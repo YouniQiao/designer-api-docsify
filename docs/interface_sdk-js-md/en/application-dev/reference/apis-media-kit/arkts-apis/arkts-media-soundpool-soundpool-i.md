@@ -1,6 +1,6 @@
 # SoundPool
 
-Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds, setting the volume, and setting the number of loops. Before using these APIs, you must call [media.createSoundPool](../../../reference/apis-media-kit/arkts-apis-media-f.md) to create a SoundPool instance.
+Implements a sound pool that provides APIs for loading, unloading, playing, and stopping playing system sounds, setting the volume, and setting the number of loops. Before using these APIs, you must call [media.createSoundPool](arkts-media-media-createsoundpool-f.md) to create a SoundPool instance.
 
 > **NOTE：**&gt;
 > - When using the SoundPool instance, you are advised to register the following callbacks to proactively obtain
@@ -509,7 +509,7 @@ Releases a **SoundPool** instance. This API uses a promise to return the result.
 setInterruptMode(interruptMode: media.SoundInterruptMode): void
 ```
 
-Sets the interruption mode of the audio files with the same ID during playback. After the **SoundPool** is created, this API is valid only when the **Play** function of the **SoundPool** is called for the first time. You can set the interruption mode for multiple times. If the interruption mode is not set, the [SAME_SOUND_INTERRUPT](../../../reference/apis-media-kit/arkts-apis-media-e.md) mode is used by default. That is, if the former audio file is not completely played, the latter audio file with the same ID interrupts the former audio file.
+Sets the interruption mode of the audio files with the same ID during playback. After the **SoundPool** is created, this API is valid only when the **Play** function of the **SoundPool** is called for the first time. You can set the interruption mode for multiple times. If the interruption mode is not set, the [SAME_SOUND_INTERRUPT](../../../reference/apis-media-kit/arkts-media-media-soundinterruptmode-e.md) mode is used by default. That is, if the former audio file is not completely played, the latter audio file with the same ID interrupts the former audio file.
 
 **Since:** 23
 

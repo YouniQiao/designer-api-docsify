@@ -535,7 +535,7 @@ ArkUI_StyledString_Descriptor* OH_ArkUI_StyledString_Descriptor_Create(void)
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor*](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) | 指向ArkUI_StyledString_Descriptor对象的指针，用于存储属性字符串的文本和样式信息。 |
+| ArkUI_StyledString_Descriptor* | 指向ArkUI_StyledString_Descriptor对象的指针，用于存储属性字符串的文本和样式信息。 |
 
 ### OH_ArkUI_StyledString_Descriptor_Destroy()
 
@@ -553,7 +553,7 @@ void OH_ArkUI_StyledString_Descriptor_Destroy(ArkUI_StyledString_Descriptor* des
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向ArkUI_StyledString_Descriptor对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向ArkUI_StyledString_Descriptor对象的指针。 |
 
 ### OH_ArkUI_ConvertToHtml()
 
@@ -571,7 +571,7 @@ const char* OH_ArkUI_ConvertToHtml(ArkUI_StyledString_Descriptor* descriptor)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向ArkUI_StyledString_Descriptor对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向ArkUI_StyledString_Descriptor对象的指针。 |
 
 **返回：**
 
@@ -597,7 +597,7 @@ int32_t OH_ArkUI_UnmarshallStyledStringDescriptor(uint8_t* buffer, size_t buffer
 | -- | -- |
 | uint8_t* buffer | 待反序列化的字节数组。 |
 | size_t bufferSize | 字节数组长度。 |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向ArkUI_StyledString_Descriptor对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向ArkUI_StyledString_Descriptor对象的指针。 |
 
 **返回：**
 
@@ -623,7 +623,7 @@ int32_t OH_ArkUI_MarshallStyledStringDescriptor(uint8_t* buffer, size_t bufferSi
 | -- | -- |
 | uint8_t* buffer | 字节数组，用于存储属性字符串序列化后的数据。 |
 | size_t bufferSize | 字节数组长度。 |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向ArkUI_StyledString_Descriptor对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向ArkUI_StyledString_Descriptor对象的指针。 |
 | size_t* resultSize | 属性字符串转换后的字节数组实际长度。 |
 
 **返回：**
@@ -659,7 +659,7 @@ ArkUI_StyledString_Descriptor* OH_ArkUI_StyledString_Descriptor_CreateWithString
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor*](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) | 指向创建的[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。\n          如果结果为空指针，表示创建失败，失败的原因是传入参数为空指针或参数值无效。 |
+| ArkUI_StyledString_Descriptor* | 指向创建的[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。\n          如果结果为空指针，表示创建失败，失败的原因是传入参数为空指针或参数值无效。 |
 
 ### OH_ArkUI_StyledString_Descriptor_CreateWithImageAttachment()
 
@@ -686,7 +686,7 @@ ArkUI_StyledString_Descriptor* OH_ArkUI_StyledString_Descriptor_CreateWithImageA
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor*](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) | 指向创建的[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。\n          如果结果为空指针，表示创建失败，失败的原因是传入参数为空指针或参数值无效。 |
+| ArkUI_StyledString_Descriptor* | 指向创建的[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。\n          如果结果为空指针，表示创建失败，失败的原因是传入参数为空指针或参数值无效。 |
 
 ### OH_ArkUI_StyledString_Descriptor_CreateWithCustomSpan()
 
@@ -713,7 +713,7 @@ ArkUI_StyledString_Descriptor* OH_ArkUI_StyledString_Descriptor_CreateWithCustom
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor*](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) | 指向创建的[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。\n          如果结果为空指针，表示创建失败，失败的原因是传入参数为空指针或参数值无效。 |
+| ArkUI_StyledString_Descriptor* | 指向创建的[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。\n          如果结果为空指针，表示创建失败，失败的原因是传入参数为空指针或参数值无效。 |
 
 ### OH_ArkUI_StyledString_Descriptor_GetLength()
 
@@ -731,7 +731,7 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_GetLength(const ArkUI_StyledStr
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| const ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 | int32_t* length | 输出参数，用于接收属性字符串的字符长度结果。 |
 
 **返回：**
@@ -756,7 +756,7 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_GetString(const ArkUI_StyledStr
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| const ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 | char* buffer | 文本内容写入内存的缓冲区，内存空间需由开发者分配。 |
 | int32_t bufferSize | 缓冲区大小。 |
 | int32_t* writeLength | 返回值为[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)时表示实际写入缓冲区的长度。 <br>                    返回值为[ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-native-type-h.md#arkui_errorcode)时表示字符串完整写入缓冲区所需要的最小长度。 |
@@ -783,8 +783,8 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_IsEqual(const ArkUI_StyledStrin
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* firstDescriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
-| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* secondDescriptor | 指向另一个[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| const ArkUI_StyledString_Descriptor* firstDescriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| const ArkUI_StyledString_Descriptor* secondDescriptor | 指向另一个[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 | bool* isEqual | 两个属性字符串是否相同。true表示相同；false表示不相同。 |
 
 **返回：**
@@ -809,8 +809,8 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_SubStyledString(const ArkUI_Sty
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* subDescriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)子属性字符串对象的指针。 |
+| const ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* subDescriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)子属性字符串对象的指针。 |
 | uint32_t start | 子属性字符串的起始位置。取值范围[0, 属性字符串的字符长度]，超出范围时返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 | uint32_t length | 子属性字符串的字符长度。取值范围[0, 属性字符串的字符长度与参数start的差值]。 |
 
@@ -836,7 +836,7 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_GetStyles(const ArkUI_StyledStr
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| const ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 | uint32_t start | 指定范围的起始位置。取值范围[0, 属性字符串的字符长度]。 |
 | uint32_t length | 指定范围的长度。取值范围[0, 属性字符串的字符长度与参数start的差值]。 |
 | [OH_ArkUI_StyledStringKey](capi-styled-string-h.md#oh_arkui_styledstringkey) styledKey | 需要获取的指定样式类型，取值为[OH_ArkUI_StyledStringKey](capi-styled-string-h.md#oh_arkui_styledstringkey)中的枚举。 |
@@ -866,7 +866,7 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_FromHtml(ArkUI_StyledString_Des
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 | const char* html | 待转换为属性字符串的HTML格式字符串，当前支持转换的HTML标签范围：\<p>、\<span>、\<img>、\<br>、 <br>            \<strong>、\<b>、\<a>、\<i>、\<em>、\<s>、\<u>、\<del>、\<sup>、\<sub>、\<cite>、\<dfn>、\<small>、 <br>            \<h1>、\<h2>、\<h3>、\<h4>、\<h5>、\<h6>、\<ol>、\<ul>、\<li>。 |
 
 **返回：**
@@ -891,7 +891,7 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_ReplaceString(ArkUI_StyledStrin
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 | uint32_t start | 指定范围的起始位置。取值范围[0, 属性字符串的字符长度]。 |
 | uint32_t length | 指定范围的长度。取值范围[0, 属性字符串的字符长度与参数start的差值]。 |
 | const char* string | 替换的新文本内容。 |
@@ -918,7 +918,7 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_InsertString(ArkUI_StyledString
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 | uint32_t start | 插入位置。取值范围[0, 属性字符串的字符长度]。 |
 | const char* string | 插入的新文本内容。 |
 
@@ -944,7 +944,7 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_RemoveString(ArkUI_StyledString
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 | uint32_t start | 指定范围的起始位置。取值范围[0, 属性字符串的字符长度]。 |
 | uint32_t length | 指定范围的字符长度。取值范围[0, 属性字符串的字符长度与参数start的差值]。 |
 
@@ -970,7 +970,7 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_ReplaceStyle(ArkUI_StyledString
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 | [const OH_ArkUI_SpanStyle](capi-arkui-nativemodule-oh-arkui-spanstyle.md)* spanStyle | 指向[OH_ArkUI_SpanStyle](capi-arkui-nativemodule-oh-arkui-spanstyle.md)对象的指针。<br>                  需先调用[OH_ArkUI_SpanStyle_SetStart](capi-styled-string-h.md#oh_arkui_spanstyle_setstart)和[OH_ArkUI_SpanStyle_SetLength](capi-styled-string-h.md#oh_arkui_spanstyle_setlength)在该对象中设置目标范围。 |
 
 **返回：**
@@ -995,7 +995,7 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_SetStyle(ArkUI_StyledString_Des
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 | [const OH_ArkUI_SpanStyle](capi-arkui-nativemodule-oh-arkui-spanstyle.md)* spanStyle | 指向[OH_ArkUI_SpanStyle](capi-arkui-nativemodule-oh-arkui-spanstyle.md)对象的指针。需先调用[OH_ArkUI_SpanStyle_SetStart](capi-styled-string-h.md#oh_arkui_spanstyle_setstart)和[OH_ArkUI_SpanStyle_SetLength](capi-styled-string-h.md#oh_arkui_spanstyle_setlength)在该对象中设置目标范围。 |
 
 **返回：**
@@ -1023,7 +1023,7 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_RemoveStyle(ArkUI_StyledString_
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 | uint32_t start | 指定范围的起始位置。取值范围[0, 属性字符串的字符长度]。 |
 | uint32_t length | 指定范围的长度。取值范围[0, 属性字符串的字符长度与参数start的差值]。 |
 | [OH_ArkUI_StyledStringKey](capi-styled-string-h.md#oh_arkui_styledstringkey) styledKey | 样式类型枚举值，取值为[OH_ArkUI_StyledStringKey](capi-styled-string-h.md#oh_arkui_styledstringkey)中的枚举。 |
@@ -1053,7 +1053,7 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_ClearStyles(ArkUI_StyledString_
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 
 **返回：**
 
@@ -1077,10 +1077,10 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_ReplaceStyledString(ArkUI_Style
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 | uint32_t start | 指定范围的起始位置。取值范围[0, 属性字符串的字符长度]。 |
 | uint32_t length | 指定范围的长度。取值范围[0, 属性字符串的字符长度与参数start的差值]。 |
-| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* other | 指向新的[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| const ArkUI_StyledString_Descriptor* other | 指向新的[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 
 **返回：**
 
@@ -1104,9 +1104,9 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_InsertStyledString(ArkUI_Styled
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 | uint32_t start | 插入位置。取值范围[0, 属性字符串的字符长度]。 |
-| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* other | 指向新的[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| const ArkUI_StyledString_Descriptor* other | 指向新的[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 
 **返回：**
 
@@ -1130,8 +1130,8 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_AppendStyledString(ArkUI_Styled
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
-| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* other | 指向新的[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| const ArkUI_StyledString_Descriptor* other | 指向新的[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 
 **返回：**
 
@@ -1158,7 +1158,7 @@ ArkUI_ErrorCode OH_ArkUI_StyledString_Descriptor_InvalidateCustomSpan(const ArkU
 
 | 参数项 | 描述 |
 | -- | -- |
-| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| const ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 
 **返回：**
 
@@ -1424,7 +1424,7 @@ ArkUI_ErrorCode OH_ArkUI_TextStyle_SetFontStyle(OH_ArkUI_TextStyle* textStyle, A
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_TextStyle](capi-arkui-nativemodule-oh-arkui-textstyle.md)* textStyle | 指向[OH_ArkUI_TextStyle](capi-arkui-nativemodule-oh-arkui-textstyle.md)对象的指针。 |
-| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle) fontStyle | 字体风格。取值为[ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)中的枚举。 |
+| ArkUI_FontStyle fontStyle | 字体风格。取值为[ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)中的枚举。 |
 
 **返回：**
 
@@ -1449,7 +1449,7 @@ ArkUI_ErrorCode OH_ArkUI_TextStyle_GetFontStyle(const OH_ArkUI_TextStyle* textSt
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_TextStyle](capi-arkui-nativemodule-oh-arkui-textstyle.md)* textStyle | 指向[OH_ArkUI_TextStyle](capi-arkui-nativemodule-oh-arkui-textstyle.md)对象的指针。 |
-| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)* fontStyle | 字体风格。取值为[ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)中的枚举。 |
+| ArkUI_FontStyle* fontStyle | 字体风格。取值为[ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)中的枚举。 |
 
 **返回：**
 
@@ -2729,7 +2729,7 @@ ArkUI_ErrorCode OH_ArkUI_LeadingMarginSpanDrawInfo_SetTextDirection(OH_ArkUI_Lea
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_LeadingMarginSpanDrawInfo](capi-arkui-nativemodule-oh-arkui-leadingmarginspandrawinfo.md)* drawInfo | 指向[OH_ArkUI_LeadingMarginSpanDrawInfo](capi-arkui-nativemodule-oh-arkui-leadingmarginspandrawinfo.md)对象的指针。 |
-| [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection) direction | 文本内容的方向。取值为[ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection)中的枚举。 |
+| ArkUI_TextDirection direction | 文本内容的方向。取值为[ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection)中的枚举。 |
 
 **返回：**
 
@@ -2754,7 +2754,7 @@ ArkUI_ErrorCode OH_ArkUI_LeadingMarginSpanDrawInfo_GetTextDirection(const OH_Ark
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_LeadingMarginSpanDrawInfo](capi-arkui-nativemodule-oh-arkui-leadingmarginspandrawinfo.md)* drawInfo | 指向[OH_ArkUI_LeadingMarginSpanDrawInfo](capi-arkui-nativemodule-oh-arkui-leadingmarginspandrawinfo.md)对象的指针。 |
-| [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection)* direction | 文本内容的方向。取值为[ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection)中的枚举。 |
+| ArkUI_TextDirection* direction | 文本内容的方向。取值为[ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection)中的枚举。 |
 
 **返回：**
 
@@ -2968,7 +2968,7 @@ ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_SetTextAlign(OH_ArkUI_ParagraphStyle* pa
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | 指向[OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)对象的指针。 |
-| [ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment) align | 水平方向的文本对齐方式。取值为[ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment)中的枚举。 |
+| ArkUI_TextAlignment align | 水平方向的文本对齐方式。取值为[ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment)中的枚举。 |
 
 **返回：**
 
@@ -2993,7 +2993,7 @@ ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_GetTextAlign(const OH_ArkUI_ParagraphSty
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | 指向[OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)对象的指针。 |
-| [ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment)* align | 水平方向的文本对齐方式。取值为[ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment)中的枚举。 |
+| ArkUI_TextAlignment* align | 水平方向的文本对齐方式。取值为[ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment)中的枚举。 |
 
 **返回：**
 
@@ -3118,7 +3118,7 @@ ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_SetOverflow(OH_ArkUI_ParagraphStyle* par
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | 指向[OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)对象的指针。 |
-| [ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow) overflow | 段落超长时的显示方式。取值为[ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow)中的枚举。 |
+| ArkUI_TextOverflow overflow | 段落超长时的显示方式。取值为[ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow)中的枚举。 |
 
 **返回：**
 
@@ -3143,7 +3143,7 @@ ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_GetOverflow(const OH_ArkUI_ParagraphStyl
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | 指向[OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)对象的指针。 |
-| [ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow)* overflow | 段落超长时的显示方式。取值为[ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow)中的枚举。 |
+| ArkUI_TextOverflow* overflow | 段落超长时的显示方式。取值为[ArkUI_TextOverflow](capi-text-common-h.md#arkui_textoverflow)中的枚举。 |
 
 **返回：**
 
@@ -3168,7 +3168,7 @@ ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_SetWordBreak(OH_ArkUI_ParagraphStyle* pa
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | 指向[OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)对象的指针。 |
-| [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak) wordBreak | 断行规则。取值为[ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak)中的枚举。 |
+| ArkUI_WordBreak wordBreak | 断行规则。取值为[ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak)中的枚举。 |
 
 **返回：**
 
@@ -3193,7 +3193,7 @@ ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_GetWordBreak(const OH_ArkUI_ParagraphSty
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | 指向[OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)对象的指针。 |
-| [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak)* wordBreak | 断行规则。取值为[ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak)中的枚举。 |
+| ArkUI_WordBreak* wordBreak | 断行规则。取值为[ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak)中的枚举。 |
 
 **返回：**
 
@@ -3218,7 +3218,7 @@ ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_SetLeadingMarginPixelMap(OH_ArkUI_Paragr
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | 指向[OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)对象的指针。 |
-| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* pixelmap | 段落缩进的像素图。 |
+| struct OH_PixelmapNative* pixelmap | 段落缩进的像素图。 |
 
 **返回：**
 
@@ -3243,7 +3243,7 @@ ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_GetLeadingMarginPixelMap(const OH_ArkUI_
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | 指向[OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)对象的指针。 |
-| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)** pixelmap | 段落缩进的像素图。 |
+| struct OH_PixelmapNative** pixelmap | 段落缩进的像素图。 |
 
 **返回：**
 
@@ -3418,7 +3418,7 @@ ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_SetTextVerticalAlign(OH_ArkUI_ParagraphS
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | 指向[OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)对象的指针。 |
-| [ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment) verticalAlignment | 垂直方向的文本对齐方式。取值为[ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment)中的枚举。 |
+| ArkUI_TextVerticalAlignment verticalAlignment | 垂直方向的文本对齐方式。取值为[ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment)中的枚举。 |
 
 **返回：**
 
@@ -3443,7 +3443,7 @@ ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_GetTextVerticalAlign(const OH_ArkUI_Para
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | 指向[OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)对象的指针。 |
-| [ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment)* verticalAlignment | 垂直方向的文本对齐方式。取值为[ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment)中的枚举。 |
+| ArkUI_TextVerticalAlignment* verticalAlignment | 垂直方向的文本对齐方式。取值为[ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment)中的枚举。 |
 
 **返回：**
 
@@ -3518,7 +3518,7 @@ ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_SetTextDirection(OH_ArkUI_ParagraphStyle
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | 指向[OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)对象的指针。 |
-| [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection) textDirection | 文本方向。取值为[ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection)中的枚举。 |
+| ArkUI_TextDirection textDirection | 文本方向。取值为[ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection)中的枚举。 |
 
 **返回：**
 
@@ -3543,7 +3543,7 @@ ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_GetTextDirection(const OH_ArkUI_Paragrap
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)* paragraphStyle | 指向[OH_ArkUI_ParagraphStyle](capi-arkui-nativemodule-oh-arkui-paragraphstyle.md)对象的指针。 |
-| [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection)* textDirection | 文本方向。取值为[ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection)中的枚举。 |
+| ArkUI_TextDirection* textDirection | 文本方向。取值为[ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection)中的枚举。 |
 
 **返回：**
 
@@ -3813,7 +3813,7 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyle_SetTextDecorationType(OH_ArkUI_Decorati
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md)* decorationStyle | 指向[OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md)对象的指针。 |
-| [ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype) type | 装饰线类型。取值为[ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype)中的枚举。 |
+| ArkUI_TextDecorationType type | 装饰线类型。取值为[ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype)中的枚举。 |
 
 **返回：**
 
@@ -3838,7 +3838,7 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyle_GetTextDecorationType(const OH_ArkUI_De
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md)* decorationStyle | 指向[OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md)对象的指针。 |
-| [ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype)* type | 装饰线类型。取值为[ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype)中的枚举。 |
+| ArkUI_TextDecorationType* type | 装饰线类型。取值为[ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype)中的枚举。 |
 
 **返回：**
 
@@ -3913,7 +3913,7 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyle_SetTextDecorationStyle(OH_ArkUI_Decorat
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md)* decorationStyle | 指向[OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md)对象的指针。 |
-| [ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle) style | 装饰线样式。取值为[ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle)中的枚举。 |
+| ArkUI_TextDecorationStyle style | 装饰线样式。取值为[ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle)中的枚举。 |
 
 **返回：**
 
@@ -3938,7 +3938,7 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyle_GetTextDecorationStyle(const OH_ArkUI_D
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md)* decorationStyle | 指向[OH_ArkUI_DecorationStyle](capi-arkui-nativemodule-oh-arkui-decorationstyle.md)对象的指针。 |
-| [ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle)* style | 装饰线样式。取值为[ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle)中的枚举。 |
+| ArkUI_TextDecorationStyle* style | 装饰线样式。取值为[ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle)中的枚举。 |
 
 **返回：**
 
@@ -5047,7 +5047,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_SetPixelMap(OH_ArkUI_ImageAttachment* i
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* pixelmap | 图片数据源。 |
+| struct OH_PixelmapNative* pixelmap | 图片数据源。 |
 
 **返回：**
 
@@ -5072,7 +5072,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetPixelMap(const OH_ArkUI_ImageAttachm
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)** pixelmap | 图片数据源。 |
+| struct OH_PixelmapNative** pixelmap | 图片数据源。 |
 
 **返回：**
 
@@ -5252,7 +5252,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_SetVerticalAlign(OH_ArkUI_ImageAttachme
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| [ArkUI_ImageSpanAlignment](capi-image-span-h.md#arkui_imagespanalignment) verticalAlign | 图片对齐方式。取值为[ArkUI_ImageSpanAlignment](capi-image-span-h.md#arkui_imagespanalignment)中的枚举。 |
+| ArkUI_ImageSpanAlignment verticalAlign | 图片对齐方式。取值为[ArkUI_ImageSpanAlignment](capi-image-span-h.md#arkui_imagespanalignment)中的枚举。 |
 
 **返回：**
 
@@ -5277,7 +5277,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetVerticalAlign(const OH_ArkUI_ImageAt
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| [ArkUI_ImageSpanAlignment](capi-image-span-h.md#arkui_imagespanalignment)* verticalAlign | 图片对齐方式。取值为[ArkUI_ImageSpanAlignment](capi-image-span-h.md#arkui_imagespanalignment)中的枚举。 |
+| ArkUI_ImageSpanAlignment* verticalAlign | 图片对齐方式。取值为[ArkUI_ImageSpanAlignment](capi-image-span-h.md#arkui_imagespanalignment)中的枚举。 |
 
 **返回：**
 
@@ -5352,7 +5352,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_SetMargin(OH_ArkUI_ImageAttachment* ima
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| [ArkUI_Margin](capi-arkui-nativemodule-arkui-margin.md) margin | 图片外边距，单位为vp。 |
+| ArkUI_Margin margin | 图片外边距，单位为vp。 |
 
 **返回：**
 
@@ -5377,7 +5377,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetMargin(const OH_ArkUI_ImageAttachmen
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| [ArkUI_Margin](capi-arkui-nativemodule-arkui-margin.md)* margin | 图片外边距，单位为vp。 |
+| ArkUI_Margin* margin | 图片外边距，单位为vp。 |
 
 **返回：**
 
@@ -5402,7 +5402,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_SetPadding(OH_ArkUI_ImageAttachment* im
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| [ArkUI_Margin](capi-arkui-nativemodule-arkui-margin.md) padding | 图片内边距，单位为vp。 |
+| ArkUI_Margin padding | 图片内边距，单位为vp。 |
 
 **返回：**
 
@@ -5427,7 +5427,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetPadding(const OH_ArkUI_ImageAttachme
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| [ArkUI_Margin](capi-arkui-nativemodule-arkui-margin.md)* padding | 图片内边距，单位为vp。 |
+| ArkUI_Margin* padding | 图片内边距，单位为vp。 |
 
 **返回：**
 
@@ -5567,7 +5567,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_SetDrawingColorFilter(OH_ArkUI_ImageAtt
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| const OH_Drawing_ColorFilter* drawingColorFilter | 图片颜色滤镜。 |
+| [const OH_Drawing_ColorFilter](../ArkGraphics2D/capi-drawing-oh-drawing-colorfilter.md)* drawingColorFilter | 图片颜色滤镜。 |
 
 **返回：**
 
@@ -5592,7 +5592,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetDrawingColorFilter(const OH_ArkUI_Im
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| OH_Drawing_ColorFilter* drawingColorFilter | 图片颜色滤镜。 |
+| [OH_Drawing_ColorFilter](../ArkGraphics2D/capi-drawing-oh-drawing-colorfilter.md)* drawingColorFilter | 图片颜色滤镜。 |
 
 **返回：**
 
@@ -5776,7 +5776,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_SetResizableLattice(OH_ArkUI_ImageAttac
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| const OH_Drawing_Lattice* lattice | [in] 图片拉伸栅格，类型为[OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md)。 |
+| [const OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md)* lattice | [in] 图片拉伸栅格，类型为[OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md)。 |
 
 **返回：**
 
@@ -5801,7 +5801,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetResizableLattice(const OH_ArkUI_Imag
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| OH_Drawing_Lattice* lattice | [out] 输出参数，指向图片拉伸栅格的指针，类型为[OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md)。 |
+| [OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md)* lattice | [out] 输出参数，指向图片拉伸栅格的指针，类型为[OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md)。 |
 
 **返回：**
 
@@ -5852,7 +5852,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorChangeEvent_GetReplacementStyledString(const 
 | 参数项 | 描述 |
 | -- | -- |
 | const OH_ArkUI_TextEditorChangeEvent* event | 指向[OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)对象的指针。 |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 
 **返回：**
 
@@ -5877,7 +5877,7 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorChangeEvent_GetPreviewStyledString(const OH_A
 | 参数项 | 描述 |
 | -- | -- |
 | const OH_ArkUI_TextEditorChangeEvent* event | 指向[OH_ArkUI_TextEditorChangeEvent](capi-arkui-nativemodule-oh-arkui-texteditorchangeevent.md)对象的指针。 |
-| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
+| ArkUI_StyledString_Descriptor* descriptor | 指向[ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)对象的指针。 |
 
 **返回：**
 

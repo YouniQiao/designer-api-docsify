@@ -112,15 +112,15 @@ enum AVPlayerState
 
 | 枚举项 | 描述 |
 | -- | -- |
-| AV_IDLE = 0 | idle states |
-| AV_INITIALIZED = 1 | initialized states |
-| AV_PREPARED = 2 | prepared states |
-| AV_PLAYING = 3 | playing states |
-| AV_PAUSED = 4 | paused states |
-| AV_STOPPED = 5 | stopped states |
-| AV_COMPLETED = 6 | Play to the end states |
-| AV_RELEASED = 7 | released states |
-| AV_ERROR = 8 | error states |
+| AV_IDLE = 0 | 空闲 |
+| AV_INITIALIZED = 1 | 初始化 |
+| AV_PREPARED = 2 | 准备 |
+| AV_PLAYING = 3 | 播放 |
+| AV_PAUSED = 4 | 暂停 |
+| AV_STOPPED = 5 | 停止 |
+| AV_COMPLETED = 6 | 结束 |
+| AV_RELEASED = 7 | 释放 |
+| AV_ERROR = 8 | 错误 |
 
 ### AVPlayerSeekMode
 

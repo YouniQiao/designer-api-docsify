@@ -20,7 +20,7 @@
 | -- | -- | -- |
 | [MediaKeySession](capi-avplayer-mediakeysession.md) | MediaKeySession | 媒体密钥会话结构体，用于管理DRM（数字版权管理）的密钥会话，提供密钥的获取、更新和释放等操作能力。 |
 | [DRM_MediaKeySystemInfo](capi-avplayer-drm-mediakeysysteminfo.md) | DRM_MediaKeySystemInfo | DRM_MediaKeySystemInfo类型，DRM媒体密钥系统信息结构体，用于存储和管理DRM媒体密钥系统相关信息。**使用场景：- 在线视频播放时获取DRM系统信息。- 版权保护应用中查询媒体密钥系统状态。- DRM认证流程中传递密钥系统配置信息。 |
-| [OH_AVPlayerVideoOutput](capi-avplayer-oh-avplayervideooutput.md) | OH_AVPlayerVideoOutput | OH_AVPlayerVideoOutput字段声明。 |
+| [OH_AVPlayerVideoOutput](capi-avplayer-oh-avplayervideooutput.md) | OH_AVPlayerVideoOutput | 定义了OH_AVPlayerVideoOutput结构体，用于表示播放器视频输出的相关信息。 |
 
 ### 函数
 
@@ -1214,7 +1214,7 @@ OH_AVFormat *OH_AVPlayer_GetPlaybackStatisticMetrics(OH_AVPlayer *player)
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVPlayer *player | Pointer to an OH_AVPlayer instance |
+| OH_AVPlayer *player | 指向OH_AVPlayer实例的指针。 |
 
 **返回：**
 
@@ -1238,10 +1238,10 @@ OH_AVErrCode OH_AVPlayer_AddFdSubtitleSource(OH_AVPlayer *player, int32_t fd, in
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVPlayer *player | Pointer to an OH_AVPlayer instance |
-| int32_t fd | Indicates the file descriptor of subtitle source. |
-| int64_t offset | Indicates the offset of media source in file descriptor. |
-| int64_t size | Indicates the size of media source. |
+| OH_AVPlayer *player | 指向OH_AVPlayer实例的指针。 |
+| int32_t fd | 字幕源的文件描述符。 |
+| int64_t offset | 文件描述符中媒体源的偏移量。 |
+| int64_t size | 媒体源的大小，单位为字节（Byte），用于指定从文件描述符中读取的媒体数据长度。 |
 
 **返回：**
 
@@ -1936,7 +1936,7 @@ OH_AVFormat* OH_AVPlayer_GetPlaybackInfo(OH_AVPlayer *player)
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AVPlayer *player | Pointer to an OH_AVPlayer instance |
+| OH_AVPlayer *player | 指向OH_AVPlayer实例的指针。 |
 
 **返回：**
 

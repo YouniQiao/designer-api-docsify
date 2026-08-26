@@ -93,7 +93,7 @@ OH_AVErrCode OH_LowPowerVideoSink_Configure(OH_LowPowerVideoSink* sink, const OH
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
-| [const OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | 指向OH_AVFormat的指针，用于配置LowPowerVideoSink的参数。 |
+| const OH_AVFormat* format | 指向OH_AVFormat的指针，用于配置LowPowerVideoSink的参数。 |
 
 **返回：**
 
@@ -118,7 +118,7 @@ OH_AVErrCode OH_LowPowerVideoSink_SetParameter(OH_LowPowerVideoSink* sink, const
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
-| [const OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | 指向OH_AVFormat的指针，用于配置LowPowerVideoSink的参数。 |
+| const OH_AVFormat* format | 指向OH_AVFormat的指针，用于配置LowPowerVideoSink的参数。 |
 
 **返回：**
 
@@ -143,7 +143,7 @@ OH_AVErrCode OH_LowPowerVideoSink_GetParameter(OH_LowPowerVideoSink* sink, OH_AV
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | 指向OH_LowPowerVideoSink实例的指针。 |
-| [OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | 指向OH_AVFormat的指针，为LowPowerVideoSink设置的参数。 |
+| OH_AVFormat* format | 指向OH_AVFormat的指针，为LowPowerVideoSink设置的参数。 |
 
 **返回：**
 

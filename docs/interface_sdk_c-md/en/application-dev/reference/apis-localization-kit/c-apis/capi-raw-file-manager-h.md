@@ -99,7 +99,7 @@ Opens the `rawfile` directory.
 
 | Type | Description |
 | -- | -- |
-| RawDir * | Pointer to the `RawDir` object. If the call fails or `mgr` is null, `NULL` is returned. After use, call      [OH_ResourceManager_CloseRawDir](capi-raw-dir-h.md#oh_resourcemanager_closerawdir) to release it. |
+| [RawDir *](capi-rawfile-rawdir.md) | Pointer to the `RawDir` object. If the call fails or `mgr` is null, `NULL` is returned. After use, call      [OH_ResourceManager_CloseRawDir](capi-raw-dir-h.md#oh_resourcemanager_closerawdir) to release it. |
 
 **Reference**:
 

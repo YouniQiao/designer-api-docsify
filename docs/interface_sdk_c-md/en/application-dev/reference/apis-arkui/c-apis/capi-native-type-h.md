@@ -1067,7 +1067,7 @@ Sets the font weight of total count in the digital indicator.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_SwiperDigitIndicator *indicator | The pointer to the digital indicator. |
-| ArkUI_FontWeight fontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
+| [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight) fontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
 
 ### OH_ArkUI_SwiperDigitIndicator_GetFontWeight()
 
@@ -1091,7 +1091,7 @@ Gets the font weight of total count in the digital indicator.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_FontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). |
+| [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight) | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). |
 
 ### OH_ArkUI_SwiperDigitIndicator_SetSelectedFontWeight()
 
@@ -1110,7 +1110,7 @@ Sets the font weight of selected index in the digital indicator.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_SwiperDigitIndicator *indicator | The pointer to the digital indicator. |
-| ArkUI_FontWeight selectedFontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
+| [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight) selectedFontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
 
 ### OH_ArkUI_SwiperDigitIndicator_GetSelectedFontWeight()
 
@@ -1134,7 +1134,7 @@ Gets the font weight of selected index in the digital indicator.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_FontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). |
+| [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight) | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). |
 
 ### OH_ArkUI_ContentTransitionEffect_Create()
 
@@ -1908,14 +1908,14 @@ Set text menu item title.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextMenuItem* item | The text menu item. |
+| [ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)* item | The text menu item. |
 | const char* content | The name of the text menu item, which defaults to an empty string. The string will copy to framework. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItem_GetContent()
 
@@ -1933,7 +1933,7 @@ Get text menu item title.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_TextMenuItem* item | The text menu item object. |
+| [const ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)* item | The text menu item object. |
 | char* buffer | The buffer of the text menu content, memory space needs to be allocated by the developer. |
 | int32_t bufferSize | The name of the text menu item, which defaults to an empty string; |
 | int32_t* writeLength | Indicates the string length actually written to the bufferwhen returning [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode).Indicates the minimum buffer size that can accommodate the targetwhen [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) is returned. |
@@ -1942,7 +1942,7 @@ Get text menu item title.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.          [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.          [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_TextMenuItem_SetIcon()
 
@@ -1960,14 +1960,14 @@ Set text menu item icon.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextMenuItem* item | The text menu item. |
+| [ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)* item | The text menu item. |
 | const char* icon | The text menu item icon resource, which defaults to an empty string. The string will copy to framework. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItem_GetIcon()
 
@@ -1985,7 +1985,7 @@ Get text menu item icon.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_TextMenuItem* item | The text menu item object |
+| [const ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)* item | The text menu item object |
 | char* buffer | The buffer of the text menu content, memory space needs to be allocated by the developer. |
 | int32_t bufferSize | The icon of the text menu item, which defaults to an empty string; |
 | int32_t* writeLength | Indicates the string length actually written to the bufferwhen returning [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode).Indicates the minimum buffer size that can accommodate the targetwhen [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) is returned. |
@@ -1994,7 +1994,7 @@ Get text menu item icon.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.          [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.          [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_TextMenuItem_SetLabelInfo()
 
@@ -2012,14 +2012,14 @@ Set text menu item label info for keyboard shortcut.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextMenuItem* item | The text menu item. |
+| [ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)* item | The text menu item. |
 | const char* labelInfo | The text menu item shortcut displays, which defaults to an empty string.The string will copy to framework. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItem_GetLabelInfo()
 
@@ -2037,7 +2037,7 @@ Get text menu item label info for keyboard shortcut..
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_TextMenuItem* item | The text menu item object |
+| [const ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)* item | The text menu item object |
 | char* buffer | The buffer of the text menu content, memory space needs to be allocated by the developer. |
 | int32_t bufferSize | The shortcuts of the text menu item, which defaults to an empty string; |
 | int32_t* writeLength | Indicates the string length actually written to the bufferwhen returning [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode).Indicates the minimum buffer size that can accommodate the targetwhen [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) is returned. |
@@ -2046,7 +2046,7 @@ Get text menu item label info for keyboard shortcut..
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.          [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | The error code.          [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the node, buffer or writeLength is null.          [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) If the buffer size is less than the minimum buffer size. |
 
 ### OH_ArkUI_TextMenuItem_SetId()
 
@@ -2064,14 +2064,14 @@ Set text menu item id.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextMenuItem* item | The text menu item. |
+| [ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)* item | The text menu item. |
 | int32_t id | The text menu id. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItem_GetId()
 
@@ -2089,14 +2089,14 @@ Get text menu item id.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_TextMenuItem* item | The text menu item object |
+| [const ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)* item | The text menu item object |
 | int32_t* id | The text menu item id; |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItemArray_GetSize()
 
@@ -2114,14 +2114,14 @@ Get the size of text menu items.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextMenuItemArray* items | The text menu items. |
+| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)* items | The text menu items. |
 | int32_t* size | The size of text menu items. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItemArray_GetItem()
 
@@ -2139,15 +2139,15 @@ Get text menu item at index.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextMenuItemArray* items | The text menu items. |
+| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)* items | The text menu items. |
 | int32_t index | The index of text menu items. |
-| ArkUI_TextMenuItem** item | The text menu item at index of array. |
+| [ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)** item | The text menu item at index of array. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItemArray_Insert()
 
@@ -2165,15 +2165,15 @@ Insert text menu item at index.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextMenuItemArray* items | The text menu items. |
-| ArkUI_TextMenuItem* item | The text menu item at index of array. The item will copy by framework. |
+| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)* items | The text menu items. |
+| [ArkUI_TextMenuItem](capi-arkui-nativemodule-arkui-textmenuitem.md)* item | The text menu item at index of array. The item will copy by framework. |
 | int32_t index | The index of text menu items. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItemArray_Erase()
 
@@ -2191,14 +2191,14 @@ Erase text menu item at index.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextMenuItemArray* items | The text menu items. |
+| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)* items | The text menu items. |
 | int32_t index | The index of text menu items. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextMenuItemArray_Clear()
 
@@ -2216,13 +2216,13 @@ Clear all the items.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextMenuItemArray* items | The text menu items. |
+| [ArkUI_TextMenuItemArray](capi-arkui-nativemodule-arkui-textmenuitemarray.md)* items | The text menu items. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextEditMenuOptions_RegisterOnCreateMenuCallback()
 
@@ -2240,15 +2240,15 @@ Set the event to be called when text menu create.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextEditMenuOptions* editMenuOptions | Pointer to the ArkUI_TextEditMenuOptions object. |
+| [ArkUI_TextEditMenuOptions](capi-arkui-nativemodule-arkui-texteditmenuoptions.md)* editMenuOptions | Pointer to the ArkUI_TextEditMenuOptions object. |
 | void* userData | The user data. |
-| ArkUI_TextCreateMenuCallback cb | The create callback function. |
+| [ArkUI_TextCreateMenuCallback](capi-text-common-h.md#arkui_textcreatemenucallback) cb | The create callback function. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextEditMenuOptions_RegisterOnPrepareMenuCallback()
 
@@ -2266,15 +2266,15 @@ Set the event to be called when menu prepare.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextEditMenuOptions* editMenuOptions | Pointer to the ArkUI_TextEditMenuOptions object. |
+| [ArkUI_TextEditMenuOptions](capi-arkui-nativemodule-arkui-texteditmenuoptions.md)* editMenuOptions | Pointer to the ArkUI_TextEditMenuOptions object. |
 | void* userData | The user data. |
-| ArkUI_TextPrepareMenuCallback cb | The prepare callback function. |
+| [ArkUI_TextPrepareMenuCallback](capi-text-common-h.md#arkui_textpreparemenucallback) cb | The prepare callback function. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextEditMenuOptions_RegisterOnMenuItemClickCallback()
 
@@ -2292,15 +2292,15 @@ Set the event to be called when menu item click.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextEditMenuOptions* editMenuOptions | Pointer to the ArkUI_TextEditMenuOptions object. |
+| [ArkUI_TextEditMenuOptions](capi-arkui-nativemodule-arkui-texteditmenuoptions.md)* editMenuOptions | Pointer to the ArkUI_TextEditMenuOptions object. |
 | void* userData | The user data. |
-| ArkUI_TextMenuItemClickCallback cb | The menu item click callback function. |
+| [ArkUI_TextMenuItemClickCallback](capi-text-common-h.md#arkui_textmenuitemclickcallback) cb | The menu item click callback function. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_SetSpanType()
 
@@ -2318,14 +2318,14 @@ Sets the recognition types of a configuration object for selected text recogniti
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextSelectionMenuOptions* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| ArkUI_TextSpanType textSpanType | The span type of [ArkUI_TextSpanType](capi-text-common-h.md#arkui_textspantype). |
+| [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
+| [ArkUI_TextSpanType](capi-text-common-h.md#arkui_textspantype) textSpanType | The span type of [ArkUI_TextSpanType](capi-text-common-h.md#arkui_textspantype). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_GetSpanType()
 
@@ -2343,14 +2343,14 @@ Gets the span type select menu options.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextSelectionMenuOptions* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| ArkUI_TextSpanType* spanType | the text span type [ArkUI_TextSpanType](capi-text-common-h.md#arkui_textspantype). |
+| [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
+| [ArkUI_TextSpanType](capi-text-common-h.md#arkui_textspantype)* spanType | the text span type [ArkUI_TextSpanType](capi-text-common-h.md#arkui_textspantype). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_SetContentNode()
 
@@ -2368,14 +2368,14 @@ Set custom text menu node of text.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextSelectionMenuOptions* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
+| [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
 | [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | The custom menu node. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_GetContentNode()
 
@@ -2393,14 +2393,14 @@ Get custom text menu node of text.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextSelectionMenuOptions* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
+| [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
 | [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | The custom menu node. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_SetResponseType()
 
@@ -2418,14 +2418,14 @@ Sets the recognition types of a configuration object for selected text recogniti
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextSelectionMenuOptions* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| ArkUI_TextResponseType responseType | The response type of [ArkUI_TextResponseType](capi-text-common-h.md#arkui_textresponsetype). |
+| [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
+| [ArkUI_TextResponseType](capi-text-common-h.md#arkui_textresponsetype) responseType | The response type of [ArkUI_TextResponseType](capi-text-common-h.md#arkui_textresponsetype). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_GetResponseType()
 
@@ -2443,14 +2443,14 @@ Gets the response type select menu options.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_TextSelectionMenuOptions* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| ArkUI_TextResponseType* responseType | The text response type [ArkUI_TextResponseType](capi-text-common-h.md#arkui_textresponsetype). |
+| [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
+| [ArkUI_TextResponseType](capi-text-common-h.md#arkui_textresponsetype)* responseType | The text response type [ArkUI_TextResponseType](capi-text-common-h.md#arkui_textresponsetype). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_RegisterOnMenuShowCallback()
 
@@ -2476,7 +2476,7 @@ Set the event to be called when selection menu show.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextSelectionMenuOptions_RegisterOnMenuHideCallback()
 
@@ -2502,7 +2502,7 @@ Set the event to be called when selection menu hide.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_SelectionOptions_Create()
 
@@ -2678,14 +2678,14 @@ Sets the decoration type of the decorative line style.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_DecorationStyleOptions* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
-| ArkUI_TextDecorationType type | Decoration type ([ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype)). |
+| [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
+| [ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype) type | Decoration type ([ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype)). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DecorationStyleOptions_GetTextDecorationType()
 
@@ -2703,14 +2703,14 @@ Obtains the decoration type of the decorative line style.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_DecorationStyleOptions* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
-| ArkUI_TextDecorationType* type | Pointer to the decoration type ([ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype)). |
+| [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
+| [ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype)* type | Pointer to the decoration type ([ArkUI_TextDecorationType](capi-text-common-h.md#arkui_textdecorationtype)). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DecorationStyleOptions_SetColor()
 
@@ -2728,14 +2728,14 @@ Sets the color of the decorative line.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_DecorationStyleOptions* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
+| [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
 | uint32_t color | Color of the decorative line, in 0xARGB format. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DecorationStyleOptions_GetColor()
 
@@ -2753,14 +2753,14 @@ Obtains the color of the decorative line.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_DecorationStyleOptions* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
+| [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
 | uint32_t* color | Pointer to the color of the decorative line, in 0xARGB format. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DecorationStyleOptions_SetTextDecorationStyle()
 
@@ -2778,14 +2778,14 @@ Sets the style of the decorative line.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_DecorationStyleOptions* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
-| ArkUI_TextDecorationStyle style | Style of the decorative line ([ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle)). |
+| [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
+| [ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle) style | Style of the decorative line ([ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle)). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DecorationStyleOptions_GetTextDecorationStyle()
 
@@ -2803,14 +2803,14 @@ Obtains the style of the decorative line.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_DecorationStyleOptions* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
-| ArkUI_TextDecorationStyle* style | Pointer to the style of the decorative line ([ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle)). |
+| [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
+| [ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle)* style | Pointer to the style of the decorative line ([ArkUI_TextDecorationStyle](capi-text-common-h.md#arkui_textdecorationstyle)). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DecorationStyleOptions_SetThicknessScale()
 
@@ -2828,14 +2828,14 @@ Sets the scale factor of the decorative line thickness.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_DecorationStyleOptions* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
+| [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
 | float thicknessScale | Scale factor of the decorative line thickness. The value range is [0, +∞). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_DecorationStyleOptions_GetThicknessScale()
 
@@ -2853,14 +2853,14 @@ Obtains the scale factor of the decorative line thickness.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_DecorationStyleOptions* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
+| [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
 | float* thicknessScale | Pointer to the scale factor of the decorative line thickness. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextDataDetectorConfig_SetTypes()
 
@@ -2878,15 +2878,15 @@ Sets the types of the text entity recognition configuration.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
-| const ArkUI_TextDataDetectorType* types | Pointer to the types of the text entity recognition configuration. The value is an enumerated value of { |
+| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| [const ArkUI_TextDataDetectorType](capi-text-h.md#arkui_textdatadetectortype)* types | Pointer to the types of the text entity recognition configuration. The value is an enumerated value of { |
 | int32_t length | Type quantity. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextDataDetectorConfig_GetTypes()
 
@@ -2904,8 +2904,8 @@ Obtains the types of the text entity recognition configuration.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
-| ArkUI_TextDataDetectorType* buffer | Pointer to the buffer of the type array. |
+| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| [ArkUI_TextDataDetectorType](capi-text-h.md#arkui_textdatadetectortype)* buffer | Pointer to the buffer of the type array. |
 | int32_t bufferSize | Maximum number of types that can be written to the buffer reserved for the types. |
 | int32_t* writeLength | Pointer to the number of types that are actually written to the buffer. |
 
@@ -2913,7 +2913,7 @@ Obtains the types of the text entity recognition configuration.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) if the value of bufferSize is less than that of       writeLength. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) if the value of bufferSize is less than that of       writeLength. |
 
 ### OH_ArkUI_TextDataDetectorConfig_RegisterOnDetectResultUpdateCallback()
 
@@ -2939,7 +2939,7 @@ Sets the callback for text entity recognition result updates.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextDataDetectorConfig_SetColor()
 
@@ -2957,14 +2957,14 @@ Sets the color of the recognized content.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
 | uint32_t color | Color of the recognized content, in 0xARGB format. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextDataDetectorConfig_GetColor()
 
@@ -2982,14 +2982,14 @@ Obtains the color of the recognized content.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
 | uint32_t* color | Pointer to the color of the recognized content, in 0xARGB format. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextDataDetectorConfig_SetDecorationStyleOptions()
 
@@ -3007,14 +3007,14 @@ Sets the decoration style of the recognized content.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
-| OH_ArkUI_DecorationStyleOptions* decoration | Pointer to the decoration style of the recognized content. The value is an enumerated value of[OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md). |
+| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* decoration | Pointer to the decoration style of the recognized content. The value is an enumerated value of[OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextDataDetectorConfig_GetDecorationStyleOptions()
 
@@ -3032,14 +3032,14 @@ Obtains the decoration style of the recognized content.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
-| OH_ArkUI_DecorationStyleOptions* decoration | Pointer to the decoration style of the recognized content. The value is an enumerated value of[OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md). |
+| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* decoration | Pointer to the decoration style of the recognized content. The value is an enumerated value of[OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextDataDetectorConfig_SetEnablePreviewMenu()
 
@@ -3057,14 +3057,14 @@ Sets whether to display the preview menu when the recognized content is long-pre
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
 | bool enablePreviewMenu | Whether to display the preview menu when the recognized content is long-pressed. **truemeans to display the preview menu, and **false** means the opposite. The default value is **false**. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextDataDetectorConfig_GetEnablePreviewMenu()
 
@@ -3082,14 +3082,14 @@ Obtains whether the preview menu is displayed when the recognized content is lon
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
 | bool* enablePreviewMenu | Pointer to the **enablePreviewMenu** parameter indicating whether the preview menu isdisplayed when the recognized content is long-pressed. **true** means that the preview menu is displayed, and false** means the opposite. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextController_SetStyledString()
 
@@ -3107,14 +3107,14 @@ Set the StyledString of the text.
 
 | Parameter | Description |
 | -- | -- |
-| OH_ArkUI_TextController* controller | the controller of the text. |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to an <b>ArkUI_StyledString_Descriptor</b> object, which will be set to Text. |
+| [OH_ArkUI_TextController](capi-arkui-nativemodule-oh-arkui-textcontroller.md)* controller | the controller of the text. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to an <b>ArkUI_StyledString_Descriptor</b> object, which will be set to Text. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_SetValue()
 
@@ -3139,7 +3139,7 @@ Sets the text for the placeholder text options used when there is no input.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_GetValue()
 
@@ -3166,7 +3166,7 @@ Obtains the text for the placeholder text options used when there is no input.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) if the value of bufferSize is less than that of       writeLength. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) if the value of bufferSize is less than that of       writeLength. |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_SetFontSize()
 
@@ -3191,7 +3191,7 @@ Sets the font size for the placeholder text options used when there is no input.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_GetFontSize()
 
@@ -3216,7 +3216,7 @@ Obtains the font size for the placeholder text options used when there is no inp
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_SetFontWeight()
 
@@ -3241,7 +3241,7 @@ Sets the font weight for the placeholder text options used when there is no inpu
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_GetFontWeight()
 
@@ -3266,7 +3266,7 @@ Obtains the font weight for the placeholder text options used when there is no i
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_SetFontFamily()
 
@@ -3291,7 +3291,7 @@ Sets the font family for the placeholder text options used when there is no inpu
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_GetFontFamily()
 
@@ -3318,7 +3318,7 @@ Obtains the font family for the placeholder text options used when there is no i
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) if the value of bufferSize is less than that of       writeLength. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-error-code-h.md#arkui_errorcode) if the value of bufferSize is less than that of       writeLength. |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_SetFontStyle()
 
@@ -3337,13 +3337,13 @@ Sets the font style for the placeholder text options used when there is no input
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorPlaceholderOptions* options | Pointer to the [OH_ArkUI_TextEditorPlaceholderOptions](capi-arkui-nativemodule-oh-arkui-texteditorplaceholderoptions.md) object. |
-| ArkUI_FontStyle fontStyle | Font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
+| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle) fontStyle | Font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_GetFontStyle()
 
@@ -3362,13 +3362,13 @@ Obtains the font style for the placeholder text options used when there is no in
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorPlaceholderOptions* options | Pointer to the [OH_ArkUI_TextEditorPlaceholderOptions](capi-arkui-nativemodule-oh-arkui-texteditorplaceholderoptions.md) object. |
-| ArkUI_FontStyle* fontStyle | Pointer to the font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
+| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)* fontStyle | Pointer to the font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_SetFontColor()
 
@@ -3393,7 +3393,7 @@ Sets the font color for the placeholder text options used when there is no input
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorPlaceholderOptions_GetFontColor()
 
@@ -3418,7 +3418,7 @@ Obtains the font color for the placeholder text options used when there is no in
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_SetCaretOffset()
 
@@ -3443,7 +3443,7 @@ Sets the caret offset using the styled string controller.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_GetCaretOffset()
 
@@ -3468,7 +3468,7 @@ Obtains the caret offset using the styled string controller.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_SetSelection()
 
@@ -3495,7 +3495,7 @@ Sets the selected area using the styled string controller.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_IsEditing()
 
@@ -3520,7 +3520,7 @@ Obtains the editing status of the text editor using the styled string controller
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_StopEditing()
 
@@ -3544,7 +3544,7 @@ Exits the editing status of the text editor using the styled string controller.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_GetPreviewText()
 
@@ -3572,7 +3572,7 @@ Obtains the preview text using the styled string controller.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_GetCaretRect()
 
@@ -3597,7 +3597,7 @@ Obtains the caret-selected rectangle using the styled string controller.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_DeleteBackward()
 
@@ -3621,7 +3621,7 @@ Deletes characters using the styled string controller. If no content is selected
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetTextAlign()
 
@@ -3640,13 +3640,13 @@ Sets the text alignment mode in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| ArkUI_TextAlignment align | Text alignment mode. The value is an enumerated value of [ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment). |
+| [ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment) align | Text alignment mode. The value is an enumerated value of [ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetTextAlign()
 
@@ -3665,13 +3665,13 @@ Obtains the text alignment mode in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| ArkUI_TextAlignment* align | Pointer to the text alignment mode. The value is an enumerated value of [ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment). |
+| [ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment)* align | Pointer to the text alignment mode. The value is an enumerated value of [ArkUI_TextAlignment](capi-text-common-h.md#arkui_textalignment). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginPixelMap()
 
@@ -3690,13 +3690,13 @@ Sets the PixelMap for paragraph indentation in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)* pixelmap | Pointer to the PixelMap for paragraph indentation. |
+| struct OH_PixelmapNative* pixelmap | Pointer to the PixelMap for paragraph indentation. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetLeadingMarginPixelMap()
 
@@ -3715,13 +3715,13 @@ Obtains the PixelMap for paragraph indentation in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| [struct OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md)** pixelmap | Double pointer to the PixelMap for paragraph indentation. |
+| struct OH_PixelmapNative** pixelmap | Double pointer to the PixelMap for paragraph indentation. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginWidth()
 
@@ -3746,7 +3746,7 @@ Sets the width for paragraph indentation in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetLeadingMarginWidth()
 
@@ -3771,7 +3771,7 @@ Obtains the width for paragraph indentation in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginHeight()
 
@@ -3796,7 +3796,7 @@ Sets the height for paragraph indentation in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetLeadingMarginHeight()
 
@@ -3821,7 +3821,7 @@ Obtains the height for paragraph indentation in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetWordBreak()
 
@@ -3840,13 +3840,13 @@ Sets the word breaking mode in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| ArkUI_WordBreak wordBreak | Word breaking mode. The value is an enumerated value of [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak). |
+| [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak) wordBreak | Word breaking mode. The value is an enumerated value of [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetWordBreak()
 
@@ -3865,13 +3865,13 @@ Obtains the word breaking mode in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| ArkUI_WordBreak* wordBreak | Pointer to the word breaking mode. The value is an enumerated value of [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak). |
+| [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak)* wordBreak | Pointer to the word breaking mode. The value is an enumerated value of [ArkUI_WordBreak](capi-text-common-h.md#arkui_wordbreak). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetLineBreakStrategy()
 
@@ -3890,13 +3890,13 @@ Sets the line breaking strategy in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| OH_ArkUI_LineBreakStrategy lineBreakStrategy | Line breaking strategy. The value is an enumerated value of[OH_ArkUI_LineBreakStrategy](capi-text-common-h.md#oh_arkui_linebreakstrategy). |
+| [OH_ArkUI_LineBreakStrategy](capi-text-common-h.md#oh_arkui_linebreakstrategy) lineBreakStrategy | Line breaking strategy. The value is an enumerated value of[OH_ArkUI_LineBreakStrategy](capi-text-common-h.md#oh_arkui_linebreakstrategy). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetLineBreakStrategy()
 
@@ -3915,13 +3915,13 @@ Obtains the line breaking strategy in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| OH_ArkUI_LineBreakStrategy* lineBreakStrategy | Pointer to the line breaking strategy. The value is an enumerated value of[OH_ArkUI_LineBreakStrategy](capi-text-common-h.md#oh_arkui_linebreakstrategy). |
+| [OH_ArkUI_LineBreakStrategy](capi-text-common-h.md#oh_arkui_linebreakstrategy)* lineBreakStrategy | Pointer to the line breaking strategy. The value is an enumerated value of[OH_ArkUI_LineBreakStrategy](capi-text-common-h.md#oh_arkui_linebreakstrategy). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetParagraphSpacing()
 
@@ -3946,7 +3946,7 @@ Sets the paragraph spacing in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetParagraphSpacing()
 
@@ -3971,7 +3971,7 @@ Obtains the paragraph spacing in the paragraph style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetTextVerticalAlign()
 
@@ -3990,13 +3990,13 @@ Sets the text vertical alignment mode in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| ArkUI_TextVerticalAlignment verticalAlignment | Text vertical alignment mode. The value is an enumerated value of[ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment). |
+| [ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment) verticalAlignment | Text vertical alignment mode. The value is an enumerated value of[ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetTextVerticalAlign()
 
@@ -4015,13 +4015,13 @@ Obtains the text vertical alignment mode in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| ArkUI_TextVerticalAlignment* verticalAlignment | Text vertical alignment mode. The value is an enumerated value of[ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment). |
+| [ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment)* verticalAlignment | Text vertical alignment mode. The value is an enumerated value of[ArkUI_TextVerticalAlignment](capi-text-common-h.md#arkui_textverticalalignment). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_SetTextDirection()
 
@@ -4040,13 +4040,13 @@ Sets the text direction in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| ArkUI_TextDirection textDirection | Text direction. The value is an enumerated value of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection). |
+| [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection) textDirection | Text direction. The value is an enumerated value of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorParagraphStyle_GetTextDirection()
 
@@ -4065,13 +4065,13 @@ Obtains the text direction in the paragraph style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorParagraphStyle* style | Pointer to the [OH_ArkUI_TextEditorParagraphStyle](capi-arkui-nativemodule-oh-arkui-texteditorparagraphstyle.md) object. |
-| ArkUI_TextDirection* textDirection | Pointer to the text direction. The value is an enumerated value of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection). |
+| [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection)* textDirection | Pointer to the text direction. The value is an enumerated value of [ArkUI_TextDirection](capi-text-common-h.md#arkui_textdirection). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_SetTypingParagraphStyle()
 
@@ -4096,7 +4096,7 @@ Sets the typing paragraph style using the styled string controller.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_SetFontColor()
 
@@ -4121,7 +4121,7 @@ Sets the font color of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_GetFontColor()
 
@@ -4146,7 +4146,7 @@ Obtains the font color of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_SetFontSize()
 
@@ -4171,7 +4171,7 @@ Sets the font size of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_GetFontSize()
 
@@ -4196,7 +4196,7 @@ Obtains the font size of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_SetFontStyle()
 
@@ -4215,13 +4215,13 @@ Sets the font style of the text style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorTextStyle* style | Pointer to the text style of the **TextEditor** component. |
-| ArkUI_FontStyle fontStyle | Font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
+| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle) fontStyle | Font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_GetFontStyle()
 
@@ -4240,13 +4240,13 @@ Obtains the font style of the text style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorTextStyle* style | Pointer to the text style of the **TextEditor** component. |
-| ArkUI_FontStyle* fontStyle | Pointer to the font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
+| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)* fontStyle | Pointer to the font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_SetFontWeight()
 
@@ -4271,7 +4271,7 @@ Sets the font weight of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_GetFontWeight()
 
@@ -4296,7 +4296,7 @@ Obtains the font weight of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_SetFontFamily()
 
@@ -4321,7 +4321,7 @@ Sets the font family of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_GetFontFamily()
 
@@ -4348,7 +4348,7 @@ Obtains the font family of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_SetDecoration()
 
@@ -4367,13 +4367,13 @@ Sets the text decoration options of the text style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorTextStyle* style | Pointer to the text style of the **TextEditor** component. |
-| OH_ArkUI_DecorationStyleOptions* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
+| [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_GetDecoration()
 
@@ -4392,13 +4392,13 @@ Obtains the text decoration options of the text style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorTextStyle* style | Pointer to the text style of the **TextEditor** component. |
-| OH_ArkUI_DecorationStyleOptions* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
+| [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* options | Pointer to the [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_SetTextShadows()
 
@@ -4424,7 +4424,7 @@ Sets the text shadow options of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_GetTextShadows()
 
@@ -4451,7 +4451,7 @@ Obtains the text shadow options of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_SetLineHeight()
 
@@ -4476,7 +4476,7 @@ Sets the line height of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_GetLineHeight()
 
@@ -4501,7 +4501,7 @@ Obtains the line height of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_SetLetterSpacing()
 
@@ -4526,7 +4526,7 @@ Sets the letter spacing of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_GetLetterSpacing()
 
@@ -4551,7 +4551,7 @@ Obtains the letter spacing of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_SetFontFeature()
 
@@ -4576,7 +4576,7 @@ Sets the font feature of the text style, such as monospaced digits.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_GetFontFeature()
 
@@ -4603,7 +4603,7 @@ Obtains the font feature of the text style, such as monospaced digits.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_SetHalfLeading()
 
@@ -4628,7 +4628,7 @@ Sets whether to evenly distribute the line spacing to the top and bottom of each
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_GetHalfLeading()
 
@@ -4653,7 +4653,7 @@ Obtains whether the line spacing is evenly distributed to the top and bottom of 
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_SetTextBackgroundColor()
 
@@ -4678,7 +4678,7 @@ Sets the text background color of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_GetTextBackgroundColor()
 
@@ -4703,7 +4703,7 @@ Obtains the text background color of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_SetTextBackgroundRadius()
 
@@ -4731,7 +4731,7 @@ Sets the radius of the rounded corner of the text background of the text style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorTextStyle_GetTextBackgroundRadius()
 
@@ -4759,7 +4759,7 @@ Obtains the radius of the rounded corner of the text background of the text styl
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_SetTypingStyle()
 
@@ -4784,7 +4784,7 @@ Sets the typing style using the styled string controller.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_GetTypingStyle()
 
@@ -4809,7 +4809,7 @@ Obtains the typing style using the styled string controller.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_SetSpanType()
 
@@ -4834,7 +4834,7 @@ Sets the span type of the text selection menu in the text editor.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_GetSpanType()
 
@@ -4859,7 +4859,7 @@ Obtains the span type of the text selection menu in the text editor.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_SetContentNode()
 
@@ -4884,7 +4884,7 @@ Sets the content node of the text selection menu in the text editor.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_GetContentNode()
 
@@ -4909,7 +4909,7 @@ Obtains the content node of the text selection menu in the text editor.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_SetResponseType()
 
@@ -4934,7 +4934,7 @@ Sets the response type of the text selection menu in the text editor.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_GetResponseType()
 
@@ -4959,7 +4959,7 @@ Obtains the response type of the text selection menu in the text editor.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_SetMenuType()
 
@@ -4984,7 +4984,7 @@ Sets the type of the text selection menu in the text editor.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_GetMenuType()
 
@@ -5009,7 +5009,7 @@ Obtains the type of the text selection menu in the text editor.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuShowCallback()
 
@@ -5035,7 +5035,7 @@ Sets the callback triggered when the text selection menu is displayed.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuHideCallback()
 
@@ -5061,7 +5061,7 @@ Sets the callback triggered when the text selection menu is hidden.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuAppearCallback()
 
@@ -5087,7 +5087,7 @@ Sets the callback triggered when the text selection menu appears.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuDisappearCallback()
 
@@ -5113,7 +5113,7 @@ Sets the callback triggered when the text selection menu disappears.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_SetHapticFeedbackMode()
 
@@ -5138,7 +5138,7 @@ Sets the haptic feedback mode of the text selection menu in the text editor.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorSelectionMenuOptions_GetHapticFeedbackMode()
 
@@ -5163,7 +5163,7 @@ Obtains the haptic feedback mode of the text selection menu in the text editor.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_CloseSelectionMenu()
 
@@ -5187,7 +5187,7 @@ Closes the text selection menu of the styled string controller in the text edito
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_GetSelection()
 
@@ -5216,7 +5216,7 @@ Obtains the selected area using the styled string controller.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_SetStyledString()
 
@@ -5238,13 +5238,13 @@ Sets the styled string displayed using the styled string controller.
 | Parameter | Description |
 | -- | -- |
 | const OH_ArkUI_TextEditorStyledStringController* controller | Pointer to the [OH_ArkUI_TextEditorStyledStringController](capi-arkui-nativemodule-oh-arkui-texteditorstyledstringcontroller.md) object. |
-| const ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_GetStyledString()
 
@@ -5266,13 +5266,13 @@ Obtains the styled string displayed using the styled string controller.
 | Parameter | Description |
 | -- | -- |
 | const OH_ArkUI_TextEditorStyledStringController* controller | Pointer to the [OH_ArkUI_TextEditorStyledStringController](capi-arkui-nativemodule-oh-arkui-texteditorstyledstringcontroller.md) object. |
-| ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_SetStyledPlaceholder()
 
@@ -5294,13 +5294,13 @@ Sets the placeholder text in the styled string style using the styled string con
 | Parameter | Description |
 | -- | -- |
 | const OH_ArkUI_TextEditorStyledStringController* controller | Pointer to the [OH_ArkUI_TextEditorStyledStringController](capi-arkui-nativemodule-oh-arkui-texteditorstyledstringcontroller.md) object. |
-| const ArkUI_StyledString_Descriptor* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
+| [const ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to the [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md) object. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TextEditorStyledStringController_ScrollToVisible()
 
@@ -5326,7 +5326,7 @@ Scroll the text editor component to make the specified content visible.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_PickerIndicatorStyle_ConfigureBackground()
 
@@ -5351,7 +5351,7 @@ Set the parameters of background style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if success.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) The parameters set need to be consistent with         the type of the created instance. If they are not consistent, this error code will be returned.         This interface only takes effect when the type is "background". |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if success.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) The parameters set need to be consistent with         the type of the created instance. If they are not consistent, this error code will be returned.         This interface only takes effect when the type is "background". |
 
 ### OH_ArkUI_PickerIndicatorStyle_ConfigureDivider()
 
@@ -5376,7 +5376,7 @@ Set the parameters of divider style.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if success.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) The parameters set need to be consistent with         the type of the created instance. If they are not consistent, this error code will be returned.         This interface only takes effect when the type is "divider". |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if success.         Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) The parameters set need to be consistent with         the type of the created instance. If they are not consistent, this error code will be returned.         This interface only takes effect when the type is "divider". |
 
 ### OH_ArkUI_CrossLanguageOption_SetTreeOperatingStatus()
 
@@ -5480,7 +5480,7 @@ Sets angle of linear gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_LinearGradientOptions_GetAngle()
 
@@ -5505,7 +5505,7 @@ Gets angle of linear gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_LinearGradientOptions_SetDirection()
 
@@ -5530,7 +5530,7 @@ Sets direction of linear gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_LinearGradientOptions_GetDirection()
 
@@ -5555,7 +5555,7 @@ Gets direction of linear gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_LinearGradientOptions_SetRepeating()
 
@@ -5580,7 +5580,7 @@ Sets whether colors are repeated in linear gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_LinearGradientOptions_GetRepeating()
 
@@ -5605,7 +5605,7 @@ Gets whether colors are repeated in linear gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_LinearGradientOptions_SetColorStop()
 
@@ -5632,7 +5632,7 @@ Sets color stops of linear gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_LinearGradientOptions_GetColorStop()
 
@@ -5660,7 +5660,7 @@ Gets color stops of linear gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 ### OH_ArkUI_RadialGradientOptions_Create()
 
@@ -5721,7 +5721,7 @@ Sets centerX of radial gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_RadialGradientOptions_GetCenterX()
 
@@ -5746,7 +5746,7 @@ Gets centerX of radial gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_RadialGradientOptions_SetCenterY()
 
@@ -5771,7 +5771,7 @@ Sets centerY of radial gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_RadialGradientOptions_GetCenterY()
 
@@ -5796,7 +5796,7 @@ Gets centerY of radial gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_RadialGradientOptions_SetRadius()
 
@@ -5821,7 +5821,7 @@ Sets radius of radial gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_RadialGradientOptions_GetRadius()
 
@@ -5846,7 +5846,7 @@ Gets radius of radial gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_RadialGradientOptions_SetRepeating()
 
@@ -5871,7 +5871,7 @@ Sets whether colors are repeated in radial gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_RadialGradientOptions_GetRepeating()
 
@@ -5896,7 +5896,7 @@ Gets whether colors are repeated in radial gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_RadialGradientOptions_SetColorStop()
 
@@ -5923,7 +5923,7 @@ Sets color stops of radial gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code. |
 
 ### OH_ArkUI_RadialGradientOptions_GetColorStop()
 
@@ -5951,6 +5951,6 @@ Gets color stops of radial gradient options.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Returns the result code.          Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.          Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter exception occurs. |
 
 

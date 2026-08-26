@@ -345,7 +345,7 @@ int32_t OH_ArkUI_DragEvent_SetData(ArkUI_DragEvent* event, OH_UdmfData* data)
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_DragEvent](capi-arkui-nativemodule-arkui-dragevent.md)* event | ArkUI_DragEvent事件指针。 |
-| [OH_UdmfData](../ArkData/capi-udmf-oh-udmfdata.md)* data | 拖拽数据。 |
+| OH_UdmfData* data | 拖拽数据。 |
 
 **返回：**
 
@@ -370,7 +370,7 @@ ArkUI_ErrorCode OH_ArkUI_DragEvent_SetDataLoadParams(ArkUI_DragEvent* event, OH_
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_DragEvent](capi-arkui-nativemodule-arkui-dragevent.md)* event | ArkUI_DragEvent事件指针。 |
-| [OH_UdmfDataLoadParams](../ArkData/capi-udmf-oh-udmfdataloadparams.md)* dataLoadParams | 落入操作时使用的数据加载参数。 |
+| OH_UdmfDataLoadParams* dataLoadParams | 落入操作时使用的数据加载参数。 |
 
 **返回：**
 
@@ -395,7 +395,7 @@ int32_t OH_ArkUI_DragEvent_GetUdmfData(ArkUI_DragEvent* event, OH_UdmfData *data
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_DragEvent](capi-arkui-nativemodule-arkui-dragevent.md)* event | ArkUI_DragEvent事件指针。 |
-| [OH_UdmfData](../ArkData/capi-udmf-oh-udmfdata.md) *data | OH_UdmfData 拖拽的数据指针，应用在接收时需通过 [OH_UdmfData_Create](../ArkData/capi-udmf-h.md#oh_udmfdata_create) 方法创建一个用于接收数据的指针。 |
+| OH_UdmfData *data | OH_UdmfData 拖拽的数据指针，应用在接收时需通过 [OH_UdmfData_Create](../ArkData/capi-udmf-h.md#oh_udmfdata_create) 方法创建一个用于接收数据的指针。 |
 
 **返回：**
 
@@ -884,7 +884,7 @@ int32_t OH_ArkUI_DragEvent_StartDataLoading(ArkUI_DragEvent* event, OH_UdmfGetDa
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_DragEvent](capi-arkui-nativemodule-arkui-dragevent.md)* event | ArkUI_DragEvent事件指针。 |
-| [OH_UdmfGetDataParams](../ArkData/capi-udmf-oh-udmfgetdataparams.md)* options | OH_UdmfGetDataParams参数指针。 |
+| OH_UdmfGetDataParams* options | OH_UdmfGetDataParams参数指针。 |
 | char* key | 返回数据设置成功之后的key值，字符串长度不小于{@link UDMF_KEY_BUFFER_LEN}。 |
 | unsigned int keyLen | 表示key字符串的长度。 |
 
@@ -1110,7 +1110,7 @@ int32_t OH_ArkUI_SetNodeDragPreview(ArkUI_NodeHandle node, OH_PixelmapNative* pr
 | 参数项 | 描述 |
 | -- | -- |
 | ArkUI_NodeHandle node | 目标组件节点指针。 |
-| OH_PixelmapNative* preview | 自定义跟手图，使用 pixelmap 格式。 |
+| [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)* preview | 自定义跟手图，使用 pixelmap 格式。 |
 
 **返回：**
 
@@ -1437,7 +1437,7 @@ int32_t OH_ArkUI_DragAction_SetPixelMaps(ArkUI_DragAction* dragAction, OH_Pixelm
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_DragAction](capi-arkui-nativemodule-arkui-dragaction.md)* dragAction | 拖拽行为对象。 |
-| OH_PixelmapNative* pixelmapArray[] | Indicates the array of the drag previews to set, which must be pixel maps. |
+| [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)* pixelmapArray[] | Indicates the array of the drag previews to set, which must be pixel maps. |
 | int32_t size | 拖拽跟手图数量。 |
 
 **返回：**
@@ -1513,7 +1513,7 @@ int32_t OH_ArkUI_DragAction_SetData(ArkUI_DragAction* dragAction, OH_UdmfData* d
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_DragAction](capi-arkui-nativemodule-arkui-dragaction.md)* dragAction | 拖拽行为对象。 |
-| [OH_UdmfData](../ArkData/capi-udmf-oh-udmfdata.md)* data | 拖拽数据。 |
+| OH_UdmfData* data | 拖拽数据。 |
 
 **返回：**
 
@@ -1538,7 +1538,7 @@ ArkUI_ErrorCode OH_ArkUI_DragAction_SetDataLoadParams(ArkUI_DragAction* dragActi
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_DragAction](capi-arkui-nativemodule-arkui-dragaction.md)* dragAction | 拖拽行为对象。 |
-| [OH_UdmfDataLoadParams](../ArkData/capi-udmf-oh-udmfdataloadparams.md)* dataLoadParams | 在落入操作时使用的数据加载参数。 |
+| OH_UdmfDataLoadParams* dataLoadParams | 在落入操作时使用的数据加载参数。 |
 
 **返回：**
 

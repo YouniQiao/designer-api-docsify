@@ -305,7 +305,7 @@ Adds a gesture to a UI component.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Pointer to the ArkUI component node to which you want to add the gesture. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to the ArkUI component node to which you want to add the gesture. |
 |  [ArkUI_GestureRecognizer](capi-arkui-nativemodule-arkui-gesturerecognizer.md)* recognizer | Gesture to be added to the UI component. |
 |  [ArkUI_GesturePriority](capi-native-gesture-h.md#arkui_gesturepriority) mode | Mode of the gesture. |
 | [ArkUI_GestureMask](capi-native-gesture-h.md#arkui_gesturemask) mask | Gesture masking mode. |
@@ -330,7 +330,7 @@ Removes a gesture from a node.
 
 | 参数项 | 描述 |
 | -- | -- |
-| ArkUI_NodeHandle node | Pointer to the node from which you want to remove the gesture. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Pointer to the node from which you want to remove the gesture. |
 |  [ArkUI_GestureRecognizer](capi-arkui-nativemodule-arkui-gesturerecognizer.md)* recognizer | Gesture to be removed. |
 
 **返回：**

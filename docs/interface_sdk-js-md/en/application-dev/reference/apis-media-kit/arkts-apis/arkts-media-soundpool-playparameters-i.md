@@ -72,7 +72,7 @@ If this parameter is set to a negative value, it is automatically set to 0. If t
 rate?: number
 ```
 
-Playback rate. For details, see [AudioRendererRate](../../../reference/apis-audio-kit/arkts-apis-audio-e.md). Default value: **0**
+Playback rate. For details, see [AudioRendererRate](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererrate-e.md). Default value: **0**
 
 **Type:** number
 
