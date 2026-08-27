@@ -11,7 +11,7 @@ Provides APIs for interacting with the cloud sync service. You need to inherit t
 ## Modules to Import
 
 ```TypeScript
-import cloudExtension from '@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## connectAssetLoader
@@ -39,7 +39,7 @@ Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader,
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;rpc.RemoteObject & gt; | Promise used to return the RemoteObject instance of AssetLoader. |
+| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of AssetLoader. |
 
 **Examples**
 
@@ -85,7 +85,7 @@ Connects to a cloud database by obtaining a RemoteObject instance of CloudDB, wh
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;rpc.RemoteObject & gt; | Promise used to return the RemoteObject instance of CloudDB. |
+| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of CloudDB. |
 
 **Examples**
 
@@ -131,7 +131,7 @@ Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter, whi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;rpc.RemoteObject & gt; | Promise used to return the RemoteObject instance of ShareCenter. |
+| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of ShareCenter. |
 
 **Examples**
 
@@ -316,7 +316,7 @@ Subscribes to data. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Result & lt;SubscribeInfo & gt; & gt; | Promise used to return the result, including the subscription expiration time and subscription information. |
+| Promise&lt;Result&lt;SubscribeInfo&gt;&gt; | Promise used to return the result, including the subscription expiration time and subscription information. |
 
 **Examples**
 
@@ -359,13 +359,13 @@ Unsubscribes from data changes in the cloud. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unsubscribeInfo | Record & lt;string, Array & lt;string & gt; & gt; | Yes | Data to be unsubscribed from, in an array of KV pairs consisting of the application bundle name and database information. |
+| unsubscribeInfo | Record&lt;string, Array&lt;string&gt;&gt; | Yes | Data to be unsubscribed from, in an array of KV pairs consisting of the application bundle name and database information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. |
+| Promise&lt;number&gt; | Promise used to return the result. |
 
 **Examples**
 

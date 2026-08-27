@@ -82,7 +82,7 @@ Obtains the mouse pointer speed. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the mouse pointer speed. |
+| Promise&lt;number&gt; | Promise used to return the mouse pointer speed. |
 
 **Error codes:**
 

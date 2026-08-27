@@ -9,9 +9,6 @@ ControllerHandler is a helper class provided by ArkWeb for handling the allocati
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor

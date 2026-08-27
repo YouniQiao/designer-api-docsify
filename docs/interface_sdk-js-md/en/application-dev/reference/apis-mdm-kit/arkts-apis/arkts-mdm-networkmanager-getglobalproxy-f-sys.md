@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## getGlobalProxy
@@ -99,7 +99,7 @@ Obtains the global network proxy. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;connection.HttpProxy & gt; | Promise used to return the global HTTP proxy information obtained. |
+| Promise&lt;connection.HttpProxy&gt; | Promise used to return the global HTTP proxy information obtained. |
 
 **Error codes:**
 

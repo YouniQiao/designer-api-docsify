@@ -4,7 +4,7 @@
 export type ValidationCallback = (context: ValidationContext) => boolean | Promise<boolean>
 ```
 
-自定义远程验证。 该API使用Promise异步返回结果。
+自定义远程验证。该API使用Promise异步返回结果。
 
 **起始版本：** 26.0.0
 
@@ -22,4 +22,4 @@ export type ValidationCallback = (context: ValidationContext) => boolean | Promi
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean \| Promise & lt;boolean & gt; | 返回布尔值表示验证是否通过。true表示验证通过，false表示验证不通过。 支持返回Promise对象，用于异步验证场景。 |
+| boolean \| Promise&lt;boolean&gt; | 返回布尔值表示验证是否通过。true表示验证通过，false表示验证不通过。支持返回Promise对象，用于异步验证场景。 |

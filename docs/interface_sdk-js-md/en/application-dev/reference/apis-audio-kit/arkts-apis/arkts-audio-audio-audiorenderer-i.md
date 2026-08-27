@@ -1,6 +1,8 @@
 # AudioRenderer
 
-This interface provides APIs for audio rendering.Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) to create an AudioRenderer instance.
+This interface provides APIs for audio rendering.
+
+Before calling any API in AudioRenderer, you must use [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md) to create an AudioRenderer instance.
 
 > **NOTE：**
 > 
@@ -13,8 +15,7 @@ This interface provides APIs for audio rendering.Before calling any API in Audio
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## drain
@@ -65,7 +66,7 @@ Drains the playback buffer. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -95,7 +96,7 @@ Flushes the buffer. This API is available when [AudioState](arkts-audio-audio-au
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -229,7 +230,7 @@ Obtains the stream ID of this audio renderer. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the stream ID. |
+| Promise&lt;number&gt; | Promise used to return the stream ID. |
 
 **Examples**
 
@@ -349,7 +350,7 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the timestamp. |
+| Promise&lt;number&gt; | Promise used to return the timestamp. |
 
 **Examples**
 
@@ -379,7 +380,13 @@ audioRenderer.getAudioTime().then((timestamp: number) => {
 getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 ```
 
-Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API uses a promise to return the result.This information is commonly used for audio and video synchronization.Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called.Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
+Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API uses a promise to return the result.
+
+This information is commonly used for audio and video synchronization.
+
+Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called.
+
+Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
 
 **Since:** 19
 
@@ -425,7 +432,13 @@ audioRenderer.getAudioTimestampInfo().then((audioTimestampInfo: audio.AudioTimes
 getAudioTimestampInfoSync(): AudioTimestampInfo
 ```
 
-Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API returns the result synchronously.This information is commonly used for audio and video synchronization.Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called.Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
+Obtains the timestamp and position information of an output audio stream. It adapts to the speed adjustment interface. This API returns the result synchronously.
+
+This information is commonly used for audio and video synchronization.
+
+Note that when the actual playback position (**framePosition**) is 0, the timestamp remains fixed until the stream begins to play. The playback position is also reset when **Flush** is called.
+
+Additionally, changes in the audio stream route, such as switching devices or output types, will reset the playback position, whereas the timestamp keeps increasing. You are advised to call this API to obtain the corresponding value only when the actual playback position and timestamp are stable. This API adapts to the speed adjustment interface. For example, if the playback speed is set to 2x, the rate at which the playback position increases is also twice the normal speed.
 
 **Since:** 19
 
@@ -576,7 +589,7 @@ Obtains a reasonable minimum buffer size in bytes for rendering. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the buffer size. |
+| Promise&lt;number&gt; | Promise used to return the buffer size. |
 
 **Examples**
 
@@ -901,7 +914,7 @@ Obtains the maximum volume of the audio stream. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the maximum volume of the audio stream. |
+| Promise&lt;number&gt; | Promise used to return the maximum volume of the audio stream. |
 
 **Examples**
 
@@ -995,7 +1008,7 @@ Obtains the minimum volume of the audio stream. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the minimum volume of the audio stream. |
+| Promise&lt;number&gt; | Promise used to return the minimum volume of the audio stream. |
 
 **Examples**
 
@@ -1479,7 +1492,7 @@ Obtains the number of underflow audio frames in the audio stream that is being p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the number of underflow audio frames. |
+| Promise&lt;number&gt; | Promise used to return the number of underflow audio frames. |
 
 **Examples**
 
@@ -1729,7 +1742,11 @@ Unsubscribes from the audio data write event. This API uses an asynchronous call
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.The AudioRenderer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus.After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
+
+The AudioRenderer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus.
+
+After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 9
 
@@ -1755,7 +1772,9 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 on(type: 'markReach', frame: number, callback: Callback<number>): void
 ```
 
-Subscribes to the mark reached event, which is triggered (only once) when the number of frames rendered reaches the value of the **frame** parameter. This API uses an asynchronous callback to return the result.For example, if **frame** is set to **100**, the callback is invoked when the number of rendered frames reaches the 100th frame.
+Subscribes to the mark reached event, which is triggered (only once) when the number of frames rendered reaches the value of the **frame** parameter. This API uses an asynchronous callback to return the result.
+
+For example, if **frame** is set to **100**, the callback is invoked when the number of rendered frames reaches the 100th frame.
 
 **Since:** 8
 
@@ -1775,7 +1794,9 @@ Subscribes to the mark reached event, which is triggered (only once) when the nu
 on(type: 'periodReach', frame: number, callback: Callback<number>): void
 ```
 
-Subscribes to the period reached event, which is triggered each time the number of frames rendered reaches the value of the **frame** parameter. In other words, the information is reported periodically. This API uses an asynchronous callback to return the result.For example, if **frame** is set to **10**, the callback is invoked each time 10 frames are rendered, for example, when the number of frames rendered reaches the 10th frame, 20th frame, and 30th frame.
+Subscribes to the period reached event, which is triggered each time the number of frames rendered reaches the value of the **frame** parameter. In other words, the information is reported periodically. This API uses an asynchronous callback to return the result.
+
+For example, if **frame** is set to **10**, the callback is invoked each time 10 frames are rendered, for example, when the number of frames rendered reaches the 10th frame, 20th frame, and 30th frame.
 
 **Since:** 8
 
@@ -1866,7 +1887,9 @@ Subscribes to the change event of audio output devices and reasons, which is tri
 on(type: 'writeData', callback: AudioRendererWriteDataCallback): void
 ```
 
-Subscribes to the audio data write event, which is triggered when audio data needs to be written. This API uses an asynchronous callback to return the result.The callback function is used only to write audio data. Do not call AudioRenderer APIs in it.
+Subscribes to the audio data write event, which is triggered when audio data needs to be written. This API uses an asynchronous callback to return the result.
+
+The callback function is used only to write audio data. Do not call AudioRenderer APIs in it.
 
 **Since:** 11
 
@@ -1934,7 +1957,7 @@ Pauses this audio renderer. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -2021,7 +2044,7 @@ Releases the renderer. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -2117,7 +2140,7 @@ Sets an audio effect mode. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2189,13 +2212,13 @@ Temporarily changes the current audio device This function applies on audiorende
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | Yes | the available deviceTypes are EARPIECE: Built-in earpiece SPEAKER: Built-in speaker DEFAULT: System default output device |
+| deviceType | DeviceType | Yes | the available deviceTypes are EARPIECE: Built-in earpiece SPEAKER: Built-in speaker DEFAULT: System default output device |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -2338,7 +2361,7 @@ Sets the audio interruption mode for the application. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -2415,7 +2438,7 @@ Sets the loudness gain of this stream. The default loudness gain is 0.0dB. The s
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -2493,7 +2516,7 @@ Sets the render rate. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -2513,7 +2536,9 @@ audioRenderer.setRenderRate(audio.AudioRendererRate.RENDER_RATE_NORMAL).then(() 
 setSilentModeAndMixWithOthers(on: boolean): void
 ```
 
-Sets the silent mode in concurrent playback for the audio stream.If the silent mode in concurrent playback is enabled, the system mutes the audio stream and does not interrupt other audio streams. If the silent mode in concurrent playback is disabled, the audio stream can gain focus based on the system focus strategy.
+Sets the silent mode in concurrent playback for the audio stream.
+
+If the silent mode in concurrent playback is enabled, the system mutes the audio stream and does not interrupt other audio streams. If the silent mode in concurrent playback is disabled, the audio stream can gain focus based on the system focus strategy.
 
 **Since:** 12
 
@@ -2617,7 +2642,7 @@ Sets the volume for the audio stream. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -2740,7 +2765,7 @@ Starts this audio renderer. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise object, which indicates that the renderer is started successfully. If the operation fails, an error object with one of the following error codes is returned: |
+| Promise&lt;void&gt; | Promise object, which indicates that the renderer is started successfully. If the operation fails, an error object with one of the following error codes is returned: |
 
 **Examples**
 
@@ -2848,7 +2873,7 @@ Stops this audio renderer. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -2979,7 +3004,7 @@ Writes the buffer. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the number of written bytes. |
+| Promise&lt;number&gt; | Promise used to return the number of written bytes. |
 
 **Examples**
 

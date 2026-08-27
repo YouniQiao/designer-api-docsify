@@ -26,7 +26,7 @@ bundle: string
 uid?: number
 ```
 
-应用的UID。 从ApplicationInfo获取，默认为0。 应用分身场景下，此参数为必填项。
+应用的UID。从ApplicationInfo获取，默认为0。应用分身场景下，此参数为必填项。
 
 **类型：** number
 

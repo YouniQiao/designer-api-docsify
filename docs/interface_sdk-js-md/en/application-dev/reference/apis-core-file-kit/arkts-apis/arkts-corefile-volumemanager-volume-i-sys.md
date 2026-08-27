@@ -11,7 +11,7 @@ Get All Volumes.
 ## Modules to Import
 
 ```TypeScript
-import volumeManager from '@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## description
@@ -152,10 +152,14 @@ Whether the volume can be removed. Currently, only removable storage devices are
 state: number
 ```
 
-Volume status.  
-**0**: The volume is unmounted.  
-**1**: The volume is being checked.  
-**2**: The volume is mounted.  
+Volume status.
+
+**0**: The volume is unmounted.
+
+**1**: The volume is being checked.
+
+**2**: The volume is mounted.
+
 **3**: The volume is being ejected.
 
 **Type:** number

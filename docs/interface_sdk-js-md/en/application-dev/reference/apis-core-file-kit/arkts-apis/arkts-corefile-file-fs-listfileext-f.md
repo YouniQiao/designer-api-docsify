@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## listFileExt
@@ -34,7 +34,7 @@ Lists all file names in a directory. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string[] & gt; | Promise used to return the file names listed. |
+| Promise&lt;string[]&gt; | Promise used to return the file names listed. |
 
 **Error codes:**
 

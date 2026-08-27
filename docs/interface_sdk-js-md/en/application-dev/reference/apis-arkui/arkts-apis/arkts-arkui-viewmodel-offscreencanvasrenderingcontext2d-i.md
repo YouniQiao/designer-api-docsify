@@ -1,6 +1,8 @@
 # OffscreenCanvasRenderingContext2D
 
-Provides a 2D rendering context for the drawing surface of the &lt; Canvas &gt; element. It is used to draw shapes, text, images and other objects.@interface OffscreenCanvasRenderingContext2D
+Provides a 2D rendering context for the drawing surface of the &lt; Canvas &gt; element. It is used to draw shapes, text, images and other objects.
+
+@interface OffscreenCanvasRenderingContext2D
 
 **Since:** 7
 
@@ -170,7 +172,7 @@ Create an ImageData object.
 
 | Type | Description |
 | --- | --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData New ImageData object with width and height specified. |
+| ImageData | ImageData New ImageData object with width and height specified. |
 
 ## createImageData
 
@@ -190,13 +192,13 @@ Create an ImageData object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | Copy an object of the same width and height from an existing ImageData object The image itself is not allowed to be copied. |
+| imageData | ImageData | Yes | Copy an object of the same width and height from an existing ImageData object The image itself is not allowed to be copied. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData New ImageData object with width and height specified. |
+| ImageData | ImageData New ImageData object with width and height specified. |
 
 ## createLinearGradient
 
@@ -297,7 +299,7 @@ Create a drawing style template.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | The CanvasImageSource object that is the source of the duplicate image. |
+| image | Image | Yes | The CanvasImageSource object that is the source of the duplicate image. |
 | repetition | string | Yes | Specify how to repeat images. |
 
 **Return value:**
@@ -355,7 +357,7 @@ Draw an Image object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | An element drawn to the context. |
+| image | Image | Yes | An element drawn to the context. |
 | dx | number | Yes | The top left corner of the image is the X-axis coordinates on the target canvas. |
 | dy | number | Yes | The top left corner of the image is the Y-axis coordinates on the target canvas. |
 | dw | number | Yes | Image The width drawn on the target canvas. |
@@ -389,7 +391,7 @@ Draw an Image object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | An element drawn to the context. |
+| image | Image | Yes | An element drawn to the context. |
 | sx | number | Yes | The upper-left X-axis coordinates of the image's rectangular (clipped) selection box that need to be drawn into the target context. |
 | sy | number | Yes | The upper-left Y-axis coordinates of the image's rectangular (clipped) selection box that need to be drawn into the target context. |
 | sw | number | Yes | The width of the image's rectangular (clipped) selection box that needs to be drawn into the target context. |
@@ -583,7 +585,7 @@ Get an ImageData object.
 
 | Type | Description |
 | --- | --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData An ImageData object that contains the rectangular ImageData given by the canvas. |
+| ImageData | ImageData An ImageData object that contains the rectangular ImageData given by the canvas. |
 
 ## getPixelMap
 
@@ -810,7 +812,7 @@ Draws the specified ImageData object to the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | An array object containing pixel values. |
+| imageData | ImageData | Yes | An array object containing pixel values. |
 | dx | number | Yes | The offset of the position of the source image data in the target canvas (the offset in the X-axis direction). |
 | dy | number | Yes | The offset of the position of the source image data in the target canvas (the Y-axis offset). |
 
@@ -840,7 +842,7 @@ Draws the specified ImageData object to the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | An array object containing pixel values. |
+| imageData | ImageData | Yes | An array object containing pixel values. |
 | dx | number | Yes | The offset of the position of the source image data in the target canvas (the offset in the X-axis direction). |
 | dy | number | Yes | he offset of the position of the source image data in the target canvas (the Y-axis offset). |
 | dirtyX | number | Yes | In the source image data, the position of the upper left corner of the rectangular region Default is the upper left corner of the entire image data (x coordinate). |
@@ -995,7 +997,7 @@ Sets the dotted spacing of a line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| segments | Array & lt;number & gt; | Yes | A set of numbers describing the length of alternating drawn line segments and spacing (coordinate space units). |
+| segments | Array&lt;number&gt; | Yes | A set of numbers describing the length of alternating drawn line segments and spacing (coordinate space units). |
 
 ## setTransform
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formHost from '@kit.FormKit';
+import { formHost } from '@kit.FormKit';
 ```
 
 ## getFormIdsByFormLocation
@@ -34,7 +34,7 @@ Obtains the list of widget IDs at a specified location on the device. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the obtained widget ID list. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the obtained widget ID list. |
 
 **Error codes:**
 

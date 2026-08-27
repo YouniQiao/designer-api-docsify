@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## setBackgroundAllowed
@@ -77,7 +77,7 @@ Sets whether background applications are allowed to access the network. This API
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

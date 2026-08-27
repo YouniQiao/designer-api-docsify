@@ -1,6 +1,8 @@
 # OverlayManagerOptions
 
-the property of OverlayManager.@interface OverlayManagerOptions
+the property of OverlayManager.
+
+@interface OverlayManagerOptions
 
 **起始版本：** 15
 

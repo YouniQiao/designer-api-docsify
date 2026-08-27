@@ -1,6 +1,8 @@
 # MediaQueryListener
 
-Implements the media query listener, including the first query result when the listener is applied for. The specified media query condition, for example, **'(width &lt;= 600vp)'**, is compared system information. If related information is not initialized during the first query, **matches** returns **false**.Inherits from [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md).
+Implements the media query listener, including the first query result when the listener is applied for. The specified media query condition, for example, **'(width &lt;= 600vp)'**, is compared system information. If related information is not initialized during the first query, **matches** returns **false**.
+
+Inherits from [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md).
 
 **Inheritance/Implementation:** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)
 
@@ -11,7 +13,7 @@ Implements the media query listener, including the first query result when the l
 ## Modules to Import
 
 ```TypeScript
-import mediaquery from '@kit.ArkUI';
+import { mediaquery } from '@kit.ArkUI';
 ```
 
 ## off('change')

@@ -1,6 +1,16 @@
 # By
 
-UiTest框架通过By类提供了丰富的控件特征描述API，用于进行控件筛选来匹配/查找出目标控件。By提供的API能力具有以下几个特点：1、支持单属性匹配和多属性组合匹配，例如同时指定目标控件text和id。2、控件属性支持多种匹配模式。3、支持控件绝对定位，相对定位，可通过[By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isbefore)和 [By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isafter)等API限定邻近控件特征进行辅助定位。By类提供的所有API均为同步接口，建议使用者通过静态构造器BY来链式创建By对象。
+UiTest框架通过By类提供了丰富的控件特征描述API，用于进行控件筛选来匹配/查找出目标控件。
+
+By提供的API能力具有以下几个特点：
+
+1、支持单属性匹配和多属性组合匹配，例如同时指定目标控件text和id。
+
+2、控件属性支持多种匹配模式。
+
+3、支持控件绝对定位，相对定位，可通过[By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isbefore)和[By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isafter)等API限定邻近控件特征进行辅助定位。
+
+By类提供的所有API均为同步接口，建议使用者通过静态构造器BY来链式创建By对象。
 
 > **说明：**
 > 

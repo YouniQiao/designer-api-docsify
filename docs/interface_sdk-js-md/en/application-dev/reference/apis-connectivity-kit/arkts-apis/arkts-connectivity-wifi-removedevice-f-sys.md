@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## removeDevice
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function removeDevice(id: number): boolean
 ```
 
-Deletes a Wi-Fi network with a specified ID.<p>After a Wi-Fi network is deleted, its configuration will be deleted from the list of Wi-Fi configurations. If the Wi-Fi network is being connected, the connection will be interrupted. The application can only delete Wi-Fi networks it has created.
+Deletes a Wi-Fi network with a specified ID.
+
+<p>After a Wi-Fi network is deleted, its configuration will be deleted from the list of Wi-Fi configurations. If the Wi-Fi network is being connected, the connection will be interrupted. The application can only delete Wi-Fi networks it has created.
 
 **Since:** 7
 

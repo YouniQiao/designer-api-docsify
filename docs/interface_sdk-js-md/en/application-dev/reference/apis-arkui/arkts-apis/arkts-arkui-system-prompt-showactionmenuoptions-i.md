@@ -1,6 +1,8 @@
 # ShowActionMenuOptions
 
-Defines the option of ShowActionMenu.@interface ShowActionMenuOptions
+Defines the option of ShowActionMenu.
+
+@interface ShowActionMenuOptions
 
 **Since:** 11
 
@@ -9,7 +11,7 @@ Defines the option of ShowActionMenu.@interface ShowActionMenuOptions
 ## Modules to Import
 
 ```TypeScript
-import Prompt, { Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
+import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
 ```
 
 ## complete

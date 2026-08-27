@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import fontManager from '@kit.LocalizationKit';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## uninstallFont
@@ -32,7 +32,7 @@ Uninstalls an installed font file from the system font library by font name. Thi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the uninstallation result. |
+| Promise&lt;number&gt; | Promise used to return the uninstallation result. |
 
 **Error codes:**
 

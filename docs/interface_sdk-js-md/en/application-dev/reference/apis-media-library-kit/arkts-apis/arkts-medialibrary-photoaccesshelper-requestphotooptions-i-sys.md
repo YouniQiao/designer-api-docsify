@@ -11,7 +11,7 @@ Defines the options for obtaining the thumbnail of an image or video.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## requestPhotoType

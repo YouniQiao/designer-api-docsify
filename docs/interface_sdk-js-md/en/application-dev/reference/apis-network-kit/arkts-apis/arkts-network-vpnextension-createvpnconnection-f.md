@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import vpnExtension from '@kit.NetworkKit';
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## createVpnConnection
@@ -28,13 +28,13 @@ Creates a **VpnConnection** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [VpnExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-common-vpnextensioncontext-t.md) | Yes | Specified context. |
+| context | VpnExtensionContext | Yes | Specified context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) | VPN connection object. |
+| VpnConnection | VPN connection object. |
 
 **Error codes:**
 

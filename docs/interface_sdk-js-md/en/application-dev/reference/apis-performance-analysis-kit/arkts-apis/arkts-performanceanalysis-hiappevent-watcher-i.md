@@ -23,7 +23,11 @@ Defines parameters for a **Watcher** object. This API is used to configure and m
 onReceive?: (domain: string, appEventGroups: Array<AppEventGroup>) => void
 ```
 
-Real-time subscription callback. Only this callback function is triggered if it is passed together with **onTrigger**. The input arguments are described as follows:domain: domain name.appEventGroups: event group.
+Real-time subscription callback. Only this callback function is triggered if it is passed together with **onTrigger**. The input arguments are described as follows:
+
+domain: domain name.
+
+appEventGroups: event group.
 
 **Since:** 11
 
@@ -44,9 +48,12 @@ Real-time subscription callback. Only this callback function is triggered if it 
 onTrigger?: (curRow: number, curSize: number, holder: AppEventPackageHolder) => void
 ```
 
-Subscription callback. This parameter takes effect only when it is passed together with **triggerCondition**. The input arguments are described as follows:  
-**curRow**: total number of subscription events when the callback is triggered.  
-**curSize**: total size of subscribed events when the callback is triggered, in bytes.  
+Subscription callback. This parameter takes effect only when it is passed together with **triggerCondition**. The input arguments are described as follows:
+
+**curRow**: total number of subscription events when the callback is triggered.
+
+**curSize**: total size of subscribed events when the callback is triggered, in bytes.
+
 **holder**: subscription data holder, which can be used to process subscribed events.
 
 **Since:** 9

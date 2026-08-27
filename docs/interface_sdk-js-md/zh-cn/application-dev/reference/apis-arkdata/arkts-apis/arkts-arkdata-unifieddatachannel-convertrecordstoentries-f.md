@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import unifiedDataChannel from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## convertRecordsToEntries
@@ -12,9 +12,13 @@ import unifiedDataChannel from '@kit.ArkData';
 function convertRecordsToEntries(data: UnifiedData): void
 ```
 
-本接口用于将传入的data转换成多样式数据结构。若原data使用多个record去承载同一份数据的不同数据格式，则可以使用此接口将原data转换为多样式数据结构。当满足以下规则时进行转换，传入的data经转换后变为多样式数据结构：
+本接口用于将传入的data转换成多样式数据结构。若原data使用多个record去承载同一份数据的不同数据格式，则可以使用此接口将原data转换为多样式数据结构。
+
+当满足以下规则时进行转换，传入的data经转换后变为多样式数据结构：
+
 1. data中的record数量大于1；
 2. data中的properties中的tag值为"records_to_entries_data_format"。
+
 否则不会产生任何行为。
 
 **起始版本：** 17
@@ -29,7 +33,7 @@ function convertRecordsToEntries(data: UnifiedData): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) | 是 | 需要转换为多样式数据结构的统一数据对象。 |
+| data | UnifiedData | 是 | 需要转换为多样式数据结构的统一数据对象。 |
 
 **错误码：**
 

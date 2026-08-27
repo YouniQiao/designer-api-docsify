@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import reminderAgent from '@kit.BackgroundTasksKit';
-import reminderAgentManager from '@kit.BackgroundTasksKitManager';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## addNotificationSlot
@@ -73,7 +72,7 @@ Adds a notification slot. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
 

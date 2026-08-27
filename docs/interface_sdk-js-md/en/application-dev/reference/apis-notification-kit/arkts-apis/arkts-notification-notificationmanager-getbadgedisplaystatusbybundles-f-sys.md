@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getBadgeDisplayStatusByBundles
@@ -26,13 +26,13 @@ Batch obtains the display statuses of application badges. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | Array & lt;BundleOption & gt; | Yes | Bundles whose badge display statuses are to be obtained. |
+| bundles | Array&lt;BundleOption&gt; | Yes | Bundles whose badge display statuses are to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Map & lt;BundleOption, boolean & gt; & gt; | Promise used to return the bundles and the badge display statuses obtained. |
+| Promise&lt;Map&lt;BundleOption, boolean&gt;&gt; | Promise used to return the bundles and the badge display statuses obtained. |
 
 **Error codes:**
 

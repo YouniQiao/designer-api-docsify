@@ -81,7 +81,7 @@ Removes a specified call from a conference call. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

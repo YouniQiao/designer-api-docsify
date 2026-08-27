@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## setApplicationEnabledSync
@@ -80,7 +80,7 @@ function setApplicationEnabledSync(bundleName: string, appIndex: number, isEnabl
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用包名 |
-| appIndex | number | 是 | 应用的分身索引 取值范围为全体整数。 |
+| appIndex | number | 是 | 应用的分身索引取值范围为全体整数。 |
 | isEnabled | boolean | 是 | true表示启用应用程序，false表示启用应用程序。 |
 | killProcess | boolean | 是 | true表示应用进程在禁用时杀死应用程序进程，而值为false表示禁用时不会杀死应用程序进程 |
 

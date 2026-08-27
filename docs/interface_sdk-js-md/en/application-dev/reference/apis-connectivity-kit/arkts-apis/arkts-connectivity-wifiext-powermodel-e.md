@@ -1,6 +1,8 @@
 # PowerModel
 
-The power model enumeration.@enum { number } PowerModel
+The power model enumeration.
+
+@enum { number } PowerModel
 
 **Since:** 8
 

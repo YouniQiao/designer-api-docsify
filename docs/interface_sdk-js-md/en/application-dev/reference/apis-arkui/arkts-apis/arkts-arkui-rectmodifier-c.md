@@ -1,6 +1,8 @@
 # RectModifier
 
-Defines Rect Modifier@extends RectAttribute @implements AttributeModifier&lt;RectAttribute&gt;
+Defines Rect Modifier
+
+@extends RectAttribute @implements AttributeModifier&lt;RectAttribute&gt;
 
 **Inheritance/Implementation:** RectModifier extends [RectAttribute](../arkts-components/arkts-arkui-rect-attribute.md#rectattribute) and implements AttributeModifier<RectAttribute>
 

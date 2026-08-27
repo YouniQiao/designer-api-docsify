@@ -1,6 +1,8 @@
 # SelectModifier
 
-Defines Select Modifier@extends SelectAttribute @implements AttributeModifier&lt;SelectAttribute&gt;
+Defines Select Modifier
+
+@extends SelectAttribute @implements AttributeModifier&lt;SelectAttribute&gt;
 
 **Inheritance/Implementation:** SelectModifier extends [SelectAttribute](../arkts-components/arkts-arkui-select-attribute.md#selectattribute) and implements AttributeModifier<SelectAttribute>
 

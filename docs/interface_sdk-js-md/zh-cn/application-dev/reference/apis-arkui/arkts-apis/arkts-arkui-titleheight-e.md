@@ -1,6 +1,8 @@
 # TitleHeight
 
-Title height.@enum { number }
+Title height.
+
+@enum { number }
 
 **起始版本：** 11
 

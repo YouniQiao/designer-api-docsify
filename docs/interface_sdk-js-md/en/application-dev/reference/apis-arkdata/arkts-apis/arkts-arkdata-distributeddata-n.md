@@ -1,6 +1,7 @@
 # distributedData
 
-The distributed data management module implements collaboration between databases of different devices for applications. The APIs provided by distributed data management can be used to save data to distributed databases and perform operations such as adding, deleting, modifying, querying, and synchronizing data in distributed databases. This module provides the following functions:  
+The distributed data management module implements collaboration between databases of different devices for applications. The APIs provided by distributed data management can be used to save data to distributed databases and perform operations such as adding, deleting, modifying, querying, and synchronizing data in distributed databases. This module provides the following functions:
+
 - [KVManager](arkts-arkdata-distributeddata-kvmanagerconfig-i.md): provides a **KVManager** instance to manage key-value (KV)  
 stores.  
 - [KvStoreResultSet&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkdata-distributeddata-kvstoreresultset-i.md): provides APIs to obtain the KV store  
@@ -12,7 +13,8 @@ data sync through a **KVStore** instance.
 - [SingleKVStore](arkts-arkdata-distributeddata-singlekvstore-i.md): provides APIs to query and synchronize data in a single KV  
 store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md), and data is not distinguished by device.  
 - [DeviceKVStore&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkdata-distributeddata-devicekvstore-i.md): provides APIs to query and synchronize data in a  
-device KV store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md), and data is distinguished by device.  
+device KV store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md), and data is distinguished by device.
+
 [@ohos.data.distributedKVStore](arkts-data-distributedkvstore.md).
 
 **Since:** 7
@@ -26,7 +28,6 @@ device KV store. This class inherits from [KVStore](arkts-arkdata-distributeddat
 ## Modules to Import
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## Summary
@@ -64,7 +65,7 @@ import distributedDataObject from '@kit.ArkDataObject';
 | [Options](arkts-arkdata-distributeddata-options-i.md) | Provides KV store configuration. |
 | [KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md) | Provides APIs to obtain the KV store result sets, and query and move the data read position. Before calling any method in **KvStoreResultSet**, you must use getKVStore to obtain a **KVStore** object. |
 | [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | Provides APIs to manage data in a KV store, for example, adding or deleting data and subscribing to data changes or completion of data sync. Before calling any method in **KVStore**, you must use getKVStore to obtain a **KVStore** object. |
-| [SingleKVStore](arkts-arkdata-distributeddata-singlekvstore-i.md) | Provides APIs to query and synchronize data in a single KV store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md).Data is not distinguished by device in a single KV store. The data written to different devices using the same key will be overwritten. For example, a single KV store can be used to synchronize a user's calendar and contact data between different devices. Before calling any method in **SingleKVStore**, you must use getKVStore to obtain a **SingleKVStore** instance. |
+| [SingleKVStore](arkts-arkdata-distributeddata-singlekvstore-i.md) | Provides APIs to query and synchronize data in a single KV store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md). |
 | [DeviceKVStore](arkts-arkdata-distributeddata-devicekvstore-i.md) | Provides APIs to query and synchronize data in a device KV store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md). Data is distinguished by device in a device KV store. Each device can only write and modify its own data. Data of other devices is read-only and cannot be modified. For example, a device KV store can be used to implement image sharing between devices. The images of other devices can be viewed, but not be modified or deleted. Before calling any method in **DeviceKVStore**, you must use getKVStore to obtain a **DeviceKVStore** object. |
 | [KVManager](arkts-arkdata-distributeddata-kvmanager-i.md) | Creates a **KVManager** object to obtain KV store information. Before calling any method in **KVManager**, you must use [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md) to create a **KVManager** object. |
 

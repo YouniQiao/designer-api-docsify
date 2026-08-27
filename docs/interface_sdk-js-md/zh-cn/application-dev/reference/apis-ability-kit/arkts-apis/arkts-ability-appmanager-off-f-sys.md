@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## off('appForegroundState')
@@ -27,7 +27,7 @@ function off(type: 'appForegroundState', observer?: AppForegroundStateObserver):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'appForegroundState' | 是 | 调用接口类型，固定填'appForegroundState'字符串。 |
-| observer | [AppForegroundStateObserver](arkts-ability-appmanager-appforegroundstateobserver-t-sys.md) | 否 | 取消注册的应用启动和退出监听器。 |
+| observer | AppForegroundStateObserver | 否 | 取消注册的应用启动和退出监听器。 |
 
 **错误码：**
 
@@ -94,7 +94,7 @@ function off(type: 'abilityFirstFrameState', observer?: AbilityFirstFrameStateOb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'abilityFirstFrameState' | 是 | 调用接口类型，固定填'abilityFirstFrameState'字符串。 |
-| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | 否 | 表示待取消的Ability首帧绘制完成事件观察者对象，不填表示取消所有监听对象。 |
+| observer | AbilityFirstFrameStateObserver | 否 | 表示待取消的Ability首帧绘制完成事件观察者对象，不填表示取消所有监听对象。 |
 
 **错误码：**
 

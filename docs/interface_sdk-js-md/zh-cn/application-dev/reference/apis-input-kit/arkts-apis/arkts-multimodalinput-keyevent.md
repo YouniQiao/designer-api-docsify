@@ -14,11 +14,11 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [Key(按键输入事件)](arkts-input-multimodalinput-keyevent-key-i.md) | 按键。@interface Key [since 9 - 11] |
-| [KeyEvent(按键输入事件)](arkts-input-multimodalinput-keyevent-keyevent-i.md) | 按键事件。@interface KeyEvent [since 9 - 11] |
+| [Key](arkts-input-multimodalinput-keyevent-key-i.md) | 按键。 |
+| [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | 按键事件。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [Action(按键输入事件)](arkts-input-multimodalinput-keyevent-action-e.md) | 按键事件类型。 |
+| [Action](arkts-input-multimodalinput-keyevent-action-e.md) | 按键事件类型。 |

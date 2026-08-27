@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import storageStatistics from '@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getTotalSize
@@ -71,7 +71,7 @@ Obtains the total size (in bytes) of the built-in storage. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the total built-in storage space obtained. |
+| Promise&lt;number&gt; | Promise used to return the total built-in storage space obtained. |
 
 **Error codes:**
 

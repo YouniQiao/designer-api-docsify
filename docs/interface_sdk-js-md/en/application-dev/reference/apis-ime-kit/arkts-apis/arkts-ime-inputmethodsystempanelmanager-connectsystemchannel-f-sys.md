@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import inputMethodSystemPanelManager from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## connectSystemChannel
@@ -28,7 +28,7 @@ Connects to the system channel for communication between the input method system
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

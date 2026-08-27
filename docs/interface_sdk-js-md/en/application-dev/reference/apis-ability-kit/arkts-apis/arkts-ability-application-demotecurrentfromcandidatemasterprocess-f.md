@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import application from '@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## demoteCurrentFromCandidateMasterProcess
@@ -24,7 +24,7 @@ Removes the current process from the candidate master process list. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no result. |
+| Promise&lt;void&gt; | Promise that returns no result. |
 
 **Error codes:**
 

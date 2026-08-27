@@ -1,6 +1,8 @@
 # InputEventMonitor
 
-Input event monitor identity object.This object is created and returned by the system, serving as the unique identifier of the monitor.
+Input event monitor identity object.
+
+This object is created and returned by the system, serving as the unique identifier of the monitor.
 
 > **NOTE：**
 > 

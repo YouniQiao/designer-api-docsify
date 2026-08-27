@@ -239,7 +239,7 @@ Obtains the storage quota of an origin in the Web SQL Database and HTML5-support
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the storage quota of the origin. |
+| Promise&lt;number&gt; | Promise used to return the storage quota of the origin. |
 
 **Error codes:**
 
@@ -504,7 +504,7 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the storage usage of the origin. |
+| Promise&lt;number&gt; | Promise used to return the storage usage of the origin. |
 
 **Error codes:**
 

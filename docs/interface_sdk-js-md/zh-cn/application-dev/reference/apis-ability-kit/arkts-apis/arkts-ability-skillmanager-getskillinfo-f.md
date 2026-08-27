@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import skillManager from '@kit.AbilityKit';
+import { skillManager } from '@kit.AbilityKit';
 ```
 
 ## getSkillInfo
@@ -39,7 +39,7 @@ function getSkillInfo(bundleName: string, moduleName: string, skillName: string,
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;SkillInfo & gt; | Promise对象，返回指定技能的SkillInfo。 |
+| Promise&lt;SkillInfo&gt; | Promise对象，返回指定技能的SkillInfo。 |
 
 **错误码：**
 

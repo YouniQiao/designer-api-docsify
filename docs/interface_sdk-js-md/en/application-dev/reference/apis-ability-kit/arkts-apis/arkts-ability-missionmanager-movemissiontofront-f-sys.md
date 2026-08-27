@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import missionManager from '@kit.AbilityKit';
+import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## moveMissionToFront
@@ -144,7 +144,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # PolygonModifier
 
-Defines Polygon Modifier@extends PolygonAttribute @implements AttributeModifier&lt;PolygonAttribute&gt;
+Defines Polygon Modifier
+
+@extends PolygonAttribute @implements AttributeModifier&lt;PolygonAttribute&gt;
 
 **Inheritance/Implementation:** PolygonModifier extends [PolygonAttribute](../arkts-components/arkts-arkui-polygon-attribute.md#polygonattribute) and implements AttributeModifier<PolygonAttribute>
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -89,13 +89,13 @@ format(date: Date): StyledString
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date | 是 | 时间日期。    **说明：** 月份从0开始计数，0表示一月。 |
+| date | Date | 是 | 时间日期。   **说明：** 月份从0开始计数，0表示一月。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | 格式化后的富文本对象。 |
+| StyledString | 格式化后的富文本对象。 |
 
 **示例**
 

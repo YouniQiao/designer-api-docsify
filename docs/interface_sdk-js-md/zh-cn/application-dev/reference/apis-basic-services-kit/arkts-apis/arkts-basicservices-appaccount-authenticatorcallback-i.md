@@ -17,7 +17,7 @@ OAuth认证器回调接口。
 ## 导入模块
 
 ```TypeScript
-import appAccount from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onRequestRedirected

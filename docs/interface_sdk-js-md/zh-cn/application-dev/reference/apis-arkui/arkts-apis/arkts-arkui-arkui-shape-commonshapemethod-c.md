@@ -64,7 +64,7 @@ offset(offset: Position): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | [Position](#position) | 是 | 相对于组件布局位置的坐标偏移。 |
+| offset | Position | 是 | 相对于组件布局位置的坐标偏移。 |
 
 **返回值：**
 
@@ -94,7 +94,7 @@ position(position: Position): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | [Position](#position) | 是 | 设置形状的位置。 |
+| position | Position | 是 | 设置形状的位置。 |
 
 **返回值：**
 

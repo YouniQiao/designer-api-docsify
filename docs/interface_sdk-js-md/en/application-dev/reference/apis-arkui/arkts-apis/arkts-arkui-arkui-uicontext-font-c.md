@@ -93,7 +93,11 @@ struct Index {
 getSystemFontList(): Array<string>
 ```
 
-Obtains the list of supported fonts.This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices.You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md) API to obtain the latest system-supported font list data.
+Obtains the list of supported fonts.
+
+This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices.
+
+You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md) API to obtain the latest system-supported font list data.
 
 **Since:** 10
 
@@ -107,7 +111,7 @@ Obtains the list of supported fonts.This API only takes effect on PCs/2-in-1 dev
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of supported fonts. |
+| Array&lt;string&gt; | List of supported fonts. |
 
 **Examples**
 
@@ -142,7 +146,9 @@ struct Index {
 registerFont(options: font.FontOptions): void
 ```
 
-Registers a custom font with the font manager.This API is asynchronous and does not support concurrent calls.
+Registers a custom font with the font manager.
+
+This API is asynchronous and does not support concurrent calls.
 
 **Since:** 10
 

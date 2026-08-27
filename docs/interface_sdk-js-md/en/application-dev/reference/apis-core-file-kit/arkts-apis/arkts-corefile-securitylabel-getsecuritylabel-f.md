@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import securityLabel from '@kit.CoreFileKit';
+import { securityLabel } from '@kit.CoreFileKit';
 ```
 
 ## getSecurityLabel
@@ -28,7 +28,7 @@ Obtains the data security level of a file or directory. If no data security leve
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the data security level. |
+| Promise&lt;string&gt; | Promise used to return the data security level. |
 
 **Error codes:**
 

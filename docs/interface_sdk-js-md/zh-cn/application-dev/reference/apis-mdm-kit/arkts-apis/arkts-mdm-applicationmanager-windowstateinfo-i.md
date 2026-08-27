@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## isOnDock

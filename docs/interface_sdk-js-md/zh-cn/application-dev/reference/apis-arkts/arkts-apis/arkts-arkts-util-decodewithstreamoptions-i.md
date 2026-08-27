@@ -9,8 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## stream
@@ -19,7 +17,7 @@ import JSON from '@kit.ArkTS.json';
 stream?: boolean
 ```
 
-是否允许后续的 **decodeWithStream()** 处理数据块。如果按块处理数据，请将此参数设置为 **true**。如果这是要处理的最后 一个数据块或数据未分块，请将此参数设置为 **false**。默认值为 **false**。
+是否允许后续的 **decodeWithStream()** 处理数据块。如果按块处理数据，请将此参数设置为 **true**。如果这是要处理的最后一个数据块或数据未分块，请将此参数设置为 **false**。默认值为 **false**。
 
 **类型：** boolean
 

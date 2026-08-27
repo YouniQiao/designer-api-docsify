@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getPhotoAccessHelper
@@ -35,7 +35,7 @@ function getPhotoAccessHelper(context: Context, userId: number): PhotoAccessHelp
 
 | 类型 | 说明 |
 | --- | --- |
-| [PhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-photoaccesshelper-i.md) | 相册管理模块的实例。 |
+| PhotoAccessHelper | 相册管理模块的实例。 |
 
 **错误码：**
 

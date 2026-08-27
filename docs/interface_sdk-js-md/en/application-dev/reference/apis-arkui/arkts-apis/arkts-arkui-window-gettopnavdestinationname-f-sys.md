@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## getTopNavDestinationName
@@ -32,7 +30,7 @@ Obtains the name of NavDestination in the current top-level Navigation component
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the [NavDestination]{ |
+| Promise&lt;string&gt; | Promise used to return the [NavDestination]{ |
 
 **Error codes:**
 

@@ -11,8 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## appName

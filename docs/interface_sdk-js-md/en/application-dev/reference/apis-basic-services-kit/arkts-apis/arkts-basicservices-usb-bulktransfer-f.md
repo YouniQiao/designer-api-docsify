@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usb from '@kit.BasicServicesKit';
-import usbManager from '@kit.BasicServicesKitManager';
-import serialManager from '@kit.BasicServicesKitManager.serial';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## bulkTransfer
@@ -19,7 +17,9 @@ function bulkTransfer(
   ): Promise<number>
 ```
 
-Performs bulk transfer.Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md) to obtain the USB device list and endpoints, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md) to request the device access permission, call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md) to obtain **devicepipe** as an input parameter, and call [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md) to claim the USB interface.
+Performs bulk transfer.
+
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md) to obtain the USB device list and endpoints, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md) to request the device access permission, call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md) to obtain **devicepipe** as an input parameter, and call [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md) to claim the USB interface.
 
 **Since:** 8
 
@@ -33,8 +33,8 @@ Performs bulk transfer.Before you do this, call [usb.getDevices](arkts-basicserv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the USB device. |
-| endpoint | [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | Yes | USB endpoint, which is used to determine the USB port for data transfer. |
+| pipe | USBDevicePipe | Yes | USB device pipe, which is used to determine the USB device. |
+| endpoint | USBEndpoint | Yes | USB endpoint, which is used to determine the USB port for data transfer. |
 | buffer | Uint8Array | Yes | Buffer for writing or reading data. |
 | timeout | number | No | Timeout duration in ms. This parameter is optional. The default value is **0**, indicating no timeout. |
 
@@ -42,7 +42,7 @@ Performs bulk transfer.Before you do this, call [usb.getDevices](arkts-basicserv
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result, which is the size of the transmitted or received data block if the transfer is successful, or **-1** if an exception has occurred. |
+| Promise&lt;number&gt; | Promise used to return the result, which is the size of the transmitted or received data block if the transfer is successful, or **-1** if an exception has occurred. |
 
 **Examples**
 

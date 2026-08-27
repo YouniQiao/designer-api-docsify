@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## setNetworkInterfaceDisabled
@@ -104,7 +104,7 @@ Disables a network interface. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object is thrown if the network port fails to be disabled. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown if the network port fails to be disabled. |
 
 **Error codes:**
 

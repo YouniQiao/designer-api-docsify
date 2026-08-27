@@ -11,7 +11,7 @@ Provides APIs for domain account authentication.
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## auth
@@ -34,7 +34,7 @@ Authenticates a domain account.
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
 | credential | Uint8Array | Yes | Credentials of the domain account. |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
+| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
 
 **Examples**
 
@@ -126,7 +126,7 @@ Authenticates a domain account in a pop-up window.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
+| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
 
 **Examples**
 
@@ -183,7 +183,7 @@ Authenticates a domain account by the authorization token.
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
 | token | Uint8Array | Yes | Authorization token generated when the PIN or biometric authentication is successful. |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
+| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
 
 **Examples**
 

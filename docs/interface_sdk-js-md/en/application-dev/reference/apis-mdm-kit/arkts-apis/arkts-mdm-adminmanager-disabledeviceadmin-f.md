@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## disableDeviceAdmin
@@ -32,7 +32,7 @@ Disables a [DA](../../../mdm/mdm-kit-term.md#device-admin-da) application by a [
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. If the operation fails, an error object will be thrown. |
+| Promise&lt;void&gt; | Promise that returns no value. If the operation fails, an error object will be thrown. |
 
 **Error codes:**
 

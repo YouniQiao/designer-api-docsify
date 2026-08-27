@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import ranging from '@kit.ConnectivityKit';
+import { ranging } from '@kit.ConnectivityKit';
 ```
 
 ## startPassiveRanging
@@ -12,7 +12,11 @@ import ranging from '@kit.ConnectivityKit';
 function startPassiveRanging(capabilityType: RangingTypes): Promise<number>
 ```
 
-Starts passive ranging mode.Upon successful startup, returns a handle identifier for the passive ranging session and begins broadcasting ranging packets.The returned handle can be used to stop the passive ranging broadcast via stopPassiveRanging.
+Starts passive ranging mode.
+
+Upon successful startup, returns a handle identifier for the passive ranging session and begins broadcasting ranging packets.
+
+The returned handle can be used to stop the passive ranging broadcast via stopPassiveRanging.
 
 **Since:** 26.0.0
 
@@ -32,7 +36,7 @@ Starts passive ranging mode.Upon successful startup, returns a handle identifier
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the handle for starts ranging listening. |
+| Promise&lt;number&gt; | Promise used to return the handle for starts ranging listening. |
 
 **Error codes:**
 

@@ -32,7 +32,7 @@ Opens the certificate management dialog box and displays the page of the specifi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

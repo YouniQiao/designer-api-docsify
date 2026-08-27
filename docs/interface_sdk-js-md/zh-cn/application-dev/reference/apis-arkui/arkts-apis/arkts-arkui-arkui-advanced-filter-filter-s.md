@@ -81,7 +81,9 @@ additionFilters?: FilterParams
 filterType?: FilterType
 ```
 
-筛选器的样式类型。默认值：FilterType.LIST_FILTER
+筛选器的样式类型。
+
+默认值：FilterType.LIST_FILTER
 
 **类型：** [FilterType](arkts-arkui-arkui-advanced-filter-filtertype-e.md)
 

@@ -29,7 +29,7 @@ static assert(value?: Object, ...arguments: Object[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Object | 否 | 语句结果值。若value为假（false）或者省略，则输出以"Assertion failed"开头。 如果value为真值（true），则无打印。 |
+| value | Object | 否 | 语句结果值。若value为假（false）或者省略，则输出以"Assertion failed"开头。如果value为真值（true），则无打印。 |
 | arguments | Object[] | 是 | value为假（false）的后续错误消息打印。省略则不打印。 |
 
 **错误码：**
@@ -182,7 +182,7 @@ static error(message: string, ...arguments: any[]): void
 static group(...arguments: Object[]): void
 ```
 
-默认将后续行的缩进增加两个空格。 如果提供需要打印的信息，则首先打印信息，没有额外的缩进。
+默认将后续行的缩进增加两个空格。如果提供需要打印的信息，则首先打印信息，没有额外的缩进。
 
 **起始版本：** 10
 

@@ -9,7 +9,7 @@ AVSession object.
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## activate
@@ -69,7 +69,7 @@ Activate the session, indicating that the session can accept control commands
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void result promise when executed successfully |
+| Promise&lt;void&gt; | void result promise when executed successfully |
 
 **Error codes:**
 
@@ -143,7 +143,7 @@ Deactivate the session, indicating that the session not ready to accept control 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -227,7 +227,7 @@ Destroy this session, the server will clean up the session resources
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -318,7 +318,7 @@ Dispatch the session event of this session.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -361,7 +361,7 @@ Enable desktop lyric for this session.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -758,7 +758,7 @@ Query desktop lyric visible state for this session.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | return desktop lyric visible state |
+| Promise&lt;boolean&gt; | return desktop lyric visible state |
 
 **Error codes:**
 
@@ -802,7 +802,7 @@ Unregister play command callback. When canceling the callback, need to update th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'play' | Yes | Command to register 'play'. |
-| callback | () = & gt; void | No | Used to handle ('play') command |
+| callback | () =&gt; void | No | Used to handle ('play') command |
 
 **Error codes:**
 
@@ -831,7 +831,7 @@ Unregister pause command callback. When canceling the callback, need to update t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pause' | Yes | Command to register 'pause'. |
-| callback | () = & gt; void | No | Used to handle ('pause') command |
+| callback | () =&gt; void | No | Used to handle ('pause') command |
 
 **Error codes:**
 
@@ -860,7 +860,7 @@ Unregister stop command callback. When canceling the callback, need to update th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stop' | Yes | Command to register 'stop'. |
-| callback | () = & gt; void | No | Used to handle ('stop') command |
+| callback | () =&gt; void | No | Used to handle ('stop') command |
 
 **Error codes:**
 
@@ -889,7 +889,7 @@ Unregister playNext command callback. When canceling the callback, need to updat
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playNext' | Yes | Command to register 'playNext'. |
-| callback | () = & gt; void | No | Used to handle ('playNext') command |
+| callback | () =&gt; void | No | Used to handle ('playNext') command |
 
 **Error codes:**
 
@@ -918,7 +918,7 @@ Unregister playPrevious command callback. When canceling the callback, need to u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playPrevious' | Yes | Command to register 'playPrevious'. |
-| callback | () = & gt; void | No | Used to handle ('playPrevious') command |
+| callback | () =&gt; void | No | Used to handle ('playPrevious') command |
 
 **Error codes:**
 
@@ -947,7 +947,7 @@ Unregister fastForward command callback. When canceling the callback, need to up
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fastForward' | Yes | Command to register 'fastForward'. |
-| callback | () = & gt; void | No | Used to handle ('fastForward') command |
+| callback | () =&gt; void | No | Used to handle ('fastForward') command |
 
 **Error codes:**
 
@@ -976,7 +976,7 @@ Unregister rewind command callback. When canceling the callback, need to update 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rewind' | Yes | Command to register 'rewind'. |
-| callback | () = & gt; void | No | Used to handle ('rewind') command |
+| callback | () =&gt; void | No | Used to handle ('rewind') command |
 
 **Error codes:**
 
@@ -1009,7 +1009,7 @@ Unregister playFromAssetId command callback.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playFromAssetId' | Yes | Command to register 'playFromAssetId'. |
-| callback | (assetId: number) = & gt; void | No | Used to handle ('playFromAssetId') command |
+| callback | (assetId: number) =&gt; void | No | Used to handle ('playFromAssetId') command |
 
 **Error codes:**
 
@@ -1066,7 +1066,7 @@ Unregister seek command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seek' | Yes | Registration Type 'seek' |
-| callback | (time: number) = & gt; void | No | Used to handle seek command.The callback provides the seek time(ms) |
+| callback | (time: number) =&gt; void | No | Used to handle seek command.The callback provides the seek time(ms) |
 
 **Error codes:**
 
@@ -1095,7 +1095,7 @@ Unregister setSpeed command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setSpeed' | Yes | Registration Type 'setSpeed' |
-| callback | (speed: number) = & gt; void | No | Used to handle setSpeed command.The callback provides the speed value |
+| callback | (speed: number) =&gt; void | No | Used to handle setSpeed command.The callback provides the speed value |
 
 **Error codes:**
 
@@ -1124,7 +1124,7 @@ Unregister setLoopMode command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setLoopMode' | Yes | Registration Type 'setLoopMode' |
-| callback | (mode: LoopMode) = & gt; void | No | Used to handle setLoopMode command.The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+| callback | (mode: LoopMode) =&gt; void | No | Used to handle setLoopMode command.The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
 
 **Error codes:**
 
@@ -1181,7 +1181,7 @@ Unregister toggle favorite command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'toggleFavorite' | Yes | Registration Type 'toggleFavorite' |
-| callback | (assetId: string) = & gt; void | No | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
+| callback | (assetId: string) =&gt; void | No | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
 
 **Error codes:**
 
@@ -1210,7 +1210,7 @@ Unregister media key handling callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'handleKeyEvent' | Yes | Registration Type 'handleKeyEvent' |
-| callback | (event: KeyEvent) = & gt; void | No | Used to handle key events.The callback provides the KeyEvent |
+| callback | (event: KeyEvent) =&gt; void | No | Used to handle key events.The callback provides the KeyEvent |
 
 **Error codes:**
 
@@ -1239,7 +1239,7 @@ Unregister session output device change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'outputDeviceChange' | Yes | Registration Type 'outputDeviceChange' |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | No | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | No | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
 
 **Error codes:**
 
@@ -1268,7 +1268,7 @@ Unregister session custom command change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'commonCommand' | Yes | Registration Type 'commonCommand' |
-| callback | (command: string, args: {[key: string]: Object}) = & gt; void | No | Used to cancel a specific listener The callback provide the command name and command args |
+| callback | (command: string, args: {[key: string]: Object}) =&gt; void | No | Used to cancel a specific listener The callback provide the command name and command args |
 
 **Error codes:**
 
@@ -1297,7 +1297,7 @@ Unregister the item to play from the playlist change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'skipToQueueItem' | Yes | Registration Type 'skipToQueueItem' |
-| callback | (itemId: number) = & gt; void | No | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
+| callback | (itemId: number) =&gt; void | No | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
 
 **Error codes:**
 
@@ -1703,7 +1703,7 @@ Register play command callback. As number as it is registered, it means that the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'play' | Yes | Command to register 'play'. |
-| callback | () = & gt; void | Yes | Used to handle ('play') command |
+| callback | () =&gt; void | Yes | Used to handle ('play') command |
 
 **Error codes:**
 
@@ -1732,7 +1732,7 @@ Register pause command callback. As number as it is registered, it means that th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pause' | Yes | Command to register 'pause'. |
-| callback | () = & gt; void | Yes | Used to handle ('pause') command |
+| callback | () =&gt; void | Yes | Used to handle ('pause') command |
 
 **Error codes:**
 
@@ -1761,7 +1761,7 @@ Register stop command callback. As number as it is registered, it means that the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stop' | Yes | Command to register 'stop'. |
-| callback | () = & gt; void | Yes | Used to handle ('stop') command |
+| callback | () =&gt; void | Yes | Used to handle ('stop') command |
 
 **Error codes:**
 
@@ -1790,7 +1790,7 @@ Register playNext command callback. As number as it is registered, it means that
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playNext' | Yes | Command to register 'playNext'. |
-| callback | () = & gt; void | Yes | Used to handle ('playNext') command |
+| callback | () =&gt; void | Yes | Used to handle ('playNext') command |
 
 **Error codes:**
 
@@ -1819,7 +1819,7 @@ Register playPrevious command callback. As number as it is registered, it means 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playPrevious' | Yes | Command to register 'playPrevious'. |
-| callback | () = & gt; void | Yes | Used to handle ('playPrevious') command |
+| callback | () =&gt; void | Yes | Used to handle ('playPrevious') command |
 
 **Error codes:**
 
@@ -1848,7 +1848,7 @@ Register fastForward command callback. As number as it is registered, it means t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fastForward' | Yes | Command to register 'fastForward'. |
-| callback | (time ?: number) = & gt; void | Yes | Used to handle ('fastForward') command, described by milliseconds. |
+| callback | (time ?: number) =&gt; void | Yes | Used to handle ('fastForward') command, described by milliseconds. |
 
 **Error codes:**
 
@@ -1877,7 +1877,7 @@ Register rewind command callback. As number as it is registered, it means that t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rewind' | Yes | Command to register 'rewind'. |
-| callback | (time ?: number) = & gt; void | Yes | Used to handle ('rewind') command, described by milliseconds. |
+| callback | (time ?: number) =&gt; void | Yes | Used to handle ('rewind') command, described by milliseconds. |
 
 **Error codes:**
 
@@ -1910,7 +1910,7 @@ Register playFromAssetId command callback. As number as it is registered, it mea
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playFromAssetId' | Yes | Command to register 'playFromAssetId'. |
-| callback | (assetId: number) = & gt; void | Yes | Used to handle ('playFromAssetId') command |
+| callback | (assetId: number) =&gt; void | Yes | Used to handle ('playFromAssetId') command |
 
 **Error codes:**
 
@@ -1967,7 +1967,7 @@ Register seek command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seek' | Yes | Registration Type 'seek' |
-| callback | (time: number) = & gt; void | Yes | Used to handle seek command.The callback provides the seek time(ms) |
+| callback | (time: number) =&gt; void | Yes | Used to handle seek command.The callback provides the seek time(ms) |
 
 **Error codes:**
 
@@ -1996,7 +1996,7 @@ Register setSpeed command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setSpeed' | Yes | Registration Type 'setSpeed' |
-| callback | (speed: number) = & gt; void | Yes | Used to handle setSpeed command.The callback provides the speed value |
+| callback | (speed: number) =&gt; void | Yes | Used to handle setSpeed command.The callback provides the speed value |
 
 **Error codes:**
 
@@ -2025,7 +2025,7 @@ Register setLoopMode command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setLoopMode' | Yes | Registration Type 'setLoopMode' |
-| callback | (mode: LoopMode) = & gt; void | Yes | Used to handle setLoopMode command.The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
+| callback | (mode: LoopMode) =&gt; void | Yes | Used to handle setLoopMode command.The callback provides the [LoopMode](arkts-avsession-avsession-loopmode-e.md) |
 
 **Error codes:**
 
@@ -2082,7 +2082,7 @@ Register toggle favorite command callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'toggleFavorite' | Yes | Registration Type 'toggleFavorite' |
-| callback | (assetId: string) = & gt; void | Yes | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
+| callback | (assetId: string) =&gt; void | Yes | Used to handle toggleFavorite command.The callback provides the assetId for which the favorite status needs to be switched. |
 
 **Error codes:**
 
@@ -2111,7 +2111,7 @@ Register media key handling callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'handleKeyEvent' | Yes | Registration Type 'handleKeyEvent' |
-| callback | (event: KeyEvent) = & gt; void | Yes | Used to handle key events.The callback provides the KeyEvent |
+| callback | (event: KeyEvent) =&gt; void | Yes | Used to handle key events.The callback provides the KeyEvent |
 
 **Error codes:**
 
@@ -2140,7 +2140,7 @@ Register session output device change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'outputDeviceChange' | Yes | Registration Type 'outputDeviceChange' |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | Yes | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | Yes | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
 
 **Error codes:**
 
@@ -2169,7 +2169,7 @@ Register session custom command change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'commonCommand' | Yes | Registration Type 'commonCommand' |
-| callback | (command: string, args: {[key: string]: Object}) = & gt; void | Yes | Used to handle event when the common command is received The callback provide the command name and command args |
+| callback | (command: string, args: {[key: string]: Object}) =&gt; void | Yes | Used to handle event when the common command is received The callback provide the command name and command args |
 
 **Error codes:**
 
@@ -2198,7 +2198,7 @@ Register the item to play from the playlist change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'skipToQueueItem' | Yes | Registration Type 'skipToQueueItem' |
-| callback | (itemId: number) = & gt; void | Yes | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
+| callback | (itemId: number) =&gt; void | Yes | Used to handle the item to be played. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) |
 
 **Error codes:**
 
@@ -2623,13 +2623,13 @@ Sends custom data to a remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record & lt;string, Object & gt; | Yes | Custom data populated by the application. |
+| data | Record&lt;string, Object&gt; | Yes | Custom data populated by the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2757,7 +2757,7 @@ Set the call state of this session.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2795,7 +2795,7 @@ Set the metadata of this session. In addition to the required properties, users 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | Yes | { |
+| data | AVMetadata | Yes | { |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The asyncCallback triggered when the command is executed successfully |
 
 **Error codes:**
@@ -2859,13 +2859,13 @@ Set the metadata of this session. In addition to the required properties, users 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | Yes | { |
+| data | AVMetadata | Yes | { |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2977,7 +2977,7 @@ Set the playback state of this session.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -3099,7 +3099,7 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -3215,7 +3215,7 @@ Set the name of the playlist presented by this session.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -3258,7 +3258,7 @@ Set the background playback mode. It is recommended that you associate it with t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully. |
+| Promise&lt;void&gt; | void promise when executed successfully. |
 
 **Error codes:**
 
@@ -3371,7 +3371,7 @@ Set the metadata related with current call.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -3451,7 +3451,7 @@ Set desktop lyric state such as lock state for this session.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -3504,7 +3504,7 @@ Set desktop lyric visible state for this session.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -3592,7 +3592,7 @@ Set the custom media packets for this session.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -3706,7 +3706,7 @@ Set the ability to start the session corresponding to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -3780,7 +3780,7 @@ Set media control types that can be displayed on the media center.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully. |
+| Promise&lt;void&gt; | void promise when executed successfully. |
 
 **Error codes:**
 
@@ -3832,7 +3832,7 @@ Set supported loop modes supplied by application.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -3877,13 +3877,13 @@ Set supported speeds supplied by application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speeds | Array & lt;number & gt; | Yes | supported speeds |
+| speeds | Array&lt;number&gt; | Yes | supported speeds |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -3954,7 +3954,7 @@ Stop current cast and disconnect device connection.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void result promise when executed successfully |
+| Promise&lt;void&gt; | void result promise when executed successfully |
 
 **Error codes:**
 

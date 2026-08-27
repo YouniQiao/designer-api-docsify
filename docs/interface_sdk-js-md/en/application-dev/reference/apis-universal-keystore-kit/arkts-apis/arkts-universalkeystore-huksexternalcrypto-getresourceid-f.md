@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import huksExternalCrypto from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## getResourceId
@@ -31,7 +31,7 @@ Obtain the resource ID of the provider.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | The promise returned by the function. |
+| Promise&lt;string&gt; | The promise returned by the function. |
 
 **Error codes:**
 

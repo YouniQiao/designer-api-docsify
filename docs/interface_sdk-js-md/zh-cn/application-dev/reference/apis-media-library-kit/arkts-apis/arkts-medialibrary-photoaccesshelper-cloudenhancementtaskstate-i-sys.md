@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## expectedDuration
@@ -68,7 +68,7 @@ readonly taskStage: CloudEnhancementTaskStage
 readonly totalFileSize?: number
 ```
 
-总文件大小，单位：字节。当taskStage为CloudEnhancementTaskStage.TASK_STAGE_UPLOADING或者 CloudEnhancementTaskStage.TASK_STAGE_DOWNLOADING时提供。
+总文件大小，单位：字节。当taskStage为CloudEnhancementTaskStage.TASK_STAGE_UPLOADING或者CloudEnhancementTaskStage.TASK_STAGE_DOWNLOADING时提供。
 
 **类型：** number
 
@@ -84,7 +84,7 @@ readonly totalFileSize?: number
 readonly transferredFileSize?: number
 ```
 
-已传输的文件大小，单位：字节。当taskStage为CloudEnhancementTaskStage.TASK_STAGE_UPLOADING或者 CloudEnhancementTaskStage.TASK_STAGE_DOWNLOADING时提供。
+已传输的文件大小，单位：字节。当taskStage为CloudEnhancementTaskStage.TASK_STAGE_UPLOADING或者CloudEnhancementTaskStage.TASK_STAGE_DOWNLOADING时提供。
 
 **类型：** number
 

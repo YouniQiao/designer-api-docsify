@@ -37,7 +37,7 @@ Obtains the playing state of device.
 
 | Type | Description |
 | --- | --- |
-| [PlayingState](arkts-connectivity-a2dp-playingstate-e.md) | Returns the playing state. |
+| PlayingState | Returns the playing state. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # AVControlCommand
 
-The definition of command to be sent to the session@interface AVControlCommand [since 10 - 11]
+The definition of command to be sent to the session
+
+@interface AVControlCommand [since 10 - 11]
 
 **Since:** 10
 
@@ -9,7 +11,7 @@ The definition of command to be sent to the session@interface AVControlCommand [
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## command

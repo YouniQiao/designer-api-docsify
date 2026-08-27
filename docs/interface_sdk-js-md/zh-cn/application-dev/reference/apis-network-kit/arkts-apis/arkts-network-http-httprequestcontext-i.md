@@ -1,6 +1,6 @@
 # HttpRequestContext
 
-HTTP请求上下文数据。该对象实例在拦截器的[interceptorHandle](arkts-network-http-httpinterceptor-i.md#interceptorhandle)方法中作为参数传入，开发者可以通过该对象获取和修改 HTTP请求的相关信息。
+HTTP请求上下文数据。该对象实例在拦截器的[interceptorHandle](arkts-network-http-httpinterceptor-i.md#interceptorhandle)方法中作为参数传入，开发者可以通过该对象获取和修改HTTP请求的相关信息。
 
 **起始版本：** 22
 

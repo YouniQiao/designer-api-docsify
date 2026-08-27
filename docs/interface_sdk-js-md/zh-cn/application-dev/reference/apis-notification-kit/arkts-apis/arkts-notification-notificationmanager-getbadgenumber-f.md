@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getBadgeNumber
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function getBadgeNumber(): Promise<number>
 ```
 
-获取当前应用角标数量。使用Promise异步回调。用于查询当前应用桌面图标上显示的角标数字。
+获取当前应用角标数量。使用Promise异步回调。
+
+用于查询当前应用桌面图标上显示的角标数字。
 
 **起始版本：** 22
 
@@ -26,7 +28,7 @@ setBadgeNumber 设定角标个数。
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回当前应用角标数量。（查询的角标数量与当前应用通知开关，桌面角标开关是否开启无关） |
+| Promise&lt;number&gt; | Promise对象，返回当前应用角标数量。（查询的角标数量与当前应用通知开关，桌面角标开关是否开启无关） |
 
 **错误码：**
 

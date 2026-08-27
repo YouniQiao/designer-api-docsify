@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleResourceManager from '@kit.AbilityKit';
+import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## getAllUninstalledBundleResourceInfo
@@ -32,7 +32,7 @@ Obtains the bundle resource information of all uninstalled applications that hav
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;BundleResourceInfo & gt; & gt; | Promise used to return the BundleResourceInfo array. |
+| Promise&lt;Array&lt;BundleResourceInfo&gt;&gt; | Promise used to return the BundleResourceInfo array. |
 
 **Error codes:**
 

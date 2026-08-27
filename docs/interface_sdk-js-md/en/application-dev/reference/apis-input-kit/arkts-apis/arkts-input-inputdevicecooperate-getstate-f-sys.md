@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKit';
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## getState
@@ -98,7 +98,7 @@ Checks whether screen hopping is enabled. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;{ state: boolean | > } Promise used to return the state of the screen hopping switch. **true** if enabled and **false** if disabled.<br>**Applicable version:** 12 and later |
+| Promise&lt;{ state: boolean | > } Promise used to return the state of the screen hopping switch. **true** if enabled and **false** if disabled.<br>**Applicable version:** 12 and later |
 
 **Error codes:**
 

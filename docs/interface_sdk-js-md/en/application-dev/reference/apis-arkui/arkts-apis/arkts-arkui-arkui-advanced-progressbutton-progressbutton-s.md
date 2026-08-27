@@ -10,7 +10,6 @@ Declare Component ProgressButton
 
 ```TypeScript
 import { ProgressButton } from '@kit.ArkUI';
-import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from '@kit.ArkUIV2';
 ```
 
 ## clickCallback

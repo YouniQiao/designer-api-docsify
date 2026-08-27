@@ -17,7 +17,6 @@
 
 ```TypeScript
 import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
-import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUIV2';
 ```
 
 ## popover
@@ -62,7 +61,9 @@ targetBuilder: Callback<void>
 visible: boolean
 ```
 
-是否显示跟手弹出框。true表示显示弹出框，false表示隐藏弹出框。默认值为false，隐藏弹出框。
+是否显示跟手弹出框。true表示显示弹出框，false表示隐藏弹出框。
+
+默认值为false，隐藏弹出框。
 
 **类型：** boolean
 

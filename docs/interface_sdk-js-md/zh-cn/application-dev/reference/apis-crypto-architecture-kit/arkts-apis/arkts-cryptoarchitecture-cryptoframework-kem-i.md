@@ -1,6 +1,6 @@
 # Kem
 
-密钥封装机制（KEM）接口，定义基于密钥封装机制进行密钥封装和解封装的方法。调用前，需通过 [createKem(algNameId: KemAlgNameId): Kem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md)方法创建一个Kem实例。
+密钥封装机制（KEM）接口，定义基于密钥封装机制进行密钥封装和解封装的方法。调用前，需通过[createKem(algNameId: KemAlgNameId): Kem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md)方法创建一个Kem实例。
 
 **起始版本：** 26.0.0
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## decapsulate
@@ -39,7 +39,7 @@ decapsulate(priKey: PriKey, wrappedKey: Uint8Array): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise对象，返回共享密钥。 |
+| Promise&lt;Uint8Array&gt; | Promise对象，返回共享密钥。 |
 
 **错误码：**
 
@@ -80,7 +80,7 @@ decapsulateSync(priKey: PriKey, wrappedKey: Uint8Array): Uint8Array
 
 密钥解封装操作。使用接收方的私钥，由接收方执行，从密文中解封装出共享密钥。
 
-**说明：** 建议优先使用异步API，[decapsulate](#decapsulate)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+**说明：** 建议优先使用异步API，[decapsulate](#decapsulate)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 26.0.0
 
@@ -202,7 +202,7 @@ encapsulateSync(pubKey: PubKey, ikme: Uint8Array | null): KemEncapResult
 
 密钥封装操作。使用接收方的公钥，由发送方执行，生成并封装一个共享密钥。
 
-**说明：** 建议优先使用异步API，[encapsulate](#encapsulate)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+**说明：** 建议优先使用异步API，[encapsulate](#encapsulate)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 26.0.0
 

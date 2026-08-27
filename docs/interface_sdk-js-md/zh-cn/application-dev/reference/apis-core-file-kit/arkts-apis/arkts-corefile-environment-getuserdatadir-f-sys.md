@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import Environment from '@kit.CoreFileKit';
+import { Environment } from '@kit.CoreFileKit';
 ```
 
 ## getUserDataDir
@@ -24,7 +24,7 @@ function getUserDataDir(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | 返回公共文件根目录。 |
+| Promise&lt;string&gt; | 返回公共文件根目录。 |
 
 **错误码：**
 

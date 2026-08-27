@@ -25,7 +25,7 @@ Begins a query
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | webgl.GLenum | Yes | Target |
-| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | Yes | [Query](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-query-c.md) |
+| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | Yes | Query |
 
 ## beginTransformFeedback
 
@@ -96,7 +96,7 @@ Binds buffer range
 | target | webgl.GLenum | Yes | Target |
 | index | webgl.GLuint | Yes | Index |
 | buffer | webgl.WebGLBuffer \| null | Yes | Buffer |
-| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| offset | webgl.GLintptr | Yes | Offset |
 | size | webgl.GLsizeiptr | Yes | Size |
 
 ## bindSampler
@@ -199,7 +199,7 @@ Blits framebuffer
 | dstX1 | webgl.GLint | Yes | Destination X1 |
 | dstY1 | webgl.GLint | Yes | Destination Y1 |
 | mask | webgl.GLbitfield | Yes | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) |
-| filter | webgl.GLenum | Yes | [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
+| filter | webgl.GLenum | Yes | Filter |
 
 ## clearBufferfi
 
@@ -221,8 +221,8 @@ Clears bufferfi
 | --- | --- | --- | --- |
 | buffer | webgl.GLenum | Yes | Buffer |
 | drawbuffer | webgl.GLint | Yes | Draw buffer |
-| depth | webgl.GLfloat | Yes | [Depth](#depth) |
-| stencil | webgl.GLint | Yes | [Stencil](#stencil) |
+| depth | webgl.GLfloat | Yes | Depth |
+| stencil | webgl.GLint | Yes | Stencil |
 
 ## clearBufferfv
 
@@ -322,14 +322,14 @@ Client waits for sync object
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | Yes | Sync object |
-| flags | webgl.GLbitfield | Yes | [Flags](../../apis-ability-kit/arkts-apis/arkts-ability-wantconstant-flags-e.md) |
+| flags | webgl.GLbitfield | Yes | Flags |
 | timeout | [GLuint64](arkts-arkgraphics2d-gluint64-t.md) | Yes | Timeout |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| webgl.GLenum | [Result](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-result-i.md) |
+| webgl.GLenum | Result |
 
 ## compressedTexImage3D
 
@@ -364,10 +364,10 @@ Compressed texture image 3D from PBO offset
 | internalformat | webgl.GLenum | Yes | Internal format |
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| depth | webgl.GLsizei | Yes | Depth |
 | border | webgl.GLint | Yes | Border |
 | imageSize | webgl.GLsizei | Yes | Image size |
-| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| offset | webgl.GLintptr | Yes | Offset |
 
 ## compressedTexImage3D
 
@@ -403,7 +403,7 @@ Compressed texture image 3D from ArrayBufferView
 | internalformat | webgl.GLenum | Yes | Internal format |
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| depth | webgl.GLsizei | Yes | Depth |
 | border | webgl.GLint | Yes | Border |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
 | srcOffset | webgl.GLuint | No | Source offset |
@@ -446,10 +446,10 @@ Compressed texture sub image 3D from PBO offset
 | zoffset | webgl.GLint | Yes | Z offset |
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| depth | webgl.GLsizei | Yes | Depth |
 | format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | imageSize | webgl.GLsizei | Yes | Image size |
-| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| offset | webgl.GLintptr | Yes | Offset |
 
 ## compressedTexSubImage3D
 
@@ -489,7 +489,7 @@ Compressed texture sub image 3D from ArrayBufferView
 | zoffset | webgl.GLint | Yes | Z offset |
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| depth | webgl.GLsizei | Yes | Depth |
 | format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes | Source data |
 | srcOffset | webgl.GLuint | No | Source offset |
@@ -818,7 +818,7 @@ Draws elements instanced
 | mode | webgl.GLenum | Yes | [Mode](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-mode-e.md) |
 | count | webgl.GLsizei | Yes | Count |
 | type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| offset | webgl.GLintptr | Yes | Offset |
 | instanceCount | webgl.GLsizei | Yes | Instance count |
 
 ## drawRangeElements
@@ -851,7 +851,7 @@ Draws range elements
 | end | webgl.GLuint | Yes | End |
 | count | webgl.GLsizei | Yes | Count |
 | type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| offset | webgl.GLintptr | Yes | Offset |
 
 ## endQuery
 
@@ -906,7 +906,7 @@ Creates a sync object
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | condition | webgl.GLenum | Yes | Condition |
-| flags | webgl.GLbitfield | Yes | [Flags](../../apis-ability-kit/arkts-apis/arkts-ability-wantconstant-flags-e.md) |
+| flags | webgl.GLbitfield | Yes | Flags |
 
 **Return value:**
 
@@ -1086,7 +1086,7 @@ Gets fragment data location
 
 | Type | Description |
 | --- | --- |
-| webgl.GLint | [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md) |
+| webgl.GLint | Location |
 
 ## getIndexedParameter
 
@@ -1188,7 +1188,7 @@ Gets query parameter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | Yes | [Query](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-query-c.md) |
+| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) | Yes | Query |
 | pname | webgl.GLenum | Yes | Parameter name |
 
 **Return value:**
@@ -1403,7 +1403,7 @@ Returns whether a query is valid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | Yes | [Query](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-query-c.md) |
+| query | [WebGLQuery](arkts-arkgraphics2d-webgl2-webglquery-i.md) \| null | Yes | Query |
 
 **Return value:**
 
@@ -1671,7 +1671,7 @@ Sets texture image 3D from PBO offset
 | internalformat | webgl.GLint | Yes | Internal format |
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| depth | webgl.GLsizei | Yes | Depth |
 | border | webgl.GLint | Yes | Border |
 | format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -1711,7 +1711,7 @@ Sets texture image 3D from TexImageSource
 | internalformat | webgl.GLint | Yes | Internal format |
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| depth | webgl.GLsizei | Yes | Depth |
 | border | webgl.GLint | Yes | Border |
 | format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -1751,7 +1751,7 @@ Sets texture image 3D from ArrayBufferView
 | internalformat | webgl.GLint | Yes | Internal format |
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| depth | webgl.GLsizei | Yes | Depth |
 | border | webgl.GLint | Yes | Border |
 | format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -1792,7 +1792,7 @@ Sets texture image 3D from ArrayBufferView with offset
 | internalformat | webgl.GLint | Yes | Internal format |
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| depth | webgl.GLsizei | Yes | Depth |
 | border | webgl.GLint | Yes | Border |
 | format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
@@ -1859,7 +1859,7 @@ Sets texture storage 3D
 | internalformat | webgl.GLenum | Yes | Internal format |
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| depth | webgl.GLsizei | Yes | Depth |
 
 ## texSubImage3D
 
@@ -1898,7 +1898,7 @@ Sets texture sub image 3D from PBO offset
 | zoffset | webgl.GLint | Yes | Z offset |
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| depth | webgl.GLsizei | Yes | Depth |
 | format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | pboOffset | webgl.GLintptr | Yes | PBO offset |
@@ -1940,7 +1940,7 @@ Sets texture sub image 3D from TexImageSource
 | zoffset | webgl.GLint | Yes | Z offset |
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| depth | webgl.GLsizei | Yes | Depth |
 | format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | source | webgl.TexImageSource | Yes | Image source |
@@ -1983,7 +1983,7 @@ Sets texture sub image 3D from ArrayBufferView
 | zoffset | webgl.GLint | Yes | Z offset |
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
-| depth | webgl.GLsizei | Yes | [Depth](#depth) |
+| depth | webgl.GLsizei | Yes | Depth |
 | format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes | Source data |
@@ -2030,7 +2030,7 @@ Sets uniform1ui value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | location | webgl.WebGLUniformLocation \| null | Yes | Uniform location |
-| v0 | webgl.GLuint | Yes | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) |
+| v0 | webgl.GLuint | Yes | Value |
 
 ## uniform1uiv
 
@@ -2564,7 +2564,7 @@ Sets vertex attrib integer pointer
 | size | webgl.GLint | Yes | Size |
 | type | webgl.GLenum | Yes | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | stride | webgl.GLsizei | Yes | Stride |
-| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| offset | webgl.GLintptr | Yes | Offset |
 
 ## waitSync
 
@@ -2585,7 +2585,7 @@ Waits for sync object
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sync | [WebGLSync](arkts-arkgraphics2d-webgl2-webglsync-i.md) | Yes | Sync object |
-| flags | webgl.GLbitfield | Yes | [Flags](../../apis-ability-kit/arkts-apis/arkts-ability-wantconstant-flags-e.md) |
+| flags | webgl.GLbitfield | Yes | Flags |
 | timeout | [GLint64](arkts-arkgraphics2d-glint64-t.md) | Yes | Timeout |
 
 ## ACTIVE_UNIFORM_BLOCKS

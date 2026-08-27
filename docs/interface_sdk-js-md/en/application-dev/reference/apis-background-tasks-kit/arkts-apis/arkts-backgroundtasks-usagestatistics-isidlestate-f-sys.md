@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usageStatistics from '@kit.BackgroundTasksKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## isIdleState
@@ -85,7 +85,7 @@ Checks whether the application with a specified bundle name is in the idle state
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | the promise returned by isIdleState. boolean value is true mean the application is idle in a particular period; false mean otherwise. The time range of the particular period is defined by the system, which may be hours or days. |
+| Promise&lt;boolean&gt; | the promise returned by isIdleState. boolean value is true mean the application is idle in a particular period; false mean otherwise. The time range of the particular period is defined by the system, which may be hours or days. |
 
 **Error codes:**
 

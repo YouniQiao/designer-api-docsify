@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import deviceManager from '@kit.DistributedServiceKit';
+import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## authenticateDevice
@@ -44,8 +44,8 @@ authenticateDevice(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i.md) | 是 | 设备信息。 |
-| authParam | [AuthParam](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authparam-i.md) | 是 | 认证参数。 |
+| deviceInfo | DeviceInfo | 是 | 设备信息。 |
+| authParam | AuthParam | 是 | 认证参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceId: string, pinToken?: number }&gt; | 是 |  |
 
 **错误码：**
@@ -280,7 +280,7 @@ getDeviceInfo(networkId: string): Promise<DeviceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;DeviceInfo & gt; | Promise实例，用于获取异步返回结果。 |
+| Promise&lt;DeviceInfo&gt; | Promise实例，用于获取异步返回结果。 |
 
 **错误码：**
 
@@ -386,7 +386,7 @@ getLocalDeviceInfo(): Promise<DeviceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;DeviceInfo & gt; | Promise实例，用于获取异步返回结果。 |
+| Promise&lt;DeviceInfo&gt; | Promise实例，用于获取异步返回结果。 |
 
 **错误码：**
 
@@ -433,7 +433,7 @@ getLocalDeviceInfoSync(): DeviceInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i.md) | 返回本地设备列表。 |
+| DeviceInfo | 返回本地设备列表。 |
 
 **错误码：**
 
@@ -538,7 +538,7 @@ getTrustedDeviceList(): Promise<Array<DeviceInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;DeviceInfo & gt; & gt; | Promise实例，用于获取异步返回结果。 |
+| Promise&lt;Array&lt;DeviceInfo&gt;&gt; | Promise实例，用于获取异步返回结果。 |
 
 **错误码：**
 
@@ -585,7 +585,7 @@ getTrustedDeviceListSync(): Array<DeviceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;DeviceInfo & gt; | 返回可信设备列表。 |
+| Array&lt;DeviceInfo&gt; | 返回可信设备列表。 |
 
 **错误码：**
 
@@ -639,7 +639,7 @@ getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;DeviceInfo & gt; | 返回可信设备列表。 |
+| Array&lt;DeviceInfo&gt; | 返回可信设备列表。 |
 
 **错误码：**
 
@@ -1130,7 +1130,7 @@ off(type: 'serviceDie', callback?: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | 是 | 取消注册serviceDie回调，以便在devicemanager服务异常终止时通知应用程序，固定为serviceDie。 |
-| callback | () = & gt; void | 否 | 取消注册serviceDie的回调方法。 |
+| callback | () =&gt; void | 否 | 取消注册serviceDie的回调方法。 |
 
 **错误码：**
 
@@ -1534,7 +1534,7 @@ on(type: 'serviceDie', callback: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | 是 | 注册serviceDie回调，以便在devicemanager服务异常终止时通知应用程序，固定为serviceDie。 |
-| callback | () = & gt; void | 是 | 注册serviceDie的回调方法。 |
+| callback | () =&gt; void | 是 | 注册serviceDie的回调方法。 |
 
 **错误码：**
 
@@ -1818,7 +1818,7 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeInfo | [SubscribeInfo](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) | 是 | 发现信息。 |
+| subscribeInfo | SubscribeInfo | 是 | 发现信息。 |
 
 **错误码：**
 
@@ -1890,7 +1890,7 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeInfo | [SubscribeInfo](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) | 是 | 发现信息。 |
+| subscribeInfo | SubscribeInfo | 是 | 发现信息。 |
 | filterOptions | string | 否 | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。长度范围1~255字符。 |
 
 **错误码：**
@@ -2037,7 +2037,7 @@ unAuthenticateDevice(deviceInfo: DeviceInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i.md) | 是 | 设备信息。 |
+| deviceInfo | DeviceInfo | 是 | 设备信息。 |
 
 **错误码：**
 

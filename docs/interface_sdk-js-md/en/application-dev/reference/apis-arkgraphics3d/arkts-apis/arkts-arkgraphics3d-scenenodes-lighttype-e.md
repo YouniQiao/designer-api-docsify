@@ -1,6 +1,8 @@
 # LightType
 
-Enumerates the light types.@enum { number }
+Enumerates the light types.
+
+@enum { number }
 
 **Since:** 12
 

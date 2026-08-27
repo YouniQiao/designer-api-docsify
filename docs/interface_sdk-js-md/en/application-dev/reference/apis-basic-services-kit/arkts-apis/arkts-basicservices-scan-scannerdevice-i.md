@@ -9,7 +9,7 @@ Defines the scanner.
 ## Modules to Import
 
 ```TypeScript
-import scan from '@kit.BasicServicesKit';
+import { scan } from '@kit.BasicServicesKit';
 ```
 
 ## deviceName

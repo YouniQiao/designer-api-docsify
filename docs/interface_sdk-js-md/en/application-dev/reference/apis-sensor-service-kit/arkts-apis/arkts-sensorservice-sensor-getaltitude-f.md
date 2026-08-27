@@ -72,7 +72,7 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the altitude, in meters. |
+| Promise&lt;number&gt; | Promise used to return the altitude, in meters. |
 
 **Examples**
 

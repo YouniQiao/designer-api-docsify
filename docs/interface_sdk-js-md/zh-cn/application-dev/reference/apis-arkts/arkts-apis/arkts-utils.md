@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import ArkTSUtils from '@kit.ArkTS';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## 汇总
@@ -12,4 +12,4 @@ import ArkTSUtils from '@kit.ArkTS';
 
 | 名称 | 说明 |
 | --- | --- |
-| [utils(Defines the utils for ArkTS)](arkts-arkts-utils-n.md) |  |
+| [utils](arkts-arkts-utils-n.md) |  |

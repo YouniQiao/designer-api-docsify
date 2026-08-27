@@ -1,6 +1,6 @@
 # AVRecorderConfig
 
-表示音视频录制的参数设置。通过audioSourceType和videoSourceType区分纯音频录制、纯视频录制或音视频录制。纯音频录制时，仅需要设置audioSourceType；纯视频录制时，仅需要设置videoSourceType； 音视频录制时，audioSourceType和videoSourceType均需要设置。
+表示音视频录制的参数设置。通过audioSourceType和videoSourceType区分纯音频录制、纯视频录制或音视频录制。纯音频录制时，仅需要设置audioSourceType；纯视频录制时，仅需要设置videoSourceType；音视频录制时，audioSourceType和videoSourceType均需要设置。
 
 **起始版本：** 9
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## metaSourceTypes

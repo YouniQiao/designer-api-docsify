@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getMifareClassic
@@ -30,7 +30,7 @@ function getMifareClassic(tagInfo: TagInfo): MifareClassicTag
 
 | 类型 | 说明 |
 | --- | --- |
-| [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md) | MIFARE Classic类型Tag对象，通过该对象访问MIFARE Classic类型的相关接口。 |
+| MifareClassicTag | MIFARE Classic类型Tag对象，通过该对象访问MIFARE Classic类型的相关接口。 |
 
 **错误码：**
 

@@ -1,6 +1,6 @@
 # LRUCache
 
-提供在缓存已满时丢弃最近最少使用的数据以腾出空间给新元素的 API。此类使用最近最少使用（LRU）算法，该算法认为最近 使用的数据可能在不久的将来再次被访问，而最少访问的数据是最不具价值的数据，应从缓存中移除。
+提供在缓存已满时丢弃最近最少使用的数据以腾出空间给新元素的 API。此类使用最近最少使用（LRU）算法，该算法认为最近使用的数据可能在不久的将来再次被访问，而最少访问的数据是最不具价值的数据，应从缓存中移除。
 
 **起始版本：** 9
 
@@ -9,8 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## [Symbol.iterator]
@@ -31,7 +29,7 @@ import JSON from '@kit.ArkTS.json';
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;[K, V] & gt; | 返回以键值对形式的二维数组。 |
+| IterableIterator&lt;[K, V]&gt; | 返回以键值对形式的二维数组。 |
 
 **示例**
 
@@ -60,7 +58,7 @@ let result = pro[Symbol.iterator]();
 afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 ```
 
-在移除值后执行后续操作。后续操作必须由开发者实现。该 API 在删除操作期间会被调用，例如 [get&lt;sup&gt;9+&lt;/sup&gt;](#get)、[put&lt;sup&gt;9+&lt;/sup&gt;](#put)、 [remove&lt;sup&gt;9+&lt;/sup&gt;](#remove)、[clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和 [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity)。
+在移除值后执行后续操作。后续操作必须由开发者实现。该 API 在删除操作期间会被调用，例如[get&lt;sup&gt;9+&lt;/sup&gt;](#get)、[put&lt;sup&gt;9+&lt;/sup&gt;](#put)、[remove&lt;sup&gt;9+&lt;/sup&gt;](#remove)、[clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和[updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updatecapacity)。
 
 > **NOTE：**
 > 
@@ -275,7 +273,7 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;[K, V] & gt; | 可迭代的数组。 |
+| IterableIterator&lt;[K, V]&gt; | 可迭代的数组。 |
 
 **示例**
 
@@ -304,7 +302,7 @@ let result = pro.entries();
 get(key: K): V | undefined
 ```
 
-获取 key 对应的值。如果该 key 不在缓存中，则调用 [createDefault&lt;sup&gt;9+&lt;/sup&gt;](#createdefault) 创建该 key。如果 **createDefault** 中指定的值 不为 **undefined**，则调用 [afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](#afterremoval) 返回 **createDefault** 中指定的值。
+获取 key 对应的值。如果该 key 不在缓存中，则调用[createDefault&lt;sup&gt;9+&lt;/sup&gt;](#createdefault) 创建该 key。如果 **createDefault** 中指定的值不为 **undefined**，则调用 [afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](#afterremoval) 返回 **createDefault**中指定的值。
 
 **起始版本：** 9
 
@@ -741,7 +739,7 @@ remove(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V \| undefined | 如果 key 存在于缓存中，则返回包含被移除键值对的 **Optional** 对象；如果 key 不存在 则返回 **undefined**；如果 **key** 传入 **null**，则抛出错误。 |
+| V \| undefined | 如果 key 存在于缓存中，则返回包含被移除键值对的 **Optional** 对象；如果 key 不存在则返回 **undefined**；如果 **key** 传入 **null**，则抛出错误。 |
 
 **示例**
 

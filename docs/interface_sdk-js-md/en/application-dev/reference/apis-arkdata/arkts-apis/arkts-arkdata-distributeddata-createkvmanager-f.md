@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## createKVManager
@@ -26,7 +25,7 @@ Creates a **KVManager** instance to manage KV stores. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
+| config | KVManagerConfig | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVManager&gt; | Yes | Callback used to return the **KVManager** instance created. |
 
 **Examples**
@@ -75,13 +74,13 @@ Creates a **KVManager** instance to manage KV stores. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
+| config | KVManagerConfig | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;KVManager & gt; | Promise used to return the **KVManager** instance created. |
+| Promise&lt;KVManager&gt; | Promise used to return the **KVManager** instance created. |
 
 **Examples**
 

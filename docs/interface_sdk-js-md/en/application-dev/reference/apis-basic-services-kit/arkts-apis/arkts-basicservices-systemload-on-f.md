@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemLoad from '@kit.BasicServicesKit';
+import { systemLoad } from '@kit.BasicServicesKit';
 ```
 
 ## on('systemLoadChange')

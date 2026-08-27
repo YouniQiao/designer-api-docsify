@@ -3,9 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKitManager';
-import notificationSubscribe from '@kit.NotificationKitSubscribe';
-import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## removeAllSlots
@@ -66,7 +63,7 @@ function removeAllSlots(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **示例**
 

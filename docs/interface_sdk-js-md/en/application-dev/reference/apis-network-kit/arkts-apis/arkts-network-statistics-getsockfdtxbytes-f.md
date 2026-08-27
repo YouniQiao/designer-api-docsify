@@ -82,7 +82,7 @@ Obtains the uplink traffic (in bytes) of the specified socket. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the uplink traffic (in bytes) of the socket. |
+| Promise&lt;number&gt; | Promise used to return the uplink traffic (in bytes) of the socket. |
 
 **Error codes:**
 

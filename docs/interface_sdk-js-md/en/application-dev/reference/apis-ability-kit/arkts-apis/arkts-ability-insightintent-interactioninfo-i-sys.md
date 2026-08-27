@@ -11,9 +11,7 @@ Defines the interaction information returned after the current intent execution 
 ## Modules to Import
 
 ```TypeScript
-import insightIntent from '@kit.AbilityKit';
-import insightIntentDriver from '@kit.AbilityKitDriver';
-import insightIntentProvider from '@kit.AbilityKitProvider';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## interactionUI

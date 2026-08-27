@@ -15,7 +15,7 @@ The continuationManager module provides the continuation/collaboration managemen
 ## Modules to Import
 
 ```TypeScript
-import continuationManager from '@kit.AbilityKit';
+import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

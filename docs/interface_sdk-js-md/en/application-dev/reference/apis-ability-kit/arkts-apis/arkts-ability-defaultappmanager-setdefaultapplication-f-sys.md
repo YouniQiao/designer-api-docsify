@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import defaultAppManager from '@kit.AbilityKit';
+import { defaultAppManager } from '@kit.AbilityKit';
 ```
 
 ## setDefaultApplication
@@ -197,7 +197,7 @@ Sets the default application based on a system-defined application type, a file 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

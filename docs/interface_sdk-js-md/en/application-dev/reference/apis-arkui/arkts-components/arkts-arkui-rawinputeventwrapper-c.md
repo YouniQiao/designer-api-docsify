@@ -1,6 +1,12 @@
 # RawInputEventWrapper
 
-Raw input event wrapper class.Provides a unified interface to access different types of input events, ensuring type safety and backward compatibility.This class encapsulates either a raw **MouseEvent**, **TouchEvent**, or **KeyEvent** object and provides type-safe methods for access.This class is an abstract class. Developers cannot create instances on their own. The system automatically creates an instance and passes it to the callback when the input event listener is triggered.
+Raw input event wrapper class.
+
+Provides a unified interface to access different types of input events, ensuring type safety and backward compatibility.
+
+This class encapsulates either a raw **MouseEvent**, **TouchEvent**, or **KeyEvent** object and provides type-safe methods for access.
+
+This class is an abstract class. Developers cannot create instances on their own. The system automatically creates an instance and passes it to the callback when the input event listener is triggered.
 
 > **NOTE：**
 > 

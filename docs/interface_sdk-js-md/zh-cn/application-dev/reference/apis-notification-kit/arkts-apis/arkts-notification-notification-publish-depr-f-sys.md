@@ -3,9 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKitManager';
-import notificationSubscribe from '@kit.NotificationKitSubscribe';
-import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## publish
@@ -99,7 +96,7 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
 

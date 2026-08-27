@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wallpaper from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## getId
@@ -66,7 +66,7 @@ Obtains the ID of the wallpaper of the specified type. Returns an integer greate
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | the promise returned by the function. |
+| Promise&lt;number&gt; | the promise returned by the function. |
 
 **Examples**
 

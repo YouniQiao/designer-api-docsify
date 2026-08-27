@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import shortcutManager from '@kit.AbilityKit';
+import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## getAllShortcutInfoForSelf
@@ -22,7 +22,7 @@ Obtains all the shortcut information defined in the [configuration](../../../qui
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;ShortcutInfo & gt; & gt; | Promise that returns all the shortcut information defined in the configuration file. |
+| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise that returns all the shortcut information defined in the configuration file. |
 
 **Examples**
 

@@ -9,12 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputMethod from '@kit.IMEKit';
-import inputMethodEngine from '@kit.IMEKitEngine';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
-import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
-import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## userId
@@ -23,7 +18,7 @@ import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
 userId?: number
 ```
 
-显示输入法窗口的用户ID。 该属性仅系统应用可以使用。
+显示输入法窗口的用户ID。该属性仅系统应用可以使用。
 
 **类型：** number
 

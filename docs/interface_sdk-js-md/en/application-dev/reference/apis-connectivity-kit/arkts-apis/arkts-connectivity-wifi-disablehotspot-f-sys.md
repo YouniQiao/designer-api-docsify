@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## disableHotspot
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function disableHotspot(): boolean
 ```
 
-Disables a Wi-Fi hotspot.<p>This method is asynchronous. If Wi-Fi is enabled after the Wi-Fi hotspot is disabled, Wi-Fi may be re-enabled.
+Disables a Wi-Fi hotspot.
+
+<p>This method is asynchronous. If Wi-Fi is enabled after the Wi-Fi hotspot is disabled, Wi-Fi may be re-enabled.
 
 **Since:** 7
 

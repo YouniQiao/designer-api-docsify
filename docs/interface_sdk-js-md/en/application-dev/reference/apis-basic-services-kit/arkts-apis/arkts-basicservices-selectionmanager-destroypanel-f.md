@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import selectionManager from '@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## destroyPanel
@@ -24,13 +24,13 @@ Destroys the word selection panel. This API is used together with [createPanel](
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | [Panel](arkts-basicservices-selectionmanager-panel-i.md) | Yes | Word selection panel to destroy. |
+| panel | Panel | Yes | Word selection panel to destroy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

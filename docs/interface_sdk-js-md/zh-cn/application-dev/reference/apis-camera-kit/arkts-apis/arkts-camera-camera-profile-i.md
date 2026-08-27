@@ -33,7 +33,9 @@ readonly format: CameraFormat
 readonly size: Size
 ```
 
-分辨率。设置的是相机的分辨率宽度和高度，而非实际输出图像的宽度和高度。
+分辨率。
+
+设置的是相机的分辨率宽度和高度，而非实际输出图像的宽度和高度。
 
 **类型：** Size
 

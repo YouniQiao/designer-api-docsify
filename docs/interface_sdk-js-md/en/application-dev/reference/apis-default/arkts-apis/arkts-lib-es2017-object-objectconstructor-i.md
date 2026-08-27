@@ -17,7 +17,7 @@ Returns an array of key/values of the enumerable properties of an object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| o | { [s: string]: T } \| ArrayLike & lt;T & gt; | Yes |  |
+| o | { [s: string]: T } \| ArrayLike&lt;T&gt; | Yes |  |
 
 **Return value:**
 
@@ -71,7 +71,7 @@ Returns an array of values of the enumerable properties of an object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| o | { [s: string]: T } \| ArrayLike & lt;T & gt; | Yes |  |
+| o | { [s: string]: T } \| ArrayLike&lt;T&gt; | Yes |  |
 
 **Return value:**
 

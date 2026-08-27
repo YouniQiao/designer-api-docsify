@@ -1,6 +1,8 @@
 # HuksExceptionErrCode
 
-Enumerates error codes and error details.For details about the error codes, see [Universal Error Codes](../../errorcode-universal.md) and [HUKS Error Codes](../errorcode-huks.md).
+Enumerates error codes and error details.
+
+For details about the error codes, see [Universal Error Codes](../../errorcode-universal.md) and [HUKS Error Codes](../errorcode-huks.md).
 
 **Since:** 9
 

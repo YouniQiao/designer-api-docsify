@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dataTransfer from '@kit.ConnectivityKit';
+import { dataTransfer } from '@kit.ConnectivityKit';
 ```
 
 ## offReadData

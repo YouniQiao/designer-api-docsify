@@ -9,7 +9,7 @@ Provides APIs for setting different **DataSharePredicates** objects. This type i
 ## Modules to Import
 
 ```TypeScript
-import dataSharePredicates from '@kit.ArkData';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## beginsWith
@@ -18,7 +18,9 @@ import dataSharePredicates from '@kit.ArkData';
 beginsWith(field: string, value: string): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to match the data that begins with the specified value.Currently, only RDB store supports this predicate.
+Creates a **DataSharePredicates** object to match the data that begins with the specified value.
+
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -54,7 +56,9 @@ predicates.beginsWith("NAME", "os");
 contains(field: string, value: string): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to match the data that contains the specified value.Currently, only RDB store supports this predicate.
+Creates a **DataSharePredicates** object to match the data that contains the specified value.
+
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -90,7 +94,9 @@ predicates.contains("NAME", "os");
 distinct(): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to filter out duplicate data records.Currently, only RDB store supports this predicate.
+Creates a **DataSharePredicates** object to filter out duplicate data records.
+
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -119,7 +125,9 @@ predicates.equalTo("NAME", "Rose").distinct();
 endsWith(field: string, value: string): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to match the data that ends with the specified value.Currently, only RDB store supports this predicate.
+Creates a **DataSharePredicates** object to match the data that ends with the specified value.
+
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -155,7 +163,9 @@ predicates.endsWith("NAME", "os");
 glob(field: string, value: string): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to match the data that matches the specified wildcard expression.Currently, only RDB store supports this predicate.
+Creates a **DataSharePredicates** object to match the data that matches the specified wildcard expression.
+
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -191,7 +201,9 @@ predicates.glob("NAME", "?h*g");
 groupBy(fields: Array<string>): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object group the records according to the specified fields.Currently, only RDB store supports this predicate.
+Creates a **DataSharePredicates** object group the records according to the specified fields.
+
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -205,7 +217,7 @@ Creates a **DataSharePredicates** object group the records according to the spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fields | Array & lt;string & gt; | Yes | Names of the columns by which the records are grouped. |
+| fields | Array&lt;string&gt; | Yes | Names of the columns by which the records are grouped. |
 
 **Return value:**
 
@@ -226,7 +238,9 @@ predicates.groupBy(["AGE", "NAME"]);
 indexedBy(field: string): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to list data by the specified index. Before using this API, ensure that the index column exists.Currently, only RDB store supports this predicate.
+Creates a **DataSharePredicates** object to list data by the specified index. Before using this API, ensure that the index column exists.
+
+Currently, only RDB store supports this predicate.
 
 **Since:** 9
 
@@ -261,7 +275,9 @@ predicates.indexedBy("SALARY_INDEX");
 inKeys(keys: Array<string>): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to match the data whose keys are within the given range.Currently, only the KVDB supports this **DataSharePredicates** object.
+Creates a **DataSharePredicates** object to match the data whose keys are within the given range.
+
+Currently, only the KVDB supports this **DataSharePredicates** object.
 
 **Since:** 9
 
@@ -275,7 +291,7 @@ Creates a **DataSharePredicates** object to match the data whose keys are within
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array & lt;string & gt; | Yes | Array of the keys to match. |
+| keys | Array&lt;string&gt; | Yes | Array of the keys to match. |
 
 **Return value:**
 
@@ -296,7 +312,9 @@ predicates.inKeys(["Lisa", "Rose"]);
 isNotNull(field: string): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to match the data whose value is not null.Currently, both the RDB store and KV store support this predicate.
+Creates a **DataSharePredicates** object to match the data whose value is not null.
+
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 9
 
@@ -331,7 +349,9 @@ predicates.isNotNull("NAME");
 isNull(field: string): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to match the data whose value is null.Currently, both the RDB store and KV store support this predicate.
+Creates a **DataSharePredicates** object to match the data whose value is null.
+
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 9
 
@@ -366,7 +386,9 @@ predicates.isNull("NAME");
 prefixKey(prefix: string): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to match the data with the specified key prefix.Currently, only the KVDB supports this **DataSharePredicates** object.
+Creates a **DataSharePredicates** object to match the data with the specified key prefix.
+
+Currently, only the KVDB supports this **DataSharePredicates** object.
 
 **Since:** 9
 
@@ -401,7 +423,9 @@ predicates.prefixKey("NAME");
 unlike(field: string, value: string): DataSharePredicates
 ```
 
-Creates a **DataSharePredicates** object to match the data that does not match the specified wildcard expression.Currently, both the RDB store and KV store support this predicate.
+Creates a **DataSharePredicates** object to match the data that does not match the specified wildcard expression.
+
+Currently, both the RDB store and KV store support this predicate.
 
 **Since:** 9
 

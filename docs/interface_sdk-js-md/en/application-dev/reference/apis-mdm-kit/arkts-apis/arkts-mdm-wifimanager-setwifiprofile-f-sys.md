@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.MDMKit';
+import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## setWifiProfile
@@ -107,7 +107,7 @@ Configures Wi-Fi for the current device to connect to a specified network. This 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object is thrown if the Wi-Fi fails to be configured. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown if the Wi-Fi fails to be configured. |
 
 **Error codes:**
 

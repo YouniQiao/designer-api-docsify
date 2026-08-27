@@ -9,7 +9,7 @@ Defines a VPN observer object. It is used to listen for VPN-related events. Befo
 ## Modules to Import
 
 ```TypeScript
-import vpnExtension from '@kit.NetworkKit';
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## offAuthorizationResult
@@ -36,7 +36,7 @@ Unregisters a listener for the user authorization result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;boolean & gt; | No | Listener callback used to return the user authorization result. If this parameter is passed, the specified listener is unregistered. If no parameter is passed, all registered listeners are unregistered. |
+| callback | Callback&lt;boolean&gt; | No | Listener callback used to return the user authorization result. If this parameter is passed, the specified listener is unregistered. If no parameter is passed, all registered listeners are unregistered. |
 
 **Examples**
 
@@ -80,7 +80,7 @@ Registers a listener for the user authorization result. The authorization result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;boolean & gt; | Yes | Callback used to return the user authorization result. The value **true** indicates that the user agrees to the authorization, and the value **false** indicates the opposite. |
+| callback | Callback&lt;boolean&gt; | Yes | Callback used to return the user authorization result. The value **true** indicates that the user agrees to the authorization, and the value **false** indicates the opposite. |
 
 **Examples**
 

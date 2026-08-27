@@ -9,7 +9,7 @@ AVMusicTemplate interface
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## destroy
@@ -30,7 +30,7 @@ Destroy the AVMusicTemplate instance.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1463,7 +1463,7 @@ Report execute action information to MediaUI.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1491,13 +1491,13 @@ Report current single song to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| single | [Single](arkts-avsession-avmusictemplate-single-i.md) | Yes | single information |
+| single | Single | Yes | single information |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1526,7 +1526,7 @@ Report custom elements change information to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | Yes | action type |
+| actionType | ActionType | Yes | action type |
 | customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | Yes | custom type |
 | customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | Yes | custom element |
 
@@ -1534,7 +1534,7 @@ Report custom elements change information to MediaUI.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1569,7 +1569,7 @@ Report dialog command to MediaUI.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1603,7 +1603,7 @@ Report single download status information to MediaUI.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1637,7 +1637,7 @@ Report execute extension ability to MediaUI.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1671,7 +1671,7 @@ Report media resource change information to MediaUI.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1705,7 +1705,7 @@ Report play list information to MediaUI.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1739,7 +1739,7 @@ Report settings information to MediaUI.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1774,7 +1774,7 @@ Report tab page content information to MediaUI.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1802,13 +1802,13 @@ Report user infomation to MediaUI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userInfo | [UserInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-userinfo-i.md) | Yes | user information |
+| userInfo | UserInfo | Yes | user information |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 

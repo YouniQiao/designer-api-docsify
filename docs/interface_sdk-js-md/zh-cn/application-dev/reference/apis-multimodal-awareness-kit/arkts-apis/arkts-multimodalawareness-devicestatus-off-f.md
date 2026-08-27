@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import deviceStatus from '@kit.MultimodalAwarenessKit';
+import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## off('steadyStandingDetect')

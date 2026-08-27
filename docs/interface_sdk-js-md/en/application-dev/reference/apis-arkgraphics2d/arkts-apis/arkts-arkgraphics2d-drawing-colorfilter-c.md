@@ -16,7 +16,7 @@ Defines a color filter.
 ## Modules to Import
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createBlendModeColorFilter
@@ -36,13 +36,13 @@ Creates a **ColorFilter** object with a given color and blend mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
-| mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | Yes | Blend mode. |
+| mode | BlendMode | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 **Error codes:**
 
@@ -76,13 +76,13 @@ Creates a **ColorFilter** object with a given color and blend mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | color | common2D.Color \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
-| mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | Yes | Blend mode. |
+| mode | BlendMode | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 **Error codes:**
 
@@ -114,14 +114,14 @@ Creates a **ColorFilter** object by combining another two color filters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outer | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter that takes effect later in the new filter. |
-| inner | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter that takes effect first in the new filter. |
+| outer | ColorFilter | Yes | Color filter that takes effect later in the new filter. |
+| inner | ColorFilter | Yes | Color filter that takes effect first in the new filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 **Error codes:**
 
@@ -163,7 +163,7 @@ Creates a lighting color filter. It multiplies the RGB channel values by one col
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | ColorFilter** object created. |
+| ColorFilter | ColorFilter** object created. |
 
 **Examples**
 
@@ -190,7 +190,7 @@ Creates a **ColorFilter** object that applies the sRGB gamma curve to the RGB ch
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 **Examples**
 
@@ -216,7 +216,7 @@ Creates a **ColorFilter** object that multiplies the luma into the alpha channel
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 **Examples**
 
@@ -242,13 +242,13 @@ Creates a color filter object with a 4*5 color matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | Array & lt;number & gt; | Yes | An array of 20 numbers, indicating the 4*5 matrix. |
+| matrix | Array&lt;number&gt; | Yes | An array of 20 numbers, indicating the 4*5 matrix. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 **Error codes:**
 
@@ -286,7 +286,7 @@ Creates a **ColorFilter** object that applies the RGB channels to the sRGB gamma
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 **Examples**
 

@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getDeviceConfigs
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function getDeviceConfigs(): Array<WifiDeviceConfig>
 ```
 
-Obtains the list of all existing Wi-Fi configurations.<p>You can obtain only the Wi-Fi configurations you created on your own application.
+Obtains the list of all existing Wi-Fi configurations.
+
+<p>You can obtain only the Wi-Fi configurations you created on your own application.
 
 **Since:** 7
 
@@ -33,7 +32,7 @@ Obtains the list of all existing Wi-Fi configurations.<p>You can obtain only the
 
 | Type | Description |
 | --- | --- |
-| Array & lt;WifiDeviceConfig & gt; | sReturns the list of all existing Wi-Fi configurations you created on your application. |
+| Array&lt;WifiDeviceConfig&gt; | sReturns the list of all existing Wi-Fi configurations you created on your application. |
 
 **Examples**
 

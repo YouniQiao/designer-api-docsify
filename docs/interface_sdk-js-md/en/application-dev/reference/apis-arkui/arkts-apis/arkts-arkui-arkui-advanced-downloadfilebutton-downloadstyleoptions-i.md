@@ -1,6 +1,8 @@
 # DownloadStyleOptions
 
-Defines the DownloadFileButton style option.@interface DownloadStyleOptions
+Defines the DownloadFileButton style option.
+
+@interface DownloadStyleOptions
 
 **Since:** 12
 

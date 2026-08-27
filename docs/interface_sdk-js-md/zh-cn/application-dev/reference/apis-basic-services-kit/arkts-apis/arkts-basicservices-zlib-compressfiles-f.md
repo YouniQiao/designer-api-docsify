@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import zlib from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## compressFiles
@@ -24,23 +24,23 @@ function compressFiles(inFiles: Array<string>, outFile: string, options: Options
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inFiles | Array & lt;string & gt; | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考FA模型， Stage模型。待压缩的文件夹不可为空，否则使用 [decompressFile](arkts-basicservices-zlib-decompressfile-f.md)对压缩后的文件解压时会报错。 |
+| inFiles | Array&lt;string&gt; | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考FA模型，Stage模型。待压缩的文件夹不可为空，否则使用[decompressFile](arkts-basicservices-zlib-decompressfile-f.md)对压缩后的文件解压时会报错。 |
 | outFile | string | 是 | 指定的压缩结果的文件路径。多个线程同时压缩文件时，outFile不能相同。 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | 是 | 压缩的配置参数。 |
+| options | Options | 是 | 压缩的配置参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回值。 |
+| Promise&lt;void&gt; | Promise对象，无返回值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-传入的源文件错误) | The input source file is invalid. |
-| [900002](../../apis-ability-kit/errorcode-zlib.md#900002-传入的目标文件错误) | The input destination file is invalid. |
+| [900001](../errorcode-zlib.md#900001-传入的源文件错误) | The input source file is invalid. |
+| [900002](../errorcode-zlib.md#900002-传入的目标文件错误) | The input destination file is invalid. |
 
 **示例**
 

@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usbManager from '@kit.BasicServicesKit';
-import serialManager from '@kit.BasicServicesKit.serial';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## connectDevice
@@ -14,6 +13,7 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 ```
 
 Connects to the USB device based on the device information returned by **getDevices()**. If the USB service is abnormal, **undefined** may be returned. Check whether the return value of the API is empty.
+
 1. Call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain the USB device list.
 2. Call [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) to request the device access permission.
 
@@ -25,13 +25,13 @@ Connects to the USB device based on the device information returned by **getDevi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | Yes | USB device. The **busNum** and **devAddress** parameters obtained by [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) are used to determine a USB device. Other parameters are passed transparently. |
+| device | USBDevice | Yes | USB device. The **busNum** and **devAddress** parameters obtained by [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) are used to determine a USB device. Other parameters are passed transparently. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Readonly & lt;USBDevicePipe & gt; | USB device pipe for data transfer. |
+| Readonly&lt;USBDevicePipe&gt; | USB device pipe for data transfer. |
 
 **Error codes:**
 

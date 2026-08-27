@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## createReadStream
@@ -23,7 +23,7 @@ declare function createReadStream(path: string, options?: ReadStreamOptions): Re
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件路径。 |
-| options | [ReadStreamOptions](arkts-corefile-file-fs-readstreamoptions-i.md) | 否 | 支持如下选项：   - start，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。   - end， number类型，表示期望读取结束的位置，单位为Byte。可选，默认文件末尾。 |
+| options | [ReadStreamOptions](arkts-corefile-file-fs-readstreamoptions-i.md) | 否 | 支持如下选项：   - start，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读。   - end，number类型，表示期望读取结束的位置，单位为Byte。可选，默认文件末尾。 |
 
 **返回值：**
 

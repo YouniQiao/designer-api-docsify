@@ -82,7 +82,7 @@ Set the SIM card number in the specified slot.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the setShowNumber. |
+| Promise&lt;void&gt; | The promise returned by the setShowNumber. |
 
 **Error codes:**
 

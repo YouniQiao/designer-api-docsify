@@ -1,6 +1,8 @@
 # LifecycleData
 
-interface of data lifecycle.@interface LifecycleData
+interface of data lifecycle.
+
+@interface LifecycleData
 
 **Since:** 7
 
@@ -30,7 +32,7 @@ Inserts multiple data records into the database. This method should be implement
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the position where the data is to insert. |
-| valueBuckets | Array & lt;rdb.ValuesBucket & gt; | Yes | Indicates the data to insert. |
+| valueBuckets | Array&lt;rdb.ValuesBucket&gt; | Yes | Indicates the data to insert. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
 
 ## call
@@ -139,7 +141,7 @@ Obtains the MIME type of files. This method should be implemented by a Data abil
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the path of the files to obtain. |
-| mimeTypeFilter | string | Yes | Indicates the MIME type of the files to obtain. This parameter cannot be set to {@code null}. & lt;p & gt;1. " & ast;/*": Obtains all types supported by a Data ability. & lt;p & gt;2. "image/*": Obtains files whose main type is image of any subtype. & lt;p & gt;3. " & ast;/jpg": Obtains files whose subtype is JPG of any main type. |
+| mimeTypeFilter | string | Yes | Indicates the MIME type of the files to obtain. This parameter cannot be set to {@code null}. <p>1. " & ast;/*": Obtains all types supported by a Data ability. <p>2. "image/*": Obtains files whose main type is image of any subtype. <p>3. " & ast;/jpg": Obtains files whose subtype is JPG of any main type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
 
 ## getType
@@ -272,7 +274,7 @@ Queries one or more data records in the database. This method should be implemen
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the database table storing the data to query. |
-| columns | Array & lt;string & gt; | Yes | Indicates the columns to be queried, in array, for example, {"name","age"}. You should define the processing logic when this parameter is null. |
+| columns | Array&lt;string&gt; | Yes | Indicates the columns to be queried, in array, for example, {"name","age"}. You should define the processing logic when this parameter is null. |
 | predicates | dataAbility.DataAbilityPredicates | Yes | Indicates filter criteria. If this parameter is null, all data records will be queried by default. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes | function specified by framework to receive the result, developer should call this function to return the result to framework. |
 

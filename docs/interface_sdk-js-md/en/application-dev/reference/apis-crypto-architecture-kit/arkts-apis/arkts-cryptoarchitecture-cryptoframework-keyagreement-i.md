@@ -11,7 +11,7 @@ Key agreement interface, defining methods for generating shared secrets based on
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## generateSecret
@@ -164,7 +164,7 @@ Generates a shared secret based on the given private key and public key. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;DataBlob & gt; | Promise used to return the shared secret of key agreement. |
+| Promise&lt;DataBlob&gt; | Promise used to return the shared secret of key agreement. |
 
 **Error codes:**
 
@@ -206,7 +206,7 @@ Generates a shared secret based on the given private key and public key. This AP
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Returns the shared secret generated. |
+| DataBlob | Returns the shared secret generated. |
 
 **Error codes:**
 

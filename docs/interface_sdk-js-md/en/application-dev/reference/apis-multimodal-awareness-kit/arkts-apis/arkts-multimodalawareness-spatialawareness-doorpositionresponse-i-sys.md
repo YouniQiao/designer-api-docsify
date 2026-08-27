@@ -11,7 +11,7 @@ Interface for indoor or outdoor identify result @interface DoorPositionResponse
 ## Modules to Import
 
 ```TypeScript
-import spatialAwareness from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## deviceId

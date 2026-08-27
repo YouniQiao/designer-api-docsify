@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## abilityName
@@ -60,8 +60,8 @@ readonly capitalizeMode?: CapitalizeMode
 readonly consumeKeyEvents?: boolean
 ```
 
-编辑框是否具有完整处理字母、字符、功能等按键的能力。   
-- 值为true，表示具备此能力。   
+编辑框是否具有完整处理字母、字符、功能等按键的能力。  
+- 值为true，表示具备此能力。  
 - 值为false，表示不具备此能力。
 
 **类型：** boolean
@@ -162,8 +162,8 @@ readonly inputPattern: number
 isTextPreviewSupported: boolean
 ```
 
-编辑框是否支持预上屏。   
-- 值为true，表示支持。   
+编辑框是否支持预上屏。  
+- 值为true，表示支持。  
 - 值为false，表示不支持。
 
 **类型：** boolean

@@ -1,6 +1,7 @@
 # MouseController
 
 Provides the capability of simulating mouse operations. The simulated mouse operation sequence must meet the following requirements:
+
 1. A mouse button can be pressed only when it is in the released state.
 2. A mouse button can only be released after it has been pressed.
 3. A valid axis event sequence must begin with a **beginAxis** call, followed by zero or more **updateAxis** calls,
@@ -43,7 +44,7 @@ Starts an axis event. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -116,7 +117,7 @@ Ends an axis event. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -158,7 +159,7 @@ Moves the mouse cursor to the specified display coordinates. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -223,7 +224,7 @@ Presses a mouse button. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -292,7 +293,7 @@ Release a mouse button. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -333,7 +334,7 @@ Updates an axis event. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

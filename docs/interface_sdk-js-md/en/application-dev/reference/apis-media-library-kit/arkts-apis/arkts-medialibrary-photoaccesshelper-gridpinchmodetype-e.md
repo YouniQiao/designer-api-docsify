@@ -1,6 +1,8 @@
 # GridPinchModeType
 
-Enumeration type of grid pinch mode.@enum { number } GridPinchModeType
+Enumeration type of grid pinch mode.
+
+@enum { number } GridPinchModeType
 
 **Since:** 23
 

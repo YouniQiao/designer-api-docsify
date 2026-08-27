@@ -1,6 +1,8 @@
 # BusinessType (System API)
 
-This enumeration value is used to identify various types of business ability info@enum { number }
+This enumeration value is used to identify various types of business ability info
+
+@enum { number }
 
 **Since:** 10
 

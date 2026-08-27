@@ -24,7 +24,7 @@ Joins a conference call. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mainCallId | number | Yes | Main call ID. |
-| callNumberList | Array & lt;string & gt; | Yes | List of call numbers. |
+| callNumberList | Array&lt;string&gt; | Yes | List of call numbers. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -75,13 +75,13 @@ Joins a conference call. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mainCallId | number | Yes | Main call ID. |
-| callNumberList | Array & lt;string & gt; | Yes | List of call numbers. |
+| callNumberList | Array&lt;string&gt; | Yes | List of call numbers. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

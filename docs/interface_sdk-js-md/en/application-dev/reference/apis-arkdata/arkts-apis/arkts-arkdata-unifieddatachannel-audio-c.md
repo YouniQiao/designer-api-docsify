@@ -11,7 +11,7 @@ Represents audio data. It is a child class of [File](arkts-arkdata-unifieddatach
 ## Modules to Import
 
 ```TypeScript
-import unifiedDataChannel from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## audioUri

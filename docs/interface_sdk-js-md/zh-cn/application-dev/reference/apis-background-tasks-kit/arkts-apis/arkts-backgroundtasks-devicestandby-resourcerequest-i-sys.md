@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import deviceStandby from '@kit.BackgroundTasksKit';
+import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## duration
@@ -20,7 +20,7 @@ import deviceStandby from '@kit.BackgroundTasksKit';
 duration: number
 ```
 
-豁免时长。 单位：s
+豁免时长。单位：s
 
 **类型：** number
 

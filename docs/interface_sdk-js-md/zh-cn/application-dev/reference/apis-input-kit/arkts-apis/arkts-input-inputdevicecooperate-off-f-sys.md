@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKit';
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## off('cooperation')

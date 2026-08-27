@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## setNetworkAccessPolicy
@@ -34,7 +34,7 @@ Sets whether the application with the specified UID can access the network. This
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

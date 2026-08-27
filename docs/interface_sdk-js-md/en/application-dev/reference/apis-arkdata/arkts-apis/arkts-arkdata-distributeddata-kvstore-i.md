@@ -13,7 +13,6 @@ Provides APIs to manage data in a KV store, for example, adding or deleting data
 ## Modules to Import
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## commit
@@ -75,7 +74,7 @@ Commits the transaction in this KV store. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -167,7 +166,7 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -271,7 +270,7 @@ Deletes KV pairs in batches from this KV store. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -374,7 +373,7 @@ Sets data sync, which can be enabled or disabled. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -500,7 +499,7 @@ Subscribes to data changes of the specified type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | Yes | Type of data change. |
+| type | SubscribeType | Yes | Type of data change. |
 | listener | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -614,7 +613,7 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -653,7 +652,7 @@ Inserts KV pairs in batches to this KV store. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | [Entry[]](arkts-arkdata-distributeddata-entry-i.md) | Yes | KV pairs to insert in batches. |
+| entries | Entry[] | Yes | KV pairs to insert in batches. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -707,13 +706,13 @@ Inserts KV pairs in batches to this KV store. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | [Entry[]](arkts-arkdata-distributeddata-entry-i.md) | Yes | KV pairs to insert in batches. |
+| entries | Entry[] | Yes | KV pairs to insert in batches. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -808,7 +807,7 @@ Rolls back the transaction in this KV store. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -891,7 +890,7 @@ Sets the data sync range. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -989,7 +988,7 @@ Starts the transaction in this KV store. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

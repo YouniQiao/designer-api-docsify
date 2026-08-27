@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## queryApn
@@ -12,7 +12,7 @@ import networkManager from '@kit.MDMKit';
 function queryApn(admin: Want, apnInfo: Record<string, string>): Array<string>
 ```
 
-查询符合特定APN信息的APN ID。适用于企业移动网络配置审计场景，例如查找特定配置的APN、验证APN配置是否存在、为APN管理操作提供APN ID参数，帮助企业查找和管理APN配置，为APN的更新和删除操作提供必要的参数信 息。
+查询符合特定APN信息的APN ID。适用于企业移动网络配置审计场景，例如查找特定配置的APN、验证APN配置是否存在、为APN管理操作提供APN ID参数，帮助企业查找和管理APN配置，为APN的更新和删除操作提供必要的参数信息。
 
 **起始版本：** 20
 
@@ -27,13 +27,13 @@ function queryApn(admin: Want, apnInfo: Record<string, string>): Array<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| apnInfo | Record & lt;string, string & gt; | 是 | APN的查询条件。设置后系统将根据这些条件筛选匹配的APN配置，返回符合条件的APN ID列表。   - apnName：APN配置的名称 标识符，可选。   - mcc：3位数字的移动国家代码，可选。   - mnc：2-3位数字的移动网络代码，可选。   - apn：接入点名称，可选。   - type：APN的服务类型，可选。   - user：APN身份验证的用户名，可选。   - proxy：普通数据连接的代理服务器地址，可选。   - mmsproxy：彩信服务的专用代理地址，可选。   - authType：APN的认证协议类型，可 选。 |
+| apnInfo | Record&lt;string, string&gt; | 是 | APN的查询条件。设置后系统将根据这些条件筛选匹配的APN配置，返回符合条件的APN ID列表。   - apnName：APN配置的名称标识符，可选。   - mcc：3位数字的移动国家代码，可选。   - mnc：2-3位数字的移动网络代码，可选。   - apn：接入点名称，可选。   - type：APN的服务类型，可选。   - user：APN身份验证的用户名，可选。   - proxy：普通数据连接的代理服务器地址，可选。   - mmsproxy：彩信服务的专用代理地址，可选。   - authType：APN的认证协议类型，可选。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 满足要求的APN ID。 |
+| Array&lt;string&gt; | 满足要求的APN ID。 |
 
 **错误码：**
 
@@ -91,13 +91,13 @@ function queryApn(admin: Want, apnId: string): Record<string, string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| apnId | string | 是 | 指定的APN ID。设置后将查询该APN ID对应的详细参数配置信息。可以通过 [networkManager.queryApn](#queryapn)获取设备信息。 |
+| apnId | string | 是 | 指定的APN ID。设置后将查询该APN ID对应的详细参数配置信息。可以通过[networkManager.queryApn](#queryapn)获取设备信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Record & lt;string, string & gt; | 指定APN ID的APN参数信息。 |
+| Record&lt;string, string&gt; | 指定APN ID的APN参数信息。 |
 
 **错误码：**
 

@@ -9,7 +9,7 @@ Defines the **value** object in a KV store.
 ## Modules to Import
 
 ```TypeScript
-import distributedKVStore from '@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## type

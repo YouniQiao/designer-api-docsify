@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import metadataBinding from '@kit.MultimodalAwarenessKit';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## encodeImage
@@ -31,7 +31,7 @@ Encodes metadata into an image. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise object, which is used to return the image with encoded metadata. |
+| Promise&lt;image.PixelMap&gt; | Promise object, which is used to return the image with encoded metadata. |
 
 **Error codes:**
 

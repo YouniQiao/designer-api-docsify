@@ -1,6 +1,8 @@
 # SearchPlayInfo
 
-搜播信息的定义。@interface SearchPlayInfo
+搜播信息的定义。
+
+@interface SearchPlayInfo
 
 **起始版本：** 23
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## musicInfo

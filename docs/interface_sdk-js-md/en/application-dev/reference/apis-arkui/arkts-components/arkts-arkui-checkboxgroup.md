@@ -1,6 +1,7 @@
 # CheckboxGroup
 
 The **CheckboxGroup** component is used to select or deselect all check boxes in a group.
+
 > **NOTE**
 
 ## Child Components
@@ -13,7 +14,9 @@ Not supported
 CheckboxGroup(options?: CheckboxGroupOptions)
 ```
 
-Creates a check box group for controlling the select-all or deselect-all state of check boxes within the group. Check boxes and check box groups with the same **group** value belong to the same group.When this API is used with components that come with the caching mechanism, such as the List component, those check boxes that have not been created yet need to be manually selected or unselected. For details, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-checkboxgroup.md#example-4-implementing-the-select-all-functionality).
+Creates a check box group for controlling the select-all or deselect-all state of check boxes within the group. Check boxes and check box groups with the same **group** value belong to the same group.
+
+When this API is used with components that come with the caching mechanism, such as the List component, those check boxes that have not been created yet need to be manually selected or unselected. For details, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-checkboxgroup.md#example-4-implementing-the-select-all-functionality).
 
 **Since:** 8
 
@@ -35,16 +38,21 @@ Creates a check box group for controlling the select-all or deselect-all state o
 
 | Name | Description |
 | --- | --- |
+| [CheckBoxGroupConfiguration](arkts-arkui-checkboxgroupconfiguration-i.md) | You must customize this class to implement the ContentModifier interface. For details, see [contentModifier](arkts-arkui-checkboxgroup-attribute.md#contentmodifier). |
+| [CheckboxGroupOptions](arkts-arkui-checkboxgroupoptions-i.md) | Information about the check box group. |
+| [CheckboxGroupResult](arkts-arkui-checkboxgroupresult-i.md) | Name and status of a check box group. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [OnCheckboxGroupChangeCallback](arkts-arkui-oncheckboxgroupchangecallback-t.md) | Information about the check box group. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [SelectStatus](arkts-arkui-selectstatus-e.md) | Enumerates the selection states of check boxes in the check box group. |
 
 ## Examples
 

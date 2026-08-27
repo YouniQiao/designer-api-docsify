@@ -44,7 +44,7 @@ readonly appInstanceKey?: string
 classification?: string
 ```
 
-通知分类。 预留能力，暂未支持。
+通知分类。预留能力，暂未支持。
 
 **类型：** string
 
@@ -80,7 +80,7 @@ readonly creatorInstanceKey?: number
 readonly deviceId?: string
 ```
 
-通知源的deviceId。 预留能力，暂未支持。
+通知源的deviceId。预留能力，暂未支持。
 
 **类型：** string
 
@@ -112,9 +112,14 @@ extendInfo?: Record<string, Object>
 forceDistributed?: boolean
 ```
 
-通知是否强制进行全场景跨设备协同显示，默认为false。  
-**说明：**:仅当应用在跨设备协同管控名单中且notDistributed为false时，该字段才会生效。通过读取notification_config.json文件 （文件配置路径见：[notification_config_parse.h] (https://gitcode.com/openharmony/notification_distributed_notification_service/blob/master/services/ans/include/notification_config_parse.h) 中的NOTIFICATION_CONFIG_FILE属性）中的collaborationFilter字段，查看是否包含应用的UID或包名。如果包含， 说明是在应用跨设备协同管控名单中。
+通知是否强制进行全场景跨设备协同显示，默认为false。
+
+**说明：**:
+
+仅当应用在跨设备协同管控名单中且notDistributed为false时，该字段才会生效。通过读取notification_config.json文件（文件配置路径见：[notification_config_parse.h] (https://gitcode.com/openharmony/notification_distributed_notification_service/blob/master/services/ans/include/notification_config_parse.h)中的NOTIFICATION_CONFIG_FILE属性）中的collaborationFilter字段，查看是否包含应用的UID或包名。如果包含，说明是在应用跨设备协同管控名单中。
+
 - 设置为true时：通知将在所有协同设备上显示。
+
 - 设置为false时：通知将按照协同管控名单显示。
 
 **类型：** boolean
@@ -151,7 +156,8 @@ groupInfo?: GroupInfo
 isRemoveAllowed?: boolean
 ```
 
-通知是否能被移除（点击通知下方删除按钮无法删除，左滑不出现删除按钮）。默认为true。  
+通知是否能被移除（点击通知下方删除按钮无法删除，左滑不出现删除按钮）。默认为true。
+
 - true：是。  
 - false：否。
 
@@ -174,9 +180,14 @@ isRemoveAllowed?: boolean
 notDistributed?: boolean
 ```
 
-通知是否不进行全场景跨设备协同显示，默认为false。  
-**说明：**:该字段与forceDistributed字段互斥，当两者同时为true时，仅notDistributed字段生效。
+通知是否不进行全场景跨设备协同显示，默认为false。
+
+**说明：**:
+
+该字段与forceDistributed字段互斥，当两者同时为true时，仅notDistributed字段生效。
+
 - 设置为true时：通知仅在本设备上显示。
+
 - 设置为false时：通知将在所有协同设备上显示。
 
 **类型：** boolean
@@ -195,7 +206,9 @@ notDistributed?: boolean
 notificationControlFlags?: number
 ```
 
-通知提醒方式管控。默认值为0。可以通过此接口减少当前通知的提醒方式。与 [NotificationControlFlagStatus](arkts-notification-notificationmanager-notificationcontrolflagstatus-e-sys.md)的 枚举进行按位或运算得到该参数。
+通知提醒方式管控。默认值为0。
+
+可以通过此接口减少当前通知的提醒方式。与[NotificationControlFlagStatus](arkts-notification-notificationmanager-notificationcontrolflagstatus-e-sys.md)的枚举进行按位或运算得到该参数。
 
 **类型：** number
 
@@ -227,7 +240,7 @@ representativeBundle?: BundleOption
 readonly source?: number
 ```
 
-通知源。 预留能力，暂未支持。
+通知源。预留能力，暂未支持。
 
 **类型：** number
 

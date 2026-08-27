@@ -52,3 +52,4 @@ Defines the constructor of Polyline component.
 
 | Name | Description |
 | --- | --- |
+| [PolylineOptions](arkts-arkui-polylineoptions-i.md) | Describes the options of the polyline. |

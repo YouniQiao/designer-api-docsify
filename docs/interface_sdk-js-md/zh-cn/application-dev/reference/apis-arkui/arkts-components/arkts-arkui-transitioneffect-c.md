@@ -33,7 +33,7 @@ animation(value: AnimateParam): TransitionEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [AnimateParam](arkts-arkui-animateparam-i.md) | 是 | 动画参数。 & lt;/br & gt;该参数只用来指定动画参数，其入参AnimateParam的onFinish回调不生效。 & lt;/br & gt;如果通过combine进行 TransitionEffect的组合，前一TransitionEffect的动画参数也可用于后一TransitionEffect。 |
+| value | [AnimateParam](arkts-arkui-animateparam-i.md) | 是 | 动画参数。&lt;/br&gt;该参数只用来指定动画参数，其入参AnimateParam的onFinish回调不生效。&lt;/br&gt;如果通过combine进行TransitionEffect的组合，前一TransitionEffect的动画参数也可用于后一TransitionEffect。 |
 
 **返回值：**
 
@@ -50,7 +50,7 @@ static asymmetric(
   ): TransitionEffect<"asymmetric">
 ```
 
-设置非对称的转场效果，即出现、消失为两套独立不同的动画，效果不互为逆过程。具体效果可参考 [示例2](../../../reference/apis-arkui/arkui-ts/ts-transition-animation-component.md#示例2使用不同接口实现图片出现消失)。
+设置非对称的转场效果，即出现、消失为两套独立不同的动画，效果不互为逆过程。具体效果可参考[示例2](../../../reference/apis-arkui/arkui-ts/ts-transition-animation-component.md#示例2使用不同接口实现图片出现消失)。
 
 **起始版本：** 10
 
@@ -225,7 +225,7 @@ static rotate(options: RotateOptions): TransitionEffect<"rotate">
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RotateOptions](arkts-arkui-rotateoptions-i.md) | 是 | 组件转场时的旋转效果，为插入时起点和删除时终点的值。   -x：横向的旋转向量分量。   -y：纵向的旋转向量分量。   -z：竖向的旋转向量分量。    - centerX、centerY指旋转中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为旋转中心点。   - 中心点为(0, 0)代表组件的左上角。   -centerZ指 z轴锚点，即3D旋转中心点的z轴分量，centerZ默认值是0。   -perspective指视距，不支持perspective属性做转场动画。 |
+| options | [RotateOptions](arkts-arkui-rotateoptions-i.md) | 是 | 组件转场时的旋转效果，为插入时起点和删除时终点的值。   -x：横向的旋转向量分量。   -y：纵向的旋转向量分量。   -z：竖向的旋转向量分量。   - centerX、centerY指旋转中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为旋转中心点。   - 中心点为(0, 0)代表组件的左上角。   -centerZ指z轴锚点，即3D旋转中心点的z轴分量，centerZ默认值是0。   -perspective指视距，不支持perspective属性做转场动画。 |
 
 **返回值：**
 
@@ -255,7 +255,7 @@ static scale(options: ScaleOptions): TransitionEffect<"scale">
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | 是 | 组件转场时的缩放效果，为插入时起点和删除时终点的值。设置的缩放值在组件当前的scale属性上进行叠加，如组件当前scale值为0.8，当转场缩放值设置为0.5时， 组件入场动画的缩放值将从0.4开始执行。   -x：横向放大倍数（或缩小比例）。   -y：纵向放大倍数（或缩小比例）。   -z：当前为二维显示，该参数无效。   - centerX、centerY指缩放 中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为缩放中心点。   - 中心点为(0, 0)代表组件的左上角。   **说明：** 设置centerX、centerY为非法字符串 时（例如，"illegalString"），默认值为"0"。 |
+| options | [ScaleOptions](arkts-arkui-scaleoptions-i.md) | 是 | 组件转场时的缩放效果，为插入时起点和删除时终点的值。设置的缩放值在组件当前的scale属性上进行叠加，如组件当前scale值为0.8，当转场缩放值设置为0.5时，组件入场动画的缩放值将从0.4开始执行。   -x：横向放大倍数（或缩小比例）。   -y：纵向放大倍数（或缩小比例）。   -z：当前为二维显示，该参数无效。   - centerX、centerY指缩放中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为缩放中心点。   - 中心点为(0, 0)代表组件的左上角。   **说明：** 设置centerX、centerY为非法字符串时（例如，"illegalString"），默认值为"0"。 |
 
 **返回值：**
 
@@ -365,7 +365,7 @@ static readonly SLIDE: TransitionEffect<
 static readonly SLIDE_SWITCH: TransitionEffect<"slideSwitch">
 ```
 
-指定出现时从右侧先缩小再放大滑入、消失时从左侧先缩小再放大滑出的转场效果。自带动画参数，也可覆盖动画参数，自带的动画参数时长600ms，指定动画曲线cubicBezierCurve(0.24, 0.0, 0.50, 1.0)，最小 缩放比例为0.8。
+指定出现时从右侧先缩小再放大滑入、消失时从左侧先缩小再放大滑出的转场效果。自带动画参数，也可覆盖动画参数，自带的动画参数时长600ms，指定动画曲线cubicBezierCurve(0.24, 0.0, 0.50, 1.0)，最小缩放比例为0.8。
 
 **类型：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"slideSwitch"&gt;
 

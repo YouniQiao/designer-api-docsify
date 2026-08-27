@@ -9,7 +9,7 @@ Describes the launch parameters, which mainly include the ability launch reasons
 ## Modules to Import
 
 ```TypeScript
-import AbilityConstant from '@kit.AbilityKit';
+import { AbilityConstant } from '@kit.AbilityKit';
 ```
 
 ## lastExitDetailInfo
@@ -108,8 +108,11 @@ Detailed message that describes the reason for the ability launch.
 launchUptime?: number
 ```
 
-System uptime (the time elapsed since the system booted up) when the UIAbility starts, in milliseconds.  
-**Constraints**:This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
+System uptime (the time elapsed since the system booted up) when the UIAbility starts, in milliseconds.
+
+**Constraints**:
+
+This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
 
 **Type:** number
 
@@ -127,8 +130,13 @@ System uptime (the time elapsed since the system booted up) when the UIAbility s
 launchUTCTime?: number
 ```
 
-UTC timestamp when the UIAbility starts, in milliseconds.This API can be used in atomic services since API version 23.  
-**Constraints**:This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
+UTC timestamp when the UIAbility starts, in milliseconds.
+
+This API can be used in atomic services since API version 23.
+
+**Constraints**:
+
+This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
 
 **Type:** number
 

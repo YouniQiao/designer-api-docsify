@@ -1,6 +1,8 @@
 # Video属性/事件
 
-除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：
+
+除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** VideoAttribute extends CommonMethod<VideoAttribute>
 
@@ -57,7 +59,7 @@ autoPlay(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否自动播放。 true：开启自动播放；false：关闭自动播放。 默认值：false |
+| value | boolean | 是 | 是否自动播放。true：开启自动播放；false：关闭自动播放。默认值：false |
 
 ## controls
 
@@ -77,7 +79,7 @@ controls(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 控制视频播放的控制栏是否显示。 true：控制栏显示；false：控制栏不显示。 默认值：true    **说明：** 如需使用[enableAnalyzer](#enableanalyzer)功能进行AI分析，需设置为false使用自定义控制栏。 |
+| value | boolean | 是 | 控制视频播放的控制栏是否显示。true：控制栏显示；false：控制栏不显示。默认值：true    **说明：** 如需使用[enableAnalyzer](#enableanalyzer)功能进行AI分析，需设置为false使用自定义控制栏。 |
 
 ## enableAnalyzer
 
@@ -85,7 +87,11 @@ controls(value: boolean)
 enableAnalyzer(enable: boolean)
 ```
 
-设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能，支持attributeModifier动态设置属性方法。启用后，视频播放暂停时自动进入分析状态，开始分析当前画面帧，视频继续播放后自动退出分析状态。不支持与overlay属性同时使用，两者同时设置时overlay中 [CustomBuilder](arkts-arkui-custombuilder-t.md)属性会失效。
+设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能，支持attributeModifier动态设置属性方法。
+
+启用后，视频播放暂停时自动进入分析状态，开始分析当前画面帧，视频继续播放后自动退出分析状态。
+
+不支持与overlay属性同时使用，两者同时设置时overlay中[CustomBuilder](arkts-arkui-custombuilder-t.md)属性会失效。
 
 > **说明：**
 > 
@@ -103,7 +109,7 @@ enableAnalyzer(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否启用AI分析功能。 true：开启AI分析功能；false：关闭AI分析功能。 默认值：false    **说明：** 不支持与overlay属性同时使用，两者同时设置时overlay中 [CustomBuilder](arkts-arkui-custombuilder-t.md)属性会失效。 |
+| enable | boolean | 是 | 是否启用AI分析功能。true：开启AI分析功能；false：关闭AI分析功能。默认值：false    **说明：** 不支持与overlay属性同时使用，两者同时设置时overlay中[CustomBuilder](arkts-arkui-custombuilder-t.md)属性会失效。 |
 
 ## enableShortcutKey
 
@@ -111,7 +117,9 @@ enableAnalyzer(enable: boolean)
 enableShortcutKey(enabled: boolean)
 ```
 
-设置组件支持快捷键响应，支持attributeModifier动态设置属性方法。目前支持在组件获焦后响应空格键播放/暂停、上下方向键调整视频音量、左右方向键快进/快退。
+设置组件支持快捷键响应，支持attributeModifier动态设置属性方法。
+
+目前支持在组件获焦后响应空格键播放/暂停、上下方向键调整视频音量、左右方向键快进/快退。
 
 **起始版本：** 15
 
@@ -125,7 +133,7 @@ enableShortcutKey(enabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 是否启用快捷键响应。 true：开启快捷键响应；false：关闭快捷键响应。 默认值：false    **说明：** enabled设置为false且controls属性设置为true时，仍然可以通过左右方向键控制进度条快进或快退。 |
+| enabled | boolean | 是 | 是否启用快捷键响应。true：开启快捷键响应；false：关闭快捷键响应。默认值：false    **说明：** enabled设置为false且controls属性设置为true时，仍然可以通过左右方向键控制进度条快进或快退。 |
 
 ## loop
 
@@ -145,7 +153,7 @@ loop(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否单个视频循环播放。 true：开启循环播放；false：关闭循环播放。 默认值：false |
+| value | boolean | 是 | 是否单个视频循环播放。true：开启循环播放；false：关闭循环播放。默认值：false |
 
 ## muted
 
@@ -165,7 +173,7 @@ muted(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 视频是否静音。 true：开启静音；false：关闭静音。 默认值：false |
+| value | boolean | 是 | 视频是否静音。true：开启静音；false：关闭静音。默认值：false |
 
 ## objectFit
 
@@ -185,7 +193,7 @@ objectFit(value: ImageFit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) | 是 | 视频填充模式。 默认值：ImageFit.Cover 约束：不支持ImageFit类型中的枚举值MATRIX，若设置，则作用效果与ImageFit.Cover一致。 异常值：若设置异常值undefined、null，或不在[ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md)枚举范围内的值，作用效果均与ImageFit.Cover一致。 |
+| value | [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md) | 是 | 视频填充模式。默认值：ImageFit.Cover 约束：不支持ImageFit类型中的枚举值MATRIX，若设置，则作用效果与ImageFit.Cover一致。异常值：若设置异常值undefined、null，或不在[ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md)枚举范围内的值，作用效果均与ImageFit.Cover一致。 |
 
 ## onError
 
@@ -209,7 +217,7 @@ onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) \| import('../api/@ohos.base').ErrorCallback | 是 | 视频播放失败时的回调函数。其中 [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)类型入参的回调函数用于接收异常信息，回调返回的错误码详细介绍请参见 [Video组件错误码](../errorcode-video.md)和 [Media错误码](../../apis-media-kit/errorcode-media.md)。<br>**起始版本：** 20 |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) \| import('../api/@ohos.base').ErrorCallback | 是 | 视频播放失败时的回调函数。其中[ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)类型入参的回调函数用于接收异常信息，回调返回的错误码详细介绍请参见[Video组件错误码](../errorcode-video.md)和[Media错误码](../../apis-media-kit/errorcode-media.md)。<br>**起始版本：** 20 |
 
 ## onFinish
 
@@ -371,7 +379,7 @@ onStop(event: Callback<void>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback & lt;void & gt; | 是 | 视频播放停止时的回调函数。 |
+| event | Callback&lt;void&gt; | 是 | 视频播放停止时的回调函数。 |
 
 ## onUpdate
 

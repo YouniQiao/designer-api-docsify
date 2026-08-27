@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## isRunningInStabilityTest
@@ -76,7 +76,7 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the API call result and the result **true** or **false**. You can perform error handling or custom processing in this callback. |
+| Promise&lt;boolean&gt; | Promise used to return the API call result and the result **true** or **false**. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 

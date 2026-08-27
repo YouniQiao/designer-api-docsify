@@ -11,7 +11,7 @@ Application component that has the UI. It provides lifecycle callbacks such as c
 ## Modules to Import
 
 ```TypeScript
-import UIAbility, { Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## onBackground
@@ -20,7 +20,9 @@ import UIAbility, { Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteS
 onBackground(): void
 ```
 
-Called when the application transitions from the foreground to the background. You can release resources when the UI is no longer visible, for example, stopping location services, within this callback.This API returns the result synchronously and does not support asynchronous callback.
+Called when the application transitions from the foreground to the background. You can release resources when the UI is no longer visible, for example, stopping location services, within this callback.
+
+This API returns the result synchronously and does not support asynchronous callback.
 
 **Since:** 9
 
@@ -50,7 +52,8 @@ export default class MyUIAbility extends UIAbility {
 onBackPressed(): boolean
 ```
 
-Called when an operation of going back to the previous page is triggered on this UIAbility. The return value determines whether to destroy the UIAbility instance.  
+Called when an operation of going back to the previous page is triggered on this UIAbility. The return value determines whether to destroy the UIAbility instance.
+
 - When the target SDK version is earlier than 12, the default return value is **false**, indicating that the  
 UIAbility will be destroyed.  
 - When the target SDK version is 12 or later, the default return value is **true**, indicating that the UIAbility  
@@ -68,7 +71,7 @@ will be moved to the background and will not be destroyed.
 
 | Type | Description |
 | --- | --- |
-| boolean | The value & lt;code & gt;true & lt;/code & gt; means that the UIAbility instance will be moved to the background and will not be destroyed, and & lt;code & gt;false & lt;/code & gt; means that the UIAbility instance will be destroyed. |
+| boolean | The value &lt;code&gt;true&lt;/code&gt; means that the UIAbility instance will be moved to the background and will not be destroyed, and &lt;code&gt;false&lt;/code&gt; means that the UIAbility instance will be destroyed. |
 
 **Examples**
 
@@ -117,7 +120,7 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | Record & lt;string, Object & gt; | Yes | Want parameter, which supports only the key **"ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
+| wantParam | Record&lt;string, Object&gt; | Yes | Want parameter, which supports only the key **"ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
 
 **Return value:**
 
@@ -163,14 +166,14 @@ Called when a UIAbility is to be migrated across devices. You can save service d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | Record & lt;string, Object & gt; | Yes | Data to be migrated.<br>**Since:** 11 |
+| wantParam | Record&lt;string, Object&gt; | Yes | Data to be migrated.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | AbilityConstant.OnContinueResult | Return the result of onContinue.<br>**Applicable version:** 9 - 11 |
-| AbilityConstant.OnContinueResult \| Promise & lt;AbilityConstant.OnContinueResult & gt; | Whether the migration is accepted. The options are as follows: |
+| AbilityConstant.OnContinueResult \| Promise&lt;AbilityConstant.OnContinueResult&gt; | Whether the migration is accepted. The options are as follows: |
 
 **Examples**
 
@@ -217,7 +220,9 @@ export default class MyUIAbility extends UIAbility {
 onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void
 ```
 
-Called when a UIAbility instance is created. You can execute initialization logic (such as defining variables and loading resources) in this callback. This callback is invoked during a [cold start](../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability) of the UIAbility.This API returns the result synchronously and does not support asynchronous callback.
+Called when a UIAbility instance is created. You can execute initialization logic (such as defining variables and loading resources) in this callback. This callback is invoked during a [cold start](../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability) of the UIAbility.
+
+This API returns the result synchronously and does not support asynchronous callback.
 
 **Since:** 9
 
@@ -255,7 +260,9 @@ export default class MyUIAbility extends UIAbility {
 onDestroy(): void | Promise<void>
 ```
 
-Called when the UIAbility is destroyed (for example, when the UIAbility is terminated using the [terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself) API). You can clear resources and save data during this lifecycle.This API returns the result synchronously or uses a promise to return the result.
+Called when the UIAbility is destroyed (for example, when the UIAbility is terminated using the [terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself) API). You can clear resources and save data during this lifecycle.
+
+This API returns the result synchronously or uses a promise to return the result.
 
 > **NOTE：**
 > 
@@ -310,7 +317,9 @@ export default class MyUIAbility extends UIAbility {
 onDidBackground(): void
 ```
 
-Called after the application has transitioned to the background. It is called after [onBackground](#onbackground). It can be used to release resources after the application has entered the background, for example, stopping audio playback.This API returns the result synchronously and does not support asynchronous callback.
+Called after the application has transitioned to the background. It is called after [onBackground](#onbackground). It can be used to release resources after the application has entered the background, for example, stopping audio playback.
+
+This API returns the result synchronously and does not support asynchronous callback.
 
 **Since:** 20
 
@@ -378,7 +387,9 @@ export default class MyUIAbility extends UIAbility {
 onDidForeground(): void
 ```
 
-Called after the application has transitioned to the foreground. It is called after [onForeground](#onforeground). It can be used to capture the moment when the application fully transitions to the foreground. When paired with [onWillForeground](#onwillforeground), it can also measure the duration from the application's initial foreground entry to its full transition into the foreground state.This API returns the result synchronously and does not support asynchronous callback.
+Called after the application has transitioned to the foreground. It is called after [onForeground](#onforeground). It can be used to capture the moment when the application fully transitions to the foreground. When paired with [onWillForeground](#onwillforeground), it can also measure the duration from the application's initial foreground entry to its full transition into the foreground state.
+
+This API returns the result synchronously and does not support asynchronous callback.
 
 **Since:** 20
 
@@ -412,13 +423,13 @@ Called when UIAbility data is dumped by running the dump command during applicat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Array & lt;string & gt; | Yes | Parameters for the dump command. |
+| params | Array&lt;string&gt; | Yes | Parameters for the dump command. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Information returned by the dump operation. |
+| Array&lt;string&gt; | Information returned by the dump operation. |
 
 **Examples**
 
@@ -439,7 +450,9 @@ export default class MyUIAbility extends UIAbility {
 onForeground(): void
 ```
 
-Called when the application is initially launched into the foreground or transitions from the background to the foreground. You can request necessary system resources, for example, requesting location services when the application transitions to the foreground, within this callback.This API returns the result synchronously and does not support asynchronous callback.
+Called when the application is initially launched into the foreground or transitions from the background to the foreground. You can request necessary system resources, for example, requesting location services when the application transitions to the foreground, within this callback.
+
+This API returns the result synchronously and does not support asynchronous callback.
 
 **Since:** 9
 
@@ -468,7 +481,9 @@ export default class MyUIAbility extends UIAbility {
 onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
 ```
 
-Called when a started UIAbility instance is brought up again. If there are specific scenarios where you do not want this lifecycle callback to be triggered, you can use [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios) to set those [scenarios](arkts-ability-contextconstant-scenarios-e.md).This API returns the result synchronously and does not support asynchronous callback.
+Called when a started UIAbility instance is brought up again. If there are specific scenarios where you do not want this lifecycle callback to be triggered, you can use [setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios) to set those [scenarios](arkts-ability-contextconstant-scenarios-e.md).
+
+This API returns the result synchronously and does not support asynchronous callback.
 
 **Since:** 9
 
@@ -574,7 +589,9 @@ export default class EntryAbility extends UIAbility {
 onPrepareToTerminateAsync(): Promise<boolean>
 ```
 
-Triggered by the system just before the UIAbility is close (for example, when the user clicks the close button in the top-right corner of the application window or exits from the dock or system tray), allowing for additional operations to be performed before the UIAbility is officially shut down.You can return **true** to block the current closure attempt and then manually call [terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself) at an appropriate time to close it. For example, you might ask the user to confirm whether they want to close the UIAbility and then proceed with the closure manually. Starting from API version 15, this API executes the callback normally only on 2-in-1 devices. It does not execute the callback on other devices. Starting from API version 19, this API executes the callback normally only on 2-in-1 devices and tablets. It does not execute the callback on other devices.
+Triggered by the system just before the UIAbility is close (for example, when the user clicks the close button in the top-right corner of the application window or exits from the dock or system tray), allowing for additional operations to be performed before the UIAbility is officially shut down.
+
+You can return **true** to block the current closure attempt and then manually call [terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself) at an appropriate time to close it. For example, you might ask the user to confirm whether they want to close the UIAbility and then proceed with the closure manually. Starting from API version 15, this API executes the callback normally only on 2-in-1 devices. It does not execute the callback on other devices. Starting from API version 19, this API executes the callback normally only on 2-in-1 devices and tablets. It does not execute the callback on other devices.
 
 > **NOTE：**
 > 
@@ -605,7 +622,7 @@ Triggered by the system just before the UIAbility is close (for example, when th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 
 **Examples**
 
@@ -649,7 +666,7 @@ This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reason | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently, only **APP_RECOVERY** (fault recovery scenario) is supported. |
-| wantParam | Record & lt;string, Object & gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#oncreate) when the application restarts.<br>**Since:** 11 |
+| wantParam | Record&lt;string, Object&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#oncreate) when the application restarts.<br>**Since:** 11 |
 
 **Return value:**
 
@@ -692,13 +709,13 @@ This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | stateType | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently, only **APP_RECOVERY** (fault recovery scenario) is supported. |
-| wantParam | Record & lt;string, Object & gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#oncreate) when the application restarts. |
+| wantParam | Record&lt;string, Object&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#oncreate) when the application restarts. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;AbilityConstant.OnSaveResult & gt; | Promise used to return the result. An object indicating the data -saving policy (for example, all denied, all allowed, or only allowed in fault recovery scenarios). |
+| Promise&lt;AbilityConstant.OnSaveResult&gt; | Promise used to return the result. An object indicating the data -saving policy (for example, all denied, all allowed, or only allowed in fault recovery scenarios). |
 
 **Examples**
 
@@ -736,7 +753,7 @@ Called when an atomic service is shared across devices. You can set the title, a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | Record & lt;string, Object & gt; | Yes | Data to share.<br>**Since:** 11 |
+| wantParam | Record&lt;string, Object&gt; | Yes | Data to share.<br>**Since:** 11 |
 
 **Examples**
 
@@ -757,7 +774,9 @@ export default class MyUIAbility extends UIAbility {
 onWillBackground(): void
 ```
 
-Called just when the application transitions to the background. It is called before [onBackground](#onbackground). It can be used to log various types of data, such as faults, statistics, security information, and user behavior that occur during application running.This API returns the result synchronously and does not support asynchronous callback.
+Called just when the application transitions to the background. It is called before [onBackground](#onbackground). It can be used to log various types of data, such as faults, statistics, security information, and user behavior that occur during application running.
+
+This API returns the result synchronously and does not support asynchronous callback.
 
 **Since:** 20
 
@@ -803,7 +822,9 @@ export default class MyUIAbility extends UIAbility {
 onWillForeground(): void
 ```
 
-Called just before the application transitions to the foreground. It is called before [onForeground](#onforeground). It can be used to capture the moment when the application starts to transition to the foreground. When paired with [onDidForeground](#ondidforeground), it can also measure the duration from the application's initial foreground entry to its full transition into the foreground state.This API returns the result synchronously and does not support asynchronous callback.
+Called just before the application transitions to the foreground. It is called before [onForeground](#onforeground). It can be used to capture the moment when the application starts to transition to the foreground. When paired with [onDidForeground](#ondidforeground), it can also measure the duration from the application's initial foreground entry to its full transition into the foreground state.
+
+This API returns the result synchronously and does not support asynchronous callback.
 
 **Since:** 20
 
@@ -916,7 +937,9 @@ export default class MyUIAbility extends UIAbility {
 onWindowStageDestroy(): void
 ```
 
-Called when the WindowStage instance has been destroyed. It informs applications that the WindowStage instance is no longer available for use.The callback is invoked only when the UIAbility exits gracefully. It is not invoked in cases of abnormal exits (for example, process termination due to low memory conditions).
+Called when the WindowStage instance has been destroyed. It informs applications that the WindowStage instance is no longer available for use.
+
+The callback is invoked only when the UIAbility exits gracefully. It is not invoked in cases of abnormal exits (for example, process termination due to low memory conditions).
 
 **Since:** 9
 
@@ -1060,7 +1083,9 @@ Context of the UIAbility.
 isDestroyed: boolean
 ```
 
-Indicates whether the UIAbility has been destroyed. The default value is **false**.After the [onDestroy](#ondestroy) callback is executed, this property is set to **true**.
+Indicates whether the UIAbility has been destroyed. The default value is **false**.
+
+After the [onDestroy](#ondestroy) callback is executed, this property is set to **true**.
 
 **Type:** boolean
 
@@ -1076,7 +1101,8 @@ Indicates whether the UIAbility has been destroyed. The default value is **false
 lastRequestWant: Want
 ```
 
-Want in the most recent request to launch the UIAbility.  
+Want in the most recent request to launch the UIAbility.
+
 - On the first launch of a UIAbility, it is the Want parameter received in [onCreate](#oncreate).  
 - On subsequent launches, it is the most recent Want received in [onNewWant](#onnewwant).
 

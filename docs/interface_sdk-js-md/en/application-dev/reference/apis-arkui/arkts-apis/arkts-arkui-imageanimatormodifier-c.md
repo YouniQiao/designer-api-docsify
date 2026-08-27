@@ -1,6 +1,8 @@
 # ImageAnimatorModifier
 
-Defines ImageAnimator Modifier@extends ImageAnimatorAttribute @implements AttributeModifier&lt;ImageAnimatorAttribute&gt;
+Defines ImageAnimator Modifier
+
+@extends ImageAnimatorAttribute @implements AttributeModifier&lt;ImageAnimatorAttribute&gt;
 
 **Inheritance/Implementation:** ImageAnimatorModifier extends [ImageAnimatorAttribute](../arkts-components/arkts-arkui-imageanimator-attribute.md#imageanimatorattribute) and implements AttributeModifier<ImageAnimatorAttribute>
 

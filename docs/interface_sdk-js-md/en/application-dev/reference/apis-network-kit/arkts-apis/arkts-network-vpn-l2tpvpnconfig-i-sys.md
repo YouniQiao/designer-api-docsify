@@ -13,8 +13,7 @@ Define configuration of the l2tp VPN network.
 ## Modules to Import
 
 ```TypeScript
-import vpn from '@kit.NetworkKit';
-import vpnExtension from '@kit.NetworkKitExtension';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## ipsecCaCertConfig

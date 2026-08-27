@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleManager from '@kit.MDMKit';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## uninstall
@@ -33,14 +33,14 @@ function uninstall(admin: Want, bundleName: string, userId?: number, isKeepData?
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 应用程序包名。 |
-| userId | number | 否 | 用户ID，取值范围：大于等于0。     - 调用接口时，若传入userId，表示指定用户。     - 调用接口时，若未传入userId，表示当前用户。 |
+| userId | number | 否 | 用户ID，取值范围：大于等于0。    - 调用接口时，若传入userId，表示指定用户。    - 调用接口时，若未传入userId，表示当前用户。 |
 | isKeepData | boolean | 否 | 是否保留包数据，true表示保留，false表示不保留。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。当包卸载失败时抛出错误对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。当包卸载失败时抛出错误对象。 |
 
 **错误码：**
 

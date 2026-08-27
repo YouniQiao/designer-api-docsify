@@ -21,7 +21,7 @@
 ## 导入模块
 
 ```TypeScript
-import uiExtensionHost from '@kit.ArkUI';
+import { uiExtensionHost } from '@kit.ArkUI';
 ```
 
 ## 汇总

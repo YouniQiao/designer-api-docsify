@@ -1,6 +1,8 @@
 # AVMusicTemplateType
 
-Enumeration of AVMusicTemplate type.@enum { string }
+Enumeration of AVMusicTemplate type.
+
+@enum { string }
 
 **Since:** 23
 

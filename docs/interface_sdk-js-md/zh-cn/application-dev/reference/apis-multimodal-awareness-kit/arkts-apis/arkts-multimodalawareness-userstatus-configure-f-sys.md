@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import userStatus from '@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## configure
@@ -12,7 +12,7 @@ import userStatus from '@kit.MultimodalAwarenessKit';
 function configure(featureId: UserStatusFeature, detail: string): number
 ```
 
-配置功能参数。调用成功后，将更新指定功能的配置参数，影响后续该功能的检测行为，如检测灵敏度、采样频率、启用的检测项等。建议在subscribe()之前调用configure()配置功能参数， 确保配置在订阅时生效。对于需要特定配置的功能（如USER_MOOD的实时/非实时模式），建议先configure()再subscribe()。
+配置功能参数。调用成功后，将更新指定功能的配置参数，影响后续该功能的检测行为，如检测灵敏度、采样频率、启用的检测项等。建议在subscribe()之前调用configure()配置功能参数，确保配置在订阅时生效。对于需要特定配置的功能（如USER_MOOD的实时/非实时模式），建议先configure()再subscribe()。
 
 **起始版本：** 26.0.0
 
@@ -27,7 +27,7 @@ function configure(featureId: UserStatusFeature, detail: string): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | featureId | [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | 是 | 表示要配置的用户状态检测功能类型。 |
-| detail | string | 是 | 配置参数，JSON格式字符串。包含params数组，每个参数包含description（参数名）和value（参数值数组）字段。 具体格式和取值参见下方detail定义说明表格。 |
+| detail | string | 是 | 配置参数，JSON格式字符串。包含params数组，每个参数包含description（参数名）和value（参数值数组）字段。具体格式和取值参见下方detail定义说明表格。 |
 
 **返回值：**
 

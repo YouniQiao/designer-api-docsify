@@ -43,7 +43,11 @@ Constructs the grid layout algorithm class.
 public columnsGap?: LengthMetrics
 ```
 
-Spacing between columns.Default value: **LengthMetrics.vp(0)**Invalid values are treated as the default value.
+Spacing between columns.
+
+Default value: **LengthMetrics.vp(0)**
+
+Invalid values are treated as the default value.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -63,7 +67,11 @@ Spacing between columns.Default value: **LengthMetrics.vp(0)**Invalid values are
 public columnsTemplate?: string | ItemFillPolicy
 ```
 
-Number of columns in the grid layout.Default value: **'1fr'**Invalid values are treated as the default value.
+Number of columns in the grid layout.
+
+Default value: **'1fr'**
+
+Invalid values are treated as the default value.
 
 **Type:** string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md)
 
@@ -83,7 +91,11 @@ Number of columns in the grid layout.Default value: **'1fr'**Invalid values are 
 public rowsGap?: LengthMetrics
 ```
 
-Spacing between rows.Default value: **LengthMetrics.vp(0)**Invalid values are treated as the default value.
+Spacing between rows.
+
+Default value: **LengthMetrics.vp(0)**
+
+Invalid values are treated as the default value.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 

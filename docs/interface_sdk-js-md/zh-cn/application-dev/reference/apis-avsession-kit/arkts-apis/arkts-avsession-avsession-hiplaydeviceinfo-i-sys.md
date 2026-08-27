@@ -11,7 +11,7 @@ HiPlay 设备类型定义
 ## 导入模块
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## castMode
@@ -80,7 +80,7 @@ supportCastMode?: number
 supportMultiDeviceMode?: number
 ```
 
-是否支持多设备连接能力。 取值限定为整数。
+是否支持多设备连接能力。取值限定为整数。
 
 **类型：** number
 

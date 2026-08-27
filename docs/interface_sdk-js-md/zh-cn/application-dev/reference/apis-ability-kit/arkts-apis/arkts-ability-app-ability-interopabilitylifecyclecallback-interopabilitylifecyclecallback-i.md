@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import InteropAbilityLifecycleCallback from '@kit.AbilityKit';
+import { InteropAbilityLifecycleCallback } from '@kit.AbilityKit';
 ```
 
 ## onAbilityBackground

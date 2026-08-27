@@ -1,6 +1,8 @@
 # ModelConfig
 
-管理嵌入模型的配置信息。@interface ModelConfig
+管理嵌入模型的配置信息。
+
+@interface ModelConfig
 
 **起始版本：** 15
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import intelligence from '@kit.ArkData';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## cachePath

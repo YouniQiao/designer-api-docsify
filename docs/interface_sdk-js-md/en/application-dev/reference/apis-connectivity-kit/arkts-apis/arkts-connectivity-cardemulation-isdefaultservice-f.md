@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cardEmulation from '@kit.ConnectivityKit';
+import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
 ## isDefaultService
@@ -27,7 +27,7 @@ Checks whether an application is the default application of the specified servic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | Yes | Information about the page, on which the application declares the NFC card emulation capability. It must contain at least **bundleName** and **abilityName** and cannot be empty. |
-| type | [CardType](arkts-connectivity-cardemulation-cardtype-e.md) | Yes | Card emulation service type. Currently, only the default payment application can be queried. |
+| type | CardType | Yes | Card emulation service type. Currently, only the default payment application can be queried. |
 
 **Return value:**
 

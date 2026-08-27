@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usb from '@kit.BasicServicesKit';
-import usbManager from '@kit.BasicServicesKitManager';
-import serialManager from '@kit.BasicServicesKitManager.serial';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## closePipe
@@ -14,7 +12,9 @@ import serialManager from '@kit.BasicServicesKitManager.serial';
 function closePipe(pipe: USBDevicePipe): number
 ```
 
-Closes a USB device pipe.Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md) to obtain **devicepipe** as an input parameter.
+Closes a USB device pipe.
+
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ Closes a USB device pipe.Before you do this, call [usb.getDevices](arkts-basicse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe. |
+| pipe | USBDevicePipe | Yes | USB device pipe. |
 
 **Return value:**
 

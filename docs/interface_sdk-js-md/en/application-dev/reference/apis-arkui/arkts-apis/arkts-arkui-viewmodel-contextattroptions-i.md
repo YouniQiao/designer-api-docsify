@@ -1,6 +1,8 @@
 # ContextAttrOptions
 
-ContextAttrOptions@interface ContextAttrOptions
+ContextAttrOptions
+
+@interface ContextAttrOptions
 
 **Since:** 6
 

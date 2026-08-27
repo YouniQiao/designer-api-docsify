@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## migrateData
@@ -26,14 +26,14 @@ Migrates files from the source path to the destination path. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourcePaths | Array & lt;string & gt; | Yes | Array of source paths. The value can be a single file path such as **\/example1/test.txt** or a directory path such as **\/example2/test**. |
+| sourcePaths | Array&lt;string&gt; | Yes | Array of source paths. The value can be a single file path such as **\/example1/test.txt** or a directory path such as **\/example2/test**. |
 | destinationPath | string | Yes | Destination path. Only one directory path is supported, for example, **\/example2/test**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

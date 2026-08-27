@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getScanResultsSync
@@ -29,7 +28,7 @@ Obtain the scanned sta list.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;WifiScanInfo & gt; | Returns information about scanned Wi-Fi hotspot if any. |
+| Array&lt;WifiScanInfo&gt; | Returns information about scanned Wi-Fi hotspot if any. |
 
 **Error codes:**
 

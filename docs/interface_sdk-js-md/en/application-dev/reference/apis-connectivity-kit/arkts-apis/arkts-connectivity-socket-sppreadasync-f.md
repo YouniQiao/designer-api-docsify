@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.ConnectivityKit';
+import { socket } from '@kit.ConnectivityKit';
 ```
 
 ## sppReadAsync
@@ -28,7 +28,7 @@ Asynchronous interface for reading data from the socket.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Returns the promise object, used to get the spp read data. |
+| Promise&lt;ArrayBuffer&gt; | Returns the promise object, used to get the spp read data. |
 
 **Error codes:**
 

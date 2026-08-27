@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import missionManager from '@kit.AbilityKit';
+import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## getMissionInfo
@@ -104,7 +104,7 @@ Obtains the mission information. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;MissionInfo & gt; | Promise used to return the mission information obtained. |
+| Promise&lt;MissionInfo&gt; | Promise used to return the mission information obtained. |
 
 **Error codes:**
 

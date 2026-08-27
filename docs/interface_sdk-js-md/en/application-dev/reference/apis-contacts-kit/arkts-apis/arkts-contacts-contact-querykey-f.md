@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## queryKey
@@ -65,7 +65,7 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Indicates the context of application or capability. |
+| context | Context | Yes | Indicates the context of application or capability. |
 | id | number | Yes | Contact ID. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
 
@@ -161,7 +161,7 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Indicates the context of application or capability. |
+| context | Context | Yes | Indicates the context of application or capability. |
 | id | number | Yes | Contact ID. |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
@@ -227,7 +227,7 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result, which is the key of the queried contact. |
+| Promise&lt;string&gt; | Promise used to return the result, which is the key of the queried contact. |
 
 **Examples**
 
@@ -263,7 +263,7 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Indicates the context of application or capability. |
+| context | Context | Yes | Indicates the context of application or capability. |
 | id | number | Yes | Contact ID. |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | No | Application information for a contact. If this parameter is not specified, the system contact application is used by default. |
 
@@ -271,7 +271,7 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result, which is the key of the queried contact. |
+| Promise&lt;string&gt; | Promise used to return the result, which is the key of the queried contact. |
 
 **Error codes:**
 

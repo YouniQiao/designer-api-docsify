@@ -1,6 +1,9 @@
 # CreateOptions
 
-Options for creating an image or video asset.The title must meet the following requirements:  
+Options for creating an image or video asset.
+
+The title must meet the following requirements:
+
 - It must not contain a file name extension.  
 - The total length of the file name must be between 1 and 255 characters.
 
@@ -11,7 +14,7 @@ Options for creating an image or video asset.The title must meet the following r
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## subtype

@@ -26,7 +26,7 @@ Create a new scene from a SceneLoadParams.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the resource of creating a scene |
+| uri | ResourceStr | Yes | the resource of creating a scene |
 | param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | Yes | the params for scene load |
 
 **Return value:**
@@ -77,8 +77,8 @@ async function loadModelFromAbsolutePath(context: common.UIAbilityContext): Prom
   // Load the model using the absolute path.
   Scene.load(load_uri).then((scene: Scene) => {
     // Handle the loaded scene.
-  }).catch((error: string) => {
-    console.error('Scene load failed: ' + error);
+  }).catch((err: Error) => {
+    console.error(`Failed to load scene. Message: ${err.message}`);
   });
 }
 ```

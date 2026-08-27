@@ -3,9 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## setStartWindowBackgroundColor
@@ -14,7 +12,9 @@ import window from '@kit.ArkUI';
 function setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promise<void>
 ```
 
-设置同一应用包名下指定moduleName、abilityName对应UIAbility的启动页背景色，使用Promise异步回调。该接口对同一应用包名下的所有进程生效，例如多实例或应用分身场景。
+设置同一应用包名下指定moduleName、abilityName对应UIAbility的启动页背景色，使用Promise异步回调。
+
+该接口对同一应用包名下的所有进程生效，例如多实例或应用分身场景。
 
 **起始版本：** 20
 
@@ -26,15 +26,15 @@ function setStartWindowBackgroundColor(moduleName: string, abilityName: string, 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| moduleName | string | 是 | 需要设置的UIAbility所属模块名，moduleName的长度范围为0-200字节，仅支持设置当前同一应用包名内的模块。模块名由开发者在 [module.json5配置文件](../../../quick-start/module-configuration-file.md#配置文件标签)中的name字段指定。 |
-| abilityName | string | 是 | 需要设置的UIAbility名字，abilityName的长度范围为0-200字节，仅支持设置当前同一应用包名内的abilityName。UIAbility名由开发者 在[module.json5配置文件abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)的name字段指定。 |
+| moduleName | string | 是 | 需要设置的UIAbility所属模块名，moduleName的长度范围为0-200字节，仅支持设置当前同一应用包名内的模块。模块名由开发者在[module.json5配置文件](../../../quick-start/module-configuration-file.md#配置文件标签)中的name字段指定。 |
+| abilityName | string | 是 | 需要设置的UIAbility名字，abilityName的长度范围为0-200字节，仅支持设置当前同一应用包名内的abilityName。UIAbility名由开发者在[module.json5配置文件abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)的name字段指定。 |
 | color | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 是 | 设置的启动页背景色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

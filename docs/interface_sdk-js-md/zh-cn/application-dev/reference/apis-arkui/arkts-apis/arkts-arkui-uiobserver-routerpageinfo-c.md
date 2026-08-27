@@ -9,7 +9,7 @@ RouterPageInfo包含的信息，由系统返回给开发者。
 ## 导入模块
 
 ```TypeScript
-import uiObserver from '@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## context
@@ -36,7 +36,7 @@ context: UIAbilityContext | UIContext
 index: number
 ```
 
-触发生命周期的routerPage页面对应的上下文信息。 取值应≥0。
+触发生命周期的routerPage页面对应的上下文信息。取值应≥0。
 
 **类型：** number
 

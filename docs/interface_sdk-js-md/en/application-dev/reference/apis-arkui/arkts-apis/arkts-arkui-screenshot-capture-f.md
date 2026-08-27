@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screenshot from '@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## capture
@@ -12,7 +12,9 @@ import screenshot from '@kit.ArkUI';
 function capture(options?: CaptureOption): Promise<image.PixelMap>
 ```
 
-Takes a screenshot of the entire screen. This API uses a promise to return the result.This API allows you to take screenshots of different screens by setting various **displayId** values, but only full -screen captures are supported. The [pick](arkts-arkui-screenshot-pick-f.md) API allows you to take screenshots of a specified region.
+Takes a screenshot of the entire screen. This API uses a promise to return the result.
+
+This API allows you to take screenshots of different screens by setting various **displayId** values, but only full -screen captures are supported. The [pick](arkts-arkui-screenshot-pick-f.md) API allows you to take screenshots of a specified region.
 
 **Since:** 14
 
@@ -34,7 +36,7 @@ Takes a screenshot of the entire screen. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return a PixelMap object. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return a PixelMap object. |
 
 **Error codes:**
 

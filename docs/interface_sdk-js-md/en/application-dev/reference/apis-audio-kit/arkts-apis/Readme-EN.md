@@ -250,7 +250,7 @@
   - [AudioHapticPlayerOptions](arkts-audio-audiohaptic-audiohapticplayeroptions-i.md)
   - [AudioHapticType](arkts-audio-audiohaptic-audiohaptictype-e.md)
   - [AudioLatencyMode](arkts-audio-audiohaptic-audiolatencymode-e.md)
-- [@ohos.multimedia.avVolumePanel](arkts-multimedia-avvolumepanel.md)
+- [@ohos.multimedia.avVolumePanel(Defines a panel to set the system audio output volume.)](arkts-multimedia-avvolumepanel.md)
   - [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
   - [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md)
 - [@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md)

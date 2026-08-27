@@ -11,9 +11,7 @@ Define AppIntentEntity.
 ## Modules to Import
 
 ```TypeScript
-import insightIntent from '@kit.AbilityKit';
-import insightIntentDriver from '@kit.AbilityKitDriver';
-import insightIntentProvider from '@kit.AbilityKitProvider';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## onQueryEntity
@@ -42,7 +40,7 @@ Called when query entity execute.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;T & gt; & gt; | Returns an array of subclasses of the AppIntentEntity class, support promise. |
+| Promise&lt;Array&lt;T&gt;&gt; | Returns an array of subclasses of the AppIntentEntity class, support promise. |
 
 ## displayName
 

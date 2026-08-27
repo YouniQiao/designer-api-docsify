@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## setFormNextRefreshTime
@@ -87,7 +87,7 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

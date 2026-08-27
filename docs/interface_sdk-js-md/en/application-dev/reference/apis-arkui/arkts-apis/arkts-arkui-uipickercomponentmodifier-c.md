@@ -1,6 +1,8 @@
 # UIPickerComponentModifier
 
-Defines Picker Modifier@extends UIPickerComponentAttribute @implements { AttributeModifier&lt;UIPickerComponentAttribute&gt; }
+Defines Picker Modifier
+
+@extends UIPickerComponentAttribute @implements { AttributeModifier&lt;UIPickerComponentAttribute&gt; }
 
 **Inheritance/Implementation:** UIPickerComponentModifier extends [UIPickerComponentAttribute](../arkts-components/arkts-arkui-uipickercomponent-attribute.md#uipickercomponentattribute) and implements AttributeModifier<UIPickerComponentAttribute>
 

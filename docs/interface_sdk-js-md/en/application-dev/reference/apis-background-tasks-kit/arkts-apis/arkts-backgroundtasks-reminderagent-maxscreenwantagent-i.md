@@ -13,8 +13,7 @@ Provides the information about the target package and ability to start automatic
 ## Modules to Import
 
 ```TypeScript
-import reminderAgent from '@kit.BackgroundTasksKit';
-import reminderAgentManager from '@kit.BackgroundTasksKitManager';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName

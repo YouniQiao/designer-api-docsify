@@ -20,7 +20,8 @@ type RelativeTimeFormatUnit =
         | "seconds"
 ```
 
-Unit to use in the relative time internationalized message.  
+Unit to use in the relative time internationalized message.
+
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format#Parameters).
 
 | Type | Description |

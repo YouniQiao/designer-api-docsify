@@ -1,6 +1,8 @@
 # GenerateImageTaskResult (System API)
 
-Configuration result for AI-generated image tasks.@interface GenerateImageTaskResult
+Configuration result for AI-generated image tasks.
+
+@interface GenerateImageTaskResult
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ Configuration result for AI-generated image tasks.@interface GenerateImageTaskRe
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## imageData

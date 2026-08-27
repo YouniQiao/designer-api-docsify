@@ -139,7 +139,7 @@ A constructor that creates an ArkTS Uint8ClampedArray from an iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | Iterable & lt;number & gt; | Yes | An iterable collection of numbers used to construct an ArkTS Uint8 ClampedArray object. |
+| elements | Iterable&lt;number&gt; | Yes | An iterable collection of numbers used to construct an ArkTS Uint8 ClampedArray object. |
 
 **Error codes:**
 
@@ -165,7 +165,7 @@ A constructor that creates an ArkTS Uint8ClampedArray from an array-like object 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; \ | ArrayBuffer | Yes | Object used to construct the ArkTS Uint8ClampedArray. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 1. |
+| array | ArrayLike&lt;number&gt; \| ArrayBuffer | Yes | Object used to construct the ArkTS Uint8ClampedArray. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 1. |
 
 **Error codes:**
 
@@ -227,7 +227,7 @@ Copies elements within a given range from this ArkTS Uint8ClampedArray to anothe
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | Uint8ClampedArray after being modified. |
+| Uint8ClampedArray | Uint8ClampedArray after being modified. |
 
 **Error codes:**
 
@@ -322,7 +322,7 @@ Fills all elements in a given range in this ArkTS Uint8ClampedArray with a value
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | Filled ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | Filled ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
@@ -355,7 +355,7 @@ Returns a new ArkTS Uint8ClampedArray that contains all elements that meet the g
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | Filtered ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | Filtered ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
@@ -475,13 +475,13 @@ Creates an ArkTS Uint8ClampedArray from an array-like or iterator object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;number & gt; | Yes | Array-like object used to construct the ArkTS Uint8ClampedArray. |
+| arrayLike | ArrayLike&lt;number&gt; | Yes | Array-like object used to construct the ArkTS Uint8ClampedArray. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | New ArkTS Uint8ClampedArray generated. |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray generated. |
 
 ## from
 
@@ -501,14 +501,14 @@ Creates an ArkTS Uint8ClampedArray from an array-like object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;T & gt; | Yes | Array-like object used to construct the ArkTS Uint8ClampedArray. |
+| arrayLike | ArrayLike&lt;T&gt; | Yes | Array-like object used to construct the ArkTS Uint8ClampedArray. |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | Yes | A mapping function to call on every element of the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | New ArkTS Uint8ClampedArray generated. |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray generated. |
 
 ## from
 
@@ -528,14 +528,14 @@ Creates an ArkTS Uint8ClampedArray from an iterator object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | Iterable & lt;number & gt; | Yes | Iterator object used to construct the ArkTS Uint8ClampedArray. |
+| arrayLike | Iterable&lt;number&gt; | Yes | Iterator object used to construct the ArkTS Uint8ClampedArray. |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;number, number&gt; | No | Mapping function. If no value is passed in, no special processing is conducted on the elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | New ArkTS Uint8ClampedArray generated. |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray generated. |
 
 ## includes
 
@@ -723,7 +723,7 @@ Applies a callback function to each element in this ArkTS Uint8ClampedArray and 
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | New ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
@@ -756,7 +756,7 @@ Creates an ArkTS Uint8ClampedArray with a variable number of parameters.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | New ArkTS Uint8ClampedArray instance. Possible causes: 1. Mandatory parameters are left unspecified; |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray instance. Possible causes: 1. Mandatory parameters are left unspecified; |
 
 ## reduce
 
@@ -910,7 +910,7 @@ Reverses this ArkTS Uint8ClampedArray.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | Reversed ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | Reversed ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
@@ -937,7 +937,7 @@ Writes the elements in an array-like object to the given start position in seque
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; | Yes | A typed or untyped array of values to set. |
+| array | ArrayLike&lt;number&gt; | Yes | A typed or untyped array of values to set. |
 | offset | number | No | The index in the current array at which the values are to be written. |
 
 **Error codes:**
@@ -972,7 +972,7 @@ Selects a range of elements in this ArkTS Uint8ClampedArray to create an ArkTS U
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | New ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
@@ -1038,7 +1038,7 @@ Sorts elements in this ArkTS Uint8ClampedArray and returns the sorted ArkTS Uint
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | Sorted ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | Sorted ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
@@ -1072,7 +1072,7 @@ Truncates an array from a specified position and returns a new ArkTS Uint8Clampe
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | New ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 

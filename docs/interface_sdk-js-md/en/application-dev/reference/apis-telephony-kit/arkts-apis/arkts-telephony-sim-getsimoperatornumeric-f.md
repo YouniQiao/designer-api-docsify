@@ -69,7 +69,7 @@ Obtains the home PLMN ID of the SIM card in the specified slot. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 

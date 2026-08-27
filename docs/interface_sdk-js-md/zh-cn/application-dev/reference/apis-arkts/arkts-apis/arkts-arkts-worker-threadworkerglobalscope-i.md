@@ -1,6 +1,6 @@
 # ThreadWorkerGlobalScope
 
-Worker线程用于与宿主线程通信的类。其中postMessage接口用于向宿主线程发送消息，close接口用于销毁Worker线程。 ThreadWorkerGlobalScope类继承GlobalScope9+。
+Worker线程用于与宿主线程通信的类。其中postMessage接口用于向宿主线程发送消息，close接口用于销毁Worker线程。ThreadWorkerGlobalScope类继承GlobalScope9+。
 
 **继承/实现关系：** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-worker-globalscope-i.md)
 
@@ -11,7 +11,7 @@ Worker线程用于与宿主线程通信的类。其中postMessage接口用于向
 ## 导入模块
 
 ```TypeScript
-import worker, { DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## callGlobalCallObjectMethod
@@ -20,7 +20,7 @@ import worker, { DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, E
 callGlobalCallObjectMethod(instanceName: string, methodName: string, timeout: number, ...args: Object[]): Object
 ```
 
-Worker线程调用宿主线程上注册的对象的指定方法，此调用对Worker线程同步，对宿主线程异步， 返回值通过数据拷贝传递。
+Worker线程调用宿主线程上注册的对象的指定方法，此调用对Worker线程同步，对宿主线程异步，返回值通过数据拷贝传递。
 
 **起始版本：** 11
 
@@ -33,8 +33,8 @@ Worker线程调用宿主线程上注册的对象的指定方法，此调用对Wo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | instanceName | string | 是 | 注册对象时使用的键，用于在宿主线程中查找对象。 |
-| methodName | string | 是 | 在已注册对象上调用的方法名。该方法不能使用async修饰， 也不能基于底层异步机制返回结果，否则会抛出异常。 |
-| timeout | number | 是 | 表示从Worker线程发起调用开始到在主线程中执行目标方法的最大等待时间， 单位为ms，取整数，取值范围为[1-5000]。也可取特殊值0，此时表示本次调用等待时间为5000ms。 该值应为整数。 单位：ms。 |
+| methodName | string | 是 | 在已注册对象上调用的方法名。该方法不能使用async修饰，也不能基于底层异步机制返回结果，否则会抛出异常。 |
+| timeout | number | 是 | 表示从Worker线程发起调用开始到在主线程中执行目标方法的最大等待时间，单位为ms，取整数，取值范围为[1-5000]。也可取特殊值0，此时表示本次调用等待时间为5000ms。该值应为整数。单位：ms。 |
 | args | Object[] | 是 | 注册对象上所调用方法的参数数组。 |
 
 **返回值：**
@@ -164,7 +164,7 @@ parentPort.onmessage = (): void => {
 onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 ```
 
-回调函数。表示Worker线程收到来自其宿主线程通过postMessage或postMessageWithSharedSendable接口发送的消息时被调用的事件处理程序，处理程序在Worker线程中执行。 其中this指调用者对象本身ThreadWorkerGlobalScope，ev类型为MessageEvents，表示收到的宿主线程发送的消息数据。默认值为undefined。
+回调函数。表示Worker线程收到来自其宿主线程通过postMessage或postMessageWithSharedSendable接口发送的消息时被调用的事件处理程序，处理程序在Worker线程中执行。其中this指调用者对象本身ThreadWorkerGlobalScope，ev类型为MessageEvents，表示收到的宿主线程发送的消息数据。默认值为undefined。
 
 **起始版本：** 9
 
@@ -192,7 +192,7 @@ onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 ```
 
-回调函数。表示当Worker线程的Worker对象接收到一条无法被反序列化的消息时被调用的事件处理程序，处理程序在Worker线程中执行。其中this指调用者对象本身ThreadWorkerGlobalScope， ev类型为MessageEvents，表示收到的消息数据。默认值为undefined。
+回调函数。表示当Worker线程的Worker对象接收到一条无法被反序列化的消息时被调用的事件处理程序，处理程序在Worker线程中执行。其中this指调用者对象本身ThreadWorkerGlobalScope，ev类型为MessageEvents，表示收到的消息数据。默认值为undefined。
 
 **起始版本：** 9
 
@@ -232,8 +232,8 @@ Worker线程通过转移对象所有权的方式向宿主线程发送消息。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| messageObject | Object | 是 | 发送至宿主线程的数据，该数据对象必须是可序列化对象。 支持的参数类型请参考序列化支持类型。 |
-| transfer | ArrayBuffer[] | 是 | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权 会被转移到宿主线程，转移后该对象仅在宿主线程中可用。该数组不可传入null。 |
+| messageObject | Object | 是 | 发送至宿主线程的数据，该数据对象必须是可序列化对象。支持的参数类型请参考序列化支持类型。 |
+| transfer | ArrayBuffer[] | 是 | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权会被转移到宿主线程，转移后该对象仅在宿主线程中可用。该数组不可传入null。 |
 
 **错误码：**
 
@@ -309,8 +309,8 @@ Worker线程通过转移对象所有权或拷贝数据的方式向宿主线程�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| messageObject | Object | 是 | 发送至宿主线程的数据，该数据对象必须是可序列化对象。 支持的参数类型请参考序列化支持类型。 |
-| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | 否 | 当填入该参数时，其作用与传入ArrayBuffer[]相同， 该数组中对象的所有权会被转移到宿主线程，在Worker线程中将变为不可用，仅在宿主线程中可用。 若不填入该参数，默认设置为undefined，通过拷贝数据的方式传输信息到宿主线程。 |
+| messageObject | Object | 是 | 发送至宿主线程的数据，该数据对象必须是可序列化对象。支持的参数类型请参考序列化支持类型。 |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | 否 | 当填入该参数时，其作用与传入ArrayBuffer[]相同，该数组中对象的所有权会被转移到宿主线程，在Worker线程中将变为不可用，仅在宿主线程中可用。若不填入该参数，默认设置为undefined，通过拷贝数据的方式传输信息到宿主线程。 |
 
 **错误码：**
 
@@ -369,7 +369,7 @@ parentPort.onmessage = (e: MessageEvents) => {
 postMessageAtFront?(message: Object, priority: Priority, transfer?: ArrayBuffer[]): void
 ```
 
-Worker线程通过转移对象所有权的方式向宿主线程发送插队消息，并插入到对应优先级队列的队头。 除Worker线程向主线程发送的场景外，该接口与postMessage功能一致。
+Worker线程通过转移对象所有权的方式向宿主线程发送插队消息，并插入到对应优先级队列的队头。除Worker线程向主线程发送的场景外，该接口与postMessage功能一致。
 
 > **说明：**
 > 
@@ -391,9 +391,9 @@ Worker线程通过转移对象所有权的方式向宿主线程发送插队消�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | Object | 是 | 发送至宿主线程的数据，该数据对象必须是可序列化或可共享。 支持的序列化类型请参考序列化支持类型。 支持的共享类型请参考Sendable支持的数据类型。 |
+| message | Object | 是 | 发送至宿主线程的数据，该数据对象必须是可序列化或可共享。支持的序列化类型请参考序列化支持类型。支持的共享类型请参考Sendable支持的数据类型。 |
 | priority | [Priority](arkts-arkts-worker-priority-e.md) | 是 | Worker EventHandler的优先级。 |
-| transfer | ArrayBuffer[] | 否 | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权 会被转移到主线程，转移后该对象仅在主线程中可用。该数组不可传入null。 |
+| transfer | ArrayBuffer[] | 否 | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权会被转移到主线程，转移后该对象仅在主线程中可用。该数组不可传入null。 |
 
 **错误码：**
 
@@ -490,7 +490,7 @@ workerPort.onmessage = (e: MessageEvents) => {
 postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void
 ```
 
-Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用传递， 非Sendable对象通过拷贝数据的方式传递。
+Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用传递，非Sendable对象通过拷贝数据的方式传递。
 
 **起始版本：** 12
 
@@ -502,8 +502,8 @@ Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | Object | 是 | 发送至宿主线程的数据，该数据对象必须是可序列化或可共享。 支持的序列化类型请参考序列化支持类型。 支持的共享类型请参考Sendable支持的数据类型。 |
-| transfer | ArrayBuffer[] | 否 | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权 会被转移到宿主线程，转移后该对象仅在宿主线程中可用。该数组不可传入null。默认值为空数组。 |
+| message | Object | 是 | 发送至宿主线程的数据，该数据对象必须是可序列化或可共享。支持的序列化类型请参考序列化支持类型。支持的共享类型请参考Sendable支持的数据类型。 |
+| transfer | ArrayBuffer[] | 否 | 表示可转移的ArrayBuffer实例对象数组，该数组中对象的所有权会被转移到宿主线程，转移后该对象仅在宿主线程中可用。该数组不可传入null。默认值为空数组。 |
 
 **错误码：**
 

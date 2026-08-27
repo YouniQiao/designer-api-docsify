@@ -25,7 +25,7 @@ Grants tool permissions based on user authorization results. This function grant
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userAuthResult | [UserAuthResult[]](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | Yes | User authorization result list. |
+| userAuthResult | UserAuthResult[] | Yes | User authorization result list. |
 
 **Return value:**
 

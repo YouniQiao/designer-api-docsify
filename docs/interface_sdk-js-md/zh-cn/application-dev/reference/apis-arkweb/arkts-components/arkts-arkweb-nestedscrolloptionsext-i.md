@@ -9,9 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## scrollDown
@@ -20,7 +17,9 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 scrollDown?: NestedScrollMode
 ```
 
-可滚动组件往下滚动时的嵌套滚动选项。默认值：NestedScrollMode.SELF_FIRST。
+可滚动组件往下滚动时的嵌套滚动选项。
+
+默认值：NestedScrollMode.SELF_FIRST。
 
 **类型：** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
@@ -34,7 +33,9 @@ scrollDown?: NestedScrollMode
 scrollLeft?: NestedScrollMode
 ```
 
-可滚动组件往左滚动时的嵌套滚动选项。默认值：NestedScrollMode.SELF_FIRST。
+可滚动组件往左滚动时的嵌套滚动选项。
+
+默认值：NestedScrollMode.SELF_FIRST。
 
 **类型：** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
@@ -48,7 +49,9 @@ scrollLeft?: NestedScrollMode
 scrollRight?: NestedScrollMode
 ```
 
-可滚动组件往右滚动时的嵌套滚动选项。默认值：NestedScrollMode.SELF_FIRST。
+可滚动组件往右滚动时的嵌套滚动选项。
+
+默认值：NestedScrollMode.SELF_FIRST。
 
 **类型：** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
@@ -62,7 +65,9 @@ scrollRight?: NestedScrollMode
 scrollUp?: NestedScrollMode
 ```
 
-可滚动组件往上滚动时的嵌套滚动选项。默认值：NestedScrollMode.SELF_FIRST。
+可滚动组件往上滚动时的嵌套滚动选项。
+
+默认值：NestedScrollMode.SELF_FIRST。
 
 **类型：** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 

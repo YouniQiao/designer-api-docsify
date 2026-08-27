@@ -4,7 +4,7 @@
 type SourceReadCallback = (uuid: number, requestedOffset: number, requestedLength: number) => void
 ```
 
-由应用实现此回调函数，应用需记录读取请求，并在数据充足时通过对应的MediaSourceLoadingRequest对象的 [respondData](arkts-media-media-mediasourceloadingrequest-i.md#responddata) 方法推送数据。
+由应用实现此回调函数，应用需记录读取请求，并在数据充足时通过对应的MediaSourceLoadingRequest对象的[respondData](arkts-media-media-mediasourceloadingrequest-i.md#responddata)方法推送数据。
 
 > **注意：**
 > 
@@ -22,7 +22,7 @@ type SourceReadCallback = (uuid: number, requestedOffset: number, requestedLengt
 | --- | --- | --- | --- |
 | uuid | number | 是 | 资源句柄的标识。 |
 | requestedOffset | number | 是 | 当前媒体数据相对于资源起始位置的偏移量。 |
-| requestedLength | number | 是 | 当前请求的长度。值为-1时，表示到达资源末尾，此时推送完成后需通过 [finishLoading](arkts-media-media-mediasourceloadingrequest-i.md#finishloading)方法通知播放器推送结束。 |
+| requestedLength | number | 是 | 当前请求的长度。值为-1时，表示到达资源末尾，此时推送完成后需通过[finishLoading](arkts-media-media-mediasourceloadingrequest-i.md#finishloading)方法通知播放器推送结束。 |
 
 **示例**
 

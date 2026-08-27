@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancelDownloadCloudMedia
@@ -34,7 +34,7 @@ cancelDownloadCloudMedia(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -79,13 +79,13 @@ cancelDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetUris | string[] \| null | 是 | 需要取消下载的原图和视频的uri列表。 当传入null、undefined和空列表时，表示已存在的所有批量下载任务。 |
+| assetUris | string[] \| null | 是 | 需要取消下载的原图和视频的uri列表。当传入null、undefined和空列表时，表示已存在的所有批量下载任务。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -232,7 +232,7 @@ offDownloadProgressChange(callback?: Callback<CloudAssetDownloadProgressInfo>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CloudAssetDownloadProgressInfo](arkts-medialibrary-photoaccesshelper-cloudassetdownloadprogressinfo-i-sys.md)&gt; | 否 | 取消监听 [onDownloadProgressChange](#ondownloadprogresschange)注册指定的callback监听；不填时，则取消所有进度相关监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CloudAssetDownloadProgressInfo](arkts-medialibrary-photoaccesshelper-cloudassetdownloadprogressinfo-i-sys.md)&gt; | 否 | 取消监听[onDownloadProgressChange](#ondownloadprogresschange)注册指定的callback监听；不填时，则取消所有进度相关监听。 |
 
 **错误码：**
 
@@ -326,7 +326,7 @@ pauseDownloadCloudMedia(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -371,13 +371,13 @@ pauseDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetUris | string[] \| null | 是 | 需要暂停下载的原图和视频的uri列表。 当传入null、undefined和空列表时，表示已存在的所有批量下载任务。 |
+| assetUris | string[] \| null | 是 | 需要暂停下载的原图和视频的uri列表。当传入null、undefined和空列表时，表示已存在的所有批量下载任务。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -444,7 +444,7 @@ queryDownloadSpecificCloudMediaDetails(predicates: dataSharePredicates.DataShare
 **示例**
 
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
+import { dataSharePredicates } from '@kit.ArkData';
 
 async function example(context: Context) {
   console.info('QueryDownloadSpecificCloudMediaDetailsDemo');
@@ -452,7 +452,7 @@ async function example(context: Context) {
     let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
       = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
     let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    predicates.orderByAsc("file_id");
+    predicates.orderByAsc('file_id');
     let taskListStatus : photoAccessHelper.CloudAssetDownloadStatus =
        await cloudMediaAssetManagerInstance.queryDownloadSpecificCloudMediaDetails(predicates);
   } catch (err) {
@@ -487,7 +487,7 @@ queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSha
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回总量。 |
+| Promise&lt;number&gt; | Promise对象，返回总量。 |
 
 **错误码：**
 
@@ -500,7 +500,7 @@ queryDownloadSpecificCloudMediaTaskCount(predicates: dataSharePredicates.DataSha
 **示例**
 
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
+import { dataSharePredicates } from '@kit.ArkData';
 
 async function example(context: Context) {
   console.info('QueryDownloadSpecificCloudMediaTaskCountDemo');
@@ -508,7 +508,7 @@ async function example(context: Context) {
     let cloudMediaAssetManagerInstance: photoAccessHelper.CloudMediaAssetManager
       = photoAccessHelper.CloudMediaAssetManager.getCloudMediaAssetManagerInstance(context);
     let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
-    predicates.orderByAsc("file_id");
+    predicates.orderByAsc('file_id');
     let count : number =
        await cloudMediaAssetManagerInstance.queryDownloadSpecificCloudMediaTaskCount(predicates);
   } catch (err) {
@@ -537,13 +537,13 @@ resumeDownloadSpecificCloudMedia(assetUris: string[] | null): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetUris | string[] \| null | 是 | 需要恢复下载的原图和视频的uri列表。 当传入null、undefined和空列表时，表示已存在的所有批量下载任务。 |
+| assetUris | string[] \| null | 是 | 需要恢复下载的原图和视频的uri列表。当传入null、undefined和空列表时，表示已存在的所有批量下载任务。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -597,7 +597,7 @@ retainCloudMediaAsset(retainType: CloudMediaRetainType): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -649,7 +649,7 @@ startDownloadCloudMedia(downloadType: CloudMediaDownloadType): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 

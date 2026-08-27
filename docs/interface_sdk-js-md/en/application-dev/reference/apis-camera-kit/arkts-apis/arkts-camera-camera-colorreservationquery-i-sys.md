@@ -50,7 +50,7 @@ function getSupportedColorReservationTypes(session: camera.VideoSessionForSys): 
   try {
     colorReservationTypes = session.getSupportedColorReservationTypes();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code on failure and handle it.
     let err = error as BusinessError;
     console.error(`The getSupportedColorReservationTypes call failed. error code: ${err.code}`);
   }

@@ -1,6 +1,8 @@
 # ItemDragInfo
 
-拖拽点信息对象。@interface ItemDragInfo
+拖拽点信息对象。
+
+@interface ItemDragInfo
 
 **起始版本：** 11
 

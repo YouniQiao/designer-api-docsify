@@ -68,7 +68,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 | [GestureObserverConfigs](arkts-arkui-arkui-uicontext-gestureobserverconfigs-i.md) | Specifies the gesture callback phases to listen for (passing an empty array will be ineffective). Notifications are sent only when the gesture triggers the specified phases. |
 | [GestureTriggerInfo](arkts-arkui-arkui-uicontext-gesturetriggerinfo-i.md) | Defines the information provided when a specific gesture callback is triggered. |
 | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | Options for opening an overlay with order. |
-| [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | Provides the parameters used for initializing [OverlayManager](arkts-arkui-arkui-uicontext-uicontext-c.md).@interface OverlayManagerOptions |
+| [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md) | Provides the parameters used for initializing [OverlayManager](arkts-arkui-arkui-uicontext-uicontext-c.md). |
 | [PageInfo](arkts-arkui-arkui-uicontext-pageinfo-i.md) | Represents the page information of the router or navigation destination. If there is no related page information, **undefined** is returned. |
 | [SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md) | Provides content area information of the **Swiper** component. |
 | [SwiperItemInfo](arkts-arkui-arkui-uicontext-swiperiteminfo-i.md) | Provides information about **Swiper** child components. |

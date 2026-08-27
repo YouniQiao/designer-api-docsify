@@ -18,4 +18,4 @@ Custom page state restore callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| savedState | Record & lt;string, Object & gt; \ | null | Yes | Custom page state saved by onSaveState. |
+| savedState | Record&lt;string, Object&gt; \| null | Yes | Custom page state saved by onSaveState. |

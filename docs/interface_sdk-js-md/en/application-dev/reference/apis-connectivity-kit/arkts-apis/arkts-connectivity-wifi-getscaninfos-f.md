@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getScanInfos
@@ -31,7 +28,7 @@ Obtains the hotspot information that scanned.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;WifiScanInfo & gt; & gt; | Returns information about scanned Wi-Fi hotspot if any. |
+| Promise&lt;Array&lt;WifiScanInfo&gt;&gt; | Returns information about scanned Wi-Fi hotspot if any. |
 
 **Examples**
 

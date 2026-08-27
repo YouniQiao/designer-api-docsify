@@ -9,7 +9,7 @@ Provides APIs for domain server configuration and management.
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addServerConfig
@@ -30,7 +30,7 @@ Adds domain server configuration. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameters | Record & lt;string, Object & gt; | Yes | Domain server configuration parameters, which are used to configure the connection information of the domain server. The parameters include the server address and port number. |
+| parameters | Record&lt;string, Object&gt; | Yes | Domain server configuration parameters, which are used to configure the connection information of the domain server. The parameters include the server address and port number. |
 
 **Return value:**
 
@@ -250,7 +250,7 @@ Removes domain server configuration. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -300,7 +300,7 @@ Updates the domain server configuration. This API uses a promise to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | configId | string | Yes | Server configuration ID. |
-| parameters | Record & lt;string, Object & gt; | Yes | Domain server configuration parameters, which are used to configure the connection information of the domain server. The parameters include the server address and port number. |
+| parameters | Record&lt;string, Object&gt; | Yes | Domain server configuration parameters, which are used to configure the connection information of the domain server. The parameters include the server address and port number. |
 
 **Return value:**
 

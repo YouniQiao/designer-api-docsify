@@ -31,8 +31,8 @@ URL的构造函数。与parseURL方法功能相同，但parseURL为静态工厂�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | 一个表示绝对URL或相对URL的字符串，必须是合法的URL格式。 如果url是相对URL，则需要指定base，用于解析最终的URL。 如果 url是绝对URL，则给定的base将不会生效。 |
-| base | string \| URL | 否 | 入参字符串或者对象，默认值是undefined。   - string：表示基础URL的字符串， 当url为相对URL时需为合法URL格式。   - URL：已解析的URL对象，用作相对URL解析的基础地址。 |
+| url | string | 是 | 一个表示绝对URL或相对URL的字符串，必须是合法的URL格式。如果url是相对URL，则需要指定base，用于解析最终的URL。如果 url是绝对URL，则给定的base将不会生效。 |
+| base | string \| URL | 否 | 入参字符串或者对象，默认值是undefined。   - string：表示基础URL的字符串，当url为相对URL时需为合法URL格式。   - URL：已解析的URL对象，用作相对URL解析的基础地址。 |
 
 **示例**
 
@@ -129,7 +129,7 @@ static parseURL(url: string, base?: string | URL): URL
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | 一个表示绝对URL或相对URL的字符串。 如果 url 是相对URL，则需要指定 base，用于解析最终的URL。 如果 url 是绝对URL，则给定的 base 将不会生效。 |
+| url | string | 是 | 一个表示绝对URL或相对URL的字符串。如果 url 是相对URL，则需要指定 base，用于解析最终的URL。如果 url 是绝对URL，则给定的 base 将不会生效。 |
 | base | string \| URL | 否 | 入参字符串或者对象，默认值是undefined。   - string：字符串。当第一个参数是相对URL时，该参数需符合URL标准。   - URL：URL对象。   - 在url是相对URL时使用，url为绝对URL时此参数不会生效。 |
 
 **返回值：**

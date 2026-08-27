@@ -9,10 +9,7 @@ Defines the ad request parameters.
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit.AdComponent';
-import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
-import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
-import advertising from '@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## [key: string]
@@ -21,7 +18,9 @@ import advertising from '@kit.AdsKit';
 [key: string]: number | boolean | string | undefined
 ```
 
-Custom parameter.<!--RP2--><!--RP2End-->
+Custom parameter.
+
+<!--RP2--><!--RP2End-->
 
 **Type:** number \| boolean \| string \| undefined
 
@@ -69,7 +68,9 @@ Expected creative height when requesting an ad, in vp (mandatory for banner ads)
 adId: string
 ```
 
-Ad slot ID.Note: The getAdRequestBody API can omit this parameter.
+Ad slot ID.
+
+Note: The getAdRequestBody API can omit this parameter.
 
 **Type:** string
 
@@ -85,7 +86,9 @@ Ad slot ID.Note: The getAdRequestBody API can omit this parameter.
 adSearchKeyword?: string
 ```
 
-Ad keyword. Defaults to "" if not set.Note: Not supported for use currently.
+Ad keyword. Defaults to "" if not set.
+
+Note: Not supported for use currently.
 
 **Type:** string
 
@@ -101,13 +104,15 @@ Ad keyword. Defaults to "" if not set.Note: Not supported for use currently.
 adType?: number
 ```
 
-Requested ad type.  
+Requested ad type.
+
 - 1: Splash ad.  
 - 3: Native ad.  
 - 7: Rewarded ad.  
 - 8: Banner ad.  
 - 12: Interstitial ad  
-- 60: Roll ad.  
+- 60: Roll ad.
+
 If not set, the default is the native ad type.
 
 **Type:** number

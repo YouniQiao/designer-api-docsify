@@ -1,6 +1,6 @@
 # Timeout
 
-任务的超时配置。任务处于等待状态的时间不参与计算，上传下载任务会存在以下任务等待的原因: [WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md) 。
+任务的超时配置。任务处于等待状态的时间不参与计算，上传下载任务会存在以下任务等待的原因: [WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md)。
 
 **起始版本：** 20
 
@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## connectionTimeout

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usbManager from '@kit.MDMKit';
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## setUsbPolicy
@@ -102,7 +102,7 @@ Sets the USB read/write policy. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object is thrown when the USB policy fails to be set. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when the USB policy fails to be set. |
 
 **Error codes:**
 

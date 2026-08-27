@@ -17,33 +17,33 @@
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityActionOptions](arkts-arkui-accessibilityactionoptions-i.md) | Defines the struct of AccessibilityActionOptions that can affect operation under accessibility.@interface AccessibilityActionOptions |
-| [AccessibilityCustomAction](arkts-arkui-accessibilitycustomaction-i.md) | Defines struct of AccessibilityCustomAction that can be processed in custom action processing under accessibility.@interface AccessibilityCustomAction |
+| [AccessibilityActionOptions](arkts-arkui-accessibilityactionoptions-i.md) | Defines the struct of AccessibilityActionOptions that can affect operation under accessibility. |
+| [AccessibilityCustomAction](arkts-arkui-accessibilitycustomaction-i.md) | Defines struct of AccessibilityCustomAction that can be processed in custom action processing under accessibility. |
 | [AccessibilityNextFocusParams](arkts-arkui-accessibilitynextfocusparams-i.md) | Defines struct of the parameters used to configure the next accessibility focus transition. |
-| [AccessibilityOptions](arkts-arkui-accessibilityoptions-i.md) | Defines the struct of AccessibilityOptions.@interface AccessibilityOptions |
+| [AccessibilityOptions](arkts-arkui-accessibilityoptions-i.md) | Defines the struct of AccessibilityOptions. |
 | [Area](arkts-arkui-area-i.md) | Defines the area information of a component. |
-| [Bias](arkts-arkui-bias-i.md) | Defines the Bias.@interface Bias |
-| [BorderOptions](arkts-arkui-borderoptions-i.md) | Defines the options of border.@interface BorderOptions |
-| [CacheCountInfo](arkts-arkui-cachecountinfo-i.md) | Define cache count information.@interface CacheCountInfo |
-| [ChainWeightOptions](arkts-arkui-chainweightoptions-i.md) | Defines the ChainWeightOptions interface.@interface ChainWeightOptions |
-| [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) | Defines the constrain size options.@interface ConstraintSizeOptions |
+| [Bias](arkts-arkui-bias-i.md) | Defines the Bias. |
+| [BorderOptions](arkts-arkui-borderoptions-i.md) | Defines the options of border. |
+| [CacheCountInfo](arkts-arkui-cachecountinfo-i.md) | Define cache count information. |
+| [ChainWeightOptions](arkts-arkui-chainweightoptions-i.md) | Defines the ChainWeightOptions interface. |
+| [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) | Defines the constrain size options. |
 | [Coordinate2D](arkts-arkui-coordinate2d-i.md) | Describes a two-dimension coordinate. |
-| [DirectionalEdgesT](arkts-arkui-directionaledgest-i.md) | Defines the DirectionalEdgesT interface.@interface DirectionalEdgesT |
-| [DividerStyleOptions](arkts-arkui-dividerstyleoptions-i.md) | Defines the struct of DividerStyleOptions.@interface DividerStyleOptions |
-| [Edges](arkts-arkui-edges-i.md) | Defines the Edges.@interface Edges |
+| [DirectionalEdgesT](arkts-arkui-directionaledgest-i.md) | Defines the DirectionalEdgesT interface. |
+| [DividerStyleOptions](arkts-arkui-dividerstyleoptions-i.md) | Defines the struct of DividerStyleOptions. |
+| [Edges](arkts-arkui-edges-i.md) | Defines the Edges. |
 | [Font](arkts-arkui-font-i.md) | Sets the text style. |
-| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) | Define a responsive item layout suitable for WaterFlow, Grid, List,and Swiper components.@interface ItemFillPolicy |
-| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md) | Defines the localized border radius property.@interface LocalizedBorderRadiuses |
-| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md) | Defines the localized border color property.@interface LocalizedEdgeColors |
-| [LocalizedEdges](arkts-arkui-localizededges-i.md) | Defines the LocalizedEdges.@interface LocalizedEdges |
-| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md) | Defines the localized border width property.@interface LocalizedEdgeWidths |
-| [LocalizedPadding](arkts-arkui-localizedpadding-i.md) | Defines the localized padding property.@interface LocalizedPadding |
-| [LocalizedPosition](arkts-arkui-localizedposition-i.md) | Defines the LocalizedPosition.@interface LocalizedPosition |
-| [MarkStyle](arkts-arkui-markstyle-i.md) | Define the style of checkbox mark.@interface MarkStyle |
-| [OutlineOptions](arkts-arkui-outlineoptions-i.md) | Defines the options of outline.@interface OutlineOptions |
-| [Position](arkts-arkui-position-i.md) | Defines the position.@interface Position |
-| [ScrollBarMargin](arkts-arkui-scrollbarmargin-i.md) | Define scrollbar margin options.@interface ScrollBarMargin |
-| [SizeOptions](arkts-arkui-sizeoptions-i.md) | Defines the size options.@interface SizeOptions |
+| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) | Define a responsive item layout suitable for WaterFlow, Grid, List,and Swiper components. |
+| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md) | Defines the localized border radius property. |
+| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md) | Defines the localized border color property. |
+| [LocalizedEdges](arkts-arkui-localizededges-i.md) | Defines the LocalizedEdges. |
+| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md) | Defines the localized border width property. |
+| [LocalizedPadding](arkts-arkui-localizedpadding-i.md) | Defines the localized padding property. |
+| [LocalizedPosition](arkts-arkui-localizedposition-i.md) | Defines the LocalizedPosition. |
+| [MarkStyle](arkts-arkui-markstyle-i.md) | Define the style of checkbox mark. |
+| [OutlineOptions](arkts-arkui-outlineoptions-i.md) | Defines the options of outline. |
+| [Position](arkts-arkui-position-i.md) | Defines the position. |
+| [ScrollBarMargin](arkts-arkui-scrollbarmargin-i.md) | Define scrollbar margin options. |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) | Defines the size options. |
 | [TouchPoint](arkts-arkui-touchpoint-i.md) | Defines the coordinates of the touch point. If it is not set, the touch point is centered. |
 
 ### Types

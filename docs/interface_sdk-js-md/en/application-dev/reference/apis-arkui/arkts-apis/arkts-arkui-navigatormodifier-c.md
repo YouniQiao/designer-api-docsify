@@ -1,6 +1,8 @@
 # NavigatorModifier
 
-Defines Navigator Modifier@extends NavigatorAttribute @implements AttributeModifier&lt;NavigatorAttribute&gt;
+Defines Navigator Modifier
+
+@extends NavigatorAttribute @implements AttributeModifier&lt;NavigatorAttribute&gt;
 
 **Inheritance/Implementation:** NavigatorModifier extends [NavigatorAttribute](../arkts-components/arkts-arkui-navigator-attribute.md#navigatorattribute) and implements AttributeModifier<NavigatorAttribute>
 

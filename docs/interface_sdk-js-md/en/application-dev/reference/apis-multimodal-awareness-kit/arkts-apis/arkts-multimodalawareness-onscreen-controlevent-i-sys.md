@@ -11,7 +11,7 @@ Defines a control event.
 ## Modules to Import
 
 ```TypeScript
-import onScreen from '@kit.MultimodalAwarenessKit';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## eventType

@@ -11,7 +11,7 @@ Implements configuration, acquisition, and listening for properties.
 ## Modules to Import
 
 ```TypeScript
-import config from '@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## get
@@ -32,7 +32,7 @@ Obtains the value of a property. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise used to return the value obtained. |
+| Promise&lt;T&gt; | Promise used to return the value obtained. |
 
 **Error codes:**
 
@@ -142,7 +142,9 @@ config.highContrastText.off(callback);
 on(callback: Callback<T>): void
 ```
 
-Adds a listener for property changes. This API uses an asynchronous callback to return the result.This API must be used together with [off](#off). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
+Adds a listener for property changes. This API uses an asynchronous callback to return the result.
+
+This API must be used together with [off](#off). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
 
 **Since:** 9
 
@@ -202,7 +204,7 @@ Sets the value of a property. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

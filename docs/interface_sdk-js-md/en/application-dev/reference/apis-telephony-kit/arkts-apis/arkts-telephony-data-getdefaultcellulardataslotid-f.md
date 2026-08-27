@@ -55,7 +55,7 @@ Obtains the default slot of the SIM card used for mobile data. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. |
+| Promise&lt;number&gt; | Promise used to return the result. |
 
 **Examples**
 

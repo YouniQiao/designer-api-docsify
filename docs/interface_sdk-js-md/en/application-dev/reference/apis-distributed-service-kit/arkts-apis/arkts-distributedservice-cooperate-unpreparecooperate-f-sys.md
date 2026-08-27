@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cooperate from '@kit.DistributedServiceKit';
+import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
 ## unprepareCooperate
@@ -77,7 +77,7 @@ Cancels the preparation for screen hopping. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@ A helper to enable a picker to select output devices
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## constructor
@@ -30,7 +30,7 @@ The constructor used to create a AVCastPickerHelper object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | represents the context. |
+| context | Context | Yes | represents the context. |
 
 **Error codes:**
 
@@ -141,7 +141,7 @@ Reset audio device to be default set by the platform which is used for communica
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Examples**
 
@@ -181,7 +181,7 @@ Pull up the avcastpicker based on the options.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 

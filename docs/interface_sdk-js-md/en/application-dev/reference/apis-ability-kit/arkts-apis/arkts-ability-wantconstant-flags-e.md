@@ -52,7 +52,8 @@ The URI can be persisted by the receiver. It takes effect only on 2-in-1 devices
 FLAG_INSTALL_ON_DEMAND = 0x00000800
 ```
 
-Enables on-demand installation when launching an atomic service.  
+Enables on-demand installation when launching an atomic service.
+
 - If enabled, the system automatically installs the atomic service if it is not already installed before  
 proceeding with the launch.  
 - If disabled, the launch fails if the atomic service is not installed.
@@ -81,7 +82,9 @@ In multi-device collaboration scenario, the caller application must initiate a r
 FLAG_START_WITHOUT_TIPS = 0x40000000
 ```
 
-Disables the "No available applications" prompt during implicit application launches.When [launching an application implicitly](../../../application-models/app-startup-overview.md), a prompt saying "No available applications" will appear if no matching application is found. You can use this flag to prevent this prompt from appearing.
+Disables the "No available applications" prompt during implicit application launches.
+
+When [launching an application implicitly](../../../application-models/app-startup-overview.md), a prompt saying "No available applications" will appear if no matching application is found. You can use this flag to prevent this prompt from appearing.
 
 **Since:** 11
 

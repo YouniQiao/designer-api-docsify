@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## createAudioLoopback
@@ -13,7 +12,7 @@ import audioHaptic from '@kit.AudioKitHaptic';
 function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>
 ```
 
-创建音频返听器。使用Promise异步回调。 在使用createAudioLoopback接口之前，需先通过 [isAudioLoopbackSupported](arkts-audio-audio-audiostreammanager-i.md#isaudioloopbacksupported)查询系统返听能力。
+创建音频返听器。使用Promise异步回调。在使用createAudioLoopback接口之前，需先通过[isAudioLoopbackSupported](arkts-audio-audio-audiostreammanager-i.md#isaudioloopbacksupported)查询系统返听能力。
 
 **起始版本：** 26.0.0
 

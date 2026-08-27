@@ -197,7 +197,7 @@ Runs a performance test, iteratively executes test code segments based on the co
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; |  |
+| Promise&lt;void&gt; |  |
 
 **Error codes:**
 

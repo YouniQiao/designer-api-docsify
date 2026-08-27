@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import systemParameter from '@kit.BasicServicesKit';
+import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
 ## setSync

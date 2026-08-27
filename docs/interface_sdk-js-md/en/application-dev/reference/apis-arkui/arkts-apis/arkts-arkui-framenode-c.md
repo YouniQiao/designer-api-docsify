@@ -2551,7 +2551,11 @@ Invalidates this FrameNode to trigger a re-rendering of the self-drawing content
 invalidateAttributes(): void
 ```
 
-Forces immediate node property updates in this frame.By default, property modifications applied after the build phase are deferred until the next frame.This API ensures rendering synchronization by triggering immediate property updates.
+Forces immediate node property updates in this frame.
+
+By default, property modifications applied after the build phase are deferred until the next frame.
+
+This API ensures rendering synchronization by triggering immediate property updates.
 
 **Since:** 21
 
@@ -3564,7 +3568,9 @@ See Example of Node Operations.
 onDraw?(context: DrawContext): void
 ```
 
-Implements custom drawing for the FrameNode. This API overrides the default drawing behavior and is invoked during FrameNode content rendering.Note: The Canvas provided in the [DrawContext](arkts-arkui-graphics-drawcontext-c.md) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-frameNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
+Implements custom drawing for the FrameNode. This API overrides the default drawing behavior and is invoked during FrameNode content rendering.
+
+Note: The Canvas provided in the [DrawContext](arkts-arkui-graphics-drawcontext-c.md) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-frameNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
 
 **Since:** 12
 
@@ -3890,7 +3896,9 @@ See Example of Customizing a Node.
 get commonAttribute(): CommonAttribute
 ```
 
-Obtains the **CommonAttribute** API associated with the FrameNode, which is used to configure universal attributes and universal events.Note that only the attributes of a custom node can be modified.
+Obtains the **CommonAttribute** API associated with the FrameNode, which is used to configure universal attributes and universal events.
+
+Note that only the attributes of a custom node can be modified.
 
 > **NOTE：**
 > 
@@ -3920,7 +3928,9 @@ See Basic Event Example.
 get commonEvent(): UICommonEvent
 ```
 
-Obtains the **UICommonEvent** object held in this FrameNode to set basic events. The set basic events will compete with declaratively defined events for event handling without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.In scenarios involving **LazyForEach**, where nodes may be destroyed and reconstructed, you need to reset or re- attach event listeners to the newly created nodes to ensure they respond to events correctly.
+Obtains the **UICommonEvent** object held in this FrameNode to set basic events. The set basic events will compete with declaratively defined events for event handling without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
+
+In scenarios involving **LazyForEach**, where nodes may be destroyed and reconstructed, you need to reset or re- attach event listeners to the newly created nodes to ensure they respond to events correctly.
 
 **Type:** [UICommonEvent](../arkts-components/arkts-arkui-uicommonevent-i.md)
 

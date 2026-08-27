@@ -3,9 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKitManager';
-import notificationSubscribe from '@kit.NotificationKitSubscribe';
-import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## requestEnableNotification
@@ -67,7 +64,7 @@ Requests notification to be enabled for this application. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

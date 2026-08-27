@@ -11,8 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## fd
@@ -21,7 +20,7 @@ import audioHaptic from '@kit.AudioKitHaptic';
 fd: number
 ```
 
-个性化HRTF的文件描述符。 取值限定为整数。
+个性化HRTF的文件描述符。取值限定为整数。
 
 **类型：** number
 

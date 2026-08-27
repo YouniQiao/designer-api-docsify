@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setSlotFlagsByBundle
@@ -26,14 +26,14 @@ function setSlotFlagsByBundle(bundle: BundleOption, slotFlags: number): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 指定应用的包信息。 |
-| slotFlags | number | 是 | 通知提醒方式开关标识位。   - bit0：铃声提示。0表示关闭，1表示开启。    - bit1：锁屏。0表示关闭，1表示开启。    - bit2：横幅。0表示关闭 ，1表示开启。    - bit3：亮屏。0表示关闭，1表示开启。    - bit4：振动。0表示关闭，1表示开启。    - bit5：状态栏通知图标。0表示关闭，1表示开启。 |
+| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| slotFlags | number | 是 | 通知提醒方式开关标识位。   - bit0：铃声提示。0表示关闭，1表示开启。    - bit1：锁屏。0表示关闭，1表示开启。    - bit2：横幅。0表示关闭，1表示开启。    - bit3：亮屏。0表示关闭，1表示开启。    - bit4：振动。0表示关闭，1表示开启。    - bit5：状态栏通知图标。0表示关闭，1表示开启。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

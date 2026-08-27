@@ -1,10 +1,10 @@
 # ArkTS API<!--arkts-userauthenticationkit-->
 
 <!--Del-->
-- [@ohos.app.ability.UserAuthExtensionAbility](arkts-app-ability-userauthextensionability.md)<!--DelEnd-->
+- [@ohos.app.ability.UserAuthExtensionAbility(User Authentication Extension Ability)](arkts-app-ability-userauthextensionability.md)<!--DelEnd-->
   - [UserAuthExtensionAbility](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c.md)
 <!--Del-->
-- [@ohos.userIAM.companionDeviceAuth](arkts-useriam-companiondeviceauth.md)<!--DelEnd-->
+- [@ohos.userIAM.companionDeviceAuth(Companion Device Authentication)](arkts-useriam-companiondeviceauth.md)<!--DelEnd-->
   <!--Del-->
   - [getStatusMonitor(system api)](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -49,17 +49,17 @@
   - [DeviceIdType(system api)](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SelectPurpose(system api)](arkts-userauthentication-companiondeviceauth-selectpurpose-e-sys.md)<!--DelEnd-->
-- [@ohos.userIAM.faceAuth](arkts-useriam-faceauth.md)
+- [@ohos.userIAM.faceAuth(Facial Authentication)](arkts-useriam-faceauth.md)
   <!--Del-->
   - [FaceAuthManager(system api)](arkts-userauthentication-faceauth-faceauthmanager-c-sys.md)<!--DelEnd-->
-- [@ohos.userIAM.userAccessCtrl](arkts-useriam-useraccessctrl.md)
+- [@ohos.userIAM.userAccessCtrl(User Access Control)](arkts-useriam-useraccessctrl.md)
   <!--Del-->
   - [verifyAuthToken(system api)](arkts-userauthentication-useraccessctrl-verifyauthtoken-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AuthToken(system api)](arkts-userauthentication-useraccessctrl-authtoken-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AuthTokenType(system api)](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md)<!--DelEnd-->
-- [@ohos.userIAM.userAuth](arkts-useriam-userauth.md)
+- [@ohos.userIAM.userAuth(User Authentication)](arkts-useriam-userauth.md)
   - [getAuthenticator](arkts-userauthentication-userauth-getauthenticator-f.md)
   - [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md)
   - [getAuthLockState](arkts-userauthentication-userauth-getauthlockstate-f.md)
@@ -130,5 +130,5 @@
   <!--Del-->
   - [WindowModeType(system api)](arkts-userauthentication-userauth-windowmodetype-e-sys.md)<!--DelEnd-->
   - [Constants](arkts-userauthentication-userauth-con.md)
-- [@ohos.userIAM.userAuthIcon](arkts-useriam-userauthicon.md)
+- [@ohos.userIAM.userAuthIcon(Embedded User Authentication Icons)](arkts-useriam-userauthicon.md)
   - [UserAuthIcon](arkts-userauthentication-useriam-userauthicon-userauthicon-s.md)

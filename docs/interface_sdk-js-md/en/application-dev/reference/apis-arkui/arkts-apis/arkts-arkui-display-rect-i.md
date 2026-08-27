@@ -9,7 +9,7 @@ Describes a rectangle on the display.
 ## Modules to Import
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## height

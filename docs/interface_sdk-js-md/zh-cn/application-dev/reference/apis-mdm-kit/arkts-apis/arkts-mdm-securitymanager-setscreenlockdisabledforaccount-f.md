@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import securityManager from '@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## setScreenLockDisabledForAccount
@@ -12,7 +12,7 @@ import securityManager from '@kit.MDMKit';
 function setScreenLockDisabledForAccount(admin: Want, disable: boolean): void
 ```
 
-禁用/启用当前用户的滑动解锁能力。启用时：设备灭屏后再亮屏，用户需要在屏幕上滑动后才能进入桌面。禁用时：设备灭屏后再亮屏会直接进入桌面。适用于企业设备管理场景，如在特定安全环境下禁用滑动解锁简化操作，或在通用场景下启用滑动解锁作为 基础安全措施。
+禁用/启用当前用户的滑动解锁能力。启用时：设备灭屏后再亮屏，用户需要在屏幕上滑动后才能进入桌面。禁用时：设备灭屏后再亮屏会直接进入桌面。适用于企业设备管理场景，如在特定安全环境下禁用滑动解锁简化操作，或在通用场景下启用滑动解锁作为基础安全措施。
 
 > **说明：**
 > 

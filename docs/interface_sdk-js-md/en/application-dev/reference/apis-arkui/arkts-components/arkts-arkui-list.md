@@ -1,27 +1,36 @@
 # List
 
 The **List** component provides a list container that presents a series of list items arranged in a column with the same width. It supports presentations of the same type of data in a multiple and coherent row style, for example, images or text.
+
 Lazy loading of **List** loads the child components in the visible area as required. Compared with full loading, lazy loading can improve the app startup speed and reduce the memory usage. The lazy loading capabilities vary when the **List** component is used together with [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), or [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md).
+
 - When **List** is used together with **ForEach**, all child nodes are created at a time. The nodes within the screen
 range are laid out and rendered when needed. When a user swipes, the nodes that are out of the screen range are not removed from the tree, and the nodes that are within the screen range are laid out and rendered.
 - When **List** is used together with **LazyForEach**, all nodes within the screen range are created, laid out, and
 rendered at a time. When a user swipes, the nodes that are out of the screen range are removed from the tree, and the nodes that are within the screen range are created, laid out, and rendered.
 - When the **List** component is used together with **Repeat** with
 [virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll), the lazy loading behavior is the same as that of **LazyForEach**. When the **List** component is used together with **Repeat** without **virtualScroll**, the lazy loading behavior is the same as that of **ForEach**.
+
 If a scrollable component is nested in a **List** component, their scrolling directions are the same, and the main axis size is not set for the **List** component, the **List** component loads all child components. As a result, lazy loading does not take effect. In this scenario, you are advised to use the ListItemGroup component to optimize the performance.
+
 Preloading in **List** refers to loading not only the visible child components within the display area but also some invisible child components outside the display area during idle time. Preloading can reduce frame loss during scrolling and improve smoothness. Preloading takes effect only when lazy loading is used. You can set the number of components to be preloaded for the **List** component using [cachedCount](arkts-arkui-list-attribute.md#cachedcount). By default, child components equivalent to one screen above and below the visible area are preloaded (up to a maximum of 16 rows). The preloading capabilities vary when the **List** component is used together with [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), or [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md).
+
 - When the **List** component is used together with **ForEach** and **cachedCount** is set, in addition to laying out
 child components within the visible area, child components within the range of **cachedCount** outside the visible area are pre-laid out during idle time.
 - When the **List** component is used together with **LazyForEach** and **cachedCount** is set, in addition to
 creating and laying out child components within the display area, child components within the range of **cachedCount** outside the display area are pre-created and pre-laid out during idle time.
 - When the **List** component is used together with **Repeat** with
 [virtualScroll](../arkts-apis/arkts-arkui-repeatattribute-c.md#virtualscroll), the preloading behavior is the same as that of **LazyForEach**. When the **List** component is used together with **Repeat** without **virtualScroll**, the preloading behavior is the same as that of **ForEach**.
+
 > **NOTE**
+
 > The component has been bound with gestures to implement functions such as follow-up scrolling. If you need to add > custom gestures, refer to Gesture Blocking Enhancement.
 
 ## Child Components
 
-Only the ListItem and ListItemGroup child components and custom components are supported. When using custom components inside **List**, you are advised to wrap the custom component with a **ListItem** or **ListItemGroup** as the top-level container. Setting attributes or event methods directly on custom components is not recommended.Child components can be dynamically generated using rendering control types [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
+Only the ListItem and ListItemGroup child components and custom components are supported. When using custom components inside **List**, you are advised to wrap the custom component with a **ListItem** or **ListItemGroup** as the top-level container. Setting attributes or event methods directly on custom components is not recommended.
+
+Child components can be dynamically generated using rendering control types [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
 
 > **NOTE：**
 > 
@@ -83,16 +92,32 @@ Creates a list container.
 
 | Name | Description |
 | --- | --- |
+| [ChainAnimationOptions](arkts-arkui-chainanimationoptions-i-sys.md) | Defines the chain animation options. |
+| [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | Implements the callbacks and events for the ListItem in the [expanded](arkts-arkui-swipeactionstate-e.md) state. |
+| [ListBackPressBehavior](arkts-arkui-listbackpressbehavior-i.md) | Defines the system back button behavior of the **List** component. |
+| [ListDividerOptions](arkts-arkui-listdivideroptions-i.md) | Defines the divider style of the list or list item group. |
+| [ListOptions](arkts-arkui-listoptions-i.md) | Defines the options of the **List** component. |
+| [UIListEvent](arkts-arkui-uilistevent-i.md) | Represents the return value of the [getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md) method in **frameNode**, which can be used to set scroll events for a **List** node. |
+| [VisibleListContentInfo](arkts-arkui-visiblelistcontentinfo-i.md) | Describes the details of the child components in the visible area of a list. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [OnListScrollIndexCallback](arkts-arkui-onlistscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **List** component. |
+| [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md) | Triggered when a child component enters or leaves the list display area. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [ChainEdgeEffect](arkts-arkui-chainedgeeffect-e-sys.md) | Declare edge effect of chain animation. |
+| [ListItemAlign](arkts-arkui-listitemalign-e.md) | Sets the alignment mode of child components in the cross-axis direction of the list. |
+| [ListItemGroupArea](arkts-arkui-listitemgrouparea-e.md) | Enumerates the areas of **ListItemGroup**. |
+| [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md) | Enumerates the alignment modes of list items when scrolling ends. |
+| [ScrollSnapAnimationSpeed](arkts-arkui-scrollsnapanimationspeed-e.md) | Enumerates the speeds of the snap animation for list scrolling. |
+| [ScrollState](arkts-arkui-scrollstate-e.md) | Enumerates the scrolling states. |
+| [StickyStyle](arkts-arkui-stickystyle-e.md) | Enumerates the sticky styles. |
 
 ## Examples
 

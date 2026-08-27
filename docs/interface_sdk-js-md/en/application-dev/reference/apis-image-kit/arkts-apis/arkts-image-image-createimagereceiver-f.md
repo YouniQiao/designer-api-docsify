@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createImageReceiver
@@ -35,7 +35,7 @@ Creates an ImageReceiver instance by specifying the image width, height, format,
 
 | Type | Description |
 | --- | --- |
-| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | ImageReceiver instance. |
+| ImageReceiver | ImageReceiver instance. |
 
 **Examples**
 
@@ -68,7 +68,7 @@ Creates an ImageReceiver instance by specifying the image size, format, and capa
 
 | Type | Description |
 | --- | --- |
-| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | ImageReceiver instance. |
+| ImageReceiver | ImageReceiver instance. |
 
 **Error codes:**
 

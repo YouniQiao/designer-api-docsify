@@ -1,6 +1,8 @@
 # GetItemsInShapePathParams（系统接口）
 
-需要获取图像对象时设置的图像选项。@interface GetItemsInShapePathParams
+需要获取图像对象时设置的图像选项。
+
+@interface GetItemsInShapePathParams
 
 **起始版本：** 23
 
@@ -11,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import componentUtils from '@kit.ArkUI';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## images
@@ -38,7 +40,7 @@ images: Array<ImageItem>
 ratio?: number
 ```
 
-所选区域中非透明空白像素的比例 相对于图像总像素的比例。默认值为0.15。
+所选区域中非透明空白像素的比例相对于图像总像素的比例。默认值为0.15。
 
 **类型：** number
 

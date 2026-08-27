@@ -27,7 +27,7 @@ function getAllPublicCertificates() : Promise<CMResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise对象，返回获取所有用户公共凭据的结果，返回值为 [CMResult]{ |
+| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise对象，返回获取所有用户公共凭据的结果，返回值为[CMResult]{ |
 
 **错误码：**
 

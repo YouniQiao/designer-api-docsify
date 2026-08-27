@@ -4,7 +4,9 @@
 type ProgressListener = (progress: Progress) => void
 ```
 
-表示复制操作进度的监听类型。进度回调可以表示复制操作的大小进度和复制操作的文件数量进度。
+表示复制操作进度的监听类型。
+
+进度回调可以表示复制操作的大小进度和复制操作的文件数量进度。
 
 **起始版本：** 26.0.0
 
@@ -18,4 +20,4 @@ type ProgressListener = (progress: Progress) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| progress | [Progress](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-progress-i.md) | 是 | 进度信息。 |
+| progress | Progress | 是 | 进度信息。 |

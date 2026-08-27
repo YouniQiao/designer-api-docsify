@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import update from '@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## end
@@ -20,7 +20,9 @@ import update from '@kit.BasicServicesKit';
 end: number
 ```
 
-结束时间，取值范围[0, 1440]，单位为min。表示一天中的分钟数，0表示00:00，1440表示24:00。必须大于或等于start，超出范围时抛出异常。
+结束时间，取值范围[0, 1440]，单位为min。表示一天中的分钟数，0表示00:00，1440表示24:00。
+
+必须大于或等于start，超出范围时抛出异常。
 
 **类型：** number
 
@@ -36,7 +38,9 @@ end: number
 start: number
 ```
 
-开始时间，取值范围[0, 1440]，单位为min。表示一天中的分钟数，0表示00:00，1440表示24:00。必须小于或等于end，超出范围时抛出异常。
+开始时间，取值范围[0, 1440]，单位为min。表示一天中的分钟数，0表示00:00，1440表示24:00。
+
+必须小于或等于end，超出范围时抛出异常。
 
 **类型：** number
 

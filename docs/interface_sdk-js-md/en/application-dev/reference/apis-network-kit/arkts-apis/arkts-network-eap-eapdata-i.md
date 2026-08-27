@@ -1,6 +1,8 @@
 # EapData
 
-Defines the EAP data.​
+Defines the EAP data.
+
+​
 
 **Since:** 20
 
@@ -9,7 +11,7 @@ Defines the EAP data.​
 ## Modules to Import
 
 ```TypeScript
-import eap from '@kit.NetworkKit';
+import { eap } from '@kit.NetworkKit';
 ```
 
 ## bufferLen

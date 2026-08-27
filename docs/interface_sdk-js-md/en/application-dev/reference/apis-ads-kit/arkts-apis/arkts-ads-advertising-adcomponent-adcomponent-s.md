@@ -55,7 +55,9 @@ A constructor used to create an **AdComponent** object.
 ads: advertising.Advertisement[]
 ```
 
-Array of ad objects.NOTE: For non-roll ad types, the component only displays the first data in the array.
+Array of ad objects.
+
+NOTE: For non-roll ad types, the component only displays the first data in the array.
 
 **Type:** advertising.Advertisement[]
 
@@ -114,48 +116,6 @@ Used to provide the playback status of roll ads externally. Set to 1 for playing
 **System capability:** SystemCapability.Advertising.Ads
 
 **Examples**
-
-```TypeScript
-import { AdComponent, advertising } from '@kit.AdsKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-@Entry
-@Component
-struct Index {
-  // Requested ad content
-  private ads: advertising.Advertisement[] = [];
-  // Ad display parameters
-  private adDisplayOptions: advertising.AdDisplayOptions = {};
-
-  build() {
-    Column() {
-      AdComponent({
-        ads: this.ads,
-        displayOptions: this.adDisplayOptions,
-        interactionListener: {
-          onStatusChanged: (status: string, ad: advertising.Advertisement, data: string) => {
-            switch (status) {
-              case 'onAdOpen':
-                hilog.info(0x0000, 'testTag', 'onAdOpen');
-                break;
-              case 'onAdClick':
-                hilog.info(0x0000, 'testTag', 'onAdClick');
-                break;
-              case 'onAdClose':
-                hilog.info(0x0000, 'testTag', 'onAdClose');
-                break;
-            }
-          }
-        }
-      })
-        .width('100%')
-        .height('100%')
-    }
-    .width('100%')
-    .height('100%')
-  }
-}
-```
 
 ```TypeScript
 import { AdComponent, advertising } from '@kit.AdsKit';

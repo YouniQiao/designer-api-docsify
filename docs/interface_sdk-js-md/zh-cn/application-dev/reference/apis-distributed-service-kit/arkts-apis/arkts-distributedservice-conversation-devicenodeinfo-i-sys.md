@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import conversation from '@kit.DistributedServiceKit';
+import { conversation } from '@kit.DistributedServiceKit';
 ```
 
 ## deviceName
@@ -92,7 +92,7 @@ networkId: string
 udid: string
 ```
 
-设备的UDID，唯一标识一台设备，用于发送数据时的设备寻址。与networkId不同，UDID为设备的永久唯一标识， 不随网络拓扑变化而改变，两者互为替代，发送数据时可任选其一。
+设备的UDID，唯一标识一台设备，用于发送数据时的设备寻址。与networkId不同，UDID为设备的永久唯一标识，不随网络拓扑变化而改变，两者互为替代，发送数据时可任选其一。
 
 **类型：** string
 

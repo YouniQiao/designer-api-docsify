@@ -1,6 +1,14 @@
 # RichEditorTextStyleResult
 
-后端返回的文本样式信息。在RichEditorTextStyle中，fontWeight是设置字体粗细的输入参数。而在RichEditorTextStyleResult中，会将之前设置的字体粗细转换为数字后返回。转换关系如下： | RichEditorTextStyle中的fontWeight | RichEditorTextStyleResult中的fontWeight | | ---- | ----------------------------------- | | 100 | 0 | | 200 | 1 | | 300 | 2 | | 400 | 3 | | 500 | 4 | | 600 | 5 | | 700 | 6 | | 800 | 7 | | 900 | 8 | | Lighter | 12 | | Normal | 10 | | Regular | 14 | | Medium | 13 | | Bold | 9 | | Bolder | 11 |RichEditorSymbolSpanStyle和RichEditorSymbolSpanStyleResult中fontWeight的转换关系，与RichEditorTextStyle和 RichEditorTextStyleResult中fontWeight的转换关系一致。
+后端返回的文本样式信息。
+
+在RichEditorTextStyle中，fontWeight是设置字体粗细的输入参数。
+
+而在RichEditorTextStyleResult中，会将之前设置的字体粗细转换为数字后返回。
+
+转换关系如下：| RichEditorTextStyle中的fontWeight | RichEditorTextStyleResult中的fontWeight | | ---- | ----------------------------------- | | 100 | 0 | | 200 | 1 | | 300 | 2 | | 400 | 3 | | 500 | 4 | | 600 | 5 | | 700 | 6 | | 800 | 7 | | 900 | 8 | | Lighter | 12 | | Normal | 10 | | Regular | 14 | | Medium | 13 | | Bold | 9 | | Bolder | 11 |
+
+RichEditorSymbolSpanStyle和RichEditorSymbolSpanStyleResult中fontWeight的转换关系，与RichEditorTextStyle和RichEditorTextStyleResult中fontWeight的转换关系一致。
 
 **起始版本：** 10
 
@@ -143,7 +151,11 @@ fontWeight: number
 halfLeading?: boolean
 ```
 
-文本是否将行间距平分至行的顶部与底部。true表示将行间距平分至行的顶部与底部，false则不平分。默认值：false。
+文本是否将行间距平分至行的顶部与底部。
+
+true表示将行间距平分至行的顶部与底部，false则不平分。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -215,7 +227,9 @@ strokeColor?: ResourceColor
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-文本描边拐角样式。默认值：StrokeJoinStyle.MITER_JOIN。
+文本描边拐角样式。
+
+默认值：StrokeJoinStyle.MITER_JOIN。
 
 **类型：** [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md)
 
@@ -233,7 +247,9 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: number
 ```
 
-文本描边宽度。单位为[vp](../arkts-apis/arkts-arkui-length-t.md)。
+文本描边宽度。
+
+单位为[vp](../arkts-apis/arkts-arkui-length-t.md)。
 
 **类型：** number
 
@@ -269,8 +285,11 @@ textBackgroundStyle?: TextBackgroundStyle
 textShadow?: Array<ShadowOptions>
 ```
 
-文字阴影效果。  
-**说明：**仅支持查询阴影模糊半径、颜色和偏移量。
+文字阴影效果。
+
+**说明：**
+
+仅支持查询阴影模糊半径、颜色和偏移量。
 
 **类型：** Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
 

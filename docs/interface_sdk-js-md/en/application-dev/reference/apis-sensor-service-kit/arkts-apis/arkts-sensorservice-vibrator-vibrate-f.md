@@ -74,7 +74,7 @@ Triggers vibration based on a specified duration. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns the result. |
+| Promise&lt;void&gt; | Promise that returns the result. |
 
 **Examples**
 
@@ -118,7 +118,7 @@ Triggers vibration based on a specified effect. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns the result. |
+| Promise&lt;void&gt; | Promise that returns the result. |
 
 **Examples**
 

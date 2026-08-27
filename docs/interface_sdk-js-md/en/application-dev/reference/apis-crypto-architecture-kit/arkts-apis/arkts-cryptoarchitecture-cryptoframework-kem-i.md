@@ -9,7 +9,7 @@ Key encapsulation mechanism (KEM) interface, defining methods for key encapsulat
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## decapsulate
@@ -39,7 +39,7 @@ Key decapsulation operation. Using the receiver's private key, executed by the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the shared secret. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the shared secret. |
 
 **Error codes:**
 

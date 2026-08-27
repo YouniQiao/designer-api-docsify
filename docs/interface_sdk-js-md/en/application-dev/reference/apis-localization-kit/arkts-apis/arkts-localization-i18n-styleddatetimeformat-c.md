@@ -9,7 +9,7 @@ Provide a DateTime formatting interface which could format DateTime to StyleStri
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -95,7 +95,7 @@ Formats the date and time as a rich text object.
 
 | Type | Description |
 | --- | --- |
-| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | Rich text object after formatting. |
+| StyledString | Rich text object after formatting. |
 
 **Examples**
 

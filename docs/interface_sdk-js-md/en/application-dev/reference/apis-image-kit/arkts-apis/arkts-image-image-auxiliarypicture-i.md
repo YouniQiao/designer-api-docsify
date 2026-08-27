@@ -1,6 +1,10 @@
 # AuxiliaryPicture
 
-The **AuxiliaryPicture** class is used to read or write auxiliary picture data of an image and obtain auxiliary picture information of an image. The supported types of auxiliary pictures can be found in [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md).Before calling any API in AuxiliaryPicture, you must create an AuxiliaryPicture instance using [image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md) or [getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture) in Picture.Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+The **AuxiliaryPicture** class is used to read or write auxiliary picture data of an image and obtain auxiliary picture information of an image. The supported types of auxiliary pictures can be found in [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md).
+
+Before calling any API in AuxiliaryPicture, you must create an AuxiliaryPicture instance using [image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md) or [getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture) in Picture.
+
+Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
@@ -9,7 +13,7 @@ The **AuxiliaryPicture** class is used to read or write auxiliary picture data o
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## getAuxiliaryPictureInfo
@@ -68,7 +72,7 @@ Obtains the metadata of this auxiliary picture. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Metadata & gt; | Promise that returns the metadata. |
+| Promise&lt;Metadata&gt; | Promise that returns the metadata. |
 
 **Error codes:**
 
@@ -158,7 +162,7 @@ Reads pixels of this auxiliary picture and writes the data to an ArrayBuffer. Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise used to return the pixels of the auxiliary picture. |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the pixels of the auxiliary picture. |
 
 **Examples**
 
@@ -193,7 +197,11 @@ async function ReadPixelsToBuffer(context: Context) {
 release():void
 ```
 
-Releases this AuxiliaryPicture object. No value is returned.Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this AuxiliaryPicture object. No value is returned.
+
+Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
@@ -294,13 +302,13 @@ Sets the metadata for this auxiliary picture. This API uses a promise to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | Yes | Metadata type, which is used to set the corresponding metadata. |
-| metadata | [Metadata](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-metadata-t.md) | Yes | Metadata object. |
+| metadata | Metadata | Yes | Metadata object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -397,7 +405,7 @@ Reads pixels from an ArrayBuffer and writes the data to this AuxiliaryPicture ob
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

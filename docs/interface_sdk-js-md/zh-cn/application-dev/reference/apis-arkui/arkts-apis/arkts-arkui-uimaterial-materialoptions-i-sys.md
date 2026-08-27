@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import uiMaterial from '@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## type
@@ -20,7 +20,9 @@ import uiMaterial from '@kit.ArkUI';
 type?: MaterialType
 ```
 
-材质类型。默认值：MaterialType.NONE
+材质类型。
+
+默认值：MaterialType.NONE
 
 **类型：** MaterialType
 

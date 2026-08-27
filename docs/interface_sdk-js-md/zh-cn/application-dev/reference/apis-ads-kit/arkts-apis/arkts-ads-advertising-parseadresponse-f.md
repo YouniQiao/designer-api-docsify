@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit.AdComponent';
-import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
-import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
-import advertising from '@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## parseAdResponse

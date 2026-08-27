@@ -33,7 +33,7 @@ Sets the size of all text within the menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](#font) | Yes | Size of all text within the menu.Default value:{size: 16,family: 'HarmonyOS Sans',weight: FontWeight.Medium,style: FontStyle.Normal} |
+| value | Font | Yes | Size of all text within the menu.Default value:{size: 16,family: 'HarmonyOS Sans',weight: FontWeight.Medium,style: FontStyle.Normal} |
 
 ## fontColor
 
@@ -87,7 +87,9 @@ Sets the size of all text within the menu.
 menuItemDivider(options: DividerStyleOptions | undefined)
 ```
 
-Sets the style of the menu item divider. If this attribute is not set, the divider will not be displayed.If the sum of **startMargin** and **endMargin** exceeds the component width, both **startMargin** and **endMargin** will be set to **0**.
+Sets the style of the menu item divider. If this attribute is not set, the divider will not be displayed.
+
+If the sum of **startMargin** and **endMargin** exceeds the component width, both **startMargin** and **endMargin** will be set to **0**.
 
 **Since:** 12
 
@@ -189,4 +191,4 @@ Sets the submenu expand symbol of the menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| symbol | [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes | Submenu expand symbol of the menu. 1. **SubMenuExpandingMode.SIDE_EXPAND**: The expand symbol is not displayed. 2. **SubMenuExpandingMode.EMBEDDED_EXPAND**: The symbol rotates 180° clockwise upon expansion. Default value: **\\$r('sys.symbol.chevron_down').fontSize('24vp')** 3. **SubMenuExpandingMode.STACK_EXPAND**: The symbol rotates 90° clockwise upon expansion. Default value: **\\$r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp') |
+| symbol | SymbolGlyphModifier | Yes | Submenu expand symbol of the menu. 1. **SubMenuExpandingMode.SIDE_EXPAND**: The expand symbol is not displayed. 2. **SubMenuExpandingMode.EMBEDDED_EXPAND**: The symbol rotates 180° clockwise upon expansion. Default value: **\\$r('sys.symbol.chevron_down').fontSize('24vp')** 3. **SubMenuExpandingMode.STACK_EXPAND**: The symbol rotates 90° clockwise upon expansion. Default value: **\\$r('sys.symbol.chevron_forward').fontSize('20vp').padding('2vp') |

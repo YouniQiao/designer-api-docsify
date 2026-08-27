@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKit';
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## enable
@@ -97,7 +97,7 @@ Specifies whether to enable screen hopping. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

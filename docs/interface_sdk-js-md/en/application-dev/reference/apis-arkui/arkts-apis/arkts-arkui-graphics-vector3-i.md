@@ -12,7 +12,9 @@ Represents a vector including three values: x, y, and z.
 x: number
 ```
 
-Rotation angle along the x-axis.Value range: (-∞, +∞).
+Rotation angle along the x-axis.
+
+Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -30,7 +32,9 @@ Rotation angle along the x-axis.Value range: (-∞, +∞).
 y: number
 ```
 
-Rotation angle along the y-axis.Value range: (-∞, +∞).
+Rotation angle along the y-axis.
+
+Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -48,7 +52,9 @@ Rotation angle along the y-axis.Value range: (-∞, +∞).
 z: number
 ```
 
-Rotation angle along the z-axis.Value range: (-∞, +∞).
+Rotation angle along the z-axis.
+
+Value range: (-∞, +∞).
 
 **Type:** number
 

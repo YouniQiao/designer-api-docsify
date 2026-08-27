@@ -9,7 +9,7 @@ Defines the pagination structure for firewall rules.
 ## Modules to Import
 
 ```TypeScript
-import netFirewall from '@kit.NetworkKit';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## data

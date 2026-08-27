@@ -25,13 +25,13 @@ Get the profile connection state of the current device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | [ProfileId](arkts-connectivity-constant-profileid-e.md) | No | Indicate the profile id. This is an optional parameter. With profileId, returns the current connection state of this profile, [ProfileConnectionState](arkts-connectivity-connection-profileconnectionstate-t.md). Without profileId, if any profile is connected, STATE_CONNECTED is returned. Otherwise, STATE_DISCONNECTED is returned. |
+| profileId | ProfileId | No | Indicate the profile id. This is an optional parameter. With profileId, returns the current connection state of this profile, [ProfileConnectionState](arkts-connectivity-connection-profileconnectionstate-t.md). Without profileId, if any profile is connected, STATE_CONNECTED is returned. Otherwise, STATE_DISCONNECTED is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | Returns the connection state. |
+| ProfileConnectionState | Returns the connection state. |
 
 **Error codes:**
 

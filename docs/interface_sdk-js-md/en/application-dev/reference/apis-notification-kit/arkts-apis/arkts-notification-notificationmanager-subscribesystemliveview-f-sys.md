@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## subscribeSystemLiveView
@@ -30,7 +30,7 @@ Subscribes to the system live view notification. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

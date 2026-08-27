@@ -1,6 +1,6 @@
 # StringDecoder
 
-提供将二进制流解码为字符串的能力。支持以下编码类型：utf-8、iso-8859-2、koi8-r、macintosh、windows-1250、 windows-1251、gbk、gb18030、big5、utf-16be 和 UTF-16le。
+提供将二进制流解码为字符串的能力。支持以下编码类型：utf-8、iso-8859-2、koi8-r、macintosh、windows-1250、windows-1251、gbk、gb18030、big5、utf-16be 和 UTF-16le。
 
 **起始版本：** 12
 
@@ -9,8 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## constructor
@@ -100,7 +98,7 @@ write(chunk: string | Uint8Array): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | string \| Uint8Array | 是 | 要解码的字符串。基于输入的编码类型进行解码。如果输入为 Uint8Array 类型， 则正常解码。如果输入为字符串类型，则直接返回该参数。 |
+| chunk | string \| Uint8Array | 是 | 要解码的字符串。基于输入的编码类型进行解码。如果输入为 Uint8Array 类型，则正常解码。如果输入为字符串类型，则直接返回该参数。 |
 
 **返回值：**
 

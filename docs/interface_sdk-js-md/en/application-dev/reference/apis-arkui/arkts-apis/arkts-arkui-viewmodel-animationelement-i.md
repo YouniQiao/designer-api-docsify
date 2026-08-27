@@ -1,6 +1,8 @@
 # AnimationElement
 
-animation element@extends Element @interface AnimationElement
+animation element
+
+@extends Element @interface AnimationElement
 
 **Inheritance/Implementation:** AnimationElement extends [Element](arkts-arkui-viewmodel-element-i.md)
 

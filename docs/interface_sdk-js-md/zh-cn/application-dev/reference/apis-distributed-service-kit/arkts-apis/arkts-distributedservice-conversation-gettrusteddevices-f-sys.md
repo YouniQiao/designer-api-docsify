@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import conversation from '@kit.DistributedServiceKit';
+import { conversation } from '@kit.DistributedServiceKit';
 ```
 
 ## getTrustedDevices

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPictureByHdrAndSdrPixelMap
@@ -24,8 +24,8 @@ Creates a Picture object based on an HDR PixelMap and an SDR PixelMap. The syste
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | HDR PixelMap, with 16-bit or 10-bit depth, in FP16/RGBA1010102/YCBCR_P010 format, and BT2020_HLG color space. |
-| sdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | SDR PixelMap, with 8-bit depth, in RGBA8888/NV21 format, and P3 color space. |
+| hdrPixelMap | PixelMap | Yes | HDR PixelMap, with 16-bit or 10-bit depth, in FP16/RGBA1010102/YCBCR_P010 format, and BT2020_HLG color space. |
+| sdrPixelMap | PixelMap | Yes | SDR PixelMap, with 8-bit depth, in RGBA8888/NV21 format, and P3 color space. |
 
 **Return value:**
 
@@ -99,8 +99,8 @@ Creates a Picture object by a HDR PixelMap and a SDR PixelMap with specified opt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | A HDR PixelMap, whose PixelMapFormat should be RGBA_F16\RGBA_1010102\YCBCR_P010 and color space should be BT2020_HLG |
-| sdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | A SDR PixelMap, whose PixelMapFormat should be RGBA_8888\NV21\NV12 and color space should be P3. |
+| hdrPixelMap | PixelMap | Yes | A HDR PixelMap, whose PixelMapFormat should be RGBA_F16\RGBA_1010102\YCBCR_P010 and color space should be BT2020_HLG |
+| sdrPixelMap | PixelMap | Yes | A SDR PixelMap, whose PixelMapFormat should be RGBA_8888\NV21\NV12 and color space should be P3. |
 | params | [GainmapParams](arkts-image-image-gainmapparams-i-sys.md) | Yes | Gainmap generation parameters. |
 
 **Return value:**

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import componentUtils from '@kit.ArkUI';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -46,8 +46,8 @@ import componentUtils from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [GetItemsInShapePathParams](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | 需要获取图像对象时设置的图像选项。@interface GetItemsInShapePathParams |
-| [ImageItem](arkts-arkui-componentutils-imageitem-i-sys.md) | 带有布局信息的图像对象。@interface ImageItem |
+| [GetItemsInShapePathParams](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | 需要获取图像对象时设置的图像选项。 |
+| [ImageItem](arkts-arkui-componentutils-imageitem-i-sys.md) | 带有布局信息的图像对象。 |
 | [Rotation2D](arkts-arkui-componentutils-rotation2d-i-sys.md) | 描述二维空间中的旋转，可以通过旋转角度和旋转中心来定义。 |
 <!--DelEnd-->
 
@@ -56,3 +56,53 @@ import componentUtils from '@kit.ArkUI';
 | 名称 | 说明 |
 | --- | --- |
 | [Matrix4Result](arkts-arkui-componentutils-matrix4result-t.md) | 列优先四阶矩阵。 |
+
+## 示例
+
+推荐使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getComponentUtils](./arkts-apis-uicontext-uicontext.md#getcomponentutils)方法获取当前UI上下文关联的ComponentUtils对象。
+
+```TypeScript
+import { matrix4 } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Utils {
+  @State translateX: number = 120;
+  @State translateY: number = 10;
+  @State translateZ: number = 100;
+  @State value: string = '';
+  private matrix1 = matrix4.identity().translate({ x: this.translateX, y: this.translateY, z: this.translateZ });
+
+  build() {
+    Column() {
+      // $r("app.media.img")需要替换为开发者所需的图像资源文件
+      Image($r('app.media.img'))
+        .transform(this.matrix1)
+        .translate({ x: 20, y: 20, z: 20 })
+        .scale({ x: 0.5, y: 0.5, z: 1 })
+        .rotate({
+          x: 1,
+          y: 1,
+          z: 1,
+          centerX: '50%',
+          centerY: '50%',
+          angle: 300
+        })
+        .width(300)
+        .height(100)
+        .key('image_01')
+      Button('getRectangleById')
+        .onClick(() => {
+          this.value = JSON.stringify(this.getUIContext()
+            .getComponentUtils()
+            .getRectangleById('image_01')); // 建议使用this.getUIContext().getComponentUtils()接口
+        }).margin(10).id('onClick')
+      Text(this.value)
+        .margin(20)
+        .width(300)
+        .height(300)
+        .borderWidth(2)
+    }.margin({ left: 50 })
+  }
+}
+```

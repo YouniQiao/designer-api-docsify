@@ -1,6 +1,8 @@
 # CurrentOffsetResultValue
 
-CurrentOffsetResultValue@interface CurrentOffsetResultValue
+CurrentOffsetResultValue
+
+@interface CurrentOffsetResultValue
 
 **Since:** 4
 

@@ -1,6 +1,8 @@
 # SuffixIconOptions
 
-SuffixIconOptions定义后缀图标的属性。继承于[IconCommonOptions](arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md)。
+SuffixIconOptions定义后缀图标的属性。
+
+继承于[IconCommonOptions](arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md)。
 
 **继承/实现关系：** SuffixIconOptions extends [IconCommonOptions](arkts-arkui-arkui-advanced-chip-iconcommonoptions-i.md)
 
@@ -12,9 +14,6 @@ SuffixIconOptions定义后缀图标的属性。继承于[IconCommonOptions](arkt
 
 ```TypeScript
 import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
-import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2SuffixImageIconConfig, ChipV2SuffixImageIcon, ChipV2Icon, ChipV2PrefixImageIconConfig, ChipV2PrefixImageIcon, ChipV2AccessibilityConfig, ChipV2Accessibility, ChipV2CloseConfig, ChipV2CloseIcon, ChipV2SymbolIconConfig, ChipV2SymbolIcon, ChipV2PrefixSymbolIconConfig, ChipV2PrefixSymbolIcon, ChipV2SuffixSymbolIconConfig, ChipV2SuffixSymbolIcon, ChipV2LabelMarginConfig, ChipV2LocalizedLabelMarginConfig, ChipV2LabelConfig, ChipV2Label, IChipV2OptionsConfig, ChipV2Options, ChipV2 } from '@kit.ArkUIV2';
-import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUIGroup';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUIGroupV2';
 ```
 
 ## action
@@ -23,7 +22,9 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 action?: () => void
 ```
 
-后缀图标点击事件回调。值为undefined时，不设定后缀图标事件。
+后缀图标点击事件回调。
+
+值为undefined时，不设定后缀图标事件。
 
 **起始版本：** 11
 
@@ -39,7 +40,11 @@ action?: () => void
 accessibilityDescription?: ResourceStr
 ```
 
-后缀图标的无障碍描述。此描述用于向用户详细解释后缀图标，开发人员应提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的后果，特别是当这些后果无法仅从后缀图标的属性和无障碍文本中直接获知时。如果后缀图标同时具备文本属性 和无障碍说明属性，当后缀图标被选中时，系统将首先播报后缀图标的文本属性，随后播报无障碍说明属性的内容。默认值：‘ ’值为undefined时，按默认值处理。
+后缀图标的无障碍描述。此描述用于向用户详细解释后缀图标，开发人员应提供较为详尽的文本说明，以协助用户理解即将执行的操作及其可能产生的后果，特别是当这些后果无法仅从后缀图标的属性和无障碍文本中直接获知时。如果后缀图标同时具备文本属性和无障碍说明属性，当后缀图标被选中时，系统将首先播报后缀图标的文本属性，随后播报无障碍说明属性的内容。
+
+默认值：‘ ’
+
+值为undefined时，按默认值处理。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -57,7 +62,21 @@ accessibilityDescription?: ResourceStr
 accessibilityLevel?: string
 ```
 
-后缀图标的无障碍重要性。用于控制后缀图标是否可被无障碍辅助服务识别。支持的值为："auto"：当前组件存在action时转化为"yes"，不存在action时，转化为"no"。"yes"：当前组件可被无障碍辅助服务所识别。"no"：当前组件不可被无障碍辅助服务所识别。"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。默认值："auto"。值为undefined时，按默认值处理。
+后缀图标的无障碍重要性。用于控制后缀图标是否可被无障碍辅助服务识别。
+
+支持的值为：
+
+"auto"：当前组件存在action时转化为"yes"，不存在action时，转化为"no"。
+
+"yes"：当前组件可被无障碍辅助服务所识别。
+
+"no"：当前组件不可被无障碍辅助服务所识别。
+
+"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。
+
+默认值："auto"。
+
+值为undefined时，按默认值处理。
 
 **类型：** string
 
@@ -77,7 +96,11 @@ accessibilityLevel?: string
 accessibilityText?: ResourceStr
 ```
 
-后缀图标无障碍文本属性。当后缀图标不包含文本属性时，屏幕朗读选中后缀图标时不播报，使用者无法清楚地知道当前是否选中了后缀图标。开发人员可为此类图标设置无障碍文本，屏幕朗读选中时播报该文本内容。默认值：‘ ’值为undefined时，按默认值处理。
+后缀图标无障碍文本属性。当后缀图标不包含文本属性时，屏幕朗读选中后缀图标时不播报，使用者无法清楚地知道当前是否选中了后缀图标。开发人员可为此类图标设置无障碍文本，屏幕朗读选中时播报该文本内容。
+
+默认值：‘ ’
+
+值为undefined时，按默认值处理。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

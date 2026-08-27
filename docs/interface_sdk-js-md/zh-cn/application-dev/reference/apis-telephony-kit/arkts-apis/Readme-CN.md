@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-telephonykit-->
 
-- [@ohos.telephony.call](arkts-telephony-call.md)
+- [@ohos.telephony.call(拨打电话)](arkts-telephony-call.md)
   - [answerCall](arkts-telephony-call-answercall-f.md)
   <!--Del-->
   - [answerCall(系统接口)](arkts-telephony-call-answercall-f-sys.md)<!--DelEnd-->
@@ -242,7 +242,7 @@
   - [VoNRState(系统接口)](arkts-telephony-call-vonrstate-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [XCallType(系统接口)](arkts-telephony-call-xcalltype-e-sys.md)<!--DelEnd-->
-- [@ohos.telephony.data](arkts-telephony-data.md)
+- [@ohos.telephony.data(蜂窝数据)](arkts-telephony-data.md)
   <!--Del-->
   - [disableCellularData(系统接口)](arkts-telephony-data-disablecellulardata-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -270,7 +270,7 @@
   - [ApnInfo](arkts-telephony-data-apninfo-i.md)
   - [DataConnectState](arkts-telephony-data-dataconnectstate-e.md)
   - [DataFlowType](arkts-telephony-data-dataflowtype-e.md)
-- [@ohos.telephony.esim](arkts-telephony-esim.md)
+- [@ohos.telephony.esim(eSIM卡管理)](arkts-telephony-esim.md)
   - [addProfile](arkts-telephony-esim-addprofile-f.md)
   <!--Del-->
   - [cancelSession(系统接口)](arkts-telephony-esim-cancelsession-f-sys.md)<!--DelEnd-->
@@ -348,7 +348,7 @@
   - [ResultCode(系统接口)](arkts-telephony-esim-resultcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SolvableErrors(系统接口)](arkts-telephony-esim-solvableerrors-e-sys.md)<!--DelEnd-->
-- [@ohos.telephony.observer](arkts-telephony-observer.md)
+- [@ohos.telephony.observer(电话服务状态监听)](arkts-telephony-observer.md)
   - [off](arkts-telephony-observer-off-f.md)
   <!--Del-->
   - [off(系统接口)](arkts-telephony-observer-off-f-sys.md)<!--DelEnd-->
@@ -381,7 +381,7 @@
   - [SimState](arkts-telephony-observer-simstate-t.md)
   - [TelCallState](arkts-telephony-observer-telcallstate-t.md)
   - [LockReason](arkts-telephony-observer-lockreason-e.md)
-- [@ohos.telephony.radio](arkts-telephony-radio.md)
+- [@ohos.telephony.radio(网络搜索)](arkts-telephony-radio.md)
   <!--Del-->
   - [factoryReset(系统接口)](arkts-telephony-radio-factoryreset-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -499,7 +499,7 @@
   - [PreferredNetworkMode(系统接口)](arkts-telephony-radio-preferrednetworkmode-e-sys.md)<!--DelEnd-->
   - [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
   - [RegState](arkts-telephony-radio-regstate-e.md)
-- [@ohos.telephony.sim](arkts-telephony-sim.md)
+- [@ohos.telephony.sim(SIM卡管理)](arkts-telephony-sim.md)
   <!--Del-->
   - [activateSim(系统接口)](arkts-telephony-sim-activatesim-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -631,7 +631,7 @@
   - [PersoLockType(系统接口)](arkts-telephony-sim-persolocktype-e-sys.md)<!--DelEnd-->
   - [SimState](arkts-telephony-sim-simstate-e.md)
   - [SimType](arkts-telephony-sim-simtype-e.md)
-- [@ohos.telephony.sms](arkts-telephony-sms.md)
+- [@ohos.telephony.sms(短信服务)](arkts-telephony-sms.md)
   <!--Del-->
   - [addSimMessage(系统接口)](arkts-telephony-sms-addsimmessage-f-sys.md)<!--DelEnd-->
   - [createMessage](arkts-telephony-sms-createmessage-f.md)
@@ -740,7 +740,7 @@
   - [SmsEncodingScheme(系统接口)](arkts-telephony-sms-smsencodingscheme-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SmsShortCodeType(系统接口)](arkts-telephony-sms-smsshortcodetype-e-sys.md)<!--DelEnd-->
-- [@ohos.telephony.vcard](arkts-telephony-vcard.md)
+- [@ohos.telephony.vcard(VCard模块)](arkts-telephony-vcard.md)
   - [exportVCard](arkts-telephony-vcard-exportvcard-f.md)
   - [importVCard](arkts-telephony-vcard-importvcard-f.md)
   - [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md)

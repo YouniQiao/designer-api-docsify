@@ -36,7 +36,7 @@ Concatenates an array of **Buffer** objects of the specified length into a new o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "length" is out of range. It must be & gt;= 0 and & lt;= uint32 max. Received value is: [length] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "length" is out of range. It must be &gt;= 0 and &lt;= uint32 max. Received value is: [length] |
 
 **Examples**
 

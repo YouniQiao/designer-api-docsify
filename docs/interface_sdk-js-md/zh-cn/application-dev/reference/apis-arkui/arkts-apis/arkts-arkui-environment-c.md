@@ -1,6 +1,6 @@
 # Environment
 
-Environment提供设备环境状态的查询能力，可将系统环境变量（如深浅色模式、语言、字体缩放、布局方向等）注入AppStorage，使应用能够感知和响应设备环境变化。具体UI使用说明，详见 [Environment：设备环境查询](../../../ui/state-management/arkts-environment.md)。
+Environment提供设备环境状态的查询能力，可将系统环境变量（如深浅色模式、语言、字体缩放、布局方向等）注入AppStorage，使应用能够感知和响应设备环境变化。具体UI使用说明，详见[Environment：设备环境查询](../../../ui/state-management/arkts-environment.md)。
 
 ## 内置环境变量说明
 
@@ -26,7 +26,9 @@ Environment提供设备环境状态的查询能力，可将系统环境变量（
 static EnvProp<S>(key: string, value: S): boolean
 ```
 
-将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key存入 [AppStorage](../../../ui/state-management/arkts-appstorage.md)中。如果系统中未查询到Environment环境变量key的值，则使用默认值value存入 AppStorage并返回true。如果AppStorage中已经有对应的key，则返回false。在没有调用EnvProp的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用该接口。
+将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key存入[AppStorage](../../../ui/state-management/arkts-appstorage.md)中。如果系统中未查询到Environment环境变量key的值，则使用默认值value存入AppStorage并返回true。如果AppStorage中已经有对应的key，则返回false。
+
+在没有调用EnvProp的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用该接口。
 
 **起始版本：** 7
 
@@ -61,7 +63,9 @@ Environment.EnvProp('accessibilityEnabled', 'default');
 static envProp<S>(key: string, value: S): boolean
 ```
 
-将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key存入 [AppStorage](../../../ui/state-management/arkts-appstorage.md)中。如果系统中未查询到Environment环境变量key的值，则使用默认值value存入 AppStorage并返回true。如果AppStorage中已经有对应的key，则返回false。在没有调用envProp的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用该接口。
+将[Environment](../../../ui/state-management/arkts-environment.md)的内置环境变量key存入[AppStorage](../../../ui/state-management/arkts-appstorage.md)中。如果系统中未查询到Environment环境变量key的值，则使用默认值value存入AppStorage并返回true。如果AppStorage中已经有对应的key，则返回false。
+
+在没有调用envProp的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用该接口。
 
 **起始版本：** 10
 
@@ -97,7 +101,7 @@ static EnvProps(
   ): void
 ```
 
-和[EnvProp](#envprop)功能类似，不同点在于参数为数组，可以一次性初始化多个数据。在没有调用EnvProps的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环 境变量值。建议在应用启动时调用，将系统环境变量批量存入[AppStorage](../../../ui/state-management/arkts-appstorage.md)中。
+和[EnvProp](#envprop)功能类似，不同点在于参数为数组，可以一次性初始化多个数据。在没有调用EnvProps的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用，将系统环境变量批量存入[AppStorage](../../../ui/state-management/arkts-appstorage.md)中。
 
 **起始版本：** 7
 
@@ -128,7 +132,7 @@ Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, 
 static envProps(props: EnvPropsOptions[]): void
 ```
 
-和[envProp](#envprop)功能类似，不同点在于参数为数组，可以一次性初始化多个数据。在没有调用envProps的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环 境变量值。建议在应用启动时调用，将系统环境变量批量存入[AppStorage](../../../ui/state-management/arkts-appstorage.md)中。
+和[envProp](#envprop)功能类似，不同点在于参数为数组，可以一次性初始化多个数据。在没有调用envProps的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用，将系统环境变量批量存入[AppStorage](../../../ui/state-management/arkts-appstorage.md)中。
 
 **起始版本：** 10
 
@@ -171,7 +175,7 @@ static Keys(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 返回环境变量的属性key的数组。 |
+| Array&lt;string&gt; | 返回环境变量的属性key的数组。 |
 
 **示例**
 
@@ -206,7 +210,7 @@ static keys(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 返回环境变量的属性key的数组。 |
+| Array&lt;string&gt; | 返回环境变量的属性key的数组。 |
 
 **示例**
 

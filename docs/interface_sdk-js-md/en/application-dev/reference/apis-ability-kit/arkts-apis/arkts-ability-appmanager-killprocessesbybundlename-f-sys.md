@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## killProcessesByBundleName
@@ -34,7 +34,7 @@ Kills a process by bundle name. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

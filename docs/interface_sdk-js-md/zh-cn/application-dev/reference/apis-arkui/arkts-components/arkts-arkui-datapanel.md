@@ -1,6 +1,7 @@
 # DataPanel
 
 数据面板组件，用于将多个数据占比情况使用占比图进行展示，支持环形和线性两种展示类型，可自定义颜色、阴影、底板等视觉效果，适用于存储容量、任务进度、资源占比等数据可视化场景，帮助用户直观了解数据分布情况。
+
 > **说明：** > > - 该组件从API版本26.0.0开始支持WithTheme。
 
 ## 子组件
@@ -35,11 +36,16 @@ DataPanel(options: DataPanelOptions)
 
 | 名称 | 说明 |
 | --- | --- |
+| [ColorStop](arkts-arkui-colorstop-i.md) | 颜色断点类型，用于描述渐变色颜色断点。 |
+| [DataPanelConfiguration](arkts-arkui-datapanelconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。 |
+| [DataPanelOptions](arkts-arkui-datapaneloptions-i.md) | 数据面板选项。 |
+| [DataPanelShadowOptions](arkts-arkui-datapanelshadowoptions-i.md) | DataPanelShadowOptions继承自[MultiShadowOptions](arkts-arkui-multishadowoptions-i.md)，具有MultiShadowOptions的全部属性。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
+| [DataPanelType](arkts-arkui-datapaneltype-e.md) | 数据面板的类型。 |
 
 ## 示例
 

@@ -75,7 +75,9 @@ struct Index {
 function on(type: 'keyPressed', options: KeyPressedConfig, callback: Callback<KeyEvent>): void
 ```
 
-Subscribes to key press events. If the current application is in the foreground focus window, a callback is triggered when the specified key is pressed. This API uses an asynchronous callback to return the result.If the API call is successful, the system's default response to the key event will be intercepted; that is, system- level actions, such as volume adjustment, will no longer be triggered. To restore the system response, call off to disable listening for the key event.
+Subscribes to key press events. If the current application is in the foreground focus window, a callback is triggered when the specified key is pressed. This API uses an asynchronous callback to return the result.
+
+If the API call is successful, the system's default response to the key event will be intercepted; that is, system- level actions, such as volume adjustment, will no longer be triggered. To restore the system response, call off to disable listening for the key event.
 
 **Since:** 16
 

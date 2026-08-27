@@ -11,7 +11,7 @@ The ServiceExtensionAbility module provides extended capabilities for background
 ## Modules to Import
 
 ```TypeScript
-import ServiceExtensionAbility from '@kit.AbilityKit';
+import { ServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdate
@@ -74,7 +74,7 @@ Called following **onCreate()** when a ServiceExtensionAbility is started by cal
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject \| Promise & lt;rpc.RemoteObject & gt; | RemoteObject or Promise used to return a RemoteObject, which is used for communication between the client and server. |
+| rpc.RemoteObject \| Promise&lt;rpc.RemoteObject&gt; | RemoteObject or Promise used to return a RemoteObject, which is used for communication between the client and server. |
 
 **Examples**
 
@@ -254,13 +254,13 @@ Dumps the client information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Array & lt;string & gt; | Yes | Parameters in the form of a command. |
+| params | Array&lt;string&gt; | Yes | Parameters in the form of a command. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Array of client information. |
+| Array&lt;string&gt; | Array of client information. |
 
 **Examples**
 

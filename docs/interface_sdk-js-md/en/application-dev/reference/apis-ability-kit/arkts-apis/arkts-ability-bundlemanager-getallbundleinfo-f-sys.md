@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllBundleInfo
@@ -146,7 +146,7 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;BundleInfo & gt; & gt; | Promise used to return an array of bundle information. |
+| Promise&lt;Array&lt;BundleInfo&gt;&gt; | Promise used to return an array of bundle information. |
 
 **Error codes:**
 

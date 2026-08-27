@@ -31,7 +31,7 @@ Add a persistent random device address. Once the randomized address is successfu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 

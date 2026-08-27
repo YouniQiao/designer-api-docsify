@@ -3,9 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKitManager';
-import notificationSubscribe from '@kit.NotificationKitSubscribe';
-import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## isSupportTemplate
@@ -75,7 +72,7 @@ Checks whether a specified template is supported before using [NotificationTempl
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 
 **Examples**
 

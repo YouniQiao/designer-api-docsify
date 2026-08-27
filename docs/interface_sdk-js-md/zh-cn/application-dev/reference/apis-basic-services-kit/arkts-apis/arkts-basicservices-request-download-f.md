@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## download

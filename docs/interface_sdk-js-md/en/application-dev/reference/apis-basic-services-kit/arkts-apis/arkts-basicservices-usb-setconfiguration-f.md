@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usb from '@kit.BasicServicesKit';
-import usbManager from '@kit.BasicServicesKitManager';
-import serialManager from '@kit.BasicServicesKitManager.serial';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## setConfiguration
@@ -14,7 +12,9 @@ import serialManager from '@kit.BasicServicesKitManager.serial';
 function setConfiguration(pipe: USBDevicePipe, config: USBConfig): number
 ```
 
-Sets the device configuration.Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md) to obtain the USB device list and device configuration, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md) to obtain **devicepipe** as an input parameter.
+Sets the device configuration.
+
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md) to obtain the USB device list and device configuration, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
 
@@ -28,7 +28,7 @@ Sets the device configuration.Before you do this, call [usb.getDevices](arkts-ba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | Device pipe, which is used to determine the bus number and device address. |
+| pipe | USBDevicePipe | Yes | Device pipe, which is used to determine the bus number and device address. |
 | config | [USBConfig](arkts-basicservices-usb-usbconfig-i.md) | Yes | USB configuration to set. |
 
 **Return value:**

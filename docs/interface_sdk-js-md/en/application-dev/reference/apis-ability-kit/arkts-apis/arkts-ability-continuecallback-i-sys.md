@@ -1,6 +1,8 @@
 # ContinueCallback (System API)
 
-ContinueCallback registered for notify continue result.@interface ContinueCallback
+ContinueCallback registered for notify continue result.
+
+@interface ContinueCallback
 
 **Since:** 9
 

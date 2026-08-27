@@ -1,6 +1,6 @@
 # Stat
 
-文件具体信息，包含文件大小、权限模式、访问时间、修改时间等属性。在调用Stat的方法前，需要先通过[stat()](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiostat)方法（同步或异步）构建一个 Stat实例。
+文件具体信息，包含文件大小、权限模式、访问时间、修改时间等属性。在调用Stat的方法前，需要先通过[stat()](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiostat)方法（同步或异步）构建一个Stat实例。
 
 **起始版本：** 9
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## isBlockDevice
@@ -246,7 +246,8 @@ let isSymbolicLink = fileIo.statSync(filePath).isSymbolicLink();
 readonly atime: number
 ```
 
-上次访问该文件的时间，表示距1970年1月1日0时0分0秒的秒数。  
+上次访问该文件的时间，表示距1970年1月1日0时0分0秒的秒数。
+
 **注意**：目前用户数据分区默认以“noatime”方式挂载，atime更新被禁用。
 
 **类型：** number
@@ -263,7 +264,8 @@ readonly atime: number
 readonly atimeNs?:bigint
 ```
 
-上次访问该文件的时间，表示距1970年1月1日0时0分0秒的纳秒数。  
+上次访问该文件的时间，表示距1970年1月1日0时0分0秒的纳秒数。
+
 **注意**：目前用户数据分区默认以“noatime”方式挂载，atime更新被禁用。
 
 **类型：** bigint
@@ -348,16 +350,26 @@ readonly location: LocationType
 readonly mode: number
 ```
 
-表示文件权限，各特征位的含义如下：  
+表示文件权限，各特征位的含义如下：
+
 **说明：**以下值为八进制，取得的返回值为十进制，请换算后查看。
+
 - 0o400：用户读。对于普通文件，所有者可读取文件；对于目录，所有者可读取目录项。
+
 - 0o200：用户写。对于普通文件，所有者可写入文件；对于目录，所有者可创建/删除目录项。
+
 - 0o100：用户执行。对于普通文件，所有者可执行文件；对于目录，所有者可在目录中搜索给定路径名。
+
 - 0o040：用户组读。对于普通文件，所有用户组可读取文件；对于目录，所有用户组可读取目录项。
+
 - 0o020：用户组写。对于普通文件，所有用户组可写入文件；对于目录，所有用户组可创建/删除目录项。
+
 - 0o010：用户组执行。对于普通文件，所有用户组可执行文件；对于目录，所有用户组是否可在目录中搜索给定路径名。
+
 - 0o004：其他读。对于普通文件，其余用户可读取文件；对于目录，其他用户组可读取目录项。
+
 - 0o002：其他写。对于普通文件，其余用户可写入文件；对于目录，其他用户组可创建/删除目录项。
+
 - 0o001：其他执行。对于普通文件，其余用户可执行文件；对于目录，其他用户组可在目录中搜索给定路径名。
 
 **类型：** number

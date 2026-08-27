@@ -1,6 +1,6 @@
 # @ohos.ability.particleAbility
 
-particleAbility模块提供了操作Data和Service类型的Ability的能力，包括启动、停止指定的particleAbility，获取dataAbilityHelper，连接、断连指定的ServiceAbility等 。
+particleAbility模块提供了操作Data和Service类型的Ability的能力，包括启动、停止指定的particleAbility，获取dataAbilityHelper，连接、断连指定的ServiceAbility等。
 
 **起始版本：** 7
 
@@ -11,7 +11,7 @@ particleAbility模块提供了操作Data和Service类型的Ability的能力，�
 ## 导入模块
 
 ```TypeScript
-import particleAbility from '@kit.AbilityKit';
+import { particleAbility } from '@kit.AbilityKit';
 ```
 
 ## 汇总

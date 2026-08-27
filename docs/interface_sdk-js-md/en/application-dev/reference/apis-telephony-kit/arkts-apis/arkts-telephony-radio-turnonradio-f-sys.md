@@ -82,7 +82,7 @@ Turn on the radio service.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the turnOnRadio. |
+| Promise&lt;void&gt; | The promise returned by the turnOnRadio. |
 
 **Error codes:**
 

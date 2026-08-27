@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## openDLPFile
@@ -12,7 +12,11 @@ import dlpPermission from '@kit.DataProtectionKit';
 function openDLPFile(ciphertextFd: number, appId: string): Promise<DLPFile>
 ```
 
-DLP管理应用调用该接口，打开DLP文件。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用Promise异步回调。调用openDLPFile()成功后返回DLPFile对象，必须在使用完毕后调用[closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closedlpfile)释放资源。DLP管理应用或授权应用需要访问受保护的DLP文件内容时，先打开文件获取管理对象。
+DLP管理应用调用该接口，打开DLP文件。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用Promise异步回调。
+
+调用openDLPFile()成功后返回DLPFile对象，必须在使用完毕后调用[closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closedlpfile)释放资源。
+
+DLP管理应用或授权应用需要访问受保护的DLP文件内容时，先打开文件获取管理对象。
 
 **起始版本：** 11
 
@@ -26,7 +30,7 @@ DLP管理应用调用该接口，打开DLP文件。调用成功后返回DLPFile�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ciphertextFd | number | 是 | 加密文件的fd。取值范围为[0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2 & lt;sup & gt;31 & lt;/sup & gt;-1时， fd的值被截断。 |
+| ciphertextFd | number | 是 | 加密文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时，fd的值被截断。 |
 | appId | string | 是 | 调用方身份。最小8字节，最大1024字节。超出范围时抛出错误码401。 |
 
 **返回值：**
@@ -92,7 +96,7 @@ ExampleFunction();
 function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void
 ```
 
-DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用完DLPFile对象后，应调用closeDLPFile释放对象，避免资 源泄露。
+DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用完DLPFile对象后，应调用closeDLPFile释放对象，避免资源泄露。
 
 **起始版本：** 11
 
@@ -106,9 +110,9 @@ DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ciphertextFd | number | 是 | 加密文件的fd。取值范围为[0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2 & lt;sup & gt;31 & lt;/sup & gt;-1时， fd的值被截断。 |
+| ciphertextFd | number | 是 | 加密文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时，fd的值被截断。 |
 | appId | string | 是 | 调用方身份。最小8字节，最大1024字节。超出范围时抛出错误码401。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | 是 | 回调函数。用于接收打开DLP文件的结果。回调参数包括：err（错误对象，成功时为undefined）和res（DLPFile对象，表示打 开的DLP文件）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | 是 | 回调函数。用于接收打开DLP文件的结果。回调参数包括：err（错误对象，成功时为undefined）和res（DLPFile对象，表示打开的DLP文件）。 |
 
 **错误码：**
 

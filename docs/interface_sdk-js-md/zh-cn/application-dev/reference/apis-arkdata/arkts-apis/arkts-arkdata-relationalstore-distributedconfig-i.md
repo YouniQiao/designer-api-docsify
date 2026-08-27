@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## assetConflictPolicy
@@ -34,7 +34,7 @@ assetConflictPolicy?: AssetConflictPolicy
 assetDownloadOnDemand?: boolean
 ```
 
-是否按需下载资产。true表示仅下行数据到本地，当需要下载资产时，调用[cloudSyncEx](arkts-arkdata-relationalstore-rdbstore-i.md#cloudsyncex)接口触发资产下载；false表示数据与资产 都下行到本地。默认值为false。
+是否按需下载资产。true表示仅下行数据到本地，当需要下载资产时，调用[cloudSyncEx](arkts-arkdata-relationalstore-rdbstore-i.md#cloudsyncex)接口触发资产下载；false表示数据与资产都下行到本地。默认值为false。
 
 **类型：** boolean
 
@@ -50,7 +50,7 @@ assetDownloadOnDemand?: boolean
 assetTempPath?: string
 ```
 
-资产临时路径。仅当assetConflictPolicy值为CONFLICT_POLICY_TEMP_PATH时生效，需指定为 [应用文件目录与应用文件路径](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)下的临时路径，格式示例：tmp/，若未填写或路径不合规，将 抛出 401 错误码。默认值为空。
+资产临时路径。仅当assetConflictPolicy值为CONFLICT_POLICY_TEMP_PATH时生效，需指定为[应用文件目录与应用文件路径](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/file-management/app-sandbox-directory.md#应用文件目录与应用文件路径)下的临时路径，格式示例：tmp/，若未填写或路径不合规，将抛出 401 错误码。默认值为空。
 
 **类型：** string
 
@@ -80,7 +80,7 @@ asyncDownloadAsset?: boolean
 autoSync: boolean
 ```
 
-表示该表是否支持端云自动同步。为true时，支持系统自动触发端云同步；为false时不支持系统自动触发端云同步，需要调用 [cloudSync](arkts-arkdata-relationalstore-rdbstore-i.md#cloudsync) 接口触发端云同步。
+表示该表是否支持端云自动同步。为true时，支持系统自动触发端云同步；为false时不支持系统自动触发端云同步，需要调用[cloudSync](arkts-arkdata-relationalstore-rdbstore-i.md#cloudsync)接口触发端云同步。
 
 **类型：** boolean
 
@@ -124,7 +124,7 @@ enableCloud?: boolean
 tableType?: DistributedTableType
 ```
 
-分布式表类型。DEVICE_COLLABORATION表示设备协作表；SINGLE_VERSION表示单版本表。跨设备数据同步时，默认值为DEVICE_COLLABORATION；端云数据同步时，默认值为 SINGLE_VERSION，不支持DEVICE_COLLABORATION。
+分布式表类型。DEVICE_COLLABORATION表示设备协作表；SINGLE_VERSION表示单版本表。跨设备数据同步时，默认值为DEVICE_COLLABORATION；端云数据同步时，默认值为SINGLE_VERSION，不支持DEVICE_COLLABORATION。
 
 **类型：** [DistributedTableType](arkts-arkdata-relationalstore-distributedtabletype-e.md)
 

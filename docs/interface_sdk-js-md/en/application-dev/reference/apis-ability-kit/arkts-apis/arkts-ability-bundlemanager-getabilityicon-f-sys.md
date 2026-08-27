@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAbilityIcon
@@ -107,7 +107,7 @@ Obtains the PixelMap of an icon based on the bundle name, module name, and abili
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return the PixelMap. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the PixelMap. |
 
 **Error codes:**
 

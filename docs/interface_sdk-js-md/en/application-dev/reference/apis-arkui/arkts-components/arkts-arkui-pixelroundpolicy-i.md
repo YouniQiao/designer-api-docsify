@@ -1,6 +1,8 @@
 # PixelRoundPolicy
 
-Enumerates the directions of pixel rounding at the component level.@interface PixelRoundPolicy
+Enumerates the directions of pixel rounding at the component level.
+
+@interface PixelRoundPolicy
 
 **Since:** 11
 

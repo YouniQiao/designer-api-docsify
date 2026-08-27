@@ -11,7 +11,7 @@ This module provides the SparkLink Service Access Protocol (SSAP) connection cap
 ## Modules to Import
 
 ```TypeScript
-import ssap from '@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -20,44 +20,44 @@ import ssap from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createClient(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-createclient-f.md) | Creates an SSAP client instance. |
-| [createServer(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-createserver-f.md) | Creates an SSAP server instance. |
+| [createClient](arkts-connectivity-ssap-createclient-f.md) | Creates an SSAP client instance. |
+| [createServer](arkts-connectivity-ssap-createserver-f.md) | Creates an SSAP server instance. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Client(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-client-i.md) | Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server.Before using the methods of this class, use the [ssap.createClient](arkts-connectivity-ssap-createclient-f.md) method to construct an instance of this class.An app only needs to create one [Client](arkts-connectivity-ssap-client-i.md) instance for a remote device. Repeated creation will increase unnecessary resource overhead. |
-| [ConnectionChangeState(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-connectionchangestate-i.md) | Defines the connection status reporting parameters. |
-| [Property(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-property-i.md) | Represents a service Property. |
-| [PropertyDescriptor(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-propertydescriptor-i.md) | Defines the descriptor of a property. |
-| [PropertyReadRequest(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-propertyreadrequest-i.md) | Represents the Property read request parameter of the client. |
-| [PropertyWriteRequest(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-propertywriterequest-i.md) | Define a client property write request. |
-| [Server(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-server-i.md) | Represents a SSAP server class, which provides APIs for connecting to and exchanging data with the client.Before using the methods of this class, you need to call [ssap.createServer](arkts-connectivity-ssap-createserver-f.md) to create an instance of this class.An app only needs to create one [Server](arkts-connectivity-ssap-server-i.md) instance. Repeated creation will increase unnecessary resource overhead. |
-| [ServerResponse(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-serverresponse-i.md) | Defines a response to a client request. |
-| [Service(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-service-i.md) | Represents the NearLink service. |
+| [Client](arkts-connectivity-ssap-client-i.md) | Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server. |
+| [ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md) | Defines the connection status reporting parameters. |
+| [Property](arkts-connectivity-ssap-property-i.md) | Represents a service Property. |
+| [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Defines the descriptor of a property. |
+| [PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md) | Represents the Property read request parameter of the client. |
+| [PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md) | Define a client property write request. |
+| [Server](arkts-connectivity-ssap-server-i.md) | Represents a SSAP server class, which provides APIs for connecting to and exchanging data with the client. |
+| [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | Defines a response to a client request. |
+| [Service](arkts-connectivity-ssap-service-i.md) | Represents the NearLink service. |
 
 <!--Del-->
 ### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [Client(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-client-i-sys.md) | Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server.Before using the methods of this class, use the [ssap.createClient](arkts-connectivity-ssap-createclient-f.md) method to construct an instance of this class.An app only needs to create one [Client](arkts-connectivity-ssap-client-i.md) instance for a remote device. Repeated creation will increase unnecessary resource overhead. |
-| [Event(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-event-i-sys.md) | Represents a service event. |
-| [Method(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-method-i-sys.md) | Represents a method of the service. |
-| [Service(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-service-i-sys.md) | Represents the NearLink service. |
+| [Client](arkts-connectivity-ssap-client-i-sys.md) | Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server. |
+| [Event](arkts-connectivity-ssap-event-i-sys.md) | Represents a service event. |
+| [Method](arkts-connectivity-ssap-method-i-sys.md) | Represents a method of the service. |
+| [Service](arkts-connectivity-ssap-service-i-sys.md) | Represents the NearLink service. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [Operation(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-operation-e.md) | Enumerates the operation types supported by a property. |
-| [PropertyDescriptorType(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-propertydescriptortype-e.md) | Enumerates the property descriptor types. |
-| [PropertyWriteType(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-propertywritetype-e.md) | Enumerates the write types supported by a property. |
+| [Operation](arkts-connectivity-ssap-operation-e.md) | Enumerates the operation types supported by a property. |
+| [PropertyDescriptorType](arkts-connectivity-ssap-propertydescriptortype-e.md) | Enumerates the property descriptor types. |
+| [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | Enumerates the write types supported by a property. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [ConnectionState(NearLink SSAP Connection Capability)](arkts-connectivity-ssap-connectionstate-t.md) | Enumerates the connection states with a remote device. |
+| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) | Enumerates the connection states with a remote device. |

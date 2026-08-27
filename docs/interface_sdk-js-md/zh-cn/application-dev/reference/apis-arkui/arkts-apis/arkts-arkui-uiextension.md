@@ -1,6 +1,6 @@
 # @ohos.arkui.uiExtension
 
-用于[EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md)（或 [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)）中获取宿主应用的窗口信息或对应的 EmbeddedComponent<!--Del-->（或 UIExtensionComponent）<!--DelEnd-->组件的信息。
+用于[EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md)（或[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)）中获取宿主应用的窗口信息或对应的EmbeddedComponent<!--Del-->（或UIExtensionComponent）<!--DelEnd-->组件的信息。
 
 > **说明：**
 > 
@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import uiExtension from '@kit.ArkUI';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## 汇总

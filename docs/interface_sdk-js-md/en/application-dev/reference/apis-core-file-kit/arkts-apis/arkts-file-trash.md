@@ -19,7 +19,7 @@ The **file.trash** module provides APIs for querying, recovering, or permanently
 ## Modules to Import
 
 ```TypeScript
-import trash from '@kit.CoreFileKit';
+import { trash } from '@kit.CoreFileKit';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import fontManager from '@kit.LocalizationKit';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## installFont
@@ -12,7 +12,7 @@ import fontManager from '@kit.LocalizationKit';
 function installFont(path: string): Promise<number>
 ```
 
-将指定路径下的字体文件安装到系统字体库中。使用Promise异步回调。 安装成功后，应用可以通过字体名称使用该字体。
+将指定路径下的字体文件安装到系统字体库中。使用Promise异步回调。安装成功后，应用可以通过字体名称使用该字体。
 
 **起始版本：** 19
 
@@ -32,7 +32,7 @@ function installFont(path: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回安装结果。 |
+| Promise&lt;number&gt; | Promise对象，返回安装结果。 |
 
 **错误码：**
 

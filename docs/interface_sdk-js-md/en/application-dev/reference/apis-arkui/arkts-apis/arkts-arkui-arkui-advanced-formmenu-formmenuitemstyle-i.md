@@ -20,7 +20,7 @@ options?: MenuItemOptions
 
 Defines options of the form menu.
 
-**Type:** [MenuItemOptions](../arkts-components/arkts-arkui-menuitemoptions-i.md)
+**Type:** MenuItemOptions
 
 **Since:** 12
 

@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getP2pGroups
@@ -27,7 +26,7 @@ function getP2pGroups(): Promise<Array<WifiP2pGroupInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;WifiP2pGroupInfo & gt; & gt; | 返回群组信息。 |
+| Promise&lt;Array&lt;WifiP2pGroupInfo&gt;&gt; | 返回群组信息。 |
 
 **错误码：**
 

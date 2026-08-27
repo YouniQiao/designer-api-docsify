@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getSlotsByBundle
@@ -26,7 +26,7 @@ Obtains the notification slots of a specified application. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes | Bundle information of the application. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NotificationSlot&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -81,13 +81,13 @@ Obtains the notification slots of a specified application. This API uses a promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes | Bundle information of the application. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;NotificationSlot & gt; & gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;NotificationSlot&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

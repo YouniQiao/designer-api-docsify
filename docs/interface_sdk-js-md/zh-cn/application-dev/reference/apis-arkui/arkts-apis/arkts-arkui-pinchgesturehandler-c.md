@@ -55,7 +55,7 @@ onActionCancel(event: Callback<void>): PinchGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback & lt;void & gt; | 是 | 捏合手势处理器取消回调。不返回手势事件信息。 |
+| event | Callback&lt;void&gt; | 是 | 捏合手势处理器取消回调。不返回手势事件信息。 |
 
 **返回值：**
 
@@ -69,7 +69,7 @@ onActionCancel(event: Callback<void>): PinchGestureHandler
 onActionCancel(event: Callback<GestureEvent>): PinchGestureHandler
 ```
 
-设置捏合手势处理器取消回调。捏合手势处理器识别成功后，接收到触摸取消事件时触发回调。与 [onActionCancel](#onactioncancel)接口相比，此接口返回手势事件信息。
+设置捏合手势处理器取消回调。捏合手势处理器识别成功后，接收到触摸取消事件时触发回调。与[onActionCancel](#onactioncancel)接口相比，此接口返回手势事件信息。
 
 **起始版本：** 18
 

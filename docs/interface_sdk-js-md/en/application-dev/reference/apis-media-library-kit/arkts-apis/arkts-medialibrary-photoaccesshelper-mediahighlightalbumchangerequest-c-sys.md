@@ -13,7 +13,7 @@ Provides APIs for managing the media album change request. It inherits from [Med
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor
@@ -34,7 +34,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | Yes | Highlights** album. |
+| album | Album | Yes | Highlights** album. |
 
 **Error codes:**
 

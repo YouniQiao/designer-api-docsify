@@ -76,7 +76,7 @@ Obtains the list of subcall IDs. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

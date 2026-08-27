@@ -11,7 +11,8 @@
 function getActiveSimAccountInfoList(callback: AsyncCallback<Array<IccAccountInfo>>): void
 ```
 
-Obtains the list of activated SIM card accounts. This API uses an asynchronous callback to return the result.  
+Obtains the list of activated SIM card accounts. This API uses an asynchronous callback to return the result.
+
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
 > **NOTE：**
@@ -61,7 +62,8 @@ sim.getActiveSimAccountInfoList((err: BusinessError, data: Array<sim.IccAccountI
 function getActiveSimAccountInfoList(): Promise<Array<IccAccountInfo>>
 ```
 
-Obtains the list of activated SIM card accounts. This API uses a promise to return the result.  
+Obtains the list of activated SIM card accounts. This API uses a promise to return the result.
+
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
 > **NOTE：**

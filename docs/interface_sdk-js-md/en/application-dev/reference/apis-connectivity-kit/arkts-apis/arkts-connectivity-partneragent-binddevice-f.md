@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import partnerAgent from '@kit.ConnectivityKit';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## bindDevice
@@ -17,7 +17,9 @@ Bind the partner device. After successfully binding the device, if the device me
 - If the [supportBR](arkts-connectivity-partneragent-devicecapability-i.md#supportbr) in the capability variable is set to true,  
 the application's ability will be launched when the device is connected via Bluetooth.  
 - If the [supportBleAdvertiser](arkts-connectivity-partneragent-devicecapability-i.md#supportbleadvertiser) in the capability variable is set to true,  
-the application's ability will be launched when the device is detected via Bluetooth scanning.Note: The device must be paired first.
+the application's ability will be launched when the device is detected via Bluetooth scanning.
+
+Note: The device must be paired first.
 
 **Since:** 23
 
@@ -31,8 +33,8 @@ the application's ability will be launched when the device is detected via Bluet
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes | The address of partner device. |
-| deviceCapability | [DeviceCapability](arkts-connectivity-partneragent-devicecapability-i.md) | Yes | The capability of partner device. |
+| deviceAddress | PartnerDeviceAddress | Yes | The address of partner device. |
+| deviceCapability | DeviceCapability | Yes | The capability of partner device. |
 | businessCapability | [BusinessCapability](arkts-connectivity-partneragent-businesscapability-i.md) | Yes | The business capability of application. |
 | partnerAgentExtensionAbilityName | string | Yes | The name of PartnerAgentExtensionAbility. |
 
@@ -40,7 +42,7 @@ the application's ability will be launched when the device is detected via Bluet
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

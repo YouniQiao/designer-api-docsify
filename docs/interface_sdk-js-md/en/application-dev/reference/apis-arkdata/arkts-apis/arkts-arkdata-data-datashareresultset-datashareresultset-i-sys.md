@@ -1,6 +1,8 @@
 # DataShareResultSet (System API)
 
-Provides APIs for accessing the result sets returned.The column or key names are returned as a string array, in which the strings are in the same order as the columns or keys in the result set.
+Provides APIs for accessing the result sets returned.
+
+The column or key names are returned as a string array, in which the strings are in the same order as the columns or keys in the result set.
 
 **Since:** 9
 
@@ -11,7 +13,7 @@ Provides APIs for accessing the result sets returned.The column or key names are
 ## Modules to Import
 
 ```TypeScript
-import DataShareResultSet, { DataType } from '@kit.ArkData';
+import { DataShareResultSet, DataType } from '@kit.ArkData';
 ```
 
 ## close
@@ -20,7 +22,9 @@ import DataShareResultSet, { DataType } from '@kit.ArkData';
 close(): void
 ```
 
-Closes this result set.Calling this API will invalidate the result set and release all its resources.
+Closes this result set.
+
+Calling this API will invalidate the result set and release all its resources.
 
 **Since:** 9
 
@@ -44,7 +48,9 @@ if (resultSet != undefined) {
 getBlob(columnIndex: number): Uint8Array
 ```
 
-Obtains the value in the form of a byte array based on the specified column and the current row.If the specified column or key is empty or the value is not of the Blob type, you need to determine whether to throw an exception.
+Obtains the value in the form of a byte array based on the specified column and the current row.
+
+If the specified column or key is empty or the value is not of the Blob type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
@@ -87,7 +93,9 @@ if (resultSet != undefined) {
 getColumnIndex(columnName: string): number
 ```
 
-Obtains the column index based on a column name.The column name is passed in as an input parameter.
+Obtains the column index based on a column name.
+
+The column name is passed in as an input parameter.
 
 **Since:** 9
 
@@ -125,7 +133,9 @@ if (resultSet != undefined) {
 getColumnName(columnIndex: number): string
 ```
 
-Obtains the column name based on a column index.The column index is passed in as an input parameter.
+Obtains the column name based on a column index.
+
+The column index is passed in as an input parameter.
 
 **Since:** 9
 
@@ -163,7 +173,9 @@ if (resultSet != undefined) {
 getDataType(columnIndex: number): DataType
 ```
 
-Obtains the data type based on the specified column index.If the specified column or key is empty or the value is not of the DataType type, you need to determine whether to throw an exception.
+Obtains the data type based on the specified column index.
+
+If the specified column or key is empty or the value is not of the DataType type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
@@ -201,7 +213,9 @@ if (resultSet != undefined) {
 getDouble(columnIndex: number): number
 ```
 
-Obtains the value in the form of a number-precision floating-point number based on the specified column and the current row.If the specified column or key is empty or the value is not of the number type, you need to determine whether to throw an exception.
+Obtains the value in the form of a number-precision floating-point number based on the specified column and the current row.
+
+If the specified column or key is empty or the value is not of the number type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
@@ -240,7 +254,9 @@ if (resultSet != undefined) {
 getLong(columnIndex: number): number
 ```
 
-Obtains the value in the form of a number integer based on the specified column and the current row.If the specified column or key is empty or the value is not of the number type, you need to determine whether to throw an exception.
+Obtains the value in the form of a number integer based on the specified column and the current row.
+
+If the specified column or key is empty or the value is not of the number type, you need to determine whether to throw an exception.
 
 **Since:** 9
 
@@ -279,7 +295,9 @@ if (resultSet != undefined) {
 getString(columnIndex: number): string
 ```
 
-Obtains the value in the form of a string based on the specified column and the current row.If the specified column or key is empty or the value is not of the string type, you need to determine whether to throw an exception.
+Obtains the value in the form of a string based on the specified column and the current row.
+
+If the specified column or key is empty or the value is not of the string type, you need to determine whether to throw an exception.
 
 **Since:** 9
 

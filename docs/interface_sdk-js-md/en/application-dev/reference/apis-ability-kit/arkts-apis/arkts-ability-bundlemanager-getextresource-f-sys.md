@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getExtResource
@@ -32,7 +32,7 @@ Obtains the module names corresponding to the extended resources based on the gi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the API call result and the module names corresponding to the extended resources. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the API call result and the module names corresponding to the extended resources. |
 
 **Error codes:**
 

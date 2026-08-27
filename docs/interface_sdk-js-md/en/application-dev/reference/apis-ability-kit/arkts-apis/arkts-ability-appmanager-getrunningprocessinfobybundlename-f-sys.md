@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## getRunningProcessInfoByBundleName
@@ -140,7 +140,7 @@ Obtains information about the running processes by bundle name. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;ProcessInformation & gt; & gt; | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
+| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 
@@ -197,7 +197,7 @@ Obtains information about the running processes by bundle name and user ID. This
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;ProcessInformation & gt; & gt; | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
+| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise used to return the API call result and the process running information. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 

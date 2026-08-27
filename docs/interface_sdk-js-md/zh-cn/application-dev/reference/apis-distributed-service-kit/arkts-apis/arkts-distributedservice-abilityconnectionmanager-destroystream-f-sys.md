@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## destroyStream
@@ -12,7 +12,7 @@ import abilityConnectionManager from '@kit.DistributedServiceKit';
 function destroyStream(streamId: number): void
 ```
 
-发送图片和视频流等业务结束后，创建传输流的应用应及时销毁传输流，否则会增加系统功耗。 需与createStream()方法配对使用，在业务结束后必须调用此方法销毁传输流以释放资源。
+发送图片和视频流等业务结束后，创建传输流的应用应及时销毁传输流，否则会增加系统功耗。需与createStream()方法配对使用，在业务结束后必须调用此方法销毁传输流以释放资源。
 
 **起始版本：** 18
 

@@ -3,9 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKitManager';
-import notificationSubscribe from '@kit.NotificationKitSubscribe';
-import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## subscribe
@@ -142,13 +139,13 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md) | 是 | 通知订阅对象。 |
-| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | 否 | 通知订阅信息， 默认为空（当为空时，表示订阅当前用户下所有应用的通知，否则表示订阅通知并指定订阅信息）。 |
+| info | [NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md) | 否 | 通知订阅信息，默认为空（当为空时，表示订阅当前用户下所有应用的通知，否则表示订阅通知并指定订阅信息）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **示例**
 

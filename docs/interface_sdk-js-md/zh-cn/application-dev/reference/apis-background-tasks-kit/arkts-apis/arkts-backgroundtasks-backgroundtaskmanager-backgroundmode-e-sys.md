@@ -12,7 +12,8 @@
 WIFI_INTERACTION = 7
 ```
 
-WLAN相关。  
+WLAN相关。
+
 **系统API**: 此接口为系统接口。
 
 **起始版本：** 9

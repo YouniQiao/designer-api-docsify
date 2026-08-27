@@ -1,6 +1,8 @@
 # Querier (System API)
 
-Definition callback of receiving the query data.@interface Querier
+Definition callback of receiving the query data.
+
+@interface Querier
 
 **Since:** 12
 
@@ -11,7 +13,7 @@ Definition callback of receiving the query data.@interface Querier
 ## Modules to Import
 
 ```TypeScript
-import securityGuard from '@kit.SecurityGuardKit';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## onComplete

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## queryDlpPolicy
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function queryDlpPolicy(dlpFd: number): Promise<string>
 ```
 
-Parses the file header in a DLP file to obtain the DLP plaintext policy. The returned JSON string of the DLP policy contains the [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) and [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md) information. This API uses a promise to return the result.This API obtains the policy information of a DLP file for analysis in scenarios such as viewing the DLP file permission configuration.
+Parses the file header in a DLP file to obtain the DLP plaintext policy. The returned JSON string of the DLP policy contains the [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) and [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md) information. This API uses a promise to return the result.
+
+This API obtains the policy information of a DLP file for analysis in scenarios such as viewing the DLP file permission configuration.
 
 > **NOTE：**
 > 
@@ -28,13 +30,13 @@ Parses the file header in a DLP file to obtain the DLP plaintext policy. The ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dlpFd | number | Yes | FD of the DLP file to be queried. The value range is [0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2 & lt;sup & gt;31 & lt;/sup & gt;-1, the excess part will be truncated. |
+| dlpFd | number | Yes | FD of the DLP file to be queried. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the JSON string of the DLP policy. The length cannot exceed 4,194,304 bytes. |
+| Promise&lt;string&gt; | Promise used to return the JSON string of the DLP policy. The length cannot exceed 4,194,304 bytes. |
 
 **Error codes:**
 

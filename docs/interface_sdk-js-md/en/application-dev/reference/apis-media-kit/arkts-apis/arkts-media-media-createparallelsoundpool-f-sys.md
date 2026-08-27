@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createParallelSoundPool
@@ -12,7 +12,9 @@ import media from '@kit.MediaKit';
 function createParallelSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>
 ```
 
-Creates a **SoundPool** instance. This API uses a promise to return the result.If a **SoundPool** instance created using [createSoundPool](arkts-media-media-createsoundpool-f.md) is used to play the same sound again, it stops the current audio and restarts the audio. However, if the instance is created using **createParallelSoundPool**, it keeps playing the first audio and starts the new one alongside it.
+Creates a **SoundPool** instance. This API uses a promise to return the result.
+
+If a **SoundPool** instance created using [createSoundPool](arkts-media-media-createsoundpool-f.md) is used to play the same sound again, it stops the current audio and restarts the audio. However, if the instance is created using **createParallelSoundPool**, it keeps playing the first audio and starts the new one alongside it.
 
 **Since:** 20
 
@@ -31,7 +33,7 @@ Creates a **SoundPool** instance. This API uses a promise to return the result.I
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;SoundPool & gt; | Promise used to return the result. If the operation is successful, a **SoundPool** instance is returned; otherwise, **null** is returned. The instance is used for loading and playback. |
+| Promise&lt;SoundPool&gt; | Promise used to return the result. If the operation is successful, a **SoundPool** instance is returned; otherwise, **null** is returned. The instance is used for loading and playback. |
 
 **Error codes:**
 

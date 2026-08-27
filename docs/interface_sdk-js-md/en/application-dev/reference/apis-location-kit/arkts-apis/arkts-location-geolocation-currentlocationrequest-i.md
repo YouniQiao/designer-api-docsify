@@ -1,6 +1,8 @@
 # CurrentLocationRequest
 
-Configuring parameters in current location requests@interface CurrentLocationRequest
+Configuring parameters in current location requests
+
+@interface CurrentLocationRequest
 
 **Since:** 7
 
@@ -15,7 +17,7 @@ Configuring parameters in current location requests@interface CurrentLocationReq
 ## Modules to Import
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## maxAccuracy

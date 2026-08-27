@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import cliManager from '@kit.AbilityKit';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## background
@@ -20,7 +20,11 @@ import cliManager from '@kit.AbilityKit';
 background?: boolean
 ```
 
-表示命令是否后台执行。true：后台执行，false：前台执行。默认值：false。
+表示命令是否后台执行。
+
+true：后台执行，false：前台执行。
+
+默认值：false。
 
 **类型：** boolean
 

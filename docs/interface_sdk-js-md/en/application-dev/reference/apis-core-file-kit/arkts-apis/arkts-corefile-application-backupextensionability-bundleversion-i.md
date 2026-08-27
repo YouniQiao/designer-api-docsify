@@ -1,6 +1,8 @@
 # BundleVersion
 
-Describe bundle version@interface BundleVersion
+Describe bundle version
+
+@interface BundleVersion
 
 **Since:** 10
 
@@ -9,7 +11,7 @@ Describe bundle version@interface BundleVersion
 ## Modules to Import
 
 ```TypeScript
-import BackupExtensionAbility, { BundleVersion } from '@kit.CoreFileKit';
+import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
 ```
 
 ## code

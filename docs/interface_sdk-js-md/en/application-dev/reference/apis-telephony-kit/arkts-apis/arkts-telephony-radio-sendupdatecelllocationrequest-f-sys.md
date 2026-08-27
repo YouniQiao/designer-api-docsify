@@ -82,7 +82,7 @@ Actively requests to update location information.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the sendUpdateCellLocationRequest. |
+| Promise&lt;void&gt; | The promise returned by the sendUpdateCellLocationRequest. |
 
 **Error codes:**
 

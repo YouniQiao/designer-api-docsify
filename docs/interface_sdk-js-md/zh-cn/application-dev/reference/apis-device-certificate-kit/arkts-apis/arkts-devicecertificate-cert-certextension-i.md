@@ -29,7 +29,7 @@ checkCA(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 当证书扩展中密钥用途扩展包含keyCertSign位，并且基本约束中cA字段为true时，表示证书为CA证书。 如果证书不是CA证书，则返回-1；否则返回基本约束中的路径长度。 如果证书是CA证书，但是基本约束中未给定路径长度，则返回-2，表示无路径长度限制。 |
+| number | 当证书扩展中密钥用途扩展包含keyCertSign位，并且基本约束中cA字段为true时，表示证书为CA证书。如果证书不是CA证书，则返回-1；否则返回基本约束中的路径长度。如果证书是CA证书，但是基本约束中未给定路径长度，则返回-2，表示无路径长度限制。 |
 
 **错误码：**
 
@@ -190,13 +190,13 @@ getEntry(valueType: ExtensionEntryType, oid: DataBlob): DataBlob
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | valueType | [ExtensionEntryType](arkts-devicecertificate-cert-extensionentrytype-e.md) | 是 | 指定要获取的扩展信息类型。 |
-| oid | [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 是 | 指定要获取的扩展项OID。 |
+| oid | DataBlob | 是 | 指定要获取的扩展项OID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 获取的证书扩展项数据。 |
+| DataBlob | 获取的证书扩展项数据。 |
 
 **错误码：**
 

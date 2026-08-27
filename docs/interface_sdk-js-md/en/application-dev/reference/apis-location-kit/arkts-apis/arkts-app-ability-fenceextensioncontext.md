@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import FenceExtensionContext from '@kit.LocationKit';
+import { FenceExtensionContext } from '@kit.LocationKit';
 ```
 
 ## Summary
@@ -13,5 +13,5 @@ import FenceExtensionContext from '@kit.LocationKit';
 
 | Name | Description |
 | --- | --- |
-| [FenceExtensionContext](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md) | class of static subscriber extension context.@extends ExtensionContext |
+| [FenceExtensionContext](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md) | class of static subscriber extension context. |
 <!--DelEnd-->

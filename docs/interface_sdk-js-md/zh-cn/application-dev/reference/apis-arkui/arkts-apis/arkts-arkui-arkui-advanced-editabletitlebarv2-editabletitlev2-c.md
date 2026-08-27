@@ -40,7 +40,9 @@ EditableTitleV2的构造函数。
 public mainTitle: ResourceStr
 ```
 
-主标题内容。默认值：''，表示标题内容为空。
+主标题内容。
+
+默认值：''，表示标题内容为空。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

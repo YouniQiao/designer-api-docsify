@@ -1,6 +1,8 @@
 # FileData（系统接口）
 
-文件数据，包含一个已经打开的文件描述符，在与备份服务进行IPC时使用。@interface FileData
+文件数据，包含一个已经打开的文件描述符，在与备份服务进行IPC时使用。
+
+@interface FileData
 
 **起始版本：** 10
 
@@ -11,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## fd

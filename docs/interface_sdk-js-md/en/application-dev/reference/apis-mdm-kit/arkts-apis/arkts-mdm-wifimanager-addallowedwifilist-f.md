@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.MDMKit';
+import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## addAllowedWifiList
@@ -12,7 +12,10 @@ import wifiManager from '@kit.MDMKit';
 function addAllowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void
 ```
 
-Adds allowed Wi-Fi networks. The current device can only connect to the allowed Wi-Fi networks. This API is applicable to enterprise security management scenarios, for example, restricting employees' devices to connect only to Wi-Fi networks authorized by the enterprise, preventing connection to insecure external Wi-Fi networks and ensuring enterprise network and data security.A policy conflict is reported when this API is called in the following scenarios:
+Adds allowed Wi-Fi networks. The current device can only connect to the allowed Wi-Fi networks. This API is applicable to enterprise security management scenarios, for example, restricting employees' devices to connect only to Wi-Fi networks authorized by the enterprise, preventing connection to insecure external Wi-Fi networks and ensuring enterprise network and data security.
+
+A policy conflict is reported when this API is called in the following scenarios:
+
 1. The device Wi-Fi capability has been disabled via [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md).
 You can resolve the conflict by enabling Wi-Fi via [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md).
 2. Disallowed Wi-Fi networks have been added by calling [addDisallowedWifiList](arkts-mdm-wifimanager-adddisallowedwifilist-f.md).

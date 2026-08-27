@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## code
@@ -32,7 +32,9 @@ code: ProgressCode
 details: Record<string, TableDetails>
 ```
 
-表示端云同步各表的统计信息。键表示表名，值表示该表的端云同步过程统计信息。
+表示端云同步各表的统计信息。
+
+键表示表名，值表示该表的端云同步过程统计信息。
 
 **类型：** Record&lt;string, [TableDetails](arkts-arkdata-relationalstore-tabledetails-i.md)&gt;
 

@@ -13,7 +13,7 @@ Encapsulates binary data. The core field **data** is of the Uint8Array type.
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## data

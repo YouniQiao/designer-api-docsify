@@ -68,7 +68,7 @@ iconModifier?: ImageModifier
 
 The icon attributes of Popup.
 
-**Type:** ImageModifier
+**Type:** [ImageModifier](arkts-arkui-imagemodifier-c.md)
 
 **Since:** 26.0.0
 

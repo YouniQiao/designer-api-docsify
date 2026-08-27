@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getAVScreenCaptureConfigurableParameters
@@ -30,7 +30,7 @@ get Configurations which user can changes from AVScreenCapture server
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns a configurable configuration item string. |
+| Promise&lt;string&gt; | Returns a configurable configuration item string. |
 
 **Error codes:**
 

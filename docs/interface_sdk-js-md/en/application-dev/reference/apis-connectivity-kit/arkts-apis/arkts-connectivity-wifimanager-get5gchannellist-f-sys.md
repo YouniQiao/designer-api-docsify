@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## get5GChannelList
@@ -27,7 +26,7 @@ Obtain the supported 5G channel list of the device.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Returns 5G channel list. |
+| Array&lt;number&gt; | Returns 5G channel list. |
 
 **Error codes:**
 

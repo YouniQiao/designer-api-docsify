@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## disconnectPrinter
@@ -80,7 +80,7 @@ Disconnects from the specified printer. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

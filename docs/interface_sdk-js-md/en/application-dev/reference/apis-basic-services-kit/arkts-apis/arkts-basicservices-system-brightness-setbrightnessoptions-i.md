@@ -11,7 +11,7 @@ Options for setting the screen brightness.
 ## Modules to Import
 
 ```TypeScript
-import Brightness, { BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
+import { Brightness, BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -69,7 +69,8 @@ Called when an API call is successful.
 value: number
 ```
 
-Screen brightness. The value is an integer ranging from **1** to **255**.  
+Screen brightness. The value is an integer ranging from **1** to **255**.
+
 - If the value is less than or equal to **0**, value **1** will be used.  
 - If the value is greater than **255**, value **255** will be used.  
 - If the value contains decimals, the integral part of the value will be used. For example, if value **8.1** is set  

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screenLock from '@kit.BasicServicesKit';
+import { screenLock } from '@kit.BasicServicesKit';
 ```
 
 ## setScreenLockDisabled
@@ -33,7 +33,7 @@ Disable screen lock showing for os account local userId. This only becomes effec
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | the promise returned by the function. |
+| Promise&lt;boolean&gt; | the promise returned by the function. |
 
 **Error codes:**
 

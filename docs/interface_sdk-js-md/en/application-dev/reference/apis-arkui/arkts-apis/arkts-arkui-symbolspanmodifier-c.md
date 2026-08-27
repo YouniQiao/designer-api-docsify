@@ -50,4 +50,4 @@ constructor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | No |  |
+| src | Resource | No |  |

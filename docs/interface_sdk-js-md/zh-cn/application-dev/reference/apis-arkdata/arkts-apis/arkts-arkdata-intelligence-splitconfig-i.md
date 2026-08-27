@@ -1,6 +1,8 @@
 # SplitConfig
 
-管理文本分块的配置信息。@interface SplitConfig
+管理文本分块的配置信息。
+
+@interface SplitConfig
 
 **起始版本：** 15
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import intelligence from '@kit.ArkData';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## overlapRatio

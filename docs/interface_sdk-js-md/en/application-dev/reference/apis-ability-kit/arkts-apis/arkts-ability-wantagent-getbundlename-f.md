@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wantAgent, { WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## getBundleName
@@ -126,7 +126,7 @@ Obtains the bundle name of a WantAgent object. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the bundle name. |
+| Promise&lt;string&gt; | Promise used to return the bundle name. |
 
 **Error codes:**
 

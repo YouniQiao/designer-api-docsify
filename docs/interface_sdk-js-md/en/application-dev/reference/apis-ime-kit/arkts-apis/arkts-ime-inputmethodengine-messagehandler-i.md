@@ -22,7 +22,7 @@ Represents a custom communication object.
 ## Modules to Import
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## onMessage

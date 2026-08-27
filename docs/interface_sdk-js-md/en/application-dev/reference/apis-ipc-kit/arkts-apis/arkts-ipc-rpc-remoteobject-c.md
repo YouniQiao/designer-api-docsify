@@ -11,7 +11,7 @@ Provides methods to implement **RemoteObject**. The service provider must inheri
 ## Modules to Import
 
 ```TypeScript
-import rpc from '@kit.IPCKit';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## attachLocalInterface
@@ -575,7 +575,7 @@ Called to return a response to **sendMessageRequest()**. The server processes th
 
 | Type | Description |
 | --- | --- |
-| boolean \| Promise & lt;boolean & gt; | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
+| boolean \| Promise&lt;boolean&gt; | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Examples**
 
@@ -700,7 +700,7 @@ Provides a response to **sendMessageRequest()**. The server processes the reques
 
 | Type | Description |
 | --- | --- |
-| boolean \| Promise & lt;boolean & gt; | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
+| boolean \| Promise&lt;boolean&gt; | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Examples**
 
@@ -925,7 +925,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;RequestResult & gt; | Promise used to return a **requestResult** instance. |
+| Promise&lt;RequestResult&gt; | Promise used to return a **requestResult** instance. |
 
 **Error codes:**
 
@@ -1484,43 +1484,6 @@ try {
 } catch (error) {
   hilog.error(0x0000, 'testTag', 'error: ' + error);
 }
-```
-
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
-
-```TypeScript
-// If the FA model is used, import featureAbility from @kit.AbilityKit.
-// import { featureAbility } from '@kit.AbilityKit';
-import { rpc } from '@kit.IPCKit';
-import { Want, common } from '@kit.AbilityKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-let proxy: rpc.IRemoteObject | undefined;
-let connect: common.ConnectOptions = {
-  onConnect: (elementName, remoteProxy) => {
-    hilog.info(0x0000, 'testTag', 'js onConnect called');
-    proxy = remoteProxy;
-  },
-  onDisconnect: (elementName) => {
-    hilog.info(0x0000, 'testTag', 'onDisconnect');
-  },
-  onFailed: () => {
-    hilog.info(0x0000, 'testTag', 'onFailed');
-  }
-};
-let want: Want = {
-  // Obtain the package name and ability name on the server.
-  bundleName: "com.ohos.server",
-  abilityName: "com.ohos.server.EntryAbility",
-};
-
-// Use this method to connect to the ability for the FA model.
-// FA.connectAbility(want,connect);
-
-// Save the connection ID, which will be used for the subsequent service disconnection.
-let context: common.UIAbilityContext = this.getUIContext().getHostContext(); // UIAbilityContext
-// Save the connection ID, which will be used for the subsequent service disconnection.
-let connectionId = context.connectServiceExtensionAbility(want, connect);
 ```
 
 The proxy object in the onConnect callback can be assigned a value only after the ability is connected asynchronously. Then, sendRequest() of the proxy object is called to send a message.

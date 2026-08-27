@@ -20,6 +20,6 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [setKeyDownDuration(系统预置全局快捷键)](arkts-input-shortkey-setkeydownduration-f-sys.md) | 设置快捷键拉起Ability的延迟时间，使用callback异步回调。 |
-| [setKeyDownDuration(系统预置全局快捷键)](arkts-input-shortkey-setkeydownduration-f-sys.md) | 设置快捷键拉起Ability的延迟时间，使用Promise异步回调。 |
+| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md) | 设置快捷键拉起Ability的延迟时间，使用callback异步回调。 |
+| [setKeyDownDuration](arkts-input-shortkey-setkeydownduration-f-sys.md) | 设置快捷键拉起Ability的延迟时间，使用Promise异步回调。 |
 <!--DelEnd-->

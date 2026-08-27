@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import featureAbility from '@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## terminateSelfWithResult
@@ -89,7 +89,7 @@ Terminates this ability. This API uses a promise to return the result. If the ab
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

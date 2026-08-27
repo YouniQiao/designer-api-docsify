@@ -84,7 +84,7 @@ Sets the voice mail information.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the setVoiceMailInfo. |
+| Promise&lt;void&gt; | The promise returned by the setVoiceMailInfo. |
 
 **Error codes:**
 

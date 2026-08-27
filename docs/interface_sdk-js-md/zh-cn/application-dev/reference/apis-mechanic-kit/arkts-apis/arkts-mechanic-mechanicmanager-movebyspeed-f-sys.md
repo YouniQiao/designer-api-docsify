@@ -23,15 +23,15 @@ function moveBySpeed(mechId: number, params: SpeedParams, duration: number): Pro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | number | 是 | 具身设备ID。 取值限定为整数。 |
+| mechId | number | 是 | 具身设备ID。取值限定为整数。 |
 | params | [SpeedParams](arkts-mechanic-mechanicmanager-speedparams-i-sys.md) | 是 | 移动参数。 |
-| duration | number | 是 | 移动时长，单位ms。 取值限定为整数。 |
+| duration | number | 是 | 移动时长，单位ms。取值限定为整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Result & gt; | 202 - 非系统应用 |
+| Promise&lt;Result&gt; | 202 - 非系统应用 |
 
 **错误码：**
 

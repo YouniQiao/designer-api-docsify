@@ -1,6 +1,8 @@
 # MediaQueryListener
 
-媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)。
+媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。
+
+继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)。
 
 **继承/实现关系：** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)
 
@@ -11,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import mediaquery from '@kit.ArkUI';
+import { mediaquery } from '@kit.ArkUI';
 ```
 
 ## off('change')

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import huksExternalCrypto from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## clearUkeyPinAuthState
@@ -30,7 +30,7 @@ Clear the PIN auth state of the specified resource ID.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

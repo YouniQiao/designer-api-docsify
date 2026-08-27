@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wallpaper from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## isOperationAllowed
@@ -59,7 +59,7 @@ Checks whether a user is allowed to set wallpapers. Returns true if a user is al
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | the promise returned by the function. |
+| Promise&lt;boolean&gt; | the promise returned by the function. |
 
 **Examples**
 

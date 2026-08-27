@@ -9,9 +9,6 @@ Configures preview menu options, supporting the vibration effect when the menu p
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## hapticFeedbackMode
@@ -20,7 +17,9 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 hapticFeedbackMode?: HapticFeedbackMode
 ```
 
-Vibration effect when the menu is displayed. The **ohos.permission.VIBRATE** permission is required.Default value: **HapticFeedbackMode.DISABLED**, indicating no vibration when the menu is displayed.
+Vibration effect when the menu is displayed. The **ohos.permission.VIBRATE** permission is required.
+
+Default value: **HapticFeedbackMode.DISABLED**, indicating no vibration when the menu is displayed.
 
 **Type:** [HapticFeedbackMode](../../apis-arkui/arkts-components/arkts-arkui-hapticfeedbackmode-e.md)
 

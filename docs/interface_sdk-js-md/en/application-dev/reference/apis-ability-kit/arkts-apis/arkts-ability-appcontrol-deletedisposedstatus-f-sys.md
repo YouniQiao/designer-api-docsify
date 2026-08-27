@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appControl from '@kit.AbilityKit';
+import { appControl } from '@kit.AbilityKit';
 ```
 
 ## deleteDisposedStatus
@@ -87,7 +87,7 @@ Deletes the disposed status for an application. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

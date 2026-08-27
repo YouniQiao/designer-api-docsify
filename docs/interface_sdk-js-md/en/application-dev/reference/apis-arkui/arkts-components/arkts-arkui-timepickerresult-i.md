@@ -17,7 +17,9 @@ Describes a time in 24-hour format.
 hour: number
 ```
 
-Hour portion of the selected time.Value range: [0-23]
+Hour portion of the selected time.
+
+Value range: [0-23]
 
 **Type:** number
 
@@ -33,7 +35,9 @@ Hour portion of the selected time.Value range: [0-23]
 minute: number
 ```
 
-Minute portion of the selected time.Value range: [0-59]
+Minute portion of the selected time.
+
+Value range: [0-59]
 
 **Type:** number
 
@@ -49,7 +53,9 @@ Minute portion of the selected time.Value range: [0-59]
 second: number
 ```
 
-Second portion of the selected time.Value range: [0-59]
+Second portion of the selected time.
+
+Value range: [0-59]
 
 **Type:** number
 

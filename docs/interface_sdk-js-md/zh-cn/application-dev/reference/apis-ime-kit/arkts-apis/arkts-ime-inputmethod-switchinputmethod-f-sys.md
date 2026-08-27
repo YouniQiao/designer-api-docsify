@@ -3,12 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputMethod from '@kit.IMEKit';
-import inputMethodEngine from '@kit.IMEKitEngine';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
-import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
-import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## switchInputMethod
@@ -38,7 +33,7 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

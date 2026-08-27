@@ -16,7 +16,9 @@
 DELAY_TIME = 'AvisDelayTime'
 ```
 
-AVIS图片的每帧播放时长。单位：毫秒（ms）。
+AVIS图片的每帧播放时长。
+
+单位：毫秒（ms）。
 
 **起始版本：** 26.0.0
 

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## event
@@ -38,7 +38,7 @@ event: OsAccountSubProfileEvent
 osAccountLocalId: number
 ```
 
-表示系统账号本地ID。 取值范围为全体整数。
+表示系统账号本地ID。取值范围为全体整数。
 
 **类型：** number
 
@@ -56,7 +56,7 @@ osAccountLocalId: number
 previousSubProfileId?: number
 ```
 
-表示上一个系统账号子身份资料标识符。仅在SWITCHING和SWITCHED事件中有效。 取值范围为全体整数。
+表示上一个系统账号子身份资料标识符。仅在SWITCHING和SWITCHED事件中有效。取值范围为全体整数。
 
 **类型：** number
 
@@ -74,7 +74,7 @@ previousSubProfileId?: number
 subProfileId: number
 ```
 
-系统账号子身份资料的标识符。 取值范围为全体整数。
+系统账号子身份资料的标识符。取值范围为全体整数。
 
 **类型：** number
 

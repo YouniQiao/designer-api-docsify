@@ -9,7 +9,7 @@ Provides APIs for selecting and saving audio clips. Before using the APIs of **A
 ## Modules to Import
 
 ```TypeScript
-import picker from '@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -164,7 +164,7 @@ Starts an **audioPicker** page (currently, a **documentPicker** page is displaye
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the URIs of the audio clips saved. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the audio clips saved. |
 
 **Examples**
 
@@ -340,7 +340,7 @@ Starts an **audioPicker** page for the user to select one or more audio clips. T
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the URIs of the audio clips selected. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the audio clips selected. |
 
 **Examples**
 

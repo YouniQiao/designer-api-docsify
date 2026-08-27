@@ -211,7 +211,7 @@ Sets the text style of the drop-down button. When **size** is set to **0**, the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](#font) | Yes | Text style of the drop-down list button.For API versions 11 and earlier, the default value is as follows:{size: `\\$r('sys.float.ohos_id_text_size_button1')`,weight: FontWeight.Medium} Since API version 12: The default value of **size** is **\\$r('sys.float.ohos_id_text_size_button2')** in the case of **controlSize.SMALL** and **\\$r('sys.float.ohos_id_text_size_button1')** in other cases. |
+| value | Font | Yes | Text style of the drop-down list button.For API versions 11 and earlier, the default value is as follows:{size: `\\$r('sys.float.ohos_id_text_size_button1')`,weight: FontWeight.Medium} Since API version 12: The default value of **size** is **\\$r('sys.float.ohos_id_text_size_button2')** in the case of **controlSize.SMALL** and **\\$r('sys.float.ohos_id_text_size_button1')** in other cases. |
 
 ## font
 
@@ -320,7 +320,7 @@ Sets the alignment between the drop-down button and the drop-down menu.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alignType | [MenuAlignType](arkts-arkui-menualigntype-e.md) | Yes | Alignment type.Default value: **MenuAlignType.START |
-| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No | Offset of the drop-down menu relative to the drop-down button after alignment based on the alignment type.Default value: **{dx: 0, dy: 0} |
+| offset | Offset | No | Offset of the drop-down menu relative to the drop-down button after alignment based on the alignment type.Default value: **{dx: 0, dy: 0} |
 
 ## menuAlign
 
@@ -343,7 +343,7 @@ Sets the alignment between the drop-down button and the drop-down menu. Compared
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alignType | [Optional](arkts-arkui-optional-t.md)&lt;[MenuAlignType](arkts-arkui-menualigntype-e.md)&gt; | Yes | Alignment type.If **alignType** is set to **undefined**, the default value **MenuAlignType.START** is used. |
-| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No | Offset of the drop-down menu relative to the drop-down button after alignment based on the alignment type.Default value: **{dx: 0, dy: 0} |
+| offset | Offset | No | Offset of the drop-down menu relative to the drop-down button after alignment based on the alignment type.Default value: **{dx: 0, dy: 0} |
 
 ## menuBackgroundBlurStyle
 
@@ -369,7 +369,7 @@ Sets the background blur style of the drop-down menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Background blur style of the drop-down menu.Default value: **BlurStyle.COMPONENT_ULTRA_THICK |
+| value | BlurStyle | Yes | Background blur style of the drop-down menu.Default value: **BlurStyle.COMPONENT_ULTRA_THICK |
 
 ## menuBackgroundBlurStyle
 
@@ -565,7 +565,9 @@ Sets the outline style for the drop-down menu.
 menuSystemMaterial(material: Optional<SystemUiMaterial>)
 ```
 
-Set system-styled materials for select's menu. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of select's menu.Device Behavior Differences:The effect of the same material may vary across different devices depending on their computing power.
+Set system-styled materials for select's menu. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of select's menu.
+
+Device Behavior Differences:The effect of the same material may vary across different devices depending on their computing power.
 
 **Since:** 26.0.0
 
@@ -621,7 +623,7 @@ Triggered when a drop-down menu option is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (index: number, value: string) = & gt; void | Yes |  |
+| callback | (index: number, value: string) =&gt; void | Yes |  |
 
 ## onSelect
 
@@ -705,7 +707,7 @@ Sets the text font of options in the drop-down menu. When **size** is set to **0
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](#font) | Yes | Text font of options in the drop-down menu.Default value:{size: \\$r('sys.float.ohos_id_text_size_body1'),weight: FontWeight.Regular} |
+| value | Font | Yes | Text font of options in the drop-down menu.Default value:{size: \\$r('sys.float.ohos_id_text_size_body1'),weight: FontWeight.Regular} |
 
 ## optionFont
 
@@ -713,7 +715,9 @@ Sets the text font of options in the drop-down menu. When **size** is set to **0
 optionFont(selectFont: Optional<Font>)
 ```
 
-Sets the text font of options in the drop-down menu. When **size** is set to **0**, the text is not displayed. When **size** is set to a negative value, the text is displayed at its default size.Compared with [optionFont](#optionfont), this API supports the **undefined** type for the **selectFont** parameter.
+Sets the text font of options in the drop-down menu. When **size** is set to **0**, the text is not displayed. When **size** is set to a negative value, the text is displayed at its default size.
+
+Compared with [optionFont](#optionfont), this API supports the **undefined** type for the **selectFont** parameter.
 
 **Since:** 18
 
@@ -777,7 +781,11 @@ Sets the font color of options in the drop-down menu. Compared with [optionFontC
 optionHeight(value: Dimension)
 ```
 
-Sets the maximum height for the drop-down menu. Percentage values are not supported. The default maximum height is 80% of the available screen height, and any custom maximum height setting must not exceed this limit.This attribute has no effect when set to abnormal values or zero.If the actual height of all drop-down menu options is less than the set height, the menu will automatically adjust to the actual content height.
+Sets the maximum height for the drop-down menu. Percentage values are not supported. The default maximum height is 80% of the available screen height, and any custom maximum height setting must not exceed this limit.
+
+This attribute has no effect when set to abnormal values or zero.
+
+If the actual height of all drop-down menu options is less than the set height, the menu will automatically adjust to the actual content height.
 
 **Since:** 11
 
@@ -799,7 +807,11 @@ Sets the maximum height for the drop-down menu. Percentage values are not suppor
 optionHeight(height: Optional<Dimension>)
 ```
 
-Sets the maximum height for the drop-down menu. Percentage values are not supported. The default maximum height is 80% of the available screen height, and any custom maximum height setting must not exceed this limit. Compared with [optionHeight](#optionheight)&lt;sup&gt;11+&lt;/sup&gt;, this API supports the **undefined** type for the **height** parameter.This attribute has no effect when set to abnormal values or zero.If the actual height of all drop-down menu options is less than the set height, the menu will automatically adjust to the actual content height.
+Sets the maximum height for the drop-down menu. Percentage values are not supported. The default maximum height is 80% of the available screen height, and any custom maximum height setting must not exceed this limit. Compared with [optionHeight](#optionheight)&lt;sup&gt;11+&lt;/sup&gt;, this API supports the **undefined** type for the **height** parameter.
+
+This attribute has no effect when set to abnormal values or zero.
+
+If the actual height of all drop-down menu options is less than the set height, the menu will automatically adjust to the actual content height.
 
 **Since:** 18
 
@@ -821,7 +833,9 @@ Sets the maximum height for the drop-down menu. Percentage values are not suppor
 optionTextModifier(modifier: Optional<TextModifier>)
 ```
 
-Creates an option text modifier to customize the text style of unselected options in the drop-down menu. After **optionTextModifier** is applied, the unselected option text style will be completely customized by the developer.If both [optionFont](#optionfont) and **Font** of **optionTextModifier** are set, [optionFont](#optionfont) takes precedence. Any unspecified attributes in **optionFont** will use default values.
+Creates an option text modifier to customize the text style of unselected options in the drop-down menu. After **optionTextModifier** is applied, the unselected option text style will be completely customized by the developer.
+
+If both [optionFont](#optionfont) and **Font** of **optionTextModifier** are set, [optionFont](#optionfont) takes precedence. Any unspecified attributes in **optionFont** will use default values.
 
 > **NOTE：**
 > 
@@ -847,7 +861,11 @@ Creates an option text modifier to customize the text style of unselected option
 optionWidth(value: Dimension | OptionWidthMode )
 ```
 
-Sets the width for the drop-down menu option. Percentage values are not supported. **OptionWidthMode** specifies whether to inherit the width of the drop-down button.If an invalid value or a value less than the minimum width of 56 vp is set, the attribute has no effect. In this case, the option width uses the default value, which is the width of two columns.The **Select** component maintains 16 vp spacing from both left and right screen edges by default. This creates a 3 2 vp total horizontal margin (16 vp × 2). To prevent horizontal shifting when the drop-down menu is displayed, set the width of the component itself and its menu options to a value less than or equal to **calc(100% - 32 vp)**.
+Sets the width for the drop-down menu option. Percentage values are not supported. **OptionWidthMode** specifies whether to inherit the width of the drop-down button.
+
+If an invalid value or a value less than the minimum width of 56 vp is set, the attribute has no effect. In this case, the option width uses the default value, which is the width of two columns.
+
+The **Select** component maintains 16 vp spacing from both left and right screen edges by default. This creates a 3 2 vp total horizontal margin (16 vp × 2). To prevent horizontal shifting when the drop-down menu is displayed, set the width of the component itself and its menu options to a value less than or equal to **calc(100% - 32 vp)**.
 
 **Since:** 11
 
@@ -869,7 +887,11 @@ Sets the width for the drop-down menu option. Percentage values are not supporte
 optionWidth(width: Optional<Dimension | OptionWidthMode> )
 ```
 
-Sets the width for the drop-down menu option. Percentage values are not supported. **OptionWidthMode** specifies whether to inherit the width of the drop-down button. Compared with [optionWidth](#optionwidth)&lt;sup&gt;11+&lt;/sup&gt;, this API supports the **undefined** type for the **width** parameter.If an invalid value or a value less than the minimum width of 56 vp is set, the attribute has no effect. In this case, the option width uses the default value, which is the width of two columns.The **Select** component maintains 16 vp spacing from both left and right screen edges by default. This creates a 3 2 vp total horizontal margin (16 vp × 2). To prevent horizontal shifting when the drop-down menu is displayed, set the width of the component itself and its menu options to a value less than or equal to **calc(100% - 32 vp)**.
+Sets the width for the drop-down menu option. Percentage values are not supported. **OptionWidthMode** specifies whether to inherit the width of the drop-down button. Compared with [optionWidth](#optionwidth)&lt;sup&gt;11+&lt;/sup&gt;, this API supports the **undefined** type for the **width** parameter.
+
+If an invalid value or a value less than the minimum width of 56 vp is set, the attribute has no effect. In this case, the option width uses the default value, which is the width of two columns.
+
+The **Select** component maintains 16 vp spacing from both left and right screen edges by default. This creates a 3 2 vp total horizontal margin (16 vp × 2). To prevent horizontal shifting when the drop-down menu is displayed, set the width of the component itself and its menu options to a value less than or equal to **calc(100% - 32 vp)**.
 
 **Since:** 18
 
@@ -891,7 +913,11 @@ Sets the width for the drop-down menu option. Percentage values are not supporte
 selected(value: number | Resource)
 ```
 
-Sets the index of the initially selected option in the drop-down menu, where the first option has an index of 0. When **selected** is set to an invalid value or is not set, the default default **-1** is used, which indicates no selection. When **selected** is set to **undefined** or **null**, the first option is selected.Since API version 10, this attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+Sets the index of the initially selected option in the drop-down menu, where the first option has an index of 0. When **selected** is set to an invalid value or is not set, the default default **-1** is used, which indicates no selection. When **selected** is set to **undefined** or **null**, the first option is selected.
+
+Since API version 10, this attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+
+Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 8
 
@@ -903,7 +929,7 @@ Sets the index of the initially selected option in the drop-down menu, where the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Index of the initially selected option. The index is zero-based.<br>**Since:** 11 |
+| value | number \| Resource | Yes | Index of the initially selected option. The index is zero-based.<br>**Since:** 11 |
 
 ## selected
 
@@ -911,7 +937,9 @@ Sets the index of the initially selected option in the drop-down menu, where the
 selected(numCount: Optional<number | Resource>)
 ```
 
-Sets the index of the initially selected option in the drop-down menu, where the first option has an index of 0. When **selected** is set to an invalid value or is not set, the default default **-1** is used, which indicates no selection. When **selected** is set to **undefined** or **null**, the first option is selected.This attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md) and [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+Sets the index of the initially selected option in the drop-down menu, where the first option has an index of 0. When **selected** is set to an invalid value or is not set, the default default **-1** is used, which indicates no selection. When **selected** is set to **undefined** or **null**, the first option is selected.
+
+This attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md) and [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 18
 
@@ -925,7 +953,7 @@ Sets the index of the initially selected option in the drop-down menu, where the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numCount | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes | Index of the initially selected option.When **numCount** is set to **undefined**, the first option is selected. |
+| numCount | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | Yes | Index of the initially selected option.When **numCount** is set to **undefined**, the first option is selected. |
 
 ## selectedOptionBgColor
 
@@ -987,7 +1015,7 @@ Sets the text font of the selected option in the drop-down menu. When **size** i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](#font) | Yes | Text font of the selected option in the drop-down menu.Default value:{size: \\$r('sys.float.ohos_id_text_size_body1'),weight: FontWeight.Regular} |
+| value | Font | Yes | Text font of the selected option in the drop-down menu.Default value:{size: \\$r('sys.float.ohos_id_text_size_body1'),weight: FontWeight.Regular} |
 
 ## selectedOptionFont
 
@@ -1059,7 +1087,9 @@ Sets the font color of the selected option in the drop-down menu. Compared with 
 selectedOptionTextModifier(modifier: Optional<TextModifier>)
 ```
 
-Creates a selected-option text modifier to customize the text style of selected options in the drop-down menu. After **selectedOptionTextModifier** is applied, the selected-option text style will be completely customized by the developer.If both [selectedOptionFont](#selectedoptionfont) and **Font** of **selectedOptionTextModifier** are set, [selectedOptionFont](#selectedoptionfont) takes precedence. If **selectedOptionFont** is not set, [optionFont](#optionfont) settings are applied. Any unspecified attributes in **selectedOptionFont** or **optionFont** will use default values.
+Creates a selected-option text modifier to customize the text style of selected options in the drop-down menu. After **selectedOptionTextModifier** is applied, the selected-option text style will be completely customized by the developer.
+
+If both [selectedOptionFont](#selectedoptionfont) and **Font** of **selectedOptionTextModifier** are set, [selectedOptionFont](#selectedoptionfont) takes precedence. If **selectedOptionFont** is not set, [optionFont](#optionfont) settings are applied. Any unspecified attributes in **selectedOptionFont** or **optionFont** will use default values.
 
 > **NOTE：**
 > 
@@ -1199,7 +1229,11 @@ Creates a text modifier to customize the text style of the **Select** button. Af
 value(value: ResourceStr)
 ```
 
-Sets the text content of drop-down button. After a menu option is selected, the button text will automatically update to display the selected option's text.Since API version 10, this attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+Sets the text content of drop-down button. After a menu option is selected, the button text will automatically update to display the selected option's text.
+
+Since API version 10, this attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+
+Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 8
 
@@ -1219,7 +1253,9 @@ Sets the text content of drop-down button. After a menu option is selected, the 
 value(resStr: Optional<ResourceStr>)
 ```
 
-Sets the text content of drop-down button. After a menu option is selected, the button text will automatically update to display the selected option's text. Compared with [value](#value), this API supports the **undefined** type for the **resStr** parameter.This attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md) and [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+Sets the text content of drop-down button. After a menu option is selected, the button text will automatically update to display the selected option's text. Compared with [value](#value), this API supports the **undefined** type for the **resStr** parameter.
+
+This attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md) and [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 18
 

@@ -34,7 +34,9 @@ ID of the display to which the coordinate point belongs. The default value is th
 x: number
 ```
 
-Horizontal coordinate of a coordinate point, in pixels. The value is an integer greater than or equal to 0.@readonly [since 9-19]
+Horizontal coordinate of a coordinate point, in pixels. The value is an integer greater than or equal to 0.
+
+@readonly [since 9-19]
 
 **Type:** number
 
@@ -50,7 +52,9 @@ Horizontal coordinate of a coordinate point, in pixels. The value is an integer 
 y: number
 ```
 
-Vertical coordinate of a coordinate point, in pixels. The value is an integer greater than or equal to 0.@readonly [since 9-19]
+Vertical coordinate of a coordinate point, in pixels. The value is an integer greater than or equal to 0.
+
+@readonly [since 9-19]
 
 **Type:** number
 

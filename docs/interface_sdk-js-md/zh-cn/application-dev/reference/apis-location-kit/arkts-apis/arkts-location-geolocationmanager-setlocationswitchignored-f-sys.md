@@ -11,7 +11,7 @@
 function setLocationSwitchIgnored(isIgnored: boolean): void
 ```
 
-设置应用获取位置信息是否受位置开关控制。 设置为true后，允许应用在位置开关关闭的场景获取到位置信息，有效时间为从调用接口成功开始的两分钟。
+设置应用获取位置信息是否受位置开关控制。设置为true后，允许应用在位置开关关闭的场景获取到位置信息，有效时间为从调用接口成功开始的两分钟。
 
 **起始版本：** 18
 
@@ -25,7 +25,7 @@ function setLocationSwitchIgnored(isIgnored: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isIgnored | boolean | 是 | true：需要在位置开关关闭的场景下获取位置信息。有效时间为从调用接口成功开始的两分钟。 false：不需要在位置开关关闭的场景下获取位置信息。 |
+| isIgnored | boolean | 是 | true：需要在位置开关关闭的场景下获取位置信息。有效时间为从调用接口成功开始的两分钟。false：不需要在位置开关关闭的场景下获取位置信息。 |
 
 **错误码：**
 

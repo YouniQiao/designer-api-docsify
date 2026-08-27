@@ -31,7 +31,9 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 addLocalInputEventMonitor(eventMask: number, listener: InputEventListener): InputEventMonitor
 ```
 
-注册本地输入事件监视器。接口名中的“Local”表示监视器只在当前UIContext内有效。 并且不影响其他UIContext实例。每个UIContext都维护自己独立的监视器列表。
+注册本地输入事件监视器。
+
+接口名中的“Local”表示监视器只在当前UIContext内有效。并且不影响其他UIContext实例。每个UIContext都维护自己独立的监视器列表。
 
 > **说明：**
 > &gt;性能警告：不要在回调中执行耗时操作！
@@ -63,7 +65,7 @@ addLocalInputEventMonitor(eventMask: number, listener: InputEventListener): Inpu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventMask | number | 是 | 事件类型掩码，指定要监视的事件类型 位运算。 取值限定为整数。 |
+| eventMask | number | 是 | 事件类型掩码，指定要监视的事件类型位运算。取值限定为整数。 |
 | listener | [InputEventListener](../arkts-components/arkts-arkui-inputeventlistener-t.md) | 是 | 事件监听器回调函数。 |
 
 **返回值：**
@@ -156,7 +158,7 @@ animateTo(value: AnimateParam, event: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | 是 | 设置动画效果相关参数。 |
-| event | () = & gt; void | 是 | 指定显示动效的闭包函数，在闭包函数中导致的状态变化系统会自动插入过渡动画。 |
+| event | () =&gt; void | 是 | 指定显示动效的闭包函数，在闭包函数中导致的状态变化系统会自动插入过渡动画。 |
 
 **示例**
 
@@ -494,13 +496,13 @@ closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bindSheetContent | ComponentContent & lt;T & gt; | 是 | 半模态页面中显示的组件内容。 |
+| bindSheetContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | 半模态页面中显示的组件内容。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -764,7 +766,7 @@ export default class EntryAbility extends UIAbility {
 createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-创建animator动画结果对象（AnimatorResult）。与[createAnimator](#createanimator)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)类型入参的支持。
+创建animator动画结果对象（AnimatorResult）。与[createAnimator](#createanimator)相比，新增对[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)类型入参的支持。
 
 **起始版本：** 18
 
@@ -842,7 +844,7 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | common.UIAbilityContext \| common.ExtensionContext | 是 | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)或 [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md)所对应的上下文环境。 |
+| context | common.UIAbilityContext \| common.ExtensionContext | 是 | [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)或[ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md)所对应的上下文环境。 |
 
 **返回值：**
 
@@ -931,7 +933,7 @@ Dispach keyboard event to the frameNode with inspector key.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | node | number \| string | 是 | The uniqueId or inspector key of the target FrameNode. |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 | The keyboard event. |
+| event | KeyEvent | 是 | The keyboard event. |
 
 **返回值：**
 
@@ -1070,7 +1072,13 @@ struct Index {
 fp2px(value: number): number
 ```
 
-将fp单位的数值转换为以px为单位的数值。转换公式为：px值 = fp值 × 像素密度 × 字体缩放比例像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。字体缩放比例：系统设置的字体缩放系数，对应 Configuration.fontScale。
+将fp单位的数值转换为以px为单位的数值。
+
+转换公式为：px值 = fp值 × 像素密度 × 字体缩放比例
+
+像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
+
+字体缩放比例：系统设置的字体缩放系数，对应 Configuration.fontScale。
 
 > **说明：**
 > 
@@ -1247,7 +1255,7 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| FrameNode \| null | The instance of FrameNode. |
+| [FrameNode](arkts-arkui-framenode-c.md) \| null | The instance of FrameNode. |
 
 **示例**
 
@@ -1507,7 +1515,7 @@ get the filtered attributes of the component tree.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filters | Array & lt;string & gt; | 否 | List of component attributes used for filtering. Currently, only the following filter fields are supported:    **"id"**: unique ID of the component.    **"src"**: source of the resource.    **"content"**: information or data contained in the element, component, or object.    **"editable"**: whether the component is editable.    **"scrollable"**: whether the component is scrollable.    **"selectable"**: whether the component is selectable.    **"focusable"**: whether the component is focusable.    **"focused"**: whether the component is currently focused. If **filters** includes one or more fields, unspecified fields will be filtered out from the results. If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. The following filter field is supported since API version 20:    **"isLayoutInspector"**: whether the component tree contains custom components. If **filters** is omitted or does not contain **"isLayoutInspector"**, the returned component tree will not include custom component details. Other filter fields are used only in testing scenarios. |
+| filters | Array&lt;string&gt; | 否 | List of component attributes used for filtering. Currently, only the following filter fields are supported:    **"id"**: unique ID of the component.    **"src"**: source of the resource.    **"content"**: information or data contained in the element, component, or object.    **"editable"**: whether the component is editable.    **"scrollable"**: whether the component is scrollable.    **"selectable"**: whether the component is selectable.    **"focusable"**: whether the component is focusable.    **"focused"**: whether the component is currently focused. If **filters** includes one or more fields, unspecified fields will be filtered out from the results. If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. The following filter field is supported since API version 20:    **"isLayoutInspector"**: whether the component tree contains custom components. If **filters** is omitted or does not contain **"isLayoutInspector"**, the returned component tree will not include custom component details. Other filter fields are used only in testing scenarios. |
 
 **返回值：**
 
@@ -1609,7 +1617,7 @@ get the filtered attributes of the component tree with the specified id and dept
 | --- | --- | --- | --- |
 | id | string | 是 | ID of the target component. |
 | depth | number | 是 | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of the specified component are obtained. If the value is **2**, the attributes of the specified component and its level-1 child components are obtained. The rest can be deduced by analogy. |
-| filters | Array & lt;string & gt; | 否 | List of component attributes used for filtering. Currently, only the following filter fields are supported:    **"id"**: unique ID of the component.    **"src"**: source of the resource.    **"content"**: information or data contained in the element, component, or object.    **"editable"**: whether the component is editable.    **"scrollable"**: whether the component is scrollable.    **"selectable"**: whether the component is selectable.    **"focusable"**: whether the component is focusable.    **"focused"**: whether the component is currently focused. If **filters** includes one or more fields, unspecified fields will be filtered out from the results. If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. Other filter fields are used only in testing scenarios. |
+| filters | Array&lt;string&gt; | 否 | List of component attributes used for filtering. Currently, only the following filter fields are supported:    **"id"**: unique ID of the component.    **"src"**: source of the resource.    **"content"**: information or data contained in the element, component, or object.    **"editable"**: whether the component is editable.    **"scrollable"**: whether the component is scrollable.    **"selectable"**: whether the component is selectable.    **"focusable"**: whether the component is focusable.    **"focused"**: whether the component is currently focused. If **filters** includes one or more fields, unspecified fields will be filtered out from the results. If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. Other filter fields are used only in testing scenarios. |
 
 **返回值：**
 
@@ -1746,7 +1754,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| FrameNode \| null | The instance of FrameNode. |
+| [FrameNode](arkts-arkui-framenode-c.md) \| null | The instance of FrameNode. |
 
 **示例**
 
@@ -1759,6 +1767,7 @@ getFrameNodeByUniqueId(id: number): FrameNode | null
 ```
 
 通过组件的uniqueId获取组件树的实体节点。
+
 1. 当uniqueId对应的是系统组件时，返回组件所对应的FrameNode；
 2. 当uniqueId对应的是自定义组件时：  
 - 若其有渲染内容，且没有被[@Reusable装饰器](../../../ui/state-management/arkts-reusable.md)修饰时，返回该自定义组件的根节点，类型为__Common__。  
@@ -1783,7 +1792,7 @@ getFrameNodeByUniqueId(id: number): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| FrameNode \| null | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
+| [FrameNode](arkts-arkui-framenode-c.md) \| null | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
 
 **示例**
 
@@ -2338,7 +2347,7 @@ getPageRootNode(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| FrameNode \| null | FrameNode of the root node of the page or **null**. |
+| [FrameNode](arkts-arkui-framenode-c.md) \| null | FrameNode of the root node of the page or **null**. |
 
 **错误码：**
 
@@ -3006,7 +3015,7 @@ struct Index {
 isAvailable(): boolean
 ```
 
-判断UIContext对象对应的UI实例是否有效。使用 getUIContext方法获取UIContext对象。后端UI实例存在时， 该UI实例有效。通过new UIContext()创建的UIContext对象无对应的UI实例；多次 [loadContent](arkts-arkui-window-window-i.md#loadcontent)后，旧的UI实例会失效。多窗口应用场景，当窗口关闭后，该窗 口的UI实例失效。总而言之，当UIContext对象没有对应的后端UI实例时，该对象是无效的。
+判断UIContext对象对应的UI实例是否有效。使用getUIContext方法获取UIContext对象。后端UI实例存在时，该UI实例有效。通过new UIContext()创建的UIContext对象无对应的UI实例；多次[loadContent](arkts-arkui-window-window-i.md#loadcontent)后，旧的UI实例会失效。多窗口应用场景，当窗口关闭后，该窗口的UI实例失效。总而言之，当UIContext对象没有对应的后端UI实例时，该对象是无效的。
 
 **起始版本：** 20
 
@@ -3257,7 +3266,9 @@ struct KeyframeDemo {
 lpx2px(value: number): number
 ```
 
-将lpx单位的数值转换为以px为单位的数值。转换公式为：px值 = lpx值 × 实际屏幕宽度与逻辑宽度（通过[designWidth](../../../quick-start/module-configuration-file.md#pages标签)配置）的比值。
+将lpx单位的数值转换为以px为单位的数值。
+
+转换公式为：px值 = lpx值 × 实际屏幕宽度与逻辑宽度（通过[designWidth](../../../quick-start/module-configuration-file.md#pages标签)配置）的比值。
 
 > **说明：**
 > 
@@ -3338,15 +3349,15 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bindSheetContent | ComponentContent & lt;T & gt; | 是 | 半模态页面中显示的组件内容。 |
-| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 否 | 半模态页面样式。   **说明：** 1. 不支持设置SheetOptions.uiContext，该属性的值固定为当前实例的 UIContext。 2. 若不传递targetId，则不支持设置SheetOptions.preferType为POPUP样式，若设置了POPUP样式则使用CENTER样式替代。 3. 若不传递 targetId，则不支持设置SheetOptions.mode为EMBEDDED模式，默认为OVERLAY模式。 4. 其余属性的默认值参考[SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md)文 档。 |
+| bindSheetContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | 半模态页面中显示的组件内容。 |
+| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 否 | 半模态页面样式。   **说明：** 1. 不支持设置SheetOptions.uiContext，该属性的值固定为当前实例的UIContext。 2. 若不传递targetId，则不支持设置SheetOptions.preferType为POPUP样式，若设置了POPUP样式则使用CENTER样式替代。 3. 若不传递targetId，则不支持设置SheetOptions.mode为EMBEDDED模式，默认为OVERLAY模式。 4. 其余属性的默认值参考[SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md)文档。 |
 | targetId | number | 否 | 需要绑定组件的ID，若不指定则不绑定任何组件。id不存在时返回错误码120004。在传入undefined时返回错误码401。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -3563,7 +3574,13 @@ struct Index {
 px2fp(value: number): number
 ```
 
-将px单位的数值转换为以fp为单位的数值。转换公式为：fp值 = px值 ÷ 像素密度 ÷ 字体缩放比例像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。字体缩放比例：系统设置的字体缩放系数，对应 Configuration.fontScale。
+将px单位的数值转换为以fp为单位的数值。
+
+转换公式为：fp值 = px值 ÷ 像素密度 ÷ 字体缩放比例
+
+像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
+
+字体缩放比例：系统设置的字体缩放系数，对应 Configuration.fontScale。
 
 > **说明：**
 > 
@@ -3621,7 +3638,9 @@ struct MatrixExample {
 px2lpx(value: number): number
 ```
 
-将px单位的数值转换为以lpx为单位的数值。转换公式为：lpx值 = px值 ÷ 实际屏幕宽度与逻辑宽度（通过[designWidth](../../../quick-start/module-configuration-file.md#pages标签)配置）的比值。
+将px单位的数值转换为以lpx为单位的数值。
+
+转换公式为：lpx值 = px值 ÷ 实际屏幕宽度与逻辑宽度（通过[designWidth](../../../quick-start/module-configuration-file.md#pages标签)配置）的比值。
 
 > **说明：**
 > 
@@ -3679,7 +3698,11 @@ struct MatrixExample {
 px2vp(value: number): number
 ```
 
-将px单位的数值转换为以vp为单位的数值。转换公式为：vp值 = px值 ÷ 像素密度像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
+将px单位的数值转换为以vp为单位的数值。
+
+转换公式为：vp值 = px值 ÷ 像素密度
+
+像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
 
 > **说明：**
 > 
@@ -3740,8 +3763,9 @@ struct MatrixExample {
 removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 ```
 
-删除本地输入事件监视器。  
-**重要说明**： -只能移除addLocalInputEventMonitor返回的Monitor对象。 -无法通过手动构造对象来注销监视器。 -如果传递了一个无效的对象，系统会默默地忽略它。
+删除本地输入事件监视器。
+
+**重要说明**：-只能移除addLocalInputEventMonitor返回的Monitor对象。-无法通过手动构造对象来注销监视器。-如果传递了一个无效的对象，系统会默默地忽略它。
 
 **起始版本：** 26.0.0
 
@@ -3956,7 +3980,7 @@ runScopedTask(callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | 是 | 需要在当前UIContext对应的UI实例作用域内执行的回调函数。 |
+| callback | () =&gt; void | 是 | 需要在当前UIContext对应的UI实例作用域内执行的回调函数。 |
 
 **示例**
 
@@ -4115,7 +4139,7 @@ struct Index {
 setImageCacheCount(value: number): void
 ```
 
-设置内存中缓存解码后图片的数量上限，提升再次加载同源图片的加载速度。如果不设置则默认为0，不进行缓存。缓存采用内置的LRU策略，新图片加载后，如果超过缓存上限，会删除最久未再次加载的缓存。 建议根据应用内存需求，设置合理缓存数量，数字过大可能导致内存使用过高。
+设置内存中缓存解码后图片的数量上限，提升再次加载同源图片的加载速度。如果不设置则默认为0，不进行缓存。缓存采用内置的LRU策略，新图片加载后，如果超过缓存上限，会删除最久未再次加载的缓存。建议根据应用内存需求，设置合理缓存数量，数字过大可能导致内存使用过高。
 
 **起始版本：** 23
 
@@ -4163,7 +4187,7 @@ struct Index {
 setImageRawDataCacheSize(value: number): void
 ```
 
-设置内存中缓存解码前图片数据的大小上限，单位为字节，提升再次加载同源图片的加载速度。如果不设置则默认为0，不进行缓存。缓存采用内置的LRU策略，新图片加载后，如果解码前数据超过缓存上限，会删除最久未再次加载的图片数据缓存。 建议根据应用内存需求，设置合理缓存上限，过大可能导致应用内存使用过高。
+设置内存中缓存解码前图片数据的大小上限，单位为字节，提升再次加载同源图片的加载速度。如果不设置则默认为0，不进行缓存。缓存采用内置的LRU策略，新图片加载后，如果解码前数据超过缓存上限，会删除最久未再次加载的图片数据缓存。建议根据应用内存需求，设置合理缓存上限，过大可能导致应用内存使用过高。
 
 **起始版本：** 23
 
@@ -4219,7 +4243,7 @@ setKeyboardAvoidMode(value: KeyboardAvoidMode): void
 > 
 > KeyboardAvoidMode.NONE模式配置页面不避让键盘，页面会被抬起的键盘遮盖。
 > 
-> setKeyboardAvoidMode针对页面生效，对于弹窗类组件不生效，比如Dialog、Popup、Menu、BindSheet、BindContentCover、Toast、OverlayManager。弹窗类组件的避让模 式可以参考CustomDialogControllerOptions对象说明。
+> setKeyboardAvoidMode针对页面生效，对于弹窗类组件不生效，比如Dialog、Popup、Menu、BindSheet、BindContentCover、Toast、OverlayManager。弹窗类组件的避让模式可以参考CustomDialogControllerOptions对象说明。
 
 **起始版本：** 11
 
@@ -4331,7 +4355,9 @@ export default class EntryAbility extends UIAbility {
 static setResourceManagerCacheMaxCountForHSP(count: number): void
 ```
 
-设置HSP资源管理对象的缓存数量上限。如果缓存的上限设置得过高，可能会导致内存开销过大，存在内存过载的风险。 建议根据实际需求进行配置。
+设置HSP资源管理对象的缓存数量上限。
+
+如果缓存的上限设置得过高，可能会导致内存开销过大，存在内存过载的风险。建议根据实际需求进行配置。
 
 **起始版本：** 21
 
@@ -4386,7 +4412,7 @@ export default class EntryAbility extends UIAbility {
 setTextSelectionClearPolicy(policy: TextSelectionClearPolicy): void
 ```
 
-设置文本组件的文本选择清除策略。 默认策略：**TextSelectionClearPolicy.KEEP_ON_EXTERNAL_CLICK**。
+设置文本组件的文本选择清除策略。默认策略：**TextSelectionClearPolicy.KEEP_ON_EXTERNAL_CLICK**。
 
 **起始版本：** 26.0.0
 
@@ -4888,15 +4914,15 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bindSheetContent | ComponentContent & lt;T & gt; | 是 | 半模态页面中显示的组件内容。 |
-| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 是 | 半模态页面样式。   **说明：** 不支持更新SheetOptions.uiContext、SheetOptions.mode、回调函 数。 |
-| partialUpdate | boolean | 否 | 半模态页面更新方式, 默认值为false。   **说明：** 1. true为增量更新，保留当前值，更新SheetOptions中的指定属性。  2. false为全量更新，除SheetOptions中的指定属性，其他属性恢复默认值。 |
+| bindSheetContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | 半模态页面中显示的组件内容。 |
+| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 是 | 半模态页面样式。   **说明：** 不支持更新SheetOptions.uiContext、SheetOptions.mode、回调函数。 |
+| partialUpdate | boolean | 否 | 半模态页面更新方式, 默认值为false。   **说明：** 1. true为增量更新，保留当前值，更新SheetOptions中的指定属性。 2. false为全量更新，除SheetOptions中的指定属性，其他属性恢复默认值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -5001,7 +5027,11 @@ struct UIContextBindSheet {
 vp2px(value: number): number
 ```
 
-将vp单位的数值转换为以px为单位的数值。转换公式为：px值 = vp值 × 像素密度像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
+将vp单位的数值转换为以px为单位的数值。
+
+转换公式为：px值 = vp值 × 像素密度
+
+像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
 
 > **说明：**
 > 

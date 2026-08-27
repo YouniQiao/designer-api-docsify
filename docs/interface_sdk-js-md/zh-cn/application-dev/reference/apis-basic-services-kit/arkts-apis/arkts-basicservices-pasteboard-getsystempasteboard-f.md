@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import pasteboard from '@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## getSystemPasteboard
@@ -12,7 +12,7 @@ import pasteboard from '@kit.BasicServicesKit';
 function getSystemPasteboard(): SystemPasteboard
 ```
 
-获取系统剪贴板对象，返回剪贴板服务的单例实例。调用此方法后，返回的系统剪贴板对象可用于访问剪贴板的读写、监听等功能。 每次调用返回同一实例，调用前剪贴板系统服务需要正常运行。在进行任何剪贴板读写操作前，都需要先调用此方法获取系统剪贴板对象。
+获取系统剪贴板对象，返回剪贴板服务的单例实例。调用此方法后，返回的系统剪贴板对象可用于访问剪贴板的读写、监听等功能。每次调用返回同一实例，调用前剪贴板系统服务需要正常运行。在进行任何剪贴板读写操作前，都需要先调用此方法获取系统剪贴板对象。
 
 **起始版本：** 6
 

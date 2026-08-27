@@ -1,6 +1,8 @@
 # LineModifier
 
-Defines Line Modifier@extends LineAttribute @implements AttributeModifier&lt;LineAttribute&gt;
+Defines Line Modifier
+
+@extends LineAttribute @implements AttributeModifier&lt;LineAttribute&gt;
 
 **Inheritance/Implementation:** LineModifier extends [LineAttribute](../arkts-components/arkts-arkui-line-attribute.md#lineattribute) and implements AttributeModifier<LineAttribute>
 

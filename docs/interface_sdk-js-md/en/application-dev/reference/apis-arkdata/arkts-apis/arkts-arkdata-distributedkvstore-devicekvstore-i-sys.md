@@ -11,7 +11,7 @@ Provides APIs for querying data in a device KV store and performing cross-device
 ## Modules to Import
 
 ```TypeScript
-import distributedKVStore from '@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## getResultSet

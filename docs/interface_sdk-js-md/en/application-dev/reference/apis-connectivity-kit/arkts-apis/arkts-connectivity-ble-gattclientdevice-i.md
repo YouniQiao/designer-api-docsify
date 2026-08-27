@@ -17,7 +17,9 @@ Manages GATT client. Before calling an Gatt client method, you must use [createG
 close(): void
 ```
 
-Disables a BLE peripheral device.This method unregisters the device and clears the registered callbacks and handles.
+Disables a BLE peripheral device.
+
+This method unregisters the device and clears the registered callbacks and handles.
 
 **Since:** 10
 
@@ -67,7 +69,9 @@ try {
 connect(): void
 ```
 
-Connects to a BLE peripheral device.The 'BLEConnectionStateChange' event is subscribed to return the connection state.
+Connects to a BLE peripheral device.
+
+The 'BLEConnectionStateChange' event is subscribed to return the connection state.
 
 **Since:** 10
 
@@ -161,7 +165,7 @@ Get the connection status of a specific device.
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | Connection state. |
+| ProfileConnectionState | Connection state. |
 
 **Error codes:**
 
@@ -265,7 +269,7 @@ Obtains the name of BLE peripheral device.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns a string representation of the name if obtained; |
+| Promise&lt;string&gt; | Returns a string representation of the name if obtained; |
 
 **Error codes:**
 
@@ -375,7 +379,7 @@ Get the RSSI value of this BLE peripheral device.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Returns the RSSI value. |
+| Promise&lt;number&gt; | Returns the RSSI value. |
 
 **Error codes:**
 
@@ -492,7 +496,7 @@ Starts discovering services.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;GattService & gt; & gt; | Returns the list of services { |
+| Promise&lt;Array&lt;GattService&gt;&gt; | Returns the list of services { |
 
 **Error codes:**
 
@@ -1061,7 +1065,7 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
 
 **Error codes:**
@@ -1138,13 +1142,13 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BLECharacteristic & gt; | Promise used to return the characteristic value read. |
+| Promise&lt;BLECharacteristic&gt; | Promise used to return the characteristic value read. |
 
 **Error codes:**
 
@@ -1211,7 +1215,7 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
+| descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
 
 **Error codes:**
@@ -1281,13 +1285,13 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
+| descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BLEDescriptor & gt; | Promise used to return the descriptor read. |
+| Promise&lt;BLEDescriptor&gt; | Promise used to return the descriptor read. |
 
 **Error codes:**
 
@@ -1400,7 +1404,7 @@ Asynchronous interface for setting the mtu size of a BLE peripheral device. The 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the mtu size that takes effect. |
+| Promise&lt;number&gt; | Promise used to return the mtu size that takes effect. |
 
 **Error codes:**
 
@@ -1484,7 +1488,7 @@ Enables or disables indication of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to indicate. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that indication is enabled, and the value {@code false} indicates that indication is disabled. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCharacteristicChangeIndication. |
 
@@ -1552,14 +1556,14 @@ Enables or disables indication of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to indicate. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that indication is enabled, and the value {@code false} indicates that indication is disabled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 
@@ -1623,7 +1627,7 @@ Enables or disables notification of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to indicate. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that notification is enabled, and the value {@code false} indicates that indication is disabled. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCharacteristicChangeNotification. |
 
@@ -1691,14 +1695,14 @@ Enables or disables indication of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to indicate. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
 | enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that indication is enabled, and the value {@code false} indicates that indication is disabled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 
@@ -1762,7 +1766,7 @@ Set the preferred phy associated with the connection. Whether the phy value will
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1815,7 +1819,7 @@ Update the connection parameters of the current GATT link to save power or impro
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1866,7 +1870,7 @@ Writes the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
 | writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -1942,14 +1946,14 @@ Writes the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
 | writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -2017,7 +2021,7 @@ Writes the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to write. |
+| descriptor | BLEDescriptor | Yes | Indicates the descriptor to write. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -2086,13 +2090,13 @@ Writes the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to write. |
+| descriptor | BLEDescriptor | Yes | Indicates the descriptor to write. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

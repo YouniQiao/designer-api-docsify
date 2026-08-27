@@ -11,7 +11,7 @@ Execution frequency information.
 ## Modules to Import
 
 ```TypeScript
-import workScheduler from '@kit.BackgroundTasksKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## interval

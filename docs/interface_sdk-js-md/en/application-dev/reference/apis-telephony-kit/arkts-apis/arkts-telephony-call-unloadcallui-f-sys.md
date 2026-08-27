@@ -25,7 +25,7 @@ Unload callUI.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | The promise returned by the unloadCallUI. |
+| Promise&lt;boolean&gt; | The promise returned by the unloadCallUI. |
 
 **Error codes:**
 

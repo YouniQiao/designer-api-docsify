@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## removeBackupBundleData
@@ -34,7 +34,7 @@ Removes the backup data for a specified application under a given user. This API
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appControl from '@kit.AbilityKit';
+import { appControl } from '@kit.AbilityKit';
 ```
 
 ## getDisposedRule

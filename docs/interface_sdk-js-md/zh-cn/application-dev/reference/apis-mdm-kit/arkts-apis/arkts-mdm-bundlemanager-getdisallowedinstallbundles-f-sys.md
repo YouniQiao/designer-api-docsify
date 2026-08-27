@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleManager from '@kit.MDMKit';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## getDisallowedInstallBundles
@@ -156,13 +156,13 @@ function getDisallowedInstallBundles(admin: Want, userId?: number): Promise<Arra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| userId | number | 否 | 用户ID，取值范围：大于等于0。     - 调用接口时，若传入userId，表示指定用户。     - 调用接口时，若未传入userId，表示当前用户。 |
+| userId | number | 否 | 用户ID，取值范围：大于等于0。    - 调用接口时，若传入userId，表示指定用户。    - 调用接口时，若未传入userId，表示当前用户。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise对象，返回当前/指定用户下的应用程序包安装禁止名单。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回当前/指定用户下的应用程序包安装禁止名单。 |
 
 **错误码：**
 

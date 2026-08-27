@@ -9,7 +9,7 @@ Describes the event emit priority.
 ## Modules to Import
 
 ```TypeScript
-import emitter from '@kit.BasicServicesKit';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## priority

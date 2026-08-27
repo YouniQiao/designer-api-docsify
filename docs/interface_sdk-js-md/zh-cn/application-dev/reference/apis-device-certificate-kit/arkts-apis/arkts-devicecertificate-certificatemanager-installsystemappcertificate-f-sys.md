@@ -34,7 +34,7 @@ function installSystemAppCertificate(keystore: Uint8Array, keystorePwd: string):
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise对象，返回安装系统应用凭据的结果，返回值为 [CMResult]{ |
+| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise对象，返回安装系统应用凭据的结果，返回值为[CMResult]{ |
 
 **错误码：**
 

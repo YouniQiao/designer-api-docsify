@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import ethernet from '@kit.NetworkKit';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## getMacAddress
@@ -12,7 +12,8 @@ import ethernet from '@kit.NetworkKit';
 function getMacAddress(): Promise<Array<MacAddressInfo>>
 ```
 
-Obtains the names and MAC addresses of all Ethernet NICs. This API uses a promise to return the result.  
+Obtains the names and MAC addresses of all Ethernet NICs. This API uses a promise to return the result.
+
 **Required permission**: ohos.permission.GET_ETHERNET_LOCAL_MAC
 
 **Since:** 14

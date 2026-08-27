@@ -9,7 +9,7 @@ Represents data of the home screen icon type defined by the system.
 ## Modules to Import
 
 ```TypeScript
-import uniformDataStruct from '@kit.ArkData';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## abilityName

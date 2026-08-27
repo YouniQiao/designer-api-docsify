@@ -9,7 +9,7 @@ Defines the Contact selection options, which specifies whether one contact or mu
 ## Modules to Import
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## filter
@@ -34,7 +34,9 @@ Contact selection filter. This API can be used in atomic services since API vers
 isAutoDismissOnNavigation?: boolean
 ```
 
-Whether to allow automatic dismissal of the picker when the page that launched it undergoes a route change. The value true means the picker is allowed to be dismissed automatically, and false means the picker is not allowed to be dismissed automatically.The default value is false.
+Whether to allow automatic dismissal of the picker when the page that launched it undergoes a route change. The value true means the picker is allowed to be dismissed automatically, and false means the picker is not allowed to be dismissed automatically.
+
+The default value is false.
 
 **Type:** boolean
 

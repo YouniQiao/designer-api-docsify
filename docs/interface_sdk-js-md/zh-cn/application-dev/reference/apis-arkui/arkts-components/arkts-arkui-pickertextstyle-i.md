@@ -1,6 +1,8 @@
 # PickerTextStyle
 
-Provide an interface for the text style of picker@interface PickerTextStyle
+Provide an interface for the text style of picker
+
+@interface PickerTextStyle
 
 **起始版本：** 11
 

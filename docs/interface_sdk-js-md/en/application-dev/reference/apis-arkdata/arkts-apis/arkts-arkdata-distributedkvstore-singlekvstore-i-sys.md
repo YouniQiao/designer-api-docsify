@@ -9,7 +9,7 @@ Provides APIs for data management in a single KV store, such as adding data, del
 ## Modules to Import
 
 ```TypeScript
-import distributedKVStore from '@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## delete
@@ -125,7 +125,7 @@ Deletes the key-value pairs based on the dataSharePredicates.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -851,7 +851,7 @@ Writes values of ValuesBucket type into the {@code SingleKVStore} database.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 

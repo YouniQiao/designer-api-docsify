@@ -11,7 +11,11 @@
 function requestTrace(config: RequestTraceConfig): Promise<string>
 ```
 
-获取当前进程的trace信息，包含应用tag、图像窗口tag、cpu调度和binder内核信息。使用Promise异步回调。采集trace返回的.sys文件在目录下最多存储3份，数量大于等于3份时再次调用接口会抛出错误码11400120。接口不支持在输入法应用中使用。
+获取当前进程的trace信息，包含应用tag、图像窗口tag、cpu调度和binder内核信息。使用Promise异步回调。
+
+采集trace返回的.sys文件在目录下最多存储3份，数量大于等于3份时再次调用接口会抛出错误码11400120。
+
+接口不支持在输入法应用中使用。
 
 **起始版本：** 24
 
@@ -31,7 +35,7 @@ function requestTrace(config: RequestTraceConfig): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回以.sys作为后缀的trace文件的应用沙箱路径。 |
+| Promise&lt;string&gt; | Promise对象，返回以.sys作为后缀的trace文件的应用沙箱路径。 |
 
 **错误码：**
 

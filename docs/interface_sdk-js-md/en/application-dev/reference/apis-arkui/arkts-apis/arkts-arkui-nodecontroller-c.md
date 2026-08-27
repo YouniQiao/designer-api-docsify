@@ -78,7 +78,9 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 abstract makeNode(uiContext: UIContext): FrameNode | null
 ```
 
-Called when the NodeContainer component bound to this **NodeController** instance is created. This callback returns a node, which will be mounted to the **NodeContainer**.This callback can also be invoked through the **rebuild()** method of **NodeController**.
+Called when the NodeContainer component bound to this **NodeController** instance is created. This callback returns a node, which will be mounted to the **NodeContainer**.
+
+This callback can also be invoked through the **rebuild()** method of **NodeController**.
 
 > **NOTE：**
 > 
@@ -193,7 +195,7 @@ Called when the NodeContainer component bound to this **NodeController** instanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | Yes | Touch event. |
+| event | TouchEvent | Yes | Touch event. |
 
 ## onUnbind
 

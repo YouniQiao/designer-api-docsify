@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import autoStartupManager from '@kit.AbilityKit';
+import { autoStartupManager } from '@kit.AbilityKit';
 ```
 
 ## off('systemAutoStartup')
@@ -12,7 +12,7 @@ import autoStartupManager from '@kit.AbilityKit';
 function off(type: 'systemAutoStartup', callback?: AutoStartupCallback): void
 ```
 
-注销监听应用组件开机自启动状态变化的回调函数。 从API version 18开始，该接口仅在2in1和Wearable设备中可正常调用，在其他设备上返回16000050错误码。 对于API version 18之前版本，该接口仅在2in1设备中可正常调用，在其他设备上返回16000050错误码。
+注销监听应用组件开机自启动状态变化的回调函数。从API version 18开始，该接口仅在2in1和Wearable设备中可正常调用，在其他设备上返回16000050错误码。对于API version 18之前版本，该接口仅在2in1设备中可正常调用，在其他设备上返回16000050错误码。
 
 **起始版本：** 11
 

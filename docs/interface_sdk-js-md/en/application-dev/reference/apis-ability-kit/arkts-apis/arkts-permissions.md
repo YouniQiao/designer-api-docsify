@@ -11,4 +11,4 @@
 
 | Name | Description |
 | --- | --- |
-| [Permissions(Defines all permissions.)](arkts-ability-permissions-t.md) | Indicates permissions. |
+| [Permissions](arkts-ability-permissions-t.md) | Indicates permissions. |

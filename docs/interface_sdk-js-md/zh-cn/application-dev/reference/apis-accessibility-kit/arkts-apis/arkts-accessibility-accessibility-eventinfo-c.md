@@ -1,6 +1,6 @@
 # EventInfo
 
-无障碍事件信息，用于描述界面变更或交互事件，作为[sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md)的参数定义事件的类型和触发动作。发送的无障碍事 件将被系统分发到已注册且匹配事件类型的辅助应用进行响应，详见[sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md)。
+无障碍事件信息，用于描述界面变更或交互事件，作为[sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md)的参数定义事件的类型和触发动作。发送的无障碍事件将被系统分发到已注册且匹配事件类型的辅助应用进行响应，详见[sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md)。
 
 **起始版本：** 7
 
@@ -9,10 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import config from '@kit.AccessibilityKit.config';
-import accessibility from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
-import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
@@ -70,9 +67,9 @@ constructor(type: EventType, bundleName: string, triggerAction: Action)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md) | 是 | 无障碍事件类型。 |
+| type | EventType | 是 | 无障碍事件类型。 |
 | bundleName | string | 是 | 目标应用的Bundle名称。 |
-| triggerAction | [Action](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | 是 | 触发事件的Action。 |
+| triggerAction | Action | 是 | 触发事件的Action。 |
 
 **示例**
 
@@ -125,7 +122,10 @@ bundleName: string
 componentType?: string
 ```
 
-应与事件源组件类型对应，默认值为空。例如：  
+应与事件源组件类型对应，默认值为空。
+
+例如：
+
 - 按钮Button类型-&gt;'Button'。  
 - 图片Image类型-&gt;'Image'。
 

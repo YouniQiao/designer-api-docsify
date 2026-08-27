@@ -9,7 +9,7 @@ You must first use on('inputStart') to obtain a **KeyboardController** instance,
 ## Modules to Import
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## exitCurrentInputType
@@ -67,7 +67,7 @@ Exits this input type. This API can be called only by the preconfigured default 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -154,7 +154,7 @@ Hides the keyboard. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -240,7 +240,7 @@ Hides the keyboard. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

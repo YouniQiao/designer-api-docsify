@@ -1,6 +1,8 @@
 # DismissSheetAction
 
-Component sheet dismiss@interface DismissSheetAction
+Component sheet dismiss
+
+@interface DismissSheetAction
 
 **Since:** 12
 

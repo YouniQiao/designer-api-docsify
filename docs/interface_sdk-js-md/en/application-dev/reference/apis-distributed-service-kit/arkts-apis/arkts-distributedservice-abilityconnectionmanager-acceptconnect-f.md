@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## acceptConnect
@@ -31,7 +31,7 @@ Accepts the UIAbility connection after a collaboration session is set up and the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

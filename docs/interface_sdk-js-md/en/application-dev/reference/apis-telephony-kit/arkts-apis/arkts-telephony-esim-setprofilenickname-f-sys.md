@@ -33,7 +33,7 @@ Sets a nickname for the specified profile. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ResultCode & gt; | Promise used to return the operation result. |
+| Promise&lt;ResultCode&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 

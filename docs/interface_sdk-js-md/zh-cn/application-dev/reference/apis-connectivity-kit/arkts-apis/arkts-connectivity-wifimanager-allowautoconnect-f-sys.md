@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## allowAutoConnect
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function allowAutoConnect(netId: number, isAllowed: boolean): void
 ```
 
-设置是否允许通过networkId自动连接。 如果isAllowed为true，则可以再次关联该网络，否则不可。
+设置是否允许通过networkId自动连接。如果isAllowed为true，则可以再次关联该网络，否则不可。
 
 **起始版本：** 17
 

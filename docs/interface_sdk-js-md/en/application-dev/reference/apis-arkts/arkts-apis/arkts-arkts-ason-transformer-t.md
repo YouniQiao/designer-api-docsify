@@ -17,7 +17,7 @@ The type of conversion result function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | [ISendable](arkts-arkts-ason-isendable-t.md) | Yes | The ISendable to which the parsed key value pair belongs. |
+| this | ISendable | Yes | The ISendable to which the parsed key value pair belongs. |
 | key | string | Yes | Attribute name. |
 | value | ISendable \| undefined \| null | Yes | The value of the parsed key value pair. |
 

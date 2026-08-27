@@ -1,6 +1,8 @@
 # HotspotConfig（系统接口）
 
-WLAN热点配置信息。@interface HotspotConfig
+WLAN热点配置信息。
+
+@interface HotspotConfig
 
 **起始版本：** 7
 
@@ -15,10 +17,7 @@ WLAN热点配置信息。@interface HotspotConfig
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## band

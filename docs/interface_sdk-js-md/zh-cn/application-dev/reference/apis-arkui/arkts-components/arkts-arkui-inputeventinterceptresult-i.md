@@ -17,7 +17,11 @@
 action: InputEventInterceptAction
 ```
 
-输入事件拦截动作。CONTINUE：允许事件继续传递到UI框架。BLOCK：阻止事件传递到UI框架。
+输入事件拦截动作。
+
+CONTINUE：允许事件继续传递到UI框架。
+
+BLOCK：阻止事件传递到UI框架。
 
 **类型：** [InputEventInterceptAction](../arkts-apis/arkts-arkui-inputeventinterceptaction-e.md)
 

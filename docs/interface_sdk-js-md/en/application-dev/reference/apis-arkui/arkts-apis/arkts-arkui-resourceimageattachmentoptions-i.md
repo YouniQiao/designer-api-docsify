@@ -53,7 +53,9 @@ Image layout.
 objectFit?: ImageFit
 ```
 
-Image scaling type. The **ImageFit.MATRIX** enum value is not supported.Default value: **ImageFit.Cover**
+Image scaling type. The **ImageFit.MATRIX** enum value is not supported.
+
+Default value: **ImageFit.Cover**
 
 **Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
@@ -125,8 +127,11 @@ Image size.
 supportSvg2?: boolean
 ```
 
-Whether to enable [enhanced SVG tag parsing capabilities](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md).  
-**true**: Enable enhanced SVG tag parsing. **false**: Use original SVG tag parsing.Default value: **false**
+Whether to enable [enhanced SVG tag parsing capabilities](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md).
+
+**true**: Enable enhanced SVG tag parsing. **false**: Use original SVG tag parsing.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -144,8 +149,11 @@ Whether to enable [enhanced SVG tag parsing capabilities](../../../reference/api
 syncLoad?: boolean
 ```
 
-Whether to load the image synchronously. By default, the image is loaded asynchronously. During synchronous loading, the UI thread is blocked and the placeholder image is not displayed.  
-**true**: synchronous loading; **false**: asynchronous loading.Default value: **false**
+Whether to load the image synchronously. By default, the image is loaded asynchronously. During synchronous loading, the UI thread is blocked and the placeholder image is not displayed.
+
+**true**: synchronous loading; **false**: asynchronous loading.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -163,7 +171,9 @@ Whether to load the image synchronously. By default, the image is loaded asynchr
 verticalAlign?: ImageSpanAlignment
 ```
 
-Alignment mode of the image with the text.Default value: **ImageSpanAlignment.BOTTOM**
+Alignment mode of the image with the text.
+
+Default value: **ImageSpanAlignment.BOTTOM**
 
 **Type:** [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
 

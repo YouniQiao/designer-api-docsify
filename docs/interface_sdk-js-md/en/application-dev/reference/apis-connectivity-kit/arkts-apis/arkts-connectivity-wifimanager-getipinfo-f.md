@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getIpInfo
@@ -25,7 +24,7 @@ Obtain the IPv4 information of the Wi-Fi connection. The IP information includes
 
 | Type | Description |
 | --- | --- |
-| [IpInfo](arkts-connectivity-wifi-ipinfo-i.md) | Returns the IP information of the Wi-Fi connection. |
+| IpInfo | Returns the IP information of the Wi-Fi connection. |
 
 **Error codes:**
 

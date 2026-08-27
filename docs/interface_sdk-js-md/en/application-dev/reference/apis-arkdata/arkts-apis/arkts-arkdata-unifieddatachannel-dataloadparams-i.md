@@ -1,6 +1,8 @@
 # DataLoadParams
 
-Defines the data loading policy for the data sender in the lazy loading scenario.If both **loadHandler** and **delayedDataLoadHandler** are passed, **delayedDataLoadHandler** is preferentially used, and **loadHandler** does not take effect.
+Defines the data loading policy for the data sender in the lazy loading scenario.
+
+If both **loadHandler** and **delayedDataLoadHandler** are passed, **delayedDataLoadHandler** is preferentially used, and **loadHandler** does not take effect.
 
 **Since:** 20
 
@@ -9,7 +11,7 @@ Defines the data loading policy for the data sender in the lazy loading scenario
 ## Modules to Import
 
 ```TypeScript
-import unifiedDataChannel from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## delayedDataLoadHandler

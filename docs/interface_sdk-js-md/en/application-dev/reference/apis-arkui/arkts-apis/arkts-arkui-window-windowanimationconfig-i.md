@@ -9,9 +9,7 @@ Describes the configuration for window animation.
 ## Modules to Import
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## curve
@@ -36,7 +34,11 @@ Type of animation curve.
 duration?: number
 ```
 
-Duration for playing the animation, in milliseconds (ms).The default value is 0, and the maximum value is 3000.Whether it is required depends on the animation curve type.
+Duration for playing the animation, in milliseconds (ms).
+
+The default value is 0, and the maximum value is 3000.
+
+Whether it is required depends on the animation curve type.
 
 **Type:** number
 

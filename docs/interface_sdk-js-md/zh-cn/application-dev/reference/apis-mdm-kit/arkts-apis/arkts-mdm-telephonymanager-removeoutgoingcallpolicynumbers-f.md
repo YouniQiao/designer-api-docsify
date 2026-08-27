@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import telephonyManager from '@kit.MDMKit';
+import { telephonyManager } from '@kit.MDMKit';
 ```
 
 ## removeOutgoingCallPolicyNumbers
@@ -12,7 +12,11 @@ import telephonyManager from '@kit.MDMKit';
 function removeOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array<string>): void
 ```
 
-移除通话呼出的允许或禁用名单，若在该名单尚未设置时进行移除，则会移除失败。例如，企业可在解除通话限制、恢复员工正常通话权限时使用。以下情况下，通过本接口移除通话呼出的允许或禁用名单，会报策略冲突：已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了设备通话能力，再通过本接口移除 通话呼出的禁用或允许名单，返回203错误码。通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md) 接口解除禁用设备通话能力后，可解除冲突。
+移除通话呼出的允许或禁用名单，若在该名单尚未设置时进行移除，则会移除失败。例如，企业可在解除通话限制、恢复员工正常通话权限时使用。
+
+以下情况下，通过本接口移除通话呼出的允许或禁用名单，会报策略冲突：
+
+已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了设备通话能力，再通过本接口移除通话呼出的禁用或允许名单，返回203错误码。通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口解除禁用设备通话能力后，可解除冲突。
 
 **起始版本：** 20
 
@@ -28,7 +32,7 @@ function removeOutgoingCallPolicyNumbers(admin: Want, policy: adminManager.Polic
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | policy | adminManager.Policy | 是 | 允许或禁用名单策略。BLOCK_LIST为禁用名单，TRUST_LIST为允许名单。 |
-| numbers | Array & lt;string & gt; | 是 | 待移除的通话号码数组。数组总长度不能超过1000。 |
+| numbers | Array&lt;string&gt; | 是 | 待移除的通话号码数组。数组总长度不能超过1000。 |
 
 **错误码：**
 

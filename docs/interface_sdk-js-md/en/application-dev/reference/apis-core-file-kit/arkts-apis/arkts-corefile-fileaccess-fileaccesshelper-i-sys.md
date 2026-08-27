@@ -13,7 +13,7 @@ Provides a **FileAccessHelper** object.
 ## Modules to Import
 
 ```TypeScript
-import fileAccess from '@kit.CoreFileKit';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## access
@@ -46,7 +46,7 @@ Checks whether a file or directory exists. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Returns whether it exists. |
+| Promise&lt;boolean&gt; | Returns whether it exists. |
 
 **Error codes:**
 
@@ -472,7 +472,7 @@ Copies a file with an alternative file name. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | URI of the file generated. |
+| Promise&lt;string&gt; | URI of the file generated. |
 
 **Error codes:**
 
@@ -643,7 +643,7 @@ Creates a file in a directory. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the new file's URI. |
+| Promise&lt;string&gt; | Returns the new file's URI. |
 
 **Error codes:**
 
@@ -836,7 +836,7 @@ Deletes a file or directory. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; |  |
+| Promise&lt;number&gt; |  |
 
 **Error codes:**
 
@@ -1022,7 +1022,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;FileInfo & gt; | Returns a FileInfo. |
+| Promise&lt;FileInfo&gt; | Returns a FileInfo. |
 
 **Examples**
 
@@ -1127,7 +1127,7 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;FileInfo & gt; | Returns a FileInfo. |
+| Promise&lt;FileInfo&gt; | Returns a FileInfo. |
 
 **Examples**
 
@@ -1424,7 +1424,7 @@ Creates a directory in a specified directory. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the new directory's URI. |
+| Promise&lt;string&gt; | Returns the new directory's URI. |
 
 **Error codes:**
 
@@ -1618,7 +1618,7 @@ Moves a file or directory. This API uses a promise to return the result. Current
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the URI of the file or directory in the destination directory. |
+| Promise&lt;string&gt; | Promise used to return the URI of the file or directory in the destination directory. |
 
 **Error codes:**
 
@@ -1810,7 +1810,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the URI of the file in the destination directory. |
+| Promise&lt;string&gt; | Promise used to return the URI of the file in the destination directory. |
 
 **Error codes:**
 
@@ -2306,7 +2306,7 @@ Opens a file. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Returns the file descriptor. |
+| Promise&lt;number&gt; | Returns the file descriptor. |
 
 **Error codes:**
 
@@ -2492,7 +2492,7 @@ Queries the attribute information about a file or directory based on a URI. This
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return a JSON string that contains the file attribute and the value obtained. |
+| Promise&lt;string&gt; | Promise used to return a JSON string that contains the file attribute and the value obtained. |
 
 **Examples**
 
@@ -2636,7 +2636,7 @@ Renames a file or directory. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns a URI representing the new file or directory. |
+| Promise&lt;string&gt; | Returns a URI representing the new file or directory. |
 
 **Error codes:**
 

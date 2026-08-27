@@ -9,7 +9,7 @@ Describes the setting status of the notification mode switch.
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## badgeNumberEnabled
@@ -18,7 +18,8 @@ import notificationManager from '@kit.NotificationKit';
 badgeNumberEnabled?: boolean
 ```
 
-Whether to enable the display of notification badges.  
+Whether to enable the display of notification badges.
+
 - **true**: enable.  
 - **false**: disable.
 
@@ -36,7 +37,8 @@ Whether to enable the display of notification badges.
 bannerEnabled?: boolean
 ```
 
-Whether to enable banner notification.  
+Whether to enable banner notification.
+
 - **true**: enable.  
 - **false**: disable.
 
@@ -54,7 +56,8 @@ Whether to enable banner notification.
 lockScreenEnabled?: boolean
 ```
 
-Whether to enable lock screen notification.  
+Whether to enable lock screen notification.
+
 - **true**: enable.  
 - **false**: disable.
 
@@ -72,7 +75,8 @@ Whether to enable lock screen notification.
 notificationEnabled?: boolean
 ```
 
-Whether to enable the application notification.  
+Whether to enable the application notification.
+
 - **true**: enable.  
 - **false**: disable.
 
@@ -90,7 +94,8 @@ Whether to enable the application notification.
 soundEnabled: boolean
 ```
 
-Whether to enable ringtone.  
+Whether to enable ringtone.
+
 - **true**: enable.  
 - **false**: disable.
 
@@ -106,7 +111,8 @@ Whether to enable ringtone.
 vibrationEnabled: boolean
 ```
 
-Whether to enable vibration.  
+Whether to enable vibration.
+
 - **true**: enable.  
 - **false**: disable.
 

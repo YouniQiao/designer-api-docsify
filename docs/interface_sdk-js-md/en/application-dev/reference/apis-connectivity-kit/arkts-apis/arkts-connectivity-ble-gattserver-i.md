@@ -17,7 +17,9 @@ Manages GATT server. Before calling an Gatt server method, you must use [createG
 addService(service: GattService): void
 ```
 
-Adds a specified service to be hosted.The added service and its characteristics are provided by the local device.
+Adds a specified service to be hosted.
+
+The added service and its characteristics are provided by the local device.
 
 **Since:** 10
 
@@ -33,7 +35,7 @@ Adds a specified service to be hosted.The added service and its characteristics 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| service | [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md) | Yes | Indicates the service to add. |
+| service | GattService | Yes | Indicates the service to add. |
 
 **Error codes:**
 
@@ -249,7 +251,7 @@ Get the connection state of a specific device.
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | Connection state. |
+| ProfileConnectionState | Connection state. |
 
 **Error codes:**
 
@@ -300,7 +302,7 @@ Obtain a specific GATT service by using a UUID.
 
 | Type | Description |
 | --- | --- |
-| [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md) | The GATT service has been obtained. |
+| GattService | The GATT service has been obtained. |
 
 **Error codes:**
 
@@ -350,7 +352,7 @@ Obtain the list of GATT services registered by the application.
 
 | Type | Description |
 | --- | --- |
-| [GattService[]](arkts-connectivity-bluetoothmanager-gattservice-i.md) | The list of GATT service has been obtained. |
+| GattService[] | The list of GATT service has been obtained. |
 
 **Error codes:**
 
@@ -388,7 +390,9 @@ notifyCharacteristicChanged(
     ): void
 ```
 
-Sends a notification of a change in a specified local characteristic with a asynchronous callback.This method should be called for every BLE peripheral device that has requested notifications.
+Sends a notification of a change in a specified local characteristic with a asynchronous callback.
+
+This method should be called for every BLE peripheral device that has requested notifications.
 
 **Since:** 10
 
@@ -405,7 +409,7 @@ Sends a notification of a change in a specified local characteristic with a asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md) | Yes | Indicates the local characteristic that has changed. |
+| notifyCharacteristic | NotifyCharacteristic | Yes | Indicates the local characteristic that has changed. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -450,7 +454,9 @@ try {
 notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): Promise<void>
 ```
 
-Sends a notification of a change in a specified local characteristic with a asynchronous callback.This method should be called for every BLE peripheral device that has requested notifications.
+Sends a notification of a change in a specified local characteristic with a asynchronous callback.
+
+This method should be called for every BLE peripheral device that has requested notifications.
 
 **Since:** 10
 
@@ -467,13 +473,13 @@ Sends a notification of a change in a specified local characteristic with a asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md) | Yes | Indicates the local characteristic that has changed. |
+| notifyCharacteristic | NotifyCharacteristic | Yes | Indicates the local characteristic that has changed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1389,7 +1395,7 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverResponse | [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-ble-serverresponse-i.md). |
+| serverResponse | ServerResponse | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-ble-serverresponse-i.md). |
 
 **Error codes:**
 
@@ -1452,7 +1458,7 @@ Set the preferred phy associated with the connection. Whether the phy value will
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

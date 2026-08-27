@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import calendarManager from '@kit.CalendarKit';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## color
@@ -18,7 +18,7 @@ import calendarManager from '@kit.CalendarKit';
 color?: number | string
 ```
 
-设置Calendar颜色。值为number时取值范围为0x000000至0xFFFFFF或0x00000000至0xFFFFFFFF，值为string时长度为7或9，如'#FFFFFF'，'#FFFFFFFFF'。 不设置时默认值为0xFF0A59F7，输入undefined或错误值时抛异常。
+设置Calendar颜色。值为number时取值范围为0x000000至0xFFFFFF或0x00000000至0xFFFFFFFF，值为string时长度为7或9，如'#FFFFFF'，'#FFFFFFFFF'。不设置时默认值为0xFF0A59F7，输入undefined或错误值时抛异常。
 
 **类型：** number \| string
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## selectContacts

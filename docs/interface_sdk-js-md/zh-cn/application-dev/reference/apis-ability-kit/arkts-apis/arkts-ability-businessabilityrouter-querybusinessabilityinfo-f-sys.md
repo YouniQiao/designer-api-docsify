@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import businessAbilityRouter from '@kit.AbilityKit';
+import { businessAbilityRouter } from '@kit.AbilityKit';
 ```
 
 ## queryBusinessAbilityInfo
@@ -89,7 +89,7 @@ function queryBusinessAbilityInfo(filter: BusinessAbilityFilter): Promise<Array<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;BusinessAbilityInfo & gt; & gt; | Promise对象，返回符合过滤条件的Ability信息。 |
+| Promise&lt;Array&lt;BusinessAbilityInfo&gt;&gt; | Promise对象，返回符合过滤条件的Ability信息。 |
 
 **错误码：**
 

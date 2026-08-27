@@ -23,7 +23,11 @@ Describes the current progress of video playback.
 time: number
 ```
 
-Callback that provides the current playback progress.Unit: second Value range: [0, +∞)
+Callback that provides the current playback progress.
+
+Unit: second
+
+Value range: [0, +∞)
 
 **Type:** number
 

@@ -22,7 +22,8 @@ Defines the configuration policy for the high CPU usage event.
 backgroundLoadThreshold?: number
 ```
 
-High CPU usage threshold of the application background, in percentage. The value range is **[1, 100]**. The default value is **10**. If the value is not within the threshold range, the default value **10** is used.  
+High CPU usage threshold of the application background, in percentage. The value range is **[1, 100]**. The default value is **10**. If the value is not within the threshold range, the default value **10** is used.
+
 **Note：**: It is recommended that the value be less than **10**.
 
 **Type:** number
@@ -39,7 +40,8 @@ High CPU usage threshold of the application background, in percentage. The value
 foregroundLoadThreshold?: number
 ```
 
-High CPU usage threshold of the application foreground, in percentage. The value range is **[1, 100]**. The default value is **30**. If the value is not within the threshold range, the default value **30** is used.  
+High CPU usage threshold of the application foreground, in percentage. The value range is **[1, 100]**. The default value is **30**. If the value is not within the threshold range, the default value **30** is used.
+
 **Note：**: It is recommended that the value be less than **30**.
 
 **Type:** number
@@ -56,8 +58,18 @@ High CPU usage threshold of the application foreground, in percentage. The value
 perfLogCaptureCount?: number
 ```
 
-Number of log collection times per day. Once the system detects that the number of log collection times exceeds the set value, the system still reports the event normally, but the **external_log** field in the exception event is not attached with the log file path information.For debug-type applications, the threshold range is **[-1, 100]**.For release-type applications, the threshold range is **[0, 20]**.Unit: times. Default value: **1**.If the value is not within the threshold range, the default value **1** is used.  
+Number of log collection times per day. Once the system detects that the number of log collection times exceeds the set value, the system still reports the event normally, but the **external_log** field in the exception event is not attached with the log file path information.
+
+For debug-type applications, the threshold range is **[-1, 100]**.
+
+For release-type applications, the threshold range is **[0, 20]**.
+
+Unit: times. Default value: **1**.
+
+If the value is not within the threshold range, the default value **1** is used.
+
 **NOTE：**
+
 1. The value **-1** indicates that log collection times are not limited.
 2. The value **0** indicates that logs are not collected.
 3. A value greater than **0** indicates the maximum number of daily collection times.
@@ -76,7 +88,9 @@ Number of log collection times per day. Once the system detects that the number 
 threadLoadInterval?: number
 ```
 
-Interval for detecting high CPU usage of application threads, in seconds. The value range is **[5, 3600]**. The default value is **60**.If the value is not within the threshold range, the default value **60** is used.
+Interval for detecting high CPU usage of application threads, in seconds. The value range is **[5, 3600]**. The default value is **60**.
+
+If the value is not within the threshold range, the default value **60** is used.
 
 **Type:** number
 

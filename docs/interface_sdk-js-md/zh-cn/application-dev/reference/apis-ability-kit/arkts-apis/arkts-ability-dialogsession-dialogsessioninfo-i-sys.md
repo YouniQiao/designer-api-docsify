@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import dialogSession from '@kit.AbilityKit';
+import { dialogSession } from '@kit.AbilityKit';
 ```
 
 ## callerAbilityInfo

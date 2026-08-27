@@ -14,4 +14,4 @@ export type ProxyConfiguration = 'system' | 'no-proxy' | HttpProxy
 | --- | --- |
 | 'system' | 使用系统默认网络代理。 |
 | 'no-proxy' | 不使用网络代理。 |
-| [HttpProxy](arkts-network-ethernet-httpproxy-t.md) | 使用指定的网络代理。 |
+| HttpProxy | 使用指定的网络代理。 |

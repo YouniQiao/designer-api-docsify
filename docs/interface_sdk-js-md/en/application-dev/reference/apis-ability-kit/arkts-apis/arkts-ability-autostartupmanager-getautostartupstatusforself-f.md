@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import autoStartupManager from '@kit.AbilityKit';
+import { autoStartupManager } from '@kit.AbilityKit';
 ```
 
 ## getAutoStartupStatusForSelf
@@ -24,7 +24,7 @@ Checks whether the current application is enabled for automatic startup at boot 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the auto-startup status. **true** if enabled for automatic startup at boot time, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the auto-startup status. **true** if enabled for automatic startup at boot time, **false** otherwise. |
 
 **Error codes:**
 

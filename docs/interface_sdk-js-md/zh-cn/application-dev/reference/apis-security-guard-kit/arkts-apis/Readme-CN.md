@@ -1,7 +1,7 @@
 # ArkTS API<!--arkts-securityguardkit-->
 
 <!--Del-->
-- [@ohos.security.securityGuard](arkts-security-securityguard.md)<!--DelEnd-->
+- [@ohos.security.securityGuard(本模块提供设备风险管理平台能力。)](arkts-security-securityguard.md)<!--DelEnd-->
   <!--Del-->
   - [getModelResult(系统接口)](arkts-securityguard-securityguard-getmodelresult-f-sys.md)<!--DelEnd-->
   <!--Del-->

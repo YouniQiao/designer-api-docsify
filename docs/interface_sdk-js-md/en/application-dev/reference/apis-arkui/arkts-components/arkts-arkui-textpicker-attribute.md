@@ -1,6 +1,8 @@
 # TextPicker properties/events
 
-In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.
+
+In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** TextPickerAttribute extends CommonMethod<TextPickerAttribute>
 
@@ -97,7 +99,7 @@ Sets the height of the picker items. Compared with [defaultPickerItemHeight](#de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [Optional](arkts-arkui-optional-t.md)&lt;number \| string & gt; | Yes | Height of the picker items.Value range:Number type: [0, +∞), in vp.String type: numeric string only, for example, **"56"**.Default value: selected item 56 vp, unselected item 36 vp.   **NOTE：** 1. The set value applies to both selected and unselected items.  2. If **height** is set to **undefined**, the previous value is retained. |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;number \| string&gt; | Yes | Height of the picker items.Value range:Number type: [0, +∞), in vp.String type: numeric string only, for example, **"56"**.Default value: selected item 56 vp, unselected item 36 vp.   **NOTE：** 1. The set value applies to both selected and unselected items.  2. If **height** is set to **undefined**, the previous value is retained. |
 
 ## defaultTextStyle
 
@@ -237,7 +239,9 @@ Sets the text style of edge items (the second item above or below the selected i
 divider(value: DividerOptions | null)
 ```
 
-Sets the divider style. If not explicitly set, the divider uses the default style.If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-divideroptions-i.md) exceeds the component's width, both margins are automatically reset to 0.
+Sets the divider style. If not explicitly set, the divider uses the default style.
+
+If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-divideroptions-i.md) exceeds the component's width, both margins are automatically reset to 0.
 
 **Since:** 12
 
@@ -259,7 +263,9 @@ Sets the divider style. If not explicitly set, the divider uses the default styl
 divider(textDivider: Optional<DividerOptions | null>)
 ```
 
-Sets the divider style. If not explicitly set, the divider uses the default style. Compared with [divider&lt;sup&gt;12+&lt;/sup&gt;](#divider), this API supports the **undefined** type for the **textDivider** parameter.If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-divideroptions-i.md) exceeds the component's width, both margins are automatically reset to 0.
+Sets the divider style. If not explicitly set, the divider uses the default style. Compared with [divider&lt;sup&gt;12+&lt;/sup&gt;](#divider), this API supports the **undefined** type for the **textDivider** parameter.
+
+If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-divideroptions-i.md) exceeds the component's width, both margins are automatically reset to 0.
 
 **Since:** 18
 
@@ -273,7 +279,7 @@ Sets the divider style. If not explicitly set, the divider uses the default styl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textDivider | [Optional](arkts-arkui-optional-t.md)&lt;[DividerOptions](arkts-arkui-divideroptions-i.md) \| null & gt; | Yes | Default value:{strokeWidth: '2px', startMargin: 0, endMargin: 0, color: '#33000000'} 1. If the value of **textDivider** is **undefined**, the default value is used. 2. If **textDivider** is a valid [DividerOptions](arkts-arkui-divideroptions-i.md) object, the divider is rendered using the specified style. 3. If **textDivider** is **null**, the divider is hidden. |
+| textDivider | [Optional](arkts-arkui-optional-t.md)&lt;[DividerOptions](arkts-arkui-divideroptions-i.md) \| null&gt; | Yes | Default value:{strokeWidth: '2px', startMargin: 0, endMargin: 0, color: '#33000000'} 1. If the value of **textDivider** is **undefined**, the default value is used. 2. If **textDivider** is a valid [DividerOptions](arkts-arkui-divideroptions-i.md) object, the divider is rendered using the specified style. 3. If **textDivider** is **null**, the divider is hidden. |
 
 ## enableHapticFeedback
 
@@ -347,7 +353,9 @@ Sets the height of the fade effect applied to the top and bottom edges of the co
 onAccept(callback: (value: string, index: number) => void)
 ```
 
-Triggered when the OK button in the dialog box is clicked. This event can be triggered only in the [text picker dialog box.This API is supported since API version 8 and deprecated since API version 10. No substitute is provided.
+Triggered when the OK button in the dialog box is clicked. This event can be triggered only in the [text picker dialog box.
+
+This API is supported since API version 8 and deprecated since API version 10. No substitute is provided.
 
 **Since:** 8
 
@@ -359,7 +367,7 @@ Triggered when the OK button in the dialog box is clicked. This event can be tri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (value: string, index: number) = & gt; void | Yes |  |
+| callback | (value: string, index: number) =&gt; void | Yes |  |
 
 ## onCancel
 
@@ -367,7 +375,9 @@ Triggered when the OK button in the dialog box is clicked. This event can be tri
 onCancel(callback: () => void)
 ```
 
-Triggered when the cancel button in the dialog box is clicked. This event can be triggered only in the text picker dialog box.This API is supported since API version 8 and deprecated since API version 10. No substitute is provided.
+Triggered when the cancel button in the dialog box is clicked. This event can be triggered only in the text picker dialog box.
+
+This API is supported since API version 8 and deprecated since API version 10. No substitute is provided.
 
 **Since:** 8
 
@@ -379,7 +389,7 @@ Triggered when the cancel button in the dialog box is clicked. This event can be
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | Yes |  |
+| callback | () =&gt; void | Yes |  |
 
 ## onChange
 
@@ -387,7 +397,9 @@ Triggered when the cancel button in the dialog box is clicked. This event can be
 onChange(callback: (value: string | string[], index: number | number[]) => void)
 ```
 
-Triggered when the text picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. When the picker contains text only or a combination of images and text, **value** indicates the text of the selected item. When the picker contains images only, **value** is empty.This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
+Triggered when the text picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. When the picker contains text only or a combination of images and text, **value** indicates the text of the selected item. When the picker contains images only, **value** is empty.
+
+This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
 
 **Since:** 8
 
@@ -399,7 +411,7 @@ Triggered when the text picker snaps to the selected item. This event cannot be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (value: string \| string[], index: number \| number[]) = & gt; void | Yes |  |
+| callback | (value: string \| string[], index: number \| number[]) =&gt; void | Yes |  |
 
 ## onChange
 
@@ -407,7 +419,9 @@ Triggered when the text picker snaps to the selected item. This event cannot be 
 onChange(callback: Optional<OnTextPickerChangeCallback>)
 ```
 
-Triggered when the text picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. When the picker contains text only or a combination of images and text, **value** indicates the text of the selected item. When the picker contains images only, **value** is empty. Compared with [onChange] onChange, this API supports the **undefined** type for the **callback** parameter.This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
+Triggered when the text picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. When the picker contains text only or a combination of images and text, **value** indicates the text of the selected item. When the picker contains images only, **value** is empty. Compared with [onChange] onChange, this API supports the **undefined** type for the **callback** parameter.
+
+This callback is triggered only after the scroll animation completes. To obtain real-time index changes, use [onEnterSelectedArea](#onenterselectedarea) instead.
 
 **Since:** 18
 
@@ -464,7 +478,9 @@ Triggered when an option enters the selection zone during text picker scrolling 
 onScrollStop(callback: TextPickerScrollStopCallback)
 ```
 
-Triggered when the scrolling in the text picker stops.If the scrolling is initiated by a gesture, this event is triggered when the finger is lifted from the screen and the scrolling stops.
+Triggered when the scrolling in the text picker stops.
+
+If the scrolling is initiated by a gesture, this event is triggered when the finger is lifted from the screen and the scrolling stops.
 
 > **NOTE：**
 > 
@@ -490,7 +506,9 @@ Triggered when the scrolling in the text picker stops.If the scrolling is initia
 onScrollStop(callback: Optional<TextPickerScrollStopCallback>)
 ```
 
-Triggered when the scrolling in the text picker stops. Compared with [onScrollStop&lt;sup&gt;14+&lt;/sup&gt;](#onscrollstop), this API supports the **undefined** type for the **callback** parameter.If the scrolling is initiated by a gesture, this event is triggered when the finger is lifted from the screen and the scrolling stops.
+Triggered when the scrolling in the text picker stops. Compared with [onScrollStop&lt;sup&gt;14+&lt;/sup&gt;](#onscrollstop), this API supports the **undefined** type for the **callback** parameter.
+
+If the scrolling is initiated by a gesture, this event is triggered when the finger is lifted from the screen and the scrolling stops.
 
 > **NOTE：**
 > 
@@ -574,7 +592,7 @@ Sets the index of the selected item or items in the data list. This setting take
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | [Optional](arkts-arkui-optional-t.md)&lt;number \| number[] & gt; | Yes | Index of the selected item or items in the data list. The index is zero-based.Default value: **0**If **index** is **undefined**, the **selected** value of [TextPickerOptions](arkts-arkui-textpickeroptions-i.md) is used.If it is negative or exceeds the maximum index, the default value is used. |
+| index | [Optional](arkts-arkui-optional-t.md)&lt;number \| number[]&gt; | Yes | Index of the selected item or items in the data list. The index is zero-based.Default value: **0**If **index** is **undefined**, the **selected** value of [TextPickerOptions](arkts-arkui-textpickeroptions-i.md) is used.If it is negative or exceeds the maximum index, the default value is used. |
 
 ## selectedTextStyle
 

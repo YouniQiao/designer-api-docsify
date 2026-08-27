@@ -11,7 +11,8 @@
 function isCellularDataRoamingEnabledSync(slotId: number): boolean
 ```
 
-Checks whether roaming is enabled for the cellular data service. This API returns the result synchronously.  
+Checks whether roaming is enabled for the cellular data service. This API returns the result synchronously.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 12

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## getBackgroundPolicyByUid

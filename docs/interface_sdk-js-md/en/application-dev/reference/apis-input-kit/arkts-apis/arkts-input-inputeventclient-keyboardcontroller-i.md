@@ -1,6 +1,7 @@
 # KeyboardController
 
 Provides the capability of simulating key operations. The simulated key operation sequence must meet the following requirements:
+
 1. A key can only be pressed when it is in the released state, or when it is the most recently pressed key and
 has not been released.
 2. A key can only be released after it has been pressed.
@@ -41,7 +42,7 @@ Presses a key. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -110,7 +111,7 @@ Releases a key. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

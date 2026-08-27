@@ -35,7 +35,7 @@ String.raw is usually used as a tag function of a Tagged Template String. When c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| template | { raw: readonly string[] \| ArrayLike & lt;string & gt;} | Yes |  |
+| template | { raw: readonly string[] \| ArrayLike&lt;string&gt;} | Yes |  |
 | substitutions | any[] | Yes |  |
 
 **Return value:**

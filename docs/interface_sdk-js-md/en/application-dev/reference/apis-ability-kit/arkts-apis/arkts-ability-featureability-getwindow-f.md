@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import featureAbility from '@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## getWindow
@@ -61,7 +61,7 @@ Obtains the window corresponding to this ability. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;window.Window & gt; | Promise used to return the window. |
+| Promise&lt;window.Window&gt; | Promise used to return the window. |
 
 **Examples**
 

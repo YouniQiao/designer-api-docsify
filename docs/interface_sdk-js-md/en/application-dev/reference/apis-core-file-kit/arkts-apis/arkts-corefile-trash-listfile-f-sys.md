@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import trash from '@kit.CoreFileKit';
+import { trash } from '@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -30,7 +30,7 @@ Lists the files and directories in the **Recently deleted** list.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;FileInfo & gt; | List of the files and directories obtained. |
+| Array&lt;FileInfo&gt; | List of the files and directories obtained. |
 
 **Error codes:**
 

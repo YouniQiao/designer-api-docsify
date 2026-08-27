@@ -17,7 +17,13 @@ label文本和字体的样式对象。
 font?: Font
 ```
 
-设置label文本字体样式。当页签为子页签时，默认值是字体大小16.0fp、字体类型'HarmonyOS Sans'，字体风格正常，选中时字重中等，未选中时字重正常。当页签为底部页签时，默认值是字体大小10.0fp、字体类型'HarmonyOS Sans'，字体风格正常，字重中等。从API version 12开始，底部页签内容左右排布时默认字体大小为12.0fp。
+设置label文本字体样式。
+
+当页签为子页签时，默认值是字体大小16.0fp、字体类型'HarmonyOS Sans'，字体风格正常，选中时字重中等，未选中时字重正常。
+
+当页签为底部页签时，默认值是字体大小10.0fp、字体类型'HarmonyOS Sans'，字体风格正常，字重中等。
+
+从API version 12开始，底部页签内容左右排布时默认字体大小为12.0fp。
 
 **类型：** Font
 
@@ -53,7 +59,9 @@ heightAdaptivePolicy?: TextHeightAdaptivePolicy
 maxFontSize?: number | ResourceStr
 ```
 
-设置label文本最大显示字号（不支持百分比设置）。需配合minFontSize以及maxLines或布局大小限制使用。自适应文本大小生效后，font.size不生效。默认值是0.0fp，即默认自适应文本大小不生效。取值范围：[minFontSize, +∞)。异常值时取默认值。
+设置label文本最大显示字号（不支持百分比设置）。需配合minFontSize以及maxLines或布局大小限制使用。自适应文本大小生效后，font.size不生效。默认值是0.0fp，即默认自适应文本大小不生效。
+
+取值范围：[minFontSize, +∞)。异常值时取默认值。
 
 **类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -73,7 +81,9 @@ maxFontSize?: number | ResourceStr
 maxLines?: number
 ```
 
-设置label文本的最大行数。如果指定此参数，则文本最多不会超过指定的行。如果有多余的文本，可以通过textOverflow来指定截断方式。默认值是1。取值范围：[1, +∞)。异常值时取默认值。
+设置label文本的最大行数。如果指定此参数，则文本最多不会超过指定的行。如果有多余的文本，可以通过textOverflow来指定截断方式。默认值是1。
+
+取值范围：[1, +∞)。异常值时取默认值。
 
 **类型：** number
 
@@ -91,7 +101,9 @@ maxLines?: number
 minFontSize?: number | ResourceStr
 ```
 
-设置label文本最小显示字号（不支持百分比设置）。需配合maxFontSize以及maxLines或布局大小限制使用。自适应文本大小生效后，font.size不生效。默认值是0.0fp，即默认自适应文本大小不生效。取值范围：(0, +∞)。异常值时取默认值。
+设置label文本最小显示字号（不支持百分比设置）。需配合maxFontSize以及maxLines或布局大小限制使用。自适应文本大小生效后，font.size不生效。默认值是0.0fp，即默认自适应文本大小不生效。
+
+取值范围：(0, +∞)。异常值时取默认值。
 
 **类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -129,7 +141,9 @@ overflow?: TextOverflow
 selectedColor?: ResourceColor
 ```
 
-设置label文本字体选中时的颜色。默认值：#FF007DFF
+设置label文本字体选中时的颜色。
+
+默认值：#FF007DFF
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -149,7 +163,9 @@ selectedColor?: ResourceColor
 unselectedColor?: ResourceColor
 ```
 
-设置label文本字体未选中时的颜色。默认值：#99182431
+设置label文本字体未选中时的颜色。
+
+默认值：#99182431
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

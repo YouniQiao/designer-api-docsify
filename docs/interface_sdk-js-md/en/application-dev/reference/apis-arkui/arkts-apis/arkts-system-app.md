@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import App, { AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } from '@kit.ArkUI';
+import { App, AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } from '@kit.ArkUI';
 ```
 
 ## Summary

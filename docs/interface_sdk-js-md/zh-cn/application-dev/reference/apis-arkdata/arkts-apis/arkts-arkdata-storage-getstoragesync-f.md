@@ -29,7 +29,7 @@ function getStorageSync(path: string): Storage
 
 | 类型 | 说明 |
 | --- | --- |
-| [Storage](arkts-arkdata-system-storage-storage-c.md) | 获取到要操作的Storage实例，用于进行数据存储操作。 |
+| Storage | 获取到要操作的Storage实例，用于进行数据存储操作。 |
 
 **示例**
 

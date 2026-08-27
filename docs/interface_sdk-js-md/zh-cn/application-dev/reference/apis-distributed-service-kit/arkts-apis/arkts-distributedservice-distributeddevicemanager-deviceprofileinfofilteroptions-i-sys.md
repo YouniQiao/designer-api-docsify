@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedDeviceManager from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## deviceIdList
@@ -36,7 +36,8 @@ deviceIdList?: Array<string>
 isCloud : boolean
 ```
 
-表示是否需要实时从云端获取设备列表。  
+表示是否需要实时从云端获取设备列表。
+
 - false：表示从设备获取。  
 - true：表示从云端获取。
 

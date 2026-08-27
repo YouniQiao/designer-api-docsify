@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## openGeneratorNodeGraph
@@ -33,4 +33,4 @@ Open the AI node graph Sheet.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the result. |
+| Promise&lt;void&gt; | Returns the result. |

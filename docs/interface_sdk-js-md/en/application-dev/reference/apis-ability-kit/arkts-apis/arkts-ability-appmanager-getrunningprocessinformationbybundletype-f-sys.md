@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## getRunningProcessInformationByBundleType
@@ -33,7 +33,7 @@ Obtains the information about the running process based on the bundle type. This
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;ProcessInformation & gt; & gt; | Promise used to return the process information. |
+| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise used to return the process information. |
 
 **Error codes:**
 

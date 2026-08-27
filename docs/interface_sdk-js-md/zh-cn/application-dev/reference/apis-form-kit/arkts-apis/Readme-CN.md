@@ -1,12 +1,12 @@
 # ArkTS API<!--arkts-formkit-->
 
 <!--Del-->
-- [@ohos.app.form.formAgent](arkts-app-form-formagent.md)<!--DelEnd-->
+- [@ohos.app.form.formAgent(FormAgent)](arkts-app-form-formagent.md)<!--DelEnd-->
   <!--Del-->
   - [requestPublishForm(系统接口)](arkts-form-formagent-requestpublishform-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateFormCrossBundle(系统接口)](arkts-form-formagent-updateformcrossbundle-f-sys.md)<!--DelEnd-->
-- [@ohos.app.form.formBindingData](arkts-app-form-formbindingdata.md)
+- [@ohos.app.form.formBindingData(卡片数据绑定类)](arkts-app-form-formbindingdata.md)
   - [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md)
   - [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md)
   - [ProxyData](arkts-form-formbindingdata-proxydata-i.md)
@@ -17,7 +17,7 @@
   <!--Del-->
   - [FormExtensionAbility(系统接口)](arkts-form-app-form-formextensionability-formextensionability-c-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.app.form.formHost](arkts-app-form-formhost.md)<!--DelEnd-->
+- [@ohos.app.form.formHost(formHost)](arkts-app-form-formhost.md)<!--DelEnd-->
   <!--Del-->
   - [acquireFormData(系统接口)](arkts-form-formhost-acquireformdata-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -102,7 +102,7 @@
   - [updateFormLockedState(系统接口)](arkts-form-formhost-updateformlockedstate-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateFormSize(系统接口)](arkts-form-formhost-updateformsize-f-sys.md)<!--DelEnd-->
-- [@ohos.app.form.formInfo](arkts-app-form-forminfo.md)
+- [@ohos.app.form.formInfo(formInfo)](arkts-app-form-forminfo.md)
   <!--Del-->
   - [ChangeSceneAnimationStateRequest(系统接口)](arkts-form-forminfo-changesceneanimationstaterequest-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -170,7 +170,7 @@
   - [SceneAnimationTriggerType(系统接口)](arkts-form-forminfo-sceneanimationtriggertype-e-sys.md)<!--DelEnd-->
   - [VisibilityType](arkts-form-forminfo-visibilitytype-e.md)
 <!--Del-->
-- [@ohos.app.form.formObserver](arkts-app-form-formobserver.md)<!--DelEnd-->
+- [@ohos.app.form.formObserver(formObserver)](arkts-app-form-formobserver.md)<!--DelEnd-->
   <!--Del-->
   - [getRunningFormInfoById(系统接口)](arkts-form-formobserver-getrunningforminfobyid-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -181,7 +181,7 @@
   - [off(系统接口)](arkts-form-formobserver-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [on(系统接口)](arkts-form-formobserver-on-f-sys.md)<!--DelEnd-->
-- [@ohos.app.form.formProvider](arkts-app-form-formprovider.md)
+- [@ohos.app.form.formProvider(formProvider)](arkts-app-form-formprovider.md)
   <!--Del-->
   - [activateSceneAnimation(系统接口)](arkts-form-formprovider-activatesceneanimation-f-sys.md)<!--DelEnd-->
   - [cancelOverflow](arkts-form-formprovider-canceloverflow-f.md)
@@ -216,15 +216,15 @@
 - [@ohos.app.form.LiveFormExtensionAbility](arkts-app-form-liveformextensionability.md)
   - [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md)
   - [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md)
-- [@ohos.application.formBindingData](arkts-application-formbindingdata.md)
+- [@ohos.application.formBindingData(卡片数据绑定类)](arkts-application-formbindingdata.md)
   - [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md)
   - [FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md)
-- [@ohos.application.formError](arkts-application-formerror.md)
+- [@ohos.application.formError(formError)](arkts-application-formerror.md)
   - [FormError](arkts-form-formerror-formerror-e.md)
   <!--Del-->
   - [FormError(系统接口)](arkts-form-formerror-formerror-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.application.formHost](arkts-application-formhost.md)<!--DelEnd-->
+- [@ohos.application.formHost(formHost)](arkts-application-formhost.md)<!--DelEnd-->
   <!--Del-->
   - [acquireFormState(系统接口)](arkts-form-formhost-acquireformstate-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -259,7 +259,7 @@
   - [releaseForm(系统接口)](arkts-form-formhost-releaseform-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [requestForm(系统接口)](arkts-form-formhost-requestform-depr-f-sys.md)<!--DelEnd-->
-- [@ohos.application.formInfo](arkts-application-forminfo.md)
+- [@ohos.application.formInfo(formInfo)](arkts-application-forminfo.md)
   - [FormInfo](arkts-form-forminfo-forminfo-depr-i.md)
   - [FormStateInfo](arkts-form-forminfo-formstateinfo-depr-i.md)
   - [ColorMode](arkts-form-forminfo-colormode-depr-e.md)
@@ -268,7 +268,7 @@
   - [FormParam(系统接口)](arkts-form-forminfo-formparam-depr-e-sys.md)<!--DelEnd-->
   - [FormState](arkts-form-forminfo-formstate-depr-e.md)
   - [FormType](arkts-form-forminfo-formtype-depr-e.md)
-- [@ohos.application.formProvider](arkts-application-formprovider.md)
+- [@ohos.application.formProvider(formProvider)](arkts-application-formprovider.md)
   - [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md)
   - [updateForm](arkts-form-formprovider-updateform-depr-f.md)
 - application<!--arkts-formkit-application-->

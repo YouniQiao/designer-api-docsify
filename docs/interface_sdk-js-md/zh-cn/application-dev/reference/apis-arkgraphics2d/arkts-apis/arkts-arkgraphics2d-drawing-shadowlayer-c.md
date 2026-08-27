@@ -17,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## create
@@ -86,7 +86,7 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color | 
 | blurRadius | number | 是 | 阴影的半径，必须为大于0的浮点数。单位为物理像素px。 |
 | x | number | 是 | x轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
 | y | number | 是 | y轴上的偏移量，该参数为浮点数。单位为物理像素px。 |
-| color | common2D.Color \| number | 是 | 颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，必须是16进制ARGB格式的无符 号整数，取值范围为[0, 0xFFFFFFFF]。 |
+| color | common2D.Color \| number | 是 | 颜色。为common2D.Color类型时，每个颜色通道的值是[0, 255]的整数；为number类型时，必须是16进制ARGB格式的无符号整数，取值范围为[0, 0xFFFFFFFF]。 |
 
 **返回值：**
 

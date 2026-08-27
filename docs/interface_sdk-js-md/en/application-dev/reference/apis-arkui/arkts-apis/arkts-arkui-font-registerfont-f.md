@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import font from '@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## registerFont
@@ -12,7 +12,9 @@ import font from '@kit.ArkUI';
 function registerFont(options: FontOptions): void
 ```
 
-Registers a custom font with the font manager.This API is asynchronous and does not support concurrent calls.
+Registers a custom font with the font manager.
+
+This API is asynchronous and does not support concurrent calls.
 
 > **NOTE：**
 > 

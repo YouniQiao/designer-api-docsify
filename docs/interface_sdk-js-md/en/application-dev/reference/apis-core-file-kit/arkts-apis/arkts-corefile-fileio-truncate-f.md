@@ -32,7 +32,7 @@ Truncates a file based on the file path. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

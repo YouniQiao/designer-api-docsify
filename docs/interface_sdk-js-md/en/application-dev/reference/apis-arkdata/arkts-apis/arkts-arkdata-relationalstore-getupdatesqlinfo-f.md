@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## getUpdateSqlInfo
@@ -22,9 +22,9 @@ Obtains the SQL statement used to update data. This API returns the result synch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes | RdbPredicates** object that matches the specified field. |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Field information and corresponding values of the data to be written to the database. |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | Resolution used to resolve the conflict. Default value: **relationalStore.ConflictResolution.ON_CONFLICT_NONE**. |
+| predicates | RdbPredicates | Yes | RdbPredicates** object that matches the specified field. |
+| values | ValuesBucket | Yes | Field information and corresponding values of the data to be written to the database. |
+| conflict | ConflictResolution | No | Resolution used to resolve the conflict. Default value: **relationalStore.ConflictResolution.ON_CONFLICT_NONE**. |
 
 **Return value:**
 

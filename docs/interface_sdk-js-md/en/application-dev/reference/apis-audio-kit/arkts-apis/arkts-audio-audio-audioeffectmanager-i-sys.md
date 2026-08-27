@@ -11,8 +11,7 @@ Implements audio effect management.
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## getAudioEffectProperty
@@ -291,7 +290,7 @@ Sets audio separation effect enable or disable for specific application process,
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -345,7 +344,7 @@ Sets audio separation effect volume for specific volume type. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

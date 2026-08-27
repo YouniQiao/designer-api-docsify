@@ -9,7 +9,7 @@ Creates an **Animator** object.
 ## Modules to Import
 
 ```TypeScript
-import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
 ## create

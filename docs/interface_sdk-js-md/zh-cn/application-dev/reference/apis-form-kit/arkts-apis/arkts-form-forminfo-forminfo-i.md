@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import formInfo from '@kit.FormKit';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## abilityName
@@ -50,8 +50,11 @@ bundleName: string
 colorMode: ColorMode
 ```
 
-卡片颜色模式。  
-**说明：**从API version 9开始支持，从API version 20开始废弃。无替代接口。
+卡片颜色模式。
+
+**说明：**
+
+从API version 9开始支持，从API version 20开始废弃。无替代接口。
 
 **类型：** ColorMode
 
@@ -85,7 +88,8 @@ customizeData: Record<string, string>
 defaultDimension: number
 ```
 
-卡片规格。具体可选规格参考[FormDimension](arkts-form-forminfo-formdimension-e.md)。  
+卡片规格。具体可选规格参考[FormDimension](arkts-form-forminfo-formdimension-e.md)。
+
 **说明：** 数值为[1, 9]的整数，数值5从API version 9开始支持，从API version 20开始废弃。超出范围时抛出异常。
 
 **类型：** number
@@ -118,7 +122,8 @@ description: string
 descriptionId: number
 ```
 
-卡片描述ID。  
+卡片描述ID。
+
 **说明：** 数值为大于0小于2^32的整数。
 
 **类型：** number
@@ -151,7 +156,8 @@ displayName: string
 displayNameId: number
 ```
 
-卡片预览时标识卡片名称的ID。  
+卡片预览时标识卡片名称的ID。
+
 **说明：** 数值为大于0小于2^32的整数。
 
 **类型：** number
@@ -184,8 +190,10 @@ formConfigAbility: string
 formVisibleNotify: boolean
 ```
 
-卡片是否使能可见通知。  
-- true：通知卡片提供方可见状态变化。  
+卡片是否使能可见通知。
+
+- true：通知卡片提供方可见状态变化。
+
 - false：不通知卡片提供方可见状态变化。
 
 **类型：** boolean
@@ -202,8 +210,10 @@ formVisibleNotify: boolean
 isDefault: boolean
 ```
 
-卡片是否是默认卡片。  
-- true：默认卡片。  
+卡片是否是默认卡片。
+
+- true：默认卡片。
+
 - false：非默认卡片。
 
 **类型：** boolean
@@ -220,8 +230,12 @@ isDefault: boolean
 isDynamic: boolean
 ```
 
-卡片是否为动态卡片。仅ArkTS卡片区分动静态卡片，JS卡片均为动态卡片。  
-- true：为动态卡片。  
+卡片是否为动态卡片。
+
+仅ArkTS卡片区分动静态卡片，JS卡片均为动态卡片。
+
+- true：为动态卡片。
+
 - false：为静态卡片。
 
 **类型：** boolean
@@ -302,7 +316,8 @@ scheduledUpdateTime: string
 supportDimensions: Array<number>
 ```
 
-卡片支持的规格。具体可选规格参考[FormDimension](arkts-form-forminfo-formdimension-e.md)。  
+卡片支持的规格。具体可选规格参考[FormDimension](arkts-form-forminfo-formdimension-e.md)。
+
 **说明：** 最大长度为9，数值取值范围[1, 9]的整数的数组，数值5从API version 9开始支持，从API version 20开始废弃。超出范围时抛出异常。
 
 **类型：** Array&lt;number&gt;
@@ -319,7 +334,8 @@ supportDimensions: Array<number>
 supportedShapes: Array<number>
 ```
 
-卡片支持的形状。具体可选形状参考[FormShape&lt;sup&gt;12+&lt;/sup&gt;](arkts-form-forminfo-formshape-e.md)  
+卡片支持的形状。具体可选形状参考[FormShape&lt;sup&gt;12+&lt;/sup&gt;](arkts-form-forminfo-formshape-e.md)
+
 **说明：** 1代表方形，2代表圆形。
 
 **类型：** Array&lt;number&gt;
@@ -336,8 +352,12 @@ supportedShapes: Array<number>
 transparencyEnabled: boolean
 ```
 
-卡片是否支持设置背景透明度。ArkTS卡片由用户配置决定是否支持，JS卡片均不支持。  
-- true：表示是透明卡片。  
+卡片是否支持设置背景透明度。
+
+ArkTS卡片由用户配置决定是否支持，JS卡片均不支持。
+
+- true：表示是透明卡片。
+
 - false：表示不是透明卡片。
 
 **类型：** boolean
@@ -356,7 +376,8 @@ transparencyEnabled: boolean
 type: FormType
 ```
 
-卡片类型。当前支持JS卡片、ArkTS卡片。  
+卡片类型。当前支持JS卡片、ArkTS卡片。
+
 **说明：** 当卡片类型为JS时，isDynamic强制为true，transparencyEnabled不生效，jsComponentName为必填项。
 
 **类型：** FormType
@@ -373,7 +394,8 @@ type: FormType
 updateDuration: number
 ```
 
-卡片更新周期。  
+卡片更新周期。
+
 **说明：** 数值为[0, 336]的整数。超出范围时抛出异常。
 
 **类型：** number
@@ -390,8 +412,10 @@ updateDuration: number
 updateEnabled: boolean
 ```
 
-卡片是否使能更新。  
-- true：表示支持周期性刷新。  
+卡片是否使能更新。
+
+- true：表示支持周期性刷新。
+
 - false：表示不支持周期性刷新。
 
 **类型：** boolean

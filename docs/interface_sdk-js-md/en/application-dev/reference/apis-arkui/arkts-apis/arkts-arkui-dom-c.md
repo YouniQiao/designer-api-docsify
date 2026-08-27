@@ -32,4 +32,4 @@ create a dynamic dom by tag, return element
 
 | Type | Description |
 | --- | --- |
-| [Element](arkts-arkui-viewmodel-element-i.md) |  |
+| Element |  |

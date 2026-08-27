@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import ssap from '@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## createServer
@@ -26,7 +26,7 @@ function createServer(): Server
 
 | 类型 | 说明 |
 | --- | --- |
-| [Server](arkts-connectivity-ssap-server-i.md) | SSAP服务端实例。 |
+| Server | SSAP服务端实例。 |
 
 **错误码：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getMifareClassic
@@ -30,7 +30,7 @@ Obtains a **MifareClassicTag** object, which allows access to the tags that use 
 
 | Type | Description |
 | --- | --- |
-| [MifareClassicTag](arkts-connectivity-tag-mifareclassictag-t.md) | MifareClassicTag** object obtained. |
+| MifareClassicTag | MifareClassicTag** object obtained. |
 
 **Error codes:**
 

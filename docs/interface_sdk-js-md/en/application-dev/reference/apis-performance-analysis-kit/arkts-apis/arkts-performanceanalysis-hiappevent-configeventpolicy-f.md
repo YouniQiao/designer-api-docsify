@@ -11,7 +11,9 @@
 function configEventPolicy(policy: EventPolicy): Promise<void>
 ```
 
-Sets a system event configuration policy. This API uses a promise to return the result.In the same lifecycle, you can set system event configuration by policy.
+Sets a system event configuration policy. This API uses a promise to return the result.
+
+In the same lifecycle, you can set system event configuration by policy.
 
 **Since:** 22
 
@@ -29,7 +31,7 @@ Sets a system event configuration policy. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

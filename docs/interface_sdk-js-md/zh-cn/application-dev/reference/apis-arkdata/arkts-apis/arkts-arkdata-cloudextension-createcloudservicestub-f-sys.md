@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import cloudExtension from '@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## createCloudServiceStub
@@ -30,7 +30,7 @@ function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObjec
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;rpc.RemoteObject & gt; | Promise对象，返回CloudService的RemoteObject对象。 |
+| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回CloudService的RemoteObject对象。 |
 
 **示例**
 

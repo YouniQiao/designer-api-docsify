@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import deviceControl from '@kit.MDMKit';
+import { deviceControl } from '@kit.MDMKit';
 ```
 
 ## operateDevice
@@ -27,7 +27,7 @@ function operateDevice(admin: Want, operate: string, addition?: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| operate | string | 是 | 要执行的操作。仅支持以下操作类型：   - resetFactory：设备恢复出厂设置。接口调用后，设备将立即恢复出厂设置。恢复完成后，整机设备数据将全部被擦除且无法恢 复。企业需要做好应用的安全设计，防止应用被攻击导致企业数据丢失。已经通过 [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了恢复出厂，需要先解除禁用。   - reboot：设备重启。   - shutDown：设备关机。   - lockScreen：设备锁屏。 |
+| operate | string | 是 | 要执行的操作。仅支持以下操作类型：   - resetFactory：设备恢复出厂设置。接口调用后，设备将立即恢复出厂设置。恢复完成后，整机设备数据将全部被擦除且无法恢复。企业需要做好应用的安全设计，防止应用被攻击导致企业数据丢失。已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了恢复出厂，需要先解除禁用。   - reboot：设备重启。   - shutDown：设备关机。   - lockScreen：设备锁屏。 |
 | addition | string | 否 | 执行时附加参数。当前为预留参数，无需传入。 |
 
 **错误码：**
@@ -81,8 +81,8 @@ function operateDevice(admin: Want, operation: Operation, addition?: string): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| operation | [Operation](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-operation-e.md) | 是 | 要执行的操作。 |
-| addition | string | 否 | 执行时附加参数。当operation类型为磁盘擦除时，附加参数为图片的沙箱路径。 若磁盘擦除成功后需给用户展示信息，可设置该参数传递信息，该图片大小需小于5KB（建议使用二维码图片）。 长度限制为1024字节。若operation类型为锁定设备时，表示屏幕锁定后展示的描述信息。若operation为其他类型时，目前无需传入。 |
+| operation | Operation | 是 | 要执行的操作。 |
+| addition | string | 否 | 执行时附加参数。当operation类型为磁盘擦除时，附加参数为图片的沙箱路径。若磁盘擦除成功后需给用户展示信息，可设置该参数传递信息，该图片大小需小于5KB（建议使用二维码图片）。长度限制为1024字节。若operation类型为锁定设备时，表示屏幕锁定后展示的描述信息。若operation为其他类型时，目前无需传入。 |
 
 **错误码：**
 

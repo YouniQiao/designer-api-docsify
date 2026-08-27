@@ -126,7 +126,11 @@ holder2.setSize(1000);
 takeNext(): AppEventPackage
 ```
 
-获取订阅事件。系统根据setSize设置的数据大小阈值或setRow设置的条数来取出订阅事件数据，默认取1条订阅事件。当订阅事件数据全部被取出时返回null。当setRow和setSize同时调用时仅setRow生效。
+获取订阅事件。
+
+系统根据setSize设置的数据大小阈值或setRow设置的条数来取出订阅事件数据，默认取1条订阅事件。当订阅事件数据全部被取出时返回null。
+
+当setRow和setSize同时调用时仅setRow生效。
 
 **起始版本：** 9
 

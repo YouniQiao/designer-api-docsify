@@ -15,7 +15,7 @@ Defines the type of data to return for a subscription to data changes of the gyr
 ## Modules to Import
 
 ```TypeScript
-import Sensor, { AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
+import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
 ```
 
 ## fail
@@ -77,7 +77,10 @@ Callback invoked when the gyroscope sensor data changes.
 interval: string
 ```
 
-Interval at which the callback is invoked to return the gyroscope sensor data.The default value is **normal**. The options are as follows:  
+Interval at which the callback is invoked to return the gyroscope sensor data.
+
+The default value is **normal**. The options are as follows:
+
 - **game**: called at an interval of 20 ms, which is applicable to gaming scenarios.  
 - **ui**: called at an interval of 60 ms, which is applicable to UI updating scenarios.  
 - **normal**: called at an interval of 200 ms, which is applicable to power-saving scenarios.

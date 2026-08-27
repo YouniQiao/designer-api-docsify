@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## needReceiveStream
@@ -18,7 +18,7 @@ import abilityConnectionManager from '@kit.DistributedServiceKit';
 needReceiveStream?: boolean
 ```
 
-true表示需要接收流（当本端需要从对端接收视频流时选择）， false表示不需要接收流（当本端只发送不接收时选择）。默认值为false。
+true表示需要接收流（当本端需要从对端接收视频流时选择），false表示不需要接收流（当本端只发送不接收时选择）。默认值为false。
 
 **类型：** boolean
 
@@ -36,7 +36,7 @@ true表示需要接收流（当本端需要从对端接收视频流时选择）�
 needSendStream?: boolean
 ```
 
-true表示需要发送流（当本端需要向对端发送视频流时选择）， false表示不需要发送流（当本端只接收不发送时选择）。默认值为false。
+true表示需要发送流（当本端需要向对端发送视频流时选择），false表示不需要发送流（当本端只接收不发送时选择）。默认值为false。
 
 **类型：** boolean
 

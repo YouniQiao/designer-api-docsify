@@ -1,7 +1,9 @@
 # Toggle
 
 组件提供勾选框样式、状态按钮样式和开关样式，适用于需要快速切换状态或进行单选确认的场景，能够有效提升交互体验与界面的直观性。
+
 > **说明：**
+
 > - 从API版本26.0.0开始，Toggle组件支持新材质效果。Toggle组件使用通用新材质属性systemMaterial时，不同 > [ToggleType](arkts-arkui-toggletype-e.md)类型的效果不同： > > - ToggleType.Checkbox：当前未适配系统材质效果，设置系统材质不会出现系统材质相关的动效和视觉效果。 > > - ToggleType.Switch：传入材质参数时，使用组件内部预设的视觉参数，传入的材质参数仅作为开启新材质的开关标记，不影响实际视觉效果。主要影响Toggle的滑块大小、滑块样式、阴影等视觉属性。设置 > [switchPointColor](arkts-arkui-toggle-attribute.md#switchpointcolor)后会出现点光源效果，点光源颜色跟随switchPointColor的设置。传入undefined时，新材质不生效， > 表现为原先的Toggle样式。 > > - ToggleType.Button：设置系统材质的效果与Button组件设置系统材质的效果相同，主要影响背景颜色、边框、阴影等视觉属性。
 
 ## 子组件
@@ -34,11 +36,15 @@ Toggle(options: ToggleOptions)
 
 | 名称 | 说明 |
 | --- | --- |
+| [SwitchStyle](arkts-arkui-switchstyle-i.md) | Switch类型的样式。 |
+| [ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。 |
+| [ToggleOptions](arkts-arkui-toggleoptions-i.md) | Toggle组件的配置信息。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
+| [ToggleType](arkts-arkui-toggletype-e.md) | Toggle的样式。 |
 
 ## 示例
 
@@ -202,7 +208,7 @@ struct Index {
 }
 ```
 
-从API版本26.0.0开始，新增systemMaterial属性。
+系统材质的实际显示效果与设备的算力档位相关，相同的代码在不同算力档位的设备上显示效果存在差异，低算力设备上会显示简化后的材质效果。算力档位由系统根据设备硬件能力自动划分和管理，应用无需感知，也无需进行额外设置，系统会根据当前设备的算力档位自动适配材质的显示效果。
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';
@@ -215,23 +221,19 @@ struct ToggleMaterialTest {
     Column({ space: 10 }) {
       // 不设置系统材质接口，无系统材质效果
       Toggle({ type: ToggleType.Switch, isOn: true })
-        .size({ width: 80, height: 40 })
 
       // systemMaterial设置undefined，恢复为无材质的效果
       Toggle({ type: ToggleType.Switch, isOn: true })
-        .size({ width: 80, height: 40 })
         .systemMaterial(undefined)
 
-      // 开启系统材质效果（systemMaterial参数任意仅作为系统材质开关，最终使用组件侧固定参数），无点光源效果
+      // 开启系统材质效果（systemMaterial参数任意仅作为系统材质开关，最终使用组件侧固定参数），默认白色点光源（颜色为switchPointColor默认值）
       Toggle({ type: ToggleType.Switch, isOn: true })
-        .size({ width: 80, height: 40 })
         .systemMaterial(new uiMaterial.Material())
 
-      // 开启系统材质效果（systemMaterial参数任意仅作为系统材质开关，最终使用组件侧固定参数），有点光源效果
+      // 开启系统材质效果（systemMaterial参数任意仅作为系统材质开关，最终使用组件侧固定参数），点光源颜色跟随switchPointColor设置
       Toggle({ type: ToggleType.Switch, isOn: true })
-        .size({ width: 80, height: 40 })
         .systemMaterial(new uiMaterial.Material())
-        .switchPointColor(Color.White)
+        .switchPointColor(Color.Red)
     }
     .width('100%')
   }

@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit.AdComponent';
-import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
-import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
-import advertising from '@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## getAdRequestBody
@@ -32,7 +29,7 @@ Obtains the body of an ad request. This API uses a promise to return the result 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the ad data of the string type. |
+| Promise&lt;string&gt; | Promise used to return the ad data of the string type. |
 
 **Error codes:**
 

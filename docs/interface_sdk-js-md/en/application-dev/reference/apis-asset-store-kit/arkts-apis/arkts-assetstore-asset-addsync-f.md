@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import asset from '@kit.AssetStoreKit';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## addSync
@@ -12,7 +12,9 @@ import asset from '@kit.AssetStoreKit';
 function addSync(attributes: AssetMap): void
 ```
 
-Adds an asset. This API returns the result synchronously.To set [IS_PERSISTENT](arkts-assetstore-asset-tag-e.md#is_persistent), the application must have the ohos.permission.STORE_PERSISTENT_DATA permission.
+Adds an asset. This API returns the result synchronously.
+
+To set [IS_PERSISTENT](arkts-assetstore-asset-tag-e.md#is_persistent), the application must have the ohos.permission.STORE_PERSISTENT_DATA permission.
 
 **Since:** 12
 

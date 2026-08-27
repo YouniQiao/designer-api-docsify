@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemTime from '@kit.BasicServicesKit';
-import systemTimer from '@kit.BasicServicesKitr';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## getTimezone
@@ -75,7 +74,7 @@ Obtains the system time zone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the system time zone. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones). |
+| Promise&lt;string&gt; | Promise used to return the system time zone. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones). |
 
 **Error codes:**
 

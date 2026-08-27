@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## getBackgroundTaskState
@@ -34,7 +34,7 @@ Obtains the authorization information of a continuous task.
 
 | Type | Description |
 | --- | --- |
-| [UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | Authorization result. |
+| UserAuthResult | Authorization result. |
 
 **Error codes:**
 

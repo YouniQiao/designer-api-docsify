@@ -99,7 +99,7 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检测表示支持该闪光灯模式。true表示支持，false表示不支持。接口调用失败会抛出相应错误码并返回undefined，错误码类型 [CameraErrorCode]{ |
+| boolean | 检测表示支持该闪光灯模式。true表示支持，false表示不支持。接口调用失败会抛出相应错误码并返回undefined，错误码类型[CameraErrorCode]{ |
 
 **错误码：**
 

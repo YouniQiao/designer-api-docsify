@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import cooperate from '@kit.DistributedServiceKit';
+import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
 ## 汇总

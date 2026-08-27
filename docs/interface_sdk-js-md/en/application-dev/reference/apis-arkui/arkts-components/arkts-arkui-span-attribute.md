@@ -1,6 +1,10 @@
 # Span properties/events
 
-Inherited from [BaseSpan](arkts-arkui-basespan-c.md).Among universal events, only onClick click events and onHover hover events are supported.@extends CommonMethod&lt;SpanAttribute&gt; [since 7 - 10] @extends BaseSpan&lt;SpanAttribute&gt; [since 11]
+Inherited from [BaseSpan](arkts-arkui-basespan-c.md).
+
+Among universal events, only onClick click events and onHover hover events are supported.
+
+@extends CommonMethod&lt;SpanAttribute&gt; [since 7 - 10] @extends BaseSpan&lt;SpanAttribute&gt; [since 11]
 
 **Inheritance/Implementation:** SpanAttribute extends BaseSpan<SpanAttribute>
 
@@ -55,7 +59,7 @@ Sets the text style, covering the font size, font width, Font family, and font s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](#font) | Yes | Text style. |
+| value | Font | Yes | Text style. |
 
 ## font
 
@@ -77,7 +81,7 @@ Used to set the font of span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](#font) | Yes | the span font size, font weight, font family and font style. |
+| value | Font | Yes | the span font size, font weight, font family and font style. |
 | fontConfigs | [FontConfigs](../arkts-apis/arkts-arkui-fontconfigs-i.md) | No | the configuration of font. |
 
 ## fontColor
@@ -122,7 +126,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Font family.Default font: **'HarmonyOS Sans'**To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. |
+| value | string \| Resource | Yes | Font family.Default font: **'HarmonyOS Sans'**To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. |
 
 ## fontSize
 
@@ -144,7 +148,7 @@ Sets the font size.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. The default font size is 16 fp. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported. Percentage values are not supported.Default value on wearable devices: **15fp**. |
+| value | number \| string \| Resource | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. The default font size is 16 fp. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported. Percentage values are not supported.Default value on wearable devices: **15fp**. |
 
 ## fontStyle
 
@@ -166,7 +170,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](#fontstyle) | Yes | Font style.Default value: **FontStyle.Normal |
+| value | FontStyle | Yes | Font style.Default value: **FontStyle.Normal |
 
 ## fontVariations
 
@@ -188,7 +192,7 @@ Set the font variation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontVariations | Array & lt;FontVariation & gt; | Yes | Indicates the span font variation. |
+| fontVariations | Array&lt;FontVariation&gt; | Yes | Indicates the span font variation. |
 
 ## fontWeight
 

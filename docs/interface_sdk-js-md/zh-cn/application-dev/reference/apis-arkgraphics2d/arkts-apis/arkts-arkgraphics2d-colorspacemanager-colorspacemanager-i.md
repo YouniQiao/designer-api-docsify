@@ -1,6 +1,8 @@
 # ColorSpaceManager
 
-当前色域对象实例。下列API示例中都需先使用[create()](arkts-arkgraphics2d-colorspacemanager-create-f.md)获取到ColorSpaceManager实例，再通过此实例调用对应方法。
+当前色域对象实例。
+
+下列API示例中都需先使用[create()](arkts-arkgraphics2d-colorspacemanager-create-f.md)获取到ColorSpaceManager实例，再通过此实例调用对应方法。
 
 **起始版本：** 9
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import colorSpaceManager from '@kit.ArkGraphics2D';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## getColorSpaceName
@@ -28,7 +30,7 @@ getColorSpaceName(): ColorSpace
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) | 返回色域类型枚举值。 |
+| ColorSpace | 返回色域类型枚举值。 |
 
 **错误码：**
 
@@ -100,7 +102,7 @@ getWhitePoint(): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;number & gt; | 返回色域白点值[x, y]。 |
+| Array&lt;number&gt; | 返回色域白点值[x, y]。 |
 
 **错误码：**
 

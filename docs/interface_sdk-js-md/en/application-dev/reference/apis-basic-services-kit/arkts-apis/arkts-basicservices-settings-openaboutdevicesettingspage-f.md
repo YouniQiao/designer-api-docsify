@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import settings from '@kit.BasicServicesKit';
-import settingsLite from '@kit.BasicServicesKitLite';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## openAboutDeviceSettingsPage

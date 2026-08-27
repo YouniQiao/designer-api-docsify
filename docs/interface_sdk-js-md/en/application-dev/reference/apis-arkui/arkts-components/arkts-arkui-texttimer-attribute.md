@@ -1,6 +1,8 @@
 # TextTimer properties/events
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
+
+In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
 
 **Inheritance/Implementation:** TextTimerAttribute extends CommonMethod<TextTimerAttribute>
 
@@ -121,7 +123,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](#fontstyle) | Yes | Font style, for example, italic.Default value: **FontStyle.Normal |
+| value | FontStyle | Yes | Font style, for example, italic.Default value: **FontStyle.Normal |
 
 ## fontWeight
 
@@ -151,7 +153,9 @@ Sets the font weight of the text. If the value is too large, the text in differe
 format(value: string)
 ```
 
-Sets the custom format. The value must contain at least one of the following keywords: **HH**, **mm**, **ss**, and **SS**. If the date format is yy, MM, or dd, the default value is used.The timer update frequency is in the minimum unit of **format**. For example, if **format** is set to **'HH:mm'**, the update frequency is one minute.
+Sets the custom format. The value must contain at least one of the following keywords: **HH**, **mm**, **ss**, and **SS**. If the date format is yy, MM, or dd, the default value is used.
+
+The timer update frequency is in the minimum unit of **format**. For example, if **format** is set to **'HH:mm'**, the update frequency is one minute.
 
 **Since:** 8
 
@@ -187,7 +191,7 @@ Event triggered when the time text changes. This event is not triggered when the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (utc: number, elapsedTime: number) = & gt; void | Yes | utc: Linux timestamp, which is the amount of time that has elapsed since January 1, 197 0, in the minimum unit of the format.elapsedTime: Elapsed time of the timer, in the minimum unit of the format. |
+| event | (utc: number, elapsedTime: number) =&gt; void | Yes | utc: Linux timestamp, which is the amount of time that has elapsed since January 1, 197 0, in the minimum unit of the format.elapsedTime: Elapsed time of the timer, in the minimum unit of the format. |
 
 ## textShadow
 

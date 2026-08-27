@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor
@@ -32,7 +32,7 @@ constructor(album: Album)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | 是 | 智慧相册。 |
+| album | Album | 是 | 智慧相册。 |
 
 **错误码：**
 
@@ -142,9 +142,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     fetchColumns: [],
     predicates: predicates
   };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
-  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
-  let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
+    let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
+    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+  } catch (err) {
+    console.error(`MediaAlbumChangeRequest constructorDemo failed with error: ${err.code}, ${err.message}`);
+  }
 }
 ```
 
@@ -169,13 +173,13 @@ static deleteHighlightAlbums(context: Context, albums: Array<Album>): Promise<nu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的Context。 |
-| albums | Array & lt;Album & gt; | 是 | 需要删除的时刻相册。 |
+| albums | Array&lt;Album&gt; | 是 | 需要删除的时刻相册。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 是否成功删除相册。成功返回0，失败返回1。 |
+| Promise&lt;number&gt; | 是否成功删除相册。成功返回0，失败返回1。 |
 
 **错误码：**
 
@@ -241,7 +245,7 @@ getHighlightAlbumInfo(type: HighlightAlbumInfoType): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回指定的时刻相册信息。 |
+| Promise&lt;string&gt; | Promise对象，返回指定的时刻相册信息。 |
 
 **错误码：**
 
@@ -307,7 +311,7 @@ getHighlightResource(resourceUri: string): Promise<ArrayBuffer>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象，返回资源的ArrayBuffer。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回资源的ArrayBuffer。 |
 
 **错误码：**
 
@@ -372,7 +376,7 @@ setHighlightUserActionData(type: HighlightUserActionType, actionData: number): P
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -400,7 +404,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     let album: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
     if (album != undefined) {
       let highlightAlbum: photoAccessHelper.HighlightAlbum = new photoAccessHelper.HighlightAlbum(album);
-      highlightAlbum.setHighlightUserActionData(photoAccessHelper.HighlightUserActionType.INSERTED_PIC_COUNT, 1);
+      await highlightAlbum.setHighlightUserActionData(photoAccessHelper.HighlightUserActionType.INSERTED_PIC_COUNT, 1);
     }
     albumFetchResult.close();
   } catch (err) {
@@ -415,10 +419,15 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setSubTitle(subTitle: string): Promise<void>
 ```
 
-设置时刻副标题内容。副标题参数规格为：  
+设置时刻副标题内容。
+
+副标题参数规格为：
+
 - 副标题字符串长度为0~255。  
-- 不允许出现的非法英文字符，包括：  
-. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
+- 不允许出现的非法英文字符，包括：
+
+. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+
 - 英文字符大小写不敏感。
 
 **起始版本：** 18
@@ -439,7 +448,7 @@ setSubTitle(subTitle: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Returns void |
+| Promise&lt;void&gt; | Returns void |
 
 **错误码：**
 
@@ -472,7 +481,7 @@ async function example(context: Context) {
     let highlightAlbum: photoAccessHelper.Album = await albumFetchResult.getFirstObject();
     albumFetchResult.close();
     let changeHighlightAlbumRequest: photoAccessHelper.HighlightAlbum = new photoAccessHelper.HighlightAlbum(highlightAlbum);
-    changeHighlightAlbumRequest.setSubTitle("testName");
+    changeHighlightAlbumRequest.setSubTitle('testName');
     console.info('setSubTitle success');
   } catch (err) {
     console.error(`setSubTitle with error: ${err}`);

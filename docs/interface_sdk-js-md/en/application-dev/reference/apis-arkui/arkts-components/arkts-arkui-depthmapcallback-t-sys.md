@@ -20,4 +20,4 @@ Callback invoked when the depth map resource is loaded.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | BusinessError & lt;void & gt; | Yes |  |
+| error | BusinessError&lt;void&gt; | Yes |  |

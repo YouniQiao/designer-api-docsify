@@ -11,7 +11,7 @@ Describes the parameters used for destroying an application clone.
 ## Modules to Import
 
 ```TypeScript
-import installer from '@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## parameters
@@ -20,7 +20,8 @@ import installer from '@kit.AbilityKit';
 parameters?: Array<Parameters>
 ```
 
-Extended parameters, represented as an array of the Parameters type. The default value is empty. The options of **Parameters.key** are as follows:  
+Extended parameters, represented as an array of the Parameters type. The default value is empty. The options of **Parameters.key** are as follows:
+
 - **ohos.bms.param.renameInstall**: If the value is **true**, the installation package is moved from the  
 application sandbox to the installation directory using a shared directory. Otherwise, it is copied from the application sandbox to the installation directory using a regular directory.  
 - **ohos.bms.param.enterpriseForAllUser**: If the value is **true**, the enterprise app is installed for all  

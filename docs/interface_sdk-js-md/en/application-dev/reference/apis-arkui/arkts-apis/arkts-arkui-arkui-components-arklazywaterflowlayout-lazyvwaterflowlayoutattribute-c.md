@@ -1,6 +1,8 @@
 # LazyVWaterFlowLayoutAttribute
 
-Defines the lazy vertical waterflow layout attribute.@extends LazyWaterFlowLayoutAttribute&lt;LazyVWaterFlowLayoutAttribute&gt;
+Defines the lazy vertical waterflow layout attribute.
+
+@extends LazyWaterFlowLayoutAttribute&lt;LazyVWaterFlowLayoutAttribute&gt;
 
 **Inheritance/Implementation:** LazyVWaterFlowLayoutAttribute extends LazyWaterFlowLayoutAttribute<LazyVWaterFlowLayoutAttribute>
 
@@ -34,7 +36,7 @@ This parameter specifies the number of columns in the current waterflow layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) \| undefined | Yes | Number of columns in the layout. Default value: '1fr'When the value is a string, it sets the number of columns or the minimum column width of the current & lt;em & gt;LazyVWaterFlowLayout & lt;/em & gt;. For example, & lt;em & gt;columnsTemplate('1fr 1fr 2fr') & lt;/em & gt; divides the & lt;em & gt;LazyVWaterFlowLayout & lt;/em & gt; into 3 columns, splitting the width into 4 equal parts: column 1 takes 1 part, column 2 takes 1 part, and column 3 takes 2 parts. |
+| value | string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) \| undefined | Yes | Number of columns in the layout. Default value: '1fr'When the value is a string, it sets the number of columns or the minimum column width of the current &lt;em&gt;LazyVWaterFlowLayout&lt;/em&gt;. For example, &lt;em&gt;columnsTemplate('1fr 1fr 2fr')&lt;/em&gt; divides the &lt;em&gt;LazyVWaterFlowLayout&lt;/em&gt; into 3 columns, splitting the width into 4 equal parts: column 1 takes 1 part, column 2 takes 1 part, and column 3 takes 2 parts. |
 
 **Return value:**
 

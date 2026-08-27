@@ -147,8 +147,10 @@ formConfigAbility: string
 formVisibleNotify: boolean
 ```
 
-表示卡片是否使能可见通知。  
-- true：通知卡片提供方可见状态变化。  
+表示卡片是否使能可见通知。
+
+- true：通知卡片提供方可见状态变化。
+
 - false：不通知卡片提供方可见状态变化。
 
 **类型：** boolean
@@ -167,8 +169,10 @@ formVisibleNotify: boolean
 isDefault: boolean
 ```
 
-表示是否是默认卡片。  
-- true：默认卡片。  
+表示是否是默认卡片。
+
+- true：默认卡片。
+
 - false：非默认卡片。
 
 **类型：** boolean
@@ -329,8 +333,10 @@ updateDuration: number
 updateEnabled: boolean
 ```
 
-表示卡片是否使能更新。  
-- true：表示支持周期性刷新。  
+表示卡片是否使能更新。
+
+- true：表示支持周期性刷新。
+
 - false：表示不支持周期性刷新。
 
 **类型：** boolean

@@ -27,13 +27,13 @@ function move(logType: string, logName: string, dest: string): Promise<void>
 | --- | --- | --- | --- |
 | logType | string | 是 | 日志类型字符串，例如"FAULTLOG", "BETACLUB", "REMOTELOG"等。 |
 | logName | string | 是 | 日志文件名称。 |
-| dest | string | 是 | 目标目录，需填入相对目录名称。传入dest字串后，日志文件将保存到应用缓存路径下的"hiview/*dest*"文件夹，即"../cache/hiview/*dest*"。可填入多 层目录。 如果传入空字串，将保存到根目录下，即应用缓存路径下的hiview文件夹。 |
+| dest | string | 是 | 目标目录，需填入相对目录名称。传入dest字串后，日志文件将保存到应用缓存路径下的"hiview/*dest*"文件夹，即"../cache/hiview/*dest*"。可填入多层目录。如果传入空字串，将保存到根目录下，即应用缓存路径下的hiview文件夹。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise实例，可以在其then()、catch()方法中分别对移动成功、移动异常的回调进行处理。 |
+| Promise&lt;void&gt; | Promise实例，可以在其then()、catch()方法中分别对移动成功、移动异常的回调进行处理。 |
 
 **错误码：**
 
@@ -92,7 +92,7 @@ function move(logType: string, logName: string, dest: string, callback: AsyncCal
 | --- | --- | --- | --- |
 | logType | string | 是 | 日志类型字符串，例如“HILOG”, "FAULTLOG", "BETACLUB", "REMOTELOG"等。 |
 | logName | string | 是 | 日志文件名称。 |
-| dest | string | 是 | 目标目录，需填入相对目录名称。传入dest字串后，日志文件将保存到应用缓存路径下的"hiview/*dest*"文件夹，即"../cache/hiview/*dest*"。可填入多 层目录。 如果传入空字串，将保存到根目录下，即应用缓存路径下的hiview文件夹。 |
+| dest | string | 是 | 目标目录，需填入相对目录名称。传入dest字串后，日志文件将保存到应用缓存路径下的"hiview/*dest*"文件夹，即"../cache/hiview/*dest*"。可填入多层目录。如果传入空字串，将保存到根目录下，即应用缓存路径下的hiview文件夹。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，可以在回调函数中处理接口返回值。0表示移动成功，其它值表示移动失败。 |
 
 **错误码：**

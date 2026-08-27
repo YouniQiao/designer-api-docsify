@@ -44,7 +44,7 @@ public activated?: SymbolGlyphModifier
 
 Symbol activated.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ public normal?: SymbolGlyphModifier
 
 Symbol normal.
 
-**Type:** SymbolGlyphModifier
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 26.0.0
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import storageStatistics from '@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getFreeSize
@@ -71,7 +71,7 @@ Obtains the available space (in bytes) of the built-in storage. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the available space of the built-in storage obtained. |
+| Promise&lt;number&gt; | Promise used to return the available space of the built-in storage obtained. |
 
 **Error codes:**
 

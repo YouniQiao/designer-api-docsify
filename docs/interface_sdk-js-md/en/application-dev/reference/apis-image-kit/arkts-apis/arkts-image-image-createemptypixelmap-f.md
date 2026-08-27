@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createEmptyPixelMap
@@ -12,7 +12,9 @@ import image from '@kit.ImageKit';
 function createEmptyPixelMap(param: InitializationOptions): PixelMap
 ```
 
-Creates an empty PixelMap.The following pixel format is not supported for PixelMap creation: ASTC_4x4.
+Creates an empty PixelMap.
+
+The following pixel format is not supported for PixelMap creation: ASTC_4x4.
 
 **Since:** 26.0.0
 
@@ -34,7 +36,7 @@ Creates an empty PixelMap.The following pixel format is not supported for PixelM
 
 | Type | Description |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | The new PixelMap created. |
+| PixelMap | The new PixelMap created. |
 
 **Error codes:**
 

@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import huks from '@kit.UniversalKeystoreKit';
-import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## isKeyItemExist
@@ -13,7 +12,9 @@ import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 function isKeyItemExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a key exists. This API uses an asynchronous callback to return the result.If the key does not exist, the error code 12000011 is returned.
+Checks whether a key exists. This API uses an asynchronous callback to return the result.
+
+If the key does not exist, the error code 12000011 is returned.
 
 **Since:** 9
 
@@ -151,7 +152,9 @@ export default {
 function isKeyItemExist(keyAlias: string, options: HuksOptions): Promise<boolean>
 ```
 
-Checks whether a key exists. This API uses a promise to return the result.If the key does not exist, the error code 12000011 is returned.
+Checks whether a key exists. This API uses a promise to return the result.
+
+If the key does not exist, the error code 12000011 is returned.
 
 **Since:** 9
 
@@ -168,7 +171,7 @@ Checks whether a key exists. This API uses a promise to return the result.If the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. If the key exists, the value of **data** is **true**. If the key does not exist, the error code in **err** is **12000011** with the error description attached. |
+| Promise&lt;boolean&gt; | Promise used to return the result. If the key exists, the value of **data** is **true**. If the key does not exist, the error code in **err** is **12000011** with the error description attached. |
 
 **Error codes:**
 

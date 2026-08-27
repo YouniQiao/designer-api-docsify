@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import reminderAgentManager from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## addExcludeDate
@@ -29,7 +29,7 @@ Adds a non-reminder date for a recurring calendar reminder with a specific ID. F
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

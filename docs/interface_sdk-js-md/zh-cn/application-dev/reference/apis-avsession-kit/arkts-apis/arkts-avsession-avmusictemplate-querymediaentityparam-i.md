@@ -1,6 +1,8 @@
 # QueryMediaEntityParam
 
-查询媒体实例参数的定义。@interface QueryMediaEntityParam
+查询媒体实例参数的定义。
+
+@interface QueryMediaEntityParam
 
 **起始版本：** 23
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## entityId

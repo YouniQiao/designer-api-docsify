@@ -11,7 +11,7 @@ Provides APIs for managing the user identity.
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addCredential
@@ -394,7 +394,7 @@ Obtains authentication information of the specified type. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
+| authType | AuthType | Yes | Authentication credential type. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the information about all enrolled credentials of the specified type. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -448,7 +448,7 @@ Obtains authentication information. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication type, which indicates that information about all authentication types is obtained. |
+| authType | AuthType | Yes | Authentication type, which indicates that information about all authentication types is obtained. |
 
 **Return value:**
 
@@ -565,14 +565,14 @@ Obtains the ID of the enrolled credential based on the credential type and accou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Credential type. |
+| authType | AuthType | Yes | Credential type. |
 | accountId | number | No | OS account ID, which is left blank by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the credential ID obtained. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the credential ID obtained. |
 
 **Error codes:**
 
@@ -691,7 +691,7 @@ Subscribes to one or more types of credential change events. This API uses a cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| credentialTypes | [AuthType[]](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Credential types subscribed. |
+| credentialTypes | AuthType[] | Yes | Credential types subscribed. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the credential change events. |
 
 **Error codes:**
@@ -807,7 +807,7 @@ Opens a session. This API returns a challenge value, which can be used to determ
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the challenge value obtained. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the challenge value obtained. |
 
 **Error codes:**
 

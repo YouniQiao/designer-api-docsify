@@ -18,7 +18,9 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 confirm?: AdvancedDialogV2Button
 ```
 
-选择弹出框底部按钮。默认不显示。
+选择弹出框底部按钮。
+
+默认不显示。
 
 **类型：** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
@@ -72,7 +74,11 @@ radioContent: SheetInfo[]
 selectedIndex?: number
 ```
 
-选择弹出框的选中项，基于0的索引（0表示第一个选项）。默认值：-1，没有选中项。若设置数值不在取值范围，按没有选中项处理。取值范围：小于选择弹出框的子项内容列表长度。
+选择弹出框的选中项，基于0的索引（0表示第一个选项）。
+
+默认值：-1，没有选中项。若设置数值不在取值范围，按没有选中项处理。
+
+取值范围：小于选择弹出框的子项内容列表长度。
 
 **类型：** number
 
@@ -90,7 +96,8 @@ selectedIndex?: number
 title: ResourceStr
 ```
 
-选择弹出框标题。  
+选择弹出框标题。
+
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)

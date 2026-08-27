@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## setFunctionKeyEnabled
@@ -24,14 +23,14 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | 是 | 需要设置的功能键类型。 |
+| functionKey | FunctionKey | 是 | 需要设置的功能键类型。 |
 | enabled | boolean | 是 | 功能键使能状态。取值为true表示使能功能键，取值为false表示不使能功能键。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

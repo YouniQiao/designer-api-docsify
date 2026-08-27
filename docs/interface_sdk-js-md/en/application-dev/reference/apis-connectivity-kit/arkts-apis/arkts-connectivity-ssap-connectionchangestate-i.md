@@ -9,7 +9,7 @@ Defines the connection status reporting parameters.
 ## Modules to Import
 
 ```TypeScript
-import ssap from '@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## address

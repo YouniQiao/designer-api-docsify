@@ -11,7 +11,8 @@
 function reportNetDisconnected(netHandle: NetHandle, callback: AsyncCallback<void>): void
 ```
 
-Reports the network unavailability to the network management module. This API uses an asynchronous callback to return the result.  
+Reports the network unavailability to the network management module. This API uses an asynchronous callback to return the result.
+
 **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8
@@ -24,7 +25,7 @@ Reports the network unavailability to the network management module. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md). |
+| netHandle | NetHandle | Yes | Network handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the network status is reported successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
@@ -65,7 +66,8 @@ connection.getDefaultNet((error: BusinessError, netHandle: connection.NetHandle)
 function reportNetDisconnected(netHandle: NetHandle): Promise<void>
 ```
 
-Reports the network unavailability to the network management module. This API uses a promise to return the result.  
+Reports the network unavailability to the network management module. This API uses a promise to return the result.
+
 **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8
@@ -78,13 +80,13 @@ Reports the network unavailability to the network management module. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. |
+| netHandle | NetHandle | Yes | Network handle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

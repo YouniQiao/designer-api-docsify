@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import carAwareness from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## getCarAwareness
@@ -26,7 +26,7 @@ function getCarAwareness(capability: Capability, options?: CarAwarenessOptions):
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capability | [Capability](arkts-multimodalawareness-carawareness-capability-e.md) | Yes | Specific capability. |
+| capability | Capability | Yes | Specific capability. |
 | options | [CarAwarenessOptions](arkts-multimodalawareness-carawareness-carawarenessoptions-i-sys.md) | No | Options for a specific function. |
 
 **Return value:**

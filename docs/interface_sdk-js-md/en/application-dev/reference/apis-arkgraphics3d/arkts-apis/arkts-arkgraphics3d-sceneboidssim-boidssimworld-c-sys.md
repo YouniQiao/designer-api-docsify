@@ -180,7 +180,7 @@ Gets the flock behavior parameters on the specified node.
 **Examples**
 
 ```TypeScript
-import { BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+import { BoidsSimParameters, BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
 
 function queryBoidsSimComponent(world: BoidsSimWorld, node: Node): void {
   let params: BoidsSimParameters | null = world.getBoidsSimComponent(node);
@@ -221,7 +221,7 @@ Gets the attraction field parameters on the specified node.
 **Examples**
 
 ```TypeScript
-import { BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+import { BoidsSimGravityParameters, BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
 
 function queryBoidsSimGravityComponent(world: BoidsSimWorld, node: Node): void {
   let params: BoidsSimGravityParameters | null = world.getBoidsSimGravityComponent(node);
@@ -262,7 +262,7 @@ Gets the repulsion field parameters on the specified node.
 **Examples**
 
 ```TypeScript
-import { BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+import { BoidsSimRepulsionParameters, BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
 
 function queryBoidsSimRepulsionComponent(world: BoidsSimWorld, node: Node): void {
   let params: BoidsSimRepulsionParameters | null = world.getBoidsSimRepulsionComponent(node);

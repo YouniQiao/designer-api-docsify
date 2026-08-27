@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import cloudSync from '@kit.CoreFileKit';
-import cloudSyncManager from '@kit.CoreFileKitManager';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## cleanFileCache
@@ -77,7 +76,7 @@ cleanFileCache(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Return Promise. |
+| Promise&lt;void&gt; | Return Promise. |
 
 **错误码：**
 
@@ -145,7 +144,7 @@ getCachedTotalSize(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Return the total size of cached files. |
+| Promise&lt;number&gt; | Return the total size of cached files. |
 
 **错误码：**
 
@@ -220,7 +219,7 @@ try {
 off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 ```
 
-云盘文件缓存对象移除由 on接口添加的云文 件批量缓存过程事件的监听。
+云盘文件缓存对象移除由on接口添加的云文件批量缓存过程事件的监听。
 
 **起始版本：** 20
 
@@ -231,7 +230,7 @@ off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'batchDownload' | 是 | 取消订阅的事件类型，取值为'batchDownload'，表示批量缓存过程事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 否 | 回调函数。云文件批量缓存过程事件。如果填写此参数，将取消指定的回调函数；否则，将取消当前订阅的相同事件类型的所有回 调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 否 | 回调函数。云文件批量缓存过程事件。如果填写此参数，将取消指定的回调函数；否则，将取消当前订阅的相同事件类型的所有回调函数。 |
 
 **错误码：**
 
@@ -374,7 +373,7 @@ start(uri: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -498,7 +497,9 @@ download.start(uri, (err: BusinessError) => {
 startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<number>
 ```
 
-启动云文件批量缓存。使用Promise异步回调。不同的批量缓存任务可以通过接口返回的任务ID区分。
+启动云文件批量缓存。使用Promise异步回调。
+
+不同的批量缓存任务可以通过接口返回的任务ID区分。
 
 **起始版本：** 20
 
@@ -508,14 +509,14 @@ startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uris | Array & lt;string & gt; | 是 | URI列表，一次调用最多支持传入400个URI，超过报错22400004。 |
+| uris | Array&lt;string&gt; | 是 | URI列表，一次调用最多支持传入400个URI，超过报错22400004。 |
 | fileType | [DownloadFileType](arkts-corefile-cloudsync-downloadfiletype-e.md) | 否 | 文件类型，默认值为CONTENT类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回启动的云文件批量缓存任务的ID。 |
+| Promise&lt;number&gt; | Promise对象，返回启动的云文件批量缓存任务的ID。 |
 
 **错误码：**
 
@@ -556,7 +557,9 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((download
 stop(uri: string, needClean?: boolean): Promise<void>
 ```
 
-Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
+Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.
+
+When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
 
 **起始版本：** 12
 
@@ -573,7 +576,7 @@ Stops downloading a file from the Drive Kit to the local device. This API uses a
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -607,7 +610,9 @@ fileCache.stop(uri, true).then(() => {
 stop(uri: string, callback: AsyncCallback<void>): void
 ```
 
-异步方法停止云盘文件缓存。使用callback异步回调。调用stop接口，当前文件下载流程会终止，不删除缓存文件，再次调用start接口重新启动下载。
+异步方法停止云盘文件缓存。使用callback异步回调。
+
+调用stop接口，当前文件下载流程会终止，不删除缓存文件，再次调用start接口重新启动下载。
 
 **起始版本：** 11
 
@@ -669,7 +674,9 @@ download.stop(uri, (err: BusinessError) => {
 stopBatch(downloadId: number, needClean?: boolean): Promise<void>
 ```
 
-停止由[startBatch](#startbatch)启动的云文件批量缓存任务。使用Promise异步回调。调用stopBatch接口会终止当前文件批量缓存流程，未下载完成的缓存文件是否删除由needClean参数决定。
+停止由[startBatch](#startbatch)启动的云文件批量缓存任务。使用Promise异步回调。
+
+调用stopBatch接口会终止当前文件批量缓存流程，未下载完成的缓存文件是否删除由needClean参数决定。
 
 **起始版本：** 20
 
@@ -686,7 +693,7 @@ stopBatch(downloadId: number, needClean?: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

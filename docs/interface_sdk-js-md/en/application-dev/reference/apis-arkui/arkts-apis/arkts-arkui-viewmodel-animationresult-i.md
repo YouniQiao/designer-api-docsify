@@ -1,6 +1,8 @@
 # AnimationResult
 
-AnimationResult@interface AnimationResult
+AnimationResult
+
+@interface AnimationResult
 
 **Since:** 4
 

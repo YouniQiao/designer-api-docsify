@@ -35,7 +35,7 @@ Clear up application data by bundle name
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Examples**
 

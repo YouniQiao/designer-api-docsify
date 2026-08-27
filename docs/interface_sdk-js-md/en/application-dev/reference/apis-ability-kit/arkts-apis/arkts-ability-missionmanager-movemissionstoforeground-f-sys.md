@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import missionManager from '@kit.AbilityKit';
+import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## moveMissionsToForeground
@@ -26,7 +26,7 @@ Switches a batch of missions to the foreground. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | Array & lt;number & gt; | Yes | Array holding the mission IDs. |
+| missionIds | Array&lt;number&gt; | Yes | Array holding the mission IDs. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -96,7 +96,7 @@ Switches a batch of missions to the foreground, and moves the mission with the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | Array & lt;number & gt; | Yes | Array holding the mission IDs. |
+| missionIds | Array&lt;number&gt; | Yes | Array holding the mission IDs. |
 | topMission | number | Yes | ID of the mission to be moved to the top. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -167,14 +167,14 @@ Switches a batch of missions to the foreground, and moves the mission with the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | Array & lt;number & gt; | Yes | Array holding the mission IDs. |
+| missionIds | Array&lt;number&gt; | Yes | Array holding the mission IDs. |
 | topMission | number | No | ID of the mission to be moved to the top. The default value is **-1**, indicating that the default mission is moved to the top. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

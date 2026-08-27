@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## deactivatePermission
@@ -30,7 +30,7 @@ Stop the authorized URI that has been enabled
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 

@@ -27,7 +27,7 @@ function getSingleSensorSync(type: SensorId): Sensor
 
 | 类型 | 说明 |
 | --- | --- |
-| [Sensor](arkts-sensorservice-system-sensor-sensor-c.md) | 使用同步方式返回传感器信息。 |
+| Sensor | 使用同步方式返回传感器信息。 |
 
 **错误码：**
 

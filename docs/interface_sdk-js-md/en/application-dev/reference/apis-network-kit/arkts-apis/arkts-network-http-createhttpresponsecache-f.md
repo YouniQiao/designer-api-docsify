@@ -38,9 +38,3 @@ import { http } from '@kit.NetworkKit';
 
 let httpResponseCache = http.createHttpResponseCache();
 ```
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpResponseCache = http.createHttpResponseCache();
-```

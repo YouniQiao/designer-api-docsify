@@ -9,8 +9,7 @@ Defines the filter criteria.
 ## Modules to Import
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## action
@@ -19,7 +18,8 @@ import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
 action?: Action
 ```
 
-Task action.  
+Task action.
+
 - **UPLOAD**: Upload tasks.  
 - **DOWNLOAD**: Download tasks.  
 - If this parameter is not set, all tasks are queried.
@@ -64,7 +64,8 @@ Unix timestamp of the end time, in milliseconds. The default value is the invoki
 mode?: Mode
 ```
 
-Task mode.  
+Task mode.
+
 - **FOREGROUND**: foreground task.  
 - **BACKGROUND**: background task.  
 - If this parameter is not set, all tasks are queried.

@@ -11,7 +11,9 @@
 function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): void
 ```
 
-Enables GWP-ASan to detect illegal behaviors in heap memory usage.This API is used to dynamically configure and enable GWP-ASan to adapt to the custom GWP-ASan detection policy. The configuration takes effect after the application is restarted.
+Enables GWP-ASan to detect illegal behaviors in heap memory usage.
+
+This API is used to dynamically configure and enable GWP-ASan to adapt to the custom GWP-ASan detection policy. The configuration takes effect after the application is restarted.
 
 > **NOTE：**
 > 

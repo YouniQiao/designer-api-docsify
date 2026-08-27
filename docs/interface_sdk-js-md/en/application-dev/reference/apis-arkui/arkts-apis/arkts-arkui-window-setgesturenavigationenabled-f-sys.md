@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## setGestureNavigationEnabled
@@ -82,7 +80,7 @@ Enables or disables gesture navigation. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

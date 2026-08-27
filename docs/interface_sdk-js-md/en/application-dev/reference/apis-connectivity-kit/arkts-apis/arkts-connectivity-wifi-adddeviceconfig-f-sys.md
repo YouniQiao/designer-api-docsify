@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## addDeviceConfig
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 ```
 
-Adds Wi-Fi connection configuration to the device.<p>The configuration will be updated when the configuration is added.</p>
+Adds Wi-Fi connection configuration to the device.
+
+<p>The configuration will be updated when the configuration is added.</p>
 
 **Since:** 6
 
@@ -33,13 +32,13 @@ Adds Wi-Fi connection configuration to the device.<p>The configuration will be u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Returns { |
+| Promise&lt;number&gt; | Returns { |
 
 **Examples**
 
@@ -81,7 +80,9 @@ try {
 function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void
 ```
 
-Adds Wi-Fi connection configuration to the device.<p>The configuration will be updated when the configuration is added.</p>
+Adds Wi-Fi connection configuration to the device.
+
+<p>The configuration will be updated when the configuration is added.</p>
 
 **Since:** 6
 
@@ -99,7 +100,7 @@ Adds Wi-Fi connection configuration to the device.<p>The configuration will be u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
 
 **Examples**

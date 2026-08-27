@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import sendableImage from '@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## convertToPixelMap
@@ -22,7 +22,7 @@ Creates a image PixelMap from sendable image PixelMap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | the src pixelmap. |
+| pixelmap | PixelMap | Yes | the src pixelmap. |
 
 **Return value:**
 

@@ -23,13 +23,13 @@ function getNetExtAttribute(netHandle: NetHandle): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | 是 | 网络句柄。 |
+| netHandle | NetHandle | 是 | 网络句柄。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回的网络扩展属性。 |
+| Promise&lt;string&gt; | Promise对象，返回的网络扩展属性。 |
 
 **错误码：**
 

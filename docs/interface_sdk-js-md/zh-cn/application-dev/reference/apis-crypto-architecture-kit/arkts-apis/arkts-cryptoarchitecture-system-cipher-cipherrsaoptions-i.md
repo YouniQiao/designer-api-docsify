@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import Cipher, { CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
+import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
 
 ## complete
@@ -84,6 +84,7 @@ action: string
 ```
 
 加解密操作类型，可选项有：
+
 1. encrypt 加密；
 2. decrypt 解密。
 
@@ -121,7 +122,7 @@ key: string
 text: string
 ```
 
-待加密或解密的文本内容。待加密的文本内容应该是一段普通文本，长度不能超过keySize / 8 - 66，其中keySize是密钥的长度 （例如密钥长度为1024时，text不能超过62个字节）。待解密的文本内容应该是经过base64编码的一段二进制值。base64编码使用 默认风格。
+待加密或解密的文本内容。待加密的文本内容应该是一段普通文本，长度不能超过keySize / 8 - 66，其中keySize是密钥的长度（例如密钥长度为1024时，text不能超过62个字节）。待解密的文本内容应该是经过base64编码的一段二进制值。base64编码使用默认风格。
 
 **类型：** string
 

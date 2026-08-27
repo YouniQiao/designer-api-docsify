@@ -21,14 +21,14 @@ export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<num
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | [CertBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certblob-i.md) | 是 | 被校验的证书。 |
-| caCert | [CertBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certblob-i.md) | 否 | 传入自定义的CA证书。 |
+| cert | CertBlob | 是 | 被校验的证书。 |
+| caCert | CertBlob | 否 | 传入自定义的CA证书。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 以promise形式返回一个数字，表示证书验证的结果。如果证书验证成功，则返回0； 否则验证失败。 |
+| Promise&lt;number&gt; | 以promise形式返回一个数字，表示证书验证的结果。如果证书验证成功，则返回0； 否则验证失败。 |
 
 **错误码：**
 

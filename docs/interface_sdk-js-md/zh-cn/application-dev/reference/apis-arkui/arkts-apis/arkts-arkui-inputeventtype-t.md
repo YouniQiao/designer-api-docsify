@@ -16,6 +16,6 @@ declare type InputEventType = TouchEvent | MouseEvent | AxisEvent
 
 | 类型 | 说明 |
 | --- | --- |
-| [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | 触摸事件。 |
-| [MouseEvent](../arkts-components/arkts-arkui-mouseevent-i.md) | 鼠标事件。 |
+| TouchEvent | 触摸事件。 |
+| MouseEvent | 鼠标事件。 |
 | [AxisEvent](../arkts-components/arkts-arkui-axisevent-i.md) | 轴事件。 |

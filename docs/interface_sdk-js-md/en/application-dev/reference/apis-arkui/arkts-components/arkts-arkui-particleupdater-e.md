@@ -1,6 +1,8 @@
 # ParticleUpdater
 
-Enumerates the updater types of a particle.@enum { string }
+Enumerates the updater types of a particle.
+
+@enum { string }
 
 **Since:** 10
 

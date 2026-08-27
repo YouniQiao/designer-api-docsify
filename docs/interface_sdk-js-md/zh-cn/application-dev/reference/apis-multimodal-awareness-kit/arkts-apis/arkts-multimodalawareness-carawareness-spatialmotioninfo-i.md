@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import carAwareness from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## event
@@ -18,7 +18,7 @@ import carAwareness from '@kit.MultimodalAwarenessKit';
 event: number
 ```
 
-指示屏幕上的手移动。 取值限定为整数。
+指示屏幕上的手移动。取值限定为整数。
 
 **类型：** number
 
@@ -66,7 +66,7 @@ pointY: number
 timestamp: number
 ```
 
-时间戳。 单位为：毫秒。
+时间戳。单位为：毫秒。
 
 **类型：** number
 

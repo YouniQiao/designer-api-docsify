@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import huks from '@kit.UniversalKeystoreKit';
-import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## abortSession
@@ -447,7 +446,7 @@ abortSession终止密钥操作。使用Promise异步回调。
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

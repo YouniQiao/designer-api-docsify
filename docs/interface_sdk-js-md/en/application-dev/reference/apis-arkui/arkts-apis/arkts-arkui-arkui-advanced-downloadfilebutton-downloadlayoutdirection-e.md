@@ -1,6 +1,8 @@
 # DownloadLayoutDirection
 
-Enum for DownloadDescription@enum { number }
+Enum for DownloadDescription
+
+@enum { number }
 
 **Since:** 12
 

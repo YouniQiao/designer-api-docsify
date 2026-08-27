@@ -9,9 +9,6 @@ Configures the media policy of the **Web** component, including the audio playba
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## audioExclusive
@@ -20,7 +17,11 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 audioExclusive?: boolean
 ```
 
-Whether the audio of multiple Web instances in an app is exclusive.The value **true** means the audio of multiple Web instances in an app is exclusive, and **false** means the opposite.Default value: **true**.
+Whether the audio of multiple Web instances in an app is exclusive.
+
+The value **true** means the audio of multiple Web instances in an app is exclusive, and **false** means the opposite.
+
+Default value: **true**.
 
 **Type:** boolean
 
@@ -50,8 +51,13 @@ Web audio type in the app. The default value corresponds to STREAM_USAGE_MUSIC i
 resumeInterval?: number
 ```
 
-Validity period during which Web audio and video paused by other apps can automatically resume playback, in seconds. Value range: [-2147483648, 2147483647]. The value **0** means no automatic resumption; a value greater than **0** means an attempt to resume within the specified period; a value less than **0** means an attempt to resume within an unlimited period. Due to approximation, this validity period may have an error within one second.  
-**NOTE：**After an HLS video is interrupted, it will automatically resume when returning to the foreground, regardless of this time setting.Default value: **0**.
+Validity period during which Web audio and video paused by other apps can automatically resume playback, in seconds. Value range: [-2147483648, 2147483647]. The value **0** means no automatic resumption; a value greater than **0** means an attempt to resume within the specified period; a value less than **0** means an attempt to resume within an unlimited period. Due to approximation, this validity period may have an error within one second.
+
+**NOTE：**
+
+After an HLS video is interrupted, it will automatically resume when returning to the foreground, regardless of this time setting.
+
+Default value: **0**.
 
 **Type:** number
 

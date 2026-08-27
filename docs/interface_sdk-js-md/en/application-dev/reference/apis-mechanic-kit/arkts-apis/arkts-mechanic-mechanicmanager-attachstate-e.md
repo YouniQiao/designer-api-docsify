@@ -1,6 +1,8 @@
 # AttachState
 
-Device attach states.@enum { number }
+Device attach states.
+
+@enum { number }
 
 **Since:** 20
 

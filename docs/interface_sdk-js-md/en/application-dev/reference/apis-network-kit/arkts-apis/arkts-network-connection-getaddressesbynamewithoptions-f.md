@@ -32,7 +32,7 @@ Performs the DNS resolution using the current default network based on the speci
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;NetAddress & gt; & gt; | Promise used to return the queried IP address. In the command output, the port field has a fixed value of 0. |
+| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise used to return the queried IP address. In the command output, the port field has a fixed value of 0. |
 
 **Error codes:**
 

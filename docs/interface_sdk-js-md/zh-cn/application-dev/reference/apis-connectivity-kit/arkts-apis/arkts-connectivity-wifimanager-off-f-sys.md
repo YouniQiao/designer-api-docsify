@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## off('streamChange')
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function off(type: 'streamChange', callback?: Callback<number>): void
 ```
 
-取消注册WLAN流量改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。
+取消注册WLAN流量改变事件。如果未指定callback参数，将取消注册该事件关联的所有回调函数。
 
 **起始版本：** 9
 
@@ -113,7 +112,7 @@ wifiManager.off("deviceConfigChange", recvDeviceConfigChangeFunc);
 function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void
 ```
 
-取消注册热点STA加入事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。
+取消注册热点STA加入事件。如果未指定callback参数，将取消注册该事件关联的所有回调函数。
 
 **起始版本：** 9
 

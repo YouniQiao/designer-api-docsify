@@ -1,6 +1,8 @@
 # @ohos.app.ability.kioskManager
 
-The KioskManager module provides APIs to manage kiosk mode, including entering/exiting kiosk mode and querying the kiosk mode status.Kiosk mode is a dedicated device lockdown mode that ensures the device UI serves only specific interaction scenarios. In this mode, device usage is confined to predetermined applications. A typical example is a bank ATM, where users can only interact with the ATM software and cannot exit it or access any other functions.
+The KioskManager module provides APIs to manage kiosk mode, including entering/exiting kiosk mode and querying the kiosk mode status.
+
+Kiosk mode is a dedicated device lockdown mode that ensures the device UI serves only specific interaction scenarios. In this mode, device usage is confined to predetermined applications. A typical example is a bank ATM, where users can only interact with the ATM software and cannot exit it or access any other functions.
 
 **Since:** 20
 
@@ -11,7 +13,7 @@ The KioskManager module provides APIs to manage kiosk mode, including entering/e
 ## Modules to Import
 
 ```TypeScript
-import kioskManager from '@kit.AbilityKit';
+import { kioskManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -1,6 +1,8 @@
 # ImageEmbedding
 
-Describes the image embedding functions of the multi-modal embedding model.@interface ImageEmbedding
+Describes the image embedding functions of the multi-modal embedding model.
+
+@interface ImageEmbedding
 
 **Since:** 15
 
@@ -9,7 +11,7 @@ Describes the image embedding functions of the multi-modal embedding model.@inte
 ## Modules to Import
 
 ```TypeScript
-import intelligence from '@kit.ArkData';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## getEmbedding
@@ -28,13 +30,13 @@ Obtains the embedding vector of the given image. The model can handle images bel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | The input image of the embedding model. |
+| image | Image | Yes | The input image of the embedding model. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | The promise used to return the embedding result. |
+| Promise&lt;Array&lt;number&gt;&gt; | The promise used to return the embedding result. |
 
 **Error codes:**
 
@@ -76,7 +78,7 @@ Loads this image embedding model. If the loading fails, an error code is returne
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -127,7 +129,7 @@ Releases this image embedding model. If the releasing fails, an error code is re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

@@ -11,7 +11,7 @@ Defines the lite settings capability for wearables.
 ## Modules to Import
 
 ```TypeScript
-import settingsLite from '@kit.BasicServicesKit';
+import { settingsLite } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

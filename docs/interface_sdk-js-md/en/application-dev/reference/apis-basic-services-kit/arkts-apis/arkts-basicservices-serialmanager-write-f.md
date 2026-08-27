@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import serialManager from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## write
@@ -30,7 +30,7 @@ Writes data to the serial port device asynchronously. The length of data written
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the length of the data written. |
+| Promise&lt;number&gt; | Promise used to return the length of the data written. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # CameraTakePhotoOptions
 
-CameraTakePhotoOptions@interface CameraTakePhotoOptions
+CameraTakePhotoOptions
+
+@interface CameraTakePhotoOptions
 
 **Since:** 6
 

@@ -29,7 +29,7 @@ This module implements virtual private network (VPN) management, such as startin
 ## Modules to Import
 
 ```TypeScript
-import vpnExtension from '@kit.NetworkKit';
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## Summary
@@ -38,33 +38,33 @@ import vpnExtension from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [createVpnConnection(Enhanced VPN Management)](arkts-network-vpnextension-createvpnconnection-f.md) | Creates a **VpnConnection** object. |
-| [createVpnObserver(Enhanced VPN Management)](arkts-network-vpnextension-createvpnobserver-f.md) | Creates a VPN observer object. It is used to listen for VPN-related events. |
-| [startVpnExtensionAbility(Enhanced VPN Management)](arkts-network-vpnextension-startvpnextensionability-f.md) | Enables the VPN extension ability. This API uses a promise to return the result. |
-| [stopVpnExtensionAbility(Enhanced VPN Management)](arkts-network-vpnextension-stopvpnextensionability-f.md) | Stops the VPN extension ability. This API uses a promise to return the result. |
+| [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md) | Creates a **VpnConnection** object. |
+| [createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md) | Creates a VPN observer object. It is used to listen for VPN-related events. |
+| [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md) | Enables the VPN extension ability. This API uses a promise to return the result. |
+| [stopVpnExtensionAbility](arkts-network-vpnextension-stopvpnextensionability-f.md) | Stops the VPN extension ability. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [isAlwaysOnVpnEnabled(Enhanced VPN Management)](arkts-network-vpnextension-isalwaysonvpnenabled-f-sys.md) | Obtains the status of the **always on** mode. This API uses a promise to return the result. |
-| [setAlwaysOnVpnEnabled(Enhanced VPN Management)](arkts-network-vpnextension-setalwaysonvpnenabled-f-sys.md) | Enables or disables the **always on** mode. This API uses a promise to return the result. |
-| [updateVpnAuthorizedState(Enhanced VPN Management)](arkts-network-vpnextension-updatevpnauthorizedstate-f-sys.md) | Updates the VPN pop-up authorization status. |
+| [isAlwaysOnVpnEnabled](arkts-network-vpnextension-isalwaysonvpnenabled-f-sys.md) | Obtains the status of the **always on** mode. This API uses a promise to return the result. |
+| [setAlwaysOnVpnEnabled](arkts-network-vpnextension-setalwaysonvpnenabled-f-sys.md) | Enables or disables the **always on** mode. This API uses a promise to return the result. |
+| [updateVpnAuthorizedState](arkts-network-vpnextension-updatevpnauthorizedstate-f-sys.md) | Updates the VPN pop-up authorization status. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [VpnConfig(Enhanced VPN Management)](arkts-network-vpnextension-vpnconfig-i.md) | Defines the VPN configuration. |
-| [VpnConnection(Enhanced VPN Management)](arkts-network-vpnextension-vpnconnection-i.md) | Defines a VPN connection object. Before calling **VpnConnection** APIs, you need to create a VPN connection object by calling **vpnExt.createVpnConnection**. |
-| [VpnObserver(Enhanced VPN Management)](arkts-network-vpnextension-vpnobserver-i.md) | Defines a VPN observer object. It is used to listen for VPN-related events. Before calling **VpnObserver** APIs, you need to create a VPN connection object by calling [vpnExtension.createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md). |
+| [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | Defines the VPN configuration. |
+| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) | Defines a VPN connection object. Before calling **VpnConnection** APIs, you need to create a VPN connection object by calling **vpnExt.createVpnConnection**. |
+| [VpnObserver](arkts-network-vpnextension-vpnobserver-i.md) | Defines a VPN observer object. It is used to listen for VPN-related events. Before calling **VpnObserver** APIs, you need to create a VPN connection object by calling [vpnExtension.createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md). |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [LinkAddress(Enhanced VPN Management)](arkts-network-vpnextension-linkaddress-t.md) | Defines the network link address information. |
-| [RouteInfo(Enhanced VPN Management)](arkts-network-vpnextension-routeinfo-t.md) | Defines the network route information. |
-| [VpnExtensionContext(Enhanced VPN Management)](arkts-network-vpnextension-vpnextensioncontext-t.md) | Defines the VPN extension context. It allows access to serviceExtension-specific resources. |
+| [LinkAddress](arkts-network-vpnextension-linkaddress-t.md) | Defines the network link address information. |
+| [RouteInfo](arkts-network-vpnextension-routeinfo-t.md) | Defines the network route information. |
+| [VpnExtensionContext](arkts-network-vpnextension-vpnextensioncontext-t.md) | Defines the VPN extension context. It allows access to serviceExtension-specific resources. |

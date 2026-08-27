@@ -3,9 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKitManager';
-import notificationSubscribe from '@kit.NotificationKitSubscribe';
-import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## getDoNotDisturbDate
@@ -75,7 +72,7 @@ Obtains the DND time. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;DoNotDisturbDate & gt; | Promise used to return the result. |
+| Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
 
 **Examples**
 
@@ -166,7 +163,7 @@ Obtains the DND time of a specified user. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;DoNotDisturbDate & gt; | Promise used to return the result. |
+| Promise&lt;DoNotDisturbDate&gt; | Promise used to return the result. |
 
 **Examples**
 

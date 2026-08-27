@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import PiPWindow from '@kit.ArkUI';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## create

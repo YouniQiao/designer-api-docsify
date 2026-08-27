@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import featureAbility from '@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## disconnectAbility
@@ -85,7 +85,7 @@ Disconnects this ability from a specific ServiceAbility. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

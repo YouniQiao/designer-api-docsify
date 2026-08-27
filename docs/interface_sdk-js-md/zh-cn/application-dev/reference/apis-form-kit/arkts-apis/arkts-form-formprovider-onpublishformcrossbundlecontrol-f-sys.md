@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## onPublishFormCrossBundleControl

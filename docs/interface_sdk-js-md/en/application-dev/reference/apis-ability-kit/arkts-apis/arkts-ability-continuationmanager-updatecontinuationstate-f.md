@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import continuationManager from '@kit.AbilityKit';
+import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## updateContinuationState
@@ -102,7 +102,7 @@ Instructs the device selection module to update the device connection state. Thi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import update from '@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## getOnlineUpdater
@@ -12,9 +12,14 @@ import update from '@kit.BasicServicesKit';
 function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 ```
 
-获取在线升级对象，可用于在线检查新版本、下载升级包、安装升级包等操作。适用于设备厂商的OTA(详见[术语](../../../basic-services/update/update-kit-term.md))升级客户端应用、在 线系统升级等场景，帮助用户及时获取系统更新，提升升级效率和用户体验。  
-**原理说明**：该方法通过系统服务接口获取在线升级对象，该对象提供检查新版本、下载升级包、安装升级包等核心功能。  
-**约束和限制**：  
+获取在线升级对象，可用于在线检查新版本、下载升级包、安装升级包等操作。适用于设备厂商的OTA(详见[术语](../../../basic-services/update/update-kit-term.md))升级客户端应用、在线系统升级等场景，帮助用户及时获取系统更新，提升升级效率和用户体验。
+
+**原理说明**：
+
+该方法通过系统服务接口获取在线升级对象，该对象提供检查新版本、下载升级包、安装升级包等核心功能。
+
+**约束和限制**：
+
 - 检查新版本和下载升级包都必须依赖设备厂商部署的升级包管理服务器。
 
 **起始版本：** 9
@@ -27,7 +32,7 @@ function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| upgradeInfo | [UpgradeInfo](arkts-basicservices-update-upgradeinfo-i-sys.md) | 是 | 升级对象信息（UpgradeInfo），用于标识调用方和升级业务类型。upgradeApp字段为调用方包名，格式为com.xxx.xxx.xxx，长度范围 [1，255]，单位：字符。每段长度范围[1，64]，单位：字符。仅支持字母、数字和点号，每段必须以字母开头，不能包含连续点号或以点号开头结尾，超出范围或格式错误时抛出异常。 |
+| upgradeInfo | [UpgradeInfo](arkts-basicservices-update-upgradeinfo-i-sys.md) | 是 | 升级对象信息（UpgradeInfo），用于标识调用方和升级业务类型。upgradeApp字段为调用方包名，格式为com.xxx.xxx.xxx，长度范围[1，255]，单位：字符。每段长度范围[1，64]，单位：字符。仅支持字母、数字和点号，每段必须以字母开头，不能包含连续点号或以点号开头结尾，超出范围或格式错误时抛出异常。 |
 
 **返回值：**
 

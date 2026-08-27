@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## getInputMethodAbility
@@ -12,7 +12,7 @@ import inputMethodEngine from '@kit.IMEKit';
 function getInputMethodAbility(): InputMethodAbility
 ```
 
-获取输入法能力对象实例[InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md)，仅支持输入法应用调用。 输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件、创建/销毁输入法面板等。
+获取输入法能力对象实例[InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md)，仅支持输入法应用调用。输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件、创建/销毁输入法面板等。
 
 **起始版本：** 9
 

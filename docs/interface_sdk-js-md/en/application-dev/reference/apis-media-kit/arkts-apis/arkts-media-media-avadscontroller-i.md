@@ -9,7 +9,7 @@ Definition of the Ad Content Control Interface
 ## Modules to Import
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addAdsMediaSource
@@ -37,7 +37,7 @@ Add an advertisement film source to the advertisement controller, The insertion 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the ID of the added media source in the ad controller. |
+| Promise&lt;string&gt; | Returns the ID of the added media source in the ad controller. |
 
 **Error codes:**
 

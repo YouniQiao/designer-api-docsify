@@ -24,7 +24,7 @@ NULL = 0
 INTEGER = 1
 ```
 
-表示列数据类型为64位整数。可用于保存8位（包括布尔值）、16位、32位、64位整数。如果64位整数大于2^53或小于-2^53，需使用 [getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)将64位整数转换为字符串。
+表示列数据类型为64位整数。可用于保存8位（包括布尔值）、16位、32位、64位整数。如果64位整数大于2^53或小于-2^53，需使用[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)将64位整数转换为字符串。
 
 **起始版本：** 18
 

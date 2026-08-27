@@ -34,7 +34,9 @@ Whether the window is interacting with the user. The value **true** indicates th
 actived?: boolean
 ```
 
-Whether the window is interacting with the user. The value **true** indicates that the window is interacting with the user, and **false** indicates the opposite.This API is supported since API version 9 and deprecated since API version 11. You are advised to use [active](#active) instead.
+Whether the window is interacting with the user. The value **true** indicates that the window is interacting with the user, and **false** indicates the opposite.
+
+This API is supported since API version 9 and deprecated since API version 11. You are advised to use [active](#active) instead.
 
 **Type:** boolean
 

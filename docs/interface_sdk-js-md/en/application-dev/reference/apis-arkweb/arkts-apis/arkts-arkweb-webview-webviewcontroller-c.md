@@ -17,7 +17,9 @@ WebviewController is the core controller for various behaviors of the **Web** co
 accessBackward(): boolean
 ```
 
-Checks whether going to the previous page can be performed on the current page.You can use [getBackForwardEntries](#getbackforwardentries) to obtain the historical information list of the current WebView and use [accessStep](#accessstep) to determine whether to move forward or backward based on the specified number of steps.
+Checks whether going to the previous page can be performed on the current page.
+
+You can use [getBackForwardEntries](#getbackforwardentries) to obtain the historical information list of the current WebView and use [accessStep](#accessstep) to determine whether to move forward or backward based on the specified number of steps.
 
 > **NOTE：**
 > 
@@ -84,7 +86,9 @@ struct WebComponent {
 accessForward(): boolean
 ```
 
-Checks whether going to the next page can be performed on the current page.You can use [getBackForwardEntries](#getbackforwardentries) to obtain the historical information list of the current WebView and use [accessStep](#accessstep) to determine whether to move forward or backward based on the specified number of steps.
+Checks whether going to the next page can be performed on the current page.
+
+You can use [getBackForwardEntries](#getbackforwardentries) to obtain the historical information list of the current WebView and use [accessStep](#accessstep) to determine whether to move forward or backward based on the specified number of steps.
 
 **Since:** 9
 
@@ -214,7 +218,7 @@ Adds a list of domain names that bypass intelligent tracking prevention.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hostList | Array & lt;string & gt; | Yes | List of domain names that bypass intelligent tracking prevention. |
+| hostList | Array&lt;string&gt; | Yes | List of domain names that bypass intelligent tracking prevention. |
 
 **Error codes:**
 
@@ -334,7 +338,9 @@ struct WebComponent {
 backOrForward(step: number): void
 ```
 
-Performs a specific number of steps forward or backward on the current page based on the history stack. No redirection will be performed if the corresponding page does not exist in the history stack.Because the previously loaded web pages are used for the operation, no page reloading is involved.
+Performs a specific number of steps forward or backward on the current page based on the history stack. No redirection will be performed if the corresponding page does not exist in the history stack.
+
+Because the previously loaded web pages are used for the operation, no page reloading is involved.
 
 **Since:** 9
 
@@ -438,7 +444,9 @@ struct WebComponent {
 static clearBlanklessLoadingCache(keys?: Array<string>) : void
 ```
 
-Clears the blankless loading cache of the page with a specified key value.In an applet or web application, when the content changes significantly during page loading, an obvious scene change may occur. If you are concerned about this change, you can use this API to clear the page cache.
+Clears the blankless loading cache of the page with a specified key value.
+
+In an applet or web application, when the content changes significantly during page loading, an obvious scene change may occur. If you are concerned about this change, you can use this API to clear the page cache.
 
 > **NOTE：**
 > 
@@ -452,7 +460,7 @@ Clears the blankless loading cache of the page with a specified key value.In an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array & lt;string & gt; | No | Key value list on the pages using the blankless optimization solution. The **key** value has been specified in [getBlanklessInfoWithKey](#getblanklessinfowithkey).Default value: key list of all pages cached by the blankless optimization solution.Valid value range: The key length cannot exceed 2048 characters, and the number of keys must be less than or equal to 100. The key value is the same as that input to the **Web** component during page loading.Invalid value setting behavior: If **undefined** or **null** is passed, error code **401** is thrown. If the key length exceeds 2048, the key does not take effect. If the key length exceeds 100, the first 100 values are used. If the key is empty, the default value is used. |
+| keys | Array&lt;string&gt; | No | Key value list on the pages using the blankless optimization solution. The **key** value has been specified in [getBlanklessInfoWithKey](#getblanklessinfowithkey).Default value: key list of all pages cached by the blankless optimization solution.Valid value range: The key length cannot exceed 2048 characters, and the number of keys must be less than or equal to 100. The key value is the same as that input to the **Web** component during page loading.Invalid value setting behavior: If **undefined** or **null** is passed, error code **401** is thrown. If the key length exceeds 2048, the key does not take effect. If the key length exceeds 100, the first 100 values are used. If the key is empty, the default value is used. |
 
 **Error codes:**
 
@@ -757,7 +765,7 @@ Clears the cache of prefetched resources based on the specified cache key list. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cacheKeyList | Array & lt;string & gt; | Yes | Key used to query the cache of prefetched resources. The value can contain only letters and digits. If this parameter is not passed or is left empty, **url** is used by default. |
+| cacheKeyList | Array&lt;string&gt; | Yes | Key used to query the cache of prefetched resources. The value can contain only letters and digits. If this parameter is not passed or is left empty, **url** is used by default. |
 
 **Examples**
 
@@ -1749,7 +1757,9 @@ struct WebComponent {
 static enableBackForwardCache(features: BackForwardCacheSupportedFeatures): void
 ```
 
-Enables the back-forward cache of a **Web** component. You can specify whether to add a specific page to the back -forward cache.This API must be called before [initializeWebEngine()](#initializewebengine) initializes the kernel.
+Enables the back-forward cache of a **Web** component. You can specify whether to add a specific page to the back -forward cache.
+
+This API must be called before [initializeWebEngine()](#initializewebengine) initializes the kernel.
 
 **Since:** 12
 
@@ -1847,7 +1857,9 @@ struct WebComponent {
 static enablePrivateNetworkAccess(enable: boolean): void
 ```
 
-Sets the private network access check feature.After this feature is enabled, the **Web** component performs CORS preflight on private network requests (such as requests for accessing local servers or intranet resources). It sends an OPTIONS preflight request to obtain explicit authorization from the target server and then transmits the actual data. Disabling this feature will skip the security check.
+Sets the private network access check feature.
+
+After this feature is enabled, the **Web** component performs CORS preflight on private network requests (such as requests for accessing local servers or intranet resources). It sends an OPTIONS preflight request to obtain explicit authorization from the target server and then transmits the actual data. Disabling this feature will skip the security check.
 
 > **NOTE：**
 > 
@@ -1891,7 +1903,9 @@ struct WebComponent {
 enableSafeBrowsing(enable: boolean): void
 ```
 
-Enables the safe browsing feature. This feature is forcibly enabled and cannot be disabled for identified untrusted websites.By default, this feature does not take effect. OpenHarmony provides only the malicious website blocking web UI. The website risk detection and web UI display features are implemented by the vendor. You are advised to listen for [DidStartNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) and [DidRedirectNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) in **WebContentsObserver** for detection.
+Enables the safe browsing feature. This feature is forcibly enabled and cannot be disabled for identified untrusted websites.
+
+By default, this feature does not take effect. OpenHarmony provides only the malicious website blocking web UI. The website risk detection and web UI display features are implemented by the vendor. You are advised to listen for [DidStartNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) and [DidRedirectNavigation](https://gitcode.com/openharmony-tpc/chromium_src/blob/master/content/public/browser/web_contents_observer.h) in **WebContentsObserver** for detection.
 
 > **NOTE：**
 > 
@@ -2020,7 +2034,7 @@ Executes `AIPageCommand` asynchronously. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the command execution result in JSON format. The return format varies for different commands. When a command cannot be dispatched or has no return value, an empty string is returned. |
+| Promise&lt;string&gt; | Promise used to return the command execution result in JSON format. The return format varies for different commands. When a command cannot be dispatched or has no return value, an empty string is returned. |
 
 **Error codes:**
 
@@ -2322,7 +2336,7 @@ Obtains the certificate information of this website. When the **Web** component 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;cert.X509Cert & gt; & gt; | Promise used to obtain the X.509 certificate array of the current HTTPS website. |
+| Promise&lt;Array&lt;cert.X509Cert&gt;&gt; | Promise used to obtain the X.509 certificate array of the current HTTPS website. |
 
 **Error codes:**
 
@@ -2641,7 +2655,9 @@ struct Index {
 getCustomUserAgent(): string
 ```
 
-Obtains a custom user agent.For details about the default **User-Agent**, see [Developing User-Agent](../../../web/web-default-userAgent.md).
+Obtains a custom user agent.
+
+For details about the default **User-Agent**, see [Developing User-Agent](../../../web/web-default-userAgent.md).
 
 **Since:** 10
 
@@ -2697,7 +2713,11 @@ struct WebComponent {
 static getDefaultUserAgent(): string
 ```
 
-Obtains the default user agent.This API can be called only in the UI thread.For details about the default **User-Agent**, see [Developing User-Agent](../../../web/web-default-userAgent.md).
+Obtains the default user agent.
+
+This API can be called only in the UI thread.
+
+For details about the default **User-Agent**, see [Developing User-Agent](../../../web/web-default-userAgent.md).
 
 **Since:** 14
 
@@ -3213,7 +3233,9 @@ struct WebComponent {
 getOriginalUrl(): string
 ```
 
-Obtains the original URL of the current page.Risk warning: If you want to obtain the URL for JavaScriptProxy communication API authentication, use [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](#getlastjavascriptproxycallingframeurl).
+Obtains the original URL of the current page.
+
+Risk warning: If you want to obtain the URL for JavaScriptProxy communication API authentication, use [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](#getlastjavascriptproxycallingframeurl).
 
 **Since:** 9
 
@@ -3382,7 +3404,7 @@ Obtains the current scrolling offset of the web page (excluding the over-scrolli
 
 | Type | Description |
 | --- | --- |
-| [ScrollOffset](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-scrolloffset-i.md) | Current scroll offset of the web page (excluding over-scroll offset), which contains x and y coordinates, in vp. |
+| ScrollOffset | Current scroll offset of the web page (excluding over-scroll offset), which contains x and y coordinates, in vp. |
 
 **Error codes:**
 
@@ -3668,7 +3690,7 @@ Obtains the current scrolling offset (including the over-scrolling offset) of th
 
 | Type | Description |
 | --- | --- |
-| [ScrollOffset](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-scrolloffset-i.md) | Current scroll offset of the web page (including the overscroll offset), containing x and y coordinates, in vp. |
+| ScrollOffset | Current scroll offset of the web page (including the overscroll offset), containing x and y coordinates, in vp. |
 
 **Examples**
 
@@ -3768,7 +3790,7 @@ Obtains the security level of this web page.
 
 | Type | Description |
 | --- | --- |
-| [SecurityLevel](../../apis-arkdata/arkts-apis/arkts-arkdata-distributedkvstore-securitylevel-e.md) | Security level of the web page. The value can be **NONE**, **SECURE**, **WARNING**, or **DANGEROUS**. |
+| SecurityLevel | Security level of the web page. The value can be **NONE**, **SECURE**, **WARNING**, or **DANGEROUS**. |
 
 **Error codes:**
 
@@ -4131,7 +4153,9 @@ struct WebComponent {
 getUserAgent(): string
 ```
 
-Obtains the default user agent of this web page.For details about the default **User-Agent**, see [Developing User-Agent](../../../web/web-default-userAgent.md).
+Obtains the default user agent of this web page.
+
+For details about the default **User-Agent**, see [Developing User-Agent](../../../web/web-default-userAgent.md).
 
 **Since:** 9
 
@@ -4336,7 +4360,7 @@ Checks whether this page contains images. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -4482,7 +4506,17 @@ export default class EntryAbility extends UIAbility {
 injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 ```
 
-Injects local offline resources to the memory cache to improve the initial page startup speed.Resources in the memory cache are automatically managed by the ArkWeb engine. When the injected resources are excessive and cause significant memory pressure, the engine will automatically release unused resources. It is advisable to avoid injecting a large number of resources into the memory cache.Under normal circumstances, the validity period of the resources is controlled by the provided Cache-Control or Expires response header, with a default validity period of 86,400 seconds, which is one day.The MIME type of the resources is configured through the provided Content-Type response header. The Content-Type must comply with standards; otherwise, the resources cannot be used correctly. For resources of type MODULE_JS, a valid MIME type must be provided. For other types, the MIME type is optional.Resources injected in this mode can be loaded only through HTML tags. If a **script** tag on the web page uses the **crossorigin** attribute, the **Cross-Origin** response header must be set in the **responseHeaders** parameter of the API. The value for this header should be **anonymous** or **use-credentials**.After **webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode.MULTIPLE)** is called, the application starts the multi-rendering process mode. This API does not take effect in this scenario.
+Injects local offline resources to the memory cache to improve the initial page startup speed.
+
+Resources in the memory cache are automatically managed by the ArkWeb engine. When the injected resources are excessive and cause significant memory pressure, the engine will automatically release unused resources. It is advisable to avoid injecting a large number of resources into the memory cache.
+
+Under normal circumstances, the validity period of the resources is controlled by the provided Cache-Control or Expires response header, with a default validity period of 86,400 seconds, which is one day.
+
+The MIME type of the resources is configured through the provided Content-Type response header. The Content-Type must comply with standards; otherwise, the resources cannot be used correctly. For resources of type MODULE_JS, a valid MIME type must be provided. For other types, the MIME type is optional.
+
+Resources injected in this mode can be loaded only through HTML tags. If a **script** tag on the web page uses the **crossorigin** attribute, the **Cross-Origin** response header must be set in the **responseHeaders** parameter of the API. The value for this header should be **anonymous** or **use-credentials**.
+
+After **webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode.MULTIPLE)** is called, the application starts the multi-rendering process mode. This API does not take effect in this scenario.
 
 **Since:** 12
 
@@ -4846,7 +4880,9 @@ struct WebComponent {
 isAdsBlockEnabledForCurPage(): boolean
 ```
 
-Checks whether ad blocking is enabled on this web page.After ads blocking is enabled for the **Web** component, this feature is enabled for all web pages by default. You can call [addAdsBlockDisallowedList](arkts-arkweb-webview-adsblockmanager-c.md#addadsblockdisallowedlist) to disable the feature for specific domains.
+Checks whether ad blocking is enabled on this web page.
+
+After ads blocking is enabled for the **Web** component, this feature is enabled for all web pages by default. You can call [addAdsBlockDisallowedList](arkts-arkweb-webview-adsblockmanager-c.md#addadsblockdisallowedlist) to disable the feature for specific domains.
 
 **Since:** 12
 
@@ -4901,7 +4937,9 @@ struct WebComponent {
 static isAutoPreconnectEnabled(): boolean
 ```
 
-Queries the automatic preconnection status of the Web kernel.If the automatic preconnection status of the Web kernel is not set by using [setAutoPreconnect](#setautopreconnect), automatic preconnection is enabled by default, and **true** is returned.
+Queries the automatic preconnection status of the Web kernel.
+
+If the automatic preconnection status of the Web kernel is not set by using [setAutoPreconnect](#setautopreconnect), automatic preconnection is enabled by default, and **true** is returned.
 
 **Since:** 21
 
@@ -5153,7 +5191,12 @@ struct WebComponent {
 loadData(data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string): void
 ```
 
-Loads specified data.When both **baseUrl** and **historyUrl** are empty:If **encoding** is not base64 (including null values), ASCII encoding is used for octets within the secure URL character range, and the standard %xx hexadecimal encoding of the URL is used for octets outside the secure URL character range.  
+Loads specified data.
+
+When both **baseUrl** and **historyUrl** are empty:
+
+If **encoding** is not base64 (including null values), ASCII encoding is used for octets within the secure URL character range, and the standard %xx hexadecimal encoding of the URL is used for octets outside the secure URL character range.
+
 **data** must be encoded using Base64 or any hash (#) in the content must be encoded as %23. Otherwise, hash (#) is considered as the end of the content, and the remaining text is used as the document fragment identifier.
 
 > **NOTE：**
@@ -5379,8 +5422,8 @@ Loads a specified URL.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | URL to load. |
-| headers | Array & lt;WebHeader & gt; | No | Additional HTTP request header of the URL. Default value: **[]**. If **undefined** or **null** is passed, error code **401** will be thrown. |
+| url | string \| Resource | Yes | URL to load. |
+| headers | Array&lt;WebHeader&gt; | No | Additional HTTP request header of the URL. Default value: **[]**. If **undefined** or **null** is passed, error code **401** will be thrown. |
 
 **Error codes:**
 
@@ -5592,7 +5635,11 @@ Registers the attach state event of **WebViewController**, which obtains the att
 onActive(): void
 ```
 
-Called when the **Web** component enters the active state.The application can interact with the user while in the active foreground state, and it remains in this state until the focus is moved away from it due to some event (for example, an incoming call is received or the device screen is turned off).If the page was previously in the inactive state, the event listener registered through document.addEventListener ('visibilitychange',...) in the H5 page will be triggered, and document.visibilityState changes from "hidden" to"visible".
+Called when the **Web** component enters the active state.
+
+The application can interact with the user while in the active foreground state, and it remains in this state until the focus is moved away from it due to some event (for example, an incoming call is received or the device screen is turned off).
+
+If the page was previously in the inactive state, the event listener registered through document.addEventListener ('visibilitychange',...) in the H5 page will be triggered, and document.visibilityState changes from "hidden" to"visible".
 
 **Since:** 9
 
@@ -5640,7 +5687,9 @@ struct WebComponent {
 onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback): void
 ```
 
-Registers a callback function. After [enableNativeMediaPlayer](../arkts-components/arkts-arkweb-web-attribute.md#enablenativemediaplayer) is used to enable the app to take over web page media playback, the registered callback function is triggered when media is played on the web page.If the application does not take over media playback on the web page, this callback is not invoked.
+Registers a callback function. After [enableNativeMediaPlayer](../arkts-components/arkts-arkweb-web-attribute.md#enablenativemediaplayer) is used to enable the app to take over web page media playback, the registered callback function is triggered when media is played on the web page.
+
+If the application does not take over media playback on the web page, this callback is not invoked.
 
 **Since:** 12
 
@@ -5868,7 +5917,9 @@ function shouldHandle(mediaInfo: webview.MediaInfo) {
 onInactive(): void
 ```
 
-Called when the **Web** component enters the inactive state. You can implement the behavior to perform after the application loses focus.When this API is called, any content that can be safely paused, such as animations and geographical locations, is paused as much as possible. However, the JavaScript is not paused. To pause the JavaScript globally, use [pauseAllTimers](#pausealltimers). To reactivate the **Web** component, use [onActive](#onactive).
+Called when the **Web** component enters the inactive state. You can implement the behavior to perform after the application loses focus.
+
+When this API is called, any content that can be safely paused, such as animations and geographical locations, is paused as much as possible. However, the JavaScript is not paused. To pause the JavaScript globally, use [pauseAllTimers](#pausealltimers). To reactivate the **Web** component, use [onActive](#onactive).
 
 **Since:** 9
 
@@ -6486,7 +6537,9 @@ struct WebComponent {
 precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: CacheOptions): Promise<number>
 ```
 
-Precompiles JavaScript to generate the bytecode cache or update the existing bytecode cache based on the provided parameters.The API determines whether to update the existing bytecode cache based on the provided file information, E-Tag response header, and Last-Modified response header.
+Precompiles JavaScript to generate the bytecode cache or update the existing bytecode cache based on the provided parameters.
+
+The API determines whether to update the existing bytecode cache based on the provided file information, E-Tag response header, and Last-Modified response header.
 
 **Since:** 12
 
@@ -6504,7 +6557,7 @@ Precompiles JavaScript to generate the bytecode cache or update the existing byt
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the error code for generating the bytecode cache. The value **0** indicates no error, and the value **-1** indicates an internal error. |
+| Promise&lt;number&gt; | Promise used to return the error code for generating the bytecode cache. The value **0** indicates no error, and the value **-1** indicates an internal error. |
 
 **Error codes:**
 
@@ -6757,7 +6810,7 @@ Prefetches resources in the background for a page that is likely to be accessed 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL to preload. |
-| additionalHeaders | Array & lt;WebHeader & gt; | No | Additional HTTP request headers for the URL. Default value:[] |
+| additionalHeaders | Array&lt;WebHeader&gt; | No | Additional HTTP request headers for the URL. Default value:[] |
 
 **Error codes:**
 
@@ -6827,7 +6880,7 @@ Prefetches resources in the background for a page that is likely to be accessed 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL to preload. |
-| additionalHeaders | Array & lt;WebHeader & gt; | No | Additional HTTP request headers for the URL. Default value:[] |
+| additionalHeaders | Array&lt;WebHeader&gt; | No | Additional HTTP request headers for the URL. Default value:[] |
 | prefetchOptions | [PrefetchOptions](arkts-arkweb-webview-prefetchoptions-c.md) | No | Options for customizing the prefetch behavior. The minimum interval between two prefetches is 500 ms. By default, Cache-Control: no-store in the response header is not ignored. |
 
 **Error codes:**
@@ -6875,7 +6928,9 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
                             cacheValidTime?: number): void
 ```
 
-Prefetches resource requests based on specified request information and additional HTTP request headers, saves them to the memory cache, and specifies the cache key and validity period to accelerate loading. Currently, only POST requests with Content-Type of application/x-www-form-urlencoded are supported. A maximum of six POST requests can be prefetched. To prefetch a seventh one, use [clearPrefetchedResource](#clearprefetchedresource) to clear unnecessary POST request caches. Otherwise, the earliest prefetched POST cache is automatically cleared. To use the prefetched resource cache, developers need to add the key-value pair "ArkWebPostCacheKey" to the request header of the actual POST request, with the value being the cacheKey of the corresponding cache.Resources in the memory cache are automatically managed by the kernel. When too many resources are injected, causing excessive memory pressure, the kernel automatically releases unused resources. However, injecting a large number of resources into the memory cache should still be avoided.
+Prefetches resource requests based on specified request information and additional HTTP request headers, saves them to the memory cache, and specifies the cache key and validity period to accelerate loading. Currently, only POST requests with Content-Type of application/x-www-form-urlencoded are supported. A maximum of six POST requests can be prefetched. To prefetch a seventh one, use [clearPrefetchedResource](#clearprefetchedresource) to clear unnecessary POST request caches. Otherwise, the earliest prefetched POST cache is automatically cleared. To use the prefetched resource cache, developers need to add the key-value pair "ArkWebPostCacheKey" to the request header of the actual POST request, with the value being the cacheKey of the corresponding cache.
+
+Resources in the memory cache are automatically managed by the kernel. When too many resources are injected, causing excessive memory pressure, the kernel automatically releases unused resources. However, injecting a large number of resources into the memory cache should still be avoided.
 
 **Since:** 12
 
@@ -6887,8 +6942,8 @@ Prefetches resource requests based on specified request information and addition
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | Yes | Information about the prefetched request. |
-| additionalHeaders | Array & lt;WebHeader & gt; | No | Additional HTTP request header of the prefetched request. If **undefined** or **null** is passed, error code **401** will be thrown. |
+| request | RequestInfo | Yes | Information about the prefetched request. |
+| additionalHeaders | Array&lt;WebHeader&gt; | No | Additional HTTP request header of the prefetched request. If **undefined** or **null** is passed, error code **401** will be thrown. |
 | cacheKey | string | No | Key used to query the cache of prefetched resources. The value can contain only letters and digits. If this parameter is not passed or is left empty, **url** is used by default. If **undefined** or **null** is passed, error code **401** will be thrown. |
 | cacheValidTime | number | No | Validity period of the prefetched resource cache. Value range: (0, 2147483647]. Default value: 300s. Unit: s. If undefined or null is passed in, an exception with error code 401 is thrown. |
 
@@ -7083,7 +7138,9 @@ registerJavaScriptProxy(jsObject: object, name: string, methodList: Array<string
         asyncMethodList?: Array<string>, permission?: string): void
 ```
 
-Registers a proxy for interaction between the application and web pages loaded by the **Web** component. Registers a JavaScript object with the window. APIs of this object can then be invoked in the window.For the example, see [Invoking Application Functions on the Frontend Page](../../../web/web-in-page-app-function-invoking.md).
+Registers a proxy for interaction between the application and web pages loaded by the **Web** component. Registers a JavaScript object with the window. APIs of this object can then be invoked in the window.
+
+For the example, see [Invoking Application Functions on the Frontend Page](../../../web/web-in-page-app-function-invoking.md).
 
 > **NOTE：**
 > 
@@ -7124,8 +7181,8 @@ Registers a proxy for interaction between the application and web pages loaded b
 | --- | --- | --- | --- |
 | jsObject | object | Yes | Application-side JavaScript object to be registered. Methods and attributes can be declared separately, but cannot be registered and used at the same time. If an object contains only attributes, HTML5 can access the attributes in the object. If an object contains only methods, HTML5 can access the methods in the object.  1. The parameter and return value can be any of the following types:  string, number, boolean.  2. Dictionary or Array, with a maximum of 10 nested layers and 10,000 data records per layer.  3. Object, which must contain the **methodNameListForJsProxy:[fun1, fun2]** attribute, where **fun1** and **fun2** are methods that can be called.  4. The parameter also supports Function and Promise. Their callback cannot have return values.  5. The return value supports Promise. Its callback cannot have a return value. |
 | name | string | Yes | Name of the object to be registered, which is the same as that invoked in the window. After registration, the window can use this name to access the JavaScript object at the application side. |
-| methodList | Array & lt;string & gt; | Yes | Synchronous methods of the JavaScript object to be registered at the application side. |
-| asyncMethodList | Array & lt;string & gt; | No | Asynchronous methods of the JavaScript object to be registered at the application side. The default value is null. Asynchronous methods cannot obtain return values. If **undefined** or **null** is passed, error code **401** will be thrown.<br>**Since:** 12 |
+| methodList | Array&lt;string&gt; | Yes | Synchronous methods of the JavaScript object to be registered at the application side. |
+| asyncMethodList | Array&lt;string&gt; | No | Asynchronous methods of the JavaScript object to be registered at the application side. The default value is null. Asynchronous methods cannot obtain return values. If **undefined** or **null** is passed, error code **401** will be thrown.<br>**Since:** 12 |
 | permission | string | No | JSON string, which is empty by default. This string is used to configure JSBridge permission control and define the URL trustlist at the object and method levels.  1. The **scheme** and **host** parameters cannot be empty. The **host** does not support wildcards and can contain only complete host names.  2. You can configure only the object-level trustlist, which takes effect for all JSBridge methods.  3. If method-level trustlists are configured for JSBridge method A, the intersection of object-level and method-level trustlists takes effect.  If **undefined** or **null** is passed, error code **401** will be thrown.<br>**Since:** 12 |
 
 **Error codes:**
@@ -7401,7 +7458,7 @@ Deletes the domain names from the list of domain names added through the **addIn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hostList | Array & lt;string & gt; | Yes | List of domain names that bypass intelligent tracking prevention. |
+| hostList | Array&lt;string&gt; | Yes | List of domain names that bypass intelligent tracking prevention. |
 
 **Error codes:**
 
@@ -7493,7 +7550,9 @@ struct WebComponent {
 restoreWebState(state: Uint8Array) : void
 ```
 
-Restores the page status history from the serialized data of the current WebView.If the value of **state** is too large, exceptions may occur. It is recommended that the page status history be not restored when the **state** value is greater than 512 KB.
+Restores the page status history from the serialized data of the current WebView.
+
+If the value of **state** is too large, exceptions may occur. It is recommended that the page status history be not restored when the **state** value is greater than 512 KB.
 
 **Since:** 9
 
@@ -7877,7 +7936,7 @@ Executes a JavaScript script asynchronously in the context of the current page. 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result if the operation is successful and null otherwise. |
+| Promise&lt;string&gt; | Promise used to return the result if the operation is successful and null otherwise. |
 
 **Error codes:**
 
@@ -9031,7 +9090,11 @@ export default class EntryAbility extends UIAbility {
 static setAppCustomUserAgent(userAgent: string) : void
 ```
 
-Sets the application-level custom user agent, which will overwrite the system user agent and take effect for all **Web** components in the application.If you need to set the application-level custom user agent, you are advised to call the **setAppCustomUserAgent** method to set the **User-Agent** before creating the **Web** component, and then create the **Web** component with the specified src or load the page using [loadUrl](#loadurl).For details about the default **User-Agent** definition, application scenarios, and API priorities, see [Developing User-Agent](../../../web/web-default-userAgent.md).
+Sets the application-level custom user agent, which will overwrite the system user agent and take effect for all **Web** components in the application.
+
+If you need to set the application-level custom user agent, you are advised to call the **setAppCustomUserAgent** method to set the **User-Agent** before creating the **Web** component, and then create the **Web** component with the specified src or load the page using [loadUrl](#loadurl).
+
+For details about the default **User-Agent** definition, application scenarios, and API priorities, see [Developing User-Agent](../../../web/web-default-userAgent.md).
 
 **Since:** 20
 
@@ -9134,7 +9197,9 @@ struct WebComponent {
 static setAutoPreconnect(enabled: boolean): void
 ```
 
-Sets the automatic preconnection status of the Web kernel. If this API is not set, automatic preconnection is enabled by default.This API must be called before [initializeWebEngine()](#initializewebengine) initializes the kernel or a **Web** component is created. If any **Web** component has been loaded, the setting does not take effect.
+Sets the automatic preconnection status of the Web kernel. If this API is not set, automatic preconnection is enabled by default.
+
+This API must be called before [initializeWebEngine()](#initializewebengine) initializes the kernel or a **Web** component is created. If any **Web** component has been loaded, the setting does not take effect.
 
 **Since:** 21
 
@@ -9725,7 +9790,9 @@ struct WebComponent {
 setErrorPageEnabled(enable: boolean): void
 ```
 
-Sets whether to enable the default error page.When this API is set to true, if an error occurs during page loading, the [onOverrideErrorPage](../arkts-components/arkts-arkweb-web-attribute.md#onoverrideerrorpage) callback is triggered. You can customize the error display page in the callback.
+Sets whether to enable the default error page.
+
+When this API is set to true, if an error occurs during page loading, the [onOverrideErrorPage](../arkts-components/arkts-arkweb-web-attribute.md#onoverrideerrorpage) callback is triggered. You can customize the error display page in the callback.
 
 **Since:** 20
 
@@ -9772,7 +9839,9 @@ struct WebComponent {
 setErrorPageEnabled(enable: boolean, includeSubframe: boolean): void
 ```
 
-Sets whether to enable the mainframe error page feature, and controls whether to also enable the subframe error page feature.When **enable** is set to **true**, an error page is displayed when a mainframe loading error occurs: if the [onOverrideErrorPage](../arkts-components/arkts-arkweb-web-attribute.md#onoverrideerrorpage) callback is set, the user-defined error page is displayed; if not, the default error page provided by ArkWeb is displayed. When both **enable** and **includeSubframe** are set to **true**, an error page is also displayed when a subframe loading error occurs, and the **onOverrideErrorPage** callback also takes effect for subframes.
+Sets whether to enable the mainframe error page feature, and controls whether to also enable the subframe error page feature.
+
+When **enable** is set to **true**, an error page is displayed when a mainframe loading error occurs: if the [onOverrideErrorPage](../arkts-components/arkts-arkweb-web-attribute.md#onoverrideerrorpage) callback is set, the user-defined error page is displayed; if not, the default error page provided by ArkWeb is displayed. When both **enable** and **includeSubframe** are set to **true**, an error page is also displayed when a subframe loading error occurs, and the **onOverrideErrorPage** callback also takes effect for subframes.
 
 > **NOTE：**
 > 
@@ -10017,24 +10086,36 @@ HTML file to be loaded:
 setPathAllowingUniversalAccess(pathList: Array<string>): void
 ```
 
-Sets a path list. When the file protocol accesses resources in the path list, cross-origin access to local files and other online resources is allowed. In addition, when a path list is set, the file protocol only allows access to resources in the path list. Typical use case: used when the **Web** component needs to be allowed to access local resource files across origins while restricting the access scope to ensure security. (The behavior of fileAccess will be overridden by the behavior of this API.)Using setPathAllowingUniversalAccess to relax cross-origin access restrictions on directories is a high-risk operation. Based on the principle of least privilege, the paths for el1 and el2 are fixed. The paths in the path list must conform to one of the following path formats:
+Sets a path list. When the file protocol accesses resources in the path list, cross-origin access to local files and other online resources is allowed. In addition, when a path list is set, the file protocol only allows access to resources in the path list. Typical use case: used when the **Web** component needs to be allowed to access local resource files across origins while restricting the access scope to ensure security. (The behavior of fileAccess will be overridden by the behavior of this API.)
+
+Using setPathAllowingUniversalAccess to relax cross-origin access restrictions on directories is a high-risk operation. Based on the principle of least privilege, the paths for el1 and el2 are fixed. The paths in the path list must conform to one of the following path formats:
+
 1. A subdirectory of the app file directory. (The app file directory is obtained through [Context.filesDir]
-(../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example:  
+(../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example:
+
 * /data/storage/el2/base/files/example  
 * /data/storage/el2/base/haps/entry/files/example
+
 2. The app resource directory or its subdirectory.
-(The app resource directory is obtained through [Context.resourceDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example:  
+(The app resource directory is obtained through [Context.resourceDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example:
+
 * /data/storage/el1/bundle/entry/resource/resfile  
 * /data/storage/el1/bundle/entry/resource/resfile/example
+
 3. Since API version 21, the app cache directory and its subdirectory are also included.
-(The app cache directory is obtained through [Context.cacheDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example:  
+(The app cache directory is obtained through [Context.cacheDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example:
+
 * /data/storage/el2/base/cache  
 * /data/storage/el2/base/haps/entry/cache/example  
 * The **cache/web** directory is not allowed. If it is included, an exception with the code **401** will be thrown. If the **cache** directory is set, **cache/web** cannot be accessed.
+
 4. Since API version 21, the app temporary directory and its subdirectory are also included.
-(The app temporary directory is obtained through [Context.tempDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example:  
+(The app temporary directory is obtained through [Context.tempDir] (../../../reference/apis-ability-kit/js-apis-inner-application-context.md#properties) in Ability Kit.) For example:
+
 * /data/storage/el2/base/temp  
-* /data/storage/el2/base/haps/entry/temp/example If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the fileAccess.
+* /data/storage/el2/base/haps/entry/temp/example
+
+If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the fileAccess.
 
 **Since:** 12
 
@@ -10044,7 +10125,7 @@ Sets a path list. When the file protocol accesses resources in the path list, cr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathList | Array & lt;string & gt; | Yes | The path list. |
+| pathList | Array&lt;string&gt; | Yes | The path list. |
 
 **Error codes:**
 
@@ -10446,7 +10527,9 @@ struct WebComponent {
 static setSiteIsolationMode(mode: SiteIsolationMode): void
 ```
 
-Sets the site isolation mode. The site isolation mechanism isolates websites from different origins in different rendering processes to reduce the cross-domain attack surface. For example, on devices such as PCs, when site isolation mode is not enabled, the original process model assigns one rendering process per tab. After site isolation is enabled, iframes from different origins within a tab can run in independent rendering processes.For third-party applications that load only trusted web pages, you can disable this functionality to improve performance, reduce memory usage, and reduce interception of cross-domain access. The default value varies according to the device. [SiteIsolationMode.STRICT](arkts-arkweb-webview-siteisolationmode-e.md) is used for PCs and tablets, and [SiteIsolationMode.PARTIAL](arkts-arkweb-webview-siteisolationmode-e.md) is used for phones. In [Secure Shield mode](../../../web/web-secure-shield-mode.md), strict site isolation is used.
+Sets the site isolation mode. The site isolation mechanism isolates websites from different origins in different rendering processes to reduce the cross-domain attack surface. For example, on devices such as PCs, when site isolation mode is not enabled, the original process model assigns one rendering process per tab. After site isolation is enabled, iframes from different origins within a tab can run in independent rendering processes.
+
+For third-party applications that load only trusted web pages, you can disable this functionality to improve performance, reduce memory usage, and reduce interception of cross-domain access. The default value varies according to the device. [SiteIsolationMode.STRICT](arkts-arkweb-webview-siteisolationmode-e.md) is used for PCs and tablets, and [SiteIsolationMode.PARTIAL](arkts-arkweb-webview-siteisolationmode-e.md) is used for phones. In [Secure Shield mode](../../../web/web-secure-shield-mode.md), strict site isolation is used.
 
 > **NOTE：**
 > 
@@ -10504,7 +10587,9 @@ struct WebComponent {
 static setSocketIdleTimeout(timeout: number): void
 ```
 
-Sets the timeout interval for used sockets to stay idle in the **Web** component. If the value is different from the timeout interval of existing idle sockets, the existing idle sockets are cleared according to the new value.If this API is not used to set the timeout interval for idle sockets, the default value **300s** is used for the **Web** component.
+Sets the timeout interval for used sockets to stay idle in the **Web** component. If the value is different from the timeout interval of existing idle sockets, the existing idle sockets are cleared according to the new value.
+
+If this API is not used to set the timeout interval for idle sockets, the default value **300s** is used for the **Web** component.
 
 **Since:** 21
 
@@ -10887,7 +10972,11 @@ struct WebComponent {
 static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 ```
 
-Sets a custom user agent for a specific website, which overwrites the system user agent and takes effect for all **Web** components in the application.To set a custom user agent for a specific website, you are advised to call the **setUserAgentForHosts** method to set **User-Agent** before creating a **Web** component, and then create a **Web** component with a specified src or use [loadUrl](#loadurl) to load a specific page.For details about the default **User-Agent** definition, application scenarios, and API priorities, see [Developing User-Agent](../../../web/web-default-userAgent.md).
+Sets a custom user agent for a specific website, which overwrites the system user agent and takes effect for all **Web** components in the application.
+
+To set a custom user agent for a specific website, you are advised to call the **setUserAgentForHosts** method to set **User-Agent** before creating a **Web** component, and then create a **Web** component with a specified src or use [loadUrl](#loadurl) to load a specific page.
+
+For details about the default **User-Agent** definition, application scenarios, and API priorities, see [Developing User-Agent](../../../web/web-default-userAgent.md).
 
 **Since:** 20
 
@@ -10898,7 +10987,7 @@ Sets a custom user agent for a specific website, which overwrites the system use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userAgent | string | Yes | Information about the custom user agent. It is recommended that you obtain the current default user agent through [getDefaultUserAgent](#getdefaultuseragent) and then customize the obtained user agent. |
-| hosts | Array & lt;string & gt; | Yes | List of domain names related to the custom user agent. Only the latest list is retained each time the API is called. The maximum number of entries is 20,000, and the excessive entries are automatically truncated. |
+| hosts | Array&lt;string&gt; | Yes | List of domain names related to the custom user agent. Only the latest list is retained each time the API is called. The maximum number of entries is 20,000, and the excessive entries are automatically truncated. |
 
 **Examples**
 
@@ -10980,7 +11069,9 @@ For details about the sample code, see [setUserAgentClientHintsEnabled](#setuser
 static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 ```
 
-Sets whether to enable web debugging. For details, see [Debugging Frontend Pages by Using DevTools](../../../web/web-debugging-with-devtools.md).NOTE: Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this feature in the officially released version of the application.
+Sets whether to enable web debugging. For details, see [Debugging Frontend Pages by Using DevTools](../../../web/web-debugging-with-devtools.md).
+
+NOTE: Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this feature in the officially released version of the application.
 
 **Since:** 9
 
@@ -11034,10 +11125,15 @@ struct WebComponent {
 static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 ```
 
-Sets whether to enable wireless web debugging. By default, wireless web debugging is disabled.  
+Sets whether to enable wireless web debugging. By default, wireless web debugging is disabled.
+
 * If no port is specified, this API is equivalent to the  
 [setWebDebuggingAccess](#setwebdebuggingaccess) API. In this case, ArkWeb starts a local domain socket listener.  
-* When a port is specified, ArkWeb starts a TCP socket listener. In this case, you can debug the web page wirelessly. For details, see [Wireless Debugging](../../../web/web-debugging-with-devtools.md#wireless-debugging).A port number smaller than 1024 is a well-known or system port and can be enabled only with privileges in the operating system. Therefore, the value of port must be greater than 1024. Otherwise, the API throws an exception.NOTE: Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this feature in the officially released version of the application.
+* When a port is specified, ArkWeb starts a TCP socket listener. In this case, you can debug the web page wirelessly. For details, see [Wireless Debugging](../../../web/web-debugging-with-devtools.md#wireless-debugging).
+
+A port number smaller than 1024 is a well-known or system port and can be enabled only with privileges in the operating system. Therefore, the value of port must be greater than 1024. Otherwise, the API throws an exception.
+
+NOTE: Enabling web debugging allows users to check and modify the internal status of the web page, which poses security risks. Therefore, you are advised not to enable this feature in the officially released version of the application.
 
 **Since:** 20
 
@@ -11629,7 +11725,7 @@ Stores this web page. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the save path if the operation is successful and null otherwise. |
+| Promise&lt;string&gt; | Promise used to return the save path if the operation is successful and null otherwise. |
 
 **Error codes:**
 
@@ -11747,7 +11843,9 @@ struct WebComponent {
 terminateRenderProcess(): boolean
 ```
 
-Terminates this render process.Calling this API will destroy the associated render process. If the render process has not been started or has been destroyed, there is no impact. In addition, destroying the render process affects all other instances associated with the render process.
+Terminates this render process.
+
+Calling this API will destroy the associated render process. If the render process has not been started or has been destroyed, there is no impact. In addition, destroying the render process affects all other instances associated with the render process.
 
 **Since:** 12
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wearDetection from '@kit.ConnectivityKit';
+import { wearDetection } from '@kit.ConnectivityKit';
 ```
 
 ## isWearDetectionEnabled
@@ -80,7 +80,7 @@ Check whether the wearing detection is enabled.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Returns the promise object. |
+| Promise&lt;boolean&gt; | Returns the promise object. |
 
 **Error codes:**
 

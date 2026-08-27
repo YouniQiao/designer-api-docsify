@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## convertRelativeToGlobalCoordinate
@@ -30,7 +30,7 @@ function convertRelativeToGlobalCoordinate(relativePosition: RelativePosition): 
 
 | 类型 | 说明 |
 | --- | --- |
-| [Position](arkts-arkui-display-position-i.md) | 返回相对于主屏左上角的全局坐标。 |
+| Position | 返回相对于主屏左上角的全局坐标。 |
 
 **错误码：**
 

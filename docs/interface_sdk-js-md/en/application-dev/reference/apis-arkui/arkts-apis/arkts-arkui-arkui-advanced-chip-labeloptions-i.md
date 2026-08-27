@@ -10,9 +10,6 @@ Defines text configuration options.
 
 ```TypeScript
 import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
-import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2SuffixImageIconConfig, ChipV2SuffixImageIcon, ChipV2Icon, ChipV2PrefixImageIconConfig, ChipV2PrefixImageIcon, ChipV2AccessibilityConfig, ChipV2Accessibility, ChipV2CloseConfig, ChipV2CloseIcon, ChipV2SymbolIconConfig, ChipV2SymbolIcon, ChipV2PrefixSymbolIconConfig, ChipV2PrefixSymbolIcon, ChipV2SuffixSymbolIconConfig, ChipV2SuffixSymbolIcon, ChipV2LabelMarginConfig, ChipV2LocalizedLabelMarginConfig, ChipV2LabelConfig, ChipV2Label, IChipV2OptionsConfig, ChipV2Options, ChipV2 } from '@kit.ArkUIV2';
-import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUIGroup';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUIGroupV2';
 ```
 
 ## activatedFontColor
@@ -21,7 +18,11 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 activatedFontColor?: ResourceColor
 ```
 
-Font color when the chip is activated.Default value: **\$r('sys.color.ohos_id_color_text_primary_contrary')**If the value is **undefined**, the default value is used.
+Font color when the chip is activated.
+
+Default value: **\$r('sys.color.ohos_id_color_text_primary_contrary')**
+
+If the value is **undefined**, the default value is used.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -39,7 +40,11 @@ Font color when the chip is activated.Default value: **\$r('sys.color.ohos_id_co
 fontColor?: ResourceColor
 ```
 
-Font color.Default value: **\$r('sys.color.ohos_id_color_text_primary')**If the value is **undefined**, the default value is used.
+Font color.
+
+Default value: **\$r('sys.color.ohos_id_color_text_primary')**
+
+If the value is **undefined**, the default value is used.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -57,7 +62,11 @@ Font color.Default value: **\$r('sys.color.ohos_id_color_text_primary')**If the 
 fontFamily?: string
 ```
 
-Font family.Default value: **"HarmonyOS Sans"**If the value is **undefined**, the default value is used.
+Font family.
+
+Default value: **"HarmonyOS Sans"**
+
+If the value is **undefined**, the default value is used.
 
 **Type:** string
 
@@ -75,7 +84,11 @@ Font family.Default value: **"HarmonyOS Sans"**If the value is **undefined**, th
 fontSize?: Dimension
 ```
 
-Font size. This parameter cannot be set in percentage.Default value: **\$r('sys.float.ohos_id_text_size_button2')**If the value is **undefined**, the default value is used.
+Font size. This parameter cannot be set in percentage.
+
+Default value: **\$r('sys.float.ohos_id_text_size_button2')**
+
+If the value is **undefined**, the default value is used.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -93,7 +106,17 @@ Font size. This parameter cannot be set in percentage.Default value: **\$r('sys.
 labelMargin?: LabelMarginOptions
 ```
 
-Spacing between the text and the left and right icons.Default value:When **size** is **ChipSize.SMALL**: **{ left: 4, right: 4 }**.When **size** is **ChipSize.NORMAL**: **{ left: 6, right: 6 }**.Unit: vp.If the value is **undefined**, the default value is used.
+Spacing between the text and the left and right icons.
+
+Default value:
+
+When **size** is **ChipSize.SMALL**: **{ left: 4, right: 4 }**.
+
+When **size** is **ChipSize.NORMAL**: **{ left: 6, right: 6 }**.
+
+Unit: vp.
+
+If the value is **undefined**, the default value is used.
 
 **Type:** [LabelMarginOptions](arkts-arkui-arkui-advanced-chip-labelmarginoptions-i.md)
 
@@ -111,7 +134,19 @@ Spacing between the text and the left and right icons.Default value:When **size*
 localizedLabelMargin?: LocalizedLabelMarginOptions
 ```
 
-Spacing between the localized text and the left and right icons.Default value:When **size** is set to **ChipSize.SMALL**, the default value is as follows:`{ start: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')) }`When **size** is set to **ChipSize.NORMAL**, the default value is as follows:`{ start: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')) }`If the value is **undefined**, the default value is used.
+Spacing between the localized text and the left and right icons.
+
+Default value:
+
+When **size** is set to **ChipSize.SMALL**, the default value is as follows:
+
+`{ start: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')) }`
+
+When **size** is set to **ChipSize.NORMAL**, the default value is as follows:
+
+`{ start: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')) }`
+
+If the value is **undefined**, the default value is used.
 
 **Type:** [LocalizedLabelMarginOptions](arkts-arkui-arkui-advanced-chip-localizedlabelmarginoptions-i.md)
 

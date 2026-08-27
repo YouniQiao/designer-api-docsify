@@ -21,8 +21,8 @@ Verifies the certificate passed by the application using the preset CA certifica
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | [CertBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certblob-i.md) | Yes | Certificate to be verified. |
-| caCert | [CertBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certblob-i.md) | No | Custom CA certificate. |
+| cert | CertBlob | Yes | Certificate to be verified. |
+| caCert | CertBlob | No | Custom CA certificate. |
 
 **Return value:**
 

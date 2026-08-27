@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemDateTime from '@kit.BasicServicesKit';
+import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
 ## setAutoTimeStatus
@@ -32,7 +32,7 @@ Sets the status of the automatic time setting. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

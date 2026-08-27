@@ -9,8 +9,7 @@ Describes audio stream information.
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## channelLayout

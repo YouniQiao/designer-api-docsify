@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancelAllCloudEnhancementTasks
@@ -34,7 +34,7 @@ cancelAllCloudEnhancementTasks(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -47,8 +47,6 @@ cancelAllCloudEnhancementTasks(): Promise<void>
 **示例**
 
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
 async function example(context: Context) {
   console.info('cancelAllCloudEnhancementTasksDemo');
   try {
@@ -81,13 +79,13 @@ cancelCloudEnhancementTasks(photoAssets: Array<PhotoAsset>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoAssets | Array & lt;PhotoAsset & gt; | 是 | 需要取消云增强任务的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)集合。 |
+| photoAssets | Array&lt;PhotoAsset&gt; | 是 | 需要取消云增强任务的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)集合。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -207,13 +205,13 @@ getCloudEnhancementPair(asset: PhotoAsset): Promise<PhotoAsset>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | 是 | 需要查询云增强配对照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)。 |
+| asset | PhotoAsset | 是 | 需要查询云增强配对照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PhotoAsset & gt; | 返回云增强配对照片。 |
+| Promise&lt;PhotoAsset&gt; | 返回云增强配对照片。 |
 
 **错误码：**
 
@@ -274,13 +272,13 @@ prioritizeCloudEnhancementTask(photoAsset: PhotoAsset): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoAsset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | 是 | 需要修改云增强优先级照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)。 |
+| photoAsset | PhotoAsset | 是 | 需要修改云增强优先级照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -341,7 +339,7 @@ queryCloudEnhancementTaskState(photoAsset: PhotoAsset): Promise<CloudEnhancement
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoAsset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | 是 | 需要查询云增强任务信息的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)。 |
+| photoAsset | PhotoAsset | 是 | 需要查询云增强任务信息的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)。 |
 
 **返回值：**
 
@@ -434,14 +432,14 @@ submitCloudEnhancementTasks(photoAssets: Array<PhotoAsset>, hasCloudWatermark: b
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoAssets | Array & lt;PhotoAsset & gt; | 是 | 需要增强照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)集合。 |
+| photoAssets | Array&lt;PhotoAsset&gt; | 是 | 需要增强照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)集合。 |
 | hasCloudWatermark | boolean | 是 | 增强后图片是否添加云增强水印。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -504,7 +502,7 @@ submitCloudEnhancementTasks(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoAssets | Array & lt;PhotoAsset & gt; | 是 | 需要增强照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)集合。 |
+| photoAssets | Array&lt;PhotoAsset&gt; | 是 | 需要增强照片的[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md)集合。 |
 | hasCloudWatermark | boolean | 是 | 若为true，增强后图片添加云增强水印；若为false，增强后图片不添加云增强水印。 |
 | triggerMode | number | 否 | 云增强任务触发类型。   - 0：手动触发。   - 1：自动触发。   - 默认值为0。 |
 
@@ -512,7 +510,7 @@ submitCloudEnhancementTasks(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -572,7 +570,7 @@ syncCloudEnhancementTaskStatus(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -585,8 +583,6 @@ syncCloudEnhancementTaskStatus(): Promise<void>
 **示例**
 
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
-
 async function example(context: Context) {
   console.info('syncCloudEnhancementTaskStatusDemo');
   try {

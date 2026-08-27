@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import power from '@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## hibernate
@@ -14,7 +14,7 @@ function hibernate(clearMemory: boolean): void
 
 休眠设备。
 
-与suspend方法的区别：hibernate为更深的休眠状态（休眠前可选择清理内存），suspend为较浅的低功耗睡眠状态（灭屏后进入睡眠）。 需最大程度节省电量时选择hibernate，需快速恢复设备活动时选择suspend。适用于设备长时间闲置需要深度节能的场景。
+与suspend方法的区别：hibernate为更深的休眠状态（休眠前可选择清理内存），suspend为较浅的低功耗睡眠状态（灭屏后进入睡眠）。需最大程度节省电量时选择hibernate，需快速恢复设备活动时选择suspend。适用于设备长时间闲置需要深度节能的场景。
 
 **起始版本：** 12
 

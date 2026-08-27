@@ -20,7 +20,7 @@ activatedFillColor?: ColorMetrics
 
 Image filled color when chip is activated.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ fillColor?: ColorMetrics
 
 Image filled color.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ modifier?: ImageModifier
 
 Modifier for the icon.
 
-**Type:** ImageModifier
+**Type:** [ImageModifier](arkts-arkui-imagemodifier-c.md)
 
 **Since:** 26.0.0
 
@@ -74,7 +74,7 @@ size?: SizeT<LengthMetrics>
 
 Image size option.
 
-**Type:** SizeT&lt;LengthMetrics&gt;
+**Type:** [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt;
 
 **Since:** 26.0.0
 

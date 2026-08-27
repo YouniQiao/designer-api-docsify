@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## query
@@ -87,7 +86,7 @@ Queries specified task details.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;TaskInfo & gt; | the promise returned by the function. |
+| Promise&lt;TaskInfo&gt; | the promise returned by the function. |
 
 **错误码：**
 

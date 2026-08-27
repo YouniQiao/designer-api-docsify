@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import identifier from '@kit.AdsKit';
+import { identifier } from '@kit.AdsKit';
 ```
 
 ## getOAID
@@ -75,7 +75,7 @@ Obtains the OAID. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the OAID. |
+| Promise&lt;string&gt; | Promise used to return the OAID. |
 
 **Error codes:**
 

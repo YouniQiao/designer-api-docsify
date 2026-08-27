@@ -11,7 +11,7 @@ Provides APIs to manage the file retrieval result.
 ## Modules to Import
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## close
@@ -73,7 +73,7 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;T & gt; & gt; | Promise used to return all the assets in the result set. |
+| Promise&lt;Array&lt;T&gt;&gt; | Promise used to return all the assets in the result set. |
 
 **Error codes:**
 
@@ -163,7 +163,7 @@ Obtains the first asset in the result set. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise used to return the first object in the result set. |
+| Promise&lt;T&gt; | Promise used to return the first object in the result set. |
 
 **Error codes:**
 
@@ -208,7 +208,7 @@ Obtains the last asset in the result set. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise used to return the last object in the result set. |
+| Promise&lt;T&gt; | Promise used to return the last object in the result set. |
 
 **Error codes:**
 
@@ -243,7 +243,9 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 getNextObject(): Promise<T>
 ```
 
-Obtains the next asset in the result set. This API uses a promise to return the result.Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
+Obtains the next asset in the result set. This API uses a promise to return the result.
+
+Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
 
 **Since:** 12
 
@@ -253,7 +255,7 @@ Obtains the next asset in the result set. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise used to return the next object in the result set. |
+| Promise&lt;T&gt; | Promise used to return the next object in the result set. |
 
 **Error codes:**
 
@@ -305,7 +307,7 @@ Obtains the asset with the given index in the result set. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise used to return the asset obtained. |
+| Promise&lt;T&gt; | Promise used to return the asset obtained. |
 
 **Error codes:**
 

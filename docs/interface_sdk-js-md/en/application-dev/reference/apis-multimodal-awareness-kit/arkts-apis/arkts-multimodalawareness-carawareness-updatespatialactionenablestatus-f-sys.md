@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import carAwareness from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## updateSpatialActionEnableStatus

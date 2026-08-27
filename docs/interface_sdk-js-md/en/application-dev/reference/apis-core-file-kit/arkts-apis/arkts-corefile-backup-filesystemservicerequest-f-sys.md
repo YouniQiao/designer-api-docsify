@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## fileSystemServiceRequest
@@ -34,7 +34,7 @@ Requests filesystem garbage collection with specified configuration.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | The errcode of garbage collection. |
+| Promise&lt;number&gt; | The errcode of garbage collection. |
 
 **Error codes:**
 

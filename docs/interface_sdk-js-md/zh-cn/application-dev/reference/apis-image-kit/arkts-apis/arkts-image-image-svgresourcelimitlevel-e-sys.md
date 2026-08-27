@@ -1,6 +1,8 @@
 # SVGResourceLimitLevel（系统接口）
 
-SVG资源限制等级枚举。更高等级允许解析和绘制SVG图像时使用更少的资源。 无论指定哪种等级，系统默认的资源限制都会实施。
+SVG资源限制等级枚举。
+
+更高等级允许解析和绘制SVG图像时使用更少的资源。无论指定哪种等级，系统默认的资源限制都会实施。
 
 **起始版本：** 26.1.0
 
@@ -14,7 +16,9 @@ SVG资源限制等级枚举。更高等级允许解析和绘制SVG图像时使�
 NONE = 0
 ```
 
-使用系统默认的SVG资源限制。该等级不会关闭SVG资源保护。
+使用系统默认的SVG资源限制。
+
+该等级不会关闭SVG资源保护。
 
 **起始版本：** 26.1.0
 
@@ -30,7 +34,9 @@ NONE = 0
 LOW = 1
 ```
 
-使用低等级限制，允许使用更多SVG资源预算。此等级适用于复杂的SVG图片。系统默认的资源限制仍然使用。
+使用低等级限制，允许使用更多SVG资源预算。
+
+此等级适用于复杂的SVG图片。系统默认的资源限制仍然使用。
 
 **起始版本：** 26.1.0
 
@@ -46,7 +52,9 @@ LOW = 1
 MEDIUM = 2
 ```
 
-使用中等级限制，允许使用适中的SVG资源预算。该等级平衡SVG兼容性和资源消耗，适用于大多数SVG图像。
+使用中等级限制，允许使用适中的SVG资源预算。
+
+该等级平衡SVG兼容性和资源消耗，适用于大多数SVG图像。
 
 **起始版本：** 26.1.0
 
@@ -62,7 +70,9 @@ MEDIUM = 2
 HIGH = 3
 ```
 
-使用高等级限制，允许使用更少SVG资源预算。该等级适用于简单SVG图像，如图标和基础的UI资源。
+使用高等级限制，允许使用更少SVG资源预算。
+
+该等级适用于简单SVG图像，如图标和基础的UI资源。
 
 **起始版本：** 26.1.0
 
@@ -71,3 +81,17 @@ HIGH = 3
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
 **系统接口：** 此接口为系统接口。
+
+**示例**
+
+```TypeScript
+import { fileIo } from '@kit.CoreFileKit';
+
+async function CreateImageSource(context : Context) {
+  let sourceOptions: image.SourceOptions = { sourceDensity: 120, svgResourceLimitLevel: image.SVGResourceLimitLevel.MEDIUM};
+  // 此处'test.jpg'仅作示例，请开发者自行替换，否则imageSource创建失败会导致后续无法正常执行。
+  const filePath: string = context.filesDir + "/test.jpg";
+  let file = fileIo.openSync(filePath, fileIo.OpenMode.CREATE | fileIo.OpenMode.READ_WRITE);
+  const imageSourceObj: image.ImageSource = image.createImageSource(file.fd, sourceOptions);
+}
+```

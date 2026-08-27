@@ -17,8 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import userAuth from '@kit.UserAuthenticationKit';
-import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## reuseDuration
@@ -27,7 +26,8 @@ import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 reuseDuration: number
 ```
 
-允许复用解锁认证结果的有效时长，单位为毫秒。有效时长的值应大于0，最大值为 [MAX_ALLOWABLE_REUSE_DURATION](arkts-userauthentication-userauth-con.md#max_allowable_reuse_duration)， （300000毫秒，即5分钟）。建议根据业务场景设置合理的时长：  
+允许复用解锁认证结果的有效时长，单位为毫秒。有效时长的值应大于0，最大值为[MAX_ALLOWABLE_REUSE_DURATION](arkts-userauthentication-userauth-con.md#max_allowable_reuse_duration)，（300000毫秒，即5分钟）。建议根据业务场景设置合理的时长：
+
 - 高安全场景（如支付）：建议设置较短时长（如30秒至1分钟）。  
 - 中等安全场景（如应用登录）：建议设置中等时长（如2至3分钟）。  
 - 低安全场景（如数据查询）：可使用最大时长。
@@ -46,7 +46,8 @@ reuseDuration: number
 reuseMode: ReuseMode
 ```
 
-复用解锁认证结果的模式。根据业务场景的安全需求选择合适的复用模式：  
+复用解锁认证结果的模式。根据业务场景的安全需求选择合适的复用模式：
+
 - AUTH_TYPE_RELEVANT(1)：仅复用匹配认证类型的设备解锁结果，安全性最高。  
 - AUTH_TYPE_IRRELEVANT(2)：复用任意类型的设备解锁结果，适用于中等安全场景。  
 - CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT(3)：复用匹配认证类型的任意认证结果，适用于跨应用场景。  

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedMissionManager from '@kit.AbilityKit';
+import { distributedMissionManager } from '@kit.AbilityKit';
 ```
 
 ## continueMission
@@ -28,8 +28,8 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | [ContinueDeviceInfo](arkts-ability-continuedeviceinfo-i-sys.md) | 是 | 通过任务ID方式迁移时的迁移信息，包含源设备ID、目标设备ID、任务ID等。 |
-| options | [ContinueCallback](arkts-ability-continuecallback-i-sys.md) | 是 | 通过任务ID方式迁移任务完成时的回调函数，用于接收迁移结果。 |
+| parameter | ContinueDeviceInfo | 是 | 通过任务ID方式迁移时的迁移信息，包含源设备ID、目标设备ID、任务ID等。 |
+| options | ContinueCallback | 是 | 通过任务ID方式迁移任务完成时的回调函数，用于接收迁移结果。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，迁移任务完成时，err为undefined，否则返回错误对象。 |
 
 **错误码：**
@@ -102,14 +102,14 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | [ContinueDeviceInfo](arkts-ability-continuedeviceinfo-i-sys.md) | 是 | 迁移信息，包含源设备ID、目标设备ID、任务ID和自定义参数等字段。 |
-| options | [ContinueCallback](arkts-ability-continuecallback-i-sys.md) | 是 | 迁移任务完成回调函数。 |
+| parameter | ContinueDeviceInfo | 是 | 迁移信息，包含源设备ID、目标设备ID、任务ID和自定义参数等字段。 |
+| options | ContinueCallback | 是 | 迁移任务完成回调函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 返回的Promise对象，操作成功时表示通过任务ID方式迁移任务已完成，失败时返回错误信息。 |
+| Promise&lt;void&gt; | 返回的Promise对象，操作成功时表示通过任务ID方式迁移任务已完成，失败时返回错误信息。 |
 
 **错误码：**
 
@@ -178,7 +178,7 @@ function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | [ContinueMissionInfo](arkts-ability-continuemissioninfo-i-sys.md) | 是 | 迁移信息，包含源设备ID、目标设备ID、应用包名和自定义参数等字段。 |
+| parameter | ContinueMissionInfo | 是 | 迁移信息，包含源设备ID、目标设备ID、应用包名和自定义参数等字段。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，通过指定包名迁移任务完成时，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -244,13 +244,13 @@ function continueMission(parameter: ContinueMissionInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | [ContinueMissionInfo](arkts-ability-continuemissioninfo-i-sys.md) | 是 | 迁移信息，包含源设备ID、目标设备ID、应用包名和自定义参数等字段。 |
+| parameter | ContinueMissionInfo | 是 | 迁移信息，包含源设备ID、目标设备ID、应用包名和自定义参数等字段。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 返回的Promise对象，操作成功时表示通过包名方式迁移任务已完成，失败时返回错误信息。 |
+| Promise&lt;void&gt; | 返回的Promise对象，操作成功时表示通过包名方式迁移任务已完成，失败时返回错误信息。 |
 
 **错误码：**
 

@@ -9,8 +9,7 @@ Provides APIs for the file manager application to perform device-cloud sync of t
 ## Modules to Import
 
 ```TypeScript
-import cloudSync from '@kit.CoreFileKit';
-import cloudSyncManager from '@kit.CoreFileKitManager';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -68,7 +67,7 @@ Query the upload state of the cloud file list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | Array & lt;string & gt; | Yes | uris of queryed files. |
+| uris | Array&lt;string&gt; | Yes | uris of queryed files. |
 
 **Return value:**
 

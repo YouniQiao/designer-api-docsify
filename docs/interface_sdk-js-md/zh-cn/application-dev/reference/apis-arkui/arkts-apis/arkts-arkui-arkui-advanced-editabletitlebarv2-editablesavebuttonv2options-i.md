@@ -34,7 +34,13 @@ onAction?: OnActionCallback
 defaultFocus?: boolean
 ```
 
-是否默认获取焦点。true：获焦。false：不获焦。默认值：false。
+是否默认获取焦点。
+
+true：获焦。
+
+false：不获焦。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -54,7 +60,13 @@ defaultFocus?: boolean
 isRequired?: boolean
 ```
 
-是否显示保存按钮。true：显示保存按钮。false：不显示保存按钮。默认值：true。
+是否显示保存按钮。
+
+true：显示保存按钮。
+
+false：不显示保存按钮。
+
+默认值：true。
 
 **类型：** boolean
 

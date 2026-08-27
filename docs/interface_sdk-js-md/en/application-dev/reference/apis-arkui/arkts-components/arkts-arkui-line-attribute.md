@@ -33,7 +33,7 @@ Sets the coordinates (relative coordinates) of the end point of the line. This a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array & lt;any & gt; | Yes | Coordinates (relative coordinates) of the end point of the line, in vp.Default value: **[0, 0]**The **undefined** and **null** values are treated as the default value. |
+| value | Array&lt;any&gt; | Yes | Coordinates (relative coordinates) of the end point of the line, in vp.Default value: **[0, 0]**The **undefined** and **null** values are treated as the default value. |
 
 ## startPoint
 
@@ -55,4 +55,4 @@ Sets the coordinates (relative coordinates) of the start point of the line. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array & lt;any & gt; | Yes | Coordinates (relative coordinates) of the start point of the line, in vp.Default value: **[0, 0]**The **undefined** and **null** values are treated as the default value. |
+| value | Array&lt;any&gt; | Yes | Coordinates (relative coordinates) of the start point of the line, in vp.Default value: **[0, 0]**The **undefined** and **null** values are treated as the default value. |

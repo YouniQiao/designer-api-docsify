@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import continueManager from '@kit.AbilityKit';
+import { continueManager } from '@kit.AbilityKit';
 ```
 
 ## resultInfo
@@ -18,7 +18,9 @@ import continueManager from '@kit.AbilityKit';
 resultInfo?: string
 ```
 
-操作结果的说明，提供操作成功或失败的详细描述信息。此接口仅可在Stage模型下使用。
+操作结果的说明，提供操作成功或失败的详细描述信息。
+
+此接口仅可在Stage模型下使用。
 
 **类型：** string
 

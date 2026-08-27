@@ -11,7 +11,8 @@
 function getConnectionPropertiesSync(netHandle: NetHandle): ConnectionProperties
 ```
 
-Obtains the connection information of the data network specified by **NetHandle**, including the NIC name, domain name, link information, route information, network address, and maximum transmission unit. This API returns the result synchronously.  
+Obtains the connection information of the data network specified by **NetHandle**, including the NIC name, domain name, link information, route information, network address, and maximum transmission unit. This API returns the result synchronously.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 10
@@ -24,7 +25,7 @@ Obtains the connection information of the data network specified by **NetHandle*
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. |
+| netHandle | NetHandle | Yes | Network handle. |
 
 **Return value:**
 

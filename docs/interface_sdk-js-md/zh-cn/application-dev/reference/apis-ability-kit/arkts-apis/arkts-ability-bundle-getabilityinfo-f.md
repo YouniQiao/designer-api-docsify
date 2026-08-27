@@ -3,22 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import appControl from '@kit.AbilityKit.appControl';
-import bundleManager from '@kit.AbilityKit.bundleManager';
-import bundleMonitor from '@kit.AbilityKit.bundleMonitor';
-import bundleResourceManager from '@kit.AbilityKit.bundleResourceManager';
-import bundle from '@kit.AbilityKit';
-import defaultAppManager from '@kit.AbilityKit.defaultAppManager';
-import distributedBundleManager from '@kit.AbilityKit.distributedBundleManager';
-import freeInstall from '@kit.AbilityKit.freeInstall';
-import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit.innerBundleManager';
-import installer from '@kit.AbilityKit.installer';
-import launcherBundleManager from '@kit.AbilityKit.launcherBundleManager';
-import overlay from '@kit.AbilityKit.overlay';
-import shortcutManager from '@kit.AbilityKit.shortcutManager';
-import skillManager from '@kit.AbilityKit.skillManager';
-import appDomainVerify from '@kit.AbilityKit.appDomainVerify';
-import pluginBundleManager from '@kit.AbilityKit.pluginBundleManager';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## getAbilityInfo
@@ -27,7 +12,9 @@ import pluginBundleManager from '@kit.AbilityKit.pluginBundleManager';
 function getAbilityInfo(bundleName: string, abilityName: string, callback: AsyncCallback<AbilityInfo>): void
 ```
 
-通过Bundle名称和组件名获取Ability组件信息，使用callback异步回调。获取调用方自己的信息时不需要权限。
+通过Bundle名称和组件名获取Ability组件信息，使用callback异步回调。
+
+获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 
@@ -69,7 +56,9 @@ bundle.getAbilityInfo(bundleName, abilityName, (err, data) => {
 function getAbilityInfo(bundleName: string, abilityName: string): Promise<AbilityInfo>
 ```
 
-通过Bundle名称和组件名获取Ability组件信息，使用Promise形式异步回调。获取调用方自己的信息时不需要权限。
+通过Bundle名称和组件名获取Ability组件信息，使用Promise形式异步回调。
+
+获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 

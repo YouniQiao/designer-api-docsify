@@ -1,6 +1,12 @@
 # ImageSource
 
-The **ImageSource** class provides APIs to obtain image information.Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md) to create an ImageSource instance.All APIs in ImageSource cannot be called concurrently.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+The **ImageSource** class provides APIs to obtain image information.
+
+Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md) to create an ImageSource instance.
+
+All APIs in ImageSource cannot be called concurrently.
+
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
 
@@ -9,7 +15,7 @@ The **ImageSource** class provides APIs to obtain image information.Before calli
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createWideGamutSdrPixelMap
@@ -30,7 +36,7 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible. For a SDR ImageSou
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | Decoded PixelMap. |
+| Promise&lt;PixelMap&gt; | Decoded PixelMap. |
 
 **Error codes:**
 
@@ -96,7 +102,7 @@ Checks whether a JPEG image is progressive. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise object. The value **true** indicates that the JPEG image is progressive, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise object. The value **true** indicates that the JPEG image is progressive, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -140,13 +146,13 @@ Modify the value of properties in an image with the specified keys.The HwMnote r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record & lt;string, string \ | null & gt; | Yes | Property Records whose values are to be modified, when the value is set to null the tag will be removed. |
+| records | Record&lt;string, string \| null&gt; | Yes | Property Records whose values are to be modified, when the value is set to null the tag will be removed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

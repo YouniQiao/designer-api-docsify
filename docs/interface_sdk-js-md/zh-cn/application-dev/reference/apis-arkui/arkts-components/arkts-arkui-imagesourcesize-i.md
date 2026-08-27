@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import @kit.ArkUIGeneration from '@ohos.arkui.intelligence.@kit.ArkUIGeneration';
 ```
 
 ## height
@@ -22,8 +21,11 @@ import @kit.ArkUIGeneration from '@ohos.arkui.intelligence.@kit.ArkUIGeneration'
 height: number
 ```
 
-图片解码尺寸高度。单位：vp  
-**取值范围：** (0, +∞)；当取值小于等于0时，该参数不生效，按图片原始尺寸解码。 Anonymous Object Rectification.
+图片解码尺寸高度。
+
+单位：vp
+
+**取值范围：** (0, +∞)；当取值小于等于0时，该参数不生效，按图片原始尺寸解码。Anonymous Object Rectification.
 
 **类型：** number
 
@@ -41,8 +43,11 @@ height: number
 width: number
 ```
 
-图片解码尺寸宽度。单位：vp  
-**取值范围：** (0, +∞)；当取值小于等于0时，该参数不生效，按图片原始尺寸解码。 Anonymous Object Rectification.
+图片解码尺寸宽度。
+
+单位：vp
+
+**取值范围：** (0, +∞)；当取值小于等于0时，该参数不生效，按图片原始尺寸解码。Anonymous Object Rectification.
 
 **类型：** number
 

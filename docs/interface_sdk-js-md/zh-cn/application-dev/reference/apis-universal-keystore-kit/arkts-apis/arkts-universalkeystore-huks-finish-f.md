@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import huks from '@kit.UniversalKeystoreKit';
-import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## finish
@@ -13,7 +12,9 @@ import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 function finish(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void
 ```
 
-finish操作密钥接口。使用callback异步回调。huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
+finish操作密钥接口。使用callback异步回调。
+
+huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 
 > **说明：**
 > 
@@ -44,7 +45,9 @@ finish操作密钥接口。使用callback异步回调。huks.init、huks.update�
 function finish(handle: number, options: HuksOptions): Promise<HuksResult>
 ```
 
-finish操作密钥接口。使用Promise异步回调。huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
+finish操作密钥接口。使用Promise异步回调。
+
+huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 
 > **说明：**
 > 

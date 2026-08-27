@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import storageStatistics from '@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getFreeSize
@@ -71,7 +71,7 @@ function getFreeSize(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回内置存储的可用空间大小（单位为Byte）。 |
+| Promise&lt;number&gt; | Promise对象，返回内置存储的可用空间大小（单位为Byte）。 |
 
 **错误码：**
 

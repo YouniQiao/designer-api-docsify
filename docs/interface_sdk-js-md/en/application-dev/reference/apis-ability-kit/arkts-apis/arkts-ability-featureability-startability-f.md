@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import featureAbility from '@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## startAbility
@@ -92,7 +92,7 @@ Starts an ability. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. If the operation is successful, **0** is returned; otherwise, a non-zero value is returned. |
+| Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, **0** is returned; otherwise, a non-zero value is returned. |
 
 **Examples**
 

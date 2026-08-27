@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import FaultLogger from '@kit.PerformanceAnalysisKit';
+import { FaultLogger } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## query

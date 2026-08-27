@@ -1,6 +1,8 @@
 # LocalizedAlignment
 
-LocalizedAlignment enumeration description.@enum { string }
+LocalizedAlignment enumeration description.
+
+@enum { string }
 
 **起始版本：** 20
 

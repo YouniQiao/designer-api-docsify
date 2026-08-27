@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import formAgent from '@kit.FormKit';
+import { formAgent } from '@kit.FormKit';
 ```
 
 ## updateFormCrossBundle
@@ -35,7 +35,7 @@ function updateFormCrossBundle(formId: string, formBindingData: formBindingData.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

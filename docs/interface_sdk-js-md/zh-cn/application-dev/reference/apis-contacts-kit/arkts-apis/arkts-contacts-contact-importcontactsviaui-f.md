@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## importContactsViaUI
@@ -12,7 +12,9 @@ import contact from '@kit.ContactsKit';
 function importContactsViaUI(context: Context, contacts: Array<Contact>): Promise<Array<number>>
 ```
 
-通过UI交互批量导入多个联系人。每次最多可导入100个联系人。不支持导入联系人的头像。
+通过UI交互批量导入多个联系人。
+
+每次最多可导入100个联系人。不支持导入联系人的头像。
 
 **起始版本：** 26.0.0
 
@@ -26,14 +28,14 @@ function importContactsViaUI(context: Context, contacts: Array<Contact>): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| context | Context | 是 | 应用上下文Context。 |
 | contacts | Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 表示待导入数据库的联系人信息数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | 返回联系人创建结果的数组。返回的联系人id有效（可通过[getId]{ |
+| Promise&lt;Array&lt;number&gt;&gt; | 返回联系人创建结果的数组。返回的联系人id有效（可通过[getId]{ |
 
 **错误码：**
 

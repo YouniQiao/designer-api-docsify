@@ -20,7 +20,7 @@ left?: LengthMetrics
 
 Left label margin length.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ right?: LengthMetrics
 
 Right label margin length.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 26.0.0
 

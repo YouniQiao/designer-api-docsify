@@ -1,6 +1,8 @@
 # EapData
 
-EAP信息。​**系统能力**​：SystemCapability.Communication.NetManager.Eap
+EAP信息。
+
+​**系统能力**​：SystemCapability.Communication.NetManager.Eap
 
 **起始版本：** 20
 
@@ -9,7 +11,7 @@ EAP信息。​**系统能力**​：SystemCapability.Communication.NetManager.E
 ## 导入模块
 
 ```TypeScript
-import eap from '@kit.NetworkKit';
+import { eap } from '@kit.NetworkKit';
 ```
 
 ## bufferLen

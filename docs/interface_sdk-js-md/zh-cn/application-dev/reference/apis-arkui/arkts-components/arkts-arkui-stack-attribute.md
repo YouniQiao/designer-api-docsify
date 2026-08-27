@@ -1,6 +1,8 @@
 # Stack属性/事件
 
-除支持通用属性外，还支持以下属性：支持通用事件。
+除支持通用属性外，还支持以下属性：
+
+支持通用事件。
 
 **继承/实现关系：** StackAttribute extends CommonMethod<StackAttribute>
 
@@ -19,7 +21,7 @@
 alignContent(value: Alignment)
 ```
 
-设置子组件在容器内的对齐方式。该属性与align同时设置时，后设置的属性值会覆盖先设置的属性值。该属性与接口构造入参同时设置时，以属性设置 的值为准，与设置顺序无关。
+设置子组件在容器内的对齐方式。该属性与align同时设置时，后设置的属性值会覆盖先设置的属性值。该属性与接口构造入参同时设置时，以属性设置的值为准，与设置顺序无关。
 
 **起始版本：** 7
 
@@ -33,7 +35,7 @@ alignContent(value: Alignment)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | 是 | 所有子组件在容器内的对齐方式。 默认值：Alignment.Center 非法值：按默认值处理。 |
+| value | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | 是 | 所有子组件在容器内的对齐方式。默认值：Alignment.Center 非法值：按默认值处理。 |
 
 ## syncLoad
 
@@ -55,4 +57,4 @@ syncLoad(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否同步加载Stack区域内所有子组件。 true表示同步加载；false表示异步加载。 默认值：true    **说明：** 设置为false时，在首次显示场景，若当前帧布局耗时超过50ms，会将Stack区域内尚未布局的子组件延后到下一帧进行布局。 |
+| enable | boolean | 是 | 是否同步加载Stack区域内所有子组件。true表示同步加载；false表示异步加载。默认值：true    **说明：** 设置为false时，在首次显示场景，若当前帧布局耗时超过50ms，会将Stack区域内尚未布局的子组件延后到下一帧进行布局。 |

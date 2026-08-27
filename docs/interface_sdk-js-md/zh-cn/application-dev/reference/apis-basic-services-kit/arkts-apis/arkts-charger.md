@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import charger from '@kit.BasicServicesKit';
+import { charger } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总

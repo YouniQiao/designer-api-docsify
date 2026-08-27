@@ -17,7 +17,9 @@
 getAttributeCount(): number
 ```
 
-ArkTS-Sta: getAttributeCount(): int当前开始标记的属性数量，用于遍历和处理XML属性。
+ArkTS-Sta: getAttributeCount(): number
+
+当前开始标记的属性数量，用于遍历和处理XML属性。
 
 **起始版本：** 8
 
@@ -57,7 +59,9 @@ console.info(str);
 getColumnNumber(): number
 ```
 
-ArkTS-Sta: getColumnNumber(): int获取当前列号，从1开始计数。
+ArkTS-Sta: getColumnNumber(): number
+
+获取当前列号，从1开始计数。
 
 **起始版本：** 8
 
@@ -97,7 +101,9 @@ console.info(str);
 getDepth(): number
 ```
 
-ArkTS-Sta: getDepth(): int获取元素的当前深度。
+ArkTS-Sta: getDepth(): number
+
+获取元素的当前深度。
 
 > **说明：**
 > 
@@ -145,7 +151,9 @@ console.info(str);
 getLineNumber(): number
 ```
 
-ArkTS-Sta: getLineNumber(): int获取当前行号，从1开始。
+ArkTS-Sta: getLineNumber(): number
+
+获取当前行号，从1开始。
 
 **起始版本：** 8
 

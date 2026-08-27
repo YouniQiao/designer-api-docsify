@@ -1,6 +1,6 @@
 # TCPSocketServer
 
-TCPSocketServer连接。在调用TCPSocketServer的方法前，需要先通过 [socket.constructTCPSocketServerInstance](arkts-network-socket-constructtcpsocketserverinstance-f.md)创建TCPSocketServer对象。
+TCPSocketServer连接。在调用TCPSocketServer的方法前，需要先通过[socket.constructTCPSocketServerInstance](arkts-network-socket-constructtcpsocketserverinstance-f.md)创建TCPSocketServer对象。
 
 **起始版本：** 10
 
@@ -9,7 +9,7 @@ TCPSocketServer连接。在调用TCPSocketServer的方法前，需要先通过 [
 ## 导入模块
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## close
@@ -18,7 +18,7 @@ import socket from '@kit.NetworkKit';
 close(): Promise<void>
 ```
 
-TCPSocketServer停止监听并释放通过 [listen](#listen)方法绑定的端口。若多次调用 [listen](#listen)方法，再调用此方法时会释放 TCPSocketServer的所有监听端口。使用Promise异步回调。
+TCPSocketServer停止监听并释放通过[listen](#listen)方法绑定的端口。若多次调用[listen](#listen)方法，再调用此方法时会释放TCPSocketServer的所有监听端口。使用Promise异步回调。
 
 > **说明：**
 > 
@@ -35,7 +35,7 @@ TCPSocketServer停止监听并释放通过 [listen](#listen)方法绑定的端�
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -266,7 +266,7 @@ getLocalAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;NetAddress & gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| Promise&lt;NetAddress&gt; | 以Promise形式返回获取本地socket地址的结果。 |
 
 **错误码：**
 
@@ -469,7 +469,7 @@ getSocketFd(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回Socket的文件描述符。 |
+| Promise&lt;number&gt; | Promise对象，返回Socket的文件描述符。 |
 
 **错误码：**
 
@@ -1179,7 +1179,7 @@ listen(address: NetAddress, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 目标地址信息。 |
+| address | NetAddress | 是 | 目标地址信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
@@ -1237,13 +1237,13 @@ listen(address: NetAddress): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 目标地址信息。 |
+| address | NetAddress | 是 | 目标地址信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1736,7 +1736,7 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -1,6 +1,6 @@
 # @ohos.arkui.uiMaterial
 
-本模块提供系统材质的接口定义。不同的系统材质对应不同的UI效果，包括背景色 backgroundColor、边框颜色 borderColor、边框宽度borderWidth、阴影 shadow效果。
+本模块提供系统材质的接口定义。不同的系统材质对应不同的UI效果，包括背景色backgroundColor、边框颜色borderColor、边框宽度borderWidth、阴影shadow效果。
 
 **起始版本：** 26.0.0
 
@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import uiMaterial from '@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -26,7 +26,7 @@ import uiMaterial from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | 沉浸式材质类，继承自[Material](arkts-arkui-uimaterial-materialtype-e.md)。沉浸式材质根据设备算力有分档表现，设备算力的高、中、低档由设备厂商决定，定义在系统配置文件中。在高档和中档算力设备上，影响材质层滤镜效果和阴影 shadow效果。在低档算力设备上，影响背景色 backgroundColor、边框 颜色borderColor、边框宽度borderWidth、阴影 shadow效果。且同一材质的效果，会受到设置应用中沉浸光感配置项的影响，不同强弱程度的沉浸光感配置 下，材质的参数和效果存在差异。 |
+| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | 沉浸式材质类，继承自[Material](arkts-arkui-uimaterial-materialtype-e.md)。 |
 | [Material](arkts-arkui-uimaterial-material-c.md) | 系统材质对象基类。 |
 
 <!--Del-->
@@ -59,12 +59,103 @@ import uiMaterial from '@kit.ArkUI';
 | --- | --- |
 | [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md) | 沉浸式材质样式枚举。不同的材质样式对应不同的材质参数，主要包括材质的模糊程度、高光效果等。 |
 | [MaterialState](arkts-arkui-uimaterial-materialstate-e.md) | 材质使能状态枚举，表示应用级沉浸式系统材质配置的状态。 |
-| [MaterialType](arkts-arkui-uimaterial-materialtype-e.md) | 系统材质类型枚举。@enum { number } [since 23 - 24] |
+| [MaterialType](arkts-arkui-uimaterial-materialtype-e.md) | 系统材质类型枚举。 |
 
 <!--Del-->
 ### 枚举（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [MaterialType](arkts-arkui-uimaterial-materialtype-e-sys.md) | 系统材质类型枚举。@enum { number } [since 23 - 24] |
+| [MaterialType](arkts-arkui-uimaterial-materialtype-e-sys.md) | 系统材质类型枚举。 |
 <!--DelEnd-->
+
+## 示例
+
+本示例介绍如何将半透明材质的Material对象通过[systemMaterial](../arkui-ts/ts-universal-attributes-image-effect-sys.md#systemmaterial23)属性设置给组件。
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SystemMaterialPage {
+  build() {
+    Column() {
+      Stack() {
+        Image($r('app.media.bg1')) // $r('app.media.bg1')需要替换为开发者所需的图像资源文件
+          .width('100%')
+          .height('100%')
+
+        Column()
+          .width(100)
+          .height(50)
+          .position({ x: 50, y: 350 })
+          .systemMaterial(new uiMaterial.Material({ type: uiMaterial.MaterialType.SEMI_TRANSPARENT })) // 使用半透明的系统材质效果
+      }
+      .height('90%')
+      .width('90%')
+    }
+    .height('100%')
+    .width('100%')
+    .alignItems(HorizontalAlign.Center)
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+从API版本26.0.0开始，新增uiMaterial.convertToECMaterial、uiMaterial.convertToECSubMaterial接口。
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  @State myMaterialBase: uiMaterial.ImmersiveMaterial | undefined = new uiMaterial.ImmersiveMaterial({
+    style: uiMaterial.ImmersiveStyle.ULTRA_THIN,
+  });
+  @State myMaterialEC: uiMaterial.ImmersiveMaterial | undefined = new uiMaterial.ImmersiveMaterial({
+    style: uiMaterial.ImmersiveStyle.ULTRA_THIN_EC,
+  });
+  @State myMaterialECSub: uiMaterial.ImmersiveMaterial | undefined = new uiMaterial.ImmersiveMaterial({
+    style: uiMaterial.ImmersiveStyle.ULTRA_THIN_EC_SUB,
+  });
+
+  build() {
+    Stack() {
+      // 请将$r('app.media.startIcon')替换为实际资源文件
+      Image($r('app.media.startIcon'))
+      Row() {
+        // 推荐使用不同style为EffectComponent及其子组件设置材质
+        EffectComponent() {
+          Row() {
+            Column()
+              .width(100)
+              .height(100)
+              .systemMaterial(this.myMaterialECSub)
+              .margin(5)
+          }
+        }
+        .systemMaterial(this.myMaterialEC)
+
+        EffectComponent() {
+          Row() {
+            Column()
+              .width(100)
+              .height(100)
+              .systemMaterial(uiMaterial.convertToECSubMaterial(this.myMaterialBase))
+              .margin(5)
+
+            Column()
+              .width(100)
+              .height(100)
+              .systemMaterial(uiMaterial.convertToECSubMaterial(this.myMaterialBase))
+              .margin(5)
+          }
+        }
+        .systemMaterial(uiMaterial.convertToECMaterial(this.myMaterialBase))
+      }.height('100%').width('100%').justifyContent(FlexAlign.Center)
+    }
+  }
+}
+```

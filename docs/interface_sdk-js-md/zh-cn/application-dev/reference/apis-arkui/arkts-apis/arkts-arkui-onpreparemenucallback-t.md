@@ -18,7 +18,7 @@ type OnPrepareMenuCallback = (menuItems: Array<TextMenuItem>) => Array<TextMenuI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | 是 | 将要显示的菜单项。  **说明：**  对默认菜单项的名称、图标、快捷键提示修改不生效。 |
+| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | 是 | 将要显示的菜单项。 **说明：**  对默认菜单项的名称、图标、快捷键提示修改不生效。 |
 
 **返回值：**
 

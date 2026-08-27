@@ -19,7 +19,7 @@ The module provides basic APIs for manipulating Picture in Picture (PiP). For ex
 ## Modules to Import
 
 ```TypeScript
-import PiPWindow from '@kit.ArkUI';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -38,7 +38,7 @@ import PiPWindow from '@kit.ArkUI';
 | --- | --- |
 | [ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md) | Describes the parameters in the callback of the action event of the PiP controller. |
 | [PiPConfiguration](arkts-arkui-pipwindow-pipconfiguration-i.md) | Defines the parameters for creating a PiP controller. |
-| [PiPController](arkts-arkui-pipwindow-pipcontroller-i.md) | Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md) to create a PiPController instance. |
+| [PiPController](arkts-arkui-pipwindow-pipcontroller-i.md) | Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks. |
 | [PiPWindowInfo](arkts-arkui-pipwindow-pipwindowinfo-i.md) | Describes the PiP window information. |
 | [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md) | Describes the size of a PiP window. |
 
@@ -47,7 +47,7 @@ import PiPWindow from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [PiPController](arkts-arkui-pipwindow-pipcontroller-i-sys.md) | Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md) to create a PiPController instance. |
+| [PiPController](arkts-arkui-pipwindow-pipcontroller-i-sys.md) | Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks. |
 <!--DelEnd-->
 
 ### Enums

@@ -1,6 +1,8 @@
 # AccessibilityOptions
 
-Defines the struct of AccessibilityOptions.@interface AccessibilityOptions
+Defines the struct of AccessibilityOptions.
+
+@interface AccessibilityOptions
 
 **起始版本：** 14
 

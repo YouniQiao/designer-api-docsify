@@ -1,6 +1,8 @@
 # SystemToneType（系统接口）
 
-枚举，系统铃声类型。@enum { number }
+枚举，系统铃声类型。
+
+@enum { number }
 
 **起始版本：** 11
 

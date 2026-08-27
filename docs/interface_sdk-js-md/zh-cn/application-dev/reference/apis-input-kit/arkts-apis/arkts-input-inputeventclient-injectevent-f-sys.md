@@ -26,7 +26,7 @@ function injectEvent({ KeyEvent: KeyEvent }): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| KeyEvent | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |  |
+| KeyEvent | KeyEvent | 是 | 按键注入描述信息。 |
 
 **错误码：**
 

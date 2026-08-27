@@ -1,6 +1,10 @@
 # ImageCreator
 
-ImageCreator类，作为图片的生产者，用于将图片写入到Surface中。在调用以下方法前需要先通过[image.createImageCreator](arkts-image-image-createimagecreator-f.md)创建ImageCreator实例，ImageCreator不支持多线程。由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](#release)方法 及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+ImageCreator类，作为图片的生产者，用于将图片写入到Surface中。
+
+在调用以下方法前需要先通过[image.createImageCreator](arkts-image-image-createimagecreator-f.md)创建ImageCreator实例，ImageCreator不支持多线程。
+
+由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 > **说明：**
 > 
@@ -13,7 +17,7 @@ ImageCreator类，作为图片的生产者，用于将图片写入到Surface中�
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## dequeueImage
@@ -66,7 +70,7 @@ dequeueImage(): Promise<Image>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Image & gt; | Promise对象，返回最新图片。 |
+| Promise&lt;Image&gt; | Promise对象，返回最新图片。 |
 
 **示例**
 
@@ -164,7 +168,7 @@ queueImage(image: Image, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | 是 | 绘制好的buffer图像。 |
+| image | Image | 是 | 绘制好的buffer图像。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当将图片放入队列成功，err为undefined，否则为错误对象。 |
 
 **示例**
@@ -211,13 +215,13 @@ queueImage(image: Image): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | 是 | 绘制好的buffer图像。 |
+| image | Image | 是 | 绘制好的buffer图像。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -251,7 +255,11 @@ async function QueueImage(creator : image.ImageCreator) {
 release(callback: AsyncCallback<void>): void
 ```
 
-释放当前图像。使用callback异步回调。由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放当前图像。使用callback异步回调。
+
+由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用该方法，及时释放内存。
+
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 9
 
@@ -356,7 +364,11 @@ function release(pixelMap: image.PixelMap) {
 release(): Promise<void>
 ```
 
-释放当前图像。使用Promise异步回调。由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放当前图像。使用Promise异步回调。
+
+由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用该方法，及时释放内存。
+
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 9
 
@@ -366,7 +378,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 

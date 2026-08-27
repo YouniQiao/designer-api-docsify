@@ -9,8 +9,7 @@ WLAN设备配置信息。
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## bssid
@@ -111,7 +110,7 @@ securityType: WifiSecurityType
 showNoInternetDialog?: boolean
 ```
 
-首次网络探测检测到无网络时是否显示对话框。 如果为false，默认网络绑定到蜂窝网络，不显示对话框。 如果为true，将显示无网络对话框，提示用户选择默认网络绑定。 默认值：true。
+首次网络探测检测到无网络时是否显示对话框。如果为false，默认网络绑定到蜂窝网络，不显示对话框。如果为true，将显示无网络对话框，提示用户选择默认网络绑定。默认值：true。
 
 **类型：** boolean
 

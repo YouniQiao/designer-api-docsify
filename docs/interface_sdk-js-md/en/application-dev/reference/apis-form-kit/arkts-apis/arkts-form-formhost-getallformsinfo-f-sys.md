@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formHost from '@kit.FormKit';
+import { formHost } from '@kit.FormKit';
 ```
 
 ## getAllFormsInfo
@@ -78,7 +78,7 @@ Obtains the widget information provided by all applications on the device (exclu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; | Promise used to return the information obtained. |
+| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Promise used to return the information obtained. |
 
 **Error codes:**
 

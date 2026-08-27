@@ -79,7 +79,7 @@ Gets the name of the SIM card in the specified slot.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the SIM card name. |
+| Promise&lt;string&gt; | Returns the SIM card name. |
 
 **Error codes:**
 

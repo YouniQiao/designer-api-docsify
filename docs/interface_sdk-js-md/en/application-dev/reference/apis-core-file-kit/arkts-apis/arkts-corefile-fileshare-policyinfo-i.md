@@ -1,6 +1,8 @@
 # PolicyInfo
 
-Policy information to manager permissions on a URI.@interface PolicyInfo
+Policy information to manager permissions on a URI.
+
+@interface PolicyInfo
 
 **Since:** 11
 
@@ -9,7 +11,7 @@ Policy information to manager permissions on a URI.@interface PolicyInfo
 ## Modules to Import
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## operationMode

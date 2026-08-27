@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getBarcodeTag
@@ -30,7 +30,7 @@ Obtains a **BarcodeTag** object, which allows access to the tags in the BarcodeT
 
 | Type | Description |
 | --- | --- |
-| [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md) | BarcodeTag** object obtained. |
+| BarcodeTag | BarcodeTag** object obtained. |
 
 **Error codes:**
 

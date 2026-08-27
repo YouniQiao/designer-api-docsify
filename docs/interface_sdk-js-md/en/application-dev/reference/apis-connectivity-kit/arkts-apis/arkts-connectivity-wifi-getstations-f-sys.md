@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getStations
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function getStations(): Array<StationInfo>
 ```
 
-Obtains the list of clients that are connected to a Wi-Fi hotspot.<p>This method can only be used on a device that serves as a Wi-Fi hotspot.
+Obtains the list of clients that are connected to a Wi-Fi hotspot.
+
+<p>This method can only be used on a device that serves as a Wi-Fi hotspot.
 
 **Since:** 7
 
@@ -33,7 +32,7 @@ Obtains the list of clients that are connected to a Wi-Fi hotspot.<p>This method
 
 | Type | Description |
 | --- | --- |
-| Array & lt;StationInfo & gt; | Returns the list of clients that are connected to the Wi-Fi hotspot. |
+| Array&lt;StationInfo&gt; | Returns the list of clients that are connected to the Wi-Fi hotspot. |
 
 **Examples**
 

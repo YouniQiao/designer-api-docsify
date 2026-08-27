@@ -1,6 +1,8 @@
 # TabContent属性/事件
 
-除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：
+
+除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** TabContentAttribute extends CommonMethod<TabContentAttribute>
 
@@ -71,7 +73,9 @@ onWillShow(event: VoidCallback)
 tabBar(options: string | Resource | CustomBuilder | TabBarOptions)
 ```
 
-设置TabBar上显示内容。设置的内容超出tabBar页签时进行裁切。
+设置TabBar上显示内容。
+
+设置的内容超出tabBar页签时进行裁切。
 
 **起始版本：** 7
 
@@ -83,7 +87,7 @@ tabBar(options: string | Resource | CustomBuilder | TabBarOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | string \| Resource \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | 是 | TabBar上显示内容。CustomBuilder：?构造器，内部可以传入组件 （API version 8版本以上适用）。<br>**起始版本：** 18 |
+| options | string \| Resource \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | 是 | TabBar上显示内容。CustomBuilder：?构造器，内部可以传入组件（API version 8版本以上适用）。<br>**起始版本：** 18 |
 
 ## tabBar
 
@@ -91,7 +95,11 @@ tabBar(options: string | Resource | CustomBuilder | TabBarOptions)
 tabBar(value: SubTabBarStyle | BottomTabBarStyle)
 ```
 
-设置TabBar上显示内容。底部样式没有下划线效果。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。否则，icon大小将使用svg图源内置的宽高属性值。设置的内容超出TabBar页签时进行裁切。
+设置TabBar上显示内容。底部样式没有下划线效果。当图标资源加载失败或不存在时，显示灰色图块。
+
+如果icon采用svg格式图源，需删除其内置的宽高属性。否则，icon大小将使用svg图源内置的宽高属性值。
+
+设置的内容超出TabBar页签时进行裁切。
 
 > **说明：**
 
@@ -120,7 +128,11 @@ tabBar(content: ComponentContent | SubTabBarStyle | BottomTabBarStyle | string |
     TabBarOptions)
 ```
 
-设置TabBar上显示内容。使用BottomTabBarStyle或TabBarOptions类型作为入参并设置icon，当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。设置的内容超出TabBar页签时进行裁切。
+设置TabBar上显示内容。
+
+使用BottomTabBarStyle或TabBarOptions类型作为入参并设置icon，当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。否则，icon大小将使用svg图源内置的宽高属性值。
+
+设置的内容超出TabBar页签时进行裁切。
 
 **起始版本：** 18
 

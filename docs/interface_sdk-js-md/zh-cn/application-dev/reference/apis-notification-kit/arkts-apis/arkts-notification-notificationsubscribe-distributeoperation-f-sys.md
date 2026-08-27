@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationSubscribe from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## distributeOperation
@@ -27,13 +27,13 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hashcode | string | 是 | 通知唯一ID。 |
-| operationInfo | [OperationInfo](arkts-notification-notificationsubscribe-operationinfo-i-sys.md) | 否 | 跨设备协同操作信息，默认为空。 |
+| operationInfo | OperationInfo | 否 | 跨设备协同操作信息，默认为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## startCasting
@@ -86,7 +86,7 @@ Cast resource to remote device.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise for the result |
+| Promise&lt;void&gt; | Promise for the result |
 
 **Error codes:**
 

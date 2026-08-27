@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## cancel
@@ -83,6 +83,7 @@ onCancel(): Promise<string>
 > **说明：**
 > 
 > 从API version 12开始支持，从API version 24开始废弃。
+
 取消拷贝事件监听。
 
 **起始版本：** 12
@@ -95,7 +96,7 @@ onCancel(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象。最后一个拷贝的文件路径。 |
+| Promise&lt;string&gt; | Promise对象。最后一个拷贝的文件路径。 |
 
 **错误码：**
 

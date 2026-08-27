@@ -1,6 +1,8 @@
 # GridRow属性/事件
 
-除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：
+
+除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** GridRowAttribute extends CommonMethod<GridRowAttribute>
 
@@ -19,7 +21,7 @@
 alignItems(value: ItemAlign)
 ```
 
-设置GridRow中的GridCol交叉轴方向对齐方式。GridCol本身也可通过alignSelf([ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md))设置自身对齐方式。当上述两种对齐方式都设置时，以GridCol自身设置 为准。
+设置GridRow中的GridCol交叉轴方向对齐方式。GridCol本身也可通过alignSelf([ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md))设置自身对齐方式。当上述两种对齐方式都设置时，以GridCol自身设置为准。
 
 **起始版本：** 10
 
@@ -35,7 +37,7 @@ alignItems(value: ItemAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | 是 | GridRow中的GridCol交叉轴方向对齐方式。 默认值：ItemAlign.Start 非法值：按默认值处理。    **说明：** ItemAlign支持的枚举：ItemAlign.Start、ItemAlign.Center、ItemAlign.End、ItemAlign.Stretch。 |
+| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | 是 | GridRow中的GridCol交叉轴方向对齐方式。默认值：ItemAlign.Start 非法值：按默认值处理。   **说明：** ItemAlign支持的枚举：ItemAlign.Start、ItemAlign.Center、ItemAlign.End、ItemAlign.Stretch。 |
 
 ## onBreakpointChange
 
@@ -43,7 +45,7 @@ alignItems(value: ItemAlign)
 onBreakpointChange(callback: (breakpoints: string) => void)
 ```
 
-断点发生变化时触发回调。回调函数接收到的breakpoints参数表示当前断点值（取值为`"xs"`、`"sm"`、`"md"`、`"lg"`、`"xl"`、`"xxl"`），开发者可在回调中根据断点值执行相应的UI布局调整或业务 逻辑处理。
+断点发生变化时触发回调。回调函数接收到的breakpoints参数表示当前断点值（取值为`"xs"`、`"sm"`、`"md"`、`"lg"`、`"xl"`、`"xxl"`），开发者可在回调中根据断点值执行相应的UI布局调整或业务逻辑处理。
 
 > **说明：**
 > 
@@ -63,4 +65,4 @@ onBreakpointChange(callback: (breakpoints: string) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (breakpoints: string) = & gt; void | 是 | 断点变化时触发的回调函数。参数breakpoints表示当前断点值，取值为`"xs"`、`"sm"`、`"md"`、`"lg"`、`"xl"`、`"xxl"`。 |
+| callback | (breakpoints: string) =&gt; void | 是 | 断点变化时触发的回调函数。参数breakpoints表示当前断点值，取值为`"xs"`、`"sm"`、`"md"`、`"lg"`、`"xl"`、`"xxl"`。 |

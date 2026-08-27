@@ -14,6 +14,7 @@ Configures the annular emitter area.
 > the larger value is used as the new end angle.
 > 
 > 
+
 @interface ParticleAnnulusRegion
 
 **Since:** 20

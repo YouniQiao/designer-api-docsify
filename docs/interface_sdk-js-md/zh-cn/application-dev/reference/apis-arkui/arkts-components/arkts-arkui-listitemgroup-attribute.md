@@ -48,7 +48,11 @@ divider(
   )
 ```
 
-设置ListItem分割线样式，默认无分割线。strokeWidth，startMargin和endMargin不支持设置百分比。ListItem设置多态样式时，被按压的子组件上下的分割线不绘制。
+设置ListItem分割线样式，默认无分割线。
+
+strokeWidth，startMargin和endMargin不支持设置百分比。
+
+ListItem设置多态样式时，被按压的子组件上下的分割线不绘制。
 
 **起始版本：** 9
 

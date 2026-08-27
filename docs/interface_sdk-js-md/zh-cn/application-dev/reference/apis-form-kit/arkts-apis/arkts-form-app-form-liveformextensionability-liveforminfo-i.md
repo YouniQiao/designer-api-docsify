@@ -9,7 +9,7 @@ Provides information about a live form.
 ## 导入模块
 
 ```TypeScript
-import LiveFormExtensionAbility, { LiveFormInfo } from '@kit.FormKit';
+import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## borderRadius

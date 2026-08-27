@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import identifier from '@kit.AdsKit';
+import { identifier } from '@kit.AdsKit';
 ```
 
 ## 汇总
@@ -22,13 +22,13 @@ import identifier from '@kit.AdsKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getOAID(开放匿名设备标识服务)](arkts-ads-identifier-getoaid-f.md) | 获取开放匿名设备标识符（OAID）。使用callback异步回调。 |
-| [getOAID(开放匿名设备标识服务)](arkts-ads-identifier-getoaid-f.md) | 获取开放匿名设备标识符（OAID）。使用Promise异步回调。 |
+| [getOAID](arkts-ads-identifier-getoaid-f.md) | 获取开放匿名设备标识符（OAID）。使用callback异步回调。 |
+| [getOAID](arkts-ads-identifier-getoaid-f.md) | 获取开放匿名设备标识符（OAID）。使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [resetOAID(开放匿名设备标识服务)](arkts-ads-identifier-resetoaid-f-sys.md) | 重置开放匿名设备标识符（OAID）。 |
+| [resetOAID](arkts-ads-identifier-resetoaid-f-sys.md) | 重置开放匿名设备标识符（OAID）。 |
 <!--DelEnd-->

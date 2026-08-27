@@ -1,6 +1,6 @@
 # MediaInfo
 
-[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md)回调函数的一个参数。包含了网页中媒体的信息。应用可以根据这些信息来创建 接管网页媒体播放的播放器。
+[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md)回调函数的一个参数。包含了网页中媒体的信息。应用可以根据这些信息来创建接管网页媒体播放的播放器。
 
 **起始版本：** 12
 
@@ -47,7 +47,9 @@ controlList: string[]
 controlsShown: boolean
 ```
 
-`&lt;video&gt;` 或 `&lt;audio&gt;` 中是否有 `controls` 属性。true 表示有，false 表示没有。
+`&lt;video&gt;` 或 `&lt;audio&gt;` 中是否有 `controls` 属性。
+
+true 表示有，false 表示没有。
 
 **类型：** boolean
 
@@ -123,7 +125,9 @@ mediaType: MediaType
 muted: boolean
 ```
 
-是否要求静音播放。true 表示静音播放，false 表示未静音播放。
+是否要求静音播放。
+
+true 表示静音播放，false 表示未静音播放。
 
 **类型：** boolean
 

@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cloudSync from '@kit.CoreFileKit';
-import cloudSyncManager from '@kit.CoreFileKitManager';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## startOptimizeSpace
@@ -13,7 +12,9 @@ import cloudSyncManager from '@kit.CoreFileKitManager';
 function startOptimizeSpace(optimizePara: OptimizeSpaceParam, callback?: Callback<OptimizeSpaceProgress>): Promise<void>
 ```
 
-Optimizes local resources that have been synced to the cloud and optimizes local images and videos that have not been accessed before the aging period expires. This API uses a promise to return the result. The callback returns the optimization progress.startOptimizeSpace is used together with **stopOptimizeSpace**. If **startOptimizeSpace** is called repeatedly, the error code 22400006 will be returned, indicating that other tasks are being executed.
+Optimizes local resources that have been synced to the cloud and optimizes local images and videos that have not been accessed before the aging period expires. This API uses a promise to return the result. The callback returns the optimization progress.
+
+startOptimizeSpace is used together with **stopOptimizeSpace**. If **startOptimizeSpace** is called repeatedly, the error code 22400006 will be returned, indicating that other tasks are being executed.
 
 **Since:** 17
 
@@ -34,7 +35,7 @@ Optimizes local resources that have been synced to the cloud and optimizes local
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

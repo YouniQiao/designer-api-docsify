@@ -9,7 +9,7 @@ Result of arkTS script execution.
 ## Modules to Import
 
 ```TypeScript
-import scriptManager from '@kit.AbilityKit';
+import { scriptManager } from '@kit.AbilityKit';
 ```
 
 ## code

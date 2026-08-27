@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundLoader from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## registerTask
@@ -12,7 +12,7 @@ import backgroundLoader from '@kit.BackgroundTasksKit';
 function registerTask(taskInfo: TaskInfo): void
 ```
 
-注册后台加载任务。 使用 callee.on(ON_START)来接受系统测触发的任务
+注册后台加载任务。使用 callee.on(ON_START)来接受系统测触发的任务
 
 **起始版本：** 26.1.0
 
@@ -26,7 +26,7 @@ function registerTask(taskInfo: TaskInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| taskInfo | [TaskInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-taskinfo-i.md) | 是 |  |
+| taskInfo | TaskInfo | 是 |  |
 
 **错误码：**
 

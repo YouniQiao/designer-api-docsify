@@ -9,9 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## precomposed
@@ -20,7 +17,9 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 precomposed: boolean
 ```
 
-对应apple-touch-icon是否为预合成。true表示对应apple-touch-icon为预合成，false表示对应apple-touch-icon不是预合成。
+对应apple-touch-icon是否为预合成。
+
+true表示对应apple-touch-icon为预合成，false表示对应apple-touch-icon不是预合成。
 
 **类型：** boolean
 

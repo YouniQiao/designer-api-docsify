@@ -1,7 +1,10 @@
 # @ohos.matrix4
 
-Provides matrix transformation capabilities for components, including translation, rotation, and scaling. For details, see Transformation.  
-**Matrix4** can be used in the following scenarios:In Transformation, the transform API uses the **Matrix4** object to display the matrix transformation in two-dimensional transformation, and the [transform3D](../arkts-components/arkts-arkui-commonmethod-c.md#transform3d) API uses the **Matrix4** object to set the three-dimensional transformation matrix for a component.
+Provides matrix transformation capabilities for components, including translation, rotation, and scaling. For details, see Transformation.
+
+**Matrix4** can be used in the following scenarios:
+
+In Transformation, the transform API uses the **Matrix4** object to display the matrix transformation in two-dimensional transformation, and the [transform3D](../arkts-components/arkts-arkui-commonmethod-c.md#transform3d) API uses the **Matrix4** object to set the three-dimensional transformation matrix for a component.
 
 **Since:** 7
 
@@ -10,7 +13,7 @@ Provides matrix transformation capabilities for components, including translatio
 ## Modules to Import
 
 ```TypeScript
-import matrix4 from '@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## importContactsViaUI
@@ -12,7 +12,9 @@ import contact from '@kit.ContactsKit';
 function importContactsViaUI(context: Context, contacts: Array<Contact>): Promise<Array<number>>
 ```
 
-Imports multiple contacts through UI interaction.A maximum of 100 contacts can be imported at a time. Importing contact portraits is not supported.
+Imports multiple contacts through UI interaction.
+
+A maximum of 100 contacts can be imported at a time. Importing contact portraits is not supported.
 
 **Since:** 26.0.0
 
@@ -26,14 +28,14 @@ Imports multiple contacts through UI interaction.A maximum of 100 contacts can b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Indicates the context of the application or capability. |
+| context | Context | Yes | Indicates the context of the application or capability. |
 | contacts | Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the array of contact information to be imported into the database. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Returns the array of contacts creation results. Valid contact ID (which can be obtained by [getId]{ |
+| Promise&lt;Array&lt;number&gt;&gt; | Returns the array of contacts creation results. Valid contact ID (which can be obtained by [getId]{ |
 
 **Error codes:**
 

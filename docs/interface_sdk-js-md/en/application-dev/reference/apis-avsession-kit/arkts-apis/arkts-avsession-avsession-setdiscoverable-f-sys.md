@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## setDiscoverable
@@ -67,7 +67,7 @@ Enable or disable device to be discoverable, used at sink side.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise for the result |
+| Promise&lt;void&gt; | Promise for the result |
 
 **Error codes:**
 

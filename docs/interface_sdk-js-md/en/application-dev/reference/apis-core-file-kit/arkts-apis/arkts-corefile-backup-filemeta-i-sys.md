@@ -1,6 +1,8 @@
 # FileMeta (System API)
 
-Corresponding to a file's metadata. FileMeta is useful when doing IPC with the backup service.@interface FileMeta
+Corresponding to a file's metadata. FileMeta is useful when doing IPC with the backup service.
+
+@interface FileMeta
 
 **Since:** 10
 
@@ -11,7 +13,7 @@ Corresponding to a file's metadata. FileMeta is useful when doing IPC with the b
 ## Modules to Import
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## bundleName

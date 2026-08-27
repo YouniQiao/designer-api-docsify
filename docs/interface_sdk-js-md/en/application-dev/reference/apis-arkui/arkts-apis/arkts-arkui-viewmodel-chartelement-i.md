@@ -1,6 +1,8 @@
 # ChartElement
 
-The &lt;chart&gt; component displays line charts, gauge charts, and bar charts.@extends Element @interface ChartElement
+The &lt;chart&gt; component displays line charts, gauge charts, and bar charts.
+
+@extends Element @interface ChartElement
 
 **Inheritance/Implementation:** ChartElement extends [Element](arkts-arkui-viewmodel-element-i.md)
 
@@ -45,4 +47,4 @@ Data is dynamiconlyally added to an existing data sequence. The target sequence 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | {     /**      * Set the data subscript of the line chart to be updated.      *      * @type { number }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     serial: number;     /**      * Set the new data.      *      * @type { Array & lt;number & gt; }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     data: Array & lt;number & gt;;   } | Yes |  |
+| params | {     /**      * Set the data subscript of the line chart to be updated.      *      * @type { number }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     serial: number;     /**      * Set the new data.      *      * @type { Array&lt;number&gt; }      * @syscap SystemCapability.ArkUI.ArkUI.Full      * @famodelonly      * @since 4 dynamiconly      */     data: Array&lt;number&gt;;   } | Yes |  |

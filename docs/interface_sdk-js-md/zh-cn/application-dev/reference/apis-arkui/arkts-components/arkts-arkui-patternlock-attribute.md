@@ -1,6 +1,8 @@
 # PatternLock属性/事件
 
-除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
+除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。
+
+除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
 
 **继承/实现关系：** PatternLockAttribute extends CommonMethod<PatternLockAttribute>
 
@@ -73,7 +75,7 @@ autoReset(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 在完成密码输入后再次在组件区域按下时是否重置组件状态。 true：重置组件状态（即清除之前输入的密码）；false：不重置组件状态。 |
+| value | boolean | 是 | 在完成密码输入后再次在组件区域按下时是否重置组件状态。true：重置组件状态（即清除之前输入的密码）；false：不重置组件状态。 |
 
 ## backgroundColor
 
@@ -117,7 +119,7 @@ circleRadius(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 宫格中圆点的半径。 取值范围：(0, sideLength/11]。设置小于等于0的值时，按默认值处理；超过最大值时，按最大值处理。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 宫格中圆点的半径。取值范围：(0, sideLength/11]。设置小于等于0的值时，按默认值处理；超过最大值时，按最大值处理。 |
 
 ## onDotConnect
 
@@ -143,7 +145,7 @@ onDotConnect(callback: import('../api/@ohos.base').Callback<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | import('../api/@ohos.base').Callback & lt;number & gt; | 是 | 密码输入选中宫格圆点时触发该回调。回调参数为选中宫格圆点的索引值（第一行圆点从左往右依次为0、1 、2，第二行圆点从左往右依次为3、4、5，第三行圆点从左往右依次为6、7、8）。 |
+| callback | import('../api/@ohos.base').Callback&lt;number&gt; | 是 | 密码输入选中宫格圆点时触发该回调。回调参数为选中宫格圆点的索引值（第一行圆点从左往右依次为0、1、2，第二行圆点从左往右依次为3、4、5，第三行圆点从左往右依次为6、7、8）。 |
 
 ## onPatternComplete
 
@@ -168,7 +170,7 @@ onPatternComplete(callback: (input: Array<number>) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (input: Array & lt;number & gt;) = & gt; void | 是 | Array of digits representing the indices of the selected grid dots, in the order they were connected. Grid dots are indexed row-wise from top to bottom, left to right: The first row contains indices 0, 1, 2; the second row 3, 4, 5; and the third row 6, 7, 8. |
+| callback | (input: Array&lt;number&gt;) =&gt; void | 是 | Array of digits representing the indices of the selected grid dots, in the order they were connected. Grid dots are indexed row-wise from top to bottom, left to right: The first row contains indices 0, 1, 2; the second row 3, 4, 5; and the third row 6, 7, 8. |
 
 ## pathColor
 
@@ -208,7 +210,7 @@ pathStrokeWidth(value: number | string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string | 是 | 连线的宽度。 单位：vp 取值范围：(0, sideLength/3]，设置为0或负数时连线不显示，超过最大值按最大值处理。 |
+| value | number \| string | 是 | 连线的宽度。单位：vp 取值范围：(0, sideLength/3]，设置为0或负数时连线不显示，超过最大值按最大值处理。 |
 
 ## regularColor
 
@@ -272,7 +274,7 @@ sideLength(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 组件的宽度和高度。 取值范围：大于0。 设置为0或负数时，组件不显示。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 组件的宽度和高度。取值范围：大于0。设置为0或负数时，组件不显示。 |
 
 ## skipUnselectedPoint
 
@@ -294,4 +296,4 @@ skipUnselectedPoint(skipped: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| skipped | boolean | 是 | 未选中的宫格圆点在密码路径经过时是否跳过选中。 true：跳过选中；false：自动选中。 |
+| skipped | boolean | 是 | 未选中的宫格圆点在密码路径经过时是否跳过选中。true：跳过选中；false：自动选中。 |

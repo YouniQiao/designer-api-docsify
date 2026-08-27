@@ -25,7 +25,7 @@ Preload callUI.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | The promise returned by the preloadCallUI. |
+| Promise&lt;boolean&gt; | The promise returned by the preloadCallUI. |
 
 **Error codes:**
 

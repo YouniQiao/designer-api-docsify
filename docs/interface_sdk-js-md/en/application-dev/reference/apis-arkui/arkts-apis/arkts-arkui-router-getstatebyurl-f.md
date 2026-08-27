@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import router from '@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## getStateByUrl
@@ -43,7 +43,7 @@ Obtains the status information about a page by its URL.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;RouterState & gt; | Page routing state. |
+| Array&lt;RouterState&gt; | Page routing state. |
 
 **Examples**
 

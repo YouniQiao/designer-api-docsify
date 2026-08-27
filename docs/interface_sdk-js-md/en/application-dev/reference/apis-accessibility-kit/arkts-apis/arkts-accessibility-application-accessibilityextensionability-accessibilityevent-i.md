@@ -9,7 +9,7 @@ Defines the accessibility event information. An accessibility event is generated
 ## Modules to Import
 
 ```TypeScript
-import AccessibilityExtensionAbility, { AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
 ```
 
 ## elementId
@@ -33,7 +33,17 @@ eventType: accessibility.EventType | accessibility.WindowUpdateType |
         TouchGuideType | GestureType | PageUpdateType
 ```
 
-Specific event type, which identifies the category of the current accessibility event.EventType: accessibility event type;WindowUpdateType: window change type;TouchGuideType: touch exploration event type;GestureType: gesture event type;PageUpdateType: page update type.
+Specific event type, which identifies the category of the current accessibility event.
+
+EventType: accessibility event type;
+
+WindowUpdateType: window change type;
+
+TouchGuideType: touch exploration event type;
+
+GestureType: gesture event type;
+
+PageUpdateType: page update type.
 
 **Type:** accessibility.EventType \| accessibility.WindowUpdateType \| [TouchGuideType](arkts-accessibility-touchguidetype-t.md) \| [GestureType](arkts-accessibility-gesturetype-t.md) \| [PageUpdateType](arkts-accessibility-pageupdatetype-t.md)
 

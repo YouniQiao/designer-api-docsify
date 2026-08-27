@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## getEnterpriseManagedTips
@@ -26,7 +26,7 @@ Gets enterprise message tips.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | returns the enterprise message tips. |
+| Promise&lt;string&gt; | returns the enterprise message tips. |
 
 **Error codes:**
 

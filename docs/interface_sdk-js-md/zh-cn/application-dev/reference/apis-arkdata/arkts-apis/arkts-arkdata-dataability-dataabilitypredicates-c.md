@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import dataAbility from '@kit.ArkData';
+import { dataAbility } from '@kit.ArkData';
 ```
 
 ## and
@@ -44,7 +44,9 @@ dataAbilityPredicates.equalTo("NAME", "Lisa")
 beginsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string且值以指定字符串开头的字段。此方法类似于SQL语句的“value%”。
+配置谓词以匹配数据类型为string且值以指定字符串开头的字段。
+
+此方法类似于SQL语句的“value%”。
 
 **起始版本：** 7
 
@@ -115,8 +117,8 @@ between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
+| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
+| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
@@ -191,7 +193,9 @@ dataAbilityPredicates.equalTo("NAME", "Rose").distinct();
 endsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string且值以指定字符串结尾的字段。此方法类似于SQL语句的“%value”。
+配置谓词以匹配数据类型为string且值以指定字符串结尾的字段。
+
+此方法类似于SQL语句的“%value”。
 
 **起始版本：** 7
 
@@ -251,7 +255,9 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 equalTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据，数据的指定字段数据类型为ValueType且值等于指定值。此方法类似于SQL语句的“=”。
+配置谓词以匹配数据，数据的指定字段数据类型为ValueType且值等于指定值。
+
+此方法类似于SQL语句的“=”。
 
 **起始版本：** 7
 
@@ -262,7 +268,7 @@ equalTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -330,7 +336,7 @@ greaterThan(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -361,7 +367,7 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -391,7 +397,7 @@ groupBy(fields: Array<string>): DataAbilityPredicates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fields | Array & lt;string & gt; | 是 | 指定分组依赖的列名。 |
+| fields | Array&lt;string&gt; | 是 | 指定分组依赖的列名。 |
 
 **返回值：**
 
@@ -422,7 +428,7 @@ in(field: string, value: Array<ValueType>): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | Array & lt;ValueType & gt; | 是 | 以ValueType类型数组形式指定的要匹配的值。 |
+| value | Array&lt;ValueType&gt; | 是 | 以ValueType类型数组形式指定的要匹配的值。 |
 
 **返回值：**
 
@@ -582,7 +588,7 @@ lessThan(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -613,7 +619,7 @@ lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -633,7 +639,9 @@ dataAbilityPredicates.lessThanOrEqualTo("AGE", 20);
 like(field: string, value: string): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据类型为string且值类似于指定字符串的字段。此方法类似于SQL语句“like”。
+配置谓词以匹配数据类型为string且值类似于指定字符串的字段。
+
+此方法类似于SQL语句“like”。
 
 **起始版本：** 7
 
@@ -705,8 +713,8 @@ notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicate
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
+| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
+| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
@@ -726,7 +734,9 @@ dataAbilityPredicates.notBetween("AGE", 10, 50);
 notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-配置谓词以匹配数据，数据的指定字段数据类型为ValueType且不等于指定值。此方法类似于SQL语句的“!=”。
+配置谓词以匹配数据，数据的指定字段数据类型为ValueType且不等于指定值。
+
+此方法类似于SQL语句的“!=”。
 
 **起始版本：** 7
 
@@ -737,7 +747,7 @@ notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -768,7 +778,7 @@ notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | Array & lt;ValueType & gt; | 是 | 以ValueType类型数组形式指定的要匹配的值。 |
+| value | Array&lt;ValueType&gt; | 是 | 以ValueType类型数组形式指定的要匹配的值。 |
 
 **返回值：**
 
@@ -788,7 +798,7 @@ dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"]);
 offsetAs(rowOffset: number): DataAbilityPredicates
 ```
 
-设置谓词查询结果的起始位置。需要同步调用[limitAs](#limitas)接口指定查询数量，否则无查询结果。查询指定偏移位置后的所有行时， [limitAs](#limitas)接口需传入参数-1。
+设置谓词查询结果的起始位置。需要同步调用[limitAs](#limitas)接口指定查询数量，否则无查询结果。查询指定偏移位置后的所有行时，[limitAs](#limitas)接口需传入参数-1。
 
 **起始版本：** 7
 
@@ -819,7 +829,9 @@ dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3);
 or(): DataAbilityPredicates
 ```
 
-将或条件添加到谓词中。此方法类似于SQL语句“or”。
+将或条件添加到谓词中。
+
+此方法类似于SQL语句“or”。
 
 **起始版本：** 7
 

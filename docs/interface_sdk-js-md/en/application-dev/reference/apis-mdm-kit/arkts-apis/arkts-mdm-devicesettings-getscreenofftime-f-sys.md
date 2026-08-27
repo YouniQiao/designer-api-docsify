@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import deviceSettings from '@kit.MDMKit';
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## getScreenOffTime
@@ -99,7 +99,7 @@ Obtains the device screen-off time. This API uses an asynchronous promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the screen-off time, in ms. |
+| Promise&lt;number&gt; | Promise used to return the screen-off time, in ms. |
 
 **Error codes:**
 

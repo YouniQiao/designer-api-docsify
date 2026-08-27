@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import pasteboard from '@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## progressListener
@@ -18,7 +18,7 @@ import pasteboard from '@kit.BasicServicesKit';
 progressListener?: ProgressListener
 ```
 
-定义进度数据变化的订阅函数，用于获取粘贴过程的进度。仅当progressIndicator设置为NONE时此参数才生效，可设置该项自行处理进度显示； 当progressIndicator设置为DEFAULT时此参数无效。默认为空（不监听进度）。
+定义进度数据变化的订阅函数，用于获取粘贴过程的进度。仅当progressIndicator设置为NONE时此参数才生效，可设置该项自行处理进度显示；当progressIndicator设置为DEFAULT时此参数无效。默认为空（不监听进度）。
 
 **起始版本：** 15
 
@@ -32,7 +32,7 @@ progressListener?: ProgressListener
 destUri?: string
 ```
 
-拷贝文件的目标路径对应的URI。 若不支持文件处理，则不需要设置此参数；若应用涉及复杂文件处理策略或需要区分文件多路径存储，建议不设置此参数，由应用自行完成文件copy处理，默认为空。
+拷贝文件的目标路径对应的URI。若不支持文件处理，则不需要设置此参数；若应用涉及复杂文件处理策略或需要区分文件多路径存储，建议不设置此参数，由应用自行完成文件copy处理，默认为空。
 
 **类型：** string
 
@@ -50,7 +50,7 @@ destUri?: string
 fileConflictOptions?: FileConflictOptions
 ```
 
-定义文件拷贝冲突时的选项。 OVERWRITE（覆盖）适合需要确保目标路径使用最新文件内容的场景；SKIP（跳过）适合需要保留目标路径原有文件、避免意外覆盖的场景。默认为OVERWRITE。
+定义文件拷贝冲突时的选项。OVERWRITE（覆盖）适合需要确保目标路径使用最新文件内容的场景；SKIP（跳过）适合需要保留目标路径原有文件、避免意外覆盖的场景。默认为OVERWRITE。
 
 **类型：** FileConflictOptions
 
@@ -68,7 +68,7 @@ fileConflictOptions?: FileConflictOptions
 progressIndicator: ProgressIndicator
 ```
 
-定义进度条指示选项，可选择是否采用系统默认进度显示。设置为DEFAULT时采用系统默认进度显示；设置为NONE时需应用自行处理进度， 此时progressListener和progressSignal参数才有效。
+定义进度条指示选项，可选择是否采用系统默认进度显示。设置为DEFAULT时采用系统默认进度显示；设置为NONE时需应用自行处理进度，此时progressListener和progressSignal参数才有效。
 
 **类型：** ProgressIndicator
 

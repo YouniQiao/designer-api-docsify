@@ -11,7 +11,9 @@
 function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callback: AsyncCallback<string>): void
 ```
 
-Converts a phone number into the E.164 format. This API uses an asynchronous callback to return the result.The phone number must match the specified country code. For example, for a China phone number, the country code must be **CN**. Otherwise, **null** will be returned.
+Converts a phone number into the E.164 format. This API uses an asynchronous callback to return the result.
+
+The phone number must match the specified country code. For example, for a China phone number, the country code must be **CN**. Otherwise, **null** will be returned.
 
 **Since:** 7
 
@@ -56,7 +58,11 @@ call.formatPhoneNumberToE164("138xxxxxxxx", "CN", (err: BusinessError, data: str
 function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Promise<string>
 ```
 
-Converts a phone number into the E.164 format. This API uses a promise to return the result.The phone number must match the specified country code. For example, for a China phone number, the country code must be **CN**. Otherwise, **null** will be returned.All country codes are supported.
+Converts a phone number into the E.164 format. This API uses a promise to return the result.
+
+The phone number must match the specified country code. For example, for a China phone number, the country code must be **CN**. Otherwise, **null** will be returned.
+
+All country codes are supported.
 
 **Since:** 7
 
@@ -73,7 +79,7 @@ Converts a phone number into the E.164 format. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 

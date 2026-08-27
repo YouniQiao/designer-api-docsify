@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wallpaper from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## setVideo
@@ -85,7 +85,7 @@ Sets live wallpaper of the specified type based on the uri path of the MP4 file.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 

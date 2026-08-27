@@ -34,7 +34,7 @@ Constructor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appStorage | [AppStorage](arkts-arkui-appstorage-c.md) | Yes | Application-level storage. |
-| storage | [Storage](../../apis-arkdata/arkts-apis/arkts-arkdata-system-storage-storage-c.md) | Yes | Storage. |
+| storage | Storage | Yes | Storage. |
 
 **Examples**
 

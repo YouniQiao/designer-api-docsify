@@ -1,6 +1,8 @@
 # AudioRoutingManager
 
-This interface implements audio routing management.Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
+This interface implements audio routing management.
+
+Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
 
 > **NOTE：**
 > 
@@ -13,8 +15,7 @@ This interface implements audio routing management.Before calling any API in Aud
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## declareDeviceTypesCompatibility
@@ -116,7 +117,7 @@ Obtains the audio devices with a specific flag. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | Yes | Audio device flag. |
+| deviceFlag | DeviceFlag | Yes | Audio device flag. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio devices obtained; otherwise, **err** is an error object. |
 
 **Examples**
@@ -161,7 +162,7 @@ Obtains the audio devices with a specific flag. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | Yes | Audio device flag. |
+| deviceFlag | DeviceFlag | Yes | Audio device flag. |
 
 **Return value:**
 
@@ -203,7 +204,7 @@ Obtains the audio devices with a specific flag. This API returns the result sync
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | Yes | Audio device flag. |
+| deviceFlag | DeviceFlag | Yes | Audio device flag. |
 
 **Return value:**
 
@@ -577,7 +578,7 @@ Checks whether a communication device is active. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result, indicating whether the device is active. **true** if active, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the device is active. **true** if active, **false** otherwise. |
 
 **Examples**
 
@@ -648,7 +649,7 @@ Checks whether the current device supports microphone blocking detection. This A
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result, indicating the support for microphone blocking detection. **true** if supported, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result, indicating the support for microphone blocking detection. **true** if supported, **false** otherwise. |
 
 **Examples**
 
@@ -805,7 +806,7 @@ Subscribes to the event indicating that the connection status of an audio device
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceChange' | Yes | Event type. The event **'deviceChange'** is triggered when the connection status of an audio device is changed. |
-| deviceFlag | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | Yes | Audio device flag. |
+| deviceFlag | DeviceFlag | Yes | Audio device flag. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to return the device change details. |
 
 **Error codes:**
@@ -902,7 +903,9 @@ Subscribes to the change event of the input device with the highest priority, wh
 on(type: 'micBlockStatusChanged', callback: Callback<DeviceBlockStatusInfo>): void
 ```
 
-Subscribes to the microphone blocked status change event. This API uses an asynchronous callback to return the result.Before using this API, check whether the current device supports microphone blocking detection. This event is triggered when the microphone blocked status changes during recording. Currently, this API takes effect only for the microphone on the local device.
+Subscribes to the microphone blocked status change event. This API uses an asynchronous callback to return the result.
+
+Before using this API, check whether the current device supports microphone blocking detection. This event is triggered when the microphone blocked status changes during recording. Currently, this API takes effect only for the microphone on the local device.
 
 **Since:** 13
 
@@ -928,7 +931,11 @@ Subscribes to the microphone blocked status change event. This API uses an async
 setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets a communication device to the active state. This API uses an asynchronous callback to return the result.This API will be deprecated in a later version due to function design is changed. You are not advised to use it.You are advised to use the [AVCastPicker component](../../../media/avsession/using-switch-call-devices.md) provided by AVSession to switch between call devices.
+Sets a communication device to the active state. This API uses an asynchronous callback to return the result.
+
+This API will be deprecated in a later version due to function design is changed. You are not advised to use it.
+
+You are advised to use the [AVCastPicker component](../../../media/avsession/using-switch-call-devices.md) provided by AVSession to switch between call devices.
 
 **Since:** 9
 
@@ -962,7 +969,11 @@ audioRoutingManager.setCommunicationDevice(audio.CommunicationDeviceType.SPEAKER
 setCommunicationDevice(deviceType: CommunicationDeviceType, active: boolean): Promise<void>
 ```
 
-Sets a communication device to the active state. This API uses a promise to return the result.This API will be deprecated in a later version due to function design is changed. You are not advised to use it.You are advised to use the [AVCastPicker component](../../../media/avsession/using-switch-call-devices.md) provided by AVSession to switch between call devices.
+Sets a communication device to the active state. This API uses a promise to return the result.
+
+This API will be deprecated in a later version due to function design is changed. You are not advised to use it.
+
+You are advised to use the [AVCastPicker component](../../../media/avsession/using-switch-call-devices.md) provided by AVSession to switch between call devices.
 
 **Since:** 9
 
@@ -979,7 +990,7 @@ Sets a communication device to the active state. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

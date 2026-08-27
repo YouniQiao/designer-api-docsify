@@ -1,6 +1,7 @@
 # AlphabetIndexer
 
 The **AlphabetIndexer** component can create a logically indexed array of items in a container for instant location.
+
 > **NOTE**
 
 ## Child Components
@@ -33,16 +34,21 @@ Creates an **AlphabetIndexer** component.
 
 | Name | Description |
 | --- | --- |
+| [AlphabetIndexerOptions](arkts-arkui-alphabetindexeroptions-i.md) | Defines the options of the **AlphabetIndexer** component. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | Represents the callback invoked when a secondary index item in the pop-up window is selected. |
+| [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md) | Represents the callback invoked when an index item is selected and [usingPopup](arkts-arkui-alphabetindexer-attribute.md#usingpopup) is set to **true**. |
+| [OnAlphabetIndexerSelectCallback](arkts-arkui-onalphabetindexerselectcallback-t.md) | Represents the callback invoked when an index item is selected. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [IndexerAlign](arkts-arkui-indexeralign-e.md) | Enumerates the alignment styles of the indexer pop-up window. |
 
 ## Examples
 

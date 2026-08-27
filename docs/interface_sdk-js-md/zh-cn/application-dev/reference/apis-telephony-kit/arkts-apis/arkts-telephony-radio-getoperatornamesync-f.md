@@ -32,7 +32,13 @@ function getOperatorNameSync(slotId: number): string
 **示例**
 
 ```TypeScript
+// 指定卡槽ID，0表示卡槽1
 let slotId: number = 0;
-let operatorName: string = radio.getOperatorNameSync(slotId);
-console.info(`operator name is:` + operatorName);
+try {
+    // 同步获取运营商名称
+    let operatorName: string = radio.getOperatorNameSync(slotId);
+    console.info(`operator name is:` + operatorName);
+} catch (err) {
+    console.error(`getOperatorNameSync failed, err->${JSON.stringify(err)}`);
+}
 ```

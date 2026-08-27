@@ -1,6 +1,10 @@
 # Server
 
-SSAP服务端类，提供了和客户端进行连接和数据交互等操作方法。使用该类的方法前，需通过[ssap.createServer](arkts-connectivity-ssap-createserver-f.md)方法构造该类的实例。同一应用创建一个[Server](#server)实例即可，重复创建会增加不必要的资源开销。
+SSAP服务端类，提供了和客户端进行连接和数据交互等操作方法。
+
+使用该类的方法前，需通过[ssap.createServer](arkts-connectivity-ssap-createserver-f.md)方法构造该类的实例。
+
+同一应用创建一个[Server](#server)实例即可，重复创建会增加不必要的资源开销。
 
 **起始版本：** 26.0.0
 
@@ -9,7 +13,7 @@ SSAP服务端类，提供了和客户端进行连接和数据交互等操作方�
 ## 导入模块
 
 ```TypeScript
-import ssap from '@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## addService
@@ -95,7 +99,7 @@ notifyPropertyChanged(address: string, property: Property): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -126,7 +130,7 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 否 | 回调函数，返回连接状态上报参数。 填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 否 | 回调函数，返回连接状态上报参数。填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
 
 ## offMtuChange
 
@@ -146,7 +150,7 @@ offMtuChange(callback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 回调函数，返回协商后的MTU大小。 填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 回调函数，返回协商后的MTU大小。填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
 
 ## offPropertyRead
 
@@ -166,7 +170,7 @@ offPropertyRead(callback?: Callback<PropertyReadRequest>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)&gt; | 否 | 回调函数，返回客户端的Property读请求参数。 填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)&gt; | 否 | 回调函数，返回客户端的Property读请求参数。填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
 
 ## offPropertyWrite
 
@@ -186,7 +190,7 @@ offPropertyWrite(callback?: Callback<PropertyWriteRequest>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)&gt; | 否 | 回调函数，返回客户端的Property写请求参数。 填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)&gt; | 否 | 回调函数，返回客户端的Property写请求参数。填写该参数则取消当前callback订阅。不填写该参数则取消该事件对应的所有回调。 |
 
 ## onConnectionStateChange
 
@@ -194,7 +198,9 @@ offPropertyWrite(callback?: Callback<PropertyWriteRequest>): void
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-订阅连接状态变化事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
+订阅连接状态变化事件。使用callback异步回调。
+
+应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 
@@ -214,7 +220,9 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 onMtuChange(callback: Callback<number>): void
 ```
 
-订阅MTU变化事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
+订阅MTU变化事件。使用callback异步回调。
+
+应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 
@@ -234,7 +242,9 @@ onMtuChange(callback: Callback<number>): void
 onPropertyRead(callback: Callback<PropertyReadRequest>): void
 ```
 
-订阅客户端的读属性请求事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
+订阅客户端的读属性请求事件。使用callback异步回调。
+
+应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 
@@ -254,7 +264,9 @@ onPropertyRead(callback: Callback<PropertyReadRequest>): void
 onPropertyWrite(callback: Callback<PropertyWriteRequest>): void
 ```
 
-订阅客户端的写属性请求事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
+订阅客户端的写属性请求事件。使用callback异步回调。
+
+应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 
@@ -306,7 +318,7 @@ removeService(serviceUuid: string): void
 sendResponse(response: ServerResponse): void
 ```
 
-回复客户端读写请求。收到[ssap.onPropertyRead](#onpropertyread)或 [ssap.onPropertyWrite](#onpropertywrite)上报的请求后，调用本接口向对 应客户端回复数据。
+回复客户端读写请求。收到[ssap.onPropertyRead](#onpropertyread)或[ssap.onPropertyWrite](#onpropertywrite)上报的请求后，调用本接口向对应客户端回复数据。
 
 **起始版本：** 26.0.0
 

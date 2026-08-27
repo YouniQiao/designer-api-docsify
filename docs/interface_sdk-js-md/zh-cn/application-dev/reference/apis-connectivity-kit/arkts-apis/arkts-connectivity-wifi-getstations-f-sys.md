@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getStations
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function getStations(): Array<StationInfo>
 ```
 
-获取连接的设备。<p>该方法只能在作为热点的设备上使用。
+获取连接的设备。
+
+<p>该方法只能在作为热点的设备上使用。
 
 **起始版本：** 7
 
@@ -33,7 +32,7 @@ function getStations(): Array<StationInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;StationInfo & gt; | 连接的设备数组。 |
+| Array&lt;StationInfo&gt; | 连接的设备数组。 |
 
 **示例**
 

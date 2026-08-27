@@ -1,6 +1,10 @@
 # ResultSet
 
-提供通过查询数据库生成的数据库结果集的访问方法。结果集是指用户调用关系型数据库查询接口之后返回的结果集合，提供了多种灵活的数据访问方式，以便用户获取各项数据。ResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。下列API示例中，都需先使用 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query) 、 [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql) 、 [remoteQuery](arkts-arkdata-relationalstore-rdbstore-i.md#remotequery) 、[queryLockedRow](arkts-arkdata-relationalstore-rdbstore-i.md#querylockedrow)等query类方法中任一方法获取到ResultSet实例，再通过此实例调用对应方法。
+提供通过查询数据库生成的数据库结果集的访问方法。结果集是指用户调用关系型数据库查询接口之后返回的结果集合，提供了多种灵活的数据访问方式，以便用户获取各项数据。
+
+ResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。
+
+下列API示例中，都需先使用[query](arkts-arkdata-relationalstore-rdbstore-i.md#query)、[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)、[remoteQuery](arkts-arkdata-relationalstore-rdbstore-i.md#remotequery)、[queryLockedRow](arkts-arkdata-relationalstore-rdbstore-i.md#querylockedrow)等query类方法中任一方法获取到ResultSet实例，再通过此实例调用对应方法。
 
 **起始版本：** 9
 
@@ -9,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## close
@@ -59,7 +63,7 @@ async function closeExample(store : relationalStore.RdbStore) {
 getAsset(columnIndex: number): Asset
 ```
 
-以[Asset](arkts-arkdata-relationalstore-asset-i.md)形式获取当前行中指定列的值，如果当前列的数据类型为Asset类型，会以Asset类型返回指定值，如果当前列中的值为null时，会返回null，其他类型则 抛出错误码14800000。
+以[Asset](arkts-arkdata-relationalstore-asset-i.md)形式获取当前行中指定列的值，如果当前列的数据类型为Asset类型，会以Asset类型返回指定值，如果当前列中的值为null时，会返回null，其他类型则抛出错误码14800000。
 
 **起始版本：** 10
 
@@ -75,7 +79,7 @@ getAsset(columnIndex: number): Asset
 
 | 类型 | 说明 |
 | --- | --- |
-| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | 以Asset形式返回指定列的值。 |
+| Asset | 以Asset形式返回指定列的值。 |
 
 **错误码：**
 
@@ -132,7 +136,7 @@ async function getAssetExample(store : relationalStore.RdbStore) {
 getAssets(columnIndex: number): Assets
 ```
 
-以[Assets](arkts-arkdata-relationalstore-assets-t.md)形式获取当前行中指定列的值，如果当前列的数据类型为Assets类型，会以Assets类型返回指定值，如果当前列中的值为null时，会返回null，其 他类型则抛出14800000。
+以[Assets](arkts-arkdata-relationalstore-assets-t.md)形式获取当前行中指定列的值，如果当前列的数据类型为Assets类型，会以Assets类型返回指定值，如果当前列中的值为null时，会返回null，其他类型则抛出14800000。
 
 **起始版本：** 10
 
@@ -148,7 +152,7 @@ getAssets(columnIndex: number): Assets
 
 | 类型 | 说明 |
 | --- | --- |
-| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) | 以Assets形式返回指定列的值。 |
+| Assets | 以Assets形式返回指定列的值。 |
 
 **错误码：**
 
@@ -433,7 +437,9 @@ async function getColumnNameExample(store : relationalStore.RdbStore){
 getColumnNames(): Array<string>
 ```
 
-获取结果集中所有列的名称。列名以字符串数组的形式返回，数组中字符串的顺序与结果集中列的顺序一致。
+获取结果集中所有列的名称。
+
+列名以字符串数组的形式返回，数组中字符串的顺序与结果集中列的顺序一致。
 
 **起始版本：** 23
 
@@ -445,7 +451,7 @@ getColumnNames(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 返回结果集中所有列的名称。支持获取包含重名列的列名。 |
+| Array&lt;string&gt; | 返回结果集中所有列的名称。支持获取包含重名列的列名。 |
 
 **错误码：**
 
@@ -507,7 +513,7 @@ getColumnType(columnIdentifier: number | string): Promise<ColumnType>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIdentifier | number \| string | 是 | 表示结果集中指定列的索引或列名。索引必须是非负整数，且必须小于属性columnNames的长度。列名必须是属性columnNames内的名 称。 |
+| columnIdentifier | number \| string | 是 | 表示结果集中指定列的索引或列名。索引必须是非负整数，且必须小于属性columnNames的长度。列名必须是属性columnNames内的名称。 |
 
 **返回值：**
 
@@ -599,7 +605,7 @@ getColumnTypeSync(columnIdentifier: number | string): ColumnType
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIdentifier | number \| string | 是 | 表示结果集中指定列的索引或名称。索引必须是非负整数，最大不能超过属性columnNames的长度。列名必须是属性columnNames内的名 称。 |
+| columnIdentifier | number \| string | 是 | 表示结果集中指定列的索引或名称。索引必须是非负整数，最大不能超过属性columnNames的长度。列名必须是属性columnNames内的名称。 |
 
 **返回值：**
 
@@ -828,7 +834,7 @@ async function getDoubleExample(store : relationalStore.RdbStore) {
 getLong(columnIndex: number): number
 ```
 
-以Long形式获取当前行中指定列的值，如果当前列的数据类型为INTEGER、DOUBLE、TEXT、BLOB类型，会转成Long类型返回指定值，如果该列内容为空时，会返回0，其他类型则抛出错误码14800000。如果当前列的数 据类型为INTEGER，值大于 Number.MAX_SAFE_INTEGER 或小于 Number.MIN_SAFE_INTEGER 且不希望丢失精度，建议使用 [getString](#getstring)接口获取。如果当前列的数据类型为DOUBLE且不希望丢失精度，建议使用 [getDouble](#getdouble)接口获取。
+以Long形式获取当前行中指定列的值，如果当前列的数据类型为INTEGER、DOUBLE、TEXT、BLOB类型，会转成Long类型返回指定值，如果该列内容为空时，会返回0，其他类型则抛出错误码14800000。如果当前列的数据类型为INTEGER，值大于 Number.MAX_SAFE_INTEGER 或小于 Number.MIN_SAFE_INTEGER 且不希望丢失精度，建议使用[getString](#getstring)接口获取。如果当前列的数据类型为DOUBLE且不希望丢失精度，建议使用[getDouble](#getdouble)接口获取。
 
 **起始版本：** 9
 
@@ -917,7 +923,7 @@ getRow(): ValuesBucket
 
 | 类型 | 说明 |
 | --- | --- |
-| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 返回指定行的值。当结果集中包含重名列时，返回值会不符合预期，建议使用 [getCurrentRowData]{ |
+| ValuesBucket | 返回指定行的值。当结果集中包含重名列时，返回值会不符合预期，建议使用[getCurrentRowData]{ |
 
 **错误码：**
 
@@ -991,7 +997,7 @@ getRows(maxCount: number, position?: number): Promise<Array<ValuesBucket>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;ValuesBucket & gt; & gt; | 返回maxCount条数据，剩余数据不足maxCount条则返回剩余数据，返回空数组时代表已经遍历到结果集的末尾。当结果集中包含重名列时，返回 值会不符合预期，建议使用[getRowsData]{ |
+| Promise&lt;Array&lt;ValuesBucket&gt;&gt; | 返回maxCount条数据，剩余数据不足maxCount条则返回剩余数据，返回空数组时代表已经遍历到结果集的末尾。当结果集中包含重名列时，返回值会不符合预期，建议使用[getRowsData]{ |
 
 **错误码：**
 
@@ -1084,7 +1090,7 @@ async function getRowsExample(store : relationalStore.RdbStore) {
 getRowsData(maxCount: number, position?: number): Promise<RowsData>
 ```
 
-从指定位置position开始，最多获取maxCount行数据。使用Promise异步回调。禁止与[ResultSet](#resultset)的其他接口并发调用，否则获取的数据可能非 预期。
+从指定位置position开始，最多获取maxCount行数据。使用Promise异步回调。禁止与[ResultSet](#resultset)的其他接口并发调用，否则获取的数据可能非预期。
 
 **起始版本：** 23
 
@@ -1376,7 +1382,7 @@ async function getStringExample(store : relationalStore.RdbStore) {
 getValue(columnIndex: number): ValueType
 ```
 
-获取当前行中指定列的值，如果值类型是ValueType中指定的任意类型，返回指定类型的值，否则抛出错误码14800000。如果值类型为INTEGER，值大于 Number.MAX_SAFE_INTEGER 或小于 Number.MIN_SAFE_INTEGER 且不希望丢失精度，建议使用[getString](#getstring)接口获取。
+获取当前行中指定列的值，如果值类型是ValueType中指定的任意类型，返回指定类型的值，否则抛出错误码14800000。如果值类型为INTEGER，值大于 Number.MAX_SAFE_INTEGER 或小于Number.MIN_SAFE_INTEGER 且不希望丢失精度，建议使用[getString](#getstring)接口获取。
 
 **起始版本：** 12
 
@@ -1392,7 +1398,7 @@ getValue(columnIndex: number): ValueType
 
 | 类型 | 说明 |
 | --- | --- |
-| [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 表示允许的数据字段类型。 |
+| ValueType | 表示允许的数据字段类型。 |
 
 **错误码：**
 
@@ -1863,7 +1869,9 @@ async function isColumnNullExample(store : relationalStore.RdbStore) {
 columnCount: number
 ```
 
-columnCount: int获取结果集中列的数量。
+columnCount: number
+
+获取结果集中列的数量。
 
 **类型：** number
 
@@ -1877,7 +1885,9 @@ columnCount: int获取结果集中列的数量。
 columnNames: Array<string>
 ```
 
-columnNames: Array\&lt;string\&gt;获取结果集中所有列的名称。当结果集中包含重名列时，获取的列名会不符合预期，建议使用[getColumnNames](#getcolumnnames)接口获取。
+columnNames: Array\&lt;string\&gt;
+
+获取结果集中所有列的名称。当结果集中包含重名列时，获取的列名会不符合预期，建议使用[getColumnNames](#getcolumnnames)接口获取。
 
 **类型：** Array&lt;string&gt;
 
@@ -1891,7 +1901,9 @@ columnNames: Array\&lt;string\&gt;获取结果集中所有列的名称。当结�
 isAtFirstRow: boolean
 ```
 
-isAtFirstRow: boolean检查结果集指针是否位于第一行（行索引为0），true表示位于第一行，false表示不位于第一行。
+isAtFirstRow: boolean
+
+检查结果集指针是否位于第一行（行索引为0），true表示位于第一行，false表示不位于第一行。
 
 **类型：** boolean
 
@@ -1905,7 +1917,9 @@ isAtFirstRow: boolean检查结果集指针是否位于第一行（行索引为0�
 isAtLastRow: boolean
 ```
 
-isAtLastRow: boolean检查结果集指针是否位于最后一行，true表示位于最后一行，false表示不位于最后一行。
+isAtLastRow: boolean
+
+检查结果集指针是否位于最后一行，true表示位于最后一行，false表示不位于最后一行。
 
 **类型：** boolean
 
@@ -1919,7 +1933,9 @@ isAtLastRow: boolean检查结果集指针是否位于最后一行，true表示�
 isClosed: boolean
 ```
 
-isClosed: boolean检查当前结果集是否关闭，true表示结果集已关闭，false表示结果集未关闭。
+isClosed: boolean
+
+检查当前结果集是否关闭，true表示结果集已关闭，false表示结果集未关闭。
 
 **类型：** boolean
 
@@ -1933,7 +1949,9 @@ isClosed: boolean检查当前结果集是否关闭，true表示结果集已关�
 isEnded: boolean
 ```
 
-isEnded: boolean检查结果集指针是否位于最后一行之后，true表示位于最后一行之后，false表示不位于最后一行之后。
+isEnded: boolean
+
+检查结果集指针是否位于最后一行之后，true表示位于最后一行之后，false表示不位于最后一行之后。
 
 **类型：** boolean
 
@@ -1947,7 +1965,9 @@ isEnded: boolean检查结果集指针是否位于最后一行之后，true表示
 isStarted: boolean
 ```
 
-isStarted: boolean检查指针是否移动过，true表示指针已移动过，false表示指针未移动过。
+isStarted: boolean
+
+检查指针是否移动过，true表示指针已移动过，false表示指针未移动过。
 
 **类型：** boolean
 
@@ -1961,7 +1981,9 @@ isStarted: boolean检查指针是否移动过，true表示指针已移动过，f
 rowCount: number
 ```
 
-rowCount: int获取结果集中行的数量。
+rowCount: number
+
+获取结果集中行的数量。
 
 **类型：** number
 
@@ -1975,7 +1997,9 @@ rowCount: int获取结果集中行的数量。
 rowIndex: number
 ```
 
-rowIndex: int获取结果集当前行的索引位置，默认值为-1。索引位置下标从0开始。
+rowIndex: number
+
+获取结果集当前行的索引位置，默认值为-1。索引位置下标从0开始。
 
 **类型：** number
 

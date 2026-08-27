@@ -1,7 +1,9 @@
 # LoadingProgress
 
 LoadingProgress是用于显示加载进度条的组件，在数据加载过程中为用户提供视觉反馈，提升用户体验。该组件支持设置前景色、控制动画显示状态等特性，适用于需要在应用内展示加载进度的场景。
-加载进度条的动效在组件不可见时停止，组件的可见状态基于 [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) 处理，可见阈值ratios大于0即视为可见状态。
+
+加载进度条的动效在组件不可见时停止，组件的可见状态基于[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)处理，可见阈值ratios大于0即视为可见状态。
+
 > **说明：** > > - 该组件从API版本26.0.0开始支持WithTheme。
 
 ## 子组件
@@ -30,11 +32,13 @@ LoadingProgress()
 
 | 名称 | 说明 |
 | --- | --- |
+| [LoadingProgressConfiguration](arkts-arkui-loadingprogressconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
+| [LoadingProgressStyle](arkts-arkui-loadingprogressstyle-e.md) | 表示LoadingProgress的样式类型，不推荐使用。 |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## getCurrentLocation
@@ -28,7 +28,7 @@ Obtain current location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) | Yes | Indicates the location request parameters. |
+| request | CurrentLocationRequest | Yes | Indicates the location request parameters. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
 **Examples**
@@ -112,13 +112,13 @@ Obtain current location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) | No | Indicates the location request parameters. |
+| request | CurrentLocationRequest | No | Indicates the location request parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Location & gt; | The promise returned by the function. |
+| Promise&lt;Location&gt; | The promise returned by the function. |
 
 **Examples**
 

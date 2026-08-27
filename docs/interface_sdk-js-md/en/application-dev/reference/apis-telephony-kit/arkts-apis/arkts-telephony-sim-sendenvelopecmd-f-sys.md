@@ -81,7 +81,7 @@ Send envelope command to SIM card.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the sendEnvelopeCmd. |
+| Promise&lt;void&gt; | The promise returned by the sendEnvelopeCmd. |
 
 **Error codes:**
 

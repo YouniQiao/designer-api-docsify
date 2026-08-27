@@ -9,7 +9,7 @@ The DataUriUtils module provides APIs to process URI objects. You can use the AP
 ## Modules to Import
 
 ```TypeScript
-import dataUriUtils from '@kit.AbilityKit';
+import { dataUriUtils } from '@kit.AbilityKit';
 ```
 
 ## Summary

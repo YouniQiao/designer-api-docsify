@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import commonEventManager from '@kit.BasicServicesKit';
+import { commonEventManager } from '@kit.BasicServicesKit';
 ```
 
 ## removeStickyCommonEvent
@@ -81,7 +81,7 @@ Removes a sticky common event that has been published. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

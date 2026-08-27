@@ -1,6 +1,8 @@
 # SegmentButtonV2Items
 
-分段按钮选项集合。继承自 Array\&lt;[SegmentButtonV2Item](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2item-c.md)&gt;
+分段按钮选项集合。
+
+继承自 Array\&lt;[SegmentButtonV2Item](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2item-c.md)&gt;
 
 **继承/实现关系：** SegmentButtonV2Items extends Array<SegmentButtonV2Item>
 

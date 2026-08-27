@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import router from '@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## hideAlertBeforeBackPage
@@ -12,7 +12,7 @@ import router from '@kit.ArkUI';
 function hideAlertBeforeBackPage(): void
 ```
 
-禁用页面返回询问对话框。调用此方法后，将关闭由showAlertBeforeBackPage 开启的返回询问对话框，back操作将不再弹出确认对话框，直接执行页面返回。
+禁用页面返回询问对话框。调用此方法后，将关闭由showAlertBeforeBackPage开启的返回询问对话框，back操作将不再弹出确认对话框，直接执行页面返回。
 
 > **说明：**
 > 

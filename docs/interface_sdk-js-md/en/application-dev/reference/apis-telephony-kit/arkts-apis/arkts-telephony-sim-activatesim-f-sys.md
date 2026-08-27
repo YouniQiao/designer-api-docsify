@@ -79,7 +79,7 @@ Activate the SIM card in the specified slot.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the activateSim. |
+| Promise&lt;void&gt; | The promise returned by the activateSim. |
 
 **Error codes:**
 

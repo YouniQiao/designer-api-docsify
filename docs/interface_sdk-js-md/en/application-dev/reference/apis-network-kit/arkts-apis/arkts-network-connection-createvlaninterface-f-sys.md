@@ -39,7 +39,7 @@ Creates a virtual local area network (VLAN) with specified **vlanId** on a speci
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

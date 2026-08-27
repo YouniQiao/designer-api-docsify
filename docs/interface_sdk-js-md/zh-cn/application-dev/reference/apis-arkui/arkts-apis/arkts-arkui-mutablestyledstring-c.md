@@ -47,7 +47,9 @@ appendStyledString(other: StyledString): void
 clearStyles(): void
 ```
 
-清除属性字符串对象的所有样式。被清空样式类型对象属性使用的是对应Text组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
+清除属性字符串对象的所有样式。
+
+被清空样式类型对象属性使用的是对应Text组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
 
 **起始版本：** 12
 
@@ -78,7 +80,7 @@ insertString(start: number, other: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | start | number | 是 | 插入位置的下标。 |
-| other | string | 是 | 插入的新文本内容。    **说明：** 插入的字符串使用的是start-1位置字符的样式。若start-1位置字符未设置样式，则使用start位置字符样式。 |
+| other | string | 是 | 插入的新文本内容。   **说明：** 插入的字符串使用的是start-1位置字符的样式。若start-1位置字符未设置样式，则使用start位置字符样式。 |
 
 **错误码：**
 
@@ -121,7 +123,9 @@ insertStyledString(start: number, other: StyledString): void
 removeString(start: number, length: number): void
 ```
 
-移除指定范围的字符串。当属性字符串中包含图片或[CustomSpan](arkts-arkui-customspan-c.md)时，同样生效。
+移除指定范围的字符串。
+
+当属性字符串中包含图片或[CustomSpan](arkts-arkui-customspan-c.md)时，同样生效。
 
 **起始版本：** 12
 
@@ -150,7 +154,11 @@ removeString(start: number, length: number): void
 removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 ```
 
-清除指定范围内容的指定类型样式。被清空样式类型对象属性使用的是对应Text组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。当属性字符串中包含图片时，同样生效。
+清除指定范围内容的指定类型样式。
+
+被清空样式类型对象属性使用的是对应Text组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
+
+当属性字符串中包含图片时，同样生效。
 
 **起始版本：** 12
 
@@ -180,7 +188,11 @@ removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 removeStyles(start: number, length: number): void
 ```
 
-清除指定范围内容的所有样式。被清空样式类型对象属性使用的是对应Text组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。当属性字符串中包含图片时，同样生效。
+清除指定范围内容的所有样式。
+
+被清空样式类型对象属性使用的是对应Text组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
+
+当属性字符串中包含图片时，同样生效。
 
 **起始版本：** 12
 
@@ -225,7 +237,7 @@ replaceString(start: number, length: number, other: string): void
 | --- | --- | --- | --- |
 | start | number | 是 | 指定范围的下标。 |
 | length | number | 是 | 指定范围的长度。 |
-| other | string | 是 | 替换的新文本内容。    **说明：** 替换的字符串使用的是start位置字符的样式。 |
+| other | string | 是 | 替换的新文本内容。   **说明：** 替换的字符串使用的是start位置字符的样式。 |
 
 **错误码：**
 
@@ -253,7 +265,7 @@ replaceStyle(spanStyle: SpanStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | 是 | 样式对象。    **说明：** 默认清空原有样式，替换为新样式。 当SpanStyle的styledKey为IMAGE或CUSTOM_SPAN时，只有当start的位置当前是image或CustomSpan且长度为1，才会生效，其余情况无效果。 |
+| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | 是 | 样式对象。   **说明：** 默认清空原有样式，替换为新样式。当SpanStyle的styledKey为IMAGE或CUSTOM_SPAN时，只有当start的位置当前是image或CustomSpan且长度为1，才会生效，其余情况无效果。 |
 
 **错误码：**
 
@@ -311,7 +323,7 @@ setStyle(spanStyle: SpanStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | 是 | 样式对象。 默认不清空原有样式，叠加新样式。如果StyledStringValue类型相同，则新样式将覆盖旧样式。 当SpanStyle的styledKey为IMAGE或CUSTOM_SPAN时，只有当start的位置当前是image或CustomSpan且长度为1，才会生效，其余情况无效果。 |
+| spanStyle | [SpanStyle](arkts-arkui-spanstyle-i.md) | 是 | 样式对象。默认不清空原有样式，叠加新样式。如果StyledStringValue类型相同，则新样式将覆盖旧样式。当SpanStyle的styledKey为IMAGE或CUSTOM_SPAN时，只有当start的位置当前是image或CustomSpan且长度为1，才会生效，其余情况无效果。 |
 
 **错误码：**
 

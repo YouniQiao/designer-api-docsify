@@ -79,7 +79,7 @@ Obtains the names of NICs in the specified network sharing state. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return an array of NIC names. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return an array of NIC names. |
 
 **Error codes:**
 

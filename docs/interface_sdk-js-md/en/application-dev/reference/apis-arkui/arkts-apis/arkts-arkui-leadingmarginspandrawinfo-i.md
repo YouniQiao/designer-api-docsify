@@ -17,7 +17,11 @@ Provides the custom drawing information.
 baseline: number
 ```
 
-Distance from the baseline of the current line to the component's upper edge.Unit: pxThe value must be greater than or equal to 0.
+Distance from the baseline of the current line to the component's upper edge.
+
+Unit: px
+
+The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -35,7 +39,11 @@ Distance from the baseline of the current line to the component's upper edge.Uni
 bottom: number
 ```
 
-Distance from the bottom of the current line to the component's upper edge.Unit: pxThe value must be greater than or equal to 0.
+Distance from the bottom of the current line to the component's upper edge.
+
+Unit: px
+
+The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -71,7 +79,9 @@ Direction of the text content.
 end: number
 ```
 
-End index of the current line.The value must be greater than or equal to 0.
+End index of the current line.
+
+The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -89,7 +99,8 @@ End index of the current line.The value must be greater than or equal to 0.
 first: boolean
 ```
 
-Whether the current line is the first line of the paragraph.  
+Whether the current line is the first line of the paragraph.
+
 **true**: first line; **false**: non-first line.
 
 **Type:** boolean
@@ -108,7 +119,9 @@ Whether the current line is the first line of the paragraph.
 start: number
 ```
 
-Start index of the current line.The value must be greater than or equal to 0.
+Start index of the current line.
+
+The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -126,7 +139,11 @@ Start index of the current line.The value must be greater than or equal to 0.
 top: number
 ```
 
-Distance from the top of the current line to the component's upper edge.Unit: pxThe value must be greater than or equal to 0.
+Distance from the top of the current line to the component's upper edge.
+
+Unit: px
+
+The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -144,7 +161,11 @@ Distance from the top of the current line to the component's upper edge.Unit: px
 x: number
 ```
 
-Horizontal offset of the current line relative to the component. For right-to-left (RTL) scripts (direction set to **RTL**), this value represents the distance between the right side of the current line and the component's right edge.Unit: pxThe value must be greater than or equal to 0.
+Horizontal offset of the current line relative to the component. For right-to-left (RTL) scripts (direction set to **RTL**), this value represents the distance between the right side of the current line and the component's right edge.
+
+Unit: px
+
+The value must be greater than or equal to 0.
 
 **Type:** number
 

@@ -1,6 +1,8 @@
 # PowerMode
 
-表示功率模式的枚举。@enum { number } PowerMode
+表示功率模式的枚举。
+
+@enum { number } PowerMode
 
 **起始版本：** 9
 

@@ -21,7 +21,13 @@
 height?: Length
 ```
 
-高度，取值范围[0, +∞)。默认值：0默认单位：vp若给定值小于0，则按默认值处理。异常值undefined、null、NaN和Infinity按照默认值处理。
+高度，取值范围[0, +∞)。
+
+默认值：0
+
+默认单位：vp
+
+若给定值小于0，则按默认值处理。异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -39,7 +45,13 @@ height?: Length
 width?: Length
 ```
 
-宽度，取值范围[0, +∞)。默认值：0默认单位：vp若给定值小于0，则按默认值处理。异常值undefined、null、NaN和Infinity按照默认值处理。
+宽度，取值范围[0, +∞)。
+
+默认值：0
+
+默认单位：vp
+
+若给定值小于0，则按默认值处理。异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## addDoNotDisturbProfile
@@ -32,7 +32,7 @@ Adds the Do Not Disturb profile. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -107,7 +107,7 @@ Adds the Do Not Disturb profile for a specified user. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no result. |
+| Promise&lt;void&gt; | Promise that returns no result. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # ButtonType
 
-Enumeration of button type.@enum { number }
+Enumeration of button type.
+
+@enum { number }
 
 **Since:** 23
 

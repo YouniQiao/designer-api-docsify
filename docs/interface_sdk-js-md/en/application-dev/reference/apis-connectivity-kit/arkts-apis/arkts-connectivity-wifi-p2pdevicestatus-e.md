@@ -1,6 +1,8 @@
 # P2pDeviceStatus
 
-P2P device status.@enum { number } P2pDeviceStatus
+P2P device status.
+
+@enum { number } P2pDeviceStatus
 
 **Since:** 8
 

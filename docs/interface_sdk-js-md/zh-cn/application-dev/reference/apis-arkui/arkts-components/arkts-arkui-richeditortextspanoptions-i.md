@@ -35,7 +35,9 @@ gesture?: RichEditorGesture
 offset?: number
 ```
 
-添加文本的位置。省略时，添加到所有内容的最后。当值小于0时，放在所有内容最前面；当值大于所有内容长度时，放在所有内容最后面。
+添加文本的位置。省略时，添加到所有内容的最后。
+
+当值小于0时，放在所有内容最前面；当值大于所有内容长度时，放在所有内容最后面。
 
 **类型：** number
 
@@ -89,7 +91,9 @@ style?: RichEditorTextStyle
 urlStyle?: RichEditorUrlStyle
 ```
 
-url信息。默认值：undefined
+url信息。
+
+默认值：undefined
 
 **类型：** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 

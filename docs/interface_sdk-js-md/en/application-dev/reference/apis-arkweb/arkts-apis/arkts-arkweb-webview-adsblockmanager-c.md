@@ -1,6 +1,8 @@
 # AdsBlockManager
 
-AdsBlockManager is a class in the ArkWeb framework used to manage the ad filtering feature of Web components. It provides capabilities such as setting ad filtering rules, managing domain AllowedList/DisallowedList, and controlling filtering policies. All Web components in each app share a single AdsBlockManager static class. Developers can use this class to inject ad filtering configuration files that conform to the universal EasyList syntax into Web components and flexibly control the ad filtering status for specific websites.The core mechanism of AdsBlockManager is based on a two-tier AllowedList/DisallowedList strategy using domain suffix matching: the DisallowedList is used to disable ad filtering for specific websites, while the AllowedList has a higher priority and can re-enable ad filtering for certain subdomains within the scope of the DisallowedList. After successful internal parsing, ad filtering rules are persistently stored and do not need to be set again after an app restart. However, they are not persistent and must be reconfigured after an app restart.
+AdsBlockManager is a class in the ArkWeb framework used to manage the ad filtering feature of Web components. It provides capabilities such as setting ad filtering rules, managing domain AllowedList/DisallowedList, and controlling filtering policies. All Web components in each app share a single AdsBlockManager static class. Developers can use this class to inject ad filtering configuration files that conform to the universal EasyList syntax into Web components and flexibly control the ad filtering status for specific websites.
+
+The core mechanism of AdsBlockManager is based on a two-tier AllowedList/DisallowedList strategy using domain suffix matching: the DisallowedList is used to disable ad filtering for specific websites, while the AllowedList has a higher priority and can re-enable ad filtering for certain subdomains within the scope of the DisallowedList. After successful internal parsing, ad filtering rules are persistently stored and do not need to be set again after an app restart. However, they are not persistent and must be reconfigured after an app restart.
 
 **Since:** 12
 
@@ -40,7 +42,7 @@ Adds an array of domain names to the AllowedList of this AdsBlockManager object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainSuffixes | Array & lt;string & gt; | Yes | Array of domain names, for example, ['example.com', 'abcd.efg.com']. |
+| domainSuffixes | Array&lt;string&gt; | Yes | Array of domain names, for example, ['example.com', 'abcd.efg.com']. |
 
 **Error codes:**
 
@@ -134,7 +136,7 @@ Adds an array of domain names to the disallowed list of this **AdsBlockManager**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainSuffixes | Array & lt;string & gt; | Yes | Array of domain names, for example, ['example.com', 'abcd.efg.com']. |
+| domainSuffixes | Array&lt;string&gt; | Yes | Array of domain names, for example, ['example.com', 'abcd.efg.com']. |
 
 **Error codes:**
 
@@ -369,7 +371,7 @@ Removes an array of domain names from the allowed list of this **AdsBlockManager
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainSuffixes | Array & lt;string & gt; | Yes | Array of domain names, for example, ['example.com', 'abcd.efg.com']. |
+| domainSuffixes | Array&lt;string&gt; | Yes | Array of domain names, for example, ['example.com', 'abcd.efg.com']. |
 
 **Error codes:**
 
@@ -455,7 +457,7 @@ Removes an array of domain names from the disallowed list of this **AdsBlockMana
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainSuffixes | Array & lt;string & gt; | Yes | Array of domain names, for example, ['example.com', 'abcd.efg.com']. |
+| domainSuffixes | Array&lt;string&gt; | Yes | Array of domain names, for example, ['example.com', 'abcd.efg.com']. |
 
 **Error codes:**
 

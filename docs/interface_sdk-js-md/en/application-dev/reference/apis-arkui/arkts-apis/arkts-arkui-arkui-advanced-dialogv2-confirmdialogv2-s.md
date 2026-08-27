@@ -1,6 +1,8 @@
 # ConfirmDialogV2
 
-Declare CustomDialog ConfirmDialogV2@struct { ConfirmDialogV2 }
+Declare CustomDialog ConfirmDialogV2
+
+@struct { ConfirmDialogV2 }
 
 **Since:** 18
 

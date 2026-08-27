@@ -13,7 +13,7 @@ Provides APIs for obtaining locale information.
 ## Modules to Import
 
 ```TypeScript
-import intl from '@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -107,7 +107,7 @@ Creates a **Locale** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | string | Yes | Locale information, which consists of the language, script, and country/region. |
-| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | No | Options for creating the **Locale** object.<br>**Since:** 12 |
+| options | LocaleOptions | No | Options for creating the **Locale** object.<br>**Since:** 12 |
 
 **Examples**
 
@@ -143,7 +143,7 @@ Maximizes locale information by supplementing the missing script and country/reg
 
 | Type | Description |
 | --- | --- |
-| [Locale](arkts-localization-intl-locale-c.md) | Locale** object with the script and country/region information. |
+| Locale | Locale** object with the script and country/region information. |
 
 **Examples**
 
@@ -187,7 +187,7 @@ Minimizes locale information by removing the script and country/region informati
 
 | Type | Description |
 | --- | --- |
-| [Locale](arkts-localization-intl-locale-c.md) | Locale** object without the script and country/region information. |
+| Locale | Locale** object without the script and country/region information. |
 
 **Examples**
 

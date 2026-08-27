@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import configPolicy from '@kit.BasicServicesKit';
+import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
 ## getCfgDirListSync
@@ -24,7 +24,7 @@ Obtains a list of configuration level directories, in ascending order of priorit
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Obtains the list of configuration level directories. This API returns the result synchronously. |
+| Array&lt;string&gt; | Obtains the list of configuration level directories. This API returns the result synchronously. |
 
 **Examples**
 

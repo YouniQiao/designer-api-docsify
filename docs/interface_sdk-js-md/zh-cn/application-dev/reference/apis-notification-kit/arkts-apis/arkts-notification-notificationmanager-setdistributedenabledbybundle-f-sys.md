@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setDistributedEnabledByBundle
@@ -26,7 +26,7 @@ function setDistributedEnabledByBundle(bundle: BundleOption, deviceType: string,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 应用的包信息。 |
+| bundle | BundleOption | 是 | 应用的包信息。 |
 | deviceType | string | 是 | 设备类型。 |
 | enable | boolean | 是 | 指定应用是否支持跨设备协同（true：支持，false：不支持）。 |
 
@@ -34,7 +34,7 @@ function setDistributedEnabledByBundle(bundle: BundleOption, deviceType: string,
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

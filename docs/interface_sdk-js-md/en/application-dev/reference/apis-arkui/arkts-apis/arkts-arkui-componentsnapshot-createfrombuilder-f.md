@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import componentSnapshot from '@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## createFromBuilder
@@ -174,7 +174,7 @@ Renders a custom component in the application background and outputs its snapsho
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return the result. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the result. |
 
 **Error codes:**
 

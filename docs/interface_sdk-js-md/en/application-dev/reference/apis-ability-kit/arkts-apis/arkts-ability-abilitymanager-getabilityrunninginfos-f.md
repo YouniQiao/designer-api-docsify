@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import abilityManager from '@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## getAbilityRunningInfos
@@ -30,7 +30,7 @@ Obtains the UIAbility running information. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;AbilityRunningInfo & gt; & gt; | Promise used to return the UIAbility running information. You can perform error handling or other custom processing. |
+| Promise&lt;Array&lt;AbilityRunningInfo&gt;&gt; | Promise used to return the UIAbility running information. You can perform error handling or other custom processing. |
 
 **Error codes:**
 

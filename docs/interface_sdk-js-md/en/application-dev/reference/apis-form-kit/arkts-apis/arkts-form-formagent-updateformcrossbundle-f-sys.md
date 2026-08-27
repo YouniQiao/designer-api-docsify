@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formAgent from '@kit.FormKit';
+import { formAgent } from '@kit.FormKit';
 ```
 
 ## updateFormCrossBundle
@@ -35,7 +35,7 @@ Updates a widget by cross bundle. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

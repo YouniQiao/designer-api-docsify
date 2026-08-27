@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import vpn from '@kit.NetworkKit';
-import vpnExtension from '@kit.NetworkKitExtension';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## addSysVpnConfig
@@ -33,7 +32,7 @@ function addSysVpnConfig(config: SysVpnConfig): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **错误码：**
 

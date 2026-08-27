@@ -23,7 +23,7 @@ Defines a contact's portrait.
 ## Modules to Import
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## photo

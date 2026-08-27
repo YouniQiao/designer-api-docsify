@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## info
@@ -56,7 +56,7 @@ key: string | Uint8Array
 keySize: number
 ```
 
-派生得到的密钥字节长度，需要为正整数，单位为bytes。 取值应为正整数。
+派生得到的密钥字节长度，需要为正整数，单位为bytes。取值应为正整数。
 
 **类型：** number
 

@@ -6,7 +6,8 @@
 > 
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
 > 本节使用以下标识来表示泛型的使用：
-- T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。
+
+- T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。  
 **装饰器类型：** \@Sendable
 
 **起始版本：** 12
@@ -24,7 +25,7 @@
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个JavaScript对象。 说明： 本接口不支持在.ets文件中使用。
+返回一个迭代器，迭代器的每一项都是一个JavaScript对象。说明：本接口不支持在.ets文件中使用。
 
 **起始版本：** 12
 
@@ -36,7 +37,7 @@
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;T & gt; | 迭代器对象。 |
+| IterableIterator&lt;T&gt; | 迭代器对象。 |
 
 **错误码：**
 
@@ -68,7 +69,7 @@ add(value: T): Set<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Set & lt;T & gt; | 插入元素后的Set对象本身。 |
+| Set&lt;T&gt; | 插入元素后的Set对象本身。 |
 
 **错误码：**
 
@@ -142,7 +143,7 @@ constructor(iterable: Iterable<T>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| iterable | Iterable & lt;T & gt; | 是 | 用于构造ArkTS Set的可迭代对象。 |
+| iterable | Iterable&lt;T&gt; | 是 | 用于构造ArkTS Set的可迭代对象。 |
 
 **错误码：**
 
@@ -201,7 +202,7 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;[T, T] & gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键值对。 |
+| IterableIterator&lt;[T, T]&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键值对。 |
 
 **错误码：**
 
@@ -228,7 +229,7 @@ forEach(callbackFn: (value: T, value2: T, set: Set<T>) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, value2: T, set: Set & lt;T & gt;) = & gt; void | 是 | 对每个键值对运行的回调函数。 |
+| callbackFn | (value: T, value2: T, set: Set&lt;T&gt;) =&gt; void | 是 | 对每个键值对运行的回调函数。 |
 
 **错误码：**
 
@@ -288,7 +289,7 @@ keys(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;T & gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键。 |
+| IterableIterator&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的键。 |
 
 **错误码：**
 
@@ -315,7 +316,7 @@ values(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;T & gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的值。 |
+| IterableIterator&lt;T&gt; | 返回一个Set迭代器对象，该对象包含了此Set中每个元素的值。 |
 
 **错误码：**
 

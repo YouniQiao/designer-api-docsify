@@ -11,7 +11,7 @@ Provides callbacks to obtain credential inputer data.
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onGetData

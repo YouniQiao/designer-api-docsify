@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## capturerFlags
@@ -19,7 +18,9 @@ import audioHaptic from '@kit.AudioKitHaptic';
 capturerFlags: number
 ```
 
-录制流行为标志。设置为0即可。
+录制流行为标志。
+
+设置为0即可。
 
 **类型：** number
 

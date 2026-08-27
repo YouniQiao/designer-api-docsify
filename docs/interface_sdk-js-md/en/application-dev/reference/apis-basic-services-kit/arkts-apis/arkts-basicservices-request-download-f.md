@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## download

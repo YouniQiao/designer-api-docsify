@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import telephonyManager from '@kit.MDMKit';
+import { telephonyManager } from '@kit.MDMKit';
 ```
 
 ## addIncomingCallPolicyNumbers
@@ -12,7 +12,10 @@ import telephonyManager from '@kit.MDMKit';
 function addIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, numbers: Array<string>): void
 ```
 
-添加通话呼入的允许或禁用名单，如果不添加名单，则任意号码都可以呼入，添加后仅名单内的号码允许或禁止呼入。例如，企业可限制员工只能接听客户来电，或禁止接听骚扰电话。以下情况下，通过本接口添加通话呼入的允许或禁用名单，会报策略冲突：
+添加通话呼入的允许或禁用名单，如果不添加名单，则任意号码都可以呼入，添加后仅名单内的号码允许或禁止呼入。例如，企业可限制员工只能接听客户来电，或禁止接听骚扰电话。
+
+以下情况下，通过本接口添加通话呼入的允许或禁用名单，会报策略冲突：
+
 1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了设备通话能力，再通过本接口添加通话呼入的禁用或允许名单，返回203错误码。
 通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口解除禁用设备通话能力后，可解除冲突。
 2. 已经通过本接口设置了通话呼入的禁用名单，再通过本接口添加通话呼入允许名单，返回9200010错误码。通过[removeIncomingCallPolicyNumbers](arkts-mdm-telephonymanager-removeincomingcallpolicynumbers-f.md)接口将之前设置的通话呼入禁用名单移除后，可解除冲突。
@@ -32,7 +35,7 @@ function addIncomingCallPolicyNumbers(admin: Want, policy: adminManager.Policy, 
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | policy | adminManager.Policy | 是 | 允许或禁用名单策略。BLOCK_LIST为禁用名单，TRUST_LIST为允许名单。 |
-| numbers | Array & lt;string & gt; | 是 | 通话号码列表，当前仅支持全号码匹配。数组总长度不能超过1000。例如，若当前允许名单数组中已有100个号码，则最多支持通过该接口再添加900个。 |
+| numbers | Array&lt;string&gt; | 是 | 通话号码列表，当前仅支持全号码匹配。数组总长度不能超过1000。例如，若当前允许名单数组中已有100个号码，则最多支持通过该接口再添加900个。 |
 
 **错误码：**
 

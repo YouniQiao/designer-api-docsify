@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import matrix4 from '@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## copy
@@ -26,7 +26,7 @@ Copies this matrix object.
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Copy object of the current matrix. |
+| Matrix4Transit | Copy object of the current matrix. |
 
 **Examples**
 

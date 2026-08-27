@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import volumeManager from '@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## getAllVolumes

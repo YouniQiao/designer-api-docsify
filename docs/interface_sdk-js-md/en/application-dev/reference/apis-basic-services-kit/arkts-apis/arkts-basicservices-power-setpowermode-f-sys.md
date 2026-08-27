@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import power from '@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## setPowerMode
@@ -77,7 +77,7 @@ Sets the power mode of a device. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

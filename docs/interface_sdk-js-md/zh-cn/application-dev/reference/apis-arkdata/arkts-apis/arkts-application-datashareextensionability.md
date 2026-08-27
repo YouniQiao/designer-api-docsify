@@ -6,7 +6,7 @@ DataShareExtensionAbility基于ExtensionAbility框架，提供支持数据共享
 ## 导入模块
 
 ```TypeScript
-import DataShareExtensionAbility from '@kit.ArkData';
+import { DataShareExtensionAbility } from '@kit.ArkData';
 ```
 
 ## 汇总

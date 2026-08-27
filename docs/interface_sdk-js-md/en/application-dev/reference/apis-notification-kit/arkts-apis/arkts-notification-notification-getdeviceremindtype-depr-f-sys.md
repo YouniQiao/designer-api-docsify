@@ -3,9 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKitManager';
-import notificationSubscribe from '@kit.NotificationKitSubscribe';
-import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## getDeviceRemindType
@@ -75,7 +72,7 @@ Obtains the notification reminder type. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;DeviceRemindType & gt; | Promise used to return the result. |
+| Promise&lt;DeviceRemindType&gt; | Promise used to return the result. |
 
 **Examples**
 

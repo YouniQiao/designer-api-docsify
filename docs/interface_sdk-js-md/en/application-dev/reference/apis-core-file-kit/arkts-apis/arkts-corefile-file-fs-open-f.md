@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## open
@@ -155,7 +155,9 @@ fileIo.open(filePath, (err: BusinessError, file: fileIo.File) => {
 declare function open(path: string, mode: number, callback: AsyncCallback<File>): void
 ```
 
-Opens a file or directory with the specified mode. This API uses an asynchronous callback to return the result.This API supports the use of a URI.
+Opens a file or directory with the specified mode. This API uses an asynchronous callback to return the result.
+
+This API supports the use of a URI.
 
 **Since:** 9
 

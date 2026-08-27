@@ -31,7 +31,7 @@ Opens the authorization page of the certificate management dialog box to grant a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the URI of the certificate authorized. The value contains up to 256 bytes. |
+| Promise&lt;string&gt; | Promise used to return the URI of the certificate authorized. The value contains up to 256 bytes. |
 
 **Error codes:**
 

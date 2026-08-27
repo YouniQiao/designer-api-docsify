@@ -37,7 +37,7 @@ arfcn?: number[]
 needStartScan: boolean
 ```
 
-是否需要发起扫描。 true：需要发起扫描。 false：不需要发起扫描。
+是否需要发起扫描。true：需要发起扫描。false：不需要发起扫描。
 
 **类型：** boolean
 

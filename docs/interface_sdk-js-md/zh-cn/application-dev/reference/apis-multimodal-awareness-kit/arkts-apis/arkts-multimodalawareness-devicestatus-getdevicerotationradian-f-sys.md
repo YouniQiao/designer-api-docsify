@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import deviceStatus from '@kit.MultimodalAwarenessKit';
+import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## getDeviceRotationRadian
@@ -12,7 +12,9 @@ import deviceStatus from '@kit.MultimodalAwarenessKit';
 function getDeviceRotationRadian(): Promise<DeviceRotationRadian>
 ```
 
-获取设备的姿态数据。姿态数据包含x、y、z三轴的姿态旋转角，即三轴的欧拉角，三轴定义与设备sensor定义相同，为右手系。姿态旋转角在ZXY旋转顺序、内旋下计算， 通过传感器融合获取的四元数计算得到结果。
+获取设备的姿态数据。
+
+姿态数据包含x、y、z三轴的姿态旋转角，即三轴的欧拉角，三轴定义与设备sensor定义相同，为右手系。姿态旋转角在ZXY旋转顺序、内旋下计算，通过传感器融合获取的四元数计算得到结果。
 
 **起始版本：** 20
 

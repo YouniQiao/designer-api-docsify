@@ -2295,7 +2295,9 @@ Return a new Decimal whose value is `x` minus `y`, rounded to `precision` signif
 static sum(...n: Value[]): Decimal
 ```
 
-Return a new Decimal whose value is the sum of the arguments, rounded to `precision` significant digits using rounding mode `rounding`.Only the result is rounded, not the intermediate calculations.
+Return a new Decimal whose value is the sum of the arguments, rounded to `precision` significant digits using rounding mode `rounding`.
+
+Only the result is rounded, not the intermediate calculations.
 
 **Since:** 12
 

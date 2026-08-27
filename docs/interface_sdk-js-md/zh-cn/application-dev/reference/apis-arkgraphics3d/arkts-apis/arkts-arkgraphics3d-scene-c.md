@@ -392,7 +392,7 @@ function ImportSceneTest() {
 static load(uri? : ResourceStr): Promise<Scene>
 ```
 
-通过传入的资源路径加载资源，使用Promise异步回调。 调用后，应该在Scene使用完毕时调用destroy释放资源，否则可能导致资源泄漏。
+通过传入的资源路径加载资源，使用Promise异步回调。调用后，应该在Scene使用完毕时调用destroy释放资源，否则可能导致资源泄漏。
 
 **起始版本：** 12
 
@@ -402,7 +402,7 @@ static load(uri? : ResourceStr): Promise<Scene>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | 否 | 待加载的模型文件资源路径，默认值为undefined。 |
+| uri | ResourceStr | 否 | 待加载的模型文件资源路径，默认值为undefined。 |
 
 **返回值：**
 
@@ -506,7 +506,9 @@ function RenderFrameTest() {
 get animations(): Animation[]
 ```
 
-动画数组，用于保存3D场景中的动画对象。@return { Animation[] } @readonly
+动画数组，用于保存3D场景中的动画对象。
+
+@return { Animation[] } @readonly
 
 **类型：** [Animation](arkts-arkgraphics3d-sceneresources-animation-i.md)[]
 
@@ -548,7 +550,9 @@ get renderConfiguration(): RenderConfiguration
 get root(): Node | null
 ```
 
-3D场景树根节点。@return { Node | null } @readonly
+3D场景树根节点。
+
+@return { Node | null } @readonly
 
 **类型：** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## acceptConnect
@@ -12,7 +12,7 @@ import abilityConnectionManager from '@kit.DistributedServiceKit';
 function acceptConnect(sessionId: number, token: string): Promise<void>
 ```
 
-设备B上的应用，在创建协同会话成功并获得会话ID后，调用acceptConnect()方法接受连接。 调用此接口前，需先在两端设备分别创建协同会话。必须与设备A的connect方法配合使用： 设备A调用connect会拉起设备B应用，设备B在onCollaborate生命周期中创建会话后调用acceptConnect。 使用Promise异步回调。
+设备B上的应用，在创建协同会话成功并获得会话ID后，调用acceptConnect()方法接受连接。调用此接口前，需先在两端设备分别创建协同会话。必须与设备A的connect方法配合使用：设备A调用connect会拉起设备B应用，设备B在onCollaborate生命周期中创建会话后调用acceptConnect。使用Promise异步回调。
 
 **起始版本：** 18
 
@@ -25,13 +25,13 @@ function acceptConnect(sessionId: number, token: string): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | number | 是 | 已创建的协同会话ID。 |
-| token | string | 是 | 设备A应用传入的token值，该值通过wantParam参数中'ohos.dms.collabToken'键获取 （在应用被拉起后的onCollaborate生命周期方法的wantParam参数中获取）。 当设备A调用connect方法时，系统会自动生成collabToken并通过want参数传递给设备B， 设备B在onCollaborate生命周期回调中可以从wantParam参数获取此token。 |
+| token | string | 是 | 设备A应用传入的token值，该值通过wantParam参数中'ohos.dms.collabToken'键获取（在应用被拉起后的onCollaborate生命周期方法的wantParam参数中获取）。当设备A调用connect方法时，系统会自动生成collabToken并通过want参数传递给设备B，设备B在onCollaborate生命周期回调中可以从wantParam参数获取此token。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import browser from '@kit.MDMKit';
+import { browser } from '@kit.MDMKit';
 ```
 
 ## getPolicies
@@ -96,7 +96,7 @@ Obtains the policy of the specified browser. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the browser policies obtained. |
+| Promise&lt;string&gt; | Promise used to return the browser policies obtained. |
 
 **Error codes:**
 

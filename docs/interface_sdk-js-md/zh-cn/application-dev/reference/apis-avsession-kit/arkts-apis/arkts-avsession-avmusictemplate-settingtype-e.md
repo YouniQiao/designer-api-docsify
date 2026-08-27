@@ -1,6 +1,8 @@
 # SettingType
 
-表示设置类型的枚举。@enum { number }
+表示设置类型的枚举。
+
+@enum { number }
 
 **起始版本：** 23
 

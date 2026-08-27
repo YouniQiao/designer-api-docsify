@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## connectToCandidateConfigWithUserAction
@@ -33,7 +32,7 @@ Connect to a specified candidate hotspot by networkId, and wait for user respond
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the promise object that used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Returns the promise object that used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

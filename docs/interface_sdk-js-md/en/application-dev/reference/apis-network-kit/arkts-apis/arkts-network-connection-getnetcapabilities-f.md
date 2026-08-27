@@ -11,7 +11,8 @@
 function getNetCapabilities(netHandle: NetHandle, callback: AsyncCallback<NetCapabilities>): void
 ```
 
-Obtains the network capability set of the data network specified by **NetHandle**, including the uplink and downlink bandwidth, specific network capabilities, and network type. This API uses an asynchronous callback to return the result.  
+Obtains the network capability set of the data network specified by **NetHandle**, including the uplink and downlink bandwidth, specific network capabilities, and network type. This API uses an asynchronous callback to return the result.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 8
@@ -26,7 +27,7 @@ Obtains the network capability set of the data network specified by **NetHandle*
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. |
+| netHandle | NetHandle | Yes | Network handle. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NetCapabilities](arkts-network-connection-netcapabilities-i.md)&gt; | Yes | Callback used to return the result. If the capability set of the network specified by **NetHandle** is successfully obtained, **error** is **undefined**, and **data** is the obtained network capability set. Otherwise, **error** is an error object. |
 
 **Error codes:**
@@ -69,7 +70,8 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 function getNetCapabilities(netHandle: NetHandle): Promise<NetCapabilities>
 ```
 
-Obtains the network capability set of the data network specified by **NetHandle**, including the uplink and downlink bandwidth, specific network capabilities, and network type. This API uses a promise to return the result.  
+Obtains the network capability set of the data network specified by **NetHandle**, including the uplink and downlink bandwidth, specific network capabilities, and network type. This API uses a promise to return the result.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 8
@@ -84,7 +86,7 @@ Obtains the network capability set of the data network specified by **NetHandle*
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. |
+| netHandle | NetHandle | Yes | Network handle. |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import matrix4 from '@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## invert
@@ -28,7 +28,7 @@ Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效�
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的逆矩阵对象。 |
+| Matrix4Transit | 当前矩阵的逆矩阵对象。 |
 
 **示例**
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import componentSnapshot from '@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## bottom
@@ -18,7 +18,11 @@ import componentSnapshot from '@kit.ArkUI';
 bottom: number
 ```
 
-截图区域矩形右下角的y轴坐标。单位：px取值范围：[0, 组件高度]
+截图区域矩形右下角的y轴坐标。
+
+单位：px
+
+取值范围：[0, 组件高度]
 
 **类型：** number
 
@@ -36,7 +40,11 @@ bottom: number
 left: number
 ```
 
-截图区域矩形左上角的x轴坐标。单位：px取值范围：[0, 组件宽度]
+截图区域矩形左上角的x轴坐标。
+
+单位：px
+
+取值范围：[0, 组件宽度]
 
 **类型：** number
 
@@ -54,7 +62,11 @@ left: number
 right: number
 ```
 
-截图区域矩形右下角的x轴坐标。单位：px取值范围：[0, 组件宽度]
+截图区域矩形右下角的x轴坐标。
+
+单位：px
+
+取值范围：[0, 组件宽度]
 
 **类型：** number
 
@@ -72,7 +84,11 @@ right: number
 top: number
 ```
 
-截图区域矩形左上角的y轴坐标。单位：px取值范围：[0, 组件高度]
+截图区域矩形左上角的y轴坐标。
+
+单位：px
+
+取值范围：[0, 组件高度]
 
 **类型：** number
 

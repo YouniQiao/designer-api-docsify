@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import dialogRequest from '@kit.AbilityKit';
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## setRequestResult
@@ -30,7 +30,7 @@ setRequestResult(result: RequestResult): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | [RequestResult](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-requestresult-i-sys.md) | 是 | 模态弹框请求结果信息。 |
+| result | RequestResult | 是 | 模态弹框请求结果信息。 |
 
 **错误码：**
 

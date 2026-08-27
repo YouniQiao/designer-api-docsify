@@ -1,6 +1,8 @@
 # TabContent properties/events
 
-In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.
+
+In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** TabContentAttribute extends CommonMethod<TabContentAttribute>
 
@@ -71,7 +73,11 @@ Called when the tab content is about to be displayed. The scenarios include the 
 tabBar(options: string | Resource | CustomBuilder | TabBarOptions)
 ```
 
-Sets the content displayed on the tab bar.If the icon uses an SVG image source, delete the width and height attribute values built in the SVG image source. Otherwise, the width and height attribute values built in the SVG image source are used.If the content exceeds the space provided by the tab bar, it will be clipped.
+Sets the content displayed on the tab bar.
+
+If the icon uses an SVG image source, delete the width and height attribute values built in the SVG image source. Otherwise, the width and height attribute values built in the SVG image source are used.
+
+If the content exceeds the space provided by the tab bar, it will be clipped.
 
 **Since:** 7
 
@@ -125,7 +131,11 @@ tabBar(content: ComponentContent | SubTabBarStyle | BottomTabBarStyle | string |
     TabBarOptions)
 ```
 
-Sets the content displayed on the tab bar.If **BottomTabBarStyle** or **TabBarOptions** is used and an icon is set, a gray block will be displayed if the icon is invalid. If the icon uses an SVG image source, delete the width and height attribute values built in the SVG image source. Otherwise, the width and height attribute values built in the SVG image source are used.If the content exceeds the space provided by the tab bar, it will be clipped.
+Sets the content displayed on the tab bar.
+
+If **BottomTabBarStyle** or **TabBarOptions** is used and an icon is set, a gray block will be displayed if the icon is invalid. If the icon uses an SVG image source, delete the width and height attribute values built in the SVG image source. Otherwise, the width and height attribute values built in the SVG image source are used.
+
+If the content exceeds the space provided by the tab bar, it will be clipped.
 
 **Since:** 18
 

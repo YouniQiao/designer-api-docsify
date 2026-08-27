@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import telephonyManager from '@kit.MDMKit';
+import { telephonyManager } from '@kit.MDMKit';
 ```
 
 ## activeSim

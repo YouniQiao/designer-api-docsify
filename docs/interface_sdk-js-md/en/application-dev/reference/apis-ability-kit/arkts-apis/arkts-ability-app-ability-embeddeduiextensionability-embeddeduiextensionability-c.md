@@ -13,5 +13,5 @@ EmbeddedUIExtensionAbility is a component that enables cross-process UI embeddin
 ## Modules to Import
 
 ```TypeScript
-import EmbeddedUIExtensionAbility from '@kit.AbilityKit';
+import { EmbeddedUIExtensionAbility } from '@kit.AbilityKit';
 ```

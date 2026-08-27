@@ -9,12 +9,7 @@ In the following API examples, you must first use [getSetting](arkts-ime-inputme
 ## Modules to Import
 
 ```TypeScript
-import inputMethod from '@kit.IMEKit';
-import inputMethodEngine from '@kit.IMEKitEngine';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
-import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
-import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## displayOptionalInputMethod
@@ -73,7 +68,7 @@ Displays a dialog box for selecting an input method. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -659,7 +654,7 @@ Disables listening for the input method and subtype change event. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imeChange' | Yes | Listening type. The value is fixed at **'imeChange'**. |
-| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) = & gt; void | No | Callback used to return the input method attributes and subtype. |
+| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | No | Callback used to return the input method attributes and subtype. |
 
 **Examples**
 
@@ -687,7 +682,7 @@ Enables listening for the input method and subtype change event. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imeChange' | Yes | Listening type. The value is fixed at **'imeChange'**. |
-| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) = & gt; void | Yes | Callback used to return the input method attributes and subtype. |
+| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | Callback used to return the input method attributes and subtype. |
 
 **Examples**
 
@@ -767,7 +762,7 @@ Displays a dialog box for selecting an input method. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| Promise&lt;boolean&gt; | Promise used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

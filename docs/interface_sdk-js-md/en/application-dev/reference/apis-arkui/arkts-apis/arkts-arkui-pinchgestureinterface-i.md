@@ -90,7 +90,7 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback for the pinch event. |
+| event | () =&gt; void | Yes | Callback for the pinch event. |
 
 **Return value:**
 
@@ -144,7 +144,7 @@ Triggered when all fingers are lifted after successful pinch gesture recognition
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes | Callback for the pinch event. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for the pinch event. |
 
 **Return value:**
 
@@ -170,7 +170,7 @@ Triggered after the pinch gesture is recognized.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes | Callback for the pinch event. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for the pinch event. |
 
 **Return value:**
 
@@ -196,7 +196,7 @@ Triggered when the user moves the finger in the pinch gesture on the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes | Callback for the pinch event. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for the pinch event. |
 
 **Return value:**
 

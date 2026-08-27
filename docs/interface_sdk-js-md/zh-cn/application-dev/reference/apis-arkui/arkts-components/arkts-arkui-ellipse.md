@@ -1,6 +1,7 @@
 # Ellipse
 
 椭圆绘制组件。该组件通过设置宽度和高度属性绘制椭圆形状，在给定的矩形区域内渲染椭圆轮廓和填充区域。
+
 > **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 ## 子组件
@@ -49,7 +50,7 @@ Ellipse(options?: EllipseOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | 否 | 椭圆绘制配置选项，包含宽度和高度设置。不传入时使用默认尺寸（宽度和高度均为0）。  异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | 否 | 椭圆绘制配置选项，包含宽度和高度设置。不传入时使用默认尺寸（宽度和高度均为0）。 异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## 汇总
 
@@ -57,6 +58,7 @@ Ellipse(options?: EllipseOptions)
 
 | 名称 | 说明 |
 | --- | --- |
+| [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | 用于描述Ellipse组件绘制属性。 |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wallpaper from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## getColors

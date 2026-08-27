@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import manager from '@kit.ConnectivityKit';
+import { manager } from '@kit.ConnectivityKit';
 ```
 
 ## 汇总
@@ -20,35 +20,35 @@ import manager from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getLocalName(星闪基础管理能力)](arkts-connectivity-manager-getlocalname-f.md) | 查询本机星闪名称。 |
-| [getPairedDevices(星闪基础管理能力)](arkts-connectivity-manager-getpaireddevices-f.md) | 获取与当前设备配对的设备列表。 |
-| [getState(星闪基础管理能力)](arkts-connectivity-manager-getstate-f.md) | 查询星闪开关状态。 |
-| [isNearLinkSupported(星闪基础管理能力)](arkts-connectivity-manager-isnearlinksupported-f.md) | 查询当前设备是否支持星闪服务。 |
-| [offStateChange(星闪基础管理能力)](arkts-connectivity-manager-offstatechange-f.md) | 取消订阅星闪开关状态变化事件。使用callback异步回调。 |
-| [onStateChange(星闪基础管理能力)](arkts-connectivity-manager-onstatechange-f.md) | 订阅星闪开关状态变化事件。使用callback异步回调。 |
+| [getLocalName](arkts-connectivity-manager-getlocalname-f.md) | 查询本机星闪名称。 |
+| [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md) | 获取与当前设备配对的设备列表。 |
+| [getState](arkts-connectivity-manager-getstate-f.md) | 查询星闪开关状态。 |
+| [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) | 查询当前设备是否支持星闪服务。 |
+| [offStateChange](arkts-connectivity-manager-offstatechange-f.md) | 取消订阅星闪开关状态变化事件。使用callback异步回调。 |
+| [onStateChange](arkts-connectivity-manager-onstatechange-f.md) | 订阅星闪开关状态变化事件。使用callback异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [disable(星闪基础管理能力)](arkts-connectivity-manager-disable-f-sys.md) | 关闭星闪。 |
-| [enable(星闪基础管理能力)](arkts-connectivity-manager-enable-f-sys.md) | 打开星闪。 |
-| [factoryReset(星闪基础管理能力)](arkts-connectivity-manager-factoryreset-f-sys.md) | 恢复出厂设置。使用Promise异步回调。 |
-| [getLocalAddress(星闪基础管理能力)](arkts-connectivity-manager-getlocaladdress-f-sys.md) | 查询本机MAC地址。 |
-| [setConnectionMode(星闪基础管理能力)](arkts-connectivity-manager-setconnectionmode-f-sys.md) | 设置连接模式。使用Promise异步回调。 |
+| [disable](arkts-connectivity-manager-disable-f-sys.md) | 关闭星闪。 |
+| [enable](arkts-connectivity-manager-enable-f-sys.md) | 打开星闪。 |
+| [factoryReset](arkts-connectivity-manager-factoryreset-f-sys.md) | 恢复出厂设置。使用Promise异步回调。 |
+| [getLocalAddress](arkts-connectivity-manager-getlocaladdress-f-sys.md) | 查询本机MAC地址。 |
+| [setConnectionMode](arkts-connectivity-manager-setconnectionmode-f-sys.md) | 设置连接模式。使用Promise异步回调。 |
 <!--DelEnd-->
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [NearlinkState(星闪基础管理能力)](arkts-connectivity-manager-nearlinkstate-e.md) | 星闪的开关状态，为枚举值。 |
+| [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md) | 星闪的开关状态，为枚举值。 |
 
 <!--Del-->
 ### 枚举（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [ConnectionMode(星闪基础管理能力)](arkts-connectivity-manager-connectionmode-e-sys.md) | 连接模式的枚举值。 |
+| [ConnectionMode](arkts-connectivity-manager-connectionmode-e-sys.md) | 连接模式的枚举值。 |
 <!--DelEnd-->

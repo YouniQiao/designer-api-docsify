@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import advertising from '@kit.ConnectivityKit';
+import { advertising } from '@kit.ConnectivityKit';
 ```
 
 ## startAdvertising
@@ -12,7 +12,7 @@ import advertising from '@kit.ConnectivityKit';
 function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
 ```
 
-发送星闪广播。使用Promise异步回调。适用于设备发现、设备信息广播等需要将本端设备能力或数据对外发布的业务场景，配合 [advertising.onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md)可监听广播启停状态。
+发送星闪广播。使用Promise异步回调。适用于设备发现、设备信息广播等需要将本端设备能力或数据对外发布的业务场景，配合[advertising.onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md)可监听广播启停状态。
 
 **起始版本：** 26.0.0
 
@@ -32,7 +32,7 @@ function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回本次开启的广播ID。广播ID是随机分配的唯一标识值，范围[0, 255]，与 [advertising.stopAdvertising]{ |
+| Promise&lt;number&gt; | Promise对象，返回本次开启的广播ID。广播ID是随机分配的唯一标识值，范围[0, 255]，与[advertising.stopAdvertising]{ |
 
 **错误码：**
 

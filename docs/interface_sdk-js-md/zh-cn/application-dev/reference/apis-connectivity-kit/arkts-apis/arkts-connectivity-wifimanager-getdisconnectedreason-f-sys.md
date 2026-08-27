@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getDisconnectedReason
@@ -27,7 +26,7 @@ function getDisconnectedReason(): DisconnectedReason
 
 | 类型 | 说明 |
 | --- | --- |
-| [DisconnectedReason](arkts-connectivity-wifimanager-disconnectedreason-e-sys.md) | 返回最近的断开连接原因。 |
+| DisconnectedReason | 返回最近的断开连接原因。 |
 
 **错误码：**
 

@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import Device, { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
+import { Device, DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
 ```
 
 ## apiVersion

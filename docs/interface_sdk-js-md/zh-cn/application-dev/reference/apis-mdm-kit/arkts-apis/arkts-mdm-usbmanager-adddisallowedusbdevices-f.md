@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import usbManager from '@kit.MDMKit';
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## addDisallowedUsbDevices
@@ -12,8 +12,10 @@ import usbManager from '@kit.MDMKit';
 function addDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>): void
 ```
 
-添加禁止使用的USB设备类型。  
-**使用场景**：  
+添加禁止使用的USB设备类型。
+
+**使用场景**：
+
 - 企业安全管理场景，需要禁用特定类型的USB设备  
 - 防止数据泄露：禁用USB存储设备类型  
 - 设备管理员需要根据安全策略，禁止使用某些类型的USB设备  
@@ -23,6 +25,7 @@ function addDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>):
 > 
 > 推荐使用[addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)接口。
 > 以下情况下，调用本接口会报策略冲突：
+
 1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了设备USB能力。
 2. 已经通过[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md)接口添加了USB设备可用名单。
 3. 已经通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md)接口禁用了某用户USB存储设备写入能力。
@@ -41,7 +44,7 @@ function addDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| usbDevices | Array&lt;[UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md)&gt; | 是 | 要添加的USB设备类型的数组，UsbDeviceType信息可以通过 [getDevices](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md)接口获取。USB设备禁用名单数组长度上限为200，若当前禁用名单中已有100个USB设备ID，则只允许再添 加100个。 |
+| usbDevices | Array&lt;[UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md)&gt; | 是 | 要添加的USB设备类型的数组，UsbDeviceType信息可以通过[getDevices](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md)接口获取。USB设备禁用名单数组长度上限为200，若当前禁用名单中已有100个USB设备ID，则只允许再添加100个。 |
 
 **错误码：**
 

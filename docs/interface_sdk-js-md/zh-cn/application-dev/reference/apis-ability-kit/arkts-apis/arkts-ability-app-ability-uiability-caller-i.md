@@ -1,6 +1,6 @@
 # Caller
 
-调用方Caller UIAbility通过[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall)接口 拉起目标Callee UIAbility，目标UIAbility启动成功后，返回一个Caller对象给调用方进行通信。
+调用方Caller UIAbility通过[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall)接口拉起目标Callee UIAbility，目标UIAbility启动成功后，返回一个Caller对象给调用方进行通信。
 
 **起始版本：** 9
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import UIAbility, { Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## call
@@ -37,7 +37,7 @@ Caller UIAbility向Callee UIAbility发送双方约定好的序列化的数据。
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -132,7 +132,7 @@ Caller UIAbility向Callee UIAbility发送消息，Callee UIAbility处理完成�
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;rpc.MessageSequence & gt; | Promise对象，返回Callee UIAbility的应答数据。 |
+| Promise&lt;rpc.MessageSequence&gt; | Promise对象，返回Callee UIAbility的应答数据。 |
 
 **错误码：**
 

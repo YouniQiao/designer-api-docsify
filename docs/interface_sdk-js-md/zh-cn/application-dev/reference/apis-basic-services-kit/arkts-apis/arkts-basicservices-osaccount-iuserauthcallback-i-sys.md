@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onAcquireInfo
@@ -71,7 +71,7 @@ onResult: (result: number, extraInfo: AuthResult) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | result | number | 是 |  |
-| extraInfo | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | 是 |  |
+| extraInfo | AuthResult | 是 |  |
 
 **示例**
 

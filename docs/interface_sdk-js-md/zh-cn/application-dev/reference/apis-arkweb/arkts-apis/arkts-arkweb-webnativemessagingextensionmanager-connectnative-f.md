@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import webNativeMessagingExtensionManager from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
 ```
 
 ## connectNative

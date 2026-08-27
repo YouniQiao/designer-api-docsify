@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllAppProvisionInfo
@@ -32,7 +32,7 @@ Obtains the provision configuration file information of all applications based o
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;AppProvisionInfo & gt; & gt; | Promise used to return the provision profile obtained. |
+| Promise&lt;Array&lt;AppProvisionInfo&gt;&gt; | Promise used to return the provision profile obtained. |
 
 **Error codes:**
 

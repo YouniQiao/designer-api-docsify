@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## isDomainAccountSupported
@@ -24,7 +24,7 @@ Checks whether this domain account is supported. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means this domain account is supported; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means this domain account is supported; the value **false** means the opposite. |
 
 **Error codes:**
 

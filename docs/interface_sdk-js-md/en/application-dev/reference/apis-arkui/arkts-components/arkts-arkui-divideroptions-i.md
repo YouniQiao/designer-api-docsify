@@ -17,7 +17,9 @@ Define the divider configuration options.
 color?: ResourceColor
 ```
 
-Color of the divider.Default value: **'#33000000'**
+Color of the divider.
+
+Default value: **'#33000000'**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -37,7 +39,13 @@ Color of the divider.Default value: **'#33000000'**
 endMargin?: Dimension
 ```
 
-Distance between the divider and the end edge of the text picker.Default value: **0**Unit: vp (default) or px.Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
+Distance between the divider and the end edge of the text picker.
+
+Default value: **0**
+
+Unit: vp (default) or px.
+
+Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -57,7 +65,13 @@ Distance between the divider and the end edge of the text picker.Default value: 
 startMargin?: Dimension
 ```
 
-Distance between the divider and the start edge of the text picker.Default value: **0**Unit: vp (default) or px.Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
+Distance between the divider and the start edge of the text picker.
+
+Default value: **0**
+
+Unit: vp (default) or px.
+
+Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -77,7 +91,13 @@ Distance between the divider and the start edge of the text picker.Default value
 strokeWidth?: Dimension
 ```
 
-Stroke width of the divider.Default value: **2.0px**Unit: vp (default) or px.If the value is less than 0, the default value is used. The maximum value allowed is half the height of the column. Percentages are not supported.
+Stroke width of the divider.
+
+Default value: **2.0px**
+
+Unit: vp (default) or px.
+
+If the value is less than 0, the default value is used. The maximum value allowed is half the height of the column. Percentages are not supported.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

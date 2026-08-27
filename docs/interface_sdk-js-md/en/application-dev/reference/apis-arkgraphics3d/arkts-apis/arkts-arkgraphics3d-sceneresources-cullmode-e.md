@@ -1,6 +1,8 @@
 # CullMode
 
-Enumerates the culling modes of PBR materials. You can improve rendering performance and visual quality by determining whether the front or back faces of objects are culled.@enum { number }
+Enumerates the culling modes of PBR materials. You can improve rendering performance and visual quality by determining whether the front or back faces of objects are culled.
+
+@enum { number }
 
 **Since:** 20
 

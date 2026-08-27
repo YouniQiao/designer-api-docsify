@@ -11,24 +11,24 @@
 
 | Name | Description |
 | --- | --- |
-| [WithThemeAttribute(Defines WithTheme component.)](arkts-arkui-withthemeattribute-c.md) | The universal attributes are not supported.The universal events are not supported. |
+| [WithThemeAttribute](arkts-arkui-withthemeattribute-c.md) | The universal attributes are not supported. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [WithThemeOptions(Defines WithTheme component.)](arkts-arkui-withthemeoptions-i.md) | Defines the default theme and color mode for components within the **WithTheme** scope. |
+| [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) | Defines the default theme and color mode for components within the **WithTheme** scope. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [CustomTheme(Defines WithTheme component.)](arkts-arkui-customtheme-t.md) | Defines a custom theme. |
-| [WithThemeInterface(Defines WithTheme component.)](arkts-arkui-withthemeinterface-t.md) | Define the function of WithThemeInterface. |
+| [CustomTheme](arkts-arkui-customtheme-t.md) | Defines a custom theme. |
+| [WithThemeInterface](arkts-arkui-withthemeinterface-t.md) | Define the function of WithThemeInterface. |
 
 ### Constants
 
 | Name | Description |
 | --- | --- |
-| [WithTheme(Defines WithTheme component.)](arkts-arkui-withtheme-con.md) | Defines WithTheme Logic Component. |
-| [WithThemeInstance(Defines WithTheme component.)](arkts-arkui-withtheme-con.md#withthemeinstance) | Defines WithTheme Logic Component Instance. |
+| [WithTheme](arkts-arkui-withtheme-con.md) | Defines WithTheme Logic Component. |
+| [WithThemeInstance](arkts-arkui-withtheme-con.md#withthemeinstance) | Defines WithTheme Logic Component Instance. |

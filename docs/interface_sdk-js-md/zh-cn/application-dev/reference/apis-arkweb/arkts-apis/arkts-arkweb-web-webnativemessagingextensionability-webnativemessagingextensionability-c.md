@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## onConnectNative

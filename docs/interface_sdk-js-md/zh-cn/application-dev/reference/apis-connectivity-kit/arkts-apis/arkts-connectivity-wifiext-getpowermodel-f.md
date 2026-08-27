@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiext from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
 ```
 
 ## getPowerModel

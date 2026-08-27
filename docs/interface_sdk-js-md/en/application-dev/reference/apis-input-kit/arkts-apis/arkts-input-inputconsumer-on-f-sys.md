@@ -31,7 +31,7 @@ Enables listening for system hotkey change events. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'key' | Yes | Event type. Currently, only **key** is supported. |
-| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-uitest-keyoptions-i.md) | Yes | Combination key options. |
+| keyOptions | KeyOptions | Yes | Combination key options. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyOptions&gt; | Yes | Callback used to return the combination key data when a combination key event that meets the specified condition occurs. |
 
 **Error codes:**

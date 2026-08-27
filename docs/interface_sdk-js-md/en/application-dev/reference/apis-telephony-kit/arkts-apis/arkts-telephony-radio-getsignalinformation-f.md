@@ -72,7 +72,7 @@ Obtains a list of signal strengths of the network with which the SIM card in the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;SignalInformation & gt; & gt; | Promise used to return the result, which is a list of child class objects derived from [SignalInformation]{ |
+| Promise&lt;Array&lt;SignalInformation&gt;&gt; | Promise used to return the result, which is a list of child class objects derived from [SignalInformation]{ |
 
 **Error codes:**
 

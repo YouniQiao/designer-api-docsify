@@ -1,6 +1,8 @@
 # WifiScanInfo
 
-Describes the scanned Wi-Fi information.@interface WifiScanInfo
+Describes the scanned Wi-Fi information.
+
+@interface WifiScanInfo
 
 **Since:** 6
 
@@ -13,10 +15,7 @@ Describes the scanned Wi-Fi information.@interface WifiScanInfo
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## band

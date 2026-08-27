@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import config from '@kit.AccessibilityKit.config';
-import accessibility from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
-import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
@@ -68,7 +65,7 @@ Checks whether an accessibility application is enabled. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates the accessibility app is enabled, and **false** indicates the accessibility app is disabled. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates the accessibility app is enabled, and **false** indicates the accessibility app is disabled. |
 
 **Examples**
 

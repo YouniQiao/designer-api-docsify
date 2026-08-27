@@ -1,6 +1,6 @@
 # DoorPositionResponse（系统接口）
 
-门内外识别接口执行完成后的回调结果。 @interface DoorPositionResponse
+门内外识别接口执行完成后的回调结果。@interface DoorPositionResponse
 
 **起始版本：** 23
 
@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import spatialAwareness from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## deviceId

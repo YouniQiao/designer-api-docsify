@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundProcessManager from '@kit.BackgroundTasksKit';
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## setPowerSaveMode
@@ -12,7 +12,10 @@ import backgroundProcessManager from '@kit.BackgroundTasksKit';
 function setPowerSaveMode(pid: number, powerSaveMode: PowerSaveMode): Promise<void>
 ```
 
-设置进程的能效模式，使用Promise异步回调。当应用满足以下条件时，可以设置自身是否进入能效模式：  
+设置进程的能效模式，使用Promise异步回调。
+
+当应用满足以下条件时，可以设置自身是否进入能效模式：
+
 - 应用未获取系统焦点，未执行音频或界面刷新操作。  
 - 无法通过框架层获取电源锁。  
 - 应用需要执行压缩、解压缩、编译等耗时较长的计算任务，不希望这些任务受到显著的CPU资源限制（即被迫进入能效模式）。
@@ -34,7 +37,7 @@ function setPowerSaveMode(pid: number, powerSaveMode: PowerSaveMode): Promise<vo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

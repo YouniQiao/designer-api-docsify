@@ -13,8 +13,6 @@ Decodes a string or Uint8Array containing Base64 data into a newly allocated Uin
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## constructor
@@ -88,7 +86,7 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the Uint8Array object obtained. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
 
 **Examples**
 
@@ -165,7 +163,7 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the Uint8Array object obtained. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
 
 **Examples**
 
@@ -242,7 +240,7 @@ Encodes the input content into a string. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the string obtained. |
+| Promise&lt;string&gt; | Promise used to return the string obtained. |
 
 **Examples**
 

@@ -1,6 +1,8 @@
 # TimePickerOptions
 
-时间选择器组件的参数说明。在TimePicker组件滑动过程中修改TimePickerOptions中的属性，会导致这些属性无法生效。
+时间选择器组件的参数说明。
+
+在TimePicker组件滑动过程中修改TimePickerOptions中的属性，会导致这些属性无法生效。
 
 > Date对象用于处理日期和时间，使用方式如下。
 > 
@@ -35,7 +37,9 @@
 end?: Date
 ```
 
-指定时间选择组件的结束时间。默认值：结束时间为23:59:59（小时=23，分钟=59）
+指定时间选择组件的结束时间。
+
+默认值：结束时间为23:59:59（小时=23，分钟=59）
 
 > **说明：**
 > 
@@ -58,7 +62,9 @@ end?: Date
 format?: TimePickerFormat
 ```
 
-指定需要显示的TimePicker的格式。默认值：TimePickerFormat.HOUR_MINUTE
+指定需要显示的TimePicker的格式。
+
+默认值：TimePickerFormat.HOUR_MINUTE
 
 **类型：** [TimePickerFormat](arkts-arkui-timepickerformat-e.md)
 
@@ -78,7 +84,11 @@ format?: TimePickerFormat
 selected?: Date
 ```
 
-设置选中项的时间。默认值：当前系统时间从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+设置选中项的时间。
+
+默认值：当前系统时间
+
+从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **类型：** Date
 
@@ -94,7 +104,9 @@ selected?: Date
 start?: Date
 ```
 
-指定时间选择组件的起始时间。默认值：起始时间为00:00:00（小时=0，分钟=0）
+指定时间选择组件的起始时间。
+
+默认值：起始时间为00:00:00（小时=0，分钟=0）
 
 > **说明：**
 > 

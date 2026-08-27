@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cooperate from '@kit.DistributedServiceKit';
+import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
 ## activateCooperateWithOptions
@@ -36,7 +36,7 @@ Starts screen hopping based on the specified options. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

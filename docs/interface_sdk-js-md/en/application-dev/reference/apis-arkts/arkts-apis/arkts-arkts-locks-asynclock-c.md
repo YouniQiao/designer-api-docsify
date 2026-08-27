@@ -9,7 +9,7 @@ Class to execute an asynchronous operation under lock.
 ## Modules to Import
 
 ```TypeScript
-import ArkTSUtils from '@kit.ArkTS';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -50,7 +50,7 @@ Perform an operation with the acquired lock exclusively. The method acquires the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise that will be resolved after the callback gets executed. |
+| Promise&lt;T&gt; | Promise that will be resolved after the callback gets executed. |
 
 **Error codes:**
 
@@ -83,7 +83,7 @@ Perform an operation with the acquired lock. The method acquires the lock first,
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise that will be resolved after the callback gets executed or rejected. |
+| Promise&lt;T&gt; | Promise that will be resolved after the callback gets executed or rejected. |
 
 **Error codes:**
 
@@ -118,7 +118,7 @@ Perform an operation with the acquired lock. The method acquires the lock first,
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T \ | U & gt; | Promise that will be resolved after the callback gets executed or rejected in case timeout exceeded. |
+| Promise&lt;T \| U&gt; | Promise that will be resolved after the callback gets executed or rejected in case timeout exceeded. |
 
 **Error codes:**
 

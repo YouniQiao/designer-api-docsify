@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## getForegroundApplications
@@ -81,7 +81,7 @@ Obtains applications that are running in the foreground. The application informa
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;AppStateData & gt; & gt; | Promise used to return an array holding the application state data. |
+| Promise&lt;Array&lt;AppStateData&gt;&gt; | Promise used to return an array holding the application state data. |
 
 **Error codes:**
 

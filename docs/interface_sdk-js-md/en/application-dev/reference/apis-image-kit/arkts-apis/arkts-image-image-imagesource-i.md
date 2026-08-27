@@ -1,6 +1,12 @@
 # ImageSource
 
-The **ImageSource** class provides APIs to obtain image information.Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md) to create an ImageSource instance.All APIs in ImageSource cannot be called concurrently.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+The **ImageSource** class provides APIs to obtain image information.
+
+Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md) to create an ImageSource instance.
+
+All APIs in ImageSource cannot be called concurrently.
+
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
 
@@ -9,7 +15,7 @@ The **ImageSource** class provides APIs to obtain image information.Before calli
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createImageRawData
@@ -68,7 +74,11 @@ async function createImageRawData(imageSourceObj: image.ImageSource) {
 createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 ```
 
-Creates a Picture object based on decoding options. This API uses a promise to return the result.Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates a Picture object based on decoding options. This API uses a promise to return the result.
+
+Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
@@ -116,7 +126,11 @@ async function CreatePicture(imageSourceObj : image.ImageSource) {
 createPictureAtIndex(index: number): Promise<Picture>
 ```
 
-Creates a **Picture** object using a specified image (only GIF and HEIF&lt;sup&gt;23+&lt;/sup&gt; images currently). This API uses a promise to return the result.Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates a **Picture** object using a specified image (only GIF and HEIF&lt;sup&gt;23+&lt;/sup&gt; images currently). This API uses a promise to return the result.
+
+Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 20
 
@@ -166,7 +180,9 @@ async function CreatePictures(imageSourceObj : image.ImageSource) {
 createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 ```
 
-Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses a promise to return the result.Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
+Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses a promise to return the result.
+
+Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 
 > **NOTE：**
 > 
@@ -196,7 +212,7 @@ Creates a PixelMap object based on decoding options. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
 **Examples**
 
@@ -218,7 +234,9 @@ async function CreatePixelMap(imageSourceObj : image.ImageSource) {
 createPixelMap(callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object based on the default parameters. This API uses an asynchronous callback to return the result.Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
+Creates a PixelMap object based on the default parameters. This API uses an asynchronous callback to return the result.
+
+Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 
 > **NOTE：**
 > 
@@ -266,7 +284,9 @@ async function CreatePixelMap(imageSourceObj : image.ImageSource) {
 createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses an asynchronous callback to return the result.Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
+Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses an asynchronous callback to return the result.
+
+Starting from API version 15, you are advised to use [createPixelMapUsingAllocator](#createpixelmapusingallocator). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 
 > **NOTE：**
 > 
@@ -326,7 +346,9 @@ async function CreatePixelMap(imageSourceObj : image.ImageSource) {
 createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 ```
 
-Creates an array of PixelMap objects based on decoding options. This API uses a promise to return the result.For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
+Creates an array of PixelMap objects based on decoding options. This API uses a promise to return the result.
+
+For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
 
 > **NOTE：**
 > 
@@ -357,7 +379,7 @@ Creates an array of PixelMap objects based on decoding options. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;PixelMap & gt; & gt; | Promise used to return an array of PixelMap objects. |
+| Promise&lt;Array&lt;PixelMap&gt;&gt; | Promise used to return an array of PixelMap objects. |
 
 **Error codes:**
 
@@ -405,7 +427,9 @@ async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
 createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 ```
 
-Creates an array of PixelMap objects based on the default parameters. This API uses an asynchronous callback to return the result.For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
+Creates an array of PixelMap objects based on the default parameters. This API uses an asynchronous callback to return the result.
+
+For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
 
 > **NOTE：**
 > 
@@ -472,7 +496,9 @@ async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
 createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void
 ```
 
-Creates an array of PixelMap objects based on decoding options. This API uses an asynchronous callback to return the result.For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
+Creates an array of PixelMap objects based on decoding options. This API uses an asynchronous callback to return the result.
+
+For dynamic images such as GIF and WebP images, this API returns the data of each frame of the image. For static images, this API returns the data of the unique frame of the image.
 
 > **NOTE：**
 > 
@@ -548,7 +574,13 @@ async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
 createPixelMapSync(options?: DecodingOptions): PixelMap
 ```
 
-Creates a PixelMap object based on decoding options. This API returns the result synchronously.Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.Starting from API version 15, you are advised to use [createPixelMapUsingAllocatorSync](#createpixelmapusingallocatorsync). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
+Creates a PixelMap object based on decoding options. This API returns the result synchronously.
+
+Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+
+Starting from API version 15, you are advised to use [createPixelMapUsingAllocatorSync](#createpixelmapusingallocatorsync). This API can be used to specify the memory type [AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 
 > **NOTE：**
 > 
@@ -571,7 +603,7 @@ Creates a PixelMap object based on decoding options. This API returns the result
 
 | Type | Description |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. |
+| PixelMap | PixelMap object. |
 
 **Examples**
 
@@ -633,7 +665,7 @@ Creates a PixelMap object based on decoding options and memory type. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
 **Error codes:**
 
@@ -680,7 +712,11 @@ async function CreatePixelMapUsingAllocator(context : Context) {
 createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap
 ```
 
-Creates a PixelMap object based on decoding options and memory type. This API returns the result synchronously. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates a PixelMap object based on decoding options and memory type. This API returns the result synchronously. For details, see [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
+
+Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 > **NOTE：**
 > 
@@ -704,7 +740,7 @@ Creates a PixelMap object based on decoding options and memory type. This API re
 
 | Type | Description |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. |
+| PixelMap | PixelMap object. |
 
 **Error codes:**
 
@@ -769,7 +805,7 @@ Creates a thumbnail image based on image decoding parameters. This method uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PixelMap \ | undefined & gt; | A Promise instance used to return the PixelMap object representing the thumbnail. |
+| Promise&lt;PixelMap \| undefined&gt; | A Promise instance used to return the PixelMap object representing the thumbnail. |
 
 **Error codes:**
 
@@ -908,7 +944,7 @@ Obtains an array of delay times. This API uses a promise to return the result. T
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return an array of delay times. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return an array of delay times. |
 
 **Error codes:**
 
@@ -1000,7 +1036,7 @@ Obtains the list of disposal types. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return an array of disposal types. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return an array of disposal types. |
 
 **Error codes:**
 
@@ -1041,7 +1077,7 @@ Obtains the number of frames. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the number of frames. |
+| Promise&lt;number&gt; | Promise used to return the number of frames. |
 
 **Error codes:**
 
@@ -1308,7 +1344,9 @@ function GetImageInfoSync(context : Context) {
 getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>
 ```
 
-Obtains the values of properties with the given names in this image. This API uses a promise to return the result.This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format and contain Exif information. (The supported formats may vary depending on the hardware.)
+Obtains the values of properties with the given names in this image. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format and contain Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 12
 
@@ -1318,13 +1356,13 @@ Obtains the values of properties with the given names in this image. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | Array & lt;PropertyKey & gt; | Yes | Array of properties names. |
+| key | Array&lt;PropertyKey&gt; | Yes | Array of properties names. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Record & lt;PropertyKey, string \ | null & gt; & gt; | Promise used to return the property values. If the operation fails, **null** is returned. |
+| Promise&lt;Record&lt;PropertyKey, string \| null&gt;&gt; | Promise used to return the property values. If the operation fails, **null** is returned. |
 
 **Error codes:**
 
@@ -1357,7 +1395,9 @@ async function GetImageProperties(imageSourceObj : image.ImageSource) {
 getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>
 ```
 
-Obtains the value of a property with the specified index in this image. This API uses a promise to return the result.This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/ sup&gt; format and contain Exif information. (The supported formats may vary depending on the hardware.)
+Obtains the value of a property with the specified index in this image. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/ sup&gt; format and contain Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 11
 
@@ -1367,14 +1407,14 @@ Obtains the value of a property with the specified index in this image. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes | Name of the property. |
+| key | PropertyKey | Yes | Name of the property. |
 | options | [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md) | No | Image properties, including the image index and default property value. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the property value. If the operation fails, the default value is returned. |
+| Promise&lt;string&gt; | Promise used to return the property value. If the operation fails, the default value is returned. |
 
 **Error codes:**
 
@@ -1415,7 +1455,9 @@ async function GetImageProperty(imageSourceObj : image.ImageSource) {
 getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>
 ```
 
-Obtains the value of a property with the specified index in this image. This API uses a promise to return the result.This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+Obtains the value of a property with the specified index in this image. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 7
 
@@ -1436,7 +1478,7 @@ Obtains the value of a property with the specified index in this image. This API
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the property value. If the operation fails, the default value is returned. |
+| Promise&lt;string&gt; | Promise used to return the property value. If the operation fails, the default value is returned. |
 
 **Examples**
 
@@ -1459,7 +1501,9 @@ async function GetImageProperty(imageSourceObj : image.ImageSource) {
 getImageProperty(key: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the value of a property with the specified index in this image. This API uses an asynchronous callback to return the result.This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+Obtains the value of a property with the specified index in this image. This API uses an asynchronous callback to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 7
 
@@ -1562,7 +1606,7 @@ Obtains the value of a specified Exif property. This API returns the result sync
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes | Name of the property. |
+| key | PropertyKey | Yes | Name of the property. |
 
 **Return value:**
 
@@ -1601,7 +1645,9 @@ function GetImagePropertySync(context : Context) {
 modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 ```
 
-Modifies the values of properties in this image. This API uses a promise to return the result.This API applies only to images that are in JPEG, PNG, HEIF, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+Modifies the values of properties in this image. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 > **NOTE：**
 > 
@@ -1617,13 +1663,13 @@ Modifies the values of properties in this image. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record & lt;PropertyKey, string \ | null & gt; | Yes | Array of property names and property values. |
+| records | Record&lt;PropertyKey, string \| null&gt; | Yes | Array of property names and property values. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1688,13 +1734,13 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record & lt;string, string \ | null & gt; | Yes | Key-value pairs of image property names and property values. |
+| records | Record&lt;string, string \| null&gt; | Yes | Key-value pairs of image property names and property values. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1734,7 +1780,9 @@ async function ModifyImagePropertiesEnhanced(imageSourceObj : image.ImageSource)
 modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 ```
 
-Modifies the value of a property in this image. This API uses a promise to return the result.This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+Modifies the value of a property in this image. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 > **NOTE：**
 > 
@@ -1750,14 +1798,14 @@ Modifies the value of a property in this image. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [PropertyKey](arkts-image-image-propertykey-e.md) | Yes | Name of the property. |
+| key | PropertyKey | Yes | Name of the property. |
 | value | string | Yes | New value of the property. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1793,7 +1841,9 @@ async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
 modifyImageProperty(key: string, value: string): Promise<void>
 ```
 
-Modifies the value of a property in this image. This API uses a promise to return the result.This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+Modifies the value of a property in this image. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 > **NOTE：**
 > 
@@ -1820,7 +1870,7 @@ Modifies the value of a property in this image. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -1846,7 +1896,9 @@ async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
 modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-Modifies the value of a property in this image. This API uses an asynchronous callback to return the result.This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+Modifies the value of a property in this image. This API uses an asynchronous callback to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 > **NOTE：**
 > 
@@ -1892,7 +1944,9 @@ async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
 readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadata>
 ```
 
-Reads image metadata. You can use **propertyKeys** to specify the keys of metadata. This API uses a promise to return the result.This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format and contain Exif information. (The supported formats may vary depending on the hardware.)
+Reads image metadata. You can use **propertyKeys** to specify the keys of metadata. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format and contain Exif information. (The supported formats may vary depending on the hardware.)
 
 > **NOTE：**
 > 
@@ -1998,7 +2052,9 @@ async function ReadImageMetadata(imageSourceObj : image.ImageSource) {
 readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise<ImageMetadata>
 ```
 
-Reads the metadata of an image source. You can use **metadataTypes** to specify the metadata types. If **metadataTypes** is not specified, all supported metadata is returned. This API uses a promise to return the result.This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS format. (The supported formats may vary depending on the hardware.)
+Reads the metadata of an image source. You can use **metadataTypes** to specify the metadata types. If **metadataTypes** is not specified, all supported metadata is returned. This API uses a promise to return the result.
+
+This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS format. (The supported formats may vary depending on the hardware.)
 
 > **NOTE：**
 > 
@@ -2083,7 +2139,11 @@ async function ReadImageMetadataByType(imageSource : image.ImageSource, type: im
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImageSource instance. This API uses an asynchronous callback to return the result.Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImageSource instance. This API uses an asynchronous callback to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
 
@@ -2190,7 +2250,11 @@ function release(pixelMap: image.PixelMap) {
 release(): Promise<void>
 ```
 
-Releases this ImageSource instance. This API uses a promise to return the result.Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImageSource instance. This API uses a promise to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
 
@@ -2202,7 +2266,7 @@ Releases this ImageSource instance. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -2304,7 +2368,7 @@ Updates incremental data. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -2413,7 +2477,7 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

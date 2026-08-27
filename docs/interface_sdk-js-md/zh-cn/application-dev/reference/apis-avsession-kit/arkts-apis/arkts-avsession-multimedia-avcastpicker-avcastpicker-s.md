@@ -16,8 +16,7 @@
 ## 导入模块
 
 ```TypeScript
-import AVCastPicker from '@kit.AVSessionKit';
-import { AVCastPickerState, AVCastPickerStyle, AVCastPickerColorMode } from '@kit.AVSessionKitParam';
+import { AVCastPicker } from '@kit.AVSessionKit';
 ```
 
 ## onStateChange
@@ -46,7 +45,9 @@ onStateChange?: (state: AVCastPickerState) => void
 activeColor?: Color | number | string
 ```
 
-设备连接成功状态下投播组件的颜色。未设置时，系统将优先根据normalColor的颜色匹配；如果normalColor也未设置，将采用colorMode下的颜色设置。
+设备连接成功状态下投播组件的颜色。
+
+未设置时，系统将优先根据normalColor的颜色匹配；如果normalColor也未设置，将采用colorMode下的颜色设置。
 
 **类型：** Color \| number \| string
 
@@ -62,7 +63,8 @@ activeColor?: Color | number | string
 colorMode?: AVCastPickerColorMode
 ```
 
-显示模式。默认值为AUTO。  
+显示模式。默认值为AUTO。
+
 - 当colorMode设置为AUTO时，跟随系统的深浅色模式的默认色值。  
 - 当colorMode设置为DARK、LIGHT时，使用对应模式的系统预设色值。
 
@@ -96,7 +98,9 @@ customPicker?: CustomBuilder
 normalColor?: Color | number | string
 ```
 
-正常状态下投播组件的颜色。未设置时，将采用colorMode下的颜色设置。
+正常状态下投播组件的颜色。
+
+未设置时，将采用colorMode下的颜色设置。
 
 **类型：** Color \| number \| string
 
@@ -112,7 +116,8 @@ normalColor?: Color | number | string
 pickerStyle?: AVCastPickerStyle
 ```
 
-投播样式。  
+投播样式。
+
 - 当sessionType是audio或者video时，默认值为STYLE_PANEL。  
 - 当sessionType是voice_call或者video_call时，默认值为STYLE_MENU，且不可修改为STYLE_PANEL。
 

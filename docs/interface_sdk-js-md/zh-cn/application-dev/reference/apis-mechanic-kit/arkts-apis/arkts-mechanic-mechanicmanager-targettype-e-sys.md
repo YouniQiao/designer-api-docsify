@@ -1,6 +1,8 @@
 # TargetType（系统接口）
 
-Target type.@enum { number }
+Target type.
+
+@enum { number }
 
 **起始版本：** 21
 

@@ -21,7 +21,7 @@ Obtains the magnetic dip based on the inclination matrix. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inclinationMatrix | Array & lt;number & gt; | Yes | Inclination matrix. |
+| inclinationMatrix | Array&lt;number&gt; | Yes | Inclination matrix. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the magnetic dip, in radians. |
 
 **Error codes:**
@@ -75,13 +75,13 @@ Obtains the magnetic dip based on the inclination matrix. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inclinationMatrix | Array & lt;number & gt; | Yes | Inclination matrix. |
+| inclinationMatrix | Array&lt;number&gt; | Yes | Inclination matrix. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the magnetic dip, in radians. |
+| Promise&lt;number&gt; | Promise used to return the magnetic dip, in radians. |
 
 **Error codes:**
 

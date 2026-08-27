@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import systemTime from '@kit.BasicServicesKit';
-import systemTimer from '@kit.BasicServicesKitr';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## setTime
@@ -88,7 +87,7 @@ function setTime(time: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

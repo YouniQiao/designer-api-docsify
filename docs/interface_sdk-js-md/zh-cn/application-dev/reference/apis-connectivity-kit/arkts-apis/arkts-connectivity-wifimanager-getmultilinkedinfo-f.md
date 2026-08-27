@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getMultiLinkedInfo
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function getMultiLinkedInfo(): Array<WifiLinkedInfo>
 ```
 
-当WLAN处于MLO（多链路操作）状态时，获取多个WLAN连接信息。 如果未获取ohos.permission.GET_WIFI_PEERS_MAC权限，返回随机bssid。
+当WLAN处于MLO（多链路操作）状态时，获取多个WLAN连接信息。如果未获取ohos.permission.GET_WIFI_PEERS_MAC权限，返回随机bssid。
 
 **起始版本：** 18
 
@@ -25,7 +24,7 @@ function getMultiLinkedInfo(): Array<WifiLinkedInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;WifiLinkedInfo & gt; | 返回WLAN多链路信息。 |
+| Array&lt;WifiLinkedInfo&gt; | 返回WLAN多链路信息。 |
 
 **错误码：**
 

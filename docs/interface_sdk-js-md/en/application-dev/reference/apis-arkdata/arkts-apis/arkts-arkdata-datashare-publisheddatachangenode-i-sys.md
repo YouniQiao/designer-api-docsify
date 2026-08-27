@@ -11,8 +11,7 @@ Defines the subscription/unsubscription result of the changes in the published d
 ## Modules to Import
 
 ```TypeScript
-import dataShare from '@kit.ArkData';
-import dataSharePredicates from '@kit.ArkDataPredicates';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## bundleName

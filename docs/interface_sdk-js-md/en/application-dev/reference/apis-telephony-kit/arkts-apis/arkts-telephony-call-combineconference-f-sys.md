@@ -77,7 +77,7 @@ Combines two calls into a conference call. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

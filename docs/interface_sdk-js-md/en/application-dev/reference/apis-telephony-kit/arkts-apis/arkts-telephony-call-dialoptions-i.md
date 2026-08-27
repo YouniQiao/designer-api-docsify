@@ -17,7 +17,8 @@ Provides an option for determining whether a call is a video call.
 extras?: boolean
 ```
 
-Whether the call is a video call.  
+Whether the call is a video call.
+
 - **true**: video call  
 - **false** (default): voice call
 

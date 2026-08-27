@@ -1,6 +1,6 @@
 # Color
 
-颜色类，用于保存取色的结果，适用于配合ColorPicker获取图像主色、占比最多颜色、饱和度最高颜色等场景， 可帮助开发者便捷地获取和传递图像取色结果。
+颜色类，用于保存取色的结果，适用于配合ColorPicker获取图像主色、占比最多颜色、饱和度最高颜色等场景，可帮助开发者便捷地获取和传递图像取色结果。
 
 **起始版本：** 9
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import effectKit from '@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## alpha

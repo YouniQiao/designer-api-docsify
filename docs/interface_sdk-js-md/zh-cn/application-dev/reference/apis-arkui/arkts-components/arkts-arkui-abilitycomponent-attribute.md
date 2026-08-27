@@ -1,6 +1,8 @@
 # AbilityComponent属性/事件
 
-定义AbilityComponent的属性函数。@extends CommonMethod&lt;AbilityComponentAttribute&gt;
+定义AbilityComponent的属性函数。
+
+@extends CommonMethod&lt;AbilityComponentAttribute&gt;
 
 **继承/实现关系：** AbilityComponentAttribute extends CommonMethod<AbilityComponentAttribute>
 

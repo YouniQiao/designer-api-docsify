@@ -9,7 +9,7 @@ UIExtensionContentSession是[UIExtensionAbility](arkts-ability-app-ability-uiext
 ## 导入模块
 
 ```TypeScript
-import UIExtensionContentSession from '@kit.AbilityKit';
+import { UIExtensionContentSession } from '@kit.AbilityKit';
 ```
 
 ## 汇总

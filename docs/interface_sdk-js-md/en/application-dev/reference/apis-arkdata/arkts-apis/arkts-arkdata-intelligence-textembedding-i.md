@@ -1,6 +1,8 @@
 # TextEmbedding
 
-Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported.@interface TextEmbedding
+Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported.
+
+@interface TextEmbedding
 
 **Since:** 15
 
@@ -9,7 +11,7 @@ Describes the text embedding functions of the multi-modal embedding model. Chine
 ## Modules to Import
 
 ```TypeScript
-import intelligence from '@kit.ArkData';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## getEmbedding
@@ -34,7 +36,7 @@ Obtains the embedding vector of the given text. The model can process up to 512 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | The promise used to return the embedding result. |
+| Promise&lt;Array&lt;number&gt;&gt; | The promise used to return the embedding result. |
 
 **Error codes:**
 
@@ -76,13 +78,13 @@ Obtains the embedding vector of a given batch of text. The model can process up 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| batchTexts | Array & lt;string & gt; | Yes | The input batch of texts of the embedding model. |
+| batchTexts | Array&lt;string&gt; | Yes | The input batch of texts of the embedding model. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;Array & lt;number & gt; & gt; & gt; | The promise used to return the embedding result. |
+| Promise&lt;Array&lt;Array&lt;number&gt;&gt;&gt; | The promise used to return the embedding result. |
 
 **Error codes:**
 
@@ -124,7 +126,7 @@ Loads this text embedding model. If the loading fails, an error code is returned
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -175,7 +177,7 @@ Releases this text embedding model. If the releasing fails, an error code is ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

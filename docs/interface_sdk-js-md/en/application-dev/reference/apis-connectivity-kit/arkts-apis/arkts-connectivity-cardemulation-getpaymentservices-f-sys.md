@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cardEmulation from '@kit.ConnectivityKit';
+import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
 ## getPaymentServices

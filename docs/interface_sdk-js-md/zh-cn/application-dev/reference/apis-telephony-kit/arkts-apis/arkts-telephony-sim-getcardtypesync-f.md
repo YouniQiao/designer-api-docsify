@@ -27,7 +27,7 @@ function getCardTypeSync(slotId: number): CardType
 
 | 类型 | 说明 |
 | --- | --- |
-| [CardType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-cardemulation-cardtype-e.md) | 返回指定卡槽SIM卡的卡类型。 |
+| CardType | 返回指定卡槽SIM卡的卡类型。 |
 
 **示例**
 

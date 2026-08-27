@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import cdsm from '@kit.ConnectivityKit';
+import { cdsm } from '@kit.ConnectivityKit';
 ```
 
 ## createCdsmClient

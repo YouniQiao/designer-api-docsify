@@ -1,6 +1,8 @@
 # ScrollEventInfo
 
-ScrollEvent info.@interface ScrollEventInfo
+ScrollEvent info.
+
+@interface ScrollEventInfo
 
 **起始版本：** 12
 
@@ -9,7 +11,7 @@ ScrollEvent info.@interface ScrollEventInfo
 ## 导入模块
 
 ```TypeScript
-import uiObserver from '@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## axis

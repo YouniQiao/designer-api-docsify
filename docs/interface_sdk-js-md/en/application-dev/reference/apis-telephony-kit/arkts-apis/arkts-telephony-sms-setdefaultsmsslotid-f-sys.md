@@ -79,7 +79,7 @@ Sets the default slot ID of the SIM card used to send SMS messages. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

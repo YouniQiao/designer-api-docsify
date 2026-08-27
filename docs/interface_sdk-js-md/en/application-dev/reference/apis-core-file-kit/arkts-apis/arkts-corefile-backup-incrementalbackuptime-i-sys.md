@@ -1,6 +1,8 @@
 # IncrementalBackupTime (System API)
 
-Save the time information of the incremental backup. IncrementalBackupTime is useful when doing IPC with the backup service.@interface IncrementalBackupTime
+Save the time information of the incremental backup. IncrementalBackupTime is useful when doing IPC with the backup service.
+
+@interface IncrementalBackupTime
 
 **Since:** 12
 
@@ -11,7 +13,7 @@ Save the time information of the incremental backup. IncrementalBackupTime is us
 ## Modules to Import
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## bundleName

@@ -1,6 +1,8 @@
 # AccessibilityElement
 
-An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes.Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement) or [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow).
+An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes.
+
+Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement) or [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow).
 
 **Since:** 9
 
@@ -59,7 +61,7 @@ Obtains the names of all actions supported by the node element. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the names of all actions supported by the element. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the names of all actions supported by the element. |
 
 **Examples**
 
@@ -128,7 +130,7 @@ Obtains all attribute names of the node element. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;T & gt; & gt; | Promise used to return all attribute names of the element. |
+| Promise&lt;Array&lt;T&gt;&gt; | Promise used to return all attribute names of the element. |
 
 **Examples**
 
@@ -217,7 +219,7 @@ Obtains the attribute value based on the attribute name. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ElementAttributeValues[T] & gt; | Promise used to return the attribute value. |
+| Promise&lt;ElementAttributeValues[T]&gt; | Promise used to return the attribute value. |
 
 **Error codes:**
 
@@ -599,7 +601,7 @@ Performs the specified action on the accessibility node element. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

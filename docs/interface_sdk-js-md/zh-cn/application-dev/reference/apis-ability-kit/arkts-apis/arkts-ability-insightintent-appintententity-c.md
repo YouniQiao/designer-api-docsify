@@ -11,9 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import insightIntent from '@kit.AbilityKit';
-import insightIntentDriver from '@kit.AbilityKitDriver';
-import insightIntentProvider from '@kit.AbilityKitProvider';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## onQueryEntity
@@ -42,7 +40,7 @@ abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;T & gt; & gt; | Returns an array of subclasses of the AppIntentEntity class, support promise. |
+| Promise&lt;Array&lt;T&gt;&gt; | Returns an array of subclasses of the AppIntentEntity class, support promise. |
 
 **示例**
 

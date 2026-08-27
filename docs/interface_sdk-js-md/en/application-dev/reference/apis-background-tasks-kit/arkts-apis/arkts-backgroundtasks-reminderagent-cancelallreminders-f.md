@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import reminderAgent from '@kit.BackgroundTasksKit';
-import reminderAgentManager from '@kit.BackgroundTasksKitManager';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## cancelAllReminders
@@ -61,7 +60,7 @@ Cancels all reminders set by the current application. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
 

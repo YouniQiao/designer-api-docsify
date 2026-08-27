@@ -72,7 +72,7 @@ Obtains the ISO country code of the network with which the SIM card in the speci
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result, which is an ISO country code, for example, **CN** (China). If the device is not registered with any network, an empty string is returned. |
+| Promise&lt;string&gt; | Promise used to return the result, which is an ISO country code, for example, **CN** (China). If the device is not registered with any network, an empty string is returned. |
 
 **Error codes:**
 

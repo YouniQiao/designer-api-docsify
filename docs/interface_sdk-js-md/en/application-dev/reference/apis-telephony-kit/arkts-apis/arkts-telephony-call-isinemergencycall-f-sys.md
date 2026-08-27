@@ -74,7 +74,7 @@ Checks whether a call is an emergency call. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates an emergency call, and the value false indicates a non-emergency call. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates an emergency call, and the value false indicates a non-emergency call. |
 
 **Error codes:**
 

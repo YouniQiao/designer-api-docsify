@@ -15,7 +15,7 @@ Worker线程自身的运行环境，与宿主线程环境隔离。
 ## 导入模块
 
 ```TypeScript
-import worker, { DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## onerror
@@ -24,7 +24,7 @@ import worker, { DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, E
 onerror?: (ev: ErrorEvent) => void
 ```
 
-onerror属性用于指定Worker在执行过程中发生异常被调用的回调函数， 该回调函数在Worker线程中执行。
+onerror属性用于指定Worker在执行过程中发生异常被调用的回调函数，该回调函数在Worker线程中执行。
 
 **起始版本：** 7
 

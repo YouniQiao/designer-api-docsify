@@ -1,6 +1,8 @@
 # Toggle属性/事件
 
-除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：
+
+除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** ToggleAttribute extends CommonMethod<ToggleAttribute>
 
@@ -33,7 +35,7 @@ contentModifier(modifier: ContentModifier<ToggleConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md)&gt; | 是 | 在Toggle组件上，定制内容区的方法。modifier：内容修改器，开发者需要自定义class实现 ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md)&gt; | 是 | 在Toggle组件上，定制内容区的方法。modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 ## onChange
 
@@ -55,7 +57,7 @@ onChange(callback: (isOn: boolean) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (isOn: boolean) = & gt; void | 是 |  |
+| callback | (isOn: boolean) =&gt; void | 是 |  |
 
 ## selectedColor
 
@@ -77,7 +79,7 @@ selectedColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 组件打开状态的背景颜色。默认值：当ToggleType为Switch时，默认值为 `\\$r('sys.color.ohos_id_color_emphasize')`。当ToggleType为Checkbox时，默认值为 `\\$r('sys.color.ohos_id_color_emphasize')`。当ToggleType为Button时，默认值为 `\\$r('sys.color.ohos_id_color_emphasize')`混合`\\$r('sys.float.ohos_id_alpha_highlight_bg')`的透明度。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 组件打开状态的背景颜色。默认值：当ToggleType为Switch时，默认值为`\\$r('sys.color.ohos_id_color_emphasize')`。当ToggleType为Checkbox时，默认值为`\\$r('sys.color.ohos_id_color_emphasize')`。当ToggleType为Button时，默认值为`\\$r('sys.color.ohos_id_color_emphasize')`混合`\\$r('sys.float.ohos_id_alpha_highlight_bg')`的透明度。 |
 
 ## switchPointColor
 

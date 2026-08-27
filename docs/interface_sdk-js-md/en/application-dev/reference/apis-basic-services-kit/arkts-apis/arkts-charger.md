@@ -15,7 +15,7 @@ The **charger** module enumerates charging types.
 ## Modules to Import
 
 ```TypeScript
-import charger from '@kit.BasicServicesKit';
+import { charger } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

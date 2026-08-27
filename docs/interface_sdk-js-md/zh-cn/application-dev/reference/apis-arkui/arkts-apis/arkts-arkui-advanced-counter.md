@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUIV2';
 ```
 
 ## 汇总
@@ -14,11 +13,11 @@ import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type 
 | 名称 | 说明 |
 | --- | --- |
 | [CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md) | CommonOptions定义了Counter的通用属性和事件。 |
-| [CounterOptions](arkts-arkui-arkui-advanced-counter-counteroptions-c.md) | CounterOptions定义了Counter类型及样式。选择不同的Counter类型时，需选择对应的Counter样式。若样式参数与类型不匹配，将使用该类型对应的默认样式。 |
+| [CounterOptions](arkts-arkui-arkui-advanced-counter-counteroptions-c.md) | CounterOptions定义了Counter类型及样式。 |
 | [DateData](arkts-arkui-arkui-advanced-counter-datedata-c.md) | DateData定义了日期通用属性和方法，包括年、月、日。 |
-| [DateStyleOptions](arkts-arkui-arkui-advanced-counter-datestyleoptions-c.md) | DateStyleOptions定义了日期内联型Counter的属性和事件。继承于[CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md)。 |
-| [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md) | InlineStyleOptions定义了数值内联型Counter的属性和事件。继承于[CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md)。 |
-| [NumberStyleOptions](arkts-arkui-arkui-advanced-counter-numberstyleoptions-c.md) | NumberStyleOptions定义了列表型和紧凑型Counter的属性和事件。继承于[InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md)，包含该接口所有属性。本节仅展示新增属性，继承属性请参见父接口。 |
+| [DateStyleOptions](arkts-arkui-arkui-advanced-counter-datestyleoptions-c.md) | DateStyleOptions定义了日期内联型Counter的属性和事件。 |
+| [InlineStyleOptions](arkts-arkui-arkui-advanced-counter-inlinestyleoptions-c.md) | InlineStyleOptions定义了数值内联型Counter的属性和事件。 |
+| [NumberStyleOptions](arkts-arkui-arkui-advanced-counter-numberstyleoptions-c.md) | NumberStyleOptions定义了列表型和紧凑型Counter的属性和事件。 |
 
 ### 结构体
 
@@ -31,3 +30,200 @@ import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type 
 | 名称 | 说明 |
 | --- | --- |
 | [CounterType](arkts-arkui-arkui-advanced-counter-countertype-e.md) | CounterType指定Counter类型。 |
+
+## 示例
+
+该示例通过设置为和配置，实现了列表型Counter。
+
+```TypeScript
+import { CounterType, CounterComponent } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct ListCounterExample {
+  build() {
+    Column() {
+      // 列表型Counter
+      CounterComponent({
+        options: {
+          type: CounterType.LIST,
+          numberOptions: {
+            label: '价格',
+            min: 0,
+            value: 5,
+            max: 10
+          }
+        }
+      })
+    }
+  }
+}
+```
+
+该示例通过设置为和，实现了紧凑型Counter。
+
+```TypeScript
+import { CounterType, CounterComponent } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct CompactCounterExample {
+  build() {
+    Column() {
+      // 紧凑型Counter
+      CounterComponent({
+        options: {
+          type: CounterType.COMPACT,
+          numberOptions: {
+            label: '数量',
+            value: 10,
+            min: 0,
+            max: 100,
+            step: 10
+          }
+        }
+      })
+    }
+  }
+}
+```
+
+该示例通过设置为和，实现了数值内联型Counter。
+
+```TypeScript
+import { CounterType, CounterComponent } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct NumberStyleExample {
+  build() {
+    Column() {
+      // 数值内联型Counter
+      CounterComponent({
+        options: {
+          type: CounterType.INLINE,
+          inlineOptions: {
+            value: 100,
+            min: 10,
+            step: 2,
+            max: 1000,
+            textWidth: 100,
+            onChange: (value: number) => {
+              console.info('onCounterChange Counter: ' + value.toString());
+            }
+          }
+        }
+      })
+    }
+  }
+}
+```
+
+该示例通过设置为和，实现了日期内联型Counter。
+
+```TypeScript
+import { CounterType, CounterComponent, DateData } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct DateStyleExample {
+  build() {
+    Column() {
+      // 日期内联型Counter
+      CounterComponent({
+        options: {
+          type: CounterType.INLINE_DATE,
+          dateOptions: {
+            year: 2016,
+            onDateChange: (date: DateData) => {
+              console.info('onDateChange Date: ' + date.toString());
+            }
+          }
+        }
+      })
+    }
+  }
+}
+```
+
+该示例通过设置direction属性，实现了列表型、紧凑型、数值内联型、日期内联型Counter的镜像布局。
+
+```TypeScript
+import { CounterType, CounterComponent, DateData } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct CounterPage {
+  @State currentDirection: Direction = Direction.Rtl
+
+  build() {
+    Column({space: 20}) {
+
+      // 列表型Counter
+      CounterComponent({
+        options: {
+          direction: this.currentDirection,
+          type: CounterType.LIST,
+          numberOptions: {
+            label: '价格',
+            min: 0,
+            value: 5,
+            max: 10,
+          }
+        }
+      })
+
+      // 紧凑型Counter
+      CounterComponent({
+        options: {
+          direction: this.currentDirection,
+          type: CounterType.COMPACT,
+          numberOptions: {
+            label: '数量',
+            value: 10,
+            min: 0,
+            max: 100,
+            step: 10
+          }
+        }
+      })
+
+      // 数值内联型Counter
+      CounterComponent({
+        options: {
+          type: CounterType.INLINE,
+          direction: this.currentDirection,
+          inlineOptions: {
+            value: 100,
+            min: 10,
+            step: 2,
+            max: 1000,
+            textWidth: 100,
+            onChange: (value: number) => {
+              console.info('onCounterChange Counter: ' + value.toString());
+            }
+          }
+        }
+      })
+      
+      // 日期内联型Counter
+      CounterComponent({
+        options: {
+          direction: this.currentDirection,
+          type: CounterType.INLINE_DATE,
+          dateOptions: {
+            year: 2024,
+            onDateChange: (date: DateData) => {
+              console.info('onDateChange Date: ' + date.toString());
+            }
+          }
+        }
+      })
+    }
+    .width('100%')
+    .height('100%')
+    .justifyContent(FlexAlign.Center)
+    .alignItems(HorizontalAlign.Center)
+  }
+}
+```

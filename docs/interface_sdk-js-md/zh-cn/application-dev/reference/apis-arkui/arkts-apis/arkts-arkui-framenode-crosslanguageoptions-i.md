@@ -12,7 +12,11 @@
 attributeSetting?: boolean
 ```
 
-FrameNode是否支持跨ArkTS语言进行属性设置。true表示支持跨ArkTS语言进行属性设置，false表示不支持跨ArkTS语言进行属性设置。默认值为false。
+FrameNode是否支持跨ArkTS语言进行属性设置。
+
+true表示支持跨ArkTS语言进行属性设置，false表示不支持跨ArkTS语言进行属性设置。
+
+默认值为false。
 
 **类型：** boolean
 
@@ -32,8 +36,13 @@ FrameNode是否支持跨ArkTS语言进行属性设置。true表示支持跨ArkTS
 treeOperating?: boolean
 ```
 
-FrameNode是否支持跨ArkTS语言进行组件树操作。true表示支持跨ArkTS语言进行组件树操作，false表示不支持跨ArkTS语言进行组件树操作。默认值为false。  
-**说明：** 当FrameNode启用了跨ArkTS语言进行组件树操作的选项后，支持该FrameNode跨ArkTS语言调用 addChild、 insertChildAfter 、insertChildAt、 insertChildBefore 和removeChild。
+FrameNode是否支持跨ArkTS语言进行组件树操作。
+
+true表示支持跨ArkTS语言进行组件树操作，false表示不支持跨ArkTS语言进行组件树操作。
+
+默认值为false。
+
+**说明：** 当FrameNode启用了跨ArkTS语言进行组件树操作的选项后，支持该FrameNode跨ArkTS语言调用addChild、insertChildAfter、insertChildAt、insertChildBefore和removeChild。
 
 **类型：** boolean
 

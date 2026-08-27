@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import prompt from '@kit.ArkUI';
-import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUIAction';
+import { prompt } from '@kit.ArkUI';
 ```
 
 ## showDialog
@@ -27,7 +26,7 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | 是 | 页面显示对话框信息描述。 |
+| options | ShowDialogOptions | 是 | 页面显示对话框信息描述。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | 是 | 对话框响应结果回调。 |
 
 **示例**
@@ -77,13 +76,13 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | 是 | 对话框选项。 |
+| options | ShowDialogOptions | 是 | 对话框选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ShowDialogSuccessResponse & gt; | 对话框响应结果。 |
+| Promise&lt;ShowDialogSuccessResponse&gt; | 对话框响应结果。 |
 
 **示例**
 

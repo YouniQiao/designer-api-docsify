@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import config from '@kit.AccessibilityKit.config';
-import accessibility from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
-import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
@@ -28,7 +25,7 @@ function isFlashReminderEnabled(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示闪烁提醒模式已开启；返回false表示闪烁提醒模式已关闭。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示闪烁提醒模式已开启；返回false表示闪烁提醒模式已关闭。 |
 
 **示例**
 

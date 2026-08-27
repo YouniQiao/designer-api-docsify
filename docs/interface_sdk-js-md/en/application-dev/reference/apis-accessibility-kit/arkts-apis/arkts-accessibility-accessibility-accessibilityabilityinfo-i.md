@@ -9,10 +9,7 @@ Provides information about an accessibility application.
 ## Modules to Import
 
 ```TypeScript
-import config from '@kit.AccessibilityKit.config';
-import accessibility from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
-import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 

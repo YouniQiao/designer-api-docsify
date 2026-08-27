@@ -19,7 +19,9 @@ Represents the return value of the [getEvent('Grid')](../arkts-apis/arkts-arkui-
 setOnDidScroll(callback: OnScrollCallback | undefined): void
 ```
 
-Sets the callback for the [onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12) event.If the input parameter is **undefined**, the event callback is reset.
+Sets the callback for the [onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12) event.
+
+If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 
@@ -41,7 +43,9 @@ Sets the callback for the [onDidScroll](../../../reference/apis-arkui/arkui-ts/t
 setOnScrollIndex(callback: OnGridScrollIndexCallback | undefined): void
 ```
 
-Sets the callback of the [onScrollIndex](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#onscrollindex) event.If the input parameter is **undefined**, the event callback is reset.
+Sets the callback of the [onScrollIndex](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#onscrollindex) event.
+
+If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 
@@ -63,7 +67,9 @@ Sets the callback of the [onScrollIndex](../../../reference/apis-arkui/arkui-ts/
 setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 ```
 
-Sets the callback for the [onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event.If the input parameter is **undefined**, the event callback is reset.
+Sets the callback for the [onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event.
+
+If the input parameter is **undefined**, the event callback is reset.
 
 **Since:** 19
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getCalendar
@@ -31,7 +31,7 @@ Obtains the **Calendar** object for the specified locale and calendar type.
 
 | Type | Description |
 | --- | --- |
-| [Calendar](arkts-localization-i18n-calendar-c.md) | Calendar** object. |
+| Calendar | Calendar** object. |
 
 **Examples**
 

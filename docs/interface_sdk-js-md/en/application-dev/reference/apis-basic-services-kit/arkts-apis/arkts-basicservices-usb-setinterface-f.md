@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usb from '@kit.BasicServicesKit';
-import usbManager from '@kit.BasicServicesKitManager';
-import serialManager from '@kit.BasicServicesKitManager.serial';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## setInterface
@@ -14,7 +12,9 @@ import serialManager from '@kit.BasicServicesKitManager.serial';
 function setInterface(pipe: USBDevicePipe, iface: USBInterface): number
 ```
 
-Sets a USB interface.Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md) to obtain the USB device list and interfaces, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md) to request the device access permission, call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md) to obtain **devicepipe** as an input parameter, and call [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md) to claim the USB interface.
+Sets a USB interface.
+
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md) to obtain the USB device list and interfaces, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md) to request the device access permission, call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md) to obtain **devicepipe** as an input parameter, and call [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md) to claim the USB interface.
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ Sets a USB interface.Before you do this, call [usb.getDevices](arkts-basicservic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | Device pipe, which is used to determine the bus number and device address. |
-| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | USB interface to set. |
+| pipe | USBDevicePipe | Yes | Device pipe, which is used to determine the bus number and device address. |
+| iface | USBInterface | Yes | USB interface to set. |
 
 **Return value:**
 

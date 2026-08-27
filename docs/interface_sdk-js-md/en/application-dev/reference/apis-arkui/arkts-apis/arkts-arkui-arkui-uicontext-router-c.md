@@ -359,7 +359,7 @@ Obtains the status information about a page by its URL.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;router.RouterState & gt; | Page routing state. |
+| Array&lt;router.RouterState&gt; | Page routing state. |
 
 **Examples**
 
@@ -511,7 +511,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -682,7 +682,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -850,7 +850,7 @@ Navigates to a specified page in the application. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1085,7 +1085,7 @@ Navigates to a specified page in the application. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1250,7 +1250,7 @@ Replaces the current page with another one using the named route and destroys th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1413,7 +1413,7 @@ Replaces the current page with another one using the named route and destroys th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1573,7 +1573,7 @@ Replaces the current page with another one in the application and destroys the c
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1736,7 +1736,7 @@ Replaces the current page with another one in the application and destroys the c
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

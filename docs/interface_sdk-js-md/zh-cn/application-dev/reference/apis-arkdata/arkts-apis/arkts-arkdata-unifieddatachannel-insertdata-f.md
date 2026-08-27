@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import unifiedDataChannel from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## insertData
@@ -12,7 +12,8 @@ import unifiedDataChannel from '@kit.ArkData';
 function insertData(options: Options, data: UnifiedData, callback: AsyncCallback<string>): void
 ```
 
-将数据写入UDMF的公共数据通路中，并生成数据的唯一标识符，使用callback异步回调。  
+将数据写入UDMF的公共数据通路中，并生成数据的唯一标识符，使用callback异步回调。
+
 **实现机制：** 系统接收UnifiedData对象后，验证数据完整性并序列化存储。根据intention值路由到对应存储空间，生成唯一标识符key。数据在公共数据通路中由系统管理有效期，默认策略为应用退出后自动清理。
 
 **起始版本：** 10
@@ -27,8 +28,8 @@ function insertData(options: Options, data: UnifiedData, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 | 配置项参数，参数中intention字段必填，且不支持DRAG，不填时会返回401错误码；其他字段是否填写均不影响接口的使用。 |
-| data | [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) | 是 | 要写入或更新的统一数据对象，用于存储数据记录及其属性信息。 |
+| options | Options | 是 | 配置项参数，参数中intention字段必填，且不支持DRAG，不填时会返回401错误码；其他字段是否填写均不影响接口的使用。 |
+| data | UnifiedData | 是 | 要写入或更新的统一数据对象，用于存储数据记录及其属性信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回写入UDMF的数据的唯一标识符key的值。 |
 
 **错误码：**
@@ -89,14 +90,14 @@ function insertData(options: Options, data: UnifiedData): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 | 配置项参数，参数中intention字段必填，且不支持DRAG，不填时会返回401错误码；其他字段是否填写均不影响接口的使用。 |
-| data | [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) | 是 | 要写入或更新的统一数据对象，用于存储数据记录及其属性信息。 |
+| options | Options | 是 | 配置项参数，参数中intention字段必填，且不支持DRAG，不填时会返回401错误码；其他字段是否填写均不影响接口的使用。 |
+| data | UnifiedData | 是 | 要写入或更新的统一数据对象，用于存储数据记录及其属性信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回写入UDMF的数据的唯一标识符key的值。 |
+| Promise&lt;string&gt; | Promise对象，返回写入UDMF的数据的唯一标识符key的值。 |
 
 **错误码：**
 

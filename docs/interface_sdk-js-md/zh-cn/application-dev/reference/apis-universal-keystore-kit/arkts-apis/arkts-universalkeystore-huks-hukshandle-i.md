@@ -17,8 +17,7 @@ huks Handle结构体。
 ## 导入模块
 
 ```TypeScript
-import huks from '@kit.UniversalKeystoreKit';
-import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## errorCode
@@ -27,7 +26,8 @@ import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 errorCode: number
 ```
 
-原为预留字段。  
+原为预留字段。
+
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **类型：** number
@@ -44,7 +44,8 @@ errorCode: number
 handle: number
 ```
 
-原为预留字段。  
+原为预留字段。
+
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **类型：** number
@@ -61,7 +62,8 @@ handle: number
 token?: Uint8Array
 ```
 
-原为预留字段。  
+原为预留字段。
+
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **类型：** Uint8Array

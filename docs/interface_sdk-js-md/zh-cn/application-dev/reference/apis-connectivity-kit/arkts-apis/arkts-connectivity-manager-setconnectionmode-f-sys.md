@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import manager from '@kit.ConnectivityKit';
+import { manager } from '@kit.ConnectivityKit';
 ```
 
 ## setConnectionMode
@@ -29,13 +29,13 @@ function setConnectionMode(mode: ConnectionMode, duration: number): Promise<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [ConnectionMode](arkts-connectivity-manager-connectionmode-e-sys.md) | 是 | 表示要设置的连接模式。 |
-| duration | number | 是 | 表示设置模式的持续时间，单位为s，取值范围为大于等于0的整数，若为0则表示无限制。 取值限定为整数。 |
+| duration | number | 是 | 表示设置模式的持续时间，单位为s，取值范围为大于等于0的整数，若为0则表示无限制。取值限定为整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

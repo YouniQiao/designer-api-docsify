@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManagerExt from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## getSupportedPowerMode

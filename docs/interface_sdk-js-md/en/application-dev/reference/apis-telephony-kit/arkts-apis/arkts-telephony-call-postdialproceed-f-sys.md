@@ -11,7 +11,9 @@
 function postDialProceed(callId: number, proceed: boolean, callback: AsyncCallback<void>): void
 ```
 
-Continues a call by playing a post-dial DTMF string. This API uses an asynchronous callback to return the result.If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones.
+Continues a call by playing a post-dial DTMF string. This API uses an asynchronous callback to return the result.
+
+If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones.
 
 **Since:** 11
 
@@ -58,7 +60,9 @@ call.postDialProceed(1, true, (err: BusinessError) => {
 function postDialProceed(callId: number, proceed: boolean): Promise<void>
 ```
 
-Continues a call by playing a post-dial DTMF string. This API uses a promise to return the result.If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones.
+Continues a call by playing a post-dial DTMF string. This API uses a promise to return the result.
+
+If the called number is in the format of "common phone number + semicolon (;) + DTMF string", for example, **400xxxxxxx;123**, and the listening for **postDialDelay** events is enabled, the system reports a **postDialDelay** event when the call is connected. The application can then call this API to send DTMF tones.
 
 **Since:** 11
 
@@ -79,7 +83,7 @@ Continues a call by playing a post-dial DTMF string. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

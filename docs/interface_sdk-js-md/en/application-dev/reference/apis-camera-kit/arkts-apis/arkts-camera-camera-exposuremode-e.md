@@ -28,7 +28,9 @@ Unspecified exposure.
 EXPOSURE_MODE_LOCKED = 0
 ```
 
-Exposure locked. The metering point cannot be set.After this mode is used, the exposure will be locked by default for each photo capture.
+Exposure locked. The metering point cannot be set.
+
+After this mode is used, the exposure will be locked by default for each photo capture.
 
 **Since:** 10
 
@@ -42,7 +44,9 @@ Exposure locked. The metering point cannot be set.After this mode is used, the e
 EXPOSURE_MODE_AUTO = 1
 ```
 
-Auto exposure. The metering point can be set by calling [AutoExposure.setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setmeteringpoint).After this mode is used, it takes effect only for the first photo capture.
+Auto exposure. The metering point can be set by calling [AutoExposure.setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setmeteringpoint).
+
+After this mode is used, it takes effect only for the first photo capture.
 
 **Since:** 10
 
@@ -56,7 +60,9 @@ Auto exposure. The metering point can be set by calling [AutoExposure.setMeterin
 EXPOSURE_MODE_CONTINUOUS_AUTO = 2
 ```
 
-Continuous auto exposure. The metering point cannot be set.After this mode is used, the camera system automatically adjusts the exposure based on the environment changes each time.
+Continuous auto exposure. The metering point cannot be set.
+
+After this mode is used, the camera system automatically adjusts the exposure based on the environment changes each time.
 
 **Since:** 10
 
@@ -70,7 +76,9 @@ Continuous auto exposure. The metering point cannot be set.After this mode is us
 EXPOSURE_MODE_MANUAL = 3
 ```
 
-Manual exposure. The exposure duration can be set.In this mode, you can set the exposure duration by calling [ManualExposure.setExposureDuration](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md#setexposureduration).
+Manual exposure. The exposure duration can be set.
+
+In this mode, you can set the exposure duration by calling [ManualExposure.setExposureDuration](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md#setexposureduration).
 
 **Since:** 24
 

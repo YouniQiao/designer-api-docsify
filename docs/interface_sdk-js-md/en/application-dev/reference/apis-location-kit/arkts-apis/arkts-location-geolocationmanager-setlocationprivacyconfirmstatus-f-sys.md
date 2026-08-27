@@ -25,7 +25,7 @@ Set location privacy protocol confirmation status.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [LocationPrivacyType](arkts-location-geolocation-locationprivacytype-e.md) | Yes | Indicates location privacy protocol type. |
+| type | LocationPrivacyType | Yes | Indicates location privacy protocol type. |
 | isConfirmed | boolean | Yes | Indicates whether the location privacy protocol has been confirmed. |
 
 **Error codes:**

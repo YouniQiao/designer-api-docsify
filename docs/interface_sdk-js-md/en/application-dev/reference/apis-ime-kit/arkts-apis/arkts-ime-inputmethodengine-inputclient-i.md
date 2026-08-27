@@ -9,7 +9,7 @@ You must first use on('inputStart') to obtain a **InputClient** instance, and th
 ## Modules to Import
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## deleteBackward
@@ -97,7 +97,7 @@ Deletes the fixed-length text after the cursor. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the deletion is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the deletion is successful, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -257,7 +257,7 @@ Deletes the fixed-length text before the cursor. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the deletion is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the deletion is successful, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -353,7 +353,7 @@ Finishes the text preview. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -420,7 +420,7 @@ Obtains the additional options for binding an input method.
 
 | Type | Description |
 | --- | --- |
-| [AttachOptions](arkts-ime-inputmethod-attachoptions-i.md) | Additional options for binding an input method. |
+| AttachOptions | Additional options for binding an input method. |
 
 **Error codes:**
 
@@ -512,7 +512,7 @@ Obtains the specific-length text after the cursor. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the specific-length text after the cursor. |
+| Promise&lt;string&gt; | Promise used to return the specific-length text after the cursor. |
 
 **Error codes:**
 
@@ -607,7 +607,7 @@ Obtains information about the application window, in which the input box that st
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;WindowInfo & gt; | Promise used to return the information obtained. |
+| Promise&lt;WindowInfo&gt; | Promise used to return the information obtained. |
 
 **Error codes:**
 
@@ -841,7 +841,7 @@ Obtains the specific-length text before the cursor. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the specific-length text before the cursor. |
+| Promise&lt;string&gt; | Promise used to return the specific-length text before the cursor. |
 
 **Error codes:**
 
@@ -970,7 +970,7 @@ Obtains the index of the text where the cursor is located. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. |
+| Promise&lt;number&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1107,7 +1107,7 @@ Inserts text. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the insertion is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the insertion is successful, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -1241,7 +1241,7 @@ Moves the cursor. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1390,7 +1390,7 @@ Registers or unregisters MessageHandler.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated). If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
+| msgHandler | MessageHandler | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated). If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
 
 **Error codes:**
 
@@ -1434,7 +1434,7 @@ Selects text based on the cursor movement direction. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| movement | [Movement](arkts-ime-inputmethod-movement-i.md) | Yes | Direction in which the cursor moves when the text is selected. |
+| movement | Movement | Yes | Direction in which the cursor moves when the text is selected. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the selection event is sent, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1475,13 +1475,13 @@ Selects text based on the cursor movement direction. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| movement | [Movement](arkts-ime-inputmethod-movement-i.md) | Yes | Direction in which the cursor moves when the text is selected. |
+| movement | Movement | Yes | Direction in which the cursor moves when the text is selected. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1519,7 +1519,7 @@ Selects text based on the cursor movement direction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| movement | [Movement](arkts-ime-inputmethod-movement-i.md) | Yes | Direction in which the cursor moves when the text is selected. |
+| movement | Movement | Yes | Direction in which the cursor moves when the text is selected. |
 
 **Error codes:**
 
@@ -1551,7 +1551,7 @@ Selects text based on the specified range. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of the selected text. |
+| range | Range | Yes | Range of the selected text. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the selection event is sent, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1592,13 +1592,13 @@ Selects text based on the specified range. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of the selected text. |
+| range | Range | Yes | Range of the selected text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1636,7 +1636,7 @@ Selects text based on the specified range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of the selected text. |
+| range | Range | Yes | Range of the selected text. |
 
 **Error codes:**
 
@@ -1677,7 +1677,7 @@ Sends an extended edit action. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md) | Yes | Extended edit action to send. |
+| action | ExtendAction | Yes | Extended edit action to send. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1727,13 +1727,13 @@ Sends an extended edit action. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md) | Yes | Extended edit action to send. |
+| action | ExtendAction | Yes | Extended edit action to send. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1840,7 +1840,7 @@ Sends the function key. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -1913,7 +1913,7 @@ Sends the custom communication to the edit box application attached to the input
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1969,13 +1969,13 @@ Sends private data to the system component that needs to communicate with the in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| commandData | Record & lt;string, CommandDataType & gt; | Yes | Private data to send. |
+| commandData | Record&lt;string, CommandDataType&gt; | Yes | Private data to send. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2022,13 +2022,13 @@ Sets the preview text. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Preview text to set. |
-| range | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of the preview text.    - If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default.    - If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**.    - If **start** is not equal to **end**, **text** replaces the text of the specified range.    - If the values of **start** and **end** are negative values, a parameter error is returned.    - If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned.    - If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
+| range | Range | Yes | Range of the preview text.    - If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default.    - If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**.    - If **start** is not equal to **end**, **text** replaces the text of the specified range.    - If the values of **start** and **end** are negative values, a parameter error is returned.    - If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned.    - If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2068,7 +2068,7 @@ Sets the preview text.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Preview text to set. |
-| range | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of the preview text.    - If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default.    - If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**.    - If **start** is not equal to **end**, **text** replaces the text of the specified range.    - If the values of **start** and **end** are negative values, a parameter error is returned.    - If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned.    - If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
+| range | Range | Yes | Range of the preview text.    - If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default.    - If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**.    - If **start** is not equal to **end**, **text** replaces the text of the specified range.    - If the values of **start** and **end** are negative values, a parameter error is returned.    - If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned.    - If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
 
 **Error codes:**
 

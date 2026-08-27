@@ -42,7 +42,7 @@ activatedColor?: ColorMetrics
 
 Icon fillColor when the item is activated.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -60,7 +60,7 @@ color?: ColorMetrics
 
 Define icon fillColor.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 

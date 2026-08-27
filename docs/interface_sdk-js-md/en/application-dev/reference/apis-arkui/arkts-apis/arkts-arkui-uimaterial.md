@@ -11,7 +11,7 @@ This module provides APIs for system materials. Different system materials corre
 ## Modules to Import
 
 ```TypeScript
-import uiMaterial from '@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -37,7 +37,7 @@ import uiMaterial from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | Immersive material class, which inherits from [Material](arkts-arkui-uimaterial-materialtype-e.md).The performance of an immersive material varies based on device computing power. The high, medium, and low levels of device computing power are determined by device vendors and defined in the system configuration files. On devices with high- and mid-level computing power, the filter and shadow effects of the material layer are affected. On devices with low-level computing power, the background color, border color, border width, and shadow effects are affected. In addition, the effect of the same material is affected by the immersive light configuration in the application. The material parameters and effects vary depending on the immersive light configuration. |
+| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | Immersive material class, which inherits from [Material](arkts-arkui-uimaterial-materialtype-e.md). |
 | [Material](arkts-arkui-uimaterial-material-c.md) | System material object on the UI. |
 
 <!--Del-->
@@ -81,3 +81,94 @@ import uiMaterial from '@kit.ArkUI';
 | [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e-sys.md) | Enumerates immersive material styles. Different material styles correspond to different material parameters, including the blur degree and brightness. |
 | [MaterialType](arkts-arkui-uimaterial-materialtype-e-sys.md) | Enumerates system material types. |
 <!--DelEnd-->
+
+## Examples
+
+This example shows how to apply the Material object of a semi-transparent material to a component using the [systemMaterial](../arkui-ts/ts-universal-attributes-image-effect-sys.md#systemmaterial23) attribute.
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SystemMaterialPage {
+  build() {
+    Column() {
+      Stack() {
+        Image($r('app.media.bg1')) // Replace $r('app.media.bg1') with the image resource file you use.
+          .width('100%')
+          .height('100%')
+
+        Column()
+          .width(100)
+          .height(50)
+          .position({ x: 50, y: 350 })
+          .systemMaterial(new uiMaterial.Material({ type: uiMaterial.MaterialType.SEMI_TRANSPARENT })) // Use the semi-transparent system material effect.
+      }
+      .height('90%')
+      .width('90%')
+    }
+    .height('100%')
+    .width('100%')
+    .alignItems(HorizontalAlign.Center)
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+Since API version 26.0.0, the uiMaterial.convertToECMaterial and uiMaterial.convertToECSubMaterial APIs are added.
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  @State myMaterialBase: uiMaterial.ImmersiveMaterial | undefined = new uiMaterial.ImmersiveMaterial({
+    style: uiMaterial.ImmersiveStyle.ULTRA_THIN,
+  });
+  @State myMaterialEC: uiMaterial.ImmersiveMaterial | undefined = new uiMaterial.ImmersiveMaterial({
+    style: uiMaterial.ImmersiveStyle.ULTRA_THIN_EC,
+  });
+  @State myMaterialECSub: uiMaterial.ImmersiveMaterial | undefined = new uiMaterial.ImmersiveMaterial({
+    style: uiMaterial.ImmersiveStyle.ULTRA_THIN_EC_SUB,
+  });
+
+  build() {
+    Stack() {
+      // Replace $r('app.media.startIcon') with the actual resource file.
+      Image($r('app.media.startIcon'))
+      Row() {
+        // It is recommended to use different styles to set materials for EffectComponent and its child components.
+        EffectComponent() {
+          Row() {
+            Column()
+              .width(100)
+              .height(100)
+              .systemMaterial(this.myMaterialECSub)
+              .margin(5)
+          }
+        }
+        .systemMaterial(this.myMaterialEC)
+
+        EffectComponent() {
+          Row() {
+            Column()
+              .width(100)
+              .height(100)
+              .systemMaterial(uiMaterial.convertToECSubMaterial(this.myMaterialBase))
+              .margin(5)
+
+            Column()
+              .width(100)
+              .height(100)
+              .systemMaterial(uiMaterial.convertToECSubMaterial(this.myMaterialBase))
+              .margin(5)
+          }
+        }
+        .systemMaterial(uiMaterial.convertToECMaterial(this.myMaterialBase))
+      }.height('100%').width('100%').justifyContent(FlexAlign.Center)
+    }
+  }
+}
+```

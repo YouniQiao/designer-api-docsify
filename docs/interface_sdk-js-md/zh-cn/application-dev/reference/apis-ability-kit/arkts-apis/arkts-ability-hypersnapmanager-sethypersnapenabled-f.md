@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import hyperSnapManager from '@kit.AbilityKit';
+import { hyperSnapManager } from '@kit.AbilityKit';
 ```
 
 ## setHyperSnapEnabled
@@ -30,7 +30,7 @@ function setHyperSnapEnabled(enableFlag: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enableFlag | boolean | 是 | 表示快启功能开关标志。    - `true`：表示启用快启功能（系统将最终决策是否创建快启）。    - `false`：禁用应用快启功能。 |
+| enableFlag | boolean | 是 | 表示快启功能开关标志。   - `true`：表示启用快启功能（系统将最终决策是否创建快启）。   - `false`：禁用应用快启功能。 |
 
 **错误码：**
 

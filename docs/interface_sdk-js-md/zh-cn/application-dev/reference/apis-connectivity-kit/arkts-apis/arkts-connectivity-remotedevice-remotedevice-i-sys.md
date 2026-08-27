@@ -1,6 +1,6 @@
 # RemoteDevice
 
-提供远端设备的操作方法，使用前需要使用[remoteDevice.createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md)方法创建一个远端设备 [RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md)实例。一个设备只需要创建一次，无需多次创建。
+提供远端设备的操作方法，使用前需要使用[remoteDevice.createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md)方法创建一个远端设备[RemoteDevice](arkts-connectivity-remotedevice-remotedevice-i.md)实例。一个设备只需要创建一次，无需多次创建。
 
 **起始版本：** 26.0.0
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import remoteDevice from '@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## cancelDevicePairing
@@ -34,7 +34,7 @@ cancelDevicePairing(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -67,7 +67,7 @@ connect(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -100,7 +100,7 @@ disconnect(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -196,7 +196,7 @@ getRssiValue(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回RSSI值。 |
+| Promise&lt;number&gt; | Promise对象，返回RSSI值。 |
 
 **错误码：**
 
@@ -229,7 +229,7 @@ removePairedDevice(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -262,7 +262,7 @@ setConnectionInterval(interval: ConnectionInterval): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| interval | [ConnectionInterval](arkts-connectivity-remotedevice-connectioninterval-t-sys.md) | 是 | 要设置的连接间隔。 |
+| interval | ConnectionInterval | 是 | 要设置的连接间隔。 |
 
 **错误码：**
 
@@ -295,7 +295,7 @@ setDeviceAlias(alias: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alias | string | 是 | 远端设备别名。个字符，不能为空。 最大长度为64。 |
+| alias | string | 是 | 远端设备别名。个字符，不能为空。最大长度为64。 |
 
 **错误码：**
 
@@ -313,7 +313,7 @@ setDeviceAlias(alias: string): void
 setPairingConfirmation(accept: boolean): void
 ```
 
-设置配对请求的确认结果。对端设备的配对请求通过 [remoteDevice.onPairingRequest](../../../reference/apis-connectivity-kit/js-apis-nearlink-remote-device-sys.md#remotedeviceonpairingrequest) 获取。
+设置配对请求的确认结果。对端设备的配对请求通过[remoteDevice.onPairingRequest](../../../reference/apis-connectivity-kit/js-apis-nearlink-remote-device-sys.md#remotedeviceonpairingrequest)获取。
 
 **起始版本：** 26.0.0
 
@@ -368,7 +368,7 @@ setPairingPasscode(passcode: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -402,7 +402,7 @@ startCrediblePairing(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -31,7 +31,7 @@ Releases output resources. This API uses a promise to return the result. Model c
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

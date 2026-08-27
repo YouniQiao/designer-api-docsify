@@ -1,6 +1,8 @@
 # RadioModifier
 
-Defines Radio Modifier@extends RadioAttribute @implements AttributeModifier&lt;RadioAttribute&gt;
+Defines Radio Modifier
+
+@extends RadioAttribute @implements AttributeModifier&lt;RadioAttribute&gt;
 
 **Inheritance/Implementation:** RadioModifier extends [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md#radioattribute) and implements AttributeModifier<RadioAttribute>
 

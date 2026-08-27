@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import dataTransfer from '@kit.ConnectivityKit';
+import { dataTransfer } from '@kit.ConnectivityKit';
 ```
 
 ## address
@@ -34,7 +34,7 @@ address: string
 data: ArrayBuffer
 ```
 
-数据包。通过[dataTransfer.writeData](arkts-connectivity-datatransfer-writedata-f.md)发送时表示待发送的数据，通过 [dataTransfer.onReadData](arkts-connectivity-datatransfer-onreaddata-f.md)接收时表示接收到的数据。
+数据包。通过[dataTransfer.writeData](arkts-connectivity-datatransfer-writedata-f.md)发送时表示待发送的数据，通过[dataTransfer.onReadData](arkts-connectivity-datatransfer-onreaddata-f.md)接收时表示接收到的数据。
 
 **类型：** ArrayBuffer
 

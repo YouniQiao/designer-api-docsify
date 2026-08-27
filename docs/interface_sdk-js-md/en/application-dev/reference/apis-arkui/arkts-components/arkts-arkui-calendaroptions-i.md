@@ -17,8 +17,10 @@ Describes the parameters of the calendar picker.
 disabledDateRange?: DateRange[]
 ```
 
-Disabled date range.  
+Disabled date range.
+
 **NOTE：**
+
 1. If the start date or end date within a date range is invalid or is not set,
 the entire date range does not take effect.
 2. If the end date is earlier than the start date within a date range, the entire date range does not take effect.
@@ -41,7 +43,11 @@ the system skips over all dates in the disabled date range.
 end?: Date
 ```
 
-End date.Default value: **Date('5000-12-31')**.Value range: [Date('0001-01-01'), Date('5000-12-31')].
+End date.
+
+Default value: **Date('5000-12-31')**.
+
+Value range: [Date('0001-01-01'), Date('5000-12-31')].
 
 **Type:** Date
 
@@ -61,8 +67,17 @@ End date.Default value: **Date('5000-12-31')**.Value range: [Date('0001-01-01'),
 hintRadius?: number | Resource
 ```
 
-Style of the background of the selected state.Value range: [0.0, 16.0]Unit: vp.Default value: **16.0** (the background is a circle).  
-**NOTE：**If the value is **0.0**, the background is a right-angled rectangle. If the value is in the (0.0, 16.0) range, the background is a rounded rectangle. If the value is a negative number or greater than 16.0, the default value **16.0** is used, which means the background is a circle.
+Style of the background of the selected state.
+
+Value range: [0.0, 16.0]
+
+Unit: vp.
+
+Default value: **16.0** (the background is a circle).
+
+**NOTE：**
+
+If the value is **0.0**, the background is a right-angled rectangle. If the value is in the (0.0, 16.0) range, the background is a rounded rectangle. If the value is a negative number or greater than 16.0, the default value **16.0** is used, which means the background is a circle.
 
 **Type:** number \| Resource
 
@@ -82,7 +97,11 @@ Style of the background of the selected state.Value range: [0.0, 16.0]Unit: vp.D
 selected?: Date
 ```
 
-Date of the selected item. If the value is not set or does not comply with the date format specifications, the default value will be used.Default value: current system date Value range: [Date('0001-01-01'), Date('5000-12-31')].
+Date of the selected item. If the value is not set or does not comply with the date format specifications, the default value will be used.
+
+Default value: current system date
+
+Value range: [Date('0001-01-01'), Date('5000-12-31')].
 
 **Type:** Date
 
@@ -102,7 +121,11 @@ Date of the selected item. If the value is not set or does not comply with the d
 start?: Date
 ```
 
-Start date.Default value: **Date('0001-01-01')**Value range: [Date('0001-01-01'), Date('5000-12-31')].
+Start date.
+
+Default value: **Date('0001-01-01')**
+
+Value range: [Date('0001-01-01'), Date('5000-12-31')].
 
 **Type:** Date
 

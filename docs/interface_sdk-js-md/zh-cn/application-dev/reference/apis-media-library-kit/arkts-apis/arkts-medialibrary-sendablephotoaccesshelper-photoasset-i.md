@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## commitModify
@@ -34,7 +34,7 @@ commitModify(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -66,6 +66,7 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
   console.info('photoAsset get photoAssetTitle = ', photoAssetTitle);
   photoAsset.set(title, 'newTitle3');
   try {
+   // 将修改后的照片元数据提交到数据库进行持久化保存。
     await photoAsset.commitModify();
     let newPhotoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
     console.info('photoAsset get newPhotoAssetTitle = ', newPhotoAssetTitle);
@@ -91,6 +92,7 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
   };
   let albumList: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.Album> = await phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.USER, sendablePhotoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
   let album: sendablePhotoAccessHelper.Album = await albumList.getFirstObject();
+ // 修改相册名称并将修改提交到数据库进行持久化保存。
   album.albumName = 'hello';
   album.commitModify().then(() => {
     console.info('commitModify successfully');
@@ -116,7 +118,7 @@ convertToPhotoAsset(): photoAccessHelper.PhotoAsset
 
 | 类型 | 说明 |
 | --- | --- |
-| photoAccessHelper.PhotoAsset | 返回非Sendable类型的 [PhotoAsset]{ |
+| photoAccessHelper.PhotoAsset | 返回非Sendable类型的[PhotoAsset]{ |
 
 **错误码：**
 
@@ -167,7 +169,7 @@ get(member: string): photoAccessHelper.MemberType
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| member | string | 是 | 成员参数名称，在get时，除了'uri'、'media_type'、'subtype'和'display_name'四个属性之外， 其他的属性都需要在fetchColumns中填入需要get的[PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md)，例如：get title属性 fetchColumns: ['title']。 |
+| member | string | 是 | 成员参数名称，在get时，除了'uri'、'media_type'、'subtype'和'display_name'四个属性之外，其他的属性都需要在fetchColumns中填入需要get的[PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md)，例如：get title属性fetchColumns: ['title']。 |
 
 **返回值：**
 
@@ -236,7 +238,7 @@ getThumbnail(size?: image.Size): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise对象，返回缩略图的PixelMap。 |
+| Promise&lt;image.PixelMap&gt; | Promise对象，返回缩略图的PixelMap。 |
 
 **错误码：**
 
@@ -295,8 +297,8 @@ set(member: string, value: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| member | string | 是 | 成员参数名称例如： [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE。字符串长度的取值范围为[1, 255]。 |
-| value | string | 是 | 设置成员参数名称，只能修改 [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE的值。title的参数规格为：    - 不应包含扩展名。    - 文件名字符串长度的取值范围为[1, 255]（资产文件名为标题+扩展名）。    - 不允许出现的非法英文字符，包括：. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| member | string | 是 | 成员参数名称例如：[PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE。字符串长度的取值范围为[1, 255]。 |
+| value | string | 是 | 设置成员参数名称，只能修改[PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md).TITLE的值。title的参数规格为：   - 不应包含扩展名。   - 文件名字符串长度的取值范围为[1, 255]（资产文件名为标题+扩展名）。   - 不允许出现的非法英文字符，包括：. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **错误码：**
 
@@ -364,7 +366,7 @@ readonly photoType: PhotoType
 readonly uri: string
 ```
 
-媒体文件资源URI（如：file://media/Photo/1/IMG_datetime_0001/displayName.jpg），详情参见用户文件URI介绍中的 [媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。 服务中使用。
+媒体文件资源URI（如：file://media/Photo/1/IMG_datetime_0001/displayName.jpg），详情参见用户文件URI介绍中的[媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。服务中使用。
 
 **类型：** string
 

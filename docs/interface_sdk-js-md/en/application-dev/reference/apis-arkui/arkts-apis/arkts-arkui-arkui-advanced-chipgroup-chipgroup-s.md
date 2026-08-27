@@ -22,7 +22,6 @@
 
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUIV2';
 ```
 
 ## backgroundSystemMaterial
@@ -49,7 +48,13 @@ Set system-styled materials for the component. Different materials have differen
 chipGroupPadding?: ChipGroupPaddingOptions
 ```
 
-Top and bottom padding, used to control the overall height. The type is [ChipGroupPaddingOptions](arkts-arkui-arkui-advanced-chipgroup-chipgrouppaddingoptions-i.md).Default value: { top: 14, bottom: 14 }Unit: vp If the value is **undefined**, the default value is used.
+Top and bottom padding, used to control the overall height. The type is [ChipGroupPaddingOptions](arkts-arkui-arkui-advanced-chipgroup-chipgrouppaddingoptions-i.md).
+
+Default value: { top: 14, bottom: 14 }
+
+Unit: vp
+
+If the value is **undefined**, the default value is used.
 
 **Type:** [ChipGroupPaddingOptions](arkts-arkui-arkui-advanced-chipgroup-chipgrouppaddingoptions-i.md)
 
@@ -67,7 +72,13 @@ Top and bottom padding, used to control the overall height. The type is [ChipGro
 chipGroupSpace?: ChipGroupSpaceOptions
 ```
 
-Left and right padding and spacing between chips. For details, see [ChipGroupSpaceOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md).Default value: { itemSpace: 8, startSpace: 16, endSpace: 16 }Unit: vp If the value is **undefined**, the default value is used.
+Left and right padding and spacing between chips. For details, see [ChipGroupSpaceOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md).
+
+Default value: { itemSpace: 8, startSpace: 16, endSpace: 16 }
+
+Unit: vp
+
+If the value is **undefined**, the default value is used.
 
 **Type:** [ChipGroupSpaceOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupspaceoptions-i.md)
 
@@ -85,7 +96,9 @@ Left and right padding and spacing between chips. For details, see [ChipGroupSpa
 items: ChipGroupItemOptions[]
 ```
 
-Specific attributes of each chip. For details, see [ChipGroupItemOptions[]][ChipGroupItemOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md).If the value is **undefined**, the **ChipGroup** component is empty by default.
+Specific attributes of each chip. For details, see [ChipGroupItemOptions[]][ChipGroupItemOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md).
+
+If the value is **undefined**, the **ChipGroup** component is empty by default.
 
 **Type:** [ChipGroupItemOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md)[]
 
@@ -103,7 +116,13 @@ Specific attributes of each chip. For details, see [ChipGroupItemOptions[]][Chip
 itemStyle?: ChipItemStyle
 ```
 
-Style attributes of the chip, such as the color and size. For details, see [ChipItemStyle](arkts-arkui-arkui-advanced-chipgroup-chipitemstyle-i.md).Default value:{ size: ChipSize.NORMAL, backgroundColor: \$r('sys.color.ohos_id_color_button_normal'), fontColor: \$r('sys.color.ohos_id_color_text_primary'), selectedFontColor: \$r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: \$r('sys.color.ohos_id_color_emphasize') }If the value is **undefined**, the default value is used.
+Style attributes of the chip, such as the color and size. For details, see [ChipItemStyle](arkts-arkui-arkui-advanced-chipgroup-chipitemstyle-i.md).
+
+Default value:
+
+{ size: ChipSize.NORMAL, backgroundColor: \$r('sys.color.ohos_id_color_button_normal'), fontColor: \$r('sys.color.ohos_id_color_text_primary'), selectedFontColor: \$r('sys.color.ohos_id_color_text_primary_contrary'), selectedBackgroundColor: \$r('sys.color.ohos_id_color_emphasize') }
+
+If the value is **undefined**, the default value is used.
 
 **Type:** [ChipItemStyle](arkts-arkui-arkui-advanced-chipgroup-chipitemstyle-i.md)
 
@@ -121,8 +140,13 @@ Style attributes of the chip, such as the color and size. For details, see [Chip
 multiple?: boolean
 ```
 
-Whether to select multiple chips.  
-**true**: Multiple chips can be selected. **false**: Only one chip can be selected.Default value: **false**If the value is **undefined**, the default value is used.
+Whether to select multiple chips.
+
+**true**: Multiple chips can be selected. **false**: Only one chip can be selected.
+
+Default value: **false**
+
+If the value is **undefined**, the default value is used.
 
 **Type:** boolean
 
@@ -140,7 +164,9 @@ Whether to select multiple chips.
 onChange?: Callback<Array<number>>
 ```
 
-Callback invoked when the chip status changes.If the value is **undefined**, the event is unbound.
+Callback invoked when the chip status changes.
+
+If the value is **undefined**, the event is unbound.
 
 **Type:** Callback&lt;Array&lt;number&gt;&gt;
 
@@ -176,7 +202,11 @@ Set system-styled materials for the component when selected. Different materials
 selectedIndexes?: Array<number>
 ```
 
-Index of the selected chip.Default value: **[0]**If the value is **undefined**, the default value is used.
+Index of the selected chip.
+
+Default value: **[0]**
+
+If the value is **undefined**, the default value is used.
 
 **Type:** Array&lt;number&gt;
 
@@ -194,7 +224,11 @@ Index of the selected chip.Default value: **[0]**If the value is **undefined**, 
 suffix?: Callback<void>
 ```
 
-Callback used to customize a builder. To display custom content on the rightmost side of the component, configure the **suffix** property. Use of the **suffix** property requires referencing the [IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md) API.By default, if this parameter is not passed, there is no suffix.If the value is **undefined**, there is no suffix.
+Callback used to customize a builder. To display custom content on the rightmost side of the component, configure the **suffix** property. Use of the **suffix** property requires referencing the [IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md) API.
+
+By default, if this parameter is not passed, there is no suffix.
+
+If the value is **undefined**, there is no suffix.
 
 **Type:** Callback&lt;void&gt;
 

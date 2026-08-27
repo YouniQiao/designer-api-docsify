@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## addNetworkToSystem
@@ -19,7 +18,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 addNetworkToSystem?: boolean
 ```
 
-是否将网络添加到系统中进行连接。 默认为false，如果设置为true，在连接之前会将网络添加到系统中， 且无法再次获取。
+是否将网络添加到系统中进行连接。默认为false，如果设置为true，在连接之前会将网络添加到系统中，且无法再次获取。
 
 **类型：** boolean
 
@@ -55,7 +54,7 @@ WLAN连接的唯一标识ID。
 userActionTimeout?: number
 ```
 
-用户操作超时阈值（单位为秒）。 最大值不能超过30，默认为10。
+用户操作超时阈值（单位为秒）。最大值不能超过30，默认为10。
 
 **类型：** number
 

@@ -11,7 +11,7 @@ Provides APIs for performing cloud database operations.
 ## Modules to Import
 
 ```TypeScript
-import cloudExtension from '@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## delete
@@ -84,7 +84,7 @@ Generates IDs for the data records inserted to the cloud database. The IDs are u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Result & lt;Array & lt;string & gt; & gt; & gt; | Promise used to return the generated IDs in Result. |
+| Promise&lt;Result&lt;Array&lt;string&gt;&gt;&gt; | Promise used to return the generated IDs in Result. |
 
 **Examples**
 
@@ -128,7 +128,7 @@ Extends the lock period of the database. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Result & lt;LockInfo & gt; & gt; | Promise used to return the lock ID and lock period. |
+| Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise used to return the lock ID and lock period. |
 
 **Examples**
 
@@ -220,7 +220,7 @@ Locks this cloud database. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Result & lt;LockInfo & gt; & gt; | Promise used to return the lock ID and lock period. |
+| Promise&lt;Result&lt;LockInfo&gt;&gt; | Promise used to return the lock ID and lock period. |
 
 **Examples**
 
@@ -265,7 +265,7 @@ Queries data in a cloud database table. This API uses a promise to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Table name. |
-| fields | Array & lt;string & gt; | Yes | Name of the fields to query. |
+| fields | Array&lt;string&gt; | Yes | Name of the fields to query. |
 | queryCount | number | Yes | Number of data records to query. |
 | queryCursor | string | Yes | Cursor for the query. |
 
@@ -322,7 +322,7 @@ Unlocks a cloud database. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Result & lt;boolean & gt; & gt; | Promise used to return the result. The value true means the operation is successful; the value false means the opposite. |
+| Promise&lt;Result&lt;boolean&gt;&gt; | Promise used to return the result. The value true means the operation is successful; the value false means the opposite. |
 
 **Examples**
 

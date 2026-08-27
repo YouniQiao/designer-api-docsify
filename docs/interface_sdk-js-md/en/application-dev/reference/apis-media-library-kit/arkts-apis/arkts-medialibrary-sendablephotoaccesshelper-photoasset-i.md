@@ -11,7 +11,7 @@ Provides APIs for encapsulating file asset attributes.
 ## Modules to Import
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## commitModify
@@ -34,7 +34,7 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -236,7 +236,7 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return the PixelMap of the thumbnail. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the PixelMap of the thumbnail. |
 
 **Error codes:**
 

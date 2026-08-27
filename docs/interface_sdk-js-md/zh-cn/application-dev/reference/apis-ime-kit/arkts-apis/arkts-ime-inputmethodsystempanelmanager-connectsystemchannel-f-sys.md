@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputMethodSystemPanelManager from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## connectSystemChannel
@@ -28,7 +28,7 @@ function connectSystemChannel(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 返回的Promise。 |
+| Promise&lt;void&gt; | 返回的Promise。 |
 
 **错误码：**
 

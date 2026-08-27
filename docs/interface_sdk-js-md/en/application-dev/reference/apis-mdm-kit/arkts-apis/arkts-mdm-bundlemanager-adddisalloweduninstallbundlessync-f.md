@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.MDMKit';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## addDisallowedUninstallBundlesSync
@@ -27,7 +27,7 @@ Adds the applications that are not allowed to be uninstalled by the current or s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| appIds | Array & lt;string & gt; | Yes | Application IDs. Value range: The total number of entries in this list for a single user must not exceed 200. For example, if user 100 already has 50 entries and user 101 has none, user 100 can add up to 150 more entries, while user 1 01 can add up to 200 entries. You are advised to configure a maximum of 50 entries at a time to prevent potential performance problems. Note: From API version 21 onwards, the **appId** and **appIdentifier** of the app can be passed. **appIdentifier** is recommended. In API version 20 and earlier versions, only **appId** can be passed. |
+| appIds | Array&lt;string&gt; | Yes | Application IDs. Value range: The total number of entries in this list for a single user must not exceed 200. For example, if user 100 already has 50 entries and user 101 has none, user 100 can add up to 150 more entries, while user 1 01 can add up to 200 entries. You are advised to configure a maximum of 50 entries at a time to prevent potential performance problems. Note: From API version 21 onwards, the **appId** and **appIdentifier** of the app can be passed. **appIdentifier** is recommended. In API version 20 and earlier versions, only **appId** can be passed. |
 | accountId | number | No | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of **@ohos.account.osAccount** to obtain the user ID.     - If **accountId** is passed in, this API applies to the specified user.     - If **accountId** is not passed in, this API applies to the current user. |
 
 **Error codes:**

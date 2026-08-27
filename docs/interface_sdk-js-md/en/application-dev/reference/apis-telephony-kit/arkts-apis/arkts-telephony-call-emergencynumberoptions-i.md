@@ -17,7 +17,8 @@ Provides an option for determining whether a number is an emergency number for t
 slotId?: number
 ```
 
-Card slot ID.  
+Card slot ID.
+
 - **0**: card slot 1  
 - **1**: card slot 2
 

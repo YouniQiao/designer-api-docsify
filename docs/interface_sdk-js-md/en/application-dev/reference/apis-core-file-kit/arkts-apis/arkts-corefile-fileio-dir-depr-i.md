@@ -35,7 +35,7 @@ Closes a directory. This API uses a promise to return the result. After a direct
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | return Promise |
+| Promise&lt;void&gt; | return Promise |
 
 **Examples**
 

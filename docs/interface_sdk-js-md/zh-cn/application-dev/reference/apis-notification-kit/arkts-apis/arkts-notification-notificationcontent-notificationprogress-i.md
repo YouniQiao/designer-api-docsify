@@ -30,7 +30,8 @@ currentValue?: number
 isPercentage?: boolean
 ```
 
-是否按百分比展示进度。默认为false。  
+是否按百分比展示进度。默认为false。
+
 - true：进度以百分比形式展示。  
 - false：进度以绝对值形式展示。
 

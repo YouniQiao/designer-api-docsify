@@ -24,11 +24,17 @@ Defines the constructor of RelativeContainer.
 
 | Name | Description |
 | --- | --- |
+| [BarrierStyle](arkts-arkui-barrierstyle-i.md) | Defines the ID, direction, and referenced components of a barrier. |
+| [GuideLinePosition](arkts-arkui-guidelineposition-i.md) | Defines the position of a guideline. |
+| [GuideLineStyle](arkts-arkui-guidelinestyle-i.md) | Defines the ID, direction, and position of a guideline. |
+| [LocalizedBarrierStyle](arkts-arkui-localizedbarrierstyle-i.md) | Defines the ID, direction, and referenced components of a barrier. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [BarrierDirection](arkts-arkui-barrierdirection-e.md) | Defines the direction of a barrier. |
+| [LocalizedBarrierDirection](arkts-arkui-localizedbarrierdirection-e.md) | Enumerates the directions of barriers with mirror mode support. |
 
 ## Examples
 

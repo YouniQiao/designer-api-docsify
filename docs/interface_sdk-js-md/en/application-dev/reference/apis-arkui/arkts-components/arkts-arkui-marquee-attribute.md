@@ -1,6 +1,8 @@
 # Marquee properties/events
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
+
+In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
 
 **Inheritance/Implementation:** MarqueeAttribute extends CommonMethod<MarqueeAttribute>
 
@@ -77,7 +79,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Font family. Default font: **'HarmonyOS Sans'**Supported fonts include **'HarmonyOS Sans'** and custom fonts registered using [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync).Only the 'HarmonyOS Sans' font is supported for widgets. |
+| value | string \| Resource | Yes | Font family. Default font: **'HarmonyOS Sans'**Supported fonts include **'HarmonyOS Sans'** and custom fonts registered using [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync).Only the 'HarmonyOS Sans' font is supported for widgets. |
 
 ## fontSize
 
@@ -165,7 +167,7 @@ Triggered when the marquee has reached the end. This event will be triggered for
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback invoked when the marquee has finished scrolling once. |
+| event | () =&gt; void | Yes | Callback invoked when the marquee has finished scrolling once. |
 
 ## onFinish
 
@@ -187,7 +189,7 @@ Triggered when the marquee has finished the number of scrolling times set by the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback invoked when the marquee has finished the number of scrolling times set by the **loop** attribute. |
+| event | () =&gt; void | Yes | Callback invoked when the marquee has finished the number of scrolling times set by the **loop** attribute. |
 
 ## onStart
 
@@ -209,7 +211,7 @@ Triggered when the marquee text changes or starts scrolling.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback invoked when the marquee text changes or starts scrolling. |
+| event | () =&gt; void | Yes | Callback invoked when the marquee text changes or starts scrolling. |
 
 ## onStop
 
@@ -217,7 +219,9 @@ Triggered when the marquee text changes or starts scrolling.
 onStop(event: Callback<void> | undefined)
 ```
 
-Called when scrolling is stopped.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: If event is set to undefined, the current event will be unbound. </p>
+Called when scrolling is stopped.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: If event is set to undefined, the current event will be unbound. </p>
 
 **Since:** 26.0.0
 
@@ -233,4 +237,4 @@ Called when scrolling is stopped.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: If event 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback & lt;void & gt; \ | undefined | Yes |  |
+| event | Callback&lt;void&gt; \| undefined | Yes |  |

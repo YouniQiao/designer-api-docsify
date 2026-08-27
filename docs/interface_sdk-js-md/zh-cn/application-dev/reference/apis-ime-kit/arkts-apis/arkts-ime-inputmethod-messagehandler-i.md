@@ -1,6 +1,6 @@
 # MessageHandler
 
-自定义通信对象。   
+自定义通信对象。  
 > **说明：**
    
 > 
@@ -24,12 +24,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputMethod from '@kit.IMEKit';
-import inputMethodEngine from '@kit.IMEKitEngine';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
-import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
-import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## onMessage
@@ -38,7 +33,7 @@ import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-接收输入法应用发送的自定义数据回调函数。   
+接收输入法应用发送的自定义数据回调函数。  
 > **说明：**
    
 > 
@@ -82,7 +77,7 @@ inputMethodController.recvMessage(messageHandler);
 onTerminated(): void
 ```
 
-监听对象终止回调函数。   
+监听对象终止回调函数。  
 > **说明：**
    
 > 

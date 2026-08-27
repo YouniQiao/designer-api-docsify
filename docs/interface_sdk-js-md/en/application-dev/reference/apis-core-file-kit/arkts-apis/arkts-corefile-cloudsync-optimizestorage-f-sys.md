@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cloudSync from '@kit.CoreFileKit';
-import cloudSyncManager from '@kit.CoreFileKitManager';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## optimizeStorage
@@ -27,7 +26,7 @@ Optimizes the resources that have been synced to the cloud from the local Galler
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

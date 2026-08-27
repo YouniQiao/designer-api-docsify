@@ -52,3 +52,4 @@ Defines the constructor of Line component.
 
 | Name | Description |
 | --- | --- |
+| [LineOptions](arkts-arkui-lineoptions-i.md) | Describes the options of the line. |

@@ -1,6 +1,6 @@
 # HashStream
 
-HashStream类是用于创建数据的哈希摘要的实用工具。由 [createHash](arkts-corefile-hash-createhash-f.md) 接口获得。该类采用增量式哈希计算设计，通过update方法多次添加数据块， 最后通过digest方法计算最终哈希值，适用于处理大文件或持续产生的数据流。
+HashStream类是用于创建数据的哈希摘要的实用工具。由 [createHash](arkts-corefile-hash-createhash-f.md) 接口获得。该类采用增量式哈希计算设计，通过update方法多次添加数据块，最后通过digest方法计算最终哈希值，适用于处理大文件或持续产生的数据流。
 
 **继承/实现关系：** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md)
 
@@ -11,7 +11,7 @@ HashStream类是用于创建数据的哈希摘要的实用工具。由 [createHa
 ## 导入模块
 
 ```TypeScript
-import hash from '@kit.CoreFileKit';
+import { hash } from '@kit.CoreFileKit';
 ```
 
 ## digest

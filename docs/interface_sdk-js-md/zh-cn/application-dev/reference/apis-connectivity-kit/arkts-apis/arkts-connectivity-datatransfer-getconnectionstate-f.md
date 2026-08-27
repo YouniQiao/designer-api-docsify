@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import dataTransfer from '@kit.ConnectivityKit';
+import { dataTransfer } from '@kit.ConnectivityKit';
 ```
 
 ## getConnectionState
@@ -32,7 +32,7 @@ function getConnectionState(params: ConnectionStateParams): ConnectionState
 
 | 类型 | 说明 |
 | --- | --- |
-| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) | 和远端设备的星闪端口通道连接状态。 |
+| ConnectionState | 和远端设备的星闪端口通道连接状态。 |
 
 **错误码：**
 

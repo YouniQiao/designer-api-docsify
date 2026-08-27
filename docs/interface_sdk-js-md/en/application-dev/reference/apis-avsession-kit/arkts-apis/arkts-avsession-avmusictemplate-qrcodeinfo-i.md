@@ -1,6 +1,8 @@
 # QrCodeInfo
 
-The definition of QR code Information.@interface QrCodeInfo
+The definition of QR code Information.
+
+@interface QrCodeInfo
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of QR code Information.@interface QrCodeInfo
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## codeData

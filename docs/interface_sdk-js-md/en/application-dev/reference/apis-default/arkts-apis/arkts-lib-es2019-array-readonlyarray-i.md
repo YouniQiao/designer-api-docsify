@@ -42,7 +42,7 @@ Calls a defined callback function on each element of an array. Then, flattens th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (this: This, value: T, index: number, array: T[]) = & gt; U \ | ReadonlyArray & lt;U & gt; | Yes |  |
+| callback | (this: This, value: T, index: number, array: T[]) =&gt; U \| ReadonlyArray&lt;U&gt; | Yes |  |
 | thisArg | This | No |  |
 
 **Return value:**

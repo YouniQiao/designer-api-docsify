@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import mindSporeLite from '@kit.MindSporeLiteKit';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## loadTrainModelFromBuffer
@@ -29,7 +29,7 @@ Load train model from buffer
 | --- | --- | --- | --- |
 | model | ArrayBuffer | Yes | model buffer |
 | trainCfg | [TrainCfg](arkts-mindsporelite-mindsporelite-traincfg-i.md) | No | model train configuration |
-| context | [Context](arkts-mindsporelite-mindsporelite-context-i.md) | No | model build context |
+| context | Context | No | model build context |
 
 **Return value:**
 

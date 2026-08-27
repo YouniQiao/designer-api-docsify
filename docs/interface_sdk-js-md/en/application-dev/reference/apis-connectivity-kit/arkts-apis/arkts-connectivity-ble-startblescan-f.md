@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## startBLEScan
@@ -30,8 +30,8 @@ Starts scanning for specified BLE devices with filters. On API 10 and above, the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filters | Array & lt;ScanFilter & gt; | Yes | Indicates the list of filters used to filter out specified devices. If you do not want to use filter, set this parameter to {@code null}. |
-| options | [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md) | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-bluetoothmanager-scanoptions-i.md#interval) set to 0, [dutyMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#dutymode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-bluetoothmanager-scanduty-e.md#scan_mode_low_power) and [matchMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#matchmode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-bluetoothmanager-matchmode-e.md#match_mode_aggressive). |
+| filters | Array&lt;ScanFilter&gt; | Yes | Indicates the list of filters used to filter out specified devices. If you do not want to use filter, set this parameter to {@code null}. |
+| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-bluetoothmanager-scanoptions-i.md#interval) set to 0, [dutyMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#dutymode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-bluetoothmanager-scanduty-e.md#scan_mode_low_power) and [matchMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#matchmode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-bluetoothmanager-matchmode-e.md#match_mode_aggressive). |
 
 **Error codes:**
 

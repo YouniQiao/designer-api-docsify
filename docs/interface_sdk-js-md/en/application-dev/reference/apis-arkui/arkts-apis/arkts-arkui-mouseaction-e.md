@@ -54,7 +54,9 @@ The mouse cursor moves.
 Hover
 ```
 
-The mouse pointer is hovered on an element.Note: This value has no effect.
+The mouse pointer is hovered on an element.
+
+Note: This value has no effect.
 
 **Since:** 8
 
@@ -101,6 +103,7 @@ CANCEL = 13
 ```
 
 The mouse button action is canceled. It is triggered in the following scenarios:
+
 1. Component focus loss: This action is triggered when a currently focused component loses focus due to a system
 event (such as pop-up interruption or app switching).
 2. Event interruption: During a mouse operation, if a higher-priority event occurs (such as a system-level gesture

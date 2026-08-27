@@ -31,7 +31,7 @@ Triggered when the RichText loading ends.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | Yes |  |
+| callback | () =&gt; void | Yes |  |
 
 ## onStart
 
@@ -51,4 +51,4 @@ Triggered when the RichText loading starts.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | Yes |  |
+| callback | () =&gt; void | Yes |  |

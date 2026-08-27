@@ -27,7 +27,7 @@ Dumps the list of leaked objects and VM memory snapshot.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Export result. The file name extension is **.jsleaklist** for the list of leaked objects and **.heapsnapshot** for the VM memory snapshot. |
+| Array&lt;string&gt; | Export result. The file name extension is **.jsleaklist** for the list of leaked objects and **.heapsnapshot** for the VM memory snapshot. |
 
 **Examples**
 

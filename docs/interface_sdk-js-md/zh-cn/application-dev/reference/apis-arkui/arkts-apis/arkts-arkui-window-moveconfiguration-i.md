@@ -9,9 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## displayId
@@ -20,7 +18,7 @@ import window from '@kit.ArkUI';
 displayId?: number
 ```
 
-目标屏幕ID，该参数应为整数，输入非整数时将向下取整。默认值为undefined。填入该参数时，将移动到相对于目标屏幕左上角的指定位置。此参数不传、传undefined或传入目标屏幕ID不存在时，将移动到相对于当前屏幕左上角的 指定位置。
+目标屏幕ID，该参数应为整数，输入非整数时将向下取整。默认值为undefined。填入该参数时，将移动到相对于目标屏幕左上角的指定位置。此参数不传、传undefined或传入目标屏幕ID不存在时，将移动到相对于当前屏幕左上角的指定位置。
 
 **类型：** number
 

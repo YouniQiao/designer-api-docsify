@@ -1,7 +1,8 @@
 # @ohos.enterprise.locationManager(位置服务管理)
 
-本模块提供设备位置服务策略管理的能力，包括设置和查询位置服务开关策略等。  
-**使用场景**： 适用于企业设备管理场景，管理员可通过此模块统一管控设备位置服务策略。
+本模块提供设备位置服务策略管理的能力，包括设置和查询位置服务开关策略等。
+
+**使用场景**：适用于企业设备管理场景，管理员可通过此模块统一管控设备位置服务策略。
 
 > **说明：**
 > 
@@ -16,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import locationManager from '@kit.MDMKit';
+import { locationManager } from '@kit.MDMKit';
 ```
 
 ## 汇总
@@ -25,12 +26,12 @@ import locationManager from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getLocationPolicy(位置服务管理)](arkts-mdm-locationmanager-getlocationpolicy-f.md) | 查询位置服务管理策略。可在企业设备管理应用中检查当前设备的位置服务策略状态，用于策略合规性验证或策略调整前的状态确认。适用于确认当前策略配置、设备管理应用启动时读取策略状态、排查位置服务问题时检查策略等场景。 |
-| [getLocationPolicy(位置服务管理)](arkts-mdm-locationmanager-getlocationpolicy-f.md) | 查询位置服务管理策略。可在企业设备管理应用中检查当前设备的位置服务策略状态，用于策略合规性验证或策略调整前的状态确认。适用于确认当前策略配置、设备管理应用启动时读取策略状态、排查位置服务问题时检查策略等场景。 |
-| [setLocationPolicy(位置服务管理)](arkts-mdm-locationmanager-setlocationpolicy-f.md) | 设置位置服务管理策略。可用于企业管控场景，如：在涉密区域禁用位置服务以保护信息安全，或在物流配送应用中强制开启位置服务以追踪设备位置。 |
+| [getLocationPolicy](arkts-mdm-locationmanager-getlocationpolicy-f.md) | 查询位置服务管理策略。可在企业设备管理应用中检查当前设备的位置服务策略状态，用于策略合规性验证或策略调整前的状态确认。适用于确认当前策略配置、设备管理应用启动时读取策略状态、排查位置服务问题时检查策略等场景。 |
+| [getLocationPolicy](arkts-mdm-locationmanager-getlocationpolicy-f.md) | 查询位置服务管理策略。可在企业设备管理应用中检查当前设备的位置服务策略状态，用于策略合规性验证或策略调整前的状态确认。适用于确认当前策略配置、设备管理应用启动时读取策略状态、排查位置服务问题时检查策略等场景。 |
+| [setLocationPolicy](arkts-mdm-locationmanager-setlocationpolicy-f.md) | 设置位置服务管理策略。可用于企业管控场景，如：在涉密区域禁用位置服务以保护信息安全，或在物流配送应用中强制开启位置服务以追踪设备位置。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [LocationPolicy(位置服务管理)](arkts-mdm-locationmanager-locationpolicy-e.md) | 位置服务策略值。 |
+| [LocationPolicy](arkts-mdm-locationmanager-locationpolicy-e.md) | 位置服务策略值。 |

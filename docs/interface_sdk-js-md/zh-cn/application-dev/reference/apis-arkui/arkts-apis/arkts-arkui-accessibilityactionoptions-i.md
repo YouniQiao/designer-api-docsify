@@ -1,6 +1,8 @@
 # AccessibilityActionOptions
 
-包含无障碍操作的参数的结构体。@interface AccessibilityActionOptions
+包含无障碍操作的参数的结构体。
+
+@interface AccessibilityActionOptions
 
 **起始版本：** 23
 

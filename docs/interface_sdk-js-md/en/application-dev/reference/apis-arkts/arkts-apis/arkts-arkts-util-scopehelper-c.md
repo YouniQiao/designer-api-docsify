@@ -9,8 +9,6 @@ Provides APIs to define the valid range of a field. The constructor of this clas
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## clamp

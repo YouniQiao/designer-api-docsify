@@ -26,7 +26,7 @@ Create ColorMetrics class using HDR color with default exposure. Create an HDR c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
+| colorSpace | ColorSpace | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
 | red | number | Yes | Red component value. Valid range: [0, +∞). Values greater than 1.0 enable HDR brightness. |
 | green | number | Yes | Green component value. Valid range: [0, +∞). Values greater than 1.0 enable HDR brightness. |
 | blue | number | Yes | Blue component value. Valid range: [0, +∞). Values greater than 1.0 enable HDR brightness. |
@@ -60,7 +60,7 @@ Create ColorMetrics class using HDR color with linear exposure. Create an HDR co
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | linearExposure | number | Yes | Linear exposure value in exposure value. Valid range: [1, +∞). A value of 1.0 represents standard exposure. Values greater than 1.0 increase brightness linearly. |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
+| colorSpace | ColorSpace | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
 | red | number | Yes | Red component value. Valid range: [0, 1]. |
 | green | number | Yes | Green component value. Valid range: [0, 1]. |
 | blue | number | Yes | Blue component value. Valid range: [0, 1]. |
@@ -94,7 +94,7 @@ Create ColorMetrics class using HDR color with linear exposure. Create an HDR co
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | exposure | number | Yes | Logarithmic exposure value in stops. Valid range: [0, +∞). A value of 0.0 represents standard exposure. Each increment of 1.0 doubles the brightness (one stop). |
-| colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
+| colorSpace | ColorSpace | Yes | Color space of color. Supports SRGB, DISPLAY_P3, and BT2020 color spaces. |
 | red | number | Yes | Red component value. Valid range: [0, 1]. |
 | green | number | Yes | Green component value. Valid range: [0, 1]. |
 | blue | number | Yes | Blue component value. Valid range: [0, 1]. |
@@ -126,7 +126,7 @@ Get blue value. Returns blue channel value as a floating-point number. For SDR c
 
 | Type | Description |
 | --- | --- |
-| number | The blue value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values & gt; 1.0 indicate HDR brightness. |
+| number | The blue value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values &gt; 1.0 indicate HDR brightness. |
 
 ## getColorSpace
 
@@ -148,7 +148,7 @@ Get color space of the ColorMetrics. Returns the color space used when creating 
 
 | Type | Description |
 | --- | --- |
-| [ColorSpace](arkts-arkui-window-colorspace-e.md) | The color space of the ColorMetrics. Possible value: ColorSpace.SRGB, ColorSpace.DISPLAY_P3, ColorSpace.BT2020. |
+| ColorSpace | The color space of the ColorMetrics. Possible value: ColorSpace.SRGB, ColorSpace.DISPLAY_P3, ColorSpace.BT2020. |
 
 ## getGreenValue
 
@@ -170,7 +170,7 @@ Get green value. Returns green channel value as a floating-point number. For SDR
 
 | Type | Description |
 | --- | --- |
-| number | The green value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values & gt; 1.0 indicate HDR brightness. |
+| number | The green value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values &gt; 1.0 indicate HDR brightness. |
 
 ## getRedValue
 
@@ -192,7 +192,7 @@ Get red value. Returns red channel value as a floating-point number. For SDR col
 
 | Type | Description |
 | --- | --- |
-| number | The red value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values & gt; 1.0 indicate HDR brightness. |
+| number | The red value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values &gt; 1.0 indicate HDR brightness. |
 
 ## isHDR
 

@@ -9,7 +9,7 @@ Defines parameters related to drag-and-drop animation effects.
 ## Modules to Import
 
 ```TypeScript
-import dragController from '@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## curve
@@ -18,7 +18,9 @@ import dragController from '@kit.ArkUI';
 curve?: Curve | ICurve
 ```
 
-Animation curve.Default value: **Curve.EaseInOut**
+Animation curve.
+
+Default value: **Curve.EaseInOut**
 
 **Type:** Curve \| ICurve
 
@@ -36,10 +38,14 @@ Animation curve.Default value: **Curve.EaseInOut**
 duration?: number
 ```
 
-Animation duration, in ms.Default value: **1000**  
+Animation duration, in ms.
+
+Default value: **1000**
+
 **NOTE：**
-- If this parameter is set to a value less than 0, the value **0** is used.
-- Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be
+
+- If this parameter is set to a value less than 0, the value **0** is used.  
+- Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be  
 used.
 
 **Type:** number

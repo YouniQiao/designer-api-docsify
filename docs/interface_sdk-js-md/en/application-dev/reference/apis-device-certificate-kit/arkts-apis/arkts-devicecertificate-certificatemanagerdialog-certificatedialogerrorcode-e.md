@@ -82,7 +82,9 @@ The device security policy is not met when the API is called. For example, the d
 ERROR_PARAMETER_VALIDATION_FAILED = 29700006
 ```
 
-The input parameter verification fails.For example, the parameter format is incorrect or the parameter range is invalid.
+The input parameter verification fails.
+
+For example, the parameter format is incorrect or the parameter range is invalid.
 
 **Since:** 22
 

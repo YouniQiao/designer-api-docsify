@@ -9,7 +9,7 @@ VisualEffect class, used to apply background color blending, border lighting, co
 ## Modules to Import
 
 ```TypeScript
-import uiEffect from '@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## backgroundColorBlender
@@ -38,7 +38,7 @@ A blender for changing the background color of the component. Currently, only th
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the background color change effect attached. |
+| VisualEffect | Returns the VisualEffect with the background color change effect attached. |
 
 **Examples**
 
@@ -80,7 +80,7 @@ Adds a 3D lighting effect to the border of a rounded rectangle component.
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the border lighting effect attached. |
+| VisualEffect | Returns the VisualEffect with the border lighting effect attached. |
 
 **Error codes:**
 
@@ -150,16 +150,16 @@ Adds a color gradient effect to the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colors | Array & lt;Color & gt; | Yes | The color array for multi-color gradient. The array length range is [0, 12], and each color value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
-| positions | Array & lt;common2D.Point & gt; | Yes | The position array, corresponding to the positions of colors. The array length range is [0, 12]. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
-| strengths | Array & lt;number & gt; | Yes | The strength array, corresponding to the intensity of colors. The array length range is [0, 12], and each strength value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
+| colors | Array&lt;Color&gt; | Yes | The color array for multi-color gradient. The array length range is [0, 12], and each color value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
+| positions | Array&lt;common2D.Point&gt; | Yes | The position array, corresponding to the positions of colors. The array length range is [0, 12]. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
+| strengths | Array&lt;number&gt; | Yes | The strength array, corresponding to the intensity of colors. The array length range is [0, 12], and each strength value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, there will be no color gradient effect. |
 | alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | The alpha mask corresponding to the colors. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to control the transparency distribution of the color gradient effect (such as local transparency or dynamic transparency effects). If not set, the transparency of the color gradient effect is entirely determined by the colors parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the color gradient effect attached. |
+| VisualEffect | Returns the VisualEffect with the color gradient effect attached. |
 
 **Error codes:**
 
@@ -212,7 +212,9 @@ struct ColorGradientExample {
 distortionCollapse(distortionParam: DistortionParam): VisualEffect
 ```
 
-Adds a nonlinear deformation effect to the component. Typical application scenarios include page collapse animations, window close effects, card flip animations, scene transition effects, etc.NOTE
+Adds a nonlinear deformation effect to the component. Typical application scenarios include page collapse animations, window close effects, card flip animations, scene transition effects, etc.
+
+NOTE
 1. This visual effect supports drawing outside the bounds of the control,
 but it is still subject to the clipping (Clip) of the parent control.
 2. Because it contains a foreground Filter, some visual effects of the component itself and its child components
@@ -242,7 +244,7 @@ capture, such as systemMaterial, backgroundEffect, brightness, and blur, will no
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the nonlinear deformation effect attached. |
+| VisualEffect | Returns the VisualEffect with the nonlinear deformation effect attached. |
 
 **Examples**
 
@@ -300,7 +302,7 @@ Adds a material effect to the component. The material effect simulates the optic
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the material effect attached. |
+| VisualEffect | Returns the VisualEffect with the material effect attached. |
 
 **Error codes:**
 

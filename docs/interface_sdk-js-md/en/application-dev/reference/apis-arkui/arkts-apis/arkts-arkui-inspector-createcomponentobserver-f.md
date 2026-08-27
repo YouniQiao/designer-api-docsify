@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import inspector from '@kit.ArkUI';
+import { inspector } from '@kit.ArkUI';
 ```
 
 ## createComponentObserver

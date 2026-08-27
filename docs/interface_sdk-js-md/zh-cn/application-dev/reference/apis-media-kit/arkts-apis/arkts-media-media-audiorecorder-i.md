@@ -4,7 +4,8 @@
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorder](arkts-media-media-avrecorder-i.md)替代。
-音频录制管理类，用于录制音频媒体。在调用AudioRecorder的方法前，需要先通过 [createAudioRecorder()](arkts-media-media-createaudiorecorder-f.md) 构建一个AudioRecorder实例。
+
+音频录制管理类，用于录制音频媒体。在调用AudioRecorder的方法前，需要先通过[createAudioRecorder()](arkts-media-media-createaudiorecorder-f.md) 构建一个AudioRecorder实例。
 
 **起始版本：** 6
 
@@ -17,7 +18,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
@@ -47,7 +48,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset'。  - 'prepare' ：完成prepare调用，音频录制参数设置完成，触发该事件。  - 'start' ：完成start调用，音频录制开始，触发该事件。  - 'pause' ：完成pause调用，音频暂停录制，触发该事件。  - 'resume' ：完成resume调用，音频恢复录制，触发该事件。  - 'stop' ：完成stop调用，音频停止录制，触发该事件。  - 'release' ：完成release调用，音频释放录制资源，触发该事件。  - 'reset' ：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () = & gt; void | 是 | 录制事件回调方法。 |
+| callback | () =&gt; void | 是 | 录制事件回调方法。 |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -76,7 +77,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset'。  - 'prepare' ：完成prepare调用，音频录制参数设置完成，触发该事件。  - 'start' ：完成start调用，音频录制开始，触发该事件。  - 'pause' ：完成pause调用，音频暂停录制，触发该事件。  - 'resume' ：完成resume调用，音频恢复录制，触发该事件。  - 'stop' ：完成stop调用，音频停止录制，触发该事件。  - 'release' ：完成release调用，音频释放录制资源，触发该事件。  - 'reset' ：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () = & gt; void | 是 | 录制事件回调方法。 |
+| callback | () =&gt; void | 是 | 录制事件回调方法。 |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -105,7 +106,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset'。  - 'prepare' ：完成prepare调用，音频录制参数设置完成，触发该事件。  - 'start' ：完成start调用，音频录制开始，触发该事件。  - 'pause' ：完成pause调用，音频暂停录制，触发该事件。  - 'resume' ：完成resume调用，音频恢复录制，触发该事件。  - 'stop' ：完成stop调用，音频停止录制，触发该事件。  - 'release' ：完成release调用，音频释放录制资源，触发该事件。  - 'reset' ：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () = & gt; void | 是 | 录制事件回调方法。 |
+| callback | () =&gt; void | 是 | 录制事件回调方法。 |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -134,7 +135,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset'。  - 'prepare' ：完成prepare调用，音频录制参数设置完成，触发该事件。  - 'start' ：完成start调用，音频录制开始，触发该事件。  - 'pause' ：完成pause调用，音频暂停录制，触发该事件。  - 'resume' ：完成resume调用，音频恢复录制，触发该事件。  - 'stop' ：完成stop调用，音频停止录制，触发该事件。  - 'release' ：完成release调用，音频释放录制资源，触发该事件。  - 'reset' ：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () = & gt; void | 是 | 录制事件回调方法。 |
+| callback | () =&gt; void | 是 | 录制事件回调方法。 |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -163,7 +164,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset'。  - 'prepare' ：完成prepare调用，音频录制参数设置完成，触发该事件。  - 'start' ：完成start调用，音频录制开始，触发该事件。  - 'pause' ：完成pause调用，音频暂停录制，触发该事件。  - 'resume' ：完成resume调用，音频恢复录制，触发该事件。  - 'stop' ：完成stop调用，音频停止录制，触发该事件。  - 'release' ：完成release调用，音频释放录制资源，触发该事件。  - 'reset' ：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () = & gt; void | 是 | 录制事件回调方法。 |
+| callback | () =&gt; void | 是 | 录制事件回调方法。 |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -192,7 +193,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset'。  - 'prepare' ：完成prepare调用，音频录制参数设置完成，触发该事件。  - 'start' ：完成start调用，音频录制开始，触发该事件。  - 'pause' ：完成pause调用，音频暂停录制，触发该事件。  - 'resume' ：完成resume调用，音频恢复录制，触发该事件。  - 'stop' ：完成stop调用，音频停止录制，触发该事件。  - 'release' ：完成release调用，音频释放录制资源，触发该事件。  - 'reset' ：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () = & gt; void | 是 | 录制事件回调方法。 |
+| callback | () =&gt; void | 是 | 录制事件回调方法。 |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -221,7 +222,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | 是 | 录制事件回调类型，支持的事件包括：'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset'。  - 'prepare' ：完成prepare调用，音频录制参数设置完成，触发该事件。  - 'start' ：完成start调用，音频录制开始，触发该事件。  - 'pause' ：完成pause调用，音频暂停录制，触发该事件。  - 'resume' ：完成resume调用，音频恢复录制，触发该事件。  - 'stop' ：完成stop调用，音频停止录制，触发该事件。  - 'release' ：完成release调用，音频释放录制资源，触发该事件。  - 'reset' ：完成reset调用，音频重置为初始状态，触发该事件。 |
-| callback | () = & gt; void | 是 | 录制事件回调方法。 |
+| callback | () =&gt; void | 是 | 录制事件回调方法。 |
 
 ## on('error')
 
@@ -385,7 +386,9 @@ audioRecorder = undefined;
 reset(): void
 ```
 
-重置录音。进行重置录音之前，需要先调用stop()停止录音。重置录音之后，需要调用prepare()设置录音参数项，才能再次进行录音。
+重置录音。
+
+进行重置录音之前，需要先调用stop()停止录音。重置录音之后，需要调用prepare()设置录音参数项，才能再次进行录音。
 
 > **说明：**
 > 

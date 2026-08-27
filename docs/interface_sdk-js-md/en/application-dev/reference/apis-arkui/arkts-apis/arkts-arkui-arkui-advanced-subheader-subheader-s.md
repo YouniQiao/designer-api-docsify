@@ -21,7 +21,6 @@ The **SubHeader** component is positioned at the top of list items or content se
 
 ```TypeScript
 import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from '@kit.ArkUI';
-import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, SubHeaderV2OperationType, SubHeaderV2OperationItem, SubHeaderV2OperationItemType } from '@kit.ArkUIV2';
 ```
 
 ## titleBuilder
@@ -30,7 +29,9 @@ import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, 
 titleBuilder?: () => void
 ```
 
-Content of the custom title area.Default value: **undefined**, indicating that no custom title is used.
+Content of the custom title area.
+
+Default value: **undefined**, indicating that no custom title is used.
 
 **Since:** 12
 
@@ -46,7 +47,17 @@ Content of the custom title area.Default value: **undefined**, indicating that n
 contentMargin?: LocalizedMargin
 ```
 
-Margin of the content. Negative numbers are not supported.Default value:`{start: LengthMetrics.resource(``\$r('sys.float.margin_left'))`,`end: LengthMetrics.resource(``\$r('sys.float.margin_right'))}`
+Margin of the content. Negative numbers are not supported.
+
+Default value:
+
+`{start: LengthMetrics.resource(`
+
+`\$r('sys.float.margin_left'))`,
+
+`end: LengthMetrics.resource(`
+
+`\$r('sys.float.margin_right'))}`
 
 **Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
@@ -67,7 +78,13 @@ Margin of the content. Negative numbers are not supported.Default value:`{start:
 contentPadding?: LocalizedPadding
 ```
 
-Padding of the content.Default value:If a secondary title, with or without an icon, is displayed on the left:{start: LengthMetrics.vp(12), end: LengthMetrics.vp(12)}
+Padding of the content.
+
+Default value:
+
+If a secondary title, with or without an icon, is displayed on the left:
+
+{start: LengthMetrics.vp(12), end: LengthMetrics.vp(12)}
 
 **Type:** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
@@ -89,7 +106,11 @@ Padding of the content.Default value:If a secondary title, with or without an ic
 icon?: ResourceStr
 ```
 
-Icon.Default value: **undefined**, indicating that no icon is displayed.The **icon** attribute takes effect only when the **secondaryTitle** attribute is used.
+Icon.
+
+Default value: **undefined**, indicating that no icon is displayed.
+
+The **icon** attribute takes effect only when the **secondaryTitle** attribute is used.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -107,7 +128,9 @@ Icon.Default value: **undefined**, indicating that no icon is displayed.The **ic
 iconSymbolOptions?: SymbolOptions
 ```
 
-Icon symbol options. This parameter is available when **icon** is set to a symbol glyph.Default value: **undefined**, indicating that no icon is displayed.
+Icon symbol options. This parameter is available when **icon** is set to a symbol glyph.
+
+Default value: **undefined**, indicating that no icon is displayed.
 
 **Type:** [SymbolOptions](arkts-arkui-arkui-advanced-subheader-symboloptions-c.md)
 
@@ -125,7 +148,9 @@ Icon symbol options. This parameter is available when **icon** is set to a symbo
 operationItem?: Array<OperationOption>
 ```
 
-Items in the operation area (right).Default value: **undefined**, indicating that the operation area is not displayed.
+Items in the operation area (right).
+
+Default value: **undefined**, indicating that the operation area is not displayed.
 
 **Type:** Array&lt;[OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)&gt;
 
@@ -143,7 +168,11 @@ Items in the operation area (right).Default value: **undefined**, indicating tha
 operationSymbolOptions?: Array<SymbolOptions>
 ```
 
-Icon symbol options.This parameter is available when **operationType** is set to **OperationType.ICON_GROUP** and **operationItem** is set to an array of symbol glyphs.Default value: **undefined**, indicating that no symbol icon is set.
+Icon symbol options.
+
+This parameter is available when **operationType** is set to **OperationType.ICON_GROUP** and **operationItem** is set to an array of symbol glyphs.
+
+Default value: **undefined**, indicating that no symbol icon is set.
 
 **Type:** Array&lt;[SymbolOptions](arkts-arkui-arkui-advanced-subheader-symboloptions-c.md)&gt;
 
@@ -161,7 +190,9 @@ Icon symbol options.This parameter is available when **operationType** is set to
 operationType?: OperationType
 ```
 
-Style of elements in the operation area (right).Default value: **OperationType.BUTTON**
+Style of elements in the operation area (right).
+
+Default value: **OperationType.BUTTON**
 
 **Type:** [OperationType](arkts-arkui-arkui-advanced-subheader-operationtype-e.md)
 
@@ -179,7 +210,11 @@ Style of elements in the operation area (right).Default value: **OperationType.B
 primaryTitle?: ResourceStr
 ```
 
-Primary title.Default value: **undefined**, indicating that no primary title is displayed.When the **primaryTitle**, **secondaryTitle**, and **icon** attributes are used simultaneously, the **primaryTitle** attribute will not take effect.
+Primary title.
+
+Default value: **undefined**, indicating that no primary title is displayed.
+
+When the **primaryTitle**, **secondaryTitle**, and **icon** attributes are used simultaneously, the **primaryTitle** attribute will not take effect.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -197,7 +232,9 @@ Primary title.Default value: **undefined**, indicating that no primary title is 
 primaryTitleModifier?: TextModifier
 ```
 
-Text attributes of the primary title, such as the font color, font size, and font weight.Default value: **undefined**, indicating that the default style is used.
+Text attributes of the primary title, such as the font color, font size, and font weight.
+
+Default value: **undefined**, indicating that the default style is used.
 
 **Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 
@@ -215,7 +252,9 @@ Text attributes of the primary title, such as the font color, font size, and fon
 secondaryTitle?: ResourceStr
 ```
 
-Secondary title.Default value: **undefined**, indicating that no secondary title is displayed.
+Secondary title.
+
+Default value: **undefined**, indicating that no secondary title is displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -233,7 +272,9 @@ Secondary title.Default value: **undefined**, indicating that no secondary title
 secondaryTitleModifier?: TextModifier
 ```
 
-Text attributes of the secondary title, such as the font color, font size, and font weight.Default value: **undefined**, indicating that the default style is used.
+Text attributes of the secondary title, such as the font color, font size, and font weight.
+
+Default value: **undefined**, indicating that the default style is used.
 
 **Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 
@@ -251,7 +292,9 @@ Text attributes of the secondary title, such as the font color, font size, and f
 select?: SelectOptions
 ```
 
-Content and events for selection.Default value: **undefined**, indicating that no drop-down list is displayed.
+Content and events for selection.
+
+Default value: **undefined**, indicating that no drop-down list is displayed.
 
 **Type:** [SelectOptions](arkts-arkui-arkui-advanced-subheader-selectoptions-c.md)
 
@@ -269,7 +312,11 @@ Content and events for selection.Default value: **undefined**, indicating that n
 titleAccessibilityText?: ResourceStr
 ```
 
-Customized content to be read in the title.Default value: **undefined**.If the value is **undefined**, the title content displayed by the component is read by default.
+Customized content to be read in the title.
+
+Default value: **undefined**.
+
+If the value is **undefined**, the title content displayed by the component is read by default.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

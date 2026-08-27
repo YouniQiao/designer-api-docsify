@@ -1,6 +1,8 @@
 # StepperModifier
 
-Defines Stepper Modifier@extends StepperAttribute @implements AttributeModifier&lt;StepperAttribute&gt;
+Defines Stepper Modifier
+
+@extends StepperAttribute @implements AttributeModifier&lt;StepperAttribute&gt;
 
 **Inheritance/Implementation:** StepperModifier extends [StepperAttribute](../arkts-components/arkts-arkui-stepper-attribute.md#stepperattribute) and implements AttributeModifier<StepperAttribute>
 

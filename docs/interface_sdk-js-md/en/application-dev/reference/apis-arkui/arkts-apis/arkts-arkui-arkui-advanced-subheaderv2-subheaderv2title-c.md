@@ -130,7 +130,13 @@ Text modifier for secondary title.
 titleAccessibilityText?: ResourceStr
 ```
 
-Customized content to be read in the title.Default value: **undefined**If the value is **undefined**, the title content displayed by the component is read by default.Decorator: @Trace
+Customized content to be read in the title.
+
+Default value: **undefined**
+
+If the value is **undefined**, the title content displayed by the component is read by default.
+
+Decorator: @Trace
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

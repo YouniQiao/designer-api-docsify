@@ -13,4 +13,4 @@ The module defines the ability information. An application can obtain its own ab
 | 名称 | 说明 |
 | --- | --- |
 | [AbilityInfo](arkts-ability-abilityinfo-i.md) | Ability信息。 |
-| [WindowSize](arkts-ability-abilityinfo-windowsize-i.md) | 描述窗口尺寸。  **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。 |
+| [WindowSize](arkts-ability-abilityinfo-windowsize-i.md) | 描述窗口尺寸。 |

@@ -11,7 +11,8 @@
 function isCellularDataRoamingEnabled(slotId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether roaming is enabled for the cellular data service. This API uses an asynchronous callback to return the result.  
+Checks whether roaming is enabled for the cellular data service. This API uses an asynchronous callback to return the result.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 7
@@ -60,7 +61,8 @@ data.isCellularDataRoamingEnabled(0, (err: BusinessError, contextData: boolean) 
 function isCellularDataRoamingEnabled(slotId: number): Promise<boolean>
 ```
 
-Checks whether roaming is enabled for the cellular data service. This API uses a promise to return the result.  
+Checks whether roaming is enabled for the cellular data service. This API uses a promise to return the result.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 7
@@ -79,7 +81,7 @@ Checks whether roaming is enabled for the cellular data service. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 
 **Error codes:**
 

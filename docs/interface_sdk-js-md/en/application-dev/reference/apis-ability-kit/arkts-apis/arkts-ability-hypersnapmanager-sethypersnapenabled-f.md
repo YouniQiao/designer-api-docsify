@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import hyperSnapManager from '@kit.AbilityKit';
+import { hyperSnapManager } from '@kit.AbilityKit';
 ```
 
 ## setHyperSnapEnabled
@@ -12,7 +12,10 @@ import hyperSnapManager from '@kit.AbilityKit';
 function setHyperSnapEnabled(enableFlag : boolean): void
 ```
 
-Enables or disables the Hyper Snap performance optimization for the application.When enabled, the system will create a snapshot of the application process at an appropriate time. Subsequent launched resume directly from this snapshot, bypassing the full cold start sequence, resulting in significantly improved application launch performance.  
+Enables or disables the Hyper Snap performance optimization for the application.
+
+When enabled, the system will create a snapshot of the application process at an appropriate time. Subsequent launched resume directly from this snapshot, bypassing the full cold start sequence, resulting in significantly improved application launch performance.
+
 **Notes:**  
 - The system ultimately determines whether to create or use snapshots based on  
 application compatibility, resource availability, and system policies. Enabling this feature only indicates the application's readiness for optimization.  

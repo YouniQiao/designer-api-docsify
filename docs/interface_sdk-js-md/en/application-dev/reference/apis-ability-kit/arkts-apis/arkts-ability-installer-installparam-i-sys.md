@@ -11,7 +11,7 @@ Defines the parameters that need to be specified for bundle installation, uninst
 ## Modules to Import
 
 ```TypeScript
-import installer from '@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## additionalInfo
@@ -100,7 +100,8 @@ Whether to retain the data directory during bundle uninstall. The default value 
 parameters?: Array<Parameters>
 ```
 
-Extended parameters, represented as an array of the Parameters type. The default value is empty. The options of **Parameters.key** are as follows:  
+Extended parameters, represented as an array of the Parameters type. The default value is empty. The options of **Parameters.key** are as follows:
+
 - **ohos.bms.param.renameInstall**: If the value is **true**, the installation package is moved from the  
 application sandbox to the installation directory using a shared directory. Otherwise, it is copied from the application sandbox to the installation directory using a regular directory.  
 - **ohos.bms.param.enterpriseForAllUser**: If the value is **true**, the enterprise app is installed for all  
@@ -192,8 +193,11 @@ User ID. The default value is the user ID of the caller. The value must be great
 verifyCodeParams?: Array<VerifyCodeParam>
 ```
 
-Information about the code signature file. The default value is null.  
-**NOTE：**Starting from API version 10, the code signature file of an application is integrated into the installation package, rather than being specified by using this field. This field is deprecated since API version 11.
+Information about the code signature file. The default value is null.
+
+**NOTE：**
+
+Starting from API version 10, the code signature file of an application is integrated into the installation package, rather than being specified by using this field. This field is deprecated since API version 11.
 
 **Type:** Array&lt;[VerifyCodeParam](arkts-ability-installer-verifycodeparam-i-sys.md)&gt;
 

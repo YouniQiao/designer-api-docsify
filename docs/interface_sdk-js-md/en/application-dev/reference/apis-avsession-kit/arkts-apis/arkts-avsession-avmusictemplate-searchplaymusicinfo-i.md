@@ -1,6 +1,8 @@
 # SearchPlayMusicInfo
 
-The definition of SearchPlayMusicInfo.@interface SearchPlayMusicInfo
+The definition of SearchPlayMusicInfo.
+
+@interface SearchPlayMusicInfo
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of SearchPlayMusicInfo.@interface SearchPlayMusicInfo
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## description

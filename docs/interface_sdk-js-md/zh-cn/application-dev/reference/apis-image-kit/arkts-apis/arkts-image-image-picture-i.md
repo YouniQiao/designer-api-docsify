@@ -1,6 +1,8 @@
 # Picture
 
-Picture类，一些包含特殊信息的图片可以解码为Picture（也可以称为多图对象）。多图对象一般包含主图、辅助图和元数据。其中主图包含图像的大部分信息，主要用于显示图像内容；辅助图用于存储与主图相关但不同的数据，展示图像更丰富 的信息；元数据一般用来存储关于图像文件的信息。多图对象类用于读取或写入多图对象。在调用Picture的方法前，需要先通过[image.createPicture](arkts-image-image-createpicture-f.md)创建一个 Picture实例。由于图片占用内存较大，所以当Picture实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+Picture类，一些包含特殊信息的图片可以解码为Picture（也可以称为多图对象）。多图对象一般包含主图、辅助图和元数据。其中主图包含图像的大部分信息，主要用于显示图像内容；辅助图用于存储与主图相关但不同的数据，展示图像更丰富的信息；元数据一般用来存储关于图像文件的信息。多图对象类用于读取或写入多图对象。在调用Picture的方法前，需要先通过[image.createPicture](arkts-image-image-createpicture-f.md)创建一个Picture实例。
+
+由于图片占用内存较大，所以当Picture实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 > **说明：**
 > 
@@ -13,7 +15,7 @@ Picture类，一些包含特殊信息的图片可以解码为Picture（也可以
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## getAuxiliaryPicture
@@ -119,7 +121,7 @@ getHdrComposedPixelmap(): Promise<PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | Promise对象，返回PixelMap。 |
+| Promise&lt;PixelMap&gt; | Promise对象，返回PixelMap。 |
 
 **错误码：**
 
@@ -158,7 +160,9 @@ async function GetHdrComposedPixelmap(pictureObj : image.Picture) {
 getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap | undefined>
 ```
 
-合成HDR图像并返回HDR图像的PixelMap，支持传入合成参数（如PixelMapFormat等）。使用Promise异步回调。调用该接口的Picture对象中必须包含主图、增益图和元数据。
+合成HDR图像并返回HDR图像的PixelMap，支持传入合成参数（如PixelMapFormat等）。使用Promise异步回调。
+
+调用该接口的Picture对象中必须包含主图、增益图和元数据。
 
 **起始版本：** 23
 
@@ -176,7 +180,7 @@ getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PixelMap \ | undefined & gt; | Promise对象，返回PixelMap或undefined。 |
+| Promise&lt;PixelMap \| undefined&gt; | Promise对象，返回PixelMap或undefined。 |
 
 **错误码：**
 
@@ -232,7 +236,7 @@ getMainPixelmap(): PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | 同步返回PixelMap对象。 |
+| PixelMap | 同步返回PixelMap对象。 |
 
 **示例**
 
@@ -280,7 +284,7 @@ getMetadata(metadataType: MetadataType): Promise<Metadata>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Metadata & gt; | Promise对象。返回元数据。 |
+| Promise&lt;Metadata&gt; | Promise对象。返回元数据。 |
 
 **错误码：**
 
@@ -329,7 +333,9 @@ async function GetPictureObjMetadataProperties(pictureObj : image.Picture) {
 hdrComposeToMainPixelmap(): Promise<void>
 ```
 
-将Picture对象的主图和增益图合成为HDR图，合成后原Picture的主图被替换为HDR图，原Picture的增益图被删除。使用Promise异步回调。调用该接口的Picture对象中必须包含主图、增益图。
+将Picture对象的主图和增益图合成为HDR图，合成后原Picture的主图被替换为HDR图，原Picture的增益图被删除。使用Promise异步回调。
+
+调用该接口的Picture对象中必须包含主图、增益图。
 
 **起始版本：** 26.0.0
 
@@ -341,7 +347,7 @@ hdrComposeToMainPixelmap(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -500,7 +506,11 @@ async function marshal() {
 release(): void
 ```
 
-释放picture对象。由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用该方法及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+释放picture对象。
+
+由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用该方法及时释放内存。
+
+释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **起始版本：** 13
 
@@ -611,7 +621,7 @@ setMainPixelmap(pixelmap: PixelMap): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | PixelMap对象。 |
+| pixelmap | PixelMap | 是 | PixelMap对象。 |
 
 **错误码：**
 
@@ -654,13 +664,13 @@ setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 | 元数据类型。 |
-| metadata | [Metadata](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-metadata-t.md) | 是 | 元数据对象。 |
+| metadata | Metadata | 是 | 元数据对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

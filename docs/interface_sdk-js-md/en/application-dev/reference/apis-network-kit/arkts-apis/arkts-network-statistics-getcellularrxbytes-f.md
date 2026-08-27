@@ -75,7 +75,7 @@ Obtains the total downlink traffic (in bytes) of the NIC corresponding to the cu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the total downlink traffic (in bytes) of the specified NIC from the last startup to the time when the API is called. |
+| Promise&lt;number&gt; | Promise used to return the total downlink traffic (in bytes) of the specified NIC from the last startup to the time when the API is called. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import appAccount from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## createAppAccountManager

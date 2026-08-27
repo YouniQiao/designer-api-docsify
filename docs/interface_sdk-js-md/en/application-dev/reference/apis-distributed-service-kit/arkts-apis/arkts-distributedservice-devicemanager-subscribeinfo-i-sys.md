@@ -13,7 +13,7 @@ Defines subscription information.
 ## Modules to Import
 
 ```TypeScript
-import deviceManager from '@kit.DistributedServiceKit';
+import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## capability

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## close
@@ -95,7 +95,7 @@ contains(object: T): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示指定的文件资产在文件检索结果中；返回false表示指定的文件资产不在文件检索结果中。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示指定的文件资产在文件检索结果中；返回false表示指定的文件资产不在文件检索结果中。 |
 
 **示例**
 
@@ -192,7 +192,7 @@ getAllObjects(): Promise<Array<T>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;T & gt; & gt; | Promise对象，返回所有文件资产的数组。 |
+| Promise&lt;Array&lt;T&gt;&gt; | Promise对象，返回所有文件资产的数组。 |
 
 **错误码：**
 
@@ -311,11 +311,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   };
   let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
   fetchResult.getFirstObject((err, photoAsset) => {
-    if (photoAsset !== undefined) {
-      console.info('photoAsset displayName: ', photoAsset.displayName);
-    } else {
-      console.error(`photoAsset failed with err:${err.code}, ${err.message}`);
+    if (err) {
+      console.error(`Failed to getFirstObject. Code: ${err.code}, message: ${err.message}`);
+      return;
     }
+      console.info('photoAsset displayName: ', photoAsset.displayName);
   });
 }
 ```
@@ -338,7 +338,7 @@ getFirstObject(): Promise<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;T & gt; | Promise对象，返回结果集中第一个对象。 |
+| Promise&lt;T&gt; | Promise对象，返回结果集中第一个对象。 |
 
 **错误码：**
 
@@ -393,7 +393,7 @@ getIndex(object: T): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回查询结果。如果对象在文件检索结果中则返回对应的索引，不存在则返回-1。 |
+| Promise&lt;number&gt; | Promise对象，返回查询结果。如果对象在文件检索结果中则返回对应的索引，不存在则返回-1。 |
 
 **示例**
 
@@ -490,7 +490,7 @@ getLastObject(): Promise<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;T & gt; | Promise对象，返回结果集中的最后一个对象。 |
+| Promise&lt;T&gt; | Promise对象，返回结果集中的最后一个对象。 |
 
 **错误码：**
 
@@ -525,7 +525,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getNextObject(callback: AsyncCallback<T>): void
 ```
 
-获取文件检索结果中的下一个文件资产。使用callback异步回调。在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置是否为最后一行。
+获取文件检索结果中的下一个文件资产。使用callback异步回调。
+
+在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置是否为最后一行。
 
 **起始版本：** 10
 
@@ -580,7 +582,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getNextObject(): Promise<T>
 ```
 
-获取文件检索结果中的下一个文件资产。使用Promise异步回调。在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置是否为最后一行。
+获取文件检索结果中的下一个文件资产。使用Promise异步回调。
+
+在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置是否为最后一行。
 
 **起始版本：** 10
 
@@ -592,7 +596,7 @@ getNextObject(): Promise<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;T & gt; | Promise对象，返回结果集中下一个对象。 |
+| Promise&lt;T&gt; | Promise对象，返回结果集中下一个对象。 |
 
 **错误码：**
 
@@ -701,7 +705,7 @@ getObjectByPosition(index: number): Promise<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;T & gt; | Promise对象，返回结果集中指定索引的一个对象。 |
+| Promise&lt;T&gt; | Promise对象，返回结果集中指定索引的一个对象。 |
 
 **错误码：**
 
@@ -760,7 +764,7 @@ getObjectsByIndexSet(indexSet: number[]): Promise<T[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;T[] & gt; | Promise对象，返回指定索引集合所对应的文件资产数组。 |
+| Promise&lt;T[]&gt; | Promise对象，返回指定索引集合所对应的文件资产数组。 |
 
 **错误码：**
 
@@ -810,13 +814,13 @@ getRangeObjects(index: number, offset: number): Promise<T[]>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | number | 是 | 开始获取的文件资产索引，大于等于0，小于文件检索结果中对象数量。 |
-| offset | number | 是 | 要获取的文件资产数量，大于0。 index和offset之和需要小于检索结果中的对象数量，否则抛出23800151错误码。 |
+| offset | number | 是 | 要获取的文件资产数量，大于0。index和offset之和需要小于检索结果中的对象数量，否则抛出23800151错误码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;T[] & gt; | 返回Promise异步回调数组。 |
+| Promise&lt;T[]&gt; | 返回Promise异步回调数组。 |
 
 **错误码：**
 
@@ -843,12 +847,14 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
       fetchColumns: [],
       predicates: predicates
   };
+  // 创建两个独立的FetchResult实例用于并行获取，提高大批量数据检索效率。
   let fetchResult1: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> =
       await phAccessHelper.getAssets(fetchOptions);
   let fetchResult2: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> =
       await phAccessHelper.getAssets(fetchOptions);
   let count: number = fetchResult1.getCount();
   const half: number = Math.ceil(count / 2);
+  // 将结果集分为两批并行获取：前半部分从fetchResult1获取，后半部分从fetchResult2获取。
   let promises: Promise<PhotoAsset[]>[] = [];
   promises[0] = fetchResult1.getRangeObjects(0, half);
   promises[1] = fetchResult2.getRangeObjects(half, count - half);
@@ -903,7 +909,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   console.info('count:' + fetchCount);
   let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getLastObject();
   if (fetchResult.isAfterLast()) {
-    console.info('photoAsset isAfterLast displayName = ', photoAsset.displayName);
+    if (photoAsset) {
+      console.info('photoAsset isAfterLast displayName = ', photoAsset.displayName);
+    }
   } else {
     console.info('photoAsset not isAfterLast.');
   }

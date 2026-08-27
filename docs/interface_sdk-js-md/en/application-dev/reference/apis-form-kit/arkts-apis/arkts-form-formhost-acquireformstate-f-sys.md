@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formHost from '@kit.FormKit';
+import { formHost } from '@kit.FormKit';
 ```
 
 ## acquireFormState
@@ -98,7 +98,7 @@ Obtains the widget state. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;formInfo.FormStateInfo & gt; | Promise used to return the widget state obtained. |
+| Promise&lt;formInfo.FormStateInfo&gt; | Promise used to return the widget state obtained. |
 
 **Error codes:**
 

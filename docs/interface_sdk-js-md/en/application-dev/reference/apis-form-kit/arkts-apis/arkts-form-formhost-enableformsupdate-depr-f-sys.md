@@ -29,7 +29,7 @@ Instructs the widget framework to make a widget updatable. After this API is cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes | List of widget IDs. |
+| formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If a notification is sent to the widget framework to make the widget updatable, **error** is undefined; otherwise, **error** is an error object. |
 
 **Examples**
@@ -70,13 +70,13 @@ Instructs the widget framework to make a widget updatable. After this API is cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes | List of widget IDs. |
+| formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

@@ -9,7 +9,7 @@ ConvertXML representation refers to extensible markup language.
 ## Modules to Import
 
 ```TypeScript
-import convertxml from '@kit.ArkTS';
+import { convertxml } from '@kit.ArkTS';
 ```
 
 ## convert
@@ -94,7 +94,7 @@ Converts an XML text to an object of the object type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xml | string | Yes | If the XML text to convert contains the ampersand ( & ), replace it with the entity reference ** & amp;**. |
+| xml | string | Yes | If the XML text to convert contains the ampersand ( & ), replace it with the entity reference **&amp;**. |
 | options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object, which consists of the default values of the attributes in the object. |
 
 **Return value:**
@@ -170,7 +170,7 @@ Converts an XML text to an object of the object type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xml | string | Yes | XML text to convert. If the XML text contains the ampersand ( & ), replace it with the entity reference ** & amp;**. |
+| xml | string | Yes | XML text to convert. If the XML text contains the ampersand ( & ), replace it with the entity reference **&amp;**. |
 | options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a **ConvertOptions** object, which consists of the default values of the attributes in the object. |
 
 **Return value:**
@@ -239,7 +239,7 @@ Convert XML text to JavaScript objects, this method supports parsing large XML t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| xml | string | Yes | XML text to convert. If the XML text contains the ampersand ( & ), replace it with the entity reference & amp;. |
+| xml | string | Yes | XML text to convert. If the XML text contains the ampersand ( & ), replace it with the entity reference &amp;. |
 | options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No | Options for conversion. The default value is a ConvertOptions object, which consists of the default values of the attributes in the object. |
 
 **Return value:**

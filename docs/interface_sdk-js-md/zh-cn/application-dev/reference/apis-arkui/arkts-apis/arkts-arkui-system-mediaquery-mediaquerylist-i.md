@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import SystemMediaQuery, { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
+import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 ```
 
 ## addListener
@@ -30,7 +30,7 @@ addListener(callback: (event: MediaQueryEvent) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (event: MediaQueryEvent) = & gt; void | 是 | 匹配条件发生变化时触发的回调。 |
+| callback | (event: MediaQueryEvent) =&gt; void | 是 | 匹配条件发生变化时触发的回调。 |
 
 **示例**
 
@@ -52,7 +52,7 @@ mMediaQueryList.addListener(maxWidthMatch);
 onchange?: (matches: boolean) => void
 ```
 
-匹配结果发生变化时的执行函数。matches表示是否匹配媒体查询条件，true满足查询条件，false不满足查询条件。 该参数为只读。
+匹配结果发生变化时的执行函数。matches表示是否匹配媒体查询条件，true满足查询条件，false不满足查询条件。该参数为只读。
 
 **起始版本：** 3
 
@@ -84,7 +84,7 @@ removeListener(callback: (event: MediaQueryEvent) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (event: MediaQueryEvent) = & gt; void | 是 | 匹配条件发生变化时触发的回调。 |
+| callback | (event: MediaQueryEvent) =&gt; void | 是 | 匹配条件发生变化时触发的回调。 |
 
 **示例**
 
@@ -106,7 +106,7 @@ mMediaQueryList.removeListener(maxWidthMatch);
 matches?: boolean
 ```
 
-匹配结果。 true表示满足查询条件，false表示不满足查询条件。 该参数为只读。
+匹配结果。 true表示满足查询条件，false表示不满足查询条件。该参数为只读。
 
 **类型：** boolean
 
@@ -122,7 +122,7 @@ matches?: boolean
 media?: string
 ```
 
-序列化媒体查询条件。 该参数为只读。
+序列化媒体查询条件。该参数为只读。
 
 **类型：** string
 

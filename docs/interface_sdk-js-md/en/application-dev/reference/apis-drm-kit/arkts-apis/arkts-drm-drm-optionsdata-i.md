@@ -9,7 +9,7 @@ Defines optional parameters for a device certificate request.
 ## Modules to Import
 
 ```TypeScript
-import drm from '@kit.DrmKit';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## name

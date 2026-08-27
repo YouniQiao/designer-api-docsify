@@ -9,9 +9,6 @@ Callback details triggered when an SSL error occurs during resource loading by t
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## certChainData
@@ -66,7 +63,9 @@ User operation.
 isFatalError: boolean
 ```
 
-Whether the error is a fatal error. A fatal error prevents the page from loading and rendering properly (for example, certificate verification failure or protocol error), while a non-fatal error affects only the loading of some resources (for example, image loading failure).The value **true** indicates a fatal error, and **false** indicates a non-fatal error.
+Whether the error is a fatal error. A fatal error prevents the page from loading and rendering properly (for example, certificate verification failure or protocol error), while a non-fatal error affects only the loading of some resources (for example, image loading failure).
+
+The value **true** indicates a fatal error, and **false** indicates a non-fatal error.
 
 **Type:** boolean
 
@@ -82,7 +81,9 @@ Whether the error is a fatal error. A fatal error prevents the page from loading
 isMainFrame: boolean
 ```
 
-Whether the resource is a main resource.The value **true** indicates a main resource, and **false** indicates a non-main resource.
+Whether the resource is a main resource.
+
+The value **true** indicates a main resource, and **false** indicates a non-main resource.
 
 **Type:** boolean
 

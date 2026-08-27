@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import restrictions from '@kit.MDMKit';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## isPrinterDisabled
@@ -99,7 +99,7 @@ Queries whether the printing capability of a device is disabled. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the printing capability is disabled; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the printing capability is disabled; the value **false** means the opposite. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import launcherBundleManager from '@kit.AbilityKit';
+import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityInfoSync
@@ -31,7 +31,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 
 | Type | Description |
 | --- | --- |
-| Array & lt;LauncherAbilityInfo & gt; | Array of the [LauncherAbilityInfo]{ |
+| Array&lt;LauncherAbilityInfo&gt; | Array of the [LauncherAbilityInfo]{ |
 
 **Error codes:**
 

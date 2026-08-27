@@ -33,13 +33,13 @@ function deleteVlanIp(ifName: string, vlanId: number, address: LinkAddress): Pro
 | --- | --- | --- | --- |
 | ifName | string | 是 | 网卡名。 |
 | vlanId | number | 是 | vlan标识符，取值范围[0,4094]。 |
-| address | [LinkAddress](arkts-network-vpnextension-linkaddress-t.md) | 是 | 链路信息。 |
+| address | LinkAddress | 是 | 链路信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

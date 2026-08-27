@@ -1,6 +1,8 @@
 # ReusableOptions
 
-Defines the options for Reusable ClassDecorator.@interface ReusableOptions
+Defines the options for Reusable ClassDecorator.
+
+@interface ReusableOptions
 
 **Since:** 26.0.0
 

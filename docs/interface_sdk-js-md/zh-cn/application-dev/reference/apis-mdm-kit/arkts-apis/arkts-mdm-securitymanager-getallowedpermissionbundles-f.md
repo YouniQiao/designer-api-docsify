@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import securityManager from '@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## getAllowedPermissionBundles
@@ -26,15 +26,15 @@ function getAllowedPermissionBundles(admin: Want | null, permission: string, acc
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。当admin为null时，表示获取所有企业设备管理 应用下发的权限使用例外应用名单，返回合并后的结果。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。当admin为null时，表示获取所有企业设备管理应用下发的权限使用例外应用名单，返回合并后的结果。 |
 | permission | string | 是 | 权限名称。 |
-| accountId | number | 是 | 用户ID，指定具体用户，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
+| accountId | number | 是 | 用户ID，指定具体用户，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;common.ApplicationInstance & gt; | 返回权限使用例外名单列表。 |
+| Array&lt;common.ApplicationInstance&gt; | 返回权限使用例外名单列表。 |
 
 **错误码：**
 

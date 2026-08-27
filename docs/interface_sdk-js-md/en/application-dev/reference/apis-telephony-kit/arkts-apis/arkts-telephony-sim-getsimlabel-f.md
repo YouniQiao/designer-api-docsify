@@ -11,7 +11,8 @@
 function getSimLabel(slotId: number, callback: AsyncCallback<SimLabel>): void
 ```
 
-Checks the mapping between card slot IDs and SIM cards.  
+Checks the mapping between card slot IDs and SIM cards.
+
 - Slot 1 corresponds to SIM card 1 or SIM card 2.  
 - Slot 2 corresponds to SIM card 2 or eSIMX.
 

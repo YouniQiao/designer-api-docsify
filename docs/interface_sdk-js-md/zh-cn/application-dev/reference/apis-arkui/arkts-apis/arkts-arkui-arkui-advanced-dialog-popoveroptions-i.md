@@ -1,6 +1,8 @@
 # PopoverOptions
 
-跟手弹出框参数，用于设置弹出框内容、位置属性等。继承自[CustomPopupOptions](../arkts-components/arkts-arkui-custompopupoptions-i.md)。
+跟手弹出框参数，用于设置弹出框内容、位置属性等。
+
+继承自[CustomPopupOptions](../arkts-components/arkts-arkui-custompopupoptions-i.md)。
 
 > **说明：**
 > 
@@ -20,5 +22,4 @@
 
 ```TypeScript
 import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
-import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUIV2';
 ```

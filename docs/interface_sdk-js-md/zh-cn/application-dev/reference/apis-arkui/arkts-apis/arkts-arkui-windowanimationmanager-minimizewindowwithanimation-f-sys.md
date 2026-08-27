@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import windowAnimationManager from '@kit.ArkUI';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## minimizeWindowWithAnimation
@@ -25,8 +25,8 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | 是 | 动画目标窗口。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | 是 | 回调函数。当最小化动画目标窗口成功，err为undefined，data为获取到的 WindowAnimationFinishedCallback；否则返回err.code为-1，data为undefined。 |
+| windowTarget | WindowAnimationTarget | 是 | 动画目标窗口。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | 是 | 回调函数。当最小化动画目标窗口成功，err为undefined，data为获取到的WindowAnimationFinishedCallback；否则返回err.code为-1，data为undefined。 |
 
 **示例**
 
@@ -111,7 +111,7 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | 是 | 动画目标窗口。 |
+| windowTarget | WindowAnimationTarget | 是 | 动画目标窗口。 |
 
 **返回值：**
 

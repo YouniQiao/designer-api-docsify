@@ -6,7 +6,9 @@
 const ANIMATOR_DURATION_SCALE: string
 ```
 
-Indicates the scaling factor for the animation duration.<p>This affects the start delay and duration of all such animations. If the value is {@code 0}, the animation ends immediately. The default value is {@code 1}.
+Indicates the scaling factor for the animation duration.
+
+<p>This affects the start delay and duration of all such animations. If the value is {@code 0}, the animation ends immediately. The default value is {@code 1}.
 
 **Since:** 7
 
@@ -20,7 +22,9 @@ Indicates the scaling factor for the animation duration.<p>This affects the star
 const AUTO_SCREEN_BRIGHTNESS: string
 ```
 
-Specifies whether automatic screen brightness adjustment is enabled.<p>If the value is {@code 1}, automatic adjustment is enabled. If the value is {@code 0}, automatic adjustment is disabled.
+Specifies whether automatic screen brightness adjustment is enabled.
+
+<p>If the value is {@code 1}, automatic adjustment is enabled. If the value is {@code 0}, automatic adjustment is disabled.
 
 **Since:** 7
 
@@ -44,7 +48,11 @@ Indicates the value of {@code AUTO_SCREEN_BRIGHTNESS} when automatic screen brig
 const DEFAULT_SCREEN_ROTATION: string
 ```
 
-Indicates the screen rotation when no other policy is available.<p>This constant is invalid when auto-rotation is enabled. When auto-rotation is disabled, the following values are available:&lt;ul&gt; &lt;li&gt;{@code 0} - The screen rotates 0 degrees. &lt;li&gt;{@code 1} - The screen rotates 90 degrees. &lt;li&gt;{@code 2} - The screen rotates 180 degrees. &lt;li&gt;{@code 3} - The screen rotates 270 degrees. &lt;/ul&gt;
+Indicates the screen rotation when no other policy is available.
+
+<p>This constant is invalid when auto-rotation is enabled. When auto-rotation is disabled, the following values are available:
+
+&lt;ul&gt; &lt;li&gt;{@code 0} - The screen rotates 0 degrees. &lt;li&gt;{@code 1} - The screen rotates 90 degrees. &lt;li&gt;{@code 2} - The screen rotates 180 degrees. &lt;li&gt;{@code 3} - The screen rotates 270 degrees. &lt;/ul&gt;
 
 **Since:** 7
 
@@ -58,7 +66,9 @@ Indicates the screen rotation when no other policy is available.<p>This constant
 const DISPLAY_INVERSION_STATUS: string
 ```
 
-Specifies whether display color inversion is enabled.<p>If the value is {@code 1}, display color inversion is enabled. If the value is {@code 0}, display color inversion is disabled.
+Specifies whether display color inversion is enabled.
+
+<p>If the value is {@code 1}, display color inversion is enabled. If the value is {@code 0}, display color inversion is disabled.
 
 **Since:** 7
 

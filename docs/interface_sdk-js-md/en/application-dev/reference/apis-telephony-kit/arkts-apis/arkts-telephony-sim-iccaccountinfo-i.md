@@ -31,8 +31,10 @@ ICCID number.
 isActive: boolean
 ```
 
-Whether the card is activated.  
-**true**: activated.  
+Whether the card is activated.
+
+**true**: activated.
+
 **false**: not activated.
 
 **Type:** boolean
@@ -47,7 +49,8 @@ Whether the card is activated.
 isEsim: boolean
 ```
 
-Whether the SIM card is an eSIM.  
+Whether the SIM card is an eSIM.
+
 - **true**: The SIM card is an eSIM.  
 - **false**: The SIM card is not an eSIM.
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## disableAdmin
@@ -29,14 +29,14 @@ function disableAdmin(admin: Want, userId?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。解除激活BYOD设备管理应用时，仅支持传入当前应用的企业设备管理 扩展组件。 |
-| userId | number | 否 | 用户ID，取值范围：大于等于0。     - 调用接口时，若传入userId，表示指定用户。     - 调用接口时，若未传入userId，表示当前用户。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。解除激活BYOD设备管理应用时，仅支持传入当前应用的企业设备管理扩展组件。 |
+| userId | number | 否 | 用户ID，取值范围：大于等于0。    - 调用接口时，若传入userId，表示指定用户。    - 调用接口时，若未传入userId，表示当前用户。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。当解除激活设备管理应用失败时，会抛出错误对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。当解除激活设备管理应用失败时，会抛出错误对象。 |
 
 **错误码：**
 

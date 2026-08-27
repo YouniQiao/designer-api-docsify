@@ -40,7 +40,7 @@ Clears up all data in the application file path and revokes the permissions that
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -90,7 +90,7 @@ Clears up all data in the application file path and revokes the permissions that
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the application data is cleared up, & lt;code & gt;error & lt;/code & gt; is & lt;code & gt;undefined & lt;/code & gt;; otherwise, & lt;code & gt;error & lt;/code & gt; is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the application data is cleared up, &lt;code&gt;error&lt;/code&gt; is &lt;code&gt;undefined&lt;/code&gt;; otherwise, &lt;code&gt;error&lt;/code&gt; is an error object. |
 
 **Error codes:**
 
@@ -123,7 +123,9 @@ export default class MyAbility extends UIAbility {
 disableDelayedProcessExit(): Promise<void>
 ```
 
-Disables delayed process exit for the current process.<p>&lt;b&gt;NOTE&lt;/b&gt;: This API can be called only by the main thread. Calling this API cancels the effect of [enableDelayedProcessExit](#enabledelayedprocessexit).</p>
+Disables delayed process exit for the current process.
+
+<p>&lt;b&gt;NOTE&lt;/b&gt;: This API can be called only by the main thread. Calling this API cancels the effect of [enableDelayedProcessExit](#enabledelayedprocessexit).</p>
 
 **Since:** 26.0.0
 
@@ -135,7 +137,7 @@ Disables delayed process exit for the current process.<p>&lt;b&gt;NOTE&lt;/b&gt;
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -163,7 +165,7 @@ Enable delayed exit for the current process. <p>**NOTE：**: It can be called on
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -191,7 +193,7 @@ Obtains the unique instance IDs of all multi-instances of this application. This
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the unique instance IDs of all multi-instances of the application. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the unique instance IDs of all multi-instances of the application. |
 
 **Error codes:**
 
@@ -227,7 +229,9 @@ export default class MyAbilityStage extends AbilityStage {
 getAllWindowStages(): Promise<Array<window.WindowStage>>
 ```
 
-Obtains all WindowStage objects in the current application process. This API uses a promise to return the result. It can be called only on the main thread.This API is used to manage multiple windows in an application that contains several UIAbility components, for example, managing the states of different WindowStage objects, or synchronizing state or data between multiple windows within the same application.
+Obtains all WindowStage objects in the current application process. This API uses a promise to return the result. It can be called only on the main thread.
+
+This API is used to manage multiple windows in an application that contains several UIAbility components, for example, managing the states of different WindowStage objects, or synchronizing state or data between multiple windows within the same application.
 
 **Since:** 23
 
@@ -241,7 +245,7 @@ Obtains all WindowStage objects in the current application process. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;window.WindowStage & gt; & gt; | Promise used to return all WindowStage objects in the current application process. |
+| Promise&lt;Array&lt;window.WindowStage&gt;&gt; | Promise used to return all WindowStage objects in the current application process. |
 
 **Examples**
 
@@ -321,7 +325,9 @@ export default class MyAbility extends UIAbility {
 getCurrentInstanceKey(): string
 ```
 
-Obtains the unique instance ID of this application. This API can be called only on the main thread.This API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000078 is returned.
+Obtains the unique instance ID of this application. This API can be called only on the main thread.
+
+This API can be properly called only on 2-in-1 devices. If it is called on other device types, error code 16000078 is returned.
 
 **Since:** 14
 
@@ -467,7 +473,9 @@ export default class MyAbility extends UIAbility {
 getUIAbilityByInstanceId(instanceId: string): UIAbility
 ```
 
-Get the UIAbility instance by the instance Id.<p>**NOTE：**: It can be called only by the main thread. </p>
+Get the UIAbility instance by the instance Id.
+
+<p>**NOTE：**: It can be called only by the main thread. </p>
 
 **Since:** 26.0.0
 
@@ -547,7 +555,7 @@ Kills all processes of this application. The application will not execute the no
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -600,7 +608,7 @@ Kills all processes of this application. The application will not execute the no
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -759,7 +767,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -871,7 +879,7 @@ Unregisters the listener for system environment changes. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -965,7 +973,9 @@ export default class MyAbility extends UIAbility {
 offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void
 ```
 
-unregisters a listener for system configuration updated.<p>**NOTE：**: It can be called only by the main thread. </p>
+unregisters a listener for system configuration updated.
+
+<p>**NOTE：**: It can be called only by the main thread. </p>
 
 **Since:** 24
 
@@ -1223,7 +1233,9 @@ export default class MyAbility extends UIAbility {
 onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): void
 ```
 
-Registers a listener for system configuration updated.<p>**NOTE：**: It can be called only by the main thread. </p>
+Registers a listener for system configuration updated.
+
+<p>**NOTE：**: It can be called only by the main thread. </p>
 
 **Since:** 24
 
@@ -1560,7 +1572,11 @@ export default class MyAbility extends UIAbility {
 setSupportedProcessCache(isSupported : boolean): void
 ```
 
-Sets whether the current application's process supports resource caching, so that the cached process resources can be reused when the application is started again. This API can be called only on the main thread.This setting applies only to the current process instance and does not affect others. If the application process instance is terminated, the previously set state will not be preserved and must be reset.This API can be properly called only on phones and 2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Sets whether the current application's process supports resource caching, so that the cached process resources can be reused when the application is started again. This API can be called only on the main thread.
+
+This setting applies only to the current process instance and does not affect others. If the application process instance is terminated, the previously set state will not be preserved and must be reset.
+
+This API can be properly called only on phones and 2-in-1 devices. If it is called on other device types, error code 801 is returned.
 
 > **NOTE：**
 > 
@@ -1585,7 +1601,7 @@ Sets whether the current application's process supports resource caching, so tha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSupported | boolean | Yes | Whether process cache is supported. The value & lt;code & gt;true & lt;/code & gt; means that process cache is supported, and & lt;code & gt;false & lt;/code & gt; means the opposite. |
+| isSupported | boolean | Yes | Whether process cache is supported. The value &lt;code&gt;true&lt;/code&gt; means that process cache is supported, and &lt;code&gt;false&lt;/code&gt; means the opposite. |
 
 **Error codes:**
 
@@ -1640,7 +1656,7 @@ Starts a UIAbility of the current application during the delayed-exit window.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

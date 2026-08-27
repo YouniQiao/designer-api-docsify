@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import userAuth from '@kit.UserAuthenticationKit';
-import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## getAuthInstance
@@ -33,7 +32,7 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 | --- | --- | --- | --- |
 | challenge | Uint8Array | 是 | 挑战值，最大长度为32字节，可以传Uint8Array([])。 |
 | authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 是 | 认证类型，当前支持FACE和FINGERPRINT。 |
-| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | 是 | 认证信任等级。 |
+| authTrustLevel | AuthTrustLevel | 是 | 认证信任等级。 |
 
 **返回值：**
 

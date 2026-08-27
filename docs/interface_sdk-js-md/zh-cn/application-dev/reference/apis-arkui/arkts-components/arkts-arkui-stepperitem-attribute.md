@@ -6,7 +6,7 @@
 
 **废弃版本：** 22
 
-**替代接口：** [SwiperAttribute](arkts-arkui-swiper-attribute.md#swiperattribute)
+**替代接口：** [SwiperAttribute](arkts-arkui-swiper-attribute.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

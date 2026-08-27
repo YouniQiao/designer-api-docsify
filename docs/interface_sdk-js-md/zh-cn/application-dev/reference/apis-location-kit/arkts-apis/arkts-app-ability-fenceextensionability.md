@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import FenceExtensionAbility from '@kit.LocationKit';
+import { FenceExtensionAbility } from '@kit.LocationKit';
 ```
 
 ## 汇总

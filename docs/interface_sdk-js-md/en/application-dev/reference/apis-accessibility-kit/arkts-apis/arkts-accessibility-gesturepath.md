@@ -16,4 +16,4 @@ import { GesturePath } from '@kit.AccessibilityKit';
 
 | Name | Description |
 | --- | --- |
-| [GesturePath(Gesture Path)](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Represents gesture path information, used to simulate user touch gestures (such as tap, swipe, etc.) in accessibility services. |
+| [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Represents gesture path information, used to simulate user touch gestures (such as tap, swipe, etc.) in accessibility services. |

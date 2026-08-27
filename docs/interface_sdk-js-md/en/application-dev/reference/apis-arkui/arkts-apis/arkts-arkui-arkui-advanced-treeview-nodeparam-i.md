@@ -10,7 +10,6 @@ Declare NodeParam
 
 ```TypeScript
 import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
-import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUIV2';
 ```
 
 ## container
@@ -19,7 +18,9 @@ import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeLis
 container?: () => void
 ```
 
-Right-click child component bound to the node. The child component is decorated with @Builder.Default value: **() =&gt; void**.
+Right-click child component bound to the node. The child component is decorated with @Builder.
+
+Default value: **() =&gt; void**.
 
 **Since:** 10
 
@@ -35,7 +36,13 @@ Right-click child component bound to the node. The child component is decorated 
 currentNodeId?: number
 ```
 
-Current child node ID.The value must be greater than or equal to -1.The value cannot be the root node ID or null. Otherwise, an exception is thrown. In addition, duplicate **currentNodeId** values are not allowed.Default value: **-1**
+Current child node ID.
+
+The value must be greater than or equal to -1.
+
+The value cannot be the root node ID or null. Otherwise, an exception is thrown. In addition, duplicate **currentNodeId** values are not allowed.
+
+Default value: **-1**
 
 **Type:** number
 
@@ -53,7 +60,9 @@ Current child node ID.The value must be greater than or equal to -1.The value ca
 editIcon?: ResourceStr
 ```
 
-Edit icon.The default value is an empty string.
+Edit icon.
+
+The default value is an empty string.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -71,7 +80,9 @@ Edit icon.The default value is an empty string.
 icon?: ResourceStr
 ```
 
-Icon.The default value is an empty string.
+Icon.
+
+The default value is an empty string.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -89,7 +100,10 @@ Icon.The default value is an empty string.
 isFolder?: boolean
 ```
 
-Whether the node is a directory.Default value: **false**.  
+Whether the node is a directory.
+
+Default value: **false**.
+
 **true**: The node is a directory. **false**: The node is not a directory.
 
 **Type:** boolean
@@ -108,7 +122,11 @@ Whether the node is a directory.Default value: **false**.
 parentNodeId?: number
 ```
 
-ID of the parent node.The value must be greater than or equal to -1.Default value: -1. The root node ID is -1. If the value is less than -1, the setting does not take effect.
+ID of the parent node.
+
+The value must be greater than or equal to -1.
+
+Default value: -1. The root node ID is -1. If the value is less than -1, the setting does not take effect.
 
 **Type:** number
 
@@ -126,7 +144,9 @@ ID of the parent node.The value must be greater than or equal to -1.Default valu
 primaryTitle?: ResourceStr
 ```
 
-Primary title.The default value is an empty string.
+Primary title.
+
+The default value is an empty string.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -144,7 +164,9 @@ Primary title.The default value is an empty string.
 secondaryTitle?: ResourceStr
 ```
 
-Secondary title.The default value is an empty string.
+Secondary title.
+
+The default value is an empty string.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -162,7 +184,9 @@ Secondary title.The default value is an empty string.
 selectedIcon?: ResourceStr
 ```
 
-Icon of the selected node.The default value is an empty string.
+Icon of the selected node.
+
+The default value is an empty string.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -180,7 +204,9 @@ Icon of the selected node.The default value is an empty string.
 symbolEditIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol edit icon, which has a higher priority than **editIcon**.Default value: **undefined**
+Symbol edit icon, which has a higher priority than **editIcon**.
+
+Default value: **undefined**
 
 **Type:** SymbolGlyphModifier
 
@@ -198,7 +224,9 @@ Symbol edit icon, which has a higher priority than **editIcon**.Default value: *
 symbolIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol icon, which has higher priority than **icon**.Default value: **undefined**
+Symbol icon, which has higher priority than **icon**.
+
+Default value: **undefined**
 
 **Type:** SymbolGlyphModifier
 
@@ -216,7 +244,9 @@ Symbol icon, which has higher priority than **icon**.Default value: **undefined*
 symbolSelectedIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol icon of the selected node., which has higher priority than **selectedIcon**.Default value: **undefined**
+Symbol icon of the selected node., which has higher priority than **selectedIcon**.
+
+Default value: **undefined**
 
 **Type:** SymbolGlyphModifier
 

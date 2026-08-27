@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import agentManager from '@kit.AbilityKit';
+import { agentManager } from '@kit.AbilityKit';
 ```
 
 ## notifyLowCodeAgentComplete
@@ -34,7 +34,7 @@ Notifies that the specified LOW_CODE agent has completed.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

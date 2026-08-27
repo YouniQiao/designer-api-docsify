@@ -1,6 +1,8 @@
 # RenderContext
 
-定义了所有渲染资源的上下文。在同一渲染上下文中创建的多个场景之间，可以共享渲染资源。@interface RenderContext
+定义了所有渲染资源的上下文。在同一渲染上下文中创建的多个场景之间，可以共享渲染资源。
+
+@interface RenderContext
 
 **起始版本：** 20
 
@@ -62,7 +64,7 @@ loadPlugin(name: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | 返回一个Promise对象，解析结果为boolean类型，表示插件加载是否成功。true表示加载成功，false表示加载失败。 |
+| Promise&lt;boolean&gt; | 返回一个Promise对象，解析结果为boolean类型，表示插件加载是否成功。true表示加载成功，false表示加载失败。 |
 
 **示例**
 
@@ -85,7 +87,7 @@ function loadPlugin(): Promise<boolean> {
 registerResourcePath(protocol: string, uri: string): boolean
 ```
 
-注册shader等资产文件所在的路径目录及其检索名，通过检索名查找并替换shader内部关联文件的路径描述，找到对应的资产路径目录， 实现资产及其关联文件的正确加载。
+注册shader等资产文件所在的路径目录及其检索名，通过检索名查找并替换shader内部关联文件的路径描述，找到对应的资产路径目录，实现资产及其关联文件的正确加载。
 
 **起始版本：** 20
 
@@ -95,14 +97,14 @@ registerResourcePath(protocol: string, uri: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| protocol | string | 是 | 要注册的路径检索名，用作shader内部关联文件路径的前缀标识， 必须是系统未预定义或未注册且非空的检索名称。 |
-| uri | string | 是 | 要注册的资产路径目录，与检索名对应，shader加载时会将路径中的检索名前缀替换为该目录， 必须是资产文件所在文件夹路径。 |
+| protocol | string | 是 | 要注册的路径检索名，用作shader内部关联文件路径的前缀标识，必须是系统未预定义或未注册且非空的检索名称。 |
+| uri | string | 是 | 要注册的资产路径目录，与检索名对应，shader加载时会将路径中的检索名前缀替换为该目录，必须是资产文件所在文件夹路径。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回资产文件路径是否注册成功。 true表示注册成功；false表示注册失败，可能原因为检索名已被注册或输入参数不可用。 |
+| boolean | 返回资产文件路径是否注册成功。true表示注册成功；false表示注册失败，可能原因为检索名已被注册或输入参数不可用。 |
 
 **示例**
 

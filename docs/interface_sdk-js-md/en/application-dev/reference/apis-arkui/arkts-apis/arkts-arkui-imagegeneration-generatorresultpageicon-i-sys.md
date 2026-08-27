@@ -1,6 +1,8 @@
 # GeneratorResultPageIcon (System API)
 
-Custom icon object in the generation result page of ImageGeneratorDialog.@interface GeneratorResultPageIcon
+Custom icon object in the generation result page of ImageGeneratorDialog.
+
+@interface GeneratorResultPageIcon
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ Custom icon object in the generation result page of ImageGeneratorDialog.@interf
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## callback

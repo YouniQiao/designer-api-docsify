@@ -1,6 +1,8 @@
 # GeneratorNodeGraphOptions (System API)
 
-Parameters used to open the NodeGraphComponent.@interface GeneratorNodeGraphOptions
+Parameters used to open the NodeGraphComponent.
+
+@interface GeneratorNodeGraphOptions
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ Parameters used to open the NodeGraphComponent.@interface GeneratorNodeGraphOpti
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## customIcons

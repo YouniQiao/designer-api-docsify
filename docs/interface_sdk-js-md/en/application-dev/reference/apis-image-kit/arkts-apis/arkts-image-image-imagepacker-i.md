@@ -1,6 +1,12 @@
 # ImagePacker
 
-The **ImagePacker** class provides APIs to compress and encode images.Before calling any API in ImagePacker, you must use [image.createImagePacker](arkts-image-image-createimagepacker-f.md) to create an ImagePacker instance. During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur.Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
+The **ImagePacker** class provides APIs to compress and encode images.
+
+Before calling any API in ImagePacker, you must use [image.createImagePacker](arkts-image-image-createimagepacker-f.md) to create an ImagePacker instance. During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur.
+
+Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+
+Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
 
 **Since:** 6
 
@@ -9,7 +15,7 @@ The **ImagePacker** class provides APIs to compress and encode images.Before cal
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## packBinaryImageToTiffData
@@ -37,7 +43,7 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | A Promise instance used to return the compressed or packed data. |
+| Promise&lt;ArrayBuffer&gt; | A Promise instance used to return the compressed or packed data. |
 
 **Error codes:**
 
@@ -109,7 +115,7 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. |
 
 **Error codes:**
 
@@ -182,7 +188,7 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | Image source to compress or re-encode. |
+| source | ImageSource | Yes | Image source to compress or re-encode. |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
 
@@ -229,14 +235,14 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | Image source to compress or re-encode. |
+| source | ImageSource | Yes | Image source to compress or re-encode. |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise used to return the compressed or encoded image data. |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
 
 **Examples**
 
@@ -286,7 +292,7 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | PixelMap to compress or re-encode. |
+| source | PixelMap | Yes | PixelMap to compress or re-encode. |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
 
@@ -342,14 +348,14 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | PixelMap to compress or re-encode. |
+| source | PixelMap | Yes | PixelMap to compress or re-encode. |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise used to return the compressed or encoded image data. |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
 
 **Examples**
 
@@ -397,7 +403,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise used to return the compressed or encoded image data. |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
 
 **Error codes:**
 
@@ -455,14 +461,14 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | Image source to compress or re-encode. |
+| source | ImageSource | Yes | Image source to compress or re-encode. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise used to return the compressed or encoded image data. |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
 
 **Error codes:**
 
@@ -522,14 +528,14 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | PixelMap to compress or re-encode. |
+| source | PixelMap | Yes | PixelMap to compress or re-encode. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise used to return the compressed or encoded image data. |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the compressed or encoded image data. |
 
 **Error codes:**
 
@@ -584,14 +590,14 @@ Encodes multiple PixelMap objects into GIF data. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmapSequence | Array & lt;PixelMap & gt; | Yes | PixelMaps to encode. |
+| pixelmapSequence | Array&lt;PixelMap&gt; | Yes | PixelMaps to encode. |
 | options | [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | Yes | Options for encoding animated images. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise used to return the encoded data. |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the encoded data. |
 
 **Error codes:**
 
@@ -644,7 +650,7 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | Image source to encode. |
+| source | ImageSource | Yes | Image source to encode. |
 | fd | number | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
@@ -703,7 +709,7 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | Image source to encode. |
+| source | ImageSource | Yes | Image source to encode. |
 | fd | number | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
@@ -711,7 +717,7 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -771,7 +777,7 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | PixelMap to encode. |
+| source | PixelMap | Yes | PixelMap to encode. |
 | fd | number | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
@@ -837,7 +843,7 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | PixelMap to encode. |
+| source | PixelMap | Yes | PixelMap to encode. |
 | fd | number | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
@@ -845,7 +851,7 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -909,7 +915,7 @@ Encodes the Picture into a file based on the specified encoding parameters. This
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | that returns no value. |
+| Promise&lt;void&gt; | that returns no value. |
 
 **Error codes:**
 
@@ -969,7 +975,7 @@ Encodes multiple PixelMaps into a GIF file. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmapSequence | Array & lt;PixelMap & gt; | Yes | PixelMaps to encode. |
+| pixelmapSequence | Array&lt;PixelMap&gt; | Yes | PixelMaps to encode. |
 | fd | number | Yes | File descriptor. |
 | options | [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | Yes | Options for encoding animated images. |
 
@@ -977,7 +983,7 @@ Encodes multiple PixelMaps into a GIF file. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | that returns no value. |
+| Promise&lt;void&gt; | that returns no value. |
 
 **Error codes:**
 
@@ -1023,7 +1029,11 @@ async function PackToFile(context : Context) {
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImagePacker instance. This API uses an asynchronous callback to return the result.Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImagePacker instance. This API uses an asynchronous callback to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
 
@@ -1128,7 +1138,11 @@ function release(pixelMap: image.PixelMap) {
 release(): Promise<void>
 ```
 
-Releases this ImagePacker instance. This API uses a promise to return the result.Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImagePacker instance. This API uses a promise to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
 
@@ -1138,7 +1152,7 @@ Releases this ImagePacker instance. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

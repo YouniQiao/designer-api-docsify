@@ -31,7 +31,9 @@ Describes the rectangle of the surface held by the **XComponent**.
 offsetX?: number
 ```
 
-X-coordinate of the surface rectangle relative to the upper-left corner of the **XComponent**.Unit: px
+X-coordinate of the surface rectangle relative to the upper-left corner of the **XComponent**.
+
+Unit: px
 
 **Type:** number
 
@@ -49,7 +51,9 @@ X-coordinate of the surface rectangle relative to the upper-left corner of the *
 offsetY?: number
 ```
 
-Y-coordinate of the surface rectangle relative to the upper left corner of the **XComponent**.Unit: px
+Y-coordinate of the surface rectangle relative to the upper left corner of the **XComponent**.
+
+Unit: px
 
 **Type:** number
 
@@ -67,7 +71,9 @@ Y-coordinate of the surface rectangle relative to the upper left corner of the *
 surfaceHeight: number
 ```
 
-Height of the surface rectangle.Unit: px.
+Height of the surface rectangle.
+
+Unit: px.
 
 **Type:** number
 
@@ -85,7 +91,9 @@ Height of the surface rectangle.Unit: px.
 surfaceWidth: number
 ```
 
-Width of the surface rectangle.Unit: px.
+Width of the surface rectangle.
+
+Unit: px.
 
 **Type:** number
 

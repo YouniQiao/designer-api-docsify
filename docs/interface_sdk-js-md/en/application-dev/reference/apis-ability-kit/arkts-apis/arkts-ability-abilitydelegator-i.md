@@ -91,7 +91,7 @@ Adds an **AbilityMonitor** instance. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -242,7 +242,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -416,7 +416,7 @@ Schedules the lifecycle state of an ability to **Background**. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -529,7 +529,7 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -762,7 +762,7 @@ Finishes the test and prints log information to the unit test console. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1026,7 +1026,7 @@ Prints log information to the unit test console. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -1158,7 +1158,7 @@ Removes an **AbilityMonitor** instance. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1311,7 +1311,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1423,7 +1423,7 @@ Sets a list of mock data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mockList | Record & lt;string, string & gt; | Yes | Key-value object of the mock, where **key** is the target path to be replaced and **value** is the path of the mock implementation to be used for the replacement. |
+| mockList | Record&lt;string, string&gt; | Yes | Key-value object of the mock, where **key** is the target path to be replaced and **value** is the path of the mock implementation to be used for the replacement. |
 
 **Error codes:**
 
@@ -1543,7 +1543,7 @@ Starts an ability. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

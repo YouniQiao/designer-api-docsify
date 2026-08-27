@@ -98,7 +98,7 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

@@ -9,7 +9,7 @@ Defines information about the socket connection.
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## address
@@ -32,9 +32,11 @@ Peer IP address.
 family: 'IPv4' | 'IPv6'
 ```
 
-Network protocol type.  
+Network protocol type.
+
 - IPv4  
-- IPv6  
+- IPv6
+
 The default value is **IPv4**.
 
 **Type:** 'IPv4' \| 'IPv6'

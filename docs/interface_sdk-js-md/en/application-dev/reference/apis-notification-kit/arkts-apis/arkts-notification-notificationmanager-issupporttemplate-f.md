@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isSupportTemplate
@@ -73,7 +73,7 @@ Checks whether a specified template is supported before using [NotificationTempl
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the specified template is supported, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the specified template is supported, and **false** means the opposite. |
 
 **Error codes:**
 

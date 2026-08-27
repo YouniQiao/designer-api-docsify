@@ -1,11 +1,14 @@
 # Grid
 
 The **Grid** component consists of cells formed by rows and columns. You can specify the cells where items are located to form various layouts.
+
 > **NOTE** > > The component has been bound with gestures to implement functions such as follow-up scrolling. If you need to add > custom gestures, refer to Gesture Blocking Enhancement.
 
 ## Child Components
 
-Child components are limited to GridItem and custom components. When using custom components inside **Grid**, it is recommended to wrap the custom component with a **GridItem** as the top-level container. Setting attributes or event methods directly on custom components is not recommended.Child components can be dynamically generated using rendering control types [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
+Child components are limited to GridItem and custom components. When using custom components inside **Grid**, it is recommended to wrap the custom component with a **GridItem** as the top-level container. Setting attributes or event methods directly on custom components is not recommended.
+
+Child components can be dynamically generated using rendering control types [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md), [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md), [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md), and [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md). **LazyForEach** or **Repeat** is recommended to optimize performance.
 
 > **NOTE：**
 > 
@@ -69,16 +72,25 @@ Creates a **Grid** component.
 
 | Name | Description |
 | --- | --- |
+| [ComputedBarAttribute](arkts-arkui-computedbarattribute-i.md) | Provides information about the position and length of the scrollbar. |
+| [GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md) | Defines the grid layout options. In this API, **irregularIndexes** and **onGetIrregularSizeByIndex** can be used for grids where either **rowsTemplate** or **columnsTemplate** is set. These properties allow you to specify an index array and set the number of rows and columns to be occupied by a grid item at the specified index. For details about the usage, see [Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-3-implementing-a-scrollable-grid-with-grid-items-spanning-rows-and-columns). On the other hand, **onGetRectByIndex** can be used for grids where both **rowsTemplate** and **columnsTemplate** are set. It allows you to specify the position and size for the grid item at the specified index. For details about the usage, see [Example 1](../../../reference/apis-arkui/arkui-ts/ts-container-grid.md#example-1-creating-a-fixed-row-and-column-grid-layout). |
+| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) | Define start line info used in GridLayoutOptions. |
+| [UIGridEvent](arkts-arkui-uigridevent-i.md) | Represents the return value of the [getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md) method in **frameNode**, which can be used to set scroll events for a **Grid** node. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [OnGetStartIndexByIndexCallback](arkts-arkui-ongetstartindexbyindexcallback-t-sys.md) | Defines the callback type used in onGetStartIndexByIndex of GridLayoutOptions. |
+| [OnGetStartIndexByOffsetCallback](arkts-arkui-ongetstartindexbyoffsetcallback-t-sys.md) | Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions. |
+| [OnGridScrollIndexCallback](arkts-arkui-ongridscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **Grid** component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [GridDirection](arkts-arkui-griddirection-e.md) | Enumerates the main axis layout directions. |
+| [GridItemAlignment](arkts-arkui-griditemalignment-e.md) | Enumerates the alignment modes of grid items. |
 
 ## Examples
 
@@ -865,7 +877,7 @@ struct Index {
       Text('Grid alignItems sample code')
 
       Grid() {
-        LazyForEach(this.data, (item: number) => {
+        LazyForEach(this.data, (item: string) => {
           // GridItem and Column components, when left without explicitly set heights, will by default adapt to the size of their child components. With alignItems set to STRETCH, they will instead take on the height of the tallest component in the current row.
           // If the height is explicitly set, the component maintains the defined height and will not follow the height of the tallest component in the current row.
           GridItem() {
@@ -1180,7 +1192,7 @@ struct GridScrollToIndexSample {
     let list: string[] = [];
     for (let i = 0; i < 10; i++) {
       for (let j = 0; j < 10; j++) {
-        list.push((i * 5 + j  + 1).toString());
+        list.push((i * 5 + j + 1).toString());
       }
     }
     this.numbers =  new GridDataSource(list);
@@ -1236,7 +1248,7 @@ enum SlideActionType {
   END
 }
 // Hot zone
-let HOT_AREA_LENGTH: number;
+let HOT_AREA_LENGTH: number = 0;
 try {
   HOT_AREA_LENGTH =
     Math.round(display.getDefaultDisplaySync().densityDPI * 10 / 25.4 / display.getDefaultDisplaySync().densityPixels);
@@ -1246,7 +1258,7 @@ try {
 // Scroll curve: Bezier curve
 const SLIDE_SELECT_SPEED_CURVE = curves.cubicBezierCurve(0.33, 0, 0.67, 1);
 // Scroll speed: maximum speed
-let AUTO_SPEED_MAX: number;
+let AUTO_SPEED_MAX: number = 0;
 try {
   AUTO_SPEED_MAX = Math.round(2400 / display.getDefaultDisplaySync().densityPixels);
 } catch (error) {
@@ -1531,7 +1543,6 @@ struct GridItemExample {
   @State numbers: number[] = [];
   @State dragItem: number = -1;
   @State scaleItem: number = -1;
-  @State item: number = -1;
   private dragRefOffsetX: number = 0;
   private dragRefOffsetY: number = 0;
   @State offsetX: number = 0;
@@ -1814,7 +1825,7 @@ struct Example {
   build() {
     Column({ space: 5 }) {
       Grid() {
-        LazyForEach(this.numbers, (item: number, index: number) => {
+        LazyForEach(this.numbers, (item: string, index: number) => {
           GridItem() {
             Text(item + '')
               .fontSize(16)
@@ -2087,6 +2098,17 @@ import { GridDataSource } from './GridDataSource';
 @Component
 struct GridExample {
   numbers: GridDataSource = new GridDataSource([]);
+  @State @Watch('onEditModeChanged') enableEditMode: boolean = false;
+  @State enableTwoFingerSelect: boolean = false;
+  @State selectedIndexes: number[] = [];
+
+  onEditModeChanged() {
+    console.info(`enableEditMode changed to: ${this.enableEditMode}`);
+    if (!this.enableEditMode) {
+      console.info('enableEditMode changed to false, clearing selectedIndexes');
+      this.selectedIndexes = [];
+    }
+  }
 
   aboutToAppear() {
     let list: string[] = [];
@@ -2112,8 +2134,17 @@ struct GridExample {
                 .textAlign(TextAlign.Center)
             }
           }
+          .selected(this.selectedIndexes.includes(index))
           .onSelect((isSelected: boolean) => {
             console.info('item ' + index.toString() + ' is ' + (isSelected ? 'selected' : 'unselected'));
+            if (isSelected) {
+              this.selectedIndexes.push(index);
+            } else {
+              let deleted = this.selectedIndexes.findIndex((value) => value === index);
+              if (deleted !== -1) {
+                this.selectedIndexes.splice(deleted, 1);
+              }
+            }
           })
         }, (index: number) => index.toString())
       }
@@ -2123,12 +2154,234 @@ struct GridExample {
       .width('90%')
       .height('50%')
       .backgroundColor(0xFAEEE0)
-      .enableEditMode(true)
-      .editModeOptions({ useDefaultMultiSelectStyle: true })
+      .enableEditMode(this.enableEditMode!!)
+      .onEditModeChange((data: boolean) => {
+        // Alternatively, implement the business logic in onEditModeChanged here without using the enableEditMode two-way binding.
+        console.info(`onEditModeChange:${data}`)
+      })
+      .editModeOptions({ useDefaultMultiSelectStyle: true, enableTwoFingerMultiSelect: this.enableTwoFingerSelect })
+
+      Row() {
+        Button('EditMode: ' + this.enableEditMode).onClick(() => {
+          this.enableEditMode = !this.enableEditMode;
+        })
+        Button('TwoFinger: ' + this.enableTwoFingerSelect).onClick(() => {
+          this.enableTwoFingerSelect = !this.enableTwoFingerSelect;
+        })
+      }
       .margin({
         bottom: 30
       })
     }.width('100%').margin({ top: 5 })
+  }
+}
+```
+
+Since API version 26.0.0, this example demonstrates the effect of drag sorting using the [onMove](./ts-universal-attributes-drag-sorting.md#onmove) API of LazyForEach in the Grid. It supports triggering automatic scrolling of the Grid when dragging to the edge, and the Grid contains nodes that span rows and columns.
+
+```TypeScript
+// RectGridDataSource.ets
+export class Rects {
+  id: number = 0
+  // rectSize indicates the number of [rows, columns] occupied by the GridItem. The default value [1, 1] indicates a regular node.
+  rectSize: [number, number] = [1, 1]
+  constructor(id_: number) {
+    this.id = id_
+  }
+}
+
+// Data source of LazyForEach, which implements the IDataSource interface and manages data and notifies the UI to refresh.
+export class RectGridDataSource implements IDataSource {
+  private list: Array<Rects> = [];
+  private listeners: DataChangeListener[] = [];
+
+  constructor(list: Rects[]) {
+    this.list = list;
+  }
+
+  // Return the total number of data items.
+  totalCount(): number {
+    return this.list.length;
+  }
+
+  // Obtain the corresponding data item by index.
+  getData(index: number): Rects {
+    return this.list[index];
+  }
+
+  // Register a data change listener.
+  registerDataChangeListener(listener: DataChangeListener): void {
+    if (this.listeners.indexOf(listener) < 0) {
+      this.listeners.push(listener);
+    }
+  }
+
+  // Unregister the data change listener.
+  unregisterDataChangeListener(listener: DataChangeListener): void {
+    const pos = this.listeners.indexOf(listener);
+    if (pos >= 0) {
+      this.listeners.splice(pos, 1);
+    }
+  }
+
+  // Notify the controller of the data position change.
+  notifyDataMove(from: number, to: number): void {
+    this.listeners.forEach(listener => {
+      listener.onDataMove(from, to);
+    })
+  }
+
+  // Reload all data.
+  notifyDataReload(): void {
+    this.listeners.forEach(listener => {
+      listener.onDataReloaded();
+    })
+  }
+
+  // Move the element at the from position to the to position, and notify the UI to reload and refresh all data.
+  public moveItem(from: number, to: number): void {
+    let tmp = this.list.splice(from, 1);  // Remove the dragged item first.
+    this.list.splice(to, 0, tmp[0]);      // Insert the dragged item into the target position.
+    this.notifyDataReload()
+  }
+}
+```
+
+```TypeScript
+// xxx.ets
+import { RectGridDataSource, Rects } from './RectGridDataSource';
+
+@Entry
+@Component
+struct GridOnMoveExample {
+  numbers: RectGridDataSource = new RectGridDataSource([]);
+
+  // Grid layout options (actually effective), which declare the indexes of irregular nodes and the number of rows and columns occupied by each.
+  @State layoutOptions: GridLayoutOptions = {
+    regularSize: [1, 1],
+    irregularIndexes: [4, 5, 6, 7, 8, 13],   // Set which indexes correspond to irregular GridItem nodes.
+    onGetIrregularSizeByIndex: (index: number) => {
+      return this.numbers.getData(index).rectSize
+    }
+  };
+
+  // Layout options (backup), used to trigger the refresh of layoutOptions through overall assignment during dragging.
+  layoutOptions_back: GridLayoutOptions = {
+    regularSize: [1, 1],
+    irregularIndexes: [4, 5, 6, 7, 8, 13],
+    onGetIrregularSizeByIndex: (index: number) => {
+      return this.numbers.getData(index).rectSize
+    }
+  };
+
+  build() {
+    Row() {
+      Grid(undefined, this.layoutOptions) {
+        LazyForEach(this.numbers, (item: Rects) => {
+          GridItem() {
+            Text(item.id.toString())
+              .fontSize(16)
+              .textAlign(TextAlign.Center)
+              // Set the height. A GridItem spanning multiple rows needs an extra margin (the spacing of a regular GridItem is 2*10) for UI alignment.
+              .size({ height: 100 * item.rectSize[0] + (item.rectSize[0] - 1) * 20, width: '100%'})
+          }.margin(10)
+          .borderRadius(10)
+          .backgroundColor(0xF9CF93)
+        }, (index: Rects) => index.id.toString())
+          // Triggered when the dragged item is released and its landing position differs from the position before dragging. from is the start index, and to is the target index.
+          .onMove((from:number, to:number) => {
+            console.info("Grid onMove from " + from + " to " + to)
+            // Update the data source.
+            this.numbers.moveItem(from, to)
+            if (from < to) {  // The index of the dragged item is smaller than the target position index.
+              // Save the position of the dragged item in the irregularIndexes array first to avoid indexOf locating errors caused by duplicate values generated in subsequent loop updates.
+              let from_idx = -1
+              if (this.layoutOptions.irregularIndexes?.includes(from)) {
+                from_idx = this.layoutOptions.irregularIndexes.indexOf(from)
+              }
+
+              // The elements between the dragged item and the target position move forward by one position as a whole (index -1).
+              if (this.layoutOptions.irregularIndexes != undefined) {
+                let len = this.layoutOptions.irregularIndexes.length
+                for (let i = len - 1; i >= 0; i --) {
+                  let irregularIndex = this.layoutOptions.irregularIndexes[i]
+                  if (irregularIndex > from && irregularIndex <= to) {
+                    this.layoutOptions.irregularIndexes[i] --
+                  }
+                }
+              }
+
+              // If the dragged item itself is an irregular node, update its index to the target position.
+              if (from_idx != -1 && this.layoutOptions.irregularIndexes != undefined) {
+                this.layoutOptions.irregularIndexes[from_idx] = to
+              }
+            } else {  // The index of the dragged item is greater than or equal to the target position index.
+              // Save the position of the dragged item in the irregularIndexes array first to avoid indexOf locating errors caused by duplicate values generated in subsequent loop updates.
+              let from_idx = -1
+              if (this.layoutOptions.irregularIndexes?.includes(from)) {
+                from_idx = this.layoutOptions.irregularIndexes.indexOf(from)
+              }
+
+              // The elements between the target position and the dragged item move backward by one position as a whole (index +1).
+              if (this.layoutOptions.irregularIndexes != undefined) {
+                let len = this.layoutOptions.irregularIndexes.length
+                for (let i = 0; i < len; i ++) {
+                  let irregularIndex = this.layoutOptions.irregularIndexes[i]
+                  if (irregularIndex >= to && irregularIndex < from) {
+                    this.layoutOptions.irregularIndexes[i] ++
+                  }
+                }
+              }
+
+              // If the dragged item itself is an irregular node, update its index to the target position.
+              if (from_idx != -1 && this.layoutOptions.irregularIndexes != undefined) {
+                this.layoutOptions.irregularIndexes[from_idx] = to
+              }
+            }
+            // Assign the backup object as a whole to force layoutOptions to refresh and take effect.
+            this.layoutOptions_back.irregularIndexes = this.layoutOptions.irregularIndexes
+            this.layoutOptions = this.layoutOptions_back
+            console.info("Grid this.layoutOptions.irregularIndexes " + this.layoutOptions.irregularIndexes)
+          },
+            {
+              onLongPress: (index: number) => {
+                // Triggered when a GridItem is lifted after a long press.
+                console.info('Grid onLongPress: ' + index);
+              },
+              onDrop: (index: number) => {
+                // Triggered when the dragged GridItem is released.
+                console.info('Grid onDrop: ' + index);
+              },
+              onDragStart: (index: number) => {
+                // Triggered when a GridItem is lifted after a long press and dragging starts.
+                console.info('Grid onDragStart: ' + index);
+              },
+              onMoveThrough: (from: number, to: number) => {
+                // Triggered continuously during the dragging of a GridItem.
+                console.info('Grid onMoveThrough From: ' + from + ' to: ' + to);
+              }
+            })
+      }
+      .columnsTemplate('1fr 1fr 1fr 1fr')   // Four-column equal-width layout.
+      .width('100%')
+      .height('100%')
+      .backgroundColor(0xFAEEE0)
+    }
+  }
+
+  aboutToAppear(): void {
+    // Initialize 100 rectangle data items and set the spanning size of each irregular node.
+    let list: Rects[] = [];
+    for (let i = 0; i < 100; i++) {
+      list.push(new Rects(i));
+    }
+    list[4].rectSize = [2, 2] // 2 rows and 2 columns.
+    list[5].rectSize = [1, 2] // 1 row and 2 columns.
+    list[6].rectSize = [1, 2] // 1 row and 2 columns.
+    list[7].rectSize = [2, 1] // 2 rows and 1 column.
+    list[8].rectSize = [2, 1] // 2 rows and 1 column.
+    list[13].rectSize = [1, 4]  // 1 row and 4 columns.
+    this.numbers = new RectGridDataSource(list);
   }
 }
 ```

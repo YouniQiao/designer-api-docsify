@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getApplicationInfoSync
@@ -12,7 +12,9 @@ import bundleManager from '@kit.AbilityKit';
 function getApplicationInfoSync(bundleName: string, applicationFlags: number, userId: number) : ApplicationInfo
 ```
 
-以同步方法根据给定的bundleName、applicationFlags和userId获取ApplicationInfo。获取调用方自身的信息时不需要权限。
+以同步方法根据给定的bundleName、applicationFlags和userId获取ApplicationInfo。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 9
 
@@ -27,14 +29,14 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: number, us
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示应用程序的bundleName。 |
-| applicationFlags | number | 是 | 表示用于指定将返回的ApplicationInfo对象中包含的信息，具体取值及不同含义参考 [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md)。 |
-| userId | number | 是 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) 获取。 |
+| applicationFlags | number | 是 | 表示用于指定将返回的ApplicationInfo对象中包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md)。 |
+| userId | number | 是 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md) | 返回ApplicationInfo对象。 |
+| ApplicationInfo | 返回ApplicationInfo对象。 |
 
 **错误码：**
 
@@ -74,7 +76,9 @@ try {
 function getApplicationInfoSync(bundleName: string, applicationFlags: number) : ApplicationInfo
 ```
 
-以同步方法根据给定的bundleName、applicationFlags获取ApplicationInfo。获取调用方自身的信息时不需要权限。
+以同步方法根据给定的bundleName、applicationFlags获取ApplicationInfo。
+
+获取调用方自身的信息时不需要权限。
 
 **起始版本：** 9
 
@@ -89,13 +93,13 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: number) : 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示应用程序的bundleName。 |
-| applicationFlags | number | 是 | 表示用于指定将返回的ApplicationInfo对象中包含的信息，具体取值及不同含义参考 [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md)。 |
+| applicationFlags | number | 是 | 表示用于指定将返回的ApplicationInfo对象中包含的信息，具体取值及不同含义参考[ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md) | 返回ApplicationInfo对象。 |
+| ApplicationInfo | 返回ApplicationInfo对象。 |
 
 **错误码：**
 

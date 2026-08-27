@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setBadgeNumberByBundle
@@ -12,7 +12,11 @@ import notificationManager from '@kit.NotificationKit';
 function setBadgeNumberByBundle(bundle: BundleOption, badgeNumber: number): Promise<void>
 ```
 
-Sets the badge count for other applications. This API uses a promise to return the result.The current application must have a proxy relationship with another application, or the **ohos.permission.NOTIFICATION_AGENT_CONTROLLER** permission is granted to the current application.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
+Sets the badge count for other applications. This API uses a promise to return the result.
+
+The current application must have a proxy relationship with another application, or the **ohos.permission.NOTIFICATION_AGENT_CONTROLLER** permission is granted to the current application.
+
+This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 12
 
@@ -24,14 +28,14 @@ Sets the badge count for other applications. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes | Bundle information of the application. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
 | badgeNumber | number | Yes | Notification badge number to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

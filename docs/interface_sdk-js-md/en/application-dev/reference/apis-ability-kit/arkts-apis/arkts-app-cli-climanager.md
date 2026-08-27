@@ -1,6 +1,8 @@
 # @ohos.app.cli.cliManager
 
-The module provides the capability to interact with cli tools in the system.@namespace cliManager
+The module provides the capability to interact with cli tools in the system.
+
+@namespace cliManager
 
 **Since:** 26.0.0
 
@@ -13,7 +15,7 @@ The module provides the capability to interact with cli tools in the system.@nam
 ## Modules to Import
 
 ```TypeScript
-import cliManager from '@kit.AbilityKit';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

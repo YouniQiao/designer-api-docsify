@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screenLock from '@kit.BasicServicesKit';
+import { screenLock } from '@kit.BasicServicesKit';
 ```
 
 ## isSecureMode
@@ -59,7 +59,7 @@ Checks whether the screen lock of the current device is secure.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | the promise returned by the function. |
+| Promise&lt;boolean&gt; | the promise returned by the function. |
 
 **Examples**
 

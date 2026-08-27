@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## setNetworkInterfaceDisabled
@@ -104,7 +104,7 @@ function setNetworkInterfaceDisabled(admin: Want, networkInterface: string, isDi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。当禁用网络接口失败时抛出错误对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。当禁用网络接口失败时抛出错误对象。 |
 
 **错误码：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## access
@@ -12,7 +12,9 @@ import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 ```
 
-Checks whether the file or directory exists or has the operation permission. This API uses a promise to return the result.If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether the file or directory exists or has the operation permission. This API uses a promise to return the result.
+
+If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 9
 
@@ -31,7 +33,7 @@ Checks whether the file or directory exists or has the operation permission. Thi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return a Boolean value. The value **true** means the file exists; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return a Boolean value. The value **true** means the file exists; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -132,7 +134,9 @@ fileIo.access(filePath, (err: BusinessError, res: boolean) => {
 declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>
 ```
 
-Checks whether the file or directory is stored locally or has the operation permission. This API uses a promise to return the result.If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether the file or directory is stored locally or has the operation permission. This API uses a promise to return the result.
+
+If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 12
 
@@ -150,7 +154,7 @@ Checks whether the file or directory is stored locally or has the operation perm
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return a Boolean value. The value **true** means the file or directory is a local one and has the related permission. The value **false** means the file or directory does not exist or is on the cloud or a distributed device. |
+| Promise&lt;boolean&gt; | Promise used to return a Boolean value. The value **true** means the file or directory is a local one and has the related permission. The value **false** means the file or directory does not exist or is on the cloud or a distributed device. |
 
 **Error codes:**
 

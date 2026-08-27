@@ -1,6 +1,8 @@
 # MediaEntity
 
-媒体实例的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。@interface MediaEntity
+媒体实例的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
+
+@interface MediaEntity
 
 **起始版本：** 23
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## desc

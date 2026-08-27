@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemManager from '@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## getUpdateAuthData
@@ -32,7 +32,7 @@ Obtains the authentication data for system update verification. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the authentication data. |
+| Promise&lt;string&gt; | Promise used to return the authentication data. |
 
 **Error codes:**
 

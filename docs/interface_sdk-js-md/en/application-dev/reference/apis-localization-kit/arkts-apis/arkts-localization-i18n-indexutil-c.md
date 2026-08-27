@@ -9,7 +9,7 @@ Provides index management capabilities, such as obtaining the locale index list 
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## addLocale
@@ -94,7 +94,7 @@ Obtains the index list of the current locale.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Index list of the current locale. The first and last elements are **...**. |
+| Array&lt;string&gt; | Index list of the current locale. The first and last elements are **...**. |
 
 **Examples**
 

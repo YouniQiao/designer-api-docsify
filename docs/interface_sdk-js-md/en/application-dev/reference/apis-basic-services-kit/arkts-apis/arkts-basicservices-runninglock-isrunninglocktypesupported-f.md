@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import runningLock from '@kit.BasicServicesKit';
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## isRunningLockTypeSupported
@@ -68,7 +68,7 @@ Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the specified type of the running lock is supported, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the specified type of the running lock is supported, and the value **false** indicates the opposite. |
 
 **Examples**
 

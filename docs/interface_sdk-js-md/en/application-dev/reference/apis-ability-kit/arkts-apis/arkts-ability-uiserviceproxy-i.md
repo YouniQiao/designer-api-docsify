@@ -35,7 +35,7 @@ Sends data to the UIServiceExtensionAbility server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record & lt;string, Object & gt; | Yes | Data to be sent to the UIServiceExtensionAbility server. |
+| data | Record&lt;string, Object&gt; | Yes | Data to be sent to the UIServiceExtensionAbility server. |
 
 **Error codes:**
 

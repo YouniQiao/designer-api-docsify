@@ -1,11 +1,13 @@
 # @ohos.app.ability.verticalPanelManager
 
-Defines a vertical domain panel manager.@namespace verticalPanelManager
+Defines a vertical domain panel manager.
+
+@namespace verticalPanelManager
 
 ## Modules to Import
 
 ```TypeScript
-import verticalPanelManager from '@kit.AbilityKit';
+import { verticalPanelManager } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -14,7 +16,7 @@ import verticalPanelManager from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [verticalPanelManager](arkts-ability-verticalpanelmanager-n.md) | Defines a vertical domain panel manager.@namespace verticalPanelManager |
+| [verticalPanelManager](arkts-ability-verticalpanelmanager-n.md) | Defines a vertical domain panel manager. |
 
 <!--Del-->
 ### Types(System API)

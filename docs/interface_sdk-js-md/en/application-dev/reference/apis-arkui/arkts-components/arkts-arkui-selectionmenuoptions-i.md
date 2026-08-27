@@ -65,7 +65,9 @@ Callback invoked when the custom context menu on selection is shown.
 menuType?: MenuType
 ```
 
-Type of the custom context menu on selection.Default value: **MenuType.SELECTION_MENU**
+Type of the custom context menu on selection.
+
+Default value: **MenuType.SELECTION_MENU**
 
 **Type:** [MenuType](../arkts-apis/arkts-arkui-menutype-e.md)
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## checkPreferencesConflicts
@@ -36,7 +36,7 @@ Check preferences conflicts.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string[] & gt; | Promise that resolves with the conflicting field names. |
+| Promise&lt;string[]&gt; | Promise that resolves with the conflicting field names. |
 
 **Error codes:**
 

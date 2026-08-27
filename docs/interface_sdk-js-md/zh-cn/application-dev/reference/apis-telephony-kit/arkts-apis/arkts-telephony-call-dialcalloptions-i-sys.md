@@ -19,7 +19,8 @@
 accountId?: number
 ```
 
-帐户Id。  
+帐户Id。
+
 - 0：卡槽1。  
 - 1：卡槽2。
 
@@ -101,7 +102,8 @@ videoState?: VideoStateType
 xCallType?: XCallType
 ```
 
-XCALL类型。  
+XCALL类型。
+
 **起始版本:** 26.0.0
 
 **类型：** [XCallType](arkts-telephony-call-xcalltype-e-sys.md)

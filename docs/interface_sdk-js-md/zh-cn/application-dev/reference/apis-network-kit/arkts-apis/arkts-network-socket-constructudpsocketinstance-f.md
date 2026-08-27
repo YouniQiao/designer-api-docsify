@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## constructUDPSocketInstance
@@ -22,7 +22,7 @@ function constructUDPSocketInstance(): UDPSocket
 
 | 类型 | 说明 |
 | --- | --- |
-| [UDPSocket](arkts-network-connection-udpsocket-t.md) | 返回一个UDPSocket对象。 |
+| UDPSocket | 返回一个UDPSocket对象。 |
 
 **示例**
 

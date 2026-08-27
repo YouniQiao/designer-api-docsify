@@ -21,7 +21,7 @@ function sendCommand(command: LocationCommand, callback: AsyncCallback<void>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | 是 | 指定目标场景，和将要发送的命令（字符串）。 |
+| command | LocationCommand | 是 | 指定目标场景，和将要发送的命令（字符串）。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -66,13 +66,13 @@ function sendCommand(command: LocationCommand): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | 是 | 指定目标场景，和将要发送的命令（字符串）。 |
+| command | LocationCommand | 是 | 指定目标场景，和将要发送的命令（字符串）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象 |
 
 **错误码：**
 

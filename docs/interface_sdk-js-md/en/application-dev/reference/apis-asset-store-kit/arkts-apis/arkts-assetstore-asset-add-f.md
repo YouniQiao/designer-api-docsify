@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import asset from '@kit.AssetStoreKit';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## add
@@ -12,7 +12,9 @@ import asset from '@kit.AssetStoreKit';
 function add(attributes: AssetMap): Promise<void>
 ```
 
-Adds an asset. This API uses a promise to return the result.To set [IS_PERSISTENT](arkts-assetstore-asset-tag-e.md#is_persistent), the application must have the ohos.permission.STORE_PERSISTENT_DATA permission.
+Adds an asset. This API uses a promise to return the result.
+
+To set [IS_PERSISTENT](arkts-assetstore-asset-tag-e.md#is_persistent), the application must have the ohos.permission.STORE_PERSISTENT_DATA permission.
 
 **Since:** 11
 
@@ -30,7 +32,7 @@ Adds an asset. This API uses a promise to return the result.To set [IS_PERSISTEN
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

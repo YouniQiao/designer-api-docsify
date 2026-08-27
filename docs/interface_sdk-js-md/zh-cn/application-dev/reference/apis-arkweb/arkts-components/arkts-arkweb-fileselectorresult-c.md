@@ -1,6 +1,6 @@
 # FileSelectorResult
 
-FileSelectorResult是ArkWeb组件中用于通知Web组件文件选择结果的类，支持应用层自定义文件选择行为、统一文件选择结果回传机制，适用于应用需要接管文件选择流程的场景，例如拉起系统文件选择器、图库选择器或相机选择器 后，将选中的文件结果返回给Web页面。当Web组件中的HTML页面通过`&lt;input type="file"&gt;`等方式发起文件选择请求时，应用可通过FileSelectorResult将用户选择的文件列表回传给Web组件，完成文件选择 流程。该类主要在`onShowFileSelector`事件回调中使用，使应用能够灵活控制文件选择交互，提升用户体验的一致性。示例代码参考 [onShowFileSelector](arkts-arkweb-web-attribute.md#onshowfileselector)。
+FileSelectorResult是ArkWeb组件中用于通知Web组件文件选择结果的类，支持应用层自定义文件选择行为、统一文件选择结果回传机制，适用于应用需要接管文件选择流程的场景，例如拉起系统文件选择器、图库选择器或相机选择器后，将选中的文件结果返回给Web页面。当Web组件中的HTML页面通过`&lt;input type="file"&gt;`等方式发起文件选择请求时，应用可通过FileSelectorResult将用户选择的文件列表回传给Web组件，完成文件选择流程。该类主要在`onShowFileSelector`事件回调中使用，使应用能够灵活控制文件选择交互，提升用户体验的一致性。示例代码参考[onShowFileSelector](arkts-arkweb-web-attribute.md#onshowfileselector)。
 
 **起始版本：** 9
 
@@ -9,9 +9,6 @@ FileSelectorResult是ArkWeb组件中用于通知Web组件文件选择结果的�
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -46,4 +43,4 @@ handleFileList(fileList: Array<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileList | Array & lt;string & gt; | 是 | 文件URI字符串数组，用于向Web组件传递用户选择的文件路径。 |
+| fileList | Array&lt;string&gt; | 是 | 文件URI字符串数组，用于向Web组件传递用户选择的文件路径。 |

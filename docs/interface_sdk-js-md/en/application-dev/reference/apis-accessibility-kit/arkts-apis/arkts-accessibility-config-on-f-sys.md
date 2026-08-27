@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import config from '@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## on('enabledAccessibilityExtensionListChange')
@@ -12,7 +12,9 @@ import config from '@kit.AccessibilityKit';
 function on(type: 'enabledAccessibilityExtensionListChange', callback: Callback<void>): void
 ```
 
-Adds a listener for changes in the list of enabled accessibility extensions. This API uses an asynchronous callback to return the result.This API must be used together with config.off('enabledAccessibilityExtensionListChange'). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
+Adds a listener for changes in the list of enabled accessibility extensions. This API uses an asynchronous callback to return the result.
+
+This API must be used together with config.off('enabledAccessibilityExtensionListChange'). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
 
 **Since:** 9
 
@@ -54,7 +56,9 @@ config.highContrastText.on((data: boolean) => {
 function on(type: 'installedAccessibilityListChange', callback: Callback<void>): void
 ```
 
-Adds a listener for changes in the list of installed accessibility extensions. This API uses an asynchronous callback to return the result.This API must be used together with config.off('installedAccessibilityListChange'). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
+Adds a listener for changes in the list of installed accessibility extensions. This API uses an asynchronous callback to return the result.
+
+This API must be used together with config.off('installedAccessibilityListChange'). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
 
 **Since:** 12
 

@@ -1,6 +1,8 @@
 # OperResult
 
-The definition of the operate result.@interface OperResult
+The definition of the operate result.
+
+@interface OperResult
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of the operate result.@interface OperResult
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## errorCode

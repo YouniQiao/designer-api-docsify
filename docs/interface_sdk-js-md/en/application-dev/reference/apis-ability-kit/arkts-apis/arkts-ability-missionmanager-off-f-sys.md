@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import missionManager from '@kit.AbilityKit';
+import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## off('mission')
@@ -151,7 +151,7 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -312,7 +312,7 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

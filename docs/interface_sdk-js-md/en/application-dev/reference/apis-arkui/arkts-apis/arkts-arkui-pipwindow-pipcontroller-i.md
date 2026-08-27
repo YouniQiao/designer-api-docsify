@@ -1,6 +1,8 @@
 # PiPController
 
-Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md) to create a PiPController instance.
+Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.
+
+Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md) to create a PiPController instance.
 
 **Since:** 11
 
@@ -9,7 +11,7 @@ Implements a PiP controller that starts, stops, or updates a PiP window and regi
 ## Modules to Import
 
 ```TypeScript
-import PiPWindow from '@kit.ArkUI';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## getPiPSettingSwitch
@@ -30,7 +32,7 @@ Obtains the status of the auto-start PiP switch in Settings. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the auto-start PiP switch status. **true** if enabled, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the auto-start PiP switch status. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
@@ -122,7 +124,7 @@ Check whether the PiP window is active. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the PiP window status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If this API is called when the PiP lifecycle is not [STARTED]{ |
+| Promise&lt;boolean&gt; | Promise used to return the PiP window status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If this API is called when the PiP lifecycle is not [STARTED]{ |
 
 **Error codes:**
 
@@ -335,7 +337,7 @@ Subscribes to PiP state events. To avoid potential memory leaks, you are advised
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The value is fixed at **'stateChange'**, indicating that the PiP state changes. |
-| callback | (state: PiPState, reason: string) = & gt; void | Yes | Callback used to return the result, which includes the following information:   - **state**: [PiPState](arkts-arkui-pipwindow-pipstate-e.md), indicating the new PiP state.    - **reason**: a string indicating the reason for the state change.    Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, the value of **reason** is always **0**, which can be ignored.Since <!--RP1-->OpenHarmony 6.1<!--RP1End-->, **reason** indicates the reason for switching the current lifecycle. The options are as follows:    **"requestStart"**: An application calls the **startPip** API.    **"autoStart"**: The application is automatically started in PiP mode when it is switched to the background.    **"requestDelete"**: The application calls the **stopPip** API.    **"panelActionDelete"**: The user taps the close button in the PiP window.    **"dragDelete"**: The user drags the PiP window to delete.    **"panelActionRestore"**: The user taps the restore button in the PiP window (or taps the PiP window if there is no restore button) to restore the PiP window.    **"other"**: Other reasons, such as the current window or application's main window being closed due to the startup of a new PiP window. |
+| callback | (state: PiPState, reason: string) =&gt; void | Yes | Callback used to return the result, which includes the following information:   - **state**: [PiPState](arkts-arkui-pipwindow-pipstate-e.md), indicating the new PiP state.    - **reason**: a string indicating the reason for the state change.    Before <!--RP1-->OpenHarmony 6.1<!--RP1End-->, the value of **reason** is always **0**, which can be ignored.Since <!--RP1-->OpenHarmony 6.1<!--RP1End-->, **reason** indicates the reason for switching the current lifecycle. The options are as follows:    **"requestStart"**: An application calls the **startPip** API.    **"autoStart"**: The application is automatically started in PiP mode when it is switched to the background.    **"requestDelete"**: The application calls the **stopPip** API.    **"panelActionDelete"**: The user taps the close button in the PiP window.    **"dragDelete"**: The user drags the PiP window to delete.    **"panelActionRestore"**: The user taps the restore button in the PiP window (or taps the PiP window if there is no restore button) to restore the PiP window.    **"other"**: Other reasons, such as the current window or application's main window being closed due to the startup of a new PiP window. |
 
 **Examples**
 
@@ -554,7 +556,9 @@ this.pipController.on('activeStatusChange', callback);
 setAutoStartEnabled(enable: boolean): void
 ```
 
-Sets whether to automatically start the PiP window when the application's main window which can start the PiP window transitions to the background. By default, the PiP window is not automatically started.If the XComponent approach is used to implement PiP and the **Navigation** component is used for route management, the system caches the top stack information with the specified navigation ID upon the first call of **setAutoStartEnabled(true)**.
+Sets whether to automatically start the PiP window when the application's main window which can start the PiP window transitions to the background. By default, the PiP window is not automatically started.
+
+If the XComponent approach is used to implement PiP and the **Navigation** component is used for route management, the system caches the top stack information with the specified navigation ID upon the first call of **setAutoStartEnabled(true)**.
 
 **Since:** 11
 
@@ -628,7 +632,7 @@ Starts a PiP window. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -670,7 +674,7 @@ Stops a PiP window. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -715,7 +719,7 @@ Updates the PiP node content. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

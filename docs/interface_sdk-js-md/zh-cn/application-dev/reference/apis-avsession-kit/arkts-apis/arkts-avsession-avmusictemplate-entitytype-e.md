@@ -1,6 +1,8 @@
 # EntityType
 
-表示媒体资源类型的枚举。@enum { number }
+表示媒体资源类型的枚举。
+
+@enum { number }
 
 **起始版本：** 23
 

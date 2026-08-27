@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## identity
@@ -20,7 +20,11 @@ import policy from '@kit.NetworkKit';
 identity: string
 ```
 
-计量蜂窝网络中配合simId联合使用。以太网和wifi网络单独使用。用于标记类型。
+计量蜂窝网络中配合simId联合使用。
+
+以太网和wifi网络单独使用。
+
+用于标记类型。
 
 **类型：** string
 
@@ -52,7 +56,9 @@ netType: NetBearType
 simId: string
 ```
 
-计量蜂窝网络的SIM卡的标识值。以太网和wifi网络不会用到。
+计量蜂窝网络的SIM卡的标识值。
+
+以太网和wifi网络不会用到。
 
 **类型：** string
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## createNdefMessage
@@ -30,7 +30,7 @@ Creates an NDEF message from raw byte data. The data must comply with the NDEF r
 
 | Type | Description |
 | --- | --- |
-| [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | NDEF message created. For details, see *NFCForum-TS-NDEF_1.0*. |
+| NdefMessage | NDEF message created. For details, see *NFCForum-TS-NDEF_1.0*. |
 
 **Error codes:**
 
@@ -63,7 +63,7 @@ Creates an NDEF message from the NDEF records list.
 
 | Type | Description |
 | --- | --- |
-| [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | NDEF message created. For details, see *NFCForum-TS-NDEF_1.0*. |
+| NdefMessage | NDEF message created. For details, see *NFCForum-TS-NDEF_1.0*. |
 
 **Error codes:**
 

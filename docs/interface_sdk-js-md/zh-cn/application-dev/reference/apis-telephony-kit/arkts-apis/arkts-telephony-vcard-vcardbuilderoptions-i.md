@@ -9,7 +9,7 @@ VCard版本和编码信息。
 ## 导入模块
 
 ```TypeScript
-import vcard from '@kit.TelephonyKit';
+import { vcard } from '@kit.TelephonyKit';
 ```
 
 ## cardType

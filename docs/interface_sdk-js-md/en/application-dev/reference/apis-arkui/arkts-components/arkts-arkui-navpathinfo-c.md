@@ -42,11 +42,20 @@ Creates a **NavPathInfo** object.
 isEntry?: boolean
 ```
 
-Whether the navigation destination page is the entry page.  
-**true**: yes; **false**: no Default value: **false**The value of this parameter is reviewed or reset under the following conditions:
+Whether the navigation destination page is the entry page.
+
+**true**: yes; **false**: no
+
+Default value: **false**
+
+The value of this parameter is reviewed or reset under the following conditions:
+
 1. A global back event is triggered on the current navigation destination page.
-2. The application is switched to the background.  
-**NOTE：**The navigation destination page serving as an entry does not respond to the in-app global back events; instead, it directly triggers the global back event between applications.
+2. The application is switched to the background.
+
+**NOTE：**
+
+The navigation destination page serving as an entry does not respond to the in-app global back events; instead, it directly triggers the global back event between applications.
 
 **Type:** boolean
 
@@ -65,6 +74,7 @@ name: string
 ```
 
 Name of the navigation destination page. The name matches the name in the following route tables:
+
 1. Custom route table, which is passed via the [navDestination](arkts-arkui-navigation-attribute.md#navdestination) method.
 2. System route table, which is set by **name** in **routerMap**. For details, please refer to [Example 2: Using NavPathStack APIs](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-2-using-navpathstack-apis).
 

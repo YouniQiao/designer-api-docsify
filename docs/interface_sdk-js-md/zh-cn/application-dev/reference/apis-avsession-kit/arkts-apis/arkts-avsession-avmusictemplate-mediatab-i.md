@@ -1,6 +1,8 @@
 # MediaTab
 
-媒体标签页的定义。@interface MediaTab
+媒体标签页的定义。
+
+@interface MediaTab
 
 **起始版本：** 23
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## extraDataJson

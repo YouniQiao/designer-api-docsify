@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import asset from '@kit.AssetStoreKit';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## query
@@ -12,7 +12,9 @@ import asset from '@kit.AssetStoreKit';
 function query(query: AssetMap): Promise<Array<AssetMap>>
 ```
 
-Queries one or more assets. If user authentication is required for the access to the asset, call [asset.preQuery](arkts-assetstore-asset-prequery-f.md) before this API and call [asset.postQuery](arkts-assetstore-asset-postquery-f.md) after this API. For details about the development procedure, see [Development Guidance](../../../security/AssetStoreKit/asset-js-query-auth.md). This API uses a promise to return the result.If no asset is found, an exception indicating that no asset is found is thrown instead of returning an empty query result list.
+Queries one or more assets. If user authentication is required for the access to the asset, call [asset.preQuery](arkts-assetstore-asset-prequery-f.md) before this API and call [asset.postQuery](arkts-assetstore-asset-postquery-f.md) after this API. For details about the development procedure, see [Development Guidance](../../../security/AssetStoreKit/asset-js-query-auth.md). This API uses a promise to return the result.
+
+If no asset is found, an exception indicating that no asset is found is thrown instead of returning an empty query result list.
 
 **Since:** 11
 

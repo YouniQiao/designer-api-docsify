@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addLcdJumpCount
@@ -32,13 +32,13 @@ addLcdJumpCount(ids: Array<number>): Promise<Array<number>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ids | Array & lt;number & gt; | 是 | [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)中的fileId集合。 |
+| ids | Array&lt;number&gt; | 是 | [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)中的fileId集合。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | 更新失败的自定义用户统计行为数据中的fileId。 |
+| Promise&lt;Array&lt;number&gt;&gt; | 更新失败的自定义用户统计行为数据中的fileId。 |
 
 **错误码：**
 
@@ -66,13 +66,13 @@ addShareCount(ids: Array<number>): Promise<Array<number>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ids | Array & lt;number & gt; | 是 | [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)中的fileId集合。 |
+| ids | Array&lt;number&gt; | 是 | [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md)中的fileId集合。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | 更新失败的自定义用户统计行为数据中的fileId。 |
+| Promise&lt;Array&lt;number&gt;&gt; | 更新失败的自定义用户统计行为数据中的fileId。 |
 
 **错误码：**
 
@@ -106,7 +106,7 @@ createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -171,9 +171,6 @@ static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordM
 **示例**
 
 ```TypeScript
-import { common } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
 async function example(context: Context) {
   console.info('getCustomRecordManagerInstance');
   try {
@@ -237,7 +234,7 @@ async function example(context: Context) {
     let record = await fetchResult.getFirstObject();
     console.info('record file id is ' + record.fileId);
   }).catch((err: BusinessError) => {
-    console.error('getCustomRecords fail with error: ${err.code}, ${err.message}');
+    console.error(`getCustomRecords fail with error: ${err.code}, ${err.message}`);
   });
 }
 ```
@@ -266,7 +263,7 @@ removeCustomRecords(optionCheck: FetchOptions): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -323,7 +320,7 @@ setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<nu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | 更新失败的自定义用户统计行为数据中的fileId。 |
+| Promise&lt;Array&lt;number&gt;&gt; | 更新失败的自定义用户统计行为数据中的fileId。 |
 
 **错误码：**
 
@@ -341,14 +338,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 async function example(context: Context) {
   console.info('setCustomRecords');
   let crManager = photoAccessHelper.PhotoAssetCustomRecordManager.getCustomRecordManagerInstance(context);
-  let UpdateArray: Array<photoAccessHelper.PhotoAssetCustomRecord> = [
+  let updateArray: Array<photoAccessHelper.PhotoAssetCustomRecord> = [
     {fileId:1,shareCount:2,lcdJumpCount:3},
     {fileId:2,shareCount:2,lcdJumpCount:3}
   ];
-  crManager.setCustomRecords(UpdateArray).then((failIds) => {
+  crManager.setCustomRecords(updateArray).then((failIds) => {
     console.info('setCustomRecords successful');
   }).catch((err: BusinessError) => {
-    console.error('setCustomRecords file with err: ${err.code}, ${err.message}');
+    console.error(`setCustomRecords file with err: ${err.code}, ${err.message}`);
   });
 }
 ```

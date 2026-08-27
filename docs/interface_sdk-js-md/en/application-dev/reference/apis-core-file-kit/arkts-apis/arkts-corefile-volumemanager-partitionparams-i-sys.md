@@ -11,7 +11,7 @@ Partition creation options.
 ## Modules to Import
 
 ```TypeScript
-import volumeManager from '@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## endSector

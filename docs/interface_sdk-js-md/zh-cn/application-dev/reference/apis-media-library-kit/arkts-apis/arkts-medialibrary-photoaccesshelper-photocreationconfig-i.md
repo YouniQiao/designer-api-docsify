@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## fileNameExtension
@@ -66,7 +66,8 @@ subtype?: PhotoSubtype
 title?: string
 ```
 
-图片或者视频的标题，不传入时由系统生成。参数规格为：  
+图片或者视频的标题，不传入时由系统生成。参数规格为：
+
 - 不应包含扩展名。  
 - 文件名字符串长度为1~255（资产文件名为标题+扩展名）。  
 - 不允许出现的非法英文字符，包括：. \ / : * ? " ' ` &lt; &gt; | { } [ ]

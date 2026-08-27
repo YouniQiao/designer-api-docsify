@@ -9,7 +9,7 @@ PhotoViewPicker provides APIs for the user to select images and videos. Before u
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## select
@@ -38,13 +38,13 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [PhotoSelectOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-picker-photoselectoptions-c.md) | No | Options for selecting files. If this parameter is not specified, up to 5 0 images and videos are selected by default. |
+| option | PhotoSelectOptions | No | Options for selecting files. If this parameter is not specified, up to 5 0 images and videos are selected by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PhotoSelectResult & gt; | Promise used to return information about the images or videos selected. |
+| Promise&lt;PhotoSelectResult&gt; | Promise used to return information about the images or videos selected. |
 
 **Error codes:**
 
@@ -103,7 +103,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [PhotoSelectOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-picker-photoselectoptions-c.md) | Yes | Options for selecting images or videos. |
+| option | PhotoSelectOptions | Yes | Options for selecting images or videos. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return information about the images or videos selected. |
 
 **Error codes:**

@@ -9,9 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## activeMatchOrdinal
@@ -36,7 +33,11 @@ activeMatchOrdinal: number
 isDoneCounting: boolean
 ```
 
-当次页内查找操作是否结束。true表示当次页内查找操作结束，false表示未结束。该方法可能回调多次，直到isDoneCounting为true。
+当次页内查找操作是否结束。
+
+true表示当次页内查找操作结束，false表示未结束。
+
+该方法可能回调多次，直到isDoneCounting为true。
 
 **类型：** boolean
 

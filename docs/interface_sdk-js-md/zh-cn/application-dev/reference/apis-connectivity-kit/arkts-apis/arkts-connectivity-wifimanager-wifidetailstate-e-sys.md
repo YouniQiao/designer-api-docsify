@@ -1,6 +1,6 @@
 # WifiDetailState（系统接口）
 
-WLAN详细状态。 @enum { number } WifiDetailState
+WLAN详细状态。@enum { number } WifiDetailState
 
 **起始版本：** 12
 

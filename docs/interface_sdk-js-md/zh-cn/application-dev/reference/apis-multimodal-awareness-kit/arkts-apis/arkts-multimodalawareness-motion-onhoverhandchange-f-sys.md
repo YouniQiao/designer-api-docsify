@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import motion from '@kit.MultimodalAwarenessKit';
+import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## onHoverHandChange
@@ -26,7 +26,7 @@ function onHoverHandChange(detectionArea: HoverHandDetectionArea, callback: Call
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| detectionArea | [HoverHandDetectionArea](arkts-multimodalawareness-motion-hoverhanddetectionarea-i-sys.md) | 是 | 悬停手势矩形检测区域。 重复调用将覆盖之前设置的检测区域。 若检测区域超出屏幕边界，默认检测重叠区域。 |
+| detectionArea | [HoverHandDetectionArea](arkts-multimodalawareness-motion-hoverhanddetectionarea-i-sys.md) | 是 | 悬停手势矩形检测区域。重复调用将覆盖之前设置的检测区域。若检测区域超出屏幕边界，默认检测重叠区域。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md)&gt; | 是 | 回调函数，返回悬停手势动作。 |
 
 **错误码：**
@@ -60,8 +60,8 @@ function onHoverHandChange(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| detectionArea | [HoverHandDetectionArea](arkts-multimodalawareness-motion-hoverhanddetectionarea-i-sys.md) | 是 | 悬停手势矩形检测区域。 重复调用将覆盖之前设置的检测区域。 若检测区域超出屏幕边界，默认检测重叠区域。 |
-| duration | number | 是 | 检测时长。单位：秒，取值范围为[1,10]的整数。 时长到期后自动结束订阅，需重新调用以重启检测。 悬停手势事件为高功耗事件，建议开发者根据需要设置时长。 |
+| detectionArea | [HoverHandDetectionArea](arkts-multimodalawareness-motion-hoverhanddetectionarea-i-sys.md) | 是 | 悬停手势矩形检测区域。重复调用将覆盖之前设置的检测区域。若检测区域超出屏幕边界，默认检测重叠区域。 |
+| duration | number | 是 | 检测时长。单位：秒，取值范围为[1,10]的整数。时长到期后自动结束订阅，需重新调用以重启检测。悬停手势事件为高功耗事件，建议开发者根据需要设置时长。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[HoverHandAction](arkts-multimodalawareness-motion-hoverhandaction-e-sys.md)&gt; | 是 | 回调函数，返回悬停手势动作。 |
 
 **错误码：**

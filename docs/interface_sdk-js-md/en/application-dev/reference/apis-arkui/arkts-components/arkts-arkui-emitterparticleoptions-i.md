@@ -23,7 +23,10 @@ Defines parameters of particles used by emitters.
 config: ParticleConfigs[PARTICLE]
 ```
 
-Configuration of the particle type.The value type of **config** is subject to the value of **type**.
+Configuration of the particle type.
+
+The value type of **config** is subject to the value of **type**.
+
 1. If the type is ParticleType.POINT, the config type is [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md).
 2. If the type is ParticleType.IMAGE, the config type is [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md).
 
@@ -61,7 +64,9 @@ Number of particles. The value is greater than or equal to -1. The value **-1** 
 lifetime?: number
 ```
 
-Lifetime of a single particle. The default value is **1000** (that is, 1000 ms, 1s). The value is greater than or equal to -1. The value **-1** indicates that the lifetime of the particle is infinite. If the value specified is less than **-1**, the default value is used.Note: If you do not want the animation to keep playing, you are advised not to set the lifetime to –1, which may greatly affect the performance.
+Lifetime of a single particle. The default value is **1000** (that is, 1000 ms, 1s). The value is greater than or equal to -1. The value **-1** indicates that the lifetime of the particle is infinite. If the value specified is less than **-1**, the default value is used.
+
+Note: If you do not want the animation to keep playing, you are advised not to set the lifetime to –1, which may greatly affect the performance.
 
 **Type:** number
 

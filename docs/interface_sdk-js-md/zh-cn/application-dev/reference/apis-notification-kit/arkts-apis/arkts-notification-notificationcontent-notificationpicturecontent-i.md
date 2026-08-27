@@ -26,7 +26,7 @@
 briefText: string
 ```
 
-通知概要内容，是对通知内容的总结，不在通知中心中显示。 不可为空字符串，大小不超过1024字节，超出部分会被截断。
+通知概要内容，是对通知内容的总结，不在通知中心中显示。不可为空字符串，大小不超过1024字节，超出部分会被截断。
 
 **类型：** string
 
@@ -54,7 +54,7 @@ expandedTitle: string
 picture: image.PixelMap
 ```
 
-通知展开后显示的图片内容。图标像素的总字节数不能超过2MB（图标像素的总字节数通过 [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取）。
+通知展开后显示的图片内容。图标像素的总字节数不能超过2MB（图标像素的总字节数通过[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取）。
 
 **类型：** image.PixelMap
 

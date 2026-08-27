@@ -25,7 +25,7 @@ new <K, V>(iterable?: Iterable<readonly [K, V]> | null): Map<K, V>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | Iterable & lt;readonly [K, V] & gt; \ | null | No |  |
+| iterable | Iterable&lt;readonly [K, V]&gt; \| null | No |  |
 
 **Return value:**
 

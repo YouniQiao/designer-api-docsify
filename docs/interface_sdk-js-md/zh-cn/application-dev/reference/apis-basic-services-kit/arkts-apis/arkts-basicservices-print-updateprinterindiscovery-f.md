@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## updatePrinterInDiscovery
@@ -30,7 +30,7 @@ function updatePrinterInDiscovery(printerInformation: PrinterInformation): Promi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -63,7 +63,7 @@ let testCapability : print.PrinterCapabilities = {
 };
 
 let printerInformation : print.PrinterInformation = {
-    printerId : 'testPrinterId',
+    printerId : 'testPrinterId', // printerId可通过on('printerChange')回调获取
     printerName : 'testPrinterName',
     printerStatus : 0,
     description : 'testDesc',

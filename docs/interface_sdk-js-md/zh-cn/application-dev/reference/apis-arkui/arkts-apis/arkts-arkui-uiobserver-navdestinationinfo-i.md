@@ -9,7 +9,7 @@ NavDestination组件信息，由系统返回给开发者。
 ## 导入模块
 
 ```TypeScript
-import uiObserver from '@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## index
@@ -18,7 +18,7 @@ import uiObserver from '@kit.ArkUI';
 index: number
 ```
 
-NavDestination在页面栈中的索引。 取值应≥0。
+NavDestination在页面栈中的索引。取值应≥0。
 
 **类型：** number
 
@@ -36,7 +36,7 @@ NavDestination在页面栈中的索引。 取值应≥0。
 mode?: NavDestinationMode
 ```
 
-NavDestination类型。 默认值：NavDestinationMode.Standard。
+NavDestination类型。默认值：NavDestinationMode.Standard。
 
 **类型：** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
 

@@ -1,6 +1,7 @@
 # Gauge
 
 数据量规图表组件，用于将数据展示为环形图表。适用于展示任务完成进度、性能指标、数据占比等场景，支持自定义颜色、起止角度、指针样式、阴影效果等多种视觉配置，能够直观地呈现数据状态，提升用户对数据的理解和交互体验。
+
 > **说明：** > > - 该组件从API版本26.0.0开始支持WithTheme。
 
 ## 子组件
@@ -44,6 +45,10 @@ Gauge(options: GaugeOptions)
 
 | 名称 | 说明 |
 | --- | --- |
+| [GaugeConfiguration](arkts-arkui-gaugeconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。 |
+| [GaugeIndicatorOptions](arkts-arkui-gaugeindicatoroptions-i.md) | 数据量规图表指针选项。 |
+| [GaugeOptions](arkts-arkui-gaugeoptions-i.md) | 数据量规图表选项。 |
+| [GaugeShadowOptions](arkts-arkui-gaugeshadowoptions-i.md) | GaugeShadowOptions继承自[MultiShadowOptions](arkts-arkui-multishadowoptions-i.md)，具有MultiShadowOptions的全部属性。 |
 
 ## 示例
 

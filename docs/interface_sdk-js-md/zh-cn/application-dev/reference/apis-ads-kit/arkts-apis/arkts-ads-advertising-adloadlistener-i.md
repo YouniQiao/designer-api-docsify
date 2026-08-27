@@ -9,10 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit.AdComponent';
-import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
-import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
-import advertising from '@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## onAdLoadFailure
@@ -84,7 +81,7 @@ onAdLoadSuccess(ads: Array<Advertisement>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ads | Array & lt;Advertisement & gt; | 是 | 广告数据。 |
+| ads | Array&lt;Advertisement&gt; | 是 | 广告数据。 |
 
 **示例**
 

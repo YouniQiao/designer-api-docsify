@@ -90,7 +90,7 @@ Delete dialing number information on SIM card.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the delIccDiallingNumbers. |
+| Promise&lt;void&gt; | The promise returned by the delIccDiallingNumbers. |
 
 **Error codes:**
 

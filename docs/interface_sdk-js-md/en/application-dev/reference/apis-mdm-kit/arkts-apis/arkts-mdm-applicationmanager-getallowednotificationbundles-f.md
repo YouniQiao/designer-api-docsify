@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## getAllowedNotificationBundles
@@ -33,7 +33,7 @@ Obtains the list of applications that are allowed to send notifications.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Array of bundle names of applications that are allowed to send notifications. |
+| Array&lt;string&gt; | Array of bundle names of applications that are allowed to send notifications. |
 
 **Error codes:**
 

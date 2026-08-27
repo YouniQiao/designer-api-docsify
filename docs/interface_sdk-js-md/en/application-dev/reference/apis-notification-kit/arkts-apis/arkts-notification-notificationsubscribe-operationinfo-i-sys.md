@@ -11,7 +11,7 @@ Defines cross-device collaborative operation information.
 ## Modules to Import
 
 ```TypeScript
-import notificationSubscribe from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## actionName
@@ -52,7 +52,8 @@ Index of the non-live view button or live view auxiliary area that the user taps
 operationType?: number
 ```
 
-Operation type.  
+Operation type.
+
 - **0**: The user taps the non-live view.  
 - **1**: The user taps the non-live view button.  
 - **32**: The user taps the live view.  

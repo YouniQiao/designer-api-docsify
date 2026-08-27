@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## autoFlip
@@ -18,7 +18,8 @@ import media from '@kit.MediaKit';
 autoFlip?: boolean
 ```
 
-当视频具有镜像属性（垂直翻转或水平翻转）时，自动翻转缩略图。如果该值为false，则返回的缩略图将不会翻转。  
+当视频具有镜像属性（垂直翻转或水平翻转）时，自动翻转缩略图。如果该值为false，则返回的缩略图将不会翻转。
+
 **System API**: This is a system API.
 
 **类型：** boolean
@@ -35,7 +36,8 @@ autoFlip?: boolean
 colorFormat?: PixelFormat
 ```
 
-输出的缩略图颜色格式。  
+输出的缩略图颜色格式。
+
 **System API**: This is a system API.
 
 **类型：** [PixelFormat](arkts-media-media-pixelformat-e-sys.md)

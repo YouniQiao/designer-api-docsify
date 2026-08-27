@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import curves from '@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## springMotion
@@ -32,7 +32,7 @@ Creates a spring animation curve. If multiple spring animations are applied to t
 
 | Type | Description |
 | --- | --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | Curve. |
+| ICurve | Curve. |
 
 **Examples**
 

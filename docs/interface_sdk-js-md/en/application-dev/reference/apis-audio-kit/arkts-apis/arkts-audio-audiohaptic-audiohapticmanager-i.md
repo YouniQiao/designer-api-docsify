@@ -9,7 +9,7 @@ Manages the audio-haptic feature. Before calling any API in AudioHapticManager, 
 ## Modules to Import
 
 ```TypeScript
-import audioHaptic from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## createPlayer
@@ -97,7 +97,7 @@ Registers audio and haptic resources via URIs. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise, which returns the registered resource ID. |
+| Promise&lt;number&gt; | Promise, which returns the registered resource ID. |
 
 **Error codes:**
 
@@ -152,7 +152,7 @@ Registers audio and haptic resources via file descriptors. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise, which returns the registered resource ID. |
+| Promise&lt;number&gt; | Promise, which returns the registered resource ID. |
 
 **Examples**
 
@@ -290,7 +290,7 @@ Unregisters an audio-haptic source. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

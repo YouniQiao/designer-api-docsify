@@ -9,12 +9,7 @@ In the following API examples, you must first use [getSetting](arkts-ime-inputme
 ## Modules to Import
 
 ```TypeScript
-import inputMethod from '@kit.IMEKit';
-import inputMethodEngine from '@kit.IMEKitEngine';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
-import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
-import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## enableInputMethod
@@ -68,7 +63,7 @@ enableInputMethodSafely();
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -137,7 +132,7 @@ Change the enabled state of an input method of a specified user.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 

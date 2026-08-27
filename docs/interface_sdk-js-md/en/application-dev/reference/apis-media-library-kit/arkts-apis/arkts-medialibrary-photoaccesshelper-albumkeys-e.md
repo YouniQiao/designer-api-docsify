@@ -36,7 +36,10 @@ Name of the album.
 ALBUM_LPATH = 'lpath'
 ```
 
-Virtual path of the album.Albums and their virtual path values:  
+Virtual path of the album.
+
+Albums and their virtual path values:
+
 - Camera application album: '/DCIM/Camera'  
 - Screenshot application album: '/Pictures/Screenshots'  
 - Screen recording application album: '/Pictures/Screenrecords'  

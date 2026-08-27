@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import taskpool from '@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## execute
@@ -12,7 +12,7 @@ import taskpool from '@kit.ArkTS';
 function execute(func: Function, ...args: Object[]): Promise<Object>
 ```
 
-将待执行的函数放入taskpool的内部任务队列，函数不会立即执行，而是等待分发到工作线程执行。在当前执行模式下， 不支持取消任务。使用Promise异步回调。
+将待执行的函数放入taskpool的内部任务队列，函数不会立即执行，而是等待分发到工作线程执行。在当前执行模式下，不支持取消任务。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -24,15 +24,15 @@ function execute(func: Function, ...args: Object[]): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| func | Function | 是 | 待执行的函数，必须使用 [@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰。支持的函数返回值类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。 |
-| args | Object[] | 是 | 任务执行函数的入参，支持的参数类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为**undefined**。 |
+| func | Function | 是 | 待执行的函数，必须使用[@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰。支持的函数返回值类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。 |
+| args | Object[] | 是 | 任务执行函数的入参，支持的参数类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为**undefined**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;unknown & gt; | <br>**适用版本：** 9 - 11 |
-| Promise & lt;Object & gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11+ |
+| Promise&lt;unknown&gt; | <br>**适用版本：** 9 - 11 |
+| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11+ |
 
 **错误码：**
 
@@ -75,14 +75,14 @@ function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| func | (...args: A) = & gt; R \ | Promise & lt;R & gt; | 是 | 待执行的函数，必须使用 [@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰，支持的函数返回值类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。 |
-| args | A | 是 | 任务执行函数的入参，支持的参数类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为**undefined**。 |
+| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | 是 | 待执行的函数，必须使用[@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰，支持的函数返回值类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。 |
+| args | A | 是 | 任务执行函数的入参，支持的参数类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为**undefined**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;R & gt; | Promise对象，返回任务函数的执行结果。 |
+| Promise&lt;R&gt; | Promise对象，返回任务函数的执行结果。 |
 
 **错误码：**
 
@@ -147,15 +147,15 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 | 需要在任务池中执行的任务。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 等待执行的任务的优先级，默认值为 **taskpool.Priority.MEDIUM**。 |
+| task | Task | 是 | 需要在任务池中执行的任务。 |
+| priority | Priority | 否 | 等待执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;unknown & gt; | <br>**适用版本：** 9 - 17 |
-| Promise & lt;Object & gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11+ |
+| Promise&lt;unknown&gt; | <br>**适用版本：** 9 - 17 |
+| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。<br>**适用版本：** 11+ |
 
 **错误码：**
 
@@ -231,7 +231,7 @@ async function asyncRunner2() {
 function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>
 ```
 
-将创建好的泛型任务放入taskpool的内部任务队列，校验任务的参数类型和返回值类型。使用Promise异步回调。 execute任务的校验是结合**new GenericsTask**一起用的，参数、返回值类型需与**new GenericsTask**中的类型保持一致。
+将创建好的泛型任务放入taskpool的内部任务队列，校验任务的参数类型和返回值类型。使用Promise异步回调。execute任务的校验是结合**new GenericsTask**一起用的，参数、返回值类型需与**new GenericsTask**中的类型保持一致。
 
 **起始版本：** 13
 
@@ -244,13 +244,13 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 | 需要在任务池中执行的泛型任务。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 等待执行的任务的优先级，默认值为 **taskpool.Priority.MEDIUM**。 |
+| priority | Priority | 否 | 等待执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;R & gt; | Promise对象，返回任务函数的执行结果。 |
+| Promise&lt;R&gt; | Promise对象，返回任务函数的执行结果。 |
 
 **错误码：**
 
@@ -291,7 +291,7 @@ taskpool.execute<[number], number>(task3, taskpool.Priority.HIGH).then((value: n
 function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 ```
 
-将创建好的任务组放入taskpool内部任务队列，任务组中的任务不会立即执行，而是等待分发到工作线程执行。任务组中任务全部执行完成后， 结果数组统一返回。此模式适用于执行关联任务。使用Promise异步回调。
+将创建好的任务组放入taskpool内部任务队列，任务组中的任务不会立即执行，而是等待分发到工作线程执行。任务组中任务全部执行完成后，结果数组统一返回。此模式适用于执行关联任务。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -304,13 +304,13 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | 是 | 需要在任务池中执行的任务组。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 等待执行的任务组的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | Priority | 否 | 等待执行的任务组的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Object[] & gt; | Promise对象数组，返回任务函数的执行结果。 |
+| Promise&lt;Object[]&gt; | Promise对象数组，返回任务函数的执行结果。 |
 
 **错误码：**
 
@@ -391,14 +391,14 @@ function execute(task: Task, configs: Configs): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 | 需要在任务池中执行的任务。 |
+| task | Task | 是 | 需要在任务池中执行的任务。 |
 | configs | [Configs](arkts-arkts-taskpool-configs-i.md) | 是 | 该参数可以设置超时时间和任务优先级。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Object & gt; | Promise对象，返回任务函数的执行结果。 |
+| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。 |
 
 **错误码：**
 
@@ -443,7 +443,7 @@ try {
 function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: Configs): Promise<R>
 ```
 
-将创建好的泛型任务放入taskpool的内部任务队列，使用Promise异步回调。 execute任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。
+将创建好的泛型任务放入taskpool的内部任务队列，使用Promise异步回调。execute任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。
 
 > **说明：**
 > 
@@ -486,7 +486,7 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;R & gt; | Promise对象，返回任务函数的执行结果。 |
+| Promise&lt;R&gt; | Promise对象，返回任务函数的执行结果。 |
 
 **错误码：**
 
@@ -531,7 +531,7 @@ try {
 function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 ```
 
-将创建好的任务组放入taskpool内部任务队列，任务组中的任务不会立即执行，而是等待分发到工作线程执行。任务组中任务全部执行完成后，结果数组统一返回。此模式适用于执行关联任务。使用Promise异步回调。 configs配置里可以指定任务组执行的超时时间和优先级。指定的超时时间到了，但是任务组还未完成，则会抛出任务组超时的异常信息。
+将创建好的任务组放入taskpool内部任务队列，任务组中的任务不会立即执行，而是等待分发到工作线程执行。任务组中任务全部执行完成后，结果数组统一返回。此模式适用于执行关联任务。使用Promise异步回调。configs配置里可以指定任务组执行的超时时间和优先级。指定的超时时间到了，但是任务组还未完成，则会抛出任务组超时的异常信息。
 
 > **说明：**
 > 
@@ -556,7 +556,7 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Object[] & gt; | Promise对象数组，返回任务函数的执行结果。 |
+| Promise&lt;Object[]&gt; | Promise对象数组，返回任务函数的执行结果。 |
 
 **错误码：**
 

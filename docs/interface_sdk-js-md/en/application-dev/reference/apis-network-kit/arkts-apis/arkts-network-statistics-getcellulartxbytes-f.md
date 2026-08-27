@@ -75,7 +75,7 @@ Obtains the total uplink traffic (in bytes) of the NIC corresponding to the curr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the total uplink traffic (in bytes) consumed on the cellular network since the last startup to the current moment. |
+| Promise&lt;number&gt; | Promise used to return the total uplink traffic (in bytes) consumed on the cellular network since the last startup to the current moment. |
 
 **Error codes:**
 

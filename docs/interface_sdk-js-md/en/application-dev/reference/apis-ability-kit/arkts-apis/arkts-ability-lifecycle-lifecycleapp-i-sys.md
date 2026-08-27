@@ -1,6 +1,8 @@
 # LifecycleApp
 
-interface of app lifecycle.@interface LifecycleApp
+interface of app lifecycle.
+
+@interface LifecycleApp
 
 **Since:** 7
 

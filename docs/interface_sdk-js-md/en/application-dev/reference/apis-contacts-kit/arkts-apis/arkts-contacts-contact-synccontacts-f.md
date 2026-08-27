@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## syncContacts
@@ -12,7 +12,9 @@ import contact from '@kit.ContactsKit';
 function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<number>>
 ```
 
-Synchronizes multiple contacts to the contacts database in batches.A maximum of 400 contacts can be synchronized at a time. The caller must be running in the foreground.
+Synchronizes multiple contacts to the contacts database in batches.
+
+A maximum of 400 contacts can be synchronized at a time. The caller must be running in the foreground.
 
 **Since:** 26.0.0
 
@@ -28,7 +30,7 @@ Synchronizes multiple contacts to the contacts database in batches.A maximum of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Indicates the context of the application or capability. |
+| context | Context | Yes | Indicates the context of the application or capability. |
 | mode | [ContactSyncMode](arkts-contacts-contact-contactsyncmode-e.md) | Yes | Indicates the type of contact synchronization mode. |
 | progress | [ContactSyncProgress](arkts-contacts-contact-contactsyncprogress-i.md) | Yes | Indicates the information about the contact synchronization progress. |
 | contacts | Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the array of contact information to be synchronized into the database. |
@@ -37,7 +39,7 @@ Synchronizes multiple contacts to the contacts database in batches.A maximum of 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Returns the array of contacts creation results. Valid contact ID (which can be obtained by { |
+| Promise&lt;Array&lt;number&gt;&gt; | Returns the array of contacts creation results. Valid contact ID (which can be obtained by { |
 
 **Error codes:**
 

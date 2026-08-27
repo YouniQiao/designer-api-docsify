@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## getAllowedKioskApps
@@ -32,7 +32,7 @@ Obtains the applications allowed to run in kiosk mode.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of [unique identifiers]{ |
+| Array&lt;string&gt; | List of [unique identifiers]{ |
 
 **Error codes:**
 
@@ -89,7 +89,7 @@ Obtains the applications allowed to run in kiosk mode.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of [unique identifiers]{ |
+| Array&lt;string&gt; | List of [unique identifiers]{ |
 
 **Error codes:**
 

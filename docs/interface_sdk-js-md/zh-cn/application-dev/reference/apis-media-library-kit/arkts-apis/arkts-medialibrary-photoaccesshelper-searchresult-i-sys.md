@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## results
@@ -20,7 +20,7 @@ import photoAccessHelper from '@kit.MediaLibraryKit';
 results: string[]
 ```
 
-与搜索查询匹配的uri列表。 最大长度为5000且不能为空。
+与搜索查询匹配的uri列表。最大长度为5000且不能为空。
 
 **类型：** string[]
 

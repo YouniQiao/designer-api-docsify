@@ -1,6 +1,8 @@
 # FormError
 
-Error of form.@enum { number }
+Error of form.
+
+@enum { number }
 
 **Since:** 8
 

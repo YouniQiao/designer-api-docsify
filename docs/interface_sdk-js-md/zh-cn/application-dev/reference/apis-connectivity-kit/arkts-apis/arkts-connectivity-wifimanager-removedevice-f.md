@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## removeDevice
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function removeDevice(id: number): void
 ```
 
-通过networkId移除WLAN DeviceConfig。 WLAN DeviceConfig移除后，其配置将从WLAN配置列表中删除。 如果该WLAN DeviceConfig正在连接中，则连接将被中断。 应用只能删除自己创建的WLAN DeviceConfig。
+通过networkId移除WLAN DeviceConfig。WLAN DeviceConfig移除后，其配置将从WLAN配置列表中删除。如果该WLAN DeviceConfig正在连接中，则连接将被中断。应用只能删除自己创建的WLAN DeviceConfig。
 
 **起始版本：** 15
 

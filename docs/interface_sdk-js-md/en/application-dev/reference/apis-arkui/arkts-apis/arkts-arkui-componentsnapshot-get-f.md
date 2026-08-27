@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import componentSnapshot from '@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## get
@@ -134,7 +134,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return the result. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import securityGuard from '@kit.SecurityGuardKit';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## reportSecurityEvent

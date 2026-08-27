@@ -18,7 +18,7 @@ options?: MenuItemOptions
 
 Defines options of the form menu.
 
-**类型：** [MenuItemOptions](../arkts-components/arkts-arkui-menuitemoptions-i.md)
+**类型：** MenuItemOptions
 
 **起始版本：** 12
 

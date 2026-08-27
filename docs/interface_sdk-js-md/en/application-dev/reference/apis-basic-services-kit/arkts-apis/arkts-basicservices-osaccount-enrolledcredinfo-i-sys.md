@@ -11,7 +11,7 @@ Defines enrolled credential information.
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## authSubType

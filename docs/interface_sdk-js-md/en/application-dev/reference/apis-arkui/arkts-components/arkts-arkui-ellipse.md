@@ -52,3 +52,4 @@ Set the value.
 
 | Name | Description |
 | --- | --- |
+| [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | Describes the options of the ellipse. |

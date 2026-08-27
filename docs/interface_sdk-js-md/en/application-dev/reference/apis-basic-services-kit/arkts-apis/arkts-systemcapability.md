@@ -11,7 +11,7 @@ Provides interfaces to get system capability. @namespace systemCapability
 ## Modules to Import
 
 ```TypeScript
-import systemCapability from '@kit.BasicServicesKit';
+import { systemCapability } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

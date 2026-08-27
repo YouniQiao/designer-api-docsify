@@ -9,8 +9,6 @@ Describes heap memory information of either an ArkTS-VM, or the shared heap memo
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## heapObjectSize

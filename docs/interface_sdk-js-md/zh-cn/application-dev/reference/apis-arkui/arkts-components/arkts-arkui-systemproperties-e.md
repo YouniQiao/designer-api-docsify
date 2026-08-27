@@ -1,6 +1,8 @@
 # SystemProperties
 
-定义系统环境变量枚举值@enum { string }
+定义系统环境变量枚举值
+
+@enum { string }
 
 **起始版本：** 22
 

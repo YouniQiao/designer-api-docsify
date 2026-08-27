@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleManager from '@kit.MDMKit';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## installFlag

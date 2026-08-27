@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usbManager from '@kit.BasicServicesKit';
-import serialManager from '@kit.BasicServicesKit.serial';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## getDevices
@@ -29,7 +28,7 @@ Obtains the list of USB devices connected to the host.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Readonly & lt;USBDevice & gt; & gt; | USB device list. |
+| Array&lt;Readonly&lt;USBDevice&gt;&gt; | USB device list. |
 
 **Error codes:**
 

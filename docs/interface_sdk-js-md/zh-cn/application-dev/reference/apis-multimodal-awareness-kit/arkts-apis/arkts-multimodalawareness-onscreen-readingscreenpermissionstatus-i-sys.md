@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import onScreen from '@kit.MultimodalAwarenessKit';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## readingCode
@@ -38,7 +38,11 @@ readingCode?: number
 readingState: number
 ```
 
-表示是否允许读屏。0：不允许读屏。1：允许读屏。
+表示是否允许读屏。
+
+0：不允许读屏。
+
+1：允许读屏。
 
 **类型：** number
 

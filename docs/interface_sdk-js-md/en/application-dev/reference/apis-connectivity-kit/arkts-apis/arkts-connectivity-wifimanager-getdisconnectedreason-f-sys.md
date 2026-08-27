@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getDisconnectedReason
@@ -27,7 +26,7 @@ Obtain the latest disconnected reason.
 
 | Type | Description |
 | --- | --- |
-| [DisconnectedReason](arkts-connectivity-wifimanager-disconnectedreason-e-sys.md) | Returns the latest disconnected reason. |
+| DisconnectedReason | Returns the latest disconnected reason. |
 
 **Error codes:**
 

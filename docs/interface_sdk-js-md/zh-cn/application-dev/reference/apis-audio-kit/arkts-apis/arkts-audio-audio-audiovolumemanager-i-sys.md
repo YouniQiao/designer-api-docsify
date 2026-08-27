@@ -1,6 +1,6 @@
 # AudioVolumeManager
 
-音量管理。在使用AudioVolumeManager的接口前，需要使用 [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。
+音量管理。在使用AudioVolumeManager的接口前，需要使用[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。
 
 **起始版本：** 9
 
@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## confirmVolumeLimitExceeded
@@ -33,7 +32,7 @@ confirmVolumeLimitExceeded(volumeType: AudioVolumeType, result: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型， 不同的音量类型有不同的阈值， volumeType 用于识别当前的音量类型阈值。 |
+| volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频音量类型，不同的音量类型有不同的阈值，volumeType 用于识别当前的音量类型阈值。 |
 | result | boolean | 是 | 确认音量调整已超过音量保护阈值 |
 
 **错误码：**
@@ -150,7 +149,7 @@ getAppVolumePercentageForUid(uid: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回应用的音量百分比，范围为[0, 100]。 |
+| Promise&lt;number&gt; | Promise对象，返回应用的音量百分比，范围为[0, 100]。 |
 
 **错误码：**
 
@@ -623,7 +622,7 @@ getVolumeInUnitOfDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量类型。 |
 | volumeLevel | number | 是 | 要设置的音量级别。 |
-| device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | 是 | 输出设备类型。 |
+| device | DeviceType | 是 | 输出设备类型。 |
 
 **返回值：**
 
@@ -669,7 +668,7 @@ isAppVolumeMutedForUid(uid: number, owned: boolean): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示应用为静音状态；返回false表示应用为非静音状态。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示应用为静音状态；返回false表示应用为非静音状态。 |
 
 **错误码：**
 
@@ -1085,7 +1084,7 @@ audioVolumeManager.on('systemVolumeChange', (volumeEvent: audio.VolumeEvent) => 
 onSystemVolumeChangeByFilter(filter: SystemVolumeFilter, callback: Callback<VolumeEvent>): void
 ```
 
-订阅系统音量变化事件。 当目标过滤器的系统音量发生变化时，已注册的客户端将收到回调通知。
+订阅系统音量变化事件。当目标过滤器的系统音量发生变化时，已注册的客户端将收到回调通知。
 
 **起始版本：** 26.0.0
 
@@ -1203,7 +1202,7 @@ setAppVolumeMutedForUid(uid: number, muted: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1251,7 +1250,7 @@ setAppVolumePercentageForUid(uid: number, volume: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1301,7 +1300,7 @@ setSystemVolumeByUid(volumeType: AudioVolumeType, volume: number, callingUid: nu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 承诺用于返回结果。 |
+| Promise&lt;void&gt; | 承诺用于返回结果。 |
 
 **错误码：**
 
@@ -1345,13 +1344,13 @@ setSystemVolumePercentage(volumeType: AudioVolumeType, percentage: number): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音量流类型。 |
-| percentage | number | 是 | 音量百分比，可设置范围的最小值是通过 [getMinSystemVolumePercentage](#getminsystemvolumepercentage)接口获取到的音量百分比， 最大值是100。 |
+| percentage | number | 是 | 音量百分比，可设置范围的最小值是通过[getMinSystemVolumePercentage](#getminsystemvolumepercentage)接口获取到的音量百分比， 最大值是100。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

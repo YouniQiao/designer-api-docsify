@@ -25,7 +25,7 @@ function installUserTrustedCertificate(certificate: CertBlob) : Promise<CMResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| certificate | [CertBlob](arkts-devicecertificate-certificatemanager-certblob-i.md) | 是 | 表示证书信息。 |
+| certificate | CertBlob | 是 | 表示证书信息。 |
 
 **返回值：**
 

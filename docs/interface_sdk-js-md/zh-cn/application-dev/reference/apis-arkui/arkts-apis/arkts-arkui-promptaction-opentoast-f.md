@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## openToast
@@ -36,13 +36,13 @@ function openToast(options: ShowToastOptions): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | 是 | Toast选项，用于配置Toast的显示内容和样式。 |
+| options | ShowToastOptions | 是 | Toast选项，用于配置Toast的显示内容和样式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 返回即时反馈的id，可供closeToast使用。 |
+| Promise&lt;number&gt; | 返回即时反馈的id，可供closeToast使用。 |
 
 **错误码：**
 

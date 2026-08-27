@@ -11,7 +11,7 @@ Helper functions to access photos and albums.
 ## Modules to Import
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## createAsset
@@ -20,7 +20,9 @@ import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
 createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper.CreateOptions): Promise<string>
 ```
 
-Creates an image or video asset with the specified file type, file name extension, and options. This API uses a promise to return the result.If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video asset with the specified file type, file name extension, and options. This API uses a promise to return the result.
+
+If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 12
 
@@ -34,15 +36,15 @@ Creates an image or video asset with the specified file type, file name extensio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
+| photoType | PhotoType | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. The string length ranges from 1 to 255. |
-| options | photoAccessHelper.CreateOptions | No | Options for creating the media asset, for example, **{title: 'testPhoto'}**. The file name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " & lt; & gt; \ | For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| options | photoAccessHelper.CreateOptions | No | Options for creating the media asset, for example, **{title: 'testPhoto'}**. The file name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; \| For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the URI of the created media asset. |
+| Promise&lt;string&gt; | Promise used to return the URI of the created media asset. |
 
 **Error codes:**
 
@@ -82,7 +84,9 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 getAlbums(options: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>
 ```
 
-Obtains albums based on the specified options. This API uses a promise to return the result.Before the operation, ensure that the albums to obtain exist.
+Obtains albums based on the specified options. This API uses a promise to return the result.
+
+Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 12
 
@@ -100,7 +104,7 @@ Obtains albums based on the specified options. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;FetchResult & lt;Album & gt; & gt; | Promise used to return the result. |
+| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -152,7 +156,9 @@ getAlbums(
     ): Promise<FetchResult<Album>>
 ```
 
-Obtains albums based on the specified options and album type. This API uses a promise to return the result.Before the operation, ensure that the albums to obtain exist.
+Obtains albums based on the specified options and album type. This API uses a promise to return the result.
+
+Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 12
 
@@ -164,15 +170,15 @@ Obtains albums based on the specified options and album type. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md) | Yes | Album type. |
-| subtype | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | Yes | Subtype of the album. |
+| type | AlbumType | Yes | Album type. |
+| subtype | AlbumSubtype | Yes | Subtype of the album. |
 | options | photoAccessHelper.FetchOptions | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;FetchResult & lt;Album & gt; & gt; | Promise used to return the result. |
+| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -238,7 +244,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;FetchResult & lt;PhotoAsset & gt; & gt; | Promise used to return the media assets obtained. |
+| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise used to return the media assets obtained. |
 
 **Error codes:**
 
@@ -331,7 +337,7 @@ Obtains resources of burst photos. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;FetchResult & lt;PhotoAsset & gt; & gt; | Promise used to return the result. |
+| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -396,7 +402,7 @@ Releases the **PhotoAccessHelper** instance. Call this method when the APIs of t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

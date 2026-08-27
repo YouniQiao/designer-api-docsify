@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import curves from '@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## trailOptimizedResponsiveSpringMotion
@@ -35,4 +35,4 @@ Creates a responsive spring animation curve. It is a special case of [springMoti
 
 | Type | Description |
 | --- | --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | Curve. |
+| ICurve | Curve. |

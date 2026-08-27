@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllBundleInstallInfo
@@ -28,7 +28,7 @@ Obtains the extended install information about all applications in the system. T
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;Record & lt;string, Object & gt; & gt; & gt; | Promise used to return the list of extended install information set of all applications. |
+| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | Promise used to return the list of extended install information set of all applications. |
 
 **Error codes:**
 

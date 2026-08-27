@@ -376,8 +376,8 @@ Creates a pointer to the ArkUI_StyledString object.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Drawing_TypographyStyle](capi-drawing-oh-drawing-typographystyle.md)* style | A pointer to OH_Drawing_TypographyStyle, obtained by [OH_Drawing_CreateTypographyStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_createtypographystyle). |
-| [OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)* collection | A pointer to OH_Drawing_FontCollection, obtained by {@link OH_Drawing_CreateFontCollection}. |
+| [OH_Drawing_TypographyStyle](../ArkGraphics2D/capi-drawing-oh-drawing-typographystyle.md)* style | A pointer to OH_Drawing_TypographyStyle, obtained by [OH_Drawing_CreateTypographyStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_createtypographystyle). |
+| [OH_Drawing_FontCollection](../ArkGraphics2D/capi-drawing-oh-drawing-fontcollection.md)* collection | A pointer to OH_Drawing_FontCollection, obtained by {@link OH_Drawing_CreateFontCollection}. |
 
 **Returns**:
 
@@ -420,7 +420,7 @@ Sets the new layout style to the top of the current format string style stack.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_StyledString](capi-arkui-nativemodule-arkui-styledstring.md)* handle | A pointer to the ArkUI_StyledString object. |
-| [OH_Drawing_TextStyle](capi-drawing-oh-drawing-textstyle.md)* style | A pointer to the OH_Drawing_TextStyle object. |
+| [OH_Drawing_TextStyle](../ArkGraphics2D/capi-drawing-oh-drawing-textstyle.md)* style | A pointer to the OH_Drawing_TextStyle object. |
 
 ### OH_ArkUI_StyledString_AddText()
 
@@ -481,7 +481,7 @@ Creates a pointer to an OH_Drawing_Typography object based on a format string ob
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_Typography*](capi-drawing-oh-drawing-typography.md) | A pointer to the OH_Drawing_Typography object. If the object returns a null pointer,          the creation fails because the handle parameter is abnormal, such as a null pointer. |
+| [OH_Drawing_Typography*](../ArkGraphics2D/capi-drawing-oh-drawing-typography.md) | A pointer to the OH_Drawing_Typography object. If the object returns a null pointer,          the creation fails because the handle parameter is abnormal, such as a null pointer. |
 
 ### OH_ArkUI_StyledString_AddPlaceholder()
 
@@ -6365,7 +6365,7 @@ Gets the rects for range.
 | int32_t end | Indicates the end of range to set. |
 | [OH_Drawing_RectWidthStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_rectwidthstyle) widthStyle | Indicates the width style to set.For details, see the enum <b>OH_Drawing_RectWidthStyle</b>. |
 | [OH_Drawing_RectHeightStyle](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_rectheightstyle) heightStyle | Indicates the height style to set.For details, see the enum <b>OH_Drawing_RectHeightStyle</b>. |
-| [OH_Drawing_TextBox](capi-drawing-oh-drawing-textbox.md)** outTextBoxes | Returns the array of rects for range. |
+| [OH_Drawing_TextBox](../ArkGraphics2D/capi-drawing-oh-drawing-textbox.md)** outTextBoxes | Returns the array of rects for range. |
 
 **Returns**:
 
@@ -6392,7 +6392,7 @@ Gets the glyph position at coordinate.
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
 | double dx | Indicates the positionX of typography to set. |
 | double dy | Indicates the positionY of typography to set. |
-| [OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md)** outPos | Returns the glyph position at coordinate. |
+| [OH_Drawing_PositionAndAffinity](../ArkGraphics2D/capi-drawing-oh-drawing-positionandaffinity.md)** outPos | Returns the glyph position at coordinate. |
 
 **Returns**:
 
@@ -6445,7 +6445,7 @@ Gets the character position at coordinate.
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
 | double dx | Indicates the positionX of typography to set. |
 | double dy | Indicates the positionY of typography to set. |
-| [OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md)** outPos | Returns the character position at coordinate. |
+| [OH_Drawing_PositionAndAffinity](../ArkGraphics2D/capi-drawing-oh-drawing-positionandaffinity.md)** outPos | Returns the character position at coordinate. |
 
 **Returns**:
 
@@ -6473,7 +6473,7 @@ Gets the character position at coordinate based on the specified encoding type.
 | double dx | Indicates the positionX of typography to set. |
 | double dy | Indicates the positionY of typography to set. |
 | [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | Indicates the encoding type used for the returned character position. |
-| [OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md)** outPos | Returns the character position at coordinate. |
+| [OH_Drawing_PositionAndAffinity](../ArkGraphics2D/capi-drawing-oh-drawing-positionandaffinity.md)** outPos | Returns the character position at coordinate. |
 
 **Returns**:
 
@@ -6498,9 +6498,9 @@ Get the glyph range produced by the specified range of characters.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)* charRange | The character range. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outGlyphRange | The range of glyphs generated by charRange. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outActualCharRange | If not null, specifies the actual character range that fully defines the returnedglyph range, which may match or slightly exceed the requested range. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)* charRange | The character range. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outGlyphRange | The range of glyphs generated by charRange. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outActualCharRange | If not null, specifies the actual character range that fully defines the returnedglyph range, which may match or slightly exceed the requested range. |
 
 **Returns**:
 
@@ -6525,10 +6525,10 @@ Get the glyph range produced by the specified range of characters based on the s
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)* charRange | The character range. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)* charRange | The character range. |
 | [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | Indicates the encoding type used for <b>charRange</b>. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outGlyphRange | The range of glyphs generated by charRange. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outActualCharRange | If not null, specifies the actual character range that fully defines the returnedglyph range, which may match or slightly exceed the requested range. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outGlyphRange | The range of glyphs generated by charRange. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outActualCharRange | If not null, specifies the actual character range that fully defines the returnedglyph range, which may match or slightly exceed the requested range. |
 
 **Returns**:
 
@@ -6553,9 +6553,9 @@ Get the character range that maps to the glyphs in the given glyph range.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)* glyphRange | The glyph range. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outCharRange | The range of characters generated by glyphRange. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outActualGlyphRange | If not null, specifies the full glyph range generated by the returned character range,which may match or slightly exceed the requested glyph range. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)* glyphRange | The glyph range. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outCharRange | The range of characters generated by glyphRange. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outActualGlyphRange | If not null, specifies the full glyph range generated by the returned character range,which may match or slightly exceed the requested glyph range. |
 
 **Returns**:
 
@@ -6580,10 +6580,10 @@ Get the character range that maps to the glyphs in the given glyph range based o
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | Indicates the pointer to an <b>ArkUI_TextLayoutManager</b> object. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)* glyphRange | The glyph range. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)* glyphRange | The glyph range. |
 | [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | Indicates the encoding type used for the returned character range. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outCharRange | The range of characters generated by glyphRange. |
-| [OH_Drawing_Range](capi-drawing-oh-drawing-range.md)** outActualGlyphRange | If not null, specifies the full glyph range generated by the returned character range,which may match or slightly exceed the requested glyph range. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outCharRange | The range of characters generated by glyphRange. |
+| [OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)** outActualGlyphRange | If not null, specifies the full glyph range generated by the returned character range,which may match or slightly exceed the requested glyph range. |
 
 **Returns**:
 

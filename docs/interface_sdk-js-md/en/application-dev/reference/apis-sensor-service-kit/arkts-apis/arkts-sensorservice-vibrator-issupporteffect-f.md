@@ -97,7 +97,7 @@ Checks whether an effect ID is supported. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise that returns the result. The value **true** means that the effect ID is supported, and the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise that returns the result. The value **true** means that the effect ID is supported, and the value **false** means the opposite. |
 
 **Error codes:**
 

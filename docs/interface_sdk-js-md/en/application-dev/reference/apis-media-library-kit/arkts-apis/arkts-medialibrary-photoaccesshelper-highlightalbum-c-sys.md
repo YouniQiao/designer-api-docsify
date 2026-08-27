@@ -11,7 +11,7 @@ Provides APIs for managing the **Highlights** album, which is an automatically g
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor
@@ -32,7 +32,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | Yes | Highlights** album. |
+| album | Album | Yes | Highlights** album. |
 
 **Error codes:**
 
@@ -169,13 +169,13 @@ Deletes highlight albums.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| albums | Array & lt;Album & gt; | Yes | Array of highlight albums to delete. |
+| albums | Array&lt;Album&gt; | Yes | Array of highlight albums to delete. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the operation result. The value **0** means that the operation is successful, and **1** means the opposite. |
+| Promise&lt;number&gt; | Promise used to return the operation result. The value **0** means that the operation is successful, and **1** means the opposite. |
 
 **Error codes:**
 
@@ -241,7 +241,7 @@ Obtains specific information about the **Highlights** album.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the album information. |
+| Promise&lt;string&gt; | Promise used to return the album information. |
 
 **Error codes:**
 
@@ -307,7 +307,7 @@ Obtains the ArrayBuffer for caching the specified asset.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise used to return the ArrayBuffer. |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the ArrayBuffer. |
 
 **Error codes:**
 
@@ -372,7 +372,7 @@ Sets the user behavior data for the **Highlights** album.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -415,10 +415,15 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setSubTitle(subTitle: string): Promise<void>
 ```
 
-Sets the subtitle for this **Highlights** album instance.The subtitle must meet the following requirements:  
+Sets the subtitle for this **Highlights** album instance.
+
+The subtitle must meet the following requirements:
+
 - The total length of the subtitle must be between 0 and 255 characters.  
-- It must not contain any invalid characters, which are:  
-. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
+- It must not contain any invalid characters, which are:
+
+. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+
 - The characters are case insensitive.
 
 **Since:** 18
@@ -439,7 +444,7 @@ Sets the subtitle for this **Highlights** album instance.The subtitle must meet 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns void |
+| Promise&lt;void&gt; | Returns void |
 
 **Error codes:**
 

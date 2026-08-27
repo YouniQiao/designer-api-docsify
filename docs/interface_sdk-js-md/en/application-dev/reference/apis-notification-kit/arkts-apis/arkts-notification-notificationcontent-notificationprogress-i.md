@@ -30,7 +30,8 @@ Current value of the progress.
 isPercentage?: boolean
 ```
 
-Whether to display the progress as a percentage. The value defaults to **false**.  
+Whether to display the progress as a percentage. The value defaults to **false**.
+
 - **true**: The progress is displayed as a percentage.  
 - **false**: The progress is displayed as an absolute value.
 

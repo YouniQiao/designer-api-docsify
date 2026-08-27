@@ -1,6 +1,10 @@
 # EventResult
 
-EventResult is a class in ArkWeb Kit used to notify the **Web** component of the same-layer event consumption result. In same-layer embedding scenarios, the app and the **Web** component are both exposed in the event response chain. EventResult allows the app to declare to the **Web** component whether it has consumed a touch or mouse event, thereby determining whether the **Web** component continues to process the event. When the app sets the consumption result to **true**, it indicates that the app has consumed the event and the **Web** component will no longer consume it. When set to **false**, it indicates that the app does not consume the event, and the event will be consumed by the **Web** component. EventResult is used to set the consumption result of touch events ([TouchType](../../apis-arkui/arkts-apis/arkts-arkui-touchtype-e.md)) and mouse events ([MouseAction](../../apis-arkui/arkts-apis/arkts-arkui-mouseaction-e.md), limited to left, middle, and right buttons), with the mouse button type defined by MouseButton. It is applicable to event coordination scenarios where the app and the **Web** component interact at the same layer.For details about the sample code of the touch event, see [onNativeEmbedGestureEvent](arkts-arkweb-web-attribute.md#onnativeembedgestureevent).For details about the sample code of the mouse event, see [onNativeEmbedMouseEvent](arkts-arkweb-web-attribute.md#onnativeembedmouseevent).
+EventResult is a class in ArkWeb Kit used to notify the **Web** component of the same-layer event consumption result. In same-layer embedding scenarios, the app and the **Web** component are both exposed in the event response chain. EventResult allows the app to declare to the **Web** component whether it has consumed a touch or mouse event, thereby determining whether the **Web** component continues to process the event. When the app sets the consumption result to **true**, it indicates that the app has consumed the event and the **Web** component will no longer consume it. When set to **false**, it indicates that the app does not consume the event, and the event will be consumed by the **Web** component. EventResult is used to set the consumption result of touch events ([TouchType](../../apis-arkui/arkts-apis/arkts-arkui-touchtype-e.md)) and mouse events ([MouseAction](../../apis-arkui/arkts-apis/arkts-arkui-mouseaction-e.md), limited to left, middle, and right buttons), with the mouse button type defined by MouseButton. It is applicable to event coordination scenarios where the app and the **Web** component interact at the same layer.
+
+For details about the sample code of the touch event, see [onNativeEmbedGestureEvent](arkts-arkweb-web-attribute.md#onnativeembedgestureevent).
+
+For details about the sample code of the mouse event, see [onNativeEmbedMouseEvent](arkts-arkweb-web-attribute.md#onnativeembedmouseevent).
 
 **Since:** 12
 
@@ -9,9 +13,6 @@ EventResult is a class in ArkWeb Kit used to notify the **Web** component of the
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor

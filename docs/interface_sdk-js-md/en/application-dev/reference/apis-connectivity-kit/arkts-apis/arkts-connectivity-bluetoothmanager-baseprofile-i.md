@@ -13,7 +13,7 @@ Base interface of profile.
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## getConnectionDevices
@@ -40,7 +40,7 @@ Obtains the connected devices list of profile. On API 10 and above, the permissi
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Returns the address of connected devices list. |
+| Array&lt;string&gt; | Returns the address of connected devices list. |
 
 **Error codes:**
 
@@ -95,7 +95,7 @@ Obtains the profile state of device. On API 10 and above, the permission require
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | Returns { |
+| ProfileConnectionState | Returns { |
 
 **Error codes:**
 

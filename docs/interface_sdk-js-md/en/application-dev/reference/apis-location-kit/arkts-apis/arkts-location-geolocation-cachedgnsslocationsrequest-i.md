@@ -1,6 +1,8 @@
 # CachedGnssLocationsRequest
 
-Parameters for requesting to report cache location information@interface CachedGnssLocationsRequest
+Parameters for requesting to report cache location information
+
+@interface CachedGnssLocationsRequest
 
 **Since:** 8
 
@@ -15,7 +17,7 @@ Parameters for requesting to report cache location information@interface CachedG
 ## Modules to Import
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## reportingPeriodSec

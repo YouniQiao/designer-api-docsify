@@ -11,7 +11,9 @@
 function traceByValue(name: string, count: number): void
 ```
 
-用来标记一个跟踪的整数变量，该变量的数值会不断变化。适用于需要实时监控数值变化（如网络请求次数、缓存命中率、内存占用等）的场景，能够帮助开发者 快速发现异常波动，分析数据趋势。从API version 19开始，建议使用 [traceByValue](#tracebyvalue)接口，以便分级控 制跟踪输出。
+用来标记一个跟踪的整数变量，该变量的数值会不断变化。适用于需要实时监控数值变化（如网络请求次数、缓存命中率、内存占用等）的场景，能够帮助开发者快速发现异常波动，分析数据趋势。
+
+从API version 19开始，建议使用[traceByValue](#tracebyvalue)接口，以便分级控制跟踪输出。
 
 **起始版本：** 8
 
@@ -23,7 +25,7 @@ function traceByValue(name: string, count: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 要跟踪的整数变量名称。 由于单条trace记录的总长度限制为512Byte，超过的部分将会被截断，建议该参数的长度不要超过420Byte。 |
+| name | string | 是 | 要跟踪的整数变量名称。由于单条trace记录的总长度限制为512Byte，超过的部分将会被截断，建议该参数的长度不要超过420Byte。 |
 | count | number | 是 | 整数变量的值。 |
 
 **示例**
@@ -56,7 +58,7 @@ function traceByValue(level: HiTraceOutputLevel, name: string, count: number): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | 是 | 跟踪输出级别。 |
-| name | string | 是 | 要跟踪的整数变量名称。 由于单条trace记录的总长度限制为512Byte，超出部分将被截断，建议该参数的长度不要超过420Byte。 |
+| name | string | 是 | 要跟踪的整数变量名称。由于单条trace记录的总长度限制为512Byte，超出部分将被截断，建议该参数的长度不要超过420Byte。 |
 | count | number | 是 | 整数变量的值。 |
 
 **示例**

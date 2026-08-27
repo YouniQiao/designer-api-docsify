@@ -1,6 +1,6 @@
 # ServiceExtensionIntentInfo（系统接口）
 
-用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的ServiceExtensionAbility组件信息 。
+用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的ServiceExtensionAbility组件信息。
 
 **起始版本：** 23
 
@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import insightIntentDriver from '@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName

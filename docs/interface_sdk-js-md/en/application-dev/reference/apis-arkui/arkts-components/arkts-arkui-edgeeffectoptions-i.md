@@ -1,6 +1,8 @@
 # EdgeEffectOptions
 
-Define EdgeEffect Options.@interface EdgeEffectOptions
+Define EdgeEffect Options.
+
+@interface EdgeEffectOptions
 
 **Since:** 12
 

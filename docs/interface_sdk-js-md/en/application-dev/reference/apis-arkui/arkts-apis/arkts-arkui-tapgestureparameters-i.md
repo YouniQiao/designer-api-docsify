@@ -25,8 +25,14 @@ Defines tap gesture parameters. Inherits from [BaseHandlerOptions](arkts-arkui-b
 count?: number
 ```
 
-Number of consecutive taps. If the value is less than 1 or is not set, the default value is used.Default value: **1**Value range: [0, +∞)  
+Number of consecutive taps. If the value is less than 1 or is not set, the default value is used.
+
+Default value: **1**
+
+Value range: [0, +∞)
+
 **NOTE：**
+
 1. If multi-tap is configured, the timeout interval between a lift and the next tap is 300 ms.
 2. If the distance between the last tapped position and the current tapped position exceeds 60 vp, gesture
 recognition fails. In multi-finger scenarios, the tapped position is the average position of all fingers involved in the gesture response.
@@ -47,8 +53,15 @@ recognition fails. In multi-finger scenarios, the tapped position is the average
 distanceThreshold?: number
 ```
 
-Movement threshold for the tap gesture. If the value is less than or equal to 0 or is not set, the default value is used.Default value: 2^31-1Unit: vp  
-**NOTE：**If the finger movement exceeds the preset movement threshold, the tap gesture recognition fails. If the default threshold is used during initialization and the finger moves beyond the component's touch target, the tap gesture recognition fails.
+Movement threshold for the tap gesture. If the value is less than or equal to 0 or is not set, the default value is used.
+
+Default value: 2^31-1
+
+Unit: vp
+
+**NOTE：**
+
+If the finger movement exceeds the preset movement threshold, the tap gesture recognition fails. If the default threshold is used during initialization and the finger moves beyond the component's touch target, the tap gesture recognition fails.
 
 **Type:** number
 
@@ -66,8 +79,12 @@ Movement threshold for the tap gesture. If the value is less than or equal to 0 
 fingers?: number
 ```
 
-Number of fingers required to trigger a tap. The value ranges from 1 to 10. If the value is less than 1 or is not set, the default value is used.Default value: **1**  
+Number of fingers required to trigger a tap. The value ranges from 1 to 10. If the value is less than 1 or is not set, the default value is used.
+
+Default value: **1**
+
 **NOTE：**
+
 1. For a multi-finger gesture, recognition fails if the required number of fingers is not pressed within 300 ms
 after the first finger; when fingers are lifted, if the remaining number of fingers is below the threshold after lifting, all fingers must be lifted within 300 ms for the gesture to be successfully recognized.
 2. When the number of fingers touching the screen exceeds the set value, the gesture can be recognized.

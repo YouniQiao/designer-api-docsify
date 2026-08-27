@@ -1,6 +1,8 @@
 # ResponseType
 
-ResponseType for contextMenu@enum { number }
+ResponseType for contextMenu
+
+@enum { number }
 
 **起始版本：** 11
 

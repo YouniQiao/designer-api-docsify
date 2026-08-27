@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## getSandboxAppConfig
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function getSandboxAppConfig(): Promise<string>
 ```
 
-获取沙箱应用配置信息，使用Promise异步回调。该接口用于获取沙箱应用的配置信息，便于读取或验证当前的配置状态。
+获取沙箱应用配置信息，使用Promise异步回调。
+
+该接口用于获取沙箱应用的配置信息，便于读取或验证当前的配置状态。
 
 **起始版本：** 11
 
@@ -22,7 +24,7 @@ function getSandboxAppConfig(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象。返回沙箱应用配置信息。长度小于4194304字节。 |
+| Promise&lt;string&gt; | Promise对象。返回沙箱应用配置信息。长度小于4194304字节。 |
 
 **错误码：**
 

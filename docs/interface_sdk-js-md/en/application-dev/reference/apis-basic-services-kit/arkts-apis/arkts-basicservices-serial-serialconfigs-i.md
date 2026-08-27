@@ -9,7 +9,7 @@ Serial port communication configuration.
 ## Modules to Import
 
 ```TypeScript
-import serial from '@kit.BasicServicesKit';
+import { serial } from '@kit.BasicServicesKit';
 ```
 
 ## baudRate
@@ -90,7 +90,9 @@ Whether to enable hardware-based automatic flow control. Default value: false.
 stopBits?: StopBits
 ```
 
-Stop bits.Default value: ONE
+Stop bits.
+
+Default value: ONE
 
 **Type:** StopBits
 

@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screen from '@kit.ArkUI';
-import screenshot from '@kit.ArkUIshot';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## makeExpand
@@ -91,7 +90,7 @@ Sets the screen to extended mode. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the group ID of the extended screens, where the ID is an integer. |
+| Promise&lt;number&gt; | Promise used to return the group ID of the extended screens, where the ID is an integer. |
 
 **Error codes:**
 

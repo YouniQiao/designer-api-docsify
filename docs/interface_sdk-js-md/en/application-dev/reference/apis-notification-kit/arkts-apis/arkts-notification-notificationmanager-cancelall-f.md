@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## cancelAll
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function cancelAll(callback: AsyncCallback<void>): void
 ```
 
-Cancels all notifications of this application. This API uses an asynchronous callback to return the result.After cancellation, all notifications of the current application will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios such as application exit or when the user manually clears all notifications.
+Cancels all notifications of this application. This API uses an asynchronous callback to return the result.
+
+After cancellation, all notifications of the current application will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios such as application exit or when the user manually clears all notifications.
 
 **Since:** 9
 
@@ -62,7 +64,9 @@ notificationManager.cancelAll(cancelAllCallback);
 function cancelAll(): Promise<void>
 ```
 
-Cancels all notifications of this application. This API uses a promise to return the result.After cancellation, all notifications of the current application will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios such as application exit or when the user manually clears all notifications.
+Cancels all notifications of this application. This API uses a promise to return the result.
+
+After cancellation, all notifications of the current application will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios such as application exit or when the user manually clears all notifications.
 
 **Since:** 9
 
@@ -78,7 +82,7 @@ cancel cancels a notification with the specified ID.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

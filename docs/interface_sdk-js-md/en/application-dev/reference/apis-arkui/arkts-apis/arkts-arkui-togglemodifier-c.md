@@ -1,6 +1,8 @@
 # ToggleModifier
 
-Defines Toggle Modifier@extends ToggleAttribute @implements AttributeModifier&lt;ToggleAttribute&gt;
+Defines Toggle Modifier
+
+@extends ToggleAttribute @implements AttributeModifier&lt;ToggleAttribute&gt;
 
 **Inheritance/Implementation:** ToggleModifier extends [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md#toggleattribute) and implements AttributeModifier<ToggleAttribute>
 

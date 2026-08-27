@@ -30,6 +30,9 @@ Panel(show: boolean)
 
 | 名称 | 说明 |
 | --- | --- |
+| [PanelHeight](arkts-arkui-panelheight-e.md) | 自定义内容显示区域的枚举。 |
+| [PanelMode](arkts-arkui-panelmode-e.md) | 设置滑动面板的初始状态 |
+| [PanelType](arkts-arkui-paneltype-e.md) | 设置滑动面板的类型 |
 
 ## 示例
 

@@ -1,6 +1,7 @@
 # PropertyKey
 
-Enumerates the types of Exchangeable Image File Format (Exif) data of an image.  
+Enumerates the types of Exchangeable Image File Format (Exif) data of an image.
+
 - The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for  
 example, **image.PropertyKey.NEW_SUBFILE_TYPE**).  
 - The format example is used only to show how to modify values and read results. For details about how to use them,  

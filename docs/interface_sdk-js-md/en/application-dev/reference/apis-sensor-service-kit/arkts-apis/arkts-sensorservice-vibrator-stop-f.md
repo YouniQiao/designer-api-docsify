@@ -33,7 +33,7 @@ Stops vibration in the specified mode. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns the result. |
+| Promise&lt;void&gt; | Promise that returns the result. |
 
 **Examples**
 

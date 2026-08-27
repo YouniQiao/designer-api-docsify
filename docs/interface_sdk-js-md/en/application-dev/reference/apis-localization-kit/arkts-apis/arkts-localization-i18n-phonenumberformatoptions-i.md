@@ -9,7 +9,7 @@ Options for **PhoneNumberFormat** object initialization.
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## type
@@ -18,7 +18,8 @@ import i18n from '@kit.LocalizationKit';
 type?: string
 ```
 
-Type of the phone number. The value can be **E164**, **INTERNATIONAL**, **NATIONAL**, **RFC3966**, or **TYPING**.  
+Type of the phone number. The value can be **E164**, **INTERNATIONAL**, **NATIONAL**, **RFC3966**, or **TYPING**.
+
 - In API version 8, **type** is mandatory.  
 - In API version 9 or later, **type** is optional.  
 - In API version 12 or later, TYPING is supported, which indicates that the dialed number is formatted in real  

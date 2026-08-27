@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## off('sessionCreate')
@@ -25,7 +25,7 @@ Unregister session create callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionCreate' | Yes | Registration Type, session creation, 'sessionCreate' |
-| callback | (session: AVSessionDescriptor) = & gt; void | No | Used to unregister listener for ('sessionCreate') command |
+| callback | (session: AVSessionDescriptor) =&gt; void | No | Used to unregister listener for ('sessionCreate') command |
 
 **Error codes:**
 
@@ -80,7 +80,7 @@ Unregister session destroy callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionDestroy' | Yes | Registration Type, session deletion, 'sessionDestroy' |
-| callback | (session: AVSessionDescriptor) = & gt; void | No | Used to unregister listener for ('sessionDestroy') command |
+| callback | (session: AVSessionDescriptor) =&gt; void | No | Used to unregister listener for ('sessionDestroy') command |
 
 **Error codes:**
 
@@ -135,7 +135,7 @@ Unregister top session changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'topSessionChange' | Yes | Registration Type, top priority session change, 'topSessionChange' |
-| callback | (session: AVSessionDescriptor) = & gt; void | No | Used to unregister listener for ('topSessionChange') command |
+| callback | (session: AVSessionDescriptor) =&gt; void | No | Used to unregister listener for ('topSessionChange') command |
 
 **Error codes:**
 
@@ -190,7 +190,7 @@ Unregister Session service death callback, notifying the application to clean up
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionServiceDie' | Yes | Registration Type, 'sessionServiceDie' |
-| callback | () = & gt; void | No | Used to unregister listener for ('sessionServiceDie') command. |
+| callback | () =&gt; void | No | Used to unregister listener for ('sessionServiceDie') command. |
 
 **Error codes:**
 
@@ -262,7 +262,7 @@ Unregister device discovery callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceAvailable' | Yes | Registration Type |
-| callback | (device: OutputDeviceInfo) = & gt; void | No | Used to returns the device info |
+| callback | (device: OutputDeviceInfo) =&gt; void | No | Used to returns the device info |
 
 **Error codes:**
 
@@ -297,7 +297,7 @@ Unregister device offline callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceOffline' | Yes | Registration Type |
-| callback | (deviceId: string) = & gt; void | No | Used to returns the device info |
+| callback | (deviceId: string) =&gt; void | No | Used to returns the device info |
 
 **Error codes:**
 

@@ -13,7 +13,7 @@ In the following API examples, you must first use [getInputMethodEngine](arkts-i
 ## Modules to Import
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## off('inputStart')
@@ -40,7 +40,7 @@ Disables listening for the input method binding event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
-| callback | (kbController: KeyboardController, textInputClient: TextInputClient) = & gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -73,7 +73,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () = & gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -103,7 +103,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () = & gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -133,7 +133,7 @@ Enables listening for the input method binding event. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
-| callback | (kbController: KeyboardController, textInputClient: TextInputClient) = & gt; void | Yes | Callback used to return the **KeyboardController** and **TextInputClient** instances. |
+| callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | Yes | Callback used to return the **KeyboardController** and **TextInputClient** instances. |
 
 **Examples**
 
@@ -167,7 +167,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () = & gt; void | Yes | Callback used to return the result. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -201,7 +201,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () = & gt; void | Yes | Callback used to return the result. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Examples**
 

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## createAsset
@@ -20,11 +20,17 @@ import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
 createAsset(displayName: string): Promise<PhotoAsset>
 ```
 
-指定待创建的图片或者视频的文件名，创建图片或视频资源。使用Promise异步回调。待创建的文件名参数规格为：  
+指定待创建的图片或者视频的文件名，创建图片或视频资源。使用Promise异步回调。
+
+待创建的文件名参数规格为：
+
 - 应包含有效文件主名和图片或视频扩展名。  
 - 文件名字符串长度为1~255。  
-- 文件主名中不允许出现的非法英文字符。  
-API18开始，非法字符包括：\ / : * ? " &lt; &gt; |API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+- 文件主名中不允许出现的非法英文字符。
+
+API18开始，非法字符包括：\ / : * ? " &lt; &gt; |
+
+API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 12
 
@@ -44,7 +50,7 @@ API18开始，非法字符包括：\ / : * ? " &lt; &gt; |API10-17，非法字�
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PhotoAsset & gt; | Promise对象，返回创建的图片和视频结果。 |
+| Promise&lt;PhotoAsset&gt; | Promise对象，返回创建的图片和视频结果。 |
 
 **错误码：**
 
@@ -81,11 +87,17 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions): Promise<PhotoAsset>
 ```
 
-指定待创建的图片或者视频的文件名和创建选项，创建图片或视频资源。使用Promise异步回调。待创建的文件名参数规格为：  
+指定待创建的图片或者视频的文件名和创建选项，创建图片或视频资源。使用Promise异步回调。
+
+待创建的文件名参数规格为：
+
 - 应包含有效文件主名和图片或视频扩展名。  
 - 文件名字符串长度为1~255。  
-- 文件主名中不允许出现的非法英文字符。  
-API18开始，非法字符包括： \ / : * ? " &lt; &gt; |API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+- 文件主名中不允许出现的非法英文字符。
+
+API18开始，非法字符包括： \ / : * ? " &lt; &gt; |
+
+API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 12
 
@@ -106,7 +118,7 @@ API18开始，非法字符包括： \ / : * ? " &lt; &gt; |API10-17，非法字�
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PhotoAsset & gt; | Promise used to return the created asset. |
+| Promise&lt;PhotoAsset&gt; | Promise used to return the created asset. |
 
 **错误码：**
 
@@ -170,7 +182,7 @@ getHiddenAlbums(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;FetchResult & lt;Album & gt; & gt; | Promise对象，返回获取相册的结果集。 |
+| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise对象，返回获取相册的结果集。 |
 
 **错误码：**
 
@@ -257,13 +269,13 @@ getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetsData | photoAccessHelper.ValuesBucket[] | 是 | 资产记录的数组。 数组中的每个元素包含资产的列名称及其对应的值。 数组的大小不能超过500个。 数组中的每个元素必须包含以下资产列信息：file_id、data、display_name、media_type、subtype。 |
+| assetsData | photoAccessHelper.ValuesBucket[] | 是 | 资产记录的数组。数组中的每个元素包含资产的列名称及其对应的值。数组的大小不能超过500个。数组中的每个元素必须包含以下资产列信息：file_id、data、display_name、media_type、subtype。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PhotoAsset[] & gt; | Promise对象，返回PhotoAsset对象的数组（数组可能为空）。 |
+| Promise&lt;PhotoAsset[]&gt; | Promise对象，返回PhotoAsset对象的数组（数组可能为空）。 |
 
 **错误码：**
 
@@ -278,6 +290,7 @@ getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset
 phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-file-sendablephotoaccesshelper.md)的示例使用。
 
 ```TypeScript
+import { Context } from '@kit.AbilityKit';
 async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper, context: Context) {
   console.info('getPhotoAssets demo');
   let valuesArr: photoAccessHelper.ValuesBucket[] = [];
@@ -326,7 +339,7 @@ Fetch shared photo assets.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;SharedPhotoAsset & gt; | Returns the shared photo assets |
+| Array&lt;SharedPhotoAsset&gt; | Returns the shared photo assets |
 
 **错误码：**
 

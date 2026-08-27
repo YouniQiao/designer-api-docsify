@@ -1,6 +1,8 @@
 # SelectionOptions
 
-Defines the selection options.@interface SelectionOptions
+Defines the selection options.
+
+@interface SelectionOptions
 
 **起始版本：** 12
 

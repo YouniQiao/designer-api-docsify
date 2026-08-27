@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAlternateIcons
@@ -24,7 +24,7 @@ Queries the alternate icon information configured in the alternateIcons in the a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;AlternateIconInfo & gt; & gt; | Promise used to return the list of alternate icons of the current application. |
+| Promise&lt;Array&lt;AlternateIconInfo&gt;&gt; | Promise used to return the list of alternate icons of the current application. |
 
 **Error codes:**
 

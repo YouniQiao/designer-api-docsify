@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getP2pLinkedInfo
@@ -31,7 +28,7 @@ Obtains information about a P2P connection.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;WifiP2pLinkedInfo & gt; | Returns the P2P connection information. |
+| Promise&lt;WifiP2pLinkedInfo&gt; | Returns the P2P connection information. |
 
 **Examples**
 

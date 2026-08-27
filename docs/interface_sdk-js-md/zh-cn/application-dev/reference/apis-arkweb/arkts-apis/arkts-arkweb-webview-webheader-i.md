@@ -1,6 +1,8 @@
 # WebHeader
 
-Web组件返回的请求/响应头对象。@interface WebHeader [since 9 - 11]
+Web组件返回的请求/响应头对象。
+
+@interface WebHeader [since 9 - 11]
 
 **起始版本：** 9
 

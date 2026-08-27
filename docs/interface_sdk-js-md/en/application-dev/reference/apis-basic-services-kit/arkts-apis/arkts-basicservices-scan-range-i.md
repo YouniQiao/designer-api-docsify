@@ -9,7 +9,7 @@ Defines the range.
 ## Modules to Import
 
 ```TypeScript
-import scan from '@kit.BasicServicesKit';
+import { scan } from '@kit.BasicServicesKit';
 ```
 
 ## maxValue

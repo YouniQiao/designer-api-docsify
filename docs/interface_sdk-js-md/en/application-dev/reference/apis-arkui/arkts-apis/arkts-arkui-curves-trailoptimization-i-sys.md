@@ -11,7 +11,7 @@ Trail optimization configuration for spring animations.
 ## Modules to Import
 
 ```TypeScript
-import curves from '@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## progressThreshold

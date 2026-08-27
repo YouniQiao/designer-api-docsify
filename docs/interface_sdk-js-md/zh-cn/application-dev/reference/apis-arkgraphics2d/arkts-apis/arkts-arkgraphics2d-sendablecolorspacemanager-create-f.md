@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendableColorSpaceManager from '@kit.ArkGraphics2D';
+import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## create
@@ -22,13 +22,13 @@ function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpaceName | colorSpaceManager.ColorSpace | 是 | 标准色域类型枚举值。 UNKNOWN与CUSTOM不可用于直接创建色域对象。 |
+| colorSpaceName | colorSpaceManager.ColorSpace | 是 | 标准色域类型枚举值。UNKNOWN与CUSTOM不可用于直接创建色域对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | 返回当前创建的可共享的色彩管理实例。 |
+| ColorSpaceManager | 返回当前创建的可共享的色彩管理实例。 |
 
 **错误码：**
 
@@ -70,7 +70,7 @@ function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number)
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | 返回当前创建的可共享的色彩管理实例。 |
+| ColorSpaceManager | 返回当前创建的可共享的色彩管理实例。 |
 
 **错误码：**
 

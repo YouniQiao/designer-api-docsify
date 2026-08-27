@@ -1,6 +1,8 @@
 # SearchPlayMusicItem
 
-The definition of SearchPlayMusicItem.@interface SearchPlayMusicItem
+The definition of SearchPlayMusicItem.
+
+@interface SearchPlayMusicItem
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of SearchPlayMusicItem.@interface SearchPlayMusicItem
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## entityId

@@ -307,7 +307,9 @@ setXComponentSurfaceSize(value: {
   }): void
 ```
 
-Sets the width and height of the surface held by the **XComponent**. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.Unit: px.
+Sets the width and height of the surface held by the **XComponent**. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
+
+Unit: px.
 
 **Since:** 9
 
@@ -329,7 +331,11 @@ Sets the width and height of the surface held by the **XComponent**. This API wo
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-Starts AI image analysis in the given settings. Before calling this API, make sure the AI image analyzer is [enabled](arkts-arkui-xcomponent-attribute.md#enableanalyzer). This API uses a promise to return the result.Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.If this API is repeatedly called before the execution is complete, an error callback is triggered.
+Starts AI image analysis in the given settings. Before calling this API, make sure the AI image analyzer is [enabled](arkts-arkui-xcomponent-attribute.md#enableanalyzer). This API uses a promise to return the result.
+
+Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.
+
+If this API is repeatedly called before the execution is complete, an error callback is triggered.
 
 > **NOTE：**
 
@@ -355,7 +361,7 @@ Starts AI image analysis in the given settings. Before calling this API, make su
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. It is used to indicate AI-based analysis is successfully executed. |
+| Promise&lt;void&gt; | Promise that returns no value. It is used to indicate AI-based analysis is successfully executed. |
 
 **Error codes:**
 

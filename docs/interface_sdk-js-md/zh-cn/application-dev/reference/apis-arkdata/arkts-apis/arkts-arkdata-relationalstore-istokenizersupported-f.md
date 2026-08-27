@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## isTokenizerSupported
@@ -12,7 +12,9 @@ import relationalStore from '@kit.ArkData';
 function isTokenizerSupported(tokenizer: Tokenizer): boolean
 ```
 
-判断当前平台是否支持传入的分词器，此为同步接口。如果当前平台支持传入的分词器时，此接口返回值为true；反之，返回值为false。
+判断当前平台是否支持传入的分词器，此为同步接口。
+
+如果当前平台支持传入的分词器时，此接口返回值为true；反之，返回值为false。
 
 **起始版本：** 18
 

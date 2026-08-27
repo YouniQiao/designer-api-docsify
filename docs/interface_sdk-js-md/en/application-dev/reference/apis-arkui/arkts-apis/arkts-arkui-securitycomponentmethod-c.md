@@ -1,6 +1,8 @@
 # SecurityComponentMethod
 
-The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.This module is mainly used in the following scenarios:  
+The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.
+
+This module is mainly used in the following scenarios:  
 - Set layout, size, text, icon, color, border, and interaction-related attributes for security components  
 such as PasteButton and SaveButton.  
 - Adjust the display effect and interaction experience of security components while ensuring compliance with  
@@ -21,7 +23,8 @@ security components. Configures layout, size, text, icon, color, border, and int
 
 ## Child Components
 
-- Not supported  
+- Not supported
+
 Defines the method of a security component.
 
 **Since:** 10
@@ -81,7 +84,7 @@ Provides an accessibility description for the component. You can set detailed te
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Accessibility description for the component. Provides details about the component's operation, helping users understand what the current action does and its potential consequences. When the component is selected, if it has both text attributes and an accessibility description, the text content is announced first, followed by the accessibility description. The default value is an empty string. |
+| description | string \| Resource | Yes | Accessibility description for the component. Provides details about the component's operation, helping users understand what the current action does and its potential consequences. When the component is selected, if it has both text attributes and an accessibility description, the text content is announced first, followed by the accessibility description. The default value is an empty string. |
 
 **Return value:**
 
@@ -291,7 +294,9 @@ Sets the border color of the security component.
 borderRadius(value: Dimension): T
 ```
 
-Sets the border radius of the security component.The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**, the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect. For details, see ButtonType.
+Sets the border radius of the security component.
+
+The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**, the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect. For details, see ButtonType.
 
 **Since:** 10
 
@@ -319,7 +324,9 @@ Sets the border radius of the security component.The effect of **borderRadius** 
 borderRadius(radius: Dimension | BorderRadiuses): T
 ```
 
-Sets the border radius of the security component, allowing individual setting of the four corner radii.The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**, the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect. For details, see ButtonType.
+Sets the border radius of the security component, allowing individual setting of the four corner radii.
+
+The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**, the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect. For details, see ButtonType.
 
 **Since:** 15
 
@@ -417,7 +424,7 @@ Sets the parameters of the chain in which the component is the head. This API ta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | [Axis](arkts-arkui-axis-e.md) | Yes | Direction of the chain layout. Specifies the arrangement direction of the chain headed by this component in the RelativeContainer. |
+| direction | Axis | Yes | Direction of the chain layout. Specifies the arrangement direction of the chain headed by this component in the RelativeContainer. |
 | style | [ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md) | Yes | Style of the chain layout. Controls how child components are distributed within the chain, such as evenly distributed, aligned at both ends, or compactly arranged. For specific values and effects, see [ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md). |
 
 **Return value:**
@@ -488,7 +495,9 @@ Sets whether the security component is interactive.
 fallbackLineSpacing(enabled: boolean): T
 ```
 
-Enables adaptive line height based on the actual text height for multi-line text.The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight** attribute of [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md). When the **lineHeight** value is less than the actual rendering height of the text at the current font size, the **fallbackLineSpacing** value determines whether the line height should adapt based on the actual text height.
+Enables adaptive line height based on the actual text height for multi-line text.
+
+The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight** attribute of [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md). When the **lineHeight** value is less than the actual rendering height of the text at the current font size, the **fallbackLineSpacing** value determines whether the line height should adapt based on the actual text height.
 
 **Since:** 26.0.0
 
@@ -586,7 +595,7 @@ Sets the font family of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Font family of the text on the security component. Default font:**'HarmonyOS Sans'**. |
+| value | string \| Resource | Yes | Font family of the text on the security component. Default font:**'HarmonyOS Sans'**. |
 
 **Return value:**
 
@@ -642,7 +651,7 @@ Sets the font style of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](#fontstyle) | Yes | Font style of the text on the security component. Default value: FontStyle.Normal. |
+| value | FontStyle | Yes | Font style of the text on the security component. Default value: FontStyle.Normal. |
 
 **Return value:**
 
@@ -670,7 +679,7 @@ Sets the font weight of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Font weight of the text on the security component. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. For the string type, only numeric strings, for example, **'400'**, and the enumerated values of **FontWeight** are supported, including **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**. The Resource type is supported since API version 20. The Resource type supports only **'integer'** and **'string'** formats. Values follow the number type specifications for the **'integer'** type and the string type specifications for the **'string'** type, both described earlier. If **fontWeight** is not set for the component, the font weight is set to **FontWeight.Medium** by default. If **value** is **undefined** or **null**, a number outside the [100, 900] range, or a string that does not match the string format of **FontWeight** enums, the font weight is set to **FontWeight.Normal**.<br>**Since:** 20 |
+| value | number \| FontWeight \| string \| Resource | Yes | Font weight of the text on the security component. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. For the string type, only numeric strings, for example, **'400'**, and the enumerated values of **FontWeight** are supported, including **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**. The Resource type is supported since API version 20. The Resource type supports only **'integer'** and **'string'** formats. Values follow the number type specifications for the **'integer'** type and the string type specifications for the **'string'** type, both described earlier. If **fontWeight** is not set for the component, the font weight is set to **FontWeight.Medium** by default. If **value** is **undefined** or **null**, a number outside the [100, 900] range, or a string that does not match the string format of **FontWeight** enums, the font weight is set to **FontWeight.Normal**.<br>**Since:** 20 |
 
 **Return value:**
 
@@ -712,7 +721,9 @@ Sets the height of the security component. If not set, the height adapts to the 
 heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T
 ```
 
-Sets the method for text height adaptation. This is applicable to scenarios where the text display of a security component needs to be dynamically adjusted to ensure complete text visibility under different sizes or language environments.The security component text is laid out at [maxFontSize](#maxfontsize). If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise, adaptation proceeds according to the specified policy, as follows:   
+Sets the method for text height adaptation. This is applicable to scenarios where the text display of a security component needs to be dynamically adjusted to ensure complete text visibility under different sizes or language environments.
+
+The security component text is laid out at [maxFontSize](#maxfontsize). If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise, adaptation proceeds according to the specified policy, as follows:   
 **TextHeightAdaptivePolicy.MAX_LINES_FIRST**: prioritizes the [maxLines](#maxlines) attribute for adjusting the text height. If the layout size with **maxLines** exceeds the layout constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minfontsize) and [maxFontSize](#maxfontsize) to fit more text. If the text still cannot be fully displayed, the security component adaptively adjusts its height to show all text.   
 **TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST**: prioritizes the [minFontSize](#minfontsize) attribute for adjusting the text height. If the text can be laid out in a single line using **minFontSize**, the security component attempts to increase the font size within the range of **minFontSize** and [maxFontSize](#maxfontsize) to use the largest possible font size. If the text cannot be laid out in a single line using **minFontSize**, the security component attempts to use the [maxLines](#maxlines) attribute for layout. If the text still cannot be fully displayed, the security component adaptively adjusts its height to fully display the text.   
 **TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**: prioritizes layout constraints for adjusting the text height. If the layout size exceeds the constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minfontsize) and [maxFontSize](#maxfontsize). If the layout size still exceeds the constraints after the font size is reduced to **minFontSize**, the security component truncates the excess lines. If the [maxLines](#maxlines) attribute is set, the number of lines does not exceed the **maxLines** value (horizontal truncation may occur). If **maxLines** is not set, there is no limit on the number of lines. If the security component text is not fully displayed, clicking does not trigger authorization. Whether the text is fully displayed depends on attributes such as **heightAdaptivePolicy**, **minFontSize**, **maxFontSize**, **maxLines**, **width**, and **height**.
@@ -869,7 +880,7 @@ Sets the anchor of the security component for moving the component with its top-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Position](#position) | Yes | Anchor of the security component for moving the component with its top-left corner as the reference point. Generally, this attribute is used in conjunction with **position()** and **offset()** for more precise positioning. No default value. This attribute does not take effect when it is set to an invalid value. |
+| value | Position | Yes | Anchor of the security component for moving the component with its top-left corner as the reference point. Generally, this attribute is used in conjunction with **position()** and **offset()** for more precise positioning. No default value. This attribute does not take effect when it is set to an invalid value. |
 
 **Return value:**
 
@@ -883,7 +894,9 @@ Sets the anchor of the security component for moving the component with its top-
 maxFontScale(scale: number | Resource): T
 ```
 
-Sets the maximum font scale factor. When this API is invoked and the system font scaling causes the text to enlarge, the font scale factor will not exceed the set maximum scale factor.This API can be used in conjunction with [minFontScale](#minfontscale). **maxFontScale** controls the upper limit of the scale factor, and **minFontScale** controls the lower limit. They can be set independently or together to precisely control font scaling.
+Sets the maximum font scale factor. When this API is invoked and the system font scaling causes the text to enlarge, the font scale factor will not exceed the set maximum scale factor.
+
+This API can be used in conjunction with [minFontScale](#minfontscale). **maxFontScale** controls the upper limit of the scale factor, and **minFontScale** controls the lower limit. They can be set independently or together to precisely control font scaling.
 
 **Since:** 18
 
@@ -897,7 +910,7 @@ Sets the maximum font scale factor. When this API is invoked and the system font
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Maximum font scale factor for the text. The value must be greater than or equal to 1.    **NOTE：**If the set value is less than 1, the value **1** is used. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
+| scale | number \| Resource | Yes | Maximum font scale factor for the text. The value must be greater than or equal to 1.    **NOTE：**If the set value is less than 1, the value **1** is used. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
 
 **Return value:**
 
@@ -911,7 +924,8 @@ Sets the maximum font scale factor. When this API is invoked and the system font
 maxFontSize(maxSize: number | string | Resource): T
 ```
 
-Sets the maximum font size for text display.  
+Sets the maximum font size for text display.
+
 - When used in conjunction with [minFontSize](#minfontsize) and  
 [maxLines](#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
 - **maxFontSize** must be greater than **minFontSize**. If **maxFontSize** is less than **minFontSize**,  
@@ -932,7 +946,7 @@ Sets the maximum font size for text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSize | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Maximum display font size of the text. The value must be greater than 0. When the unit is not explicitly specified, the unit is fp.    **NOTE：**When the set value is less than or equal to 0, the adaptive font size does not take effect. When an invalid value is set, this attribute does not take effect. |
+| maxSize | number \| string \| Resource | Yes | Maximum display font size of the text. The value must be greater than 0. When the unit is not explicitly specified, the unit is fp.    **NOTE：**When the set value is less than or equal to 0, the adaptive font size does not take effect. When an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -960,7 +974,7 @@ Sets the maximum number of lines for text. By default, text wraps automatically.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Maximum number of lines for the text. The number type accepts values in [1, +∞). The Resource type is supported since API version 20. The parameter of the Resource type supports only integers in the range [1, +∞).    **NOTE：**A value less than 1 is handled as the default value **1000000**.<br>**Since:** 20 |
+| line | number \| Resource | Yes | Maximum number of lines for the text. The number type accepts values in [1, +∞). The Resource type is supported since API version 20. The parameter of the Resource type supports only integers in the range [1, +∞).    **NOTE：**A value less than 1 is handled as the default value **1000000**.<br>**Since:** 20 |
 
 **Return value:**
 
@@ -974,7 +988,9 @@ Sets the maximum number of lines for text. By default, text wraps automatically.
 minFontScale(scale: number | Resource): T
 ```
 
-Sets the minimum font scale factor for the text. When this API is invoked and the system font scaling causes the text to shrink, the font scale factor will not fall below the set minimum scale factor.This API can be used in conjunction with [maxFontScale](#maxfontscale). **minFontScale** controls the lower limit of the scale factor and **maxFontScale** controls the upper limit. They can be set independently or together to precisely control font scaling.
+Sets the minimum font scale factor for the text. When this API is invoked and the system font scaling causes the text to shrink, the font scale factor will not fall below the set minimum scale factor.
+
+This API can be used in conjunction with [maxFontScale](#maxfontscale). **minFontScale** controls the lower limit of the scale factor and **maxFontScale** controls the upper limit. They can be set independently or together to precisely control font scaling.
 
 **Since:** 18
 
@@ -988,7 +1004,7 @@ Sets the minimum font scale factor for the text. When this API is invoked and th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Minimum font scale factor for the text. Value range: [0,1].    **NOTE：**If the set value is less than 0, the value **0** is used, meaning scaling down to any factor is allowed. If the set value is greater than 1, the value **1** is used, meaning font scaling is not allowed. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
+| scale | number \| Resource | Yes | Minimum font scale factor for the text. Value range: [0,1].    **NOTE：**If the set value is less than 0, the value **0** is used, meaning scaling down to any factor is allowed. If the set value is greater than 1, the value **1** is used, meaning font scaling is not allowed. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
 
 **Return value:**
 
@@ -1002,7 +1018,8 @@ Sets the minimum font scale factor for the text. When this API is invoked and th
 minFontSize(minSize: number | string | Resource): T
 ```
 
-Sets the minimum font size for text display.  
+Sets the minimum font size for text display.
+
 - When used in conjunction with [maxFontSize](#maxfontsize) and  
 [maxLines](#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
 - **minFontSize** must be smaller than **maxFontSize**. If the set value is greater than **maxFontSize**,  
@@ -1024,7 +1041,7 @@ Sets the minimum font size for text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minSize | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Minimum display font size of the text. The value must be greater than 0. When the unit is not explicitly specified, the unit is fp.    **minFontSize** must be less than **maxFontSize**. If the set value is greater than **maxFontSize**, **maxFontSize** is used instead. If this parameter is less than or equal to 0, the adaptive font size does not take effect. |
+| minSize | number \| string \| Resource | Yes | Minimum display font size of the text. The value must be greater than 0. When the unit is not explicitly specified, the unit is fp.    **minFontSize** must be less than **maxFontSize**. If the set value is greater than **maxFontSize**, **maxFontSize** is used instead. If this parameter is less than or equal to 0, the adaptive font size does not take effect. |
 
 **Return value:**
 
@@ -1108,7 +1125,7 @@ Sets the absolute position, which is the offset of the top-left corner of the se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Position](#position) | Yes | Offset position of the security component's top-left corner relative to the parent container's top-left corner. Applicable to scenarios where the security component is placed in a fixed area of the page through absolute positioning. When the unit is not explicitly specified, the unit is vp. It is recommended that you pass numeric coordinates for both **x** and **y**.If the parameter is **undefined** or **null**, or **x** and **y** are non-numeric types, this attribute does not take effect, and invalid coordinates are treated as **0**. |
+| value | Position | Yes | Offset position of the security component's top-left corner relative to the parent container's top-left corner. Applicable to scenarios where the security component is placed in a fixed area of the page through absolute positioning. When the unit is not explicitly specified, the unit is vp. It is recommended that you pass numeric coordinates for both **x** and **y**.If the parameter is **undefined** or **null**, or **x** and **y** are non-numeric types, this attribute does not take effect, and invalid coordinates are treated as **0**. |
 
 **Return value:**
 

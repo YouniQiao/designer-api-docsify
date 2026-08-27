@@ -17,7 +17,7 @@
 isMacroSupported(): boolean
 ```
 
-检测当前状态下是否支持微距能力，需要在CaptureSession调用 [commitConfig](arkts-camera-camera-session-i.md#commitconfig)之后进行调用。
+检测当前状态下是否支持微距能力，需要在CaptureSession调用[commitConfig](arkts-camera-camera-session-i.md#commitconfig)之后进行调用。
 
 **起始版本：** 19
 

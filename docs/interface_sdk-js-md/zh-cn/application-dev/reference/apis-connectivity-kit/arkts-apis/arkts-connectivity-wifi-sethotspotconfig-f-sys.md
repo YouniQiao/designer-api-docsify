@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## setHotspotConfig
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function setHotspotConfig(config: HotspotConfig): boolean
 ```
 
-设置热点配置信息。<p>仅支持配置OPEN和WPA2 PSK热点。
+设置热点配置信息。
+
+<p>仅支持配置OPEN和WPA2 PSK热点。
 
 **起始版本：** 7
 
@@ -33,7 +32,7 @@ function setHotspotConfig(config: HotspotConfig): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) | 是 |  |
+| config | HotspotConfig | 是 |  |
 
 **返回值：**
 

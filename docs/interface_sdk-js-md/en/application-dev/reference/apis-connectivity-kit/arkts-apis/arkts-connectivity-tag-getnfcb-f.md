@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getNfcB
@@ -30,7 +30,7 @@ Obtains an **NfcBTag** object, which allows access to the tags that use the NFC-
 
 | Type | Description |
 | --- | --- |
-| [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md) | NfcBTag** object obtained. |
+| NfcBTag | NfcBTag** object obtained. |
 
 **Error codes:**
 

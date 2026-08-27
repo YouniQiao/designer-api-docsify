@@ -31,7 +31,7 @@ static collapse(node: FrameNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) | 是 | ListItem节点对象。 |
+| node | FrameNode | 是 | ListItem节点对象。 |
 
 **错误码：**
 
@@ -64,7 +64,7 @@ static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) | 是 | ListItem节点对象。 |
+| node | FrameNode | 是 | ListItem节点对象。 |
 | direction | [ListItemSwipeActionDirection](arkts-arkui-listitemswipeactiondirection-e.md) | 是 | ListItem划出菜单的展开方向。 |
 
 **错误码：**

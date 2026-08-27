@@ -21,7 +21,7 @@ Obtains information about all sensors on the device. This API returns the result
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Sensor & gt; | List of sensor attributes. |
+| Array&lt;Sensor&gt; | List of sensor attributes. |
 
 **Error codes:**
 

@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getCandidateConfigs
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function getCandidateConfigs(): Array<WifiDeviceConfig>
 ```
 
-获取自己添加的所有已存在的候选WLAN配置列表。 只能获取自己在应用上创建的WLAN配置。
+获取自己添加的所有已存在的候选WLAN配置列表。只能获取自己在应用上创建的WLAN配置。
 
 **起始版本：** 12
 
@@ -27,7 +26,7 @@ function getCandidateConfigs(): Array<WifiDeviceConfig>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;WifiDeviceConfig & gt; | 返回您在应用上创建的所有已存在的WLAN配置列表。 |
+| Array&lt;WifiDeviceConfig&gt; | 返回您在应用上创建的所有已存在的WLAN配置列表。 |
 
 **错误码：**
 

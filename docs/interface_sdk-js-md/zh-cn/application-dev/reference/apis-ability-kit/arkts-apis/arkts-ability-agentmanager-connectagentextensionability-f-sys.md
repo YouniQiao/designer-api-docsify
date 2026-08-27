@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import agentManager from '@kit.AbilityKit';
+import { agentManager } from '@kit.AbilityKit';
 ```
 
 ## connectAgentExtensionAbility
@@ -13,7 +13,7 @@ function connectAgentExtensionAbility(want: Want, agentId: string,
     callback: AgentExtensionConnectCallback): Promise<AgentProxy>
 ```
 
-将当前调用方组件连接到 [AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)。通过返回的 [AgentProxy](../../../reference/apis-ability-kit/js-apis-inner-application-agentProxy-sys.md)与 [AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)进行通信，以使用 AgentExtensionAbility对外提供的能力。
+将当前调用方组件连接到[AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)。通过返回的[AgentProxy](../../../reference/apis-ability-kit/js-apis-inner-application-agentProxy-sys.md)与[AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)进行通信，以使用AgentExtensionAbility对外提供的能力。
 
 > **说明：**
 > 
@@ -42,9 +42,9 @@ function connectAgentExtensionAbility(want: Want, agentId: string,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | [AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)所属的Want 信息，通常需要包括bundle名称、ability名称。 |
-| agentId | string | 是 | [AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)所属的 agentId。 |
-| callback | [AgentExtensionConnectCallback](arkts-ability-agentextensionconnectcallback-i-sys.md) | 是 | 连接回调函数，包含接收 [AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)服务端的数据、 安全认证数据以及断开连接事件的回调接口。 |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | [AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)所属的Want信息，通常需要包括bundle名称、ability名称。 |
+| agentId | string | 是 | [AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)所属的agentId。 |
+| callback | [AgentExtensionConnectCallback](arkts-ability-agentextensionconnectcallback-i-sys.md) | 是 | 连接回调函数，包含接收[AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)服务端的数据、安全认证数据以及断开连接事件的回调接口。 |
 
 **返回值：**
 

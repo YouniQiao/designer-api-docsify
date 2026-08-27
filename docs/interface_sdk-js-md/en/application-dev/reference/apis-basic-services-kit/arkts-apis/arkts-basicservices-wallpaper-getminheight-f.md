@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wallpaper from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## getMinHeight
@@ -59,7 +59,7 @@ Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpape
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | the promise returned by the function. |
+| Promise&lt;number&gt; | the promise returned by the function. |
 
 **Examples**
 

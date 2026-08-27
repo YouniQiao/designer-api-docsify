@@ -17,7 +17,9 @@ Defines the style of the lunar calendar switch in the **DatePickerDialog** compo
 selectedColor?: ResourceColor
 ```
 
-Background color of the switch when it is on.Default value: **\$r('sys.color.ohos_id_color_text_primary_actived')**
+Background color of the switch when it is on.
+
+Default value: **\$r('sys.color.ohos_id_color_text_primary_actived')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -37,7 +39,9 @@ Background color of the switch when it is on.Default value: **\$r('sys.color.oho
 strokeColor?: ResourceColor
 ```
 
-Color of the icon inside the switch.Default value: **Color.White**
+Color of the icon inside the switch.
+
+Default value: **Color.White**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -57,7 +61,9 @@ Color of the icon inside the switch.Default value: **Color.White**
 unselectedColor?: ResourceColor
 ```
 
-Border color of the switch when it is off.Default value: **\$r('sys.color.ohos_id_color_switch_outline_off')**
+Border color of the switch when it is off.
+
+Default value: **\$r('sys.color.ohos_id_color_switch_outline_off')**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

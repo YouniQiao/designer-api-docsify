@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import intl from '@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -107,7 +107,7 @@ constructor(locale: string, options?: LocaleOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | string | 是 | 表示区域ID的字符串，由语言、脚本、国家地区组成。 |
-| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | 否 | 创建区域对象的配置项。 默认值：所有属性都取默认值时的配置项。<br>**起始版本：** 12 |
+| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | 否 | 创建区域对象的配置项。默认值：所有属性都取默认值时的配置项。<br>**起始版本：** 12 |
 
 **示例**
 
@@ -271,7 +271,11 @@ baseName: string
 calendar: string
 ```
 
-区域的日历信息，取值包括："buddhist", "chinese", "coptic","dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic","islamic-umalqura", "islamic-tbla", "islamic-civil", "islamic-rgsa", "iso8601", "japanese", "persian", "roc","islamicc"。不同取值表示的含义请参考[设置日历和历法表1](../../../internationalization/i18n-calendar.md)。
+区域的日历信息，取值包括：
+
+"buddhist", "chinese", "coptic","dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic","islamic-umalqura", "islamic-tbla", "islamic-civil", "islamic-rgsa", "iso8601", "japanese", "persian", "roc","islamicc"。
+
+不同取值表示的含义请参考[设置日历和历法表1](../../../internationalization/i18n-calendar.md)。
 
 **类型：** string
 
@@ -293,7 +297,13 @@ calendar: string
 caseFirst: string
 ```
 
-区域的排序规则是否考虑大小写，取值包括："upper"：大写排前面。"lower"：小写排前面。"false"：使用区域默认的大小写排序规则。
+区域的排序规则是否考虑大小写，取值包括：
+
+"upper"：大写排前面。
+
+"lower"：小写排前面。
+
+"false"：使用区域默认的大小写排序规则。
 
 **类型：** string
 
@@ -315,7 +325,39 @@ caseFirst: string
 collation: string
 ```
 
-区域的排序规则，取值包括："big5han"：拉丁字母使用的拼音排序。"compat"：兼容性排序，仅用于阿拉伯语。"dict"：词典风格排序，仅用于僧伽罗语。"direct"：二进制码点排序。"ducet"：按Unicode排序元素表排序。"eor"：按欧洲排序规则排序。"gb2312"：拼音排序，仅用于中文排序。"phonebk"：电话本风格排序。"phonetic"：发音排序。"pinyin"：拼音排序。"reformed"：瑞典语排序。"searchjl"：韩语初始辅音搜索的特殊排序。"stroke"：汉语的笔画排序。"trad"：传统风格排序，如西班牙语。"unihan"：统一汉字排序，用于日语、韩语、中文等汉字排序。"zhuyin"：注音排序，仅用于中文排序。
+区域的排序规则，取值包括：
+
+"big5han"：拉丁字母使用的拼音排序。
+
+"compat"：兼容性排序，仅用于阿拉伯语。
+
+"dict"：词典风格排序，仅用于僧伽罗语。
+
+"direct"：二进制码点排序。
+
+"ducet"：按Unicode排序元素表排序。
+
+"eor"：按欧洲排序规则排序。
+
+"gb2312"：拼音排序，仅用于中文排序。
+
+"phonebk"：电话本风格排序。
+
+"phonetic"：发音排序。
+
+"pinyin"：拼音排序。
+
+"reformed"：瑞典语排序。
+
+"searchjl"：韩语初始辅音搜索的特殊排序。
+
+"stroke"：汉语的笔画排序。
+
+"trad"：传统风格排序，如西班牙语。
+
+"unihan"：统一汉字排序，用于日语、韩语、中文等汉字排序。
+
+"zhuyin"：注音排序，仅用于中文排序。
 
 **类型：** string
 
@@ -337,7 +379,11 @@ collation: string
 hourCycle: string
 ```
 
-区域的时制信息，取值包括："h11"、"h12"、"h23"、"h24"。不同取值的显示效果可参考[附录表5](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+区域的时制信息，取值包括：
+
+"h11"、"h12"、"h23"、"h24"。
+
+不同取值的显示效果可参考[附录表5](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -381,7 +427,9 @@ language: string
 numberingSystem: string
 ```
 
-区域使用的数字系统，取值包括："adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide","gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham","laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong","mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment","shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii","wara", "wcho"。
+区域使用的数字系统，取值包括：
+
+"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide","gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham","laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong","mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment","shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii","wara", "wcho"。
 
 **类型：** string
 
@@ -403,7 +451,9 @@ numberingSystem: string
 numeric: boolean
 ```
 
-true表示对数字字符进行特殊的排序规则处理（把数字字符作为数值进行排序），false表示不对数字字符进行特殊的排序规则处理。默认值：false。
+true表示对数字字符进行特殊的排序规则处理（把数字字符作为数值进行排序），false表示不对数字字符进行特殊的排序规则处理。
+
+默认值：false。
 
 **类型：** boolean
 

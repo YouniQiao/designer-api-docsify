@@ -14,9 +14,6 @@ IconCommonOptions定义图标的共通属性。
 
 ```TypeScript
 import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
-import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2SuffixImageIconConfig, ChipV2SuffixImageIcon, ChipV2Icon, ChipV2PrefixImageIconConfig, ChipV2PrefixImageIcon, ChipV2AccessibilityConfig, ChipV2Accessibility, ChipV2CloseConfig, ChipV2CloseIcon, ChipV2SymbolIconConfig, ChipV2SymbolIcon, ChipV2PrefixSymbolIconConfig, ChipV2PrefixSymbolIcon, ChipV2SuffixSymbolIconConfig, ChipV2SuffixSymbolIcon, ChipV2LabelMarginConfig, ChipV2LocalizedLabelMarginConfig, ChipV2LabelConfig, ChipV2Label, IChipV2OptionsConfig, ChipV2Options, ChipV2 } from '@kit.ArkUIV2';
-import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUIGroup';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUIGroupV2';
 ```
 
 ## activatedFillColor
@@ -25,7 +22,11 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 activatedFillColor?: ResourceColor
 ```
 
-Chip激活时的图标填充颜色。仅在图片格式为SVG时生效。默认值：\$r('sys.color.chip_active_icon_color')值为undefined时，按默认值处理。
+Chip激活时的图标填充颜色。仅在图片格式为SVG时生效。
+
+默认值：\$r('sys.color.chip_active_icon_color')
+
+值为undefined时，按默认值处理。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -43,7 +44,11 @@ Chip激活时的图标填充颜色。仅在图片格式为SVG时生效。默认�
 fillColor?: ResourceColor
 ```
 
-图标填充颜色。仅在图片格式为SVG时生效。默认值：\$r('sys.color.chip_usually_icon_color')值为undefined时，按默认值处理。
+图标填充颜色。仅在图片格式为SVG时生效。
+
+默认值：\$r('sys.color.chip_usually_icon_color')
+
+值为undefined时，按默认值处理。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -61,11 +66,18 @@ fillColor?: ResourceColor
 size?: SizeOptions
 ```
 
-图标大小，不支持百分比，异常值按默认值处理。默认值：  
+图标大小，不支持百分比，异常值按默认值处理。
+
+默认值：
+
 - 当ChipOptions.size为ChipSize.SMALL时，默认值为：{width: \$r('sys.float.chip_small_icon_size'), height: \$r('  
 sys.float.chip_small_icon_size')}  
 - 当ChipOptions.size为ChipSize.NORMAL时，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('  
-sys.float.chip_normal_icon_size')}单位：vp值为undefined时，按默认值处理。
+sys.float.chip_normal_icon_size')}
+
+单位：vp
+
+值为undefined时，按默认值处理。
 
 **类型：** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 

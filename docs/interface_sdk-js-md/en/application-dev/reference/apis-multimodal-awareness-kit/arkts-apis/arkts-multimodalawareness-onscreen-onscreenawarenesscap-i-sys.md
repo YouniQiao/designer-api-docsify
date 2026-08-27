@@ -11,7 +11,7 @@ Defines onscreen awareness capabilities (including but not limited to awareness 
 ## Modules to Import
 
 ```TypeScript
-import onScreen from '@kit.MultimodalAwarenessKit';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## capList

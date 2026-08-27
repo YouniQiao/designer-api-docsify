@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import skillManager from '@kit.AbilityKit';
+import { skillManager } from '@kit.AbilityKit';
 ```
 
 ## getSkillInfosForSelf
@@ -32,7 +32,7 @@ function getSkillInfosForSelf(flags: number): Promise<Array<SkillInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;SkillInfo & gt; & gt; | Promise对象，返回调用方所在应用的所有技能信息数组。 |
+| Promise&lt;Array&lt;SkillInfo&gt;&gt; | Promise对象，返回调用方所在应用的所有技能信息数组。 |
 
 **错误码：**
 

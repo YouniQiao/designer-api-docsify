@@ -1,6 +1,8 @@
 # OutlineStyle
 
-外描边样式。@enum { number }
+外描边样式。
+
+@enum { number }
 
 **起始版本：** 12
 

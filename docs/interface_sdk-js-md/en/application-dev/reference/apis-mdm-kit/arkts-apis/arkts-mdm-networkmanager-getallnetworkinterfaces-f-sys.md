@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## getAllNetworkInterfaces
@@ -99,7 +99,7 @@ Obtains all activated wired network interfaces. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the names of all activated wired network interfaces. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the names of all activated wired network interfaces. |
 
 **Error codes:**
 

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import cloudSyncManager from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## failedCount

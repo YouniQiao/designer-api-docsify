@@ -1,6 +1,8 @@
 # Week
 
-定义星期枚举值。@enum { number }
+定义星期枚举值。
+
+@enum { number }
 
 **起始版本：** 11
 

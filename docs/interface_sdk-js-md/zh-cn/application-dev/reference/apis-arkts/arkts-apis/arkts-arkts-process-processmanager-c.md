@@ -1,6 +1,8 @@
 # ProcessManager
 
-提供进程管理相关接口，包括进程 UID 判断、用户信息查询、线程优先级获取、环境变量获取、进程退出和信号发送等功能。通过 `new process.ProcessManager()` 构造 ProcessManager 对象。
+提供进程管理相关接口，包括进程 UID 判断、用户信息查询、线程优先级获取、环境变量获取、进程退出和信号发送等功能。
+
+通过 `new process.ProcessManager()` 构造 ProcessManager 对象。
 
 **起始版本：** 9
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import process from '@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## exit
@@ -18,7 +20,9 @@ import process from '@kit.ArkTS';
 exit(code: number): void
 ```
 
-终止程序。请谨慎使用此接口，此接口调用后应用会退出，如果输入参数非0，可能会导致数据丢失或出现未定义的运行异常。
+终止程序。
+
+请谨慎使用此接口，此接口调用后应用会退出，如果输入参数非0，可能会导致数据丢失或出现未定义的运行异常。
 
 **起始版本：** 9
 
@@ -229,7 +233,7 @@ isAppUid(v: number): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回判断结果。如果是应用程序的 uid 则返回 true； 否则返回 false。 |
+| boolean | 返回判断结果。如果是应用程序的 uid 则返回 true；否则返回 false。 |
 
 **示例**
 
@@ -267,7 +271,7 @@ kill(signal: number, pid: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| signal | number | 是 | 发送特定的信号给指定进程。取值范围：1 & lt;= signal & lt;= 64。 |
+| signal | number | 是 | 发送特定的信号给指定进程。取值范围：1 &lt;= signal &lt;= 64。 |
 | pid | number | 是 | 进程的id。可通过process.pid获取。 |
 
 **返回值：**

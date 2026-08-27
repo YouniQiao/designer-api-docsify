@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## address
@@ -19,7 +18,13 @@ import audioHaptic from '@kit.AudioKitHaptic';
 readonly address: string
 ```
 
-设备静态MAC地址。如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。SystemCapability.Multimedia.Audio.Device从API version 12开始，该接口支持在原子化服务中使用。
+设备静态MAC地址。
+
+如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
+
+SystemCapability.Multimedia.Audio.Device
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
@@ -35,7 +40,9 @@ readonly address: string
 readonly capabilities?: Array<AudioStreamInfo>
 ```
 
-设备支持的音频流能力。SystemCapability.Multimedia.Audio.Device
+设备支持的音频流能力。
+
+SystemCapability.Multimedia.Audio.Device
 
 **类型：** Array&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt;
 
@@ -49,7 +56,11 @@ readonly capabilities?: Array<AudioStreamInfo>
 readonly channelCounts: Array<number>
 ```
 
-支持的通道数。SystemCapability.Multimedia.Audio.Device从API version 12开始，该接口支持在原子化服务中使用。
+支持的通道数。
+
+SystemCapability.Multimedia.Audio.Device
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** Array&lt;number&gt;
 
@@ -65,7 +76,11 @@ readonly channelCounts: Array<number>
 readonly channelMasks: Array<number>
 ```
 
-支持的通道掩码。SystemCapability.Multimedia.Audio.Device从API version 12开始，该接口支持在原子化服务中使用。
+支持的通道掩码。
+
+SystemCapability.Multimedia.Audio.Device
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** Array&lt;number&gt;
 
@@ -81,7 +96,11 @@ readonly channelMasks: Array<number>
 readonly deviceRole: DeviceRole
 ```
 
-设备角色。SystemCapability.Multimedia.Audio.Device从API version 12开始，该接口支持在原子化服务中使用。
+设备角色。
+
+SystemCapability.Multimedia.Audio.Device
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** [DeviceRole](arkts-audio-audio-devicerole-e.md)
 
@@ -97,7 +116,11 @@ readonly deviceRole: DeviceRole
 readonly deviceType: DeviceType
 ```
 
-设备类型。SystemCapability.Multimedia.Audio.Device从API version 12开始，该接口支持在原子化服务中使用。
+设备类型。
+
+SystemCapability.Multimedia.Audio.Device
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** DeviceType
 
@@ -113,7 +136,11 @@ readonly deviceType: DeviceType
 readonly displayName: string
 ```
 
-设备显示名。SystemCapability.Multimedia.Audio.Device从API version 12开始，该接口支持在原子化服务中使用。
+设备显示名。
+
+SystemCapability.Multimedia.Audio.Device
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
@@ -129,7 +156,11 @@ readonly displayName: string
 readonly encodingTypes?: Array<AudioEncodingType>
 ```
 
-支持的编码类型。SystemCapability.Multimedia.Audio.Core从API version 12开始，该接口支持在原子化服务中使用。
+支持的编码类型。
+
+SystemCapability.Multimedia.Audio.Core
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** Array&lt;[AudioEncodingType](arkts-audio-audio-audioencodingtype-e.md)&gt;
 
@@ -145,7 +176,11 @@ readonly encodingTypes?: Array<AudioEncodingType>
 readonly id: number
 ```
 
-唯一的设备id。SystemCapability.Multimedia.Audio.Device从API version 12开始，该接口支持在原子化服务中使用。
+唯一的设备id。
+
+SystemCapability.Multimedia.Audio.Device
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -161,7 +196,9 @@ readonly id: number
 readonly model?: string
 ```
 
-设备的具体型号类别。SystemCapability.Multimedia.Audio.Device
+设备的具体型号类别。
+
+SystemCapability.Multimedia.Audio.Device
 
 **类型：** string
 
@@ -175,7 +212,13 @@ readonly model?: string
 readonly name: string
 ```
 
-设备名称。如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。SystemCapability.Multimedia.Audio.Device从API version 12开始，该接口支持在原子化服务中使用。
+设备名称。
+
+如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
+
+SystemCapability.Multimedia.Audio.Device
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
@@ -191,7 +234,11 @@ readonly name: string
 readonly sampleRates: Array<number>
 ```
 
-支持的采样率。SystemCapability.Multimedia.Audio.Device从API version 12开始，该接口支持在原子化服务中使用。
+支持的采样率。
+
+SystemCapability.Multimedia.Audio.Device
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** Array&lt;number&gt;
 
@@ -207,7 +254,9 @@ readonly sampleRates: Array<number>
 readonly spatializationSupported?: boolean
 ```
 
-设备是否支持空间音频。true表示支持空间音频，false表示不支持空间音频。SystemCapability.Multimedia.Audio.Spatialization
+设备是否支持空间音频。true表示支持空间音频，false表示不支持空间音频。
+
+SystemCapability.Multimedia.Audio.Spatialization
 
 **类型：** boolean
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setBadgeNumber
@@ -12,7 +12,11 @@ import notificationManager from '@kit.NotificationKit';
 function setBadgeNumber(badgeNumber: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the notification badge number. This API uses an asynchronous callback to return the result.A badge is a numeric identifier displayed in the upper right corner of an application's desktop icon, used to prompt the user about the number of unprocessed notifications. After setting, the desktop icon will display the corresponding badge number. This is suitable for scenarios where the number of pending messages needs to be prompted on the desktop icon, such as the number of unread messages and to-do items.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
+Sets the notification badge number. This API uses an asynchronous callback to return the result.
+
+A badge is a numeric identifier displayed in the upper right corner of an application's desktop icon, used to prompt the user about the number of unprocessed notifications. After setting, the desktop icon will display the corresponding badge number. This is suitable for scenarios where the number of pending messages needs to be prompted on the desktop icon, such as the number of unread messages and to-do items.
+
+This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 10
 
@@ -63,7 +67,11 @@ notificationManager.setBadgeNumber(badgeNumber, setBadgeNumberCallback);
 function setBadgeNumber(badgeNumber: number): Promise<void>
 ```
 
-Sets the notification badge number. This API uses a promise to return the result.A badge is a numeric identifier displayed in the upper right corner of an application's desktop icon, used to prompt the user about the number of unprocessed notifications. After setting, the desktop icon will display the corresponding badge number. This is suitable for scenarios where the number of pending messages needs to be prompted on the desktop icon, such as the number of unread messages and to-do items.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
+Sets the notification badge number. This API uses a promise to return the result.
+
+A badge is a numeric identifier displayed in the upper right corner of an application's desktop icon, used to prompt the user about the number of unprocessed notifications. After setting, the desktop icon will display the corresponding badge number. This is suitable for scenarios where the number of pending messages needs to be prompted on the desktop icon, such as the number of unread messages and to-do items.
+
+This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 10
 
@@ -83,7 +91,7 @@ getActiveNotificationCount obtains the number of
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

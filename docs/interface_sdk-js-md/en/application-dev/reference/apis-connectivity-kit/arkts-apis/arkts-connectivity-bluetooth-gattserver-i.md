@@ -13,16 +13,7 @@ Manages GATT server. Before calling an Gatt server method, you must use [createG
 ## Modules to Import
 
 ```TypeScript
-import bas from '@kit.ConnectivityKit.bas';
-import common from '@kit.ConnectivityKit.common';
-import bluetooth from '@kit.ConnectivityKit';
-import map from '@kit.ConnectivityKit.map';
-import pan from '@kit.ConnectivityKit.pan';
-import pbap from '@kit.ConnectivityKit.pbap';
-import opp from '@kit.ConnectivityKit.opp';
-import socket from '@kit.ConnectivityKit.socket';
-import wearDetection from '@kit.ConnectivityKit.wearDetection';
-import bluetoothManager from '@kit.ConnectivityKitManager';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## addService
@@ -47,7 +38,7 @@ Adds a specified service to be hosted. The added service and its characteristics
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| service | [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md) | Yes | Indicates the service to add. |
+| service | GattService | Yes | Indicates the service to add. |
 
 **Return value:**
 
@@ -122,7 +113,9 @@ server.close();
 notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): boolean
 ```
 
-Sends a notification of a change in a specified local characteristic.This method should be called for every BLE peripheral device that has requested notifications.
+Sends a notification of a change in a specified local characteristic.
+
+This method should be called for every BLE peripheral device that has requested notifications.
 
 **Since:** 7
 
@@ -139,7 +132,7 @@ Sends a notification of a change in a specified local characteristic.This method
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates the address of the BLE peripheral device to receive the notification. |
-| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md) | Yes | Indicates the local characteristic that has changed. |
+| notifyCharacteristic | NotifyCharacteristic | Yes | Indicates the local characteristic that has changed. |
 
 **Return value:**
 
@@ -637,7 +630,7 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverResponse | [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-bluetooth-serverresponse-i.md). |
+| serverResponse | ServerResponse | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-bluetooth-serverresponse-i.md). |
 
 **Return value:**
 
@@ -691,9 +684,9 @@ Starts BLE advertising.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| setting | [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md) | Yes | Indicates the settings for BLE advertising. If you need to use the default value, set this parameter to {@code null}. |
-| advData | [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md) | Yes | Indicates the advertising data. |
-| advResponse | [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md) | No | Indicates the scan response associated with the advertising data. |
+| setting | AdvertiseSetting | Yes | Indicates the settings for BLE advertising. If you need to use the default value, set this parameter to {@code null}. |
+| advData | AdvertiseData | Yes | Indicates the advertising data. |
+| advResponse | AdvertiseData | No | Indicates the scan response associated with the advertising data. |
 
 **Examples**
 

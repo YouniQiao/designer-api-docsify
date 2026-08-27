@@ -11,7 +11,7 @@ The childprocess object can be used to create a new process.
 ## Modules to Import
 
 ```TypeScript
-import process from '@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## close
@@ -46,7 +46,7 @@ Return it as 'Uint8Array of the stderr until EOF
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Return subprocess standard error output. |
+| Promise&lt;Uint8Array&gt; | Return subprocess standard error output. |
 
 ## getOutput
 
@@ -66,7 +66,7 @@ Return it as 'Uint8Array' of the stdout until EOF
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Return subprocess standard output. |
+| Promise&lt;Uint8Array&gt; | Return subprocess standard output. |
 
 ## kill
 
@@ -119,7 +119,7 @@ Return 'number' is the target process exit code
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Return the target process exit code. |
+| Promise&lt;number&gt; | Return the target process exit code. |
 
 ## exitCode
 

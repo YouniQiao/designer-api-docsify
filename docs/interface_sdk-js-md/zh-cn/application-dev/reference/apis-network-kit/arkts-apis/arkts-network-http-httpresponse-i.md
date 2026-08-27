@@ -47,7 +47,8 @@ cookies: string
 header: Object
 ```
 
-发起HTTP请求返回来的响应头。当前返回的是JSON格式字符串，如需具体字段内容，需开发者自行解析。常见字段及解析方式如下：  
+发起HTTP请求返回来的响应头。当前返回的是JSON格式字符串，如需具体字段内容，需开发者自行解析。常见字段及解析方式如下：
+
 - content-type：header['content-type']。  
 - status-line：header['status-line']。  
 - date：header.date/header['date']。  
@@ -97,11 +98,13 @@ responseCode: ResponseCode | number
 result: string | Object | ArrayBuffer
 ```
 
-HTTP请求根据响应头中content-type类型返回对应的响应格式内容，若HttpRequestOptions无expectDataType字段，按如下规则返回：  
+HTTP请求根据响应头中content-type类型返回对应的响应格式内容，若HttpRequestOptions无expectDataType字段，按如下规则返回：
+
 - application/json：返回JSON格式的字符串。  
 - application/octet-stream：ArrayBuffer。  
 - image：ArrayBuffer。  
-- 其他：string。  
+- 其他：string。
+
 若HttpRequestOption有expectDataType字段，开发者需传入与服务器返回类型相同的数据类型。
 
 **类型：** string \| Object \| ArrayBuffer

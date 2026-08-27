@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import linkEnhance from '@kit.DistributedServiceKit';
+import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## createConnection
@@ -12,7 +12,7 @@ import linkEnhance from '@kit.DistributedServiceKit';
 function createConnection(deviceId: string, name: string): Connection
 ```
 
-作为客户端的设备创建连接对象。创建Connection对象后，订阅on('connectResult')，然后调用connect()方法向服务端设备发起连接，连接成功后，可通过sendData()发送数据，当连接不需要使用，可调用 close()销毁连接对象释放资源。
+作为客户端的设备创建连接对象。创建Connection对象后，订阅on('connectResult')，然后调用connect()方法向服务端设备发起连接，连接成功后，可通过sendData()发送数据，当连接不需要使用，可调用close()销毁连接对象释放资源。
 
 **起始版本：** 20
 
@@ -26,7 +26,7 @@ function createConnection(deviceId: string, name: string): Connection
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | string | 是 | 连接的对端设备的deviceId，即对端设备的BLE MAC地址。BLE MAC的获取方法，请参考 [查找设备](../../../connectivity/bluetooth/ble-development-guide.md)。 |
+| deviceId | string | 是 | 连接的对端设备的deviceId，即对端设备的BLE MAC地址。BLE MAC的获取方法，请参考[查找设备](../../../connectivity/bluetooth/ble-development-guide.md)。 |
 | name | string | 是 | 连接的目标设备的服务名，非空字符串，最大长度255字节。超出长度限制或传入空字符串时返回错误码32390206。 |
 
 **返回值：**

@@ -1,6 +1,8 @@
 # HistoryItem
 
-Describes a historical page record.@interface HistoryItem [since 9 - 11]
+Describes a historical page record.
+
+@interface HistoryItem [since 9 - 11]
 
 **Since:** 9
 

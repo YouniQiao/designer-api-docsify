@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getHotspotConfig
@@ -27,7 +26,7 @@ function getHotspotConfig(): HotspotConfig
 
 | 类型 | 说明 |
 | --- | --- |
-| [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) | 返回已存在或已使能的WLAN热点配置。 |
+| HotspotConfig | 返回已存在或已使能的WLAN热点配置。 |
 
 **错误码：**
 

@@ -11,7 +11,7 @@ getInfo interface
 ## 导入模块
 
 ```TypeScript
-import Device, { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
+import { Device, DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
 ```
 
 ## getInfo
@@ -26,8 +26,11 @@ static getInfo(options?: GetDeviceOptions): void
    
 > 
 > 在首页的onShow生命周期之前不建议调用Device.getInfo接口。
-**系统能力：** SystemCapability.Startup.SystemInfo.Lite  
-**返回值：**  
+
+**系统能力：** SystemCapability.Startup.SystemInfo.Lite
+
+**返回值：**
+
 | 类型 | 说明 | | -------- | -------- | | void | 无返回值，设备信息通过回调函数返回。 |
 
 **起始版本：** 3

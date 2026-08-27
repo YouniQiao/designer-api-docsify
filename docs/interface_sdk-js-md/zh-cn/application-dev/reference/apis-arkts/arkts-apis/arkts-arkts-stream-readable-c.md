@@ -143,7 +143,7 @@ doRead(size: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | number | 是 | 读取数据的字节数。取值范围：0 & lt;= size & lt;= Number.MAX_VALUE。 |
+| size | number | 是 | 读取数据的字节数。取值范围：0 &lt;= size &lt;= Number.MAX_VALUE。 |
 
 **示例**
 
@@ -566,7 +566,7 @@ console.info("Readable test resume", !readableStream.isPaused()); // 切换流�
 setEncoding(encoding?: string): boolean
 ```
 
-设置可读流的字符编码类型。 当缓冲区有数据时，不允许设置字符编码类型，返回值为**false**。
+设置可读流的字符编码类型。当缓冲区有数据时，不允许设置字符编码类型，返回值为**false**。
 
 **起始版本：** 12
 

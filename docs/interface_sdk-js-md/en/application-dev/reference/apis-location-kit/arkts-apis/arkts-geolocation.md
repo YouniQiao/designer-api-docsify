@@ -1,6 +1,8 @@
 # @ohos.geolocation
 
-Provides interfaces for initiating location requests, ending the location service, and obtaining the location result cached by the system.@namespace geolocation
+Provides interfaces for initiating location requests, ending the location service, and obtaining the location result cached by the system.
+
+@namespace geolocation
 
 **Since:** 7
 
@@ -15,7 +17,7 @@ Provides interfaces for initiating location requests, ending the location servic
 ## Modules to Import
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## Summary
@@ -62,17 +64,17 @@ import geolocation from '@kit.LocationKit';
 
 | Name | Description |
 | --- | --- |
-| [CachedGnssLocationsRequest](arkts-location-geolocation-cachedgnsslocationsrequest-i.md) | Parameters for requesting to report cache location information@interface CachedGnssLocationsRequest |
-| [CurrentLocationRequest](arkts-location-geolocation-currentlocationrequest-i.md) | Configuring parameters in current location requests@interface CurrentLocationRequest |
-| [GeoAddress](arkts-location-geolocation-geoaddress-i.md) | Data struct describes geographic locations.@interface GeoAddress |
-| [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | Configuring parameters in geocode requests@interface GeoCodeRequest |
-| [Geofence](arkts-location-geolocation-geofence-i.md) | Circular fence information.@interface Geofence |
-| [GeofenceRequest](arkts-location-geolocation-geofencerequest-i.md) | Configuring parameters in geo fence requests@interface GeofenceRequest |
-| [Location](arkts-location-geolocation-location-i.md) | Provides information about geographic locations@interface Location |
-| [LocationCommand](arkts-location-geolocation-locationcommand-i.md) | Location subsystem command structure@interface LocationCommand |
-| [LocationRequest](arkts-location-geolocation-locationrequest-i.md) | Configuring parameters in location requests@interface LocationRequest |
-| [ReverseGeoCodeRequest](arkts-location-geolocation-reversegeocoderequest-i.md) | Configuring parameters in reverse geocode requests@interface ReverseGeoCodeRequest |
-| [SatelliteStatusInfo](arkts-location-geolocation-satellitestatusinfo-i.md) | Satellite status information@interface SatelliteStatusInfo |
+| [CachedGnssLocationsRequest](arkts-location-geolocation-cachedgnsslocationsrequest-i.md) | Parameters for requesting to report cache location information |
+| [CurrentLocationRequest](arkts-location-geolocation-currentlocationrequest-i.md) | Configuring parameters in current location requests |
+| [GeoAddress](arkts-location-geolocation-geoaddress-i.md) | Data struct describes geographic locations. |
+| [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | Configuring parameters in geocode requests |
+| [Geofence](arkts-location-geolocation-geofence-i.md) | Circular fence information. |
+| [GeofenceRequest](arkts-location-geolocation-geofencerequest-i.md) | Configuring parameters in geo fence requests |
+| [Location](arkts-location-geolocation-location-i.md) | Provides information about geographic locations |
+| [LocationCommand](arkts-location-geolocation-locationcommand-i.md) | Location subsystem command structure |
+| [LocationRequest](arkts-location-geolocation-locationrequest-i.md) | Configuring parameters in location requests |
+| [ReverseGeoCodeRequest](arkts-location-geolocation-reversegeocoderequest-i.md) | Configuring parameters in reverse geocode requests |
+| [SatelliteStatusInfo](arkts-location-geolocation-satellitestatusinfo-i.md) | Satellite status information |
 
 ### Enums
 

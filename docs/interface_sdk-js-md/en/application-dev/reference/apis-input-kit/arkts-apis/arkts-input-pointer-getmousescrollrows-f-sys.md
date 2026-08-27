@@ -82,7 +82,7 @@ Obtains the number of mouse scroll lines. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the number of mouse scroll lines. |
+| Promise&lt;number&gt; | Promise used to return the number of mouse scroll lines. |
 
 **Error codes:**
 

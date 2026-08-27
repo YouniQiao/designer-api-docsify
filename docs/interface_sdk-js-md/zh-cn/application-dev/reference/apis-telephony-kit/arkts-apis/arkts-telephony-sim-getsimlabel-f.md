@@ -11,7 +11,8 @@
 function getSimLabel(slotId: number, callback: AsyncCallback<SimLabel>): void
 ```
 
-查看卡槽ID和SIM卡的对应关系：  
+查看卡槽ID和SIM卡的对应关系：
+
 - 卡槽1对应SIM卡1或SIM卡2  
 - 卡槽2对应SIM卡2或ESIMX
 
@@ -42,7 +43,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { sim } from '@kit.TelephonyKit';
 
 sim.getSimLabel(0, (err: BusinessError, data: sim.SimLabel) => {
-  console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+  if (err) {
+        console.err(`getSimLabel failed. callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`callback: data->${JSON.stringify(data)}`);
 });
 ```
 

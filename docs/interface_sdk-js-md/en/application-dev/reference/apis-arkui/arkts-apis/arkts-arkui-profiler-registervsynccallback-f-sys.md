@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## registerVsyncCallback
@@ -24,4 +23,4 @@ Registers vsync callback for profiler.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (info: string) = & gt; void | Yes | the callback info is json string with ui update info. |
+| callback | (info: string) =&gt; void | Yes | the callback info is json string with ui update info. |

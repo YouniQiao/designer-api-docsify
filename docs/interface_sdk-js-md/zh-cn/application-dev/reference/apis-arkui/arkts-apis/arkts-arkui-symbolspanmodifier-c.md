@@ -2,7 +2,7 @@
 
 Defines SymbolSpan Modifier. Provided for use by the SymbolSpan component
 
-**继承/实现关系：** SymbolSpanModifier extends [SymbolSpanAttribute](../arkts-components/arkts-arkui-symbolspan-attribute.md#symbolspanattribute) implements AttributeModifier<SymbolSpanAttribute>
+**继承/实现关系：** SymbolSpanModifier extends [SymbolSpanAttribute](../arkts-components/arkts-arkui-symbolspan-attribute.md) implements AttributeModifier<SymbolSpanAttribute>
 
 **起始版本：** 12
 
@@ -50,4 +50,4 @@ constructor
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 |  |
+| src | Resource | 否 |  |

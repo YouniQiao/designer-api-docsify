@@ -18,7 +18,7 @@ Implements a shadow layer.
 ## Modules to Import
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## create

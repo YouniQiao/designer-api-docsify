@@ -1,6 +1,8 @@
 # ResourceRequest (System API)
 
-The request of standby resources.@interface ResourceRequest
+The request of standby resources.
+
+@interface ResourceRequest
 
 **Since:** 10
 
@@ -11,7 +13,7 @@ The request of standby resources.@interface ResourceRequest
 ## Modules to Import
 
 ```TypeScript
-import deviceStandby from '@kit.BackgroundTasksKit';
+import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## duration

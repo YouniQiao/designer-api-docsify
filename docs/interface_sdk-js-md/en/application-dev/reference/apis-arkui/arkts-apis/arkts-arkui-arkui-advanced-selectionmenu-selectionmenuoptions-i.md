@@ -18,8 +18,12 @@ import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu,
 onCopy?: (event?: EditorEventInfo) => void
 ```
 
-Event callback to take the place of the preset copy menu option.It is effective only when the **controller** parameter is set and the preset menu is available.  
+Event callback to take the place of the preset copy menu option.
+
+It is effective only when the **controller** parameter is set and the preset menu is available.
+
 **NOTE：**
+
 **event** indicates the returned information.
 
 **Since:** 11
@@ -42,8 +46,12 @@ Event callback to take the place of the preset copy menu option.It is effective 
 onCut?: (event?: EditorEventInfo) => void
 ```
 
-Event callback to take the place of the preset cut menu option.It is effective only when the **controller** parameter is set and the preset menu is available.  
+Event callback to take the place of the preset cut menu option.
+
+It is effective only when the **controller** parameter is set and the preset menu is available.
+
 **NOTE：**
+
 **event** indicates the returned information.
 
 **Since:** 11
@@ -66,8 +74,12 @@ Event callback to take the place of the preset cut menu option.It is effective o
 onPaste?: (event?: EditorEventInfo) => void
 ```
 
-Event callback to take the place of the preset paste menu option.It is effective only when the **controller** parameter is set and the preset menu is available.  
+Event callback to take the place of the preset paste menu option.
+
+It is effective only when the **controller** parameter is set and the preset menu is available.
+
 **NOTE：**
+
 **event** indicates the returned information.
 
 **Since:** 11
@@ -90,8 +102,12 @@ Event callback to take the place of the preset paste menu option.It is effective
 onSelectAll?: (event?: EditorEventInfo) => void
 ```
 
-Event callback to take the place of the preset select-all menu option.It is effective only when the **controller** parameter is set and the preset menu is available.  
+Event callback to take the place of the preset select-all menu option.
+
+It is effective only when the **controller** parameter is set and the preset menu is available.
+
 **NOTE：**
+
 **event** indicates the returned information.
 
 **Since:** 11
@@ -132,7 +148,11 @@ Set system-styled materials for the component. Different materials have differen
 controller?: RichEditorController
 ```
 
-Expanded drop-down menu options.If this parameter is left empty, the expanded drop-down menu is not displayed.The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More** shows the expanded drop-down menu.
+Expanded drop-down menu options.
+
+If this parameter is left empty, the expanded drop-down menu is not displayed.
+
+The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More** shows the expanded drop-down menu.
 
 **Type:** [RichEditorController](../arkts-components/arkts-arkui-richeditorcontroller-c.md)
 
@@ -150,7 +170,13 @@ Expanded drop-down menu options.If this parameter is left empty, the expanded dr
 editorMenuOptions?: Array<EditorMenuOptions>
 ```
 
-Edit menu.If **editorMenuOptions** is not set, the edit menu is not displayed.When both **action** and **builder** in **EditorMenuOptions** are configured, clicking the edit icon will trigger both.By default, the context menu is not closed when the edit menu icon is clicked. You can configure **closeSelectionMenu** of **RichEditorController** in **action** to enable the menu to be closed.
+Edit menu.
+
+If **editorMenuOptions** is not set, the edit menu is not displayed.
+
+When both **action** and **builder** in **EditorMenuOptions** are configured, clicking the edit icon will trigger both.
+
+By default, the context menu is not closed when the edit menu icon is clicked. You can configure **closeSelectionMenu** of **RichEditorController** in **action** to enable the menu to be closed.
 
 **Type:** Array&lt;[EditorMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-editormenuoptions-i.md)&gt;
 
@@ -168,7 +194,11 @@ Edit menu.If **editorMenuOptions** is not set, the edit menu is not displayed.Wh
 expandedMenuOptions?: Array<ExpandedMenuOptions>
 ```
 
-Expanded drop-down menu options.If this parameter is left empty, the expanded drop-down menu is not displayed.The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More** shows the expanded drop-down menu.
+Expanded drop-down menu options.
+
+If this parameter is left empty, the expanded drop-down menu is not displayed.
+
+The options configured for **ExpandedMenuOptions** are displayed in the **More** menu option, and clicking **More** shows the expanded drop-down menu.
 
 **Type:** Array&lt;[ExpandedMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-expandedmenuoptions-i.md)&gt;
 

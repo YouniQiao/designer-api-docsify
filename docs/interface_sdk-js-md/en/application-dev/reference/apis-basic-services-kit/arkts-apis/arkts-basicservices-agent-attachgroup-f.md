@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## attachGroup
@@ -13,7 +12,9 @@ import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
 function attachGroup(gid: string, tids: string[]): Promise<void>
 ```
 
-Attaches multiple download task IDs to a specified group ID. This API uses a promise to return the result.If any task ID does not meet the attachment conditions, all tasks in the list will not be added to the group.
+Attaches multiple download task IDs to a specified group ID. This API uses a promise to return the result.
+
+If any task ID does not meet the attachment conditions, all tasks in the list will not be added to the group.
 
 **Since:** 15
 
@@ -30,7 +31,7 @@ Attaches multiple download task IDs to a specified group ID. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

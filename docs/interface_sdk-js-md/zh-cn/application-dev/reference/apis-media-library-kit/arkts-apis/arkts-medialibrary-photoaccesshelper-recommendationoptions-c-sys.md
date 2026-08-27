@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## defaultRecommendationType
@@ -18,7 +18,11 @@ import photoAccessHelper from '@kit.MediaLibraryKit';
 defaultRecommendationType?: RecommendationType
 ```
 
-表示打开Picker直接显示的推荐标签。需要配置recommendationTypeList后，该配置才生效。如果该标签存在，则默认显示该标签页。如果该标签不存在，则默认显示“全部”标签页。
+表示打开Picker直接显示的推荐标签。需要配置recommendationTypeList后，该配置才生效。
+
+如果该标签存在，则默认显示该标签页。
+
+如果该标签不存在，则默认显示“全部”标签页。
 
 **类型：** [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md)
 

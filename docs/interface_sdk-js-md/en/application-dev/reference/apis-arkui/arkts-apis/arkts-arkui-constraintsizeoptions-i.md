@@ -1,6 +1,8 @@
 # ConstraintSizeOptions
 
-Defines the constrain size options.@interface ConstraintSizeOptions
+Defines the constrain size options.
+
+@interface ConstraintSizeOptions
 
 **Since:** 11
 

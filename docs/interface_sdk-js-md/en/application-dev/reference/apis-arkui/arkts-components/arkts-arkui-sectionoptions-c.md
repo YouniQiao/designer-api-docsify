@@ -17,8 +17,10 @@ Describes the configuration of the water flow item section.
 onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
 ```
 
-Callback used to obtain the main axis size, in vp, of the water flow item at a specified index during the layout process of the **WaterFlow** component. For a vertical **WaterFlow** component, this size refers to the height, and for a horizontal **WaterFlow** component, it refers to the width.  
+Callback used to obtain the main axis size, in vp, of the water flow item at a specified index during the layout process of the **WaterFlow** component. For a vertical **WaterFlow** component, this size refers to the height, and for a horizontal **WaterFlow** component, it refers to the width.
+
 **NOTE：**
+
 1. When both **onGetItemMainSizeByIndex** and the width or height attribute of **FlowItem** are used,
 the main-axis size is determined by the return value of **onGetItemMainSizeByIndex**, which will override the main-axis length of **FlowItem**.
 2. Using **onGetItemMainSizeByIndex** can improve the efficiency of jumping to a specific position
@@ -57,7 +59,11 @@ Column gap of the section. If this parameter is not set, the [columnsGap](arkts-
 crossCount?: number
 ```
 
-Number of columns (in vertical layout) or rows (in horizontal layout).Default value: **1**If the value is less than 1, the default value is used.
+Number of columns (in vertical layout) or rows (in horizontal layout).
+
+Default value: **1**
+
+If the value is less than 1, the default value is used.
 
 **Type:** number
 
@@ -95,7 +101,13 @@ Number of **FlowItem** components in a section. The value must be a non-negative
 margin?: Margin | Dimension
 ```
 
-Margins of the section. A value of the **Length** type specifies the margins on all the four sides.Default value: **0**Unit: vp When **margin** is set to a percentage, the width of the **WaterFlow** component is used as the base value for the top, bottom, left, and right margins.
+Margins of the section. A value of the **Length** type specifies the margins on all the four sides.
+
+Default value: **0**
+
+Unit: vp
+
+When **margin** is set to a percentage, the width of the **WaterFlow** component is used as the base value for the top, bottom, left, and right margins.
 
 **Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

@@ -1,8 +1,11 @@
 # GridRow
 
 栅格布局可以为布局提供规律性的结构，解决多尺寸多设备的动态布局问题，保证不同设备上各个模块的布局一致性。
+
 栅格容器组件，仅可以和栅格子组件(GridCol)在栅格布局场景中使用。
+
 支持根据设备尺寸和断点动态调整列数与间距，实现响应式布局。
+
 > **说明：** > > 该组件从API version 9开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 ## 子组件
@@ -37,11 +40,18 @@ GridRow(option?: GridRowOptions)
 
 | 名称 | 说明 |
 | --- | --- |
+| [BreakPoints](arkts-arkui-breakpoints-i.md) | 设置栅格容器组件的断点。更多断点的说明参考[栅格容器断点](../../../ui/arkts-layout-development-grid-layout.md#栅格容器断点)。 |
+| [GridRowColumnOption](arkts-arkui-gridrowcolumnoption-i.md) | 栅格在不同宽度设备类型下的栅格列数配置。 |
+| [GridRowOptions](arkts-arkui-gridrowoptions-i.md) | 设置栅格行布局容器的布局选项。 |
+| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md) | 栅格在不同宽度设备类型下的gutter大小配置。 |
+| [GutterOption](arkts-arkui-gutteroption-i.md) | 栅格布局间距类型，用于描述栅格子组件不同方向的间距。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
+| [BreakpointsReference](arkts-arkui-breakpointsreference-e.md) | 设置栅格容器组件的断点参照物。 |
+| [GridRowDirection](arkts-arkui-gridrowdirection-e.md) | 栅格元素排列方向。 |
 
 ## 示例
 

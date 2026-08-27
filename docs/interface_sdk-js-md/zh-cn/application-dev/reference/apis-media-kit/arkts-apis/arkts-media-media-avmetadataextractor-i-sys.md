@@ -1,6 +1,8 @@
 # AVMetadataExtractor
 
-元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过 [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md) 构建一个AVMetadataExtractor实例。获取音频或视频元数据、视频缩略图的demo可参考：[使用AVMetadataExtractor提取音视频元数据信息(ArkTS)](../../../media/media/avmetadataextractor.md)。
+元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md)构建一个AVMetadataExtractor实例。
+
+获取音频或视频元数据、视频缩略图的demo可参考：[使用AVMetadataExtractor提取音视频元数据信息(ArkTS)](../../../media/media/avmetadataextractor.md)。
 
 > **说明：**
 > 
@@ -13,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getFrameIndexByTime
@@ -40,7 +42,7 @@ getFrameIndexByTime(timeUs: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回视频帧号。 |
+| Promise&lt;number&gt; | Promise对象，返回视频帧号。 |
 
 **错误码：**
 
@@ -87,7 +89,7 @@ getTimeByFrameIndex(index: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回时间戳。单位是微秒。 |
+| Promise&lt;number&gt; | Promise对象，返回时间戳。单位是微秒。 |
 
 **错误码：**
 

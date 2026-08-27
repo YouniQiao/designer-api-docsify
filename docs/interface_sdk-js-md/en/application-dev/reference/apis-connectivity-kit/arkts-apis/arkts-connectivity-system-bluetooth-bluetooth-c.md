@@ -9,7 +9,7 @@ Provides methods to manage BLE scan.
 ## Modules to Import
 
 ```TypeScript
-import Bluetooth, { BLEFoundResponse, BluetoothDevice, StartBLEScanOptions, StopBLEScanOptions, SubscribeBLEFoundOptions } from '@kit.ConnectivityKit';
+import { Bluetooth, BLEFoundResponse, BluetoothDevice, StartBLEScanOptions, StopBLEScanOptions, SubscribeBLEFoundOptions } from '@kit.ConnectivityKit';
 ```
 
 ## startBLEScan
@@ -30,7 +30,7 @@ Start BLE scan
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [StartBLEScanOptions](arkts-connectivity-system-bluetooth-startblescanoptions-i.md) | Yes | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) |
+| options | [StartBLEScanOptions](arkts-connectivity-system-bluetooth-startblescanoptions-i.md) | Yes | Options |
 
 ## stopBLEScan
 
@@ -50,7 +50,7 @@ Stop BLE scan
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [StopBLEScanOptions](arkts-connectivity-system-bluetooth-stopblescanoptions-i.md) | Yes | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) |
+| options | [StopBLEScanOptions](arkts-connectivity-system-bluetooth-stopblescanoptions-i.md) | Yes | Options |
 
 ## subscribeBLEFound
 
@@ -70,7 +70,7 @@ Subscribe BLE found
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SubscribeBLEFoundOptions](arkts-connectivity-system-bluetooth-subscribeblefoundoptions-i.md) | Yes | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) |
+| options | [SubscribeBLEFoundOptions](arkts-connectivity-system-bluetooth-subscribeblefoundoptions-i.md) | Yes | Options |
 
 ## unsubscribeBLEFound
 

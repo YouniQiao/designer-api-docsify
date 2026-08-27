@@ -33,7 +33,7 @@ Open the Certificate Management Uninstall Certificate dialog. The corresponding 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

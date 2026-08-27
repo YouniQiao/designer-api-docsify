@@ -74,7 +74,7 @@ Checks whether the ringtone is playing. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value true indicates that the **ringtone** is playing, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value true indicates that the **ringtone** is playing, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

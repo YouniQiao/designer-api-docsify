@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## generateDlpFileForEnterprise
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, property: DLPProperty, customProperty: CustomProperty): Promise<void>
 ```
 
-将明文文件加密生成企业账号DLP文件，仅支持企业账号调用。使用Promise异步回调。用于将明文文件加密生成企业账号的DLP权限受控文件，实现企业级的文件权限管理。
+将明文文件加密生成企业账号DLP文件，仅支持企业账号调用。使用Promise异步回调。
+
+用于将明文文件加密生成企业账号的DLP权限受控文件，实现企业级的文件权限管理。
 
 > **说明：**
 > 
@@ -28,8 +30,8 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| plaintextFd | number | 是 | 明文文件的文件描述符。取值范围为[0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2 & lt;sup & gt;31 & lt;/sup & gt;-1 时，fd的值被截断。 |
-| dlpFd | number | 是 | 加密文件的文件描述符。取值范围为[0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2 & lt;sup & gt;31 & lt;/sup & gt;-1时，fd的值 被截断。 |
+| plaintextFd | number | 是 | 明文文件的文件描述符。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时，fd的值被截断。 |
+| dlpFd | number | 是 | 加密文件的文件描述符。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时，fd的值被截断。 |
 | property | [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) | 是 | DLP文件通用策略。 |
 | customProperty | [CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md) | 是 | 企业定制策略。 |
 
@@ -37,7 +39,7 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

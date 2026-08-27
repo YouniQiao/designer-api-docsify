@@ -9,9 +9,6 @@ Sets the nested scrolling rules of the **Web** component, supporting scrolling o
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## scrollDown
@@ -20,7 +17,9 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 scrollDown?: NestedScrollMode
 ```
 
-Nested scrolling options when the component scrolls down.Default value: **NestedScrollMode.SELF_FIRST**.
+Nested scrolling options when the component scrolls down.
+
+Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
@@ -34,7 +33,9 @@ Nested scrolling options when the component scrolls down.Default value: **Nested
 scrollLeft?: NestedScrollMode
 ```
 
-Nested scrolling options when the component scrolls left.Default value: **NestedScrollMode.SELF_FIRST**.
+Nested scrolling options when the component scrolls left.
+
+Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
@@ -48,7 +49,9 @@ Nested scrolling options when the component scrolls left.Default value: **Nested
 scrollRight?: NestedScrollMode
 ```
 
-Nested scrolling options when the component scrolls right.Default value: **NestedScrollMode.SELF_FIRST**.
+Nested scrolling options when the component scrolls right.
+
+Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
@@ -62,7 +65,9 @@ Nested scrolling options when the component scrolls right.Default value: **Neste
 scrollUp?: NestedScrollMode
 ```
 
-Nested scrolling options when the component scrolls up.Default value: **NestedScrollMode.SELF_FIRST**.
+Nested scrolling options when the component scrolls up.
+
+Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 

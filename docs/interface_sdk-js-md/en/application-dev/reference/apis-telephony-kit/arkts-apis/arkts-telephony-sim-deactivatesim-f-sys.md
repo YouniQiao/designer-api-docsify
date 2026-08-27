@@ -79,7 +79,7 @@ Disable SIM card in specified slot.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the deactivateSim. |
+| Promise&lt;void&gt; | The promise returned by the deactivateSim. |
 
 **Error codes:**
 

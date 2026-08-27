@@ -33,7 +33,7 @@ Sets the radius of the rounded corner. The value must be greater than or equal t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array & lt;any & gt; | Yes | Radius of the rounded corner. You can set separate radii for the four rounded corners.Default value: **0**Default unit: vp Invalid values **undefined** and **null** are treated as **[[0, 0], [0, 0], [0, 0], [0, 0]]**.<br>**Since:** 20 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array&lt;any&gt; | Yes | Radius of the rounded corner. You can set separate radii for the four rounded corners.Default value: **0**Default unit: vp Invalid values **undefined** and **null** are treated as **[[0, 0], [0, 0], [0, 0], [0, 0]]**.<br>**Since:** 20 |
 
 ## radiusHeight
 

@@ -1,6 +1,8 @@
 # DeviceIdentification (System API)
 
-Struct for distributed device identification.@interface DeviceIdentification
+Struct for distributed device identification.
+
+@interface DeviceIdentification
 
 **Since:** 24
 
@@ -11,7 +13,7 @@ Struct for distributed device identification.@interface DeviceIdentification
 ## Modules to Import
 
 ```TypeScript
-import distributedDeviceManager from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## deviceId

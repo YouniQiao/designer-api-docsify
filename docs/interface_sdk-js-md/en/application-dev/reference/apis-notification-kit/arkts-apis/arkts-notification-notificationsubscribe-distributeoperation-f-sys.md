@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationSubscribe from '@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## distributeOperation
@@ -27,13 +27,13 @@ Triggers a notification for cross-device operations, such as tap-to-redirect and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hashcode | string | Yes | Unique notification ID. |
-| operationInfo | [OperationInfo](arkts-notification-notificationsubscribe-operationinfo-i-sys.md) | No | Cross-device operation information. This parameter is left empty by default. |
+| operationInfo | OperationInfo | No | Cross-device operation information. This parameter is left empty by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

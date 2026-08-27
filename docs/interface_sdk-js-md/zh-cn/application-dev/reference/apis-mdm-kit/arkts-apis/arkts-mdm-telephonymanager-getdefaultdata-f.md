@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import telephonyManager from '@kit.MDMKit';
+import { telephonyManager } from '@kit.MDMKit';
 ```
 
 ## getDefaultData
@@ -12,7 +12,7 @@ import telephonyManager from '@kit.MDMKit';
 function getDefaultData(admin: Want): number
 ```
 
-获取设备当前默认使用的数据流量卡卡槽ID。例如，企业设备管理员可在设备管理过程中查询当前配置的默认数据流量卡，以便进行流量管理或切换数据卡配置。未插卡或者飞行模式下会获取上一次使用的数据流量卡卡槽ID、设备从未设置过默认数据流量卡 场景下，该接口返回默认卡槽1，值为0。
+获取设备当前默认使用的数据流量卡卡槽ID。例如，企业设备管理员可在设备管理过程中查询当前配置的默认数据流量卡，以便进行流量管理或切换数据卡配置。未插卡或者飞行模式下会获取上一次使用的数据流量卡卡槽ID、设备从未设置过默认数据流量卡场景下，该接口返回默认卡槽1，值为0。
 
 **起始版本：** 26.0.0
 

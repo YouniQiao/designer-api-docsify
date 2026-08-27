@@ -1,6 +1,8 @@
 # UIMaterialAnimationMode
 
-Enumerates the component animation modes under the UI material effect.@enum { number }
+Enumerates the component animation modes under the UI material effect.
+
+@enum { number }
 
 **Since:** 26.0.0
 

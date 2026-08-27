@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## audioBitrate
@@ -46,7 +46,7 @@ audioChannelCount?: number
 audioSampleRate?: number
 ```
 
-录屏的音频采样率。 内录的系统音和外录的麦克风都使用此采样率，默认48000，仅支持设置48000或16000。单位为赫兹（Hz）。
+录屏的音频采样率。内录的系统音和外录的麦克风都使用此采样率，默认48000，仅支持设置48000或16000。单位为赫兹（Hz）。
 
 **类型：** number
 
@@ -102,7 +102,7 @@ fillMode?: AVScreenCaptureFillMode
 frameHeight?: number
 ```
 
-录屏的视频高度。 默认屏幕高度，根据不同屏幕默认值不同。单位为像素（px）。
+录屏的视频高度。默认屏幕高度，根据不同屏幕默认值不同。单位为像素（px）。
 
 **类型：** number
 
@@ -116,7 +116,7 @@ frameHeight?: number
 frameWidth?: number
 ```
 
-录屏的视频宽度。 默认屏幕宽度，根据不同屏幕默认值不同。单位为像素（px）。
+录屏的视频宽度。默认屏幕宽度，根据不同屏幕默认值不同。单位为像素（px）。
 
 **类型：** number
 
@@ -160,7 +160,7 @@ strategy?: AVScreenCaptureStrategy
 videoBitrate?: number
 ```
 
-录屏的视频比特率。 默认为10000000。单位为比特每秒（bit/s）。
+录屏的视频比特率。默认为10000000。单位为比特每秒（bit/s）。
 
 **类型：** number
 

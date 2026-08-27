@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedMissionManager from '@kit.AbilityKit';
+import { distributedMissionManager } from '@kit.AbilityKit';
 ```
 
 ## off('continueStateChange')

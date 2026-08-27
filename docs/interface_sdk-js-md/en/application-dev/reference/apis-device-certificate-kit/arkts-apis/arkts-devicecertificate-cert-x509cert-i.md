@@ -1266,7 +1266,7 @@ Obtains the issuer name of this X.509 certificate.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | X.509 certificate issuer obtained. |
+| DataBlob | X.509 certificate issuer obtained. |
 
 **Error codes:**
 
@@ -1707,7 +1707,7 @@ Obtains the fields in the X.509 certificate.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Fields in DER format. |
+| DataBlob | Fields in DER format. |
 
 **Error codes:**
 
@@ -1784,7 +1784,7 @@ Obtains the key usage of this X.509 certificate.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Key usage of the X.509 certificate obtained. |
+| DataBlob | Key usage of the X.509 certificate obtained. |
 
 **Error codes:**
 
@@ -2206,7 +2206,7 @@ Obtains the signature data of this X.509 certificate.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Signature data obtained. |
+| DataBlob | Signature data obtained. |
 
 **Error codes:**
 
@@ -2695,7 +2695,7 @@ Obtains the signing algorithm parameters of this X.509 certificate.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | X.509 certificate signing algorithm parameters obtained. |
+| DataBlob | X.509 certificate signing algorithm parameters obtained. |
 
 **Error codes:**
 
@@ -2980,7 +2980,7 @@ Obtains the subject name of this X.509 certificate.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Represents the subject name of an X.509 certificate. |
+| DataBlob | Represents the subject name of an X.509 certificate. |
 
 **Error codes:**
 
@@ -4406,7 +4406,7 @@ Verifies the certificate signature. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

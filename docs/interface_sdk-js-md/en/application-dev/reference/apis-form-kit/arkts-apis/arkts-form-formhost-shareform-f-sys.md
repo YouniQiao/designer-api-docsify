@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formHost from '@kit.FormKit';
+import { formHost } from '@kit.FormKit';
 ```
 
 ## shareForm
@@ -89,7 +89,7 @@ Shares a specified widget with a remote device. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

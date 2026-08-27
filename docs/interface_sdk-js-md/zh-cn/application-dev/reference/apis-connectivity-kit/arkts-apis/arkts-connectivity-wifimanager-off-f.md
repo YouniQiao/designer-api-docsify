@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## off('wifiStateChange')
@@ -13,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function off(type: 'wifiStateChange', callback?: Callback<number>): void
 ```
 
-取消注册WLAN状态改变事件。如果未指定callback参数，将取消注册该事件关联的所有回调函数。
+取消注册WLAN状态改变事件。
+
+如果未指定callback参数，将取消注册该事件关联的所有回调函数。
 
 **起始版本：** 12
 
@@ -62,7 +63,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function off(type: 'wifiConnectionChange', callback?: Callback<number>): void
 ```
 
-取消注册WLAN连接状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。
+取消注册WLAN连接状态改变事件。如果未指定callback参数，将取消注册该事件关联的所有回调函数。
 
 **起始版本：** 12
 
@@ -111,7 +112,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
 ```
 
-取消注册扫描状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。
+取消注册扫描状态改变事件。如果未指定callback参数，将取消注册该事件关联的所有回调函数。
 
 **起始版本：** 12
 
@@ -160,7 +161,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function off(type: 'wifiRssiChange', callback?: Callback<number>): void
 ```
 
-取消注册WLAN接收信号强度(RSSI)变化事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。
+取消注册WLAN接收信号强度(RSSI)变化事件。如果未指定callback参数，将取消注册该事件关联的所有回调函数。
 
 **起始版本：** 9
 
@@ -207,7 +208,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 ```
 
-取消注册热点状态改变事件。 如果未指定callback参数，将取消注册该事件关联的所有回调函数。
+取消注册热点状态改变事件。如果未指定callback参数，将取消注册该事件关联的所有回调函数。
 
 **起始版本：** 9
 

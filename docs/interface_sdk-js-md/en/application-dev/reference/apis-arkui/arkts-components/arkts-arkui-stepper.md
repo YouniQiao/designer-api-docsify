@@ -1,6 +1,7 @@
 # Stepper
 
 The **Stepper** component provides a step navigator, suitable for guiding users through a step-by-step task completion process.
+
 > **NOTE**
 
 ## Child Components

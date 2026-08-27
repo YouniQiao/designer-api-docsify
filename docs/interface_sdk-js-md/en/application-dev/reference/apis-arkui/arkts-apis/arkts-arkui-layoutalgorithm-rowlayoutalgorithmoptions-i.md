@@ -1,6 +1,8 @@
 # RowLayoutAlgorithmOptions
 
-Sets the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the horizontal linear layout algorithm.@interface RowLayoutAlgorithmOptions
+Sets the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the horizontal linear layout algorithm.
+
+@interface RowLayoutAlgorithmOptions
 
 **Since:** 24
 
@@ -12,7 +14,11 @@ Sets the spacing, main axis alignment method, cross axis alignment method, and m
 alignItems?: VerticalAlign
 ```
 
-Vertical alignment mode of all child components.Default value: **VerticalAlign.Center**Invalid values are treated as the default value.
+Vertical alignment mode of all child components.
+
+Default value: **VerticalAlign.Center**
+
+Invalid values are treated as the default value.
 
 **Type:** [VerticalAlign](arkts-arkui-verticalalign-e.md)
 
@@ -34,7 +40,11 @@ Vertical alignment mode of all child components.Default value: **VerticalAlign.C
 isReverse?: boolean
 ```
 
-Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal arrangement of child components. The horizontal direction is affected by the common attribute [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction). If the [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction) attribute takes effect, the arrangement is reversed again. **false** indicates to arrange child components in the horizontal direction in normal order.Default value: **false**Invalid values are treated as the default value.
+Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal arrangement of child components. The horizontal direction is affected by the common attribute [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction). If the [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction) attribute takes effect, the arrangement is reversed again. **false** indicates to arrange child components in the horizontal direction in normal order.
+
+Default value: **false**
+
+Invalid values are treated as the default value.
 
 **Type:** boolean
 
@@ -56,7 +66,11 @@ Whether to reverse the horizontal arrangement of child components. **true** indi
 justifyContent?: FlexAlign
 ```
 
-Horizontal alignment mode of all child components.Default value: **FlexAlign.Start**Invalid values are treated as the default value.
+Horizontal alignment mode of all child components.
+
+Default value: **FlexAlign.Start**
+
+Invalid values are treated as the default value.
 
 **Type:** [FlexAlign](arkts-arkui-flexalign-e.md)
 
@@ -78,7 +92,11 @@ Horizontal alignment mode of all child components.Default value: **FlexAlign.Sta
 space?: LengthMetrics
 ```
 
-Horizontal spacing between elements in a horizontal layout.Default value: **LengthMetrics.vp(0)**Invalid values are treated as the default value.
+Horizontal spacing between elements in a horizontal layout.
+
+Default value: **LengthMetrics.vp(0)**
+
+Invalid values are treated as the default value.
 
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 

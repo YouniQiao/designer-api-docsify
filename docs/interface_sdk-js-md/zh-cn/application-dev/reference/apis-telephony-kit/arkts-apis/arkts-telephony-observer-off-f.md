@@ -26,7 +26,7 @@ function off(type: 'networkStateChange', callback?: Callback<NetworkState>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'networkStateChange' | 是 | 网络状态变化事件，参数固定为'networkStateChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | 否 | 回调函数，返回网络状态对象。参考radio的 [NetworkState](arkts-telephony-radio-networkstate-i.md)。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetworkState&gt; | 否 | 回调函数，返回网络状态对象。参考radio的[NetworkState](arkts-telephony-radio-networkstate-i.md)。 |
 
 **错误码：**
 
@@ -72,7 +72,7 @@ function off(type: 'signalInfoChange', callback?: Callback<Array<SignalInformati
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'signalInfoChange' | 是 | 信号状态变化事件，参数固定为'signalInfoChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | 否 | 回调函数，返回信号强度对象。参考radio的 [SignalInformation](arkts-telephony-radio-signalinformation-i.md)。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | 否 | 回调函数，返回信号强度对象。参考radio的[SignalInformation](arkts-telephony-radio-signalinformation-i.md)。 |
 
 **错误码：**
 
@@ -120,7 +120,7 @@ function off(type: 'cellularDataConnectionStateChange', callback?: Callback<Data
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cellularDataConnectionStateChange' | 是 | 蜂窝数据链路连接状态事件，参数固定为'cellularDataConnectionStateChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | 否 | 回调函数，返回蜂窝数据链路连接状态信息对象。参考data的 [DataConnectState](arkts-telephony-data-dataconnectstate-e.md)，radio的 [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)&gt; | 否 | 回调函数，返回蜂窝数据链路连接状态信息对象。参考data的[DataConnectState](arkts-telephony-data-dataconnectstate-e.md)，radio的[RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)。 |
 
 **错误码：**
 
@@ -166,7 +166,7 @@ function off(type: 'cellularDataFlowChange', callback?: Callback<DataFlowType>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cellularDataFlowChange' | 是 | 蜂窝数据业务的上下行数据流状态事件，参数固定为'cellularDataFlowChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | 否 | 回调函数，返回数据流状态对象。参考data的 [DataFlowType](arkts-telephony-data-dataflowtype-e.md)。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataFlowType&gt; | 否 | 回调函数，返回数据流状态对象。参考data的[DataFlowType](arkts-telephony-data-dataflowtype-e.md)。 |
 
 **错误码：**
 
@@ -214,7 +214,7 @@ function off(type: 'callStateChange', callback?: Callback<CallStateInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | 是 | 通话状态变化事件，参数固定为'callStateChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | 否 | 回调函数，返回通话状态信息对象。参考call的 [CallState](arkts-telephony-call-callstate-e.md)。number：电话号码。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)&gt; | 否 | 回调函数，返回通话状态信息对象。参考call的[CallState](arkts-telephony-call-callstate-e.md)。number：电话号码。 |
 
 **错误码：**
 
@@ -260,7 +260,7 @@ function off(type: 'callStateChangeEx', callback?: Callback<TelCallState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'callStateChangeEx' | 是 | 通话状态变化事件，参数固定为'callStateChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TelCallState&gt; | 否 | 回调函数，返回通话状态对象。参考call的 [TelCallState](arkts-telephony-call-telcallstate-e.md)。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TelCallState&gt; | 否 | 回调函数，返回通话状态对象。参考call的[TelCallState](arkts-telephony-call-telcallstate-e.md)。 |
 
 **错误码：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## getProcessMemoryByPid
@@ -30,7 +30,7 @@ Obtains the memory size of a process. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the API call result and the memory size (in KB). You can perform error handling or custom processing in this callback. |
+| Promise&lt;number&gt; | Promise used to return the API call result and the memory size (in KB). You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 

@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import config from '@kit.AccessibilityKit.config';
-import accessibility from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
-import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
@@ -33,8 +30,8 @@ Obtains the accessibility application list. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | Yes | Accessibility application type. |
-| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Yes | Accessibility application status. |
+| abilityType | AbilityType | Yes | Accessibility application type. |
+| stateType | AbilityState | Yes | Accessibility application status. |
 
 **Return value:**
 
@@ -117,8 +114,8 @@ Obtains the accessibility application list. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | Yes | Accessibility application type. |
-| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Yes | Accessibility application status. |
+| abilityType | AbilityType | Yes | Accessibility application type. |
+| stateType | AbilityState | Yes | Accessibility application status. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the query of the accessibility app list is successful, **err** is **undefined** and **data** is the accessibility app information list; otherwise, the value is an error object. |
 
 **Error codes:**

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import restrictions from '@kit.MDMKit';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## getDisallowedListForAccount
@@ -34,7 +34,7 @@ Obtains the list of applications that are not allowed to use a feature for a spe
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of applications that have been added by the user and for which a certain feature is disabled. |
+| Array&lt;string&gt; | List of applications that have been added by the user and for which a certain feature is disabled. |
 
 **Error codes:**
 

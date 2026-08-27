@@ -19,7 +19,9 @@ Describes the keyboard visual style configuration.
 fluidLightMode?: KeyboardFluidLightMode
 ```
 
-Keyboard fluid lighting effect.Default value: **KeyboardFluidLightMode.NONE**
+Keyboard fluid lighting effect.
+
+Default value: **KeyboardFluidLightMode.NONE**
 
 **Type:** [KeyboardFluidLightMode](arkts-arkui-keyboardfluidlightmode-e-sys.md)
 
@@ -37,7 +39,9 @@ Keyboard fluid lighting effect.Default value: **KeyboardFluidLightMode.NONE**
 gradientMode?: KeyboardGradientMode
 ```
 
-Keyboard gradient effect.Default value: **KeyboardGradientMode.NONE**
+Keyboard gradient effect.
+
+Default value: **KeyboardGradientMode.NONE**
 
 **Type:** [KeyboardGradientMode](arkts-arkui-keyboardgradientmode-e-sys.md)
 

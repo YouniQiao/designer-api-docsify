@@ -1,6 +1,7 @@
 # SelectionExtensionAbility
 
-This module provides APIs for word selection extension, which can implement extended interactions such as searching and translating text using a mouse or touchpad. Word selection extension services can be customized by inheriting SelectionExtensionAbility. You need to declare this ExtensionAbility in the project configuration. For details, see [Developing a Word Selection Extension Ability](../../../basic-services/selectionInput/selection-services-application-guide.md). This module provides the following capabilities:  
+This module provides APIs for word selection extension, which can implement extended interactions such as searching and translating text using a mouse or touchpad. Word selection extension services can be customized by inheriting SelectionExtensionAbility. You need to declare this ExtensionAbility in the project configuration. For details, see [Developing a Word Selection Extension Ability](../../../basic-services/selectionInput/selection-services-application-guide.md). This module provides the following capabilities:
+
 - Lifecycle management: Use the [onConnect](#onconnect) and  
 [onDisconnect](#ondisconnect) callbacks to process the connection and disconnection logic.  
 - **context**: You can use **context** to call  
@@ -19,7 +20,7 @@ This module provides APIs for word selection extension, which can implement exte
 ## Modules to Import
 
 ```TypeScript
-import SelectionExtensionAbility from '@kit.BasicServicesKit';
+import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
 ## onConnect
@@ -89,7 +90,9 @@ class ServiceExtAbility extends SelectionExtensionAbility {
 onDisconnect(): void
 ```
 
-Defines a callback triggered when the client disconnects from the **SelectionExtensionAbility** (for example, when the user disables the word selection function or switches the word selection app). You can perform cleanup operations for the **onConnect** callback in this callback. For example, you can call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) to destroy the created panel, or call off('selectionCompleted') to unsubscribe from the word selection completion event.The callback is triggered only when the **SelectionExtensionAbility** is disconnected normally. It is not triggered in cases of abnormal disconnection (for example, process termination due to low memory conditions).
+Defines a callback triggered when the client disconnects from the **SelectionExtensionAbility** (for example, when the user disables the word selection function or switches the word selection app). You can perform cleanup operations for the **onConnect** callback in this callback. For example, you can call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) to destroy the created panel, or call off('selectionCompleted') to unsubscribe from the word selection completion event.
+
+The callback is triggered only when the **SelectionExtensionAbility** is disconnected normally. It is not triggered in cases of abnormal disconnection (for example, process termination due to low memory conditions).
 
 **Since:** 24
 

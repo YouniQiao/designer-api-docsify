@@ -35,7 +35,7 @@ Appends an encoded field to the path component of this URI to create a new URI a
 
 | Type | Description |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | After adding, return the URI object. |
+| URI | After adding, return the URI object. |
 
 **Examples**
 
@@ -70,7 +70,7 @@ Adds a query parameter to this URI to create a new URI, while keeping the existi
 
 | Type | Description |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | Return URI object. |
+| URI | Return URI object. |
 
 **Examples**
 
@@ -104,7 +104,7 @@ Encodes a given field, appends it to the path component of this URI to create a 
 
 | Type | Description |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | After adding, return the URI object. |
+| URI | After adding, return the URI object. |
 
 **Examples**
 
@@ -248,7 +248,7 @@ Clears the query component of this URI to create a new URI, while keeping the ex
 
 | Type | Description |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | After clearing, return the URI object. |
+| URI | After clearing, return the URI object. |
 
 **Examples**
 
@@ -320,7 +320,7 @@ Creates a URI based on the provided scheme, scheme-specific-part, and fragment c
 
 | Type | Description |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | Return Uri consisting of a given scheme, SSP, and fragment. |
+| URI | Return Uri consisting of a given scheme, SSP, and fragment. |
 
 **Examples**
 
@@ -349,7 +349,7 @@ Check whether this URI is equivalent to other URI objects.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [URI](arkts-arkts-uri-uri-c.md) | Yes | other other URI object to be compared |
+| other | URI | Yes | other other URI object to be compared |
 
 **Return value:**
 
@@ -383,7 +383,7 @@ Checks whether this URI is the same as another URI object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [URI](arkts-arkts-uri-uri-c.md) | Yes | URI object to compare. |
+| other | URI | Yes | URI object to compare. |
 
 **Return value:**
 
@@ -611,7 +611,7 @@ Normalizes the path of this URI.
 
 | Type | Description |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | URI Used to normalize the path of this URI and return a URI object whose path has been normalized. |
+| URI | URI Used to normalize the path of this URI and return a URI object whose path has been normalized. |
 
 **Examples**
 

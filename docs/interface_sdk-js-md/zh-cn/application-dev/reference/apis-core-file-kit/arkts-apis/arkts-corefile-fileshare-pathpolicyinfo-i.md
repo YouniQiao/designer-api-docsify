@@ -1,6 +1,8 @@
 # PathPolicyInfo
 
-需要查询的文件或目录的信息。@interface PathPolicyInfo
+需要查询的文件或目录的信息。
+
+@interface PathPolicyInfo
 
 **起始版本：** 15
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## operationMode

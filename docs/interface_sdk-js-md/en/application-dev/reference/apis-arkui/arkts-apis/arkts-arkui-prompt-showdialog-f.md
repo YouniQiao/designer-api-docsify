@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import prompt from '@kit.ArkUI';
-import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUIAction';
+import { prompt } from '@kit.ArkUI';
 ```
 
 ## showDialog
@@ -27,7 +26,7 @@ Displays the dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | Options. |
+| options | ShowDialogOptions | Yes | Options. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ShowDialogSuccessResponse&gt; | Yes |  |
 
 **Examples**
@@ -77,13 +76,13 @@ Displays the dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | Options. |
+| options | ShowDialogOptions | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ShowDialogSuccessResponse & gt; |  |
+| Promise&lt;ShowDialogSuccessResponse&gt; |  |
 
 **Examples**
 

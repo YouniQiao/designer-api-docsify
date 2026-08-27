@@ -1,6 +1,8 @@
 # MediaAssetChangeRequest
 
-MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).资产变更请求。
+MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).
+
+资产变更请求。
 
 > **说明：**
 > 
@@ -15,7 +17,7 @@ MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addResource
@@ -40,7 +42,7 @@ addResource(type: ResourceType, proxy: PhotoProxy): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-resourcetype-e.md) | 是 | 待添加资源的类型。 |
+| type | ResourceType | 是 | 待添加资源的类型。 |
 | proxy | [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i.md) | 是 | 待添加资源的PhotoProxy 数据。 |
 
 **错误码：**
@@ -97,7 +99,7 @@ addResourceForPicker(type: ResourceType, fileUri: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-resourcetype-e.md) | 是 | 待加载的图片或者视频类型 |
+| type | ResourceType | 是 | 待加载的图片或者视频类型 |
 | fileUri | string | 是 | 待加载图片或者视频的路径 |
 
 **错误码：**
@@ -137,11 +139,17 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest
 ```
 
-指定待创建的图片或者视频的文件名，创建资产变更请求。待创建的文件名参数规格为：  
+指定待创建的图片或者视频的文件名，创建资产变更请求。
+
+待创建的文件名参数规格为：
+
 - 应包含有效文件主名和图片或视频扩展名。  
 - 文件名字符串长度为1~255。  
-- 文件主名中不允许出现的非法英文字符。  
-API18开始，非法字符包括： \ / : * ? " &lt; &gt; |API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+- 文件主名中不允许出现的非法英文字符。
+
+API18开始，非法字符包括： \ / : * ? " &lt; &gt; |
+
+API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **起始版本：** 11
 
@@ -228,7 +236,7 @@ static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Pr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -288,7 +296,7 @@ static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -337,13 +345,13 @@ static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的Context。 |
-| assets | Array & lt;PhotoAsset & gt; | 是 | 待彻底删除的图片或者视频数组，数组中元素个数不超过500个。 |
+| assets | Array&lt;PhotoAsset&gt; | 是 | 待彻底删除的图片或者视频数组，数组中元素个数不超过500个。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -358,7 +366,6 @@ static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>)
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
-import { BusinessError } from '@kit.BasicServicesKit';
 
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
   console.info('deleteAssetsPermanentlyDemo');
@@ -402,13 +409,13 @@ static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<st
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的Context。 |
-| assetUris | Array & lt;string & gt; | 是 | 待彻底删除的图片或者视频Uri数组，数组中元素个数不超过500个。 |
+| assetUris | Array&lt;string&gt; | 是 | 待彻底删除的图片或者视频Uri数组，数组中元素个数不超过500个。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -484,7 +491,7 @@ static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -739,7 +746,7 @@ setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<voi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -753,6 +760,7 @@ setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<voi
 
 ```TypeScript
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { dataSharePredicates } from '@kit.ArkData';
 
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     console.info('setCompositeDisplayModeDemo');
@@ -852,7 +860,7 @@ setEffectMode(mode: MovingPhotoEffectMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [MovingPhotoEffectMode](arkts-medialibrary-sendablephotoaccesshelper-movingphotoeffectmode-e-sys.md) | 是 | 动态照片效果模式。 |
+| mode | MovingPhotoEffectMode | 是 | 动态照片效果模式。 |
 
 **错误码：**
 
@@ -919,13 +927,13 @@ setHasAppLink(hasAppLink: number): void
 ```TypeScript
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 
-enum linkType {
+enum LinkType {
   NOT_DECODED = 0,
   LINK_NOT_EXIST = 1,
   LINK_EXIST = 2
 }
 
-async function example(asset: photoAccessHelper.PhotoAsset, hasAppLink: linkType, context: Context) {
+async function example(asset: photoAccessHelper.PhotoAsset, hasAppLink: LinkType, context: Context) {
     try {
       let phAccessHelper: photoAccessHelper.PhotoAccessHelper =
         photoAccessHelper.getPhotoAccessHelper(context);
@@ -1236,7 +1244,7 @@ setMovingPhotoVersion(version: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| version | number | 是 | 动图版本号 取值范围为全体整数。 |
+| version | number | 是 | 动图版本号取值范围为全体整数。 |
 
 **错误码：**
 
@@ -1291,7 +1299,7 @@ setSupportedWatermarkType(watermarkType: WatermarkType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watermarkType | [WatermarkType](arkts-medialibrary-photoaccesshelper-watermarktype-e-sys.md) | 是 | 水印可编辑标识。    **注意：** 不支持传入WatermarkType.DEFAULT。 |
+| watermarkType | [WatermarkType](arkts-medialibrary-photoaccesshelper-watermarktype-e-sys.md) | 是 | 水印可编辑标识。   **注意：** 不支持传入WatermarkType.DEFAULT。 |
 
 **错误码：**
 
@@ -1346,7 +1354,7 @@ setTitleByFile(name: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 资产修改名称。 取值范围:1-255 不应包含扩展名。 文件名字符串长度为1~255。 不允许出现的非法英文字符，包括：. \ / : * ? " ' ` &lt; &gt; \| { } [ ] 不允许仅命名.或者.. 文管目录下不允许重名 |
+| name | string | 是 | 资产修改名称。取值范围:1-255 不应包含扩展名。文件名字符串长度为1~255。不允许出现的非法英文字符，包括：. \ / : * ? " ' ` &lt; &gt; \| { } [ ]不允许仅命名.或者..文管目录下不允许重名 |
 
 **错误码：**
 

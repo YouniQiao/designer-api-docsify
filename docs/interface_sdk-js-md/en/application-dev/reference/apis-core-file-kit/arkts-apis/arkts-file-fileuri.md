@@ -1,6 +1,8 @@
 # @ohos.file.fileuri
 
-Provides fileUri APIS@namespace fileUri
+Provides fileUri APIS
+
+@namespace fileUri
 
 **Since:** 15
 
@@ -9,7 +11,7 @@ Provides fileUri APIS@namespace fileUri
 ## Modules to Import
 
 ```TypeScript
-import fileUri from '@kit.CoreFileKit';
+import { fileUri } from '@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -24,4 +26,4 @@ import fileUri from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [FileUri](arkts-corefile-fileuri-fileuri-c.md) | FileUri represents the uri of the file.@extends uri.URI |
+| [FileUri](arkts-corefile-fileuri-fileuri-c.md) | FileUri represents the uri of the file. |

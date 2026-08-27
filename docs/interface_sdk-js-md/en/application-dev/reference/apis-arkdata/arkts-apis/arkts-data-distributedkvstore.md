@@ -1,6 +1,7 @@
 # @ohos.data.distributedKVStore
 
-The **distributedKVStore** module implements collaboration between databases for different devices that form a Super Device. You can use the APIs provided by this module to save application data to a distributed key-value (KV) store and perform operations, such as adding, deleting, modifying, and querying data, and synchronizing data across devices. The **distributedKVStore** module provides the following functionalities:  
+The **distributedKVStore** module implements collaboration between databases for different devices that form a Super Device. You can use the APIs provided by this module to save application data to a distributed key-value (KV) store and perform operations, such as adding, deleting, modifying, and querying data, and synchronizing data across devices. The **distributedKVStore** module provides the following functionalities:
+
 - [KVManager](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md): provides a **KVManager** instance to obtain KV store  
 information.  
 - [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md): provides APIs for accessing the results obtained  
@@ -20,7 +21,7 @@ synchronizing data across devices. This class inherits from [SingleKVStore](arkt
 ## Modules to Import
 
 ```TypeScript
-import distributedKVStore from '@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## Summary
@@ -72,4 +73,4 @@ import distributedKVStore from '@kit.ArkData';
 | [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md) | Enumerates the KV store security levels. |
 | [SubscribeType](arkts-arkdata-distributedkvstore-subscribetype-e.md) | Enumerates the subscription types. |
 | [SyncMode](arkts-arkdata-distributedkvstore-syncmode-e.md) | Enumerates the sync modes. |
-| [ValueType](arkts-arkdata-distributedkvstore-valuetype-e.md) | Indicates the {@code ValueType}. & lt;p & gt;{@code ValueType} is obtained based on the value. |
+| [ValueType](arkts-arkdata-distributedkvstore-valuetype-e.md) | Indicates the {@code ValueType}. |

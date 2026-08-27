@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## setEnterpriseInfo
@@ -97,7 +97,7 @@ Sets the enterprise information of the device administrator application. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. If the operation fails, an error object will be thrown. |
+| Promise&lt;void&gt; | Promise that returns no value. If the operation fails, an error object will be thrown. |
 
 **Error codes:**
 

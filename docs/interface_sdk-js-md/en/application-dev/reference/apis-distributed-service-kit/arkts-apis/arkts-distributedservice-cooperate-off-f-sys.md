@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cooperate from '@kit.DistributedServiceKit';
+import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
 ## off('cooperate')

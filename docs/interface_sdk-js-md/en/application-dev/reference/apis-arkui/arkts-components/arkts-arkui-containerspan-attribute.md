@@ -1,6 +1,8 @@
 # ContainerSpan properties/events
 
-Only the following attributes are supported.The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are not supported.
+Only the following attributes are supported.
+
+The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are not supported.
 
 **Since:** 11
 

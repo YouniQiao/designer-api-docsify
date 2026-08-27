@@ -9,9 +9,6 @@ Defines the callback information for the search result on the web page, includin
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## activeMatchOrdinal
@@ -36,7 +33,11 @@ Sequence number of the current match, which starts from 0.
 isDoneCounting: boolean
 ```
 
-Whether the current in-page search operation is complete.The value **true** indicates that the current in-page search operation is complete, and **false** indicates the opposite.This method may be called back multiple times until isDoneCounting is **true**.
+Whether the current in-page search operation is complete.
+
+The value **true** indicates that the current in-page search operation is complete, and **false** indicates the opposite.
+
+This method may be called back multiple times until isDoneCounting is **true**.
 
 **Type:** boolean
 

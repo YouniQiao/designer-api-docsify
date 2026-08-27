@@ -9,7 +9,7 @@ Defines the file name filtering interface used by listFileExt().
 ## Modules to Import
 
 ```TypeScript
-import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## filter
@@ -18,7 +18,9 @@ import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 filter(name: string): boolean
 ```
 
-Filtering function, which determines whether the specified file name should be included in the file list.Note: This function is frequently invoked. Avoid time-consuming operations, such as file I/O and network requests.
+Filtering function, which determines whether the specified file name should be included in the file list.
+
+Note: This function is frequently invoked. Avoid time-consuming operations, such as file I/O and network requests.
 
 **Since:** 26.0.0
 

@@ -24,7 +24,7 @@ Get want parameters callback.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Record & lt;string, Object & gt; & gt; | The want parameters list of the forms. |
+| Array&lt;Record&lt;string, Object&gt;&gt; | The want parameters list of the forms. |
 
 **Examples**
 

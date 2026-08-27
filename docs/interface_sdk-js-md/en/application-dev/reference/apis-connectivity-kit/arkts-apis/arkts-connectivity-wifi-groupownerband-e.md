@@ -1,6 +1,8 @@
 # GroupOwnerBand
 
-P2P group owner band.@enum { number } GroupOwnerBand
+P2P group owner band.
+
+@enum { number } GroupOwnerBand
 
 **Since:** 8
 

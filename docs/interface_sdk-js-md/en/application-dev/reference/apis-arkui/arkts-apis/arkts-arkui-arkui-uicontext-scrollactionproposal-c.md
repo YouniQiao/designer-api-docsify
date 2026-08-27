@@ -116,7 +116,11 @@ struct Index {
 distance?: number
 ```
 
-Scroll distance of the smart gesture.Value range: [0, +∞). Values less than 0 are treated as 0.Unit: vp.
+Scroll distance of the smart gesture.
+
+Value range: [0, +∞). Values less than 0 are treated as 0.
+
+Unit: vp.
 
 **Type:** number
 

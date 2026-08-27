@@ -1,6 +1,8 @@
 # WhiteBalance
 
-WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)。提供了处理设备白平衡的相关功能，包括获取和设置白平衡模式以及白平衡值。
+WhiteBalance继承自[WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)。
+
+提供了处理设备白平衡的相关功能，包括获取和设置白平衡模式以及白平衡值。
 
 **继承/实现关系：** WhiteBalance extends [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)
 
@@ -152,7 +154,9 @@ function getWhiteBalanceMode(session: camera.PhotoSession | camera.VideoSession)
 setColorTint(colorTint: number): void
 ```
 
-设置白平衡的色调调节值。设置之前需要先检查设备支持配置的白平衡色调调节范围，具体方法请参考[getColorTintRange](arkts-camera-camera-whitebalancequery-i.md#getcolortintrange)。
+设置白平衡的色调调节值。
+
+设置之前需要先检查设备支持配置的白平衡色调调节范围，具体方法请参考[getColorTintRange](arkts-camera-camera-whitebalancequery-i.md#getcolortintrange)。
 
 **起始版本：** 26.0.0
 
@@ -196,7 +200,9 @@ function setColorTint(session: camera.PhotoSession | camera.VideoSession): void 
 setWhiteBalance(whiteBalance: number): void
 ```
 
-设置手动白平衡值。设置之前需要先检查设备支持的白平衡值范围，具体方法请参考[getWhiteBalanceRange](arkts-camera-camera-whitebalancequery-i.md#getwhitebalancerange)。
+设置手动白平衡值。
+
+设置之前需要先检查设备支持的白平衡值范围，具体方法请参考[getWhiteBalanceRange](arkts-camera-camera-whitebalancequery-i.md#getwhitebalancerange)。
 
 **起始版本：** 20
 
@@ -240,7 +246,7 @@ function setWhiteBalance(session: camera.PhotoSession | camera.VideoSession): vo
 setWhiteBalanceMode(mode: WhiteBalanceMode): void
 ```
 
-设置白平衡模式。设置之前需要先检查设备是否支持指定的白平衡模式，具体方法请参考 [isWhiteBalanceModeSupported](arkts-camera-camera-whitebalancequery-i.md#iswhitebalancemodesupported)。
+设置白平衡模式。设置之前需要先检查设备是否支持指定的白平衡模式，具体方法请参考[isWhiteBalanceModeSupported](arkts-camera-camera-whitebalancequery-i.md#iswhitebalancemodesupported)。
 
 **起始版本：** 20
 

@@ -17,7 +17,9 @@ Navigation configuration options.
 clearContentStackOnPrimaryNavigation?: boolean
 ```
 
-Whether to clear the content stack when navigation is triggered from the primary side.In Navigation split mode, when enabled, navigaiton triggered from the primary side clears old NavDestination after the Primary/Home node while preserving all NavDestinations created by the current operation.
+Whether to clear the content stack when navigation is triggered from the primary side.
+
+In Navigation split mode, when enabled, navigaiton triggered from the primary side clears old NavDestination after the Primary/Home node while preserving all NavDestinations created by the current operation.
 
 **Type:** boolean
 
@@ -37,7 +39,9 @@ Whether to clear the content stack when navigation is triggered from the primary
 recyclePagesOnLowMemory?: boolean
 ```
 
-Whether to recycle invisible pages when a low memory signal is received.When enabled, Navigation recycles invisible NavDestination page instance after receiving low memory pressure notifications. NavPathInfo is preserved, and the page can be reconstructed later.
+Whether to recycle invisible pages when a low memory signal is received.
+
+When enabled, Navigation recycles invisible NavDestination page instance after receiving low memory pressure notifications. NavPathInfo is preserved, and the page can be reconstructed later.
 
 **Type:** boolean
 
@@ -57,7 +61,9 @@ Whether to recycle invisible pages when a low memory signal is received.When ena
 stackSizeLimit?: number
 ```
 
-Navigation page stack size limit.Description:  
+Navigation page stack size limit.
+
+Description:  
 - Limits to maximum number of active page nodes in Navigation page stack.  
 - When limit is exceeded, oldest page nodes are automatically destroyed  
 in FIFO (First-In-First-Out) order.  

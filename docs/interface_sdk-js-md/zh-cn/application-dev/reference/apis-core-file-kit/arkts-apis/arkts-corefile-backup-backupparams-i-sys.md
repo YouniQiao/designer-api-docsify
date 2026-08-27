@@ -1,6 +1,8 @@
 # BackupParams（系统接口）
 
-为备份恢复提供可选配置参数。@interface BackupParams
+为备份恢复提供可选配置参数。
+
+@interface BackupParams
 
 **起始版本：** 12
 
@@ -11,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## parameters

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import sendableContextManager from '@kit.AbilityKit';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## convertToContext
@@ -26,7 +26,7 @@ Converts a SendableContext object to a Context object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | Yes |  |
+| sendableContext | SendableContext | Yes |  |
 
 **Return value:**
 

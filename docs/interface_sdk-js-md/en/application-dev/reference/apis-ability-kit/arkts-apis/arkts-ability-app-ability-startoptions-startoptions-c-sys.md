@@ -9,7 +9,7 @@ StartOptions can be used as an input parameter for APIs used to launch a UIAbili
 ## Modules to Import
 
 ```TypeScript
-import StartOptions from '@kit.AbilityKit';
+import { StartOptions } from '@kit.AbilityKit';
 ```
 
 ## windowFocused
@@ -18,8 +18,10 @@ import StartOptions from '@kit.AbilityKit';
 windowFocused?: boolean
 ```
 
-Whether the window has focus. The default value is **true**, indicating that the window has focus.  
+Whether the window has focus. The default value is **true**, indicating that the window has focus.
+
 **Constraints**:
+
 1. This property takes effect only on 2-in-1 devices and tablets.
 2. This property takes effect only in  
 [UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).

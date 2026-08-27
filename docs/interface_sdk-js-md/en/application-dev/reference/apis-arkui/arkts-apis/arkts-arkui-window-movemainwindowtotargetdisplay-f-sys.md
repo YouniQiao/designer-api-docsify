@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## moveMainWindowToTargetDisplay
@@ -36,7 +34,7 @@ Move a window to the target display. The window must be a main window.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value indicates complete. |
+| Promise&lt;void&gt; | Promise that returns no value indicates complete. |
 
 **Error codes:**
 

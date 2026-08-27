@@ -31,7 +31,7 @@ A constructor used to create a text line height style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
+| lineHeight | LengthMetrics | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
 
 ## constructor
 
@@ -51,6 +51,7 @@ A constructor used to create a text line height and multiple.
 > [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) to set the line height and line spacing.
 > 
 > - When **lineHeightMultiple** is set to 0, it is equivalent to setting it to 1.
+
 **Since**: 26.0.0
 
 **Since:** 26.0.0
@@ -65,7 +66,7 @@ A constructor used to create a text line height and multiple.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineHeight | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
+| lineHeight | LengthMetrics | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
 | lineHeightMultiple | number | No | Multiplier for the text line height.Value range: 0, +∞). Decimals are supported. |
 
 ## lineHeight
@@ -74,7 +75,9 @@ A constructor used to create a text line height and multiple.
 readonly lineHeight: number
 ```
 
-Text line height of the styled string.Unit: [vp
+Text line height of the styled string.
+
+Unit: [vp
 
 **Type:** number
 
@@ -92,7 +95,8 @@ Text line height of the styled string.Unit: [vp
 readonly lineHeightMultiple?: number
 ```
 
-Multiplier for the text line height. The effective line height is the product of the highest font height in the line and the multiplier.  
+Multiplier for the text line height. The effective line height is the product of the highest font height in the line and the multiplier.
+
 **Since**: 26.0.0
 
 **Type:** number

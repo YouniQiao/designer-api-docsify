@@ -1,6 +1,8 @@
 # SpatialPosition（系统接口）
 
-三维空间中的空间角位置。@interface SpatialPosition
+三维空间中的空间角位置。
+
+@interface SpatialPosition
 
 **起始版本：** 26.0.0
 

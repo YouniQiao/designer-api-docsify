@@ -17,8 +17,12 @@ Defines the configuration options of the text picker.
 columnWidths?: LengthMetrics[]
 ```
 
-Custom widths for each column.Default value: Each column has equal width, calculated by dividing the total component width by the number of columns.  
+Custom widths for each column.
+
+Default value: Each column has equal width, calculated by dividing the total component width by the number of columns.
+
 **NOTE：**
+
 1. Text truncation occurs when content exceeds column width.
 2. Invalid values are treated as the default value.
 3. Individual array elements can be **Undefined** or **Null**, but the entire array cannot be **Undefined[]**
@@ -42,8 +46,10 @@ or **Null[]**.
 range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascadePickerRangeContent[]
 ```
 
-Data selection range of the picker. This parameter cannot be set to an empty array. If it is set to an empty array, no value is displayed. If it is dynamically changed to an empty array, the current valid value remains displayed.  
+Data selection range of the picker. This parameter cannot be set to an empty array. If it is set to an empty array, no value is displayed. If it is dynamically changed to an empty array, the current valid value remains displayed.
+
 **NOTE：**
+
 1. Single-column pickers: string[], Resource,
 or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]
 2. Multi-column independent pickers: string[][]
@@ -66,8 +72,12 @@ or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]
 selected?: number | number[]
 ```
 
-Index of the selected item in the data list. The index is zero-based.Default value: **0**  
+Index of the selected item in the data list. The index is zero-based.
+
+Default value: **0**
+
 **NOTE：**
+
 1. Single-column pickers: number
 2. Multi-column pickers: number[]
 3. Since API version 10, this parameter supports two-way binding through  
@@ -89,8 +99,12 @@ Index of the selected item in the data list. The index is zero-based.Default val
 value?: ResourceStr | ResourceStr[]
 ```
 
-Value of the selected item. The priority of this parameter is lower than that of **selected**.Default value: value of the first item in the data list.  
+Value of the selected item. The priority of this parameter is lower than that of **selected**.
+
+Default value: value of the first item in the data list.
+
 **NOTE：**
+
 1. Since API version 10, this parameter supports two-way binding through  
 [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 2. The Resource type is supported since API version 20.

@@ -9,7 +9,7 @@ Implements a **DragPreview** object. This API does not work in the **OnDrop** an
 ## Modules to Import
 
 ```TypeScript
-import dragController from '@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## animate
@@ -32,8 +32,8 @@ Applies a foreground color animation to the drag preview. This API does not work
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimationOptions](arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | Yes | Animation settings. |
-| handler | () = & gt;void | Yes | Callback used to change attributes such as the background mask color. |
+| options | AnimationOptions | Yes | Animation settings. |
+| handler | () =&gt;void | Yes | Callback used to change attributes such as the background mask color. |
 
 **Examples**
 

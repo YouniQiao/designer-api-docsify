@@ -30,3 +30,41 @@ MediaCachedImage(src: PixelMap | ResourceStr | DrawableDescriptor | ASTCResource
 
 | 名称 | 说明 |
 | --- | --- |
+| [ASTCResource](arkts-arkui-astcresource-i-sys.md) | 定义可以使用 ASTC 的资源。 |
+
+## 示例
+
+加载基本类型图片。
+
+```TypeScript
+@Entry
+@Component
+struct MediaCachedImageExample {
+  build() {
+    Column() {
+      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Start }) {
+        Row() {
+          // 加载png格式图片。
+          MediaCachedImage($r('app.media.ic_camera_master_ai_leaf'))
+            .width(110).height(110).margin(15)
+            .overlay('png', { align: Alignment.Bottom, offset: { x: 0, y: 20 } })
+          // 加载gif格式图片。
+          MediaCachedImage($r('app.media.loading'))
+            .width(110).height(110).margin(15)
+            .overlay('gif', { align: Alignment.Bottom, offset: { x: 0, y: 20 } })
+        }
+        Row() {
+          // 加载svg格式图片。
+          MediaCachedImage($r('app.media.ic_camera_master_ai_clouded'))
+            .width(110).height(110).margin(15)
+            .overlay('svg', { align: Alignment.Bottom, offset: { x: 0, y: 20 } })
+          // 加载jpg格式图片。
+          MediaCachedImage($r('app.media.ic_public_favor_filled'))
+            .width(110).height(110).margin(15)
+            .overlay('jpg', { align: Alignment.Bottom, offset: { x: 0, y: 20 } })
+        }
+      }
+    }.height(320).width(360).padding({ right: 10, top: 10 })
+  }
+}
+```

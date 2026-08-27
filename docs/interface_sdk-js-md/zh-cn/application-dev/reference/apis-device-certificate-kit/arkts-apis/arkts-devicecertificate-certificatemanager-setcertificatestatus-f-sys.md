@@ -28,14 +28,14 @@ function setCertificateStatus(certUri: string, certType: CertType, enabled: bool
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | certUri | string | 是 | 表示证书的唯一标识符。当前仅支持用户CA证书。 |
-| certType | [CertType](../../apis-network-kit/arkts-apis/arkts-network-http-certtype-e.md) | 是 | 表示证书类型。当前仅支持设置用户CA证书（CA_CERT_USER）的状态。 |
+| certType | CertType | 是 | 表示证书类型。当前仅支持设置用户CA证书（CA_CERT_USER）的状态。 |
 | enabled | boolean | 是 | 表示证书状态是否启用。true：已启用，false：已禁用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

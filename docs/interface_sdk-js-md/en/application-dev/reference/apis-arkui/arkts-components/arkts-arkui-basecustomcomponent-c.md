@@ -19,7 +19,9 @@ Custom Component base class and it is migrated from class CustomComponent.
 aboutToAppear?(): void
 ```
 
-aboutToAppear Method and it is migrated from class CustomComponent.The aboutToAppear function is executed after a new instance of the custom component is created, before its build() function is executed.
+aboutToAppear Method and it is migrated from class CustomComponent.
+
+The aboutToAppear function is executed after a new instance of the custom component is created, before its build() function is executed.
 
 **Since:** 7
 
@@ -35,7 +37,9 @@ aboutToAppear Method and it is migrated from class CustomComponent.The aboutToAp
 aboutToDisappear?(): void
 ```
 
-aboutToDisappear Method and it is migrated from class CustomComponent.The aboutToDisappear function executes before a custom component is destroyed.
+aboutToDisappear Method and it is migrated from class CustomComponent.
+
+The aboutToDisappear function executes before a custom component is destroyed.
 
 **Since:** 7
 
@@ -77,7 +81,7 @@ export class Message {
 @Entry
 @Component
 struct Index {
-  @State switch: boolean = true;
+  @State isChildVisible: boolean = true;
 
   build() {
     Column() {
@@ -85,9 +89,9 @@ struct Index {
         .fontSize(30)
         .fontWeight(FontWeight.Bold)
         .onClick(() => {
-          this.switch = !this.switch;
+          this.isChildVisible = !this.isChildVisible;
         })
-      if (this.switch) {
+      if (this.isChildVisible) {
         // If only one reusable component is used, reuseId is optional.
         Child({ message: new Message('Child') })
           .reuseId('Child')
@@ -102,7 +106,6 @@ struct Index {
 @Component
 struct Child {
   @State message: Message = new Message('AboutToReuse');
-  @State label: string = 'HelloWorld';
   @ComponentInit
   myInit(): void {
     registerObserver(UIUtils.getLifecycle(this));
@@ -120,27 +123,20 @@ struct Child {
 }
 
 export class MyObserver implements CustomComponentLifecycleObserver {
-  // Override the lifecycle events in CustomComponentLifecycleObserver. CustomComponentLifecycleObserver cannot listen to the aboutToInit event of the parent component.
+  // Override the lifecycle events in CustomComponentLifecycleObserver.
   aboutToAppear() {
     hilog.info(0x0000, 'testTag', 'MyObserver aboutToAppear');
   }
   onDidBuild() {
     hilog.info(0x0000, 'testTag', 'MyObserver onDidBuild');
   }
-  aboutToAttach() {
-    hilog.info(0x0000, 'testTag', 'MyObserver aboutToAttach');
-  }
-  aboutToDetach() {
-    hilog.info(0x0000, 'testTag', 'MyObserver aboutToDetach');
-  }
-  aboutToReuse(param?: ESObject) {
-    // The value of param is not undefined in the reuse callback of the V1 component and is undefined in the reuse callback of the V2 component.
+  aboutToReuse(params?: Record<string, Object | undefined | null>) {
+    // When params exists, it is V1 reuse.
     hilog.info(0x0000, 'testTag', 'MyObserver aboutToReuse');
   }
   aboutToRecycle() {
     hilog.info(0x0000, 'testTag', 'MyObserver aboutToRecycle');
   }
-  // Unregister the listener in the aboutToDelete function of the parent component. As a result, the aboutToDisappear event of the parent component cannot be listened to.
   aboutToDisappear() {
     hilog.info(0x0000, 'testTag', 'MyObserver aboutToDisappear');
   }
@@ -217,7 +213,7 @@ struct MyComponent {
     Column() {
       Button('Close Dialog')
         .onClick(() => {
-          let ctrl: PromptActionDialogController = this.getDialogController();
+          let ctrl: PromptActionDialogController | undefined = this.getDialogController();
           if (ctrl != undefined) {
             ctrl.close();
           }
@@ -344,7 +340,9 @@ Invoked when a user clicks the back button on a router-managed page (a custom co
 onDidBuild?(): void
 ```
 
-The callback method after the custom component is built and it is migrated from class CustomComponent.Triggered when the custom component has been built.
+The callback method after the custom component is built and it is migrated from class CustomComponent.
+
+Triggered when the custom component has been built.
 
 **Since:** 12
 

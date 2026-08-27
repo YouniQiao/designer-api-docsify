@@ -90,7 +90,7 @@ Update dialing number information on SIM card.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the updateIccDiallingNumbers. |
+| Promise&lt;void&gt; | The promise returned by the updateIccDiallingNumbers. |
 
 **Error codes:**
 

@@ -55,7 +55,7 @@ Replaces text in a string, using an object that supports replacement within a st
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchValue | { [Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) =&gt; string): string; } | Yes |  |
-| replacer | (substring: string, ...args: any[]) = & gt; string | Yes |  |
+| replacer | (substring: string, ...args: any[]) =&gt; string | Yes |  |
 
 **Return value:**
 

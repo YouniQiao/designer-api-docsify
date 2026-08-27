@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import autoStartupManager from '@kit.AbilityKit';
+import { autoStartupManager } from '@kit.AbilityKit';
 ```
 
 ## setApplicationAutoStartup
@@ -95,7 +95,7 @@ Sets an application component to automatically start upon system boot. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

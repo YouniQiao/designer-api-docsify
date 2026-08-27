@@ -9,7 +9,7 @@ AVCastController definition used to implement a remote control when a cast is co
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## getAVPlaybackState
@@ -256,7 +256,7 @@ Get supported hdr capabilities of remote player.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;hdrCapability.HDRFormat & gt; & gt; | HDRFormat returned through promise |
+| Promise&lt;Array&lt;hdrCapability.HDRFormat&gt;&gt; | HDRFormat returned through promise |
 
 **Error codes:**
 
@@ -295,7 +295,7 @@ Get supported speed of remote player.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | supported speed returned through promise |
+| Promise&lt;Array&lt;number&gt;&gt; | supported speed returned through promise |
 
 **Error codes:**
 
@@ -403,7 +403,7 @@ Unregister playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| callback | (state: AVPlaybackState) = & gt; void | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+| callback | (state: AVPlaybackState) =&gt; void | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -899,8 +899,8 @@ Register playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
-| callback | (state: AVPlaybackState) = & gt; void | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
+| callback | (state: AVPlaybackState) =&gt; void | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -1117,7 +1117,7 @@ Register listener for video size change event, used at remote side.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'videoSizeChange' | Yes | Type of the 'videoSizeChange' to listen for. |
-| callback | (width: number, height: number) = & gt; void | Yes | Callback used to return video size. |
+| callback | (width: number, height: number) =&gt; void | Yes | Callback used to return video size. |
 
 **Error codes:**
 
@@ -1518,7 +1518,7 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1579,7 +1579,7 @@ Process the response corresponding to the media key request obtained by the appl
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1651,7 +1651,7 @@ Destroy the controller
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -1728,7 +1728,7 @@ Send control commands to remote player
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1766,13 +1766,13 @@ Sends custom data to a remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record & lt;string, Object & gt; | Yes | Custom data populated by the application. |
+| data | Record&lt;string, Object&gt; | Yes | Custom data populated by the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1910,7 +1910,7 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

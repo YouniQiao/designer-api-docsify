@@ -1,6 +1,8 @@
 # AudioVolumeManager
 
-This interface implements audio volume management.Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager) to obtain an AudioVolumeManager instance.
+This interface implements audio volume management.
+
+Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager) to obtain an AudioVolumeManager instance.
 
 > **NOTE：**
 > 
@@ -13,8 +15,7 @@ This interface implements audio volume management.Before calling any API in Audi
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## getAppVolumePercentage
@@ -35,7 +36,7 @@ Obtains the volume of the application. (The volume range is 0 to 100.) This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the application volume. |
+| Promise&lt;number&gt; | Promise used to return the application volume. |
 
 **Examples**
 
@@ -334,7 +335,7 @@ Obtains the volume (in dB) calculated by the system based on the audio stream, v
 | --- | --- | --- | --- |
 | streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Yes | Audio stream. |
 | volumeLevel | number | Yes | Volume level. |
-| device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | Yes | Device type. |
+| device | DeviceType | Yes | Device type. |
 
 **Return value:**
 
@@ -590,7 +591,7 @@ Sets the volume (within a range of 0 to 100) for the application. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

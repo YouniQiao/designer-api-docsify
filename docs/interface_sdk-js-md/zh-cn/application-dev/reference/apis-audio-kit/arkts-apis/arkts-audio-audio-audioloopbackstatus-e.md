@@ -1,6 +1,8 @@
 # AudioLoopbackStatus
 
-表示返听状态的枚举。@enum { number }
+表示返听状态的枚举。
+
+@enum { number }
 
 **起始版本：** 20
 

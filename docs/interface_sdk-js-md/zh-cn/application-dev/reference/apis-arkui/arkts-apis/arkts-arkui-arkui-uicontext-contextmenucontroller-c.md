@@ -1,6 +1,8 @@
 # ContextMenuController
 
-class ContextMenuController提供控制菜单关闭的能力。
+class ContextMenuController
+
+提供控制菜单关闭的能力。
 
 > **说明：**
 > 

@@ -37,7 +37,7 @@ icon: ResourceStr | SymbolGlyphModifier
 index: number
 ```
 
-指定索引。 取值限定为整数。
+指定索引。取值限定为整数。
 
 **类型：** number
 

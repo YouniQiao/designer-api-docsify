@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## getCachedGnssLocationsSize
@@ -67,7 +67,7 @@ Obtain the number of cached GNSS locations reported at a time
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | The promise returned by the function. |
+| Promise&lt;number&gt; | The promise returned by the function. |
 
 **Examples**
 

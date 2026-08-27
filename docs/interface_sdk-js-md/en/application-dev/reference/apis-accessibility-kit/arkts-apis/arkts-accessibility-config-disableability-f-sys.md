@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import config from '@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## disableAbility
@@ -32,7 +32,7 @@ Disables an accessibility extension. This API must be used together with [config
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

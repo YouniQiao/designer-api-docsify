@@ -9,7 +9,7 @@ Represents statistics about SQL statements executed by the database.
 ## Modules to Import
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## executeTime

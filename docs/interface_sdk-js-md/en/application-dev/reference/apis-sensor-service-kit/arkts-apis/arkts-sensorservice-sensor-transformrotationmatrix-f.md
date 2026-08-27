@@ -22,7 +22,7 @@ Transforms a rotation vector based on the coordinate system. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inRotationVector | Array & lt;number & gt; | Yes | Rotation vector. |
+| inRotationVector | Array&lt;number&gt; | Yes | Rotation vector. |
 | coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | Yes | Rotation vector to transform. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation vector after being transformed. |
 
@@ -78,14 +78,14 @@ Transforms a rotation vector based on the coordinate system. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inRotationVector | Array & lt;number & gt; | Yes | Rotation vector. |
+| inRotationVector | Array&lt;number&gt; | Yes | Rotation vector. |
 | coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | Yes | Rotation vector to transform. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the rotation vector after being transformed. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the rotation vector after being transformed. |
 
 **Error codes:**
 

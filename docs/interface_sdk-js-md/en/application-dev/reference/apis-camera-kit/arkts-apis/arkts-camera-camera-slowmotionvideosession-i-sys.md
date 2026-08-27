@@ -52,7 +52,7 @@ function isSlowMotionDetectionSupported(slowMotionVideoSession: camera.SlowMotio
   try {
     isSupported = slowMotionVideoSession.isSlowMotionDetectionSupported();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The isFocusModeSupported call failed. error code: ${err.code}`);
   }
@@ -394,7 +394,7 @@ Sets an area for slow-motion detection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| area | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | Area. |
+| area | Rect | Yes | Area. |
 
 **Error codes:**
 
@@ -413,7 +413,7 @@ function setSlowMotionDetectionArea(slowMotionVideoSession: camera.SlowMotionVid
   try {
     slowMotionVideoSession.setSlowMotionDetectionArea({topLeftX: 0.1, topLeftY: 0.1, width: 0.8, height: 0.8});
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Returns the error code error.code on failure and handles it.
     let err = error as BusinessError;
     console.error(`The setSlowMotionDetectionArea call failed. error code: ${err.code}`);
   }

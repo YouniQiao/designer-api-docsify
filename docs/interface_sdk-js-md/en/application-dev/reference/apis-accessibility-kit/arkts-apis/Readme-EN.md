@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-accessibilitykit-->
 
-- [@ohos.accessibility](arkts-accessibility.md)
+- [@ohos.accessibility(Accessibility)](arkts-accessibility.md)
   - [accessibility](arkts-accessibility-accessibility-n.md)
     - [getAbilityLists](arkts-accessibility-accessibility-getabilitylists-f.md)
     - [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md)
@@ -65,7 +65,7 @@
   <!--Del-->
   - [OperateVirtualNodeResult(system api)](arkts-accessibility-accessibility-operatevirtualnoderesult-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.accessibility.config](arkts-accessibility-config.md)<!--DelEnd-->
+- [@ohos.accessibility.config(System Accessibility Configuration)](arkts-accessibility-config.md)<!--DelEnd-->
   <!--Del-->
   - [disableAbility(system api)](arkts-accessibility-config-disableability-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -112,11 +112,11 @@
   - [BlinkResultCode(system api)](arkts-accessibility-config-blinkresultcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Constants(system api)](arkts-accessibility-config-con-sys.md)<!--DelEnd-->
-- [@ohos.accessibility.GesturePath](arkts-accessibility-gesturepath.md)
+- [@ohos.accessibility.GesturePath(Gesture Path)](arkts-accessibility-gesturepath.md)
   - [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md)
-- [@ohos.accessibility.GesturePoint](arkts-accessibility-gesturepoint.md)
+- [@ohos.accessibility.GesturePoint(Gesture Point)](arkts-accessibility-gesturepoint.md)
   - [GesturePoint](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md)
-- [@ohos.application.AccessibilityExtensionAbility](arkts-application-accessibilityextensionability.md)
+- [@ohos.application.AccessibilityExtensionAbility(AccessibilityExtensionAbility)](arkts-application-accessibilityextensionability.md)
   - [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c.md)
   <!--Del-->
   - [AccessibilityExtensionAbility(system api)](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c-sys.md)<!--DelEnd-->
@@ -147,7 +147,7 @@
   - [TouchPosition(system api)](arkts-accessibility-touchposition-t-sys.md)<!--DelEnd-->
   - [WindowType](arkts-accessibility-windowtype-t.md)
 - application<!--arkts-accessibilitykit-application-->
-  - [AccessibilityExtensionContext](arkts-accessibilityextensioncontext.md)
+  - [AccessibilityExtensionContext(Provides accessibility extension context)](arkts-accessibilityextensioncontext.md)
     - [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md)
     <!--Del-->
     - [AccessibilityExtensionContext(system api)](arkts-accessibility-accessibilityextensioncontext-c-sys.md)<!--DelEnd-->

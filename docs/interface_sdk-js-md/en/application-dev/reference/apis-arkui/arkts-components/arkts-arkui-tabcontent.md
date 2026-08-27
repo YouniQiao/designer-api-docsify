@@ -1,7 +1,9 @@
 # TabContent
 
 The **TabContent** component is used only in the **Tabs** component. It corresponds to the content view of a switched tab page.
+
 > **NOTE**
+
 > - By default, the clip attribute of this component is set to **true**. > If you want to extend the content area to the outside of the component, disable the **clip** attribute first.
 
 ## Child Components
@@ -35,8 +37,12 @@ Creates the **TabContent** component, which represents the content associated wi
 
 | Name | Description |
 | --- | --- |
+| [BoardStyle](arkts-arkui-boardstyle-i.md) | Represents a board style object. |
+| [DrawableTabBarIndicator](arkts-arkui-drawabletabbarindicator-i.md) | Uses an image resource as the indicator. |
 | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) | Represents an indicator style object. |
 | [LabelStyle](arkts-arkui-labelstyle-i.md) | Represents a style object for the label text and font. |
+| [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | Represents a label icon style object. |
+| [TabBarOptions](arkts-arkui-tabbaroptions-i.md) | Defines the options for configuring images and text content on the tabs. |
 
 ### Types
 
@@ -48,10 +54,12 @@ Creates the **TabContent** component, which represents the content associated wi
 
 | Name | Description |
 | --- | --- |
+| [LayoutMode](arkts-arkui-layoutmode-e.md) | Enumerates the layout modes of the images and texts on the bottom tabs. |
+| [SelectedMode](arkts-arkui-selectedmode-e.md) | Enumerates the display modes of selected subtabs. |
 
 ## Examples
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOptions in the module's build-profile.json5 file > resOptions > copyCodeResource, and set enable to true. For details, see the description of [resOptions](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#table1476161719356).
+The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOptions > resOptions > copyCodeResource in the module's build-profile.json5 file, and set enable to true. For details, see the description of [resOptions](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348).
 
 ```TypeScript
 // xxx.ets
@@ -62,8 +70,10 @@ struct TabContentExample {
   @State selectedFontColor: string = '#007DFF';
   @State currentIndex: number = 0;
   @State selectedIndex: number = 0;
+  // Create a Tabs controller to control the switching of TabContent.
   private controller: TabsController = new TabsController();
 
+  // Customize the TabBar builder to switch the icon and text color based on the selection status.
   @Builder tabBuilder(index: number) {
     Column() {
       // The common directory is at the same level as the pages directory.
@@ -82,6 +92,7 @@ struct TabContentExample {
 
   build() {
     Column() {
+      // Create the Tabs component, set the position of the tab bar to the bottom, and bind the controller.
       Tabs({ barPosition: BarPosition.End, controller: this.controller }) {
         TabContent() {
           Column() {
@@ -96,7 +107,7 @@ struct TabContentExample {
               .color('#182431')
               .opacity(0.05)
           }.width('100%')
-        }.tabBar(this.tabBuilder(0))
+        }.tabBar(this.tabBuilder(0)) // Set the tab bar to a custom style.
 
         TabContent() {
           Column() {
@@ -146,11 +157,12 @@ struct TabContentExample {
       .vertical(false)
       .barHeight(56)
       .onChange((index: number) => {
-        // currentIndex controls the displayed tab in TabContent.
+        // currentIndex controls the tab page displayed in TabContent, and selectedIndex controls the color switching of the custom TabBar.
         this.currentIndex = index;
         this.selectedIndex = index;
       })
       .onAnimationStart((index: number, targetIndex: number, event: TabsAnimationEvent) => {
+        // If the index of the current tab is the same as that of the target tab, the status does not need to be updated.
         if (index === targetIndex) {
           return;
         }
@@ -166,7 +178,7 @@ struct TabContentExample {
 }
 ```
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOptions in the module's build-profile.json5 file > resOptions > copyCodeResource, and set enable to true. For details, see the description of [resOptions](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#table1476161719356).
+The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOptions > resOptions > copyCodeResource in the module's build-profile.json5 file, and set enable to true. For details, see the description of [resOptions](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348).
 
 ```TypeScript
 // xxx.ets
@@ -197,9 +209,10 @@ struct TabContentExample {
 
   build() {
     Column() {
+      // Create the Tabs component, set the position of the TabBar to the start end, and bind the controller.
       Tabs({ barPosition: BarPosition.Start, controller: this.controller }) {
         TabContent()
-          .tabBar(this.tabBuilder(0))
+          .tabBar(this.tabBuilder(0)) // Set the TabBar to a custom style.
         TabContent()
           .tabBar(this.tabBuilder(1))
         TabContent()
@@ -211,11 +224,12 @@ struct TabContentExample {
       .barWidth(96)
       .barHeight(414)
       .onChange((index: number) => {
-        // currentIndex controls the displayed tab in TabContent.
+        // currentIndex controls the tab page displayed in TabContent, and selectedIndex controls the color switching of the custom TabBar.
         this.currentIndex = index;
         this.selectedIndex = index;
       })
       .onAnimationStart((index: number, targetIndex: number, event: TabsAnimationEvent) => {
+        // If the index of the current tab page is the same as that of the target tab page, the status does not need to be updated.
         if (index === targetIndex) {
           return;
         }
@@ -242,14 +256,17 @@ struct TabBarStyleExample {
     Column({ space: 5 }) {
       Text('Subtab style')
       Column() {
+        // Create the Tabs component and set the position of the tab bar to the start.
         Tabs({ barPosition: BarPosition.Start }) {
           TabContent() {
             Column().width('100%').height('100%').backgroundColor(Color.Pink)
-          }.tabBar(new SubTabBarStyle('Pink'))
+          }.tabBar(new SubTabBarStyle('Pink')) // Set the tab bar to the sub tab approved sample style.
           .onWillShow(() => {
+            // Triggered when the TabContent is about to be displayed.
             console.info('Pink will show');
           })
           .onWillHide(() => {
+            // Triggered when the TabContent is about to be hidden.
             console.info('Pink will hide');
           })
 
@@ -294,10 +311,11 @@ struct TabBarStyleExample {
       }.width('100%').height(200)
       Text('Bottom tab style')
       Column() {
+        // Create a Tabs component and set the position of the tab bar to the bottom.
         Tabs({ barPosition: BarPosition.End }) {
           TabContent() {
             Column().width('100%').height('100%').backgroundColor(Color.Pink)
-          }.tabBar(new BottomTabBarStyle($r('sys.media.ohos_app_icon'), 'Pink'))
+          }.tabBar(new BottomTabBarStyle($r('sys.media.ohos_app_icon'), 'Pink')) // Set the tab bar to the bottom page in approved sample style.
           .onWillShow(() => {
             console.info('Pink will show');
           })
@@ -387,7 +405,8 @@ struct TabBarStyleExample {
             console.info('Green will hide');
           })
         }
-        .vertical(true).scrollable(true).barMode(BarMode.Fixed)
+        .vertical(true) // Set the tab mode to vertical.
+        .scrollable(true).barMode(BarMode.Fixed)
         .onChange((index: number) => {
           console.info(index.toString());
         })
@@ -424,7 +443,7 @@ struct TabsAttr {
     Column() {
       Button('Change Indicator Color').width('100%').margin({ bottom: '12vp' })
         .onClick((event?: ClickEvent) => {
-          // Animation configuration for the width and height attributes of the <Button> component
+          // Configure the animation for the underline color attribute.
           if (this.colorFlag) {
             this.getUIContext()?.animateTo({
               duration: 1000, // Animation duration.
@@ -456,7 +475,7 @@ struct TabsAttr {
         })
       Button('Change Indicator Height').width('100%').margin({ bottom: '12vp' })
         .onClick((event?: ClickEvent) => {
-          // Animation configuration for the width and height attributes of the <Button> component
+          // Configure the animation for the underline height attribute.
           if (this.heightFlag) {
             this.getUIContext()?.animateTo({
               duration: 1000, // Animation duration.
@@ -488,7 +507,7 @@ struct TabsAttr {
         })
       Button('Change Indicator Width').width('100%').margin({ bottom: '12vp' })
         .onClick((event?: ClickEvent) => {
-          // Animation configuration for the width and height attributes of the <Button> component
+          // Configure the animation for the underline width attribute.
           if (this.widthFlag) {
             this.getUIContext()?.animateTo({
               duration: 1000, // Animation duration.
@@ -520,7 +539,7 @@ struct TabsAttr {
         })
       Button('Change Indicator Corner Radius').width('100%').margin({ bottom: '12vp' })
         .onClick((event?: ClickEvent) => {
-          // Animation configuration for the width and height attributes of the <Button> component
+          // Configure the animation for the underline corner radius attribute.
           if (this.borderFlag) {
             this.getUIContext()?.animateTo({
               duration: 1000, // Animation duration.
@@ -552,7 +571,7 @@ struct TabsAttr {
         })
       Button('Change Indicator Spacing').width('100%').margin({ bottom: '12vp' })
         .onClick((event?: ClickEvent) => {
-          // Animation configuration for the width and height attributes of the <Button> component
+          // Configure the animation for the underline spacing attribute.
           if (this.spaceFlag) {
             this.getUIContext()?.animateTo({
               duration: 1000, // Animation duration.
@@ -640,9 +659,7 @@ This example demonstrates how to achieve adaptive height for subtab text using [
 @Entry
 @Component
 struct TabsTextOverflow {
-  @State message: string = 'Hello World';
   private controller: TabsController = new TabsController();
-  @State subTabOverflowOpaque: boolean = true;
 
   build() {
     Column() {
@@ -867,7 +884,7 @@ struct TabContentExample6 {
 }
 ```
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOptions in the module's build-profile.json5 file > resOptions > copyCodeResource, and set enable to true. For details, see the description of [resOptions](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#table1476161719356).
+The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOptions > resOptions > copyCodeResource in the module's build-profile.json5 file, and set enable to true. For details, see the description of [resOptions](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348).
 
 ```TypeScript
 // xxx.ets
@@ -973,7 +990,7 @@ struct Index {
   build() {
     Column({space: 5}) {
       Text('Bottom tab style')
-      Column(){
+      Column() {
         Tabs({barPosition: BarPosition.End}) {
           TabContent() {
             Column().width('100%').height('100%').backgroundColor(Color.Pink)
@@ -1026,7 +1043,7 @@ struct Index {
         .vertical(false)
         .scrollable(true)
         .barMode(BarMode.Fixed)
-        .onChange((index:number)=>{
+        .onChange((index: number) => {
           console.info(index.toString());
         })
         .width('100%')
@@ -1258,7 +1275,7 @@ struct TabsPreloadItems {
               console.info('preloadItems success.');
             })
             .catch((error: BusinessError) => {
-              console.error('preloadItems failed, error code: ' + error.code + ', error message: ' + error.message);
+              console.error(`preloadItems failed. Code: ${error.code}, message: ${error.message}`);
             });
         })
 
@@ -1271,7 +1288,7 @@ struct TabsPreloadItems {
               console.info('preloadItems success.');
             })
             .catch((error: BusinessError) => {
-              console.error('preloadItems failed, error code: ' + error.code + ', error message: ' + error.message);
+              console.error(`preloadItems failed. Code: ${error.code}, message: ${error.message}`);
             });
         })
       Button('preload items: [3]')
@@ -1283,7 +1300,7 @@ struct TabsPreloadItems {
               console.info('preloadItems success.');
             })
             .catch((error: BusinessError) => {
-              console.error('preloadItems failed, error code: ' + error.code + ', error message: ' + error.message);
+              console.error(`preloadItems failed. Code: ${error.code}, message: ${error.message}`);
             });
         })
     }
@@ -1319,9 +1336,6 @@ import { DrawableDescriptor } from '@kit.ArkUI';
 @Entry
 @Component
 struct TabsIndicatorExample {
-  @State isVertical: boolean = false;
-  @State text: string = 'Text';
-  @State barMode: BarMode = BarMode.Fixed;
   @State pixmapDesc: DrawableDescriptor | null = null;
 
   async aboutToAppear() {

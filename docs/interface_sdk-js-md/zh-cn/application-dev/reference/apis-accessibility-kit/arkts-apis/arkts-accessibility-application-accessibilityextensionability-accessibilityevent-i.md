@@ -1,6 +1,6 @@
 # AccessibilityEvent
 
-无障碍事件信息。无障碍事件由系统无障碍服务在用户操作或界面变化时生成，通过eventType标识事件类别（包括无障碍事件类型、窗口变化类型、触摸浏览事件类型、手势事件类型、页面更新类型），辅助功能扩展可通过 onAccessibilityEvent回调接收并处理这些事件。
+无障碍事件信息。无障碍事件由系统无障碍服务在用户操作或界面变化时生成，通过eventType标识事件类别（包括无障碍事件类型、窗口变化类型、触摸浏览事件类型、手势事件类型、页面更新类型），辅助功能扩展可通过onAccessibilityEvent回调接收并处理这些事件。
 
 **起始版本：** 9
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import AccessibilityExtensionAbility, { AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
+import { AccessibilityExtensionAbility, AccessibilityElement, AccessibilityExtensionContext, ElementAttributeKeys, ElementAttributeValues, FocusDirection, FocusType, Rect, WindowType, AccessibilityEvent, AccessibilityEventInfo, Parameter, FocusRule, FocusCondition, FocusMoveResult, AccessibilityVirtualNode, TouchPosition } from '@kit.AccessibilityKit';
 ```
 
 ## elementId
@@ -33,7 +33,17 @@ eventType: accessibility.EventType | accessibility.WindowUpdateType |
         TouchGuideType | GestureType | PageUpdateType
 ```
 
-具体事件类型，用于标识当前无障碍事件的类别。EventType：无障碍事件类型；WindowUpdateType：窗口变化类型；TouchGuideType：触摸浏览事件类型；GestureType：手势事件类型；PageUpdateType：页面更新类型。
+具体事件类型，用于标识当前无障碍事件的类别。
+
+EventType：无障碍事件类型；
+
+WindowUpdateType：窗口变化类型；
+
+TouchGuideType：触摸浏览事件类型；
+
+GestureType：手势事件类型；
+
+PageUpdateType：页面更新类型。
 
 **类型：** accessibility.EventType \| accessibility.WindowUpdateType \| [TouchGuideType](arkts-accessibility-touchguidetype-t.md) \| [GestureType](arkts-accessibility-gesturetype-t.md) \| [PageUpdateType](arkts-accessibility-pageupdatetype-t.md)
 

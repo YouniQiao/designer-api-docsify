@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import selectionManager from '@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## off('selectionCompleted')
@@ -12,7 +12,7 @@ import selectionManager from '@kit.BasicServicesKit';
 function off(type: 'selectionCompleted', callback?: Callback<SelectionInfo>): void
 ```
 
-取消订阅划词完成事件，与 on('selectionCompleted') 搭配使用。
+取消订阅划词完成事件，与on('selectionCompleted')搭配使用。
 
 **起始版本：** 24
 

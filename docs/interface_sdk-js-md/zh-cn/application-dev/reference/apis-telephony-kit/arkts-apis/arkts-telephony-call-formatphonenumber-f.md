@@ -11,7 +11,9 @@
 function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, callback: AsyncCallback<string>): void
 ```
 
-格式化电话号码，可设置格式化参数。使用callback异步回调。电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。
+格式化电话号码，可设置格式化参数。使用callback异步回调。
+
+电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。
 
 **起始版本：** 7
 
@@ -59,7 +61,9 @@ call.formatPhoneNumber("138xxxxxxxx", options, (err: BusinessError, data: string
 function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): Promise<string>
 ```
 
-格式化电话号码，可设置格式化参数。使用Promise异步回调。电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。
+格式化电话号码，可设置格式化参数。使用Promise异步回调。
+
+电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。
 
 **起始版本：** 7
 
@@ -76,7 +80,7 @@ function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | 以Promise形式异步返回格式化电话号码的结果。 |
+| Promise&lt;string&gt; | 以Promise形式异步返回格式化电话号码的结果。 |
 
 **错误码：**
 
@@ -110,7 +114,9 @@ call.formatPhoneNumber("138xxxxxxxx", options).then((data: string) => {
 function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>): void
 ```
 
-格式化电话号码。使用callback异步回调。电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。
+格式化电话号码。使用callback异步回调。
+
+电话号码格式化后为标准数字字符串，例如：“138 xxxx xxxx”、“0755 xxxx xxxx”。
 
 **起始版本：** 7
 

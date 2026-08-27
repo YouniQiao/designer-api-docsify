@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## createGattClientDevice
@@ -32,7 +32,7 @@ create a JavaScript Gatt client device instance.
 
 | Type | Description |
 | --- | --- |
-| [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md) | Returns a JavaScript Gatt client device instance { |
+| GattClientDevice | Returns a JavaScript Gatt client device instance { |
 
 **Error codes:**
 

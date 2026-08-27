@@ -21,9 +21,9 @@ Constructs the target with the elements of specified array as the arguments and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | new (...args: A) = & gt; R | Yes |  |
-| argumentsList | Readonly & lt;A & gt; | Yes |  |
-| newTarget | new (...args: any) = & gt; any | No |  |
+| target | new (...args: A) =&gt; R | Yes |  |
+| argumentsList | Readonly&lt;A&gt; | Yes |  |
+| newTarget | new (...args: any) =&gt; any | No |  |
 
 **Return value:**
 
@@ -41,7 +41,7 @@ function construct(target: Function, argumentsList: ArrayLike<any>, newTarget?: 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | Function | Yes |  |
-| argumentsList | ArrayLike & lt;any & gt; | Yes |  |
+| argumentsList | ArrayLike&lt;any&gt; | Yes |  |
 | newTarget | Function | No |  |
 
 **Return value:**

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import privacyManager from '@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## getPermissionUsedRecordToggleStatus
@@ -26,7 +26,7 @@ A system application can call this API to obtain the current user's permission u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the switch status value of the current user is on, and **false** indicates that the switch status value of the current user is off. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the switch status value of the current user is on, and **false** indicates that the switch status value of the current user is off. |
 
 **Error codes:**
 
@@ -85,7 +85,7 @@ A system application can call this API to obtain the permission usage record tog
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the toggle is enabled for the specified sub-profile, and **false** indicates that it is disabled. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the toggle is enabled for the specified sub-profile, and **false** indicates that it is disabled. |
 
 **Error codes:**
 

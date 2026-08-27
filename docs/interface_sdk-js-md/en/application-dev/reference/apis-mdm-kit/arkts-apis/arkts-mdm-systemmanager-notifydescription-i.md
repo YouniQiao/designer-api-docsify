@@ -9,7 +9,7 @@ Represents the update notification defined by an enterprise.
 ## Modules to Import
 
 ```TypeScript
-import systemManager from '@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## installTips

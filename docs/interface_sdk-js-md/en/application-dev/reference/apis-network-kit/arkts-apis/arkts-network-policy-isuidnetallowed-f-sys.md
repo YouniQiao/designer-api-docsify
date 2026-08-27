@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## isUidNetAllowed
@@ -80,7 +80,7 @@ Checks whether the application specified by a given UID is allowed to access a m
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the UID can access the metering or non-metering network, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the UID can access the metering or non-metering network, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -183,7 +183,7 @@ Obtains whether the UID can access the network of the specified iface. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the application is allowed to access the specified network, and the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the application is allowed to access the specified network, and the value **false** means the opposite. |
 
 **Error codes:**
 

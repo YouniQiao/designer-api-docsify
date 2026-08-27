@@ -1,6 +1,8 @@
 # Button
 
-Defines the prompt info of button.@interface Button
+Defines the prompt info of button.
+
+@interface Button
 
 **Since:** 11
 
@@ -9,7 +11,7 @@ Defines the prompt info of button.@interface Button
 ## Modules to Import
 
 ```TypeScript
-import Prompt, { Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
+import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
 ```
 
 ## color

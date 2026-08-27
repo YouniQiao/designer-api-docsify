@@ -1,6 +1,8 @@
 # RefreshModifier
 
-Defines Refresh Modifier@extends RefreshAttribute @implements AttributeModifier&lt;RefreshAttribute&gt;
+Defines Refresh Modifier
+
+@extends RefreshAttribute @implements AttributeModifier&lt;RefreshAttribute&gt;
 
 **Inheritance/Implementation:** RefreshModifier extends [RefreshAttribute](../arkts-components/arkts-arkui-refresh-attribute.md#refreshattribute) and implements AttributeModifier<RefreshAttribute>
 

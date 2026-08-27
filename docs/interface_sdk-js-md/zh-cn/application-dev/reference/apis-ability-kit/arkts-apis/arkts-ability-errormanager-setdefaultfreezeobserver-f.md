@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import errorManager from '@kit.AbilityKit';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## setDefaultFreezeObserver
@@ -12,7 +12,7 @@ import errorManager from '@kit.AbilityKit';
 function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObserver
 ```
 
-发生APP_FREEZE时，支持链式回调，返回上一次注册的处理器，仅限主线程调用。 如果传入非法参数或在子线程调用，将抛出错误码并返回undefined，因此建议使用try-catch逻辑进行处理。
+发生APP_FREEZE时，支持链式回调，返回上一次注册的处理器，仅限主线程调用。如果传入非法参数或在子线程调用，将抛出错误码并返回undefined，因此建议使用try-catch逻辑进行处理。
 
 > **说明：**
 > 

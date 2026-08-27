@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screenLockFileManager from '@kit.AbilityKit';
+import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
 ## queryAppKeyState
@@ -26,7 +26,7 @@ Queries the status of a specified type of sensitive data key under the lock scre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | Yes | Type of sensitive data that is accessible on the lock screen. |
+| dataType | DataType | Yes | Type of sensitive data that is accessible on the lock screen. |
 
 **Return value:**
 

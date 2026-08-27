@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import ethernet from '@kit.NetworkKit';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## isIfaceActive
@@ -83,7 +83,7 @@ Checks whether the interface is activated. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. The value **1** means that the network interface is active, **0** means that the network interface is inactive, and any other value means that an error has occurred. |
+| Promise&lt;number&gt; | Promise used to return the result. The value **1** means that the network interface is active, **0** means that the network interface is inactive, and any other value means that an error has occurred. |
 
 **Error codes:**
 

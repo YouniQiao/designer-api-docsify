@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import dragController from '@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## event
@@ -36,7 +36,9 @@ event: DragEvent
 extraParams: string
 ```
 
-设置拖拽事件额外信息，具体功能暂未实现。默认值：空
+设置拖拽事件额外信息，具体功能暂未实现。
+
+默认值：空
 
 **类型：** string
 

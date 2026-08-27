@@ -9,7 +9,7 @@ Provides phone number management capabilities, such as phone number validity ver
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor

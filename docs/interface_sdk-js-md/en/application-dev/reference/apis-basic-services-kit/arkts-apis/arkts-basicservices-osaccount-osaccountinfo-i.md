@@ -9,7 +9,7 @@ Represents the OS account information.
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## constraints
@@ -88,7 +88,9 @@ Whether the OS account is activated. The value **true** means the specified acco
 isActived: boolean
 ```
 
-Whether the OS account is activated. The value **true** means the specified account is activated; the value **false** means the opposite.Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use **isActivated** instead.
+Whether the OS account is activated. The value **true** means the specified account is activated; the value **false** means the opposite.
+
+Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use **isActivated** instead.
 
 **Type:** boolean
 

@@ -1,6 +1,7 @@
 # Toggle
 
 The **Toggle** component provides a clickable element of the checkbox, button, or switch type.
+
 > **NOTE**
 
 ## Child Components
@@ -33,11 +34,15 @@ Toggle(options: ToggleOptions)
 
 | Name | Description |
 | --- | --- |
+| [SwitchStyle](arkts-arkui-switchstyle-i.md) | Sets the style for the component of the **Switch** type. |
+| [ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. This API inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
+| [ToggleOptions](arkts-arkui-toggleoptions-i.md) | Options of the toggle. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [ToggleType](arkts-arkui-toggletype-e.md) | Enumerates toggle types. |
 
 ## Examples
 

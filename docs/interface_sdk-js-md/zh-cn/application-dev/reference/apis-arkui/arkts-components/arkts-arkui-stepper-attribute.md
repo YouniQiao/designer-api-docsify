@@ -1,6 +1,8 @@
 # Stepper属性/事件
 
-无@extends CommonMethod&lt;StepperAttribute&gt;
+无
+
+@extends CommonMethod&lt;StepperAttribute&gt;
 
 **继承/实现关系：** StepperAttribute extends CommonMethod<StepperAttribute>
 
@@ -8,7 +10,7 @@
 
 **废弃版本：** 22
 
-**替代接口：** [SwiperAttribute](arkts-arkui-swiper-attribute.md#swiperattribute)
+**替代接口：** [SwiperAttribute](arkts-arkui-swiper-attribute.md)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,7 +41,7 @@ Callback when the change label is clicked.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (prevIndex: number, index: number) = & gt; void | 是 | Callback triggered when the page is switched.prevIndex: Index of the step page before the switching.Value range: [0, +∞).index: Index of the step page after the switching, that is, index of the previous or next page. Value range: [0, +∞). |
+| callback | (prevIndex: number, index: number) =&gt; void | 是 | Callback triggered when the page is switched.prevIndex: Index of the step page before the switching.Value range: [0, +∞).index: Index of the step page after the switching, that is, index of the previous or next page. Value range: [0, +∞). |
 
 ## onFinish
 
@@ -63,7 +65,7 @@ Callback when the finish label is clicked.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | 是 | Invoked when the **nextLabel** of the last **StepperItem** in the **Stepper** is clicked and the **ItemState** attribute is set to **Normal**. |
+| callback | () =&gt; void | 是 | Invoked when the **nextLabel** of the last **StepperItem** in the **Stepper** is clicked and the **ItemState** attribute is set to **Normal**. |
 
 ## onNext
 
@@ -87,7 +89,7 @@ Callback when the next label is clicked.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (index: number, pendingIndex: number) = & gt; void | 是 | Callback triggered when the page is switched.index: Index of the current step page.pendingIndex: Index of the next step page. |
+| callback | (index: number, pendingIndex: number) =&gt; void | 是 | Callback triggered when the page is switched.index: Index of the current step page.pendingIndex: Index of the next step page. |
 
 ## onPrevious
 
@@ -111,7 +113,7 @@ Callback when the previous label is clicked.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (index: number, pendingIndex: number) = & gt; void | 是 | Callback triggered when the page is switched.index: Index of the current step page.pendingIndex: Index of the next step page. |
+| callback | (index: number, pendingIndex: number) =&gt; void | 是 | Callback triggered when the page is switched.index: Index of the current step page.pendingIndex: Index of the next step page. |
 
 ## onSkip
 
@@ -135,4 +137,4 @@ Callback when the skip label is clicked.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | 是 | Invoked when the current **StepperItem** is **ItemState.Skip** and the **nextLabel** is clicked. |
+| callback | () =&gt; void | 是 | Invoked when the current **StepperItem** is **ItemState.Skip** and the **nextLabel** is clicked. |

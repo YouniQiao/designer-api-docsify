@@ -55,7 +55,7 @@ Sets the callback for rotation gesture cancellation. This callback is triggered 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback & lt;void & gt; | Yes | Callback invoked when the rotation gesture is cancelled. No gesture event information is returned. |
+| event | Callback&lt;void&gt; | Yes | Callback invoked when the rotation gesture is cancelled. No gesture event information is returned. |
 
 **Return value:**
 

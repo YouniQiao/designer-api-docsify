@@ -1,6 +1,8 @@
 # RenderConfiguration
 
-Describes the rendering configuration.@interface RenderConfiguration
+Describes the rendering configuration.
+
+@interface RenderConfiguration
 
 **Since:** 23
 

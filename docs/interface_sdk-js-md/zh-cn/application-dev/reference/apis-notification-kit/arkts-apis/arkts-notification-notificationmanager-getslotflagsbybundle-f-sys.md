@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getSlotFlagsByBundle
@@ -26,13 +26,13 @@ function getSlotFlagsByBundle(bundle: BundleOption): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 指定应用的包信息。 |
+| bundle | BundleOption | 是 | 指定应用的包信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 以Promise形式返回获取指定应用的通知渠道标识位。 |
+| Promise&lt;number&gt; | 以Promise形式返回获取指定应用的通知渠道标识位。 |
 
 **错误码：**
 

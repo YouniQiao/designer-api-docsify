@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import uiEffect from '@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## createFilter
@@ -22,7 +22,7 @@ function createFilter(): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回Filter实例，支持添加多种Filter效果。 |
+| Filter | 返回Filter实例，支持添加多种Filter效果。 |
 
 **示例**
 

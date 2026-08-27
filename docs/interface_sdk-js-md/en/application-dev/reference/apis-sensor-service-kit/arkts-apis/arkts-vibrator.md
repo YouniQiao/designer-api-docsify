@@ -87,5 +87,5 @@ The **vibrator** module allows precise control over the vibration of device vibr
 
 | Name | Description |
 | --- | --- |
-| [Usage](arkts-sensorservice-vibrator-usage-t.md) | Enumerates the vibration scenarios.<!--RP1End--> |
+| [Usage](arkts-sensorservice-vibrator-usage-t.md) | Enumerates the vibration scenarios. |
 | [VibrateEffect](arkts-sensorservice-vibrator-vibrateeffect-t.md) | Enumerates vibration effects of the vibrator. You can specify the vibration effect when calling [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md) or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md). |

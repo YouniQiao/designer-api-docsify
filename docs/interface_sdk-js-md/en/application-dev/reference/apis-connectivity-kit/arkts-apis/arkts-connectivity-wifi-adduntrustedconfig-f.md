@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## addUntrustedConfig
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 ```
 
-Adds a specified untrusted hotspot configuration.<p>This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.
+Adds a specified untrusted hotspot configuration.
+
+<p>This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.
 
 **Since:** 7
 
@@ -31,13 +30,13 @@ Adds a specified untrusted hotspot configuration.<p>This method adds one configu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Returns { |
+| Promise&lt;boolean&gt; | Returns { |
 
 **Examples**
 
@@ -79,7 +78,9 @@ try {
 function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<boolean>): void
 ```
 
-Adds a specified untrusted hotspot configuration.<p>This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.
+Adds a specified untrusted hotspot configuration.
+
+<p>This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot.
 
 **Since:** 7
 
@@ -95,7 +96,7 @@ Adds a specified untrusted hotspot configuration.<p>This method adds one configu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |  |
 
 **Examples**

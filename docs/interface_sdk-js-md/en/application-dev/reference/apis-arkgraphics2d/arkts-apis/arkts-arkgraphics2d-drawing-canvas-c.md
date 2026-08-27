@@ -20,7 +20,7 @@ A carrier that carries the drawn content and drawing status.
 ## Modules to Import
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## attachBrush
@@ -91,7 +91,7 @@ Attaches a pen to the canvas. When you draw on the canvas, the pen's style is us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pen | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | Yes | Pen** object. |
+| pen | Pen | Yes | Pen** object. |
 
 **Error codes:**
 
@@ -206,7 +206,7 @@ Clips the drawable area of the canvas using a custom path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object. |
+| path | Path | Yes | Path** object. |
 | clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | No | Clip mode. The default value is **INTERSECT**. |
 | doAntiAlias | boolean | No | Whether to enable anti-aliasing. The value **true** means to enable anti- aliasing, and **false** means the opposite. Default value: **false**. |
 
@@ -292,7 +292,7 @@ Clips a region on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes | Region** object, which indicates the range to clip. |
+| region | Region | Yes | Region** object, which indicates the range to clip. |
 | clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | No | Clipping mode. The default value is **INTERSECT**. |
 
 **Error codes:**
@@ -335,7 +335,7 @@ Clips a rounded rectangle on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | RoundRect** object, which indicates the range to clip. |
+| roundRect | RoundRect | Yes | RoundRect** object, which indicates the range to clip. |
 | clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | No | Clipping mode. The default value is **INTERSECT**. |
 | doAntiAlias | boolean | No | Whether to enable anti-aliasing. The value **true** means to enable anti- aliasing, and **false** means the opposite. Default value: **false**. |
 
@@ -444,10 +444,10 @@ let opts : image.InitializationOptions = {
     height: 4,
     width: 6
   }
-}
+};
 image.createPixelMap(color, opts).then((pixelMap) => {
   const canvas = new drawing.Canvas(pixelMap);
-})
+});
 ```
 
 ## detachBrush
@@ -703,7 +703,7 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
-| blendMode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | No | Blend mode. The default mode is **SRC_OVER**. |
+| blendMode | BlendMode | No | Blend mode. The default mode is **SRC_OVER**. |
 
 **Error codes:**
 
@@ -725,7 +725,7 @@ class DrawingRenderNode extends RenderNode {
       red: 0,
       green: 10,
       blue: 10
-    }
+    };
     canvas.drawColor(color, drawing.BlendMode.CLEAR);
   }
 }
@@ -751,7 +751,7 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 | red | number | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
 | green | number | Yes | Green channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
 | blue | number | Yes | Blue channel value of the color in ARGB format. The value is an integer ranging from 0 to 2 55. Any passed-in floating point number is rounded down. |
-| blendMode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | No | Blend mode. The default mode is **SRC_OVER**. |
+| blendMode | BlendMode | No | Blend mode. The default mode is **SRC_OVER**. |
 
 **Error codes:**
 
@@ -790,7 +790,7 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | color | number | Yes | Color in hexadecimal ARGB format. |
-| blendMode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | No | Blend mode. The default mode is **SRC_OVER**. |
+| blendMode | BlendMode | No | Blend mode. The default mode is **SRC_OVER**. |
 
 **Error codes:**
 
@@ -831,18 +831,46 @@ Draws the array of glyphs with specified font. Nothing is drawn if glyphCount is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| glyphIds | Array & lt;number & gt; | Yes | Indicates an array of glyph IDs. |
+| glyphIds | Array&lt;number&gt; | Yes | Indicates an array of glyph IDs. |
 | glyphIdOffset | number | Yes | Indicates the number of elements to skip before drawing in glyphIds array. |
-| positions | Array & lt;common2D.Point & gt; | Yes | Indicates an array of positions. |
+| positions | Array&lt;common2D.Point&gt; | Yes | Indicates an array of positions. |
 | positionOffset | number | Yes | Indicates the number of elements to skip before drawing in positions. |
 | glyphCount | number | Yes | Indicates the number of glyphs to be drawn. |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Indicates the font used for drawing. |
+| font | Font | Yes | Indicates the font used for drawing. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    const brush = new drawing.Brush();
+    brush.setColor({alpha: 255, red: 255, green: 0, blue: 0});
+    const font = new drawing.Font();
+    font.setSize(20);
+    canvas.attachBrush(brush);
+    let glyphsArray : Array<number> = [100, 200, 300];
+    let positionArray = new Array<common2D.Point>();
+    const point1: common2D.Point = { x: 100.0, y: 100.0 };
+    const point2: common2D.Point = { x: 200.0, y: 100.0 };
+    const point3: common2D.Point = { x: 150.0, y: 200.0 };
+    positionArray.push(point1);
+    positionArray.push(point2);
+    positionArray.push(point3);
+    canvas.drawGlyphs(glyphsArray, 0, positionArray, 0, 3, font);
+    canvas.detachBrush();
+  }
+}
+```
 
 ## drawImage
 
@@ -888,16 +916,16 @@ class DrawingRenderNode extends RenderNode {
     const colorData = new Uint8Array(color);
     for (let i = 0; i < colorData.length; i += 4) {
       colorData[i] = 255;
-      colorData[i+1] = 156;
-      colorData[i+2] = 0;
-      colorData[i+3] = 255;
+      colorData[i + 1] = 156;
+      colorData[i + 2] = 0;
+      colorData[i + 3] = 255;
     }
 
     let opts : image.InitializationOptions = {
       editable: true,
       pixelFormat: 3,
       size: { height, width }
-    }
+    };
 
     let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
     const canvas = context.canvas;
@@ -916,7 +944,9 @@ drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.R
       filterMode: FilterMode): void
 ```
 
-Splits an image into multiple sections based on the lattice object's configuration and draws each section into the specified target rectangle on the canvas. When this API is used, the anti-aliasing enablement setting does not take effect.The intersections of even-numbered rows and columns (starting from 0) are fixed points. If the fixed lattice area fits within the target rectangle, it will be drawn without scaling. Otherwise, it will be scaled proportionally to fit the target rectangle. Any remaining space will be filled by stretching or compressing the remaining sections to cover the entire target rectangle.
+Splits an image into multiple sections based on the lattice object's configuration and draws each section into the specified target rectangle on the canvas. When this API is used, the anti-aliasing enablement setting does not take effect.
+
+The intersections of even-numbered rows and columns (starting from 0) are fixed points. If the fixed lattice area fits within the target rectangle, it will be drawn without scaling. Otherwise, it will be scaled proportionally to fit the target rectangle. Any remaining space will be filled by stretching or compressing the remaining sections to cover the entire target rectangle.
 
 **Since:** 18
 
@@ -980,16 +1010,17 @@ class DrawingRenderNode extends RenderNode {
       editable: true,
       pixelFormat: 3,
       size: { height, width }
-    }
+    };
+
     let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
     canvas.drawImage(pixelMap, 0, 0); // Original image
     let xDivs: Array<number> = [28, 36, 44, 52];
     let yDivs: Array<number> = [28, 36, 44, 52];
     let lattice = drawing.Lattice.createImageLattice(xDivs, yDivs, 4, 4);
     let dst: common2D.Rect = { left: 100, top: 0, right: 164, bottom: 64 };
-    let dst1: common2D.Rect = { left: 200, top: 0, right: 360, bottom: 160 };
+    let dstScaled: common2D.Rect = { left: 200, top: 0, right: 360, bottom: 160 };
     canvas.drawImageLattice(pixelMap, lattice, dst, drawing.FilterMode.FILTER_MODE_NEAREST); // Example 1
-    canvas.drawImageLattice(pixelMap, lattice, dst1, drawing.FilterMode.FILTER_MODE_NEAREST); // Example 2
+    canvas.drawImageLattice(pixelMap, lattice, dstScaled, drawing.FilterMode.FILTER_MODE_NEAREST); // Example 2
   }
 }
 ```
@@ -1001,7 +1032,9 @@ drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D
       filterMode: FilterMode): void
 ```
 
-Splits an image into nine sections using two horizontal and two vertical lines: four edge sections, four corner sections, and a central section. When this API is used, the anti-aliasing enablement setting does not take effect.If the four corner sections are smaller than the target rectangle, they will be drawn in the target rectangle without scaling. Otherwise, they will be scaled to fit the target rectangle. Any remaining space will be filled by stretching or compressing the other five sections to cover the entire target rectangle.
+Splits an image into nine sections using two horizontal and two vertical lines: four edge sections, four corner sections, and a central section. When this API is used, the anti-aliasing enablement setting does not take effect.
+
+If the four corner sections are smaller than the target rectangle, they will be drawn in the target rectangle without scaling. Otherwise, they will be scaled to fit the target rectangle. Any remaining space will be filled by stretching or compressing the other five sections to cover the entire target rectangle.
 
 **Since:** 18
 
@@ -1065,14 +1098,15 @@ class DrawingRenderNode extends RenderNode {
       editable: true,
       pixelFormat: 3,
       size: { height, width }
-    }
+    };
+
     let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
     canvas.drawImage(pixelMap, 0, 0); // Original image
     let center: common2D.Rect = { left: 20, top: 10, right: 50, bottom: 40 };
     let dst: common2D.Rect = { left: 70, top: 0, right: 100, bottom: 30 };
-    let dst1: common2D.Rect = { left: 110, top: 0, right: 200, bottom: 90 };
+    let dstScaled: common2D.Rect = { left: 110, top: 0, right: 200, bottom: 90 };
     canvas.drawImageNine(pixelMap, center, dst, drawing.FilterMode.FILTER_MODE_NEAREST); // Example 1
-    canvas.drawImageNine(pixelMap, center, dst1, drawing.FilterMode.FILTER_MODE_NEAREST); // Example 2
+    canvas.drawImageNine(pixelMap, center, dstScaled, drawing.FilterMode.FILTER_MODE_NEAREST); // Example 2
   }
 }
 ```
@@ -1120,16 +1154,16 @@ class DrawingRenderNode extends RenderNode {
     const colorData = new Uint8Array(color);
     for (let i = 0; i < colorData.length; i += 4) {
       colorData[i] = 255;
-      colorData[i+1] = 156;
-      colorData[i+2] = 0;
-      colorData[i+3] = 255;
+      colorData[i + 1] = 156;
+      colorData[i + 2] = 0;
+      colorData[i + 3] = 255;
     }
 
     let opts : image.InitializationOptions = {
       editable: true,
       pixelFormat: 3,
       size: { height, width }
-    }
+    };
 
     let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
     const canvas = context.canvas;
@@ -1188,16 +1222,16 @@ class DrawingRenderNode extends RenderNode {
     const colorData = new Uint8Array(color);
     for (let i = 0; i < colorData.length; i += 4) {
       colorData[i] = 255;
-      colorData[i+1] = 156;
-      colorData[i+2] = 0;
-      colorData[i+3] = 255;
+      colorData[i + 1] = 156;
+      colorData[i + 2] = 0;
+      colorData[i + 3] = 255;
     }
 
     let opts : image.InitializationOptions = {
       editable: true,
       pixelFormat: 3,
       size: { height, width }
-    }
+    };
 
     let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
     const canvas = context.canvas;
@@ -1273,8 +1307,8 @@ Draws two nested rounded rectangles. The outer rectangle boundary must contain t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outer | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | Outer rounded rectangle. |
-| inner | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | Inner rounded rectangle. |
+| outer | RoundRect | Yes | Outer rounded rectangle. |
+| inner | RoundRect | Yes | Inner rounded rectangle. |
 
 **Error codes:**
 
@@ -1362,7 +1396,7 @@ Draws a custom path, which contains a set of path outlines. Each path outline ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object to draw. |
+| path | Path | Yes | Path** object to draw. |
 
 **Error codes:**
 
@@ -1413,9 +1447,9 @@ Draws a **PixelMap** based on a mesh, with the mesh vertices evenly distributed 
 | pixelmap | image.PixelMap | Yes | PixelMap** to draw. |
 | meshWidth | number | Yes | Number of columns in the mesh. The value is an integer greater than 0. |
 | meshHeight | number | Yes | Number of rows in the mesh. The value is an integer greater than 0. |
-| vertices | Array & lt;number & gt; | Yes | Array of vertices, which specify the position to draw. The value is a floating-point array and the size must be ((meshWidth+1) * (meshHeight+1) + vertOffset) * 2. |
+| vertices | Array&lt;number&gt; | Yes | Array of vertices, which specify the position to draw. The value is a floating-point array and the size must be ((meshWidth+1) * (meshHeight+1) + vertOffset) * 2. |
 | vertOffset | number | Yes | Number of vert elements to skip before drawing. The value is an integer greater than or equal to 0. |
-| colors | Array & lt;number & gt; \ | null | Yes | Array of colors, which specify the color at each vertex. The value is an integer array and can be null. The size must be (meshWidth+1) * (meshHeight+1) + colorOffset.<br>**Since:** 20 |
+| colors | Array&lt;number&gt; \| null | Yes | Array of colors, which specify the color at each vertex. The value is an integer array and can be null. The size must be (meshWidth+1) * (meshHeight+1) + colorOffset.<br>**Since:** 20 |
 | colorOffset | number | Yes | Number of color elements to skip before drawing. The value is an integer greater than or equal to 0. |
 
 **Error codes:**
@@ -1441,21 +1475,21 @@ class DrawingRenderNode extends RenderNode {
     const colorData = new Uint8Array(color);
     for (let i = 0; i < colorData.length; i += 4) {
       colorData[i] = 255;
-      colorData[i+1] = 156;
-      colorData[i+2] = 0;
-      colorData[i+3] = 255;
+      colorData[i + 1] = 156;
+      colorData[i + 2] = 0;
+      colorData[i + 3] = 255;
     }
 
     let opts : image.InitializationOptions = {
       editable: true,
       pixelFormat: 3,
       size: { height, width }
-    }
+    };
 
     let pixelMap: image.PixelMap = image.createPixelMapSync(color, opts);
     const canvas = context.canvas;
     if (pixelMap != null) {
-      const brush = new drawing.Brush(); // Only brush is supported. There is no drawing effect when pen is used.
+      const brush = new drawing.Brush(); // Only brush is supported. Using pen has no drawing effect.
       canvas.attachBrush(brush);
       let verts : Array<number> = [0, 0, 50, 0, 410, 0, 0, 180, 50, 180, 410, 180, 0, 360, 50, 360, 410, 360]; // 18
       canvas.drawPixelMapMesh(pixelMap, 2, 2, verts, 0, null, 0);
@@ -1525,7 +1559,7 @@ Draws a group of points, line segments, or polygons on the canvas, with the spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| points | Array & lt;common2D.Point & gt; | Yes | Array that holds the points to draw. The length cannot be **0**. |
+| points | Array&lt;common2D.Point&gt; | Yes | Array that holds the points to draw. The length cannot be **0**. |
 | mode | [PointMode](arkts-arkgraphics2d-drawing-pointmode-e.md) | No | Mode in which the points are drawn. The default value is **drawing.PointMode.POINTS**. |
 
 **Error codes:**
@@ -1660,7 +1694,7 @@ Draws a region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes | Region to draw. |
+| region | Region | Yes | Region to draw. |
 
 **Error codes:**
 
@@ -1705,7 +1739,7 @@ Draws a rounded rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | Rounded rectangle. |
+| roundRect | RoundRect | Yes | Rounded rectangle. |
 
 **Error codes:**
 
@@ -1746,7 +1780,7 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object, which is used to outline the shadow. |
+| path | Path | Yes | Path** object, which is used to outline the shadow. |
 | planeParams | common2D.Point3d | Yes | 3D vector, which is used to determine the z-axis offset of an occluder relative to the canvas, based on its x and y coordinates. |
 | devLightPos | common2D.Point3d | Yes | Position of the light relative to the canvas. |
 | lightRadius | number | Yes | Radius of the light. The value is a floating point number. |
@@ -1773,20 +1807,20 @@ class DrawingRenderNode extends RenderNode {
     path.addCircle(100, 200, 100, drawing.PathDirection.CLOCKWISE);
     let pen = new drawing.Pen();
     pen.setAntiAlias(true);
-    let pen_color : common2D.Color = { alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00 };
-    pen.setColor(pen_color);
+    let penColor : common2D.Color = { alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00 };
+    pen.setColor(penColor);
     pen.setStrokeWidth(10.0);
     canvas.attachPen(pen);
     let brush = new drawing.Brush();
-    let brush_color : common2D.Color = { alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00 };
-    brush.setColor(brush_color);
+    let brushColor : common2D.Color = { alpha: 0xFF, red: 0x00, green: 0xFF, blue: 0x00 };
+    brush.setColor(brushColor);
     canvas.attachBrush(brush);
-    let point1 : common2D.Point3d = {x: 100, y: 80, z:80};
-    let point2 : common2D.Point3d = {x: 200, y: 10, z:40};
-    let color1 : common2D.Color = {alpha: 0xFF, red:0, green:0, blue:0xFF};
-    let color2 : common2D.Color = {alpha: 0xFF, red:0xFF, green:0, blue:0};
+    let planeParams : common2D.Point3d = {x: 100, y: 80, z: 80};
+    let devLightPos : common2D.Point3d = {x: 200, y: 10, z: 40};
+    let ambientColor : common2D.Color = {alpha: 0xFF, red: 0, green: 0, blue: 0xFF};
+    let spotColor : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0, blue: 0};
     let shadowFlag : drawing.ShadowFlag = drawing.ShadowFlag.ALL;
-    canvas.drawShadow(path, point1, point2, 30, color1, color2, shadowFlag);
+    canvas.drawShadow(path, planeParams, devLightPos, 30, ambientColor, spotColor, shadowFlag);
   }
 }
 ```
@@ -1808,7 +1842,7 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object, which is used to outline the shadow. |
+| path | Path | Yes | Path** object, which is used to outline the shadow. |
 | planeParams | common2D.Point3d | Yes | 3D vector, which is used to calculate the offset in the Z axis. |
 | devLightPos | common2D.Point3d | Yes | Position of the light relative to the canvas. |
 | lightRadius | number | Yes | Radius of the light. The value is a floating point number. |
@@ -1833,10 +1867,10 @@ class DrawingRenderNode extends RenderNode {
     const canvas = context.canvas;
     const path = new drawing.Path();
     path.addCircle(300, 600, 100, drawing.PathDirection.CLOCKWISE);
-    let point1 : common2D.Point3d = {x: 100, y: 80, z:80};
-    let point2 : common2D.Point3d = {x: 200, y: 10, z:40};
+    let planeParams : common2D.Point3d = {x: 100, y: 80, z: 80};
+    let devLightPos : common2D.Point3d = {x: 200, y: 10, z: 40};
     let shadowFlag : drawing.ShadowFlag = drawing.ShadowFlag.ALL;
-    canvas.drawShadow(path, point1, point2, 30, 0xFF0000FF, 0xFFFF0000, shadowFlag);
+    canvas.drawShadow(path, planeParams, devLightPos, 30, 0xFF0000FF, 0xFFFF0000, shadowFlag);
   }
 }
 ```
@@ -1858,7 +1892,7 @@ Draws a single character. If the typeface of the current font does not support t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Single character to draw. The length of the string must be **1**. |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font** object. |
+| font | Font | Yes | Font** object. |
 | x | number | Yes | X coordinate of the left point (red point in the figure below) of the character baseline (blue line in the figure below). The value is a floating point number. |
 | y | number | Yes | Y coordinate of the left point (red point in the figure below) of the character baseline (blue line in the figure below). The value is a floating point number. |
 
@@ -1882,8 +1916,8 @@ class DrawingRenderNode extends RenderNode {
     const font = new drawing.Font();
     font.setSize(20);
     canvas.attachBrush(brush);
-    canvas.drawSingleCharacter("H", font, 100, 100);
-    canvas.drawSingleCharacter("i", font, 120, 100);
+    canvas.drawSingleCharacter('你', font, 100, 100);
+    canvas.drawSingleCharacter('好', font, 120, 100);
     canvas.detachBrush();
   }
 }
@@ -1906,10 +1940,10 @@ Draws a single character with font features. If the typeface of the current font
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Single character to draw. The length of the string must be **1**. |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font** object. |
+| font | Font | Yes | Font** object. |
 | x | number | Yes | X coordinate of the left endpoint of the drawn character baseline. The value is a floating point number. |
 | y | number | Yes | Y coordinate of the left endpoint of the drawn character baseline. The value is a floating point number. |
-| features | Array & lt;FontFeature & gt; | Yes | Array of the font feature object. For an empty array, the preset font features in the TrueType Font (TTF) file are used. |
+| features | Array&lt;FontFeature&gt; | Yes | Array of the font feature object. For an empty array, the preset font features in the TrueType Font (TTF) file are used. |
 
 **Error codes:**
 
@@ -1933,8 +1967,8 @@ class DrawingRenderNode extends RenderNode {
     let fontFeatures : Array<drawing.FontFeature> = [];
     fontFeatures.push({name: 'calt', value: 0});
     canvas.attachBrush(brush);
-    canvas.drawSingleCharacterWithFeatures("H", font, 100, 100, fontFeatures);
-    canvas.drawSingleCharacterWithFeatures("i", font, 180, 100, fontFeatures);
+    canvas.drawSingleCharacterWithFeatures('你', font, 100, 100, fontFeatures);
+    canvas.drawSingleCharacterWithFeatures('好', font, 180, 100, fontFeatures);
     canvas.detachBrush();
   }
 }
@@ -1979,7 +2013,7 @@ class DrawingRenderNode extends RenderNode {
     brush.setColor({alpha: 255, red: 255, green: 0, blue: 0});
     const font = new drawing.Font();
     font.setSize(20);
-    const textBlob = drawing.TextBlob.makeFromString("Hello, drawing", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    const textBlob = drawing.TextBlob.makeFromString('Hello, drawing', font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
     canvas.attachBrush(brush);
     canvas.drawTextBlob(textBlob, 20, 20);
     canvas.detachBrush();
@@ -2007,12 +2041,12 @@ Draws a triangle mesh described by the vertex array.
 | --- | --- | --- | --- |
 | vertexMode | [VertexMode](arkts-arkgraphics2d-drawing-vertexmode-e.md) | Yes | Connection mode of the vertex to be drawn. |
 | vertexCount | number | Yes | Number of elements in the vertex array. The value is an integer greater than or equal to 3. |
-| positions | Array & lt;common2D.Point & gt; | Yes | Array that holds the position of every vertex. The array cannot be null and its length must be equal to the value of **vertexCount**. |
-| texs | Array & lt;common2D.Point & gt; \ | null | Yes | Array of texture space coordinates corresponding to the vertices. This array can be null, which indicates that the texture space is invalid. If not null, the length of the array must be equal to the value of **vertexCount**. |
-| colors | Array & lt;number & gt; \ | null | Yes | Array of colors corresponding to the vertices, which is used for interpolation in triangles. This array can be null, which indicates that the color effect is the default color set by the user. If not null, the length of the array must be equal to the value of **vertexCount**. |
+| positions | Array&lt;common2D.Point&gt; | Yes | Array that holds the position of every vertex. The array cannot be null and its length must be equal to the value of **vertexCount**. |
+| texs | Array&lt;common2D.Point&gt; \| null | Yes | Array of texture space coordinates corresponding to the vertices. This array can be null, which indicates that the texture space is invalid. If not null, the length of the array must be equal to the value of **vertexCount**. |
+| colors | Array&lt;number&gt; \| null | Yes | Array of colors corresponding to the vertices, which is used for interpolation in triangles. This array can be null, which indicates that the color effect is the default color set by the user. If not null, the length of the array must be equal to the value of **vertexCount**. |
 | indexCount | number | Yes | Number of indices. The value can be **0** or a value greater than or equal to 3. If the value is not **0**, the value must be an integer greater than or equal to 3. |
-| indices | Array & lt;number & gt; \ | null | Yes | Array of vertex indices. The value can be null. In this case, the value of **indexCount** is ignored (an integer greater than or equal to 3 or equal to 0). If not null, the value length must be the same as that of **indexCount**. |
-| mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | Yes | Color blend mode. |
+| indices | Array&lt;number&gt; \| null | Yes | Array of vertex indices. The value can be null. In this case, the value of **indexCount** is ignored (an integer greater than or equal to 3 or equal to 0). If not null, the value length must be the same as that of **indexCount**. |
+| mode | BlendMode | Yes | Color blend mode. |
 
 **Error codes:**
 
@@ -2045,7 +2079,7 @@ class DrawingRenderNode extends RenderNode {
     texsArray.push(texs3);
     const colors = [0xFFFF0000, 0xFF00FF00, 0xFF0000FF];
     const indices = [0, 1, 2];
-    canvas.drawVertices(drawing.VertexMode.TRIANGLESSTRIP_VERTEXMODE, 3, pointsArray, texsArray, colors, 3, indices,drawing.BlendMode.SRC);
+    canvas.drawVertices(drawing.VertexMode.TRIANGLESSTRIP_VERTEXMODE, 3, pointsArray, texsArray, colors, 3, indices, drawing.BlendMode.SRC);
   }
 }
 ```
@@ -2113,12 +2147,12 @@ class DrawingRenderNode extends RenderNode {
     let clipRect: common2D.Rect = {
       left : 150, top : 150, right : 300, bottom : 400
     };
-    canvas.clipRect(clipRect,drawing.ClipOp.DIFFERENCE, true);
-    console.info("test rect.left: " + clipRect.left);
-    console.info("test rect.top: " + clipRect.top);
-    console.info("test rect.right: " + clipRect.right);
-    console.info("test rect.bottom: " + clipRect.bottom);
-    canvas.getLocalClipBounds();
+    canvas.clipRect(clipRect, drawing.ClipOp.DIFFERENCE, true);
+    console.info('test rect.left: ' + clipRect.left);
+    console.info('test rect.top: ' + clipRect.top);
+    console.info('test rect.right: ' + clipRect.right);
+    console.info('test rect.bottom: ' + clipRect.bottom);
+    let clipBounds = canvas.getLocalClipBounds();
   }
 }
 ```
@@ -2157,7 +2191,7 @@ class DrawingRenderNode extends RenderNode {
     canvas.drawRect({left: 10, right: 200, top: 100, bottom: 300});
     canvas.save();
     canvas.drawRect({left : 10, right : 500, top : 300, bottom : 900});
-    canvas.getSaveCount();
+    let saveCount = canvas.getSaveCount();
     canvas.detachPen();
   }
 }
@@ -2193,7 +2227,7 @@ class DrawingRenderNode extends RenderNode {
     let matrix = new drawing.Matrix();
     matrix.setMatrix([5, 0, 0, 0, 1, 1, 0, 0, 1]);
     canvas.setMatrix(matrix);
-    let matrixResult =canvas.getTotalMatrix();
+    let matrixResult = canvas.getTotalMatrix();
   }
 }
 ```
@@ -2266,9 +2300,9 @@ class DrawingRenderNode extends RenderNode {
   draw(context : DrawContext) {
     const canvas = context.canvas;
     if (canvas.isClipEmpty()) {
-      console.info("canvas.isClipEmpty() returned true");
+      console.info('canvas.isClipEmpty() returned true');
     } else {
-      console.info("canvas.isClipEmpty() returned false");
+      console.info('canvas.isClipEmpty() returned false');
     }
   }
 }
@@ -2294,6 +2328,24 @@ Checks whether the current layer that drawn into the device is opaque.
 | --- | --- |
 | boolean | Returns true if the current layer that drawn into the device is opaque. |
 
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    if (canvas.isOpaque()) {
+      console.info('canvas.isOpaque() returned true');
+    } else {
+      console.info('canvas.isOpaque() returned false');
+    }
+  }
+}
+```
+
 ## quickRejectPath
 
 ```TypeScript
@@ -2310,7 +2362,7 @@ Checks whether the path is not intersecting with the canvas area. The canvas are
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object. |
+| path | Path | Yes | Path** object. |
 
 **Return value:**
 
@@ -2332,9 +2384,9 @@ class DrawingRenderNode extends RenderNode {
     path.cubicTo(10, 10, 10, 10, 15, 15);
     path.close();
     if (canvas.quickRejectPath(path)) {
-      console.info("canvas and path do not intersect.");
+      console.info('canvas and path do not intersect.');
     } else {
-      console.info("canvas and path intersect.");
+      console.info('canvas and path intersect.');
     }
   }
 }
@@ -2375,9 +2427,9 @@ class DrawingRenderNode extends RenderNode {
     const canvas = context.canvas;
     let rect: common2D.Rect = { left : 10, top : 20, right : 50, bottom : 30 };
     if (canvas.quickRejectRect(rect)) {
-      console.info("canvas and rect do not intersect.");
+      console.info('canvas and rect do not intersect.');
     } else {
-      console.info("canvas and rect intersect.");
+      console.info('canvas and rect intersect.');
     }
   }
 }
@@ -2396,6 +2448,22 @@ Resets the clip status.
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Graphics.Drawing
+
+**Examples**
+
+```TypeScript
+import { RenderNode } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let rect: common2D.Rect = { left: 10, top: 100, right: 200, bottom: 300 };
+    canvas.clipRect(rect);
+    canvas.resetClip();
+  }
+}
+```
 
 ## resetMatrix
 
@@ -2440,7 +2508,7 @@ Restores the canvas state (canvas matrix and clipping area) saved on the top of 
 
 ```TypeScript
 import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 
 class DrawingRenderNode extends RenderNode {
   draw(context : DrawContext) {
@@ -2449,6 +2517,7 @@ class DrawingRenderNode extends RenderNode {
     pen.setStrokeWidth(5);
     pen.setColor({alpha: 255, red: 255, green: 0, blue: 0});
     canvas.attachPen(pen);
+    canvas.save();
     canvas.restore();
     canvas.detachPen();
   }
@@ -2626,10 +2695,10 @@ class DrawingRenderNode extends RenderNode {
   draw(context : DrawContext) {
     const canvas = context.canvas;
     canvas.saveLayer(null, null);
-    const brushRect = new drawing.Brush();
-    const colorRect: common2D.Color = {alpha: 255, red: 255, green: 255, blue: 0};
-    brushRect.setColor(colorRect);
-    canvas.attachBrush(brushRect);
+    const rectBrush = new drawing.Brush();
+    const rectColor: common2D.Color = {alpha: 255, red: 255, green: 255, blue: 0};
+    rectBrush.setColor(rectColor);
+    canvas.attachBrush(rectBrush);
     const rect: common2D.Rect = {left:100, top:100, right:500, bottom:500};
     canvas.drawRect(rect);
 
@@ -2727,7 +2796,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 class DrawingRenderNode extends RenderNode {
   draw(context : DrawContext) {
     const canvas = context.canvas;
-    let matrix = new drawing.Matrix()
+    let matrix = new drawing.Matrix();
     matrix.setMatrix([5, 0, 0, 0, 1, 1, 0, 0, 1]);
     canvas.setMatrix(matrix);
     canvas.drawRect({left: 10, right: 200, top: 100, bottom: 500});

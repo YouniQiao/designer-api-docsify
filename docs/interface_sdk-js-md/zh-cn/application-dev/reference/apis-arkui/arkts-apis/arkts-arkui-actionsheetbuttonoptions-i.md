@@ -35,7 +35,9 @@ Button选中时的回调。
 defaultFocus?: boolean
 ```
 
-设置Button是否是默认焦点，true表示Button是默认焦点，false表示Button不是默认焦点。在弹窗获焦且未进行tab键走焦时，该按钮默认响应Enter键。多重弹窗情况下，可自动获焦并连续响应。默认响应Enter键能力在defaultFocus为true时不生效。默认值：false
+设置Button是否是默认焦点，true表示Button是默认焦点，false表示Button不是默认焦点。在弹窗获焦且未进行tab键走焦时，该按钮默认响应Enter键。多重弹窗情况下，可自动获焦并连续响应。默认响应Enter键能力在defaultFocus为true时不生效。
+
+默认值：false
 
 **类型：** boolean
 
@@ -55,7 +57,9 @@ defaultFocus?: boolean
 enabled?: boolean
 ```
 
-点击Button是否响应，true表示Button可以响应，false表示Button不可以响应。默认值：true
+点击Button是否响应，true表示Button可以响应，false表示Button不可以响应。
+
+默认值：true
 
 **类型：** boolean
 
@@ -75,7 +79,9 @@ enabled?: boolean
 style?: DialogButtonStyle
 ```
 
-设置Button的风格样式。默认值：DialogButtonStyle.DEFAULT
+设置Button的风格样式。
+
+默认值：DialogButtonStyle.DEFAULT
 
 **类型：** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
 
@@ -95,7 +101,9 @@ style?: DialogButtonStyle
 value: string | Resource
 ```
 
-Button文本内容。当文本内容过长无法显示时，用省略号代替未显示的部分。
+Button文本内容。
+
+当文本内容过长无法显示时，用省略号代替未显示的部分。
 
 **类型：** string \| Resource
 

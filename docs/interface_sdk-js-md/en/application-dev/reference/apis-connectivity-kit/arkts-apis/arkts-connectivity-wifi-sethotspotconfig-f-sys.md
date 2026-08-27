@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## setHotspotConfig
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function setHotspotConfig(config: HotspotConfig): boolean
 ```
 
-Sets the hotspot for a device.<p>Only OPEN and WPA2 PSK hotspot can be configured.
+Sets the hotspot for a device.
+
+<p>Only OPEN and WPA2 PSK hotspot can be configured.
 
 **Since:** 7
 
@@ -33,7 +32,7 @@ Sets the hotspot for a device.<p>Only OPEN and WPA2 PSK hotspot can be configure
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) | Yes |  |
+| config | HotspotConfig | Yes |  |
 
 **Return value:**
 

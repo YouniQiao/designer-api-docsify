@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## activateOsAccount
@@ -98,7 +98,7 @@ activateOsAccount(localId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -141,7 +141,7 @@ try {
 activateOsAccount(localId: number, displayId: number): Promise<void>
 ```
 
-在指定逻辑屏激活（前台启动或切换）目标系统账号。使用Promise异步回调。 当前不支持跨逻辑屏激活，即在指定逻辑屏上激活另一个已在逻辑屏前台运行的系统账号。
+在指定逻辑屏激活（前台启动或切换）目标系统账号。使用Promise异步回调。当前不支持跨逻辑屏激活，即在指定逻辑屏上激活另一个已在逻辑屏前台运行的系统账号。
 
 **起始版本：** 23
 
@@ -162,7 +162,7 @@ activateOsAccount(localId: number, displayId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -228,7 +228,7 @@ bindDomainAccount(localId: number, domainAccountInfo: DomainAccountInfo): Promis
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -560,7 +560,7 @@ deactivateOsAccount(localId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -671,7 +671,7 @@ getBundleIdForUid(uid: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回与uid对应的bundleId。 |
+| Promise&lt;number&gt; | Promise对象，返回与uid对应的bundleId。 |
 
 **错误码：**
 
@@ -777,7 +777,7 @@ getEnabledOsAccountConstraints(localId: number): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise对象，返回指定系统账号已使能的全部 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回指定系统账号已使能的全部[约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)。 |
 
 **错误码：**
 
@@ -836,7 +836,7 @@ getForegroundOsAccountDisplayId(localId: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回逻辑屏ID。 |
+| Promise&lt;number&gt; | Promise对象，返回逻辑屏ID。 |
 
 **错误码：**
 
@@ -892,7 +892,7 @@ getForegroundOsAccountLocalId(displayId: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回系统账号ID。 |
+| Promise&lt;number&gt; | Promise对象，返回系统账号ID。 |
 
 **错误码：**
 
@@ -943,8 +943,8 @@ getOsAccountConstraintSourceTypes(localId: number, constraint: string, callback:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 要查询的系统账号ID。 |
-| constraint | string | 是 | 要查询的 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)名称。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | 是 | 回调函数。如果成功，err为null，data为指定系统账号的指定 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)来源信息；否则为错误对象。 |
+| constraint | string | 是 | 要查询的[约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)名称。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | 是 | 回调函数。如果成功，err为null，data为指定系统账号的指定[约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)来源信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -999,13 +999,13 @@ getOsAccountConstraintSourceTypes(localId: number, constraint: string): Promise<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 要查询的系统账号ID。 |
-| constraint | string | 是 | 要查询的 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)名称。 |
+| constraint | string | 是 | 要查询的[约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)名称。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | Promise对象，返回指定系统账号的指定 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)来源信息。 |
+| Promise&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | Promise对象，返回指定系统账号的指定[约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)来源信息。 |
 
 **错误码：**
 
@@ -1120,7 +1120,7 @@ getOsAccountProfilePhoto(localId: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回指定系统账号的头像信息。 |
+| Promise&lt;string&gt; | Promise对象，返回指定系统账号的头像信息。 |
 
 **错误码：**
 
@@ -1282,7 +1282,7 @@ isMainOsAccount(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示当前账号为主账号；返回false表示当前账号非主账号。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示当前账号为主账号；返回false表示当前账号非主账号。 |
 
 **错误码：**
 
@@ -1336,7 +1336,7 @@ isOsAccountActivated(localId: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示账号已激活；返回false表示账号未激活。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示账号已激活；返回false表示账号未激活。 |
 
 **错误码：**
 
@@ -1390,13 +1390,13 @@ isOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boole
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| constraint | string | 是 | 指定的[约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) 名称。 |
+| constraint | string | 是 | 指定的[约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)名称。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示已使能指定的约束；返回false表示未使能指定的约束。 |
 
 **错误码：**
 
@@ -1456,7 +1456,7 @@ isOsAccountUnlocked(localId: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示当前账号已解锁；返回false表示当前账号未解锁。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示当前账号已解锁；返回false表示当前账号未解锁。 |
 
 **错误码：**
 
@@ -1692,7 +1692,7 @@ offConstraintChanged(callback?: Callback<ConstraintChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 否 | 表示用于接收约束变更事件的回调函数。 默认为undefined，表示清除所有订阅记录。 非undefined时，表示清除与该回调函数关联的订阅记录。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 否 | 表示用于接收约束变更事件的回调函数。默认为undefined，表示清除所有订阅记录。非undefined时，表示清除与该回调函数关联的订阅记录。 |
 
 **错误码：**
 
@@ -1942,7 +1942,7 @@ onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeIn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| constraints | string[] | 是 | 表示待订阅的 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)列表。 |
+| constraints | string[] | 是 | 表示待订阅的[约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)列表。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | 是 | 表示用于接收约束变更事件的回调函数。 |
 
 **错误码：**
@@ -2089,7 +2089,7 @@ queryMaxLoggedInOsAccountNumber(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回允许登录的系统账号的最大数量。 |
+| Promise&lt;number&gt; | Promise对象，返回允许登录的系统账号的最大数量。 |
 
 **错误码：**
 
@@ -2182,7 +2182,7 @@ queryMaxOsAccountNumber(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回允许创建的系统账号的最大数量。 |
+| Promise&lt;number&gt; | Promise对象，返回允许创建的系统账号的最大数量。 |
 
 **错误码：**
 
@@ -2460,7 +2460,7 @@ removeOsAccount(localId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2524,7 +2524,7 @@ removeOsAccount(localId: number, options: RemoveOsAccountOptions): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2586,7 +2586,7 @@ setOsAccountConstraints(localId: number, constraints: Array<string>, enable: boo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| constraints | Array & lt;string & gt; | 是 | 待设置/删除的 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)列表。 |
+| constraints | Array&lt;string&gt; | 是 | 待设置/删除的[约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)列表。 |
 | enable | boolean | 是 | 设置(true)/删除(false)。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果设置成功，err为null，否则为错误对象。 |
 
@@ -2647,14 +2647,14 @@ setOsAccountConstraints(localId: number, constraints: Array<string>, enable: boo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | localId | number | 是 | 系统账号ID。 |
-| constraints | Array & lt;string & gt; | 是 | 待设置/删除的 [约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)列表。 |
+| constraints | Array&lt;string&gt; | 是 | 待设置/删除的[约束](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md)列表。 |
 | enable | boolean | 是 | 设置(true)/删除(false)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2776,7 +2776,7 @@ setOsAccountName(localId: number, localName: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2902,7 +2902,7 @@ setOsAccountProfilePhoto(localId: number, photo: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2969,7 +2969,7 @@ setOsAccountType(localId: number, type: OsAccountType, options?: SetOsAccountTyp
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

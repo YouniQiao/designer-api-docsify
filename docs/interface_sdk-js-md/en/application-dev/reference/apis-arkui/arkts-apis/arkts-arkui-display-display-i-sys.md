@@ -1,6 +1,8 @@
 # Display
 
-Implements a Display instance, with attributes and APIs defined.Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance.
+Implements a Display instance, with attributes and APIs defined.
+
+Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance.
 
 **Since:** 7
 
@@ -9,7 +11,7 @@ Implements a Display instance, with attributes and APIs defined.Before calling a
 ## Modules to Import
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## hasImmersiveWindow
@@ -79,7 +81,7 @@ Checks whether this display contains an immersive window. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. **true** if the display contains an immersive window, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the display contains an immersive window, **false** otherwise. |
 
 **Error codes:**
 

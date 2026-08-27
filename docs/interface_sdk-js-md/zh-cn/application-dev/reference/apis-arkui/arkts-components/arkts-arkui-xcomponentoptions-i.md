@@ -17,7 +17,7 @@
 controller: XComponentController
 ```
 
-绑定到组件的控制器，可用于调用组件的方法。 该参数仅在type为SURFACE或TEXTURE时有效。
+绑定到组件的控制器，可用于调用组件的方法。该参数仅在type为SURFACE或TEXTURE时有效。
 
 **类型：** [XComponentController](arkts-arkui-xcomponentcontroller-c.md)
 

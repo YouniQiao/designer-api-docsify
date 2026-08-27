@@ -1,6 +1,8 @@
 # Slider properties/events
 
-All the universal attributes except **responseRegion** are supported.In addition to the universal events, the following events are supported.
+All the universal attributes except **responseRegion** are supported.
+
+In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** SliderAttribute extends CommonMethod<SliderAttribute>
 
@@ -19,7 +21,13 @@ All the universal attributes except **responseRegion** are supported.In addition
 blockBorderColor(value: ResourceColor)
 ```
 
-Sets the border color of the slider in the block direction.When **SliderBlockType.DEFAULT** is used, **blockBorderColor** sets the border color of the round slider.When **SliderBlockType.IMAGE** is used, **blockBorderColor** does not work as the slider has no border.When **SliderBlockType.SHAPE** is used, **blockBorderColor** sets the border color of the slider in a custom shape.
+Sets the border color of the slider in the block direction.
+
+When **SliderBlockType.DEFAULT** is used, **blockBorderColor** sets the border color of the round slider.
+
+When **SliderBlockType.IMAGE** is used, **blockBorderColor** does not work as the slider has no border.
+
+When **SliderBlockType.SHAPE** is used, **blockBorderColor** sets the border color of the slider in a custom shape.
 
 **Since:** 10
 
@@ -41,7 +49,13 @@ Sets the border color of the slider in the block direction.When **SliderBlockTyp
 blockBorderWidth(value: Length)
 ```
 
-Sets the border width of the slider in the block direction.When **SliderBlockType.DEFAULT** is used, **blockBorderWidth** sets the border width of the round slider.When **SliderBlockType.IMAGE** is used, **blockBorderWidth** does not work as the slider has no border.When **SliderBlockType.SHAPE** is used, **blockBorderWidth** sets the border width of the slider in a custom shape.
+Sets the border width of the slider in the block direction.
+
+When **SliderBlockType.DEFAULT** is used, **blockBorderWidth** sets the border width of the round slider.
+
+When **SliderBlockType.IMAGE** is used, **blockBorderWidth** does not work as the slider has no border.
+
+When **SliderBlockType.SHAPE** is used, **blockBorderWidth** sets the border width of the slider in a custom shape.
 
 **Since:** 10
 
@@ -63,7 +77,13 @@ Sets the border width of the slider in the block direction.When **SliderBlockTyp
 blockColor(value: ResourceColor)
 ```
 
-Sets the color of the thumb.When **SliderBlockType.DEFAULT** is used, **blockColor** sets the color of the round thumb.When **SliderBlockType.IMAGE** is used, **blockColor** does not work as the thumb has no fill color.When **SliderBlockType.SHAPE** is used, **blockColor** sets the color of the thumb in a custom shape.
+Sets the color of the thumb.
+
+When **SliderBlockType.DEFAULT** is used, **blockColor** sets the color of the round thumb.
+
+When **SliderBlockType.IMAGE** is used, **blockColor** does not work as the thumb has no fill color.
+
+When **SliderBlockType.SHAPE** is used, **blockColor** sets the color of the thumb in a custom shape.
 
 **Since:** 7
 
@@ -85,7 +105,13 @@ Sets the color of the thumb.When **SliderBlockType.DEFAULT** is used, **blockCol
 blockColor(value: ResourceColor | LinearGradient)
 ```
 
-Sets the color of the slider. Gradient colors are supported.When **SliderBlockType.DEFAULT** is used, **blockColor** sets the color of the round thumb.When **SliderBlockType.IMAGE** is used, **blockColor** does not work as the thumb has no fill color.When **SliderBlockType.SHAPE** is used, **blockColor** sets the color of the thumb in a custom shape.
+Sets the color of the slider. Gradient colors are supported.
+
+When **SliderBlockType.DEFAULT** is used, **blockColor** sets the color of the round thumb.
+
+When **SliderBlockType.IMAGE** is used, **blockColor** does not work as the thumb has no fill color.
+
+When **SliderBlockType.SHAPE** is used, **blockColor** sets the color of the thumb in a custom shape.
 
 **Since:** 21
 
@@ -101,7 +127,7 @@ Sets the color of the slider. Gradient colors are supported.When **SliderBlockTy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes | Color of the thumb.Default value: **\\$r('sys.color.ohos_id_color_foreground_contrary') |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient | Yes | Color of the thumb.Default value: **\\$r('sys.color.ohos_id_color_foreground_contrary') |
 
 ## blockSize
 
@@ -109,7 +135,13 @@ Sets the color of the slider. Gradient colors are supported.When **SliderBlockTy
 blockSize(value: SizeOptions)
 ```
 
-Sets the size of the slider in the block direction.When the slider type is set to **SliderBlockType.DEFAULT**, the smaller of the width and height values is used as the radius of the circle.When the slider type is set to **SliderBlockType.IMAGE**, this API sets the size of the image, which is scaled using the **ObjectFit.Cover** strategy.When the slider type is set to **SliderBlockType.SHAPE**, this API sets the size of the custom shape, which is also scaled using the **ObjectFit.Cover** strategy.
+Sets the size of the slider in the block direction.
+
+When the slider type is set to **SliderBlockType.DEFAULT**, the smaller of the width and height values is used as the radius of the circle.
+
+When the slider type is set to **SliderBlockType.IMAGE**, this API sets the size of the image, which is scaled using the **ObjectFit.Cover** strategy.
+
+When the slider type is set to **SliderBlockType.SHAPE**, this API sets the size of the custom shape, which is also scaled using the **ObjectFit.Cover** strategy.
 
 **Since:** 10
 
@@ -201,7 +233,9 @@ Sets the sensitivity to the digital crown rotation.
 enableHapticFeedback(enabled: boolean)
 ```
 
-Specifies whether to enable haptic feedback.To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project.
+Specifies whether to enable haptic feedback.
+
+To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project.
 
 **Since:** 18
 
@@ -299,7 +333,11 @@ Sets the minimum distance required for the slider to respond.
 onChange(callback: (value: number, mode: SliderChangeMode) => void)
 ```
 
-Triggered when the slider is dragged or clicked.The **Begin** and **End** states are triggered when the slider is clicked with a gesture. The **Moving** and **Click** states are triggered when the value of **value** changes.If the coherent action is a drag action, the **Click** state will not be triggered.
+Triggered when the slider is dragged or clicked.
+
+The **Begin** and **End** states are triggered when the slider is clicked with a gesture. The **Moving** and **Click** states are triggered when the value of **value** changes.
+
+If the coherent action is a drag action, the **Click** state will not be triggered.
 
 **Since:** 7
 
@@ -313,7 +351,7 @@ Triggered when the slider is dragged or clicked.The **Begin** and **End** states
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (value: number, mode: SliderChangeMode) = & gt; void | Yes |  |
+| callback | (value: number, mode: SliderChangeMode) =&gt; void | Yes |  |
 
 ## prefix
 
@@ -335,7 +373,7 @@ Sets the prefix of the slider.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes | Visual content of the slider prefix, which will be displayed at the start of the slider. |
+| content | ComponentContent | Yes | Visual content of the slider prefix, which will be displayed at the start of the slider. |
 | options | [SliderPrefixOptions](arkts-arkui-sliderprefixoptions-i.md) | No | Accessibility configuration of the slider prefix. |
 
 ## selectedBorderRadius
@@ -404,7 +442,7 @@ Sets the color of the portion of the track between the minimum value and the thu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedColor | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes | Color of the portion of the track between the minimum value and the thumb.Default value: **\\$r('sys.color.ohos_id_color_emphasize')**   **NOTE：**With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied. |
+| selectedColor | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient | Yes | Color of the portion of the track between the minimum value and the thumb.Default value: **\\$r('sys.color.ohos_id_color_emphasize')**   **NOTE：**With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied. |
 
 ## showSteps
 
@@ -434,7 +472,11 @@ Sets whether to display the step markers along the slider track.
 showSteps(value: boolean, options?: SliderShowStepOptions)
 ```
 
-Sets whether to display the step markers along the slider track.You can set custom accessibility text for each step value. If no accessibility text is provided, the numeric values are used.The accessibility text settings take effect only when the step markers are displayed.
+Sets whether to display the step markers along the slider track.
+
+You can set custom accessibility text for each step value. If no accessibility text is provided, the numeric values are used.
+
+The accessibility text settings take effect only when the step markers are displayed.
 
 **Since:** 20
 
@@ -459,7 +501,11 @@ Sets whether to display the step markers along the slider track.You can set cust
 showTips(value: boolean, content?: ResourceStr)
 ```
 
-Sets whether to display a tooltip when the user drags the slider.When **direction** is set to **Axis.Horizontal**, the tooltip is displayed right above the slider; if there is insufficient space above, it will be displayed below. When **direction** is set to **Axis.Vertical**, the tooltip is displayed on the left of the slider; if there is insufficient space on the left, it will be displayed on the right. If the margins are not set or are set to small values, the tooltip may be clipped.The drawing area of the tooltip is the overlay of the slider.
+Sets whether to display a tooltip when the user drags the slider.
+
+When **direction** is set to **Axis.Horizontal**, the tooltip is displayed right above the slider; if there is insufficient space above, it will be displayed below. When **direction** is set to **Axis.Vertical**, the tooltip is displayed on the left of the slider; if there is insufficient space on the left, it will be displayed on the right. If the margins are not set or are set to small values, the tooltip may be clipped.
+
+The drawing area of the tooltip is the overlay of the slider.
 
 **Since:** 7
 
@@ -584,7 +630,7 @@ Sets the suffix of the slider.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes | Visual content of the slider suffix, which will be displayed at the end of the slider. |
+| content | ComponentContent | Yes | Visual content of the slider suffix, which will be displayed at the end of the slider. |
 | options | [SliderSuffixOptions](arkts-arkui-slidersuffixoptions-i.md) | No | Accessibility configuration of the slider suffix. |
 
 ## trackBorderRadius
@@ -615,7 +661,9 @@ Sets the radius of the rounded corner of the track.
 trackColor(value: ResourceColor | LinearGradient)
 ```
 
-Sets the background color of the track.Since API version 12, **LinearGradient** can be used to create a gradient effect for the track.
+Sets the background color of the track.
+
+Since API version 12, **LinearGradient** can be used to create a gradient effect for the track.
 
 **Since:** 7
 
@@ -629,7 +677,7 @@ Sets the background color of the track.Since API version 12, **LinearGradient** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes | Background color of the track.Default value: **\\$r('sys.color.ohos_id_color_component_normal')**   **NOTE：** 1. With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied. 2. The LinearGradient type cannot be used in atomic services.<br>**Since:** 12 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient | Yes | Background color of the track.Default value: **\\$r('sys.color.ohos_id_color_component_normal')**   **NOTE：** 1. With gradient color settings, if the color stop values are invalid or if the color stops are empty, the gradient effect will not be applied. 2. The LinearGradient type cannot be used in atomic services.<br>**Since:** 12 |
 
 ## trackColorMetrics
 
@@ -659,7 +707,15 @@ Sets the linear gradient background color of the track.
 trackThickness(value: Length)
 ```
 
-Sets the thickness of the track. If the value is less than or equal to 0, the default value is used.To ensure [SliderStyle](arkts-arkui-sliderstyle-e.md) works as expected for the thumb and track, [blockSize](#blocksize) should increase or decrease proportionally with **trackThickness**.Specially, when **style** is **[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet**, trackThickness: [blockSize](#blocksize) = 1:4; when **style** is **[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet**, trackThickness: [blockSize](#blocksize) = 5:3.If the value of **trackThickness** or [blockSize](#blocksize) exceeds the width or height of the **Slider** component, the default value is used.When [SliderStyle](arkts-arkui-sliderstyle-e.md) is set to **OutSet**, if the specified value of [blockSize](#blocksize) exceeds the width or height of the **Slider** component, the default value is used, regardless of whether the value of **trackThickness** is valid or not.
+Sets the thickness of the track. If the value is less than or equal to 0, the default value is used.
+
+To ensure [SliderStyle](arkts-arkui-sliderstyle-e.md) works as expected for the thumb and track, [blockSize](#blocksize) should increase or decrease proportionally with **trackThickness**.
+
+Specially, when **style** is **[SliderStyle](arkts-arkui-sliderstyle-e.md).OutSet**, trackThickness: [blockSize](#blocksize) = 1:4; when **style** is **[SliderStyle](arkts-arkui-sliderstyle-e.md).InSet**, trackThickness: [blockSize](#blocksize) = 5:3.
+
+If the value of **trackThickness** or [blockSize](#blocksize) exceeds the width or height of the **Slider** component, the default value is used.
+
+When [SliderStyle](arkts-arkui-sliderstyle-e.md) is set to **OutSet**, if the specified value of [blockSize](#blocksize) exceeds the width or height of the **Slider** component, the default value is used, regardless of whether the value of **trackThickness** is valid or not.
 
 **Since:** 8
 

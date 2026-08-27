@@ -207,7 +207,7 @@ Loads a specified URL.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | URL to load. |
+| url | string \| Resource | Yes | URL to load. |
 | headers | Array&lt;[WebHeader](arkts-arkui-atomicservice-atomicserviceweb-webheader-i.md)&gt; | No | Additional HTTP request header of the URL. |
 
 **Error codes:**
@@ -245,7 +245,9 @@ Refreshes the web page.
 setCustomUserAgent(userAgent: string): void
 ```
 
-Sets a custom user agent, which will override the default user agent.Set the user agent in the **onControllerAttached** callback to ensure that it takes effect. For details about the setting, see the example. Avoid setting the user agent in **onLoadIntercept**. Otherwise, the setting may fail occasionally.
+Sets a custom user agent, which will override the default user agent.
+
+Set the user agent in the **onControllerAttached** callback to ensure that it takes effect. For details about the setting, see the example. Avoid setting the user agent in **onLoadIntercept**. Otherwise, the setting may fail occasionally.
 
 > **NOTE：**
 > 

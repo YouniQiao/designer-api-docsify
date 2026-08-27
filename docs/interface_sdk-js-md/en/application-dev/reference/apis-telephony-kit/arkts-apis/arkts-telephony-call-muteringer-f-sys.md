@@ -74,7 +74,7 @@ Mutes the ringtone while it is playing. It does not work if the ringtone has bee
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

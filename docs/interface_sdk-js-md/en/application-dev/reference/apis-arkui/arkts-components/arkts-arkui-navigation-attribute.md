@@ -37,7 +37,7 @@ Sets the icon of the back button in the title bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| PixelMap \| Resource \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes | Icon of the back button in the title bar.<br>**Since:** 12 |
+| value | string \| PixelMap \| Resource \| SymbolGlyphModifier | Yes | Icon of the back button in the title bar.<br>**Since:** 12 |
 
 ## backButtonIcon
 
@@ -67,7 +67,7 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | string \| PixelMap \| Resource \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes | Icon of the back button in the title bar. |
+| icon | string \| PixelMap \| Resource \| SymbolGlyphModifier | Yes | Icon of the back button in the title bar. |
 | accessibilityText | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | No | Accessibility text for the back button.Default value: **back** when the system language is English. |
 
 ## configuration
@@ -117,7 +117,7 @@ Defines the callback of the custom transition animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delegate | (from: NavContentInfo, to: NavContentInfo, operation: NavigationOperation)     = & gt; NavigationAnimatedTransition \ | undefined | Yes | Defines the callback of the custom transition animation.from: Destination page to exit.to: Destination page to enter.operation: Transition type.    **NavigationAnimatedTransition**: protocol object for custom transition animations.   **undefined**: undefined, executing the default transition animation effect. |
+| delegate | (from: NavContentInfo, to: NavContentInfo, operation: NavigationOperation)     =&gt; NavigationAnimatedTransition \| undefined | Yes | Defines the callback of the custom transition animation.from: Destination page to exit.to: Destination page to enter.operation: Transition type.    **NavigationAnimatedTransition**: protocol object for custom transition animations.   **undefined**: undefined, executing the default transition animation effect. |
 
 ## divider
 
@@ -255,7 +255,9 @@ Sets whether to hide the back button in the title bar. The back button takes eff
 hideNavBar(value: boolean)
 ```
 
-Sets whether to hide the navigation page. If the value is set to **true**, the navigation bar, including the title bar, content area, and toolbar, will be hidden. In this case, if the navigation destination page is in the routing stack, it is moved to the top of the stack and displayed. Otherwise, a blank page is displayed.From API version 9 to API version 10, this attribute takes effect only in split-column mode. Since API version 11, this attribute takes effect in all display modes.
+Sets whether to hide the navigation page. If the value is set to **true**, the navigation bar, including the title bar, content area, and toolbar, will be hidden. In this case, if the navigation destination page is in the routing stack, it is moved to the top of the stack and displayed. Otherwise, a blank page is displayed.
+
+From API version 9 to API version 10, this attribute takes effect only in split-column mode. Since API version 11, this attribute takes effect in all display modes.
 
 **Since:** 9
 
@@ -517,7 +519,9 @@ Sets the position of the navigation page. It takes effect only when [mode](#mode
 navBarWidth(value: Length)
 ```
 
-Set the width of the navigation page. It takes effect only when [mode](#mode) is set to **NavigationMode.Auto** or **NavigationMode.Split**.Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md).
+Set the width of the navigation page. It takes effect only when [mode](#mode) is set to **NavigationMode.Auto** or **NavigationMode.Split**.
+
+Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md).
 
 **Since:** 9
 
@@ -537,7 +541,10 @@ Set the width of the navigation page. It takes effect only when [mode](#mode) is
 navBarWidthRange(value: [Dimension, Dimension])
 ```
 
-Sets the minimum and maximum widths of the navigation page (effective in split-column mode). When this API is not used, the minimum width defaults to 240 vp, and the maximum width defaults to 40% of the component width (not exceeding 432 vp). When dragging the divider changes the navigation page width, the content area will be compressed.Divider dragging range:  
+Sets the minimum and maximum widths of the navigation page (effective in split-column mode). When this API is not used, the minimum width defaults to 240 vp, and the maximum width defaults to 40% of the component width (not exceeding 432 vp). When dragging the divider changes the navigation page width, the content area will be compressed.
+
+Divider dragging range:
+
 | Condition| Dragging Range | | ----| ----------- | |Both **navBarWidthRange** and **minContentWidth** are set.| Range set by **navBarWidthRange** if the value set by **minContentWidth** is satisfied| |Neither **navBarWidthRange** nor **minContentWidth** is set.| Default minimum and maximum ranges of **navBarWidthRange**| |Only the **navBarWidthRange** attribute is set.| Range set by **navBarWidthRange**, where the maximum dragging range cannot exceed the default value of **minContentWidth**| |Only the **minContentWidth** attribute is set.| Default minimum and maximum ranges of **navBarWidthRange**| |Only the **navBarWidth** attribute is set.| Dragging not supported|
 
 **Since:** 10
@@ -574,7 +581,7 @@ Creates a **NavDestination** component. The builder receives the **name** and **
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | (name: string, param: unknown) = & gt; void | Yes | Builder for a **NavDestination** component. **name**: name of the **NavDestination** page. **param**: detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type. |
+| builder | (name: string, param: unknown) =&gt; void | Yes | Builder for a **NavDestination** component. **name**: name of the **NavDestination** page. **param**: detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type. |
 
 ## onNavBarStateChange
 
@@ -594,7 +601,7 @@ Callback invoked when the navigation page visibility status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (isVisible: boolean) = & gt; void | Yes | Whether the navigation bar is visible. The value **true** means that the navigation bar is visible, and **false** means the opposite.<br>**Since:** 10 |
+| callback | (isVisible: boolean) =&gt; void | Yes | Whether the navigation bar is visible. The value **true** means that the navigation bar is visible, and **false** means the opposite.<br>**Since:** 10 |
 
 ## onNavigationModeChange
 
@@ -616,7 +623,7 @@ Triggered when the **Navigation** component is displayed for the first time or i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (mode: NavigationMode) = & gt; void | Yes | NavigationMode.Split**: The component is displayed in split-column mode.    **NavigationMode.Stack**: The component is displayed in single-column mode. |
+| callback | (mode: NavigationMode) =&gt; void | Yes | NavigationMode.Split**: The component is displayed in split-column mode.    **NavigationMode.Stack**: The component is displayed in single-column mode. |
 
 ## onTitleModeChange
 
@@ -636,7 +643,7 @@ Triggered when [titleMode](#titlemode) is set to **NavigationTitleMode.Free** an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (titleMode: NavigationTitleMode) = & gt; void | Yes | Title mode.<br>**Since:** 10 |
+| callback | (titleMode: NavigationTitleMode) =&gt; void | Yes | Title mode.<br>**Since:** 10 |
 
 ## recoverable
 
@@ -696,7 +703,7 @@ Sets a default placeholder page for the right column in the **Navigation** compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| placeholder | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes | Default placeholder page for the right column in the **Navigation** component's split-column mode. |
+| placeholder | ComponentContent | Yes | Default placeholder page for the right column in the **Navigation** component's split-column mode. |
 
 ## subTitle
 
@@ -827,7 +834,8 @@ Sets the display mode of the page title bar.
 toolBar(value: object | CustomBuilder)
 ```
 
-Sets the content of the toolbar. If this attribute is not set, no toolbar is displayed. Toolbar items are evenly distributed on the bottom toolbar, with text and icons evenly spaced in each content area. If any item contains overlong text and there are fewer than five items, the toolbar will reduce the text size progressively, wrap the text over two lines if necessary, and then clip the text to fit.  
+Sets the content of the toolbar. If this attribute is not set, no toolbar is displayed. Toolbar items are evenly distributed on the bottom toolbar, with text and icons evenly spaced in each content area. If any item contains overlong text and there are fewer than five items, the toolbar will reduce the text size progressively, wrap the text over two lines if necessary, and then clip the text to fit.
+
 **object**
 
 **Since:** 8

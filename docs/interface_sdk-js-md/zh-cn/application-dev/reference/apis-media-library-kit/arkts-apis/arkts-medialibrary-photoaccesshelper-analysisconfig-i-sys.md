@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## extraInfos
@@ -20,7 +20,9 @@ import photoAccessHelper from '@kit.MediaLibraryKit';
 extraInfos?: string
 ```
 
-JSON字符串格式的扩展信息。长度范围：(0, 500]。
+JSON字符串格式的扩展信息。
+
+长度范围：(0, 500]。
 
 **类型：** string
 
@@ -56,7 +58,9 @@ types: AnalysisType[]
 uris: string[]
 ```
 
-资产URI数组。长度范围：[0, 100]。
+资产URI数组。
+
+长度范围：[0, 100]。
 
 **类型：** string[]
 

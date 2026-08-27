@@ -39,7 +39,7 @@ Determines whether all the members of an array satisfy the specified test.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: number, index: number, array: Int16Array) = & gt; unknown | Yes |  |
+| predicate | (value: number, index: number, array: Int16Array) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -78,7 +78,7 @@ Returns the elements of an array that meet the condition specified in a callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: number, index: number, array: Int16Array) = & gt; any | Yes |  |
+| predicate | (value: number, index: number, array: Int16Array) =&gt; any | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -97,7 +97,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: number, index: number, obj: Int16Array) = & gt; boolean | Yes |  |
+| predicate | (value: number, index: number, obj: Int16Array) =&gt; boolean | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -116,7 +116,7 @@ Returns the index of the first element in the array where predicate is true, and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: number, index: number, obj: Int16Array) = & gt; boolean | Yes |  |
+| predicate | (value: number, index: number, obj: Int16Array) =&gt; boolean | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -135,7 +135,7 @@ Performs the specified action for each element in an array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (value: number, index: number, array: Int16Array) = & gt; void | Yes |  |
+| callbackfn | (value: number, index: number, array: Int16Array) =&gt; void | Yes |  |
 | thisArg | any | No |  |
 
 ## indexOf
@@ -206,7 +206,7 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (value: number, index: number, array: Int16Array) = & gt; number | Yes |  |
+| callbackfn | (value: number, index: number, array: Int16Array) =&gt; number | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -225,7 +225,7 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Int16Array) = & gt; number | Yes |  |
+| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Int16Array) =&gt; number | Yes |  |
 
 **Return value:**
 
@@ -241,7 +241,7 @@ reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Int16Array) = & gt; number | Yes |  |
+| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Int16Array) =&gt; number | Yes |  |
 | initialValue | number | Yes |  |
 
 **Return value:**
@@ -260,7 +260,7 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: number, currentIndex: number, array: Int16Array) = & gt; U | Yes |  |
+| callbackfn | (previousValue: U, currentValue: number, currentIndex: number, array: Int16Array) =&gt; U | Yes |  |
 | initialValue | U | Yes |  |
 
 **Return value:**
@@ -279,7 +279,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Int16Array) = & gt; number | Yes |  |
+| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Int16Array) =&gt; number | Yes |  |
 
 **Return value:**
 
@@ -295,7 +295,7 @@ reduceRight(callbackfn: (previousValue: number, currentValue: number, currentInd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Int16Array) = & gt; number | Yes |  |
+| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Int16Array) =&gt; number | Yes |  |
 | initialValue | number | Yes |  |
 
 **Return value:**
@@ -314,7 +314,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: number, currentIndex: number, array: Int16Array) = & gt; U | Yes |  |
+| callbackfn | (previousValue: U, currentValue: number, currentIndex: number, array: Int16Array) =&gt; U | Yes |  |
 | initialValue | U | Yes |  |
 
 **Return value:**
@@ -345,7 +345,7 @@ Sets a value or an array of values.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; | Yes |  |
+| array | ArrayLike&lt;number&gt; | Yes |  |
 | offset | number | No |  |
 
 ## slice
@@ -379,7 +379,7 @@ Determines whether the specified callback function returns true for any element 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: number, index: number, array: Int16Array) = & gt; unknown | Yes |  |
+| predicate | (value: number, index: number, array: Int16Array) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -398,7 +398,7 @@ Sorts an array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compareFn | (a: number, b: number) = & gt; number | No |  |
+| compareFn | (a: number, b: number) =&gt; number | No |  |
 
 **Return value:**
 

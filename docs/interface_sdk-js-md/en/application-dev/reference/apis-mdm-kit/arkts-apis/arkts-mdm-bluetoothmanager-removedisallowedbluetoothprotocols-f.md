@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.MDMKit';
+import { bluetoothManager } from '@kit.MDMKit';
 ```
 
 ## removeDisallowedBluetoothProtocols
@@ -28,7 +28,7 @@ Removes disallowed Bluetooth protocols. After removing some protocols, the user 
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | accountId | number | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
-| protocols | Array & lt;Protocol & gt; | Yes | Bluetooth protocol array. |
+| protocols | Array&lt;Protocol&gt; | Yes | Bluetooth protocol array. |
 
 **Error codes:**
 
@@ -98,7 +98,7 @@ Removes Bluetooth protocols from the blocklist. After the setting, specified use
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | accountId | number | Yes | User ID, which must be greater than or equal to 0. You can call [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) of @ ohos.account.osAccount to obtain the ID. |
-| protocols | Array & lt;Protocol & gt; | Yes | Array of Bluetooth protocols to be removed from the blocklist. |
+| protocols | Array&lt;Protocol&gt; | Yes | Array of Bluetooth protocols to be removed from the blocklist. |
 | policy | [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md) | Yes | Transfer policy. |
 
 **Error codes:**

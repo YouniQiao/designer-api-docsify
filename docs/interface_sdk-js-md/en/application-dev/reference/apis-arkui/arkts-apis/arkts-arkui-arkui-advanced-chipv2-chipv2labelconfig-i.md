@@ -20,7 +20,7 @@ activatedFontColor?: ColorMetrics
 
 Text font color when chip is activated.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ fontColor?: ColorMetrics
 
 Text font color.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 26.0.0
 
@@ -74,7 +74,7 @@ fontSize?: LengthMetrics
 
 Text font size.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 26.0.0
 

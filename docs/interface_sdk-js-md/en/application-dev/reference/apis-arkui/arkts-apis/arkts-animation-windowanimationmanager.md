@@ -1,6 +1,8 @@
 # @ohos.animation.windowAnimationManager
 
-Window animation manager.@namespace windowAnimationManager
+Window animation manager.
+
+@namespace windowAnimationManager
 
 **Since:** 9
 
@@ -11,7 +13,7 @@ Window animation manager.@namespace windowAnimationManager
 ## Modules to Import
 
 ```TypeScript
-import windowAnimationManager from '@kit.ArkUI';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -31,8 +33,8 @@ import windowAnimationManager from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md) | Round rect.@interface RRect |
-| [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | Window animation controller.@interface WindowAnimationController |
-| [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Window animation finished callback.@interface WindowAnimationFinishedCallback |
-| [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Window animation target.@interface WindowAnimationTarget |
+| [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md) | Round rect. |
+| [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | Window animation controller. |
+| [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Window animation finished callback. |
+| [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | Window animation target. |
 <!--DelEnd-->

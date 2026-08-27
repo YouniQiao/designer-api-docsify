@@ -9,7 +9,7 @@ Defines the parameters for port data sending and receiving.
 ## Modules to Import
 
 ```TypeScript
-import dataTransfer from '@kit.ConnectivityKit';
+import { dataTransfer } from '@kit.ConnectivityKit';
 ```
 
 ## address

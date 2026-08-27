@@ -9,7 +9,7 @@ Describes the pre-downloaded resource information.
 ## Modules to Import
 
 ```TypeScript
-import cacheDownload from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## size

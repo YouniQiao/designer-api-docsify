@@ -26,7 +26,7 @@ Check whether the WLAN scan results match the WLAN BSSID list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wlanBssidArray | Array & lt;string & gt; | Yes | Indicates the list of WLAN BSSIDs that need to be matched. |
+| wlanBssidArray | Array&lt;string&gt; | Yes | Indicates the list of WLAN BSSIDs that need to be matched. |
 | rssiThreshold | number | Yes | Indicates the WLAN RSSI threshold, only matching WLAN BSSID with RSSI greater than this threshold. |
 | needStartScan | boolean | Yes | Indicate whether a WLAN scan needs to be initiated. |
 
@@ -34,7 +34,7 @@ Check whether the WLAN scan results match the WLAN BSSID list.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | The promise returned by the function. |
+| Promise&lt;boolean&gt; | The promise returned by the function. |
 
 **Error codes:**
 

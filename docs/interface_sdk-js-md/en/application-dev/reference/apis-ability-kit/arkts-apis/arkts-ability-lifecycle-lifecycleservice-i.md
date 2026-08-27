@@ -1,6 +1,8 @@
 # LifecycleService
 
-interface of service lifecycle.@interface LifecycleService
+interface of service lifecycle.
+
+@interface LifecycleService
 
 **Since:** 7
 

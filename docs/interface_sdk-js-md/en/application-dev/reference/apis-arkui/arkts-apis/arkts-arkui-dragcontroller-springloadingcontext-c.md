@@ -9,7 +9,7 @@ Defines callback context information passed to applications during hover detecti
 ## Modules to Import
 
 ```TypeScript
-import dragController from '@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## abort
@@ -48,7 +48,7 @@ Updates the hover detection configuration. This API is effective only when the h
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [DragSpringLoadingConfiguration](../arkts-components/arkts-arkui-dragspringloadingconfiguration-t.md) | Yes | New configuration for hover detection. |
+| config | DragSpringLoadingConfiguration | Yes | New configuration for hover detection. |
 
 ## currentConfig
 

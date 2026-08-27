@@ -9,7 +9,7 @@ Implements event listeners for print jobs.
 ## Modules to Import
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## off('block')

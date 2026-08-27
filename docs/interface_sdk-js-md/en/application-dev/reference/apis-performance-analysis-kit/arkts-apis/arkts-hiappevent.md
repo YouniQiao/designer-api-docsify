@@ -18,4 +18,4 @@ The **hiAppEvent** module provides the application event logging functions, such
 
 | Name | Description |
 | --- | --- |
-| [hiAppEvent(Application Event Logging)](arkts-performanceanalysis-hiappevent-depr-n.md) | The **hiAppEvent** module provides the application event logging functions, such as writing application events to the event file and managing the event logging configuration. |
+| [hiAppEvent](arkts-performanceanalysis-hiappevent-depr-n.md) | The **hiAppEvent** module provides the application event logging functions, such as writing application events to the event file and managing the event logging configuration. |

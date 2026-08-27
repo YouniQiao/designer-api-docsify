@@ -1,6 +1,6 @@
 # FoldSplitContainer
 
-FoldSplitContainer分栏布局，实现折叠屏二分栏、三分栏在展开态（设备完全展开状态）、悬停态（设备半折叠状态）以及折叠态（设备完全折叠状态）的区域控制。适用于折叠屏应用的响应式布局适配场景，可帮助开发者实现多屏状态下的智 能分栏布局，提升用户体验。折叠状态详情可参考[display.FoldStatus](arkts-arkui-display-foldstatus-e.md)。
+FoldSplitContainer分栏布局，实现折叠屏二分栏、三分栏在展开态（设备完全展开状态）、悬停态（设备半折叠状态）以及折叠态（设备完全折叠状态）的区域控制。适用于折叠屏应用的响应式布局适配场景，可帮助开发者实现多屏状态下的智能分栏布局，提升用户体验。折叠状态详情可参考[display.FoldStatus](arkts-arkui-display-foldstatus-e.md)。
 
 > **说明：**
 > 
@@ -41,7 +41,9 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 animationOptions?: AnimateParam | null
 ```
 
-设置动画效果相关的参数，null表示关闭动效。默认值：null
+设置动画效果相关的参数，null表示关闭动效。
+
+默认值：null
 
 **类型：** [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) \| null
 

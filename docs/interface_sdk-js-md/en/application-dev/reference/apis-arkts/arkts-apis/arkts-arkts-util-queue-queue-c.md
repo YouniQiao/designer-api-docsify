@@ -161,7 +161,7 @@ Uses a callback to traverse each element in the **Queue** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, Queue?: Queue & lt;T & gt;) = & gt; void | Yes | Callback invoked to traverse the elements in the Queue. |
+| callbackFn | (value: T, index?: number, Queue?: Queue&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the Queue. |
 | thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**

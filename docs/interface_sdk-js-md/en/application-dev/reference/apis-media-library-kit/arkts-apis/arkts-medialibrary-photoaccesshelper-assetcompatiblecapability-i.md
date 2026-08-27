@@ -9,7 +9,7 @@ Defines the asset compatibility capability.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## supportedHighResolution

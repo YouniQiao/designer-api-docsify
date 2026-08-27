@@ -11,7 +11,7 @@ Describes the parameters for requesting efficiency resources.
 ## Modules to Import
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## cpuLevel
@@ -38,7 +38,8 @@ CPU level. If **resourceTypes** is set to **CPU**, this parameter specifies the 
 isApply: boolean
 ```
 
-Whether the request is used to apply for resources.  
+Whether the request is used to apply for resources.
+
 - **true**: The request is used to apply for resources.  
 - **false**: The request is used to release resources.
 
@@ -56,7 +57,8 @@ Whether the request is used to apply for resources.
 isPersist?: boolean
 ```
 
-Whether the resource is permanently held. The default value is **false**.  
+Whether the resource is permanently held. The default value is **false**.
+
 - **true**: The resource is permanently held.  
 - **false**: The resource is held for a limited period of time.
 
@@ -74,7 +76,8 @@ Whether the resource is permanently held. The default value is **false**.
 isProcess?: boolean
 ```
 
-Whether the request is initiated by a process. The default value is **false**.  
+Whether the request is initiated by a process. The default value is **false**.
+
 - **true**: The request is initiated by a process.  
 - **false**: The request is initiated by an application.
 

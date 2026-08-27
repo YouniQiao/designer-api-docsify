@@ -1,6 +1,8 @@
 # AVRecorder
 
-AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-media-createavrecorder-f.md) to create an AVRecorder instance.For details about the audio and video recording demo, see [Audio Recording](../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../media/media/video-recording.md).
+AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-media-createavrecorder-f.md) to create an AVRecorder instance.
+
+For details about the audio and video recording demo, see [Audio Recording](../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../media/media/video-recording.md).
 
 > **NOTE：**
 > 
@@ -15,7 +17,7 @@ AVRecorder is a class for audio and video recording management. It provides APIs
 ## Modules to Import
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getInputMetaSurface
@@ -42,7 +44,7 @@ Get input meta surface for specified meta source type. it must be called between
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | A Promise instance used to return the input surface id in string. |
+| Promise&lt;string&gt; | A Promise instance used to return the input surface id in string. |
 
 **Error codes:**
 
@@ -60,7 +62,9 @@ Get input meta surface for specified meta source type. it must be called between
 isWatermarkSupported(): Promise<boolean>
 ```
 
-Checks whether the device supports the hardware digital watermark. This API uses a promise to return the result.This API can be called after the prepare(), start(), or paused() event is triggered.
+Checks whether the device supports the hardware digital watermark. This API uses a promise to return the result.
+
+This API can be called after the prepare(), start(), or paused() event is triggered.
 
 **Since:** 13
 
@@ -72,7 +76,7 @@ Checks whether the device supports the hardware digital watermark. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the check result. The value **true** means that the device supports the hardware digital watermark, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the check result. The value **true** means that the device supports the hardware digital watermark, and **false** means the opposite. |
 
 **Examples**
 
@@ -92,7 +96,9 @@ avRecorder.isWatermarkSupported().then((isWatermarkSupported: boolean) => {
 setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 ```
 
-Sets a watermark for the AVRecorder. This API uses a promise to return the result.This API can be called only after the prepare() event is triggered and before the start() event is triggered.
+Sets a watermark for the AVRecorder. This API uses a promise to return the result.
+
+This API can be called only after the prepare() event is triggered and before the start() event is triggered.
 
 **Since:** 13
 
@@ -111,7 +117,7 @@ Sets a watermark for the AVRecorder. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

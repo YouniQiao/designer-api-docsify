@@ -64,11 +64,14 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 | Name | Description |
 | --- | --- |
+| [ColumnOptions](arkts-arkui-columnoptions-i.md) | Sets the spacing between child components of the **Column** component. |
+| [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | Sets the spacing between child components of the **Column** component. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [SpaceType](arkts-arkui-spacetype-t.md) | Describes the supported data types for the **space** parameter in the constructors of the **Column** component. The type is a union of the following types. |
 
 ## Examples
 

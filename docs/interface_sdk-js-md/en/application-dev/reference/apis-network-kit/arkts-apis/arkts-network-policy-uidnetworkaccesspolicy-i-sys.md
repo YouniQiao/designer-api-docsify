@@ -11,7 +11,7 @@ Defines the network policy for an application with the specified UID.
 ## Modules to Import
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## [uid: string]

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import reminderAgentManager from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## deleteExcludeDates
@@ -28,7 +28,7 @@ Deletes all non-reminder dates for a recurring calendar reminder with a specific
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

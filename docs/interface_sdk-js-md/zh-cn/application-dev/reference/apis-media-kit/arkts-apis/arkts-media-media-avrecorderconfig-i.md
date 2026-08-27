@@ -1,6 +1,6 @@
 # AVRecorderConfig
 
-表示音视频录制的参数设置。通过audioSourceType和videoSourceType区分纯音频录制、纯视频录制或音视频录制。纯音频录制时，仅需要设置audioSourceType；纯视频录制时，仅需要设置videoSourceType； 音视频录制时，audioSourceType和videoSourceType均需要设置。
+表示音视频录制的参数设置。通过audioSourceType和videoSourceType区分纯音频录制、纯视频录制或音视频录制。纯音频录制时，仅需要设置audioSourceType；纯视频录制时，仅需要设置videoSourceType；音视频录制时，audioSourceType和videoSourceType均需要设置。
 
 **起始版本：** 9
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## audioSourceType
@@ -67,7 +67,7 @@ location?: Location
 maxDuration?: number
 ```
 
-设置录制的最大时长，单位为秒，有效值取值范围[1, 2^31-1]，无效输入会重置为最大值。 录制到达设定时长后，录制会自动停止，并通过stateChange回调录制状态，[AVRecorderState](arkts-media-media-avrecorderstate-t.md) = 'stopped'， [StateChangeReason](arkts-media-media-statechangereason-e.md) = BACKGROUND。
+设置录制的最大时长，单位为秒，有效值取值范围[1, 2^31-1]，无效输入会重置为最大值。录制到达设定时长后，录制会自动停止，并通过stateChange回调录制状态，[AVRecorderState](arkts-media-media-avrecorderstate-t.md) = 'stopped'，[StateChangeReason](arkts-media-media-statechangereason-e.md) = BACKGROUND。
 
 **类型：** number
 

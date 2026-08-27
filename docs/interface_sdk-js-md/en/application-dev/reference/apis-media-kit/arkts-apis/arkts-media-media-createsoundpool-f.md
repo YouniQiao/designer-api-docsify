@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createSoundPool
@@ -98,7 +98,7 @@ Creates a SoundPool instance. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;SoundPool & gt; | Promise used to return the result. If the operation is successful, a SoundPool instance is returned; otherwise, **null** is returned. The instance is used for loading and playback. |
+| Promise&lt;SoundPool&gt; | Promise used to return the result. If the operation is successful, a SoundPool instance is returned; otherwise, **null** is returned. The instance is used for loading and playback. |
 
 **Error codes:**
 

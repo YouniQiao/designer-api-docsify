@@ -1,6 +1,6 @@
 # AudioCapturer
 
-提供音频采集的相关接口。在使用AudioCapturer的接口之前，需先通过 [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) 获取AudioCapturer实例。
+提供音频采集的相关接口。在使用AudioCapturer的接口之前，需先通过[createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md)获取AudioCapturer实例。
 
 **起始版本：** 8
 
@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## getAudioStreamId
@@ -65,7 +64,7 @@ getAudioStreamId(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回音频流id。 |
+| Promise&lt;number&gt; | Promise对象，返回音频流id。 |
 
 **示例**
 
@@ -185,7 +184,7 @@ getAudioTime(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回时间戳（从1970年1月1日开始）。 |
+| Promise&lt;number&gt; | Promise对象，返回时间戳（从1970年1月1日开始）。 |
 
 **示例**
 
@@ -215,7 +214,7 @@ audioRenderer.getAudioTime().then((timestamp: number) => {
 getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 ```
 
-获取输入音频流时间戳和当前数据帧位置信息。 该接口可以获取到音频通道实际录制位置（framePos）以及录制到该位置时候的时间戳（timestamp），时间戳单位为纳秒。
+获取输入音频流时间戳和当前数据帧位置信息。该接口可以获取到音频通道实际录制位置（framePos）以及录制到该位置时候的时间戳（timestamp），时间戳单位为纳秒。
 
 **起始版本：** 19
 
@@ -365,7 +364,7 @@ getBufferSize(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取采集器合理的最小缓冲区大小成功，err为undefined，data为获取到的采集器合理的最小缓冲区大小；否则为错误对象。单位为字节 。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取采集器合理的最小缓冲区大小成功，err为undefined，data为获取到的采集器合理的最小缓冲区大小；否则为错误对象。单位为字节。 |
 
 **示例**
 
@@ -412,7 +411,7 @@ getBufferSize(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回缓冲区大小。 |
+| Promise&lt;number&gt; | Promise对象，返回缓冲区大小。 |
 
 **示例**
 
@@ -668,7 +667,7 @@ if (deviceDescriptors[0].encodingTypes) {
 getNoiseReductionMode(): NoiseReductionMode
 ```
 
-获取当前录音流的降噪模式。返回结果仅反映当前录音流的降噪模式。默认值为 [NoiseReductionMode.FIDELITY](arkts-audio-audio-noisereductionmode-e.md)。
+获取当前录音流的降噪模式。返回结果仅反映当前录音流的降噪模式。默认值为[NoiseReductionMode.FIDELITY](arkts-audio-audio-noisereductionmode-e.md)。
 
 **起始版本：** 26.0.0
 
@@ -705,7 +704,7 @@ getOverflowCount(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回音频流的过载音频帧数量。 |
+| Promise&lt;number&gt; | Promise对象，返回音频流的过载音频帧数量。 |
 
 **示例**
 
@@ -922,7 +921,7 @@ getSupportedNoiseReductionModes(): Array<NoiseReductionMode>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md)&gt; | 支持的录音降噪模式数组，默认支持 [NoiseReductionMode.FIDELITY]{ |
+| Array&lt;[NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md)&gt; | 支持的录音降噪模式数组，默认支持[NoiseReductionMode.FIDELITY]{ |
 
 **错误码：**
 
@@ -1116,7 +1115,7 @@ off(type: 'readData', callback?: Callback<ArrayBuffer>): void
 on(type: 'markReach', frame: number, callback: Callback<number>): void
 ```
 
-监听标记到达事件（当采集的帧数达到frame参数的值时触发，仅调用一次）。使用callback异步回调。 如果将frame设置为100，当采集帧数到达第100帧时，系统将上报信息。
+监听标记到达事件（当采集的帧数达到frame参数的值时触发，仅调用一次）。使用callback异步回调。如果将frame设置为100，当采集帧数到达第100帧时，系统将上报信息。
 
 **起始版本：** 8
 
@@ -1136,7 +1135,7 @@ on(type: 'markReach', frame: number, callback: Callback<number>): void
 on(type: 'periodReach', frame: number, callback: Callback<number>): void
 ```
 
-监听标记到达事件（当采集的帧数达到frame参数的值时触发，即按周期上报信息）。使用callback异步回调。 如果将frame设置为10，每采集10帧数据均会上报信息（例如：第10帧、第20帧、第30帧......）。
+监听标记到达事件（当采集的帧数达到frame参数的值时触发，即按周期上报信息）。使用callback异步回调。如果将frame设置为10，每采集10帧数据均会上报信息（例如：第10帧、第20帧、第30帧......）。
 
 **起始版本：** 8
 
@@ -1175,7 +1174,7 @@ on(type: 'stateChange', callback: Callback<AudioState>): void
 on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 ```
 
-监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。 AudioCapturer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。 调用此方法后，如果AudioCapturer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到 [InterruptEvent](arkts-audio-audio-interruptevent-i.md)。建议应用根据InterruptEvent的信息进行进一步处理。更多信息请参阅音频焦点介绍文档。
+监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。AudioCapturer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。调用此方法后，如果AudioCapturer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)。建议应用根据InterruptEvent的信息进行进一步处理。更多信息请参阅音频焦点介绍文档。
 
 **起始版本：** 10
 
@@ -1253,7 +1252,7 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): vo
 on(type: 'readData', callback: Callback<ArrayBuffer>): void
 ```
 
-监听音频数据读取回调事件（当需要读取音频流数据时触发）。使用callback异步回调。 回调函数仅用来读取音频数据，请勿在回调函数中调用AudioCapturer相关接口。 为了消除麦克风硬件设计带来的上电杂音，通常会对录音启动后的前100ms数据进行静音。
+监听音频数据读取回调事件（当需要读取音频流数据时触发）。使用callback异步回调。回调函数仅用来读取音频数据，请勿在回调函数中调用AudioCapturer相关接口。为了消除麦克风硬件设计带来的上电杂音，通常会对录音启动后的前100ms数据进行静音。
 
 **起始版本：** 11
 
@@ -1351,7 +1350,7 @@ read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象，返回读取的缓冲区数据。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回读取的缓冲区数据。 |
 
 **示例**
 
@@ -1443,7 +1442,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
 
@@ -1483,7 +1482,7 @@ audioRenderer.release().then(() => {
 requestPlaybackCaptureStart(callback: Callback<PlaybackCaptureStartState>): void
 ```
 
-请求启动内录流接口，内录流只能通过该接口触发启动。使用callback异步回调。 内录是指以系统内部音频数据作为音频源的输入类型，简称为内录，对应的流称为内录流。常用于录制目标设备应用发送到系统以供播放的音频。 该接口为非阻塞接口，系统接收到内录启动请求后，会继续处理用户授权检查和内录流启动，最终结果通过回调函数返回。
+请求启动内录流接口，内录流只能通过该接口触发启动。使用callback异步回调。内录是指以系统内部音频数据作为音频源的输入类型，简称为内录，对应的流称为内录流。常用于录制目标设备应用发送到系统以供播放的音频。该接口为非阻塞接口，系统接收到内录启动请求后，会继续处理用户授权检查和内录流启动，最终结果通过回调函数返回。
 
 **起始版本：** 26.0.0
 
@@ -1533,7 +1532,7 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strategy | [AudioSessionStrategy](arkts-audio-audio-audiosessionstrategy-i.md) | 是 | 音频会话策略。 |
-| behavior | number | 是 | 用于设置音频会话行为。该参数可以是单个标志，也可以是多个标志的按位OR组合。当前支持的音频会话行为详见 [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)中定义的标志。 |
+| behavior | number | 是 | 用于设置音频会话行为。该参数可以是单个标志，也可以是多个标志的按位OR组合。当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md)中定义的标志。 |
 
 **错误码：**
 
@@ -1594,7 +1593,7 @@ setMuteHint(mute: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1620,7 +1619,7 @@ audioCapturer.setMuteHint(true).then(() => {
 setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void
 ```
 
-设置当前录音流的降噪模式。建议先调用[getSupportedNoiseReductionModes](#getsupportednoisereductionmodes)获取当 前录音流支持的降噪模式后，再通过本接口进行设置。
+设置当前录音流的降噪模式。建议先调用[getSupportedNoiseReductionModes](#getsupportednoisereductionmodes)获取当前录音流支持的降噪模式后，再通过本接口进行设置。
 
 > **说明：**
 > 
@@ -1693,7 +1692,7 @@ setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1729,7 +1728,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动音频采集器成功，err为undefined，否则为错误对象。异常将返回error对象：错误码6800301：表示包含状态检查异常、焦 点抢占失败、系统处理异常（具体错误查看系统日志）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动音频采集器成功，err为undefined，否则为错误对象。异常将返回error对象：错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
 
 **示例**
 
@@ -1786,7 +1785,7 @@ start(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，成功表示启动音频采集器成功。异常将返回error对象： |
+| Promise&lt;void&gt; | Promise对象，成功表示启动音频采集器成功。异常将返回error对象： |
 
 **示例**
 
@@ -1894,7 +1893,7 @@ stop(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
 

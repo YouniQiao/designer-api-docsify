@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import featureAbility from '@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## startAbilityForResult
@@ -12,7 +12,8 @@ import featureAbility from '@kit.AbilityKit';
 function startAbilityForResult(parameter: StartAbilityParameter, callback: AsyncCallback<AbilityResult>): void
 ```
 
-Starts an ability. This API uses an asynchronous callback to return the result. The following situations may be possible for a started ability:  
+Starts an ability. This API uses an asynchronous callback to return the result. The following situations may be possible for a started ability:
+
 - Normally, you can call  
 [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md) to terminate the ability. The result is returned to the caller.  
 - If an exception occurs, for example, the ability is killed, an exception message, in which **resultCode** is  
@@ -75,7 +76,8 @@ featureAbility.startAbilityForResult(
 function startAbilityForResult(parameter: StartAbilityParameter): Promise<AbilityResult>
 ```
 
-Starts an ability. This API uses a promise to return the result. The following situations may be possible for a started ability:  
+Starts an ability. This API uses a promise to return the result. The following situations may be possible for a started ability:
+
 - Normally, you can call  
 [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md) to terminate the ability. The result is returned to the caller.  
 - If an exception occurs, for example, the ability is killed, an exception message, in which **resultCode** is  

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import componentSnapshot from '@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## get
@@ -132,7 +132,7 @@ function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | 截图返回的结果。 |
+| Promise&lt;image.PixelMap&gt; | 截图返回的结果。 |
 
 **错误码：**
 

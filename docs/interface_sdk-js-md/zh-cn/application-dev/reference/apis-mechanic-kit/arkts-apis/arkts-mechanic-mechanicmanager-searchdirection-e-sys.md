@@ -1,6 +1,8 @@
 # SearchDirection（系统接口）
 
-Search direction.@enum { number }
+Search direction.
+
+@enum { number }
 
 **起始版本：** 21
 

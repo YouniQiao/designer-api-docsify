@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import accountManager from '@kit.MDMKit';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## createNormalOsAccount
@@ -41,7 +41,7 @@ Creates a normal system account. A maximum of two normal system accounts ([osAcc
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;osAccount.OsAccountInfo & gt; | Promise used to return the information about the created system account. |
+| Promise&lt;osAccount.OsAccountInfo&gt; | Promise used to return the information about the created system account. |
 
 **Error codes:**
 

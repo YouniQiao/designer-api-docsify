@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import config from '@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## setSeniorModeStateForApp
@@ -34,7 +34,7 @@ Sets the senior mode state for an app. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

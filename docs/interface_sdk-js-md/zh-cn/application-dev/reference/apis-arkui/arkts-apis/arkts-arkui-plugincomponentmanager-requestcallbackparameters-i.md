@@ -9,7 +9,7 @@ pluginComponentManager.request方法接收到的回调结果。
 ## 导入模块
 
 ```TypeScript
-import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
+import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## componentTemplate

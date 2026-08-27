@@ -27,7 +27,7 @@ function off(type: 'locationChange', callback?: Callback<Location>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'locationChange' | 是 | 设置事件类型。type为“locationChange”，表示位置变化。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | 否 | 需要取消订阅的回调函数。该回调函数需要与on接口传入的回调函数保持一致，否则会取消订阅失败且不会返回任何错误码。若无此参数，则取消当前类型的所有 订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | 否 | 需要取消订阅的回调函数。该回调函数需要与on接口传入的回调函数保持一致，否则会取消订阅失败且不会返回任何错误码。若无此参数，则取消当前类型的所有订阅。 |
 
 **错误码：**
 
@@ -101,7 +101,7 @@ function off(type: 'locationError', callback?: Callback<LocationError>): void
 import { geoLocationManager } from '@kit.LocationKit';
 
 let locationErrorChange = (errcode: geoLocationManager.LocationError): void => {
-  console.info('locationErrorChange: data: ' + JSON.stringify(errcode));
+  console.error('locationErrorChange: data: ' + JSON.stringify(errcode));
 };
 try {
   geoLocationManager.on('locationError', locationErrorChange);
@@ -129,7 +129,7 @@ function off(type: 'locationEnabledChange', callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'locationEnabledChange' | 是 | 设置事件类型。type为“locationEnabledChange”，表示位置服务状态。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 需要取消订阅的回调函数。返回true表示位置信息开关已经开启；返回false表示位置信息开关已经关闭。该回调函数需要与on接口传入的回调函数保持一 致。若无此参数，则取消当前类型的所有订阅。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 需要取消订阅的回调函数。返回true表示位置信息开关已经开启；返回false表示位置信息开关已经关闭。该回调函数需要与on接口传入的回调函数保持一致。若无此参数，则取消当前类型的所有订阅。 |
 
 **错误码：**
 
@@ -162,7 +162,7 @@ try {
 function off(type: 'cachedGnssLocationsChange', callback?: Callback<Array<Location>>): void
 ```
 
-取消订阅缓存GNSS定位结果上报事件。该接口功能由GNSS定位芯片提供（仅部分型号支持），如果设备无此芯片或使用的芯片型号不支持该功能，则返回错误码801（Capability not supported）。调用该接口前建议先通过 [geoLocationManager.isCachedGnssServiceSupported](arkts-location-geolocationmanager-iscachedgnssservicesupported-f.md)接口判断对应能力是否支持。
+取消订阅缓存GNSS定位结果上报事件。该接口功能由GNSS定位芯片提供（仅部分型号支持），如果设备无此芯片或使用的芯片型号不支持该功能，则返回错误码801（Capability not supported）。调用该接口前建议先通过[geoLocationManager.isCachedGnssServiceSupported](arkts-location-geolocationmanager-iscachedgnssservicesupported-f.md)接口判断对应能力是否支持。
 
 **起始版本：** 9
 
@@ -217,7 +217,7 @@ try {
 function off(type: 'satelliteStatusChange', callback?: Callback<SatelliteStatusInfo>): void
 ```
 
-取消订阅GNSS卫星状态信息上报事件。调用该接口前建议先通过 [geoLocationManager.isGnssServiceSupported](arkts-location-geolocationmanager-isgnssservicesupported-f.md)接口判断对应能力是否支持。
+取消订阅GNSS卫星状态信息上报事件。调用该接口前建议先通过[geoLocationManager.isGnssServiceSupported](arkts-location-geolocationmanager-isgnssservicesupported-f.md)接口判断对应能力是否支持。
 
 **起始版本：** 9
 
@@ -267,7 +267,7 @@ try {
 function off(type: 'nmeaMessage', callback?: Callback<string>): void
 ```
 
-取消订阅GNSS NMEA信息上报事件。调用该接口前建议先通过 [geoLocationManager.isGnssServiceSupported](arkts-location-geolocationmanager-isgnssservicesupported-f.md)接口判断对应能力是否支持。
+取消订阅GNSS NMEA信息上报事件。调用该接口前建议先通过[geoLocationManager.isGnssServiceSupported](arkts-location-geolocationmanager-isgnssservicesupported-f.md)接口判断对应能力是否支持。
 
 **起始版本：** 9
 
@@ -318,7 +318,7 @@ try {
 function off(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: WantAgent): void
 ```
 
-删除一个围栏，并取消订阅该围栏事件。该接口功能由GNSS定位芯片提供（仅部分型号支持），如果设备无此芯片或使用的芯片型号不支持该功能，则返回错误码801（Capability not supported）。调用该接口前建议先通过 [geoLocationManager.isGnssFenceServiceSupported](arkts-location-geolocationmanager-isgnssfenceservicesupported-f.md)接口判断对应能力是否支持。
+删除一个围栏，并取消订阅该围栏事件。该接口功能由GNSS定位芯片提供（仅部分型号支持），如果设备无此芯片或使用的芯片型号不支持该功能，则返回错误码801（Capability not supported）。调用该接口前建议先通过[geoLocationManager.isGnssFenceServiceSupported](arkts-location-geolocationmanager-isgnssfenceservicesupported-f.md)接口判断对应能力是否支持。
 
 **起始版本：** 9
 
@@ -332,7 +332,7 @@ function off(type: 'gnssFenceStatusChange', request: GeofenceRequest, want: Want
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'gnssFenceStatusChange' | 是 | 设置事件类型。type为“gnssFenceStatusChange”，表示订阅围栏事件上报。 |
-| request | [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md) | 是 | 围栏的配置参数。 |
+| request | GeofenceRequest | 是 | 围栏的配置参数。 |
 | want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | 是 | 用于接收地理围栏事件上报（进出围栏）。 |
 
 **错误码：**

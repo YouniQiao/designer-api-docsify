@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## createGlobalAudioLoopback
@@ -34,7 +33,7 @@ Creates a global audio loopback instance, which provides low-latency in-ear moni
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) \| null & gt; | Promise used to return the audio loopback instance, or null when an error happens. |
+| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) \| null&gt; | Promise used to return the audio loopback instance, or null when an error happens. |
 
 **Error codes:**
 

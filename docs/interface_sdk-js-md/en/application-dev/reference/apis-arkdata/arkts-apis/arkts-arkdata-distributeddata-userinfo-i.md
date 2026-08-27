@@ -11,7 +11,6 @@ Defines user information.
 ## Modules to Import
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## userId

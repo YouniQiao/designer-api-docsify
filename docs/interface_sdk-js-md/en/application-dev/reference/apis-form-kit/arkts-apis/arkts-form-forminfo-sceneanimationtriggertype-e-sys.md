@@ -1,6 +1,8 @@
 # SceneAnimationTriggerType (System API)
 
-The trigger type of the scene animation.@enum { number }
+The trigger type of the scene animation.
+
+@enum { number }
 
 **Since:** 26.0.0
 

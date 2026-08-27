@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-mdmkit-->
 
-- [@ohos.enterprise.accountManager](arkts-enterprise-accountmanager.md)
+- [@ohos.enterprise.accountManager(Account Management)](arkts-enterprise-accountmanager.md)
   - [activateOsAccount](arkts-mdm-accountmanager-activateosaccount-f.md)
   <!--Del-->
   - [addOsAccount(system api)](arkts-mdm-accountmanager-addosaccount-f-sys.md)<!--DelEnd-->
@@ -18,7 +18,7 @@
   - [removeOsAccount](arkts-mdm-accountmanager-removeosaccount-f.md)
   - [setDomainAccountPolicy](arkts-mdm-accountmanager-setdomainaccountpolicy-f.md)
   - [DomainAccountPolicy](arkts-mdm-accountmanager-domainaccountpolicy-i.md)
-- [@ohos.enterprise.adminManager](arkts-enterprise-adminmanager.md)
+- [@ohos.enterprise.adminManager(Administrator Permission Management)](arkts-enterprise-adminmanager.md)
   <!--Del-->
   - [authorizeAdmin(system api)](arkts-mdm-adminmanager-authorizeadmin-f-sys.md)<!--DelEnd-->
   - [disableAdmin](arkts-mdm-adminmanager-disableadmin-f.md)
@@ -71,7 +71,7 @@
   - [Policy](arkts-mdm-adminmanager-policy-e.md)
   <!--Del-->
   - [RunningMode(system api)](arkts-mdm-adminmanager-runningmode-e-sys.md)<!--DelEnd-->
-- [@ohos.enterprise.applicationManager](arkts-enterprise-applicationmanager.md)
+- [@ohos.enterprise.applicationManager(Application Management)](arkts-enterprise-applicationmanager.md)
   - [addAllowedDistributeAbilityConnBundles](arkts-mdm-applicationmanager-addalloweddistributeabilityconnbundles-f.md)
   - [addAllowedNotificationBundles](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md)
   - [addAllowedRunningBundles](arkts-mdm-applicationmanager-addallowedrunningbundles-f.md)
@@ -126,7 +126,7 @@
   - [KioskFeature](arkts-mdm-applicationmanager-kioskfeature-e.md)
   - [ServiceType](arkts-mdm-applicationmanager-servicetype-e.md)
   - [WindowState](arkts-mdm-applicationmanager-windowstate-e.md)
-- [@ohos.enterprise.bluetoothManager](arkts-enterprise-bluetoothmanager.md)
+- [@ohos.enterprise.bluetoothManager(Bluetooth Management)](arkts-enterprise-bluetoothmanager.md)
   - [addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md)
   - [addDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-adddisallowedbluetoothdevices-f.md)
   - [addDisallowedBluetoothProtocols](arkts-mdm-bluetoothmanager-adddisallowedbluetoothprotocols-f.md)
@@ -146,7 +146,7 @@
   - [BluetoothInfo](arkts-mdm-bluetoothmanager-bluetoothinfo-i.md)
   - [Protocol](arkts-mdm-bluetoothmanager-protocol-e.md)
   - [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md)
-- [@ohos.enterprise.browser](arkts-enterprise-browser.md)
+- [@ohos.enterprise.browser(Browser Management)](arkts-enterprise-browser.md)
   - [getManagedBrowserPolicy](arkts-mdm-browser-getmanagedbrowserpolicy-f.md)
   <!--Del-->
   - [getPolicies(system api)](arkts-mdm-browser-getpolicies-f-sys.md)<!--DelEnd-->
@@ -157,7 +157,7 @@
   <!--Del-->
   - [setPolicies(system api)](arkts-mdm-browser-setpolicies-f-sys.md)<!--DelEnd-->
   - [setPolicySync](arkts-mdm-browser-setpolicysync-f.md)
-- [@ohos.enterprise.bundleManager](arkts-enterprise-bundlemanager.md)
+- [@ohos.enterprise.bundleManager(Bundle Management)](arkts-enterprise-bundlemanager.md)
   <!--Del-->
   - [addAllowedInstallBundles(system api)](arkts-mdm-bundlemanager-addallowedinstallbundles-f-sys.md)<!--DelEnd-->
   - [addAllowedInstallBundlesSync](arkts-mdm-bundlemanager-addallowedinstallbundlessync-f.md)
@@ -206,7 +206,7 @@
   - [SignatureInfo](arkts-mdm-bundlemanager-signatureinfo-i.md)
   - [AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md)
   - [BundleInfoGetFlag](arkts-mdm-bundlemanager-bundleinfogetflag-e.md)
-- [@ohos.enterprise.common](arkts-enterprise-common.md)
+- [@ohos.enterprise.common(Common Module)](arkts-enterprise-common.md)
   - [ApplicationInstance](arkts-mdm-common-applicationinstance-i.md)
   - [InstallationResult](arkts-mdm-common-installationresult-i.md)
   - [PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md)
@@ -215,14 +215,14 @@
   - [Result](arkts-mdm-common-result-e.md)
   - [StartupScene](arkts-mdm-common-startupscene-e.md)
 <!--Del-->
-- [@ohos.enterprise.dateTimeManager](arkts-enterprise-datetimemanager.md)<!--DelEnd-->
+- [@ohos.enterprise.dateTimeManager(System Time Management)](arkts-enterprise-datetimemanager.md)<!--DelEnd-->
   <!--Del-->
   - [disallowModifyDateTime(system api)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [isModifyDateTimeDisallowed(system api)](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setDateTime(system api)](arkts-mdm-datetimemanager-setdatetime-f-sys.md)<!--DelEnd-->
-- [@ohos.enterprise.deviceControl](arkts-enterprise-devicecontrol.md)
+- [@ohos.enterprise.deviceControl(Device Control Management)](arkts-enterprise-devicecontrol.md)
   <!--Del-->
   - [lockScreen(system api)](arkts-mdm-devicecontrol-lockscreen-f-sys.md)<!--DelEnd-->
   - [operateDevice](arkts-mdm-devicecontrol-operatedevice-f.md)
@@ -233,7 +233,7 @@
   <!--Del-->
   - [shutdown(system api)](arkts-mdm-devicecontrol-shutdown-f-sys.md)<!--DelEnd-->
   - [Operation](arkts-mdm-devicecontrol-operation-e.md)
-- [@ohos.enterprise.deviceInfo](arkts-enterprise-deviceinfo.md)
+- [@ohos.enterprise.deviceInfo(Device Information Management)](arkts-enterprise-deviceinfo.md)
   - [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md)
   <!--Del-->
   - [getDeviceName(system api)](arkts-mdm-deviceinfo-getdevicename-f-sys.md)<!--DelEnd-->
@@ -241,7 +241,7 @@
   - [getDeviceSerial(system api)](arkts-mdm-deviceinfo-getdeviceserial-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getDisplayVersion(system api)](arkts-mdm-deviceinfo-getdisplayversion-f-sys.md)<!--DelEnd-->
-- [@ohos.enterprise.deviceSettings](arkts-enterprise-devicesettings.md)
+- [@ohos.enterprise.deviceSettings(Device Settings Management)](arkts-enterprise-devicesettings.md)
   - [addHiddenSettingsMenu](arkts-mdm-devicesettings-addhiddensettingsmenu-f.md)
   - [getHiddenSettingsMenu](arkts-mdm-devicesettings-gethiddensettingsmenu-f.md)
   <!--Del-->
@@ -276,13 +276,13 @@
   - [SettingsMenu](arkts-mdm-devicesettings-settingsmenu-e.md)
   - [SwitchKey](arkts-mdm-devicesettings-switchkey-e.md)
   - [SwitchStatus](arkts-mdm-devicesettings-switchstatus-e.md)
-- [@ohos.enterprise.EnterpriseAdminExtensionAbility](arkts-enterprise-enterpriseadminextensionability.md)
+- [@ohos.enterprise.EnterpriseAdminExtensionAbility(EnterpriseAdminExtensionAbility)](arkts-enterprise-enterpriseadminextensionability.md)
   - [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)
-- [@ohos.enterprise.locationManager](arkts-enterprise-locationmanager.md)
+- [@ohos.enterprise.locationManager(Location Service Management)](arkts-enterprise-locationmanager.md)
   - [getLocationPolicy](arkts-mdm-locationmanager-getlocationpolicy-f.md)
   - [setLocationPolicy](arkts-mdm-locationmanager-setlocationpolicy-f.md)
   - [LocationPolicy](arkts-mdm-locationmanager-locationpolicy-e.md)
-- [@ohos.enterprise.networkManager](arkts-enterprise-networkmanager.md)
+- [@ohos.enterprise.networkManager(Network Management)](arkts-enterprise-networkmanager.md)
   - [addApn](arkts-mdm-networkmanager-addapn-f.md)
   - [addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md)
   - [addFirewallRule](arkts-mdm-networkmanager-addfirewallrule-f.md)
@@ -340,7 +340,7 @@
   - [IpSetMode](arkts-mdm-networkmanager-ipsetmode-e.md)
   - [LogType](arkts-mdm-networkmanager-logtype-e.md)
   - [Protocol](arkts-mdm-networkmanager-protocol-e.md)
-- [@ohos.enterprise.restrictions](arkts-enterprise-restrictions.md)
+- [@ohos.enterprise.restrictions(Restrictions)](arkts-enterprise-restrictions.md)
   - [addDisallowedListForAccount](arkts-mdm-restrictions-adddisallowedlistforaccount-f.md)
   <!--Del-->
   - [disableMicrophone(system api)](arkts-mdm-restrictions-disablemicrophone-f-sys.md)<!--DelEnd-->
@@ -372,7 +372,7 @@
   - [FeatureForDevice](arkts-mdm-restrictions-featurefordevice-e.md)
   - [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md)
   - [SettingsForDevice](arkts-mdm-restrictions-settingsfordevice-e.md)
-- [@ohos.enterprise.securityManager](arkts-enterprise-securitymanager.md)
+- [@ohos.enterprise.securityManager(Security Management)](arkts-enterprise-securitymanager.md)
   - [addAllowedPermissionBundle](arkts-mdm-securitymanager-addallowedpermissionbundle-f.md)
   - [cancelScreenWatermarkImage](arkts-mdm-securitymanager-cancelscreenwatermarkimage-f.md)
   - [cancelWatermarkImage](arkts-mdm-securitymanager-cancelwatermarkimage-f.md)
@@ -414,7 +414,7 @@
   - [ClipboardPolicy](arkts-mdm-securitymanager-clipboardpolicy-e.md)
   - [PasswordAlgs](arkts-mdm-securitymanager-passwordalgs-e.md)
   - [PermissionManagedState](arkts-mdm-securitymanager-permissionmanagedstate-e.md)
-- [@ohos.enterprise.systemManager](arkts-enterprise-systemmanager.md)
+- [@ohos.enterprise.systemManager(System Management)](arkts-enterprise-systemmanager.md)
   - [addDisallowedNearLinkProtocols](arkts-mdm-systemmanager-adddisallowednearlinkprotocols-f.md)
   - [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md)
   - [finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md)
@@ -460,7 +460,7 @@
   - [PackageType](arkts-mdm-systemmanager-packagetype-e.md)
   - [PolicyType](arkts-mdm-systemmanager-policytype-e.md)
   - [UpdateStatus](arkts-mdm-systemmanager-updatestatus-e.md)
-- [@ohos.enterprise.telephonyManager](arkts-enterprise-telephonymanager.md)
+- [@ohos.enterprise.telephonyManager(Telephony Management)](arkts-enterprise-telephonymanager.md)
   - [activeSim](arkts-mdm-telephonymanager-activesim-f.md)
   - [addIncomingCallPolicyNumbers](arkts-mdm-telephonymanager-addincomingcallpolicynumbers-f.md)
   - [addOutgoingCallPolicyNumbers](arkts-mdm-telephonymanager-addoutgoingcallpolicynumbers-f.md)
@@ -475,7 +475,7 @@
   - [setDefaultData](arkts-mdm-telephonymanager-setdefaultdata-f.md)
   - [setSimDisabled](arkts-mdm-telephonymanager-setsimdisabled-f.md)
   - [setSimEnabled](arkts-mdm-telephonymanager-setsimenabled-f.md)
-- [@ohos.enterprise.usbManager](arkts-enterprise-usbmanager.md)
+- [@ohos.enterprise.usbManager(USB Management)](arkts-enterprise-usbmanager.md)
   - [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md)
   - [addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md)
   - [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md)
@@ -498,7 +498,7 @@
   - [UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md)
   - [Descriptor](arkts-mdm-usbmanager-descriptor-e.md)
   - [UsbPolicy](arkts-mdm-usbmanager-usbpolicy-e.md)
-- [@ohos.enterprise.wifiManager](arkts-enterprise-wifimanager.md)
+- [@ohos.enterprise.wifiManager(Wi-Fi Management)](arkts-enterprise-wifimanager.md)
   - [addAllowedWifiList](arkts-mdm-wifimanager-addallowedwifilist-f.md)
   - [addDisallowedWifiList](arkts-mdm-wifimanager-adddisallowedwifilist-f.md)
   - [getAllowedWifiList](arkts-mdm-wifimanager-getallowedwifilist-f.md)

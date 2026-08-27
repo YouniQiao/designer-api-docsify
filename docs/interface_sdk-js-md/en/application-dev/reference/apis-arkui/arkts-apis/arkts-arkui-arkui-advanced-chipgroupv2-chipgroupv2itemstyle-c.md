@@ -42,7 +42,7 @@ public backgroundColor?: ColorMetrics
 
 ChipV2 item background color.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 26.0.0
 
@@ -78,7 +78,7 @@ public fontColor?: ColorMetrics
 
 Text font color.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 26.0.0
 
@@ -96,7 +96,7 @@ public selectedBackgroundColor?: ColorMetrics
 
 Selected chip item background color.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 26.0.0
 
@@ -132,7 +132,7 @@ public selectedFontColor?: ColorMetrics
 
 Selected Text font color.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 26.0.0
 
@@ -150,7 +150,7 @@ public size?: ChipV2Size | SizeT<LengthMetrics>
 
 ChipV2 size.
 
-**Type:** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;LengthMetrics&gt;
+**Type:** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt;
 
 **Since:** 26.0.0
 

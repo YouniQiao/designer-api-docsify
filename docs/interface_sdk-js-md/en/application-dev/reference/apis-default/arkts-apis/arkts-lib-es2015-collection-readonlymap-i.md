@@ -15,7 +15,7 @@ forEach(callbackfn: (value: V, key: K, map: ReadonlyMap<K, V>) => void, thisArg?
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (value: V, key: K, map: ReadonlyMap & lt;K, V & gt;) = & gt; void | Yes |  |
+| callbackfn | (value: V, key: K, map: ReadonlyMap&lt;K, V&gt;) =&gt; void | Yes |  |
 | thisArg | any | No |  |
 
 ## get

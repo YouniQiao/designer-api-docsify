@@ -24,7 +24,13 @@
 curve?: Curve | string | ICurve
 ```
 
-动画曲线。推荐以Curve或ICurve形式指定。当类型为string时，为动画插值曲线，取值参考 [AnimateParam](arkts-arkui-animateparam-i.md)的curve参数。默认值：Curve.Linear
+动画曲线。
+
+推荐以Curve或ICurve形式指定。
+
+当类型为string时，为动画插值曲线，取值参考[AnimateParam](arkts-arkui-animateparam-i.md)的curve参数。
+
+默认值：Curve.Linear
 
 **类型：** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
@@ -42,7 +48,13 @@ curve?: Curve | string | ICurve
 delay?: number
 ```
 
-延迟播放时间。取值范围：[0, +∞)默认值：0单位：毫秒
+延迟播放时间。
+
+取值范围：[0, +∞)
+
+默认值：0
+
+单位：毫秒
 
 **类型：** number
 
@@ -60,7 +72,13 @@ delay?: number
 duration?: number
 ```
 
-描述共享元素转场动效播放时长。默认值：1000单位：毫秒取值范围：[0, +∞)
+描述共享元素转场动效播放时长。
+
+默认值：1000
+
+单位：毫秒
+
+取值范围：[0, +∞)
 
 **类型：** number
 
@@ -94,7 +112,9 @@ motionPath?: MotionPathOptions
 type?: SharedTransitionEffectType
 ```
 
-动画类型。默认值：SharedTransitionEffectType.Exchange
+动画类型。
+
+默认值：SharedTransitionEffectType.Exchange
 
 **类型：** [SharedTransitionEffectType](../arkts-apis/arkts-arkui-sharedtransitioneffecttype-e.md)
 
@@ -112,7 +132,11 @@ type?: SharedTransitionEffectType
 zIndex?: number
 ```
 
-设置Z轴。取值范围：(-∞, +∞)默认值：0
+设置Z轴。
+
+取值范围：(-∞, +∞)
+
+默认值：0
 
 **类型：** number
 

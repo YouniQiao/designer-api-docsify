@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import sendableImage from '@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## createPixelMap
@@ -29,7 +29,7 @@ Create PixelMap by data buffer.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | A Promise instance used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
 
 **Examples**
 

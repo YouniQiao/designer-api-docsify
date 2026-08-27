@@ -31,7 +31,7 @@ Creates a temporary directory. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise that returns the directory created. |
+| Promise&lt;string&gt; | Promise that returns the directory created. |
 
 **Examples**
 

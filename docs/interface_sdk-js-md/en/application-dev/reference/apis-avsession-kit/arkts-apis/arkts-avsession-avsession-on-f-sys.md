@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## on('sessionCreate')
@@ -25,7 +25,7 @@ Register session create callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionCreate' | Yes | Registration Type, 'sessionCreate' |
-| callback | (session: AVSessionDescriptor) = & gt; void | Yes | Used to handle ('sessionCreate' command) |
+| callback | (session: AVSessionDescriptor) =&gt; void | Yes | Used to handle ('sessionCreate' command) |
 
 **Error codes:**
 
@@ -82,7 +82,7 @@ Register session destroy callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionDestroy' | Yes | Registration Type, 'sessionDestroy' |
-| callback | (session: AVSessionDescriptor) = & gt; void | Yes | Used to handle ('sessionDestroy' command) |
+| callback | (session: AVSessionDescriptor) =&gt; void | Yes | Used to handle ('sessionDestroy' command) |
 
 **Error codes:**
 
@@ -137,7 +137,7 @@ Register top session changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'topSessionChange' | Yes | Registration Type, top priority session change, 'topSessionChange' |
-| callback | (session: AVSessionDescriptor) = & gt; void | Yes | Used to handle ('topSessionChange' command) |
+| callback | (session: AVSessionDescriptor) =&gt; void | Yes | Used to handle ('topSessionChange' command) |
 
 **Error codes:**
 
@@ -194,7 +194,7 @@ Register Session service death callback, notifying the application to clean up r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionServiceDie' | Yes | Registration Type, 'sessionServiceDie' |
-| callback | () = & gt; void | Yes | Used to handle ('sessionServiceDie') command. |
+| callback | () =&gt; void | Yes | Used to handle ('sessionServiceDie') command. |
 
 **Error codes:**
 
@@ -270,7 +270,7 @@ Register device discovery callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceAvailable' | Yes | Registration Type |
-| callback | (device: OutputDeviceInfo) = & gt; void | Yes | Used to returns the device info |
+| callback | (device: OutputDeviceInfo) =&gt; void | Yes | Used to returns the device info |
 
 **Error codes:**
 
@@ -309,7 +309,7 @@ Register device offline callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceOffline' | Yes | Registration Type |
-| callback | (deviceId: string) = & gt; void | Yes | Used to returns the device info |
+| callback | (deviceId: string) =&gt; void | Yes | Used to returns the device info |
 
 **Error codes:**
 

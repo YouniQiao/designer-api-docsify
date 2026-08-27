@@ -30,7 +30,7 @@ Creates P12. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the P12 created, in DER format. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the P12 created, in DER format. |
 
 **Error codes:**
 

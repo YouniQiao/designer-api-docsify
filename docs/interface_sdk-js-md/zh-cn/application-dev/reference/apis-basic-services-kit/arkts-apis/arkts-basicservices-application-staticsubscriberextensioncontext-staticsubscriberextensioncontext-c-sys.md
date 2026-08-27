@@ -1,6 +1,8 @@
 # StaticSubscriberExtensionContext（系统接口）
 
-StaticSubscriberExtensionContext模块是StaticSubscriberExtensionAbility的上下文环境，继承自ExtensionContext。StaticSubscriberExtensionContext模块提供StaticSubscriberExtensionAbility具有的接口和能力。
+StaticSubscriberExtensionContext模块是StaticSubscriberExtensionAbility的上下文环境，继承自ExtensionContext。
+
+StaticSubscriberExtensionContext模块提供StaticSubscriberExtensionAbility具有的接口和能力。
 
 **继承/实现关系：** StaticSubscriberExtensionContext extends ExtensionContext
 
@@ -13,7 +15,7 @@ StaticSubscriberExtensionContext模块是StaticSubscriberExtensionAbility的上�
 ## 导入模块
 
 ```TypeScript
-import StaticSubscriberExtensionContext from '@kit.BasicServicesKit';
+import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
 ```
 
 ## startAbility
@@ -125,7 +127,7 @@ startAbility(want: Want): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise形式返回启动结果。 |
+| Promise&lt;void&gt; | Promise形式返回启动结果。 |
 
 **错误码：**
 

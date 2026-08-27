@@ -1,6 +1,8 @@
 # KeyEvent
 
-Key event.@interface KeyEvent [since 9 - 11]
+Key event.
+
+@interface KeyEvent [since 9 - 11]
 
 **Inheritance/Implementation:** KeyEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
 
@@ -35,7 +37,9 @@ Key event type.
 altKey: boolean
 ```
 
-Whether altKey is being pressed.The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether altKey is being pressed.
+
+The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -51,7 +55,9 @@ Whether altKey is being pressed.The value **true** indicates that the key is pre
 capsLock: boolean
 ```
 
-Whether capsLock is enabled.The value **true** indicates that capsLock is enabled, and the value **false** indicates the opposite.
+Whether capsLock is enabled.
+
+The value **true** indicates that capsLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -67,7 +73,9 @@ Whether capsLock is enabled.The value **true** indicates that capsLock is enable
 ctrlKey: boolean
 ```
 
-Whether ctrlKey is being pressed.The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether ctrlKey is being pressed.
+
+The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -83,7 +91,9 @@ Whether ctrlKey is being pressed.The value **true** indicates that the key is pr
 fnKey: boolean
 ```
 
-Whether fnKey is being pressed.The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether fnKey is being pressed.
+
+The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -131,7 +141,9 @@ List of pressed keys.
 logoKey: boolean
 ```
 
-Whether logoKey is being pressed.The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether logoKey is being pressed.
+
+The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -147,7 +159,9 @@ Whether logoKey is being pressed.The value **true** indicates that the key is pr
 numLock: boolean
 ```
 
-Whether numLock is enabled.The value **true** indicates that numLock is enabled, and the value **false** indicates the opposite.
+Whether numLock is enabled.
+
+The value **true** indicates that numLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -163,7 +177,9 @@ Whether numLock is enabled.The value **true** indicates that numLock is enabled,
 scrollLock: boolean
 ```
 
-Whether scrollLock is enabled.The value **true** indicates that scrollLock is enabled, and the value **false** indicates the opposite.
+Whether scrollLock is enabled.
+
+The value **true** indicates that scrollLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -179,7 +195,9 @@ Whether scrollLock is enabled.The value **true** indicates that scrollLock is en
 shiftKey: boolean
 ```
 
-Whether shiftKey is being pressed.The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether shiftKey is being pressed.
+
+The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 

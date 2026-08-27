@@ -3,9 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKitManager';
-import notificationSubscribe from '@kit.NotificationKitSubscribe';
-import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## addSlot
@@ -28,7 +25,7 @@ Adds a notification slot of a specified type. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Type of the notification slot to add. |
+| type | SlotType | Yes | Type of the notification slot to add. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -68,13 +65,13 @@ Adds a notification slot of a specified type. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Type of the notification slot to add. |
+| type | SlotType | Yes | Type of the notification slot to add. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

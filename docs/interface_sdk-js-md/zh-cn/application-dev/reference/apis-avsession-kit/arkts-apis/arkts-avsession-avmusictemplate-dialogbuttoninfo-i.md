@@ -1,6 +1,8 @@
 # DialogButtonInfo
 
-对话框按钮信息的定义。@interface DialogButtonInfo
+对话框按钮信息的定义。
+
+@interface DialogButtonInfo
 
 **起始版本：** 23
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## buttonId

@@ -84,7 +84,7 @@ Adds a message to the SIM card. If the SIM card is full, an error is reported. T
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

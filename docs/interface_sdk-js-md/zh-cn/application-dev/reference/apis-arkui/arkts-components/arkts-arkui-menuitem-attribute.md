@@ -33,7 +33,7 @@ contentFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 菜单项中内容信息的字体样式。 |
+| value | Font | 是 | 菜单项中内容信息的字体样式。 |
 
 ## contentFontColor
 
@@ -77,7 +77,7 @@ labelFont(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 菜单项中标签信息的字体样式。 |
+| value | Font | 是 | 菜单项中标签信息的字体样式。 |
 
 ## labelFontColor
 
@@ -119,7 +119,7 @@ onChange(callback: (selected: boolean) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (selected: boolean) = & gt; void | 是 | 当前菜单项是否被选中。true：当前菜单项已选中；false：当前菜单项未选中。 |
+| callback | (selected: boolean) =&gt; void | 是 | 当前菜单项是否被选中。true：当前菜单项已选中；false：当前菜单项未选中。 |
 
 ## selected
 
@@ -127,7 +127,11 @@ onChange(callback: (selected: boolean) => void)
 selected(value: boolean)
 ```
 
-设置菜单项是否选中。从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+设置菜单项是否选中。
+
+从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+
+从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 9
 
@@ -159,7 +163,7 @@ selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | 是 | 菜单项被选中时的图标显示方式。true：显示默认的对勾图标；false：不显示图标。ResourceStr：显示指定的图标。SymbolGlyphModifier：显示指定的HMSymbol图标。默认值：false<br>**起始版本：** 12 |
+| value | boolean \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| SymbolGlyphModifier | 是 | 菜单项被选中时的图标显示方式。true：显示默认的对勾图标；false：不显示图标。ResourceStr：显示指定的图标。SymbolGlyphModifier：显示指定的HMSymbol图标。默认值：false<br>**起始版本：** 12 |
 
 ## subMenuBuilder
 

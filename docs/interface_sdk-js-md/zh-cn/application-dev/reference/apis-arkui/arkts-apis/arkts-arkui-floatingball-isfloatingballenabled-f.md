@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI';
+import { floatingBall } from '@kit.ArkUI';
 ```
 
 ## isFloatingBallEnabled

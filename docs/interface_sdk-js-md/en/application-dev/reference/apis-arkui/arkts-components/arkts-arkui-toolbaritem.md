@@ -1,6 +1,7 @@
 # ToolBarItem(Defines toolbar attributes.)
 
 You can use the **ToolBarItem** component to add toolbar items to the title bar using the [toolbar](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar) universal attribute.
+
 > **NOTE** > > This component is typically used with the > [toolbar](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-toolbar.md#toolbar) universal attribute.
 
 ## Child Components
@@ -33,8 +34,10 @@ Creates a toolbar item at the beginning of the corresponding column in the title
 
 | Name | Description |
 | --- | --- |
+| [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | Provides optional parameters for **ToolBarItem** configuration. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md) | Enumerates the placement options for toolbar items in the title bar. |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleState from '@kit.BackgroundTasksKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## isIdleState
@@ -67,7 +67,7 @@ Checks whether the application specified by **bundleName** is in the idle state.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. If the specified **bundleName** is valid, the idle state of the application is returned; otherwise, **null** is returned. |
+| Promise&lt;boolean&gt; | Promise used to return the result. If the specified **bundleName** is valid, the idle state of the application is returned; otherwise, **null** is returned. |
 
 **Examples**
 

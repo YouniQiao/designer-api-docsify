@@ -17,7 +17,7 @@ Calls the function with the specified object as the this value and the elements 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | new () = & gt; T | Yes |  |
+| this | new () =&gt; T | Yes |  |
 | thisArg | T | Yes |  |
 
 ## apply
@@ -30,7 +30,7 @@ apply<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, args: A): voi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | new (...args: A) = & gt; T | Yes |  |
+| this | new (...args: A) =&gt; T | Yes |  |
 | thisArg | T | Yes |  |
 | args | A | Yes |  |
 
@@ -63,7 +63,7 @@ bind<A0, A extends any[], R>(this: new (arg0: A0, ...args: A) => R, thisArg: any
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | new (arg0: A0, ...args: A) = & gt; R | Yes |  |
+| this | new (arg0: A0, ...args: A) =&gt; R | Yes |  |
 | thisArg | any | Yes |  |
 | arg0 | A0 | Yes |  |
 
@@ -81,7 +81,7 @@ bind<A0, A1, A extends any[], R>(this: new (arg0: A0, arg1: A1, ...args: A) => R
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | new (arg0: A0, arg1: A1, ...args: A) = & gt; R | Yes |  |
+| this | new (arg0: A0, arg1: A1, ...args: A) =&gt; R | Yes |  |
 | thisArg | any | Yes |  |
 | arg0 | A0 | Yes |  |
 | arg1 | A1 | Yes |  |
@@ -100,7 +100,7 @@ bind<A0, A1, A2, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2, ..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | new (arg0: A0, arg1: A1, arg2: A2, ...args: A) = & gt; R | Yes |  |
+| this | new (arg0: A0, arg1: A1, arg2: A2, ...args: A) =&gt; R | Yes |  |
 | thisArg | any | Yes |  |
 | arg0 | A0 | Yes |  |
 | arg1 | A1 | Yes |  |
@@ -120,7 +120,7 @@ bind<A0, A1, A2, A3, A extends any[], R>(this: new (arg0: A0, arg1: A1, arg2: A2
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | new (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) = & gt; R | Yes |  |
+| this | new (arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) =&gt; R | Yes |  |
 | thisArg | any | Yes |  |
 | arg0 | A0 | Yes |  |
 | arg1 | A1 | Yes |  |
@@ -141,7 +141,7 @@ bind<AX, R>(this: new (...args: AX[]) => R, thisArg: any, ...args: AX[]): new (.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | new (...args: AX[]) = & gt; R | Yes |  |
+| this | new (...args: AX[]) =&gt; R | Yes |  |
 | thisArg | any | Yes |  |
 | args | AX[] | Yes |  |
 
@@ -161,6 +161,6 @@ Calls the function with the specified object as the this value and the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | new (...args: A) = & gt; T | Yes |  |
+| this | new (...args: A) =&gt; T | Yes |  |
 | thisArg | T | Yes |  |
 | args | A | Yes |  |

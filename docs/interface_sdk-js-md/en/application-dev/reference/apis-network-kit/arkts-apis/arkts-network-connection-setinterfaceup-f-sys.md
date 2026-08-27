@@ -33,7 +33,7 @@ Set a specific interface up.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 

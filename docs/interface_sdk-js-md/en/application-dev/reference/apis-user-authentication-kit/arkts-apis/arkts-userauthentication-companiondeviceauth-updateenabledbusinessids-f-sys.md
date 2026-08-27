@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import companionDeviceAuth from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## updateEnabledBusinessIds
@@ -35,7 +35,7 @@ Updates the service scope supported by the specified companion device template. 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## getMac
@@ -102,7 +102,7 @@ Obtains the MAC address of a device based on the network interface. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the device MAC address obtained. |
+| Promise&lt;string&gt; | Promise used to return the device MAC address obtained. |
 
 **Error codes:**
 

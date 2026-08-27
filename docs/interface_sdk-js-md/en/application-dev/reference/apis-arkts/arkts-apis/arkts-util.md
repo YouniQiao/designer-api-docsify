@@ -9,8 +9,6 @@ The util module provides common utility functions, such as [TextEncoder](arkts-a
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## Summary
@@ -60,7 +58,7 @@ import JSON from '@kit.ArkTS.json';
 | [DecodeWithStreamOptions](arkts-arkts-util-decodewithstreamoptions-i.md) | Defines whether decoding follows data blocks. |
 | [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) | Encrypted information, including the number of read characters and the number of written bytes. |
 | [HeapMemoryInfo](arkts-arkts-util-heapmemoryinfo-i.md) | Describes heap memory information of either an ArkTS-VM, or the shared heap memory of current process. |
-| [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | Describes the heap memory threshold at which the registered callback is triggered after a GC.@interface HeapMemoryThreshold |
+| [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | Describes the heap memory threshold at which the registered callback is triggered after a GC. |
 | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | Multi-thread detection functional parameter configuration |
 | [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | The values of the **ScopeComparable** type are used to implement the **compareTo** method. Therefore, ensure that the input parameters are comparable. |
 | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | Describes decoding-related options, which include **fatal** and **ignoreBOM**. |

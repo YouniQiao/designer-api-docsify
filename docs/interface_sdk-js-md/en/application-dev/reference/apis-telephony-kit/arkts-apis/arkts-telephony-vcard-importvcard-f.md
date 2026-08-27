@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import vcard from '@kit.TelephonyKit';
+import { vcard } from '@kit.TelephonyKit';
 ```
 
 ## importVCard
@@ -24,7 +24,7 @@ Imports a VCard file (that is, **.vcf** file) to the contact database. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context. |
+| context | Context | Yes | Application context. |
 | filePath | string | Yes | URL of the vcard file (VCF). |
 | accountId | number | Yes | Contact account ID. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
@@ -78,7 +78,7 @@ Imports a VCard file (that is, **.vcf** file) to the contact database. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context. |
+| context | Context | Yes | Application context. |
 | filePath | string | Yes | URL of the vcard file (VCF). |
 | accountId | number | No | Contact account ID. |
 
@@ -86,7 +86,7 @@ Imports a VCard file (that is, **.vcf** file) to the contact database. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the operation result. |
+| Promise&lt;void&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 
@@ -139,7 +139,7 @@ Imports a VCard file (that is, **.vcf** file) to the contact database. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context. |
+| context | Context | Yes | Application context. |
 | filePath | string | Yes | URL of the vcard file (VCF). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 

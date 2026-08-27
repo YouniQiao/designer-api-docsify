@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import restrictions from '@kit.MDMKit';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## setFingerprintAuthDisabled

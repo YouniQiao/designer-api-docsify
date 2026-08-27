@@ -26,7 +26,7 @@ Injects keys (including single keys and combination keys).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| KeyEvent | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes |  |
+| KeyEvent | KeyEvent | Yes | Key event to inject. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # Single
 
-The definition of Single song.@extends MediaEntity @interface Single
+The definition of Single song.
+
+@extends MediaEntity @interface Single
 
 **Inheritance/Implementation:** Single extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
@@ -11,7 +13,7 @@ The definition of Single song.@extends MediaEntity @interface Single
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## downloadProgress

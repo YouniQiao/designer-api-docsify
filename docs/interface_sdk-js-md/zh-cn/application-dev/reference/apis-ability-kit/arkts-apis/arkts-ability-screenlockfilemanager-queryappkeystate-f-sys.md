@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import screenLockFileManager from '@kit.AbilityKit';
+import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
 ## queryAppKeyState
@@ -26,7 +26,7 @@ function queryAppKeyState(dataType: DataType): KeyStatus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataType | [DataType](arkts-ability-screenlockfilemanager-datatype-e.md) | 是 | 锁屏下访问的敏感数据类型。 |
+| dataType | DataType | 是 | 锁屏下访问的敏感数据类型。 |
 
 **返回值：**
 

@@ -33,7 +33,7 @@ Uninstalls the public credential of the user. This API is called only by the cer
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

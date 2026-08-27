@@ -1,6 +1,8 @@
 # AccessibilityHoverType
 
-Type of accessibility hover event.@enum {number}
+Type of accessibility hover event.
+
+@enum {number}
 
 **起始版本：** 12
 

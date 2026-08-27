@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManagerExt from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## enableHotspot
@@ -12,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKit';
 function enableHotspot(): void
 ```
 
-使能WLAN热点。 该方法为异步方法。启用WLAN热点后，Wi-Fi可能会被禁用。
+使能WLAN热点。该方法为异步方法。启用WLAN热点后，Wi-Fi可能会被禁用。
 
 **起始版本：** 9
 

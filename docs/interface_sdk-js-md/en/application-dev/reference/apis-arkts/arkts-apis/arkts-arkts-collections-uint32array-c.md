@@ -139,7 +139,7 @@ A constructor that creates an ArkTS Uint32Array from an iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | Iterable & lt;number & gt; | Yes | An iterable collection of numbers used to construct an ArkTS Uint32Array object. |
+| elements | Iterable&lt;number&gt; | Yes | An iterable collection of numbers used to construct an ArkTS Uint32Array object. |
 
 **Error codes:**
 
@@ -165,7 +165,7 @@ A constructor that creates an ArkTS Uint32Array from an array-like object or Ark
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; \ | ArrayBuffer | Yes | Object used to construct the ArkTS Uint32Array. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 4. |
+| array | ArrayLike&lt;number&gt; \| ArrayBuffer | Yes | Object used to construct the ArkTS Uint32Array. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 4. |
 
 **Error codes:**
 
@@ -475,7 +475,7 @@ Creates an ArkTS Uint32Array from an array-like or iterator object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;number & gt; | Yes | Array-like object used to construct the ArkTS Uint32Array. |
+| arrayLike | ArrayLike&lt;number&gt; | Yes | Array-like object used to construct the ArkTS Uint32Array. |
 
 **Return value:**
 
@@ -501,7 +501,7 @@ Creates an ArkTS Uint32Array from an array-like object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;T & gt; | Yes | An array-like object to convert to an Uint32Array. |
+| arrayLike | ArrayLike&lt;T&gt; | Yes | An array-like object to convert to an Uint32Array. |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | Yes | A mapping function to call on every element of the array. |
 
 **Return value:**
@@ -528,7 +528,7 @@ Creates an ArkTS Uint32Array from an iterator object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | Iterable & lt;number & gt; | Yes | An iterable object to convert to an Uint32Array. |
+| arrayLike | Iterable&lt;number&gt; | Yes | An iterable object to convert to an Uint32Array. |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;number, number&gt; | No | A mapping function to call on every element of the array. |
 
 **Return value:**
@@ -971,7 +971,7 @@ Writes the elements in an array-like object to the given start position in seque
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; | Yes | A typed or untyped array of values to set. |
+| array | ArrayLike&lt;number&gt; | Yes | A typed or untyped array of values to set. |
 | offset | number | No | The index in the current array at which the values are to be written. |
 
 **Error codes:**

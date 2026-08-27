@@ -14,7 +14,8 @@ Describes the system notification button.
 hidePanel?: boolean
 ```
 
-Whether to hide the notification panel when the button is tapped. The default value is **false**.  
+Whether to hide the notification panel when the button is tapped. The default value is **false**.
+
 - **true**: Yes.  
 - **false**: No.
 

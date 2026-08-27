@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import abilityManager from '@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## updateConfiguration
@@ -95,7 +95,7 @@ Updates the configuration. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. You can perform error handling or other custom processing. |
+| Promise&lt;void&gt; | Promise that returns no value. You can perform error handling or other custom processing. |
 
 **Error codes:**
 

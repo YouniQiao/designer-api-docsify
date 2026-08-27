@@ -1,6 +1,8 @@
 # AudioRoutingManager
 
-This interface implements audio routing management.Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
+This interface implements audio routing management.
+
+Before calling any API in AudioRoutingManager, you must use [getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager) to obtain an AudioRoutingManager instance.
 
 > **NOTE：**
 > 
@@ -13,8 +15,7 @@ This interface implements audio routing management.Before calling any API in Aud
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## excludeOutputDevices
@@ -45,7 +46,7 @@ Exclude output devices. After calling this function successfully, audio will not
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return result. |
+| Promise&lt;void&gt; | Promise used to return result. |
 
 **Error codes:**
 
@@ -505,7 +506,7 @@ Restores the output device for the specified audio renderer filter to the defaul
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return result. |
+| Promise&lt;void&gt; | Promise used to return result. |
 
 **Error codes:**
 
@@ -613,7 +614,7 @@ Select the input device. This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
 
@@ -670,7 +671,7 @@ Select the input device with desired AudioCapturer. This method uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -795,7 +796,7 @@ Select the output device. This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
 
@@ -914,7 +915,7 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
 
@@ -981,7 +982,7 @@ Select the output device with desired AudioRenderer. This method uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1055,7 +1056,7 @@ Unexclude output devices. This function will unexclude target output devices bel
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return result. |
+| Promise&lt;void&gt; | Promise used to return result. |
 
 **Error codes:**
 
@@ -1124,7 +1125,7 @@ Unexclude output devices. This function will unexclude all output devices belong
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return result. |
+| Promise&lt;void&gt; | Promise used to return result. |
 
 **Error codes:**
 

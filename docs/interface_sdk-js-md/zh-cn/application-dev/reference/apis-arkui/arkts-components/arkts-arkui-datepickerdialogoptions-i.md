@@ -1,6 +1,8 @@
 # DatePickerDialogOptions
 
-日期选择器弹窗选项。继承自[DatePickerOptions](arkts-arkui-datepickeroptions-i.md)。
+日期选择器弹窗选项。
+
+继承自[DatePickerOptions](arkts-arkui-datepickeroptions-i.md)。
 
 **继承/实现关系：** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md)
 
@@ -185,7 +187,7 @@ onWillDisappear?: VoidCallback
 acceptButtonStyle?: PickerDialogButtonStyle
 ```
 
-设置确认按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。 当需要自定义确认按钮外观或行为时传入此参数。不传入时使用系统默认按钮样式。
+设置确认按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。当需要自定义确认按钮外观或行为时传入此参数。不传入时使用系统默认按钮样式。
 
 > **说明：**
 > 
@@ -260,7 +262,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-背景模糊效果参数，用于自定义弹窗背景模糊的显示样式，支持配置颜色模式、自适应颜色、缩放比例等属性，实现不同的背景模糊视觉效果。 默认值请参考BackgroundBlurStyleOptions类型说明。
+背景模糊效果参数，用于自定义弹窗背景模糊的显示样式，支持配置颜色模式、自适应颜色、缩放比例等属性，实现不同的背景模糊视觉效果。默认值请参考BackgroundBlurStyleOptions类型说明。
 
 > **说明：**
 > 
@@ -308,7 +310,7 @@ backgroundColor?: ResourceColor
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。默认值请参考 BackgroundEffectOptions类型说明。
+背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。默认值请参考BackgroundEffectOptions类型说明。
 
 > **说明：**
 > 
@@ -331,7 +333,7 @@ backgroundEffect?: BackgroundEffectOptions
 cancelButtonStyle?: PickerDialogButtonStyle
 ```
 
-设置取消按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。 当需要自定义取消按钮外观或行为时传入此参数。不传入时使用系统默认按钮样式。
+设置取消按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。当需要自定义取消按钮外观或行为时传入此参数。不传入时使用系统默认按钮样式。
 
 > **说明：**
 > 
@@ -357,7 +359,8 @@ cancelButtonStyle?: PickerDialogButtonStyle
 canLoop?: boolean
 ```
 
-设置是否可循环滚动。  
+设置是否可循环滚动。
+
 - true：可循环，年份随着月份的循环滚动进行联动加减，月份随着日的循环滚动进行联动加减。  
 - false：不可循环，年、月、日到达本列的顶部或底部时，无法再进行滚动，年、月、日之间也无法再联动加减。
 
@@ -447,7 +450,8 @@ weight: FontWeight.Regular
 enableHapticFeedback?: boolean
 ```
 
-设置是否开启触控反馈。  
+设置是否开启触控反馈。
+
 - true：开启触控反馈（当需要为用户提供操作反馈时选择）。  
 - false：不开启触控反馈（当不需要触控反馈或设备不支持时选择）。
 
@@ -478,9 +482,11 @@ enableHapticFeedback?: boolean
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态。悬停态指折叠屏等设备处于悬停折叠状态时的交互模式，而非鼠标悬停。  
+是否响应悬停态。悬停态指折叠屏等设备处于悬停折叠状态时的交互模式，而非鼠标悬停。
+
 - true：响应悬停态。  
-- false：不响应悬停态。  
+- false：不响应悬停态。
+
 默认值：false
 
 **类型：** boolean
@@ -501,7 +507,9 @@ enableHoverMode?: boolean
 hoverModeArea?: HoverModeAreaType
 ```
 
-设置悬停态下弹窗默认展示区域，仅在enableHoverMode为true时生效。默认值：HoverModeAreaType.BOTTOM_SCREEN
+设置悬停态下弹窗默认展示区域，仅在enableHoverMode为true时生效。
+
+默认值：HoverModeAreaType.BOTTOM_SCREEN
 
 **类型：** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
 
@@ -521,7 +529,8 @@ hoverModeArea?: HoverModeAreaType
 lunar?: boolean
 ```
 
-日期是否显示为农历。  
+日期是否显示为农历。
+
 - true：显示为农历。  
 - false：不显示为农历。
 
@@ -547,7 +556,8 @@ lunar?: boolean
 lunarSwitch?: boolean
 ```
 
-是否展示切换农历的开关。  
+是否展示切换农历的开关。
+
 - true：展示切换农历的开关。  
 - false：不展示切换农历的开关。
 
@@ -629,7 +639,7 @@ maskRect?: Rectangle
 offset?: Offset
 ```
 
-弹窗相对alignment所在位置的偏移量。当需要微调弹窗位置时设置此参数（如与alignment配合实现精确位置控制）， 不设置时弹窗按alignment对齐位置显示。
+弹窗相对alignment所在位置的偏移量。当需要微调弹窗位置时设置此参数（如与alignment配合实现精确位置控制），不设置时弹窗按alignment对齐位置显示。
 
 > 默认值：{ dx: 0 , dy: 0 }
 
@@ -651,7 +661,7 @@ offset?: Offset
 onDateAccept?: Callback<Date>
 ```
 
-点击弹窗中的“确定”按钮时触发该回调。回调签名：(value: Date) =&gt; void，其中value为用户选择的日期，包含年月日信息；当showTime为true时， 还包含时和分信息。开发者可在此回调中保存用户选择的日期或执行后续业务逻辑。
+点击弹窗中的“确定”按钮时触发该回调。回调签名：(value: Date) =&gt; void，其中value为用户选择的日期，包含年月日信息；当showTime为true时，还包含时和分信息。开发者可在此回调中保存用户选择的日期或执行后续业务逻辑。
 
 > **说明：**
 > 
@@ -673,7 +683,7 @@ onDateAccept?: Callback<Date>
 onDateChange?: Callback<Date>
 ```
 
-滑动弹窗中的日期使当前选中项改变时触发该回调。回调签名：(value: Date) =&gt; void，其中value为当前选中的日期，包含年月日信息； 当showTime为true时，还包含时和分信息。此回调在用户滑动选择器过程中实时触发，与onDateAccept仅在点击确定后触发的时机不同。
+滑动弹窗中的日期使当前选中项改变时触发该回调。回调签名：(value: Date) =&gt; void，其中value为当前选中的日期，包含年月日信息；当showTime为true时，还包含时和分信息。此回调在用户滑动选择器过程中实时触发，与onDateAccept仅在点击确定后触发的时机不同。
 
 > **说明：**
 > 
@@ -732,7 +742,9 @@ weight: FontWeight.Medium
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-设置弹窗背板的阴影。当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
+设置弹窗背板的阴影。
+
+当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
 **类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
@@ -750,7 +762,8 @@ shadow?: ShadowOptions | ShadowStyle
 showTime?: boolean
 ```
 
-是否在弹窗内展示时间选择器。  
+是否在弹窗内展示时间选择器。
+
 - true：展示时间选择器。  
 - false：不展示时间选择器。
 
@@ -845,7 +858,8 @@ weight: FontWeight.Regular
 useMilitaryTime?: boolean
 ```
 
-弹窗内展示的时间选择器是否为24小时制，仅当showTime为true时生效。  
+弹窗内展示的时间选择器是否为24小时制，仅当showTime为true时生效。
+
 - true：显示24小时制。  
 - false：显示12小时制。
 

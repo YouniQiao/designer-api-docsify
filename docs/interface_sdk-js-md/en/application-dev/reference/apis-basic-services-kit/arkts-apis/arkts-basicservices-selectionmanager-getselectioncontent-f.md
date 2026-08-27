@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import selectionManager from '@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## getSelectionContent
@@ -22,7 +22,7 @@ Obtains the content of the selected text. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the content of the selected text. |
+| Promise&lt;string&gt; | Promise used to return the content of the selected text. |
 
 **Error codes:**
 

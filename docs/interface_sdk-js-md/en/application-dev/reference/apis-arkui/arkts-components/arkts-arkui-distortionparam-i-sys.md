@@ -31,7 +31,13 @@ Defines the spatial distortion parameters.
 barrelDistortion: Vector4
 ```
 
-Barrel distortion degree of the four edges.The four values in **Vector4** are as follows: **x** indicates the left edge, **y** indicates the right edge, **z** indicates the top edge, and **w** indicates the bottom edge.A positive value indicates outward distortion, and a negative value indicates inward distortion. When the absolute value of the distortion parameter reaches 1, the distortion degree is extreme.Recommended value range for x, y, z, and w: **[-1, 1]**
+Barrel distortion degree of the four edges.
+
+The four values in **Vector4** are as follows: **x** indicates the left edge, **y** indicates the right edge, **z** indicates the top edge, and **w** indicates the bottom edge.
+
+A positive value indicates outward distortion, and a negative value indicates inward distortion. When the absolute value of the distortion parameter reaches 1, the distortion degree is extreme.
+
+Recommended value range for x, y, z, and w: **[-1, 1]**
 
 **Type:** [Vector4](arkts-arkui-vector4-t-sys.md)
 

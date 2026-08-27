@@ -25,7 +25,7 @@
 ## 导入模块
 
 ```TypeScript
-import selectionManager from '@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -34,29 +34,29 @@ import selectionManager from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createPanel(划词管理)](arkts-basicservices-selectionmanager-createpanel-f.md) | 创建划词面板，用于向用户展示业务相关的操作界面或文本处理结果，使用完毕后需调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md)销毁面板释放资源。使用Promise异步回调。单个划词应用仅允许创建一个[MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)和一个 [MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)。 |
-| [destroyPanel(划词管理)](arkts-basicservices-selectionmanager-destroypanel-f.md) | 销毁划词面板。与[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)搭配使用，用于销毁由createPanel()创建的面板对象。使用Promise异步回调。 |
-| [getSelectionContent(划词管理)](arkts-basicservices-selectionmanager-getselectioncontent-f.md) | 获取选中文本的内容。使用Promise异步回调。需在 on('selectionCompleted') 回调中调用，且仅在划词完成事件触发后有效。 |
-| [off(划词管理)](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted) | 取消订阅划词完成事件，与 on('selectionCompleted') 搭配使用。 |
-| [on(划词管理)](arkts-basicservices-selectionmanager-on-f.md#onselectioncompleted) | 订阅划词完成事件，与 off('selectionCompleted') 搭配使用取消订阅。 |
+| [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md) | 创建划词面板，用于向用户展示业务相关的操作界面或文本处理结果，使用完毕后需调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md)销毁面板释放资源。使用Promise异步回调。 |
+| [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) | 销毁划词面板。与[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)搭配使用，用于销毁由createPanel()创建的面板对象。使用Promise异步回调。 |
+| [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md) | 获取选中文本的内容。使用Promise异步回调。需在on('selectionCompleted')回调中调用，且仅在划词完成事件触发后有效。 |
+| [off](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted) | 取消订阅划词完成事件，与on('selectionCompleted')搭配使用。 |
+| [on](arkts-basicservices-selectionmanager-on-f.md#onselectioncompleted) | 订阅划词完成事件，与off('selectionCompleted')搭配使用取消订阅。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [Panel(划词管理)](arkts-basicservices-selectionmanager-panel-i.md) | 划词面板对象，通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)创建，提供面板内容设置、显示、隐藏、移动及事件订阅等管理能力，适用于在划词完成后向用户展示自定义操作界面的场景。 |
-| [SelectionInfo(划词管理)](arkts-basicservices-selectionmanager-selectioninfo-i.md) | 划词事件信息。 |
+| [Panel](arkts-basicservices-selectionmanager-panel-i.md) | 划词面板对象，通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)创建，提供面板内容设置、显示、隐藏、移动及事件订阅等管理能力，适用于在划词完成后向用户展示自定义操作界面的场景。 |
+| [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md) | 划词事件信息。 |
 
 <!--Del-->
 ### 接口（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [Panel(划词管理)](arkts-basicservices-selectionmanager-panel-i-sys.md) | 划词面板对象，通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)创建，提供面板内容设置、显示、隐藏、移动及事件订阅等管理能力，适用于在划词完成后向用户展示自定义操作界面的场景。 |
+| [Panel](arkts-basicservices-selectionmanager-panel-i-sys.md) | 划词面板对象，通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)创建，提供面板内容设置、显示、隐藏、移动及事件订阅等管理能力，适用于在划词完成后向用户展示自定义操作界面的场景。 |
 <!--DelEnd-->
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [SelectionType(划词管理)](arkts-basicservices-selectionmanager-selectiontype-e.md) | 定义划词方式枚举值。  \| 名称 \| 值 \| 说明 \| \| ------------ \| -- \| ------------------ \| \| MOUSE_MOVE \| 1 \| 鼠标或触控板滑动划词。 \| \| DOUBLE_CLICK \| 2 \| 鼠标或触控板双击划词。 \| \| TRIPLE_CLICK \| 3 \| 鼠标或触控板三击划词。 \| |
+| [SelectionType](arkts-basicservices-selectionmanager-selectiontype-e.md) | 定义划词方式枚举值。 |

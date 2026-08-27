@@ -11,8 +11,7 @@ Implements audio collaborative management.
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## isCollaborativePlaybackEnabledForDevice
@@ -178,7 +177,7 @@ Enables or disables collaborative playback for the specified device. Currently, 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

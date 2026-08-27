@@ -1,6 +1,8 @@
 # AudioSessionStrategy
 
-音频会话策略。@
+音频会话策略。
+
+@
 
 **起始版本：** 12
 
@@ -9,8 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## concurrencyMode

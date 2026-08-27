@@ -9,8 +9,7 @@ Implements file uploads. Before using any APIs of this class, you must obtain an
 ## Modules to Import
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## delete
@@ -104,7 +103,7 @@ Deletes the upload task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -161,7 +160,7 @@ Unsubscribes from upload progress events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'progress' | Yes | Event type.   - **'progress'**: upload progress. |
-| callback | (uploadedSize: number, totalSize: number) = & gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | (uploadedSize: number, totalSize: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -203,7 +202,7 @@ Unsubscribes from HTTP response events for the upload task.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headerReceive' | Yes | Event type.   - **'headerReceive'**: The HTTP request receives a response. |
-| callback | (header: object) = & gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | (header: object) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -346,7 +345,7 @@ Subscribes to upload progress events. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'progress' | Yes | Event type. The value is fixed at **'progress'**, indicating upload progress. |
-| callback | (uploadedSize: number, totalSize: number) = & gt; void | Yes | Callback used to return the size of the uploaded file and the total size of the file to upload, in bytes. |
+| callback | (uploadedSize: number, totalSize: number) =&gt; void | Yes | Callback used to return the size of the uploaded file and the total size of the file to upload, in bytes. |
 
 **Error codes:**
 
@@ -380,7 +379,7 @@ Subscribes to HTTP response events for the upload task.This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'headerReceive' | Yes | Event type.   - **'headerReceive'**: The HTTP request receives a response. |
-| callback | (header: object) = & gt; void | Yes | Callback used to return the response content. |
+| callback | (header: object) =&gt; void | Yes | Callback used to return the response content. |
 
 **Error codes:**
 
@@ -545,7 +544,7 @@ Deletes the upload task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 

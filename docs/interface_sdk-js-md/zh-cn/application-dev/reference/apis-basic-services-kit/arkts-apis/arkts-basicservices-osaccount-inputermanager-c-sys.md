@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## registerInputer
@@ -34,7 +34,7 @@ static registerInputer(authType: AuthType, inputer: IInputer): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | 是 | 认证类型。 |
+| authType | AuthType | 是 | 认证类型。 |
 | inputer | [IInputer](arkts-basicservices-osaccount-iinputer-i-sys.md) | 是 | 凭据输入器，用于获取凭据。 |
 
 **错误码：**
@@ -89,7 +89,7 @@ static unregisterInputer(authType: AuthType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | 是 | 认证类型。 |
+| authType | AuthType | 是 | 认证类型。 |
 
 **错误码：**
 

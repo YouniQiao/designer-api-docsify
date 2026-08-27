@@ -237,7 +237,7 @@ setOnTouch(callback: Callback<TouchEvent> | undefined): void
 setOnVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleAreaChangeCallback | undefined): void
 ```
 
-设置限制回调间隔的 [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) 可见区域变化事件的回调。
+设置限制回调间隔的[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)可见区域变化事件的回调。
 
 **起始版本：** 12
 

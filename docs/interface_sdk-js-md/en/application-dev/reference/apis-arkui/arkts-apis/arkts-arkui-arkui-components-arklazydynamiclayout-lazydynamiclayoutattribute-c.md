@@ -1,6 +1,8 @@
 # LazyDynamicLayoutAttribute
 
-Defines the LazyDynamicLayout attribute functions.@extends CommonMethod&lt;LazyDynamicLayoutAttribute&gt;
+Defines the LazyDynamicLayout attribute functions.
+
+@extends CommonMethod&lt;LazyDynamicLayoutAttribute&gt;
 
 **Inheritance/Implementation:** LazyDynamicLayoutAttribute extends CommonMethod<LazyDynamicLayoutAttribute>
 
@@ -34,7 +36,7 @@ Called when visible indexes change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;number[] & gt; \ | undefined | Yes | Callback used to return the list of index numbers of visible subcomponents. Passing undefined will unregister the callback. |
+| callback | Callback&lt;number[]&gt; \| undefined | Yes | Callback used to return the list of index numbers of visible subcomponents. Passing undefined will unregister the callback. |
 
 **Return value:**
 

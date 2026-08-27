@@ -1,6 +1,8 @@
 # @ohos.bundle.appDomainVerify(Define capabilities to access app domain verification info.)
 
-This module provides app domain verification info.@namespace appDomainVerify
+This module provides app domain verification info.
+
+@namespace appDomainVerify
 
 **Since:** 13
 
@@ -13,7 +15,7 @@ This module provides app domain verification info.@namespace appDomainVerify
 ## Modules to Import
 
 ```TypeScript
-import appDomainVerify from '@kit.AbilityKit';
+import { appDomainVerify } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -23,6 +25,6 @@ import appDomainVerify from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [queryAssociatedBundleNames(Define capabilities to access app domain verification info.)](arkts-ability-appdomainverify-queryassociatedbundlenames-f-sys.md) | query bundleNames associated with domain. |
-| [queryAssociatedDomains(Define capabilities to access app domain verification info.)](arkts-ability-appdomainverify-queryassociateddomains-f-sys.md) | query domains verify associated with bundleName. |
+| [queryAssociatedBundleNames](arkts-ability-appdomainverify-queryassociatedbundlenames-f-sys.md) | query bundleNames associated with domain. |
+| [queryAssociatedDomains](arkts-ability-appdomainverify-queryassociateddomains-f-sys.md) | query domains verify associated with bundleName. |
 <!--DelEnd-->

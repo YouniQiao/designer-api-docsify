@@ -29,7 +29,7 @@ Writes events of the **AppEventInfo** type. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

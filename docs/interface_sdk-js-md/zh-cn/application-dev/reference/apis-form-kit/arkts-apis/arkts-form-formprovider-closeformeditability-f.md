@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## closeFormEditAbility
@@ -24,7 +24,7 @@ function closeFormEditAbility(isMainPage?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isMainPage | boolean | 否 | 是否关闭主编辑页。    - true：关闭主编辑页，适合在主编辑页完成配置后关闭的场景。    - false：关闭非主编辑页，适合在多级编辑页场景下关闭当前非主编辑页的场景。    默认值：true（通常关闭当前编辑页时使用默认值即可）。 |
+| isMainPage | boolean | 否 | 是否关闭主编辑页。   - true：关闭主编辑页，适合在主编辑页完成配置后关闭的场景。   - false：关闭非主编辑页，适合在多级编辑页场景下关闭当前非主编辑页的场景。   默认值：true（通常关闭当前编辑页时使用默认值即可）。 |
 
 **错误码：**
 

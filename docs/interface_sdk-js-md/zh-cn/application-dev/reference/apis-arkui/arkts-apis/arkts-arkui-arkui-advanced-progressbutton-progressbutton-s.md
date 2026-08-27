@@ -18,7 +18,6 @@
 
 ```TypeScript
 import { ProgressButton } from '@kit.ArkUI';
-import { ProgressButtonV2, ProgressButtonV2Color, ProgressButtonV2ColorOptions } from '@kit.ArkUIV2';
 ```
 
 ## clickCallback
@@ -61,7 +60,10 @@ colorOptions?: ProgressButtonColorOptions
 content: ResourceStr
 ```
 
-下载按钮的文本。默认值：空字符串。  
+下载按钮的文本。
+
+默认值：空字符串。
+
 **说明：**最长显示组件宽度，超出部分用省略号代替。从API version 20开始，支持Resource类型。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
@@ -80,7 +82,11 @@ content: ResourceStr
 enable: boolean
 ```
 
-下载按钮是否可以点击。true：可以点击。false：不可点击。
+下载按钮是否可以点击。
+
+true：可以点击。
+
+false：不可点击。
 
 **类型：** boolean
 
@@ -98,7 +104,11 @@ enable: boolean
 progress: number
 ```
 
-下载按钮的当前进度值。取值范围：[0,100]。设置小于0的数值时置为0，设置大于100的数值时置为100。默认值：0
+下载按钮的当前进度值。
+
+取值范围：[0,100]。设置小于0的数值时置为0，设置大于100的数值时置为100。
+
+默认值：0
 
 **类型：** number
 
@@ -116,7 +126,13 @@ progress: number
 progressButtonRadius?: LengthMetrics
 ```
 
-下载按钮的圆角（不支持百分比设置）。取值范围：[0, height/2]默认值：height/2设置值小于0时按照0处理，设置其他非法数值时，按照默认值处理。当直接入参为undefined时，按照默认值处理，入参为LengthMetrics.vp时，建议传入具体数值，传入null/undefined会导致显示异常。
+下载按钮的圆角（不支持百分比设置）。
+
+取值范围：[0, height/2]
+
+默认值：height/2
+
+设置值小于0时按照0处理，设置其他非法数值时，按照默认值处理。当直接入参为undefined时，按照默认值处理，入参为LengthMetrics.vp时，建议传入具体数值，传入null/undefined会导致显示异常。
 
 **类型：** LengthMetrics
 
@@ -134,7 +150,11 @@ progressButtonRadius?: LengthMetrics
 progressButtonWidth?: Length
 ```
 
-下载按钮的宽度，单位vp。取值范围：大于等于44vp。默认值：44vp。当取值为非Resource类型且小于默认值或取值为非法值时，识别值为默认值。当取值为Resource类型且小于默认值时识别为默认值，为非法值时下载按钮的宽度显示为容器宽度的100%。
+下载按钮的宽度，单位vp。
+
+取值范围：大于等于44vp。
+
+默认值：44vp。当取值为非Resource类型且小于默认值或取值为非法值时，识别值为默认值。当取值为Resource类型且小于默认值时识别为默认值，为非法值时下载按钮的宽度显示为容器宽度的100%。
 
 **类型：** [Length](arkts-arkui-length-t.md)
 

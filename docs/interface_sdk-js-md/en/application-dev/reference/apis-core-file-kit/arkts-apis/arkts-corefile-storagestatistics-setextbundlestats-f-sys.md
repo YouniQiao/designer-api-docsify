@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import storageStatistics from '@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## setExtBundleStats
@@ -40,7 +40,7 @@ Reports the space usage of system applications or system services. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

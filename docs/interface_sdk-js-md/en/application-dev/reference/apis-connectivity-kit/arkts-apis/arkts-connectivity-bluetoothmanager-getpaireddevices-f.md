@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## getPairedDevices
@@ -30,7 +30,7 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Returns a list of paired Bluetooth devices's address. |
+| Array&lt;string&gt; | Returns a list of paired Bluetooth devices's address. |
 
 **Error codes:**
 

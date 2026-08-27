@@ -4,7 +4,9 @@
 export type TagSession = _TagSession
 ```
 
-获取TagSession。<!--no_check-->
+获取TagSession。
+
+<!--no_check-->
 
 **起始版本：** 7
 

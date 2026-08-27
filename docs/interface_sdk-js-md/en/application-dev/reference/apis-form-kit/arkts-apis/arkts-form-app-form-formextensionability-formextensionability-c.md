@@ -9,7 +9,7 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 ## Modules to Import
 
 ```TypeScript
-import FormExtensionAbility from '@kit.FormKit';
+import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
 ## onAcquireFormState
@@ -155,7 +155,7 @@ Called to notify the widget provider that the widget visibility status is being 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newStatus | Record & lt;string, number & gt; | Yes | ID and visibility status of the widget to be changed.<br>**Since:** 11 |
+| newStatus | Record&lt;string, number&gt; | Yes | ID and visibility status of the widget to be changed.<br>**Since:** 11 |
 
 **Examples**
 
@@ -426,7 +426,7 @@ Called to notify the widget provider that a widget is being updated, with update
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | ID of the widget that requests to be updated. |
-| wantParams | Record & lt;string, Object & gt; | No | Parameters used for the update. |
+| wantParams | Record&lt;string, Object&gt; | No | Parameters used for the update. |
 
 **Examples**
 
@@ -458,7 +458,9 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 context: FormExtensionContext
 ```
 
-Context of the FormExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).This API can be used in atomic services since API version 11.
+Context of the FormExtensionAbility. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
+
+This API can be used in atomic services since API version 11.
 
 **Type:** [FormExtensionContext](arkts-form-formextensioncontext-c-sys.md)
 

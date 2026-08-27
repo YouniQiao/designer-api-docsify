@@ -4,6 +4,7 @@
 > **说明：**
 > 
 > 从API version 3开始支持，从API version 9开始废弃。
+
 指示应用包是否已安装。
 
 **起始版本：** 3
@@ -15,7 +16,7 @@
 ## 导入模块
 
 ```TypeScript
-import Package, { CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
+import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
 ```
 
 ## hasInstalled
@@ -38,7 +39,7 @@ static hasInstalled(options: CheckPackageHasInstalledOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | 是 | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) |
+| options | [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | 是 | Options |
 
 **示例**
 

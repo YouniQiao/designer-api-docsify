@@ -22,7 +22,7 @@ Sets the mouse pointer style type for a specified window and returns the result 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowId | number | Yes | Window ID. The value is an integer greater than or equal to 0. If the window ID is valid and the corresponding window exists, the mouse pointer style of the window can be set properly. If the window ID is valid but the window does not exist, the mouse pointer style can also be set properly. The result can be obtained through [getPointerStyleSync](arkts-input-pointer-getpointerstylesync-f.md). |
-| pointerStyle | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | Yes | Pointer style. |
+| pointerStyle | PointerStyle | Yes | Pointer style. |
 
 **Error codes:**
 

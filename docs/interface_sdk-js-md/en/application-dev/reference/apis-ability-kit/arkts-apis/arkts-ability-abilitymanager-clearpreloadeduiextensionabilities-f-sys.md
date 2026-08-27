@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import abilityManager from '@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## clearPreloadedUIExtensionAbilities
@@ -28,7 +28,7 @@ Clears all preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensiona
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

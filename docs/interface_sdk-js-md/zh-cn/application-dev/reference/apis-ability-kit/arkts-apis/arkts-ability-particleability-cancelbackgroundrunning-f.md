@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import particleAbility from '@kit.AbilityKit';
+import { particleAbility } from '@kit.AbilityKit';
 ```
 
 ## cancelBackgroundRunning
@@ -70,7 +70,7 @@ function cancelBackgroundRunning(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
 

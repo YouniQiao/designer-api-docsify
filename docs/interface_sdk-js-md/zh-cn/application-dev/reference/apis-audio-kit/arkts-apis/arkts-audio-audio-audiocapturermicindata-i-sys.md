@@ -11,8 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## data
@@ -39,7 +38,9 @@ data: ArrayBuffer
 ecData?: ArrayBuffer
 ```
 
-回声参考音频数据缓冲区。如果采集器配置未设置ecStreamInfo，则该字段为空，详情请参考[AudioCapturerMicInConfig](arkts-audio-audio-audiocapturermicinconfig-i-sys.md)。
+回声参考音频数据缓冲区。
+
+如果采集器配置未设置ecStreamInfo，则该字段为空，详情请参考[AudioCapturerMicInConfig](arkts-audio-audio-audiocapturermicinconfig-i-sys.md)。
 
 **类型：** ArrayBuffer
 

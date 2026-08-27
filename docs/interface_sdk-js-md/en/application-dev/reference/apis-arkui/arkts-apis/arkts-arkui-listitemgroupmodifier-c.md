@@ -1,6 +1,8 @@
 # ListItemGroupModifier
 
-Defines ListItemGroup Modifier@extends ListItemGroupAttribute @implements AttributeModifier&lt;ListItemGroupAttribute&gt;
+Defines ListItemGroup Modifier
+
+@extends ListItemGroupAttribute @implements AttributeModifier&lt;ListItemGroupAttribute&gt;
 
 **Inheritance/Implementation:** ListItemGroupModifier extends [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md#listitemgroupattribute) and implements AttributeModifier<ListItemGroupAttribute>
 

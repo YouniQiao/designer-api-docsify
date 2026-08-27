@@ -1,6 +1,8 @@
 # Querier（系统接口）
 
-用于接收安全数据的回调函数。@interface Querier
+用于接收安全数据的回调函数。
+
+@interface Querier
 
 **起始版本：** 12
 
@@ -11,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import securityGuard from '@kit.SecurityGuardKit';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## onComplete

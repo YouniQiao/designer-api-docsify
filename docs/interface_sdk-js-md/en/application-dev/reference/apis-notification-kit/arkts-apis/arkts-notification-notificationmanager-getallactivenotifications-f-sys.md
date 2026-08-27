@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getAllActiveNotifications
@@ -76,7 +76,7 @@ Obtains all active notifications. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;NotificationRequest & gt; & gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;NotificationRequest&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

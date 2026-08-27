@@ -11,7 +11,9 @@
 function stopAppTraceCapture(): void
 ```
 
-停止应用trace采集。调用前，需先调用'[startAppTraceCapture()](arkts-performanceanalysis-hidebug-startapptracecapture-f.md)'方法开始采集。关闭前未开启或重复关闭会导致接口异常。调用startAppTraceCapture接口，如果没有合理传入limitSize参数，生成trace的大小大于传入的limitSize大小，系统内部会自动调用stopAppTraceCapture，再次手动调用 stopAppTraceCapture就会抛出错误码11400105。
+停止应用trace采集。调用前，需先调用'[startAppTraceCapture()](arkts-performanceanalysis-hidebug-startapptracecapture-f.md)'方法开始采集。关闭前未开启或重复关闭会导致接口异常。
+
+调用startAppTraceCapture接口，如果没有合理传入limitSize参数，生成trace的大小大于传入的limitSize大小，系统内部会自动调用stopAppTraceCapture，再次手动调用stopAppTraceCapture就会抛出错误码11400105。
 
 **起始版本：** 12
 

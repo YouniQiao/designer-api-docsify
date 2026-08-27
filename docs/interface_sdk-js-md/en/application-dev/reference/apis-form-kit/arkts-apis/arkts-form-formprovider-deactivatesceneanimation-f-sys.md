@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## deactivateSceneAnimation
@@ -30,7 +30,7 @@ Requests to deactivate a widget. This API takes effect only for [scene-based wid
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

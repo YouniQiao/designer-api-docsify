@@ -9,9 +9,6 @@ Configuration for Web same-layer rendering. Configures Web same-layer rendering 
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## supportCssDisplayChange
@@ -20,7 +17,13 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 supportCssDisplayChange?: boolean
 ```
 
-Whether the same-layer rendering visibility API supports the display attribute.By default, the visibility status of same-layer tags relative to the viewport is supported.If this attribute is set to **true**, CSS attributes can be displayed, including visibility, display, width, and height.Otherwise, CSS attributes are not displayed, and only same-layer tags are visible relative to the viewport.
+Whether the same-layer rendering visibility API supports the display attribute.
+
+By default, the visibility status of same-layer tags relative to the viewport is supported.
+
+If this attribute is set to **true**, CSS attributes can be displayed, including visibility, display, width, and height.
+
+Otherwise, CSS attributes are not displayed, and only same-layer tags are visible relative to the viewport.
 
 **Type:** boolean
 
@@ -36,7 +39,17 @@ Whether the same-layer rendering visibility API supports the display attribute.B
 supportDefaultIntrinsicSize?: boolean
 ```
 
-Whether a same-layer rendering element supports the fixed size of 300 × 150.When the size of an element is set using CSS on the HTML5 side, the size of the same-layer rendering element uses the CSS size. Otherwise, the size is fixed.If the value is **true**, the fixed size is 300 × 150.If the value is **false** and the CSS size is not set on the HTML5 side, the same-layer rendering elements are not rendered.Default value: **false**.Unit: px.
+Whether a same-layer rendering element supports the fixed size of 300 × 150.
+
+When the size of an element is set using CSS on the HTML5 side, the size of the same-layer rendering element uses the CSS size. Otherwise, the size is fixed.
+
+If the value is **true**, the fixed size is 300 × 150.
+
+If the value is **false** and the CSS size is not set on the HTML5 side, the same-layer rendering elements are not rendered.
+
+Default value: **false**.
+
+Unit: px.
 
 **Type:** boolean
 

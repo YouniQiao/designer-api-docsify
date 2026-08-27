@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## enableSuperResolution
@@ -18,7 +18,7 @@ import media from '@kit.MediaKit';
 enableSuperResolution?: boolean
 ```
 
-是否启用超分。默认是关闭的。 在调用之前必须启用超分辨率功能 [setSuperResolution](arkts-media-media-avplayer-i.md#setsuperresolution) 和 [setVideoWindowSize](arkts-media-media-avplayer-i.md#setvideowindowsize).
+是否启用超分。默认是关闭的。在调用之前必须启用超分辨率功能 [setSuperResolution](arkts-media-media-avplayer-i.md#setsuperresolution) 和 [setVideoWindowSize](arkts-media-media-avplayer-i.md#setvideowindowsize).
 
 **类型：** boolean
 
@@ -80,7 +80,9 @@ preferredAudioLanguage?: string
 preferredBufferDuration?: number
 ```
 
-选择缓冲时长。<p>The preferred buffer duration in the playback policy, is used to set the buffer size. For details, see Online Video Frame Freezing Optimization Practice.</p>
+选择缓冲时长。
+
+<p>The preferred buffer duration in the playback policy, is used to set the buffer size. For details, see Online Video Frame Freezing Optimization Practice.</p>
 
 **类型：** number
 
@@ -192,7 +194,7 @@ prepare时显示首帧。
 thresholdForAutoQuickPlay?: number
 ```
 
-在更改速度时，为直播或 AVPlayer 设置最大缓冲阈值。 建议比起始水位高出2秒。
+在更改速度时，为直播或 AVPlayer 设置最大缓冲阈值。建议比起始水位高出2秒。
 
 **类型：** number
 

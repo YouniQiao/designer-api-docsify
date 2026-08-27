@@ -9,7 +9,7 @@ Provides the media AVScreenCaptureStrategy definition.
 ## Modules to Import
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## enableDeviceLevelCapture

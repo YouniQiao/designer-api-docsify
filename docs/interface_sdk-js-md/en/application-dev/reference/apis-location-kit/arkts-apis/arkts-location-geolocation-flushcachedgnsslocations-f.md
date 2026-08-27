@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## flushCachedGnssLocations
@@ -67,7 +67,7 @@ All prepared GNSS locations are returned to the application through the callback
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | The promise returned by the function. |
+| Promise&lt;boolean&gt; | The promise returned by the function. |
 
 **Examples**
 

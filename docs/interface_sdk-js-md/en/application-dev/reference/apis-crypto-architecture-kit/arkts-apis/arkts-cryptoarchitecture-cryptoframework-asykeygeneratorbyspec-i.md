@@ -11,7 +11,7 @@ Asymmetric key generator interface with specified key specifications, defining m
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## generateKeyPair

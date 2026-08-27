@@ -21,7 +21,6 @@ The **Toolbar** component is designed to present a set of action options related
 
 ```TypeScript
 import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
-import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUIV2';
 ```
 
 ## activateIndex
@@ -30,7 +29,11 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 activateIndex?: number
 ```
 
-Index of the active item.The value must be greater than or equal to -1.The default value is **-1**, indicating that there is no active item. Values less than -1 are treated as no active item.
+Index of the active item.
+
+The value must be greater than or equal to -1.
+
+The default value is **-1**, indicating that there is no active item. Values less than -1 are treated as no active item.
 
 **Type:** number
 
@@ -66,7 +69,9 @@ Toolbar controller, which cannot be used for controlling individual toolbar item
 dividerModifier?: DividerModifier
 ```
 
-Modifier for the toolbar header divider, which can be used to customize the divider's height, color, and other attributes.Default value: system default value
+Modifier for the toolbar header divider, which can be used to customize the divider's height, color, and other attributes.
+
+Default value: system default value
 
 **Type:** [DividerModifier](arkts-arkui-dividermodifier-c.md)
 
@@ -102,7 +107,17 @@ Toolbar list.
 toolBarModifier?: ToolBarModifier
 ```
 
-Modifier for the toolbar, which can be used to set the toolbar's height, background color, padding (which only takes effect when there are fewer than five toolbar items), and whether to display the pressed state.Default value:Height of the toolbar: **56vp**Background color: **ohos_id_toolbar_bg**Padding: **24vp**Whether to display the pressed state: yes
+Modifier for the toolbar, which can be used to set the toolbar's height, background color, padding (which only takes effect when there are fewer than five toolbar items), and whether to display the pressed state.
+
+Default value:
+
+Height of the toolbar: **56vp**
+
+Background color: **ohos_id_toolbar_bg**
+
+Padding: **24vp**
+
+Whether to display the pressed state: yes
 
 **Type:** [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md)
 

@@ -1,6 +1,7 @@
 # Select
 
 The **Select** component provides a drop-down menu that allows users to select among multiple options.
+
 > **NOTE**
 
 ## Child Components
@@ -31,6 +32,9 @@ Select(options: Array<SelectOption>)
 
 | Name | Description |
 | --- | --- |
+| [MenuItemConfiguration](arkts-arkui-menuitemconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
+| [MenuOutlineOptions](arkts-arkui-menuoutlineoptions-i.md) | Defines the outline of the drop-down menu. |
+| [SelectOption](arkts-arkui-selectoption-i.md) | Provides information about the drop-down menu options. |
 
 ### Types
 
@@ -42,6 +46,9 @@ Select(options: Array<SelectOption>)
 
 | Name | Description |
 | --- | --- |
+| [ArrowPosition](arkts-arkui-arrowposition-e.md) | Enumerates arrow positions. |
+| [AvoidanceMode](arkts-arkui-avoidancemode-e.md) | Enumerates the drop-down menu avoidance modes. |
+| [MenuAlignType](arkts-arkui-menualigntype-e.md) | Enumerates drop-down menu alignment modes. |
 
 ## Examples
 

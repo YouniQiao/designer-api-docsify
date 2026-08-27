@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## getDelegatedPolicies
@@ -33,7 +33,7 @@ Queries the list of policies that can be accessed by the delegated application.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Delegation policy list. |
+| Array&lt;string&gt; | Delegation policy list. |
 
 **Error codes:**
 

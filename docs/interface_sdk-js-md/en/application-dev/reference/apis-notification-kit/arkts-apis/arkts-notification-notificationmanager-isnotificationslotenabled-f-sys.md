@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isNotificationSlotEnabled
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a notification slot type is enabled for the specified application. This API uses an asynchronous callback to return the result.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
+Checks whether a notification slot type is enabled for the specified application. This API uses an asynchronous callback to return the result.
+
+This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 9
 
@@ -26,8 +28,8 @@ Checks whether a notification slot type is enabled for the specified application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes | Bundle information of the application. |
-| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
+| type | SlotType | Yes | Notification slot type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the notification slot type is enabled, and **false** means the opposite. |
 
 **Error codes:**
@@ -70,7 +72,9 @@ notificationManager.isNotificationSlotEnabled(
 function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promise<boolean>
 ```
 
-Checks whether a notification slot type is enabled for the specified application. This API uses a promise to return the result.This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
+Checks whether a notification slot type is enabled for the specified application. This API uses a promise to return the result.
+
+This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
 **Since:** 9
 
@@ -84,14 +88,14 @@ Checks whether a notification slot type is enabled for the specified application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes | Bundle information of the application. |
-| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
+| type | SlotType | Yes | Notification slot type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the notification slot type is enabled, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the notification slot type is enabled, and **false** means the opposite. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # RdbStore
 
-Provides APIs for managing data in an RDB store.Before using the APIs of this class, use [executeSql](#executesql) to initialize the database table structure and related data.
+Provides APIs for managing data in an RDB store.
+
+Before using the APIs of this class, use [executeSql](#executesql) to initialize the database table structure and related data.
 
 **Since:** 7
 
@@ -36,7 +38,7 @@ Inserts a batch of data into a table. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Name of the target table. |
-| values | Array & lt;ValuesBucket & gt; | Yes | An array of data to insert. |
+| values | Array&lt;ValuesBucket&gt; | Yes | An array of data to insert. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
 
 **Examples**
@@ -110,13 +112,13 @@ Inserts a batch of data into a table. This API uses a promise to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Name of the target table. |
-| values | Array & lt;ValuesBucket & gt; | Yes | An array of data to insert. |
+| values | Array&lt;ValuesBucket&gt; | Yes | An array of data to insert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
+| Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
 
 **Examples**
 
@@ -277,7 +279,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes | Deletion conditions specified by the **RdbPredicates** object. |
+| predicates | RdbPredicates | Yes | Deletion conditions specified by the **RdbPredicates** object. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of rows deleted. |
 
 **Examples**
@@ -314,13 +316,13 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes | Deletion conditions specified by the **RdbPredicates** object. |
+| predicates | RdbPredicates | Yes | Deletion conditions specified by the **RdbPredicates** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the number of rows deleted. |
+| Promise&lt;number&gt; | Promise used to return the number of rows deleted. |
 
 **Examples**
 
@@ -356,7 +358,7 @@ Executes an SQL statement that contains specified arguments but returns no value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | SQL statement to run. |
-| bindArgs | Array & lt;ValueType & gt; | Yes | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, the value of this parameter must be an empty array. |
+| bindArgs | Array&lt;ValueType&gt; | Yes | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, the value of this parameter must be an empty array. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -393,13 +395,13 @@ Executes an SQL statement that contains specified arguments but returns no value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | SQL statement to run. |
-| bindArgs | Array & lt;ValueType & gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, leave this parameter blank. |
+| bindArgs | Array&lt;ValueType&gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, leave this parameter blank. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -434,7 +436,7 @@ Inserts a row of data into a table. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Name of the target table. |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Row of data to insert. |
+| values | ValuesBucket | Yes | Row of data to insert. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, the row ID will be returned. Otherwise, **-1** will be returned. |
 
 **Examples**
@@ -487,13 +489,13 @@ Inserts a row of data into a table. This API uses a promise to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Name of the target table. |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Row of data to insert. |
+| values | ValuesBucket | Yes | Row of data to insert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. If the operation is successful, the row ID will be returned. Otherwise, **-1** will be returned. |
+| Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, the row ID will be returned. Otherwise, **-1** will be returned. |
 
 **Examples**
 
@@ -620,7 +622,7 @@ Obtains the distributed table name of a remote device based on the local table n
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. If the operation succeeds, the distributed table name of the remote device is returned. |
+| Promise&lt;string&gt; | Promise used to return the result. If the operation succeeds, the distributed table name of the remote device is returned. |
 
 **Examples**
 
@@ -668,8 +670,8 @@ Unregisters the observer of the specified type from the RDB store. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event to observe. The value is **dataChange**, which indicates a data change event. |
-| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | Yes | Subscription type to register. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Data change observer registered. **Array & lt;string & gt;** indicates the ID of the peer device whose data in the database is changed. |
+| type | SubscribeType | Yes | Subscription type to register. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Data change observer registered. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
 
 **Examples**
 
@@ -708,8 +710,8 @@ Registers an observer for this RDB store. When the data in the RDB store changes
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event to observe. The value is **dataChange**, which indicates a data change event. |
-| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | Yes | Subscription type to register. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Observer that listens for the data changes in the RDB store. **Array & lt;string & gt;** indicates the ID of the peer device whose data in the database is changed. |
+| type | SubscribeType | Yes | Subscription type to register. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Observer that listens for the data changes in the RDB store. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
 
 **Examples**
 
@@ -747,8 +749,8 @@ Queries data from the RDB store based on specified conditions. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes | Query conditions specified by the **RdbPredicates** object. |
-| columns | Array & lt;string & gt; | Yes | Columns to query. If this parameter is not specified, the query applies to all columns. |
+| predicates | RdbPredicates | Yes | Query conditions specified by the **RdbPredicates** object. |
+| columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is not specified, the query applies to all columns. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful, a **ResultSet** object will be returned. |
 
 **Examples**
@@ -786,14 +788,14 @@ Queries data from the RDB store based on specified conditions. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes | Query conditions specified by the **RdbPredicates** object. |
-| columns | Array & lt;string & gt; | No | Columns to query. If this parameter is not specified, the query applies to all columns. |
+| predicates | RdbPredicates | Yes | Query conditions specified by the **RdbPredicates** object. |
+| columns | Array&lt;string&gt; | No | Columns to query. If this parameter is not specified, the query applies to all columns. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ResultSet & gt; | Promise used to return the result. If the operation is successful, a **ResultSet** object will be returned. |
+| Promise&lt;ResultSet&gt; | Promise used to return the result. If the operation is successful, a **ResultSet** object will be returned. |
 
 **Examples**
 
@@ -830,7 +832,7 @@ Queries data using the specified SQL statement. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | SQL statement to run. |
-| bindArgs | Array & lt;ValueType & gt; | Yes | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, the value of this parameter must be an empty array. |
+| bindArgs | Array&lt;ValueType&gt; | Yes | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, the value of this parameter must be an empty array. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful, a **ResultSet** object will be returned. |
 
 **Examples**
@@ -867,13 +869,13 @@ Queries data using the specified SQL statement. This API uses a promise to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sql | string | Yes | SQL statement to run. |
-| bindArgs | Array & lt;ValueType & gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, leave this parameter blank. |
+| bindArgs | Array&lt;ValueType&gt; | No | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, leave this parameter blank. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ResultSet & gt; | Promise used to return the result. If the operation is successful, a **ResultSet** object will be returned. |
+| Promise&lt;ResultSet&gt; | Promise used to return the result. If the operation is successful, a **ResultSet** object will be returned. |
 
 **Examples**
 
@@ -959,7 +961,7 @@ Sets distributed tables. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tables | Array & lt;string & gt; | Yes | Names of the distributed tables to set. |
+| tables | Array&lt;string&gt; | Yes | Names of the distributed tables to set. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Examples**
@@ -996,13 +998,13 @@ Sets distributed tables. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tables | Array & lt;string & gt; | Yes | Names of the distributed tables to set. |
+| tables | Array&lt;string&gt; | Yes | Names of the distributed tables to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -1037,8 +1039,8 @@ Synchronizes data across devices. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | Data sync mode. The value can be **push** or **pull**. |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes | RdbPredicates** object that specifies the data and devices to synchronize. |
+| mode | SyncMode | Yes | Data sync mode. The value can be **push** or **pull**. |
+| predicates | RdbPredicates | Yes | RdbPredicates** object that specifies the data and devices to synchronize. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback invoked to send the sync result to the caller.    **string** indicates the device ID.    **number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
 
 **Examples**
@@ -1096,14 +1098,14 @@ Synchronizes data across devices. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | Data sync mode. The value can be **push** or **pull**. |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes | RdbPredicates** object that specifies the data and devices to synchronize. |
+| mode | SyncMode | Yes | Data sync mode. The value can be **push** or **pull**. |
+| predicates | RdbPredicates | Yes | RdbPredicates** object that specifies the data and devices to synchronize. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;[string, number] & gt; & gt; | Promise used to send the sync result. |
+| Promise&lt;Array&lt;[string, number]&gt;&gt; | Promise used to send the sync result. |
 
 **Examples**
 
@@ -1157,8 +1159,8 @@ Updates data in the RDB store based on the specified **RdbPredicates** object. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes | Update conditions specified by the **RdbPredicates** object. |
+| values | ValuesBucket | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
+| predicates | RdbPredicates | Yes | Update conditions specified by the **RdbPredicates** object. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked to return the number of rows updated. |
 
 **Examples**
@@ -1212,14 +1214,14 @@ Updates data based on the specified **RdbPredicates** object. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes | Update conditions specified by the **RdbPredicates** object. |
+| values | ValuesBucket | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
+| predicates | RdbPredicates | Yes | Update conditions specified by the **RdbPredicates** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the number of rows updated. |
+| Promise&lt;number&gt; | Promise used to return the number of rows updated. |
 
 **Examples**
 

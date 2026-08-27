@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screenLock from '@kit.BasicServicesKit';
+import { screenLock } from '@kit.BasicServicesKit';
 ```
 
 ## setScreenLockAuthState
@@ -34,7 +34,7 @@ Set the screen lock authentication state for os account local userId.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | the promise returned by the function. |
+| Promise&lt;boolean&gt; | the promise returned by the function. |
 
 **Error codes:**
 

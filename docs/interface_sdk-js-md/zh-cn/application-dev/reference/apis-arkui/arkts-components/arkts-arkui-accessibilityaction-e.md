@@ -1,6 +1,6 @@
 # AccessibilityAction
 
-辅助功能操作类型的枚举 @enum { number }
+辅助功能操作类型的枚举@enum { number }
 
 **起始版本：** 20
 

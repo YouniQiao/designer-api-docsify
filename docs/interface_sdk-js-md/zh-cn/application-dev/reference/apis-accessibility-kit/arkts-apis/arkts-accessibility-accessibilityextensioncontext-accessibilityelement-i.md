@@ -1,6 +1,8 @@
 # AccessibilityElement
 
-无障碍节点元素，提供查询父/子元素、按内容或焦点方向查找元素、执行无障碍操作等能力，适用于无障碍辅助应用需要与界面节点交互和操作的场景。调用AccessibilityElement的方法前，先通过 [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement) 或[AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow) 获取AccessibilityElement实例。
+无障碍节点元素，提供查询父/子元素、按内容或焦点方向查找元素、执行无障碍操作等能力，适用于无障碍辅助应用需要与界面节点交互和操作的场景。
+
+调用AccessibilityElement的方法前，先通过[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement)或[AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow)获取AccessibilityElement实例。
 
 **起始版本：** 9
 
@@ -59,7 +61,7 @@ actionNames(): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise对象，返回节点元素支持的所有操作名称。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回节点元素支持的所有操作名称。 |
 
 **示例**
 
@@ -128,7 +130,7 @@ attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;T & gt; & gt; | Promise对象，返回节点元素的所有属性名称。 |
+| Promise&lt;Array&lt;T&gt;&gt; | Promise对象，返回节点元素的所有属性名称。 |
 
 **示例**
 
@@ -217,7 +219,7 @@ attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promis
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ElementAttributeValues[T] & gt; | Promise对象，返回根据节点属性名称获取的属性值。 |
+| Promise&lt;ElementAttributeValues[T]&gt; | Promise对象，返回根据节点属性名称获取的属性值。 |
 
 **错误码：**
 
@@ -262,7 +264,7 @@ findElement(type: 'content', condition: string, callback: AsyncCallback<Array<Ac
 | --- | --- | --- | --- |
 | type | 'content' | 是 | 固定为'content'，表示查找的类型为节点元素内容。 |
 | condition | string | 是 | 表示查找的关键字条件，用于匹配节点元素的文本内容。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | 是 | 回调函数。当查找节点元素成功，err为undefined，data为满足指定查询关键字的所有节点元 素；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | 是 | 回调函数。当查找节点元素成功，err为undefined，data为满足指定查询关键字的所有节点元素；否则为错误对象。 |
 
 **错误码：**
 
@@ -357,7 +359,7 @@ findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<Acc
 | --- | --- | --- | --- |
 | type | 'focusType' | 是 | 固定为'focusType'，表示查询的类型为节点的焦点元素类型。 |
 | condition | [FocusType](arkts-accessibility-focustype-t.md) | 是 | 表示查询焦点元素的类型。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数。当查找节点元素成功，err为undefined，data为满足指定查询焦点元素类型的节点元素；否则为错误 对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数。当查找节点元素成功，err为undefined，data为满足指定查询焦点元素类型的节点元素；否则为错误对象。 |
 
 **错误码：**
 
@@ -452,7 +454,7 @@ findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCa
 | --- | --- | --- | --- |
 | type | 'focusDirection' | 是 | 固定为'focusDirection'，表示查询的类型为节点的下一焦点元素方向。 |
 | condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | 是 | 表示查询下一焦点元素的方向。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数。当查找节点元素成功，err为undefined，data为满足指定查询下一焦点元素方向的节点元素；否则为 错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数。当查找节点元素成功，err为undefined，data为满足指定查询下一焦点元素方向的节点元素；否则为错误对象。 |
 
 **错误码：**
 
@@ -546,7 +548,7 @@ performAction(actionName: string, parameters: object, callback: AsyncCallback<vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | actionName | string | 是 | 表示操作的名称，取值参考[Action](arkts-accessibility-accessibility-action-t.md)。 |
-| parameters | object | 是 | 表示执行操作时所需要的参数。不同操作类型所需的参数结构不同，具体参数格式参见各Action的说明，如setSelection需传入selectTextBegin、 selectTextEnd、selectTextInForWard参数，setCursorPosition需传入offset参数。 |
+| parameters | object | 是 | 表示执行操作时所需要的参数。不同操作类型所需的参数结构不同，具体参数格式参见各Action的说明，如setSelection需传入selectTextBegin、selectTextEnd、selectTextInForWard参数，setCursorPosition需传入offset参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当执行操作成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -593,13 +595,13 @@ performAction(actionName: string, parameters?: object): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | actionName | string | 是 | 表示操作的名称，取值参考[Action](arkts-accessibility-accessibility-action-t.md)。 |
-| parameters | object | 否 | 表示执行操作时所需要的参数。不同操作需要的参数键名和值类型不同，具体取值原则参见各Action定义，如setSelection需传入selectTextBegin、 selectTextEnd、selectTextInForWard参数，setCursorPosition需传入offset参数。不传则默认为空。 |
+| parameters | object | 否 | 表示执行操作时所需要的参数。不同操作需要的参数键名和值类型不同，具体取值原则参见各Action定义，如setSelection需传入selectTextBegin、selectTextEnd、selectTextInForWard参数，setCursorPosition需传入offset参数。不传则默认为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -11,7 +11,7 @@ WebNativeMessagingExtensionAbility是ArkWeb提供的Web原生消息通信扩展�
 ## 导入模块
 
 ```TypeScript
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## 汇总

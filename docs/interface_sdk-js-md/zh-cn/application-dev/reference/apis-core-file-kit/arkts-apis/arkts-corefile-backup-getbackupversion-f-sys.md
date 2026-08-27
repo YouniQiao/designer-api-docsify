@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## getBackupVersion

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## continuousTaskId
@@ -18,7 +18,7 @@ import backgroundTaskManager from '@kit.BackgroundTasksKit';
 continuousTaskId: number
 ```
 
-长时任务ID。 取值限定为整数。
+长时任务ID。取值限定为整数。
 
 **类型：** number
 

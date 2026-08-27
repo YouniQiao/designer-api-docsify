@@ -17,7 +17,6 @@
 
 ```TypeScript
 import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
-import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUIV2';
 ```
 
 ## activateIndex
@@ -26,7 +25,9 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 activateIndex?: number
 ```
 
-激活态的子项索引。默认值：-1，表示没有激活态的子项。设置小于-1的值时按没有激活项处理。
+激活态的子项索引。
+
+默认值：-1，表示没有激活态的子项。设置小于-1的值时按没有激活项处理。
 
 **类型：** number
 
@@ -44,8 +45,11 @@ activateIndex?: number
 controller: TabsController
 ```
 
-工具栏控制器，用于关联Tabs组件页面切换，不支持控制工具栏子项。  
-**说明：**根据自定义组件成员属性访问限定符[使用限制](../../../ui/state-management/arkts-custom-components-access-restrictions.md#使用限制)，该接口属于常规成员 变量，可以传参进行初始化；也可以不传。不传时，使用组件内预设值进行初始化，组件内预设值为：new TabsController()。
+工具栏控制器，用于关联Tabs组件页面切换，不支持控制工具栏子项。
+
+**说明：**
+
+根据自定义组件成员属性访问限定符[使用限制](../../../ui/state-management/arkts-custom-components-access-restrictions.md#使用限制)，该接口属于常规成员变量，可以传参进行初始化；也可以不传。不传时，使用组件内预设值进行初始化，组件内预设值为：new TabsController()。
 
 **类型：** [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md)
 
@@ -63,7 +67,9 @@ controller: TabsController
 dividerModifier?: DividerModifier
 ```
 
-工具栏头部分割线属性，可设置分割线高度、颜色等。默认值：系统默认值。
+工具栏头部分割线属性，可设置分割线高度、颜色等。
+
+默认值：系统默认值。
 
 **类型：** DividerModifier
 
@@ -99,7 +105,17 @@ toolBarList: ToolBarOptions
 toolBarModifier?: ToolBarModifier
 ```
 
-工具栏属性，可设置工具栏高度、背景色、内边距（仅在工具栏子项数量小于5时生效）、是否显示按压态。默认值：工具栏高度：56vp背景色：ohos_id_toolbar_bg内边距：24vp显示按压态。
+工具栏属性，可设置工具栏高度、背景色、内边距（仅在工具栏子项数量小于5时生效）、是否显示按压态。
+
+默认值：
+
+工具栏高度：56vp
+
+背景色：ohos_id_toolbar_bg
+
+内边距：24vp
+
+显示按压态。
 
 **类型：** [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md)
 

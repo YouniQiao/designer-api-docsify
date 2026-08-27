@@ -1,6 +1,8 @@
 # TipsAnchorType
 
-Follow position type.@enum { number }
+Follow position type.
+
+@enum { number }
 
 **Since:** 20
 

@@ -10,7 +10,6 @@ ToolBarSymbolGlyphOptions定义图标的属性。
 
 ```TypeScript
 import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
-import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUIV2';
 ```
 
 ## activated
@@ -19,7 +18,9 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 activated?: SymbolGlyphModifier
 ```
 
-工具栏symbol图标激活态样式。默认值：fontColor：\$r('sys.color.icon_emphasize')，fontSize：24vp。
+工具栏symbol图标激活态样式。
+
+默认值：fontColor：\$r('sys.color.icon_emphasize')，fontSize：24vp。
 
 **类型：** SymbolGlyphModifier
 
@@ -37,7 +38,9 @@ activated?: SymbolGlyphModifier
 normal?: SymbolGlyphModifier
 ```
 
-工具栏symbol图标普通态样式。默认值：fontColor：\$r('sys.color.icon_primary')，fontSize：24vp。
+工具栏symbol图标普通态样式。
+
+默认值：fontColor：\$r('sys.color.icon_primary')，fontSize：24vp。
 
 **类型：** SymbolGlyphModifier
 

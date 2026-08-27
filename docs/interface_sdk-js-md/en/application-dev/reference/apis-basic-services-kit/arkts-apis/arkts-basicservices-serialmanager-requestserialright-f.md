@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import serialManager from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## requestSerialRight
@@ -28,7 +28,7 @@ Requests the permission for the application to access the serial port device. Af
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the permission is successfully requested, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the permission is successfully requested, and **false** indicates the opposite. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import reminderAgentManager from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## cancelReminderOnDisplay
@@ -28,7 +28,7 @@ Cancels the notification card displayed in the notification center with the agen
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

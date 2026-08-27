@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import storageStatistics from '@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getCurrentBundleInodes
@@ -24,7 +24,7 @@ function getCurrentBundleInodes(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回当前应用的inode占用量。 |
+| Promise&lt;number&gt; | Promise对象，返回当前应用的inode占用量。 |
 
 **错误码：**
 

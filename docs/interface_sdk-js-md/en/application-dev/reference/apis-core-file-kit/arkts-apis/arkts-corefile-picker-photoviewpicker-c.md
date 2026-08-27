@@ -13,7 +13,7 @@ Provides APIs for selecting and saving images or videos. You are advised to use 
 ## Modules to Import
 
 ```TypeScript
-import picker from '@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -176,7 +176,7 @@ Starts a **photoPicker** page for the user to save one or more images or videos.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the URIs of the images or videos saved. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the images or videos saved. |
 
 **Examples**
 
@@ -358,13 +358,13 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [PhotoSelectOptions](arkts-corefile-picker-photoselectoptions-c.md) | No | Options for selecting images or videos. If this parameter is not specified, images and videos are selected by default. A maximum of 50 files can be selected. |
+| option | PhotoSelectOptions | No | Options for selecting images or videos. If this parameter is not specified, images and videos are selected by default. A maximum of 50 files can be selected. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PhotoSelectResult & gt; | Promise used to return the URIs of the images or videos selected. |
+| Promise&lt;PhotoSelectResult&gt; | Promise used to return the URIs of the images or videos selected. |
 
 **Examples**
 
@@ -412,7 +412,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [PhotoSelectOptions](arkts-corefile-picker-photoselectoptions-c.md) | Yes | Options for selecting images or videos. |
+| option | PhotoSelectOptions | Yes | Options for selecting images or videos. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return the images or videos selected.    **Note：**: The **photoUris** in the **PhotoSelectResult** object returned by this API can be used only by [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets). For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
 
 **Examples**

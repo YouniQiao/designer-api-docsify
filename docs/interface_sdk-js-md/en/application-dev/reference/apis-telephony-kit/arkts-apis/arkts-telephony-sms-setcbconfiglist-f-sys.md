@@ -31,7 +31,7 @@ Turn on Cell BroadCast by list.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the setCBConfigList. |
+| Promise&lt;void&gt; | The promise returned by the setCBConfigList. |
 
 **Error codes:**
 

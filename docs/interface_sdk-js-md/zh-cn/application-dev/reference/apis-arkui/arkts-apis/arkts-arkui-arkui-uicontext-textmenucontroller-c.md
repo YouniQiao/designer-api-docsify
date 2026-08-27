@@ -245,7 +245,7 @@ setMenuOptions(options: TextMenuOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TextMenuOptions](arkts-arkui-textmenuoptions-i.md) | 是 | 设置菜单选项，用于控制文本选择菜单的显示模式。 默认值：{showMode: TextMenuShowMode.DEFAULT}。 |
+| options | [TextMenuOptions](arkts-arkui-textmenuoptions-i.md) | 是 | 设置菜单选项，用于控制文本选择菜单的显示模式。默认值：{showMode: TextMenuShowMode.DEFAULT}。 |
 
 **示例**
 

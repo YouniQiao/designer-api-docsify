@@ -11,7 +11,7 @@ Provides DialogAbility information, including the bundle name, module name, and 
 ## Modules to Import
 
 ```TypeScript
-import dialogSession from '@kit.AbilityKit';
+import { dialogSession } from '@kit.AbilityKit';
 ```
 
 ## abilityIconId
@@ -164,7 +164,8 @@ Installation directory of the application.
 installSource?: string
 ```
 
-Installation source of the application. The options are as follows:  
+Installation source of the application. The options are as follows:
+
 - **pre-installed**: pre-installed application installed during the first boot.  
 - **ota**: pre-installed application added during system upgrade.  
 - **recovery**: pre-installed application manually restored by the user after uninstallation.  

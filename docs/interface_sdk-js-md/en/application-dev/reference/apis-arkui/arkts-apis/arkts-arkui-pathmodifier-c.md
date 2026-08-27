@@ -1,6 +1,8 @@
 # PathModifier
 
-Defines Path Modifier@extends PathAttribute @implements AttributeModifier&lt;PathAttribute&gt;
+Defines Path Modifier
+
+@extends PathAttribute @implements AttributeModifier&lt;PathAttribute&gt;
 
 **Inheritance/Implementation:** PathModifier extends [PathAttribute](../arkts-components/arkts-arkui-path-attribute.md#pathattribute) and implements AttributeModifier<PathAttribute>
 

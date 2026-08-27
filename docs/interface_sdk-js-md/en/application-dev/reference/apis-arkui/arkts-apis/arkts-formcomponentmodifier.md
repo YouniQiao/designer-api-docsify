@@ -7,5 +7,5 @@
 
 | Name | Description |
 | --- | --- |
-| [FormComponentModifier](arkts-arkui-formcomponentmodifier-c-sys.md) | Defines FormComponent Modifier@extends FormComponentAttribute @implements AttributeModifier & lt;FormComponentAttribute & gt; |
+| [FormComponentModifier](arkts-arkui-formcomponentmodifier-c-sys.md) | Defines FormComponent Modifier |
 <!--DelEnd-->

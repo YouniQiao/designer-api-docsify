@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import dialogSession from '@kit.AbilityKit';
+import { dialogSession } from '@kit.AbilityKit';
 ```
 
 ## abilityIconId
@@ -164,7 +164,8 @@ codePath?: string
 installSource?: string
 ```
 
-表示应用程序的安装来源，支持的取值如下：  
+表示应用程序的安装来源，支持的取值如下：
+
 - pre-installed：表示首次开机时安装的预置应用。  
 - ota：表示系统升级时新增的预置应用。  
 - recovery：表示用户卸载后又手动恢复的预置应用。  

@@ -48,7 +48,8 @@ DENIED = 2
 GRANTED_ONCE = 3
 ```
 
-本次允许。  
+本次允许。
+
 **说明：** 在应用退出时该授权记录会被清除
 
 **起始版本：** 22
@@ -61,9 +62,13 @@ GRANTED_ONCE = 3
 GRANTED_ALWAYS = 4
 ```
 
-始终允许。  
-**说明：**当接收到以下公共事件时，相关授权记录将被清除：
-[COMMON_EVENT_PACKAGE_ADDED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_added)、 [COMMON_EVENT_PACKAGE_REMOVED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_removed)、 [COMMON_EVENT_BUNDLE_REMOVED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_bundle_removed)、 [COMMON_EVENT_PACKAGE_FULLY_REMOVED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_fully_removed)、 [COMMON_EVENT_PACKAGE_CHANGED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_changed)。
+始终允许。
+
+**说明：**
+
+当接收到以下公共事件时，相关授权记录将被清除：
+
+[COMMON_EVENT_PACKAGE_ADDED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_added)、[COMMON_EVENT_PACKAGE_REMOVED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_removed)、[COMMON_EVENT_BUNDLE_REMOVED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_bundle_removed)、[COMMON_EVENT_PACKAGE_FULLY_REMOVED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_fully_removed)、[COMMON_EVENT_PACKAGE_CHANGED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_changed)。
 
 **起始版本：** 22
 

@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-ipckit-->
 
-- [@ohos.rpc](arkts-rpc.md)
+- [@ohos.rpc(RPC通信)](arkts-rpc.md)
   - [Ashmem](arkts-ipc-rpc-ashmem-c.md)
   - [CallingInfo](arkts-ipc-rpc-callinginfo-c.md)
   - [IPCSkeleton](arkts-ipc-rpc-ipcskeleton-c.md)

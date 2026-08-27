@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## param
@@ -20,7 +20,7 @@ import photoAccessHelper from '@kit.MediaLibraryKit';
 param?: string
 ```
 
-可选附加参数。 最大长度为500且不能为空。
+可选附加参数。最大长度为500且不能为空。
 
 **类型：** string
 
@@ -38,7 +38,7 @@ param?: string
 taskId: string
 ```
 
-要停止的任务ID。 最大长度为100且不能为空。
+要停止的任务ID。最大长度为100且不能为空。
 
 **类型：** string
 

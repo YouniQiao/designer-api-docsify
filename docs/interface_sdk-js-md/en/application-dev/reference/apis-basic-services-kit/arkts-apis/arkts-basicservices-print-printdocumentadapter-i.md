@@ -9,7 +9,7 @@ Provides information about the document to print. This API must be implemented b
 ## Modules to Import
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## onJobStateChanged
@@ -90,7 +90,7 @@ Sends an empty PDF file descriptor to a third-party application. The third-party
 | oldAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | Old print attributes. |
 | newAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | New print attributes. |
 | fd | number | Yes | PDF file descriptor sent to the API caller. |
-| writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) = & gt; void | Yes | Callback used to print the updated file. |
+| writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) =&gt; void | Yes | Callback used to print the updated file. |
 
 **Error codes:**
 

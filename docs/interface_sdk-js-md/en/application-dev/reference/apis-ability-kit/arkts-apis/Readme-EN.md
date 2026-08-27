@@ -43,7 +43,7 @@
   - [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md)
   - [terminateSelf](arkts-ability-particleability-terminateself-f.md)
   - [ErrorCode](arkts-ability-particleability-errorcode-e.md)
-- [@ohos.ability.screenLockFileManager](arkts-ability-screenlockfilemanager.md)
+- [@ohos.ability.screenLockFileManager(Sensitive Data Access Management Under Lock Screen)](arkts-ability-screenlockfilemanager.md)
   - [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md)
   <!--Del-->
   - [acquireAccess(system api)](arkts-ability-screenlockfilemanager-acquireaccess-f-sys.md)<!--DelEnd-->
@@ -63,7 +63,7 @@
   - [Flags](arkts-ability-wantconstant-flags-depr-e.md)
   <!--Del-->
   - [Flags(system api)](arkts-ability-wantconstant-flags-depr-e-sys.md)<!--DelEnd-->
-- [@ohos.abilityAccessCtrl](arkts-abilityaccessctrl.md)
+- [@ohos.abilityAccessCtrl(Application Access Control)](arkts-abilityaccessctrl.md)
   - [abilityAccessCtrl](arkts-ability-abilityaccessctrl-n.md)
     - [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md)
     - [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md)
@@ -82,7 +82,7 @@
   - [Context](arkts-ability-context-t.md)
   - [PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)
 <!--Del-->
-- [@ohos.abilityToolAccessCtrl](arkts-abilitytoolaccessctrl.md)<!--DelEnd-->
+- [@ohos.abilityToolAccessCtrl(This module provides the capabilities of tools access control)](arkts-abilitytoolaccessctrl.md)<!--DelEnd-->
   <!--Del-->
   - [generateControlledDevicePackage(system api)](arkts-ability-abilitytoolaccessctrl-generatecontrolleddevicepackage-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -327,7 +327,7 @@
 - [@ohos.app.ability.appMemoryOptimizer](arkts-app-ability-appmemoryoptimizer.md)
   - [evictFilePages](arkts-ability-appmemoryoptimizer-evictfilepages-f.md)
   - [evictModuleFilePages](arkts-ability-appmemoryoptimizer-evictmodulefilepages-f.md)
-- [@ohos.app.ability.appRecovery](arkts-app-ability-apprecovery.md)
+- [@ohos.app.ability.appRecovery(Application Recovery)](arkts-app-ability-apprecovery.md)
   - [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)
   - [restartApp](arkts-ability-apprecovery-restartapp-f.md)
   - [saveAppState](arkts-ability-apprecovery-saveappstate-f.md)
@@ -511,7 +511,7 @@
   - [EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md)
 - [@ohos.app.ability.EnvironmentCallback](arkts-app-ability-environmentcallback.md)
   - [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md)
-- [@ohos.app.ability.errorManager](arkts-app-ability-errormanager.md)
+- [@ohos.app.ability.errorManager(Error Management Module)](arkts-app-ability-errormanager.md)
   - [off](arkts-ability-errormanager-off-f.md)
   - [on](arkts-ability-errormanager-on-f.md)
   - [setDefaultErrorHandler](arkts-ability-errormanager-setdefaulterrorhandler-f.md)
@@ -1040,7 +1040,7 @@
   <!--Del-->
   - [UninstallComponentType(system api)](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.bundle.appDomainVerify](arkts-bundle-appdomainverify.md)<!--DelEnd-->
+- [@ohos.bundle.appDomainVerify(Define capabilities to access app domain verification info.)](arkts-bundle-appdomainverify.md)<!--DelEnd-->
   <!--Del-->
   - [queryAssociatedBundleNames(system api)](arkts-ability-appdomainverify-queryassociatedbundlenames-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1525,7 +1525,7 @@
   - [MissionParameter(system api)](arkts-ability-distributedmissionmanager-missionparameter-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ContinueState(system api)](arkts-ability-distributedmissionmanager-continuestate-e-sys.md)<!--DelEnd-->
-- [@ohos.privacyManager](arkts-privacymanager.md)
+- [@ohos.privacyManager(Privacy Management)](arkts-privacymanager.md)
   <!--Del-->
   - [addPermissionUsedRecord(system api)](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1597,7 +1597,7 @@
   <!--Del-->
   - [LifecycleForm(system api)](arkts-ability-lifecycle-lifecycleform-i-sys.md)<!--DelEnd-->
   - [LifecycleService](arkts-ability-lifecycle-lifecycleservice-i.md)
-- [permissions](arkts-permissions.md)
+- [permissions(Defines all permissions.)](arkts-permissions.md)
   - [Permissions](arkts-ability-permissions-t.md)
 - ability<!--arkts-abilitykit-ability-->
   - [abilityResult](arkts-abilityresult.md)

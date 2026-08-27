@@ -40,7 +40,7 @@ actionCode: Callback<Callback<boolean>>
 bundleName?: string
 ```
 
-被测应用包名，格式要求与应用的bundleName一致。当需要测试非当前应用的性能数据时，传入目标应用的包名。 默认为""，框架在执行测试时测试当前应用的性能数据。
+被测应用包名，格式要求与应用的bundleName一致。当需要测试非当前应用的性能数据时，传入目标应用的包名。默认为""，框架在执行测试时测试当前应用的性能数据。
 
 **类型：** string
 
@@ -88,7 +88,7 @@ metrics: Array<PerfMetric>
 resetCode?: Callback<Callback<boolean>>
 ```
 
-测试结束环境重置代码段。 当测试代码段修改了全局状态（如全局变量、配置等）需要在每轮测试后重置时传入此参数。 默认为空，框架在执行测试时不执行此代码段。 入参为回调函数，需在代码段中主动调用以通知框架执行完成，否则会导致执行超时。
+测试结束环境重置代码段。当测试代码段修改了全局状态（如全局变量、配置等）需要在每轮测试后重置时传入此参数。默认为空，框架在执行测试时不执行此代码段。入参为回调函数，需在代码段中主动调用以通知框架执行完成，否则会导致执行超时。
 
 **类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
@@ -104,7 +104,7 @@ resetCode?: Callback<Callback<boolean>>
 timeout?: number
 ```
 
-单次代码段（actionCode/resetCode）执行的超时时间，取值范围为大于0的整数，单位：ms，默认值为10000ms。 当测试代码段执行耗时较长时，可适当增大此值以避免超时，超时后将触发异常，并终止测试执行。
+单次代码段（actionCode/resetCode）执行的超时时间，取值范围为大于0的整数，单位：ms，默认值为10000ms。当测试代码段执行耗时较长时，可适当增大此值以避免超时，超时后将触发异常，并终止测试执行。
 
 **类型：** number
 

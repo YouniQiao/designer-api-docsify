@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import reminderAgentManager from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## getExcludeDates
@@ -22,13 +22,13 @@ function getExcludeDates(reminderId: number): Promise<Array<Date>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reminderId | number | 是 | 需要查询不提醒日期的代理提醒id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md) 时作为返回值返回。 |
+| reminderId | number | 是 | 需要查询不提醒日期的代理提醒id。代理提醒id会在[发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md)时作为返回值返回。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;Date & gt; & gt; | Promise对象。返回特定日历设置的所有不提醒日期。 |
+| Promise&lt;Array&lt;Date&gt;&gt; | Promise对象。返回特定日历设置的所有不提醒日期。 |
 
 **错误码：**
 

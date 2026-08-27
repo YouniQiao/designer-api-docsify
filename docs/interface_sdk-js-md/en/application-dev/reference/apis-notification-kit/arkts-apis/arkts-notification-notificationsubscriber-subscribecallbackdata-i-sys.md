@@ -32,7 +32,8 @@ Notification classification information. It exists only when **enableClassificat
 readonly reason?: number
 ```
 
-Reason for deletion. The options are as follows:  
+Reason for deletion. The options are as follows:
+
 - **1**: The notification is deleted after being tapped.  
 - **2**: The notification is deleted by the user.
 

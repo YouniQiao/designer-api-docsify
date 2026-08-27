@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## sppListen
@@ -31,7 +31,7 @@ Creates a Bluetooth server listening socket. On API 10 and above, the permission
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the service name. |
-| option | [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md) | Yes | Indicates the listen parameters [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md). |
+| option | SppOption | Yes | Indicates the listen parameters [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a server socket ID. |
 
 **Error codes:**

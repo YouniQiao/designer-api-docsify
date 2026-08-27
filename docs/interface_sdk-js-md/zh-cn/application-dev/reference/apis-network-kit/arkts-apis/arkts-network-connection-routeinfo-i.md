@@ -73,7 +73,8 @@ interface: string
 isDefaultRoute: boolean
 ```
 
-是否为默认路由。true：默认路由；false：非默认路由。  
+是否为默认路由。true：默认路由；false：非默认路由。
+
 **说明：** IPv4默认路由是指目的地址为0.0.0.0/0的路由；IPv6默认路由是指目的地址为::/0的路由。
 
 **类型：** boolean

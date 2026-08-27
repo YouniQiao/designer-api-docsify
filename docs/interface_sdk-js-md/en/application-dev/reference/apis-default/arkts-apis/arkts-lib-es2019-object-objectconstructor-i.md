@@ -17,7 +17,7 @@ Returns an object created by key-value entries for properties and methods
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | Iterable & lt;readonly [PropertyKey, T] & gt; | Yes |  |
+| entries | Iterable&lt;readonly [PropertyKey, T]&gt; | Yes |  |
 
 **Return value:**
 
@@ -35,7 +35,7 @@ Returns an object created by key-value entries for properties and methods
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | Iterable & lt;readonly any[] & gt; | Yes |  |
+| entries | Iterable&lt;readonly any[]&gt; | Yes |  |
 
 **Return value:**
 

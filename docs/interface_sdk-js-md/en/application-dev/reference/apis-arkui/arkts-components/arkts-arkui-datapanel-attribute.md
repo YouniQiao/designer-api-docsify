@@ -1,6 +1,10 @@
 # DataPanel properties/events
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.@extends CommonMethod [since 7 - 10] @extends CommonMethod&lt;DataPanelAttribute&gt; [since 11]
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
+
+The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
+
+@extends CommonMethod [since 7 - 10] @extends CommonMethod&lt;DataPanelAttribute&gt; [since 11]
 
 **Inheritance/Implementation:** DataPanelAttribute extends CommonMethod<DataPanelAttribute>
 

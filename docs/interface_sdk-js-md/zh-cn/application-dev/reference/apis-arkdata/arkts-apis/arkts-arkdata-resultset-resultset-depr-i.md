@@ -516,7 +516,9 @@ const isColumnNull = resultSet.isColumnNull(resultSet.getColumnIndex("CODES"));
 columnCount: number
 ```
 
-columnCount: number获取结果集中的列数。
+columnCount: number
+
+获取结果集中的列数。
 
 **类型：** number
 
@@ -534,7 +536,9 @@ columnCount: number获取结果集中的列数。
 columnNames: Array<string>
 ```
 
-columnNames: Array&lt;string&gt;获取结果集中所有列的名称。
+columnNames: Array&lt;string&gt;
+
+获取结果集中所有列的名称。
 
 **类型：** Array&lt;string&gt;
 
@@ -552,7 +556,9 @@ columnNames: Array&lt;string&gt;获取结果集中所有列的名称。
 isAtFirstRow: boolean
 ```
 
-isAtFirstRow: boolean检查结果集是否位于第一行。
+isAtFirstRow: boolean
+
+检查结果集是否位于第一行。
 
 **类型：** boolean
 
@@ -570,7 +576,9 @@ isAtFirstRow: boolean检查结果集是否位于第一行。
 isAtLastRow: boolean
 ```
 
-isAtLastRow: boolean检查结果集是否位于最后一行。
+isAtLastRow: boolean
+
+检查结果集是否位于最后一行。
 
 **类型：** boolean
 
@@ -588,7 +596,9 @@ isAtLastRow: boolean检查结果集是否位于最后一行。
 isClosed: boolean
 ```
 
-isClosed: boolean检查当前结果集是否关闭。
+isClosed: boolean
+
+检查当前结果集是否关闭。
 
 **类型：** boolean
 
@@ -606,7 +616,9 @@ isClosed: boolean检查当前结果集是否关闭。
 isEnded: boolean
 ```
 
-isEnded: boolean检查结果集是否位于最后一行之后。
+isEnded: boolean
+
+检查结果集是否位于最后一行之后。
 
 **类型：** boolean
 
@@ -624,7 +636,9 @@ isEnded: boolean检查结果集是否位于最后一行之后。
 isStarted: boolean
 ```
 
-isStarted: boolean检查指针是否移动过。
+isStarted: boolean
+
+检查指针是否移动过。
 
 **类型：** boolean
 
@@ -642,7 +656,9 @@ isStarted: boolean检查指针是否移动过。
 rowCount: number
 ```
 
-rowCount: number获取结果集中的行数。
+rowCount: number
+
+获取结果集中的行数。
 
 **类型：** number
 
@@ -660,7 +676,9 @@ rowCount: number获取结果集中的行数。
 rowIndex: number
 ```
 
-rowIndex: number获取结果集当前行的索引。
+rowIndex: number
+
+获取结果集当前行的索引。
 
 **类型：** number
 

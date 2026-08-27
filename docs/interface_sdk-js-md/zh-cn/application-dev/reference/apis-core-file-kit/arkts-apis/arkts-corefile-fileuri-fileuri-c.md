@@ -1,6 +1,8 @@
 # FileUri
 
-FileUri表示文件的URI，继承自uri.URI。@extends uri.URI
+FileUri表示文件的URI，继承自uri.URI。
+
+@extends uri.URI
 
 **继承/实现关系：** FileUri extends uri.URI
 
@@ -11,7 +13,7 @@ FileUri表示文件的URI，继承自uri.URI。@extends uri.URI
 ## 导入模块
 
 ```TypeScript
-import fileUri from '@kit.CoreFileKit';
+import { fileUri } from '@kit.CoreFileKit';
 ```
 
 ## constructor

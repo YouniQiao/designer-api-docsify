@@ -9,8 +9,7 @@ Enumerates the lockout status of an identity authentication type. This API is us
 ## Modules to Import
 
 ```TypeScript
-import userAuth from '@kit.UserAuthenticationKit';
-import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## isLocked
@@ -35,7 +34,9 @@ Whether the authentication is locked. The value **true** indicates that the auth
 lockoutDuration: number
 ```
 
-Remaining lockout duration, in milliseconds. This parameter is valid only when **isLocked** is set to **true**.If the authenticator is permanently locked, the value is [PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#permanent_lockout_duration), indicating that the authenticator has been permanently locked. The user needs to perform PIN authentication before using the authentication type again. If the authenticator is temporarily locked, the value is the actual remaining lockout duration. After the lockout period ends, the user can continue to attempt authentication.
+Remaining lockout duration, in milliseconds. This parameter is valid only when **isLocked** is set to **true**.
+
+If the authenticator is permanently locked, the value is [PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#permanent_lockout_duration), indicating that the authenticator has been permanently locked. The user needs to perform PIN authentication before using the authentication type again. If the authenticator is temporarily locked, the value is the actual remaining lockout duration. After the lockout period ends, the user can continue to attempt authentication.
 
 **Type:** number
 

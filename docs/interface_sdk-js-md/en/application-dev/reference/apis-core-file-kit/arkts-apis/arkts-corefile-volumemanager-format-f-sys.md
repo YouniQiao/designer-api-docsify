@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import volumeManager from '@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## format
@@ -82,7 +82,7 @@ Formats a volume. This API uses a promise to return the result. Currently, only 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

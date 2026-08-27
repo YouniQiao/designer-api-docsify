@@ -1,6 +1,8 @@
 # AudioLoopbackEqualizerPreset
 
-表示返听均衡器类型的枚举。@enum { number }
+表示返听均衡器类型的枚举。
+
+@enum { number }
 
 **起始版本：** 21
 

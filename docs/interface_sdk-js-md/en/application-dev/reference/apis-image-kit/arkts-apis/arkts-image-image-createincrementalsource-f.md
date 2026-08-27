@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## CreateIncrementalSource
@@ -12,7 +12,12 @@ import image from '@kit.ImageKit';
 function CreateIncrementalSource(buf: ArrayBuffer): ImageSource
 ```
 
-Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.The ImageSource instance created in incremental mode supports the following capabilities (applicable to synchronous, callback, and promise modes):  
+Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information.
+
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+
+The ImageSource instance created in incremental mode supports the following capabilities (applicable to synchronous, callback, and promise modes):
+
 - Obtaining image information: Call  
 [getImageInfo](arkts-image-image-imagesource-i.md#getimageinfo) to obtain image information by index, or call [getImageInfo](arkts-image-image-imagesource-i.md#getimageinfo) to directly obtain image information.  
 - Obtaining an image property: Call  
@@ -40,7 +45,7 @@ Creates an ImageSource instance in incremental mode based on buffers. Such an in
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -73,7 +78,9 @@ async function CreateIncrementalImageSource(context : Context) {
 function CreateIncrementalSource(buf: ArrayBuffer, options?: SourceOptions): ImageSource
 ```
 
-Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information.The capabilities supported by the ImageSource instance created by this API are the same as those supported by the instance created by [CreateIncrementalSource(buf: ArrayBuffer): ImageSource](#createincrementalsource). Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information.
+
+The capabilities supported by the ImageSource instance created by this API are the same as those supported by the instance created by [CreateIncrementalSource(buf: ArrayBuffer): ImageSource](#createincrementalsource). Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -90,7 +97,7 @@ Creates an ImageSource instance in incremental mode based on buffers. Such an in
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 

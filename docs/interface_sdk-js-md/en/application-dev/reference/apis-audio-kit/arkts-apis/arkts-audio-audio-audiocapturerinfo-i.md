@@ -9,8 +9,7 @@ Describes audio capturer information.
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## capturerFlags
@@ -19,7 +18,9 @@ import audioHaptic from '@kit.AudioKitHaptic';
 capturerFlags: number
 ```
 
-Flags that control the capturer behavior.Set this parameter to **0**.
+Flags that control the capturer behavior.
+
+Set this parameter to **0**.
 
 **Type:** number
 

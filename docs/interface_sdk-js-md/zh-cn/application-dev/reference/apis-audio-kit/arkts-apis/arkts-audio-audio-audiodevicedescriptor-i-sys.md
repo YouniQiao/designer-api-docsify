@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## dmDeviceInfo
@@ -19,7 +18,11 @@ import audioHaptic from '@kit.AudioKitHaptic';
 readonly dmDeviceInfo?: string
 ```
 
-分布式设备扩展信息，包括设备是否支持立体声、设备序列号等。此接口仅可在Stage模型下使用。SystemCapability.Multimedia.Audio.Core
+分布式设备扩展信息，包括设备是否支持立体声、设备序列号等。
+
+此接口仅可在Stage模型下使用。
+
+SystemCapability.Multimedia.Audio.Core
 
 **类型：** string
 
@@ -37,7 +40,9 @@ readonly dmDeviceInfo?: string
 readonly dmDeviceType?: number
 ```
 
-设备的子类型ID。SystemCapability.Multimedia.Audio.Core
+设备的子类型ID。
+
+SystemCapability.Multimedia.Audio.Core
 
 **类型：** number
 
@@ -53,7 +58,9 @@ readonly dmDeviceType?: number
 readonly highQualityRecordingSupported?: boolean
 ```
 
-是否支持高品质录音。true表示支持，false表示不支持。SystemCapability.Multimedia.Audio.Core
+是否支持高品质录音。true表示支持，false表示不支持。
+
+SystemCapability.Multimedia.Audio.Core
 
 **类型：** boolean
 
@@ -69,7 +76,9 @@ readonly highQualityRecordingSupported?: boolean
 readonly interruptGroupId: number
 ```
 
-设备所处的焦点组ID。SystemCapability.Multimedia.Audio.Device
+设备所处的焦点组ID。
+
+SystemCapability.Multimedia.Audio.Device
 
 **类型：** number
 
@@ -85,7 +94,9 @@ readonly interruptGroupId: number
 readonly networkId: string
 ```
 
-设备组网的ID。SystemCapability.Multimedia.Audio.Device
+设备组网的ID。
+
+SystemCapability.Multimedia.Audio.Device
 
 **类型：** string
 
@@ -101,7 +112,9 @@ readonly networkId: string
 readonly volumeGroupId: number
 ```
 
-设备所处的音量组ID。SystemCapability.Multimedia.Audio.Device
+设备所处的音量组ID。
+
+SystemCapability.Multimedia.Audio.Device
 
 **类型：** number
 

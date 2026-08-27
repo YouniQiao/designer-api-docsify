@@ -9,7 +9,7 @@ The autoStartupManager module provides APIs for an application to query whether 
 ## Modules to Import
 
 ```TypeScript
-import autoStartupManager from '@kit.AbilityKit';
+import { autoStartupManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import vpn from '@kit.NetworkKit';
-import vpnExtension from '@kit.NetworkKitExtension';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## deleteSysVpnConfig
@@ -33,7 +32,7 @@ Delete the configuration of system VPN network by the specified vpnId.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

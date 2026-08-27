@@ -1,6 +1,8 @@
 # CustomContentDialogV2
 
-Declare custom content dialog@struct { CustomContentDialogV2 }
+Declare custom content dialog
+
+@struct { CustomContentDialogV2 }
 
 **Since:** 18
 

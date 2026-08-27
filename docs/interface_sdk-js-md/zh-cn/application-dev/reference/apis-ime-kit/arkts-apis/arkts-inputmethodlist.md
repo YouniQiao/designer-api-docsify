@@ -85,11 +85,68 @@ import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [InputMethodListDialog(输入法切换列表控件)](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md) | 输入法切换列表弹窗控件。以弹窗形式展示当前系统中已安装的输入法应用列表，支持用户在输入法之间进行切换；对于默认输入法，还提供键盘模式（如单手模式、全屏模式等）的切换入口。 使用场景：当系统应用或输入法应用需要为用户提供可视化的输入法选择和切换功能时使用此控件。例如，在系统设置应用中允许用户选择不同输入法，或在输入法应用中允许用户切换到其他输入法或切换当前输入法的键盘模式。 使用后效果：调用此控件后，将弹出输入法切换列表弹窗。用户在弹窗中选择输入法后，系统将切换到指定的输入法；若用户选择了默认输入法的模式选项，系统将按指定模式显示键盘布局。 相似接口差异点及选取原则：与[inputMethod.switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md)接口相比，本控件提供了可视化的输入 法选择界面，适用于需要交互式选择界面的场景；switchInputMethod接口适用于程序化切换输入法的场景，无需用户手动选择。 使用限制：本组件仅系统应用和输入法应用可调用，patternOptions参数仅系统预置输入法支持。注意事项：  - 前提条件：需先创建[CustomDialogController](../../apis-arkui/arkts-apis/arkts-arkui-customdialogcontroller-c.md)实例并关联InputMethodListDialog，再通过controller的open()方法打开弹  窗。  - 本组件不支持通用属性和通用事件。 |
+| [InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md) | 输入法切换列表弹窗控件。以弹窗形式展示当前系统中已安装的输入法应用列表，支持用户在输入法之间进行切换；对于默认输入法，还提供键盘模式（如单手模式、全屏模式等）的切换入口。使用场景：当系统应用或输入法应用需要为用户提供可视化的输入法选择和切换功能时使用此控件。例如，在系统设置应用中允许用户选择不同输入法，或在输入法应用中允许用户切换到其他输入法或切换当前输入法的键盘模式。使用后效果：调用此控件后，将弹出输入法切换列表弹窗。用户在弹窗中选择输入法后，系统将切换到指定的输入法；若用户选择了默认输入法的模式选项，系统将按指定模式显示键盘布局。相似接口差异点及选取原则：与[inputMethod.switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md)接口相比，本控件提供了可视化的输入法选择界面，适用于需要交互式选择界面的场景；switchInputMethod接口适用于程序化切换输入法的场景，无需用户手动选择。使用限制：本组件仅系统应用和输入法应用可调用，patternOptions参数仅系统预置输入法支持。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [Pattern(输入法切换列表控件)](arkts-ime-inputmethodlist-pattern-i.md) | 输入法模式选项的图标资源定义，用于配置键盘模式在弹窗中的视觉表现。仅当前输入法（即系统预置输入法）可使用。 |
-| [PatternOptions(输入法切换列表控件)](arkts-ime-inputmethodlist-patternoptions-i.md) | 输入法模式选项配置，用于定义键盘模式的切换选项。 |
+| [Pattern](arkts-ime-inputmethodlist-pattern-i.md) | 输入法模式选项的图标资源定义，用于配置键盘模式在弹窗中的视觉表现。仅当前输入法（即系统预置输入法）可使用。 |
+| [PatternOptions](arkts-ime-inputmethodlist-patternoptions-i.md) | 输入法模式选项配置，用于定义键盘模式的切换选项。 |
+
+## 示例
+
+```TypeScript
+import { PatternOptions, InputMethodListDialog } from '@kit.IMEKit';
+
+@Entry
+// 设置组件
+@Component
+struct SettingsItem {
+  @State defaultPattern: number = 1;
+  private oneHandAction: PatternOptions = {
+    defaultSelected: this.defaultPattern,
+    patterns: [ // patterns中的图标需要在工程的resource中添加对应图标资源后使用
+      {
+        icon: $r('app.media.hand_icon'), // 此处为输入法模式选项的图标资源，例如单手模式图标
+        selectedIcon: $r('app.media.hand_icon_selected') // 此处为输入法模式选项的图标资源选中状态，例如单手模式选中状态的图标
+      },
+      {
+        icon: $r('app.media.hand_icon1'),
+        selectedIcon: $r('app.media.hand_icon_selected1')
+      },
+      {
+        icon: $r('app.media.hand_icon2'),
+        selectedIcon: $r('app.media.hand_icon_selected2')
+      }],
+    // 模式选项改变时的回调函数
+    action: (index: number) => {
+      console.info(`pattern is changed, current is ${index}`);
+      this.defaultPattern = index; // 更新默认选择的模式
+    }
+  };
+  // 创建自定义对话框控制器
+  private listController: CustomDialogController = new CustomDialogController({
+    builder: InputMethodListDialog({ patternOptions: this.oneHandAction }), // 构建输入法切换列表弹窗
+    customStyle: true,
+    maskColor: '#00000000'
+  });
+
+  build() {
+    Column() {
+      Flex({
+        direction: FlexDirection.Column,
+        alignItems: ItemAlign.Center, 
+        justifyContent: FlexAlign.Center 
+      }) {
+        Text('输入法切换列表').fontSize(20)
+      }
+    }
+    .width('13%')
+    .id('bindInputMethod')
+    .onClick((event?: ClickEvent) => {
+      this.listController.open();
+    })
+  }
+}
+```

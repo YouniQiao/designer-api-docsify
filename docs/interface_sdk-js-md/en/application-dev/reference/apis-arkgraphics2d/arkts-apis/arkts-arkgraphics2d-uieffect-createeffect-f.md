@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import uiEffect from '@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## createEffect
@@ -24,11 +24,11 @@ Creates a VisualEffect instance for adding multiple VisualEffect effects to a co
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns a VisualEffect instance, which supports adding multiple VisualEffect effects. |
+| VisualEffect | Returns a VisualEffect instance, which supports adding multiple VisualEffect effects. |
 
 **Examples**
 
 ```TypeScript
 // Create a VisualEffect instance
-let visualEffect : uiEffect.VisualEffect = uiEffect.createEffect();
+let visualEffect: uiEffect.VisualEffect = uiEffect.createEffect();
 ```

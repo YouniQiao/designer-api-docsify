@@ -168,7 +168,7 @@ Called to notify the ArkWeb engine of the network status of the player when the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [NetworkState](../../apis-telephony-kit/arkts-apis/arkts-telephony-radio-networkstate-i.md) | Yes | Network status of the player. |
+| state | NetworkState | Yes | Network status of the player. |
 
 **Examples**
 

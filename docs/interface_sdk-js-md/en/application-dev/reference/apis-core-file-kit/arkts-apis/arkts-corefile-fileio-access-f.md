@@ -32,7 +32,7 @@ Checks whether this process can access a file. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

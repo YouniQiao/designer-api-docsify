@@ -1,6 +1,8 @@
 # @ohos.data.intelligence
 
-Provides methods for intelligent data processing.@namespace intelligence
+Provides methods for intelligent data processing.
+
+@namespace intelligence
 
 **Since:** 15
 
@@ -9,7 +11,7 @@ Provides methods for intelligent data processing.@namespace intelligence
 ## Modules to Import
 
 ```TypeScript
-import intelligence from '@kit.ArkData';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## Summary
@@ -28,16 +30,16 @@ import intelligence from '@kit.ArkData';
 | Name | Description |
 | --- | --- |
 | [CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md) | Indicates cloud embedding model information. |
-| [ImageEmbedding](arkts-arkdata-intelligence-imageembedding-i.md) | Describes the image embedding functions of the multi-modal embedding model.@interface ImageEmbedding |
-| [ModelConfig](arkts-arkdata-intelligence-modelconfig-i.md) | Manages configurations of the embedding model.@interface ModelConfig |
-| [SplitConfig](arkts-arkdata-intelligence-splitconfig-i.md) | Manages text chunk process configurations.@interface SplitConfig |
-| [TextEmbedding](arkts-arkdata-intelligence-textembedding-i.md) | Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported.@interface TextEmbedding |
+| [ImageEmbedding](arkts-arkdata-intelligence-imageembedding-i.md) | Describes the image embedding functions of the multi-modal embedding model. |
+| [ModelConfig](arkts-arkdata-intelligence-modelconfig-i.md) | Manages configurations of the embedding model. |
+| [SplitConfig](arkts-arkdata-intelligence-splitconfig-i.md) | Manages text chunk process configurations. |
+| [TextEmbedding](arkts-arkdata-intelligence-textembedding-i.md) | Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ModelVersion](arkts-arkdata-intelligence-modelversion-e.md) | Version of the model.@enum { number } |
+| [ModelVersion](arkts-arkdata-intelligence-modelversion-e.md) | Version of the model. |
 | [NetworkPolicy](arkts-arkdata-intelligence-networkpolicy-e.md) | Indicates network policy. |
 
 ### Types

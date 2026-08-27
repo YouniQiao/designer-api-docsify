@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import installer from '@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## getBundleInstallerSync
@@ -24,7 +24,7 @@ Obtains a BundleInstaller object. This API is a synchronous API.
 
 | Type | Description |
 | --- | --- |
-| [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md) | BundleInstaller object. |
+| BundleInstaller | BundleInstaller object. |
 
 **Error codes:**
 

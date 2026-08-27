@@ -9,7 +9,7 @@ The **motion** module provides the user motion awareness capabilities, including
 ## Modules to Import
 
 ```TypeScript
-import motion from '@kit.MultimodalAwarenessKit';
+import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary
@@ -21,7 +21,7 @@ import motion from '@kit.MultimodalAwarenessKit';
 | [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md) | Obtains the latest operating hand status. |
 | [off](arkts-multimodalawareness-motion-off-f.md#offoperatinghandchanged) | Unsubscribes from operating hand change events. |
 | [off](arkts-multimodalawareness-motion-off-f.md#offholdinghandchanged) | Disables listening for holding hand status changes. |
-| [on](arkts-multimodalawareness-motion-on-f.md#onoperatinghandchanged) | Subscribes to operating hand change events.If the device does not support this function, error code 801 is returned. |
+| [on](arkts-multimodalawareness-motion-on-f.md#onoperatinghandchanged) | Subscribes to operating hand change events. |
 | [on](arkts-multimodalawareness-motion-on-f.md#onholdinghandchanged) | Enables listening for holding hand status changes. |
 
 <!--Del-->

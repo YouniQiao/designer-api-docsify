@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import workScheduler from '@kit.BackgroundTasksKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## isLastWorkTimeOut
@@ -147,7 +147,7 @@ Checks whether the last execution of a task timed out. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the last execution of the specified task times out, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the last execution of the specified task times out, and **false** means the opposite. |
 
 **Error codes:**
 

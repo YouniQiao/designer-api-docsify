@@ -3,8 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## promiseWrapper
@@ -27,10 +25,10 @@ Receives a function that uses the error-first callback mode, that is, uses `(err
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| original | (err: Object, value: Object) = & gt; void | Yes | Asynchronous function. |
+| original | (err: Object, value: Object) =&gt; void | Yes | Asynchronous function. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Object | Promise in the error-first style (that is, (err, value) = & gt; ... is called as the last parameter). |
+| Object | Promise in the error-first style (that is, (err, value) =&gt; ... is called as the last parameter). |

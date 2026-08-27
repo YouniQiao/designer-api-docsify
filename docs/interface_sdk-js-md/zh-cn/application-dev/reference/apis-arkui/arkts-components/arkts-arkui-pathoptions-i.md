@@ -21,7 +21,11 @@
 commands?: ResourceStr
 ```
 
-路径绘制的命令字符串，符合SVG路径描述规范，单位为px。默认值：空字符串异常值按照默认值处理。
+路径绘制的命令字符串，符合SVG路径描述规范，单位为px。
+
+默认值：空字符串
+
+异常值按照默认值处理。
 
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -39,7 +43,11 @@ commands?: ResourceStr
 height?: Length
 ```
 
-路径所在矩形的高度。取值范围≥0。值为异常值或缺省时按照路径内容自动计算高度。默认单位：vp
+路径所在矩形的高度。取值范围≥0。
+
+值为异常值或缺省时按照路径内容自动计算高度。
+
+默认单位：vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -57,7 +65,11 @@ height?: Length
 width?: Length
 ```
 
-路径所在矩形的宽度。取值范围≥0。值为异常值或缺省时按照路径内容自动计算宽度。默认单位：vp
+路径所在矩形的宽度。取值范围≥0。
+
+值为异常值或缺省时按照路径内容自动计算宽度。
+
+默认单位：vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

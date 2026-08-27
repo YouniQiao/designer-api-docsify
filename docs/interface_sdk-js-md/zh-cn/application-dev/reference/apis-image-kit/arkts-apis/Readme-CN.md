@@ -141,7 +141,7 @@
   - [Region](arkts-image-sendableimage-region-i.md)
   - [Size](arkts-image-sendableimage-size-i.md)
   - [ISendable](arkts-image-sendableimage-isendable-t.md)
-- [@ohos.multimedia.videoProcessingEngine](arkts-multimedia-videoprocessingengine.md)
+- [@ohos.multimedia.videoProcessingEngine(提供图像画质处理能力。)](arkts-multimedia-videoprocessingengine.md)
   - [create](arkts-image-videoprocessingengine-create-f.md)
   - [deinitializeEnvironment](arkts-image-videoprocessingengine-deinitializeenvironment-f.md)
   - [initializeEnvironment](arkts-image-videoprocessingengine-initializeenvironment-f.md)

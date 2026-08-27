@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## getGlobalWindowMode
@@ -32,7 +30,7 @@ Obtains the window mode of the window that is in the foreground lifecycle on the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the window mode. Each binary bit represents a window mode. For details about the supported window modes, see [GlobalWindowMode]{ |
+| Promise&lt;number&gt; | Promise used to return the window mode. Each binary bit represents a window mode. For details about the supported window modes, see [GlobalWindowMode]{ |
 
 **Error codes:**
 

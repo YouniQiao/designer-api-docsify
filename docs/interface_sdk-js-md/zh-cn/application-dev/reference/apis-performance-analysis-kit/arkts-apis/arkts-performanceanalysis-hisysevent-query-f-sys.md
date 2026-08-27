@@ -27,7 +27,7 @@ function query(queryArg: QueryArg, rules: QueryRule[], querier: Querier): void
 | --- | --- | --- | --- |
 | queryArg | [QueryArg](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md) | 是 | 查询需要配置的查询参数。 |
 | rules | [QueryRule](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md)[] | 是 | 查询规则数组，每次查询可配置多个查询规则。 |
-| querier | [Querier](../../apis-security-guard-kit/arkts-apis/arkts-securityguard-securityguard-querier-i-sys.md) | 是 | 查询者对象，包含查询结果及结束的相关回调。 |
+| querier | Querier | 是 | 查询者对象，包含查询结果及结束的相关回调。 |
 
 **错误码：**
 

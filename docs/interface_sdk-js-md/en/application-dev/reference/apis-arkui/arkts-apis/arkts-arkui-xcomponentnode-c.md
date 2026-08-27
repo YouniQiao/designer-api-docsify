@@ -1,6 +1,8 @@
 # XComponentNode
 
-Defines XComponent Node.@extends FrameNode
+Defines XComponent Node.
+
+@extends FrameNode
 
 **Inheritance/Implementation:** XComponentNode extends FrameNode
 

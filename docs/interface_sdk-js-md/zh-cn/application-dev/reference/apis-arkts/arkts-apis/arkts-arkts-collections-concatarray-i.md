@@ -6,6 +6,7 @@
 > 
 > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
 > 文档中存在泛型的使用，涉及以下泛型标记符：
+
 - T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。
 
 **继承/实现关系：** ConcatArray extends [ISendable](arkts-arkts-collections-isendable-t.md)
@@ -70,7 +71,7 @@ slice(start?: number, end?: number): ConcatArray<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| ConcatArray & lt;T & gt; | 包含原始ConcatArray切片的新ConcatArray。 |
+| ConcatArray&lt;T&gt; | 包含原始ConcatArray切片的新ConcatArray。 |
 
 ## [index: number]
 

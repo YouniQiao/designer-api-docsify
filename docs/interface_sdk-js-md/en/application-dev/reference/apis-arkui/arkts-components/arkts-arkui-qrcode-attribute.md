@@ -1,6 +1,8 @@
 # QRCode properties/events
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.The [universal events][universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
+
+The [universal events][universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
 
 **Inheritance/Implementation:** QRCodeAttribute extends CommonMethod<QRCodeAttribute>
 
@@ -77,4 +79,4 @@ Sets the opacity of the QR code content. The minimum value is 0, and the maximum
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Opacity of the QR code content.Default value: **1**Value range: [0, 1]. If the value is out of the range, the default value is used. |
+| value | number \| Resource | Yes | Opacity of the QR code content.Default value: **1**Value range: [0, 1]. If the value is out of the range, the default value is used. |

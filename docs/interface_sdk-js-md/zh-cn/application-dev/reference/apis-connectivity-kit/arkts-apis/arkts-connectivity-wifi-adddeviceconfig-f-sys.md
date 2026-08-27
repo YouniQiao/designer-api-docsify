@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## addDeviceConfig
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 ```
 
-添加网络配置，使用Promise异步回调。<p>添加配置后，配置将被更新。</p>
+添加网络配置，使用Promise异步回调。
+
+<p>添加配置后，配置将被更新。</p>
 
 **起始版本：** 6
 
@@ -33,13 +32,13 @@ function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 | WLAN配置信息。 |
+| config | WifiDeviceConfig | 是 | WLAN配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 返回添加的网络配置ID，如果值为{ |
+| Promise&lt;number&gt; | 返回添加的网络配置ID，如果值为{ |
 
 **示例**
 
@@ -81,7 +80,9 @@ try {
 function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void
 ```
 
-添加网络配置，使用callback异步回调。<p>添加配置后，配置将被更新。</p>
+添加网络配置，使用callback异步回调。
+
+<p>添加配置后，配置将被更新。</p>
 
 **起始版本：** 6
 
@@ -99,7 +100,7 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 | WLAN配置信息。 |
+| config | WifiDeviceConfig | 是 | WLAN配置信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |  |
 
 **示例**

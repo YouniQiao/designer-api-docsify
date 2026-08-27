@@ -29,7 +29,7 @@ Obtains the supported ISO range.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | ISO range. The value range is [50, 100, ..., 6400]. The actual value depends on the bottom-layer capability. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Array&lt;number&gt; | ISO range. The value range is [50, 100, ..., 6400]. The actual value depends on the bottom-layer capability. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
@@ -48,7 +48,7 @@ function getIsoRange(professionalPhotoSession: camera.ProfessionalPhotoSession):
   try {
     isoRange = professionalPhotoSession.getIsoRange();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The getIsoRange call failed. error code: ${err.code}`);
   }
@@ -93,7 +93,7 @@ function isManualIsoSupported(professionalPhotoSession: camera.ProfessionalPhoto
   try {
     status = professionalPhotoSession.isManualIsoSupported();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The isManualIsoSupported call failed. error code: ${err.code}`);
   }

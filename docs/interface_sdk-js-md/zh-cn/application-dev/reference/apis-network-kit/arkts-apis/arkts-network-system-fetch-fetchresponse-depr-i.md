@@ -1,6 +1,7 @@
 # FetchResponse
 
-**表2** responseType与success中data关系  
+**表2** responseType与success中data关系
+
 | responseType | data | 说明 | | -------- | -------- | -------- | | 无 | string | 服务器返回的header中的type如果是text/\*或application/json、application/javascript、application/xml，值为文本内容。 | | text | string | 返回文本内容。 | | json | Object | 返回json格式的对象。 |
 
 **起始版本：** 3
@@ -65,8 +66,8 @@ fetch.fetch({
     console.info('fetch success');
     console.info(JSON.stringify(response));
   },
-  fail: () => {
-    console.error('fetch failed');
+  fail: (data: Object, code) => {
+    console.error('fetch failed, data: ' + JSON.stringify(data) + ', code: =' + code);
   }
 });
 ```
@@ -126,9 +127,9 @@ export default {
                 console.info('fetch success');
                 console.info(JSON.stringify(response));
             },
-            fail: function() {
+            fail: function(data, code) {
                 that.fontColor = '#FF0000';
-                that.result = 'FAILED';
+                that.result = 'FAILED code ' + code;
                 console.error('fetch failed');
             }
         });

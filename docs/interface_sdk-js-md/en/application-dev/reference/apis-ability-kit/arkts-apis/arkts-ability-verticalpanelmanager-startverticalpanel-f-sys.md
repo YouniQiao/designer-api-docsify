@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import verticalPanelManager from '@kit.AbilityKit';
+import { verticalPanelManager } from '@kit.AbilityKit';
 ```
 
 ## startVerticalPanel
@@ -32,7 +32,7 @@ Starts the vertical domain picker with panel config. If the target ability is vi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | common.UIAbilityContext | Yes | Indicates the ui ability context of the application. |
-| wantParam | Record & lt;string, Object & gt; | Yes | Indicates the want parameter. |
+| wantParam | Record&lt;string, Object&gt; | Yes | Indicates the want parameter. |
 | panelConfig | [PanelConfig](arkts-ability-verticalpanelmanager-panelconfig-i-sys.md) | Yes | Indicates the panel config. |
 | panelStartCallback | [PanelStartCallback](arkts-ability-verticalpanelmanager-panelstartcallback-i-sys.md) | Yes | indicates the panelStartCallback. |
 
@@ -40,7 +40,7 @@ Starts the vertical domain picker with panel config. If the target ability is vi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

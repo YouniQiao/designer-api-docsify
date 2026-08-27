@@ -9,7 +9,7 @@ Represents the result of port connection parameter negotiation with a remote dev
 ## Modules to Import
 
 ```TypeScript
-import dataTransfer from '@kit.ConnectivityKit';
+import { dataTransfer } from '@kit.ConnectivityKit';
 ```
 
 ## address

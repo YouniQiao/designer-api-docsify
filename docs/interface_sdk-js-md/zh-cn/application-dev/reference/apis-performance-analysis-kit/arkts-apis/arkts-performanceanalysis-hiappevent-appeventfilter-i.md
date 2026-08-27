@@ -21,7 +21,7 @@
 domain: string
 ```
 
-需要订阅的事件领域。可以是系统事件领域（hiAppEvent.domain.OS）或开发者在使用[Write](arkts-performanceanalysis-hiappevent-write-f.md)接口时传入的 自定义事件信息（[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)）中的事件领域。
+需要订阅的事件领域。可以是系统事件领域（hiAppEvent.domain.OS）或开发者在使用[Write](arkts-performanceanalysis-hiappevent-write-f.md)接口时传入的自定义事件信息（[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)）中的事件领域。
 
 **类型：** string
 

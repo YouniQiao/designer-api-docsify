@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import scan from '@kit.ConnectivityKit';
+import { scan } from '@kit.ConnectivityKit';
 ```
 
 ## address
@@ -98,7 +98,7 @@ isConnectable: boolean
 rssi: number
 ```
 
-表示扫描到的设备rssi值，取值范围[-128, 127]，单位：dBm，其中127表示无效值。 取值限定为整数。
+表示扫描到的设备rssi值，取值范围[-128, 127]，单位：dBm，其中127表示无效值。取值限定为整数。
 
 **类型：** number
 

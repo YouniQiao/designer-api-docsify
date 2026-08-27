@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## disableSuperAdmin
@@ -87,7 +87,7 @@ function disableSuperAdmin(bundleName: String): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。当解除激活超级设备管理应用失败时，会抛出错误对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。当解除激活超级设备管理应用失败时，会抛出错误对象。 |
 
 **错误码：**
 

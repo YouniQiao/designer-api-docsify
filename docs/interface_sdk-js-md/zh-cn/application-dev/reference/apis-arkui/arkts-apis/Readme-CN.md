@@ -1,7 +1,7 @@
 # ArkTS API<!--arkts-arkui-->
 
 <!--Del-->
-- [@ohos.animation.windowAnimationManager](arkts-animation-windowanimationmanager.md)<!--DelEnd-->
+- [@ohos.animation.windowAnimationManager(窗口动画管理)](arkts-animation-windowanimationmanager.md)<!--DelEnd-->
   <!--Del-->
   - [minimizeWindowWithAnimation(系统接口)](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -25,7 +25,7 @@
   - [WindowExtensionAbility(系统接口)](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md)<!--DelEnd-->
   <!--Del-->
   - [WindowExtensionContext(系统接口)](arkts-arkui-windowextensioncontext-t-sys.md)<!--DelEnd-->
-- [@ohos.arkui.advanced.ArcButton](arkts-arkui-advanced-arcbutton.md)
+- [@ohos.arkui.advanced.ArcButton(Defines the arc button component)](arkts-arkui-advanced-arcbutton.md)
   - [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
   - [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
   - [ArcButton](arkts-arkui-arkui-advanced-arcbutton-arcbutton-s.md)
@@ -177,7 +177,7 @@
   - [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md)
   - [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md)
   - [TimeFormat](arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md)
-- [@ohos.arkui.advanced.Dialog](arkts-arkui-advanced-dialog.md)
+- [@ohos.arkui.advanced.Dialog(Dialog)](arkts-arkui-advanced-dialog.md)
   - [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
   - [AlertDialog](arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)
   - [ConfirmDialog](arkts-arkui-arkui-advanced-dialog-confirmdialog-s.md)
@@ -239,7 +239,7 @@
   - [FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md)
   - [Filter](arkts-arkui-arkui-advanced-filter-filter-s.md)
   - [FilterType](arkts-arkui-arkui-advanced-filter-filtertype-e.md)
-- [@ohos.arkui.advanced.FoldSplitContainer](arkts-arkui-advanced-foldsplitcontainer.md)
+- [@ohos.arkui.advanced.FoldSplitContainer(Defines FoldSplitContainer component.)](arkts-arkui-advanced-foldsplitcontainer.md)
   - [FoldSplitContainer](arkts-arkui-arkui-advanced-foldsplitcontainer-foldsplitcontainer-s.md)
   - [ExpandedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
   - [FoldedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)
@@ -248,11 +248,11 @@
   - [OnHoverStatusChangeHandler](arkts-arkui-onhoverstatuschangehandler-t.md)
   - [ExtraRegionPosition](arkts-arkui-arkui-advanced-foldsplitcontainer-extraregionposition-e.md)
   - [PresetSplitRatio](arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md)
-- [@ohos.arkui.advanced.FormMenu](arkts-arkui-advanced-formmenu.md)
+- [@ohos.arkui.advanced.FormMenu(Defines the form menu)](arkts-arkui-advanced-formmenu.md)
   - [AddFormMenuItem](arkts-arkui-arkui-advanced-formmenu-addformmenuitem-f.md)
   - [AddFormOptions](arkts-arkui-arkui-advanced-formmenu-addformoptions-i.md)
   - [FormMenuItemStyle](arkts-arkui-arkui-advanced-formmenu-formmenuitemstyle-i.md)
-- [@ohos.arkui.advanced.FullScreenLaunchComponent](arkts-arkui-advanced-fullscreenlaunchcomponent.md)
+- [@ohos.arkui.advanced.FullScreenLaunchComponent(Defines the fullScreen launch component)](arkts-arkui-advanced-fullscreenlaunchcomponent.md)
   - [FullScreenLaunchComponent](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md)
 - [@ohos.arkui.advanced.GridObjectSortComponent](arkts-arkui-advanced-gridobjectsortcomponent.md)
   - [GridObjectSortComponent](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponent-s.md)
@@ -260,7 +260,7 @@
   - [GridObjectSortComponentOptions](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentoptions-i.md)
   - [GridObjectSortComponentType](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponenttype-e.md)
 <!--Del-->
-- [@ohos.arkui.advanced.InnerFullScreenLaunchComponent](arkts-arkui-advanced-innerfullscreenlaunchcomponent.md)<!--DelEnd-->
+- [@ohos.arkui.advanced.InnerFullScreenLaunchComponent(系统接口)](arkts-arkui-advanced-innerfullscreenlaunchcomponent.md)<!--DelEnd-->
   <!--Del-->
   - [LaunchController(系统接口)](arkts-arkui-arkui-advanced-innerfullscreenlaunchcomponent-launchcontroller-c-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -311,7 +311,7 @@
   - [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md)
   - [SegmentButtonItemTuple](arkts-arkui-segmentbuttonitemtuple-t.md)
   - [BorderRadiusMode](arkts-arkui-arkui-advanced-segmentbutton-borderradiusmode-e.md)
-- [@ohos.arkui.advanced.SegmentButtonV2](arkts-arkui-advanced-segmentbuttonv2.md)
+- [@ohos.arkui.advanced.SegmentButtonV2(api/@ohos.arkui.advanced.SegmentedButton.d.ts)](arkts-arkui-advanced-segmentbuttonv2.md)
   - [SegmentButtonV2Item](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2item-c.md)
   - [SegmentButtonV2Items](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)
   - [CapsuleSegmentButtonV2](arkts-arkui-arkui-advanced-segmentbuttonv2-capsulesegmentbuttonv2-s.md)
@@ -337,7 +337,7 @@
   - [SymbolOptions](arkts-arkui-arkui-advanced-subheader-symboloptions-c.md)
   - [SubHeader](arkts-arkui-arkui-advanced-subheader-subheader-s.md)
   - [OperationType](arkts-arkui-arkui-advanced-subheader-operationtype-e.md)
-- [@ohos.arkui.advanced.SubHeaderV2](arkts-arkui-advanced-subheaderv2.md)
+- [@ohos.arkui.advanced.SubHeaderV2(api/@ohos.arkui.advanced.SubHeaderV2.d.ts)](arkts-arkui-advanced-subheaderv2.md)
   - [SubHeaderV2OperationItem](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2operationitem-c.md)
   - [SubHeaderV2Select](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2select-c.md)
   - [SubHeaderV2Title](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2title-c.md)
@@ -525,7 +525,7 @@
   - [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md)
   - [DragStartRequestStatus](arkts-arkui-dragcontroller-dragstartrequeststatus-e.md)
   - [DragStatus](arkts-arkui-dragcontroller-dragstatus-e.md)
-- [@ohos.arkui.drawableDescriptor](arkts-arkui-drawabledescriptor.md)
+- [@ohos.arkui.drawableDescriptor(DrawableDescriptor)](arkts-arkui-drawabledescriptor.md)
   - [AnimatedDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)
   - [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
   <!--Del-->
@@ -538,7 +538,7 @@
   - [DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)
   - [HdrCompositionConfig](arkts-arkui-arkui-drawabledescriptor-hdrcompositionconfig-i.md)
   - [AnimationStopMode](arkts-arkui-arkui-drawabledescriptor-animationstopmode-e.md)
-- [@ohos.arkui.inspector](arkts-arkui-inspector.md)
+- [@ohos.arkui.inspector(布局回调)](arkts-arkui-inspector.md)
   - [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md)
   - [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md)
 - [@ohos.arkui.node](arkts-arkui-node.md)
@@ -561,7 +561,7 @@
   - [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md)
   - [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md)
 <!--Del-->
-- [@ohos.arkui.performanceMonitor](arkts-arkui-performancemonitor.md)<!--DelEnd-->
+- [@ohos.arkui.performanceMonitor(性能监测)](arkts-arkui-performancemonitor.md)<!--DelEnd-->
   <!--Del-->
   - [begin(系统接口)](arkts-arkui-performancemonitor-begin-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -572,11 +572,11 @@
   - [ActionType(系统接口)](arkts-arkui-performancemonitor-actiontype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SourceType(系统接口)](arkts-arkui-performancemonitor-sourcetype-e-sys.md)<!--DelEnd-->
-- [@ohos.arkui.Prefetcher](arkts-arkui-prefetcher.md)
+- [@ohos.arkui.Prefetcher(Prefetching)](arkts-arkui-prefetcher.md)
   - [BasicPrefetcher](arkts-arkui-arkui-prefetcher-basicprefetcher-c.md)
   - [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)
   - [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md)
-- [@ohos.arkui.shape](arkts-arkui-shape.md)
+- [@ohos.arkui.shape(形状)](arkts-arkui-shape.md)
   - [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)
   - [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md)
   - [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
@@ -587,7 +587,7 @@
   - [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md)
   - [RoundRectShapeOptions](arkts-arkui-arkui-shape-roundrectshapeoptions-i.md)
   - [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md)
-- [@ohos.arkui.StateManagement](arkts-arkui-statemanagement.md)
+- [@ohos.arkui.StateManagement(状态管理)](arkts-arkui-statemanagement.md)
   - [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md)
   - [Binding](arkts-arkui-arkui-statemanagement-binding-c.md)
   - [ConnectOptions](arkts-arkui-arkui-statemanagement-connectoptions-c.md)
@@ -719,15 +719,15 @@
   - [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
   <!--Del-->
   - [MaterialType(系统接口)](arkts-arkui-uimaterial-materialtype-e-sys.md)<!--DelEnd-->
-- [@ohos.arkui.WithEnv](arkts-arkui-withenv.md)
+- [@ohos.arkui.WithEnv(定义WithEnv组件，允许为子组件设置环境属性。)](arkts-arkui-withenv.md)
   - [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md)
   - [WithEnvInterface](arkts-arkui-withenvinterface-t.md)
   - [常量](arkts-arkui-arkui-withenv-con.md)
 <!--Del-->
-- [@ohos.atomicservice.AtomicServiceMenuBar](arkts-atomicservice-atomicservicemenubar.md)<!--DelEnd-->
+- [@ohos.atomicservice.AtomicServiceMenuBar(系统接口)](arkts-atomicservice-atomicservicemenubar.md)<!--DelEnd-->
   <!--Del-->
   - [AtomicServiceMenuBar(系统接口)](arkts-arkui-atomicservice-atomicservicemenubar-atomicservicemenubar-c-sys.md)<!--DelEnd-->
-- [@ohos.atomicservice.AtomicServiceNavigation](arkts-atomicservice-atomicservicenavigation.md)
+- [@ohos.atomicservice.AtomicServiceNavigation(This section describes the interfaces used by AtomicServiceNavigation)](arkts-atomicservice-atomicservicenavigation.md)
   - [AtomicServiceNavigation](arkts-arkui-atomicservice-atomicservicenavigation-atomicservicenavigation-s.md)
   - [GradientBackground](arkts-arkui-atomicservice-atomicservicenavigation-gradientbackground-i.md)
   - [SideBarOptions](arkts-arkui-atomicservice-atomicservicenavigation-sidebaroptions-i.md)
@@ -737,7 +737,7 @@
   - [GradientAlpha](arkts-arkui-atomicservice-atomicservicenavigation-gradientalpha-e.md)
   - [MixMode](arkts-arkui-atomicservice-atomicservicenavigation-mixmode-e.md)
   - [TitleBarType](arkts-arkui-atomicservice-atomicservicenavigation-titlebartype-e.md)
-- [@ohos.atomicservice.AtomicServiceSearch](arkts-atomicservice-atomicservicesearch.md)
+- [@ohos.atomicservice.AtomicServiceSearch(This section describes the interfaces used by AtomicServiceSearch)](arkts-atomicservice-atomicservicesearch.md)
   - [AtomicServiceSearch](arkts-arkui-atomicservice-atomicservicesearch-atomicservicesearch-s.md)
   - [InputFilterParams](arkts-arkui-atomicservice-atomicservicesearch-inputfilterparams-i.md)
   - [MenuAlignParams](arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md)
@@ -749,13 +749,13 @@
   - [OnPasteCallback](arkts-arkui-onpastecallback-t.md)
   - [OnSelectCallback](arkts-arkui-onselectcallback-t.md)
   - [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md)
-- [@ohos.atomicservice.AtomicServiceTabs](arkts-atomicservice-atomicservicetabs.md)
+- [@ohos.atomicservice.AtomicServiceTabs(Provides an advanced struct of tabs for atomic services)](arkts-atomicservice-atomicservicetabs.md)
   - [TabBarOptions](arkts-arkui-atomicservice-atomicservicetabs-tabbaroptions-c.md)
   - [AtomicServiceTabs](arkts-arkui-atomicservice-atomicservicetabs-atomicservicetabs-s.md)
   - [OnContentWillChangeCallback](arkts-arkui-oncontentwillchangecallback-t.md)
   - [TabContentBuilder](arkts-arkui-tabcontentbuilder-t.md)
   - [TabBarPosition](arkts-arkui-atomicservice-atomicservicetabs-tabbarposition-e.md)
-- [@ohos.atomicservice.AtomicServiceWeb](arkts-atomicservice-atomicserviceweb.md)
+- [@ohos.atomicservice.AtomicServiceWeb(Defines the atomicService web component)](arkts-atomicservice-atomicserviceweb.md)
   - [AtomicServiceWebController](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md)
   - [AtomicServiceWeb](arkts-arkui-atomicservice-atomicserviceweb-atomicserviceweb-s.md)
   - [OnErrorReceiveEvent](arkts-arkui-atomicservice-atomicserviceweb-onerrorreceiveevent-i.md)
@@ -767,15 +767,15 @@
   - [OnProgressChangeEvent](arkts-arkui-atomicservice-atomicserviceweb-onprogresschangeevent-i.md)
   - [WebHeader](arkts-arkui-atomicservice-atomicserviceweb-webheader-i.md)
   - [OnLoadInterceptCallback](arkts-arkui-onloadinterceptcallback-t.md)
-- [@ohos.atomicservice.HalfScreenLaunchComponent](arkts-atomicservice-halfscreenlaunchcomponent.md)
+- [@ohos.atomicservice.HalfScreenLaunchComponent(Defines the halfScreen launch component)](arkts-atomicservice-halfscreenlaunchcomponent.md)
   - [HalfScreenLaunchComponent](arkts-arkui-atomicservice-halfscreenlaunchcomponent-halfscreenlaunchcomponent-s.md)
-- [@ohos.atomicservice.InterstitialDialogAction](arkts-atomicservice-interstitialdialogaction.md)
+- [@ohos.atomicservice.InterstitialDialogAction(This section describes the interfaces used by InterstitialDialogAction)](arkts-atomicservice-interstitialdialogaction.md)
   - [InterstitialDialogAction](arkts-arkui-atomicservice-interstitialdialogaction-interstitialdialogaction-c.md)
   - [DialogOptions](arkts-arkui-atomicservice-interstitialdialogaction-dialogoptions-i.md)
   - [BottomOffset](arkts-arkui-atomicservice-interstitialdialogaction-bottomoffset-e.md)
   - [IconStyle](arkts-arkui-atomicservice-interstitialdialogaction-iconstyle-e.md)
   - [TitlePosition](arkts-arkui-atomicservice-interstitialdialogaction-titleposition-e.md)
-- [@ohos.atomicservice.NavPushPathHelper](arkts-atomicservice-navpushpathhelper.md)
+- [@ohos.atomicservice.NavPushPathHelper(Defines provides a push method for the target page in the routing table.)](arkts-atomicservice-navpushpathhelper.md)
   - [NavPushPathHelper](arkts-arkui-atomicservice-navpushpathhelper-navpushpathhelper-c.md)
 - [@ohos.curves](arkts-curves.md)
   - [cubicBezier](arkts-arkui-curves-cubicbezier-f.md)
@@ -870,7 +870,7 @@
   - [FoldStatus](arkts-arkui-display-foldstatus-e.md)
   - [Orientation](arkts-arkui-display-orientation-e.md)
   - [ScreenShape](arkts-arkui-display-screenshape-e.md)
-- [@ohos.font](arkts-font.md)
+- [@ohos.font(Custom Font Registration)](arkts-font.md)
   - [getFontByName](arkts-arkui-font-getfontbyname-f.md)
   - [getSystemFontList](arkts-arkui-font-getsystemfontlist-f.md)
   - [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md)
@@ -899,10 +899,10 @@
   - [RotateOption](arkts-arkui-matrix4-rotateoption-i.md)
   - [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md)
   - [TranslateOption](arkts-arkui-matrix4-translateoption-i.md)
-- [@ohos.measure](arkts-measure.md)
+- [@ohos.measure(Text Measurement)](arkts-measure.md)
   - [MeasureText](arkts-arkui-measure-measuretext-c.md)
   - [MeasureOptions](arkts-arkui-measure-measureoptions-i.md)
-- [@ohos.mediaquery](arkts-mediaquery.md)
+- [@ohos.mediaquery(媒体查询)](arkts-mediaquery.md)
   - [matchMediaSync](arkts-arkui-mediaquery-matchmediasync-f.md)
   - [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md)
   - [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)
@@ -933,7 +933,7 @@
   - [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md)
   - [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md)
   - [VideoPlayControlGroup](arkts-arkui-pipwindow-videoplaycontrolgroup-e.md)
-- [@ohos.pluginComponent](arkts-plugincomponent.md)
+- [@ohos.pluginComponent(PluginComponentManager)](arkts-plugincomponent.md)
   - [pluginComponentManager](arkts-arkui-plugincomponentmanager-n.md)
     - [on](arkts-arkui-plugincomponentmanager-on-f.md)
     - [push](arkts-arkui-plugincomponentmanager-push-f.md)
@@ -1104,7 +1104,7 @@
   - [Size(系统接口)](arkts-arkui-screenshot-size-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DisplayIntentType(系统接口)](arkts-arkui-screenshot-displayintenttype-e-sys.md)<!--DelEnd-->
-- [@ohos.uiAppearance](arkts-uiappearance.md)
+- [@ohos.uiAppearance(UI Appearance)](arkts-uiappearance.md)
   - [getDarkMode](arkts-arkui-uiappearance-getdarkmode-f.md)
   - [getFontScale](arkts-arkui-uiappearance-getfontscale-f.md)
   - [getFontWeightScale](arkts-arkui-uiappearance-getfontweightscale-f.md)
@@ -1326,14 +1326,14 @@
   - [MediaQuery](arkts-arkui-system-mediaquery-mediaquery-c.md)
   - [MediaQueryEvent](arkts-arkui-system-mediaquery-mediaqueryevent-i.md)
   - [MediaQueryList](arkts-arkui-system-mediaquery-mediaquerylist-i.md)
-- [@system.prompt](arkts-system-prompt.md)
+- [@system.prompt(弹窗)](arkts-system-prompt.md)
   - [Prompt](arkts-arkui-system-prompt-prompt-c.md)
   - [Button](arkts-arkui-system-prompt-button-i.md)
   - [ShowActionMenuOptions](arkts-arkui-system-prompt-showactionmenuoptions-i.md)
   - [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md)
   - [ShowDialogSuccessResponse](arkts-arkui-system-prompt-showdialogsuccessresponse-i.md)
   - [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md)
-- [@system.router](arkts-system-router.md)
+- [@system.router(页面路由)](arkts-system-router.md)
   - [Router](arkts-arkui-system-router-router-c.md)
   - [BackRouterOptions](arkts-arkui-system-router-backrouteroptions-i.md)
   - [DisableAlertBeforeBackPageOptions](arkts-arkui-system-router-disablealertbeforebackpageoptions-i.md)
@@ -1341,7 +1341,7 @@
   - [RouterOptions](arkts-arkui-system-router-routeroptions-i.md)
   - [RouterState](arkts-arkui-system-router-routerstate-i.md)
   - [ParamsInterface](arkts-arkui-paramsinterface-t.md)
-- [action_sheet](arkts-action_sheet.md)
+- [action_sheet(ActionSheet)](arkts-action_sheet.md)
   - [ActionSheet](arkts-arkui-actionsheet-c.md)
   - [ActionSheetButtonOptions](arkts-arkui-actionsheetbuttonoptions-i.md)
   - [ActionSheetOffset](arkts-arkui-actionsheetoffset-i.md)
@@ -1352,7 +1352,7 @@
   - [SheetInfo](arkts-arkui-sheetinfo-i.md)
   - [ImmersiveMode](arkts-arkui-immersivemode-t.md)
   - [LevelMode](arkts-arkui-levelmode-t.md)
-- [alert_dialog](arkts-alert_dialog.md)
+- [alert_dialog(AlertDialog)](arkts-alert_dialog.md)
   - [AlertDialog](arkts-arkui-alertdialog-c.md)
   - [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
   - [AlertDialogButtonOptions](arkts-arkui-alertdialogbuttonoptions-i.md)
@@ -1397,7 +1397,7 @@
   - [FrameNode](arkts-arkui-framenode-t.md)
   - [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md)
   - [常量](arkts-arkui-canvas-con.md)
-- [common_ts_ets_api](arkts-common_ts_ets_api.md)
+- [common_ts_ets_api(System API)](arkts-common_ts_ets_api.md)
   - [AppStorage](arkts-arkui-appstorage-c.md)
   - [Environment](arkts-arkui-environment-c.md)
   <!--Del-->
@@ -1426,7 +1426,7 @@
   - [appStorage(系统接口)](arkts-arkui-commontsetsapi-p-sys.md)<!--DelEnd-->
 - [context_menu](arkts-context_menu.md)
   - [ContextMenu](arkts-arkui-contextmenu-c.md)
-- [custom_dialog_controller](arkts-custom_dialog_controller.md)
+- [custom_dialog_controller(CustomDialog)](arkts-custom_dialog_controller.md)
   - [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
   - [CustomDialogControllerOptions](arkts-arkui-customdialogcontrolleroptions-i.md)
   <!--Del-->
@@ -1547,7 +1547,7 @@
   - [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
   - [WordBreak](arkts-arkui-wordbreak-e.md)
   - [XComponentType](arkts-arkui-xcomponenttype-e.md)
-- [focus](arkts-focus.md)
+- [focus(Provide some common interface for focus.)](arkts-focus.md)
   - [FocusBoxStyle](arkts-arkui-focusboxstyle-i.md)
   - [FocusPriority](arkts-arkui-focuspriority-e.md)
   - [KeyProcessingMode](arkts-arkui-keyprocessingmode-e.md)
@@ -1645,7 +1645,7 @@
   <!--Del-->
   - [setAppBgColor(系统接口)](arkts-arkui-inspector-setappbgcolor-f-sys.md)<!--DelEnd-->
 <!--Del-->
-- [isolated_component](arkts-isolated_component.md)<!--DelEnd-->
+- [isolated_component(System API)](arkts-isolated_component.md)<!--DelEnd-->
   <!--Del-->
   - [IsolatedComponentAttribute(系统接口)](arkts-arkui-isolatedcomponentattribute-c-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1662,7 +1662,7 @@
   - [常量(系统接口)](arkts-arkui-isolatedcomponent-con-sys.md)<!--DelEnd-->
 - [matrix2d](arkts-matrix2d.md)
   - [Matrix2D](arkts-arkui-matrix2d-c.md)
-- [repeat](arkts-repeat.md)
+- [repeat(Defines Repeat component.)](arkts-repeat.md)
   - [RepeatAttribute](arkts-arkui-repeatattribute-c.md)
   - [RepeatItem](arkts-arkui-repeatitem-i.md)
   - [TemplateOptions](arkts-arkui-templateoptions-i.md)
@@ -1851,7 +1851,7 @@
   - [ResponsiveFillType](arkts-arkui-responsivefilltype-t.md)
   - [VoidCallback](arkts-arkui-voidcallback-t.md)
   - [VP](arkts-arkui-vp-t.md)
-- [with_theme](arkts-with_theme.md)
+- [with_theme(Defines WithTheme component.)](arkts-with_theme.md)
   - [WithThemeAttribute](arkts-arkui-withthemeattribute-c.md)
   - [WithThemeOptions](arkts-arkui-withthemeoptions-i.md)
   - [CustomTheme](arkts-arkui-customtheme-t.md)

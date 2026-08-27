@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import appAccount from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addAccount
@@ -123,7 +123,7 @@ addAccount(name: string, extraInfo?: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -318,7 +318,7 @@ auth(
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
 | authType | string | 是 | 鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | Record & lt;string, Object & gt; | 是 | 鉴权所需的可选项。 |
+| options | Record&lt;string, Object&gt; | 是 | 鉴权所需的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 回调对象，返回鉴权结果。 |
 
 **错误码：**
@@ -479,7 +479,7 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>, callback:
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| labels | Array & lt;string & gt; | 是 | 标签数组。 |
+| labels | Array&lt;string&gt; | 是 | 标签数组。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当检查成功时，err为null，data为true表示满足特定的标签集合，data为false表示不满足；否则为错误对象。 |
 
 **错误码：**
@@ -533,13 +533,13 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | owner | string | 是 | 应用账号所有者的包名。最大长度为1024个字符。 |
-| labels | Array & lt;string & gt; | 是 | 标签数组。 |
+| labels | Array&lt;string&gt; | 是 | 标签数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示指定账号满足特定的标签集合，返回false表示不满足。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示指定账号满足特定的标签集合，返回false表示不满足。 |
 
 **错误码：**
 
@@ -644,7 +644,7 @@ checkAppAccess(name: string, bundleName: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示指定应用可访问特定账号的数据；返回false表示不可访问。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示指定应用可访问特定账号的数据；返回false表示不可访问。 |
 
 **错误码：**
 
@@ -750,7 +750,7 @@ checkAppAccountSyncEnable(name: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
 
 **示例**
 
@@ -839,7 +839,7 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Pr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示授权令牌对指定应用的可见，返回false表示不可见。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示授权令牌对指定应用的可见，返回false表示不可见。 |
 
 **错误码：**
 
@@ -943,7 +943,7 @@ checkDataSyncEnabled(name: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示指定应用账号已开启数据同步功能；返回false表示未开启。 |
 
 **错误码：**
 
@@ -1057,7 +1057,7 @@ checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): P
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示指定鉴权类型的OAuth令牌对特定应用的可见，返回false表示不可见。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示指定鉴权类型的OAuth令牌对特定应用的可见，返回false表示不可见。 |
 
 **示例**
 
@@ -1191,13 +1191,13 @@ createAccount(name: string, options?: CreateAccountOptions): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| options | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | 否 | 创建应用账号的选项，可提供自定义数据，但不建议包含敏感数据（如密码、Token等）。不填无影响，默认为空，表示创建的该账号无额外信息需要添 加。 |
+| options | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | 否 | 创建应用账号的选项，可提供自定义数据，但不建议包含敏感数据（如密码、Token等）。不填无影响，默认为空，表示创建的该账号无额外信息需要添加。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1459,7 +1459,7 @@ deleteAccount(name: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -1550,7 +1550,7 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string): P
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1651,7 +1651,7 @@ deleteCredential(name: string, credentialType: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1762,7 +1762,7 @@ deleteOAuthToken(name: string, owner: string, authType: string, token: string): 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -1849,7 +1849,7 @@ disableAppAccess(name: string, bundleName: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -1940,7 +1940,7 @@ enableAppAccess(name: string, bundleName: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -2030,7 +2030,7 @@ getAccountCredential(name: string, credentialType: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回指定应用账号的凭据。 |
+| Promise&lt;string&gt; | Promise对象，返回指定应用账号的凭据。 |
 
 **示例**
 
@@ -2118,7 +2118,7 @@ getAccountExtraInfo(name: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回指定应用账号的额外信息。 |
+| Promise&lt;string&gt; | Promise对象，返回指定应用账号的额外信息。 |
 
 **示例**
 
@@ -2138,7 +2138,7 @@ appAccountManager.getAccountExtraInfo('ZhangSan').then((data: string) => {
 getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。 此方法适用于以下账户： 本应用的账户。 第三方应用的账户。要获取此类信息， 您的应用必须已获得第三方应用的授权，或 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。此方法适用于以下账户：本应用的账户。第三方应用的账户。要获取此类信息，您的应用必须已获得第三方应用的授权，或已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
 **起始版本：** 9
 
@@ -2185,7 +2185,7 @@ try {
 getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。 此方法适用于以下账户： 本应用的账户。 第三方应用的账户。要获取此类信息， 您的应用必须已获得第三方应用的授权，或 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。此方法适用于以下账户：本应用的账户。第三方应用的账户。要获取此类信息，您的应用必须已获得第三方应用的授权，或已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
 **起始版本：** 9
 
@@ -2235,7 +2235,7 @@ try {
 getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-获取所有可访问的应用账号信息。使用callback异步回调。 此方法适用于以下账户： 本应用的账户。 第三方应用的账户。要获取此类信息， 您的应用必须已获得第三方应用的授权。
+获取所有可访问的应用账号信息。使用callback异步回调。此方法适用于以下账户：本应用的账户。第三方应用的账户。要获取此类信息，您的应用必须已获得第三方应用的授权。
 
 > **说明：**
 > 
@@ -2279,7 +2279,7 @@ appAccountManager.getAllAccessibleAccounts((err: BusinessError, data: appAccount
 getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-获取所有可访问的应用账号信息。使用Promise异步回调。 此方法适用于以下账户： 本应用的账户。 第三方应用的账户。要获取此类信息， 您的应用必须已获得第三方应用的授权。
+获取所有可访问的应用账号信息。使用Promise异步回调。此方法适用于以下账户：本应用的账户。第三方应用的账户。要获取此类信息，您的应用必须已获得第三方应用的授权。
 
 > **说明：**
 > 
@@ -2320,7 +2320,7 @@ appAccountManager.getAllAccessibleAccounts().then((data: appAccount.AppAccountIn
 getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-获取所有可访问的应用账号信息。使用callback异步回调。 此方法适用于以下账户： 本应用的账户。 第三方应用的账户。要获取此类信息， 您的应用必须已获得第三方应用的授权，或 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+获取所有可访问的应用账号信息。使用callback异步回调。此方法适用于以下账户：本应用的账户。第三方应用的账户。要获取此类信息，您的应用必须已获得第三方应用的授权，或已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
 **起始版本：** 9
 
@@ -2364,7 +2364,7 @@ try {
 getAllAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-获取所有可访问的应用账号信息。使用Promise异步回调。 此方法适用于以下账户： 本应用的账户。 第三方应用的账户。要获取此类信息， 您的应用必须已获得第三方应用的授权，或 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+获取所有可访问的应用账号信息。使用Promise异步回调。此方法适用于以下账户：本应用的账户。第三方应用的账户。要获取此类信息，您的应用必须已获得第三方应用的授权，或已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
 **起始版本：** 9
 
@@ -2405,7 +2405,7 @@ try {
 getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。 此方法适用于以下账户： 本应用的账户。 第三方应用的账户。要获取此类信息， 您的应用必须已获得第三方应用的授权。
+根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。此方法适用于以下账户：本应用的账户。第三方应用的账户。要获取此类信息，您的应用必须已获得第三方应用的授权。
 
 > **说明：**
 > 
@@ -2451,7 +2451,7 @@ appAccountManager.getAllAccounts(selfBundle, (err: BusinessError, data: appAccou
 getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。 此方法适用于以下账户： 本应用的账户。 第三方应用的账户。要获取此类信息， 您的应用必须已获得第三方应用的授权。
+根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。此方法适用于以下账户：本应用的账户。第三方应用的账户。要获取此类信息，您的应用必须已获得第三方应用的授权。
 
 > **说明：**
 > 
@@ -2762,7 +2762,7 @@ getAssociatedData(name: string, key: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回关联数据的取值。 |
+| Promise&lt;string&gt; | Promise对象，返回关联数据的取值。 |
 
 **示例**
 
@@ -3113,7 +3113,7 @@ appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo').then((
 getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过 [setAuthTokenVisibility](#setauthtokenvisibility) 来设置）。使用callback异步回调。
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过[setAuthTokenVisibility](#setauthtokenvisibility)来设置）。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -3162,7 +3162,7 @@ try {
 getAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过 [setAuthTokenVisibility](#setauthtokenvisibility) 来设置）。使用Promise异步回调。
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过[setAuthTokenVisibility](#setauthtokenvisibility)来设置）。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -3179,7 +3179,7 @@ getAuthList(name: string, authType: string): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise对象，返回被授权的包名数组。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回被授权的包名数组。 |
 
 **错误码：**
 
@@ -3283,7 +3283,7 @@ getAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回授权令牌。 |
+| Promise&lt;string&gt; | Promise对象，返回授权令牌。 |
 
 **错误码：**
 
@@ -3384,7 +3384,7 @@ getCredential(name: string, credentialType: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回指定应用账号的凭据。 |
+| Promise&lt;string&gt; | Promise对象，返回指定应用账号的凭据。 |
 
 **错误码：**
 
@@ -3485,7 +3485,7 @@ getCustomData(name: string, key: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回自定义数据的取值。 |
+| Promise&lt;string&gt; | Promise对象，返回自定义数据的取值。 |
 
 **错误码：**
 
@@ -3569,7 +3569,7 @@ try {
 getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过 [setOAuthTokenVisibility](#setoauthtokenvisibility) 来设置）。使用callback异步回调。
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过[setOAuthTokenVisibility](#setoauthtokenvisibility)来设置）。使用callback异步回调。
 
 > **说明：**
 > 
@@ -3613,7 +3613,7 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData', (err: BusinessError, dat
 getOAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过 [setOAuthTokenVisibility](#setoauthtokenvisibility) 来设置）。使用Promise异步回调。
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过[setOAuthTokenVisibility](#setoauthtokenvisibility)来设置）。使用Promise异步回调。
 
 > **说明：**
 > 
@@ -3639,7 +3639,7 @@ getOAuthList(name: string, authType: string): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise对象，返回被授权的包名数组。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回被授权的包名数组。 |
 
 **示例**
 
@@ -3732,7 +3732,7 @@ getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回授权令牌。 |
+| Promise&lt;string&gt; | Promise对象，返回授权令牌。 |
 
 **示例**
 
@@ -3872,7 +3872,7 @@ on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInf
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件回调类型，支持的事件为'change'，当账号所有者更新账号信息时，触发该事件。 |
-| owners | Array & lt;string & gt; | 是 | 应用账号所有者的包名列表。 |
+| owners | Array&lt;string&gt; | 是 | 应用账号所有者的包名列表。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息发生变更的应用账号列表。 |
 
 **示例**
@@ -3909,7 +3909,7 @@ on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAcc
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'accountChange' | 是 | 事件回调类型，支持的事件为'accountChange'，当账号所有者更新账号信息时，触发该事件。 |
-| owners | Array & lt;string & gt; | 是 | 应用账号所有者的包名列表。 |
+| owners | Array&lt;string&gt; | 是 | 应用账号所有者的包名列表。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 | 需要注册的回调函数，返回信息为发生变更的应用账号列表。 |
 
 **错误码：**
@@ -4105,7 +4105,7 @@ removeAccount(name: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -4319,7 +4319,7 @@ setAccountCredential(name: string, credentialType: string, credential: string): 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -4409,7 +4409,7 @@ setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -4497,7 +4497,7 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<v
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -4606,7 +4606,7 @@ setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -4698,7 +4698,7 @@ setAssociatedData(name: string, key: string, value: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -4894,7 +4894,7 @@ setAuthToken(name: string, authType: string, token: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -5007,7 +5007,7 @@ setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVis
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -5111,7 +5111,7 @@ setCredential(name: string, credentialType: string, credential: string): Promise
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -5213,7 +5213,7 @@ setCustomData(name: string, key: string, value: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -5314,7 +5314,7 @@ setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -5421,7 +5421,7 @@ setOAuthToken(name: string, authType: string, token: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -5523,7 +5523,7 @@ setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 

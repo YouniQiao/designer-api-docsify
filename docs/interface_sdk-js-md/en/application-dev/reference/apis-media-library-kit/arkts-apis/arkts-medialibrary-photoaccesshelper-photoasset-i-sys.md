@@ -9,7 +9,7 @@ PhotoAsset provides APIs for encapsulating file asset attributes.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancelPhotoRequest
@@ -87,7 +87,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>): void
 ```
 
-Commits the edited image or video asset. This API uses an asynchronous callback to return the result.The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+Commits the edited image or video asset. This API uses an asynchronous callback to return the result.
+
+The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 > **NOTE：**
 > 
@@ -160,7 +162,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 commitEditedAsset(editData: string, uri: string): Promise<void>
 ```
 
-Commits the edited image or video asset. This API uses a promise to return the result.The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+Commits the edited image or video asset. This API uses a promise to return the result.
+
+The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 > **NOTE：**
 > 
@@ -185,7 +189,7 @@ Commits the edited image or video asset. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -250,7 +254,7 @@ Duplicates an image within the same album (either user-created or application-sp
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PhotoAsset & gt; | Promise used to return the PhotoAsset instance representing the new image file. |
+| Promise&lt;PhotoAsset&gt; | Promise used to return the PhotoAsset instance representing the new image file. |
 
 **Error codes:**
 
@@ -305,7 +309,7 @@ Creates a JPEG-compatible copy for a third-party application that does not suppo
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -365,7 +369,7 @@ Obtains analysis data. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns analysis info into a json string |
+| Promise&lt;string&gt; | Returns analysis info into a json string |
 
 **Error codes:**
 
@@ -411,7 +415,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getEditData(): Promise<MediaAssetEditData>
 ```
 
-Obtains the edited data of this asset. This API uses a promise to return the result.If the asset has never been edited, an empty string is returned.
+Obtains the edited data of this asset. This API uses a promise to return the result.
+
+If the asset has never been edited, an empty string is returned.
 
 **Since:** 11
 
@@ -468,7 +474,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(callback: AsyncCallback<string>): void
 ```
 
-Obtains the Exif data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result.The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
+Obtains the Exif data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result.
+
+The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
 
 > **NOTE：**
 > 
@@ -541,7 +549,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(): Promise<string>
 ```
 
-Obtains the Exif data from a JPG image and returns a JSON string. This API uses a promise to return the result.The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
+Obtains the Exif data from a JPG image and returns a JSON string. This API uses a promise to return the result.
+
+The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
 
 > **NOTE：**
 > 
@@ -561,7 +571,7 @@ Obtains the Exif data from a JPG image and returns a JSON string. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the Exif data, in JSON strings. |
+| Promise&lt;string&gt; | Promise used to return the Exif data, in JSON strings. |
 
 **Error codes:**
 
@@ -628,7 +638,7 @@ Obtains the thumbnail of the specified type for the key frame. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return the PixelMap of the thumbnail obtained. The cover frame is returned by default if no thumbnail is obtained. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the PixelMap of the thumbnail obtained. The cover frame is returned by default if no thumbnail is obtained. |
 
 **Error codes:**
 
@@ -688,7 +698,7 @@ Open the file and cache it in the gallery sandbox when streaming video from the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the file fd. |
+| Promise&lt;number&gt; | Promise used to return the file fd. |
 
 **Error codes:**
 
@@ -725,7 +735,7 @@ Obtains the ArrayBuffer of a file thumbnail by specifying its type. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise used to return the ArrayBuffer of the thumbnail. |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the ArrayBuffer of the thumbnail. |
 
 **Error codes:**
 
@@ -845,7 +855,7 @@ Checks whether this image or video asset is edited. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result indicating whether the image or video asset is edited. **true** if edited, **false** otherwise. The default value is **false**. |
+| Promise&lt;boolean&gt; | Promise used to return the result indicating whether the image or video asset is edited. **true** if edited, **false** otherwise. The default value is **false**. |
 
 **Error codes:**
 
@@ -891,7 +901,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 open(mode: string, callback: AsyncCallback<number>): void
 ```
 
-Opens this file asset. This API uses an asynchronous callback to return the result.The returned FD must be closed when it is not required.
+Opens this file asset. This API uses an asynchronous callback to return the result.
+
+The returned FD must be closed when it is not required.
 
 > **NOTE：**
 > 
@@ -953,7 +965,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 open(mode: string): Promise<number>
 ```
 
-Opens this file asset. This API uses a promise to return the result.The returned FD must be closed when it is not required.
+Opens this file asset. This API uses a promise to return the result.
+
+The returned FD must be closed when it is not required.
 
 > **NOTE：**
 > 
@@ -982,7 +996,7 @@ Opens this file asset. This API uses a promise to return the result.The returned
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the FD of the file opened. |
+| Promise&lt;number&gt; | Promise used to return the FD of the file opened. |
 
 **Error codes:**
 
@@ -1023,7 +1037,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestEditData(callback: AsyncCallback<string>): void
 ```
 
-Obtains the edit data of this image or video asset. This API uses an asynchronous callback to return the result.If the asset has never been edited, an empty string is returned.
+Obtains the edit data of this image or video asset. This API uses an asynchronous callback to return the result.
+
+If the asset has never been edited, an empty string is returned.
 
 **Since:** 11
 
@@ -1084,7 +1100,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestEditData(): Promise<string>
 ```
 
-Obtains the edit data of this image or video asset. This API uses a promise to return the result.If the asset has never been edited, an empty string is returned.
+Obtains the edit data of this image or video asset. This API uses a promise to return the result.
+
+If the asset has never been edited, an empty string is returned.
 
 **Since:** 11
 
@@ -1098,7 +1116,7 @@ Obtains the edit data of this image or video asset. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the edit data obtained. |
+| Promise&lt;string&gt; | Promise used to return the edit data obtained. |
 
 **Error codes:**
 
@@ -1140,7 +1158,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestPhoto(callback: AsyncCallback<image.PixelMap>): string
 ```
 
-Obtains the quick thumbnail and quality thumbnail of this asset. This API uses an asynchronous callback to return the result.The size of a quick thumbnail is 128 x 128, and the size of a quality thumbnail is 256 x 256. After this API is called, the callback will be invoked twice to return a quick thumbnail and a quality thumbnail in sequence.
+Obtains the quick thumbnail and quality thumbnail of this asset. This API uses an asynchronous callback to return the result.
+
+The size of a quick thumbnail is 128 x 128, and the size of a quality thumbnail is 256 x 256. After this API is called, the callback will be invoked twice to return a quick thumbnail and a quality thumbnail in sequence.
 
 **Since:** 11
 
@@ -1358,7 +1378,7 @@ Opens the source file and returns the FD. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the FD. |
+| Promise&lt;number&gt; | Promise used to return the FD. |
 
 **Error codes:**
 
@@ -1485,7 +1505,7 @@ Reverts to the state of the file before being edited. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1618,7 +1638,7 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1665,7 +1685,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets this file asset to the hidden state. This API uses an asynchronous callback to return the result.Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
+Sets this file asset to the hidden state. This API uses an asynchronous callback to return the result.
+
+Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
 
@@ -1728,7 +1750,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setHidden(hiddenState: boolean): Promise<void>
 ```
 
-Sets this file asset to the hidden state. This API uses a promise to return the result.Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
+Sets this file asset to the hidden state. This API uses a promise to return the result.
+
+Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
 
@@ -1752,7 +1776,7 @@ Sets this file asset to the hidden state. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1798,7 +1822,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setPending(pendingState: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets the pending state for this image or video asset. This API uses an asynchronous callback to return the result.The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
+Sets the pending state for this image or video asset. This API uses an asynchronous callback to return the result.
+
+The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
 
 > **NOTE：**
 > 
@@ -1864,7 +1890,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setPending(pendingState: boolean): Promise<void>
 ```
 
-Sets the pending state for this image or video asset. This API uses a promise to return the result.The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
+Sets the pending state for this image or video asset. This API uses a promise to return the result.
+
+The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
 
 > **NOTE：**
 > 
@@ -1889,7 +1917,7 @@ Sets the pending state for this image or video asset. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2017,7 +2045,7 @@ Sets user comment information of an image or video. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

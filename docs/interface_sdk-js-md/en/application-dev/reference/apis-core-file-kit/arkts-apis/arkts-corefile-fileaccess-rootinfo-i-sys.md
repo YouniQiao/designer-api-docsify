@@ -13,7 +13,7 @@ Provides APIs for managing the device's root attribute information.
 ## Modules to Import
 
 ```TypeScript
-import fileAccess from '@kit.CoreFileKit';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## listFile

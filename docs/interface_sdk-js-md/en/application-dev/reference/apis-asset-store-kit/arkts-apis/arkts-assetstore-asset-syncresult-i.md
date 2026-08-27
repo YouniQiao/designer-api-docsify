@@ -9,7 +9,7 @@ Represents the sync result of an asset.
 ## Modules to Import
 
 ```TypeScript
-import asset from '@kit.AssetStoreKit';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## failedCount

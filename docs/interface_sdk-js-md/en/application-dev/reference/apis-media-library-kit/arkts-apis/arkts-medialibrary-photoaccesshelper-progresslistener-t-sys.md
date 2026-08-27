@@ -4,7 +4,9 @@
 type ProgressListener = (progress: Progress) => void
 ```
 
-Indicates the type of the progress of batch operation.Progress callback, which can be the size or numberof files.
+Indicates the type of the progress of batch operation.
+
+Progress callback, which can be the size or numberof files.
 
 **Since:** 26.0.0
 
@@ -18,4 +20,4 @@ Indicates the type of the progress of batch operation.Progress callback, which c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | [Progress](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-progress-i.md) | Yes | progress info. |
+| progress | Progress | Yes | progress info. |

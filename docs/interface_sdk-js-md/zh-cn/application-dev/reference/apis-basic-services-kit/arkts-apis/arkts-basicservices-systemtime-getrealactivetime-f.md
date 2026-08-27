@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import systemTime from '@kit.BasicServicesKit';
-import systemTimer from '@kit.BasicServicesKitr';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## getRealActiveTime
@@ -130,7 +129,7 @@ function getRealActiveTime(isNano?: boolean): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回自系统启动以来经过的时间，但不包括深度睡眠时间。 |
+| Promise&lt;number&gt; | Promise对象，返回自系统启动以来经过的时间，但不包括深度睡眠时间。 |
 
 **错误码：**
 

@@ -55,6 +55,7 @@ FINGERPRINT = 3
 ```
 
 Device fingerprint authentication capability. Currently, this feature is supported only on PCs/2-in-1 devices. The rules for using this capability are as follows:
+
 1. After the device fingerprint authentication capability ([FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefordevice-e.md))
 is disabled, disabling this capability for a specific user will result in a policy conflict.
 2. After the device fingerprint authentication capability is disabled or enabled for a specific user, disabling
@@ -100,7 +101,10 @@ MTP client capability (including read and write capabilities). Currently, it is 
 USB_STORAGE_DEVICE_WRITE = 6
 ```
 
-USB storage device write capability. Currently, it is supported only on enterprise PCs/2-in-1 devices.Disabling the USB storage device write capability for a specific user in any of the following scenarios will result in a policy conflict:
+USB storage device write capability. Currently, it is supported only on enterprise PCs/2-in-1 devices.
+
+Disabling the USB storage device write capability for a specific user in any of the following scenarios will result in a policy conflict:
+
 1. The device USB capability ([FeatureForDevice.USB](arkts-mdm-restrictions-featurefordevice-e.md)) has been disabled.
 2. USB storage device access policy has been set to read-only or disabled via the  
 [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md) API.

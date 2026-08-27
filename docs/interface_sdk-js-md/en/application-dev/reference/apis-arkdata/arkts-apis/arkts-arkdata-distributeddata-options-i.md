@@ -13,7 +13,6 @@ Provides KV store configuration.
 ## Modules to Import
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## autoSync
@@ -22,7 +21,9 @@ import distributedDataObject from '@kit.ArkDataObject';
 autoSync?: boolean
 ```
 
-Whether to automatically synchronize database files. The default value is **false**, which means the database files are manually synchronized.ohos.permission.DISTRIBUTED_DATASYNC
+Whether to automatically synchronize database files. The default value is **false**, which means the database files are manually synchronized.
+
+ohos.permission.DISTRIBUTED_DATASYNC
 
 **Type:** boolean
 

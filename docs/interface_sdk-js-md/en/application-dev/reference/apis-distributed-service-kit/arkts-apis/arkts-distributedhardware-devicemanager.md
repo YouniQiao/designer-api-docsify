@@ -1,6 +1,7 @@
 # @ohos.distributedHardware.deviceManager
 
-The APIs of this module are deprecated. You are advised to use [@ohos.distributedDeviceManager](arkts-distributeddevicemanager.md). The **deviceManager** module provides APIs for distributed device management. System applications can call the APIs to do the following:  
+The APIs of this module are deprecated. You are advised to use [@ohos.distributedDeviceManager](arkts-distributeddevicemanager.md). The **deviceManager** module provides APIs for distributed device management. System applications can call the APIs to do the following:
+
 - Subscribe to or unsubscribe from device state changes.  
 - Discover devices nearby.  
 - Authenticate or deauthenticate a device.  
@@ -19,7 +20,7 @@ The APIs of this module are deprecated. You are advised to use [@ohos.distribute
 ## Modules to Import
 
 ```TypeScript
-import deviceManager from '@kit.DistributedServiceKit';
+import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary

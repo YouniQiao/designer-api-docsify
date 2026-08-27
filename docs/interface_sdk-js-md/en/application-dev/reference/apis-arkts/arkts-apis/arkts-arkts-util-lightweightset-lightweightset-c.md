@@ -331,7 +331,7 @@ Uses a callback to traverse the elements in this LightWeightSet and obtain their
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: LightWeightSet & lt;T & gt;) = & gt; void | Yes | Callback invoked to traverse the elements in the LightWeightSet. |
+| callbackFn | (value?: T, key?: T, set?: LightWeightSet&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the LightWeightSet. |
 | thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
@@ -693,7 +693,7 @@ Obtains an array that contains all objects in this LightWeightSet.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Array obtained. |
+| Array&lt;T&gt; | Array obtained. |
 
 **Error codes:**
 

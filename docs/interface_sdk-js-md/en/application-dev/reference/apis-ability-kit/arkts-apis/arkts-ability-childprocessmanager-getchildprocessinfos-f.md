@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import childProcessManager from '@kit.AbilityKit';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## getChildProcessInfos
@@ -29,7 +29,7 @@ Obtains the information about the child processes of the current application. Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;ChildProcessInformation & gt; & gt; | Promise used to return the information about the child processes of the current application. |
+| Promise&lt;Array&lt;ChildProcessInformation&gt;&gt; | Promise used to return the information about the child processes of the current application. |
 
 **Error codes:**
 

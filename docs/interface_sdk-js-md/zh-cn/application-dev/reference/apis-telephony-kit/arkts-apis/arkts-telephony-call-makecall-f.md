@@ -75,7 +75,7 @@ function makeCall(phoneNumber: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式异步返回拨号的结果。 |
+| Promise&lt;void&gt; | 以Promise形式异步返回拨号的结果。 |
 
 **错误码：**
 
@@ -125,7 +125,7 @@ function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -173,14 +173,14 @@ function makeCall(context: Context, phoneNumber: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| context | Context | 是 | 应用上下文Context。 |
 | phoneNumber | string | 是 | 电话号码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式异步返回拨号的结果。 |
+| Promise&lt;void&gt; | 以Promise形式异步返回拨号的结果。 |
 
 **错误码：**
 

@@ -15,7 +15,7 @@ TextBlob是由一个或多个具有相同字型的字符组成的字块。支持
 ## 导入模块
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## bounds
@@ -66,7 +66,7 @@ static makeFromPosText(text: string, len: number, points: common2D.Point[], font
 | text | string | 是 | 绘制字形的文本内容。 |
 | len | number | 是 | 字形个数，由[countText](arkts-arkgraphics2d-drawing-font-c.md#counttext)获取，该参数为整数。 |
 | points | common2D.Point[] | 是 | 点数组，用于指定每个字形的坐标，长度必须为len。 |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 字型对象。 |
+| font | Font | 是 | 字型对象。 |
 
 **返回值：**
 
@@ -120,7 +120,7 @@ static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: com
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pos | Array&lt;[TextBlobRunBuffer](arkts-arkgraphics2d-drawing-textblobrunbuffer-i.md)&gt; | 是 | TextBlobRunBuffer数组，每个元素包含字形ID及位置坐标信息。 |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 字型对象。 |
+| font | Font | 是 | 字型对象。 |
 | bounds | common2D.Rect | 否 | 文字边界框的矩形区域；如果不设置，则不预设边界框。 |
 
 **返回值：**
@@ -180,8 +180,8 @@ static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBl
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 绘制字形的文本内容。 |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 字型对象。 |
-| encoding | [TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | 否 | 编码类型，默认值为TEXT_ENCODING_UTF8。当前只有TEXT_ENCODING_UTF8生效，其余编码类型也会被视为 TEXT_ENCODING_UTF8。 |
+| font | Font | 是 | 字型对象。 |
+| encoding | TextEncoding | 否 | 编码类型，默认值为TEXT_ENCODING_UTF8。当前只有TEXT_ENCODING_UTF8生效，其余编码类型也会被视为TEXT_ENCODING_UTF8。 |
 
 **返回值：**
 

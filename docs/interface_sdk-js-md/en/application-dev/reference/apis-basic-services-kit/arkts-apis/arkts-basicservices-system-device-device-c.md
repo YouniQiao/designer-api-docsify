@@ -11,7 +11,7 @@ getInfo interface
 ## Modules to Import
 
 ```TypeScript
-import Device, { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
+import { Device, DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
 ```
 
 ## getInfo
@@ -32,7 +32,7 @@ Obtains the device information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md) | No | [Options](arkts-basicservices-zlib-options-i.md) |
+| options | [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md) | No | Options |
 
 **Examples**
 

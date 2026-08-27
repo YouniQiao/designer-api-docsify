@@ -154,7 +154,9 @@ struct OverlayExample {
 addComponentContentWithOrder(content: ComponentContent, levelOrder?: LevelOrder): void
 ```
 
-Creates an overlay node with the specified display order.This API allows you to define the stacking order of the nodes when they are created.
+Creates an overlay node with the specified display order.
+
+This API allows you to define the stacking order of the nodes when they are created.
 
 **Since:** 18
 
@@ -318,14 +320,14 @@ Opens an overlay with the specified ComponentContent and options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes | Content to add to the new node on the OverlayManager. & lt;p & gt; & lt;strong & gt;NOTE & lt;/strong & gt;: By default, the new node is centered on the page and stacked according to its stacking level. & lt;/p & gt; |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes | Content to add to the new node on the OverlayManager. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: By default, the new node is centered on the page and stacked according to its stacking level. </p> |
 | options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 

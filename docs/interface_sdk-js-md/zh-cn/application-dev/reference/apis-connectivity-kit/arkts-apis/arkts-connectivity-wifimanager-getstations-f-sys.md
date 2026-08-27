@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getStations
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function getStations(): Array<StationInfo>
 ```
 
-获取连接到WLAN热点的站点列表。 此方法只能在作为WLAN热点的设备上使用。
+获取连接到WLAN热点的站点列表。此方法只能在作为WLAN热点的设备上使用。
 
 **起始版本：** 10
 
@@ -27,7 +26,7 @@ function getStations(): Array<StationInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;StationInfo & gt; | 连接到WLAN热点的客户端列表。 |
+| Array&lt;StationInfo&gt; | 连接到WLAN热点的客户端列表。 |
 
 **错误码：**
 

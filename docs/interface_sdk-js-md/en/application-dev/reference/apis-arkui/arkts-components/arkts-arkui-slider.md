@@ -1,6 +1,7 @@
 # Slider
 
 The **Slider** component is used to quickly adjust settings, such as the volume and brightness.
+
 > **NOTE**
 
 ## Child Components
@@ -33,16 +34,31 @@ Slider(options?: SliderOptions)
 
 | Name | Description |
 | --- | --- |
+| [ColorMetricsStop](arkts-arkui-colormetricsstop-i.md) | Describes the breakpoint of the gradient color. |
+| [SlideRange](arkts-arkui-sliderange-i.md) | Defines the callback type used in **SlideRange**. |
+| [SliderBlockStyle](arkts-arkui-sliderblockstyle-i.md) | Describes the style of the slider in the block direction. |
+| [SliderConfiguration](arkts-arkui-sliderconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
+| [SliderCustomContentOptions](arkts-arkui-slidercustomcontentoptions-i.md) | Provides accessibility configuration of the slider prefix and suffix. |
+| [SliderOptions](arkts-arkui-slideroptions-i.md) | Provides information about the slider. |
+| [SliderPrefixOptions](arkts-arkui-sliderprefixoptions-i.md) | Provides accessibility configuration of the slider prefix. |
+| [SliderShowStepOptions](arkts-arkui-slidershowstepoptions-i.md) | Provides accessibility text mapping for the slider step markers. |
+| [SliderStepItemAccessibility](arkts-arkui-sliderstepitemaccessibility-i.md) | Provides accessibility configuration of the slider step markers. |
+| [SliderSuffixOptions](arkts-arkui-slidersuffixoptions-i.md) | Provides accessibility configuration of the slider suffix. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [SliderTriggerChangeCallback](arkts-arkui-slidertriggerchangecallback-t.md) | Defines the callback type used in **SliderConfiguration**. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [SliderBlockType](arkts-arkui-sliderblocktype-e.md) | Enumerates the types of the slider in the block direction. |
+| [SliderChangeMode](arkts-arkui-sliderchangemode-e.md) | Enumerates the slider states. |
+| [SliderInteraction](arkts-arkui-sliderinteraction-e.md) | Interaction mode between the user and the slider. |
+| [SliderStyle](arkts-arkui-sliderstyle-e.md) | Enumerates the display styles of the slider thumb relative to the track. For details, see [How Are the Slider Thumb and Track of the Slider Component Aligned?](../../../ui/arkts-select-component-faq.md#how-are-the-slider-thumb-and-track-of-the-slider-component-aligned). |
 
 ## Examples
 

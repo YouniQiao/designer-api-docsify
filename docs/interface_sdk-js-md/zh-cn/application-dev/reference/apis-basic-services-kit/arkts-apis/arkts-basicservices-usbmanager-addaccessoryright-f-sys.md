@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import usbManager from '@kit.BasicServicesKit';
-import serialManager from '@kit.BasicServicesKit.serial';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## addAccessoryRight
@@ -13,7 +12,7 @@ import serialManager from '@kit.BasicServicesKit.serial';
 function addAccessoryRight(tokenId: number, accessory: USBAccessory): void
 ```
 
-为应用添加访问USB配件权限。适用于系统应用需要为第三方应用授权访问USB配件的场景。usbManager.requestAccessoryRight会触发弹窗请求用户授权；addAccessoryRight不会触发弹窗，而是直接 添加应用访问USB配件的权限。授权立即生效并持久化存储，设备重启后仍然有效。授权范围为指定的USB配件实例，多个应用可以同时获得同一配件的访问权限。与requestAccessoryRight相比， addAccessoryRight不需要用户交互，适用于系统应用自动授权场景。
+为应用添加访问USB配件权限。适用于系统应用需要为第三方应用授权访问USB配件的场景。usbManager.requestAccessoryRight会触发弹窗请求用户授权；addAccessoryRight不会触发弹窗，而是直接添加应用访问USB配件的权限。授权立即生效并持久化存储，设备重启后仍然有效。授权范围为指定的USB配件实例，多个应用可以同时获得同一配件的访问权限。与requestAccessoryRight相比，addAccessoryRight不需要用户交互，适用于系统应用自动授权场景。
 
 **起始版本：** 14
 
@@ -27,8 +26,8 @@ function addAccessoryRight(tokenId: number, accessory: USBAccessory): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenId | number | 是 | 应用程序的唯一标识符，可通过 [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md)获取。 |
-| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | 是 | USB配件对象，包含配件的标识和属性信息。可通过[getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md)获取 配件列表后获得。详细字段定义参见[USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)接口。 |
+| tokenId | number | 是 | 应用程序的唯一标识符，可通过[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md)获取。 |
+| accessory | [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) | 是 | USB配件对象，包含配件的标识和属性信息。可通过[getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md)获取配件列表后获得。详细字段定义参见[USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)接口。 |
 
 **错误码：**
 

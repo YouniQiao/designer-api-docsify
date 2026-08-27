@@ -1,6 +1,8 @@
 # GenerateImageTaskParams (System API)
 
-Configuration parameter options for AI-generated image tasks.@interface GenerateImageTaskParams
+Configuration parameter options for AI-generated image tasks.
+
+@interface GenerateImageTaskParams
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ Configuration parameter options for AI-generated image tasks.@interface Generate
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## imageCount

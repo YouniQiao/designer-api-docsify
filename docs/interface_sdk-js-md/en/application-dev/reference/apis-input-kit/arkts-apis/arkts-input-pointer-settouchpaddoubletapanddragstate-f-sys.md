@@ -89,7 +89,7 @@ Sets the touchpad number-tap and drag switch state. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

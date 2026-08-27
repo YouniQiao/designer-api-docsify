@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import asset from '@kit.AssetStoreKit';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## removeAsUser
@@ -33,7 +33,7 @@ Removes one or more assets in the specified user space. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import serial from '@kit.BasicServicesKit';
+import { serial } from '@kit.BasicServicesKit';
 ```
 
 ## getSerialPortList
@@ -24,7 +24,7 @@ Obtains the serial port list. This API returns the result asynchronously through
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;SerialPort[] & gt; | Promise used to return the list of serial port devices. |
+| Promise&lt;SerialPort[]&gt; | Promise used to return the list of serial port devices. |
 
 **Error codes:**
 

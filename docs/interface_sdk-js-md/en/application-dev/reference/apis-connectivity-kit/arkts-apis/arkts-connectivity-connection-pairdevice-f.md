@@ -84,7 +84,7 @@ Starts pairing with a remote Bluetooth device.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 
@@ -135,13 +135,13 @@ Starts pairing with a remote Bluetooth device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | [BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md) | Yes | Indicates address of peer device. |
+| deviceId | BluetoothAddress | Yes | Indicates address of peer device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 

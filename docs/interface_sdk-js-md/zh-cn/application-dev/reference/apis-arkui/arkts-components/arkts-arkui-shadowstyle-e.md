@@ -1,6 +1,8 @@
 # ShadowStyle
 
-组件阴影效果。@enum { number }
+组件阴影效果。
+
+@enum { number }
 
 **起始版本：** 11
 

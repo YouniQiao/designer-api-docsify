@@ -37,7 +37,7 @@ Starts the burst mode, in which users can capture a series of photos in quick su
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -335,13 +335,13 @@ async function enableQuickThumbnail(context: common.BaseContext, mode: camera.Sc
   let cameras: Array<camera.CameraDevice> = cameraManager.getSupportedCameras();
   // Create a CaptureSession instance.
   let session: camera.Session = cameraManager.createSession(mode);
-  // Start configuration for the session.
+  // Start configuring the session.
   session.beginConfig();
-  // Add a CameraInput instance to the session.
+  // Add the CameraInput to the session.
   let cameraInput: camera.CameraInput = cameraManager.createCameraInput(cameras[0]);
   await cameraInput.open();
   session.addInput(cameraInput);
-  // Add a PhotoOutput instance to the session.
+  // Add the PhotoOutput to the session.
   let photoOutput: camera.PhotoOutput = cameraManager.createPhotoOutput(photoProfile);
   session.addOutput(photoOutput);
   let isSupported: boolean = photoOutput.isQuickThumbnailSupported();
@@ -662,11 +662,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 async function isQuickThumbnailSupported(context: common.BaseContext, mode: camera.SceneMode, photoProfile: camera.Profile): Promise<boolean> {
   let cameraManager: camera.CameraManager = camera.getCameraManager(context);
   let cameras: Array<camera.CameraDevice> = cameraManager.getSupportedCameras();
-  // Create a CaptureSession instance.
+  // Create the CaptureSession instance.
   let session: camera.Session = cameraManager.createSession(mode);
-  // Start configuration for the session.
+  // Begin configuring the session.
   session.beginConfig();
-  // Add a CameraInput instance to the session.
+  // Add the CameraInput to the session.
   if (cameras.length <= 0) {
     console.info('Get supported cameras is null or [].');
     return false;
@@ -674,7 +674,7 @@ async function isQuickThumbnailSupported(context: common.BaseContext, mode: came
   let cameraInput: camera.CameraInput = cameraManager.createCameraInput(cameras[0]);
   await cameraInput.open();
   session.addInput(cameraInput);
-  // Add a PhotoOutput instance to the session.
+  // Add the photoOutput to the session.
   let photoOutput: camera.PhotoOutput = cameraManager.createPhotoOutput(photoProfile);
   try {
     session.addOutput(photoOutput);
@@ -902,8 +902,8 @@ function callback(err: BusinessError, pixelMap: image.PixelMap): void {
       console.error('photoOutput on thumbnail failed');
       return;
   }
-  // Display or save the PixelMap instance.
-  // Execute the operation.
+  // Display or save the pixelMap.
+  // Perform the operation.
 }
 
 async function registerQuickThumbnail(context: common.BaseContext, mode: camera.SceneMode, photoProfile: camera.Profile): Promise<void> {
@@ -911,13 +911,13 @@ async function registerQuickThumbnail(context: common.BaseContext, mode: camera.
   let cameras: Array<camera.CameraDevice> = cameraManager.getSupportedCameras();
   // Create a CaptureSession instance.
   let session: camera.Session = cameraManager.createSession(mode);
-  // Start configuration for the session.
+  // Start configuring the session.
   session.beginConfig();
-  // Add a CameraInput instance to the session.
+  // Add the CameraInput to the session.
   let cameraInput: camera.CameraInput = cameraManager.createCameraInput(cameras[0]);
   await cameraInput.open();
   session.addInput(cameraInput);
-  // Add a PhotoOutput instance to the session.
+  // Add the PhotoOutput to the session.
   let photoOutput: camera.PhotoOutput = cameraManager.createPhotoOutput(photoProfile);
   session.addOutput(photoOutput);
   let isSupported: boolean = photoOutput.isQuickThumbnailSupported();

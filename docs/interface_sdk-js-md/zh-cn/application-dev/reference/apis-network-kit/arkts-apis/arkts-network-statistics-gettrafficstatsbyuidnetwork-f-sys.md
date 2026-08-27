@@ -26,13 +26,13 @@ function getTrafficStatsByUidNetwork(uid: number, networkInfo: NetworkInfo): Pro
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uid | number | 是 | 指定查询的应用 UID。 |
-| networkInfo | [NetworkInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-cachedownload-networkinfo-i.md) | 是 | 指定查询的网络信息，参见[NetworkInfo](arkts-network-statistics-networkinfo-i.md)。 |
+| networkInfo | NetworkInfo | 是 | 指定查询的网络信息，参见[NetworkInfo](arkts-network-statistics-networkinfo-i.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;NetStatsInfoSequence & gt; | 以 Promise 形式返回获取结果。返回应用历史流量统计信息。 |
+| Promise&lt;NetStatsInfoSequence&gt; | 以 Promise 形式返回获取结果。返回应用历史流量统计信息。 |
 
 **错误码：**
 

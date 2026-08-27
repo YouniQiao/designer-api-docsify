@@ -1,6 +1,7 @@
 # NavRouter
 
 The **NavRouter** component provides default processing logic for responding to clicks, eliminating the need for manual logic definition.
+
 > **NOTE** > > This component is deprecated since API version 13. You are advised to use [NavPathStack](arkts-arkui-navpathstack-c.md) in > conjunction with the **navDestination** attribute for page routing.
 
 ## Child Components
@@ -67,11 +68,13 @@ Provides route information so that clicking the **NavRouter** component redirect
 
 | Name | Description |
 | --- | --- |
+| [RouteInfo](arkts-arkui-routeinfo-i.md) | Route information. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [NavRouteMode](arkts-arkui-navroutemode-e.md) | Defines the routing policy. |
 
 ## Examples
 

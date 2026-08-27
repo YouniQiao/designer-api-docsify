@@ -37,7 +37,7 @@ If the **addSigner** API is not called and only the certificate is added, the ge
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | X.509 certificate to add. |
+| cert | X509Cert | Yes | X.509 certificate to add. |
 
 **Error codes:**
 
@@ -131,7 +131,7 @@ At least one recipient needs to be set.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -243,7 +243,7 @@ Adds signer information to the CMS whose content type is **SIGNED_DATA**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | X.509 certificate. |
+| cert | X509Cert | Yes | X.509 certificate. |
 | keyInfo | [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md) | Yes | Private key information. |
 | config | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | Yes | Signer configuration. |
 
@@ -368,7 +368,7 @@ Obtains the CMS message, for example, the CMS signed data or CMS enveloped data.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array \ | string & gt; | Promise used to return the CMS message. |
+| Promise&lt;Uint8Array \| string&gt; | Promise used to return the CMS message. |
 
 **Error codes:**
 
@@ -630,7 +630,7 @@ Obtains the encrypted content data if the **CmsGenerator** of the **ENVELOPED_DA
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the encrypted data. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the encrypted data. |
 
 **Error codes:**
 

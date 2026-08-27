@@ -75,7 +75,9 @@ let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, n
 edgeLight(params: EdgeLightParams | undefined): T
 ```
 
-Sets the edge light effect for the component.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The edge light effect creates a glowing light effect along the component's edges, starting from the specified position and extending along the edge. This effect can enhance the visual appeal and highlight important components. </p>
+Sets the edge light effect for the component.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: The edge light effect creates a glowing light effect along the component's edges, starting from the specified position and extending along the edge. This effect can enhance the visual appeal and highlight important components. </p>
 
 **Since:** 26.0.0
 
@@ -103,7 +105,11 @@ Sets the edge light effect for the component.<p>&lt;strong&gt;NOTE&lt;/strong&gt
 excludeFromRenderGroup(exclude: boolean | undefined): T
 ```
 
-Sets whether the current component and its child components are removed from the render group of the ancestor component. If this attribute is used alone, no effect is achieved. It must be used with the [renderGroup](arkts-arkui-commonmethod-c.md#rendergroup) attribute of the ancestor component.Removing the current component and its children from the render group does not affect the offscreen canvas of the ancestor component, and the cache of the render group is still valid. In this way, the render group cache can be reused. If the display area of the current component occupies only a part of the display area of the render group drawing content, and the display effect of the current component and its children is frequently updated, setting **excludeFromRenderGroup** helps optimize the drawing performance.If this attribute is not set, the current component and its children are not removed from the render group of the ancestor component by default.
+Sets whether the current component and its child components are removed from the render group of the ancestor component. If this attribute is used alone, no effect is achieved. It must be used with the [renderGroup](arkts-arkui-commonmethod-c.md#rendergroup) attribute of the ancestor component.
+
+Removing the current component and its children from the render group does not affect the offscreen canvas of the ancestor component, and the cache of the render group is still valid. In this way, the render group cache can be reused. If the display area of the current component occupies only a part of the display area of the render group drawing content, and the display effect of the current component and its children is frequently updated, setting **excludeFromRenderGroup** helps optimize the drawing performance.
+
+If this attribute is not set, the current component and its children are not removed from the render group of the ancestor component by default.
 
 > **NOTE：**
 > 

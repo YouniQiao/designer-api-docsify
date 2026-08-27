@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import taskpool from '@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -30,7 +30,7 @@ SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | Priority | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **示例**
 
@@ -44,7 +44,7 @@ let runner: taskpool.SequenceRunner = new taskpool.SequenceRunner();
 constructor(name: string, priority?: Priority)
 ```
 
-SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。该实例表示一个全局串行队列。如果传入的名字与已有名字相同， 将返回同一个串行队列。
+SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。该实例表示一个全局串行队列。如果传入的名字与已有名字相同，将返回同一个串行队列。
 
 > **说明：**
 > 
@@ -63,7 +63,7 @@ SequenceRunner的构造函数，用于创建一个**SequenceRunner**实例。该
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 串行队列的名字。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | Priority | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **示例**
 
@@ -77,7 +77,7 @@ let runner:taskpool.SequenceRunner = new taskpool.SequenceRunner("runner1", task
 execute(task: Task): Promise<Object>
 ```
 
-执行串行任务。使用该方法前需先构造**SequenceRunner**实例。串行队列不能执行任务组任务、其他串行队列任务、异步队列任务、 有依赖关系的任务和已执行的任务。使用Promise异步回调。
+执行串行任务。使用该方法前需先构造**SequenceRunner**实例。串行队列不能执行任务组任务、其他串行队列任务、异步队列任务、有依赖关系的任务和已执行的任务。使用Promise异步回调。
 
 > **说明：**
 > 
@@ -95,13 +95,13 @@ execute(task: Task): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 | 需要添加到串行任务队列中的任务。 |
+| task | Task | 是 | 需要添加到串行任务队列中的任务。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Object & gt; | Promise对象，返回任务执行的结果。 |
+| Promise&lt;Object&gt; | Promise对象，返回任务执行的结果。 |
 
 **错误码：**
 

@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import usbManager from '@kit.BasicServicesKit';
-import serialManager from '@kit.BasicServicesKit.serial';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## hasRight
@@ -13,7 +12,9 @@ import serialManager from '@kit.BasicServicesKit.serial';
 function hasRight(deviceName: string): boolean
 ```
 
-判断是否有权访问该设备。如果应用有权访问设备则返回true；无权访问设备则返回false。
+判断是否有权访问该设备。
+
+如果应用有权访问设备则返回true；无权访问设备则返回false。
 
 **起始版本：** 9
 

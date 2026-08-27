@@ -9,8 +9,7 @@ Provides recording strategy management, including collaborative recording and re
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## enableSystemRecordController
@@ -38,7 +37,7 @@ Enables or disables the system recording controller panel. The application can c
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

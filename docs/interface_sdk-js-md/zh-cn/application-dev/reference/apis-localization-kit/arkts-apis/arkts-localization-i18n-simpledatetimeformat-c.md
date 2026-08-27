@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## format
@@ -30,7 +30,7 @@ format(date: Date): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date | 是 | 时间日期。    **说明：** 月份从0开始计数，0表示一月。 |
+| date | Date | 是 | 时间日期。   **说明：** 月份从0开始计数，0表示一月。 |
 
 **返回值：**
 

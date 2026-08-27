@@ -34,7 +34,7 @@ Get remote device custom type.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;DeviceType & gt; | Returns the device type. |
+| Promise&lt;DeviceType&gt; | Returns the device type. |
 
 **Error codes:**
 

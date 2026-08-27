@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## addPrinterToCups
@@ -36,7 +36,7 @@ function addPrinterToCups(printerUri: string, printerName: string, printerMake: 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象，返回true表示添加打印机到cups成功；返回false表示添加打印机到cups失败。 |
+| Promise&lt;boolean&gt; | Promise对象，返回true表示添加打印机到cups成功；返回false表示添加打印机到cups失败。 |
 
 **错误码：**
 
@@ -52,6 +52,7 @@ function addPrinterToCups(printerUri: string, printerName: string, printerMake: 
 import { print } from '@kit.BasicServicesKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// printerUri 可通过 discoverUsbPrinters 接口返回的 PrinterInformation 获取
 let printerUri : string = 'testPrinterUri';
 let printerName : string = 'testPrinterName';
 let printerMake : string = 'testPrinterMake';

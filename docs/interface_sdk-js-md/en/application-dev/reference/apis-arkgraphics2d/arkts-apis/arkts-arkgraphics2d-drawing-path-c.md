@@ -16,7 +16,7 @@ A compound geometric path consisting of line segments, arcs, quadratic Bezier cu
 ## Modules to Import
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## addArc
@@ -26,6 +26,7 @@ addArc(rect: common2D.Rect, startAngle: number, sweepAngle: number): void
 ```
 
 Adds an arc to this path. When **startAngle** and **sweepAngle** meet the following conditions, an oval instead of an arc is added:
+
 1. The result of **startAngle** modulo 90 is close to 0.
 2. The value of **sweepAngle** is not in the range of (-360, 360).
 In other cases, this API adds an arc by applying the result of **sweepAngle** modulo 360 to the path.
@@ -146,7 +147,7 @@ Transforms the points in a path by a matrix and stores the resulting path in the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Source **Path** object. |
+| path | Path | Yes | Source **Path** object. |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object. The default value is an identity matrix. |
 
 **Error codes:**
@@ -185,7 +186,7 @@ Adds a polygon to this path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| points | Array & lt;common2D.Point & gt; | Yes | Array that holds the vertex coordinates of the polygon. |
+| points | Array&lt;common2D.Point&gt; | Yes | Array that holds the vertex coordinates of the polygon. |
 | close | boolean | Yes | Whether to close the path, that is, whether to add a line segment from the start point to the end point of the path. The value **true** means to close the path, and **false** means the opposite. |
 
 **Error codes:**
@@ -263,7 +264,7 @@ Adds a rounded rectangle to a path in the specified direction. When the path dir
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | Rounded rectangle. |
+| roundRect | RoundRect | Yes | Rounded rectangle. |
 | pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | No | Direction of the path. The default direction is clockwise. |
 
 **Error codes:**
@@ -316,7 +317,7 @@ Converts the existing path into an approximate path consisting of consecutive li
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | An array of points in the approximate path, which contains at least two points. Each point consists of three values: |
+| Array&lt;number&gt; | An array of points in the approximate path, which contains at least two points. Each point consists of three values: |
 
 **Error codes:**
 
@@ -561,7 +562,7 @@ Constructs a copy of an existing path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path to copy. |
+| path | Path | Yes | Path to copy. |
 
 **Examples**
 
@@ -745,7 +746,7 @@ Gets path conic weight data.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | path conic weight array. |
+| Array&lt;number&gt; | path conic weight array. |
 
 ## getFillType
 
@@ -922,7 +923,7 @@ Gets path point data.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;common2D.Point & gt; | path points array. |
+| Array&lt;common2D.Point&gt; | path points array. |
 
 ## getPositionAndTangent
 
@@ -996,7 +997,7 @@ Extracts a segment of a path and appends it to a destination path.
 | start | number | Yes | Distance from the start point of the path to the start point of the segment. If it is less than 0, it defaults to 0. If it is greater than or equal to **stop**, the extraction fails. The value is a floating point number. |
 | stop | number | Yes | Distance from the start point of the path to the end point of the segment. If it is less than or equal to **start**, the extraction fails. If it is greater than the path length, it defaults to the path length. The value is a floating point number. |
 | startWithMoveTo | boolean | Yes | Whether to execute [moveTo](#moveto) in the destination path to move to its start point. The value **true** means to move to the start point, and **false** means the opposite. |
-| dst | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Destination path. If the extraction succeeds, the segment is appended to the path. If the extraction fails, nothing changes. |
+| dst | Path | Yes | Destination path. If the extraction succeeds, the segment is appended to the path. If the extraction fails, nothing changes. |
 
 **Return value:**
 
@@ -1053,9 +1054,9 @@ Interpolates between the existing path and another path based on the given weigh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Another path object. |
+| other | Path | Yes | Another path object. |
 | weight | number | Yes | Interpolation weight, which must be within the range of [0.0, 1.0]. The value is a floating point number. |
-| interpolatedPath | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Target path object used to store the interpolation result. |
+| interpolatedPath | Path | Yes | Target path object used to store the interpolation result. |
 
 **Return value:**
 
@@ -1197,7 +1198,7 @@ Checks if two paths are equal.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Another Path object to compare. |
+| path | Path | Yes | Another Path object to compare. |
 
 **Return value:**
 
@@ -1276,7 +1277,7 @@ Checks whether the existing path and another path are compatible for interpolati
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Another path object. |
+| other | Path | Yes | Another path object. |
 
 **Return value:**
 
@@ -1472,7 +1473,7 @@ Offsets this path by specified distances along the X axis and Y axis and stores 
 
 | Type | Description |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | New path generated. |
+| Path | New path generated. |
 
 **Error codes:**
 
@@ -1507,7 +1508,7 @@ Combines this path with the passed-in path based on the specified operation mode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path object, which will be combined with the current path. |
+| path | Path | Yes | Path object, which will be combined with the current path. |
 | pathOp | [PathOp](arkts-arkgraphics2d-drawing-pathop-e.md) | Yes | Defines an enum for the operation modes available for a path. |
 
 **Return value:**
@@ -1849,7 +1850,7 @@ Updates the existing path with another path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path for the update. |
+| src | Path | Yes | Path for the update. |
 
 **Examples**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## getDLPFileAccessRecords
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function getDLPFileAccessRecords(): Promise<Array<AccessedDLPFileInfo>>
 ```
 
-查询最近访问的DLP文件列表。调用成功后返回文件访问记录，用于追踪和管理DLP文件的使用情况。仅支持在非DLP沙箱应用中调用。使用Promise异步回调。该接口用于获取最近访问的DLP文件记录列表，便于审计追踪和文件使用情况管理。
+查询最近访问的DLP文件列表。调用成功后返回文件访问记录，用于追踪和管理DLP文件的使用情况。仅支持在非DLP沙箱应用中调用。使用Promise异步回调。
+
+该接口用于获取最近访问的DLP文件记录列表，便于审计追踪和文件使用情况管理。
 
 **起始版本：** 10
 
@@ -51,7 +53,9 @@ dlpPermission.getDLPFileAccessRecords().then((accessRecords) => { // 获取DLP�
 function getDLPFileAccessRecords(callback: AsyncCallback<Array<AccessedDLPFileInfo>>): void
 ```
 
-查询最近访问的DLP文件列表。调用成功后返回文件访问记录，用于追踪和管理DLP文件的使用情况。使用callback异步回调。该接口用于获取最近访问的DLP文件记录列表，便于审计追踪和文件使用情况管理。
+查询最近访问的DLP文件列表。调用成功后返回文件访问记录，用于追踪和管理DLP文件的使用情况。使用callback异步回调。
+
+该接口用于获取最近访问的DLP文件记录列表，便于审计追踪和文件使用情况管理。
 
 **起始版本：** 10
 

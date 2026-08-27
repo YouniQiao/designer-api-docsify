@@ -11,7 +11,7 @@ Represents information about the last device-cloud sync.
 ## Modules to Import
 
 ```TypeScript
-import cloudData from '@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## code

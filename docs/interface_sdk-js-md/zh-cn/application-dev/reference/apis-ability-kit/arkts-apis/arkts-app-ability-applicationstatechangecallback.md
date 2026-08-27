@@ -20,7 +20,7 @@
 ## 导入模块
 
 ```TypeScript
-import ApplicationStateChangeCallback from '@kit.AbilityKit';
+import { ApplicationStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -29,4 +29,4 @@ import ApplicationStateChangeCallback from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | * 本模块用于监听当前应用进程的状态变化。为了便于表述，下文中将“应用进程”简称为“进程”。开发者可调用ApplicationContext.on('applicationStateChange')方法传入自定义ApplicationStateChangeCallback来监听当前进程的前后台状态变化， 并执行相应操作。例如，统计进程前后台时长、或者当进程退到后台时清理内存缓存。 |
+| [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | * 本模块用于监听当前应用进程的状态变化。为了便于表述，下文中将“应用进程”简称为“进程”。 |

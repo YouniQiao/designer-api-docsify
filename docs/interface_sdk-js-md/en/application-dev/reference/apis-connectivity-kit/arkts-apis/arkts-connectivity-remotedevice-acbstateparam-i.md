@@ -9,7 +9,7 @@ Represents the result of the logical link connection status change event.
 ## Modules to Import
 
 ```TypeScript
-import remoteDevice from '@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## address

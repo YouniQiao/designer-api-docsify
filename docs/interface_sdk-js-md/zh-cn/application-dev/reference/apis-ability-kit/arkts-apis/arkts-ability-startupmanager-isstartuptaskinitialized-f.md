@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import startupManager from '@kit.AbilityKit';
+import { startupManager } from '@kit.AbilityKit';
 ```
 
 ## isStartupTaskInitialized

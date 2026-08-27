@@ -31,7 +31,7 @@ new(array: ArrayLike<number> | ArrayBufferLike): Float32Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; \ | [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |  |
+| array | ArrayLike&lt;number&gt; \| [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |  |
 
 **Return value:**
 
@@ -67,7 +67,7 @@ Creates an array from an array-like or iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;number & gt; | Yes |  |
+| arrayLike | ArrayLike&lt;number&gt; | Yes |  |
 
 **Return value:**
 
@@ -85,8 +85,8 @@ Creates an array from an array-like or iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;T & gt; | Yes |  |
-| mapfn | (v: T, k: number) = & gt; number | Yes |  |
+| arrayLike | ArrayLike&lt;T&gt; | Yes |  |
+| mapfn | (v: T, k: number) =&gt; number | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**

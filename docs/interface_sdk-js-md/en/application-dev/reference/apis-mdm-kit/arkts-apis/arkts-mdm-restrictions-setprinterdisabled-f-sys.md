@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import restrictions from '@kit.MDMKit';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## setPrinterDisabled
@@ -101,7 +101,7 @@ Enables or disables the printing capability of the device. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object is thrown when the print capability fails to be disabled or enabled. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when the print capability fails to be disabled or enabled. |
 
 **Error codes:**
 

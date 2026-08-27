@@ -1,6 +1,8 @@
 # EpisodeRange
 
-The definition of EpisodeRange.@interface EpisodeRange
+The definition of EpisodeRange.
+
+@interface EpisodeRange
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of EpisodeRange.@interface EpisodeRange
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## end

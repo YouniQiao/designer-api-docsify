@@ -1,6 +1,8 @@
 # VerticalAlignParam
 
-Defines the vertical align rule of relative container.@interface VerticalAlignParam
+Defines the vertical align rule of relative container.
+
+@interface VerticalAlignParam
 
 **Since:** 23
 
@@ -17,7 +19,9 @@ Defines the vertical align rule of relative container.@interface VerticalAlignPa
 align: VerticalAlign
 ```
 
-Sets the vertical alignment relative to the anchor component.Anonymous Object Rectification
+Sets the vertical alignment relative to the anchor component.
+
+Anonymous Object Rectification
 
 **Type:** [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md)
 
@@ -35,7 +39,9 @@ Sets the vertical alignment relative to the anchor component.Anonymous Object Re
 anchor: string
 ```
 
-Specifies the anchor component Anonymous Object Rectification
+Specifies the anchor component
+
+Anonymous Object Rectification
 
 **Type:** string
 

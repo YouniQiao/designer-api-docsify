@@ -1,6 +1,8 @@
 # PopoverDialogV2Options
 
-跟手弹出框参数，用于设置弹出框内容、位置属性等。继承自[CustomPopupOptions](../arkts-components/arkts-arkui-custompopupoptions-i.md)。
+跟手弹出框参数，用于设置弹出框内容、位置属性等。
+
+继承自[CustomPopupOptions](../arkts-components/arkts-arkui-custompopupoptions-i.md)。
 
 > **说明：**
 > 

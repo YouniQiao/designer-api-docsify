@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## publish
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function publish(request: NotificationRequest, callback: AsyncCallback<void>): void
 ```
 
-Publishes a notification. This API uses an asynchronous callback to return the result.After a notification is published, it will be displayed as a notification widget in the device's notification center, status bar, etc. If the ID and tag of the newly published notification are the same as those of an already published notification, the new notification will replace the original one, achieving a notification update effect.
+Publishes a notification. This API uses an asynchronous callback to return the result.
+
+After a notification is published, it will be displayed as a notification widget in the device's notification center, status bar, etc. If the ID and tag of the newly published notification are the same as those of an already published notification, the new notification will replace the original one, achieving a notification update effect.
 
 **Since:** 9
 
@@ -30,7 +32,7 @@ cancelAll cancels all
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes | Content and related configuration of the notification to publish. |
+| request | NotificationRequest | Yes | Content and related configuration of the notification to publish. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -88,7 +90,9 @@ notificationManager.publish(notificationRequest, publishCallback);
 function publish(request: NotificationRequest): Promise<void>
 ```
 
-Publishes a notification. This API uses a promise to return the result.After a notification is published, it will be displayed as a notification card in the device's notification center, status bar, and other locations. If the ID and tag of the newly published notification are the same as those of an already published notification, the new notification will replace the original one, achieving a notification update effect.
+Publishes a notification. This API uses a promise to return the result.
+
+After a notification is published, it will be displayed as a notification card in the device's notification center, status bar, and other locations. If the ID and tag of the newly published notification are the same as those of an already published notification, the new notification will replace the original one, achieving a notification update effect.
 
 **Since:** 9
 
@@ -106,13 +110,13 @@ cancelAll cancels all notifications of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | Yes | Content and related configuration of the notification to publish. |
+| request | NotificationRequest | Yes | Content and related configuration of the notification to publish. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

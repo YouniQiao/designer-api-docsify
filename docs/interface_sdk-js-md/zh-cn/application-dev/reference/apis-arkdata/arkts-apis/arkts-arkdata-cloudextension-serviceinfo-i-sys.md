@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import cloudExtension from '@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## enableCloud

@@ -23,7 +23,7 @@ function addWatcher(watcher: Watcher): AppEventPackageHolder
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watcher-i.md) | 是 | 事件观察者。 |
+| watcher | Watcher | 是 | 事件观察者。 |
 
 **返回值：**
 

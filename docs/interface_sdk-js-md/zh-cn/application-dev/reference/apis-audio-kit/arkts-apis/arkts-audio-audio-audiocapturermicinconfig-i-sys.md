@@ -11,8 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## capturerInfo
@@ -39,7 +38,9 @@ capturerInfo: AudioCapturerInfo
 ecStreamInfo?: AudioStreamInfo
 ```
 
-回声消除音频流信息。若未设置此属性，采集器将仅录制麦克风输入的音频流。
+回声消除音频流信息。
+
+若未设置此属性，采集器将仅录制麦克风输入的音频流。
 
 **类型：** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 

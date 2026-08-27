@@ -9,7 +9,7 @@ Defines a TLS socket server connection. Before calling TLSSocketServer APIs, you
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## close
@@ -36,7 +36,7 @@ Stops listening for events of the **TLSSocketServer** object and releases the po
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -443,7 +443,7 @@ Obtains the local socket address of a **TLSSocketServer** connection. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NetAddress & gt; | Promise used to return the result. |
+| Promise&lt;NetAddress&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -724,7 +724,7 @@ Obtains the communication protocol version after a **TLSSocketServer** connectio
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. If the operation fails, an error message is returned. |
+| Promise&lt;string&gt; | Promise used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -815,7 +815,7 @@ Obtains the file descriptor bound to the TLSSocketServer listening port. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the socket file descriptor. |
+| Promise&lt;number&gt; | Promise used to return the socket file descriptor. |
 
 **Error codes:**
 
@@ -1595,7 +1595,7 @@ Listens for client connections after **bind** is successfully called to bind the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -2163,7 +2163,7 @@ Sets other properties of the **TLSSocketServer** object after **listen** is succ
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

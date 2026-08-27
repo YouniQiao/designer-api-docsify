@@ -28,7 +28,9 @@ STANDARD = 0
 DIALOG = 1
 ```
 
-默认透明。进出路由栈不影响下层NavDestination的可见性（onShown、onHidden等生命周期），只触发onActive、onInactive生命周期。 适合需要透明背景或悬浮效果的场景，如弹窗式页面、浮层提示、操作确认对话框等。API version 13之前，默认无系统转场动画。从API version 13开始，支持系统转场动画。
+默认透明。进出路由栈不影响下层NavDestination的可见性（onShown、onHidden等生命周期），只触发onActive、onInactive生命周期。适合需要透明背景或悬浮效果的场景，如弹窗式页面、浮层提示、操作确认对话框等。
+
+API version 13之前，默认无系统转场动画。从API version 13开始，支持系统转场动画。
 
 **起始版本：** 11
 

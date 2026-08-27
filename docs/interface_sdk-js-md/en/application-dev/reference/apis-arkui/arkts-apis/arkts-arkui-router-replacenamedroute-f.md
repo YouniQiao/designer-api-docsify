@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import router from '@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## replaceNamedRoute
@@ -111,7 +111,7 @@ Replaces the current page with another one using the named route and destroys th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -256,7 +256,7 @@ Replaces the current page with another one using the named route and destroys th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

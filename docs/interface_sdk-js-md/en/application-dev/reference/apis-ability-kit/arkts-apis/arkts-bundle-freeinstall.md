@@ -16,7 +16,7 @@ The module provides APIs for setting and obtaining installation-free information
 ## Modules to Import
 
 ```TypeScript
-import freeInstall from '@kit.AbilityKit';
+import { freeInstall } from '@kit.AbilityKit';
 ```
 
 ## Summary

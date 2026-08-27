@@ -74,7 +74,7 @@ Checks whether SMS is supported on IMS. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -17,11 +17,12 @@
 data: Record<string, Object>
 ```
 
-模板数据。  
+模板数据。
+
 - title: 表示下载标题。必填字段，值为字符串类型。  
 - fileName: 表示下载文件名。必填字段，值为字符串类型。  
 - progressValue: 表示下载进度，值为数值类型。建议取值范围为0~100，  
-表示百分比进度。当`progressValue`取值小于或等于0时，进度为0； 当其取值大于或等于100时，进度环消失，代表下载完成。
+表示百分比进度。当`progressValue`取值小于或等于0时，进度为0；当其取值大于或等于100时，进度环消失，代表下载完成。
 
 **类型：** Record&lt;string, Object&gt;
 
@@ -35,7 +36,7 @@ data: Record<string, Object>
 name: string
 ```
 
-模板名称。当前仅支持表示下载进度的进度条通知模板，取值为'downloadTemplate'。 字符串长度不超过202字节，超出部分会被截断。不可为空字符串。
+模板名称。当前仅支持表示下载进度的进度条通知模板，取值为'downloadTemplate'。字符串长度不超过202字节，超出部分会被截断。不可为空字符串。
 
 **类型：** string
 

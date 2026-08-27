@@ -16,6 +16,6 @@ Represents the tuple union type used to store button information.
 
 | Type | Description |
 | --- | --- |
-| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonTextItem & gt; | A tuple of text-only button information. |
-| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonIconItem & gt; | A tuple of icon-only button information. |
-| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonIconTextItem & gt; | A tuple of icon and text button information. |
+| ItemRestriction&lt;SegmentButtonTextItem&gt; | A tuple of text-only button information. |
+| ItemRestriction&lt;SegmentButtonIconItem&gt; | A tuple of icon-only button information. |
+| ItemRestriction&lt;SegmentButtonIconTextItem&gt; | A tuple of icon and text button information. |

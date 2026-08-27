@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## getSnapshot
@@ -32,7 +30,7 @@ Obtains a snapshot of the same size as the specified window. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise that returns no value. |
+| Promise&lt;image.PixelMap&gt; | Promise that returns no value. |
 
 **Error codes:**
 

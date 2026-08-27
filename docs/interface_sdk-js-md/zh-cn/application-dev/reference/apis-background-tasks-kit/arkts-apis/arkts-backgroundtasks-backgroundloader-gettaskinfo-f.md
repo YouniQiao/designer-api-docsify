@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundLoader from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## getTaskInfo
@@ -26,13 +26,13 @@ function getTaskInfo(taskId: number): Promise<TaskInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| taskId | number | 是 | 后台加载任务id。 取值范围为全体整数。 |
+| taskId | number | 是 | 后台加载任务id。取值范围为全体整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;TaskInfo & gt; | Promise对象， 返回任务信息。 |
+| Promise&lt;TaskInfo&gt; | Promise对象， 返回任务信息。 |
 
 **错误码：**
 

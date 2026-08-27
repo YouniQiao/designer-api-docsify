@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import scan from '@kit.BasicServicesKit';
+import { scan } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总

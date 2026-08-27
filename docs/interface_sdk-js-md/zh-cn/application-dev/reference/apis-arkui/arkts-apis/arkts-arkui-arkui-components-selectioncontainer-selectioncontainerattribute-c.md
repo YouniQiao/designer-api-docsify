@@ -1,6 +1,8 @@
 # SelectionContainerAttribute
 
-支持[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)。支持[通用事件](../arkts-components/arkts-arkui-commonmethod-c.md)。
+支持[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)。
+
+支持[通用事件](../arkts-components/arkts-arkui-commonmethod-c.md)。
 
 > **说明：**
 > 
@@ -29,7 +31,9 @@ bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuil
     responseType: Optional<TextResponseType>, options?: Optional<SelectionContainerMenuOptions>): SelectionContainerAttribute
 ```
 
-绑定到选择菜单。<p>&lt;strong&gt;注意&lt;/strong&gt;： 长按手势需要的时间，bindSelectionMenu为600ms,bindContextMenu为800 ms。 当bindSelectionMenu和bindContextMenu都设置了，并且都设置为长按触发 手势， bindSelectionMenu首先被触发。 如果自定义菜单过长，可以嵌入一个Scroll组件，防止键盘被遮挡。 </p>
+绑定到选择菜单。
+
+<p>&lt;strong&gt;注意&lt;/strong&gt;：长按手势需要的时间，bindSelectionMenu为600ms,bindContextMenu为800 ms。当bindSelectionMenu和bindContextMenu都设置了，并且都设置为长按触发手势，bindSelectionMenu首先被触发。如果自定义菜单过长，可以嵌入一个Scroll组件，防止键盘被遮挡。</p>
 
 **起始版本：** 26.0.0
 
@@ -43,9 +47,9 @@ bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuil
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spanType | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[TextSpanType](../arkts-components/arkts-arkui-textspantype-e.md)&gt; | 是 | 选择菜单的类型。默认值为 TextSpanType.TEXT |
+| spanType | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[TextSpanType](../arkts-components/arkts-arkui-textspantype-e.md)&gt; | 是 | 选择菜单的类型。默认值为TextSpanType.TEXT |
 | content | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)&gt; | 是 | 指示选择菜单的内容 |
-| responseType | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[TextResponseType](../arkts-components/arkts-arkui-textresponsetype-e.md)&gt; | 是 | 选择菜单响应类型。默认值为 TextResponseType.LONG_press |
+| responseType | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[TextResponseType](../arkts-components/arkts-arkui-textresponsetype-e.md)&gt; | 是 | 选择菜单响应类型。默认值为TextResponseType.LONG_press |
 | options | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md)&gt; | 否 | 指示选择菜单的选项 |
 
 **返回值：**
@@ -160,7 +164,9 @@ editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): Selectio
 enableHapticFeedback(isEnabled: Optional<boolean>): SelectionContainerAttribute
 ```
 
-设置是否开启触控反馈。未通过该接口设置时，默认开启。开启触控反馈时，需要在工程的[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启振动权限，配 置如下：
+设置是否开启触控反馈。未通过该接口设置时，默认开启。
+
+开启触控反馈时，需要在工程的[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启振动权限，配置如下：
 
 **起始版本：** 26.0.0
 
@@ -174,7 +180,7 @@ enableHapticFeedback(isEnabled: Optional<boolean>): SelectionContainerAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isEnabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启触控反馈。 true表示开启触控反馈，false表示不开启触控反馈。 |
+| isEnabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启触控反馈。true表示开启触控反馈，false表示不开启触控反馈。 |
 
 **返回值：**
 

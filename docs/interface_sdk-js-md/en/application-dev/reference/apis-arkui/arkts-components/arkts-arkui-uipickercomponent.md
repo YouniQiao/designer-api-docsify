@@ -1,34 +1,50 @@
 # UIPickerComponent
 
 The **UIPickerComponent** container is used to implement user selection operations. It supports single selection from a limited set of options and can be applied to various scenarios such as time selection, date selection, region selection, and status selection. Its display effect is a three-dimensional wheel style, supporting customizable options including text type, image type, and text-image combination type.
+
 NOTE
+
 - The height of the **UIPickerComponent** container options is fixed at 40 vp, and a maximum of seven options can
 be displayed. Due to the three-dimensional wheel display effect, options other than the selected one will be rotated at different angles, so the actual visible height will be less than 40 vp.
+
 - It is recommended that the height of the **UIPickerComponent**
 container be set to 200 vp. When the set height is greater than or equal to this recommended value, all 7 options can be fully displayed. Otherwise, the display area will be cropped from the top and bottom edges towards the center, and the number of displayed options will be reduced accordingly, always keeping the selected item vertically centered.
+
 - When the **UIPickerComponent** container's width is not set, the
 maximum width of the visible child components in the current view is taken as the container width. You are advised to set the width of the **UIPickerComponent** container or set the same width for each child component to avoid dynamic changes in container width during sliding, which affects the display effect.
+
 - The alignment mode of child components in the **UIPickerComponent** container is fixed to center alignment, and
 cannot be changed via the align attribute.
+
 - Currently, the **UIPickerComponent** container does not support wearables.
+
 - This component supports WithTheme since API version 26.0.0.
+
 Child Components
+
 - Multiple child components are supported.
 - Supported child component types: Text, Image, Row, and
 SymbolGlyph
 - Supported rendering control types: [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) and
 [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)
+
 NOTE
+
 - When the Row **container** is used as a child component, the **Row** container can contain only the **Text**,
 **Image**, and **SymbolGlyph** basic components. Including other container components may affect the display effect or cause sliding functionality abnormalities.
+
 - When counting the number of child components, the **Row** container and its child components are counted as one
 child component.
+
 - When the child component is **Text**, **Image**, or **SymbolGlyph**, the
 height attribute does not take effect and is fixed at 40 vp.
+
 - When the child component is a **Row** container, its height attribute
 does not take effect and is fixed at 40 vp. The height attribute of the child components in the **Row** container takes effect. The final display effect is determined by the **Row** container.
+
 - The text-image combination option requires that the **Row** container contain the **Text** and **Image**
 components. When using the text-image combination option, you are advised to set the image's height to 40 vp or below to avoid cropping when images are large.
+
 - The **fontSize** attribute of all text components (including the **Text** components in the **Row** container) in
 the **UIPickerComponent** container is 20 fp by default. User settings will override the default value, and abnormal values will be processed according to the result of handling the text component's fontSize. You are advised to set the **fontSize** attribute to a unified value or not to set it to ensure a good display effect.
 
@@ -60,16 +76,20 @@ Creates a **UIPickerComponent** container, whose selected item is determined by 
 
 | Name | Description |
 | --- | --- |
+| [PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md) | Sets parameters of the selected item indicator style. |
+| [UIPickerComponentOptions](arkts-arkui-uipickercomponentoptions-i.md) | Describes the parameters of the **UIPickerComponent** container. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md) | Defines the callback types for the [onChange](arkts-arkui-uipickercomponent-attribute.md#onchange) and [onScrollStop](arkts-arkui-uipickercomponent-attribute.md#onscrollstop) events. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [PickerIndicatorType](arkts-arkui-pickerindicatortype-e.md) | Enumerates the types of the selected item indicator. |
 
 ## Examples
 
@@ -85,7 +105,7 @@ struct UIPickerComponentAttrsExample {
   @State hapticFeedback: boolean = true;
 
   aboutToAppear(): void {
-    // Construct options.
+    // Construct the option data.
     for (let i = 1; i <= 10; i++) {
       this.dataArray.push(i.toString())
     }
@@ -99,7 +119,7 @@ struct UIPickerComponentAttrsExample {
             Text(item)
           })
         }
-        // Configure the option list looping.
+        // Configure the option list to loop.
         .canLoop(this.loop)
         // Configure haptic feedback.
         .enableHapticFeedback(this.hapticFeedback)
@@ -132,33 +152,37 @@ struct UIPickerComponentAttrsExample {
 }
 ```
 
-Since API version 22, this example demonstrates how to set the onChange and onScrollStop callbacks of the UIPickerComponent container based on status selection.
+Since API version 22, this example implements the onChange and onScrollStop event callbacks of the UIPickerComponent container based on status selection.
 
 ```TypeScript
 // xxx.ets
 @Entry
 @Component
 struct UIPickerComponentEventsExample {
-  // Construct status options.
-  private dataArray: string[] = ['To-do', 'In progress', 'Completed'];
+  // Construct the status option data.
+  private dataArray: string[] = ['To do', 'In progress', 'Completed'];
   @State onChangeDesc: string = '';
   @State onScrollStopDesc: string = '';
+  @State index: number = 0;
 
   build() {
     Column() {
       Row() {
-        UIPickerComponent() {
+        UIPickerComponent({
+          selectedIndex: this.index
+        }) {
           ForEach(this.dataArray, (item: string) => {
             Text(item)
           })
         }
-        // Configure the onChange callback.
+        // Configure the onChange event callback.
         .onChange((selectedIndex: number) => {
-          this.onChangeDesc = 'on change: ' + selectedIndex
+          this.index = selectedIndex;
+          this.onChangeDesc = 'on change: ' + selectedIndex;
         })
-        // Configure the onScrollStop callback.
+        // Configure the onScrollStop event callback.
         .onScrollStop((selectedIndex: number) => {
-          this.onScrollStopDesc = 'on scroll stop: ' + selectedIndex
+          this.onScrollStopDesc = 'on scroll stop: ' + selectedIndex;
         })
         .width('70%')
       }
@@ -174,7 +198,7 @@ struct UIPickerComponentEventsExample {
 }
 ```
 
-Since API version 22, this example demonstrates how to set the selected item index of the UIPickerComponent container.
+Since API version 22, this example implements setting the selected item index of the UIPickerComponent container.
 
 ```TypeScript
 // xxx.ets
@@ -185,7 +209,7 @@ struct UIPickerComponentSelectedIndexExample {
   @State selectedIndex: number = 0;
 
   aboutToAppear(): void {
-    // Construct options.
+    // Construct the option data.
     for (let i = 1; i <= 10; i++) {
       this.dataArray.push(i.toString())
     }
@@ -195,7 +219,7 @@ struct UIPickerComponentSelectedIndexExample {
     Column() {
       Row() {
         UIPickerComponent({
-          // Configure the index of the selected item.
+          // Configure the selected index value.
           selectedIndex: this.selectedIndex
         }) {
           ForEach(this.dataArray, (item: string) => {
@@ -203,10 +227,10 @@ struct UIPickerComponentSelectedIndexExample {
           })
         }
         .onChange((selectedIndex: number) => {
-          this.selectedIndex = selectedIndex
+          this.selectedIndex = selectedIndex;
         })
         .onScrollStop((selectedIndex: number) => {
-          this.selectedIndex = selectedIndex
+          this.selectedIndex = selectedIndex;
         })
         .width('70%')
       }
@@ -221,7 +245,7 @@ struct UIPickerComponentSelectedIndexExample {
 }
 ```
 
-Since API version 22, this example demonstrates how to set the selected item indicator of the UIPickerComponent container. Scenarios include the following: When using a background indicator, set the background color and background corner radius. When using a divider indicator, set the divider color, divider width, start side margin, and end side margin.
+Since API version 22, this example implements setting the selected item indicator of the UIPickerComponent container. Specifically, when a background indicator is used, set backgroundColor and borderRadius of [PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md); when a divider indicator is used, set strokeWidth, dividerColor, startMargin, and endMargin of [PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md).
 
 ```TypeScript
 // xxx.ets
@@ -231,7 +255,7 @@ import { LengthMetrics } from '@kit.ArkUI';
 @Component
 struct UIPickerComponentIndicatorExample {
   private dataArray: string[] = [];
-  @State indicatorType: PickerIndicatorType | undefined = undefined;
+  @State indicatorType: Optional<PickerIndicatorType> = undefined;
   @State bgColor: Color | undefined = undefined;
   @State dividerColor: Color | undefined = undefined;
   @State strokeWidth: LengthMetrics = LengthMetrics.px(2);
@@ -290,7 +314,7 @@ struct UIPickerComponentIndicatorExample {
       }
 
       Row() {
-        Text('Start Side Margin')
+        Text('Start margin')
       }.margin(2)
 
       Row() {
@@ -321,7 +345,7 @@ struct UIPickerComponentIndicatorExample {
       }
 
       Row() {
-        Text('End Side Margin')
+        Text('End Margin')
       }.margin(2)
 
       Row() {
@@ -458,7 +482,7 @@ struct UIPickerComponentIndicatorExample {
   }
 
   aboutToAppear(): void {
-    // Construct options.
+    // Construct the option data.
     for (let i = 1; i <= 10; i++) {
       this.dataArray.push(i.toString())
     }
@@ -472,7 +496,7 @@ struct UIPickerComponentIndicatorExample {
             Text(item)
           })
         }
-        // Configure the selected item indicator.
+        // Configure the selection indicator.
         .selectionIndicator({
           type: this.indicatorType,
           strokeWidth: this.strokeWidth,
@@ -516,7 +540,7 @@ struct UIPickerComponentIndicatorExample {
 }
 ```
 
-Since API version 22, this example demonstrates how to use the UIPickerComponent container to nest text child components to implement the month picker.
+Since API version 22, this example uses the UIPickerComponent container with nested text child components to implement a month picker.
 
 ```TypeScript
 // xxx.ets
@@ -527,9 +551,9 @@ struct MonthUIPickerComponentExample {
   private monthArray: string[] = [];
 
   aboutToAppear(): void {
-    // Construct options.
+    // Construct the option data.
     for (let i = 1; i <= 12; i++) {
-      this.monthArray.push(i + 'Month')
+      this.monthArray.push(i + 'month')
     }
   }
 
@@ -544,19 +568,19 @@ struct MonthUIPickerComponentExample {
         })
       }
       .width('70%')
-      // Configure the option list looping.
+      // Configure the option list to loop.
       .canLoop(true)
       // Disable haptic feedback.
       .enableHapticFeedback(false)
-      // Set the indicator of the selected item to a divider.
+      // Set the selection indicator to a divider.
       .selectionIndicator({ type: PickerIndicatorType.DIVIDER })
-      // Subscribe to the selected item change event.
+      // Subscribe to the selection change event.
       .onChange((idx: number) => {
-        console.info('UIPickerComponent item changed: ' + this.monthArray[idx])
+        console.info('UIPickerComponent item changed: ' + this.monthArray[idx]);
       })
-      // Subscribe to the scrolling stop event.
+      // Subscribe to the scroll stop event.
       .onScrollStop((idx: number) => {
-        console.info('UIPickerComponent scroll stopped: ' + this.monthArray[idx])
+        console.info('UIPickerComponent scroll stopped: ' + this.monthArray[idx]);
       })
     }
     .width('100%')
@@ -564,17 +588,17 @@ struct MonthUIPickerComponentExample {
 }
 ```
 
-Since API version 22, this example demonstrates how to use the multi-column UIPickerComponent container combination to implement an area selector.
+Since API version 22, this example uses a multi-column UIPickerComponent container combination to implement an area selector.
 
 ```TypeScript
 // xxx.ets
 
 type RegionDict = Record<string, Record<string, Array<string>>>;
-// Define a region dictionary.
+// Define the region dictionary.
 let regionData: RegionDict = {
   'Liaoning': {
     'Shenyang': ['Shenhe District', 'Heping District', 'Hunnan District'],
-    'Dalian': ['Zhongshan District', 'Jinzhou District', 'Changhai County'],
+    'Dalian': ['Zhongshan District', 'Jinzhou District', 'Changhai County']
   },
   'Jilin': {
     'Changchun': ['Nanguan District', 'Kuancheng District', 'Chaoyang District'],
@@ -603,22 +627,22 @@ struct RegionUIPickerComponentExample {
 
   flushCityColumn() {
     let currentProvince = this.provinces[this.provinceIndex]
-    this.cities = Object.keys(regionData[currentProvince])
-    this.cityIndex = 0
+    this.cities = Object.keys(regionData[currentProvince]);
+    this.cityIndex = 0;
     this.flushCountyColumn()
   }
 
   flushCountyColumn() {
     let currentProvince = this.provinces[this.provinceIndex]
     let currentCity = this.cities[this.cityIndex]
-    this.counties = regionData[currentProvince][currentCity]
-    this.countyIndex = 0
+    this.counties = regionData[currentProvince][currentCity];
+    this.countyIndex = 0;
   }
 
   build() {
     Column() {
       Row() {
-        // Province
+        // Provincial level
         UIPickerComponent({
           selectedIndex: this.provinceIndex
         }) {
@@ -627,12 +651,12 @@ struct RegionUIPickerComponentExample {
           })
         }
         .onChange((selectedIndex: number) => {
-          this.provinceIndex = selectedIndex
+          this.provinceIndex = selectedIndex;
           this.flushCityColumn()
 
         })
         .onScrollStop((selectedIndex: number) => {
-          this.provinceIndex = selectedIndex
+          this.provinceIndex = selectedIndex;
         })
         .selectionIndicator({ type: PickerIndicatorType.DIVIDER })
         .width('25%')
@@ -646,11 +670,11 @@ struct RegionUIPickerComponentExample {
           })
         }
         .onChange((selectedIndex: number) => {
-          this.cityIndex = selectedIndex
+          this.cityIndex = selectedIndex;
           this.flushCountyColumn()
         })
         .onScrollStop((selectedIndex: number) => {
-          this.cityIndex = selectedIndex
+          this.cityIndex = selectedIndex;
         })
         .selectionIndicator({ type: PickerIndicatorType.DIVIDER })
         .width('25%')
@@ -664,10 +688,10 @@ struct RegionUIPickerComponentExample {
           })
         }
         .onChange((selectedIndex: number) => {
-          this.countyIndex = selectedIndex
+          this.countyIndex = selectedIndex;
         })
         .onScrollStop((selectedIndex: number) => {
-          this.countyIndex = selectedIndex
+          this.countyIndex = selectedIndex;
         })
         .selectionIndicator({ type: PickerIndicatorType.DIVIDER })
         .width('25%')
@@ -678,7 +702,7 @@ struct RegionUIPickerComponentExample {
 }
 ```
 
-Since API version 22, this example uses the UIPickerComponent container to implement pickers with different option types, including text picker, image picker, and text-image combination picker.
+Since API version 22, this example uses the UIPickerComponent container to implement pickers with different option types, including a text picker, an image picker, and a combined image-text picker.
 
 ```TypeScript
 // xxx.ets
@@ -687,13 +711,13 @@ Since API version 22, this example uses the UIPickerComponent container to imple
 struct UIPickerComponentExample {
   @State textList: string[] =
     ['text1', 'text2', 'text3', 'text4', 'text5', 'text6', 'text7', 'text8'];
-  // Replace $r('sys.media.*') with the image resource file you use.
+  // The following $r('sys.media.*') resource files need to be replaced with the image resource files required by developers.
   @State imageList: Resource[] =
     [$r('sys.media.ohos_ic_normal_white_grid_audio'), $r('sys.media.ohos_ic_normal_white_grid_calendar'),
       $r('sys.media.ohos_ic_normal_white_grid_compress'), $r('sys.media.ohos_ic_normal_white_grid_doc'),
       $r('sys.media.ohos_ic_normal_white_grid_flac'), $r('sys.media.ohos_ic_normal_white_grid_folder'),
       $r('sys.media.ohos_ic_normal_white_grid_html'), $r('sys.media.ohos_ic_normal_white_grid_image')];
-  // Replace the $r('sys.symbol.*') file with the image resource file you use.
+  // The following $r('sys.symbol.*') resource files need to be replaced with the image resource files required by developers.
   @State symbolList: Resource[] =
     [$r('sys.symbol.calendar_01'), $r('sys.symbol.calendar_02'), $r('sys.symbol.calendar_03'),
       $r('sys.symbol.calendar_04'), $r('sys.symbol.calendar_05'), $r('sys.symbol.calendar_06'),
@@ -771,7 +795,7 @@ struct UIPickerComponentExample {
 }
 ```
 
-Chinese (default): Create the base directory in the resource directory, create the element directory in the base directory, and add the string.json file to the element directory. (If the file already exists, add the following key-value pair in the name-value format to the file. Do not directly overwrite the original file.) The following shows the file content:
+Chinese (default): Create a base directory under the resource directory, create an element directory under the base directory, and add a string.json file under the element directory (if the file already exists, append the following "name"-"value" key-value pairs to the file instead of overwriting the original file). The file content is as follows:
 
 ```TypeScript
 {
@@ -792,7 +816,7 @@ Chinese (default): Create the base directory in the resource directory, create t
 }
 ```
 
-English: Create the en directory in the resource directory, create the element directory in the en directory, and add the string.json file to the element directory. If the file already exists, add the key-value pair in the name-value format to the file. Do not overwrite the original file. The following shows the file content:
+English: Create the en directory under the resource directory, create the element directory under the en directory, and add the string.json file under the element directory (if the file already exists, append the following "name"-"value" key-value pairs to the file instead of overwriting the original file). The file content is as follows:
 
 ```TypeScript
 {
@@ -813,7 +837,7 @@ English: Create the en directory in the resource directory, create the element d
 }
 ```
 
-Arabic: Create the ar directory in the resource directory, create the element directory in the ar directory, and add the string.json file to the element directory. If the file already exists, add the key-value pair in the name-value format to the file. Do not overwrite the original file. The following shows the file content:
+Arabic: Create the ar directory under the resource directory, create the element directory under the ar directory, and add the string.json file under the element directory (if the file already exists, append the following "name"-"value" key-value pairs to the file instead of overwriting the original file). The file content is as follows:
 
 ```TypeScript
 {
@@ -834,7 +858,7 @@ Arabic: Create the ar directory in the resource directory, create the element di
 }
 ```
 
-Sample code:
+The sample code is as follows:
 
 ```TypeScript
 // xxx.ets
@@ -886,6 +910,7 @@ struct TimeUIPickerComponentExample {
   systemLanguage: string = i18n.System.getSystemLanguage();
   // Create a NumberFormat object using the current system locale ID.
   formatter: intl.NumberFormat = new intl.NumberFormat();
+  private subscriber: commonEventManager.CommonEventSubscriber | undefined = undefined;
 
   aboutToAppear(): void {
     this.zero = this.formatter.format(0)
@@ -894,23 +919,22 @@ struct TimeUIPickerComponentExample {
     this.flushMinSecColumn()
     this.flushCurrentTime()
     this.flushBorderStyle()
-    let subscriber: commonEventManager.CommonEventSubscriber;
     let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = {
       events: [commonEventManager.Support.COMMON_EVENT_LOCALE_CHANGED]
     };
-    // Create a subscriber to listen for the system language changes.
+    // Create a subscriber to listen for system language changes.
     commonEventManager.createSubscriber(subscribeInfo)
       .then((commonEventSubscriber: commonEventManager.CommonEventSubscriber) => {
         console.info("CreateSubscriber");
-        subscriber = commonEventSubscriber;
-        commonEventManager.subscribe(subscriber, (err, data) => {
+        this.subscriber = commonEventSubscriber;
+        commonEventManager.subscribe(this.subscriber, (err, data) => {
           if (err) {
             console.error(`Failed to subscribe common event. error code: ${err.code}, message: ${err.message}.`);
             return;
           }
           this.formatter = new intl.NumberFormat();
-          this.zero = this.formatter.format(0)
-          this.sysLanguageChanged = true
+          this.zero = this.formatter.format(0);
+          this.sysLanguageChanged = true;
           this.systemLanguage = i18n.System.getSystemLanguage();
           this.flushAmPmColumn()
           this.flushHourColumn()
@@ -922,6 +946,17 @@ struct TimeUIPickerComponentExample {
       .catch((err: BusinessError) => {
         console.error(`CreateSubscriber failed, code is ${err.code}, message is ${err.message}`);
       });
+  }
+
+  // Refresh the UI state after the system language changes.
+  aboutToDisappear(): void {
+    if (this.subscriber) {
+      commonEventManager.unsubscribe(this.subscriber, (err) => {
+        if (err) {
+          console.error(`Failed to unsubscribe common event. error code: ${err.code}, message: ${err.message}.`);
+        }
+      });
+    }
   }
 
   onPageShow(): void {
@@ -950,12 +985,13 @@ struct TimeUIPickerComponentExample {
   }
 
   flushAmPmColumn() {
-    // Set whether to display the amPm column at the end based on linguistic habits.
+    // Set whether the amPm column is placed last based on language conventions.
     if (this.systemLanguage.startsWith('en') || this.systemLanguage == 'ug') {
       this.amPmAtLast = true
     } else {
       this.amPmAtLast = false
     }
+    this.amPmArr = [];
     this.amPmArr[0] = this.getUIContext().getHostContext()?.resourceManager.getStringSync($r('app.string.am').id)
     this.amPmArr[1] = this.getUIContext().getHostContext()?.resourceManager.getStringSync($r('app.string.pm').id)
   }
@@ -975,7 +1011,7 @@ struct TimeUIPickerComponentExample {
   flushBorderStyle() {
     let realStartBorder = this.startBorderStyle
     let realEndBorder = this.endBorderStyle
-    // Set the time sequence of the RTL language based on linguistic habits.
+    // Set the time order of mirror languages based on language conventions.
     if (this.systemLanguage == 'ar' || this.systemLanguage == 'ug') {
       this.isRtl = true
       realStartBorder = this.endBorderStyle
@@ -1020,8 +1056,8 @@ struct TimeUIPickerComponentExample {
   @Builder
   buildAmPmColumn() {
     UIPickerComponent({ selectedIndex: this.amPmIndex }) {
-      ForEach(this.amPmArr, (amPm: string) => {
-        Text(amPm)
+      ForEach(this.amPmArr, (amPm: string | undefined) => {
+        Text(amPm ?? '')
       })
     }
     .width('200px')
@@ -1112,18 +1148,18 @@ struct TimeUIPickerComponentExample {
   flushCurrentTime() {
     this.currentTime = ''
     if (!this.useMilitary) {
-      this.currentTime += this.amPmArr[this.amPmIndex] + ' '
+      this.currentTime += this.amPmArr[this.amPmIndex] + ' ';
     }
-    this.currentTime += this.hourArr[this.hourIndex] + ':' + this.minSecArr[this.minIndex]
+    this.currentTime += this.hourArr[this.hourIndex] + ':' + this.minSecArr[this.minIndex];
     if (this.showSecond) {
-      this.currentTime += ':' + this.minSecArr[this.secIndex]
+      this.currentTime += ':' + this.minSecArr[this.secIndex];
     }
   }
 
   build() {
     Column() {
       Row() {
-        // Create columns according to the display sequence of the RTL language.
+        // Create columns in the display order based on the mirrored language.
         if (!this.isRtl) {
           if (!this.useMilitary && !this.amPmAtLast) {
             this.buildAmPmColumn()
@@ -1187,14 +1223,14 @@ struct TimeUIPickerComponentExample {
               this.useMilitary = isOn
               if (this.useMilitary) {
                 if (this.amPmIndex) {
-                  this.hourIndex += 12
+                  this.hourIndex += 12;
                 }
               } else {
                 if (this.hourIndex >= 12) {
-                  this.amPmIndex = 1
-                  this.hourIndex -= 12
+                  this.amPmIndex = 1;
+                  this.hourIndex -= 12;
                 } else {
-                  this.amPmIndex = 0
+                  this.amPmIndex = 0;
                 }
               }
               this.flushBorderStyle()
@@ -1216,6 +1252,126 @@ struct TimeUIPickerComponentExample {
       }
     }
     .width('100%')
+  }
+}
+```
+
+Since API version 26.0.0, the [itemHeight](#itemheight) attribute is added.
+
+```TypeScript
+// xxx.ets
+import { LengthMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct UIPickerComponentItemHeightExample {
+  private dataArray: string[] = [];
+  @State pickerItemHeight: LengthMetrics | undefined = undefined;
+  @State selectedIndex: number = 0;
+
+  aboutToAppear(): void {
+    for (let i = 1; i <= 10; i++) {
+      this.dataArray.push('Item' + i)
+    }
+  }
+
+  build() {
+    Column({ space: 12 }) {
+      Text('Current itemHeight: ' + (this.pickerItemHeight ? this.pickerItemHeight.value + 'vp' : 'Default value (40vp)'))
+        .fontSize(16)
+
+      UIPickerComponent({
+        selectedIndex: this.selectedIndex
+      }) {
+        ForEach(this.dataArray, (item: string) => {
+          Text(item)
+        })
+      }
+      .width('70%')
+      .itemHeight(this.pickerItemHeight)
+      .onChange((selectedIndex: number) => {
+        this.selectedIndex = selectedIndex
+      })
+
+      Row({ space: 12 }) {
+        Button('40vp')
+          .onClick(() => {
+            this.pickerItemHeight = LengthMetrics.vp(40)
+          })
+        Button('50vp')
+          .onClick(() => {
+            this.pickerItemHeight = LengthMetrics.vp(50)
+          })
+        Button('64vp')
+          .onClick(() => {
+            this.pickerItemHeight = LengthMetrics.vp(64)
+          })
+      }
+    }
+    .width('100%')
+    .padding(16)
+  }
+}
+```
+
+Since API version 26.0.0, the [displayedItemCount](arkts-arkui-uipickercomponent-attribute.md#displayeditemcount) attribute is added.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct UIPickerComponentDisplayedCountExample {
+  private dataArray: string[] = [];
+  @State visibleCount: number = 7;
+  @State selectedIndex: number = 0;
+
+  aboutToAppear(): void {
+    for (let i = 1; i <= 12; i++) {
+      this.dataArray.push('Item' + i)
+    }
+  }
+
+  build() {
+    Column({ space: 12 }) {
+      Text('displayedItemCount: ' + this.visibleCount)
+        .fontSize(16)
+
+      UIPickerComponent({
+        selectedIndex: this.selectedIndex
+      }) {
+        ForEach(this.dataArray, (item: string) => {
+          Text(item)
+        })
+      }
+      .onChange((selectedIndex: number) => {
+        this.selectedIndex = selectedIndex
+      })
+      .width('70%')
+      .displayedItemCount(this.visibleCount)
+
+      Row({ space: 12 }) {
+        Button('Item 3')
+          .width(120)
+          .height(40)
+          .onClick(() => {
+            this.visibleCount = 3
+          })
+        Button('Item 5')
+          .width(120)
+          .height(40)
+          .onClick(() => {
+            this.visibleCount = 5
+          })
+        Button('Item 8 (auto changes to 9)')
+          .width(120)
+          .height(40)
+          .onClick(() => {
+            this.visibleCount = 8
+          })
+      }
+    }
+    .width('100%')
+    .padding(16)
   }
 }
 ```

@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## content
@@ -19,7 +18,13 @@ import audioHaptic from '@kit.AudioKitHaptic';
 content?: ContentType
 ```
 
-音频内容类型。SystemCapability.Multimedia.Audio.Core API version 8、9为必填参数，从API version 10开始为可选参数，默认值为CONTENT_TYPE_UNKNOWN。从API version 8开始支持，从API version 10开始废弃，建议使用usage替代。
+音频内容类型。
+
+SystemCapability.Multimedia.Audio.Core
+
+API version 8、9为必填参数，从API version 10开始为可选参数，默认值为CONTENT_TYPE_UNKNOWN。
+
+从API version 8开始支持，从API version 10开始废弃，建议使用usage替代。
 
 **类型：** ContentType
 
@@ -37,7 +42,13 @@ content?: ContentType
 rendererFlags: number
 ```
 
-播放流行为标志。设置为0即可。SystemCapability.Multimedia.Audio.Core从API version 12开始，该接口支持在原子化服务中使用。
+播放流行为标志。
+
+设置为0即可。
+
+SystemCapability.Multimedia.Audio.Core
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -53,7 +64,11 @@ rendererFlags: number
 usage: StreamUsage
 ```
 
-音频流使用类型。SystemCapability.Multimedia.Audio.Core从API version 12开始，该接口支持在原子化服务中使用。
+音频流使用类型。
+
+SystemCapability.Multimedia.Audio.Core
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **类型：** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
@@ -69,7 +84,9 @@ usage: StreamUsage
 volumeMode?: AudioVolumeMode
 ```
 
-音频的音量模式。默认值为SYSTEM_GLOBAL。SystemCapability.Multimedia.Audio.Volume
+音频的音量模式。默认值为SYSTEM_GLOBAL。
+
+SystemCapability.Multimedia.Audio.Volume
 
 **类型：** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 

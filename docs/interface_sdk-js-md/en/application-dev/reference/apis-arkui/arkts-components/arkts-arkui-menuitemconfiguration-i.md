@@ -43,8 +43,11 @@ Invoked when a drop-down menu option is selected.
 icon?: ResourceStr
 ```
 
-Icon of the drop-down menu option.  
-**NOTE：**The string type can be used to load network images and local images.
+Icon of the drop-down menu option.
+
+**NOTE：**
+
+The string type can be used to load network images and local images.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -80,7 +83,9 @@ Index of the drop-down menu option. The index is zero-based.
 selected: boolean
 ```
 
-Whether the drop-down menu option is selected. The value **true** means that the option is selected, and **false** means the opposite.Default value: **false**
+Whether the drop-down menu option is selected. The value **true** means that the option is selected, and **false** means the opposite.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -98,7 +103,8 @@ Whether the drop-down menu option is selected. The value **true** means that the
 symbolIcon?: SymbolGlyphModifier
 ```
 
-Symbol icon of drop-down menu option.  
+Symbol icon of drop-down menu option.
+
 **symbolIcon** takes precedence over **icon**.
 
 **Type:** SymbolGlyphModifier
@@ -117,8 +123,11 @@ Symbol icon of drop-down menu option.
 value: ResourceStr
 ```
 
-Text content of the drop-down menu option.  
-**NOTE：**If the length of the text exceeds the width of the menu item text area, the text will be truncated.
+Text content of the drop-down menu option.
+
+**NOTE：**
+
+If the length of the text exceeds the width of the menu item text area, the text will be truncated.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

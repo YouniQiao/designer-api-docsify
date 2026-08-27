@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## callbackWrapper

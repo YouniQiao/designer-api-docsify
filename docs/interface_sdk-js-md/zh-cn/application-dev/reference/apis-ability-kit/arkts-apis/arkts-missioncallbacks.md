@@ -12,7 +12,7 @@ The module defines the callbacks invoked after synchronization starts. These cal
 
 | 名称 | 说明 |
 | --- | --- |
-| [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) | 作为可以[registerMissionListener]的入参，表示开始同步后，建立的回调函数，用于监听任务状态变化，包含任务列表变化通知、任务快照通知和断开连接通知等功能。@interface MissionCallback |
+| [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) | 作为可以[registerMissionListener]的入参，表示开始同步后，建立的回调函数，用于监听任务状态变化，包含任务列表变化通知、任务快照通知和断开连接通知等功能。 |
 <!--DelEnd-->
 
 <!--Del-->

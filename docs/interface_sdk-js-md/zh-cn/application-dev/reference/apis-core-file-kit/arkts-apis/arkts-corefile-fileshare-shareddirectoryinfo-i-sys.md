@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## bundleName
@@ -56,7 +56,7 @@ path: string
 permissionMode: number
 ```
 
-应用程序捐献目录的权限，例如 { OperationMode.READ_MODE } 或 { OperationMode.READ_MODE | OperationMode.WRITE_MODE }。
+应用程序捐献目录的权限，例如 { OperationMode.READ_MODE } 或{ OperationMode.READ_MODE | OperationMode.WRITE_MODE }。
 
 **类型：** number
 

@@ -1,6 +1,7 @@
 # @ohos.distributedDeviceManager
 
-The **distributedDeviceManager** module provides APIs for distributed device management. Applications can call the APIs to:  
+The **distributedDeviceManager** module provides APIs for distributed device management. Applications can call the APIs to:
+
 - Subscribe to or unsubscribe from device state changes.  
 - Discover devices nearby.  
 - Authenticate or deauthenticate a device.  
@@ -14,7 +15,7 @@ The **distributedDeviceManager** module provides APIs for distributed device man
 ## Modules to Import
 
 ```TypeScript
-import distributedDeviceManager from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary
@@ -40,7 +41,7 @@ import distributedDeviceManager from '@kit.DistributedServiceKit';
 | --- | --- |
 | [DeviceIconInfo](arkts-distributedservice-distributeddevicemanager-deviceiconinfo-i-sys.md) | Defines the device icon information. |
 | [DeviceIconInfoFilterOptions](arkts-distributedservice-distributeddevicemanager-deviceiconinfofilteroptions-i-sys.md) | Defines the device icon information filter options. |
-| [DeviceIdentification](arkts-distributedservice-distributeddevicemanager-deviceidentification-i-sys.md) | Struct for distributed device identification.@interface DeviceIdentification |
+| [DeviceIdentification](arkts-distributedservice-distributeddevicemanager-deviceidentification-i-sys.md) | Struct for distributed device identification. |
 | [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i-sys.md) | Provides APIs to obtain information about trusted devices and local devices. Before calling any API in **DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example, **dmInstance**. |
 | [DeviceProfileInfo](arkts-distributedservice-distributeddevicemanager-deviceprofileinfo-i-sys.md) | Defines the device profile information. |
 | [DeviceProfileInfoFilterOptions](arkts-distributedservice-distributeddevicemanager-deviceprofileinfofilteroptions-i-sys.md) | Defines device profile information filter options. |

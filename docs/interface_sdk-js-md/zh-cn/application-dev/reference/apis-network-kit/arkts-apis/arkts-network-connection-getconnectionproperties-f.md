@@ -23,8 +23,8 @@ function getConnectionProperties(netHandle: NetHandle, callback: AsyncCallback<C
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | 是 | 网络句柄。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ConnectionProperties](arkts-network-connection-connectionproperties-i.md)&gt; | 是 | 回调函数。当成功获取netHandle对应的网络的连接信息时，error为undefined，data为获取的网络 连接信息；否则为错误对象。 |
+| netHandle | NetHandle | 是 | 网络句柄。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ConnectionProperties](arkts-network-connection-connectionproperties-i.md)&gt; | 是 | 回调函数。当成功获取netHandle对应的网络的连接信息时，error为undefined，data为获取的网络连接信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -77,7 +77,7 @@ function getConnectionProperties(netHandle: NetHandle): Promise<ConnectionProper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | 是 | 数据网络的句柄。 |
+| netHandle | NetHandle | 是 | 数据网络的句柄。 |
 
 **返回值：**
 

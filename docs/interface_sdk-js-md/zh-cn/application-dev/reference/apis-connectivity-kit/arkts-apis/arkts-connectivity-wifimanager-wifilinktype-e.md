@@ -1,6 +1,6 @@
 # WifiLinkType
 
-WLAN连接类型。 @enum { number }
+WLAN连接类型。@enum { number }
 
 **起始版本：** 18
 

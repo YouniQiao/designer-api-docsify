@@ -1,6 +1,6 @@
 # LocalSocket
 
-LocalSocket连接。在调用LocalSocket的方法前，需要先通过 [socket.constructLocalSocketInstance](arkts-network-socket-constructlocalsocketinstance-f.md)创建LocalSocket对象。
+LocalSocket连接。在调用LocalSocket的方法前，需要先通过[socket.constructLocalSocketInstance](arkts-network-socket-constructlocalsocketinstance-f.md)创建LocalSocket对象。
 
 **起始版本：** 11
 
@@ -9,7 +9,7 @@ LocalSocket连接。在调用LocalSocket的方法前，需要先通过 [socket.c
 ## 导入模块
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## bind
@@ -40,7 +40,7 @@ bind(address: LocalAddress): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -88,7 +88,7 @@ close(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -318,13 +318,13 @@ connect(options: LocalConnectOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [LocalConnectOptions](arkts-network-socket-localconnectoptions-i.md) | 是 | LocalSocket连接的参数，参考 [LocalConnectOptions](arkts-network-socket-localconnectoptions-i.md)。 |
+| options | [LocalConnectOptions](arkts-network-socket-localconnectoptions-i.md) | 是 | LocalSocket连接的参数，参考[LocalConnectOptions](arkts-network-socket-localconnectoptions-i.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式返回LocalSocket连接服务端的结果。 |
+| Promise&lt;void&gt; | 以Promise形式返回LocalSocket连接服务端的结果。 |
 
 **错误码：**
 
@@ -463,7 +463,7 @@ getLocalAddress(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| Promise&lt;string&gt; | 以Promise形式返回获取本地socket地址的结果。 |
 
 **错误码：**
 
@@ -581,7 +581,7 @@ getSocketFd(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 以Promise形式返回socket的文件描述符。 |
+| Promise&lt;number&gt; | 以Promise形式返回socket的文件描述符。 |
 
 **示例**
 
@@ -1421,7 +1421,7 @@ send(options: LocalSendOptions): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1506,7 +1506,7 @@ setExtraOptions(options: ExtraOptionsBase): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式返回设置LocalSocket套接字属性的结果。 |
+| Promise&lt;void&gt; | 以Promise形式返回设置LocalSocket套接字属性的结果。 |
 
 **错误码：**
 

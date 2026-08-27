@@ -17,7 +17,11 @@ Provides historical touch point information.
 force: number
 ```
 
-Touch pressure value of the historical point.Default value: **0**Value range: [0, 65535), where higher values indicate stronger pressure.
+Touch pressure value of the historical point.
+
+Default value: **0**
+
+Value range: [0, 65535), where higher values indicate stronger pressure.
 
 **Type:** number
 
@@ -35,7 +39,9 @@ Touch pressure value of the historical point.Default value: **0**Value range: [0
 size: number
 ```
 
-Size of the contact area size between the finger and screen in the touch event corresponding to the historical point.Default value: **0**
+Size of the contact area size between the finger and screen in the touch event corresponding to the historical point.
+
+Default value: **0**
 
 **Type:** number
 
@@ -53,7 +59,9 @@ Size of the contact area size between the finger and screen in the touch event c
 timestamp: number
 ```
 
-Timestamp of the touch event corresponding to the historical point, representing the time interval from system boot when the event is triggered.Unit: ns
+Timestamp of the touch event corresponding to the historical point, representing the time interval from system boot when the event is triggered.
+
+Unit: ns
 
 **Type:** number
 

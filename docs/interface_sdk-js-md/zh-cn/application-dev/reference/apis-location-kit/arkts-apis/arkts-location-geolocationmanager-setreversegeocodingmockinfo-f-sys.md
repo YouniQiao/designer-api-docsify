@@ -11,7 +11,7 @@
 function setReverseGeocodingMockInfo(mockInfos: Array<ReverseGeocodingMockInfo>): void
 ```
 
-设置逆地理编码模拟功能的配置信息，包含了位置和地名的对应关系，后续进行逆地理编码查询时如果位置信息位于配置信息中，就返回对应的地名。 该接口需要在调用geoLocationManager.enableReverseGeocodingMock之后才能调用。
+设置逆地理编码模拟功能的配置信息，包含了位置和地名的对应关系，后续进行逆地理编码查询时如果位置信息位于配置信息中，就返回对应的地名。该接口需要在调用geoLocationManager.enableReverseGeocodingMock之后才能调用。
 
 **起始版本：** 9
 

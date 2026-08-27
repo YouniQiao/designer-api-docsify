@@ -1,6 +1,7 @@
 # TextArea
 
 The **TextArea** component provides multi-line text input and automatically wraps text to ensure that no line extends beyond the component's width.
+
 If the component does not have its height set, it adapts its height to the content. If the component does not have its width set, it stretches to fill the maximum available width.
 
 ## Child Components
@@ -33,16 +34,19 @@ Defines the constructor of TextArea.
 
 | Name | Description |
 | --- | --- |
+| [TextAreaOptions](arkts-arkui-textareaoptions-i.md) | Describes the initialization options of the **TextArea** component. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [TextAreaSubmitCallback](arkts-arkui-textareasubmitcallback-t.md) | Represents the callback invoked when the Enter key on the soft keyboard is pressed. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [TextAreaType](arkts-arkui-textareatype-e.md) | Multi-line text input box type. |
 
 ## Examples
 

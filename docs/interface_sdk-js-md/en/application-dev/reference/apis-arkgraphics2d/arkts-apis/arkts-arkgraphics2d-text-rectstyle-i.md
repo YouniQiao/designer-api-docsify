@@ -9,7 +9,7 @@ Describes the style of a rectangle.
 ## Modules to Import
 
 ```TypeScript
-import text from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## color

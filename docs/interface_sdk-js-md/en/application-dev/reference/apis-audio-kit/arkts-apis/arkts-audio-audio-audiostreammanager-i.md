@@ -1,6 +1,8 @@
 # AudioStreamManager
 
-This interface implements audio stream management.Before calling any API in AudioStreamManager, you must use [getStreamManager](arkts-audio-audio-audiomanager-i.md#getstreammanager) to obtain an AudioStreamManager instance.
+This interface implements audio stream management.
+
+Before calling any API in AudioStreamManager, you must use [getStreamManager](arkts-audio-audio-audiomanager-i.md#getstreammanager) to obtain an AudioStreamManager instance.
 
 > **NOTE：**
 > 
@@ -13,8 +15,7 @@ This interface implements audio stream management.Before calling any API in Audi
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## getAudioEffectInfoArray
@@ -379,7 +380,7 @@ Checks whether the specified audio source type supports echo cancellation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | Audio source type. |
+| sourceType | SourceType | Yes | Audio source type. |
 
 **Return value:**
 
@@ -482,7 +483,7 @@ Checks whether a stream is active. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result, indicating whether the stream is active. **true** if active, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the stream is active. **true** if active, **false** otherwise. |
 
 **Examples**
 
@@ -704,7 +705,7 @@ Return if fast recording is supported for the specific audio stream info and usa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamInfo | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Yes | reference of stream info structure to describe basic audio format. |
-| source | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | stream source type used to decide the audio device and pipe type selection result. |
+| source | SourceType | Yes | stream source type used to decide the audio device and pipe type selection result. |
 
 **Return value:**
 
@@ -748,7 +749,7 @@ Checks whether the intelligent noise reduction feature is enabled for the audio 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | Audio source type. |
+| sourceType | SourceType | Yes | Audio source type. |
 
 **Return value:**
 

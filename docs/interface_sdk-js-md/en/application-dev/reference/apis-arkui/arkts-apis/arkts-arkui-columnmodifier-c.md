@@ -1,6 +1,8 @@
 # ColumnModifier
 
-Defines Column Modifier@extends ColumnAttribute @implements AttributeModifier&lt;ColumnAttribute&gt;
+Defines Column Modifier
+
+@extends ColumnAttribute @implements AttributeModifier&lt;ColumnAttribute&gt;
 
 **Inheritance/Implementation:** ColumnModifier extends [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md#columnattribute) and implements AttributeModifier<ColumnAttribute>
 

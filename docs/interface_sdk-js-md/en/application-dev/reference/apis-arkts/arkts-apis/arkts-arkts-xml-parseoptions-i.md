@@ -85,7 +85,7 @@ Token value callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | [EventType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes |  |
+| eventType | EventType | Yes |  |
 | value | [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | Yes |  |
 
 ## ignoreNameSpace

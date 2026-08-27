@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import Environment from '@kit.CoreFileKit';
+import { Environment } from '@kit.CoreFileKit';
 ```
 
 ## getStorageDataDir
@@ -24,7 +24,7 @@ Obtains the root directory of the memory. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the root directory of the memory. |
+| Promise&lt;string&gt; | Promise used to return the root directory of the memory. |
 
 **Error codes:**
 

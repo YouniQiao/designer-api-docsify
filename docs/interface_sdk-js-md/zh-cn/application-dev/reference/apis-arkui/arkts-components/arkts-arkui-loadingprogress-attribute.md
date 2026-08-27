@@ -1,6 +1,8 @@
 # LoadingProgress属性/事件
 
-除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。支持[通用事件](arkts-arkui-commonmethod-c.md)。
+除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。
+
+支持[通用事件](arkts-arkui-commonmethod-c.md)。
 
 **继承/实现关系：** LoadingProgressAttribute extends CommonMethod<LoadingProgressAttribute>
 
@@ -33,7 +35,7 @@ color(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 加载进度条的前景色。 默认值： API version 10及以下：'#99666666'API version 11及以上：'#ff666666' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 加载进度条的前景色。默认值：API version 10及以下：'#99666666'API version 11及以上：'#ff666666' |
 
 ## contentModifier
 
@@ -55,7 +57,7 @@ contentModifier(modifier: ContentModifier<LoadingProgressConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[LoadingProgressConfiguration](arkts-arkui-loadingprogressconfiguration-i.md)&gt; | 是 | 在LoadingProgress组件上，定制内容区的方法。 modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[LoadingProgressConfiguration](arkts-arkui-loadingprogressconfiguration-i.md)&gt; | 是 | 在LoadingProgress组件上，定制内容区的方法。modifier：内容修改器，开发者需要自定义class实现ContentModifier接口。 |
 
 ## enableLoading
 
@@ -63,7 +65,7 @@ contentModifier(modifier: ContentModifier<LoadingProgressConfiguration>)
 enableLoading(value: boolean)
 ```
 
-设置LoadingProgress动画是否显示。LoadingProgress动画不显示时，该组件依旧占位。通用属性Visibility.Hidden隐藏的是包括 [border](arkts-arkui-commonmethod-c.md#border)、padding等整个组件范围，而enableLoading=false只隐藏 LoadingProgress本身动画内容，不包括border等。
+设置LoadingProgress动画是否显示。LoadingProgress动画不显示时，该组件依旧占位。通用属性Visibility.Hidden隐藏的是包括[border](arkts-arkui-commonmethod-c.md#border)、padding等整个组件范围，而enableLoading=false只隐藏LoadingProgress本身动画内容，不包括border等。
 
 **起始版本：** 10
 
@@ -77,4 +79,4 @@ enableLoading(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | LoadingProgress动画是否显示。 默认值：true，true表示显示LoadingProgress动画，false表示不显示LoadingProgress动画。 |
+| value | boolean | 是 | LoadingProgress动画是否显示。默认值：true，true表示显示LoadingProgress动画，false表示不显示LoadingProgress动画。 |

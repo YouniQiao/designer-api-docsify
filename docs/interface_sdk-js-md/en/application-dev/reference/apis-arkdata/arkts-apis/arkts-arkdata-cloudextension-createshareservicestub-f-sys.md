@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cloudExtension from '@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## createShareServiceStub
@@ -30,7 +30,7 @@ Creates a RemoteObject instance based on a ShareCenter instance. The system uses
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;rpc.RemoteObject & gt; | Promise used to return the RemoteObject instance of ShareCenter. |
+| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of ShareCenter. |
 
 **Examples**
 

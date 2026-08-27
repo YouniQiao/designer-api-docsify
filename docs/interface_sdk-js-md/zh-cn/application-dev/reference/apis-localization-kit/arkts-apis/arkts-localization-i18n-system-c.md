@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getAppPreferredLanguage
@@ -59,7 +59,7 @@ static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | country | string | 是 | 国家地区，要求是[合法的国家地区码](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
-| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。 |
 | sentenceCase | boolean | 否 | true表示按照首字母大写的格式显示文本，false表示按照区域默认的大小写格式显示文本。默认值：true。 |
 
 **返回值：**
@@ -115,7 +115,7 @@ static getDisplayLanguage(language: string, locale: string, sentenceCase?: boole
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | language | string | 是 | 语言，要求是[合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
-| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。 |
 | sentenceCase | boolean | 否 | true表示按照首字母大写的格式显示文本，false表示按照区域默认的大小写格式显示文本。默认值：true。 |
 
 **返回值：**
@@ -233,7 +233,7 @@ static getPreferredLanguageList(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 系统偏好语言列表。 |
+| Array&lt;string&gt; | 系统偏好语言列表。 |
 
 **示例**
 
@@ -323,7 +323,7 @@ static getSystemCountries(language: string): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | language参数指定的语言下，系统支持的国家/地区列表。 |
+| Array&lt;string&gt; | language参数指定的语言下，系统支持的国家/地区列表。 |
 
 **错误码：**
 
@@ -353,7 +353,7 @@ try {
 static getSystemLanguage(): string
 ```
 
-获取系统当前设置的语言。若要监听系统语言变化，可以监听 [公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考 [系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。
+获取系统当前设置的语言。若要监听系统语言变化，可以监听[公共事件](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。
 
 **起始版本：** 9
 
@@ -401,7 +401,7 @@ static getSystemLanguages(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 系统支持的语言列表。 |
+| Array&lt;string&gt; | 系统支持的语言列表。 |
 
 **示例**
 
@@ -458,7 +458,7 @@ let locale: string = i18n.getSystemLocale();
 static getSystemLocaleInstance(): Intl.Locale
 ```
 
-获取系统当前设置的区域对象。若要监听系统区域变化，可以监听 [公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考 [系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。
+获取系统当前设置的区域对象。若要监听系统区域变化，可以监听[公共事件](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。
 
 **起始版本：** 20
 
@@ -486,7 +486,7 @@ let systemLocale: Intl.Locale = i18n.System.getSystemLocaleInstance();
 static getSystemRegion(): string
 ```
 
-获取系统当前设置的国家地区。若要监听系统地区变化，可以监听 [公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考 [系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。
+获取系统当前设置的国家地区。若要监听系统地区变化，可以监听[公共事件](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。
 
 **起始版本：** 9
 
@@ -623,7 +623,7 @@ let usingLocalDigit: boolean = i18n.System.getUsingLocalDigit();
 static is24HourClock(): boolean
 ```
 
-判断系统时制是否为24小时制。若要监听系统时制变化，可以监听 [公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_time_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_TIME_CHANGED，具体可参考 [用户偏好](../../../internationalization/i18n-user-preferences.md#开发步骤)。
+判断系统时制是否为24小时制。若要监听系统时制变化，可以监听[公共事件](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_time_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_TIME_CHANGED，具体可参考[用户偏好](../../../internationalization/i18n-user-preferences.md#开发步骤)。
 
 **起始版本：** 9
 
@@ -672,7 +672,7 @@ static isSuggested(language: string, region?: string): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | language | string | 是 | [合法的语言ID](../../../internationalization/i18n-locale-culture.md#实现原理)，例如zh。 |
-| region | string | 否 | [合法的国家地区码](../../../internationalization/i18n-locale-culture.md#实现原理)，例如CN。 默认值：SIM卡国家地区。 |
+| region | string | 否 | [合法的国家地区码](../../../internationalization/i18n-locale-culture.md#实现原理)，例如CN。默认值：SIM卡国家地区。 |
 
 **返回值：**
 

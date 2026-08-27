@@ -1,6 +1,6 @@
 # MulticastSocket
 
-MulticastSocket连接。在调用MulticastSocket的方法前，需要先通过 [socket.constructMulticastSocketInstance](arkts-network-socket-constructmulticastsocketinstance-f.md)创建MulticastSocket对象。
+MulticastSocket连接。在调用MulticastSocket的方法前，需要先通过[socket.constructMulticastSocketInstance](arkts-network-socket-constructmulticastsocketinstance-f.md)创建MulticastSocket对象。
 
 **继承/实现关系：** MulticastSocket extends [UDPSocket](arkts-network-socket-udpsocket-i.md)
 
@@ -11,7 +11,7 @@ MulticastSocket连接。在调用MulticastSocket的方法前，需要先通过 [
 ## 导入模块
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## addMembership
@@ -38,7 +38,7 @@ addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 目标地址信息，参考 [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| multicastAddress | NetAddress | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
@@ -94,13 +94,13 @@ addMembership(multicastAddress: NetAddress): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 目标地址信息，参考 [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| multicastAddress | NetAddress | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式返回MulticastSocket加入多播组的行为结果。 |
+| Promise&lt;void&gt; | 以Promise形式返回MulticastSocket加入多播组的行为结果。 |
 
 **错误码：**
 
@@ -154,7 +154,7 @@ dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 目标地址信息，参考 [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| multicastAddress | NetAddress | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
@@ -211,13 +211,13 @@ dropMembership(multicastAddress: NetAddress): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| multicastAddress | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 目标地址信息，参考 [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| multicastAddress | NetAddress | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式返回MulticastSocket加入多播组的执行结果。 |
+| Promise&lt;void&gt; | 以Promise形式返回MulticastSocket加入多播组的执行结果。 |
 
 **错误码：**
 
@@ -321,7 +321,7 @@ getLoopbackMode(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示环回模式开启，返回false表示环回模式关闭。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示环回模式开启，返回false表示环回模式关闭。 |
 
 **错误码：**
 
@@ -423,7 +423,7 @@ getMulticastTTL(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 以Promise形式返回当前TTL数值。 |
+| Promise&lt;number&gt; | 以Promise形式返回当前TTL数值。 |
 
 **错误码：**
 
@@ -474,7 +474,7 @@ getSocketFd(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回Socket的文件描述符。 |
+| Promise&lt;number&gt; | Promise对象，返回Socket的文件描述符。 |
 
 **错误码：**
 
@@ -853,7 +853,7 @@ setLoopbackMode(flag: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式返回MulticastSocket设置环回模式的结果。 |
+| Promise&lt;void&gt; | 以Promise形式返回MulticastSocket设置环回模式的结果。 |
 
 **错误码：**
 
@@ -964,7 +964,7 @@ setMulticastTTL(ttl: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式返回MulticastSocket设置TTL数值的结果。 |
+| Promise&lt;void&gt; | 以Promise形式返回MulticastSocket设置TTL数值的结果。 |
 
 **错误码：**
 

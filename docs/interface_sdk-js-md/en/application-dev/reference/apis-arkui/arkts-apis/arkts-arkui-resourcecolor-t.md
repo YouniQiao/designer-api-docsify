@@ -16,7 +16,7 @@ Defines the color which can use resource.
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |  |
+| Color |  |
 | number |  |
 | string |  |
 | [Resource](arkts-arkui-resource-t.md) |  |

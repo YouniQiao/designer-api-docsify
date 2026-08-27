@@ -582,7 +582,7 @@ Obtains the issuer of the X.509 CRL.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Issuer of the X.509 CRL obtained. |
+| DataBlob | Issuer of the X.509 CRL obtained. |
 
 **Error codes:**
 
@@ -1250,7 +1250,7 @@ Obtains the revoked certificate entry from the X.509 CRL based on the specified 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | Certificate based on which the revoked certificate is obtained. |
+| cert | X509Cert | Yes | Certificate based on which the revoked certificate is obtained. |
 
 **Return value:**
 
@@ -1374,7 +1374,7 @@ Obtains the signature data of the X.509 CRL.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Signature data of the X.509 CRL obtained. |
+| DataBlob | Signature data of the X.509 CRL obtained. |
 
 **Error codes:**
 
@@ -1884,7 +1884,7 @@ Obtains the parameters of the X.509 CRL signing algorithm.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Algorithm parameters obtained. |
+| DataBlob | Algorithm parameters obtained. |
 
 **Error codes:**
 
@@ -2070,7 +2070,7 @@ Obtains the DER-encoded CRL information, that is, **tbsCertList** from this CRL.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | tbsCertList** information obtained. |
+| DataBlob | tbsCertList** information obtained. |
 
 **Error codes:**
 
@@ -2399,7 +2399,7 @@ Checks whether an X.509 certificate is revoked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | X.509 certificate to check. |
+| cert | X509Cert | Yes | X.509 certificate to check. |
 
 **Return value:**
 
@@ -2920,7 +2920,7 @@ Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleState from '@kit.BackgroundTasksKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryBundleStateInfoByInterval
@@ -33,7 +33,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
+| byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | Yes | the callback of usage information about each bundle. |
@@ -84,7 +84,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
+| byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. |
 

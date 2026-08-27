@@ -11,8 +11,7 @@ Defines a VPN connection object. Before calling **VpnConnection** APIs, you need
 ## Modules to Import
 
 ```TypeScript
-import vpn from '@kit.NetworkKit';
-import vpnExtension from '@kit.NetworkKitExtension';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## destroy
@@ -90,7 +89,7 @@ Destroys a VPN. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, the operation result is returned. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, the operation result is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -229,7 +228,7 @@ Protects sockets against a VPN connection. The data sent through sockets is dire
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, the operation result is returned. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, the operation result is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -306,7 +305,7 @@ Creates a VPN based on the specified configuration. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | Yes | VPN configuration. |
+| config | VpnConfig | Yes | VPN configuration. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If a VPN is created successfully, **error** is **undefined** and **data** is the file descriptor of the vNIC. Otherwise, **error** is an error object. |
 
 **Error codes:**
@@ -377,13 +376,13 @@ Creates a VPN based on the specified configuration. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | Yes | VPN configuration. |
+| config | VpnConfig | Yes | VPN configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result, which is the file descriptor of the vNIC. |
+| Promise&lt;number&gt; | Promise used to return the result, which is the file descriptor of the vNIC. |
 
 **Error codes:**
 

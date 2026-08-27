@@ -17,8 +17,19 @@ Provides parameters for configuring the **Tabs** component, including tab positi
 barModifier?: CommonModifier
 ```
 
-Universal attributes of the tab bar.  
-**NOTE：**If this parameter is dynamically set to **undefined**, the current state will be preserved, and universal attributes will not be reset.If the setting switches from one **CommonModifier** to another, overlapping attributes will be overwritten, while non-overlapping attributes will coexist without resetting the attributes of the previous **CommonModifier**.The [barWidth](arkts-arkui-tabs-attribute.md#barwidth), [barHeight](arkts-arkui-tabs-attribute.md#barheight), [barBackgroundColor](arkts-arkui-tabs-attribute.md#barbackgroundcolor), [barBackgroundBlurStyle](arkts-arkui-tabs-attribute.md#barbackgroundblurstyle), and [barBackgroundEffect](arkts-arkui-tabs-attribute.md#barbackgroundeffect) attributes of **Tabs** will overwrite the width, height, backgroundColor, backgroundBlurStyle, and backgroundEffect attributes of **CommonModifier**.The align attribute works only in [BarMode.Scrollable](arkts-arkui-tabs-attribute.md#barmode) mode. In addition, for a horizontal **Tabs** component, it only takes effect when [nonScrollableLayoutStyle](arkts-arkui-scrollablebarmodeoptions-i.md) is set to an invalid value or is not set.When set to the bottom tab style, [tabBar](arkts-arkui-tabcontent-attribute.md#tabbar) attribute of the TabContent component does not support the dragging feature.
+Universal attributes of the tab bar.
+
+**NOTE：**
+
+If this parameter is dynamically set to **undefined**, the current state will be preserved, and universal attributes will not be reset.
+
+If the setting switches from one **CommonModifier** to another, overlapping attributes will be overwritten, while non-overlapping attributes will coexist without resetting the attributes of the previous **CommonModifier**.
+
+The [barWidth](arkts-arkui-tabs-attribute.md#barwidth), [barHeight](arkts-arkui-tabs-attribute.md#barheight), [barBackgroundColor](arkts-arkui-tabs-attribute.md#barbackgroundcolor), [barBackgroundBlurStyle](arkts-arkui-tabs-attribute.md#barbackgroundblurstyle), and [barBackgroundEffect](arkts-arkui-tabs-attribute.md#barbackgroundeffect) attributes of **Tabs** will overwrite the width, height, backgroundColor, backgroundBlurStyle, and backgroundEffect attributes of **CommonModifier**.
+
+The align attribute works only in [BarMode.Scrollable](arkts-arkui-tabs-attribute.md#barmode) mode. In addition, for a horizontal **Tabs** component, it only takes effect when [nonScrollableLayoutStyle](arkts-arkui-scrollablebarmodeoptions-i.md) is set to an invalid value or is not set.
+
+When set to the bottom tab style, [tabBar](arkts-arkui-tabcontent-attribute.md#tabbar) attribute of the TabContent component does not support the dragging feature.
 
 **Type:** [CommonModifier](arkts-arkui-commonmodifier-t.md)
 
@@ -36,7 +47,9 @@ Universal attributes of the tab bar.
 barPosition?: BarPosition
 ```
 
-Position of the **Tabs** component.Default value: **BarPosition.Start**
+Position of the **Tabs** component.
+
+Default value: **BarPosition.Start**
 
 **Type:** [BarPosition](arkts-arkui-barposition-e.md)
 
@@ -70,8 +83,21 @@ Tab controller.
 index?: number
 ```
 
-Index of the currently displayed tab.Default value: **0**  
-**NOTE：**A value less than 0 evaluates to the default value.The value ranges from 0 to the number of **TabContent** nodes minus 1.When the tab is switched by changing the index, the tab switching animation does not take effect. When **changeIndex** of **TabController** is used for tab switching, the tab switching animation is enabled by default. You can disable the animation by setting **animationDuration** to **0**.Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).When the **Tabs** component is rebuilt, system resources are switched (for example, system font or theme changes), or component attributes change, the **Tab** component will switch to the one specified by **index**. To prevent this behavior, you are advised to use two-way binding.
+Index of the currently displayed tab.
+
+Default value: **0**
+
+**NOTE：**
+
+A value less than 0 evaluates to the default value.
+
+The value ranges from 0 to the number of **TabContent** nodes minus 1.
+
+When the tab is switched by changing the index, the tab switching animation does not take effect. When **changeIndex** of **TabController** is used for tab switching, the tab switching animation is enabled by default. You can disable the animation by setting **animationDuration** to **0**.
+
+Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+
+When the **Tabs** component is rebuilt, system resources are switched (for example, system font or theme changes), or component attributes change, the **Tab** component will switch to the one specified by **index**. To prevent this behavior, you are advised to use two-way binding.
 
 **Type:** number
 

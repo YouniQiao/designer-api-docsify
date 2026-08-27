@@ -25,7 +25,7 @@ Defining wrapBuilder function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | (...args: Args) = & gt; void | Yes |  |
+| builder | (...args: Args) =&gt; void | Yes |  |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setBadgeDisplayStatusByBundles
@@ -26,13 +26,13 @@ Batch sets whether to display badges for specified applications. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| badges | Map & lt;BundleOption, boolean & gt; | Yes | List containing bundle names and badge display statuses. |
+| badges | Map&lt;BundleOption, boolean&gt; | Yes | List containing bundle names and badge display statuses. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

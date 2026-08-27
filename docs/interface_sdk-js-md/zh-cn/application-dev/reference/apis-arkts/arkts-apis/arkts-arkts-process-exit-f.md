@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import process from '@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## exit
@@ -12,7 +12,9 @@ import process from '@kit.ArkTS';
 function exit(code: number): void
 ```
 
-终止程序。请谨慎使用此接口。调用此接口后应用将退出。如果输入参数非0，可能会导致数据丢失或出现未定义的运行异常。
+终止程序。
+
+请谨慎使用此接口。调用此接口后应用将退出。如果输入参数非0，可能会导致数据丢失或出现未定义的运行异常。
 
 **起始版本：** 7
 

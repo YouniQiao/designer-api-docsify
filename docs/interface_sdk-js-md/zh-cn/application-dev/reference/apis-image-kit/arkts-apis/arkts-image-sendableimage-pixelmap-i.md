@@ -11,7 +11,7 @@ Sendable PixelMap instance.
 ## 导入模块
 
 ```TypeScript
-import sendableImage from '@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## applyColorSpace
@@ -20,7 +20,9 @@ import sendableImage from '@kit.ImageKit';
 applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>
 ```
 
-Apply color space of pixelmap, the pixels will be changed by input color space. This method uses a promise to return the result.This method is used to change color space of PixelMap. Pixel data will be changed by calling this method. If you want to set the colorspace property of PixelMap only, use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
+Apply color space of pixelmap, the pixels will be changed by input color space. This method uses a promise to return the result.
+
+This method is used to change color space of PixelMap. Pixel data will be changed by calling this method. If you want to set the colorspace property of PixelMap only, use method {@Link #setColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **起始版本：** 12
 
@@ -36,7 +38,7 @@ Apply color space of pixelmap, the pixels will be changed by input color space. 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **错误码：**
 
@@ -82,7 +84,7 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | A Promise instance used to return the new image pixelmap. If the operation fails, an error message is returned. |
+| Promise&lt;PixelMap&gt; | A Promise instance used to return the new image pixelmap. If the operation fails, an error message is returned. |
 
 **示例**
 
@@ -116,7 +118,7 @@ Obtains new pixelmap with alpha information.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | return the new image pixelmap. If the operation fails, an error message is returned. |
+| PixelMap | return the new image pixelmap. If the operation fails, an error message is returned. |
 
 **错误码：**
 
@@ -169,7 +171,7 @@ Crop the image. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **示例**
 
@@ -257,7 +259,7 @@ Image flipping. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **示例**
 
@@ -630,7 +632,7 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **示例**
 
@@ -715,7 +717,7 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **示例**
 
@@ -828,7 +830,7 @@ Reads image pixelmap data and writes the data to an ArrayBuffer. This method use
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **示例**
 
@@ -907,7 +909,7 @@ Releases this PixelMap object. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the instance release result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the instance release result. If the operation fails, an error message is returned. |
 
 **示例**
 
@@ -1001,7 +1003,7 @@ Image rotation. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **示例**
 
@@ -1087,7 +1089,7 @@ Image zoom in width and height. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **示例**
 
@@ -1157,7 +1159,9 @@ function scaleSync(pixelMap: sendableImage.PixelMap) {
 setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 ```
 
-Set color space of pixelmap.This method is only used to set the colorspace property of PixelMap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
+Set color space of pixelmap.
+
+This method is only used to set the colorspace property of PixelMap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)}.
 
 **起始版本：** 12
 
@@ -1220,7 +1224,7 @@ Image position transformation. This method uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **示例**
 
@@ -1306,7 +1310,7 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | A Promise instance used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
 
 **错误码：**
 
@@ -1396,7 +1400,7 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object. Thi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **示例**
 
@@ -1489,7 +1493,7 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **示例**
 

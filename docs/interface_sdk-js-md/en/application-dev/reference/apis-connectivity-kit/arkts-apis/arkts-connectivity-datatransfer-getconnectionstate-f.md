@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dataTransfer from '@kit.ConnectivityKit';
+import { dataTransfer } from '@kit.ConnectivityKit';
 ```
 
 ## getConnectionState
@@ -32,7 +32,7 @@ Obtains the port channel connection state with a remote device.
 
 | Type | Description |
 | --- | --- |
-| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) | NearLink port channel connection state with a remote device. |
+| ConnectionState | NearLink port channel connection state with a remote device. |
 
 **Error codes:**
 

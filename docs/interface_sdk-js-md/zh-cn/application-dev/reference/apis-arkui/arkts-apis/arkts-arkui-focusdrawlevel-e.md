@@ -1,6 +1,8 @@
 # FocusDrawLevel
 
-Type of focus draw level.@enum {number}
+Type of focus draw level.
+
+@enum {number}
 
 **起始版本：** 19
 

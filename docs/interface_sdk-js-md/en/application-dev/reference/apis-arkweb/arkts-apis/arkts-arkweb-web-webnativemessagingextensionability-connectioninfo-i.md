@@ -9,7 +9,7 @@ Represents the information object of the web native messaging connection.
 ## Modules to Import
 
 ```TypeScript
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## bundleName

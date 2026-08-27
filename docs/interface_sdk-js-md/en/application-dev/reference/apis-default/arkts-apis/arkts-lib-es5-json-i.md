@@ -18,7 +18,7 @@ Converts a JavaScript Object Notation (JSON) string into an object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes |  |
-| reviver | (this: any, key: string, value: any) = & gt; any | No |  |
+| reviver | (this: any, key: string, value: any) =&gt; any | No |  |
 
 **Return value:**
 
@@ -37,7 +37,7 @@ Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | any | Yes |  |
-| replacer | (this: any, key: string, value: any) = & gt; any | No |  |
+| replacer | (this: any, key: string, value: any) =&gt; any | No |  |
 | space | string \| number | No |  |
 
 **Return value:**

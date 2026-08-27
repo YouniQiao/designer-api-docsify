@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import distributedBundleManager from '@kit.AbilityKit';
+import { distributedBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getRemoteAbilityInfo
@@ -95,7 +95,7 @@ Obtains information about the remote ability that matches the given element name
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;RemoteAbilityInfo & gt; | Promise used to return the result. If the operation is successful, the RemoteAbilityInfo object is returned. Otherwise, an error object is returned. |
+| Promise&lt;RemoteAbilityInfo&gt; | Promise used to return the result. If the operation is successful, the RemoteAbilityInfo object is returned. Otherwise, an error object is returned. |
 
 **Error codes:**
 
@@ -231,7 +231,7 @@ Obtains information about the remote abilities that match the given element name
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;RemoteAbilityInfo & gt; & gt; | Promise used to return the result. If the operation is successful, an array of RemoteAbilityInfo objects is returned. Otherwise, an error object is returned. |
+| Promise&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Promise used to return the result. If the operation is successful, an array of RemoteAbilityInfo objects is returned. Otherwise, an error object is returned. |
 
 **Error codes:**
 
@@ -369,7 +369,7 @@ Obtains information about the remote ability that matches the given element name
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;RemoteAbilityInfo & gt; | Promise used to return the result. If the operation is successful, the RemoteAbilityInfo object is returned. Otherwise, an error object is returned. |
+| Promise&lt;RemoteAbilityInfo&gt; | Promise used to return the result. If the operation is successful, the RemoteAbilityInfo object is returned. Otherwise, an error object is returned. |
 
 **Error codes:**
 
@@ -507,7 +507,7 @@ Obtains information about the remote abilities that match the given element name
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;RemoteAbilityInfo & gt; & gt; | Promise used to return the result. If the operation is successful, an array of RemoteAbilityInfo objects is returned. Otherwise, an error object is returned. |
+| Promise&lt;Array&lt;RemoteAbilityInfo&gt;&gt; | Promise used to return the result. If the operation is successful, an array of RemoteAbilityInfo objects is returned. Otherwise, an error object is returned. |
 
 **Error codes:**
 

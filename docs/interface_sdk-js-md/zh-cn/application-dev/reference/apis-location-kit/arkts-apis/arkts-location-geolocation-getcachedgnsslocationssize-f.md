@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## getCachedGnssLocationsSize
@@ -67,7 +67,7 @@ function getCachedGnssLocationsSize(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回GNSS缓存位置的个数。 |
+| Promise&lt;number&gt; | Promise对象，返回GNSS缓存位置的个数。 |
 
 **示例**
 

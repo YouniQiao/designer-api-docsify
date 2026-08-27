@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import scan from '@kit.ConnectivityKit';
+import { scan } from '@kit.ConnectivityKit';
 ```
 
 ## duration
@@ -18,7 +18,7 @@ import scan from '@kit.ConnectivityKit';
 duration?: number
 ```
 
-表示扫描持续时间。单位：秒，取值范围[10, 60]，默认值为全时段扫描。 取值限定为整数。
+表示扫描持续时间。单位：秒，取值范围[10, 60]，默认值为全时段扫描。取值限定为整数。
 
 **类型：** number
 

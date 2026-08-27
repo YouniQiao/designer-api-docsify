@@ -1,6 +1,6 @@
 # Rect属性/事件
 
-除支持通用属性以及[图形绘制通用属性](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-common.md)外，还支持以下 属性：
+除支持通用属性以及[图形绘制通用属性](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-common.md)外，还支持以下属性：
 
 **继承/实现关系：** RectAttribute extends CommonShapeMethod<RectAttribute>
 
@@ -19,7 +19,7 @@
 radius(value: Length | Array<any>)
 ```
 
-设置圆角半径大小，取值范围≥0，支持attributeModifier动态设置属性方法。该属性与 [radiusWidth](#radiuswidth)、[radiusHeight](#radiusheight)属性效果类似，在组合使用时优先于 radiusWidth和radiusHeight生效。异常值undefined、null、NaN和Infinity按照默认值处理。
+设置圆角半径大小，取值范围≥0，支持attributeModifier动态设置属性方法。该属性与[radiusWidth](#radiuswidth)、[radiusHeight](#radiusheight)属性效果类似，在组合使用时优先于radiusWidth和radiusHeight生效。异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **起始版本：** 7
 
@@ -33,7 +33,7 @@ radius(value: Length | Array<any>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array & lt;any & gt; | 是 | 圆角半径大小。 默认值：0 默认单位：vp 异常值undefined、null、NaN和Infinity按照[[0, 0], [0, 0], [0, 0], [0, 0]]处理。<br>**起始版本：** 20 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array&lt;any&gt; | 是 | 圆角半径大小。默认值：0 默认单位：vp 异常值undefined、null、NaN和Infinity按照[[0, 0], [0, 0], [0, 0], [0, 0]]处理。<br>**起始版本：** 20 |
 
 ## radiusHeight
 
@@ -41,7 +41,7 @@ radius(value: Length | Array<any>)
 radiusHeight(value: Length)
 ```
 
-设置圆角的高度。仅设置radiusHeight时，圆角的高度和宽度相同。该属性与[radius](#radius)属性效果类似，当与radius组合使用时，radius属性优先于本属性生效。支 持attributeModifier动态设置属性方法。异常值undefined、null、NaN和Infinity按照默认值处理。
+设置圆角的高度。仅设置radiusHeight时，圆角的高度和宽度相同。该属性与[radius](#radius)属性效果类似，当与radius组合使用时，radius属性优先于本属性生效。支持attributeModifier动态设置属性方法。异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **起始版本：** 7
 
@@ -55,7 +55,7 @@ radiusHeight(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 圆角的高度，取值范围≥0。 默认值：0 默认单位：vp。 异常值undefined、null、NaN和Infinity按照默认值处理。<br>**起始版本：** 20 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 圆角的高度，取值范围≥0。默认值：0 默认单位：vp。异常值undefined、null、NaN和Infinity按照默认值处理。<br>**起始版本：** 20 |
 
 ## radiusWidth
 
@@ -63,7 +63,7 @@ radiusHeight(value: Length)
 radiusWidth(value: Length)
 ```
 
-设置圆角的宽度。仅设置radiusWidth时，圆角的宽度和高度相同。该属性与[radius](#radius)属性效果类似，当与radius组合使用时，radius属性优先于本属性生效。支持 attributeModifier动态设置属性方法。异常值undefined、null、NaN和Infinity按照默认值处理。
+设置圆角的宽度。仅设置radiusWidth时，圆角的宽度和高度相同。该属性与[radius](#radius)属性效果类似，当与radius组合使用时，radius属性优先于本属性生效。支持attributeModifier动态设置属性方法。异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **起始版本：** 7
 
@@ -77,4 +77,4 @@ radiusWidth(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 圆角的宽度，取值范围≥0。 默认值：0 默认单位：vp。 异常值undefined、null、NaN和Infinity按照默认值处理。<br>**起始版本：** 20 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 圆角的宽度，取值范围≥0。默认值：0 默认单位：vp。异常值undefined、null、NaN和Infinity按照默认值处理。<br>**起始版本：** 20 |

@@ -30,6 +30,9 @@ Called when the panel slidable panel pops up.
 
 | Name | Description |
 | --- | --- |
+| [PanelHeight](arkts-arkui-panelheight-e.md) | Enum for custom content display area. |
+| [PanelMode](arkts-arkui-panelmode-e.md) | Sets the initial state of the slidable panel. |
+| [PanelType](arkts-arkui-paneltype-e.md) | Sets the type of sliding panel. |
 
 ## Examples
 

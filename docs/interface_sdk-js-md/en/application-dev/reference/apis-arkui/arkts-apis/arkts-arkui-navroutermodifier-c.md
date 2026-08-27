@@ -1,6 +1,8 @@
 # NavRouterModifier
 
-Defines NavRouter Modifier@extends NavRouterAttribute @implements AttributeModifier&lt;NavRouterAttribute&gt;
+Defines NavRouter Modifier
+
+@extends NavRouterAttribute @implements AttributeModifier&lt;NavRouterAttribute&gt;
 
 **Inheritance/Implementation:** NavRouterModifier extends [NavRouterAttribute](../arkts-components/arkts-arkui-navrouter-attribute.md#navrouterattribute) and implements AttributeModifier<NavRouterAttribute>
 

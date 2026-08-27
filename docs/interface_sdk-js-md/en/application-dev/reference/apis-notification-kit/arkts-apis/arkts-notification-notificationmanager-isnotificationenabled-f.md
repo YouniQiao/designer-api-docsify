@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isNotificationEnabled
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-Queries the notification authorization status of the current application. This API uses an asynchronous callback to return the result.This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
+Queries the notification authorization status of the current application. This API uses an asynchronous callback to return the result.
+
+This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
 
 **Since:** 11
 
@@ -63,7 +65,9 @@ notificationManager.isNotificationEnabled(isNotificationEnabledCallback);
 function isNotificationEnabled(): Promise<boolean>
 ```
 
-Queries the notification authorization status of the current application. This API uses a promise to return the result.This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
+Queries the notification authorization status of the current application. This API uses a promise to return the result.
+
+This API is used to check whether the current application is allowed to send notifications before publishing, preventing publish failures when notification authorization is disabled.
 
 **Since:** 11
 
@@ -76,7 +80,7 @@ Queries the notification authorization status of the current application. This A
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
 
 **Error codes:**
 

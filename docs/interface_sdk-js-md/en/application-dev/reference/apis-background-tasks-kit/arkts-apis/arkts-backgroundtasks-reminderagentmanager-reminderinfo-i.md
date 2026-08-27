@@ -9,7 +9,7 @@ Defines the reminder information.
 ## Modules to Import
 
 ```TypeScript
-import reminderAgentManager from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## reminderId

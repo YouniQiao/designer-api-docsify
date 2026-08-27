@@ -1,6 +1,8 @@
 # ImageItem (System API)
 
-Image object with layout information.@interface ImageItem
+Image object with layout information.
+
+@interface ImageItem
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ Image object with layout information.@interface ImageItem
 ## Modules to Import
 
 ```TypeScript
-import componentUtils from '@kit.ArkUI';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## image

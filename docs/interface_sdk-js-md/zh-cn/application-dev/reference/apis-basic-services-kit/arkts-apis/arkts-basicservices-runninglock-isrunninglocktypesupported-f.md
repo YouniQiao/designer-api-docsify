@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import runningLock from '@kit.BasicServicesKit';
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## isRunningLockTypeSupported
@@ -27,7 +27,7 @@ function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | 是 | 需要查询的锁的类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当查询成功，err为undefined，data为获取到的支持情况，返回true表示支持，返回false表示不支持；否则为错误对象 。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当查询成功，err为undefined，data为获取到的支持情况，返回true表示支持，返回false表示不支持；否则为错误对象。 |
 
 **示例**
 
@@ -68,7 +68,7 @@ function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示支持；返回false表示不支持。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示支持；返回false表示不支持。 |
 
 **示例**
 

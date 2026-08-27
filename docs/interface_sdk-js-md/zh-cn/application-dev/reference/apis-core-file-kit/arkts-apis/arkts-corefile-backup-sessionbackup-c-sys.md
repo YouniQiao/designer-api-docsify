@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## appendBundles
@@ -41,7 +41,7 @@ appendBundles(bundlesToBackup: string[], infos?: string[]): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -509,7 +509,7 @@ cleanBundleTempDir(bundleName: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | 清理结果，true表示成功，false表示失败。 |
+| Promise&lt;boolean&gt; | 清理结果，true表示成功，false表示失败。 |
 
 **错误码：**
 
@@ -904,7 +904,7 @@ getBackupDataSize(isPreciseScan: boolean, dataList: Array<IncrementalBackupTime>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1158,7 +1158,7 @@ getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回应用的兼容性信息。 |
+| Promise&lt;string&gt; | Promise对象，返回应用的兼容性信息。 |
 
 **错误码：**
 
@@ -1378,7 +1378,7 @@ getLocalCapabilities(): Promise<FileData>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将 自动删除。 |
+| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将自动删除。 |
 
 **错误码：**
 
@@ -1536,25 +1536,6 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md)提供的fileIo.stat等相关接口获取，能力文件内容示例：
-
-```TypeScript
-{
- "backupVersion" : "16.0",
- "bundleInfos" :[{
-   "allToBackup" : true,
-   "extensionName" : "BackupExtensionAbility",
-   "name" : "com.example.hiworld",
-   "needToInstall" : false,
-   "spaceOccupied" : 0,
-   "versionCode" : 1000000,
-   "versionName" : "1.0.0"
-   }],
- "deviceType" : "default",
- "systemFullName" : "OpenHarmony-4.0.0.0"
-}
-```
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileIo, backup } from '@kit.CoreFileKit';
@@ -1659,25 +1640,6 @@ async function getLocalCapabilitiesTest() {
     let err: BusinessError = error as BusinessError;
     console.error(`parse failed with code: ${err.code}, message: ${err.message}`);
   }
-}
-```
-
-能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md)提供的fileIo.stat等相关接口获取，能力文件内容示例：
-
-```TypeScript
-{
- "backupVersion" : "16.0",
- "bundleInfos" :[{
-   "allToBackup" : true,
-   "extensionName" : "BackupExtensionAbility",
-   "name" : "com.example.hiworld",
-   "needToInstall" : false,
-   "spaceOccupied" : 0,
-   "versionCode" : 1000000,
-   "versionName" : "1.0.0"
-   }],
- "deviceType" : "default",
- "systemFullName" : "OpenHarmony-4.0.0.0"
 }
 ```
 
@@ -1827,7 +1789,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

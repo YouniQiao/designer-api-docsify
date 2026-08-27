@@ -37,7 +37,7 @@ clearUpApplicationData(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -86,7 +86,7 @@ clearUpApplicationData(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback & lt;void & gt; | 是 | Callback used to return the result. If the application data is cleared up, & lt;code & gt;error & lt;/code & gt; is & lt;code & gt;undefined & lt;/code & gt;; otherwise, & lt;code & gt;error & lt;/code & gt; is an error object. |
+| callback | AsyncCallback&lt;void&gt; | 是 | Callback used to return the result. If the application data is cleared up, &lt;code&gt;error&lt;/code&gt; is &lt;code&gt;undefined&lt;/code&gt;; otherwise, &lt;code&gt;error&lt;/code&gt; is an error object. |
 
 **错误码：**
 
@@ -133,7 +133,7 @@ getAllRunningInstanceKeys(): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise对象，返回应用的所有多实例的唯一实例标识。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回应用的所有多实例的唯一实例标识。 |
 
 **错误码：**
 
@@ -171,7 +171,9 @@ export default class MyAbilityStage extends AbilityStage {
 getAllWindowStages(): Promise<Array<window.WindowStage>>
 ```
 
-获取应用当前进程内的所有WindowStage对象。使用Promise异步回调。仅支持主线程调用。该接口主要用于包含多个UIAbility的应用进行多窗口管理，例如管理多个WindowStage的状态、同一应用的多个窗口间的状态或数据同步等。
+获取应用当前进程内的所有WindowStage对象。使用Promise异步回调。仅支持主线程调用。
+
+该接口主要用于包含多个UIAbility的应用进行多窗口管理，例如管理多个WindowStage的状态、同一应用的多个窗口间的状态或数据同步等。
 
 **起始版本：** 23
 
@@ -185,7 +187,7 @@ getAllWindowStages(): Promise<Array<window.WindowStage>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;window.WindowStage & gt; & gt; | Promise used to return all WindowStage objects in the current application process. |
+| Promise&lt;Array&lt;window.WindowStage&gt;&gt; | Promise used to return all WindowStage objects in the current application process. |
 
 **示例**
 
@@ -334,7 +336,7 @@ getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;ProcessInformation & gt; & gt; | Promise对象，返回接口运行结果及有关运行进程的信息，可进行错误处理或其他自定义处理。 |
+| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise对象，返回接口运行结果及有关运行进程的信息，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
@@ -384,7 +386,7 @@ getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback & lt;Array & lt;ProcessInformation & gt; & gt; | 是 | 回调函数，返回有关运行进程的信息。 |
+| callback | AsyncCallback&lt;Array&lt;ProcessInformation&gt;&gt; | 是 | 回调函数，返回有关运行进程的信息。 |
 
 **错误码：**
 
@@ -439,7 +441,7 @@ killAllProcesses(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -493,7 +495,7 @@ killAllProcesses(clearPageStack: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -543,7 +545,7 @@ killAllProcesses(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback & lt;void & gt; | 是 | 回调函数。当终止应用所在的进程成功，err为undefined，否则为错误对象。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | 回调函数。当终止应用所在的进程成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -592,8 +594,8 @@ off(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback<void>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'abilityLifecycle' | 是 | 此类型表示应用内UIAbility的生命周期，固定为'abilityLifecycle'。 |
-| callbackId | number | 是 | 通过 [ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
-| callback | AsyncCallback & lt;void & gt; | 是 | 回调方法。当取消监听应用内生命周期成功，err为undefined，否则为错误对象。 |
+| callbackId | number | 是 | 通过[ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle)接口注册监听应用内UIAbility的生命周期时返回的ID。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | 回调方法。当取消监听应用内生命周期成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -651,13 +653,13 @@ off(type: 'abilityLifecycle', callbackId: number): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'abilityLifecycle' | 是 | 此类型表示应用内UIAbility的生命周期，固定为'abilityLifecycle'。 |
-| callbackId | number | 是 | 通过 [ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
+| callbackId | number | 是 | 通过[ApplicationContext.on('abilityLifecycle')](#onabilitylifecycle)接口注册监听应用内UIAbility的生命周期时返回的ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -709,8 +711,8 @@ off(type: 'environment', callbackId: number, callback: AsyncCallback<void>): voi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'environment' | 是 | 此类型表示系统环境变化，如系统深浅色发生变化，固定为'environment'。 |
-| callbackId | number | 是 | 通过 [ApplicationContext.on('environment')](#onenvironment) 接口注册监听系统环境变化时返回的ID。 |
-| callback | AsyncCallback & lt;void & gt; | 是 | 回调方法。当取消对系统环境变化的监听成功，err为undefined，否则为错误对象。 |
+| callbackId | number | 是 | 通过[ApplicationContext.on('environment')](#onenvironment)接口注册监听系统环境变化时返回的ID。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | 回调方法。当取消对系统环境变化的监听成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -767,13 +769,13 @@ off(type: 'environment', callbackId: number): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'environment' | 是 | 此类型表示系统环境变化，如系统深浅色发生变化，固定为'environment'。 |
-| callbackId | number | 是 | 通过 [ApplicationContext.on('environment')](#onenvironment) 接口注册监听系统环境变化时返回的ID。 |
+| callbackId | number | 是 | 通过[ApplicationContext.on('environment')](#onenvironment)接口注册监听系统环境变化时返回的ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -824,7 +826,7 @@ off(type: 'applicationStateChange', callback?: ApplicationStateChangeCallback): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | 是 | 此类型表示当前应用进程状态变化，固定为'applicationStateChange'。 |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | 否 | 回调函数。取值可以为使用 [ApplicationContext.on('applicationStateChange')](#onapplicationstatechange) 方法定义的callback回调，也可以为空。   -?如果传入已定义的回调，则取消该监听。    -?如果未传入参数，则取消所有已注册的该类型事件的监听。 |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | 否 | 回调函数。取值可以为使用[ApplicationContext.on('applicationStateChange')](#onapplicationstatechange)方法定义的callback回调，也可以为空。   -?如果传入已定义的回调，则取消该监听。    -?如果未传入参数，则取消所有已注册的该类型事件的监听。 |
 
 **错误码：**
 
@@ -870,7 +872,9 @@ export default class MyAbility extends UIAbility {
 offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void
 ```
 
-取消监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。仅支持主线程调用。<p>**NOTE：**: It can be called only by the main thread. </p>
+取消监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。仅支持主线程调用。
+
+<p>**NOTE：**: It can be called only by the main thread. </p>
 
 **起始版本：** 24
 
@@ -884,7 +888,7 @@ offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | systemConfiguration.UpdatedCallback | 否 | 回调函数。取值可以为使用 [ApplicationContext.onSystemConfigurationUpdated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationContext.md#applicationcontextonsystemconfigurationupdated24) 方法注册的callback回调，也可以为空。   -&nbsp;如果传入已定义的回调，则取消该监听。    -&nbsp;如果未传入参数，则取消所有已注册的监听。 |
+| callback | systemConfiguration.UpdatedCallback | 否 | 回调函数。取值可以为使用[ApplicationContext.onSystemConfigurationUpdated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationContext.md#applicationcontextonsystemconfigurationupdated24)方法注册的callback回调，也可以为空。   -&nbsp;如果传入已定义的回调，则取消该监听。    -&nbsp;如果未传入参数，则取消所有已注册的监听。 |
 
 **示例**
 
@@ -964,7 +968,7 @@ on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回此次注册的callbackID，该ID用于在 [ApplicationContext.off('abilityLifecycle')]{ |
+| number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.off('abilityLifecycle')]{ |
 
 **错误码：**
 
@@ -1088,7 +1092,7 @@ on(type: 'environment', callback: EnvironmentCallback): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回此次注册的callbackID，该ID用于在 [ApplicationContext.off('environment')]{ |
+| number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.off('environment')]{ |
 
 **错误码：**
 
@@ -1342,7 +1346,7 @@ restartApp(want: Want): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | Want information about the UIAbility to start. No verification is performed on the bundle name passed in. |
+| want | Want | 是 | Want information about the UIAbility to start. No verification is performed on the bundle name passed in. |
 
 **错误码：**
 
@@ -1482,7 +1486,7 @@ setFont(font: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| font | string | 是 | 设置字体类型，字体可以通过 UIContext.registerFont方法进行注册使用。 |
+| font | string | 是 | 设置字体类型，字体可以通过UIContext.registerFont方法进行注册使用。 |
 
 **错误码：**
 
@@ -1546,7 +1550,7 @@ setFontSizeScale(fontSizeScale: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fontSizeScale | number | 是 | 表示字体缩放比例，取值为非负数。当应用字体 [跟随系统](../../../quick-start/app-configuration-file.md#configuration标签)且该字段取值超过 [fontSizeMaxScale](../../../quick-start/app-configuration-file.md#configuration标签)取值时，实际生效值为 [fontSizeMaxScale](../../../quick-start/app-configuration-file.md#configuration标签)取值。 |
+| fontSizeScale | number | 是 | 表示字体缩放比例，取值为非负数。当应用字体[跟随系统](../../../quick-start/app-configuration-file.md#configuration标签)且该字段取值超过[fontSizeMaxScale](../../../quick-start/app-configuration-file.md#configuration标签)取值时，实际生效值为[fontSizeMaxScale](../../../quick-start/app-configuration-file.md#configuration标签)取值。 |
 
 **示例**
 
@@ -1595,7 +1599,7 @@ setLanguage(language: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| language | string | 是 | 设置语言，当前支持的语言列表可以通过 [getSystemLanguages()](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-system-c.md#getsystemlanguages)获取。 |
+| language | string | 是 | 设置语言，当前支持的语言列表可以通过[getSystemLanguages()](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-system-c.md#getsystemlanguages)获取。 |
 
 **错误码：**
 
@@ -1633,7 +1637,9 @@ export default class MyAbility extends UIAbility {
 setSupportedProcessCache(isSupported : boolean): void
 ```
 
-设置当前应用进程是否支持进程资源的缓存，便于应用再次启动时复用缓存的进程资源。仅支持主线程调用。该接口仅对单个进程实例生效，不同进程实例互不影响。应用进程实例销毁后，已设置的状态不保留，需要重新设置。
+设置当前应用进程是否支持进程资源的缓存，便于应用再次启动时复用缓存的进程资源。仅支持主线程调用。
+
+该接口仅对单个进程实例生效，不同进程实例互不影响。应用进程实例销毁后，已设置的状态不保留，需要重新设置。
 
 > **说明：**
 > 
@@ -1654,7 +1660,7 @@ setSupportedProcessCache(isSupported : boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isSupported | boolean | 是 | Whether process cache is supported. The value & lt;code & gt;true & lt;/code & gt; means that process cache is supported, and & lt;code & gt;false & lt;/code & gt; means the opposite. |
+| isSupported | boolean | 是 | Whether process cache is supported. The value &lt;code&gt;true&lt;/code&gt; means that process cache is supported, and &lt;code&gt;false&lt;/code&gt; means the opposite. |
 
 **错误码：**
 

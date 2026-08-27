@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import calendarManager from '@kit.CalendarKit';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## displayName

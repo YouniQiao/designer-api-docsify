@@ -31,7 +31,7 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | { fingers?: number; angle?: number } | 否 | 设置旋转手势事件参数。     - fingers：触发旋转手势所需的最少手指数， & nbsp;最小为2指，最大为5指。   默认值：2 取值范围：[2, 5]。当设置的值小于2或大于5时，会被转化 为默认值。触发手势时手指数量可以多于fingers参数值，但仅最先落下的两指参与手势计算。     - angle：触发旋转手势所需的最小角度变化，单位为deg。   默认值：1    **说明：** 当改变度数的值小于等于0或大于360时，会被转化为默认值。 |
+| value | { fingers?: number; angle?: number } | 否 | 设置旋转手势事件参数。    - fingers：触发旋转手势所需的最少手指数， & nbsp;最小为2指，最大为5指。   默认值：2 取值范围：[2, 5]。当设置的值小于2或大于5时，会被转化为默认值。触发手势时手指数量可以多于fingers参数值，但仅最先落下的两指参与手势计算。    - angle：触发旋转手势所需的最小角度变化，单位为deg。   默认值：1    **说明：** 当改变度数的值小于等于0或大于360时，会被转化为默认值。 |
 
 **返回值：**
 
@@ -45,7 +45,7 @@
 (options?: RotationGestureHandlerOptions): RotationGestureInterface
 ```
 
-设置旋转手势事件。与RotationGesture)}相比， options参数新增了isFingerCountLimited参数，表示是否检查触摸屏幕的手指数量。
+设置旋转手势事件。与RotationGesture)}相比，options参数新增了isFingerCountLimited参数，表示是否检查触摸屏幕的手指数量。
 
 **起始版本：** 15
 
@@ -85,7 +85,7 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。该回
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () = & gt; void | 是 | 手势事件回调函数。 |
+| event | () =&gt; void | 是 | 手势事件回调函数。 |
 
 **返回值：**
 
@@ -99,7 +99,7 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。该回
 onActionCancel(event: Callback<GestureEvent>): RotationGestureInterface
 ```
 
-Rotation手势识别成功，接收到触摸取消事件触发的回调。与onActionCancel相 比，该回调返回手势事件信息。
+Rotation手势识别成功，接收到触摸取消事件触发的回调。与onActionCancel相比，该回调返回手势事件信息。
 
 **起始版本：** 18
 
@@ -139,7 +139,7 @@ Rotation手势识别成功，当抬起最后一根满足手势触发条件的手
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 | 手势事件回调函数。 |
+| event | (event: GestureEvent) =&gt; void | 是 | 手势事件回调函数。 |
 
 **返回值：**
 
@@ -165,7 +165,7 @@ Rotation手势识别成功后触发的回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 | 手势事件回调函数。 |
+| event | (event: GestureEvent) =&gt; void | 是 | 手势事件回调函数。 |
 
 **返回值：**
 
@@ -191,7 +191,7 @@ Rotation手势移动过程中触发的回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 | 手势事件回调函数。 |
+| event | (event: GestureEvent) =&gt; void | 是 | 手势事件回调函数。 |
 
 **返回值：**
 

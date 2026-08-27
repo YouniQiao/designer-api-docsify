@@ -35,7 +35,7 @@ operatorName?: string
 simLabelIndex?: number
 ```
 
-卡的simLabelIndex。 取值限定为整数。
+卡的simLabelIndex。取值限定为整数。
 
 **类型：** number
 

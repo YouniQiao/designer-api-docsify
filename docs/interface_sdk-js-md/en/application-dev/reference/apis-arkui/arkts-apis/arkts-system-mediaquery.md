@@ -10,7 +10,7 @@ The **mediaquery** module provides different styles for different media types.
 ## Modules to Import
 
 ```TypeScript
-import SystemMediaQuery, { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
+import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -9,10 +9,7 @@ Defines the ad configuration.
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit.AdComponent';
-import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
-import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
-import advertising from '@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## [key: string]
@@ -21,7 +18,9 @@ import advertising from '@kit.AdsKit';
 [key: string]: number | boolean | string | undefined
 ```
 
-Custom parameters.<!--RP1--><!--RP1End-->
+Custom parameters.
+
+<!--RP1--><!--RP1End-->
 
 **Type:** number \| boolean \| string \| undefined
 
@@ -37,7 +36,11 @@ Custom parameters.<!--RP1--><!--RP1End-->
 adContentClassification?: string
 ```
 
-Sets the maximum ad content rating.W: ages 3+, all audiences. PI: ages 7+, parental guidance. J: ages 12+, teen. A: ages 16+/18+, adult audience.If not set, the business logic prevails.
+Sets the maximum ad content rating.
+
+W: ages 3+, all audiences. PI: ages 7+, parental guidance. J: ages 12+, teen. A: ages 16+/18+, adult audience.
+
+If not set, the business logic prevails.
 
 **Type:** string
 
@@ -53,7 +56,11 @@ Sets the maximum ad content rating.W: ages 3+, all audiences. PI: ages 7+, paren
 nonPersonalizedAd?: number
 ```
 
-Sets whether to request only non-personalized ads.0: Request both personalized and non-personalized ads. 1: Request only non-personalized ads.If not set, the business logic prevails.
+Sets whether to request only non-personalized ads.
+
+0: Request both personalized and non-personalized ads. 1: Request only non-personalized ads.
+
+If not set, the business logic prevails.
 
 **Type:** number
 
@@ -69,8 +76,10 @@ Sets whether to request only non-personalized ads.0: Request both personalized a
 tagForChildProtection?: number
 ```
 
-Whether you want your content to be treated as child-directed for purposes of COPPA.  
--1: Default value, unspecified. 0: No. 1: Yes.  
+Whether you want your content to be treated as child-directed for purposes of COPPA.
+
+-1: Default value, unspecified. 0: No. 1: Yes.
+
 The default value is -1.
 
 **Type:** number

@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## off('wifiStateChange')
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function off(type: 'wifiStateChange', callback?: Callback<number>): void
 ```
 
-取消订阅WLAN状态改变事件。<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
+取消订阅WLAN状态改变事件。
+
+<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
 
 **起始版本：** 7
 
@@ -57,7 +56,9 @@ wifi.off("wifiStateChange", recvPowerNotifyFunc);
 function off(type: 'wifiConnectionChange', callback?: Callback<number>): void
 ```
 
-取消订阅WLAN连接状态改变事件。<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
+取消订阅WLAN连接状态改变事件。
+
+<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
 
 **起始版本：** 7
 
@@ -99,7 +100,9 @@ wifi.off("wifiConnectionChange", recvWifiConnectionChangeFunc);
 function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
 ```
 
-取消订阅WLAN扫描状态改变事件。<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
+取消订阅WLAN扫描状态改变事件。
+
+<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
 
 **起始版本：** 7
 
@@ -141,7 +144,9 @@ wifi.off("wifiScanStateChange", recvWifiScanStateChangeFunc);
 function off(type: 'wifiRssiChange', callback?: Callback<number>): void
 ```
 
-取消订阅WLAN RSSI改变事件。<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
+取消订阅WLAN RSSI改变事件。
+
+<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
 
 **起始版本：** 7
 
@@ -183,7 +188,9 @@ wifi.off("wifiRssiChange", recvWifiRssiChangeFunc);
 function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 ```
 
-取消订阅WLAN热点状态改变事件。<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
+取消订阅WLAN热点状态改变事件。
+
+<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
 
 **起始版本：** 7
 

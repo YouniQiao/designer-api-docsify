@@ -20,4 +20,4 @@ type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackRe
 
 | 类型 | 说明 |
 | --- | --- |
-| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) \| void | 如果返回 void 或 AudioDataCallbackResult.VALID：表示数据有效，将播放音频数据；如果返回 AudioDataCallbackResult.INVALID：表示数据无效，且音频数据不播放。 |
+| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) \| void | 如果返回 void 或 AudioDataCallbackResult.VALID：表示数据有效，将播放音频数据；如果返回AudioDataCallbackResult.INVALID：表示数据无效，且音频数据不播放。 |

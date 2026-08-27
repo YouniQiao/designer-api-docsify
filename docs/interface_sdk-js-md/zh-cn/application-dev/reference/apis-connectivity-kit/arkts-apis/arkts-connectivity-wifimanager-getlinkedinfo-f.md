@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getLinkedInfo
@@ -27,7 +26,7 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;WifiLinkedInfo & gt; | 返回WLAN连接信息。 |
+| Promise&lt;WifiLinkedInfo&gt; | 返回WLAN连接信息。 |
 
 **错误码：**
 

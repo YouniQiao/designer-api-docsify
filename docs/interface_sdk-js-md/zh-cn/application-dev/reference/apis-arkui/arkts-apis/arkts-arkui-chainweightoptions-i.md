@@ -1,6 +1,8 @@
 # ChainWeightOptions
 
-Defines the ChainWeightOptions interface.@interface ChainWeightOptions
+Defines the ChainWeightOptions interface.
+
+@interface ChainWeightOptions
 
 **起始版本：** 14
 

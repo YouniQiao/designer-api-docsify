@@ -182,7 +182,7 @@ struct UpdaterDemo4 {
 get attribute(): T | undefined
 ```
 
-获取AttributeUpdater中组件对应的属性类实例，通过该实例实现属性直通更新。需先通过组件的attributeModifier属性方法建立组件与AttributeUpdater的绑定关系，绑定后方可获取到属性类实例。不建 议在同一组件上同时用属性直通更新和属性方法设置相同属性；当与属性方法同时设置时，属性生效的原则为后设置的生效。
+获取AttributeUpdater中组件对应的属性类实例，通过该实例实现属性直通更新。需先通过组件的attributeModifier属性方法建立组件与AttributeUpdater的绑定关系，绑定后方可获取到属性类实例。不建议在同一组件上同时用属性直通更新和属性方法设置相同属性；当与属性方法同时设置时，属性生效的原则为后设置的生效。
 
 **类型：** T
 
@@ -237,7 +237,7 @@ struct UpdaterDemo2 {
 updateConstructorParams: C
 ```
 
-C代表组件的构造函数类型，比如Text组件的TextInterface，Image组件的ImageInterface等。用于更改组件的构造函数入参。需先通过组件的attributeModifier属性方法建立组件与 AttributeUpdater的绑定关系，绑定后方可使用。当前仅支持Button、Image、Text、Span、SymbolSpan和ImageSpan组件，使用前需确保T和C类型匹配，否则可能导致功能异常。
+C代表组件的构造函数类型，比如Text组件的TextInterface，Image组件的ImageInterface等。用于更改组件的构造函数入参。需先通过组件的attributeModifier属性方法建立组件与AttributeUpdater的绑定关系，绑定后方可使用。当前仅支持Button、Image、Text、Span、SymbolSpan和ImageSpan组件，使用前需确保T和C类型匹配，否则可能导致功能异常。
 
 **类型：** C
 

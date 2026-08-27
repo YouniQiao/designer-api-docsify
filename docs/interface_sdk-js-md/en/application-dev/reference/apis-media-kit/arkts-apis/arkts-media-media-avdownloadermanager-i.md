@@ -9,7 +9,7 @@ Definition of the Offline Download Management Interface
 ## Modules to Import
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addAVDownloadTask
@@ -76,7 +76,7 @@ Obtains all offline download tasks in the Task Manager. Ended download tasks are
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | If a task exists in the task manager, the task ID array is returned. Otherwise null. |
+| Array&lt;string&gt; | If a task exists in the task manager, the task ID array is returned. Otherwise null. |
 
 ## getTaskCacheDirectory
 
@@ -381,4 +381,4 @@ Sets the network timeout interval for HTTP requests. If the timeout interval is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | number | Yes | Timeout duration, in ms. If is not set, the default timeout duration is used. The value should be an integer.    **Description** & lt;/br & gt; & lt;ul & gt; & lt;li & gt;If the value is less than 0, there is no timeout duration. & lt;/li & gt; & lt;/ul & gt;. |
+| timeout | number | Yes | Timeout duration, in ms. If is not set, the default timeout duration is used. The value should be an integer.    **Description**&lt;/br&gt; &lt;ul&gt;&lt;li&gt;If the value is less than 0, there is no timeout duration.&lt;/li&gt;&lt;/ul&gt;. |

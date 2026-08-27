@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-medialibrarykit-->
 
-- [@ohos.file.photoAccessHelper](arkts-file-photoaccesshelper.md)
+- [@ohos.file.photoAccessHelper(MediaAssetManager)](arkts-file-photoaccesshelper.md)
   - [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md)
   <!--Del-->
   - [getPhotoAccessHelper(系统接口)](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f-sys.md)<!--DelEnd-->
@@ -311,7 +311,7 @@
   - [VideoMode](arkts-medialibrary-photoaccesshelper-videomode-e.md)
   <!--Del-->
   - [WatermarkType(系统接口)](arkts-medialibrary-photoaccesshelper-watermarktype-e-sys.md)<!--DelEnd-->
-- [@ohos.file.sendablePhotoAccessHelper](arkts-file-sendablephotoaccesshelper.md)
+- [@ohos.file.sendablePhotoAccessHelper(Helper functions to access image and video assets)](arkts-file-sendablephotoaccesshelper.md)
   - [getPhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f.md)
   <!--Del-->
   - [getPhotoAccessHelper(系统接口)](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f-sys.md)<!--DelEnd-->

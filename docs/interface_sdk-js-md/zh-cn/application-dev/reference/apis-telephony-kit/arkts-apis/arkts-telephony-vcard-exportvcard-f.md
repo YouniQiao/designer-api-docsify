@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import vcard from '@kit.TelephonyKit';
+import { vcard } from '@kit.TelephonyKit';
 ```
 
 ## exportVCard
@@ -24,7 +24,7 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文。 |
+| context | Context | 是 | 应用上下文。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 查询语句。 |
 | options | [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md) | 是 | VCard版本与编码类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。生成的 VCF(vcard file)文件地址。 |
@@ -83,7 +83,7 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文。 |
+| context | Context | 是 | 应用上下文。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 查询语句。 |
 | options | [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md) | 否 | VCard版本与编码类型。 |
 
@@ -91,7 +91,7 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回重置的结果码。 |
+| Promise&lt;string&gt; | Promise对象，返回重置的结果码。 |
 
 **错误码：**
 
@@ -149,7 +149,7 @@ function exportVCard(context: Context, predicates: dataSharePredicates.DataShare
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文。 |
+| context | Context | 是 | 应用上下文。 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | 查询语句。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。生成的 VCF(vcard file)文件地址。 |
 

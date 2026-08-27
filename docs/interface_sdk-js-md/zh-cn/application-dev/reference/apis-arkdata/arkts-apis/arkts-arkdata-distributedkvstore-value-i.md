@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedKVStore from '@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## type
@@ -34,7 +34,7 @@ type: ValueType
 value: Uint8Array | string | number | number | boolean
 ```
 
-键值对中的值。Uint8Array、string类型的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，number和boolean类型的取值范围由其自 身类型决定。
+键值对中的值。Uint8Array、string类型的长度范围为0-[MAX_VALUE_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，number和boolean类型的取值范围由其自身类型决定。
 
 **类型：** Uint8Array \| string \| number \| number \| boolean
 

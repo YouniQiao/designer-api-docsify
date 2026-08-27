@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## addPrinterToDiscovery
@@ -30,7 +30,7 @@ Adds a printer to the printer discovery list. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

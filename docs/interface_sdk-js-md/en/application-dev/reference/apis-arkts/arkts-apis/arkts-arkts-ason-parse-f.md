@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import ArkTSUtils from '@kit.ArkTS';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## parse
@@ -25,8 +25,8 @@ Converts a JavaScript Object Notation (JSON) string into an ArkTS Value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | A valid JSON string. |
-| reviver | [Transformer](arkts-arkts-ason-transformer-t.md) | No | A function that transforms the results. |
-| options | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | No | The config of parse. |
+| reviver | Transformer | No | A function that transforms the results. |
+| options | ParseOptions | No | The config of parse. |
 
 **Return value:**
 

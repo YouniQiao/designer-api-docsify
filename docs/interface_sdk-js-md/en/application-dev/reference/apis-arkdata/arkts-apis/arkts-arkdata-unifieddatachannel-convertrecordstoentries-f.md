@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import unifiedDataChannel from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## convertRecordsToEntries
@@ -12,7 +12,10 @@ import unifiedDataChannel from '@kit.ArkData';
 function convertRecordsToEntries(data: UnifiedData): void
 ```
 
-Converts the provided data into a multi-style data structure, which is useful when the original data uses multiple records to represent different styles of the same data.This API is used only when the following rules are met:
+Converts the provided data into a multi-style data structure, which is useful when the original data uses multiple records to represent different styles of the same data.
+
+This API is used only when the following rules are met:
+
 1. The number of records in data is greater than 1.
 2. The value of **unifiedData.properties.tag** is **records_to_entries_data_format**.
 
@@ -28,7 +31,7 @@ Converts the provided data into a multi-style data structure, which is useful wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) | Yes | Data to convert. |
+| data | UnifiedData | Yes | Data to convert. |
 
 **Error codes:**
 

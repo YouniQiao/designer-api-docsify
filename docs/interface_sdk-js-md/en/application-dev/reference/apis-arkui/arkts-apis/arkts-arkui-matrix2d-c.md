@@ -51,7 +51,7 @@ Constructs a two-dimensional transformation matrix object. The default value is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes | Unit mode of the **Matrix2D** object. The value cannot be dynamically changed once set. The configuration method is the same as that of CanvasRenderingContext2D.For abnormal values NaN and Infinity, the default values are used.Default value: DEFAULT. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the **Matrix2D** object. The value cannot be dynamically changed once set. The configuration method is the same as that of CanvasRenderingContext2D.For abnormal values NaN and Infinity, the default values are used.Default value: DEFAULT. |
 
 ## identity
 

@@ -1,6 +1,6 @@
 # XmlSAXParser
 
-XmlSAXParser类用于以流式方式解析XML文本。适用于需要边读取边处理的场景，支持从[stream.Readable](arkts-arkts-stream-readable-c.md) 流中读取XML数据并 进行解析。
+XmlSAXParser类用于以流式方式解析XML文本。适用于需要边读取边处理的场景，支持从[stream.Readable](arkts-arkts-stream-readable-c.md) 流中读取XML数据并进行解析。
 
 > **说明：**
 > 

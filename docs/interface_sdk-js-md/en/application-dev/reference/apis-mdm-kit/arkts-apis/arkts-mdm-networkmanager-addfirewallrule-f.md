@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## addFirewallRule
@@ -12,7 +12,10 @@ import networkManager from '@kit.MDMKit';
 function addFirewallRule(admin: Want, firewallRule: FirewallRule): void
 ```
 
-Adds firewall rules for the device. This API is suitable for enterprise network security management and control scenarios. For example, it can be used to restrict network access from specific IP addresses, prevent malicious network attacks, control network communication of applications, and manage the trustlist or blocklist for network access. This helps enterprises implement refined control over network access and prevent network attacks and data leaks.In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.  
+Adds firewall rules for the device. This API is suitable for enterprise network security management and control scenarios. For example, it can be used to restrict network access from specific IP addresses, prevent malicious network attacks, control network communication of applications, and manage the trustlist or blocklist for network access. This helps enterprises implement refined control over network access and prevent network attacks and data leaks.
+
+In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.
+
 [LogType](arkts-mdm-networkmanager-logtype-e.md) is supported since API version 23.
 
 > **NOTE：**

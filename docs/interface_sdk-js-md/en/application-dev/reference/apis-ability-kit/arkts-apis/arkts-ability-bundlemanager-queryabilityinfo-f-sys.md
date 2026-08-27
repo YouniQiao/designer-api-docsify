@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## queryAbilityInfo
@@ -12,7 +12,9 @@ import bundleManager from '@kit.AbilityKit';
 function queryAbilityInfo(want: Want, abilityFlags: number, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-Obtains the ability information based on the given want and ability flags. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
+Obtains the ability information based on the given want and ability flags. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -77,7 +79,9 @@ try {
 function queryAbilityInfo(want: Want, abilityFlags: number, userId: number, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-Obtains the ability information based on the given want, ability flags, and user ID. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
+Obtains the ability information based on the given want, ability flags, and user ID. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -145,7 +149,9 @@ try {
 function queryAbilityInfo(want: Want, abilityFlags: number, userId?: number): Promise<Array<AbilityInfo>>
 ```
 
-Obtains the ability information based on the given want, ability flags, and user ID. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
+Obtains the ability information based on the given want, ability flags, and user ID. This API uses a promise to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -167,7 +173,7 @@ Obtains the ability information based on the given want, ability flags, and user
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;AbilityInfo & gt; & gt; | Promise used to return the array of ability information obtained. |
+| Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise used to return the array of ability information obtained. |
 
 **Error codes:**
 
@@ -240,7 +246,9 @@ try {
 function queryAbilityInfo(wants: Array<Want>, abilityFlags: number, userId?: number): Promise<Array<AbilityInfo>>
 ```
 
-Obtains the ability information based on the given want list, ability flags, and user ID. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
+Obtains the ability information based on the given want list, ability flags, and user ID. This API uses a promise to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 12
 
@@ -262,7 +270,7 @@ Obtains the ability information based on the given want list, ability flags, and
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;AbilityInfo & gt; & gt; | Promise used to return an array of [AbilityInfo]{ |
+| Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise used to return an array of [AbilityInfo]{ |
 
 **Error codes:**
 

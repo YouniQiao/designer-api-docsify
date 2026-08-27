@@ -1,6 +1,8 @@
 # Location
 
-位置信息。@interface Location
+位置信息。
+
+@interface Location
 
 **起始版本：** 7
 
@@ -15,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## accuracy

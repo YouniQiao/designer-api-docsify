@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cloudExtension from '@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## createCloudServiceStub
@@ -30,7 +30,7 @@ Creates a RemoteObject instance based on a CloudService instance. The system use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;rpc.RemoteObject & gt; | Promise used to return the RemoteObject instance of CloudService. |
+| Promise&lt;rpc.RemoteObject&gt; | Promise used to return the RemoteObject instance of CloudService. |
 
 **Examples**
 

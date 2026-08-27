@@ -9,7 +9,7 @@ Defines a local socket server connection. Before calling LocalSocketServer APIs,
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## close
@@ -33,7 +33,7 @@ Stops listening for events of the **LocalSocketServer** object and releases the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -345,7 +345,7 @@ Obtains the local socket address of a **LocalSocketServer** connection. This API
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -467,7 +467,7 @@ Obtains the file descriptor bound to the LocalSocketServer listening port. This 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the socket file descriptor. |
+| Promise&lt;number&gt; | Promise used to return the socket file descriptor. |
 
 **Examples**
 
@@ -992,7 +992,7 @@ Binds the address of the local socket file. The server listens to and accepts lo
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -1215,7 +1215,7 @@ Sets the socket properties of the **LocalSocketServer** object. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

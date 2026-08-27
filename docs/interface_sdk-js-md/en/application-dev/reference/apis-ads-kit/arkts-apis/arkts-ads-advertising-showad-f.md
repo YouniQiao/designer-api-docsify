@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit.AdComponent';
-import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
-import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
-import advertising from '@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## showAd
@@ -33,7 +30,7 @@ Shows a full-screen ad.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ad | [Advertisement](arkts-ads-advertisement-advertisement-i.md) | Yes | Ad object. |
+| ad | Advertisement | Yes | Ad object. |
 | options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | Yes | Ad display parameters. |
 | context | common.UIAbilityContext | No | Context of the UIAbility. If this parameter is not set, the value is obtained from @ohos.app.ability.common.<br>**Since:** 12 |
 

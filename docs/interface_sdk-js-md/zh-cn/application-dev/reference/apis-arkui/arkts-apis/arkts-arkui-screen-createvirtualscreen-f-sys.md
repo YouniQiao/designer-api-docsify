@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import screen from '@kit.ArkUI';
-import screenshot from '@kit.ArkUIshot';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## createVirtualScreen

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getApplicationLabel
@@ -33,7 +33,7 @@ Obtains the name of an application with the specified package name and clone ind
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. If the operation is successful, the application name is returned. Otherwise, an error object is returned. |
+| Promise&lt;string&gt; | Promise used to return the result. If the operation is successful, the application name is returned. Otherwise, an error object is returned. |
 
 **Error codes:**
 

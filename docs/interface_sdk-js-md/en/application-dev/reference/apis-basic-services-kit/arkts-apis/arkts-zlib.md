@@ -9,7 +9,7 @@ The **Zip** module provides APIs for file compression and decompression.
 ## Modules to Import
 
 ```TypeScript
-import zlib from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -58,7 +58,7 @@ import zlib from '@kit.BasicServicesKit';
 | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) |
 | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | The deflate compression method (the only one supported in this version). |
 | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) |
-| [ErrorCode](arkts-basicservices-zlib-errorcode-e.md) | [ErrorCode](arkts-basicservices-cachedownload-errorcode-e.md) |
+| [ErrorCode](arkts-basicservices-zlib-errorcode-e.md) | ErrorCode |
 | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) |
 | [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md) | Defines the reference point for the offset. |
 | [ParallelStrategy](arkts-basicservices-zlib-parallelstrategy-e.md) | [ParallelStrategy](arkts-basicservices-zlib-parallelstrategy-e.md) |

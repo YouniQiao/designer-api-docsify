@@ -1,6 +1,8 @@
 # @ohos.fastbuffer
 
-The FastBuffer class is a container type for dealing with binary data directly. It can be constructed in a variety of ways.@namespace fastbuffer
+The FastBuffer class is a container type for dealing with binary data directly. It can be constructed in a variety of ways.
+
+@namespace fastbuffer
 
 **Since:** 20
 
@@ -9,7 +11,7 @@ The FastBuffer class is a container type for dealing with binary data directly. 
 ## Modules to Import
 
 ```TypeScript
-import fastbuffer from '@kit.ArkTS';
+import { fastbuffer } from '@kit.ArkTS';
 ```
 
 ## Summary
@@ -42,7 +44,7 @@ import fastbuffer from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [TypedArray](arkts-arkts-fastbuffer-typedarray-i.md) | TypedArray inherits the features and methods of Int8Array@extends Int8Array |
+| [TypedArray](arkts-arkts-fastbuffer-typedarray-i.md) | TypedArray inherits the features and methods of Int8Array |
 
 ### Types
 

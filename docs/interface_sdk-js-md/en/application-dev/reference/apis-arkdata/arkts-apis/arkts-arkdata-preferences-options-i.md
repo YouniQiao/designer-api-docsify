@@ -9,7 +9,7 @@ Represents the configuration of a **Preferences** instance.
 ## Modules to Import
 
 ```TypeScript
-import preferences from '@kit.ArkData';
+import { preferences } from '@kit.ArkData';
 ```
 
 ## dataGroupId
@@ -18,7 +18,13 @@ import preferences from '@kit.ArkData';
 dataGroupId?: string | null | undefined
 ```
 
-Application group ID. <!--RP1-->Currently, this parameter is not supported.<!--RP1End-->This parameter is optional. A **Preferences** instance will be created in the sandbox path corresponding to the specified **dataGroupId**. If this parameter is not specified, the **Preferences** instance is created in the sandbox directory of the application.This attribute can be used only in the stage model.This API can be used in atomic services since API version 11.
+Application group ID. <!--RP1-->Currently, this parameter is not supported.<!--RP1End-->
+
+This parameter is optional. A **Preferences** instance will be created in the sandbox path corresponding to the specified **dataGroupId**. If this parameter is not specified, the **Preferences** instance is created in the sandbox directory of the application.
+
+This attribute can be used only in the stage model.
+
+This API can be used in atomic services since API version 11.
 
 **Type:** string \| null \| undefined
 
@@ -36,7 +42,9 @@ Application group ID. <!--RP1-->Currently, this parameter is not supported.<!--R
 name: string
 ```
 
-Name of the **Preferences** instance. It must be longer than 0 bytes and less than or equal to 255 bytes, and cannot contain or end with slashes (/).This API can be used in atomic services since API version 11.
+Name of the **Preferences** instance. It must be longer than 0 bytes and less than or equal to 255 bytes, and cannot contain or end with slashes (/).
+
+This API can be used in atomic services since API version 11.
 
 **Type:** string
 
@@ -52,7 +60,9 @@ Name of the **Preferences** instance. It must be longer than 0 bytes and less th
 storageType?: StorageType | null | undefined
 ```
 
-Storage mode to be used by the **Preferences** instance. This parameter is optional. If this parameter is left blank, the XML storage type is used by default. After the storage type is set for a **Preferences** instance, it cannot be changed.This API can be used in atomic services since API version 18.
+Storage mode to be used by the **Preferences** instance. This parameter is optional. If this parameter is left blank, the XML storage type is used by default. After the storage type is set for a **Preferences** instance, it cannot be changed.
+
+This API can be used in atomic services since API version 18.
 
 **Type:** [StorageType](arkts-arkdata-preferences-storagetype-e.md) \| null \| undefined
 

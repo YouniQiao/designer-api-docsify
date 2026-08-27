@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import Brightness, { BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
+import { Brightness, BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
 ```
 
 ## getMode
@@ -194,8 +194,12 @@ export default {
 static setKeepScreenOn(options?: SetKeepScreenOnOptions): void
 ```
 
-设置屏幕是否保持常亮状态，开启常亮模式推荐在onShow()阶段调用。注意：  
-- 除Lite Wearable外，从API version 7开始不再维护，建议使用[window.setWindowKeepScreenOn()](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowkeepscreenon)替代。  
+设置屏幕是否保持常亮状态，开启常亮模式推荐在onShow()阶段调用。
+
+注意：
+
+- 除Lite Wearable外，从API version 7开始不再维护，建议使用[window.setWindowKeepScreenOn()](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowkeepscreenon)替代。
+
 - 在Lite Wearable上，该接口仅能阻止系统无活动超时灭屏（自动），无法阻止用户主动操作（如盖屏）、常亮时刻结束等导致的灭屏。
 
 **起始版本：** 3

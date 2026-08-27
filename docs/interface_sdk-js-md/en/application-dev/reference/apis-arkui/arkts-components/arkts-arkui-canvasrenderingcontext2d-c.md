@@ -124,7 +124,7 @@ Creates a **CanvasRenderingContext2D** object, allowing for initial configuratio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md). If the value is **undefined** or **null**, the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) is used. |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No | Unit mode of the **CanvasRenderingContext2D** object. The value cannot be dynamically changed once set. Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. Default value: **DEFAULT**. |
+| unit | LengthMetricsUnit | No | Unit mode of the **CanvasRenderingContext2D** object. The value cannot be dynamically changed once set. Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. Default value: **DEFAULT**. |
 
 **Examples**
 
@@ -223,7 +223,7 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is bound 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.    **undefined** and **null** are treated as invalid values. |
-| callback | Callback & lt;void & gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is bound to the **Canvas** component are unsubscribed.If this parameter is not left empty, the callback corresponding to the bind event is unsubscribed.   **undefined** and **null** are treated as invalid values. |
+| callback | Callback&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is bound to the **Canvas** component are unsubscribed.If this parameter is not left empty, the callback corresponding to the bind event is unsubscribed.   **undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -252,7 +252,7 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is unboun
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.    **undefined** and **null** are treated as invalid values. |
-| callback | Callback & lt;void & gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is unbound from the **Canvas** component are unsubscribed.If this parameter is not left empty, the callback corresponding to the unbind event is unsubscribed.   **undefined** and **null** are treated as invalid values. |
+| callback | Callback&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is unbound from the **Canvas** component are unsubscribed.If this parameter is not left empty, the callback corresponding to the unbind event is unsubscribed.   **undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -396,7 +396,7 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.    **undefined** and **null** are treated as invalid values. |
-| callback | Callback & lt;void & gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is bound to the **Canvas** component.   **undefined** and **null** are treated as invalid values. |
+| callback | Callback&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is bound to the **Canvas** component.   **undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -438,7 +438,7 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.    **undefined** and **null** are treated as invalid values. |
-| callback | Callback & lt;void & gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is unbound from the **Canvas** component.   **undefined** and **null** are treated as invalid values. |
+| callback | Callback&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is unbound from the **Canvas** component.   **undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -480,7 +480,7 @@ Configures and starts the AI analyzer. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -673,7 +673,9 @@ struct ToDataURL {
 readonly canvas: FrameNode
 ```
 
-FrameNode instance of the **Canvas** component associated with **CanvasRenderingContext2D**. It can be used to listen for the visibility status of the associated **Canvas** component.Default value: **null**
+FrameNode instance of the **Canvas** component associated with **CanvasRenderingContext2D**. It can be used to listen for the visibility status of the associated **Canvas** component.
+
+Default value: **null**
 
 **Type:** [FrameNode](arkts-arkui-framenode-t.md)
 
@@ -691,7 +693,9 @@ FrameNode instance of the **Canvas** component associated with **CanvasRendering
 readonly height: number
 ```
 
-Component height.Default unit: vp
+Component height.
+
+Default unit: vp
 
 **Type:** number
 
@@ -743,7 +747,9 @@ struct OffscreenCanvasPage {
 readonly width: number
 ```
 
-Component width.Default unit: vp
+Component width.
+
+Default unit: vp
 
 **Type:** number
 

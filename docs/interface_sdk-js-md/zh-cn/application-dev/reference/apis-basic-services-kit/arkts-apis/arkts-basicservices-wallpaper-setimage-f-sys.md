@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wallpaper from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## setImage
@@ -103,7 +103,7 @@ function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType)
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

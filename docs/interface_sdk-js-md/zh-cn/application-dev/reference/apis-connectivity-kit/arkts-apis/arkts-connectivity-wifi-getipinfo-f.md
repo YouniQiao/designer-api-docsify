@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getIpInfo
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function getIpInfo(): IpInfo
 ```
 
-获取IP信息。<p>IP信息包括主机IP地址、网关地址和DNS信息。
+获取IP信息。
+
+<p>IP信息包括主机IP地址、网关地址和DNS信息。
 
 **起始版本：** 7
 
@@ -31,7 +30,7 @@ function getIpInfo(): IpInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [IpInfo](arkts-connectivity-wifi-ipinfo-i.md) | IP信息。 |
+| IpInfo | IP信息。 |
 
 **示例**
 

@@ -10,7 +10,6 @@ Defines the style parameters of the popup.
 
 ```TypeScript
 import { Popup, PopupButtonOptions, PopupIconOptions, PopupOptions, PopupTextOptions } from '@kit.ArkUI';
-import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUIV2';
 ```
 
 ## onClose
@@ -19,7 +18,9 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUIV2';
 onClose?: () => void
 ```
 
-Callback for the popup close button.By default, the callback for the close button is not set.
+Callback for the popup close button.
+
+By default, the callback for the close button is not set.
 
 **Since:** 11
 
@@ -35,7 +36,9 @@ Callback for the popup close button.By default, the callback for the close butto
 buttons?: [PopupButtonOptions?, PopupButtonOptions?]
 ```
 
-Buttons of the popup. A maximum of two buttons can be set.By default, no buttons are displayed.
+Buttons of the popup. A maximum of two buttons can be set.
+
+By default, no buttons are displayed.
 
 **Type:** [PopupButtonOptions?, PopupButtonOptions?]
 
@@ -53,7 +56,9 @@ Buttons of the popup. A maximum of two buttons can be set.By default, no buttons
 direction?: Direction
 ```
 
-Layout direction.Default value: **Direction.Auto**
+Layout direction.
+
+Default value: **Direction.Auto**
 
 **Type:** Direction
 
@@ -71,8 +76,13 @@ Layout direction.Default value: **Direction.Auto**
 icon?: PopupIconOptions
 ```
 
-Icon of the popup.  
-**NOTE：**The icon is not displayed when **width** and **height** are set to an invalid value or **0**.By default, no icon is displayed.
+Icon of the popup.
+
+**NOTE：**
+
+The icon is not displayed when **width** and **height** are set to an invalid value or **0**.
+
+By default, no icon is displayed.
 
 **Type:** [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md)
 
@@ -90,11 +100,14 @@ Icon of the popup.
 maxWidth?: Dimension
 ```
 
-Maximum width of the popup. This API allows the popup to display with a custom width.  
+Maximum width of the popup. This API allows the popup to display with a custom width.
+
 **NOTE：**
+
 1. When using resource references, ensure that the parameter type matches the attribute method type.
 2. **maxWidth** accepts numeric values (both floating-point and integer values), such as **\$r('app.float.maxWidth')** and **\$r('app.integer.maxWidth')**.
 3. When the type is Resource, values default to px units if no unit is explicitly specified.
+
 Default value: **400vp**
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
@@ -113,9 +126,13 @@ Default value: **400vp**
 message: PopupTextOptions
 ```
 
-Message of the popup.  
+Message of the popup.
+
 **NOTE：**
-**fontWeight** is not available for messages.By default, no message is displayed.
+
+**fontWeight** is not available for messages.
+
+By default, no message is displayed.
 
 **Type:** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 
@@ -133,9 +150,13 @@ Message of the popup.
 showClose?: boolean | Resource
 ```
 
-Whether to show the close button.  
-**true**: Show the close button. **false**: Do not show the close button.  
-**Resource**: Show the corresponding icon.Default value: **true**
+Whether to show the close button.
+
+**true**: Show the close button. **false**: Do not show the close button.
+
+**Resource**: Show the corresponding icon.
+
+Default value: **true**
 
 **Type:** boolean \| Resource
 
@@ -153,7 +174,9 @@ Whether to show the close button.
 title?: PopupTextOptions
 ```
 
-Title of the popup.By default, no title is displayed.
+Title of the popup.
+
+By default, no title is displayed.
 
 **Type:** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
 

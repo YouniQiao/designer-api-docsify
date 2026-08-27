@@ -74,7 +74,9 @@ onTextSelectionChange?: OnTextSelectionChangeCallback
 cancelIcon?: IconOptions
 ```
 
-右侧清除按钮样式。默认值：`{style: CancelButtonStyle.INPUT, icon: {size: '16vp', color: '#99ffffff', src: ' '}}`。当style为CancelButtonStyle.CONSTANT时，默认显示清除样式。
+右侧清除按钮样式。默认值：`{style: CancelButtonStyle.INPUT, icon: {size: '16vp', color: '#99ffffff', src: ' '}}`。
+
+当style为CancelButtonStyle.CONSTANT时，默认显示清除样式。
 
 **类型：** IconOptions
 
@@ -202,7 +204,9 @@ Search获焦时，是否主动拉起软键盘。true表示Search获焦时主动�
 enablePreviewText?: boolean
 ```
 
-是否开启输入预上屏。true表示开启输入预上屏。false表示不开启输入预上屏。默认值：`true`。需要配合开启输入法的预上屏功能。预上屏内容定义为文字暂存态，目前不支持文字拦截功能，因此该值为true时不触发onWillInsert、onDidInsert回调。
+是否开启输入预上屏。true表示开启输入预上屏。false表示不开启输入预上屏。默认值：`true`。
+
+需要配合开启输入法的预上屏功能。预上屏内容定义为文字暂存态，目前不支持文字拦截功能，因此该值为true时不触发onWillInsert、onDidInsert回调。
 
 **类型：** boolean
 
@@ -250,7 +254,15 @@ fontColor?: ResourceColor
 fontFeature?: ResourceStr
 ```
 
-设置文字特性效果，比如数字等宽的特性。格式为：normal | &lt;feature-tag-value&gt;&lt;feature-tag-value&gt;的格式为：&lt;string&gt; [ &lt;integer&gt; | on | off ]&lt;feature-tag-value&gt;的个数可以有多个，中间用','隔开。例如，使用等宽数字的输入格式为："ss01" on。默认值为`undefined`。
+设置文字特性效果，比如数字等宽的特性。
+
+格式为：normal | &lt;feature-tag-value&gt;
+
+&lt;feature-tag-value&gt;的格式为：&lt;string&gt; [ &lt;integer&gt; | on | off ]
+
+&lt;feature-tag-value&gt;的个数可以有多个，中间用','隔开。
+
+例如，使用等宽数字的输入格式为："ss01" on。默认值为`undefined`。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -266,7 +278,9 @@ fontFeature?: ResourceStr
 hideSelectionMenu?: boolean
 ```
 
-是否隐藏系统文本选择菜单。设置为true时，单击输入框光标、长按输入框、双击输入框、三击输入框或者右键输入框，不弹出系统文本选择菜单。设置为false时，弹出系统文本选择菜单。默认值：`false`。
+是否隐藏系统文本选择菜单。
+
+设置为true时，单击输入框光标、长按输入框、双击输入框、三击输入框或者右键输入框，不弹出系统文本选择菜单。设置为false时，弹出系统文本选择菜单。默认值：`false`。
 
 **类型：** boolean
 
@@ -282,8 +296,10 @@ hideSelectionMenu?: boolean
 inputFilter?: InputFilterParams
 ```
 
-通过正则表达式设置输入过滤器。匹配表达式的输入允许显示，不匹配的输入将被过滤。仅支持单个字符匹配，不支持字符串匹配。默认值为`undefined`。  
--value: 正则表达式。  
+通过正则表达式设置输入过滤器。匹配表达式的输入允许显示，不匹配的输入将被过滤。仅支持单个字符匹配，不支持字符串匹配。默认值为`undefined`。
+
+-value: 正则表达式。
+
 -error: 正则匹配失败时，返回被过滤的内容。
 
 **类型：** [InputFilterParams](arkts-arkui-atomicservice-atomicservicesearch-inputfilterparams-i.md)
@@ -412,7 +428,7 @@ onDidDelete?: Callback<DeleteValue>
 onDidInsert?: Callback<InsertValue>
 ```
 
-在输入完成时触发该回调，在onWillInsert之后触发。当onWillInsert返回false拦截插入操作时，该回调不触发。默认值为`undefined`。 当enablePreviewText为true时，不触发本回调。
+在输入完成时触发该回调，在onWillInsert之后触发。当onWillInsert返回false拦截插入操作时，该回调不触发。默认值为`undefined`。当enablePreviewText为true时，不触发本回调。
 
 **类型：** Callback&lt;[InsertValue](arkts-arkui-insertvalue-i.md)&gt;
 
@@ -476,7 +492,7 @@ onWillDelete?: Callback<DeleteValue, boolean>
 onWillInsert?: Callback<InsertValue, boolean>
 ```
 
-在将要输入时，触发该回调。true表示将输入内容正常插入结果字符串，false表示不插入。默认值为`undefined`。 当enablePreviewText为true时，不触发本回调。
+在将要输入时，触发该回调。true表示将输入内容正常插入结果字符串，false表示不插入。默认值为`undefined`。当enablePreviewText为true时，不触发本回调。
 
 **类型：** Callback&lt;[InsertValue](arkts-arkui-insertvalue-i.md), boolean&gt;
 
@@ -508,7 +524,7 @@ placeholder文本颜色。默认值：`\$r('sys.color.ohos_id_color_text_seconda
 placeholderFont?: Font
 ```
 
-设置placeholder文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。 默认值：`{size: \$r('sys.float.ohos_id_text_size_body1')}`。
+设置placeholder文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：`{size: \$r('sys.float.ohos_id_text_size_body1')}`。
 
 **类型：** Font
 
@@ -540,8 +556,10 @@ pressedBackgroundColor?: ResourceColor
 searchButton?: SearchButtonParams
 ```
 
-设置搜索框末尾搜索按钮。点击搜索按钮，触发onSubmit回调。默认值为`undefined`  
--searchButtonValue: 搜索框末尾搜索按钮文本内容。  
+设置搜索框末尾搜索按钮。点击搜索按钮，触发onSubmit回调。默认值为`undefined`
+
+-searchButtonValue: 搜索框末尾搜索按钮文本内容。
+
 -options: 配置搜索框文本样式。默认值：`{fontSize: '16fp', fontColor: '#ff3f97e9'}`。
 
 **类型：** [SearchButtonParams](arkts-arkui-atomicservice-atomicservicesearch-searchbuttonparams-i.md)
@@ -558,7 +576,11 @@ searchButton?: SearchButtonParams
 searchIcon?: IconOptions | SymbolGlyphModifier
 ```
 
-左侧搜索图标样式。浅色模式默认值：`{size: '16vp', color: '#99182431', src: ' '}`。深色模式默认值：`{size: '16vp', color: '#99ffffff', src: ' '}`。
+左侧搜索图标样式。
+
+浅色模式默认值：`{size: '16vp', color: '#99182431', src: ' '}`。
+
+深色模式默认值：`{size: '16vp', color: '#99ffffff', src: ' '}`。
 
 **类型：** IconOptions \| SymbolGlyphModifier
 
@@ -622,7 +644,7 @@ textAlign?: TextAlign
 textFont?: Font
 ```
 
-设置搜索框内输入文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。 默认值：`{size: \$r('sys.float.ohos_id_text_size_body1')}`。
+设置搜索框内输入文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：`{size: \$r('sys.float.ohos_id_text_size_body1')}`。
 
 **类型：** Font
 

@@ -11,7 +11,7 @@ Represents the subscription information.
 ## Modules to Import
 
 ```TypeScript
-import cloudExtension from '@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## expirationTime

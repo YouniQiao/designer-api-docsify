@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import hash from '@kit.CoreFileKit';
+import { hash } from '@kit.CoreFileKit';
 ```
 
 ## createHash

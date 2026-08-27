@@ -11,9 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import insightIntent from '@kit.AbilityKit';
-import insightIntentDriver from '@kit.AbilityKitDriver';
-import insightIntentProvider from '@kit.AbilityKitProvider';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## interactionUIType

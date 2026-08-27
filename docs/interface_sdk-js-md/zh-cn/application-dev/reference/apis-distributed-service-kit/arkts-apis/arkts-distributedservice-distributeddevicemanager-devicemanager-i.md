@@ -1,6 +1,6 @@
 # DeviceManager
 
-设备管理实例，是分布式设备管理方法的调用入口，提供设备发现、设备认证、状态监听和信息查询等能力。 在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。
+设备管理实例，是分布式设备管理方法的调用入口，提供设备发现、设备认证、状态监听和信息查询等能力。在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。
 
 **起始版本：** 10
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedDeviceManager from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## bindTarget
@@ -18,7 +18,7 @@ import distributedDeviceManager from '@kit.DistributedServiceKit';
 bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback<{deviceId: string;}>): void
 ```
 
-认证设备，将发现的不可信设备通过认证流程绑定为可信设备。认证过程中，系统会根据bindParam中指定的认证类型发起认证请求， 认证成功后设备将加入可信设备列表，可通过getAvailableDeviceListSync查询。当不再需要与目标设备进行分布式业务时， 可调用unbindTarget解除绑定。使用callback异步回调。
+认证设备，将发现的不可信设备通过认证流程绑定为可信设备。认证过程中，系统会根据bindParam中指定的认证类型发起认证请求，认证成功后设备将加入可信设备列表，可通过getAvailableDeviceListSync查询。当不再需要与目标设备进行分布式业务时，可调用unbindTarget解除绑定。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -30,9 +30,9 @@ bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: As
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | string | 是 | 设备标识，可从设备发现结果（startDiscovering的discoverSuccess回调返回的 DeviceBasicInfo）中获取。长度范围1~255字符，超出范围时返回错误码401。 |
-| bindParam | { [key: string]: Object; } | 是 | 认证参数。由开发者自行决定传入的键值对。默认会携带以下key值： bindType 此值是绑定的类型，必填。    -1：PIN码。    targetPkgName 绑定目标的包名。 appName 尝试绑定目标的应用程序名称。 appOperation 应用程序要绑定目标的原因。 customDescription 操作的详细说明。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: string;}&gt; | 是 | 认证结果回调。当认证成功时， err为undefined，data为包含deviceId的对象；当认证失败时，err为错误对象。 |
+| deviceId | string | 是 | 设备标识，可从设备发现结果（startDiscovering的discoverSuccess回调返回的DeviceBasicInfo）中获取。长度范围1~255字符，超出范围时返回错误码401。 |
+| bindParam | { [key: string]: Object; } | 是 | 认证参数。由开发者自行决定传入的键值对。默认会携带以下key值：bindType 此值是绑定的类型，必填。   -1：PIN码。   targetPkgName 绑定目标的包名。appName 尝试绑定目标的应用程序名称。appOperation 应用程序要绑定目标的原因。customDescription 操作的详细说明。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: string;}&gt; | 是 | 认证结果回调。当认证成功时，err为undefined，data为包含deviceId的对象；当认证失败时，err为错误对象。 |
 
 **错误码：**
 
@@ -86,7 +86,7 @@ try {
 getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void
 ```
 
-获取所有在线可信设备。调用前需先通过createDeviceManager创建DeviceManager实例。使用callback异步回调。 与getAvailableDeviceListSync的区别在于：本方法为异步调用，通过callback返回结果；getAvailableDeviceListSync为同步调用， 直接返回结果。建议在不希望阻塞线程的场景使用本方法，在需要阻塞等待结果的场景使用getAvailableDeviceListSync。
+获取所有在线可信设备。调用前需先通过createDeviceManager创建DeviceManager实例。使用callback异步回调。与getAvailableDeviceListSync的区别在于：本方法为异步调用，通过callback返回结果；getAvailableDeviceListSync为同步调用，直接返回结果。建议在不希望阻塞线程的场景使用本方法，在需要阻塞等待结果的场景使用getAvailableDeviceListSync。
 
 **起始版本：** 10
 
@@ -98,7 +98,7 @@ getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)&gt;&gt; | 是 | 回调函数。当获取可信设备列表成功时，err为undefined， data为获取到的可信设备列表；失败时，err为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)&gt;&gt; | 是 | 回调函数。当获取可信设备列表成功时，err为undefined，data为获取到的可信设备列表；失败时，err为错误对象。 |
 
 **错误码：**
 
@@ -136,7 +136,7 @@ try {
 getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>
 ```
 
-获取所有在线可信设备。调用前需先通过createDeviceManager创建DeviceManager实例。使用Promise异步回调。 与getAvailableDeviceListSync的区别在于：本方法为异步调用，通过Promise返回结果；getAvailableDeviceListSync为同步调用， 直接返回结果。建议在不希望阻塞线程的场景使用本方法，在需要阻塞等待结果的场景使用getAvailableDeviceListSync。
+获取所有在线可信设备。调用前需先通过createDeviceManager创建DeviceManager实例。使用Promise异步回调。与getAvailableDeviceListSync的区别在于：本方法为异步调用，通过Promise返回结果；getAvailableDeviceListSync为同步调用，直接返回结果。建议在不希望阻塞线程的场景使用本方法，在需要阻塞等待结果的场景使用getAvailableDeviceListSync。
 
 **起始版本：** 10
 
@@ -184,7 +184,7 @@ try {
 getAvailableDeviceListSync(): Array<DeviceBasicInfo>
 ```
 
-同步获取所有在线可信设备。调用前需先通过createDeviceManager创建DeviceManager实例。 与getAvailableDeviceList的区别在于：本方法为同步调用，直接返回结果；getAvailableDeviceList为异步调用，通过callback 或Promise返回结果。建议在需要阻塞等待结果的场景使用本方法，在不希望阻塞线程的场景使用getAvailableDeviceList。
+同步获取所有在线可信设备。调用前需先通过createDeviceManager创建DeviceManager实例。与getAvailableDeviceList的区别在于：本方法为同步调用，直接返回结果；getAvailableDeviceList为异步调用，通过callback或Promise返回结果。建议在需要阻塞等待结果的场景使用本方法，在不希望阻塞线程的场景使用getAvailableDeviceList。
 
 **起始版本：** 10
 
@@ -240,7 +240,7 @@ getDeviceName(networkId: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| networkId | string | 是 | 设备的网络标识，可从可信设备列表（getAvailableDeviceListSync或 getAvailableDeviceList返回的DeviceBasicInfo）中获取。注意：若获取到的networkId为空字符串，不可用于本接口调用。 长度范围1~255字符，超出范围时返回错误码401。 |
+| networkId | string | 是 | 设备的网络标识，可从可信设备列表（getAvailableDeviceListSync或getAvailableDeviceList返回的DeviceBasicInfo）中获取。注意：若获取到的networkId为空字符串，不可用于本接口调用。长度范围1~255字符，超出范围时返回错误码401。 |
 
 **返回值：**
 
@@ -294,7 +294,7 @@ getDeviceType(networkId: string): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| networkId | string | 是 | 设备的网络标识，可从可信设备列表（getAvailableDeviceListSync或 getAvailableDeviceList返回的DeviceBasicInfo）中获取。注意：若获取到的networkId为空字符串，不可用于本接口调用。 长度范围1~255字符，超出范围时返回错误码401。 |
+| networkId | string | 是 | 设备的网络标识，可从可信设备列表（getAvailableDeviceListSync或getAvailableDeviceList返回的DeviceBasicInfo）中获取。注意：若获取到的networkId为空字符串，不可用于本接口调用。长度范围1~255字符，超出范围时返回错误码401。 |
 
 **返回值：**
 
@@ -835,7 +835,7 @@ try {
 on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): void
 ```
 
-注册发现设备成功回调。使用callback异步回调。此回调在调用startDiscovering发现到周边设备时触发， 返回发现的设备信息（DeviceBasicInfo）。需在调用startDiscovering之前注册此回调。
+注册发现设备成功回调。使用callback异步回调。此回调在调用startDiscovering发现到周边设备时触发，返回发现的设备信息（DeviceBasicInfo）。需在调用startDiscovering之前注册此回调。
 
 **起始版本：** 10
 
@@ -942,7 +942,7 @@ try {
 on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
 ```
 
-注册设备发现失败回调。使用callback异步回调。此回调在调用startDiscovering发现设备失败时触发， 返回失败原因。需在调用startDiscovering之前注册此回调。
+注册设备发现失败回调。使用callback异步回调。此回调在调用startDiscovering发现设备失败时触发，返回失败原因。需在调用startDiscovering之前注册此回调。
 
 **起始版本：** 10
 
@@ -1040,7 +1040,7 @@ try {
 startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; }): void
 ```
 
-发现周边设备，用于在需要建立分布式连接前搜索可用设备。发现状态持续两分钟，超时后自动停止，最大发现数量为99个。使用WiFi进行 设备发现时，要求发现方与被发现方处于同一局域网内。调用本方法前，需先通过on('discoverSuccess')注册设备发现成功回调以接收 发现的设备信息，并通过on('discoverFailure')注册设备发现失败回调以接收失败通知。发现完成后可调用stopDiscovering停止发现。
+发现周边设备，用于在需要建立分布式连接前搜索可用设备。发现状态持续两分钟，超时后自动停止，最大发现数量为99个。使用WiFi进行设备发现时，要求发现方与被发现方处于同一局域网内。调用本方法前，需先通过on('discoverSuccess')注册设备发现成功回调以接收发现的设备信息，并通过on('discoverFailure')注册设备发现失败回调以接收失败通知。发现完成后可调用stopDiscovering停止发现。
 
 **起始版本：** 10
 
@@ -1052,8 +1052,8 @@ startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [k
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| discoverParam | { [key: string]: Object; } | 是 | 发现标识。 标识发现的目标类型。 discoverTargetType: 发现目标默认为设备，值为1。 |
-| filterOptions | { [key: string]: Object; } | 否 | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。会携带以下key值： availableStatus(0-1)：仅发现设备可信，值为0表示设备不可信。    -0：设备离线，客户端需要通过调用bindTarget绑定设备。    -1：设备已在线，客户端可以进行连接。    discoverDistance(0-100)：发现距离本地一定距离内的设备，单位为cm。wifi场景不传该参数。 authenticationStatus(0-1)：根据不同的认证状态发现设备：    -0：设备未认证。    -1：设备已认证。    authorizationType(0-2)：根据不同的授权类型发现设备：    -0：根据临时协商的会话密钥认证的设备。    -1：基于同账号密钥进行身份验证的设备。    -2：基于不同账号凭据密钥认证的设备。 |
+| discoverParam | { [key: string]: Object; } | 是 | 发现标识。 标识发现的目标类型。discoverTargetType: 发现目标默认为设备，值为1。 |
+| filterOptions | { [key: string]: Object; } | 否 | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。会携带以下key值：availableStatus(0-1)：仅发现设备可信，值为0表示设备不可信。   -0：设备离线，客户端需要通过调用bindTarget绑定设备。   -1：设备已在线，客户端可以进行连接。   discoverDistance(0-100)：发现距离本地一定距离内的设备，单位为cm。wifi场景不传该参数。authenticationStatus(0-1)：根据不同的认证状态发现设备：   -0：设备未认证。   -1：设备已认证。   authorizationType(0-2)：根据不同的授权类型发现设备：   -0：根据临时协商的会话密钥认证的设备。   -1：基于同账号密钥进行身份验证的设备。   -2：基于不同账号凭据密钥认证的设备。 |
 
 **错误码：**
 
@@ -1095,7 +1095,7 @@ try {
 stopDiscovering(): void
 ```
 
-停止发现周边设备。与startDiscovering方法配合使用，用于在发现超时（两分钟）前手动停止设备发现。 需在调用startDiscovering之后调用。
+停止发现周边设备。与startDiscovering方法配合使用，用于在发现超时（两分钟）前手动停止设备发现。需在调用startDiscovering之后调用。
 
 **起始版本：** 10
 
@@ -1133,7 +1133,7 @@ try {
 unbindTarget(deviceId: string): void
 ```
 
-解除认证设备，用于在不再需要与目标设备进行分布式业务时，解除与该设备的认证关系。与bindTarget方法配合使用， 仅能解除已通过bindTarget认证绑定的可信设备。解除后设备将从可信设备列表中移除， 可通过getAvailableDeviceListSync或getAvailableDeviceList查询确认。
+解除认证设备，用于在不再需要与目标设备进行分布式业务时，解除与该设备的认证关系。与bindTarget方法配合使用，仅能解除已通过bindTarget认证绑定的可信设备。解除后设备将从可信设备列表中移除，可通过getAvailableDeviceListSync或getAvailableDeviceList查询确认。
 
 **起始版本：** 10
 
@@ -1145,7 +1145,7 @@ unbindTarget(deviceId: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | string | 是 | 设备标识，仅支持已通过bindTarget认证绑定的可信设备，可从可信设备列表 （getAvailableDeviceListSync或getAvailableDeviceList返回的DeviceBasicInfo）中获取。 长度范围1~255字符，超出范围时返回错误码401。 |
+| deviceId | string | 是 | 设备标识，仅支持已通过bindTarget认证绑定的可信设备，可从可信设备列表（getAvailableDeviceListSync或getAvailableDeviceList返回的DeviceBasicInfo）中获取。长度范围1~255字符，超出范围时返回错误码401。 |
 
 **错误码：**
 

@@ -1,11 +1,11 @@
 # ArkTS API<!--arkts-performanceanalysiskit-->
 
-- [@ohos.faultLogger](arkts-faultlogger.md)
+- [@ohos.faultLogger(FaultLogger)](arkts-faultlogger.md)
   - [query](arkts-performanceanalysis-faultlogger-query-f.md)
   - [querySelfFaultLog](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md)
   - [FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)
   - [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md)
-- [@ohos.hiAppEvent](arkts-hiappevent.md)
+- [@ohos.hiAppEvent(Application Event Logging)](arkts-hiappevent.md)
   - [hiAppEvent](arkts-performanceanalysis-hiappevent-depr-n.md)
     - [Event](arkts-performanceanalysis-hiappevent-event-depr-n.md)
       - [Constants](arkts-performanceanalysis-event-depr-con.md)
@@ -132,7 +132,7 @@
   - [EventType(system api)](arkts-performanceanalysis-hisysevent-eventtype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [RuleType(system api)](arkts-performanceanalysis-hisysevent-ruletype-e-sys.md)<!--DelEnd-->
-- [@ohos.hiTraceChain](arkts-hitracechain.md)
+- [@ohos.hiTraceChain(Distributed Tracing)](arkts-hitracechain.md)
   - [begin](arkts-performanceanalysis-hitracechain-begin-f.md)
   - [clearId](arkts-performanceanalysis-hitracechain-clearid-f.md)
   - [createSpan](arkts-performanceanalysis-hitracechain-createspan-f.md)
@@ -147,7 +147,7 @@
   - [HiTraceCommunicationMode](arkts-performanceanalysis-hitracechain-hitracecommunicationmode-e.md)
   - [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md)
   - [HiTraceTracepointType](arkts-performanceanalysis-hitracechain-hitracetracepointtype-e.md)
-- [@ohos.hiTraceMeter](arkts-hitracemeter.md)
+- [@ohos.hiTraceMeter(Performance Tracing)](arkts-hitracemeter.md)
   - [finishAsyncTrace](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md)
   - [finishSyncTrace](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md)
   - [finishTrace](arkts-performanceanalysis-hitracemeter-finishtrace-f.md)
@@ -160,11 +160,11 @@
   - [unregisterTraceListener](arkts-performanceanalysis-hitracemeter-unregistertracelistener-f.md)
   - [TraceEventListener](arkts-performanceanalysis-hitracemeter-traceeventlistener-t.md)
   - [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md)
-- [@ohos.hiviewdfx.FaultLogExtensionAbility](arkts-hiviewdfx-faultlogextensionability.md)
+- [@ohos.hiviewdfx.FaultLogExtensionAbility(Delayed Fault Notification)](arkts-hiviewdfx-faultlogextensionability.md)
   - [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md)
-- [@ohos.hiviewdfx.FaultLogExtensionContext](arkts-hiviewdfx-faultlogextensioncontext.md)
+- [@ohos.hiviewdfx.FaultLogExtensionContext(Delayed Fault Notification Context)](arkts-hiviewdfx-faultlogextensioncontext.md)
   - [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md)
-- [@ohos.hiviewdfx.hiAppEvent](arkts-hiviewdfx-hiappevent.md)
+- [@ohos.hiviewdfx.hiAppEvent(Application Event Logging)](arkts-hiviewdfx-hiappevent.md)
   - [hiAppEvent](arkts-performanceanalysis-hiappevent-n.md)
     - [domain](arkts-performanceanalysis-hiappevent-domain-n.md)
       - [Constants](arkts-performanceanalysis-domain-con.md)

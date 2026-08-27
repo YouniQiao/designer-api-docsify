@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import recent from '@kit.CoreFileKit';
+import { recent } from '@kit.CoreFileKit';
 ```
 
 ## remove

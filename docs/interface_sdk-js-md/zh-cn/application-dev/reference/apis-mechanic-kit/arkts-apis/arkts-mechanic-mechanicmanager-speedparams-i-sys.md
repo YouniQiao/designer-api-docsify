@@ -51,7 +51,7 @@ mode?: MarchingMode
 speed: number
 ```
 
-转动或移动速度。 取值限定为整数。
+转动或移动速度。取值限定为整数。
 
 **类型：** number
 

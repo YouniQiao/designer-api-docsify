@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import ssap from '@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## address
@@ -34,7 +34,7 @@ address: string
 requestId: number
 ```
 
-表示请求ID。取值范围[0, 65535]。该ID必须与收到的[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)或 [PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)中的requestId一致，用于关联请求与响应。
+表示请求ID。取值范围[0, 65535]。该ID必须与收到的[PropertyReadRequest](arkts-connectivity-ssap-propertyreadrequest-i.md)或[PropertyWriteRequest](arkts-connectivity-ssap-propertywriterequest-i.md)中的requestId一致，用于关联请求与响应。
 
 **类型：** number
 

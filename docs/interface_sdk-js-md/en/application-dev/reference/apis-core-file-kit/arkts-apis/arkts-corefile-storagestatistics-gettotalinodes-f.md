@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import storageStatistics from '@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getTotalInodes
@@ -24,7 +24,7 @@ Get the total inodes.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | return Promise |
+| Promise&lt;number&gt; | return Promise |
 
 **Error codes:**
 

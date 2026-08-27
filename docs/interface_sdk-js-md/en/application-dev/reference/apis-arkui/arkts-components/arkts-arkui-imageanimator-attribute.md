@@ -1,6 +1,8 @@
 # ImageAnimator properties/events
 
-In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.
+
+In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** ImageAnimatorAttribute extends CommonMethod<ImageAnimatorAttribute>
 
@@ -163,7 +165,7 @@ Triggered when the animation playback returns to the initial state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback triggered when the animation playback returns to the initial state. |
+| event | () =&gt; void | Yes | Callback triggered when the animation playback returns to the initial state. |
 
 ## onFinish
 
@@ -185,7 +187,7 @@ Triggered when the animation playback completes or stops.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback triggered when the animation playback completes or stops. |
+| event | () =&gt; void | Yes | Callback triggered when the animation playback completes or stops. |
 
 ## onPause
 
@@ -207,7 +209,7 @@ Triggered when the animation playback is paused.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback triggered when the animation playback is paused. |
+| event | () =&gt; void | Yes | Callback triggered when the animation playback is paused. |
 
 ## onRepeat
 
@@ -227,7 +229,7 @@ Triggered when the animation playback is repeated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback triggered when the animation playback is repeated. |
+| event | () =&gt; void | Yes | Callback triggered when the animation playback is repeated. |
 
 ## onStart
 
@@ -249,7 +251,7 @@ Triggered when the animation starts to play.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback triggered when the animation starts to play. |
+| event | () =&gt; void | Yes | Callback triggered when the animation starts to play. |
 
 ## preDecode
 

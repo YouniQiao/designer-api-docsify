@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import huks from '@kit.UniversalKeystoreKit';
-import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## isKeyExist
@@ -84,7 +83,7 @@ function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。false代表密钥不存在，true代表密钥存在。 |
+| Promise&lt;boolean&gt; | Promise对象。false代表密钥不存在，true代表密钥存在。 |
 
 **示例**
 

@@ -1,6 +1,6 @@
 # BrightnessBlender（系统接口）
 
-提亮混合器，用于将提亮效果添加到指定的组件上。 在调用BrightnessBlender前，需要先通过createBrightnessBlender创建一个BrightnessBlender实例。
+提亮混合器，用于将提亮效果添加到指定的组件上。在调用BrightnessBlender前，需要先通过createBrightnessBlender创建一个BrightnessBlender实例。
 
 **起始版本：** 12
 
@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import uiEffect from '@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## cubicRate

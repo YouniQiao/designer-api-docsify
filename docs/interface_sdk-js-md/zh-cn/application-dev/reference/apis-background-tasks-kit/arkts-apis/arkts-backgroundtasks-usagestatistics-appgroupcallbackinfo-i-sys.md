@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import usageStatistics from '@kit.BackgroundTasksKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## appNewGroup
@@ -68,7 +68,8 @@ bundleName: string
 changeReason: number
 ```
 
-分组变化原因。  
+分组变化原因。
+
 - 256:使用记录初创建时，默认匹配的原因。  
 - 512:计算优先级分组时异常。  
 - 768:使用时长变化。  

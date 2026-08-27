@@ -1,6 +1,8 @@
 # GroupOwnerBand
 
-P2P群组带宽。@enum { number }
+P2P群组带宽。
+
+@enum { number }
 
 **起始版本：** 9
 

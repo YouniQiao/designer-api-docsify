@@ -1,6 +1,7 @@
 # Button
 
 The **Button** component can be used to create different types of buttons.
+
 > **NOTE**
 
 ## Child Components
@@ -51,7 +52,9 @@ Creates a button that can contain a single child component.
 Button(label: ResourceStr, options?: ButtonOptions)
 ```
 
-Creates a button based on text content. In this case, the component cannot contain child components.By default, the text content is displayed in a one line.
+Creates a button based on text content. In this case, the component cannot contain child components.
+
+By default, the text content is displayed in a one line.
 
 **Since:** 7
 
@@ -74,16 +77,24 @@ Creates a button based on text content. In this case, the component cannot conta
 
 | Name | Description |
 | --- | --- |
+| [ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
+| [ButtonOptions](arkts-arkui-buttonoptions-i.md) | Describes the button style. |
+| [LabelStyle](arkts-arkui-labelstyle-i.md) | Label text and font style of the button. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [ButtonTriggerClickCallback](arkts-arkui-buttontriggerclickcallback-t.md) | Defines the callback type used in **ButtonConfiguration**. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [ButtonRole](arkts-arkui-buttonrole-e.md) | Role of the button. |
+| [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | Enumerates the button importance levels. |
+| [ButtonType](arkts-arkui-buttontype-e.md) | Enumerates the button types. |
+| [ControlSize](arkts-arkui-controlsize-e.md) | Button size. |
 
 ## Examples
 

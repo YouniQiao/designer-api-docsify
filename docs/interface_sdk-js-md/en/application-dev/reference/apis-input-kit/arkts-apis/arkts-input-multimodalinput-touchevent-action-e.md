@@ -60,7 +60,8 @@ Touch up.
 PULL_DOWN = 4
 ```
 
-Drag started.  
+Drag started.
+
 **Since**: 26.0.0
 
 **Since:** 26.0.0
@@ -75,7 +76,8 @@ Drag started.
 PULL_MOVE = 5
 ```
 
-Dragging.  
+Dragging.
+
 **Since**: 26.0.0
 
 **Since:** 26.0.0
@@ -90,7 +92,8 @@ Dragging.
 PULL_UP = 6
 ```
 
-Drag ended.  
+Drag ended.
+
 **Since**: 26.0.0
 
 **Since:** 26.0.0

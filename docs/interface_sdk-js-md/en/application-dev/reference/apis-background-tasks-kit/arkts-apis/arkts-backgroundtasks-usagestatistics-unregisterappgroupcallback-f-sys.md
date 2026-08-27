@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usageStatistics from '@kit.BackgroundTasksKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## unregisterAppGroupCallBack
@@ -78,7 +78,7 @@ Unregister appGroup change callback from service.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by unregisterAppGroupCallBack. |
+| Promise&lt;void&gt; | the promise returned by unregisterAppGroupCallBack. |
 
 **Error codes:**
 

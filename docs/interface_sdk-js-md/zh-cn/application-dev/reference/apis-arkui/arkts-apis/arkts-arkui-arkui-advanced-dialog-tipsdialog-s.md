@@ -10,7 +10,6 @@
 
 ```TypeScript
 import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
-import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUIV2';
 ```
 
 ## checkAction
@@ -41,7 +40,9 @@ checkbox的选中状态改变事件。isChecked为true时，表示checkbox已选
 checkTips?: ResourceStr
 ```
 
-checkbox的提示内容。默认不设置或设置为undefined，提示内容不显示。
+checkbox的提示内容。
+
+默认不设置或设置为undefined，提示内容不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -59,7 +60,9 @@ checkbox的提示内容。默认不设置或设置为undefined，提示内容不
 content?: ResourceStr
 ```
 
-提示弹出框内容。默认不设置或设置为undefined，弹出框内容不显示。
+提示弹出框内容。
+
+默认不设置或设置为undefined，弹出框内容不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -77,7 +80,8 @@ content?: ResourceStr
 controller: CustomDialogController
 ```
 
-提示弹出框控制器，用于控制弹出框的显示和隐藏。  
+提示弹出框控制器，用于控制弹出框的显示和隐藏。
+
 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
@@ -114,7 +118,9 @@ imageRes: ResourceStr | PixelMap
 imageSize?: SizeOptions
 ```
 
-自定义图片尺寸。默认值：64*64vp
+自定义图片尺寸。
+
+默认值：64*64vp
 
 **类型：** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
@@ -132,7 +138,9 @@ imageSize?: SizeOptions
 isChecked?: boolean
 ```
 
-value为true时，表示checkbox已选中，value为false时，表示未选中。默认值：false
+value为true时，表示checkbox已选中，value为false时，表示未选中。
+
+默认值：false
 
 **类型：** boolean
 
@@ -168,7 +176,9 @@ checkbox的选中状态改变事件回调。回调参数类型为boolean，true�
 primaryButton?: ButtonOptions
 ```
 
-提示弹出框左侧按钮。默认不设置或设置为undefined，左侧按钮不显示。
+提示弹出框左侧按钮。
+
+默认不设置或设置为undefined，左侧按钮不显示。
 
 **类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
@@ -186,7 +196,9 @@ primaryButton?: ButtonOptions
 secondaryButton?: ButtonOptions
 ```
 
-提示弹出框右侧按钮。默认不设置或设置为undefined，右侧按钮不显示。
+提示弹出框右侧按钮。
+
+默认不设置或设置为undefined，右侧按钮不显示。
 
 **类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
@@ -222,7 +234,9 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。
+
+默认值：ThemeColorMode.SYSTEM
 
 **类型：** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
@@ -240,7 +254,10 @@ themeColorMode?: ThemeColorMode
 title?: ResourceStr
 ```
 
-提示弹出框标题。默认不设置或设置为undefined，弹出框标题不显示。  
+提示弹出框标题。
+
+默认不设置或设置为undefined，弹出框标题不显示。
+
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)

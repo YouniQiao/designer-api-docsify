@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getPermissionDefSync
@@ -32,7 +32,7 @@ function getPermissionDefSync(permissionName: string): PermissionDef
 
 | 类型 | 说明 |
 | --- | --- |
-| [PermissionDef](arkts-ability-permissiondef-i-sys.md) | PermissionDef对象。 |
+| PermissionDef | PermissionDef对象。 |
 
 **错误码：**
 

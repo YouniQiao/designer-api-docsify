@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import storageStatistics from '@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getSystemDataSize
@@ -28,7 +28,7 @@ Get the system data size.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | return Promise (Unit: Byte) |
+| Promise&lt;number&gt; | return Promise (Unit: Byte) |
 
 **Error codes:**
 

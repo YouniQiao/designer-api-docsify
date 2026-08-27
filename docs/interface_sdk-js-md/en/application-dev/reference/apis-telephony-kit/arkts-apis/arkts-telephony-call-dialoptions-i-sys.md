@@ -17,7 +17,8 @@ Provides an option for determining whether a call is a video call.
 accountId?: number
 ```
 
-Account ID.  
+Account ID.
+
 - **0**: card slot 1.  
 - **1**: card slot 2.&lt;br
 

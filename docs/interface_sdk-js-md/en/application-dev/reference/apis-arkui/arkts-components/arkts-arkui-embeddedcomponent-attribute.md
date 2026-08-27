@@ -1,6 +1,10 @@
 # EmbeddedComponent properties/events
 
-The universal attributes are supported.Event information related to screen coordinates is converted based on the position, width, and height of the **EmbeddedComponent**, before being transferred to the EmbeddedUIExtensionAbility for processing.Universal events, such as the click event, are not supported. Only the following events are supported.
+The universal attributes are supported.
+
+Event information related to screen coordinates is converted based on the position, width, and height of the **EmbeddedComponent**, before being transferred to the EmbeddedUIExtensionAbility for processing.
+
+Universal events, such as the click event, are not supported. Only the following events are supported.
 
 **Inheritance/Implementation:** EmbeddedComponentAttribute extends CommonMethod<EmbeddedComponentAttribute>
 
@@ -33,7 +37,7 @@ Callback called when the EmbeddedUIExtensionAbility draw the first frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;void & gt; | Yes |  |
+| callback | Callback&lt;void&gt; | Yes |  |
 
 ## onError
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import preferences from '@kit.ArkData';
+import { preferences } from '@kit.ArkData';
 ```
 
 ## isStorageTypeSupported

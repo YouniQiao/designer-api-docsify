@@ -1,6 +1,8 @@
 # CircleShape
 
-Represents a circle shape used in the **clipShape** and **maskShape** APIs.This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md).
+Represents a circle shape used in the **clipShape** and **maskShape** APIs.
+
+This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md).
 
 **Inheritance/Implementation:** CircleShape extends BaseShape<CircleShape>
 

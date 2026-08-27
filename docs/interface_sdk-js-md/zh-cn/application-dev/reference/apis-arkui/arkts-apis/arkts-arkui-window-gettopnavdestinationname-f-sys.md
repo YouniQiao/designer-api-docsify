@@ -3,9 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## getTopNavDestinationName
@@ -14,7 +12,7 @@ import window from '@kit.ArkUI';
 function getTopNavDestinationName(windowId: number): Promise<string>
 ```
 
-获取指定的前台窗口当前栈顶Navigation中的 NavDestination名称，使用Promise异步回调。
+获取指定的前台窗口当前栈顶Navigation中的NavDestination名称，使用Promise异步回调。
 
 **起始版本：** 20
 
@@ -32,7 +30,7 @@ function getTopNavDestinationName(windowId: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象。返回获取到的[NavDestination]{ |
+| Promise&lt;string&gt; | Promise对象。返回获取到的[NavDestination]{ |
 
 **错误码：**
 

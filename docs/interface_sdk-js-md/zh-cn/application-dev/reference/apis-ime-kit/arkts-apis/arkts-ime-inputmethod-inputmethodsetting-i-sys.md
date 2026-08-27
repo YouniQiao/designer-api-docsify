@@ -1,11 +1,11 @@
 # InputMethodSetting
 
-InputMethodSetting提供输入法配置与查询能力，面向前台应用提供以下功能：   
-- 输入法变化订阅：通过 on('imeChange') 订阅输入法及子类型变化事件，当用户切换输入法时收到通知。   
-- 输入法列表查询：通过 [getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods) 查询已激活/未激活输入法列表，通过 [getAllInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getallinputmethods) 查询所有已安装输入法列表，通过 [listInputMethodSubtype](arkts-ime-inputmethod-inputmethodsetting-i.md#listinputmethodsubtype) 查询指定输入法的子类型列表。   
-- 面板可见性查询：通过isPanelShown查询输入法面板是否显示。   
-- 输入法选择对话框：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。   
- 需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md)获取InputMethodSetting实例后使用。 下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md)获取到InputMethodSetting实例后，通过实例调用。
+InputMethodSetting提供输入法配置与查询能力，面向前台应用提供以下功能：  
+- 输入法变化订阅：通过on('imeChange')订阅输入法及子类型变化事件，当用户切换输入法时收到通知。  
+- 输入法列表查询：通过[getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods)查询已激活/未激活输入法列表，通过[getAllInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getallinputmethods)查询所有已安装输入法列表，通过[listInputMethodSubtype](arkts-ime-inputmethod-inputmethodsetting-i.md#listinputmethodsubtype)查询指定输入法的子类型列表。  
+- 面板可见性查询：通过isPanelShown查询输入法面板是否显示。  
+- 输入法选择对话框：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。  
+ 需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md)获取InputMethodSetting实例后使用。下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md)获取到InputMethodSetting实例后，通过实例调用。
 
 **起始版本：** 8
 
@@ -14,12 +14,7 @@ InputMethodSetting提供输入法配置与查询能力，面向前台应用提�
 ## 导入模块
 
 ```TypeScript
-import inputMethod from '@kit.IMEKit';
-import inputMethodEngine from '@kit.IMEKitEngine';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
-import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
-import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## enableInputMethod
@@ -50,7 +45,7 @@ enableInputMethod(bundleName: string, extensionName: string, enabledState: Enabl
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -117,13 +112,13 @@ enableInputMethod(
 | bundleName | string | 是 | 输入法的包名。 |
 | extensionName | string | 是 | 输入法的扩展名。 |
 | enabledState | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | 是 | 要修改的启用状态。 |
-| userId | number | 否 | 用户ID。取值范围为有效用户的ID。如果不提供：    - 如果调用者不是用户0的应用，该值默认为调用者的用户ID。   - 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| userId | number | 否 | 用户ID。取值范围为有效用户的ID。如果不提供：   - 如果调用者不是用户0的应用，该值默认为调用者的用户ID。   - 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -170,7 +165,7 @@ getAllInputMethodsSync(userId?: number): Array<InputMethodProperty>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | number | 否 | 用户ID。取值范围为有效用户的ID。如果不提供：    - 如果调用者不是用户0的应用，该值默认为调用者的用户ID。   - 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| userId | number | 否 | 用户ID。取值范围为有效用户的ID。如果不提供：   - 如果调用者不是用户0的应用，该值默认为调用者的用户ID。   - 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
 
 **返回值：**
 
@@ -223,7 +218,7 @@ getCursorInfo(userId?: number): CursorInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | number | 否 | 指定的用户ID。 如果调用者不是用户0应用，该值默认为调用者的用户ID。 如果调用者是用户0应用，则该值默认为主屏幕的前台用户ID。 |
+| userId | number | 否 | 指定的用户ID。如果调用者不是用户0应用，该值默认为调用者的用户ID。如果调用者是用户0应用，则该值默认为主屏幕的前台用户ID。 |
 
 **返回值：**
 
@@ -305,7 +300,7 @@ try {
 getInputMethodsSync(enable: boolean, userId?: number): Array<InputMethodProperty>
 ```
 
-获取指定用户已激活/未激活的输入法应用列表。同步接口。   
+获取指定用户已激活/未激活的输入法应用列表。同步接口。  
 > **说明：**
    
 > 
@@ -383,7 +378,7 @@ getInputMethodSubtypes(bundleName: string, userId?: number): Array<InputMethodSu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定输入法的包名。 |
-| userId | number | 否 | 用户ID。取值范围为有效用户的ID。如果不提供：    - 如果调用者不是用户0的应用，该值默认为调用者的用户ID。   - 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| userId | number | 否 | 用户ID。取值范围为有效用户的ID。如果不提供：   - 如果调用者不是用户0的应用，该值默认为调用者的用户ID。   - 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
 
 **返回值：**
 
@@ -544,7 +539,7 @@ off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'imeShow' | 是 | 设置监听类型，固定取值'imeShow'。 |
-| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -571,7 +566,7 @@ off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'imeHide' | 是 | 设置监听类型，固定取值'imeHide'。 |
-| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **示例**
 
@@ -619,9 +614,9 @@ inputMethod.getSetting().offImeChangeWithUserId();
 on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
 ```
 
-订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘显示事件。使用callback异步回调。 配对调用：   
-- 调用on('imeShow')订阅事件后，必须在使用完毕时调用对应的off('imeShow')取消订阅。   
-- 取消订阅时可以传入callback参数取消指定回调，或不传参数取消type对应的所有回调。   
+订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘显示事件。使用callback异步回调。配对调用：  
+- 调用on('imeShow')订阅事件后，必须在使用完毕时调用对应的off('imeShow')取消订阅。  
+- 取消订阅时可以传入callback参数取消指定回调，或不传参数取消type对应的所有回调。  
 - 不取消订阅可能导致回调事件持续触发和内存泄漏。
 
 **起始版本：** 10
@@ -657,9 +652,9 @@ inputMethod.getSetting().on('imeShow', (info: Array<inputMethod.InputWindowInfo>
 on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
 ```
 
-订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘隐藏事件。使用callback异步回调。 配对调用：   
-- 调用on('imeHide')订阅事件后，必须在使用完毕时调用对应的off('imeHide')取消订阅。   
-- 取消订阅时可以传入callback参数取消指定回调，或不传参数取消type对应的所有回调。   
+订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘隐藏事件。使用callback异步回调。配对调用：  
+- 调用on('imeHide')订阅事件后，必须在使用完毕时调用对应的off('imeHide')取消订阅。  
+- 取消订阅时可以传入callback参数取消指定回调，或不传参数取消type对应的所有回调。  
 - 不取消订阅可能导致回调事件持续触发和内存泄漏。
 
 **起始版本：** 10
@@ -695,9 +690,9 @@ inputMethod.getSetting().on('imeHide', (info: Array<inputMethod.InputWindowInfo>
 onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 ```
 
-订阅输入法及子类型变化监听事件，携带发生输入法变更的用户ID。使用callback异步回调。 配对调用：   
-- 调用onImeChangeWithUserId订阅事件后，必须在使用完毕时调用offImeChangeWithUserId取消订阅。   
-- 取消订阅时可以传入callback参数取消指定回调，或不传参数取消所有监听事件。   
+订阅输入法及子类型变化监听事件，携带发生输入法变更的用户ID。使用callback异步回调。配对调用：  
+- 调用onImeChangeWithUserId订阅事件后，必须在使用完毕时调用offImeChangeWithUserId取消订阅。  
+- 取消订阅时可以传入callback参数取消指定回调，或不传参数取消所有监听事件。  
 - 不取消订阅可能导致回调事件持续触发和内存泄漏。
 
 **起始版本：** 26.0.0

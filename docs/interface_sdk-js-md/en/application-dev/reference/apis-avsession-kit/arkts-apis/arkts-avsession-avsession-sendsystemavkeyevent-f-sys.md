@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## sendSystemAVKeyEvent
@@ -79,7 +79,7 @@ Send system media key event.The system automatically selects the recipient.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 

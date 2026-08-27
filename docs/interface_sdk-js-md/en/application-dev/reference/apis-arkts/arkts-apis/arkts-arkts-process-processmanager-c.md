@@ -1,6 +1,8 @@
 # ProcessManager
 
-Provides APIs for throwing exceptions during the addition of a process.Construct a **ProcessManager** object.
+Provides APIs for throwing exceptions during the addition of a process.
+
+Construct a **ProcessManager** object.
 
 **Since:** 9
 
@@ -9,7 +11,7 @@ Provides APIs for throwing exceptions during the addition of a process.Construct
 ## Modules to Import
 
 ```TypeScript
-import process from '@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## exit
@@ -18,7 +20,9 @@ import process from '@kit.ArkTS';
 exit(code: number): void
 ```
 
-Terminates this process.Exercise caution when using this API. After this API is called, the application exits. If the input parameter is not 0, data loss or exceptions may occur.
+Terminates this process.
+
+Exercise caution when using this API. After this API is called, the application exits. If the input parameter is not 0, data loss or exceptions may occur.
 
 **Since:** 9
 
@@ -258,7 +262,7 @@ Sends a signal to the specified process to terminate it. Only the current proces
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| signal | number | Yes | Signal to send. Value range: 1 & lt;= signal & lt;= 64. |
+| signal | number | Yes | Signal to send. Value range: 1 &lt;= signal &lt;= 64. |
 | pid | number | Yes | PID of the process, to which the signal will be sent. |
 
 **Return value:**

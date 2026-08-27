@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityAccessCtrl, { Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 ```
 
 ## grantFlags
@@ -68,7 +68,7 @@ grantStatus: GrantStatus
 grantTimestamp?: number
 ```
 
-授权状态变化的时间戳。该字段为可选字段，当权限状态变化时返回。 单位为：毫秒。
+授权状态变化的时间戳。该字段为可选字段，当权限状态变化时返回。单位为：毫秒。
 
 **类型：** number
 
@@ -104,7 +104,7 @@ permissionName: Permissions
 tokenID: number
 ```
 
-应用的身份标识。 取值限定为整数。
+应用的身份标识。取值限定为整数。
 
 **类型：** number
 

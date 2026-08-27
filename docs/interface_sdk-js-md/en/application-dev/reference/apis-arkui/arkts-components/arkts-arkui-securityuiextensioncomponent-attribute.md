@@ -1,6 +1,8 @@
 # SecurityUIExtensionComponent properties/events
 
-The universal attributes are supported.The following events are supported:
+The universal attributes are supported.
+
+The following events are supported:
 
 **Inheritance/Implementation:** SecurityUIExtensionComponentAttribute extends CommonMethod<SecurityUIExtensionComponentAttribute>
 

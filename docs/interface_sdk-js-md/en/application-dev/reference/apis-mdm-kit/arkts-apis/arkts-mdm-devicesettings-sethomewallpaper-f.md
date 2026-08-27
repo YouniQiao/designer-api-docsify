@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import deviceSettings from '@kit.MDMKit';
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## setHomeWallpaper
@@ -33,7 +33,7 @@ Sets the home screen wallpaper. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object is thrown when the home screen wallpaper fails to be set. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when the home screen wallpaper fails to be set. |
 
 **Error codes:**
 

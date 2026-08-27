@@ -1,6 +1,8 @@
 # TextGenerationModel (System API)
 
-AI Text Model Abstract Interface.@interface TextGenerationModel
+AI Text Model Abstract Interface.
+
+@interface TextGenerationModel
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ AI Text Model Abstract Interface.@interface TextGenerationModel
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## cancelTextGeneration

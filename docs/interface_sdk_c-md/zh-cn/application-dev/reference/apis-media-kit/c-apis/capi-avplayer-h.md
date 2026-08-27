@@ -214,7 +214,7 @@ OH_AVErrCode OH_AVPlayer_SetDataSource(OH_AVPlayer *player, OH_AVDataSourceExt* 
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AVPlayer *player | 指向OH_AVPlayer实例的指针 |
-| [OH_AVDataSourceExt](../AVCodecKit/capi-codecbase-oh-avdatasourceext.md)* datasrc | 指向OH_AVDataSourceExt实例的指针 |
+| OH_AVDataSourceExt* datasrc | 指向OH_AVDataSourceExt实例的指针 |
 | void* userData | 用户传入的句柄用于传送回调 |
 
 **返回：**
@@ -759,7 +759,7 @@ OH_AVErrCode OH_AVPlayer_SetVideoSurface(OH_AVPlayer *player, OHNativeWindow *wi
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AVPlayer *player | 指向OH_AVPlayer实例的指针。 |
-| [OHNativeWindow](../AVCodecKit/capi-codecbase-nativewindow.md) *window | 指向OHNativeWindow实例的指针。 |
+| [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) *window | 指向OHNativeWindow实例的指针。 |
 
 **返回：**
 
@@ -1316,7 +1316,7 @@ OH_AVErrCode OH_AVPlayer_SetMediaMuted(OH_AVPlayer *player, OH_MediaType mediaTy
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AVPlayer *player | 指向OH_AVPlayer实例的指针。 |
-| [OH_MediaType](../AVCodecKit/capi-native-avcodec-base-h.md#oh_mediatype) mediaType | 指定的媒体类型，参见{@link native_avcodec_base.h}中的[OH_MediaType](../AVCodecKit/capi-native-avcodec-base-h.md#oh_mediatype)。 |
+| OH_MediaType mediaType | 指定的媒体类型，参见{@link native_avcodec_base.h}中的[OH_MediaType](../AVCodecKit/capi-native-avcodec-base-h.md#oh_mediatype)。 |
 | bool muted | true表示静音，false表示取消静音。 |
 
 **返回：**
@@ -1762,7 +1762,7 @@ OH_AVErrCode OH_AVPlaybackStrategy_SetMutedMediaType(OH_AVPlaybackStrategy *stra
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AVPlaybackStrategy *strategy | 指向OH_AVPlaybackStrategy的指针。 |
-| [OH_MediaType](../AVCodecKit/capi-native-avcodec-base-h.md#oh_mediatype) mediaType | 要静音的媒体类型。 |
+| OH_MediaType mediaType | 要静音的媒体类型。 |
 
 **返回：**
 
@@ -2035,7 +2035,7 @@ OH_AVPlayerVideoOutput* OH_AVPlayer_SetVideoSideOutput(OH_AVPlayer *player, OHNa
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AVPlayer *player | 指向OH_AVPlayer实例的指针。 |
-| [OHNativeWindow](../AVCodecKit/capi-codecbase-nativewindow.md) *window | 指向OHNativeWindow实例的指针，请参见[OHNativeWindow](../AVCodecKit/capi-codecbase-nativewindow.md) |
+| [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) *window | 指向OHNativeWindow实例的指针，请参见[OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
 
 **返回：**
 

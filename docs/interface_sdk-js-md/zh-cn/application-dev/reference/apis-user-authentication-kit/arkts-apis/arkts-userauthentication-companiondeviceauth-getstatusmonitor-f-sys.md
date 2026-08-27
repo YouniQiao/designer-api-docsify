@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import companionDeviceAuth from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## getStatusMonitor
@@ -12,7 +12,9 @@ import companionDeviceAuth from '@kit.UserAuthenticationKit';
 function getStatusMonitor(localUserId: number): StatusMonitor
 ```
 
-获取状态监听器。用于获取指定用户的状态监听器对象，通过该对象可查询和订阅伴随设备的模板状态、持续认证状态、可添加设备状态等信息。生命周期：订阅在系统服务侧按用户维护。使用完毕应调用对应的off方法取消订阅以释放资源；应用进程退出时已注册的订阅会自动清理。
+获取状态监听器。用于获取指定用户的状态监听器对象，通过该对象可查询和订阅伴随设备的模板状态、持续认证状态、可添加设备状态等信息。
+
+生命周期：订阅在系统服务侧按用户维护。使用完毕应调用对应的off方法取消订阅以释放资源；应用进程退出时已注册的订阅会自动清理。
 
 **起始版本：** 23
 
@@ -34,7 +36,7 @@ function getStatusMonitor(localUserId: number): StatusMonitor
 
 | 类型 | 说明 |
 | --- | --- |
-| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | 状态监听器对象。可用于查询模板状态（ [getTemplateStatus]{ |
+| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | 状态监听器对象。可用于查询模板状态（[getTemplateStatus]{ |
 
 **错误码：**
 

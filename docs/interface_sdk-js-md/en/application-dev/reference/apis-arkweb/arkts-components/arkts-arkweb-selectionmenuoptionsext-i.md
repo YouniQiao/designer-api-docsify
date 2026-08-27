@@ -9,9 +9,6 @@ Represents the selection menu option extension.
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## menuType
@@ -20,7 +17,11 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 menuType?: MenuType
 ```
 
-Type of the custom selection menu.Default value: **MenuType.SELECTION_MENU**Since API version 20, **MenuType.PREVIEW_MENU** supports hyperlink preview.
+Type of the custom selection menu.
+
+Default value: **MenuType.SELECTION_MENU**
+
+Since API version 20, **MenuType.PREVIEW_MENU** supports hyperlink preview.
 
 **Type:** [MenuType](../../apis-arkui/arkts-apis/arkts-arkui-menutype-e.md)
 

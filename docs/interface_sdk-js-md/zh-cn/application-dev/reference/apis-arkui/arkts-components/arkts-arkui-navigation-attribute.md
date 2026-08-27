@@ -38,7 +38,7 @@ backButtonIcon(value: string | PixelMap | Resource | SymbolGlyphModifier)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| PixelMap \| Resource \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | 是 | 标题栏中返回键图标。<br>**起始版本：** 9 - 11 |
+| value | string \| PixelMap \| Resource \| SymbolGlyphModifier | 是 | 标题栏中返回键图标。<br>**起始版本：** 9 - 11 |
 
 ## backButtonIcon
 
@@ -69,8 +69,8 @@ backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier, accessi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | string \| PixelMap \| Resource \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | 是 | 标题栏中返回键图标。 |
-| accessibilityText | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 否 | 返回键无障碍播报内容。 & lt;/br & gt;默认值：系统语言是中文时为“返回”，系统语言是英文时为“back”。 |
+| icon | string \| PixelMap \| Resource \| SymbolGlyphModifier | 是 | 标题栏中返回键图标。 |
+| accessibilityText | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 否 | 返回键无障碍播报内容。&lt;/br&gt;默认值：系统语言是中文时为“返回”，系统语言是英文时为“back”。 |
 
 ## configuration
 
@@ -119,7 +119,7 @@ customNavContentTransition(delegate: (from: NavContentInfo, to: NavContentInfo, 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| delegate | (from: NavContentInfo, to: NavContentInfo, operation: NavigationOperation)     = & gt; NavigationAnimatedTransition \ | undefined | 是 | 自定义转场动画回调。from：退场Destination的页面。to：进场Destination的页面。operation：转场类型。 返 回NavigationAnimatedTransition时，表示自定义转场动画协议。undefined: 返回未定义，执行默认转场动效。 |
+| delegate | (from: NavContentInfo, to: NavContentInfo, operation: NavigationOperation)     =&gt; NavigationAnimatedTransition \| undefined | 是 | 自定义转场动画回调。from：退场Destination的页面。to：进场Destination的页面。operation：转场类型。 返回NavigationAnimatedTransition时，表示自定义转场动画协议。undefined: 返回未定义，执行默认转场动效。 |
 
 ## divider
 
@@ -193,7 +193,7 @@ enableModeChangeAnimation(isEnabled: Optional<boolean>)
 enableToolBarAdaptation(enable: Optional<boolean>)
 ```
 
-设置是否启用Navigation和NavDestination的工具栏[toolbarConfiguration](#toolbarconfiguration)自适应能力。关闭此能 力后，底部工具栏[toolbarConfiguration](#toolbarconfiguration)将不会再移动至页面右上角的菜单中。该接口不适配于自定义菜单，使用该接口需采 用[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)接口来定义 [菜单](#menus)。
+设置是否启用Navigation和NavDestination的工具栏[toolbarConfiguration](#toolbarconfiguration)自适应能力。关闭此能力后，底部工具栏[toolbarConfiguration](#toolbarconfiguration)将不会再移动至页面右上角的菜单中。该接口不适配于自定义菜单，使用该接口需采用[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)接口来定义[菜单](#menus)。
 
 **起始版本：** 19
 
@@ -207,7 +207,7 @@ enableToolBarAdaptation(enable: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否启用Navigation和NavDestination的工具栏自适应能力。默认值：true true：启用Navigation和 NavDestination的工具栏自适应能力。false：不启用Navigation和NavDestination的工具栏自适应能力。 |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否启用Navigation和NavDestination的工具栏自适应能力。默认值：true true：启用Navigation和NavDestination的工具栏自适应能力。false：不启用Navigation和NavDestination的工具栏自适应能力。 |
 
 ## enableVisibilityLifecycleWithContentCover
 
@@ -215,7 +215,7 @@ enableToolBarAdaptation(enable: Optional<boolean>)
 enableVisibilityLifecycleWithContentCover(isEnabled: Optional<boolean>)
 ```
 
-设置是否启用NavDestination页面onHidden、 [onShown](arkts-arkui-navdestination-attribute.md#onshown)生命周期与全模态的联动触发。
+设置是否启用NavDestination页面onHidden、[onShown](arkts-arkui-navdestination-attribute.md#onshown)生命周期与全模态的联动触发。
 
 > **说明：**
 > 
@@ -233,7 +233,7 @@ enableVisibilityLifecycleWithContentCover(isEnabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否启用NavDestination页面onShown、onHidden生命周期与全模态的联动触发。默认值：true true：全 模态拉起时，会触发当前NavDestination页面的onHidden生命周期；全模态关闭时会触发当前NavDestination页面的onShown生命周期false：NavDestination页面 onHidden、onShown生命周期不会因为全模态的拉起、关闭而触发。 |
+| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否启用NavDestination页面onShown、onHidden生命周期与全模态的联动触发。默认值：true true：全模态拉起时，会触发当前NavDestination页面的onHidden生命周期；全模态关闭时会触发当前NavDestination页面的onShown生命周期false：NavDestination页面onHidden、onShown生命周期不会因为全模态的拉起、关闭而触发。 |
 
 ## hideBackButton
 
@@ -261,7 +261,9 @@ hideBackButton(value: boolean)
 hideNavBar(value: boolean)
 ```
 
-设置是否隐藏导航页。设置为true时，隐藏Navigation的导航页，包括标题栏、内容区和工具栏。如果此时路由栈中存在NavDestination页面，则直接显示栈顶NavDestination页面，反之显示空白。从API version 9开始到API version 10仅在双栏模式下生效。从API version 11开始在单栏、双栏与自适应模式均生效。
+设置是否隐藏导航页。设置为true时，隐藏Navigation的导航页，包括标题栏、内容区和工具栏。如果此时路由栈中存在NavDestination页面，则直接显示栈顶NavDestination页面，反之显示空白。
+
+从API version 9开始到API version 10仅在双栏模式下生效。从API version 11开始在单栏、双栏与自适应模式均生效。
 
 **起始版本：** 9
 
@@ -316,7 +318,7 @@ hideTitleBar(hide: boolean, animated: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hide | boolean | 是 | 是否隐藏标题栏。默认值：false true：隐藏标题栏；false：显示标题栏。传入参数非法时，按false处理。 |
-| animated | boolean | 是 | 设置是否使用动画显隐标题栏。默认值：false true：使用动画显示隐藏标题栏；false：不使用动画显示隐藏标题栏。传入参数非法时，按 false处理。 |
+| animated | boolean | 是 | 设置是否使用动画显隐标题栏。默认值：false true：使用动画显示隐藏标题栏；false：不使用动画显示隐藏标题栏。传入参数非法时，按false处理。 |
 
 ## hideToolBar
 
@@ -359,7 +361,7 @@ hideToolBar(hide: boolean, animated: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hide | boolean | 是 | 是否隐藏工具栏。默认值：false true：隐藏工具栏；false：显示工具栏。传入参数非法时，按false处理。 |
-| animated | boolean | 是 | 设置是否使用动画显隐工具栏。默认值：false true：使用动画显示隐藏工具栏；false：不使用动画显示隐藏工具栏。传入参数非法时，按 false处理。 |
+| animated | boolean | 是 | 设置是否使用动画显隐工具栏。默认值：false true：使用动画显示隐藏工具栏；false：不使用动画显示隐藏工具栏。传入参数非法时，按false处理。 |
 
 ## ignoreLayoutSafeArea
 
@@ -400,7 +402,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 menus(value: Array<NavigationMenuItem> | CustomBuilder)
 ```
 
-设置页面右上角菜单。不设置时不显示菜单项。使用Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标 会被放入自动生成的更多图标。
+设置页面右上角菜单。不设置时不显示菜单项。使用Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。
 
 **起始版本：** 8
 
@@ -420,7 +422,7 @@ menus(value: Array<NavigationMenuItem> | CustomBuilder)
 menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenuOptions)
 ```
 
-设置页面右上角菜单。不设置时不显示菜单项。与[menus](#menus)相比， 新增菜单选项。使用Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。
+设置页面右上角菜单。不设置时不显示菜单项。与[menus](#menus)相比，新增菜单选项。使用Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。
 
 &gt; **说明：**
 > 
@@ -461,7 +463,7 @@ minContentWidth(value: Dimension)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 | 导航页内容区最小宽度。默认值：360单位：vp undefined：行为不做处理，导航页内容区最小宽度与默认值保持一致。Auto模式断 点计算：默认600vp，minNavBarWidth(240vp) + minContentWidth (360vp) |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 | 导航页内容区最小宽度。默认值：360单位：vp undefined：行为不做处理，导航页内容区最小宽度与默认值保持一致。Auto模式断点计算：默认600vp，minNavBarWidth(240vp) + minContentWidth (360vp) |
 
 ## mode
 
@@ -509,7 +511,9 @@ navBarPosition(value: NavBarPosition)
 navBarWidth(value: Length)
 ```
 
-设置导航页宽度。仅在[mode](#mode)设置为NavigationMode.Auto或NavigationMode.Split时生效。从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。
+设置导航页宽度。仅在[mode](#mode)设置为NavigationMode.Auto或NavigationMode.Split时生效。
+
+从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。
 
 **起始版本：** 9
 
@@ -529,7 +533,10 @@ navBarWidth(value: Length)
 navBarWidthRange(value: [Dimension, Dimension])
 ```
 
-设置导航页最小和最大宽度（双栏模式下生效）。未设置该接口时，最小宽度默认为240vp，最大宽度默认为组件宽度的40%，且不大于432vp，即导航页和内容区之间的分割线可以在此范围内进行拖拽。拖拽分割线使导航页宽度变化时，内容区的内 容会被压缩。分割线的拖拽范围：  
+设置导航页最小和最大宽度（双栏模式下生效）。未设置该接口时，最小宽度默认为240vp，最大宽度默认为组件宽度的40%，且不大于432vp，即导航页和内容区之间的分割线可以在此范围内进行拖拽。拖拽分割线使导航页宽度变化时，内容区的内容会被压缩。
+
+分割线的拖拽范围：
+
 | 条件| 拖拽范围 | | ----| ----------- | |navBarWidthRange和minContentWidth同时设置 | 满足minContentWidth所设置的值后，在navBarWidthRange所设置的范围内进行拖拽 | |navBarWidthRange和minContentWidth均不设置 | 在navBarWidthRange默认的最小和最大范围内进行拖拽 | |仅设置navBarWidthRange属性 | 在navBarWidthRange所设置的范围内进行拖拽，最大拖拽范围不能超过minContentWidth的默认值 | |仅设置minContentWidth属性 | 在navBarWidthRange默认的最小和最大范围内进行拖拽 | |仅设置navBarWidth属性 | 不支持拖拽 |
 
 **起始版本：** 10
@@ -552,7 +559,7 @@ navBarWidthRange(value: [Dimension, Dimension])
 navDestination(builder: (name: string, param: unknown) => void)
 ```
 
-创建NavDestination组件。使用builder函数，基于name和param构造NavDestination组件。builder下只能有一个根节点。builder中允许在NavDestination组件外包含一层自定义组 件， 但自定义组件不允许设置属性和事件，否则仅显示空白。
+创建NavDestination组件。使用builder函数，基于name和param构造NavDestination组件。builder下只能有一个根节点。builder中允许在NavDestination组件外包含一层自定义组件， 但自定义组件不允许设置属性和事件，否则仅显示空白。
 
 **起始版本：** 10
 
@@ -566,7 +573,7 @@ navDestination(builder: (name: string, param: unknown) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | (name: string, param: unknown) = & gt; void | 是 | 创建NavDestination组件。name：NavDestination页面名称。param：开发者设置的NavDestination页面详细参数，unknown可以 是用户自定义的类型。 |
+| builder | (name: string, param: unknown) =&gt; void | 是 | 创建NavDestination组件。name：NavDestination页面名称。param：开发者设置的NavDestination页面详细参数，unknown可以是用户自定义的类型。 |
 
 ## onNavBarStateChange
 
@@ -586,7 +593,7 @@ onNavBarStateChange(callback: (isVisible: boolean) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (isVisible: boolean) = & gt; void | 是 | isVisible为true时表示显示，为false时表示隐藏。<br>**起始版本：** 10 |
+| callback | (isVisible: boolean) =&gt; void | 是 | isVisible为true时表示显示，为false时表示隐藏。<br>**起始版本：** 10 |
 
 ## onNavigationModeChange
 
@@ -608,7 +615,7 @@ onNavigationModeChange(callback: (mode: NavigationMode) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (mode: NavigationMode) = & gt; void | 是 | NavigationMode.Split：当前Navigation显示为双栏;NavigationMode.Stack：当前Navigation显示为单栏。 |
+| callback | (mode: NavigationMode) =&gt; void | 是 | NavigationMode.Split：当前Navigation显示为双栏;NavigationMode.Stack：当前Navigation显示为单栏。 |
 
 ## onTitleModeChange
 
@@ -628,7 +635,7 @@ onTitleModeChange(callback: (titleMode: NavigationTitleMode) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (titleMode: NavigationTitleMode) = & gt; void | 是 | 标题模式。<br>**起始版本：** 10 |
+| callback | (titleMode: NavigationTitleMode) =&gt; void | 是 | 标题模式。<br>**起始版本：** 10 |
 
 ## recoverable
 
@@ -682,7 +689,7 @@ Navigation双栏模式下，支持设置右侧页面显示默认占位页，占�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| placeholder | [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | 是 | 设置Navigation双栏模式下右侧的默认占位页。 |
+| placeholder | ComponentContent | 是 | 设置Navigation双栏模式下右侧的默认占位页。 |
 
 ## subTitle
 
@@ -777,8 +784,8 @@ title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | NavigationCus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavigationCommonTitle](arkts-arkui-navigationcommontitle-i.md) \| [NavigationCustomTitle](arkts-arkui-navigationcustomtitle-i.md) | 是 | 页面标题，使用 NavigationCustomTitle类型设置height高度时，[titleMode](#titlemode)属性不会生效。字符串超长时，如果不设置副标题， 先缩小再换行（2行）最后截断。如果设置副标题，先缩小最后截断。<br>**起始版本：** 10 |
-| options | [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | 否 | 标题栏选项。 包含标题栏背景颜色、标题栏背景模糊样式及模糊选项、标题栏背景属性、标题栏布局方式、标题栏起始端内间距、标题栏结束端内间距、主 标题属性修改器、子标题属性修改器、是否响应悬停态。<br>**起始版本：** 11 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavigationCommonTitle](arkts-arkui-navigationcommontitle-i.md) \| [NavigationCustomTitle](arkts-arkui-navigationcustomtitle-i.md) | 是 | 页面标题，使用NavigationCustomTitle类型设置height高度时，[titleMode](#titlemode)属性不会生效。字符串超长时，如果不设置副标题，先缩小再换行（2行）最后截断。如果设置副标题，先缩小最后截断。<br>**起始版本：** 10 |
+| options | [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | 否 | 标题栏选项。 包含标题栏背景颜色、标题栏背景模糊样式及模糊选项、标题栏背景属性、标题栏布局方式、标题栏起始端内间距、标题栏结束端内间距、主标题属性修改器、子标题属性修改器、是否响应悬停态。<br>**起始版本：** 11 |
 
 ## titleMode
 
@@ -806,8 +813,10 @@ titleMode(value: NavigationTitleMode)
 toolBar(value: object | CustomBuilder)
 ```
 
-设置工具栏内容。不设置时不显示工具栏。items均分底部工具栏，在每个均分内容区布局文本和图标，文本超长时，逐级缩小，缩小之后换行，最后截断。  
-**object类型说明：**  
+设置工具栏内容。不设置时不显示工具栏。items均分底部工具栏，在每个均分内容区布局文本和图标，文本超长时，逐级缩小，缩小之后换行，最后截断。
+
+**object类型说明：**
+
 | 名称 | 类型 | 必填 | 说明 | | ------ | ------------- | ---- | --------------- | | value | string | 是 | 工具栏单个选项的显示文本。 | | icon | string | 否 | 工具栏单个选项的图标资源路径。 | | action | () =&gt; void | 否 | 当前选项被选中的事件回调。 |
 
 **起始版本：** 8
@@ -848,5 +857,5 @@ toolbarConfiguration(value: Array<ToolbarItem> | CustomBuilder, options?: Naviga
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;[ToolbarItem](arkts-arkui-toolbaritem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 工具栏内容，使用Array&lt;[ToolbarItem](arkts-arkui-toolbaritem-i.md)&gt;设置的工具栏有如下特性：工具栏所有选项均分底部工具栏，在每个均分内容区布局文本和图标。竖屏模式最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。横屏模式时，如果为 [Split](arkts-arkui-navigationmode-e.md)模式，仍按照竖屏模式显示，如果为[Stack](arkts-arkui-navigationmode-e.md)模式需配合menus属性的Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;使用，底部工具栏会自动隐藏，同时底部工具栏所有选项移动至页面右上角菜单。使用 [CustomBuilder](arkts-arkui-custombuilder-t.md)写法为用户自定义工具栏选项，不具备以上功能。 |
-| options | [NavigationToolbarOptions](arkts-arkui-navigationtoolbaroptions-i.md) | 否 | 工具栏选项。 包含工具栏背景颜色、工具栏背景模糊样式及模糊选项、工具栏背景属性、工具栏布局方式、是否隐藏工具栏的文本、工具栏更多图标的 菜单选项。<br>**起始版本：** 11 |
+| value | Array&lt;[ToolbarItem](arkts-arkui-toolbaritem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 工具栏内容，使用Array&lt;[ToolbarItem](arkts-arkui-toolbaritem-i.md)&gt;设置的工具栏有如下特性：工具栏所有选项均分底部工具栏，在每个均分内容区布局文本和图标。竖屏模式最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。横屏模式时，如果为[Split](arkts-arkui-navigationmode-e.md)模式，仍按照竖屏模式显示，如果为[Stack](arkts-arkui-navigationmode-e.md)模式需配合menus属性的Array&lt;[NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md)&gt;使用，底部工具栏会自动隐藏，同时底部工具栏所有选项移动至页面右上角菜单。使用[CustomBuilder](arkts-arkui-custombuilder-t.md)写法为用户自定义工具栏选项，不具备以上功能。 |
+| options | [NavigationToolbarOptions](arkts-arkui-navigationtoolbaroptions-i.md) | 否 | 工具栏选项。 包含工具栏背景颜色、工具栏背景模糊样式及模糊选项、工具栏背景属性、工具栏布局方式、是否隐藏工具栏的文本、工具栏更多图标的菜单选项。<br>**起始版本：** 11 |

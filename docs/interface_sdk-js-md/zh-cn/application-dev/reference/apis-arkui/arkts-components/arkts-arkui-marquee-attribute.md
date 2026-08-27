@@ -1,6 +1,8 @@
 # Marquee属性/事件
 
-除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
+除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。
+
+除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
 
 **继承/实现关系：** MarqueeAttribute extends CommonMethod<MarqueeAttribute>
 
@@ -33,7 +35,7 @@ allowScale(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否允许文本缩放。 true：允许文本缩放；false：不允许文本缩放。    **说明：** 仅当[fontSize](#fontsize)为fp单位时生效。 |
+| value | boolean | 是 | 是否允许文本缩放。true：允许文本缩放；false：不允许文本缩放。   **说明：** 仅当[fontSize](#fontsize)为fp单位时生效。 |
 
 ## fontColor
 
@@ -77,7 +79,7 @@ fontFamily(value: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 字体列表。默认字体'HarmonyOS Sans'。 应用当前支持'HarmonyOS Sans'字体和注册自定义字体[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)。 卡片当前仅支持'HarmonyOS Sans'字体。 |
+| value | string \| Resource | 是 | 字体列表。默认字体'HarmonyOS Sans'。应用当前支持'HarmonyOS Sans'字体和注册自定义字体[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)。卡片当前仅支持'HarmonyOS Sans'字体。 |
 
 ## fontSize
 
@@ -99,7 +101,7 @@ fontSize(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 字体大小。fontSize为number类型时，使用fp单位。字体默认大小16fp。不支持设置百分比字符串。 Wearable设备上默认值：15fp    **说明：** 配合[allowScale](#allowscale)属性使用时，需设置为fp单位。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 字体大小。fontSize为number类型时，使用fp单位。字体默认大小16fp。不支持设置百分比字符串。Wearable设备上默认值：15fp    **说明：** 配合[allowScale](#allowscale)属性使用时，需设置为fp单位。 |
 
 ## fontWeight
 
@@ -121,7 +123,7 @@ fontWeight(value: number | FontWeight | string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | 是 | 文本的字体粗细 number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。 传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。 |
+| value | number \| FontWeight \| string | 是 | 文本的字体粗细number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。 |
 
 ## marqueeUpdateStrategy
 
@@ -129,7 +131,10 @@ fontWeight(value: number | FontWeight | string)
 marqueeUpdateStrategy(value: MarqueeUpdateStrategy)
 ```
 
-跑马灯组件属性更新后，跑马灯的滚动策略。(当跑马灯为播放状态，且文本内容宽度大于等于跑马灯组件宽度时，该属性生效。)未通过该接口设置时，默认使用MarqueeUpdateStrategy.DEFAULT。使用场景：  
+跑马灯组件属性更新后，跑马灯的滚动策略。(当跑马灯为播放状态，且文本内容宽度大于等于跑马灯组件宽度时，该属性生效。)未通过该接口设置时，默认使用MarqueeUpdateStrategy.DEFAULT。
+
+使用场景：
+
 - MarqueeUpdateStrategy.DEFAULT：适用于内容更新后希望以默认策略重新开始滚动展示的场景。  
 - MarqueeUpdateStrategy.PRESERVE_POSITION：适用于内容动态更新时希望保持当前滚动位置继续滚动的场景，如实时时钟、股价等动态内容展示。
 
@@ -167,7 +172,7 @@ onBounce(event: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () = & gt; void | 是 | 完成一次完整滚动时触发的回调。 |
+| event | () =&gt; void | 是 | 完成一次完整滚动时触发的回调。 |
 
 ## onFinish
 
@@ -189,7 +194,7 @@ onFinish(event: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () = & gt; void | 是 | 滚动全部循环次数完成时的回调。 |
+| event | () =&gt; void | 是 | 滚动全部循环次数完成时的回调。 |
 
 ## onStart
 
@@ -211,7 +216,7 @@ onStart(event: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () = & gt; void | 是 | 当滚动的文本内容变化或者开始滚动时的回调。 |
+| event | () =&gt; void | 是 | 当滚动的文本内容变化或者开始滚动时的回调。 |
 
 ## onStop
 
@@ -219,7 +224,9 @@ onStart(event: () => void)
 onStop(event: Callback<void> | undefined)
 ```
 
-跑马灯滚动结束或停止时触发回调。跑马灯停止表示跑马灯将从开始位置，重新开始循环，不包含暂停场景，暂停不会触发该回调。
+跑马灯滚动结束或停止时触发回调。
+
+跑马灯停止表示跑马灯将从开始位置，重新开始循环，不包含暂停场景，暂停不会触发该回调。
 
 **起始版本：** 26.0.0
 
@@ -235,4 +242,4 @@ onStop(event: Callback<void> | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback & lt;void & gt; \ | undefined | 是 |  |
+| event | Callback&lt;void&gt; \| undefined | 是 |  |

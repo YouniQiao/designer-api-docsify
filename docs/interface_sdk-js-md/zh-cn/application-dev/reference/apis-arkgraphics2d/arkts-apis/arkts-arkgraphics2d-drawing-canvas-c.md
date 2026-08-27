@@ -19,7 +19,7 @@
 ## 导入模块
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## attachBrush
@@ -28,7 +28,7 @@ import drawing from '@kit.ArkGraphics2D';
 attachBrush(brush: Brush): void
 ```
 
-绑定画刷到画布上，在画布上进行绘制时，将使用画刷的样式对绘制图形形状的内部进行填充。调用本方法后，画刷将持续生效于后续所有绘制操作，直至调用 [detachBrush](#detachbrush)解除绑定。
+绑定画刷到画布上，在画布上进行绘制时，将使用画刷的样式对绘制图形形状的内部进行填充。调用本方法后，画刷将持续生效于后续所有绘制操作，直至调用[detachBrush](#detachbrush)解除绑定。
 
 > **说明：**
 > 
@@ -74,7 +74,7 @@ class DrawingRenderNode extends RenderNode {
 attachPen(pen: Pen): void
 ```
 
-绑定画笔到画布上，在画布上进行绘制时，将使用画笔的样式去绘制图形形状的轮廓。调用本方法后，画笔将持续生效于后续所有绘制操作， 直至调用[detachPen](#detachpen)解除绑定。
+绑定画笔到画布上，在画布上进行绘制时，将使用画笔的样式去绘制图形形状的轮廓。调用本方法后，画笔将持续生效于后续所有绘制操作，直至调用[detachPen](#detachpen)解除绑定。
 
 > **说明：**
 > 
@@ -88,7 +88,7 @@ attachPen(pen: Pen): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pen | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | 是 | 画笔对象。 |
+| pen | Pen | 是 | 画笔对象。 |
 
 **错误码：**
 
@@ -203,7 +203,7 @@ clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 路径对象。 |
+| path | Path | 是 | 路径对象。 |
 | clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | 否 | 裁剪方式。默认为INTERSECT。 |
 | doAntiAlias | boolean | 否 | 表示是否使用抗锯齿绘制。true表示使用，false表示不使用。默认为false。 |
 
@@ -289,7 +289,7 @@ clipRegion(region: Region, clipOp?: ClipOp): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | 是 | 区域对象，表示裁剪范围。 |
+| region | Region | 是 | 区域对象，表示裁剪范围。 |
 | clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | 否 | 裁剪方式。默认值为INTERSECT。 |
 
 **错误码：**
@@ -332,7 +332,7 @@ clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 圆角矩形对象，表示裁剪范围。 |
+| roundRect | RoundRect | 是 | 圆角矩形对象，表示裁剪范围。 |
 | clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | 否 | 裁剪方式。默认值为INTERSECT。 |
 | doAntiAlias | boolean | 否 | 表示是否使用抗锯齿。true表示使用，false表示不使用。默认值为false。 |
 
@@ -526,7 +526,7 @@ drawArc(arc: common2D.Rect, startAngle: number, sweepAngle: number): void
 | --- | --- | --- | --- |
 | arc | common2D.Rect | 是 | 包含要绘制的圆弧的椭圆的矩形边界。 |
 | startAngle | number | 是 | 弧的起始角度，单位为度，该参数为浮点数。0度时起始点位于椭圆的右端点，正数时以顺时针方向放置起始点，负数时以逆时针方向放置起始点。 |
-| sweepAngle | number | 是 | 弧的扫描角度，单位为度，该参数为浮点数。为正数时顺时针扫描，为负数时逆时针扫描。它的有效范围在-360度到360度之间，当绝对值大于360度时，该方法绘制的是一个椭 圆。 |
+| sweepAngle | number | 是 | 弧的扫描角度，单位为度，该参数为浮点数。为正数时顺时针扫描，为负数时逆时针扫描。它的有效范围在-360度到360度之间，当绝对值大于360度时，该方法绘制的是一个椭圆。 |
 
 **错误码：**
 
@@ -700,7 +700,7 @@ drawColor(color: common2D.Color, blendMode?: BlendMode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | color | common2D.Color | 是 | ARGB格式的颜色，每个颜色通道的取值范围为[0, 255]的整数。 |
-| blendMode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | 否 | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC_OVER。 |
+| blendMode | BlendMode | 否 | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC_OVER。 |
 
 **错误码：**
 
@@ -734,7 +734,7 @@ class DrawingRenderNode extends RenderNode {
 drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: BlendMode): void
 ```
 
-使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。性能优于 [drawColor](#drawcolor)接口，推荐使用本接口。
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。性能优于[drawColor](#drawcolor)接口，推荐使用本接口。
 
 **起始版本：** 12
 
@@ -748,7 +748,7 @@ drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: B
 | red | number | 是 | ARGB格式颜色的红色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
 | green | number | 是 | ARGB格式颜色的绿色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
 | blue | number | 是 | ARGB格式颜色的蓝色通道值，取值范围为[0, 255]的整数，传入范围内的浮点数会向下取整。 |
-| blendMode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | 否 | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC_OVER。 |
+| blendMode | BlendMode | 否 | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC_OVER。 |
 
 **错误码：**
 
@@ -787,7 +787,7 @@ drawColor(color: number, blendMode?: BlendMode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | color | number | 是 | 16进制ARGB格式的颜色，用32位无符号整数表示，例如：0xAARRGGBB。 |
-| blendMode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | 否 | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC_OVER。 |
+| blendMode | BlendMode | 否 | 颜色混合模式，用于指定绘制颜色与画布已有内容的混合方式。当需要自定义颜色叠加效果时传入此参数，不传入时默认模式为SRC_OVER。 |
 
 **错误码：**
 
@@ -828,12 +828,12 @@ drawGlyphs(glyphIds: Array<number>, glyphIdOffset: number, positions: Array<comm
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphIds | Array & lt;number & gt; | 是 | 字形ID的数组。数组成员取值限定为整数，输入浮点数则仅保留整数部分。 |
-| glyphIdOffset | number | 是 | 在绘制字形ID数组之前要跳过的元素的数量。 取值限定为整数，输入浮点数则仅保留整数部分。 如果glyphCount为n，跳过长度为m，则有效glyphIds数组的范围为[glyphIds[m], glyphIds[m+n])。 如果glyphIds数组长度小于“glyphIdOffset + glyphCount”则抛出错误码25900001。 如果glyphIdOffset小于0则抛出错误码25900001。 |
-| positions | Array & lt;common2D.Point & gt; | 是 | 每个字形对应的绘制位置坐标数组。如果glyphCount为n，跳过长度为m，则有效positions数组范围为 [positions[m], positions[m+n])。 |
-| positionOffset | number | 是 | 在绘制位置数组之前要跳过的元素的数量。取值限定为整数，输入浮点数则仅保留整数部分。 如果glyphCount为n，跳过长度为m，则有效positions数组的范围为[positions[m], positions[m+n])。 如果positions数组长度小于“positionOffset + glyphCount”则抛出错误码25900001。 如果positionOffset小于0则抛出错误码25900001。 |
-| glyphCount | number | 是 | 要绘制的字形的数目。数目小于或等于0，则不绘制任何内容，并抛出错误码25900001。 如果glyphCount与glyphIdOffset的和，或者glyphCount与positionOffset的和大于0x7FFFFFFF，则该计算结果按0x7FFFFFFF处理。 |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 用于绘图的字体。 |
+| glyphIds | Array&lt;number&gt; | 是 | 字形ID的数组。数组成员取值限定为整数，输入浮点数则仅保留整数部分。 |
+| glyphIdOffset | number | 是 | 在绘制字形ID数组之前要跳过的元素的数量。 取值限定为整数，输入浮点数则仅保留整数部分。如果glyphCount为n，跳过长度为m，则有效glyphIds数组的范围为[glyphIds[m], glyphIds[m+n])。如果glyphIds数组长度小于“glyphIdOffset + glyphCount”则抛出错误码25900001。如果glyphIdOffset小于0则抛出错误码25900001。 |
+| positions | Array&lt;common2D.Point&gt; | 是 | 每个字形对应的绘制位置坐标数组。如果glyphCount为n，跳过长度为m，则有效positions数组范围为[positions[m], positions[m+n])。 |
+| positionOffset | number | 是 | 在绘制位置数组之前要跳过的元素的数量。取值限定为整数，输入浮点数则仅保留整数部分。如果glyphCount为n，跳过长度为m，则有效positions数组的范围为[positions[m], positions[m+n])。如果positions数组长度小于“positionOffset + glyphCount”则抛出错误码25900001。如果positionOffset小于0则抛出错误码25900001。 |
+| glyphCount | number | 是 | 要绘制的字形的数目。数目小于或等于0，则不绘制任何内容，并抛出错误码25900001。如果glyphCount与glyphIdOffset的和，或者glyphCount与positionOffset的和大于0x7FFFFFFF，则该计算结果按0x7FFFFFFF处理。 |
+| font | Font | 是 | 用于绘图的字体。 |
 
 **错误码：**
 
@@ -941,7 +941,9 @@ drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.R
       filterMode: FilterMode): void
 ```
 
-将图像按照矩形网格对象的设置划分为多个网格，并把图像的每个部分按照网格对象的设置绘制到画布上的目标矩形区域。与[drawImageNine](#drawimagenine)固定将图像分割 为9个部分不同，本接口通过Lattice对象支持自定义网格分割。使用此接口时，设置开启抗锯齿无效。偶数行和列（起始计数为0）的每个交叉点对应的网格区域保持原始尺寸不缩放，若固定网格区域的尺寸不超过目标矩形，则会在不缩放的情况下被绘制在目标矩形，反之则会按比例缩放绘制在目标矩形；在角落区域绘制后，若目标矩形中仍有未被覆盖的区 域，则剩下的区域会通过拉伸或压缩来绘制，以便完全覆盖目标矩形。
+将图像按照矩形网格对象的设置划分为多个网格，并把图像的每个部分按照网格对象的设置绘制到画布上的目标矩形区域。与[drawImageNine](#drawimagenine)固定将图像分割为9个部分不同，本接口通过Lattice对象支持自定义网格分割。使用此接口时，设置开启抗锯齿无效。
+
+偶数行和列（起始计数为0）的每个交叉点对应的网格区域保持原始尺寸不缩放，若固定网格区域的尺寸不超过目标矩形，则会在不缩放的情况下被绘制在目标矩形，反之则会按比例缩放绘制在目标矩形；在角落区域绘制后，若目标矩形中仍有未被覆盖的区域，则剩下的区域会通过拉伸或压缩来绘制，以便完全覆盖目标矩形。
 
 **起始版本：** 18
 
@@ -1027,7 +1029,9 @@ drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D
       filterMode: FilterMode): void
 ```
 
-通过绘制两条水平线和两条垂直线将图像分割成9个部分：四个边、四个角和中心。使用此接口时，设置开启抗锯齿无效。若角落的4个区域尺寸不超过目标矩形，则会在不缩放的情况下被绘制在目标矩形，反之则会按比例缩放绘制在目标矩形；在角落区域绘制后，若目标矩形中仍有未被覆盖的区域，则剩下的5个区域会通过拉伸或压缩来绘制，以便完全覆盖目标矩形。
+通过绘制两条水平线和两条垂直线将图像分割成9个部分：四个边、四个角和中心。使用此接口时，设置开启抗锯齿无效。
+
+若角落的4个区域尺寸不超过目标矩形，则会在不缩放的情况下被绘制在目标矩形，反之则会按比例缩放绘制在目标矩形；在角落区域绘制后，若目标矩形中仍有未被覆盖的区域，则剩下的5个区域会通过拉伸或压缩来绘制，以便完全覆盖目标矩形。
 
 **起始版本：** 18
 
@@ -1300,8 +1304,8 @@ drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| outer | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 圆角矩形对象，表示外部圆角矩形边界。 |
-| inner | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 圆角矩形对象，表示内部圆角矩形边界。 |
+| outer | RoundRect | 是 | 圆角矩形对象，表示外部圆角矩形边界。 |
+| inner | RoundRect | 是 | 圆角矩形对象，表示内部圆角矩形边界。 |
 
 **错误码：**
 
@@ -1389,7 +1393,7 @@ drawPath(path: Path): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 要绘制的路径对象。 |
+| path | Path | 是 | 要绘制的路径对象。 |
 
 **错误码：**
 
@@ -1440,9 +1444,9 @@ drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: number, meshHeight: number
 | pixelmap | image.PixelMap | 是 | 用于绘制网格的像素图。 |
 | meshWidth | number | 是 | 网格中的列数，大于0的整数。 |
 | meshHeight | number | 是 | 网格中的行数，大于0的整数。 |
-| vertices | Array & lt;number & gt; | 是 | 顶点数组，指定网格的绘制位置，该参数为浮点数组，单位为物理像素px。大小必须为((meshWidth+1) * (meshHeight+1) + vertOffset) * 2。 |
+| vertices | Array&lt;number&gt; | 是 | 顶点数组，指定网格的绘制位置，该参数为浮点数组，单位为物理像素px。大小必须为((meshWidth+1) * (meshHeight+1) + vertOffset) * 2。 |
 | vertOffset | number | 是 | 绘图前要跳过的vert元素数，大于等于0的整数。 |
-| colors | Array & lt;number & gt; \ | null | 是 | 颜色数组，在每个顶点指定一种颜色，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB，可为null，大小必须为(meshWidth+1) * (meshHeight+1) + colorOffset。<br>**起始版本：** 20 |
+| colors | Array&lt;number&gt; \| null | 是 | 颜色数组，在每个顶点指定一种颜色，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB，可为null，大小必须为(meshWidth+1) * (meshHeight+1) + colorOffset。<br>**起始版本：** 20 |
 | colorOffset | number | 是 | 绘制前要跳过的颜色元素数，大于等于0的整数。 |
 
 **错误码：**
@@ -1552,7 +1556,7 @@ drawPoints(points: Array<common2D.Point>, mode?: PointMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| points | Array & lt;common2D.Point & gt; | 是 | 要绘制的点的数组。长度不能为0。 |
+| points | Array&lt;common2D.Point&gt; | 是 | 要绘制的点的数组。长度不能为0。 |
 | mode | [PointMode](arkts-arkgraphics2d-drawing-pointmode-e.md) | 否 | 绘制数组中的点的方式。默认值为drawing.PointMode.POINTS。 |
 
 **错误码：**
@@ -1687,7 +1691,7 @@ drawRegion(region: Region): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | 是 | 绘制的区域。 |
+| region | Region | 是 | 绘制的区域。 |
 
 **错误码：**
 
@@ -1732,7 +1736,7 @@ drawRoundRect(roundRect: RoundRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 圆角矩形对象。 |
+| roundRect | RoundRect | 是 | 圆角矩形对象。 |
 
 **错误码：**
 
@@ -1773,10 +1777,10 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 路径对象，可生成阴影。 |
+| path | Path | 是 | 路径对象，可生成阴影。 |
 | planeParams | common2D.Point3d | 是 | 表示一个三维向量，用于计算遮挡物相对于画布在z轴上的偏移量，偏移量的值由该向量的x坐标与y坐标计算得出。 |
 | devLightPos | common2D.Point3d | 是 | 光线相对于画布的位置。 |
-| lightRadius | number | 是 | 圆形灯半径，取值范围 & gt;0，该参数为浮点数。单位为物理像素px。 |
+| lightRadius | number | 是 | 圆形灯半径，取值范围&gt;0，该参数为浮点数。单位为物理像素px。 |
 | ambientColor | common2D.Color | 是 | 环境阴影颜色。 |
 | spotColor | common2D.Color | 是 | 点阴影颜色。 |
 | flag | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | 是 | 阴影标志，用于控制阴影的绘制方式。 |
@@ -1835,7 +1839,7 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 路径对象，可生成阴影。 |
+| path | Path | 是 | 路径对象，可生成阴影。 |
 | planeParams | common2D.Point3d | 是 | 表示一个三维向量，用于计算遮挡物相对于画布在z轴上的偏移量，偏移量的值由该向量的x坐标与y坐标计算得出。 |
 | devLightPos | common2D.Point3d | 是 | 光线相对于画布的位置。 |
 | lightRadius | number | 是 | 圆形灯半径，该参数为浮点数。单位为物理像素px。 |
@@ -1885,7 +1889,7 @@ drawSingleCharacter(text: string, font: Font, x: number, y: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待绘制的单个字符，字符串长度必须为1。 |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 字型对象。 |
+| font | Font | 是 | 字型对象。 |
 | x | number | 是 | 所绘制出的字符基线（下图蓝线）的左端点（下图红点）的x轴坐标，该参数为浮点数。单位为物理像素px。 |
 | y | number | 是 | 所绘制出的字符基线（下图蓝线）的左端点（下图红点）的y轴坐标，该参数为浮点数。单位为物理像素px。 |
 
@@ -1933,10 +1937,10 @@ drawSingleCharacterWithFeatures(text: string, font: Font, x: number, y: number, 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待绘制的单个字符，字符串长度必须为1。 |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 | 字型对象。 |
+| font | Font | 是 | 字型对象。 |
 | x | number | 是 | 所绘制字符基线左端点的x轴坐标，该参数为浮点数。单位为物理像素px。 |
 | y | number | 是 | 所绘制字符基线左端点的y轴坐标，该参数为浮点数。单位为物理像素px。 |
-| features | Array & lt;FontFeature & gt; | 是 | 字体特征对象数组。参数为空数组时使用TTF（TrueType Font）文件中预设的字体特征。 |
+| features | Array&lt;FontFeature&gt; | 是 | 字体特征对象数组。参数为空数组时使用TTF（TrueType Font）文件中预设的字体特征。 |
 
 **错误码：**
 
@@ -2034,12 +2038,12 @@ drawVertices(vertexMode: VertexMode, vertexCount: number, positions: Array<commo
 | --- | --- | --- | --- |
 | vertexMode | [VertexMode](arkts-arkgraphics2d-drawing-vertexmode-e.md) | 是 | 绘制顶点的连接方式。 |
 | vertexCount | number | 是 | 顶点数组元素的数量，值为大于等于3的整数，输入浮点数则仅保留整数部分。 |
-| positions | Array & lt;common2D.Point & gt; | 是 | 描述顶点位置的数组，不能为空，其长度必须等于vertexCount。 |
-| texs | Array & lt;common2D.Point & gt; \ | null | 是 | 描述顶点对应纹理空间坐标的数组。其可以为空，表明纹理空间失效；若不为空，其长度必须等于vertexCount。 |
-| colors | Array & lt;number & gt; \ | null | 是 | 描述顶点对应颜色的数组，用于在三角形中进行插值，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。其可以为空，表明不 使用顶点颜色插值，颜色效果取决于当前画布绑定的画刷或画笔所设置的颜色；若不为空其长度必须等于vertexCount。 |
+| positions | Array&lt;common2D.Point&gt; | 是 | 描述顶点位置的数组，不能为空，其长度必须等于vertexCount。 |
+| texs | Array&lt;common2D.Point&gt; \| null | 是 | 描述顶点对应纹理空间坐标的数组。其可以为空，表明纹理空间失效；若不为空，其长度必须等于vertexCount。 |
+| colors | Array&lt;number&gt; \| null | 是 | 描述顶点对应颜色的数组，用于在三角形中进行插值，每个颜色值用16进制ARGB格式的32位无符号整数表示，例如：0xAARRGGBB。其可以为空，表明不使用顶点颜色插值，颜色效果取决于当前画布绑定的画刷或画笔所设置的颜色；若不为空其长度必须等于vertexCount。 |
 | indexCount | number | 是 | 索引的数量。其值可以为0，且indices数组长度为0时可以画图；若不为0，则值必须为大于等于3的整数，输入浮点数则仅保留整数部分。 |
-| indices | Array & lt;number & gt; \ | null | 是 | 描述顶点对应索引的数组。其可以为空，此时将忽略indexCount的合理传值（大于等于3的整数或等于0）；若不为空其长度必须等于 indexCount。 |
-| mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | 是 | 颜色混合模式。 |
+| indices | Array&lt;number&gt; \| null | 是 | 描述顶点对应索引的数组。其可以为空，此时将忽略indexCount的合理传值（大于等于3的整数或等于0）；若不为空其长度必须等于indexCount。 |
+| mode | BlendMode | 是 | 颜色混合模式。 |
 
 **错误码：**
 
@@ -2355,7 +2359,7 @@ quickRejectPath(path: Path): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 路径对象。 |
+| path | Path | 是 | 路径对象。 |
 
 **返回值：**
 
@@ -2491,7 +2495,7 @@ class DrawingRenderNode extends RenderNode {
 restore(): void
 ```
 
-恢复保存在栈顶的画布状态（画布矩阵和裁剪区域）。需要与保存接口[save](#save)或[saveLayer](#savelayer)配合使用。 若栈顶状态由saveLayer保存，恢复时还会将saveLayer分配的位图绘制到画布上；若栈为空（无已保存状态），则不执行恢复操作。
+恢复保存在栈顶的画布状态（画布矩阵和裁剪区域）。需要与保存接口[save](#save)或[saveLayer](#savelayer)配合使用。若栈顶状态由saveLayer保存，恢复时还会将saveLayer分配的位图绘制到画布上；若栈为空（无已保存状态），则不执行恢复操作。
 
 **起始版本：** 12
 
@@ -2523,7 +2527,7 @@ class DrawingRenderNode extends RenderNode {
 restoreToCount(count: number): void
 ```
 
-恢复到指定深度的画布状态（画布矩阵和裁剪区域）。需要先调用[save](#save)或[saveLayer](#savelayer)保存画布状态后 才能使用本接口恢复。
+恢复到指定深度的画布状态（画布矩阵和裁剪区域）。需要先调用[save](#save)或[saveLayer](#savelayer)保存画布状态后才能使用本接口恢复。
 
 **起始版本：** 12
 

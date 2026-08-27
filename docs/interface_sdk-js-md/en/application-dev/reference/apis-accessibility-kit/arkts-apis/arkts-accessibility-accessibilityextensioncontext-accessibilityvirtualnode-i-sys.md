@@ -14,7 +14,9 @@ Defines an accessibility virtual node.
 accessibilityFocused?: boolean
 ```
 
-Whether the element has gained focus for accessibility purposes. The value true indicates that the element has gained focus, and false indicates that the element has not gained focus.Default value: false.
+Whether the element has gained focus for accessibility purposes. The value true indicates that the element has gained focus, and false indicates that the element has not gained focus.
+
+Default value: false.
 
 **Type:** boolean
 
@@ -32,7 +34,9 @@ Whether the element has gained focus for accessibility purposes. The value true 
 accessibilityGroup?: boolean
 ```
 
-Whether the element is an accessibility group. The value true indicates that the element is an accessibility group, and false indicates that the element is not an accessibility group.Default value: true.
+Whether the element is an accessibility group. The value true indicates that the element is an accessibility group, and false indicates that the element is not an accessibility group.
+
+Default value: true.
 
 **Type:** boolean
 
@@ -50,7 +54,15 @@ Whether the element is an accessibility group. The value true indicates that the
 accessibilityLevel?: string
 ```
 
-Accessibility level of the component.'auto': The accessibility grouping service and ArkUI jointly determine whether the component can be identified by accessibility.'yes': The component can be identified by accessibility.'no': The component cannot be identified by accessibility.'no-hide-descendants': The component and all its child components cannot be identified by accessibility.
+Accessibility level of the component.
+
+'auto': The accessibility grouping service and ArkUI jointly determine whether the component can be identified by accessibility.
+
+'yes': The component can be identified by accessibility.
+
+'no': The component cannot be identified by accessibility.
+
+'no-hide-descendants': The component and all its child components cannot be identified by accessibility.
 
 **Type:** string
 
@@ -86,7 +98,9 @@ Accessibility text information of the element.
 checkable?: boolean
 ```
 
-Whether the element is checkable. The value true indicates that the element is checkable, and false indicates that the element is not checkable.Default value: false.
+Whether the element is checkable. The value true indicates that the element is checkable, and false indicates that the element is not checkable.
+
+Default value: false.
 
 **Type:** boolean
 
@@ -104,7 +118,9 @@ Whether the element is checkable. The value true indicates that the element is c
 checked?: boolean
 ```
 
-Whether the element is checked. The value true indicates that the element is checked, and false indicates that the element is not checked.Default value: false.
+Whether the element is checked. The value true indicates that the element is checked, and false indicates that the element is not checked.
+
+Default value: false.
 
 **Type:** boolean
 
@@ -140,7 +156,9 @@ List of child element IDs of the component.
 clickable?: boolean
 ```
 
-Whether the element is clickable. The value true indicates that the element is clickable, and false indicates that the element is not clickable.Default value: false.
+Whether the element is clickable. The value true indicates that the element is clickable, and false indicates that the element is not clickable.
+
+Default value: false.
 
 **Type:** boolean
 
@@ -176,7 +194,9 @@ Custom component type.
 elementId?: number
 ```
 
-ID of the component to which the element belongs.Default value: -1.
+ID of the component to which the element belongs.
+
+Default value: -1.
 
 **Type:** number
 
@@ -194,7 +214,9 @@ ID of the component to which the element belongs.Default value: -1.
 enabled?: boolean
 ```
 
-Whether the element is enabled. The value true indicates that the element is enabled, and false indicates that the element is not enabled.Corresponds to the isEnable attribute of AccessibilityElement. Default value: false.
+Whether the element is enabled. The value true indicates that the element is enabled, and false indicates that the element is not enabled.
+
+Corresponds to the isEnable attribute of AccessibilityElement. Default value: false.
 
 **Type:** boolean
 
@@ -248,7 +270,9 @@ Area of the element (relative to the parent node).
 selected?: boolean
 ```
 
-Whether the element is selected. The value true indicates that the element is selected, and false indicates that the element is not selected.Default value: false.
+Whether the element is selected. The value true indicates that the element is selected, and false indicates that the element is not selected.
+
+Default value: false.
 
 **Type:** boolean
 

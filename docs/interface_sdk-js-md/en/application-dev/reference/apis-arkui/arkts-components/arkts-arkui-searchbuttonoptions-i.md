@@ -17,7 +17,10 @@ Defines the SearchButton options.
 autoDisable?: Boolean
 ```
 
-Whether to disable the search button when there is no text input.Default value: **false**  
+Whether to disable the search button when there is no text input.
+
+Default value: **false**
+
 **true**: The search button is disabled when there is no text input. **false**: The search button remains enabled regardless of the text input.
 
 **Type:** Boolean

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import connectedTag from '@kit.ConnectivityKit';
+import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
 ## uninit

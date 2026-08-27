@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllPluginInfo
@@ -33,7 +33,7 @@ Obtains all the plugin information in the system based on the given host bundle 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;PluginBundleInfo & gt; & gt; | Promise used to return the array of plugin information obtained. |
+| Promise&lt;Array&lt;PluginBundleInfo&gt;&gt; | Promise used to return the array of plugin information obtained. |
 
 **Error codes:**
 

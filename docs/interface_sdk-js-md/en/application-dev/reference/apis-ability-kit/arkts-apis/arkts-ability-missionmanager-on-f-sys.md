@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import missionManager from '@kit.AbilityKit';
+import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## on('mission')
@@ -27,7 +27,7 @@ Registers a listener to observe the mission status.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mission' | Yes | Name of the target mission. The value is fixed at **'mission'**, indicating the system mission status listener. |
-| listener | [MissionListener](arkts-ability-missionmanager-missionlistener-t-sys.md) | Yes | Mission status listener to register. |
+| listener | MissionListener | Yes | Mission status listener to register. |
 
 **Return value:**
 
@@ -135,7 +135,7 @@ Registers a listener to observe the mission status.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'missionEvent' | Yes | Name of the target mission. The value is fixed at **'missionEvent'**, indicating the system mission status listener. |
-| listener | [MissionListener](arkts-ability-missionmanager-missionlistener-t-sys.md) | Yes | Mission status listener to register. |
+| listener | MissionListener | Yes | Mission status listener to register. |
 
 **Return value:**
 

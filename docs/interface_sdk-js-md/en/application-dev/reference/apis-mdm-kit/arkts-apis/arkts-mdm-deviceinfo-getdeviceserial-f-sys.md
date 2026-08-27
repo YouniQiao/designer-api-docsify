@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import deviceInfo from '@kit.MDMKit';
+import { deviceInfo } from '@kit.MDMKit';
 ```
 
 ## getDeviceSerial
@@ -99,7 +99,7 @@ Obtains the device serial number. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the device serial number. |
+| Promise&lt;string&gt; | Promise used to return the device serial number. |
 
 **Error codes:**
 

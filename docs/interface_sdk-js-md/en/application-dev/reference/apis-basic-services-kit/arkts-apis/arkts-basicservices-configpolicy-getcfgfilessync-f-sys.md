@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import configPolicy from '@kit.BasicServicesKit';
+import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
 ## getCfgFilesSync
@@ -32,7 +32,7 @@ Obtains a list of all files of a specified file name based on the provided follo
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of configuration files obtained. |
+| Array&lt;string&gt; | List of configuration files obtained. |
 
 **Error codes:**
 

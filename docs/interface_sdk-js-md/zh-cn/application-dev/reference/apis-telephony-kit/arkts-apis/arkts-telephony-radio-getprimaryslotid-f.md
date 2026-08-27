@@ -40,7 +40,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 radio.getPrimarySlotId((err: BusinessError, data: number) => {
     if (err) {
-        console.error(`getPrimarySlotId failed, callback: err->${JSON.stringify(err)}`);
+        console.error(`getPrimarySlotId failed, callback: err code: ${err.code}, message: ${err.message}`);
         return;
     }
     console.info(`getPrimarySlotId success, callback: data->${JSON.stringify(data)}`);
@@ -64,7 +64,7 @@ function getPrimarySlotId(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 以Promise形式返回获取设备主卡所在卡槽的索引号的结果。 |
+| Promise&lt;number&gt; | 以Promise形式返回获取设备主卡所在卡槽的索引号的结果。 |
 
 **错误码：**
 
@@ -82,6 +82,6 @@ import { BusinessError } from '@kit.BasicServicesKit';
 radio.getPrimarySlotId().then((data: number) => {
     console.info(`getPrimarySlotId success, promise: data->${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-    console.error(`getPrimarySlotId failed, promise: err->${JSON.stringify(err)}`);
+    console.error(`getPrimarySlotId failed, promise: err code: ${err.code}, message: ${err.message}`);
 });
 ```

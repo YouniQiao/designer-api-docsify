@@ -23,7 +23,7 @@ Creates an object for a collection of X.509 certificates and CRLs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certs | Array & lt;X509Cert & gt; | Yes | X.509 certificates. |
+| certs | Array&lt;X509Cert&gt; | Yes | X.509 certificates. |
 | crls | Array&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt; | No | Array of X509CRL. |
 
 **Return value:**

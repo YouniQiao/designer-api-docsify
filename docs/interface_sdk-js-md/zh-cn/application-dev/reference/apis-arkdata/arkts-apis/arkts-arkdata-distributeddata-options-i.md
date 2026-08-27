@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## autoSync
@@ -22,7 +21,9 @@ import distributedDataObject from '@kit.ArkDataObject';
 autoSync?: boolean
 ```
 
-设置数据库文件是否自动同步。默认为false，即手动同步。ohos.permission.DISTRIBUTED_DATASYNC
+设置数据库文件是否自动同步。默认为false，即手动同步。
+
+ohos.permission.DISTRIBUTED_DATASYNC
 
 **类型：** boolean
 

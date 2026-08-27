@@ -13,7 +13,6 @@ Rolling animation model: You can build rolling animation based on the initial po
 ## Modules to Import
 
 ```TypeScript
-import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@ohos.@kit.ArkUI';
 ```
 
 ## constructor

@@ -1,6 +1,8 @@
 # @ohos.bundle.bundleMonitor
 
-Bundle monitor@namespace bundleMonitor
+Bundle monitor
+
+@namespace bundleMonitor
 
 **Since:** 9
 
@@ -11,7 +13,7 @@ Bundle monitor@namespace bundleMonitor
 ## Modules to Import
 
 ```TypeScript
-import bundleMonitor from '@kit.AbilityKit';
+import { bundleMonitor } from '@kit.AbilityKit';
 ```
 
 ## Summary

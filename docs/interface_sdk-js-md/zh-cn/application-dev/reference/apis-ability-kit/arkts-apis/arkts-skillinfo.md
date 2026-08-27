@@ -12,4 +12,4 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [SkillType](arkts-ability-skillinfo-skilltype-e.md) | 枚举Skill类型。@enum { number } |
+| [SkillType](arkts-ability-skillinfo-skilltype-e.md) | 枚举Skill类型。 |

@@ -18,7 +18,9 @@ import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, 
 onSelect?: SubHeaderV2SelectOnSelect
 ```
 
-Callback invoked when an item in the drop-down list box is selected.Default value: **undefined**
+Callback invoked when an item in the drop-down list box is selected.
+
+Default value: **undefined**
 
 **Since:** 18
 
@@ -34,9 +36,13 @@ Callback invoked when an item in the drop-down list box is selected.Default valu
 defaultFocus?: boolean
 ```
 
-Whether the drop-down button is the default focus.  
-**true**: The drop-down button is the default focus.  
-**false**: The drop-down button is not the default focus.Default value: **false**
+Whether the drop-down button is the default focus.
+
+**true**: The drop-down button is the default focus.
+
+**false**: The drop-down button is not the default focus.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -110,7 +116,11 @@ Text content of the drop-down button. Default value: **''**. The Resource type i
 selectedIndex?: number
 ```
 
-Index of the initially selected item in the drop-down list box.The index of the first item is 0.If this property is not set, the default value **-1** is used, indicating that no item is selected.
+Index of the initially selected item in the drop-down list box.
+
+The index of the first item is 0.
+
+If this property is not set, the default value **-1** is used, indicating that no item is selected.
 
 **Type:** number
 

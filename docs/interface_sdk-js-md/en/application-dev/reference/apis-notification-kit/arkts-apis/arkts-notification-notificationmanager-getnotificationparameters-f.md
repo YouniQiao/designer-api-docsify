@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getNotificationParameters
@@ -31,7 +31,7 @@ Obtains some information about the **wantAgent** field in [NotificationRequest](
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NotificationParameters & gt; | Promise used to return some information about **wantAgent**. |
+| Promise&lt;NotificationParameters&gt; | Promise used to return some information about **wantAgent**. |
 
 **Error codes:**
 

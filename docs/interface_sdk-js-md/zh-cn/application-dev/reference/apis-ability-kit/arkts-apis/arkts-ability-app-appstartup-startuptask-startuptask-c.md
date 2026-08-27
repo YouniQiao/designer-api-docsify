@@ -9,7 +9,7 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 ## 导入模块
 
 ```TypeScript
-import StartupTask from '@kit.AbilityKit';
+import { StartupTask } from '@kit.AbilityKit';
 ```
 
 ## init
@@ -36,7 +36,7 @@ init(context: AbilityStageContext): Promise<Object | void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Object \ | void & gt; | Promise used to return the execution result. |
+| Promise&lt;Object \| void&gt; | Promise used to return the execution result. |
 
 **示例**
 

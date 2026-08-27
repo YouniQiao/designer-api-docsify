@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usageStatistics from '@kit.BackgroundTasksKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryLastUseTime
@@ -26,7 +26,7 @@ Queries the last usage timestamp by bundleName and app index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appInfo | Record & lt;string, Array & lt;number & gt; & gt; | Yes | bundle name and app index info for each application. |
+| appInfo | Record&lt;string, Array&lt;number&gt;&gt; | Yes | bundle name and app index info for each application. |
 
 **Return value:**
 

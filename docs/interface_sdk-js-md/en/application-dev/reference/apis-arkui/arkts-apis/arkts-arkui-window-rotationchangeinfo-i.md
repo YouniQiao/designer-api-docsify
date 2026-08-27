@@ -9,9 +9,7 @@ Describes the window information obtained during window rotation changes.
 ## Modules to Import
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## displayId
@@ -52,11 +50,13 @@ Size of the rectangle after the screen where the window is located is rotated.
 orientation: number
 ```
 
-Display orientation of the window.  
+Display orientation of the window.
+
 - **0**: portrait.  
 - **1**: reverse landscape.  
 - **2**: reverse portrait.  
-- **3**: landscape.  
+- **3**: landscape.
+
 Note that the orientation here is different from the orientation property of the display object.
 
 **Type:** number

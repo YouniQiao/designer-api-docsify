@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedMissionManager from '@kit.AbilityKit';
+import { distributedMissionManager } from '@kit.AbilityKit';
 ```
 
 ## unRegisterMissionListener
@@ -28,7 +28,7 @@ function unRegisterMissionListener(parameter: MissionDeviceInfo, callback: Async
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | 是 | 取消监听时指定的设备信息，deviceId为设备标识符。 |
+| parameter | MissionDeviceInfo | 是 | 取消监听时指定的设备信息，deviceId为设备标识符。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，取消监听成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -83,13 +83,13 @@ function unRegisterMissionListener(parameter: MissionDeviceInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | 是 | 取消监听时的设备信息，deviceId为设备标识符。 |
+| parameter | MissionDeviceInfo | 是 | 取消监听时的设备信息，deviceId为设备标识符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 返回的Promise对象，操作成功时表示任务状态监听已成功取消，失败时返回错误信息。 |
+| Promise&lt;void&gt; | 返回的Promise对象，操作成功时表示任务状态监听已成功取消，失败时返回错误信息。 |
 
 **错误码：**
 

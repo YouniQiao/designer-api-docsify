@@ -64,7 +64,7 @@ Sets the coordinate offset relative to the component's layout position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | [Position](#position) | Yes | Coordinate offset relative to the component's layout position. |
+| offset | Position | Yes | Coordinate offset relative to the component's layout position. |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Sets the position of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | [Position](#position) | Yes | Position of the shape. |
+| position | Position | Yes | Position of the shape. |
 
 **Return value:**
 

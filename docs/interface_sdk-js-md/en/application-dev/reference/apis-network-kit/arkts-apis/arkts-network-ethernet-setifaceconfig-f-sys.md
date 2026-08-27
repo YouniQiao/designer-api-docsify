@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import ethernet from '@kit.NetworkKit';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## setIfaceConfig
@@ -97,7 +97,7 @@ Sets the network interface configuration information. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, the return result is empty. If the operation fails, an error code is returned. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, the return result is empty. If the operation fails, an error code is returned. |
 
 **Error codes:**
 

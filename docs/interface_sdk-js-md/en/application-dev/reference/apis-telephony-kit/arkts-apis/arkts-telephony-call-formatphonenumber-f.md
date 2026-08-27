@@ -11,7 +11,9 @@
 function formatPhoneNumber(phoneNumber: string, options: NumberFormatOptions, callback: AsyncCallback<string>): void
 ```
 
-Formats a phone number based on specified formatting options. This API uses an asynchronous callback to return the result.A formatted phone number is a standard numeric string, for example, 555 0100.
+Formats a phone number based on specified formatting options. This API uses an asynchronous callback to return the result.
+
+A formatted phone number is a standard numeric string, for example, 555 0100.
 
 **Since:** 7
 
@@ -22,7 +24,7 @@ Formats a phone number based on specified formatting options. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
-| options | [NumberFormatOptions](arkts-telephony-call-numberformatoptions-i.md) | Yes | Number formatting options, for example, country code. |
+| options | NumberFormatOptions | Yes | Number formatting options, for example, country code. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -59,7 +61,9 @@ call.formatPhoneNumber("138xxxxxxxx", options, (err: BusinessError, data: string
 function formatPhoneNumber(phoneNumber: string, options?: NumberFormatOptions): Promise<string>
 ```
 
-Formats a phone number based on specified formatting options. This API uses a promise to return the result.A formatted phone number is a standard numeric string, for example, 555 0100.
+Formats a phone number based on specified formatting options. This API uses a promise to return the result.
+
+A formatted phone number is a standard numeric string, for example, 555 0100.
 
 **Since:** 7
 
@@ -70,13 +74,13 @@ Formats a phone number based on specified formatting options. This API uses a pr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
-| options | [NumberFormatOptions](arkts-telephony-call-numberformatoptions-i.md) | No | Number formatting options, for example, country code. |
+| options | NumberFormatOptions | No | Number formatting options, for example, country code. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -110,7 +114,9 @@ call.formatPhoneNumber("138xxxxxxxx", options).then((data: string) => {
 function formatPhoneNumber(phoneNumber: string, callback: AsyncCallback<string>): void
 ```
 
-Formats a phone number. This API uses an asynchronous callback to return the result.A formatted phone number is a standard numeric string, for example, 555 0100.
+Formats a phone number. This API uses an asynchronous callback to return the result.
+
+A formatted phone number is a standard numeric string, for example, 555 0100.
 
 **Since:** 7
 

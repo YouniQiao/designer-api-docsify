@@ -99,7 +99,9 @@ selected?: number | number[]
 value?: ResourceStr | ResourceStr[]
 ```
 
-设置选中项的值，优先级低于selected。默认值：数据选择列表中第一个元素的值。
+设置选中项的值，优先级低于selected。
+
+默认值：数据选择列表中第一个元素的值。
 
 > **说明：**
 > 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## reject
@@ -24,7 +24,7 @@ function reject(token: string, reason: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| token | string | 是 | 用于协作服务管理的令牌。该值通过wantParam参数中'ohos.dms.collabToken'键获取 （在应用被拉起后的onCollaborate生命周期方法的wantParam参数中获取）。 |
+| token | string | 是 | 用于协作服务管理的令牌。该值通过wantParam参数中'ohos.dms.collabToken'键获取（在应用被拉起后的onCollaborate生命周期方法的wantParam参数中获取）。 |
 | reason | string | 是 | 连接被拒绝的原因。 |
 
 **错误码：**

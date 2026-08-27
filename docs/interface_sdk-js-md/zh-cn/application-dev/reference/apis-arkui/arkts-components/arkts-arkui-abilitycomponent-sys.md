@@ -27,3 +27,30 @@ AbilityComponent(value: { want: import('../api/@ohos.app.ability.Want').default 
 | value | { want: import('../api/@ohos.app.ability.Want').default } | 是 |  |
 
 ## 汇总
+
+## 示例
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct MyComponent {
+
+  build() {
+      Column() {
+          AbilityComponent({
+              want: {
+                  bundleName: '',
+                  abilityName: ''
+              },
+          })
+          .onConnect(() => {
+              console.log('AbilityComponent connect')
+          })
+          .onDisconnect(() => {
+              console.log('AbilityComponent disconnect')
+          })
+      }
+  }
+}
+```

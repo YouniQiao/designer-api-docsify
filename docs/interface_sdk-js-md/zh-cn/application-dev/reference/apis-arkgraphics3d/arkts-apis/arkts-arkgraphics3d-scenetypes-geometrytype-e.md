@@ -1,6 +1,8 @@
 # GeometryType
 
-几何类型枚举，用于指定不同的几何类型。@enum { number }
+几何类型枚举，用于指定不同的几何类型。
+
+@enum { number }
 
 **起始版本：** 18
 

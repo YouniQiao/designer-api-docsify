@@ -11,7 +11,7 @@ Describes the filter for application lifecycle change events. It can be used as 
 ## Modules to Import
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## abilityStateTypes
@@ -20,7 +20,8 @@ import appManager from '@kit.AbilityKit';
 abilityStateTypes?: number
 ```
 
-Type of ability state to filter. The options are as follows:  
+Type of ability state to filter. The options are as follows:
+
 - **0**: Do not listen for any ability state.  
 - A bitwise OR combination of the enumerated values of [FilterAbilityStateType](arkts-ability-appmanager-filterabilitystatetype-e-sys.md), for  
 example, "appManager.FilterAbilityStateType.CREATE | appManager.FilterAbilityStateType.FOREGROUND" listens for both the creating and foreground states of ability components.  
@@ -40,7 +41,8 @@ example, "appManager.FilterAbilityStateType.CREATE | appManager.FilterAbilitySta
 appStateTypes?: number
 ```
 
-Type of application state to filter. The options are as follows:  
+Type of application state to filter. The options are as follows:
+
 - **0**: Do not listen for any application state.  
 - A bitwise OR combination of the enumerated values of [FilterAppStateType](arkts-ability-appmanager-filterappstatetype-e-sys.md), for example,  
 "appManager.FilterAppStateType.CREATE | appManager.FilterAppStateType.FOREGROUND" listens for both the creating and foreground states of applications.  
@@ -60,7 +62,8 @@ Type of application state to filter. The options are as follows:
 bundleTypes?: number
 ```
 
-Type of application to filter. The options are as follows:  
+Type of application to filter. The options are as follows:
+
 - **0**: Do not listen for any application type.  
 - A bitwise OR combination of the enumerated values of [FilterBundleType](arkts-ability-appmanager-filterbundletype-e-sys.md), for example, "  
 appManager.FilterBundleType.APP | appManager.FilterBundleType.ATOMIC_SERVICE" listens for lifecycle change events for both applications and atomic services.  
@@ -80,7 +83,8 @@ appManager.FilterBundleType.APP | appManager.FilterBundleType.ATOMIC_SERVICE" li
 callbacks?: number
 ```
 
-Callback to filter. The options are as follows:  
+Callback to filter. The options are as follows:
+
 - **0**: Do not listen for any callback.  
 - A bitwise OR combination of the enumerated values of [FilterCallback](arkts-ability-appmanager-filtercallback-e-sys.md), for example, "  
 appManager.FilterCallback.ON_ABILITY_STATE_CHANGED | appManager.FilterCallback.ON_PROCESS_STATE_CHANGED" listens for both [ApplicationStateObserver.onAbilityStateChanged](arkts-ability-applicationstateobserver-c.md#onabilitystatechanged) and [ApplicationStateObserver.onProcessStateChanged](arkts-ability-applicationstateobserver-c.md#onprocessstatechanged).  
@@ -101,7 +105,8 @@ by default.
 processStateTypes?: number
 ```
 
-Type of process state to filter. The options are as follows:  
+Type of process state to filter. The options are as follows:
+
 - **0**: Do not listen for any process state.  
 - A bitwise OR combination of the enumerated values of [FilterProcessStateType](arkts-ability-appmanager-filterprocessstatetype-e-sys.md), for  
 example, "appManager.FilterProcessStateType.CREATE | appManager.FilterProcessStateType.FOREGROUND" listens for both the creating and foreground states of processes.  

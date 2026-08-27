@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wearDetection from '@kit.ConnectivityKit';
+import { wearDetection } from '@kit.ConnectivityKit';
 ```
 
 ## disableWearDetection
@@ -82,7 +82,7 @@ Turn off the wearing detection switch.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 

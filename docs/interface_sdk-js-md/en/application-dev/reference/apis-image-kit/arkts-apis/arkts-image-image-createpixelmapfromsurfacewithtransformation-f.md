@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPixelMapFromSurfaceWithTransformation
@@ -31,7 +31,7 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | A Promise of PixelMap instance if the operation is successful. Otherwise, an exception will be thrown. |
+| Promise&lt;PixelMap&gt; | A Promise of PixelMap instance if the operation is successful. Otherwise, an exception will be thrown. |
 
 **Error codes:**
 

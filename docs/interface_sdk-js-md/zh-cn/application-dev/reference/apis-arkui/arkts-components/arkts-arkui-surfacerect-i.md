@@ -28,7 +28,9 @@
 offsetX?: number
 ```
 
-surface矩形相对于XComponent左上角的X坐标。单位：px。
+surface矩形相对于XComponent左上角的X坐标。
+
+单位：px。
 
 **类型：** number
 
@@ -46,7 +48,9 @@ surface矩形相对于XComponent左上角的X坐标。单位：px。
 offsetY?: number
 ```
 
-surface矩形相对于XComponent左上角的Y坐标。单位：px。
+surface矩形相对于XComponent左上角的Y坐标。
+
+单位：px。
 
 **类型：** number
 
@@ -64,7 +68,9 @@ surface矩形相对于XComponent左上角的Y坐标。单位：px。
 surfaceHeight: number
 ```
 
-surface矩形的高度。单位：px。
+surface矩形的高度。
+
+单位：px。
 
 **类型：** number
 
@@ -82,7 +88,9 @@ surface矩形的高度。单位：px。
 surfaceWidth: number
 ```
 
-surface矩形的宽度。单位：px。
+surface矩形的宽度。
+
+单位：px。
 
 **类型：** number
 

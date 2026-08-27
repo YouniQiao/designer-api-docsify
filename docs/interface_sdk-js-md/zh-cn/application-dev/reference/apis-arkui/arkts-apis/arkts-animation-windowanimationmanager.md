@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import windowAnimationManager from '@kit.ArkUI';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -21,9 +21,9 @@ import windowAnimationManager from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [minimizeWindowWithAnimation(窗口动画管理)](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) | 最小化动画目标窗口，并返回动画完成的回调。使用callback异步回调。 |
-| [minimizeWindowWithAnimation(窗口动画管理)](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) | 最小化动画目标窗口，并返回动画完成的回调。使用Promise异步回调。 |
-| [setController(窗口动画管理)](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md) | 设置窗口动画控制器。窗口动画控制器的说明请参考[WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md)。在使用windowAnimationManager的其他接口前，需要预先调用本接口设置窗口动画控制器。 |
+| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) | 最小化动画目标窗口，并返回动画完成的回调。使用callback异步回调。 |
+| [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md) | 最小化动画目标窗口，并返回动画完成的回调。使用Promise异步回调。 |
+| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md) | 设置窗口动画控制器。窗口动画控制器的说明请参考[WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md)。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -31,8 +31,8 @@ import windowAnimationManager from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [RRect(窗口动画管理)](arkts-arkui-windowanimationmanager-rrect-i-sys.md) | 圆角矩形。 |
-| [WindowAnimationController(窗口动画管理)](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | 窗口动画控制器。在创建一个WindowAnimationController对象时，需要实现其中的所有回调函数。 |
-| [WindowAnimationFinishedCallback(窗口动画管理)](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | 动画完成后的回调。 |
-| [WindowAnimationTarget(窗口动画管理)](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | 动画目标窗口，用来实现动画。 |
+| [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md) | 圆角矩形。 |
+| [WindowAnimationController](arkts-arkui-windowanimationmanager-windowanimationcontroller-i-sys.md) | 窗口动画控制器。在创建一个WindowAnimationController对象时，需要实现其中的所有回调函数。 |
+| [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | 动画完成后的回调。 |
+| [WindowAnimationTarget](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md) | 动画目标窗口，用来实现动画。 |
 <!--DelEnd-->

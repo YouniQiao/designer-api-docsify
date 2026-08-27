@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import floatView from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## unbind
@@ -32,7 +32,7 @@ Unbinds the float view and floating ball. The unbinding can be performed only af
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -79,7 +79,7 @@ Obtains the voice mailbox number of the SIM card in a specified slot.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the voice mailbox number. returns an empty string if no voice mailbox number is written into the SIM card. |
+| Promise&lt;string&gt; | Returns the voice mailbox number. returns an empty string if no voice mailbox number is written into the SIM card. |
 
 **Error codes:**
 

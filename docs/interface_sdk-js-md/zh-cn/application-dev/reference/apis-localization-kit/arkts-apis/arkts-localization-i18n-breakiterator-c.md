@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## current
@@ -225,7 +225,7 @@ next(index?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 否 | 换行迭代器将要移动的可换行点数，取值为整数。 正数表示向后移动index个可换行点，负数表示向前移动index个可换行点。 默认值：1。 |
+| index | number | 否 | 换行迭代器将要移动的可换行点数，取值为整数。正数表示向后移动index个可换行点，负数表示向前移动index个可换行点。默认值：1。 |
 
 **返回值：**
 

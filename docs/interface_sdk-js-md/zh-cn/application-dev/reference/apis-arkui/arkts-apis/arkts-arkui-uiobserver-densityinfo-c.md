@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import uiObserver from '@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## context
@@ -36,7 +36,9 @@ context: UIContext
 density: number
 ```
 
-变化后的屏幕像素密度。取值范围：[0, +∞)
+变化后的屏幕像素密度。
+
+取值范围：[0, +∞)
 
 **类型：** number
 

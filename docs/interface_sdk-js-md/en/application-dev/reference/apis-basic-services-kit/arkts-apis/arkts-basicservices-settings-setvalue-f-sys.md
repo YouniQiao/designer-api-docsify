@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import settings from '@kit.BasicServicesKit';
-import settingsLite from '@kit.BasicServicesKitLite';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## setValue
@@ -107,7 +106,7 @@ Saves a character string name and its value to the database.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Returns { |
+| Promise&lt;boolean&gt; | Returns { |
 
 **Examples**
 

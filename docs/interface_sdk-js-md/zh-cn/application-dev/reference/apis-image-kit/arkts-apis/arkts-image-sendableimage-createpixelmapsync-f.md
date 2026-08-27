@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendableImage from '@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## createPixelMapSync
@@ -29,7 +29,7 @@ Create PixelMap by data buffer.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
 
 **错误码：**
 

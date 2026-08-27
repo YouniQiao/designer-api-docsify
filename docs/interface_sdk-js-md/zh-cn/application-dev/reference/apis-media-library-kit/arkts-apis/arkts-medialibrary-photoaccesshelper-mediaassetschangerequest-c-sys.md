@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## setHidden
@@ -112,7 +112,7 @@ setIsRecentShow(isRencentShow: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isRencentShow | boolean | 是 | 表示当前资产是否在“最近”列表中显示。true表示显示，false表示不显示。 **false** otherwise. |
+| isRencentShow | boolean | 是 | 表示当前资产是否在“最近”列表中显示。true表示显示，false表示不显示。**false** otherwise. |
 
 **错误码：**
 
@@ -236,7 +236,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 readonly comment: string
 ```
 
-用于[MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md) 类型校验。 如果类（如MediaAssetsChangeRequest）对象可以访问，就说明该类是MediaChangeRequest的实现类。
+用于[MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md)类型校验。如果类（如MediaAssetsChangeRequest）对象可以访问，就说明该类是MediaChangeRequest的实现类。
 
 **类型：** string
 

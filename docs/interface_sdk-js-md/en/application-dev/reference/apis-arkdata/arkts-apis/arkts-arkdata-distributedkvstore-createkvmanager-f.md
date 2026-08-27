@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import distributedKVStore from '@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## createKVManager
@@ -24,13 +24,13 @@ Creates a **KVManager** instance for KV store management.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | Configuration of the **KVManager** instance, including the bundle name (cannot be empty) of the caller and user information. |
+| config | KVManagerConfig | Yes | Configuration of the **KVManager** instance, including the bundle name (cannot be empty) of the caller and user information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [KVManager](arkts-arkdata-distributeddata-kvmanager-i.md) | KVManager** instance created. |
+| KVManager | KVManager** instance created. |
 
 **Error codes:**
 

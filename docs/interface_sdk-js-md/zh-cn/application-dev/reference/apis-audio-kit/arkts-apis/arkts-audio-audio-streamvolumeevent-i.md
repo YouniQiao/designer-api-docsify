@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## previousVolume
@@ -19,7 +18,7 @@ import audioHaptic from '@kit.AudioKitHaptic';
 previousVolume?: number
 ```
 
-变化前的音量值。 取值限定为整数。
+变化前的音量值。取值限定为整数。
 
 **类型：** number
 
@@ -47,7 +46,9 @@ streamUsage: StreamUsage
 updateUi: boolean
 ```
 
-标识是否会显示系统本身的音量条，true表示会显示系统音量条，false表示不会显示系统音量条。若应用内含自定义音量条，建议根据此参数动态控制其显示：当updateUi为true时不显示自定义音量条，为false时显示自定义音量条，从而避免出现系统本身音量条与应用自定义音量条同时显示或不显示的问题。
+标识是否会显示系统本身的音量条，true表示会显示系统音量条，false表示不会显示系统音量条。
+
+若应用内含自定义音量条，建议根据此参数动态控制其显示：当updateUi为true时不显示自定义音量条，为false时显示自定义音量条，从而避免出现系统本身音量条与应用自定义音量条同时显示或不显示的问题。
 
 **类型：** boolean
 

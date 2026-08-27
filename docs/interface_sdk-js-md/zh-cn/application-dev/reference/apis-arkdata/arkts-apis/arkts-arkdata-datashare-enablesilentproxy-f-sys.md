@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import dataShare from '@kit.ArkData';
-import dataSharePredicates from '@kit.ArkDataPredicates';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## enableSilentProxy
@@ -13,7 +12,10 @@ import dataSharePredicates from '@kit.ArkDataPredicates';
 function enableSilentProxy(context: Context, uri?: string): Promise<void>
 ```
 
-开启静默访问。使用Promise异步回调。使用规则：  
+开启静默访问。使用Promise异步回调。
+
+使用规则：
+
 - 数据提供方调用此接口，来开启静默访问功能。  
 - 此接口设置的开启结果在校验的时候是搭配data_share_config.json文件中isSilentProxyEnable字段进行工作的。支持的配置可参考  
 [data_share_config.json配置](../../../database/share-data-by-datashareextensionability-sys.md)。  
@@ -33,13 +35,13 @@ Datashare的开启状态。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用的上下文环境。 |
-| uri | string | 否 | 要开启的数据提供方的数据路径。1、全局开关状态：入参不带uri、uri为undefined、uri为null，会清空掉之前设置的所有uri开关状态，开启数据提供方静默访问 。2、精准开关状态：uri的入参为固定的值，仅开启该uri对应的静默访问。在调用datashareHelper相关接口时，优先精准匹配uri的开关状态。如果匹配不到，继续匹配全局的开关状态。uri格式：datashare:///{bundleName}/{moduleName}/{storeName}/{tableName} |
+| uri | string | 否 | 要开启的数据提供方的数据路径。1、全局开关状态：入参不带uri、uri为undefined、uri为null，会清空掉之前设置的所有uri开关状态，开启数据提供方静默访问。2、精准开关状态：uri的入参为固定的值，仅开启该uri对应的静默访问。在调用datashareHelper相关接口时，优先精准匹配uri的开关状态。如果匹配不到，继续匹配全局的开关状态。uri格式：datashare:///{bundleName}/{moduleName}/{storeName}/{tableName} |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

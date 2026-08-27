@@ -1,6 +1,8 @@
 # ImageModifier
 
-Defines Image Modifier@extends ImageAttribute @implements AttributeModifier&lt;ImageAttribute&gt;
+Defines Image Modifier
+
+@extends ImageAttribute @implements AttributeModifier&lt;ImageAttribute&gt;
 
 **Inheritance/Implementation:** ImageModifier extends [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md#imageattribute) and implements AttributeModifier<ImageAttribute>
 

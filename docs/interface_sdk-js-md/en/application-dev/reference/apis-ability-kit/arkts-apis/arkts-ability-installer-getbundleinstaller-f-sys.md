@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import installer from '@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## getBundleInstaller
@@ -72,7 +72,7 @@ Obtains a BundleInstaller object. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BundleInstaller & gt; | BundleInstaller object. |
+| Promise&lt;BundleInstaller&gt; | BundleInstaller object. |
 
 **Error codes:**
 

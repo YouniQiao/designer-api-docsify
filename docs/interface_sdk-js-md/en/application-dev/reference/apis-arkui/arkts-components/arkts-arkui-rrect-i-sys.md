@@ -1,6 +1,8 @@
 # RRect (System API)
 
-Round rect.@interface RRect
+Round rect.
+
+@interface RRect
 
 **Since:** 9
 

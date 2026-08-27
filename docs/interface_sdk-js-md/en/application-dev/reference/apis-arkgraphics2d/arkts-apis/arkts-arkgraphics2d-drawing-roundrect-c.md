@@ -18,7 +18,7 @@ Rounded rectangle.
 ## Modules to Import
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -37,7 +37,7 @@ Copies a rounded rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | Rounded rectangle to be copied. |
+| roundRect | RoundRect | Yes | Rounded rectangle to be copied. |
 
 **Examples**
 

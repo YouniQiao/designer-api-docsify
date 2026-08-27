@@ -35,7 +35,9 @@ Click event of the new component constructed using the builder.
 label: string
 ```
 
-Text label of the button.Note: If the text is longer than the width of the button, it is truncated.
+Text label of the button.
+
+Note: If the text is longer than the width of the button, it is truncated.
 
 **Type:** string
 
@@ -53,9 +55,15 @@ Text label of the button.Note: If the text is longer than the width of the butto
 pressed: boolean
 ```
 
-Whether the button is pressed.  
-**true**: pressed; **false**: not pressed.Default value: **false**  
-**NOTE：**This setting applies to the original button size, not to any new component constructed using the builder.
+Whether the button is pressed.
+
+**true**: pressed; **false**: not pressed.
+
+Default value: **false**
+
+**NOTE：**
+
+This setting applies to the original button size, not to any new component constructed using the builder.
 
 **Type:** boolean
 

@@ -1,6 +1,8 @@
 # StationInfo（系统接口）
 
-WLAN站点信息。@interface StationInfo
+WLAN站点信息。
+
+@interface StationInfo
 
 **起始版本：** 7
 
@@ -15,10 +17,7 @@ WLAN站点信息。@interface StationInfo
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## ipAddress

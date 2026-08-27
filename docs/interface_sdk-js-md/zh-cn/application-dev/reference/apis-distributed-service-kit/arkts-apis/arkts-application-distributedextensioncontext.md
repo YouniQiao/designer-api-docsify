@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import DistributedExtensionContext from '@kit.DistributedServiceKit';
+import { DistributedExtensionContext } from '@kit.DistributedServiceKit';
 ```
 
 ## 汇总
@@ -12,4 +12,4 @@ import DistributedExtensionContext from '@kit.DistributedServiceKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [DistributedExtensionContext(Distributed Extension Context)](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md) | 用于分布式扩展功能的实现。 |
+| [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md) | 用于分布式扩展功能的实现。 |

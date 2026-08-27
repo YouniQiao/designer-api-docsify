@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usbManager from '@kit.BasicServicesKit';
-import serialManager from '@kit.BasicServicesKit.serial';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## getPortList
@@ -27,7 +26,7 @@ Obtains the list of all physical USB ports. When the developer mode is disabled,
 
 | Type | Description |
 | --- | --- |
-| Array & lt;USBPort & gt; | List of physical USB ports. |
+| Array&lt;USBPort&gt; | List of physical USB ports. |
 
 **Error codes:**
 

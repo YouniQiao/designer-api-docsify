@@ -21,7 +21,11 @@
 fullscreen: boolean
 ```
 
-当前视频是否进入全屏播放状态。true：进入全屏播放状态；false：未进入全屏播放状态。默认值：false
+当前视频是否进入全屏播放状态。
+
+true：进入全屏播放状态；false：未进入全屏播放状态。
+
+默认值：false
 
 **类型：** boolean
 

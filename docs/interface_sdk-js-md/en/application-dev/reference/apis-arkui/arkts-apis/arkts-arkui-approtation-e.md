@@ -1,6 +1,8 @@
 # AppRotation
 
-Enumerates the app rotation.@enum { number }
+Enumerates the app rotation.
+
+@enum { number }
 
 **Since:** 12
 

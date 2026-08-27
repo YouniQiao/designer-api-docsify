@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import errorManager from '@kit.AbilityKit';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## off('error')
@@ -12,7 +12,9 @@ import errorManager from '@kit.AbilityKit';
 function off(type: 'error', observerId: number, callback: AsyncCallback<void>): void
 ```
 
-注销错误观测器。使用callback异步返回。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注销错误观测器。使用callback异步返回。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 9
 
@@ -65,7 +67,9 @@ try {
 function off(type: 'error', observerId: number): Promise<void>
 ```
 
-注销错误观测器。使用Promise异步返回。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注销错误观测器。使用Promise异步返回。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 9
 
@@ -84,7 +88,7 @@ function off(type: 'error', observerId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -123,7 +127,9 @@ try {
 function off(type: 'loopObserver', observer?: LoopObserver): void
 ```
 
-注销主线程消息处理监听器。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注销主线程消息处理监听器。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 12
 
@@ -136,7 +142,7 @@ function off(type: 'loopObserver', observer?: LoopObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'loopObserver' | 是 | 填写'loopObserver'，表示应用主线程观测器。 |
-| observer | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | 否 | 应用主线程观测器标志。 |
+| observer | LoopObserver | 否 | 应用主线程观测器标志。 |
 
 **错误码：**
 
@@ -168,7 +174,9 @@ try {
 function off(type: 'unhandledRejection', observer?: UnhandledRejectionObserver): void
 ```
 
-注销被拒绝promise监听器。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注销被拒绝promise监听器。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 12
 
@@ -181,7 +189,7 @@ function off(type: 'unhandledRejection', observer?: UnhandledRejectionObserver):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'unhandledRejection' | 是 | 填写'unhandledRejection'，表示注册被拒绝promise监听器。 |
-| observer | [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md) | 否 | 注册了被拒绝promise监听器。建议使用该参数，缺省时默认清除所有通过on注册的相同env的observer，否则删除指定 observer。 |
+| observer | [UnhandledRejectionObserver](arkts-ability-errormanager-unhandledrejectionobserver-t.md) | 否 | 注册了被拒绝promise监听器。建议使用该参数，缺省时默认清除所有通过on注册的相同env的observer，否则删除指定observer。 |
 
 **错误码：**
 
@@ -248,7 +256,9 @@ errorManager.off('unhandledRejection', observer);
 function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void
 ```
 
-注销被拒绝promise监听器，注销后无法监听进程中的promise异常。如果传入的回调不在通过on方法注册的回调队列中，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
+注销被拒绝promise监听器，注销后无法监听进程中的promise异常。
+
+如果传入的回调不在通过on方法注册的回调队列中，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 18
 
@@ -261,7 +271,7 @@ function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'globalUnhandledRejectionDetected' | 是 | 填写'globalUnhandledRejectionDetected'，表示注册被拒绝promise监听器。 |
-| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | 否 | 由on接口注册的被拒绝promise的callback。建议使用该参数，缺省时默认清除所有通过on注册的相同env的callback，否则删除指定 callback。 |
+| observer | [GlobalObserver](arkts-ability-errormanager-globalobserver-t.md) | 否 | 由on接口注册的被拒绝promise的callback。建议使用该参数，缺省时默认清除所有通过on注册的相同env的callback，否则删除指定callback。 |
 
 **错误码：**
 
@@ -304,7 +314,11 @@ errorManager.off('globalUnhandledRejectionDetected', promiseFunc);
 function off(type: 'freeze', observer?: FreezeObserver): void
 ```
 
-取消之前注册的应用主线程freeze监听。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。如果传入的回调与通过on方法注册回调不一致，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
+取消之前注册的应用主线程freeze监听。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+
+如果传入的回调与通过on方法注册回调不一致，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 18
 
@@ -352,7 +366,9 @@ try {
 function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void
 ```
 
-注销错误观测器，注销之前注册在同一线程的callback全局监听。如果传入的回调不在通过on方法注册的回调队列中，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
+注销错误观测器，注销之前注册在同一线程的callback全局监听。
+
+如果传入的回调不在通过on方法注册的回调队列中，将抛出16300004错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 18
 

@@ -23,7 +23,7 @@ Send key event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | KeyEvent to be sent. |
+| event | KeyEvent | Yes | KeyEvent to be sent. |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cloudSyncManager from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## changeAppCloudSwitch
@@ -32,7 +32,7 @@ Changes the device-cloud file sync switch for an application. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

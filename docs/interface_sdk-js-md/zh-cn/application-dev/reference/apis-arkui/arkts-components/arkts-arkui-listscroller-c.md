@@ -43,7 +43,7 @@ closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | 否 | 收起[EXPANDED](arkts-arkui-swipeactionstate-e.md)状态的ListItem的回 调事件集合。不传入时不设置回调事件。 |
+| options | [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | 否 | 收起[EXPANDED](arkts-arkui-swipeactionstate-e.md)状态的ListItem的回调事件集合。不传入时不设置回调事件。 |
 
 **错误码：**
 
@@ -144,9 +144,9 @@ scrollToItemInGroup(index: number, indexInGroup:number, smooth?: boolean, align?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 要滑动到的目标元素所在的ListItemGroup在当前容器中的索引值。    **说明：** index值设置成负值或者大于当前容器子组件的最大索引值， 视为异常值，本次跳转不生效。 |
-| indexInGroup | number | 是 | 要滑动到的目标元素在index指定的ListItemGroup中的索引值。    **说明：** indexInGroup值设置成负值或者大 于index指定的ListItemGroup容器子组件的最大索引值，视为异常值，本次跳转不生效。 |
-| smooth | boolean | 否 | 设置该次滑动是否有动效，true表示有动效，false表示没有动效。默认值：false   **说明：** 开启动效时，会对经过的所有item进行加载 和布局计算，当大量加载item时会导致性能问题。 |
+| index | number | 是 | 要滑动到的目标元素所在的ListItemGroup在当前容器中的索引值。    **说明：** index值设置成负值或者大于当前容器子组件的最大索引值，视为异常值，本次跳转不生效。 |
+| indexInGroup | number | 是 | 要滑动到的目标元素在index指定的ListItemGroup中的索引值。    **说明：** indexInGroup值设置成负值或者大于index指定的ListItemGroup容器子组件的最大索引值，视为异常值，本次跳转不生效。 |
+| smooth | boolean | 否 | 设置该次滑动是否有动效，true表示有动效，false表示没有动效。默认值：false   **说明：** 开启动效时，会对经过的所有item进行加载和布局计算，当大量加载item时会导致性能问题。 |
 | align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | 否 | 指定滑动到的元素与当前容器的对齐方式。默认值：ScrollAlign.START。 |
 
 **错误码：**

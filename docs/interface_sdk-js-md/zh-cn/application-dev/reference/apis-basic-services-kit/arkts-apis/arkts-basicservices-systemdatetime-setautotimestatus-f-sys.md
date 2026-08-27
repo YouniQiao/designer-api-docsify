@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import systemDateTime from '@kit.BasicServicesKit';
+import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
 ## setAutoTimeStatus
@@ -32,7 +32,7 @@ function setAutoTimeStatus(status: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

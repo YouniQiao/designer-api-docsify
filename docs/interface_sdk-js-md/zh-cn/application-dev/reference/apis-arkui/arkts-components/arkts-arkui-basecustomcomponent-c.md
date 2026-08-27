@@ -2,7 +2,7 @@
 
 自定义组件基类，它是从类CustomComponent迁移过来的。
 
-**继承/实现关系：** BaseCustomComponent extends [CommonAttribute](arkts-arkui-common-attribute.md#commonattribute)
+**继承/实现关系：** BaseCustomComponent extends [CommonAttribute](arkts-arkui-common-attribute.md)
 
 **起始版本：** 18
 
@@ -19,7 +19,7 @@
 aboutToAppear?(): void
 ```
 
-aboutToAppear函数在创建自定义组件的新实例后，在其build()函数执行前调用。允许在aboutToAppear函数中改变 [状态变量](../../../ui/state-management/arkts-state-management-glossary.md#state-variables状态变量)，更改将在后续执行build()函数中生效。实 现[自定义布局](arkts-arkui-layoutable-i.md)的自定义组件的aboutToAppear生命周期在布局过程中触发。具体使用说明，详见 [自定义组件生命周期指南](../../../ui/state-management/arkts-page-custom-components-lifecycle.md)。
+aboutToAppear函数在创建自定义组件的新实例后，在其build()函数执行前调用。允许在aboutToAppear函数中改变[状态变量](../../../ui/state-management/arkts-state-management-glossary.md#state-variables状态变量)，更改将在后续执行build()函数中生效。实现[自定义布局](arkts-arkui-layoutable-i.md)的自定义组件的aboutToAppear生命周期在布局过程中触发。具体使用说明，详见[自定义组件生命周期指南](../../../ui/state-management/arkts-page-custom-components-lifecycle.md)。
 
 > **说明：**
 > 
@@ -43,7 +43,7 @@ aboutToAppear函数在创建自定义组件的新实例后，在其build()函数
 aboutToDisappear?(): void
 ```
 
-aboutToDisappear函数在自定义组件析构销毁时执行。不允许在aboutToDisappear函数中改变状态变量，特别是\@Link变量的修改可能会导致应用行为不稳定。具体使用说明，详见 [自定义组件生命周期指南](../../../ui/state-management/arkts-page-custom-components-lifecycle.md)。不建议在aboutToDisappear函数调用后再触发 例如自定义弹窗的创建等逻辑，这可能会因为组件树信息丢失导致应用行为异常，例如 [@Consume](../../../ui/state-management/arkts-provide-and-consume.md)找不到对应的 [@Provide](../../../ui/state-management/arkts-provide-and-consume.md)、弹窗内白屏不显示组件等。
+aboutToDisappear函数在自定义组件析构销毁时执行。不允许在aboutToDisappear函数中改变状态变量，特别是\@Link变量的修改可能会导致应用行为不稳定。具体使用说明，详见[自定义组件生命周期指南](../../../ui/state-management/arkts-page-custom-components-lifecycle.md)。不建议在aboutToDisappear函数调用后再触发例如自定义弹窗的创建等逻辑，这可能会因为组件树信息丢失导致应用行为异常，例如[@Consume](../../../ui/state-management/arkts-provide-and-consume.md)找不到对应的[@Provide](../../../ui/state-management/arkts-provide-and-consume.md)、弹窗内白屏不显示组件等。
 
 > **说明：**
 > 
@@ -64,7 +64,7 @@ aboutToDisappear函数在自定义组件析构销毁时执行。不允许在abou
 aboutToRecycle?(): void
 ```
 
-组件的生命周期回调，在可复用组件从节点树上被加入到复用缓存之前调用。当该组件后续从复用缓存中被重新复用时，将触发 aboutToReuse生命周期回调。在频繁调用 场景下，应避免在其中执行耗时操作，否则可能导致丢帧卡顿。
+组件的生命周期回调，在可复用组件从节点树上被加入到复用缓存之前调用。当该组件后续从复用缓存中被重新复用时，将触发aboutToReuse生命周期回调。在频繁调用场景下，应避免在其中执行耗时操作，否则可能导致丢帧卡顿。
 
 **起始版本：** 10
 
@@ -335,7 +335,7 @@ struct MyComponent {
 onBackPress?(): void | boolean
 ```
 
-在router路由页面（即[\@Entry](../../../ui/state-management/arkts-create-custom-components.md#entry)装饰的自定义组件）生效，当用户点击返回按钮时 触发。返回true表示页面自己处理返回逻辑，不进行页面路由；返回false表示使用默认的路由返回逻辑，不设置返回值按照false处理。典型使用场景包括：页面有未保存的编辑内容时阻止返回以提示用户保存、弹出自定义确认对话框替代系统默 认返回行为等。
+在router路由页面（即[\@Entry](../../../ui/state-management/arkts-create-custom-components.md#entry)装饰的自定义组件）生效，当用户点击返回按钮时触发。返回true表示页面自己处理返回逻辑，不进行页面路由；返回false表示使用默认的路由返回逻辑，不设置返回值按照false处理。典型使用场景包括：页面有未保存的编辑内容时阻止返回以提示用户保存、弹出自定义确认对话框替代系统默认返回行为等。
 
 **起始版本：** 7
 
@@ -349,7 +349,7 @@ onBackPress?(): void | boolean
 onDidBuild?(): void
 ```
 
-onDidBuild函数在自定义组件的build()函数执行后调用，开发者可以在这个阶段实现埋点数据上报等不影响实际UI的功能。具体使用说明，详见 [自定义组件生命周期指南](../../../ui/state-management/arkts-page-custom-components-lifecycle.md)。
+onDidBuild函数在自定义组件的build()函数执行后调用，开发者可以在这个阶段实现埋点数据上报等不影响实际UI的功能。具体使用说明，详见[自定义组件生命周期指南](../../../ui/state-management/arkts-page-custom-components-lifecycle.md)。
 
 **起始版本：** 12
 
@@ -365,7 +365,7 @@ onDidBuild函数在自定义组件的build()函数执行后调用，开发者可
 onFormRecover?(statusData: string): void
 ```
 
-onFormRecover回调函数在卡片恢复时执行，卡片提供方可以拿到卡片回收时卡片管理服务代保存的数据，该数据可以通过 [onFormRecycle](#onformrecycle)卡片回收回调函数保存 到卡片管理服务。
+onFormRecover回调函数在卡片恢复时执行，卡片提供方可以拿到卡片回收时卡片管理服务代保存的数据，该数据可以通过[onFormRecycle](#onformrecycle)卡片回收回调函数保存到卡片管理服务。
 
 **起始版本：** 11
 
@@ -438,7 +438,7 @@ struct WidgetCard {
 onFormRecycle?(): string
 ```
 
-onFormRecycle回调函数在卡片回收时执行，卡片提供方可以返回需要卡片管理服务代保存的数据，在卡片恢复时通过 [onFormRecover](#onformrecover)接口传给卡片提供方。
+onFormRecycle回调函数在卡片回收时执行，卡片提供方可以返回需要卡片管理服务代保存的数据，在卡片恢复时通过[onFormRecover](#onformrecover)接口传给卡片提供方。
 
 **起始版本：** 11
 
@@ -541,7 +541,7 @@ ArkUI框架会在自定义组件确定尺寸时，将该自定义组件的节点
 onNewParam?(param: ESObject): void
 ```
 
-该回调仅生效于由[\@Entry](../../../ui/state-management/arkts-create-custom-components.md#entry)装饰的、作为 [router](../arkts-apis/arkts-router.md)路由页面存在的自定义组件。当之前存在于路由栈中的页面，通过单实例模式 [RouterMode](../arkts-apis/arkts-arkui-router-routermode-e.md)移动到栈顶时触发该回调。
+该回调仅生效于由[\@Entry](../../../ui/state-management/arkts-create-custom-components.md#entry)装饰的、作为[router](../arkts-apis/arkts-router.md)路由页面存在的自定义组件。当之前存在于路由栈中的页面，通过单实例模式[RouterMode](../arkts-apis/arkts-arkui-router-routermode-e.md)移动到栈顶时触发该回调。
 
 **起始版本：** 19
 
@@ -563,7 +563,7 @@ onNewParam?(param: ESObject): void
 onPageHide?(): void
 ```
 
-router路由页面（即[\@Entry](../../../ui/state-management/arkts-create-custom-components.md#entry)装饰的自定义组件）每次隐藏时触发一次，包括路由 跳转、应用进入后台等场景。
+router路由页面（即[\@Entry](../../../ui/state-management/arkts-create-custom-components.md#entry)装饰的自定义组件）每次隐藏时触发一次，包括路由跳转、应用进入后台等场景。
 
 > **说明：**
 > 
@@ -582,7 +582,7 @@ router路由页面（即[\@Entry](../../../ui/state-management/arkts-create-cust
 onPageShow?(): void
 ```
 
-router路由页面（即[\@Entry](../../../ui/state-management/arkts-create-custom-components.md#entry)装饰的自定义组件）每次显示时触发一次，包括路由 跳转、应用进入前台等场景。建议在该回调函数内避免执行高耗时操作阻塞主线程，以免影响页面显示性能。
+router路由页面（即[\@Entry](../../../ui/state-management/arkts-create-custom-components.md#entry)装饰的自定义组件）每次显示时触发一次，包括路由跳转、应用进入前台等场景。建议在该回调函数内避免执行高耗时操作阻塞主线程，以免影响页面显示性能。
 
 **起始版本：** 7
 
@@ -624,7 +624,7 @@ ArkUI框架会在自定义组件确定位置时，将该自定义组件的子节
 onWillApplyTheme?(theme: Theme): void
 ```
 
-onWillApplyTheme函数用于获取当前组件上下文的Theme对象，在创建自定义组件的新实例后，在执行其build()函数之前执行。与aboutToAppear不同，onWillApplyTheme用于基于Theme对象初 始化状态变量，aboutToAppear用于通用初始化逻辑。允许在onWillApplyTheme函数中改变状态变量，更改将在后续执行build()函数中生效。
+onWillApplyTheme函数用于获取当前组件上下文的Theme对象，在创建自定义组件的新实例后，在执行其build()函数之前执行。与aboutToAppear不同，onWillApplyTheme用于基于Theme对象初始化状态变量，aboutToAppear用于通用初始化逻辑。允许在onWillApplyTheme函数中改变状态变量，更改将在后续执行build()函数中生效。
 
 > **说明：**
 > 

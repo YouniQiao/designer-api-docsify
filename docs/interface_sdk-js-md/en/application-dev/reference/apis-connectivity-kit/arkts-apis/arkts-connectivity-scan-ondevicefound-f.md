@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import scan from '@kit.ConnectivityKit';
+import { scan } from '@kit.ConnectivityKit';
 ```
 
 ## onDeviceFound
@@ -12,7 +12,9 @@ import scan from '@kit.ConnectivityKit';
 function onDeviceFound(callback: Callback<ScanResults[]>): void
 ```
 
-Subscribes to NearLink scanning results. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to NearLink scanning results. This API uses an asynchronous callback to return the result.
+
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 

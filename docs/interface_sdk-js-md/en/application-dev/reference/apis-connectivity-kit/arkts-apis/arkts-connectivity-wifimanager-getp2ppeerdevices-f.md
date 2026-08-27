@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getP2pPeerDevices
@@ -25,7 +24,7 @@ Obtain the information about the found devices.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;WifiP2pDevice[] & gt; | Returns p2p device information. |
+| Promise&lt;WifiP2pDevice[]&gt; | Returns p2p device information. |
 
 **Error codes:**
 

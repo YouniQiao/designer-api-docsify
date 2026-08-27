@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-dataprotectionkit-->
 
-- [@ohos.dlpPermission](arkts-dlppermission.md)
+- [@ohos.dlpPermission(数据防泄漏)](arkts-dlppermission.md)
   - [cancelRetentionState](arkts-dataprotection-dlppermission-cancelretentionstate-f.md)
   - [cleanSandboxAppConfig](arkts-dataprotection-dlppermission-cleansandboxappconfig-f.md)
   - [closeOpenedEnterpriseDlpFiles](arkts-dataprotection-dlppermission-closeopenedenterprisedlpfiles-f.md)
@@ -64,7 +64,7 @@
   <!--Del-->
   - [GatheringPolicyType(系统接口)](arkts-dataprotection-dlppermission-gatheringpolicytype-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.dlpSetDlpFeature](arkts-dlpsetdlpfeature.md)<!--DelEnd-->
+- [@ohos.dlpSetDlpFeature(设置数据防泄漏入口)](arkts-dlpsetdlpfeature.md)<!--DelEnd-->
   <!--Del-->
   - [setDlpFeature(系统接口)](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -73,7 +73,7 @@
   - [StatusInfoResult(系统接口)](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DlpFeatureStatus(系统接口)](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md)<!--DelEnd-->
-- [@ohos.security.identifySensitiveContent](arkts-security-identifysensitivecontent.md)
+- [@ohos.security.identifySensitiveContent(Identify sensitive file)](arkts-security-identifysensitivecontent.md)
   - [scanFile](arkts-dataprotection-identifysensitivecontent-scanfile-f.md)
   - [MatchResult](arkts-dataprotection-identifysensitivecontent-matchresult-i.md)
   - [Policy](arkts-dataprotection-identifysensitivecontent-policy-i.md)

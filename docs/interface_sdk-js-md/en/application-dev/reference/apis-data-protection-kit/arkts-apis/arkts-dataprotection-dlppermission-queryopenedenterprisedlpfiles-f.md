@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## queryOpenedEnterpriseDlpFiles
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function queryOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<Array<string>>
 ```
 
-Queries the URIs of enterprise DLP files that have been opened and meet the specified options. This API uses a promise to return the result.This API is called when the system needs to manage or track enterprise DLP files that have been opened by the current application. It can be used in scenarios such as file status check and resource management.
+Queries the URIs of enterprise DLP files that have been opened and meet the specified options. This API uses a promise to return the result.
+
+This API is called when the system needs to manage or track enterprise DLP files that have been opened by the current application. It can be used in scenarios such as file status check and resource management.
 
 > **NOTE：**
 > 
@@ -42,7 +44,7 @@ Queries the URIs of enterprise DLP files that have been opened and meet the spec
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the URI list of the target enterprise DLP files that have been opened. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URI list of the target enterprise DLP files that have been opened. |
 
 **Error codes:**
 

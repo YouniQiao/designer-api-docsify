@@ -10,7 +10,6 @@ Declare component SwipeRefresher
 
 ```TypeScript
 import { SwipeRefresher } from '@kit.ArkUI';
-import { SwipeRefresherV2 } from '@kit.ArkUIV2';
 ```
 
 ## content

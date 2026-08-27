@@ -17,7 +17,9 @@ Sets the spacing between child components along the main axis or cross axis of t
 cross?: LengthMetrics
 ```
 
-Space on the cross axis of the **Flex** component.Default value: **LengthMetrics.px(0)**.
+Space on the cross axis of the **Flex** component.
+
+Default value: **LengthMetrics.px(0)**.
 
 **Type:** LengthMetrics
 
@@ -35,7 +37,9 @@ Space on the cross axis of the **Flex** component.Default value: **LengthMetrics
 main?: LengthMetrics
 ```
 
-Space on the main axis of the **Flex** component.Default value: **LengthMetrics.px(0)**.
+Space on the main axis of the **Flex** component.
+
+Default value: **LengthMetrics.px(0)**.
 
 **Type:** LengthMetrics
 

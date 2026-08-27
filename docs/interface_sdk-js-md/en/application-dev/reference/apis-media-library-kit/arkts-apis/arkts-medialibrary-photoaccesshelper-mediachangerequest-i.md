@@ -14,7 +14,7 @@ Media change request, which is the parent class of the asset change request and 
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## comment

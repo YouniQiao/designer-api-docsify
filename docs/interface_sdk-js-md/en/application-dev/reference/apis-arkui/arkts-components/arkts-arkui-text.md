@@ -31,7 +31,7 @@ Defines the constructor of Text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | No | Plain text. This parameter takes effect when the child component Span is not included and styled string is not set. Default value: **' '** **NOTE** Priority of displayed content: Styled string > Content of the **Span** component > Text content of the **Text** component. |
+| content | string \| Resource | No | Plain text. This parameter takes effect when the child component Span is not included and styled string is not set. Default value: **' '** **NOTE** Priority of displayed content: Styled string > Content of the **Span** component > Text content of the **Text** component. |
 | value | [TextOptions](arkts-arkui-textoptions-i.md) | No | Initialization options of the component. |
 
 ## Summary
@@ -40,11 +40,19 @@ Defines the constructor of Text.
 
 | Name | Description |
 | --- | --- |
+| [TextMarqueeOptions](arkts-arkui-textmarqueeoptions-i.md) | Describes the initialization options of the **Marquee** component. |
+| [TextOptions](arkts-arkui-textoptions-i.md) | Describes the initialization options of the **Text** component. |
+| [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) | Defines the configuration object for text overflow behavior. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [MarqueeStartPolicy](arkts-arkui-marqueestartpolicy-e.md) | Enumerates the marquee scrolling modes. |
+| [MarqueeState](arkts-arkui-marqueestate-e.md) | Enumerates the return values of the marquee state callback. |
+| [MarqueeUpdatePolicy](arkts-arkui-marqueeupdatepolicy-e.md) | Sets the scrolling policy of the marquee after its attributes are updated. |
+| [TextResponseType](arkts-arkui-textresponsetype-e.md) | Response type of the menu. |
+| [TextSpanType](arkts-arkui-textspantype-e.md) | Provides the span type information. |
 
 ## Examples
 

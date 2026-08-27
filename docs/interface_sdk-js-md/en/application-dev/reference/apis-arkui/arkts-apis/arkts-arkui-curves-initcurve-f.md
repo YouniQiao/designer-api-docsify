@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import curves from '@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## initCurve
@@ -24,10 +24,10 @@ Implements initialization for the interpolation curve, which is used to create a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | [Curve](arkts-arkui-curve-e.md) | No | Curve type.Default value: **Curve.Linear |
+| curve | Curve | No | Curve type.Default value: **Curve.Linear |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | Interpolation curve. |
+| ICurve | Interpolation curve. |

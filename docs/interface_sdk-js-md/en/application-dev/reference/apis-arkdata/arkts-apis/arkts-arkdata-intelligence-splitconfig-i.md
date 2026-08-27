@@ -1,6 +1,8 @@
 # SplitConfig
 
-Manages text chunk process configurations.@interface SplitConfig
+Manages text chunk process configurations.
+
+@interface SplitConfig
 
 **Since:** 15
 
@@ -9,7 +11,7 @@ Manages text chunk process configurations.@interface SplitConfig
 ## Modules to Import
 
 ```TypeScript
-import intelligence from '@kit.ArkData';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## overlapRatio

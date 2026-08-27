@@ -1,18 +1,18 @@
 # Panel
 
-Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺寸调整、位置移动、模式切换等功能。Panel实例通过InputMethodAbility的 [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) 接口获取，使用完毕后需调用 [destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel) 销毁以释放资源。createPanel与destroyPanel必须配对调用。 核心功能概述：   
-- 页面加载：通过[setUiContent](#setuicontent)为面板 加载键盘页面内容，支持加载普通页面和与LocalStorage关联的页面。   
-- 显示与隐藏：通过[show](#show)显示面板，通过 [hide](#hide)隐藏面板。面板的显示/隐藏也可通过订阅on('show')/on('hide')事件 监听状态变化。   
-- 尺寸与位置调整：通过 [resize](#resize)调整面板尺寸，通过 [moveTo](#moveto)移动面板位置，通过 [startMoving](#startmoving)拖拽移动面板，通过 [adjustPanelRect](#adjustpanelrect)/ [updatePanelRect](#updatepanelrect)/ [updateRegion](#updateregion)调整面板区域。   
-- 模式设置：通过[changeFlag](#changeflag)切换面板固定态/浮动态，通过 [setPrivacyMode](#setprivacymode)设置隐私模式，通过 [setImmersiveMode](#setimmersivemode)/ [getImmersiveMode](#getimmersivemode)设置/获取沉浸模式。   
-- 事件监听：通过on('show')/on('hide')/on('sizeChange')监听面板状态变化事件。   
- 面板生命周期： 
-1. 在InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)中创建Panel实例并指定面板类型和标志位。 
-2. 调用[setUiContent](#setuicontent)加载键盘页面内容。 
-3. 调用[show](#show)显示面板，用户可交互。 
-4. 根据需要调用resize、moveTo、changeFlag等接口动态调整面板。 
-5. 使用完毕后调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁面板，释放资源。 
- 下列API均需使用 [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) 获取到Panel实例后，通过实例调用。
+Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺寸调整、位置移动、模式切换等功能。Panel实例通过InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)接口获取，使用完毕后需调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁以释放资源。createPanel与destroyPanel必须配对调用。核心功能概述：  
+- 页面加载：通过[setUiContent](#setuicontent)为面板加载键盘页面内容，支持加载普通页面和与LocalStorage关联的页面。  
+- 显示与隐藏：通过[show](#show)显示面板，通过[hide](#hide)隐藏面板。面板的显示/隐藏也可通过订阅on('show')/on('hide')事件监听状态变化。  
+- 尺寸与位置调整：通过[resize](#resize)调整面板尺寸，通过[moveTo](#moveto)移动面板位置，通过[startMoving](#startmoving)拖拽移动面板，通过[adjustPanelRect](#adjustpanelrect)/ [updatePanelRect](#updatepanelrect)/ [updateRegion](#updateregion)调整面板区域。  
+- 模式设置：通过[changeFlag](#changeflag)切换面板固定态/浮动态，通过[setPrivacyMode](#setprivacymode)设置隐私模式，通过[setImmersiveMode](#setimmersivemode)/ [getImmersiveMode](#getimmersivemode)设置/获取沉浸模式。  
+- 事件监听：通过on('show')/on('hide')/on('sizeChange')监听面板状态变化事件。  
+ 面板生命周期：
+1. 在InputMethodAbility的[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)中创建Panel实例并指定面板类型和标志位。
+2. 调用[setUiContent](#setuicontent)加载键盘页面内容。
+3. 调用[show](#show)显示面板，用户可交互。
+4. 根据需要调用resize、moveTo、changeFlag等接口动态调整面板。
+5. 使用完毕后调用[destroyPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#destroypanel)销毁面板，释放资源。
+ 下列API均需使用[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)获取到Panel实例后，通过实例调用。
 
 **起始版本：** 10
 
@@ -21,7 +21,7 @@ Panel是输入法面板对象，提供面板页面加载、显示/隐藏、尺�
 ## 导入模块
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## adjustPanelRect
@@ -30,7 +30,7 @@ import inputMethodEngine from '@kit.IMEKit';
 adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 ```
 
-预设置输入法应用横竖屏大小。接口调用完毕表示adjust请求已提交到输入法框架，不表示执行完毕。   
+预设置输入法应用横竖屏大小。接口调用完毕表示adjust请求已提交到输入法框架，不表示执行完毕。  
 > **说明:**
    
 > 
@@ -57,8 +57,8 @@ adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
-| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。 超出范围时返回错误码401。 |
+| flag | PanelFlag | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。超出范围时返回错误码401。 |
 
 **错误码：**
 
@@ -105,7 +105,7 @@ panel.adjustPanelRect(panelFlag, panelRect);
 adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。   
+预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。  
 > **说明:**
    
 > 
@@ -144,7 +144,7 @@ adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| flag | PanelFlag | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
 | rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。 |
 
 **错误码：**
@@ -194,7 +194,7 @@ panel.adjustPanelRect(panelFlag, panelRect);
 changeFlag(flag: PanelFlag): void
 ```
 
-将输入法应用的面板状态改变为其他[PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)形态，仅对 [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md)生效。
+将输入法应用的面板状态改变为其他[PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)形态，仅对[SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md)生效。
 
 **起始版本：** 10
 
@@ -204,7 +204,7 @@ changeFlag(flag: PanelFlag): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。 |
+| flag | PanelFlag | 是 | 目标面板状态类型。 |
 
 **错误码：**
 
@@ -235,7 +235,7 @@ getDisplayId(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象。返回窗口的displayId。 |
+| Promise&lt;number&gt; | Promise对象。返回窗口的displayId。 |
 
 **错误码：**
 
@@ -272,7 +272,7 @@ getImmersiveMode(): ImmersiveMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-immersivemode-t.md) | 沉浸模式。 |
+| ImmersiveMode | 沉浸模式。 |
 
 **示例**
 
@@ -400,7 +400,7 @@ hide(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -488,7 +488,7 @@ moveTo(x: number, y: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -526,7 +526,7 @@ off(type: 'show', callback?: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'show' | 是 | 取消监听当前面板的状态类型，固定取值为'show'。 |
-| callback | () = & gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | () =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **错误码：**
 
@@ -557,7 +557,7 @@ off(type: 'hide', callback?: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hide' | 是 | 要取消监听的当前面板状态类型，固定取值为'hide'。 |
-| callback | () = & gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | () =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 **错误码：**
 
@@ -577,7 +577,7 @@ panel.off('hide');
 off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
-取消监听当前面板大小变化，使用callback异步回调。   
+取消监听当前面板大小变化，使用callback异步回调。  
 > **说明:**
    
 > 
@@ -607,7 +607,7 @@ off(type: 'sizeChange', callback?: SizeChangeCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sizeChange' | 是 | 监听当前面板的大小是否产生变化，固定取值为'sizeChange'。 |
-| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | 否 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。参数不填写时，取消订阅type对应的所有回调事件。<br>**起始版本：** 15 |
+| callback | SizeChangeCallback | 否 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。参数不填写时，取消订阅type对应的所有回调事件。<br>**起始版本：** 15 |
 
 **示例**
 
@@ -636,7 +636,7 @@ on(type: 'show', callback: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'show' | 是 | 监听当前面板的状态类型，固定取值为'show'。 |
-| callback | () = & gt; void | 是 | 回调函数。 |
+| callback | () =&gt; void | 是 | 回调函数。 |
 
 **示例**
 
@@ -663,7 +663,7 @@ on(type: 'hide', callback: () => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hide' | 是 | 监听当前面板的状态类型，固定取值为'hide'。 |
-| callback | () = & gt; void | 是 | 回调函数。 |
+| callback | () =&gt; void | 是 | 回调函数。 |
 
 **示例**
 
@@ -679,7 +679,7 @@ panel.on('hide', () => {
 on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
-监听当前面板大小变化，使用callback异步回调。   
+监听当前面板大小变化，使用callback异步回调。  
 > **说明:**
    
 > 
@@ -709,7 +709,7 @@ on(type: 'sizeChange', callback: SizeChangeCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'sizeChange' | 是 | 监听当前面板的大小是否产生变化，固定值为'sizeChange'。 |
-| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | 是 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。<br>**起始版本：** 15 |
+| callback | SizeChangeCallback | 是 | 回调函数。返回当前软键盘面板的大小，包含宽度和高度值。<br>**起始版本：** 15 |
 
 **示例**
 
@@ -734,7 +734,7 @@ panel.on('sizeChange', (windowSize: window.Size, keyboardArea: inputMethodEngine
 resize(width: number, height: number, callback: AsyncCallback<void>): void
 ```
 
-改变当前输入法面板的大小，使用callback异步回调。   
+改变当前输入法面板的大小，使用callback异步回调。  
 > **说明：**
    
 > 
@@ -784,7 +784,7 @@ panel.resize(500, 1000, (err: BusinessError) => {
 resize(width: number, height: number): Promise<void>
 ```
 
-改变当前输入法面板的大小，使用Promise异步回调。   
+改变当前输入法面板的大小，使用Promise异步回调。  
 > **说明：**
    
 > 
@@ -810,7 +810,7 @@ resize(width: number, height: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -837,14 +837,14 @@ panel.resize(500, 1000).then(() => {
 setImmersiveEffect(effect: ImmersiveEffect): void
 ```
 
-设置输入法应用的沉浸效果。   
-- 只有在[启用沉浸式模式](#setimmersivemode)时，才能使用渐变模式和流光模式。   
-- 只有在启用渐变模式时，才能使用流光模式。   
-- 未启用渐变模式时，渐变高度必须为0px。   
-- 只有系统应用才能设置流光模式。   
-- 必须先调用以下任一接口，才能调用当前接口：   
+设置输入法应用的沉浸效果。  
+- 只有在[启用沉浸式模式](#setimmersivemode)时，才能使用渐变模式和流光模式。  
+- 只有在启用渐变模式时，才能使用流光模式。  
+- 未启用渐变模式时，渐变高度必须为0px。  
+- 只有系统应用才能设置流光模式。  
+- 必须先调用以下任一接口，才能调用当前接口：  
  - [adjustPanelRect](#adjustpanelrect)(支持API version 12)   
- - [adjustPanelRect](#adjustpanelrect)(支持 API version 15)   
+ - [adjustPanelRect](#adjustpanelrect)(支持API version 15)   
  - [resize](#resize)(支持API version 10)
 
 **起始版本：** 20
@@ -893,7 +893,7 @@ setImmersiveMode(mode: ImmersiveMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-immersivemode-t.md) | 是 | 沉浸模式。 |
+| mode | ImmersiveMode | 是 | 沉浸模式。 |
 
 **错误码：**
 
@@ -915,7 +915,7 @@ panel.setImmersiveMode(inputMethodEngine.ImmersiveMode.LIGHT_IMMERSIVE);
 setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
-设置屏幕常亮。使用Promise异步回调。   
+设置屏幕常亮。使用Promise异步回调。  
 > **说明:**
    
 > 
@@ -940,7 +940,7 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1010,14 +1010,14 @@ setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fillColor | string \| undefined | 是 | 功能键的颜色，取值范围为[#01000000, #FFFFFFFF] 或 [#000000, #FFFFFF]，不支持具有完全透明Alpha通 道（#00xxxxxx）的值。 |
-| backgroundColor | string \| undefined | 是 | 功能键的背景颜色，取值范围为[#01000000, #FFFFFFFF] 或 [#000000, #FFFFFF]，不支持具有完全 透明Alpha通道（#00xxxxxx）的值。 |
+| fillColor | string \| undefined | 是 | 功能键的颜色，取值范围为[#01000000, #FFFFFFFF] 或 [#000000, #FFFFFF]，不支持具有完全透明Alpha通道（#00xxxxxx）的值。 |
+| backgroundColor | string \| undefined | 是 | 功能键的背景颜色，取值范围为[#01000000, #FFFFFFFF] 或 [#000000, #FFFFFF]，不支持具有完全透明Alpha通道（#00xxxxxx）的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果。 |
 
 **示例**
 
@@ -1102,7 +1102,7 @@ setUiContent(path: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1139,7 +1139,7 @@ setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | LocalStorage相关联的具体页面的路径。路径长度建议不超过1024字符。 |
-| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | 是 | 存储单元，为应用程序范围内的可变状态属性和不可变状态属性提供存储。 |
+| storage | LocalStorage | 是 | 存储单元，为应用程序范围内的可变状态属性和不可变状态属性提供存储。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当面板页面内容加载成功，err为undefined，否则err为错误对象。 |
 
 **错误码：**
@@ -1182,13 +1182,13 @@ setUiContent(path: string, storage: LocalStorage): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 具体页面的路径。路径长度建议不超过1024字符。 |
-| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | 是 | 存储单元，为应用程序范围内的可变状态属性和非可变状态属性提供存储。 |
+| storage | LocalStorage | 是 | 存储单元，为应用程序范围内的可变状态属性和非可变状态属性提供存储。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1259,7 +1259,7 @@ show(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -1306,7 +1306,7 @@ panel.startMoving();
 updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 ```
 
-预设置输入法应用横竖屏大小。使用Promise异步回调。   
+预设置输入法应用横竖屏大小。使用Promise异步回调。  
 > **说明:**
    
 > 
@@ -1331,14 +1331,14 @@ updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
-| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。 超出范围时返回错误码401。 |
+| flag | PanelFlag | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。超出范围时返回错误码401。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1381,7 +1381,7 @@ panel.updatePanelRect(panelFlag, panelRect);
 updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 ```
 
-预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。使用Promise异步回调。   
+预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。使用Promise异步回调。  
 > **说明:**
    
 > 
@@ -1416,14 +1416,14 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| flag | PanelFlag | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
 | rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1471,7 +1471,7 @@ panel.updatePanelRect(panelFlag, panelRect);
 updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 ```
 
-预设置输入法应用横竖屏大小。   
+预设置输入法应用横竖屏大小。  
 > **说明：**
    
 > 
@@ -1502,8 +1502,8 @@ updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
-| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。 超出范围时返回错误码401。 |
+| flag | PanelFlag | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的横坐标，纵坐标，宽度以及高度。固定态：高度不能超过屏幕高度的70%，宽度不能超过屏幕宽度；悬浮态：高度不能超过屏幕高度，宽度不能超过屏幕宽度。超出范围时返回错误码401。 |
 
 **错误码：**
 
@@ -1546,7 +1546,7 @@ panel.updatePanelRectSync(panelFlag, panelRect);
 updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。   
+预设置输入法应用横竖屏大小、位置、自定义避让区域以及热区。  
 > **说明：**
    
 > 
@@ -1587,7 +1587,7 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
+| flag | PanelFlag | 是 | 目标面板状态类型。类型为FLG_FIXED或FLG_FLOATING。 |
 | rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | 是 | 目标面板横屏状态及竖屏状态的位置、大小、避让区域以及热区。 |
 
 **错误码：**
@@ -1636,7 +1636,7 @@ panel.updatePanelRectSync(panelFlag, panelRect);
 updateRegion(inputRegion: Array<window.Rect>): void
 ```
 
-更新当前状态下输入法面板内的热区。   
+更新当前状态下输入法面板内的热区。  
 > **说明:**
    
 > 
@@ -1659,7 +1659,7 @@ updateRegion(inputRegion: Array<window.Rect>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputRegion | Array & lt;window.Rect & gt; | 是 | 面板内接收输入事件的区域。   - 数组大小限制为[1, 4]。   - 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
+| inputRegion | Array&lt;window.Rect&gt; | 是 | 面板内接收输入事件的区域。   - 数组大小限制为[1, 4]。   - 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
 
 **错误码：**
 

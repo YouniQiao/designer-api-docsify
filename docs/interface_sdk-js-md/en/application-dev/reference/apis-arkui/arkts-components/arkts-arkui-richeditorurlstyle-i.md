@@ -17,7 +17,9 @@ URL information.
 url?: ResourceStr
 ```
 
-URL.Default value: **undefined**
+URL.
+
+Default value: **undefined**
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

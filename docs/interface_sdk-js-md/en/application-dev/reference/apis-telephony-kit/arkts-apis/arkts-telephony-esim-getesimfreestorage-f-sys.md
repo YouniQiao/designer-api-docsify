@@ -25,7 +25,7 @@ This API is used to obtain the remaining storage space of the eUICC hardware. Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the remaining storage space of the eUICC hardware, in KB. |
+| Promise&lt;number&gt; | Promise used to return the remaining storage space of the eUICC hardware, in KB. |
 
 **Error codes:**
 

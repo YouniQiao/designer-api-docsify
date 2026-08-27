@@ -11,7 +11,9 @@
 function debug(domain: number, tag: string, format: string, ...args: any[]): void
 ```
 
-Prints DEBUG logs.DEBUG logs are not recorded in official versions by default. They are available in debug versions or in official versions with the debug function enabled.
+Prints DEBUG logs.
+
+DEBUG logs are not recorded in official versions by default. They are available in debug versions or in official versions with the debug function enabled.
 
 **Since:** 7
 
@@ -25,7 +27,7 @@ Prints DEBUG logs.DEBUG logs are not recorded in official versions by default. T
 | --- | --- | --- | --- |
 | domain | number | Yes | Service domain of logs. The value ranges from **0x0** to **0xFFFF**. If the value exceeds the range, logs cannot be printed.You can define the value as required. |
 | tag | string | Yes | Log tag in the string format. You are advised to use this parameter to identify a particular service behavior or the class holding the ongoing method. A tag can contain a maximum of 31 bytes. If a tag exceeds this limit, it will be truncated. Chinese characters are not recommended because garbled characters or alignment problems may occur. |
-| format | string | Yes | Format string used to output logs in a specified format. It can contain several elements, where the parameter type and privacy identifier are mandatory.Parameters labeled **{public}** are public data and are displayed in plaintext; parameters labeled **{private}** (default value) are private data and are filtered by ** & lt;private & gt;**. |
+| format | string | Yes | Format string used to output logs in a specified format. It can contain several elements, where the parameter type and privacy identifier are mandatory.Parameters labeled **{public}** are public data and are displayed in plaintext; parameters labeled **{private}** (default value) are private data and are filtered by **&lt;private&gt;**. |
 | args | any[] | Yes | Variable-length parameter list corresponding to the format string. The number and type of parameters must map to the identifier in the format string. |
 
 **Examples**

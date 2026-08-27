@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import configPolicy from '@kit.BasicServicesKit';
+import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
 ## getOneCfgFile
@@ -73,7 +73,7 @@ Obtains the path of the configuration file with the highest priority. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the path of the configuration file with the highest priority. |
+| Promise&lt;string&gt; | Promise used to return the path of the configuration file with the highest priority. |
 
 **Error codes:**
 
@@ -220,7 +220,7 @@ Obtains the path of the configuration file with the highest priority based on th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the path of the configuration file with the highest priority. |
+| Promise&lt;string&gt; | Promise used to return the path of the configuration file with the highest priority. |
 
 **Error codes:**
 

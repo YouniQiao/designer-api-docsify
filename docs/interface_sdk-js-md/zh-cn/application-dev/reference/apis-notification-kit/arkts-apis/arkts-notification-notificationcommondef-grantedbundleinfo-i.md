@@ -12,7 +12,7 @@
 readonly appIndex: number
 ```
 
-应用的分身索引标识，仅在分身应用中生效。 从ApplicationInfo中appIndex获取。
+应用的分身索引标识，仅在分身应用中生效。从ApplicationInfo中appIndex获取。
 
 **类型：** number
 
@@ -26,7 +26,7 @@ readonly appIndex: number
 readonly appName?: string
 ```
 
-应用的名称。 从ApplicationInfo中label获取。
+应用的名称。从ApplicationInfo中label获取。
 
 **类型：** string
 

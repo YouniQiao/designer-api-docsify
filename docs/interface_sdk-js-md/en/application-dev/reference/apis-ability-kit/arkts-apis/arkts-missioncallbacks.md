@@ -12,7 +12,7 @@ The module defines the callbacks invoked after synchronization starts. These cal
 
 | Name | Description |
 | --- | --- |
-| [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) | MissionCallback registered by app.@interface MissionCallback |
+| [MissionCallback](arkts-ability-missioncallbacks-missioncallback-i-sys.md) | MissionCallback registered by app. |
 <!--DelEnd-->
 
 <!--Del-->

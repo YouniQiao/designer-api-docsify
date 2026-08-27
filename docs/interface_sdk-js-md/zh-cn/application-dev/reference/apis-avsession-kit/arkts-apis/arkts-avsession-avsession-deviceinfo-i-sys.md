@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## authenticationStatus
@@ -18,7 +18,8 @@ import avSession from '@kit.AVSessionKit';
 authenticationStatus?: number
 ```
 
-播放设备是否可信。默认为0。0代表设备不可信，1代表设备可信。  
+播放设备是否可信。默认为0。0代表设备不可信，1代表设备可信。
+
 **系统接口：** 该接口为系统接口。
 
 **类型：** number
@@ -53,7 +54,8 @@ HiPlay设备类型定义
 ipAddress?: string
 ```
 
-播放设备的IP地址。  
+播放设备的IP地址。
+
 **系统接口：** 该接口为系统接口。
 
 **类型：** string
@@ -70,7 +72,8 @@ ipAddress?: string
 isLegacy?: boolean
 ```
 
-表示当前设备是否为旧版设备。 true表示是，false表示不是。  
+表示当前设备是否为旧版设备。 true表示是，false表示不是。
+
 **系统接口：** 该接口为系统接口。
 
 **类型：** boolean
@@ -87,7 +90,12 @@ isLegacy?: boolean
 mediumTypes?: number
 ```
 
-用于发现设备的介质类型。1：蓝牙低功耗（BLE），用于蓝牙设备的发现和链接。2：受限应用协议（COAP），用于局域网内的设备发现。  
+用于发现设备的介质类型。
+
+1：蓝牙低功耗（BLE），用于蓝牙设备的发现和链接。
+
+2：受限应用协议（COAP），用于局域网内的设备发现。
+
 **系统接口：** 该接口为系统接口。
 
 **类型：** number
@@ -104,7 +112,8 @@ mediumTypes?: number
 networkId?: string
 ```
 
-播放设备的网络ID。  
+播放设备的网络ID。
+
 **系统接口：** 该接口为系统接口。
 
 **类型：** string
@@ -121,7 +130,8 @@ networkId?: string
 providerId?: number
 ```
 
-播放设备提供商。  
+播放设备提供商。
+
 **系统接口：** 该接口为系统接口。
 
 **类型：** number

@@ -22,10 +22,10 @@ import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [PanelInfo(划词面板)](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 划词面板属性信息，包含面板类型、位置和宽高。开发者通过panelType指定面板类型（菜单面板或主面板），通过x、y设定面板左上角坐标，通过width、height设定面板尺寸，各项属性共同定义面板的呈现形态。 |
+| [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 划词面板属性信息，包含面板类型、位置和宽高。开发者通过panelType指定面板类型（菜单面板或主面板），通过x、y设定面板左上角坐标，通过width、height设定面板尺寸，各项属性共同定义面板的呈现形态。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [PanelType(划词面板)](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) | 划词面板类型枚举，定义面板的两级架构：菜单面板（一级）和主面板（二级）。 |
+| [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) | 划词面板类型枚举，定义面板的两级架构：菜单面板（一级）和主面板（二级）。 |

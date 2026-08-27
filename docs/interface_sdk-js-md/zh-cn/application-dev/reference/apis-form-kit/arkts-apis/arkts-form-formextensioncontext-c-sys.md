@@ -1,6 +1,8 @@
 # FormExtensionContext
 
-FormExtensionContext模块是[FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md)的上下文环境，继承自 [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。FormExtensionContext模块提供FormExtensionAbility具有的接口和能力。
+FormExtensionContext模块是[FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md)的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
+
+FormExtensionContext模块提供FormExtensionAbility具有的接口和能力。
 
 **继承/实现关系：** FormExtensionContext extends ExtensionContext
 
@@ -120,7 +122,7 @@ disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| connection | number | 是 | 在 [connectServiceExtensionAbility](#connectserviceextensionability)中返回的number。 |
+| connection | number | 是 | 在[connectServiceExtensionAbility](#connectserviceextensionability)中返回的number。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当Ability与绑定的服务类型的Ability解绑成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -186,13 +188,13 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| connection | number | 是 | 在 [connectServiceExtensionAbility](#connectserviceextensionability)中返回的number。 |
+| connection | number | 是 | 在[connectServiceExtensionAbility](#connectserviceextensionability)中返回的number。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -328,7 +330,7 @@ startAbility(want: Want): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

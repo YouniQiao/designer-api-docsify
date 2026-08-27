@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemParameterEnhance from '@kit.BasicServicesKit';
+import { systemParameterEnhance } from '@kit.BasicServicesKit';
 ```
 
 ## get
@@ -129,7 +129,7 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the execution result. |
+| Promise&lt;string&gt; | Promise used to return the execution result. |
 
 **Error codes:**
 

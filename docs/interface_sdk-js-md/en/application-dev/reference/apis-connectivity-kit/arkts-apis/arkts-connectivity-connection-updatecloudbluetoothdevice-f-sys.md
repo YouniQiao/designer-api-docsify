@@ -33,7 +33,7 @@ update cloud devices.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # ShowDialogSuccessResponse
 
-Defines the response of ShowDialog.@interface ShowDialogSuccessResponse
+Defines the response of ShowDialog.
+
+@interface ShowDialogSuccessResponse
 
 **Since:** 11
 
@@ -9,7 +11,7 @@ Defines the response of ShowDialog.@interface ShowDialogSuccessResponse
 ## Modules to Import
 
 ```TypeScript
-import Prompt, { Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
+import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
 ```
 
 ## index

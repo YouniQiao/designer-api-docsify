@@ -3,9 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKitManager';
-import notificationSubscribe from '@kit.NotificationKitSubscribe';
-import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## getActiveNotificationCount
@@ -67,7 +64,7 @@ function getActiveNotificationCount(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 以Promise形式返回获取当前应用未删除通知数。 |
+| Promise&lt;number&gt; | 以Promise形式返回获取当前应用未删除通知数。 |
 
 **示例**
 

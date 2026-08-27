@@ -72,7 +72,7 @@ Removes the singleton **Storage** instance of a file from the cache. The removed
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
 

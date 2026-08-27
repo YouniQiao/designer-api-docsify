@@ -1,6 +1,8 @@
 # ModelVersion
 
-模型版本枚举。@enum { number }
+模型版本枚举。
+
+@enum { number }
 
 **起始版本：** 15
 

@@ -1,6 +1,8 @@
 # LifecycleForm
 
-interface of form lifecycle.@interface LifecycleForm
+interface of form lifecycle.
+
+@interface LifecycleForm
 
 **Since:** 7
 
@@ -65,4 +67,4 @@ Called when the system shares the form. The ability of this function is same as 
 
 | Type | Description |
 | --- | --- |
-| Record & lt;string, Object & gt; | Returns the wantParams object. |
+| Record&lt;string, Object&gt; | Returns the wantParams object. |

@@ -11,7 +11,7 @@ CLI工具执行的结果。包含CLI工具的退出码、标准输出、标准�
 ## 导入模块
 
 ```TypeScript
-import cliManager from '@kit.AbilityKit';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## errorText

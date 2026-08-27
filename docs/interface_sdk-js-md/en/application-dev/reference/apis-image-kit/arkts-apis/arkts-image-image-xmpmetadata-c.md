@@ -9,7 +9,7 @@ XMPMetadata instance.
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## enumerateTags
@@ -34,7 +34,7 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (path: string, tag: XMPTag) = & gt; boolean | Yes | Callback used to return the XMP node and the corresponding XMPTag. The callback receives a path argument that follows the XMP namespace:path format. |
+| callback | (path: string, tag: XMPTag) =&gt; boolean | Yes | Callback used to return the XMP node and the corresponding XMPTag. The callback receives a path argument that follows the XMP namespace:path format. |
 | rootPath | string | No | Enumerate root path. If this parameter is not specified, the default value is root path. |
 | options | [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md) | No | XMP enumerate option. |
 
@@ -62,7 +62,7 @@ Obtains the XMP metadata as a blob.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | A Promise instance used to return the ArrayBuffer of blob. |
+| Promise&lt;ArrayBuffer&gt; | A Promise instance used to return the ArrayBuffer of blob. |
 
 **Error codes:**
 
@@ -191,7 +191,7 @@ Get a single XMP tag from specified path.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[XMPTag](arkts-image-image-xmptag-i.md) \| null & gt; | Promise used to return the XMP tag. |
+| Promise&lt;[XMPTag](arkts-image-image-xmptag-i.md) \| null&gt; | Promise used to return the XMP tag. |
 
 **Error codes:**
 
@@ -256,7 +256,7 @@ Register a new namespace according to the xml namespace and prefix.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -288,7 +288,7 @@ Remove the XMP tag from specified path.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -320,7 +320,7 @@ Set a blob into the XMP metadata.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -470,7 +470,7 @@ Set the XMP type and value of the XMP tag in the specified path.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

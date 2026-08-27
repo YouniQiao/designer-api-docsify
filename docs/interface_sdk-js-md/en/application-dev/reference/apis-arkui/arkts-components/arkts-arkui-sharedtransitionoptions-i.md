@@ -27,7 +27,13 @@ Parameters of the shared element transition animation.
 curve?: Curve | string | ICurve
 ```
 
-Animation curve.You are advised to specify the curve using the **Curve** or **ICurve** type.For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md).Default value: **Curve.Linear**
+Animation curve.
+
+You are advised to specify the curve using the **Curve** or **ICurve** type.
+
+For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md).
+
+Default value: **Curve.Linear**
 
 **Type:** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
@@ -45,7 +51,11 @@ Animation curve.You are advised to specify the curve using the **Curve** or **IC
 delay?: number
 ```
 
-Delay of animation playback.Default value: **0**Unit: ms
+Delay of animation playback.
+
+Default value: **0**
+
+Unit: ms
 
 **Type:** number
 
@@ -63,7 +73,13 @@ Delay of animation playback.Default value: **0**Unit: ms
 duration?: number
 ```
 
-Animation duration.Default value: **1000**Unit: ms Value range: [0, +∞)
+Animation duration.
+
+Default value: **1000**
+
+Unit: ms
+
+Value range: [0, +∞)
 
 **Type:** number
 
@@ -97,7 +113,9 @@ Motion path.
 type?: SharedTransitionEffectType
 ```
 
-Animation type.Default value: **SharedTransitionEffectType.Exchange**
+Animation type.
+
+Default value: **SharedTransitionEffectType.Exchange**
 
 **Type:** [SharedTransitionEffectType](../arkts-apis/arkts-arkui-sharedtransitioneffecttype-e.md)
 
@@ -115,7 +133,11 @@ Animation type.Default value: **SharedTransitionEffectType.Exchange**
 zIndex?: number
 ```
 
-Z-axis.Value range: (-∞, +∞)Default value: **0**
+Z-axis.
+
+Value range: (-∞, +∞)
+
+Default value: **0**
 
 **Type:** number
 

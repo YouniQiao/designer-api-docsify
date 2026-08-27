@@ -1,6 +1,6 @@
 # AudioRecordingManager
 
-录音策略管理，提供协同录音和录音控制能力。 在使用AudioRecordingManager的接口之前，需先通过 [getRecordingManager](arkts-audio-audio-audiomanager-i-sys.md#getrecordingmanager)获取AudioRecordingManager实例 。
+录音策略管理，提供协同录音和录音控制能力。在使用AudioRecordingManager的接口之前，需先通过[getRecordingManager](arkts-audio-audio-audiomanager-i-sys.md#getrecordingmanager)获取AudioRecordingManager实例。
 
 > **说明：**
 > 
@@ -15,8 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## getCurrentCollaborativeRecordingConfiguration
@@ -124,7 +123,7 @@ offSystemRecordControllerEnabledChange(callback?: Callback<SystemRecordControlle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SystemRecordControllerChangeInfo](arkts-audio-audio-systemrecordcontrollerchangeinfo-i-sys.md)&gt; | 否 | 订阅中使用的回调函数 用于取消订阅的函数。如果不使用此参数，将取消当前进程中之前订阅的所有回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SystemRecordControllerChangeInfo](arkts-audio-audio-systemrecordcontrollerchangeinfo-i-sys.md)&gt; | 否 | 订阅中使用的回调函数用于取消订阅的函数。如果不使用此参数，将取消当前进程中之前订阅的所有回调。 |
 
 **错误码：**
 
@@ -206,13 +205,13 @@ setCollaborativeRecordingEnabledForDevices(enable: boolean, devices: AudioDevice
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | 确实可以实现协作录制。 |
-| devices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | 目标音频设备用于协同录制， 应使用 [getSupportedCollaborativeRecordingDevices](#getsupportedcollaborativerecordingdevices) 来获取。 |
+| devices | [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md) | 是 | 目标音频设备用于协同录制，应使用 [getSupportedCollaborativeRecordingDevices](#getsupportedcollaborativerecordingdevices) 来获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise 对象，返回 void。 |
+| Promise&lt;void&gt; | Promise 对象，返回 void。 |
 
 **错误码：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import insightIntentDriver from '@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## execute
@@ -118,7 +118,7 @@ Executes a call to an intent. This API uses a promise to return the result. When
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;insightIntent.ExecuteResult & gt; | Promise used to return the intent call execution result. |
+| Promise&lt;insightIntent.ExecuteResult&gt; | Promise used to return the intent call execution result. |
 
 **Error codes:**
 

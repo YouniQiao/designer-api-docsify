@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import accountManager from '@kit.MDMKit';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## disallowAddLocalAccount
@@ -101,7 +101,7 @@ Forbids the creation of local accounts on the device. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object will be thrown if the operation fails. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object will be thrown if the operation fails. |
 
 **Error codes:**
 

@@ -56,7 +56,7 @@ function attachSketchSurface(previewOutput: camera.PreviewOutput, session: camer
     session.commitConfig();
     previewOutput.attachSketchSurface(sketchSurfaceId);
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The attachSketchSurface call failed. error code: ${err.code}`);
   }
@@ -105,7 +105,7 @@ function enableSketch(previewOutput: camera.PreviewOutput, session: camera.Sessi
     previewOutput.enableSketch(true);
     session.commitConfig();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code on failure and handle it.
     let err = error as BusinessError;
     console.error(`The enableSketch call failed. error code: ${err.code}`);
   }
@@ -184,7 +184,7 @@ function isSketchSupported(previewOutput: camera.PreviewOutput): boolean {
     let isSupported: boolean = previewOutput.isSketchSupported();
     return isSupported;
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The isSketchSupported call failed. error code: ${err.code}`);
   }

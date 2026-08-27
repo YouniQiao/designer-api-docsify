@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## getPowerSaveTrustlist
@@ -71,7 +71,7 @@ Obtains the UID array of applications that are on the device idle allowlist. Thi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # LocationCommand
 
-Location subsystem command structure@interface LocationCommand
+Location subsystem command structure
+
+@interface LocationCommand
 
 **Since:** 8
 
@@ -15,7 +17,7 @@ Location subsystem command structure@interface LocationCommand
 ## Modules to Import
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## command

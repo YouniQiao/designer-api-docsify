@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bas from '@kit.ConnectivityKit';
+import { bas } from '@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceBatteryInfo
@@ -28,13 +28,13 @@ Get remote device battery information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | [BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md) | Yes | Indicates address of peer device. |
+| deviceId | BluetoothAddress | Yes | Indicates address of peer device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BatteryInfo & gt; | Returns the battery info. |
+| Promise&lt;BatteryInfo&gt; | Returns the battery info. |
 
 **Error codes:**
 

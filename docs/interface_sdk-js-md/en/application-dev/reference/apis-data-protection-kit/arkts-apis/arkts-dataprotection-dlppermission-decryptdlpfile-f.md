@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## decryptDlpFile
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 ```
 
-Decrypts a DLP file to generate a plaintext file. This API can be called only by enterprise accounts. This API uses a promise to return the result.This API decrypts DLP files into plaintext files, which is applicable to exporting or migrating files by users with owner permissions.
+Decrypts a DLP file to generate a plaintext file. This API can be called only by enterprise accounts. This API uses a promise to return the result.
+
+This API decrypts DLP files into plaintext files, which is applicable to exporting or migrating files by users with owner permissions.
 
 > **NOTE：**
 > 
@@ -29,14 +31,14 @@ Decrypts a DLP file to generate a plaintext file. This API can be called only by
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dlpFd | number | Yes | FD of the DLP file to be decrypted. The value range is [0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]. If the value of **fd** is less than 0, n error log is generated, and the function stops running. If the value of **fd** is greater than 2 & lt;sup & gt;31 & lt;/sup & gt;-1, the excess part will be truncated. |
-| plaintextFd | number | Yes | FD of the decrypted file. The value range is [0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2 & lt;sup & gt;31 & lt;/sup & gt;, the excess part will be truncated. |
+| dlpFd | number | Yes | FD of the DLP file to be decrypted. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, n error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
+| plaintextFd | number | Yes | FD of the decrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;, the excess part will be truncated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

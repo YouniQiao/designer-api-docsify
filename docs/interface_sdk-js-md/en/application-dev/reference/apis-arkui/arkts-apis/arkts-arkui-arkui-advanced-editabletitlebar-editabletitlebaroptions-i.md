@@ -10,7 +10,6 @@ Indicates the options of the editable title bar.
 
 ```TypeScript
 import { EditableLeftIconType, EditableTitleBar, EditableTitleBarMenuItem, EditableTitleBarItem, EditableTitleBarOptions } from '@kit.ArkUI';
-import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, EditableLeftIconV2Options, EditableTitleV2, EditableTitleV2Options, EditableTitleBarItemV2, EditableTitleBarItemV2Options, EditableTitleBarMenuItemV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2, EditableSaveButtonV2Options, EditableTitleBarStyleV2, EditableTitleBarStyleV2Options } from '@kit.ArkUIV2';
 ```
 
 ## backgroundBlurStyle
@@ -19,7 +18,9 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the title bar.Default value: **BlurStyle.NONE**
+Background blur style of the title bar.
+
+Default value: **BlurStyle.NONE**
 
 **Type:** BlurStyle
 
@@ -37,7 +38,9 @@ Background blur style of the title bar.Default value: **BlurStyle.NONE**
 backgroundColor?: ResourceColor
 ```
 
-Background color of the title bar.Default value: **'#00000000'**
+Background color of the title bar.
+
+Default value: **'#00000000'**
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -55,7 +58,9 @@ Background color of the title bar.Default value: **'#00000000'**
 safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
-Edges for expanding the safe area.Default value: **[SafeAreaEdge.TOP]**
+Edges for expanding the safe area.
+
+Default value: **[SafeAreaEdge.TOP]**
 
 **Type:** Array&lt;[SafeAreaEdge](../arkts-components/arkts-arkui-safeareaedge-e.md)&gt;
 
@@ -73,7 +78,9 @@ Edges for expanding the safe area.Default value: **[SafeAreaEdge.TOP]**
 safeAreaTypes?: Array<SafeAreaType>
 ```
 
-Types of the expanded safe areas.Default value: **[SafeAreaType.SYSTEM]**
+Types of the expanded safe areas.
+
+Default value: **[SafeAreaType.SYSTEM]**
 
 **Type:** Array&lt;[SafeAreaType](../arkts-components/arkts-arkui-safeareatype-e.md)&gt;
 

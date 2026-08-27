@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import formHost from '@kit.FormKit';
+import { formHost } from '@kit.FormKit';
 ```
 
 ## addForm
@@ -12,7 +12,9 @@ import formHost from '@kit.FormKit';
 function addForm(want: Want): Promise<formInfo.RunningFormInfo>
 ```
 
-Add a form.You can use this method to create a theme form.
+Add a form.
+
+You can use this method to create a theme form.
 
 **起始版本：** 12
 
@@ -34,7 +36,7 @@ Add a form.You can use this method to create a theme form.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;formInfo.RunningFormInfo & gt; | Return the form info. |
+| Promise&lt;formInfo.RunningFormInfo&gt; | Return the form info. |
 
 **错误码：**
 

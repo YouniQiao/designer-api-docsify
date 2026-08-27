@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getP2pPeerDevices
@@ -25,7 +24,7 @@ function getP2pPeerDevices(): Promise<WifiP2pDevice[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;WifiP2pDevice[] & gt; | 返回P2P设备信息。 |
+| Promise&lt;WifiP2pDevice[]&gt; | 返回P2P设备信息。 |
 
 **错误码：**
 

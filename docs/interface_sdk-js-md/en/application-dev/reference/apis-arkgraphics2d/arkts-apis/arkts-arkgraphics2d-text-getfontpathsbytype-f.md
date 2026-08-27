@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import text from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## getFontPathsByType
@@ -30,7 +30,7 @@ Obtains the paths of all font files of a specified font type.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of font file paths. |
+| Array&lt;string&gt; | List of font file paths. |
 
 **Examples**
 

@@ -1,6 +1,8 @@
 # QrCodeInfo
 
-二维码信息的定义。@interface QrCodeInfo
+二维码信息的定义。
+
+@interface QrCodeInfo
 
 **起始版本：** 23
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## codeData
@@ -82,7 +84,9 @@ icon?: image.PixelMap
 id: string
 ```
 
-用于唯一标识用户登录的二维码会话。当二维码过期时，MediaUI将使用此ID从媒体应用查询并更新新的二维码。
+用于唯一标识用户登录的二维码会话。
+
+当二维码过期时，MediaUI将使用此ID从媒体应用查询并更新新的二维码。
 
 **类型：** string
 
@@ -146,7 +150,9 @@ titleName: string
 validPeriod: number
 ```
 
-二维码有效期（单位：秒）。当二维码到期时，二维码ID将用于再次查询并获得新的二维码。
+二维码有效期（单位：秒）。
+
+当二维码到期时，二维码ID将用于再次查询并获得新的二维码。
 
 **类型：** number
 

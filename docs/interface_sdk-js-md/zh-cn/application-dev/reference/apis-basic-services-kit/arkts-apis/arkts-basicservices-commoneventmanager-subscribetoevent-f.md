@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import commonEventManager from '@kit.BasicServicesKit';
+import { commonEventManager } from '@kit.BasicServicesKit';
 ```
 
 ## subscribeToEvent
@@ -24,14 +24,14 @@ function subscribeToEvent(subscriber: CommonEventSubscriber, callback: Callback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | 是 | 表示订阅者对象。 |
+| subscriber | CommonEventSubscriber | 是 | 表示订阅者对象。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;CommonEventData&gt; | 是 | 表示接收公共事件数据的回调函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

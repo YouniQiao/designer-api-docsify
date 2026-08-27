@@ -9,9 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## displayId
@@ -52,11 +50,13 @@ displayRect: Rect
 orientation: number
 ```
 
-窗口显示方向。  
+窗口显示方向。
+
 - 0表示竖屏。  
 - 1表示反向横屏。  
 - 2表示反向竖屏。  
-- 3表示横屏。  
+- 3表示横屏。
+
 开发者在使用时，需要注意该方向与display对象的属性orientation含义不一致。
 
 **类型：** number

@@ -1,6 +1,8 @@
 # AVMusicTemplateErrorCode
 
-Enumeration ErrorCode types, returns in BusinessError.code.@enum { number }
+Enumeration ErrorCode types, returns in BusinessError.code.
+
+@enum { number }
 
 **Since:** 23
 

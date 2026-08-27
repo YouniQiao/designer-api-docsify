@@ -29,7 +29,7 @@ Obtains the supported manual exposure durations.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Array of manual exposure durations supported, in ms. |
+| Array&lt;number&gt; | Array of manual exposure durations supported, in ms. |
 
 **Error codes:**
 

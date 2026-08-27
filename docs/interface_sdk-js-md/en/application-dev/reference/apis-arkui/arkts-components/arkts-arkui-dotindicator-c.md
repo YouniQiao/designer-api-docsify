@@ -331,7 +331,7 @@ Sets the spacing between dot-style navigation indicators of the **Swiper** compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Spacing between the dots in the dot-style navigation indicator. Percentage values are not supported.Default value: **10** for PCs and 2-in-1 devices and **8** for other devices Unit: vp Value range: [0, +∞) |
+| space | LengthMetrics | Yes | Spacing between the dots in the dot-style navigation indicator. Percentage values are not supported.Default value: **10** for PCs and 2-in-1 devices and **8** for other devices Unit: vp Value range: [0, +∞) |
 
 **Return value:**
 

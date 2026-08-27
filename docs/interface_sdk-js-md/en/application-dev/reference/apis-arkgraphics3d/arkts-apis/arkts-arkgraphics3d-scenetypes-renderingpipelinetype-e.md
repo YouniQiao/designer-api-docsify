@@ -1,6 +1,8 @@
 # RenderingPipelineType
 
-Enumerates the rendering pipeline types.@enum { number }
+Enumerates the rendering pipeline types.
+
+@enum { number }
 
 **Since:** 21
 

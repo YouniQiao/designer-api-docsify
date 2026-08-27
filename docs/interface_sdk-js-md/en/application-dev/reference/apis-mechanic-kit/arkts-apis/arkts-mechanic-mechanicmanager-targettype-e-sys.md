@@ -1,6 +1,8 @@
 # TargetType (System API)
 
-Target type.@enum { number }
+Target type.
+
+@enum { number }
 
 **Since:** 21
 

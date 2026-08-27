@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import pan from '@kit.ConnectivityKit';
+import { pan } from '@kit.ConnectivityKit';
 ```
 
 ## createPanProfile
@@ -24,7 +24,7 @@ create the instance of pan profile.
 
 | Type | Description |
 | --- | --- |
-| [PanProfile](arkts-connectivity-pan-panprofile-i.md) | Returns the instance of pan profile. |
+| PanProfile | Returns the instance of pan profile. |
 
 **Error codes:**
 

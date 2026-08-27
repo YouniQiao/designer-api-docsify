@@ -9,7 +9,7 @@ Internationalization utility class, which provides the capabilities of unit conv
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## convertCanonicalLocaleIdentifier
@@ -135,7 +135,9 @@ let order: string = i18n.I18NUtil.getDateOrder('zh-CN'); // order = 'y-L-d'
 static getThreeLetterLanguage(locale: string): string
 ```
 
-Converts a language code from two letters to three letters.For example, the two-letter language code of Chinese is **zh**, and the corresponding three-letter language code is **zho**. For details, see [ISO 639](https://www.iso.org/iso-639-language-code).
+Converts a language code from two letters to three letters.
+
+For example, the two-letter language code of Chinese is **zh**, and the corresponding three-letter language code is **zho**. For details, see [ISO 639](https://www.iso.org/iso-639-language-code).
 
 **Since:** 12
 
@@ -182,7 +184,9 @@ try {
 static getThreeLetterRegion(locale: string): string
 ```
 
-Converts a region code from two letters to three letters.For example, the two-letter region code of China is **CN**, and the corresponding three-letter region code is **CHN**. For details, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
+Converts a region code from two letters to three letters.
+
+For example, the two-letter region code of China is **CN**, and the corresponding three-letter region code is **CHN**. For details, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
 
 **Since:** 12
 
@@ -277,7 +281,9 @@ try {
 static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string
 ```
 
-Localizes a file path for the specified locale.For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
+Localizes a file path for the specified locale.
+
+For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 **Since:** 20
 
@@ -329,7 +335,9 @@ try {
 static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl.Locale): string
 ```
 
-Localizes a file path for the specified locale.For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
+Localizes a file path for the specified locale.
+
+For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 **Since:** 18
 

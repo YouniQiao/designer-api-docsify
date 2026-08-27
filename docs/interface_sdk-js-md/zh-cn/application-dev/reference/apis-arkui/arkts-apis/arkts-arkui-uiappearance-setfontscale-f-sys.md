@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import uiAppearance from '@kit.ArkUI';
+import { uiAppearance } from '@kit.ArkUI';
 ```
 
 ## setFontScale
@@ -32,7 +32,7 @@ function setFontScale(fontScale: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function |
+| Promise&lt;void&gt; | the promise returned by the function |
 
 **错误码：**
 

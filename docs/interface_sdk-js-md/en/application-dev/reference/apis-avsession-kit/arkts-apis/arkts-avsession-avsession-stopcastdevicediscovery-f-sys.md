@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## stopCastDeviceDiscovery
@@ -59,7 +59,7 @@ Stop device discovery.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise for the result |
+| Promise&lt;void&gt; | Promise for the result |
 
 **Error codes:**
 

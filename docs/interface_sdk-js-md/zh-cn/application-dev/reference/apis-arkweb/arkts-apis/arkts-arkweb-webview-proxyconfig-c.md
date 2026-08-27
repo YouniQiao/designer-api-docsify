@@ -1,6 +1,6 @@
 # ProxyConfig
 
-ProxyConfig是ArkWeb框架中用于配置网络代理规则的类，配合[ProxyController](arkts-arkweb-webview-proxycontroller-c.md)实现对应用中所有Web组件网络请求的代理控制。通过 ProxyConfig，开发者可以灵活定义多种代理规则：指定特定URL使用特定代理服务器、指定某些URL直连服务器、定义绕过代理的规则等。
+ProxyConfig是ArkWeb框架中用于配置网络代理规则的类，配合[ProxyController](arkts-arkweb-webview-proxycontroller-c.md)实现对应用中所有Web组件网络请求的代理控制。通过ProxyConfig，开发者可以灵活定义多种代理规则：指定特定URL使用特定代理服务器、指定某些URL直连服务器、定义绕过代理的规则等。
 
 **起始版本：** 15
 
@@ -65,7 +65,7 @@ enableReverseBypass(reverse: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reverse | boolean | 是 | 参数值默认是false，表示与[insertBypassRule](#insertbypassrule)中的 bypassRule匹配的URL会绕过代理，参数值为true时，表示与[insertBypassRule](#insertbypassrule)中的bypassRule 匹配的URL会使用代理。 |
+| reverse | boolean | 是 | 参数值默认是false，表示与[insertBypassRule](#insertbypassrule)中的bypassRule匹配的URL会绕过代理，参数值为true时，表示与[insertBypassRule](#insertbypassrule)中的bypassRule匹配的URL会使用代理。 |
 
 **错误码：**
 
@@ -95,7 +95,7 @@ getBypassRules(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 不使用代理的URL列表。 |
+| Array&lt;string&gt; | 不使用代理的URL列表。 |
 
 **示例**
 
@@ -131,7 +131,7 @@ getProxyRules(): Array<ProxyRule>
 insertBypassRule(bypassRule: string): void
 ```
 
-插入一条bypass规则，指明哪些URL应该绕过代理并直接连接到服务器。当[enableReverseBypass](#enablereversebypass)设置为true 时，与bypassRule匹配的URL会使用代理而非绕过代理。
+插入一条bypass规则，指明哪些URL应该绕过代理并直接连接到服务器。当[enableReverseBypass](#enablereversebypass)设置为true时，与bypassRule匹配的URL会使用代理而非绕过代理。
 
 **起始版本：** 15
 
@@ -143,7 +143,7 @@ insertBypassRule(bypassRule: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bypassRule | string | 是 | bypass规则字符串，用于指定绕过代理的URL匹配规则，支持主机名或域名格式（如"example.com"匹配该域名及其子域名）。与bypassRule匹配的 URL会绕过代理。 |
+| bypassRule | string | 是 | bypass规则字符串，用于指定绕过代理的URL匹配规则，支持主机名或域名格式（如"example.com"匹配该域名及其子域名）。与bypassRule匹配的URL会绕过代理。 |
 
 **错误码：**
 
@@ -180,7 +180,7 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会直接与服务器相连。 默认值：MATCH_ALL_SCHEMES。 传入undefined或null会抛出异常错误码401。 |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会直接与服务器相连。默认值：MATCH_ALL_SCHEMES。传入undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
@@ -198,7 +198,18 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 ```
 
-插入一条代理规则，与schemeFilter匹配的URL都会使用指定代理。如果未指定schemeFilter参数，将使用默认值MATCH_ALL_SCHEMES，所有URL都将使用指定代理。代理格式为[scheme://]host[:port]。scheme是可选的，必须是HTTP、HTTPS或SOCKS。scheme默认值为HTTP。host是带括号的IPv6字面量、IPv4字面量或由点分隔的一个或多个标签。端口号是可选的，默认HTTP为80、HTTPS为443、SOCKS为1080。例如：  
+插入一条代理规则，与schemeFilter匹配的URL都会使用指定代理。如果未指定schemeFilter参数，将使用默认值MATCH_ALL_SCHEMES，所有URL都将使用指定代理。
+
+代理格式为[scheme://]host[:port]。
+
+scheme是可选的，必须是HTTP、HTTPS或SOCKS。scheme默认值为HTTP。
+
+host是带括号的IPv6字面量、IPv4字面量或由点分隔的一个或多个标签。
+
+端口号是可选的，默认HTTP为80、HTTPS为443、SOCKS为1080。
+
+例如：
+
 - example.com host: example.com  
 - https://example.com scheme: https host: example.com  
 - example.com:8888 host: example.com port: 8888  
@@ -218,7 +229,7 @@ insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | proxyRule | string | 是 | URL要使用的代理。 |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会使用代理。 默认值：MATCH_ALL_SCHEMES。 传入undefined或null会抛出异常错误码401。 |
+| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会使用代理。默认值：MATCH_ALL_SCHEMES。传入undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
@@ -236,7 +247,7 @@ insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 isReverseBypassEnabled(): boolean
 ```
 
-获取[enableReverseBypass](#enablereversebypass)的参数值，详见 [enableReverseBypass](#enablereversebypass)。
+获取[enableReverseBypass](#enablereversebypass)的参数值，详见[enableReverseBypass](#enablereversebypass)。
 
 **起始版本：** 15
 

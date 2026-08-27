@@ -17,4 +17,4 @@ SubHeaderV2IconType
 | 类型 | 说明 |
 | --- | --- |
 | [ResourceStr](arkts-arkui-resourcestr-t.md) |  |
-| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md) |  |
+| SymbolGlyphModifier |  |

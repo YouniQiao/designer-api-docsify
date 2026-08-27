@@ -11,7 +11,7 @@ Implements wakeup intelligent voice engine.
 ## Modules to Import
 
 ```TypeScript
-import intelligentVoice from '@kit.BasicServicesKit';
+import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
 ## getParameter
@@ -104,7 +104,7 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | the promise used to return the value of the intelligent voice parameter. |
+| Promise&lt;string&gt; | the promise used to return the value of the intelligent voice parameter. |
 
 **Error codes:**
 
@@ -176,7 +176,7 @@ Gets pulse-code modulation audio. This method uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | the promise used to return the pulse-code modulation audio. |
+| Promise&lt;ArrayBuffer&gt; | the promise used to return the pulse-code modulation audio. |
 
 **Error codes:**
 
@@ -285,7 +285,7 @@ Obtains the supported regions, This method uses a promise to return the query re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | the promise used to return the supported regions. |
+| Promise&lt;Array&lt;string&gt;&gt; | the promise used to return the supported regions. |
 
 **Error codes:**
 
@@ -423,7 +423,7 @@ Reads the buffer from wakeup engine. This method uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | the promise used to return the buffer. |
+| Promise&lt;ArrayBuffer&gt; | the promise used to return the buffer. |
 
 **Error codes:**
 
@@ -529,7 +529,7 @@ Releases the engine, This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise used to return the result. |
+| Promise&lt;void&gt; | the promise used to return the result. |
 
 **Error codes:**
 
@@ -654,7 +654,7 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise used to return the result. |
+| Promise&lt;void&gt; | the promise used to return the result. |
 
 **Error codes:**
 
@@ -791,7 +791,7 @@ Sets sensibility, This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise used to return the result. |
+| Promise&lt;void&gt; | the promise used to return the result. |
 
 **Error codes:**
 
@@ -925,7 +925,7 @@ Sets wakeup hap information, This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise used to return the result. |
+| Promise&lt;void&gt; | the promise used to return the result. |
 
 **Error codes:**
 
@@ -996,7 +996,7 @@ Starts the capturer. This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise used to return the result. |
+| Promise&lt;void&gt; | the promise used to return the result. |
 
 **Error codes:**
 
@@ -1043,7 +1043,7 @@ Stops the capturer. This method uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise used to return the result. |
+| Promise&lt;void&gt; | the promise used to return the result. |
 
 **Error codes:**
 

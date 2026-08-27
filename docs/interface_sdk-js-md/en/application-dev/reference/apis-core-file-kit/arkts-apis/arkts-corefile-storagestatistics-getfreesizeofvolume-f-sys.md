@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import storageStatistics from '@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getFreeSizeOfVolume
@@ -92,7 +92,7 @@ Get the free size of volume.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | return Promise (Unit: Byte) |
+| Promise&lt;number&gt; | return Promise (Unit: Byte) |
 
 **Error codes:**
 

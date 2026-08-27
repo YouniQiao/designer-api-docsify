@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-accessibilitykit-->
 
-- [@ohos.accessibility](arkts-accessibility.md)
+- [@ohos.accessibility(辅助功能)](arkts-accessibility.md)
   - [accessibility](arkts-accessibility-accessibility-n.md)
     - [getAbilityLists](arkts-accessibility-accessibility-getabilitylists-f.md)
     - [getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md)
@@ -65,7 +65,7 @@
   <!--Del-->
   - [OperateVirtualNodeResult(系统接口)](arkts-accessibility-accessibility-operatevirtualnoderesult-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.accessibility.config](arkts-accessibility-config.md)<!--DelEnd-->
+- [@ohos.accessibility.config(系统辅助功能配置)](arkts-accessibility-config.md)<!--DelEnd-->
   <!--Del-->
   - [disableAbility(系统接口)](arkts-accessibility-config-disableability-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -112,11 +112,11 @@
   - [BlinkResultCode(系统接口)](arkts-accessibility-config-blinkresultcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [常量(系统接口)](arkts-accessibility-config-con-sys.md)<!--DelEnd-->
-- [@ohos.accessibility.GesturePath](arkts-accessibility-gesturepath.md)
+- [@ohos.accessibility.GesturePath(手势路径)](arkts-accessibility-gesturepath.md)
   - [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md)
-- [@ohos.accessibility.GesturePoint](arkts-accessibility-gesturepoint.md)
+- [@ohos.accessibility.GesturePoint(手势触摸点)](arkts-accessibility-gesturepoint.md)
   - [GesturePoint](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md)
-- [@ohos.application.AccessibilityExtensionAbility](arkts-application-accessibilityextensionability.md)
+- [@ohos.application.AccessibilityExtensionAbility(辅助功能扩展能力)](arkts-application-accessibilityextensionability.md)
   - [AccessibilityExtensionAbility](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c.md)
   <!--Del-->
   - [AccessibilityExtensionAbility(系统接口)](arkts-accessibility-application-accessibilityextensionability-accessibilityextensionability-c-sys.md)<!--DelEnd-->
@@ -147,7 +147,7 @@
   - [TouchPosition(系统接口)](arkts-accessibility-touchposition-t-sys.md)<!--DelEnd-->
   - [WindowType](arkts-accessibility-windowtype-t.md)
 - application<!--arkts-accessibilitykit-application-->
-  - [AccessibilityExtensionContext](arkts-accessibilityextensioncontext.md)
+  - [AccessibilityExtensionContext(辅助功能扩展上下文)](arkts-accessibilityextensioncontext.md)
     - [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md)
     <!--Del-->
     - [AccessibilityExtensionContext(系统接口)](arkts-accessibility-accessibilityextensioncontext-c-sys.md)<!--DelEnd-->

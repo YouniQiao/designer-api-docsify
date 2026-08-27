@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## addCandidateConfig
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function addCandidateConfig(config: WifiDeviceConfig): Promise<number>
 ```
 
-添加指定的候选热点配置，并返回networkId。 此方法一次添加一个配置。添加此配置后，设备将决定是否连接到该热点。 应用必须在前台运行。
+添加指定的候选热点配置，并返回networkId。此方法一次添加一个配置。添加此配置后，设备将决定是否连接到该热点。应用必须在前台运行。
 
 **起始版本：** 12
 
@@ -27,13 +26,13 @@ function addCandidateConfig(config: WifiDeviceConfig): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 | 候选配置。 |
+| config | WifiDeviceConfig | 是 | 候选配置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 添加配置时返回{ |
+| Promise&lt;number&gt; | 添加配置时返回{ |
 
 **错误码：**
 
@@ -72,7 +71,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function addCandidateConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void
 ```
 
-添加指定的候选热点配置，并返回networkId。 此方法一次添加一个配置。添加此配置后，设备将决定是否连接到该热点。 应用必须在前台运行。
+添加指定的候选热点配置，并返回networkId。此方法一次添加一个配置。添加此配置后，设备将决定是否连接到该热点。应用必须在前台运行。
 
 **起始版本：** 12
 
@@ -86,7 +85,7 @@ function addCandidateConfig(config: WifiDeviceConfig, callback: AsyncCallback<nu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 | 候选配置。 |
+| config | WifiDeviceConfig | 是 | 候选配置。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 表示addCandidateConfig的回调函数。 |
 
 **错误码：**

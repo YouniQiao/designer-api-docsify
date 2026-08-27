@@ -1,6 +1,14 @@
 # ImagePacker
 
-ImagePacker类，用于图片压缩和编码。在调用ImagePacker的方法前，需要先通过[image.createImagePacker](arkts-image-image-createimagepacker-f.md)构建一个ImagePacker实例。编码期间，请避免修改或释放作为输入的ImageSource/PixelMap/Picture对象，以免出现crash或其他未定义行为。由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release](#release)方法及时 释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。当前支持的格式有：JPEG、WebP、PNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、GIF&lt;sup&gt;18+&lt;/sup&gt;、从API版本26.0.0开始支持TIFF格式（不同硬件设备支持情况不同，可通过ImagePacker的 supportedFormats属性查看）。
+ImagePacker类，用于图片压缩和编码。
+
+在调用ImagePacker的方法前，需要先通过[image.createImagePacker](arkts-image-image-createimagepacker-f.md)构建一个ImagePacker实例。
+
+编码期间，请避免修改或释放作为输入的ImageSource/PixelMap/Picture对象，以免出现crash或其他未定义行为。
+
+由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+
+当前支持的格式有：JPEG、WebP、PNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、GIF&lt;sup&gt;18+&lt;/sup&gt;、从API版本26.0.0开始支持TIFF格式（不同硬件设备支持情况不同，可通过ImagePacker的supportedFormats属性查看）。
 
 **起始版本：** 6
 
@@ -9,7 +17,7 @@ ImagePacker类，用于图片压缩和编码。在调用ImagePacker的方法前�
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## packBinaryImageToTiffData
@@ -31,13 +39,13 @@ packBinaryImageToTiffData(bufferInfo: BinaryBufferInfo, options?: PackingOptions
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bufferInfo | [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | 是 | 图像缓冲区信息。 |
-| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | 否 | TIFF图像编码选项。 未传入options时，默认的compression为4（CCITT G4）。 未传入options时，默认的orientation为1（TOP_LEFT），表示图像未旋转。 |
+| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | 否 | TIFF图像编码选项。未传入options时，默认的compression为4（CCITT G4）。未传入options时，默认的orientation为1（TOP_LEFT），表示图像未旋转。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象，返回编码后的数据。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回编码后的数据。 |
 
 **错误码：**
 
@@ -103,13 +111,13 @@ packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: number, options?: Pa
 | --- | --- | --- | --- |
 | bufferInfo | [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | 是 | 图像缓冲区信息。 |
 | fd | number | 是 | 文件描述符ID。该值必须为正整数。 |
-| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | 否 | TIFF图像编码选项。 未传入options时，默认的compression为4（CCITT G4）。 未传入options时，默认的orientation为1（TOP_LEFT），表示图像未旋转。 |
+| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | 否 | TIFF图像编码选项。未传入options时，默认的compression为4（CCITT G4）。未传入options时，默认的orientation为1（TOP_LEFT），表示图像未旋转。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -186,7 +194,7 @@ packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<Arra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 | 编码的ImageSource。 |
+| source | ImageSource | 是 | 编码的ImageSource。 |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
 
@@ -237,14 +245,14 @@ packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 | 编码的ImageSource。 |
+| source | ImageSource | 是 | 编码的ImageSource。 |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象，返回压缩或编码后的数据。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
 
 **示例**
 
@@ -296,7 +304,7 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 编码的PixelMap资源。 |
+| source | PixelMap | 是 | 编码的PixelMap资源。 |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
 
@@ -354,14 +362,14 @@ packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 编码的PixelMap源。 |
+| source | PixelMap | 是 | 编码的PixelMap源。 |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象，返回压缩或编码后的数据。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
 
 **示例**
 
@@ -409,7 +417,7 @@ packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象，返回压缩或编码后的数据。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
 
 **错误码：**
 
@@ -467,14 +475,14 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 | 编码的ImageSource。 |
+| source | ImageSource | 是 | 编码的ImageSource。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象，返回压缩或编码后的数据。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
 
 **错误码：**
 
@@ -532,14 +540,14 @@ packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 编码的PixelMap源。 |
+| source | PixelMap | 是 | 编码的PixelMap源。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象，返回压缩或编码后的数据。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回压缩或编码后的数据。 |
 
 **错误码：**
 
@@ -594,14 +602,14 @@ packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: Packi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmapSequence | Array & lt;PixelMap & gt; | 是 | 待编码的PixelMap序列。 |
+| pixelmapSequence | Array&lt;PixelMap&gt; | 是 | 待编码的PixelMap序列。 |
 | options | [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | 是 | 动图编码参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象，返回编码后的数据。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回编码后的数据。 |
 
 **错误码：**
 
@@ -654,7 +662,7 @@ packToFile(source: ImageSource, fd: number, options: PackingOption, callback: As
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 | 编码的ImageSource。 |
+| source | ImageSource | 是 | 编码的ImageSource。 |
 | fd | number | 是 | 文件描述符。取值范围为[0，65535]。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当编码进文件成功，err为undefined，否则为错误对象。 |
@@ -713,7 +721,7 @@ packToFile(source: ImageSource, fd: number, options: PackingOption): Promise<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 | 编码的ImageSource。 |
+| source | ImageSource | 是 | 编码的ImageSource。 |
 | fd | number | 是 | 文件描述符。取值范围为[0，65535]。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
@@ -721,7 +729,7 @@ packToFile(source: ImageSource, fd: number, options: PackingOption): Promise<voi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -779,7 +787,7 @@ packToFile(source: PixelMap, fd: number, options: PackingOption, callback: Async
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 编码的PixelMap资源。 |
+| source | PixelMap | 是 | 编码的PixelMap资源。 |
 | fd | number | 是 | 文件描述符。取值范围为[0，65535]。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当编码图片进文件成功，err为undefined，否则为错误对象。 |
@@ -843,7 +851,7 @@ packToFile(source: PixelMap, fd: number, options: PackingOption): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | 编码的PixelMap资源。 |
+| source | PixelMap | 是 | 编码的PixelMap资源。 |
 | fd | number | 是 | 文件描述符。取值范围为[0，65535]。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
@@ -851,7 +859,7 @@ packToFile(source: PixelMap, fd: number, options: PackingOption): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -915,7 +923,7 @@ packToFile(picture: Picture, fd: number, options: PackingOption): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -975,7 +983,7 @@ packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: number, op
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmapSequence | Array & lt;PixelMap & gt; | 是 | 待编码的PixelMap序列。 |
+| pixelmapSequence | Array&lt;PixelMap&gt; | 是 | 待编码的PixelMap序列。 |
 | fd | number | 是 | 文件描述符。取值范围为[0，65535]。 |
 | options | [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | 是 | 动图编码参数。 |
 
@@ -983,7 +991,7 @@ packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: number, op
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1029,7 +1037,11 @@ async function PackToFile(context : Context) {
 release(callback: AsyncCallback<void>): void
 ```
 
-释放图片编码实例。使用callback异步回调。由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放图片编码实例。使用callback异步回调。
+
+由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用该方法，及时释放内存。
+
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 6
 
@@ -1134,7 +1146,11 @@ function release(pixelMap: image.PixelMap) {
 release(): Promise<void>
 ```
 
-释放图片编码实例。使用Promise异步回调。由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放图片编码实例。使用Promise异步回调。
+
+由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用该方法，及时释放内存。
+
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 6
 
@@ -1144,7 +1160,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 

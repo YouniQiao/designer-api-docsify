@@ -23,7 +23,13 @@
 endMargin?: Dimension
 ```
 
-子组件与其下方分割线的距离。可调整间距（如避免内容与分割线重叠、美化布局等场景）。默认值：0vp取值范围：不支持负值。非法值：按默认值处理，此时 [getInspectorByKey()](../arkts-apis/arkts-arkui-global-getinspectorbykey-f.md) 接口获取到的属性值为undefined。
+子组件与其下方分割线的距离。可调整间距（如避免内容与分割线重叠、美化布局等场景）。
+
+默认值：0vp
+
+取值范围：不支持负值。
+
+非法值：按默认值处理，此时[getInspectorByKey()](../arkts-apis/arkts-arkui-global-getinspectorbykey-f.md)接口获取到的属性值为undefined。
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -43,7 +49,13 @@ endMargin?: Dimension
 startMargin?: Dimension
 ```
 
-子组件与其上方分割线的距离。可调整间距（如避免内容与分割线重叠、美化布局等场景）。默认值：0vp取值范围：不支持负值。非法值：按默认值处理，此时 [getInspectorByKey()](../arkts-apis/arkts-arkui-global-getinspectorbykey-f.md) 接口获取到的属性值为undefined。
+子组件与其上方分割线的距离。可调整间距（如避免内容与分割线重叠、美化布局等场景）。
+
+默认值：0vp
+
+取值范围：不支持负值。
+
+非法值：按默认值处理，此时[getInspectorByKey()](../arkts-apis/arkts-arkui-global-getinspectorbykey-f.md)接口获取到的属性值为undefined。
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

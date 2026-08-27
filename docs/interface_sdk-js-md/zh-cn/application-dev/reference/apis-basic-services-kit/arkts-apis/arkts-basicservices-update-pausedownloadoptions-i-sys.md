@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import update from '@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## isAllowAutoResume
@@ -20,7 +20,11 @@ import update from '@kit.BasicServicesKit';
 isAllowAutoResume: boolean
 ```
 
-是否允许自动恢复。仅当有正在进行的下载任务时才能设置此参数。true表示允许自动恢复，系统可能自动恢复下载；false表示不允许，需手动调用resumeDownload恢复。使用建议：网络不稳定场景建议设置true启用自动恢复，提升下载成功率；需要精确控制下载时机或避免在特定网络环境下恢复的场景建议设置false，通过手动调用resumeDownload控制恢复时机。
+是否允许自动恢复。仅当有正在进行的下载任务时才能设置此参数。
+
+true表示允许自动恢复，系统可能自动恢复下载；false表示不允许，需手动调用resumeDownload恢复。
+
+使用建议：网络不稳定场景建议设置true启用自动恢复，提升下载成功率；需要精确控制下载时机或避免在特定网络环境下恢复的场景建议设置false，通过手动调用resumeDownload控制恢复时机。
 
 **类型：** boolean
 

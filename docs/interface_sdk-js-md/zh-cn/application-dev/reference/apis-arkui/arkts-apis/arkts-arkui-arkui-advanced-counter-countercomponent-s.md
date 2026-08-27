@@ -16,7 +16,6 @@ Counter组件用于精确调节数值，支持列表型、紧凑型、数值内�
 
 ```TypeScript
 import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUIV2';
 ```
 
 ## options

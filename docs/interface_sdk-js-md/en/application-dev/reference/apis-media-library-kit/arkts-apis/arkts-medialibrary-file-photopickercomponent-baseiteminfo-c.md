@@ -18,7 +18,9 @@ import { PhotoPickerComponent, PickerController, PickerOptions, DataType, BaseIt
 duration?: number
 ```
 
-Video duration, in milliseconds. In versions earlier than API version 23, the value of **duration** is **0** for moving photos. In API version 23 and later versions, the value of **duration** is the duration of the video clip attached to moving photos. If an exception occurs, **-1** is returned.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+Video duration, in milliseconds. In versions earlier than API version 23, the value of **duration** is **0** for moving photos. In API version 23 and later versions, the value of **duration** is the duration of the video clip attached to moving photos. If an exception occurs, **-1** is returned.
+
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 
@@ -34,7 +36,9 @@ Video duration, in milliseconds. In versions earlier than API version 23, the va
 dynamicRangeType?: photoAccessHelper.DynamicRangeType
 ```
 
-Dynamic range type of the media file. The options are **HDR** and **SDR**.For moving photos, this parameter specifies the dynamic range type of the cover image.
+Dynamic range type of the media file. The options are **HDR** and **SDR**.
+
+For moving photos, this parameter specifies the dynamic range type of the cover image.
 
 **Type:** photoAccessHelper.DynamicRangeType
 
@@ -50,7 +54,9 @@ Dynamic range type of the media file. The options are **HDR** and **SDR**.For mo
 height?: number
 ```
 
-Height of the image or video, in px.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+Height of the image or video, in px.
+
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 
@@ -66,7 +72,11 @@ Height of the image or video, in px.This parameter is supported only when [ItemT
 mimeType?: string
 ```
 
-MIME type of the image or video.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.You can determine the media type based on the prefix of the **mimeType** string. If the string starts with "image/", it indicates an image. If the string starts with "video/", it indicates a video. For details, see [Identifying Asset Types Using the mimeType Field](../../../media/medialibrary/medialibrary-faqs/medialibrary-asset-judgment-faq.md#identifying-asset-types-using-the-mimetype-field).
+MIME type of the image or video.
+
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+
+You can determine the media type based on the prefix of the **mimeType** string. If the string starts with "image/", it indicates an image. If the string starts with "video/", it indicates a video. For details, see [Identifying Asset Types Using the mimeType Field](../../../media/medialibrary/medialibrary-faqs/medialibrary-asset-judgment-faq.md#identifying-asset-types-using-the-mimetype-field).
 
 **Type:** string
 
@@ -82,7 +92,9 @@ MIME type of the image or video.This parameter is supported only when [ItemType]
 movingPhotoBadgeState?: photoAccessHelper.MovingPhotoBadgeStateType
 ```
 
-State of the moving photo badge.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+State of the moving photo badge.
+
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** photoAccessHelper.MovingPhotoBadgeStateType
 
@@ -98,7 +110,25 @@ State of the moving photo badge.This parameter is supported only when [ItemType]
 orientation?: number
 ```
 
-Image or video direction information.1: **TOP-left**: The image is not rotated.2: **TOP-right**: The image is flipped horizontally.3: **Bottom-right**: The image is rotated by 180°.4: **Bottom-left**: The image is flipped vertically.5: **Left-top**: The image is flipped horizontally and then rotated clockwise by 270°.6: **Right-top**: The image is rotated clockwise by 90°.7: **Right-bottom**: The image is vertically flipped and then rotated clockwise by 90°.8: **Left-bottom**: The image is rotated clockwise by 270°.Images with mirroring information retain their original width and height attributes regardless of rotation, whereas images without such information have these attributes updated to reflect the post-rotation dimensions.
+Image or video direction information.
+
+1: **TOP-left**: The image is not rotated.
+
+2: **TOP-right**: The image is flipped horizontally.
+
+3: **Bottom-right**: The image is rotated by 180°.
+
+4: **Bottom-left**: The image is flipped vertically.
+
+5: **Left-top**: The image is flipped horizontally and then rotated clockwise by 270°.
+
+6: **Right-top**: The image is rotated clockwise by 90°.
+
+7: **Right-bottom**: The image is vertically flipped and then rotated clockwise by 90°.
+
+8: **Left-bottom**: The image is rotated clockwise by 270°.
+
+Images with mirroring information retain their original width and height attributes regardless of rotation, whereas images without such information have these attributes updated to reflect the post-rotation dimensions.
 
 **Type:** number
 
@@ -114,7 +144,9 @@ Image or video direction information.1: **TOP-left**: The image is not rotated.2
 photoSubType?: photoAccessHelper.PhotoSubtype
 ```
 
-Subtype of the photo. The options are **DEFAULT**, **MOVING_PHOTO**, and **BURST**.The default value is **DEFAULT (0)**.
+Subtype of the photo. The options are **DEFAULT**, **MOVING_PHOTO**, and **BURST**.
+
+The default value is **DEFAULT (0)**.
 
 **Type:** photoAccessHelper.PhotoSubtype
 
@@ -130,7 +162,9 @@ Subtype of the photo. The options are **DEFAULT**, **MOVING_PHOTO**, and **BURST
 size?: number
 ```
 
-Size of the image or video, in bytes.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+Size of the image or video, in bytes.
+
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 
@@ -148,8 +182,13 @@ Size of the image or video, in bytes.This parameter is supported only when [Item
 uri?: string
 ```
 
-URI of the image or video.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.  
-**NOTE：**If the resource is a burst shot photo, only the cover image of the burst shot photo group is returned.
+URI of the image or video.
+
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+
+**NOTE：**
+
+If the resource is a burst shot photo, only the cover image of the burst shot photo group is returned.
 
 **Type:** string
 
@@ -181,7 +220,9 @@ Log mode of a video file.
 width?: number
 ```
 
-Width of the image or video, in px.This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+Width of the image or video, in px.
+
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 

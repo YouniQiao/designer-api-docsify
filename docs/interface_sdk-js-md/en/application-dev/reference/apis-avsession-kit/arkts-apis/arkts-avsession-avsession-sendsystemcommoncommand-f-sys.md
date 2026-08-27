@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## sendSystemCommonCommand
@@ -35,7 +35,7 @@ Send system control command. The system automatically selects the recipient.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | callback info for sync command |
+| Promise&lt;string&gt; | callback info for sync command |
 
 **Error codes:**
 

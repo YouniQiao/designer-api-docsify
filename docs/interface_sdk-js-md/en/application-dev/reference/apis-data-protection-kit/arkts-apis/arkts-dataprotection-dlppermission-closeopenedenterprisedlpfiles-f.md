@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## closeOpenedEnterpriseDlpFiles
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function closeOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<void>
 ```
 
-Closes all opened enterprise DLP files that meet the specified options. This API uses a promise to return the result.This API can be called to close enterprise DLP files in batches, clear file resources, or release file handles before exiting the application.
+Closes all opened enterprise DLP files that meet the specified options. This API uses a promise to return the result.
+
+This API can be called to close enterprise DLP files in batches, clear file resources, or release file handles before exiting the application.
 
 > **NOTE：**
 > 
@@ -37,7 +39,7 @@ Closes all opened enterprise DLP files that meet the specified options. This API
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

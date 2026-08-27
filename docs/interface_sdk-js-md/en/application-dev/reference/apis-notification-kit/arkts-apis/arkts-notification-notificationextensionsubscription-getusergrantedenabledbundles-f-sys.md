@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationExtensionSubscription from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## getUserGrantedEnabledBundles
@@ -26,13 +26,13 @@ Obtains the applications that are allowed to access device notifications. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetBundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes | Information about the target application. The application must have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented [NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md). Otherwise, error code 1600022 is returned. |
+| targetBundle | BundleOption | Yes | Information about the target application. The application must have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented [NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md). Otherwise, error code 1600022 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BundleOption[] & gt; | Promise used to return the applications obtained. |
+| Promise&lt;BundleOption[]&gt; | Promise used to return the applications obtained. |
 
 **Error codes:**
 

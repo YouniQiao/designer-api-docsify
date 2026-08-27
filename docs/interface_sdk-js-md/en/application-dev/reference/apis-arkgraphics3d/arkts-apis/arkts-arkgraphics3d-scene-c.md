@@ -46,9 +46,9 @@ function CloneNode() {
       let name = "cloneNode_";
       let clone = result.cloneNode(node, parent, name);
       if (clone) {
-        console.info("cloneNode success");
+        console.info("Succeeded in cloning node");
       } else {
-        console.error("cloneNode failed");
+        console.error("Failed to clone node");
       }
     });
 }
@@ -89,14 +89,14 @@ function createComponentTest(): Promise<SceneComponent> {
   return Scene.load($rawfile("gltf/DamagedHelmet/glTF/DamagedHelmet.glb"))
     .then(scene => {
       if (!scene) {
-        return Promise.reject(new Error("Scene load failed"));
+        return Promise.reject(new Error("Failed to load scene"));
       }
       // RenderConfigurationComponent is an internal component of the engine. You do not need to install plugins when creating the component.
       return scene.createComponent(scene.root, "RenderConfigurationComponent");
     })
     .then(component => {
       if (!component) {
-        return Promise.reject(new Error("createComponent failed"));
+        return Promise.reject(new Error("Failed to create component"));
       }
       return component;
     });
@@ -167,15 +167,15 @@ function getComponentTest() {
   Scene.load($rawfile("gltf/DamagedHelmet/glTF/DamagedHelmet.glb"))
     .then(async (result: Scene | undefined) => {
       if (!result) {
-        console.error("Scene load failed");
+        console.error("Failed to load scene");
         return;
       }
       console.info("TEST getComponentTest");
       let component = result.getComponent(result.root, "myComponent");
       if (component) {
-        console.info("getComponent success");
+        console.info("Succeeded in getting component");
       } else {
-        console.warn("Component not found");
+        console.error("Failed to get component");
       }
     });
 }
@@ -208,9 +208,9 @@ function getDefaultRenderContextTest() {
   console.info("TEST getDefaultRenderContextTest");
   const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
   if (renderContext) {
-    console.info("getDefaultRenderContext success");
+    console.info("Succeeded in getting default render context");
   } else {
-    console.error("RenderContext is null");
+    console.error("Failed to get default render context");
   }
 }
 ```
@@ -379,7 +379,7 @@ function ImportSceneTest() {
       return;
     }
     // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
-    let content = await result.getResourceFactory().createScene($rawfile("gltf/DamagedHelmet/glTF/DamagedHelmet.glb"))
+    let content = await result.getResourceFactory().createScene($rawfile("gltf/DamagedHelmet/glTF/DamagedHelmet.glb"));
     console.info("TEST ImportSceneTest");
     result.importScene("helmet", content, null);
   });
@@ -402,7 +402,7 @@ Loads a resource by path. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | No | Path of the model file resource to load. The default value is undefined. |
+| uri | ResourceStr | No | Path of the model file resource to load. The default value is undefined. |
 
 **Return value:**
 
@@ -452,8 +452,8 @@ async function loadModelFromAbsolutePath(context: common.UIAbilityContext): Prom
   // Load the model using the absolute path.
   Scene.load(load_uri).then((scene: Scene) => {
     // Handle the loaded scene.
-  }).catch((error: string) => {
-    console.error('Scene load failed: ' + error);
+  }).catch((err: Error) => {
+    console.error(`Failed to load scene. Message: ${err.message}`);
   });
 }
 ```
@@ -506,7 +506,9 @@ function RenderFrameTest() {
 get animations(): Animation[]
 ```
 
-Animation objects in the 3D scene.@return { Animation[] } @readonly
+Animation objects in the 3D scene.
+
+@return { Animation[] } @readonly
 
 **Type:** [Animation](arkts-arkgraphics3d-sceneresources-animation-i.md)[]
 
@@ -548,7 +550,9 @@ Rendering configuration.
 get root(): Node | null
 ```
 
-Root node of the 3D scene tree.@return { Node | null } @readonly
+Root node of the 3D scene tree.
+
+@return { Node | null } @readonly
 
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 

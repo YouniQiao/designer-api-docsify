@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import abilityManager from '@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## isEmbeddedOpenAllowed
@@ -33,7 +33,7 @@ Checks whether the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuia
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. **true** if embedded startup is allowed, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result. **true** if embedded startup is allowed, **false** otherwise. |
 
 **Error codes:**
 

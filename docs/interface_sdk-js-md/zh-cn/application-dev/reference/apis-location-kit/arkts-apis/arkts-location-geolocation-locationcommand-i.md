@@ -1,6 +1,8 @@
 # LocationCommand
 
-扩展命令参数。@interface LocationCommand
+扩展命令参数。
+
+@interface LocationCommand
 
 **起始版本：** 8
 
@@ -15,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## command

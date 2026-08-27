@@ -1,6 +1,8 @@
 # LiveViewInfo (System API)
 
-Information for LiveView in AI image generation.@interface LiveViewInfo
+Information for LiveView in AI image generation.
+
+@interface LiveViewInfo
 
 **Since:** 26.0.0
 
@@ -11,7 +13,7 @@ Information for LiveView in AI image generation.@interface LiveViewInfo
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## getLongTermTaskId

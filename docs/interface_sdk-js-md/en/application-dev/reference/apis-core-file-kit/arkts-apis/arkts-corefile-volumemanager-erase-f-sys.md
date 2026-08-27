@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import volumeManager from '@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## erase
@@ -34,7 +34,7 @@ Erases a volume. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

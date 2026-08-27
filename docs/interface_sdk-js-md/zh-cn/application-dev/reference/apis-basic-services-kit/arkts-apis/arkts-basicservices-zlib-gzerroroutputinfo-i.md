@@ -9,7 +9,7 @@ GzError返回信息。
 ## 导入模块
 
 ```TypeScript
-import zlib from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## status

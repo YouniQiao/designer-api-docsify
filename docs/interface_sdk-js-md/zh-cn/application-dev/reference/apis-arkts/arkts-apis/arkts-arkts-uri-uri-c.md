@@ -35,7 +35,7 @@ addEncodedSegment(pathSegment: string): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回已追加字段的URI对象。 |
+| URI | 返回已追加字段的URI对象。 |
 
 **示例**
 
@@ -70,7 +70,7 @@ addQueryValue(key: string, value: string): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回添加查询部分后的URI对象。 |
+| URI | 返回添加查询部分后的URI对象。 |
 
 **示例**
 
@@ -104,7 +104,7 @@ addSegment(pathSegment: string): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回已追加字段的URI对象。 |
+| URI | 返回已追加字段的URI对象。 |
 
 **示例**
 
@@ -248,7 +248,7 @@ clearQuery(): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回一个已被清除查询部分的URI对象。 |
+| URI | 返回一个已被清除查询部分的URI对象。 |
 
 **示例**
 
@@ -320,7 +320,7 @@ static createFromParts(scheme: string, ssp: string, fragment: string): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回由给定方案、方案特定部分和片段创建的URI对象。 |
+| URI | 返回由给定方案、方案特定部分和片段创建的URI对象。 |
 
 **示例**
 
@@ -349,7 +349,7 @@ equals(other: URI): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [URI](arkts-arkts-uri-uri-c.md) | 是 | 需要比较的URI对象。 |
+| other | URI | 是 | 需要比较的URI对象。 |
 
 **返回值：**
 
@@ -383,7 +383,7 @@ equalsTo(other: URI): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [URI](arkts-arkts-uri-uri-c.md) | 是 | 需要比较的URI对象。 |
+| other | URI | 是 | 需要比较的URI对象。 |
 
 **返回值：**
 
@@ -502,7 +502,9 @@ console.info(paramNames.toString()); // param1,param2
 getQueryValue(key: string): string
 ```
 
-根据给定的查询关键词，从URI查询参数部分中提取出该关键词对应的第一个值，若查询参数中存在已编码过的内容，需将对应Key进行解码后获取Value。查询参数在问号“?”后，由键值对组成。键和值用等号“=”连接，键值对用与号“&”分隔。
+根据给定的查询关键词，从URI查询参数部分中提取出该关键词对应的第一个值，若查询参数中存在已编码过的内容，需将对应Key进行解码后获取Value。
+
+查询参数在问号“?”后，由键值对组成。键和值用等号“=”连接，键值对用与号“&”分隔。
 
 **起始版本：** 12
 
@@ -538,7 +540,9 @@ console.info(uriInstance1.getQueryValue('abc')) // null
 getQueryValues(key: string): string[]
 ```
 
-获取URI中查询参数指定键的所有值。如果查询参数已编码，需先解码键再获取值。查询参数是出现在问号“?”之后的部分，由键值对组成，键和值用等号“=”连接，键值对间用与号“&”分隔。
+获取URI中查询参数指定键的所有值。如果查询参数已编码，需先解码键再获取值。
+
+查询参数是出现在问号“?”之后的部分，由键值对组成，键和值用等号“=”连接，键值对间用与号“&”分隔。
 
 **起始版本：** 12
 
@@ -621,7 +625,7 @@ normalize(): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回一个path被规范化后的URI对象。 |
+| URI | 返回一个path被规范化后的URI对象。 |
 
 **示例**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createImageSource
@@ -12,7 +12,12 @@ import image from '@kit.ImageKit';
 function createImageSource(uri: string): ImageSource
 ```
 
-Creates an ImageSource instance based on a given URI.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.The SVG tags are supported since API version 10. The used version is (SVG) 1.1, and the width and height of the SVG tag must be set. An XML declaration can be added to an SVG file and start with **&lt;?xml**. The following tags are supported:  
+Creates an ImageSource instance based on a given URI.
+
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+
+The SVG tags are supported since API version 10. The used version is (SVG) 1.1, and the width and height of the SVG tag must be set. An XML declaration can be added to an SVG file and start with **&lt;?xml**. The following tags are supported:
+
 - a  
 - circle  
 - clipPath  
@@ -62,13 +67,13 @@ Creates an ImageSource instance based on a given URI.Images occupy a large amoun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic & lt;sup & gt;12+ & lt;/sup & gt; (depending on the hardware), .svg & lt;sup & gt;10+ & lt;/sup & gt;, and .ico & lt;sup & gt;11+ & lt;/sup & gt;. |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), .svg&lt;sup&gt;10+&lt;/sup&gt;, and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -87,7 +92,12 @@ async function CreateImageSource(context : Context) {
 function createImageSource(uri: string, options: SourceOptions): ImageSource
 ```
 
-Creates an ImageSource instance based on a given URI.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.The SVG tags are supported since API version 10. The used version is (SVG) 1.1, and the width and height of the SVG tag must be set. An XML declaration can be added to an SVG file and start with **&lt;?xml**. The following tags are supported:  
+Creates an ImageSource instance based on a given URI.
+
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+
+The SVG tags are supported since API version 10. The used version is (SVG) 1.1, and the width and height of the SVG tag must be set. An XML declaration can be added to an SVG file and start with **&lt;?xml**. The following tags are supported:
+
 - a  
 - circle  
 - clipPath  
@@ -139,14 +149,14 @@ Creates an ImageSource instance based on a given URI.Images occupy a large amoun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic & lt;sup & gt;12+ & lt;/sup & gt; (depending on the hardware), .svg & lt;sup & gt;10+ & lt;/sup & gt; and .ico & lt;sup & gt;11+ & lt;/sup & gt;. |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), .svg&lt;sup&gt;10+&lt;/sup&gt; and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
 | options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | Image properties, including the image pixel density, pixel format, and image size. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -166,7 +176,9 @@ async function CreateImageSource(context : Context) {
 function createImageSource(fd: number): ImageSource
 ```
 
-Creates an ImageSource instance based on a given file descriptor.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on a given file descriptor.
+
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 7
 
@@ -184,7 +196,7 @@ Creates an ImageSource instance based on a given file descriptor.Images occupy a
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -206,7 +218,9 @@ async function CreateImageSource(context : Context) {
 function createImageSource(fd: number, options: SourceOptions): ImageSource
 ```
 
-Creates an ImageSource instance based on a given file descriptor.Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on a given file descriptor.
+
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -227,7 +241,7 @@ Creates an ImageSource instance based on a given file descriptor.Images occupy a
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -270,7 +284,7 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -309,7 +323,7 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 
@@ -347,7 +361,7 @@ Creates an ImageSource instance based on the raw file descriptor of an image res
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 **Examples**
 

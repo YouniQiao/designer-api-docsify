@@ -30,7 +30,7 @@ Clears the text information of a component. This API takes effect only for edita
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -70,7 +70,7 @@ Clicks this component. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -124,7 +124,7 @@ Double-clicks this component. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -181,7 +181,7 @@ Drags a component to the target component. This method is valid only for compone
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -321,7 +321,7 @@ Obtains the description of this component. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the description of the component. |
+| Promise&lt;string&gt; | Promise used to return the description of the component. |
 
 **Error codes:**
 
@@ -361,7 +361,7 @@ Obtains the ID of the display to which the component belongs. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the ID of the display to which the component belongs. |
+| Promise&lt;number&gt; | Promise used to return the ID of the display to which the component belongs. |
 
 **Error codes:**
 
@@ -412,7 +412,7 @@ Obtains the hint text of a component. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the hint text of a component. |
+| Promise&lt;string&gt; | Promise used to return the hint text of a component. |
 
 **Error codes:**
 
@@ -452,7 +452,7 @@ Obtains the ID of this component. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the component ID. |
+| Promise&lt;string&gt; | Promise used to return the component ID. |
 
 **Error codes:**
 
@@ -492,7 +492,7 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the text information of the component. |
+| Promise&lt;string&gt; | Promise used to return the text information of the component. |
 
 **Error codes:**
 
@@ -539,7 +539,7 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the text information of the component. |
+| Promise&lt;string&gt; | Promise used to return the text information of the component. |
 
 **Error codes:**
 
@@ -590,7 +590,7 @@ Obtains the type of this component. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the component type. |
+| Promise&lt;string&gt; | Promise used to return the component type. |
 
 **Error codes:**
 
@@ -647,7 +647,7 @@ Clears the original text in a component and inputs the specified text. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -709,7 +709,7 @@ Inputs text to a component in a specified text input mode. This API takes effect
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -751,7 +751,7 @@ Obtains the checkable status of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result of whether the component object is checkable. The value **true** indicates that the component is checkable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result of whether the component object is checkable. The value **true** indicates that the component is checkable, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -795,7 +795,7 @@ Obtains the checked status of this component. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the checked status of the component object. The value **true** indicates that the component is checked, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the checked status of the component object. The value **true** indicates that the component is checked, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -839,7 +839,7 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return whether the component object is clickable. The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return whether the component object is clickable. The value **true** indicates that the component is clickable, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -898,7 +898,7 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return whether the component is enabled. The value **true** indicates that the component is enabled, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return whether the component is enabled. The value **true** indicates that the component is enabled, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -957,7 +957,7 @@ Checks whether a component is focused. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return whether the component is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return whether the component is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1027,7 +1027,7 @@ Obtains the number-clickable status of this component. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return whether the component object is number-clickable. The value **true** indicates that the component is number-clickable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return whether the component object is number-clickable. The value **true** indicates that the component is number-clickable, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1071,7 +1071,7 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return whether the component object is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return whether the component object is scrollable. The value **true** indicates that the component is scrollable, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1130,7 +1130,7 @@ Obtains the selected status of this component. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return whether the component is selected. The value **true** indicates that the component is selected, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return whether the component is selected. The value **true** indicates that the component is selected, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1189,7 +1189,7 @@ Long-clicks this component. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1246,7 +1246,7 @@ Pinches in a component at the specified scale. This method is valid only for com
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1293,7 +1293,7 @@ Pinches out a component at the specified scale. This method is valid only for co
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1439,7 +1439,7 @@ Scrolls to the bottom of this component. This API is applicable to components th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1486,7 +1486,7 @@ Scrolls to the top of this component. This API is applicable to components that 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

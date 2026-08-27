@@ -37,7 +37,7 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Array of levels supported. |
+| Array&lt;number&gt; | Array of levels supported. |
 
 **Error codes:**
 

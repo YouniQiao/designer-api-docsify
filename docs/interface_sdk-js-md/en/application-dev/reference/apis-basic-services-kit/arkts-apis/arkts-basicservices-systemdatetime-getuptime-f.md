@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemDateTime from '@kit.BasicServicesKit';
+import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
 ## getUptime

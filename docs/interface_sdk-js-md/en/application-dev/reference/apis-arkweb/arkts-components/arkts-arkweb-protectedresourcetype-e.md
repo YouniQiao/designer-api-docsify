@@ -12,7 +12,9 @@ Defines the types of protected resources that the Web component needs to access.
 MidiSysex = "TYPE_MIDI_SYSEX"
 ```
 
-MIDI SYSEX resource.Currently, only permission events can be reported. MIDI devices are not yet supported.
+MIDI SYSEX resource.
+
+Currently, only permission events can be reported. MIDI devices are not yet supported.
 
 **Since:** 9
 

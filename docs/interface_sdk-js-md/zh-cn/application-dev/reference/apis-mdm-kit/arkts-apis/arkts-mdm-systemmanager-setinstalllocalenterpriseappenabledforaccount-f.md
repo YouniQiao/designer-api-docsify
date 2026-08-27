@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import systemManager from '@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## setInstallLocalEnterpriseAppEnabledForAccount
@@ -12,7 +12,9 @@ import systemManager from '@kit.MDMKit';
 function setInstallLocalEnterpriseAppEnabledForAccount(admin: Want, isEnable: boolean, accountId: number): void
 ```
 
-设置指定用户下是否支持本地安装企业应用。在具备本地安装能力的PC/2in1企业设备上下发支持本地企业应用策略后，用户可以在桌面或者文件管理器直接双击企业应用安装包，即可直接安装企业应用。仅支持enterprise_normal或enterprise_mdm签名类型的企业应用。
+设置指定用户下是否支持本地安装企业应用。在具备本地安装能力的PC/2in1企业设备上下发支持本地企业应用策略后，用户可以在桌面或者文件管理器直接双击企业应用安装包，即可直接安装企业应用。
+
+仅支持enterprise_normal或enterprise_mdm签名类型的企业应用。
 
 > **说明：**
 > 
@@ -36,7 +38,7 @@ function setInstallLocalEnterpriseAppEnabledForAccount(admin: Want, isEnable: bo
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | isEnable | boolean | 是 | 是否支持本地安装企业应用。true表示支持，false表示不支持。 |
-| accountId | number | 是 | 用户ID，取值范围：大于等于0。accountId可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
+| accountId | number | 是 | 用户ID，取值范围：大于等于0。accountId可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 
 **错误码：**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import systemManager from '@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## setNTPServer
@@ -12,7 +12,7 @@ import systemManager from '@kit.MDMKit';
 function setNTPServer(admin: Want, server: string): void
 ```
 
-设置NTP(Network Time Protocol)时间服务器。设置成功后，系统将使用指定的NTP服务器进行时间同步，校准系统时间。适用于企业设备需要统一时间同步的场景，确保企业设备时间与标准时间保持一致，避免因时间不准确导致 的业务问题，如日志时间戳不一致、证书验证失败等。
+设置NTP(Network Time Protocol)时间服务器。设置成功后，系统将使用指定的NTP服务器进行时间同步，校准系统时间。适用于企业设备需要统一时间同步的场景，确保企业设备时间与标准时间保持一致，避免因时间不准确导致的业务问题，如日志时间戳不一致、证书验证失败等。
 
 **起始版本：** 12
 

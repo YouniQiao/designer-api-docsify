@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## fileName
@@ -50,7 +50,7 @@ isMute?: boolean
 progressValue?: number
 ```
 
-通知进度。如果该字段不存在，则不显示通知进度环，显示为普通通知。 取值限定为整数。
+通知进度。如果该字段不存在，则不显示通知进度环，显示为普通通知。取值限定为整数。
 
 **类型：** number
 

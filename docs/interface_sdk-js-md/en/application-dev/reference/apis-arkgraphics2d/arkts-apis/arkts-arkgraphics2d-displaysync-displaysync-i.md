@@ -9,7 +9,7 @@ An object that implements the setting of the frame rate and callback. It provide
 ## Modules to Import
 
 ```TypeScript
-import displaySync from '@kit.ArkGraphics2D';
+import { displaySync } from '@kit.ArkGraphics2D';
 ```
 
 ## off('frame')
@@ -90,7 +90,7 @@ Sets the expected frame rate range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](../../apis-arkui/arkts-components/arkts-arkui-expectedframeraterange-i.md) | Yes | Expected frame rate range. |
+| rateRange | ExpectedFrameRateRange | Yes | Expected frame rate range. |
 
 **Error codes:**
 

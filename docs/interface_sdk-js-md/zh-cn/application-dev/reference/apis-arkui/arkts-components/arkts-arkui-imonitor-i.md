@@ -31,7 +31,7 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 否 | 被监听的状态变量路径名。未指定时默认使用变化路径数组dirty中的第一个路径。从API版本26.0.0开始，默认使用dirty中第一个非通配符路径。 当指定路径为通配符路径时，返回undefined。 |
+| path | string | 否 | 被监听的状态变量路径名。未指定时默认使用变化路径数组dirty中的第一个路径。从API版本26.0.0开始，默认使用dirty中第一个非通配符路径。当指定路径为通配符路径时，返回undefined。 |
 
 **返回值：**
 
@@ -45,7 +45,7 @@ value<T>(path?: string): IMonitorValue<T> | undefined
 dirty: Array<string>
 ```
 
-被监听的状态变量中发生变化的属性路径数组，路径格式与@Monitor装饰器指定的状态变量名路径一致，支持点号分隔的嵌套属性路径（如'a.b.c'）。从API版本26.0.0开始，当通配符能力开启时，该数组中可能包含通配符路径， 通过[value](#value)()方法查询通配符路径将返回undefined。
+被监听的状态变量中发生变化的属性路径数组，路径格式与@Monitor装饰器指定的状态变量名路径一致，支持点号分隔的嵌套属性路径（如'a.b.c'）。从API版本26.0.0开始，当通配符能力开启时，该数组中可能包含通配符路径，通过[value](#value)()方法查询通配符路径将返回undefined。
 
 **类型：** Array&lt;string&gt;
 

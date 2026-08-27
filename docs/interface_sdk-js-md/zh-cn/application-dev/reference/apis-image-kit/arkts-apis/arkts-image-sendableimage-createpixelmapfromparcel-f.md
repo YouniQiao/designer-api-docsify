@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendableImage from '@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## createPixelMapFromParcel
@@ -28,7 +28,7 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful. Otherwise, an exception will be thrown. |
+| PixelMap | Returns the instance if the operation is successful. Otherwise, an exception will be thrown. |
 
 **错误码：**
 

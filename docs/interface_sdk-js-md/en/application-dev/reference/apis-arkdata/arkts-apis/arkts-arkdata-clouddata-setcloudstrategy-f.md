@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cloudData from '@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## setCloudStrategy
@@ -23,13 +23,13 @@ Sets the cloud sync strategy of an application. This API uses a promise to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strategy | [StrategyType](arkts-arkdata-clouddata-strategytype-e.md) | Yes | Type of the strategy to set. |
-| param | Array & lt;commonType.ValueType & gt; | No | Strategy parameters to set. Currently, only network strategies can be set. By default, Wi-Fi and cellular network are supported. |
+| param | Array&lt;commonType.ValueType&gt; | No | Strategy parameters to set. Currently, only network strategies can be set. By default, Wi-Fi and cellular network are supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

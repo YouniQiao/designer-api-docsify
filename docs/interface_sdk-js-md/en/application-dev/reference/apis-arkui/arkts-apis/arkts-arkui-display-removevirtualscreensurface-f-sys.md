@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## removeVirtualScreenSurface
@@ -33,7 +33,7 @@ Remove surface for the virtual screen.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

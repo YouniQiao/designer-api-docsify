@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import proxyChannelManager from '@kit.DistributedServiceKit';
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## closeProxyChannel
@@ -12,7 +12,7 @@ import proxyChannelManager from '@kit.DistributedServiceKit';
 function closeProxyChannel(channelId: number): void
 ```
 
-关闭已打开的代理通道。适用于手机侧应用不再需要与穿戴设备侧应用通信的场景，例如完成数据同步任务后主动释放通道资源等。此方法必须与 [openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md)配对使用，在使用完毕后调用此方法关闭通道以释放资源。关闭通道后，已注册的receiveData和 channelStateChange回调将自动取消订阅，正在传输的数据将中断。未及时关闭代理通道可能导致通道资源泄漏。
+关闭已打开的代理通道。适用于手机侧应用不再需要与穿戴设备侧应用通信的场景，例如完成数据同步任务后主动释放通道资源等。此方法必须与[openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md)配对使用，在使用完毕后调用此方法关闭通道以释放资源。关闭通道后，已注册的receiveData和channelStateChange回调将自动取消订阅，正在传输的数据将中断。未及时关闭代理通道可能导致通道资源泄漏。
 
 **起始版本：** 20
 

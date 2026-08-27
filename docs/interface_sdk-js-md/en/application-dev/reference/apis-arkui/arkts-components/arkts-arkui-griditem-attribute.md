@@ -95,7 +95,7 @@ Triggered when the selected state of the grid item changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (isSelected: boolean) = & gt; void | Yes | Callback invoked when the selected state changes. The input parameter **isSelected** returns **true** if the grid item is selected in the mouse selection box area; returns **false** otherwise. |
+| event | (isSelected: boolean) =&gt; void | Yes | Callback invoked when the selected state changes. The input parameter **isSelected** returns **true** if the grid item is selected in the mouse selection box area; returns **false** otherwise. |
 
 ## rowEnd
 
@@ -143,7 +143,9 @@ Sets the start row number of the component.
 selectable(value: boolean)
 ```
 
-Sets whether the grid item is selectable in the mouse selection box area. This attribute takes effect only when mouse box selection is enabled for the parent **Grid** container.This attribute must be used before the polymorphic style is set. Otherwise, the style settings will not take effect.
+Sets whether the grid item is selectable in the mouse selection box area. This attribute takes effect only when mouse box selection is enabled for the parent **Grid** container.
+
+This attribute must be used before the polymorphic style is set. Otherwise, the style settings will not take effect.
 
 **Since:** 8
 
@@ -163,7 +165,9 @@ Sets whether the grid item is selectable in the mouse selection box area. This a
 selected(value: boolean)
 ```
 
-Sets whether the grid item is selected. This attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).This attribute must be used before the polymorphic style is set. Otherwise, the style settings will not take effect.
+Sets whether the grid item is selected. This attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+
+This attribute must be used before the polymorphic style is set. Otherwise, the style settings will not take effect.
 
 **Since:** 10
 

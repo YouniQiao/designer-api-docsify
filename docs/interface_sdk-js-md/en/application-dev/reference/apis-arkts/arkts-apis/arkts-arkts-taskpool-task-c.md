@@ -9,7 +9,7 @@ Enumerates tasks, which can be executed for multiple times, placed in a task gro
 ## Modules to Import
 
 ```TypeScript
-import taskpool from '@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## addDependency
@@ -30,7 +30,7 @@ Adds dependent tasks for this task. Before using this API, you must create a **T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tasks | [Task[]](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
+| tasks | Task[] | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
 
 **Error codes:**
 
@@ -538,7 +538,7 @@ Removes dependent tasks for this task. Before using this method, you need to con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tasks | [Task[]](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
+| tasks | Task[] | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
 
 **Error codes:**
 

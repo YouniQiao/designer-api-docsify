@@ -31,7 +31,7 @@ Determine whether the current manual network scan is in progress.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | the promise return ManualNetworkScanState. |
+| Promise&lt;boolean&gt; | the promise return ManualNetworkScanState. |
 
 **Error codes:**
 

@@ -3,9 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## getLastWindow
@@ -14,7 +12,9 @@ import window from '@kit.ArkUI';
 function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 ```
 
-获取当前应用内层级最高的子窗口，使用callback异步回调。若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行显示，则返回应用主 窗口。
+获取当前应用内层级最高的子窗口，使用callback异步回调。
+
+若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行显示，则返回应用主窗口。
 
 **起始版本：** 9
 
@@ -89,7 +89,9 @@ export default class EntryAbility extends UIAbility {
 function getLastWindow(ctx: BaseContext): Promise<Window>
 ```
 
-获取当前应用内层级最高的子窗口，使用Promise异步回调。若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行显示，则返回应用主 窗口。
+获取当前应用内层级最高的子窗口，使用Promise异步回调。
+
+若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行显示，则返回应用主窗口。
 
 **起始版本：** 9
 

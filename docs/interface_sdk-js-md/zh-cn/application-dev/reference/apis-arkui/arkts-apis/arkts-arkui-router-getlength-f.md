@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import router from '@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## getLength

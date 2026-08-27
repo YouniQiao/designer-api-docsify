@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-imekit-->
 
-- [@ohos.inputMethod](arkts-inputmethod.md)
+- [@ohos.inputMethod(输入法框架)](arkts-inputmethod.md)
   - [getController](arkts-ime-inputmethod-getcontroller-f.md)
   - [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md)
   <!--Del-->
@@ -58,14 +58,14 @@
   - [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md)
   - [TextInputType](arkts-ime-inputmethod-textinputtype-e.md)
   - [常量](arkts-ime-inputmethod-con.md)
-- [@ohos.inputMethod.ExtraConfig](arkts-inputmethod-extraconfig.md)
+- [@ohos.inputMethod.ExtraConfig(输入法扩展信息)](arkts-inputmethod-extraconfig.md)
   - [InputMethodExtraConfig](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md)
   - [CustomValueType](arkts-ime-customvaluetype-t.md)
-- [@ohos.inputMethod.Panel](arkts-inputmethod-panel.md)
+- [@ohos.inputMethod.Panel(输入法面板)](arkts-inputmethod-panel.md)
   - [PanelInfo](arkts-ime-inputmethod-panel-panelinfo-i.md)
   - [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md)
   - [PanelType](arkts-ime-inputmethod-panel-paneltype-e.md)
-- [@ohos.inputMethodEngine](arkts-inputmethodengine.md)
+- [@ohos.inputMethodEngine(输入法服务)](arkts-inputmethodengine.md)
   - [createKeyboardDelegate](arkts-ime-inputmethodengine-createkeyboarddelegate-f.md)
   - [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md)
   - [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md)
@@ -112,17 +112,17 @@
   - [RequestKeyboardReason](arkts-ime-inputmethodengine-requestkeyboardreason-e.md)
   - [SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)
   - [常量](arkts-ime-inputmethodengine-con.md)
-- [@ohos.InputMethodExtensionAbility](arkts-inputmethodextensionability.md)
+- [@ohos.InputMethodExtensionAbility(InputMethodExtensionAbility)](arkts-inputmethodextensionability.md)
   - [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)
-- [@ohos.InputMethodExtensionContext](arkts-inputmethodextensioncontext.md)
+- [@ohos.InputMethodExtensionContext(InputMethodExtensionContext)](arkts-inputmethodextensioncontext.md)
   - [InputMethodExtensionContext](arkts-ime-inputmethodextensioncontext-c.md)
   <!--Del-->
   - [InputMethodExtensionContext(系统接口)](arkts-ime-inputmethodextensioncontext-c-sys.md)<!--DelEnd-->
-- [@ohos.inputMethodList](arkts-inputmethodlist.md)
+- [@ohos.inputMethodList(输入法切换列表控件)](arkts-inputmethodlist.md)
   - [InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md)
   - [Pattern](arkts-ime-inputmethodlist-pattern-i.md)
   - [PatternOptions](arkts-ime-inputmethodlist-patternoptions-i.md)
-- [@ohos.InputMethodSubtype](arkts-inputmethodsubtype.md)
+- [@ohos.InputMethodSubtype(输入法子类型)](arkts-inputmethodsubtype.md)
   - [InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)
 <!--Del-->
 - [@ohos.inputMethodSystemPanelManager](arkts-inputmethodsystempanelmanager.md)<!--DelEnd-->

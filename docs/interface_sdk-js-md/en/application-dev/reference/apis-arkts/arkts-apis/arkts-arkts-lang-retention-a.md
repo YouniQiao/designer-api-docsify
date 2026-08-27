@@ -13,7 +13,7 @@ An annotation used to annotate the lifecycle of other annotations.
 ## Modules to Import
 
 ```TypeScript
-import lang, { Retention, RetentionPolicy } from '@kit.ArkTS';
+import { lang, Retention, RetentionPolicy } from '@kit.ArkTS';
 ```
 
 ## policy

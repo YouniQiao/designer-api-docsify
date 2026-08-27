@@ -23,7 +23,7 @@ Removes an event watcher.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watcher-i.md) | Yes | Event watcher. |
+| watcher | Watcher | Yes | Event watcher. |
 
 **Error codes:**
 

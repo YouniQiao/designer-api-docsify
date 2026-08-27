@@ -1,6 +1,8 @@
 # CheckboxGroup properties/events
 
-In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.
+
+In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** CheckboxGroupAttribute extends CommonMethod<CheckboxGroupAttribute>
 
@@ -183,7 +185,13 @@ Triggered when the selected status of the check box group or any check box where
 selectAll(value: boolean)
 ```
 
-Sets whether to select all check boxes in the group. If the **select** attribute is set for a Checkbox component in the same group, the setting of the **Checkbox** has a higher priority.When used with components that have caching functionality (such as List), the selection state of uncreated check boxes must be controlled by the developer.Since API version 10, this attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+Sets whether to select all check boxes in the group. If the **select** attribute is set for a Checkbox component in the same group, the setting of the **Checkbox** has a higher priority.
+
+When used with components that have caching functionality (such as List), the selection state of uncreated check boxes must be controlled by the developer.
+
+Since API version 10, this attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+
+Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 8
 
@@ -205,7 +213,11 @@ Sets whether to select all check boxes in the group. If the **select** attribute
 selectAll(isAllSelected: Optional<boolean>)
 ```
 
-Sets whether to select all. If the **select** attribute is set for a Checkbox component in the same group, the setting of the **Checkbox** has a higher priority. Compared with [selectAll](#selectall), this API supports the **undefined** type for the **isAllSelected** parameter.When used with components that have caching functionality (such as List), the selection state of uncreated check boxes must be controlled by the developer.This attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md) and [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+Sets whether to select all. If the **select** attribute is set for a Checkbox component in the same group, the setting of the **Checkbox** has a higher priority. Compared with [selectAll](#selectall), this API supports the **undefined** type for the **isAllSelected** parameter.
+
+When used with components that have caching functionality (such as List), the selection state of uncreated check boxes must be controlled by the developer.
+
+This attribute supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md) and [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 18
 

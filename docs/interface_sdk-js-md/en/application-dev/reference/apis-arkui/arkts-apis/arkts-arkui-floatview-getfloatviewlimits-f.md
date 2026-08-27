@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import floatView from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## getFloatViewLimits

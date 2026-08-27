@@ -101,7 +101,7 @@ Starts UIAbility of the application to which a widget belongs. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

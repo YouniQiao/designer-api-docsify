@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import proxyChannelManager from '@kit.DistributedServiceKit';
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## sendData
@@ -33,7 +33,7 @@ Sends data to the peer end. This API uses a promise to return the result. This i
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

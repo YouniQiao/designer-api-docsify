@@ -1,6 +1,8 @@
 # SizeOptions
 
-Defines the size options.@interface SizeOptions
+Defines the size options.
+
+@interface SizeOptions
 
 **Since:** 11
 

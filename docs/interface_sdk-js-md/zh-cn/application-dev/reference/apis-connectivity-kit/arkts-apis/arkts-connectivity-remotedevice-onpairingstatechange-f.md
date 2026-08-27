@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import remoteDevice from '@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## onPairingStateChange
@@ -12,7 +12,9 @@ import remoteDevice from '@kit.ConnectivityKit';
 function onPairingStateChange(callback: Callback<PairingStateParam>): void
 ```
 
-订阅配对状态变化事件。使用callback异步回调。应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
+订阅配对状态变化事件。使用callback异步回调。
+
+应用需具备ohos.permission.ACCESS_NEARLINK权限，方可接收此事件上报。
 
 **起始版本：** 26.0.0
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formAgent from '@kit.FormKit';
+import { formAgent } from '@kit.FormKit';
 ```
 
 ## requestPublishForm
@@ -99,7 +99,7 @@ Requests to publish a widget to the widget host. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the widget ID. |
+| Promise&lt;string&gt; | Promise used to return the widget ID. |
 
 **Error codes:**
 

@@ -70,7 +70,7 @@ Obtains the volume of mobile data traffic sent via network sharing. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the data volume, in KB. |
+| Promise&lt;number&gt; | Promise used to return the data volume, in KB. |
 
 **Error codes:**
 

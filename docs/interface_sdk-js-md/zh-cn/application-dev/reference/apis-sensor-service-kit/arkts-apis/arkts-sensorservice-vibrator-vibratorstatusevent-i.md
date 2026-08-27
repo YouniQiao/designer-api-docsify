@@ -17,7 +17,7 @@
 deviceId: number
 ```
 
-设备的ID。可用于 [startVibration](arkts-sensorservice-vibrator-startvibration-f.md) 和[stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)等接口指定目标设备。
+设备的ID。可用于[startVibration](arkts-sensorservice-vibrator-startvibration-f.md)和[stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)等接口指定目标设备。
 
 **类型：** number
 

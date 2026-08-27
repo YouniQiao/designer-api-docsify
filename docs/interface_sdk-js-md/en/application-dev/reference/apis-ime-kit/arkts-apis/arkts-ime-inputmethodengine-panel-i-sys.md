@@ -9,7 +9,7 @@ You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.m
 ## Modules to Import
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## off('sizeUpdate')

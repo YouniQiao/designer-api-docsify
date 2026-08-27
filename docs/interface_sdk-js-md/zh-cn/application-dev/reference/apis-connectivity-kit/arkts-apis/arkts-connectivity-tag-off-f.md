@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## off('readerMode')
@@ -12,7 +12,7 @@ import tag from '@kit.ConnectivityKit';
 function off(type: 'readerMode', elementName: ElementName, callback?: AsyncCallback<TagInfo>): void
 ```
 
-取消订阅NFC Tag读卡事件。设备退出读卡模式，并恢复卡模拟。如果已通过 tag.on 设置NFC的读卡器模式，需要在页面退出前台或页面销毁时调用off进行取消。
+取消订阅NFC Tag读卡事件。设备退出读卡模式，并恢复卡模拟。如果已通过tag.on设置NFC的读卡器模式，需要在页面退出前台或页面销毁时调用off进行取消。
 
 **起始版本：** 11
 
@@ -47,7 +47,7 @@ function off(type: 'readerMode', elementName: ElementName, callback?: AsyncCallb
 function off(type: 'readerModeWithInterval', elementName: ElementName, callback?: Callback<TagInfo>): void
 ```
 
-取消订阅NFC Tag读卡事件。设备退出读卡模式，并恢复卡模拟。如果已通过 tag.on 设置NFC的读卡器模式，需要在页面退出前台或页面销毁时调用 tag.off进行取 消。使用callback异步回调。
+取消订阅NFC Tag读卡事件。设备退出读卡模式，并恢复卡模拟。如果已通过tag.on设置NFC的读卡器模式，需要在页面退出前台或页面销毁时调用tag.off进行取消。使用callback异步回调。
 
 **起始版本：** 23
 

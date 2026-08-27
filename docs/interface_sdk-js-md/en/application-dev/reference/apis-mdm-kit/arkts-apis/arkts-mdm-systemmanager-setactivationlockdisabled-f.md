@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemManager from '@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## setActivationLockDisabled
@@ -34,7 +34,7 @@ Enables or disables the device activation lock. After the device activation lock
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object is thrown when the activation lock fails to be enabled or disabled. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when the activation lock fails to be enabled or disabled. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import uniformTypeDescriptor from '@kit.ArkData';
+import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## getUniformDataTypeByMIMEType

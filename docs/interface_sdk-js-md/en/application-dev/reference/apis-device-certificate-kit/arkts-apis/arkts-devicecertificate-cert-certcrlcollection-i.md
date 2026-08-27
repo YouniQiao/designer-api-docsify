@@ -35,7 +35,7 @@ Selects certificates that match the specified parameters. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;X509Cert & gt; & gt; | Promise used to return the matched certificates. |
+| Promise&lt;Array&lt;X509Cert&gt;&gt; | Promise used to return the matched certificates. |
 
 **Error codes:**
 

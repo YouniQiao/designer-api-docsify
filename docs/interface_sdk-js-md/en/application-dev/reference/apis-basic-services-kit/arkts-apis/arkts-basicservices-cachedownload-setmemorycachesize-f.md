@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cacheDownload from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## setMemoryCacheSize
@@ -12,7 +12,8 @@ import cacheDownload from '@kit.BasicServicesKit';
 function setMemoryCacheSize(bytes: number): void
 ```
 
-Sets the upper limit of the memory cache size for the **cacheDownload** component.  
+Sets the upper limit of the memory cache size for the **cacheDownload** component.
+
 - When this API is used to adjust the cache size, the LRU mode is used by default to clear redundant cached data  
 in the memory.  
 - This API returns the result synchronously, without blocking the calling thread.

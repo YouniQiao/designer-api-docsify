@@ -117,7 +117,7 @@ Checks whether two WantAgent objects are equal.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Returns { |
+| Promise&lt;boolean&gt; | Returns { |
 
 **Examples**
 

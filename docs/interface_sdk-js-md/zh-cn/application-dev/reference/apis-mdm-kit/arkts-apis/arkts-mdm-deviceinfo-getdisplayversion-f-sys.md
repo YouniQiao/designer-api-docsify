@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import deviceInfo from '@kit.MDMKit';
+import { deviceInfo } from '@kit.MDMKit';
 ```
 
 ## getDisplayVersion
@@ -99,7 +99,7 @@ function getDisplayVersion(admin: Want): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回设备版本号。 |
+| Promise&lt;string&gt; | Promise对象，返回设备版本号。 |
 
 **错误码：**
 

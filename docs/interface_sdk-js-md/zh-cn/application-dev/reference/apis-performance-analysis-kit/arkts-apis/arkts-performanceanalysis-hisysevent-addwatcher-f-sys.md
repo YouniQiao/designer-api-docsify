@@ -25,7 +25,7 @@ function addWatcher(watcher: Watcher): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watcher-i.md) | 是 | 系统事件订阅者对象。 |
+| watcher | Watcher | 是 | 系统事件订阅者对象。 |
 
 **错误码：**
 

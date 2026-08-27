@@ -1,6 +1,8 @@
 # RenderResourceFactory
 
-用于创建可在共享RenderContext的多个场景（[Scene](arkts-arkgraphics3d-scene-c.md)）中共享的渲染资源。@interface RenderResourceFactory
+用于创建可在共享RenderContext的多个场景（[Scene](arkts-arkgraphics3d-scene-c.md)）中共享的渲染资源。
+
+@interface RenderResourceFactory
 
 **起始版本：** 20
 
@@ -26,7 +28,7 @@ createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 创建场景使用的资源路径。 |
+| uri | ResourceStr | 是 | 创建场景使用的资源路径。 |
 | param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | 是 | 场景加载参数。 |
 
 **返回值：**

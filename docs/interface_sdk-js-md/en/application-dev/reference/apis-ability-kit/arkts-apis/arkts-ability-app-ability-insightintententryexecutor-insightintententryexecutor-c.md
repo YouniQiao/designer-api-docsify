@@ -1,6 +1,8 @@
 # InsightIntentEntryExecutor
 
-The class of insight intent entry executor.@class InsightIntentEntryExecutor&lt;T&gt;
+The class of insight intent entry executor.
+
+@class InsightIntentEntryExecutor&lt;T&gt;
 
 **Since:** 20
 
@@ -9,7 +11,7 @@ The class of insight intent entry executor.@class InsightIntentEntryExecutor&lt;
 ## Modules to Import
 
 ```TypeScript
-import InsightIntentEntryExecutor from '@kit.AbilityKit';
+import { InsightIntentEntryExecutor } from '@kit.AbilityKit';
 ```
 
 ## onExecute
@@ -32,7 +34,7 @@ Called when insight intent execute.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;insightIntent.IntentResult & lt;T & gt; & gt; | The result of insight intent execution, support promise. |
+| Promise&lt;insightIntent.IntentResult&lt;T&gt;&gt; | The result of insight intent execution, support promise. |
 
 **Examples**
 

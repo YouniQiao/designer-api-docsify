@@ -12,7 +12,7 @@ The ContinueCallback module defines the callback function that indicates the res
 
 | Name | Description |
 | --- | --- |
-| [ContinueCallback](arkts-ability-continuecallback-i-sys.md) | ContinueCallback registered for notify continue result.@interface ContinueCallback |
+| [ContinueCallback](arkts-ability-continuecallback-i-sys.md) | ContinueCallback registered for notify continue result. |
 <!--DelEnd-->
 
 <!--Del-->

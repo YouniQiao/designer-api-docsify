@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import fastbuffer from '@kit.ArkTS';
+import { fastbuffer } from '@kit.ArkTS';
 ```
 
 ## from
@@ -63,7 +63,7 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 | --- | --- | --- | --- |
 | arrayBuffer | ArrayBuffer \| SharedArrayBuffer | 是 | 用于创建FastBuffer对象的底层ArrayBuffer或SharedArrayBuffer，创建的FastBuffer将与该对象共享相同的内存区域。 |
 | byteOffset | number | 否 | 字节偏移量，默认值：0。 |
-| length | number | 否 | 字节长度，默认值：（arrayBuffer.byteLength - byteOffset）。取值范围：0 & lt;= length & lt;= arrayBuffer.byteLength - byteOffset。传入null时返回长度为0的FastBuffer对象。 |
+| length | number | 否 | 字节长度，默认值：（arrayBuffer.byteLength - byteOffset）。取值范围：0 &lt;= length &lt;= arrayBuffer.byteLength - byteOffset。传入null时返回长度为0的FastBuffer对象。 |
 
 **返回值：**
 
@@ -96,7 +96,9 @@ console.info(buf.length.toString());
 function from(buffer: FastBuffer | Uint8Array): FastBuffer
 ```
 
-当入参为FastBuffer对象时，创建新的FastBuffer对象并复制入参数据。新旧对象数据独立，互不影响。当入参为Uint8Array对象时，基于其内存创建新的FastBuffer对象。两个对象保持内存关联，修改任一对象的数据会同步影响另一对象。
+当入参为FastBuffer对象时，创建新的FastBuffer对象并复制入参数据。新旧对象数据独立，互不影响。
+
+当入参为Uint8Array对象时，基于其内存创建新的FastBuffer对象。两个对象保持内存关联，修改任一对象的数据会同步影响另一对象。
 
 **起始版本：** 20
 

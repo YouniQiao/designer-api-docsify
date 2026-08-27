@@ -19,7 +19,7 @@
 addDeferredSurface(surfaceId: string): void
 ```
 
-配置延迟预览的Surface，可以在[commitConfig](arkts-camera-camera-session-i.md#commitconfig)配流和[start](arkts-camera-camera-session-i.md#start)启流之后 运行。
+配置延迟预览的Surface，可以在[commitConfig](arkts-camera-camera-session-i.md#commitconfig)配流和[start](arkts-camera-camera-session-i.md#start)启流之后运行。
 
 **起始版本：** 24
 
@@ -72,7 +72,9 @@ async function preview(cameraManager: camera.CameraManager, cameraInfo: camera.C
 enableBandwidthCompression(enabled: boolean): void
 ```
 
-使能预览带宽压缩。使能之前，可先使用方法[isBandwidthCompressionSupported](#isbandwidthcompressionsupported)对设备是否支持预览 带宽压缩进行检查。
+使能预览带宽压缩。
+
+使能之前，可先使用方法[isBandwidthCompressionSupported](#isbandwidthcompressionsupported)对设备是否支持预览带宽压缩进行检查。
 
 > **说明：**
 > 
@@ -121,7 +123,9 @@ function enableBandwidthCompression(previewOutput: camera.PreviewOutput, enabled
 getActiveFrameRate(): FrameRateRange
 ```
 
-获取已设置的帧率范围。使用[setFrameRate](#setframerate)接口对预览流设置过帧率后可查询。
+获取已设置的帧率范围。
+
+使用[setFrameRate](#setframerate)接口对预览流设置过帧率后可查询。
 
 **起始版本：** 12
 
@@ -217,10 +221,11 @@ function testGetActiveProfile(previewOutput: camera.PreviewOutput): camera.Profi
 getPreviewRotation(displayRotation?: number): ImageRotation
 ```
 
-获取预览旋转角度。  
+获取预览旋转角度。
+
 - 设备自然方向：设备默认使用方向。例如，直板机默认使用方向为竖屏（充电口向下）。  
 - 相机镜头角度：值等于相机图像顺时针旋转到设备自然方向的角度。例如，直板机后置相机传感器是横屏安装的，所以需要顺时针旋转90度到设备自然方向。  
-- [屏幕旋转角度](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-window-direction#section737072712182)： 显示设备的屏幕顺时针旋转角度。
+- [屏幕旋转角度](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-multi-device-window-direction#section737072712182)：显示设备的屏幕顺时针旋转角度。
 
 **起始版本：** 12
 
@@ -234,7 +239,7 @@ getPreviewRotation(displayRotation?: number): ImageRotation
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayRotation | number | 否 | 显示设备的屏幕旋转角度，通过 [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md)获得。 从API version 23开始，入参displayRotation为可选参数，当不传入参数时，由系统获取displayRotation进行预览旋转角度计算。 单位为度数（degree），取值范围为[0, 360]。<br>**起始版本：** 23 |
+| displayRotation | number | 否 | 显示设备的屏幕旋转角度，通过[display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md)获得。从API version 23开始，入参displayRotation为可选参数，当不传入参数时，由系统获取displayRotation进行预览旋转角度计算。单位为度数（degree），取值范围为[0, 360]。<br>**起始版本：** 23 |
 
 **返回值：**
 
@@ -534,7 +539,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 监听事件，固定为'error'，previewOutput创建成功可监听。预览接口使用错误时触发该事件，比如调用 [Session.start](arkts-camera-camera-session-i.md#start)，[CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release)等接口发 生错误时返回对应错误信息。 |
+| type | 'error' | 是 | 监听事件，固定为'error'，previewOutput创建成功可监听。预览接口使用错误时触发该事件，比如调用[Session.start](arkts-camera-camera-session-i.md#start)，[CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release)等接口发生错误时返回对应错误信息。 |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 ## setFrameRate
@@ -543,7 +548,9 @@ on(type: 'error', callback: ErrorCallback): void
 setFrameRate(minFps: number, maxFps: number): void
 ```
 
-设置预览流帧率范围，设置的范围必须在支持的帧率范围内。进行设置前，可通过[getSupportedFrameRates](#getsupportedframerates)接口查询支持的帧率范围。
+设置预览流帧率范围，设置的范围必须在支持的帧率范围内。
+
+进行设置前，可通过[getSupportedFrameRates](#getsupportedframerates)接口查询支持的帧率范围。
 
 > **说明：**
 > 
@@ -589,7 +596,7 @@ function setFrameRateRange(videoOutput: camera.VideoOutput, frameRateRange: Arra
 setLogViewAssistEnable(enable: boolean): void
 ```
 
-LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupported](#islogviewassistsupported)查询设备是否支持预览辅助 监看。
+LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupported](#islogviewassistsupported)查询设备是否支持预览辅助监看。
 
 > **说明：**
 > 
@@ -654,7 +661,7 @@ setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | previewRotation | [ImageRotation](arkts-camera-camera-imagerotation-e.md) | 是 | 预览旋转角度 |
-| isDisplayLocked | boolean | 否 | Surface在屏幕旋转时是否锁定方向，未设置时默认取值为false，即不锁定方向。true表示锁定方向，false表示不锁定方向。详情请参考 [SurfaceRotationOptions](../../apis-arkui/arkts-components/arkts-arkui-surfacerotationoptions-i.md) |
+| isDisplayLocked | boolean | 否 | Surface在屏幕旋转时是否锁定方向，未设置时默认取值为false，即不锁定方向。true表示锁定方向，false表示不锁定方向。详情请参考[SurfaceRotationOptions](../../apis-arkui/arkts-components/arkts-arkui-surfacerotationoptions-i.md) |
 
 **错误码：**
 
@@ -704,7 +711,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始输出预览流成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始输出预览流成功，err为undefined，否则为错误对象。错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -808,7 +815,7 @@ start(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1006,7 +1013,7 @@ stop(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 

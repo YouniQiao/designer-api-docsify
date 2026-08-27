@@ -1,6 +1,8 @@
 # PolicyErrorCode
 
-Enumerates the error code of the permission policy for the URI operation.@enum { number } PolicyErrorCode
+Enumerates the error code of the permission policy for the URI operation.
+
+@enum { number } PolicyErrorCode
 
 **Since:** 11
 

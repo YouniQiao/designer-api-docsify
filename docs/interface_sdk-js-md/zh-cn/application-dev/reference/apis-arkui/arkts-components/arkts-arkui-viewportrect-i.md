@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## height
@@ -22,7 +21,13 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@ohos.arkui.@ki
 height?: Length
 ```
 
-形状视口的高度，取值范围≥0。默认值：0默认单位：vp异常值undefined、null、NaN和Infinity按照默认值处理。
+形状视口的高度，取值范围≥0。
+
+默认值：0
+
+默认单位：vp
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -40,7 +45,13 @@ height?: Length
 width?: Length
 ```
 
-形状视口的宽度，取值范围≥0。默认值：0默认单位：vp异常值undefined、null、NaN和Infinity按照默认值处理。
+形状视口的宽度，取值范围≥0。
+
+默认值：0
+
+默认单位：vp
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -58,7 +69,13 @@ width?: Length
 x?: Length
 ```
 
-形状视口起始点的水平坐标。默认值：0默认单位：vp异常值undefined、null、NaN和Infinity按照默认值处理。
+形状视口起始点的水平坐标。
+
+默认值：0
+
+默认单位：vp
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -76,7 +93,13 @@ x?: Length
 y?: Length
 ```
 
-形状视口起始点的垂直坐标。默认值：0默认单位：vp异常值undefined、null、NaN和Infinity按照默认值处理。
+形状视口起始点的垂直坐标。
+
+默认值：0
+
+默认单位：vp
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

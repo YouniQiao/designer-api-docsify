@@ -9,7 +9,7 @@ Provides the method for operating on a remote device. Before using this method, 
 ## Modules to Import
 
 ```TypeScript
-import remoteDevice from '@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## getAcbState
@@ -32,7 +32,7 @@ Obtains the logical link connection status with a remote device. This method is 
 
 | Type | Description |
 | --- | --- |
-| [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md) | Logical link connection state with a remote device. |
+| AcbState | Logical link connection state with a remote device. |
 
 **Error codes:**
 
@@ -62,7 +62,7 @@ Obtains the connection status between the local and remote devices. Unlike [getA
 
 | Type | Description |
 | --- | --- |
-| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) | Connection status between the local and remote devices. |
+| ConnectionState | Connection status between the local and remote devices. |
 
 **Error codes:**
 
@@ -92,7 +92,7 @@ Obtains the type of a remote device.
 
 | Type | Description |
 | --- | --- |
-| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) | Remote device type. |
+| DeviceClass | Remote device type. |
 
 **Error codes:**
 
@@ -182,7 +182,7 @@ Obtains the pairing status with a remote device.
 
 | Type | Description |
 | --- | --- |
-| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) | Pairing status with a remote device. |
+| PairingState | Pairing status with a remote device. |
 
 **Error codes:**
 
@@ -212,7 +212,7 @@ Initiates pairing with a remote device. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

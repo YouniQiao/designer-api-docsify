@@ -1,6 +1,6 @@
 # InsightIntentContext
 
-本模块提供意图执行上下文，是[意图执行基类](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md)和 [@InsightIntentEntry的意图执行基类](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md)的属性，为意图执行提 供基础能力，例如启动本应用内的[UIAbility组件](arkts-ability-app-ability-uiability-uiability-c.md)。
+本模块提供意图执行上下文，是[意图执行基类](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md)和[@InsightIntentEntry的意图执行基类](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md)的属性，为意图执行提供基础能力，例如启动本应用内的[UIAbility组件](arkts-ability-app-ability-uiability-uiability-c.md)。
 
 **起始版本：** 11
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import InsightIntentContext from '@kit.AbilityKit';
+import { InsightIntentContext } from '@kit.AbilityKit';
 ```
 
 ## setReturnModeForUIAbilityForeground
@@ -263,7 +263,7 @@ startAbility(want: Want): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -327,7 +327,7 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 instanceId: number
 ```
 
-意图实例唯一ID。用于通过 [insightIntentProvider.sendExecuteResult接口] sendExecuteResult 和 [insightIntentProvider.sendIntentResult接口] sendIntentResult返回指定意图的执行结果。
+意图实例唯一ID。用于通过[insightIntentProvider.sendExecuteResult接口] sendExecuteResult 和[insightIntentProvider.sendIntentResult接口] sendIntentResult返回指定意图的执行结果。
 
 **类型：** number
 

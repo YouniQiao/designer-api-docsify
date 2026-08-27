@@ -36,7 +36,9 @@ Field name used to specify the data source in cursor-based search.
 DELETED_FLAG_FIELD = '#_deleted_flag'
 ```
 
-Whether the dirty data (data deleted from the cloud) is cleared from the local device. It fills in the result set returned upon the cursor-based search.The value **true** means the dirty data is cleared; the value **false** means the opposite.
+Whether the dirty data (data deleted from the cloud) is cleared from the local device. It fills in the result set returned upon the cursor-based search.
+
+The value **true** means the dirty data is cleared; the value **false** means the opposite.
 
 **Since:** 11
 

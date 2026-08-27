@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import metadataBinding from '@kit.MultimodalAwarenessKit';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## decodeImage
@@ -30,7 +30,7 @@ function decodeImage(encodedImage: image.PixelMap): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象。返回从图片解析出的信息。 |
+| Promise&lt;string&gt; | Promise对象。返回从图片解析出的信息。 |
 
 **错误码：**
 

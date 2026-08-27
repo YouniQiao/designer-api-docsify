@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getCurrentGroup
@@ -31,7 +28,7 @@ Obtains information about the current group.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;WifiP2pGroupInfo & gt; | Returns the current group information. |
+| Promise&lt;WifiP2pGroupInfo&gt; | Returns the current group information. |
 
 **Examples**
 

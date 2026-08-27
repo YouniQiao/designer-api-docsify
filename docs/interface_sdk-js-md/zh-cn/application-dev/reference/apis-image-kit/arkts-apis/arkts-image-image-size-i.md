@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## height
@@ -18,7 +18,9 @@ import image from '@kit.ImageKit';
 height: number
 ```
 
-Height Unit:px.
+Height
+
+Unit:px.
 
 **类型：** number
 
@@ -36,7 +38,9 @@ Height Unit:px.
 width: number
 ```
 
-Width Unit:px.
+Width
+
+Unit:px.
 
 **类型：** number
 

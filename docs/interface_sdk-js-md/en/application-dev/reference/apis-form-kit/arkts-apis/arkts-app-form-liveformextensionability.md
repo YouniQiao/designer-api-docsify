@@ -11,7 +11,7 @@ The **LiveFormExtensionAbility** module, inherited from
 ## Modules to Import
 
 ```TypeScript
-import LiveFormExtensionAbility, { LiveFormInfo } from '@kit.FormKit';
+import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## Summary

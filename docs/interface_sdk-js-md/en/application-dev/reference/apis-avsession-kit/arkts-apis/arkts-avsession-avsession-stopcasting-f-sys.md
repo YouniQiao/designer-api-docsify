@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## stopCasting
@@ -71,7 +71,7 @@ Stop current cast and disconnect device connection.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise for the result |
+| Promise&lt;void&gt; | Promise for the result |
 
 **Error codes:**
 

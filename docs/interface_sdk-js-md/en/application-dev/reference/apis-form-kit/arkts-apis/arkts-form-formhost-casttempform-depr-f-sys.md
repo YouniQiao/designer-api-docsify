@@ -76,7 +76,7 @@ Converts a temporary widget to a normal one. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

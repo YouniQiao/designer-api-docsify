@@ -1,6 +1,8 @@
 # QRCode属性/事件
 
-除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。支持[通用事件](arkts-arkui-commonmethod-c.md)。
+除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。
+
+支持[通用事件](arkts-arkui-commonmethod-c.md)。
 
 **继承/实现关系：** QRCodeAttribute extends CommonMethod<QRCodeAttribute>
 
@@ -33,7 +35,7 @@ backgroundColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 二维码背景颜色。 默认值：Color.White 从API version 11开始，默认值改为'#ffffffff'，且不跟随系统深浅色模式切换而修改。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 二维码背景颜色。默认值：Color.White 从API version 11开始，默认值改为'#ffffffff'，且不跟随系统深浅色模式切换而修改。 |
 
 ## color
 
@@ -77,4 +79,4 @@ contentOpacity(value: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 二维码内容颜色的不透明度。 默认值：1 取值范围：[0, 1]，超出取值范围按默认值处理。 |
+| value | number \| Resource | 是 | 二维码内容颜色的不透明度。默认值：1 取值范围：[0, 1]，超出取值范围按默认值处理。 |

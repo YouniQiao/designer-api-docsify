@@ -9,10 +9,7 @@ Defines the accessibility event information, which describes UI changes or inter
 ## Modules to Import
 
 ```TypeScript
-import config from '@kit.AccessibilityKit.config';
-import accessibility from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
-import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
@@ -70,9 +67,9 @@ Constructor, which is used to construct an EventInfo instance using independent 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [EventType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes | Accessibility event types. |
+| type | EventType | Yes | Accessibility event types. |
 | bundleName | string | Yes | Bundle name of the target app. |
-| triggerAction | [Action](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | Yes | Action that triggers the event. |
+| triggerAction | Action | Yes | Action that triggers the event. |
 
 **Examples**
 
@@ -125,7 +122,10 @@ Bundle name of the target app. This parameter is mandatory.
 componentType?: string
 ```
 
-It should correspond to the event source component type, and the default value is empty.Example:  
+It should correspond to the event source component type, and the default value is empty.
+
+Example:
+
 - Button type - &gt; 'Button'  
 - Image type - &gt; 'Image'
 

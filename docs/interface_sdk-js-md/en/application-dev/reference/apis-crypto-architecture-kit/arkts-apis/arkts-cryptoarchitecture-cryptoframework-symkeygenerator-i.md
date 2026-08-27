@@ -11,7 +11,7 @@ Symmetric key generator interface, defining methods for generating symmetric key
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## convertKey
@@ -27,6 +27,7 @@ Converts specified data into a symmetric key. This API uses an asynchronous call
 > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
 > when the symmetric key generator is created, the binary key data passed in must match the hash length (for
 > example, a 256-bit key for SHA256).
+
 If no hash algorithm is specified when the symmetric key generator is created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is supported.
 
 **Since:** 9
@@ -41,7 +42,7 @@ If no hash algorithm is specified when the symmetric key generator is created (f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes | Data to convert. |
+| key | DataBlob | Yes | Data to convert. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the symmetric key obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -95,7 +96,7 @@ Converts specified data into a symmetric key. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes | Data to convert. |
+| key | DataBlob | Yes | Data to convert. |
 
 **Return value:**
 
@@ -166,7 +167,7 @@ Converts specified data into a symmetric key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes | Data to convert. |
+| key | DataBlob | Yes | Data to convert. |
 
 **Return value:**
 
@@ -306,6 +307,7 @@ Generates a random key using this symmetric key generator. This API returns the 
 > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
 > when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)
 > will be randomly generated.
+
 If no hash algorithm is specified, for example, only **HMAC** is specified, random symmetric key generation is not supported. You can generate symmetric key data using [convertKeySync](#convertkeysync).
 
 **NOTE：**It is recommended to prioritize the use of asynchronous API, [generateSymKey](#generatesymkey). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.

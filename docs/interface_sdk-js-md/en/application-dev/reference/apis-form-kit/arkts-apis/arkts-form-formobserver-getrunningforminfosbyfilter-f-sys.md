@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formObserver from '@kit.FormKit';
+import { formObserver } from '@kit.FormKit';
 ```
 
 ## getRunningFormInfosByFilter
@@ -36,7 +36,7 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;formInfo.RunningFormInfo & gt; & gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | The promise returned by the function. |
 
 **Error codes:**
 

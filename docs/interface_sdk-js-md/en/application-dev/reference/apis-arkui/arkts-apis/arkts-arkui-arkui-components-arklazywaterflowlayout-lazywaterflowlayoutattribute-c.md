@@ -1,6 +1,8 @@
 # LazyWaterFlowLayoutAttribute
 
-Defines the lazy waterflow layout attribute.@extends CommonMethod&lt;T&gt;
+Defines the lazy waterflow layout attribute.
+
+@extends CommonMethod&lt;T&gt;
 
 **Inheritance/Implementation:** LazyWaterFlowLayoutAttribute extends CommonMethod<T>
 

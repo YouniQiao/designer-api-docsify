@@ -29,7 +29,7 @@ function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| networkInfo | [NetworkInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-cachedownload-networkinfo-i.md) | 是 | 指定查询的网络信息。 |
+| networkInfo | NetworkInfo | 是 | 指定查询的网络信息。 |
 
 **返回值：**
 

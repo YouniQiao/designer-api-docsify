@@ -1,6 +1,8 @@
 # SceneOptions
 
-Scene options used by 3D scene control@interface SceneOptions
+Scene options used by 3D scene control
+
+@interface SceneOptions
 
 **Since:** 12
 

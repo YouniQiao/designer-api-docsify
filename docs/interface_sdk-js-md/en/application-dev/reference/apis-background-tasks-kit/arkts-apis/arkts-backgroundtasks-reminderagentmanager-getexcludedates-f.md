@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import reminderAgentManager from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## getExcludeDates
@@ -28,7 +28,7 @@ Obtains all non-reminder dates for a recurring calendar reminder with a specific
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;Date & gt; & gt; | Promise used to return all the non-reminder dates. |
+| Promise&lt;Array&lt;Date&gt;&gt; | Promise used to return all the non-reminder dates. |
 
 **Error codes:**
 

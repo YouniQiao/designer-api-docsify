@@ -1,6 +1,8 @@
 # StackModifier
 
-Defines Stack Modifier@extends StackAttribute @implements AttributeModifier&lt;StackAttribute&gt;
+Defines Stack Modifier
+
+@extends StackAttribute @implements AttributeModifier&lt;StackAttribute&gt;
 
 **Inheritance/Implementation:** StackModifier extends [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md#stackattribute) and implements AttributeModifier<StackAttribute>
 

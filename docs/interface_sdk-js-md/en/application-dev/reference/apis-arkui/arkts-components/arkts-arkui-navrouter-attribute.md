@@ -69,4 +69,4 @@ Called when the component activation status changes. **onStateChange(true)** is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (isActivated: boolean) = & gt; void | Yes | Component activation status. The value **true** means that component is activated, and **false** means the opposite. |
+| callback | (isActivated: boolean) =&gt; void | Yes | Component activation status. The value **true** means that component is activated, and **false** means the opposite. |

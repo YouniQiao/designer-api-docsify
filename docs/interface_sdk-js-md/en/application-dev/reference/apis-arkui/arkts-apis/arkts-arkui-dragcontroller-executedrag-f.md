@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dragController from '@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## executeDrag
@@ -167,7 +167,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;{ event: DragEvent, extraParams: string | > } Promise used to return the result.<br>**Applicable version:** 10 - 11 |
+| Promise&lt;{ event: DragEvent, extraParams: string | > } Promise used to return the result.<br>**Applicable version:** 10 - 11 |
 | Promise&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | A Promise with the drag event information.<br>**Applicable version:** 12 and later |
 
 **Error codes:**

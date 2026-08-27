@@ -9,10 +9,7 @@ Describes the style of captions.
 ## Modules to Import
 
 ```TypeScript
-import config from '@kit.AccessibilityKit.config';
-import accessibility from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
-import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
@@ -22,7 +19,13 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 backgroundColor: number | string
 ```
 
-Describes the caption background color.number: HEX format color, supporting RGB or ARGB.string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
+Describes the caption background color.
+
+number: HEX format color, supporting RGB or ARGB.
+
+string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.
+
+Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
 **Type:** number \| string
 
@@ -40,7 +43,13 @@ Describes the caption background color.number: HEX format color, supporting RGB 
 fontColor: number | string
 ```
 
-Describes the caption font color.number: HEX format color, supporting RGB or ARGB.string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
+Describes the caption font color.
+
+number: HEX format color, supporting RGB or ARGB.
+
+string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.
+
+Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
 **Type:** number \| string
 
@@ -112,7 +121,13 @@ Font scale factor of captions, in percentage. The value ranges from 1 to 200.
 windowColor: number | string
 ```
 
-Describes the caption window color.number: HEX format color, supporting RGB or ARGB.string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
+Describes the caption window color.
+
+number: HEX format color, supporting RGB or ARGB.
+
+string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats.
+
+Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
 **Type:** number \| string
 

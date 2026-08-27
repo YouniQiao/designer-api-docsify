@@ -1,6 +1,6 @@
 # VolumeLimitExceededEvent（系统接口）
 
-描述表示音量超过阈值的通知事件。 在收到通知后，应用必须发送确认结果。 在继续调整音量之前，通过 [confirmVolumeLimitExceeded](arkts-audio-audio-audiovolumemanager-i-sys.md#confirmvolumelimitexceeded) 进行确认。
+描述表示音量超过阈值的通知事件。在收到通知后，应用必须发送确认结果。在继续调整音量之前，通过 [confirmVolumeLimitExceeded](arkts-audio-audio-audiovolumemanager-i-sys.md#confirmvolumelimitexceeded) 进行确认。
 
 **起始版本：** 26.0.0
 
@@ -11,8 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## currentVolume
@@ -21,7 +20,7 @@ import audioHaptic from '@kit.AudioKitHaptic';
 currentVolume: number
 ```
 
-当前音量等级。 该值介于通过 [getMinSystemVolume](arkts-audio-audio-audiovolumemanager-i-sys.md#getminsystemvolume) 和 [getMaxSystemVolume](arkts-audio-audio-audiovolumemanager-i-sys.md#getmaxsystemvolume) 获取的值之间。 取值限定为整数。
+当前音量等级。该值介于通过 [getMinSystemVolume](arkts-audio-audio-audiovolumemanager-i-sys.md#getminsystemvolume) 和 [getMaxSystemVolume](arkts-audio-audio-audiovolumemanager-i-sys.md#getmaxsystemvolume) 获取的值之间。取值限定为整数。
 
 **类型：** number
 
@@ -39,7 +38,7 @@ currentVolume: number
 volumeThreshold: number
 ```
 
-当前卷音量型的音量大小阈值。 该值介于通过 [getMinSystemVolume](arkts-audio-audio-audiovolumemanager-i-sys.md#getminsystemvolume) 和 [getMaxSystemVolume](arkts-audio-audio-audiovolumemanager-i-sys.md#getmaxsystemvolume) 获取的值之间。 取值限定为整数。
+当前卷音量型的音量大小阈值。该值介于通过 [getMinSystemVolume](arkts-audio-audio-audiovolumemanager-i-sys.md#getminsystemvolume) 和 [getMaxSystemVolume](arkts-audio-audio-audiovolumemanager-i-sys.md#getmaxsystemvolume) 获取的值之间。取值限定为整数。
 
 **类型：** number
 

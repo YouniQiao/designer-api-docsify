@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendablePreferences from '@kit.ArkData';
+import { sendablePreferences } from '@kit.ArkData';
 ```
 
 ## getPreferencesSync
@@ -12,7 +12,9 @@ import sendablePreferences from '@kit.ArkData';
 function getPreferencesSync(context: Context, options: Options): Preferences
 ```
 
-获取Preferences实例，此为同步接口。应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
+获取Preferences实例，此为同步接口。
+
+应用首次调用该接口获取某个Preferences实例后，该实例会被缓存起来，后续再次调用时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。
 
 **起始版本：** 12
 
@@ -24,14 +26,14 @@ function getPreferencesSync(context: Context, options: Options): Preferences
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文。 |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 | 与Preferences实例相关的配置选项。 |
+| context | Context | 是 | 应用上下文。 |
+| options | Options | 是 | 与Preferences实例相关的配置选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Preferences](arkts-arkdata-preferences-preferences-i.md) | 返回Preferences实例。 |
+| Preferences | 返回Preferences实例。 |
 
 **错误码：**
 

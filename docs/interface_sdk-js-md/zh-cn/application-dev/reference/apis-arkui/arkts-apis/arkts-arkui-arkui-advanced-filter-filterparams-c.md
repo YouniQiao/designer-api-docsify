@@ -18,7 +18,10 @@ import { Filter, FilterParams, FilterResult, FilterType } from '@kit.ArkUI';
 name: ResourceStr
 ```
 
-筛选项维度名称。默认值：空字符串。  
+筛选项维度名称。
+
+默认值：空字符串。
+
 **说明：**如果文本大于列宽时，文本被截断。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
@@ -37,7 +40,10 @@ name: ResourceStr
 options: Array<ResourceStr>
 ```
 
-筛选项维度可选项列表。默认值：空数组。  
+筛选项维度可选项列表。
+
+默认值：空数组。
+
 **说明：**文本超长显示省略号。
 
 **类型：** Array&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt;

@@ -1,6 +1,8 @@
 # ImageGenerationModel (System API)
 
-AI Image Model Abstract Interface.@interface ImageGenerationModel
+AI Image Model Abstract Interface.
+
+@interface ImageGenerationModel
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ AI Image Model Abstract Interface.@interface ImageGenerationModel
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## cancelImageGeneration

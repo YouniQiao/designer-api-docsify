@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screen from '@kit.ArkUI';
-import screenshot from '@kit.ArkUIshot';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## isScreenRotationLocked
@@ -68,7 +67,7 @@ Checks whether auto rotate is locked. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. If **true** is returned, auto rotate is locked. If **false** is returned, auto rotate is unlocked. |
+| Promise&lt;boolean&gt; | Promise used to return the result. If **true** is returned, auto rotate is locked. If **false** is returned, auto rotate is unlocked. |
 
 **Error codes:**
 

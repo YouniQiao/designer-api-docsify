@@ -16,5 +16,5 @@ Defines the CustomBuilder Type.
 
 | Type | Description |
 | --- | --- |
-| () = & gt; any) |  |
+| () =&gt; any) |  |
 | void |  |

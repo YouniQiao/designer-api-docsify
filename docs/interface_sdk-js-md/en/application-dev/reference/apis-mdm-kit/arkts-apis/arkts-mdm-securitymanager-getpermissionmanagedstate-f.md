@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import securityManager from '@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## getPermissionManagedState
@@ -31,7 +31,7 @@ Obtains the management policy for the [user_grant permission](../../apis-ability
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| applicationInstance | [ApplicationInstance](arkts-mdm-securitymanager-applicationinstance-i.md) | Yes | Application instance. |
+| applicationInstance | ApplicationInstance | Yes | Application instance. |
 | permission | string | Yes | Name of the permission required for obtaining the management policy. Only the **user_grant** permission is supported. |
 
 **Return value:**

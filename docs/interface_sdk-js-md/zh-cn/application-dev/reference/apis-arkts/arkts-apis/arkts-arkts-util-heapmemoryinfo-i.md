@@ -9,8 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## heapObjectSize
@@ -51,7 +49,7 @@ heapType: string
 threadId?: number
 ```
 
-如果此内存信息描述的是 ArkTS-VM 的 local 堆，该值为表示运行线程 ID 的整数； 如果此内存信息描述的是 shared 堆，则该值为 undefined。
+如果此内存信息描述的是 ArkTS-VM 的 local 堆，该值为表示运行线程 ID 的整数；如果此内存信息描述的是 shared 堆，则该值为 undefined。
 
 **类型：** number
 
@@ -67,7 +65,7 @@ threadId?: number
 threadName?: string
 ```
 
-如果此内存信息描述的是 ArkTS-VM 的 local 堆，该值为表示运行线程名称的字符串； 如果此内存信息描述的是 shared 堆，则该值为 undefined。
+如果此内存信息描述的是 ArkTS-VM 的 local 堆，该值为表示运行线程名称的字符串；如果此内存信息描述的是 shared 堆，则该值为 undefined。
 
 **类型：** string
 

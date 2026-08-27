@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## notifyPrintService('spooler_closed_for_cancelled' | 'spooler_closed_for_started')
@@ -84,7 +84,7 @@ Notifies the print service of the spooler shutdown information. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

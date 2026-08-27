@@ -23,4 +23,4 @@ The execute action event.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | (string) returned through promise |
+| Promise&lt;string&gt; | (string) returned through promise |

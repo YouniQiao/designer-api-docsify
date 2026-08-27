@@ -35,7 +35,9 @@ offsetInSpan: [number, number]
 paragraphStyle?: RichEditorParagraphStyle
 ```
 
-段落样式。省略时，使用系统默认段落样式。
+段落样式。
+
+省略时，使用系统默认段落样式。
 
 **类型：** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
@@ -125,7 +127,11 @@ textStyle: RichEditorTextStyleResult
 urlStyle?: RichEditorUrlStyle
 ```
 
-url信息。默认值：undefined。当需要为文本设置超链接样式时传入此参数。
+url信息。
+
+默认值：undefined。
+
+当需要为文本设置超链接样式时传入此参数。
 
 **类型：** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 
@@ -161,7 +167,9 @@ value: string
 valueResource?: Resource
 ```
 
-SymbolSpan资源内容。默认值：undefined。
+SymbolSpan资源内容。
+
+默认值：undefined。
 
 **类型：** Resource
 

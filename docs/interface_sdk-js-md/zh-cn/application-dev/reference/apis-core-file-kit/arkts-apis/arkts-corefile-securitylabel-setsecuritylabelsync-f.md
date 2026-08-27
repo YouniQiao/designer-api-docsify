@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import securityLabel from '@kit.CoreFileKit';
+import { securityLabel } from '@kit.CoreFileKit';
 ```
 
 ## setSecurityLabelSync

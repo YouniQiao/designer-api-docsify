@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import huks from '@kit.UniversalKeystoreKit';
-import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## anonAttestKeyItemOfflineAsUser
@@ -14,7 +13,7 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
       params: HuksParam[]): Promise<HuksReturnResult>
 ```
 
-离线获取匿名证明证书。该接口使用promise返回结果。此操作不需要每次都需要网络连接， 比anonAttestKeyItemAsUser函数性能高。
+离线获取匿名证明证书。该接口使用promise返回结果。此操作不需要每次都需要网络连接，比anonAttestKeyItemAsUser函数性能高。
 
 > **说明：**
 > 
@@ -46,7 +45,7 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Promise用于返回结果。如果操作成功。 HuksReturnResult中的certChains包含获取到的证书链。 |
+| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Promise用于返回结果。如果操作成功。HuksReturnResult中的certChains包含获取到的证书链。 |
 
 **错误码：**
 

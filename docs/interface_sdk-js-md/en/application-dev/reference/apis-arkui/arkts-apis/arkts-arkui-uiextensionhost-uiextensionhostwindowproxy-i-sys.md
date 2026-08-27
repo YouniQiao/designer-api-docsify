@@ -11,7 +11,7 @@ Transition Controller
 ## Modules to Import
 
 ```TypeScript
-import uiExtensionHost from '@kit.ArkUI';
+import { uiExtensionHost } from '@kit.ArkUI';
 ```
 
 ## createSubWindowWithOptions
@@ -41,7 +41,7 @@ Creates a subwindow for this **UIExtensionHostWindowProxy** instance. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;window.Window & gt; | Promise used to return the subwindow created. |
+| Promise&lt;window.Window&gt; | Promise used to return the subwindow created. |
 
 **Error codes:**
 
@@ -128,7 +128,7 @@ Create subwindow.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;window.Window & gt; | Promise used to return the subwindow. |
+| Promise&lt;window.Window&gt; | Promise used to return the subwindow. |
 
 **Error codes:**
 
@@ -281,7 +281,7 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -355,7 +355,7 @@ Sets whether to enable privacy protection for the UIExtension component during n
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -600,7 +600,7 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -645,7 +645,9 @@ export default class EntryAbility extends UIExtensionAbility {
 properties: UIExtensionHostWindowProxyProperties
 ```
 
-Information about the host application window and the **UIExtensionComponent**.Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the on('windowSizeChange') callback.
+Information about the host application window and the **UIExtensionComponent**.
+
+Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the on('windowSizeChange') callback.
 
 **Type:** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)
 

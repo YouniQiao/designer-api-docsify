@@ -1,6 +1,8 @@
 # verticalPanelManager
 
-Defines a vertical domain panel manager.@namespace verticalPanelManager
+Defines a vertical domain panel manager.
+
+@namespace verticalPanelManager
 
 **Since:** 20
 
@@ -13,7 +15,7 @@ Defines a vertical domain panel manager.@namespace verticalPanelManager
 ## Modules to Import
 
 ```TypeScript
-import verticalPanelManager from '@kit.AbilityKit';
+import { verticalPanelManager } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -31,7 +33,7 @@ import verticalPanelManager from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [PanelConfig](arkts-ability-verticalpanelmanager-panelconfig-i-sys.md) | Indicates the panel config@interface PanelConfig |
+| [PanelConfig](arkts-ability-verticalpanelmanager-panelconfig-i-sys.md) | Indicates the panel config |
 | [PanelStartCallback](arkts-ability-verticalpanelmanager-panelstartcallback-i-sys.md) | The callback of start vertical panel. |
 <!--DelEnd-->
 
@@ -40,7 +42,7 @@ import verticalPanelManager from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [VerticalType](arkts-ability-verticalpanelmanager-verticaltype-e-sys.md) | Provides vertical type definition.@enum { string } VerticalType |
+| [VerticalType](arkts-ability-verticalpanelmanager-verticaltype-e-sys.md) | Provides vertical type definition. |
 <!--DelEnd-->
 
 <!--Del-->

@@ -21,7 +21,7 @@ Obtains the coordinate system types supported by geofence.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;CoordinateSystemType & gt; | Return the coordinate system types supported by geofence. |
+| Array&lt;CoordinateSystemType&gt; | Return the coordinate system types supported by geofence. |
 
 **Error codes:**
 

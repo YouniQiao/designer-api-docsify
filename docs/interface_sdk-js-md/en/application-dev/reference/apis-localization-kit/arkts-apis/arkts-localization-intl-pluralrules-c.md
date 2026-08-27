@@ -13,7 +13,7 @@ Provides the capability for obtaining the plural rule type.
 ## Modules to Import
 
 ```TypeScript
-import intl from '@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -102,8 +102,8 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string \| Array & lt;string & gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
-| options | [PluralRulesOptions](arkts-localization-intl-pluralrulesoptions-i.md) | No | Options for creating a **PluralRules** object. |
+| locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
+| options | PluralRulesOptions | No | Options for creating a **PluralRules** object. |
 
 **Examples**
 

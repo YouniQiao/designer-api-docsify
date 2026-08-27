@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import appAccount from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addAccountImplicitly
@@ -105,7 +105,7 @@ auth(name: string, authType: string, options: Record<string, Object>, callback: 
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | Record & lt;string, Object & gt; | 是 | 鉴权所需要的可选项。 |
+| options | Record&lt;string, Object&gt; | 是 | 鉴权所需要的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 回调对象，用于返回鉴权结果。 |
 
 **示例**
@@ -295,7 +295,7 @@ checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
-| labels | Array & lt;string & gt; | 是 | 标签数组。 |
+| labels | Array&lt;string&gt; | 是 | 标签数组。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回检查结果。 |
 
 **示例**
@@ -461,6 +461,30 @@ import { rpc } from '@kit.IPCKit';
 import { Want } from '@kit.AbilityKit';
 
 class MyAuthenticator extends appAccount.Authenticator {
+  createAccountImplicitly(
+    options: appAccount.CreateAccountImplicitlyOptions, callback: appAccount.AuthCallback) {
+    let want: Want = {
+      bundleName: 'com.example.accountjsdemo',
+      abilityName: 'com.example.accountjsdemo.loginAbility',
+    };
+    callback.onRequestRedirected(want);
+  }
+
+  auth(name: string, authType: string,
+    options: Record<string, Object>, callback: appAccount.AuthCallback) {
+    let result: appAccount.AuthResult = {
+      account: {
+        name: 'Lisi',
+        owner: 'com.example.accountjsdemo',
+      },
+      tokenInfo: {
+        token: 'xxxxxx',
+        authType: 'getSocialData',
+      }
+    };
+    callback.onResult(0, result);
+  }
+
   verifyCredential(name: string,
     options: appAccount.VerifyCredentialOptions, callback: appAccount.AuthCallback) {
       let want: Want = {
@@ -494,7 +518,7 @@ class MyAuthenticator extends appAccount.Authenticator {
 }
 
 export default {
-  onConnect(want: Want): rpc.RemoteObject { // serviceAbility 生命周期函数, 需要放在serviceAbility中
+  onConnect(want: Want): rpc.RemoteObject { // serviceAbility 生命周期函数，需要放在serviceAbility中
     let authenticator = new MyAuthenticator();
     return authenticator.getRemoteObject();
   }

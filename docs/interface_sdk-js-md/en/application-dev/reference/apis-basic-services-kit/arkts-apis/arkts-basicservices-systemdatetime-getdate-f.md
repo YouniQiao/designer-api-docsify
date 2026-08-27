@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemDateTime from '@kit.BasicServicesKit';
+import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
 ## getDate
@@ -74,7 +74,7 @@ Obtains the current system date. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Date & gt; | Promise used to return the current system date. |
+| Promise&lt;Date&gt; | Promise used to return the current system date. |
 
 **Error codes:**
 

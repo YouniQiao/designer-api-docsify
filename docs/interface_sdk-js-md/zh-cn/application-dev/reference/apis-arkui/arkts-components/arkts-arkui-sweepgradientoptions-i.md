@@ -21,7 +21,9 @@
 center: [Length, Length]
 ```
 
-Defines center point for angle gradient.Anonymous Object Rectification.
+Defines center point for angle gradient.
+
+Anonymous Object Rectification.
 
 **类型：** [Length, Length]
 
@@ -39,7 +41,9 @@ Defines center point for angle gradient.Anonymous Object Rectification.
 colors: Array<[ResourceColor, number]>
 ```
 
-Defines color description for gradients.Anonymous Object Rectification.
+Defines color description for gradients.
+
+Anonymous Object Rectification.
 
 **类型：** Array&lt;[ResourceColor, number]&gt;
 
@@ -57,7 +61,9 @@ Defines color description for gradients.Anonymous Object Rectification.
 end?: number | string
 ```
 
-Defines end point of angle gradient.Anonymous Object Rectification.
+Defines end point of angle gradient.
+
+Anonymous Object Rectification.
 
 **类型：** number \| string
 
@@ -95,7 +101,9 @@ Defines color description in ColorMetrics format for gradients. This parameter t
 repeating?: boolean
 ```
 
-Defines gradient colors with repeated coloring.Anonymous Object Rectification.
+Defines gradient colors with repeated coloring.
+
+Anonymous Object Rectification.
 
 **类型：** boolean
 
@@ -115,7 +123,9 @@ Defines gradient colors with repeated coloring.Anonymous Object Rectification.
 rotation?: number | string
 ```
 
-Defines the rotation angle of the gradient.Anonymous Object Rectification.
+Defines the rotation angle of the gradient.
+
+Anonymous Object Rectification.
 
 **类型：** number \| string
 
@@ -135,7 +145,9 @@ Defines the rotation angle of the gradient.Anonymous Object Rectification.
 start?: number | string
 ```
 
-Defines the starting point of angle gradient.Anonymous Object Rectification.
+Defines the starting point of angle gradient.
+
+Anonymous Object Rectification.
 
 **类型：** number \| string
 

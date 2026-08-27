@@ -9,7 +9,7 @@ Provides APIs for managing OS accounts.
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## checkMultiOsAccountEnabled
@@ -73,7 +73,7 @@ Checks whether multiple OS accounts are supported. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means multiple OS accounts are supported; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means multiple OS accounts are supported; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -192,7 +192,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -322,7 +322,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -418,7 +418,7 @@ Checks whether the current OS account is a test account. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the account is a test account; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the account is a test account; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -522,7 +522,7 @@ Checks whether the current OS account has been verified. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -639,7 +639,7 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -735,7 +735,7 @@ Obtains information about all activated OS accounts. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the information about all activated OS accounts. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the information about all activated OS accounts. |
 
 **Error codes:**
 
@@ -832,7 +832,7 @@ Obtains the number of OS accounts created. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the number of created OS accounts. |
+| Promise&lt;number&gt; | Promise used to return the number of created OS accounts. |
 
 **Examples**
 
@@ -1029,7 +1029,7 @@ Queries the ID of a distributed virtual device. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the distributed virtual device ID obtained. |
+| Promise&lt;string&gt; | Promise used to return the distributed virtual device ID obtained. |
 
 **Examples**
 
@@ -1060,7 +1060,7 @@ Obtains the ID of the foreground OS account. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the foreground OS account ID. |
+| Promise&lt;number&gt; | Promise used to return the foreground OS account ID. |
 
 **Error codes:**
 
@@ -1164,7 +1164,7 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return all the [constraints](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) enabled for the OS account. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return all the [constraints](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) enabled for the OS account. |
 
 **Examples**
 
@@ -1276,7 +1276,7 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return all the [constraints](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) enabled for the OS account. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return all the [constraints](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) enabled for the OS account. |
 
 **Error codes:**
 
@@ -1376,7 +1376,7 @@ Obtains the number of OS accounts created. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the number of created OS accounts. |
+| Promise&lt;number&gt; | Promise used to return the number of created OS accounts. |
 
 **Error codes:**
 
@@ -1519,7 +1519,7 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the OS account ID obtained. |
+| Promise&lt;number&gt; | Promise used to return the OS account ID obtained. |
 
 **Error codes:**
 
@@ -1624,7 +1624,7 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the OS account ID obtained. |
+| Promise&lt;number&gt; | Promise used to return the OS account ID obtained. |
 
 **Examples**
 
@@ -1718,7 +1718,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the ID of the OS account associated with the domain account. |
+| Promise&lt;number&gt; | Promise used to return the ID of the OS account associated with the domain account. |
 
 **Error codes:**
 
@@ -1823,7 +1823,7 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the OS account ID obtained. |
+| Promise&lt;number&gt; | Promise used to return the OS account ID obtained. |
 
 **Error codes:**
 
@@ -1929,7 +1929,7 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the OS account ID obtained. |
+| Promise&lt;number&gt; | Promise used to return the OS account ID obtained. |
 
 **Error codes:**
 
@@ -2092,7 +2092,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the ID of the OS account associated with the domain account. |
+| Promise&lt;number&gt; | Promise used to return the ID of the OS account associated with the domain account. |
 
 **Examples**
 
@@ -2176,7 +2176,7 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the OS account ID obtained. |
+| Promise&lt;number&gt; | Promise used to return the OS account ID obtained. |
 
 **Examples**
 
@@ -2269,7 +2269,7 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the OS account ID obtained. |
+| Promise&lt;number&gt; | Promise used to return the OS account ID obtained. |
 
 **Examples**
 
@@ -2307,7 +2307,7 @@ Obtains the local IDs of all non-system-level OS accounts. Non-system-level OS a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number[] & gt; | Promise used to return the local IDs of all non-system-level OS accounts. |
+| Promise&lt;number[]&gt; | Promise used to return the local IDs of all non-system-level OS accounts. |
 
 **Error codes:**
 
@@ -2350,7 +2350,7 @@ Obtains the name of the OS account of the caller. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the OS account name obtained. |
+| Promise&lt;string&gt; | Promise used to return the OS account name obtained. |
 
 **Error codes:**
 
@@ -2402,7 +2402,7 @@ Obtains the name of an OS account based on its local ID. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the name of the target OS account. |
+| Promise&lt;string&gt; | Promise used to return the name of the target OS account. |
 
 **Error codes:**
 
@@ -2681,7 +2681,7 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the SN obtained. |
+| Promise&lt;number&gt; | Promise used to return the SN obtained. |
 
 **Examples**
 
@@ -2774,7 +2774,7 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the SN obtained. |
+| Promise&lt;number&gt; | Promise used to return the SN obtained. |
 
 **Error codes:**
 
@@ -2875,7 +2875,7 @@ Checks whether multiple OS accounts are supported. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means multiple OS accounts are supported; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means multiple OS accounts are supported; the value **false** means the opposite. |
 
 **Examples**
 
@@ -2968,7 +2968,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
 
 **Examples**
 
@@ -3068,7 +3068,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 **Examples**
 
@@ -3110,7 +3110,7 @@ Checks whether a constraint is enabled for the current OS account. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -3156,7 +3156,7 @@ Checks whether the current OS account has been unlocked. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the OS account has been unlocked; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the OS account has been unlocked; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -3303,7 +3303,7 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Examples**
 
@@ -3386,7 +3386,7 @@ Checks whether the current OS account is a test account. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the account is a test account; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the account is a test account; the value **false** means the opposite. |
 
 **Examples**
 
@@ -3472,7 +3472,7 @@ Obtains information about all activated OS accounts. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the information about all activated OS accounts. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the information about all activated OS accounts. |
 
 **Examples**
 
@@ -3635,7 +3635,7 @@ Queries the ID of this distributed virtual device. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the distributed virtual device ID obtained. |
+| Promise&lt;string&gt; | Promise used to return the distributed virtual device ID obtained. |
 
 **Error codes:**
 

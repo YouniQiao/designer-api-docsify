@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-basicserviceskit-->
 
-- [@ohos.account.appAccount](arkts-account-appaccount.md)
+- [@ohos.account.appAccount(应用账号管理)](arkts-account-appaccount.md)
   - [createAppAccountManager](arkts-basicservices-appaccount-createappaccountmanager-f.md)
   - [Authenticator](arkts-basicservices-appaccount-authenticator-c.md)
   - [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)
@@ -18,7 +18,7 @@
   - [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md)
   - [Constants](arkts-basicservices-appaccount-constants-e.md)
   - [ResultCode](arkts-basicservices-appaccount-resultcode-e.md)
-- [@ohos.account.distributedAccount](arkts-account-distributedaccount.md)
+- [@ohos.account.distributedAccount(分布式账号管理)](arkts-account-distributedaccount.md)
   - [getDistributedAccountAbility](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md)
   - [DistributedAccountAbility](arkts-basicservices-distributedaccount-distributedaccountability-i.md)
   <!--Del-->
@@ -154,7 +154,7 @@
   - [ResultCode(系统接口)](arkts-basicservices-osaccount-resultcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SetPropertyType(系统接口)](arkts-basicservices-osaccount-setpropertytype-e-sys.md)<!--DelEnd-->
-- [@ohos.annotation](arkts-annotation.md)
+- [@ohos.annotation(Annotation)](arkts-annotation.md)
   - [Available](arkts-basicservices-annotation-available-a.md)
   - [SuppressWarnings](arkts-basicservices-annotation-suppresswarnings-a.md)
   - [SuppressWarningsType](arkts-basicservices-annotation-suppresswarningstype-e.md)
@@ -167,10 +167,10 @@
   <!--Del-->
   - [StaticSubscriberExtensionAbility(系统接口)](arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.application.StaticSubscriberExtensionContext](arkts-application-staticsubscriberextensioncontext.md)<!--DelEnd-->
+- [@ohos.application.StaticSubscriberExtensionContext(StaticSubscriberExtensionContext)](arkts-application-staticsubscriberextensioncontext.md)<!--DelEnd-->
   <!--Del-->
   - [StaticSubscriberExtensionContext(系统接口)](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md)<!--DelEnd-->
-- [@ohos.base](arkts-base.md)
+- [@ohos.base(公共回调信息)](arkts-base.md)
   - [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)
   - [BusinessError](arkts-basicservices-base-businesserror-i.md)
   - [Callback](arkts-basicservices-base-callback-i.md)
@@ -210,7 +210,7 @@
 - [@ohos.brightness](arkts-brightness.md)<!--DelEnd-->
   <!--Del-->
   - [setValue(系统接口)](arkts-basicservices-brightness-setvalue-f-sys.md)<!--DelEnd-->
-- [@ohos.busManager.serial](arkts-busmanager-serial.md)
+- [@ohos.busManager.serial(串口通信管理)](arkts-busmanager-serial.md)
   <!--Del-->
   - [addPortAuthorization(系统接口)](arkts-basicservices-serial-addportauthorization-f-sys.md)<!--DelEnd-->
   - [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md)
@@ -275,7 +275,7 @@
   - [DeviceTypes](arkts-basicservices-deviceinfo-devicetypes-e.md)
   - [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md)
   - [常量](arkts-basicservices-deviceinfo-con.md)
-- [@ohos.events.emitter](arkts-events-emitter.md)
+- [@ohos.events.emitter(Emitter)](arkts-events-emitter.md)
   - [emit](arkts-basicservices-emitter-emit-f.md)
   - [getListenerCount](arkts-basicservices-emitter-getlistenercount-f.md)
   - [off](arkts-basicservices-emitter-off-f.md)
@@ -494,7 +494,7 @@
   - [PrintPageType](arkts-basicservices-print-printpagetype-e.md)
   - [PrintQuality](arkts-basicservices-print-printquality-e.md)
   - [WatermarkHandleResult](arkts-basicservices-print-watermarkhandleresult-e.md)
-- [@ohos.request](arkts-request.md)
+- [@ohos.request(上传下载)](arkts-request.md)
   - [request](arkts-basicservices-request-n.md)
     - [agent](arkts-basicservices-request-agent-n.md)
       - [attachGroup](arkts-basicservices-agent-attachgroup-f.md)
@@ -547,7 +547,7 @@
     - [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
     - [UploadTask](arkts-basicservices-request-uploadtask-i.md)
     - [常量](arkts-basicservices-request-con.md)
-- [@ohos.request.cacheDownload](arkts-request-cachedownload.md)
+- [@ohos.request.cacheDownload(缓存下载)](arkts-request-cachedownload.md)
   - [cancel](arkts-basicservices-cachedownload-cancel-f.md)
   - [clearFileCache](arkts-basicservices-cachedownload-clearfilecache-f.md)
   - [clearMemoryCache](arkts-basicservices-cachedownload-clearmemorycache-f.md)
@@ -573,7 +573,7 @@
   - [CacheStrategy](arkts-basicservices-cachedownload-cachestrategy-e.md)
   - [ErrorCode](arkts-basicservices-cachedownload-errorcode-e.md)
   - [SslType](arkts-basicservices-cachedownload-ssltype-e.md)
-- [@ohos.resourceschedule.systemload](arkts-resourceschedule-systemload.md)
+- [@ohos.resourceschedule.systemload(性能功耗热融合档位)](arkts-resourceschedule-systemload.md)
   - [getLevel](arkts-basicservices-systemload-getlevel-f.md)
   - [off](arkts-basicservices-systemload-off-f.md)
   - [on](arkts-basicservices-systemload-on-f.md)
@@ -622,11 +622,11 @@
   - [ScanErrorCode](arkts-basicservices-scan-scanerrorcode-e.md)
   - [ScannerDiscoveryMode](arkts-basicservices-scan-scannerdiscoverymode-e.md)
   - [ScannerSyncMode](arkts-basicservices-scan-scannersyncmode-e.md)
-- [@ohos.selectionInput.SelectionExtensionAbility](arkts-selectioninput-selectionextensionability.md)
+- [@ohos.selectionInput.SelectionExtensionAbility(划词扩展能力)](arkts-selectioninput-selectionextensionability.md)
   - [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md)
-- [@ohos.selectionInput.SelectionExtensionContext](arkts-selectioninput-selectionextensioncontext.md)
+- [@ohos.selectionInput.SelectionExtensionContext(划词扩展上下文)](arkts-selectioninput-selectionextensioncontext.md)
   - [SelectionExtensionContext](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md)
-- [@ohos.selectionInput.selectionManager](arkts-selectioninput-selectionmanager.md)
+- [@ohos.selectionInput.selectionManager(划词管理)](arkts-selectioninput-selectionmanager.md)
   - [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)
   - [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md)
   - [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md)
@@ -637,10 +637,10 @@
   - [Panel(系统接口)](arkts-basicservices-selectionmanager-panel-i-sys.md)<!--DelEnd-->
   - [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)
   - [SelectionType](arkts-basicservices-selectionmanager-selectiontype-e.md)
-- [@ohos.selectionInput.SelectionPanel](arkts-selectioninput-selectionpanel.md)
+- [@ohos.selectionInput.SelectionPanel(划词面板)](arkts-selectioninput-selectionpanel.md)
   - [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md)
   - [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
-- [@ohos.systemDateTime](arkts-systemdatetime.md)
+- [@ohos.systemDateTime(系统时间、时区)](arkts-systemdatetime.md)
   - [getAutoTimeStatus](arkts-basicservices-systemdatetime-getautotimestatus-f.md)
   - [getCurrentTime](arkts-basicservices-systemdatetime-getcurrenttime-f.md)
   - [getDate](arkts-basicservices-systemdatetime-getdate-f.md)
@@ -683,7 +683,7 @@
   - [set(系统接口)](arkts-basicservices-systemparameterenhance-set-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setSync(系统接口)](arkts-basicservices-systemparameterenhance-setsync-f-sys.md)<!--DelEnd-->
-- [@ohos.systemTime](arkts-systemtime.md)
+- [@ohos.systemTime(系统时间、时区)](arkts-systemtime.md)
   - [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md)
   - [getDate](arkts-basicservices-systemtime-getdate-f.md)
   - [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md)
@@ -693,7 +693,7 @@
   - [setTime](arkts-basicservices-systemtime-settime-f.md)
   - [setTimezone](arkts-basicservices-systemtime-settimezone-f.md)
 <!--Del-->
-- [@ohos.systemTimer](arkts-systemtimer.md)<!--DelEnd-->
+- [@ohos.systemTimer(系统定时器)](arkts-systemtimer.md)<!--DelEnd-->
   <!--Del-->
   - [createTimer(系统接口)](arkts-basicservices-systemtimer-createtimer-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -808,7 +808,7 @@
   - [UpgradeAction(系统接口)](arkts-basicservices-update-upgradeaction-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UpgradeStatus(系统接口)](arkts-basicservices-update-upgradestatus-e-sys.md)<!--DelEnd-->
-- [@ohos.usb](arkts-usb.md)
+- [@ohos.usb(USB Manager)](arkts-usb.md)
   - [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md)
   - [claimInterface](arkts-basicservices-usb-claiminterface-f.md)
   - [closePipe](arkts-basicservices-usb-closepipe-f.md)
@@ -857,7 +857,7 @@
   - [USBControlRequestType](arkts-basicservices-usb-usbcontrolrequesttype-e.md)
   - [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
   - [USBRequestTargetType](arkts-basicservices-usb-usbrequesttargettype-e.md)
-- [@ohos.usbManager](arkts-usbmanager.md)
+- [@ohos.usbManager(USB管理)](arkts-usbmanager.md)
   <!--Del-->
   - [addAccessoryRight(系统接口)](arkts-basicservices-usbmanager-addaccessoryright-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -965,7 +965,7 @@
   - [DataBits](arkts-basicservices-serialmanager-databits-e.md)
   - [Parity](arkts-basicservices-serialmanager-parity-e.md)
   - [StopBits](arkts-basicservices-serialmanager-stopbits-e.md)
-- [@ohos.wallpaper](arkts-wallpaper.md)
+- [@ohos.wallpaper(壁纸)](arkts-wallpaper.md)
   - [getColors](arkts-basicservices-wallpaper-getcolors-f.md)
   <!--Del-->
   - [getColorsSync(系统接口)](arkts-basicservices-wallpaper-getcolorssync-f-sys.md)<!--DelEnd-->
@@ -1070,7 +1070,7 @@
   - [Device](arkts-basicservices-system-device-device-c.md)
   - [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md)
   - [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md)
-- [@system.request](arkts-system-request.md)
+- [@system.request(上传下载)](arkts-system-request.md)
   - [Request](arkts-basicservices-system-request-request-c.md)
   - [DownloadRequestOptions](arkts-basicservices-system-request-downloadrequestoptions-i.md)
   - [DownloadResponse](arkts-basicservices-system-request-downloadresponse-i.md)
@@ -1084,11 +1084,11 @@
   - [PrintExtensionContext](arkts-printextensioncontext.md)
     - [PrintExtensionContext](arkts-basicservices-printextensioncontext-c.md)
 - commonEvent<!--arkts-basicserviceskit-commonEvent-->
-  - [commonEventData](arkts-commoneventdata.md)
+  - [commonEventData(Common event data.)](arkts-commoneventdata.md)
     - [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md)
-  - [commonEventPublishData](arkts-commoneventpublishdata.md)
+  - [commonEventPublishData(The CommonEventPublishData module provides APIs for defining common event content and attributes.)](arkts-commoneventpublishdata.md)
     - [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md)
-  - [commonEventSubscribeInfo](arkts-commoneventsubscribeinfo.md)
+  - [commonEventSubscribeInfo(The CommonEventSubscribeInfo module provides APIs for providing subscriber information.)](arkts-commoneventsubscribeinfo.md)
     - [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md)
-  - [commonEventSubscriber](arkts-commoneventsubscriber.md)
+  - [commonEventSubscriber(The subscriber of common event)](arkts-commoneventsubscriber.md)
     - [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)

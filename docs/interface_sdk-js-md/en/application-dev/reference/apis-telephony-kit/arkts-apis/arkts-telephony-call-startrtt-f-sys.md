@@ -32,7 +32,7 @@ Start rtt.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the startRtt. |
+| Promise&lt;void&gt; | The promise returned by the startRtt. |
 
 **Error codes:**
 

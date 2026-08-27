@@ -63,7 +63,7 @@ Obtains the default slot ID of the SIM card that provides voice services. This A
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. |
+| Promise&lt;number&gt; | Promise used to return the result. |
 
 **Error codes:**
 

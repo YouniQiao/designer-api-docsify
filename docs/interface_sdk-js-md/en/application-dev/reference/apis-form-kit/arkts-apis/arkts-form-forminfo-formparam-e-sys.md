@@ -40,7 +40,8 @@ Device ID.
 FORM_MANAGER_SHOW_SINGLE_FORM = 'ohos.extra.param.key.form_manager_show_single_form'
 ```
 
-Whether to display only a specified widget on the widget management page.  
+Whether to display only a specified widget on the widget management page.
+
 - **true**: Only one specified widget is displayed.  
 - **false**: All widgets are displayed.
 

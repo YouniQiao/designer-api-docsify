@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getDeviceConfig
@@ -35,7 +34,7 @@ function getDeviceConfig(networkId: number): WifiDeviceConfig
 
 | 类型 | 说明 |
 | --- | --- |
-| [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 返回与网络ID对应的WLAN配置。 |
+| WifiDeviceConfig | 返回与网络ID对应的WLAN配置。 |
 
 **错误码：**
 

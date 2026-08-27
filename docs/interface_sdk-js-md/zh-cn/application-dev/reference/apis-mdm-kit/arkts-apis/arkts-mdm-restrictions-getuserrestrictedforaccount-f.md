@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import restrictions from '@kit.MDMKit';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## getUserRestrictedForAccount
@@ -32,7 +32,7 @@ function getUserRestrictedForAccount(admin: Want | null, settingsItem: string, a
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | settingsItem | string | 是 | 指定设置项。   - modifyWallpaper：修改壁纸，包含锁屏壁纸和桌面壁纸。 |
-| accountId | number | 是 | 用户ID，取值范围：大于等于0。accountId可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 取值限定为整数。 |
+| accountId | number | 是 | 用户ID，取值范围：大于等于0。accountId可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。取值限定为整数。 |
 
 **返回值：**
 
@@ -93,9 +93,9 @@ function getUserRestrictedForAccount(admin: Want | null, settingsItem: SettingsF
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
 | settingsItem | [SettingsForAccount](arkts-mdm-restrictions-settingsforaccount-e.md) | 是 | 指定要查询的用户设置项。 |
-| accountId | number | 是 | 用户ID，取值范围：大于等于0。 取值限定为整数。 accountId可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
+| accountId | number | 是 | 用户ID，取值范围：大于等于0。取值限定为整数。accountId可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 
 **返回值：**
 

@@ -263,7 +263,7 @@ Creates an X.509 certificate chain object based on the specified certificates. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| certs | Array & lt;X509Cert & gt; | Yes | Array of X.509 certificates. |
+| certs | Array&lt;X509Cert&gt; | Yes | Array of X.509 certificates. |
 
 **Return value:**
 

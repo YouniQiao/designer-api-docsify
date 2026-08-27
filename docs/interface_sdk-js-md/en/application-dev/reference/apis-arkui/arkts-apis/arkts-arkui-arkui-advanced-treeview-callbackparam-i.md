@@ -10,7 +10,6 @@ Declare CallbackParam
 
 ```TypeScript
 import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
-import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUIV2';
 ```
 
 ## childIndex
@@ -19,7 +18,11 @@ import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeLis
 childIndex?: number
 ```
 
-Child index.The value must be greater than or equal to -1.Default value: **-1**
+Child index.
+
+The value must be greater than or equal to -1.
+
+Default value: **-1**
 
 **Type:** number
 
@@ -37,7 +40,9 @@ Child index.The value must be greater than or equal to -1.Default value: **-1**
 currentNodeId: number
 ```
 
-ID of the current child node.The value must be greater than or equal to 0.
+ID of the current child node.
+
+The value must be greater than or equal to 0.
 
 **Type:** number
 
@@ -55,7 +60,11 @@ ID of the current child node.The value must be greater than or equal to 0.
 parentNodeId?: number
 ```
 
-ID of the current parent node.The value must be greater than or equal to -1.Default value: **-1**
+ID of the current parent node.
+
+The value must be greater than or equal to -1.
+
+Default value: **-1**
 
 **Type:** number
 

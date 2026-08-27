@@ -1,6 +1,10 @@
 # Server
 
-Represents a SSAP server class, which provides APIs for connecting to and exchanging data with the client.Before using the methods of this class, you need to call [ssap.createServer](arkts-connectivity-ssap-createserver-f.md) to create an instance of this class.An app only needs to create one [Server](#server) instance. Repeated creation will increase unnecessary resource overhead.
+Represents a SSAP server class, which provides APIs for connecting to and exchanging data with the client.
+
+Before using the methods of this class, you need to call [ssap.createServer](arkts-connectivity-ssap-createserver-f.md) to create an instance of this class.
+
+An app only needs to create one [Server](#server) instance. Repeated creation will increase unnecessary resource overhead.
 
 **Since:** 26.0.0
 
@@ -9,7 +13,7 @@ Represents a SSAP server class, which provides APIs for connecting to and exchan
 ## Modules to Import
 
 ```TypeScript
-import ssap from '@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## addService
@@ -95,7 +99,7 @@ Notifies the client of property value updates. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -194,7 +198,9 @@ Unsubscribes from the client property write request event. This API uses an asyn
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-Subscribes to the connection status change event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to the connection status change event. This API uses an asynchronous callback to return the result.
+
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -214,7 +220,9 @@ Subscribes to the connection status change event. This API uses an asynchronous 
 onMtuChange(callback: Callback<number>): void
 ```
 
-Subscribes to the MTU change event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to the MTU change event. This API uses an asynchronous callback to return the result.
+
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -234,7 +242,9 @@ Subscribes to the MTU change event. This API uses an asynchronous callback to re
 onPropertyRead(callback: Callback<PropertyReadRequest>): void
 ```
 
-Subscribes to the client property read request event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to the client property read request event. This API uses an asynchronous callback to return the result.
+
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -254,7 +264,9 @@ Subscribes to the client property read request event. This API uses an asynchron
 onPropertyWrite(callback: Callback<PropertyWriteRequest>): void
 ```
 
-Subscribes to the client property write request event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to the client property write request event. This API uses an asynchronous callback to return the result.
+
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -320,7 +332,7 @@ Responds to read or write requests from the client. After receiving a request re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | Yes | Response data for the client. |
+| response | ServerResponse | Yes | Response data for the client. |
 
 **Error codes:**
 

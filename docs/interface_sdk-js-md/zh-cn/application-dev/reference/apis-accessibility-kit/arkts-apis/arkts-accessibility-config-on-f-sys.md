@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import config from '@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## on('enabledAccessibilityExtensionListChange')
@@ -12,7 +12,9 @@ import config from '@kit.AccessibilityKit';
 function on(type: 'enabledAccessibilityExtensionListChange', callback: Callback<void>): void
 ```
 
-添加启用的辅助扩展的列表变化监听。使用callback异步回调。需与 config.off('enabledAccessibilityExtensionListChange') 配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
+添加启用的辅助扩展的列表变化监听。使用callback异步回调。
+
+需与config.off('enabledAccessibilityExtensionListChange')配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
 
 **起始版本：** 9
 
@@ -26,7 +28,7 @@ function on(type: 'enabledAccessibilityExtensionListChange', callback: Callback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'enabledAccessibilityExtensionListChange' | 是 | 参数固定为'enabledAccessibilityExtensionListChange'，指定监听启用的辅 助扩展的列表变化事件类型。 |
+| type | 'enabledAccessibilityExtensionListChange' | 是 | 参数固定为'enabledAccessibilityExtensionListChange'，指定监听启用的辅助扩展的列表变化事件类型。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，在启用的辅助扩展的列表变化时通过此函数进行通知。 |
 
 **错误码：**
@@ -54,7 +56,9 @@ config.highContrastText.on((data: boolean) => {
 function on(type: 'installedAccessibilityListChange', callback: Callback<void>): void
 ```
 
-添加已安装的辅助扩展的列表变化监听。使用callback异步回调。需与 config.off('installedAccessibilityListChange') 配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
+添加已安装的辅助扩展的列表变化监听。使用callback异步回调。
+
+需与config.off('installedAccessibilityListChange')配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
 
 **起始版本：** 12
 

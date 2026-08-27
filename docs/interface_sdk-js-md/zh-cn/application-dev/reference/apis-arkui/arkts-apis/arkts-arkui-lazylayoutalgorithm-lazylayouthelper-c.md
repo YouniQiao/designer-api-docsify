@@ -78,7 +78,11 @@ getViewStart(): number
 setAdjustedOffset(offset: number): void
 ```
 
-设置懒加载的调整偏移量。在布局列数、间距等参数变化场景下，需要调用该接口调整偏移量以保持可视区域第一个子组件相对位置保持不变。以垂直方向布局为例，当布局方向为LazyLayoutDirection.FORWARD时，该接口设置的偏移量为容器上边界的调整量，当布局方向为LazyLayoutDirection.BACKWARD时，该接口设置的偏移量为容器 下边界的调整量。
+设置懒加载的调整偏移量。
+
+在布局列数、间距等参数变化场景下，需要调用该接口调整偏移量以保持可视区域第一个子组件相对位置保持不变。
+
+以垂直方向布局为例，当布局方向为LazyLayoutDirection.FORWARD时，该接口设置的偏移量为容器上边界的调整量，当布局方向为LazyLayoutDirection.BACKWARD时，该接口设置的偏移量为容器下边界的调整量。
 
 **起始版本：** 26.0.0
 
@@ -100,8 +104,15 @@ setAdjustedOffset(offset: number): void
 setChildrenInactive(children: number[]): void
 ```
 
-设置子组件为非激活状态。如果子组件是通过ForEach或Repeat（未启 用[virtualScroll](arkts-arkui-repeatattribute-c.md#virtualscroll)）生成的，设置为非激活状态后将不显示。如果子组件是通过LazyForEach或 Repeat（启用[virtualScroll](arkts-arkui-repeatattribute-c.md#virtualscroll)）生成的，设置为非 激活状态后将销毁或回收。  
-LazyForEach或Repeat（启 用[virtualScroll](arkts-arkui-repeatattribute-c.md#virtualscroll)）只支持连续的激活子组件；在两个激活子组件之间设置子组件为非激活状态不会生效。布局在可视区域外的子组件会自动设置为非激活状态。
+设置子组件为非激活状态。
+
+如果子组件是通过ForEach或Repeat（未启用[virtualScroll](arkts-arkui-repeatattribute-c.md#virtualscroll)）生成的，设置为非激活状态后将不显示。
+
+如果子组件是通过LazyForEach或Repeat（启用[virtualScroll](arkts-arkui-repeatattribute-c.md#virtualscroll)）生成的，设置为非激活状态后将销毁或回收。
+
+LazyForEach或Repeat（启用[virtualScroll](arkts-arkui-repeatattribute-c.md#virtualscroll)）只支持连续的激活子组件；在两个激活子组件之间设置子组件为非激活状态不会生效。
+
+布局在可视区域外的子组件会自动设置为非激活状态。
 
 **起始版本：** 26.0.0
 

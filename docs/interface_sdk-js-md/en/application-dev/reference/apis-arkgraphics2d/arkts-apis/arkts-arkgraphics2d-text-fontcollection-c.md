@@ -9,7 +9,7 @@ Represents a font collection, which manages the font resources required for text
 ## Modules to Import
 
 ```TypeScript
-import text from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## clearCaches
@@ -145,7 +145,7 @@ Loads the custom font. This API uses a promise to return the result. In this API
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -342,7 +342,7 @@ Loads a custom font. This API uses a promise to return the result. In this API, 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -448,7 +448,12 @@ struct Index {
 unloadFont(name: string): Promise<void>
 ```
 
-Uninstalls a specified custom font. This API uses a promise to return the result.After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available.All layout objects that use the font alias must be destroyed and recreated.  
+Uninstalls a specified custom font. This API uses a promise to return the result.
+
+After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available.
+
+All layout objects that use the font alias must be destroyed and recreated.
+
 - Unloading a non-existent font alias does not produce any effect and does not throw an error.  
 - This operation only affects future font usage.  
 - Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or  
@@ -472,7 +477,7 @@ missing glyphs).
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -512,7 +517,12 @@ struct UnloadFontTest {
 unloadFontSync(name: string): void
 ```
 
-Uninstalls a specified custom font. This API is synchronous.After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available.All layout objects that use the font alias must be destroyed and recreated.  
+Uninstalls a specified custom font. This API is synchronous.
+
+After this API is called to unload a custom font corresponding to a font alias, the custom font is no longer available.
+
+All layout objects that use the font alias must be destroyed and recreated.
+
 - Unloading a non-existent font alias does not produce any effect and does not throw an error.  
 - This operation only affects future font usage.  
 - Unloading a font that is currently in use may lead to text rendering exceptions (such as garbled characters or  

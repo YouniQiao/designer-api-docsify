@@ -13,7 +13,7 @@ Defines the input parameters of **cipher.aes()**.
 ## Modules to Import
 
 ```TypeScript
-import Cipher, { CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
+import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
 
 ## complete
@@ -84,6 +84,7 @@ action: string
 ```
 
 Action to perform. The options are as follows:
+
 1. **encrypt**: Encrypts data.
 2. **decrypt**: Decrypts data.
 
@@ -175,7 +176,9 @@ Key used for encryption or decryption. It is a Base64 encoded string.
 text: string
 ```
 
-Text to be encrypted or decrypted.The text to be encrypted must be common text. The text to be decrypted must be a binary value encoded in Base64. The default format is used for Base64 encoding.
+Text to be encrypted or decrypted.
+
+The text to be encrypted must be common text. The text to be decrypted must be a binary value encoded in Base64. The default format is used for Base64 encoding.
 
 **Type:** string
 

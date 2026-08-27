@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import pasteboard from '@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## createData
@@ -25,7 +25,7 @@ Creates a **PasteData** object of the specified type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mimeType | string | Yes | Type of PasteData. The value can be a predefined MIME type listed in [Constants](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. The value of **mimeType** cannot exceed 1024 bytes. |
-| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Content of PasteData. |
+| value | ValueType | Yes | Content of PasteData. |
 
 **Return value:**
 
@@ -56,7 +56,7 @@ Creates a **PasteData** object that contains multiple types of data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record & lt;string, ValueType & gt; | Yes | The key of **Record** can be the MIME type corresponding to the PasteData, including HTML, Want, plain text, URI, and PixelMap defined in [Constants](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants). Alternatively, the key could be a custom type, whose parameter, the length of **mimeType**, cannot exceed 1024 bytes. The value of **Record** is the data corresponding to the type specified in the key. The first type specified by the key-value in **Record** is used as the default type of the first **PasteDataRecord** in the **PasteData** object. Data of non-default types can be read only by using the [getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata) API. |
+| data | Record&lt;string, ValueType&gt; | Yes | The key of **Record** can be the MIME type corresponding to the PasteData, including HTML, Want, plain text, URI, and PixelMap defined in [Constants](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants). Alternatively, the key could be a custom type, whose parameter, the length of **mimeType**, cannot exceed 1024 bytes. The value of **Record** is the data corresponding to the type specified in the key. The first type specified by the key-value in **Record** is used as the default type of the first **PasteDataRecord** in the **PasteData** object. Data of non-default types can be read only by using the [getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata) API. |
 
 **Return value:**
 

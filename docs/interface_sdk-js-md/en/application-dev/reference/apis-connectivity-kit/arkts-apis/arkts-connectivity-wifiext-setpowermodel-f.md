@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiext from '@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
 ```
 
 ## setPowerModel

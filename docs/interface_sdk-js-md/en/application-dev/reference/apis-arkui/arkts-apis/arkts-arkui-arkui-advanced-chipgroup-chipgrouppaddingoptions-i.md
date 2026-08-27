@@ -10,7 +10,6 @@ Defines the top and bottom padding of a **ChipGroup** component, which is used t
 
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUIV2';
 ```
 
 ## bottom
@@ -19,7 +18,13 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 bottom: Length
 ```
 
-Bottom padding. Percentage values are not supported.Default value: **14**Unit: vp If this parameter is set to **undefined**, the default value is used.
+Bottom padding. Percentage values are not supported.
+
+Default value: **14**
+
+Unit: vp
+
+If this parameter is set to **undefined**, the default value is used.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -37,7 +42,13 @@ Bottom padding. Percentage values are not supported.Default value: **14**Unit: v
 top: Length
 ```
 
-Top padding. Percentage values are not supported.Default value: **14**Unit: vp If the value is **undefined**, the default value is used.
+Top padding. Percentage values are not supported.
+
+Default value: **14**
+
+Unit: vp
+
+If the value is **undefined**, the default value is used.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

@@ -32,7 +32,7 @@ Send rtt message.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the sendRttMessage. |
+| Promise&lt;void&gt; | The promise returned by the sendRttMessage. |
 
 **Error codes:**
 

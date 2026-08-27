@@ -11,7 +11,7 @@ Provides APIs to manage albums.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addAssets
@@ -36,7 +36,7 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Array of the image and video assets to add. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image and video assets to add. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If an image or video is added successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -106,13 +106,13 @@ Adds image and video assets to a user album. Before the operation, ensure that t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Array of the image and video assets to add. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image and video assets to add. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -269,7 +269,7 @@ Commits the modification on the album attributes to the database. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -368,7 +368,7 @@ Removes image and video assets from a user album. The album and file resources m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Array of the image and video assets to remove. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image and video assets to remove. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If an image or video is removed successfully, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -438,13 +438,13 @@ Removes image and video assets from a user album. The album and file resources m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Array of the image and video assets to remove. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image and video assets to remove. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

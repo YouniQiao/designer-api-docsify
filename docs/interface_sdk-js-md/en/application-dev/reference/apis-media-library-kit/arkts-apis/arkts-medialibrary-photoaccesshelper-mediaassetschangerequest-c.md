@@ -11,7 +11,7 @@ Represents a request for changing multiple assets.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor
@@ -30,7 +30,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Assets to change. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Assets to change. |
 
 **Error codes:**
 

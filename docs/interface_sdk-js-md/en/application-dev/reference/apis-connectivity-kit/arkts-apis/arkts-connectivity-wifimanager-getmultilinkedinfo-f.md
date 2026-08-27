@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getMultiLinkedInfo
@@ -25,7 +24,7 @@ Obtain multiple Wi-Fi connection information when Wi-Fi linked in MLO(Muti-Link 
 
 | Type | Description |
 | --- | --- |
-| Array & lt;WifiLinkedInfo & gt; | Returns Wi-Fi multiple link information. |
+| Array&lt;WifiLinkedInfo&gt; | Returns Wi-Fi multiple link information. |
 
 **Error codes:**
 

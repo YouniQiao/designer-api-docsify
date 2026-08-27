@@ -17,7 +17,7 @@ UIServiceExtensionAbility provides extended capabilities related to the floating
 ## Modules to Import
 
 ```TypeScript
-import UIServiceExtensionAbility from '@kit.AbilityKit';
+import { UIServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConnect
@@ -111,7 +111,7 @@ Callback invoked when data is received.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | Yes | Proxy that sends data to the client. |
-| data | Record & lt;string, Object & gt; | Yes | Data received. |
+| data | Record&lt;string, Object&gt; | Yes | Data received. |
 
 **Examples**
 

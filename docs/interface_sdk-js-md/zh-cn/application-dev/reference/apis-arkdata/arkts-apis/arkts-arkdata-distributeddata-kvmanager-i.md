@@ -1,6 +1,6 @@
 # KVManager
 
-数据管理实例，用于获取KVStore的相关信息。在调用KVManager的方法前，需要先通过 [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md) 构建一个KVManager实例。
+数据管理实例，用于获取KVStore的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md)构建一个KVManager实例。
 
 **起始版本：** 7
 
@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## closeKVStore
@@ -57,14 +56,14 @@ const options = {
 }
 try {
     kvManager.getKVStore('storeId', options, async function (err, store) {
-        console.log('getKVStore success');
+        console.info('getKVStore success');
         kvStore = store;
         kvManager.closeKVStore('appId', 'storeId', kvStore, function (err, data) {
-            console.log('closeKVStore success');
+            console.info('closeKVStore success');
         });
     });
 } catch (e) {
-    console.log('closeKVStore e ' + e);
+    console.error('closeKVStore e ' + e);
 }
 ```
 
@@ -96,7 +95,7 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **示例**
 
@@ -114,18 +113,18 @@ const options = {
 }
 try {
     kvManager.getKVStore('storeId', options).then(async (store) => {
-        console.log('getKVStore success');
+        console.info('getKVStore success');
         kvStore = store;
         kvManager.closeKVStore('appId', 'storeId', kvStore).then(() => {
-            console.log('closeKVStore success');
+            console.info('closeKVStore success');
         }).catch((err) => {
-            console.log('closeKVStore err ' + JSON.stringify(err));
+            console.error('closeKVStore err ' + JSON.stringify(err));
         });
     }).catch((err) => {
-        console.log('CloseKVStore getKVStore err ' + JSON.stringify(err));
+        console.error('CloseKVStore getKVStore err ' + JSON.stringify(err));
     });
 } catch (e) {
-    console.log('closeKVStore e ' + e);
+    console.error('closeKVStore e ' + e);
 }
 ```
 
@@ -169,14 +168,14 @@ const options = {
 }
 try {
     kvManager.getKVStore('store', options, async function (err, store) {
-        console.log('getKVStore success');
+        console.info('getKVStore success');
         kvStore = store;
         kvManager.deleteKVStore('appId', 'storeId', function (err, data) {
-            console.log('deleteKVStore success');
+            console.info('deleteKVStore success');
         });
     });
 } catch (e) {
-    console.log('DeleteKVStore e ' + e);
+    console.error('DeleteKVStore e ' + e);
 }
 ```
 
@@ -207,7 +206,7 @@ deleteKVStore(appId: string, storeId: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **示例**
 
@@ -225,18 +224,18 @@ const options = {
 }
 try {
     kvManager.getKVStore('storeId', options).then(async (store) => {
-        console.log('getKVStore success');
+        console.info('getKVStore success');
         kvStore = store;
         kvManager.deleteKVStore('appId', 'storeId').then(() => {
-            console.log('deleteKVStore success');
+            console.info('deleteKVStore success');
         }).catch((err) => {
-            console.log('deleteKVStore err ' + JSON.stringify(err));
+            console.error('deleteKVStore err ' + JSON.stringify(err));
         });
     }).catch((err) => {
-        console.log('getKVStore err ' + JSON.stringify(err));
+        console.error('getKVStore err ' + JSON.stringify(err));
     });
 } catch (e) {
-    console.log('deleteKVStore e ' + e);
+    console.error('deleteKVStore e ' + e);
 }
 ```
 
@@ -246,7 +245,7 @@ try {
 getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
-获取所有通过 getKVStore 方法创建的且没有调用 [deleteKVStore](#deletekvstore) 方法删除的KVStore数据库的storeId，使用callback异步回调。
+获取所有通过getKVStore方法创建的且没有调用[deleteKVStore](#deletekvstore)方法删除的KVStore数据库的storeId，使用callback异步回调。
 
 **起始版本：** 8
 
@@ -269,11 +268,11 @@ getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 let kvManager;
 try {
     kvManager.getAllKVStoreId('appId', function (err, data) {
-        console.log('GetAllKVStoreId success');
-        console.log('GetAllKVStoreId size = ' + data.length);
+        console.info('GetAllKVStoreId success');
+        console.info('GetAllKVStoreId size = ' + data.length);
     });
 } catch (e) {
-    console.log('GetAllKVStoreId e ' + e);
+    console.error('GetAllKVStoreId e ' + e);
 }
 ```
 
@@ -283,7 +282,7 @@ try {
 getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
-获取所有通过 getKVStore 方法创建的且没有调用 [deleteKVStore](#deletekvstore) 方法删除的KVStore数据库的storeId，使用Promise异步回调。
+获取所有通过getKVStore方法创建的且没有调用[deleteKVStore](#deletekvstore)方法删除的KVStore数据库的storeId，使用Promise异步回调。
 
 **起始版本：** 8
 
@@ -303,22 +302,22 @@ getAllKVStoreId(appId: string): Promise<string[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string[] & gt; | Promise对象。返回所有创建的KvStore数据库的storeId。 |
+| Promise&lt;string[]&gt; | Promise对象。返回所有创建的KvStore数据库的storeId。 |
 
 **示例**
 
 ```TypeScript
 let kvManager;
 try {
-    console.log('GetAllKVStoreId');
+    console.info('GetAllKVStoreId');
     kvManager.getAllKVStoreId('appId').then((data) => {
-        console.log('getAllKVStoreId success');
-        console.log('size = ' + data.length);
+        console.info('getAllKVStoreId success');
+        console.info('size = ' + data.length);
     }).catch((err) => {
-        console.log('getAllKVStoreId err ' + JSON.stringify(err));
+        console.error('getAllKVStoreId err ' + JSON.stringify(err));
     });
 } catch(e) {
-    console.log('getAllKVStoreId e ' + e);
+    console.error('getAllKVStoreId e ' + e);
 }
 ```
 
@@ -343,13 +342,13 @@ getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | storeId | string | 是 | 数据库唯一标识符，长度不大于[MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md)。 |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 | 创建KVStore实例的配置信息。 |
+| options | Options | 是 | 创建KVStore实例的配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;T & gt;, & lt;T extends KVStore & gt; | Promise对象。返回创建的KVStore数据库实例。 |
+| Promise&lt;T&gt;, &lt;T extends KVStore&gt; | Promise对象。返回创建的KVStore数据库实例。 |
 
 **示例**
 
@@ -366,13 +365,13 @@ try {
         securityLevel : distributedData.SecurityLevel.S3,
     };
     kvManager.getKVStore('storeId', options).then((store) => {
-        console.log("getKVStore success");
+        console.info("getKVStore success");
         kvStore = store;
     }).catch((err) => {
-        console.log("getKVStore err: "  + JSON.stringify(err));
+        console.error("getKVStore err: "  + JSON.stringify(err));
     });
 } catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
+    console.error("An unexpected error occurred. Error:" + e);
 }
 ```
 
@@ -397,7 +396,7 @@ getKVStore<T extends KVStore>(storeId: string, options: Options, callback: Async
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | storeId | string | 是 | 数据库唯一标识符，长度不大于[MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md)。 |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 | 创建KVStore实例的配置信息。 |
+| options | Options | 是 | 创建KVStore实例的配置信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | 是 | 回调函数。返回创建的KVStore数据库实例。 |
 
 **示例**
@@ -416,14 +415,14 @@ try {
     };
     kvManager.getKVStore('storeId', options, function (err, store) {
         if (err) {
-            console.log("getKVStore err: "  + JSON.stringify(err));
+            console.error("getKVStore err: "  + JSON.stringify(err));
             return;
         }
-        console.log("getKVStore success");
+        console.info("getKVStore success");
         kvStore = store;
     });
 } catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
+    console.error("An unexpected error occurred. Error:" + e);
 }
 ```
 
@@ -455,13 +454,13 @@ off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 ```TypeScript
 let kvManager;
 try {
-    console.log('KVManagerOff');
+    console.info('KVManagerOff');
     const deathCallback = function () {
-        console.log('death callback call');
+        console.info('death callback call');
     }
     kvManager.off('distributedDataServiceDie', deathCallback);
 } catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
+    console.error("An unexpected error occurred. Error:" + e);
 }
 ```
 
@@ -493,12 +492,12 @@ on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 ```TypeScript
 let kvManager;
 try {
-    console.log('KVManagerOn');
+    console.info('KVManagerOn');
     const deathCallback = function () {
-        console.log('death callback call');
+        console.info('death callback call');
     }
     kvManager.on('distributedDataServiceDie', deathCallback);
 } catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
+    console.error("An unexpected error occurred. Error:" + e);
 }
 ```

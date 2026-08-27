@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import zlib from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## decompressFile
@@ -34,7 +34,7 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 | --- | --- | --- | --- |
 | inFile | string | Yes | Path of the file to decompress. The file name extension must be .zip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. If the.zip file to be unzipped contains Chinese file names or folder names, use UTF-8 to encode them. Otherwise, garbled characters may be displayed after unzipping. |
 | outFile | string | Yes | Path of the decompressed file. The path must exist in the system. Otherwise, the decompression fails. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. If a file or folder with the same name already exists in the path, they will be overwritten. When multiple threads decompress files at the same time, the values of **outFile** must be different. |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Decompression parameters. |
+| options | Options | Yes | Decompression parameters. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **null** is returned; otherwise, a specific error code is returned. |
 
 **Error codes:**
@@ -42,9 +42,9 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
-| [900002](../../apis-ability-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
-| [900003](../../apis-ability-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged.<br>**Applicable version:** 10 and later |
+| [900001](../errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
+| [900002](../errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [900003](../errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged.<br>**Applicable version:** 10 and later |
 
 **Examples**
 
@@ -110,9 +110,9 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
-| [900002](../../apis-ability-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
-| [900003](../../apis-ability-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged. |
+| [900001](../errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
+| [900002](../errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [900003](../errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged. |
 
 **Examples**
 
@@ -167,22 +167,22 @@ Decompresses a file. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | inFile | string | Yes | Path of the file to decompress. The file name extension must be .zip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. If the.zip file to be unzipped contains Chinese file names or folder names, use UTF-8 to encode them. Otherwise, garbled characters may be displayed after unzipping. |
 | outFile | string | Yes | Path of the decompressed file. The path must exist in the system. Otherwise, the decompression fails. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. If a file or folder with the same name already exists in the path, they will be overwritten. When multiple threads decompress files at the same time, the values of **outFile** must be different. |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | No | Decompression parameters. |
+| options | Options | No | Decompression parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
-| [900002](../../apis-ability-kit/errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
-| [900003](../../apis-ability-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged.<br>**Applicable version:** 10 and later |
+| [900001](../errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
+| [900002](../errorcode-zlib.md#900002-invalid-destination-file) | The input destination file is invalid. |
+| [900003](../errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged.<br>**Applicable version:** 10 and later |
 
 **Examples**
 

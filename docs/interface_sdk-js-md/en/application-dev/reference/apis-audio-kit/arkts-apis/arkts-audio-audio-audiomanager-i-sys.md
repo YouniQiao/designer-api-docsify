@@ -1,6 +1,8 @@
 # AudioManager
 
-This interface implements audio volume and device management.Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md) to obtain an AudioManager instance.
+This interface implements audio volume and device management.
+
+Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md) to obtain an AudioManager instance.
 
 **Since:** 7
 
@@ -9,8 +11,7 @@ This interface implements audio volume and device management.Before calling any 
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## disableSafeMediaVolume
@@ -33,7 +34,7 @@ user disable the safe media volume state.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -142,13 +143,13 @@ Obtains the values of a certain key. This method uses a promise to return the qu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mainKey | string | Yes | Main key of the audio parameters to get. |
-| subKeys | Array & lt;string & gt; | No | Sub keys of the audio parameters to get. |
+| subKeys | Array&lt;string&gt; | No | Sub keys of the audio parameters to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Record & lt;string, string & gt; & gt; | Promise used to return the key-value pairs. |
+| Promise&lt;Record&lt;string, string&gt;&gt; | Promise used to return the key-value pairs. |
 
 **Error codes:**
 
@@ -298,7 +299,7 @@ Sets the audio scene mode to change audio strategies. This method uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
 
@@ -333,13 +334,13 @@ Sets extra audio parameters. This method uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mainKey | string | Yes | Main key of the audio parameters to set. |
-| kvpairs | Record & lt;string, string & gt; | Yes | Key-value pairs with subkeys and values to set. |
+| kvpairs | Record&lt;string, string&gt; | Yes | Key-value pairs with subkeys and values to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

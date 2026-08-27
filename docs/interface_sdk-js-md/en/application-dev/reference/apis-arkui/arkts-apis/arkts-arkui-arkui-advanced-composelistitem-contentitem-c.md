@@ -10,7 +10,6 @@ Defines elements for the left and center areas of the **ComposeListItem** compon
 
 ```TypeScript
 import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from '@kit.ArkUI';
-import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, OperateButtonV2, OperateButtonV2Options, OperateCheckV2, OperateCheckV2Options, OperateIconV2, OperateIconV2Options, OperateItemV2, OperateItemV2Options } from '@kit.ArkUIV2';
 ```
 
 ## description
@@ -19,7 +18,10 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 description?: ResourceStr
 ```
 
-Description of the element in the center.If this parameter is not set or is set to **undefined**, the description is not displayed.  
+Description of the element in the center.
+
+If this parameter is not set or is set to **undefined**, the description is not displayed.
+
 **Text processing rules**: Text will wrap to a new line when it exceeds the length limit.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
@@ -38,7 +40,9 @@ Description of the element in the center.If this parameter is not set or is set 
 icon?: ResourceStr
 ```
 
-Icon resource of the element on the left.If this parameter is not set or is set to **undefined**, the icon is not displayed.
+Icon resource of the element on the left.
+
+If this parameter is not set or is set to **undefined**, the icon is not displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -56,7 +60,9 @@ Icon resource of the element on the left.If this parameter is not set or is set 
 iconStyle?: IconType
 ```
 
-Icon style of the element on the left.If this parameter is not set or is set to **undefined**, the icon is not displayed.
+Icon style of the element on the left.
+
+If this parameter is not set or is set to **undefined**, the icon is not displayed.
 
 **Type:** [IconType](arkts-arkui-arkui-advanced-composelistitem-icontype-e.md)
 
@@ -74,7 +80,10 @@ Icon style of the element on the left.If this parameter is not set or is set to 
 primaryText?: ResourceStr
 ```
 
-Primary text of the element in the center.If this parameter is not set or is set to **undefined**, the primary text is not displayed.  
+Primary text of the element in the center.
+
+If this parameter is not set or is set to **undefined**, the primary text is not displayed.
+
 **Text processing rules**: Text will wrap to a new line when it exceeds the length limit.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
@@ -93,7 +102,10 @@ Primary text of the element in the center.If this parameter is not set or is set
 secondaryText?: ResourceStr
 ```
 
-Secondary text of the element in the center.If this parameter is not set or is set to **undefined**, the secondary text is not displayed.  
+Secondary text of the element in the center.
+
+If this parameter is not set or is set to **undefined**, the secondary text is not displayed.
+
 **Text processing rules**: Text will wrap to a new line when it exceeds the length limit.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
@@ -112,7 +124,9 @@ Secondary text of the element in the center.If this parameter is not set or is s
 symbolStyle?: SymbolGlyphModifier
 ```
 
-Symbol icon resource of the element on the left, which has higher priority than **icon**. If both **icon** and this parameter are set, only the symbol icon is displayed.If this parameter is not set or is set to **undefined**, the symbol icon is not displayed.
+Symbol icon resource of the element on the left, which has higher priority than **icon**. If both **icon** and this parameter are set, only the symbol icon is displayed.
+
+If this parameter is not set or is set to **undefined**, the symbol icon is not displayed.
 
 **Type:** SymbolGlyphModifier
 

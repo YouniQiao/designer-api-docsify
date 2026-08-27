@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getMifareUltralight
@@ -30,7 +30,7 @@ function getMifareUltralight(tagInfo: TagInfo): MifareUltralightTag
 
 | 类型 | 说明 |
 | --- | --- |
-| [MifareUltralightTag](arkts-connectivity-nfctech-mifareultralighttag-i.md) | MIFARE Ultralight类型Tag对象，通过该对象访问MIFARE Ultralight类型的相关接口。 |
+| MifareUltralightTag | MIFARE Ultralight类型Tag对象，通过该对象访问MIFARE Ultralight类型的相关接口。 |
 
 **错误码：**
 

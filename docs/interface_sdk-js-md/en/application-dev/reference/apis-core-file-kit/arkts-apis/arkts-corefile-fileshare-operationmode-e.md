@@ -1,6 +1,8 @@
 # OperationMode
 
-Enumerates the uri operate mode types.@enum { number } OperationMode
+Enumerates the uri operate mode types.
+
+@enum { number } OperationMode
 
 **Since:** 11
 

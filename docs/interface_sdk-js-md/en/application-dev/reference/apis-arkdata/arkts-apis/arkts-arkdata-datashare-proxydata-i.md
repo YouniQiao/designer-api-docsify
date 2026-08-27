@@ -9,8 +9,7 @@ Defines a struct for shared configurations.
 ## Modules to Import
 
 ```TypeScript
-import dataShare from '@kit.ArkData';
-import dataSharePredicates from '@kit.ArkDataPredicates';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## allowList

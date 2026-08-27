@@ -8,7 +8,10 @@ The **Blank** component is a spacer in the layout, automatically filling the rem
 Blank(min?: number | string)
 ```
 
-Creates a **Blank** component.Since API version 10:  
+Creates a **Blank** component.
+
+Since API version 10:
+
 - When the **Blank** component is used within a Row, Column, or Flex  
 container, it will automatically stretch or shrink along the main axis if it does not have a main axis size specified. If the **Blank** component has a main axis size specified or if the container is set to adapt to the size of its child nodes, the component will not automatically stretch or shrink.  
 - Relationship between **size** and **min** of the **Blank** component on the main axis: max(min, size).  

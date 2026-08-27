@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import companionDeviceAuth from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## registerPasscodePromptCallback
@@ -12,7 +12,7 @@ import companionDeviceAuth from '@kit.UserAuthenticationKit';
 function registerPasscodePromptCallback(callback: PasscodePromptCallback): void
 ```
 
-注册当框架需要辅助设备密码时调用的回调。 如果回调已经被注册，则新的回调将替换它。
+注册当框架需要辅助设备密码时调用的回调。如果回调已经被注册，则新的回调将替换它。
 
 **起始版本：** 26.1.0
 
@@ -28,7 +28,7 @@ function registerPasscodePromptCallback(callback: PasscodePromptCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [PasscodePromptCallback](arkts-userauthentication-companiondeviceauth-passcodepromptcallback-t-sys.md) | 是 | 框架调用的回调 密码为必填项。 |
+| callback | [PasscodePromptCallback](arkts-userauthentication-companiondeviceauth-passcodepromptcallback-t-sys.md) | 是 | 框架调用的回调密码为必填项。 |
 
 **错误码：**
 

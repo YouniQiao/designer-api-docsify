@@ -1,6 +1,8 @@
 # SizeType
 
-Defines the size type.@enum { number }
+Defines the size type.
+
+@enum { number }
 
 **Since:** 7
 

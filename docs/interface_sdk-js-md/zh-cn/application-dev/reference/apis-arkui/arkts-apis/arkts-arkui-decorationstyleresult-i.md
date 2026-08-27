@@ -53,7 +53,12 @@ style?: TextDecorationStyle
 thicknessScale?: number
 ```
 
-装饰线粗细缩放比例。默认值：1.0取值范围：[0, +∞)  
+装饰线粗细缩放比例。
+
+默认值：1.0
+
+取值范围：[0, +∞)
+
 **说明：** 负值按默认值处理。
 
 **类型：** number

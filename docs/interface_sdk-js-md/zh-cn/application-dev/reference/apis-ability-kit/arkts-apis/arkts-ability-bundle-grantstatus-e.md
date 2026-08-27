@@ -5,6 +5,7 @@
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
 > [bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md)替代。
+
 权限授予状态。
 
 **起始版本：** 7

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAppCloneBundleInfo
@@ -12,7 +12,9 @@ import bundleManager from '@kit.AbilityKit';
 function getAppCloneBundleInfo(bundleName: string, appIndex: number, bundleFlags: number, userId?: number): Promise<BundleInfo>
 ```
 
-Obtains the bundle information of an application or an application clone based on the given bundle name, app index, [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md), and user ID. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
+Obtains the bundle information of an application or an application clone based on the given bundle name, app index, [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md), and user ID. This API uses a promise to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 12
 
@@ -35,7 +37,7 @@ Obtains the bundle information of an application or an application clone based o
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BundleInfo & gt; | Promise used to return the bundle information. |
+| Promise&lt;BundleInfo&gt; | Promise used to return the bundle information. |
 
 **Error codes:**
 

@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## touch
@@ -59,7 +58,7 @@ Queries the task details based on the task ID and token. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;TaskInfo & gt; | Promise used to return the **TaskInfo** object. |
+| Promise&lt;TaskInfo&gt; | Promise used to return the **TaskInfo** object. |
 
 **Error codes:**
 

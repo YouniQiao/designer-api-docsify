@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import partnerAgent from '@kit.ConnectivityKit';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## isDeviceBound
@@ -26,7 +26,7 @@ Checks whether a device is bound to this application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes | The address of partner device. |
+| deviceAddress | PartnerDeviceAddress | Yes | The address of partner device. |
 
 **Return value:**
 

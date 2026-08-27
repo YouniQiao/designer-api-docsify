@@ -19,7 +19,9 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 enableLoading: boolean
 ```
 
-Whether to show the loading animation.Default value: **true**. **true**: Show the loading animation. **false**: Do not show the loading animation.
+Whether to show the loading animation.
+
+Default value: **true**. **true**: Show the loading animation. **false**: Do not show the loading animation.
 
 **Type:** boolean
 

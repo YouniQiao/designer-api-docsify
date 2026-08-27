@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formObserver from '@kit.FormKit';
+import { formObserver } from '@kit.FormKit';
 ```
 
 ## getRunningFormInfos
@@ -147,7 +147,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;formInfo.RunningFormInfo & gt; & gt; | Returns the RunningFormInfo. |
+| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Returns the RunningFormInfo. |
 
 **Error codes:**
 
@@ -207,7 +207,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;formInfo.RunningFormInfo & gt; & gt; | Returns the RunningFormInfo. |
+| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Returns the RunningFormInfo. |
 
 **Error codes:**
 

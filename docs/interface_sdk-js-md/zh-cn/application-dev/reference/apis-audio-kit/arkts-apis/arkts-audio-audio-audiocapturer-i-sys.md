@@ -1,6 +1,6 @@
 # AudioCapturer
 
-提供音频采集的相关接口。在使用AudioCapturer的接口之前，需先通过 [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md) 获取AudioCapturer实例。
+提供音频采集的相关接口。在使用AudioCapturer的接口之前，需先通过[createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md)获取AudioCapturer实例。
 
 **起始版本：** 8
 
@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## offReadMicInData
@@ -203,7 +202,7 @@ async function registerReadMicInDataCallback(): Promise<void> {
 setInputDeviceToAccessory(): void
 ```
 
-将此捕获器的默认输入设备设置为 DEVICE_TYPE_ACCESSORY。 其他捕获器的设备不会受到此方法的影响。 此方法只能在捕获流开始之前使用。此外， 如果音频配件未连接，此方法将报告失败。调用此函数后，该捕获器的输入设备将不再受其他接口的影响。
+将此捕获器的默认输入设备设置为 DEVICE_TYPE_ACCESSORY。其他捕获器的设备不会受到此方法的影响。此方法只能在捕获流开始之前使用。此外，如果音频配件未连接，此方法将报告失败。调用此函数后，该捕获器的输入设备将不再受其他接口的影响。
 
 **起始版本：** 19
 

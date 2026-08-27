@@ -22,10 +22,10 @@ import { InputMethodExtraConfig } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [InputMethodExtraConfig(Input Method Extension Information)](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md) | Represents the extension information of an input method. |
+| [InputMethodExtraConfig](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md) | Represents the extension information of an input method. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [CustomValueType(Input Method Extension Information)](arkts-ime-customvaluetype-t.md) | Represents the extension information type. The specific type of the parameter depends on its functionality. |
+| [CustomValueType](arkts-ime-customvaluetype-t.md) | Represents the extension information type. The specific type of the parameter depends on its functionality. |

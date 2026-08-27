@@ -3,6 +3,7 @@
 
 > **说明：**
 > 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)替代。
+
 表示音频的录音配置。
 
 **起始版本：** 6
@@ -16,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## audioEncodeBitRate
@@ -26,7 +27,7 @@ audioEncodeBitRate?: number
 ```
 
 音频编码比特率，默认值为48000。单位为比特每秒（bit/s）。  
-**说明：** 从API version 6开始支持，从API version 9开始废弃， 建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioBitrate替代。
+**说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioBitrate替代。
 
 **类型：** number
 
@@ -64,7 +65,7 @@ audioEncoderMime?: CodecMimeType
 ```
 
 音频编码格式。  
-**说明：** 从API version 8开始支持，从API version 9开始废弃， 建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioCodec替代。
+**说明：** 从API version 8开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioCodec替代。
 
 **类型：** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
@@ -83,7 +84,7 @@ audioSampleRate?: number
 ```
 
 音频采集采样率，默认值为48000。单位为赫兹（Hz）。可变比特率模式，码率仅作参考。  
-**说明：** 从API version 6开始支持，从API version 9开始废弃， 建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioSampleRate替代。
+**说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioSampleRate替代。
 
 **类型：** number
 
@@ -102,7 +103,7 @@ fileFormat?: ContainerFormatType
 ```
 
 文件容器格式。  
-**说明：** 从API version 8开始支持，从API version 9开始废弃， 建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的fileFormat替代。
+**说明：** 从API version 8开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的fileFormat替代。
 
 **类型：** [ContainerFormatType](arkts-media-media-containerformattype-e.md)
 
@@ -159,7 +160,7 @@ numberOfChannels?: number
 ```
 
 音频采集声道数，默认值为2。  
-**说明：** 从API version 6开始支持，从API version 9开始废弃， 建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioChannels替代。
+**说明：** 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)中的audioChannels替代。
 
 **类型：** number
 

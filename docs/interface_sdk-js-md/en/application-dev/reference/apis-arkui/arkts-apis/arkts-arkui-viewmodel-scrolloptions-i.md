@@ -1,6 +1,8 @@
 # ScrollOptions
 
-ScrollOptions@interface ScrollOptions
+ScrollOptions
+
+@interface ScrollOptions
 
 **Since:** 6
 

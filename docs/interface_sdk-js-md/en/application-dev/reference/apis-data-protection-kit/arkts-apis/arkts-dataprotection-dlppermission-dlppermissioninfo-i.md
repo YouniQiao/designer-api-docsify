@@ -9,7 +9,7 @@ Represents the permission information about a DLP file.
 ## Modules to Import
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## dlpFileAccess

@@ -147,9 +147,12 @@ Indicates the extra call parameters.
 isCustomAccessibility?: boolean
 ```
 
-应用是否支持自定义无障碍能力，默认为false。  
--true:支持  
--false:不支持  
+应用是否支持自定义无障碍能力，默认为false。
+
+-true:支持
+
+-false:不支持
+
 **起始版本:** 26.0.0
 
 **类型：** boolean
@@ -166,8 +169,10 @@ isCustomAccessibility?: boolean
 isEcc: boolean
 ```
 
-判断是否是Ecc，默认false。  
--true：是  
+判断是否是Ecc，默认false。
+
+-true：是
+
 -false：否
 
 **类型：** boolean
@@ -248,8 +253,10 @@ rtt通话状态
 speakerphoneOn: boolean
 ```
 
-判断是否是扬声器接通电话，默认false。  
--true：是  
+判断是否是扬声器接通电话，默认false。
+
+-true：是
+
 -false：否
 
 **类型：** boolean
@@ -314,7 +321,8 @@ VoIP通话信息。
 xCallType?: XCallType
 ```
 
-XCALL类型。  
+XCALL类型。
+
 **起始版本:** 26.0.0
 
 **类型：** [XCallType](arkts-telephony-call-xcalltype-e-sys.md)

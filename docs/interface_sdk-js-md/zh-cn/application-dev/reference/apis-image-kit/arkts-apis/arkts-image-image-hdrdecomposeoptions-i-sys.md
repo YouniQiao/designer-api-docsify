@@ -11,7 +11,7 @@ HDR PixelMap分解为Picture的配置选项，分解后的Picture包含一张SDR
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## desiredPixelFormat
@@ -38,7 +38,9 @@ desiredPixelFormat?: PixelMapFormat
 isFullSizeGainmap?: boolean
 ```
 
-是否生成全尺寸增益图。true表示生成全尺寸增益图，增益图尺寸和主图一致；false表示不生成全尺寸增益图，增益图尺寸是主图的一半。默认值为false。
+是否生成全尺寸增益图。
+
+true表示生成全尺寸增益图，增益图尺寸和主图一致；false表示不生成全尺寸增益图，增益图尺寸是主图的一半。默认值为false。
 
 **类型：** boolean
 

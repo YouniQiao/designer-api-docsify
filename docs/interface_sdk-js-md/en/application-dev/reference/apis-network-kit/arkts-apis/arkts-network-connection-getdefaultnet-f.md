@@ -108,7 +108,7 @@ Obtains the network handle used by the system by default, including the network 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NetHandle & gt; | Promise used to return the network handle of the default network. |
+| Promise&lt;NetHandle&gt; | Promise used to return the network handle of the default network. |
 
 **Error codes:**
 

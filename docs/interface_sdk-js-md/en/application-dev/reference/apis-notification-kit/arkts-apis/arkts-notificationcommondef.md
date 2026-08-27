@@ -9,6 +9,6 @@ The **NotificationCommonDef** module defines the common data structures used in 
 
 | Name | Description |
 | --- | --- |
-| [BundleOption(Some common definitions)](arkts-notification-notificationcommondef-bundleoption-i.md) | Describes the **BundleOption** information, that is, the bundle information of an application. |
-| [GrantedBundleInfo(Some common definitions)](arkts-notification-notificationcommondef-grantedbundleinfo-i.md) | Describes the authorized bundle information. |
-| [UserGrantSetting(Some common definitions)](arkts-notification-notificationcommondef-usergrantsetting-i.md) | Describes the user authorization settings. |
+| [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Describes the **BundleOption** information, that is, the bundle information of an application. |
+| [GrantedBundleInfo](arkts-notification-notificationcommondef-grantedbundleinfo-i.md) | Describes the authorized bundle information. |
+| [UserGrantSetting](arkts-notification-notificationcommondef-usergrantsetting-i.md) | Describes the user authorization settings. |

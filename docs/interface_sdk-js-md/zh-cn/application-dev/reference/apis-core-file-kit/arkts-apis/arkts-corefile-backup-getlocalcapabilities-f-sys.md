@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## getLocalCapabilities
@@ -26,7 +26,7 @@ function getLocalCapabilities(): Promise<FileData>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将 自动删除。 |
+| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将自动删除。 |
 
 **错误码：**
 
@@ -183,25 +183,6 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md)提供的fileIo.stat等相关接口获取，能力文件内容示例：
-
-```TypeScript
-{
- "backupVersion" : "16.0",
- "bundleInfos" :[{
-   "allToBackup" : true,
-   "extensionName" : "BackupExtensionAbility",
-   "name" : "com.example.hiworld",
-   "needToInstall" : false,
-   "spaceOccupied" : 0,
-   "versionCode" : 1000000,
-   "versionName" : "1.0.0"
-   }],
- "deviceType" : "default",
- "systemFullName" : "OpenHarmony-4.0.0.0"
-}
-```
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileIo, backup } from '@kit.CoreFileKit';
@@ -306,25 +287,6 @@ async function getLocalCapabilitiesTest() {
     let err: BusinessError = error as BusinessError;
     console.error(`parse failed with code: ${err.code}, message: ${err.message}`);
   }
-}
-```
-
-能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md)提供的fileIo.stat等相关接口获取，能力文件内容示例：
-
-```TypeScript
-{
- "backupVersion" : "16.0",
- "bundleInfos" :[{
-   "allToBackup" : true,
-   "extensionName" : "BackupExtensionAbility",
-   "name" : "com.example.hiworld",
-   "needToInstall" : false,
-   "spaceOccupied" : 0,
-   "versionCode" : 1000000,
-   "versionName" : "1.0.0"
-   }],
- "deviceType" : "default",
- "systemFullName" : "OpenHarmony-4.0.0.0"
 }
 ```
 
@@ -475,7 +437,7 @@ function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | 是 | 回调函数，返回包含本地能力文件描述符的FileData。 返回的文件为临时文件，关闭后将自动删除。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | 是 | 回调函数，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将自动删除。 |
 
 **错误码：**
 
@@ -555,7 +517,7 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将 自动删除。 |
+| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将自动删除。 |
 
 **错误码：**
 

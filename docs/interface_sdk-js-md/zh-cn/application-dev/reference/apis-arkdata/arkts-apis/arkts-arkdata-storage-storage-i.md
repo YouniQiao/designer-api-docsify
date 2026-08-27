@@ -1,6 +1,8 @@
 # Storage
 
-提供获取和修改存储数据的接口。下列接口都需先使用[data_storage.getStorage](arkts-arkdata-storage-getstorage-f.md)或 [data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md)获取到Storage实例，再通过此实例调用对应接口。
+提供获取和修改存储数据的接口。
+
+下列接口都需先使用[data_storage.getStorage](arkts-arkdata-storage-getstorage-f.md)或[data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md)获取到Storage实例，再通过此实例调用对应接口。
 
 **起始版本：** 6
 
@@ -65,7 +67,7 @@ clear(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise实例，用于异步处理。 |
+| Promise&lt;void&gt; | Promise实例，用于异步处理。 |
 
 **示例**
 
@@ -155,7 +157,7 @@ delete(key: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise实例，用于异步处理。 |
+| Promise&lt;void&gt; | Promise实例，用于异步处理。 |
 
 **示例**
 
@@ -244,7 +246,7 @@ flush(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise实例，用于异步处理。 |
+| Promise&lt;void&gt; | Promise实例，用于异步处理。 |
 
 **示例**
 
@@ -296,7 +298,7 @@ get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储key名称，不能为空。 |
-| defValue | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 默认返回值。支持number、string、boolean。 |
+| defValue | ValueType | 是 | 默认返回值。支持number、string、boolean。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ValueType&gt; | 是 | 回调函数。 |
 
 **示例**
@@ -330,13 +332,13 @@ get(key: string, defValue: ValueType): Promise<ValueType>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储key名称，不能为空。 |
-| defValue | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 默认返回值。支持number、string、boolean。 |
+| defValue | ValueType | 是 | 默认返回值。支持number、string、boolean。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ValueType & gt; | Promise实例，用于异步获取结果。 |
+| Promise&lt;ValueType&gt; | Promise实例，用于异步获取结果。 |
 
 **示例**
 
@@ -368,13 +370,13 @@ getSync(key: string, defValue: ValueType): ValueType
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要获取的存储key名称，不能为空。 |
-| defValue | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 给定key的存储不存在，则要返回的默认值。支持number、string、boolean。 |
+| defValue | ValueType | 是 | 给定key的存储不存在，则要返回的默认值。支持number、string、boolean。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 键对应的值，如果值为null或者非默认值类型，返回默认数据。 |
+| ValueType | 键对应的值，如果值为null或者非默认值类型，返回默认数据。 |
 
 **示例**
 
@@ -448,7 +450,7 @@ has(key: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise实例，用于异步处理。 |
+| Promise&lt;boolean&gt; | Promise实例，用于异步处理。 |
 
 **示例**
 
@@ -579,7 +581,7 @@ put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要修改的存储的key，不能为空。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 存储的新值。支持number、string、boolean。 |
+| value | ValueType | 是 | 存储的新值。支持number、string、boolean。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 **示例**
@@ -613,13 +615,13 @@ put(key: string, value: ValueType): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要修改的存储的key，不能为空。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 存储的新值。支持number、string、boolean。 |
+| value | ValueType | 是 | 存储的新值。支持number、string、boolean。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise实例，用于异步处理。 |
+| Promise&lt;void&gt; | Promise实例，用于异步处理。 |
 
 **示例**
 
@@ -651,7 +653,7 @@ putSync(key: string, value: ValueType): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 要修改的存储的key，不能为空。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 存储的新值。支持number、string、boolean。 |
+| value | ValueType | 是 | 存储的新值。支持number、string、boolean。 |
 
 **示例**
 

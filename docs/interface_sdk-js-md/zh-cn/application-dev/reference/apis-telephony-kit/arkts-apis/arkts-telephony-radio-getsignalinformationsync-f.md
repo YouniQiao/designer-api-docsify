@@ -27,12 +27,16 @@ function getSignalInformationSync(slotId: number): Array<SignalInformation>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;SignalInformation & gt; | 返回网络信号强度[SignalInformation]{ |
+| Array&lt;SignalInformation&gt; | 返回网络信号强度[SignalInformation]{ |
 
 **示例**
 
 ```TypeScript
 let slotId: number = 0;
-let signalInfo: Array<radio.SignalInformation> = radio.getSignalInformationSync(slotId);
-console.info(`signal information size is:` + signalInfo.length);
+try {
+    let signalInfo: Array<radio.SignalInformation> = radio.getSignalInformationSync(slotId);
+    console.info(`signal information size is:` + signalInfo.length);
+} catch (err) {
+    console.error(`getSignalInformationSync failed, err->${JSON.stringify(err)}`);
+}
 ```

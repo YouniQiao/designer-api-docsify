@@ -1,6 +1,8 @@
 # SettingType
 
-Enumeration of setting type.@enum { number }
+Enumeration of setting type.
+
+@enum { number }
 
 **Since:** 23
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import cardEmulation from '@kit.ConnectivityKit';
+import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
 ## getPaymentServices
@@ -12,7 +12,7 @@ import cardEmulation from '@kit.ConnectivityKit';
 function getPaymentServices(): AbilityInfo[]
 ```
 
-获取所有支付类型的服务列表。如果应用程序声明支持HCE功能，并且声明了"payment-aid"，则会包含在列表里面，参考 [HCE卡模拟和AID列表的声明定义](../../../reference/apis-connectivity-kit/js-apis-cardEmulation.md#hce卡模拟和aid列表的声明定义)。
+获取所有支付类型的服务列表。如果应用程序声明支持HCE功能，并且声明了"payment-aid"，则会包含在列表里面，参考[HCE卡模拟和AID列表的声明定义](../../../reference/apis-connectivity-kit/js-apis-cardEmulation.md#hce卡模拟和aid列表的声明定义)。
 
 **起始版本：** 11
 

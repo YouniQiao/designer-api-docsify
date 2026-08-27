@@ -21,7 +21,13 @@
 height?: Length
 ```
 
-高度，取值范围≥0。默认值：0默认单位：vp。异常值undefined、null、NaN和Infinity按照默认值处理。
+高度，取值范围≥0。
+
+默认值：0
+
+默认单位：vp。
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -39,7 +45,15 @@ height?: Length
 radius?: Length | Array<any>
 ```
 
-圆角半径，支持分别设置四个角的圆角半径大小，取值范围≥0。该属性和radiusWidth/radiusHeight属性效果类似，在组合使用时优先于radiusWidth/radiusHeight生效。默认值：0默认单位：vp。异常值undefined、null、NaN和Infinity按照默认值处理。
+圆角半径，支持分别设置四个角的圆角半径大小，取值范围≥0。
+
+该属性和radiusWidth/radiusHeight属性效果类似，在组合使用时优先于radiusWidth/radiusHeight生效。
+
+默认值：0
+
+默认单位：vp。
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array&lt;any&gt;
 
@@ -57,7 +71,13 @@ radius?: Length | Array<any>
 width?: Length
 ```
 
-宽度，取值范围≥0。默认值：0默认单位：vp。异常值undefined、null、NaN和Infinity按照默认值处理。
+宽度，取值范围≥0。
+
+默认值：0
+
+默认单位：vp。
+
+异常值undefined、null、NaN和Infinity按照默认值处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

@@ -1,6 +1,10 @@
 # AbilityStage
 
-AbilityStage is a [module](../../../quick-start/application-package-overview.md#multi-module-design-mechanism)-level component manager. It is used for initializing operations such as resource preloading and thread creation at the module level, as well as maintaining the application state under the module. An AbilityStage instance corresponds to a module.When the [HAP](../../../quick-start/hap-package.md) or [HSP](../../../quick-start/in-app-hsp.md) of an application is first loaded, an AbilityStage instance is created. If a module contains both AbilityStage and other components (like UIAbility or ExtensionAbility), the AbilityStage instance is created before the other component instances.An AbilityStage has the lifecycle callbacks [onCreate()](#oncreate) and [onDestroy()](#ondestroy), and the event callbacks [onAcceptWant()](#onacceptwant), [onConfigurationUpdate()](#onconfigurationupdate), and [onMemoryLevel()](#onmemorylevel).
+AbilityStage is a [module](../../../quick-start/application-package-overview.md#multi-module-design-mechanism)-level component manager. It is used for initializing operations such as resource preloading and thread creation at the module level, as well as maintaining the application state under the module. An AbilityStage instance corresponds to a module.
+
+When the [HAP](../../../quick-start/hap-package.md) or [HSP](../../../quick-start/in-app-hsp.md) of an application is first loaded, an AbilityStage instance is created. If a module contains both AbilityStage and other components (like UIAbility or ExtensionAbility), the AbilityStage instance is created before the other component instances.
+
+An AbilityStage has the lifecycle callbacks [onCreate()](#oncreate) and [onDestroy()](#ondestroy), and the event callbacks [onAcceptWant()](#onacceptwant), [onConfigurationUpdate()](#onconfigurationupdate), and [onMemoryLevel()](#onmemorylevel).
 
 **Since:** 9
 
@@ -9,7 +13,7 @@ AbilityStage is a [module](../../../quick-start/application-package-overview.md#
 ## Modules to Import
 
 ```TypeScript
-import AbilityStage from '@kit.AbilityKit';
+import { AbilityStage } from '@kit.AbilityKit';
 ```
 
 ## onAboutToCreateAbility
@@ -44,7 +48,7 @@ Called when the ability stage is about to create the first ability. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## onAcceptWant
 
@@ -52,7 +56,9 @@ Called when the ability stage is about to create the first ability. This API use
 onAcceptWant(want: Want): string
 ```
 
-Called when a UIAbility with the launch mode set to [specified](../../../application-models/uiability-launch-type.md#specified) is launched. This API returns a string representing the unique ID of the UIAbility instance. This API returns the result synchronously and does not support asynchronous callbacks.If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created.
+Called when a UIAbility with the launch mode set to [specified](../../../application-models/uiability-launch-type.md#specified) is launched. This API returns a string representing the unique ID of the UIAbility instance. This API returns the result synchronously and does not support asynchronous callbacks.
+
+If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created.
 
 > **NOTE：**
 > 
@@ -98,7 +104,9 @@ export default class MyAbilityStage extends AbilityStage {
 onAcceptWantAsync(want: Want): Promise<string>
 ```
 
-Called when a UIAbility with the launch mode set to [specified](../../../application-models/uiability-launch-type.md#specified) is launched. This API returns a string representing the unique ID of the UIAbility instance. This API uses a promise to return the result.If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created.
+Called when a UIAbility with the launch mode set to [specified](../../../application-models/uiability-launch-type.md#specified) is launched. This API returns a string representing the unique ID of the UIAbility instance. This API uses a promise to return the result.
+
+If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created.
 
 **Since:** 20
 
@@ -118,7 +126,7 @@ Called when a UIAbility with the launch mode set to [specified](../../../applica
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return a string that uniquely identifies the UIAbility instance launched. If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created. |
+| Promise&lt;string&gt; | Promise used to return a string that uniquely identifies the UIAbility instance launched. If a UIAbility instance with the same ID already exists in the system, that instance is reused. Otherwise, a new instance is created. |
 
 **Examples**
 
@@ -182,7 +190,9 @@ export default class MyAbilityStage extends AbilityStage {
 onCreate(): void
 ```
 
-Called when an AbilityStage instance is created. Such an instance is automatically created by the system before it loads the first Ability instance of the module.You can initialize the module (for example, preload resources or create threads) in this callback. This API returns the result synchronously and does not support asynchronous callbacks.
+Called when an AbilityStage instance is created. Such an instance is automatically created by the system before it loads the first Ability instance of the module.
+
+You can initialize the module (for example, preload resources or create threads) in this callback. This API returns the result synchronously and does not support asynchronous callbacks.
 
 **Since:** 9
 
@@ -252,7 +262,9 @@ Called when the process is launched from HyperSnap.
 onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
-Listens for changes in the system memory level status. Called when the available memory of the entire device changes to a specified level. You can implement this callback to promptly release non-essential resources (such as cached data or temporary objects) upon receiving a memory shortage event, thereby preventing the application process from being forcibly terminated by the system.This API returns the result synchronously and does not support asynchronous callbacks.
+Listens for changes in the system memory level status. Called when the available memory of the entire device changes to a specified level. You can implement this callback to promptly release non-essential resources (such as cached data or temporary objects) upon receiving a memory shortage event, thereby preventing the application process from being forcibly terminated by the system.
+
+This API returns the result synchronously and does not support asynchronous callbacks.
 
 > **NOTE：**
 > 
@@ -291,7 +303,17 @@ export default class MyAbilityStage extends AbilityStage {
 onNewProcessRequest(want: Want): string
 ```
 
-Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is configured to run in an independent process (with **isolationProcess** set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string representing the unique process ID. This API returns the result synchronously and does not support asynchronous callbacks.If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd- -> runs in that process. Otherwise, a new process is created.If you implement both **onNewProcessRequest** and [onAcceptWant](#onacceptwant), the system first invokes the **onNewProcessRequest** callback, and then the **onAcceptWant** callback.<!--Del-->The **isolationProcess** field can be set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the sys/commonUI type.<!--DelEnd-->
+Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is configured to run in an independent process (with **isolationProcess** set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string representing the unique process ID. This API returns the result synchronously and does not support asynchronous callbacks.
+
+If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd- -> runs in that process. Otherwise, a new process is created.
+
+If you implement both **onNewProcessRequest** and [onAcceptWant](#onacceptwant), the system first invokes the **onNewProcessRequest** callback, and then the **onAcceptWant** callback.
+
+<!--Del-->
+
+The **isolationProcess** field can be set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the sys/commonUI type.
+
+<!--DelEnd-->
 
 > **NOTE：**
 > 
@@ -339,7 +361,15 @@ export default class MyAbilityStage extends AbilityStage {
 onNewProcessRequestAsync(want: Want): Promise<string>
 ```
 
-Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is configured to run in an independent process (with **isolationProcess** set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string representing the unique process ID. This API uses a promise to return the result.If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd- -> runs in that process. Otherwise, a new process is created.<!--Del-->The **isolationProcess** field can be set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the sys/commonUI type.<!--DelEnd-->
+Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is configured to run in an independent process (with **isolationProcess** set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file), is launched. This API returns a string representing the unique process ID. This API uses a promise to return the result.
+
+If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd- -> runs in that process. Otherwise, a new process is created.
+
+<!--Del-->
+
+The **isolationProcess** field can be set to **true** in the [module.json5](../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of the sys/commonUI type.
+
+<!--DelEnd-->
 
 **Since:** 20
 
@@ -359,7 +389,7 @@ Called when a UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd-->, which is c
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return a string representing the process ID. If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd--> runs in that process. Otherwise, a new process is created. |
+| Promise&lt;string&gt; | Promise used to return a string representing the process ID. If the application already has a process with the same ID, the UIAbility<!--Del--> or UIExtensionAbility<!--DelEnd--> runs in that process. Otherwise, a new process is created. |
 
 **Examples**
 
@@ -453,7 +483,7 @@ Called when the application is closed by the user, allowing the user to choose b
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;AbilityConstant.PrepareTermination & gt; | Promise used to return the user's choice. |
+| Promise&lt;AbilityConstant.PrepareTermination&gt; | Promise used to return the user's choice. |
 
 **Examples**
 

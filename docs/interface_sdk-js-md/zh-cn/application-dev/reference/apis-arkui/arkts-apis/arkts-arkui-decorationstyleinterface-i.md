@@ -23,7 +23,9 @@
 color?: ResourceColor
 ```
 
-装饰线颜色。默认值：Color.Black
+装饰线颜色。
+
+默认值：Color.Black
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -41,7 +43,9 @@ color?: ResourceColor
 style?: TextDecorationStyle
 ```
 
-装饰线样式。具体枚举及说明请参考TextDecorationStyle。默认值：TextDecorationStyle.SOLID。
+装饰线样式。具体枚举及说明请参考TextDecorationStyle。
+
+默认值：TextDecorationStyle.SOLID。
 
 **类型：** TextDecorationStyle
 
@@ -59,7 +63,12 @@ style?: TextDecorationStyle
 thicknessScale?: number
 ```
 
-装饰线粗细缩放。默认值：1.0取值范围：[0, +∞)  
+装饰线粗细缩放。
+
+默认值：1.0
+
+取值范围：[0, +∞)
+
 **说明：** 负值按默认值处理。
 
 **类型：** number
@@ -78,7 +87,9 @@ thicknessScale?: number
 type: TextDecorationType
 ```
 
-装饰线类型。具体枚举及说明请参考TextDecorationType。默认值：TextDecorationType.None。
+装饰线类型。具体枚举及说明请参考TextDecorationType。
+
+默认值：TextDecorationType.None。
 
 **类型：** TextDecorationType
 

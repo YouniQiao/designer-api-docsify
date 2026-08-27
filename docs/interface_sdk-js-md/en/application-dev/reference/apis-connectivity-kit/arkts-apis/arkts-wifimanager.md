@@ -9,8 +9,7 @@ Provides methods to operate or manage Wi-Fi. @namespace wifiManager
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -60,7 +59,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 | [isMeteredHotspot](arkts-connectivity-wifimanager-ismeteredhotspot-f.md) | Whether the hotspot is metered hotspot or not. |
 | [isWifiActive](arkts-connectivity-wifimanager-iswifiactive-f.md) | Query the Wi-Fi status |
 | [isWlanSupported](arkts-connectivity-wifimanager-iswlansupported-f.md) | Query whether Wi-Fi is available |
-| [off](arkts-connectivity-wifimanager-off-f.md#offwifistatechange) | Unsubscribe Wi-Fi status change events.All callback functions will be deregistered If there is no specific callback parameter. |
+| [off](arkts-connectivity-wifimanager-off-f.md#offwifistatechange) | Unsubscribe Wi-Fi status change events. |
 | [off](arkts-connectivity-wifimanager-off-f.md#offwificonnectionchange) | Unsubscribe Wi-Fi connection change events. All callback functions will be deregistered If there is no specific callback parameter. |
 | [off](arkts-connectivity-wifimanager-off-f.md#offwifiscanstatechange) | Unsubscribe Wi-Fi scan status change events. All callback functions will be deregistered If there is no specific callback parameter. |
 | [off](arkts-connectivity-wifimanager-off-f.md#offwifirssichange) | Unsubscribe Wi-Fi rssi change events. All callback functions will be deregistered If there is no specific callback parameter. |
@@ -183,12 +182,12 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 
 | Name | Description |
 | --- | --- |
-| [ConnState](arkts-connectivity-wifimanager-connstate-e.md) | The state of Wi-Fi connection enumeration.@enum { number } |
+| [ConnState](arkts-connectivity-wifimanager-connstate-e.md) | The state of Wi-Fi connection enumeration. |
 | [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md) | Wi-Fi device address( mac / bssid ) type. @enum { number } |
 | [EapMethod](arkts-connectivity-wifimanager-eapmethod-e.md) | Wi-Fi EAP method. @enum { number } |
-| [GroupOwnerBand](arkts-connectivity-wifimanager-groupownerband-e.md) | P2P group owner band.@enum { number } |
-| [P2pConnectState](arkts-connectivity-wifimanager-p2pconnectstate-e.md) | P2P connection status.@enum { number } |
-| [P2pDeviceStatus](arkts-connectivity-wifimanager-p2pdevicestatus-e.md) | P2P device status.@enum { number } |
+| [GroupOwnerBand](arkts-connectivity-wifimanager-groupownerband-e.md) | P2P group owner band. |
+| [P2pConnectState](arkts-connectivity-wifimanager-p2pconnectstate-e.md) | P2P connection status. |
+| [P2pDeviceStatus](arkts-connectivity-wifimanager-p2pdevicestatus-e.md) | P2P device status. |
 | [Phase2Method](arkts-connectivity-wifimanager-phase2method-e.md) | Wi-Fi phase 2 method. @enum { number } |
 | [WapiPskType](arkts-connectivity-wifimanager-wapipsktype-e.md) | Describes the WAPI pre-shared key Type. @enum { number } |
 | [WifiBandType](arkts-connectivity-wifimanager-wifibandtype-e.md) | Wi-Fi band type. @enum { number } |
@@ -205,8 +204,8 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 | Name | Description |
 | --- | --- |
 | [DisconnectedReason](arkts-connectivity-wifimanager-disconnectedreason-e-sys.md) | Wi-Fi disconnected reason. @enum { number } |
-| [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md) | Wi-Fi IP type enumeration.@enum { number } |
+| [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md) | Wi-Fi IP type enumeration. |
 | [ProxyMethod](arkts-connectivity-wifimanager-proxymethod-e-sys.md) | Wi-Fi Proxy method. @enum { number } |
-| [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md) | The state of the supplicant enumeration.@enum { number } |
+| [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md) | The state of the supplicant enumeration. |
 | [WifiDetailState](arkts-connectivity-wifimanager-wifidetailstate-e-sys.md) | Wi-Fi detail state. @enum { number } WifiDetailState |
 <!--DelEnd-->

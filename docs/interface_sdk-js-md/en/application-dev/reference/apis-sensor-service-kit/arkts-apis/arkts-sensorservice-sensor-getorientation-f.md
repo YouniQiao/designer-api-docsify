@@ -21,7 +21,7 @@ Obtains the device direction based on the rotation matrix. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationMatrix | Array & lt;number & gt; | Yes | Rotation matrix. |
+| rotationMatrix | Array&lt;number&gt; | Yes | Rotation matrix. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation angle around the z, x, and y axes, in degrees. |
 
 **Error codes:**
@@ -79,13 +79,13 @@ Obtains the device direction based on the rotation matrix. This API uses a promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationMatrix | Array & lt;number & gt; | Yes | Rotation matrix. |
+| rotationMatrix | Array&lt;number&gt; | Yes | Rotation matrix. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the rotation angle around the z, x, and y axes, in degrees. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the rotation angle around the z, x, and y axes, in degrees. |
 
 **Error codes:**
 

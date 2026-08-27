@@ -1,6 +1,8 @@
 # Placement
 
-Placement enumeration description@enum { number }
+Placement enumeration description
+
+@enum { number }
 
 **起始版本：** 11
 

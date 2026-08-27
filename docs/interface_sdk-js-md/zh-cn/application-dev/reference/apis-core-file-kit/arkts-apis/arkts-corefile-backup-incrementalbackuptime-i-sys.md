@@ -1,6 +1,8 @@
 # IncrementalBackupTime（系统接口）
 
-记录最后一次增量备份时间，用于描述备份增量的时间点。@interface IncrementalBackupTime
+记录最后一次增量备份时间，用于描述备份增量的时间点。
+
+@interface IncrementalBackupTime
 
 **起始版本：** 12
 
@@ -11,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## bundleName

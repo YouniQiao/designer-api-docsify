@@ -15,7 +15,7 @@ Worker类包含所有Worker功能。
 ## 导入模块
 
 ```TypeScript
-import worker, { DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -138,7 +138,7 @@ workerInstance.on("alert", () => {
 once(type: string, listener: EventListener): void
 ```
 
-向Worker添加一个事件监听， 该事件监听只执行一次，执行完后会自动删除。
+向Worker添加一个事件监听，该事件监听只执行一次，执行完后会自动删除。
 
 **起始版本：** 7
 
@@ -217,7 +217,7 @@ onexit?: (code: number) => void
 onmessage?: (event: MessageEvent) => void
 ```
 
-回调函数。表示宿主线程接收到来自其创建的Worker通过workerPort.postMessage接口发送的消息时被调用的事件处理程序，处理程序在宿主线程中执行。其中回调函数中event类型为MessageEvent， 表示收到的Worker消息数据。默认值为undefined。
+回调函数。表示宿主线程接收到来自其创建的Worker通过workerPort.postMessage接口发送的消息时被调用的事件处理程序，处理程序在宿主线程中执行。其中回调函数中event类型为MessageEvent，表示收到的Worker消息数据。默认值为undefined。
 
 **起始版本：** 7
 
@@ -261,7 +261,7 @@ onmessageerror?: (event: MessageEvent) => void
 postMessage(message: Object, transfer: ArrayBuffer[]): void
 ```
 
-向Worker线程发送消息。 数据通过结构化克隆算法传递。
+向Worker线程发送消息。数据通过结构化克隆算法传递。
 
 **起始版本：** 7
 
@@ -276,7 +276,7 @@ postMessage(message: Object, transfer: ArrayBuffer[]): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | message | Object | 是 | 发送至Worker的数据。 |
-| transfer | ArrayBuffer[] | 是 | transfer 可转移的ArrayBuffer实例对象。 transferList数组不可包含null。 |
+| transfer | ArrayBuffer[] | 是 | transfer 可转移的ArrayBuffer实例对象。transferList数组不可包含null。 |
 
 **示例**
 
@@ -369,7 +369,7 @@ workerInstance.postMessage(buffer, [buffer]);
 postMessage(message: Object, options?: PostMessageOptions): void
 ```
 
-向Worker线程发送消息。 数据通过结构化克隆算法传递。
+向Worker线程发送消息。数据通过结构化克隆算法传递。
 
 **起始版本：** 7
 
@@ -384,7 +384,7 @@ postMessage(message: Object, options?: PostMessageOptions): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | message | Object | 是 | 发送至Worker的数据。 |
-| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | 否 | 可为postMessage设置的选项。 transferList数组不可包含null。 |
+| options | [PostMessageOptions](arkts-arkts-worker-postmessageoptions-i.md) | 否 | 可为postMessage设置的选项。transferList数组不可包含null。 |
 
 **示例**
 

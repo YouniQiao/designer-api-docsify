@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import storageStatistics from '@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getTotalInodes
@@ -24,7 +24,7 @@ function getTotalInodes(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回文件系统inode资源总量。 |
+| Promise&lt;number&gt; | Promise对象，返回文件系统inode资源总量。 |
 
 **错误码：**
 

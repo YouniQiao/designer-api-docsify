@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import configPolicy from '@kit.BasicServicesKit';
+import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
 ## getCfgDirList
@@ -24,7 +24,7 @@ Obtains a list of configuration level directories, in ascending order of priorit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the list of configuration level directories is successfully obtained, & lt;strong & gt;err & lt;/strong & gt; is & lt;strong & gt;undefined & lt;/strong & gt;, and & lt;strong & gt;data & lt;/strong & gt; is the obtained list. Otherwise, & lt;strong & gt;err & lt;/strong & gt; is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the list of configuration level directories is successfully obtained, &lt;strong&gt;err&lt;/strong&gt; is &lt;strong&gt;undefined&lt;/strong&gt;, and &lt;strong&gt;data&lt;/strong&gt; is the obtained list. Otherwise, &lt;strong&gt;err&lt;/strong&gt; is an error object. |
 
 **Error codes:**
 
@@ -65,7 +65,7 @@ Obtains a list of configuration level directories, in ascending order of priorit
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the list of configuration level directories. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the list of configuration level directories. |
 
 **Examples**
 

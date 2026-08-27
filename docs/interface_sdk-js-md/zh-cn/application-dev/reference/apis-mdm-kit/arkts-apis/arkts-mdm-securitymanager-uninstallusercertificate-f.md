@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import securityManager from '@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## uninstallUserCertificate
@@ -27,13 +27,13 @@ function uninstallUserCertificate(admin: Want, certUri: string): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| certUri | string | 是 | 证书uri，由安装用户证书接口[installUserCertificate](arkts-mdm-securitymanager-installusercertificate-f.md)设置 返回。 |
+| certUri | string | 是 | 证书uri，由安装用户证书接口[installUserCertificate](arkts-mdm-securitymanager-installusercertificate-f.md)设置返回。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。当卸载用户证书失败时会抛出错误对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。当卸载用户证书失败时会抛出错误对象。 |
 
 **错误码：**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## enableAdmin
@@ -12,7 +12,7 @@ import adminManager from '@kit.MDMKit';
 function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminType, callback: AsyncCallback<void>): void
 ```
 
-激活指定的设备管理应用。超级设备管理应用仅在首用户（u100）下可激活。激活后，应用不可卸载，其 [企业设备管理扩展能力](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability企业设备管理扩展能力)组件将开机自启并在用户切换后自启。使用callback异步回 调。
+激活指定的设备管理应用。超级设备管理应用仅在首用户（u100）下可激活。激活后，应用不可卸载，其[企业设备管理扩展能力](../../../mdm/mdm-kit-term.md#enterpriseadminextensionability企业设备管理扩展能力)组件将开机自启并在用户切换后自启。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -96,7 +96,7 @@ function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminTyp
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | enterpriseInfo | [EnterpriseInfo](arkts-mdm-adminmanager-enterpriseinfo-i-sys.md) | 是 | 设备管理应用的企业信息。 |
 | type | [AdminType](arkts-mdm-adminmanager-admintype-e.md) | 是 | 激活的设备管理应用类型。 |
-| userId | number | 是 | 用户ID，指定具体用户，取值范围：大于等于0。 默认值：调用方所在用户。 |
+| userId | number | 是 | 用户ID，指定具体用户，取值范围：大于等于0。默认值：调用方所在用户。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当接口调用成功，err为null，否则为错误对象。 |
 
 **错误码：**
@@ -162,13 +162,13 @@ function enableAdmin(admin: Want, enterpriseInfo: EnterpriseInfo, type: AdminTyp
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | enterpriseInfo | [EnterpriseInfo](arkts-mdm-adminmanager-enterpriseinfo-i-sys.md) | 是 | 设备管理应用的企业信息。 |
 | type | [AdminType](arkts-mdm-adminmanager-admintype-e.md) | 是 | 激活的设备管理应用类型。 |
-| userId | number | 否 | 用户ID，取值范围：大于等于0。     - 调用接口时，若传入userId，表示指定用户。     - 调用接口时，若未传入userId，表示当前用户。 |
+| userId | number | 否 | 用户ID，取值范围：大于等于0。    - 调用接口时，若传入userId，表示指定用户。    - 调用接口时，若未传入userId，表示当前用户。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。当激活设备管理应用失败时，会抛出错误对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。当激活设备管理应用失败时，会抛出错误对象。 |
 
 **错误码：**
 

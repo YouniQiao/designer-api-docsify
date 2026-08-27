@@ -9,7 +9,7 @@ Provides information about the action to dismiss the dialog box.
 ## Modules to Import
 
 ```TypeScript
-import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## dismiss

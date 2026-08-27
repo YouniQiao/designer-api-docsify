@@ -1,6 +1,8 @@
 # @ohos.FusionConnectivity.partnerAgent
 
-Provides APIs for managing partner agents.@namespace partnerAgent
+Provides APIs for managing partner agents.
+
+@namespace partnerAgent
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ Provides APIs for managing partner agents.@namespace partnerAgent
 ## Modules to Import
 
 ```TypeScript
-import partnerAgent from '@kit.ConnectivityKit';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -20,7 +22,7 @@ import partnerAgent from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [bindDevice](arkts-connectivity-partneragent-binddevice-f.md) | Bind the partner device. After successfully binding the device, if the device meets the discovery requirements, the [PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md) of the application will be launched.  - If the [supportBR](arkts-connectivity-partneragent-devicecapability-i.md#supportbr) in the capability variable is set to true,  the application's ability will be launched when the device is connected via Bluetooth.  - If the [supportBleAdvertiser](arkts-connectivity-partneragent-devicecapability-i.md#supportbleadvertiser) in the capability variable is set to true,  the application's ability will be launched when the device is detected via Bluetooth scanning.Note: The device must be paired first. |
+| [bindDevice](arkts-connectivity-partneragent-binddevice-f.md) | Bind the partner device. After successfully binding the device, if the device meets the discovery requirements, the [PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md) of the application will be launched.  - If the [supportBR](arkts-connectivity-partneragent-devicecapability-i.md#supportbr) in the capability variable is set to true,  the application's ability will be launched when the device is connected via Bluetooth.  - If the [supportBleAdvertiser](arkts-connectivity-partneragent-devicecapability-i.md#supportbleadvertiser) in the capability variable is set to true,  the application's ability will be launched when the device is detected via Bluetooth scanning. |
 | [getBoundDevices](arkts-connectivity-partneragent-getbounddevices-f.md) | Gets the list of addresses of the bound partner device for this application. |
 | [isDeviceBound](arkts-connectivity-partneragent-isdevicebound-f.md) | Checks whether a device is bound to this application. |
 | [isDeviceControlEnabled](arkts-connectivity-partneragent-isdevicecontrolenabled-f.md) | Checks whether device control is enabled. |
@@ -48,4 +50,4 @@ import partnerAgent from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragent-partneragentextensionabilitydestroyreason-e.md) | The enum of reasons for destroying partner agent extension ability.@enum { number } |
+| [PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragent-partneragentextensionabilitydestroyreason-e.md) | The enum of reasons for destroying partner agent extension ability. |

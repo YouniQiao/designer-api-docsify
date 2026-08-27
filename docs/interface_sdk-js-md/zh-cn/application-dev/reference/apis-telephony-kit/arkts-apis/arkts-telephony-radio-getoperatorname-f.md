@@ -42,7 +42,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let slotId: number = 0;
 radio.getOperatorName(slotId, (err: BusinessError, data: string) => {
     if (err) {
-        console.error(`getOperatorName failed, callback: err->${JSON.stringify(err)}`);
+        console.error(`getOperatorName failed, callback: err code: ${err.code}, message: ${err.message}`);
         return;
     }
     console.info(`getOperatorName success, callback: data->${JSON.stringify(data)}`);
@@ -72,7 +72,7 @@ function getOperatorName(slotId: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | 以Promise形式返回运营商名称。例如：中国移动。 |
+| Promise&lt;string&gt; | 以Promise形式返回运营商名称。例如：中国移动。 |
 
 **错误码：**
 
@@ -93,6 +93,6 @@ let slotId: number = 0;
 radio.getOperatorName(slotId).then((data: string) => {
     console.info(`getOperatorName success, promise: data->${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-    console.error(`getOperatorName failed, promise: err->${JSON.stringify(err)}`);
+    console.error(`getOperatorName failed, promise: err code: ${err.code}, message: ${err.message}`);
 });
 ```

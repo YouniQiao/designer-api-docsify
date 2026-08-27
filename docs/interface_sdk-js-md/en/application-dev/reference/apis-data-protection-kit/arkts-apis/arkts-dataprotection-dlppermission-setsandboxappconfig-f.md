@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## setSandboxAppConfig
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function setSandboxAppConfig(configInfo: string): Promise<void>
 ```
 
-Sets the configuration information of the sandbox application. The configuration information is in JSON string format and can be set by the application. After the API is successfully called, the sandbox application runs based on the configuration information. This API uses a promise to return the result. This API can be called only in non-DLP sandbox applications.This API sets the sandbox application configuration so that the application can pass custom parameters as required.
+Sets the configuration information of the sandbox application. The configuration information is in JSON string format and can be set by the application. After the API is successfully called, the sandbox application runs based on the configuration information. This API uses a promise to return the result. This API can be called only in non-DLP sandbox applications.
+
+This API sets the sandbox application configuration so that the application can pass custom parameters as required.
 
 **Since:** 11
 
@@ -28,7 +30,7 @@ Sets the configuration information of the sandbox application. The configuration
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

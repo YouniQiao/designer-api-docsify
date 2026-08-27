@@ -82,7 +82,9 @@ STREAM_USAGE_VOICE_CALL_ASSISTANT = 21
 STREAM_USAGE_ANNOUNCEMENT = 22
 ```
 
-通知音。此接口仅可在Stage模型下使用。
+通知音。
+
+此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
 
@@ -98,7 +100,9 @@ STREAM_USAGE_ANNOUNCEMENT = 22
 STREAM_USAGE_EMERGENCY = 23
 ```
 
-告警音。此接口仅可在Stage模型下使用。
+告警音。
+
+此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
 

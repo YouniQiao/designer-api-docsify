@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import huksExternalCrypto from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## openResource
@@ -31,7 +31,7 @@ Open resource by specific resource ID. NOTE: The opened resource must be closed 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Return value of the Promise type |
+| Promise&lt;void&gt; | Return value of the Promise type |
 
 **Error codes:**
 

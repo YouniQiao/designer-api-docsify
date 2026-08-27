@@ -1,6 +1,8 @@
 # BackupPriority（系统接口）
 
-控制备份和恢复的优先级顺序。@interface BackupPriority
+控制备份和恢复的优先级顺序。
+
+@interface BackupPriority
 
 **起始版本：** 12
 
@@ -11,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## priority

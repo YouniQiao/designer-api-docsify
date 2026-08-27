@@ -1,6 +1,8 @@
 # RRect (System API)
 
-Round rect.@interface RRect
+Round rect.
+
+@interface RRect
 
 **Since:** 9
 
@@ -11,7 +13,7 @@ Round rect.@interface RRect
 ## Modules to Import
 
 ```TypeScript
-import windowAnimationManager from '@kit.ArkUI';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## height

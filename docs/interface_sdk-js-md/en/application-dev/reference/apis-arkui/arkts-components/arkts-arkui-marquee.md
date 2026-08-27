@@ -1,6 +1,7 @@
 # Marquee
 
 The **Marquee** component is used to display a scrolling piece of text. Text scrolling is activated only when the content width is greater than or equal to the component's width.
+
 > **NOTE** > > To ensure that scrolling frame rates are not affected, it is recommended that the number of **Marquee** components > in a scroll container does not exceed four, or alternatively, use the Text component's > [TextOverflow.MARQUEE](../arkts-apis/arkts-arkui-textoverflow-e.md) as a substitute. > > For the scenario where the frame rate of the **Marquee** component is dynamic, you can use the > [MarqueeDynamicSyncScene](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) API. > > If the text width is less than the **Marquee** component width, use the property animation to > implement scrolling.
 
 ## Child Components
@@ -35,6 +36,7 @@ Creates a marquee.
 
 | Name | Description |
 | --- | --- |
+| [MarqueeOptions](arkts-arkui-marqueeoptions-i.md) | Describes the initialization options of the **Marquee** component. |
 
 ## Examples
 

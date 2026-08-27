@@ -18,7 +18,7 @@ The module provides APIs for obtaining resource information, including [BundleRe
 ## Modules to Import
 
 ```TypeScript
-import bundleResourceManager from '@kit.AbilityKit';
+import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -55,5 +55,5 @@ import bundleResourceManager from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [BundleResourceInfo](arkts-ability-bundleresourcemanager-bundleresourceinfo-t-sys.md) | Defines the icon and name of an application. |
-| [LauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-launcherabilityresourceinfo-t-sys.md) | Defines the entry icon and name of an application.<!--no_check--> |
+| [LauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-launcherabilityresourceinfo-t-sys.md) | Defines the entry icon and name of an application. |
 <!--DelEnd-->

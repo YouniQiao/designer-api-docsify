@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import huksExternalCrypto from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## registerProvider
@@ -12,13 +12,18 @@ import huksExternalCrypto from '@kit.UniversalKeystoreKit';
 function registerProvider(providerName: string, params: Array<HuksExternalCryptoParam>): Promise<void>
 ```
 
-注册指定的外部provider。使用Promise异步回调。若需使用自定义PIN码弹窗，在注册provider时需要同步注册UIExtensionAbility，注意事项如下：
+注册指定的外部provider。使用Promise异步回调。
+
+若需使用自定义PIN码弹窗，在注册provider时需要同步注册UIExtensionAbility，注意事项如下：
+
 1. 自定义ability通过UIExtensionAbility扩展实现。
 2. 注册的UIExtensionAbility可以通过证书管理kit提供的[openUKeyAuthDialog](../../apis-device-certificate-kit/arkts-apis/arkts-security-certmanager.md)接口统一拉起。
+
 3. 系统拉起自定义弹窗时会通过want接口向开发者传递以下参数：  
 - Action：string参数类型，在拉起自定义弹窗时want传输的Action为"UkeyPINAuth"。  
 - appUid：number参数类型，通过want.parameters传输。"appUid"字段为应用id，开发者可以通过该字段完成应用隔离。  
-- keyUri：string参数类型其值为resourceId，通过want.parameters传输，表示Ukey证书的索引。  
+- keyUri：string参数类型其值为resourceId，通过want.parameters传输，表示Ukey证书的索引。
+
 4. 开发者实现UIExtensionAbility时，应用需根据指定场景返回对应的错误码：  
 - 用户取消操作时，返回-1001。  
 - keyUri指定的证书/密钥不存在时，返回-1008。  
@@ -36,13 +41,13 @@ function registerProvider(providerName: string, params: Array<HuksExternalCrypto
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | providerName | string | 是 | provider名称，最大长度为128。建议包含厂商信息，全局唯一，不要包含个人联系方式等敏感数据。最多支持注册10个provider。 |
-| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | 是 | 操作时需传入的参数，必选TAG： [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md)，表示ability的名字，根据业务自己内部定义按 照实际填写。从API版本26.0.0开始，可选TAG： [HUKS_EXT_CRYPTO_TAG_ABILITY_INFO](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md)，以JSON列表的形式传入PIN码认证自定义弹窗 UIExtensionAbility的名字以及包名。 |
+| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | 是 | 操作时需传入的参数，必选TAG：[HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md)，表示ability的名字，根据业务自己内部定义按照实际填写。从API版本26.0.0开始，可选TAG：[HUKS_EXT_CRYPTO_TAG_ABILITY_INFO](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md)，以JSON列表的形式传入PIN码认证自定义弹窗UIExtensionAbility的名字以及包名。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

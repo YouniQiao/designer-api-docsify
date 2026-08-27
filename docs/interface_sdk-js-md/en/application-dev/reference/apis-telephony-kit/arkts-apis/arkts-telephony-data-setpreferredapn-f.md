@@ -33,7 +33,7 @@ Sets the APN corresponding to the specified **apnId** as the preferred APN. This
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. If no SIM card is installed, the value **false** is returned. |
+| Promise&lt;boolean&gt; | Promise used to return the result. If no SIM card is installed, the value **false** is returned. |
 
 **Error codes:**
 

@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getIpInfo
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function getIpInfo(): IpInfo
 ```
 
-Obtains the IP information of a Wi-Fi connection.<p>The IP information includes the host IP address, gateway address, and DNS information.
+Obtains the IP information of a Wi-Fi connection.
+
+<p>The IP information includes the host IP address, gateway address, and DNS information.
 
 **Since:** 7
 
@@ -31,7 +30,7 @@ Obtains the IP information of a Wi-Fi connection.<p>The IP information includes 
 
 | Type | Description |
 | --- | --- |
-| [IpInfo](arkts-connectivity-wifi-ipinfo-i.md) | Returns the IP information of the Wi-Fi connection. |
+| IpInfo | Returns the IP information of the Wi-Fi connection. |
 
 **Examples**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import autoFillManager from '@kit.AbilityKit';
+import { autoFillManager } from '@kit.AbilityKit';
 ```
 
 ## requestAutoFill
@@ -27,7 +27,7 @@ Trigger an auto fill request.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Indicates the ui context where the filling operation will be performed. |
-| request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) | Yes | Indicates the struct of automatic filling request. |
+| request | FillRequest | Yes | Indicates the struct of automatic filling request. |
 | callback | [AutoFillCallback](arkts-ability-autofillmanager-autofillcallback-i.md) | No | Indicates the callback that used to receive the result. |
 
 **Error codes:**

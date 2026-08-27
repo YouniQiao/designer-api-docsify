@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## album
@@ -50,7 +50,8 @@ artist?: string
 assetId: string
 ```
 
-媒体ID。媒体信息的唯一标识，由应用自定义。  
+媒体ID。媒体信息的唯一标识，由应用自定义。
+
 - 该属性发生变化则其他元数据属性都将被刷新。  
 - 若该属性维持不变，且不设置相应的媒体元数据信息，那么将不会更新对应的媒体元数据信息。  
 - 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setavmetadata)方法将失败，返回错误码6600101。
@@ -99,7 +100,10 @@ avQueueId?: string
 avQueueImage?: image.PixelMap | string
 ```
 
-歌单（歌曲列表）封面图。图片的像素数据或者图片路径地址（本地路径或网络路径）。应用通过setAVMetadata设置图片数据。  
+歌单（歌曲列表）封面图。
+
+图片的像素数据或者图片路径地址（本地路径或网络路径）。应用通过setAVMetadata设置图片数据。
+
 - 设置的数据类型为PixelMap时，通过getAVMetadata获取的将为PixelMap。  
 - 设置为url图片路径，获取的为url图片路径。
 
@@ -217,7 +221,12 @@ duration?: number
 fastForwardSkipIntervals?: SkipIntervals
 ```
 
-快进支持的时间间隔。默认为SECONDS_15，即15秒。系统会使用此值作为快进操作的时间间隔，而非skipIntervals的值。若未设置此参数，快进操作的时间间隔仍会沿用skipIntervals的值。  
+快进支持的时间间隔。默认为SECONDS_15，即15秒。
+
+系统会使用此值作为快进操作的时间间隔，而非skipIntervals的值。
+
+若未设置此参数，快进操作的时间间隔仍会沿用skipIntervals的值。
+
 **起始版本**：26.0.0
 
 **类型：** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
@@ -250,7 +259,10 @@ filter?: number
 lyric?: string
 ```
 
-媒体歌词内容。应用需将歌词内容拼接为一个字符串传入。字符串长度需小于40960字节。  
+媒体歌词内容。应用需将歌词内容拼接为一个字符串传入。
+
+字符串长度需小于40960字节。
+
 **说明：** 系统支持简单版的LRC格式（Simple LRC format）的歌词文本内容。当传入的歌词内容不规范（例如：出现重复的时间戳等），将导致解析失败，并在系统中显示异常。
 
 **类型：** string
@@ -265,7 +277,8 @@ lyric?: string
 mediaImage?: image.PixelMap | string
 ```
 
-图片的像素数据或者图片路径地址（本地路径或网络路径）。应用通过setAVMetadata设置图片数据。  
+图片的像素数据或者图片路径地址（本地路径或网络路径）。应用通过setAVMetadata设置图片数据。
+
 - 设置的数据类型为PixelMap时，通过getAVMetadata获取的将为PixelMap。  
 - 设置为url图片路径，获取的为url图片路径。
 
@@ -329,7 +342,12 @@ publishDate?: Date
 rewindSkipIntervals?: SkipIntervals
 ```
 
-快退支持的时间间隔。默认为SECONDS_15，即15秒。系统会使用此值作为快退操作的时间间隔，而非skipIntervals的值。若未设置此参数，快退操作的时间间隔仍会沿用skipIntervals的值。  
+快退支持的时间间隔。默认为SECONDS_15，即15秒。
+
+系统会使用此值作为快退操作的时间间隔，而非skipIntervals的值。
+
+若未设置此参数，快退操作的时间间隔仍会沿用skipIntervals的值。
+
 **起始版本**：26.0.0
 
 **类型：** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
@@ -346,7 +364,9 @@ rewindSkipIntervals?: SkipIntervals
 singleLyricText?: string
 ```
 
-单条媒体歌词内容。应用需将歌词内容拼接为一个字符串传入（不包含时间戳）。字符串长度小于40960字节。
+单条媒体歌词内容。应用需将歌词内容拼接为一个字符串传入（不包含时间戳）。
+
+字符串长度小于40960字节。
 
 **类型：** string
 

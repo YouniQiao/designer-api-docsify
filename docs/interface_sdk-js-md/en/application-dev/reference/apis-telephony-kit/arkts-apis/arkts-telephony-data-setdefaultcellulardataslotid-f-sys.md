@@ -84,7 +84,7 @@ Sets the default slot of the SIM card used for mobile data. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

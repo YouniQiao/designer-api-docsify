@@ -1,6 +1,8 @@
 # SceneResource
 
-Describes a resource in a scene.@interface SceneResource
+Describes a resource in a scene.
+
+@interface SceneResource
 
 **Since:** 12
 
@@ -78,7 +80,7 @@ readonly uri?: ResourceStr
 
 Resource to load. The default value is undefined.
 
-**Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 

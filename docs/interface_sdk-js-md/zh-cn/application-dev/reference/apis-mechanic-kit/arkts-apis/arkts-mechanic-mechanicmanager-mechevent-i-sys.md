@@ -35,7 +35,7 @@ event: MechEventType
 mechId: number
 ```
 
-具身设备ID。 取值限定为整数。
+具身设备ID。取值限定为整数。
 
 **类型：** number
 

@@ -69,7 +69,7 @@ Obtains the type of the SIM card in the specified slot. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;CardType & gt; | Promise used to return the result. |
+| Promise&lt;CardType&gt; | Promise used to return the result. |
 
 **Error codes:**
 

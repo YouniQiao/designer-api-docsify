@@ -36,7 +36,7 @@ getProcessRunningInformation(): Promise<Array<ProcessInformation>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;ProcessInformation & gt; & gt; | Promise对象，返回接口运行结果及有关运行进程的信息，可进行错误处理或其他自定义处理。 |
+| Promise&lt;Array&lt;ProcessInformation&gt;&gt; | Promise对象，返回接口运行结果及有关运行进程的信息，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
@@ -88,7 +88,7 @@ getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | AsyncCallback & lt;Array & lt;ProcessInformation & gt; & gt; | 是 | 回调函数，返回有关运行进程的信息。 |
+| callback | AsyncCallback&lt;Array&lt;ProcessInformation&gt;&gt; | 是 | 回调函数，返回有关运行进程的信息。 |
 
 **错误码：**
 
@@ -123,7 +123,11 @@ export default class MyAbility extends UIAbility {
 preloadUIExtensionAbility(want: Want): Promise<void>
 ```
 
-预加载指定UIExtensionAbility实例。使用Promise异步回调。被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。
+预加载指定UIExtensionAbility实例。使用Promise异步回调。
+
+被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。
+
+被预加载的UIExtensionAbility实例会执行到UIExtensionAbility的onCreate生命周期，然后等待被当前应用正式加载。
 
 **起始版本：** 12
 
@@ -139,13 +143,13 @@ preloadUIExtensionAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 预加载UIExtensionAbility的want信息。 |
+| want | Want | 是 | 预加载UIExtensionAbility的want信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -207,7 +211,9 @@ export default class EntryAbility extends UIAbility {
 registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallback): number
 ```
 
-注册监听应用内UIAbility的生命周期。使用callback异步回调。<p>**说明：**: 仅支持主线程调用。 </p>
+注册监听应用内UIAbility的生命周期。使用callback异步回调。
+
+<p>**说明：**: 仅支持主线程调用。</p>
 
 **起始版本：** 9
 
@@ -231,7 +237,7 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回此次注册的callbackID，该ID用于在 [ApplicationContext.unregisterAbilityLifecycleCallback()]{ |
+| number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.unregisterAbilityLifecycleCallback()]{ |
 
 **示例**
 
@@ -297,7 +303,9 @@ export default class EntryAbility extends UIAbility {
 registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 ```
 
-注册对系统环境变化的监听。使用callback异步回调。<p>**说明：**: 仅支持主线程调用。 </p>
+注册对系统环境变化的监听。使用callback异步回调。
+
+<p>**说明：**: 仅支持主线程调用。</p>
 
 **起始版本：** 9
 
@@ -321,7 +329,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回此次注册的callbackID，该ID用于在 [ApplicationContext.unregisterEnvironmentCallback]{ |
+| number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.unregisterEnvironmentCallback]{ |
 
 **示例**
 
@@ -362,7 +370,9 @@ export default class EntryAbility extends UIAbility {
 unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<void>): void
 ```
 
-取消监听应用内UIAbility的生命周期。使用callback异步回调。<p>**说明：**: 仅支持主线程调用。 </p>
+取消监听应用内UIAbility的生命周期。使用callback异步回调。
+
+<p>**说明：**: 仅支持主线程调用。</p>
 
 **起始版本：** 9
 
@@ -380,8 +390,8 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackId | number | 是 | 通过 [ApplicationContext.registerAbilityLifecycleCallback](#registerabilitylifecyclecallback) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
-| callback | AsyncCallback & lt;void & gt; | 是 | 回调方法。当取消监听应用内生命周期成功，err为undefined，否则为错误对象。 |
+| callbackId | number | 是 | 通过[ApplicationContext.registerAbilityLifecycleCallback](#registerabilitylifecyclecallback)接口注册监听应用内UIAbility的生命周期时返回的ID。 |
+| callback | AsyncCallback&lt;void&gt; | 是 | 回调方法。当取消监听应用内生命周期成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -417,7 +427,9 @@ export default class EntryAbility extends UIAbility {
 unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 ```
 
-取消监听应用内UIAbility的生命周期。使用Promise异步回调。<p>**说明：**: 仅支持主线程调用。 </p>
+取消监听应用内UIAbility的生命周期。使用Promise异步回调。
+
+<p>**说明：**: 仅支持主线程调用。</p>
 
 **起始版本：** 9
 
@@ -435,13 +447,13 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackId | number | 是 | 通过 [ApplicationContext.registerAbilityLifecycleCallback](#registerabilitylifecyclecallback) 接口注册监听应用内UIAbility的生命周期时返回的ID。 |
+| callbackId | number | 是 | 通过[ApplicationContext.registerAbilityLifecycleCallback](#registerabilitylifecyclecallback)接口注册监听应用内UIAbility的生命周期时返回的ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -477,7 +489,9 @@ export default class MyAbility extends UIAbility {
 unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<void>): void
 ```
 
-取消对系统环境变化的监听。使用callback异步回调。<p>**说明：**: 仅支持主线程调用。 </p>
+取消对系统环境变化的监听。使用callback异步回调。
+
+<p>**说明：**: 仅支持主线程调用。</p>
 
 **起始版本：** 9
 
@@ -495,8 +509,8 @@ unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackId | number | 是 | 通过 [ApplicationContext.registerEnvironmentCallback](#registerenvironmentcallback) 接口注册监听系统环境变化时返回的ID。 |
-| envcallback | AsyncCallback & lt;void & gt; | 是 | 回调方法。当取消对系统环境变化的监听成功，err为undefined，否则为错误对象。 |
+| callbackId | number | 是 | 通过[ApplicationContext.registerEnvironmentCallback](#registerenvironmentcallback)接口注册监听系统环境变化时返回的ID。 |
+| envcallback | AsyncCallback&lt;void&gt; | 是 | 回调方法。当取消对系统环境变化的监听成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -549,13 +563,13 @@ unregisterEnvironmentCallback(callbackId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackId | number | 是 | 通过 [ApplicationContext.registerEnvironmentCallback](#registerenvironmentcallback) 接口注册监听系统环境变化时返回的ID。 |
+| callbackId | number | 是 | 通过[ApplicationContext.registerEnvironmentCallback](#registerenvironmentcallback)接口注册监听系统环境变化时返回的ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

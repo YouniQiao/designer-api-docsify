@@ -11,7 +11,7 @@ Knowledge Content class, used for geting related entity.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getRelatedEntity
@@ -38,13 +38,13 @@ Get Related Entities, Smart Label
 | --- | --- | --- | --- |
 | topic | string | Yes | Searching topic string. |
 | context | [ContextMap](arkts-medialibrary-photoaccesshelper-contextmap-i-sys.md) | Yes | Context Map indicates topic filed. |
-| option | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No | Options for getRelatedEntity. |
+| option | Options | No | Options for getRelatedEntity. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Entity[] & gt; | Returns Array of Related Entities |
+| Promise&lt;Entity[]&gt; | Returns Array of Related Entities |
 
 **Error codes:**
 

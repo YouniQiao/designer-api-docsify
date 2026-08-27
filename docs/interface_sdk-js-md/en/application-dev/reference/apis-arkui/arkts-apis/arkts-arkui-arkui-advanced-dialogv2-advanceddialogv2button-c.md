@@ -1,6 +1,8 @@
 # AdvancedDialogV2Button
 
-Declare AdvancedDialogV2Button.@class AdvancedDialogV2Button
+Declare AdvancedDialogV2Button.
+
+@class AdvancedDialogV2Button
 
 **Since:** 18
 

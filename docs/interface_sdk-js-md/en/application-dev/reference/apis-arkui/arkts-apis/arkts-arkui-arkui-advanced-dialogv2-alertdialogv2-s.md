@@ -1,6 +1,8 @@
 # AlertDialogV2
 
-Declare CustomDialog AlertDialogV2.@struct { AlertDialogV2 }
+Declare CustomDialog AlertDialogV2.
+
+@struct { AlertDialogV2 }
 
 **Since:** 18
 

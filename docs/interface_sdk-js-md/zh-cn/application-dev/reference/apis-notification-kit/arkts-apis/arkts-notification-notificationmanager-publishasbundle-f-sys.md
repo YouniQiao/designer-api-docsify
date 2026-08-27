@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## publishAsBundle
@@ -31,7 +31,7 @@ function publishAsBundle(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | 是 | 用于设置要发布通知的内容和相关配置信息。 |
+| request | NotificationRequest | 是 | 用于设置要发布通知的内容和相关配置信息。 |
 | representativeBundle | string | 是 | 被代理应用的包名。 |
 | userId | number | 是 | 用户ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 发布代理通知的回调方法。 |
@@ -116,7 +116,7 @@ function publishAsBundle(request: NotificationRequest, representativeBundle: str
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | 是 | 用于设置要发布通知的内容和相关配置信息。 |
+| request | NotificationRequest | 是 | 用于设置要发布通知的内容和相关配置信息。 |
 | representativeBundle | string | 是 | 被代理应用的包名。 |
 | userId | number | 是 | 用户ID。 |
 
@@ -124,7 +124,7 @@ function publishAsBundle(request: NotificationRequest, representativeBundle: str
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -202,14 +202,14 @@ function publishAsBundle(representativeBundle: BundleOption, request: Notificati
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| representativeBundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 被代理应用的包信息。 |
-| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | 是 | 用于设置要发布通知的内容和相关配置信息。 |
+| representativeBundle | BundleOption | 是 | 被代理应用的包信息。 |
+| request | NotificationRequest | 是 | 用于设置要发布通知的内容和相关配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

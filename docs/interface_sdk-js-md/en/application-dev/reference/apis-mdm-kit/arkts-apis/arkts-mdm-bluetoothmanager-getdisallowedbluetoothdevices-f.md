@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.MDMKit';
+import { bluetoothManager } from '@kit.MDMKit';
 ```
 
 ## getDisallowedBluetoothDevices
@@ -32,7 +32,7 @@ Obtains disallowed Bluetooth devices.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | MAC addresses of disallowed Bluetooth devices obtained. |
+| Array&lt;string&gt; | MAC addresses of disallowed Bluetooth devices obtained. |
 
 **Error codes:**
 
@@ -90,7 +90,7 @@ Obtains disallowed Bluetooth devices.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | MAC addresses of disallowed Bluetooth devices obtained. |
+| Array&lt;string&gt; | MAC addresses of disallowed Bluetooth devices obtained. |
 
 **Error codes:**
 

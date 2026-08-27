@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAppClonePreference
@@ -34,7 +34,7 @@ Obtains the application clone preference configuration based on the given bundle
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;AppClonePreference & gt; | Promise used to return the application clone preference configuration. |
+| Promise&lt;AppClonePreference&gt; | Promise used to return the application clone preference configuration. |
 
 **Error codes:**
 

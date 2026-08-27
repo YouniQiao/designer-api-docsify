@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import ssap from '@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## createClient

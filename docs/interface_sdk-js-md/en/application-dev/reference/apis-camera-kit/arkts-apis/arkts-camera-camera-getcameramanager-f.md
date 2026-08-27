@@ -23,7 +23,7 @@ Obtains a CameraManager instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context. |
+| context | Context | Yes | Application context. |
 
 **Return value:**
 

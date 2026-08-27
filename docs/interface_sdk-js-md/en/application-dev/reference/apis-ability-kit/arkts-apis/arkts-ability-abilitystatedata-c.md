@@ -82,8 +82,10 @@ Bundle name of the application that triggers the creation of the ability.
 isAtomicService: boolean
 ```
 
-Whether the ability belongs to an atomic service.  
-**true**: The ability belongs to an atomic service.  
+Whether the ability belongs to an atomic service.
+
+**true**: The ability belongs to an atomic service.
+
 **false**: The ability does not belong to an atomic service.
 
 **Type:** boolean
@@ -126,7 +128,8 @@ Process ID.
 state: number
 ```
 
-Ability state.  
+Ability state.
+
 - [Stage model](../../../application-models/ability-terminology.md#stage-model): For the  
 [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md), see [UIAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiability-states). For the [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md), see [ExtensionAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#extensionability-states). For the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), see [UIExtensionAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiextensionability-states).  
 - [FA model](../../../application-models/ability-terminology.md#fa-model): For the ability, see  

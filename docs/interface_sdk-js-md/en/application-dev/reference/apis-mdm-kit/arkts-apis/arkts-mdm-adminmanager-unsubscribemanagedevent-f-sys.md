@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## unsubscribeManagedEvent
@@ -102,7 +102,7 @@ Unsubscribes from system management events. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object is thrown when the unsubscription of system management events fails. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when the unsubscription of system management events fails. |
 
 **Error codes:**
 

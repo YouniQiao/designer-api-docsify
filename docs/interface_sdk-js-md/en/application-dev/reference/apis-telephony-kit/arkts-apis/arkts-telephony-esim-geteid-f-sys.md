@@ -31,7 +31,7 @@ Obtains the equipment identifier (EID) of the eUICC hardware in a specified card
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | EID of the eUICC in the specified slot. |
+| Promise&lt;string&gt; | EID of the eUICC in the specified slot. |
 
 **Error codes:**
 

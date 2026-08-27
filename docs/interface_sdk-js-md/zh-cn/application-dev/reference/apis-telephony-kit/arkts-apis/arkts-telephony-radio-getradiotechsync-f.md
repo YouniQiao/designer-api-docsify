@@ -45,7 +45,13 @@ function getRadioTechSync(slotId: number): NetworkRadioTech
 **示例**
 
 ```TypeScript
+// 指定卡槽ID，0表示卡槽1
 let slotId: number = 0;
-let networkRadioTech: radio.NetworkRadioTech = radio.getRadioTechSync(slotId);
-console.info(`getRadioTechSync success, NetworkRadioTech->${JSON.stringify(networkRadioTech)}`);
+try {
+    // 同步获取当前接入的CS域和PS域无线接入技术
+    let networkRadioTech: radio.NetworkRadioTech = radio.getRadioTechSync(slotId);
+    console.info(`getRadioTechSync success, NetworkRadioTech->${JSON.stringify(networkRadioTech)}`);
+} catch (err) {
+    console.error(`getRadioTechSync failed, err->${JSON.stringify(err)}`);
+}
 ```

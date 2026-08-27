@@ -1,6 +1,8 @@
 # TextChangeEventInfo
 
-Text change event info@interface TextChangeEventInfo
+Text change event info
+
+@interface TextChangeEventInfo
 
 **Since:** 22
 
@@ -9,7 +11,7 @@ Text change event info@interface TextChangeEventInfo
 ## Modules to Import
 
 ```TypeScript
-import uiObserver from '@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## content

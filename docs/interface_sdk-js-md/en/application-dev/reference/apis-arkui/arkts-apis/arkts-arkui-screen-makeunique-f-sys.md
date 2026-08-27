@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screen from '@kit.ArkUI';
-import screenshot from '@kit.ArkUIshot';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## makeUnique
@@ -25,13 +24,13 @@ Sets the screen to independent display mode. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueScreen | Array & lt;number & gt; | Yes | Arry of independent screen IDs. Each ID must be an integer greater than 0; otherwise, error code 401 is returned. |
+| uniqueScreen | Array&lt;number&gt; | Yes | Arry of independent screen IDs. Each ID must be an integer greater than 0; otherwise, error code 401 is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the independent screen IDs, where each ID is an integer greater than 0. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the independent screen IDs, where each ID is an integer greater than 0. |
 
 **Error codes:**
 

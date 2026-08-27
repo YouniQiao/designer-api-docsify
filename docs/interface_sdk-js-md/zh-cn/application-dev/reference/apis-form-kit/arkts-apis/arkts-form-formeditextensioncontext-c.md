@@ -1,6 +1,6 @@
 # FormEditExtensionContext
 
-FormEditExtensionContext是 [FormEditExtensionAbility](arkts-form-app-form-formeditextensionability-formeditextensionability-c.md)的上下文，继承自 [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)。用于管理卡片编辑场景的上下文环境，支持拉起卡片提供方页面和所属应用UIAbility，适用于卡片编 辑流程中需要与卡片提供方交互的场景。
+FormEditExtensionContext是[FormEditExtensionAbility](arkts-form-app-form-formeditextensionability-formeditextensionability-c.md)的上下文，继承自[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)。用于管理卡片编辑场景的上下文环境，支持拉起卡片提供方页面和所属应用UIAbility，适用于卡片编辑流程中需要与卡片提供方交互的场景。
 
 **继承/实现关系：** FormEditExtensionContext extends UIExtensionContext
 
@@ -14,7 +14,8 @@ FormEditExtensionContext是 [FormEditExtensionAbility](arkts-form-app-form-forme
 startSecondPage(want: Want): Promise<AbilityResult>
 ```
 
-拉起需要被编辑的卡片提供方页面。使用Promise异步回调。  
+拉起需要被编辑的卡片提供方页面。使用Promise异步回调。
+
 - 用户在卡片编辑界面点击编辑按钮，需要打开卡片提供方的编辑页面。  
 - 用户需要修改卡片配置或内容时，拉起卡片提供方应用进行编辑。
 
@@ -99,7 +100,7 @@ startUIAbility(want: Want): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

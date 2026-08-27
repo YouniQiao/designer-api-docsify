@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import serial from '@kit.BasicServicesKit';
+import { serial } from '@kit.BasicServicesKit';
 ```
 
 ## addPortAuthorization
@@ -33,7 +33,7 @@ Adds the permission for applications to access the serial port. This API is open
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

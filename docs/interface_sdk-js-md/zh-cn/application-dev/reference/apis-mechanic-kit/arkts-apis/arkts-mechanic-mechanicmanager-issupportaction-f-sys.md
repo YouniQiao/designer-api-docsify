@@ -23,8 +23,8 @@ function isSupportAction(mechId: number, actionType: ActionType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | number | 是 | 具身设备ID。 取值限定为整数。 |
-| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | 是 | 动作序列类型。 |
+| mechId | number | 是 | 具身设备ID。取值限定为整数。 |
+| actionType | ActionType | 是 | 动作序列类型。 |
 
 **返回值：**
 

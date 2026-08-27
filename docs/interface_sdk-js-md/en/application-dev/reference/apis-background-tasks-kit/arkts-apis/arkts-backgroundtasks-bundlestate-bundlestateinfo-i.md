@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleState from '@kit.BackgroundTasksKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## merge

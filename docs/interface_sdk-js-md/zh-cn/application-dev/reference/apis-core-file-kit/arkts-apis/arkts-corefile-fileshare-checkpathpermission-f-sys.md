@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## checkPathPermission
@@ -28,13 +28,13 @@ function checkPathPermission(tokenID: number, policies: Array<PathPolicyInfo>, p
 | --- | --- | --- | --- |
 | tokenID | number | 是 | 目标应用的访问令牌标识。 |
 | policies | Array&lt;[PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md)&gt; | 是 | 需要查询授权状态的路径策略信息数组。 |
-| policyType | [PolicyType](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-policytype-e.md) | 是 | 要查询的授权类型，使用TEMPORARY_TYPE查询临时授权，使用PERSISTENT_TYPE查询持久化授权。 |
+| policyType | PolicyType | 是 | 要查询的授权类型，使用TEMPORARY_TYPE查询临时授权，使用PERSISTENT_TYPE查询持久化授权。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;boolean & gt; & gt; | Promise对象，返回授权状态校验结果数组。返回true表示授权类型匹配policyType的查询类型，否则返回false。 |
+| Promise&lt;Array&lt;boolean&gt;&gt; | Promise对象，返回授权状态校验结果数组。返回true表示授权类型匹配policyType的查询类型，否则返回false。 |
 
 **错误码：**
 

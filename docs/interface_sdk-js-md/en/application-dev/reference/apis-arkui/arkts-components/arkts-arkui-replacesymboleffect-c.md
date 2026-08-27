@@ -68,7 +68,9 @@ A constructor used to create a **ReplaceSymbolEffect** instance, which comes wit
 replaceType?: ReplaceEffectType
 ```
 
-Replacement effect type.Default value: **ReplaceEffectType.SEQUENTIAL**.
+Replacement effect type.
+
+Default value: **ReplaceEffectType.SEQUENTIAL**.
 
 **Type:** [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md)
 
@@ -88,7 +90,9 @@ Replacement effect type.Default value: **ReplaceEffectType.SEQUENTIAL**.
 scope?: EffectScope
 ```
 
-Effect scope.Default value: **EffectScope.LAYER**
+Effect scope.
+
+Default value: **EffectScope.LAYER**
 
 **Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 

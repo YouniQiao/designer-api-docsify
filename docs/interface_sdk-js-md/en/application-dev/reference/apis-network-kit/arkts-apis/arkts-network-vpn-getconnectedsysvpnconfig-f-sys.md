@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import vpn from '@kit.NetworkKit';
-import vpnExtension from '@kit.NetworkKitExtension';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## getConnectedSysVpnConfig

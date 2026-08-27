@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## createCipher
@@ -37,13 +37,13 @@ function createCipher(transformation: string): Cipher
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transformation | string | 是 | 待生成Cipher的算法名称（含密钥长度）、加密模式以及填充方法的组合。支持的规格详见 [对称密钥加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)和 [非对称密钥加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。 |
+| transformation | string | 是 | 待生成Cipher的算法名称（含密钥长度）、加密模式以及填充方法的组合。支持的规格详见[对称密钥加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)和[非对称密钥加解密算法规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) | 返回对应算法的Cipher实例。 |
+| Cipher | 返回对应算法的Cipher实例。 |
 
 **错误码：**
 

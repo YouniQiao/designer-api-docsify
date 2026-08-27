@@ -23,7 +23,7 @@ function getArguments(): AbilityDelegatorArgs
 
 | 类型 | 说明 |
 | --- | --- |
-| [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) | [AbilityDelegatorArgs]{ |
+| AbilityDelegatorArgs | [AbilityDelegatorArgs]{ |
 
 **示例**
 

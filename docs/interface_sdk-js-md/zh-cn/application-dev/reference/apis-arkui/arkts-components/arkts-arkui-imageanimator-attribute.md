@@ -1,6 +1,8 @@
 # ImageAnimator属性/事件
 
-除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：
+
+除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** ImageAnimatorAttribute extends CommonMethod<ImageAnimatorAttribute>
 
@@ -41,7 +43,7 @@ duration(value: number)
 fillMode(value: FillMode)
 ```
 
-设置当前播放方向下，动画开始前和结束后的状态。动画结束后的状态由fillMode和reverse属性共同决定。例如，fillMode为Forwards表示停止时维持动画最后一个关键帧的状态，若reverse为false则维持正播的 最后一帧，即最后一张图，若reverse为true则维持逆播的最后一帧，即第一张图。
+设置当前播放方向下，动画开始前和结束后的状态。动画结束后的状态由fillMode和reverse属性共同决定。例如，fillMode为Forwards表示停止时维持动画最后一个关键帧的状态，若reverse为false则维持正播的最后一帧，即最后一张图，若reverse为true则维持逆播的最后一帧，即第一张图。
 
 **起始版本：** 7
 
@@ -77,7 +79,7 @@ fixedSize(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 设置图片大小是否固定为组件大小。 true表示图片大小与组件大小一致，此时设置图片的width 、height 、top 和left属性无效。false表示每一张图片的 width 、height 、top和left属性都要单独设置。图片宽高与组件宽高不一致时，图片不会被拉伸。默认值：true |
+| value | boolean | 是 | 设置图片大小是否固定为组件大小。 true表示图片大小与组件大小一致，此时设置图片的width 、height 、top 和left属性无效。false表示每一张图片的width 、height 、top和left属性都要单独设置。图片宽高与组件宽高不一致时，图片不会被拉伸。默认值：true |
 
 ## images
 
@@ -99,7 +101,7 @@ images(value: Array<ImageFrameInfo>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;[ImageFrameInfo](arkts-arkui-imageframeinfo-i.md)&gt; | 是 | 设置图片帧信息集合。每一帧的帧信息(ImageFrameInfo)包含图片路径、图片大小、图片位置和图片播放时长信息，详见 [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md) 。默认值：[]    **说明：** 传入数组的内容过大时，内存占用会随之升高。此内存由开发者自行控制。因此，开发者在传入数据 前，请充分评估内存消耗情况，以避免内存不足等问题。 |
+| value | Array&lt;[ImageFrameInfo](arkts-arkui-imageframeinfo-i.md)&gt; | 是 | 设置图片帧信息集合。每一帧的帧信息(ImageFrameInfo)包含图片路径、图片大小、图片位置和图片播放时长信息，详见[ImageFrameInfo](arkts-arkui-imageframeinfo-i.md) 。默认值：[]    **说明：** 传入数组的内容过大时，内存占用会随之升高。此内存由开发者自行控制。因此，开发者在传入数据前，请充分评估内存消耗情况，以避免内存不足等问题。 |
 
 ## iterations
 
@@ -127,7 +129,7 @@ iterations(value: number)
 monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 ```
 
-设置组件是否通过系统 [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) 的可见性判定，控制组件的暂停和播放。
+设置组件是否通过系统[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)的可见性判定，控制组件的暂停和播放。
 
 **起始版本：** 17
 
@@ -141,7 +143,7 @@ monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| monitorInvisibleArea | boolean | 是 | true时，组件基于系统的 [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) 可见性判定控制暂停和播放；当组件的运行状态为[AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md)的Running时，若判定不可见则自动暂停，若判定可见则自动恢复播放。false时，组件的暂停和播 放不受onVisibleAreaChange影响。默认值：false    **说明：** 当该属性由true动态修改为false时，组件将依据当前的 [AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md)状态进行处理。例如，若当前状态为Running且因 [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) 的不可见回调暂停，则在属性由true改为false后，组件会从上次暂停的位置重新开始播放。由该属性导致的不可见暂停和可见播放操作不会改变用户设置的 [state](#state)值。 |
+| monitorInvisibleArea | boolean | 是 | true时，组件基于系统的[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)可见性判定控制暂停和播放；当组件的运行状态为[AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md)的Running时，若判定不可见则自动暂停，若判定可见则自动恢复播放。false时，组件的暂停和播放不受onVisibleAreaChange影响。默认值：false    **说明：** 当该属性由true动态修改为false时，组件将依据当前的[AnimationStatus](../arkts-apis/arkts-arkui-animationstatus-e.md)状态进行处理。例如，若当前状态为Running且因[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)的不可见回调暂停，则在属性由true改为false后，组件会从上次暂停的位置重新开始播放。由该属性导致的不可见暂停和可见播放操作不会改变用户设置的[state](#state)值。 |
 
 ## onCancel
 
@@ -149,7 +151,7 @@ monitorInvisibleArea(monitorInvisibleArea: boolean) : ImageAnimatorAttribute
 onCancel(event: () => void)
 ```
 
-状态回调，动画取消时触发。当state被设置为[AnimationStatus.Initial](../arkts-apis/arkts-arkui-animationstatus-e.md)时触发；触发后图片显示回到第一帧（正播）或最后一帧（逆播）。与 [onFinish](#onfinish)的区别在于：onCancel对应回到Initial初始状态，onFinish对应动画自然结束或停止（Stopped）状态。
+状态回调，动画取消时触发。当state被设置为[AnimationStatus.Initial](../arkts-apis/arkts-arkui-animationstatus-e.md)时触发；触发后图片显示回到第一帧（正播）或最后一帧（逆播）。与[onFinish](#onfinish)的区别在于：onCancel对应回到Initial初始状态，onFinish对应动画自然结束或停止（Stopped）状态。
 
 **起始版本：** 7
 
@@ -163,7 +165,7 @@ onCancel(event: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () = & gt; void | 是 | 状态回调，动画取消时触发。当state被设置为AnimationStatus.Initial时触发；触发后图片显示回到第一帧（正播）或最后一帧（逆播）。 |
+| event | () =&gt; void | 是 | 状态回调，动画取消时触发。当state被设置为AnimationStatus.Initial时触发；触发后图片显示回到第一帧（正播）或最后一帧（逆播）。 |
 
 ## onFinish
 
@@ -171,7 +173,7 @@ onCancel(event: () => void)
 onFinish(event: () => void)
 ```
 
-状态回调，动画播放完成时（iterations设置的轮次全部播完且动画自然结束）或者停止播放时（state被切换为[AnimationStatus.Stopped](../arkts-apis/arkts-arkui-animationstatus-e.md)）触发。当动画处于 [AnimationStatus.Initial](../arkts-apis/arkts-arkui-animationstatus-e.md)状态时返回初始状态不会触发该事件，对应触发的是onCancel。
+状态回调，动画播放完成时（iterations设置的轮次全部播完且动画自然结束）或者停止播放时（state被切换为[AnimationStatus.Stopped](../arkts-apis/arkts-arkui-animationstatus-e.md)）触发。当动画处于[AnimationStatus.Initial](../arkts-apis/arkts-arkui-animationstatus-e.md)状态时返回初始状态不会触发该事件，对应触发的是onCancel。
 
 **起始版本：** 7
 
@@ -185,7 +187,7 @@ onFinish(event: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () = & gt; void | 是 | 状态回调，动画播放完成时（iterations轮次全部播完且动画自然结束）或者停止播放时（state被切换为AnimationStatus.Stopped）触发。 |
+| event | () =&gt; void | 是 | 状态回调，动画播放完成时（iterations轮次全部播完且动画自然结束）或者停止播放时（state被切换为AnimationStatus.Stopped）触发。 |
 
 ## onPause
 
@@ -207,7 +209,7 @@ onPause(event: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () = & gt; void | 是 | 状态回调，动画暂停播放时触发。 |
+| event | () =&gt; void | 是 | 状态回调，动画暂停播放时触发。 |
 
 ## onRepeat
 
@@ -227,7 +229,7 @@ onRepeat(event: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () = & gt; void | 是 | 状态回调，动画重复播放时触发。 |
+| event | () =&gt; void | 是 | 状态回调，动画重复播放时触发。 |
 
 ## onStart
 
@@ -249,7 +251,7 @@ onStart(event: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () = & gt; void | 是 | 状态回调，动画开始播放时触发。 |
+| event | () =&gt; void | 是 | 状态回调，动画开始播放时触发。 |
 
 ## preDecode
 
@@ -295,7 +297,7 @@ reverse(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 播放方向。false表示从第1张图片播放到最后1张图片，true表示从最后1张图片播放到第1张图片。动画结束后保留哪一帧还与 [fillMode](#fillmode)属性有关，详见fillMode说明。默认值：false |
+| value | boolean | 是 | 播放方向。false表示从第1张图片播放到最后1张图片，true表示从最后1张图片播放到第1张图片。动画结束后保留哪一帧还与[fillMode](#fillmode)属性有关，详见fillMode说明。默认值：false |
 
 ## state
 

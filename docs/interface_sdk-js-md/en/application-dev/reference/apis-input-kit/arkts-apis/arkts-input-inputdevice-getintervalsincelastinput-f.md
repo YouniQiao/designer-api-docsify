@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## getIntervalSinceLastInput
@@ -22,7 +21,7 @@ Obtains the interval (including the device sleep time) elapsed since the last sy
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the time elapsed since the last system input event, in microseconds (μs). |
+| Promise&lt;number&gt; | Promise used to return the time elapsed since the last system input event, in microseconds (μs). |
 
 **Examples**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.MDMKit';
+import { bluetoothManager } from '@kit.MDMKit';
 ```
 
 ## turnOnBluetooth

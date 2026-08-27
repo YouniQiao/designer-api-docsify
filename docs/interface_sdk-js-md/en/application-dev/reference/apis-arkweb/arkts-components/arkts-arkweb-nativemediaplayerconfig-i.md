@@ -9,9 +9,6 @@ Configures the [enableNativeMediaPlayer](arkts-arkweb-web-attribute.md#enablenat
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## enable
@@ -20,7 +17,11 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 enable: boolean
 ```
 
-Whether to enable the app to take over web media playback.The value **true** indicates that the app takes over web media playback, and **false** indicates that this feature is disabled.Default value: **false**
+Whether to enable the app to take over web media playback.
+
+The value **true** indicates that the app takes over web media playback, and **false** indicates that this feature is disabled.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -36,7 +37,11 @@ Whether to enable the app to take over web media playback.The value **true** ind
 shouldOverlay: boolean
 ```
 
-Whether the player screen of the app-taken-over web video overlays the web content after the app takes over web media playback.The value **true** indicates that the video layer level is changed to overlay the web content, and **false** indicates that the original layer level is maintained and the video is embedded in the web page.Default value: **false**
+Whether the player screen of the app-taken-over web video overlays the web content after the app takes over web media playback.
+
+The value **true** indicates that the video layer level is changed to overlay the web content, and **false** indicates that the original layer level is maintained and the video is embedded in the web page.
+
+Default value: **false**
 
 **Type:** boolean
 

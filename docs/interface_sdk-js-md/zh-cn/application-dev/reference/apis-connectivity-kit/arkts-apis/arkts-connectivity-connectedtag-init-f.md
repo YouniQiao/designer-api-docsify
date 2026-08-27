@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import connectedTag from '@kit.ConnectivityKit';
+import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
 ## init

@@ -106,7 +106,7 @@ A constructor used to create a URLParams instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| init | string[][] \| Record & lt;string, string & gt; \ | string \| [URLParams](arkts-arkts-url-urlparams-c.md) | No | Input parameter objects, which include the following:   - string[][]: two-dimensional string array.   - Record & lt;string, string & gt;: list of objects.   - string: string.   - URLParams: object.   The default value is null. |
+| init | string[][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | No | Input parameter objects, which include the following:   - string[][]: two-dimensional string array.   - Record&lt;string, string&gt;: list of objects.   - string: string.   - URLParams: object.   The default value is null. |
 
 **Examples**
 
@@ -219,7 +219,7 @@ Callback functions are used to traverse key-value pairs on the URLParams instanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: string, key: string, searchParams: URLParams) = & gt; void | Yes | callbackFn value Current traversal key value, key Indicates the name of the key that is traversed. |
+| callbackFn | (value: string, key: string, searchParams: URLParams) =&gt; void | Yes | callbackFn value Current traversal key value, key Indicates the name of the key that is traversed. |
 | thisArg | Object | No | thisArg to be used as this value for when callbackFn is called |
 
 **Examples**

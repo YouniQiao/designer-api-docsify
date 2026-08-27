@@ -36,7 +36,7 @@ addCert(cert: X509Cert): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | 是 | 要添加的X.509证书。 |
+| cert | X509Cert | 是 | 要添加的X.509证书。 |
 
 **错误码：**
 
@@ -130,7 +130,7 @@ addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -246,7 +246,7 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | 是 | 指定X.509证书。 |
+| cert | X509Cert | 是 | 指定X.509证书。 |
 | keyInfo | [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md) | 是 | 指定私钥信息。 |
 | config | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | 是 | 指定签名者选项。 |
 
@@ -371,7 +371,7 @@ doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | s
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Uint8Array \ | string & gt; | Promise对象，返回CMS消息。 |
+| Promise&lt;Uint8Array \| string&gt; | Promise对象，返回CMS消息。 |
 
 **错误码：**
 
@@ -633,7 +633,7 @@ getEncryptedContentData(): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise对象，返回加密的数据内容。 |
+| Promise&lt;Uint8Array&gt; | Promise对象，返回加密的数据内容。 |
 
 **错误码：**
 

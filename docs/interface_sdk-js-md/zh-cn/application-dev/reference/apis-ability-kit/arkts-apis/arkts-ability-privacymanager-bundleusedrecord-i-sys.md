@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import privacyManager from '@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -52,7 +52,7 @@ deviceId: string
 deviceName?: string
 ```
 
-使用权限的应用所在设备名称，仅用于分布式场景。可用于在界面中展示更易理解的设备标识。 默认值：空字符串。
+使用权限的应用所在设备名称，仅用于分布式场景。可用于在界面中展示更易理解的设备标识。默认值：空字符串。
 
 **类型：** string
 

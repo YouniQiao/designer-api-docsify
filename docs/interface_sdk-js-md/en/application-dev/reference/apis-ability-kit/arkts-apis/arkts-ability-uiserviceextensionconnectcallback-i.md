@@ -35,7 +35,7 @@ Called to receive data when a connection to the UIServiceExtensionAbility is est
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record & lt;string, Object & gt; | Yes | Data about the UIServiceExtensionAbility connection. |
+| data | Record&lt;string, Object&gt; | Yes | Data about the UIServiceExtensionAbility connection. |
 
 **Examples**
 

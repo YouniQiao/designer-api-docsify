@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## getFormsInfo
@@ -133,7 +133,7 @@ Obtains information about widgets that meet the criteria of the current applicat
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; | Promise used to return the information obtained. |
+| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Promise used to return the information obtained. |
 
 **Error codes:**
 

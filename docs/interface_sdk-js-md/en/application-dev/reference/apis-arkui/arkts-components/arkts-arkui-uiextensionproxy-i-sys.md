@@ -125,7 +125,7 @@ Asynchronously sends data from the component host to the started UIExtensionAbil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record & lt;string, Object & gt; | Yes | Data to be asynchronously sent to the started UIExtensionAbility. In versions earlier than API version 18, the data type is **Object**.<br>**Since:** 18 |
+| data | Record&lt;string, Object&gt; | Yes | Data to be asynchronously sent to the started UIExtensionAbility. In versions earlier than API version 18, the data type is **Object**.<br>**Since:** 18 |
 
 ## sendSync
 
@@ -147,14 +147,14 @@ Synchronously sends data from the component host to the started UIExtensionAbili
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record & lt;string, Object & gt; | Yes | Data to be synchronously sent to the started UIExtensionAbility.<br>**Since:** 18 |
+| data | Record&lt;string, Object&gt; | Yes | Data to be synchronously sent to the started UIExtensionAbility.<br>**Since:** 18 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | object | data - data transferred from the UIExtensionAbility<br>**Applicable version:** 11 - 17 |
-| Record & lt;string, Object & gt; | data - Data transferred from the UIExtensionAbility.<br>**Applicable version:** 18 and later |
+| Record&lt;string, Object&gt; | data - Data transferred from the UIExtensionAbility.<br>**Applicable version:** 18 and later |
 
 **Error codes:**
 

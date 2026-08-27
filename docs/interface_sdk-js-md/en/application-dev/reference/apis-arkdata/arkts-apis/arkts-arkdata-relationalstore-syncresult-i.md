@@ -9,7 +9,7 @@ Indicates synchronization result.
 ## Modules to Import
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## code

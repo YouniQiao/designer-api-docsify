@@ -1,6 +1,6 @@
 # StartOptions
 
-StartOptions可以作为启动UIAbility接口（例如 [startAbility()](arkts-ability-uiabilitycontext-c.md#startability) ）的入参，用于指定目标UIAbility启动时的选项，包括但不局限于窗口模式、目标UIAbility启动时所在的屏幕等。
+StartOptions可以作为启动UIAbility接口（例如[startAbility()](arkts-ability-uiabilitycontext-c.md#startability)）的入参，用于指定目标UIAbility启动时的选项，包括但不局限于窗口模式、目标UIAbility启动时所在的屏幕等。
 
 **起始版本：** 9
 
@@ -9,7 +9,7 @@ StartOptions可以作为启动UIAbility接口（例如 [startAbility()](arkts-ab
 ## 导入模块
 
 ```TypeScript
-import StartOptions from '@kit.AbilityKit';
+import { StartOptions } from '@kit.AbilityKit';
 ```
 
 ## windowFocused
@@ -18,9 +18,12 @@ import StartOptions from '@kit.AbilityKit';
 windowFocused?: boolean
 ```
 
-窗口是否获焦。默认是true，表示窗口获焦。  
+窗口是否获焦。默认是true，表示窗口获焦。
+
 **约束：**
+
 1.该功能仅在2in1和Tablet设备上生效。
+
 2.仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
 
 **类型：** boolean

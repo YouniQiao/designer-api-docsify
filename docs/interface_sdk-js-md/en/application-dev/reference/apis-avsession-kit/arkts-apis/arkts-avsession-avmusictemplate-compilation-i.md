@@ -1,6 +1,8 @@
 # Compilation
 
-The definition of compilation.@extends OperResult @interface Compilation
+The definition of compilation.
+
+@extends OperResult @interface Compilation
 
 **Inheritance/Implementation:** Compilation extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
@@ -11,7 +13,7 @@ The definition of compilation.@extends OperResult @interface Compilation
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## hasMoreData

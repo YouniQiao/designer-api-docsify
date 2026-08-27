@@ -17,7 +17,9 @@
 preventDefault?: Callback<void>
 ```
 
-阻止系统默认剪切事件。省略时，执行系统默认剪切行为。
+阻止系统默认剪切事件。
+
+省略时，执行系统默认剪切行为。
 
 **类型：** Callback&lt;void&gt;
 

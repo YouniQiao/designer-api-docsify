@@ -22,7 +22,7 @@ It is applicable to the CCM and GCM modes of AES. It is applicable to the GCM mo
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## authenticatedData

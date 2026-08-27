@@ -1,6 +1,6 @@
 # SymbolGlyph
 
-SymbolGlyph组件用于显示系统预置的图标小符号，支持设置颜色、大小、粗细、渲染策略、动效策略等样式属性，适用于需要在应用中展示系统图标的场景，如导航栏图标、按钮图标、状态指示图标等。相比使用图片资源，SymbolGlyph具有 体积小、可动态着色、支持动效等优势。<!--RP1--><!--RP1End-->
+SymbolGlyph组件用于显示系统预置的图标小符号，支持设置颜色、大小、粗细、渲染策略、动效策略等样式属性，适用于需要在应用中展示系统图标的场景，如导航栏图标、按钮图标、状态指示图标等。相比使用图片资源，SymbolGlyph具有体积小、可动态着色、支持动效等优势。<!--RP1--><!--RP1End-->
 
 ## 子组件
 
@@ -28,7 +28,7 @@ SymbolGlyph(value?: Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 | SymbolGlyph组件的资源名，如 \$r('sys.symbol.ohos_wifi')。不传入时不显示图标。 |
+| value | Resource | 否 | SymbolGlyph组件的资源名，如 \$r('sys.symbol.ohos_wifi')。不传入时不显示图标。 |
 
 ## 汇总
 
@@ -36,6 +36,12 @@ SymbolGlyph(value?: Resource)
 
 | 名称 | 说明 |
 | --- | --- |
+| [EffectDirection](arkts-arkui-effectdirection-e.md) | 符号动效方向的枚举值。 |
+| [EffectFillStyle](arkts-arkui-effectfillstyle-e.md) | EffectFillStyle的枚举值。 |
+| [EffectScope](arkts-arkui-effectscope-e.md) | EffectScope的枚举值。 |
+| [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | 替换动效类型的枚举值。 |
+| [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | 动效类型的枚举值。设置动效后，动效启动即生效，无需触发。 |
+| [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | 渲染模式的枚举值。 |
 
 ## 示例
 

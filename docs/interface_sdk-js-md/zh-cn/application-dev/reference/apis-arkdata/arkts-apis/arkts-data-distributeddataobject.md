@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## 汇总
@@ -18,24 +18,24 @@ import distributedDataObject from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [create(分布式数据对象)](arkts-arkdata-distributeddataobject-create-f.md) | 创建一个分布式数据对象。对象属性支持基本类型（数字类型、布尔类型和字符串类型）以及复杂类型（数组、基本类型嵌套）。 |
-| [createDistributedObject(分布式数据对象)](arkts-arkdata-distributeddataobject-createdistributedobject-f.md) | 创建一个分布式数据对象。 |
-| [genSessionId(分布式数据对象)](arkts-arkdata-distributeddataobject-gensessionid-f.md) | 随机创建一个sessionId。 |
+| [create](arkts-arkdata-distributeddataobject-create-f.md) | 创建一个分布式数据对象。对象属性支持基本类型（数字类型、布尔类型和字符串类型）以及复杂类型（数组、基本类型嵌套）。 |
+| [createDistributedObject](arkts-arkdata-distributeddataobject-createdistributedobject-f.md) | 创建一个分布式数据对象。 |
+| [genSessionId](arkts-arkdata-distributeddataobject-gensessionid-f.md) | 随机创建一个sessionId。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [BindInfo(分布式数据对象)](arkts-arkdata-distributeddataobject-bindinfo-i.md) | 数据库的绑定信息。当前版本只支持关系型数据库的绑定。 |
-| [DataObject(分布式数据对象)](arkts-arkdata-distributeddataobject-dataobject-i.md) | 表示一个分布式数据对象。在使用以下接口前，需调用[create()](arkts-arkdata-distributeddataobject-create-f.md)获取DataObject对象。 |
-| [DistributedObject(分布式数据对象)](arkts-arkdata-distributeddataobject-distributedobject-i.md) | 表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md)获取 DistributedObject对象。 |
-| [RevokeSaveSuccessResponse(分布式数据对象)](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md) | [revokeSave](arkts-arkdata-distributeddataobject-dataobject-i.md#revokesave) 接口回调信息。 |
-| [SaveSuccessResponse(分布式数据对象)](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md) | [save](arkts-arkdata-distributeddataobject-dataobject-i.md#save) 接口回调信息。 |
+| [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | 数据库的绑定信息。当前版本只支持关系型数据库的绑定。 |
+| [DataObject](arkts-arkdata-distributeddataobject-dataobject-i.md) | 表示一个分布式数据对象。在使用以下接口前，需调用[create()](arkts-arkdata-distributeddataobject-create-f.md)获取DataObject对象。 |
+| [DistributedObject](arkts-arkdata-distributeddataobject-distributedobject-i.md) | 表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md)获取DistributedObject对象。 |
+| [RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md) | [revokeSave](arkts-arkdata-distributeddataobject-dataobject-i.md#revokesave)接口回调信息。 |
+| [SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md) | [save](arkts-arkdata-distributeddataobject-dataobject-i.md#save)接口回调信息。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [DataObserver(分布式数据对象)](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 定义获取分布式对象数据变更的监听回调函数。 |
-| [ProgressObserver(分布式数据对象)](arkts-arkdata-distributeddataobject-progressobserver-t.md) | 定义传输进度的监听回调函数。 |
-| [StatusObserver(分布式数据对象)](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 定义获取分布式对象状态变更的监听回调函数。 |
+| [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 定义获取分布式对象数据变更的监听回调函数。 |
+| [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | 定义传输进度的监听回调函数。 |
+| [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 定义获取分布式对象状态变更的监听回调函数。 |

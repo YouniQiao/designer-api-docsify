@@ -1,6 +1,8 @@
 # PolylineModifier
 
-Defines Polyline Modifier@extends PolylineAttribute @implements AttributeModifier&lt;PolylineAttribute&gt;
+Defines Polyline Modifier
+
+@extends PolylineAttribute @implements AttributeModifier&lt;PolylineAttribute&gt;
 
 **Inheritance/Implementation:** PolylineModifier extends [PolylineAttribute](../arkts-components/arkts-arkui-polyline-attribute.md#polylineattribute) and implements AttributeModifier<PolylineAttribute>
 

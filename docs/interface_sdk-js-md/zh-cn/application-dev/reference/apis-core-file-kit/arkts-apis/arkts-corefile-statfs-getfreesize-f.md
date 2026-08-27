@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import statfs from '@kit.CoreFileKit';
+import { statfs } from '@kit.CoreFileKit';
 ```
 
 ## getFreeSize
@@ -28,7 +28,7 @@ function getFreeSize(path: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回空闲字节数，单位为Byte。 |
+| Promise&lt;number&gt; | Promise对象，返回空闲字节数，单位为Byte。 |
 
 **错误码：**
 

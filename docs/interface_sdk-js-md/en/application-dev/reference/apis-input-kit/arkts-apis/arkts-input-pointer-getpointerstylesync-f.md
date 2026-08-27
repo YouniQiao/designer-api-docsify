@@ -27,7 +27,7 @@ Queries the mouse pointer style type of a specified window, such as east arrow, 
 
 | Type | Description |
 | --- | --- |
-| [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | Mouse pointer style. |
+| PointerStyle | Mouse pointer style. |
 
 **Error codes:**
 

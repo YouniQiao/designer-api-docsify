@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import componentUtils from '@kit.ArkUI';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## angle
@@ -18,7 +18,9 @@ import componentUtils from '@kit.ArkUI';
 angle: number
 ```
 
-旋转角度。单位: deg
+旋转角度。
+
+单位: deg
 
 **类型：** number
 
@@ -36,7 +38,9 @@ angle: number
 centerX: number
 ```
 
-变换中心点x轴坐标。单位: vp
+变换中心点x轴坐标。
+
+单位: vp
 
 **类型：** number
 
@@ -54,7 +58,9 @@ centerX: number
 centerY: number
 ```
 
-变换中心点y轴坐标。单位: vp
+变换中心点y轴坐标。
+
+单位: vp
 
 **类型：** number
 

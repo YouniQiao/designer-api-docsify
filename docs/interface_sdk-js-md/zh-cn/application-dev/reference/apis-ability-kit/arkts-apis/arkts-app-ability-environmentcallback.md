@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import EnvironmentCallback from '@kit.AbilityKit';
+import { EnvironmentCallback } from '@kit.AbilityKit';
 ```
 
 ## 汇总

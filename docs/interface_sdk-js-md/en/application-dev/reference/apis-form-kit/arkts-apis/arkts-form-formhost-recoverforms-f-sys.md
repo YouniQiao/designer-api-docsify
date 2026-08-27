@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formHost from '@kit.FormKit';
+import { formHost } from '@kit.FormKit';
 ```
 
 ## recoverForms
@@ -28,13 +28,13 @@ Recovers recycled widgets and updates their status to non-recyclable, or updates
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes | Array of widget IDs. |
+| formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Recovers widgets. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes | Array of widget IDs. |
+| formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widgets are recovered, **error** is **undefined**; otherwise, an exception is thrown. |
 
 **Error codes:**

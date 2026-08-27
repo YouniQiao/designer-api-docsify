@@ -1,6 +1,6 @@
 # DistanceMeasurementResponse（系统接口）
 
-测距接口执行完成后的回调结果。 @interface DistanceMeasurementResponse
+测距接口执行完成后的回调结果。@interface DistanceMeasurementResponse
 
 **起始版本：** 23
 
@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import spatialAwareness from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## confidence

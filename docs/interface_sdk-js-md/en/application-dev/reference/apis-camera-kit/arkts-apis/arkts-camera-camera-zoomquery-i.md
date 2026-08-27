@@ -36,7 +36,7 @@ Obtains the supported zoom ratio range during shooting in RAW format.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Zoom ratio range. |
+| Array&lt;number&gt; | Zoom ratio range. |
 
 **Error codes:**
 
@@ -108,7 +108,7 @@ Obtains the supported zoom ratio range.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Array containing the minimum and maximum zoom ratios. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| Array&lt;number&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 

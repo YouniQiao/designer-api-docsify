@@ -38,7 +38,7 @@
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;number & gt; | 生成数字的迭代器对象。 |
+| IterableIterator&lt;number&gt; | 生成数字的迭代器对象。 |
 
 **错误码：**
 
@@ -143,7 +143,7 @@ constructor(elements: Iterable<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elements | Iterable & lt;number & gt; | 是 | 可迭代数字集合，用于构造ArkTS Uint8Array对象。集合中的数值取值范围为[0, 255]， 超出值被截断为低8位（例如256的二进制是100000000，截断后是00000000）。 |
+| elements | Iterable&lt;number&gt; | 是 | 可迭代数字集合，用于构造ArkTS Uint8Array对象。集合中的数值取值范围为[0, 255]，超出值被截断为低8位（例如256的二进制是100000000，截断后是00000000）。 |
 
 **错误码：**
 
@@ -169,7 +169,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; \ | ArrayBuffer | 是 | 用于构造ArkTS Uint8Array的对象。当参数类型是ArrayBuffer时，buffer所占的 字节数须是4的整数倍。 |
+| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint8Array的对象。当参数类型是ArrayBuffer时，buffer所占的字节数须是4的整数倍。 |
 
 **错误码：**
 
@@ -195,9 +195,9 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于构造ArkTS Uint8Array的ArrayBuffer对象。且ArkTS Uint8Array和该ArrayBuffer共享内存， 修改其中的数据会相互影响。 |
+| buffer | ArrayBuffer | 是 | 用于构造ArkTS Uint8Array的ArrayBuffer对象。且ArkTS Uint8Array和该ArrayBuffer共享内存，修改其中的数据会相互影响。 |
 | byteOffset | number | 否 | 指定buffer的字节偏移，从0开始。默认值为**0**。 |
-| length | number | 否 | 指定ArkTS Uint8Array的长度，byteOffset和length的总和不能超过buffer.byteLength，超出范围时将抛出异常。 默认值为buffer.byteLength - byteOffset。 |
+| length | number | 否 | 指定ArkTS Uint8Array的长度，byteOffset和length的总和不能超过buffer.byteLength，超出范围时将抛出异常。默认值为buffer.byteLength - byteOffset。 |
 
 **错误码：**
 
@@ -225,7 +225,7 @@ copyWithin(target: number, start: number, end?: number): Uint8Array
 | --- | --- | --- | --- |
 | target | number | 是 | 目标起始位置的下标。如果传入负数，则指代 `target + array.length` 位置的下标。 |
 | start | number | 是 | 源起始位置的下标。如果传入负数，则指代 `start + Uint8Array.length` 位置的下标。 |
-| end | number | 否 | 源终止位置的下标（不包含end位置的元素）。如果传入负数，则指代 `end + Uint8Array.length` 位置的下标。默认值为ArkTS Uint8Array的长度。 |
+| end | number | 否 | 源终止位置的下标（不包含end位置的元素）。如果传入负数，则指代`end + Uint8Array.length` 位置的下标。默认值为ArkTS Uint8Array的长度。 |
 
 **返回值：**
 
@@ -258,7 +258,7 @@ entries(): IterableIterator<[number, number]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;[number, number] & gt; | 迭代器对象。 |
+| IterableIterator&lt;[number, number]&gt; | 迭代器对象。 |
 
 **错误码：**
 
@@ -319,8 +319,8 @@ fill(value: number, start?: number, end?: number): Uint8Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 待填充的值。 |
-| start | number | 否 | 开始填充的索引。如果传入负数，则指代 `start + Uint8Array.length` 位置的下标。默认值为**0**。 |
-| end | number | 否 | 结束填充的索引（不包含该元素）。如果传入负数，则指代 `end + Uint8Array.length` 位置的下标。默认值为ArkTS Uint8Array的长度。 |
+| start | number | 否 | 开始填充的索引。如果传入负数，则指代`start + Uint8Array.length` 位置的下标。默认值为**0**。 |
+| end | number | 否 | 结束填充的索引（不包含该元素）。如果传入负数，则指代`end + Uint8Array.length` 位置的下标。默认值为ArkTS Uint8Array的长度。 |
 
 **返回值：**
 
@@ -392,7 +392,7 @@ find(predicate: TypedArrayPredicateFn<number, Uint8Array>): number | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| number \| undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回 **undefined**。 |
+| number \| undefined | 第一个满足条件的元素的值；如果所有元素都不满足条件，则返回**undefined**。 |
 
 **错误码：**
 
@@ -425,7 +425,7 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint8Array>): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 第一个满足条件的元素索引；如果所有元素都不满足条件， 则返回**-1**。 |
+| number | 第一个满足条件的元素索引；如果所有元素都不满足条件，则返回**-1**。 |
 
 **错误码：**
 
@@ -479,7 +479,7 @@ static from(arrayLike: ArrayLike<number>): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;number & gt; | 是 | 用于构造ArkTS Uint8Array的ArrayLike对象。 |
+| arrayLike | ArrayLike&lt;number&gt; | 是 | 用于构造ArkTS Uint8Array的ArrayLike对象。 |
 
 **返回值：**
 
@@ -505,7 +505,7 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;T & gt; | 是 | 用于构造ArkTS Uint8Array的ArrayLike对象。 |
+| arrayLike | ArrayLike&lt;T&gt; | 是 | 用于构造ArkTS Uint8Array的ArrayLike对象。 |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | 是 | 映射函数，对数组的每个元素调用。 |
 
 **返回值：**
@@ -532,8 +532,8 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | Iterable & lt;number & gt; | 是 | 用于构造ArkTS Uint8Array的可迭代对象。 |
-| mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;number, number&gt; | 否 | 映射函数，对数组的每个元素 调用。 |
+| arrayLike | Iterable&lt;number&gt; | 是 | 用于构造ArkTS Uint8Array的可迭代对象。 |
+| mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;number, number&gt; | 否 | 映射函数，对数组的每个元素调用。 |
 
 **返回值：**
 
@@ -566,7 +566,7 @@ includes(searchElement: number, fromIndex?: number): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检查结果。如果该元素存在则返回**true**；否则返回 **false**。 |
+| boolean | 检查结果。如果该元素存在则返回**true**；否则返回**false**。 |
 
 **错误码：**
 
@@ -594,7 +594,7 @@ indexOf(searchElement: number, fromIndex?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | searchElement | number | 是 | 待索引的值。 |
-| fromIndex | number | 否 | 搜索的起始下标。默认值为**0**。如果下标大于等于ArkTS Uint8Array的长度， 则返回**-1**。如果传入负数，则从前到后从ArkTS Uint8Array末尾开始搜索。 |
+| fromIndex | number | 否 | 搜索的起始下标。默认值为**0**。如果下标大于等于ArkTS Uint8Array的长度，则返回**-1**。如果传入负数，则从前到后从ArkTS Uint8Array末尾开始搜索。 |
 
 **返回值：**
 
@@ -627,7 +627,7 @@ join(separator?: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| separator | string | 否 | 分隔字符串。如果未传入任何值，则使用逗号（,）作为 分隔符。 |
+| separator | string | 否 | 分隔字符串。如果未传入任何值，则使用逗号（,）作为分隔符。 |
 
 **返回值：**
 
@@ -660,7 +660,7 @@ keys(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;number & gt; | 迭代器对象。 |
+| IterableIterator&lt;number&gt; | 迭代器对象。 |
 
 **错误码：**
 
@@ -688,7 +688,7 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | searchElement | number | 是 | 待索引的值。 |
-| fromIndex | number | 否 | 搜索的起始下标。默认值为ArkTS Uint8Array长度减1（即从末尾开始）。如果下标大于等于ArkTS Uint8Array的长度， 则返回**-1**。如果传入负数，则从后到前从ArkTS Uint8Array末尾开始搜索。 |
+| fromIndex | number | 否 | 搜索的起始下标。默认值为ArkTS Uint8Array长度减1（即从末尾开始）。如果下标大于等于ArkTS Uint8Array的长度，则返回**-1**。如果传入负数，则从后到前从ArkTS Uint8Array末尾开始搜索。 |
 
 **返回值：**
 
@@ -721,7 +721,7 @@ map(callbackFn: TypedArrayMapCallback<number, Uint8Array>): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Uint8Array&gt; | 是 | 一个最多接受三个参数的函数。 map方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Uint8Array&gt; | 是 | 一个最多接受三个参数的函数。map方法对数组中的每个元素调用一次callbackfn函数。 |
 
 **返回值：**
 
@@ -780,7 +780,7 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8Array&gt; | 是 | 一个最多接受四个参数的函数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8Array&gt; | 是 | 一个最多接受四个参数的函数。reduce方法对数组中的每个元素调用一次callbackfn函数。 |
 
 **返回值：**
 
@@ -813,8 +813,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>, initial
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8Array&gt; | 是 | 一个最多接受四个参数的函数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
-| initialValue | number | 是 | 如果指定了initialValue，则将其作为初始值开始 累加。首次调用callbackfn函数时，将该值作为参数提供， 而不是使用数组元素的值。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8Array&gt; | 是 | 一个最多接受四个参数的函数。reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| initialValue | number | 是 | 如果指定了initialValue，则将其作为初始值开始累加。首次调用callbackfn函数时，将该值作为参数提供，而不是使用数组元素的值。 |
 
 **返回值：**
 
@@ -869,7 +869,7 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialVa
 reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialValue: U): U
 ```
 
-反向遍历ArkTS Uint8Array，对每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回 最终的归约结果。
+反向遍历ArkTS Uint8Array，对每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
 
 **起始版本：** 18
 
@@ -881,14 +881,14 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Arr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint8Array&gt; | 是 | 对Uint8Array中的每个元素 调用的函数。 |
-| initialValue | U | 是 | 作为回调函数首次调用的第一个参数的值。 如果未提供初始值，则使用Uint8Array的最后一个元素， 回调将从倒数第二个元素开始调用。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint8Array&gt; | 是 | 对Uint8Array中的每个元素调用的函数。 |
+| initialValue | U | 是 | 作为回调函数首次调用的第一个参数的值。如果未提供初始值，则使用Uint8Array的最后一个元素，回调将从倒数第二个元素开始调用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| U | 由最后一次调用归约函数返回的最终结果。可能的原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| U | 由最后一次调用归约函数返回的最终结果。可能的原因：1.必填参数未指定。2.参数类型不正确。 |
 
 **错误码：**
 
@@ -915,13 +915,13 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): n
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8Array&gt; | 是 | 对Uint8Array中的每个元素 调用的函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Uint8Array&gt; | 是 | 对Uint8Array中的每个元素调用的函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 由最后一次调用归约函数返回的最终结果。可能的原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| number | 由最后一次调用归约函数返回的最终结果。可能的原因：1.必填参数未指定。2.参数类型不正确。 |
 
 **错误码：**
 
@@ -975,7 +975,7 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; | 是 | 用于设置的ArrayLike对象。 |
+| array | ArrayLike&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
 | offset | number | 否 | 当前数组中要写入值的起始位置索引。 |
 
 **错误码：**
@@ -1003,8 +1003,8 @@ slice(start?: number, end?: number): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 否 | 开始索引。如果传入负数，则指代 `start + Uint8Array.length` 位置的下标。默认值为**0**。 |
-| end | number | 否 | 结束索引（不包含该元素）。如果传入负数，则指代 `end + Uint8Array.length` 位置的下标。默认值为ArkTS Uint8Array的长度。 |
+| start | number | 否 | 开始索引。如果传入负数，则指代`start + Uint8Array.length` 位置的下标。默认值为**0**。 |
+| end | number | 否 | 结束索引（不包含该元素）。如果传入负数，则指代`end + Uint8Array.length` 位置的下标。默认值为ArkTS Uint8Array的长度。 |
 
 **返回值：**
 
@@ -1043,7 +1043,7 @@ some(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检查结果。如果存在元素满足指定条件则返回**true**； 否则返回**false**。 |
+| boolean | 检查结果。如果存在元素满足指定条件则返回**true**；否则返回**false**。 |
 
 **错误码：**
 
@@ -1103,8 +1103,8 @@ subarray(begin?: number, end?: number): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| begin | number | 否 | 开始索引。如果传入负数，则指代 `begin + Uint8Array.length` 位置的下标。默认值为**0**。 |
-| end | number | 否 | 结束索引（不包含该元素）。如果传入负数，则指代 `end + Uint8Array.length` 位置的下标。默认值为ArkTS Uint8Array的长度。 |
+| begin | number | 否 | 开始索引。如果传入负数，则指代`begin + Uint8Array.length` 位置的下标。默认值为**0**。 |
+| end | number | 否 | 结束索引（不包含该元素）。如果传入负数，则指代`end + Uint8Array.length` 位置的下标。默认值为ArkTS Uint8Array的长度。 |
 
 **返回值：**
 
@@ -1191,7 +1191,7 @@ values(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;number & gt; | 迭代器对象。 |
+| IterableIterator&lt;number&gt; | 迭代器对象。 |
 
 **错误码：**
 

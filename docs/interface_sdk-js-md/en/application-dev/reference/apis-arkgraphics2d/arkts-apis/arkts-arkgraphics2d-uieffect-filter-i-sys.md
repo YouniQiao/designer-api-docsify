@@ -9,7 +9,7 @@ Filter effect class, used to apply corresponding effects to specified components
 ## Modules to Import
 
 ```TypeScript
-import uiEffect from '@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## bezierWarp
@@ -30,13 +30,13 @@ Adds a Bezier curve deformation effect to the component. This effect achieves pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controlPoints | Array & lt;common2D.Point & gt; | Yes | 12 Bezier deformation control points. The array length must be 12. Changing the positions of the control points changes the shape of the curves forming the edges, thereby distorting the image. The control point coordinates use a normalized coordinate system (default range [0, 1]), and coordinate values can be greater than 1 or less than 0. If the array length is not 12, the effect will not take effect. |
+| controlPoints | Array&lt;common2D.Point&gt; | Yes | 12 Bezier deformation control points. The array length must be 12. Changing the positions of the control points changes the shape of the curves forming the edges, thereby distorting the image. The control point coordinates use a normalized coordinate system (default range [0, 1]), and coordinate values can be greater than 1 or less than 0. If the array length is not 12, the effect will not take effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the Bezier curve deformation effect attached. |
+| Filter | Returns the Filter with the Bezier curve deformation effect attached. |
 
 **Error codes:**
 
@@ -94,7 +94,7 @@ Applies a blur bubbles rise effect to the image, simulating a dreamy, bubbly dis
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the blur bubbles rise effect attached. |
+| Filter | Returns the Filter with the blur bubbles rise effect attached. |
 
 **Examples**
 
@@ -167,16 +167,16 @@ Adds a color gradient effect to the component content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colors | Array & lt;Color & gt; | Yes | The color array for multi-color gradient. The array length range is [0, 12], and each color value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
-| positions | Array & lt;common2D.Point & gt; | Yes | The position array, corresponding to the distribution positions of colors. The array length range is [0, 12]. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
-| strengths | Array & lt;number & gt; | Yes | The strength array, corresponding to the diffusion strength of colors. The array length range is [0, 12], and each strength value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
+| colors | Array&lt;Color&gt; | Yes | The color array for multi-color gradient. The array length range is [0, 12], and each color value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
+| positions | Array&lt;common2D.Point&gt; | Yes | The position array, corresponding to the distribution positions of colors. The array length range is [0, 12]. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
+| strengths | Array&lt;number&gt; | Yes | The strength array, corresponding to the diffusion strength of colors. The array length range is [0, 12], and each strength value must be greater than or equal to 0. If the array length is 0 or greater than 12, or if the array lengths of colors, positions, and strengths are not equal, the effect will not take effect. |
 | alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | The mask that controls the transparency distribution of the gradient effect. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to control the transparency distribution of the color gradient effect (such as local transparency or dynamic transparency effects). If not set, the transparency of the color gradient effect is entirely determined by the colors parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the color gradient effect attached. |
+| Filter | Returns the Filter with the color gradient effect attached. |
 
 **Error codes:**
 
@@ -243,7 +243,7 @@ Adds a 3D lighting effect to the component content.
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the content lighting effect attached. |
+| Filter | Returns the Filter with the content lighting effect attached. |
 
 **Error codes:**
 
@@ -310,7 +310,7 @@ Provides a Mask-based and directional light lighting effect for the component co
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | direction | common2D.Point3d | Yes | The direction of the incident light, represented by three-dimensional coordinates indicating the direction of the light rays. |
-| color | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | Yes | The light color. |
+| color | Color | Yes | The light color. |
 | intensity | number | Yes | The light intensity. The value range is [0, +∞). A larger value indicates a brighter light source. |
 | mask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | The displacement map, used to describe the three-dimensional details of the two-dimensional image surface. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to enhance local details and lighting reflection effects (such as relief, bump textures). Implemented through normal maps or height maps; if a height map is input, it needs to be used with the factor parameter. If not set, the default is empty, resulting in a global flat lighting effect without details. |
 | factor | number | No | The sampling scale coefficient. Pass this parameter when using a height map as the mask and needing to control the height scaling. If not set, the mask is sampled directly as a normal map; if a value is set, the mask is sampled as a height map, and the actual height value is the product of the mask sampling value and the factor. |
@@ -319,7 +319,7 @@ Provides a Mask-based and directional light lighting effect for the component co
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the lighting effect controlled by the displacement map attached. |
+| Filter | Returns the Filter with the lighting effect controlled by the displacement map attached. |
 
 **Error codes:**
 
@@ -390,7 +390,7 @@ Adds a distortion effect to the component content.
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the distortion effect attached. |
+| Filter | Returns the Filter with the distortion effect attached. |
 
 **Error codes:**
 
@@ -445,7 +445,7 @@ Adds a lens distortion effect to the component.
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the lens distortion effect attached. |
+| Filter | Returns the Filter with the lens distortion effect attached. |
 
 **Error codes:**
 
@@ -480,7 +480,7 @@ Detects edges of the component content and adds an edge highlight effect. This e
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alpha | number | Yes | Specifies the stroke highlight transparency. A larger value makes the stroke more obvious. The value range is [0, 1]. Setting it to 0 results in no stroke; values less than 0 are treated as 0; values greater than 1 are treated as 1. |
-| color | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | No | Specifies the stroke highlight color. The RGB components range from [0, +∞). Pass this parameter when you need to customize the stroke highlight color (such as emphasizing a specific color effect). If not set, the original color of the component content is used by default. When the color parameter is set, the alpha in Color does not take effect; only RGB is used. |
+| color | Color | No | Specifies the stroke highlight color. The RGB components range from [0, +∞). Pass this parameter when you need to customize the stroke highlight color (such as emphasizing a specific color effect). If not set, the original color of the component content is used by default. When the color parameter is set, the alpha in Color does not take effect; only RGB is used. |
 | mask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No | Specifies the stroke highlight intensity mask. A Mask instance can be created through Mask creation methods (such as createRippleMask, createRadialGradientMask, etc.). Pass this parameter when you need to control the area of the stroke highlight effect (such as local highlight instead of global highlight). If not set, the entire component content has the stroke highlight effect by default. |
 | bloom | boolean | No | Specifies whether the stroke has a bloom effect. Set to true when you need to enhance the visual effect; set to false when you need a simple stroke effect. The default value is true (with bloom effect). For images smaller than 16x16, there is only a stroke effect by default, no bloom effect, and this parameter has no effect. |
 
@@ -488,7 +488,7 @@ Detects edges of the component content and adds an edge highlight effect. This e
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the edge highlight effect attached. |
+| Filter | Returns the Filter with the edge highlight effect attached. |
 
 **Error codes:**
 
@@ -546,7 +546,7 @@ Adds a fly-in or fly-out deformation effect to the component. Typical applicatio
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the fly-in or fly-out deformation effect attached. |
+| Filter | Returns the Filter with the fly-in or fly-out deformation effect attached. |
 
 **Error codes:**
 
@@ -588,7 +588,7 @@ Applies a heat distortion effect to the image, simulating the visual distortion 
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the heat distortion effect attached. |
+| Filter | Returns the Filter with the heat distortion effect attached. |
 
 **Examples**
 
@@ -651,7 +651,7 @@ Adds a dispersion effect controlled by a displacement map to the component conte
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the dispersion effect controlled by the displacement map attached. |
+| Filter | Returns the Filter with the dispersion effect controlled by the displacement map attached. |
 
 **Error codes:**
 
@@ -715,7 +715,9 @@ struct MaskDispersion {
 maskTransition(alphaMask: Mask, factor?: number, inverse?: boolean): Filter
 ```
 
-Provides a Mask-based transition effect for the component content, which can be used for page transition animations, scene transition effects, etc.It is not recommended to use this effect during screen size changes, such as screen rotation, foldable screen opening/closing, etc.
+Provides a Mask-based transition effect for the component content, which can be used for page transition animations, scene transition effects, etc.
+
+It is not recommended to use this effect during screen size changes, such as screen rotation, foldable screen opening/closing, etc.
 
 **Since:** 20
 
@@ -735,7 +737,7 @@ Provides a Mask-based transition effect for the component content, which can be 
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the transition effect attached. |
+| Filter | Returns the Filter with the transition effect attached. |
 
 **Error codes:**
 
@@ -807,14 +809,14 @@ Adds a pixel stretch effect to the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stretchSizes | Array & lt;number & gt; | Yes | The percentage ratios of edge pixel stretching in the top, bottom, left, and right directions. The value range is [-1, 1]. A positive value indicates outward stretching, and the edge pixels of the specified original image ratio are used to fill in the top, bottom, left, and right directions. A negative value indicates inward shrinking, but the final image size remains unchanged. Note that the parameters for all four directions must be uniformly non-positive or non-negative, otherwise the effect will not take effect. |
-| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | The pixel fill mode for edge pixel stretching. |
+| stretchSizes | Array&lt;number&gt; | Yes | The percentage ratios of edge pixel stretching in the top, bottom, left, and right directions. The value range is [-1, 1]. A positive value indicates outward stretching, and the edge pixels of the specified original image ratio are used to fill in the top, bottom, left, and right directions. A negative value indicates inward shrinking, but the final image size remains unchanged. Note that the parameters for all four directions must be uniformly non-positive or non-negative, otherwise the effect will not take effect. |
+| tileMode | TileMode | Yes | The pixel fill mode for edge pixel stretching. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the pixel stretch effect attached. |
+| Filter | Returns the Filter with the pixel stretch effect attached. |
 
 **Examples**
 
@@ -843,13 +845,13 @@ Adds a radius linear gradient blur effect to the component content.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | radius | number | Yes | Blur radius, in px. A larger blur radius results in a stronger blur effect. The value range is [0, 128]. When the blur radius is 0, there is no blur effect; values less than 0 are treated as 0; values greater than 128 are treated as 128. |
-| gradientParam | [LinearGradientBlurOptions](../../apis-arkui/arkts-components/arkts-arkui-lineargradientbluroptions-i.md) | Yes | The linear gradient parameters, including fractionStops and direction. |
+| gradientParam | LinearGradientBlurOptions | Yes | The linear gradient parameters, including fractionStops and direction. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the radius linear gradient blur effect attached. |
+| Filter | Returns the Filter with the radius linear gradient blur effect attached. |
 
 **Error codes:**
 
@@ -905,7 +907,7 @@ Provides a Mask-based gradient blur effect for the component content.
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the current effect attached. |
+| Filter | Returns the Filter with the current effect attached. |
 
 **Error codes:**
 
@@ -964,7 +966,7 @@ Adds a water ripple effect to the component.
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the water ripple effect attached. |
+| Filter | Returns the Filter with the water ripple effect attached. |
 
 **Error codes:**
 

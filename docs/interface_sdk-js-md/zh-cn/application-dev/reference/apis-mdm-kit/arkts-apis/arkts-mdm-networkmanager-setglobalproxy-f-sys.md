@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## setGlobalProxy
@@ -111,7 +111,7 @@ function setGlobalProxy(admin: Want, httpProxy: connection.HttpProxy): Promise<v
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。当设置网络全局代理失败时抛出错误对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。当设置网络全局代理失败时抛出错误对象。 |
 
 **错误码：**
 

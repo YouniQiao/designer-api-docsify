@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## elementName
@@ -32,7 +32,11 @@ elementName: ElementName
 isActive: boolean
 ```
 
-会话是否被激活。true：已被激活。false：没有被激活。
+会话是否被激活。
+
+true：已被激活。
+
+false：没有被激活。
 
 **类型：** boolean
 
@@ -64,7 +68,11 @@ avcontroller.isActive((err: BusinessError, isActive: boolean) => {
 isTopSession: boolean
 ```
 
-会话是否为最新的会话。true：是最新的会话。false：不是最新的会话。
+会话是否为最新的会话。
+
+true：是最新的会话。
+
+false：不是最新的会话。
 
 **类型：** boolean
 

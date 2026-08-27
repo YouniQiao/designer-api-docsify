@@ -79,7 +79,7 @@ Obtains the MSISDN of the SIM card in a specified slot. The MSISDN is recorded i
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the MSISDN; returns an empty string if no SIM card is inserted or no MSISDN is recorded in the EFMSISDN file. |
+| Promise&lt;string&gt; | Returns the MSISDN; returns an empty string if no SIM card is inserted or no MSISDN is recorded in the EFMSISDN file. |
 
 **Error codes:**
 

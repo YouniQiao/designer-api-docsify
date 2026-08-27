@@ -64,7 +64,7 @@ Obtains the ID of the slot in which the primary card is located. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. |
+| Promise&lt;number&gt; | Promise used to return the result. |
 
 **Error codes:**
 

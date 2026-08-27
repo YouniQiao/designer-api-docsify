@@ -19,4 +19,4 @@ Enumerates the types of custom event parameter values.
 | double | Double. |
 | string | String. |
 | boolean | The value is true or false. |
-| Array & lt;string & gt; | The value is an array of strings. |
+| Array&lt;string&gt; | The value is an array of strings. |

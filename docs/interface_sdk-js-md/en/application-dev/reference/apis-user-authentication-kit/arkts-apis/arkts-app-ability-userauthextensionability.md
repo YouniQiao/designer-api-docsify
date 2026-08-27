@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import UserAuthExtensionAbility from '@kit.UserAuthenticationKit';
+import { UserAuthExtensionAbility } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary
@@ -12,4 +12,4 @@ import UserAuthExtensionAbility from '@kit.UserAuthenticationKit';
 
 | Name | Description |
 | --- | --- |
-| [UserAuthExtensionAbility(User Authentication Extension Ability)](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c.md) | The class of user authentication extension ability.@extends UIExtensionAbility |
+| [UserAuthExtensionAbility](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c.md) | The class of user authentication extension ability. |

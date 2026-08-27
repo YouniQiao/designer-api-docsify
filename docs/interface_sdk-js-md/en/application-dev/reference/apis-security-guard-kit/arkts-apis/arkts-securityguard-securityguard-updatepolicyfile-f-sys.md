@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import securityGuard from '@kit.SecurityGuardKit';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## updatePolicyFile
@@ -32,7 +32,7 @@ Update the policy file.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 

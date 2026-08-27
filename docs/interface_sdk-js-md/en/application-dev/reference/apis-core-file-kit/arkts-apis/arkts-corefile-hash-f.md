@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import hash from '@kit.CoreFileKit';
+import { hash } from '@kit.CoreFileKit';
 ```
 
 ## hash
@@ -31,7 +31,7 @@ Calculates a hash value for a file. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the hash value. The hash value is a hexadecimal string consisting of digits and uppercase letters. |
+| Promise&lt;string&gt; | Promise used to return the hash value. The hash value is a hexadecimal string consisting of digits and uppercase letters. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # SkillType
 
-枚举Skill类型。@enum { number }
+枚举Skill类型。
+
+@enum { number }
 
 **起始版本：** 26.0.0
 

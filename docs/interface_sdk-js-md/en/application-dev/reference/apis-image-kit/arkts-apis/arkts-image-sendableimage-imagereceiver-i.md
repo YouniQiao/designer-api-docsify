@@ -1,6 +1,8 @@
 # ImageReceiver
 
-Image receiver class. You can use it to obtain the surface ID of a component, read the latest image and the next image, and release **ImageReceiver** instances.Before calling any APIs in ImageReceiver, you must create an ImageReceiver instance.
+Image receiver class. You can use it to obtain the surface ID of a component, read the latest image and the next image, and release **ImageReceiver** instances.
+
+Before calling any APIs in ImageReceiver, you must create an ImageReceiver instance.
 
 **Since:** 12
 
@@ -9,7 +11,7 @@ Image receiver class. You can use it to obtain the surface ID of a component, re
 ## Modules to Import
 
 ```TypeScript
-import sendableImage from '@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## getReceivingSurfaceId
@@ -28,7 +30,7 @@ Obtains a surface ID for the camera or other components. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Asynchronously returns the surface ID. |
+| Promise&lt;string&gt; | Asynchronously returns the surface ID. |
 
 **Examples**
 
@@ -111,7 +113,7 @@ Reads the latest image from the ImageReceiver instance. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Image & gt; | Promise used to return the latest image. |
+| Promise&lt;Image&gt; | Promise used to return the latest image. |
 
 **Examples**
 
@@ -157,7 +159,7 @@ Reads the next image from the ImageReceiver instance. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Image & gt; | Promise used to return the next image. |
+| Promise&lt;Image&gt; | Promise used to return the next image. |
 
 **Examples**
 
@@ -196,7 +198,7 @@ Releases this ImageReceiver instance. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
 
@@ -275,7 +277,9 @@ async function Release() {
 readonly capacity: number
 ```
 
-Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value.The actual capacity is determined by the device hardware.
+Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value.
+
+The actual capacity is determined by the device hardware.
 
 **Type:** number
 

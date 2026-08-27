@@ -1,6 +1,8 @@
 # WebMessageExt
 
-WebMessageExt是[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)接口中用于接收和发送的拓展数据对象，支持多种数据类型：字符串（STRING）、数值（NUMBER）、布尔值（ BOOLEAN）、二进制数据（ARRAY_BUFFER）、数组（ARRAY）和错误对象（ERROR）。该类为ArkTS侧与HTML5侧之间的跨语言消息通信提供了结构化的数据载体，通过setType/getType设置和获取数据类 型，再通过对应的setter/getter方法读写具体数据。WebMessageExt与WebMessagePort配合使用：WebMessagePort负责消息通道的建立和消息的收发，WebMessageExt作为消息的有效载荷在不同语言运行时之间传递。使用扩展接口 [postMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#postmessageeventext)/ onMessageEventExt时，消息载 体即为WebMessageExt对象。
+WebMessageExt是[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)接口中用于接收和发送的拓展数据对象，支持多种数据类型：字符串（STRING）、数值（NUMBER）、布尔值（BOOLEAN）、二进制数据（ARRAY_BUFFER）、数组（ARRAY）和错误对象（ERROR）。该类为ArkTS侧与HTML5侧之间的跨语言消息通信提供了结构化的数据载体，通过setType/getType设置和获取数据类型，再通过对应的setter/getter方法读写具体数据。
+
+WebMessageExt与WebMessagePort配合使用：WebMessagePort负责消息通道的建立和消息的收发，WebMessageExt作为消息的有效载荷在不同语言运行时之间传递。使用扩展接口[postMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#postmessageeventext)/ onMessageEventExt时，消息载体即为WebMessageExt对象。
 
 **起始版本：** 10
 
@@ -17,7 +19,7 @@ WebMessageExt是[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)接口
 getArray(): Array<string | number | boolean>
 ```
 
-获取数据对象的数组类型数据。完整示例代码参考 onMessageEventExt。
+获取数据对象的数组类型数据。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 
@@ -29,7 +31,7 @@ getArray(): Array<string | number | boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string \ | number \| boolean & gt; | 返回数组类型的数据。 |
+| Array&lt;string \| number \| boolean&gt; | 返回数组类型的数据。 |
 
 **错误码：**
 
@@ -43,7 +45,7 @@ getArray(): Array<string | number | boolean>
 getArrayBuffer(): ArrayBuffer
 ```
 
-获取数据对象的原始二进制数据。完整示例代码参考 onMessageEventExt。
+获取数据对象的原始二进制数据。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 
@@ -69,7 +71,7 @@ getArrayBuffer(): ArrayBuffer
 getBoolean(): boolean
 ```
 
-获取数据对象的布尔类型数据。完整示例代码参考 onMessageEventExt。
+获取数据对象的布尔类型数据。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 
@@ -95,7 +97,7 @@ getBoolean(): boolean
 getError(): Error
 ```
 
-获取数据对象的错误类型数据。完整示例代码参考 onMessageEventExt。
+获取数据对象的错误类型数据。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 
@@ -121,7 +123,7 @@ getError(): Error
 getNumber(): number
 ```
 
-获取数据对象的数值类型数据。完整示例代码参考 onMessageEventExt。
+获取数据对象的数值类型数据。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 
@@ -147,7 +149,7 @@ getNumber(): number
 getString(): string
 ```
 
-获取数据对象的字符串类型数据。完整示例代码参考 onMessageEventExt。
+获取数据对象的字符串类型数据。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 
@@ -173,7 +175,7 @@ getString(): string
 getType(): WebMessageType
 ```
 
-获取数据对象的类型。完整示例代码参考 onMessageEventExt。
+获取数据对象的类型。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 
@@ -193,7 +195,7 @@ getType(): WebMessageType
 setArray(message: Array<string | number | boolean>): void
 ```
 
-设置数据对象的数组类型数据。完整示例代码参考 onMessageEventExt。
+设置数据对象的数组类型数据。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 
@@ -205,7 +207,7 @@ setArray(message: Array<string | number | boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | Array & lt;string \ | number \| boolean & gt; | 是 | 数组类型数据。 |
+| message | Array&lt;string \| number \| boolean&gt; | 是 | 数组类型数据。 |
 
 **错误码：**
 
@@ -220,7 +222,7 @@ setArray(message: Array<string | number | boolean>): void
 setArrayBuffer(message: ArrayBuffer): void
 ```
 
-设置数据对象的原始二进制数据。完整示例代码参考 onMessageEventExt。
+设置数据对象的原始二进制数据。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 
@@ -247,7 +249,7 @@ setArrayBuffer(message: ArrayBuffer): void
 setBoolean(message: boolean): void
 ```
 
-设置数据对象的布尔类型数据。完整示例代码参考 onMessageEventExt。
+设置数据对象的布尔类型数据。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 
@@ -274,7 +276,7 @@ setBoolean(message: boolean): void
 setError(message: Error): void
 ```
 
-设置数据对象的错误对象类型数据。完整示例代码参考 onMessageEventExt。
+设置数据对象的错误对象类型数据。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 
@@ -301,7 +303,7 @@ setError(message: Error): void
 setNumber(message: number): void
 ```
 
-设置数据对象的数值类型数据。完整示例代码参考 onMessageEventExt。
+设置数据对象的数值类型数据。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 
@@ -328,7 +330,7 @@ setNumber(message: number): void
 setString(message: string): void
 ```
 
-设置数据对象的字符串类型数据。完整示例代码参考 onMessageEventExt。
+设置数据对象的字符串类型数据。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 
@@ -355,7 +357,7 @@ setString(message: string): void
 setType(type: WebMessageType): void
 ```
 
-设置数据对象的类型。完整示例代码参考 onMessageEventExt。
+设置数据对象的类型。完整示例代码参考onMessageEventExt。
 
 **起始版本：** 10
 

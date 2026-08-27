@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## getVisibleWindowInfo
@@ -27,7 +25,7 @@ Obtains information about visible main windows on the current screen. Visible ma
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;WindowInfo & gt; & gt; | Promise used to return the information about visible windows. |
+| Promise&lt;Array&lt;WindowInfo&gt;&gt; | Promise used to return the information about visible windows. |
 
 **Error codes:**
 

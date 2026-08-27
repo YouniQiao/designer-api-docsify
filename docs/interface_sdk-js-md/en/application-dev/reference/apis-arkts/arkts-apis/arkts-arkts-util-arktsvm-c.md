@@ -9,8 +9,6 @@ A class that provides VM maintenance and test capabilities for developers.
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## enableLocalHandleDetection
@@ -53,7 +51,9 @@ Get all heap memory information from ArkTS-VMs and the shared heap.
 static offVMHeapMemoryPressure(): void
 ```
 
-Unregister the callback that is triggered when the heap memory exceeds the critical warning threshold after a GC.@static
+Unregister the callback that is triggered when the heap memory exceeds the critical warning threshold after a GC.
+
+@static
 
 **Since:** 24
 
@@ -67,7 +67,9 @@ Unregister the callback that is triggered when the heap memory exceeds the criti
 static onVMHeapMemoryPressure(callback: Callback<string>, heapMemoryThreshold: HeapMemoryThreshold): boolean
 ```
 
-Register a callback that is triggered if the heap memory exceeds the critical warning threshold after a GC. It must be called on the main thread and only one callback can be registered.NOTE: There is no guarantee that the callback will be triggered before OOM.
+Register a callback that is triggered if the heap memory exceeds the critical warning threshold after a GC. It must be called on the main thread and only one callback can be registered.
+
+NOTE: There is no guarantee that the callback will be triggered before OOM.
 
 **Since:** 24
 

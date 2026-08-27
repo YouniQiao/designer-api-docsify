@@ -1,6 +1,8 @@
 # SatelliteStatusInfo
 
-Satellite status information@interface SatelliteStatusInfo
+Satellite status information
+
+@interface SatelliteStatusInfo
 
 **Since:** 8
 
@@ -15,7 +17,7 @@ Satellite status information@interface SatelliteStatusInfo
 ## Modules to Import
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## altitudes

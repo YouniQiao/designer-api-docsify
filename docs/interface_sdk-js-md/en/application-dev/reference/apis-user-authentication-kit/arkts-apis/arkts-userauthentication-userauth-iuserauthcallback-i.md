@@ -13,8 +13,7 @@ Provides callbacks to return the authentication result.
 ## Modules to Import
 
 ```TypeScript
-import userAuth from '@kit.UserAuthenticationKit';
-import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## onAcquireInfo
@@ -23,7 +22,8 @@ import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 onAcquireInfo?: (module: number, acquire: number, extraInfo: any) => void
 ```
 
-Called to acquire authentication tip information. This API is optional.  
+Called to acquire authentication tip information. This API is optional.
+
 - **module**: ID of the module that sends the tip information.  
 - **acquire**: Authentication tip information.  
 - **extraInfo**: Reserved field.
@@ -80,7 +80,8 @@ auth.auth(challenge, userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL1, {
 onResult: (result: number, extraInfo: AuthResult) => void
 ```
 
-Called to return the authentication result.  
+Called to return the authentication result.
+
 - **result**: Authentication result. For details, see [ResultCode](arkts-userauthentication-userauth-resultcode-e.md).  
 - **extraInfo**: Extended information, which varies depending on the authentication result. If the authentication  
 is successful, the user authentication token will be returned in **extraInfo**. If the authentication fails, the remaining number of authentication times will be returned in **extraInfo**. If the authentication executor is locked, the freeze time will be returned in **extraInfo**.
@@ -98,7 +99,7 @@ is successful, the user authentication token will be returned in **extraInfo**. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | result | number | Yes |  |
-| extraInfo | [AuthResult](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-appaccount-authresult-i.md) | Yes |  |
+| extraInfo | AuthResult | Yes |  |
 
 **Examples**
 

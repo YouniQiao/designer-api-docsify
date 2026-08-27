@@ -9,7 +9,7 @@ Defines the options for saving documents.
 ## Modules to Import
 
 ```TypeScript
-import picker from '@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## themeColor

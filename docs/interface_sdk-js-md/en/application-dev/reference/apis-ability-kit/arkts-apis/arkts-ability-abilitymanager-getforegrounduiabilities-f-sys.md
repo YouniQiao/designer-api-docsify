@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import abilityManager from '@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## getForegroundUIAbilities
@@ -73,7 +73,7 @@ Obtains the information about the UIAbility components of an application that is
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;AbilityStateData & gt; & gt; | Promise used to return the API call result and the UIAbility information. You can perform error handling or custom processing in it. |
+| Promise&lt;Array&lt;AbilityStateData&gt;&gt; | Promise used to return the API call result and the UIAbility information. You can perform error handling or custom processing in it. |
 
 **Error codes:**
 

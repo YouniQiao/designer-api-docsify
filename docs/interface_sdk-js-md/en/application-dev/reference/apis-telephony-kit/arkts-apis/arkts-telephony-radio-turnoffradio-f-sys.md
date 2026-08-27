@@ -82,7 +82,7 @@ Turn off the radio service.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the turnOffRadio. |
+| Promise&lt;void&gt; | The promise returned by the turnOffRadio. |
 
 **Error codes:**
 

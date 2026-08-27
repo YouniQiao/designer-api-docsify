@@ -1,6 +1,8 @@
 # ASTCResource (System API)
 
-Defines the resource which can use ASTC.@interface ASTCResource
+Defines the resource which can use ASTC.
+
+@interface ASTCResource
 
 **Since:** 12
 

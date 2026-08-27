@@ -119,7 +119,7 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 | width | number | Yes | Width of the offscreen canvas.Default unit: vp Invalid values **NaN** and **Infinity** are treated as invalid. |
 | height | number | Yes | Height of the offscreen canvas.Default unit: vp Invalid values **NaN** and **Infinity** are treated as invalid. |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **OffscreenCanvasRenderingContext2D** object.The value **undefined** is treated as the default value of [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md).Default value: **null |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No | Unit of the **OffscreenCanvasRenderingContext2D** object. The value cannot be dynamically changed once set.Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.Default value: **DEFAULT |
+| unit | LengthMetricsUnit | No | Unit of the **OffscreenCanvasRenderingContext2D** object. The value cannot be dynamically changed once set.Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.Default value: **DEFAULT |
 
 **Examples**
 

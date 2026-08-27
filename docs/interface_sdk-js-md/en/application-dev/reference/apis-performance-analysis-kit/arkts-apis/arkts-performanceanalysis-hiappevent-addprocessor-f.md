@@ -11,7 +11,9 @@
 function addProcessor(processor: Processor): number
 ```
 
-Adds the configuration information of the data processor, such as the event name received by it.This is a synchronous API and involves time-consuming operations. To ensure performance, you are advised to use the asynchronous API [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md) or use a child thread.
+Adds the configuration information of the data processor, such as the event name received by it.
+
+This is a synchronous API and involves time-consuming operations. To ensure performance, you are advised to use the asynchronous API [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md) or use a child thread.
 
 **Since:** 11
 

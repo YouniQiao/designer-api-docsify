@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import zlib from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## unzipFile
@@ -33,13 +33,13 @@ Unzips a file. The execution result is returned after the decompression is compl
 | --- | --- | --- | --- |
 | inFile | string | Yes | Path of the file to unzip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. If the.zip file to be unzipped contains Chinese file names or folder names, use UTF-8 to encode them. Otherwise, garbled characters may be displayed after unzipping. |
 | outFile | string | Yes | Path of the unzipped file. |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Optional parameters for the unzip operation. |
+| options | Options | Yes | Optional parameters for the unzip operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

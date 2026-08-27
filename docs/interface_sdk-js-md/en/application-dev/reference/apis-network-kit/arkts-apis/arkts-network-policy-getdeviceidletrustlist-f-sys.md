@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## getDeviceIdleTrustlist
@@ -71,7 +71,7 @@ Obtains the UID of applications that are on the device idle allowlist. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

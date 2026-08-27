@@ -1,6 +1,6 @@
 # Parameter（系统接口）
 
-无障碍节点元素执行特定操作时，为操作提供具体设置的参数值。不同操作类型需设置不同的参数字段，各操作类型与参数字段的对应关系，详见 [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md)（无障碍节点元素可执行的操作）。
+无障碍节点元素执行特定操作时，为操作提供具体设置的参数值。不同操作类型需设置不同的参数字段，各操作类型与参数字段的对应关系，详见[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md)（无障碍节点元素可执行的操作）。
 
 **起始版本：** 20
 
@@ -100,7 +100,7 @@ scrollType?: string
 selectTextBegin?: string
 ```
 
-执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SET_SELECTION时配置，选定组件内文本时的起始坐标，如：'2'。需与 selectTextEnd和selectTextInForWard同时设置。
+执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SET_SELECTION时配置，选定组件内文本时的起始坐标，如：'2'。需与selectTextEnd和selectTextInForWard同时设置。
 
 **类型：** string
 
@@ -116,7 +116,7 @@ selectTextBegin?: string
 selectTextEnd?: string
 ```
 
-执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SET_SELECTION时配置，选定组件内文本时的结束坐标，如：'8'。需与 selectTextBegin和selectTextInForWard同时设置。
+执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SET_SELECTION时配置，选定组件内文本时的结束坐标，如：'8'。需与selectTextBegin和selectTextInForWard同时设置。
 
 **类型：** string
 
@@ -132,7 +132,7 @@ selectTextEnd?: string
 selectTextInForWard?: boolean
 ```
 
-执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SET_SELECTION时配置，表示选定组件内文本时是否向前选择。true表示向前选 择，false表示向后选择。需与selectTextBegin和selectTextEnd同时设置。
+执行[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md).SET_SELECTION时配置，表示选定组件内文本时是否向前选择。true表示向前选择，false表示向后选择。需与selectTextBegin和selectTextEnd同时设置。
 
 **类型：** boolean
 

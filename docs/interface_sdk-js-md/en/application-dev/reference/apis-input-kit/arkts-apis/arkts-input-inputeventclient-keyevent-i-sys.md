@@ -19,7 +19,9 @@ Defines the key event to inject.
 isIntercepted: boolean
 ```
 
-Whether the key event can be intercepted.The value **true** indicates that the key event can be intercepted, and the value **false** indicates the opposite.
+Whether the key event can be intercepted.
+
+The value **true** indicates that the key event can be intercepted, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
@@ -35,7 +37,9 @@ Whether the key event can be intercepted.The value **true** indicates that the k
 isPressed: boolean
 ```
 
-Whether the key is pressed.The value **true** indicates that the key is pressed, and the value **false** indicates that the key is released.
+Whether the key is pressed.
+
+The value **true** indicates that the key is pressed, and the value **false** indicates that the key is released.
 
 **Type:** boolean
 

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import inspector from '@kit.ArkUI';
+import { inspector } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -20,10 +20,10 @@ import inspector from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createComponentObserver(布局回调)](arkts-arkui-inspector-createcomponentobserver-f.md) | 绑定指定组件，返回对应的监听句柄。 |
+| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md) | 绑定指定组件，返回对应的监听句柄。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [ComponentObserver(布局回调)](arkts-arkui-inspector-componentobserver-i.md) | 组件布局和组件绘制送显完成回调的句柄，通过该句柄可调用以下方法。 |
+| [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md) | 组件布局和组件绘制送显完成回调的句柄，通过该句柄可调用以下方法。 |

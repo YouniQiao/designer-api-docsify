@@ -26,7 +26,7 @@ Rotates a rotation vector so that it can represent the coordinate system in diff
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inRotationVector | Array & lt;number & gt; | Yes | Rotation vector. |
+| inRotationVector | Array&lt;number&gt; | Yes | Rotation vector. |
 | coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | Yes | Direction of the coordinate system. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation vector after being rotated. |
 
@@ -70,14 +70,14 @@ Rotates a rotation vector so that it can represent the coordinate system in diff
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inRotationVector | Array & lt;number & gt; | Yes | Rotation vector. |
+| inRotationVector | Array&lt;number&gt; | Yes | Rotation vector. |
 | coordinates | [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md) | Yes | Direction of the coordinate system. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the rotation vector after being rotated. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the rotation vector after being rotated. |
 
 **Examples**
 

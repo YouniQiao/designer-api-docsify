@@ -9,7 +9,7 @@ Provides the information contained in **RouterPageInfo**, returned by the system
 ## Modules to Import
 
 ```TypeScript
-import uiObserver from '@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## context

@@ -1,6 +1,8 @@
 # DisturbanceFieldShape
 
-Defines particle disturbance shape.@enum { number }
+Defines particle disturbance shape.
+
+@enum { number }
 
 **Since:** 12
 

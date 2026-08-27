@@ -6,7 +6,9 @@
 const ACCELEROMETER_ROTATION_STATUS: string
 ```
 
-Specifies whether the accelerometer is used to change screen orientation, that is, whether auto-rotation is enabled.<p>The value {@code 1} indicates that the accelerometer is enabled by default, and {@code 0} indicates that the accelerometer is disabled by default.
+Specifies whether the accelerometer is used to change screen orientation, that is, whether auto-rotation is enabled.
+
+<p>The value {@code 1} indicates that the accelerometer is enabled by default, and {@code 0} indicates that the accelerometer is disabled by default.
 
 **Since:** 7
 
@@ -18,7 +20,9 @@ Specifies whether the accelerometer is used to change screen orientation, that i
 const ACCESSIBILITY_STATUS: string
 ```
 
-Specifies whether any accessibility feature is enabled.<p>If the value is {@code 1}, the accessibility feature is enabled. If the value is {@code 0}, the accessibility feature is disabled.
+Specifies whether any accessibility feature is enabled.
+
+<p>If the value is {@code 1}, the accessibility feature is enabled. If the value is {@code 0}, the accessibility feature is disabled.
 
 **Since:** 7
 
@@ -46,7 +50,9 @@ Indicates the list of accessibility features that have been activated.
 const AIRPLANE_MODE_STATUS: string
 ```
 
-Specifies whether airplane mode is enabled.<p>If the value is {@code 1}, airplane mode is enabled. If the value is {@code 0}, airplane mode is disabled.
+Specifies whether airplane mode is enabled.
+
+<p>If the value is {@code 1}, airplane mode is enabled. If the value is {@code 0}, airplane mode is disabled.
 
 **Since:** 7
 
@@ -74,7 +80,9 @@ Indicates the number of boot operations after the device is powered on.
 const CONTACT_METADATA_SYNC_STATUS: string
 ```
 
-Specifies whether contact metadata synchronization is enabled.<p>If the value is {@code true}, synchronization is enabled. If the value is {@code false}, synchronization is disabled.
+Specifies whether contact metadata synchronization is enabled.
+
+<p>If the value is {@code true}, synchronization is enabled. If the value is {@code false}, synchronization is disabled.
 
 **Since:** 7
 
@@ -102,7 +110,9 @@ Indicates the bundle name of the application to debug.
 const DEBUGGER_WAITING: string
 ```
 
-Specifies whether the device waits for the debugger when starting an application to debug.<p>If the value is {@code 1}, the device waits for the debugger. If the value is {@code 0}, the system does not wait for the debugger, and so the application runs normally.
+Specifies whether the device waits for the debugger when starting an application to debug.
+
+<p>If the value is {@code 1}, the device waits for the debugger. If the value is {@code 0}, the system does not wait for the debugger, and so the application runs normally.
 
 **Since:** 7
 
@@ -116,7 +126,9 @@ Specifies whether the device waits for the debugger when starting an application
 const DEVELOPMENT_SETTINGS_STATUS: string
 ```
 
-Specifies whether developer options are enabled.<p>If the value is {@code true}, developer options are enabled. If the value is {@code false}, developer options are disabled.
+Specifies whether developer options are enabled.
+
+<p>If the value is {@code true}, developer options are enabled. If the value is {@code false}, developer options are disabled.
 
 **Since:** 7
 
@@ -142,7 +154,9 @@ Indicates the device name.
 const DEVICE_PROVISION_STATUS: string
 ```
 
-Specifies whether the device is provisioned.<p>On a multi-user device with a single system user, the screen may be locked when the value is {@code true}. In addition, other abilities cannot be started on the system user unless they are marked to display over the screen lock.
+Specifies whether the device is provisioned.
+
+<p>On a multi-user device with a single system user, the screen may be locked when the value is {@code true}. In addition, other abilities cannot be started on the system user unless they are marked to display over the screen lock.
 
 **Since:** 7
 
@@ -156,7 +170,9 @@ Specifies whether the device is provisioned.<p>On a multi-user device with a sin
 const END_BUTTON_ACTION: string
 ```
 
-Specifies what happens after the user presses the call end button if the user is not in a call.&lt;ul&gt; &lt;li&gt;{@code 0} - Nothing happens. &lt;li&gt;{@code 1} - The home screen is displayed. &lt;li&gt;{@code 2} - The device enters the sleep state and the screen is locked. &lt;li&gt;{@code 3} - The home screen is displayed. If the user is already on the home screen, the device enters the sleep state. &lt;/ul&gt;
+Specifies what happens after the user presses the call end button if the user is not in a call.
+
+&lt;ul&gt; &lt;li&gt;{@code 0} - Nothing happens. &lt;li&gt;{@code 1} - The home screen is displayed. &lt;li&gt;{@code 2} - The device enters the sleep state and the screen is locked. &lt;li&gt;{@code 3} - The home screen is displayed. If the user is already on the home screen, the device enters the sleep state. &lt;/ul&gt;
 
 **Since:** 7
 
@@ -184,7 +200,9 @@ Indicates the default geographical location that can be used by the browser. Mul
 const HDC_STATUS: string
 ```
 
-Specifies whether the hard disk controller (HDC) on USB devices is enabled.<p>If the value is {@code true}, the HDC is enabled. If the value is {@code false}, the HDC is disabled.
+Specifies whether the hard disk controller (HDC) on USB devices is enabled.
+
+<p>If the value is {@code true}, the HDC is enabled. If the value is {@code false}, the HDC is disabled.
 
 **Since:** 7
 
@@ -198,7 +216,9 @@ Specifies whether the hard disk controller (HDC) on USB devices is enabled.<p>If
 const SETUP_WIZARD_FINISHED: string
 ```
 
-Specifies whether the startup wizard has been run.<p>If the value is {@code 0}, the startup wizard has not been run. If the value is not {@code 0}, the startup wizard has been run.
+Specifies whether the startup wizard has been run.
+
+<p>If the value is {@code 0}, the startup wizard has not been run. If the value is not {@code 0}, the startup wizard has been run.
 
 **Since:** 7
 
@@ -212,7 +232,9 @@ Specifies whether the startup wizard has been run.<p>If the value is {@code 0}, 
 const SKIP_USE_HINTS: string
 ```
 
-Specifies whether an application should attempt to skip all introductory hints at the first startup. This is intended for temporary users or users who are familiar with the environment.<p>If the value is {@code 1}, the application attempts to skip all introductory hints at the first startup. If the value is {@code 0}, the application does not skip introductory hints at the first startup.
+Specifies whether an application should attempt to skip all introductory hints at the first startup. This is intended for temporary users or users who are familiar with the environment.
+
+<p>If the value is {@code 1}, the application attempts to skip all introductory hints at the first startup. If the value is {@code 0}, the application does not skip introductory hints at the first startup.
 
 **Since:** 7
 
@@ -226,7 +248,9 @@ Specifies whether an application should attempt to skip all introductory hints a
 const TOUCH_EXPLORATION_STATUS: string
 ```
 
-Indicates whether touch exploration is enabled.<p>If the value is {@code 1}, touch exploration is enabled. If the value is {@code 0}, touch exploration is disabled.
+Indicates whether touch exploration is enabled.
+
+<p>If the value is {@code 1}, touch exploration is enabled. If the value is {@code 0}, touch exploration is disabled.
 
 **Since:** 7
 
@@ -240,7 +264,9 @@ Indicates whether touch exploration is enabled.<p>If the value is {@code 1}, tou
 const USB_STORAGE_STATUS: string
 ```
 
-Specifies whether USB mass storage is enabled.<p>If the value is {@code true}, USB mass storage is enabled. If the value is {@code false}, USB mass storage is disabled.
+Specifies whether USB mass storage is enabled.
+
+<p>If the value is {@code true}, USB mass storage is enabled. If the value is {@code false}, USB mass storage is disabled.
 
 **Since:** 7
 

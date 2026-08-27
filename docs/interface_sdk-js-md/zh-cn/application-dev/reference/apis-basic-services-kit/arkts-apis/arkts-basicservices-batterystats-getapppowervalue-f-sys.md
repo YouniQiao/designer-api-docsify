@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import batteryStats from '@kit.BasicServicesKit';
+import { batteryStats } from '@kit.BasicServicesKit';
 ```
 
 ## getAppPowerValue
@@ -24,7 +24,7 @@ function getAppPowerValue(uid: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | number | 是 | 应用的UID，用于指定查询耗电量的目标应用。 可通过[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md)等接口获取应用UID。 |
+| uid | number | 是 | 应用的UID，用于指定查询耗电量的目标应用。可通过[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md)等接口获取应用UID。 |
 
 **返回值：**
 

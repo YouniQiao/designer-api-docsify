@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import router from '@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## push
@@ -26,36 +26,9 @@ Navigates to a specified page in the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Page routing parameters. |
+| options | RouterOptions | Yes | Page routing parameters. |
 
 **Examples**
-
-```TypeScript
-import { router } from '@kit.ArkUI';
-
-class InnerParams {
-  data3: number[];
-
-  constructor(tuple: number[]) {
-    this.data3 = tuple;
-  }
-}
-
-class RouterParams {
-  data1: string;
-  data2: InnerParams;
-
-  constructor(str: string, tuple: number[]) {
-    this.data1 = str;
-    this.data2 = new InnerParams(tuple);
-  }
-}
-
-router.push({
-  url: 'pages/routerpage2',
-  params: new RouterParams('message', [123, 456, 789])
-});
-```
 
 ```TypeScript
 import { router } from '@kit.ArkUI';

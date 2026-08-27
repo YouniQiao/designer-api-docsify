@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createVideoRecorder
@@ -12,7 +12,7 @@ import media from '@kit.MediaKit';
 function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 ```
 
-该接口自API version 9起停止维护，建议使用AVRecorder。 创建视频录制实例。
+该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。
 
 **起始版本：** 9
 
@@ -56,7 +56,7 @@ media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => 
 function createVideoRecorder(): Promise<VideoRecorder>
 ```
 
-该接口自API version 9起停止维护，建议使用AVRecorder。 创建视频录制实例。
+该接口自API version 9起停止维护，建议使用AVRecorder。创建视频录制实例。
 
 **起始版本：** 9
 

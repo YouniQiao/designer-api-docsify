@@ -1,6 +1,6 @@
 # Scroller
 
-可滚动容器组件的控制器，可以将此组件绑定至容器组件，然后通过它控制容器组件的滚动。同一个控制器不可以控制多个容器组件，目前支持绑定到ArcList、ArcScrollBar、List、Scroll、ScrollBar、Grid、 WaterFlow上。
+可滚动容器组件的控制器，可以将此组件绑定至容器组件，然后通过它控制容器组件的滚动。同一个控制器不可以控制多个容器组件，目前支持绑定到ArcList、ArcScrollBar、List、Scroll、ScrollBar、Grid、WaterFlow上。
 
 > **说明：**
 > 
@@ -135,7 +135,7 @@ fling(velocity: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| velocity | number | 是 | 惯性滚动的初始速度值。单位：vp/s   **说明：**velocity值设置为0时，本次滚动不生效且不会产生滚动动画。如果值为正数，则向顶部滚动；如果值为负 数，则向底部滚动。 |
+| velocity | number | 是 | 惯性滚动的初始速度值。单位：vp/s   **说明：**velocity值设置为0时，本次滚动不生效且不会产生滚动动画。如果值为正数，则向顶部滚动；如果值为负数，则向底部滚动。 |
 
 **错误码：**
 
@@ -164,7 +164,7 @@ getFrameNode(): FrameNode | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| FrameNode \| undefined | 当Scroller已绑定到Scroll、List、Grid、WaterFlow等滚动类组件时，返回对应组件的FrameNode；如果Scroller未绑定组件， 则返回undefined。 |
+| FrameNode \| undefined | 当Scroller已绑定到Scroll、List、Grid、WaterFlow等滚动类组件时，返回对应组件的FrameNode；如果Scroller未绑定组件，则返回undefined。 |
 
 ## getItemIndex
 
@@ -291,7 +291,7 @@ offset() : OffsetResult | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [OffsetResult](arkts-arkui-offsetresult-i.md) \| undefined | 返回当前的滚动总偏移量。xOffset表示水平滚动总偏移量，yOffset表示竖直滚动总偏移量。当Scroller没有和组件绑定时，该接口会返回 undefined。 |
+| [OffsetResult](arkts-arkui-offsetresult-i.md) \| undefined | 返回当前的滚动总偏移量。xOffset表示水平滚动总偏移量，yOffset表示竖直滚动总偏移量。当Scroller没有和组件绑定时，该接口会返回undefined。 |
 
 ## scrollBy
 
@@ -333,7 +333,9 @@ scrollBy(dx: Length, dy: Length)
 scrollEdge(value: Edge, options?: ScrollEdgeOptions)
 ```
 
-滚动到容器边缘，不区分滚动轴方向，Edge.Top和Edge.Start表现相同，Edge.Bottom和Edge.End表现相同。可用于返回顶部、跳转到内容末尾等场景。Scroll组件默认有动画，Grid、List、WaterFlow组件默认无动画。
+滚动到容器边缘，不区分滚动轴方向，Edge.Top和Edge.Start表现相同，Edge.Bottom和Edge.End表现相同。可用于返回顶部、跳转到内容末尾等场景。
+
+Scroll组件默认有动画，Grid、List、WaterFlow组件默认无动画。
 
 **起始版本：** 7
 
@@ -346,7 +348,7 @@ scrollEdge(value: Edge, options?: ScrollEdgeOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | 是 | 滚动到的边缘位置。 |
-| options | [ScrollEdgeOptions](arkts-arkui-scrolledgeoptions-i.md) | 否 | 设置滚动到边缘位置的模式。 & lt;em & gt;原子化服务API & lt;/em & gt;：该API可在原子化服务中使用，从API version 12开始。<br>**起始版本：** 12 |
+| options | [ScrollEdgeOptions](arkts-arkui-scrolledgeoptions-i.md) | 否 | 设置滚动到边缘位置的模式。&lt;em&gt;原子化服务API&lt;/em&gt;：该API可在原子化服务中使用，从API version 12开始。<br>**起始版本：** 12 |
 
 ## scrollPage
 
@@ -388,7 +390,7 @@ scrollPage(value: { next: boolean; direction?: Axis })
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | { next: boolean; direction?: Axis } | 是 | next：是否向下翻页。true表示向下翻页，false表示向上翻页。 direction：设置滚动方向为水平或竖直方向。 |
+| value | { next: boolean; direction?: Axis } | 是 | next：是否向下翻页。true表示向下翻页，false表示向上翻页。direction：设置滚动方向为水平或竖直方向。 |
 
 ## scrollTo
 
@@ -422,7 +424,7 @@ scrollTo(options: ScrollOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ScrollOptions](arkts-arkui-scrolloptions-i.md) | 是 | 滑动到指定位置的参数，包含xOffset、yOffset、animation、canOverScroll等字段，用于指定滚动目标位置和滚动行 为。<br>**起始版本：** 18 |
+| options | [ScrollOptions](arkts-arkui-scrolloptions-i.md) | 是 | 滑动到指定位置的参数，包含xOffset、yOffset、animation、canOverScroll等字段，用于指定滚动目标位置和滚动行为。<br>**起始版本：** 18 |
 
 ## scrollToIndex
 
@@ -430,7 +432,9 @@ scrollTo(options: ScrollOptions)
 scrollToIndex(value: number, smooth?: boolean, align?: ScrollAlign, options?: ScrollToIndexOptions)
 ```
 
-滑动到指定Index，支持设置滑动额外偏移量。开启smooth动画时，会对经过的所有item进行加载和布局计算。当大量加载item时会导致性能问题，开发者应先调用scrollToIndex不带动画跳转到目标附近位置，再调用scrollToIndex带动画滚动到目标位置，以优化 性能。
+滑动到指定Index，支持设置滑动额外偏移量。
+
+开启smooth动画时，会对经过的所有item进行加载和布局计算。当大量加载item时会导致性能问题，开发者应先调用scrollToIndex不带动画跳转到目标附近位置，再调用scrollToIndex带动画滚动到目标位置，以优化性能。
 
 > **说明：**
 > 
@@ -464,5 +468,5 @@ scrollToIndex(value: number, smooth?: boolean, align?: ScrollAlign, options?: Sc
 | --- | --- | --- | --- |
 | value | number | 是 | 要滑动到的目标元素在当前容器中的索引值。    **说明：** value值设置成负值或者大于当前容器子组件的最大索引值，视为异常值，本次跳转不生效。 |
 | smooth | boolean | 否 | 设置滑动到列表项在列表中的索引值时是否有动画，true表示有动画，false表示没有动画。不传入时默认无动画。默认值：false。<br>**起始版本：** 12 |
-| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | 否 | 指定滑动到的元素与当前容器的对齐方式，可根据期望item首部、尾部或居中显示选择对应对齐方式。默认值：List为ScrollAlign.START， Grid为ScrollAlign.AUTO，WaterFlow为ScrollAlign.START。   **说明：** 仅List、Grid、WaterFlow组件支持该参数。<br>**起始版本：** 12 |
-| options | [ScrollToIndexOptions](arkts-arkui-scrolltoindexoptions-i.md) | 否 | 设置滑动到指定Index的选项，包含extraOffset字段，用于指定滚动后的额外偏移量。不传入时无额外偏移量。 & lt;br/ & gt;<br>**起始版本：** 12 |
+| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | 否 | 指定滑动到的元素与当前容器的对齐方式，可根据期望item首部、尾部或居中显示选择对应对齐方式。默认值：List为ScrollAlign.START，Grid为ScrollAlign.AUTO，WaterFlow为ScrollAlign.START。   **说明：** 仅List、Grid、WaterFlow组件支持该参数。<br>**起始版本：** 12 |
+| options | [ScrollToIndexOptions](arkts-arkui-scrolltoindexoptions-i.md) | 否 | 设置滑动到指定Index的选项，包含extraOffset字段，用于指定滚动后的额外偏移量。不传入时无额外偏移量。&lt;br/ &gt;<br>**起始版本：** 12 |

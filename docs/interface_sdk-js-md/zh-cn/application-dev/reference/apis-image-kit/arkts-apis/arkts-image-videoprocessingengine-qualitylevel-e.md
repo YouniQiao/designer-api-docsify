@@ -1,6 +1,6 @@
 # QualityLevel
 
-细节增强的处理质量等级。 @enum {number}
+细节增强的处理质量等级。@enum {number}
 
 **起始版本：** 18
 

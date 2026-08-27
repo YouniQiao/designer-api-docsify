@@ -1,6 +1,8 @@
 # AVCastPickerStyle
 
-投播组件样式参数选项。@enum { number }
+投播组件样式参数选项。
+
+@enum { number }
 
 **起始版本：** 12
 

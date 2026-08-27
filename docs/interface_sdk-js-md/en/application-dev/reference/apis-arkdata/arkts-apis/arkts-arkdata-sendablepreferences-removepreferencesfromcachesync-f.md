@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import sendablePreferences from '@kit.ArkData';
+import { sendablePreferences } from '@kit.ArkData';
 ```
 
 ## removePreferencesFromCacheSync
@@ -24,8 +24,8 @@ Removes a **Preferences** instance from the cache. This API returns the result s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context. |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | Configuration options of the **Preferences** instance. |
+| context | Context | Yes | Application context. |
+| options | Options | Yes | Configuration options of the **Preferences** instance. |
 
 **Error codes:**
 

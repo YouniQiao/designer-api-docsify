@@ -25,8 +25,8 @@ Obtains an RDB store. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context. For details about the application context of the FA model, see Context. For details about the application context of the stage model, see Context. |
-| config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | Yes | Configuration of the RDB store. |
+| context | Context | Yes | Application context. For details about the application context of the FA model, see Context. For details about the application context of the stage model, see Context. |
+| config | StoreConfig | Yes | Configuration of the RDB store. |
 | version | number | Yes | RDB store version.Currently, automatic RDB upgrades and downgrades performed based on **version** is not supported. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbStore&gt; | Yes | Callback used to return the RDB store obtained. |
 
@@ -90,15 +90,15 @@ Obtains an RDB store. This API uses a promise to return the result. You can set 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context.For details about the application context of the FA model, see Context. For details about the application context of the stage model, see Context. |
-| config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | Yes | Configuration of the RDB store. |
+| context | Context | Yes | Application context.For details about the application context of the FA model, see Context. For details about the application context of the stage model, see Context. |
+| config | StoreConfig | Yes | Configuration of the RDB store. |
 | version | number | Yes | RDB store version.Currently, automatic RDB upgrades and downgrades performed based on **version** is not supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;RdbStore & gt; | Promise used to return the **RdbStore** object. |
+| Promise&lt;RdbStore&gt; | Promise used to return the **RdbStore** object. |
 
 **Examples**
 

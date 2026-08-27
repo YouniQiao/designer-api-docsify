@@ -3,22 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appControl from '@kit.AbilityKit.appControl';
-import bundleManager from '@kit.AbilityKit.bundleManager';
-import bundleMonitor from '@kit.AbilityKit.bundleMonitor';
-import bundleResourceManager from '@kit.AbilityKit.bundleResourceManager';
-import bundle from '@kit.AbilityKit';
-import defaultAppManager from '@kit.AbilityKit.defaultAppManager';
-import distributedBundleManager from '@kit.AbilityKit.distributedBundleManager';
-import freeInstall from '@kit.AbilityKit.freeInstall';
-import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit.innerBundleManager';
-import installer from '@kit.AbilityKit.installer';
-import launcherBundleManager from '@kit.AbilityKit.launcherBundleManager';
-import overlay from '@kit.AbilityKit.overlay';
-import shortcutManager from '@kit.AbilityKit.shortcutManager';
-import skillManager from '@kit.AbilityKit.skillManager';
-import appDomainVerify from '@kit.AbilityKit.appDomainVerify';
-import pluginBundleManager from '@kit.AbilityKit.pluginBundleManager';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## getNameForUid
@@ -87,7 +72,7 @@ Obtains the bundle name based on a UID. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the bundle name. |
+| Promise&lt;string&gt; | Returns the bundle name. |
 
 **Examples**
 

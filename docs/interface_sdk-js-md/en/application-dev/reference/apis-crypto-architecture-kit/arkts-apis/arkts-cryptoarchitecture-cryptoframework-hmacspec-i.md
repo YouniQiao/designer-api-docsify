@@ -15,7 +15,7 @@ Represents the child class of [MacSpec](arkts-cryptoarchitecture-cryptoframework
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## mdName

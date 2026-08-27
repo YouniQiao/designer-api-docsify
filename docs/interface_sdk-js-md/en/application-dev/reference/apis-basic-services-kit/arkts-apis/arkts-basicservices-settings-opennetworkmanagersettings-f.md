@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import settings from '@kit.BasicServicesKit';
-import settingsLite from '@kit.BasicServicesKitLite';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## openNetworkManagerSettings
@@ -29,7 +28,7 @@ Open the network manager settings page.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | The promise returned by the function. |
+| Promise&lt;boolean&gt; | The promise returned by the function. |
 
 **Error codes:**
 

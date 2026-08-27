@@ -1,6 +1,8 @@
 # AudioVolumeGroupManager
 
-This interface implements volume management for an audio group.Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) to obtain an AudioVolumeGroupManager instance.
+This interface implements volume management for an audio group.
+
+Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager) to obtain an AudioVolumeGroupManager instance.
 
 > **NOTE：**
 > 
@@ -13,8 +15,7 @@ This interface implements volume management for an audio group.Before calling an
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## getMaxAmplitudeForInputDevice
@@ -39,7 +40,7 @@ Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an i
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the maximum amplitude, which is in the range [0, 1]. |
+| Promise&lt;number&gt; | Promise used to return the maximum amplitude, which is in the range [0, 1]. |
 
 **Error codes:**
 
@@ -92,7 +93,7 @@ Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an o
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the maximum amplitude, which is in the range [0, 1]. |
+| Promise&lt;number&gt; | Promise used to return the maximum amplitude, which is in the range [0, 1]. |
 
 **Error codes:**
 
@@ -198,7 +199,7 @@ Obtains the maximum volume level of a stream. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the maximum volume level. |
+| Promise&lt;number&gt; | Promise used to return the maximum volume level. |
 
 **Examples**
 
@@ -338,7 +339,7 @@ Obtains the minimum volume level of a stream. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the minimum volume level. |
+| Promise&lt;number&gt; | Promise used to return the minimum volume level. |
 
 **Examples**
 
@@ -537,7 +538,7 @@ Obtains the volume gain. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | volumeLevel | number | Yes | Volume level. |
-| device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | Yes | Device type. |
+| device | DeviceType | Yes | Device type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the volume gain obtained; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -584,13 +585,13 @@ Obtains the volume gain. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | volumeLevel | number | Yes | Volume level. |
-| device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | Yes | Device type. |
+| device | DeviceType | Yes | Device type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the volume gain (in dB). |
+| Promise&lt;number&gt; | Promise used to return the volume gain (in dB). |
 
 **Error codes:**
 
@@ -634,7 +635,7 @@ Obtains the volume gain. This API returns the result synchronously.
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | volumeLevel | number | Yes | Volume level. |
-| device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | Yes | Device type. |
+| device | DeviceType | Yes | Device type. |
 
 **Return value:**
 
@@ -738,7 +739,7 @@ Obtains the volume level of a stream. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the stream volume level. The volume range of a specified stream can be obtained by calling [getMinVolume]{ |
+| Promise&lt;number&gt; | Promise used to return the stream volume level. The volume range of a specified stream can be obtained by calling [getMinVolume]{ |
 
 **Examples**
 
@@ -863,7 +864,7 @@ Checks whether the microphone is muted. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result, indicating whether the microphone is muted. **true** if muted, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the microphone is muted. **true** if muted, **false** otherwise. |
 
 **Examples**
 
@@ -990,7 +991,7 @@ Checks whether a stream is muted. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result, indicating whether the stream is muted. **true** if muted, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the stream is muted. **true** if muted, **false** otherwise. |
 
 **Examples**
 
@@ -1163,7 +1164,9 @@ Subscribes to the ringer mode change event, which is triggered when the [AudioRi
 on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void
 ```
 
-Subscribes to the microphone state change event, which is triggered when the microphone state is changed. This API uses an asynchronous callback to return the result.Currently, when multiple AudioManager instances are used in a single process, only the subscription of the last instance takes effect, and the subscription of other instances is overwritten (even if the last instance does not initiate a subscription). Therefore, you are advised to use a single AudioManager instance.
+Subscribes to the microphone state change event, which is triggered when the microphone state is changed. This API uses an asynchronous callback to return the result.
+
+Currently, when multiple AudioManager instances are used in a single process, only the subscription of the last instance takes effect, and the subscription of other instances is overwritten (even if the last instance does not initiate a subscription). Therefore, you are advised to use a single AudioManager instance.
 
 **Since:** 9
 
@@ -1258,7 +1261,7 @@ Mutes or unmutes the microphone. This method uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Examples**
 

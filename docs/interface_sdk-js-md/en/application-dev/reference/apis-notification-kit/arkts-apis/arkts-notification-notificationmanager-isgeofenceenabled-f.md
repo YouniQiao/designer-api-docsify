@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isGeofenceEnabled
@@ -22,7 +22,7 @@ Checks whether geofencing is enabled. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that geofencing is enabled, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that geofencing is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

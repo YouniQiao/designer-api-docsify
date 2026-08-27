@@ -42,7 +42,7 @@ backgroundColor?: ColorMetrics
 
 Set background color of the ProgressButtonV2.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -60,7 +60,7 @@ borderColor?: ColorMetrics
 
 Set border color of the ProgressButtonV2.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -78,7 +78,7 @@ progressColor?: ColorMetrics
 
 Set progress color of the ProgressButtonV2.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -96,7 +96,7 @@ textColor?: ColorMetrics
 
 Set text color of the ProgressButtonV2.
 
-**Type:** ColorMetrics
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 

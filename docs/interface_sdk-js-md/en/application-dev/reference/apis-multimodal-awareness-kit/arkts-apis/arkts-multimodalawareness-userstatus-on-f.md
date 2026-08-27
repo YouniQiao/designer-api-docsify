@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import userStatus from '@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## on('userAgeGroupDetected')
@@ -12,7 +12,9 @@ import userStatus from '@kit.MultimodalAwarenessKit';
 function on(type: 'userAgeGroupDetected', callback: Callback<UserClassification>): void
 ```
 
-Enables the age group detection function.When the function is enabled, the application can recommend content based on the age group detection result.
+Enables the age group detection function.
+
+When the function is enabled, the application can recommend content based on the age group detection result.
 
 > **NOTE：**
 > 

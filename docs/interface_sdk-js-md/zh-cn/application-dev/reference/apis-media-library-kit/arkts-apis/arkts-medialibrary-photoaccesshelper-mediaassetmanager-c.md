@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancelRequest
@@ -41,7 +41,7 @@ static cancelRequest(context: Context, requestId: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -62,7 +62,7 @@ async function example(context: Context) {
     await photoAccessHelper.MediaAssetManager.cancelRequest(context, requestId);
     console.info("request cancelled successfully");
   } catch (err) {
-    console.error(`cancelRequest failed with error: ${err.code}, ${err.message}`);
+    console.error(`Failed to cancel request. Code: ${err.code}, message: ${err.message}`);
   }
 }
 ```
@@ -90,14 +90,14 @@ static loadMovingPhoto(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入AbilityContext或者UIExtensionContext的实例。 |
-| imageFileUri | string | 是 | 应用沙箱动态照片的图片uri。 示例：'file://com.example.temptest/data/storage/el2/base/haps/ImageFile.jpg' |
-| videoFileUri | string | 是 | 应用沙箱动态照片的视频uri。 示例：'file://com.example.temptest/data/storage/el2/base/haps/VideoFile.mp4' |
+| imageFileUri | string | 是 | 应用沙箱动态照片的图片uri。示例：'file://com.example.temptest/data/storage/el2/base/haps/ImageFile.jpg' |
+| videoFileUri | string | 是 | 应用沙箱动态照片的视频uri。示例：'file://com.example.temptest/data/storage/el2/base/haps/VideoFile.mp4' |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md)&gt; | Promise对象，返回 [MovingPhoto]{ |
+| Promise&lt;[MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md)&gt; | Promise对象，返回[MovingPhoto]{ |
 
 **错误码：**
 
@@ -115,7 +115,7 @@ async function example(context: Context) {
     let videoFileUri: string = 'file://com.example.temptest/data/storage/el2/base/haps/VideoFile.mp4'; // 应用沙箱动态照片的视频uri。
     let movingPhoto: photoAccessHelper.MovingPhoto = await photoAccessHelper.MediaAssetManager.loadMovingPhoto(context, imageFileUri, videoFileUri);
   } catch (err) {
-    console.error(`loadMovingPhoto failed with error: ${err.code}, ${err.message}`);
+    console.error(`Failed to load moving photo. Code: ${err.code}, message: ${err.message}`);
   }
 }
 ```
@@ -144,7 +144,7 @@ static quickRequestImage(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的上下文。 |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | 是 | 待请求的媒体文件对象。 |
+| asset | PhotoAsset | 是 | 待请求的媒体文件对象。 |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | 是 | 图片请求策略模式配置项。 |
 | dataHandler | [QuickImageDataHandler](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md)&lt;image.Picture&gt; | 是 | 媒体资源处理器，当所请求的图片资源准备完成时会触发回调。 |
 
@@ -152,7 +152,7 @@ static quickRequestImage(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回请求id，可用于 [cancelRequest]{ |
+| Promise&lt;string&gt; | Promise对象，返回请求id，可用于[cancelRequest]{ |
 
 **错误码：**
 
@@ -189,6 +189,10 @@ async function example(context: Context) {
   const handler = new MediaHandler();
   let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
   phAccessHelper.getAssets(fetchOptions, async (err, fetchResult) => {
+    if (err) {
+      console.error(`Failed to get assets. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
       console.info('fetchResult success');
       let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
       await photoAccessHelper.MediaAssetManager.quickRequestImage(context, photoAsset, requestOptions, handler);
@@ -221,7 +225,7 @@ static requestImage(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的上下文。 |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | 是 | 待请求的媒体文件对象。 |
+| asset | PhotoAsset | 是 | 待请求的媒体文件对象。 |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | 是 | 图片请求策略模式配置项。 |
 | dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;image.ImageSource&gt; | 是 | 媒体资源处理器，请求完成时触发回调。 |
 
@@ -229,7 +233,7 @@ static requestImage(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回请求id，可用于 [cancelRequest]{ |
+| Promise&lt;string&gt; | Promise对象，返回请求id，可用于[cancelRequest]{ |
 
 **错误码：**
 
@@ -270,6 +274,10 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   const handler = new MediaHandler();
 
   phAccessHelper.getAssets(fetchOptions, async (err, fetchResult) => {
+    if (err) {
+      console.error(`Failed to get assets. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
     console.info('fetchResult success');
     let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
     if (photoAsset === undefined) {
@@ -306,7 +314,7 @@ static requestImageData(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的上下文。 |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | 是 | 待请求的媒体文件对象。 |
+| asset | PhotoAsset | 是 | 待请求的媒体文件对象。 |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | 是 | 图片请求策略模式配置项。 |
 | dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;ArrayBuffer&gt; | 是 | 媒体资源处理器，当所请求的图片资源准备完成时会触发回调。 |
 
@@ -314,7 +322,7 @@ static requestImageData(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回请求id，可用于 [cancelRequest]{ |
+| Promise&lt;string&gt; | Promise对象，返回请求id，可用于[cancelRequest]{ |
 
 **错误码：**
 
@@ -354,6 +362,10 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   const handler = new MediaDataHandler();
 
   phAccessHelper.getAssets(fetchOptions, async (err, fetchResult) => {
+    if (err) {
+      console.error(`Failed to get assets. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
       console.info('fetchResult success');
       let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
       if (photoAsset === undefined) {
@@ -390,7 +402,7 @@ static requestMovingPhoto(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的上下文。 |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | 是 | 待请求的媒体文件对象。 |
+| asset | PhotoAsset | 是 | 待请求的媒体文件对象。 |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | 是 | 图片请求策略模式配置项。 |
 | dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;[MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md)&gt; | 是 | 媒体资源处理器，当所请求的图片资源准备完成时会触发回调。 |
 
@@ -398,7 +410,7 @@ static requestMovingPhoto(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回请求id，可用于 [cancelRequest]{ |
+| Promise&lt;string&gt; | Promise对象，返回请求id，可用于[cancelRequest]{ |
 
 **错误码：**
 
@@ -435,6 +447,10 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   };
   // 请确保图库内存在动态照片。
   let assetResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
+  if (!assetResult) {
+    console.error('Failed to get assets');
+    return;
+  }
   let asset: photoAccessHelper.PhotoAsset = await assetResult.getFirstObject();
   let requestOptions: photoAccessHelper.RequestOptions = {
     deliveryMode: photoAccessHelper.DeliveryMode.FAST_MODE,
@@ -444,7 +460,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
     let requestId: string = await photoAccessHelper.MediaAssetManager.requestMovingPhoto(context, asset, requestOptions, handler);
     console.info("moving photo requested successfully, requestId: " + requestId);
   } catch (err) {
-    console.error(`failed to request moving photo, error code is ${err.code}, message is ${err.message}`);
+    console.error(`Failed to request moving photo. Code: ${err.code}, message: ${err.message}`);
   }
 }
 ```
@@ -474,16 +490,16 @@ static requestVideoFile(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的上下文。 |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | 是 | 待请求的媒体文件对象。 |
+| asset | PhotoAsset | 是 | 待请求的媒体文件对象。 |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | 是 | 视频请求策略模式配置项。 |
-| fileUri | string | 是 | 目标写入沙箱路径uri。 示例fileUri：'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.mp4'。 |
-| dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;boolean&gt; | 是 | 媒体资源处理器，当所请求的视频资源写入完成时会触发回调。 视频资源写入成功时返回true，写入失败则返回false。 |
+| fileUri | string | 是 | 目标写入沙箱路径uri。示例fileUri：'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.mp4'。 |
+| dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;boolean&gt; | 是 | 媒体资源处理器，当所请求的视频资源写入完成时会触发回调。视频资源写入成功时返回true，写入失败则返回false。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回请求id，可用于 [cancelRequest]{ |
+| Promise&lt;string&gt; | Promise对象，返回请求id，可用于[cancelRequest]{ |
 
 **错误码：**
 
@@ -520,6 +536,10 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   const handler = new MediaDataHandler();
   let fileUri = 'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.mp4';
   phAccessHelper.getAssets(fetchOptions, async (err, fetchResult) => {
+    if (err) {
+      console.error(`Failed to get assets. Code: ${err.code}, message: ${err.message}`);
+      return;
+    }
       console.info('fetchResult success');
       let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
       await photoAccessHelper.MediaAssetManager.requestVideoFile(context, photoAsset, requestOptions, fileUri, handler);

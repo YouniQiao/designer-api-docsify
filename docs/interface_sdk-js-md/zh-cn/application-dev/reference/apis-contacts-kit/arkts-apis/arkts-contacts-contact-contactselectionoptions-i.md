@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## filter
@@ -18,7 +18,7 @@ import contact from '@kit.ContactsKit';
 filter?: ContactSelectionFilter
 ```
 
-联系人查询过滤器。 从API version 15 开始，该接口支持在原子化服务中使用。
+联系人查询过滤器。从API version 15 开始，该接口支持在原子化服务中使用。
 
 **类型：** [ContactSelectionFilter](arkts-contacts-contact-contactselectionfilter-i.md)
 
@@ -52,7 +52,7 @@ isAutoDismissOnNavigation?: boolean
 isDisplayedByName?: boolean
 ```
 
-是否按联系人姓名维度展示，true:按联系人姓名维度展示，false:按联系人号码维度展示，默认值为false。 从API version 15 开始，该接口支持在原子化服务中使用。
+是否按联系人姓名维度展示，true:按联系人姓名维度展示，false:按联系人号码维度展示，默认值为false。从API version 15 开始，该接口支持在原子化服务中使用。
 
 **类型：** boolean
 
@@ -84,7 +84,7 @@ isMultiSelect?: boolean
 maxSelectable?: number
 ```
 
-联系人数量上限。默认值为10000，超出上限则以默认值筛选。 从API version 15 开始，该接口支持在原子化服务中使用。
+联系人数量上限。默认值为10000，超出上限则以默认值筛选。从API version 15 开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 

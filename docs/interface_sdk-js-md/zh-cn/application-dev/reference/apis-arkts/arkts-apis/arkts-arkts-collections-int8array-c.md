@@ -22,7 +22,7 @@
 [Symbol.iterator](): IterableIterator<number>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个数字对象。 说明： 本接口不支持在.ets文件中使用。
+返回一个迭代器，迭代器的每一项都是一个数字对象。说明：本接口不支持在.ets文件中使用。
 
 **起始版本：** 12
 
@@ -34,7 +34,7 @@
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;number & gt; | 返回一个迭代器对象，迭代出数字。 |
+| IterableIterator&lt;number&gt; | 返回一个迭代器对象，迭代出数字。 |
 
 **错误码：**
 
@@ -60,7 +60,7 @@ at(index: number): number | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 要返回的Array元素的索引（从零开始），取值为整数。 如果为负数，则从最后一个元素开始倒数。 |
+| index | number | 是 | 要返回的Array元素的索引（从零开始），取值为整数。如果为负数，则从最后一个元素开始倒数。 |
 
 **返回值：**
 
@@ -139,7 +139,7 @@ constructor(elements: Iterable<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elements | Iterable & lt;number & gt; | 是 | 可迭代数字集合，用于构造ArkTS Int8Array对象。 |
+| elements | Iterable&lt;number&gt; | 是 | 可迭代数字集合，用于构造ArkTS Int8Array对象。 |
 
 **错误码：**
 
@@ -165,7 +165,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; \ | ArrayBuffer | 是 | 用于构造ArkTS Int8Array的对象。当参数类型是ArrayBuffer时buffer所占的字节数是1的整数倍。 |
+| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Int8Array的对象。当参数类型是ArrayBuffer时buffer所占的字节数是1的整数倍。 |
 
 **错误码：**
 
@@ -193,7 +193,7 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | 用于构造ArkTS Int8Array的ArrayBuffer对象。buffer所占的字节数需是1的整数倍。 |
 | byteOffset | number | 否 | 指定buffer的字节偏移，从0开始，默认为0。 |
-| length | number | 否 | 指定ArkTS Int8Array的长度，默认值为0。取值需为非负整数，且需满足byteOffset + length & lt;= buffer.byteLength。 |
+| length | number | 否 | 指定ArkTS Int8Array的长度，默认值为0。取值需为非负整数，且需满足byteOffset + length &lt;= buffer.byteLength。 |
 
 **错误码：**
 
@@ -254,7 +254,7 @@ entries(): IterableIterator<[number, number]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;[number, number] & gt; | 新的迭代器对象。 |
+| IterableIterator&lt;[number, number]&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
@@ -475,7 +475,7 @@ static from(arrayLike: ArrayLike<number>): Int8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;number & gt; | 是 | 用于构造ArkTS Int8Array的ArrayLike对象。 |
+| arrayLike | ArrayLike&lt;number&gt; | 是 | 用于构造ArkTS Int8Array的ArrayLike对象。 |
 
 **返回值：**
 
@@ -501,7 +501,7 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;T & gt; | 是 | 用于构造ArrayLike对象。 |
+| arrayLike | ArrayLike&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | 是 | 映射函数。 |
 
 **返回值：**
@@ -528,7 +528,7 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | Iterable & lt;number & gt; | 是 | 用于构造的可迭代对象。 |
+| arrayLike | Iterable&lt;number&gt; | 是 | 用于构造的可迭代对象。 |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;number, number&gt; | 否 | 映射函数。如果省略，则不对元素进行加工处理。 |
 
 **返回值：**
@@ -656,7 +656,7 @@ keys(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;number & gt; | 新的迭代器对象。 |
+| IterableIterator&lt;number&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
@@ -684,7 +684,7 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | searchElement | number | 是 | 待索引的值。 |
-| fromIndex | number | 否 | 搜索的起始索引，从该位置开始往前查找。默认值为ArkTS Int8Array长度减1（即从末尾开始）。如果索引大于等于ArkTS Int8Array的长度， 则从末尾开始往前查找。如果提供的索引值是负数，则被当作距离数组尾部的偏移，从后到前搜索。 |
+| fromIndex | number | 否 | 搜索的起始索引，从该位置开始往前查找。默认值为ArkTS Int8Array长度减1（即从末尾开始）。如果索引大于等于ArkTS Int8Array的长度，则从末尾开始往前查找。如果提供的索引值是负数，则被当作距离数组尾部的偏移，从后到前搜索。 |
 
 **返回值：**
 
@@ -717,7 +717,7 @@ map(callbackFn: TypedArrayMapCallback<number, Int8Array>): Int8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Int8Array&gt; | 是 | 回调函数，接收至多三个参数。 map方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Int8Array&gt; | 是 | 回调函数，接收至多三个参数。map方法对数组中的每个元素调用一次callbackfn函数。 |
 
 **返回值：**
 
@@ -738,7 +738,9 @@ map(callbackFn: TypedArrayMapCallback<number, Int8Array>): Int8Array
 static of(...items: number[]): Int8Array
 ```
 
-通过可变数量的参数创建一个新的ArkTS Int8Array对象。@static [since 18 - 21]
+通过可变数量的参数创建一个新的ArkTS Int8Array对象。
+
+@static [since 18 - 21]
 
 **起始版本：** 18
 
@@ -776,7 +778,7 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Int8Array>): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int8Array&gt; | 是 | 归约函数，接收至多四个参数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int8Array&gt; | 是 | 归约函数，接收至多四个参数。reduce方法对数组中的每个元素调用一次callbackfn函数。 |
 
 **返回值：**
 
@@ -809,8 +811,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Int8Array>, initialV
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int8Array&gt; | 是 | 归约函数，接收至多四个参数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
-| initialValue | number | 是 | 如果指定了initialValue，则将其作为开始累加的初始值。 首次调用callbackfn函数时会将该值作为参数传入，而不是使用数组元素值。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int8Array&gt; | 是 | 归约函数，接收至多四个参数。reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| initialValue | number | 是 | 如果指定了initialValue，则将其作为开始累加的初始值。首次调用callbackfn函数时会将该值作为参数传入，而不是使用数组元素值。 |
 
 **返回值：**
 
@@ -878,13 +880,13 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int8Arra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Int8Array&gt; | 是 | 对Int8Array中的每个元素调用的函数。 |
-| initialValue | U | 是 | 作为回调函数首次调用的第一个参数的值。 如果未提供初始值，则使用Int8Array的最后一个元素， 并且回调函数将从倒数第二个元素开始调用。 |
+| initialValue | U | 是 | 作为回调函数首次调用的第一个参数的值。如果未提供初始值，则使用Int8Array的最后一个元素，并且回调函数将从倒数第二个元素开始调用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| U | 由归约函数最后一次调用返回的最终结果。可能的错误原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| U | 由归约函数最后一次调用返回的最终结果。可能的错误原因：1.必填参数未指定。2.参数类型不正确。 |
 
 **错误码：**
 
@@ -917,7 +919,7 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Int8Array>): nu
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 由归约函数最后一次调用返回的最终结果。可能的错误原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| number | 由归约函数最后一次调用返回的最终结果。可能的错误原因：1.必填参数未指定。2.参数类型不正确。 |
 
 **错误码：**
 
@@ -971,7 +973,7 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; | 是 | 用于设置的ArrayLike对象。 |
+| array | ArrayLike&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
 | offset | number | 否 | 写入的起始位置。默认为0。 |
 
 **错误码：**
@@ -1187,7 +1189,7 @@ values(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;number & gt; | 新的迭代器对象。 |
+| IterableIterator&lt;number&gt; | 新的迭代器对象。 |
 
 **错误码：**
 

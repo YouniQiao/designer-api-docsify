@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import deviceInfo from '@kit.MDMKit';
+import { deviceInfo } from '@kit.MDMKit';
 ```
 
 ## getDeviceName
@@ -99,7 +99,7 @@ Obtains the device name. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the device name. |
+| Promise&lt;string&gt; | Promise used to return the device name. |
 
 **Error codes:**
 

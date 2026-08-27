@@ -31,7 +31,8 @@ ICCID号码。
 isActive: boolean
 ```
 
-卡是否被激活。  
+卡是否被激活。
+
 - true:激活。  
 - false：未激活。
 
@@ -47,7 +48,8 @@ isActive: boolean
 isEsim: boolean
 ```
 
-标记卡是否是eSim。  
+标记卡是否是eSim。
+
 - true:是eSim。  
 - false：不是eSim。
 

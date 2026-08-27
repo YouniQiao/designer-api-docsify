@@ -1,6 +1,6 @@
 # SystemRecordControllerChangeInfo（系统接口）
 
-定义系统记录控制器状态变化时所携带的信息。 它包括启用状态、应用程序UID和预期的音频源类型。
+定义系统记录控制器状态变化时所携带的信息。它包括启用状态、应用程序UID和预期的音频源类型。
 
 **起始版本：** 26.0.0
 
@@ -11,8 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## enabled
@@ -39,7 +38,7 @@ enabled: boolean
 sourceType?: SourceType
 ```
 
-应用程序在启用录音控制器时配置的预期音频源类型。 用于匹配相应的录音场景和降噪模式。
+应用程序在启用录音控制器时配置的预期音频源类型。用于匹配相应的录音场景和降噪模式。
 
 **类型：** SourceType
 

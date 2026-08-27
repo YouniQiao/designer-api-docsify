@@ -80,7 +80,7 @@ Set the card slot ID of the default voice service.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the setVoiceMailInfo. |
+| Promise&lt;void&gt; | The promise returned by the setVoiceMailInfo. |
 
 **Error codes:**
 

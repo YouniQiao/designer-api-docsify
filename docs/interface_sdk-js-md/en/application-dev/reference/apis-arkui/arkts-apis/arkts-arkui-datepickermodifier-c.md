@@ -1,6 +1,8 @@
 # DatePickerModifier
 
-Defines DatePicker Modifier@extends DatePickerAttribute @implements AttributeModifier&lt;DatePickerAttribute&gt;
+Defines DatePicker Modifier
+
+@extends DatePickerAttribute @implements AttributeModifier&lt;DatePickerAttribute&gt;
 
 **Inheritance/Implementation:** DatePickerModifier extends [DatePickerAttribute](../arkts-components/arkts-arkui-datepicker-attribute.md#datepickerattribute) and implements AttributeModifier<DatePickerAttribute>
 

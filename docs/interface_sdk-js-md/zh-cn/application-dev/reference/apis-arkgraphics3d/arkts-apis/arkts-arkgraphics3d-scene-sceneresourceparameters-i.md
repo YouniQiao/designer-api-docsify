@@ -28,7 +28,7 @@ uri?: ResourceStr
 
 3D场景所需的资源文件路径。默认值为undefined。
 
-**类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 12
 

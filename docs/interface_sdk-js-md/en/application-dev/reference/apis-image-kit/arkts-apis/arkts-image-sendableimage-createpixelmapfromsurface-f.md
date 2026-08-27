@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import sendableImage from '@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## createPixelMapFromSurface
@@ -29,7 +29,7 @@ Creates a PixelMap object from surface id.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | Returns the instance if the operation is successful. Otherwise, an exception will be thrown. |
+| Promise&lt;PixelMap&gt; | Returns the instance if the operation is successful. Otherwise, an exception will be thrown. |
 
 **Error codes:**
 

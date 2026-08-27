@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import config from '@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## getSeniorModeStateForApp
@@ -29,13 +29,13 @@ function getSeniorModeStateForApp(bundleName: string, appIndex?: number): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 查询“长辈模式”的应用包名。 |
-| appIndex | number | 否 | 应用包的分身索引标识。 取值范围：大于等于0的整数。缺省时，appIndex默认为0。 |
+| appIndex | number | 否 | 应用包的分身索引标识。取值范围：大于等于0的整数。缺省时，appIndex默认为0。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示应用已启用“长辈模式”；返回false表示应用未启用“长辈模式”。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示应用已启用“长辈模式”；返回false表示应用未启用“长辈模式”。 |
 
 **错误码：**
 

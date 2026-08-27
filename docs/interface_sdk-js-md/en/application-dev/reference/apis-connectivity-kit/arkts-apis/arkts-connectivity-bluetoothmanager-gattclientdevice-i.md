@@ -13,7 +13,7 @@ Manages GATT client. Before calling an Gatt client method, you must use [createG
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## close
@@ -22,7 +22,9 @@ import bluetoothManager from '@kit.ConnectivityKit';
 close(): void
 ```
 
-Disables a BLE peripheral device.This method unregisters the device and clears the registered callbacks and handles. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Disables a BLE peripheral device.
+
+This method unregisters the device and clears the registered callbacks and handles. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -74,7 +76,9 @@ try {
 connect(): void
 ```
 
-Connects to a BLE peripheral device.The 'BLEConnectionStateChange' event is subscribed to return the connection state. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Connects to a BLE peripheral device.
+
+The 'BLEConnectionStateChange' event is subscribed to return the connection state. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -229,7 +233,7 @@ Obtains the name of BLE peripheral device. On API 10 and above, the permission r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns a string representation of the name if obtained; returns { |
+| Promise&lt;string&gt; | Returns a string representation of the name if obtained; returns { |
 
 **Error codes:**
 
@@ -333,7 +337,7 @@ Get the RSSI value of this BLE peripheral device. On API 10 and above, the permi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Returns the RSSI value. |
+| Promise&lt;number&gt; | Returns the RSSI value. |
 
 **Error codes:**
 
@@ -445,7 +449,7 @@ Starts discovering services. On API 10 and above, the permission required by thi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;GattService & gt; & gt; | Returns the list of services { |
+| Promise&lt;Array&lt;GattService&gt;&gt; | Returns the list of services { |
 
 **Error codes:**
 
@@ -690,7 +694,7 @@ Reads the characteristic of a BLE peripheral device. On API 10 and above, the pe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
 
 **Error codes:**
@@ -765,13 +769,13 @@ Reads the characteristic of a BLE peripheral device. On API 10 and above, the pe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BLECharacteristic & gt; | Promise used to return the characteristic value read. |
+| Promise&lt;BLECharacteristic&gt; | Promise used to return the characteristic value read. |
 
 **Error codes:**
 
@@ -836,7 +840,7 @@ Reads the descriptor of a BLE peripheral device. On API 10 and above, the permis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
+| descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
 
 **Error codes:**
@@ -903,13 +907,13 @@ Reads the descriptor of a BLE peripheral device. On API 10 and above, the permis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
+| descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BLEDescriptor & gt; | Promise used to return the descriptor read. |
+| Promise&lt;BLEDescriptor&gt; | Promise used to return the descriptor read. |
 
 **Error codes:**
 
@@ -1015,7 +1019,7 @@ Enables or disables notification of a characteristic when value changed. On API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | BLE characteristic to listen for. |
+| characteristic | BLECharacteristic | Yes | BLE characteristic to listen for. |
 | enable | boolean | Yes | Specifies whether to enable notification of the characteristic. The value {@code true} indicates that notification is enabled, and the value {@code false} indicates that notification is disabled. |
 
 **Error codes:**
@@ -1080,7 +1084,7 @@ Writes the characteristic of a BLE peripheral device. On API 10 and above, the p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
 
 **Error codes:**
 
@@ -1144,7 +1148,7 @@ Writes the descriptor of a BLE peripheral device. On API 10 and above, the permi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to write. |
+| descriptor | BLEDescriptor | Yes | Indicates the descriptor to write. |
 
 **Error codes:**
 

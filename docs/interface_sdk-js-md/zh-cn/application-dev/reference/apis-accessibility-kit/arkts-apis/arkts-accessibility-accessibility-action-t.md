@@ -34,7 +34,7 @@ type Action = 'accessibilityFocus' | 'clearAccessibilityFocus' | 'focus' | 'clea
 | 'delete' | 表示删除操作。当前版本暂不支持。 |
 | 'scrollForward' | 表示向前滚动操作，需配置参数scrollType，参数值为'fullScreen'或'halfScreen'。 |
 | 'scrollBackward' | 表示向后滚动操作，需配置参数scrollType，参数值为'fullScreen'或'halfScreen'。 |
-| 'setSelection' | 表示设置文本选择范围操作，需配置参数selectTextBegin、selectTextEnd、selectTextInForWard，参数值为选定文本的起始坐标、结 束坐标及是否向前选择。 |
+| 'setSelection' | 表示设置文本选择范围操作，需配置参数selectTextBegin、selectTextEnd、selectTextInForWard，参数值为选定文本的起始坐标、结束坐标及是否向前选择。 |
 | 'setCursorPosition' | 表示设置光标位置操作，需配置参数offset，参数值为光标的字符偏移量。 [since 12] |
 | 'home' | 表示返回桌面操作。 [since 12] |
 | 'back' | 表示返回上一级操作。 [since 12] |

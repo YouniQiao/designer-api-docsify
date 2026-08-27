@@ -21,7 +21,7 @@ Send extended commands to location subsystem.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | Yes | Indicates the extended command message body. |
+| command | LocationCommand | Yes | Indicates the extended command message body. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for reporting the error message. If the function fails to execute, the error message will be carried in the first parameter err of AsyncCallback, If the function executes successfully, execute the callback function only, no data will be returned. |
 
 **Error codes:**
@@ -66,13 +66,13 @@ Send extended commands to location subsystem.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | Yes | Indicates the extended command message body. |
+| command | LocationCommand | Yes | Indicates the extended command message body. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## cyclicalYear
@@ -18,7 +18,9 @@ import i18n from '@kit.LocalizationKit';
 cyclicalYear: number
 ```
 
-农历的干支年。取值范围：[1, 60]。
+农历的干支年。
+
+取值范围：[1, 60]。
 
 **类型：** number
 
@@ -54,7 +56,9 @@ date: number
 gregorianYear: number
 ```
 
-公历的年。取值范围：[1900, 2100]。
+公历的年。
+
+取值范围：[1900, 2100]。
 
 **类型：** number
 
@@ -126,8 +130,11 @@ minute?: number
 month: number
 ```
 
-农历的月。  
-**说明：**月份从0开始计数，0表示一月。
+农历的月。
+
+**说明：**
+
+月份从0开始计数，0表示一月。
 
 **类型：** number
 

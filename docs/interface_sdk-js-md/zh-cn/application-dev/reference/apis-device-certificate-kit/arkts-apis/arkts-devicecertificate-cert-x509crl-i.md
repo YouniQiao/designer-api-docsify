@@ -29,7 +29,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | 是 | 回调函数。当获取X.509证书吊销列表序列化数据成功时，err为undefined， data为获取到的X.509证书吊销列表序列化数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | 是 | 回调函数。当获取X.509证书吊销列表序列化数据成功时，err为undefined，data为获取到的X.509证书吊销列表序列化数据；否则为错误对象。 |
 
 **错误码：**
 
@@ -552,7 +552,7 @@ getExtensions(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示CRL扩展的DER格式数据。 |
+| DataBlob | 表示CRL扩展的DER格式数据。 |
 
 **错误码：**
 
@@ -926,7 +926,7 @@ getIssuerName(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书吊销列表颁发者名称。 |
+| DataBlob | 表示X.509证书吊销列表颁发者名称。 |
 
 **错误码：**
 
@@ -1685,7 +1685,7 @@ getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md)&gt;&gt; | 是 | 回调函数。当获取证书吊销条目列表成功时，err为undefined， data为获取到的证书吊销条目列表；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md)&gt;&gt; | 是 | 回调函数。当获取证书吊销条目列表成功时，err为undefined，data为获取到的证书吊销条目列表；否则为错误对象。 |
 
 **错误码：**
 
@@ -1830,7 +1830,7 @@ getRevokedCertWithCert(cert: X509Cert): X509CRLEntry
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | 是 | 表示证书对象。 |
+| cert | X509Cert | 是 | 表示证书对象。 |
 
 **返回值：**
 
@@ -1947,7 +1947,7 @@ getSignature(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书吊销列表的签名数据。 |
+| DataBlob | 表示X.509证书吊销列表的签名数据。 |
 
 **错误码：**
 
@@ -2445,7 +2445,7 @@ getSignatureAlgParams(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书吊销列表签名的算法参数。 |
+| DataBlob | 表示X.509证书吊销列表签名的算法参数。 |
 
 **错误码：**
 
@@ -2627,7 +2627,7 @@ getTBSInfo(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示证书吊销列表的tbsCertList信息。 |
+| DataBlob | 表示证书吊销列表的tbsCertList信息。 |
 
 **错误码：**
 
@@ -3211,7 +3211,7 @@ isRevoked(cert: X509Cert): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | 是 | 表示被检查的证书对象。 |
+| cert | X509Cert | 是 | 表示被检查的证书对象。 |
 
 **返回值：**
 
@@ -4250,7 +4250,7 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -85,7 +85,7 @@ Sets whether the mouse pointer is visible in the current window. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

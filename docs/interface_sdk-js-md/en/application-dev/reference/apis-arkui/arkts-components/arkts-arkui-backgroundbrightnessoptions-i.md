@@ -31,7 +31,11 @@ Provides background brightness options.
 lightUpDegree: number
 ```
 
-Light up degree. A greater degree indicates a greater increase in brightness.Default value: **0.0**Value range: [-1.0, 1.0]
+Light up degree. A greater degree indicates a greater increase in brightness.
+
+Default value: **0.0**
+
+Value range: [-1.0, 1.0]
 
 **Type:** number
 
@@ -49,7 +53,11 @@ Light up degree. A greater degree indicates a greater increase in brightness.Def
 rate: number
 ```
 
-Brightness change rate. A higher rate means that brightness decreases more quickly. If **rate** is set to **0**, **lightUpDegree** will not take effect, meaning no brightening effect will occur.Default value: **0.0**Value range: (0.0, +∞)
+Brightness change rate. A higher rate means that brightness decreases more quickly. If **rate** is set to **0**, **lightUpDegree** will not take effect, meaning no brightening effect will occur.
+
+Default value: **0.0**
+
+Value range: (0.0, +∞)
 
 **Type:** number
 

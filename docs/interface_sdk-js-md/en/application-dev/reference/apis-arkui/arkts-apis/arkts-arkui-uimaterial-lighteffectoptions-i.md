@@ -9,7 +9,7 @@ Provides the light sensing interaction feedback configuration for immersive mate
 ## Modules to Import
 
 ```TypeScript
-import uiMaterial from '@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## color
@@ -18,7 +18,9 @@ import uiMaterial from '@kit.ArkUI';
 color?: ResourceColor
 ```
 
-Custom color of the light sensing feedback.Default value: **Color.White**
+Custom color of the light sensing feedback.
+
+Default value: **Color.White**
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

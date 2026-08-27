@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import overlay from '@kit.AbilityKit';
+import { overlay } from '@kit.AbilityKit';
 ```
 
 ## getOverlayModuleInfo
@@ -23,7 +23,7 @@ function getOverlayModuleInfo(moduleName: string, callback: AsyncCallback<Overla
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 指定当前应用中的overlay特征module的名称。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OverlayModuleInfo&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取当前应用中指定的module的 [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息成功时，err返回undefined。否则回调函数返回具体错误 对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OverlayModuleInfo&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取当前应用中指定的module的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息成功时，err返回undefined。否则回调函数返回具体错误对象。 |
 
 **错误码：**
 
@@ -80,7 +80,7 @@ function getOverlayModuleInfo(moduleName: string): Promise<OverlayModuleInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;OverlayModuleInfo & gt; | Promise对象，返回 [OverlayModuleInfo]{ |
+| Promise&lt;OverlayModuleInfo&gt; | Promise对象，返回[OverlayModuleInfo]{ |
 
 **错误码：**
 

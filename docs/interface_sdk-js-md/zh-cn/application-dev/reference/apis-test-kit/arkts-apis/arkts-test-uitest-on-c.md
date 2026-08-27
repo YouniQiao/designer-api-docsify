@@ -1,6 +1,16 @@
 # On
 
-UiTest框架从API version 9开始，通过On类提供了丰富的控件特征描述API，用于进行控件筛选来匹配/查找出目标控件。On提供的API能力具有以下几个特点：1、支持单属性匹配和多属性组合匹配，例如同时指定目标控件text和id。2、控件属性支持多种匹配模式。3、支持控件绝对定位，相对定位，可通过[ON.isBefore](#isbefore)和[ON.isAfter](#isafter)等API限定邻近控件特征进行辅助定位。On类提供的所有API均为同步接口，建议使用者通过静态构造器ON来链式创建On对象。
+UiTest框架从API version 9开始，通过On类提供了丰富的控件特征描述API，用于进行控件筛选来匹配/查找出目标控件。
+
+On提供的API能力具有以下几个特点：
+
+1、支持单属性匹配和多属性组合匹配，例如同时指定目标控件text和id。
+
+2、控件属性支持多种匹配模式。
+
+3、支持控件绝对定位，相对定位，可通过[ON.isBefore](#isbefore)和[ON.isAfter](#isafter)等API限定邻近控件特征进行辅助定位。
+
+On类提供的所有API均为同步接口，建议使用者通过静态构造器ON来链式创建On对象。
 
 **起始版本：** 9
 
@@ -120,7 +130,7 @@ belongingDisplay(displayId: number): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | number | 是 | 指定控件所属屏幕ID，取值范围：大于等于0的整数。 **说明：** 传入displayId不存在时，将抛出17000007异常。可通过 [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md)获取当前所有的 display对象，并由display对象获取对应的屏幕ID。 |
+| displayId | number | 是 | 指定控件所属屏幕ID，取值范围：大于等于0的整数。**说明：** 传入displayId不存在时，将抛出17000007异常。可通过[getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md)获取当前所有的display对象，并由display对象获取对应的屏幕ID。 |
 
 **返回值：**
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import CryptoExtensionAbility, { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from '@kit.UniversalKeystoreKit';
+import { CryptoExtensionAbility, HuksCryptoExtensionCertInfo, HuksCryptoExtensionResult, HuksCryptoExtensionResultCode, HuksCryptoExtensionParam, HuksCryptoExtensionParams } from '@kit.UniversalKeystoreKit';
 ```
 
 ## authState
@@ -32,7 +32,7 @@ authState?: number
 certs?: Array<HuksCryptoExtensionCertInfo>
 ```
 
-/** 证书。
+/**证书。
 
 **类型：** Array&lt;[HuksCryptoExtensionCertInfo](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensioncertinfo-i.md)&gt;
 
@@ -105,7 +105,9 @@ resourceId?: string
 ```
 
 返回的资源ID。
-26.0.0  
+
+26.0.0
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** string

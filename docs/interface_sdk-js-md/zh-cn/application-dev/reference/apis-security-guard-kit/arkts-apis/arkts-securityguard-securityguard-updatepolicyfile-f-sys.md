@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import securityGuard from '@kit.SecurityGuardKit';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## updatePolicyFile
@@ -32,7 +32,7 @@ function updatePolicyFile(policyFile: PolicyFile): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式返回结果。 |
+| Promise&lt;void&gt; | 以Promise形式返回结果。 |
 
 **错误码：**
 

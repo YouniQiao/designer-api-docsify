@@ -14,7 +14,7 @@ The **sendablePreferences** module provides APIs for processing data in the form
 ## Modules to Import
 
 ```TypeScript
-import sendablePreferences from '@kit.ArkData';
+import { sendablePreferences } from '@kit.ArkData';
 ```
 
 ## Summary

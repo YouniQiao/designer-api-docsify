@@ -167,7 +167,7 @@ Replaces text in a string, using a regular expression or search string.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchValue | string \| RegExp | Yes |  |
-| replacer | (substring: string, ...args: any[]) = & gt; string | Yes |  |
+| replacer | (substring: string, ...args: any[]) =&gt; string | Yes |  |
 
 **Return value:**
 

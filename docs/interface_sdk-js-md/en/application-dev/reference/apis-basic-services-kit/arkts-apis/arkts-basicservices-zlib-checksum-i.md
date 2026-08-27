@@ -9,7 +9,7 @@ Checksum object.
 ## Modules to Import
 
 ```TypeScript
-import zlib from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## adler32
@@ -37,7 +37,7 @@ Calculates the Adler-32 checksum. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the calculated Adler-32 checksum. |
+| Promise&lt;number&gt; | Promise used to return the calculated Adler-32 checksum. |
 
 **Error codes:**
 
@@ -91,7 +91,7 @@ Combines two Adler-32 checksums. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the combined Adler-32 checksum. |
+| Promise&lt;number&gt; | Promise used to return the combined Adler-32 checksum. |
 
 **Error codes:**
 
@@ -155,7 +155,7 @@ Updates a CRC-32 checksum. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the updated CRC-32 checksum. |
+| Promise&lt;number&gt; | Promise used to return the updated CRC-32 checksum. |
 
 **Error codes:**
 
@@ -211,7 +211,7 @@ Combines two CRC-32 checksums. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the combined CRC-32 checksum. |
+| Promise&lt;number&gt; | Promise used to return the combined CRC-32 checksum. |
 
 **Error codes:**
 
@@ -275,7 +275,7 @@ Updates a CRC-64 checksum. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the updated CRC-64 checksum. |
+| Promise&lt;number&gt; | Promise used to return the updated CRC-64 checksum. |
 
 **Error codes:**
 
@@ -323,7 +323,7 @@ Obtains this CRC-64 checksum table. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the CRC-64 checksum table. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the CRC-64 checksum table. |
 
 **Examples**
 
@@ -357,7 +357,7 @@ Obtains this CRC-32 checksum table. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the CRC-32 checksum table. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the CRC-32 checksum table. |
 
 **Examples**
 

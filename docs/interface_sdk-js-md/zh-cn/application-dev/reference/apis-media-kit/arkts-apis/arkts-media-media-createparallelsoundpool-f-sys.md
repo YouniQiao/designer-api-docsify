@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createParallelSoundPool
@@ -12,7 +12,9 @@ import media from '@kit.MediaKit';
 function createParallelSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendererInfo): Promise<SoundPool>
 ```
 
-创建音频池实例。使用Promise异步回调。使用[createSoundPool](arkts-media-media-createsoundpool-f.md)创建的音频池实例，在重复播放相同音频时，会停止之前的播放并重新开始；而使用 createParallelSoundPool创建的实例，在重复播放相同音频时，不会停止之前的音频，而是并行播放。
+创建音频池实例。使用Promise异步回调。
+
+使用[createSoundPool](arkts-media-media-createsoundpool-f.md)创建的音频池实例，在重复播放相同音频时，会停止之前的播放并重新开始；而使用createParallelSoundPool创建的实例，在重复播放相同音频时，不会停止之前的音频，而是并行播放。
 
 **起始版本：** 20
 
@@ -31,7 +33,7 @@ function createParallelSoundPool(maxStreams: number, audioRenderInfo: audio.Audi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;SoundPool & gt; | Promise对象，返回SoundPool实例，失败时返回null。用于音频池实例的加载播放功能。 |
+| Promise&lt;SoundPool&gt; | Promise对象，返回SoundPool实例，失败时返回null。用于音频池实例的加载播放功能。 |
 
 **错误码：**
 

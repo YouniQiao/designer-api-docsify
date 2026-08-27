@@ -14,7 +14,7 @@ The **formInfo** module provides types and enums related to the widget informati
 ## Modules to Import
 
 ```TypeScript
-import formInfo from '@kit.FormKit';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## Summary
@@ -74,7 +74,7 @@ import formInfo from '@kit.FormKit';
 | [FormUsageState](arkts-form-forminfo-formusagestate-e-sys.md) | Enumerates the usage statuses of a widget. |
 | [PublishFormErrorCode](arkts-form-forminfo-publishformerrorcode-e-sys.md) | Enumerates the result codes that may be used for the operation of adding a widget to the home screen. |
 | [RenderingMode](arkts-form-forminfo-renderingmode-e-sys.md) | Enumerates the rendering modes supported by the widget. |
-| [SceneAnimationTriggerType](arkts-form-forminfo-sceneanimationtriggertype-e-sys.md) | The trigger type of the scene animation.@enum { number } |
+| [SceneAnimationTriggerType](arkts-form-forminfo-sceneanimationtriggertype-e-sys.md) | The trigger type of the scene animation. |
 <!--DelEnd-->
 
 <!--Del-->

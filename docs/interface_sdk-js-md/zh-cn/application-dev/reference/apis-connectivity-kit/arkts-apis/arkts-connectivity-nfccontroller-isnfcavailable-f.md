@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import nfcController from '@kit.ConnectivityKit';
+import { nfcController } from '@kit.ConnectivityKit';
 ```
 
 ## isNfcAvailable

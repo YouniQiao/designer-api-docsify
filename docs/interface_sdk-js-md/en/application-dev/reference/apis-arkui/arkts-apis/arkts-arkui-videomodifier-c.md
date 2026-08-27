@@ -1,6 +1,8 @@
 # VideoModifier
 
-Defines Video Modifier@extends VideoAttribute @implements AttributeModifier&lt;VideoAttribute&gt;
+Defines Video Modifier
+
+@extends VideoAttribute @implements AttributeModifier&lt;VideoAttribute&gt;
 
 **Inheritance/Implementation:** VideoModifier extends [VideoAttribute](../arkts-components/arkts-arkui-video-attribute.md#videoattribute) and implements AttributeModifier<VideoAttribute>
 

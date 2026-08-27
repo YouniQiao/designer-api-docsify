@@ -1,6 +1,8 @@
 # SuppState（系统接口）
 
-supplicant状态枚举。@enum { number }
+supplicant状态枚举。
+
+@enum { number }
 
 **起始版本：** 9
 

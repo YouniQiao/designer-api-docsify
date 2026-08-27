@@ -9,7 +9,7 @@ MovingPhoto provides APIs for managing a moving photo instance.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## isVideoReady
@@ -32,7 +32,7 @@ Checks whether the video of the moving photo is ready. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. **true** if the video of the moving photo is ready, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the video of the moving photo is ready, **false** otherwise. |
 
 **Error codes:**
 

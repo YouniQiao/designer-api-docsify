@@ -1,6 +1,7 @@
 # ScrollBar
 
 The **ScrollBar** component is designed to be used together with scrollable components such as ArcList, List, Grid, Scroll, and WaterFlow.
+
 > **NOTE** > > - This component is supported since API version 8. Updates will be marked with a superscript to indicate their > earliest API version. > > - If the size of the main axis direction is not set for **ScrollBar**, the **maxSize** value in the > [layout constraints](../arkts-apis/arkts-arkui-framenode-layoutconstraint-i.md) of the parent component is used. If the parent component of > the **ScrollBar** component contains a scrollable component, such as ArcList, > List, Grid, Scroll, or WaterFlow, you are advised > to set the size in the main axis direction of the **ScrollBar**; otherwise, the size in the main axis direction of > **ScrollBar** may become infinite.
 
 ## Child Components
@@ -9,7 +10,8 @@ This component can contain a single child component.
 
 ## Example 1: Implementing a ScrollBar Component with Child Components
 
-This example illustrates the style of a **ScrollBar** component with child components.  
+This example illustrates the style of a **ScrollBar** component with child components.
+
 ```ts
 // xxx.ets
 @Entry
@@ -52,9 +54,12 @@ struct ScrollBarExample {
 }
 ```
 
+
+
 ## Example 2: Implementing a ScrollBar Component Without Child Components
 
-This example illustrates the style of a **ScrollBar** component without child components. The [scrollBarColor](arkts-arkui-scrollbar-attribute.md#scrollbarcolor) attribute is added since API version 20.  
+This example illustrates the style of a **ScrollBar** component without child components. The [scrollBarColor](arkts-arkui-scrollbar-attribute.md#scrollbarcolor) attribute is added since API version 20.
+
 ```ts
 import { ColorMetrics } from '@kit.ArkUI'
 @Entry
@@ -93,9 +98,12 @@ struct ScrollBarExample {
 }
 ```
 
+
+
 ## Example 3: Enabling Nested Scrolling
 
-This example demonstrates how to enable nested scrolling for a **ScrollBar** component using the [enableNestedScroll](arkts-arkui-scrollbar-attribute.md#enablenestedscroll) attribute. This feature is available from API version 20.  
+This example demonstrates how to enable nested scrolling for a **ScrollBar** component using the [enableNestedScroll](arkts-arkui-scrollbar-attribute.md#enablenestedscroll) attribute. This feature is available from API version 20.
+
 ```ts
 import { ColorMetrics } from '@kit.ArkUI'
 @Entry
@@ -157,6 +165,8 @@ struct StickyNestedScroll {
 }
 ```
 
+
+
 ## ScrollBar
 
 ```TypeScript
@@ -183,8 +193,10 @@ Creates a scroll bar.
 
 | Name | Description |
 | --- | --- |
+| [ScrollBarOptions](arkts-arkui-scrollbaroptions-i.md) | Parameters of the **ScrollBar** component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [ScrollBarDirection](arkts-arkui-scrollbardirection-e.md) | Enumerates the scrolling directions. |

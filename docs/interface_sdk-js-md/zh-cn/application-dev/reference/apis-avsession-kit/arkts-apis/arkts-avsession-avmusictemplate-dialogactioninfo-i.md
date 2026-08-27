@@ -1,6 +1,8 @@
 # DialogActionInfo
 
-对话框动作信息的定义。@interface DialogActionInfo
+对话框动作信息的定义。
+
+@interface DialogActionInfo
 
 **起始版本：** 23
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## clickedBtnId

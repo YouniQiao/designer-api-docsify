@@ -72,7 +72,7 @@ Obtains the carrier name of the SIM card in the specified slot. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result, for example, China Mobile. |
+| Promise&lt;string&gt; | Promise used to return the result, for example, China Mobile. |
 
 **Error codes:**
 

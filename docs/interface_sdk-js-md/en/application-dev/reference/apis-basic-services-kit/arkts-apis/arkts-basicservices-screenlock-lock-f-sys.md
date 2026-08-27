@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screenLock from '@kit.BasicServicesKit';
+import { screenLock } from '@kit.BasicServicesKit';
 ```
 
 ## lock
@@ -72,7 +72,7 @@ Lock the screen.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | the promise returned by the function. |
+| Promise&lt;boolean&gt; | the promise returned by the function. |
 
 **Error codes:**
 

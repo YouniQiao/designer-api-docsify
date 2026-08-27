@@ -85,7 +85,7 @@ Triggered when the swipe gesture is recognized.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes | Callback for the gesture event. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for the gesture event. |
 
 **Return value:**
 

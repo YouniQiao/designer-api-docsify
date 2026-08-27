@@ -1,6 +1,6 @@
 # Task
 
-上传或下载任务。使用该方法前需要先获取Task对象，promise形式通过 [request.agent.create](arkts-basicservices-agent-create-f.md)获取， callback形式通过 [request.agent.create](arkts-basicservices-agent-create-f.md)获取。
+上传或下载任务。使用该方法前需要先获取Task对象，promise形式通过[request.agent.create](arkts-basicservices-agent-create-f.md)获取，callback形式通过[request.agent.create](arkts-basicservices-agent-create-f.md)获取。
 
 > **说明：**
 > 
@@ -13,8 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## off
@@ -40,7 +39,7 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'progress' | 是 | 取消订阅的事件类型。   - 取值为'progress'，表示任务进度。 |
-| callback | (progress: Progress) = & gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有进度回调函数。 |
+| callback | (progress: Progress) =&gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有进度回调函数。 |
 
 **错误码：**
 
@@ -72,7 +71,7 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'completed' | 是 | 取消订阅的事件类型。   - 取值为'completed'，表示任务完成。 |
-| callback | (progress: Progress) = & gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有完成回调函数。 |
+| callback | (progress: Progress) =&gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有完成回调函数。 |
 
 **错误码：**
 
@@ -104,7 +103,7 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'failed' | 是 | 取消订阅的事件类型。   - 取值为'failed'，表示任务失败。 |
-| callback | (progress: Progress) = & gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有失败回调函数。 |
+| callback | (progress: Progress) =&gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有失败回调函数。 |
 
 **错误码：**
 
@@ -134,7 +133,7 @@ off(event: 'pause', callback?: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'pause' | 是 | 取消订阅的事件类型。   - 取值为'pause'，表示任务暂停。 |
-| callback | (progress: Progress) = & gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有暂停回调函数。 |
+| callback | (progress: Progress) =&gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有暂停回调函数。 |
 
 **错误码：**
 
@@ -163,7 +162,7 @@ off(event: 'resume', callback?: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'resume' | 是 | 取消订阅的事件类型。   - 取值为'resume'，表示任务恢复。 |
-| callback | (progress: Progress) = & gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有恢复回调函数。 |
+| callback | (progress: Progress) =&gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有恢复回调函数。 |
 
 **错误码：**
 
@@ -192,7 +191,7 @@ off(event: 'remove', callback?: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'remove' | 是 | 取消订阅的事件类型。   - 取值为'remove'，表示任务被移除。 |
-| callback | (progress: Progress) = & gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有移除回调函数。 |
+| callback | (progress: Progress) =&gt; void | 否 | 回调函数，发生相关的事件时触发该回调方法。若无此参数，则取消订阅的所有移除回调函数。 |
 
 **错误码：**
 
@@ -312,7 +311,7 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'progress' | 是 | 订阅的事件类型。   - 取值为'progress'，表示任务进度，任务进度有进展时触发该事件。 |
-| callback | (progress: Progress) = & gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
+| callback | (progress: Progress) =&gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
 
 **错误码：**
 
@@ -344,7 +343,7 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'completed' | 是 | 订阅的事件类型。   - 取值为'completed'，表示任务完成，任务完成时触发该事件。 |
-| callback | (progress: Progress) = & gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
+| callback | (progress: Progress) =&gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
 
 **错误码：**
 
@@ -359,7 +358,7 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 on(event: 'failed', callback: (progress: Progress) => void): void
 ```
 
-订阅任务失败事件，使用callback异步回调。可通过调用 [request.agent.show](arkts-basicservices-agent-show-f.md)查看错误原因 。
+订阅任务失败事件，使用callback异步回调。可通过调用[request.agent.show](arkts-basicservices-agent-show-f.md)查看错误原因。
 
 > **说明：**
 > 
@@ -376,7 +375,7 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'failed' | 是 | 订阅的事件类型。   - 取值为'failed'，表示任务失败，任务失败时触发该事件。 |
-| callback | (progress: Progress) = & gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
+| callback | (progress: Progress) =&gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
 
 **错误码：**
 
@@ -406,7 +405,7 @@ on(event: 'pause', callback: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'pause' | 是 | 订阅的事件类型。   - 取值为'pause'，表示任务已暂停，任务暂停时触发该事件。 |
-| callback | (progress: Progress) = & gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
+| callback | (progress: Progress) =&gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
 
 **错误码：**
 
@@ -435,7 +434,7 @@ on(event: 'resume', callback: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'resume' | 是 | 订阅的事件类型。   - 取值为'resume'，表示任务恢复，任务恢复时触发该事件。 |
-| callback | (progress: Progress) = & gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
+| callback | (progress: Progress) =&gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
 
 **错误码：**
 
@@ -464,7 +463,7 @@ on(event: 'remove', callback: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'remove' | 是 | 订阅的事件类型。   - 取值为'remove'，表示任务被移除，任务移除时触发该事件。 |
-| callback | (progress: Progress) = & gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
+| callback | (progress: Progress) =&gt; void | 是 | 回调函数，发生相关的事件时触发该回调方法。 |
 
 **错误码：**
 
@@ -567,7 +566,7 @@ on(event: 'wait', callback: Callback<WaitingReason>): void
 pause(callback: AsyncCallback<void>): void
 ```
 
-暂停任务，可以暂停正在等待/正在运行/正在重试的任务，已暂停的任务可被 [resume](#resume)恢复。使用callback异步回调。
+暂停任务，可以暂停正在等待/正在运行/正在重试的任务，已暂停的任务可被[resume](#resume)恢复。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -652,7 +651,7 @@ request.agent.create(context, config).then(async (task: request.agent.Task) => {
 pause(): Promise<void>
 ```
 
-暂停任务，可以暂停正在等待/正在运行/正在重试的任务，已暂停的任务可被 [resume](#resume)恢复。使用Promise异步回调。
+暂停任务，可以暂停正在等待/正在运行/正在重试的任务，已暂停的任务可被[resume](#resume)恢复。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -662,7 +661,7 @@ pause(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -838,7 +837,7 @@ resume(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -925,13 +924,13 @@ setMaxSpeed(speed: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| speed | number | 是 | 设置任务每秒能传输的字节数上限，单位为字节（B），最小值为16384字节，同时该值不得低于 [MinSpeed](arkts-basicservices-agent-minspeed-i.md)设置的最低速度。 |
+| speed | number | 是 | 设置任务每秒能传输的字节数上限，单位为字节（B），最小值为16384字节，同时该值不得低于[MinSpeed](arkts-basicservices-agent-minspeed-i.md)设置的最低速度。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -971,7 +970,10 @@ request.agent.create(context, config).then((task: request.agent.Task) => {
 start(callback: AsyncCallback<void>): void
 ```
 
-启动一个任务。使用callback异步回调。以下状态的任务可以被启动：
+启动一个任务。使用callback异步回调。
+
+以下状态的任务可以被启动：
+
 1. 刚被request.agent.create接口创建的任务。
 2. 使用request.agent.create接口创建的已经失败或者停止的下载任务。
 
@@ -1051,7 +1053,10 @@ request.agent.create(context, config).then((task: request.agent.Task) => {
 start(): Promise<void>
 ```
 
-启动一个任务。使用Promise异步回调。以下状态的任务可以被启动：
+启动一个任务。使用Promise异步回调。
+
+以下状态的任务可以被启动：
+
 1. 刚被request.agent.create接口创建的任务。
 2. 使用request.agent.create接口创建的已经失败或者停止的下载任务。
 
@@ -1071,7 +1076,7 @@ start(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -1129,7 +1134,7 @@ request.agent.create(context, config).then((task: request.agent.Task) => {
 stop(callback: AsyncCallback<void>): void
 ```
 
-停止任务，可以停止正在运行/正在等待/正在重试的任务，已停止的任务可被 [start](#start)恢复。使用callback异步回调。
+停止任务，可以停止正在运行/正在等待/正在重试的任务，已停止的任务可被[start](#start)恢复。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -1205,7 +1210,7 @@ request.agent.create(context, config).then(async (task: request.agent.Task) => {
 stop(): Promise<void>
 ```
 
-停止任务，可以停止正在运行/正在等待/正在重试的任务，已停止的任务可被 [start](#start)恢复。使用Promise异步回调。
+停止任务，可以停止正在运行/正在等待/正在重试的任务，已停止的任务可被[start](#start)恢复。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -1217,7 +1222,7 @@ stop(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

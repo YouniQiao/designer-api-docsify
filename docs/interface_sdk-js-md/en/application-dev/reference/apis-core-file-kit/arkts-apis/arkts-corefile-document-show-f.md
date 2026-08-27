@@ -30,7 +30,7 @@ Opens a file. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. An error code is returned. |
+| Promise&lt;void&gt; | Promise used to return the result. An error code is returned. |
 
 **Examples**
 

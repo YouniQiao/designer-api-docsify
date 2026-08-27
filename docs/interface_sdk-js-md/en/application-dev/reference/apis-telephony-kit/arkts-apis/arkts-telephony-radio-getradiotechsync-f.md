@@ -11,7 +11,8 @@
 function getRadioTechSync(slotId: number): NetworkRadioTech
 ```
 
-Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.  
+Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 18

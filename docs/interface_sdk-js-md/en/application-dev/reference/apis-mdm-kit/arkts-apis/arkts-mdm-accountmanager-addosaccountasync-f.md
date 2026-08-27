@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import accountManager from '@kit.MDMKit';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## addOsAccountAsync
@@ -39,7 +39,7 @@ Adds an account in the background. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;osAccount.OsAccountInfo & gt; | Promise used to return the added account information. |
+| Promise&lt;osAccount.OsAccountInfo&gt; | Promise used to return the added account information. |
 
 **Error codes:**
 

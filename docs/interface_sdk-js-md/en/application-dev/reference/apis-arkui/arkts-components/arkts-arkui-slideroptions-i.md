@@ -17,7 +17,9 @@ Provides information about the slider.
 direction?: Axis
 ```
 
-Whether the slider moves horizontally or vertically.Default value: **Axis.Horizontal**
+Whether the slider moves horizontally or vertically.
+
+Default value: **Axis.Horizontal**
 
 **Type:** Axis
 
@@ -37,8 +39,15 @@ Whether the slider moves horizontally or vertically.Default value: **Axis.Horizo
 max?: number
 ```
 
-Maximum value.Default value: **100**  
-**NOTE：**If the value of **min** is greater than or equal to the value of **max**, the **min** value defaults to **0**, and the **max** value defaults to **100**.If the value is not within the [min, max] range, the value of **min** or **max** is used, whichever is closer.
+Maximum value.
+
+Default value: **100**
+
+**NOTE：**
+
+If the value of **min** is greater than or equal to the value of **max**, the **min** value defaults to **0**, and the **max** value defaults to **100**.
+
+If the value is not within the [min, max] range, the value of **min** or **max** is used, whichever is closer.
 
 **Type:** number
 
@@ -58,7 +67,9 @@ Maximum value.Default value: **100**
 min?: number
 ```
 
-Minimum value.Default value: **0**
+Minimum value.
+
+Default value: **0**
 
 **Type:** number
 
@@ -78,8 +89,11 @@ Minimum value.Default value: **0**
 reverse?: boolean
 ```
 
-Whether the slider values are reversed.  
-**true**: A horizontal slider slides from right to left, and a vertical slider slides from bottom to top. **false**: A horizontal slider slides from left to right, and a vertical slider slides from top to bottom.Default value: **false**
+Whether the slider values are reversed.
+
+**true**: A horizontal slider slides from right to left, and a vertical slider slides from bottom to top. **false**: A horizontal slider slides from left to right, and a vertical slider slides from top to bottom.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -99,8 +113,15 @@ Whether the slider values are reversed.
 step?: number
 ```
 
-Step of the slider.Default value: **1**Value range: [0.01, max - min]  
-**NOTE：**If this parameter is set to a value less than 0 or greater than the value of **max**, the default value is used.
+Step of the slider.
+
+Default value: **1**
+
+Value range: [0.01, max - min]
+
+**NOTE：**
+
+If this parameter is set to a value less than 0 or greater than the value of **max**, the default value is used.
 
 **Type:** number
 
@@ -120,7 +141,9 @@ Step of the slider.Default value: **1**Value range: [0.01, max - min]
 style?: SliderStyle
 ```
 
-Style of the slider thumb and track.Default value: **SliderStyle.OutSet**
+Style of the slider thumb and track.
+
+Default value: **SliderStyle.OutSet**
 
 **Type:** [SliderStyle](arkts-arkui-sliderstyle-e.md)
 
@@ -140,7 +163,19 @@ Style of the slider thumb and track.Default value: **SliderStyle.OutSet**
 value?: number
 ```
 
-Current progress.Default value: same as the value of **min**.Since API version 10, this property supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).This property supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).Value range: [min, max]Values less than the value of **min** are adjusted to the value of **min**, and values greater than the value of **max** are capped at the value of **max**.The \$\$ operator enables two-way synchronization between the TS variable and the **Slider** component's **value**. For details, see [Example 7: Setting Two-Way Binding for the Slider](../../../reference/apis-arkui/arkui-ts/ts-basic-components-slider.md#example-7-setting-two-way-binding-for-the-slider).
+Current progress.
+
+Default value: same as the value of **min**.
+
+Since API version 10, this property supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+
+This property supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+
+Value range: [min, max]
+
+Values less than the value of **min** are adjusted to the value of **min**, and values greater than the value of **max** are capped at the value of **max**.
+
+The \$\$ operator enables two-way synchronization between the TS variable and the **Slider** component's **value**. For details, see [Example 7: Setting Two-Way Binding for the Slider](../../../reference/apis-arkui/arkui-ts/ts-basic-components-slider.md#example-7-setting-two-way-binding-for-the-slider).
 
 **Type:** number
 

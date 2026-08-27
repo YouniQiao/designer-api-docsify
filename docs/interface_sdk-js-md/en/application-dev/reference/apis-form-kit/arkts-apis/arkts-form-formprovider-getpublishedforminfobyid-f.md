@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## getPublishedFormInfoById
@@ -39,7 +39,7 @@ Obtains the information of the widget that has been added to the home screen on 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;formInfo.FormInfo & gt; | Promise used to return the information obtained. |
+| Promise&lt;formInfo.FormInfo&gt; | Promise used to return the information obtained. |
 
 **Error codes:**
 

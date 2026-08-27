@@ -1,6 +1,8 @@
 # SkillType
 
-Enumerates the skill types.@enum { number }
+Enumerates the skill types.
+
+@enum { number }
 
 **Since:** 26.0.0
 

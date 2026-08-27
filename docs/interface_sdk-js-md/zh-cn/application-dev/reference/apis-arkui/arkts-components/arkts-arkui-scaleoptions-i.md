@@ -21,7 +21,9 @@
 centerX?: number | string
 ```
 
-变换中心点x轴坐标。表示组件变换中心点（即锚点）的x方向坐标。取值可为string类型，如'50'，'50%'。单位：vp
+变换中心点x轴坐标。表示组件变换中心点（即锚点）的x方向坐标。取值可为string类型，如'50'，'50%'。
+
+单位：vp
 
 **类型：** number \| string
 
@@ -39,7 +41,9 @@ centerX?: number | string
 centerY?: number | string
 ```
 
-变换中心点y轴坐标。表示组件变换中心点（即锚点）的y方向坐标。取值可为string类型，如'50'，'50%'。单位：vp
+变换中心点y轴坐标。表示组件变换中心点（即锚点）的y方向坐标。取值可为string类型，如'50'，'50%'。
+
+单位：vp
 
 **类型：** number \| string
 

@@ -168,7 +168,7 @@ Because the system time on the device is untrusted, the certificate chain valida
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -308,7 +308,7 @@ such as certificate signature verification and certificate revocation check.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes | Certificate to verify. |
+| cert | X509Cert | Yes | Certificate to verify. |
 | params | [CertValidationParams](arkts-devicecertificate-cert-certvalidationparams-i.md) | Yes | Certificate validation parameters. |
 
 **Return value:**

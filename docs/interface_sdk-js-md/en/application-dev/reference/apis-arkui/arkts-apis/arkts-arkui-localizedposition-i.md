@@ -1,6 +1,8 @@
 # LocalizedPosition
 
-Defines the LocalizedPosition.@interface LocalizedPosition
+Defines the LocalizedPosition.
+
+@interface LocalizedPosition
 
 **Since:** 12
 

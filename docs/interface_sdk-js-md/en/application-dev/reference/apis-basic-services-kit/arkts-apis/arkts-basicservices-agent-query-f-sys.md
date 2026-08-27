@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## query
@@ -87,7 +86,7 @@ Queries specified task details.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;TaskInfo & gt; | the promise returned by the function. |
+| Promise&lt;TaskInfo&gt; | the promise returned by the function. |
 
 **Error codes:**
 

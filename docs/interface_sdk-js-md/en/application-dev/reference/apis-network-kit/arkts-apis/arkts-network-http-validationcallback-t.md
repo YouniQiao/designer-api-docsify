@@ -22,4 +22,4 @@ Self defined remote validation. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| boolean \| Promise & lt;boolean & gt; | Returns a boolean value indicating whether the validation is successful. Promise used to return the result. The value true indicates valid, and false indicates invalid. |
+| boolean \| Promise&lt;boolean&gt; | Returns a boolean value indicating whether the validation is successful. Promise used to return the result. The value true indicates valid, and false indicates invalid. |

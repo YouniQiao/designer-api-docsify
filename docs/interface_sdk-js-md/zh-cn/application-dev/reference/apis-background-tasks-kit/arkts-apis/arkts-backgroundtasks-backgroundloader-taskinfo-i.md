@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundLoader from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName
@@ -34,7 +34,7 @@ abilityName: string
 taskId: number
 ```
 
-任务id 取值范围为全体整数。
+任务id取值范围为全体整数。
 
 **类型：** number
 

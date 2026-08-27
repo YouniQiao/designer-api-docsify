@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import Environment from '@kit.CoreFileKit';
+import { Environment } from '@kit.CoreFileKit';
 ```
 
 ## getUserDocumentDir

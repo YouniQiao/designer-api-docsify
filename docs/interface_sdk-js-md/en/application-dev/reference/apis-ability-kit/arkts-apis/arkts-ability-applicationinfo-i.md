@@ -282,7 +282,8 @@ Resource information of the application icon. The resource information obtained 
 readonly installSource: string
 ```
 
-Installation source of an application. The options are as follows:  
+Installation source of an application. The options are as follows:
+
 - **pre-installed**: pre-installed application installed during the first boot.  
 - **ota**: pre-installed application added during system upgrade.  
 - **recovery**: pre-installed application manually restored by the user after uninstallation.  
@@ -352,7 +353,9 @@ Resource information of the application label. The resource information obtained
 readonly metadata: Map<string, Array<Metadata>>
 ```
 
-Metadata of the application. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).Note: Supported since API version 9 and deprecated since API version 10. You are advised to use **metadataArray** instead.
+Metadata of the application. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
+
+Note: Supported since API version 9 and deprecated since API version 10. You are advised to use **metadataArray** instead.
 
 **Type:** Map&lt;string, Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;&gt;
 

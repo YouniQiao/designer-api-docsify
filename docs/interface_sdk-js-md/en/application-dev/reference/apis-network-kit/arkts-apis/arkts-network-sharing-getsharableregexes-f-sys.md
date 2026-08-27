@@ -79,7 +79,7 @@ Obtains regular expressions of NICs of a specified type. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return an array of regular expressions. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return an array of regular expressions. |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@ Provides callbacks to be invoked when the scheduling conditions are met or the s
 ## Modules to Import
 
 ```TypeScript
-import WorkSchedulerExtensionAbility, { WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
+import { WorkSchedulerExtensionAbility, WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
 ```
 
 ## onWorkStart

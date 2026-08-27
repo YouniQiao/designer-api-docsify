@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## reloadAllForms
@@ -32,7 +32,7 @@ Reloads all widgets. Invoked in the main process of the application, this API no
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the number of widgets requested for update. |
+| Promise&lt;number&gt; | Promise used to return the number of widgets requested for update. |
 
 **Error codes:**
 

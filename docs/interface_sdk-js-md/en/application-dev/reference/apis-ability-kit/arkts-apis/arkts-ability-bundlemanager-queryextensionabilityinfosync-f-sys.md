@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## queryExtensionAbilityInfoSync
@@ -13,7 +13,9 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
     extensionAbilityFlags: number, userId?: number): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given want, ExtensionAbility type, ExtensionAbility flags, and user ID. This API returns the result synchronously.No permission is required for obtaining the caller's own information.
+Obtains the ExtensionAbility information based on the given want, ExtensionAbility type, ExtensionAbility flags, and user ID. This API returns the result synchronously.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
@@ -36,7 +38,7 @@ Obtains the ExtensionAbility information based on the given want, ExtensionAbili
 
 | Type | Description |
 | --- | --- |
-| Array & lt;ExtensionAbilityInfo & gt; | An array of ExtensionAbility information. |
+| Array&lt;ExtensionAbilityInfo&gt; | An array of ExtensionAbility information. |
 
 **Error codes:**
 
@@ -107,7 +109,9 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
     extensionAbilityFlags: number, userId?: number): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given Want, ExtensionAbility type, ExtensionAbility flags, and user ID. This API returns the result synchronously.No permission is required for obtaining the caller's own information.
+Obtains the ExtensionAbility information based on the given Want, ExtensionAbility type, ExtensionAbility flags, and user ID. This API returns the result synchronously.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 11
 
@@ -130,7 +134,7 @@ Obtains the ExtensionAbility information based on the given Want, ExtensionAbili
 
 | Type | Description |
 | --- | --- |
-| Array & lt;ExtensionAbilityInfo & gt; | An array of ExtensionAbility information obtained. |
+| Array&lt;ExtensionAbilityInfo&gt; | An array of ExtensionAbility information obtained. |
 
 **Error codes:**
 
@@ -201,7 +205,9 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
     userId?: number): Array<ExtensionAbilityInfo>
 ```
 
-Obtains the ExtensionAbility information based on the given ExtensionAbility type, ExtensionAbility flags, and user ID.No permission is required for obtaining the caller's own information.
+Obtains the ExtensionAbility information based on the given ExtensionAbility type, ExtensionAbility flags, and user ID.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 11
 
@@ -223,7 +229,7 @@ Obtains the ExtensionAbility information based on the given ExtensionAbility typ
 
 | Type | Description |
 | --- | --- |
-| Array & lt;ExtensionAbilityInfo & gt; | An array of ExtensionAbility information obtained. |
+| Array&lt;ExtensionAbilityInfo&gt; | An array of ExtensionAbility information obtained. |
 
 **Error codes:**
 

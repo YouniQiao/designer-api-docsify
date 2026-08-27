@@ -70,7 +70,7 @@ Checks whether network sharing is supported. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that network sharing is supported, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that network sharing is supported, and **false** means the opposite. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## on('readerMode')
@@ -54,7 +54,8 @@ function on(
   ): void
 ```
 
-Subscribes to the NFC tag read event so that the tag can be preferentially dispatched to a foreground application. You can also set the interval for detecting whether a card is present. This API uses an asynchronous callback to return the result.  
+Subscribes to the NFC tag read event so that the tag can be preferentially dispatched to a foreground application. You can also set the interval for detecting whether a card is present. This API uses an asynchronous callback to return the result.
+
 - The device enters the reader mode and disables card emulation.  
 - You can set the supported NFC tag technologies in **discTech** and set the interval for detecting whether a card  
 is present. The callback returns [TagInfo](arkts-connectivity-tag-taginfo-i.md) read.  

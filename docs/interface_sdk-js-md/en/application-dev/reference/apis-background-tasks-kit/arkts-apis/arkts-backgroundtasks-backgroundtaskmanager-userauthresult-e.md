@@ -48,7 +48,9 @@ The authorization is denied.
 GRANTED_ONCE = 3
 ```
 
-The authorization is granted this time.Note: The authorization record will be cleared when the application exits.
+The authorization is granted this time.
+
+Note: The authorization record will be cleared when the application exits.
 
 **Since:** 22
 
@@ -60,8 +62,12 @@ The authorization is granted this time.Note: The authorization record will be cl
 GRANTED_ALWAYS = 4
 ```
 
-The authorization is granted always.  
-**NOTE：**When the following common events are received, the related authorization records will be cleared:
+The authorization is granted always.
+
+**NOTE：**
+
+When the following common events are received, the related authorization records will be cleared:
+
 [COMMON_EVENT_PACKAGE_ADDED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_added), [COMMON_EVENT_PACKAGE_REMOVED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_removed), [COMMON_EVENT_BUNDLE_REMOVED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_bundle_removed), [COMMON_EVENT_PACKAGE_FULLY_REMOVED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_fully_removed), [COMMON_EVENT_PACKAGE_CHANGED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_package_changed).
 
 **Since:** 22

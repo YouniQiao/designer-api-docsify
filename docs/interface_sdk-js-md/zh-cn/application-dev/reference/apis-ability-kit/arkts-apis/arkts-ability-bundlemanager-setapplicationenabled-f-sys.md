@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## setApplicationEnabled
@@ -34,7 +34,7 @@ function setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -91,7 +91,7 @@ function setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用包名 |
-| appIndex | number | 是 | 应用的分身索引 取值范围为全体整数。 |
+| appIndex | number | 是 | 应用的分身索引取值范围为全体整数。 |
 | isEnabled | boolean | 是 | true表示启用应用程序，false表示禁用应用程序。 |
 | killProcess | boolean | 是 | true表示应用进程在禁用时会杀死应用进程，而值为false表示禁用时不会杀死应用程序进程 |
 
@@ -99,7 +99,7 @@ function setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回值 |
+| Promise&lt;void&gt; | 无返回值 |
 
 **错误码：**
 
@@ -160,7 +160,7 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback:
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundleName。 |
 | isEnabled | boolean | 是 | 值为true表示使能，值为false表示禁用。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当设置应用禁用或使能状态成功时，err为 undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当设置应用禁用或使能状态成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -222,7 +222,7 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

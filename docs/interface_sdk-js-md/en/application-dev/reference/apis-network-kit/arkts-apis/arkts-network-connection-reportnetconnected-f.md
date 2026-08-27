@@ -30,7 +30,7 @@ Reports the network availability to the network management module. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md). |
+| netHandle | NetHandle | Yes | Network handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the network status is reported successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
@@ -63,7 +63,8 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 function reportNetConnected(netHandle: NetHandle): Promise<void>
 ```
 
-Reports that the network is available to the network management module. This API uses a promise to return the result.  
+Reports that the network is available to the network management module. This API uses a promise to return the result.
+
 **Permission required**: ohos.permission.GET_NETWORK_INFO and ohos.permission.INTERNET
 
 **Since:** 8
@@ -76,13 +77,13 @@ Reports that the network is available to the network management module. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md). |
+| netHandle | NetHandle | Yes | Network handle. For details, see [NetHandle](arkts-network-connection-nethandle-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

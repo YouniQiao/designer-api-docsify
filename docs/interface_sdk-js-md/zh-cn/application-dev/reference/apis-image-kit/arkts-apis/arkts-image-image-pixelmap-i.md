@@ -9,7 +9,7 @@ The **PixelMap** class provides APIs to read or write image data and obtain imag
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## applyColorSpace
@@ -81,7 +81,7 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **错误码：**
 
@@ -131,13 +131,13 @@ Crops the PixelMap.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | The region to crop. |
+| region | Region | 是 | The region to crop. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
 
 **错误码：**
 
@@ -198,7 +198,7 @@ Crops the PixelMap.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | The region to crop. |
+| region | Region | 是 | The region to crop. |
 
 **错误码：**
 
@@ -266,7 +266,7 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
 
 **错误码：**
 
@@ -357,7 +357,9 @@ function applyFlipSync(pixelMap: image.PixelMap) {
 applyRotate(angle: number): Promise<void>
 ```
 
-Rotates the PixelMap.Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
+Rotates the PixelMap.
+
+Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
 
 **起始版本：** 26.0.0
 
@@ -379,7 +381,7 @@ Rotates the PixelMap.Note: YUV format PixelMaps only support rotation angles tha
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
 
 **错误码：**
 
@@ -415,7 +417,9 @@ function applyRotate(pixelMap: image.PixelMap) {
 applyRotateSync(angle: number): void
 ```
 
-Rotates the PixelMap.Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
+Rotates the PixelMap.
+
+Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
 
 **起始版本：** 26.0.0
 
@@ -491,7 +495,7 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
 
 **错误码：**
 
@@ -606,7 +610,7 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
 
 **错误码：**
 
@@ -707,7 +711,7 @@ Copies this PixelMap object. This API uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
 **错误码：**
 
@@ -749,7 +753,7 @@ Copies this PixelMap object. This API returns the result synchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
+| PixelMap | PixelMap object. If the operation fails, an error is thrown. |
 
 **错误码：**
 
@@ -799,7 +803,7 @@ The method is used for the transformation of the image formats. Pixel data will 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **错误码：**
 
@@ -833,7 +837,9 @@ function convertPixelFormat(pixelMap: image.PixelMap) {
 createAlphaPixelmap(): Promise<PixelMap>
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API uses a promise to return the result.Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractalphapixelmap) instead for better exception handling capabilities.
+Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractalphapixelmap) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -847,7 +853,7 @@ Creates a PixelMap object that contains only the alpha channel information. This
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
 **示例**
 
@@ -869,7 +875,9 @@ function createAlphaPixelmap(pixelMap: image.PixelMap) {
 createAlphaPixelmap(callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API returns the result through a callback.Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractalphapixelmap) instead for better exception handling capabilities.
+Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API returns the result through a callback.
+
+Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractalphapixelmap) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -907,7 +915,9 @@ function createAlphaPixelmap(pixelMap: image.PixelMap) {
 createAlphaPixelmapSync(): PixelMap
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. This API returns the result synchronously. It is invalid for YUV images.Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#extractalphapixelmapsync) instead for better exception handling capabilities.
+Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. This API returns the result synchronously. It is invalid for YUV images.
+
+Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#extractalphapixelmapsync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -919,7 +929,7 @@ Creates a PixelMap object that contains only the alpha channel information. This
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
+| PixelMap | PixelMap object. If the operation fails, an error is thrown. |
 
 **错误码：**
 
@@ -964,7 +974,7 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | Area to crop. It must be within the original image's dimension (in pixels). |
+| region | Region | 是 | Area to crop. It must be within the original image's dimension (in pixels). |
 | x | number | 是 | Scale factor of the width. It must not be **0**. |
 | y | number | 是 | Scale factor of the height. It must not be **0**. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | Anti-aliasing level. Default value: **NONE**. |
@@ -973,7 +983,7 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
 **错误码：**
 
@@ -1024,7 +1034,7 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | Area to crop. It must be within the original image's dimension (in pixels). |
+| region | Region | 是 | Area to crop. It must be within the original image's dimension (in pixels). |
 | x | number | 是 | Scale factor of the width. It must not be **0**. |
 | y | number | 是 | Scale factor of the height. It must not be **0**. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | Anti-aliasing level. Default value: **NONE**. |
@@ -1033,7 +1043,7 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
+| PixelMap | PixelMap object. If the operation fails, an error is thrown. |
 
 **错误码：**
 
@@ -1092,7 +1102,7 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
 **错误码：**
 
@@ -1141,7 +1151,7 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
+| PixelMap | PixelMap object. If the operation fails, an error is thrown. |
 
 **错误码：**
 
@@ -1174,7 +1184,9 @@ function createScaledPixelMapSync(pixelMap: image.PixelMap) {
 crop(region: Region, callback: AsyncCallback<void>): void
 ```
 
-Crops this image based on a given size. This API uses an asynchronous callback to return the result.Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) instead for better exception handling capabilities.
+Crops this image based on a given size. This API uses an asynchronous callback to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -1188,7 +1200,7 @@ Crops this image based on a given size. This API uses an asynchronous callback t
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
+| region | Region | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **示例**
@@ -1214,7 +1226,9 @@ function crop(pixelMap: image.PixelMap) {
 crop(region: Region): Promise<void>
 ```
 
-Crops a PixelMap based on a given size. This API uses a promise to return the result.Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) instead for better exception handling capabilities.
+Crops a PixelMap based on a given size. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -1228,13 +1242,13 @@ Crops a PixelMap based on a given size. This API uses a promise to return the re
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
+| region | Region | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **示例**
 
@@ -1257,7 +1271,9 @@ function crop(pixelMap: image.PixelMap) {
 cropSync(region: Region): void
 ```
 
-Crops this image based on a given size. This API returns the result synchronously.Starting from API 26.0.0, it is recommended to use [applyCropSync](#applycropsync) instead for better exception handling capabilities.
+Crops this image based on a given size. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [applyCropSync](#applycropsync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -1269,7 +1285,7 @@ Crops this image based on a given size. This API returns the result synchronousl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
+| region | Region | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
 
 **错误码：**
 
@@ -1317,7 +1333,7 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | A Promise of the new ALPHA_U8 format PixelMap. |
+| Promise&lt;PixelMap&gt; | A Promise of the new ALPHA_U8 format PixelMap. |
 
 **错误码：**
 
@@ -1367,7 +1383,7 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | A new ALPHA_U8 format PixelMap. |
+| PixelMap | A new ALPHA_U8 format PixelMap. |
 
 **错误码：**
 
@@ -1401,7 +1417,9 @@ function extractAlphaPixelMapSync(pixelMap: image.PixelMap) {
 flip(horizontal: boolean, vertical: boolean, callback: AsyncCallback<void>): void
 ```
 
-Flips this image horizontally or vertically, or both. This API uses an asynchronous callback to return the result.Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) instead for better exception handling capabilities.
+Flips this image horizontally or vertically, or both. This API uses an asynchronous callback to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -1443,7 +1461,9 @@ function flip(pixelMap: image.PixelMap) {
 flip(horizontal: boolean, vertical: boolean): Promise<void>
 ```
 
-Flips a PixelMap based on a given angle. This API uses a promise to return the result.Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) instead for better exception handling capabilities.
+Flips a PixelMap based on a given angle. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -1464,7 +1484,7 @@ Flips a PixelMap based on a given angle. This API uses a promise to return the r
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **示例**
 
@@ -1488,7 +1508,9 @@ function flip(pixelMap: image.PixelMap) {
 flipSync(horizontal: boolean, vertical: boolean): void
 ```
 
-Flips this image horizontally or vertically, or both. This API returns the result synchronously.Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyflipsync) instead for better exception handling capabilities.
+Flips this image horizontally or vertically, or both. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyflipsync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -2057,7 +2079,9 @@ async function marshal() {
 opacity(rate: number, callback: AsyncCallback<void>): void
 ```
 
-Sets an opacity rate for this image. This API uses an asynchronous callback to return the result. It is invalid for YUV images.Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) instead for better exception handling capabilities.
+Sets an opacity rate for this image. This API uses an asynchronous callback to return the result. It is invalid for YUV images.
+
+Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -2097,7 +2121,9 @@ function opacity(pixelMap: image.PixelMap) {
 opacity(rate: number): Promise<void>
 ```
 
-Sets an opacity rate for this image. It is invalid for YUV images. This API uses a promise to return the result.Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) instead for better exception handling capabilities.
+Sets an opacity rate for this image. It is invalid for YUV images. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -2117,7 +2143,7 @@ Sets an opacity rate for this image. It is invalid for YUV images. This API uses
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **示例**
 
@@ -2140,7 +2166,9 @@ function opacity(pixelMap: image.PixelMap) {
 opacitySync(rate: number): void
 ```
 
-Sets an opacity rate for this image. This API returns the result synchronously. It is invalid for YUV images.Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setopacitysync) instead for better exception handling capabilities.
+Sets an opacity rate for this image. This API returns the result synchronously. It is invalid for YUV images.
+
+Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setopacitysync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -2206,7 +2234,7 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer. The 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
 
 **错误码：**
 
@@ -2294,7 +2322,9 @@ function readAllPixelsToBufferSync(pixelMap: image.PixelMap) {
 readPixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixelstoarea) instead for better exception handling capabilities.
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+
+Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixelstoarea) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -2314,7 +2344,7 @@ Reads the pixels in the area specified by [PositionArea](arkts-image-image-posit
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **示例**
 
@@ -2358,7 +2388,9 @@ function readPixelsYUV(pixelMap: image.PixelMap) {
 readPixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixelstoarea) instead for better exception handling capabilities.
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+
+Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixelstoarea) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -2421,7 +2453,9 @@ function readPixelsYUV(pixelMap: image.PixelMap) {
 readPixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API returns the result synchronously.Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readpixelstoareasync) instead for better exception handling capabilities.
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readpixelstoareasync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -2492,7 +2526,7 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
 
 **错误码：**
 
@@ -2644,7 +2678,9 @@ function readPixelsToAreaSyncYUV(pixelMap: image.PixelMap) {
 readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses a promise to return the result.Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readallpixelstobuffer) instead for better exception handling capabilities.
+Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readallpixelstobuffer) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -2664,7 +2700,7 @@ Reads the pixels of this PixelMap object based on the PixelMap's pixel format an
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **示例**
 
@@ -2687,7 +2723,9 @@ function readPixelsToBuffer(pixelMap: image.PixelMap) {
 readPixelsToBuffer(dst: ArrayBuffer, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses an asynchronous callback to return the result.Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readallpixelstobuffer) instead for better exception handling capabilities.
+Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses an asynchronous callback to return the result.
+
+Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readallpixelstobuffer) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -2727,7 +2765,9 @@ function readPixelsToBuffer(pixelMap: image.PixelMap) {
 readPixelsToBufferSync(dst: ArrayBuffer): void
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API returns the result synchronously.Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#readallpixelstobuffersync) instead for better exception handling capabilities.
+Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#readallpixelstobuffersync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -2906,7 +2946,7 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **示例**
 
@@ -2989,7 +3029,9 @@ function release(pixelMap: image.PixelMap) {
 rotate(angle: number, callback: AsyncCallback<void>): void
 ```
 
-Rotates this image based on a given angle. This API uses an asynchronous callback to return the result.Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) instead for better exception handling capabilities.
+Rotates this image based on a given angle. This API uses an asynchronous callback to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -3029,7 +3071,9 @@ function rotate(pixelMap: image.PixelMap) {
 rotate(angle: number): Promise<void>
 ```
 
-Rotates a PixelMap based on a given angle. This API uses a promise to return the result.Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) instead for better exception handling capabilities.
+Rotates a PixelMap based on a given angle. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -3049,7 +3093,7 @@ Rotates a PixelMap based on a given angle. This API uses a promise to return the
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **示例**
 
@@ -3072,7 +3116,9 @@ function rotate(pixelMap: image.PixelMap) {
 rotateSync(angle: number): void
 ```
 
-Rotates this image based on a given angle. This API returns the result synchronously.Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyrotatesync) instead for better exception handling capabilities.
+Rotates this image based on a given angle. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyrotatesync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -3116,7 +3162,9 @@ function rotateSync(pixelMap: image.PixelMap) {
 scale(x: number, y: number, callback: AsyncCallback<void>): void
 ```
 
-Scales this image based on the scale factors of the width and height. This API uses an asynchronous callback to return the result.Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
+Scales this image based on the scale factors of the width and height. This API uses an asynchronous callback to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -3158,7 +3206,9 @@ function scale(pixelMap: image.PixelMap) {
 scale(x: number, y: number): Promise<void>
 ```
 
-Scales this image based on the scale factors of the width and height. This API uses a promise to return the result.Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
+Scales this image based on the scale factors of the width and height. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -3179,7 +3229,7 @@ Scales this image based on the scale factors of the width and height. This API u
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **示例**
 
@@ -3203,7 +3253,9 @@ function scale(pixelMap: image.PixelMap) {
 scale(x: number, y: number, level: AntiAliasingLevel): Promise<void>
 ```
 
-Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API uses a promise to return the result.Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
+Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -3225,7 +3277,7 @@ Scales this image based on the specified anti-aliasing level and the scale facto
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **错误码：**
 
@@ -3256,7 +3308,9 @@ function scaleSync(pixelMap: image.PixelMap) {
 scaleSync(x: number, y: number): void
 ```
 
-Scales this image based on the scale factors of the width and height. This API returns the result synchronously.Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscalesync) instead for better exception handling capabilities.
+Scales this image based on the scale factors of the width and height. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscalesync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -3302,7 +3356,9 @@ function scaleSync(pixelMap: image.PixelMap) {
 scaleSync(x: number, y: number, level: AntiAliasingLevel): void
 ```
 
-Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API returns the result synchronously.Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscalesync) instead for better exception handling capabilities.
+Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscalesync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -3349,7 +3405,9 @@ function scaleSync(pixelMap: image.PixelMap) {
 setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 ```
 
-Set color space of pixel map.This method is only used to set the colorspace property of pixelmap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)} or {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager, AsyncCallback&lt;void&gt;)}.
+Set color space of pixel map.
+
+This method is only used to set the colorspace property of pixelmap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)} or {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager, AsyncCallback&lt;void&gt;)}.
 
 **起始版本：** 12
 
@@ -3452,7 +3510,7 @@ Sets the value for the metadata with a given key in this PixelMap. This API uses
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **错误码：**
 
@@ -3515,7 +3573,7 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
 
 **错误码：**
 
@@ -3687,7 +3745,7 @@ Convert pixelmap to standard dynamic range.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **错误码：**
 
@@ -3728,7 +3786,9 @@ async function toSdr(context: Context) {
 translate(x: number, y: number, callback: AsyncCallback<void>): void
 ```
 
-Translates this image based on given coordinates. This API uses an asynchronous callback to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytranslate) instead for better exception handling capabilities.
+Translates this image based on given coordinates. This API uses an asynchronous callback to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+
+Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytranslate) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -3770,7 +3830,9 @@ function translate(pixelMap: image.PixelMap) {
 translate(x: number, y: number): Promise<void>
 ```
 
-Translates a PixelMap based on given coordinates. This API uses a promise to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytranslate) instead for better exception handling capabilities.
+Translates a PixelMap based on given coordinates. This API uses a promise to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+
+Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytranslate) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -3791,7 +3853,7 @@ Translates a PixelMap based on given coordinates. This API uses a promise to ret
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **示例**
 
@@ -3815,7 +3877,9 @@ function translate(pixelMap: image.PixelMap) {
 translateSync(x: number, y: number): void
 ```
 
-Translates this image based on given coordinates. This API returns the result synchronously. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applytranslatesync) instead for better exception handling capabilities.
+Translates this image based on given coordinates. This API returns the result synchronously. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+
+Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applytranslatesync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -3877,7 +3941,7 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
 **错误码：**
 
@@ -3970,7 +4034,7 @@ Reads the pixel data from a buffer and writes the data to the PixelMap. The sour
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
 
 **错误码：**
 
@@ -4076,7 +4140,9 @@ function writeAllPixelsFromBufferSync(pixelMap: image.PixelMap) {
 writeBufferToPixels(src: ArrayBuffer): Promise<void>
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses a promise to return the result.Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeallpixelsfrombuffer) instead for better exception handling capabilities.
+Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses a promise to return the result.
+
+Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeallpixelsfrombuffer) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -4096,7 +4162,7 @@ Reads the pixels in the buffer based on the PixelMap's pixel format and writes t
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **示例**
 
@@ -4123,7 +4189,9 @@ function writeBufferToPixels(pixelMap: image.PixelMap) {
 writeBufferToPixels(src: ArrayBuffer, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses an asynchronous callback to return the result.Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeallpixelsfrombuffer) instead for better exception handling capabilities.
+Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses an asynchronous callback to return the result.
+
+Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeallpixelsfrombuffer) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -4167,7 +4235,9 @@ function writeBufferToPixels(pixelMap: image.PixelMap) {
 writeBufferToPixelsSync(src: ArrayBuffer): void
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API returns the result synchronously.Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync](#writeallpixelsfrombuffersync) instead for better exception handling capabilities.
+Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync](#writeallpixelsfrombuffersync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -4215,7 +4285,9 @@ function writeBufferToPixelsSync(pixelMap: image.PixelMap) {
 writePixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writepixelsfromarea) instead for better exception handling capabilities.
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+
+Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writepixelsfromarea) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -4235,7 +4307,7 @@ Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).regi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **示例**
 
@@ -4285,7 +4357,9 @@ function writePixelsYUV(pixelMap: image.PixelMap) {
 writePixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writepixelsfromarea) instead for better exception handling capabilities.
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+
+Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writepixelsfromarea) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -4376,7 +4450,7 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
 
 **错误码：**
 
@@ -4558,7 +4632,9 @@ function writePixelsFromAreaSyncYUV(pixelMap: image.PixelMap) {
 writePixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API returns the result synchronously.Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#writepixelsfromareasync) instead for better exception handling capabilities.
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API returns the result synchronously.
+
+Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#writepixelsfromareasync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 

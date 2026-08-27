@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## createAbilityConnectionSession
@@ -13,7 +13,7 @@ function createAbilityConnectionSession(serviceName: string, context: Context, p
         connectOptions: ConnectOptions): number
 ```
 
-创建应用间的协同会话。协同会话用于管理跨设备通信的连接状态， 需要先在两端设备分别创建会话，然后通过connect建立连接。
+创建应用间的协同会话。协同会话用于管理跨设备通信的连接状态，需要先在两端设备分别创建会话，然后通过connect建立连接。
 
 **起始版本：** 18
 
@@ -30,13 +30,13 @@ function createAbilityConnectionSession(serviceName: string, context: Context, p
 | serviceName | string | 是 | 应用设置的服务名称（两端必须一致），最大长度为256字符。 |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 表示应用上下文。 |
 | peerInfo | [PeerInfo](arkts-distributedservice-abilityconnectionmanager-peerinfo-i.md) | 是 | 对端的协同信息。 |
-| connectOptions | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-ability-connectoptions-t.md) | 是 | 应用设置的连接选项。 |
+| connectOptions | ConnectOptions | 是 | 应用设置的连接选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 成功创建的协同会话ID，用于后续的connect、acceptConnect、sendMessage、sendData、disconnect等接口调用。 取值范围是大于100的整数。 |
+| number | 成功创建的协同会话ID，用于后续的connect、acceptConnect、sendMessage、sendData、disconnect等接口调用。取值范围是大于100的整数。 |
 
 **错误码：**
 

@@ -9,7 +9,7 @@ Provides the ImageProcessor type, including the processing function.
 ## Modules to Import
 
 ```TypeScript
-import videoProcessingEngine from '@kit.ImageKit';
+import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
 ## enhanceDetail
@@ -33,13 +33,13 @@ The function generate the destinationImage from sourceImage with necessary scali
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
 | width | number | Yes | The zoom value of width. |
 | height | number | Yes | The zoom value of height. |
-| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No | The quality level. |
+| level | QualityLevel | No | The quality level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | A Promise instance used to return the PixelMap object. |
+| Promise&lt;image.PixelMap&gt; | A Promise instance used to return the PixelMap object. |
 
 **Error codes:**
 
@@ -83,13 +83,13 @@ The function generate the destinationImage from sourceImage with necessary scali
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
 | scale | number | Yes | The zoom ratio. |
-| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No | The quality level. |
+| level | QualityLevel | No | The quality level. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | A Promise instance used to return the PixelMap object. |
+| Promise&lt;image.PixelMap&gt; | A Promise instance used to return the PixelMap object. |
 
 **Error codes:**
 
@@ -134,7 +134,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
 | width | number | Yes | The zoom value of width. |
 | height | number | Yes | The zoom value of height. |
-| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No | The quality level. |
+| level | QualityLevel | No | The quality level. |
 
 **Return value:**
 
@@ -185,7 +185,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
 | scale | number | Yes | The zoom ratio. |
-| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No | The quality level. |
+| level | QualityLevel | No | The quality level. |
 
 **Return value:**
 

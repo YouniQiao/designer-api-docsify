@@ -11,7 +11,7 @@ Provides APIs for custom user behavior recording for Gallery.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addLcdJumpCount
@@ -32,13 +32,13 @@ Increases the value of **LcdJumpCount** by 1 for the data in the database based 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ids | Array & lt;number & gt; | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md). |
+| ids | Array&lt;number&gt; | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
 
 **Error codes:**
 
@@ -66,13 +66,13 @@ Increases the value of **shareCount** by 1 for the data in the database based on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ids | Array & lt;number & gt; | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md). |
+| ids | Array&lt;number&gt; | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
 
 **Error codes:**
 
@@ -106,7 +106,7 @@ Adds custom user behavior recordings. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -202,7 +202,7 @@ Obtains custom user behavior recordings based on retrieval options. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| optionCheck | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
+| optionCheck | FetchOptions | Yes | Retrieval options. |
 
 **Return value:**
 
@@ -260,13 +260,13 @@ Removes custom user behavior recordings based on retrieval options. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| optionCheck | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
+| optionCheck | FetchOptions | Yes | Retrieval options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -323,7 +323,7 @@ Updates the existing database fields based on custom user behavior recordings. T
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
 
 **Error codes:**
 

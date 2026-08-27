@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## constructUDPSocketInstance
@@ -22,7 +22,7 @@ Creates a **UDPSocket** object.
 
 | Type | Description |
 | --- | --- |
-| [UDPSocket](arkts-network-connection-udpsocket-t.md) | UDPSocket** object. |
+| UDPSocket | UDPSocket** object. |
 
 **Examples**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## reportAVScreenCaptureUserChoice
@@ -31,7 +31,7 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

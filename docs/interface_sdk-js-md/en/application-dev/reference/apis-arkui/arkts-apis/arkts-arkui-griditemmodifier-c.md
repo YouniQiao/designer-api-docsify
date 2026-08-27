@@ -1,6 +1,8 @@
 # GridItemModifier
 
-Defines GridItem Modifier@extends GridItemAttribute @implements AttributeModifier&lt;GridItemAttribute&gt;
+Defines GridItem Modifier
+
+@extends GridItemAttribute @implements AttributeModifier&lt;GridItemAttribute&gt;
 
 **Inheritance/Implementation:** GridItemModifier extends [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md#griditemattribute) and implements AttributeModifier<GridItemAttribute>
 

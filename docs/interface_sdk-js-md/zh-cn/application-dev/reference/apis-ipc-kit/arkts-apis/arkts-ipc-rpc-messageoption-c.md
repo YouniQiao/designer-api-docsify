@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import rpc from '@kit.IPCKit';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## constructor
@@ -30,8 +30,8 @@ MessageOption构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| syncFlags | number | 否 | 同步调用或异步调用标志。取值范围：{0, 1}。同步调用标志：0（当需要立即获取响应结果时选择）；异步调用标志：1（当不需要立即获取响应结果时选择）。 不传入时默认为0（同步调用）。 |
-| waitTime | number | 否 | 调用rpc最长等待时间（单位：秒）。默认值：8取值范围：(0, 3000]。 当RPC调用耗时较长时，可适当增加等待时间；当需要快速响应时，可适当减少等待时间。不传入时使用默认等待时间8秒。 |
+| syncFlags | number | 否 | 同步调用或异步调用标志。取值范围：{0, 1}。同步调用标志：0（当需要立即获取响应结果时选择）；异步调用标志：1（当不需要立即获取响应结果时选择）。不传入时默认为0（同步调用）。 |
+| waitTime | number | 否 | 调用rpc最长等待时间（单位：秒）。默认值：8取值范围：(0, 3000]。当RPC调用耗时较长时，可适当增加等待时间；当需要快速响应时，可适当减少等待时间。不传入时使用默认等待时间8秒。 |
 
 **示例**
 
@@ -161,7 +161,7 @@ try {
 isAsync(): boolean
 ```
 
-获取 [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)调用中确定同步或是异步的标志。
+获取[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)调用中确定同步或是异步的标志。
 
 **起始版本：** 9
 
@@ -195,7 +195,7 @@ try {
 setAsync(isAsync: boolean): void
 ```
 
-设置 [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)调用中确定同步或是异步的标志。
+设置[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)调用中确定同步或是异步的标志。
 
 **起始版本：** 9
 
@@ -302,7 +302,7 @@ try {
 static readonly TF_ACCEPT_FDS: number
 ```
 
-指示 [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)接口可以传递文件描述符。
+指示[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)接口可以传递文件描述符。
 
 **类型：** number
 

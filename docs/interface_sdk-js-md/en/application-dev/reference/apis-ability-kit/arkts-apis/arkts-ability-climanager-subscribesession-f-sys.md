@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cliManager from '@kit.AbilityKit';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## subscribeSession
@@ -35,7 +35,7 @@ Subscribe session event.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## cleanBundleCacheFiles
@@ -12,7 +12,9 @@ import bundleManager from '@kit.AbilityKit';
 function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-根据给定的bundleName清理BundleCache。使用callback异步回调。调用方清理自身缓存数据时不需要权限。
+根据给定的bundleName清理BundleCache。使用callback异步回调。
+
+调用方清理自身缓存数据时不需要权限。
 
 **起始版本：** 9
 
@@ -27,7 +29,7 @@ function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示要清理其缓存数据的应用程序的bundleName。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当清理应用缓存目录数据成功，err为 undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当清理应用缓存目录数据成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -69,7 +71,9 @@ try {
 function cleanBundleCacheFiles(bundleName: string): Promise<void>
 ```
 
-根据给定的bundleName清理BundleCache。使用Promise异步回调。调用方清理自身缓存数据时不需要权限。
+根据给定的bundleName清理BundleCache。使用Promise异步回调。
+
+调用方清理自身缓存数据时不需要权限。
 
 **起始版本：** 9
 
@@ -89,7 +93,7 @@ function cleanBundleCacheFiles(bundleName: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -129,7 +133,9 @@ try {
 function cleanBundleCacheFiles(bundleName: string, appIndex: number): Promise<void>
 ```
 
-根据给定的bundleName和appIndex清理BundleCache。使用Promise异步回调。调用方清理自身缓存数据时不需要权限。
+根据给定的bundleName和appIndex清理BundleCache。使用Promise异步回调。
+
+调用方清理自身缓存数据时不需要权限。
 
 **起始版本：** 15
 
@@ -150,7 +156,7 @@ function cleanBundleCacheFiles(bundleName: string, appIndex: number): Promise<vo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemTime from '@kit.BasicServicesKit';
-import systemTimer from '@kit.BasicServicesKitr';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## getRealTime
@@ -130,7 +129,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the time elapsed since system startup, including the deep sleep time. |
+| Promise&lt;number&gt; | Promise used to return the time elapsed since system startup, including the deep sleep time. |
 
 **Error codes:**
 

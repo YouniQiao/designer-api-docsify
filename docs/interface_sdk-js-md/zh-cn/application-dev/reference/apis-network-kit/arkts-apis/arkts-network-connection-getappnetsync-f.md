@@ -21,7 +21,7 @@ function getAppNetSync(): NetHandle
 
 | 类型 | 说明 |
 | --- | --- |
-| [NetHandle](arkts-network-connection-nethandle-i.md) | 返回App绑定的数据网络。 |
+| NetHandle | 返回App绑定的数据网络。 |
 
 **错误码：**
 

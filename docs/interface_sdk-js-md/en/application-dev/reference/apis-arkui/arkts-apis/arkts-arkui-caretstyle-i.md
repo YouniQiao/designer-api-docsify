@@ -17,7 +17,9 @@ Defines the cursor style.
 color?: ResourceColor
 ```
 
-Caret color.Default value: **'#ff007dff'**
+Caret color.
+
+Default value: **'#ff007dff'**
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -35,7 +37,9 @@ Caret color.Default value: **'#ff007dff'**
 width?: Length
 ```
 
-Caret size. It cannot be set in percentage.Default value: **'2vp'**
+Caret size. It cannot be set in percentage.
+
+Default value: **'2vp'**
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

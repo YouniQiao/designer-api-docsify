@@ -1,6 +1,8 @@
 # ScriptItem
 
-Describes the **ScriptItem** object registered with the **Web** component through the [javaScriptOnDocumentStart](arkts-arkweb-web-attribute.md#javascriptondocumentstart) attribute.@interface ScriptItem [since 11 - 11]
+Describes the **ScriptItem** object registered with the **Web** component through the [javaScriptOnDocumentStart](arkts-arkweb-web-attribute.md#javascriptondocumentstart) attribute.
+
+@interface ScriptItem [since 11 - 11]
 
 **Since:** 11
 
@@ -9,9 +11,6 @@ Describes the **ScriptItem** object registered with the **Web** component throug
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## script
@@ -37,6 +36,7 @@ scriptRules: Array<string>
 ```
 
 A set of matching rules for allowed sources.
+
 1. To allow URLs from all sources, use the wildcard "*".
 2. To perform exact matching, specify the website address, for example, "https://www.example.com".
 3. To perform fuzzy matching, use the "*" wildcard, for example, "https://*.example.com".

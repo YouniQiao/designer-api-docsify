@@ -1,6 +1,8 @@
 # Screen (System API)
 
-Defines the [physical screen](../../../displaymanager/display-terminology.md#physical-screen) instance.Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md) or [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md) to obtain a Screen instance.
+Defines the [physical screen](../../../displaymanager/display-terminology.md#physical-screen) instance.
+
+Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md) or [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md) to obtain a Screen instance.
 
 **Since:** 9
 
@@ -11,8 +13,7 @@ Defines the [physical screen](../../../displaymanager/display-terminology.md#phy
 ## Modules to Import
 
 ```TypeScript
-import screen from '@kit.ArkUI';
-import screenshot from '@kit.ArkUIshot';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## setDensityDpi
@@ -110,7 +111,7 @@ Sets the pixel density of the screen. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -177,7 +178,7 @@ Sets the screen orientation. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | [Orientation](#orientation) | Yes | Screen orientation. The value must be an enumerated value of **Orientation**. |
+| orientation | Orientation | Yes | Screen orientation. The value must be an enumerated value of **Orientation**. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the screen orientation is successfully set, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -247,13 +248,13 @@ Sets the screen orientation. This API uses a promise to return the result. The s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | [Orientation](#orientation) | Yes | Screen orientation. The value must be an enumerated value of **Orientation**. |
+| orientation | Orientation | Yes | Screen orientation. The value must be an enumerated value of **Orientation**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -322,14 +323,14 @@ Set the orientation of the screen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | [Orientation](#orientation) | Yes | Screen orientation. orientation value must from enum Orientation. |
+| orientation | Orientation | Yes | Screen orientation. orientation value must from enum Orientation. |
 | orientationOptions | [OrientationOptions](arkts-arkui-screen-orientationoptions-i-sys.md) | No | Options of setting orientation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -463,7 +464,7 @@ Sets the active mode of the screen. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

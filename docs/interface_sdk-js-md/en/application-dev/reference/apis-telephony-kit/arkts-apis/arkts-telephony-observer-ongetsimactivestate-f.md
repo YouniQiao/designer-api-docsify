@@ -11,7 +11,8 @@
 function onGetSimActiveState(slotId: number, callback: Callback<boolean>): void
 ```
 
-Registers an observer for SIM card activation state changes. This API uses an asynchronous callback to return the execution result.  
+Registers an observer for SIM card activation state changes. This API uses an asynchronous callback to return the execution result.
+
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
 **Since:** 23

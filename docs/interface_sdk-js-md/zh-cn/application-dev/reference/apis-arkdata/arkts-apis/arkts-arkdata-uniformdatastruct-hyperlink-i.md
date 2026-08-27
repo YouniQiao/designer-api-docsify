@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import uniformDataStruct from '@kit.ArkData';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## description
@@ -34,7 +34,17 @@ description?: string
 details?: Record<string, string>
 ```
 
-字典类型对象，key和value均为string类型，用于描述Hyperlink的详细属性内容。非必填字段，默认值为空字典对象。例如，可生成一个details内容为{"title":"标题","content":"内容"}的数据对象。当需要存储额外的超链接属性信息时传入此参数，不传入时默认值为空字典对象，不提供额外属性。
+字典类型对象，key和value均为string类型，用于描述Hyperlink的详细属性内容。非必填字段，默认值为空字典对象。例如，可生成一个details内容为
+
+{
+
+"title":"标题",
+
+"content":"内容"
+
+}
+
+的数据对象。当需要存储额外的超链接属性信息时传入此参数，不传入时默认值为空字典对象，不提供额外属性。
 
 **类型：** Record&lt;string, string&gt;
 
@@ -50,7 +60,7 @@ details?: Record<string, string>
 readonly uniformDataType: 'general.hyperlink'
 ```
 
-统一数据类型标识为超链接类型数据，固定为“general.hyperlink”，数据类型描述信息见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
+统一数据类型标识为超链接类型数据，固定为“general.hyperlink”，数据类型描述信息见[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
 
 **类型：** 'general.hyperlink'
 

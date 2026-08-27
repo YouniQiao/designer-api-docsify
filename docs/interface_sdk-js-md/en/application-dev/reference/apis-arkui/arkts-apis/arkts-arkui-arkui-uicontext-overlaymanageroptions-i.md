@@ -1,6 +1,8 @@
 # OverlayManagerOptions
 
-Provides the parameters used for initializing [OverlayManager](arkts-arkui-arkui-uicontext-uicontext-c.md).@interface OverlayManagerOptions
+Provides the parameters used for initializing [OverlayManager](arkts-arkui-arkui-uicontext-uicontext-c.md).
+
+@interface OverlayManagerOptions
 
 **Since:** 15
 
@@ -21,7 +23,8 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 onBackPress?: OnOverlayBackPressCallback
 ```
 
-Callback for intercepting back-press events on an overlay.  
+Callback for intercepting back-press events on an overlay.
+
 **NOTE：**
 1. When this callback is registered and **enableBackPressedEvent** is set to **true**,
 the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback to decide whether the event should be propagated to the underlying components.

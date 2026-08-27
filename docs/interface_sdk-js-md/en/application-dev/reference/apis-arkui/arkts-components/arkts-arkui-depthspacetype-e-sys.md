@@ -1,6 +1,8 @@
 # DepthSpaceType (System API)
 
-Depth space type enumeration.@enum { number }
+Depth space type enumeration.
+
+@enum { number }
 
 **Since:** 26.0.0
 

@@ -14,7 +14,7 @@ Defines a **TCPSocketConnection** object, that is, the connection between the TC
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## close
@@ -166,7 +166,7 @@ Closes a TCP socket connection. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -393,7 +393,7 @@ Obtains the local socket address of a **TCPSocketConnection** connection. This A
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NetAddress & gt; | Promise used to return the result. |
+| Promise&lt;NetAddress&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -721,7 +721,7 @@ Obtains the remote address of a socket connection. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NetAddress & gt; | Promise used to return the result. |
+| Promise&lt;NetAddress&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -851,7 +851,7 @@ Obtains the file descriptor of a TCPSocketConnection connection. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the socket file descriptor. |
+| Promise&lt;number&gt; | Promise used to return the socket file descriptor. |
 
 **Error codes:**
 
@@ -1515,7 +1515,7 @@ Sends data over a **TCPSocketConnection** object. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

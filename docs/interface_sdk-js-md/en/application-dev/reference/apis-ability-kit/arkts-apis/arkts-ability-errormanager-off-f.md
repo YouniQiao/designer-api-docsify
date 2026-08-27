@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import errorManager from '@kit.AbilityKit';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## off('error')
@@ -12,7 +12,9 @@ import errorManager from '@kit.AbilityKit';
 function off(type: 'error', observerId: number, callback: AsyncCallback<void>): void
 ```
 
-Unregisters an error observer. This API uses an asynchronous callback to return the result.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+Unregisters an error observer. This API uses an asynchronous callback to return the result.
+
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 9
 
@@ -65,7 +67,9 @@ try {
 function off(type: 'error', observerId: number): Promise<void>
 ```
 
-Unregisters an error observer. This API uses a promise to return the result.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+Unregisters an error observer. This API uses a promise to return the result.
+
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 9
 
@@ -84,7 +88,7 @@ Unregisters an error observer. This API uses a promise to return the result.This
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -123,7 +127,9 @@ try {
 function off(type: 'loopObserver', observer?: LoopObserver): void
 ```
 
-Unregisters an observer for the message processing duration of the main thread.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+Unregisters an observer for the message processing duration of the main thread.
+
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 12
 
@@ -136,7 +142,7 @@ Unregisters an observer for the message processing duration of the main thread.T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'loopObserver' | Yes | Event type. It is fixed at **'loopObserver'**, indicating an observer for the message processing duration of the main thread. |
-| observer | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | No | Observer to unregister. |
+| observer | LoopObserver | No | Observer to unregister. |
 
 **Error codes:**
 
@@ -159,7 +165,9 @@ errorManager.off("loopObserver");
 function off(type: 'unhandledRejection', observer?: UnhandledRejectionObserver): void
 ```
 
-Unregisters an observer for the promise rejection.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+Unregisters an observer for the promise rejection.
+
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 12
 
@@ -239,7 +247,9 @@ errorManager.off("unhandledRejection", observer);
 function off(type: 'globalUnhandledRejectionDetected', observer?: GlobalObserver): void
 ```
 
-Unregisters a rejected promise observer. After the deregistration, promise exceptions in the process cannot be listened for.If the observer passed in is not in the observer queue registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic.
+Unregisters a rejected promise observer. After the deregistration, promise exceptions in the process cannot be listened for.
+
+If the observer passed in is not in the observer queue registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic.
 
 **Since:** 18
 
@@ -295,7 +305,11 @@ errorManager.off("globalUnhandledRejectionDetected", promiseFunc);
 function off(type: 'freeze', observer?: FreezeObserver): void
 ```
 
-Unregisters an observer for the main thread freeze event of the application.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.If the observer passed in does not match the observer registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic.
+Unregisters an observer for the main thread freeze event of the application.
+
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+
+If the observer passed in does not match the observer registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic.
 
 **Since:** 18
 
@@ -336,7 +350,9 @@ errorManager.off("freeze", freezeCallback);
 function off(type: 'globalErrorOccurred', observer?: GlobalObserver): void
 ```
 
-Unregisters a global error observer. Once unregistered, global listening cannot be implemented.If the observer passed in is not in the observer queue registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic.
+Unregisters a global error observer. Once unregistered, global listening cannot be implemented.
+
+If the observer passed in is not in the observer queue registered via the **on** API, error code 16300004 is thrown. Therefore, you are advised to handle this using **try-catch** logic.
 
 **Since:** 18
 

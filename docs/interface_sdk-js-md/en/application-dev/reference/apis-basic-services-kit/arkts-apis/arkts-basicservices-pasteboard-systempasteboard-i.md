@@ -9,7 +9,7 @@ Provides **SystemPasteboard** APIs. Before calling any **SystemPasteboard** API,
 ## Modules to Import
 
 ```TypeScript
-import pasteboard from '@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## clear
@@ -73,7 +73,7 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -147,7 +147,7 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -210,13 +210,13 @@ Detects [patterns](arkts-basicservices-pasteboard-pattern-e.md) in the system pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| patterns | Array & lt;Pattern & gt; | Yes | Pattern to be detected in the system pasteboard. |
+| patterns | Array&lt;Pattern&gt; | Yes | Pattern to be detected in the system pasteboard. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;Pattern & gt; & gt; | Promise used to return the detected patterns. |
+| Promise&lt;Array&lt;Pattern&gt;&gt; | Promise used to return the detected patterns. |
 
 **Error codes:**
 
@@ -476,7 +476,7 @@ Obtains the PasteData from the system pasteboard with system progress. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [GetDataParams](arkts-basicservices-pasteboard-getdataparams-i.md) | Yes | Parameters required when an application obtains the Data from the system pasteboard, including the destination path, file conflict options, and progress indicator types. |
+| params | GetDataParams | Yes | Parameters required when an application obtains the Data from the system pasteboard, including the destination path, file conflict options, and progress indicator types. |
 
 **Return value:**
 
@@ -556,7 +556,7 @@ Obtains the types of PasteData in the system pasteboard. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the types. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the types. |
 
 **Examples**
 
@@ -675,7 +675,7 @@ Obtains a **PasteData** object from the system pasteboard. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;unifiedDataChannel.UnifiedData & gt; | Promise used to return the system PasteData. |
+| Promise&lt;unifiedDataChannel.UnifiedData&gt; | Promise used to return the system PasteData. |
 
 **Error codes:**
 
@@ -806,7 +806,7 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
+| Promise&lt;boolean&gt; | Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
 
 **Examples**
 
@@ -967,7 +967,7 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
+| Promise&lt;boolean&gt; | Callback used to return the result. Returns **true** if the system pasteboard contains data; returns **false** otherwise. |
 
 **Examples**
 
@@ -1066,7 +1066,7 @@ Unsubscribes the content change event of the system pasteboard.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'update' | Yes | Event type. The value **'update'** indicates changes in the pasteboard content. |
-| callback | () = & gt; void | No | the callback to remove. If this parameter is not filled in, it indicates that all callbacks for this application will be cleared. Otherwise, it indicates that the specified callback will be cleared. |
+| callback | () =&gt; void | No | the callback to remove. If this parameter is not filled in, it indicates that all callbacks for this application will be cleared. Otherwise, it indicates that the specified callback will be cleared. |
 
 **Error codes:**
 
@@ -1132,7 +1132,7 @@ Subscribes the content change event of the system pasteboard.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'update' | Yes | Event type. The value **'update'** indicates changes in the pasteboard content. |
-| callback | () = & gt; void | Yes | Callback invoked when the pasteboard content changes. |
+| callback | () =&gt; void | Yes | Callback invoked when the pasteboard content changes. |
 
 **Error codes:**
 
@@ -1327,7 +1327,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1463,7 +1463,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -1503,7 +1503,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@ Represents the NearLink service.
 ## Modules to Import
 
 ```TypeScript
-import ssap from '@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## events

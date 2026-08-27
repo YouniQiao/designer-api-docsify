@@ -16,7 +16,9 @@ Enumerates the KV store types.
 DEVICE_COLLABORATION = 0
 ```
 
-Device KV store.The device KV store manages data by device, which eliminates conflicts. Data can be queried by device.
+Device KV store.
+
+The device KV store manages data by device, which eliminates conflicts. Data can be queried by device.
 
 **Since:** 7
 
@@ -32,7 +34,9 @@ Device KV store.The device KV store manages data by device, which eliminates con
 SINGLE_VERSION = 1
 ```
 
-Single KV store.The single KV store does not differentiate data by device. If the same key is modified by different devices, the data will be overwritten.
+Single KV store.
+
+The single KV store does not differentiate data by device. If the same key is modified by different devices, the data will be overwritten.
 
 **Since:** 7
 

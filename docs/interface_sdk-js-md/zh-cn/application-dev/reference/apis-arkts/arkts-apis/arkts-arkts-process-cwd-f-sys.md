@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import process from '@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## cwd

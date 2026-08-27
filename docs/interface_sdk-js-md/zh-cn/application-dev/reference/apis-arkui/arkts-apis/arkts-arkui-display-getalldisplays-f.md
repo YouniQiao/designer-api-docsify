@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## getAllDisplays

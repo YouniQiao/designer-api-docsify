@@ -29,7 +29,7 @@ Chooses files of the specified types. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. An error code is returned. |
+| Promise&lt;string&gt; | Promise used to return the result. An error code is returned. |
 
 **Examples**
 

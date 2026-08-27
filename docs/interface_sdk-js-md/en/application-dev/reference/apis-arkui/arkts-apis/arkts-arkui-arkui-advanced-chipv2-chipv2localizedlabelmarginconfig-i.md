@@ -20,7 +20,7 @@ end?: LengthMetrics
 
 end localized label margin length.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ start?: LengthMetrics
 
 start localized label margin length.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 26.0.0
 

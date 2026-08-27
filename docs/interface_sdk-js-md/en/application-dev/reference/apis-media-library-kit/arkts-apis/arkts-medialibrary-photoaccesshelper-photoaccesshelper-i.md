@@ -9,7 +9,7 @@ Helper functions to access photos and albums.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## applyChanges
@@ -38,7 +38,7 @@ Applies media changes. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -115,7 +115,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(photoType: PhotoType, extension: string, options: CreateOptions, callback: AsyncCallback<string>): void
 ```
 
-Creates an image or video asset with the specified file type, file name extension, and options. This API uses an asynchronous callback to return the result.If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video asset with the specified file type, file name extension, and options. This API uses an asynchronous callback to return the result.
+
+If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 10
 
@@ -129,7 +131,7 @@ Creates an image or video asset with the specified file type, file name extensio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
+| photoType | PhotoType | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. |
 | options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | Yes | Options used for creation. Currently, only **title** is supported, for example, **{title: 'testPhoto'}**.    **NOTE：**If a **subtype** option is passed, the configuration does not take effect. Only DEFAULT images can be saved. The file name must not contain any invalid characters, which are:.. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the URI of the created image or video asset. |
@@ -173,7 +175,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback<string>): void
 ```
 
-Creates an image or video asset with the specified file type and file name extension. This API uses an asynchronous callback to return the result.If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video asset with the specified file type and file name extension. This API uses an asynchronous callback to return the result.
+
+If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 10
 
@@ -187,7 +191,7 @@ Creates an image or video asset with the specified file type and file name exten
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
+| photoType | PhotoType | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the URI of the created image or video asset. |
 
@@ -227,7 +231,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): Promise<string>
 ```
 
-Creates an image or video asset with the specified file type, file name extension, and options. This API uses a promise to return the result.If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video asset with the specified file type, file name extension, and options. This API uses a promise to return the result.
+
+If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 10
 
@@ -241,7 +247,7 @@ Creates an image or video asset with the specified file type, file name extensio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
+| photoType | PhotoType | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. |
 | options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | No | Options used for creation. Currently, only **title** is supported, for example, **{title: 'testPhoto'}**.    **NOTE：**If a **subtype** option is passed, the configuration does not take effect. Only DEFAULT images can be saved. The file name must not contain any invalid characters, which are:.. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
@@ -249,7 +255,7 @@ Creates an image or video asset with the specified file type, file name extensio
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the URI of the created image or video asset. |
+| Promise&lt;string&gt; | Promise used to return the URI of the created image or video asset. |
 
 **Error codes:**
 
@@ -289,7 +295,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAssetWithShortTermPermission(photoCreationConfig: PhotoCreationConfig): Promise<string>
 ```
 
-Creates an asset with a temporary permission of the given period. When this API is called by an application for the first time, a dialog box will be displayed for the user to confirm whether to save the asset. If the user agrees to save the asset, the asset instance will be created and the file URI granted with the save permission will be returned. The application can write the asset based on the URI.Within 5 minutes after the user agrees to save the asset, if the same application calls this API again, the authorized URI can be automatically returned without the need to display the confirmation dialog box. Exiting the application will terminate the authorization, and the user need to re-trigger the dialog box for authorization confirmation when the application is re-launched.
+Creates an asset with a temporary permission of the given period. When this API is called by an application for the first time, a dialog box will be displayed for the user to confirm whether to save the asset. If the user agrees to save the asset, the asset instance will be created and the file URI granted with the save permission will be returned. The application can write the asset based on the URI.
+
+Within 5 minutes after the user agrees to save the asset, if the same application calls this API again, the authorized URI can be automatically returned without the need to display the confirmation dialog box. Exiting the application will terminate the authorization, and the user need to re-trigger the dialog box for authorization confirmation when the application is re-launched.
 
 **Since:** 12
 
@@ -307,7 +315,7 @@ Creates an asset with a temporary permission of the given period. When this API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the URI of the asset saved. The URIs are granted with the permission for the application to write data. If the URIs fail to be generated, a batch creation error code will be returned. |
+| Promise&lt;string&gt; | Promise used to return the URI of the asset saved. The URIs are granted with the permission for the application to write data. If the URIs fail to be generated, a batch creation error code will be returned. |
 
 **Error codes:**
 
@@ -395,7 +403,7 @@ Displays the dialog box for the first time for the user to confirm whether to sa
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the URI of the media library file to the application. The application can use the returned URI to write data. |
+| Promise&lt;string&gt; | Promise used to return the URI of the media library file to the application. The application can use the returned URI to write data. |
 
 **Error codes:**
 
@@ -426,7 +434,7 @@ Creates a dialog box for deleting media files. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uriList | Array & lt;string & gt; | Yes | URIs of the media files to delete. A maximum of 300 media files can be deleted. |
+| uriList | Array&lt;string&gt; | Yes | URIs of the media files to delete. A maximum of 300 media files can be deleted. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
@@ -494,13 +502,13 @@ Creates a dialog box for deleting media files. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uriList | Array & lt;string & gt; | Yes | URIs of the media files to delete. A maximum of 300 media files can be deleted. |
+| uriList | Array&lt;string&gt; | Yes | URIs of the media files to delete. A maximum of 300 media files can be deleted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -546,7 +554,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createPhotoAsset(photoType: PhotoType, extension: string, title?: string): Promise<string>
 ```
 
-Creates an image or video resource with the specified file type, extension, and title. This API uses a promise to return the result.If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+Creates an image or video resource with the specified file type, extension, and title. This API uses a promise to return the result.
+
+If you do not have the **ohos.permission.WRITE_IMAGEVIDEO** permission, you can create a media asset by using a security component or an authorization pop-up. For details, see [Saving Media Assets](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **Since:** 23
 
@@ -562,7 +572,7 @@ Creates an image or video resource with the specified file type, extension, and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | Yes | Type of the file to be created. For example, **IMAGE** or **VIDEO**. |
+| photoType | PhotoType | Yes | Type of the file to be created. For example, **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension. For example, **'jpg'**. |
 | title | string | No | Title of the image or video resource. |
 
@@ -570,7 +580,7 @@ Creates an image or video resource with the specified file type, extension, and 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the URL of the created image or video. |
+| Promise&lt;string&gt; | Promise used to return the URL of the created image or video. |
 
 **Error codes:**
 
@@ -606,7 +616,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getAlbumIdByLpath(lpath: string): Promise<number>
 ```
 
-Obtains the album ID in the media library based on the album's virtual path. This API uses a promise to return the result.This API supports the following albums: camera application album, screenshot application album, and screen recording application album.
+Obtains the album ID in the media library based on the album's virtual path. This API uses a promise to return the result.
+
+This API supports the following albums: camera application album, screenshot application album, and screen recording application album.
 
 **Since:** 22
 
@@ -624,7 +636,7 @@ Obtains the album ID in the media library based on the album's virtual path. Thi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the album ID. |
+| Promise&lt;number&gt; | Promise used to return the album ID. |
 
 **Error codes:**
 
@@ -664,7 +676,9 @@ getAlbums(
     ): void
 ```
 
-Obtains albums based on the specified options and album type. This API uses an asynchronous callback to return the result.Before the operation, ensure that the albums to obtain exist.
+Obtains albums based on the specified options and album type. This API uses an asynchronous callback to return the result.
+
+Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 10
 
@@ -676,9 +690,9 @@ Obtains albums based on the specified options and album type. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md) | Yes | Type of the album. |
-| subtype | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | Yes | Subtype of the album. |
-| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
+| type | AlbumType | Yes | Type of the album. |
+| subtype | AlbumSubtype | Yes | Subtype of the album. |
+| options | FetchOptions | Yes | Retrieval options. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -729,7 +743,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getAlbums(type: AlbumType, subtype: AlbumSubtype, callback: AsyncCallback<FetchResult<Album>>): void
 ```
 
-Obtains albums by type. This API uses an asynchronous callback to return the result.Before the operation, ensure that the albums to obtain exist.
+Obtains albums by type. This API uses an asynchronous callback to return the result.
+
+Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 10
 
@@ -741,8 +757,8 @@ Obtains albums by type. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md) | Yes | Type of the album. |
-| subtype | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | Yes | Subtype of the album. |
+| type | AlbumType | Yes | Type of the album. |
+| subtype | AlbumSubtype | Yes | Subtype of the album. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -785,7 +801,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: FetchOptions): Promise<FetchResult<Album>>
 ```
 
-Obtains albums based on the specified options and album type. This API uses a promise to return the result.Before the operation, ensure that the albums to obtain exist.
+Obtains albums based on the specified options and album type. This API uses a promise to return the result.
+
+Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 10
 
@@ -797,15 +815,15 @@ Obtains albums based on the specified options and album type. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md) | Yes | Type of the album. |
-| subtype | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | Yes | Subtype of the album. |
-| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
+| type | AlbumType | Yes | Type of the album. |
+| subtype | AlbumSubtype | Yes | Subtype of the album. |
+| options | FetchOptions | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;FetchResult & lt;Album & gt; & gt; | Promise used to return the result. |
+| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -866,7 +884,7 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
+| options | FetchOptions | Yes | Retrieval options. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Yes | Callback function. If files from the album are obtained successfully, **err** is **undefined**, and **data** is the result set of the obtained image and video data ([FetchResult](arkts-file-photoaccesshelper.md)). Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -956,13 +974,13 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
+| options | FetchOptions | Yes | Retrieval options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;FetchResult & lt;PhotoAsset & gt; & gt; | Promise used to return the image and video assets obtained. |
+| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise used to return the image and video assets obtained. |
 
 **Error codes:**
 
@@ -1050,13 +1068,13 @@ Obtains burst assets. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | burstKey | string | Yes | Universally Unique Identifier (UUID) of a group of burst photos, that is, **BURST_KEY** of [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md). The string contains 36 bytes. |
-| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
+| options | FetchOptions | Yes | Retrieval options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;FetchResult & lt;PhotoAsset & gt; & gt; | Promise used to return the result. |
+| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1115,7 +1133,7 @@ Obtains the name of the album that the **PhotoPickerComponent** shows by default
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the name of the default album. |
+| Promise&lt;string&gt; | Promise used to return the name of the default album. |
 
 **Error codes:**
 
@@ -1159,13 +1177,13 @@ Obtains the information about the recent image or video when the application use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RecentPhotoOptions](arkts-medialibrary-photoaccesshelper-recentphotooptions-c.md) | No | Options for retrieving the recent image or video. If this parameter is not specified, the latest image is retrieved according to the creation time. If this parameter is specified, it must match the **options** configuration in the **RecentPhotoComponent**. Otherwise, there may be discrepancies where the API finds a recent image or video but the component does not. |
+| options | RecentPhotoOptions | No | Options for retrieving the recent image or video. If this parameter is not specified, the latest image is retrieved according to the creation time. If this parameter is specified, it must match the **options** configuration in the **RecentPhotoComponent**. Otherwise, there may be discrepancies where the API finds a recent image or video but the component does not. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;RecentPhotoInfo & gt; | Promise used to return the information about the recent image or video. |
+| Promise&lt;RecentPhotoInfo&gt; | Promise used to return the information about the recent image or video. |
 
 **Examples**
 
@@ -1206,13 +1224,13 @@ Obtains the list of image or video file name extensions supported by the media l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | Yes | Type of the file. |
+| photoType | PhotoType | Yes | Type of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return an array of the supported image or video file name extensions. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return an array of the supported image or video file name extensions. |
 
 **Error codes:**
 
@@ -1371,6 +1389,7 @@ offSinglePhotoAlbumChange(album?: Album, callback?: Callback<AlbumChangeInfos>):
 ```
 
 Unregisters a listener for a single album. Note the following:
+
 1. If no parameter is specified, all listeners for the single albums are unregistered.
 2. If **album** is specified but **callback** is not specified, all callback listeners of the album are unregistered.
 3. If both **album** and **callback** are specified, only the specified callback listener is unregistered.
@@ -1385,7 +1404,7 @@ Unregisters a listener for a single album. Note the following:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | No | Album for which the listener is unregistered. After the unregistration is complete, any change to the album is no longer returned through the callback. |
+| album | Album | No | Album for which the listener is unregistered. After the unregistration is complete, any change to the album is no longer returned through the callback. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No | Callback used for the unregistration. If this parameter is not specified, all callbacks of the **album** parameter are unregistered. |
 
 **Error codes:**
@@ -1457,6 +1476,7 @@ offSinglePhotoChange(asset?: PhotoAsset, callback?: Callback<PhotoAssetChangeInf
 ```
 
 Unregisters the listener for a single asset. Note the following:
+
 1. If no parameter is specified, all listeners for the single assets are unregistered.
 2. If **asset** is specified but **callback** is not specified,
 all callback listeners of the **asset** are unregistered.
@@ -1472,7 +1492,7 @@ all callback listeners of the **asset** are unregistered.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | No | Asset for which the listener is canceled. After the unregistration is complete, any change to the **asset** is no longer returned through the **callback**. If this parameter is not specified, all listeners for a single asset are unregistered. |
+| asset | PhotoAsset | No | Asset for which the listener is canceled. After the unregistration is complete, any change to the **asset** is no longer returned through the **callback**. If this parameter is not specified, all listeners for a single asset are unregistered. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No | Callback used for the unregistration. If this parameter is not specified, all callbacks of the **asset** parameter are unregistered. |
 
 **Error codes:**
@@ -1676,7 +1696,7 @@ Registers a listener for changes of a single common asset. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | Yes | Album to be listened for. After the registration is complete, any change to the albums is returned through the callback. |
+| album | Album | Yes | Album to be listened for. After the registration is complete, any change to the albums is returned through the callback. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes | Callback used to return the album information after change, which is [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md).    **NOTE：**This API can be used to register multiple different callbacks. |
 
 **Error codes:**
@@ -1746,7 +1766,7 @@ Registers a listener for changes of a single common asset. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | Yes | Asset to be listened for. After the registration is complete, any change to the media assets is returned through the callback. |
+| asset | PhotoAsset | Yes | Asset to be listened for. After the registration is complete, any change to the media assets is returned through the callback. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes | Callback used to return the media asset information after change, which is [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md).    **NOTE：**This API can be used to register multiple different callbacks. |
 
 **Error codes:**
@@ -1870,7 +1890,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases the **PhotoAccessHelper** instance. This API uses an asynchronous callback to return the result.Call this API when the APIs of the PhotoAccessHelper instance are no longer used.
+Releases the **PhotoAccessHelper** instance. This API uses an asynchronous callback to return the result.
+
+Call this API when the APIs of the PhotoAccessHelper instance are no longer used.
 
 **Since:** 10
 
@@ -1913,7 +1935,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 release(): Promise<void>
 ```
 
-Releases the **PhotoAccessHelper** instance. This API uses a promise to return the result.Call this API when the APIs of the PhotoAccessHelper instance are no longer used.
+Releases the **PhotoAccessHelper** instance. This API uses a promise to return the result.
+
+Call this API when the APIs of the PhotoAccessHelper instance are no longer used.
 
 **Since:** 10
 
@@ -1923,7 +1947,7 @@ Releases the **PhotoAccessHelper** instance. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1967,13 +1991,13 @@ requestPhotoUrisReadPermission(srcFileUris: Array<string>): Promise<Array<string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| srcFileUris | Array & lt;string & gt; | Yes | [URIs](../../../file-management/user-file-uri-intro.md#media-file-uri) of the images or videos to be granted with the permission.    **NOTE：**Only image and video URIs are supported, and the maximum number of URIs is 100. |
+| srcFileUris | Array&lt;string&gt; | Yes | [URIs](../../../file-management/user-file-uri-intro.md#media-file-uri) of the images or videos to be granted with the permission.    **NOTE：**Only image and video URIs are supported, and the maximum number of URIs is 100. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the URIs granted with the permission. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs granted with the permission. |
 
 **Error codes:**
 
@@ -2011,7 +2035,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 requestPhotoUrisReadPermissionEx(srcFileUris: Array<string>): Promise<RequestReadPermissionResult>
 ```
 
-Grants the read permission for unauthorized URIs. This API uses a promise to return the authorization result.It contains the list of URIs that have been created and granted the save permission and the list of invalid URIs.
+Grants the read permission for unauthorized URIs. This API uses a promise to return the authorization result.
+
+It contains the list of URIs that have been created and granted the save permission and the list of invalid URIs.
 
 **Since:** 23
 
@@ -2025,7 +2051,7 @@ Grants the read permission for unauthorized URIs. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| srcFileUris | Array & lt;string & gt; | Yes | [URIs](../../../file-management/user-file-uri-intro.md#media-file-uri) of the images or videos to be granted with the permission.    **NOTE：**Only image and video URIs are supported, and the maximum number of URIs is 100. |
+| srcFileUris | Array&lt;string&gt; | Yes | [URIs](../../../file-management/user-file-uri-intro.md#media-file-uri) of the images or videos to be granted with the permission.    **NOTE：**Only image and video URIs are supported, and the maximum number of URIs is 100. |
 
 **Return value:**
 
@@ -2087,7 +2113,7 @@ Sets the asset compatibility capability. The system performs compatibility proce
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2119,7 +2145,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 showAssetsCreationDialog(srcFileUris: Array<string>, photoCreationConfigs: Array<PhotoCreationConfig>): Promise<Array<string>>
 ```
 
-Displays a dialog box for the user to confirm whether to save the images or videos. If the user agrees to save the images or videos, this API returns a list of URIs that have been created and granted save permissions (this list is permanent), and the application can use these URIs to write the images or videos. If the user declines to save the images or videos, this API returns an empty list.The dialog box must display the application name, but this cannot be directly obtained. Therefore, before calling this API, ensure that the **label** and **icon** items are configured in the **abilities** tag in the [module.json5 configuration file](../../../quick-start/module-configuration-file.md). Note that the icon is not affected by the **icon** item in the **abilities** tag and cannot be modified.
+Displays a dialog box for the user to confirm whether to save the images or videos. If the user agrees to save the images or videos, this API returns a list of URIs that have been created and granted save permissions (this list is permanent), and the application can use these URIs to write the images or videos. If the user declines to save the images or videos, this API returns an empty list.
+
+The dialog box must display the application name, but this cannot be directly obtained. Therefore, before calling this API, ensure that the **label** and **icon** items are configured in the **abilities** tag in the [module.json5 configuration file](../../../quick-start/module-configuration-file.md). Note that the icon is not affected by the **icon** item in the **abilities** tag and cannot be modified.
 
 > **NOTE：**
 > 
@@ -2135,14 +2163,14 @@ Displays a dialog box for the user to confirm whether to save the images or vide
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| srcFileUris | Array & lt;string & gt; | Yes | [URIs](../../../file-management/user-file-uri-intro.md#media-file-uri) of the images or videos to be saved to the media library.    **NOTE：** - A maximum of 100 images can be saved at a time. - Only image and video URIs are supported. - URIs cannot be manually constructed. You must call APIs to obtain them. For details, see [Obtaining a Media File URI](../../../file-management/user-file-uri-intro.md#obtaining-a-media-file-uri). |
+| srcFileUris | Array&lt;string&gt; | Yes | [URIs](../../../file-management/user-file-uri-intro.md#media-file-uri) of the images or videos to be saved to the media library.    **NOTE：** - A maximum of 100 images can be saved at a time. - Only image and video URIs are supported. - URIs cannot be manually constructed. You must call APIs to obtain them. For details, see [Obtaining a Media File URI](../../../file-management/user-file-uri-intro.md#obtaining-a-media-file-uri). |
 | photoCreationConfigs | Array&lt;[PhotoCreationConfig](arkts-medialibrary-photoaccesshelper-photocreationconfig-i.md)&gt; | Yes | Configuration for saving the images or videos, including the file names. The value must be consistent with that of **srcFileUris**.    **NOTE：**If a **subtype** option is passed, the configuration does not take effect. Only DEFAULT images can be saved. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return a URI list. The URIs are granted with the permission for the application to write data. If the URIs fail to be generated, a batch creation error code will be returned. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return a URI list. The URIs are granted with the permission for the application to write data. If the URIs fail to be generated, a batch creation error code will be returned. |
 
 **Error codes:**
 
@@ -2214,14 +2242,14 @@ Displays a dialog box for the user to confirm whether to save the images or vide
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| srcFileUris | Array & lt;string & gt; | Yes | [URIs](../../../file-management/user-file-uri-intro.md#media-file-uri) of the images or videos to be saved to the media library.    **NOTE：** - A maximum of 100 images can be saved at a time. - Only image and video URIs are supported. - URIs cannot be manually constructed. You must call APIs to obtain them. For details, see [Obtaining a Media File URI](../../../file-management/user-file-uri-intro.md#obtaining-a-media-file-uri). |
+| srcFileUris | Array&lt;string&gt; | Yes | [URIs](../../../file-management/user-file-uri-intro.md#media-file-uri) of the images or videos to be saved to the media library.    **NOTE：** - A maximum of 100 images can be saved at a time. - Only image and video URIs are supported. - URIs cannot be manually constructed. You must call APIs to obtain them. For details, see [Obtaining a Media File URI](../../../file-management/user-file-uri-intro.md#obtaining-a-media-file-uri). |
 | creationSettings | Array&lt;[CreationSetting](arkts-medialibrary-photoaccesshelper-creationsetting-i.md)&gt; | Yes | Configuration for saving images or videos to the media library, including the file name. The URI in this parameter must correspond to that in the **srcFileUris** parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return a URI list. The application can use the returned URI to write data. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return a URI list. The application can use the returned URI to write data. |
 
 **Error codes:**
 
@@ -2300,7 +2328,7 @@ Displays a dialog box for the user to confirm whether to save an image or video.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the URI of the media library file to the application. The URIs are granted with the permission for the application to write data. If the URIs fail to be generated, a batch creation error code will be returned. |
+| Promise&lt;string&gt; | Promise used to return the URI of the media library file to the application. The URIs are granted with the permission for the application to write data. If the URIs fail to be generated, a batch creation error code will be returned. |
 
 **Error codes:**
 

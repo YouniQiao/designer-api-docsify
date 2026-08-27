@@ -1,8 +1,8 @@
 # AeadParamsSpec
 
-用于AEAD（带附加数据的认证加密）对称加解密的 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法参数，继承自 [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)。
+用于AEAD（带附加数据的认证加密）对称加解密的[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法参数，继承自[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)。
 
-适用于[AES算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#aes)的CCM和GCM分组模式。 适用于[SM4算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#sm4)的GCM分组模式。 适用于 [ChaCha20-Poly1305算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#chacha20) 分组模式。
+适用于[AES算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#aes)的CCM和GCM分组模式。适用于[SM4算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#sm4)的GCM分组模式。适用于[ChaCha20-Poly1305算法](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#chacha20)分组模式。
 
 > **说明：**
 > 
@@ -21,7 +21,7 @@
 ## 导入模块
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## authenticatedData
@@ -74,7 +74,7 @@ tagLen?: number
 
 认证标签长度，单位为字节。
 
-加密时，标签将被添加到密文末尾。 解密时，标签应位于密文末尾。 取值应为整数。
+加密时，标签将被添加到密文末尾。解密时，标签应位于密文末尾。取值应为整数。
 
 > **说明：**
 > - 对于AES-CCM，默认值为12。支持的取值为4、6、8、10、12、14和16。

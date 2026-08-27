@@ -1,6 +1,8 @@
 # CheckBoxShape
 
-common enum of the checkbox shape@enum { number }
+common enum of the checkbox shape
+
+@enum { number }
 
 **起始版本：** 12
 

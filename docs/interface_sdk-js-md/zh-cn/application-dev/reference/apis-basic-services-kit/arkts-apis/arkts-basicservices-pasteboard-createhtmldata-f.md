@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import pasteboard from '@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## createHtmlData

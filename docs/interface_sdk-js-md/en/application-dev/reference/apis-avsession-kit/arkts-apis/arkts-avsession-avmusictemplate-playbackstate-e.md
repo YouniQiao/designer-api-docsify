@@ -1,6 +1,8 @@
 # PlaybackState
 
-Enumeration of play state.@enum { number }
+Enumeration of play state.
+
+@enum { number }
 
 **Since:** 23
 

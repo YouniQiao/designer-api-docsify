@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import serialManager from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## read
@@ -30,7 +30,7 @@ Reads data from the serial port device asynchronously. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the length of the data read. |
+| Promise&lt;number&gt; | Promise used to return the length of the data read. |
 
 **Error codes:**
 

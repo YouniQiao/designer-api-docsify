@@ -1,6 +1,8 @@
 # WindowAnimationTarget (System API)
 
-Window animation target.@interface WindowAnimationTarget
+Window animation target.
+
+@interface WindowAnimationTarget
 
 **Since:** 9
 

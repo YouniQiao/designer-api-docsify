@@ -11,7 +11,8 @@
 function isCellularDataEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the cellular data service is enabled. This API uses an asynchronous callback to return the result.  
+Checks whether the cellular data service is enabled. This API uses an asynchronous callback to return the result.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 7
@@ -59,7 +60,8 @@ data.isCellularDataEnabled((err: BusinessError, contextData: boolean) => {
 function isCellularDataEnabled(): Promise<boolean>
 ```
 
-Checks whether the cellular data service is enabled. This API uses a promise to return the result.  
+Checks whether the cellular data service is enabled. This API uses a promise to return the result.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 7
@@ -72,7 +74,7 @@ Checks whether the cellular data service is enabled. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 
 **Error codes:**
 

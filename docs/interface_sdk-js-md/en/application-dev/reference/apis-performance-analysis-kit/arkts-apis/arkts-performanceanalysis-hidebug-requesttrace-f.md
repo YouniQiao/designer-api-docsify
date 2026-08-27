@@ -11,7 +11,11 @@
 function requestTrace(config: RequestTraceConfig): Promise<string>
 ```
 
-Obtains the trace information of the current process, including the application tag, image window tag, CPU scheduling, and binder kernel information. This API uses a promise to return the result.A maximum of three .sys files returned by trace collection can be stored in the directory. If the number of .sys files is greater than or equal to three, error code 11400120 is reported when the API is called again.This API cannot be used in the input method applications.
+Obtains the trace information of the current process, including the application tag, image window tag, CPU scheduling, and binder kernel information. This API uses a promise to return the result.
+
+A maximum of three .sys files returned by trace collection can be stored in the directory. If the number of .sys files is greater than or equal to three, error code 11400120 is reported when the API is called again.
+
+This API cannot be used in the input method applications.
 
 **Since:** 24
 
@@ -31,7 +35,7 @@ Obtains the trace information of the current process, including the application 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the application sandbox path of the .sys trace file. |
+| Promise&lt;string&gt; | Promise used to return the application sandbox path of the .sys trace file. |
 
 **Error codes:**
 

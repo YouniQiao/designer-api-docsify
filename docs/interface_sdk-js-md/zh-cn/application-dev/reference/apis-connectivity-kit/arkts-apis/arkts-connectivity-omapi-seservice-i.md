@@ -9,7 +9,7 @@ SEService表示可用于连接到系统中所有可用SE的连接（服务），
 ## 导入模块
 
 ```TypeScript
-import omapi from '@kit.ConnectivityKit';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## getReaders
@@ -146,7 +146,7 @@ function secureElementDemo() {
             return;
         }
         hilog.info(0x0000, 'testTag', 'seservice state connected');
-    }).catch((error : BusinessError)=> {
+    }).catch((error : BusinessError) => {
         hilog.error(0x0000, 'testTag', 'createService error %{public}s', JSON.stringify(error));
     });
 }

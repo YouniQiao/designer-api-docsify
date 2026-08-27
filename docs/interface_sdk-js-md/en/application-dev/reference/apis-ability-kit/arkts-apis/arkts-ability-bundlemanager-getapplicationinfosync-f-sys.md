@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getApplicationInfoSync
@@ -12,7 +12,9 @@ import bundleManager from '@kit.AbilityKit';
 function getApplicationInfoSync(bundleName: string, applicationFlags: number, userId: number) : ApplicationInfo
 ```
 
-Obtains the application information based on the given bundle name, application flags, and user ID. This API returns the result synchronously.No permission is required for obtaining the caller's own information.
+Obtains the application information based on the given bundle name, application flags, and user ID. This API returns the result synchronously.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -34,7 +36,7 @@ Obtains the application information based on the given bundle name, application 
 
 | Type | Description |
 | --- | --- |
-| [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md) | Application information obtained. |
+| ApplicationInfo | Application information obtained. |
 
 **Error codes:**
 
@@ -74,7 +76,9 @@ try {
 function getApplicationInfoSync(bundleName: string, applicationFlags: number) : ApplicationInfo
 ```
 
-Obtains the application information based on the given bundle name and application flags. This API returns the result synchronously.No permission is required for obtaining the caller's own information.
+Obtains the application information based on the given bundle name and application flags. This API returns the result synchronously.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -95,7 +99,7 @@ Obtains the application information based on the given bundle name and applicati
 
 | Type | Description |
 | --- | --- |
-| [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md) | Application information obtained. |
+| ApplicationInfo | Application information obtained. |
 
 **Error codes:**
 

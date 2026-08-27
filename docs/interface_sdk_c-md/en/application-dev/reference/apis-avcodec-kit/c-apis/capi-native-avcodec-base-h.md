@@ -208,10 +208,10 @@ Declare the Native API used for audio and video muxer,demuxer and basic encoding
 | const char * OH_MD_KEY_VIDEO_CROP_BOTTOM | Pointer to the key that describes the bottom coordinate (y) of the cropped rectangle. The value type isint32_t.The row at the bottom of the cropped rectangle is contained, and the row index starts from 0.This key is used only for video decoding.<br>**Since**: 12 |
 | const char * OH_MD_KEY_VIDEO_CROP_LEFT | Pointer to the key that describes the left coordinate (x) of the cropped rectangle. The value type is int32_t.The leftmost column of the cropped rectangle is contained, and the column index starts from 0.This key is used only for video decoding.<br>**Since**: 12 |
 | const char * OH_MD_KEY_VIDEO_CROP_RIGHT | Pointer to the key that describes the right coordinate (x) of the cropped rectangle. The value type isint32_t.The rightmost column of the cropped rectangle is contained, and the column index starts from 0.This key is used only for video decoding.<br>**Since**: 12 |
-| const char * OH_MD_KEY_VIDEO_STRIDE | Pointer to the key that describes the stride of the video frame. The value type is int32_t.Stride indicates the byte distance between the start positions of two consecutive rows in memory.Due to hardware alignment requirements, the stride is typically greater than or equal to the image's active width.When the stride equals the width, there is no horizontal padding. You should always obtain the actual stride through{@link OH_VideoEncoder_GetInputDescription} (for encoding),{@link OH_VideoDecoder_GetOutputDescription} (for decoding), or **OH_AVFormat** inthe [OH_AVCodecOnStreamChanged](capi-native-avcodec-base-h.md#oh_avcodeconstreamchanged) callback, instead of assuming a fixed value.For details about the example, see step 8 in [video encoding](docroot://media/avcodec/video-encoding.md#buffer-mode)in buffer mode or step 11 in [video decoding](docroot://media/avcodec/video-decoding.md#buffer-mode) in buffer mode.<br>**Since**: 12 |
-| const char * OH_MD_KEY_VIDEO_SLICE_HEIGHT | Pointer to the key that describes the height of the video frame. The value type is int32_t.Height indicates the total number of rows allocated in the memory for a single plane. Due to hardware alignmentrequirements, **sliceHeight** is typically greater than or equal to the image's active height.The offset of the start address of the U plane relative to the origin of the Y plane is **sliceHeight** x **stride**.You should always obtain the actual height through {@link OH_VideoEncoder_GetInputDescription} (for encoding),{@link OH_VideoDecoder_GetOutputDescription} (for decoding), or **OH_AVFormat** inthe [OH_AVCodecOnStreamChanged](capi-native-avcodec-base-h.md#oh_avcodeconstreamchanged) callback, instead of assuming a fixed value.For details about the example, see step 8 in [video encoding](docroot://media/avcodec/video-encoding.md#buffer-mode)in buffer mode or step 11 in [video decoding](docroot://media/avcodec/video-decoding.md#buffer-mode) in buffer mode.<br>**Since**: 12 |
-| const char * OH_MD_KEY_VIDEO_PIC_WIDTH | Pointer to the key that describes the actual active width of a decoded video frame. The value type is int32_t.This key is read-only and used only for video decoding.You can obtain the width from the returned **OH_AVFormat** instance when {@link OH_VideoDecoder_GetOutputDescription}is called or decoded output stream changes are detected through the [OH_AVCodecOnStreamChanged](capi-native-avcodec-base-h.md#oh_avcodeconstreamchanged)callback. This value indicates the visible width after cropping, which is different from **OH_MD_KEY_WIDTH** set inthe configuration phase. The latter is a configuration hint used for pre-allocating buffers. When cropping isapplied, this value (rather than the stride) should be used as the actual width for displaying or saving the image.For details about the image layout and usage example, see step 8 in[video encoding](docroot://media/avcodec/video-encoding.md#buffer-mode) in buffer mode orstep 11 in [video decoding](docroot://media/avcodec/video-decoding.md#buffer-mode) in buffer mode.<br>**Since**: 12 |
-| const char * OH_MD_KEY_VIDEO_PIC_HEIGHT | Pointer to the key that describes the actual active height of a decoded video frame.The value type is int32_t. This key is read-only and used only for video decoding.You can obtain the height from the returned **OH_AVFormat** instance when{@link OH_VideoDecoder_GetOutputDescription} is called or decoded output bitstream changes are detected throughthe [OH_AVCodecOnStreamChanged](capi-native-avcodec-base-h.md#oh_avcodeconstreamchanged) callback. This value indicates the visible height after cropping,which is different from **OH_MD_KEY_HEIGHT** set in the configuration phase. The latter is a configuration hint usedfor pre-allocating buffers. When cropping is applied, this value (rather than **sliceHeight**) should be used as theactual height for displaying or saving the image.For details about the image layout and usage example, see step 8in [video encoding](docroot://media/avcodec/video-encoding.md#buffer-mode) in buffer mode orstep 11 in [video decoding](docroot://media/avcodec/video-decoding.md#buffer-mode) in buffer mode.<br>**Since**: 12 |
+| const char * OH_MD_KEY_VIDEO_STRIDE | Pointer to the key that describes the stride of the video frame. The value type is int32_t.Stride indicates the byte distance between the start positions of two consecutive rows in memory.Due to hardware alignment requirements, the stride is typically greater than or equal to the image's active width.When the stride equals the width, there is no horizontal padding. You should always obtain the actual stride through{@link OH_VideoEncoder_GetInputDescription} (for encoding),{@link OH_VideoDecoder_GetOutputDescription} (for decoding), or **OH_AVFormat** inthe [OH_AVCodecOnStreamChanged](capi-native-avcodec-base-h.md#oh_avcodeconstreamchanged) callback, instead of assuming a fixed value.For details about the example, see step 8 in [video encoding](../../../media/avcodec/video-encoding.md#buffer-mode)in buffer mode or step 11 in [video decoding](../../../media/avcodec/video-decoding.md#buffer-mode) in buffer mode.<br>**Since**: 12 |
+| const char * OH_MD_KEY_VIDEO_SLICE_HEIGHT | Pointer to the key that describes the height of the video frame. The value type is int32_t.Height indicates the total number of rows allocated in the memory for a single plane. Due to hardware alignmentrequirements, **sliceHeight** is typically greater than or equal to the image's active height.The offset of the start address of the U plane relative to the origin of the Y plane is **sliceHeight** x **stride**.You should always obtain the actual height through {@link OH_VideoEncoder_GetInputDescription} (for encoding),{@link OH_VideoDecoder_GetOutputDescription} (for decoding), or **OH_AVFormat** inthe [OH_AVCodecOnStreamChanged](capi-native-avcodec-base-h.md#oh_avcodeconstreamchanged) callback, instead of assuming a fixed value.For details about the example, see step 8 in [video encoding](../../../media/avcodec/video-encoding.md#buffer-mode)in buffer mode or step 11 in [video decoding](../../../media/avcodec/video-decoding.md#buffer-mode) in buffer mode.<br>**Since**: 12 |
+| const char * OH_MD_KEY_VIDEO_PIC_WIDTH | Pointer to the key that describes the actual active width of a decoded video frame. The value type is int32_t.This key is read-only and used only for video decoding.You can obtain the width from the returned **OH_AVFormat** instance when {@link OH_VideoDecoder_GetOutputDescription}is called or decoded output stream changes are detected through the [OH_AVCodecOnStreamChanged](capi-native-avcodec-base-h.md#oh_avcodeconstreamchanged)callback. This value indicates the visible width after cropping, which is different from **OH_MD_KEY_WIDTH** set inthe configuration phase. The latter is a configuration hint used for pre-allocating buffers. When cropping isapplied, this value (rather than the stride) should be used as the actual width for displaying or saving the image.For details about the image layout and usage example, see step 8 in[video encoding](../../../media/avcodec/video-encoding.md#buffer-mode) in buffer mode orstep 11 in [video decoding](../../../media/avcodec/video-decoding.md#buffer-mode) in buffer mode.<br>**Since**: 12 |
+| const char * OH_MD_KEY_VIDEO_PIC_HEIGHT | Pointer to the key that describes the actual active height of a decoded video frame.The value type is int32_t. This key is read-only and used only for video decoding.You can obtain the height from the returned **OH_AVFormat** instance when{@link OH_VideoDecoder_GetOutputDescription} is called or decoded output bitstream changes are detected throughthe [OH_AVCodecOnStreamChanged](capi-native-avcodec-base-h.md#oh_avcodeconstreamchanged) callback. This value indicates the visible height after cropping,which is different from **OH_MD_KEY_HEIGHT** set in the configuration phase. The latter is a configuration hint usedfor pre-allocating buffers. When cropping is applied, this value (rather than **sliceHeight**) should be used as theactual height for displaying or saving the image.For details about the image layout and usage example, see step 8in [video encoding](../../../media/avcodec/video-encoding.md#buffer-mode) in buffer mode orstep 11 in [video decoding](../../../media/avcodec/video-decoding.md#buffer-mode) in buffer mode.<br>**Since**: 12 |
 | const char * OH_MD_KEY_VIDEO_ENABLE_LOW_LATENCY | Pointer to the key that describes the enabled status of low-latency video decoding. The value type is int32_t.**1** if enabled, **0** otherwise. The default value is **0**. If this parameter is set to a non-zero value, thevalue **1** is used.This key is optional and used only in the configuration phase.If enabled, the input and output data held by the video decoder does not exceed the amount required by the decoderstandard.You can call {@link OH_AVCapability_IsFeatureSupported} to check whether a specific decoder supports low-latencydecoding. If supported, the video decoder outputs frames in the decoding sequence when low-latency video codec isenabled.<br>**Since**: 12 |
 | const char * OH_MD_KEY_VIDEO_ENCODER_QP_MAX | Pointer to the key that describes the maximum Quantization Parameter (QP) allowed by the video encoder. Thevalue type is int32_t.Tt is used in configure/setparameter or takes effect immediately with the frame.<br>**Since**: 12 |
 | const char * OH_MD_KEY_VIDEO_ENCODER_QP_MIN | Pointer to the key that describes the minimum QP allowed by the video encoder. The value type is int32_t.It is used in configure/setparameter or takes effect immediately with the frame.<br>**Since**: 12 |
@@ -1104,7 +1104,7 @@ Defines the pointer to the function that is called to report the new stream desc
 | Parameter | Description |
 | -- | -- |
 | [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
-| [OH_AVFormat](capi-core-oh-avformat.md) \*format | Pointer to the description information about the new output stream. |
+| OH_AVFormat \*format | Pointer to the description information about the new output stream. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
 
 ### OH_AVCodecOnNeedInputData()
@@ -1129,7 +1129,7 @@ Defines the pointer to the function that is called when new input data is requir
 | -- | -- |
 | [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | uint32_t index | Index of the new input buffer. |
-| OH_AVMemory \*data | Pointer to the data to fill in the new input buffer. |
+| [OH_AVMemory](capi-core-oh-avmemory.md) \*data | Pointer to the data to fill in the new input buffer. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
 
 ### OH_AVCodecOnNewOutputData()
@@ -1154,8 +1154,8 @@ Defines the pointer to the function that is called when new output data is gener
 | -- | -- |
 | [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | uint32_t index | Index of the new output buffer. |
-| OH_AVMemory \*data | Pointer to the data filled in the new output buffer. |
-| [OH_AVCodecBufferAttr](capi-core-oh-avcodecbufferattr.md) \*attr | Pointer to the description information about the new output buffer. |
+| [OH_AVMemory](capi-core-oh-avmemory.md) \*data | Pointer to the data filled in the new output buffer. |
+| OH_AVCodecBufferAttr \*attr | Pointer to the description information about the new output buffer. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
 
 ### OH_AVCodecOnNeedInputBuffer()
@@ -1176,7 +1176,7 @@ Defines the pointer to the function that is called when new input data is requir
 | -- | -- |
 | [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | uint32_t index | Index of the new input buffer. |
-| [OH_AVBuffer](capi-core-oh-avbuffer.md) \*buffer | Pointer to the data to fill in the new input buffer. |
+| OH_AVBuffer \*buffer | Pointer to the data to fill in the new input buffer. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
 
 ### OH_AVCodecOnNewOutputBuffer()
@@ -1197,7 +1197,7 @@ Defines the pointer to the function that is called when new output data is gener
 | -- | -- |
 | [OH_AVCodec](capi-codecbase-oh-avcodec.md) \*codec | Pointer to an OH_AVCodec instance. |
 | uint32_t index | Index of the new output buffer. |
-| [OH_AVBuffer](capi-core-oh-avbuffer.md) \*buffer | Pointer to the data filled in the new output buffer. |
+| OH_AVBuffer \*buffer | Pointer to the data filled in the new output buffer. |
 | void \*userData | Pointer to the data on which the caller depends when executing the callback. |
 
 ### OH_AVDataSourceReadAt()
@@ -1216,7 +1216,7 @@ Defines a function pointer used to provide the capability of obtaining user-defi
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVBuffer](capi-core-oh-avbuffer.md) \*data | Pointer to the buffer to be filled in. |
+| OH_AVBuffer \*data | Pointer to the buffer to be filled in. |
 | int32_t length | Length of the data to read. |
 | int64_t pos | Offset from which the data is read. |
 
@@ -1242,7 +1242,7 @@ Defines a function pointer used to provide the capability of obtaining user-defi
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVBuffer](capi-core-oh-avbuffer.md) \*data | Pointer to the buffer to be filled in. |
+| OH_AVBuffer \*data | Pointer to the buffer to be filled in. |
 | int32_t length | Length of the data to read. |
 | int64_t pos | Offset from which the data is read. |
 | void \*userData | Pointer to user-defined data. |

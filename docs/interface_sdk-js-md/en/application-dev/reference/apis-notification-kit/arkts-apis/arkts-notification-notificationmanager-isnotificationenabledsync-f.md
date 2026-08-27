@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isNotificationEnabledSync
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function isNotificationEnabledSync(): boolean
 ```
 
-Synchronously queries the notification authorization status of the current application.This API is used to quickly check whether the current application is allowed to send notifications before publishing. It is synchronous and returns the result immediately after being called, suitable for scenarios where the enabled status needs to be obtained in a synchronous code flow.
+Synchronously queries the notification authorization status of the current application.
+
+This API is used to quickly check whether the current application is allowed to send notifications before publishing. It is synchronous and returns the result immediately after being called, suitable for scenarios where the enabled status needs to be obtained in a synchronous code flow.
 
 **Since:** 12
 

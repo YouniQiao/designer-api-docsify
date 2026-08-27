@@ -11,7 +11,9 @@
 function enableLeakWatcher(isEnabled: boolean, configs: Array<string>, callback: Callback<Array<string>>): void
 ```
 
-Enables the ArkTS object leak detection.This API can detect the ArkTS object memory leak, which is simpler than the method that needs to call the **enable**, **watch**, **check**, and **dump** functions.
+Enables the ArkTS object leak detection.
+
+This API can detect the ArkTS object memory leak, which is simpler than the method that needs to call the **enable**, **watch**, **check**, and **dump** functions.
 
 **Since:** 20
 
@@ -22,7 +24,7 @@ Enables the ArkTS object leak detection.This API can detect the ArkTS object mem
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isEnabled | boolean | Yes | Whether to enable the detection for ArkTS object memory leaks. **true**: yes; **false**: no. |
-| configs | Array & lt;string & gt; | Yes | Configuration item. Each element in the array indicates a specific object type to monitor. Options: **XComponent**, **NodeContainer**, **Window**, **CustomComponent**, and **Ability**. Note: An empty array indicates that all the preceding objects are monitored. |
+| configs | Array&lt;string&gt; | Yes | Configuration item. Each element in the array indicates a specific object type to monitor. Options: **XComponent**, **NodeContainer**, **Window**, **CustomComponent**, and **Ability**. Note: An empty array indicates that all the preceding objects are monitored. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to receive the memory-leaked object returned by the **jsLeakWatcher.enableLeakWatcher** API. You need to input an array object in the callback. Index **0** is the name of the leak list file, whose extension is **.jsleaklist**. Index **1** is the name of the VM memory snapshot file, whose extension is **.rawheap**. |
 
 **Error codes:**
@@ -52,7 +54,9 @@ jsLeakWatcher.enableLeakWatcher(true, config, (filePath: Array<string>) => {
 function enableLeakWatcher(isEnabled: boolean, configs: LeakWatcherConfig, callback: Callback<Array<string>>): void
 ```
 
-Enables the ArkTS object leak detection.This API can detect memory leaks of ArkTS objects with a single call, which is simpler than the previous method that requires four functions (**enable**, **watch**, **check**, and **dump**). You can use the **configs** parameter to customize the properties of monitoring items, greatly improving the leak detection performance.
+Enables the ArkTS object leak detection.
+
+This API can detect memory leaks of ArkTS objects with a single call, which is simpler than the previous method that requires four functions (**enable**, **watch**, **check**, and **dump**). You can use the **configs** parameter to customize the properties of monitoring items, greatly improving the leak detection performance.
 
 **Since:** 24
 

@@ -23,7 +23,7 @@ Use the new function to create Shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | No |  |
+| value | PixelMap | No |  |
 
 ## Shape
 
@@ -43,7 +43,7 @@ Since API version 9, this API is supported in ArkTS widgets, except that **Pixel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Drawing target. You can draw a shape in a specified **PixelMap** object. If this parameter is not set, the shape is drawn in the current drawing target by default. The **undefined** and **null** values are treated as invalid and will not take effect. |
+| value | PixelMap | Yes | Drawing target. You can draw a shape in a specified **PixelMap** object. If this parameter is not set, the shape is drawn in the current drawing target by default. The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Shape
 
@@ -67,3 +67,4 @@ Called when a component is drawn.
 
 | Name | Description |
 | --- | --- |
+| [ViewportRect](arkts-arkui-viewportrect-i.md) | Describes the options of the viewport. |

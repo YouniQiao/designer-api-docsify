@@ -1,6 +1,8 @@
 # AVMetadataExtractor
 
-AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md) to create an AVMetadataExtractor instance.For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
+AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md) to create an AVMetadataExtractor instance.
+
+For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
 
 **Since:** 11
 
@@ -9,7 +11,7 @@ AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtai
 ## Modules to Import
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getFrameIndexByTime
@@ -36,7 +38,7 @@ Obtains the video frame number corresponding to a video timestamp. Only MP4 vide
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the video frame number. |
+| Promise&lt;number&gt; | Promise used to return the video frame number. |
 
 **Error codes:**
 
@@ -83,7 +85,7 @@ Obtains the video timestamp corresponding to a video frame number. Only MP4 vide
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the timestamp, in microseconds. |
+| Promise&lt;number&gt; | Promise used to return the timestamp, in microseconds. |
 
 **Error codes:**
 

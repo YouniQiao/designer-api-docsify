@@ -1,6 +1,7 @@
 # ContinuousTaskRequest
 
 Specifies details of the continuous task being requested or updated. It is typically used as input for the [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md) and [updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) APIs. Note that:
+
 1. When requesting a continuous task via  
 [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md), notifications will be combined if the main type and subtype of the continuous task to be requested are the same as those of the existing continuous task in the current application, and the **combinedTaskNotification** value is **true** for both tasks. Otherwise, notifications will not be combined.
 2. Notifications will not be combined if the continuous task has no notification.
@@ -22,7 +23,7 @@ are supported since API version 22. This task type must be used independently an
 ## Modules to Import
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## checkSpecialScenarioAuth
@@ -45,13 +46,13 @@ Checks whether the user has authorized tasks to run continuously in the backgrou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context. For details about the application context of the FA model, see Context.For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
+| context | Context | Yes | Application context. For details about the application context of the FA model, see Context.For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;UserAuthResult & gt; | Promise used to return the user authorization result. |
+| Promise&lt;UserAuthResult&gt; | Promise used to return the user authorization result. |
 
 **Error codes:**
 
@@ -104,13 +105,13 @@ Check whether the application can request MODE_SPECIAL_SCENARIO_PROCESSING. No e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | App running context. |
+| context | Context | Yes | App running context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;UserAuthResult & gt; | The promise returns the result of user authorization. |
+| Promise&lt;UserAuthResult&gt; | The promise returns the result of user authorization. |
 
 **Error codes:**
 
@@ -215,7 +216,7 @@ Requests user authorization to run tasks continuously in the background. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context. For details about the application context of the FA model, see Context.For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
+| context | Context | Yes | Application context. For details about the application context of the FA model, see Context.For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md).Note: Continuous tasks can be requested only by the UIAbility in the stage model and the ServiceAbility in the FA model. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserAuthResult&gt; | Yes | Callback used to return the user authorization result. |
 
 **Error codes:**
@@ -274,7 +275,7 @@ Requesting MODE_SPECIAL_SCENARIO_PROCESSING authorization from users, a dialog b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | App running context. |
+| context | Context | Yes | App running context. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserAuthResult&gt; | Yes | The callback of the function. |
 
 **Error codes:**
@@ -325,7 +326,9 @@ export default class EntryAbility extends UIAbility {
 set backgroundTaskModes(value: BackgroundTaskMode[])
 ```
 
-Main type of a continuous task.Note: The main type must match the subtype.
+Main type of a continuous task.
+
+Note: The main type must match the subtype.
 
 **Type:** [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md)[]
 
@@ -341,7 +344,9 @@ Main type of a continuous task.Note: The main type must match the subtype.
 set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])
 ```
 
-Subtype of a continuous task.Note: The main type must match the subtype.
+Subtype of a continuous task.
+
+Note: The main type must match the subtype.
 
 **Type:** [BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md)[]
 
@@ -357,7 +362,9 @@ Subtype of a continuous task.Note: The main type must match the subtype.
 combinedTaskNotification?: boolean
 ```
 
-Whether to combine notifications. The value **true** means to combine notifications, and the value **false** (default) means the opposite.Note: This property does not take effect in [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) API. If notifications need to be combined for an existing task, request the task again and set the value to **true**.
+Whether to combine notifications. The value **true** means to combine notifications, and the value **false** (default) means the opposite.
+
+Note: This property does not take effect in [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) API. If notifications need to be combined for an existing task, request the task again and set the value to **true**.
 
 **Type:** boolean
 
@@ -373,7 +380,13 @@ Whether to combine notifications. The value **true** means to combine notificati
 continuousTaskId?: number
 ```
 
-Continuous task ID. The default value is **-1**.Note: If **combinedTaskNotification** is set to true, this property is mandatory and the corresponding ID must exist.Additionally, this property is mandatory (with the corresponding ID required) when used as an input parameter for the [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) API.You can call the [getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md) API to view information about all continuous tasks.
+Continuous task ID. The default value is **-1**.
+
+Note: If **combinedTaskNotification** is set to true, this property is mandatory and the corresponding ID must exist.
+
+Additionally, this property is mandatory (with the corresponding ID required) when used as an input parameter for the [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md) API.
+
+You can call the [getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md) API to view information about all continuous tasks.
 
 **Type:** number
 

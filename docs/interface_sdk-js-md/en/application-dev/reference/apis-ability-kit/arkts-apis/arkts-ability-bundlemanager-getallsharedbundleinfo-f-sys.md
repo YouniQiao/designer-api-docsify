@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllSharedBundleInfo
@@ -77,7 +77,7 @@ Obtains all the shared bundle information. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;SharedBundleInfo & gt; & gt; | Promise used to return an array of the shared bundle information obtained. |
+| Promise&lt;Array&lt;SharedBundleInfo&gt;&gt; | Promise used to return an array of the shared bundle information obtained. |
 
 **Error codes:**
 

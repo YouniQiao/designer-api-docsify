@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## on('printerStateChange')
@@ -27,7 +27,7 @@ Registers a listener for printer state change events. This API uses a callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'printerStateChange' | Yes | Listening type. The value is fixed at **'printerStateChange'**. |
-| callback | (state: PrinterState, info: PrinterInfo) = & gt; void | Yes | Callback used to return the result. |
+| callback | (state: PrinterState, info: PrinterInfo) =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ Registers a listener for print job state change events. This API uses a callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'jobStateChange' | Yes | Listening type. The value is fixed at **'jobStateChange'**. |
-| callback | (state: PrintJobState, job: PrintJob) = & gt; void | Yes | Callback used to return the result. |
+| callback | (state: PrintJobState, job: PrintJob) =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -117,7 +117,7 @@ Registers a listener for printer extension information change events. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'extInfoChange' | Yes | Listening type. The value is fixed at **'extInfoChange'**. |
-| callback | (extensionId: string, info: string) = & gt; void | Yes | Callback used to return the result. |
+| callback | (extensionId: string, info: string) =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 

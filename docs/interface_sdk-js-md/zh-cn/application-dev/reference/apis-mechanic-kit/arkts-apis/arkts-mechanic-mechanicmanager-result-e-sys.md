@@ -1,6 +1,8 @@
 # Result（系统接口）
 
-Rotation execution results.@enum { number }
+Rotation execution results.
+
+@enum { number }
 
 **起始版本：** 20
 

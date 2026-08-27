@@ -17,7 +17,7 @@
 isConsiderDescendants?: boolean
 ```
 
-descendantMode -确定焦点搜索是否应考虑 在下一个可访问性焦点操作。
+descendantMode -确定焦点搜索是否应考虑在下一个可访问性焦点操作。
 
 **类型：** boolean
 

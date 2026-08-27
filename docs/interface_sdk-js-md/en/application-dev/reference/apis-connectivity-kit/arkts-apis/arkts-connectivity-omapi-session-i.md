@@ -9,7 +9,7 @@ A **Session** instance indicates a session created on an SE **Reader** instance.
 ## Modules to Import
 
 ```TypeScript
-import omapi from '@kit.ConnectivityKit';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## close

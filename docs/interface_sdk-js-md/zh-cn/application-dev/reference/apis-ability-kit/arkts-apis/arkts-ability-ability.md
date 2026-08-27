@@ -12,7 +12,7 @@ Ability模块将二级模块API组织在一起方便开发者进行导出。
 ## 导入模块
 
 ```TypeScript
-import ability from '@kit.AbilityKit';
+import { ability } from '@kit.AbilityKit';
 ```
 
 ## 汇总

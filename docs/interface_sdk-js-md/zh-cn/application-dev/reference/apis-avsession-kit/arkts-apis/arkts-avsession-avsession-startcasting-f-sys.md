@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## startCasting
@@ -87,7 +87,7 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。当命令发送成功并启动投播，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | Promise对象。当命令发送成功并启动投播，无返回结果，否则返回错误对象。 |
 
 **错误码：**
 

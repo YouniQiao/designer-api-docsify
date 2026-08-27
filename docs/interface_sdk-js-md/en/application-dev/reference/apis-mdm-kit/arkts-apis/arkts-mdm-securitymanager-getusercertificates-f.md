@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import securityManager from '@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## getUserCertificates
@@ -33,7 +33,7 @@ Obtains the user certificate of a specified system account. Enterprises can use 
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | All user certificates installed under the specified user ID. |
+| Array&lt;string&gt; | All user certificates installed under the specified user ID. |
 
 **Error codes:**
 

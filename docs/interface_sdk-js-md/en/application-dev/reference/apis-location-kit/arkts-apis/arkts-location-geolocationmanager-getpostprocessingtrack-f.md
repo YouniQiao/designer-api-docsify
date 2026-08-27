@@ -11,7 +11,11 @@
 function getPostProcessingTrack(sportsType: SportsType): Promise<Array<Location>>
 ```
 
-Obtain post-processing trajectory information under specific sport mode. Only [SKIING](arkts-location-geolocationmanager-sportstype-e.md#skiing) is supported currently.Before calling this API, you need to call on('locationChange') and set the input parameter [sportsType](arkts-location-geolocationmanager-continuouslocationrequest-i.md#sportstype) to the specific sport mode to start tracking.Returns data within 24 hours since tracking started; Subsequent calls return only new records.
+Obtain post-processing trajectory information under specific sport mode. Only [SKIING](arkts-location-geolocationmanager-sportstype-e.md#skiing) is supported currently.
+
+Before calling this API, you need to call on('locationChange') and set the input parameter [sportsType](arkts-location-geolocationmanager-continuouslocationrequest-i.md#sportstype) to the specific sport mode to start tracking.
+
+Returns data within 24 hours since tracking started; Subsequent calls return only new records.
 
 **Since:** 26.0.0
 
@@ -33,7 +37,7 @@ Obtain post-processing trajectory information under specific sport mode. Only [S
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;Location & gt; & gt; | Promise used to return `Array&lt;Location&gt;`. |
+| Promise&lt;Array&lt;Location&gt;&gt; | Promise used to return `Array&lt;Location&gt;`. |
 
 **Error codes:**
 

@@ -71,7 +71,7 @@ Obtains the remaining duration before the application is suspended. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the remaining duration before the application is suspended, in milliseconds. |
+| Promise&lt;number&gt; | Promise used to return the remaining duration before the application is suspended, in milliseconds. |
 
 **Examples**
 

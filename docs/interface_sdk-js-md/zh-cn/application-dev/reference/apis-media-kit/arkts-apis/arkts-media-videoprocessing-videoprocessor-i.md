@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import videoProcessing from '@kit.MediaKit';
+import { videoProcessing } from '@kit.MediaKit';
 ```
 
 ## getStatus
@@ -30,7 +30,7 @@ getStatus(): Promise<VideoProcessorStatus | undefined>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[VideoProcessorStatus](arkts-media-videoprocessing-videoprocessorstatus-i.md) \| undefined & gt; | Promise对象，用于返回VideoProcessorStatus；如果无法获取状态，则返回undefined。 |
+| Promise&lt;[VideoProcessorStatus](arkts-media-videoprocessing-videoprocessorstatus-i.md) \| undefined&gt; | Promise对象，用于返回VideoProcessorStatus；如果无法获取状态，则返回undefined。 |
 
 **错误码：**
 
@@ -56,7 +56,7 @@ offStatusChange(callback?: VideoProcessorStatusCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [VideoProcessorStatusCallback](arkts-media-videoprocessing-videoprocessorstatuscallback-t.md) | 否 | 需要取消注册的回调函数。 参数不填时，默认取消该事件类型的所有回调函数。 |
+| callback | [VideoProcessorStatusCallback](arkts-media-videoprocessing-videoprocessorstatuscallback-t.md) | 否 | 需要取消注册的回调函数。参数不填时，默认取消该事件类型的所有回调函数。 |
 
 **错误码：**
 

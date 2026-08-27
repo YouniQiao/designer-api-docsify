@@ -86,7 +86,7 @@ Obtains all keys in [AppStorageV2](../../../ui/state-management/arkts-new-appsto
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | All keys stored in AppStorageV2. |
+| Array&lt;string&gt; | All keys stored in AppStorageV2. |
 
 **Examples**
 

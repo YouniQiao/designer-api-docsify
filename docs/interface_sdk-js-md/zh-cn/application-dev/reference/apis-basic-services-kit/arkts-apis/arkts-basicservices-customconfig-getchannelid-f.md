@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import customConfig from '@kit.BasicServicesKit';
+import { customConfig } from '@kit.BasicServicesKit';
 ```
 
 ## getChannelId

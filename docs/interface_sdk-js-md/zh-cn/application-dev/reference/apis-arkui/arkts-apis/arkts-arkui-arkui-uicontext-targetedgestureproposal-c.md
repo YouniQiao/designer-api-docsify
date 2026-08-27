@@ -25,7 +25,7 @@ node: FrameNode
 
 处理当前智慧手势的目标节点。
 
-**类型：** FrameNode
+**类型：** [FrameNode](arkts-arkui-framenode-c.md)
 
 **起始版本：** 26.0.0
 

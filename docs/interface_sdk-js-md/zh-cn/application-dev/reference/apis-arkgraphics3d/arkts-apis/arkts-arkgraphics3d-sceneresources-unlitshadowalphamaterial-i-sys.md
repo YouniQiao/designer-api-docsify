@@ -1,6 +1,8 @@
 # UnlitShadowAlphaMaterial（系统接口）
 
-此材质继承自Material，仅绘制材质表面阴影。材质启用Blend属性时，可与背景融合模拟透明效果。@extends Material @interface UnlitShadowAlphaMaterial
+此材质继承自Material，仅绘制材质表面阴影。材质启用Blend属性时，可与背景融合模拟透明效果。
+
+@extends Material @interface UnlitShadowAlphaMaterial
 
 **继承/实现关系：** UnlitShadowAlphaMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 

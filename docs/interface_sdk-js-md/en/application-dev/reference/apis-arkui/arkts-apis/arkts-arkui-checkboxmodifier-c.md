@@ -1,6 +1,8 @@
 # CheckboxModifier
 
-Defines Checkbox Modifier@extends CheckboxAttribute @implements AttributeModifier&lt;CheckboxAttribute&gt;
+Defines Checkbox Modifier
+
+@extends CheckboxAttribute @implements AttributeModifier&lt;CheckboxAttribute&gt;
 
 **Inheritance/Implementation:** CheckboxModifier extends [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md#checkboxattribute) and implements AttributeModifier<CheckboxAttribute>
 

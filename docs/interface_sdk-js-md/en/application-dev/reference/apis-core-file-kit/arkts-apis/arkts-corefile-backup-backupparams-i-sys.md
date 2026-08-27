@@ -1,6 +1,8 @@
 # BackupParams (System API)
 
-Provides configuration parameters for backup and restore.@interface BackupParams
+Provides configuration parameters for backup and restore.
+
+@interface BackupParams
 
 **Since:** 12
 
@@ -11,7 +13,7 @@ Provides configuration parameters for backup and restore.@interface BackupParams
 ## Modules to Import
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## parameters

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import featureAbility from '@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## hasWindowFocus
@@ -59,7 +59,7 @@ Checks whether the main window of this ability has the focus. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
+| Promise&lt;boolean&gt; | Promise used to return the result. If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
 
 **Examples**
 

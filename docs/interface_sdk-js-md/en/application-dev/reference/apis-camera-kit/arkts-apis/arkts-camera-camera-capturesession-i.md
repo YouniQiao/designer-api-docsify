@@ -264,7 +264,7 @@ Commits the configuration for this session. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -383,7 +383,7 @@ Obtains the exposure compensation values of the camera device.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Array of compensation values. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Array&lt;number&gt; | Array of compensation values. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
@@ -697,7 +697,7 @@ Obtains the focus mode in use.
 
 | Type | Description |
 | --- | --- |
-| [FocusMode](arkts-camera-camera-focusmode-e.md) | Focus mode obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| FocusMode | Focus mode obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
@@ -759,7 +759,7 @@ Obtains the focal point of the camera device.
 
 | Type | Description |
 | --- | --- |
-| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Focal point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Point | Focal point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
@@ -821,7 +821,7 @@ Obtains the metering point of the camera device.
 
 | Type | Description |
 | --- | --- |
-| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Metering point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Point | Metering point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
@@ -947,7 +947,7 @@ Obtains the supported zoom ratio range.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Array containing the minimum and maximum zoom ratios. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Array&lt;number&gt; | Array containing the minimum and maximum zoom ratios. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
@@ -1207,7 +1207,7 @@ Checks whether a focus mode is supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | Yes | Focus mode. |
+| afMode | FocusMode | Yes | Focus mode. |
 
 **Return value:**
 
@@ -1525,7 +1525,7 @@ Releases this session. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1729,7 +1729,9 @@ function removeOutput(session: camera.Session, previewOutput: camera.PreviewOutp
 setExposureBias(exposureBias: number): void
 ```
 
-Sets an exposure compensation value (EV).Before the setting, you are advised to use [getExposureBiasRange](#getexposurebiasrange) to obtain the supported values.
+Sets an exposure compensation value (EV).
+
+Before the setting, you are advised to use [getExposureBiasRange](#getexposurebiasrange) to obtain the supported values.
 
 **Since:** 10
 
@@ -1851,7 +1853,10 @@ function setExposureMode(captureSession: camera.CaptureSession): void {
 setFlashMode(flashMode: FlashMode): void
 ```
 
-Sets a flash mode.Before the setting, do the following checks:
+Sets a flash mode.
+
+Before the setting, do the following checks:
+
 1. Use [hasFlash](#hasflash) to check whether the camera device has flash.
 2. Use [isFlashModeSupported](#isflashmodesupported) to check whether the camera device supports the flash mode.
 
@@ -1911,7 +1916,9 @@ function setFlashMode(photoSession: camera.PhotoSession): void {
 setFocusMode(afMode: FocusMode): void
 ```
 
-Sets a focus mode.Before the setting, call [isFocusModeSupported](#isfocusmodesupported) to check whether the focus mode is supported.
+Sets a focus mode.
+
+Before the setting, call [isFocusModeSupported](#isfocusmodesupported) to check whether the focus mode is supported.
 
 **Since:** 10
 
@@ -1925,7 +1932,7 @@ Sets a focus mode.Before the setting, call [isFocusModeSupported](#isfocusmodesu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | Yes | Focus mode. |
+| afMode | FocusMode | Yes | Focus mode. |
 
 **Error codes:**
 
@@ -1969,7 +1976,9 @@ function setFocusMode(photoSession: camera.PhotoSession): void {
 setFocusPoint(point: Point): void
 ```
 
-Sets the focal point. The focal point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}.The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
+Sets the focal point. The focal point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}.
+
+The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
 
 **Since:** 10
 
@@ -1983,7 +1992,7 @@ Sets the focal point. The focal point must be in the coordinate system (0-1), wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes | Focal point. The value range of x and y must be within [0,1]. If a value less than 0 is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
+| point | Point | Yes | Focal point. The value range of x and y must be within [0,1]. If a value less than 0 is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
 
 **Error codes:**
 
@@ -2029,7 +2038,9 @@ function setFocusPoint(photoSession: camera.PhotoSession): void {
 setMeteringPoint(point: Point): void
 ```
 
-Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}.The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
+Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}.
+
+The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
 
 **Since:** 10
 
@@ -2043,7 +2054,7 @@ Sets the metering point, which is the center point of the metering rectangle. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes | Metering point. The value range of x and y must be within [0,1]. If a value less than 0 is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
+| point | Point | Yes | Metering point. The value range of x and y must be within [0,1]. If a value less than 0 is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
 
 **Error codes:**
 
@@ -2328,7 +2339,7 @@ Starts this session. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2525,7 +2536,7 @@ Stops this session. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

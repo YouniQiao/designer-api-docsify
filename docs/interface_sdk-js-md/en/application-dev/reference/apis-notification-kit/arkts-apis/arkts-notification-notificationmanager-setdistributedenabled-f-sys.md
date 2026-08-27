@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setDistributedEnabled
@@ -33,7 +33,7 @@ Sets whether the device of a specified type enables cross-device notification. T
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no result. |
+| Promise&lt;void&gt; | Promise that returns no result. |
 
 **Error codes:**
 

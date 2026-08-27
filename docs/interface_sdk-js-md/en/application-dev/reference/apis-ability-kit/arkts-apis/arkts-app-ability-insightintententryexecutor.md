@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import InsightIntentEntryExecutor from '@kit.AbilityKit';
+import { InsightIntentEntryExecutor } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -12,4 +12,4 @@ import InsightIntentEntryExecutor from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [InsightIntentEntryExecutor](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md) | The class of insight intent entry executor.@class InsightIntentEntryExecutor & lt;T & gt; |
+| [InsightIntentEntryExecutor](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md) | The class of insight intent entry executor. |

@@ -35,8 +35,13 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-标题栏背景模糊选项。  
-**说明：**只在设置了backgroundBlurStyle时生效。不建议与backgroundEffect同时使用。
+标题栏背景模糊选项。
+
+**说明：**
+
+只在设置了backgroundBlurStyle时生效。
+
+不建议与backgroundEffect同时使用。
 
 **类型：** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
@@ -72,8 +77,11 @@ backgroundColor?: ResourceColor
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-设置标题栏背景属性包括：模糊半径，亮度，饱和度，颜色等。  
-**说明：**不建议与backgroundBlurStyleOptions同时使用。
+设置标题栏背景属性包括：模糊半径，亮度，饱和度，颜色等。
+
+**说明：**
+
+不建议与backgroundBlurStyleOptions同时使用。
 
 **类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
@@ -91,7 +99,9 @@ backgroundEffect?: BackgroundEffectOptions
 barStyle?: BarStyle
 ```
 
-设置标题栏布局方式。默认值：BarStyle.STANDARD
+设置标题栏布局方式。
+
+默认值：BarStyle.STANDARD
 
 **类型：** [BarStyle](arkts-arkui-barstyle-e.md)
 
@@ -111,10 +121,16 @@ barStyle?: BarStyle
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态。使用规则：
+是否响应悬停态。
+
+使用规则：
+
 1. 需满足Navigation为全屏大小；
 2. 标题栏显示模式为[Free](arkts-arkui-navigationtitlemode-e.md)时或者标题栏布局方式为[STANDARD](arkts-arkui-barstyle-e.md)时，此接口设置无效。
-true：响应悬停态；false：不响应悬停态。默认值：false
+
+true：响应悬停态；false：不响应悬停态。
+
+默认值：false
 
 **类型：** boolean
 
@@ -135,6 +151,7 @@ mainTitleModifier?: TextModifier
 ```
 
 主标题属性修改器。
+
 1. 通过Modifier设置的属性会覆盖系统默认的属性（如果Modifier设置了fontSize，maxFontSize，minFontSize任一属性，则系统设置的大小相关属性不生效，以开发者的设置为准）；
 2. 不设该属性或者设置了异常值，则恢复系统默认设置；
 3. [Free](arkts-arkui-navigationtitlemode-e.md)模式下设置字体大小时，原有滑动改变标题大小的效果失效。
@@ -155,10 +172,16 @@ mainTitleModifier?: TextModifier
 paddingEnd?: LengthMetrics
 ```
 
-标题栏结束端内间距。仅支持以下任一场景：
+标题栏结束端内间距。
+
+仅支持以下任一场景：
+
 1. 使用非自定义菜单，即[菜单value](arkts-arkui-navigation-attribute.md#menus)为Array&lt;NavigationMenuItem&gt;；
 2. 没有右上角菜单，且使用非自定义标题，即[标题value](arkts-arkui-navigation-attribute.md#title)类型为ResourceStr或NavigationCommonTitle。
-默认值：LengthMetrics.resource(`\$r('sys.float.margin_right')`)
+
+默认值：
+
+LengthMetrics.resource(`\$r('sys.float.margin_right')`)
 
 **类型：** LengthMetrics
 
@@ -178,10 +201,16 @@ paddingEnd?: LengthMetrics
 paddingStart?: LengthMetrics
 ```
 
-标题栏起始端内间距。仅支持以下任一场景：
+标题栏起始端内间距。
+
+仅支持以下任一场景：
+
 1. 显示返回图标，即[hideBackButton](arkts-arkui-navigation-attribute.md#hidebackbutton)为false；
 2. 使用非自定义标题，即[标题value](arkts-arkui-navigation-attribute.md#title)类型为ResourceStr或NavigationCommonTitle。
-默认值：LengthMetrics.resource(`\$r('sys.float.margin_left')`)。
+
+默认值：
+
+LengthMetrics.resource(`\$r('sys.float.margin_left')`)。
 
 **类型：** LengthMetrics
 
@@ -220,6 +249,7 @@ subTitleModifier?: TextModifier
 ```
 
 子标题属性修改器。
+
 1. 通过Modifier设置的属性会覆盖系统默认的属性（如果Modifier设置了fontSize，maxFontSize，minFontSize任一属性，则系统设置的大小相关属性不生效，以开发者的设置为准）；
 2. 不设该属性或者设置了异常值，则恢复系统默认设置。
 
@@ -239,7 +269,7 @@ subTitleModifier?: TextModifier
 systemMaterial?: Material
 ```
 
-为标题栏设置系统样式的材质。不同的材料有不同的效果，会影响 titleBar的背景颜色、边框、阴影和其他视觉属性。 设备行为差异：相同材料在不同设备上的效果可能不同，具体取决于 他们的计算能力。
+为标题栏设置系统样式的材质。不同的材料有不同的效果，会影响titleBar的背景颜色、边框、阴影和其他视觉属性。设备行为差异：相同材料在不同设备上的效果可能不同，具体取决于他们的计算能力。
 
 **类型：** [Material](arkts-arkui-material-t.md)
 

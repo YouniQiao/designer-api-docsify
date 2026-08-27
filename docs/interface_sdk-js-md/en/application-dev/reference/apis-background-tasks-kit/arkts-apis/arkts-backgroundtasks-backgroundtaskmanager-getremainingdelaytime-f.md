@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## getRemainingDelayTime
@@ -76,7 +76,7 @@ Obtains the remaining time of a transient task. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise that returns the remaining time of the transient task, in milliseconds. |
+| Promise&lt;number&gt; | Promise that returns the remaining time of the transient task, in milliseconds. |
 
 **Error codes:**
 

@@ -32,7 +32,7 @@ Opens the PIN authentication dialog box of the USB Key credential. On the displa
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

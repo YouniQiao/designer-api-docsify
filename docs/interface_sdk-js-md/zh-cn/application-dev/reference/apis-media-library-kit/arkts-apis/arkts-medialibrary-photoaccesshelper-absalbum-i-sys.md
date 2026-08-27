@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getSharedPhotoAssets
@@ -38,7 +38,7 @@ getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;SharedPhotoAsset & gt; | Returns the shared photo assets |
+| Array&lt;SharedPhotoAsset&gt; | Returns the shared photo assets |
 
 **错误码：**
 

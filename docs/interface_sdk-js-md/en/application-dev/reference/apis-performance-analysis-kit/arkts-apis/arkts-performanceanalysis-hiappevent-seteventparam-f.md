@@ -31,7 +31,7 @@ Sets custom event parameters. This API uses a promise to return the result. Duri
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

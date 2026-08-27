@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getActiveNotificationCount
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function getActiveNotificationCount(callback: AsyncCallback<number>): void
 ```
 
-获取当前应用的通知数量。使用callback异步回调。用于查询当前应用在通知中心中已发布的存量通知数量。适用于需要展示未读通知数量提示的场景。
+获取当前应用的通知数量。使用callback异步回调。
+
+用于查询当前应用在通知中心中已发布的存量通知数量。适用于需要展示未读通知数量提示的场景。
 
 **起始版本：** 9
 
@@ -60,7 +62,9 @@ notificationManager.getActiveNotificationCount(getActiveNotificationCountCallbac
 function getActiveNotificationCount(): Promise<number>
 ```
 
-获取当前应用的通知数量。使用Promise异步回调。用于查询当前应用在通知中心中已发布的存量通知数量。适用于需要展示未读通知数量提示的场景。
+获取当前应用的通知数量。使用Promise异步回调。
+
+用于查询当前应用在通知中心中已发布的存量通知数量。适用于需要展示未读通知数量提示的场景。
 
 **起始版本：** 9
 
@@ -74,7 +78,7 @@ setBadgeNumber 设置角标个数。
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回当前应用未删除通知数。 |
+| Promise&lt;number&gt; | Promise对象，返回当前应用未删除通知数。 |
 
 **错误码：**
 

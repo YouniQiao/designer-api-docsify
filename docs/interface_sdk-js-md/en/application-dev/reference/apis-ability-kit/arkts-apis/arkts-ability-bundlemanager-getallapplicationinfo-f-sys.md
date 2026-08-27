@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllApplicationInfo
@@ -147,7 +147,7 @@ Obtains all the application information in the system based on the given applica
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;ApplicationInfo & gt; & gt; | Promise used to return the array of application information obtained. |
+| Promise&lt;Array&lt;ApplicationInfo&gt;&gt; | Promise used to return the array of application information obtained. |
 
 **Error codes:**
 

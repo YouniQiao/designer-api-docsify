@@ -1,6 +1,8 @@
 # @ohos.screenLock
 
-systemScreenLock@namespace screenLock
+systemScreenLock
+
+@namespace screenLock
 
 **Since:** 7
 
@@ -9,7 +11,7 @@ systemScreenLock@namespace screenLock
 ## Modules to Import
 
 ```TypeScript
-import screenLock from '@kit.BasicServicesKit';
+import { screenLock } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -61,8 +63,8 @@ import screenLock from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [AuthState](arkts-basicservices-screenlock-authstate-e-sys.md) | Indicates the screen lock authentication state.@enum { number } |
-| [StrongAuthReasonFlags](arkts-basicservices-screenlock-strongauthreasonflags-e-sys.md) | Indicates the strong authentication reason flags used to request.@enum { number } |
+| [AuthState](arkts-basicservices-screenlock-authstate-e-sys.md) | Indicates the screen lock authentication state. |
+| [StrongAuthReasonFlags](arkts-basicservices-screenlock-strongauthreasonflags-e-sys.md) | Indicates the strong authentication reason flags used to request. |
 | [UnlockPolicy](arkts-basicservices-screenlock-unlockpolicy-e-sys.md) | Indicates the screen lock authentication policy used to unlock the screen. |
 <!--DelEnd-->
 

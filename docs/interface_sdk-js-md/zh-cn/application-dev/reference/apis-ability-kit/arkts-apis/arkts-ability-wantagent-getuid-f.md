@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wantAgent, { WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## getUid
@@ -133,7 +133,7 @@ function getUid(agent: WantAgent): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回获取WantAgent实例所属应用的UID。 |
+| Promise&lt;number&gt; | Promise对象，返回获取WantAgent实例所属应用的UID。 |
 
 **错误码：**
 

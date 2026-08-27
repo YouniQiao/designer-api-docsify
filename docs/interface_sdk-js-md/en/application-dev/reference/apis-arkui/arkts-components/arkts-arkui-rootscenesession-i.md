@@ -1,6 +1,8 @@
 # RootSceneSession (System API)
 
-Defines the session of RootScene.@interface RootSceneSession
+Defines the session of RootScene.
+
+@interface RootSceneSession
 
 **Since:** 10
 

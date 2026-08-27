@@ -1,6 +1,8 @@
 # PolicyErrorResult
 
-授予或激活权限失败的URI策略结果。@interface { object }
+授予或激活权限失败的URI策略结果。
+
+@interface { object }
 
 **起始版本：** 11
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## code

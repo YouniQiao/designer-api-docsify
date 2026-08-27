@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## create
@@ -22,7 +22,7 @@ Creates a distributed data object. The object properties support basic types (nu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context. For details about the application context of the FA model, see Context.For details about the application context of the stage model, see Context. |
+| context | Context | Yes | Application context. For details about the application context of the FA model, see Context.For details about the application context of the stage model, see Context. |
 | source | object | Yes | Properties of the distributed data object. |
 
 **Return value:**

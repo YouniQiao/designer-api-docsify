@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationExtensionSubscription from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## subscribe
@@ -30,13 +30,13 @@ getSubscribeInfo 获取应用通知扩展订阅信息。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NotificationExtensionSubscriptionInfo[]](arkts-notification-notificationextensionsubscriptioninfo-i.md) | 是 | 订阅的信息列表（数组）。 |
+| info | NotificationExtensionSubscriptionInfo[] | 是 | 订阅的信息列表（数组）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

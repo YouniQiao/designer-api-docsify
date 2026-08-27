@@ -55,7 +55,9 @@ startIndex对应GridItem在Grid布局中的起始行号。若该GridItem跨多�
 startOffset: number
 ```
 
-startIndex对应的GridItem的顶部与Grid顶部之间的偏移量。单位：vp
+startIndex对应的GridItem的顶部与Grid顶部之间的偏移量。
+
+单位：vp
 
 **类型：** number
 
@@ -73,7 +75,9 @@ startIndex对应的GridItem的顶部与Grid顶部之间的偏移量。单位：v
 totalOffset: number
 ```
 
-总滚动偏移量，即Grid中第一个GridItem的顶部与Grid顶部之间的偏移量。单位：vp
+总滚动偏移量，即Grid中第一个GridItem的顶部与Grid顶部之间的偏移量。
+
+单位：vp
 
 **类型：** number
 

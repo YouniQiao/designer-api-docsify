@@ -31,7 +31,7 @@ Rotates a mechanical device to the absolute angles.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Result & gt; | Promise that return the execution result. |
+| Promise&lt;Result&gt; | Promise that return the execution result. |
 
 **Error codes:**
 

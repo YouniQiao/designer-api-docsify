@@ -35,7 +35,7 @@ Returns the startup result to the caller of [startAbilityForResult](#startabilit
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -375,7 +375,7 @@ Disconnects from an [AppServiceExtensionAbility](../../../reference/apis-ability
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -506,7 +506,7 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -580,7 +580,7 @@ Disconnects from a UIServiceExtensionAbility. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -667,7 +667,7 @@ Hides this UIAbility. This API uses a promise to return the result. It can be ca
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -811,7 +811,7 @@ Moves this UIAbility from the foreground to the background. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -863,7 +863,8 @@ struct Index {
 openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<AbilityResult>
 ```
 
-Opens an atomic service in an independent window. This API uses a promise to return the result. It can be called only on the main thread. After an atomic service is started, the following situations may occur:  
+Opens an atomic service in an independent window. This API uses a promise to return the result. It can be called only on the main thread. After an atomic service is started, the following situations may occur:
+
 - Normally, the atomic service can call  
 [terminateSelfWithResult](#terminateselfwithresult) to terminate itself. The result is returned to the caller.  
 - If an exception occurs, for example, the atomic service is killed, an exception result, in which **resultCode**  
@@ -951,7 +952,8 @@ export default class EntryAbility extends UIAbility {
 openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<AbilityResult>): Promise<void>
 ```
 
-Starts a UIAbility by using <!--RP2-->[App Linking](../../../application-models/app-linking-startup.md)&lt;!--RP2End- -&gt; or [Deep Linking](../../../application-models/deep-linking-startup.md), and returns the exit result of the launched UIAbility via a callback. This API uses a promise to return the result. It can be called only on the main thread. A URL in the standard format is passed in to the **link** field to start the target UIAbility based on the implicit Want matching rules. The target UIAbility must have the following filter characteristics to process links of App Linking:  
+Starts a UIAbility by using <!--RP2-->[App Linking](../../../application-models/app-linking-startup.md)&lt;!--RP2End- -&gt; or [Deep Linking](../../../application-models/deep-linking-startup.md), and returns the exit result of the launched UIAbility via a callback. This API uses a promise to return the result. It can be called only on the main thread. A URL in the standard format is passed in to the **link** field to start the target UIAbility based on the implicit Want matching rules. The target UIAbility must have the following filter characteristics to process links of App Linking:
+
 - The **actions** field must contain **ohos.want.action.viewData**.  
 - The **entities** field must contain **entity.system.browsable**.  
 - The **uris** field must contain elements whose **scheme** is **https** and **domainVerify** is **true**.  
@@ -982,7 +984,7 @@ If you want to obtain the result after the started UIAbility is terminated, set 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1232,7 +1234,7 @@ Starts a ServiceExtensionAbility that supports modal dialog boxes. After the Ser
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;dialogRequest.RequestResult & gt; | Promise that returns no value. |
+| Promise&lt;dialogRequest.RequestResult&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1329,7 +1331,7 @@ Called by a focused UIAbility to restart its own process and launch a specified 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1402,7 +1404,7 @@ Restores the WindowStage data in the UIAbility. It can be called only on the mai
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localStorage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | Yes | Storage used to store the restored window stage. |
+| localStorage | LocalStorage | Yes | Storage used to store the restored window stage. |
 
 **Error codes:**
 
@@ -1448,7 +1450,7 @@ When the first UIAbility launched under a module needs to redirect to another UI
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1521,7 +1523,7 @@ Sets the icon and label for this UIAbility. The icon and label can be displayed 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1711,7 +1713,7 @@ Sets the mission continuation state of this UIAbility. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1810,7 +1812,7 @@ Sets a mission label for this UIAbility on the multitasking screen. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1873,7 +1875,7 @@ Sets the icon for this UIAbility, which is displayed in the application window, 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1952,7 +1954,7 @@ Sets whether to trigger the [onNewWant](arkts-ability-app-ability-uiability-uiab
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2057,7 +2059,7 @@ Shows this UIAbility. This API uses a promise to return the result. It can be ca
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2367,7 +2369,7 @@ Starts a UIAbility. This API uses a promise to return the result. It can be call
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2666,7 +2668,7 @@ Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the UIExtensionAbility to start. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules). |
-| wantParam | Record & lt;string, Object & gt; | Yes | Extended parameter. |
+| wantParam | Record&lt;string, Object&gt; | Yes | Extended parameter. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback used to return the detailed error information if the startup fails. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
@@ -2734,14 +2736,14 @@ Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the UIExtensionAbility to start. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules). |
-| wantParam | Record & lt;string, Object & gt; | Yes | Extended parameter. |
+| wantParam | Record&lt;string, Object&gt; | Yes | Extended parameter. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback used to return the detailed error information if the startup fails. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2790,7 +2792,8 @@ export default class EntryAbility extends UIAbility {
 startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 ```
 
-Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility:  
+Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility:
+
 - Normally, you can call  
 [terminateSelfWithResult](#terminateselfwithresult) to terminate the UIAbility and return the result to the caller.  
 - If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-  
@@ -2890,7 +2893,8 @@ export default class EntryAbility extends UIAbility {
 startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void
 ```
 
-Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility:  
+Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility:
+
 - Normally, you can call  
 [terminateSelfWithResult](#terminateselfwithresult) to terminate the UIAbility and return the result to the caller.  
 - If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-  
@@ -2994,7 +2998,8 @@ export default class EntryAbility extends UIAbility {
 startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>
 ```
 
-Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses a promise to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility:  
+Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses a promise to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility:
+
 - Normally, you can call  
 [terminateSelfWithResult](#terminateselfwithresult) to terminate the UIAbility and return the result to the caller.  
 - If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-  
@@ -3128,7 +3133,7 @@ Starts an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-ap
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -3200,7 +3205,7 @@ Bring the current UIAbility instance to the foreground.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -3236,7 +3241,7 @@ Launch the application's own UIAbility in the child process. If the launchMode o
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -3290,7 +3295,7 @@ Starts the application's own UIAbility within the current process. This API can 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -3372,7 +3377,7 @@ Starts a UIServiceExtensionAbility. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -3463,7 +3468,7 @@ Stops an [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-api
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -3623,7 +3628,7 @@ Terminates this UIAbility. This API uses a promise to return the result. It can 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -3792,7 +3797,7 @@ Terminates this UIAbility. This API uses a promise to return the result. It can 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

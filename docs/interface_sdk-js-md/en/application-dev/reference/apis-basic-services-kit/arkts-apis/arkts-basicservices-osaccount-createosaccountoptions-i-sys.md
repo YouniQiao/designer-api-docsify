@@ -11,7 +11,7 @@ Represents the optional parameter used to create an OS account.
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## allowedPreinstalledBundles
@@ -52,8 +52,10 @@ Forbidden list of the preinstalled applications, which cannot be installed on th
 shortName: string
 ```
 
-Short name of the account (used as the name of the personal folder).  
+Short name of the account (used as the name of the personal folder).
+
 **The short name cannot**:
+
 1. Contain any of the following characters: &lt; &gt;| : " * ? / \
 2. Contain any of the following: . or ..
 3. Exceed 255 characters.

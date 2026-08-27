@@ -1,6 +1,6 @@
 # TreeListener
 
-树视图组件的监听器，可以将此对象绑定至树视图组件，然后通过它监听树的节点的变化，同一个监听器不可以控制多个树视图组件。监听器内部维护事件类型与回调函数的映射关系，当用户在TreeView上进行节点操作时，TreeView会通知监听器触 发相应的回调函数，开发者可在回调中获取节点信息并进行业务处理。
+树视图组件的监听器，可以将此对象绑定至树视图组件，然后通过它监听树的节点的变化，同一个监听器不可以控制多个树视图组件。监听器内部维护事件类型与回调函数的映射关系，当用户在TreeView上进行节点操作时，TreeView会通知监听器触发相应的回调函数，开发者可在回调中获取节点信息并进行业务处理。
 
 **起始版本：** 10
 
@@ -10,7 +10,6 @@
 
 ```TypeScript
 import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
-import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUIV2';
 ```
 
 ## off
@@ -34,7 +33,7 @@ off(type: TreeListenType, callback?: (callbackParam: CallbackParam) => void): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | 是 | 监听事件类型，用于指定要取消的监听事件。 |
-| callback | (callbackParam: CallbackParam) = & gt; void | 否 | Node information. |
+| callback | (callbackParam: CallbackParam) =&gt; void | 否 | Node information. |
 
 ## on
 
@@ -57,7 +56,7 @@ on(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | 是 | 监听事件类型，用于指定要注册的监听事件。 |
-| callback | (callbackParam: CallbackParam) = & gt; void | 是 | 回调函数，在对应监听事件触发时调用。回调参数callbackParam包含currentNodeId、parentNodeId和childIndex等信息。 |
+| callback | (callbackParam: CallbackParam) =&gt; void | 是 | 回调函数，在对应监听事件触发时调用。回调参数callbackParam包含currentNodeId、parentNodeId和childIndex等信息。 |
 
 ## once
 
@@ -80,4 +79,4 @@ once(type: TreeListenType, callback: (callbackParam: CallbackParam) => void): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | 是 | 监听事件类型，用于指定要注册的监听事件。 |
-| callback | (callbackParam: CallbackParam) = & gt; void | 是 | 回调函数，在对应监听事件触发时调用。回调参数callbackParam包含currentNodeId、parentNodeId和childIndex等信息。 |
+| callback | (callbackParam: CallbackParam) =&gt; void | 是 | 回调函数，在对应监听事件触发时调用。回调参数callbackParam包含currentNodeId、parentNodeId和childIndex等信息。 |

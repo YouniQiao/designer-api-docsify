@@ -40,7 +40,7 @@ Creates an **ImageData** object with the specified width, height, and color. If 
 | --- | --- | --- | --- |
 | width | number | Yes | Width of the rectangle.Default unit: vp Invalid values **NaN** and **Infinity** are treated as **0**. |
 | height | number | Yes | Height of the rectangle.Default unit: vp Invalid values **NaN** and **Infinity** are treated as **0**. |
-| data | [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | No | A one-dimensional array of color values. The values range from 0 to 255.If the value specified is **undefined**, **data** is **undefined**.Default value: a one-dimensional array of all 0s |
+| data | Uint8ClampedArray | No | A one-dimensional array of color values. The values range from 0 to 255.If the value specified is **undefined**, **data** is **undefined**.Default value: a one-dimensional array of all 0s |
 
 **Examples**
 
@@ -108,8 +108,8 @@ Creates an **ImageData** object with the specified width, height, and color. If 
 | --- | --- | --- | --- |
 | width | number | Yes | Width of the rectangle.Default unit: vp Invalid values **NaN** and **Infinity** are treated as **0**. |
 | height | number | Yes | Height of the rectangle.Default unit: vp Invalid values **NaN** and **Infinity** are treated as **0**. |
-| data | [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | No | A one-dimensional array of color values. The values range from 0 to 255.If the value specified is **undefined**, **data** is **undefined**.Default value: a one-dimensional array of all 0s |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No | Unit mode of the **ImageData** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.Default value: **DEFAULT**. |
+| data | Uint8ClampedArray | No | A one-dimensional array of color values. The values range from 0 to 255.If the value specified is **undefined**, **data** is **undefined**.Default value: a one-dimensional array of all 0s |
+| unit | LengthMetricsUnit | No | Unit mode of the **ImageData** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.Default value: **DEFAULT**. |
 
 **Examples**
 
@@ -139,7 +139,9 @@ A one-dimensional array of color values. The values range from 0 to 255.
 readonly height: number
 ```
 
-Actual height of the rectangle on the canvas.The unit is px.
+Actual height of the rectangle on the canvas.
+
+The unit is px.
 
 **Type:** number
 
@@ -191,7 +193,9 @@ struct OffscreenCanvasPage {
 readonly width: number
 ```
 
-Actual width of the rectangle on the canvas.The unit is px.
+Actual width of the rectangle on the canvas.
+
+The unit is px.
 
 > **NOTE：**
 > 

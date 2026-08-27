@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemParameter from '@kit.BasicServicesKit';
+import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
 ## set
@@ -79,7 +79,7 @@ Sets a value for the specified key. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the execution result. |
+| Promise&lt;void&gt; | Promise used to return the execution result. |
 
 **Examples**
 

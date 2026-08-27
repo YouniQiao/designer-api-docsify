@@ -1,6 +1,8 @@
 # AdvancedDialogV2ButtonOptions
 
-Declare the options of AdvancedDialogV2Button@interface AdvancedDialogV2ButtonOptions
+Declare the options of AdvancedDialogV2Button
+
+@interface AdvancedDialogV2ButtonOptions
 
 **Since:** 18
 

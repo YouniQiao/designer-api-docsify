@@ -1,6 +1,8 @@
 # NetHandle
 
-Represents the network handle.Before invoking **NetHandle** APIs, call **getNetHandle** to obtain a **NetHandle** object. For example, you can call [getDefaultNet](arkts-network-connection-getdefaultnet-f.md) to obtain the network handle of the default network.
+Represents the network handle.
+
+Before invoking **NetHandle** APIs, call **getNetHandle** to obtain a **NetHandle** object. For example, you can call [getDefaultNet](arkts-network-connection-getdefaultnet-f.md) to obtain the network handle of the default network.
 
 **Since:** 8
 
@@ -27,7 +29,7 @@ Binds the TCPSocket or UDPSocket to the network specified by **NetHandle**. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socketParam | TCPSocket \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | Yes | TCPSocket** or **UDPSocket** object. |
+| socketParam | TCPSocket \| UDPSocket | Yes | TCPSocket** or **UDPSocket** object. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **TCPSocket** or **UDPSocket** object is successfully bound to the current network, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
@@ -117,13 +119,13 @@ Binds the TCPSocket or UDPSocket to the network specified by **NetHandle**. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socketParam | TCPSocket \| [UDPSocket](arkts-network-connection-udpsocket-t.md) | Yes | TCPSocket** or **UDPSocket** object. |
+| socketParam | TCPSocket \| UDPSocket | Yes | TCPSocket** or **UDPSocket** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -268,7 +270,7 @@ Obtains the first IP address by using the network specified by **NetHandle** to 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NetAddress & gt; | Promise used to return the first IP address. |
+| Promise&lt;NetAddress&gt; | Promise used to return the first IP address. |
 
 **Error codes:**
 
@@ -391,7 +393,7 @@ Obtains all IP addresses by using the network specified by **NetHandle** to reso
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;NetAddress & gt; & gt; | Promise used to return all IP addresses. |
+| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise used to return all IP addresses. |
 
 **Error codes:**
 
@@ -455,7 +457,7 @@ Performs DNS resolution using the network specified by **NetHandle** based on th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;NetAddress & gt; & gt; | Promise used to return the queried IP address. In the command output, the port field has a fixed value of 0. |
+| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise used to return the queried IP address. In the command output, the port field has a fixed value of 0. |
 
 **Error codes:**
 

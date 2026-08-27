@@ -323,7 +323,7 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | 是 | 回调函数。当获取X.509证书序列化数据成功时，err为undefined，data为 获取到的X.509证书序列化数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | 是 | 回调函数。当获取X.509证书序列化数据成功时，err为undefined，data为获取到的X.509证书序列化数据；否则为错误对象。 |
 
 **错误码：**
 
@@ -1269,7 +1269,7 @@ getIssuerName(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书颁发者名称。 |
+| DataBlob | 表示X.509证书颁发者名称。 |
 
 **错误码：**
 
@@ -1713,7 +1713,7 @@ getItem(itemType: CertItemType): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书对应的字段，返回值为DER格式。 |
+| DataBlob | 表示X.509证书对应的字段，返回值为DER格式。 |
 
 **错误码：**
 
@@ -1792,7 +1792,7 @@ getKeyUsage(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书密钥用途。 |
+| DataBlob | 表示X.509证书密钥用途。 |
 
 **错误码：**
 
@@ -2219,7 +2219,7 @@ getSignature(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书签名数据。 |
+| DataBlob | 表示X.509证书签名数据。 |
 
 **错误码：**
 
@@ -2717,7 +2717,7 @@ getSignatureAlgParams(): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书签名算法参数。 |
+| DataBlob | 表示X.509证书签名算法参数。 |
 
 **错误码：**
 
@@ -2997,13 +2997,13 @@ getSubjectName(encodingType?: EncodingType): DataBlob
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encodingType | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | 否 | 表示编码类型。设置该参数时，获取UTF-8格式的主体名称； 不设置时，默认获取ASCII编码格式的主体名称。该参数从API version 12开始可用。<br>**起始版本：** 12 |
+| encodingType | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | 否 | 表示编码类型。设置该参数时，获取UTF-8格式的主体名称；不设置时，默认获取ASCII编码格式的主体名称。该参数从API version 12开始可用。<br>**起始版本：** 12 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | 表示X.509证书主体名称。 |
+| DataBlob | 表示X.509证书主体名称。 |
 
 **错误码：**
 
@@ -4435,7 +4435,7 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

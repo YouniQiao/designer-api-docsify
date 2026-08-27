@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import unifiedDataChannel from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## abilityName
@@ -38,7 +38,7 @@ set abilityName(value: string)
 set appIconId(value: string)
 ```
 
-图标的图片id。 This field can be sourced from BMS or customized as needed.
+图标的图片id。This field can be sourced from BMS or customized as needed.
 
 **类型：** string
 

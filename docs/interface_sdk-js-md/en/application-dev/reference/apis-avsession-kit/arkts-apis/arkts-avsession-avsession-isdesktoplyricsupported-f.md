@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## isDesktopLyricSupported
@@ -24,7 +24,7 @@ Whether desktop lyric feature is supported.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | result returned to indicate desktop lyric is supported. |
+| Promise&lt;boolean&gt; | result returned to indicate desktop lyric is supported. |
 
 **Error codes:**
 

@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import config from '@kit.AccessibilityKit.config';
-import accessibility from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
-import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
@@ -28,7 +25,7 @@ Checks whether the senior mode is enabled. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that senior mode is enabled, and **false** indicates that senior mode is disabled. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that senior mode is enabled, and **false** indicates that senior mode is disabled. |
 
 **Error codes:**
 

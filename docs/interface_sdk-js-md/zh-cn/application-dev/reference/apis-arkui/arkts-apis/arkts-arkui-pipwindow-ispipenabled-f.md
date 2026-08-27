@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import PiPWindow from '@kit.ArkUI';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## isPiPEnabled

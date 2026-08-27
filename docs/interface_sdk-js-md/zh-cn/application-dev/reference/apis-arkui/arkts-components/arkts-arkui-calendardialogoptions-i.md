@@ -1,6 +1,8 @@
 # CalendarDialogOptions
 
-日历选择器弹窗选项。继承自[CalendarOptions](arkts-arkui-calendaroptions-i.md)。
+日历选择器弹窗选项。
+
+继承自[CalendarOptions](arkts-arkui-calendaroptions-i.md)。
 
 > **说明：**
 > 
@@ -190,7 +192,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-背景模糊效果参数，用于自定义弹窗背景模糊的显示样式，支持配置颜色模式、自适应颜色、缩放比例等属性，实现不同的背景模糊视觉效果。默认值请参考 BackgroundBlurStyleOptions。
+背景模糊效果参数，用于自定义弹窗背景模糊的显示样式，支持配置颜色模式、自适应颜色、缩放比例等属性，实现不同的背景模糊视觉效果。默认值请参考BackgroundBlurStyleOptions。
 
 > **说明：**
 > 
@@ -238,7 +240,7 @@ backgroundColor?: ResourceColor
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。 默认值请参考[BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)。
+背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。默认值请参考[BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)。
 
 > **说明：**
 > 
@@ -287,9 +289,11 @@ cancelButtonStyle?: PickerDialogButtonStyle
 enableHoverMode?: boolean
 ```
 
-设置弹窗是否响应悬停态，适用于折叠屏等支持悬停模式的设备。  
+设置弹窗是否响应悬停态，适用于折叠屏等支持悬停模式的设备。
+
 - true：弹窗响应悬停态，在折叠屏悬停模式下会自适应调整布局区域，提供更好的多任务体验。  
-- false：弹窗不响应悬停态，在悬停模式下保持默认布局。  
+- false：弹窗不响应悬停态，在悬停模式下保持默认布局。
+
 默认值：false
 
 **类型：** boolean
@@ -310,7 +314,7 @@ enableHoverMode?: boolean
 hoverModeArea?: HoverModeAreaType
 ```
 
-设置悬停态下弹窗的默认展示区域，仅在enableHoverMode为true时生效。不同的区域值对应弹窗在折叠屏悬停模式下的不同布局位置 （如BOTTOM_SCREEN表示弹窗展示在下半屏区域，TOP_SCREEN表示弹窗展示在上半屏区域）。
+设置悬停态下弹窗的默认展示区域，仅在enableHoverMode为true时生效。不同的区域值对应弹窗在折叠屏悬停模式下的不同布局位置（如BOTTOM_SCREEN表示弹窗展示在下半屏区域，TOP_SCREEN表示弹窗展示在上半屏区域）。
 
 > 默认值：HoverModeAreaType.BOTTOM_SCREEN
 
@@ -332,7 +336,8 @@ hoverModeArea?: HoverModeAreaType
 markToday?: boolean
 ```
 
-设置日历选择器弹窗中系统当前日期是否保持高亮显示。  
+设置日历选择器弹窗中系统当前日期是否保持高亮显示。
+
 - true：系统当前日期在日历选择器弹窗内保持高亮显示。  
 - false：系统当前日期在日历选择器弹窗内不保持高亮显示。
 
@@ -356,7 +361,9 @@ markToday?: boolean
 onAccept?: Callback<Date>
 ```
 
-点击弹窗中的“确定”按钮时触发该回调。回调函数的参数表示选中的日期值。
+点击弹窗中的“确定”按钮时触发该回调。
+
+回调函数的参数表示选中的日期值。
 
 **类型：** Callback&lt;Date&gt;
 
@@ -374,7 +381,9 @@ onAccept?: Callback<Date>
 onChange?: Callback<Date>
 ```
 
-选择弹窗中日期使当前选中项改变时触发该回调。回调函数的参数表示选中的日期值。
+选择弹窗中日期使当前选中项改变时触发该回调。
+
+回调函数的参数表示选中的日期值。
 
 **类型：** Callback&lt;Date&gt;
 
@@ -392,7 +401,9 @@ onChange?: Callback<Date>
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-设置弹窗背板的阴影。当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。
+设置弹窗背板的阴影。
+
+当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。
 
 **类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 

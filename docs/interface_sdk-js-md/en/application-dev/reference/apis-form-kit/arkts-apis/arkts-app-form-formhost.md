@@ -11,7 +11,7 @@ The **formHost** module provides APIs related to the widget host, which is an ap
 ## Modules to Import
 
 ```TypeScript
-import formHost from '@kit.FormKit';
+import { formHost } from '@kit.FormKit';
 ```
 
 ## Summary
@@ -25,7 +25,7 @@ import formHost from '@kit.FormKit';
 | [acquireFormData](arkts-form-formhost-acquireformdata-f-sys.md) | Requests data from the widget provider. This API uses a promise to return the result. |
 | [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md) | Obtains the widget state. This API uses an asynchronous callback to return the result. |
 | [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md) | Obtains the widget state. This API uses a promise to return the result. |
-| [addForm](arkts-form-formhost-addform-f-sys.md) | Add a form.You can use this method to create a theme form. |
+| [addForm](arkts-form-formhost-addform-f-sys.md) | Add a form. |
 | [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md) | Converts a temporary widget to a normal one. This API uses an asynchronous callback to return the result. |
 | [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md) | Converts a temporary widget to a normal one. This API uses a promise to return the result. |
 | [clearRouterProxy](arkts-form-formhost-clearrouterproxy-f-sys.md) | Clears the router proxy set for widgets. This API uses an asynchronous callback to return the result. |

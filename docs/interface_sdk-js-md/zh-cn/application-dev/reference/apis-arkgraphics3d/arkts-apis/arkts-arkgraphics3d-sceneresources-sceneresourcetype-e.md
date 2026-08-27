@@ -1,6 +1,8 @@
 # SceneResourceType
 
-场景资源类型枚举，对场景中的资源进行分类。@enum { number }
+场景资源类型枚举，对场景中的资源进行分类。
+
+@enum { number }
 
 **起始版本：** 12
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemSoundManager from '@kit.AudioKit';
+import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## createSystemSoundPlayer
@@ -22,7 +22,7 @@ Creates a SystemSoundPlayer instance. This function uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;SystemSoundPlayer \ | null & gt; | Promise used to return the result. If the operation is successful, a SystemSoundPlayer instance is returned. Otherwise, null is returned. The instance is used for loading and playback. |
+| Promise&lt;SystemSoundPlayer \| null&gt; | Promise used to return the result. If the operation is successful, a SystemSoundPlayer instance is returned. Otherwise, null is returned. The instance is used for loading and playback. |
 
 **Error codes:**
 

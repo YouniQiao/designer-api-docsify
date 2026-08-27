@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import batteryStats from '@kit.BasicServicesKit';
+import { batteryStats } from '@kit.BasicServicesKit';
 ```
 
 ## getBatteryStats

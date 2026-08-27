@@ -9,7 +9,7 @@ Defines a TCP socket server connection. Before calling TCPSocketServer APIs, you
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## close
@@ -36,7 +36,7 @@ Stops listening for events of the **TCPSocketServer** object and releases the po
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -267,7 +267,7 @@ Obtains the local socket address of a **TCPSocketServer** connection. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NetAddress & gt; | Promise used to return the result. |
+| Promise&lt;NetAddress&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -475,7 +475,7 @@ Obtains the file descriptor bound to the TCPSocketServer listening port. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the socket file descriptor. |
+| Promise&lt;number&gt; | Promise used to return the socket file descriptor. |
 
 **Error codes:**
 
@@ -1186,7 +1186,7 @@ Binds the IP address and port number. The port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Destination address. |
+| address | NetAddress | Yes | Destination address. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
@@ -1245,13 +1245,13 @@ Binds the IP address and port number. The port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Destination address. |
+| address | NetAddress | Yes | Destination address. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1744,7 +1744,7 @@ Sets other properties of the **TCPSocketServer** object. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

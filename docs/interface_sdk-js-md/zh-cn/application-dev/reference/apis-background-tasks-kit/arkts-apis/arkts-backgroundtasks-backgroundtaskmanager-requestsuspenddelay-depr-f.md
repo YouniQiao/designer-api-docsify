@@ -11,7 +11,9 @@
 function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo
 ```
 
-后台应用申请延迟挂起。延迟挂起时间一般情况下默认值为3分钟，低电量（依据系统低电量广播）时默认值为1分钟。
+后台应用申请延迟挂起。
+
+延迟挂起时间一般情况下默认值为3分钟，低电量（依据系统低电量广播）时默认值为1分钟。
 
 **起始版本：** 7
 
@@ -32,7 +34,7 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 
 | 类型 | 说明 |
 | --- | --- |
-| [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md) | 返回延迟挂起信息。 |
+| DelaySuspendInfo | 返回延迟挂起信息。 |
 
 **示例**
 

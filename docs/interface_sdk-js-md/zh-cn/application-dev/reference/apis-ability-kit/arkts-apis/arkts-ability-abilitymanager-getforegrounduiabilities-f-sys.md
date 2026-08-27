@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityManager from '@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## getForegroundUIAbilities
@@ -73,7 +73,7 @@ function getForegroundUIAbilities(): Promise<Array<AbilityStateData>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;AbilityStateData & gt; & gt; | 以Promise方式返回接口运行结果及有关前台Ability的信息，可进行错误处理或其他自定义处理。 |
+| Promise&lt;Array&lt;AbilityStateData&gt;&gt; | 以Promise方式返回接口运行结果及有关前台Ability的信息，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 

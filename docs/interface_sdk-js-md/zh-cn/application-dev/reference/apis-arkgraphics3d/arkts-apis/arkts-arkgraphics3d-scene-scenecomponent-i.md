@@ -1,6 +1,8 @@
 # SceneComponent
 
-表示基础场景组件，用于描述场景节点的组件信息，包括组件名称及其对应的属性集合。@interface SceneComponent
+表示基础场景组件，用于描述场景节点的组件信息，包括组件名称及其对应的属性集合。
+
+@interface SceneComponent
 
 **起始版本：** 20
 

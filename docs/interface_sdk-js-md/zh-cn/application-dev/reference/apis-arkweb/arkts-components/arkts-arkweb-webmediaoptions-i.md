@@ -9,9 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## audioExclusive
@@ -20,7 +17,11 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 audioExclusive?: boolean
 ```
 
-应用内多个Web实例的音频是否独占。true表示应用内多个Web实例的音频独占，false表示不独占。默认值：true。
+应用内多个Web实例的音频是否独占。
+
+true表示应用内多个Web实例的音频独占，false表示不独占。
+
+默认值：true。
 
 **类型：** boolean
 
@@ -36,7 +37,7 @@ audioExclusive?: boolean
 audioSessionType?: AudioSessionType
 ```
 
-应用中Web音频类型。默认值对应系统音频流类型[StreamUsage](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md)中的STREAM_USAGE_MUSIC。用于改变组件音频类型 与系统音频类型映射关系，影响ArkWeb音频焦点策略。
+应用中Web音频类型。默认值对应系统音频流类型[StreamUsage](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md)中的STREAM_USAGE_MUSIC。用于改变组件音频类型与系统音频类型映射关系，影响ArkWeb音频焦点策略。
 
 **类型：** [AudioSessionType](arkts-arkweb-audiosessiontype-e.md)
 
@@ -50,8 +51,13 @@ audioSessionType?: AudioSessionType
 resumeInterval?: number
 ```
 
-被其他应用暂停的Web音视频能够自动续播的有效期，单位：秒。取值范围：[-2147483648, 2147483647]。值为0时，不自动续播；大于0时，将在该时间内尝试续播；小于0时，将在无限时间内尝试续播。由于近似值原因，该有 效期可能存在一秒内的误差。  
-**说明：**HLS视频被打断后，回到前台将自动续播，不受该时间控制。默认值：0。
+被其他应用暂停的Web音视频能够自动续播的有效期，单位：秒。取值范围：[-2147483648, 2147483647]。值为0时，不自动续播；大于0时，将在该时间内尝试续播；小于0时，将在无限时间内尝试续播。由于近似值原因，该有效期可能存在一秒内的误差。
+
+**说明：**
+
+HLS视频被打断后，回到前台将自动续播，不受该时间控制。
+
+默认值：0。
 
 **类型：** number
 

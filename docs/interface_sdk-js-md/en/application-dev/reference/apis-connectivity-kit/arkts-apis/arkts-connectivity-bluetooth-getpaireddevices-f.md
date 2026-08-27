@@ -3,16 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bas from '@kit.ConnectivityKit.bas';
-import common from '@kit.ConnectivityKit.common';
-import bluetooth from '@kit.ConnectivityKit';
-import map from '@kit.ConnectivityKit.map';
-import pan from '@kit.ConnectivityKit.pan';
-import pbap from '@kit.ConnectivityKit.pbap';
-import opp from '@kit.ConnectivityKit.opp';
-import socket from '@kit.ConnectivityKit.socket';
-import wearDetection from '@kit.ConnectivityKit.wearDetection';
-import bluetoothManager from '@kit.ConnectivityKitManager';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## getPairedDevices
@@ -37,7 +28,7 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Returns a list of paired Bluetooth devices's address. |
+| Array&lt;string&gt; | Returns a list of paired Bluetooth devices's address. |
 
 **Examples**
 

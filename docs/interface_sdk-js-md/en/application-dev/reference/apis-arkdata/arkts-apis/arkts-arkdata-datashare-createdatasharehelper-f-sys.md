@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dataShare from '@kit.ArkData';
-import dataSharePredicates from '@kit.ArkDataPredicates';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## createDataShareHelper

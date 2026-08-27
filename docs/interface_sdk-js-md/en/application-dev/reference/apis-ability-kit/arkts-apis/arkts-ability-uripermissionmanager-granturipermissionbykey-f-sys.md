@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import uriPermissionManager from '@kit.AbilityKit';
+import { uriPermissionManager } from '@kit.AbilityKit';
 ```
 
 ## grantUriPermissionByKey
@@ -32,7 +32,7 @@ Grants the URI access permission of the current application to the target applic
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -11,7 +11,7 @@ Status monitor object. It is used to listen for or obtain information such as th
 ## Modules to Import
 
 ```TypeScript
-import companionDeviceAuth from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## getTemplateStatus

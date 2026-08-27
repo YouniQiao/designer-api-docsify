@@ -19,8 +19,7 @@ The **usbManager** module provides USB device management functions, including US
 ## Modules to Import
 
 ```TypeScript
-import usbManager from '@kit.BasicServicesKit';
-import serialManager from '@kit.BasicServicesKit.serial';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -33,8 +32,8 @@ import serialManager from '@kit.BasicServicesKit.serial';
 | [cancelAccessoryRight](arkts-basicservices-usbmanager-cancelaccessoryright-f.md) | Cancels the permission of the current application to access USB accessories. You need to call [usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md) to obtain the accessory list and use [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md) as a parameter. |
 | [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) | Claims a USB device interface. |
 | [closeAccessory](arkts-basicservices-usbmanager-closeaccessory-f.md) | Closes the accessory file descriptor. You need to call [usbManager.openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md) to obtain the accessory list and use [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) as a parameter. |
-| [closePipe](arkts-basicservices-usbmanager-closepipe-f.md) | Closes a USB device pipe. 1. Call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain the USB device list. 2. Call [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) to request the device access permission. 3. Call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) to obtain **devicepipe** as an input parameter. |
-| [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) | Connects to the USB device based on the device information returned by **getDevices()**. If the USB service is abnormal, **undefined** may be returned. Check whether the return value of the API is empty. 1. Call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md) to obtain the USB device list. 2. Call [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md) to request the device access permission. |
+| [closePipe](arkts-basicservices-usbmanager-closepipe-f.md) | Closes a USB device pipe. |
+| [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md) | Connects to the USB device based on the device information returned by **getDevices()**. If the USB service is abnormal, **undefined** may be returned. Check whether the return value of the API is empty. |
 | [controlTransfer](arkts-basicservices-usbmanager-controltransfer-f.md) | Performs control transfer. This API uses a promise to return the result. |
 | [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md) | Obtains the list of USB accessories connected to the host. |
 | [getDevices](arkts-basicservices-usbmanager-getdevices-f.md) | Obtains the list of USB devices connected to the host. |

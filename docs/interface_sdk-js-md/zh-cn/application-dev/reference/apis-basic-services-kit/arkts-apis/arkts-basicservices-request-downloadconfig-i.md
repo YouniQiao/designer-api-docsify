@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## background
@@ -79,8 +78,10 @@ enableRoaming?: boolean
 filePath?: string
 ```
 
-设置下载路径。默认为调用方（即传入的context）对应的缓存路径。默认文件名从url的最后一个"/"后截取。  
-- FA模型下使用 [Context.getCacheDir](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetcachedir)方法获取应用 存储路径。  
+设置下载路径。默认为调用方（即传入的context）对应的缓存路径。默认文件名从url的最后一个"/"后截取。
+
+- FA模型下使用[Context.getCacheDir](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetcachedir)方法获取应用存储路径。
+
 - Stage模型下使用[Context (Stage模型的上下文基类)](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)中AbilityContext的类获取文件路径。
 
 **类型：** string
@@ -109,10 +110,12 @@ header?: Object
 networkType?: number
 ```
 
-设置允许下载的网络类型，通过 [网络类型常量](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)的位运算方式决定允许 的网络类型，支持如下几种设置方式:  
+设置允许下载的网络类型，通过[网络类型常量](../../../reference/apis-basic-services-kit/js-apis-request.md#constants)的位运算方式决定允许的网络类型，支持如下几种设置方式:
+
 - 仅支持蜂窝网络下载，参数为NETWORK_MOBILE或0x00000001  
 - 仅支持WLAN网络下载，参数为NETWORK_WIFI或0x00010000  
-- 参数默认值，支持蜂窝/WLAN网络下载，参数为NETWORK_MOBILE | NETWORK_WIFI或0x00010001。  
+- 参数默认值，支持蜂窝/WLAN网络下载，参数为NETWORK_MOBILE | NETWORK_WIFI或0x00010001。
+
 当参数为NETWORK_MOBILE | NETWORK_WIFI时，enableMetered和enableRoaming参数不生效。
 
 **类型：** number
@@ -141,7 +144,7 @@ title?: string
 url: string
 ```
 
-资源地址。从API 6到API 14，最大长度为2048个字符；从API 15开始，最大长度为8192个字符。支持 [HTTP拦截](../../../basic-services/request/app-file-upload-download.md#http拦截)功能。
+资源地址。从API 6到API 14，最大长度为2048个字符；从API 15开始，最大长度为8192个字符。支持[HTTP拦截](../../../basic-services/request/app-file-upload-download.md#http拦截)功能。
 
 **类型：** string
 

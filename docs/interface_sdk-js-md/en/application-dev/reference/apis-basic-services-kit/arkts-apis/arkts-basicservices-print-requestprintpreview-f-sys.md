@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## requestPrintPreview
@@ -92,7 +92,7 @@ Requests print preview data. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the preview result. |
+| Promise&lt;number&gt; | Promise used to return the preview result. |
 
 **Error codes:**
 

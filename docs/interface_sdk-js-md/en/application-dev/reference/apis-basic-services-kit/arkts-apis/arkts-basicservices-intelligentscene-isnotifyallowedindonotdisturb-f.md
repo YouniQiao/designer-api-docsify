@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import intelligentScene from '@kit.BasicServicesKit';
+import { intelligentScene } from '@kit.BasicServicesKit';
 ```
 
 ## isNotifyAllowedInDoNotDisturb
@@ -26,7 +26,7 @@ Checks whether calling bundle is allow notify(e.g. sound & vibration) when syste
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Returns whether notify in Do Not Disturb mode is Allowed. |
+| Promise&lt;boolean&gt; | Returns whether notify in Do Not Disturb mode is Allowed. |
 
 **Error codes:**
 

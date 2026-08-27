@@ -11,7 +11,7 @@ The **LiveFormExtensionAbility** module, inherited from
 ## 导入模块
 
 ```TypeScript
-import LiveFormExtensionAbility, { LiveFormInfo } from '@kit.FormKit';
+import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## 汇总

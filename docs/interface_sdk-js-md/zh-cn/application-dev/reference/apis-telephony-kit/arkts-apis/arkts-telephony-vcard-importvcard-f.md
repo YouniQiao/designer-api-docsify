@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import vcard from '@kit.TelephonyKit';
+import { vcard } from '@kit.TelephonyKit';
 ```
 
 ## importVCard
@@ -24,7 +24,7 @@ function importVCard(context: Context, filePath: string, accountId: number, call
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文。 |
+| context | Context | 是 | 应用上下文。 |
 | filePath | string | 是 | VCF(vcard file)文件地址。 |
 | accountId | number | 是 | 联系人账户ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，返回导入成功或失败的状态码。 |
@@ -78,7 +78,7 @@ function importVCard(context: Context, filePath: string, accountId?: number): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文。 |
+| context | Context | 是 | 应用上下文。 |
 | filePath | string | 是 | VCF(vcard file)文件地址。 |
 | accountId | number | 否 | 联系人账户ID。 |
 
@@ -86,7 +86,7 @@ function importVCard(context: Context, filePath: string, accountId?: number): Pr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回重置的结果码。 |
+| Promise&lt;void&gt; | Promise对象，返回重置的结果码。 |
 
 **错误码：**
 
@@ -139,7 +139,7 @@ function importVCard(context: Context, filePath: string, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文。 |
+| context | Context | 是 | 应用上下文。 |
 | filePath | string | 是 | VCF(vcard file)文件地址。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，返回导入成功或失败的状态码。 |
 

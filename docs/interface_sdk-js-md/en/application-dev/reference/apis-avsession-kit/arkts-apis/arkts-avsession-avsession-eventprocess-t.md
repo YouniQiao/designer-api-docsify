@@ -15,4 +15,4 @@ The general process funcation with an event and arguments.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | request event |
-| args | Record & lt;string, Object & gt; | Yes | arguments associated with event |
+| args | Record&lt;string, Object&gt; | Yes | arguments associated with event |

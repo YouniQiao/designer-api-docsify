@@ -9,7 +9,7 @@ Asynchronous lock.
 ## Modules to Import
 
 ```TypeScript
-import ArkTSUtils from '@kit.ArkTS';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## Summary
@@ -18,21 +18,21 @@ import ArkTSUtils from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [AsyncLock(Defines the utils for ArkTS)](arkts-arkts-locks-asynclock-c.md) | Class to execute an asynchronous operation under lock. |
-| [AsyncLockOptions(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockoptions-c.md) | Lock operation's options |
-| [AsyncLockState(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockstate-c.md) | Information about all lock operations on the AsyncLock instance. |
-| [AsyncLockInfo(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockinfo-c.md) | Information about a lock. |
-| [AbortSignal(Defines the utils for ArkTS)](arkts-arkts-locks-abortsignal-c.md) | Object used to abort an async operation. An instance of this class must be accessed in the same thread where the instance is created. Access to fields of this class from another thread is undefined behaviour. |
-| [ConditionVariable(Defines the utils for ArkTS)](arkts-arkts-locks-conditionvariable-c.md) | Object used for thread synchronization. |
+| [AsyncLock](arkts-arkts-locks-asynclock-c.md) | Class to execute an asynchronous operation under lock. |
+| [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md) | Lock operation's options |
+| [AsyncLockState](arkts-arkts-locks-asynclockstate-c.md) | Information about all lock operations on the AsyncLock instance. |
+| [AsyncLockInfo](arkts-arkts-locks-asynclockinfo-c.md) | Information about a lock. |
+| [AbortSignal](arkts-arkts-locks-abortsignal-c.md) | Object used to abort an async operation. An instance of this class must be accessed in the same thread where the instance is created. Access to fields of this class from another thread is undefined behaviour. |
+| [ConditionVariable](arkts-arkts-locks-conditionvariable-c.md) | Object used for thread synchronization. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [AsyncLockMode(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockmode-e.md) | Mode of lock operations. |
+| [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Mode of lock operations. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [AsyncLockCallback(Defines the utils for ArkTS)](arkts-arkts-locks-asynclockcallback-t.md) | Type of callback for asyncLock operation. |
+| [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md) | Type of callback for asyncLock operation. |

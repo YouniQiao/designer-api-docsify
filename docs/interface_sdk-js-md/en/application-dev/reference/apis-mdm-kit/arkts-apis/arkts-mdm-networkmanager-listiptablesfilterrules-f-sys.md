@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## listIptablesFilterRules
@@ -91,7 +91,7 @@ Obtains the network packet filtering rule. Only IPv4 is supported. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the network packet filtering rules obtained. |
+| Promise&lt;string&gt; | Promise used to return the network packet filtering rules obtained. |
 
 **Error codes:**
 

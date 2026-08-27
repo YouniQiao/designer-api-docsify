@@ -27,7 +27,7 @@ Obtains the information about all sensors on the device.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Sensor & gt; | Sensor attribute list. |
+| Array&lt;Sensor&gt; | Sensor attribute list. |
 
 **Examples**
 

@@ -1,6 +1,8 @@
 # BorderStyle
 
-Border Style@enum { number }
+Border Style
+
+@enum { number }
 
 **起始版本：** 11
 

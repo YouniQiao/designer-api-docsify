@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import privacyManager from '@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## addPermissionUsedRecord
@@ -18,7 +18,9 @@ function addPermissionUsedRecord(
   ): Promise<void>
 ```
 
-When an application protected by a permission is called by another service or application, this API can be used to add a permission usage record. It is recommended to call this API after accessing a sensitive permission, so that the system records the corresponding sensitive permission access event. This API uses a promise to return the result.The permission usage record includes the application identity of the caller, the name of the application permission, and the number of successful and failed accesses to this application by the caller.
+When an application protected by a permission is called by another service or application, this API can be used to add a permission usage record. It is recommended to call this API after accessing a sensitive permission, so that the system records the corresponding sensitive permission access event. This API uses a promise to return the result.
+
+The permission usage record includes the application identity of the caller, the name of the application permission, and the number of successful and failed accesses to this application by the caller.
 
 > **NOTE：**
 > The permission usage record is controlled by the toggle status set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md). When the toggle is off, calling this API will not generate a permission usage record.
@@ -45,7 +47,7 @@ When an application protected by a permission is called by another service or ap
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -99,7 +101,11 @@ function addPermissionUsedRecord(
   ): void
 ```
 
-When an application protected by a permission is called by another service or application, this API can be used to add a permission usage record. It is recommended to call this API after accessing a sensitive permission, so that the system records the corresponding sensitive permission access event. This API uses an asynchronous callback to return the result.The permission usage record includes the application identity of the caller, the name of the application permission used, and the number of successful and failed accesses to this application by the caller.The permission usage record is controlled by the toggle status set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md). When the toggle is off, calling this API will not generate a permission usage record.
+When an application protected by a permission is called by another service or application, this API can be used to add a permission usage record. It is recommended to call this API after accessing a sensitive permission, so that the system records the corresponding sensitive permission access event. This API uses an asynchronous callback to return the result.
+
+The permission usage record includes the application identity of the caller, the name of the application permission used, and the number of successful and failed accesses to this application by the caller.
+
+The permission usage record is controlled by the toggle status set by [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md). When the toggle is off, calling this API will not generate a permission usage record.
 
 **Since:** 9
 

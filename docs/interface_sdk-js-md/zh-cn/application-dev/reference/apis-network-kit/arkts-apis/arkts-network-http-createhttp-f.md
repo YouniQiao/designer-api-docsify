@@ -11,7 +11,7 @@
 function createHttp(): HttpRequest
 ```
 
-创建一个HTTP请求，里面包括发起请求、中断请求、订阅/取消订阅HTTP Response Header事件。当发起多个HTTP请求时，需为每个HTTP请求创建对应HttpRequest对象。每一个HttpRequest对象对应一 个HTTP请求。
+创建一个HTTP请求，里面包括发起请求、中断请求、订阅/取消订阅HTTP Response Header事件。当发起多个HTTP请求时，需为每个HTTP请求创建对应HttpRequest对象。每一个HttpRequest对象对应一个HTTP请求。
 
 > **说明：**
 > 
@@ -27,7 +27,7 @@ function createHttp(): HttpRequest
 
 | 类型 | 说明 |
 | --- | --- |
-| [HttpRequest](arkts-network-connection-httprequest-t.md) | 返回一个HttpRequest对象，里面包括request、requestInStream、requestSync、enableAutoCookie、destroy、on和off方 法。 |
+| HttpRequest | 返回一个HttpRequest对象，里面包括request、requestInStream、requestSync、enableAutoCookie、destroy、on和off方法。 |
 
 **示例**
 

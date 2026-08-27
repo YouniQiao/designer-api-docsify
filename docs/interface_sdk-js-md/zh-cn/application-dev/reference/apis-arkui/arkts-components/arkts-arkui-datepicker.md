@@ -1,7 +1,9 @@
 # DatePicker
 
-DatePicker是滑动选择日期的组件，支持公历和农历切换，可配置日期范围、选择模式和文本样式。用于需要用户选择日期的应用场景， 提供统一的日期选择交互体验，能够提升用户体验，减少开发工作量。
+DatePicker是滑动选择日期的组件，支持公历和农历切换，可配置日期范围、选择模式和文本样式。用于需要用户选择日期的应用场景，提供统一的日期选择交互体验，能够提升用户体验，减少开发工作量。
+
 > **说明：** > > - 该组件从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > - 该组件不建议开发者在动效过程中修改属性数据。 > > - 最大显示行数在横、竖屏模式下存在差异。竖屏时默认为5行，横屏时依赖系统配置，未配置时默认显示为3行。 > 可通过$r('sys.float.ohos_id_picker_show_count_landscape')查看横屏时的具体配置值。
+
 >
 
 ## 子组件 > > 该组件为基础组件，不建议包含子组件。
@@ -24,7 +26,7 @@ DatePicker(options?: DatePickerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DatePickerOptions](arkts-arkui-datepickeroptions-i.md) | 否 | 配置日期选择器组件的参数。不传该参数时使用默认配置（start默认为Date('1970-01-01')， end默认为Date('2100-12-31')，selected默认为当前系统日期）。 |
+| options | [DatePickerOptions](arkts-arkui-datepickeroptions-i.md) | 否 | 配置日期选择器组件的参数。不传该参数时使用默认配置（start默认为Date('1970-01-01')，end默认为Date('2100-12-31')，selected默认为当前系统日期）。 |
 
 ## 汇总
 
@@ -32,11 +34,16 @@ DatePicker(options?: DatePickerOptions)
 
 | 名称 | 说明 |
 | --- | --- |
+| [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) | 日期选择器弹窗选项。 |
+| [DatePickerOptions](arkts-arkui-datepickeroptions-i.md) | 日期选择器组件的参数说明。 |
+| [DatePickerResult](arkts-arkui-datepickerresult-i.md) | 日期选择器返回的时间格式。 |
+| [LunarSwitchStyle](arkts-arkui-lunarswitchstyle-i.md) | 定义了DatePickerDialog组件中农历切换开关的样式。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
+| [DatePickerMode](arkts-arkui-datepickermode-e.md) | 设置日期展示模式。 |
 
 ## 示例
 

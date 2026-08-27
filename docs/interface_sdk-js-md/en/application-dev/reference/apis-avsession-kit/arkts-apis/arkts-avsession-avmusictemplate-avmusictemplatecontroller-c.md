@@ -9,7 +9,7 @@ The definition of the AVMusicTemplateController.
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## clearSearchHistory
@@ -59,7 +59,7 @@ Destroy the controller.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -128,7 +128,7 @@ Execute action.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise for the result |
+| Promise&lt;string&gt; | Promise for the result |
 
 **Error codes:**
 
@@ -922,7 +922,7 @@ Play media entity.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise for the result |
+| Promise&lt;void&gt; | Promise for the result |
 
 **Error codes:**
 
@@ -1022,7 +1022,7 @@ Query current single.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Single & gt; | Promise for the result |
+| Promise&lt;Single&gt; | Promise for the result |
 
 **Error codes:**
 
@@ -1086,7 +1086,7 @@ Query hot words.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string[] & gt; | Promise for the result |
+| Promise&lt;string[]&gt; | Promise for the result |
 
 **Error codes:**
 
@@ -1351,7 +1351,7 @@ Query search history.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string[] & gt; | Promise for the result |
+| Promise&lt;string[]&gt; | Promise for the result |
 
 **Error codes:**
 

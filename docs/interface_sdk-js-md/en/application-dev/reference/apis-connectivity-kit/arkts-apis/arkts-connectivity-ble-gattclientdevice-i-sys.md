@@ -34,7 +34,7 @@ Writes the characteristic of a BLE peripheral device with context.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
 | writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. The interface currently only supports [WRITE](arkts-connectivity-ble-gattwritetype-e.md#write) mode. |
 
 **Return value:**

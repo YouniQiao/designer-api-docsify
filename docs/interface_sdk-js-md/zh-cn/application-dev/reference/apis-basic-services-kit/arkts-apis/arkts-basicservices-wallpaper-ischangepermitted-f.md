@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wallpaper from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## isChangePermitted
@@ -59,7 +59,7 @@ function isChangePermitted(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | 返回是否允许应用改变当前用户的壁纸。如果允许返回true，否则返回false。 |
+| Promise&lt;boolean&gt; | 返回是否允许应用改变当前用户的壁纸。如果允许返回true，否则返回false。 |
 
 **示例**
 

@@ -32,8 +32,13 @@ Defines the transition effect by setting parameters in the struct.
 opacity?: number
 ```
 
-Opacity of the component during transition, which is the value of the start point of insertion and the end point of deletion.Value range: [0, 1]  
-**NOTE：**If the value specified is less than 0, the value **0** is used. If the value specified is greater than 1, the value **1** is used.
+Opacity of the component during transition, which is the value of the start point of insertion and the end point of deletion.
+
+Value range: [0, 1]
+
+**NOTE：**
+
+If the value specified is less than 0, the value **0** is used. If the value specified is greater than 1, the value **1** is used.
 
 **Type:** number
 
@@ -51,7 +56,8 @@ Opacity of the component during transition, which is the value of the start poin
 rotate?: RotateOptions
 ```
 
-Rotation of the component during transition, which is the value of the start point of insertion and the end point of deletion.  
+Rotation of the component during transition, which is the value of the start point of insertion and the end point of deletion.
+
 - **x**: X-component of the rotation vector.  
 - **y**: Y-component of the rotation vector.  
 - **z**: Z-component of the rotation vector.  
@@ -75,14 +81,18 @@ point of the page.
 scale?: ScaleOptions
 ```
 
-Scaling of the component during transition, which is the value of the start point of insertion and the end point of deletion.  
+Scaling of the component during transition, which is the value of the start point of insertion and the end point of deletion.
+
 - **x**: scale factor along the x-axis.  
 - **y**: scale factor along the y-axis.  
 - **z**: scale factor along the z-axis (not effective for the current 2D graphics).  
 - **centerX** and **centerY**: scale center point. The default values are both **"50%"**, indicating the center  
 point of the page.  
-- If the center point is (0, 0), it refers to the upper left corner of the component.  
-**NOTE：**If **centerX** or **centerY** is set to an invalid string (for example, **"illegalString"**), the default value **"0"** is used.
+- If the center point is (0, 0), it refers to the upper left corner of the component.
+
+**NOTE：**
+
+If **centerX** or **centerY** is set to an invalid string (for example, **"illegalString"**), the default value **"0"** is used.
 
 **Type:** [ScaleOptions](arkts-arkui-scaleoptions-i.md)
 
@@ -100,9 +110,12 @@ point of the page.
 translate?: TranslateOptions
 ```
 
-Translation of the component during transition, which is the value of the start point of insertion and the end point of deletion.  
--**x**: distance to translate along the x-axis.  
--**y**: distance to translate along the y-axis.  
+Translation of the component during transition, which is the value of the start point of insertion and the end point of deletion.
+
+-**x**: distance to translate along the x-axis.
+
+-**y**: distance to translate along the y-axis.
+
 -**z**: distance to translate along the z-axis.
 
 **Type:** [TranslateOptions](arkts-arkui-translateoptions-i.md)
@@ -121,8 +134,13 @@ Translation of the component during transition, which is the value of the start 
 type?: TransitionType
 ```
 
-Transition type.Default value: **TransitionType.All**  
-**NOTE：**If **type** is not specified, the default value **TransitionType.All** is used, which means that the transition effect works for both component addition and deletion.
+Transition type.
+
+Default value: **TransitionType.All**
+
+**NOTE：**
+
+If **type** is not specified, the default value **TransitionType.All** is used, which means that the transition effect works for both component addition and deletion.
 
 **Type:** [TransitionType](../arkts-apis/arkts-arkui-transitiontype-e.md)
 

@@ -1,6 +1,8 @@
 # Flash
 
-**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md).It provides APIs related to the flash.
+**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md).
+
+It provides APIs related to the flash.
 
 **Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
 
@@ -19,7 +21,9 @@
 enableLcdFlash(enabled: boolean): void
 ```
 
-Enables or disables the LCD flash.Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-sys.md#islcdflashsupported) to check whether the device supports the LCD flash.
+Enables or disables the LCD flash.
+
+Before the setting, call [isLcdFlashSupported](arkts-camera-camera-flashquery-i-sys.md#islcdflashsupported) to check whether the device supports the LCD flash.
 
 **Since:** 13
 
@@ -49,7 +53,7 @@ function enableLcdFlash(session: camera.PhotoSessionForSys | camera.VideoSession
   try {
     session.enableLcdFlash(true);
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The setFlashMode call failed. error code: ${err.code}`);
   }

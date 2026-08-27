@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import hash from '@kit.CoreFileKit';
+import { hash } from '@kit.CoreFileKit';
 ```
 
 ## createHash

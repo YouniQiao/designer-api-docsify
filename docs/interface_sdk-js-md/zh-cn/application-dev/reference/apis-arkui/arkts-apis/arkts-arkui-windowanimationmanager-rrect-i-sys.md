@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import windowAnimationManager from '@kit.ArkUI';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## height

@@ -24,4 +24,4 @@ Represents the callback invoked when an index item is selected and [usingPopup](
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | string array corresponding to the index |
+| Array&lt;string&gt; | string array corresponding to the index |

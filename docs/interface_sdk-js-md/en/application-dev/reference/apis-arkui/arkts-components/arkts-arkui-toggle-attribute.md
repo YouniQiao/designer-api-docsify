@@ -1,6 +1,8 @@
 # Toggle properties/events
 
-In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.
+
+In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** ToggleAttribute extends CommonMethod<ToggleAttribute>
 
@@ -55,7 +57,7 @@ Triggered when the toggle status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (isOn: boolean) = & gt; void | Yes |  |
+| callback | (isOn: boolean) =&gt; void | Yes |  |
 
 ## selectedColor
 

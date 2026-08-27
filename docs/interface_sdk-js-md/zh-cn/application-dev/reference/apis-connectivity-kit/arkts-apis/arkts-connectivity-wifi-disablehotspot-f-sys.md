@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## disableHotspot
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function disableHotspot(): boolean
 ```
 
-去使能热点。<p>该方法是异步的。去使能热点后，如果WLAN已使能，WLAN可能会被重新使能。
+去使能热点。
+
+<p>该方法是异步的。去使能热点后，如果WLAN已使能，WLAN可能会被重新使能。
 
 **起始版本：** 7
 

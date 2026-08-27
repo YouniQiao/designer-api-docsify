@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## setAppClonePreference
@@ -29,13 +29,13 @@ Sets the application clone preference configuration.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the target application. |
-| appClonePreference | [AppClonePreference](arkts-ability-bundleinfo-appclonepreference-i-sys.md) | Yes | Application clone preference configuration to set. |
+| appClonePreference | AppClonePreference | Yes | Application clone preference configuration to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

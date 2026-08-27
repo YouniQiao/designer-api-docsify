@@ -83,7 +83,7 @@ Sets the callback for number press gesture cancellation. This callback is trigge
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback & lt;void & gt; | Yes | Callback invoked when the number press gesture is cancelled. |
+| event | Callback&lt;void&gt; | Yes | Callback invoked when the number press gesture is cancelled. |
 
 **Return value:**
 

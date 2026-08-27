@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import zlib from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## zipFile
@@ -28,13 +28,13 @@ Zips a file. The execution result is returned after the compression is complete.
 | --- | --- | --- | --- |
 | inFile | string | Yes | Path of the folder or file to zip. The path must be an application sandbox path, which can be obtained from the context. For details about the context, see FA Model and Stage Model. |
 | outFile | string | Yes | Path of the zipped file. The file name extension is .zip. |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Optional parameters for the zip operation. |
+| options | Options | Yes | Optional parameters for the zip operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import overlay from '@kit.AbilityKit';
+import { overlay } from '@kit.AbilityKit';
 ```
 
 ## setOverlayEnabled
@@ -82,7 +82,7 @@ Enables or disables a module with the overlay feature in the current application
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

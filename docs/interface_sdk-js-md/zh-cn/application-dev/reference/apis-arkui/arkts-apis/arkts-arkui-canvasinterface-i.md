@@ -21,7 +21,9 @@
 (context?: CanvasRenderingContext2D | DrawingRenderingContext): CanvasAttribute
 ```
 
-创建Canvas组件时，最大面积不超过10000px*10000px，超过最大面积则无法正常创建。使用本接口创建的Canvas组件在组件不可见时将不响应绘制指令。不可见场景主要包括组件所在的页面进入后台、组件滑到窗口外、设置visibility属性为隐藏等，不包 括组件被其他组件或是其他窗口遮挡导致不可见的场景。
+创建Canvas组件时，最大面积不超过10000px*10000px，超过最大面积则无法正常创建。
+
+使用本接口创建的Canvas组件在组件不可见时将不响应绘制指令。不可见场景主要包括组件所在的页面进入后台、组件滑到窗口外、设置visibility属性为隐藏等，不包括组件被其他组件或是其他窗口遮挡导致不可见的场景。
 
 **起始版本：** 8
 
@@ -35,7 +37,7 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) \| [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | 否 | CanvasRenderingContext2D: 不支持多个Canvas共用一个 CanvasRenderingContext2D对象，具体描述见[CanvasRenderingContext2D](arkts-arkui-canvas-con.md)对象。DrawingRenderingContext: 不支持多个 Canvas共用一个DrawingRenderingContext对象，具体描述见[DrawingRenderingContext](arkts-arkui-canvas-con.md)对象。 异常值null和undefined按未设置context处理。 |
+| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) \| [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | 否 | CanvasRenderingContext2D: 不支持多个Canvas共用一个CanvasRenderingContext2D对象，具体描述见[CanvasRenderingContext2D](arkts-arkui-canvas-con.md)对象。DrawingRenderingContext: 不支持多个Canvas共用一个DrawingRenderingContext对象，具体描述见[DrawingRenderingContext](arkts-arkui-canvas-con.md)对象。异常值null和undefined按未设置context处理。 |
 
 **返回值：**
 
@@ -49,7 +51,9 @@
 (context: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions: ImageAIOptions): CanvasAttribute
 ```
 
-创建Canvas组件时，最大面积不超过10000px*10000px，超过最大面积则无法正常创建。支持设置CanvasRenderingContext2D对象或DrawingRenderingContext对象，支持设置AI分析选 项。使用本接口创建的Canvas组件在组件不可见时将不响应绘制指令。不可见场景主要包括组件所在的页面进入后台、组件滑到窗口外、设置visibility属性为隐藏等，不包 括组件被其他组件或是其他窗口遮挡导致不可见的场景。
+创建Canvas组件时，最大面积不超过10000px*10000px，超过最大面积则无法正常创建。支持设置CanvasRenderingContext2D对象或DrawingRenderingContext对象，支持设置AI分析选项。
+
+使用本接口创建的Canvas组件在组件不可见时将不响应绘制指令。不可见场景主要包括组件所在的页面进入后台、组件滑到窗口外、设置visibility属性为隐藏等，不包括组件被其他组件或是其他窗口遮挡导致不可见的场景。
 
 **起始版本：** 12
 
@@ -63,8 +67,8 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) \| [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | 是 | CanvasRenderingContext2D: 不支持多个Canvas共用一个 CanvasRenderingContext2D对象，具体描述见[CanvasRenderingContext2D](arkts-arkui-canvas-con.md)对象。DrawingRenderingContext: 不支持多个 Canvas共用一个DrawingRenderingContext对象，具体描述见[DrawingRenderingContext](arkts-arkui-canvas-con.md)对象。 异常值null和undefined按未设置context处理。 |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | 是 | 给组件设置一个AI分析选项，通过此项可配置分析类型或绑定一个分析控制器。 异常值null和undefined按[ImageAIOptions](arkts-arkui-imageaioptions-i.md)的默认值处理，默认取值为{ type: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT], aiController: new ImageAnalyzerController() }，即开启主体识别和文字识别 功能。 |
+| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) \| [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | 是 | CanvasRenderingContext2D: 不支持多个Canvas共用一个CanvasRenderingContext2D对象，具体描述见[CanvasRenderingContext2D](arkts-arkui-canvas-con.md)对象。DrawingRenderingContext: 不支持多个Canvas共用一个DrawingRenderingContext对象，具体描述见[DrawingRenderingContext](arkts-arkui-canvas-con.md)对象。异常值null和undefined按未设置context处理。 |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | 是 | 给组件设置一个AI分析选项，通过此项可配置分析类型或绑定一个分析控制器。异常值null和undefined按[ImageAIOptions](arkts-arkui-imageaioptions-i.md)的默认值处理，默认取值为{ type: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT], aiController: new ImageAnalyzerController() }，即开启主体识别和文字识别功能。 |
 
 **返回值：**
 

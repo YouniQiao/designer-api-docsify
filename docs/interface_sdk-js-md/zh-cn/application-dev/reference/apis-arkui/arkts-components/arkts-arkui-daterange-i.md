@@ -1,6 +1,8 @@
 # DateRange
 
-Defines a range of dates.@interface DateRange
+Defines a range of dates.
+
+@interface DateRange
 
 **起始版本：** 19
 

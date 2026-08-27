@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import Geolocation, { GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from '@kit.LocationKit';
+import { Geolocation, GeolocationResponse, GetLocationOption, GetLocationTypeOption, GetLocationTypeResponse, SubscribeLocationOption } from '@kit.LocationKit';
 ```
 
 ## complete
@@ -109,7 +109,7 @@ coordType?: string
 timeout?: number
 ```
 
-超时时间，单位为ms，默认值为30000。 设置超时，是为了防止出现权限被系统拒绝、定位信号弱或者定位设置不当，导致请求阻塞的情况。超时后会使用fail回调函数。 取值范围为32位正整数。如果设置值小于等于0，系统按默认值处理。
+超时时间，单位为ms，默认值为30000。设置超时，是为了防止出现权限被系统拒绝、定位信号弱或者定位设置不当，导致请求阻塞的情况。超时后会使用fail回调函数。取值范围为32位正整数。如果设置值小于等于0，系统按默认值处理。
 
 **类型：** number
 

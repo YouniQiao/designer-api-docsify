@@ -9,7 +9,7 @@ Implements a task group, in which tasks are associated with each other and all t
 ## Modules to Import
 
 ```TypeScript
-import taskpool from '@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## addTask
@@ -70,7 +70,7 @@ Adds a created task to this task group. Before using this API, you must create a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be added to the task group. |
+| task | Task | Yes | Task to be added to the task group. |
 
 **Error codes:**
 

@@ -1,6 +1,10 @@
 # ProgressButtonV2
 
-文本下载按钮，可显示具体的下载进度。该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于[状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制文本下载按钮的数据和状态，实现更高效的用户界面刷新。设备行为差异：该接口在Wearable设备上使用时，应用程序运行异常，异常信息中提示接口未定义，在其他设备中可正常调用。
+文本下载按钮，可显示具体的下载进度。
+
+该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于[状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制文本下载按钮的数据和状态，实现更高效的用户界面刷新。
+
+设备行为差异：该接口在Wearable设备上使用时，应用程序运行异常，异常信息中提示接口未定义，在其他设备中可正常调用。
 
 > **说明：**
 > 
@@ -112,7 +116,7 @@ progressButtonRadius?: LengthMetrics
 
 下载按钮的圆角（不支持百分比设置）。取值范围：[0, height/2]默认值：height/2设置非法数值时，按照默认值处理。
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 18
 
@@ -130,7 +134,7 @@ progressButtonWidth?: LengthMetrics
 
 下载按钮的宽度。默认值：44vp
 
-**类型：** LengthMetrics
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 18
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import componentUtils from '@kit.ArkUI';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## x
@@ -18,7 +18,9 @@ import componentUtils from '@kit.ArkUI';
 x: number
 ```
 
-x轴平移距离。单位: vp
+x轴平移距离。
+
+单位: vp
 
 **类型：** number
 
@@ -36,7 +38,9 @@ x轴平移距离。单位: vp
 y: number
 ```
 
-y轴平移距离。单位: vp
+y轴平移距离。
+
+单位: vp
 
 **类型：** number
 
@@ -54,7 +58,9 @@ y轴平移距离。单位: vp
 z: number
 ```
 
-z轴平移距离。单位: vp
+z轴平移距离。
+
+单位: vp
 
 **类型：** number
 

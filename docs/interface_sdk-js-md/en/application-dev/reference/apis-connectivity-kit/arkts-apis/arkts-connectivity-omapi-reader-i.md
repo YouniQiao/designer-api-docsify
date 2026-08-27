@@ -9,7 +9,7 @@ Obtains the SE supported by the device. If eSE, SIM, and SIM2 are supported, thr
 ## Modules to Import
 
 ```TypeScript
-import omapi from '@kit.ConnectivityKit';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## closeSessions
@@ -166,7 +166,7 @@ Opens a session to connect to an SE in this reader. Multiple sessions can be ope
 
 | Type | Description |
 | --- | --- |
-| [Session](../../apis-camera-kit/arkts-apis/arkts-camera-camera-session-i.md) | Session instance opened. |
+| Session | Session instance opened. |
 
 **Error codes:**
 

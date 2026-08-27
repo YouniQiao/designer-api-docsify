@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import power from '@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## isScreenOn
@@ -61,7 +61,7 @@ Checks the screen status of the current device. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Returns true if the screen is on; returns false otherwise. |
+| Promise&lt;boolean&gt; | Returns true if the screen is on; returns false otherwise. |
 
 **Examples**
 

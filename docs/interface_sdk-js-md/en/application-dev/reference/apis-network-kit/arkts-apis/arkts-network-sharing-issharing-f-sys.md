@@ -70,7 +70,7 @@ Obtains the current network sharing status. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that network sharing is in progress, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that network sharing is in progress, and **false** means the opposite. |
 
 **Error codes:**
 

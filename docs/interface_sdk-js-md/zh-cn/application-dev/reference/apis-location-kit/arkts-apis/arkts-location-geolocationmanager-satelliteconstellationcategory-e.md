@@ -36,7 +36,7 @@ GPS（Global Positioning System），即全球定位系统，是美国研制发�
 CONSTELLATION_CATEGORY_SBAS = 2
 ```
 
-SBAS（Satellite-Based Augmentation System），即星基增强系统，通过地球静止轨道（GEO）卫星搭载卫星导航增强信号转发器，可以向用户播发星历误差、卫星钟差、电离层延迟等多种修正信息，实现对于 原有卫星导航系统定位精度的改进。
+SBAS（Satellite-Based Augmentation System），即星基增强系统，通过地球静止轨道（GEO）卫星搭载卫星导航增强信号转发器，可以向用户播发星历误差、卫星钟差、电离层延迟等多种修正信息，实现对于原有卫星导航系统定位精度的改进。
 
 **起始版本：** 12
 

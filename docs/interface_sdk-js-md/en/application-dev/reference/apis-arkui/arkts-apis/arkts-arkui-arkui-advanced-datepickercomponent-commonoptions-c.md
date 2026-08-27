@@ -33,13 +33,20 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 enableHapticFeedback?: boolean
 ```
 
-Enables or disables haptic feedback.Default value: true  
+Enables or disables haptic feedback.
+
+Default value: true
+
 - true: Enable haptic feedback.  
-- false: Disable haptic feedback.  
+- false: Disable haptic feedback.
+
 **Description**:
+
 1. When set to true, its effectiveness depends on whether the system's hardware supports it.
 2. To enable haptic feedback, you need to configure the requestPermissions field in the project's  
-[module.json5](../../../quick-start/module-configuration-file.md) to enable vibration permission, as follows:"requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
+[module.json5](../../../quick-start/module-configuration-file.md) to enable vibration permission, as follows:
+
+"requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
 **Type:** boolean
 
@@ -59,8 +66,15 @@ Enables or disables haptic feedback.Default value: true
 end?: Date
 ```
 
-End date or time of the picker.Default value: Date(2100, 12, 31, 23, 59, 59)Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]  
-**Description:**When end is set to a valid value, loop does not take effect.
+End date or time of the picker.
+
+Default value: Date(2100, 12, 31, 23, 59, 59)
+
+Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
+
+**Description:**
+
+When end is set to a valid value, loop does not take effect.
 
 **Type:** Date
 
@@ -78,9 +92,11 @@ End date or time of the picker.Default value: Date(2100, 12, 31, 23, 59, 59)Valu
 loop?: boolean
 ```
 
-Sets whether to enable loop mode.  
+Sets whether to enable loop mode.
+
 - true: Enable loop mode.  
-- false: Disable loop mode.  
+- false: Disable loop mode.
+
 Default value: true
 
 **Type:** boolean
@@ -157,8 +173,15 @@ Selected date. Default value is the current system date or time.
 start?: Date
 ```
 
-Start date or time of the picker.Default value: Date(1970, 0, 1, 0, 0, 0)Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]  
-**Description:**When start is set to a valid value, loop does not take effect.
+Start date or time of the picker.
+
+Default value: Date(1970, 0, 1, 0, 0, 0)
+
+Value range: [Date(0, 0, 1, 0, 0, 0), Date(10000, 11, 31,23, 59, 59)]
+
+**Description:**
+
+When start is set to a valid value, loop does not take effect.
 
 **Type:** Date
 

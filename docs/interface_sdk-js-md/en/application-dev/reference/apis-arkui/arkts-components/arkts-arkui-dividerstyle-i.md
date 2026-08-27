@@ -17,7 +17,9 @@ Describes the divider style.
 color?: ResourceColor
 ```
 
-Color of the divider.Default value: **#33182431**
+Color of the divider.
+
+Default value: **#33182431**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -35,7 +37,13 @@ Color of the divider.Default value: **#33182431**
 endMargin?: Length
 ```
 
-Distance between the divider and the bottom of the sidebar. It cannot be set in percentage.Default value: **0.0**Unit: vp Value range: [0, +∞)
+Distance between the divider and the bottom of the sidebar. It cannot be set in percentage.
+
+Default value: **0.0**
+
+Unit: vp
+
+Value range: [0, +∞)
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -55,7 +63,13 @@ Distance between the divider and the bottom of the sidebar. It cannot be set in 
 startMargin?: Length
 ```
 
-Distance between the divider and the top of the sidebar. It cannot be set in percentage.Default value: **0.0**Unit: vp Value range: [0, +∞)
+Distance between the divider and the top of the sidebar. It cannot be set in percentage.
+
+Default value: **0.0**
+
+Unit: vp
+
+Value range: [0, +∞)
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -75,7 +89,13 @@ Distance between the divider and the top of the sidebar. It cannot be set in per
 strokeWidth: Length
 ```
 
-Width of the divider. It cannot be set in percentage.Default value: **0.0**Unit: vp Value range: [0, +∞)
+Width of the divider. It cannot be set in percentage.
+
+Default value: **0.0**
+
+Unit: vp
+
+Value range: [0, +∞)
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

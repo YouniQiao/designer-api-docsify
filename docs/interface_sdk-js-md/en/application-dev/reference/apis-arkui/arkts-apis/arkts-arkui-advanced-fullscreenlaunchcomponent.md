@@ -20,4 +20,183 @@ import { FullScreenLaunchComponent } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [FullScreenLaunchComponent(Defines the fullScreen launch component)](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md) | **FullScreenLaunchComponent** is a component designed for launching atomic services in full screen. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner. |
+| [FullScreenLaunchComponent](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md) | **FullScreenLaunchComponent** is a component designed for launching atomic services in full screen. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner. |
+
+## Examples
+
+User Implementation
+
+```TypeScript
+// The entry point file Index.ets for the user side is as follows:
+import { FullScreenLaunchComponent } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  @State appId: string = '6917573653426122083'; // App ID of the atomic service.
+
+  build() {
+    Row() {
+      Column() {
+        FullScreenLaunchComponent({
+          content: ColumnChild,
+          appId: this.appId,
+          options: {},
+          onTerminated: (info) => {
+            console.info(`onTerminated code: ${info.code.toString()}`);
+          },
+          onError: (err) => {
+            console.error(`onError code: ${err.code}, message: ${err.message}`);
+          },
+          onReceive: (data) => {
+            console.info(`onReceive, data: ${JSON.stringify(data)}`);
+          }
+        }).width("80vp").height("80vp")
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+
+@Builder
+function ColumnChild() {
+  Column() {
+    Image($r('app.media.startIcon'))
+    Text('test')
+  }
+}
+```
+
+Entry point file: /src/main/ets/entryability/EntryAbility.ets
+
+```TypeScript
+import { AbilityConstant, Want, EmbeddableUIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { window } from '@kit.ArkUI';
+
+const DOMAIN = 0x0000;
+
+export default class EntryAbility extends EmbeddableUIAbility {
+  storage = new LocalStorage();
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onCreate');
+  }
+
+  onDestroy(): void {
+    hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onDestroy');
+  }
+
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
+    let mainWindow = windowStage.getMainWindowSync()
+    this.storage.setOrCreate("window", mainWindow)
+    this.storage.setOrCreate("windowStage", windowStage)
+    windowStage.loadContent('pages/Index', this.storage);
+  }
+
+  onWindowStageDestroy(): void {
+    hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onWindowStageDestroy');
+  }
+
+  onForeground(): void {
+    hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onForeground');
+  }
+
+  onBackground(): void {
+    hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onBackground');
+  }
+}
+```
+
+Extended ability entry page file: /src/main/ets/pages/Index.ets
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+const DOMAIN = 0x0000;
+
+@Entry
+@Component
+struct Index {
+  private storage: LocalStorage | undefined = this.getUIContext().getSharedLocalStorage();
+
+  build() {
+    Row() {
+      Column() {
+        GridRow({ columns: 2 }) {
+          GridCol() {
+            Button("setWindowSystemBar")
+              .onClick(() => {
+                this.testSetSystemBarEnable()
+              }).width(120)
+          }.height(60)
+
+          GridCol() {
+            Button("setGestureBack")
+              .onClick(() => {
+                this.testSetGestureBackEnable()
+              }).width(120)
+          }.height(60)
+
+          GridCol() {
+            Button("setImmersive")
+              .onClick(() => {
+                this.testSetImmersiveEnable()
+              }).width(120)
+          }.height(60)
+
+          GridCol() {
+            Button("setSpecificSystemBarEnabled")
+              .onClick(() => {
+                this.testSetSpecificSystemBarEnabled()
+              }).width(120)
+          }.height(60)
+        }
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+
+  testSetSystemBarEnable() {
+    let window: window.Window | undefined = this.storage?.get("window");
+    let p = window?.setWindowSystemBarEnable(["status"])
+    p?.then(() => {
+      console.info('setWindowSystemBarEnable success');
+    }).catch((err: BusinessError) => {
+      console.error(`setWindowSystemBarEnable failed, error = ${JSON.stringify(err)}`);
+    })
+  }
+
+  testSetGestureBackEnable() {
+    let window: window.Window | undefined = this.storage?.get("window");
+    let p = window?.setGestureBackEnabled(true)
+    p?.then(() => {
+      console.info('setGestureBackEnabled success');
+    }).catch((err: BusinessError) => {
+      console.error(`setGestureBackEnabled failed, error = ${JSON.stringify(err)}`);
+    })
+  }
+
+  testSetImmersiveEnable() {
+    let window: window.Window | undefined = this.storage?.get("window");
+    try {
+      window?.setImmersiveModeEnabledState(true)
+    } catch (err) {
+      console.error(`setImmersiveModeEnabledState failed, error = ${JSON.stringify(err)}`);
+    }
+  }
+
+  testSetSpecificSystemBarEnabled() {
+    let window: window.Window | undefined = this.storage?.get("window");
+    let p = window?.setSpecificSystemBarEnabled('navigationIndicator', false, false)
+    p?.then(() => {
+      console.info('setSpecificSystemBarEnabled success');
+    }).catch((err: BusinessError) => {
+      console.error(`setSpecificSystemBarEnabled failed, error = ${JSON.stringify(err)}`);
+    })
+  }
+}
+```

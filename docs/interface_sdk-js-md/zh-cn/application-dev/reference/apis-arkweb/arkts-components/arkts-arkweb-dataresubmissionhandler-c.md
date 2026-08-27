@@ -1,6 +1,6 @@
 # DataResubmissionHandler
 
-DataResubmissionHandler是Web组件中处理网页表单数据重新提交的处理类。当网页需要重新提交之前已发送的表单数据时，Web组件会通过`onDataResubmitted`事件回调提供 DataResubmissionHandler实例给应用，允许应用决定是否重新提交表单数据或取消导航。
+DataResubmissionHandler是Web组件中处理网页表单数据重新提交的处理类。当网页需要重新提交之前已发送的表单数据时，Web组件会通过`onDataResubmitted`事件回调提供DataResubmissionHandler实例给应用，允许应用决定是否重新提交表单数据或取消导航。
 
 **起始版本：** 9
 
@@ -9,9 +9,6 @@ DataResubmissionHandler是Web组件中处理网页表单数据重新提交的处
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## cancel

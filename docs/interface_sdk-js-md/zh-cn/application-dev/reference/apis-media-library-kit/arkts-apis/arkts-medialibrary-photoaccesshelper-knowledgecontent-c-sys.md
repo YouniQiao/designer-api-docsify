@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getRelatedEntity
@@ -38,13 +38,13 @@ static getRelatedEntity (topic: string, context: ContextMap, option?: Options): 
 | --- | --- | --- | --- |
 | topic | string | 是 | Searching topic string. |
 | context | [ContextMap](arkts-medialibrary-photoaccesshelper-contextmap-i-sys.md) | 是 | Context Map indicates topic filed. |
-| option | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 否 | Options for getRelatedEntity. |
+| option | Options | 否 | Options for getRelatedEntity. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Entity[] & gt; | 返回推荐标签内容 |
+| Promise&lt;Entity[]&gt; | 返回推荐标签内容 |
 
 **错误码：**
 
@@ -83,7 +83,7 @@ static getSearchResult(query: SearchQuery): Promise<SearchResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;SearchResult & gt; | Promise用于返回包含匹配资产的搜索结果。 |
+| Promise&lt;SearchResult&gt; | Promise用于返回包含匹配资产的搜索结果。 |
 
 **错误码：**
 
@@ -116,7 +116,7 @@ static getSearchSuggestion( searchSuggestionTypes: Array<SearchSuggestionType>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| searchSuggestionTypes | Array&lt;[SearchSuggestionType](arkts-medialibrary-photoaccesshelper-searchsuggestiontype-e-sys.md)&gt; | 是 | 搜索推荐词场景类型列表 最大长度为7且不能为空。 The maximum length is 7 and cannot be empty. |
+| searchSuggestionTypes | Array&lt;[SearchSuggestionType](arkts-medialibrary-photoaccesshelper-searchsuggestiontype-e-sys.md)&gt; | 是 | 搜索推荐词场景类型列表最大长度为7且不能为空。The maximum length is 7 and cannot be empty. |
 
 **返回值：**
 

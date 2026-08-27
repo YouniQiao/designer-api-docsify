@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import JSON from '@kit.ArkTS';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## parse
@@ -25,8 +25,8 @@ Parses a JSON string into an ArkTS object or null.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Valid JSON string. |
-| reviver | [Transformer](arkts-arkts-ason-transformer-t.md) | No | Conversion function. This parameter can be used to modify the value generated after parsing. The default value is undefined. |
-| options | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | No | Parsing options. This parameter is used to control the type of the parsing result. The default value is undefined. |
+| reviver | Transformer | No | Conversion function. This parameter can be used to modify the value generated after parsing. The default value is undefined. |
+| options | ParseOptions | No | Parsing options. This parameter is used to control the type of the parsing result. The default value is undefined. |
 
 **Return value:**
 

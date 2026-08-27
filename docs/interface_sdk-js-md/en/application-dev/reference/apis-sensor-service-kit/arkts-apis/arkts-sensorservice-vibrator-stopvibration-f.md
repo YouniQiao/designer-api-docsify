@@ -29,7 +29,7 @@ Stops vibration in the specified mode. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns the result. |
+| Promise&lt;void&gt; | Promise that returns the result. |
 
 **Error codes:**
 
@@ -303,7 +303,7 @@ Stops vibration in all modes. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns the result. |
+| Promise&lt;void&gt; | Promise that returns the result. |
 
 **Error codes:**
 
@@ -356,7 +356,7 @@ Stops vibration based on the specified vibrator parameters. If no parameters are
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns the result. |
+| Promise&lt;void&gt; | Promise that returns the result. |
 
 **Error codes:**
 

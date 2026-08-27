@@ -1,6 +1,8 @@
 # PixelMapFormat (System API)
 
-Enumerates pixel map formats.@enum { number }
+Enumerates pixel map formats.
+
+@enum { number }
 
 **Since:** 14
 
@@ -26,7 +28,7 @@ Indicates that the storage order is to store Y first and then U V alternately ea
 RGBA_1010102 = 3
 ```
 
-Indicates that each pixel is stored on 32 bits. Each pixel contains 4 components： R(10bits), G(10bits), B(10bits), A(2bits) and are stored from the higher-order to the lower-order bits.
+Indicates that each pixel is stored on 32 bits. Each pixel contains 4 components：R(10bits), G(10bits), B(10bits), A(2bits) and are stored from the higher-order to the lower-order bits.
 
 **Since:** 14
 

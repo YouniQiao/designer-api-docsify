@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import userAuth from '@kit.UserAuthenticationKit';
-import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## getUserAuthInstance
@@ -31,7 +30,7 @@ Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authParam | [AuthParam](arkts-userauthentication-userauth-authparam-i.md) | Yes | User authentication parameters, including the challenge value, authentication type list, authentication trust level, and authentication result reuse configuration. It is recommended that the challenge value be a random number generated using the crypto framework. Multiple authentication types can be specified for the user to choose from, and the authentication trust level should be selected based on the security requirements of the service scenario. |
+| authParam | AuthParam | Yes | User authentication parameters, including the challenge value, authentication type list, authentication trust level, and authentication result reuse configuration. It is recommended that the challenge value be a random number generated using the crypto framework. Multiple authentication types can be specified for the user to choose from, and the authentication trust level should be selected based on the security requirements of the service scenario. |
 | widgetParam | [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md) | Yes | User authentication widget configuration parameters, including the widget title, navigation button text, window mode, and application modal dialog context. It is recommended that the title be set to the authentication purpose, and the navigation button text can be used to customize the authentication navigation. |
 
 **Return value:**

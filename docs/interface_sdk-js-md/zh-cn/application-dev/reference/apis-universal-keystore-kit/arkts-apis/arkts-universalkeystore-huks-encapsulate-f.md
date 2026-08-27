@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import huks from '@kit.UniversalKeystoreKit';
-import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## encapsulate
@@ -14,7 +13,7 @@ function encapsulate(keyAlias: string, params: HuksParam[],
       sharedKeyAlias?: string, sharedKeyParams?: HuksParam[]): Promise<HuksReturnResult>
 ```
 
-后量子加密密钥封装操作，支持HUKS密钥管理 或由应用程序本身决定。如果应用程序选择管理密钥， 对称密钥携带在HuksReturnResult的outData字段中。
+后量子加密密钥封装操作，支持HUKS密钥管理或由应用程序本身决定。如果应用程序选择管理密钥，对称密钥携带在HuksReturnResult的outData字段中。
 
 **起始版本：** 26.0.0
 
@@ -28,8 +27,8 @@ function encapsulate(keyAlias: string, params: HuksParam[],
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 后量子加密算法的密钥名称 |
 | params | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | 是 | 表示封装属性 |
-| sharedKeyAlias | string | 否 | 封装密钥的密钥别名。 如果使用HUKS进行密钥管理，则必须指定该参数。 如果应用程序自己管理密钥，则忽略此参数 |
-| sharedKeyParams | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | 否 | 表示封装的密钥的属性。 如果使用HUKS进行密钥管理，则必须指定该参数。 如果应用程序自己管理密钥，则忽略此参数 |
+| sharedKeyAlias | string | 否 | 封装密钥的密钥别名。如果使用HUKS进行密钥管理，则必须指定该参数。如果应用程序自己管理密钥，则忽略此参数 |
+| sharedKeyParams | [HuksParam](arkts-universalkeystore-huks-huksparam-i.md)[] | 否 | 表示封装的密钥的属性。如果使用HUKS进行密钥管理，则必须指定该参数。如果应用程序自己管理密钥，则忽略此参数 |
 
 **返回值：**
 

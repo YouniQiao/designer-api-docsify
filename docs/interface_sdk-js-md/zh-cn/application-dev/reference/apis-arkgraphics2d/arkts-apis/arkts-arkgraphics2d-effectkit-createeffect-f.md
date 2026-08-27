@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import effectKit from '@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## createEffect
@@ -12,7 +12,7 @@ import effectKit from '@kit.ArkGraphics2D';
 function createEffect(source: image.PixelMap): Filter
 ```
 
-通过传入的PixelMap创建Filter实例。后续可通过链式调用添加各种图像效果， 最终通过[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。
+通过传入的PixelMap创建Filter实例。后续可通过链式调用添加各种图像效果，最终通过[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。
 
 **起始版本：** 9
 
@@ -26,13 +26,13 @@ function createEffect(source: image.PixelMap): Filter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得，具体可见 [Image Kit简介](../../../media/image/image-overview.md)。 |
+| source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得，具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回一个未添加任何效果的Filter实例，失败时返回null。 |
+| Filter | 返回一个未添加任何效果的Filter实例，失败时返回null。 |
 
 **示例**
 

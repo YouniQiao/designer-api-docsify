@@ -31,7 +31,7 @@ Changes the file owner (owner of the symbolic link, not the file referred to by 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

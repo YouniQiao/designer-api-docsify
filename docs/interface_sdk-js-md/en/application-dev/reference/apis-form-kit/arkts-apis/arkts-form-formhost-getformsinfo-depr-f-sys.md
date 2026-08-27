@@ -127,7 +127,7 @@ Obtains the widget information provided by a given application on the device. Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; | Promise used to return the information obtained. |
+| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; | Promise used to return the information obtained. |
 
 **Examples**
 

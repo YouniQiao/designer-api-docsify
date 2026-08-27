@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-telephonykit-->
 
-- [@ohos.telephony.call](arkts-telephony-call.md)
+- [@ohos.telephony.call(Call)](arkts-telephony-call.md)
   - [answerCall](arkts-telephony-call-answercall-f.md)
   <!--Del-->
   - [answerCall(system api)](arkts-telephony-call-answercall-f-sys.md)<!--DelEnd-->
@@ -242,7 +242,7 @@
   - [VoNRState(system api)](arkts-telephony-call-vonrstate-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [XCallType(system api)](arkts-telephony-call-xcalltype-e-sys.md)<!--DelEnd-->
-- [@ohos.telephony.data](arkts-telephony-data.md)
+- [@ohos.telephony.data(Cellular Data)](arkts-telephony-data.md)
   <!--Del-->
   - [disableCellularData(system api)](arkts-telephony-data-disablecellulardata-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -270,7 +270,7 @@
   - [ApnInfo](arkts-telephony-data-apninfo-i.md)
   - [DataConnectState](arkts-telephony-data-dataconnectstate-e.md)
   - [DataFlowType](arkts-telephony-data-dataflowtype-e.md)
-- [@ohos.telephony.esim](arkts-telephony-esim.md)
+- [@ohos.telephony.esim(eSIM Management)](arkts-telephony-esim.md)
   - [addProfile](arkts-telephony-esim-addprofile-f.md)
   <!--Del-->
   - [cancelSession(system api)](arkts-telephony-esim-cancelsession-f-sys.md)<!--DelEnd-->
@@ -348,7 +348,7 @@
   - [ResultCode(system api)](arkts-telephony-esim-resultcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SolvableErrors(system api)](arkts-telephony-esim-solvableerrors-e-sys.md)<!--DelEnd-->
-- [@ohos.telephony.observer](arkts-telephony-observer.md)
+- [@ohos.telephony.observer(Telephony Status Observer)](arkts-telephony-observer.md)
   - [off](arkts-telephony-observer-off-f.md)
   <!--Del-->
   - [off(system api)](arkts-telephony-observer-off-f-sys.md)<!--DelEnd-->
@@ -381,7 +381,7 @@
   - [SimState](arkts-telephony-observer-simstate-t.md)
   - [TelCallState](arkts-telephony-observer-telcallstate-t.md)
   - [LockReason](arkts-telephony-observer-lockreason-e.md)
-- [@ohos.telephony.radio](arkts-telephony-radio.md)
+- [@ohos.telephony.radio(Network Search)](arkts-telephony-radio.md)
   <!--Del-->
   - [factoryReset(system api)](arkts-telephony-radio-factoryreset-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -499,7 +499,7 @@
   - [PreferredNetworkMode(system api)](arkts-telephony-radio-preferrednetworkmode-e-sys.md)<!--DelEnd-->
   - [RadioTechnology](arkts-telephony-radio-radiotechnology-e.md)
   - [RegState](arkts-telephony-radio-regstate-e.md)
-- [@ohos.telephony.sim](arkts-telephony-sim.md)
+- [@ohos.telephony.sim(SIM Management)](arkts-telephony-sim.md)
   <!--Del-->
   - [activateSim(system api)](arkts-telephony-sim-activatesim-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -631,7 +631,7 @@
   - [PersoLockType(system api)](arkts-telephony-sim-persolocktype-e-sys.md)<!--DelEnd-->
   - [SimState](arkts-telephony-sim-simstate-e.md)
   - [SimType](arkts-telephony-sim-simtype-e.md)
-- [@ohos.telephony.sms](arkts-telephony-sms.md)
+- [@ohos.telephony.sms(SMS)](arkts-telephony-sms.md)
   <!--Del-->
   - [addSimMessage(system api)](arkts-telephony-sms-addsimmessage-f-sys.md)<!--DelEnd-->
   - [createMessage](arkts-telephony-sms-createmessage-f.md)
@@ -740,7 +740,7 @@
   - [SmsEncodingScheme(system api)](arkts-telephony-sms-smsencodingscheme-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SmsShortCodeType(system api)](arkts-telephony-sms-smsshortcodetype-e-sys.md)<!--DelEnd-->
-- [@ohos.telephony.vcard](arkts-telephony-vcard.md)
+- [@ohos.telephony.vcard(VCard)](arkts-telephony-vcard.md)
   - [exportVCard](arkts-telephony-vcard-exportvcard-f.md)
   - [importVCard](arkts-telephony-vcard-importvcard-f.md)
   - [VCardBuilderOptions](arkts-telephony-vcard-vcardbuilderoptions-i.md)

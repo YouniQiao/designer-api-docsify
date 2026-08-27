@@ -1,6 +1,8 @@
 # SecurityEventRule (System API)
 
-Provides the conditions of querySecurityEvent.@interface SecurityEventRule
+Provides the conditions of querySecurityEvent.
+
+@interface SecurityEventRule
 
 **Since:** 12
 
@@ -11,7 +13,7 @@ Provides the conditions of querySecurityEvent.@interface SecurityEventRule
 ## Modules to Import
 
 ```TypeScript
-import securityGuard from '@kit.SecurityGuardKit';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## beginTime

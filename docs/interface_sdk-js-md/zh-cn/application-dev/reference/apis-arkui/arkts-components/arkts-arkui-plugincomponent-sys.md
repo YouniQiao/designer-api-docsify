@@ -32,8 +32,12 @@ PluginComponent(options: PluginComponentOptions)
 
 | 名称 | 说明 |
 | --- | --- |
+| [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | 定义用于构造插件组件的选项。 |
+| [PluginComponentTemplate](arkts-arkui-plugincomponenttemplate-i-sys.md) | 定义插件组件模板信息，用于与提供方定义的组件绑定。 |
+| [PluginErrorData](arkts-arkui-pluginerrordata-i-sys.md) | 发生错误时提供的数据。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
+| [PluginErrorCallback](arkts-arkui-pluginerrorcallback-t-sys.md) | 发生错误时触发的回调。 |

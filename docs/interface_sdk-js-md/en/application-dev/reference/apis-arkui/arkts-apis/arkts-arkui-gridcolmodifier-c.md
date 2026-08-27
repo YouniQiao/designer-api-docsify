@@ -1,6 +1,8 @@
 # GridColModifier
 
-Defines GridCol Modifier@extends GridColAttribute @implements AttributeModifier&lt;GridColAttribute&gt;
+Defines GridCol Modifier
+
+@extends GridColAttribute @implements AttributeModifier&lt;GridColAttribute&gt;
 
 **Inheritance/Implementation:** GridColModifier extends [GridColAttribute](../arkts-components/arkts-arkui-gridcol-attribute.md#gridcolattribute) and implements AttributeModifier<GridColAttribute>
 

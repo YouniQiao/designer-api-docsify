@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## queryPrinterInfoByIp
@@ -34,7 +34,7 @@ function queryPrinterInfoByIp(printerIp: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **错误码：**
 

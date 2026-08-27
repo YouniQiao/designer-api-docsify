@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cacheDownload from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## setDownloadInfoListSize
@@ -12,7 +12,8 @@ import cacheDownload from '@kit.BasicServicesKit';
 function setDownloadInfoListSize(size: number): void
 ```
 
-Sets the size of the download information list.  
+Sets the size of the download information list.
+
 - The download information list is used to store pre-downloaded information.  
 - Each pre-download generates a piece of download information with a unique URL. Only the latest download  
 information is saved for the same URL.  

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import connectedTag from '@kit.ConnectivityKit';
+import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
 ## readNdefTag
@@ -33,7 +33,7 @@ Reads the content of this active tag. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the content of the active tag. |
+| Promise&lt;string&gt; | Promise used to return the content of the active tag. |
 
 **Examples**
 

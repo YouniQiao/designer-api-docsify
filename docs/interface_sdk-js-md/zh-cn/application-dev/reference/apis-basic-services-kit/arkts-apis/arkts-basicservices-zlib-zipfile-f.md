@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import zlib from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## zipFile
@@ -32,15 +32,15 @@ function zipFile(inFile: string, outFile: string, options: Options): Promise<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inFile | string | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考FA模型， Stage模型。 |
+| inFile | string | 是 | 指定压缩的文件夹路径或者文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考FA模型，Stage模型。 |
 | outFile | string | 是 | 指定压缩结果的文件路径（文件的扩展名zip）。 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | 是 | 压缩的可选参数。 |
+| options | Options | 是 | 压缩的可选参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回值。 |
+| Promise&lt;void&gt; | Promise对象，无返回值。 |
 
 **示例**
 

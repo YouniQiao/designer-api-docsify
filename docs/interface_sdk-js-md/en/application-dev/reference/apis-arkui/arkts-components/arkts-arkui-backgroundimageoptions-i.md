@@ -1,6 +1,8 @@
 # BackgroundImageOptions
 
-Define the options for background image.@interface BackgroundImageOptions
+Define the options for background image.
+
+@interface BackgroundImageOptions
 
 **Since:** 18
 

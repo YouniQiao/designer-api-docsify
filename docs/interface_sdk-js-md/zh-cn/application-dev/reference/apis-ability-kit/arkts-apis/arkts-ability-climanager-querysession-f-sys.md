@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import cliManager from '@kit.AbilityKit';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## querySession
@@ -38,7 +38,7 @@ function querySession(sessionId: string): Promise<CliSessionInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回CLI工具会话信息。 |
+| Promise&lt;void&gt; | Promise对象，返回CLI工具会话信息。 |
 
 **错误码：**
 

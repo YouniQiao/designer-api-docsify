@@ -35,7 +35,9 @@ content: string
 options?: TextChangeOptions
 ```
 
-变化的文本内容信息。默认值：undefined。
+变化的文本内容信息。
+
+默认值：undefined。
 
 **类型：** [TextChangeOptions](arkts-arkui-textchangeoptions-i.md)
 
@@ -53,7 +55,9 @@ options?: TextChangeOptions
 previewText?: PreviewText
 ```
 
-预上屏的内容信息。默认值：undefined，表示无预上屏内容。
+预上屏的内容信息。
+
+默认值：undefined，表示无预上屏内容。
 
 **类型：** [PreviewText](arkts-arkui-previewtext-i.md)
 

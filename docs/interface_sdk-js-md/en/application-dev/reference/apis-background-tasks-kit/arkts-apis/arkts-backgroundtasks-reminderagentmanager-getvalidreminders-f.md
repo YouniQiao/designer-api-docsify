@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import reminderAgentManager from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## getValidReminders
@@ -83,7 +83,7 @@ Obtains all [valid (not yet expired) reminders](../../../task-management/agent-p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;ReminderRequest & gt; & gt; | Promise used to return all the valid reminders. |
+| Promise&lt;Array&lt;ReminderRequest&gt;&gt; | Promise used to return all the valid reminders. |
 
 **Error codes:**
 

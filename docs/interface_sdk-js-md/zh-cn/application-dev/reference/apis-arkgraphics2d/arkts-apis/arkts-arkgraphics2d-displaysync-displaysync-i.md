@@ -1,6 +1,6 @@
 # DisplaySync
 
-期望帧率和回调函数设置实例。用于设置期望帧率范围、注册帧回调函数，以及启动和停止帧回调。 下列API示例中都需先使用displaySync.create()方法获取到DisplaySync实例，再通过此实例调用对应方法。
+期望帧率和回调函数设置实例。用于设置期望帧率范围、注册帧回调函数，以及启动和停止帧回调。下列API示例中都需先使用displaySync.create()方法获取到DisplaySync实例，再通过此实例调用对应方法。
 
 **起始版本：** 11
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import displaySync from '@kit.ArkGraphics2D';
+import { displaySync } from '@kit.ArkGraphics2D';
 ```
 
 ## off('frame')
@@ -52,7 +52,7 @@ backDisplaySync?.off("frame", callback)
 on(type: 'frame', callback: Callback<IntervalInfo>): void
 ```
 
-订阅每一帧的变化。注册回调函数后，还需调用start方法启动DisplaySync，系统才会在每一帧触发该回调。和off('frame')方法配对使用，用于取消注册回调函数。 字段需为非负整数，取值范围为[0, 设备最大帧率]，且满足min &lt;= expected &lt;= max。超出有效范围时参数校验失败。
+订阅每一帧的变化。注册回调函数后，还需调用start方法启动DisplaySync，系统才会在每一帧触发该回调。和off('frame')方法配对使用，用于取消注册回调函数。字段需为非负整数，取值范围为[0, 设备最大帧率]，且满足min &lt;= expected &lt;= max。超出有效范围时参数校验失败。
 
 **起始版本：** 11
 
@@ -86,7 +86,7 @@ backDisplaySync?.start()
 setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 ```
 
-设置期望的帧率范围。设置的期望帧率范围将作为系统调度的参考，系统会尽量在此范围内调整绘制帧率。 未调用该方法或传入ExpectedFrameRateRange(0, 0, 0)时将跟随应用当前运行的帧率。建议在调用start前设置，以便立即生效；调用start之后设置也可生效但可能存在延迟。
+设置期望的帧率范围。设置的期望帧率范围将作为系统调度的参考，系统会尽量在此范围内调整绘制帧率。未调用该方法或传入ExpectedFrameRateRange(0, 0, 0)时将跟随应用当前运行的帧率。建议在调用start前设置，以便立即生效；调用start之后设置也可生效但可能存在延迟。
 
 **起始版本：** 11
 
@@ -96,7 +96,7 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](../../apis-arkui/arkts-components/arkts-arkui-expectedframeraterange-i.md) | 是 | 设置DisplaySync期望的帧率范围，包含expected、min和max三个字段，单位为帧/秒（fps）， 字段需为非负整数，取值范围为[0, 设备最大帧率]，且满足min & lt;= expected & lt;= max。超出有效范围时会抛出401错误码。 |
+| rateRange | ExpectedFrameRateRange | 是 | 设置DisplaySync期望的帧率范围，包含expected、min和max三个字段，单位为帧/秒（fps），字段需为非负整数，取值范围为[0, 设备最大帧率]，且满足min &lt;= expected &lt;= max。超出有效范围时会抛出401错误码。 |
 
 **错误码：**
 
@@ -189,7 +189,7 @@ struct Index {
 stop(): void
 ```
 
-关闭期望帧率范围并且停止每帧回调。需在调用start后使用，停止后DisplaySync的配置（如期望帧率范围、回调函数）仍然保留，可随时通过start重新启动。 stop方法会解除DisplaySync与UI上下文和窗口的关联，通常无需特定的UI上下文。
+关闭期望帧率范围并且停止每帧回调。需在调用start后使用，停止后DisplaySync的配置（如期望帧率范围、回调函数）仍然保留，可随时通过start重新启动。stop方法会解除DisplaySync与UI上下文和窗口的关联，通常无需特定的UI上下文。
 
 **起始版本：** 11
 

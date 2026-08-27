@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## checkPathPermission
@@ -28,13 +28,13 @@ Check permissions for the path.
 | --- | --- | --- | --- |
 | tokenID | number | Yes | Token ID of the application. |
 | policies | Array&lt;[PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md)&gt; | Yes | Policy information to check on paths. |
-| policyType | [PolicyType](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-policytype-e.md) | Yes | Persistent or temporary type. |
+| policyType | PolicyType | Yes | Persistent or temporary type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;boolean & gt; & gt; | Returns the permission state of paths. |
+| Promise&lt;Array&lt;boolean&gt;&gt; | Returns the permission state of paths. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # NativeEmbedTouchInfo
 
-Provides detailed information about finger touch on a same-layer tag, including the tag ID and touch event. It is suitable for scenarios where handling same-layer element touch interaction is required, improving touch experience customization and flexibility.@interface NativeEmbedTouchInfo [since 11 - 11]
+Provides detailed information about finger touch on a same-layer tag, including the tag ID and touch event. It is suitable for scenarios where handling same-layer element touch interaction is required, improving touch experience customization and flexibility.
+
+@interface NativeEmbedTouchInfo [since 11 - 11]
 
 **Since:** 11
 
@@ -9,9 +11,6 @@ Provides detailed information about finger touch on a same-layer tag, including 
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## embedId

@@ -39,7 +39,7 @@ Executes a provided function once per each key/value pair in the Map, in inserti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (value: V, key: K, map: Map & lt;K, V & gt;) = & gt; void | Yes |  |
+| callbackfn | (value: V, key: K, map: Map&lt;K, V&gt;) =&gt; void | Yes |  |
 | thisArg | any | No |  |
 
 ## get

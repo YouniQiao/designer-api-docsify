@@ -20,7 +20,7 @@ export function borderRadiuses(all: number): BorderRadiuses
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| all | number | 是 | 边框圆角。 单位：vp 取值范围：[0, +∞) 负数按默认值处理。 |
+| all | number | 是 | 边框圆角。单位：vp 取值范围：[0, +∞) 负数按默认值处理。 |
 
 **返回值：**
 

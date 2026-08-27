@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import metadataBinding from '@kit.MultimodalAwarenessKit';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## notifyMetadataBindingEvent
@@ -30,7 +30,7 @@ Transfers metadata to the application or service that calls the encoding API. Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the application link information of the current page. |
+| Promise&lt;string&gt; | Promise used to return the application link information of the current page. |
 
 **Error codes:**
 

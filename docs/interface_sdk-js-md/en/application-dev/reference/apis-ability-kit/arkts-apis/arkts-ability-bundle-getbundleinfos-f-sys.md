@@ -3,22 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appControl from '@kit.AbilityKit.appControl';
-import bundleManager from '@kit.AbilityKit.bundleManager';
-import bundleMonitor from '@kit.AbilityKit.bundleMonitor';
-import bundleResourceManager from '@kit.AbilityKit.bundleResourceManager';
-import bundle from '@kit.AbilityKit';
-import defaultAppManager from '@kit.AbilityKit.defaultAppManager';
-import distributedBundleManager from '@kit.AbilityKit.distributedBundleManager';
-import freeInstall from '@kit.AbilityKit.freeInstall';
-import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit.innerBundleManager';
-import installer from '@kit.AbilityKit.installer';
-import launcherBundleManager from '@kit.AbilityKit.launcherBundleManager';
-import overlay from '@kit.AbilityKit.overlay';
-import shortcutManager from '@kit.AbilityKit.shortcutManager';
-import skillManager from '@kit.AbilityKit.skillManager';
-import appDomainVerify from '@kit.AbilityKit.appDomainVerify';
-import pluginBundleManager from '@kit.AbilityKit.pluginBundleManager';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## getBundleInfos
@@ -45,7 +30,7 @@ Obtains all BundleInfo for a specified user in the system. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
 | userId | number | Yes | User ID. Value range: greater than or equal to 0. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the result. If getBundleInfos is successful, **err** is **undefined**, and the BundleInfo of all bundles under the specified user as the input parameter at program startup. Otherwise, **err** is an error object. |
 
@@ -91,7 +76,7 @@ Obtains all BundleInfo for the current user. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the result. If getBundleInfos is successful, **err** is **undefined**, and all available BundleInfo as the input parameter at program startup. Otherwise, **err** is an error object. |
 
 **Examples**
@@ -135,7 +120,7 @@ Obtains all BundleInfo for a specified user. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
+| bundleFlag | BundleFlag | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
 | userId | number | No | User ID.Default value: the user to which the caller belongs. Value range: greater than or equal to 0. |
 
 **Return value:**

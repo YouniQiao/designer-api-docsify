@@ -1,6 +1,8 @@
 # AccessibilityElement
 
-无障碍节点元素，提供查询父/子元素、按内容或焦点方向查找元素、执行无障碍操作等能力，适用于无障碍辅助应用需要与界面节点交互和操作的场景。调用AccessibilityElement的方法前，先通过 [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement) 或[AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow) 获取AccessibilityElement实例。
+无障碍节点元素，提供查询父/子元素、按内容或焦点方向查找元素、执行无障碍操作等能力，适用于无障碍辅助应用需要与界面节点交互和操作的场景。
+
+调用AccessibilityElement的方法前，先通过[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement)或[AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow)获取AccessibilityElement实例。
 
 **起始版本：** 9
 
@@ -100,13 +102,13 @@ executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | action | [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | 是 | 无障碍节点可执行的操作。 |
-| parameters | [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | 否 | 执行操作时设置的参数值。当执行需要额外参数配置的操作（如SET_SELECTION、SET_CURSOR_POSITION等）时传入此参数；执行无参数操作（如 CLICK等）时不需要传入。不传入时默认为空。 |
+| parameters | [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | 否 | 执行操作时设置的参数值。当执行需要额外参数配置的操作（如SET_SELECTION、SET_CURSOR_POSITION等）时传入此参数；执行无参数操作（如CLICK等）时不需要传入。不传入时默认为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -228,7 +230,9 @@ rootElement.findElement('textType', condition).then((data: AccessibilityElement[
 findElement(type: 'elementId', condition: number): Promise<AccessibilityElement>
 ```
 
-根据elementId查询当前活动窗口下的节点元素。使用Promise异步回调。与[findElementById](#findelementbyid)均根据元素ID查找节点元素，功能等价，推荐优先使用findElementById。
+根据elementId查询当前活动窗口下的节点元素。使用Promise异步回调。
+
+与[findElementById](#findelementbyid)均根据元素ID查找节点元素，功能等价，推荐优先使用findElementById。
 
 **起始版本：** 12
 
@@ -343,7 +347,9 @@ axContext.getRootInActiveWindow(windowId).then((root: AccessibilityElement) => {
 findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityElement>
 ```
 
-根据焦点方向查找元素。使用Promise异步回调。与 [findElementsByCondition](#findelementsbycondition) 相比，本方法主要用于查找Web组件；findElementsByCondition主要用于查找UI组件。
+根据焦点方向查找元素。使用Promise异步回调。
+
+与[findElementsByCondition](#findelementsbycondition)相比，本方法主要用于查找Web组件；findElementsByCondition主要用于查找UI组件。
 
 **起始版本：** 20
 
@@ -503,7 +509,9 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 findElementById(condition: number): Promise<AccessibilityElement>
 ```
 
-根据元素ID查找当前活动窗口下的节点元素。使用Promise异步回调。与[findElement('elementId')](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#findelementcontent)功能等价，推荐优先使用本 方法。
+根据元素ID查找当前活动窗口下的节点元素。使用Promise异步回调。
+
+与[findElement('elementId')](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#findelementcontent)功能等价，推荐优先使用本方法。
 
 **起始版本：** 20
 
@@ -641,7 +649,9 @@ axContext.getRootInActiveWindow(windowId).then((root: AccessibilityElement) => {
 findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<FocusMoveResult>
 ```
 
-查询满足条件的可聚焦节点。使用Promise异步回调。与[findElementByFocusDirection](#findelementbyfocusdirection)相 比，本方法主要用于查找UI组件；findElementByFocusDirection主要用于查找Web组件。
+查询满足条件的可聚焦节点。使用Promise异步回调。
+
+与[findElementByFocusDirection](#findelementbyfocusdirection)相比，本方法主要用于查找UI组件；findElementByFocusDirection主要用于查找Web组件。
 
 **起始版本：** 23
 
@@ -882,7 +892,7 @@ getCursorPosition(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回当前光标所处位置。 |
+| Promise&lt;number&gt; | Promise对象，返回当前光标所处位置。 |
 
 **示例**
 
@@ -998,7 +1008,9 @@ for (let window of windows) {
 accessibilityFocused?: boolean
 ```
 
-表示元素是否因无障碍目的获得焦点。true表示已获得焦点，false表示未获得焦点。默认值：false。
+表示元素是否因无障碍目的获得焦点。true表示已获得焦点，false表示未获得焦点。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1014,7 +1026,9 @@ accessibilityFocused?: boolean
 accessibilityGroup?: boolean
 ```
 
-元素是否为无障碍组。true表示元素是无障碍组，false表示元素不是无障碍组。默认值：false。
+元素是否为无障碍组。true表示元素是无障碍组，false表示元素不是无障碍组。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1030,7 +1044,15 @@ accessibilityGroup?: boolean
 accessibilityLevel?: string
 ```
 
-组件的无障碍级别。'auto'：当前组件由无障碍分组服务和ArkUI进行综合判断组件是否可被辅助功能识别。'yes'：当前组件可被辅助功能识别。'no'：当前组件不可被辅助功能识别。'no-hide-descendants'：当前组件及其所有子组件不可被辅助功能识别。默认值：'auto'。
+组件的无障碍级别。
+
+'auto'：当前组件由无障碍分组服务和ArkUI进行综合判断组件是否可被辅助功能识别。
+
+'yes'：当前组件可被辅助功能识别。
+
+'no'：当前组件不可被辅助功能识别。
+
+'no-hide-descendants'：当前组件及其所有子组件不可被辅助功能识别。默认值：'auto'。
 
 **类型：** string
 
@@ -1046,7 +1068,9 @@ accessibilityLevel?: string
 accessibilityNextFocusId?: number
 ```
 
-下一个要获得焦点的组件的ID。默认值：-1。
+下一个要获得焦点的组件的ID。
+
+默认值：-1。
 
 **类型：** number
 
@@ -1062,7 +1086,9 @@ accessibilityNextFocusId?: number
 accessibilityPreviousFocusId?: number
 ```
 
-上一个要获得焦点的组件的ID。默认值：-1。
+上一个要获得焦点的组件的ID。
+
+默认值：-1。
 
 **类型：** number
 
@@ -1078,7 +1104,11 @@ accessibilityPreviousFocusId?: number
 accessibilityScrollable?: boolean
 ```
 
-元素是否因无障碍目的而可滚动。优先级高于scrollable，即当accessibilityScrollable与scrollable取值冲突时以accessibilityScrollable为准。true表示元素可滚动，false表示元素不可滚动。默认值：false。
+元素是否因无障碍目的而可滚动。优先级高于scrollable，即当accessibilityScrollable与scrollable取值冲突时以accessibilityScrollable为准。
+
+true表示元素可滚动，false表示元素不可滚动。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1178,7 +1208,9 @@ bundleName?: string
 checkable?: boolean
 ```
 
-元素是否可勾选。true表示可勾选，false表示不可勾选。默认值：false。
+元素是否可勾选。true表示可勾选，false表示不可勾选。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1194,7 +1226,9 @@ checkable?: boolean
 checked?: boolean
 ```
 
-元素是否已勾选。true表示已勾选，false表示未勾选。默认值：false。
+元素是否已勾选。true表示已勾选，false表示未勾选。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1244,7 +1278,9 @@ childrenTreeId?: number
 clickable?: boolean
 ```
 
-元素是否可点击。true表示可点击，false表示不可点击。默认值：false。
+元素是否可点击。true表示可点击，false表示不可点击。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1276,7 +1312,9 @@ clip?: boolean
 componentId?: number
 ```
 
-元素所属组件的ID。默认值：-1。
+元素所属组件的ID。
+
+默认值：-1。
 
 **类型：** number
 
@@ -1324,7 +1362,9 @@ contents?: Array<string>
 currentIndex?: number
 ```
 
-当前项的索引。默认值：0。
+当前项的索引。
+
+默认值：0。
 
 **类型：** number
 
@@ -1406,7 +1446,9 @@ description?: string
 editable?: boolean
 ```
 
-元素是否可编辑。true表示可编辑，false表示不可编辑。默认值：false。
+元素是否可编辑。true表示可编辑，false表示不可编辑。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1422,7 +1464,9 @@ editable?: boolean
 endIndex?: number
 ```
 
-屏幕上显示的最后一个列表项的索引。默认值：0。
+屏幕上显示的最后一个列表项的索引。
+
+默认值：0。
 
 **类型：** number
 
@@ -1470,7 +1514,9 @@ extraInfo?: string
 focusable?: boolean
 ```
 
-元素是否可获得焦点（此处指无障碍焦点，与输入焦点不同）。true表示可获得焦点，false表示不可获得焦点。默认值：false。
+元素是否可获得焦点（此处指无障碍焦点，与输入焦点不同）。true表示可获得焦点，false表示不可获得焦点。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1518,7 +1564,9 @@ hotArea?: Rect
 inputType?: number
 ```
 
-输入文本的类型，不同数值对应不同的输入模式：0表示无特定类型；1表示文本；2表示邮箱；3表示日期；4表示时间；5表示数字；6表示密码；7表示电话号码；8表示用户名；9表示新密码。默认值：0。
+输入文本的类型，不同数值对应不同的输入模式：0表示无特定类型；1表示文本；2表示邮箱；3表示日期；4表示时间；5表示数字；6表示密码；7表示电话号码；8表示用户名；9表示新密码。
+
+默认值：0。
 
 **类型：** number
 
@@ -1550,7 +1598,9 @@ inspectorKey?: string
 isActive?: boolean
 ```
 
-元素是否处于活动状态。true表示活动状态，false表示非活动状态。默认值：true。
+元素是否处于活动状态。true表示活动状态，false表示非活动状态。
+
+默认值：true。
 
 **类型：** boolean
 
@@ -1566,7 +1616,9 @@ isActive?: boolean
 isEnable?: boolean
 ```
 
-元素是否启用。true表示启用，false表示未启用。默认值：false。
+元素是否启用。true表示启用，false表示未启用。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1600,7 +1652,9 @@ isEssential?: boolean
 isFocused?: boolean
 ```
 
-表示元素是否已获得焦点（此处指无障碍焦点，与输入焦点不同）。true表示已获得焦点，false表示未获得焦点。默认值：false。
+表示元素是否已获得焦点（此处指无障碍焦点，与输入焦点不同）。true表示已获得焦点，false表示未获得焦点。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1616,7 +1670,9 @@ isFocused?: boolean
 isHint?: boolean
 ```
 
-元素是否为提示信息。true表示元素是提示信息，false表示非提示信息。默认值：false。
+元素是否为提示信息。true表示元素是提示信息，false表示非提示信息。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1632,7 +1688,9 @@ isHint?: boolean
 isPassword?: boolean
 ```
 
-元素是否为密码。true表示元素是密码，false表示不是密码。默认值：false。
+元素是否为密码。true表示元素是密码，false表示不是密码。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1648,7 +1706,9 @@ isPassword?: boolean
 isVisible?: boolean
 ```
 
-元素是否可见。true表示元素可见，false表示元素不可见。默认值：false。
+元素是否可见。true表示元素可见，false表示元素不可见。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1664,7 +1724,9 @@ isVisible?: boolean
 itemCount?: number
 ```
 
-项目总数。默认值：0。
+项目总数。
+
+默认值：0。
 
 **类型：** number
 
@@ -1712,7 +1774,9 @@ layer?: number
 longClickable?: boolean
 ```
 
-元素是否可长按。true表示可长按，false表示不可长按。默认值：false。
+元素是否可长按。true表示可长按，false表示不可长按。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1760,7 +1824,9 @@ navDestinationId?: number
 offset?: number
 ```
 
-内容区域相对于可滚动组件（如List和Grid）顶部坐标的像素偏移量，单位为像素（px）。默认值：0。
+内容区域相对于可滚动组件（如List和Grid）顶部坐标的像素偏移量，单位为像素（px）。
+
+默认值：0。
 
 **类型：** number
 
@@ -1776,7 +1842,9 @@ offset?: number
 pageId?: number
 ```
 
-页面ID。默认值：-1。
+页面ID。
+
+默认值：-1。
 
 **类型：** number
 
@@ -1808,7 +1876,9 @@ parentId?: number
 pluralLineSupported?: boolean
 ```
 
-表示元素是否支持多行文本。true表示支持，false表示不支持。默认值：false。
+表示元素是否支持多行文本。true表示支持，false表示不支持。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1872,7 +1942,9 @@ screenRect?: Rect
 scrollable?: boolean
 ```
 
-元素是否可滚动。true表示元素可滚动，false表示不可滚动。当与accessibilityScrollable取值冲突时，以accessibilityScrollable为准。默认值：false。
+元素是否可滚动。true表示元素可滚动，false表示不可滚动。当与accessibilityScrollable取值冲突时，以accessibilityScrollable为准。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1888,7 +1960,9 @@ scrollable?: boolean
 selected?: boolean
 ```
 
-元素是否已选中。true表示已选中，false表示未选中。默认值：false。
+元素是否已选中。true表示已选中，false表示未选中。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -1938,7 +2012,9 @@ spans?: AccessibilitySpan[]
 startIndex?: number
 ```
 
-屏幕上第一个列表项的索引。默认值：0。
+屏幕上第一个列表项的索引。
+
+默认值：0。
 
 **类型：** number
 
@@ -2002,7 +2078,9 @@ textLengthLimit?: number
 textMoveUnit?: accessibility.TextMoveUnit
 ```
 
-文本朗读时的移动单位。默认值：char。
+文本朗读时的移动单位。
+
+默认值：char。
 
 **类型：** accessibility.TextMoveUnit
 
@@ -2066,7 +2144,9 @@ type?: WindowType
 valueMax?: number
 ```
 
-最大值。默认值：0。
+最大值。
+
+默认值：0。
 
 **类型：** number
 
@@ -2082,7 +2162,9 @@ valueMax?: number
 valueMin?: number
 ```
 
-最小值。默认值：0。
+最小值。
+
+默认值：0。
 
 **类型：** number
 
@@ -2098,7 +2180,9 @@ valueMin?: number
 valueNow?: number
 ```
 
-当前值。默认值：0。
+当前值。
+
+默认值：0。
 
 **类型：** number
 
@@ -2114,7 +2198,9 @@ valueNow?: number
 windowId?: number
 ```
 
-窗口ID。默认值：-1。
+窗口ID。
+
+默认值：-1。
 
 **类型：** number
 

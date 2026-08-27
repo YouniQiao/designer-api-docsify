@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## updateDataTransferProgress
@@ -26,7 +26,7 @@ Update notification. Only data transfer ContinuousTasks are supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context. |
+| context | Context | Yes | Application context. |
 | progressInfo | [DataTransferProgress](arkts-backgroundtasks-backgroundtaskmanager-datatransferprogress-i.md) | Yes | Notify progress data. |
 
 **Error codes:**

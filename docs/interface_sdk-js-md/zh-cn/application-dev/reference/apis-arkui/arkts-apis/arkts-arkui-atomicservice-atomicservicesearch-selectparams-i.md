@@ -48,7 +48,7 @@ arrowPosition?: ArrowPosition
 divider?: Optional<DividerOptions> | null
 ```
 
-1.设置DividerOptions，则按设置的样式显示分割线。默认值：{strokeWidth: '1px', color: '#33182431'}。 当设置了menuItemContentModifier属性时，本属性不生效。 2.设置为null时，不显示分割线。 3.strokeWidth设置过宽时，会覆盖文字。分割线会从每一个Item底部开始，同时向上向下画分割线。 4.startMargin和endMargin的默认值与不设置divider属性时的分割线样式保持一致。startMargin和endMargin的和与optionWidth的值相等时， 不显示分割线。 startMargin和endMargin的和超过optionWidth的值时，按照默认样式显示分割线。
+1.设置DividerOptions，则按设置的样式显示分割线。默认值：{strokeWidth: '1px', color: '#33182431'}。当设置了menuItemContentModifier属性时，本属性不生效。2.设置为null时，不显示分割线。3.strokeWidth设置过宽时，会覆盖文字。分割线会从每一个Item底部开始，同时向上向下画分割线。4.startMargin和endMargin的默认值与不设置divider属性时的分割线样式保持一致。startMargin和endMargin的和与optionWidth的值相等时，不显示分割线。 startMargin和endMargin的和超过optionWidth的值时，按照默认样式显示分割线。
 
 **类型：** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[DividerOptions](../arkts-components/arkts-arkui-divideroptions-i.md)&gt; \| null
 
@@ -144,7 +144,7 @@ menuBackgroundColor?: ResourceColor
 menuItemContentModifier?: ContentModifier<MenuItemConfiguration>
 ```
 
-在Select组件上，定制下拉菜单项内容区的方法。 在应用了该属性后，下拉菜单的内容将完全由开发者自定义，此时为选择区设置的下拉菜单分割线、背景色及字体样式等属性将不再生效。 modifier: 内容修改器，开发者需要自定义class实现ContentModifier接口。默认值为undefined。
+在Select组件上，定制下拉菜单项内容区的方法。在应用了该属性后，下拉菜单的内容将完全由开发者自定义，此时为选择区设置的下拉菜单分割线、背景色及字体样式等属性将不再生效。modifier: 内容修改器，开发者需要自定义class实现ContentModifier接口。默认值为undefined。
 
 **类型：** [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](../arkts-components/arkts-arkui-menuitemconfiguration-i.md)&gt;
 
@@ -176,7 +176,7 @@ optionBgColor?: ResourceColor
 optionFont?: Font
 ```
 
-下拉菜单项的文本样式。默认值：{size: \$r('sys.float.ohos_id_text_size_body1'), weight: FontWeight.Regular}。 当设置了menuItemContentModifier属性时，本属性不生效。
+下拉菜单项的文本样式。默认值：{size: \$r('sys.float.ohos_id_text_size_body1'), weight: FontWeight.Regular}。当设置了menuItemContentModifier属性时，本属性不生效。
 
 **类型：** Font
 
@@ -208,7 +208,7 @@ optionFontColor?: ResourceColor
 optionHeight?: Dimension
 ```
 
-设置下拉菜单显示的最大高度，不支持设置百分比。单位：vp。 下拉菜单的默认最大高度是屏幕可用高度的80%，设置的菜单最大高度不能超过默认最大高度，超过时属性不生效，按默认最大高度显示。
+设置下拉菜单显示的最大高度，不支持设置百分比。单位：vp。下拉菜单的默认最大高度是屏幕可用高度的80%，设置的菜单最大高度不能超过默认最大高度，超过时属性不生效，按默认最大高度显示。
 
 **类型：** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -240,7 +240,7 @@ options?: Array<SelectOption>
 optionWidth?: Dimension | OptionWidthMode
 ```
 
-设置下拉菜单项的宽度，不支持设置百分比。单位：vp。OptionWidthMode为枚举类型，决定下拉菜单是否继承下拉按钮宽度。 当设置为异常值或小于最小宽度56vp时，属性不生效，菜单项宽度设为默认值，即菜单默认宽度为2栅格。
+设置下拉菜单项的宽度，不支持设置百分比。单位：vp。OptionWidthMode为枚举类型，决定下拉菜单是否继承下拉按钮宽度。当设置为异常值或小于最小宽度56vp时，属性不生效，菜单项宽度设为默认值，即菜单默认宽度为2栅格。
 
 **类型：** [Dimension](arkts-arkui-dimension-t.md) \| [OptionWidthMode](arkts-arkui-optionwidthmode-e.md)
 
@@ -272,7 +272,7 @@ selected?: number
 selectedOptionBgColor?: ResourceColor
 ```
 
-下拉菜单选中项的背景色。 默认值：\$r('sys.color.ohos_id_color_component_activated')混合\$r('sys.color.ohos_id_alpha_highlight_bg')的透明度。 当设置了menuItemContentModifier属性时，本属性不生效。
+下拉菜单选中项的背景色。默认值：\$r('sys.color.ohos_id_color_component_activated')混合\$r('sys.color.ohos_id_alpha_highlight_bg')的透明度。当设置了menuItemContentModifier属性时，本属性不生效。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -288,7 +288,7 @@ selectedOptionBgColor?: ResourceColor
 selectedOptionFont?: Font
 ```
 
-下拉菜单选中项的文本样式。默认值：{size: \$r('sys.float.ohos_id_text_size_body1'), weight: FontWeight.Regular}。 当设置了menuItemContentModifier属性时，本属性不生效。
+下拉菜单选中项的文本样式。默认值：{size: \$r('sys.float.ohos_id_text_size_body1'), weight: FontWeight.Regular}。当设置了menuItemContentModifier属性时，本属性不生效。
 
 **类型：** Font
 
@@ -304,7 +304,7 @@ selectedOptionFont?: Font
 selectedOptionFontColor?: ResourceColor
 ```
 
-下拉菜单选中项的文本颜色。默认值：\$r('sys.color.ohos_id_color_text_primary_activated')。 当设置了menuItemContentModifier属性时，本属性不生效。
+下拉菜单选中项的文本颜色。默认值：\$r('sys.color.ohos_id_color_text_primary_activated')。当设置了menuItemContentModifier属性时，本属性不生效。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 

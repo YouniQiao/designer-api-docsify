@@ -11,7 +11,7 @@ Control class for backup procedure.
 ## Modules to Import
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## appendBundles
@@ -41,7 +41,7 @@ Append new bundles and backupInfos to backup.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -491,7 +491,7 @@ Provides an interface for the tool to clear temporary directories
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Return clean result, true is success, false is fail. |
+| Promise&lt;boolean&gt; | Return clean result, true is success, false is fail. |
 
 **Error codes:**
 
@@ -886,7 +886,7 @@ Obtain application data size to be backed up.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -1136,7 +1136,7 @@ Provides an interface for the tool to get compatibility info.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Return compatibility info. |
+| Promise&lt;string&gt; | Return compatibility info. |
 
 **Error codes:**
 
@@ -1638,25 +1638,6 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md) module. The following is an example of the capability file.
-
-```TypeScript
-{
- "backupVersion" : "16.0",
- "bundleInfos" :[{
-   "allToBackup" : true,
-   "extensionName" : "BackupExtensionAbility",
-   "name" : "com.example.hiworld",
-   "needToInstall" : false,
-   "spaceOccupied" : 0,
-   "versionCode" : 1000000,
-   "versionName" : "1.0.0"
-   }],
- "deviceType" : "default",
- "systemFullName" : "OpenHarmony-4.0.0.0"
-}
-```
-
 ```TypeScript
 import { fileIo, backup} from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -1802,7 +1783,7 @@ End Backup process
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

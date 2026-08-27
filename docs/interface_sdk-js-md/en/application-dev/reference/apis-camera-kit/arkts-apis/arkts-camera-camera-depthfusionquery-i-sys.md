@@ -31,7 +31,7 @@ Obtains the depth fusion threshold.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Depth fusion threshold. |
+| Array&lt;number&gt; | Depth fusion threshold. |
 
 **Error codes:**
 

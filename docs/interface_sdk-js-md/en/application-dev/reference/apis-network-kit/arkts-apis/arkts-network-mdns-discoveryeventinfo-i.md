@@ -9,7 +9,7 @@ Defines the MDNS service event information.
 ## Modules to Import
 
 ```TypeScript
-import mdns from '@kit.NetworkKit';
+import { mdns } from '@kit.NetworkKit';
 ```
 
 ## errorCode

@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## setFunctionKeyEnabled
@@ -24,14 +23,14 @@ Specifies whether to enable a function key (for example, **CapsLock**). This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | Yes | Type of the function key. |
+| functionKey | FunctionKey | Yes | Type of the function key. |
 | enabled | boolean | Yes | Status of the function key. The value **true** indicates that the function key is enabled, and the value **false** indicates the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

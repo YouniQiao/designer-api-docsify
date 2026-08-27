@@ -13,7 +13,7 @@ The **InputMethodSubtype** module provides APIs for managing the attributes of i
 ## Modules to Import
 
 ```TypeScript
-import InputMethodSubtype from '@kit.IMEKit';
+import { InputMethodSubtype } from '@kit.IMEKit';
 ```
 
 ## extra

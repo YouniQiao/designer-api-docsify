@@ -9,7 +9,7 @@ The **print** module provides APIs for basic print operations.
 ## Modules to Import
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

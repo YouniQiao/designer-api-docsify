@@ -9,7 +9,7 @@ Represents the configuration for saving images or videos to the media library, i
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## fileNameExtension
@@ -54,7 +54,10 @@ photoType: PhotoType
 title?: string
 ```
 
-Title of the image or video.If this parameter is not passed, the system generates a value. The parameter specifications are as follows:  
+Title of the image or video.
+
+If this parameter is not passed, the system generates a value. The parameter specifications are as follows:
+
 - It must not contain a file name extension.  
 - It must not contain any invalid characters, which are:\ / : * ? " ' ` &lt; &gt; | { } [ ]  
 - The file name consists of the title and file name extension. The file name string length ranges from 1 to 255.  

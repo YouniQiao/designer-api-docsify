@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import shortcutManager from '@kit.AbilityKit';
+import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## isShortcutSupported

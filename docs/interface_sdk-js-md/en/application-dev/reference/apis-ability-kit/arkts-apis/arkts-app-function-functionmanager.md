@@ -1,6 +1,8 @@
 # @ohos.app.function.functionManager
 
-The module provides the capability to manage and invoke functions in the system.@namespace functionManager
+The module provides the capability to manage and invoke functions in the system.
+
+@namespace functionManager
 
 **Since:** 26.0.0
 
@@ -13,7 +15,7 @@ The module provides the capability to manage and invoke functions in the system.
 ## Modules to Import
 
 ```TypeScript
-import functionManager from '@kit.AbilityKit';
+import { functionManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

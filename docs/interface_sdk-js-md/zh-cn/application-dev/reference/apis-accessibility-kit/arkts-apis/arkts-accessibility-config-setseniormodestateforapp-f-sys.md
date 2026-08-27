@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import config from '@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## setSeniorModeStateForApp
@@ -28,13 +28,13 @@ function setSeniorModeStateForApp(appSeniorModeInfos: Array<AppSeniorModeInfo>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appSeniorModeInfos | Array&lt;[AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md)&gt; | 是 | 修改应用的“长辈模式”的状态信息，数组中每个对象包含bundleName、appIndex、 seniorModeState三个属性。 |
+| appSeniorModeInfos | Array&lt;[AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md)&gt; | 是 | 修改应用的“长辈模式”的状态信息，数组中每个对象包含bundleName、appIndex、seniorModeState三个属性。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

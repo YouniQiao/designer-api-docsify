@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## and
@@ -36,7 +35,7 @@ and(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
+| Query | 返回查询对象。 |
 
 **示例**
 
@@ -46,10 +45,10 @@ try {
     query.notEqualTo("field", "value1");
     query.and();
     query.notEqualTo("field", "value2");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -73,7 +72,7 @@ beginGroup(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -83,10 +82,10 @@ try {
     query.beginGroup();
     query.isNotNull("field");
     query.endGroup();
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -114,15 +113,6 @@ deviceId(deviceId: string): Query
 
 添加设备ID作为key的前缀。
 
-> **说明：**
-> 
-> 其中deviceId通过调用<!--RP1--
-> 
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
-> 方法得到。<!--RP1End-->deviceManager模块的接口均为系统接口，仅系统应用可用。
-> 
-> deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
-
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -141,7 +131,7 @@ deviceId(deviceId: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -149,9 +139,9 @@ deviceId(deviceId: string): Query
 try {
     let query = new distributedData.Query();
     query.deviceId("deviceId");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
 } catch (e) {
-    console.log("should be ok on Method Chaining : " + e);
+    console.error("should be ok on Method Chaining : " + e);
 }
 ```
 
@@ -175,7 +165,7 @@ endGroup(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -185,10 +175,10 @@ try {
     query.beginGroup();
     query.isNotNull("field");
     query.endGroup();
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -219,7 +209,7 @@ equalTo(field: string, value: number | string | boolean): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -227,10 +217,10 @@ equalTo(field: string, value: number | string | boolean): Query
 try {
     let query = new distributedData.Query();
     query.equalTo("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -262,9 +252,9 @@ getSqlLike(): string
 try {
     let query = new distributedData.Query();
     let sql1 = query.getSqlLike();
-    console.log("GetSqlLike sql=" + sql1);
+    console.info("GetSqlLike sql=" + sql1);
 } catch (e) {
-    console.log("duplicated calls should be ok : " + e);
+    console.error("duplicated calls should be ok : " + e);
 }
 ```
 
@@ -295,7 +285,7 @@ greaterThan(field: string, value: number | string | boolean): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -303,10 +293,10 @@ greaterThan(field: string, value: number | string | boolean): Query
 try {
     let query = new distributedData.Query();
     query.greaterThan("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -337,7 +327,7 @@ greaterThanOrEqualTo(field: string, value: number | string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -345,10 +335,10 @@ greaterThanOrEqualTo(field: string, value: number | string): Query
 try {
     let query = new distributedData.Query();
     query.greaterThanOrEqualTo("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -379,7 +369,7 @@ inNumber(field: string, valueList: number[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -387,10 +377,10 @@ inNumber(field: string, valueList: number[]): Query
 try {
     let query = new distributedData.Query();
     query.inNumber("field", [0, 1]);
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -421,7 +411,7 @@ inString(field: string, valueList: string[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -429,10 +419,10 @@ inString(field: string, valueList: string[]): Query
 try {
     let query = new distributedData.Query();
     query.inString("field", ['test1', 'test2']);
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -462,7 +452,7 @@ isNotNull(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -470,10 +460,10 @@ isNotNull(field: string): Query
 try {
     let query = new distributedData.Query();
     query.isNotNull("field");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -503,7 +493,7 @@ isNull(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -511,10 +501,10 @@ isNull(field: string): Query
 try {
     let query = new distributedData.Query();
     query.isNull("field");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -545,7 +535,7 @@ lessThan(field: string, value: number | string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -553,10 +543,10 @@ lessThan(field: string, value: number | string): Query
 try {
     let query = new distributedData.Query();
     query.lessThan("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -587,7 +577,7 @@ lessThanOrEqualTo(field: string, value: number | string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -595,10 +585,10 @@ lessThanOrEqualTo(field: string, value: number | string): Query
 try {
     let query = new distributedData.Query();
     query.lessThanOrEqualTo("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -629,7 +619,7 @@ like(field: string, value: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -637,10 +627,10 @@ like(field: string, value: string): Query
 try {
     let query = new distributedData.Query();
     query.like("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -671,7 +661,7 @@ limit(total: number, offset: number): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -682,10 +672,10 @@ try {
     let query = new distributedData.Query();
     query.notEqualTo("field", "value");
     query.limit(total, offset);
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -716,7 +706,7 @@ notEqualTo(field: string, value: number | string | boolean): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -724,10 +714,10 @@ notEqualTo(field: string, value: number | string | boolean): Query
 try {
     let query = new distributedData.Query();
     query.notEqualTo("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -758,7 +748,7 @@ notInNumber(field: string, valueList: number[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -766,10 +756,10 @@ notInNumber(field: string, valueList: number[]): Query
 try {
     let query = new distributedData.Query();
     query.notInNumber("field", [0, 1]);
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -800,7 +790,7 @@ notInString(field: string, valueList: string[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -808,10 +798,10 @@ notInString(field: string, valueList: string[]): Query
 try {
     let query = new distributedData.Query();
     query.notInString("field", ['test1', 'test2']);
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -835,7 +825,7 @@ or(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
+| Query | 返回查询对象。 |
 
 **示例**
 
@@ -845,10 +835,10 @@ try {
     query.notEqualTo("field", "value1");
     query.or();
     query.notEqualTo("field", "value2");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -878,7 +868,7 @@ orderByAsc(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -887,10 +877,10 @@ try {
     let query = new distributedData.Query();
     query.notEqualTo("field", "value");
     query.orderByAsc("field");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -920,7 +910,7 @@ orderByDesc(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -929,10 +919,10 @@ try {
     let query = new distributedData.Query();
     query.notEqualTo("field", "value");
     query.orderByDesc("field");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -962,7 +952,7 @@ prefixKey(prefix: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -971,10 +961,10 @@ try {
     let query = new distributedData.Query();
     query.prefixKey("$.name");
     query.prefixKey("0");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -998,7 +988,7 @@ reset(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回重置的Query对象。 |
+| Query | 返回重置的Query对象。 |
 
 **示例**
 
@@ -1006,12 +996,12 @@ reset(): Query
 try {
     let query = new distributedData.Query();
     query.equalTo("key", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query.reset();
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("simply calls should be ok :" + e);
+    console.error("simply calls should be ok :" + e);
 }
 ```
 
@@ -1041,7 +1031,7 @@ setSuggestIndex(index: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -1050,10 +1040,10 @@ try {
     let query = new distributedData.Query();
     query.setSuggestIndex("$.name");
     query.setSuggestIndex("0");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-   console.log("duplicated calls should be ok :" + e);
+   console.error("duplicated calls should be ok :" + e);
 }
 ```
 
@@ -1084,7 +1074,7 @@ unlike(field: string, value: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -1092,9 +1082,9 @@ unlike(field: string, value: string): Query
 try {
     let query = new distributedData.Query();
     query.unlike("field", "value");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
     query = null;
 } catch (e) {
-    console.log("duplicated calls should be ok :" + e);
+    console.error("duplicated calls should be ok :" + e);
 }
 ```

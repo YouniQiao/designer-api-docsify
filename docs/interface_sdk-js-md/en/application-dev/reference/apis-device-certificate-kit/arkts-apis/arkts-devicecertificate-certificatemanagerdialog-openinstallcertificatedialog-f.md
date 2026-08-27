@@ -34,7 +34,7 @@ Opens the Certificate Management Install Certificate dialog box. After the certi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the certificate URI. The value contains up to 256 bytes. |
+| Promise&lt;string&gt; | Promise used to return the certificate URI. The value contains up to 256 bytes. |
 
 **Error codes:**
 

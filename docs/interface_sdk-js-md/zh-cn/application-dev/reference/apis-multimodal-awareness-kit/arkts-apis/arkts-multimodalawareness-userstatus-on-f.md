@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import userStatus from '@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## on('userAgeGroupDetected')
@@ -12,7 +12,9 @@ import userStatus from '@kit.MultimodalAwarenessKit';
 function on(type: 'userAgeGroupDetected', callback: Callback<UserClassification>): void
 ```
 
-订阅年龄群组检测功能。订阅成功后，可以获取用户年龄群组的分类结果，应用可根据此结果做相应的内容推荐。
+订阅年龄群组检测功能。
+
+订阅成功后，可以获取用户年龄群组的分类结果，应用可根据此结果做相应的内容推荐。
 
 > **说明：**
 > 

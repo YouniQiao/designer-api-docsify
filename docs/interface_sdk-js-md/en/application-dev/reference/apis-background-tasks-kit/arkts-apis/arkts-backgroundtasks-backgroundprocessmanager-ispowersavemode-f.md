@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import backgroundProcessManager from '@kit.BackgroundTasksKit';
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## isPowerSaveMode
@@ -30,7 +30,7 @@ Queries whether the process is in power saving mode. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the query result. The value **true** means that the process is in power saving mode; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the query result. The value **true** means that the process is in power saving mode; the value **false** means the opposite. |
 
 **Error codes:**
 

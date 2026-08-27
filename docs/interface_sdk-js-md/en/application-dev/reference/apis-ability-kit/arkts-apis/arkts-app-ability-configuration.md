@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { Configuration } from '@kit.AbilityKit';
-import ConfigurationConstant from '@kit.AbilityKitConstant';
 ```
 
 ## Summary

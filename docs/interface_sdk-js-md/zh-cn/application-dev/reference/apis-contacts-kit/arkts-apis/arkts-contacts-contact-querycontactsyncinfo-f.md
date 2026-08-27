@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## queryContactSyncInfo
@@ -12,7 +12,9 @@ import contact from '@kit.ContactsKit';
 function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>
 ```
 
-查询调用应用程序正在进行的联系人同步信息。如果返回的联系人同步信息为空，则调用方不进行联系人同步或联系人同步已完成。
+查询调用应用程序正在进行的联系人同步信息。
+
+如果返回的联系人同步信息为空，则调用方不进行联系人同步或联系人同步已完成。
 
 **起始版本：** 26.0.0
 
@@ -28,7 +30,7 @@ function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| context | Context | 是 | 应用上下文Context。 |
 
 **返回值：**
 

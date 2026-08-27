@@ -1,6 +1,8 @@
 # DepthVector4（系统接口）
 
-深度空间中的4D向量。@interface DepthVector4
+深度空间中的4D向量。
+
+@interface DepthVector4
 
 **起始版本：** 26.0.0
 

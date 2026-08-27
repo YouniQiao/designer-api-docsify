@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import accountManager from '@kit.MDMKit';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## addOsAccountAsync
@@ -32,13 +32,13 @@ function addOsAccountAsync(admin: Want, name: string, type: osAccount.OsAccountT
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | name | string | 是 | 账号名，指要添加的账号的名称。无法创建同名、名称为空的账号，创建同名账号时会报错误码9201003，创建名称为空的账号时会报错误码401。 |
-| type | osAccount.OsAccountType | 是 | 要添加的账号的类型。取值范围：ADMIN、NORMAL、GUEST。· ADMIN：管理员账号。· NORMAL：普 通账号。· GUEST：访客账号。 |
+| type | osAccount.OsAccountType | 是 | 要添加的账号的类型。取值范围：ADMIN、NORMAL、GUEST。· ADMIN：管理员账号。· NORMAL：普通账号。· GUEST：访客账号。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;osAccount.OsAccountInfo & gt; | Promise对象，返回添加的账号信息。 |
+| Promise&lt;osAccount.OsAccountInfo&gt; | Promise对象，返回添加的账号信息。 |
 
 **错误码：**
 

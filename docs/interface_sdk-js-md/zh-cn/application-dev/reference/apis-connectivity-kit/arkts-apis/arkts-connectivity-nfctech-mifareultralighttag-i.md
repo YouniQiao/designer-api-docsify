@@ -1,6 +1,12 @@
 # MifareUltralightTag
 
-MifareUltralightTag 提供对MIFARE Ultralight属性和I/O操作的访问，继承自TagSession。TagSession是所有NFC Tag技术类型的基类， 提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-tagsession-i.md)。MifareUltralightTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-tag-access-guide.md)。以下是MifareUltralightTag的独有接口。
+MifareUltralightTag 提供对MIFARE Ultralight属性和I/O操作的访问，继承自TagSession。
+
+TagSession是所有NFC Tag技术类型的基类， 提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-tagsession-i.md)。
+
+MifareUltralightTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-tag-access-guide.md)。
+
+以下是MifareUltralightTag的独有接口。
 
 **继承/实现关系：** MifareUltralightTag extends TagSession
 
@@ -72,7 +78,7 @@ readMultiplePages(pageIndex: number): Promise<number[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number[] & gt; | Promise对象。以Promise形式返回读取的4页的数据，共16字节。 |
+| Promise&lt;number[]&gt; | Promise对象。以Promise形式返回读取的4页的数据，共16字节。 |
 
 **错误码：**
 
@@ -204,7 +210,7 @@ writeSinglePage(pageIndex: number, data: number[]): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

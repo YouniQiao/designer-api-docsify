@@ -1,6 +1,10 @@
 # ImageCreator
 
-The ImageCreator class provides APIs for applications to request an image data area and compile image data.Before calling any APIs in ImageCreator, you must use [image.createImageCreator](arkts-image-image-createimagecreator-f.md) to create an ImageCreator instance. ImageCreator does not support multiple threads.Images occupy a large amount of memory. When you finish using an ImageCreator instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+The ImageCreator class provides APIs for applications to request an image data area and compile image data.
+
+Before calling any APIs in ImageCreator, you must use [image.createImageCreator](arkts-image-image-createimagecreator-f.md) to create an ImageCreator instance. ImageCreator does not support multiple threads.
+
+Images occupy a large amount of memory. When you finish using an ImageCreator instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -9,7 +13,7 @@ The ImageCreator class provides APIs for applications to request an image data a
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## dequeueImage
@@ -62,7 +66,7 @@ Obtains an image buffer from the idle queue and writes image data into it. This 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Image & gt; | Promise used to return the latest image. |
+| Promise&lt;Image&gt; | Promise used to return the latest image. |
 
 **Examples**
 
@@ -160,7 +164,7 @@ Places the drawn image in the queue. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | Drawn image. |
+| image | Image | Yes | Drawn image. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Examples**
@@ -207,13 +211,13 @@ Places the drawn image in the queue. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | Drawn image. |
+| image | Image | Yes | Drawn image. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -247,7 +251,11 @@ async function QueueImage(creator : image.ImageCreator) {
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImageCreator instance. This API uses an asynchronous callback to return the result.Images occupy a large amount of memory. When you finish using an ImageCreator instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImageCreator instance. This API uses an asynchronous callback to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImageCreator instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -352,7 +360,11 @@ function release(pixelMap: image.PixelMap) {
 release(): Promise<void>
 ```
 
-Releases this ImageCreator instance. This API uses a promise to return the result.Images occupy a large amount of memory. When you finish using an ImageCreator instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImageCreator instance. This API uses a promise to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImageCreator instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -362,7 +374,7 @@ Releases this ImageCreator instance. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

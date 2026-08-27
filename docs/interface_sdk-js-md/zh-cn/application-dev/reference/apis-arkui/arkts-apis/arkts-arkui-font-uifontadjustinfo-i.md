@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import font from '@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## to
@@ -18,7 +18,9 @@ import font from '@kit.ArkUI';
 to: number
 ```
 
-字体在应用中显示的weight值。可返回的值有100、400、700、900。
+字体在应用中显示的weight值。
+
+可返回的值有100、400、700、900。
 
 **类型：** number
 
@@ -36,7 +38,9 @@ to: number
 weight: number
 ```
 
-字体原本的weight值。可返回的值有50、80、100、200。
+字体原本的weight值。
+
+可返回的值有50、80、100、200。
 
 **类型：** number
 

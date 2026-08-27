@@ -1,6 +1,8 @@
 # Bias
 
-Defines the Bias.@interface Bias
+Defines the Bias.
+
+@interface Bias
 
 **起始版本：** 12
 

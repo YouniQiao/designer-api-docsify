@@ -45,7 +45,8 @@ Form data content.
 filePath?: string
 ```
 
-File path of the form data. If **data** is not specified, **filePath** must be set.  
+File path of the form data. If **data** is not specified, **filePath** must be set.
+
 **Note：**: The file format supported by the file management module must be passed. You can call [access](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-access-f.md) to check whether the file exists and is accessible.
 
 **Type:** string
@@ -74,8 +75,13 @@ Data name.
 remoteFileName?: string
 ```
 
-Name of the file uploaded to the server.  
-**Note：**: If this field is specified, the **filename** field is added to the request header, indicating the name of the file uploaded to the server.(1) If the data to be uploaded is a file and the file content is specified via the **data** field, the **remoteFileName** field usually needs to be set to specify the name of the file to be uploaded to the server (the actual result depends on the server). If the file path is specified via the **filePath** field, the **filename** field will be automatically added to the request header. Its default value is the file name in the **filePath** field. If a different name is required, it can also be changed via this field.(2) When the data to be uploaded is in binary format, the **remoteFileName** field must be set.
+Name of the file uploaded to the server.
+
+**Note：**: If this field is specified, the **filename** field is added to the request header, indicating the name of the file uploaded to the server.
+
+(1) If the data to be uploaded is a file and the file content is specified via the **data** field, the **remoteFileName** field usually needs to be set to specify the name of the file to be uploaded to the server (the actual result depends on the server). If the file path is specified via the **filePath** field, the **filename** field will be automatically added to the request header. Its default value is the file name in the **filePath** field. If a different name is required, it can also be changed via this field.
+
+(2) When the data to be uploaded is in binary format, the **remoteFileName** field must be set.
 
 **Type:** string
 

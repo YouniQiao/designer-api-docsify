@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import featureAbility from '@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## getWindow
@@ -62,7 +62,7 @@ function getWindow(): Promise<window.Window>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;window.Window & gt; | Promise对象，返回当前Ability对应的窗口。 |
+| Promise&lt;window.Window&gt; | Promise对象，返回当前Ability对应的窗口。 |
 
 **示例**
 

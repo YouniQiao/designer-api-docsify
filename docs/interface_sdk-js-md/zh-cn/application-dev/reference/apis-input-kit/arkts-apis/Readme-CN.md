@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-inputkit-->
 
-- [@ohos.multimodalInput.gestureEvent](arkts-multimodalinput-gestureevent.md)
+- [@ohos.multimodalInput.gestureEvent(手势事件)](arkts-multimodalinput-gestureevent.md)
   - [FourFingersSwipe](arkts-input-multimodalinput-gestureevent-fourfingersswipe-i.md)
   - [Pinch](arkts-input-multimodalinput-gestureevent-pinch-i.md)
   - [Rotate](arkts-input-multimodalinput-gestureevent-rotate-i.md)
@@ -13,12 +13,12 @@
   - [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
   <!--Del-->
   - [TouchGestureAction(系统接口)](arkts-input-multimodalinput-gestureevent-touchgestureaction-e-sys.md)<!--DelEnd-->
-- [@ohos.multimodalInput.infraredEmitter](arkts-multimodalinput-infraredemitter.md)
+- [@ohos.multimodalInput.infraredEmitter(红外管理)](arkts-multimodalinput-infraredemitter.md)
   - [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f.md)
   - [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md)
   - [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f.md)
   - [InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i.md)
-- [@ohos.multimodalInput.inputConsumer](arkts-multimodalinput-inputconsumer.md)
+- [@ohos.multimodalInput.inputConsumer(全局快捷键)](arkts-multimodalinput-inputconsumer.md)
   - [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md)
   <!--Del-->
   - [getShieldStatus(系统接口)](arkts-input-inputconsumer-getshieldstatus-f-sys.md)<!--DelEnd-->
@@ -44,7 +44,7 @@
   - [KeyCommandTriggerType(系统接口)](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ShieldMode(系统接口)](arkts-input-inputconsumer-shieldmode-e-sys.md)<!--DelEnd-->
-- [@ohos.multimodalInput.inputDevice](arkts-multimodalinput-inputdevice.md)
+- [@ohos.multimodalInput.inputDevice(输入设备)](arkts-multimodalinput-inputdevice.md)
   <!--Del-->
   - [bindToDisplay(系统接口)](arkts-input-inputdevice-bindtodisplay-f-sys.md)<!--DelEnd-->
   - [getDevice](arkts-input-inputdevice-getdevice-f.md)
@@ -79,7 +79,7 @@
   - [SourceType](arkts-input-inputdevice-sourcetype-t.md)
   - [FunctionKey](arkts-input-inputdevice-functionkey-e.md)
   - [KeyboardType](arkts-input-inputdevice-keyboardtype-e.md)
-- [@ohos.multimodalInput.inputDeviceCooperate](arkts-multimodalinput-inputdevicecooperate.md)
+- [@ohos.multimodalInput.inputDeviceCooperate(键鼠穿越)](arkts-multimodalinput-inputdevicecooperate.md)
   <!--Del-->
   - [enable(系统接口)](arkts-input-inputdevicecooperate-enable-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -94,9 +94,9 @@
   - [stop(系统接口)](arkts-input-inputdevicecooperate-stop-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [EventMsg(系统接口)](arkts-input-inputdevicecooperate-eventmsg-e-sys.md)<!--DelEnd-->
-- [@ohos.multimodalInput.inputEvent](arkts-multimodalinput-inputevent.md)
+- [@ohos.multimodalInput.inputEvent(输入事件)](arkts-multimodalinput-inputevent.md)
   - [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
-- [@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md)
+- [@ohos.multimodalInput.inputEventClient(输入事件注入)](arkts-multimodalinput-inputeventclient.md)
   - [createKeyboardController](arkts-input-inputeventclient-createkeyboardcontroller-f.md)
   - [createMouseController](arkts-input-inputeventclient-createmousecontroller-f.md)
   - [createTouchController](arkts-input-inputeventclient-createtouchcontroller-f.md)
@@ -125,7 +125,7 @@
   - [TouchEventData(系统接口)](arkts-input-inputeventclient-toucheventdata-i-sys.md)<!--DelEnd-->
   - [TouchPoint](arkts-input-inputeventclient-touchpoint-i.md)
 <!--Del-->
-- [@ohos.multimodalInput.inputMonitor](arkts-multimodalinput-inputmonitor.md)<!--DelEnd-->
+- [@ohos.multimodalInput.inputMonitor(输入监听)](arkts-multimodalinput-inputmonitor.md)<!--DelEnd-->
   <!--Del-->
   - [off(系统接口)](arkts-input-inputmonitor-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -134,22 +134,22 @@
   - [queryTouchEvents(系统接口)](arkts-input-inputmonitor-querytouchevents-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TouchEventReceiver(系统接口)](arkts-input-inputmonitor-toucheventreceiver-t-sys.md)<!--DelEnd-->
-- [@ohos.multimodalInput.intentionCode](arkts-multimodalinput-intentioncode.md)
+- [@ohos.multimodalInput.intentionCode(意图事件)](arkts-multimodalinput-intentioncode.md)
   - [IntentionCode](arkts-input-multimodalinput-intentioncode-intentioncode-e.md)
-- [@ohos.multimodalInput.keyCode](arkts-multimodalinput-keycode.md)
+- [@ohos.multimodalInput.keyCode(键值)](arkts-multimodalinput-keycode.md)
   - [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)
-- [@ohos.multimodalInput.keyEvent](arkts-multimodalinput-keyevent.md)
+- [@ohos.multimodalInput.keyEvent(按键输入事件)](arkts-multimodalinput-keyevent.md)
   - [Key](arkts-input-multimodalinput-keyevent-key-i.md)
   - [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)
   - [Action](arkts-input-multimodalinput-keyevent-action-e.md)
-- [@ohos.multimodalInput.mouseEvent](arkts-multimodalinput-mouseevent.md)
+- [@ohos.multimodalInput.mouseEvent(鼠标输入事件)](arkts-multimodalinput-mouseevent.md)
   - [AxisValue](arkts-input-multimodalinput-mouseevent-axisvalue-i.md)
   - [MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)
   - [Action](arkts-input-multimodalinput-mouseevent-action-e.md)
   - [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md)
   - [Button](arkts-input-multimodalinput-mouseevent-button-e.md)
   - [ToolType](arkts-input-multimodalinput-mouseevent-tooltype-e.md)
-- [@ohos.multimodalInput.pointer](arkts-multimodalinput-pointer.md)
+- [@ohos.multimodalInput.pointer(鼠标光标)](arkts-multimodalinput-pointer.md)
   <!--Del-->
   - [getHoverScrollState(系统接口)](arkts-input-pointer-gethoverscrollstate-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -238,7 +238,7 @@
   - [PrimaryButton](arkts-input-pointer-primarybutton-e.md)
   - [RightClickType](arkts-input-pointer-rightclicktype-e.md)
 <!--Del-->
-- [@ohos.multimodalInput.shortKey](arkts-multimodalinput-shortkey.md)<!--DelEnd-->
+- [@ohos.multimodalInput.shortKey(系统预置全局快捷键)](arkts-multimodalinput-shortkey.md)<!--DelEnd-->
   - [shortKey](arkts-input-shortkey-n.md)
     <!--Del-->
     - [setKeyDownDuration(系统接口)](arkts-input-shortkey-setkeydownduration-f-sys.md)<!--DelEnd-->
@@ -246,7 +246,7 @@
   - [FingerprintEvent(系统接口)](arkts-input-multimodalinput-shortkey-fingerprintevent-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FingerprintAction(系统接口)](arkts-input-multimodalinput-shortkey-fingerprintaction-e-sys.md)<!--DelEnd-->
-- [@ohos.multimodalInput.touchEvent](arkts-multimodalinput-touchevent.md)
+- [@ohos.multimodalInput.touchEvent(触屏输入事件)](arkts-multimodalinput-touchevent.md)
   - [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)
   <!--Del-->
   - [Touch(系统接口)](arkts-input-multimodalinput-touchevent-touch-i-sys.md)<!--DelEnd-->

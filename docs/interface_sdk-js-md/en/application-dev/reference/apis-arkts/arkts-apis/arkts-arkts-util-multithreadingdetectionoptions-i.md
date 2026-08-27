@@ -9,8 +9,6 @@ Multi-thread detection functional parameter configuration
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## abort

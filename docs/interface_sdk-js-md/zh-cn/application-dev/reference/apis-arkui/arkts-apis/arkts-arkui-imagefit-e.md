@@ -1,6 +1,8 @@
 # ImageFit
 
-Image display mode.@enum { number }
+Image display mode.
+
+@enum { number }
 
 **起始版本：** 11
 

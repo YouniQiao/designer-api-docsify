@@ -1,6 +1,8 @@
 # Album
 
-The definition of Album.@extends MediaEntity @interface Album
+The definition of Album.
+
+@extends MediaEntity @interface Album
 
 **Inheritance/Implementation:** Album extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
@@ -11,7 +13,7 @@ The definition of Album.@extends MediaEntity @interface Album
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## episodeCounts

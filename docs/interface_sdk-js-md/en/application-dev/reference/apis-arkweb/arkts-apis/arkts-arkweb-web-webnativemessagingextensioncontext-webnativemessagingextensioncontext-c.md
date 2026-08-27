@@ -38,7 +38,7 @@ Starts an ability. This API uses a promise to return the result. To obtain the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -102,7 +102,10 @@ export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAb
 startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>
 ```
 
-Starts a UIAbility. This API uses a promise to return the result when the started UIAbility exits.After the UIAbility is started, the following situations may occur:  
+Starts a UIAbility. This API uses a promise to return the result when the started UIAbility exits.
+
+After the UIAbility is started, the following situations may occur:
+
 - Under normal circumstances,  
 [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) can be called to terminate the UIAbility and return the result to the caller.  
 - In abnormal cases, such as when the UIAbility is destroyed, exception information is returned to the caller, with  
@@ -211,7 +214,7 @@ Stops the specified native connection. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -264,7 +267,7 @@ Destroys the current native web message extension. This method returns a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

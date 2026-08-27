@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit';
+import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityInfos

@@ -10,7 +10,6 @@ Defines the icon symbol options.
 
 ```TypeScript
 import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
-import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUIV2';
 ```
 
 ## activated
@@ -19,9 +18,11 @@ import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, 
 activated?: SymbolGlyphModifier
 ```
 
-Icon symbol of the toolbar item in activated state.Default value: **fontColor: \$r('sys.color.icon_emphasize'), fontSize: 24vp**
+Icon symbol of the toolbar item in activated state.
 
-**Type:** SymbolGlyphModifier
+Default value: **fontColor: \$r('sys.color.icon_emphasize'), fontSize: 24vp**
+
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 13
 
@@ -37,9 +38,11 @@ Icon symbol of the toolbar item in activated state.Default value: **fontColor: \
 normal?: SymbolGlyphModifier
 ```
 
-Icon symbol of the toolbar item in normal state.Default value: **fontColor: \$r('sys.color.icon_primary'), fontSize: 24vp**
+Icon symbol of the toolbar item in normal state.
 
-**Type:** SymbolGlyphModifier
+Default value: **fontColor: \$r('sys.color.icon_primary'), fontSize: 24vp**
+
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 13
 

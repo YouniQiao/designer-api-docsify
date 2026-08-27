@@ -55,6 +55,7 @@ FINGERPRINT = 3
 ```
 
 设备指纹认证能力，当前仅支持PC/2in1设备使用。使用时有以下规则：
+
 1. 禁用设备指纹认证能力（[FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefordevice-e.md)）后，再禁用某用户的设备指纹认证能力，会报策略冲突。
 2. 禁用/启用指定用户的设备指纹认证能力后，再禁用设备指纹认证能力（[FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefordevice-e.md)）时，后者会覆盖前者的策略。
 此后再启用设备指纹认证能力（[FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefordevice-e.md)），则所有用户都允许使用设备指纹认证能力。
@@ -71,7 +72,7 @@ FINGERPRINT = 3
 PRINT = 4
 ```
 
-设备打印能力。如果禁用了指定用户的设备打印能力，再启用设备打印能力（[FeatureForDevice.PRINTER](arkts-mdm-restrictions-featurefordevice-e.md)），该用户下的设备打印能力仍然被 禁用。
+设备打印能力。如果禁用了指定用户的设备打印能力，再启用设备打印能力（[FeatureForDevice.PRINTER](arkts-mdm-restrictions-featurefordevice-e.md)），该用户下的设备打印能力仍然被禁用。
 
 **起始版本：** 26.0.0
 
@@ -85,7 +86,7 @@ PRINT = 4
 MTP_CLIENT = 5
 ```
 
-MTP客户端能力（仅包含写入），当前仅支持PC/2in1设备使用。MTP（MediaTransferProtocol，媒体传输协议），该协议允许用户在移动设备上线性访问媒体文件。当已禁用设备MTP客户端能力（ [FeatureForDevice.MTP_CLIENT](arkts-mdm-restrictions-featurefordevice-e.md)）时，再禁用某用户MTP客户端写入能力，会报策略冲突。
+MTP客户端能力（仅包含写入），当前仅支持PC/2in1设备使用。MTP（MediaTransferProtocol，媒体传输协议），该协议允许用户在移动设备上线性访问媒体文件。当已禁用设备MTP客户端能力（[FeatureForDevice.MTP_CLIENT](arkts-mdm-restrictions-featurefordevice-e.md)）时，再禁用某用户MTP客户端写入能力，会报策略冲突。
 
 **起始版本：** 26.0.0
 
@@ -99,7 +100,15 @@ MTP客户端能力（仅包含写入），当前仅支持PC/2in1设备使用。M
 USB_STORAGE_DEVICE_WRITE = 6
 ```
 
-USB存储设备写入能力，当前仅支持PC/2in1企业设备使用。以下三种情况再禁用某用户USB存储设备写入能力，会报策略冲突。1）已禁用设备USB能力（[FeatureForDevice.USB](arkts-mdm-restrictions-featurefordevice-e.md)）。2）通过 [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md)接口 设置了USB存储设备访问策略为只读/禁用。3）通过[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md)接口添加了存储类型的USB设 备禁用。
+USB存储设备写入能力，当前仅支持PC/2in1企业设备使用。
+
+以下三种情况再禁用某用户USB存储设备写入能力，会报策略冲突。
+
+1）已禁用设备USB能力（[FeatureForDevice.USB](arkts-mdm-restrictions-featurefordevice-e.md)）。
+
+2）通过[setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md)接口设置了USB存储设备访问策略为只读/禁用。
+
+3）通过[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md)接口添加了存储类型的USB设备禁用。
 
 **起始版本：** 26.0.0
 
@@ -141,7 +150,7 @@ superuser do，表示以超级用户执行，当前仅支持PC/2in1设备使用�
 DISTRIBUTED_TRANSMISSION_OUTGOING = 9
 ```
 
-设备间分布式单向传输数据的能力（仅包含向其他设备传输数据）。当已禁用分布式管理服务（[DISTRIBUTED_TRANSMISSION](#featureforaccount)），再禁用设备 间分布式单向传输数据的能力，会报策略冲突。
+设备间分布式单向传输数据的能力（仅包含向其他设备传输数据）。当已禁用分布式管理服务（[DISTRIBUTED_TRANSMISSION](#featureforaccount)），再禁用设备间分布式单向传输数据的能力，会报策略冲突。
 
 **起始版本：** 26.0.0
 

@@ -1,6 +1,8 @@
 # AVSessionController
 
-Session controller,used to control media playback and get media information@interface AVSessionController [since 10 - 11]
+Session controller,used to control media playback and get media information
+
+@interface AVSessionController [since 10 - 11]
 
 **Since:** 10
 
@@ -9,7 +11,7 @@ Session controller,used to control media playback and get media information@inte
 ## Modules to Import
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## destroy
@@ -79,7 +81,7 @@ Destroy the server controller
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -226,7 +228,7 @@ Get the metadata of the current session
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;AVMetadata & gt; | (AVMetadata) returned through promise |
+| Promise&lt;AVMetadata&gt; | (AVMetadata) returned through promise |
 
 **Error codes:**
 
@@ -262,7 +264,7 @@ Get the metadata of the current session
 
 | Type | Description |
 | --- | --- |
-| [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) | (AVMetadata) returned |
+| AVMetadata | (AVMetadata) returned |
 
 **Error codes:**
 
@@ -454,7 +456,7 @@ Get the playlist of the current session
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | (Array & lt;AVQueueItem & gt;) returned through promise |
+| Promise&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | (Array&lt;AVQueueItem&gt;) returned through promise |
 
 **Error codes:**
 
@@ -490,7 +492,7 @@ Get the playlist of the current session
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | (Array & lt;AVQueueItem & gt;) returned |
+| Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | (Array&lt;AVQueueItem&gt;) returned |
 
 **Error codes:**
 
@@ -562,7 +564,7 @@ Get the name of the playlist of the current session
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | (string) returned through promise |
+| Promise&lt;string&gt; | (string) returned through promise |
 
 **Error codes:**
 
@@ -786,7 +788,7 @@ Get custom media packets provided by the corresponding session
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;{[key: string]: Object | > } the parameters of extras |
+| Promise&lt;{[key: string]: Object | > } the parameters of extras |
 
 **Error codes:**
 
@@ -1224,7 +1226,7 @@ Get supported speeds supplied by application.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise that returns no value. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1414,7 +1416,7 @@ Check if the current session is active
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | boolean promise |
+| Promise&lt;boolean&gt; | boolean promise |
 
 **Error codes:**
 
@@ -1484,7 +1486,7 @@ Query desktop lyric enabled state for this session.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | return the enabled status |
+| Promise&lt;boolean&gt; | return the enabled status |
 
 **Error codes:**
 
@@ -1513,7 +1515,7 @@ Query desktop lyric visible state for this session.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | return desktop lyric visible state |
+| Promise&lt;boolean&gt; | return desktop lyric visible state |
 
 **Error codes:**
 
@@ -1558,7 +1560,7 @@ Unregister metadata changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'metadataChange' | Yes |  |
-| callback | (data: AVMetadata) = & gt; void | No | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
+| callback | (data: AVMetadata) =&gt; void | No | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -1587,7 +1589,7 @@ Unregister playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| callback | (state: AVPlaybackState) = & gt; void | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+| callback | (state: AVPlaybackState) =&gt; void | No | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -1674,7 +1676,7 @@ Unregister current session destroyed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionDestroy' | Yes | 'sessionDestroy' |
-| callback | () = & gt; void | No | The callback used to handle current session destroyed event. |
+| callback | () =&gt; void | No | The callback used to handle current session destroyed event. |
 
 **Error codes:**
 
@@ -1703,7 +1705,7 @@ Unregister the active state of this session changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeStateChange' | Yes | 'activeStateChange' |
-| callback | (isActive: boolean) = & gt; void | No | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
+| callback | (isActive: boolean) =&gt; void | No | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
 
 **Error codes:**
 
@@ -1761,7 +1763,7 @@ Unregister session output device change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'outputDeviceChange' | Yes | Registration Type 'outputDeviceChange' |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | No | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | No | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
 
 **Error codes:**
 
@@ -1790,7 +1792,7 @@ Unregister session event callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionEvent' | Yes | 'sessionEvent' |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | No | Used to cancel a specific listener The callback function provides the event string and key-value pair parameters. |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) =&gt; void | No | Used to cancel a specific listener The callback function provides the event string and key-value pair parameters. |
 
 **Error codes:**
 
@@ -1848,7 +1850,7 @@ Unregister the name of session playlist change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'queueTitleChange' | Yes | Registration Type 'queueTitleChange' |
-| callback | (title: string) = & gt; void | No | Used to handle name of playlist changed. The callback provides the new name. |
+| callback | (title: string) =&gt; void | No | Used to handle name of playlist changed. The callback provides the new name. |
 
 **Error codes:**
 
@@ -1877,7 +1879,7 @@ Unregister the custom media packets change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'extrasChange' | Yes | Registration Type 'extrasChange' |
-| callback | (extras: {[key: string]: Object}) = & gt; void | No | Used to handle custom media packets changed. The callback provides the new media packets. |
+| callback | (extras: {[key: string]: Object}) =&gt; void | No | Used to handle custom media packets changed. The callback provides the new media packets. |
 
 **Error codes:**
 
@@ -2148,8 +2150,8 @@ Register metadata changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'metadataChange' | Yes |  |
-| filter | Array & lt;keyof AVMetadata & gt; \ | 'all' | Yes | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) that you cared about |
-| callback | (data: AVMetadata) = & gt; void | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
+| filter | Array&lt;keyof AVMetadata&gt; \| 'all' | Yes | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) that you cared about |
+| callback | (data: AVMetadata) =&gt; void | Yes | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
 
@@ -2178,8 +2180,8 @@ Register playback state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |  |
-| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
-| callback | (state: AVPlaybackState) = & gt; void | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
+| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) that you cared about |
+| callback | (state: AVPlaybackState) =&gt; void | Yes | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md) parameter. |
 
 **Error codes:**
 
@@ -2208,7 +2210,7 @@ Register call metadata changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callMetadataChange' | Yes | 'callMetadataChange' |
-| filter | Array & lt;keyof CallMetadata & gt; \ | 'all' | Yes | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) that you cared about |
+| filter | Array&lt;keyof CallMetadata&gt; \| 'all' | Yes | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) that you cared about |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md) parameter. It only contains the properties set in the filter. |
 
 **Error codes:**
@@ -2238,7 +2240,7 @@ Register call state changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callStateChange' | Yes | 'callStateChange' |
-| filter | Array & lt;keyof AVCallState & gt; \ | 'all' | Yes | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md) that you cared about |
+| filter | Array&lt;keyof AVCallState&gt; \| 'all' | Yes | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md) that you cared about |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md) parameter. |
 
 **Error codes:**
@@ -2268,7 +2270,7 @@ Register current session destroyed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionDestroy' | Yes |  |
-| callback | () = & gt; void | Yes | The callback used to handle current session destroyed event. |
+| callback | () =&gt; void | Yes | The callback used to handle current session destroyed event. |
 
 **Error codes:**
 
@@ -2297,7 +2299,7 @@ Register the active state of this session changed callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeStateChange' | Yes | 'activeStateChange' |
-| callback | (isActive: boolean) = & gt; void | Yes | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
+| callback | (isActive: boolean) =&gt; void | Yes | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
 
 **Error codes:**
 
@@ -2355,7 +2357,7 @@ Register session output device change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'outputDeviceChange' | Yes | Registration Type 'outputDeviceChange' |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | Yes | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | Yes | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md). |
 
 **Error codes:**
 
@@ -2384,7 +2386,7 @@ Register session event callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sessionEvent' | Yes | 'sessionEvent' |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | Yes | The callback used to handle session event changed event. The callback function provides the event string and key-value pair parameters. |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) =&gt; void | Yes | The callback used to handle session event changed event. The callback function provides the event string and key-value pair parameters. |
 
 **Error codes:**
 
@@ -2442,7 +2444,7 @@ Register the name of session playlist change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'queueTitleChange' | Yes | Registration Type 'queueTitleChange' |
-| callback | (title: string) = & gt; void | Yes | Used to handle name of playlist changed. The callback provides the new name. |
+| callback | (title: string) =&gt; void | Yes | Used to handle name of playlist changed. The callback provides the new name. |
 
 **Error codes:**
 
@@ -2471,7 +2473,7 @@ Register the custom media packets change callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'extrasChange' | Yes | Registration Type 'extrasChange' |
-| callback | (extras: {[key: string]: Object}) = & gt; void | Yes | Used to handle custom media packets changed. The callback provides the new media packets. |
+| callback | (extras: {[key: string]: Object}) =&gt; void | Yes | Used to handle custom media packets changed. The callback provides the new media packets. |
 
 **Error codes:**
 
@@ -2810,7 +2812,7 @@ Send media key event to this session
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2906,7 +2908,7 @@ Send common commands to this session
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -2997,7 +2999,7 @@ Send control commands to this session
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -3038,13 +3040,13 @@ Send custom data to this avsession.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record & lt;string, Object & gt; | Yes | The custom data populated by application. |
+| data | Record&lt;string, Object&gt; | Yes | The custom data populated by application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void result promise when executed successfully |
+| Promise&lt;void&gt; | void result promise when executed successfully |
 
 **Error codes:**
 
@@ -3130,7 +3132,7 @@ Set desktop lyric state such as lock state for this session.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -3184,7 +3186,7 @@ Set desktop lyric visible state for this session.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 
@@ -3273,7 +3275,7 @@ Set the item in the playlist to be played
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | void promise when executed successfully |
+| Promise&lt;void&gt; | void promise when executed successfully |
 
 **Error codes:**
 

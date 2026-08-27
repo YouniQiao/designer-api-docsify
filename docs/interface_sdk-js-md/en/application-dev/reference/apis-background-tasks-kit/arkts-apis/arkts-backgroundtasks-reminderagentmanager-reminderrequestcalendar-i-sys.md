@@ -1,6 +1,8 @@
 # ReminderRequestCalendar
 
-ReminderRequestCalendar extends ReminderRequest Defines a reminder for a calendar event.
+ReminderRequestCalendar extends ReminderRequest
+
+Defines a reminder for a calendar event.
 
 **Inheritance/Implementation:** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
@@ -11,7 +13,7 @@ ReminderRequestCalendar extends ReminderRequest Defines a reminder for a calenda
 ## Modules to Import
 
 ```TypeScript
-import reminderAgentManager from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## rruleWantAgent

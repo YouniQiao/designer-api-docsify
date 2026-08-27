@@ -1,6 +1,8 @@
 # CameraInput
 
-**CameraInput** defines the camera input object.It provides camera device information used in [Session](arkts-camera-camera-session-i.md).
+**CameraInput** defines the camera input object.
+
+It provides camera device information used in [Session](arkts-camera-camera-session-i.md).
 
 **Since:** 10
 
@@ -35,7 +37,7 @@ Delay close camera.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -70,7 +72,7 @@ Control auxiliary.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

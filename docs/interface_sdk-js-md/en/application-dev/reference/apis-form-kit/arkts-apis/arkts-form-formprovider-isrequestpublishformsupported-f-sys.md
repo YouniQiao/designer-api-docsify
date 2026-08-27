@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## isRequestPublishFormSupported
@@ -94,7 +94,7 @@ Checks whether a widget can be added to the widget host. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise that returns whether a widget can be added to the widget host. |
+| Promise&lt;boolean&gt; | Promise that returns whether a widget can be added to the widget host. |
 
 **Error codes:**
 

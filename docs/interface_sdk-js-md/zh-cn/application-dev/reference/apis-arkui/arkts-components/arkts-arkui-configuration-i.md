@@ -1,6 +1,8 @@
 # Configuration
 
-Defines the data type of the interface restriction.@interface Configuration
+Defines the data type of the interface restriction.
+
+@interface Configuration
 
 **起始版本：** 11
 

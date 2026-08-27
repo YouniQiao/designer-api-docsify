@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## createStream
@@ -33,7 +33,7 @@ Creating a Stream.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | The promise returned by the function, contain the ID of a transport stream. |
+| Promise&lt;number&gt; | The promise returned by the function, contain the ID of a transport stream. |
 
 **Error codes:**
 

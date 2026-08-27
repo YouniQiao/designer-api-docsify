@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import ethernet from '@kit.NetworkKit';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## getAllActiveIfaces
@@ -76,7 +76,7 @@ Obtains the active network interface. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

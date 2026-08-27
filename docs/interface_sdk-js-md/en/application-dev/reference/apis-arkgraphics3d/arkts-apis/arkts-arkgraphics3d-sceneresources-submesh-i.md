@@ -1,6 +1,8 @@
 # SubMesh
 
-Sub-mesh resource.@interface SubMesh
+Sub-mesh resource.
+
+@interface SubMesh
 
 **Since:** 12
 

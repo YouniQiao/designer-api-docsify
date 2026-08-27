@@ -9,10 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import config from '@kit.AccessibilityKit.config';
-import accessibility from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
-import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
@@ -22,7 +19,13 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 backgroundColor: number | string
 ```
 
-描述字幕背景颜色。number：HEX格式颜色，支持rgb或argb。string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。例：不透明红色，number：0xffff0000，string：'#ff0000', '#ff0000ff', '#f00', '#f00f'。
+描述字幕背景颜色。
+
+number：HEX格式颜色，支持rgb或argb。
+
+string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
+
+例：不透明红色，number：0xffff0000，string：'#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
 **类型：** number \| string
 
@@ -40,7 +43,13 @@ backgroundColor: number | string
 fontColor: number | string
 ```
 
-描述字幕字体颜色。number：HEX格式颜色，支持rgb或argb。string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。例：不透明红色，number：0xffff0000，string：'#ff0000', '#ff0000ff', '#f00', '#f00f'。
+描述字幕字体颜色。
+
+number：HEX格式颜色，支持rgb或argb。
+
+string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
+
+例：不透明红色，number：0xffff0000，string：'#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
 **类型：** number \| string
 
@@ -112,7 +121,13 @@ fontScale: number
 windowColor: number | string
 ```
 
-描述字幕窗口颜色。number：HEX格式颜色，支持rgb或argb。string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。例：不透明红色，number：0xffff0000，string：'#ff0000', '#ff0000ff', '#f00', '#f00f'。
+描述字幕窗口颜色。
+
+number：HEX格式颜色，支持rgb或argb。
+
+string：支持 '#rrggbb', '#rrggbbaa', '#rgb', '#rgba' 格式。
+
+例：不透明红色，number：0xffff0000，string：'#ff0000', '#ff0000ff', '#f00', '#f00f'。
 
 **类型：** number \| string
 

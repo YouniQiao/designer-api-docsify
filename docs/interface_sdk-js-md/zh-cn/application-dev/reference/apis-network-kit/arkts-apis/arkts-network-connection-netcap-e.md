@@ -40,7 +40,7 @@ NET_CAPABILITY_NOT_METERED = 11
 NET_CAPABILITY_INTERNET = 12
 ```
 
-表示该网络应具有访问Internet的能力，此能力由网络提供者设置，但该网络访问Internet的连通性并未被网络管理成功验证。网络连通性可以通过NET_CAPABILITY_VALIDATED和 NET_CAPABILITY_CHECKING_CONNECTIVITY判断。
+表示该网络应具有访问Internet的能力，此能力由网络提供者设置，但该网络访问Internet的连通性并未被网络管理成功验证。网络连通性可以通过NET_CAPABILITY_VALIDATED和NET_CAPABILITY_CHECKING_CONNECTIVITY判断。
 
 **起始版本：** 8
 
@@ -68,8 +68,9 @@ NET_CAPABILITY_NOT_VPN = 15
 NET_CAPABILITY_VALIDATED = 16
 ```
 
-表示网络管理通过该网络与华为云地址成功建立连接，此能力由网络管理模块设置。  
-**注意：** 网络管理可能会与华为云地址建立连接失败，导致网络能力不具备此标记位，但不完全代表该网络无法访问互联网。另外，对于新完成连接的网络，由于网络正在进行连通性验证，此值可能无法反映真实的验证结果。对此，应用可以通过 NET_CAPABILITY_CHECKING_CONNECTIVITY&lt;sup&gt;12+&lt;/sup&gt;检查网络是否正在检测连通性。
+表示网络管理通过该网络与华为云地址成功建立连接，此能力由网络管理模块设置。
+
+**注意：** 网络管理可能会与华为云地址建立连接失败，导致网络能力不具备此标记位，但不完全代表该网络无法访问互联网。另外，对于新完成连接的网络，由于网络正在进行连通性验证，此值可能无法反映真实的验证结果。对此，应用可以通过NET_CAPABILITY_CHECKING_CONNECTIVITY&lt;sup&gt;12+&lt;/sup&gt;检查网络是否正在检测连通性。
 
 **起始版本：** 8
 
@@ -97,7 +98,7 @@ NET_CAPABILITY_PORTAL = 17
 NET_CAPABILITY_CHECKING_CONNECTIVITY = 31
 ```
 
-表示网络管理正在检验当前网络的连通性，此值会在网络连接时设置。当此值存在时，NET_CAPABILITY_VALIDATED的值不准确，连通性检测结束后不再设置，此时可以通过判断NetCap是否包含 NET_CAPABILITY_VALIDATED判断连通性。
+表示网络管理正在检验当前网络的连通性，此值会在网络连接时设置。当此值存在时，NET_CAPABILITY_VALIDATED的值不准确，连通性检测结束后不再设置，此时可以通过判断NetCap是否包含NET_CAPABILITY_VALIDATED判断连通性。
 
 **起始版本：** 12
 

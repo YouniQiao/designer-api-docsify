@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## off('appForegroundState')
@@ -27,7 +27,7 @@ Unregisters the observer used to listen for application start or exit events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'appForegroundState' | Yes | Event type. It is fixed at **'appForegroundState'**. |
-| observer | [AppForegroundStateObserver](arkts-ability-appmanager-appforegroundstateobserver-t-sys.md) | No | Observer used to listen for application start or exit events. |
+| observer | AppForegroundStateObserver | No | Observer used to listen for application start or exit events. |
 
 **Error codes:**
 
@@ -94,7 +94,7 @@ Deregisters the observer used to listen for the complete of the first frame rend
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'abilityFirstFrameState' | Yes | Event type. It is fixed at **'abilityFirstFrameState'**. |
-| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | No | Callback used for deregistration. If this parameter is left blank, all subscriptions to the specified event are canceled. |
+| observer | AbilityFirstFrameStateObserver | No | Callback used for deregistration. If this parameter is left blank, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 

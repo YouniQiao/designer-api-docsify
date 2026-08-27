@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import linkEnhance from '@kit.DistributedServiceKit';
+import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## createConnection

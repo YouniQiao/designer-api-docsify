@@ -13,7 +13,7 @@ Writes objects of classes to a **MessageParcel** and reads them from the **Messa
 ## Modules to Import
 
 ```TypeScript
-import rpc from '@kit.IPCKit';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## marshalling

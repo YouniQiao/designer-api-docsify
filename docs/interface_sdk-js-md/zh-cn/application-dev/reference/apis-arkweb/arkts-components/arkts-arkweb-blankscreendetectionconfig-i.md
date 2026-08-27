@@ -9,9 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## contentfulNodesCountThreshold
@@ -20,7 +17,13 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 contentfulNodesCountThreshold?: number
 ```
 
-在使用到检测有内容的节点检测策略时，才会生效。可以设置0-\${检测策略最大节点}，如果小于等于阈值则会触发近似白屏。默认值：0。注：检测策略最大节点依赖于所选择的检测策略。
+在使用到检测有内容的节点检测策略时，才会生效。
+
+可以设置0-\${检测策略最大节点}，如果小于等于阈值则会触发近似白屏。
+
+默认值：0。
+
+注：检测策略最大节点依赖于所选择的检测策略。
 
 **类型：** number
 
@@ -34,8 +37,12 @@ contentfulNodesCountThreshold?: number
 detectionMethods?: BlankScreenDetectionMethod[]
 ```
 
-使用检测策略的方法，是一个数组。注：
+使用检测策略的方法，是一个数组。
+
+注：
+
 1.重复值会忽略。
+
 默认值：[BlankScreenDetectionMethod.DETECTION_CONTENTFUL_NODES_SEVENTEEN]。
 
 **类型：** [BlankScreenDetectionMethod](arkts-arkweb-blankscreendetectionmethod-e.md)[]
@@ -50,9 +57,16 @@ detectionMethods?: BlankScreenDetectionMethod[]
 detectionTiming?: number[]
 ```
 
-用以设置需要在加载后多少秒的时机来检测是否白屏。单位：秒。注：
+用以设置需要在加载后多少秒的时机来检测是否白屏。
+
+单位：秒。
+
+注：
+
 1.重复值会忽略。
+
 2.需大于0，小于0的值会被忽略。
+
 默认值：[1.0,3.0,5.0]。
 
 **类型：** number[]

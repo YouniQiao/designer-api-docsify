@@ -1,6 +1,8 @@
 # AudioDataCallbackResult
 
-表示音频数据回调结果的枚举。@enum { number }
+表示音频数据回调结果的枚举。
+
+@enum { number }
 
 **起始版本：** 12
 

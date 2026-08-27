@@ -23,13 +23,13 @@ function unregisterTraceListener(index: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 已注册回调函数索引，取值范围[0, 9]，即 [registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md)调用成功时的返回值。 |
+| index | number | 是 | 已注册回调函数索引，取值范围[0, 9]，即[registerTraceListener()](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md)调用成功时的返回值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 回调注销状态。 0：注销成功； -1：目标索引的回调函数未注册； -2：无效索引，参数index值不在[0, 9]范围内。 |
+| number | 回调注销状态。0：注销成功；-1：目标索引的回调函数未注册；-2：无效索引，参数index值不在[0, 9]范围内。 |
 
 **示例**
 

@@ -1,6 +1,6 @@
 # DeviceManager
 
-设备管理实例，是分布式设备管理方法的调用入口，提供设备发现、设备认证、状态监听和信息查询等能力。 在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。
+设备管理实例，是分布式设备管理方法的调用入口，提供设备发现、设备认证、状态监听和信息查询等能力。在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。
 
 **起始版本：** 10
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedDeviceManager from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## getDeviceIconInfo
@@ -106,7 +106,7 @@ getDeviceNetworkIdList(filterOptions: NetworkIdQueryFilter): Promise<Array<strin
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise实例，返回设备网络ID的列表。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise实例，返回设备网络ID的列表。 |
 
 **错误码：**
 
@@ -221,7 +221,7 @@ getIdentificationByDeviceIds(deviceIds: Array<string>): Array<DeviceIdentificati
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceIds | Array & lt;string & gt; | 是 | 应用程序可以获取的设备ID列表。 |
+| deviceIds | Array&lt;string&gt; | 是 | 应用程序可以获取的设备ID列表。 |
 
 **返回值：**
 
@@ -497,7 +497,7 @@ putDeviceProfileInfoList(deviceProfileInfoList: Array<DeviceProfileInfo>): Promi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 操作结果，0表示本次调用成功。 |
+| Promise&lt;number&gt; | 操作结果，0表示本次调用成功。 |
 
 **错误码：**
 
@@ -548,7 +548,7 @@ replyUiAction(action: number, actionResult: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | number | 是 | 用户操作动作。    - 0：允许授权。    - 1：取消授权。    - 2：授权框用户操作超时。    - 3：取消pin码框展示。    - 4：取消pin码输入框展示。    - 5：pin码输入框确定操作。 |
+| action | number | 是 | 用户操作动作。   - 0：允许授权。   - 1：取消授权。   - 2：授权框用户操作超时。   - 3：取消pin码框展示。   - 4：取消pin码输入框展示。   - 5：pin码输入框确定操作。 |
 | actionResult | string | 是 | 表示用户操作结果，长度范围1~255字符。 |
 
 **错误码：**
@@ -742,7 +742,7 @@ setLocalDeviceName(deviceName: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 操作结果，0表示本次调用成功。 |
+| Promise&lt;number&gt; | 操作结果，0表示本次调用成功。 |
 
 **错误码：**
 
@@ -803,7 +803,7 @@ setRemoteDeviceName(deviceId: string, deviceName: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 操作结果，0表示本次调用成功。 |
+| Promise&lt;number&gt; | 操作结果，0表示本次调用成功。 |
 
 **错误码：**
 

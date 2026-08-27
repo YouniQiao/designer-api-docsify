@@ -65,7 +65,8 @@ Event name. The value is string that contains a maximum of 48 characters, includ
 params: object
 ```
 
-Event parameter object, which consists of a parameter name and a parameter value. In system events, the fields contained in **params** are defined by system. For details about the fields, you can see the overviews of system events, for example, [Crash Event Overview](../../../dfx/hiappevent-watcher-crash-events.md). For application events, you need to define the parameters of the [Write](arkts-performanceanalysis-hiappevent-write-f.md) API. The specifications are as follows:  
+Event parameter object, which consists of a parameter name and a parameter value. In system events, the fields contained in **params** are defined by system. For details about the fields, you can see the overviews of system events, for example, [Crash Event Overview](../../../dfx/hiappevent-watcher-crash-events.md). For application events, you need to define the parameters of the [Write](arkts-performanceanalysis-hiappevent-write-f.md) API. The specifications are as follows:
+
 - A parameter name is a string that contains a maximum of 32 characters, including digits (0 to 9), letters (a to  
 z)(A to Z), underscore (_), and dollar sign (\$). It must start with a letter or dollar sign (\$) and end with a digit or letter. For example, **testName** and **\$123_name**.  
 - The parameter value can be a string, number, boolean, or array. The string type parameter can contain a maximum  

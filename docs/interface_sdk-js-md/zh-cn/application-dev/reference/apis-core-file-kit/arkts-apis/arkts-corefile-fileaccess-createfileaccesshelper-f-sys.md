@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import fileAccess from '@kit.CoreFileKit';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## createFileAccessHelper

@@ -9,7 +9,7 @@ Defines the policy for sensitive content identification. In a single policy, key
 ## Modules to Import
 
 ```TypeScript
-import identifySensitiveContent from '@kit.DataProtectionKit';
+import { identifySensitiveContent } from '@kit.DataProtectionKit';
 ```
 
 ## keywords

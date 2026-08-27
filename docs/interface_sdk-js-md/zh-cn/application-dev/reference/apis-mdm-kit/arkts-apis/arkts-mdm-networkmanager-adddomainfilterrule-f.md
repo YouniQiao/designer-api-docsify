@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## addDomainFilterRule
@@ -12,7 +12,11 @@ import networkManager from '@kit.MDMKit';
 function addDomainFilterRule(admin: Want, domainFilterRule: DomainFilterRule): void
 ```
 
-为设备添加域名过滤规则。API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
+为设备添加域名过滤规则。
+
+API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
+
+从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
 
 > **说明：**
 > 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import systemParameter from '@kit.BasicServicesKit';
+import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
 ## get
@@ -142,7 +142,7 @@ function get(key: string, def?: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise实例，用于异步获取结果。 |
+| Promise&lt;string&gt; | Promise实例，用于异步获取结果。 |
 
 **错误码：**
 

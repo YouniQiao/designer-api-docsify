@@ -9,7 +9,7 @@ In the following API examples, you must first use [getKeyboardDelegate](arkts-im
 ## Modules to Import
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## off('keyDown' | 'keyUp')
@@ -29,7 +29,7 @@ Disables listening for a physical keyboard event. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | Yes | Event type.    - The value **'keyDown'** indicates the keydown event.    - The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) = & gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | (event: KeyEvent) =&gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -61,7 +61,7 @@ Disables listening for a physical keyboard event. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | Yes | Event type.    - The value **'keyDown'** indicates the keydown event.    - The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) = & gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | (event: KeyEvent) =&gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -84,7 +84,7 @@ Disables listening for a keyboard event. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyEvent' | Yes | Event type, which is **'keyEvent'**. |
-| callback | (event: InputKeyEvent) = & gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | (event: InputKeyEvent) =&gt; boolean | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -115,7 +115,7 @@ Disables listening for cursor context changes. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cursorContextChange' | Yes | Event type, which is **'cursorContextChange'**. |
-| callback | (x: number, y: number, height: number) = & gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | (x: number, y: number, height: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -145,7 +145,7 @@ Disables listening for the text selection change event. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectionChange' | Yes | Event type, which is **'selectionChange'**. |
-| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) = & gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -173,7 +173,7 @@ Disables listening for the text change event. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'textChange' | Yes | Event type, which is **'textChange'**. |
-| callback | (text: string) = & gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | (text: string) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -200,7 +200,7 @@ Disables listening for the edit box attribute change event. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'editorAttributeChanged' | Yes | Event type, which is **'editorAttributeChanged'**. |
-| callback | (attr: EditorAttribute) = & gt; void | No | Callback used for unsubscription. If this parameter is not specified, this API unregisters all callbacks for the specified type by default. |
+| callback | (attr: EditorAttribute) =&gt; void | No | Callback used for unsubscription. If this parameter is not specified, this API unregisters all callbacks for the specified type by default. |
 
 **Examples**
 
@@ -225,7 +225,7 @@ Enables listening for a physical keyboard event. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | Yes | Event type.    - The value **'keyDown'** indicates the keydown event.    - The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) = & gt; boolean | Yes | Callback used to return the key information. If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
+| callback | (event: KeyEvent) =&gt; boolean | Yes | Callback used to return the key information. If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
 
 **Examples**
 
@@ -259,7 +259,7 @@ Enables listening for a physical keyboard event. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | Yes | Event type.    - The value **'keyDown'** indicates the keydown event.    - The value **'keyUp'** indicates the keyup event. |
-| callback | (event: KeyEvent) = & gt; boolean | Yes | Callback used to return the key information. If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
+| callback | (event: KeyEvent) =&gt; boolean | Yes | Callback used to return the key information. If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
 
 **Examples**
 
@@ -282,7 +282,7 @@ Enables listening for a keyboard event. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyEvent' | Yes | Event type, which is **'keyEvent'**. |
-| callback | (event: InputKeyEvent) = & gt; boolean | Yes | Callback used to return the result. The input parameter is the key event information and the return value is of the Boolean type.    - Input parameter: [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md).    - If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
+| callback | (event: InputKeyEvent) =&gt; boolean | Yes | Callback used to return the result. The input parameter is the key event information and the return value is of the Boolean type.    - Input parameter: [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md).    - If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
 
 **Examples**
 
@@ -315,7 +315,7 @@ Enables listening for the cursor change event. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cursorContextChange' | Yes | Event type, which is **'cursorContextChange'**. |
-| callback | (x: number, y: number, height: number) = & gt; void | Yes | Callback used to return the cursor information.    - **x**: x coordinate of the top of the cursor.    - **y**: y coordinate of the bottom of the cursor.    - **height**: height of the cursor. |
+| callback | (x: number, y: number, height: number) =&gt; void | Yes | Callback used to return the cursor information.    - **x**: x coordinate of the top of the cursor.    - **y**: y coordinate of the bottom of the cursor.    - **height**: height of the cursor. |
 
 **Examples**
 
@@ -347,7 +347,7 @@ Enables listening for the text selection change event. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selectionChange' | Yes | Event type, which is **'selectionChange'**. |
-| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) = & gt; void | Yes | Callback used to return the text selection information.    - **oldBegin**: start of the selected text before the change.    - **oldEnd**: end of the selected text before the change.    - **newBegin**: start of the selected text after the change.    - **newEnd**: end of the selected text after the change. |
+| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | Yes | Callback used to return the text selection information.    - **oldBegin**: start of the selected text before the change.    - **oldEnd**: end of the selected text before the change.    - **newBegin**: start of the selected text after the change.    - **newEnd**: end of the selected text after the change. |
 
 **Examples**
 
@@ -378,7 +378,7 @@ Enables listening for the text change event. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'textChange' | Yes | Event type, which is **'textChange'**. |
-| callback | (text: string) = & gt; void | Yes | Callback used to return the text content. |
+| callback | (text: string) =&gt; void | Yes | Callback used to return the text content. |
 
 **Examples**
 
@@ -405,7 +405,7 @@ Enables listening for the edit box attribute change event. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'editorAttributeChanged' | Yes | Event type, which is **'editorAttributeChanged'**. |
-| callback | (attr: EditorAttribute) = & gt; void | Yes | Callback used to return the changed edit box attribute. |
+| callback | (attr: EditorAttribute) =&gt; void | Yes | Callback used to return the changed edit box attribute. |
 
 **Examples**
 

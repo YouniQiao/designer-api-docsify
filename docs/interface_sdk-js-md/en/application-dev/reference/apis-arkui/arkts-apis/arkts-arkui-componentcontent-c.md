@@ -1,7 +1,9 @@
 # ComponentContent
 
-You can create an entity encapsulation component in either of the following ways: You can select either of the following methods during development:  
-**ComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses BuilderNode. For details, see BuilderNode.  
+You can create an entity encapsulation component in either of the following ways: You can select either of the following methods during development:
+
+**ComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses BuilderNode. For details, see BuilderNode.
+
 **ReactiveComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses **ReactiveBuilderNode**. For details, see [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md).
 
 > **NOTE：**
@@ -37,7 +39,7 @@ A constructor used to create a **ComponentContent** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;[]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has no parameters. |
+| builder | WrappedBuilder&lt;[]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has no parameters. |
 
 **Examples**
 
@@ -181,7 +183,7 @@ A constructor used to create a **ComponentContent** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;[T]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has parameters. |
+| builder | WrappedBuilder&lt;[T]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has parameters. |
 | args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. |
 
 **Examples**
@@ -209,7 +211,7 @@ A constructor used to create a **ComponentContent** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;[T]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has parameters. |
+| builder | WrappedBuilder&lt;[T]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has parameters. |
 | args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. |
 | options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | Yes | Build options, which determine whether to support the behavior of nesting **@Builder** within **@Builder**. |
 

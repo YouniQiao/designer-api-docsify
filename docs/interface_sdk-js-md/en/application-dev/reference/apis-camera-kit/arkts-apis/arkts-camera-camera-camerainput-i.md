@@ -1,6 +1,8 @@
 # CameraInput
 
-**CameraInput** defines the camera input object.It provides camera device information used in [Session](arkts-camera-camera-session-i.md).
+**CameraInput** defines the camera input object.
+
+It provides camera device information used in [Session](arkts-camera-camera-session-i.md).
 
 **Since:** 10
 
@@ -71,7 +73,7 @@ Closes this camera device. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -319,7 +321,7 @@ Opens this camera device. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -368,7 +370,7 @@ Opens this camera device. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;bigint & gt; | Promise used to return the handle to the camera device in secure mode. |
+| Promise&lt;bigint&gt; | Promise used to return the handle to the camera device in secure mode. |
 
 **Error codes:**
 
@@ -416,7 +418,7 @@ Opens the camera with the specified concurrency type. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

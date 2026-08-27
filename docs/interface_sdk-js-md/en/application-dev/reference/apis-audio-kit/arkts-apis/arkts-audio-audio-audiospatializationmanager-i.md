@@ -9,8 +9,7 @@ Implements audio spatialization management.
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## isSpatializationEnabledForCurrentDevice

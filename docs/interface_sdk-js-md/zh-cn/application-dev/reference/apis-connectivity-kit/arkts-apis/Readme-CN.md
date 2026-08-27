@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-connectivitykit-->
 
-- [@ohos.connectedTag](arkts-connectedtag.md)
+- [@ohos.connectedTag(有源标签)](arkts-connectedtag.md)
   - [init](arkts-connectivity-connectedtag-init-f.md)
   - [initialize](arkts-connectivity-connectedtag-initialize-f.md)
   - [off](arkts-connectivity-connectedtag-off-f.md)
@@ -12,7 +12,7 @@
   - [write](arkts-connectivity-connectedtag-write-f.md)
   - [writeNdefTag](arkts-connectivity-connectedtag-writendeftag-f.md)
   - [NfcRfType](arkts-connectivity-connectedtag-nfcrftype-e.md)
-- [@ohos.nearlink.advertising](arkts-nearlink-advertising.md)
+- [@ohos.nearlink.advertising(星闪广播能力)](arkts-nearlink-advertising.md)
   - [offAdvertisingStateChange](arkts-connectivity-advertising-offadvertisingstatechange-f.md)
   - [onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md)
   - [startAdvertising](arkts-connectivity-advertising-startadvertising-f.md)
@@ -25,20 +25,20 @@
   - [ServiceData](arkts-connectivity-advertising-servicedata-i.md)
   - [AdvertisingState](arkts-connectivity-advertising-advertisingstate-e.md)
   - [TxPowerMode](arkts-connectivity-advertising-txpowermode-e.md)
-- [@ohos.nearlink.cdsm](arkts-nearlink-cdsm.md)
+- [@ohos.nearlink.cdsm(星闪合作设备集合管理能力)](arkts-nearlink-cdsm.md)
   - [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md)
   - [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md)
   - [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)
   - [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md)
   - [CdsmConnectionState](arkts-connectivity-cdsm-cdsmconnectionstate-e.md)
-- [@ohos.nearlink.constant](arkts-nearlink-constant.md)
+- [@ohos.nearlink.constant(星闪公共常量定义)](arkts-nearlink-constant.md)
   - [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md)
   <!--Del-->
   - [ConnectionInterval(系统接口)](arkts-connectivity-nearlinkconstant-connectioninterval-e-sys.md)<!--DelEnd-->
   - [ConnectionState](arkts-connectivity-nearlinkconstant-connectionstate-e.md)
   - [DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md)
   - [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md)
-- [@ohos.nearlink.dataTransfer](arkts-nearlink-datatransfer.md)
+- [@ohos.nearlink.dataTransfer(星闪数传能力)](arkts-nearlink-datatransfer.md)
   - [connect](arkts-connectivity-datatransfer-connect-f.md)
   - [createPort](arkts-connectivity-datatransfer-createport-f.md)
   - [destroyPort](arkts-connectivity-datatransfer-destroyport-f.md)
@@ -55,7 +55,7 @@
   - [DataParams](arkts-connectivity-datatransfer-dataparams-i.md)
   - [ConnectionState](arkts-connectivity-datatransfer-connectionstate-t.md)
   - [TransferMode](arkts-connectivity-datatransfer-transfermode-e.md)
-- [@ohos.nearlink.manager](arkts-nearlink-manager.md)
+- [@ohos.nearlink.manager(星闪基础管理能力)](arkts-nearlink-manager.md)
   <!--Del-->
   - [disable(系统接口)](arkts-connectivity-manager-disable-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -75,7 +75,7 @@
   <!--Del-->
   - [ConnectionMode(系统接口)](arkts-connectivity-manager-connectionmode-e-sys.md)<!--DelEnd-->
   - [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md)
-- [@ohos.nearlink.remoteDevice](arkts-nearlink-remotedevice.md)
+- [@ohos.nearlink.remoteDevice(星闪远端设备连接能力)](arkts-nearlink-remotedevice.md)
   - [createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md)
   - [offAcbStateChange](arkts-connectivity-remotedevice-offacbstatechange-f.md)
   - [offConnectionStateChange](arkts-connectivity-remotedevice-offconnectionstatechange-f.md)
@@ -106,7 +106,7 @@
   - [ConnectionReason](arkts-connectivity-remotedevice-connectionreason-e.md)
   - [PairingReason](arkts-connectivity-remotedevice-pairingreason-e.md)
   - [PairingType](arkts-connectivity-remotedevice-pairingtype-e.md)
-- [@ohos.nearlink.scan](arkts-nearlink-scan.md)
+- [@ohos.nearlink.scan(星闪扫描能力)](arkts-nearlink-scan.md)
   - [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md)
   - [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md)
   - [startScan](arkts-connectivity-scan-startscan-f.md)
@@ -117,7 +117,7 @@
   - [ScanMode](arkts-connectivity-scan-scanmode-e.md)
   <!--Del-->
   - [ScanMode(系统接口)](arkts-connectivity-scan-scanmode-e-sys.md)<!--DelEnd-->
-- [@ohos.nearlink.ssap](arkts-nearlink-ssap.md)
+- [@ohos.nearlink.ssap(星闪SSAP连接能力)](arkts-nearlink-ssap.md)
   - [createClient](arkts-connectivity-ssap-createclient-f.md)
   - [createServer](arkts-connectivity-ssap-createserver-f.md)
   - [Client](arkts-connectivity-ssap-client-i.md)
@@ -141,7 +141,7 @@
   - [Operation](arkts-connectivity-ssap-operation-e.md)
   - [PropertyDescriptorType](arkts-connectivity-ssap-propertydescriptortype-e.md)
   - [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md)
-- [@ohos.nfc.cardEmulation](arkts-nfc-cardemulation.md)
+- [@ohos.nfc.cardEmulation(标准NFC-cardEmulation)](arkts-nfc-cardemulation.md)
   <!--Del-->
   - [getPaymentServices(系统接口)](arkts-connectivity-cardemulation-getpaymentservices-f-sys.md)<!--DelEnd-->
   - [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md)
@@ -150,7 +150,7 @@
   - [HceService](arkts-connectivity-cardemulation-hceservice-c.md)
   - [CardType](arkts-connectivity-cardemulation-cardtype-e.md)
   - [FeatureType](arkts-connectivity-cardemulation-featuretype-e.md)
-- [@ohos.nfc.controller](arkts-nfc-controller.md)
+- [@ohos.nfc.controller(标准NFC)](arkts-nfc-controller.md)
   - [closeNfc](arkts-connectivity-nfccontroller-closenfc-f.md)
   - [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md)
   - [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md)
@@ -162,7 +162,7 @@
   - [on](arkts-connectivity-nfccontroller-on-f.md)
   - [openNfc](arkts-connectivity-nfccontroller-opennfc-f.md)
   - [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md)
-- [@ohos.nfc.tag](arkts-nfc-tag.md)
+- [@ohos.nfc.tag(标准NFC-Tag)](arkts-nfc-tag.md)
   - [tag](arkts-connectivity-tag-n.md)
     - [ndef](arkts-connectivity-tag-ndef-n.md)
       - [createNdefMessage](arkts-connectivity-ndef-createndefmessage-f.md)
@@ -213,7 +213,7 @@
     - [NfcForumType](arkts-connectivity-tag-nfcforumtype-e.md)
     - [TnfType](arkts-connectivity-tag-tnftype-e.md)
     - [常量](arkts-connectivity-tag-con.md)
-- [@ohos.secureElement](arkts-secureelement.md)
+- [@ohos.secureElement(安全单元的通道管理)](arkts-secureelement.md)
   - [createService](arkts-connectivity-omapi-createservice-f.md)
   - [newSEService](arkts-connectivity-omapi-newseservice-f.md)
   - [off](arkts-connectivity-omapi-off-f.md)
@@ -514,7 +514,7 @@
   - [setPowerMode](arkts-connectivity-wifimanagerext-setpowermode-f.md)
   - [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
 - tag<!--arkts-connectivitykit-tag-->
-  - [nfctech](arkts-nfctech.md)
+  - [nfctech(标准NFC-Tag Nfc 技术)](arkts-nfctech.md)
     - [BarcodeTag](arkts-connectivity-nfctech-barcodetag-i.md)
     - [IsoDepTag](arkts-connectivity-nfctech-isodeptag-i.md)
     - [MifareClassicTag](arkts-connectivity-nfctech-mifareclassictag-i.md)
@@ -526,5 +526,5 @@
     - [NfcBTag](arkts-connectivity-nfctech-nfcbtag-i.md)
     - [NfcFTag](arkts-connectivity-nfctech-nfcftag-i.md)
     - [NfcVTag](arkts-connectivity-nfctech-nfcvtag-i.md)
-  - [tagSession](arkts-tagsession.md)
+  - [tagSession(标准NFC-Tag TagSession)](arkts-tagsession.md)
     - [TagSession](arkts-connectivity-tagsession-tagsession-i.md)

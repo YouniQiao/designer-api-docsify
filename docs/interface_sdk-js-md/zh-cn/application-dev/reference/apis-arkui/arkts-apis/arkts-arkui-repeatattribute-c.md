@@ -19,7 +19,7 @@
 each(itemGenerator: (repeatItem: RepeatItem<T>) => void): RepeatAttribute<T>
 ```
 
-组件生成函数。当所有[`.template()`](#template)的type和[`.templateId()`](#templateid)返 回值不匹配（即当前item不适用任何template定义的样式）时，将使用`.each()`处理数据项。当`.each()`的组件生成函数也为空时，将不渲染子组件。
+组件生成函数。当所有[`.template()`](#template)的type和[`.templateId()`](#templateid)返回值不匹配（即当前item不适用任何template定义的样式）时，将使用`.each()`处理数据项。当`.each()`的组件生成函数也为空时，将不渲染子组件。
 
 > **说明：**
 > 
@@ -43,7 +43,7 @@ each(itemGenerator: (repeatItem: RepeatItem<T>) => void): RepeatAttribute<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| itemGenerator | (repeatItem: RepeatItem & lt;T & gt;) = & gt; void | 是 | 组件生成函数。repeatItem：将item（arr数组中的数据项）和index（数据项索引）组合到一起的状态变量。 |
+| itemGenerator | (repeatItem: RepeatItem&lt;T&gt;) =&gt; void | 是 | 组件生成函数。repeatItem：将item（arr数组中的数据项）和index（数据项索引）组合到一起的状态变量。 |
 
 **返回值：**
 
@@ -85,7 +85,7 @@ key(keyGenerator: (item: T, index: number) => string): RepeatAttribute<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyGenerator | (item: T, index: number) = & gt; string | 是 | 键值生成函数。 item：`arr`数组中的数据项，可选。缺省时默认忽略该参数，请勿在闭包函数的实现中使用该参数，否则会编译报错。 index：`arr`数组中的数据项索引，可选。缺省时默认忽略该参数，请勿在闭包函数的实现中使用该参数，否则会编译报错。 |
+| keyGenerator | (item: T, index: number) =&gt; string | 是 | 键值生成函数。item：`arr`数组中的数据项，可选。缺省时默认忽略该参数，请勿在闭包函数的实现中使用该参数，否则会编译报错。index：`arr`数组中的数据项索引，可选。缺省时默认忽略该参数，请勿在闭包函数的实现中使用该参数，否则会编译报错。 |
 
 **返回值：**
 
@@ -109,7 +109,9 @@ Repeat<string>(this.arr)
 template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: TemplateOptions): RepeatAttribute<T>
 ```
 
-由template type渲染对应的template子组件，适用于列表中存在多种类型数据项、需要按类型展示不同样式布局的场景。当所有`.template()`的type和`.templateId()`返回值不匹配（即当前item不适用任何template定义的样式）时，将使用[`.each()`](#each)的 组件生成函数处理数据项。当`.each()`的组件生成函数也为空时，将不渲染子组件。
+由template type渲染对应的template子组件，适用于列表中存在多种类型数据项、需要按类型展示不同样式布局的场景。
+
+当所有`.template()`的type和`.templateId()`返回值不匹配（即当前item不适用任何template定义的样式）时，将使用[`.each()`](#each)的组件生成函数处理数据项。当`.each()`的组件生成函数也为空时，将不渲染子组件。
 
 > **说明：**
 > 
@@ -128,8 +130,8 @@ template(type: string, itemBuilder: RepeatItemBuilder<T>, templateOptions?: Temp
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 当前模板类型标识，需与templateId()的返回值相匹配，用于确定数据项使用哪个模板进行渲染。 |
-| itemBuilder | [RepeatItemBuilder](arkts-arkui-repeatitembuilder-t.md)&lt;T&gt; | 是 | 组件生成函数，用于渲染当前template对应的子组件。repeatItem为携带item（数据项）与index（索引）的组合状态变量，请 勿将`RepeatItem`参数拆开使用。 |
-| templateOptions | [TemplateOptions](arkts-arkui-templateoptions-i.md) | 否 | 当前模板配置项。当需要自定义模板配置（如设置模板缓存池中可缓存子组件节点的最大数量cachedCount等）时传入此参数；不传入时默认值为 undefined，Repeat将使用默认模板配置。 |
+| itemBuilder | [RepeatItemBuilder](arkts-arkui-repeatitembuilder-t.md)&lt;T&gt; | 是 | 组件生成函数，用于渲染当前template对应的子组件。repeatItem为携带item（数据项）与index（索引）的组合状态变量，请勿将`RepeatItem`参数拆开使用。 |
+| templateOptions | [TemplateOptions](arkts-arkui-templateoptions-i.md) | 否 | 当前模板配置项。当需要自定义模板配置（如设置模板缓存池中可缓存子组件节点的最大数量cachedCount等）时传入此参数；不传入时默认值为undefined，Repeat将使用默认模板配置。 |
 
 **返回值：**
 
@@ -159,7 +161,7 @@ List() {
 templateId(typedFunc: TemplateTypedFunc<T>): RepeatAttribute<T>
 ```
 
-为当前数据项分配template type，适用于列表中存在多种类型数据项、需要为不同类型数据项指定不同渲染模板的场景。需要与[`.template()`](#template)配合使用， templateId()的返回值应与template()中定义的type相匹配。当返回值不匹配任何template()定义的type时，该数据项将由[`.each()`](#each)的组 件生成函数处理；若.each()也为空，则不渲染子组件。
+为当前数据项分配template type，适用于列表中存在多种类型数据项、需要为不同类型数据项指定不同渲染模板的场景。需要与[`.template()`](#template)配合使用，templateId()的返回值应与template()中定义的type相匹配。当返回值不匹配任何template()定义的type时，该数据项将由[`.each()`](#each)的组件生成函数处理；若.each()也为空，则不渲染子组件。
 
 > **说明：**
 > 
@@ -225,7 +227,7 @@ virtualScroll(virtualScrollOptions?: VirtualScrollOptions): RepeatAttribute<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| virtualScrollOptions | [VirtualScrollOptions](arkts-arkui-virtualscrolloptions-i.md) | 否 | 虚拟滚动配置项。当需要自定义虚拟滚动配置（如设置期望加载的数据项总数、复用功能、内存优化策略等）时传入此参数；不传入时默 认值为undefined，Repeat将使用默认配置（totalCount取数据源长度、reusable默认为true等）。 |
+| virtualScrollOptions | [VirtualScrollOptions](arkts-arkui-virtualscrolloptions-i.md) | 否 | 虚拟滚动配置项。当需要自定义虚拟滚动配置（如设置期望加载的数据项总数、复用功能、内存优化策略等）时传入此参数；不传入时默认值为undefined，Repeat将使用默认配置（totalCount取数据源长度、reusable默认为true等）。 |
 
 **返回值：**
 

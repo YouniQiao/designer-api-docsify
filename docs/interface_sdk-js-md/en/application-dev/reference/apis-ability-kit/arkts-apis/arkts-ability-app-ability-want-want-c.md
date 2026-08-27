@@ -9,7 +9,7 @@ Want is a carrier for information transfer between objects (application componen
 ## Modules to Import
 
 ```TypeScript
-import Want from '@kit.AbilityKit';
+import { Want } from '@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -98,7 +98,9 @@ Additional category information (such as browser and video player) of the abilit
 readonly fds?: Record<string, number>
 ```
 
-File descriptor (FD). The FD written by the launcher in the application launch scenario is set to this parameter.This API can be used in atomic services since API version 15.
+File descriptor (FD). The FD written by the launcher in the application launch scenario is set to this parameter.
+
+This API can be used in atomic services since API version 15.
 
 **Type:** Record&lt;string, number&gt;
 
@@ -114,7 +116,9 @@ File descriptor (FD). The FD written by the launcher in the application launch s
 flags?: number
 ```
 
-How the Want object will be handled. The value is of the enumeration type [Flags](arkts-ability-wantconstant-flags-e.md). A numeric value should be passed by default.For example, if the value is 0x00000001 (**wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION**), the receiver is temporarily granted the permission to read the data pointed to by the URI.
+How the Want object will be handled. The value is of the enumeration type [Flags](arkts-ability-wantconstant-flags-e.md). A numeric value should be passed by default.
+
+For example, if the value is 0x00000001 (**wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION**), the receiver is temporarily granted the permission to read the data pointed to by the URI.
 
 **Type:** number
 
@@ -130,8 +134,11 @@ How the Want object will be handled. The value is of the enumeration type [Flags
 moduleName?: string
 ```
 
-Module name of the application. It represents the module name of the target application in the application launch scenario.  
-**NOTE：**If the ability belongs to a [HAR](../../../quick-start/har-package.md) module, **moduleName** must be set to the name of the [HAP](../../../quick-start/hap-package.md) or [HSP](../../../quick-start/in-app-hsp.md) module that depends on this HAR.
+Module name of the application. It represents the module name of the target application in the application launch scenario.
+
+**NOTE：**
+
+If the ability belongs to a [HAR](../../../quick-start/har-package.md) module, **moduleName** must be set to the name of the [HAP](../../../quick-start/hap-package.md) or [HSP](../../../quick-start/in-app-hsp.md) module that depends on this HAR.
 
 **Type:** string
 
@@ -148,8 +155,10 @@ parameters?: Record<string, Object>
 ```
 
 List of parameters in the Want object.
+
 1. The values of the following keys are assigned by the system. Manual settings do not take effect, since the
-system automatically changes the values to the actual values during data transfer.  
+system automatically changes the values to the actual values during data transfer.
+
 - **ohos.aafwk.param.callerPid**: PID of the caller. The value is a string.  
 - **ohos.aafwk.param.callerBundleName**: bundle name of the caller. The value is a string.  
 - **ohos.aafwk.param.callerAbilityName**: ability name of the caller. The value is a string.  
@@ -166,12 +175,23 @@ the application's UID in the bundle information. The value is a number.
 - **ohos.ability.params.abilityRecoveryRestart**: support for ability restart upon fault recovery. The value is of  
 the Boolean type.  
 - **ohos.extra.param.key.showMode**: mode to show the atomic service startup. The value is an enumerated value of  
-wantConstant.ShowMode.  
-**NOTE：**In cross-device scenarios, the following fields do not take effect and cannot be used for identity or permission verification: **ohos.aafwk.param.callerPid**, **ohos.aafwk.param.callerToken**, and **ohos.aafwk.param.callerUid**.
+wantConstant.ShowMode.
+
+**NOTE：**
+
+In cross-device scenarios, the following fields do not take effect and cannot be used for identity or permission verification: **ohos.aafwk.param.callerPid**, **ohos.aafwk.param.callerToken**, and **ohos.aafwk.param.callerUid**.
+
 2. Certain keys are defined by the system, and their values need to be manually assigned. For details about the
 keys and their values, see wantConstant.Params.
-3. In addition to the foregoing cases, applications may further agree on the key-value pairs to transfer.  
-**NOTE：**For details about the constants of **Params** in **want**, see [wantConstant](arkts-app-ability-wantconstant.md).Note that a maximum of 100 KB data that can be transferred by using **WantParams**. If the data volume exceeds 100 KB, transfer data in WriteRawDataBuffer or [uri](../../apis-arkts/arkts-apis/arkts-uri.md) mode.The values of **parameters** must be of the following basic data types: String, Number, Boolean, Object, undefined, and null. Functions in an object cannot be transferred.
+3. In addition to the foregoing cases, applications may further agree on the key-value pairs to transfer.
+
+**NOTE：**
+
+For details about the constants of **Params** in **want**, see [wantConstant](arkts-app-ability-wantconstant.md).
+
+Note that a maximum of 100 KB data that can be transferred by using **WantParams**. If the data volume exceeds 100 KB, transfer data in WriteRawDataBuffer or [uri](../../apis-arkts/arkts-apis/arkts-uri.md) mode.
+
+The values of **parameters** must be of the following basic data types: String, Number, Boolean, Object, undefined, and null. Functions in an object cannot be transferred.
 
 **Type:** Record&lt;string, Object&gt;
 

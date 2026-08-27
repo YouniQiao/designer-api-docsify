@@ -27,14 +27,14 @@ Sets extended attributes of the network specified by **netHandle** to indicate i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. |
+| netHandle | NetHandle | Yes | Network handle. |
 | netExtAttribute | string | Yes | Extended network attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

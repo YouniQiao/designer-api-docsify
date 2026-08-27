@@ -23,7 +23,7 @@ Obtains the total GPU memory size (**gl** + **graph**) of the application. This 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the total GPU memory size of the application, in KB. |
+| Promise&lt;number&gt; | Promise used to return the total GPU memory size of the application, in KB. |
 
 **Error codes:**
 

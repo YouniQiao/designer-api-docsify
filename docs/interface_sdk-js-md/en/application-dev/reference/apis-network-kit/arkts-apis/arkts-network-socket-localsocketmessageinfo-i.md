@@ -9,7 +9,7 @@ Defines the data received by the client over a local socket connection.
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## address

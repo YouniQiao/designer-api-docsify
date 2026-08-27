@@ -9,8 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## enableLocalHandleDetection
@@ -149,7 +147,9 @@ util.ArkTSVM.getAllVMHeapMemoryInfo().then(
 static offVMHeapMemoryPressure(): void
 ```
 
-取消注册在 GC 后堆内存超过临界预警阈值时触发的回调。@static
+取消注册在 GC 后堆内存超过临界预警阈值时触发的回调。
+
+@static
 
 **起始版本：** 24
 
@@ -171,7 +171,9 @@ util.ArkTSVM.offVMHeapMemoryPressure();
 static onVMHeapMemoryPressure(callback: Callback<string>, heapMemoryThreshold: HeapMemoryThreshold): boolean
 ```
 
-注册一个回调函数，在 GC（垃圾回收）后堆内存超过临界预警阈值时触发。 必须在主线程上调用，且仅能注册一个回调。NOTE: 无法保证在 OOM（内存溢出）前一定会触发该回调。
+注册一个回调函数，在 GC（垃圾回收）后堆内存超过临界预警阈值时触发。必须在主线程上调用，且仅能注册一个回调。
+
+NOTE:无法保证在 OOM（内存溢出）前一定会触发该回调。
 
 **起始版本：** 24
 
@@ -217,7 +219,7 @@ console.info('Registration result: ' + result);
 static setMultithreadingDetectionEnabled(enabled: boolean, options?: MultithreadingDetectionOptions):void
 ```
 
-设置是否开启多线程安全检测。当 **enabled** 设置为 **true** 时开启检测，多线程问题的 cppcrash 文件中将包含多线程相关的 详细信息。当 **enabled** 设置为 **false** 时关闭检测，相应的 cppcrash 文件中将不包含此类详细信息。
+设置是否开启多线程安全检测。当 **enabled** 设置为 **true** 时开启检测，多线程问题的 cppcrash 文件中将包含多线程相关的详细信息。当 **enabled** 设置为 **false** 时关闭检测，相应的 cppcrash 文件中将不包含此类详细信息。
 
 **起始版本：** 23
 
@@ -230,7 +232,7 @@ static setMultithreadingDetectionEnabled(enabled: boolean, options?: Multithread
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enabled | boolean | 是 | 控制是否开启多线程安全检测。**true** 表示开启检测，**false** 表示关闭检测。 |
-| options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | 否 | 多线程安全检测的参数配置，此参数不填时， 对应各属性取MultithreadingDetectionOptions的默认值。<br>**起始版本：** 26.0.0 |
+| options | [MultithreadingDetectionOptions](arkts-arkts-util-multithreadingdetectionoptions-i.md) | 否 | 多线程安全检测的参数配置，此参数不填时，对应各属性取MultithreadingDetectionOptions的默认值。<br>**起始版本：** 26.0.0 |
 
 **示例**
 
@@ -261,7 +263,7 @@ util.ArkTSVM.setMultithreadingDetectionEnabled(true, {
 static setTrackGlobalRef(enable: boolean): void
 ```
 
-开启或关闭 napi_ref 与全局 handle 之间关联关系的追踪。开启后，堆快照将包含 native 引用地址信息。关闭后（enable 为 false），将停止追踪，堆快照中不再显示 native 引用与全局 handle 之间的关联关系。
+开启或关闭 napi_ref 与全局 handle 之间关联关系的追踪。开启后，堆快照将包含 native 引用地址信息。关闭后（enable 为false），将停止追踪，堆快照中不再显示 native 引用与全局 handle 之间的关联关系。
 
 **起始版本：** 26.0.0
 

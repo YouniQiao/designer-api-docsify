@@ -31,7 +31,13 @@ The currency to use in currency formatting. Possible values are the ISO 4217 cur
 currencyDisplay?: string
 ```
 
-How to display the currency in currency formatting. It is only used when [[Style]] has the value "currency". The default is "symbol"."symbol" to use a localized currency symbol such as €,"code" to use the ISO currency code,"name" to use a localized currency name such as "dollar"
+How to display the currency in currency formatting. It is only used when [[Style]] has the value "currency". The default is "symbol".
+
+"symbol" to use a localized currency symbol such as €,
+
+"code" to use the ISO currency code,
+
+"name" to use a localized currency name such as "dollar"
 
 **Type:** string
 
@@ -101,7 +107,15 @@ The minimum number of significant digits to use. Possible values are from 1 to 2
 notation?: string
 ```
 
-The formatting that should be displayed for the number, the defaults is "standard""standard" plain number formatting"scientific" return the order-of-magnitude for formatted number."engineering" return the exponent of ten when divisible by three"compact" string representing exponent, defaults is using the "short" form
+The formatting that should be displayed for the number, the defaults is "standard"
+
+"standard" plain number formatting
+
+"scientific" return the order-of-magnitude for formatted number.
+
+"engineering" return the exponent of ten when divisible by three
+
+"compact" string representing exponent, defaults is using the "short" form
 
 **Type:** string
 

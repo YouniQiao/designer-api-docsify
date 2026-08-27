@@ -4,7 +4,7 @@
 type VideoRecordState = 'idle' | 'prepared' | 'playing' | 'paused' | 'stopped' | 'error'
 ```
 
-从API version 9起停止维护，请使用AVRecorderState。 描述视频录制状态。
+从API version 9起停止维护，请使用AVRecorderState。描述视频录制状态。
 
 **起始版本：** 9
 

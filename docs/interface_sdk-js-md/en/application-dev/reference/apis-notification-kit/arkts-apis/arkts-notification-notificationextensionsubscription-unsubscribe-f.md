@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationExtensionSubscription from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## unsubscribe
@@ -28,7 +28,7 @@ subscribe subscribes to the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

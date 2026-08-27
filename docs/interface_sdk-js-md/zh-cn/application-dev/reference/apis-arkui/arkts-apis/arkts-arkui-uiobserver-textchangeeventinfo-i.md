@@ -1,6 +1,8 @@
 # TextChangeEventInfo
 
-Text change event info@interface TextChangeEventInfo
+Text change event info
+
+@interface TextChangeEventInfo
 
 **起始版本：** 22
 
@@ -9,7 +11,7 @@ Text change event info@interface TextChangeEventInfo
 ## 导入模块
 
 ```TypeScript
-import uiObserver from '@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## content

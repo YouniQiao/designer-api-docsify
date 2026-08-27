@@ -9,9 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## hapticFeedbackMode
@@ -20,7 +17,9 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 hapticFeedbackMode?: HapticFeedbackMode
 ```
 
-菜单弹出时振动效果。需配置"ohos.permission.VIBRATE"权限默认值：HapticFeedbackMode.DISABLED，菜单弹出时不振动。
+菜单弹出时振动效果。需配置"ohos.permission.VIBRATE"权限
+
+默认值：HapticFeedbackMode.DISABLED，菜单弹出时不振动。
 
 **类型：** [HapticFeedbackMode](../../apis-arkui/arkts-components/arkts-arkui-hapticfeedbackmode-e.md)
 

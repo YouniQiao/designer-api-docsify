@@ -1,6 +1,8 @@
 # WindowAnimationTarget (System API)
 
-Window animation target.@interface WindowAnimationTarget
+Window animation target.
+
+@interface WindowAnimationTarget
 
 **Since:** 9
 
@@ -11,7 +13,7 @@ Window animation target.@interface WindowAnimationTarget
 ## Modules to Import
 
 ```TypeScript
-import windowAnimationManager from '@kit.ArkUI';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## abilityName

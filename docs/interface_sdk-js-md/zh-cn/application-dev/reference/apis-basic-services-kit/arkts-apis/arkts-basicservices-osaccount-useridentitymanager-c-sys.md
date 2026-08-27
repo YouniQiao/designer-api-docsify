@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addCredential
@@ -394,8 +394,8 @@ getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | 是 | 认证类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | 是 | 回调函数，如果获取成功，err为null，data为当前用户指定类型的所有已注册凭据信息；否则为错误对 象。 |
+| authType | AuthType | 是 | 认证类型。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | 是 | 回调函数，如果获取成功，err为null，data为当前用户指定类型的所有已注册凭据信息；否则为错误对象。 |
 
 **错误码：**
 
@@ -448,7 +448,7 @@ getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | 是 | 认证类型，表示查询所有认证类型的信息。 |
+| authType | AuthType | 是 | 认证类型，表示查询所有认证类型的信息。 |
 
 **返回值：**
 
@@ -565,14 +565,14 @@ getEnrolledId(authType: AuthType, accountId?: number): Promise<Uint8Array>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | 是 | 认证凭据类型 |
+| authType | AuthType | 是 | 认证凭据类型 |
 | accountId | number | 否 | 系统账号标识，默认为空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise对象，返回已注册的凭据ID。 |
+| Promise&lt;Uint8Array&gt; | Promise对象，返回已注册的凭据ID。 |
 
 **错误码：**
 
@@ -627,7 +627,7 @@ offCredentialChanged(callback?: Callback<CredentialChangeInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | 否 | 表示用于接收凭据变更事件的回调函数。默认为undefined，表示清除所有订阅记录；非undefined时，表示清除 与该回调函数关联的订阅记录。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | 否 | 表示用于接收凭据变更事件的回调函数。默认为undefined，表示清除所有订阅记录；非undefined时，表示清除与该回调函数关联的订阅记录。 |
 
 **错误码：**
 
@@ -691,7 +691,7 @@ onCredentialChanged(credentialTypes: AuthType[], callback: Callback<CredentialCh
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| credentialTypes | [AuthType[]](arkts-basicservices-osaccount-authtype-e-sys.md) | 是 | 表示订阅的凭据类型集合。 |
+| credentialTypes | AuthType[] | 是 | 表示订阅的凭据类型集合。 |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | 是 | 表示用于接收凭据变更事件的回调函数。 |
 
 **错误码：**
@@ -807,7 +807,7 @@ openSession(accountId?: number): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise对象，返回挑战值。 |
+| Promise&lt;Uint8Array&gt; | Promise对象，返回挑战值。 |
 
 **错误码：**
 

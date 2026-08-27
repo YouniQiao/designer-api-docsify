@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import uriPermissionManager from '@kit.AbilityKit';
+import { uriPermissionManager } from '@kit.AbilityKit';
 ```
 
 ## revokeUriPermission
@@ -12,7 +12,7 @@ import uriPermissionManager from '@kit.AbilityKit';
 function revokeUriPermission(uri: string, targetBundleName: string, callback: AsyncCallback<number>): void
 ```
 
-撤销授权指定应用的URI。使用callback异步回调。 该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+撤销授权指定应用的URI。使用callback异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
 
 > **说明：**
 > 
@@ -74,7 +74,7 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName, (error) => {
 function revokeUriPermission(uri: string, targetBundleName: string): Promise<number>
 ```
 
-撤销授权指定应用的URI。使用Promise异步回调。 该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+撤销授权指定应用的URI。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
 
 > **说明：**
 > 
@@ -103,7 +103,7 @@ function revokeUriPermission(uri: string, targetBundleName: string): Promise<num
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象。返回0表示有权限，返回-1表示无权限。 |
+| Promise&lt;number&gt; | Promise对象。返回0表示有权限，返回-1表示无权限。 |
 
 **错误码：**
 
@@ -141,7 +141,7 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName)
 function revokeUriPermission(uri: string, targetBundleName: string, appCloneIndex: number): Promise<void>
 ```
 
-撤销授权指定应用的URI。使用Promise异步回调。 该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
+撤销授权指定应用的URI。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备可以调用但是不生效。
 
 > **说明：**
 > 
@@ -170,7 +170,7 @@ function revokeUriPermission(uri: string, targetBundleName: string, appCloneInde
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -9,7 +9,7 @@ Describes the signature information of the bundle.
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.MDMKit';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## appId

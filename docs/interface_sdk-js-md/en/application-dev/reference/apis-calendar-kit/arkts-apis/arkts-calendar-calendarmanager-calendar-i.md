@@ -1,6 +1,8 @@
 # Calendar
 
-In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or getCalendar() to obtain a **Calendar** object before calling related APIs.
+In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or getCalendar() to obtain
+
+a **Calendar** object before calling related APIs.
 
 **Since:** 10
 
@@ -9,7 +11,7 @@ In the following API examples, you need to use [createCalendar()](arkts-calendar
 ## Modules to Import
 
 ```TypeScript
-import calendarManager from '@kit.CalendarKit';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## addEvent
@@ -34,13 +36,13 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event object. |
+| event | Event | Yes | Event object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the event ID. The ID is greater than 0. |
+| Promise&lt;number&gt; | Promise used to return the event ID. The ID is greater than 0. |
 
 **Error codes:**
 
@@ -103,7 +105,7 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event object. |
+| event | Event | Yes | Event object. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the value is less than 0, the event creation fails; if the value is greater than 0, the event creation succeeds. |
 
 **Error codes:**
@@ -165,13 +167,13 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| events | [Event[]](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Array of Event objects. |
+| events | Event[] | Yes | Array of Event objects. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -239,7 +241,7 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| events | [Event[]](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Array of Event objects. |
+| events | Event[] | Yes | Array of Event objects. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -312,7 +314,7 @@ Deletes an event with the specified ID. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -439,7 +441,7 @@ Deletes a batch of events with the specified IDs. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -677,7 +679,7 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Event[] & gt; | Promise used to return the result, which is an array of Event objects. |
+| Promise&lt;Event[]&gt; | Promise used to return the result, which is an array of Event objects. |
 
 **Error codes:**
 
@@ -818,7 +820,9 @@ calendarMgr?.getCalendar(async (err: BusinessError, data:calendarManager.Calenda
 getEvents(callback: AsyncCallback<Event[]>):void
 ```
 
-Obtains all events in the current calendar. This API uses an asynchronous callback to return the result.For versions earlier than API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, and reminderTime. Since API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, reminderTime, and identifier. The field is not returned if it is empty.
+Obtains all events in the current calendar. This API uses an asynchronous callback to return the result.
+
+For versions earlier than API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, and reminderTime. Since API version 20, the default fields to be obtained include id, type, title, startTime, endTime, isAllDay, description, timeZone, location, service, attendee, reminderTime, and identifier. The field is not returned if it is empty.
 
 **Since:** 10
 
@@ -874,7 +878,9 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 openEventEditPage(id: number): Promise<void>
 ```
 
-Obtains the event instance that meets the viewing or editing condition in a calendar based on the event ID. This API uses a promise to return the result.This API can be used to view and edit calendar events in the system calendar.
+Obtains the event instance that meets the viewing or editing condition in a calendar based on the event ID. This API uses a promise to return the result.
+
+This API can be used to view and edit calendar events in the system calendar.
 
 **Since:** 26.0.0
 
@@ -894,7 +900,7 @@ Obtains the event instance that meets the viewing or editing condition in a cale
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -985,7 +991,7 @@ Queries the event instance with a specified event key in a calendar. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Event[] & gt; | Promise used to return the result, which is an array of Event objects. |
+| Promise&lt;Event[]&gt; | Promise used to return the result, which is an array of Event objects. |
 
 **Error codes:**
 
@@ -1056,7 +1062,7 @@ Sets the calendar configuration information. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1167,13 +1173,13 @@ Updates an event, with the ID of the updated event specified in Event. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event object. |
+| event | Event | Yes | Event object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -1233,7 +1239,7 @@ Updates an event. The ID of the updated event must be specified in Event. If not
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event object. |
+| event | Event | Yes | Event object. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of updateEvent. |
 
 **Examples**

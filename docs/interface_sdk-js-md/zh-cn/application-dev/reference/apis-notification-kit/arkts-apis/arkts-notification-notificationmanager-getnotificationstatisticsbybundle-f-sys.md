@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getNotificationStatisticsByBundle
@@ -26,7 +26,7 @@ function getNotificationStatisticsByBundle(bundles: BundleOption[]): Promise<Bun
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundles | [BundleOption[]](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 应用的包信息列表。 |
+| bundles | BundleOption[] | 是 | 应用的包信息列表。 |
 
 **返回值：**
 

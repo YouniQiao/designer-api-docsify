@@ -13,10 +13,11 @@
 > | COPYRIGHT | 'PngCopyright' | PNG图像的版权信息。 |
 > | CREATION_TIME | 'PngCreationTime' | PNG图像的创建时间。 |
 > | SRGB_INTENT | 'PngSRGBIntent' | PNG图像的sRGB（standard Red Green Blue，标准红绿蓝）渲染意图。
-- 0表示感知意图。
-- 1表示相对比色意图。
-- 2表示饱和度意图。
-- 3绝对色度意图。 |
+
+- 0表示感知意图。  
+- 1表示相对比色意图。  
+- 2表示饱和度意图。  
+- 3绝对色度意图。 |  
 | AUTHOR | 'PngAuthor' | PNG图像的作者。 | | INTERLACE_TYPE | 'PngInterlaceType' | PNG图像的交错模式。  
 - 0表示无交错模式（图像按照从上到下、从左到右的顺序加载）。  
 - 1表示交错模式（通过多次扫描逐步显示图像，图像在加载过程中逐渐清晰）。 |  

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import conversation from '@kit.DistributedServiceKit';
+import { conversation } from '@kit.DistributedServiceKit';
 ```
 
 ## postConversationData
@@ -42,7 +42,7 @@ Sends session data to the target device. The target device must be a trusted dev
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

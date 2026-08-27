@@ -30,7 +30,7 @@ NavRouter()
 
 **废弃版本：** 13
 
-**替代接口：** [NavDestinationAttribute](arkts-arkui-navdestination-attribute.md#navdestinationattribute)
+**替代接口：** [NavDestinationAttribute](arkts-arkui-navdestination-attribute.md)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -68,11 +68,13 @@ NavRouter(value: RouteInfo)
 
 | 名称 | 说明 |
 | --- | --- |
+| [RouteInfo](arkts-arkui-routeinfo-i.md) | 路由信息。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
+| [NavRouteMode](arkts-arkui-navroutemode-e.md) | 路由模式。 |
 
 ## 示例
 

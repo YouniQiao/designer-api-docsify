@@ -9,7 +9,7 @@ Provides APIs for creating diverse query conditions.
 ## Modules to Import
 
 ```TypeScript
-import dataAbility from '@kit.ArkData';
+import { dataAbility } from '@kit.ArkData';
 ```
 
 ## and
@@ -44,7 +44,9 @@ dataAbilityPredicates.equalTo("NAME", "Lisa")
 beginsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that begin with the given value.This API is similar to the percent sign (%) in SQL statements.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that begin with the given value.
+
+This API is similar to the percent sign (%) in SQL statements.
 
 **Since:** 7
 
@@ -115,8 +117,8 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value to match. |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value to match. |
+| low | ValueType | Yes | Minimum value to match. |
+| high | ValueType | Yes | Maximum value to match. |
 
 **Return value:**
 
@@ -191,7 +193,9 @@ dataAbilityPredicates.equalTo("NAME", "Rose").distinct()
 endsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that end with the given value.This API is similar to the percent sign (%) in SQL statements.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that end with the given value.
+
+This API is similar to the percent sign (%) in SQL statements.
 
 **Since:** 7
 
@@ -251,7 +255,9 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 equalTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are equal to the given value.This API is similar to the SQL equal to (=) operator.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are equal to the given value.
+
+This API is similar to the SQL equal to (=) operator.
 
 **Since:** 7
 
@@ -262,7 +268,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
@@ -330,7 +336,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
@@ -361,7 +367,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
@@ -391,7 +397,7 @@ Creates a **DataAbilityPredicates** object to group the query results based on t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fields | Array & lt;string & gt; | Yes | Names of columns to group. |
+| fields | Array&lt;string&gt; | Yes | Names of columns to group. |
 
 **Return value:**
 
@@ -422,7 +428,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | Array & lt;ValueType & gt; | Yes | Array of **ValueType**s to match. |
+| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
@@ -582,7 +588,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
@@ -613,7 +619,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
@@ -633,7 +639,9 @@ dataAbilityPredicates.lessThanOrEqualTo("AGE", 20)
 like(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are similar to the given value.This API is similar to the SQL **like** statement.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are similar to the given value.
+
+This API is similar to the SQL **like** statement.
 
 **Since:** 7
 
@@ -705,8 +713,8 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value to match. |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value to match. |
+| low | ValueType | Yes | Minimum value to match. |
+| high | ValueType | Yes | Maximum value to match. |
 
 **Return value:**
 
@@ -726,7 +734,9 @@ dataAbilityPredicates.notBetween("AGE", 10, 50)
 notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not equal to the given value.This API is similar to the SQL not equal (!=) operator.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not equal to the given value.
+
+This API is similar to the SQL not equal (!=) operator.
 
 **Since:** 7
 
@@ -737,7 +747,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
@@ -768,7 +778,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | Array & lt;ValueType & gt; | Yes | Array of **ValueType**s to match. |
+| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
@@ -819,7 +829,9 @@ dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3)
 or(): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to add the OR condition.This API is similar to the SQL **or** operator.
+Creates a **DataAbilityPredicates** object to add the OR condition.
+
+This API is similar to the SQL **or** operator.
 
 **Since:** 7
 

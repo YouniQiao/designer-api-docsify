@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import matrix4 from '@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## identity
@@ -24,7 +24,7 @@ Constructs an identity matrix.
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Identity matrix object. |
+| Matrix4Transit | Identity matrix object. |
 
 **Examples**
 

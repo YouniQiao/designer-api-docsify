@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import screen from '@kit.ArkUI';
-import screenshot from '@kit.ArkUIshot';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## makeExpand
@@ -92,7 +91,7 @@ function makeExpand(options:Array<ExpandOption>): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象。返回扩展屏幕的群组id，其中id为整数。 |
+| Promise&lt;number&gt; | Promise对象。返回扩展屏幕的群组id，其中id为整数。 |
 
 **错误码：**
 

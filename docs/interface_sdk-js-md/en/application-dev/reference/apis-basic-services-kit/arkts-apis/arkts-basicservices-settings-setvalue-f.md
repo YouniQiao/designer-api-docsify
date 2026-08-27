@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import settings from '@kit.BasicServicesKit';
-import settingsLite from '@kit.BasicServicesKitLite';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## setValue
@@ -75,7 +74,7 @@ Set settingsdata value.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Returns { |
+| Promise&lt;boolean&gt; | Returns { |
 
 **Examples**
 
@@ -121,7 +120,7 @@ Set settingsdata value. [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permissi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Returns { |
+| Promise&lt;boolean&gt; | Returns { |
 
 **Error codes:**
 

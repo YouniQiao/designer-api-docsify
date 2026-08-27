@@ -11,7 +11,7 @@ This module provides data sharing and expansion capabilities.
 ## Modules to Import
 
 ```TypeScript
-import DataShareExtensionAbility from '@kit.ArkData';
+import { DataShareExtensionAbility } from '@kit.ArkData';
 ```
 
 ## batchInsert
@@ -385,7 +385,7 @@ Queries data from the database. This API can be overridden as required.
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Filter criteria for querying data. |
-| columns | Array & lt;string & gt; | Yes | Columns to query. If this parameter is empty, all columns will be queried. |
+| columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is empty, all columns will be queried. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes | Callback used to return the result set obtained. |
 
 **Examples**

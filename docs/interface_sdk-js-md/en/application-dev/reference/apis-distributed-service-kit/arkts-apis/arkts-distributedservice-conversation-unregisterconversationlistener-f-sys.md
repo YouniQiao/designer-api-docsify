@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import conversation from '@kit.DistributedServiceKit';
+import { conversation } from '@kit.DistributedServiceKit';
 ```
 
 ## unregisterConversationListener

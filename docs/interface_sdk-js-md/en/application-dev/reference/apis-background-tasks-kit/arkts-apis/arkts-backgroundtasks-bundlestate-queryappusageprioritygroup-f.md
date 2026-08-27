@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleState from '@kit.BackgroundTasksKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryAppUsagePriorityGroup
@@ -12,7 +12,9 @@ import bundleState from '@kit.BackgroundTasksKit';
 function queryAppUsagePriorityGroup(callback: AsyncCallback<number>): void
 ```
 
-Queries the usage priority group of the calling application.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the usage priority group of the calling application.
+
+The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 7
 
@@ -48,7 +50,9 @@ bundleState.queryAppUsagePriorityGroup((err: BusinessError, res: number) => {
 function queryAppUsagePriorityGroup(): Promise<number>
 ```
 
-Queries the usage priority group of the calling application.The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
+Queries the usage priority group of the calling application.
+
+The priority defined in a priority group restricts the resource usage of an application, for example, restricting the running of background tasks.
 
 **Since:** 7
 
@@ -60,7 +64,7 @@ Queries the usage priority group of the calling application.The priority defined
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | the promise returned by queryAppUsagePriorityGroup. Returns the app group of the calling application. |
+| Promise&lt;number&gt; | the promise returned by queryAppUsagePriorityGroup. Returns the app group of the calling application. |
 
 **Examples**
 

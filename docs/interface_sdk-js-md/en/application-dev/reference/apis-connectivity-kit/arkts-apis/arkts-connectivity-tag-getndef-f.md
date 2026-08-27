@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getNdef
@@ -30,7 +30,7 @@ Obtains an **NdefTag** object, which allows access to NFC Data Exchange Format (
 
 | Type | Description |
 | --- | --- |
-| [NdefTag](arkts-connectivity-nfctech-ndeftag-i.md) | NdefTag** object obtained. |
+| NdefTag | NdefTag** object obtained. |
 
 **Error codes:**
 

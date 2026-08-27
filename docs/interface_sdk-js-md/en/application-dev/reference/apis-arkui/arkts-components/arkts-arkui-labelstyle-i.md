@@ -17,7 +17,13 @@ Represents a style object for the label text and font.
 font?: Font
 ```
 
-Font of the label text.When the tab is a subtab, the default font is in 16.0 fp size, 'HarmonyOS Sans' family, normal font style, medium weight when selected, and normal weight when not selected.When the tab is a bottom tab, the default font is in 10.0 fp size, 'HarmonyOS Sans' family, normal font style, and medium weight.The default font size of the bottom tab page is 12.0 fp since API version 12.
+Font of the label text.
+
+When the tab is a subtab, the default font is in 16.0 fp size, 'HarmonyOS Sans' family, normal font style, medium weight when selected, and normal weight when not selected.
+
+When the tab is a bottom tab, the default font is in 10.0 fp size, 'HarmonyOS Sans' family, normal font style, and medium weight.
+
+The default font size of the bottom tab page is 12.0 fp since API version 12.
 
 **Type:** Font
 
@@ -53,7 +59,9 @@ How the adaptive height is determined for the label text. By default, the **maxL
 maxFontSize?: number | ResourceStr
 ```
 
-Maximum font size of the label text. It cannot be set in percentage. For the setting to take effect, this attribute must be used together with **minFontSize**, **maxLines**, or layout constraint settings. When the adaptive text size is set, **font.size** does not take effect. The default value is **0.0fp**, indicating that the adaptive text size has no effect.Value range: [minFontSize, +∞)
+Maximum font size of the label text. It cannot be set in percentage. For the setting to take effect, this attribute must be used together with **minFontSize**, **maxLines**, or layout constraint settings. When the adaptive text size is set, **font.size** does not take effect. The default value is **0.0fp**, indicating that the adaptive text size has no effect.
+
+Value range: [minFontSize, +∞)
 
 **Type:** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -73,7 +81,9 @@ Maximum font size of the label text. It cannot be set in percentage. For the set
 maxLines?: number
 ```
 
-Maximum number of lines in the label text. If this attribute is specified, the text will not exceed the specified number of lines. You can use **textOverflow** to specify how to represent text overflow. Default value: **1**Value range: [1, +∞)
+Maximum number of lines in the label text. If this attribute is specified, the text will not exceed the specified number of lines. You can use **textOverflow** to specify how to represent text overflow. Default value: **1**
+
+Value range: [1, +∞)
 
 **Type:** number
 
@@ -91,7 +101,9 @@ Maximum number of lines in the label text. If this attribute is specified, the t
 minFontSize?: number | ResourceStr
 ```
 
-Minimum font size of the label text. It cannot be set in percentage. For the setting to take effect, this attribute must be used together with **maxFontSize**, **maxLines**, or layout constraint settings. When the adaptive text size is set, **font.size** does not take effect. The default value is **0.0fp**, indicating that the adaptive text size has no effect.Value range: (0, +∞)
+Minimum font size of the label text. It cannot be set in percentage. For the setting to take effect, this attribute must be used together with **maxFontSize**, **maxLines**, or layout constraint settings. When the adaptive text size is set, **font.size** does not take effect. The default value is **0.0fp**, indicating that the adaptive text size has no effect.
+
+Value range: (0, +∞)
 
 **Type:** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -129,7 +141,9 @@ Display mode when the label text is too number. By default, an ellipsis (...) is
 selectedColor?: ResourceColor
 ```
 
-Font color of the label text when it is selected.Default value: **#FF007DFF**
+Font color of the label text when it is selected.
+
+Default value: **#FF007DFF**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -149,7 +163,9 @@ Font color of the label text when it is selected.Default value: **#FF007DFF**
 unselectedColor?: ResourceColor
 ```
 
-Font color of the label text when it is not selected.Default value: **#99182431**
+Font color of the label text when it is not selected.
+
+Default value: **#99182431**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

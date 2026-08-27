@@ -9,7 +9,7 @@ Represents the CDSM information.
 ## Modules to Import
 
 ```TypeScript
-import cdsm from '@kit.ConnectivityKit';
+import { cdsm } from '@kit.ConnectivityKit';
 ```
 
 ## members

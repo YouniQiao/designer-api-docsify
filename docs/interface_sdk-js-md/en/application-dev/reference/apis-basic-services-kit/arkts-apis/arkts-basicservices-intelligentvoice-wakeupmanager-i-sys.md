@@ -11,7 +11,7 @@ Implements wakeup management.
 ## Modules to Import
 
 ```TypeScript
-import intelligentVoice from '@kit.BasicServicesKit';
+import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
 ## clearUserData
@@ -34,7 +34,7 @@ Clears user data.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise used to return the result. |
+| Promise&lt;void&gt; | the promise used to return the result. |
 
 **Error codes:**
 
@@ -145,7 +145,7 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | the promise used to return the value of the intelligent voice parameter. |
+| Promise&lt;string&gt; | the promise used to return the value of the intelligent voice parameter. |
 
 **Error codes:**
 
@@ -326,7 +326,7 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise used to return the result. |
+| Promise&lt;void&gt; | the promise used to return the result. |
 
 **Error codes:**
 

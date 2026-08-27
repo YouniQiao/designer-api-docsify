@@ -29,5 +29,5 @@
   - [USBInterfaceDesc(system api)](arkts-driverdevelopment-devicemanager-usbinterfacedesc-i-sys.md)<!--DelEnd-->
   - [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 - application<!--arkts-driverdevelopmentkit-application-->
-  - [DriverExtensionContext](arkts-driverextensioncontext.md)
+  - [DriverExtensionContext(Defines the context of driver extension)](arkts-driverextensioncontext.md)
     - [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-c.md)

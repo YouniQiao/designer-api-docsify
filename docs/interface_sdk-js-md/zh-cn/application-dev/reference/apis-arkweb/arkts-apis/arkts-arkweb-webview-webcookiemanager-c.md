@@ -1,6 +1,8 @@
 # WebCookieManager
 
-WebCookieManager是Web组件的cookie管理器，提供对Web组件中cookie的全局管理能力。开发者通过该类可以实现cookie的获取、设置、保存、清除以及权限控制等操作。该类的所有方法均为静态方法，应用中的所有 Web组件共享一个WebCookieManager实例。cookie的格式遵循[RFC6265](https://www.rfc-editor.org/info/rfc6265/)标准。使用隐私模式浏览网页时，cookie、缓存等数据不会写入本地持久化存储；隐私模式的Web组件销毁后，这些数据将被清除，不会保留。
+WebCookieManager是Web组件的cookie管理器，提供对Web组件中cookie的全局管理能力。开发者通过该类可以实现cookie的获取、设置、保存、清除以及权限控制等操作。该类的所有方法均为静态方法，应用中的所有Web组件共享一个WebCookieManager实例。cookie的格式遵循[RFC6265](https://www.rfc-editor.org/info/rfc6265/)标准。
+
+使用隐私模式浏览网页时，cookie、缓存等数据不会写入本地持久化存储；隐私模式的Web组件销毁后，这些数据将被清除，不会保留。
 
 > **说明：**
 > 
@@ -21,7 +23,7 @@ WebCookieManager是Web组件的cookie管理器，提供对Web组件中cookie的�
 static clearAllCookies(): Promise<void>
 ```
 
-清除所有cookie（包括会话cookie和持久化cookie），使用Promise异步回调。如需仅清除会话cookie，请使用 [clearSessionCookie](#clearsessioncookie)。
+清除所有cookie（包括会话cookie和持久化cookie），使用Promise异步回调。如需仅清除会话cookie，请使用[clearSessionCookie](#clearsessioncookie)。
 
 **起始版本：** 11
 
@@ -33,7 +35,7 @@ static clearAllCookies(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise实例，用于获取清除所有cookie是否成功。 |
+| Promise&lt;void&gt; | Promise实例，用于获取清除所有cookie是否成功。 |
 
 **错误码：**
 
@@ -77,7 +79,7 @@ struct WebComponent {
 static clearAllCookies(callback: AsyncCallback<void>): void
 ```
 
-清除所有cookie（包括会话cookie和持久化cookie），使用callback异步回调。如需仅清除会话cookie，请使用 [clearSessionCookie](#clearsessioncookie)。
+清除所有cookie（包括会话cookie和持久化cookie），使用callback异步回调。如需仅清除会话cookie，请使用[clearSessionCookie](#clearsessioncookie)。
 
 **起始版本：** 11
 
@@ -135,7 +137,7 @@ struct WebComponent {
 static clearAllCookiesSync(incognito?: boolean): void
 ```
 
-清除所有cookie（包括会话cookie和持久化cookie）。如需仅清除会话cookie，请使用 [clearSessionCookieSync](#clearsessioncookiesync)。
+清除所有cookie（包括会话cookie和持久化cookie）。如需仅清除会话cookie，请使用[clearSessionCookieSync](#clearsessioncookiesync)。
 
 **起始版本：** 11
 
@@ -147,7 +149,7 @@ static clearAllCookiesSync(incognito?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| incognito | boolean | 否 | true表示清除隐私模式下Webview的所有内存cookies，false表示清除正常非隐私模式下的持久化cookies。 默认值：false。 传入undefined或null时不清除cookies。 |
+| incognito | boolean | 否 | true表示清除隐私模式下Webview的所有内存cookies，false表示清除正常非隐私模式下的持久化cookies。默认值：false。传入undefined或null时不清除cookies。 |
 
 **示例**
 
@@ -190,7 +192,7 @@ static clearSessionCookie(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise实例，用于获取清除所有会话cookie是否成功。 |
+| Promise&lt;void&gt; | Promise实例，用于获取清除所有会话cookie是否成功。 |
 
 **错误码：**
 
@@ -369,7 +371,7 @@ static configCookie(url: string, value: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise实例，用于获取指定url设置单个cookie值是否成功。 |
+| Promise&lt;void&gt; | Promise实例，用于获取指定url设置单个cookie值是否成功。 |
 
 **错误码：**
 
@@ -453,7 +455,7 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise实例，用于获取指定url设置单个cookie值是否成功。 |
+| Promise&lt;void&gt; | Promise实例，用于获取指定url设置单个cookie值是否成功。 |
 
 **错误码：**
 
@@ -613,7 +615,7 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 | --- | --- | --- | --- |
 | url | string | 是 | 要设置的cookie所属的url，建议使用完整的url。 |
 | value | string | 是 | 要设置的cookie的值。 |
-| incognito | boolean | 否 | true表示设置隐私模式下对应url的cookies，false表示设置正常非隐私模式下对应url的cookies。 默认值：false。 传入undefined或null会抛出异常错误码401。 |
+| incognito | boolean | 否 | true表示设置隐私模式下对应url的cookies，false表示设置正常非隐私模式下对应url的cookies。默认值：false。传入undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
@@ -821,7 +823,7 @@ static existCookie(incognito?: boolean): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| incognito | boolean | 否 | true表示隐私模式下查询是否存在cookies，false表示正常非隐私模式下查询是否存在cookies。 默认值：false。 传入undefined或null时返回undefined。<br>**起始版本：** 11 |
+| incognito | boolean | 否 | true表示隐私模式下查询是否存在cookies，false表示正常非隐私模式下查询是否存在cookies。默认值：false。传入undefined或null时返回undefined。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -942,7 +944,7 @@ static fetchCookie(url: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise实例，用于获取指定url对应的cookie值。 |
+| Promise&lt;string&gt; | Promise实例，用于获取指定url对应的cookie值。 |
 
 **错误码：**
 
@@ -1008,7 +1010,7 @@ static fetchCookie(url: string, incognito: boolean): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise实例，用于获取指定url对应的cookie值。 |
+| Promise&lt;string&gt; | Promise实例，用于获取指定url对应的cookie值。 |
 
 **错误码：**
 
@@ -1057,7 +1059,8 @@ struct WebComponent {
 static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: boolean): Promise<string>
 ```
 
-获取指定url对应的cookies，可以通过参数incognito指定是否获取隐私模式下的cookies，也可以通过参数includePartitionedCookies指定是否获取第一方partitioned cookie。 使用Promise异步回调。
+获取指定url对应的cookies，可以通过参数incognito指定是否获取隐私模式下的cookies，也可以通过参数includePartitionedCookies指定是否获取第一方partitioned cookie。使用Promise异步回调。
+
 26.0.0
 
 **起始版本：** 26.0.0
@@ -1071,14 +1074,14 @@ static fetchCookie(url: string, incognito: boolean, includePartitionedCookies: b
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 要获取的cookie所属的url，建议使用完整的url。 |
-| incognito | boolean | 是 | true表示获取隐私模式下webview的内存cookies，false表示获取非隐私模式下的cookies。 传入undefined或null会抛出异常错误码401。 |
-| includePartitionedCookies | boolean | 是 | true表示允许获取第一方partitioned cookies，false表示不允许获取第一方partitioned cookies。 传入undefined或null会抛出异常错误码401。 |
+| incognito | boolean | 是 | true表示获取隐私模式下webview的内存cookies，false表示获取非隐私模式下的cookies。传入undefined或null会抛出异常错误码401。 |
+| includePartitionedCookies | boolean | 是 | true表示允许获取第一方partitioned cookies，false表示不允许获取第一方partitioned cookies。传入undefined或null会抛出异常错误码401。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，用于获取指定url对应的cookies。 |
+| Promise&lt;string&gt; | Promise对象，用于获取指定url对应的cookies。 |
 
 **错误码：**
 
@@ -1211,7 +1214,7 @@ static fetchCookieSync(url: string, incognito?: boolean): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 要获取cookie的url，建议使用完整的url。 |
-| incognito | boolean | 否 | true表示获取隐私模式下webview的内存cookies，false表示正常非隐私模式下的cookies。 默认值：false。 传入undefined或null会抛出异常错误码401。 |
+| incognito | boolean | 否 | true表示获取隐私模式下webview的内存cookies，false表示正常非隐私模式下的cookies。默认值：false。传入undefined或null会抛出异常错误码401。 |
 
 **返回值：**
 
@@ -1282,8 +1285,8 @@ static fetchCookieSync(url: string, incognito?: boolean, includePartitionedCooki
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | url | string | 是 | 要获取的cookie所属的url，建议使用完整的url。 |
-| incognito | boolean | 否 | true表示获取隐私模式下webview的内存cookies，false表示获取非隐私模式下的cookies。 默认值：false。 传入undefined或null会抛出异常错误码401。 |
-| includePartitionedCookies | boolean | 否 | true表示允许获取第一方partitioned cookies，false表示不允许获取第一方partitioned cookies。 默认值：false。 传入undefined或null会抛出异常错误码401。 |
+| incognito | boolean | 否 | true表示获取隐私模式下webview的内存cookies，false表示获取非隐私模式下的cookies。默认值：false。传入undefined或null会抛出异常错误码401。 |
+| includePartitionedCookies | boolean | 否 | true表示允许获取第一方partitioned cookies，false表示不允许获取第一方partitioned cookies。默认值：false。传入undefined或null会抛出异常错误码401。 |
 
 **返回值：**
 
@@ -1550,7 +1553,7 @@ static putAcceptThirdPartyCookieEnabled(accept: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| accept | boolean | 是 | 是否允许发送和接收第三方cookie。 true表示允许，false表示不允许。 |
+| accept | boolean | 是 | 是否允许发送和接收第三方cookie。true表示允许，false表示不允许。 |
 
 **错误码：**
 
@@ -1609,7 +1612,7 @@ static saveCookieAsync(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise实例，用于获取cookie是否成功保存。 |
+| Promise&lt;void&gt; | Promise实例，用于获取cookie是否成功保存。 |
 
 **错误码：**
 

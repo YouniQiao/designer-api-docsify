@@ -26,7 +26,11 @@ Unknown type.
 ADOBE_RGB_1998 = 1
 ```
 
-Adobe RGB (1998).The conversion function is of the Adobe RGB (1998) type.The encoding range is of the Full type.
+Adobe RGB (1998).
+
+The conversion function is of the Adobe RGB (1998) type.
+
+The encoding range is of the Full type.
 
 **Since:** 9
 
@@ -40,7 +44,11 @@ Adobe RGB (1998).The conversion function is of the Adobe RGB (1998) type.The enc
 DCI_P3 = 2
 ```
 
-DCI-P3.The conversion function is of the Gamma 2.6 type.The encoding range is of the Full type.
+DCI-P3.
+
+The conversion function is of the Gamma 2.6 type.
+
+The encoding range is of the Full type.
 
 **Since:** 9
 
@@ -54,7 +62,11 @@ DCI-P3.The conversion function is of the Gamma 2.6 type.The encoding range is of
 DISPLAY_P3 = 3
 ```
 
-Display P3.The conversion function is of the SRGB type.The encoding range is of the Full type.
+Display P3.
+
+The conversion function is of the SRGB type.
+
+The encoding range is of the Full type.
 
 **Since:** 9
 
@@ -68,7 +80,13 @@ Display P3.The conversion function is of the SRGB type.The encoding range is of 
 SRGB = 4
 ```
 
-SRGB.The conversion function is of the SRGB type.The encoding range is of the Full type.This is the default color space type.
+SRGB.
+
+The conversion function is of the SRGB type.
+
+The encoding range is of the Full type.
+
+This is the default color space type.
 
 **Since:** 9
 
@@ -82,7 +100,11 @@ SRGB.The conversion function is of the SRGB type.The encoding range is of the Fu
 BT709 = 6
 ```
 
-BT709.The conversion function is of the BT709 type.The encoding range is of the Full type.
+BT709.
+
+The conversion function is of the BT709 type.
+
+The encoding range is of the Full type.
 
 **Since:** 11
 
@@ -96,7 +118,11 @@ BT709.The conversion function is of the BT709 type.The encoding range is of the 
 BT601_EBU = 7
 ```
 
-BT601_P.The conversion function is of the BT709 type.The encoding range is of the Full type.
+BT601_P.
+
+The conversion function is of the BT709 type.
+
+The encoding range is of the Full type.
 
 **Since:** 11
 
@@ -110,7 +136,11 @@ BT601_P.The conversion function is of the BT709 type.The encoding range is of th
 BT601_SMPTE_C = 8
 ```
 
-BT601_N.The conversion function is of the BT709 type.The encoding range is of the Full type.
+BT601_N.
+
+The conversion function is of the BT709 type.
+
+The encoding range is of the Full type.
 
 **Since:** 11
 
@@ -124,7 +154,11 @@ BT601_N.The conversion function is of the BT709 type.The encoding range is of th
 BT2020_HLG = 9
 ```
 
-BT2020.The conversion function is of the HLG type.The encoding range is of the Full type.
+BT2020.
+
+The conversion function is of the HLG type.
+
+The encoding range is of the Full type.
 
 **Since:** 11
 
@@ -138,7 +172,11 @@ BT2020.The conversion function is of the HLG type.The encoding range is of the F
 BT2020_PQ = 10
 ```
 
-BT2020.The conversion function is of the PQ type.The encoding range is of the Full type.
+BT2020.
+
+The conversion function is of the PQ type.
+
+The encoding range is of the Full type.
 
 **Since:** 11
 
@@ -152,7 +190,11 @@ BT2020.The conversion function is of the PQ type.The encoding range is of the Fu
 P3_HLG = 11
 ```
 
-Display P3.The conversion function is of the HLG type.The encoding range is of the Full type.
+Display P3.
+
+The conversion function is of the HLG type.
+
+The encoding range is of the Full type.
 
 **Since:** 11
 
@@ -166,7 +208,11 @@ Display P3.The conversion function is of the HLG type.The encoding range is of t
 P3_PQ = 12
 ```
 
-Display P3.The conversion function is of the PQ type.The encoding range is of the Full type.
+Display P3.
+
+The conversion function is of the PQ type.
+
+The encoding range is of the Full type.
 
 **Since:** 11
 
@@ -180,7 +226,11 @@ Display P3.The conversion function is of the PQ type.The encoding range is of th
 ADOBE_RGB_1998_LIMIT = 13
 ```
 
-Adobe RGB (1998).The conversion function is of the Adobe RGB (1998) type.The encoding range is of the Limit type.
+Adobe RGB (1998).
+
+The conversion function is of the Adobe RGB (1998) type.
+
+The encoding range is of the Limit type.
 
 **Since:** 11
 
@@ -194,7 +244,11 @@ Adobe RGB (1998).The conversion function is of the Adobe RGB (1998) type.The enc
 DISPLAY_P3_LIMIT = 14
 ```
 
-Display P3.The conversion function is of the SRGB type.The encoding range is of the Limit type.
+Display P3.
+
+The conversion function is of the SRGB type.
+
+The encoding range is of the Limit type.
 
 **Since:** 11
 
@@ -208,7 +262,11 @@ Display P3.The conversion function is of the SRGB type.The encoding range is of 
 SRGB_LIMIT = 15
 ```
 
-SRGB.The conversion function is of the SRGB type.The encoding range is of the Limit type.
+SRGB.
+
+The conversion function is of the SRGB type.
+
+The encoding range is of the Limit type.
 
 **Since:** 11
 
@@ -222,7 +280,11 @@ SRGB.The conversion function is of the SRGB type.The encoding range is of the Li
 BT709_LIMIT = 16
 ```
 
-BT709.The conversion function is of the BT709 type.The encoding range is of the Limit type.
+BT709.
+
+The conversion function is of the BT709 type.
+
+The encoding range is of the Limit type.
 
 **Since:** 11
 
@@ -236,7 +298,11 @@ BT709.The conversion function is of the BT709 type.The encoding range is of the 
 BT601_EBU_LIMIT = 17
 ```
 
-BT601_P.The conversion function is of the BT709 type.The encoding range is of the Limit type.
+BT601_P.
+
+The conversion function is of the BT709 type.
+
+The encoding range is of the Limit type.
 
 **Since:** 11
 
@@ -250,7 +316,11 @@ BT601_P.The conversion function is of the BT709 type.The encoding range is of th
 BT601_SMPTE_C_LIMIT = 18
 ```
 
-BT601_N.The conversion function is of the BT709 type.The encoding range is of the Limit type.
+BT601_N.
+
+The conversion function is of the BT709 type.
+
+The encoding range is of the Limit type.
 
 **Since:** 11
 
@@ -264,7 +334,11 @@ BT601_N.The conversion function is of the BT709 type.The encoding range is of th
 BT2020_HLG_LIMIT = 19
 ```
 
-BT2020.The conversion function is of the HLG type.The encoding range is of the Limit type.
+BT2020.
+
+The conversion function is of the HLG type.
+
+The encoding range is of the Limit type.
 
 **Since:** 11
 
@@ -278,7 +352,11 @@ BT2020.The conversion function is of the HLG type.The encoding range is of the L
 BT2020_PQ_LIMIT = 20
 ```
 
-BT2020.The conversion function is of the PQ type.The encoding range is of the Limit type.
+BT2020.
+
+The conversion function is of the PQ type.
+
+The encoding range is of the Limit type.
 
 **Since:** 11
 
@@ -292,7 +370,11 @@ BT2020.The conversion function is of the PQ type.The encoding range is of the Li
 P3_HLG_LIMIT = 21
 ```
 
-Display P3.The conversion function is of the HLG type.The encoding range is of the Limit type.
+Display P3.
+
+The conversion function is of the HLG type.
+
+The encoding range is of the Limit type.
 
 **Since:** 11
 
@@ -306,7 +388,11 @@ Display P3.The conversion function is of the HLG type.The encoding range is of t
 P3_PQ_LIMIT = 22
 ```
 
-Display P3.The conversion function is of the PQ type.The encoding range is of the Limit type.
+Display P3.
+
+The conversion function is of the PQ type.
+
+The encoding range is of the Limit type.
 
 **Since:** 11
 
@@ -320,7 +406,9 @@ Display P3.The conversion function is of the PQ type.The encoding range is of th
 LINEAR_P3 = 23
 ```
 
-Display P3.The conversion function is of the Linear type.
+Display P3.
+
+The conversion function is of the Linear type.
 
 **Since:** 11
 
@@ -334,7 +422,9 @@ Display P3.The conversion function is of the Linear type.
 LINEAR_SRGB = 24
 ```
 
-SRGB.The conversion function is of the Linear type.
+SRGB.
+
+The conversion function is of the Linear type.
 
 **Since:** 11
 
@@ -348,7 +438,11 @@ SRGB.The conversion function is of the Linear type.
 LINEAR_BT709 = LINEAR_SRGB
 ```
 
-Same as that of LINEAR_SRGB.BT709.The conversion function is of the Linear type.
+Same as that of LINEAR_SRGB.
+
+BT709.
+
+The conversion function is of the Linear type.
 
 **Since:** 11
 
@@ -362,7 +456,9 @@ Same as that of LINEAR_SRGB.BT709.The conversion function is of the Linear type.
 LINEAR_BT2020 = 25
 ```
 
-BT2020.The conversion function is of the Linear type.
+BT2020.
+
+The conversion function is of the Linear type.
 
 **Since:** 11
 
@@ -376,7 +472,13 @@ BT2020.The conversion function is of the Linear type.
 DISPLAY_SRGB = SRGB
 ```
 
-Same as that of SRGB.SRGB.The conversion function is of the SRGB type.The encoding range is of the Full type.
+Same as that of SRGB.
+
+SRGB.
+
+The conversion function is of the SRGB type.
+
+The encoding range is of the Full type.
 
 **Since:** 11
 
@@ -390,7 +492,13 @@ Same as that of SRGB.SRGB.The conversion function is of the SRGB type.The encodi
 DISPLAY_P3_SRGB = DISPLAY_P3
 ```
 
-Same as that of DISPLAY_P3.Display P3.The conversion function is of the SRGB type.The encoding range is of the Full type.
+Same as that of DISPLAY_P3.
+
+Display P3.
+
+The conversion function is of the SRGB type.
+
+The encoding range is of the Full type.
 
 **Since:** 11
 
@@ -404,7 +512,13 @@ Same as that of DISPLAY_P3.Display P3.The conversion function is of the SRGB typ
 DISPLAY_P3_HLG = P3_HLG
 ```
 
-Same as that of P3_HLG.Display P3.The conversion function is of the HLG type.The encoding range is of the Full type.
+Same as that of P3_HLG.
+
+Display P3.
+
+The conversion function is of the HLG type.
+
+The encoding range is of the Full type.
 
 **Since:** 11
 
@@ -418,7 +532,13 @@ Same as that of P3_HLG.Display P3.The conversion function is of the HLG type.The
 DISPLAY_P3_PQ = P3_PQ
 ```
 
-Same as that of P3_PQ.Display P3.The conversion function is of the PQ type.The encoding range is of the Full type.
+Same as that of P3_PQ.
+
+Display P3.
+
+The conversion function is of the PQ type.
+
+The encoding range is of the Full type.
 
 **Since:** 11
 
@@ -432,7 +552,9 @@ Same as that of P3_PQ.Display P3.The conversion function is of the PQ type.The e
 H_LOG = 26
 ```
 
-BT2020.The conversion function is of the LOG type.
+BT2020.
+
+The conversion function is of the LOG type.
 
 **Since:** 18
 
@@ -444,7 +566,11 @@ BT2020.The conversion function is of the LOG type.
 DISPLAY_BT2020_SRGB = 27
 ```
 
-DISPLAY BT2020.The conversion function is of the SRGB type.The encoding range is of the Full type.
+DISPLAY BT2020.
+
+The conversion function is of the SRGB type.
+
+The encoding range is of the Full type.
 
 **Since:** 20
 

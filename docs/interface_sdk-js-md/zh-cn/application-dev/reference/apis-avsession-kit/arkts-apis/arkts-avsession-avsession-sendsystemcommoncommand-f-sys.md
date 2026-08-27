@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## sendSystemCommonCommand
@@ -35,7 +35,7 @@ function sendSystemCommonCommand(command: string, args: ExtraInfo): Promise<stri
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | callback info for sync command |
+| Promise&lt;string&gt; | callback info for sync command |
 
 **错误码：**
 

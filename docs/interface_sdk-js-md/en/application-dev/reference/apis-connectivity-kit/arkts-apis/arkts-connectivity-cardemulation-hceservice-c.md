@@ -9,7 +9,7 @@ Provides APIs for implementing HCE, including receiving Application Protocol Dat
 ## Modules to Import
 
 ```TypeScript
-import cardEmulation from '@kit.ConnectivityKit';
+import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
 ## off('hceCmd')
@@ -296,7 +296,7 @@ Transmits an APDU to the peer card reader. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

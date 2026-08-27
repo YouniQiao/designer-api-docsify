@@ -1,6 +1,8 @@
 # MenuPolicy
 
-Define the menu pop-up policy@enum { number }
+Define the menu pop-up policy
+
+@enum { number }
 
 **起始版本：** 12
 

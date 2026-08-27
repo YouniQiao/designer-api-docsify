@@ -19,7 +19,7 @@ Attaches a callback for only the rejection of the Promise.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| onrejected | ((reason: any) = & gt; TResult \ | PromiseLike & lt;TResult & gt;) \ | undefined \| null | No |  |
+| onrejected | ((reason: any) =&gt; TResult \| PromiseLike&lt;TResult&gt;) \| undefined \| null | No |  |
 
 **Return value:**
 
@@ -37,8 +37,8 @@ Attaches callbacks for the resolution and/or rejection of the Promise.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| onfulfilled | ((value: T) = & gt; TResult1 \ | PromiseLike & lt;TResult1 & gt;) \ | undefined \| null | No |  |
-| onrejected | ((reason: any) = & gt; TResult2 \ | PromiseLike & lt;TResult2 & gt;) \ | undefined \| null | No |  |
+| onfulfilled | ((value: T) =&gt; TResult1 \| PromiseLike&lt;TResult1&gt;) \| undefined \| null | No |  |
+| onrejected | ((reason: any) =&gt; TResult2 \| PromiseLike&lt;TResult2&gt;) \| undefined \| null | No |  |
 
 **Return value:**
 

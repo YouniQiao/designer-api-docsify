@@ -25,7 +25,7 @@ function getLastLocation(): Location
 
 | 类型 | 说明 |
 | --- | --- |
-| [Location](arkts-location-geolocationmanager-location-i.md) | 位置信息。 |
+| Location | 位置信息。 |
 
 **错误码：**
 

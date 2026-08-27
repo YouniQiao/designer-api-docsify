@@ -9,7 +9,7 @@ Provide a number formatting interface which could format number to StyleString.
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -154,7 +154,7 @@ Formats a number as a rich text object.
 
 | Type | Description |
 | --- | --- |
-| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | Rich text object after formatting. |
+| StyledString | Rich text object after formatting. |
 
 **Examples**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import storageStatistics from '@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getSystemDataSize
@@ -28,7 +28,7 @@ function getSystemDataSize(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回系统数据的总空间大小，单位：Byte。 |
+| Promise&lt;number&gt; | Promise对象，返回系统数据的总空间大小，单位：Byte。 |
 
 **错误码：**
 

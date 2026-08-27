@@ -9,7 +9,7 @@ The module provides the base class for intent execution. You can use this module
 ## Modules to Import
 
 ```TypeScript
-import InsightIntentExecutor from '@kit.AbilityKit';
+import { InsightIntentExecutor } from '@kit.AbilityKit';
 ```
 
 ## onExecuteInServiceExtensionAbility
@@ -19,7 +19,8 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbility that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.  
+Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbility that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
+
 - The ServiceExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:  
 **onCreate**, **onRequest**, and **onExecuteInServiceExtensionAbility**.
 
@@ -34,13 +35,13 @@ Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Intent name. |
-| param | Record & lt;string, Object & gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
+| param | Record&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| insightIntent.ExecuteResult \| Promise & lt;insightIntent.ExecuteResult & gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **Examples**
 
@@ -124,7 +125,8 @@ onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>):
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) that the intent execution depends on is started in the background. Both synchronous calls and asynchronous calls using Promise are supported.  
+Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) that the intent execution depends on is started in the background. Both synchronous calls and asynchronous calls using Promise are supported.
+
 - If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
 during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate), onExecuteInUIAbilityBackgroundMode, and [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground).  
 - If the UIAbility is hot started, the UIAbility lifecycle callbacks are triggered in the following sequence during  
@@ -143,13 +145,13 @@ intent execution: onExecuteInUIAbilityBackgroundMode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Intent name. |
-| param | Record & lt;string, Object & gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
+| param | Record&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| insightIntent.ExecuteResult \| Promise & lt;insightIntent.ExecuteResult & gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **Examples**
 
@@ -205,7 +207,8 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, 
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) that the intent execution depends on is started in the foreground. Both synchronous calls and asynchronous calls using Promise are supported.  
+Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) that the intent execution depends on is started in the foreground. Both synchronous calls and asynchronous calls using Promise are supported.
+
 - If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
 during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate), [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate), onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground).  
 - If the UIAbility is hot started in the background, the UIAbility lifecycle callbacks are triggered in the  
@@ -226,14 +229,14 @@ following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Intent name. |
-| param | Record & lt;string, Object & gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
+| param | Record&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
 | pageLoader | window.WindowStage | Yes | WindowStage instance, which is the same as the WindowStage instance in the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) API and can be used to load the page for intent execution. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| insightIntent.ExecuteResult \| Promise & lt;insightIntent.ExecuteResult & gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **Examples**
 
@@ -329,7 +332,8 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIExtensionAbility lifecycle when the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.  
+Called during the UIExtensionAbility lifecycle when the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
+
 - The UIExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:  
 [onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate), [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate), onExecuteInUIExtensionAbility, and [onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onforeground).
 
@@ -344,14 +348,14 @@ Called during the UIExtensionAbility lifecycle when the [UIExtensionAbility](ark
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Intent name. |
-| param | Record & lt;string, Object & gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
+| param | Record&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
 | pageLoader | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UIExtensionContentSession instance, which is the same as the UIExtensionContentSession instance in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate) API and can be used to load the page for intent execution. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| insightIntent.ExecuteResult \| Promise & lt;insightIntent.ExecuteResult & gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
+| insightIntent.ExecuteResult \| Promise&lt;insightIntent.ExecuteResult&gt; | Intent execution result or a Promise object containing the intent execution result, representing the data returned to the system entry point from this intent execution. |
 
 **Examples**
 

@@ -111,7 +111,7 @@ measure(constraint: ConstraintSizeOptions) : MeasureResult
 uniqueId?: number
 ```
 
-系统为子组件分配的唯一标识UniqueID。 取值限定为整数。
+系统为子组件分配的唯一标识UniqueID。取值限定为整数。
 
 **类型：** number
 

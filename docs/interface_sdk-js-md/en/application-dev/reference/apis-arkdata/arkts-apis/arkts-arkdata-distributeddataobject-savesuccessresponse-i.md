@@ -9,7 +9,7 @@ Represents the information returned by the callback of save..
 ## Modules to Import
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## deviceId

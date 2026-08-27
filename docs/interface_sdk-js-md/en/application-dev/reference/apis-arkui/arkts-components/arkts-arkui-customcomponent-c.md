@@ -1,6 +1,8 @@
 # CustomComponent
 
-Custom Component@extends CommonAttribute [since 7 - 17] @extends BaseCustomComponent [since 18]
+Custom Component
+
+@extends CommonAttribute [since 7 - 17] @extends BaseCustomComponent [since 18]
 
 **Inheritance/Implementation:** CustomComponent extends [BaseCustomComponent](arkts-arkui-basecustomcomponent-c.md)
 
@@ -33,7 +35,7 @@ aboutToReuse Method
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Record & lt;string, Object \ | undefined \| null & gt; | Yes | Custom component init params.<br>**Since:** 20 |
+| params | Record&lt;string, Object \| undefined \| null&gt; | Yes | Custom component init params.<br>**Since:** 20 |
 
 ## onLayout
 

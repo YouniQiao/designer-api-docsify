@@ -171,7 +171,7 @@ Obtain current location.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Location & gt; | The promise returned by the function. |
+| Promise&lt;Location&gt; | The promise returned by the function. |
 
 **Error codes:**
 

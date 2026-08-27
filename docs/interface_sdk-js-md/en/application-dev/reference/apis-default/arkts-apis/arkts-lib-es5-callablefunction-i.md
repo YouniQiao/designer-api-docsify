@@ -17,7 +17,7 @@ Calls the function with the specified object as the this value and the elements 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T) = & gt; R | Yes |  |
+| this | (this: T) =&gt; R | Yes |  |
 | thisArg | T | Yes |  |
 
 **Return value:**
@@ -34,7 +34,7 @@ apply<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, ...args: A) = & gt; R | Yes |  |
+| this | (this: T, ...args: A) =&gt; R | Yes |  |
 | thisArg | T | Yes |  |
 | args | A | Yes |  |
 
@@ -55,7 +55,7 @@ For a given function, creates a bound function that has the same body as the ori
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | this | T | Yes |  |
-| thisArg | ThisParameterType & lt;T & gt; | Yes |  |
+| thisArg | ThisParameterType&lt;T&gt; | Yes |  |
 
 **Return value:**
 
@@ -71,7 +71,7 @@ bind<T, A0, A extends any[], R>(this: (this: T, arg0: A0, ...args: A) => R, this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, arg0: A0, ...args: A) = & gt; R | Yes |  |
+| this | (this: T, arg0: A0, ...args: A) =&gt; R | Yes |  |
 | thisArg | T | Yes |  |
 | arg0 | A0 | Yes |  |
 
@@ -89,7 +89,7 @@ bind<T, A0, A1, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, ...args:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, arg0: A0, arg1: A1, ...args: A) = & gt; R | Yes |  |
+| this | (this: T, arg0: A0, arg1: A1, ...args: A) =&gt; R | Yes |  |
 | thisArg | T | Yes |  |
 | arg0 | A0 | Yes |  |
 | arg1 | A1 | Yes |  |
@@ -108,7 +108,7 @@ bind<T, A0, A1, A2, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, arg2
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, arg0: A0, arg1: A1, arg2: A2, ...args: A) = & gt; R | Yes |  |
+| this | (this: T, arg0: A0, arg1: A1, arg2: A2, ...args: A) =&gt; R | Yes |  |
 | thisArg | T | Yes |  |
 | arg0 | A0 | Yes |  |
 | arg1 | A1 | Yes |  |
@@ -128,7 +128,7 @@ bind<T, A0, A1, A2, A3, A extends any[], R>(this: (this: T, arg0: A0, arg1: A1, 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) = & gt; R | Yes |  |
+| this | (this: T, arg0: A0, arg1: A1, arg2: A2, arg3: A3, ...args: A) =&gt; R | Yes |  |
 | thisArg | T | Yes |  |
 | arg0 | A0 | Yes |  |
 | arg1 | A1 | Yes |  |
@@ -149,7 +149,7 @@ bind<T, AX, R>(this: (this: T, ...args: AX[]) => R, thisArg: T, ...args: AX[]): 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, ...args: AX[]) = & gt; R | Yes |  |
+| this | (this: T, ...args: AX[]) =&gt; R | Yes |  |
 | thisArg | T | Yes |  |
 | args | AX[] | Yes |  |
 
@@ -169,7 +169,7 @@ Calls the function with the specified object as the this value and the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | (this: T, ...args: A) = & gt; R | Yes |  |
+| this | (this: T, ...args: A) =&gt; R | Yes |  |
 | thisArg | T | Yes |  |
 | args | A | Yes |  |
 

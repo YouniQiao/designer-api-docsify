@@ -1,7 +1,9 @@
 # SymbolSpan
 
 As a child component of the **Text** component, the **SymbolSpan** component is used to display small icons.
+
 > **NOTE**
+
 > - This component can inherit attribute settings from its parent component **Text**. This means that, if an > attribute is not set in this component, it takes the value of the attribute (if set) from its parent component. > > - The **SymbolSpan** component is not dimmed when dragged.
 
 ## Child Components
@@ -30,7 +32,7 @@ Defines the constructor of SymbolSpan.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Resource of the **SymbolSpan** component, for example, **\$r('sys.symbol.ohos_wifi')**. |
+| value | Resource | Yes | Resource of the **SymbolSpan** component, for example, **\$r('sys.symbol.ohos_wifi')**. |
 
 ## Summary
 

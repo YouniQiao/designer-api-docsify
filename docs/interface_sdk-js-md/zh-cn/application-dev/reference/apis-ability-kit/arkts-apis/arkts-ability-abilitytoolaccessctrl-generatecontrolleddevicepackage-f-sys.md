@@ -11,7 +11,7 @@
 export function generateControlledDevicePackage(permissionQuery: PermissionQuery[]): Promise<RemoteAuthPackage[]>
 ```
 
-生成受控设备的授权包。 根据权限查询列表生成远程授权包。 生成的包可以发送到控制器设备进行权限验证。
+生成受控设备的授权包。根据权限查询列表生成远程授权包。生成的包可以发送到控制器设备进行权限验证。
 
 **起始版本：** 26.1.0
 

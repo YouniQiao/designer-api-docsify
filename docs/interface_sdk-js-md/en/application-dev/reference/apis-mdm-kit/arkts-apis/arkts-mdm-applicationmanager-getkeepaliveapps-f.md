@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## getKeepAliveApps
@@ -33,7 +33,7 @@ Obtains the bundle name of the keep-alive application.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Bundle name of the application kept alive for the specified user. |
+| Array&lt;string&gt; | Bundle name of the application kept alive for the specified user. |
 
 **Error codes:**
 
@@ -92,7 +92,7 @@ Obtains the bundle name of the keep-alive application.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Bundle name of the application kept alive for the specified user. |
+| Array&lt;string&gt; | Bundle name of the application kept alive for the specified user. |
 
 **Error codes:**
 

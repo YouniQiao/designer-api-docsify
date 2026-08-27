@@ -1,6 +1,6 @@
 # KeyboardController
 
-下列API均需使用 on('inputStart') 获取到KeyboardController实例后，通过实例调用。
+下列API均需使用on('inputStart')获取到KeyboardController实例后，通过实例调用。
 
 **起始版本：** 8
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## exitCurrentInputType
@@ -67,7 +67,7 @@ exitCurrentInputType(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -154,7 +154,7 @@ hide(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -190,7 +190,7 @@ keyboardController.hide().then(() => {
 hideKeyboard(callback: AsyncCallback<void>): void
 ```
 
-隐藏输入法。使用callback异步回调。   
+隐藏输入法。使用callback异步回调。  
 > **说明：**
    
 > 
@@ -231,7 +231,7 @@ keyboardController.hideKeyboard((err: BusinessError) => {
 hideKeyboard(): Promise<void>
 ```
 
-隐藏输入法。使用promise异步回调。   
+隐藏输入法。使用promise异步回调。  
 > **说明：**
    
 > 
@@ -250,7 +250,7 @@ hideKeyboard(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 

@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usb from '@kit.BasicServicesKit';
-import usbManager from '@kit.BasicServicesKitManager';
-import serialManager from '@kit.BasicServicesKitManager.serial';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## releaseInterface
@@ -14,7 +12,9 @@ import serialManager from '@kit.BasicServicesKitManager.serial';
 function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 ```
 
-Releases a USB interface.Before you do this, ensure that you have claimed the interface by calling [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md).
+Releases a USB interface.
+
+Before you do this, ensure that you have claimed the interface by calling [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md).
 
 **Since:** 8
 
@@ -28,8 +28,8 @@ Releases a USB interface.Before you do this, ensure that you have claimed the in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | Device pipe, which is used to determine the bus number and device address. |
-| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | USB interface, which is used to determine the index of the interface to release. |
+| pipe | USBDevicePipe | Yes | Device pipe, which is used to determine the bus number and device address. |
+| iface | USBInterface | Yes | USB interface, which is used to determine the index of the interface to release. |
 
 **Return value:**
 

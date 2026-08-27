@@ -1,6 +1,8 @@
 # SheetKeyboardAvoidMode
 
-Define the mode of sheet how to avoid keyboard.@enum { number }
+Define the mode of sheet how to avoid keyboard.
+
+@enum { number }
 
 **Since:** 13
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getBundlePriorityConfig
@@ -26,13 +26,13 @@ function getBundlePriorityConfig(bundle: BundleOption): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 指定应用的包信息。 |
+| bundle | BundleOption | 是 | 指定应用的包信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回包含应用优先功能配置的Promise对象。 |
+| Promise&lt;string&gt; | Promise对象，返回包含应用优先功能配置的Promise对象。 |
 
 **错误码：**
 

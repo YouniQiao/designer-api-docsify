@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getLinkedInfo
@@ -27,7 +26,7 @@ Obtain connection information about the Wi-Fi connection. If does't have the per
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;WifiLinkedInfo & gt; | Returns Wi-Fi linked information. |
+| Promise&lt;WifiLinkedInfo&gt; | Returns Wi-Fi linked information. |
 
 **Error codes:**
 

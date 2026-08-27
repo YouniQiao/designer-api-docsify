@@ -11,8 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## appVolume
@@ -21,7 +20,7 @@ import audioHaptic from '@kit.AudioKitHaptic';
 appVolume: number
 ```
 
-应用程序的音量。 取值限定为整数。
+应用程序的音量。取值限定为整数。
 
 **类型：** number
 
@@ -39,7 +38,7 @@ appVolume: number
 clientUid: number
 ```
 
-应用程序的UID。 取值限定为整数。
+应用程序的UID。取值限定为整数。
 
 **类型：** number
 

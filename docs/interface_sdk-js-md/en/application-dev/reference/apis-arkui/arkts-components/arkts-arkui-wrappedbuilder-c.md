@@ -49,7 +49,7 @@ constructor(builder: (...args: Args) => void)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | (...args: Args) = & gt; void | Yes |  |
+| builder | (...args: Args) =&gt; void | Yes |  |
 
 **Examples**
 

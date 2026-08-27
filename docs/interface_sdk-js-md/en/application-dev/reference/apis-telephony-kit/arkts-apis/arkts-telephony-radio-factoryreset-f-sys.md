@@ -31,7 +31,7 @@ Reset all network settings of telephony.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the factoryReset. |
+| Promise&lt;void&gt; | The promise returned by the factoryReset. |
 
 **Error codes:**
 

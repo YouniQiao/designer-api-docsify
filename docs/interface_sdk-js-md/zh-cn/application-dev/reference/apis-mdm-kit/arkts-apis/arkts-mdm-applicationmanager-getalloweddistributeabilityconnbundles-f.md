@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## getAllowedDistributeAbilityConnBundles
@@ -27,14 +27,14 @@ function getAllowedDistributeAbilityConnBundles(admin: Want | null, serviceType:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| serviceType | [ServiceType](../../apis-calendar-kit/arkts-apis/arkts-calendar-calendarmanager-servicetype-e.md) | 是 | 分布式业务类型。 |
-| accountId | number | 是 | 用户ID，取值范围：大于等于0的整数。 accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
+| serviceType | ServiceType | 是 | 分布式业务类型。 |
+| accountId | number | 是 | 用户ID，取值范围：大于等于0的整数。accountId可以通过@ohos.account.osAccount中的[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 指定用户下特定分布式业务的允许跨设备应用的[唯一标识符]{ |
+| Array&lt;string&gt; | 指定用户下特定分布式业务的允许跨设备应用的[唯一标识符]{ |
 
 **错误码：**
 

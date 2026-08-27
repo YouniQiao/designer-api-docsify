@@ -41,7 +41,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { sim } from '@kit.TelephonyKit';
 
 sim.getSimState(0, (err: BusinessError, data: sim.SimState) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+    if (err) {
+        console.err(`getSimState failed. callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`callback: data->${JSON.stringify(data)}`);
 });
 ```
 
@@ -68,7 +72,7 @@ function getSimState(slotId: number): Promise<SimState>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;SimState & gt; | 以Promise形式返回获取指定卡槽的SIM卡状态。 |
+| Promise&lt;SimState&gt; | 以Promise形式返回获取指定卡槽的SIM卡状态。 |
 
 **错误码：**
 

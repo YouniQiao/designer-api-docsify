@@ -17,7 +17,9 @@
 constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOptions>)
 ```
 
-属性字符串的构造函数。不支持在 [loadContent()](arkts-arkui-window-window-i.md#loadcontent) 之前创建。
+属性字符串的构造函数。
+
+不支持在[loadContent()](arkts-arkui-window-window-i.md#loadcontent)之前创建。
 
 **起始版本：** 12
 
@@ -31,8 +33,8 @@ constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| [ImageAttachment](arkts-arkui-imageattachment-c.md) \| [CustomSpan](arkts-arkui-customspan-c.md) | 是 | 属性字符串文本内容。    **说明：** 当value的类型为ImageAttachment或CustomSpan时，styles参数不生效。 需要设置styles时，通过[setStyle](arkts-arkui-mutablestyledstring-c.md#setstyle)等方法实现。 |
-| styles | Array&lt;[StyleOptions](arkts-arkui-styleoptions-i.md)&gt; | 否 | 属性字符串初始化选项。    **说明：** start为异常值时，按默认值0处理； 当length为异常值时，length等于属性字符串在start后的实际长度； 当StyledStringKey与StyledStringValue不匹配时，styles不生效。 |
+| value | string \| [ImageAttachment](arkts-arkui-imageattachment-c.md) \| [CustomSpan](arkts-arkui-customspan-c.md) | 是 | 属性字符串文本内容。   **说明：** 当value的类型为ImageAttachment或CustomSpan时，styles参数不生效。需要设置styles时，通过[setStyle](arkts-arkui-mutablestyledstring-c.md#setstyle)等方法实现。 |
+| styles | Array&lt;[StyleOptions](arkts-arkui-styleoptions-i.md)&gt; | 否 | 属性字符串初始化选项。   **说明：** start为异常值时，按默认值0处理；当length为异常值时，length等于属性字符串在start后的实际长度；当StyledStringKey与StyledStringValue不匹配时，styles不生效。 |
 
 ## equals
 
@@ -68,7 +70,9 @@ equals(other: StyledString): boolean
 static fromHtml(html: string): Promise<StyledString>
 ```
 
-将HTML格式字符串转换成属性字符串，HTML标签将映射为对应的属性字符串样式（如加粗类标签映射为TextStyle、装饰类标签映射为DecorationStyle）。当前支持转换的HTML标签范围：\<p>、\&lt;span&gt;、\&lt;img&gt;、\、\&lt;strong&gt;、\&lt;b&gt;、\&lt;a&gt;、\&lt;i&gt;、\&lt;em&gt;、\&lt;s&gt;、\&lt;u&gt;、\&lt;del&gt;、\&lt;sup&gt;、\&lt;sub&gt;、\&lt;cite&gt;、\&lt;dfn&gt;、\&lt;small&gt;、\&lt;h1&gt;、\&lt;h2&gt;、\&lt;h3&gt;、\&lt;h4&gt;、\&lt;h5 &gt;、\
+将HTML格式字符串转换成属性字符串，HTML标签将映射为对应的属性字符串样式（如加粗类标签映射为TextStyle、装饰类标签映射为DecorationStyle）。当前支持转换的HTML标签范围：\<p>、\&lt;span&gt;、\&lt;img&gt;、\
+
+、\&lt;strong&gt;、\&lt;b&gt;、\&lt;a&gt;、\&lt;i&gt;、\&lt;em&gt;、\&lt;s&gt;、\&lt;u&gt;、\&lt;del&gt;、\&lt;sup&gt;、\&lt;sub&gt;、\&lt;cite&gt;、\&lt;dfn&gt;、\&lt;small&gt;、\&lt;h1&gt;、\&lt;h2&gt;、\&lt;h3&gt;、\&lt;h4&gt;、\&lt;h5 &gt;、\
 
 **起始版本：** 12
 
@@ -125,7 +129,9 @@ getString(): string
 getStyles(start: number, length: number, styledKey?: StyledStringKey): Array<SpanStyle>
 ```
 
-获取指定范围属性字符串的样式集合。不能超出属性字符串的长度。该接口仅返回开发者设置的样式。
+获取指定范围属性字符串的样式集合。不能超出属性字符串的长度。
+
+该接口仅返回开发者设置的样式。
 
 **起始版本：** 12
 
@@ -141,7 +147,7 @@ getStyles(start: number, length: number, styledKey?: StyledStringKey): Array<Spa
 | --- | --- | --- | --- |
 | start | number | 是 | 指定范围属性字符串的下标。 |
 | length | number | 是 | 指定范围属性字符串的长度。 |
-| styledKey | [StyledStringKey](arkts-arkui-styledstringkey-e.md) | 否 | 指定范围属性字符串样式的枚举值。    **说明：** 当不传入该参数时默认获取开发者设置的[StyledStringKey](arkts-arkui-styledstringkey-e.md)所有枚举值样式。 |
+| styledKey | [StyledStringKey](arkts-arkui-styledstringkey-e.md) | 否 | 指定范围属性字符串样式的枚举值。   **说明：** 当不传入该参数时默认获取开发者设置的[StyledStringKey](arkts-arkui-styledstringkey-e.md)所有枚举值样式。 |
 
 **返回值：**
 
@@ -176,7 +182,7 @@ subStyledString(start: number, length?: number): StyledString
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | start | number | 是 | 子属性字符串开始位置的下标。 |
-| length | number | 否 | 子属性字符串的长度。 不传入时默认取被查询属性字符串对象的长度与start的值的差。 |
+| length | number | 否 | 子属性字符串的长度。不传入时默认取被查询属性字符串对象的长度与start的值的差。 |
 
 **返回值：**
 
@@ -196,7 +202,9 @@ subStyledString(start: number, length?: number): StyledString
 static toHtml(styledString: StyledString): string
 ```
 
-将属性字符串转换成HTML格式字符串，属性字符串样式将映射为对应的HTML标签（如TextStyle映射为含style属性的span标签、ImageAttachment映射为img标签）。支持转换的属性字符串 [StyledStringKey](arkts-arkui-styledstringkey-e.md)包括：StyledStringKey.FONT、StyledStringKey.DECORATION、 StyledStringKey.LETTER_SPACING、StyledStringKey.TEXT_SHADOW、StyledStringKey.LINE_HEIGHT、StyledStringKey.IMAGE。使用方法参考 [示例12（fromHtml和toHtml互相转换）](#styledstring)。
+将属性字符串转换成HTML格式字符串，属性字符串样式将映射为对应的HTML标签（如TextStyle映射为含style属性的span标签、ImageAttachment映射为img标签）。支持转换的属性字符串[StyledStringKey](arkts-arkui-styledstringkey-e.md)包括：StyledStringKey.FONT、StyledStringKey.DECORATION、StyledStringKey.LETTER_SPACING、StyledStringKey.TEXT_SHADOW、StyledStringKey.LINE_HEIGHT、StyledStringKey.IMAGE。
+
+使用方法参考[示例12（fromHtml和toHtml互相转换）](#styledstring)。
 
 **起始版本：** 14
 
@@ -230,8 +238,11 @@ static toHtml(styledString: StyledString): string
 readonly length: number
 ```
 
-属性字符串字符的长度。  
-**说明：**属性字符串中的ImageAttachment和CustomSpan长度都计为1。
+属性字符串字符的长度。
+
+**说明：**
+
+属性字符串中的ImageAttachment和CustomSpan长度都计为1。
 
 **类型：** number
 

@@ -9,7 +9,7 @@ Defines TCP socket connection parameters.
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## address

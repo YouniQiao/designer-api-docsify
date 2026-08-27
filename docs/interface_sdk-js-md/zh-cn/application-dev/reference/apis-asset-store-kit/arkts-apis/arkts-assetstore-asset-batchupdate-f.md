@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import asset from '@kit.AssetStoreKit';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## batchUpdate
@@ -12,7 +12,11 @@ import asset from '@kit.AssetStoreKit';
 function batchUpdate(sourceAttributes: Array<AssetMap>, destAttributes: Array<AssetMap>): Promise<BatchResult>
 ```
 
-批量更新符合条件的关键资产。使用Promise异步回调。批量更新的关键资产必须具有相同的[Tag.GROUP_ID](arkts-assetstore-asset-tagtype-e.md)和[Tag.REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tagtype-e.md)属性。批量更新的关键资产数量最大值为100。
+批量更新符合条件的关键资产。使用Promise异步回调。
+
+批量更新的关键资产必须具有相同的[Tag.GROUP_ID](arkts-assetstore-asset-tagtype-e.md)和[Tag.REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tagtype-e.md)属性。
+
+批量更新的关键资产数量最大值为100。
 
 **起始版本：** 26.0.0
 

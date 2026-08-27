@@ -1,6 +1,8 @@
 # AudioSpatialEnabledStateForDevice（系统接口）
 
-监听设备空间音频开关状态。@interface AudioSpatialEnabledStateForDevice
+监听设备空间音频开关状态。
+
+@interface AudioSpatialEnabledStateForDevice
 
 **起始版本：** 12
 
@@ -11,8 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## deviceDescriptor

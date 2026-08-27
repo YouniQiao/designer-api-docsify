@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formHost from '@kit.FormKit';
+import { formHost } from '@kit.FormKit';
 ```
 
 ## notifyFormsPrivacyProtected
@@ -30,7 +30,7 @@ Notifies that the privacy protection status of the specified widgets changes. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes | ID of the widgets. |
+| formIds | Array&lt;string&gt; | Yes | ID of the widgets. |
 | isProtected | boolean | Yes | Whether a widget requires privacy protection.    **true**: The widget requires privacy protection.    **false**: The widget does not require privacy protection. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If privacy protection is set successfully, **error** is undefined; otherwise, **error** is an error object. |
 
@@ -84,14 +84,14 @@ Notifies that the privacy protection status of the specified widgets changes. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes | ID of the widgets. |
+| formIds | Array&lt;string&gt; | Yes | ID of the widgets. |
 | isProtected | boolean | Yes | Whether a widget requires privacy protection.    **true**: The widget requires privacy protection.    **false**: The widget does not require privacy protection. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

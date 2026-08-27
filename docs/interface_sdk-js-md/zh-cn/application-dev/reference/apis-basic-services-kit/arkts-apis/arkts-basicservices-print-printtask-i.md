@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## off('block')
@@ -53,7 +53,7 @@ struct Index {
     build() {
         Scroll() {
             Column({ space: 10 }) {
-                Button("打印").width('90%').height(50).onClick(() => {
+                Button('打印').width('90%').height(50).onClick(() => {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
@@ -116,7 +116,7 @@ struct Index {
     build() {
         Scroll() {
             Column({ space: 10 }) {
-                Button("打印").width('90%').height(50).onClick(() => {
+                Button('打印').width('90%').height(50).onClick(() => {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
@@ -179,7 +179,7 @@ struct Index {
     build() {
         Scroll() {
             Column({ space: 10 }) {
-                Button("打印").width('90%').height(50).onClick(() => {
+                Button('打印').width('90%').height(50).onClick(() => {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
@@ -242,7 +242,7 @@ struct Index {
     build() {
         Scroll() {
             Column({ space: 10 }) {
-                Button("打印").width('90%').height(50).onClick(() => {
+                Button('打印').width('90%').height(50).onClick(() => {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
@@ -305,7 +305,7 @@ struct Index {
     build() {
         Scroll() {
             Column({ space: 10 }) {
-                Button("打印").width('90%').height(50).onClick(() => {
+                Button('打印').width('90%').height(50).onClick(() => {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
@@ -368,7 +368,7 @@ struct Index {
     build() {
         Scroll() {
             Column({ space: 10 }) {
-                Button("打印").width('90%').height(50).onClick(() => {
+                Button('打印').width('90%').height(50).onClick(() => {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
@@ -431,7 +431,7 @@ struct Index {
     build() {
         Scroll() {
             Column({ space: 10 }) {
-                Button("打印").width('90%').height(50).onClick(() => {
+                Button('打印').width('90%').height(50).onClick(() => {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {
@@ -494,7 +494,7 @@ struct Index {
     build() {
         Scroll() {
             Column({ space: 10 }) {
-                Button("打印").width('90%').height(50).onClick(() => {
+                Button('打印').width('90%').height(50).onClick(() => {
                     let filePath = '/data/storage/el2/base/haps/entry/files/test.pdf';
                     let context = this.getUIContext().getHostContext();
                     print.print([fileUri.getUriFromPath(filePath)], context).then((printTask: print.PrintTask) => {

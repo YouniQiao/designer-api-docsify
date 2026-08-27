@@ -3,9 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKitManager';
-import notificationSubscribe from '@kit.NotificationKitSubscribe';
-import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## supportDoNotDisturbMode
@@ -75,7 +72,7 @@ function supportDoNotDisturbMode(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | 以Promise形式返回获取是否支持免打扰功能的结果。 |
+| Promise&lt;boolean&gt; | 以Promise形式返回获取是否支持免打扰功能的结果。 |
 
 **示例**
 

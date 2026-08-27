@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import sendableColorSpaceManager from '@kit.ArkGraphics2D';
+import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## create
@@ -28,7 +28,7 @@ Creates a criterion color space management instance that is sendable.
 
 | Type | Description |
 | --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Sendable color space object created. |
+| ColorSpaceManager | Sendable color space object created. |
 
 **Error codes:**
 
@@ -70,7 +70,7 @@ Creates a custom color space object that is sendable.
 
 | Type | Description |
 | --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Sendable color space object created. |
+| ColorSpaceManager | Sendable color space object created. |
 
 **Error codes:**
 

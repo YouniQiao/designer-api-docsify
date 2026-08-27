@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import workScheduler from '@kit.BackgroundTasksKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## resetExecFrequency
@@ -28,7 +28,7 @@ function resetExecFrequency(uid: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | number | 是 | 应用uid。 取值限定为整数。 |
+| uid | number | 是 | 应用uid。取值限定为整数。 |
 
 **错误码：**
 

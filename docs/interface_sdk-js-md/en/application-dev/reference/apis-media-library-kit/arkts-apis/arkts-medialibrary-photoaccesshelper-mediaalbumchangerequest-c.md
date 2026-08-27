@@ -11,7 +11,7 @@ Provides APIs for managing the media album change request.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addAssets
@@ -30,7 +30,7 @@ Add assets to the album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Array of assets to add. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of assets to add. |
 
 **Error codes:**
 
@@ -86,7 +86,7 @@ Constructor used to initialize a new object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | Yes | Album to change. |
+| album | Album | Yes | Album to change. |
 
 **Error codes:**
 
@@ -223,7 +223,7 @@ Obtains the album in the current album change request.
 
 | Type | Description |
 | --- | --- |
-| [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | Album obtained. |
+| Album | Album obtained. |
 
 **Error codes:**
 
@@ -268,7 +268,7 @@ Removes assets from the album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Array of assets to remove. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of assets to remove. |
 
 **Error codes:**
 
@@ -314,10 +314,15 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setAlbumName(name: string): void
 ```
 
-Sets the album name.The album name must meet the following requirements:  
+Sets the album name.
+
+The album name must meet the following requirements:
+
 - The total length of the album name must be between 1 and 255 characters.  
-- It must not contain any invalid characters, which are:  
-. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
+- It must not contain any invalid characters, which are:
+
+. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+
 - It is case-insensitive.  
 - Duplicate album names are not allowed.
 

@@ -35,7 +35,9 @@ id: string
 parentX: number
 ```
 
-按压点相对于父组件左上角的x轴坐标。单位：vp
+按压点相对于父组件左上角的x轴坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -53,7 +55,9 @@ parentX: number
 parentY: number
 ```
 
-按压点相对于父组件左上角的y轴坐标。单位：vp
+按压点相对于父组件左上角的y轴坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -89,7 +93,9 @@ rect: RectResult
 windowX: number
 ```
 
-按压点相对于窗口左上角的x轴坐标。单位：vp
+按压点相对于窗口左上角的x轴坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -107,7 +113,9 @@ windowX: number
 windowY: number
 ```
 
-按压点相对于窗口左上角的y轴坐标。单位：vp
+按压点相对于窗口左上角的y轴坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -125,7 +133,9 @@ windowY: number
 x: number
 ```
 
-按压点相对于子组件左上角的x轴坐标。单位：vp
+按压点相对于子组件左上角的x轴坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -143,7 +153,9 @@ x: number
 y: number
 ```
 
-按压点相对于子组件左上角的y轴坐标。单位：vp
+按压点相对于子组件左上角的y轴坐标。
+
+单位：vp
 
 **类型：** number
 

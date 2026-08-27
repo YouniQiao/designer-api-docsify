@@ -1,6 +1,8 @@
 # HeapMemoryThreshold
 
-Describes the heap memory threshold at which the registered callback is triggered after a GC.@interface HeapMemoryThreshold
+Describes the heap memory threshold at which the registered callback is triggered after a GC.
+
+@interface HeapMemoryThreshold
 
 **Since:** 24
 
@@ -9,8 +11,6 @@ Describes the heap memory threshold at which the registered callback is triggere
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## localHeapThreshold

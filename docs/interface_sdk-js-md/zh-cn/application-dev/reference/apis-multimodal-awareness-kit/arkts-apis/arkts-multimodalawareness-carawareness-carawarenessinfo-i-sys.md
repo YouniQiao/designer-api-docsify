@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import carAwareness from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## awarenessEvent
@@ -56,7 +56,7 @@ capability: Capability
 timestamp: number
 ```
 
-时间戳。 单位为：毫秒。
+时间戳。单位为：毫秒。
 
 **类型：** number
 

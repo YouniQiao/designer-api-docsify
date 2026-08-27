@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import config from '@kit.AccessibilityKit.config';
-import accessibility from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
-import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
@@ -16,7 +13,9 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 function on(type: 'accessibilityStateChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the state changes of the accessibility application. This API uses an asynchronous callback to return the result.To obtain information about accessibility applications in the system, you are advised to use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md).
+Subscribes to the state changes of the accessibility application. This API uses an asynchronous callback to return the result.
+
+To obtain information about accessibility applications in the system, you are advised to use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md).
 
 > **NOTE：**
 > 
@@ -87,7 +86,9 @@ struct Index {
 function on(type: 'touchGuideStateChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the state changes of touch guide mode. This API uses an asynchronous callback to return the result.To obtain information about accessibility applications in the system, you are advised to use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md).
+Subscribes to the state changes of touch guide mode. This API uses an asynchronous callback to return the result.
+
+To obtain information about accessibility applications in the system, you are advised to use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md).
 
 > **NOTE：**
 > 

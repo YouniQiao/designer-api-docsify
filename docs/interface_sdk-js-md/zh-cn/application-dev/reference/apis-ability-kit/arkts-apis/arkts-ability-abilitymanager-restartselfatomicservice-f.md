@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityManager from '@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## restartSelfAtomicService
@@ -35,7 +35,7 @@ function restartSelfAtomicService(context: Context): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | 是 | 当前Ability的上下文。   **说明：**当前仅支持 [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)。&lt;/br&gt; |
+| context | [Context](arkts-ability-context-c.md) | 是 | 当前Ability的上下文。   **说明：**当前仅支持[UIAbilityContext](arkts-ability-uiabilitycontext-c.md)。&lt;/br&gt; |
 
 **错误码：**
 

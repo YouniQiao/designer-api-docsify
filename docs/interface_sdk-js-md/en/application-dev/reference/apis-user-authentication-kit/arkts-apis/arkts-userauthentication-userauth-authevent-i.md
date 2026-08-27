@@ -13,8 +13,7 @@ Provides an asynchronous callback to return the authentication event information
 ## Modules to Import
 
 ```TypeScript
-import userAuth from '@kit.UserAuthenticationKit';
-import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## callback
@@ -37,7 +36,7 @@ Called to return the authentication result or authentication tip information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | [EventInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-update-eventinfo-i-sys.md) | Yes | Authentication result or tip information. |
+| result | EventInfo | Yes | Authentication result or tip information. |
 
 **Examples**
 

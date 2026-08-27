@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## startStream
@@ -12,7 +12,7 @@ import abilityConnectionManager from '@kit.DistributedServiceKit';
 function startStream(streamId: number): void
 ```
 
-启动指定传输流，使传输流开始发送或接收视频数据。启动前需确保传输流已完成Surface绑定， 否则无法正常启动。需与stopStream()方法配对使用，使用完毕后应调用stopStream()停止传输流， 最后调用destroyStream()销毁传输流以释放资源。
+启动指定传输流，使传输流开始发送或接收视频数据。启动前需确保传输流已完成Surface绑定，否则无法正常启动。需与stopStream()方法配对使用，使用完毕后应调用stopStream()停止传输流，最后调用destroyStream()销毁传输流以释放资源。
 
 **起始版本：** 18
 

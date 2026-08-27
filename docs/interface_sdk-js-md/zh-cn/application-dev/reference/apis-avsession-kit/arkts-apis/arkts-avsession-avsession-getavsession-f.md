@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## getAVSession
@@ -12,7 +12,9 @@ import avSession from '@kit.AVSessionKit';
 function getAVSession(context: Context): Promise<AVSession>
 ```
 
-获取会话对象。使用Promise异步回调。该接口可将当前进程已创建过的会话对象返回，如果没有创建过会话对象，该接口调用会失败并抛出异常。
+获取会话对象。使用Promise异步回调。
+
+该接口可将当前进程已创建过的会话对象返回，如果没有创建过会话对象，该接口调用会失败并抛出异常。
 
 **起始版本：** 22
 
@@ -24,7 +26,7 @@ function getAVSession(context: Context): Promise<AVSession>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 需要使用UIAbilityContext，用于系统获取应用组件的相关信息。 |
+| context | Context | 是 | 需要使用UIAbilityContext，用于系统获取应用组件的相关信息。 |
 
 **返回值：**
 

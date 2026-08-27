@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import NotificationSubscriberExtensionContext from '@kit.NotificationKit';
+import { NotificationSubscriberExtensionContext } from '@kit.NotificationKit';
 ```
 
 ## Summary

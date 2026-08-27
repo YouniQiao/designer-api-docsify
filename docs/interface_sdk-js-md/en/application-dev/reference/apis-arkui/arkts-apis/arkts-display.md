@@ -9,7 +9,7 @@ The **Display** module provides APIs for managing displays, such as obtaining in
 ## Modules to Import
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -51,10 +51,10 @@ import display from '@kit.ArkUI';
 | [on](arkts-arkui-display-on-f.md#onadd-remove-change) | Subscribes to display changes. |
 | [on](arkts-arkui-display-on-f.md#onadd-remove-change) | Subscribes to display changes. |
 | [on](arkts-arkui-display-on-f.md#onadd-remove-change) | Subscribes to display changes. |
-| [on](arkts-arkui-display-on-f.md#onfoldstatuschange) | Subscribes to fold status change events of the foldable device.To subscribe to display mode change events of foldable devices, use display.on('foldDisplayModeChange').The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status.To check whether the content is displayed on the inner or outer screen of the foldable device, use display.on('foldDisplayModeChange'). |
+| [on](arkts-arkui-display-on-f.md#onfoldstatuschange) | Subscribes to fold status change events of the foldable device. |
 | [on](arkts-arkui-display-on-f.md#onfoldanglechange) | Subscribes to folding angle change events of the foldable device. Note that there are two folding angles for dual- fold axis devices. When oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. |
 | [on](arkts-arkui-display-on-f.md#oncapturestatuschange) | Subscribes to events indicating the status of the device's screen content is being captured. |
-| [on](arkts-arkui-display-on-f.md#onfolddisplaymodechange) | Subscribes to display mode change events of the foldable device.To subscribe to fold status change events of foldable devices, use display.on('foldStatusChange').The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status. |
+| [on](arkts-arkui-display-on-f.md#onfolddisplaymodechange) | Subscribes to display mode change events of the foldable device. |
 | [on](arkts-arkui-display-on-f.md#onbrightnessinfochange) | Subscribes to events related to screen brightness information changes. If the screen does not support HDR, the **currentHeadroom** and **maxHeadroom** fields in the [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
 | [onChangeWithAttribute](arkts-arkui-display-onchangewithattribute-f.md) | Subscribes to changes of specified attributes of a display. |
 | [setVirtualScreenSurface](arkts-arkui-display-setvirtualscreensurface-f.md) | Sets a surface for a virtual screen. This API uses a promise to return the result. |
@@ -82,7 +82,7 @@ import display from '@kit.ArkUI';
 | --- | --- |
 | [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) | Describes the screen brightness information. The information comes from the underlying screen data. |
 | [CutoutInfo](arkts-arkui-display-cutoutinfo-i.md) | Describes the unusable area of a display, including punch hole, notch, and curved area of a waterfall display. |
-| [Display](arkts-arkui-display-display-i.md) | Implements a Display instance, with attributes and APIs defined.Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance. |
+| [Display](arkts-arkui-display-display-i.md) | Implements a Display instance, with attributes and APIs defined. |
 | [DisplayPhysicalResolution](arkts-arkui-display-displayphysicalresolution-i.md) | Describes the display mode of a device and the corresponding physical screen resolution information. |
 | [FoldCreaseRegion](arkts-arkui-display-foldcreaseregion-i.md) | Describes the crease region of a foldable device. |
 | [Position](arkts-arkui-display-position-i.md) | Describes a coordinate position. In the global coordinate system, the origin is the top-left corner of the primary screen. In the relative coordinate system, the origin is the top-left corner of the specified screen. |
@@ -97,7 +97,7 @@ import display from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [Display](arkts-arkui-display-display-i-sys.md) | Implements a Display instance, with attributes and APIs defined.Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance. |
+| [Display](arkts-arkui-display-display-i-sys.md) | Implements a Display instance, with attributes and APIs defined. |
 <!--DelEnd-->
 
 ### Enums

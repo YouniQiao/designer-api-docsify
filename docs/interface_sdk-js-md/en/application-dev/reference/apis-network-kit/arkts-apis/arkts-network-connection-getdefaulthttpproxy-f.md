@@ -78,7 +78,7 @@ Obtains the default HTTP proxy configuration of the network. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;HttpProxy & gt; | Promise used to return the result. |
+| Promise&lt;HttpProxy&gt; | Promise used to return the result. |
 
 **Error codes:**
 

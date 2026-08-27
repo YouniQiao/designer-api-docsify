@@ -121,7 +121,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cardEmulation from '@kit.ConnectivityKit';
+import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -130,27 +130,27 @@ import cardEmulation from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [hasHceCapability(Standard NFC Card Emulation)](arkts-connectivity-cardemulation-hashcecapability-f.md) | Checks whether the device supports HCE. |
-| [isDefaultService(Standard NFC Card Emulation)](arkts-connectivity-cardemulation-isdefaultservice-f.md) | Checks whether an application is the default application of the specified service type. |
-| [isSupported(Standard NFC Card Emulation)](arkts-connectivity-cardemulation-issupported-f.md) | Checks whether a certain type of card emulation is supported. |
+| [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md) | Checks whether the device supports HCE. |
+| [isDefaultService](arkts-connectivity-cardemulation-isdefaultservice-f.md) | Checks whether an application is the default application of the specified service type. |
+| [isSupported](arkts-connectivity-cardemulation-issupported-f.md) | Checks whether a certain type of card emulation is supported. |
 
 <!--Del-->
 ### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getPaymentServices(Standard NFC Card Emulation)](arkts-connectivity-cardemulation-getpaymentservices-f-sys.md) | Obtains all payment services. If an application declares the support for the HCE feature and **payment-aid**, the application is contained in the payment service list. For details, see [HCE and AID Declaration](../../../reference/apis-connectivity-kit/js-apis-cardEmulation.md#hce-and-aid-declaration). |
+| [getPaymentServices](arkts-connectivity-cardemulation-getpaymentservices-f-sys.md) | Obtains all payment services. If an application declares the support for the HCE feature and **payment-aid**, the application is contained in the payment service list. For details, see [HCE and AID Declaration](../../../reference/apis-connectivity-kit/js-apis-cardEmulation.md#hce-and-aid-declaration). |
 <!--DelEnd-->
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [HceService(Standard NFC Card Emulation)](arkts-connectivity-cardemulation-hceservice-c.md) | Provides APIs for implementing HCE, including receiving Application Protocol Data Units (APDUs) from the peer card reader and sending a response. Before using HCE-related APIs, check whether the device supports HCE. |
+| [HceService](arkts-connectivity-cardemulation-hceservice-c.md) | Provides APIs for implementing HCE, including receiving Application Protocol Data Units (APDUs) from the peer card reader and sending a response. Before using HCE-related APIs, check whether the device supports HCE. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [CardType(Standard NFC Card Emulation)](arkts-connectivity-cardemulation-cardtype-e.md) | Enumerates the types of services used by the card emulation application. |
-| [FeatureType(Standard NFC Card Emulation)](arkts-connectivity-cardemulation-featuretype-e.md) | Enumerates the NFC card emulation types. |
+| [CardType](arkts-connectivity-cardemulation-cardtype-e.md) | Enumerates the types of services used by the card emulation application. |
+| [FeatureType](arkts-connectivity-cardemulation-featuretype-e.md) | Enumerates the NFC card emulation types. |

@@ -23,8 +23,8 @@ function getDistanceBetweenLocations(location1: Location, location2: Location): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| location1 | [Location](arkts-location-geolocationmanager-location-i.md) | 是 | 位置1。 |
-| location2 | [Location](arkts-location-geolocationmanager-location-i.md) | 是 | 位置2。 |
+| location1 | Location | 是 | 位置1。 |
+| location2 | Location | 是 | 位置2。 |
 
 **返回值：**
 

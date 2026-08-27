@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## getIpAddress
@@ -102,7 +102,7 @@ Obtains the device IP address based on the network interface. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the device IP address obtained. |
+| Promise&lt;string&gt; | Promise used to return the device IP address obtained. |
 
 **Error codes:**
 

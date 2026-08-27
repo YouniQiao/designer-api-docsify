@@ -9,8 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## constructor
@@ -80,7 +78,7 @@ isAnyArrayBuffer(value: Object): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检查结果。如果入参为 ArrayBuffer 或 SharedArrayBuffer 类型，则返回 **true**；否则返回 **false**。 |
+| boolean | 检查结果。如果入参为 ArrayBuffer 或 SharedArrayBuffer 类型，则返回 **true**；否则返回**false**。 |
 
 **示例**
 
@@ -411,7 +409,7 @@ isBoxedPrimitive(value: Object): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检查结果。如果入参为 Boolean、Number、String 或 Symbol 类型，则返回 **true**；否则返回 **false**。 |
+| boolean | 检查结果。如果入参为 Boolean、Number、String 或 Symbol 类型，则返回 **true**；否则返回**false**。 |
 
 **示例**
 

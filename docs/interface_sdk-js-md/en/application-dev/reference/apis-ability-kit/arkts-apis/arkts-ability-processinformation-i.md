@@ -62,7 +62,8 @@ Type of the bundle running in the process.
 isPreload?: boolean
 ```
 
-Indicates whether the process is in the preload state.  
+Indicates whether the process is in the preload state.
+
 - `true`: The process is currently in the preload state.  
 - `false`: The process is either not a preload process, or its preload state has been consumed.
 

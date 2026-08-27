@@ -9,7 +9,7 @@ Defines image source initialization options.
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## sourceDensity
@@ -18,7 +18,11 @@ import image from '@kit.ImageKit';
 sourceDensity: number
 ```
 
-Pixel density of the image resource, in ppi.If **desiredSize** is not set in [DecodingOptions](arkts-image-image-decodingoptions-i.md) and **SourceOptions.sourceDensity** and **DecodingOptions.fitDensity** are not 0, the PixelMap output after decoding will be scaled.The formula for calculating the width after scaling is as follows (the same applies to the height): (width * fitDensity + (sourceDensity &gt;  
+Pixel density of the image resource, in ppi.
+
+If **desiredSize** is not set in [DecodingOptions](arkts-image-image-decodingoptions-i.md) and **SourceOptions.sourceDensity** and **DecodingOptions.fitDensity** are not 0, the PixelMap output after decoding will be scaled.
+
+The formula for calculating the width after scaling is as follows (the same applies to the height): (width * fitDensity + (sourceDensity &gt;  
 > 1)) / sourceDensity.
 
 **Type:** number

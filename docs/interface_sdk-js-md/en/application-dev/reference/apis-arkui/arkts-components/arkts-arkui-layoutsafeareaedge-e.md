@@ -1,6 +1,8 @@
 # LayoutSafeAreaEdge
 
-Define the edges for expanding the safe area in layout.@enum { number }
+Define the edges for expanding the safe area in layout.
+
+@enum { number }
 
 **Since:** 12
 

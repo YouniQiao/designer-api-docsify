@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import trash from '@kit.CoreFileKit';
+import { trash } from '@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -30,7 +30,7 @@ function listFile(): Array<FileInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;FileInfo & gt; | 已获取的文件和目录列表。 |
+| Array&lt;FileInfo&gt; | 已获取的文件和目录列表。 |
 
 **错误码：**
 

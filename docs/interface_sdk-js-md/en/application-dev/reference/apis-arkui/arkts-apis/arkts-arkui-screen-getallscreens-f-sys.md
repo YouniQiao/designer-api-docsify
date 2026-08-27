@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screen from '@kit.ArkUI';
-import screenshot from '@kit.ArkUIshot';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## getAllScreens
@@ -124,7 +123,7 @@ Obtains all screens. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;Screen & gt; & gt; | Promise used to return all the Screen objects obtained. |
+| Promise&lt;Array&lt;Screen&gt;&gt; | Promise used to return all the Screen objects obtained. |
 
 **Error codes:**
 
@@ -178,7 +177,7 @@ Obtains all screens. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;Screen & gt; & gt; | Promise used to return all the Screen objects obtained. |
+| Promise&lt;Array&lt;Screen&gt;&gt; | Promise used to return all the Screen objects obtained. |
 
 **Error codes:**
 

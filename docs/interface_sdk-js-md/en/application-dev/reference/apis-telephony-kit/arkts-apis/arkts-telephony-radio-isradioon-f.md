@@ -11,7 +11,8 @@
 function isRadioOn(slotId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the radio service is enabled on the SIM card in the specified slot. This API uses an asynchronous callback to return the result.  
+Checks whether the radio service is enabled on the SIM card in the specified slot. This API uses an asynchronous callback to return the result.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 7
@@ -60,7 +61,8 @@ radio.isRadioOn(slotId, (err: BusinessError, data: boolean) => {
 function isRadioOn(slotId?: number): Promise<boolean>
 ```
 
-Checks whether the radio service is enabled on the SIM card in the specified slot. This API uses a promise to return the result.  
+Checks whether the radio service is enabled on the SIM card in the specified slot. This API uses a promise to return the result.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 7
@@ -79,7 +81,7 @@ Checks whether the radio service is enabled on the SIM card in the specified slo
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -112,7 +114,8 @@ radio.isRadioOn(slotId).then((data: boolean) => {
 function isRadioOn(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the radio service is enabled on the primary SIM card. This API uses an asynchronous callback to return the result.  
+Checks whether the radio service is enabled on the primary SIM card. This API uses an asynchronous callback to return the result.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 7

@@ -112,7 +112,7 @@ Uses a callback to traverse each element in the **Stack** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, stack?: Stack & lt;T & gt;) = & gt; void | Yes | Callback invoked to traverse the elements in the Stack. |
+| callbackFn | (value: T, index?: number, stack?: Stack&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the Stack. |
 | thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**

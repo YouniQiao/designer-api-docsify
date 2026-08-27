@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## off('checkNotification')
@@ -30,7 +30,7 @@ Unsubscribes from notification events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'checkNotification' | Yes | Event type. The value is fixed to **'checkNotification'**. |
-| callback | (checkInfo: NotificationCheckInfo) = & gt; NotificationCheckResult | No | Pointer to the notification verification function. |
+| callback | (checkInfo: NotificationCheckInfo) =&gt; NotificationCheckResult | No | Pointer to the notification verification function. |
 
 **Error codes:**
 

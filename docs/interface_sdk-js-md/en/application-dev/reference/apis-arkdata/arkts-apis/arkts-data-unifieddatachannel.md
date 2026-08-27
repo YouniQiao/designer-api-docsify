@@ -11,7 +11,7 @@ As a part of the Unified Data Management Framework (UDMF), the **unifiedDataChan
 ## Modules to Import
 
 ```TypeScript
-import unifiedDataChannel from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## Summary
@@ -20,7 +20,7 @@ import unifiedDataChannel from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [convertRecordsToEntries](arkts-arkdata-unifieddatachannel-convertrecordstoentries-f.md) | Converts the provided data into a multi-style data structure, which is useful when the original data uses multiple records to represent different styles of the same data.This API is used only when the following rules are met: 1. The number of records in data is greater than 1. 2. The value of **unifiedData.properties.tag** is **records_to_entries_data_format**. |
+| [convertRecordsToEntries](arkts-arkdata-unifieddatachannel-convertrecordstoentries-f.md) | Converts the provided data into a multi-style data structure, which is useful when the original data uses multiple records to represent different styles of the same data. |
 | [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md) | Deletes data from the UDMF public data channel. This API uses an asynchronous callback to return the result. |
 | [deleteData](arkts-arkdata-unifieddatachannel-deletedata-f.md) | Deletes data from the UDMF public data channel. This API uses a promise to return the result. |
 | [insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md) | Inserts data to the UDMF public data channel. This API uses an asynchronous callback to return the unique identifier of the data inserted. |
@@ -59,9 +59,9 @@ import unifiedDataChannel from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md) | Defines type and quantity of the data to load.  - Used by the **data sender** to define the data range that can be provided. This field is mandatory.  - Used by the **data receiver** to define the expected data type and quantity. This field is optional. |
-| [DataLoadParams](arkts-arkdata-unifieddatachannel-dataloadparams-i.md) | Defines the data loading policy for the data sender in the lazy loading scenario.If both **loadHandler** and **delayedDataLoadHandler** are passed, **delayedDataLoadHandler** is preferentially used, and **loadHandler** does not take effect. |
-| [GetDataParams](arkts-arkdata-unifieddatachannel-getdataparams-i.md) | Represents the parameters for obtaining data from UDMF, including the destination directory, option for resolving file conflicts, and progress indicator type.For details, see [Obtaining Data Asynchronously Through Drag-and-Drop]. |
+| [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md) | Defines type and quantity of the data to load. |
+| [DataLoadParams](arkts-arkdata-unifieddatachannel-dataloadparams-i.md) | Defines the data loading policy for the data sender in the lazy loading scenario. |
+| [GetDataParams](arkts-arkdata-unifieddatachannel-getdataparams-i.md) | Represents the parameters for obtaining data from UDMF, including the destination directory, option for resolving file conflicts, and progress indicator type. |
 | [Options](arkts-arkdata-unifieddatachannel-options-i.md) | Defines the data operation performed by the UDMF. It includes three optional parameters: **intention**, **key**, and **visibility**. The three parameters can be left unspecified. For details, see the parameter description of the specific API. |
 | [ProgressInfo](arkts-arkdata-unifieddatachannel-progressinfo-i.md) | Represents the progress information. |
 
@@ -81,8 +81,8 @@ import unifiedDataChannel from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [DataLoadHandler](arkts-arkdata-unifieddatachannel-dataloadhandler-t.md) | Defines a handler for lazy data loading. The data sender can dynamically generate data based on the information passed by the data receiver to implement more flexible and precise data interaction policies.This API is a synchronous function and is applicable to simple service logic. If the service logic is complex and the execution time lasts for more than 3s, you are advised to use the asynchronous handler [DelayedDataLoadHandler](arkts-arkdata-unifieddatachannel-delayeddataloadhandler-t.md). |
+| [DataLoadHandler](arkts-arkdata-unifieddatachannel-dataloadhandler-t.md) | Defines a handler for lazy data loading. The data sender can dynamically generate data based on the information passed by the data receiver to implement more flexible and precise data interaction policies. |
 | [DataProgressListener](arkts-arkdata-unifieddatachannel-dataprogresslistener-t.md) | Defines the callback used to return the data retrieval progress information and data obtained. |
-| [DelayedDataLoadHandler](arkts-arkdata-unifieddatachannel-delayeddataloadhandler-t.md) | Defines a handler for lazy data loading. The data sender can dynamically generate data based on the information passed by the data receiver to implement more flexible and precise data interaction policies.This API is an asynchronous function, which uses a promise to return the result. It does not block the main thread and can be used to process time-consuming tasks with complex service logic. |
+| [DelayedDataLoadHandler](arkts-arkdata-unifieddatachannel-delayeddataloadhandler-t.md) | Defines a handler for lazy data loading. The data sender can dynamically generate data based on the information passed by the data receiver to implement more flexible and precise data interaction policies. |
 | [GetDelayData](arkts-arkdata-unifieddatachannel-getdelaydata-t.md) | Defines a function used to obtain a deferred **UnifiedData** object. Currently, it can be used only in the pasteboard application of the same device. |
 | [ValueType](arkts-arkdata-unifieddatachannel-valuetype-t.md) | Enumerates the data field types allowed in a unified data record. |

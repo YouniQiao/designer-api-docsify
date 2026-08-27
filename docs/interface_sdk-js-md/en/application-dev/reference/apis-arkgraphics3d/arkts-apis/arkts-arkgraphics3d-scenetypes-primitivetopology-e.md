@@ -1,6 +1,8 @@
 # PrimitiveTopology
 
-Enumerates the vertex processing methods.@enum { number }
+Enumerates the vertex processing methods.
+
+@enum { number }
 
 **Since:** 18
 

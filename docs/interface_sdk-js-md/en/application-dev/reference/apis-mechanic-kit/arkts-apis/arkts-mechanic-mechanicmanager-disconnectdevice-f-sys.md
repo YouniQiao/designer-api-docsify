@@ -33,7 +33,7 @@ Disconnect a device with mechanic id.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Result & gt; | Promise used to return the execution result. |
+| Promise&lt;Result&gt; | Promise used to return the execution result. |
 
 **Error codes:**
 

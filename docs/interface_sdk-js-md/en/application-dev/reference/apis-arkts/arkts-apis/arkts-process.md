@@ -9,7 +9,7 @@ The **process** module provides process management APIs, for example, APIs for o
 ## Modules to Import
 
 ```TypeScript
-import process from '@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## Summary
@@ -19,7 +19,7 @@ import process from '@kit.ArkTS';
 | Name | Description |
 | --- | --- |
 | [abort](arkts-arkts-process-abort-f.md) | Aborts a process and generates a core file. This method will cause a process to exit immediately. Exercise caution when using this method. |
-| [exit](arkts-arkts-process-exit-f.md) | Terminates this process.Exercise caution when using this API. After this API is called, the application exits. If the input parameter is not 0, data loss or exceptions may occur. |
+| [exit](arkts-arkts-process-exit-f.md) | Terminates this process. |
 | [getEnvironmentVar](arkts-arkts-process-getenvironmentvar-f.md) | Obtains the value of an environment variable. |
 | [getPastCpuTime](arkts-arkts-process-getpastcputime-f.md) | Obtains the CPU time (in milliseconds) from the time the process starts to the current time. |
 | [getStartRealtime](arkts-arkts-process-getstartrealtime-f.md) | Obtains the duration (excluding the system sleep time), in milliseconds, from the time the system starts to the time the process starts. |
@@ -48,7 +48,7 @@ import process from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [ProcessManager](arkts-arkts-process-processmanager-c.md) | Provides APIs for throwing exceptions during the addition of a process.Construct a **ProcessManager** object. |
+| [ProcessManager](arkts-arkts-process-processmanager-c.md) | Provides APIs for throwing exceptions during the addition of a process. |
 
 <!--Del-->
 ### Interfaces(System API)

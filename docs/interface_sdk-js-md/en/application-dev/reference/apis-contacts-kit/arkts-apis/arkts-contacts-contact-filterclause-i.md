@@ -9,7 +9,7 @@ Defines the contact filter criteria. Multiple filter criteria are ORed. If the p
 ## Modules to Import
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## dataItem

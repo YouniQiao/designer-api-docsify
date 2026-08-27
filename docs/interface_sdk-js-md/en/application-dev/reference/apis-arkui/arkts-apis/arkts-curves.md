@@ -9,7 +9,7 @@ The **Curves** module provides APIs for interpolation calculation to create step
 ## Modules to Import
 
 ```TypeScript
-import curves from '@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -60,3 +60,33 @@ import curves from '@kit.ArkUI';
 | Name | Description |
 | --- | --- |
 | [Curve](arkts-arkui-curves-curve-e.md) | Defines an interpolation curve. For details about the curves and animations, see <!--RP1--> [Bezier Curve](../../../../design/ux-design/animation-attributes.md)<!--RP1End-->. |
+
+## Examples
+
+```TypeScript
+// xxx.ets
+import { curves } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct ImageComponent {
+  @State widthSize: number = 200;
+  @State heightSize: number = 200;
+
+  build() {
+    Column() {
+      Text()
+        .margin({ top: 100 })
+        .width(this.widthSize)
+        .height(this.heightSize)
+        .backgroundColor(Color.Red)
+        .onClick(() => {
+          let curve = curves.cubicBezierCurve(0.25, 0.1, 0.25, 1.0);
+          this.widthSize = curve.interpolate(0.5) * this.widthSize;
+          this.heightSize = curve.interpolate(0.5) * this.heightSize;
+        })
+        .animation({ duration: 2000, curve: curves.stepsCurve(9, true) })
+    }.width('100%').height('100%')
+  }
+}
+```

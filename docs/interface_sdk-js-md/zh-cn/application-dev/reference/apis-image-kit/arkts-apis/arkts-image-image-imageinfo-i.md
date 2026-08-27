@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## alphaType
@@ -54,7 +54,7 @@ density: number
 isHdr: boolean
 ```
 
-true表示图片为高动态范围（HDR），false表示图片非高动态范围（SDR）。对于[ImageSource](arkts-image-image-imagesource-i.md)，代表源图片是否为HDR；对于 [PixelMap](arkts-image-image-pixelmap-i.md)，代表解码后的PixelMap是否为HDR。
+true表示图片为高动态范围（HDR），false表示图片非高动态范围（SDR）。对于[ImageSource](arkts-image-image-imagesource-i.md)，代表源图片是否为HDR；对于[PixelMap](arkts-image-image-pixelmap-i.md)，代表解码后的PixelMap是否为HDR。
 
 **类型：** boolean
 
@@ -68,7 +68,11 @@ true表示图片为高动态范围（HDR），false表示图片非高动态范�
 mimeType: string
 ```
 
-图片真实格式（MIME type）。图片解码和图片编码支持格式的范围不同，请避免直接将解码得到的图片真实格式作为图片编码时[PackingOption](arkts-image-image-packingoption-i.md)的format。可以使用ImageSource属性中的supportedFormats和 ImagePacker属性 中的supportedFormats查看解码和编码支持 的格式范围。
+图片真实格式（MIME type）。
+
+图片解码和图片编码支持格式的范围不同，请避免直接将解码得到的图片真实格式作为图片编码时[PackingOption](arkts-image-image-packingoption-i.md)的format。
+
+可以使用ImageSource属性中的supportedFormats和ImagePacker属性 中的supportedFormats查看解码和编码支持的格式范围。
 
 **类型：** string
 

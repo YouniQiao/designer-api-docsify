@@ -11,4 +11,4 @@
 
 | Name | Description |
 | --- | --- |
-| [InputEvent(Input Event)](arkts-input-multimodalinput-inputevent-inputevent-i.md) | The **inputEvent** module provides the basic events reported by the device.@interface InputEvent [since 9 - 11] |
+| [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md) | The **inputEvent** module provides the basic events reported by the device. |

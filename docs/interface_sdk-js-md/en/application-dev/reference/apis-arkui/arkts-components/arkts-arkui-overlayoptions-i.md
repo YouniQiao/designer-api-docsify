@@ -22,7 +22,9 @@
 align?: Alignment
 ```
 
-Alignment of the overlay relative to the component.Default value: **TopStart**
+Alignment of the overlay relative to the component.
+
+Default value: **TopStart**
 
 **Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 

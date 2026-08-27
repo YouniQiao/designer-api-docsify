@@ -1,6 +1,8 @@
 # PolygonMode
 
-控制多边形绘制模式的枚举。@enum { number }
+控制多边形绘制模式的枚举。
+
+@enum { number }
 
 **起始版本：** 23
 

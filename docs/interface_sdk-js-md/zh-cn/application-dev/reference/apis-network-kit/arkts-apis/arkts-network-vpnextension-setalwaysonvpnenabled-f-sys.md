@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import vpnExtension from '@kit.NetworkKit';
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## setAlwaysOnVpnEnabled
@@ -35,7 +35,7 @@ function setAlwaysOnVpnEnabled(enable: boolean, bundleName: string): Promise<voi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回值的Promise对象。 |
+| Promise&lt;void&gt; | 无返回值的Promise对象。 |
 
 **错误码：**
 

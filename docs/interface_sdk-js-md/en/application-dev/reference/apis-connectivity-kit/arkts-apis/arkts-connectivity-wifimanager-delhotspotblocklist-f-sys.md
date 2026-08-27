@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## delHotspotBlockList
@@ -27,7 +26,7 @@ Delete the station from block list, the station can access the hotspot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| stationInfo | [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md) | Yes | station which will be deleted in the block list. |
+| stationInfo | StationInfo | Yes | station which will be deleted in the block list. |
 
 **Error codes:**
 

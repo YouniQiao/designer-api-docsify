@@ -3,12 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputMethod from '@kit.IMEKit';
-import inputMethodEngine from '@kit.IMEKitEngine';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
-import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
-import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## getCurrentInputMethod
@@ -17,7 +12,7 @@ import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
 function getCurrentInputMethod(): InputMethodProperty
 ```
 
-使用同步方法获取当前输入法。 含义/功能：获取当前正在使用的输入法属性信息。 使用场景：当应用需要知道当前活跃的输入法是哪个（如判断输入法名称、获取输入法id用于后续切换操作）时使用。 使用后效果：返回当前输入法的InputMethodProperty对象。
+使用同步方法获取当前输入法。含义/功能：获取当前正在使用的输入法属性信息。使用场景：当应用需要知道当前活跃的输入法是哪个（如判断输入法名称、获取输入法id用于后续切换操作）时使用。使用后效果：返回当前输入法的InputMethodProperty对象。
 
 **起始版本：** 9
 

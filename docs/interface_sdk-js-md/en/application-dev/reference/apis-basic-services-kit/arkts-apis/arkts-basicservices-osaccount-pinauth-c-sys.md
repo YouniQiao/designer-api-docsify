@@ -11,7 +11,7 @@ Provides APIs for PIN authentication.
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## constructor

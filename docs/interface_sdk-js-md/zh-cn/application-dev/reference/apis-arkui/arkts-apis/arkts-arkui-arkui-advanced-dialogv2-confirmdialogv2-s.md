@@ -18,7 +18,9 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 onCheckedChange?: AdvancedDialogV2OnCheckedChange
 ```
 
-checkbox的选中状态改变事件。默认无事件。
+checkbox的选中状态改变事件。
+
+默认无事件。
 
 **起始版本：** 18
 
@@ -34,7 +36,9 @@ checkbox的选中状态改变事件。默认无事件。
 checked?: boolean
 ```
 
-checked为true时，表示checkbox已选中，为false时，表示未选中。默认值：false
+checked为true时，表示checkbox已选中，为false时，表示未选中。
+
+默认值：false
 
 **类型：** boolean
 
@@ -52,7 +56,9 @@ checked为true时，表示checkbox已选中，为false时，表示未选中。�
 checkTips?: ResourceStr
 ```
 
-checkbox的提示内容。默认不显示。
+checkbox的提示内容。
+
+默认不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -70,7 +76,9 @@ checkbox的提示内容。默认不显示。
 content?: ResourceStr
 ```
 
-确认弹出框内容。默认不显示。
+确认弹出框内容。
+
+默认不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -88,7 +96,9 @@ content?: ResourceStr
 primaryButton?: AdvancedDialogV2Button
 ```
 
-确认弹出框左侧按钮。默认不显示。
+确认弹出框左侧按钮。
+
+默认不显示。
 
 **类型：** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
@@ -106,7 +116,9 @@ primaryButton?: AdvancedDialogV2Button
 secondaryButton?: AdvancedDialogV2Button
 ```
 
-确认弹出框右侧按钮。默认不显示。
+确认弹出框右侧按钮。
+
+默认不显示。
 
 **类型：** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
@@ -124,7 +136,8 @@ secondaryButton?: AdvancedDialogV2Button
 title: ResourceStr
 ```
 
-确认弹出框标题。  
+确认弹出框标题。
+
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)

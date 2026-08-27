@@ -1,6 +1,14 @@
 # AlphabetIndexer properties/events
 
-When the width attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.The default value of the padding attribute is 4 vp.The maxFontScale and minFontScale attributes are both set to a constant value of 1, which means that they do not change with the system font size.In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
+When the width attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
+
+The default value of the padding attribute is 4 vp.
+
+The maxFontScale and minFontScale attributes are both set to a constant value of 1, which means that they do not change with the system font size.
+
+In addition to the universal attributes, the following attributes are supported.
+
+In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>
 
@@ -40,7 +48,11 @@ Sets the alignment style of the indexer pop-up window.
 autoCollapse(value: boolean)
 ```
 
-Sets whether to enable the adaptive collapse behavior for the indexer.When the first index item is **"#"**: Remaining items ≤ 9: Full display mode; 9 &lt; Remaining items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; remaining items &gt; 13: Adapts between short and number collapse modes based on the indexer height.When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 &lt; All items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; all items &gt; 13: Adapts between short and number collapse modes based on the indexer height.
+Sets whether to enable the adaptive collapse behavior for the indexer.
+
+When the first index item is **"#"**: Remaining items ≤ 9: Full display mode; 9 &lt; Remaining items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; remaining items &gt; 13: Adapts between short and number collapse modes based on the indexer height.
+
+When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 &lt; All items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; all items &gt; 13: Adapts between short and number collapse modes based on the indexer height.
 
 > **NOTE：**
 
@@ -120,7 +132,7 @@ Sets the text style for unselected items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](#font) | Yes | Text style of unselected items.Default value:API version 11 and earlier:{size:'12.0fp',style:FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12 and later:{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'} |
+| value | Font | Yes | Text style of unselected items.Default value:API version 11 and earlier:{size:'12.0fp',style:FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12 and later:{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'} |
 
 ## itemBorderRadius
 
@@ -246,7 +258,7 @@ Triggered when an index item is selected, with the callback parameter being the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (index: number) = & gt; void | Yes | Index of the selected item. |
+| callback | (index: number) =&gt; void | Yes | Index of the selected item. |
 
 ## popupBackground
 
@@ -254,7 +266,15 @@ Triggered when an index item is selected, with the callback parameter being the 
 popupBackground(value: ResourceColor)
 ```
 
-Sets the background color for the pop-up window.If this API is not called or the **value** parameter is set to **undefined**:In API version 11 and earlier versions, the default background color of the pop-up is **0xFFFFFFFF**, which is white.In API versions 12 to 24, the default background color is **#66808080**, which is translucent gray.Since API version 26.0.0, if neither **popupBackground** nor [popupBackgroundBlurStyle](#popupbackgroundblurstyle) is called or the **value** parameter is set to **undefined**, the **THIN** style of **[ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle)** is displayed by default on devices with high- and mid-level computing power, and the white background is displayed by default on devices with low-level computing power. If **popupBackgroundBlurStyle** is called and the **value** parameter is set to a valid value, the background color of the pop-up is **#66808080** by default, which is translucent gray.
+Sets the background color for the pop-up window.
+
+If this API is not called or the **value** parameter is set to **undefined**:
+
+In API version 11 and earlier versions, the default background color of the pop-up is **0xFFFFFFFF**, which is white.
+
+In API versions 12 to 24, the default background color is **#66808080**, which is translucent gray.
+
+Since API version 26.0.0, if neither **popupBackground** nor [popupBackgroundBlurStyle](#popupbackgroundblurstyle) is called or the **value** parameter is set to **undefined**, the **THIN** style of **[ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle)** is displayed by default on devices with high- and mid-level computing power, and the white background is displayed by default on devices with low-level computing power. If **popupBackgroundBlurStyle** is called and the **value** parameter is set to a valid value, the background color of the pop-up is **#66808080** by default, which is translucent gray.
 
 **Since:** 7
 
@@ -288,7 +308,7 @@ Sets the background blur style of the pop-up window. In versions earlier than AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Background blur style of the pop-up window.The background blur effect can affect [popupBackground](#popupbackground). You can disable the effect by setting it to **NONE**. |
+| value | BlurStyle | Yes | Background blur style of the pop-up window.The background blur effect can affect [popupBackground](#popupbackground). You can disable the effect by setting it to **NONE**. |
 
 ## popupColor
 
@@ -328,7 +348,7 @@ Sets the text style for the primary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](#font) | Yes | Text style of the primary index item in the pop-up window.Default value:{size:'24.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'} |
+| value | Font | Yes | Text style of the primary index item in the pop-up window.Default value:{size:'24.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'} |
 
 ## popupItemBackgroundColor
 
@@ -394,7 +414,7 @@ Sets the text style for the secondary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](#font) | Yes | Text style of the secondary index item in the pop-up window.Default value:{size:24,weight:FontWeight.Medium} |
+| value | Font | Yes | Text style of the secondary index item in the pop-up window.Default value:{size:24,weight:FontWeight.Medium} |
 
 ## popupPosition
 
@@ -414,7 +434,7 @@ Sets the position of the pop-up window relative to the center of the indexer's t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Position](../arkts-apis/arkts-arkui-display-position-i.md) | Yes | Position of the pop-up window relative to the center of the indexer's top border.Default value: **{x: 60.0, y: 48.0} |
+| value | Position | Yes | Position of the pop-up window relative to the center of the indexer's top border.Default value: **{x: 60.0, y: 48.0} |
 
 ## popupSelectedColor
 
@@ -488,7 +508,9 @@ Sets the text color for the unselected secondary index items in the pop-up windo
 selected(index: number)
 ```
 
-Sets the index of the selected item.Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Sets the index of the selected item.
+
+Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Since:** 8
 
@@ -560,7 +582,7 @@ Sets the text style for the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](#font) | Yes | Text style of the selected item.Default value:API version 11 and earlier:{size:'12.0fp',style:FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12 and later:{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'} |
+| value | Font | Yes | Text style of the selected item.Default value:API version 11 and earlier:{size:'12.0fp',style:FontStyle.Normal,weight:FontWeight.Regular,family:'HarmonyOS Sans'}API version 12 and later:{size:'10.0vp',style:FontStyle.Normal,weight:FontWeight.Medium,family:'HarmonyOS Sans'} |
 
 ## usingPopup
 

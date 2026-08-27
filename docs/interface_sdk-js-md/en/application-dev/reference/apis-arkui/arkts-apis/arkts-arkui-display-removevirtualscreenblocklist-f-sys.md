@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## removeVirtualScreenBlocklist
@@ -24,13 +24,13 @@ Removes windows from the list of windows that are not allowed to be displayed du
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowIds | Array & lt;number & gt; | Yes | List of window IDs. If a child window ID is passed in, it will not take effect. The window ID is an integer greater than 0. You are advised to call getWindowProperties() to obtain the window ID. |
+| windowIds | Array&lt;number&gt; | Yes | List of window IDs. If a child window ID is passed in, it will not take effect. The window ID is an integer greater than 0. You are advised to call getWindowProperties() to obtain the window ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

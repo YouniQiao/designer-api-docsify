@@ -82,7 +82,7 @@ Obtains the current mouse pointer size. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the mouse pointer size. The value ranges from 1 to 7. |
+| Promise&lt;number&gt; | Promise used to return the mouse pointer size. The value ranges from 1 to 7. |
 
 **Error codes:**
 

@@ -22,6 +22,7 @@ static show(value: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | A
 定义警告弹窗并弹出。
 
 > **说明：**
+
 showAlertDialog需先获取[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)实例后再进行调用。
 
 > 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
@@ -41,4 +42,4 @@ showAlertDialog需先获取[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.m
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) \| [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | 是 | 定义并显示 AlertDialog组件。<br>**起始版本：** 10 |
+| value | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) \| [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | 是 | 定义并显示AlertDialog组件。<br>**起始版本：** 10 |

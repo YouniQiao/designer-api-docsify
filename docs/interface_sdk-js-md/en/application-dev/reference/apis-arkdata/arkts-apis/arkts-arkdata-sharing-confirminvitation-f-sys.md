@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cloudData from '@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## confirmInvitation
@@ -25,7 +25,7 @@ Confirms the invitation based on the sharing invitation code and obtains the sha
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | invitationCode | string | Yes | Invitation code of the share. |
-| state | [State](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-state-e.md) | Yes | Confirmation state. |
+| state | State | Yes | Confirmation state. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;string&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -72,13 +72,13 @@ Confirms the invitation based on the sharing invitation code and obtains the sha
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | invitationCode | string | Yes | Invitation code of the share. |
-| state | [State](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-state-e.md) | Yes | Confirmation state. |
+| state | State | Yes | Confirmation state. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Result & lt;string & gt; & gt; | Promise used to return the result. |
+| Promise&lt;Result&lt;string&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

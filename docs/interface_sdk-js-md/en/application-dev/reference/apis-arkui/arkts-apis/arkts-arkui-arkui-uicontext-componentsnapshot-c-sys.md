@@ -61,7 +61,7 @@ Captures a snapshot of the area between two specified components. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Result of the snapshot. |
+| Promise&lt;image.PixelMap&gt; | Result of the snapshot. |
 
 **Error codes:**
 

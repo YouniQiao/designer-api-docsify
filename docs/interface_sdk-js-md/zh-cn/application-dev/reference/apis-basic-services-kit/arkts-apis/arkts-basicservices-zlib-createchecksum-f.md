@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import zlib from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## createChecksum

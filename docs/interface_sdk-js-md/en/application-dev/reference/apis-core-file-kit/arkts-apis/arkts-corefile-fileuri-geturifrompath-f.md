@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import fileUri from '@kit.CoreFileKit';
+import { fileUri } from '@kit.CoreFileKit';
 ```
 
 ## getUriFromPath

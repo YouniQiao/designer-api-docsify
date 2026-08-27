@@ -14,8 +14,7 @@ Implements an upload or download task. Before using this API, you must obtain a 
 ## Modules to Import
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## off
@@ -43,7 +42,7 @@ Unsubscribes from task progress events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'progress' | Yes | Event type.   - **'progress'**: task progress. |
-| callback | (progress: Progress) = & gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task progress events are unregistered. |
+| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task progress events are unregistered. |
 
 **Error codes:**
 
@@ -77,7 +76,7 @@ Unsubscribes from task completion events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'completed' | Yes | Event type.   - **'completed'**: task completion. |
-| callback | (progress: Progress) = & gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task completion events are unregistered. |
+| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task completion events are unregistered. |
 
 **Error codes:**
 
@@ -111,7 +110,7 @@ Unsubscribes from task failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'failed' | Yes | Event type.   - **'failed'**: task failure. |
-| callback | (progress: Progress) = & gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task failure events are unregistered. |
+| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task failure events are unregistered. |
 
 **Error codes:**
 
@@ -143,7 +142,7 @@ Unsubscribes from the foreground task pause event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'pause' | Yes | Event type.   - **'pause'**: task pause. |
-| callback | (progress: Progress) = & gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task pause events are unregistered. |
+| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task pause events are unregistered. |
 
 **Error codes:**
 
@@ -174,7 +173,7 @@ Unsubscribes from foreground task resume events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'resume' | Yes | Event type.   - **'resume'**: task resume. |
-| callback | (progress: Progress) = & gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task resume events are unregistered. |
+| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task resume events are unregistered. |
 
 **Error codes:**
 
@@ -205,7 +204,7 @@ Unsubscribes from the task removal event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'remove' | Yes | Event type.   - **'remove'**: task removal. |
-| callback | (progress: Progress) = & gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task removal events are unregistered. |
+| callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task removal events are unregistered. |
 
 **Error codes:**
 
@@ -333,7 +332,7 @@ Subscribes to task progress changes. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'progress' | Yes | Event type.   - **'progress'**: task progress. |
-| callback | (progress: Progress) = & gt; void | Yes | Callback to be invoked when the specified event occurs. |
+| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
@@ -367,7 +366,7 @@ Subscribes to task completion events. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'completed' | Yes | Event type.   - **'completed'**: task completion. |
-| callback | (progress: Progress) = & gt; void | Yes | Callback to be invoked when the specified event occurs. |
+| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
@@ -401,7 +400,7 @@ Subscribes to task failure events. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'failed' | Yes | Event type.   - **'failed'**: task failure. |
-| callback | (progress: Progress) = & gt; void | Yes | Callback to be invoked when the specified event occurs. |
+| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
@@ -433,7 +432,7 @@ Subscribes to task pause events. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'pause' | Yes | Event type.   - **'pause'**: task pause. |
-| callback | (progress: Progress) = & gt; void | Yes | Callback to be invoked when the specified event occurs. |
+| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
@@ -464,7 +463,7 @@ Subscribes to task resume events. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'resume' | Yes | Event type.   - **'resume'**: task resume. |
-| callback | (progress: Progress) = & gt; void | Yes | Callback to be invoked when the specified event occurs. |
+| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
@@ -495,7 +494,7 @@ Subscribes to task removal events. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'remove' | Yes | Event type.   - **'remove'**: task removal. |
-| callback | (progress: Progress) = & gt; void | Yes | Callback to be invoked when the specified event occurs. |
+| callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
@@ -699,7 +698,7 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -875,7 +874,7 @@ Resumes a paused task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -968,7 +967,7 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1008,7 +1007,10 @@ request.agent.create(context, config).then((task: request.agent.Task) => {
 start(callback: AsyncCallback<void>): void
 ```
 
-Starts a task. This API uses an asynchronous callback to return the result.Tasks in the following states can be started:
+Starts a task. This API uses an asynchronous callback to return the result.
+
+Tasks in the following states can be started:
+
 1. Task created by **request.agent.create**.
 2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
@@ -1090,7 +1092,10 @@ request.agent.create(context, config).then((task: request.agent.Task) => {
 start(): Promise<void>
 ```
 
-Starts a task. This API uses a promise to return the result.Tasks in the following states can be started:
+Starts a task. This API uses a promise to return the result.
+
+Tasks in the following states can be started:
+
 1. Task created by **request.agent.create**.
 2. Download tasks that are created by **request.agent.create** but have failed or paused.
 
@@ -1112,7 +1117,7 @@ Starts a task. This API uses a promise to return the result.Tasks in the followi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1258,7 +1263,7 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

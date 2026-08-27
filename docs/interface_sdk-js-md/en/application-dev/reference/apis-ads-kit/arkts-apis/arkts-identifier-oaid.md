@@ -15,7 +15,7 @@ This module provides the capability of obtaining and resetting the Open Anonymou
 ## Modules to Import
 
 ```TypeScript
-import identifier from '@kit.AdsKit';
+import { identifier } from '@kit.AdsKit';
 ```
 
 ## Summary
@@ -24,13 +24,13 @@ import identifier from '@kit.AdsKit';
 
 | Name | Description |
 | --- | --- |
-| [getOAID(OAID)](arkts-ads-identifier-getoaid-f.md) | Obtains the OAID. This API uses an asynchronous callback to return the result. |
-| [getOAID(OAID)](arkts-ads-identifier-getoaid-f.md) | Obtains the OAID. This API uses a promise to return the result. |
+| [getOAID](arkts-ads-identifier-getoaid-f.md) | Obtains the OAID. This API uses an asynchronous callback to return the result. |
+| [getOAID](arkts-ads-identifier-getoaid-f.md) | Obtains the OAID. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [resetOAID(OAID)](arkts-ads-identifier-resetoaid-f-sys.md) | Resets the OAID. |
+| [resetOAID](arkts-ads-identifier-resetoaid-f-sys.md) | Resets the OAID. |
 <!--DelEnd-->

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## clearUpApplicationData
@@ -32,7 +32,7 @@ Clears application data by bundle name. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the API call result. You can perform error handling or custom processing in this callback. |
+| Promise&lt;void&gt; | Promise used to return the API call result. You can perform error handling or custom processing in this callback. |
 
 **Error codes:**
 

@@ -11,7 +11,7 @@ Defines the quota policy for the specified network.
 ## Modules to Import
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## networkMatchRule

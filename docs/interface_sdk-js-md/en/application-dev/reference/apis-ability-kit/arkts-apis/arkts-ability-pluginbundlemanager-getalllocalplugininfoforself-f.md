@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import pluginBundleManager from '@kit.AbilityKit';
+import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllLocalPluginInfoForSelf
@@ -26,7 +26,7 @@ Obtains information about all local plugins installed on the current application
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;PluginBundleInfo & gt; & gt; | Promise used to return the list of PluginBundleInfos object. |
+| Promise&lt;Array&lt;PluginBundleInfo&gt;&gt; | Promise used to return the list of PluginBundleInfos object. |
 
 **Error codes:**
 

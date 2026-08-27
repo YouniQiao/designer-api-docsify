@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## flushCachedGnssLocations
@@ -67,7 +67,7 @@ function flushCachedGnssLocations(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象，返回true表示操作成功；返回false表示操作失败。 |
+| Promise&lt;boolean&gt; | Promise对象，返回true表示操作成功；返回false表示操作失败。 |
 
 **示例**
 

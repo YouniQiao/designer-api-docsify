@@ -91,7 +91,7 @@ Sets the delay for starting an ability using shortcut keys. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

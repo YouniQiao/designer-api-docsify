@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## setKeepAliveForAppServiceExtension
@@ -12,7 +12,7 @@ import appManager from '@kit.AbilityKit';
 function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean): Promise<void>
 ```
 
-为AppServiceExtensionAbility设置保活或取消保活。使用Promise异步回调。 该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。
+为AppServiceExtensionAbility设置保活或取消保活。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。
 
 > **说明：**
 > 
@@ -37,7 +37,7 @@ function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

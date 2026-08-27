@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
 ## cancel
@@ -18,7 +18,7 @@ import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from
 cancel(): void
 ```
 
-取消动画，会触发[onCancel](../../../reference/apis-arkui/js-apis-animator.md#属性)回调。此接口和 [finish](#finish)接口功能上没有区别，仅触发的回调不同，建议使用finish接口结束动画。
+取消动画，会触发[onCancel](../../../reference/apis-arkui/js-apis-animator.md#属性)回调。此接口和[finish](#finish)接口功能上没有区别，仅触发的回调不同，建议使用finish接口结束动画。
 
 **起始版本：** 6
 
@@ -64,7 +64,8 @@ animator.finish();
 oncancel: () => void
 ```
 
-动画被取消时回调。  
+动画被取消时回调。
+
 **说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onCancel。
 
 **起始版本：** 6
@@ -99,7 +100,8 @@ onCancel: () => void
 onfinish: () => void
 ```
 
-动画完成时回调。  
+动画完成时回调。
+
 **说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onFinish。
 
 **起始版本：** 6
@@ -134,7 +136,8 @@ onFinish: () => void
 onframe: (progress: number) => void
 ```
 
-接收到帧时回调。  
+接收到帧时回调。
+
 **说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onFrame。
 
 **起始版本：** 6
@@ -159,7 +162,9 @@ onframe: (progress: number) => void
 onFrame: (progress: number) => void
 ```
 
-接收到帧时回调。progress表示动画的当前值。取值范围为[AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md)定义的[begin, end]，默认取值范围为[0, 1]。
+接收到帧时回调。
+
+progress表示动画的当前值。取值范围为[AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md)定义的[begin, end]，默认取值范围为[0, 1]。
 
 **起始版本：** 12
 
@@ -181,7 +186,8 @@ onFrame: (progress: number) => void
 onrepeat: () => void
 ```
 
-动画重复时回调。  
+动画重复时回调。
+
 **说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onRepeat。
 
 **起始版本：** 6
@@ -328,7 +334,7 @@ struct AnimatorTest {
 reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 ```
 
-重置当前animator动画参数。与[reset](#reset)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)类型入参的支持。
+重置当前animator动画参数。与[reset](#reset)相比，新增对[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)类型入参的支持。
 
 **起始版本：** 18
 

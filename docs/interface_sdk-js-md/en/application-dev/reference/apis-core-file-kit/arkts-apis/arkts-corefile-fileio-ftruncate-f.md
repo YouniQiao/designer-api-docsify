@@ -32,7 +32,7 @@ Truncates a file based on the file descriptor. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

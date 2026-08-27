@@ -1,6 +1,8 @@
 # Element
 
-Element@interface Element
+Element
+
+@interface Element
 
 **Since:** 4
 
@@ -71,7 +73,7 @@ If 0.5 is returned, 50% of the current component is visible.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | { ratios: Array & lt;number & gt; } | Yes | Scope of Monitoring components. |
+| param | { ratios: Array&lt;number&gt; } | Yes | Scope of Monitoring components. |
 
 **Return value:**
 

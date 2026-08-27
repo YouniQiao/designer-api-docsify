@@ -25,7 +25,7 @@ Obtains the maximum memory (RAM allocation) available to the current application
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the maximum memory (RAM allocation) size, in MB. You can perform error processing or other custom processing based on the size. |
+| Promise&lt;number&gt; | Promise used to return the maximum memory (RAM allocation) size, in MB. You can perform error processing or other custom processing based on the size. |
 
 **Examples**
 

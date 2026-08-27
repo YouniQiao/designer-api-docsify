@@ -1,6 +1,6 @@
 # WifiP2PConfig
 
-P2P配置。 @interface WifiP2PConfig
+P2P配置。@interface WifiP2PConfig
 
 **起始版本：** 8
 
@@ -13,10 +13,7 @@ P2P配置。 @interface WifiP2PConfig
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## deviceAddress

@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## addDeviceConfig
@@ -25,13 +24,13 @@ function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 | 表示连接到WLAN网络的设备配置。 |
+| config | WifiDeviceConfig | 是 | 表示连接到WLAN网络的设备配置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 添加配置时返回{ |
+| Promise&lt;number&gt; | 添加配置时返回{ |
 
 **错误码：**
 
@@ -83,7 +82,7 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 | 表示连接到WLAN网络的设备配置。 |
+| config | WifiDeviceConfig | 是 | 表示连接到WLAN网络的设备配置。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 表示addDeviceConfig的回调函数。 |
 
 **错误码：**

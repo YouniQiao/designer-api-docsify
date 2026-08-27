@@ -10,7 +10,6 @@ Declare NodeParam
 
 ```TypeScript
 import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
-import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUIV2';
 ```
 
 ## container
@@ -19,7 +18,9 @@ import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeLis
 container?: () => void
 ```
 
-绑定在节点上的右键菜单组件，用户右键点击节点时显示该菜单，需通过@Builder函数定义。默认值：() =&gt; void
+绑定在节点上的右键菜单组件，用户右键点击节点时显示该菜单，需通过@Builder函数定义。
+
+默认值：() =&gt; void
 
 **起始版本：** 10
 
@@ -35,7 +36,13 @@ container?: () => void
 currentNodeId?: number
 ```
 
-当前子节点Id。取值范围：大于等于-1。不能为根节点id（即不能为-1），不能为null，否则会抛出异常。且不能设置两个相同的currentNodeId。默认值：-1
+当前子节点Id。
+
+取值范围：大于等于-1。
+
+不能为根节点id（即不能为-1），不能为null，否则会抛出异常。且不能设置两个相同的currentNodeId。
+
+默认值：-1
 
 **类型：** number
 
@@ -53,7 +60,9 @@ currentNodeId?: number
 editIcon?: ResourceStr
 ```
 
-编辑图标。若同时设置了symbolEditIconStyle，则以symbolEditIconStyle为准。默认值：空字符串
+编辑图标。若同时设置了symbolEditIconStyle，则以symbolEditIconStyle为准。
+
+默认值：空字符串
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -71,7 +80,9 @@ editIcon?: ResourceStr
 icon?: ResourceStr
 ```
 
-图标。若同时设置了symbolIconStyle，则以symbolIconStyle为准。默认值：空字符串
+图标。若同时设置了symbolIconStyle，则以symbolIconStyle为准。
+
+默认值：空字符串
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -89,7 +100,11 @@ icon?: ResourceStr
 isFolder?: boolean
 ```
 
-是否是目录。默认值：false true：是目录，可以包含子节点，支持展开/折叠操作；false：不是目录，为叶子节点。
+是否是目录。
+
+默认值：false
+
+true：是目录，可以包含子节点，支持展开/折叠操作；false：不是目录，为叶子节点。
 
 **类型：** boolean
 
@@ -107,7 +122,11 @@ isFolder?: boolean
 parentNodeId?: number
 ```
 
-父节点Id。取值范围：大于等于-1。默认值：-1，根节点id值为-1。若设置数值小于-1，做不生效处理。
+父节点Id。
+
+取值范围：大于等于-1。
+
+默认值：-1，根节点id值为-1。若设置数值小于-1，做不生效处理。
 
 **类型：** number
 
@@ -125,7 +144,9 @@ parentNodeId?: number
 primaryTitle?: ResourceStr
 ```
 
-主标题。默认值：空字符串
+主标题。
+
+默认值：空字符串
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -143,7 +164,9 @@ primaryTitle?: ResourceStr
 secondaryTitle?: ResourceStr
 ```
 
-副标题。默认值：空字符串
+副标题。
+
+默认值：空字符串
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -161,7 +184,9 @@ secondaryTitle?: ResourceStr
 selectedIcon?: ResourceStr
 ```
 
-选中图标。若同时设置了symbolSelectedIconStyle，则以symbolSelectedIconStyle为准。默认值：空字符串
+选中图标。若同时设置了symbolSelectedIconStyle，则以symbolSelectedIconStyle为准。
+
+默认值：空字符串
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -179,7 +204,9 @@ selectedIcon?: ResourceStr
 symbolEditIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol编辑图标，优先级大于editIcon。默认值：undefined
+Symbol编辑图标，优先级大于editIcon。
+
+默认值：undefined
 
 **类型：** SymbolGlyphModifier
 
@@ -197,7 +224,9 @@ Symbol编辑图标，优先级大于editIcon。默认值：undefined
 symbolIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol图标，优先级大于icon。默认值：undefined
+Symbol图标，优先级大于icon。
+
+默认值：undefined
 
 **类型：** SymbolGlyphModifier
 
@@ -215,7 +244,9 @@ Symbol图标，优先级大于icon。默认值：undefined
 symbolSelectedIconStyle?: SymbolGlyphModifier
 ```
 
-Symbol选中图标，优先级大于selectedIcon。默认值：undefined
+Symbol选中图标，优先级大于selectedIcon。
+
+默认值：undefined
 
 **类型：** SymbolGlyphModifier
 

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import Brightness, { BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
+import { Brightness, BrightnessModeResponse, BrightnessResponse, GetBrightnessModeOptions, GetBrightnessOptions, SetBrightnessModeOptions, SetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -69,9 +69,12 @@ success?: () => void
 value: number
 ```
 
-屏幕亮度，值为1-255之间的整数。  
-- 如果值小于等于0，系统按1处理。  
-- 如果值大于255，系统按255处理。  
+屏幕亮度，值为1-255之间的整数。
+
+- 如果值小于等于0，系统按1处理。
+
+- 如果值大于255，系统按255处理。
+
 - 如果值为小数，系统将处理为整数。例如设置为8.1，系统按8处理。
 
 **类型：** number

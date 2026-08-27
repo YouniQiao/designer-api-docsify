@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wantAgent, { WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## getWantAgent
@@ -12,7 +12,9 @@ import wantAgent, { WantAgent } from '@kit.AbilityKit';
 function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void
 ```
 
-Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned.<p>**NOTE：**: Third-party applications can set only their own abilities. </p>
+Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned.
+
+<p>**NOTE：**: Third-party applications can set only their own abilities. </p>
 
 **Since:** 9
 
@@ -24,7 +26,7 @@ Obtains a WantAgent object. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Yes | Information about the WantAgent object to obtain. |
+| info | WantAgentInfo | Yes | Information about the WantAgent object to obtain. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; | Yes | Callback used to return the WantAgent object. |
 
 **Error codes:**
@@ -95,7 +97,9 @@ try {
 function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 ```
 
-Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned.<p>**NOTE：**: Third-party applications can set only their own abilities. </p>
+Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned.
+
+<p>**NOTE：**: Third-party applications can set only their own abilities. </p>
 
 **Since:** 9
 
@@ -107,7 +111,7 @@ Obtains a WantAgent object. This API uses a promise to return the result. If the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | Yes | Information about the WantAgent object to obtain. |
+| info | WantAgentInfo | Yes | Information about the WantAgent object to obtain. |
 
 **Return value:**
 

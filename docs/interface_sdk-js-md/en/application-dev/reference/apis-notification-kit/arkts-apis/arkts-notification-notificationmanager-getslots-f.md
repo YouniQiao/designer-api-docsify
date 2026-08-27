@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getSlots
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 ```
 
-Obtains all notification slots of this application. This API uses an asynchronous callback to return the result.This API is used to batch query the configuration information of all notification slots created by the current application, including settings such as the type, reminder method, and level of each slot. This is suitable for scenarios where all slot configurations need to be viewed. The corresponding notification slots must be created through addSlot first; otherwise, the obtained result will be empty.
+Obtains all notification slots of this application. This API uses an asynchronous callback to return the result.
+
+This API is used to batch query the configuration information of all notification slots created by the current application, including settings such as the type, reminder method, and level of each slot. This is suitable for scenarios where all slot configurations need to be viewed. The corresponding notification slots must be created through addSlot first; otherwise, the obtained result will be empty.
 
 **Since:** 9
 
@@ -64,7 +66,9 @@ notificationManager.getSlots(getSlotsCallback);
 function getSlots(): Promise<Array<NotificationSlot>>
 ```
 
-Obtains all notification slots of this application. This API uses a promise to return the result.This API is used to batch query the configuration information of all notification slots created by the current application, including settings such as the type, reminder method, and level of each slot. This is suitable for scenarios where all slot configurations need to be viewed. The corresponding notification slots must be created through addSlot first; otherwise, the obtained result will be empty.
+Obtains all notification slots of this application. This API uses a promise to return the result.
+
+This API is used to batch query the configuration information of all notification slots created by the current application, including settings such as the type, reminder method, and level of each slot. This is suitable for scenarios where all slot configurations need to be viewed. The corresponding notification slots must be created through addSlot first; otherwise, the obtained result will be empty.
 
 **Since:** 9
 
@@ -82,7 +86,7 @@ removeAllSlots removes all notification
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;NotificationSlot & gt; & gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;NotificationSlot&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

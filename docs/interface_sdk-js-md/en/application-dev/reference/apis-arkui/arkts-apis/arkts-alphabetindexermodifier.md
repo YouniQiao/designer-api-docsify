@@ -6,4 +6,4 @@
 
 | Name | Description |
 | --- | --- |
-| [AlphabetIndexerModifier](arkts-arkui-alphabetindexermodifier-c.md) | Defines AlphabetIndexer Modifier@extends AlphabetIndexerAttribute @implements AttributeModifier & lt;AlphabetIndexerAttribute & gt; |
+| [AlphabetIndexerModifier](arkts-arkui-alphabetindexermodifier-c.md) | Defines AlphabetIndexer Modifier |

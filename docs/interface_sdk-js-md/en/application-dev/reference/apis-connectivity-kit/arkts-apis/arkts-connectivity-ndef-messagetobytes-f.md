@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## messageToBytes
@@ -24,7 +24,7 @@ Converts an NDEF message to bytes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ndefMessage | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | Yes | NDEF message to convert. |
+| ndefMessage | NdefMessage | Yes | NDEF message to convert. |
 
 **Return value:**
 

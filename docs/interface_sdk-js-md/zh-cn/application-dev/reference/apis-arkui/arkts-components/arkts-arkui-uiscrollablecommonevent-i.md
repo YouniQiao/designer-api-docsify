@@ -1,6 +1,8 @@
 # UIScrollableCommonEvent
 
-用于设置滚动事件回调。@extends UICommonEvent @interface UIScrollableCommonEvent
+用于设置滚动事件回调。
+
+@extends UICommonEvent @interface UIScrollableCommonEvent
 
 **继承/实现关系：** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-uicommonevent-i.md)
 
@@ -19,7 +21,9 @@
 setOnReachEnd(callback: Callback<void> | undefined): void
 ```
 
-设置onReachEnd事件的回调。方法入参为undefined时，会重置事件回调。
+设置onReachEnd事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
@@ -41,7 +45,9 @@ setOnReachEnd(callback: Callback<void> | undefined): void
 setOnReachStart(callback: Callback<void> | undefined): void
 ```
 
-设置onReachStart事件的回调。方法入参为undefined时，会重置事件回调。
+设置onReachStart事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
@@ -63,7 +69,9 @@ setOnReachStart(callback: Callback<void> | undefined): void
 setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 ```
 
-设置onScrollFrameBegin事件的回调。方法入参为undefined时，会重置事件回调。
+设置onScrollFrameBegin事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
@@ -85,7 +93,9 @@ setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 setOnScrollStart(callback: Callback<void> | undefined): void
 ```
 
-设置onScrollStart事件的回调。方法入参为undefined时，会重置事件回调。
+设置onScrollStart事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
@@ -107,7 +117,9 @@ setOnScrollStart(callback: Callback<void> | undefined): void
 setOnScrollStop(callback: Callback<void> | undefined): void
 ```
 
-设置onScrollStop事件的回调。方法入参为undefined时，会重置事件回调。
+设置onScrollStop事件的回调。
+
+方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 

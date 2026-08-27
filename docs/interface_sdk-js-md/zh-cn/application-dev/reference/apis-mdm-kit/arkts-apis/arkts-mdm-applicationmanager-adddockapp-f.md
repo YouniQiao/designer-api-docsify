@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## addDockApp
@@ -45,7 +45,7 @@ function addDockApp(admin: Want, bundleName: string, abilityName: string, index?
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 应用的包名。 |
 | abilityName | string | 是 | 应用的Ability名称，仅支持应用程序入口Ability。 |
-| index | number | 否 | 应用在快捷栏中的位置索引，默认值为99。 取值范围：[0,100)。 |
+| index | number | 否 | 应用在快捷栏中的位置索引，默认值为99。取值范围：[0,100)。 |
 
 **错误码：**
 

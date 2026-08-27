@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor
@@ -34,7 +34,7 @@ constructor(album: Album)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | 是 | 智慧相册。 |
+| album | Album | 是 | 智慧相册。 |
 
 **错误码：**
 
@@ -143,9 +143,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     fetchColumns: [],
     predicates: predicates
   };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
-  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
-  let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
+    let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
+    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+  } catch (err) {
+    console.error(`MediaAlbumChangeRequest constructorDemo failed with error: ${err.code}, ${err.message}`);
+  }
 }
 ```
 
@@ -184,7 +188,7 @@ static createAnalysisAlbumRequest(
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 传入Ability实例的Context。 |
 | name | string | 是 | 待创建相册的名称。 |
-| subtype | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | 是 | 待创建智慧相册的子类型。 |
+| subtype | AlbumSubtype | 是 | 待创建智慧相册的子类型。 |
 
 **返回值：**
 
@@ -316,8 +320,8 @@ setOrderPosition(assets: Array<PhotoAsset>, position: Array<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | 是 | 需要设置顺序位置的相册中资产。 |
-| position | Array & lt;number & gt; | 是 | 相册中资产的顺序位置。 |
+| assets | Array&lt;PhotoAsset&gt; | 是 | 需要设置顺序位置的相册中资产。 |
+| position | Array&lt;number&gt; | 是 | 相册中资产的顺序位置。 |
 
 **错误码：**
 
@@ -378,7 +382,9 @@ async function example(context: Context) {
 setRelationship(relationship: string): Promise<void>
 ```
 
-设置人像相册中的人物关系。支持的人物关系名称范围： | 唯一标识 | 含义 | | ---------- | ------- | | me | 我 | | son | 儿子 | | daughter | 女儿 | | wife | 妻子 | | husband | 丈夫 | | father | 爸爸 | | mother | 妈妈 | | colleague | 同事 | | friend | 朋友 | | classmate | 同学 | | best_friend_female | 闺蜜 | | boyfriend | 男朋友 | | girlfriend | 女朋友 | | family | 家人 | | maternal_grandfather | 外公 | | maternal_grandmother | 外婆 | | paternal_grandfather | 爷爷 | | paternal_grandmother | 奶奶 | | older_brother | 哥哥 | | older_sister | 姐姐 | | younger_brother | 弟弟 | | younger_sister | 妹妹 | | relative | 亲戚 | | other | 其他 |
+设置人像相册中的人物关系。
+
+支持的人物关系名称范围：| 唯一标识 | 含义 | | ---------- | ------- | | me | 我 | | son | 儿子 | | daughter | 女儿 | | wife | 妻子 | | husband | 丈夫 | | father | 爸爸 | | mother | 妈妈 | | colleague | 同事 | | friend | 朋友 | | classmate | 同学 | | best_friend_female | 闺蜜 | | boyfriend | 男朋友 | | girlfriend | 女朋友 | | family | 家人 | | maternal_grandfather | 外公 | | maternal_grandmother | 外婆 | | paternal_grandfather | 爷爷 | | paternal_grandmother | 奶奶 | | older_brother | 哥哥 | | older_sister | 姐姐 | | younger_brother | 弟弟 | | younger_sister | 妹妹 | | relative | 亲戚 | | other | 其他 |
 
 **起始版本：** 21
 
@@ -392,13 +398,13 @@ setRelationship(relationship: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| relationship | string | 是 | 需要设置的人物关系名称。 支持设置为空字符串，功能为取消当前设置的人物关系。 |
+| relationship | string | 是 | 需要设置的人物关系名称。支持设置为空字符串，功能为取消当前设置的人物关系。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **错误码：**
 
@@ -414,7 +420,7 @@ setRelationship(relationship: string): Promise<void>
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
 
-async function SetRelationshipExample(context: Context, relationship: string) {
+async function setRelationshipExample(context: Context, relationship: string) {
   try {
     console.info('setRelationship');
     let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);

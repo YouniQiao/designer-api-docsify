@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import asset from '@kit.AssetStoreKit';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## batchRemove
@@ -12,7 +12,11 @@ import asset from '@kit.AssetStoreKit';
 function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>
 ```
 
-批量删除符合条件的关键资产。使用Promise异步回调。批量删除的关键资产必须具有相同的[Tag.GROUP_ID](arkts-assetstore-asset-tagtype-e.md)和[Tag.REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tagtype-e.md)属性。批量删除的关键资产数量最大值为100。
+批量删除符合条件的关键资产。使用Promise异步回调。
+
+批量删除的关键资产必须具有相同的[Tag.GROUP_ID](arkts-assetstore-asset-tagtype-e.md)和[Tag.REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tagtype-e.md)属性。
+
+批量删除的关键资产数量最大值为100。
 
 **起始版本：** 26.0.0
 
@@ -28,7 +32,7 @@ function batchRemove(assetsToBeRemoved: Array<AssetMap>): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

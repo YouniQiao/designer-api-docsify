@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import missionManager from '@kit.AbilityKit';
+import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## getMissionSnapShot
@@ -88,7 +88,7 @@ Obtains the snapshot of a given mission. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;MissionSnapshot & gt; | Promise used to return the snapshot information obtained. |
+| Promise&lt;MissionSnapshot&gt; | Promise used to return the snapshot information obtained. |
 
 **Error codes:**
 

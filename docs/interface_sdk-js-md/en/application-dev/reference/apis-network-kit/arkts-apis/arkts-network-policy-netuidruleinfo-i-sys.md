@@ -11,7 +11,7 @@ Defines a unique network ID.
 ## Modules to Import
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## rule

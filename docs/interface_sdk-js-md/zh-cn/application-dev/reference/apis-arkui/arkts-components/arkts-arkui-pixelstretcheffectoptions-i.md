@@ -1,6 +1,8 @@
 # PixelStretchEffectOptions
 
-像素扩展属性集合，用于描述像素扩展的信息。@interface PixelStretchEffectOptions
+像素扩展属性集合，用于描述像素扩展的信息。
+
+@interface PixelStretchEffectOptions
 
 **起始版本：** 11
 
@@ -17,7 +19,9 @@
 bottom?: Length
 ```
 
-组件图像下边沿像素扩展距离。默认值：0vp
+组件图像下边沿像素扩展距离。
+
+默认值：0vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -37,7 +41,9 @@ bottom?: Length
 left?: Length
 ```
 
-组件图像左边沿像素扩展距离。默认值：0vp
+组件图像左边沿像素扩展距离。
+
+默认值：0vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -57,7 +63,9 @@ left?: Length
 right?: Length
 ```
 
-组件图像右边沿像素扩展距离。默认值：0vp
+组件图像右边沿像素扩展距离。
+
+默认值：0vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -77,7 +85,9 @@ right?: Length
 top?: Length
 ```
 
-组件图像上边沿像素扩展距离。默认值：0vp
+组件图像上边沿像素扩展距离。
+
+默认值：0vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

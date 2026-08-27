@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getIpInfo
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function getIpInfo(): IpInfo
 ```
 
-获取WLAN连接的IPv4信息。 IP信息包括主机IP地址、网关地址和DNS信息。
+获取WLAN连接的IPv4信息。IP信息包括主机IP地址、网关地址和DNS信息。
 
 **起始版本：** 9
 
@@ -25,7 +24,7 @@ function getIpInfo(): IpInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [IpInfo](arkts-connectivity-wifi-ipinfo-i.md) | 返回WLAN连接的IP信息。 |
+| IpInfo | 返回WLAN连接的IP信息。 |
 
 **错误码：**
 

@@ -10,7 +10,6 @@ Declare type SymbolOptions
 
 ```TypeScript
 import { OperationOption, OperationType, SelectOptions, SubHeader, SymbolOptions } from '@kit.ArkUI';
-import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, SubHeaderV2OperationType, SubHeaderV2OperationItem, SubHeaderV2OperationItemType } from '@kit.ArkUIV2';
 ```
 
 ## effectStrategy
@@ -19,8 +18,13 @@ import { SubHeaderV2IconType, SubHeaderV2Title, SubHeaderV2Select, SubHeaderV2, 
 effectStrategy?: SymbolEffectStrategy
 ```
 
-设置SymbolGlyph动效策略。默认值：SymbolEffectStrategy.NONE  
-**说明：**\$r('sys.symbol.ohos_*')中引用的资源仅ohos_wifi支持层级动效模式。
+设置SymbolGlyph动效策略。
+
+默认值：SymbolEffectStrategy.NONE
+
+**说明：**
+
+\$r('sys.symbol.ohos_*')中引用的资源仅ohos_wifi支持层级动效模式。
 
 **类型：** [SymbolEffectStrategy](../arkts-components/arkts-arkui-symboleffectstrategy-e.md)
 
@@ -38,7 +42,9 @@ effectStrategy?: SymbolEffectStrategy
 fontColor?: Array<ResourceColor>
 ```
 
-设置SymbolGlyph颜色。默认值：不同渲染策略下默认值不同。
+设置SymbolGlyph颜色。
+
+默认值：不同渲染策略下默认值不同。
 
 **类型：** Array&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt;
 
@@ -56,7 +62,13 @@ fontColor?: Array<ResourceColor>
 fontSize?: number | string | Resource
 ```
 
-设置SymbolGlyph大小。number类型取值范围：大于等于0。设置string类型时，支持number类型取值的字符串形式，可以附带单位，例如："10"，"10fp"。默认值：系统默认值。
+设置SymbolGlyph大小。
+
+number类型取值范围：大于等于0。
+
+设置string类型时，支持number类型取值的字符串形式，可以附带单位，例如："10"，"10fp"。
+
+默认值：系统默认值。
 
 **类型：** number \| string \| Resource
 
@@ -74,7 +86,13 @@ fontSize?: number | string | Resource
 fontWeight?: number | FontWeight | string
 ```
 
-设置SymbolGlyph粗细。number类型取值[100,900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“regular” 、“medium”分别对应FontWeight中相应的枚举值。默认值：FontWeight.Normal
+设置SymbolGlyph粗细。
+
+number类型取值[100,900]，取值间隔为100，默认为400，取值越大，字体越粗。
+
+string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“lighter”、“regular” 、“medium”分别对应FontWeight中相应的枚举值。
+
+默认值：FontWeight.Normal
 
 **类型：** number \| FontWeight \| string
 
@@ -92,8 +110,13 @@ fontWeight?: number | FontWeight | string
 renderingStrategy?: SymbolRenderingStrategy
 ```
 
-设置SymbolGlyph渲染策略。默认值：SymbolRenderingStrategy.SINGLE  
-**说明：**\$r('sys.symbol.ohos_*')中引用的资源仅ohos_trash_circle、ohos_folder_badge_plus、ohos_lungs支持分层与多色模式。
+设置SymbolGlyph渲染策略。
+
+默认值：SymbolRenderingStrategy.SINGLE
+
+**说明：**
+
+\$r('sys.symbol.ohos_*')中引用的资源仅ohos_trash_circle、ohos_folder_badge_plus、ohos_lungs支持分层与多色模式。
 
 **类型：** [SymbolRenderingStrategy](../arkts-components/arkts-arkui-symbolrenderingstrategy-e.md)
 

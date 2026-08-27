@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import cloudSync from '@kit.CoreFileKit';
-import cloudSyncManager from '@kit.CoreFileKitManager';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## getFailedFiles
@@ -85,7 +84,7 @@ getSuccessfulFiles(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 数组类型，返回缓存成功的文件URI列表。 |
+| Array&lt;string&gt; | 数组类型，返回缓存成功的文件URI列表。 |
 
 **错误码：**
 

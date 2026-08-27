@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import metadataBinding from '@kit.MultimodalAwarenessKit';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## decodeImage
@@ -30,7 +30,7 @@ Decodes the information carried in the image. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise object, which is used to return the encoded metadata of the image. |
+| Promise&lt;string&gt; | Promise object, which is used to return the encoded metadata of the image. |
 
 **Error codes:**
 

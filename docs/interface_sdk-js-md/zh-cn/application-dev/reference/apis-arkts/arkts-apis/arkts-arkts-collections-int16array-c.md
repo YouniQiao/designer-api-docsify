@@ -22,7 +22,7 @@
 [Symbol.iterator](): IterableIterator<number>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个 JavaScript 对象。 说明： 本接口不支持在.ets文件中使用。
+返回一个迭代器，迭代器的每一项都是一个 JavaScript 对象。说明：本接口不支持在.ets文件中使用。
 
 **起始版本：** 12
 
@@ -34,7 +34,7 @@
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;number & gt; | 返回一个迭代器。 |
+| IterableIterator&lt;number&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
@@ -60,7 +60,7 @@ at(index: number): number | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 要返回的元素的索引（从零开始），取值为整数。 如果`index &lt; 0`，则会访问`index + Int16Array.length`位置的元素。 |
+| index | number | 是 | 要返回的元素的索引（从零开始），取值为整数。如果`index &lt; 0`，则会访问`index + Int16Array.length`位置的元素。 |
 
 **返回值：**
 
@@ -139,7 +139,7 @@ constructor(elements: Iterable<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elements | Iterable & lt;number & gt; | 是 | 可迭代数字集合，用于构造ArkTS Int16Array 对象。 |
+| elements | Iterable&lt;number&gt; | 是 | 可迭代数字集合，用于构造ArkTS Int16Array对象。 |
 
 **错误码：**
 
@@ -165,7 +165,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; \ | ArrayBuffer | 是 | 用于构造ArkTS Int16Array的对象。当参数类型是ArrayBuffer时， buffer所占的字节数须是2的整数倍。 |
+| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Int16Array的对象。当参数类型是ArrayBuffer时，buffer所占的字节数须是2的整数倍。 |
 
 **错误码：**
 
@@ -191,7 +191,7 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | 是 | 用于构造ArkTS Int16Array的ArrayBuffer对象。buffer所占的字节数须是 2的整数倍。 |
+| buffer | ArrayBuffer | 是 | 用于构造ArkTS Int16Array的ArrayBuffer对象。buffer所占的字节数须是2的整数倍。 |
 | byteOffset | number | 否 | 指定buffer的字节偏移，从0开始，默认为**0**。 |
 | length | number | 否 | 指定ArkTS Int16Array的长度，默认为**0**。 |
 
@@ -221,7 +221,7 @@ copyWithin(target: number, start: number, end?: number): Int16Array
 | --- | --- | --- | --- |
 | target | number | 是 | 目标起始位置的下标，如果`target &lt; 0`，则会从`target + array.length`位置开始。 |
 | start | number | 是 | 源起始位置索引，如果`start &lt; 0`，则会从`start + Int16Array.length`位置开始。 |
-| end | number | 否 | 源终止位置下标（不包含end位置的元素），如果`end &lt; 0`，则会从`end + Int16Array.length`位置终止。 默认为ArkTS Int16Array的长度。 |
+| end | number | 否 | 源终止位置下标（不包含end位置的元素），如果`end &lt; 0`，则会从`end + Int16Array.length`位置终止。默认为ArkTS Int16Array的长度。 |
 
 **返回值：**
 
@@ -254,7 +254,7 @@ entries(): IterableIterator<[number, number]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;[number, number] & gt; | 新的迭代器对象。 |
+| IterableIterator&lt;[number, number]&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
@@ -287,7 +287,7 @@ every(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检查结果。如果所有元素都满足指定条件则返回true； 否则，返回false。 |
+| boolean | 检查结果。如果所有元素都满足指定条件则返回true；否则，返回false。 |
 
 **错误码：**
 
@@ -315,8 +315,8 @@ fill(value: number, start?: number, end?: number): Int16Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 待填充的值。 |
-| start | number | 否 | 开始填充的索引，如果`start &lt; 0`，则会从`start + Int16Array.length`位置开始。 默认值为**0**。 |
-| end | number | 否 | 结束填充的索引（不包括该元素），如果`end &lt; 0`，则会到`end + Int16Array.length`位置结束。 默认为ArkTS Int16Array的长度。 |
+| start | number | 否 | 开始填充的索引，如果`start &lt; 0`，则会从`start + Int16Array.length`位置开始。默认值为**0**。 |
+| end | number | 否 | 结束填充的索引（不包括该元素），如果`end &lt; 0`，则会到`end + Int16Array.length`位置结束。默认为ArkTS Int16Array的长度。 |
 
 **返回值：**
 
@@ -475,7 +475,7 @@ static from(arrayLike: ArrayLike<number>): Int16Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;number & gt; | 是 | 用于构造ArkTS Int16Array的ArrayLike对象。 |
+| arrayLike | ArrayLike&lt;number&gt; | 是 | 用于构造ArkTS Int16Array的ArrayLike对象。 |
 
 **返回值：**
 
@@ -501,7 +501,7 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;T & gt; | 是 | 用于构造ArkTS Int16Array的ArrayLike对象。 |
+| arrayLike | ArrayLike&lt;T&gt; | 是 | 用于构造ArkTS Int16Array的ArrayLike对象。 |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | 是 | 映射函数。 |
 
 **返回值：**
@@ -528,7 +528,7 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | Iterable & lt;number & gt; | 是 | 用于构造的可迭代对象。 |
+| arrayLike | Iterable&lt;number&gt; | 是 | 用于构造的可迭代对象。 |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;number, number&gt; | 否 | 映射函数。如果省略，则不对元素进行加工处理。 |
 
 **返回值：**
@@ -556,7 +556,7 @@ includes(searchElement: number, fromIndex?: number): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | searchElement | number | 是 | 待搜索的元素。 |
-| fromIndex | number | 否 | 开始搜索的索引，如果`fromIndex &lt; 0`，则会从`fromIndex + Int16Array.length`位置开始。 默认值为0。 |
+| fromIndex | number | 否 | 开始搜索的索引，如果`fromIndex &lt; 0`，则会从`fromIndex + Int16Array.length`位置开始。默认值为0。 |
 
 **返回值：**
 
@@ -590,7 +590,7 @@ indexOf(searchElement: number, fromIndex?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | searchElement | number | 是 | 待索引的值。 |
-| fromIndex | number | 否 | 搜索的起始下标。默认值为**0**。如果下标大于等于ArkTS Int16Array的长度， 则返回**-1**。如果提供的下标值是负数，则被当做距离数组尾部的偏移，从前到后搜索。 |
+| fromIndex | number | 否 | 搜索的起始下标。默认值为**0**。如果下标大于等于ArkTS Int16Array的长度，则返回**-1**。如果提供的下标值是负数，则被当做距离数组尾部的偏移，从前到后搜索。 |
 
 **返回值：**
 
@@ -656,7 +656,7 @@ keys(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;number & gt; | 新的迭代器对象。 |
+| IterableIterator&lt;number&gt; | 新的迭代器对象。 |
 
 **错误码：**
 
@@ -684,7 +684,7 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | searchElement | number | 是 | 待索引的值。 |
-| fromIndex | number | 否 | 搜索的起始下标。默认值为ArkTS Int16Array长度减1（即从末尾开始）。如果下标大于等于ArkTS Int16Array的长度， 则返回**-1**。如果提供的下标值是负数，则被当做距离数组尾部的偏移，从后到前搜索。 |
+| fromIndex | number | 否 | 搜索的起始下标。默认值为ArkTS Int16Array长度减1（即从末尾开始）。如果下标大于等于ArkTS Int16Array的长度，则返回**-1**。如果提供的下标值是负数，则被当做距离数组尾部的偏移，从后到前搜索。 |
 
 **返回值：**
 
@@ -717,7 +717,7 @@ map(callbackFn: TypedArrayMapCallback<number, Int16Array>): Int16Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Int16Array&gt; | 是 | 回调函数。回调执行期间不能修改当前Map对象，否则会触发并发修改错误。 map方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md)&lt;number, Int16Array&gt; | 是 | 回调函数。回调执行期间不能修改当前Map对象，否则会触发并发修改错误。map方法对数组中的每个元素调用一次callbackfn函数。 |
 
 **返回值：**
 
@@ -776,7 +776,7 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int16Array&gt; | 是 | 归约函数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int16Array&gt; | 是 | 归约函数。reduce方法对数组中的每个元素调用一次callbackfn函数。 |
 
 **返回值：**
 
@@ -809,8 +809,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>, initial
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int16Array&gt; | 是 | 归约函数。 reduce方法对数组中的每个元素调用一次callbackfn函数。 |
-| initialValue | number | 是 | 如果指定了initialValue，则将其作为开始累加的初始值。 首次调用callbackfn函数时将此值作为参数传入，而不是使用数组元素。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int16Array&gt; | 是 | 归约函数。reduce方法对数组中的每个元素调用一次callbackfn函数。 |
+| initialValue | number | 是 | 如果指定了initialValue，则将其作为开始累加的初始值。首次调用callbackfn函数时将此值作为参数传入，而不是使用数组元素。 |
 
 **返回值：**
 
@@ -865,7 +865,7 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialVa
 reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int16Array>, initialValue: U): U
 ```
 
-反向遍历ArkTS Int16Array，对其中的每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回 最终的归约结果。
+反向遍历ArkTS Int16Array，对其中的每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
 
 **起始版本：** 18
 
@@ -877,14 +877,14 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int16Arr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Int16Array&gt; | 是 | 对Int16Array中的 每个元素调用的函数。 |
-| initialValue | U | 是 | 作为首次调用回调函数的第一个参数使用的值。 如果未提供初始值，则使用Int16Array的最后一个元素作为初始值， 回调将从倒数第二个元素开始执行。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Int16Array&gt; | 是 | 对Int16Array中的每个元素调用的函数。 |
+| initialValue | U | 是 | 作为首次调用回调函数的第一个参数使用的值。如果未提供初始值，则使用Int16Array的最后一个元素作为初始值，回调将从倒数第二个元素开始执行。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| U | 由最后一次调用归约函数得到的结果。可能原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| U | 由最后一次调用归约函数得到的结果。可能原因：1.必填参数未指定。2.参数类型不正确。 |
 
 **错误码：**
 
@@ -911,13 +911,13 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Int16Array>): n
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int16Array&gt; | 是 | 对Int16Array中的 每个元素调用的函数。 |
+| callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;number, number, Int16Array&gt; | 是 | 对Int16Array中的每个元素调用的函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 由最后一次调用归约函数得到的结果。可能原因： 1.必填参数未指定。 2.参数类型不正确。 |
+| number | 由最后一次调用归约函数得到的结果。可能原因：1.必填参数未指定。2.参数类型不正确。 |
 
 **错误码：**
 
@@ -971,7 +971,7 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; | 是 | 用于设置的ArrayLike对象。 |
+| array | ArrayLike&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
 | offset | number | 否 | 写入的起始位置。默认为0。 |
 
 **错误码：**
@@ -999,8 +999,8 @@ slice(start?: number, end?: number): Int16Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 否 | 开始索引，如果`start &lt; 0`，则会从`start + Int16Array.length`位置开始。 默认值为**0**。 |
-| end | number | 否 | 结束索引（不包括该元素），如果`end &lt; 0`，则会到`end + Int16Array.length`位置结束。 默认为ArkTS Int16Array的长度。 |
+| start | number | 否 | 开始索引，如果`start &lt; 0`，则会从`start + Int16Array.length`位置开始。默认值为**0**。 |
+| end | number | 否 | 结束索引（不包括该元素），如果`end &lt; 0`，则会到`end + Int16Array.length`位置结束。默认为ArkTS Int16Array的长度。 |
 
 **返回值：**
 
@@ -1039,7 +1039,7 @@ some(predicate: TypedArrayPredicateFn<number, Int16Array>): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检查结果。如果存在元素满足指定条件返回true； 否则，返回false。 |
+| boolean | 检查结果。如果存在元素满足指定条件返回true；否则，返回false。 |
 
 **错误码：**
 
@@ -1099,8 +1099,8 @@ subarray(begin?: number, end?: number): Int16Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| begin | number | 否 | 开始索引，如果`begin &lt; 0`，则会从`begin + Int16Array.length`位置开始。 默认值为**0**。 |
-| end | number | 否 | 结束索引（不包括该元素），如果`end &lt; 0`，则会到`end + Int16Array.length`位置结束。 默认为ArkTS Int16Array的长度。 |
+| begin | number | 否 | 开始索引，如果`begin &lt; 0`，则会从`begin + Int16Array.length`位置开始。默认值为**0**。 |
+| end | number | 否 | 结束索引（不包括该元素），如果`end &lt; 0`，则会到`end + Int16Array.length`位置结束。默认为ArkTS Int16Array的长度。 |
 
 **返回值：**
 
@@ -1121,7 +1121,7 @@ subarray(begin?: number, end?: number): Int16Array
 toLocaleString(): string
 ```
 
-根据当前应用的系统地区获取符合当前文化习惯的数字表示形式，对每个元素调用toLocaleString方法，把数字转换为字符串， 然后使用逗号将每个元素的结果字符串按照顺序拼接成字符串。
+根据当前应用的系统地区获取符合当前文化习惯的数字表示形式，对每个元素调用toLocaleString方法，把数字转换为字符串，然后使用逗号将每个元素的结果字符串按照顺序拼接成字符串。
 
 **起始版本：** 18
 
@@ -1187,7 +1187,7 @@ values(): IterableIterator<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;number & gt; | 新的迭代器对象。 |
+| IterableIterator&lt;number&gt; | 新的迭代器对象。 |
 
 **错误码：**
 

@@ -21,7 +21,9 @@
 color?: ResourceColor
 ```
 
-分割线颜色。默认值：0x08000000
+分割线颜色。
+
+默认值：0x08000000
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -41,8 +43,17 @@ color?: ResourceColor
 endMargin?: Length
 ```
 
-分割线与列表侧边结束端的距离。默认值：0单位：vp  
-**说明：**设置为负数或者百分比时，按默认值处理。endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0。
+分割线与列表侧边结束端的距离。
+
+默认值：0
+
+单位：vp
+
+**说明：**
+
+设置为负数或者百分比时，按默认值处理。
+
+endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -62,8 +73,17 @@ endMargin?: Length
 startMargin?: Length
 ```
 
-分割线与列表侧边起始端的距离。默认值：0单位：vp  
-**说明：**设置为负数或者百分比时，按默认值处理。endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0。
+分割线与列表侧边起始端的距离。
+
+默认值：0
+
+单位：vp
+
+**说明：**
+
+设置为负数或者百分比时，按默认值处理。
+
+endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -83,8 +103,13 @@ startMargin?: Length
 strokeWidth: Length
 ```
 
-分割线的线宽。单位：vp  
-**说明：**设置为负数，百分比，或者大于等于List内容区长度时，按0处理。
+分割线的线宽。
+
+单位：vp
+
+**说明：**
+
+设置为负数，百分比，或者大于等于List内容区长度时，按0处理。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

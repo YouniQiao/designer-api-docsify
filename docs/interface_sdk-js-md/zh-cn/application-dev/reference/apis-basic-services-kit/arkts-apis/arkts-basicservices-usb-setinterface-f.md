@@ -3,9 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import usb from '@kit.BasicServicesKit';
-import usbManager from '@kit.BasicServicesKitManager';
-import serialManager from '@kit.BasicServicesKitManager.serial';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## setInterface
@@ -14,7 +12,9 @@ import serialManager from '@kit.BasicServicesKitManager.serial';
 function setInterface(pipe: USBDevicePipe, iface: USBInterface): number
 ```
 
-设置设备接口。需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备列表以及interfaces；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限；调 用[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md)得到devicepipe作为参数；调用[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md)注册通信接 口。
+设置设备接口。
+
+需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md)获取设备列表以及interfaces；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md)获取设备请求权限；调用[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md)得到devicepipe作为参数；调用[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md)注册通信接口。
 
 **起始版本：** 8
 
@@ -28,8 +28,8 @@ function setInterface(pipe: USBDevicePipe, iface: USBInterface): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 | 用于确定总线号和设备地址。 |
-| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | 是 | 用于确定需要设置的接口。 |
+| pipe | USBDevicePipe | 是 | 用于确定总线号和设备地址。 |
+| iface | USBInterface | 是 | 用于确定需要设置的接口。 |
 
 **返回值：**
 

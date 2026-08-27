@@ -1,6 +1,8 @@
 # CameraTrackingLayout
 
-相机跟踪布局@enum { number }
+相机跟踪布局
+
+@enum { number }
 
 **起始版本：** 20
 

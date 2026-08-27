@@ -11,7 +11,7 @@ The sendableContextManager module provides APIs for converting between Context a
 ## Modules to Import
 
 ```TypeScript
-import sendableContextManager from '@kit.AbilityKit';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

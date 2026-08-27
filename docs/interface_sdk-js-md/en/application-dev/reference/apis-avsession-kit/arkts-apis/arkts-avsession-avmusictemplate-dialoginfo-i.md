@@ -1,6 +1,8 @@
 # DialogInfo
 
-The definition of dialog information.@interface DialogInfo
+The definition of dialog information.
+
+@interface DialogInfo
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of dialog information.@interface DialogInfo
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## buttons

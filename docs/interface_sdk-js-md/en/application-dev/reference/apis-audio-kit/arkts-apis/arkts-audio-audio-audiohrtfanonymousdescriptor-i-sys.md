@@ -11,8 +11,7 @@ Anonymous personalzied HRTF file descriptor for cross-process transfer.
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## fd

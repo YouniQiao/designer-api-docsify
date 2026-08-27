@@ -1,6 +1,8 @@
 # LineTypeset
 
-Implements a carrier that stores the text content and style. It can be used to compute layout details for individual lines of text.Before calling any of the following APIs, you must use [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset) in the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **LineTypeset** object.
+Implements a carrier that stores the text content and style. It can be used to compute layout details for individual lines of text.
+
+Before calling any of the following APIs, you must use [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset) in the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **LineTypeset** object.
 
 **Since:** 18
 
@@ -9,7 +11,7 @@ Implements a carrier that stores the text content and style. It can be used to c
 ## Modules to Import
 
 ```TypeScript
-import text from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## createLine

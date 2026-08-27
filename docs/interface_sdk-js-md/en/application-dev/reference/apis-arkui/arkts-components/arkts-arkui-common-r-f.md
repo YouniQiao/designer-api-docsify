@@ -32,25 +32,9 @@ global \$r function
 
 | Type | Description |
 | --- | --- |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |  |
+| Resource |  |
 
 **Examples**
-
-```TypeScript
-@Entry
-@Component
-struct Page {
-  build() {
-    Row() {
-      Column() {
-        Text($r('app.string.app_name'))
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
 
 ```TypeScript
 @Entry

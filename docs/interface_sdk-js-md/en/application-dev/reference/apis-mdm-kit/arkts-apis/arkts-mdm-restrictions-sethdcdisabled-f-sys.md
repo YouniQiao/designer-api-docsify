@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import restrictions from '@kit.MDMKit';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## setHdcDisabled
@@ -101,7 +101,7 @@ Enables or disables HDC on a device. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object is thrown when the HDC fails to be disabled or enabled. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when the HDC fails to be disabled or enabled. |
 
 **Error codes:**
 

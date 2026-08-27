@@ -1,6 +1,8 @@
 # DismissPopupAction
 
-气泡关闭的信息。@interface DismissPopupAction
+气泡关闭的信息。
+
+@interface DismissPopupAction
 
 **起始版本：** 12
 

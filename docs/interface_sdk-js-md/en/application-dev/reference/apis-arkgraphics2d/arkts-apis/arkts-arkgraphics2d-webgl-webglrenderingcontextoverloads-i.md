@@ -69,7 +69,7 @@ Sets buffer sub data
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Buffer target |
-| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
 | data | BufferSource | Yes | Data to set |
 
 ## compressedTexImage2D

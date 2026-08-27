@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import accountManager from '@kit.MDMKit';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## removeOsAccount
@@ -12,7 +12,7 @@ import accountManager from '@kit.MDMKit';
 function removeOsAccount(admin: Want, accountId: number): Promise<void>
 ```
 
-移除系统账号。当前仅支持手机、平板设备使用，可以移除使用[createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md)创建的普通系统账号（normal类型）和 [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md)创建的系统账号（admin、normal、guest类型），不可移除默认系统账号（ID为100）。
+移除系统账号。当前仅支持手机、平板设备使用，可以移除使用[createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md)创建的普通系统账号（normal类型）和[addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md)创建的系统账号（admin、normal、guest类型），不可移除默认系统账号（ID为100）。
 
 **起始版本：** 26.0.0
 
@@ -33,7 +33,7 @@ function removeOsAccount(admin: Want, accountId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。当移除系统账号失败时，会抛出错误对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。当移除系统账号失败时，会抛出错误对象。 |
 
 **错误码：**
 

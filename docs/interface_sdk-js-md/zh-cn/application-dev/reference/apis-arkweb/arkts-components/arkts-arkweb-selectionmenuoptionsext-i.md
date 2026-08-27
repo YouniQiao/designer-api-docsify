@@ -9,9 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## menuType
@@ -20,7 +17,11 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 menuType?: MenuType
 ```
 
-自定义选择菜单类型。默认值：`MenuType.SELECTION_MENU`。从API version 20起，`MenuType.PREVIEW_MENU`支持超链接预览。
+自定义选择菜单类型。
+
+默认值：`MenuType.SELECTION_MENU`。
+
+从API version 20起，`MenuType.PREVIEW_MENU`支持超链接预览。
 
 **类型：** [MenuType](../../apis-arkui/arkts-apis/arkts-arkui-menutype-e.md)
 

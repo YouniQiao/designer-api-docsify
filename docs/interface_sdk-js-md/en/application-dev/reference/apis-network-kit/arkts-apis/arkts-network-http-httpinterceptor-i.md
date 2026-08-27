@@ -30,7 +30,7 @@ Intercepts the HTTP processing and modifies it as required.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reqContext | [HttpRequestContext](arkts-network-http-httprequestcontext-i.md) | Yes | the context of the target HTTP request. |
-| rspContext | [HttpResponse](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-httpresponse-i.md) | Yes | the context of the target HTTP response. |
+| rspContext | HttpResponse | Yes | the context of the target HTTP response. |
 
 **Return value:**
 
@@ -39,24 +39,6 @@ Intercepts the HTTP processing and modifies it as required.
 | Promise&lt;[ChainContinue](arkts-network-http-chaincontinue-t.md)&gt; | Continues the HTTP processing or stops and returns an HTTP response. |
 
 **Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-// Create a custom interceptor.
-class CustomInterceptor implements http.HttpInterceptor {
-  interceptorType: http.InterceptorType = http.InterceptorType.INITIAL_REQUEST;
-
-  async interceptorHandle(reqContext: http.HttpRequestContext, rspContext: http.HttpResponse): Promise<http.ChainContinue> {
-    // Add the authentication header in the initial request phase.
-    reqContext.header['Authorization'] = 'Bearer token';
-    console.info('Interceptor: Added authorization header');
-    return true; // Continue to process the interceptor chain.
-  }
-}
-
-let customInterceptor = new CustomInterceptor();
-```
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

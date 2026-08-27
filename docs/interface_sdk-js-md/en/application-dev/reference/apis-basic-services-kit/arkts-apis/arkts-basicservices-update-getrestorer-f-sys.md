@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import update from '@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## getRestorer
@@ -12,15 +12,23 @@ import update from '@kit.BasicServicesKit';
 function getRestorer(): Restorer
 ```
 
-Obtains a **Restorer** object for restoring factory settings. After this API is called, the system returns the **Restorer** utility object. Three factory reset methods are provided:  
+Obtains a **Restorer** object for restoring factory settings. After this API is called, the system returns the **Restorer** utility object. Three factory reset methods are provided:
+
 - **factoryReset**: Common factory reset. Only data in the user partition is cleared in this mode. For details, see  
 Upgrading Service Terms.  
 - **forceFactoryReset**: Forcible factory reset. Both data in the user partition and file keys are cleared in this  
 mode. For details, see Upgrading Service Terms.  
 - **deepFactoryReset**: Deep factory reset. Data in the scope specified by **scope** is cleared in this mode.  
-**DATA**: Clear data in the user partition only; **DATA_AND_OS**: Clear data in both the user partition and OS partition. For details, see Upgrading Service Terms.After obtaining the object, you can call the corresponding method to restore the device to its factory settings. The device will restart and restore to its initial factory settings.  
-**Overview**This API obtains a **Restorer** object through the system service interface, and encapsulates core functions such as data partition clearing, key clearing, and system partition clearing.  
-**Constraints**  
+**DATA**: Clear data in the user partition only; **DATA_AND_OS**: Clear data in both the user partition and OS partition. For details, see Upgrading Service Terms.
+
+After obtaining the object, you can call the corresponding method to restore the device to its factory settings. The device will restart and restore to its initial factory settings.
+
+**Overview**
+
+This API obtains a **Restorer** object through the system service interface, and encapsulates core functions such as data partition clearing, key clearing, and system partition clearing.
+
+**Constraints**
+
 - Restoring factory settings is irreversible and will permanently delete user data. Therefore, remind users to back  
 up important data in advance.  
 - The **ohos.permission.FACTORY_RESET** permission is required for calling **factoryReset**, **deepFactoryReset**,  

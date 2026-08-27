@@ -1,6 +1,8 @@
 # PlayInfo
 
-The definition of play information.@interface PlayInfo
+The definition of play information.
+
+@interface PlayInfo
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of play information.@interface PlayInfo
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## currentPlayDuration

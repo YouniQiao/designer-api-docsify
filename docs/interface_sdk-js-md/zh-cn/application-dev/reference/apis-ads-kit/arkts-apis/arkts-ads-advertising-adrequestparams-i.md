@@ -9,10 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit.AdComponent';
-import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
-import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
-import advertising from '@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## [key: string]
@@ -21,7 +18,9 @@ import advertising from '@kit.AdsKit';
 [key: string]: number | boolean | string | undefined
 ```
 
-自定义参数。<!--RP2--><!--RP2End-->
+自定义参数。
+
+<!--RP2--><!--RP2End-->
 
 **类型：** number \| boolean \| string \| undefined
 
@@ -69,7 +68,9 @@ adHeight?: number
 adId: string
 ```
 
-广告位ID。说明：getAdRequestBody接口可以不传该参数。
+广告位ID。
+
+说明：getAdRequestBody接口可以不传该参数。
 
 **类型：** string
 
@@ -85,7 +86,9 @@ adId: string
 adSearchKeyword?: string
 ```
 
-广告关键字。不填默认""。说明：暂不支持使用。
+广告关键字。不填默认""。
+
+说明：暂不支持使用。
 
 **类型：** string
 
@@ -101,13 +104,15 @@ adSearchKeyword?: string
 adType?: number
 ```
 
-请求的广告类型。  
+请求的广告类型。
+
 - 1：开屏广告。  
 - 3：原生广告。  
 - 7：激励广告。  
 - 8：横幅广告。  
 - 12：插屏广告。  
-- 60：贴片广告。  
+- 60：贴片广告。
+
 不填默认为原生广告类型。
 
 **类型：** number

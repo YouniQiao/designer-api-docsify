@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getDeviceConfig
@@ -35,7 +34,7 @@ Obtain the single Wi-Fi configuration with Network ID.
 
 | Type | Description |
 | --- | --- |
-| [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Returns the Wi-Fi configuration corresponding to the network ID. |
+| WifiDeviceConfig | Returns the Wi-Fi configuration corresponding to the network ID. |
 
 **Error codes:**
 

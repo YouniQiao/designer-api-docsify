@@ -1,6 +1,8 @@
 # ChainStyle
 
-定义链的风格，支持attributeModifier动态设置属性方法。@enum { number }
+定义链的风格，支持attributeModifier动态设置属性方法。
+
+@enum { number }
 
 **起始版本：** 12
 

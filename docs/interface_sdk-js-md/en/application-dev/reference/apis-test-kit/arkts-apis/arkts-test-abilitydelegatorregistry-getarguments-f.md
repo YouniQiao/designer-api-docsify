@@ -23,7 +23,7 @@ Obtains an [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-abilit
 
 | Type | Description |
 | --- | --- |
-| [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) | [AbilityDelegatorArgs]{ |
+| AbilityDelegatorArgs | [AbilityDelegatorArgs]{ |
 
 **Examples**
 

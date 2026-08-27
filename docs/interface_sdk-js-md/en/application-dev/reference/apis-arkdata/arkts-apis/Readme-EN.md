@@ -476,5 +476,5 @@
   - [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md)
   - [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md)
 - data<!--arkts-arkdata-data-->
-  - [resultSet](arkts-resultset.md)
+  - [resultSet(The result set of database queries.)](arkts-resultset.md)
     - [ResultSet](arkts-arkdata-resultset-resultset-depr-i.md)

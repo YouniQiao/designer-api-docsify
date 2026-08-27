@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllBundleInfoByDeveloperId
@@ -32,7 +32,7 @@ Obtains the information about all bundles of the current user based on the given
 
 | Type | Description |
 | --- | --- |
-| Array & lt;BundleInfo & gt; | An array of bundle information. |
+| Array&lt;BundleInfo&gt; | An array of bundle information. |
 
 **Error codes:**
 

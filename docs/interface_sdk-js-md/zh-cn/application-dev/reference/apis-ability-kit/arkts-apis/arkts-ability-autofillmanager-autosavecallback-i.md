@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import autoFillManager from '@kit.AbilityKit';
+import { autoFillManager } from '@kit.AbilityKit';
 ```
 
 ## onFailure

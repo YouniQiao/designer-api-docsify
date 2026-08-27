@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import config from '@kit.AccessibilityKit.config';
-import accessibility from '@kit.AccessibilityKit';
-import { GesturePath } from '@kit.AccessibilityKit.GesturePath';
-import { GesturePoint } from '@kit.AccessibilityKit.GesturePoint';
+import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
@@ -16,7 +13,9 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 function onSeniorModeStateChangeForSelf(callback: Callback<boolean>): void
 ```
 
-监听应用自身“长辈模式”变化事件。使用callback异步回调。与[accessibility.onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md)（监听系统关怀模式状态变化）对应不同作用范围，本接口仅关注应 用自身状态。
+监听应用自身“长辈模式”变化事件。使用callback异步回调。
+
+与[accessibility.onSeniorModeStateChange](arkts-accessibility-accessibility-onseniormodestatechange-f.md)（监听系统关怀模式状态变化）对应不同作用范围，本接口仅关注应用自身状态。
 
 > **说明：**
 > 
@@ -36,7 +35,7 @@ function onSeniorModeStateChangeForSelf(callback: Callback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。在应用自身“长辈模式”状态变化时将状态通过此函数进行通知。返回true表示应用自身“长辈模式”已开启；返回false表示应用自身“长辈模式” 已关闭。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。在应用自身“长辈模式”状态变化时将状态通过此函数进行通知。返回true表示应用自身“长辈模式”已开启；返回false表示应用自身“长辈模式”已关闭。 |
 
 **示例**
 

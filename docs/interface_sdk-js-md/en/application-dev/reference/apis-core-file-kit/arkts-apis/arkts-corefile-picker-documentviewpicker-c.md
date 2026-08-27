@@ -9,7 +9,7 @@ Provides APIs for selecting and saving documents in different formats. Before us
 ## Modules to Import
 
 ```TypeScript
-import picker from '@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -238,7 +238,7 @@ Starts a **documentPicker** page for the user to save one or more documents. Thi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the URIs of the documents saved. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the documents saved. |
 
 **Examples**
 
@@ -418,7 +418,7 @@ Starts a **documentPicker** page for the user to select one or more documents. T
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the URIs of the documents selected. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the documents selected. |
 
 **Examples**
 

@@ -1,6 +1,8 @@
 # CanvasPattern
 
-描述一个模板的不透明对象，该对象通过createPattern()方法创建。@interface CanvasPattern
+描述一个模板的不透明对象，该对象通过createPattern()方法创建。
+
+@interface CanvasPattern
 
 **起始版本：** 11
 

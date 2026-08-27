@@ -9,7 +9,7 @@ Defines a UDP socket connection. Before calling UDPSocket APIs, you need to call
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## bind
@@ -30,7 +30,7 @@ Binds the IP address and port number. The port number can be customized or rando
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Local address. For details, see [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress). |
+| address | NetAddress | Yes | Local address. For details, see [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
@@ -114,13 +114,13 @@ Binds the IP address and port number. The port number can be customized or rando
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Local address. For details, see [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress). |
+| address | NetAddress | Yes | Local address. For details, see [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -326,7 +326,7 @@ Closes a UDP socket connection. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -556,7 +556,7 @@ Obtains the local socket address of a **UDPSocket** connection. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NetAddress & gt; | Promise used to return the result. |
+| Promise&lt;NetAddress&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -762,7 +762,7 @@ Obtains the UDPSocket file descriptor. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the socket file descriptor. |
+| Promise&lt;number&gt; | Promise used to return the socket file descriptor. |
 
 **Error codes:**
 
@@ -1722,7 +1722,9 @@ udp.on('error', (err: BusinessError) => {
 send(options: UDPSendOptions, callback: AsyncCallback<void>): void
 ```
 
-Sends data over a UDP socket connection. This API uses an asynchronous callback to return the result.Before sending data, call [UDPSocket.bind()](#bind) to bind the IP address and port. Call the API in the worker thread or taskpool thread as this operation is time-consuming.
+Sends data over a UDP socket connection. This API uses an asynchronous callback to return the result.
+
+Before sending data, call [UDPSocket.bind()](#bind) to bind the IP address and port. Call the API in the worker thread or taskpool thread as this operation is time-consuming.
 
 **Since:** 7
 
@@ -1839,7 +1841,9 @@ udp.send(sendOptions, (err: BusinessError) => {
 send(options: UDPSendOptions): Promise<void>
 ```
 
-Sends data over a UDP socket connection. This API uses a promise to return the result.Before sending data, call [UDPSocket.bind()](#bind) to bind the IP address and port. Call the API in the worker thread or taskpool thread as this operation is time-consuming.
+Sends data over a UDP socket connection. This API uses a promise to return the result.
+
+Before sending data, call [UDPSocket.bind()](#bind) to bind the IP address and port. Call the API in the worker thread or taskpool thread as this operation is time-consuming.
 
 **Since:** 7
 
@@ -1857,7 +1861,7 @@ Sends data over a UDP socket connection. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2044,7 +2048,7 @@ Sets other properties of the **UDPSocket** object. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

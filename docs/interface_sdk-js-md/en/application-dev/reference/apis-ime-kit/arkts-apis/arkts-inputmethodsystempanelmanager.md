@@ -19,7 +19,7 @@ This module provides the input method system panel management functions, which a
 ## Modules to Import
 
 ```TypeScript
-import inputMethodSystemPanelManager from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## Summary

@@ -1,6 +1,6 @@
 # NativeMediaPlayerHandler
 
-NativeMediaPlayerHandler 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md)回调函数的参数。当 应用使用[NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md)接管网页媒体播放时，需要通过将播放器的各种状态变化实时同步给 ArkWeb 内核，确保网页 JavaScript 能够获取正确的播放器状态，ArkWeb 内核会将这些状态转换为标准的 HTML5 Media Events，触发网页中注册的事件监听器，从而保证网页功能的正常运行。
+NativeMediaPlayerHandler 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md)回调函数的参数。当应用使用[NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md)接管网页媒体播放时，需要通过将播放器的各种状态变化实时同步给 ArkWeb 内核，确保网页JavaScript 能够获取正确的播放器状态，ArkWeb 内核会将这些状态转换为标准的 HTML5 Media Events，触发网页中注册的事件监听器，从而保证网页功能的正常运行。
 
 **起始版本：** 12
 
@@ -29,7 +29,7 @@ handleBufferedEndTimeChanged(bufferedEndTime: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bufferedEndTime | number | 是 | 媒体缓冲的时长。 单位：秒，取值范围：[0, duration]。超出范围时，ArkWeb 内核将不会执行。 |
+| bufferedEndTime | number | 是 | 媒体缓冲的时长。单位：秒，取值范围：[0, duration]。超出范围时，ArkWeb 内核将不会执行。 |
 
 **示例**
 
@@ -53,7 +53,7 @@ handleDurationChanged(duration: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| duration | number | 是 | 媒体的总时长。 单位：秒，取值范围：[0, +∞)。传入负数时，ArkWeb 内核将不会执行。 |
+| duration | number | 是 | 媒体的总时长。单位：秒，取值范围：[0, +∞)。传入负数时，ArkWeb 内核将不会执行。 |
 
 **示例**
 
@@ -120,7 +120,7 @@ handleFullscreenChanged(fullscreen: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fullscreen | boolean | 是 | 是否全屏。 true表示全屏，false表示未全屏。 |
+| fullscreen | boolean | 是 | 是否全屏。true表示全屏，false表示未全屏。 |
 
 **示例**
 
@@ -144,7 +144,7 @@ handleMutedChanged(muted: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| muted | boolean | 是 | 当前播放器是否静音。 true表示当前播放器静音，false表示当前播放器未静音。 |
+| muted | boolean | 是 | 当前播放器是否静音。true表示当前播放器静音，false表示当前播放器未静音。 |
 
 **示例**
 
@@ -168,7 +168,7 @@ handleNetworkStateChanged(state: NetworkState): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | [NetworkState](../../apis-telephony-kit/arkts-apis/arkts-telephony-radio-networkstate-i.md) | 是 | 播放器的网络状态。 |
+| state | NetworkState | 是 | 播放器的网络状态。 |
 
 **示例**
 
@@ -300,7 +300,7 @@ handleTimeUpdate(currentPlayTime: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| currentPlayTime | number | 是 | 当前播放时间。 单位：秒，取值范围：[0, duration]。超出范围时，ArkWeb 内核将不会执行。 |
+| currentPlayTime | number | 是 | 当前播放时间。单位：秒，取值范围：[0, duration]。超出范围时，ArkWeb 内核将不会执行。 |
 
 **示例**
 

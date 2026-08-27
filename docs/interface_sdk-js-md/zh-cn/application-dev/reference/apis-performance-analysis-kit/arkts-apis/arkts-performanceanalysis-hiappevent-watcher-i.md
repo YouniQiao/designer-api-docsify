@@ -21,7 +21,11 @@
 onReceive?: (domain: string, appEventGroups: Array<AppEventGroup>) => void
 ```
 
-订阅实时回调函数，与回调函数onTrigger同时存在时，只触发此回调，函数入参说明如下：domain：回调事件的领域名称；appEventGroups：回调事件集合。
+订阅实时回调函数，与回调函数onTrigger同时存在时，只触发此回调，函数入参说明如下：
+
+domain：回调事件的领域名称；
+
+appEventGroups：回调事件集合。
 
 **起始版本：** 11
 
@@ -42,7 +46,13 @@ onReceive?: (domain: string, appEventGroups: Array<AppEventGroup>) => void
 onTrigger?: (curRow: number, curSize: number, holder: AppEventPackageHolder) => void
 ```
 
-订阅回调函数，需要与回调触发条件triggerCondition一同传入才会生效，函数入参说明如下：curRow：在本次回调触发时的订阅事件总数量；curSize：在本次回调触发时的订阅事件总大小，单位为byte；holder：订阅数据持有者对象，可以通过其对订阅事件进行处理。
+订阅回调函数，需要与回调触发条件triggerCondition一同传入才会生效，函数入参说明如下：
+
+curRow：在本次回调触发时的订阅事件总数量；
+
+curSize：在本次回调触发时的订阅事件总大小，单位为byte；
+
+holder：订阅数据持有者对象，可以通过其对订阅事件进行处理。
 
 **起始版本：** 9
 

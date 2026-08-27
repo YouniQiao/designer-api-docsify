@@ -1,6 +1,8 @@
 # @ohos.wallpaper
 
-System wallpaper@namespace wallpaper
+System wallpaper
+
+@namespace wallpaper
 
 **Since:** 7
 
@@ -9,7 +11,7 @@ System wallpaper@namespace wallpaper
 ## Modules to Import
 
 ```TypeScript
-import wallpaper from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -83,14 +85,14 @@ import wallpaper from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Indicates wallpaper type.@enum { number } WallpaperType |
+| [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Indicates wallpaper type. |
 
 <!--Del-->
 ### Enums(System API)
 
 | Name | Description |
 | --- | --- |
-| [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md) | Define the folding state of wallpaper@enum { number } FoldState |
-| [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md) | Define the rotation state of wallpaper@enum { number } RotateState |
-| [WallpaperResourceType](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md) | Indicates the resource type of the wallpaper.@enum { number } WallpaperResourceType |
+| [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md) | Define the folding state of wallpaper |
+| [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md) | Define the rotation state of wallpaper |
+| [WallpaperResourceType](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md) | Indicates the resource type of the wallpaper. |
 <!--DelEnd-->

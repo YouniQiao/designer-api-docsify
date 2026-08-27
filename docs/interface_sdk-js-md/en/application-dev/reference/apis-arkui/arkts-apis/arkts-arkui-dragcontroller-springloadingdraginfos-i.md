@@ -9,7 +9,7 @@ Defines the drag event information when hover detection is triggered. This API p
 ## Modules to Import
 
 ```TypeScript
-import dragController from '@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## dataSummary

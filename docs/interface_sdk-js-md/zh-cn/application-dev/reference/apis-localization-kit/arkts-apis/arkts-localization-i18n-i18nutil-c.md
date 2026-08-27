@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## convertCanonicalLocaleIdentifier
@@ -113,7 +113,7 @@ static getDateOrder(locale: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成，如：zh-Hans-CN。 |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成，如：zh-Hans-CN。 |
 
 **返回值：**
 
@@ -135,7 +135,9 @@ let order: string = i18n.I18NUtil.getDateOrder('zh-CN'); // order = 'y-L-d'
 static getThreeLetterLanguage(locale: string): string
 ```
 
-将语言代码由二字母转换为三字母。二字母和三字母语言代码的规格参考[ISO 639](https://www.iso.org/iso-639-language-code)。例如，中文的二字母语言代码是zh，对应的三字母语言代码是zho。
+将语言代码由二字母转换为三字母。二字母和三字母语言代码的规格参考[ISO 639](https://www.iso.org/iso-639-language-code)。
+
+例如，中文的二字母语言代码是zh，对应的三字母语言代码是zho。
 
 **起始版本：** 12
 
@@ -182,7 +184,9 @@ try {
 static getThreeLetterRegion(locale: string): string
 ```
 
-将地区代码由二字母转换为三字母。二字母和三字母地区代码的规格参考[ISO 3166](https://www.iso.org/iso-3166-country-codes.html)例如，中国的二字母地区代码是CN, 三字母是CHN。
+将地区代码由二字母转换为三字母。二字母和三字母地区代码的规格参考[ISO 3166](https://www.iso.org/iso-3166-country-codes.html)
+
+例如，中国的二字母地区代码是CN, 三字母是CHN。
 
 **起始版本：** 12
 
@@ -242,7 +246,7 @@ static getTimePeriodName(hour:number, locale?: string): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hour | number | 是 | 指定的时间，例如16。 |
-| locale | string | 否 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区 组成。如：zh-Hans-CN。 默认值：系统当前区域ID。 |
+| locale | string | 否 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。如：zh-Hans-CN。默认值：系统当前区域ID。 |
 
 **返回值：**
 
@@ -277,7 +281,9 @@ try {
 static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string
 ```
 
-对文件路径进行本地化处理。例如，将/data/out/tmp本地化处理后生成tmp/out/data/。
+对文件路径进行本地化处理。
+
+例如，将/data/out/tmp本地化处理后生成tmp/out/data/。
 
 **起始版本：** 20
 
@@ -329,7 +335,9 @@ try {
 static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl.Locale): string
 ```
 
-对文件路径进行本地化处理。例如，将/data/out/tmp本地化处理后生成tmp/out/data/。
+对文件路径进行本地化处理。
+
+例如，将/data/out/tmp本地化处理后生成tmp/out/data/。
 
 **起始版本：** 18
 
@@ -449,8 +457,8 @@ static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: number, locale: 
 | fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 | 需要转换的单位。 |
 | toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | 是 | 转换成的目标单位。 |
 | value | number | 是 | 需要转换的单位的数量值。 |
-| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成，如：zh-Hans-CN。 |
-| style | string | 否 | 格式化使用的风格，取值包括：'number', 'short', 'narrow'。默认值：short。 不同取值显示效果请参考[数字与度量衡国际化](../../../internationalization/i18n-numbers-weights-measures.md)。 |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成，如：zh-Hans-CN。 |
+| style | string | 否 | 格式化使用的风格，取值包括：'number', 'short', 'narrow'。默认值：short。不同取值显示效果请参考[数字与度量衡国际化](../../../internationalization/i18n-numbers-weights-measures.md)。 |
 
 **返回值：**
 

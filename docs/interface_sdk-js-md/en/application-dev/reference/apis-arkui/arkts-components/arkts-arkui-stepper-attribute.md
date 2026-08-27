@@ -1,6 +1,8 @@
 # Stepper properties/events
 
-Defines the stepper attribute functions@extends CommonMethod&lt;StepperAttribute&gt;
+Defines the stepper attribute functions
+
+@extends CommonMethod&lt;StepperAttribute&gt;
 
 **Inheritance/Implementation:** StepperAttribute extends CommonMethod<StepperAttribute>
 
@@ -41,7 +43,7 @@ Triggered when the step navigation switches by clicking [prevLabel](arkts-arkui-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (prevIndex: number, index: number) = & gt; void | Yes | Callback triggered when the page is switched.prevIndex: Index of the step page before the switching.Value range: [0, +∞).index: Index of the step page after the switching, that is, index of the previous or next page. Value range: [0, +∞). |
+| callback | (prevIndex: number, index: number) =&gt; void | Yes | Callback triggered when the page is switched.prevIndex: Index of the step page before the switching.Value range: [0, +∞).index: Index of the step page after the switching, that is, index of the previous or next page. Value range: [0, +∞). |
 
 ## onFinish
 
@@ -67,7 +69,7 @@ Triggered when [nextLabel](arkts-arkui-stepperitem-attribute.md#nextlabel) of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | Yes | Invoked when the **nextLabel** of the last **StepperItem** in the **Stepper** is clicked and the **ItemState** attribute is set to **Normal**. |
+| callback | () =&gt; void | Yes | Invoked when the **nextLabel** of the last **StepperItem** in the **Stepper** is clicked and the **ItemState** attribute is set to **Normal**. |
 
 ## onNext
 
@@ -93,7 +95,7 @@ Triggered when switching to the next step by clicking [nextLabel](arkts-arkui-st
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (index: number, pendingIndex: number) = & gt; void | Yes | Callback triggered when the page is switched.index: Index of the current step page.pendingIndex: Index of the next step page. |
+| callback | (index: number, pendingIndex: number) =&gt; void | Yes | Callback triggered when the page is switched.index: Index of the current step page.pendingIndex: Index of the next step page. |
 
 ## onPrevious
 
@@ -119,7 +121,7 @@ Triggered when switching to the previous step by clicking [prevLabel](arkts-arku
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (index: number, pendingIndex: number) = & gt; void | Yes | Callback triggered when the page is switched.index: Index of the current step page.pendingIndex: Index of the next step page. |
+| callback | (index: number, pendingIndex: number) =&gt; void | Yes | Callback triggered when the page is switched.index: Index of the current step page.pendingIndex: Index of the next step page. |
 
 ## onSkip
 
@@ -145,4 +147,4 @@ Triggered when [nextLabel](arkts-arkui-stepperitem-attribute.md#nextlabel) is cl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | Yes | Invoked when the current **StepperItem** is **ItemState.Skip** and the **nextLabel** is clicked. |
+| callback | () =&gt; void | Yes | Invoked when the current **StepperItem** is **ItemState.Skip** and the **nextLabel** is clicked. |

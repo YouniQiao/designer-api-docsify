@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import config from '@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## disableAbility
@@ -12,7 +12,7 @@ import config from '@kit.AccessibilityKit';
 function disableAbility(name: string): Promise<void>
 ```
 
-关闭辅助扩展，需与[config.enableAbility](arkts-accessibility-config-enableability-f-sys.md)或 [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)配对使用。使用Promise异步回调。
+关闭辅助扩展，需与[config.enableAbility](arkts-accessibility-config-enableability-f-sys.md)或[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)配对使用。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -32,7 +32,7 @@ function disableAbility(name: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -65,7 +65,7 @@ config.disableAbility(name).then(() => {
 function disableAbility(name: string, callback: AsyncCallback<void>): void
 ```
 
-关闭辅助扩展，需与[config.enableAbility](arkts-accessibility-config-enableability-f-sys.md)或 [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)配对使用。使用callback异步回调。
+关闭辅助扩展，需与[config.enableAbility](arkts-accessibility-config-enableability-f-sys.md)或[config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md)配对使用。使用callback异步回调。
 
 **起始版本：** 9
 

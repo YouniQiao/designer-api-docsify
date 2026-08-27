@@ -27,7 +27,7 @@ Obtains the state of the SIM card in the specified slot.
 
 | Type | Description |
 | --- | --- |
-| [SimState](arkts-telephony-sim-simstate-e.md) | State of the SIM card in the specified slot. |
+| SimState | State of the SIM card in the specified slot. |
 
 **Examples**
 

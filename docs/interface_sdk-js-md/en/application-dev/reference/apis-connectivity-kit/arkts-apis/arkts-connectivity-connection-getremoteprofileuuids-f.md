@@ -80,7 +80,7 @@ Obtains the profile UUIDs supported by the remote device.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;ProfileUuids & gt; & gt; | Returns the promise object. |
+| Promise&lt;Array&lt;ProfileUuids&gt;&gt; | Returns the promise object. |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 ## Modules to Import
 
 ```TypeScript
-import distributedDeviceManager from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## getDeviceIconInfo
@@ -106,7 +106,7 @@ Obtains the list of network devices according to the specified filter options.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the device list. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the device list. |
 
 **Error codes:**
 
@@ -221,7 +221,7 @@ Query device identification by device IDs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceIds | Array & lt;string & gt; | Yes | A list of device IDs that could be obtained by the application, with a maximum list size of 50. |
+| deviceIds | Array&lt;string&gt; | Yes | A list of device IDs that could be obtained by the application, with a maximum list size of 50. |
 
 **Return value:**
 
@@ -291,7 +291,7 @@ Obtains the local device's display name with the specified length. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Maximum number of bytes in the local device's display name. |
+| Promise&lt;string&gt; | Maximum number of bytes in the local device's display name. |
 
 **Error codes:**
 
@@ -492,7 +492,7 @@ Updates the device list. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Operation result. The value **0** indicates that the operation is successful. |
+| Promise&lt;number&gt; | Operation result. The value **0** indicates that the operation is successful. |
 
 **Error codes:**
 
@@ -737,7 +737,7 @@ Sets the local device name. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Operation result. The value **0** indicates that the operation is successful. |
+| Promise&lt;number&gt; | Operation result. The value **0** indicates that the operation is successful. |
 
 **Error codes:**
 
@@ -798,7 +798,7 @@ Sets the remote device name. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Operation result. The value **0** indicates that the operation is successful. |
+| Promise&lt;number&gt; | Operation result. The value **0** indicates that the operation is successful. |
 
 **Error codes:**
 

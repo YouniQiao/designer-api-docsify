@@ -13,7 +13,7 @@ The **cryptoFramework** module provides APIs for cryptographic operations, shiel
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dialogRequest from '@kit.AbilityKit';
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## getRequestInfo
@@ -18,6 +18,7 @@ function getRequestInfo(want: Want): RequestInfo
 > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes,
 > the request information can be obtained from Want. If this API is used in other scenarios, no return value is
 > obtained.
+
 Obtains the request information from Want.
 
 **Since:** 9
@@ -34,7 +35,7 @@ Obtains the request information from Want.
 
 | Type | Description |
 | --- | --- |
-| [RequestInfo](arkts-ability-dialogrequest-requestinfo-i.md) | RequestInfo object obtained, which is used to bind a modal dialog box. |
+| RequestInfo | RequestInfo object obtained, which is used to bind a modal dialog box. |
 
 **Error codes:**
 

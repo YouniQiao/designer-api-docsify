@@ -33,7 +33,7 @@ Sets the font style of the menu item content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font style of the menu item content. |
+| value | Font | Yes | Font style of the menu item content. |
 
 ## contentFontColor
 
@@ -77,7 +77,7 @@ Sets the font style of the menu item label.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font style of the menu item label. |
+| value | Font | Yes | Font style of the menu item label. |
 
 ## labelFontColor
 
@@ -119,7 +119,7 @@ Triggered when the selection status of the menu item is changed manually.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (selected: boolean) = & gt; void | Yes | Invoked when the selected status changes.   **true**: selected; **false**: unselected. |
+| callback | (selected: boolean) =&gt; void | Yes | Invoked when the selected status changes.   **true**: selected; **false**: unselected. |
 
 ## selected
 
@@ -127,7 +127,11 @@ Triggered when the selection status of the menu item is changed manually.
 selected(value: boolean)
 ```
 
-Sets whether the menu item is selected.Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).Since API version 18, this parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+Sets whether the menu item is selected.
+
+Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+
+Since API version 18, this parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Since:** 9
 
@@ -159,7 +163,7 @@ Sets whether to display the selected icon when the menu item is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes | Whether to display the selected icon when the menu item is selected.   **true**: Display the default check mark icon. **false**: Hide the selected state icon.   **ResourceStr**: Display the specified custom icon resource.   **SymbolGlyphModifier**: Display the specified HMSymbol icon.Default value: **false**.<br>**Since:** 12 |
+| value | boolean \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| SymbolGlyphModifier | Yes | Whether to display the selected icon when the menu item is selected.   **true**: Display the default check mark icon. **false**: Hide the selected state icon.   **ResourceStr**: Display the specified custom icon resource.   **SymbolGlyphModifier**: Display the specified HMSymbol icon.Default value: **false**.<br>**Since:** 12 |
 
 ## subMenuBuilder
 

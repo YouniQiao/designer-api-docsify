@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## getDeleteSqlInfo
@@ -22,7 +22,7 @@ Obtains the SQL statement used to delete data. This API returns the result synch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes | RdbPredicates** object that matches the specified field. |
+| predicates | RdbPredicates | Yes | RdbPredicates** object that matches the specified field. |
 
 **Return value:**
 

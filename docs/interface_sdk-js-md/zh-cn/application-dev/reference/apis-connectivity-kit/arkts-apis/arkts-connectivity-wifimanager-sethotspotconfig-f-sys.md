@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## setHotspotConfig
@@ -27,7 +26,7 @@ function setHotspotConfig(config: HotspotConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) | 是 | 表示WLAN热点配置。 SSID和{@code securityType}必须有效且正确。 如果{@code securityType}不是{@code open}，{@code preSharedKey}必须有效且正确。 |
+| config | HotspotConfig | 是 | 表示WLAN热点配置。SSID和{@code securityType}必须有效且正确。如果{@code securityType}不是{@code open}，{@code preSharedKey}必须有效且正确。 |
 
 **错误码：**
 

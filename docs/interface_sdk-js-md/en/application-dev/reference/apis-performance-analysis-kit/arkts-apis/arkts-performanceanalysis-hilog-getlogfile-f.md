@@ -29,7 +29,7 @@ Returns the list of hilog log file paths in the sandbox for the specified recent
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | list of hilog log file paths in the sandbox for the specified rencent time period, with newer files appearing first in the list. |
+| Array&lt;string&gt; | list of hilog log file paths in the sandbox for the specified rencent time period, with newer files appearing first in the list. |
 
 **Examples**
 

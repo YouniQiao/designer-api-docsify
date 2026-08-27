@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## getUidsByPolicy
@@ -78,7 +78,7 @@ Obtains all UIDs that match the policy by policy. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the result. If the operation is successful, the operation result is returned. If the operation fails, an error message is returned. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the result. If the operation is successful, the operation result is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

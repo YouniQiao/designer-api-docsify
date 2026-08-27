@@ -17,7 +17,9 @@
 xOffset: number
 ```
 
-水平滑动偏移。单位：vp。
+水平滑动偏移。
+
+单位：vp。
 
 **类型：** number
 
@@ -35,7 +37,9 @@ xOffset: number
 yOffset: number
 ```
 
-竖直滑动偏移。单位：vp。
+竖直滑动偏移。
+
+单位：vp。
 
 **类型：** number
 

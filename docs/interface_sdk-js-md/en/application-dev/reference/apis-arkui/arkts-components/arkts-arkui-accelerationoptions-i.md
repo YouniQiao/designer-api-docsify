@@ -23,7 +23,9 @@ Particle acceleration.
 angle?: ParticlePropertyOptions<number, ACC_ANGLE_UPDATER>
 ```
 
-Acceleration direction (in angles).Default value: **{range:[0.0,0.0]}**
+Acceleration direction (in angles).
+
+Default value: **{range:[0.0,0.0]}**
 
 **Type:** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, ACC_ANGLE_UPDATER&gt;
 
@@ -41,7 +43,9 @@ Acceleration direction (in angles).Default value: **{range:[0.0,0.0]}**
 speed?: ParticlePropertyOptions<number, ACC_SPEED_UPDATER>
 ```
 
-Acceleration speed.Default value: **{range:[0.0,0.0]}**
+Acceleration speed.
+
+Default value: **{range:[0.0,0.0]}**
 
 **Type:** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, ACC_SPEED_UPDATER&gt;
 

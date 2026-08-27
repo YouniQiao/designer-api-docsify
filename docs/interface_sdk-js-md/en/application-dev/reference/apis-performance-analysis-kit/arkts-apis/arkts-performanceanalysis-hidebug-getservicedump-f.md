@@ -25,7 +25,7 @@ Obtains system service information.
 | --- | --- | --- | --- |
 | serviceid | number | Yes | Service ID used to obtain system service information. |
 | fd | number | Yes | File descriptor to which data is written by the API. |
-| args | Array & lt;string & gt; | Yes | Parameter list of the **Dump** API of the system service. The maximum length of a string is 254 characters. The excess part will be truncated. |
+| args | Array&lt;string&gt; | Yes | Parameter list of the **Dump** API of the system service. The maximum length of a string is 254 characters. The excess part will be truncated. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # PhotoEditorExtensionContext
 
-The context of Photo Editor extension. It allows access to PhotoEditorExtension-specific resources.@extends ExtensionContext
+The context of Photo Editor extension. It allows access to PhotoEditorExtension-specific resources.
+
+@extends ExtensionContext
 
 **Inheritance/Implementation:** PhotoEditorExtensionContext extends ExtensionContext
 

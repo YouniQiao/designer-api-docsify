@@ -11,7 +11,9 @@
 function postDialProceed(callId: number, proceed: boolean, callback: AsyncCallback<void>): void
 ```
 
-继续进行通话。使用callback异步回调。当用户呼叫号码为：“普通电话号码”+“;”+"DTMF字符"(例如：“400xxxxxxx;123”)，并且已经订阅了通话后延迟事件，电话接通后，系统将上报通话后延迟事件，应用可以调用此接口选择是否发送DTMF音。
+继续进行通话。使用callback异步回调。
+
+当用户呼叫号码为：“普通电话号码”+“;”+"DTMF字符"(例如：“400xxxxxxx;123”)，并且已经订阅了通话后延迟事件，电话接通后，系统将上报通话后延迟事件，应用可以调用此接口选择是否发送DTMF音。
 
 **起始版本：** 11
 
@@ -58,7 +60,9 @@ call.postDialProceed(1, true, (err: BusinessError) => {
 function postDialProceed(callId: number, proceed: boolean): Promise<void>
 ```
 
-继续进行通话。使用Promise异步回调。当用户呼叫号码为：“普通电话号码”+“;”+"DTMF字符"(例如：“400xxxxxxx;123”)，并且已经订阅了通话后延迟事件，电话接通后，系统将上报通话后延迟事件，应用可以调用此接口选择是否发送DTMF音。
+继续进行通话。使用Promise异步回调。
+
+当用户呼叫号码为：“普通电话号码”+“;”+"DTMF字符"(例如：“400xxxxxxx;123”)，并且已经订阅了通话后延迟事件，电话接通后，系统将上报通话后延迟事件，应用可以调用此接口选择是否发送DTMF音。
 
 **起始版本：** 11
 
@@ -79,7 +83,7 @@ function postDialProceed(callId: number, proceed: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式异步返回结果。 |
+| Promise&lt;void&gt; | 以Promise形式异步返回结果。 |
 
 **错误码：**
 

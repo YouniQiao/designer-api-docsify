@@ -67,7 +67,8 @@ MMS configuration file. For details, see [MmsParams](#mmsparams-system-api).
 slotId: number
 ```
 
-Slot ID of the SIM card used for sending SMS messages.  
+Slot ID of the SIM card used for sending SMS messages.
+
 - **0**: card slot 1  
 - **1**: card slot 2
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import uniformTypeDescriptor from '@kit.ArkData';
+import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## getUniformDataTypeByFilenameExtension
@@ -31,7 +31,7 @@ function getUniformDataTypeByFilenameExtension(filenameExtension: string, belong
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回与给定文件后缀名以及归属类型ID（如果设置了belongsTo参数）匹配的标准化数据类型ID。如果要查询的标准化数据类型不存在，则返回根据入参按指定规则生成的动态类型（动态类型是系统动态 生成的类型标识，以'flex.'为前缀，用于表示未预定义的数据类型）。 |
+| string | 返回与给定文件后缀名以及归属类型ID（如果设置了belongsTo参数）匹配的标准化数据类型ID。如果要查询的标准化数据类型不存在，则返回根据入参按指定规则生成的动态类型（动态类型是系统动态生成的类型标识，以'flex.'为前缀，用于表示未预定义的数据类型）。 |
 
 **错误码：**
 

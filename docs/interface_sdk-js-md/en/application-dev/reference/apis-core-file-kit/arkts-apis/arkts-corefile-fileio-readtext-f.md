@@ -39,7 +39,7 @@ Reads the text content of a file. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise that returns the file content read. |
+| Promise&lt;string&gt; | Promise that returns the file content read. |
 
 **Examples**
 

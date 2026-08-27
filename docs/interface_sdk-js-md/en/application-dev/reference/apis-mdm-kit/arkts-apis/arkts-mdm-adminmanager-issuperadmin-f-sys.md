@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## isSuperAdmin
@@ -81,7 +81,7 @@ Checks whether the super device administrator application of the first user (u10
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the super device administrator application is enabled; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the super device administrator application is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 

@@ -3,9 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import usb from '@kit.BasicServicesKit';
-import usbManager from '@kit.BasicServicesKitManager';
-import serialManager from '@kit.BasicServicesKitManager.serial';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## getDevices
@@ -28,7 +26,7 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;Readonly & lt;USBDevice & gt; & gt; | 设备信息列表。 |
+| Array&lt;Readonly&lt;USBDevice&gt;&gt; | 设备信息列表。 |
 
 **示例**
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import dialog, { DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from '@kit.ArkUI';
+import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from '@kit.ArkUI';
 ```
 
 ## dialogId
@@ -18,7 +18,7 @@ import dialog, { DialogBaseAlignment, DialogButtonOrientation, DialogState, Dial
 dialogId: number
 ```
 
-对话框的ID。 取值限定为整数。
+对话框的ID。取值限定为整数。
 
 **类型：** number
 

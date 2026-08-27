@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import agentManager from '@kit.AbilityKit';
+import { agentManager } from '@kit.AbilityKit';
 ```
 
 ## registerAgentCard
@@ -34,7 +34,7 @@ Registers an AgentCard. If `agentCard.type` is not specified, it defaults to `ag
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

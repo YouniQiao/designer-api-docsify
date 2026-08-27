@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import userFileManager from '@kit.CoreFileKit';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## getUserFileMgr

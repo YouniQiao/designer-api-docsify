@@ -65,7 +65,7 @@ Obtains the global network proxy configuration information. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;HttpProxy & gt; | Promise used to return the result. |
+| Promise&lt;HttpProxy&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@ Implements a **DragAction** object to subscribe to drag state changes and start 
 ## Modules to Import
 
 ```TypeScript
-import dragController from '@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## off('statusChange')
@@ -78,7 +78,7 @@ Starts the drag service. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

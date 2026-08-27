@@ -11,7 +11,7 @@ Provides APIs for encapsulating file asset attributes.
 ## Modules to Import
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getAnalysisData
@@ -40,7 +40,7 @@ Obtains analysis data. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the analysis result obtained. |
+| Promise&lt;string&gt; | Promise used to return the analysis result obtained. |
 
 **Error codes:**
 
@@ -101,7 +101,7 @@ Opens the source file and returns the FD. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the FD obtained. |
+| Promise&lt;number&gt; | Promise used to return the FD obtained. |
 
 **Error codes:**
 

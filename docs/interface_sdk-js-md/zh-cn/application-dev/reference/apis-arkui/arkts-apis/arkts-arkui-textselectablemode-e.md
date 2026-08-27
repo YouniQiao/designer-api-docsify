@@ -1,6 +1,8 @@
 # TextSelectableMode
 
-Type of text selectable.@enum {number}
+Type of text selectable.
+
+@enum {number}
 
 **起始版本：** 12
 

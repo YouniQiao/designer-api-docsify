@@ -12,7 +12,11 @@ Provides options for configuring or querying the cross-language access permissio
 attributeSetting?: boolean
 ```
 
-Whether the FrameNode supports cross-language settings.The value **true** means the FrameNode supports cross-language settings, and **false** means the opposite.The default value is **false**.
+Whether the FrameNode supports cross-language settings.
+
+The value **true** means the FrameNode supports cross-language settings, and **false** means the opposite.
+
+The default value is **false**.
 
 **Type:** boolean
 
@@ -32,7 +36,13 @@ Whether the FrameNode supports cross-language settings.The value **true** means 
 treeOperating?: boolean
 ```
 
-Whether the FrameNode supports cross-language operations on the component tree.The value **true** means the FrameNode supports cross-language operations on the component tree, and **false** means the opposite.The default value is **false**.Note: When **treeOperating** is set to **true** for a FrameNode, the FrameNode can call [addChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#addchild), [insertChildAfter](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildafter), [insertChildAt](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildat), [insertChildBefore](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildbefore), and [removeChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#removechild) across languages.
+Whether the FrameNode supports cross-language operations on the component tree.
+
+The value **true** means the FrameNode supports cross-language operations on the component tree, and **false** means the opposite.
+
+The default value is **false**.
+
+Note: When **treeOperating** is set to **true** for a FrameNode, the FrameNode can call [addChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#addchild), [insertChildAfter](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildafter), [insertChildAt](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildat), [insertChildBefore](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildbefore), and [removeChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#removechild) across languages.
 
 **Type:** boolean
 

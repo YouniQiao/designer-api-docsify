@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getPhotoAccessHelper
@@ -32,7 +32,7 @@ function getPhotoAccessHelper(context: Context): PhotoAccessHelper
 
 | 类型 | 说明 |
 | --- | --- |
-| [PhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-photoaccesshelper-i.md) | 相册管理模块的实例。 |
+| PhotoAccessHelper | 相册管理模块的实例。 |
 
 **错误码：**
 
@@ -44,7 +44,7 @@ function getPhotoAccessHelper(context: Context): PhotoAccessHelper
 
 ```TypeScript
 // 此处获取的phAccessHelper实例为全局对象，后续使用到phAccessHelper的地方默认为使用此处获取的对象，如未添加此段代码报phAccessHelper未定义的错误请自行添加。
-// 请在组件内获取context，确保this.getUiContext().getHostContext()返回结果为UIAbilityContext
+// 请在组件内获取context，确保this.getUIContext().getHostContext()返回结果为UIAbilityContext。
 import { common } from '@kit.AbilityKit';
 
 @Entry

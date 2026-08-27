@@ -1,6 +1,8 @@
 # ArcAlphabetIndexerAttribute
 
-除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：
+
+除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>
 
@@ -193,7 +195,7 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribut
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | 是 | 设置提示弹窗的背景模糊材质。默认值：BlurStyle.NONE。 设置此属性后不建议再设置[popupBackground](#popupbackground)属性。 |
+| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | 是 | 设置提示弹窗的背景模糊材质。默认值：BlurStyle.NONE。设置此属性后不建议再设置[popupBackground](#popupbackground)属性。 |
 
 **返回值：**
 
@@ -271,7 +273,7 @@ selected(index: Optional<number>): ArcAlphabetIndexerAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 选中项索引值。若超出有效索引范围，则取默认值0。默认值：0 该参数支持 [!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。 |
+| index | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 选中项索引值。若超出有效索引范围，则取默认值0。默认值：0 该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。 |
 
 **返回值：**
 

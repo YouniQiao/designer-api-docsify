@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## getBtConnectionState
@@ -30,7 +30,7 @@ Get the local device connection state to any profile of any remote device. On AP
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | One of { |
+| ProfileConnectionState | One of { |
 
 **Error codes:**
 

@@ -27,15 +27,9 @@ Creates an HTTP request. You can use this API to initiate or destroy an HTTP req
 
 | Type | Description |
 | --- | --- |
-| [HttpRequest](arkts-network-connection-httprequest-t.md) | An **HttpRequest** object, which contains the **request**, **requestInStream**, **requestSync**, **enableAutoCookie**, **destroy**, **on**, and **off** methods. |
+| HttpRequest | An **HttpRequest** object, which contains the **request**, **requestInStream**, **requestSync**, **enableAutoCookie**, **destroy**, **on**, and **off** methods. |
 
 **Examples**
-
-```TypeScript
-import { http } from '@kit.NetworkKit';
-
-let httpRequest = http.createHttp();
-```
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

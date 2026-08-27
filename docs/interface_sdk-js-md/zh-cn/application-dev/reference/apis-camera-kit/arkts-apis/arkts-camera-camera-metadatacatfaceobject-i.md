@@ -1,6 +1,6 @@
 # MetadataCatFaceObject
 
-相机检测到的猫脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过 metadataOutput. on('metadataObjectsAvailable') 接口获取。
+相机检测到的猫脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput. on('metadataObjectsAvailable')接口获取。
 
 **继承/实现关系：** MetadataCatFaceObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md)
 

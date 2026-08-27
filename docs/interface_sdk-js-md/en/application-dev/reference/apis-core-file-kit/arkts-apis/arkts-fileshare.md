@@ -1,6 +1,8 @@
 # @ohos.fileshare
 
-Provides fileshare APIS@namespace fileShare
+Provides fileshare APIS
+
+@namespace fileShare
 
 **Since:** 9
 
@@ -9,7 +11,7 @@ Provides fileshare APIS@namespace fileShare
 ## Modules to Import
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -45,9 +47,9 @@ import fileShare from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md) | Policy information to manager permissions on a path.@interface PathPolicyInfo |
-| [PolicyErrorResult](arkts-corefile-fileshare-policyerrorresult-i.md) | Failed policy result on URI.@interface { object } |
-| [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md) | Policy information to manager permissions on a URI.@interface PolicyInfo |
+| [PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md) | Policy information to manager permissions on a path. |
+| [PolicyErrorResult](arkts-corefile-fileshare-policyerrorresult-i.md) | Failed policy result on URI. |
+| [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md) | Policy information to manager permissions on a URI. |
 
 <!--Del-->
 ### Interfaces(System API)
@@ -61,6 +63,6 @@ import fileShare from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [OperationMode](arkts-corefile-fileshare-operationmode-e.md) | Enumerates the uri operate mode types.@enum { number } OperationMode |
-| [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md) | Enumerates the error code of the permission policy for the URI operation.@enum { number } PolicyErrorCode |
-| [PolicyType](arkts-corefile-fileshare-policytype-e.md) | Indicates the policy type of the path.@enum { number } policyType |
+| [OperationMode](arkts-corefile-fileshare-operationmode-e.md) | Enumerates the uri operate mode types. |
+| [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md) | Enumerates the error code of the permission policy for the URI operation. |
+| [PolicyType](arkts-corefile-fileshare-policytype-e.md) | Indicates the policy type of the path. |

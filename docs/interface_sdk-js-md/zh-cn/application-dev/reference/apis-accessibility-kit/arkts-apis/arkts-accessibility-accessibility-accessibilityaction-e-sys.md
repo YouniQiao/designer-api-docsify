@@ -1,6 +1,8 @@
 # AccessibilityAction（系统接口）
 
-表示无障碍节点元素可执行的操作枚举。无障碍节点元素是指，UI界面上可执行无障碍操作的组件，例如：按钮、文本输入框等。
+表示无障碍节点元素可执行的操作枚举。
+
+无障碍节点元素是指，UI界面上可执行无障碍操作的组件，例如：按钮、文本输入框等。
 
 **起始版本：** 20
 
@@ -14,7 +16,7 @@
 ACCESSIBILITY_FOCUS = 0
 ```
 
-表示获得无障碍焦点。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).accessibilityFocusScene，参数值 为无障碍聚焦的场景类型。
+表示获得无障碍焦点。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).accessibilityFocusScene，参数值为无障碍聚焦的场景类型。
 
 **起始版本：** 20
 
@@ -196,7 +198,7 @@ SCROLL_BACKWARD = 12
 SET_SELECTION = 13
 ```
 
-表示选定组件内文本范围。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).selectTextBegin、 [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).selectTextEnd、 [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).selectTextInForWard，参数值为选定文本的起始坐标、结束坐标及是否向 前选择。
+表示选定组件内文本范围。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).selectTextBegin、[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).selectTextEnd、[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).selectTextInForWard，参数值为选定文本的起始坐标、结束坐标及是否向前选择。
 
 **起始版本：** 20
 
@@ -224,7 +226,8 @@ SET_CURSOR_POSITION = 14
 HOME = 15
 ```
 
-表示执行返回首页操作。  
+表示执行返回首页操作。
+
 **使用约束：** 此操作在多屏场景下，仅在主屏幕上生效。
 
 **起始版本：** 20
@@ -309,7 +312,7 @@ SPAN_CLICK = 20
 INJECT_ACTION = 21
 ```
 
-表示注入模拟用户操作的动作。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).injectActionType，参数值为注入 动作类型。
+表示注入模拟用户操作的动作。需配置参数[Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md).injectActionType，参数值为注入动作类型。
 
 **起始版本：** 26.0.0
 

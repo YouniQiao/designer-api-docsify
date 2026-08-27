@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getDynamicIcon
@@ -32,7 +32,7 @@ function getDynamicIcon(bundleName: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象。返回接口运行结果及动态图标对应的moduleName。 |
+| Promise&lt;string&gt; | Promise对象。返回接口运行结果及动态图标对应的moduleName。 |
 
 **错误码：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import distributedDeviceManager from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## createDeviceManager
@@ -28,7 +28,7 @@ Creates a **DeviceManager** instance. The **DeviceManager** instance is the entr
 
 | Type | Description |
 | --- | --- |
-| [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | DeviceManager** instance created. |
+| DeviceManager | DeviceManager** instance created. |
 
 **Error codes:**
 

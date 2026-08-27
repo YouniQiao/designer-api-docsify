@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## create
@@ -14,7 +12,9 @@ import window from '@kit.ArkUI';
 function create(id: string, type: WindowType, callback: AsyncCallback<Window>): void
 ```
 
-Creates a child window. This API uses an asynchronous callback to return the result.The child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.
+Creates a child window. This API uses an asynchronous callback to return the result.
+
+The child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.
 
 **Since:** 7
 
@@ -31,7 +31,7 @@ Creates a child window. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md). |
-| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | Yes | Window type. |
+| type | WindowType | Yes | Window type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the child window created. |
 
 **Examples**
@@ -58,7 +58,9 @@ window.create('test', window.WindowType.TYPE_APP, (err: BusinessError, data) => 
 function create(id: string, type: WindowType): Promise<Window>
 ```
 
-Creates a child window. This API uses a promise to return the result.The child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.
+Creates a child window. This API uses a promise to return the result.
+
+The child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.
 
 **Since:** 7
 
@@ -75,7 +77,7 @@ Creates a child window. This API uses a promise to return the result.The child w
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md). |
-| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | Yes | Window type. |
+| type | WindowType | Yes | Window type. |
 
 **Return value:**
 
@@ -121,7 +123,7 @@ Creates a system window. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
 | id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md). |
-| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | Yes | Window type. |
+| type | WindowType | Yes | Window type. |
 
 **Return value:**
 
@@ -167,7 +169,7 @@ Creates a system window. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
 | id | string | Yes | Window name, that is, the value of name in [Configuration](arkts-arkui-window-configuration-i.md). |
-| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | Yes | Window type. |
+| type | WindowType | Yes | Window type. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes | Callback used to return the child window created. |
 
 **Examples**

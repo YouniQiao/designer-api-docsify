@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## removeCandidateConfig
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function removeCandidateConfig(networkId: number): Promise<void>
 ```
 
-移除指定的候选热点配置，只允许移除自己添加的配置。 应用必须在前台运行。
+移除指定的候选热点配置，只允许移除自己添加的配置。应用必须在前台运行。
 
 **起始版本：** 12
 
@@ -33,7 +32,7 @@ function removeCandidateConfig(networkId: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 返回结果。 |
+| Promise&lt;void&gt; | 返回结果。 |
 
 **错误码：**
 
@@ -69,7 +68,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function removeCandidateConfig(networkId: number, callback: AsyncCallback<void>): void
 ```
 
-移除指定的候选热点配置，只允许移除自己添加的配置。 应用必须在前台运行。
+移除指定的候选热点配置，只允许移除自己添加的配置。应用必须在前台运行。
 
 **起始版本：** 12
 

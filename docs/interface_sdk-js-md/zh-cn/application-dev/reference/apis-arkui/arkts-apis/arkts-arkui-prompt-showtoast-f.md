@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import prompt from '@kit.ArkUI';
-import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUIAction';
+import { prompt } from '@kit.ArkUI';
 ```
 
 ## showToast
@@ -27,7 +26,7 @@ function showToast(options: ShowToastOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | 是 | 文本弹窗选项。 |
+| options | ShowToastOptions | 是 | 文本弹窗选项。 |
 
 **示例**
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## mimeTypeArray
@@ -18,7 +18,9 @@ import photoAccessHelper from '@kit.MediaLibraryKit';
 mimeTypeArray: Array<string>
 ```
 
-PhotoPicker可供用户选择媒体文件的过滤类型。数组长度最大为10，因此支持最多十种指定类型。过滤类型参考MIME类型定义，例如：“image/jpeg”、“video/mp4”等。
+PhotoPicker可供用户选择媒体文件的过滤类型。数组长度最大为10，因此支持最多十种指定类型。
+
+过滤类型参考MIME类型定义，例如：“image/jpeg”、“video/mp4”等。
 
 **类型：** Array&lt;string&gt;
 

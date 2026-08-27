@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getCurrentGroup
@@ -31,7 +28,7 @@ function getCurrentGroup(): Promise<WifiP2pGroupInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;WifiP2pGroupInfo & gt; | 当前群组信息。 |
+| Promise&lt;WifiP2pGroupInfo&gt; | 当前群组信息。 |
 
 **示例**
 

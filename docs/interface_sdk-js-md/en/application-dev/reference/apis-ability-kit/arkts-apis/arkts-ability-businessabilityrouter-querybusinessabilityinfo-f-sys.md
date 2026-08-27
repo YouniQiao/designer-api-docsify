@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import businessAbilityRouter from '@kit.AbilityKit';
+import { businessAbilityRouter } from '@kit.AbilityKit';
 ```
 
 ## queryBusinessAbilityInfo
@@ -89,7 +89,7 @@ Query the business ability info of by the given filter. ohos.permission.GET_BUND
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;BusinessAbilityInfo & gt; & gt; | Returns a list of business ability info objects. |
+| Promise&lt;Array&lt;BusinessAbilityInfo&gt;&gt; | Returns a list of business ability info objects. |
 
 **Error codes:**
 

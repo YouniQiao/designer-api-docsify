@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formBindingData from '@kit.FormKit';
+import { formBindingData } from '@kit.FormKit';
 ```
 
 ## createFormBindingData
@@ -30,7 +30,7 @@ Creates a **FormBindingData** object.
 
 | Type | Description |
 | --- | --- |
-| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | FormBindingData** object created based on the passed data. |
+| FormBindingData | FormBindingData** object created based on the passed data. |
 
 **Error codes:**
 

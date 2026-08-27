@@ -183,7 +183,7 @@ Sets the accessibility description, with support for resource references using R
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | set description of accessibility |
+| description | Resource | Yes | set description of accessibility |
 
 **Return value:**
 
@@ -227,7 +227,9 @@ Sets the drawing level for the accessibility focus highlight (green frame).
 accessibilityGroup(value: boolean): T
 ```
 
-Sets whether to enable accessibility grouping.<p>&lt;strong&gt;NOTE&lt;/strong&gt; Whether to enable accessibility grouping. When accessibility grouping is enabled, the component and all its children are treated as a single selectable unit, and the accessibility service will no longer focus on the individual child components.</p>
+Sets whether to enable accessibility grouping.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; Whether to enable accessibility grouping. When accessibility grouping is enabled, the component and all its children are treated as a single selectable unit, and the accessibility service will no longer focus on the individual child components.</p>
 
 **Since:** 12
 
@@ -257,7 +259,9 @@ Sets whether to enable accessibility grouping.<p>&lt;strong&gt;NOTE&lt;/strong&g
 accessibilityGroup(isGroup: boolean, accessibilityOptions: AccessibilityOptions): T
 ```
 
-Sets whether to enable accessibility grouping.<p>&lt;strong&gt;NOTE&lt;/strong&gt; If accessibility grouping is enabled and the component does not contain a universal text attribute or an accessibility text attribute, the system will concatenate the universal text attributes of its child components to form a merged text for the component. If a child component lacks a universal text attribute, it will be ignored in the concatenation process.
+Sets whether to enable accessibility grouping.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; If accessibility grouping is enabled and the component does not contain a universal text attribute or an accessibility text attribute, the system will concatenate the universal text attributes of its child components to form a merged text for the component. If a child component lacks a universal text attribute, it will be ignored in the concatenation process.
 
 When accessibilityPreferred is set to true, the system will prioritize concatenating the accessibility text attributes of the child components to form the merged text. If a child component lacks an accessibility text attribute, the system will continue to concatenate its universal text attribute. If a child component lacks both, it will be ignored.</p>
 
@@ -276,7 +280,7 @@ When accessibilityPreferred is set to true, the system will prioritize concatena
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isGroup | boolean | Yes | set group with accessibility, default value is false. |
-| accessibilityOptions | [AccessibilityOptions](../arkts-apis/arkts-arkui-accessibilityoptions-i.md) | Yes | accessibilityOptions for accessibility, default value is false. |
+| accessibilityOptions | AccessibilityOptions | Yes | accessibilityOptions for accessibility, default value is false. |
 
 **Return value:**
 
@@ -567,7 +571,9 @@ Sets the accessibility text. When a component does not contain a text attribute,
 accessibilityText(text: Resource): T
 ```
 
-Sets the accessibility text.<p>&lt;strong&gt;NOTE&lt;/strong&gt; If a component has both text content and accessibility text, only the accessibility text is announced. If a component is grouped for accessibility purposes but lacks both text content and accessibility text, the screen reader will concatenate text from its child components (depth-first traversal). To prioritize accessibility text concatenation, set accessibilityPreferred in accessibilityGroup. </p>
+Sets the accessibility text.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; If a component has both text content and accessibility text, only the accessibility text is announced. If a component is grouped for accessibility purposes but lacks both text content and accessibility text, the screen reader will concatenate text from its child components (depth-first traversal). To prioritize accessibility text concatenation, set accessibilityPreferred in accessibilityGroup. </p>
 
 **Since:** 12
 
@@ -583,7 +589,7 @@ Sets the accessibility text.<p>&lt;strong&gt;NOTE&lt;/strong&gt; If a component 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | set accessibility text |
+| text | Resource | Yes | set accessibility text |
 
 **Return value:**
 
@@ -845,7 +851,7 @@ Sets the types of data that can be dropped to the component. If **allowDrop** is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;[UniformDataType](arkts-arkui-uniformdatatype-t.md)&gt; \| null \| Array & lt;string & gt; | Yes | Types of data that can be dropped to the component. Since API version 12, this parameter can be set to **null** to make the component reject all data types. Starting from API version 23, this parameter can be set to an application-defined data type string array Array & lt;string & gt; is supported. While there is no strict format requirement for the string, it should not duplicate the format of standard types in **UniformDataType**. You are advised to define them based on the principle of being easy to remember and distinguish.<br>**Since:** 23 |
+| value | Array&lt;[UniformDataType](arkts-arkui-uniformdatatype-t.md)&gt; \| null \| Array&lt;string&gt; | Yes | Types of data that can be dropped to the component. Since API version 12, this parameter can be set to **null** to make the component reject all data types. Starting from API version 23, this parameter can be set to an application-defined data type string array Array&lt;string&gt; is supported. While there is no strict format requirement for the string, it should not duplicate the format of standard types in **UniformDataType**. You are advised to define them based on the principle of being easy to remember and distinguish.<br>**Since:** 23 |
 
 **Return value:**
 
@@ -1077,7 +1083,9 @@ Applies a background blur effect to the component. You can customize the blur ra
 background(content: CustomBuilder | ResourceColor, options?: BackgroundOptions): T
 ```
 
-Add a background for the component.Anonymous Object Rectification.
+Add a background for the component.
+
+Anonymous Object Rectification.
 
 **Since:** 20
 
@@ -1328,7 +1336,7 @@ Background color
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColorMetrics & gt; | Yes |  |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColorMetrics&gt; | Yes |  |
 
 **Return value:**
 
@@ -1716,7 +1724,7 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShown | boolean | Yes | true means display content, false means hide content, default is false. & lt;p & gt; & lt;strong & gt;NOTE & lt;/strong & gt;: The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by number presses is not supported. & lt;/p & gt; |
+| isShown | boolean | Yes | true means display content, false means hide content, default is false. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by number presses is not supported. </p> |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Indicates the content of context menu. |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
@@ -1746,7 +1754,7 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | true means display content, false means hide content, default is false. & lt;p & gt; & lt;strong & gt;NOTE & lt;/strong & gt;: The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via number press is not supported. & lt;/p & gt;. |
+| isShow | boolean | Yes | true means display content, false means hide content, default is false. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via number press is not supported. </p>. |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; | Yes | Indicates the content of context menu. |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
@@ -2428,7 +2436,7 @@ Sets the parameters of the chain in which the component is the head. This attrib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | Yes | indicates direction of the chain |
+| direction | Axis | Yes | indicates direction of the chain |
 | style | [ChainStyle](arkts-arkui-chainstyle-e.md) | Yes | indicates style of the chain |
 
 **Return value:**
@@ -2443,8 +2451,11 @@ Sets the parameters of the chain in which the component is the head. This attrib
 chainWeight(chainWeight: ChainWeightOptions): T
 ```
 
-Sets the weight of the component in a chain, which is used to re-lay out components that form the chain. This attribute takes effect only when the parent container is RelativeContainer.  
-**NOTE：**Since API version 23, dynamic configuration via [attributeModifier](#attributemodifier) is supported
+Sets the weight of the component in a chain, which is used to re-lay out components that form the chain. This attribute takes effect only when the parent container is RelativeContainer.
+
+**NOTE：**
+
+Since API version 23, dynamic configuration via [attributeModifier](#attributemodifier) is supported
 
 **Since:** 14
 
@@ -2518,7 +2529,7 @@ Sets the click feedback effect of the component. Compared with [clickEffect](#cl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [Optional](arkts-arkui-optional-t.md)&lt;[ClickEffect](arkts-arkui-clickeffect-i.md) \| null & gt; | Yes | Click feedback effect of the component.   **NOTE：**Use **undefined** or **null** to disable the click feedback effect.Avoid using this feature in scenarios where the component size dynamically changes.This attribute is not supported when the component cannot trigger universal events.After the click feedback effect triggers scaling, the touch point may fall outside the control, making the component unresponsive to gesture events. |
+| effect | [Optional](arkts-arkui-optional-t.md)&lt;[ClickEffect](arkts-arkui-clickeffect-i.md) \| null&gt; | Yes | Click feedback effect of the component.   **NOTE：**Use **undefined** or **null** to disable the click feedback effect.Avoid using this feature in scenarios where the component size dynamically changes.This attribute is not supported when the component cannot trigger universal events.After the click feedback effect triggers scaling, the touch point may fall outside the control, making the component unresponsive to gesture events. |
 
 **Return value:**
 
@@ -2720,7 +2731,7 @@ Applies a color blend effect to the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Color \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Color to blend with the component. The value can be a string, for example, **'0x000000'** or **'rgba(0,0,0,1)'**. |
+| value | Color \| string \| Resource | Yes | Color to blend with the component. The value can be a string, for example, **'0x000000'** or **'rgba(0,0,0,1)'**. |
 
 **Return value:**
 
@@ -2750,7 +2761,7 @@ Applies a color blend effect to the component. Compared with [colorBlend](#color
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;Color \| string \| Resource & gt; | Yes | Color to blend with the component. The value can be a string, for example, **'0x000000'** or **'rgba(0,0,0,1)'**.If **color** is **undefined**, the component reverts to its original effect with no color blending. |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;Color \| string \| Resource&gt; | Yes | Color to blend with the component. The value can be a string, for example, **'0x000000'** or **'rgba(0,0,0,1)'**.If **color** is **undefined**, the component reverts to its original effect with no color blending. |
 
 **Return value:**
 
@@ -2796,7 +2807,8 @@ Sets the visual effect of the compositing filter.
 constraintSize(value: ConstraintSizeOptions): T
 ```
 
-Sets the constraint size of the component, which is used to limit the size range during component layout. Since API version 10, this API supports the calc calculation feature.  
+Sets the constraint size of the component, which is used to limit the size range during component layout. Since API version 10, this API supports the calc calculation feature.
+
 **Impact of constraintSize(minWidth/maxWidth/minHeight/maxHeight) on width/height** | Default Value | Result | | ---------------------------------------- | ---------------------------------------- | | \ | width=MAX(minWidth,MIN(maxWidth,width))height=MAX(minHeight,MIN(maxHeight,height)) | | maxWidth, maxHeight| width=MAX(minWidth,width)height=MAX(minHeight,height) | minWidth, minHeight| width=MIN(maxWidth,width)height=MIN(maxHeight,height) | | width, height| If minWidth &lt; maxWidth, the layout logic of the component takes effect, and the value range of **width** is [minWidth, maxWidth]. Otherwise, width = MAX(minWidth, maxWidth).If minHeight &lt; maxHeight, the layout logic of the component takes effect, and the value range of **height** is [minHeight, maxHeight]. Otherwise, height = MAX (minHeight, maxHeight).| | width and maxWidth; height and maxHeight| width = minWidth height = minHeight | | width and minWidth; and height and minHeight| The layout logic of the component takes effect, and the value of **width** cannot be greater than that of **maxWidth**.The layout logic of the component takes effect, and the value of **height** cannot be greater than that of **maxHeight**.| | minWidth and maxWidth; minHeight and maxHeight| The width of the component is initially determined by the value of **width**, and it may be adjusted based on other layout attributes.The height of the component is initially determined by the value of **height**, and it may be adjusted based on other layout attributes.| | width, minWidth, and maxWidth| The layout restrictions passed by the parent container are used for layout.| | height, minHeight, and maxHeight| The layout restrictions passed by the parent container are used for layout.|
 
 **Since:** 7
@@ -2883,7 +2895,11 @@ Applies a contrast effect to the component. If this API is not used, there will 
 customProperty(name: string, value: Optional<Object>): T
 ```
 
-Sets a custom property for this component.In versions earlier than API 26.0.0, [custom components](../../../ui/state-management/arkts-create-custom-components.md) do not support custom properties.Since API 26.0.0, custom components support setting and reading custom properties.
+Sets a custom property for this component.
+
+In versions earlier than API 26.0.0, [custom components](../../../ui/state-management/arkts-create-custom-components.md) do not support custom properties.
+
+Since API 26.0.0, custom components support setting and reading custom properties.
 
 **Since:** 12
 
@@ -2957,7 +2973,7 @@ Sets how elements are laid out along the main axis of the container. This attrib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Direction](#direction) | Yes | How elements are laid out along the main axis of the container. If this parameter is set to **auto**, the layout is subject to the system language. The setting does not take effect in the **Column** component. Default value: **Direction.Auto**. If the **direction** attribute receives an **undefined** or **null** input parameter, the system will apply the default value |
+| value | Direction | Yes | How elements are laid out along the main axis of the container. If this parameter is set to **auto**, the layout is subject to the system language. The setting does not take effect in the **Column** component. Default value: **Direction.Auto**. If the **direction** attribute receives an **undefined** or **null** input parameter, the system will apply the default value |
 
 **Return value:**
 
@@ -3363,7 +3379,9 @@ Sets the percentage of the parent container's remaining space that is allocated 
 flexShrink(value: number): T
 ```
 
-Sets the percentage of the parent container's shrink size that is allocated to the component. When the parent container is Column or Row, you must set the size along the main axis.When [getInspectorByKey](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9) is used to obtain the **flexShrink** attribute, if the node does not have **flexShrink** set, the default value of **1** is returned by default.
+Sets the percentage of the parent container's shrink size that is allocated to the component. When the parent container is Column or Row, you must set the size along the main axis.
+
+When [getInspectorByKey](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9) is used to obtain the **flexShrink** attribute, if the node does not have **flexShrink** set, the default value of **1** is returned by default.
 
 **Since:** 7
 
@@ -3902,7 +3920,7 @@ Gesture to bind.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md) | Yes | Type of the gesture to bind. |
+| gesture | GestureType | Yes | Type of the gesture to bind. |
 | mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.Default value: **GestureMask.Normal**. |
 
 **Return value:**
@@ -4109,7 +4127,7 @@ Sets the height of the component. By default, the height required to fully hold 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the component to set.Unit: vp & gt; **NOTE：** >  > In the Row, Column, and RelativeContainer components, setting **width** and **height** to **auto** means that the size adapts to the size of their child components. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the component to set.Unit: vp &gt; **NOTE：** >  > In the Row, Column, and RelativeContainer components, setting **width** and **height** to **auto** means that the size adapts to the size of their child components. |
 
 **Return value:**
 
@@ -4251,7 +4269,7 @@ Rotates the hue of the component. If this API is not used, there will be no chan
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotation | [Optional](arkts-arkui-optional-t.md)&lt;number \| string & gt; | Yes | Hue rotation angle of the component.Value range: (-∞, +∞)For the string type, the value must be a numeric string.   **NOTE：**A rotation of 360 degrees leaves the color unchanged. A rotation of 180 degrees and then -180 degrees also leaves the color unchanged. When the data type is number, the value **90** is equivalent to **'90deg'**.If **sepia** is **undefined**, the component reverts to its original effect with no hue rotation. |
+| rotation | [Optional](arkts-arkui-optional-t.md)&lt;number \| string&gt; | Yes | Hue rotation angle of the component.Value range: (-∞, +∞)For the string type, the value must be a numeric string.   **NOTE：**A rotation of 360 degrees leaves the color unchanged. A rotation of 180 degrees and then -180 degrees also leaves the color unchanged. When the data type is number, the value **90** is equivalent to **'90deg'**.If **sepia** is **undefined**, the component reverts to its original effect with no hue rotation. |
 
 **Return value:**
 
@@ -4467,9 +4485,9 @@ Sets a keyboard shortcut for the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [FunctionKey](../../apis-input-kit/arkts-apis/arkts-input-inputdevice-functionkey-e.md) | Yes | Character key (which can be entered through the keyboard) or function key.An empty string means to disable the keyboard shortcut. |
+| value | string \| FunctionKey | Yes | Character key (which can be entered through the keyboard) or function key.An empty string means to disable the keyboard shortcut. |
 | keys | Array&lt;[ModifierKey](../arkts-apis/arkts-arkui-modifierkey-e.md)&gt; | Yes | Modifier keys.This parameter can be left empty only when **value** is set to a function key. |
-| action | () = & gt; void | No | Callback for a custom event after the keyboard shortcut is triggered. |
+| action | () =&gt; void | No | Callback for a custom event after the keyboard shortcut is triggered. |
 
 **Return value:**
 
@@ -5022,16 +5040,22 @@ motionBlur(motionBlur: Optional<MotionBlurOptions>): T
 ```
 
 Applies a motion blur effect to the component being scaled or moved. Compared with [motionBlur](#motionblur), this API supports the **undefined** type for the **motionBlur** parameter.
+
 1. Do not use this API in intra-component transitions, shared element transitions, implicit element transitions,
 or particle animations. Doing so may cause unexpected results.
+
 2. The **radius** parameter of **motionBlur** must be set to **0** for the initial state. Otherwise, there may be
 unexpected results during a cold start.
+
 3. This API must be used together with the **onFinish** parameter of **AnimateParam**. Its **radius** parameter
 must be set to **0** when the animation ends; otherwise, there may be unexpected results.
+
 4. When using this API, do not frequently change the blur radius of the same component; otherwise, there may be
 unexpected results. For example, if you frequently click the image in the example, the blur effect may not work sometimes.
+
 5. To avoid unexpected results, make sure the coordinates of the motion blur anchor point are the same as those
 of the animation scaling anchor point.
+
 6. To avoid unexpected results, set the blur radius to a value less than 1.
 
 **Since:** 18
@@ -5156,7 +5180,7 @@ Sets how the component content is obscured.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | Yes | How the component content is obscured.This API is only available for the Image<!--Del-->, FormComponent & lt;sup & gt;12+ & lt;/sup & gt;,<!--DelEnd--> and Text components.   **NOTE：**To obscure an image when it is being loaded, you must set the width and height of the **Image** component.Obscuring is not available for **Text** components that have child components or have any styled string configured. Default value: []. |
+| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | Yes | How the component content is obscured.This API is only available for the Image<!--Del-->, FormComponent&lt;sup&gt;12+&lt;/sup&gt;,<!--DelEnd--> and Text components.   **NOTE：**To obscure an image when it is being loaded, you must set the width and height of the **Image** component.Obscuring is not available for **Text** components that have child components or have any styled string configured. Default value: []. |
 
 **Return value:**
 
@@ -5332,7 +5356,7 @@ Triggered when this component appears.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback function of the **onAppear** event, which indicates that the component is displayed. |
+| event | () =&gt; void | Yes | Callback function of the **onAppear** event, which indicates that the component is displayed. |
 
 **Return value:**
 
@@ -5346,7 +5370,9 @@ Triggered when this component appears.
 onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 ```
 
-Triggered when the component area changes in size or position due to layout updates.This event is not triggered for render attribute changes caused by re-rendering, such as changes to [translate](#translate), [offset](#offset), [markAnchor](#markanchor), [scale](#scale), or [transform](#transform). In addition, if the component position is altered due to drawing changes, for example, through [bindSheet](#bindsheet), this event is also not triggered.
+Triggered when the component area changes in size or position due to layout updates.
+
+This event is not triggered for render attribute changes caused by re-rendering, such as changes to [translate](#translate), [offset](#offset), [markAnchor](#markanchor), [scale](#scale), or [transform](#transform). In addition, if the component position is altered due to drawing changes, for example, through [bindSheet](#bindsheet), this event is also not triggered.
 
 > **NOTE：**
 > 
@@ -5365,7 +5391,7 @@ Triggered when the component area changes in size or position due to layout upda
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (oldValue: Area, newValue: Area) = & gt; void | Yes | Position information of the target element. **oldValue** indicates the width and height of the target element as well as its coordinates relative to the parent element and the upper left corner of the page before the change. **newValue** indicates these dimensions and coordinates after the change. |
+| event | (oldValue: Area, newValue: Area) =&gt; void | Yes | Position information of the target element. **oldValue** indicates the width and height of the target element as well as its coordinates relative to the parent element and the upper left corner of the page before the change. **newValue** indicates these dimensions and coordinates after the change. |
 
 **Return value:**
 
@@ -5483,7 +5509,7 @@ Triggered when the current component loses focus.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback function of **onBlur**, which indicates that the component has lost focus. |
+| event | () =&gt; void | Yes | Callback function of **onBlur**, which indicates that the component has lost focus. |
 
 **Return value:**
 
@@ -5532,7 +5558,9 @@ Allows the current component to customize the hit test and control child compone
 onClick(event: (event: ClickEvent) => void): T
 ```
 
-Called when a click event occurs.When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**.
+Called when a click event occurs.
+
+When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**.
 
 > **NOTE：**
 > 
@@ -5554,7 +5582,7 @@ Called when a click event occurs.When triggered by keyboard or gamepad input, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: ClickEvent) = & gt; void | Yes | Callback for the click event. |
+| event | (event: ClickEvent) =&gt; void | Yes | Callback for the click event. |
 
 **Return value:**
 
@@ -5568,7 +5596,13 @@ Called when a click event occurs.When triggered by keyboard or gamepad input, th
 onClick(event: Callback<ClickEvent>, distanceThreshold: number): T
 ```
 
-Called when a click event occurs.When triggered by keyboard or gamepad input, the event's [SourceTool](arkts-arkui-sourcetool-e.md) is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**.Compared with the original **onClick** API, this API has the **distanceThreshold** parameter that specifies the finger movement threshold for click events. If the finger's movement exceeds the set threshold, the gesture recognition will fail. The click gesture recognition will fail if finger movement exceeds this threshold.For scenarios where there is no restriction on the finger movement distance during a click, the original API is preferred. To limit finger movement range during a click, use this new API.
+Called when a click event occurs.
+
+When triggered by keyboard or gamepad input, the event's [SourceTool](arkts-arkui-sourcetool-e.md) is **Unknown**, and [SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**.
+
+Compared with the original **onClick** API, this API has the **distanceThreshold** parameter that specifies the finger movement threshold for click events. If the finger's movement exceeds the set threshold, the gesture recognition will fail. The click gesture recognition will fail if finger movement exceeds this threshold.
+
+For scenarios where there is no restriction on the finger movement distance during a click, the original API is preferred. To limit finger movement range during a click, use this new API.
 
 > **NOTE：**
 > 
@@ -5683,7 +5717,7 @@ Triggered when this component disappears.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback function of the **onDisAppear** event, which indicates that the component is hidden. |
+| event | () =&gt; void | Yes | Callback function of the **onDisAppear** event, which indicates that the component is hidden. |
 
 **Return value:**
 
@@ -5711,7 +5745,7 @@ Triggered when the dragging of the component bound to the event ends.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) = & gt; void | Yes | Callback function.   **NOTE：**  **event**: drag event information. The coordinates of the drag point are not included in **onDragEnd**.    **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | Callback function.   **NOTE：**  **event**: drag event information. The coordinates of the drag point are not included in **onDragEnd**.    **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
 
 **Return value:**
 
@@ -5737,7 +5771,7 @@ Triggered when a dragged item enters a valid drop target. This event takes effec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) = & gt; void | Yes | Callback function.   **NOTE：**  **event**: drag event information, including the coordinates of the drag point.    **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | Callback function.   **NOTE：**  **event**: drag event information, including the coordinates of the drag point.    **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
 
 **Return value:**
 
@@ -5763,7 +5797,7 @@ Triggered when a dragged item leaves a valid drop target. This event takes effec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) = & gt; void | Yes | Callback function.   **NOTE：**  **event**: drag event information, including the coordinates of the drag point.    **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | Callback function.   **NOTE：**  **event**: drag event information, including the coordinates of the drag point.    **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
 
 **Return value:**
 
@@ -5789,7 +5823,7 @@ Triggered when a dragged item moves in a valid drop target. This event takes eff
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) = & gt; void | Yes | Callback function.   **NOTE：**  **event**: drag event information, including the coordinates of the drag point.    **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | Callback function.   **NOTE：**  **event**: drag event information, including the coordinates of the drag point.    **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
 
 **Return value:**
 
@@ -5803,7 +5837,9 @@ Triggered when a dragged item moves in a valid drop target. This event takes eff
 onDragSpringLoading(callback: Callback<SpringLoadingContext> | null, configuration?: DragSpringLoadingConfiguration): T
 ```
 
-The component bound to this event can be used as a drag-response target with hover detection capability. When the dragged object hovers over the target, the callback is triggered. Only one target can become the responder at any time, and child components always have higher response priority.For details about the hover detection triggering mechanism and usage, see [Spring Loading (Hover Detection) Support](../../../ui/arkts-common-events-drag-event.md#spring-loading-hover-detection-support).
+The component bound to this event can be used as a drag-response target with hover detection capability. When the dragged object hovers over the target, the callback is triggered. Only one target can become the responder at any time, and child components always have higher response priority.
+
+For details about the hover detection triggering mechanism and usage, see [Spring Loading (Hover Detection) Support](../../../ui/arkts-common-events-drag-event.md#spring-loading-hover-detection-support).
 
 **Since:** 20
 
@@ -5832,9 +5868,13 @@ The component bound to this event can be used as a drag-response target with hov
 onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | DragItemInfo): T
 ```
 
-In a gesture-based drag scenario, this callback is triggered when a user number-presses a draggable component for more than 500 ms and then moves the finger more than 10 vp. In a mouse-drag scenario, it is triggered when the left mouse button is pressed on a draggable component and moved more than 1 vp.For components that provide drag and drop capabilities by default, a custom **onDragStart** event, if set, is executed and:  
+In a gesture-based drag scenario, this callback is triggered when a user number-presses a draggable component for more than 500 ms and then moves the finger more than 10 vp. In a mouse-drag scenario, it is triggered when the left mouse button is pressed on a draggable component and moved more than 1 vp.
+
+For components that provide drag and drop capabilities by default, a custom **onDragStart** event, if set, is executed and:
+
 - If a custom drag preview is returned, it is used in place of the default drag preview.  
-- If drag data is set, it is used in place of the default drag data.  
+- If drag data is set, it is used in place of the default drag data.
+
 The custom drag preview is not supported for dragging selected text in the following components: Text, Search, TextInput, TextArea, RichEditor When **onDragStart** is used with menu preview or any component that provides default drag and drop capabilities, custom content on menu items and the preview cannot be dragged.
 
 > **NOTE：**
@@ -5851,7 +5891,7 @@ The custom drag preview is not supported for dragging selected text in the follo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) = & gt; CustomBuilder \ | [DragItemInfo](arkts-arkui-dragiteminfo-i.md) | Yes | Callback function.   **NOTE：**  **event**: drag event information.    **extraParams**: additional information about the drag event. Its value must be parsed into JSON format.    **CustomBuilder**: component information displayed during dragging. Global builders are not supported. |
+| event | (event: DragEvent, extraParams?: string) =&gt; CustomBuilder \| [DragItemInfo](arkts-arkui-dragiteminfo-i.md) | Yes | Callback function.   **NOTE：**  **event**: drag event information.    **extraParams**: additional information about the drag event. Its value must be parsed into JSON format.    **CustomBuilder**: component information displayed during dragging. Global builders are not supported. |
 
 **Return value:**
 
@@ -5877,7 +5917,7 @@ A component bound with this event can serve as a drop target. This callback is t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) = & gt; void | Yes | Callback function.   **NOTE：**  **event**: drag event information, including the coordinates of the drag point.    **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
+| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes | Callback function.   **NOTE：**  **event**: drag event information, including the coordinates of the drag point.    **extraParams**: additional information about the drag event. Its value must be parsed into JSON format. |
 
 **Return value:**
 
@@ -5891,7 +5931,8 @@ A component bound with this event can serve as a drop target. This callback is t
 onDrop(eventCallback: OnDragEventCallback, dropOptions?: DropOptions): T
 ```
 
-Triggered when a dragged item is dropped on a valid drop target. If you do not explicitly call event. [setResult](arkts-arkui-dragevent-i.md#setresult)() in **onDrop** to set the result of the drag reception, the system handles it as follows:  
+Triggered when a dragged item is dropped on a valid drop target. If you do not explicitly call event. [setResult](arkts-arkui-dragevent-i.md#setresult)() in **onDrop** to set the result of the drag reception, the system handles it as follows:
+
 - If the component being dragged is one that supports drop actions by default, the system's actual data processing  
 result is used.  
 - For other components, the system assumes that the data is received successfully.
@@ -5935,7 +5976,7 @@ Triggered when the current component obtains focus.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback function of **onFocus**, indicating that the component has gained focus. |
+| event | () =&gt; void | Yes | Callback function of **onFocus**, indicating that the component has gained focus. |
 
 **Return value:**
 
@@ -6019,7 +6060,7 @@ Binds a custom gesture determination callback to the component. When the gesture
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (gestureInfo: GestureInfo, event: BaseGestureEvent) = & gt; GestureJudgeResult | Yes | A callback instance used when a gesture bound to this component will be accepted. |
+| callback | (gestureInfo: GestureInfo, event: BaseGestureEvent) =&gt; GestureJudgeResult | Yes | A callback instance used when a gesture bound to this component will be accepted. |
 
 **Return value:**
 
@@ -6061,7 +6102,11 @@ Binds a custom gesture recognizer judgment callback to the component.
 onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback, exposeInnerGesture: boolean): T
 ```
 
-Binds a custom gesture recognizer judgment callback to the component.The **exposeInnerGesture** parameter indicates whether to expose gestures from built-in components within ArkUI system composite components to developers. When this parameter is set to **true**, these internal gestures are exposed.For scenarios where exposure of internal gestures is not required, use the original [onGestureRecognizerJudgeBegin](#ongesturerecognizerjudgebegin) API. Use this API with **exposeInnerGesture** set to **true** only when internal gesture exposure is necessary.
+Binds a custom gesture recognizer judgment callback to the component.
+
+The **exposeInnerGesture** parameter indicates whether to expose gestures from built-in components within ArkUI system composite components to developers. When this parameter is set to **true**, these internal gestures are exposed.
+
+For scenarios where exposure of internal gestures is not required, use the original [onGestureRecognizerJudgeBegin](#ongesturerecognizerjudgebegin) API. Use this API with **exposeInnerGesture** set to **true** only when internal gesture exposure is necessary.
 
 **Since:** 13
 
@@ -6102,7 +6147,7 @@ Triggered when the mouse pointer or stylus enters or leaves the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (isHover: boolean, event: HoverEvent) = & gt; void | Yes | Callback for mouse or stylus hover status.   **event**: event bubbling control and coordinates of the hover position; available since API version 11.   **isHover**: whether the mouse pointer or stylus is hovering over the component. **true**: The mouse pointer or stylus has entered the component. **false**: The mouse pointer or stylus has left the component. |
+| event | (isHover: boolean, event: HoverEvent) =&gt; void | Yes | Callback for mouse or stylus hover status.   **event**: event bubbling control and coordinates of the hover position; available since API version 11.   **isHover**: whether the mouse pointer or stylus is hovering over the component. **true**: The mouse pointer or stylus has entered the component. **false**: The mouse pointer or stylus has left the component. |
 
 **Return value:**
 
@@ -6156,7 +6201,7 @@ Triggered when a key event occurs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: KeyEvent) = & gt; void | Yes | KeyEvent** object. |
+| event | (event: KeyEvent) =&gt; void | Yes | KeyEvent** object. |
 
 **Return value:**
 
@@ -6198,7 +6243,9 @@ Triggered when a key operation is performed on the bound component after it obta
 onKeyEventDispatch(event: Callback<KeyEvent, boolean>): T
 ```
 
-Triggered when the bound component receives a key event. The key event will not be dispatched to its child components. Only existing key events can be intercepted; creating new **KeyEvent** objects for dispatch is not supported.If the callback returns **true**, the key event is marked as consumed and will not [bubble up](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) to parent components.
+Triggered when the bound component receives a key event. The key event will not be dispatched to its child components. Only existing key events can be intercepted; creating new **KeyEvent** objects for dispatch is not supported.
+
+If the callback returns **true**, the key event is marked as consumed and will not [bubble up](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) to parent components.
 
 **Since:** 15
 
@@ -6226,7 +6273,9 @@ Triggered when the bound component receives a key event. The key event will not 
 onKeyPreIme(event: Callback<KeyEvent, boolean>): T
 ```
 
-Triggered before other callbacks when a key operation is performed on the bound component after it obtains focus.If the return value of this callback is **true**, the key event is considered consumed, and subsequent event callbacks (**keyboardShortcut**, input method events, **onKeyEventDispatch**, and **onKeyEvent**) will be intercepted and no longer triggered.
+Triggered before other callbacks when a key operation is performed on the bound component after it obtains focus.
+
+If the return value of this callback is **true**, the key event is considered consumed, and subsequent event callbacks (**keyboardShortcut**, input method events, **onKeyEventDispatch**, and **onKeyEvent**) will be intercepted and no longer triggered.
 
 **Since:** 12
 
@@ -6266,7 +6315,7 @@ Triggered when the component is clicked by a mouse button or the mouse pointer m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: MouseEvent) = & gt; void | Yes | Timestamp, mouse button, action, coordinates of the clicked point on the entire screen, and coordinates of the clicked point relative to the component when the event is triggered. |
+| event | (event: MouseEvent) =&gt; void | Yes | Timestamp, mouse button, action, coordinates of the clicked point on the entire screen, and coordinates of the clicked point relative to the component when the event is triggered. |
 
 **Return value:**
 
@@ -6396,7 +6445,7 @@ Invoked when a touch event is triggered. Touch events [bubble](../../../ui/arkts
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: TouchEvent) = & gt; void | Yes | TouchEvent** object. |
+| event | (event: TouchEvent) =&gt; void | Yes | TouchEvent** object. |
 
 **Return value:**
 
@@ -6532,7 +6581,7 @@ Called when the visible area of the component changes. For details about the dev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratios | Array & lt;number & gt; | Yes | Threshold array. Each threshold represents a ratio of the component's visible area (that is, the area of the component that is visible on screen; only the area within the parent component is counted) to the component's total area. This callback is invoked when the ratio of the component's visible area to its total area is greater than or less than the threshold. The value of each threshold ranges from 0.0 to 1.0. If a threshold value is less than 0.0, it is clamped to 0.0; if it is greater than 1.0, it is clamped to 1.0.   **NOTE：**When the value is close to the boundary 0 or 1, it is rounded off with a round-off error not greater than 0.001. For example, 0.9997 is rounded off to 1. |
+| ratios | Array&lt;number&gt; | Yes | Threshold array. Each threshold represents a ratio of the component's visible area (that is, the area of the component that is visible on screen; only the area within the parent component is counted) to the component's total area. This callback is invoked when the ratio of the component's visible area to its total area is greater than or less than the threshold. The value of each threshold ranges from 0.0 to 1.0. If a threshold value is less than 0.0, it is clamped to 0.0; if it is greater than 1.0, it is clamped to 1.0.   **NOTE：**When the value is close to the boundary 0 or 1, it is rounded off with a round-off error not greater than 0.001. For example, 0.9997 is rounded off to 1. |
 | event | [VisibleAreaChangeCallback](arkts-arkui-visibleareachangecallback-t.md) | Yes | Callback for visible area changes of the component.<br>**Since:** 13 |
 
 **Return value:**
@@ -6561,7 +6610,7 @@ Called when the visible area of the component changes. You can use **measureFrom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ratios | Array & lt;number & gt; | Yes | Threshold array. Each threshold represents the ratio of the component's visible area to its own total area. This callback is invoked when the ratio of the component's visible area to its total area is greater than or less than the threshold. The value of each threshold ranges from 0.0 to 1.0. If a threshold value is less than 0.0, it is clamped to 0.0; if it is greater than 1.0, it is clamped to 1.0.   **NOTE：**When the value is close to the boundary 0 or 1, it is rounded off with a round-off error not greater than 0.001. For example, 0.9997 is rounded off to 1. |
+| ratios | Array&lt;number&gt; | Yes | Threshold array. Each threshold represents the ratio of the component's visible area to its own total area. This callback is invoked when the ratio of the component's visible area to its total area is greater than or less than the threshold. The value of each threshold ranges from 0.0 to 1.0. If a threshold value is less than 0.0, it is clamped to 0.0; if it is greater than 1.0, it is clamped to 1.0.   **NOTE：**When the value is close to the boundary 0 or 1, it is rounded off with a round-off error not greater than 0.001. For example, 0.9997 is rounded off to 1. |
 | event | [VisibleAreaChangeCallback](arkts-arkui-visibleareachangecallback-t.md) | Yes | Callback for visible area changes of the component. |
 | measureFromViewport | boolean | Yes | Visible area calculation mode.   **true**: considers the parent's [clip](#clip) attribute. If [clip](#clip) is **false**, areas of the child component beyond the parent's bounds are counted as visible; if [clip](#clip) is **true**, such areas are counted as invisible. **false**: ignores the parent's [clip](#clip) attribute, treating areas beyond the parent's bounds as invisible.When **measureFromViewport** is set to **true**, and an ancestor node has the [scale](#scale) attribute set, the component's visible ratio will be correctly calculated. |
 
@@ -6591,7 +6640,7 @@ Sets the opacity of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Component opacity. Value range: 0 to 1. Values less than 0 are treated as 0. Values greater than 1 are treated as 1. **1**: fully opaque. **0**: fully transparent (where the component is hidden but occupies layout space).Default value: **1**.   **NOTE：**Child components inherit parent opacity and combine with their own opacity. Example: Parent opacity 0.1 x Child opacity 0.8 = Effective opacity 0.08. |
+| value | number \| Resource | Yes | Component opacity. Value range: 0 to 1. Values less than 0 are treated as 0. Values greater than 1 are treated as 1. **1**: fully opaque. **0**: fully transparent (where the component is hidden but occupies layout space).Default value: **1**.   **NOTE：**Child components inherit parent opacity and combine with their own opacity. Example: Parent opacity 0.1 x Child opacity 0.8 = Effective opacity 0.08. |
 
 **Return value:**
 
@@ -6621,7 +6670,7 @@ Sets the opacity of the component. Compared with [opacity](../../../reference/ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| opacity | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes | Component opacity. Value range: 0 to 1. Values less than 0 are treated as 0. Values greater than 1 are treated as 1. **1**: fully opaque. **0**: fully transparent (where the component is hidden but occupies layout space).Default value: **1**.   **NOTE：**Child components inherit parent opacity and combine with their own opacity. Example: Parent opacity 0.1 x Child opacity 0.8 = Effective opacity 0.08.When **opacity** is **undefined**, the component reverts to the default opacity of **1**. |
+| opacity | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource&gt; | Yes | Component opacity. Value range: 0 to 1. Values less than 0 are treated as 0. Values greater than 1 are treated as 1. **1**: fully opaque. **0**: fully transparent (where the component is hidden but occupies layout space).Default value: **1**.   **NOTE：**Child components inherit parent opacity and combine with their own opacity. Example: Parent opacity 0.1 x Child opacity 0.8 = Effective opacity 0.08.When **opacity** is **undefined**, the component reverts to the default opacity of **1**. |
 
 **Return value:**
 
@@ -6801,7 +6850,7 @@ Sets the radius of the outline corners. If this API is not used, there will be n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| OutlineRadiuses & gt; | Yes | Radius of the outline corners. Percentage values are not supported.Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth If **radius** is **undefined**, the component reverts to its original style with the outline corner radius of 0. |
+| radius | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| OutlineRadiuses&gt; | Yes | Radius of the outline corners. Percentage values are not supported.Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth If **radius** is **undefined**, the component reverts to its original style with the outline corner radius of 0. |
 
 **Return value:**
 
@@ -6861,7 +6910,7 @@ Sets the outline style. If this API is not used, a solid line is displayed by de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[OutlineStyle](arkts-arkui-outlinestyle-e.md) \| EdgeOutlineStyles & gt; | Yes | Outline style.If **style** is **undefined**, the component reverts to its original style with no outline. |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[OutlineStyle](arkts-arkui-outlinestyle-e.md) \| EdgeOutlineStyles&gt; | Yes | Outline style.If **style** is **undefined**, the component reverts to its original style with no outline. |
 
 **Return value:**
 
@@ -6921,7 +6970,7 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths & gt; | Yes | Outline thickness. Percentage values are not supported.If **width** is **undefined**, the component reverts to its original style with no outline width. |
+| width | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths&gt; | Yes | Outline thickness. Percentage values are not supported.If **width** is **undefined**, the component reverts to its original style with no outline width. |
 
 **Return value:**
 
@@ -7017,7 +7066,7 @@ Gesture that can be recognized at once by the component and its child component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md) | Yes | Gesture object to bind. |
+| gesture | GestureType | Yes | Gesture object to bind. |
 | mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.Default value: **GestureMask.Normal**. |
 
 **Return value:**
@@ -7043,7 +7092,9 @@ Sets the pixel rounding policy for the current component in the specified direct
 > - This API can be called within
 > [attributeModifier](#attributemodifier)
 > since API version 12.
-In normal calculations, the vertical direction (top and bottom) correspond to the component height, and the horizontal direction (the starting direction of mirroring is considered "left") correspond to the component width. For ease of description, these two sets of directions are referred to as top-left and bottom-right.  
+
+In normal calculations, the vertical direction (top and bottom) correspond to the component height, and the horizontal direction (the starting direction of mirroring is considered "left") correspond to the component width. For ease of description, these two sets of directions are referred to as top-left and bottom-right.
+
 - Calculate the top-left coordinates of the current component: offset of the top-left corner relative to the  
 parent container.  
 - Calculate the bottom-right coordinates of the current component: offset of the top-left corner relative to the  
@@ -7135,7 +7186,8 @@ Applies a pixel stretch effect to the component. Compared to [pixelStretchEffect
 position(value: Position | Edges | LocalizedEdges): T
 ```
 
-Sets the absolute positioning, which determines the position of a child component relative to the content area of the parent component. Dynamic configuration via [attributeModifier](#attributemodifier) is supported.  
+Sets the absolute positioning, which determines the position of a child component relative to the content area of the parent component. Dynamic configuration via [attributeModifier](#attributemodifier) is supported.
+
 **NOTE：**
 - This API takes effect after the component's size measurement is complete.
 - When the parent container is Row,
@@ -7175,6 +7227,7 @@ priorityGesture(gesture: GestureType, mask?: GestureMask): T
 ```
 
 Gesture to preferentially recognize.
+
 1. By default, the child component preferentially recognizes the gesture specified by **gesture**, and the parent
 component preferentially recognizes the gesture specified by **priorityGesture** (if set).
 2. For number press gestures, the component with the shortest minimum hold-down time responds first, ignoring the  
@@ -7194,7 +7247,7 @@ component preferentially recognizes the gesture specified by **priorityGesture**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md) | Yes | Gesture object to bind. |
+| gesture | GestureType | Yes | Gesture object to bind. |
 | mask | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No | Mask for gesture events.Default value: **GestureMask.Normal**. |
 
 **Return value:**
@@ -7209,7 +7262,9 @@ component preferentially recognizes the gesture specified by **priorityGesture**
 radialGradient(value: RadialGradientOptions): T
 ```
 
-Radial Gradient center:Center point of radial gradient radius:Radius of Radial Gradient. value range [0, +∞) colors:Color description for gradients repeating: Refill. The default value is false Anonymous Object Rectification.
+Radial Gradient center:Center point of radial gradient radius:Radius of Radial Gradient. value range [0, +∞) colors:Color description for gradients repeating: Refill. The default value is false
+
+Anonymous Object Rectification.
 
 **Since:** 7
 
@@ -7327,7 +7382,9 @@ Sets how the final state of the component's content is rendered during its width
 renderGroup(value: boolean): T
 ```
 
-Sets whether to form a render group. A render group means that the subtree composed of the current component and its child components is first rendered on an offscreen canvas and then composited with the parent component. Setting a render group allows the system to cache the rendering result, improving performance. However, if components within the render group are frequently updated, cache invalidation may lead to performance degradation. Additionally, when a render group is set and the current component's opacity is not **1**, the rendering effect may differ.If this attribute is not set, no render group is formed by default.
+Sets whether to form a render group. A render group means that the subtree composed of the current component and its child components is first rendered on an offscreen canvas and then composited with the parent component. Setting a render group allows the system to cache the rendering result, improving performance. However, if components within the render group are frequently updated, cache invalidation may lead to performance degradation. Additionally, when a render group is set and the current component's opacity is not **1**, the rendering effect may differ.
+
+If this attribute is not set, no render group is formed by default.
 
 **Since:** 10
 
@@ -8117,7 +8174,9 @@ Sets the state-specific styles for the component.
 sweepGradient(value: SweepGradientOptions): T
 ```
 
-Angle Gradient center:is the center point of the angle gradient start:Start point of angle gradient. The default value is 0 end:End point of angle gradient. The default value is 0 rotating:rotating. The default value is 0 colors:Color description for gradients repeating:repeating. The default value is false Anonymous Object Rectification.
+Angle Gradient center:is the center point of the angle gradient start:Start point of angle gradient. The default value is 0 end:End point of angle gradient. The default value is 0 rotating:rotating. The default value is 0 colors:Color description for gradients repeating:repeating. The default value is false
+
+Anonymous Object Rectification.
 
 **Since:** 7
 
@@ -8736,7 +8795,7 @@ Sets the visibility of the component. If **visibility** is not set, the componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Visibility](#visibility) | Yes | Whether the component is visible. When appropriate, consider using [conditional rendering](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) as a substitute. |
+| value | Visibility | Yes | Whether the component is visible. When appropriate, consider using [conditional rendering](../../../ui/rendering-control/arkts-rendering-control-ifelse.md) as a substitute. |
 
 **Return value:**
 
@@ -8796,7 +8855,7 @@ Sets the width of the component. By default, the width required to fully hold th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the component to set.Unit: vp & gt; **NOTE：** >  > - In the TextInput component, setting **width** to **auto** means that > the width adapts to the width of the text content. >  > - In the AlphabetIndexer component, setting **width** to **auto** > means that the width adapts to the maximum width of index entries. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the component to set.Unit: vp &gt; **NOTE：** >  > - In the TextInput component, setting **width** to **auto** means that > the width adapts to the width of the text content. >  > - In the AlphabetIndexer component, setting **width** to **auto** > means that the width adapts to the maximum width of index entries. |
 
 **Return value:**
 

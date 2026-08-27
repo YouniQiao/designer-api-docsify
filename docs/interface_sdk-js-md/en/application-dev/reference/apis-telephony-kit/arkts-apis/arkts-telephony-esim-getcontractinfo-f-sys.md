@@ -32,7 +32,7 @@ Obtains the encrypted eSIM ID and other information required for enabling eSIM.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the encrypted information in the Tag-Length-Value (TLV) format. |
+| Promise&lt;string&gt; | Promise used to return the encrypted information in the Tag-Length-Value (TLV) format. |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## cryptoPageSize
@@ -18,7 +18,9 @@ import relationalStore from '@kit.ArkData';
 cryptoPageSize?: number
 ```
 
-整数类型，指定数据库加解密使用的页大小，单位：字节。如不指定，默认值为1024字节。用户指定的页大小应为1024到65536范围内的整数，并且为2&lt;sup&gt;n&lt;/sup&gt;。若指定值非整数，则向下取整。
+整数类型，指定数据库加解密使用的页大小，单位：字节。如不指定，默认值为1024字节。
+
+用户指定的页大小应为1024到65536范围内的整数，并且为2&lt;sup&gt;n&lt;/sup&gt;。若指定值非整数，则向下取整。
 
 **类型：** number
 
@@ -46,7 +48,11 @@ encryptionAlgo?: EncryptionAlgo
 encryptionKey: Uint8Array
 ```
 
-指定数据库加/解密使用的密钥。如传入密钥为空，则由数据库负责生成并保存密钥，并使用生成的密钥打开数据库文件。使用完后用户需要将密钥内容全部置为零。
+指定数据库加/解密使用的密钥。
+
+如传入密钥为空，则由数据库负责生成并保存密钥，并使用生成的密钥打开数据库文件。
+
+使用完后用户需要将密钥内容全部置为零。
 
 **类型：** Uint8Array
 
@@ -74,7 +80,11 @@ hmacAlgo?: HmacAlgo
 iterationCount?: number
 ```
 
-整数类型，指定数据库PBKDF2算法的迭代次数，默认值为10000。迭代次数应当为大于零的整数，若非整数则向下取整，若小于零则抛出错误码401，请参见[通用错误码](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/errorcode-universal.md)。不指定此参数或指定为零时，使用默认值10000，并使用默认加密算法AES_256_GCM。
+整数类型，指定数据库PBKDF2算法的迭代次数，默认值为10000。
+
+迭代次数应当为大于零的整数，若非整数则向下取整，若小于零则抛出错误码401，请参见[通用错误码](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/errorcode-universal.md)。
+
+不指定此参数或指定为零时，使用默认值10000，并使用默认加密算法AES_256_GCM。
 
 **类型：** number
 

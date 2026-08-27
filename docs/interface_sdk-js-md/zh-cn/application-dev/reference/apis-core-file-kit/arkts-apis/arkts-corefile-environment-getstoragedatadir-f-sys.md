@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import Environment from '@kit.CoreFileKit';
+import { Environment } from '@kit.CoreFileKit';
 ```
 
 ## getStorageDataDir
@@ -24,7 +24,7 @@ function getStorageDataDir(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | 返回存储根目录。 |
+| Promise&lt;string&gt; | 返回存储根目录。 |
 
 **错误码：**
 

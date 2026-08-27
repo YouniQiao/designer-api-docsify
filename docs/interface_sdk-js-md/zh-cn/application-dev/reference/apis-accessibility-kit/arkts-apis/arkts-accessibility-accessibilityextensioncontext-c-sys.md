@@ -1,10 +1,13 @@
 # AccessibilityExtensionContext
 
-AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。辅助功能扩展上下文模块提供辅助功能扩展的相关能力，包括配置关注信息类型、查询节点信息、手势注入等。
+AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。
+
+辅助功能扩展上下文模块提供辅助功能扩展的相关能力，包括配置关注信息类型、查询节点信息、手势注入等。
 
 ## 使用说明
 
-使用AccessibilityExtensionContext功能前，通过AccessibilityExtensionAbility子类实例获取AccessibilityExtensionContext实例。  
+使用AccessibilityExtensionContext功能前，通过AccessibilityExtensionAbility子类实例获取AccessibilityExtensionContext实例。
+
 ```ts
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
 class EntryAbility extends AccessibilityExtensionAbility {
@@ -117,7 +120,9 @@ export default class AccessibilityManager {
 getAccessibilityFocusedElement(): Promise<AccessibilityElement>
 ```
 
-获取当前获得无障碍焦点的元素。使用Promise异步回调。无障碍焦点是指无障碍服务当前聚焦的节点，与输入焦点不同。
+获取当前获得无障碍焦点的元素。使用Promise异步回调。
+
+无障碍焦点是指无障碍服务当前聚焦的节点，与输入焦点不同。
 
 **起始版本：** 20
 
@@ -276,7 +281,9 @@ export default class AccessibilityManager {
 getDefaultFocusedElementIds(windowId: number): Promise<Array<number>>
 ```
 
-查询应用自定义设置的默认焦点元素ID列表。使用Promise异步回调。默认焦点是指窗口打开时无障碍服务优先聚焦的元素。
+查询应用自定义设置的默认焦点元素ID列表。使用Promise异步回调。
+
+默认焦点是指窗口打开时无障碍服务优先聚焦的元素。
 
 **起始版本：** 18
 
@@ -294,7 +301,7 @@ getDefaultFocusedElementIds(windowId: number): Promise<Array<number>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise对象，返回当前窗口下的自定义默认焦点列表。 |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise对象，返回当前窗口下的自定义默认焦点列表。 |
 
 **错误码：**
 
@@ -437,7 +444,9 @@ export default class AccessibilityManager {
 getRootInActiveWindow(windowId?: number): Promise<AccessibilityElement>
 ```
 
-获取当前活动窗口的无障碍节点树根元素。使用Promise异步回调。活动窗口是指当前获得焦点的前台应用窗口。
+获取当前活动窗口的无障碍节点树根元素。使用Promise异步回调。
+
+活动窗口是指当前获得焦点的前台应用窗口。
 
 **起始版本：** 20
 
@@ -520,7 +529,7 @@ export default class AccessibilityManager {
 holdRunningLockSync(): void
 ```
 
-持有RunningLock锁，持锁后，屏幕不会自动灭屏。调用此方法后，在不需要保持屏幕常亮时调用 [unholdRunningLockSync](#unholdrunninglocksync)释放锁，恢复自动灭屏机制。
+持有RunningLock锁，持锁后，屏幕不会自动灭屏。调用此方法后，在不需要保持屏幕常亮时调用[unholdRunningLockSync](#unholdrunninglocksync)释放锁，恢复自动灭屏机制。
 
 **起始版本：** 20
 
@@ -585,7 +594,9 @@ export default class AccessibilityManager {
 notifyDisconnect(): void
 ```
 
-通知无障碍服务可以关闭该辅助功能扩展服务。此函数需要与注册预关闭接口 on('preDisconnect')配合使用， 如果没有调用过注册预关闭函数，直接调用此函数不生效。
+通知无障碍服务可以关闭该辅助功能扩展服务。
+
+此函数需要与注册预关闭接口on('preDisconnect')配合使用，如果没有调用过注册预关闭函数，直接调用此函数不生效。
 
 **起始版本：** 20
 
@@ -665,7 +676,7 @@ off(type: 'preDisconnect', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'preDisconnect' | 是 | 监听事件名，固定为‘preDisconnect’，即辅助功能扩展服务即将关闭的事件。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定辅助功能扩展服务即将关闭时的回调。需与 on('preDisconnect')的 callback一致。缺省时，表示注销所有已注册事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定辅助功能扩展服务即将关闭时的回调。需与on('preDisconnect')的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -722,7 +733,9 @@ export default class AccessibilityManager {
 on(type: 'preDisconnect', callback: Callback<void>): void
 ```
 
-向无障碍服务注册回调函数，在无障碍服务关闭该辅助功能扩展服务前会执行该回调函数。使用callback异步回调。此注册函数需要与[notifyDisconnect](#notifydisconnect)配合使用，如果不调用 [notifyDisconnect](#notifydisconnect)，则默认等待30秒后，辅助功能扩展服务会自动关闭。
+向无障碍服务注册回调函数，在无障碍服务关闭该辅助功能扩展服务前会执行该回调函数。使用callback异步回调。
+
+此注册函数需要与[notifyDisconnect](#notifydisconnect)配合使用，如果不调用[notifyDisconnect](#notifydisconnect)，则默认等待30秒后，辅助功能扩展服务会自动关闭。
 
 **起始版本：** 20
 
@@ -899,7 +912,7 @@ startAbility(want: Want): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1046,7 +1059,7 @@ updateAccessibilityElementProperty(elementId: number, windowId: number, node: Ac
 | --- | --- | --- | --- |
 | elementId | number | 是 | 表示修改无障碍节点的节点ID。 |
 | windowId | number | 是 | 表示修改无障碍节点的窗口ID。 |
-| node | [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | 是 | 修改无障碍节点的属性值，可修改的属性包括： accessibilityText，accessibilityGroup，accessibilityLevel，checkable，checked，selected，clickable，enabled， customComponentType。 |
+| node | [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | 是 | 修改无障碍节点的属性值，可修改的属性包括：accessibilityText，accessibilityGroup，accessibilityLevel，checkable，checked，selected，clickable，enabled，customComponentType。 |
 
 **返回值：**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## getPrinterInfoById

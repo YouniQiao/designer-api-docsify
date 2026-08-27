@@ -9,7 +9,7 @@ FetchResult provides APIs to manage the file retrieval result.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## close
@@ -95,7 +95,7 @@ Checks whether the specified file asset is contained in the result set. This API
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. **true** indicates that the specified file asset is contained in the result set, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. **true** indicates that the specified file asset is contained in the result set, and **false** indicates the opposite. |
 
 **Examples**
 
@@ -192,7 +192,7 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;T & gt; & gt; | Promise used to return an array of all file assets. |
+| Promise&lt;Array&lt;T&gt;&gt; | Promise used to return an array of all file assets. |
 
 **Error codes:**
 
@@ -338,7 +338,7 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise used to return the first object in the result set. |
+| Promise&lt;T&gt; | Promise used to return the first object in the result set. |
 
 **Error codes:**
 
@@ -393,7 +393,7 @@ Obtains the index of a specified file asset in the result set. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. If the object exists in the result set, the corresponding index is returned. Otherwise, **-1** is returned. |
+| Promise&lt;number&gt; | Promise used to return the result. If the object exists in the result set, the corresponding index is returned. Otherwise, **-1** is returned. |
 
 **Examples**
 
@@ -490,7 +490,7 @@ Obtains the last file asset in the result set. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise used to return the last object in the result set. |
+| Promise&lt;T&gt; | Promise used to return the last object in the result set. |
 
 **Error codes:**
 
@@ -525,7 +525,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getNextObject(callback: AsyncCallback<T>): void
 ```
 
-Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result.Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result.
+
+Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
 
 **Since:** 10
 
@@ -580,7 +582,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getNextObject(): Promise<T>
 ```
 
-Obtains the next file asset in the result set. This API uses a promise to return the result.Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses a promise to return the result.
+
+Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
 
 **Since:** 10
 
@@ -592,7 +596,7 @@ Obtains the next file asset in the result set. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise used to return the next object in the result set. |
+| Promise&lt;T&gt; | Promise used to return the next object in the result set. |
 
 **Error codes:**
 
@@ -701,7 +705,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise used to return the file asset obtained. |
+| Promise&lt;T&gt; | Promise used to return the file asset obtained. |
 
 **Error codes:**
 
@@ -760,7 +764,7 @@ Obtains the file asset array corresponding to the specified index set in the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T[] & gt; | Promise object, which returns the file asset array corresponding to the specified index set. |
+| Promise&lt;T[]&gt; | Promise object, which returns the file asset array corresponding to the specified index set. |
 
 **Error codes:**
 
@@ -816,7 +820,7 @@ Obtains the file asset array of a specified length (second parameter) from the s
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T[] & gt; | Promise array. |
+| Promise&lt;T[]&gt; | Promise array. |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## executeTime
@@ -46,7 +46,7 @@ prepareTime: number
 sql: Array<string>
 ```
 
-表示执行的SQL语句的数组。当 [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert) 的参数太大时，可能有多个SQL。
+表示执行的SQL语句的数组。当[batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)的参数太大时，可能有多个SQL。
 
 **类型：** Array&lt;string&gt;
 

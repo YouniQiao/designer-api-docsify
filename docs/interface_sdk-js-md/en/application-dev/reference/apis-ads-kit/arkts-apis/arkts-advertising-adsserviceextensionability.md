@@ -7,7 +7,7 @@ The AdsServiceExtensionAbility module provides ExtensionAbilities for the ads se
 ## Modules to Import
 
 ```TypeScript
-import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit';
+import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
 ```
 
 ## Summary
@@ -17,11 +17,11 @@ import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit';
 
 | Name | Description |
 | --- | --- |
-| [AdsServiceExtensionAbility(ExtensionAbility for Ads)](arkts-ads-advertising-adsserviceextensionability-adsserviceextensionability-c-sys.md) | Provides the capability of integrating advertising services with vendors. |
+| [AdsServiceExtensionAbility](arkts-ads-advertising-adsserviceextensionability-adsserviceextensionability-c-sys.md) | Provides the capability of integrating advertising services with vendors. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [RespCallback(ExtensionAbility for Ads)](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Ad request callback. |
+| [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Ad request callback. |

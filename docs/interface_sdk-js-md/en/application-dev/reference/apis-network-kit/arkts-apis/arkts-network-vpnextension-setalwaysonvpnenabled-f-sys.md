@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import vpnExtension from '@kit.NetworkKit';
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## setAlwaysOnVpnEnabled
@@ -35,7 +35,7 @@ Enables or disables the **always on** mode. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

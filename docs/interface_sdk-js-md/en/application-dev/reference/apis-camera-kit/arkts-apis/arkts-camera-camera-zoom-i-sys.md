@@ -1,6 +1,8 @@
 # Zoom
 
-**Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md).It provides APIs related to zoom operations.
+**Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md).
+
+It provides APIs related to zoom operations.
 
 **Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md)
 
@@ -31,7 +33,7 @@ Gets zoom center point.
 
 | Type | Description |
 | --- | --- |
-| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | The current zoom center point. |
+| Point | The current zoom center point. |
 
 **Error codes:**
 
@@ -70,7 +72,7 @@ function prepareZoom(sessionExtendsZoom: camera.Zoom): void {
   try {
     sessionExtendsZoom.prepareZoom();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code on failure and handle it.
     let err = error as BusinessError;
     console.error(`The prepareZoom call failed. error code: ${err.code}`);
   }
@@ -95,7 +97,7 @@ Sets zoom center point.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes | Target zoom center point. |
+| point | Point | Yes | Target zoom center point. |
 
 **Error codes:**
 
@@ -134,7 +136,7 @@ function unprepareZoom(sessionExtendsZoom: camera.Zoom): void {
   try {
     sessionExtendsZoom.unprepareZoom();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code on failure and handle it.
     let err = error as BusinessError;
     console.error(`The unprepareZoom call failed. error code: ${err.code}`);
   }

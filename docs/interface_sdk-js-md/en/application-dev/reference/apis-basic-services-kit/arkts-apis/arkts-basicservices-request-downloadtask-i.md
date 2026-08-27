@@ -9,8 +9,7 @@ Implements file downloads. Before using any APIs of this class, you must obtain 
 ## Modules to Import
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## delete
@@ -104,7 +103,7 @@ Deletes the download task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -225,7 +224,7 @@ Obtains the information about this download task. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;DownloadInfo & gt; | Promise used to return a **DownloadInfo** object. |
+| Promise&lt;DownloadInfo&gt; | Promise used to return a **DownloadInfo** object. |
 
 **Error codes:**
 
@@ -339,7 +338,7 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the MIME type of a download task. |
+| Promise&lt;string&gt; | Promise used to return the MIME type of a download task. |
 
 **Error codes:**
 
@@ -389,7 +388,7 @@ Unsubscribes from download progress events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'progress' | Yes | Event type.   - **'progress'**: download progress. |
-| callback | (receivedSize: number, totalSize: number) = & gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | (receivedSize: number, totalSize: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -446,7 +445,7 @@ Unsubscribes from download events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.   - **'complete'**: download task completion.   - **'pause'**: download task pause.   - **'remove'**: download task removal. |
-| callback | () = & gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -529,7 +528,7 @@ Unsubscribes from download events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.   - **'complete'**: download task completion.   - **'pause'**: download task pause.   - **'remove'**: download task removal. |
-| callback | () = & gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -558,7 +557,7 @@ Unsubscribes from download events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.   - **'complete'**: download task completion.   - **'pause'**: download task pause.   - **'remove'**: download task removal. |
-| callback | () = & gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
@@ -587,7 +586,7 @@ Unsubscribes from download failure events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Event type.   - **'fail'**: download task failure. |
-| callback | (err: number) = & gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered.For details about the error codes, see [Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants). |
+| callback | (err: number) =&gt; void | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered.For details about the error codes, see [Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants). |
 
 **Error codes:**
 
@@ -649,7 +648,7 @@ Subscribes to download progress events. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'progress' | Yes | Event type.   - **'progress'**: download progress. |
-| callback | (receivedSize: number, totalSize: number) = & gt; void | Yes | Callback used to return the size of the uploaded file and the total size of the file to upload, in bytes. If the server uses the chunk mode for data transmission and the total file size cannot be obtained from the request header, the value of **totalSize** is treated as **-1**. |
+| callback | (receivedSize: number, totalSize: number) =&gt; void | Yes | Callback used to return the size of the uploaded file and the total size of the file to upload, in bytes. If the server uses the chunk mode for data transmission and the total file size cannot be obtained from the request header, the value of **totalSize** is treated as **-1**. |
 
 **Error codes:**
 
@@ -698,7 +697,7 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.   - **'complete'**: download task completion.   - **'pause'**: download task pause.   - **'remove'**: download task removal. |
-| callback | () = & gt; void | Yes | Callback used to return the result. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -757,7 +756,7 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.   - **'complete'**: download task completion.   - **'pause'**: download task pause.   - **'remove'**: download task removal. |
-| callback | () = & gt; void | Yes | Callback used to return the result. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -786,7 +785,7 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes | Event type.   - **'complete'**: download task completion.   - **'pause'**: download task pause.   - **'remove'**: download task removal. |
-| callback | () = & gt; void | Yes | Callback used to return the result. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -815,7 +814,7 @@ Subscribes to download failure events. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fail' | Yes | Event type.   - **'fail'**: download task failure. |
-| callback | (err: number) = & gt; void | Yes | Callback for the download task failure event.For details about the error codes, see [Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants). |
+| callback | (err: number) =&gt; void | Yes | Callback for the download task failure event.For details about the error codes, see [Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants). |
 
 **Error codes:**
 
@@ -958,7 +957,7 @@ Pauses this download task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1085,7 +1084,7 @@ Queries this download task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;DownloadInfo & gt; | Promise used to return the **DownloadInfo** object. |
+| Promise&lt;DownloadInfo&gt; | Promise used to return the **DownloadInfo** object. |
 
 **Error codes:**
 
@@ -1167,7 +1166,7 @@ Queries the MIME type of this download task. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the MIME type of a download task. |
+| Promise&lt;string&gt; | Promise used to return the MIME type of a download task. |
 
 **Error codes:**
 
@@ -1261,7 +1260,7 @@ Deletes the download task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1368,7 +1367,7 @@ Restores the download task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -1517,7 +1516,7 @@ Restores the download task. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1666,7 +1665,7 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful; **false** indicates the opposite. |
 
 **Error codes:**
 

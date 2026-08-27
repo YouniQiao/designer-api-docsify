@@ -39,7 +39,7 @@ on(type: 'netAvailable', callback: Callback<NetHandle>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'netAvailable' | 是 | 订阅事件，固定为'netAvailable'。 netAvailable：数据网络可用事件。 |
+| type | 'netAvailable' | 是 | 订阅事件，固定为'netAvailable'。netAvailable：数据网络可用事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | 是 | 回调函数，返回数据网络句柄。 |
 
 **示例**

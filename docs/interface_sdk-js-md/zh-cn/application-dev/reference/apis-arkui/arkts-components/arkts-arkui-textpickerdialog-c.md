@@ -38,4 +38,4 @@ static show(options?: TextPickerDialogOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TextPickerDialogOptions](arkts-arkui-textpickerdialogoptions-i.md) | 否 | 配置文本选择器弹窗的参数，缺省时无法弹出弹窗。至少需要提供range参数才能正常弹出弹窗， 其他参数均为可选配置。 |
+| options | [TextPickerDialogOptions](arkts-arkui-textpickerdialogoptions-i.md) | 否 | 配置文本选择器弹窗的参数，缺省时无法弹出弹窗。至少需要提供range参数才能正常弹出弹窗，其他参数均为可选配置。 |

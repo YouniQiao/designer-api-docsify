@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## applyChanges
@@ -38,7 +38,7 @@ applyChanges(mediaChangeRequest: MediaChangeRequest): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -115,7 +115,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(photoType: PhotoType, extension: string, options: CreateOptions, callback: AsyncCallback<string>): void
 ```
 
-指定文件类型、后缀和创建选项，创建图片或视频资源。使用callback方式返回结果。在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考 [保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
+指定文件类型、后缀和创建选项，创建图片或视频资源。使用callback方式返回结果。
+
+在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考[保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
 
 **起始版本：** 10
 
@@ -129,9 +131,9 @@ createAsset(photoType: PhotoType, extension: string, options: CreateOptions, cal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
+| photoType | PhotoType | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件名后缀参数，例如：'jpg'。 |
-| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 是 | 创建选项，当前仅支持'title'，例如{title: 'testPhoto'}。    **注意：** 传入'subtype'选项，配置不生效，仅支持保存DEFAULT类型图片。 文件名中不允许出现非法英文字符，包括： . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 是 | 创建选项，当前仅支持'title'，例如{title: 'testPhoto'}。   **注意：** 传入'subtype'选项，配置不生效，仅支持保存DEFAULT类型图片。文件名中不允许出现非法英文字符，包括： . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | callback返回创建的图片和视频的uri。 |
 
 **错误码：**
@@ -173,7 +175,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback<string>): void
 ```
 
-指定文件类型和后缀，创建图片或视频资源，使用callback方式返回结果。在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考 [保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
+指定文件类型和后缀，创建图片或视频资源，使用callback方式返回结果。
+
+在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考[保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
 
 **起始版本：** 10
 
@@ -187,7 +191,7 @@ createAsset(photoType: PhotoType, extension: string, callback: AsyncCallback<str
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
+| photoType | PhotoType | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件名后缀参数，例如：'jpg'。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | callback返回创建的图片和视频的uri。 |
 
@@ -227,7 +231,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): Promise<string>
 ```
 
-指定文件类型、后缀和创建选项，创建图片或视频资源，以Promise方式返回结果。在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考 [保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
+指定文件类型、后缀和创建选项，创建图片或视频资源，以Promise方式返回结果。
+
+在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考[保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
 
 **起始版本：** 10
 
@@ -241,15 +247,15 @@ createAsset(photoType: PhotoType, extension: string, options?: CreateOptions): P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
+| photoType | PhotoType | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件名后缀参数，例如：'jpg'。 |
-| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 否 | 创建选项，当前仅支持'title'，例如{title: 'testPhoto'}。    **注意：** 传入'subtype'选项，配置不生效，仅支持保存DEFAULT类型图片。 文件名中不允许出现非法英文字符，包括： . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | 否 | 创建选项，当前仅支持'title'，例如{title: 'testPhoto'}。   **注意：** 传入'subtype'选项，配置不生效，仅支持保存DEFAULT类型图片。文件名中不允许出现非法英文字符，包括： . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回创建的图片和视频的uri。 |
+| Promise&lt;string&gt; | Promise对象，返回创建的图片和视频的uri。 |
 
 **错误码：**
 
@@ -289,7 +295,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAssetWithShortTermPermission(photoCreationConfig: PhotoCreationConfig): Promise<string>
 ```
 
-接口提供给应用调用，支持首次调用后拉起保存确认弹框。在用户同意保存后返回已创建并授予保存权限的uri，支持应用使用uri写入图片/视频。在用户"同意"后的5分钟之内，同一个应用再次调用接口，支持无需弹框确认自动返回已授权的uri给应用，支持应用保存图片/视频。退出应用会结束授权，再次进入需要重新弹出弹框进行确认授权。
+接口提供给应用调用，支持首次调用后拉起保存确认弹框。在用户同意保存后返回已创建并授予保存权限的uri，支持应用使用uri写入图片/视频。
+
+在用户"同意"后的5分钟之内，同一个应用再次调用接口，支持无需弹框确认自动返回已授权的uri给应用，支持应用保存图片/视频。退出应用会结束授权，再次进入需要重新弹出弹框进行确认授权。
 
 **起始版本：** 12
 
@@ -301,13 +309,13 @@ createAssetWithShortTermPermission(photoCreationConfig: PhotoCreationConfig): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoCreationConfig | [PhotoCreationConfig](arkts-medialibrary-photoaccesshelper-photocreationconfig-i.md) | 是 | 保存图片/视频到媒体库的配置，包括保存的文件名等。    **注意：** 传入'subtype'选项，配置项不生效，仅支持保存DEFAULT类型图片。 |
+| photoCreationConfig | [PhotoCreationConfig](arkts-medialibrary-photoaccesshelper-photocreationconfig-i.md) | 是 | 保存图片/视频到媒体库的配置，包括保存的文件名等。   **注意：** 传入'subtype'选项，配置项不生效，仅支持保存DEFAULT类型图片。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回给应用的媒体库文件uri。uri已对应用授权，支持应用写入数据。如果生成uri异常，则返回批量创建错误码。 |
+| Promise&lt;string&gt; | Promise对象，返回给应用的媒体库文件uri。uri已对应用授权，支持应用写入数据。如果生成uri异常，则返回批量创建错误码。 |
 
 **错误码：**
 
@@ -391,7 +399,7 @@ createAssetWithShortTermPermissionEx(creationSetting: CreationSetting): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回给应用的媒体库文件URI。支持应用使用返回的URI写入数据。 |
+| Promise&lt;string&gt; | Promise对象，返回给应用的媒体库文件URI。支持应用使用返回的URI写入数据。 |
 
 **错误码：**
 
@@ -426,7 +434,7 @@ createDeleteRequest(uriList: Array<string>, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uriList | Array & lt;string & gt; | 是 | 待删除的媒体文件uri数组，最大删除数量300。 |
+| uriList | Array&lt;string&gt; | 是 | 待删除的媒体文件uri数组，最大删除数量300。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback返回void。 |
 
 **错误码：**
@@ -498,13 +506,13 @@ createDeleteRequest(uriList: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uriList | Array & lt;string & gt; | 是 | 待删除的媒体文件uri数组，最大删除数量300。 |
+| uriList | Array&lt;string&gt; | 是 | 待删除的媒体文件uri数组，最大删除数量300。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -550,7 +558,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createPhotoAsset(photoType: PhotoType, extension: string, title?: string): Promise<string>
 ```
 
-指定文件类型、后缀和标题，创建图片或视频资源。使用Promise异步回调。在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考 [开发指南](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
+指定文件类型、后缀和标题，创建图片或视频资源。使用Promise异步回调。
+
+在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件或授权弹窗的方式创建媒体资源，详情请参考[开发指南](../../../media/medialibrary/photoAccessHelper-savebutton.md)。
 
 **起始版本：** 23
 
@@ -566,7 +576,7 @@ createPhotoAsset(photoType: PhotoType, extension: string, title?: string): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | 是 | 创建的文件类型。例如：IMAGE或者VIDEO类型。 |
+| photoType | PhotoType | 是 | 创建的文件类型。例如：IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件名后缀参数。例如：'jpg'。 |
 | title | string | 否 | 图片或视频资产的标题。 |
 
@@ -574,7 +584,7 @@ createPhotoAsset(photoType: PhotoType, extension: string, title?: string): Promi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回创建的图片或视频的URL。 |
+| Promise&lt;string&gt; | Promise对象，返回创建的图片或视频的URL。 |
 
 **错误码：**
 
@@ -610,7 +620,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getAlbumIdByLpath(lpath: string): Promise<number>
 ```
 
-根据相册的虚拟路径获取媒体库相册的ID。使用Promise异步回调。该接口仅支持以下相册：相机相册（'/DCIM/Camera'）、截图相册（'/Pictures/Screenshots'）和屏幕录制相册（'/Pictures/Screenrecords'）。​**模型约束**： 此接口仅可在Stage模型下使用。
+根据相册的虚拟路径获取媒体库相册的ID。使用Promise异步回调。
+
+该接口仅支持以下相册：相机相册（'/DCIM/Camera'）、截图相册（'/Pictures/Screenshots'）和屏幕录制相册（'/Pictures/Screenrecords'）。
+
+​**模型约束**： 此接口仅可在Stage模型下使用。
 
 **起始版本：** 22
 
@@ -628,7 +642,7 @@ getAlbumIdByLpath(lpath: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回相册lpath对应的媒体库相册的ID。 |
+| Promise&lt;number&gt; | Promise对象，返回相册lpath对应的媒体库相册的ID。 |
 
 **错误码：**
 
@@ -646,7 +660,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   console.info('getAlbumIdByLpath');
 
   try {
-      let albumId: number = await phAccessHelper.getAlbumIdByLpath('testLpath');
+      let albumId: number = await phAccessHelper.getAlbumIdByLpath('/DCIM/Camera');
       console.info('requestFile:: albumId: ', albumId);
 
       console.info('getAlbumIdByLpath completed.');
@@ -668,7 +682,9 @@ getAlbums(
     ): void
 ```
 
-根据检索选项和相册类型获取相册，使用callback方式返回结果。获取相册前，确保相册已存在。
+根据检索选项和相册类型获取相册，使用callback方式返回结果。
+
+获取相册前，确保相册已存在。
 
 **起始版本：** 10
 
@@ -680,8 +696,8 @@ getAlbums(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md) | 是 | 相册类型。 |
-| subtype | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | 是 | 相册子类型。 |
+| type | AlbumType | 是 | 相册类型。 |
+| subtype | AlbumSubtype | 是 | 相册子类型。 |
 | options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 检索选项。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | callback返回获取相册的结果集。 |
 
@@ -733,7 +749,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getAlbums(type: AlbumType, subtype: AlbumSubtype, callback: AsyncCallback<FetchResult<Album>>): void
 ```
 
-根据相册类型获取相册，使用callback方式返回结果。获取相册前需先保证相册存在。
+根据相册类型获取相册，使用callback方式返回结果。
+
+获取相册前需先保证相册存在。
 
 **起始版本：** 10
 
@@ -745,8 +763,8 @@ getAlbums(type: AlbumType, subtype: AlbumSubtype, callback: AsyncCallback<FetchR
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md) | 是 | 相册类型。 |
-| subtype | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | 是 | 相册子类型。 |
+| type | AlbumType | 是 | 相册类型。 |
+| subtype | AlbumSubtype | 是 | 相册子类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | 是 | callback返回获取相册的结果集。 |
 
 **错误码：**
@@ -789,7 +807,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: FetchOptions): Promise<FetchResult<Album>>
 ```
 
-根据检索选项和相册类型获取相册，使用Promise方式返回结果。在获取相册之前，确保相册已存在。
+根据检索选项和相册类型获取相册，使用Promise方式返回结果。
+
+在获取相册之前，确保相册已存在。
 
 **起始版本：** 10
 
@@ -801,15 +821,15 @@ getAlbums(type: AlbumType, subtype: AlbumSubtype, options?: FetchOptions): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md) | 是 | 相册类型。 |
-| subtype | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | 是 | 相册子类型。 |
+| type | AlbumType | 是 | 相册类型。 |
+| subtype | AlbumSubtype | 是 | 相册子类型。 |
 | options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 否 | 检索选项，不填时默认根据相册类型检索。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;FetchResult & lt;Album & gt; & gt; | Promise对象，返回获取相册的结果集。 |
+| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise对象，返回获取相册的结果集。 |
 
 **错误码：**
 
@@ -871,7 +891,7 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 检索选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;PhotoAsset&gt;&gt; | 是 | 回调函数。当获取相册中的文件成功，err为undefined，data为获取到的图片和视频数据结果集 [FetchResult](arkts-file-photoaccesshelper.md)；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;PhotoAsset&gt;&gt; | 是 | 回调函数。当获取相册中的文件成功，err为undefined，data为获取到的图片和视频数据结果集[FetchResult](arkts-file-photoaccesshelper.md)；否则为错误对象。 |
 
 **错误码：**
 
@@ -885,7 +905,7 @@ getAssets(options: FetchOptions, callback: AsyncCallback<FetchResult<PhotoAsset>
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例创建phAccessHelper。
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -904,7 +924,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   let albumList: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
   let album: photoAccessHelper.Album = await albumList.getFirstObject();
   album.getAssets(fetchOption, (err, albumFetchResult) => {
-    if (albumFetchResult !== undefined) {
+    if (!err) {
       console.info('album getAssets successfully, getCount: ' + albumFetchResult.getCount());
     } else {
       console.error(`album getAssets failed with error: ${err.code}, ${err.message}`);
@@ -927,6 +947,10 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   };
 
   phAccessHelper.getAssets(fetchOptions, async (err, fetchResult) => {
+    if (err) {
+      console.error(`fetchResult fail with error: ${err.code}, ${err.message}`);
+      return;
+    }
     if (fetchResult !== undefined) {
       console.info('fetchResult success');
       let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
@@ -966,7 +990,7 @@ getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;FetchResult & lt;PhotoAsset & gt; & gt; | Promise对象，返回图片和视频数据结果集。 |
+| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise对象，返回图片和视频数据结果集。 |
 
 **错误码：**
 
@@ -979,7 +1003,7 @@ getAssets(options: FetchOptions): Promise<FetchResult<PhotoAsset>>
 
 **示例**
 
-phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
+参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例创建phAccessHelper。
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1053,14 +1077,14 @@ getBurstAssets(burstKey: string, options: FetchOptions): Promise<FetchResult<Pho
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| burstKey | string | 是 | 一组连拍照片的唯一标识：uuid（可传入[PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md)的BURST_KEY）。字符串长度为 36字节。 |
+| burstKey | string | 是 | 一组连拍照片的唯一标识：uuid（可传入[PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md)的BURST_KEY）。字符串长度为36字节。 |
 | options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | 是 | 连拍照片检索选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;FetchResult & lt;PhotoAsset & gt; & gt; | Promise对象，返回连拍照片数据结果集。 |
+| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise对象，返回连拍照片数据结果集。 |
 
 **错误码：**
 
@@ -1119,7 +1143,7 @@ getPhotoPickerComponentDefaultAlbumName(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回默认相册的相册名。 |
+| Promise&lt;string&gt; | Promise对象，返回默认相册的相册名。 |
 
 **错误码：**
 
@@ -1163,7 +1187,7 @@ getRecentPhotoInfo(options?: RecentPhotoOptions): Promise<RecentPhotoInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RecentPhotoOptions](arkts-medialibrary-photoaccesshelper-recentphotooptions-c.md) | 否 | 最近图片配置选项参数。若无此参数，则取按照创建时间排序的最新一张图片。 该参数在配置的情况下，需与RecentPhotoComponent组件中的options配置相同才可以查到一样的图片，否则可能存在接口能查到最近图片，组件没查到最近图片的情况。 |
+| options | [RecentPhotoOptions](arkts-medialibrary-photoaccesshelper-recentphotooptions-c.md) | 否 | 最近图片配置选项参数。若无此参数，则取按照创建时间排序的最新一张图片。该参数在配置的情况下，需与RecentPhotoComponent组件中的options配置相同才可以查到一样的图片，否则可能存在接口能查到最近图片，组件没查到最近图片的情况。 |
 
 **返回值：**
 
@@ -1210,13 +1234,13 @@ getSupportedPhotoFormats(photoType: PhotoType): Promise<Array<string>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | 是 | 媒体文件类型。 |
+| photoType | PhotoType | 是 | 媒体文件类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise对象，返回支持的图片或者视频后缀列表。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回支持的图片或者视频后缀列表。 |
 
 **错误码：**
 
@@ -1275,7 +1299,7 @@ off(type: 'photoChange', callback?: Callback<PhotoAssetChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoChange' | 是 | 取消监听媒体资产，取值为'photoChange'。取消监听后，有资产发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消 on('photoChange') 注册时指定的callback监听；不填时，则取消对'photoChange'的所有监听。    **注意：** 取消注册的callback后，有资产发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 取消on('photoChange')注册时指定的callback监听；不填时，则取消对'photoChange'的所有监听。   **注意：** 取消注册的callback后，有资产发生变化时，不会进入此回调。 |
 
 **错误码：**
 
@@ -1304,7 +1328,7 @@ off(type: 'photoAlbumChange', callback?: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoAlbumChange' | 是 | 取消监听相册，取值为'photoAlbumChange'。取消监听后，有相册发生变化时，不再通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消 on('photoAlbumChange') 注册时指定的callback监听；不填时，则取消对'photoAlbumChange'的所有监听。    **注意：** 取消注册的callback后，有相册发生变化时，不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 取消on('photoAlbumChange')注册时指定的callback监听；不填时，则取消对'photoAlbumChange'的所有监听。   **注意：** 取消注册的callback后，有相册发生变化时，不会进入此回调。 |
 
 **错误码：**
 
@@ -1334,7 +1358,7 @@ offMediaLibraryAvailability(callback? : Callback<MediaLibraryAvailability>):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md)&gt; | 否 | 回调函数，返回取消 [onMediaLibraryAvailability](#onmedialibraryavailability) 注册时指定的callback监听。不填时，则取消对媒体库可用性变化的所有监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaLibraryAvailability](arkts-medialibrary-photoaccesshelper-medialibraryavailability-i.md)&gt; | 否 | 回调函数，返回取消[onMediaLibraryAvailability](#onmedialibraryavailability)注册时指定的callback监听。不填时，则取消对媒体库可用性变化的所有监听。 |
 
 **错误码：**
 
@@ -1358,6 +1382,7 @@ class MediaLibraryExample {
 
   offMediaLibraryAvailability = async () => {
     try {
+      // 先注册媒体库可用性监听，然后取消注册，演示取消监听的使用方法。
       this.helper.onMediaLibraryAvailability(this.handleMediaLibraryChange);
       this.helper.offMediaLibraryAvailability(this.handleMediaLibraryChange);
       console.info('媒体库监听解除成功');
@@ -1375,6 +1400,7 @@ offSinglePhotoAlbumChange(album?: Album, callback?: Callback<AlbumChangeInfos>):
 ```
 
 取消对单个相册的监听。具体规则如下：
+
 1. 不携带任何参数时，取消所有单个相册监听。
 2. 携带album，不携带callback时，取消该album下所有callback监听。
 3. 携带album和callback时，仅取消指定callback监听。
@@ -1389,7 +1415,7 @@ offSinglePhotoAlbumChange(album?: Album, callback?: Callback<AlbumChangeInfos>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | 否 | 取消监听相册。取消监听后,有相册发生变化时,不再通过callback返回变更信息。 |
+| album | Album | 否 | 取消监听相册。取消监听后,有相册发生变化时,不再通过callback返回变更信息。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 否 | 用于取消订阅的回调。不携带时，取消album参数下所有callback。 |
 
 **错误码：**
@@ -1420,6 +1446,7 @@ let onCallback3 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
   // 触发回调时，具体的操作。
 }
 
+// 获取相册后，注册单个相册变化监听，然后演示不同方式取消监听的使用方法。
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
   console.info('onSinglePhotoChangeDemo.');
   let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
@@ -1461,6 +1488,7 @@ offSinglePhotoChange(asset?: PhotoAsset, callback?: Callback<PhotoAssetChangeInf
 ```
 
 取消单个资产的监听。具体规则如下：
+
 1. 不携带参数时，取消所有单个资产监听。
 2. 携带asset，不携带callback时，取消该asset下所有callback监听。
 3. 携带asset和callback时，仅取消指定callback监听。
@@ -1475,7 +1503,7 @@ offSinglePhotoChange(asset?: PhotoAsset, callback?: Callback<PhotoAssetChangeInf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | 否 | 取消监听资产。取消asset资产监听后,当asset发生变化时,不再通过callback返回变更信息。不携带时，取消注册过的所有单个资产监听。 |
+| asset | PhotoAsset | 否 | 取消监听资产。取消asset资产监听后,当asset发生变化时,不再通过callback返回变更信息。不携带时，取消注册过的所有单个资产监听。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 否 | 用于取消订阅的回调。不携带时，取消asset参数下所有callback。 |
 
 **错误码：**
@@ -1506,6 +1534,7 @@ let onCallback3 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
   // 触发回调时，具体的操作。
 }
 
+// 获取相册和资产后，注册单个资产变化监听，然后演示不同方式取消监听的使用方法。
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
   console.info('onSinglePhotoChangeDemo.');
   let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
@@ -1561,7 +1590,7 @@ on(type: 'photoChange', callback: Callback<PhotoAssetChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoChange' | 是 | 注册监听媒体资产，取值为'photoChange'。注册完成后，有资产发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。    **注意：** 该接口可以注册多个不同的callback监听， off('photoChange') 既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。   **注意：** 该接口可以注册多个不同的callback监听，off('photoChange')既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -1590,7 +1619,7 @@ on(type: 'photoAlbumChange', callback: Callback<AlbumChangeInfos>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'photoAlbumChange' | 是 | 注册监听相册，取值为'photoAlbumChange'。注册完成后，有相册发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的相册信息 [AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。    **注意：** 该接口可以注册多个不同的callback监听， off('photoAlbumChange') 既可以关闭所有监听，也可以关闭指定callback监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的相册信息[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)。   **注意：** 该接口可以注册多个不同的callback监听，off('photoAlbumChange')既可以关闭所有监听，也可以关闭指定callback监听。 |
 
 **错误码：**
 
@@ -1645,13 +1674,16 @@ class MediaLibraryExample {
 
   onMediaLibraryAvailability = async () => {
     try {
+      // 定义媒体库可用性变化的回调处理函数。
       this.handleMediaLibraryChange = (
         changeData: photoAccessHelper.MediaLibraryAvailability
       ) => {
+        // 获取媒体库的可用状态和不可用原因。
         const availabilityStatus = changeData.availabilityStatus;
         const unavailabilityReason = changeData.unavailabilityReason;
-        console.info(`媒体库状态变化：状态=${availabilityStatus}，原因=${unavailabilityReason}`);
+        console.info(`媒体库状态变化: 状态=${availabilityStatus}, 原因=${unavailabilityReason}`);
       };
+      // 注册媒体库可用性监听。
       this.helper.onMediaLibraryAvailability(this.handleMediaLibraryChange);
       console.info('媒体库监听注册成功');
     } catch (err) {
@@ -1679,8 +1711,8 @@ onSinglePhotoAlbumChange(album: Album, callback: Callback<AlbumChangeInfos>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | 是 | 注册单个监听的媒体相册。注册完成后，当该相册发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的媒体相册信息 [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。    **注意：** 该接口可以注册多个不同的callback监听。 |
+| album | Album | 是 | 注册单个监听的媒体相册。注册完成后，当该相册发生变化时，通过callback返回变更信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | 是 | 返回变更的媒体相册信息[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)。   **注意：** 该接口可以注册多个不同的callback监听。 |
 
 **错误码：**
 
@@ -1706,6 +1738,7 @@ let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
   // 触发回调时，具体的操作。
 }
 
+// 获取相册后，注册单个相册变化监听，演示onSinglePhotoAlbumChange的使用方法。
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
   console.info('onSinglePhotoAlbumChangeDemo.');
   let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
@@ -1749,8 +1782,8 @@ onSinglePhotoChange(asset: PhotoAsset, callback: Callback<PhotoAssetChangeInfos>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | 是 | 注册单个监听的媒体资产。注册完成后，有资产发生变化时，通过callback返回变更信息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息 PhotoAssetChangeInfos。    **注意：** 该接口可以注册多个不同的callback监听。 |
+| asset | PhotoAsset | 是 | 注册单个监听的媒体资产。注册完成后，有资产发生变化时，通过callback返回变更信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | 是 | 返回变更的媒体资产信息PhotoAssetChangeInfos。   **注意：** 该接口可以注册多个不同的callback监听。 |
 
 **错误码：**
 
@@ -1776,6 +1809,7 @@ let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
   // 触发回调时，具体的操作。
 }
 
+// 获取相册和资产后，注册单个资产变化监听，演示onSinglePhotoChange的使用方法。
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
   console.info('onSinglePhotoChangeDemo.');
   let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
@@ -1820,8 +1854,8 @@ registerChange(uri: string, forChildUris: boolean, callback: Callback<ChangeData
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | PhotoAsset的uri, Album的uri或[DefaultChangeUri](arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md)的值。 |
-| forChildUris | boolean | 是 | 是否模糊监听。uri为相册uri时：forChildUris为true，能监听到相册中文件的变化。如果是false，只能监听相册本身变化；uri为 photoAsset时：forChildUris为true、false没有区别；uri为DefaultChangeUri时：forChildUris必须为true，如果为false将找不到该uri，收不到任何消息。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | 是 | 返回要监听的[ChangeData](arkts-medialibrary-photoaccesshelper-changedata-i.md)。注：uri可以注册多个不同的 callback监听，[unRegisterChange](#unregisterchange)可以关闭该uri所有监听，也可以关闭指定 callback的监听。 |
+| forChildUris | boolean | 是 | 是否模糊监听。uri为相册uri时：forChildUris为true，能监听到相册中文件的变化。如果是false，只能监听相册本身变化；uri为photoAsset时：forChildUris为true、false没有区别；uri为DefaultChangeUri时：forChildUris必须为true，如果为false将找不到该uri，收不到任何消息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | 是 | 返回要监听的[ChangeData](arkts-medialibrary-photoaccesshelper-changedata-i.md)。注：uri可以注册多个不同的callback监听，[unRegisterChange](#unregisterchange)可以关闭该uri所有监听，也可以关闭指定callback的监听。 |
 
 **错误码：**
 
@@ -1837,6 +1871,7 @@ phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-a
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 
 async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context) {
   console.info('registerChangeDemo');
@@ -1849,7 +1884,10 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
   if (photoAsset !== undefined) {
     console.info('photoAsset.displayName : ' + photoAsset.displayName);
-  }
+    } else {
+      console.error('photoAsset is undefined');
+      return;
+    }
   let onCallback1 = (changeData: photoAccessHelper.ChangeData) => {
       console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
     // file had changed, do something.
@@ -1873,7 +1911,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 release(callback: AsyncCallback<void>): void
 ```
 
-释放PhotoAccessHelper实例。使用callback异步回调。当后续不需要使用PhotoAccessHelper实例中的方法时调用。
+释放PhotoAccessHelper实例。使用callback异步回调。
+
+当后续不需要使用PhotoAccessHelper实例中的方法时调用。
 
 **起始版本：** 10
 
@@ -1916,7 +1956,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 release(): Promise<void>
 ```
 
-释放PhotoAccessHelper实例。使用Promise异步回调。当后续不需要使用PhotoAccessHelper实例中的方法时调用。
+释放PhotoAccessHelper实例。使用Promise异步回调。
+
+当后续不需要使用PhotoAccessHelper实例中的方法时调用。
 
 **起始版本：** 10
 
@@ -1926,7 +1968,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -1970,13 +2012,13 @@ requestPhotoUrisReadPermission(srcFileUris: Array<string>): Promise<Array<string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| srcFileUris | Array & lt;string & gt; | 是 | 需进行授权的图片/视频文件对应的 [媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。    **注意：** 仅支持处理图片、视频URI，且最大数量限制为100个。 |
+| srcFileUris | Array&lt;string&gt; | 是 | 需进行授权的图片/视频文件对应的[媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。   **注意：** 仅支持处理图片、视频URI，且最大数量限制为100个。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise对象，返回已授权的URI列表。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回已授权的URI列表。 |
 
 **错误码：**
 
@@ -2014,7 +2056,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 requestPhotoUrisReadPermissionEx(srcFileUris: Array<string>): Promise<RequestReadPermissionResult>
 ```
 
-应用调用接口为未授权的URI授权。使用promise异步回调。返回授权结果，其中包含已创建并授予保存权限的URI列表以及无效的URI列表。
+应用调用接口为未授权的URI授权。使用promise异步回调。
+
+返回授权结果，其中包含已创建并授予保存权限的URI列表以及无效的URI列表。
 
 **起始版本：** 23
 
@@ -2028,7 +2072,7 @@ requestPhotoUrisReadPermissionEx(srcFileUris: Array<string>): Promise<RequestRea
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| srcFileUris | Array & lt;string & gt; | 是 | 需进行授权的图片/视频文件对应的 [媒体库uri](../../../file-management/user-file-uri-intro.md#媒体文件uri)。    **注意：** 仅支持处理图片、视频uri，且最大数量限制为100个。 |
+| srcFileUris | Array&lt;string&gt; | 是 | 需进行授权的图片/视频文件对应的[媒体库uri](../../../file-management/user-file-uri-intro.md#媒体文件uri)。   **注意：** 仅支持处理图片、视频uri，且最大数量限制为100个。 |
 
 **返回值：**
 
@@ -2072,7 +2116,9 @@ console.info('requestPhotoUrisReadPermissionExDemo.');
 setAssetCompatibleCapability(capability: AssetCompatibleCapability): Promise<void>
 ```
 
-配置资产兼容能力。系统会对特殊的资产（如高分辨率资产）进行兼容性处理，如果开发者希望获得原始资产需要向系统注册兼容能力。​
+配置资产兼容能力。系统会对特殊的资产（如高分辨率资产）进行兼容性处理，如果开发者希望获得原始资产需要向系统注册兼容能力。
+
+​
 
 **起始版本：** 24
 
@@ -2090,7 +2136,7 @@ setAssetCompatibleCapability(capability: AssetCompatibleCapability): Promise<voi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2122,7 +2168,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 showAssetsCreationDialog(srcFileUris: Array<string>, photoCreationConfigs: Array<PhotoCreationConfig>): Promise<Array<string>>
 ```
 
-调用接口显示保存确认弹窗。如果用户同意保存，将返回一个已创建并授予保存权限的URI列表（此列表永久生效），应用可使用这些URI写入图片或视频。如果用户拒绝保存，将返回一个空列表。弹框需显示应用名称，但无法直接获取。因此，调用此接口时，请确保[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的 `abilities`标签已配置`label`和`icon`项。需要注意的是，图标不受`abilities`标签中的`icon`项影响，不支持修改。
+调用接口显示保存确认弹窗。如果用户同意保存，将返回一个已创建并授予保存权限的URI列表（此列表永久生效），应用可使用这些URI写入图片或视频。如果用户拒绝保存，将返回一个空列表。
+
+弹框需显示应用名称，但无法直接获取。因此，调用此接口时，请确保[module.json5配置文件](../../../quick-start/module-configuration-file.md)中的`abilities`标签已配置`label`和`icon`项。需要注意的是，图标不受`abilities`标签中的`icon`项影响，不支持修改。
 
 > **说明：**
 > 
@@ -2138,14 +2186,14 @@ showAssetsCreationDialog(srcFileUris: Array<string>, photoCreationConfigs: Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| srcFileUris | Array & lt;string & gt; | 是 | 需保存到媒体库中的图片/视频文件对应的 [媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。    **注意：**    - 一次弹窗最多保存100张图片。    - 仅支持处理图片、视频URI。    - 不支持手动拼接的URI，需调用接口获取，获取方式参考[媒体文件URI获取方式](../../../file-management/user-file-uri-intro.md#媒体文件uri获取方式)。 |
-| photoCreationConfigs | Array&lt;[PhotoCreationConfig](arkts-medialibrary-photoaccesshelper-photocreationconfig-i.md)&gt; | 是 | 保存图片或视频到媒体库的配置，包括文件名等，与srcFileUris保持一一对应。    **注意：** 传入'subtype'选项，配置项不生效，仅支持保存DEFAULT类型图片。 |
+| srcFileUris | Array&lt;string&gt; | 是 | 需保存到媒体库中的图片/视频文件对应的[媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。   **注意：**    - 一次弹窗最多保存100张图片。   - 仅支持处理图片、视频URI。   - 不支持手动拼接的URI，需调用接口获取，获取方式参考[媒体文件URI获取方式](../../../file-management/user-file-uri-intro.md#媒体文件uri获取方式)。 |
+| photoCreationConfigs | Array&lt;[PhotoCreationConfig](arkts-medialibrary-photoaccesshelper-photocreationconfig-i.md)&gt; | 是 | 保存图片或视频到媒体库的配置，包括文件名等，与srcFileUris保持一一对应。   **注意：** 传入'subtype'选项，配置项不生效，仅支持保存DEFAULT类型图片。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise对象，返回给应用的媒体库文件URI列表。URI已对应用授权，支持应用写入数据。如果生成URI异常，则返回批量创建错误码。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回给应用的媒体库文件URI列表。URI已对应用授权，支持应用写入数据。如果生成URI异常，则返回批量创建错误码。 |
 
 **错误码：**
 
@@ -2214,14 +2262,14 @@ showAssetsCreationDialogEx(srcFileUris: Array<string>, creationSettings: Array<C
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| srcFileUris | Array & lt;string & gt; | 是 | 需保存到媒体库中的图片或视频文件对应的 [媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。    **注意：**    - 一次弹窗最多保存100张图片。    - 仅支持处理图片和视频URI。    - 不支持手动拼接URI，需调用接口获取，具体请参考[媒体文件URI获取方式](../../../file-management/user-file-uri-intro.md#媒体文件uri获取方式)。 |
+| srcFileUris | Array&lt;string&gt; | 是 | 需保存到媒体库中的图片或视频文件对应的[媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。   **注意：**    - 一次弹窗最多保存100张图片。   - 仅支持处理图片和视频URI。   - 不支持手动拼接URI，需调用接口获取，具体请参考[媒体文件URI获取方式](../../../file-management/user-file-uri-intro.md#媒体文件uri获取方式)。 |
 | creationSettings | Array&lt;[CreationSetting](arkts-medialibrary-photoaccesshelper-creationsetting-i.md)&gt; | 是 | 保存图片或视频到媒体库的配置，包括文件名等，与srcFileUris参数中的URI保持一一对应。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise对象，返回给应用的媒体库文件URI列表。支持应用使用返回的URI写入数据。 |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise对象，返回给应用的媒体库文件URI列表。支持应用使用返回的URI写入数据。 |
 
 **错误码：**
 
@@ -2288,7 +2336,7 @@ showSingleAssetCreationDialogEx(srcFileUri: string, creationSetting: CreationSet
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| srcFileUri | string | 是 | 需要保存到媒体库中的图片/视频文件所对应的 [媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。    **注意：**    - 一次弹窗最多保存1张图片。    - 仅支持处理图片、视频URI。    - 不支持手动拼接的URI，需调用接口获取，具体请参考[媒体文件URI获取方式](../../../file-management/user-file-uri-intro.md#媒体文件uri获取方式)。 |
+| srcFileUri | string | 是 | 需要保存到媒体库中的图片/视频文件所对应的[媒体文件URI](../../../file-management/user-file-uri-intro.md#媒体文件uri)。   **注意：**    - 一次弹窗最多保存1张图片。   - 仅支持处理图片、视频URI。   - 不支持手动拼接的URI，需调用接口获取，具体请参考[媒体文件URI获取方式](../../../file-management/user-file-uri-intro.md#媒体文件uri获取方式)。 |
 | creationSetting | [CreationSetting](arkts-medialibrary-photoaccesshelper-creationsetting-i.md) | 是 | 保存图片或视频到媒体库的配置（包括文件名等），与srcFileUri保持对应。 |
 | isImageFullyDisplayed | boolean | 是 | 表示是否完整显示图片。true表示完整显示，false表示不完整显示。 |
 
@@ -2296,7 +2344,7 @@ showSingleAssetCreationDialogEx(srcFileUri: string, creationSetting: CreationSet
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回给应用的媒体库文件URI。URI已对应用授权，支持应用写入数据。如果生成URI异常，则返回批量创建错误码。 |
+| Promise&lt;string&gt; | Promise对象，返回给应用的媒体库文件URI。URI已对应用授权，支持应用写入数据。如果生成URI异常，则返回批量创建错误码。 |
 
 **错误码：**
 
@@ -2348,7 +2396,7 @@ unRegisterChange(uri: string, callback?: Callback<ChangeData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | PhotoAsset的uri, Album的uri或[DefaultChangeUri](arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md)的值。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | 否 | 取消 [registerChange](#registerchange)注册时的callback的监听，不填时，取消该uri的所有监听。注： off指定注册的callback后不会进入此回调。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeData&gt; | 否 | 取消[registerChange](#registerchange)注册时的callback的监听，不填时，取消该uri的所有监听。注：off指定注册的callback后不会进入此回调。 |
 
 **错误码：**
 
@@ -2376,7 +2424,10 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
   if (photoAsset !== undefined) {
     console.info('photoAsset.displayName : ' + photoAsset.displayName);
-  }
+    } else {
+      console.error('photoAsset is undefined');
+      return;
+    }
   let onCallback1 = (changeData: photoAccessHelper.ChangeData) => {
     console.info('onCallback1 on');
   }

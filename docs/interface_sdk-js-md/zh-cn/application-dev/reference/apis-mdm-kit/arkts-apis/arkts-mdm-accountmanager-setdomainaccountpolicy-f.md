@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import accountManager from '@kit.MDMKit';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## setDomainAccountPolicy
@@ -27,8 +27,8 @@ function setDomainAccountPolicy(admin: Want, domainAccountInfo: osAccount.Domain
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| domainAccountInfo | osAccount.DomainAccountInfo | 是 | 域账号信息。若传入的domainAccountInfo内部属性均为空，则会设置为全局域账号策略。全局 策略对所有的域账号生效。若传入的domainAccountInfo内部属性不为空，则为指定域账号设置策略。指定域账号策略的优先级高于全局策略，若指定域账号已有域账号策略，则全局策略对其不生效。   **说明：**若为指定域账号设置策略，DomainAccountInfo的serverConfigId字段必填。 |
-| policy | [DomainAccountPolicy](arkts-mdm-accountmanager-domainaccountpolicy-i.md) | 是 | 域账号策略。   **说明：**设置域账号策略后须在设备侧修改域账号密码，若未修改密码，则DomainAccountPolicy中的 passwordValidityPeriod、passwordExpirationNotification配置不生效。 |
+| domainAccountInfo | osAccount.DomainAccountInfo | 是 | 域账号信息。若传入的domainAccountInfo内部属性均为空，则会设置为全局域账号策略。全局策略对所有的域账号生效。若传入的domainAccountInfo内部属性不为空，则为指定域账号设置策略。指定域账号策略的优先级高于全局策略，若指定域账号已有域账号策略，则全局策略对其不生效。   **说明：**若为指定域账号设置策略，DomainAccountInfo的serverConfigId字段必填。 |
+| policy | [DomainAccountPolicy](arkts-mdm-accountmanager-domainaccountpolicy-i.md) | 是 | 域账号策略。   **说明：**设置域账号策略后须在设备侧修改域账号密码，若未修改密码，则DomainAccountPolicy中的passwordValidityPeriod、passwordExpirationNotification配置不生效。 |
 
 **错误码：**
 

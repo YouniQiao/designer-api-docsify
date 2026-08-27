@@ -1,6 +1,8 @@
 # WindowStage
 
-Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance.Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
+Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance.
+
+Before calling any of the following APIs, you must use [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) to create a WindowStage instance.
 
 **Since:** 9
 
@@ -9,9 +11,7 @@ Implements a window manager, which manages each basic window unit, that is, [Win
 ## Modules to Import
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## createSubWindow
@@ -549,7 +549,7 @@ Whether the window supports the window rect auto-save.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value true means that the window rect auto-save is supported, and false means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value true means that the window rect auto-save is supported, and false means the opposite. |
 
 **Error codes:**
 
@@ -606,7 +606,7 @@ Loads the content of a page, with its path in the current project specified, to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page to which the content will be loaded |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | Yes | The data object shared within the content instance loaded by the window |
+| storage | LocalStorage | Yes | The data object shared within the content instance loaded by the window |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -685,13 +685,13 @@ Loads the content of a page, with its path in the current project specified, to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | of the page to which the content will be loaded |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | The data object shared within the content instance loaded by the window |
+| storage | LocalStorage | No | The data object shared within the content instance loaded by the window |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; |  |
+| Promise&lt;void&gt; |  |
 
 **Error codes:**
 
@@ -826,7 +826,7 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | name of the page to which the content will be loaded. |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | Yes | The data object shared within the content instance loaded by the window. |
+| storage | LocalStorage | Yes | The data object shared within the content instance loaded by the window. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -924,28 +924,6 @@ export default class EntryAbility extends UIAbility {
     }
   }
 };
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName, useSharedStorage: true})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  @LocalStorageLink('storageSimpleProp') storageSimpleProp: number = 1;
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
 ```
 
 ## loadContentByName
@@ -1047,27 +1025,6 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
-```
-
 ## loadContentByName
 
 ```TypeScript
@@ -1089,13 +1046,13 @@ Loads content by named router
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | name of the page to which the content will be loaded. |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | The data object shared within the content instance loaded by the window. |
+| storage | LocalStorage | No | The data object shared within the content instance loaded by the window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1173,28 +1130,6 @@ export default class EntryAbility extends UIAbility {
     }
   }
 };
-```
-
-```TypeScript
-// ets/pages/Index.ets
-export const entryName : string = 'Index';
-@Entry({routeName: entryName, useSharedStorage: true})
-@Component
-export struct Index {
-  @State message: string = 'Hello World'
-  @LocalStorageLink('storageSimpleProp') storageSimpleProp: number = 1;
-  build() {
-    Row() {
-      Column() {
-        Text(this.message)
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
-      }
-      .width('100%')
-    }
-    .height('100%')
-  }
-}
 ```
 
 ## off
@@ -1397,7 +1332,7 @@ Release the content of this window in the current project. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value, indicating successful completion. Throws exception if window state is abnormal. |
+| Promise&lt;void&gt; | Promise that returns no value, indicating successful completion. Throws exception if window state is abnormal. |
 
 **Error codes:**
 
@@ -1465,7 +1400,7 @@ Removes the image that the application has set to be displayed in the multitaski
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1523,7 +1458,7 @@ Remove the starting window, it must be used with configuration "enable.remove.st
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 
@@ -1561,7 +1496,11 @@ export default class EntryAbility extends UIAbility {
 setCustomDensity(density: number): void
 ```
 
-Allows the main window of the application to customize its display size scale factor.Existing child windows and system windows do not immediately re-layout to match the main window's new scale factor. They will re-layout to reflect this change only when their layout information (such as position, size, and system scale size) changes.If both this API and [setDefaultDensityEnabled(true)](#setdefaultdensityenabled) are called, the setting from the last called API will be applied.
+Allows the main window of the application to customize its display size scale factor.
+
+Existing child windows and system windows do not immediately re-layout to match the main window's new scale factor. They will re-layout to reflect this change only when their layout information (such as position, size, and system scale size) changes.
+
+If both this API and [setDefaultDensityEnabled(true)](#setdefaultdensityenabled) are called, the setting from the last called API will be applied.
 
 **Since:** 15
 
@@ -1613,7 +1552,9 @@ export default class EntryAbility extends UIAbility {
 setCustomDensity(density: number, applyToSubWindow?: boolean): void
 ```
 
-Allows the main window of the application to customize its display size scale factor and control when child windows and system windows re-layout to match the main window.If both this API and [setDefaultDensityEnabled(true)](#setdefaultdensityenabled) are called, the setting from the last called API will be applied.
+Allows the main window of the application to customize its display size scale factor and control when child windows and system windows re-layout to match the main window.
+
+If both this API and [setDefaultDensityEnabled(true)](#setdefaultdensityenabled) are called, the setting from the last called API will be applied.
 
 **Since:** 20
 
@@ -1665,7 +1606,11 @@ export default class EntryAbility extends UIAbility {
 setDefaultDensityEnabled(enabled: boolean): void
 ```
 
-Sets whether the main window of the application uses the system's default density. Child windows and system windows will follow the main window's setting. Before calling this API, call [WindowStage.loadContent()](#loadcontent) to initialize the layout to ensure the correct call sequence.If this API is not called, the default density is not used.When the default density is not used, if [setCustomDensity()](#setcustomdensity) has been called, the window will be re-laid out according to the custom display size changes. Otherwise, it will be re-laid out according to the system display size changes.
+Sets whether the main window of the application uses the system's default density. Child windows and system windows will follow the main window's setting. Before calling this API, call [WindowStage.loadContent()](#loadcontent) to initialize the layout to ensure the correct call sequence.
+
+If this API is not called, the default density is not used.
+
+When the default density is not used, if [setCustomDensity()](#setcustomdensity) has been called, the window will be re-laid out according to the custom display size changes. Otherwise, it will be re-laid out according to the system display size changes.
 
 **Since:** 12
 
@@ -1759,13 +1704,13 @@ Sets the image displayed in the multitasking view and on dock hover. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | imageResource | number \| image.PixelMap | Yes | imageResourceId or pixelMap for recent image. imageResourceId Value Range: [0x1000000, 0xffffffff]. |
-| value | [ImageFit](arkts-arkui-imagefit-e.md) | Yes | Sets the zoom type of an image. |
+| value | ImageFit | Yes | Sets the zoom type of an image. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1858,13 +1803,13 @@ Sets the supported window modes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array & lt;bundleManager.SupportWindowMode & gt; | Yes | The supported modes of window. |
+| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes | The supported modes of window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value |
+| Promise&lt;void&gt; | Promise that returns no value |
 
 **Error codes:**
 
@@ -1922,14 +1867,14 @@ Sets the supported window modes of the main window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| supportedWindowModes | Array & lt;bundleManager.SupportWindowMode & gt; | Yes | The supported modes of window. |
+| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes | The supported modes of window. |
 | grayOutMaximizeButton | boolean | Yes | Whether to gray out the window maximize button. The value true means to gray out the button, and false means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1996,7 +1941,7 @@ Set the application modality of the windowStage.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2060,7 +2005,7 @@ Set to automatically save the window rect.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2124,7 +2069,7 @@ Set to automatically save the window rect and whether to enable specifiedFlag. T
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

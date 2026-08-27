@@ -21,7 +21,7 @@
   <!--Del-->
   - [PictureShadeDegree(系统接口)](arkts-arkgraphics2d-effectkit-pictureshadedegree-e-sys.md)<!--DelEnd-->
   - [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)
-- [@ohos.graphics.colorSpaceManager](arkts-graphics-colorspacemanager.md)
+- [@ohos.graphics.colorSpaceManager(色彩管理)](arkts-graphics-colorspacemanager.md)
   - [create](arkts-arkgraphics2d-colorspacemanager-create-f.md)
   - [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md)
   - [ColorSpacePrimaries](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md)
@@ -88,9 +88,9 @@
   - [TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md)
   - [TileMode](arkts-arkgraphics2d-drawing-tilemode-e.md)
   - [VertexMode](arkts-arkgraphics2d-drawing-vertexmode-e.md)
-- [@ohos.graphics.hdrCapability](arkts-graphics-hdrcapability.md)
+- [@ohos.graphics.hdrCapability(HDR能力)](arkts-graphics-hdrcapability.md)
   - [HDRFormat](arkts-arkgraphics2d-hdrcapability-hdrformat-e.md)
-- [@ohos.graphics.sendableColorSpaceManager](arkts-graphics-sendablecolorspacemanager.md)
+- [@ohos.graphics.sendableColorSpaceManager(可共享的色彩管理)](arkts-graphics-sendablecolorspacemanager.md)
   - [create](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md)
   - [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md)
   - [ISendable](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md)

@@ -9,7 +9,7 @@ The **contact** module provides contact management functions, such as adding, de
 ## Modules to Import
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## Summary
@@ -30,7 +30,7 @@ import contact from '@kit.ContactsKit';
 | [deleteContact](arkts-contacts-contact-deletecontact-f.md) | Deletes a contact. This API uses a promise to return the result. |
 | [hasMatchedCallLog](arkts-contacts-contact-hasmatchedcalllog-f.md) | Checks whether there are call records that meet the specified conditions. By default, call records within the last 6 hours are queried. This API applies only to carrier calls. This API uses a promise to return the result. |
 | [hasMatchedCallLog](arkts-contacts-contact-hasmatchedcalllog-f.md) | Checks whether there are call records that meet the specified conditions. This API applies only to carrier calls. This API uses a promise to return the result. |
-| [importContactsViaUI](arkts-contacts-contact-importcontactsviaui-f.md) | Imports multiple contacts through UI interaction.A maximum of 100 contacts can be imported at a time. Importing contact portraits is not supported. |
+| [importContactsViaUI](arkts-contacts-contact-importcontactsviaui-f.md) | Imports multiple contacts through UI interaction. |
 | [isLocalContact](arkts-contacts-contact-islocalcontact-f.md) | Checks whether the ID of this contact is in the local address book. This API uses an asynchronous callback to return the result. |
 | [isLocalContact](arkts-contacts-contact-islocalcontact-f.md) | Checks whether the ID of this contact is in the local address book. This API uses an asynchronous callback to return the result. |
 | [isLocalContact](arkts-contacts-contact-islocalcontact-f.md) | Checks whether the ID of this contact is in the local address book. This API uses a promise to return the result. |
@@ -80,7 +80,7 @@ import contact from '@kit.ContactsKit';
 | [queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md) | Queries a contact based on the specified phone number, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task. |
 | [queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md) | Queries a contact based on the specified phone number, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task. |
 | [queryContactsCount](arkts-contacts-contact-querycontactscount-f.md) | Queries the number of all contacts. This API uses a promise to return the result. |
-| [queryContactSyncInfo](arkts-contacts-contact-querycontactsyncinfo-f.md) | Queries information about ongoing contact synchronization for the calling application.If the returned contact synchronization information is empty, the invoking party does not synchronize contacts or the contact synchronization is complete. |
+| [queryContactSyncInfo](arkts-contacts-contact-querycontactsyncinfo-f.md) | Queries information about ongoing contact synchronization for the calling application. |
 | [queryGroups](arkts-contacts-contact-querygroups-f.md) | Queries all groups of a contact. This API uses an asynchronous callback to return the result. |
 | [queryGroups](arkts-contacts-contact-querygroups-f.md) | Queries all groups of a contact. This API uses an asynchronous callback to return the result. |
 | [queryGroups](arkts-contacts-contact-querygroups-f.md) | Queries all groups of a contact based on the specified holder. This API uses an asynchronous callback to return the result. |
@@ -110,7 +110,7 @@ import contact from '@kit.ContactsKit';
 | [selectContacts](arkts-contacts-contact-selectcontacts-f.md) | Selects a contact. This API uses a promise to return the result. |
 | [selectContacts](arkts-contacts-contact-selectcontacts-f.md) | Selects a contact. (Filter criteria can be transferred during contact selection.) This API uses an asynchronous callback to return the result. |
 | [selectContacts](arkts-contacts-contact-selectcontacts-f.md) | Selects a contact. (Filter criteria can be transferred during contact selection.) This API uses a promise to return the result. |
-| [syncContacts](arkts-contacts-contact-synccontacts-f.md) | Synchronizes multiple contacts to the contacts database in batches.A maximum of 400 contacts can be synchronized at a time. The caller must be running in the foreground. |
+| [syncContacts](arkts-contacts-contact-synccontacts-f.md) | Synchronizes multiple contacts to the contacts database in batches. |
 | [updateContact](arkts-contacts-contact-updatecontact-f.md) | Updates a contact. This API uses an asynchronous callback to return the result. |
 | [updateContact](arkts-contacts-contact-updatecontact-f.md) | Updates a contact. This API uses an asynchronous callback to return the result. |
 | [updateContact](arkts-contacts-contact-updatecontact-f.md) | Updates a contact. (The contact attribute list can be imported.) This API uses an asynchronous callback to return the result. |
@@ -147,7 +147,7 @@ import contact from '@kit.ContactsKit';
 | [ContactSelectionFilter](arkts-contacts-contact-contactselectionfilter-i.md) | Defines the contact selection filter. |
 | [ContactSelectionOptions](arkts-contacts-contact-contactselectionoptions-i.md) | Defines the Contact selection options, which specifies whether one contact or multiple contacts can be selected. |
 | [ContactSyncInfo](arkts-contacts-contact-contactsyncinfo-i.md) | Information about contact synchronization for the calling application. |
-| [ContactSyncProgress](arkts-contacts-contact-contactsyncprogress-i.md) | Information about the contact synchronization progress.Contains the sync ID, current batch, and total batch. |
+| [ContactSyncProgress](arkts-contacts-contact-contactsyncprogress-i.md) | Information about the contact synchronization progress. |
 | [DataFilter](arkts-contacts-contact-datafilter-i.md) | Defines the contact data filter item. |
 | [FilterClause](arkts-contacts-contact-filterclause-i.md) | Defines the contact filter criteria. Multiple filter criteria are ORed. If the parameter is an array, the array can contain a maximum of three elements. |
 | [FilterOptions](arkts-contacts-contact-filteroptions-i.md) | Defines contact filter options. |

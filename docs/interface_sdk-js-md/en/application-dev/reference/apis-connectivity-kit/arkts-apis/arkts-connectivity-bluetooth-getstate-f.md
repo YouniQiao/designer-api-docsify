@@ -3,16 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bas from '@kit.ConnectivityKit.bas';
-import common from '@kit.ConnectivityKit.common';
-import bluetooth from '@kit.ConnectivityKit';
-import map from '@kit.ConnectivityKit.map';
-import pan from '@kit.ConnectivityKit.pan';
-import pbap from '@kit.ConnectivityKit.pbap';
-import opp from '@kit.ConnectivityKit.opp';
-import socket from '@kit.ConnectivityKit.socket';
-import wearDetection from '@kit.ConnectivityKit.wearDetection';
-import bluetoothManager from '@kit.ConnectivityKitManager';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## getState
@@ -37,7 +28,7 @@ Obtains the Bluetooth status of a device.
 
 | Type | Description |
 | --- | --- |
-| [BluetoothState](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md) | Returns the Bluetooth status, which can be { |
+| BluetoothState | Returns the Bluetooth status, which can be { |
 
 **Examples**
 

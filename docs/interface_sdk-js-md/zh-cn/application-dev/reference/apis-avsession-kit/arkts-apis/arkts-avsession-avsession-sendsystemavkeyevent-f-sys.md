@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## sendSystemAVKeyEvent
@@ -79,7 +79,7 @@ function sendSystemAVKeyEvent(event: KeyEvent): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。当事件发送成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | Promise对象。当事件发送成功，无返回结果，否则返回错误对象。 |
 
 **错误码：**
 

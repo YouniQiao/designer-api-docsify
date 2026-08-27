@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit';
+import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## on('BundleStatusChange')
@@ -79,4 +79,4 @@ function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallba
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise形式返回正确结果或错误信息。 |
+| Promise&lt;string&gt; | Promise形式返回正确结果或错误信息。 |

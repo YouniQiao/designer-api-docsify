@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPixelMapUsingAllocatorSync
@@ -31,7 +31,7 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 | Type | Description |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Create an empty pixelmap by data buffer based on opts, the memory type used by t
 
 | Type | Description |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | Returns the instance if the operation is successful;Otherwise, return undefined. |
+| PixelMap | Returns the instance if the operation is successful;Otherwise, return undefined. |
 
 **Error codes:**
 

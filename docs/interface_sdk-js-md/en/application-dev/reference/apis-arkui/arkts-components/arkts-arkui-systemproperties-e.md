@@ -1,6 +1,8 @@
 # SystemProperties
 
-Defining Environment variable enumeration value.@enum { string }
+Defining Environment variable enumeration value.
+
+@enum { string }
 
 **Since:** 22
 

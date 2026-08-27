@@ -27,7 +27,7 @@ function isNRSupported(): boolean
 
 ```TypeScript
 let result: boolean = radio.isNRSupported();
-console.info("Result: "+ result);
+console.info("Result: " + result);
 ```
 
 
@@ -60,5 +60,5 @@ function isNRSupported(slotId: number): boolean
 ```TypeScript
 let slotId: number = 0;
 let result: boolean = radio.isNRSupported(slotId);
-console.info("Result: "+ result);
+console.info("Result: " + result);
 ```

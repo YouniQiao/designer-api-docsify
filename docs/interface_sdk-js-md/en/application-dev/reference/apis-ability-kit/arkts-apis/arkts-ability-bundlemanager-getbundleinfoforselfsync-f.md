@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleInfoForSelfSync
@@ -30,7 +30,7 @@ Obtains the bundle information of the current application based on the given bun
 
 | Type | Description |
 | --- | --- |
-| [BundleInfo](arkts-ability-bundleinfo-i.md) | Bundle information obtained. |
+| BundleInfo | Bundle information obtained. |
 
 **Error codes:**
 

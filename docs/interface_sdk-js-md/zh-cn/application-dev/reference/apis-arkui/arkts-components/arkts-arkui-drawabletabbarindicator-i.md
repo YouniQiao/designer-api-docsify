@@ -17,7 +17,13 @@
 borderRadius?: Length
 ```
 
-下划线的圆角半径（不支持百分比设置）。默认值：0.0单位：vp取值范围：[0, +∞)。异常值时取默认值。
+下划线的圆角半径（不支持百分比设置）。
+
+默认值：0.0
+
+单位：vp
+
+取值范围：[0, +∞)。异常值时取默认值。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -37,7 +43,7 @@ borderRadius?: Length
 drawable?: DrawableDescriptor
 ```
 
-下划线的图源。 支持[DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)、 [PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md)、 [LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)和 [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型。当传入无效图源时将显示默认的实线型下划 线。
+下划线的图源。支持[DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)、[PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md)、[LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md)和[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型。当传入无效图源时将显示默认的实线型下划线。
 
 **类型：** [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)
 
@@ -55,7 +61,13 @@ drawable?: DrawableDescriptor
 height?: Length
 ```
 
-下划线的高度（不支持百分比设置）。默认值：2.0单位：vp取值范围：[0, +∞)。异常值时取默认值。
+下划线的高度（不支持百分比设置）。
+
+默认值：2.0
+
+单位：vp
+
+取值范围：[0, +∞)。异常值时取默认值。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -75,7 +87,13 @@ height?: Length
 marginTop?: Length
 ```
 
-下划线与文字的间距（不支持百分比设置）。默认值：8.0单位：vp取值范围：[0, +∞)。异常值时取默认值。
+下划线与文字的间距（不支持百分比设置）。
+
+默认值：8.0
+
+单位：vp
+
+取值范围：[0, +∞)。异常值时取默认值。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -95,7 +113,15 @@ marginTop?: Length
 width?: Length
 ```
 
-下划线的宽度（不支持百分比设置）。默认值：0.0单位：vp取值范围：[0, +∞)。异常值时取默认值。宽度设置为0时，按页签文本宽度显示。
+下划线的宽度（不支持百分比设置）。
+
+默认值：0.0
+
+单位：vp
+
+取值范围：[0, +∞)。异常值时取默认值。
+
+宽度设置为0时，按页签文本宽度显示。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

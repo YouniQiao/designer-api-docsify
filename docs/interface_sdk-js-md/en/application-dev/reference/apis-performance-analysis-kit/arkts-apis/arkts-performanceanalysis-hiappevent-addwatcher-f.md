@@ -23,7 +23,7 @@ Adds an event watcher. You can use the callback of the event watcher to subscrib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watcher-i.md) | Yes | Event watcher. |
+| watcher | Watcher | Yes | Event watcher. |
 
 **Return value:**
 

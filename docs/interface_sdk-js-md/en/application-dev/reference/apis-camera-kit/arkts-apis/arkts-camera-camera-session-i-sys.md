@@ -108,7 +108,7 @@ Gets the values of the given key in camera metadata.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | The values of the key in camera metadata. |
+| Array&lt;string&gt; | The values of the key in camera metadata. |
 
 **Error codes:**
 
@@ -139,7 +139,7 @@ Gets the supported keys in camera metadata.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | The supported keys in camera metadata. |
+| Array&lt;string&gt; | The supported keys in camera metadata. |
 
 **Error codes:**
 
@@ -169,7 +169,7 @@ Sets key-value pairs parameters for the session.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| kvpairs | Record & lt;string, string & gt; | Yes | The pairs of tag name and value in camera metadata. |
+| kvpairs | Record&lt;string, string&gt; | Yes | The pairs of tag name and value in camera metadata. |
 
 **Error codes:**
 

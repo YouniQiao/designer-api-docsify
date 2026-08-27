@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import huksExternalCrypto from '@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## getUkeyPinAuthState

@@ -15,7 +15,7 @@ new (elements: Iterable<number>): Uint8ClampedArray
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | Iterable & lt;number & gt; | Yes |  |
+| elements | Iterable&lt;number&gt; | Yes |  |
 
 **Return value:**
 
@@ -33,8 +33,8 @@ Creates an array from an array-like or iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | Iterable & lt;number & gt; | Yes |  |
-| mapfn | (v: number, k: number) = & gt; number | No |  |
+| arrayLike | Iterable&lt;number&gt; | Yes |  |
+| mapfn | (v: number, k: number) =&gt; number | No |  |
 | thisArg | any | No |  |
 
 **Return value:**

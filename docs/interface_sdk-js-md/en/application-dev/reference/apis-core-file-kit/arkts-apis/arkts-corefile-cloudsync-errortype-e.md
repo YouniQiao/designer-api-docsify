@@ -1,6 +1,7 @@
 # ErrorType
 
-Enumerates the device-cloud sync errors.  
+Enumerates the device-cloud sync errors.
+
 - In the current phase, **NETWORK_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are  
 unavailable. If the mobile data network is available, the synchronization can be performed normally.  
 - During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY_LEVEL_LOW**  

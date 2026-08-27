@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getAllNotificationEnabledBundles
@@ -26,7 +26,7 @@ Obtains a list of applications that allow notifications. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;BundleOption & gt; & gt; | Returns a list of applications that allow notifications. |
+| Promise&lt;Array&lt;BundleOption&gt;&gt; | Returns a list of applications that allow notifications. |
 
 **Error codes:**
 
@@ -81,7 +81,7 @@ Obtains the list of applications that are allowed to publish notifications by a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;BundleOption & gt; & gt; | Returns a list of applications that allow notifications. |
+| Promise&lt;Array&lt;BundleOption&gt;&gt; | Returns a list of applications that allow notifications. |
 
 **Error codes:**
 

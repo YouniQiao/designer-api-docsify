@@ -15,7 +15,7 @@
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errors | Iterable & lt;any & gt; | Yes |  |
+| errors | Iterable&lt;any&gt; | Yes |  |
 | message | string | No |  |
 
 **Return value:**
@@ -32,7 +32,7 @@ new(errors: Iterable<any>, message?: string): AggregateError
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errors | Iterable & lt;any & gt; | Yes |  |
+| errors | Iterable&lt;any&gt; | Yes |  |
 | message | string | No |  |
 
 **Return value:**

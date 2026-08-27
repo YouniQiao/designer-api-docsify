@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## classify
@@ -50,7 +50,7 @@ contents: Record<string, object>
 duration: number
 ```
 
-基于时间的元数据的持续时长。 取值限定为整数。 单位：毫秒。
+基于时间的元数据的持续时长。取值限定为整数。单位：毫秒。
 
 **类型：** number
 
@@ -66,7 +66,7 @@ duration: number
 id?: string
 ```
 
-基于时间的元数据的唯一标记。 该标记在视频源的数据信息中须保持唯一。
+基于时间的元数据的唯一标记。该标记在视频源的数据信息中须保持唯一。
 
 **类型：** string
 
@@ -82,7 +82,7 @@ id?: string
 start: number
 ```
 
-基于时间的元数据相对整个媒体起始时间的偏移值。 取值限定为整数。 单位：毫秒。
+基于时间的元数据相对整个媒体起始时间的偏移值。取值限定为整数。单位：毫秒。
 
 **类型：** number
 

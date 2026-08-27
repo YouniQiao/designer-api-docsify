@@ -1,6 +1,8 @@
 # LazyGridLayoutAttribute
 
-除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：
+
+除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** LazyGridLayoutAttribute extends CommonMethod<T>
 
@@ -33,7 +35,7 @@ columnsGap(value: LengthMetrics): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 列与列的间距。取值范围：[0, +∞)。 |
+| value | LengthMetrics | 是 | 列与列的间距。取值范围：[0, +∞)。 |
 
 **返回值：**
 
@@ -61,7 +63,7 @@ footer(builder: CustomBuilder | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | 尾部组件构建函数。 传入undefined时移除尾部组件。 |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | 尾部组件构建函数。传入undefined时移除尾部组件。 |
 
 **返回值：**
 
@@ -113,7 +115,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 > **说明：**
 > 
-> 当父组件设置主轴方向尺寸时，LazyVGridLayout按照父组件可视区域进行懒加载。此时onVisibleIndexesChange回调中start返回当前可视区域起始位置子组件的索引值，end返回当前可视区域结束位置子组件的 索引值。
+> 当父组件设置主轴方向尺寸时，LazyVGridLayout按照父组件可视区域进行懒加载。此时onVisibleIndexesChange回调中start返回当前可视区域起始位置子组件的索引值，end返回当前可视区域结束位置子组件的索引值。
 > 
 > 当父组件未设置主轴方向尺寸时，LazyVGridLayout会被内容撑开，导致所有子组件都会被加载布局。此时onVisibleIndexesChange回调中start返回0，end返回数据源最后一个子组件的索引值。
 > 
@@ -131,7 +133,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | 是 | onVisibleIndexesChange事件的回调函数。 传入undefined时取消监听。 |
+| callback | [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | 是 | onVisibleIndexesChange事件的回调函数。传入undefined时取消监听。 |
 
 **返回值：**
 
@@ -159,7 +161,7 @@ rowsGap(value: LengthMetrics): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 行与行的间距。取值范围：[0, +∞)。 |
+| value | LengthMetrics | 是 | 行与行的间距。取值范围：[0, +∞)。 |
 
 **返回值：**
 

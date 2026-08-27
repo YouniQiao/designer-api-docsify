@@ -10,7 +10,6 @@ Defines the left and right padding of the chip group, and the spacing between ch
 
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUIV2';
 ```
 
 ## endSpace
@@ -19,7 +18,13 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 endSpace?: Length
 ```
 
-Right padding. Percentage values are not supported.Default value: **16**Unit: vp If the value is **undefined**, the default value is used.
+Right padding. Percentage values are not supported.
+
+Default value: **16**
+
+Unit: vp
+
+If the value is **undefined**, the default value is used.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -37,7 +42,21 @@ Right padding. Percentage values are not supported.Default value: **16**Unit: vp
 itemSpace?: string | number
 ```
 
-Spacing between chips. Percentage values are not supported.Value range:Number type: a value greater than or equal to 0 (for example, **0**, **8**, **16**, or **24.5**)String type: a value greater than or equal to 0, with a unit of fp, vp, px, or lpx (for example, **"8vp"**, **"16fp"**, **"12px"**, or **"10lpx"**)Not supported: negative values, percentage units, and invalid string formats.Default value: **8**Unit: vp If the value is **undefined**, the default value is used.
+Spacing between chips. Percentage values are not supported.
+
+Value range:
+
+Number type: a value greater than or equal to 0 (for example, **0**, **8**, **16**, or **24.5**)
+
+String type: a value greater than or equal to 0, with a unit of fp, vp, px, or lpx (for example, **"8vp"**, **"16fp"**, **"12px"**, or **"10lpx"**)
+
+Not supported: negative values, percentage units, and invalid string formats.
+
+Default value: **8**
+
+Unit: vp
+
+If the value is **undefined**, the default value is used.
 
 **Type:** string \| number
 
@@ -55,7 +74,13 @@ Spacing between chips. Percentage values are not supported.Value range:Number ty
 startSpace?: Length
 ```
 
-Left padding. Percentage values are not supported.Default value: **16**Unit: vp If this parameter is set to **undefined**, the default value is used.
+Left padding. Percentage values are not supported.
+
+Default value: **16**
+
+Unit: vp
+
+If this parameter is set to **undefined**, the default value is used.
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

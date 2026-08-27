@@ -1,8 +1,11 @@
 # CalendarPicker
 
 The **CalendarPicker** component provides a drop-down calendar for users to select a date.
+
 > **NOTE**
+
 Child Components
+
 Not supported
 
 ## CalendarPicker
@@ -33,11 +36,14 @@ Creates a calendar picker.
 
 | Name | Description |
 | --- | --- |
+| [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | Defines the configuration options of the calendar picker dialog box. |
+| [CalendarOptions](arkts-arkui-calendaroptions-i.md) | Describes the parameters of the calendar picker. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [CalendarAlign](arkts-arkui-calendaralign-e.md) | Enumerates alignment types. |
 
 ## Examples
 

@@ -35,7 +35,9 @@ Unique ID of the child component.
 parentX: number
 ```
 
-X-coordinate of the touch point relative to the upper left corner of the parent component.Unit: vp.
+X-coordinate of the touch point relative to the upper left corner of the parent component.
+
+Unit: vp.
 
 **Type:** number
 
@@ -53,7 +55,9 @@ X-coordinate of the touch point relative to the upper left corner of the parent 
 parentY: number
 ```
 
-Y-coordinate of the touch point relative to the upper left corner of the parent component.Unit: vp.
+Y-coordinate of the touch point relative to the upper left corner of the parent component.
+
+Unit: vp.
 
 **Type:** number
 
@@ -89,7 +93,9 @@ Position, width, and height of the child component.
 windowX: number
 ```
 
-X-coordinate of the touch point relative to the upper left corner of the window.Unit: vp.
+X-coordinate of the touch point relative to the upper left corner of the window.
+
+Unit: vp.
 
 **Type:** number
 
@@ -107,7 +113,9 @@ X-coordinate of the touch point relative to the upper left corner of the window.
 windowY: number
 ```
 
-Y-coordinate of the touch point relative to the upper left corner of the window.Unit: vp.
+Y-coordinate of the touch point relative to the upper left corner of the window.
+
+Unit: vp.
 
 **Type:** number
 
@@ -125,7 +133,9 @@ Y-coordinate of the touch point relative to the upper left corner of the window.
 x: number
 ```
 
-X-coordinate of the touch point relative to the upper left corner of the child component.Unit: vp.
+X-coordinate of the touch point relative to the upper left corner of the child component.
+
+Unit: vp.
 
 **Type:** number
 
@@ -143,7 +153,9 @@ X-coordinate of the touch point relative to the upper left corner of the child c
 y: number
 ```
 
-Y-coordinate of the touch point relative to the upper left corner of the child component.Unit: vp.
+Y-coordinate of the touch point relative to the upper left corner of the child component.
+
+Unit: vp.
 
 **Type:** number
 

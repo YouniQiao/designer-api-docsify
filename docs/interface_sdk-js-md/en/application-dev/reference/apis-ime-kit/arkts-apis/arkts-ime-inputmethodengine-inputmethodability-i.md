@@ -9,7 +9,7 @@ In the following API examples, you must first use [getInputMethodAbility](arkts-
 ## Modules to Import
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## createPanel
@@ -36,7 +36,7 @@ Creates an input method panel. This API can be called only by the input method a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current context of the input method. |
-| info | [PanelInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
+| info | PanelInfo | Yes | Information about the input method panel. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | Yes | Callback used to return the result. If the operation is successful, the created input method panel is returned. |
 
 **Error codes:**
@@ -101,13 +101,13 @@ Creates an input method panel. This API can be called only by the input method a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current context of the input method. |
-| info | [PanelInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
+| info | PanelInfo | Yes | Information about the input method panel. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Panel & gt; | the promise returned by the function. |
+| Promise&lt;Panel&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -159,7 +159,7 @@ Destroys the specified input method panel. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | [Panel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | Yes | Input method panel to destroy. |
+| panel | Panel | Yes | Input method panel to destroy. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -218,13 +218,13 @@ Destroys the specified input method panel. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | [Panel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | Yes | Input method panel to destroy. |
+| panel | Panel | Yes | Input method panel to destroy. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -312,7 +312,7 @@ Disables listening for the input method binding event. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
-| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -337,7 +337,7 @@ Disables listening for the input method stop event. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputStop' | Yes | Event type, which is **'inputStop'**. |
-| callback | () = & gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | () =&gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -364,7 +364,7 @@ Disables listening for the window invocation setting event. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
-| callback | (wid: number) = & gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | (wid: number) =&gt; void | Yes | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -391,7 +391,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () = & gt; void | No | Callback used to return the result. |
+| callback | () =&gt; void | No | Callback used to return the result. |
 
 **Examples**
 
@@ -421,7 +421,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () = & gt; void | No | Callback used to return the result. |
+| callback | () =&gt; void | No | Callback used to return the result. |
 
 **Examples**
 
@@ -444,7 +444,7 @@ Disables listening for the input method subtype setting event. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setSubtype' | Yes | Event type, which is **'setSubtype'**. |
-| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Examples**
 
@@ -594,7 +594,7 @@ Enables listening for the input method binding event. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputStart' | Yes | Event type, which is **'inputStart'**. |
-| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | Yes | Callback used to return instances related to input method operations. |
+| callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | Yes | Callback used to return instances related to input method operations. |
 
 **Examples**
 
@@ -624,7 +624,7 @@ Enables listening for the input method unbinding event. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'inputStop' | Yes | Event type, which is **'inputStop'**. |
-| callback | () = & gt; void | Yes | Callback used to return the result. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -651,7 +651,7 @@ Enables listening for the window invocation setting event. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setCallingWindow' | Yes | Event type, which is **'setCallingWindow'**. |
-| callback | (wid: number) = & gt; void | Yes | Callback used to return the window ID of the caller. |
+| callback | (wid: number) =&gt; void | Yes | Callback used to return the window ID of the caller. |
 
 **Examples**
 
@@ -678,7 +678,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () = & gt; void | Yes | Callback used to return the result. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -708,7 +708,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type.    - The value **'keyboardShow'** indicates the keyboard display event.    - The value **'keyboardHide'** indicates the keyboard hiding event. |
-| callback | () = & gt; void | Yes | Callback used to return the result. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -731,7 +731,7 @@ Enables listening for the input method subtype setting event. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'setSubtype' | Yes | Event type, which is **'setSubtype'**. |
-| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | Yes | Callback used to return the input method subtype. |
+| callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | Callback used to return the input method subtype. |
 
 **Examples**
 

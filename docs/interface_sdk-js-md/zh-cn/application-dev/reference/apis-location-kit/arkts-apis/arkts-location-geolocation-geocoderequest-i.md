@@ -1,6 +1,8 @@
 # GeoCodeRequest
 
-地理编码请求参数。@interface GeoCodeRequest
+地理编码请求参数。
+
+@interface GeoCodeRequest
 
 **起始版本：** 7
 
@@ -15,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## description

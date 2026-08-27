@@ -1,6 +1,12 @@
 # FileSelectorParam
 
-FileSelectorParam is a file selector parameter class in the ArkWeb component, used to obtain parameter information when a file selection request is triggered by `&lt;input type="file"&gt;` in a web page, including the file selection mode, file filtering type, MIME type, suggested file name, and default starting path. It helps developers efficiently build custom file selectors that comply with HTML specifications.When a web page initiates a file selection request, developers use FileSelectorParam to obtain the complete parameter information passed from the frontend, and build a custom file selector that matches the frontend requirements based on this information, ensuring that the file selection mode, type filtering, naming, and other behaviors comply with HTML specifications.Used in scenarios where the Web component needs to custom-handle file upload requests. Register the `onShowFileSelector` callback to intercept file selection requests; obtain the FileSelectorParam instance from the `fileSelector` property of the callback event; read the parameters and build a corresponding system file selector (such as DocumentViewPicker, PhotoViewPicker, etc.); return the selection result to the Web component through FileSelectorResult.For sample code, see [onShowFileSelector](arkts-arkweb-web-attribute.md#onshowfileselector).
+FileSelectorParam is a file selector parameter class in the ArkWeb component, used to obtain parameter information when a file selection request is triggered by `&lt;input type="file"&gt;` in a web page, including the file selection mode, file filtering type, MIME type, suggested file name, and default starting path. It helps developers efficiently build custom file selectors that comply with HTML specifications.
+
+When a web page initiates a file selection request, developers use FileSelectorParam to obtain the complete parameter information passed from the frontend, and build a custom file selector that matches the frontend requirements based on this information, ensuring that the file selection mode, type filtering, naming, and other behaviors comply with HTML specifications.
+
+Used in scenarios where the Web component needs to custom-handle file upload requests. Register the `onShowFileSelector` callback to intercept file selection requests; obtain the FileSelectorParam instance from the `fileSelector` property of the callback event; read the parameters and build a corresponding system file selector (such as DocumentViewPicker, PhotoViewPicker, etc.); return the selection result to the Web component through FileSelectorResult.
+
+For sample code, see [onShowFileSelector](arkts-arkweb-web-attribute.md#onshowfileselector).
 
 **Since:** 9
 
@@ -9,9 +15,6 @@ FileSelectorParam is a file selector parameter class in the ArkWeb component, us
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -64,7 +67,7 @@ Obtains the file filtering type.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Array of file filter types, containing type information used to limit the selectable file range in the file selector. The elements are extensions (such as '.png'), corresponding to the HTML accept attribute. |
+| Array&lt;string&gt; | Array of file filter types, containing type information used to limit the selectable file range in the file selector. The elements are extensions (such as '.png'), corresponding to the HTML accept attribute. |
 
 ## getDefaultPath
 
@@ -100,7 +103,7 @@ Obtains the optional description of each group of allowed file types. Correspond
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Array of description strings for file types, containing optional description text for each group of file types. |
+| Array&lt;string&gt; | Array of description strings for file types, containing optional description text for each group of file types. |
 
 ## getMimeTypes
 
@@ -118,7 +121,7 @@ Obtains the MIME type of a file.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Value of the accept attribute of the HTML input element, containing the MIME types and file extensions allowed for selection. |
+| Array&lt;string&gt; | Value of the accept attribute of the HTML input element, containing the MIME types and file extensions allowed for selection. |
 
 ## getMode
 

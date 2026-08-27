@@ -1,6 +1,8 @@
 # LinearGradient
 
-Linear Gradient Interface@interface LinearGradient
+Linear Gradient Interface
+
+@interface LinearGradient
 
 **Since:** 11
 

@@ -402,7 +402,7 @@ Marks a preview output stream as secure output.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* previewOutput | Pointer to the target Camera_PreviewOutput instance. |
+| Camera_PreviewOutput* previewOutput | Pointer to the target Camera_PreviewOutput instance. |
 
 **Returns**:
 
@@ -525,7 +525,7 @@ Adds a PreviewOutput instance to a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* previewOutput | Pointer to the PreviewOutput instance to add. |
+| Camera_PreviewOutput* previewOutput | Pointer to the PreviewOutput instance to add. |
 
 **Returns**:
 
@@ -550,7 +550,7 @@ Removes a PreviewOutput instance from a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* previewOutput | Pointer to the PreviewOutput instance to remove. |
+| Camera_PreviewOutput* previewOutput | Pointer to the PreviewOutput instance to remove. |
 
 **Returns**:
 
@@ -675,7 +675,7 @@ Adds a MetadataOutput instance to a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| Camera_MetadataOutput* metadataOutput | Pointer to the MetadataOutput instance to add. |
+| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)* metadataOutput | Pointer to the MetadataOutput instance to add. |
 
 **Returns**:
 
@@ -700,7 +700,7 @@ Removes a MetadataOutput instance from a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| Camera_MetadataOutput* metadataOutput | Pointer to the MetadataOutput instance to remove. |
+| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)* metadataOutput | Pointer to the MetadataOutput instance to remove. |
 
 **Returns**:
 
@@ -2241,7 +2241,7 @@ Checks whether a PreviewOutput instance can be added to a session.
 | Parameter | Description |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Pointer to the target Camera_CaptureSession instance. |
-| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* cameraOutput | Pointer to the PreviewOutput instance to check. |
+| Camera_PreviewOutput* cameraOutput | Pointer to the PreviewOutput instance to check. |
 | bool* isSuccessful | Pointer to the check result for whether the PreviewOutput instance can be added to the session. *true** if it can be added to the session, **false** otherwise. |
 
 **Returns**:

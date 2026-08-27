@@ -13,7 +13,7 @@ TCPSocketConnection连接，即TCPSocket客户端与服务端的连接。在调�
 ## 导入模块
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## close
@@ -165,7 +165,7 @@ close(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -392,7 +392,7 @@ getLocalAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;NetAddress & gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| Promise&lt;NetAddress&gt; | 以Promise形式返回获取本地socket地址的结果。 |
 
 **错误码：**
 
@@ -720,7 +720,7 @@ getRemoteAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;NetAddress & gt; | 以Promise形式返回获取对端socket地址的结果。 |
+| Promise&lt;NetAddress&gt; | 以Promise形式返回获取对端socket地址的结果。 |
 
 **错误码：**
 
@@ -848,7 +848,7 @@ getSocketFd(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回Socket的文件描述符。 |
+| Promise&lt;number&gt; | Promise对象，返回Socket的文件描述符。 |
 
 **错误码：**
 
@@ -1512,7 +1512,7 @@ send(options: TCPSendOptions): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

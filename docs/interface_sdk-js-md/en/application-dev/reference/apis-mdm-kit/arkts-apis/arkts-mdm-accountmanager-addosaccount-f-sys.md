@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import accountManager from '@kit.MDMKit';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## addOsAccount

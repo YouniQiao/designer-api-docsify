@@ -131,7 +131,7 @@ Set the background color of the bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Nullable](arkts-arkui-nullable-t.md)&lt;Color \| number \| string & gt; | Yes | the color to set, undefined indicates using default. |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;Color \| number \| string&gt; | Yes | the color to set, undefined indicates using default. |
 
 **Examples**
 
@@ -182,7 +182,7 @@ Set the color of the icon on the bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Nullable](arkts-arkui-nullable-t.md)&lt;Color \| number \| string & gt; | Yes | the color to set to icon, undefined indicates using default. |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;Color \| number \| string&gt; | Yes | the color to set to icon, undefined indicates using default. |
 
 **Examples**
 
@@ -284,7 +284,7 @@ Set the font style of the bar's title.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | Yes | the font style of the bar's title. |
+| font | FontStyle | Yes | the font style of the bar's title. |
 
 **Examples**
 

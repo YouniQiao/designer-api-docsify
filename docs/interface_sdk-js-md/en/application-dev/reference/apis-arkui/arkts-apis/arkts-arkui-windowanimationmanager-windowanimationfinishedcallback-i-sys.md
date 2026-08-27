@@ -1,6 +1,8 @@
 # WindowAnimationFinishedCallback (System API)
 
-Window animation finished callback.@interface WindowAnimationFinishedCallback
+Window animation finished callback.
+
+@interface WindowAnimationFinishedCallback
 
 **Since:** 9
 
@@ -11,7 +13,7 @@ Window animation finished callback.@interface WindowAnimationFinishedCallback
 ## Modules to Import
 
 ```TypeScript
-import windowAnimationManager from '@kit.ArkUI';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## onAnimationFinish

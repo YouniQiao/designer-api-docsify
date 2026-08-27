@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import systemTime from '@kit.BasicServicesKit';
-import systemTimer from '@kit.BasicServicesKitr';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## getDate
@@ -75,7 +74,7 @@ function getDate(): Promise<Date>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Date & gt; | Promise对象，返回当前系统日期。 |
+| Promise&lt;Date&gt; | Promise对象，返回当前系统日期。 |
 
 **错误码：**
 

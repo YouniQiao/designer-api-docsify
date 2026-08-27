@@ -1,6 +1,6 @@
 # Duplex
 
-既可读又可写的流。双工流允许数据双向传输，即可读可写。 **Duplex**类继承自[Readable](arkts-arkts-stream-readable-c.md)，支持**Readable**中的所有API。
+既可读又可写的流。双工流允许数据双向传输，即可读可写。**Duplex**类继承自[Readable](arkts-arkts-stream-readable-c.md)，支持**Readable**中的所有API。
 
 **继承/实现关系：** Duplex extends [Readable](arkts-arkts-stream-readable-c.md)
 
@@ -454,7 +454,7 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 可写流的缓冲区中是否还有空间。true表示缓冲区还有空间，false表示流的内部缓冲区数据量已达到设定水位线，不建议继续写入，如果连续调用写入函数，数据仍会被添加到缓冲区中， 直到内存溢出为止。 |
+| boolean | 可写流的缓冲区中是否还有空间。true表示缓冲区还有空间，false表示流的内部缓冲区数据量已达到设定水位线，不建议继续写入，如果连续调用写入函数，数据仍会被添加到缓冲区中，直到内存溢出为止。 |
 
 **错误码：**
 

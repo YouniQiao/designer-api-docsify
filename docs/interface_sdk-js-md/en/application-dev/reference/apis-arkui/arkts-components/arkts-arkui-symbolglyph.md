@@ -1,6 +1,7 @@
 # SymbolGlyph
 
 The **SymbolGlyph** component represents a symbol glyph.<!--RP1--><!--RP1End-->
+
 > **NOTE**
 
 ## Child Components
@@ -29,7 +30,7 @@ Defines the constructor of SymbolGlyph.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | No | Resource of the **SymbolGlyph** component, for example, **\$r('sys.symbol.ohos_wifi')**. |
+| value | Resource | No | Resource of the **SymbolGlyph** component, for example, **\$r('sys.symbol.ohos_wifi')**. |
 
 ## Summary
 
@@ -37,6 +38,12 @@ Defines the constructor of SymbolGlyph.
 
 | Name | Description |
 | --- | --- |
+| [EffectDirection](arkts-arkui-effectdirection-e.md) | The direction type of symbol effect. |
+| [EffectFillStyle](arkts-arkui-effectfillstyle-e.md) | The fill style of symbol effect. |
+| [EffectScope](arkts-arkui-effectscope-e.md) | The scope type of the symbol effect. |
+| [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | The replace effect type of symbol. |
+| [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md) | Enumerates symbol effect types. Once applied, the symbol effect becomes active instantly, eliminating the need for triggering. |
+| [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | The symbol rendering strategy. |
 
 ## Examples
 

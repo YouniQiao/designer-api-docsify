@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import volumeManager from '@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## partition
@@ -12,7 +12,7 @@ import volumeManager from '@kit.CoreFileKit';
 function partition(diskId: string, type: number, callback: AsyncCallback<void>): void
 ```
 
-对磁盘进行分区，使用callback异步回调。当前仅支持将磁盘设备重新分区为一个分区，系统是支持读取多分区的磁盘设备。 不支持对光盘进行分区。
+对磁盘进行分区，使用callback异步回调。当前仅支持将磁盘设备重新分区为一个分区，系统是支持读取多分区的磁盘设备。不支持对光盘进行分区。
 
 **起始版本：** 9
 
@@ -64,7 +64,7 @@ volumeManager.partition(diskId, type, (error: BusinessError) => {
 function partition(diskId: string, type: number): Promise<void>
 ```
 
-对磁盘设备进行分区，使用Promise异步回调。当前仅支持将磁盘设备重新分区为一个分区，系统是支持读取多分区的磁盘设备。 不支持对光盘进行分区。
+对磁盘设备进行分区，使用Promise异步回调。当前仅支持将磁盘设备重新分区为一个分区，系统是支持读取多分区的磁盘设备。不支持对光盘进行分区。
 
 **起始版本：** 9
 
@@ -85,7 +85,7 @@ function partition(diskId: string, type: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

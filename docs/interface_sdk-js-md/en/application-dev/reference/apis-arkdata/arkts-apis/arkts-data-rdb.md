@@ -1,6 +1,9 @@
 # @ohos.data.rdb
 
-The relational database (RDB) manages data based on relational models. With the underlying SQLite database, the RDB provides a complete mechanism for managing local databases. To satisfy different needs in complicated scenarios, the RDB offers a series of methods for performing operations such as adding, deleting, modifying, and querying data, and supports direct execution of SQL statements. The worker threads are not supported.This module provides the following RDB-related functions:  
+The relational database (RDB) manages data based on relational models. With the underlying SQLite database, the RDB provides a complete mechanism for managing local databases. To satisfy different needs in complicated scenarios, the RDB offers a series of methods for performing operations such as adding, deleting, modifying, and querying data, and supports direct execution of SQL statements. The worker threads are not supported.
+
+This module provides the following RDB-related functions:
+
 - [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md): provides APIs for creating predicates. The predicates represent the  
 properties, characteristics, or relationships between data entities in an RDB store and are used to define data operation conditions.  
 - [RdbStore](arkts-arkdata-rdb-rdbstore-i.md): provides APIs for managing data in an RDB store.
@@ -39,7 +42,7 @@ properties, characteristics, or relationships between data entities in an RDB st
 
 | Name | Description |
 | --- | --- |
-| [RdbStore](arkts-arkdata-rdb-rdbstore-i.md) | Provides APIs for managing data in an RDB store.Before using the APIs of this class, use [executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql) to initialize the database table structure and related data. |
+| [RdbStore](arkts-arkdata-rdb-rdbstore-i.md) | Provides APIs for managing data in an RDB store. |
 | [StoreConfig](arkts-arkdata-rdb-storeconfig-i.md) | Defines the RDB store configuration. |
 
 ### Enums

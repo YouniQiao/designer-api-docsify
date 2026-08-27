@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import eap from '@kit.NetworkKit';
+import { eap } from '@kit.NetworkKit';
 ```
 
 ## regCustomEapHandler
@@ -12,7 +12,9 @@ import eap from '@kit.NetworkKit';
 function regCustomEapHandler(netType: number, eapCode: number, eapType: number, callback: Callback<EapData>): void
 ```
 
-Registers a custom handler of Extensible Authentication Protocol (EAP) packets for extensible authentication. This API returns the result asynchronously through a callback.The system will encapsulate the eligible EAP packets into the callback function for enterprise applications to retrieve.
+Registers a custom handler of Extensible Authentication Protocol (EAP) packets for extensible authentication. This API returns the result asynchronously through a callback.
+
+The system will encapsulate the eligible EAP packets into the callback function for enterprise applications to retrieve.
 
 **Since:** 20
 

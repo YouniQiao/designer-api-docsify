@@ -61,16 +61,21 @@ Creates a paste button with the specified icon, text and button type. After crea
 
 | Name | Description |
 | --- | --- |
+| [PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md) | Defines options for the paste button, including icon, text and button type. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md) | Triggered when the **PasteButton** component is clicked. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [PasteButtonOnClickResult](arkts-arkui-pastebuttononclickresult-e.md) | Enumerates the authorization results after the **PasteButton** component is tapped. |
+| [PasteDescription](arkts-arkui-pastedescription-e.md) | Enumerates the text that can be displayed on the paste button. |
+| [PasteIconStyle](arkts-arkui-pasteiconstyle-e.md) | Enumerates icon styles of the **PasteButton** component. |
 
 ## Examples
 

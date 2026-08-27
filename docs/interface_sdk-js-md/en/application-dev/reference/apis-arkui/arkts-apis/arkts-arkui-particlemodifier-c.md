@@ -1,6 +1,8 @@
 # ParticleModifier
 
-Defines Particle Modifier@extends ParticleAttribute @implements AttributeModifier&lt;ParticleAttribute&gt;
+Defines Particle Modifier
+
+@extends ParticleAttribute @implements AttributeModifier&lt;ParticleAttribute&gt;
 
 **Inheritance/Implementation:** ParticleModifier extends [ParticleAttribute](../arkts-components/arkts-arkui-particle-attribute.md#particleattribute) and implements AttributeModifier<ParticleAttribute>
 

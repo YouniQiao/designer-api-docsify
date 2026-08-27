@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import JSON from '@kit.ArkTS';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## stringify
@@ -96,7 +96,7 @@ Converts an ArkTS object or array into a JSON string. In the case of a container
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | Object | Yes | ArkTS object or array. In the case of a container, linear containers are supported, but non-linear containers are not. |
-| replacer | [Transformer](arkts-arkts-ason-transformer-t.md) | No | During serialization, each key of the serialized value is converted and processed by this function. The default value is undefined. |
+| replacer | Transformer | No | During serialization, each key of the serialized value is converted and processed by this function. The default value is undefined. |
 | space | string \| number | No | Indentation, white space, or line break characters inserted into the output JSON string for readability purposes. If a number is passed in, it indicates the number of space characters to be used as indentation. If a string is passed in, the string is inserted before the output JSON string. If null is passed in, no white space is used. The default value is an empty string. |
 
 **Return value:**

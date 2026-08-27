@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## close
@@ -73,7 +73,7 @@ getAllObjects(): Promise<Array<T>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;T & gt; & gt; | Promise对象，返回结果集中所有文件资产数组。 |
+| Promise&lt;Array&lt;T&gt;&gt; | Promise对象，返回结果集中所有文件资产数组。 |
 
 **错误码：**
 
@@ -163,7 +163,7 @@ getFirstObject(): Promise<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;T & gt; | Promise对象，返回结果集中第一个对象。 |
+| Promise&lt;T&gt; | Promise对象，返回结果集中第一个对象。 |
 
 **错误码：**
 
@@ -208,7 +208,7 @@ getLastObject(): Promise<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;T & gt; | Promise对象，返回结果集中最后一个对象。 |
+| Promise&lt;T&gt; | Promise对象，返回结果集中最后一个对象。 |
 
 **错误码：**
 
@@ -243,7 +243,9 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 getNextObject(): Promise<T>
 ```
 
-获取文件检索结果中的下一个文件资产。使用Promise异步回调。在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置 是否为最后一行。
+获取文件检索结果中的下一个文件资产。使用Promise异步回调。
+
+在调用此方法之前，必须使用[isAfterLast()](#isafterlast)来检查当前位置是否为最后一行。
 
 **起始版本：** 12
 
@@ -253,7 +255,7 @@ getNextObject(): Promise<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;T & gt; | Promise对象，返回结果集中下一个对象。 |
+| Promise&lt;T&gt; | Promise对象，返回结果集中下一个对象。 |
 
 **错误码：**
 
@@ -305,7 +307,7 @@ getObjectByPosition(index: number): Promise<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;T & gt; | Promise对象，返回结果集中指定索引的一个对象。 |
+| Promise&lt;T&gt; | Promise对象，返回结果集中指定索引的一个对象。 |
 
 **错误码：**
 

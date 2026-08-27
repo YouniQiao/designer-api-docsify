@@ -11,7 +11,11 @@
 function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): void
 ```
 
-使能GWP-ASan，用于检测堆内存使用中的非法行为。该接口主要用于动态配置并启用GWP-ASan，以适配应用自定义的GWP-ASan检测策略。配置在应用重新启动后生效。更多关于GWP-ASan的说明，请参见 [使用GWP-ASan检测内存错误](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-stability-gwpasan-detection)。
+使能GWP-ASan，用于检测堆内存使用中的非法行为。
+
+该接口主要用于动态配置并启用GWP-ASan，以适配应用自定义的GWP-ASan检测策略。配置在应用重新启动后生效。
+
+更多关于GWP-ASan的说明，请参见[使用GWP-ASan检测内存错误](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-stability-gwpasan-detection)。
 
 > **说明：**
 > 

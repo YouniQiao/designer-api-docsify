@@ -19,8 +19,7 @@
 ## 导入模块
 
 ```TypeScript
-import huks from '@kit.UniversalKeystoreKit';
-import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## certChains
@@ -29,7 +28,8 @@ import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 certChains?: Array<string>
 ```
 
-原为预留字段。  
+原为预留字段。
+
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **类型：** Array&lt;string&gt;
@@ -46,7 +46,8 @@ certChains?: Array<string>
 errorCode: number
 ```
 
-原为预留字段。  
+原为预留字段。
+
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **类型：** number
@@ -63,7 +64,8 @@ errorCode: number
 outData?: Uint8Array
 ```
 
-原为预留字段。  
+原为预留字段。
+
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **类型：** Uint8Array
@@ -80,7 +82,8 @@ outData?: Uint8Array
 properties?: Array<HuksParam>
 ```
 
-原为预留字段。  
+原为预留字段。
+
 **说明：** 从API version 9开始废弃，无替代接口。
 
 **类型：** Array&lt;[HuksParam](arkts-universalkeystore-huks-huksparam-i.md)&gt;

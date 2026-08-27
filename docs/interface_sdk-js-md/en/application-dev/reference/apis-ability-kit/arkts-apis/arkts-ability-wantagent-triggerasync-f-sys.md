@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wantAgent, { WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## triggerAsync
@@ -27,14 +27,14 @@ Asynchronously triggers a predefined operation encration encapsulated in a Wanta
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Indicates the WantAgent. |
-| triggerInfo | [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md) | Yes | Indicates the information required for triggering a WantAgent. |
+| triggerInfo | TriggerInfo | Yes | Indicates the information required for triggering a WantAgent. |
 | context | [Context](arkts-ability-context-c.md) | Yes | Indicates current context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;CompleteData & gt; | Returns the CompleteData. |
+| Promise&lt;CompleteData&gt; | Returns the CompleteData. |
 
 **Error codes:**
 

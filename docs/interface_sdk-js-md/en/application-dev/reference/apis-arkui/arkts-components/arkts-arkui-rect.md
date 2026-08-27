@@ -56,3 +56,5 @@ Defines the constructor of Rect component.
 
 | Name | Description |
 | --- | --- |
+| [RectOptions](arkts-arkui-rectoptions-i.md) | Describes the options of the rectangle. |
+| [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md) | Describes the options of the rounded rectangle. |

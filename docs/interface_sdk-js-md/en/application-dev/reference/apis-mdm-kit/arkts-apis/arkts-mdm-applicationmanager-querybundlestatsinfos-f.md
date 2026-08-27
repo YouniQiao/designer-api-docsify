@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## queryBundleStatsInfos
@@ -35,7 +35,7 @@ Queries the accumulated foreground runtime statistics of applications under a sp
 
 | Type | Description |
 | --- | --- |
-| Array & lt;BundleStatsInfo & gt; | Array of application bundle statistics. |
+| Array&lt;BundleStatsInfo&gt; | Array of application bundle statistics. |
 
 **Error codes:**
 

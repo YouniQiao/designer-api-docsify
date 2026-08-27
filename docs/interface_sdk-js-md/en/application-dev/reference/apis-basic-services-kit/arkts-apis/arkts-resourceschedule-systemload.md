@@ -9,7 +9,7 @@ The **systemload** module allows the system to determine the system load level b
 ## Modules to Import
 
 ```TypeScript
-import systemLoad from '@kit.BasicServicesKit';
+import { systemLoad } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -18,12 +18,12 @@ import systemLoad from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [getLevel(System Load Level Management)](arkts-basicservices-systemload-getlevel-f.md) | Obtains the system load level. This API uses a promise to return the result. |
-| [off(System Load Level Management)](arkts-basicservices-systemload-off-f.md#offsystemloadchange) | Disables listening for system load level changes. This API uses an asynchronous callback to return the result. |
-| [on(System Load Level Management)](arkts-basicservices-systemload-on-f.md#onsystemloadchange) | Enables listening for system load level changes. This API uses an asynchronous callback to return the result. |
+| [getLevel](arkts-basicservices-systemload-getlevel-f.md) | Obtains the system load level. This API uses a promise to return the result. |
+| [off](arkts-basicservices-systemload-off-f.md#offsystemloadchange) | Disables listening for system load level changes. This API uses an asynchronous callback to return the result. |
+| [on](arkts-basicservices-systemload-on-f.md#onsystemloadchange) | Enables listening for system load level changes. This API uses an asynchronous callback to return the result. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SystemLoadLevel(System Load Level Management)](arkts-basicservices-systemload-systemloadlevel-e.md) | Enumerates system load levels. |
+| [SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md) | Enumerates system load levels. |

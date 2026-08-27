@@ -9,8 +9,6 @@ Provides APIs to discard the least recently used data to make rooms for new elem
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## [Symbol.iterator]

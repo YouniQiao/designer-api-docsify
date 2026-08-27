@@ -1,6 +1,6 @@
 # SymbolDateTimeFormatOptions
 
-创建自定义符号时间日期格式化对象时的可选配置项。继承自Intl.DateTimeFormatOptions， 支持Intl.DateTimeFormatOptions的所有配置项，并且功能与其一致。
+创建自定义符号时间日期格式化对象时的可选配置项。继承自Intl.DateTimeFormatOptions，支持Intl.DateTimeFormatOptions的所有配置项，并且功能与其一致。
 
 **继承/实现关系：** SymbolDateTimeFormatOptions extends Intl.DateTimeFormatOptions
 
@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## amPMSymbol
@@ -20,7 +20,7 @@ import i18n from '@kit.LocalizationKit';
 amPMSymbol?: string[] | undefined
 ```
 
-指定的上午和下午符号，要求数组长度不小于2，其中第一个元素为上午符号，第二个元素为下午符号。 默认值：区域默认的符号。
+指定的上午和下午符号，要求数组长度不小于2，其中第一个元素为上午符号，第二个元素为下午符号。默认值：区域默认的符号。
 
 **类型：** string[] \| undefined
 

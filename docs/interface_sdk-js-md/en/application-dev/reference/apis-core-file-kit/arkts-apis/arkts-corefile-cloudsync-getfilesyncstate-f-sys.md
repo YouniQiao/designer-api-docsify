@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cloudSync from '@kit.CoreFileKit';
-import cloudSyncManager from '@kit.CoreFileKitManager';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## getFileSyncState
@@ -27,7 +26,7 @@ Obtains the file sync state. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | Array & lt;string & gt; | Yes | URI of the file whose sync state is to be obtained. |
+| uri | Array&lt;string&gt; | Yes | URI of the file whose sync state is to be obtained. |
 
 **Return value:**
 
@@ -82,7 +81,7 @@ Obtains the file sync state. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | Array & lt;string & gt; | Yes | URI of the file whose sync state is to be obtained. |
+| uri | Array&lt;string&gt; | Yes | URI of the file whose sync state is to be obtained. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[FileSyncState](arkts-corefile-cloudsync-filesyncstate-e-sys.md)&gt;&gt; | Yes | Callback used to return the file sync state. |
 
 **Error codes:**

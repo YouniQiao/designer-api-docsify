@@ -636,7 +636,7 @@ Query the channel layout of the renderer client.
 | Parameter | Description |
 | -- | -- |
 | [OH_AudioRenderer](capi-ohaudio-oh-audiorendererstruct.md)* renderer | Reference created by OH_AudioStreamBuilder_GenerateRenderer() |
-| [OH_AudioChannelLayout](../AVCodecKit/capi-native-audio-channel-layout-h.md#oh_audiochannellayout)* channelLayout | Pointer to a variable to receive the channel layout |
+| OH_AudioChannelLayout* channelLayout | Pointer to a variable to receive the channel layout |
 
 **Returns**:
 

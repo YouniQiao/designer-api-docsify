@@ -233,7 +233,7 @@ Converts this ArrayList into an array.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Array obtained. |
+| Array&lt;T&gt; | Array obtained. |
 
 **Error codes:**
 
@@ -271,7 +271,7 @@ Uses a callback to traverse each element in the **ArrayList** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, arrlist?: ArrayList & lt;T & gt;) = & gt; void | Yes | Callback invoked for the replacement. |
+| callbackFn | (value: T, index?: number, arrlist?: ArrayList&lt;T&gt;) =&gt; void | Yes | Callback invoked for the replacement. |
 | thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
@@ -732,7 +732,7 @@ Replaces all elements in this ArrayList with new elements, and returns the new o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, arrlist?: ArrayList & lt;T & gt;) = & gt; T | Yes | Callback invoked for the replacement. |
+| callbackFn | (value: T, index?: number, arrlist?: ArrayList&lt;T&gt;) =&gt; T | Yes | Callback invoked for the replacement. |
 | thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**

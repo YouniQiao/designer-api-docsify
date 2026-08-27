@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import deviceInfo from '@kit.MDMKit';
+import { deviceInfo } from '@kit.MDMKit';
 ```
 
 ## getDisplayVersion
@@ -99,7 +99,7 @@ Obtains the device version number. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the device version number. |
+| Promise&lt;string&gt; | Promise used to return the device version number. |
 
 **Error codes:**
 

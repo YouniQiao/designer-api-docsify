@@ -63,7 +63,7 @@ Pauses video playback asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## requestFullscreen
 
@@ -107,7 +107,7 @@ Resets the video controller asynchronously. Restores the controller to its initi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## setCurrentTime
 
@@ -152,7 +152,7 @@ Starts video playback asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 ## stop
 
@@ -174,4 +174,4 @@ Stops video playback asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |

@@ -21,14 +21,14 @@ Verifies the certificate passed by the application using the preset CA certifica
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cert | [CertBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certblob-i.md) | Yes | Certificate to be verified. |
-| caCert | [CertBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certblob-i.md) | No | Custom CA certificate. |
+| cert | CertBlob | Yes | Certificate to be verified. |
+| caCert | CertBlob | No | Custom CA certificate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. The value **0** indicates that the certificate verification is successful, and a non-0 value indicates that the verification has failed. |
+| Promise&lt;number&gt; | Promise used to return the result. The value **0** indicates that the certificate verification is successful, and a non-0 value indicates that the verification has failed. |
 
 **Error codes:**
 

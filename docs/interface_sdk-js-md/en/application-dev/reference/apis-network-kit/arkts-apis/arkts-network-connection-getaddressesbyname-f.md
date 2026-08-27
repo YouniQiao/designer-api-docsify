@@ -96,7 +96,7 @@ Obtains all IP addresses of the default network by resolving the host name. This
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;NetAddress & gt; & gt; | Promise used to return all IP addresses. |
+| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise used to return all IP addresses. |
 
 **Error codes:**
 

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## genDHCommonParamsSpec
@@ -20,7 +20,7 @@ import cryptoFramework from '@kit.CryptoArchitectureKit';
 static genDHCommonParamsSpec(pLen: number, skLen?: number): DHCommonParamsSpec
 ```
 
-根据素数P的长度和私钥长度（单位为bit）生成DH公共密钥参数。详见 [DH密钥生成规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#dh)。
+根据素数P的长度和私钥长度（单位为bit）生成DH公共密钥参数。详见[DH密钥生成规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#dh)。
 
 **起始版本：** 11
 
@@ -35,7 +35,7 @@ static genDHCommonParamsSpec(pLen: number, skLen?: number): DHCommonParamsSpec
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pLen | number | 是 | 用于指定DH公共密钥参数中素数P的长度，单位为bits。 |
-| skLen | number | 否 | 用于指定生成DH私钥的最大长度，单位为bits，默认值为0。当参数值设置为0时，生成DH私钥的最大长度为： ffdhe2048：255 bits。ffdhe3072：275 bits。ffdhe4096：325 bits。ffdhe6144：375 bits。 ffdhe8192：400 bits。 |
+| skLen | number | 否 | 用于指定生成DH私钥的最大长度，单位为bits，默认值为0。当参数值设置为0时，生成DH私钥的最大长度为：ffdhe2048：255 bits。ffdhe3072：275 bits。ffdhe4096：325 bits。ffdhe6144：375 bits。ffdhe8192：400 bits。 |
 
 **返回值：**
 

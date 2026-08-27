@@ -29,7 +29,7 @@ Get latest connection time of device.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Returns latest connection time. |
+| Promise&lt;number&gt; | Returns latest connection time. |
 
 **Error codes:**
 

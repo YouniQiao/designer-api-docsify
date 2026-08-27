@@ -69,7 +69,7 @@ Checks whether a new call is allowed. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the call is allowed, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the call is allowed, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

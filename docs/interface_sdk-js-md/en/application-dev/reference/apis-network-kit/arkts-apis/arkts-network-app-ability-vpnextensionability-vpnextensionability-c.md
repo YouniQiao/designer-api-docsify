@@ -1,6 +1,8 @@
 # VpnExtensionAbility
 
-**VpnExtensionContext** represents the context of **VpnExtensionAbility** and is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).This module provides the context required for APIs to access the resources of a **VpnExtensionAbility** object.
+**VpnExtensionContext** represents the context of **VpnExtensionAbility** and is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md).
+
+This module provides the context required for APIs to access the resources of a **VpnExtensionAbility** object.
 
 **Since:** 11
 
@@ -9,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import VpnExtensionAbility, { VpnExtensionContext } from '@kit.NetworkKit';
+import { VpnExtensionAbility, VpnExtensionContext } from '@kit.NetworkKit';
 ```
 
 ## onCreate

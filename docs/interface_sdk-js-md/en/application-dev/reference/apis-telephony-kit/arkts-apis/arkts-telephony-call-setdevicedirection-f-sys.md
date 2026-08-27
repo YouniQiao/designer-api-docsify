@@ -32,7 +32,7 @@ Sets the video call screen to follow the device direction. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

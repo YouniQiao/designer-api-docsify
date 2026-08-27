@@ -21,7 +21,7 @@ create the instance of hfp profile.
 
 | Type | Description |
 | --- | --- |
-| [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetoothmanager-handsfreeaudiogatewayprofile-i.md) | Returns the instance of profile. |
+| HandsFreeAudioGatewayProfile | Returns the instance of profile. |
 
 **Error codes:**
 

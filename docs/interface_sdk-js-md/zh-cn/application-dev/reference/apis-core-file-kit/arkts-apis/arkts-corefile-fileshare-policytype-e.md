@@ -1,6 +1,8 @@
 # PolicyType
 
-枚举所查询策略信息对应的授权模式。@enum { number } policyType
+枚举所查询策略信息对应的授权模式。
+
+@enum { number } policyType
 
 **起始版本：** 15
 

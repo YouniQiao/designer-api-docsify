@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import securityManager from '@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## getDisallowedPermissions
@@ -33,7 +33,7 @@ Obtains the list of disabled permissions of a specified user.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of disabled permissions. |
+| Array&lt;string&gt; | List of disabled permissions. |
 
 **Error codes:**
 

@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import userAuth from '@kit.UserAuthenticationKit';
-import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## queryReusableAuthResult
@@ -27,7 +26,7 @@ function queryReusableAuthResult(authParam: AuthParam): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authParam | [AuthParam](arkts-userauthentication-userauth-authparam-i.md) | 是 | 用户认证相关参数。包含挑战值（challenge）、认证类型列表（authType）、认证信任等级（authTrustLevel）以及认证结果复用配置（ reuseUnlockResult）。系统会根据这些参数判断是否存在满足条件的可复用认证结果。 |
+| authParam | AuthParam | 是 | 用户认证相关参数。包含挑战值（challenge）、认证类型列表（authType）、认证信任等级（authTrustLevel）以及认证结果复用配置（reuseUnlockResult）。系统会根据这些参数判断是否存在满足条件的可复用认证结果。 |
 
 **返回值：**
 

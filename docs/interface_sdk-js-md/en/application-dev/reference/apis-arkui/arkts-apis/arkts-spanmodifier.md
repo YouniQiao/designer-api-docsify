@@ -6,4 +6,4 @@
 
 | Name | Description |
 | --- | --- |
-| [SpanModifier](arkts-arkui-spanmodifier-c.md) | Defines Span Modifier@extends SpanAttribute @implements AttributeModifier & lt;SpanAttribute & gt; |
+| [SpanModifier](arkts-arkui-spanmodifier-c.md) | Defines Span Modifier |

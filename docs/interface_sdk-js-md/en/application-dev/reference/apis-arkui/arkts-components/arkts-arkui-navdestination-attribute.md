@@ -1,6 +1,8 @@
 # NavDestination properties/events
 
-The universal attributes are supported.In addition to the universal events, the following events are supported.
+The universal attributes are supported.
+
+In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** NavDestinationAttribute extends CommonMethod<NavDestinationAttribute>
 
@@ -41,7 +43,7 @@ Sets the icon of the back button on the title bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes | Icon of the back button on the title bar.<br>**Since:** 12 |
+| value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| SymbolGlyphModifier | Yes | Icon of the back button on the title bar.<br>**Since:** 12 |
 
 ## backButtonIcon
 
@@ -71,7 +73,7 @@ Sets the icon and accessibility text for the back button on the title bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| [SymbolGlyphModifier](../arkts-apis/arkts-arkui-symbolglyphmodifier-c.md) | Yes | Icon of the back button on the title bar. |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap \| SymbolGlyphModifier | Yes | Icon of the back button on the title bar. |
 | accessibilityText | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | No | Accessibility text for the back button.Default value: **back** when the system language is English. |
 
 ## bindToNestedScrollable
@@ -247,7 +249,9 @@ Sets whether to show or hide the system status bar when entering this **NavDesti
 fullScreenOverlay(fullScreenOverlay: Optional<boolean>)
 ```
 
-Sets whether the NavDestination should cover the entire navigation container.When set to true, in split navigation mode, the page covers both the NavBar and content area, displaying in full screen overlay mode. This setting applies to all instances of this NavDestination whenever it is pushed onto the stack, unless overridden by the fullScreen option in the push operation.
+Sets whether the NavDestination should cover the entire navigation container.
+
+When set to true, in split navigation mode, the page covers both the NavBar and content area, displaying in full screen overlay mode. This setting applies to all instances of this NavDestination whenever it is pushed onto the stack, unless overridden by the fullScreen option in the push operation.
 
 **Since:** 26.0.0
 
@@ -507,7 +511,9 @@ Triggered when the **NavDestination** component becomes active (on top of the st
 onBackPressed(callback: () => boolean)
 ```
 
-This callback takes effect when content exists in the navigation controller bound to the **Navigation** component. Triggered when the back button is pressed.The value **true** means that the back button logic is overridden, and **false** means that the previous page is displayed.
+This callback takes effect when content exists in the navigation controller bound to the **Navigation** component. Triggered when the back button is pressed.
+
+The value **true** means that the back button logic is overridden, and **false** means that the previous page is displayed.
 
 **Since:** 10
 
@@ -521,7 +527,7 @@ This callback takes effect when content exists in the navigation controller boun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | () = & gt; boolean | Yes | This callback takes effect when content exists in the navigation controller bound to the **Navigation** component. Triggered when the back button is pressed. |
+| callback | () =&gt; boolean | Yes | This callback takes effect when content exists in the navigation controller bound to the **Navigation** component. Triggered when the back button is pressed. |
 
 ## onHidden
 
@@ -633,7 +639,9 @@ Triggered when the **NavDestination** component is about to build a child compon
 onRestoreState(callback: Optional<RestoreStateCallback>)
 ```
 
-Sets custom page state restore callback.Triggered when page is reconstructed. The custom state saved by onSaveState is passed to this callback. Null is passed if no custom state was saved.
+Sets custom page state restore callback.
+
+Triggered when page is reconstructed. The custom state saved by onSaveState is passed to this callback. Null is passed if no custom state was saved.
 
 **Since:** 26.0.0
 
@@ -681,7 +689,9 @@ Triggered when the **NavDestination** component returns.
 onSaveState(callback: Optional<SaveStateCallback>)
 ```
 
-Sets custom page state save callback.Triggered when page becomes hidden. Save custom page state for potential restoration. The initial param used to create the page is preserved by Navigation separately. State object must be serializable.
+Sets custom page state save callback.
+
+Triggered when page becomes hidden. Save custom page state for potential restoration. The initial param used to create the page is preserved by Navigation separately. State object must be serializable.
 
 **Since:** 26.0.0
 
@@ -743,7 +753,7 @@ Called when the **NavDestination** component is about to be mounted. The routing
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;void & gt; | Yes | Called when the **NavDestination** component is about to be mounted. The routing stack can be modified in the callback, and the modification takes effect in the current frame. |
+| callback | Callback&lt;void&gt; | Yes | Called when the **NavDestination** component is about to be mounted. The routing stack can be modified in the callback, and the modification takes effect in the current frame. |
 
 ## onWillDisappear
 
@@ -769,7 +779,7 @@ Called when the the **NavDestination** component is about to be unmounted (or wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;void & gt; | Yes | Called when the the **NavDestination** component is about to be unmounted (or when the transition animation, if any, is about to start). |
+| callback | Callback&lt;void&gt; | Yes | Called when the the **NavDestination** component is about to be unmounted (or when the transition animation, if any, is about to start). |
 
 ## onWillHide
 
@@ -795,7 +805,7 @@ Called when the **NavDestination** component is about to be hidden.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;void & gt; | Yes | Called when the **NavDestination** component is about to be hidden. |
+| callback | Callback&lt;void&gt; | Yes | Called when the **NavDestination** component is about to be hidden. |
 
 ## onWillShow
 
@@ -821,7 +831,7 @@ Called when the **NavDestination** component is about to display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;void & gt; | Yes | Called when the **NavDestination** component is about to display. |
+| callback | Callback&lt;void&gt; | Yes | Called when the **NavDestination** component is about to display. |
 
 ## preferredOrientation
 
@@ -962,7 +972,7 @@ Sets the page title. When the title string is too number: (1) If no subtitle is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavDestinationCommonTitle](arkts-arkui-navdestinationcommontitle-i.md) \| [NavDestinationCustomTitle](arkts-arkui-navdestinationcustomtitle-i.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Page title.<br>**Since:** 14 |
+| value | string \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavDestinationCommonTitle](arkts-arkui-navdestinationcommontitle-i.md) \| [NavDestinationCustomTitle](arkts-arkui-navdestinationcustomtitle-i.md) \| Resource | Yes | Page title.<br>**Since:** 14 |
 | options | [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | No | Title bar options.<br>**Since:** 12 |
 
 ## toolbarConfiguration

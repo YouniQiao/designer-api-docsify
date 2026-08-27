@@ -1,6 +1,10 @@
 # ImageSpan properties/events
 
-The attributes inherit from [BaseSpan](arkts-arkui-basespan-c.md). Among the universal attributes, size, background, and border are supported.Among all the universal events, only the click event is supported. The following events are also supported.@extends CommonMethod&lt;ImageSpanAttribute&gt; [since 10 - 10] @extends BaseSpan&lt;ImageSpanAttribute&gt; [since 11]
+The attributes inherit from [BaseSpan](arkts-arkui-basespan-c.md). Among the universal attributes, size, background, and border are supported.
+
+Among all the universal events, only the click event is supported. The following events are also supported.
+
+@extends CommonMethod&lt;ImageSpanAttribute&gt; [since 10 - 10] @extends BaseSpan&lt;ImageSpanAttribute&gt; [since 11]
 
 **Inheritance/Implementation:** ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>
 
@@ -33,7 +37,7 @@ Sets the placeholder image displayed during image loading.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Placeholder image displayed during image loading. The [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) type is supported.Default value: **null |
+| value | PixelMap | Yes | Placeholder image displayed during image loading. The [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) type is supported.Default value: **null |
 
 ## colorFilter
 
@@ -129,7 +133,13 @@ Triggered when an error occurs during image loading.
 resizable(value: ResizableOptions)
 ```
 
-Sets the resizable image options. Resizing is effective for drag previews and placeholder images.When a valid [ResizableOptions](arkts-arkui-resizableoptions-i.md) is set, the **objectRepeat**, **antialiased**, and **orientation** attributes do not take effect.When the sum of the values of **top** and **bottom** is greater than the source image height, or the sum of the values of **left** and **right** is greater than the source image width, the [ResizableOptions](arkts-arkui-resizableoptions-i.md) attribute does not take effect.This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md) or the image format is SVG.
+Sets the resizable image options. Resizing is effective for drag previews and placeholder images.
+
+When a valid [ResizableOptions](arkts-arkui-resizableoptions-i.md) is set, the **objectRepeat**, **antialiased**, and **orientation** attributes do not take effect.
+
+When the sum of the values of **top** and **bottom** is greater than the source image height, or the sum of the values of **left** and **right** is greater than the source image width, the [ResizableOptions](arkts-arkui-resizableoptions-i.md) attribute does not take effect.
+
+This attribute does not take effect when the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md) or the image format is SVG.
 
 **Since:** 26.1.0
 
@@ -151,7 +161,9 @@ Sets the resizable image options. Resizing is effective for drag previews and pl
 supportSvg2(enable: Optional<boolean>)
 ```
 
-Sets whether to enable [enhanced SVG tag parsing](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md). When this feature is enabled, SVG image rendering behavior changes accordingly.After the **ImageSpan** component is created, the value of this attribute cannot be dynamically changed.
+Sets whether to enable [enhanced SVG tag parsing](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md). When this feature is enabled, SVG image rendering behavior changes accordingly.
+
+After the **ImageSpan** component is created, the value of this attribute cannot be dynamically changed.
 
 **Since:** 22
 

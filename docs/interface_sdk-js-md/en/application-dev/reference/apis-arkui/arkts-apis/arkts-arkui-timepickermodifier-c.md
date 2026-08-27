@@ -1,6 +1,8 @@
 # TimePickerModifier
 
-Defines TimePicker Modifier@extends TimePickerAttribute @implements AttributeModifier&lt;TimePickerAttribute&gt;
+Defines TimePicker Modifier
+
+@extends TimePickerAttribute @implements AttributeModifier&lt;TimePickerAttribute&gt;
 
 **Inheritance/Implementation:** TimePickerModifier extends [TimePickerAttribute](../arkts-components/arkts-arkui-timepicker-attribute.md#timepickerattribute) and implements AttributeModifier<TimePickerAttribute>
 

@@ -67,7 +67,8 @@ mmsConfig?: MmsConfig
 slotId: number
 ```
 
-用于发送短信的SIM卡槽ID：  
+用于发送短信的SIM卡槽ID：
+
 - 0：卡槽1  
 - 1：卡槽2
 

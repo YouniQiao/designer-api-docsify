@@ -1,6 +1,8 @@
 # TimePickerDialogOptions
 
-时间选择器弹窗选项。继承自[TimePickerOptions](arkts-arkui-timepickeroptions-i.md)。
+时间选择器弹窗选项。
+
+继承自[TimePickerOptions](arkts-arkui-timepickeroptions-i.md)。
 
 **继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md)
 
@@ -191,7 +193,9 @@ acceptButtonStyle?: PickerDialogButtonStyle
 alignment?: DialogAlignment
 ```
 
-设置弹窗在垂直方向上的对齐方式。默认值：DialogAlignment.Default
+设置弹窗在垂直方向上的对齐方式。
+
+默认值：DialogAlignment.Default
 
 **类型：** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
@@ -209,7 +213,9 @@ alignment?: DialogAlignment
 backgroundBlurStyle?: BlurStyle
 ```
 
-弹窗背板模糊材质。默认值：BlurStyle.COMPONENT_ULTRA_THICK
+弹窗背板模糊材质。
+
+默认值：BlurStyle.COMPONENT_ULTRA_THICK
 
 > **说明：**
 > 
@@ -259,7 +265,9 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-弹窗背板颜色。默认值：Color.Transparent
+弹窗背板颜色。
+
+默认值：Color.Transparent
 
 > **说明：**
 > 
@@ -362,7 +370,9 @@ dateTimeOptions?: DateTimeOptions
 disappearTextStyle?: PickerTextStyle
 ```
 
-设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。默认值：
+设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。
+
+默认值：
 
 {color: '#ff182431', font: {size: '14fp', weight: FontWeight.Regular } }
 
@@ -382,10 +392,14 @@ disappearTextStyle?: PickerTextStyle
 enableCascade?: boolean
 ```
 
-设置上午和下午的标识是否根据小时数自动切换，仅在useMilitaryTime设置为false时生效。  
+设置上午和下午的标识是否根据小时数自动切换，仅在useMilitaryTime设置为false时生效。
+
 - true：自动切换。  
-- false：不自动切换。  
-默认值：false当enableCascade设置为true时，需要loop参数同时为true才能生效。loop用于控制选择器是否循环滚动。
+- false：不自动切换。
+
+默认值：false
+
+当enableCascade设置为true时，需要loop参数同时为true才能生效。loop用于控制选择器是否循环滚动。
 
 **类型：** boolean
 
@@ -405,9 +419,11 @@ enableCascade?: boolean
 enableHapticFeedback?: boolean
 ```
 
-设置是否开启触控反馈。  
+设置是否开启触控反馈。
+
 - true：开启触控反馈。  
-- false：不开启触控反馈。  
+- false：不开启触控反馈。
+
 默认值：true
 
 > **说明：**
@@ -435,9 +451,11 @@ enableHapticFeedback?: boolean
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态。悬停态指折叠屏等设备处于悬停折叠状态时的交互模式，而非鼠标悬停。  
+是否响应悬停态。悬停态指折叠屏等设备处于悬停折叠状态时的交互模式，而非鼠标悬停。
+
 - true：响应悬停态。  
-- false：不响应悬停态。  
+- false：不响应悬停态。
+
 默认值：false
 
 **类型：** boolean
@@ -458,7 +476,9 @@ enableHoverMode?: boolean
 hoverModeArea?: HoverModeAreaType
 ```
 
-悬停态下弹窗默认展示区域。仅在enableHoverMode为true时生效。默认值：HoverModeAreaType.BOTTOM_SCREEN
+悬停态下弹窗默认展示区域。仅在enableHoverMode为true时生效。
+
+默认值：HoverModeAreaType.BOTTOM_SCREEN
 
 **类型：** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
 
@@ -478,7 +498,9 @@ hoverModeArea?: HoverModeAreaType
 maskRect?: Rectangle
 ```
 
-弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
+弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。
+
+默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
 
 **类型：** [Rectangle](arkts-arkui-rectangle-i.md)
 
@@ -496,7 +518,9 @@ maskRect?: Rectangle
 offset?: Offset
 ```
 
-设置弹窗相对alignment所在位置的偏移量。默认值：{ dx: 0 , dy: 0 }
+设置弹窗相对alignment所在位置的偏移量。
+
+默认值：{ dx: 0 , dy: 0 }
 
 **类型：** Offset
 
@@ -514,7 +538,7 @@ offset?: Offset
 onEnterSelectedArea?: Callback<TimePickerResult>
 ```
 
-滑动过程中，当前滑动列滑动距离超过选中项高度的一半，选项进入分割线区域内，触发该回调。与onChange事件的差别在于，该事件在滑动过程中实时触发， 适合需要实时监听滑动场景；onChange在选项归位至选中项位置后触发，适合需要确认最终选中值的场景。
+滑动过程中，当前滑动列滑动距离超过选中项高度的一半，选项进入分割线区域内，触发该回调。与onChange事件的差别在于，该事件在滑动过程中实时触发，适合需要实时监听滑动场景；onChange在选项归位至选中项位置后触发，适合需要确认最终选中值的场景。
 
 > **说明：**
 > 
@@ -572,7 +596,9 @@ weight: FontWeight.Medium
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-设置弹窗背板的阴影。当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
+设置弹窗背板的阴影。
+
+当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
 > **说明：**
 > 
@@ -658,9 +684,11 @@ weight: FontWeight.Regular
 useMilitaryTime?: boolean
 ```
 
-时间是否以24小时制展示。  
+时间是否以24小时制展示。
+
 - true：时间以24小时制展示。  
-- false：时间以12小时制展示。  
+- false：时间以12小时制展示。
+
 默认值：false
 
 > **说明：** 当设置为false时，enableCascade参数才能生效。

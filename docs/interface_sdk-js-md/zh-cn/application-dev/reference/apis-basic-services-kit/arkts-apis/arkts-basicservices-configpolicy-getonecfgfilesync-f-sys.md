@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import configPolicy from '@kit.BasicServicesKit';
+import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
 ## getOneCfgFileSync
@@ -25,8 +25,8 @@ function getOneCfgFileSync(relPath: string, followMode?: FollowXMode, extra?: st
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | relPath | string | 是 | 配置文件名。 |
-| followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | 否 | 跟随模式，不设置时，默认使用 [DEFAULT](arkts-basicservices-configpolicy-followxmode-e-sys.md#default)。 |
-| extra | string | 否 | 用户自定义跟随规则，仅在followMode为 [USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#user_defined)时有效。 |
+| followMode | [FollowXMode](arkts-basicservices-configpolicy-followxmode-e-sys.md) | 否 | 跟随模式，不设置时，默认使用[DEFAULT](arkts-basicservices-configpolicy-followxmode-e-sys.md#default)。 |
+| extra | string | 否 | 用户自定义跟随规则，仅在followMode为[USER_DEFINED](arkts-basicservices-configpolicy-followxmode-e-sys.md#user_defined)时有效。 |
 
 **返回值：**
 

@@ -4,7 +4,9 @@
 type MemberType = number | number | number | string | boolean
 ```
 
-PhotoAsset的成员类型。成员类型为下表类型的并集。
+PhotoAsset的成员类型。
+
+成员类型为下表类型的并集。
 
 **起始版本：** 10
 

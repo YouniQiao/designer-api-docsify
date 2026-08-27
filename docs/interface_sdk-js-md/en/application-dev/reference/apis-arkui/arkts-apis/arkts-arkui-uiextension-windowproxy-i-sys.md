@@ -9,7 +9,7 @@ The proxy of the UIExtension window.
 ## Modules to Import
 
 ```TypeScript
-import uiExtension from '@kit.ArkUI';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## hideNonSecureWindows
@@ -55,7 +55,7 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -128,7 +128,7 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -1476,6 +1476,7 @@ ERR_CERT_DATE_INVALID = -201
 ```
 
 The server responded with a certificate that, by our clock, appears to either not yet be valid or to have expired. This could mean:
+
 1. An attacker is presenting an old certificate for which they have
 managed to obtain the private key.
 2. The server is misconfigured and is not presenting a valid cert.
@@ -1542,6 +1543,7 @@ ERR_CERT_UNABLE_TO_CHECK_REVOCATION = -205
 ```
 
 Revocation information for the security certificate for this site is not available. This could mean:
+
 1. An attacker has compromised the private key in the certificate and is
 blocking our attempt to find out that the cert was revoked.
 2. The certificate is unrevoked, but the revocation server is busy or

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import bluetoothManager from '@kit.MDMKit';
+import { bluetoothManager } from '@kit.MDMKit';
 ```
 
 ## addAllowedBluetoothDevices
@@ -12,7 +12,10 @@ import bluetoothManager from '@kit.MDMKit';
 function addAllowedBluetoothDevices(admin: Want, deviceIds: Array<string>): void
 ```
 
-添加蓝牙设备可用名单。添加蓝牙设备可用名单后当前设备仅允许连接该名单下的蓝牙设备。从API version 22开始，数组中的MAC地址必须符合蓝牙MAC规范（例如：00:1A:2B:3C:4D:5E），添加时会移除不合法的MAC 地址，仅添加合法的MAC地址。以下情况下，通过本接口添加蓝牙设备可用名单，会报策略冲突：
+添加蓝牙设备可用名单。添加蓝牙设备可用名单后当前设备仅允许连接该名单下的蓝牙设备。从API version 22开始，数组中的MAC地址必须符合蓝牙MAC规范（例如：00:1A:2B:3C:4D:5E），添加时会移除不合法的MAC地址，仅添加合法的MAC地址。
+
+以下情况下，通过本接口添加蓝牙设备可用名单，会报策略冲突：
+
 1. 已经通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口禁用了蓝牙。通过[setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md)接口启用蓝牙后，可解除冲突。
 2. 已经通过[addDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-adddisallowedbluetoothdevices-f.md)接口添加了蓝牙设备禁用名单。通过[removeDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-removedisallowedbluetoothdevices-f.md)移除蓝牙设备禁用名单后，可解除冲突。
 
@@ -29,7 +32,7 @@ function addAllowedBluetoothDevices(admin: Want, deviceIds: Array<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| deviceIds | Array & lt;string & gt; | 是 | 蓝牙设备MAC地址的数组。蓝牙设备允许名单数组长度上限为1000，若当前允许名单中已有300个蓝牙设备MAC地址，则只允许再添加700个。 |
+| deviceIds | Array&lt;string&gt; | 是 | 蓝牙设备MAC地址的数组。蓝牙设备允许名单数组长度上限为1000，若当前允许名单中已有300个蓝牙设备MAC地址，则只允许再添加700个。 |
 
 **错误码：**
 

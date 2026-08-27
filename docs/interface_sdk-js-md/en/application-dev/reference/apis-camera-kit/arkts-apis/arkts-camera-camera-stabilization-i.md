@@ -1,6 +1,10 @@
 # Stabilization
 
-**Stabilization** inherits from [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md).It provides APIs to set video stabilization.You can set video stabilization only when a [VideoOutput](arkts-camera-camera-videooutput-i.md) stream exists in the session.
+**Stabilization** inherits from [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md).
+
+It provides APIs to set video stabilization.
+
+You can set video stabilization only when a [VideoOutput](arkts-camera-camera-videooutput-i.md) stream exists in the session.
 
 **Inheritance/Implementation:** Stabilization extends [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md)
 

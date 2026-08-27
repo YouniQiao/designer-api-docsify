@@ -9,7 +9,7 @@ Describes the attributes of the input method panel.
 ## Modules to Import
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## flag

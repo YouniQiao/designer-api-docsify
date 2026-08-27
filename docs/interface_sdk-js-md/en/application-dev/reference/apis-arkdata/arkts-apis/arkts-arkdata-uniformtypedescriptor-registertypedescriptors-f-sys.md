@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import uniformTypeDescriptor from '@kit.ArkData';
+import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## registerTypeDescriptors
@@ -36,7 +36,7 @@ Register type descriptors into the system.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

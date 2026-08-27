@@ -14,7 +14,7 @@
 readonly notificationClassification?: NotificationClassification
 ```
 
-通知分类信息。 仅在[NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md)中的enableClassification为true时存在。
+通知分类信息。仅在[NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md)中的enableClassification为true时存在。
 
 **类型：** [NotificationClassification](arkts-notification-notificationsubscriber-notificationclassification-i-sys.md)
 

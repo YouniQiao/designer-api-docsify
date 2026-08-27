@@ -1,6 +1,8 @@
 # NavDestinationModifier
 
-Defines NavDestination Modifier@extends NavDestinationAttribute @implements AttributeModifier&lt;NavDestinationAttribute&gt;
+Defines NavDestination Modifier
+
+@extends NavDestinationAttribute @implements AttributeModifier&lt;NavDestinationAttribute&gt;
 
 **Inheritance/Implementation:** NavDestinationModifier extends [NavDestinationAttribute](../arkts-components/arkts-arkui-navdestination-attribute.md#navdestinationattribute) and implements AttributeModifier<NavDestinationAttribute>
 

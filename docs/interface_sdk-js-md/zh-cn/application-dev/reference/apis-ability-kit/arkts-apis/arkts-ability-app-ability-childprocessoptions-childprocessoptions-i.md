@@ -1,6 +1,6 @@
 # ChildProcessOptions
 
-子进程的启动配置选项。通过[childProcessManager](arkts-app-ability-childprocessmanager.md)启动子进程时，可以通过 ChildProcessOptions配置子进程启动选项。
+子进程的启动配置选项。通过[childProcessManager](arkts-app-ability-childprocessmanager.md)启动子进程时，可以通过ChildProcessOptions配置子进程启动选项。
 
 **起始版本：** 12
 
@@ -49,7 +49,7 @@ isolationUid?: boolean
 子进程部分：
 
 ```TypeScript
-// 在entry模块的src/main/ets/process下创建DemoProcess.ets子进程类:
+// 在entry模块的src/main/ets/process下创建DemoProcess.ets子进程类：
 // entry/src/main/ets/process/DemoProcess.ets
 import { ChildProcess, ChildProcessArgs } from '@kit.AbilityKit';
 
@@ -65,7 +65,7 @@ export default class DemoProcess extends ChildProcess {
 主进程部分：
 
 ```TypeScript
-// 使用childProcessManager.startArkChildProcess方法启动子进程:
+// 使用childProcessManager.startArkChildProcess方法启动子进程：
 // entry/src/main/ets/pages/Index.ets
 import { ChildProcessArgs, ChildProcessOptions, childProcessManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';

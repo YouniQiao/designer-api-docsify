@@ -113,7 +113,7 @@ Cancel a WantAgent. Only the application that creates the WantAgent can cancel i
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Examples**
 

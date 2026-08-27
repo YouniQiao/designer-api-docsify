@@ -11,7 +11,7 @@ Defines an OS account sub-profile manager.
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## createOsAccountSubProfile
@@ -106,7 +106,7 @@ Deletes an OS account sub-profile. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -162,7 +162,7 @@ Obtains the foreground sub-profile ID of the OS account of the caller. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the foreground sub-profile ID of the OS account. |
+| Promise&lt;number&gt; | Promise used to return the foreground sub-profile ID of the OS account. |
 
 **Error codes:**
 
@@ -216,7 +216,7 @@ Obtains the foreground sub-profile ID of the specified OS account. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the foreground sub-profile ID of the OS account. |
+| Promise&lt;number&gt; | Promise used to return the foreground sub-profile ID of the OS account. |
 
 **Error codes:**
 
@@ -274,7 +274,7 @@ Obtains the local ID of the OS account of a sub-profile. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the local ID of the OS account of the sub-profile. |
+| Promise&lt;number&gt; | Promise used to return the local ID of the OS account of the sub-profile. |
 
 **Error codes:**
 
@@ -449,7 +449,7 @@ Obtains the sub-profile IDs of the OS account of the caller. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number[] & gt; | Promise used to return the sub-profile IDs. |
+| Promise&lt;number[]&gt; | Promise used to return the sub-profile IDs. |
 
 **Error codes:**
 
@@ -505,7 +505,7 @@ Obtains the sub-profile IDs of the specified OS account. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number[] & gt; | Promise used to return the sub-profile IDs of the specified OS account. |
+| Promise&lt;number[]&gt; | Promise used to return the sub-profile IDs of the specified OS account. |
 
 **Error codes:**
 
@@ -661,7 +661,7 @@ Switches to an OS account sub-profile. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -25,7 +25,7 @@ Configures the application event logging function, such as setting the event log
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | Yes | Configuration items for application event logging. |
+| config | ConfigOption | Yes | Configuration items for application event logging. |
 
 **Return value:**
 

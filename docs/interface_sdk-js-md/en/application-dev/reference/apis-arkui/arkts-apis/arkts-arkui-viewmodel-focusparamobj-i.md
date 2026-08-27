@@ -1,6 +1,8 @@
 # FocusParamObj
 
-Defines the focus param.@interface FocusParamObj
+Defines the focus param.
+
+@interface FocusParamObj
 
 **Since:** 3
 

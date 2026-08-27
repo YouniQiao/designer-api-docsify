@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import prompt from '@kit.ArkUI';
-import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUIAction';
+import { prompt } from '@kit.ArkUI';
 ```
 
 ## showToast
@@ -27,7 +26,7 @@ Displays the notification text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Yes | Options. |
+| options | ShowToastOptions | Yes | Options. |
 
 **Examples**
 

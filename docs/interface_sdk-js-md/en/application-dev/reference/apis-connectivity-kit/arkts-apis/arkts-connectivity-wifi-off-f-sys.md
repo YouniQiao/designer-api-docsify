@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## off('streamChange')
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function off(type: 'streamChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi stream change events.<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
+Unsubscribe Wi-Fi stream change events.
+
+<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
 
 **Since:** 7
 
@@ -43,7 +42,9 @@ Unsubscribe Wi-Fi stream change events.<p>All callback functions will be deregis
 function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void
 ```
 
-Unsubscribe Wi-Fi hotspot sta join events.<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
+Unsubscribe Wi-Fi hotspot sta join events.
+
+<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
 
 **Since:** 7
 

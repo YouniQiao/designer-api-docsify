@@ -29,7 +29,7 @@ Obtains array-type data of the data object. For details about the sample code, s
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string \ | number \| boolean & gt; | Data of the array type. |
+| Array&lt;string \| number \| boolean&gt; | Data of the array type. |
 
 **Error codes:**
 
@@ -205,7 +205,7 @@ Sets the array-type data for the data object. For details about the sample code,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | Array & lt;string \ | number \| boolean & gt; | Yes | Data of the array type. |
+| message | Array&lt;string \| number \| boolean&gt; | Yes | Data of the array type. |
 
 **Error codes:**
 

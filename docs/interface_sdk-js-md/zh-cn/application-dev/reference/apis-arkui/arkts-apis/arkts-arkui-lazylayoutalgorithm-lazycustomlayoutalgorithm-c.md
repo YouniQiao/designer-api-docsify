@@ -77,7 +77,7 @@ onLayout(self: FrameNode, position: Position): void
 onMeasure(self: FrameNode, constraint: LayoutConstraint, helper?: LazyLayoutHelper): void
 ```
 
-通过重写此函数，开发者可以自定义测量子组件的大小。ArkUI框架会在懒加载动态布局组件确定尺寸时，将该组件对应的FrameNode、布局约束和懒加载辅助对象通过onMeasure传递给开发者。不允许在onMeasure函数中改 变状态变量。
+通过重写此函数，开发者可以自定义测量子组件的大小。ArkUI框架会在懒加载动态布局组件确定尺寸时，将该组件对应的FrameNode、布局约束和懒加载辅助对象通过onMeasure传递给开发者。不允许在onMeasure函数中改变状态变量。
 
 > **说明：**
 > 
@@ -106,4 +106,4 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint, helper?: LazyLayoutHelp
 | --- | --- | --- | --- |
 | self | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 懒加载动态布局组件在组件树上的实体节点。 |
 | constraint | [LayoutConstraint](arkts-arkui-framenode-layoutconstraint-i.md) | 是 | 懒加载动态布局组件进行测量时使用的布局约束。 |
-| helper | [LazyLayoutHelper](arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md) | 否 | 懒加载布局辅助对象，提供布局方向和可视区域位置信息。为undefined时表示不支持懒加载。helper为undefined的场景如下：  1. 在WaterFlow组件多列模式或分段模式的多列分段下使用时不支持懒加载。  2. 在List组件下使用，当List设置了 [lanes](../arkts-components/arkts-arkui-list-attribute.md#lanes)、 chainAnimation、[scrollSnapAlign](../arkts-components/arkts-arkui-list-attribute.md#scrollsnapalign)属性 中的任意一个时不支持懒加载。 |
+| helper | [LazyLayoutHelper](arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md) | 否 | 懒加载布局辅助对象，提供布局方向和可视区域位置信息。为undefined时表示不支持懒加载。helper为undefined的场景如下： 1. 在WaterFlow组件多列模式或分段模式的多列分段下使用时不支持懒加载。 2. 在List组件下使用，当List设置了[lanes](../arkts-components/arkts-arkui-list-attribute.md#lanes)、chainAnimation、[scrollSnapAlign](../arkts-components/arkts-arkui-list-attribute.md#scrollsnapalign)属性中的任意一个时不支持懒加载。 |

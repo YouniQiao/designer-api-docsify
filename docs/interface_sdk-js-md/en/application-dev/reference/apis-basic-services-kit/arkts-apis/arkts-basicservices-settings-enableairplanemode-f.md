@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import settings from '@kit.BasicServicesKit';
-import settingsLite from '@kit.BasicServicesKitLite';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## enableAirplaneMode
@@ -66,7 +65,7 @@ Enables or disables airplane mode.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Return Promise. |
+| Promise&lt;void&gt; | Return Promise. |
 
 **Examples**
 

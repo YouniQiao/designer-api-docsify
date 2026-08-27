@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## getHideLauncherIcon
@@ -32,7 +32,7 @@ Queries the list of applications whose home screen icons are hidden for the curr
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of applications whose home screen icons are hidden for the current user. |
+| Array&lt;string&gt; | List of applications whose home screen icons are hidden for the current user. |
 
 **Error codes:**
 

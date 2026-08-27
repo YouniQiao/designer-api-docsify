@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import cacheDownload from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## getDownloadInfo
@@ -12,7 +12,8 @@ import cacheDownload from '@kit.BasicServicesKit';
 function getDownloadInfo(url: string): DownloadInfo | undefined
 ```
 
-基于url获取预下载的下载信息。信息存储在内存中的下载信息列表，当应用程序退出时清除。  
+基于url获取预下载的下载信息。信息存储在内存中的下载信息列表，当应用程序退出时清除。
+
 - 如果下载信息列表中能够找到指定url，返回该url对应的最新[DownloadInfo](arkts-basicservices-cachedownload-downloadinfo-i.md)。  
 - 如果下载信息列表中找不到指定url，返回undefined。  
 - 在缓存下载信息时，如果在该url下已存在缓存信息，新的缓存内容会覆盖旧缓存。  

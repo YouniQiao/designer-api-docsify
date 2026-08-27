@@ -32,7 +32,7 @@ Set the SIM card labelIndex.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the setSimLabelIndex. |
+| Promise&lt;void&gt; | The promise returned by the setSimLabelIndex. |
 
 **Error codes:**
 

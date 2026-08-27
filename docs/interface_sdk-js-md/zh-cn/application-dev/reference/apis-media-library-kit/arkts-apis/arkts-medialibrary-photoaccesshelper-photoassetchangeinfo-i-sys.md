@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## albumChangeInfos
@@ -36,7 +36,7 @@ albumChangeInfos?: AlbumChangeInfo[] | null
 assetSourceType?: AssetSourceType
 ```
 
-资产来源类型 默认值： 0。
+资产来源类型默认值： 0。
 
 **类型：** [AssetSourceType](arkts-medialibrary-photoaccesshelper-assetsourcetype-e-sys.md)
 
@@ -88,7 +88,7 @@ dateModifiedMs?: number
 
 文件修改时的Unix时间戳。
 
- 单位为毫秒。
+单位为毫秒。
 
 **类型：** number
 
@@ -172,7 +172,7 @@ hiddenTime?: number
 
 媒体资产（图片/视频）的隐藏时间。
 
- 单位为毫秒。
+单位为毫秒。
 
 **类型：** number
 

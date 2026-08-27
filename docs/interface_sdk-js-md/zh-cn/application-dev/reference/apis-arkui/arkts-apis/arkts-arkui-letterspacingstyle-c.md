@@ -31,7 +31,7 @@ constructor(value: LengthMetrics)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 | 文本字符间距设置项。如果LengthMetrics的unit值是PERCENT，该设置不生效。 |
+| value | LengthMetrics | 是 | 文本字符间距设置项。如果LengthMetrics的unit值是PERCENT，该设置不生效。 |
 
 ## letterSpacing
 
@@ -39,7 +39,9 @@ constructor(value: LengthMetrics)
 readonly letterSpacing: number
 ```
 
-获取属性字符串的文本字符间距。单位：[vp](arkts-arkui-length-t.md)
+获取属性字符串的文本字符间距。
+
+单位：[vp](arkts-arkui-length-t.md)
 
 **类型：** number
 

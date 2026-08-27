@@ -27,7 +27,7 @@ Uninstalls all CA certificates trusted by the user. This API is called only by t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

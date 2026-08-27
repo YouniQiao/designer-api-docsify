@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cloudSyncManager from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## getDowngradeDownloadTaskState
@@ -28,13 +28,13 @@ Supports querying the execution status of full data download tasks for integrate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleNames | Array & lt;string & gt; | Yes | array of bundleName. |
+| bundleNames | Array&lt;string&gt; | Yes | array of bundleName. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;DownloadProgress & gt; & gt; | Return Promise. |
+| Promise&lt;Array&lt;DownloadProgress&gt;&gt; | Return Promise. |
 
 **Error codes:**
 

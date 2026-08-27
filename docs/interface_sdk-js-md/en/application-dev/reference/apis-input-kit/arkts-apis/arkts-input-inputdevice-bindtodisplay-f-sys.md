@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## bindToDisplay
@@ -12,7 +11,7 @@ import inputDeviceCooperate from '@kit.InputKitCooperate';
 function bindToDisplay(inputDeviceId: number, displayId: number): Promise<void>
 ```
 
-Bind input devices to a display. Only external USB and Bluetooth mice, touchpads, keyboards, and game controllers are supported. After binding, the device will be fixed to operate on the display group where the specified display is located. This API uses a promise to return the result.
+Bind input devices to a display group. Only external USB and Bluetooth mice, touchpads, keyboards, and game controllers are supported. After binding, the device will be fixed to operate on the display group where the specified display is located. This API uses a promise to return the result.
 
 **Since:** 26.1.0
 
@@ -28,14 +27,14 @@ Bind input devices to a display. Only external USB and Bluetooth mice, touchpads
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputDeviceId | number | Yes | ID of the specified input device. If the input service restarts or the input device is reconnects, its ID may change. |
-| displayId | number | Yes | ID of the target display. |
+| inputDeviceId | number | Yes | ID of the specified input device. If the input service restarts or the input device is reconnects, its ID may change. The value must be an integer greater than or equal to 0. |
+| displayId | number | Yes | ID of the target display. The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

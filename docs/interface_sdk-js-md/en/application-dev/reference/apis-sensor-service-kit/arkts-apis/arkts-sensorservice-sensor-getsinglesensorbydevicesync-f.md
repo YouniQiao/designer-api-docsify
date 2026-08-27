@@ -28,7 +28,7 @@ Obtains information about the sensor of a specific type.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Sensor & gt; | Sensor attribute list. |
+| Array&lt;Sensor&gt; | Sensor attribute list. |
 
 **Examples**
 

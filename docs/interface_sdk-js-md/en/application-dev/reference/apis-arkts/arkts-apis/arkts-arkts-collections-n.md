@@ -21,38 +21,38 @@ The collections module provides ArkTS containers for efficient data transfer in 
 
 | Name | Description |
 | --- | --- |
-| [Array(Defines the collections for ArkTS)](arkts-arkts-collections-array-c.md) | A linear data structure that is implemented on arrays and can be passed between ArkTS concurrent instances. Pass-by-reference is recommended for better transfer performance. |
-| [Map(Defines the collections for ArkTS)](arkts-arkts-collections-map-c.md) | A non-linear data structure. |
-| [Set(Defines the collections for ArkTS)](arkts-arkts-collections-set-c.md) | A non-linear data structure. |
-| [ArrayBuffer(Defines the collections for ArkTS)](arkts-arkts-collections-arraybuffer-c.md) | Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-arkts-collections-int8array-c.md), [Uint8Array](arkts-arkts-collections-uint8array-c.md), [Int16Array](arkts-arkts-collections-int16array-c.md), [Uint16Array](arkts-arkts-collections-uint16array-c.md), [Int32Array](arkts-arkts-collections-int32array-c.md), [Uint32Array](arkts-arkts-collections-uint32array-c.md), [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md), and [Float32Array](arkts-arkts-collections-float32array-c.md)). |
-| [Int8Array(Defines the collections for ArkTS)](arkts-arkts-collections-int8array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
-| [Uint8ClampedArray(Defines the collections for ArkTS)](arkts-arkts-collections-uint8clampedarray-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
-| [Uint8Array(Defines the collections for ArkTS)](arkts-arkts-collections-uint8array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
-| [Int16Array(Defines the collections for ArkTS)](arkts-arkts-collections-int16array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
-| [Uint16Array(Defines the collections for ArkTS)](arkts-arkts-collections-uint16array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
-| [Int32Array(Defines the collections for ArkTS)](arkts-arkts-collections-int32array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
-| [Uint32Array(Defines the collections for ArkTS)](arkts-arkts-collections-uint32array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
-| [Float32Array(Defines the collections for ArkTS)](arkts-arkts-collections-float32array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
-| [BitVector(Defines the collections for ArkTS)](arkts-arkts-collections-bitvector-c.md) | A linear data structure that is implemented on arrays. A bit vector stores bit values and provides bit-level storage and processing. |
+| [Array](arkts-arkts-collections-array-c.md) | A linear data structure that is implemented on arrays and can be passed between ArkTS concurrent instances. Pass-by-reference is recommended for better transfer performance. |
+| [Map](arkts-arkts-collections-map-c.md) | A non-linear data structure. |
+| [Set](arkts-arkts-collections-set-c.md) | A non-linear data structure. |
+| [ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md) | Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-arkts-collections-int8array-c.md), [Uint8Array](arkts-arkts-collections-uint8array-c.md), [Int16Array](arkts-arkts-collections-int16array-c.md), [Uint16Array](arkts-arkts-collections-uint16array-c.md), [Int32Array](arkts-arkts-collections-int32array-c.md), [Uint32Array](arkts-arkts-collections-uint32array-c.md), [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md), and [Float32Array](arkts-arkts-collections-float32array-c.md)). |
+| [Int8Array](arkts-arkts-collections-int8array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
+| [Uint8ClampedArray](arkts-arkts-collections-uint8clampedarray-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
+| [Uint8Array](arkts-arkts-collections-uint8array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
+| [Int16Array](arkts-arkts-collections-int16array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
+| [Uint16Array](arkts-arkts-collections-uint16array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
+| [Int32Array](arkts-arkts-collections-int32array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
+| [Uint32Array](arkts-arkts-collections-uint32array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
+| [Float32Array](arkts-arkts-collections-float32array-c.md) | A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-collections-arraybuffer-c.md). |
+| [BitVector](arkts-arkts-collections-bitvector-c.md) | A linear data structure that is implemented on arrays. A bit vector stores bit values and provides bit-level storage and processing. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ConcatArray(Defines the collections for ArkTS)](arkts-arkts-collections-concatarray-i.md) | An array-like object that can be concatenated. This API extends **ISendable**. |
+| [ConcatArray](arkts-arkts-collections-concatarray-i.md) | An array-like object that can be concatenated. This API extends **ISendable**. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [TypedArrayFromMapFn(Defines the collections for ArkTS)](arkts-arkts-collections-typedarrayfrommapfn-t.md) | Describes the mapping function of the ArkTS typed array. |
-| [TypedArrayPredicateFn(Defines the collections for ArkTS)](arkts-arkts-collections-typedarraypredicatefn-t.md) | Describes the assertion function of the ArkTS typed array. |
-| [TypedArrayForEachCallback(Defines the collections for ArkTS)](arkts-arkts-collections-typedarrayforeachcallback-t.md) | Describes the traversal function of the ArkTS typed array. |
-| [TypedArrayMapCallback(Defines the collections for ArkTS)](arkts-arkts-collections-typedarraymapcallback-t.md) | Describes the conversion mapping function of the ArkTS typed array. |
-| [TypedArrayReduceCallback(Defines the collections for ArkTS)](arkts-arkts-collections-typedarrayreducecallback-t.md) | Describes the reduce function of the ArkTS typed array. |
-| [TypedArrayCompareFn(Defines the collections for ArkTS)](arkts-arkts-collections-typedarraycomparefn-t.md) | Describes the sort function of the ArkTS typed array. |
-| [ArrayFromMapFn(Defines the collections for ArkTS)](arkts-arkts-collections-arrayfrommapfn-t.md) | Defines the ArkTS Array reduction function, which is used by the 'from' API of the Array class. |
-| [ArrayPredicateFn(Defines the collections for ArkTS)](arkts-arkts-collections-arraypredicatefn-t.md) | Defines the ArkTS Array reduction function, which is used by the 'some' and 'every'APIs of the Array class to determine whether array elements meet certain test conditions. |
-| [ArrayElementPredicateFn(Defines the collections for ArkTS)](arkts-arkts-collections-arrayelementpredicatefn-t.md) | Defines the ArkTS Array predicate function, which is used by the 'retainAll'API of the Array class to determine whether array elements meet certain test conditions. |
-| [ArrayReduceCallback(Defines the collections for ArkTS)](arkts-arkts-collections-arrayreducecallback-t.md) | Defines the ArkTS Array reduction function, which is used by the 'reduceRight' API of the Array class. |
-| [ISendable(Defines the collections for ArkTS)](arkts-arkts-collections-isendable-t.md) | 'ISendable' is the parent type of all sendable types except null and undefined. It does not have any necessary methods or properties. |
+| [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md) | Describes the mapping function of the ArkTS typed array. |
+| [TypedArrayPredicateFn](arkts-arkts-collections-typedarraypredicatefn-t.md) | Describes the assertion function of the ArkTS typed array. |
+| [TypedArrayForEachCallback](arkts-arkts-collections-typedarrayforeachcallback-t.md) | Describes the traversal function of the ArkTS typed array. |
+| [TypedArrayMapCallback](arkts-arkts-collections-typedarraymapcallback-t.md) | Describes the conversion mapping function of the ArkTS typed array. |
+| [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md) | Describes the reduce function of the ArkTS typed array. |
+| [TypedArrayCompareFn](arkts-arkts-collections-typedarraycomparefn-t.md) | Describes the sort function of the ArkTS typed array. |
+| [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md) | Defines the ArkTS Array reduction function, which is used by the 'from' API of the Array class. |
+| [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md) | Defines the ArkTS Array reduction function, which is used by the 'some' and 'every'APIs of the Array class to determine whether array elements meet certain test conditions. |
+| [ArrayElementPredicateFn](arkts-arkts-collections-arrayelementpredicatefn-t.md) | Defines the ArkTS Array predicate function, which is used by the 'retainAll'API of the Array class to determine whether array elements meet certain test conditions. |
+| [ArrayReduceCallback](arkts-arkts-collections-arrayreducecallback-t.md) | Defines the ArkTS Array reduction function, which is used by the 'reduceRight' API of the Array class. |
+| [ISendable](arkts-arkts-collections-isendable-t.md) | 'ISendable' is the parent type of all sendable types except null and undefined. It does not have any necessary methods or properties. |

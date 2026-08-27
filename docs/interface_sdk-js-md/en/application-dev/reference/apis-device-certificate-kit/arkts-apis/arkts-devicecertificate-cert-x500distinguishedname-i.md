@@ -239,7 +239,7 @@ Obtains relative distinguished name (RDN) strings of the specified type.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Array of RDN strings. |
+| Array&lt;string&gt; | Array of RDN strings. |
 
 **Error codes:**
 
@@ -301,7 +301,7 @@ Obtains an array of RDN strings based on the specified type and encoding format.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Array of RDN strings. |
+| Array&lt;string&gt; | Array of RDN strings. |
 
 **Error codes:**
 

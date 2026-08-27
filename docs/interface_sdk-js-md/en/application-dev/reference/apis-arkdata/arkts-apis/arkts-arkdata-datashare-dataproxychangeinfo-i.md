@@ -9,8 +9,7 @@ Defines a struct for notifying subscribers of the shared configuration changes, 
 ## Modules to Import
 
 ```TypeScript
-import dataShare from '@kit.ArkData';
-import dataSharePredicates from '@kit.ArkDataPredicates';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## type

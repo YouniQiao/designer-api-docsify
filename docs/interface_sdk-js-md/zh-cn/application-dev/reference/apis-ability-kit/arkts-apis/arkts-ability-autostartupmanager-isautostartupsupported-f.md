@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import autoStartupManager from '@kit.AbilityKit';
+import { autoStartupManager } from '@kit.AbilityKit';
 ```
 
 ## isAutoStartupSupported

@@ -17,7 +17,9 @@ GNSS围栏的配置参数。目前只支持圆形围栏。
 coordinateSystemType?: CoordinateSystemType
 ```
 
-表示地理围栏圆心坐标的坐标系。APP应先使用[getGeofenceSupportedCoordTypes](arkts-location-geolocationmanager-getgeofencesupportedcoordtypes-f.md)查询支持的坐标系，然后传入正确的圆 心坐标。
+表示地理围栏圆心坐标的坐标系。
+
+APP应先使用[getGeofenceSupportedCoordTypes](arkts-location-geolocationmanager-getgeofencesupportedcoordtypes-f.md)查询支持的坐标系，然后传入正确的圆心坐标。
 
 **类型：** CoordinateSystemType
 

@@ -460,12 +460,12 @@ sendData(data: number[]): Promise<number[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number[] & gt; | Promise对象，返回对端Tag对指令的响应数据，每个number十六进制表示，范围是0x00~0xFF。 |
+| Promise&lt;number[]&gt; | Promise对象，返回对端Tag对指令的响应数据，每个number十六进制表示，范围是0x00~0xFF。 |
 
 **示例**
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 import { BusinessError } from '@ohos.base';
 
 // 参考 @ohos.nfc.tag（标准NFC-Tag）中 tag.TagInfo 接口，tagInfo是nfc服务在分派标签时给出的对象
@@ -478,13 +478,13 @@ function tagSessionDemo() {
             console.error("tagSession connectTag failed.");
             return;
         }
-    }  
+    }
 
     let cmdData = [0x01, 0x02, 0x03, 0x04]; // 更改为正确的 data
     tag.getIsoDep(tagInfo).sendData(cmdData).then((response) => {
-    console.info("tagSession sendData Promise response: " + response);
-    }).catch((err : BusinessError)=> {
-    console.error("tagSession sendData Promise err: " + err);
+        console.info("tagSession sendData Promise response: " + response);
+    }).catch((err : BusinessError) => {
+        console.error("tagSession sendData Promise err: " + err);
     });
 }
 ```
@@ -532,7 +532,7 @@ function tagSessionDemo() {
     }
 
     let cmdData = [0x01, 0x02, 0x03, 0x04]; // 更改为正确的 data
-    tag.getIsoDep(tagInfo).sendData(cmdData, (err, response)=> {
+    tag.getIsoDep(tagInfo).sendData(cmdData, (err, response) => {
         if (err) {
             console.error("tagSession sendData AsyncCallback err: " + err);
         } else {
@@ -659,7 +659,7 @@ transmit(data: number[]): Promise<number[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number[] & gt; | Promise对象，返回对端Tag对指令的响应数据，每个number十六进制表示，范围是0x00~0xFF。 |
+| Promise&lt;number[]&gt; | Promise对象，返回对端Tag对指令的响应数据，每个number十六进制表示，范围是0x00~0xFF。 |
 
 **错误码：**
 
@@ -681,7 +681,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 // getXXX，可以是getIsoDep、getNdef、getMifareClassic...
 
 function tagSessionDemo() {
-// 如果没有连接，请先连接tag
+    // 如果没有连接，请先连接tag
     try {
         if (!tag.getIsoDep(tagInfo).isConnected()) {
             tag.getIsoDep(tagInfo).connect();
@@ -693,9 +693,9 @@ function tagSessionDemo() {
 
     let cmdData = [0x01, 0x02, 0x03, 0x04]; // 更改为正确的 data
     try {
-    tag.getIsoDep(tagInfo).transmit(cmdData).then((response) => {
+        tag.getIsoDep(tagInfo).transmit(cmdData).then((response) => {
         console.info("tagSession transmit Promise response: " + response);
-    }).catch((err : BusinessError)=> {
+    }).catch((err : BusinessError) => {
         console.error("tagSession transmit Promise err: " + err);
     });
     } catch (businessError) {
@@ -759,7 +759,7 @@ function tagSessionDemo() {
 
     let cmdData = [0x01, 0x02, 0x03, 0x04]; // 更改为正确的 data
     try {
-        tag.getIsoDep(tagInfo).transmit(cmdData, (err, response)=> {
+        tag.getIsoDep(tagInfo).transmit(cmdData, (err, response) => {
             if (err) {
                 console.error("tagSession transmit AsyncCallback err: " + err);
             } else {

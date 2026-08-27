@@ -5,6 +5,7 @@ The **hardwareManager** module provides the capability of controlling distribute
 > **NOTE：**
 
 > The APIs provided by this module are system APIs.
+
 @namespace hardwareManager
 
 **Since:** 11
@@ -16,7 +17,7 @@ The **hardwareManager** module provides the capability of controlling distribute
 ## Modules to Import
 
 ```TypeScript
-import hardwareManager from '@kit.DistributedServiceKit';
+import { hardwareManager } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## setEnterprisePolicy
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function setEnterprisePolicy(policy: EnterprisePolicy): void
 ```
 
-设置企业应用防护策略。调用成功后，企业应用的DLP防护将按照设置的策略执行。该接口可用于企业管理员配置DLP安全策略，以统一管理企业数据安全防护规则。
+设置企业应用防护策略。调用成功后，企业应用的DLP防护将按照设置的策略执行。
+
+该接口可用于企业管理员配置DLP安全策略，以统一管理企业数据安全防护规则。
 
 > **说明：**
 > 

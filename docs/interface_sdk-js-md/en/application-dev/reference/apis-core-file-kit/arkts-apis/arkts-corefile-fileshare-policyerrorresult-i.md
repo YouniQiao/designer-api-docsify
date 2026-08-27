@@ -1,6 +1,8 @@
 # PolicyErrorResult
 
-Failed policy result on URI.@interface { object }
+Failed policy result on URI.
+
+@interface { object }
 
 **Since:** 11
 
@@ -9,7 +11,7 @@ Failed policy result on URI.@interface { object }
 ## Modules to Import
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## code

@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import cloudSync from '@kit.CoreFileKit';
-import cloudSyncManager from '@kit.CoreFileKitManager';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -69,7 +68,7 @@ getLastSyncTime(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回上次同步时间。 |
+| Promise&lt;number&gt; | Promise对象，返回上次同步时间。 |
 
 **错误码：**
 
@@ -228,7 +227,7 @@ start(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -340,7 +339,9 @@ gallerySync.start((err: BusinessError) => {
 stop(): Promise<void>
 ```
 
-异步方法停止云盘端云同步。使用Promise异步回调。调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
+异步方法停止云盘端云同步。使用Promise异步回调。
+
+调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
 
 **起始版本：** 12
 
@@ -350,7 +351,7 @@ stop(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -391,7 +392,9 @@ gallerySync.stop().then(() => {
 stop(callback: AsyncCallback<void>): void
 ```
 
-异步方法停止云盘端云同步。使用callback异步回调。调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
+异步方法停止云盘端云同步。使用callback异步回调。
+
+调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
 
 **起始版本：** 12
 

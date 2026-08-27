@@ -82,7 +82,7 @@ Set the SIM card display name of the specified card slot.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the setShowName. |
+| Promise&lt;void&gt; | The promise returned by the setShowName. |
 
 **Error codes:**
 

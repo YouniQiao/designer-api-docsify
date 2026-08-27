@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## connect
@@ -12,7 +12,7 @@ import abilityConnectionManager from '@kit.DistributedServiceKit';
 function connect(sessionId: number): Promise<ConnectResult>
 ```
 
-创建协同会话成功并获得会话ID后，设备A上可进行UIAbility的连接。调用此接口前， 需先在两端设备分别创建协同会话。connect接口通过底层分布式通信服务建立连接， 必须与设备B的acceptConnect配合使用才能建立成功连接，调用connect会拉起设备B应用。 连接过程会触发'connect'事件通知状态变化。使用Promise异步回调。 连接失败时，返回的ConnectResult对象中的errorCode字段包含具体的错误信息， 可参考ConnectErrorCode枚举了解错误原因。
+创建协同会话成功并获得会话ID后，设备A上可进行UIAbility的连接。调用此接口前，需先在两端设备分别创建协同会话。connect接口通过底层分布式通信服务建立连接，必须与设备B的acceptConnect配合使用才能建立成功连接，调用connect会拉起设备B应用。连接过程会触发'connect'事件通知状态变化。使用Promise异步回调。连接失败时，返回的ConnectResult对象中的errorCode字段包含具体的错误信息，可参考ConnectErrorCode枚举了解错误原因。
 
 **起始版本：** 18
 
@@ -30,7 +30,7 @@ function connect(sessionId: number): Promise<ConnectResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ConnectResult & gt; | Promise对象，成功时resolve返回ConnectResult（包含isConnected和errorCode字段）， 失败时reject返回错误对象。 |
+| Promise&lt;ConnectResult&gt; | Promise对象，成功时resolve返回ConnectResult（包含isConnected和errorCode字段），失败时reject返回错误对象。 |
 
 **错误码：**
 

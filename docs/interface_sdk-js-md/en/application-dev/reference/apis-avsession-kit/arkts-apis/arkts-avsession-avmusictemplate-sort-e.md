@@ -1,6 +1,8 @@
 # Sort
 
-Enumeration of Sort type.@enum { number }
+Enumeration of Sort type.
+
+@enum { number }
 
 **Since:** 23
 

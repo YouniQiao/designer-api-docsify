@@ -1,6 +1,8 @@
 # GetItemsInShapePathParams (System API)
 
-Image options setted when need to get the image objects.@interface GetItemsInShapePathParams
+Image options setted when need to get the image objects.
+
+@interface GetItemsInShapePathParams
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ Image options setted when need to get the image objects.@interface GetItemsInSha
 ## Modules to Import
 
 ```TypeScript
-import componentUtils from '@kit.ArkUI';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## images

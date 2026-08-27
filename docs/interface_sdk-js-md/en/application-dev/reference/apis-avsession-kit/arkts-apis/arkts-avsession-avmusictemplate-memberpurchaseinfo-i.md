@@ -1,6 +1,8 @@
 # MemberPurchaseInfo
 
-The definition of member purchase information.@interface MemberPurchaseInfo
+The definition of member purchase information.
+
+@interface MemberPurchaseInfo
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of member purchase information.@interface MemberPurchaseInfo
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## diagramContent

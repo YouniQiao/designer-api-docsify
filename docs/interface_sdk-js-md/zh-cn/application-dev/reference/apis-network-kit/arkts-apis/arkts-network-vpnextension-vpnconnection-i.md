@@ -9,7 +9,7 @@ VPN连接对象。在调用VpnConnection的方法前，需要先通过vpnExt.cre
 ## 导入模块
 
 ```TypeScript
-import vpnExtension from '@kit.NetworkKit';
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## addRoute
@@ -30,14 +30,14 @@ addRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| routes | [RouteInfo[]](arkts-network-vpnextension-routeinfo-t.md) | 是 | VPN接口的路由数组。 |
+| routes | RouteInfo[] | 是 | VPN接口的路由数组。 |
 | vpnId | string | 否 | vpn唯一标识 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 函数返回的promise。 |
+| Promise&lt;void&gt; | 函数返回的promise。 |
 
 **错误码：**
 
@@ -68,13 +68,13 @@ create(config: VpnConfig): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | 是 | 指定VPN网络的配置信息。 |
+| config | VpnConfig | 是 | 指定VPN网络的配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 以 Promise 形式返回获取结果，返回指定虚拟网卡的文件描述符 fd。 |
+| Promise&lt;number&gt; | 以 Promise 形式返回获取结果，返回指定虚拟网卡的文件描述符 fd。 |
 
 **错误码：**
 
@@ -184,14 +184,14 @@ delRoute(routes: RouteInfo[], vpnId?: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| routes | [RouteInfo[]](arkts-network-vpnextension-routeinfo-t.md) | 是 | VPN接口的路由数组。 |
+| routes | RouteInfo[] | 是 | VPN接口的路由数组。 |
 | vpnId | string | 否 | vpn唯一标识。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 函数返回的promise。 |
+| Promise&lt;void&gt; | 函数返回的promise。 |
 
 **错误码：**
 
@@ -217,7 +217,7 @@ destroy(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -270,7 +270,7 @@ destroy(vpnId: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -306,7 +306,9 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 generateVpnId(): Promise<string>
 ```
 
-生成VPN唯一标识。使用Promise异步回调。如需使用系统多VPN能力，需调用该接口生成vpnId，配置到VpnConfig中。
+生成VPN唯一标识。使用Promise异步回调。
+
+如需使用系统多VPN能力，需调用该接口生成vpnId，配置到VpnConfig中。
 
 > **注意**
 > 
@@ -320,7 +322,7 @@ generateVpnId(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | 以Promise形式返回获取结果，返回vpnId。 |
+| Promise&lt;string&gt; | 以Promise形式返回获取结果，返回vpnId。 |
 
 **错误码：**
 
@@ -365,13 +367,13 @@ protect(socketFd: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| socketFd | number | 是 | 指定保护的 socketfd，该文件描述符通过 [getSocketFd](arkts-network-socket-tcpsocket-i.md#getsocketfd)获取。 |
+| socketFd | number | 是 | 指定保护的 socketfd，该文件描述符通过[getSocketFd](arkts-network-socket-tcpsocket-i.md#getsocketfd)获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -431,7 +433,7 @@ protectProcessNet(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 

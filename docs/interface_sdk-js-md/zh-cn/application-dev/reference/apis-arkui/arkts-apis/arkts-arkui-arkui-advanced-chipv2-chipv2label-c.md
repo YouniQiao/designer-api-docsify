@@ -32,7 +32,7 @@ ChipV2Label的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ChipV2LabelConfig](arkts-arkui-arkui-advanced-chipv2-chipv2labelconfig-i.md) | 是 | 文本属性配置，用于设置ChipV2的文本显示属性，包含text、fontSize、fontColor、activatedFontColor、 fontFamily等配置项。 |
+| config | [ChipV2LabelConfig](arkts-arkui-arkui-advanced-chipv2-chipv2labelconfig-i.md) | 是 | 文本属性配置，用于设置ChipV2的文本显示属性，包含text、fontSize、fontColor、activatedFontColor、fontFamily等配置项。 |
 
 ## activatedFontColor
 
@@ -40,9 +40,15 @@ ChipV2Label的构造函数。
 public activatedFontColor?: ColorMetrics
 ```
 
-ChipV2激活时的文字颜色。默认值：\$r('sys.color.chip_activated_fontcolor')值为undefined时，按默认值处理。值为非法值时，按默认值处理。
+ChipV2激活时的文字颜色。
 
-**类型：** ColorMetrics
+默认值：\$r('sys.color.chip_activated_fontcolor')
+
+值为undefined时，按默认值处理。
+
+值为非法值时，按默认值处理。
+
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 26.0.0
 
@@ -58,9 +64,15 @@ ChipV2激活时的文字颜色。默认值：\$r('sys.color.chip_activated_fontc
 public fontColor?: ColorMetrics
 ```
 
-文字颜色。默认值：\$r('sys.color.chip_font_color')值为undefined时，按默认值处理。值为非法值时，按默认值处理。
+文字颜色。
 
-**类型：** ColorMetrics
+默认值：\$r('sys.color.chip_font_color')
+
+值为undefined时，按默认值处理。
+
+值为非法值时，按默认值处理。
+
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 26.0.0
 
@@ -76,7 +88,11 @@ public fontColor?: ColorMetrics
 public fontFamily?: string
 ```
 
-文字字体。默认值："HarmonyOS Sans"值为undefined时，按默认值处理。
+文字字体。
+
+默认值："HarmonyOS Sans"
+
+值为undefined时，按默认值处理。
 
 **类型：** string
 
@@ -94,9 +110,19 @@ public fontFamily?: string
 public fontSize?: LengthMetrics
 ```
 
-文字字号，不支持百分比。传入百分比时按默认值处理。默认值：size为ChipV2Size.SMALL时，默认值：\$r('sys.float.chip_small_font_size')。其他情况下，默认值：\$r('sys.float.chip_normal_font_size')单位：fp值为undefined时，按默认值处理。
+文字字号，不支持百分比。传入百分比时按默认值处理。
 
-**类型：** LengthMetrics
+默认值：
+
+size为ChipV2Size.SMALL时，默认值：\$r('sys.float.chip_small_font_size')。
+
+其他情况下，默认值：\$r('sys.float.chip_normal_font_size')
+
+单位：fp
+
+值为undefined时，按默认值处理。
+
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 26.0.0
 
@@ -112,7 +138,15 @@ public fontSize?: LengthMetrics
 public labelMargin?: ChipV2LabelMarginConfig
 ```
 
-文本与左右侧图标之间间距。默认值：size为ChipV2Size.SMALL时，默认值：{ left: 4, right: 4 }。size为ChipV2Size.NORMAL时，默认值：{ left: 6, right: 6 }。值为undefined时，按默认值处理。
+文本与左右侧图标之间间距。
+
+默认值：
+
+size为ChipV2Size.SMALL时，默认值：{ left: 4, right: 4 }。
+
+size为ChipV2Size.NORMAL时，默认值：{ left: 6, right: 6 }。
+
+值为undefined时，按默认值处理。
 
 **类型：** [ChipV2LabelMarginConfig](arkts-arkui-arkui-advanced-chipv2-chipv2labelmarginconfig-i.md)
 
@@ -130,7 +164,19 @@ public labelMargin?: ChipV2LabelMarginConfig
 public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig
 ```
 
-本地化文本与左右侧图标之间间距。默认值：size为ChipV2Size.SMALL时，默认值：`{ start: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')) }`。size为ChipV2Size.NORMAL时，默认值：`{ start: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')) }`。值为undefined时，按默认值处理。
+本地化文本与左右侧图标之间间距。
+
+默认值：
+
+size为ChipV2Size.SMALL时，默认值：
+
+`{ start: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')) }`。
+
+size为ChipV2Size.NORMAL时，默认值：
+
+`{ start: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')) }`。
+
+值为undefined时，按默认值处理。
 
 **类型：** [ChipV2LocalizedLabelMarginConfig](arkts-arkui-arkui-advanced-chipv2-chipv2localizedlabelmarginconfig-i.md)
 
@@ -148,9 +194,11 @@ public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig
 public modifier?: TextModifier
 ```
 
-文本修饰器，用于设置文本的通用属性。当需要通过modifier动态修改文本属性（如fontWeight、fontStyle等）时传入此参数。不传入或传入undefined时，不应用修饰器，文本使用默认属性设置。默认值：undefined，不应用修饰器。
+文本修饰器，用于设置文本的通用属性。当需要通过modifier动态修改文本属性（如fontWeight、fontStyle等）时传入此参数。不传入或传入undefined时，不应用修饰器，文本使用默认属性设置。
 
-**类型：** [TextModifier](arkts-arkui-textmodifier-c.md)
+默认值：undefined，不应用修饰器。
+
+**类型：** TextModifier
 
 **起始版本：** 26.0.0
 

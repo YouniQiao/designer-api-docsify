@@ -86,7 +86,7 @@ Updates the data for the signing or signature verification operation. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

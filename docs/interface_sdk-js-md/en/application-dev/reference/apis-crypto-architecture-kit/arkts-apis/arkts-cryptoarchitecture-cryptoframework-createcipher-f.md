@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## createCipher
@@ -48,7 +48,7 @@ For details about the supported specifications, seeEncryption and Decryption Alg
 
 | Type | Description |
 | --- | --- |
-| [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) | Returns the **Cipher** instance corresponding to the specified algorithm. |
+| Cipher | Returns the **Cipher** instance corresponding to the specified algorithm. |
 
 **Error codes:**
 

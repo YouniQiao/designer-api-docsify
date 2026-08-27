@@ -1,6 +1,8 @@
 # List properties/events
 
-In addition to universal attributes and [scrollable component common attributes](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported.In addition to universal events and [scrollable component common events](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
+In addition to universal attributes and [scrollable component common attributes](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported.
+
+In addition to universal events and [scrollable component common events](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
 
 **Inheritance/Implementation:** ListAttribute extends ScrollableCommonMethod<ListAttribute>
 
@@ -63,7 +65,11 @@ Sets the system back button behavior of the **List** component.
 cachedCount(value: number)
 ```
 
-Sets the number of **ListItem** or **ListItemGroup** components to be preloaded (cached). In a lazy loading scenario, only the **cachedCount** rows of **ListItem** components above and below the visible area of the **List** component is preloaded. In a non-lazy loading scenario, all items are loaded at once. For both lazy and non-lazy loading, only the content within the list display area plus the content equivalent to **cachedCount** outside the display area is laid out. <!--Del-->For details, see [Minimizing White Blocks During Swiping](../../../performance/arkts-performance-improvement-recommendation.md#minimizing-white-blocks-during-swiping).<!--DelEnd-->When **cachedCount** is set for the list, the system preloads and lays out the **cachedCount**-specified number of rows of list items both above and below the currently visible area of the list. When calculating the number of rows for list items, the system takes into account the number of rows from the list items within a list item group. If a list item group does not contain any list items, then the entire list item group is counted as one row.When a list is nested with **LazyForEach**, and within **LazyForEach** there is a list item group, **LazyForEach** will create **cachedCount**-specified number of list item groups both above and below the currently visible area of the list.
+Sets the number of **ListItem** or **ListItemGroup** components to be preloaded (cached). In a lazy loading scenario, only the **cachedCount** rows of **ListItem** components above and below the visible area of the **List** component is preloaded. In a non-lazy loading scenario, all items are loaded at once. For both lazy and non-lazy loading, only the content within the list display area plus the content equivalent to **cachedCount** outside the display area is laid out. <!--Del-->For details, see [Minimizing White Blocks During Swiping](../../../performance/arkts-performance-improvement-recommendation.md#minimizing-white-blocks-during-swiping).<!--DelEnd-->
+
+When **cachedCount** is set for the list, the system preloads and lays out the **cachedCount**-specified number of rows of list items both above and below the currently visible area of the list. When calculating the number of rows for list items, the system takes into account the number of rows from the list items within a list item group. If a list item group does not contain any list items, then the entire list item group is counted as one row.
+
+When a list is nested with **LazyForEach**, and within **LazyForEach** there is a list item group, **LazyForEach** will create **cachedCount**-specified number of list item groups both above and below the currently visible area of the list.
 
 **Since:** 7
 
@@ -85,7 +91,9 @@ Sets the number of **ListItem** or **ListItemGroup** components to be preloaded 
 cachedCount(count: number, show: boolean)
 ```
 
-Sets the number of list items or list item groups to be cached (preloaded) and specifies whether to display the preloaded nodes.When **cachedCount** is set for the list, the system preloads and lays out the **cachedCount**-specified number of rows of list items both above and below the currently visible area of the list. When calculating the number of rows for list items, the system takes into account the number of rows from the list items within a list item group. If a list item group does not contain any list items, then the entire list item group is counted as one row. This attribute can be combined with the [clip or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
+Sets the number of list items or list item groups to be cached (preloaded) and specifies whether to display the preloaded nodes.
+
+When **cachedCount** is set for the list, the system preloads and lays out the **cachedCount**-specified number of rows of list items both above and below the currently visible area of the list. When calculating the number of rows for list items, the system takes into account the number of rows from the list items within a list item group. If a list item group does not contain any list items, then the entire list item group is counted as one row. This attribute can be combined with the [clip or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
 
 > **NOTE：**
 > 
@@ -116,7 +124,15 @@ Sets the number of list items or list item groups to be cached (preloaded) and s
 cachedCount(count: number | CacheCountInfo, show: boolean)
 ```
 
-Sets the number of list items or list item groups to be cached (preloaded) and specifies whether to display the preloaded nodes.If the first parameter of the **cachedCount** attribute is of the **number** type, a specified number (specified by **count**) of rows of list items will be preloaded and laid out above and below the visible area during idle frames.If the first parameter of the **cachedCount** attribute is of the **CacheCountInfo** type, preloading and layout will occur during idle frames when the number of cached rows is less than **CacheCountInfo.minCount**. When the number of cached rows is greater than **CacheCountInfo.maxCount**, the nodes outside the specified range will be destroyed or reused. When the UI is idle (no animation or user operation), a specified number (specified by **CacheCountInfo.maxCount**) of rows of list items will be preloaded above and below the visible area.When calculating the number of rows for list items, the system takes into account the number of rows from the list items within a list item group. If a list item group does not contain any list items, then the entire list item group is counted as one row. This attribute can be combined with the [clip or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.Default behavior: The **count** parameter is of the **number** type by default, with its value set based on the number of nodes displayed on the screen, up to a maximum of 16. Preloaded **ListItem** components are not involved in drawing by default.
+Sets the number of list items or list item groups to be cached (preloaded) and specifies whether to display the preloaded nodes.
+
+If the first parameter of the **cachedCount** attribute is of the **number** type, a specified number (specified by **count**) of rows of list items will be preloaded and laid out above and below the visible area during idle frames.
+
+If the first parameter of the **cachedCount** attribute is of the **CacheCountInfo** type, preloading and layout will occur during idle frames when the number of cached rows is less than **CacheCountInfo.minCount**. When the number of cached rows is greater than **CacheCountInfo.maxCount**, the nodes outside the specified range will be destroyed or reused. When the UI is idle (no animation or user operation), a specified number (specified by **CacheCountInfo.maxCount**) of rows of list items will be preloaded above and below the visible area.
+
+When calculating the number of rows for list items, the system takes into account the number of rows from the list items within a list item group. If a list item group does not contain any list items, then the entire list item group is counted as one row. This attribute can be combined with the [clip or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
+
+Default behavior: The **count** parameter is of the **number** type by default, with its value set based on the number of nodes displayed on the screen, up to a maximum of 16. Preloaded **ListItem** components are not involved in drawing by default.
 
 > **NOTE：**
 > 
@@ -232,7 +248,9 @@ Sets the size information of the child components of a **List** component along 
 contentEndOffset(value: number)
 ```
 
-Sets the offset from the end of the list content to the boundary of the list display area.If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length of the list content area, both offsets are reset to **0**.
+Sets the offset from the end of the list content to the boundary of the list display area.
+
+If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length of the list content area, both offsets are reset to **0**.
 
 **Since:** 11
 
@@ -254,7 +272,9 @@ Sets the offset from the end of the list content to the boundary of the list dis
 contentEndOffset(offset: number | Resource)
 ```
 
-Sets the offset from the end of the list content to the boundary of the list display area. Compared with [contentEndOffset&lt;sup&gt;11+&lt;/sup&gt;](#contentendoffset), the parameter name is changed to **offset** and the Resource type is supported.If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length of the list content area, both offsets are reset to **0**.
+Sets the offset from the end of the list content to the boundary of the list display area. Compared with [contentEndOffset&lt;sup&gt;11+&lt;/sup&gt;](#contentendoffset), the parameter name is changed to **offset** and the Resource type is supported.
+
+If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length of the list content area, both offsets are reset to **0**.
 
 **Since:** 22
 
@@ -268,7 +288,7 @@ Sets the offset from the end of the list content to the boundary of the list dis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Offset from the end of the list content to the boundary of the list display area.Default value: **0**If the parameter type is number, the unit is vp.Invalid values (negative numbers or non-numeric Resource values) are treated as the default value. |
+| offset | number \| Resource | Yes | Offset from the end of the list content to the boundary of the list display area.Default value: **0**If the parameter type is number, the unit is vp.Invalid values (negative numbers or non-numeric Resource values) are treated as the default value. |
 
 ## contentStartOffset
 
@@ -276,7 +296,9 @@ Sets the offset from the end of the list content to the boundary of the list dis
 contentStartOffset(value: number)
 ```
 
-Sets the offset from the start of the list content to the boundary of the list display area.If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length of the list content area, both offsets are reset to **0**.
+Sets the offset from the start of the list content to the boundary of the list display area.
+
+If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length of the list content area, both offsets are reset to **0**.
 
 **Since:** 11
 
@@ -298,7 +320,9 @@ Sets the offset from the start of the list content to the boundary of the list d
 contentStartOffset(offset: number | Resource)
 ```
 
-Sets the offset from the start of the list content to the boundary of the list display area. Compared with [contentStartOffset&lt;sup&gt;11+&lt;/sup&gt;](#contentstartoffset), the parameter name is changed to **offset** and the Resource type is supported.If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length of the list content area, both offsets are reset to **0**.
+Sets the offset from the start of the list content to the boundary of the list display area. Compared with [contentStartOffset&lt;sup&gt;11+&lt;/sup&gt;](#contentstartoffset), the parameter name is changed to **offset** and the Resource type is supported.
+
+If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length of the list content area, both offsets are reset to **0**.
 
 **Since:** 22
 
@@ -312,7 +336,7 @@ Sets the offset from the start of the list content to the boundary of the list d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Offset from the start of the list content to the boundary of the list display area.Default value: **0**If the parameter type is number, the unit is vp.Invalid values (negative numbers or non-numeric Resource values) are treated as the default value. |
+| offset | number \| Resource | Yes | Offset from the start of the list content to the boundary of the list display area.Default value: **0**If the parameter type is number, the unit is vp.Invalid values (negative numbers or non-numeric Resource values) are treated as the default value. |
 
 ## divider
 
@@ -322,7 +346,13 @@ divider(
   )
 ```
 
-Sets the style of the divider for the list items. By default, there is no divider.The divider is drawn between list items along the main axis, and not above the first list item and below the last list item.In multi-column mode, the value of **startMargin** is calculated from the start edge of the cross axis of each column. In single-column mode, it is calculated from the start edge of the cross axis of the list.When a list item has polymorphic styles applied, the dividers above and below the pressed child component are not rendered.
+Sets the style of the divider for the list items. By default, there is no divider.
+
+The divider is drawn between list items along the main axis, and not above the first list item and below the last list item.
+
+In multi-column mode, the value of **startMargin** is calculated from the start edge of the cross axis of each column. In single-column mode, it is calculated from the start edge of the cross axis of the list.
+
+When a list item has polymorphic styles applied, the dividers above and below the pressed child component are not rendered.
 
 **Since:** 7
 
@@ -499,7 +529,7 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Friction coefficient.Default value: **0.6** for non-wearable devices and **0.9** for wearable devices.Since API version 11, the default value for non-wearable devices is **0.7**.Since API version 12, the default value for non-wearable devices is **0.75**. |
+| value | number \| Resource | Yes | Friction coefficient.Default value: **0.6** for non-wearable devices and **0.9** for wearable devices.Since API version 11, the default value for non-wearable devices is **0.7**.Since API version 12, the default value for non-wearable devices is **0.75**. |
 
 ## lanes
 
@@ -507,7 +537,10 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 lanes(value: number | LengthConstrain, gutter?: Dimension)
 ```
 
-Sets the number of columns or rows in the **List** component. (When the **List** is scrolled vertically, the number of columns is displayed. When the **List** is scrolled horizontally, the number of rows is displayed.)The following example describes how to set the number of columns:  
+Sets the number of columns or rows in the **List** component. (When the **List** is scrolled vertically, the number of columns is displayed. When the **List** is scrolled horizontally, the number of rows is displayed.)
+
+The following example describes how to set the number of columns:
+
 - If **value** is a number, the number of columns is specified based on the number.  
 - If **value** is of the **LengthConstrain** type, **minLength** in **LengthConstrain** indicates the minimum  
 column width. The **List** component calculates the maximum number of columns based on its minimum column width. In addition, **LengthConstrain** is passed to the child components of the **List** component as the maximum and minimum layout width constraints. These constraints take effect when the child components do not have a specified width.  
@@ -576,7 +609,7 @@ Sets the direction in which the list items are arranged.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | Yes | Direction in which the list items are arranged.Default value: **Axis.Vertical |
+| value | Axis | Yes | Direction in which the list items are arranged.Default value: **Axis.Vertical |
 
 ## maintainVisibleContentPosition
 
@@ -664,7 +697,7 @@ Triggered when the editing mode status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;boolean & gt; \ | undefined | Yes | Callback triggered when editing mode status changes. Passing undefined will unregister the callback. |
+| callback | Callback&lt;boolean&gt; \| undefined | Yes | Callback triggered when editing mode status changes. Passing undefined will unregister the callback. |
 
 ## onItemDelete
 
@@ -684,7 +717,7 @@ Triggered when a list item is deleted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (index: number) = & gt; boolean | Yes |  |
+| event | (index: number) =&gt; boolean | Yes |  |
 
 ## onItemDragEnter
 
@@ -704,7 +737,7 @@ Called when a dragged list item enters the list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: ItemDragInfo) = & gt; void | Yes | Information about the drag point. |
+| event | (event: ItemDragInfo) =&gt; void | Yes | Information about the drag point. |
 
 ## onItemDragLeave
 
@@ -724,7 +757,7 @@ Triggered when the dragged item leaves the drop target of the list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number) = & gt; void | Yes |  |
+| event | (event: ItemDragInfo, itemIndex: number) =&gt; void | Yes |  |
 
 ## onItemDragMove
 
@@ -744,7 +777,7 @@ Triggered when the dragged item moves over the drop target of the list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number) = & gt; void | Yes |  |
+| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number) =&gt; void | Yes |  |
 
 ## onItemDragStart
 
@@ -752,7 +785,9 @@ Triggered when the dragged item moves over the drop target of the list.
 onItemDragStart(event: OnItemDragStartCallback)
 ```
 
-Triggered when a list item starts to be dragged.Automatic scrolling of the list cannot be triggered when a list item is dragged to the edge of the list. You can use the [onMove](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-drag-sorting.md#onmove) API of **ForEach**, **LazyForEach**, or **Repeat** to implement this effect. For details, see [Example 12: Implementing Dragging with OnMove](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#example-12-implementing-dragging-with-onmove). However, note that the [onMove](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-drag-sorting.md#onmove) API does not support cross-**ListItemGroup** dragging.
+Triggered when a list item starts to be dragged.
+
+Automatic scrolling of the list cannot be triggered when a list item is dragged to the edge of the list. You can use the [onMove](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-drag-sorting.md#onmove) API of **ForEach**, **LazyForEach**, or **Repeat** to implement this effect. For details, see [Example 12: Implementing Dragging with OnMove](../../../reference/apis-arkui/arkui-ts/ts-container-list.md#example-12-implementing-dragging-with-onmove). However, note that the [onMove](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-drag-sorting.md#onmove) API does not support cross-**ListItemGroup** dragging.
 
 > **NOTE：**
 > 
@@ -768,7 +803,7 @@ Triggered when a list item starts to be dragged.Automatic scrolling of the list 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | Yes | Callback triggered when the dragging of a list item starts.In API version 22 and earlier versions, the parameter type is **(event: ItemDragInfo, itemIndex: number) = & gt; (() = & gt; any) \ | void**. For details about the **event** and **itemIndex** parameters, see [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md).<br>**Since:** 23 |
+| event | [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md) | Yes | Callback triggered when the dragging of a list item starts.In API version 22 and earlier versions, the parameter type is **(event: ItemDragInfo, itemIndex: number) =&gt; (() =&gt; any) \| void**. For details about the **event** and **itemIndex** parameters, see [OnItemDragStartCallback](arkts-arkui-onitemdragstartcallback-t.md).<br>**Since:** 23 |
 
 ## onItemDrop
 
@@ -788,7 +823,7 @@ Triggered when the dragged item is dropped on the drop target of the list. Durin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) = & gt; void | Yes | Callback triggered when dragging is stopped within the scope of the list. event: Information about the drag point. itemIndex: Initial position of the dragged item. insertIndex: Index of the position to which the dragged item is dropped. isSuccess: Whether the dragged item is successfully dropped. If the return value is **true**, the list item is successfully dropped. If the return value is **false**, the list item is not successfully dropped. |
+| event | (event: ItemDragInfo, itemIndex: number, insertIndex: number, isSuccess: boolean) =&gt; void | Yes | Callback triggered when dragging is stopped within the scope of the list. event: Information about the drag point. itemIndex: Initial position of the dragged item. insertIndex: Index of the position to which the dragged item is dropped. isSuccess: Whether the dragged item is successfully dropped. If the return value is **true**, the list item is successfully dropped. If the return value is **false**, the list item is not successfully dropped. |
 
 ## onItemMove
 
@@ -808,7 +843,7 @@ Triggered when a list item moves.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (from: number, to: number) = & gt; boolean | Yes |  |
+| event | (from: number, to: number) =&gt; boolean | Yes |  |
 
 ## onReachEnd
 
@@ -816,7 +851,11 @@ Triggered when a list item moves.
 onReachEnd(event: () => void)
 ```
 
-Called when the list reaches the end position. This callback is triggered when the last child component appears in the list view due to scrolling or content/layout changes.If the child component does not fill the list and can be completely displayed in the list without scrolling, this event is triggered during the first loading.When the list edge scrolling effect is the spring effect, this event is triggered once when the list passes the end position and is triggered again when the list returns to the end position.
+Called when the list reaches the end position. This callback is triggered when the last child component appears in the list view due to scrolling or content/layout changes.
+
+If the child component does not fill the list and can be completely displayed in the list without scrolling, this event is triggered during the first loading.
+
+When the list edge scrolling effect is the spring effect, this event is triggered once when the list passes the end position and is triggered again when the list returns to the end position.
 
 **Since:** 7
 
@@ -830,7 +869,7 @@ Called when the list reaches the end position. This callback is triggered when t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback triggered when the list reaches the end position. |
+| event | () =&gt; void | Yes | Callback triggered when the list reaches the end position. |
 
 ## onReachStart
 
@@ -838,7 +877,9 @@ Called when the list reaches the end position. This callback is triggered when t
 onReachStart(event: () => void)
 ```
 
-Triggered when the list reaches the start position.This event is triggered once when **initialIndex** is **0** during list initialization and once when the list scrolls to the start position. When the list edge scrolling effect is the spring effect, this event is triggered once when the list passes the start position and is triggered again when the list returns to the start position.
+Triggered when the list reaches the start position.
+
+This event is triggered once when **initialIndex** is **0** during list initialization and once when the list scrolls to the start position. When the list edge scrolling effect is the spring effect, this event is triggered once when the list passes the start position and is triggered again when the list returns to the start position.
 
 **Since:** 7
 
@@ -852,7 +893,7 @@ Triggered when the list reaches the start position.This event is triggered once 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback triggered when the list reaches the start position. |
+| event | () =&gt; void | Yes | Callback triggered when the list reaches the start position. |
 
 ## onScroll
 
@@ -878,7 +919,7 @@ Triggered when the list scrolls.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (scrollOffset: number, scrollState: ScrollState) = & gt; void | Yes | Callback when scroll, scrollOffset: Offset relative to the previous frame. The offset is positive when the list content scrolls up and negative when the list content scrolls down. Unit: vp scrollState: Current scroll state. |
+| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | Yes | Callback when scroll, scrollOffset: Offset relative to the previous frame. The offset is positive when the list content scrolls up and negative when the list content scrolls down. Unit: vp scrollState: Current scroll state. |
 
 ## onScrollFrameBegin
 
@@ -886,11 +927,18 @@ Triggered when the list scrolls.
 onScrollFrameBegin(event: OnScrollFrameBeginCallback)
 ```
 
-When this API is called back, the event parameter passes the scroll offset that is about to occur. The event processing function can calculate the actually required scroll offset based on the application scenario and return it as the return value. The list will then scroll according to this returned actual scroll offset.If **listDirection** is set to **Axis.Vertical**, the return value is the amount by which the list needs to scroll in the vertical direction. If **listDirection** is set to **Axis.Horizontal**, the return value is the amount by which the list needs to scroll in the horizontal direction.This event is triggered when either of the following conditions is met:
+When this API is called back, the event parameter passes the scroll offset that is about to occur. The event processing function can calculate the actually required scroll offset based on the application scenario and return it as the return value. The list will then scroll according to this returned actual scroll offset.
+
+If **listDirection** is set to **Axis.Vertical**, the return value is the amount by which the list needs to scroll in the vertical direction. If **listDirection** is set to **Axis.Horizontal**, the return value is the amount by which the list needs to scroll in the horizontal direction.
+
+This event is triggered when either of the following conditions is met:
+
 1. Scrolling is initiated by user interaction (for example, finger swipe, keyboard, or mouse operation).
 2. The **List** component scrolls by inertia.
 3. Call the fling API to trigger scrolling.
+
 This event is not triggered in the following scenarios:
+
 1. A scroll control API other than fling is called.
 2. The out-of-bounds bounce effect is active.
 3. The scrollbar is dragged.
@@ -929,7 +977,7 @@ Triggered when a child component enters or leaves the list display area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (start: number, end: number, center: number) = & gt; void | Yes |  |
+| event | (start: number, end: number, center: number) =&gt; void | Yes |  |
 
 ## onScrollStart
 
@@ -951,7 +999,7 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback invoked when the list starts scrolling. |
+| event | () =&gt; void | Yes | Callback invoked when the list starts scrolling. |
 
 ## onScrollStop
 
@@ -973,7 +1021,7 @@ Triggered when the list stops scrolling after the user's finger leaves the scree
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback triggered when the list stops sliding. |
+| event | () =&gt; void | Yes | Callback triggered when the list stops sliding. |
 
 ## onScrollVisibleContentChange
 
@@ -981,7 +1029,11 @@ Triggered when the list stops scrolling after the user's finger leaves the scree
 onScrollVisibleContentChange(handler: OnScrollVisibleContentChangeCallback)
 ```
 
-Triggered when a child component enters or leaves the list display area. During index calculation, the list item, header of the list item group, and footer of the list item group each are counted as a child component.When the list edge scrolling effect is the spring effect, the **onScrollVisibleContentChange** event is not triggered when the user scrolls the list to the edge or releases the list to rebound.This event is triggered once when the list is initialized and when the index of the first child component or the next child component in the list display area changes.
+Triggered when a child component enters or leaves the list display area. During index calculation, the list item, header of the list item group, and footer of the list item group each are counted as a child component.
+
+When the list edge scrolling effect is the spring effect, the **onScrollVisibleContentChange** event is not triggered when the user scrolls the list to the edge or releases the list to rebound.
+
+This event is triggered once when the list is initialized and when the index of the first child component or the next child component in the list display area changes.
 
 **Since:** 12
 
@@ -1025,7 +1077,9 @@ Sets the scrollbar state.
 scrollSnapAlign(value: ScrollSnapAlign)
 ```
 
-Sets the scroll snap alignment effect for list items when scrolling ends.This API is available only when the heights of list items are the same. During the alignment animation, the scroll operation source type reported by the [onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event is **ScrollSource.FLING**.
+Sets the scroll snap alignment effect for list items when scrolling ends.
+
+This API is available only when the heights of list items are the same. During the alignment animation, the scroll operation source type reported by the [onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12) event is **ScrollSource.FLING**.
 
 **Since:** 10
 

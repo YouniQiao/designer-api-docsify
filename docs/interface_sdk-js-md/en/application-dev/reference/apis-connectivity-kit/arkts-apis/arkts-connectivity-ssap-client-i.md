@@ -1,6 +1,10 @@
 # Client
 
-Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server.Before using the methods of this class, use the [ssap.createClient](arkts-connectivity-ssap-createclient-f.md) method to construct an instance of this class.An app only needs to create one [Client](#client) instance for a remote device. Repeated creation will increase unnecessary resource overhead.
+Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server.
+
+Before using the methods of this class, use the [ssap.createClient](arkts-connectivity-ssap-createclient-f.md) method to construct an instance of this class.
+
+An app only needs to create one [Client](#client) instance for a remote device. Repeated creation will increase unnecessary resource overhead.
 
 **Since:** 26.0.0
 
@@ -9,7 +13,7 @@ Represents a SSAP client class. It provides APIs for connecting to and transmitt
 ## Modules to Import
 
 ```TypeScript
-import ssap from '@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## close
@@ -56,7 +60,7 @@ Initiates a connection to the server. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -86,7 +90,7 @@ Initiates a disconnection to the server, disconnecting an existing connection or
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -192,7 +196,9 @@ Unsubscribes from the property change event. This API uses an asynchronous callb
 onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 ```
 
-Subscribes to the connection status change event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to the connection status change event. This API uses an asynchronous callback to return the result.
+
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -212,7 +218,9 @@ Subscribes to the connection status change event. This API uses an asynchronous 
 onMtuChange(callback: Callback<number>): void
 ```
 
-Subscribes to the MTU change event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to the MTU change event. This API uses an asynchronous callback to return the result.
+
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -232,7 +240,9 @@ Subscribes to the MTU change event. This API uses an asynchronous callback to re
 onPropertyChange(callback: Callback<Property>): void
 ```
 
-Subscribes to the property change event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to the property change event. This API uses an asynchronous callback to return the result.
+
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -310,7 +320,7 @@ Initiates an MTU negotiation request. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -347,7 +357,7 @@ Sets a [Property](arkts-connectivity-ssap-property-i.md) change notification. Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. No return value. |
+| Promise&lt;void&gt; | Promise used to return the result. No return value. |
 
 **Error codes:**
 
@@ -386,7 +396,7 @@ Writes a property to the server. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

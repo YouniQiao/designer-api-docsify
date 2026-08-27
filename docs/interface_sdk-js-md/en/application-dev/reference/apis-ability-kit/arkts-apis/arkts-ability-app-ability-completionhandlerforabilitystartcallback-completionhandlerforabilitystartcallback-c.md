@@ -18,7 +18,9 @@ import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } fro
 onRequestFailure?: OnRequestFailureFn
 ```
 
-Callback invoked when launching the specified ability fails.This API can be used in atomic services since API version 21.
+Callback invoked when launching the specified ability fails.
+
+This API can be used in atomic services since API version 21.
 
 **Since:** 21
 
@@ -34,7 +36,9 @@ Callback invoked when launching the specified ability fails.This API can be used
 onRequestSuccess?: OnRequestSuccessFn
 ```
 
-Callback invoked when the specified ability is successfully launched.This API can be used in atomic services since API version 21.
+Callback invoked when the specified ability is successfully launched.
+
+This API can be used in atomic services since API version 21.
 
 **Since:** 21
 

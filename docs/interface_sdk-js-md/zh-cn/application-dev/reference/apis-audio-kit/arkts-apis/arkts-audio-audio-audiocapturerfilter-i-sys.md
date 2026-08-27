@@ -11,8 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## capturerInfo
@@ -21,7 +20,9 @@ import audioHaptic from '@kit.AudioKitHaptic';
 capturerInfo?: AudioCapturerInfo
 ```
 
-表示采集器信息。SystemCapability.Multimedia.Audio.Capturer
+表示采集器信息。
+
+SystemCapability.Multimedia.Audio.Capturer
 
 **类型：** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
@@ -37,7 +38,9 @@ capturerInfo?: AudioCapturerInfo
 uid?: number
 ```
 
-表示应用ID。SystemCapability.Multimedia.Audio.Core
+表示应用ID。
+
+SystemCapability.Multimedia.Audio.Core
 
 **类型：** number
 

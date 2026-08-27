@@ -1,6 +1,8 @@
 # ReusableMemOptStrategy
 
-Defines a type for memory optimization strategy.@enum { number }
+Defines a type for memory optimization strategy.
+
+@enum { number }
 
 **Since:** 26.0.0
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cliManager from '@kit.AbilityKit';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## execTool
@@ -31,7 +31,7 @@ Execute a CLI command
 | --- | --- | --- | --- |
 | toolName | string | Yes | The name of target tool. |
 | subCommand | string | Yes | The subCommand of this execute action. |
-| args | Record & lt;string, Object & gt; | Yes | The input args of tool. |
+| args | Record&lt;string, Object&gt; | Yes | The input args of tool. |
 | challenge | string | Yes | The unique identifier get from access token manager. |
 | execOptions | [ExecOptions](arkts-ability-climanager-execoptions-i-sys.md) | No | The options of this action. |
 

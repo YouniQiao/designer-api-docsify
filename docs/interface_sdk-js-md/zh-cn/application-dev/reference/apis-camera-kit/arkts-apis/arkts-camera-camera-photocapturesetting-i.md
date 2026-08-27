@@ -17,7 +17,9 @@
 compressionQuality?: number
 ```
 
-图片压缩质量值，取值范围为(1, 100)。当compressionQuality未下发时，默认按quality生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与 compressionQuality均未下发则图片质量默认是高等。
+图片压缩质量值，取值范围为(1, 100)。
+
+当compressionQuality未下发时，默认按quality生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与compressionQuality均未下发则图片质量默认是高等。
 
 **类型：** number
 
@@ -67,7 +69,9 @@ mirror?: boolean
 quality?: QualityLevel
 ```
 
-图片质量。当quality未下发时，默认按compressionQuality下发生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与 compressionQuality均未下发则图片质量默认是高等。
+图片质量。
+
+当quality未下发时，默认按compressionQuality下发生效；若quality与compressionQuality同时下发则按compressionQuality下发生效；若quality与compressionQuality均未下发则图片质量默认是高等。
 
 **类型：** QualityLevel
 

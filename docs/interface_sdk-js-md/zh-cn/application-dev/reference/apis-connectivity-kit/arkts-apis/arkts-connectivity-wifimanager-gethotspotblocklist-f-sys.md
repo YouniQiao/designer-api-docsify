@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getHotspotBlockList
@@ -27,7 +26,7 @@ function getHotspotBlockList(): Array<StationInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;StationInfo & gt; | 黑名单中的站点。 |
+| Array&lt;StationInfo&gt; | 黑名单中的站点。 |
 
 **错误码：**
 

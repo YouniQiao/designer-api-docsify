@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import taskpool from '@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## executePeriodically
@@ -25,8 +25,8 @@ Executes a task periodically. In this execution mode, you can set the task prior
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | period | number | Yes | Execution period, in ms. The value must be greater than or equal to 0. The value should be an integer. Unit:milliseconds. |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be executed. |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| task | Task | Yes | Task to be executed. |
+| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Error codes:**
 
@@ -100,7 +100,7 @@ Executes a generic task periodically, without verifying the parameter type and r
 | --- | --- | --- | --- |
 | period | number | Yes | Execution period, in ms. The value must be greater than or equal to 0. The value should be an integer. Unit:milliseconds. |
 | task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes | Generic task to be executed periodically. |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # SymbolSpan properties/events
 
-The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are not supported. Only the following attributes are supported.The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are not supported.
+The [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md) are not supported. Only the following attributes are supported.
+
+The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are not supported.
 
 **Inheritance/Implementation:** SymbolSpanAttribute extends CommonMethod<SymbolSpanAttribute>
 
@@ -117,7 +119,7 @@ Sets the size of the symbol span. When using the string type, numeric string val
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Size of the symbol span.Default value: **16fp**Unit: fp |
+| value | number \| string \| Resource | Yes | Size of the symbol span.Default value: **16fp**Unit: fp |
 
 ## fontWeight
 
@@ -125,7 +127,9 @@ Sets the size of the symbol span. When using the string type, numeric string val
 fontWeight(value: number | FontWeight | string)
 ```
 
-Sets the weight of the symbol span. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.The **sys.symbol.ohos_lungs** icon does not support font weight setting.
+Sets the weight of the symbol span. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings of the number type are supported, for example, **"400"**, **"bold"**, **"bolder"**, **"lighter"**, **"regular"**, and **"medium"**, which correspond to the enumerated values in **FontWeight**.
+
+The **sys.symbol.ohos_lungs** icon does not support font weight setting.
 
 > **NOTE：**
 > 

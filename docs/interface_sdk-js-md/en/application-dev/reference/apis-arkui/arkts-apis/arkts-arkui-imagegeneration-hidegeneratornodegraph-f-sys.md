@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## hideGeneratorNodeGraph
@@ -32,4 +32,4 @@ Hide the AI node graph Sheet.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the result of hide operation. |
+| Promise&lt;void&gt; | Returns the result of hide operation. |

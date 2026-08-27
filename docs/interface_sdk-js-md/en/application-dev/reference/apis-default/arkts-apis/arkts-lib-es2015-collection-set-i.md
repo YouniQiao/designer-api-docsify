@@ -59,7 +59,7 @@ Executes a provided function once per each value in the Set object, in insertion
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (value: T, value2: T, set: Set & lt;T & gt;) = & gt; void | Yes |  |
+| callbackfn | (value: T, value2: T, set: Set&lt;T&gt;) =&gt; void | Yes |  |
 | thisArg | any | No |  |
 
 ## has

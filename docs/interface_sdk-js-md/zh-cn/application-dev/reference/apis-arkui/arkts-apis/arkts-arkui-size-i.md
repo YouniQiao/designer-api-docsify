@@ -17,7 +17,7 @@ DrawingRenderingContext的尺寸信息。
 height: number
 ```
 
-获取DrawingRenderingContext的高度，其值为关联的Canvas组件的高度。 支持单位：vp、px。 默认单位为vp。
+获取DrawingRenderingContext的高度，其值为关联的Canvas组件的高度。支持单位：vp、px。默认单位为vp。
 
 **类型：** number
 
@@ -69,7 +69,7 @@ struct OffscreenCanvasPage {
 width: number
 ```
 
-获取DrawingRenderingContext的宽度，其值为关联的Canvas组件的宽度。 支持单位：vp、px。 默认单位为vp。
+获取DrawingRenderingContext的宽度，其值为关联的Canvas组件的宽度。支持单位：vp、px。默认单位为vp。
 
 **类型：** number
 

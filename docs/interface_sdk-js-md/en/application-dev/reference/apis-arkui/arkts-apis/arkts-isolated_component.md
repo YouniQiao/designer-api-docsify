@@ -12,7 +12,7 @@
 
 | Name | Description |
 | --- | --- |
-| [IsolatedComponentAttribute(System API)](arkts-arkui-isolatedcomponentattribute-c-sys.md) | Only the width, height, and backgroundColor universal attributes are supported.The universal events are not supported.Events are asynchronously passed to the restricted Worker thread after coordinate conversion.The following events are supported: |
+| [IsolatedComponentAttribute](arkts-arkui-isolatedcomponentattribute-c-sys.md) | Only the width, height, and backgroundColor universal attributes are supported. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -20,7 +20,7 @@
 
 | Name | Description |
 | --- | --- |
-| [IsolatedOptions(System API)](arkts-arkui-isolatedoptions-i-sys.md) | Describes the optional construction parameters during **IsolatedComponent** construction. |
+| [IsolatedOptions](arkts-arkui-isolatedoptions-i-sys.md) | Describes the optional construction parameters during **IsolatedComponent** construction. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -28,10 +28,10 @@
 
 | Name | Description |
 | --- | --- |
-| [ErrorCallback(System API)](arkts-arkui-errorcallback-t-sys.md) | Indicates error callback. |
-| [IsolatedComponentInterface(System API)](arkts-arkui-isolatedcomponentinterface-t-sys.md) | Provide an interface for the IsolatedComponent, which is used to render UI of other ABC |
-| [RestrictedWorker(System API)](arkts-arkui-restrictedworker-t-sys.md) | Indicates restricted worker for run abc. |
-| [Want(System API)](arkts-arkui-want-t-sys.md) | Indicates want. |
+| [ErrorCallback](arkts-arkui-errorcallback-t-sys.md) | Indicates error callback. |
+| [IsolatedComponentInterface](arkts-arkui-isolatedcomponentinterface-t-sys.md) | Provide an interface for the IsolatedComponent, which is used to render UI of other ABC |
+| [RestrictedWorker](arkts-arkui-restrictedworker-t-sys.md) | Indicates restricted worker for run abc. |
+| [Want](arkts-arkui-want-t-sys.md) | Indicates want. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -39,6 +39,6 @@
 
 | Name | Description |
 | --- | --- |
-| [IsolatedComponent(System API)](arkts-arkui-isolatedcomponent-con-sys.md) | Defines IsolatedComponent Component. |
-| [IsolatedComponentInstance(System API)](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponentinstance) | Defines IsolatedComponent Component instance. |
+| [IsolatedComponent](arkts-arkui-isolatedcomponent-con-sys.md) | Defines IsolatedComponent Component. |
+| [IsolatedComponentInstance](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponentinstance) | Defines IsolatedComponent Component instance. |
 <!--DelEnd-->

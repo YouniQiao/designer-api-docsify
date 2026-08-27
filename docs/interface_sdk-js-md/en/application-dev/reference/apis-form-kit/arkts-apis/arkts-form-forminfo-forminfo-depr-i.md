@@ -147,7 +147,8 @@ Configuration ability of the widget.
 formVisibleNotify: boolean
 ```
 
-Whether to send a notification when the widget is visible.  
+Whether to send a notification when the widget is visible.
+
 - **true**: The widget provider is notified of the status change.  
 - **false**: The widget provider is not notified of the status change.
 
@@ -167,7 +168,8 @@ Whether to send a notification when the widget is visible.
 isDefault: boolean
 ```
 
-Whether the widget is the default one.  
+Whether the widget is the default one.
+
 - **true**: The widget is the default one.  
 - **false**: The widget is not the default one.
 
@@ -329,7 +331,8 @@ Update period of the widget.
 updateEnabled: boolean
 ```
 
-Whether the widget is updatable.  
+Whether the widget is updatable.
+
 - **true**: The widget can be updated periodically.  
 - **false**: The widget cannot be updated periodically.
 

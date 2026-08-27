@@ -33,7 +33,7 @@ Opens a file. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise that returns the file descriptor of the file opened. |
+| Promise&lt;number&gt; | Promise that returns the file descriptor of the file opened. |
 
 **Examples**
 

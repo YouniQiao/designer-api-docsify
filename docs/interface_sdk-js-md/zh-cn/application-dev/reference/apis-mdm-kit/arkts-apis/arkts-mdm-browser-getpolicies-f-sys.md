@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import browser from '@kit.MDMKit';
+import { browser } from '@kit.MDMKit';
 ```
 
 ## getPolicies
@@ -96,7 +96,7 @@ function getPolicies(admin: Want, appId: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回浏览器策略。 |
+| Promise&lt;string&gt; | Promise对象，返回浏览器策略。 |
 
 **错误码：**
 

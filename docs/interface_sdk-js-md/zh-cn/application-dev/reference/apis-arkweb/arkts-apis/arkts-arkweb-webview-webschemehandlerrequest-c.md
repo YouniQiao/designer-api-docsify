@@ -1,6 +1,6 @@
 # WebSchemeHandlerRequest
 
-WebSchemeHandlerRequest类模块定义了通过WebSchemeHandler拦截到的资源请求的封装对象。当开发者注册自定义协议处理器（WebSchemeHandler）后，Web内核在拦截到匹配协议的请求时会创建 WebSchemeHandlerRequest实例并传递给回调方法。该对象提供以下请求信息查询方法：获取请求头信息、请求URL、请求方法、来源URL、判断是否为主框架请求、是否关联用户手势、获取请求体流、资源类型以及触发该请求的 Frame URL，从而据此决定是否拦截该请求并构造相应响应。
+WebSchemeHandlerRequest类模块定义了通过WebSchemeHandler拦截到的资源请求的封装对象。当开发者注册自定义协议处理器（WebSchemeHandler）后，Web内核在拦截到匹配协议的请求时会创建WebSchemeHandlerRequest实例并传递给回调方法。该对象提供以下请求信息查询方法：获取请求头信息、请求URL、请求方法、来源URL、判断是否为主框架请求、是否关联用户手势、获取请求体流、资源类型以及触发该请求的Frame URL，从而据此决定是否拦截该请求并构造相应响应。
 
 **起始版本：** 12
 
@@ -51,7 +51,7 @@ getHeader(): Array<WebHeader>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;WebHeader & gt; | 返回资源请求头信息。 |
+| Array&lt;WebHeader&gt; | 返回资源请求头信息。 |
 
 **示例**
 

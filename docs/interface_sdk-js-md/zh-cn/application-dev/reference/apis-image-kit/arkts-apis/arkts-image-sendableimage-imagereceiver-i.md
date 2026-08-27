@@ -1,6 +1,8 @@
 # ImageReceiver
 
-图像接收类，用于获取组件Surface ID，接收最新的图片和读取下一张图片，以及释放ImageReceiver实例。在调用以下方法前需要先创建ImageReceiver实例。
+图像接收类，用于获取组件Surface ID，接收最新的图片和读取下一张图片，以及释放ImageReceiver实例。
+
+在调用以下方法前需要先创建ImageReceiver实例。
 
 **起始版本：** 12
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendableImage from '@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## getReceivingSurfaceId
@@ -28,7 +30,7 @@ getReceivingSurfaceId(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | 异步返回Surface ID。 |
+| Promise&lt;string&gt; | 异步返回Surface ID。 |
 
 **示例**
 
@@ -109,7 +111,7 @@ readLatestImage(): Promise<Image>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Image & gt; | 异步返回最新图片。 |
+| Promise&lt;Image&gt; | 异步返回最新图片。 |
 
 **示例**
 
@@ -153,7 +155,7 @@ readNextImage(): Promise<Image>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Image & gt; | 异步返回下一张图片。 |
+| Promise&lt;Image&gt; | 异步返回下一张图片。 |
 
 **示例**
 
@@ -182,7 +184,11 @@ async function ReadNextImage() {
 release(): Promise<void>
 ```
 
-释放ImageReceiver实例。使用promise异步回调。由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放ImageReceiver实例。使用promise异步回调。
+
+由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用该方法，及时释放内存。
+
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 12
 
@@ -192,7 +198,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 异步返回操作结果。 |
+| Promise&lt;void&gt; | 异步返回操作结果。 |
 
 **示例**
 

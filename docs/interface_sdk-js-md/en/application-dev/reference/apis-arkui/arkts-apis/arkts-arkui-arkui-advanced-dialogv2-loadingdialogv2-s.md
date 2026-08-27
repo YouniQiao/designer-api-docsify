@@ -1,6 +1,8 @@
 # LoadingDialogV2
 
-Declare CustomDialog LoadingDialogV2@struct { LoadingDialogV2 }
+Declare CustomDialog LoadingDialogV2
+
+@struct { LoadingDialogV2 }
 
 **Since:** 18
 

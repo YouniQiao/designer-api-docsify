@@ -9,7 +9,7 @@ Defines a callback used to return whether the application started by number-pres
 ## Modules to Import
 
 ```TypeScript
-import settingsLite from '@kit.BasicServicesKit';
+import { settingsLite } from '@kit.BasicServicesKit';
 ```
 
 ## onResult

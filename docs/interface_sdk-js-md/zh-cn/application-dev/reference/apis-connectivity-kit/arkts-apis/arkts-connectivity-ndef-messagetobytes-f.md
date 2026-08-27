@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## messageToBytes
@@ -24,7 +24,7 @@ function messageToBytes(ndefMessage: NdefMessage): number[]
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ndefMessage | [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | 是 | NDEF消息数据对象。 |
+| ndefMessage | NdefMessage | 是 | NDEF消息数据对象。 |
 
 **返回值：**
 

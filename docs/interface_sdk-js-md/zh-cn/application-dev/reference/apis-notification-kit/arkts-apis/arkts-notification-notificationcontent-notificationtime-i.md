@@ -30,7 +30,8 @@ initialTime?: number
 isCountDown?: boolean
 ```
 
-是否为倒计时模式。默认为false。  
+是否为倒计时模式。默认为false。
+
 - true：时间从initialTime开始递减显示。  
 - false：时间从initialTime开始递增显示。
 
@@ -46,7 +47,8 @@ isCountDown?: boolean
 isInTitle?: boolean
 ```
 
-时间信息是否展示在通知标题中。默认为false。  
+时间信息是否展示在通知标题中。默认为false。
+
 - true：计时信息将嵌入标题区域展示。  
 - false：计时信息在独立区域展示。
 
@@ -62,7 +64,8 @@ isInTitle?: boolean
 isPaused?: boolean
 ```
 
-计时是否暂停。默认为false。  
+计时是否暂停。默认为false。
+
 - true：计时暂停在当前值。  
 - false：计时正常运行。
 

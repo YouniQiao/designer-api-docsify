@@ -9,7 +9,7 @@ Describes the remote device information.
 ## Modules to Import
 
 ```TypeScript
-import remoteDevice from '@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## manufacturerData

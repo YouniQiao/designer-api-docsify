@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import usbManager from '@kit.MDMKit';
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## getDisallowedUsbDevices
@@ -12,8 +12,10 @@ import usbManager from '@kit.MDMKit';
 function getDisallowedUsbDevices(admin: Want): Array<UsbDeviceType>
 ```
 
-获取禁止使用的USB设备类型。  
-**使用场景**：  
+获取禁止使用的USB设备类型。
+
+**使用场景**：
+
 - 设备管理员需要查看当前禁止使用的USB设备类型列表  
 - 在修改禁用名单前，需要先获取现有名单进行比对  
 - 管理界面需要展示当前的USB设备类型禁用策略配置
@@ -73,8 +75,10 @@ try {
 function getDisallowedUsbDevices(admin: Want | null): Array<UsbDeviceType>
 ```
 
-获取禁止使用的USB设备类型。  
-**使用场景**：  
+获取禁止使用的USB设备类型。
+
+**使用场景**：
+
 - 设备管理员需要查看当前禁止使用的USB设备类型列表  
 - 在修改禁用名单前，需要先获取现有名单进行比对  
 - 管理界面需要展示当前的USB设备类型禁用策略配置
@@ -91,7 +95,7 @@ function getDisallowedUsbDevices(admin: Want | null): Array<UsbDeviceType>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
+| admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) \| null | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。当设备存在多个MDM应用时，传入Want时查询对应企业设备管理应用设置的策略，传入null时查询实际生效的策略。 |
 
 **返回值：**
 

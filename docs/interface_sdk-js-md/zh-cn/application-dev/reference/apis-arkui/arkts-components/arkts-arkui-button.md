@@ -1,6 +1,7 @@
 # Button
 
 按钮组件，可快速创建不同样式的按钮。
+
 > **说明：**
 
 ## 子组件
@@ -51,7 +52,9 @@ Button(options: ButtonOptions)
 Button(label: ResourceStr, options?: ButtonOptions)
 ```
 
-使用文本内容创建相应的按钮组件，此时Button无法包含子组件。文本内容默认单行显示。
+使用文本内容创建相应的按钮组件，此时Button无法包含子组件。
+
+文本内容默认单行显示。
 
 **起始版本：** 7
 
@@ -74,16 +77,24 @@ Button(label: ResourceStr, options?: ButtonOptions)
 
 | 名称 | 说明 |
 | --- | --- |
+| [ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。 |
+| [ButtonOptions](arkts-arkui-buttonoptions-i.md) | 按钮的样式。 |
+| [LabelStyle](arkts-arkui-labelstyle-i.md) | Button组件的label文本及其字体样式。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
+| [ButtonTriggerClickCallback](arkts-arkui-buttontriggerclickcallback-t.md) | 定义ButtonConfiguration中使用的回调类型。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
+| [ButtonRole](arkts-arkui-buttonrole-e.md) | 按钮的角色。 |
+| [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | 按钮的重要程度。 |
+| [ButtonType](arkts-arkui-buttontype-e.md) | 按钮的类型。 |
+| [ControlSize](arkts-arkui-controlsize-e.md) | 按钮的尺寸。 |
 
 ## 示例
 

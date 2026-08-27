@@ -35,13 +35,13 @@ Dismisses a dialog box. Accepts either the dialog ID (returned by present) or th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | number \| ComponentContent & lt;Object & gt; | Yes | The dialog ID or ComponentContent to dismiss. |
+| target | number \| [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | Yes | The dialog ID or ComponentContent to dismiss. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -91,9 +91,12 @@ Presents a fixed-style dialog box.
 present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>
 ```
 
-Presents a custom-style dialog box with the provided content.The content parameter accepts CustomBuilder or ComponentContent via union type:  
+Presents a custom-style dialog box with the provided content.
+
+The content parameter accepts CustomBuilder or ComponentContent via union type:  
 - CustomBuilder: Builder function for custom dialog content.  
-- ComponentContent: ComponentContent supporting state-driven updates.  
+- ComponentContent: ComponentContent supporting state-driven updates.
+
 isModal = true and showInSubWindow = true cannot be used at the same time.
 
 **Since:** 26.1.0
@@ -108,7 +111,7 @@ isModal = true and showInSubWindow = true cannot be used at the same time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent & lt;Object & gt; | Yes | Custom dialog content. |
+| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | Yes | Custom dialog content. |
 | options | dialog.DialogCustomOptions | No | Custom dialog options. |
 
 **Return value:**
@@ -146,14 +149,14 @@ Updates a presented custom dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent & lt;Object & gt; | Yes | The content used to identify the dialog. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | Yes | The content used to identify the dialog. |
 | options | dialog.DialogBaseOptions | No | Options to update. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

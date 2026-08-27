@@ -1,6 +1,7 @@
 # Radio
 
 The **Radio** component allows users to select from a set of mutually exclusive options.
+
 > **NOTE** > > Since API version 12, the default indicator type for the **Radio** component changes from > **RadioIndicatorType.DOT** to **RadioIndicatorType.TICK**.
 
 ## Child Components
@@ -35,16 +36,21 @@ Creates a radio button.
 
 | Name | Description |
 | --- | --- |
+| [RadioConfiguration](arkts-arkui-radioconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
+| [RadioOptions](arkts-arkui-radiooptions-i.md) | Radio button information. |
+| [RadioStyle](arkts-arkui-radiostyle-i.md) | Radio button color. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md) | Defines the callback type for radio button selected state changes. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [RadioIndicatorType](arkts-arkui-radioindicatortype-e.md) | Radio button style. |
 
 ## Examples
 

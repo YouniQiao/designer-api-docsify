@@ -9,7 +9,7 @@ AVScreenCaptureRecorder is a class for screen capture management. It provides AP
 ## Modules to Import
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addWatermark
@@ -37,7 +37,7 @@ add a watermark for the AVScreenCaptureRecorder. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise that returns the watermark id. |
+| Promise&lt;number&gt; | Promise that returns the watermark id. |
 
 **Error codes:**
 
@@ -102,13 +102,13 @@ Sets the list of windows to be hidden in the picker. The setting takes effect th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| excludedWindows | Array & lt;number & gt; | Yes | List of windows to be hidden in the picker. For details about how to obtain window properties, see [getWindowProperties](../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9). |
+| excludedWindows | Array&lt;number&gt; | Yes | List of windows to be hidden in the picker. For details about how to obtain window properties, see [getWindowProperties](../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -172,7 +172,7 @@ Initializes screen capture and sets screen capture parameters. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -324,7 +324,7 @@ Pause screen capture. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -387,7 +387,7 @@ Displays the Picker once more after the screen capture starts, allowing for dyna
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -443,7 +443,7 @@ Releases this AVScreenCaptureRecorder instance. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -598,7 +598,7 @@ Resume screen capture. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -662,7 +662,7 @@ Sets whether the captured screen content automatically rotates to keep the image
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -723,7 +723,7 @@ Enables or disables the microphone. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -784,7 +784,7 @@ Sets the display mode of the picker. The setting takes effect the next time the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -830,7 +830,9 @@ if (avScreenCaptureRecorder != undefined) {
 skipPrivacyMode(windowIDs: Array<number>): Promise<void>
 ```
 
-During screen capture, the application can exempt its privacy windows from security purposes. This API uses a promise to return the result.For example, if a user enters a password in this application during screen capture, the application will not display a black screen.
+During screen capture, the application can exempt its privacy windows from security purposes. This API uses a promise to return the result.
+
+For example, if a user enters a password in this application during screen capture, the application will not display a black screen.
 
 **Since:** 12
 
@@ -840,13 +842,13 @@ During screen capture, the application can exempt its privacy windows from secur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowIDs | Array & lt;number & gt; | Yes | IDs of windows that require privacy exemption, including the main window IDs and subwindow IDs. For details about how to obtain window properties, see [getWindowProperties](../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9). |
+| windowIDs | Array&lt;number&gt; | Yes | IDs of windows that require privacy exemption, including the main window IDs and subwindow IDs. For details about how to obtain window properties, see [getWindowProperties](../../../reference/apis-arkui/arkts-apis-window-Window.md#getwindowproperties9). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -902,7 +904,7 @@ Starts screen recording. Before using this API, you must call [init](#init). Thi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -957,7 +959,7 @@ Stops screen recording. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

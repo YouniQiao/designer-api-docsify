@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKit';
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## 汇总
@@ -23,16 +23,16 @@ import inputDeviceCooperate from '@kit.InputKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [enable(键鼠穿越)](arkts-input-inputdevicecooperate-enable-f-sys.md) | 开启、关闭键鼠穿越，使用callback异步回调。 |
-| [enable(键鼠穿越)](arkts-input-inputdevicecooperate-enable-f-sys.md) | 开启、关闭键鼠穿越，使用Promise异步回调。 |
-| [getState(键鼠穿越)](arkts-input-inputdevicecooperate-getstate-f-sys.md) | 获取键鼠穿越开关的状态，使用callback异步回调。 |
-| [getState(键鼠穿越)](arkts-input-inputdevicecooperate-getstate-f-sys.md) | 获取键鼠穿越开关的状态，使用Promise异步回调。 |
-| off(键鼠穿越) | 关闭监听键鼠穿越状态，使用callback异步回调。 |
-| on(键鼠穿越) | 注册监听键鼠穿越状态，使用callback异步回调。 |
-| [start(键鼠穿越)](arkts-input-inputdevicecooperate-start-f-sys.md) | 启动键鼠穿越，使用callback异步回调。 |
-| [start(键鼠穿越)](arkts-input-inputdevicecooperate-start-f-sys.md) | 启动键鼠穿越，使用Promise异步回调。 |
-| [stop(键鼠穿越)](arkts-input-inputdevicecooperate-stop-f-sys.md) | 停止键鼠穿越，使用callback异步回调。 |
-| [stop(键鼠穿越)](arkts-input-inputdevicecooperate-stop-f-sys.md) | 停止键鼠穿越，使用Promise异步回调。 |
+| [enable](arkts-input-inputdevicecooperate-enable-f-sys.md) | 开启、关闭键鼠穿越，使用callback异步回调。 |
+| [enable](arkts-input-inputdevicecooperate-enable-f-sys.md) | 开启、关闭键鼠穿越，使用Promise异步回调。 |
+| [getState](arkts-input-inputdevicecooperate-getstate-f-sys.md) | 获取键鼠穿越开关的状态，使用callback异步回调。 |
+| [getState](arkts-input-inputdevicecooperate-getstate-f-sys.md) | 获取键鼠穿越开关的状态，使用Promise异步回调。 |
+| off | 关闭监听键鼠穿越状态，使用callback异步回调。 |
+| on | 注册监听键鼠穿越状态，使用callback异步回调。 |
+| [start](arkts-input-inputdevicecooperate-start-f-sys.md) | 启动键鼠穿越，使用callback异步回调。 |
+| [start](arkts-input-inputdevicecooperate-start-f-sys.md) | 启动键鼠穿越，使用Promise异步回调。 |
+| [stop](arkts-input-inputdevicecooperate-stop-f-sys.md) | 停止键鼠穿越，使用callback异步回调。 |
+| [stop](arkts-input-inputdevicecooperate-stop-f-sys.md) | 停止键鼠穿越，使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -40,5 +40,5 @@ import inputDeviceCooperate from '@kit.InputKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [EventMsg(键鼠穿越)](arkts-input-inputdevicecooperate-eventmsg-e-sys.md) | 键鼠穿越事件。 |
+| [EventMsg](arkts-input-inputdevicecooperate-eventmsg-e-sys.md) | 键鼠穿越事件。 |
 <!--DelEnd-->

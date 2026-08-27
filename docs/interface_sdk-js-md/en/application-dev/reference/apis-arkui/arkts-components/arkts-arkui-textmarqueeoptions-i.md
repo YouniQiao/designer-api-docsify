@@ -9,10 +9,6 @@ Describes the initialization options of the **Marquee** component.
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, Con@kit.ArkUIMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UICon@kit.ArkUI, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUICon@kit.ArkUI, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@ohos.arkui.UICon@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@ohos.arkui.UICon@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@ohos.arkui.UICon@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@ohos.arkui.UICon@kit.ArkUI';
 ```
 
 ## delay
@@ -21,7 +17,11 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 delay?: number
 ```
 
-Time interval between scroll movements.Default value: **0**Unit: millisecond
+Time interval between scroll movements.
+
+Default value: **0**
+
+Unit: millisecond
 
 **Type:** number
 
@@ -39,8 +39,13 @@ Time interval between scroll movements.Default value: **0**Unit: millisecond
 fadeout?: boolean
 ```
 
-Whether to apply a fade-out effect when the text is too number.  
-**true** to apply a fade-out effect when the text is too number, **false** otherwise.When this parameter is set to **true**: if the text content exceeds the display range, a fade-out effect is applied to the edges of the partially visible text; if text is partially visible at both ends, the fade-out effect is applied to both ends. The **clip** attribute is automatically locked to **true** and cannot be set to **false**.Default value: **false**
+Whether to apply a fade-out effect when the text is too number.
+
+**true** to apply a fade-out effect when the text is too number, **false** otherwise.
+
+When this parameter is set to **true**: if the text content exceeds the display range, a fade-out effect is applied to the edges of the partially visible text; if text is partially visible at both ends, the fade-out effect is applied to both ends. The **clip** attribute is automatically locked to **true** and cannot be set to **false**.
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -58,8 +63,11 @@ Whether to apply a fade-out effect when the text is too number.
 fromStart?: boolean
 ```
 
-Whether the text scrolls from the start.  
-**true** to scroll from the start, **false** to scroll in reverse.Default value: **true**
+Whether the text scrolls from the start.
+
+**true** to scroll from the start, **false** to scroll in reverse.
+
+Default value: **true**
 
 **Type:** boolean
 
@@ -77,7 +85,9 @@ Whether the text scrolls from the start.
 loop?: number
 ```
 
-Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll continuously.Default value: **-1**
+Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll continuously.
+
+Default value: **-1**
 
 **Type:** number
 
@@ -95,7 +105,9 @@ Number of times the marquee will scroll. If the value is less than or equal to *
 marqueeStartPolicy?: MarqueeStartPolicy
 ```
 
-Policy for starting the marquee. This attribute takes effect only when **start** is set to **true**.Default value: **MarqueeStartPolicy.DEFAULT**
+Policy for starting the marquee. This attribute takes effect only when **start** is set to **true**.
+
+Default value: **MarqueeStartPolicy.DEFAULT**
 
 **Type:** [MarqueeStartPolicy](arkts-arkui-marqueestartpolicy-e.md)
 
@@ -113,7 +125,11 @@ Policy for starting the marquee. This attribute takes effect only when **start**
 marqueeUpdatePolicy?: MarqueeUpdatePolicy
 ```
 
-Scrolling policy of the marquee after its attributes are updated.This attribute takes effect when the marquee is in the playing state and the text width exceeds the width of the marquee component.Default value: **MarqueeUpdatePolicy.DEFAULT**
+Scrolling policy of the marquee after its attributes are updated.
+
+This attribute takes effect when the marquee is in the playing state and the text width exceeds the width of the marquee component.
+
+Default value: **MarqueeUpdatePolicy.DEFAULT**
 
 **Type:** [MarqueeUpdatePolicy](arkts-arkui-marqueeupdatepolicy-e.md)
 
@@ -131,7 +147,9 @@ Scrolling policy of the marquee after its attributes are updated.This attribute 
 spacing?: LengthMetrics
 ```
 
-Spacing between two marquee rounds. If the unit of **LengthMetrics** is **PERCENT**, the current setting does not take effect and the default value is used.Default value: **48.0vp**
+Spacing between two marquee rounds. If the unit of **LengthMetrics** is **PERCENT**, the current setting does not take effect and the default value is used.
+
+Default value: **48.0vp**
 
 **Type:** LengthMetrics
 
@@ -149,7 +167,8 @@ Spacing between two marquee rounds. If the unit of **LengthMetrics** is **PERCEN
 start: boolean
 ```
 
-Whether to start the marquee.  
+Whether to start the marquee.
+
 **true**: Start the marquee. **false**: Do not start the marquee.
 
 **Type:** boolean
@@ -168,7 +187,9 @@ Whether to start the marquee.
 step?: number
 ```
 
-Step length of the scrolling animation text.Default value: **4.0** (in vp)
+Step length of the scrolling animation text.
+
+Default value: **4.0** (in vp)
 
 **Type:** number
 

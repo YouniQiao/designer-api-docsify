@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getPriorityEnabledByBundles
@@ -28,13 +28,13 @@ Obtains whether priority notifications are enabled for applications in batches. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | Array & lt;BundleOption & gt; | Yes | Array of application bundles. |
+| bundles | Array&lt;BundleOption&gt; | Yes | Array of application bundles. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Map & lt;BundleOption, boolean & gt; & gt; | Promise used to return the key-value pair set of the application notification priority enabling status. |
+| Promise&lt;Map&lt;BundleOption, boolean&gt;&gt; | Promise used to return the key-value pair set of the application notification priority enabling status. |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## errorCode
@@ -50,7 +50,7 @@ true表示连接成功；false表示连接失败，具体原因请查看errorCod
 reason?: string
 ```
 
-表示拒绝连接的原因，仅在连接被拒绝时返回。该值为对端应用调用reject接口时传入的reason参数， 用于告知本端拒绝的具体原因。连接成功或未被拒绝时无此字段。
+表示拒绝连接的原因，仅在连接被拒绝时返回。该值为对端应用调用reject接口时传入的reason参数，用于告知本端拒绝的具体原因。连接成功或未被拒绝时无此字段。
 
 **类型：** string
 

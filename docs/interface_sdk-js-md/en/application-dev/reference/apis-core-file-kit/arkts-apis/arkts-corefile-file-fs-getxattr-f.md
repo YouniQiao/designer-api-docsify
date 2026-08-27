@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## getxattr
@@ -29,7 +29,7 @@ Obtains an extended attribute of a file or directory. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the value of the extended attribute obtained. |
+| Promise&lt;string&gt; | Promise used to return the value of the extended attribute obtained. |
 
 **Error codes:**
 

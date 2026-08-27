@@ -1,6 +1,8 @@
 # Swiper属性/事件
 
-除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：
+
+除支持通用事件外，还支持以下事件：
 
 > **说明：**
 
@@ -23,7 +25,8 @@
 autoPlay(value: boolean)
 ```
 
-设置子组件是否自动播放。轮播方向为索引从小到大。  
+设置子组件是否自动播放。轮播方向为索引从小到大。
+
 [loop](#loop)为false时，自动轮播到最后一页时停止轮播。手势切换完成后，如果当前页面不是最后一页，自动轮播将继续播放。当Swiper不可见时会停止轮播。
 
 **起始版本：** 7
@@ -46,7 +49,9 @@ autoPlay(value: boolean)
 autoPlay(autoPlay: boolean, options: AutoPlayOptions)
 ```
 
-设置子组件是否自动播放。options入参控制手指或鼠标按下屏幕时子组件是否停止自动播放。当[loop](#loop)设置为false时，自动轮播将在到达最后一页时停止。在通过手势切换且未处于最后一页的情况下，轮播将继续进行。Swiper在不可见时，轮播也将停止。
+设置子组件是否自动播放。options入参控制手指或鼠标按下屏幕时子组件是否停止自动播放。
+
+当[loop](#loop)设置为false时，自动轮播将在到达最后一页时停止。在通过手势切换且未处于最后一页的情况下，轮播将继续进行。Swiper在不可见时，轮播也将停止。
 
 **起始版本：** 18
 
@@ -71,7 +76,7 @@ autoPlay(autoPlay: boolean, options: AutoPlayOptions)
 cachedCount(value: number)
 ```
 
-设置预加载子组件个数，以当前页面为基准，加载当前显示页面的前后个数。前面item删除，后面会向前补位。例如cachedCount=1时，会将当前显示页面在索引序号上相邻的前一页和后一页的子组件都预加载。如果设置为按组翻页，即 displayCount的swipeByGroup参数设为true，预加载时会以组为基本单位。例如cachedCount=1，swipeByGroup=true时，会将当前组的前面一组和后面一组的子组件都预加载。
+设置预加载子组件个数，以当前页面为基准，加载当前显示页面的前后个数。前面item删除，后面会向前补位。例如cachedCount=1时，会将当前显示页面在索引序号上相邻的前一页和后一页的子组件都预加载。如果设置为按组翻页，即displayCount的swipeByGroup参数设为true，预加载时会以组为基本单位。例如cachedCount=1，swipeByGroup=true时，会将当前组的前面一组和后面一组的子组件都预加载。
 
 > **说明：**
 
@@ -123,7 +128,7 @@ cachedCount(count: number, isShown: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | count | number | 是 | 预加载子组件个数。默认值：1取值范围：[0, +∞)，设置小于0的值时，按照默认值处理。 |
-| isShown | boolean | 是 | 预加载范围内的节点是否进行绘制，不下渲染树。true：预加载范围内的节点进行绘制；false：预加载范围内的节点不进行绘制。传入非法值时，按false处 理。 |
+| isShown | boolean | 是 | 预加载范围内的节点是否进行绘制，不下渲染树。true：预加载范围内的节点进行绘制；false：预加载范围内的节点不进行绘制。传入非法值时，按false处理。 |
 
 ## cachedCount
 
@@ -159,7 +164,7 @@ cachedCount(count: number, options: CachedCountOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| count | number | 是 | 预加载子组件个数。。 取值范围：[0, +∞)。 |
+| count | number | 是 | 预加载子组件个数。。取值范围：[0, +∞)。 |
 | options | [CachedCountOptions](arkts-arkui-cachedcountoptions-i.md) | 是 | 预加载子组件的配置选项。对象属性包括：isShown（预加载范围内的节点是否进行绘制）和independent（是否按实际子组件个数计算）。 |
 
 ## curve
@@ -182,7 +187,7 @@ curve(value: Curve | string | ICurve)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Curve \| string \| [ICurve](arkts-arkui-icurve-i.md) | 是 | Swiper的动画曲线。string类型来源[curves.init](../arkts-apis/arkts-arkui-curves-init-f.md)， [curves.steps](../arkts-apis/arkts-arkui-curves-steps-f.md)，[curves.cubicBezier](../arkts-apis/arkts-arkui-curves-cubicbezier-f.md)， [curves.spring](../arkts-apis/arkts-arkui-curves-spring-f.md)函数从API version 9开始废弃，推荐使用Curve和ICurve类型。默认值： [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)(-1, 1, 328, 34)<br>**起始版本：** 8 - 9 |
+| value | Curve \| string \| ICurve | 是 | Swiper的动画曲线。string类型来源[curves.init](../arkts-apis/arkts-arkui-curves-init-f.md)，[curves.steps](../arkts-apis/arkts-arkui-curves-steps-f.md)，[curves.cubicBezier](../arkts-apis/arkts-arkui-curves-cubicbezier-f.md)，[curves.spring](../arkts-apis/arkts-arkui-curves-spring-f.md)函数从API version 9开始废弃，推荐使用Curve和ICurve类型。默认值：[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)(-1, 1, 328, 34)<br>**起始版本：** 8 - 9 |
 
 ## customContentTransition
 
@@ -190,7 +195,17 @@ curve(value: Curve | string | ICurve)
 customContentTransition(transition: SwiperContentAnimatedTransition)
 ```
 
-自定义Swiper页面切换动画。在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发回调，开发者可以在回调中设置透明度、缩放比例、位移等属性来自定义切换动画。使用说明：1、循环场景下，设置prevMargin和nextMargin属性，使得Swiper前后端显示同一页面时，该接口不生效。2、在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md)回调。例如，当视窗内有下 标为0、1的两个页面时，会每帧触发两次index值分别为0和1的回调。3、设置displayCount属性的swipeByGroup参数为true时，若同组中至少有一个页面在视窗内时，则会对同组中所有页面触发回调，若同组所有页面均不在视窗内时，则会一起下渲染树。4、在页面跟手滑动和离手后执行切换动画的过程中，默认动画（页面滑动）依然会发生，若希望页面不滑动，可以设置主轴方向上负的位移（translate属性）来抵消页面滑动。例如：当displayCount属性值为2，视窗内有下标为0、1 的两个页面时，页面水平滑动过程中，可以逐帧设置第0页的translate属性在x轴上的值为-position * mainAxisLength来抵消第0页的位移，设置第1页的translate属性在x轴上的值为-(position  
+自定义Swiper页面切换动画。在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发回调，开发者可以在回调中设置透明度、缩放比例、位移等属性来自定义切换动画。
+
+使用说明：
+
+1、循环场景下，设置prevMargin和nextMargin属性，使得Swiper前后端显示同一页面时，该接口不生效。
+
+2、在页面跟手滑动和离手后执行切换动画的过程中，会对视窗内所有页面逐帧触发[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md)回调。例如，当视窗内有下标为0、1的两个页面时，会每帧触发两次index值分别为0和1的回调。
+
+3、设置displayCount属性的swipeByGroup参数为true时，若同组中至少有一个页面在视窗内时，则会对同组中所有页面触发回调，若同组所有页面均不在视窗内时，则会一起下渲染树。
+
+4、在页面跟手滑动和离手后执行切换动画的过程中，默认动画（页面滑动）依然会发生，若希望页面不滑动，可以设置主轴方向上负的位移（translate属性）来抵消页面滑动。例如：当displayCount属性值为2，视窗内有下标为0、1的两个页面时，页面水平滑动过程中，可以逐帧设置第0页的translate属性在x轴上的值为-position * mainAxisLength来抵消第0页的位移，设置第1页的translate属性在x轴上的值为-(position  
 - 1) * mainAxisLength来抵消第1页的位移。
 
 **起始版本：** 12
@@ -264,7 +279,13 @@ displayArrow(value: ArrowStyle | boolean, isHoverShow?: boolean)
 displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)
 ```
 
-设置Swiper视窗内元素显示个数。使用number类型时，子元素主轴宽度会基于Swiper主轴宽度适应。子组件按照主轴均分Swiper宽度（减去displayCount-1个itemSpace）的方式进行主轴拉伸（收缩）布局，设置为小于等于0的值时，按默认值1显 示。使用string类型时，根据子元素的主轴宽度线性布局，不再适应Swiper主轴宽度。此时value值仅支持设置为'auto'，设置 [customContentTransition](#customcontenttransition)和 [onContentDidScroll](#oncontentdidscroll)事件不生效。使用SwiperAutoFill类型时，子元素主轴宽度会基于Swiper主轴宽度适应。通过设置一个子组件最小宽度值minSize，会根据Swiper当前宽度和minSize值自动计算并更改一页内元素显示个数。当minSize为空或 者小于等于0时，Swiper显示1列。
+设置Swiper视窗内元素显示个数。
+
+使用number类型时，子元素主轴宽度会基于Swiper主轴宽度适应。子组件按照主轴均分Swiper宽度（减去displayCount-1个itemSpace）的方式进行主轴拉伸（收缩）布局，设置为小于等于0的值时，按默认值1显示。
+
+使用string类型时，根据子元素的主轴宽度线性布局，不再适应Swiper主轴宽度。此时value值仅支持设置为'auto'，设置[customContentTransition](#customcontenttransition)和[onContentDidScroll](#oncontentdidscroll)事件不生效。
+
+使用SwiperAutoFill类型时，子元素主轴宽度会基于Swiper主轴宽度适应。通过设置一个子组件最小宽度值minSize，会根据Swiper当前宽度和minSize值自动计算并更改一页内元素显示个数。当minSize为空或者小于等于0时，Swiper显示1列。
 
 > **说明：**
 
@@ -280,7 +301,9 @@ displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)
 > false。
 > 
 > - 从API version 18开始，该接口支持在attributeModifier中调用。
-当导航点样式设定为圆形导航点，视窗内显示子元素数量大于1（多页场景）<!--RP1--><!--RP1End-->，显示导航点数量情况如下表：  
+
+当导航点样式设定为圆形导航点，视窗内显示子元素数量大于1（多页场景）<!--RP1--><!--RP1End-->，显示导航点数量情况如下表：
+
 | 子元素总数量是否大于视窗内显示的子元素数量 | 是否按组翻页 | 是否循环 | 圆形导航点显示数量 | 说明 | | ------------------------------------------ | ------------ | --------------- | ------------------------------------------------------------ | ---------------------------------------- | | 是 | 是 | loop设置为true | 圆形导航点的数量将与组数相等（组数计算方式为子元素总数量除以视窗内显示的子元素数量，若除不尽，则向上取整） | 该效果在displayCount设置为'auto'时不生效 | | 是 | 是 | loop设置为false | 圆形导航点的数量将与组数相等（组数计算方式为子元素总数量除以视窗内显示的子元素数量，若除不尽，则向上取整） | 该效果在displayCount设置为'auto'时不生效 | | 是 | 否 | loop设置为true | 圆形导航点的数量将与实际可翻页次数一致（显示导航点的数量等于子元素总数量） | —— | | 是 | 否 | loop设置为false | 圆形导航点的数量将与实际可翻页次数一致（计算方式是子元素的总数量减去视窗内显示的子元素数量+1个） | 该效果在displayCount设置为'auto'时不生效 | | 否（同时子元素的总数量大于0） | —— | —— | 显示1个圆形导航点 | 该效果在displayCount设置为'auto'时不生效 | | 否（同时子元素的总数量等于0） | —— | —— | 显示0个圆形导航点 | —— |
 
 **起始版本：** 8
@@ -296,7 +319,7 @@ displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number \| string \| [SwiperAutoFill](arkts-arkui-swiperautofill-i.md) | 是 | 视窗内显示的子元素个数。默认值：1取值范围：(0, +∞)，设置小于等于0的值时，按照默认值处理。<br>**起始版本：** 8 - 9 |
-| swipeByGroup | boolean | 否 | 是否按组进行翻页。如果设为true，在翻页时会按组进行翻页，每组内子元素的数量为displayCount value的值；如果为false，则为默认翻页行为， 即按照子元素进行翻页。默认值：false<br>**起始版本：** 11 |
+| swipeByGroup | boolean | 否 | 是否按组进行翻页。如果设为true，在翻页时会按组进行翻页，每组内子元素的数量为displayCount value的值；如果为false，则为默认翻页行为，即按照子元素进行翻页。默认值：false<br>**起始版本：** 11 |
 
 ## displayCount
 
@@ -304,7 +327,17 @@ displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)
 displayCount(value: number | string | SwiperAutoFill | ItemFillPolicy, swipeByGroup?: boolean)
 ```
 
-设置Swiper视窗内元素显示个数。使用number类型时，子元素主轴宽度会基于Swiper主轴宽度适应。子组件按照主轴均分Swiper宽度（减去displayCount-1个itemSpace）的方式进行主轴拉伸（收缩）布局，设置为小于等于0的值时，按默认值1显 示。使用string类型时，根据子元素的主轴宽度线性布局，不再适应Swiper主轴宽度。此时value值仅支持设置为'auto'，设置 [customContentTransition](#customcontenttransition)和 [onContentDidScroll](#oncontentdidscroll)事件不生效。使用SwiperAutoFill类型时，子元素主轴宽度会基于Swiper主轴宽度适应。通过设置一个子组件最小宽度值minSize，会根据Swiper当前宽度和minSize值自动计算并更改一页内元素显示个数。当minSize为空或 者小于等于0时，Swiper显示1列。使用ItemFillPolicy类型时，子元素主轴宽度会基于Swiper主轴宽度适应。将根据Swiper组件宽度对应断点类型确定显示个数。例如，设置断点类型为ItemFillPolicy.BREAKPOINT_DEFAULT时，在 组件宽度相当于sm及更小断点区间时显示1列，相当于md断点区间时显示2列，相当于lg及更大断点区间时显示3列。参数说明参考 [displayCount](#displaycount) 。
+设置Swiper视窗内元素显示个数。
+
+使用number类型时，子元素主轴宽度会基于Swiper主轴宽度适应。子组件按照主轴均分Swiper宽度（减去displayCount-1个itemSpace）的方式进行主轴拉伸（收缩）布局，设置为小于等于0的值时，按默认值1显示。
+
+使用string类型时，根据子元素的主轴宽度线性布局，不再适应Swiper主轴宽度。此时value值仅支持设置为'auto'，设置[customContentTransition](#customcontenttransition)和[onContentDidScroll](#oncontentdidscroll)事件不生效。
+
+使用SwiperAutoFill类型时，子元素主轴宽度会基于Swiper主轴宽度适应。通过设置一个子组件最小宽度值minSize，会根据Swiper当前宽度和minSize值自动计算并更改一页内元素显示个数。当minSize为空或者小于等于0时，Swiper显示1列。
+
+使用ItemFillPolicy类型时，子元素主轴宽度会基于Swiper主轴宽度适应。将根据Swiper组件宽度对应断点类型确定显示个数。例如，设置断点类型为ItemFillPolicy.BREAKPOINT_DEFAULT时，在组件宽度相当于sm及更小断点区间时显示1列，相当于md断点区间时显示2列，相当于lg及更大断点区间时显示3列。
+
+参数说明参考[displayCount](#displaycount)。
 
 **起始版本：** 22
 
@@ -320,8 +353,8 @@ displayCount(value: number | string | SwiperAutoFill | ItemFillPolicy, swipeByGr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| [SwiperAutoFill](arkts-arkui-swiperautofill-i.md) \| [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | 是 | 视窗内显示的子元素个数。取值范围：(0, +∞)，设置小于等于0的值时，按照1处 理。 |
-| swipeByGroup | boolean | 否 | 是否按组进行翻页。如果设为true，在翻页时会按组进行翻页，每组内子元素的数量为displayCount的值；如果为false，则为默认翻页行为，即按照子元素 进行翻页。默认值：false |
+| value | number \| string \| [SwiperAutoFill](arkts-arkui-swiperautofill-i.md) \| [ItemFillPolicy](../arkts-apis/arkts-arkui-itemfillpolicy-i.md) | 是 | 视窗内显示的子元素个数。取值范围：(0, +∞)，设置小于等于0的值时，按照1处理。 |
+| swipeByGroup | boolean | 否 | 是否按组进行翻页。如果设为true，在翻页时会按组进行翻页，每组内子元素的数量为displayCount的值；如果为false，则为默认翻页行为，即按照子元素进行翻页。默认值：false |
 
 ## displayMode
 
@@ -329,7 +362,7 @@ displayCount(value: number | string | SwiperAutoFill | ItemFillPolicy, swipeByGr
 displayMode(value: SwiperDisplayMode)
 ```
 
-设置主轴方向上元素排列的模式，优先以 [displayCount](#displaycount) 设置的个数显示，displayCount未设置时本属性生效。
+设置主轴方向上元素排列的模式，优先以[displayCount](#displaycount)设置的个数显示，displayCount未设置时本属性生效。
 
 **起始版本：** 7
 
@@ -351,7 +384,11 @@ displayMode(value: SwiperDisplayMode)
 duration(value: number)
 ```
 
-设置子组件切换的动画时长。duration需要和[curve](#curve)一起使用。curve默认曲线为[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)，此时动画时长只受曲线自身参数影响，不再受duration的控制。不受 duration控制的曲线可以查阅[插值计算](../arkts-apis/arkts-curves.md)模块，比如，[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md)、 [responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md)和interpolatingSpring类型的曲线不受duration控制。如果希 望动画时长受到duration控制，需要给curve设置其他曲线。
+设置子组件切换的动画时长。
+
+duration需要和[curve](#curve)一起使用。
+
+curve默认曲线为[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)，此时动画时长只受曲线自身参数影响，不再受duration的控制。不受duration控制的曲线可以查阅[插值计算](../arkts-apis/arkts-curves.md)模块，比如，[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md)、[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md)和interpolatingSpring类型的曲线不受duration控制。如果希望动画时长受到duration控制，需要给curve设置其他曲线。
 
 **起始版本：** 7
 
@@ -371,7 +408,7 @@ duration(value: number)
 effectMode(value: EdgeEffect)
 ```
 
-设置边缘滑动效果，[loop](#loop)为false或Swiper视窗内一屏显示所有子节点时生效。调用 [SwiperController.changeIndex()](arkts-arkui-swipercontroller-c.md#changeindex)、 [SwiperController.showNext()](arkts-arkui-swipercontroller-c.md#shownext)和 [SwiperController.showPrevious()](arkts-arkui-swipercontroller-c.md#showprevious)接口跳转至首尾页时不生效回弹。
+设置边缘滑动效果，[loop](#loop)为false或Swiper视窗内一屏显示所有子节点时生效。调用[SwiperController.changeIndex()](arkts-arkui-swipercontroller-c.md#changeindex)、[SwiperController.showNext()](arkts-arkui-swipercontroller-c.md#shownext)和[SwiperController.showPrevious()](arkts-arkui-swipercontroller-c.md#showprevious)接口跳转至首尾页时不生效回弹。
 
 **起始版本：** 8
 
@@ -393,7 +430,9 @@ effectMode(value: EdgeEffect)
 index(value: number)
 ```
 
-设置当前在容器中显示的子组件的索引值。从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+设置当前在容器中显示的子组件的索引值。
+
+从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **起始版本：** 7
 
@@ -429,7 +468,7 @@ indicator(value: DotIndicator | DigitIndicator | boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) \| boolean | 是 | 导航点指示器样式。    - DotIndicator：圆点指示器样式，适用于展示简洁的位置提示。     - DigitIndicator：数字指示器样式，适用于需要明确显示当前位置的场景。    - boolean：是 否启用导航点指示器。设置为true启用，false不启用。   默认值：true默认类型：DotIndicator<br>**起始版本：** 7 - 9 |
+| value | [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) \| boolean | 是 | 导航点指示器样式。    - DotIndicator：圆点指示器样式，适用于展示简洁的位置提示。    - DigitIndicator：数字指示器样式，适用于需要明确显示当前位置的场景。    - boolean：是否启用导航点指示器。设置为true启用，false不启用。   默认值：true默认类型：DotIndicator<br>**起始版本：** 7 - 9 |
 
 ## indicator
 
@@ -528,7 +567,7 @@ interval(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 自动播放时播放的时间间隔。当该值小于[duration](#duration)属性值时，翻页完成后会立即开始下一次轮播。默认 值：3000单位：毫秒取值范围：[0, +∞)，设置小于0的值时，按照默认值处理。 |
+| value | number | 是 | 自动播放时播放的时间间隔。当该值小于[duration](#duration)属性值时，翻页完成后会立即开始下一次轮播。默认值：3000单位：毫秒取值范围：[0, +∞)，设置小于0的值时，按照默认值处理。 |
 
 ## itemSpace
 
@@ -536,7 +575,9 @@ interval(value: number)
 itemSpace(value: number | string)
 ```
 
-设置子组件与子组件之间间隙。不支持设置百分比。类型为number时，默认单位vp。类型为string时，需要显式指定像素单位，如'10px'；未指定像素单位时，如'10'，单位为vp。
+设置子组件与子组件之间间隙。不支持设置百分比。
+
+类型为number时，默认单位vp。类型为string时，需要显式指定像素单位，如'10px'；未指定像素单位时，如'10'，单位为vp。
 
 **起始版本：** 7
 
@@ -580,7 +621,9 @@ loop(value: boolean)
 maintainVisibleContentPosition(enabled: boolean)
 ```
 
-设置显示区域上方或前方插入或删除数据时是否保持可见内容位置不变。适用于使用单一 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)作为Swiper子节点的情况，通过LazyForEach的 [onDataAdd](arkts-arkui-datachangelistener-i.md#ondataadd)、[onDataDelete](arkts-arkui-datachangelistener-i.md#ondatadelete)等接口修改数据源。其他场景 下，显示区域上方或前方插入或删除数据，可见内容位置会变化。在 [displayCount](#displaycount) 属性的swipeByGroup参数设置为true，即按组翻页生效时，一次在显示区域上方或前方插入或删除数据，且插入或删除的是一组节点数量倍数的数据量时，才能保持可见内容位置不变，否则可见内容位置可能会随每组数据重新分组改变。
+设置显示区域上方或前方插入或删除数据时是否保持可见内容位置不变。适用于使用单一[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)作为Swiper子节点的情况，通过LazyForEach的[onDataAdd](arkts-arkui-datachangelistener-i.md#ondataadd)、[onDataDelete](arkts-arkui-datachangelistener-i.md#ondatadelete)等接口修改数据源。其他场景下，显示区域上方或前方插入或删除数据，可见内容位置会变化。
+
+在[displayCount](#displaycount)属性的swipeByGroup参数设置为true，即按组翻页生效时，一次在显示区域上方或前方插入或删除数据，且插入或删除的是一组节点数量倍数的数据量时，才能保持可见内容位置不变，否则可见内容位置可能会随每组数据重新分组改变。
 
 **起始版本：** 20
 
@@ -596,7 +639,7 @@ maintainVisibleContentPosition(enabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 设置显示区域上方或前方插入或删除数据时是否要保持可见内容位置不变。默认值：false，显示区域上方或前方插入或删除数据时可见内容位置会跟随变化。 true：显示区 域上方或前方插入或删除数据时可见内容位置不变。如果改变数据源是在动画过程中，由于目标索引变化会导致动画停止。 |
+| enabled | boolean | 是 | 设置显示区域上方或前方插入或删除数据时是否要保持可见内容位置不变。默认值：false，显示区域上方或前方插入或删除数据时可见内容位置会跟随变化。 true：显示区域上方或前方插入或删除数据时可见内容位置不变。如果改变数据源是在动画过程中，由于目标索引变化会导致动画停止。 |
 
 ## nestedScroll
 
@@ -631,7 +674,13 @@ nestedScroll(value: SwiperNestedScrollMode)
 nextMargin(value: Length, ignoreBlank?: boolean)
 ```
 
-设置后边距，用于露出后一项的一小部分，使用效果可以参考 [示例1设置导航点交互及翻页动效](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#示例1设置导航点交互及翻页动效)。仅当Swiper子组件的布局方式为 拉伸时生效，主要包括两种场景：1、displayMode属性设置为SwiperDisplayMode.STRETCH；2、displayCount属性设置为number类型。当主轴方向为横向布局时，nextMargin或prevMargin中任意一个大于子组件测算的宽度，nextMargin和prevMargin均不显示。当主轴方向为纵向布局时，nextMargin或prevMargin中任意一个大于子组件测算的高度，nextMargin和prevMargin均不显示。使用nextMargin/prevMargin接口时，不要对子组件进行尺寸范围限制，否则子节点主轴将不会被拉伸到预期长度，边距失去效果。
+设置后边距，用于露出后一项的一小部分，使用效果可以参考[示例1设置导航点交互及翻页动效](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#示例1设置导航点交互及翻页动效)。仅当Swiper子组件的布局方式为拉伸时生效，主要包括两种场景：1、displayMode属性设置为SwiperDisplayMode.STRETCH；2、displayCount属性设置为number类型。
+
+当主轴方向为横向布局时，nextMargin或prevMargin中任意一个大于子组件测算的宽度，nextMargin和prevMargin均不显示。
+
+当主轴方向为纵向布局时，nextMargin或prevMargin中任意一个大于子组件测算的高度，nextMargin和prevMargin均不显示。
+
+使用nextMargin/prevMargin接口时，不要对子组件进行尺寸范围限制，否则子节点主轴将不会被拉伸到预期长度，边距失去效果。
 
 > **说明：**
 
@@ -650,7 +699,7 @@ nextMargin(value: Length, ignoreBlank?: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 后边距。不支持设置百分比。默认值：0 |
-| ignoreBlank | boolean | 否 | 非loop场景下尾页不显示nextMargin。在非loop场景下，设置为true时，尾页不显示空白的nextMargin，尾页的右边缘与Swiper视窗右边缘 对齐；设置false时，尾页显示空白nextMargin，尾页的右边缘与Swiper视窗右边缘的距离为nextMargin。默认值：false    **说明：**尾页场景下，prevMargin和 nextMargin的值相加作为左边边距显示前一个页面。<br>**起始版本：** 12 |
+| ignoreBlank | boolean | 否 | 非loop场景下尾页不显示nextMargin。在非loop场景下，设置为true时，尾页不显示空白的nextMargin，尾页的右边缘与Swiper视窗右边缘对齐；设置false时，尾页显示空白nextMargin，尾页的右边缘与Swiper视窗右边缘的距离为nextMargin。默认值：false    **说明：**尾页场景下，prevMargin和nextMargin的值相加作为左边边距显示前一个页面。<br>**起始版本：** 12 |
 
 ## onAnimationEnd
 
@@ -658,7 +707,9 @@ nextMargin(value: Length, ignoreBlank?: boolean)
 onAnimationEnd(event: OnSwiperAnimationEndCallback)
 ```
 
-切换动画结束时触发该回调。当Swiper切换动效结束时触发，包括动画过程中手势中断，通过SwiperController调用finishAnimation。
+切换动画结束时触发该回调。
+
+当Swiper切换动效结束时触发，包括动画过程中手势中断，通过SwiperController调用finishAnimation。
 
 **起始版本：** 9
 
@@ -710,7 +761,9 @@ onAnimationStart(event: OnSwiperAnimationStartCallback)
 onChange(event: Callback<number>)
 ```
 
-当前显示元素索引变化时触发该事件，返回值为当前显示元素的索引值。Swiper组件结合LazyForEach使用时，不能在onChange事件里触发子页面UI的刷新。
+当前显示元素索引变化时触发该事件，返回值为当前显示元素的索引值。
+
+Swiper组件结合LazyForEach使用时，不能在onChange事件里触发子页面UI的刷新。
 
 > **说明：**
 
@@ -729,7 +782,7 @@ onChange(event: Callback<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback & lt;number & gt; | 是 | 当前显示元素的索引。<br>**起始版本：** 18 |
+| event | Callback&lt;number&gt; | 是 | 当前显示元素的索引。<br>**起始版本：** 18 |
 
 ## onContentDidScroll
 
@@ -737,7 +790,15 @@ onChange(event: Callback<number>)
 onContentDidScroll(handler: ContentDidScrollCallback)
 ```
 
-监听Swiper页面滑动事件。使用说明：1、循环场景下，设置prevMargin和nextMargin属性，使得Swiper前后端显示同一页面时，该接口不生效。2、在页面滑动过程中，会对视窗内所有页面逐帧触发[ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md)回调。例如，当视窗内有下标为0、1的两个页面时，会每帧触发两次 index值分别为0和1的回调。3、设置displayCount属性的swipeByGroup参数为true时，若同组中至少有一个页面在视窗内时，则会对同组中所有页面触发回调。
+监听Swiper页面滑动事件。
+
+使用说明：
+
+1、循环场景下，设置prevMargin和nextMargin属性，使得Swiper前后端显示同一页面时，该接口不生效。
+
+2、在页面滑动过程中，会对视窗内所有页面逐帧触发[ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md)回调。例如，当视窗内有下标为0、1的两个页面时，会每帧触发两次index值分别为0和1的回调。
+
+3、设置displayCount属性的swipeByGroup参数为true时，若同组中至少有一个页面在视窗内时，则会对同组中所有页面触发回调。
 
 **起始版本：** 12
 
@@ -760,8 +821,11 @@ onContentWillScroll(handler: ContentWillScrollCallback)
 ```
 
 Swiper滑动行为拦截事件，在滑动前触发。Swiper会依据该事件的返回值来决定是否允许此次滑动行为。若返回true，表示允许此次滑动行为，Swiper页面将跟随滑动。若返回false，表示不允许此次滑动，页面将保持静止。
+
 1. 触发该事件的场景仅限于手势操作，具体包括手指滑动、滚动鼠标滚轮以及使用键盘方向键进行焦点移动。
+
 2. 在手指滑动的过程中，每帧都将触发该事件，系统会依据事件的返回值判断是否对每帧的滑动做出响应。
+
 3. 对于滚动鼠标滚轮和使用键盘方向键进行焦点移动的场景，每次翻页操作都会触发一次该事件，翻页是否被允许将根据事件的返回值来决定。
 
 **起始版本：** 15
@@ -800,7 +864,7 @@ onGestureSwipe(event: OnSwiperGestureSwipeCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [OnSwiperGestureSwipeCallback](arkts-arkui-onswipergestureswipecallback-t.md) | 是 | 在页面跟手滑动过程中，逐帧触发的回调。onGestureSwipe回调触发时机在onTouch之后，如果需要在离手后执行操作建议使用 [onAnimationStart](#onanimationstart)。<br>**起始版本：** 18 |
+| event | [OnSwiperGestureSwipeCallback](arkts-arkui-onswipergestureswipecallback-t.md) | 是 | 在页面跟手滑动过程中，逐帧触发的回调。onGestureSwipe回调触发时机在onTouch之后，如果需要在离手后执行操作建议使用[onAnimationStart](#onanimationstart)。<br>**起始版本：** 18 |
 
 ## onScrollStateChanged
 
@@ -848,7 +912,7 @@ onSelected(event: Callback<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback & lt;number & gt; | 是 | 当前选中元素的索引。 |
+| event | Callback&lt;number&gt; | 是 | 当前选中元素的索引。 |
 
 ## onUnselected
 
@@ -872,7 +936,7 @@ onUnselected(event: Callback<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback & lt;number & gt; | 是 | 将要隐藏元素的索引。 |
+| event | Callback&lt;number&gt; | 是 | 将要隐藏元素的索引。 |
 
 ## pageFlipMode
 
@@ -904,7 +968,13 @@ pageFlipMode(mode: Optional<PageFlipMode>)
 prevMargin(value: Length, ignoreBlank?: boolean)
 ```
 
-设置前边距，用于露出前一项的一小部分，使用效果可以参考 [示例1设置导航点交互及翻页动效](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#示例1设置导航点交互及翻页动效)。仅当Swiper子组件的布局方式为 拉伸时生效，主要包括两种场景：1、displayMode属性设置为SwiperDisplayMode.STRETCH；2、displayCount属性设置为number类型。当主轴方向为横向布局时，nextMargin/prevMargin中任意一个大于子组件测算的宽度，nextMargin和prevMargin均不显示。当主轴方向为纵向布局时，nextMargin/prevMargin中任意一个大于子组件测算的高度，nextMargin和prevMargin均不显示。使用nextMargin/prevMargin接口时，不要对子组件进行尺寸范围限制，否则子节点主轴将不会被拉伸到预期长度，边距失去效果。
+设置前边距，用于露出前一项的一小部分，使用效果可以参考[示例1设置导航点交互及翻页动效](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#示例1设置导航点交互及翻页动效)。仅当Swiper子组件的布局方式为拉伸时生效，主要包括两种场景：1、displayMode属性设置为SwiperDisplayMode.STRETCH；2、displayCount属性设置为number类型。
+
+当主轴方向为横向布局时，nextMargin/prevMargin中任意一个大于子组件测算的宽度，nextMargin和prevMargin均不显示。
+
+当主轴方向为纵向布局时，nextMargin/prevMargin中任意一个大于子组件测算的高度，nextMargin和prevMargin均不显示。
+
+使用nextMargin/prevMargin接口时，不要对子组件进行尺寸范围限制，否则子节点主轴将不会被拉伸到预期长度，边距失去效果。
 
 > **说明：**
 
@@ -923,7 +993,7 @@ prevMargin(value: Length, ignoreBlank?: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 前边距。不支持设置百分比。默认值：0 |
-| ignoreBlank | boolean | 否 | 非loop场景下首页不显示prevMargin。在非loop场景下，设置为true时，首页不显示空白的prevMargin，首页的左边缘与Swiper视窗左边缘 对齐；设置false时，首页显示空白prevMargin，首页的左边缘与Swiper视窗左边缘的距离为prevMargin。默认值：false    **说明：**首页场景下，prevMargin和 nextMargin的值相加作为右边边距显示后一个页面。<br>**起始版本：** 12 |
+| ignoreBlank | boolean | 否 | 非loop场景下首页不显示prevMargin。在非loop场景下，设置为true时，首页不显示空白的prevMargin，首页的左边缘与Swiper视窗左边缘对齐；设置false时，首页显示空白prevMargin，首页的左边缘与Swiper视窗左边缘的距离为prevMargin。默认值：false    **说明：**首页场景下，prevMargin和nextMargin的值相加作为右边边距显示后一个页面。<br>**起始版本：** 12 |
 
 ## vertical
 

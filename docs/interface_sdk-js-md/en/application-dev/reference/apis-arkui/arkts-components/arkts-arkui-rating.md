@@ -1,7 +1,9 @@
 # Rating
 
 The **Rating** component provides a rating bar.
+
 > **NOTE**
+
 > - If the parent node of the **Rating** component has fixed dimensions, you must also specify the width and height > for the **Rating** component, or set its parent node's clip > attribute to **true**.
 
 ## Child Components
@@ -38,11 +40,15 @@ Rating(options?: RatingOptions)
 
 | Name | Description |
 | --- | --- |
+| [RatingConfiguration](arkts-arkui-ratingconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
+| [RatingOptions](arkts-arkui-ratingoptions-i.md) | Provides configuration options for the **Rating** component. |
+| [StarStyleOptions](arkts-arkui-starstyleoptions-i.md) | Provides style settings for the selected, unselected, and partially selected stars in the **Rating** component. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md) | Defines the callback triggered when the rating value changes. |
 
 ## Examples
 

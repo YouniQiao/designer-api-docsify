@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getIsoDep
@@ -30,7 +30,7 @@ function getIsoDep(tagInfo: TagInfo): IsoDepTag
 
 | 类型 | 说明 |
 | --- | --- |
-| [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md) | IsoDep类型Tag对象，通过该对象访问IsoDep类型的相关接口。 |
+| IsoDepTag | IsoDep类型Tag对象，通过该对象访问IsoDep类型的相关接口。 |
 
 **错误码：**
 

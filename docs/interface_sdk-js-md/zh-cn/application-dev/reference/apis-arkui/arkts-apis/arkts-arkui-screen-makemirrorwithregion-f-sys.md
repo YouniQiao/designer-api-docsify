@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import screen from '@kit.ArkUI';
-import screenshot from '@kit.ArkUIshot';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## makeMirrorWithRegion
@@ -26,14 +25,14 @@ function makeMirrorWithRegion(mainScreen: number, mirrorScreen: Array<number>, m
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mainScreen | number | 是 | 主屏幕ID，该参数仅支持正整数输入。 |
-| mirrorScreen | Array & lt;number & gt; | 是 | 镜像屏幕ID集合。其中ID应为正整数。 |
-| mainScreenRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | 是 | 主屏创建镜像的矩形区域。 |
+| mirrorScreen | Array&lt;number&gt; | 是 | 镜像屏幕ID集合。其中ID应为正整数。 |
+| mainScreenRegion | Rect | 是 | 主屏创建镜像的矩形区域。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象。返回镜像屏幕的群组id，其中id为正整数。 |
+| Promise&lt;number&gt; | Promise对象。返回镜像屏幕的群组id，其中id为正整数。 |
 
 **错误码：**
 

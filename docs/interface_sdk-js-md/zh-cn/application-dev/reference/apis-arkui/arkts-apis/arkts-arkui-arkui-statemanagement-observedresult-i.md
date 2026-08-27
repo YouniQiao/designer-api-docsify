@@ -36,7 +36,11 @@ decoratorInfo: Array<DecoratorInfo>
 isObserved: boolean
 ```
 
-对象是否可被观察。true：表示是可被观察对象。false：表示不是可被观察对象。
+对象是否可被观察。
+
+true：表示是可被观察对象。
+
+false：表示不是可被观察对象。
 
 **类型：** boolean
 
@@ -54,7 +58,12 @@ isObserved: boolean
 reason: string
 ```
 
-对象是否可被观察的原因。不可被观察原因：对象本身是不可被观察的。可被观察原因或使用场景：
+对象是否可被观察的原因。
+
+不可被观察原因：对象本身是不可被观察的。
+
+可被观察原因或使用场景：
+
 1. V1对象被[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md)装饰器装饰或对象是被[makeV1Observed](arkts-arkui-arkui-statemanagement-uiutils-c.md#makev1observed)方法转换的。
 2. V1对象被[@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md)装饰器装饰或对象是被[makeV1Observed](arkts-arkui-arkui-statemanagement-uiutils-c.md#makev1observed)方法转换的，但对象没有被UI组件使用。
 3. V1对象被[enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility)方法转换后传入V2组件。

@@ -12,7 +12,7 @@ You can use this module to reference the ability public module class.
 ## Modules to Import
 
 ```TypeScript
-import common from '@kit.AbilityKit';
+import { common } from '@kit.AbilityKit';
 ```
 
 ## Summary

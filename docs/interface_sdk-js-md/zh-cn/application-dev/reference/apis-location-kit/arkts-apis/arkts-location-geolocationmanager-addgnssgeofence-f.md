@@ -11,7 +11,7 @@
 function addGnssGeofence(fenceRequest: GnssGeofenceRequest): Promise<number>
 ```
 
-添加一个GNSS地理围栏，并订阅地理围栏事件。使用Promise异步回调。调用该接口前建议先通过 [geoLocationManager.isGnssFenceServiceSupported](arkts-location-geolocationmanager-isgnssfenceservicesupported-f.md)接口判断对应能力是否支持。 GNSS地理围栏功能依赖GNSS定位芯片（仅部分型号支持），如果设备无此芯片或使用的芯片型号不支持该功能，则返回错误码801（Capability not supported）。 单应用添加地理围栏上限为100，超过上限将移除剩余地理围栏中存活时间最短的围栏。
+添加一个GNSS地理围栏，并订阅地理围栏事件。使用Promise异步回调。调用该接口前建议先通过[geoLocationManager.isGnssFenceServiceSupported](arkts-location-geolocationmanager-isgnssfenceservicesupported-f.md)接口判断对应能力是否支持。GNSS地理围栏功能依赖GNSS定位芯片（仅部分型号支持），如果设备无此芯片或使用的芯片型号不支持该功能，则返回错误码801（Capability not supported）。单应用添加地理围栏上限为100，超过上限将移除剩余地理围栏中存活时间最短的围栏。
 
 **起始版本：** 12
 
@@ -23,13 +23,13 @@ function addGnssGeofence(fenceRequest: GnssGeofenceRequest): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fenceRequest | [GnssGeofenceRequest](arkts-location-geolocationmanager-gnssgeofencerequest-i.md) | 是 | 添加GNSS地理围栏请求参数。包含圆形围栏信息、需要监听的地理围栏事件、地理围栏事件触发后弹出的通知对象和监听地理围栏事件的回调 函数。 |
+| fenceRequest | [GnssGeofenceRequest](arkts-location-geolocationmanager-gnssgeofencerequest-i.md) | 是 | 添加GNSS地理围栏请求参数。包含圆形围栏信息、需要监听的地理围栏事件、地理围栏事件触发后弹出的通知对象和监听地理围栏事件的回调函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回地理围栏ID。 |
+| Promise&lt;number&gt; | Promise对象，返回地理围栏ID。 |
 
 **错误码：**
 

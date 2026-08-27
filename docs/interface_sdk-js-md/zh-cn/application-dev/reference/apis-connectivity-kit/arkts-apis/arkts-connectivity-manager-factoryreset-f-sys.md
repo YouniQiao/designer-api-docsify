@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import manager from '@kit.ConnectivityKit';
+import { manager } from '@kit.ConnectivityKit';
 ```
 
 ## factoryReset
@@ -28,7 +28,7 @@ function factoryReset(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -18,7 +18,10 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 content?: ResourceStr
 ```
 
-加载弹出框内容。默认为空。  
+加载弹出框内容。
+
+默认为空。
+
 **说明：** 内容超过十行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)

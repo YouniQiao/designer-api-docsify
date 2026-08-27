@@ -32,7 +32,7 @@ Set rtt capability.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the setRttCapability. |
+| Promise&lt;void&gt; | The promise returned by the setRttCapability. |
 
 **Error codes:**
 

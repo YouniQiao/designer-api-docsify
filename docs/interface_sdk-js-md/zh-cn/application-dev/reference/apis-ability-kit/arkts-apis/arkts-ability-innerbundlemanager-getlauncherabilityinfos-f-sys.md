@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit';
+import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityInfos

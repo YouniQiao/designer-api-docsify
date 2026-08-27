@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import carAwareness from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## getAllCapabilityList
@@ -24,7 +24,7 @@ Returns the list of all capabilities.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Capability[] & gt; | Promise used to return the list of all capabilities. |
+| Promise&lt;Capability[]&gt; | Promise used to return the list of all capabilities. |
 
 **Error codes:**
 

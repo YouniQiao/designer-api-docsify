@@ -9,6 +9,7 @@
 > **pushDestination**) may lead to unpredictable issues.
 
 > In scenarios with deep nesting, **MultiNavigation** may encounter routing animation issues.
+
 @struct { MultiNavigation }
 
 **Since:** 14

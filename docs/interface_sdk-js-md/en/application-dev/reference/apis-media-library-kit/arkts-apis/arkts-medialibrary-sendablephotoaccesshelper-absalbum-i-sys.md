@@ -11,7 +11,7 @@ Defines the abstract interface of albums.
 ## Modules to Import
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getSharedPhotoAssets
@@ -40,7 +40,7 @@ Fetch shared photo assets in an album.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;SharedPhotoAsset & gt; | Returns the shared photo assets |
+| Array&lt;SharedPhotoAsset&gt; | Returns the shared photo assets |
 
 **Error codes:**
 

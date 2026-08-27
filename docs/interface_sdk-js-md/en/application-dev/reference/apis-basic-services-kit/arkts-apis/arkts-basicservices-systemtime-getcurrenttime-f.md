@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemTime from '@kit.BasicServicesKit';
-import systemTimer from '@kit.BasicServicesKitr';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## getCurrentTime
@@ -130,7 +129,7 @@ Obtains the time elapsed since the Unix epoch. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the time elapsed since the Unix epoch. |
+| Promise&lt;number&gt; | Promise used to return the time elapsed since the Unix epoch. |
 
 **Error codes:**
 

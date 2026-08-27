@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceClass
@@ -36,7 +36,7 @@ Obtains the class of a peer Bluetooth device. On API 10 and above, the permissio
 
 | Type | Description |
 | --- | --- |
-| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) | The class of the remote device, { |
+| DeviceClass | The class of the remote device, { |
 
 **Error codes:**
 

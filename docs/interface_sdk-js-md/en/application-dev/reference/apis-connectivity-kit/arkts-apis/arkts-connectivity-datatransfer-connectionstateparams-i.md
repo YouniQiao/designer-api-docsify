@@ -9,7 +9,7 @@ Defines the parameters for obtaining the port channel connection state.
 ## Modules to Import
 
 ```TypeScript
-import dataTransfer from '@kit.ConnectivityKit';
+import { dataTransfer } from '@kit.ConnectivityKit';
 ```
 
 ## address

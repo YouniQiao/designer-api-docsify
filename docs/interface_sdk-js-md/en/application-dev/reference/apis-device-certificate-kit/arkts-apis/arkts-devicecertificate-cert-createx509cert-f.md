@@ -100,7 +100,7 @@ Creates an **X509Cert** instance. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;X509Cert & gt; | Promise used to return the **X509Cert** instance created. |
+| Promise&lt;X509Cert&gt; | Promise used to return the **X509Cert** instance created. |
 
 **Error codes:**
 

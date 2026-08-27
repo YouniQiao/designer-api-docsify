@@ -1,6 +1,8 @@
 # CameraInput
 
-相机设备输入对象。会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。
+相机设备输入对象。
+
+会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。
 
 **起始版本：** 10
 
@@ -35,7 +37,7 @@ Delay close camera.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **错误码：**
 
@@ -70,7 +72,7 @@ Control auxiliary.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **错误码：**
 

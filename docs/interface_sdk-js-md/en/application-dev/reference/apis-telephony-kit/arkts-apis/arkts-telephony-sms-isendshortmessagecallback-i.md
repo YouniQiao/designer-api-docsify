@@ -17,7 +17,8 @@ Provides the callback for the SMS message sending result. It consists of three p
 isLastPart: boolean
 ```
 
-Whether this SMS message is the last part of a number SMS message. The default value is **false**.  
+Whether this SMS message is the last part of a number SMS message. The default value is **false**.
+
 - **true**: yes  
 - **false**: no
 

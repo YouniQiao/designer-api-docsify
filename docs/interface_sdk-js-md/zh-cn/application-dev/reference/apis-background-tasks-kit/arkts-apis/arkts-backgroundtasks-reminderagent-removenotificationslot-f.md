@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import reminderAgent from '@kit.BackgroundTasksKit';
-import reminderAgentManager from '@kit.BackgroundTasksKitManager';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## removeNotificationSlot
@@ -69,7 +68,7 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise类型异步回调。 |
+| Promise&lt;void&gt; | Promise类型异步回调。 |
 
 **示例**
 

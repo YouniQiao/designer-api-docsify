@@ -1,6 +1,6 @@
 # Verify
 
-验签接口，定义基于公钥对签名数据进行验签的方法。调用前，需通过 [createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md)方法创建一个Verify实例。按序调用Verify实例中 的init、update（可选）、verify方法完成验签操作。验签操作的示例代码详见 [签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。
+验签接口，定义基于公钥对签名数据进行验签的方法。调用前，需通过[createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md)方法创建一个Verify实例。按序调用Verify实例中的init、update（可选）、verify方法完成验签操作。验签操作的示例代码详见[签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。
 
 Verify实例不支持重复初始化，当业务方需要使用新密钥验签时，需要重新创建新Verify实例并调用init初始化。
 
@@ -8,7 +8,7 @@ Verify实例不支持重复初始化，当业务方需要使用新密钥验签�
 
 当被签名的消息较短时，可在init初始化后，（无需update）直接调用verify接口传入被签名的消息和签名（signatureData）进行验签。
 
-当被签名的消息较长时，可通过update接口分段传入被签名的消息，最后调用verify接口对消息全文进行验签。verify接口的data入参在API 10之前只 支持DataBlob， API 10之后增加支持null。业务方可在循环中调用update接口，循环结束后调用verify传入签名（signatureData）进行验签。
+当被签名的消息较长时，可通过update接口分段传入被签名的消息，最后调用verify接口对消息全文进行验签。verify接口的data入参在API 10之前只支持DataBlob， API 10之后增加支持null。业务方可在循环中调用update接口，循环结束后调用verify传入签名（signatureData）进行验签。
 
 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持update操作，update接口会返回错误码ERR_CRYPTO_OPERATION。
 
@@ -21,7 +21,7 @@ Verify实例不支持重复初始化，当业务方需要使用新密钥验签�
 ## 导入模块
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## getVerifySpec
@@ -81,7 +81,7 @@ function testGetVerifySpec() {
 init(pubKey: PubKey, callback: AsyncCallback<void>): void
 ```
 
-传入公钥初始化Verify实例。使用callback异步回调。init、update、verify为三段式接口，需要成组使用。其中init和verify必选，update 可选。
+传入公钥初始化Verify实例。使用callback异步回调。init、update、verify为三段式接口，需要成组使用。其中init和verify必选，update可选。
 
 **起始版本：** 9
 
@@ -114,7 +114,7 @@ init(pubKey: PubKey, callback: AsyncCallback<void>): void
 init(pubKey: PubKey): Promise<void>
 ```
 
-传入公钥初始化Verify实例。使用Promise异步回调。init、update、verify为三段式接口，需要成组使用。其中init和verify必选，update 可选。
+传入公钥初始化Verify实例。使用Promise异步回调。init、update、verify为三段式接口，需要成组使用。其中init和verify必选，update可选。
 
 **起始版本：** 9
 
@@ -134,7 +134,7 @@ init(pubKey: PubKey): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -152,9 +152,9 @@ init(pubKey: PubKey): Promise<void>
 initSync(pubKey: PubKey): void
 ```
 
-传入公钥初始化Verify实例，通过同步方式获取结果。initSync、updateSync、verifySync为三段式接口，需要成组使用。其中initSync和 verifySync必选，updateSync可选。
+传入公钥初始化Verify实例，通过同步方式获取结果。initSync、updateSync、verifySync为三段式接口，需要成组使用。其中initSync和verifySync必选，updateSync可选。
 
-**说明：** 建议优先使用异步API，init。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+**说明：** 建议优先使用异步API，init。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -200,13 +200,13 @@ recover(signatureData: DataBlob): Promise<DataBlob | null>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 签名数据。 |
+| signatureData | DataBlob | 是 | 签名数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;DataBlob \ | null & gt; | Promise对象，返回从签名中恢复的原始数据。 |
+| Promise&lt;DataBlob \| null&gt; | Promise对象，返回从签名中恢复的原始数据。 |
 
 **错误码：**
 
@@ -308,7 +308,7 @@ recoverSync(signatureData: DataBlob): DataBlob | null
 > 
 > - 目前仅RSA支持。
 
-**说明：** 建议优先使用异步API，[recover](#recover)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+**说明：** 建议优先使用异步API，[recover](#recover)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -320,7 +320,7 @@ recoverSync(signatureData: DataBlob): DataBlob | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 签名数据。 |
+| signatureData | DataBlob | 是 | 签名数据。 |
 
 **返回值：**
 
@@ -504,7 +504,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 追加待验签数据，使用callback异步回调完成更新。
 
-必须在对[Verify](#verify)实例使用[init](#init)或 [initSync](#initsync)初始化后，才能使用本函数。
+必须在对[Verify](#verify)实例使用[init](#init)或[initSync](#initsync)初始化后，才能使用本函数。
 
 > **说明：**
 > 
@@ -536,7 +536,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 传入的消息。 |
+| data | DataBlob | 是 | 传入的消息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当验签更新成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -557,7 +557,7 @@ update(data: DataBlob): Promise<void>
 
 追加待验签数据，使用Promise异步回调完成更新。
 
-必须在对[Verify](#verify)实例使用[init()](#init)初始化后，才能使 用本函数。
+必须在对[Verify](#verify)实例使用[init()](#init)初始化后，才能使用本函数。
 
 > **说明：**
 > 
@@ -587,13 +587,13 @@ update(data: DataBlob): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 传入的消息。 |
+| data | DataBlob | 是 | 传入的消息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -613,7 +613,7 @@ updateSync(data: DataBlob): void
 
 追加待验签数据，通过同步方式完成更新。
 
-必须在对[Verify](#verify)实例使用[initSync()](#initsync)初始化后，才 能使用本函数。
+必须在对[Verify](#verify)实例使用[initSync()](#initsync)初始化后，才能使用本函数。
 
 > **说明：**
 > 
@@ -631,7 +631,7 @@ updateSync(data: DataBlob): void
 > 
 > 当使用DSA算法进行验签，并设置了摘要算法为NoHash时，则不支持updateSync操作，updateSync接口会返回错误码ERR_CRYPTO_OPERATION。
 
-**说明：** 建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+**说明：** 建议优先使用异步API，update。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -643,7 +643,7 @@ updateSync(data: DataBlob): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 传入的消息。 |
+| data | DataBlob | 是 | 传入的消息。 |
 
 **错误码：**
 
@@ -675,8 +675,8 @@ verify(data: DataBlob, signatureData: DataBlob, callback: AsyncCallback<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 待验签的数据。 |
-| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 签名数据。 |
+| data | DataBlob | 是 | 待验签的数据。 |
+| signatureData | DataBlob | 是 | 签名数据。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签失败。 |
 
 **错误码：**
@@ -710,7 +710,7 @@ verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<b
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | 是 | 传入的消息。API 10之前只支持DataBlob， API 10之后增加支持null。 |
-| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 签名数据。 |
+| signatureData | DataBlob | 是 | 签名数据。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示验签通过；返回false表示验签不通过。 |
 
 **错误码：**
@@ -743,14 +743,14 @@ verify(data: DataBlob, signatureData: DataBlob): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 待验签的数据。 |
-| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 签名数据。 |
+| data | DataBlob | 是 | 待验签的数据。 |
+| signatureData | DataBlob | 是 | 签名数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象，返回验签结果。返回true表示验签成功，返回false表示验签失败。 |
+| Promise&lt;boolean&gt; | Promise对象，返回验签结果。返回true表示验签成功，返回false表示验签失败。 |
 
 **错误码：**
 
@@ -783,13 +783,13 @@ verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | 是 | 传入的消息。API 10之前只支持DataBlob， API 10之后增加支持null。 |
-| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 签名数据。 |
+| signatureData | DataBlob | 是 | 签名数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示验签成功，返回false表示验签失败。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示验签成功，返回false表示验签失败。 |
 
 **错误码：**
 
@@ -809,7 +809,7 @@ verifySync(data: DataBlob | null, signatureData: DataBlob): boolean
 
 对数据进行验签，通过同步方式返回验签结果。
 
-**说明：** 建议优先使用异步API，[verify](#verify)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+**说明：** 建议优先使用异步API，[verify](#verify)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -822,7 +822,7 @@ verifySync(data: DataBlob | null, signatureData: DataBlob): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | data | DataBlob \| null | 是 | 传入的消息。 |
-| signatureData | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 | 签名数据。 |
+| signatureData | DataBlob | 是 | 签名数据。 |
 
 **返回值：**
 

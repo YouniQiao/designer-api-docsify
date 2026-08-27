@@ -1,6 +1,8 @@
 # SelectDialogV2
 
-Declare CustomDialog SelectDialogV2@struct { SelectDialogV2 }
+Declare CustomDialog SelectDialogV2
+
+@struct { SelectDialogV2 }
 
 **Since:** 18
 

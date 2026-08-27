@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isNotificationEnabled
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 ```
 
-查询当前应用通知授权状态。使用callback异步回调。用于在发布通知前检查当前应用是否被允许发送通知，避免在通知授权关闭时发布导致失败。
+查询当前应用通知授权状态。使用callback异步回调。
+
+用于在发布通知前检查当前应用是否被允许发送通知，避免在通知授权关闭时发布导致失败。
 
 **起始版本：** 11
 
@@ -63,7 +65,9 @@ notificationManager.isNotificationEnabled(isNotificationEnabledCallback);
 function isNotificationEnabled(): Promise<boolean>
 ```
 
-查询当前应用通知授权状态。使用Promise异步回调。用于在发布通知前检查当前应用是否被允许发送通知，避免在通知使能关闭时发布导致失败。
+查询当前应用通知授权状态。使用Promise异步回调。
+
+用于在发布通知前检查当前应用是否被允许发送通知，避免在通知使能关闭时发布导致失败。
 
 **起始版本：** 11
 
@@ -76,7 +80,7 @@ function isNotificationEnabled(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true，表示允许发布通知；返回false，表示禁止发布通知。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true，表示允许发布通知；返回false，表示禁止发布通知。 |
 
 **错误码：**
 

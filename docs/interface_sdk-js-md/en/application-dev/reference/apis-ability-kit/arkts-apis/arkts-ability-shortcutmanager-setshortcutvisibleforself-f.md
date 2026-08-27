@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import shortcutManager from '@kit.AbilityKit';
+import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## setShortcutVisibleForSelf
@@ -29,7 +29,7 @@ Sets whether to display the specified shortcut for the current application. This
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

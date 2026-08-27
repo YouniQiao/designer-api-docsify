@@ -1,6 +1,8 @@
 # FloatingBallController
 
-闪控球控制器实例，用于启动、更新、停止闪控球以及注册回调等操作。下列API示例中都需先使用[floatingBall.create()](arkts-arkui-floatingball-create-f.md)方法获取到闪控球控制器实例（即floatingBallController），再通过此实例调用对应方法。
+闪控球控制器实例，用于启动、更新、停止闪控球以及注册回调等操作。
+
+下列API示例中都需先使用[floatingBall.create()](arkts-arkui-floatingball-create-f.md)方法获取到闪控球控制器实例（即floatingBallController），再通过此实例调用对应方法。
 
 **起始版本：** 20
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI';
+import { floatingBall } from '@kit.ArkUI';
 ```
 
 ## getFloatingBallWindowInfo
@@ -291,7 +293,7 @@ onDestroy(callback: Callback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数。返回闪控球停止的原因。停止原因包括：    - "APP_STOP"：应用主动停止。    - "DUMPSTER_STOP"：拖动到垃圾桶触发停止。    - "LONG_PRESS_SINGLE_STOP"：长按单个闪控球触发停止。    - "LONG_PRESS_ALL_STOP"：长按全部闪控球触发停止。    - "MAIN_WINDOW_DESTROY_STOP"：context关联的主窗口被销毁后触发停止。    - "SQUEEZE"：超出设备闪控球数量上限，被其他闪控球挤占停止。    - "FLOAT_VIEW_STOP"：与标准悬浮窗绑定后，绑定状态下跟随标准悬浮窗停止。    - "STOP_IN_SIDEBAR"：在侧边栏中被停止。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 回调函数。返回闪控球停止的原因。停止原因包括：   - "APP_STOP"：应用主动停止。   - "DUMPSTER_STOP"：拖动到垃圾桶触发停止。   - "LONG_PRESS_SINGLE_STOP"：长按单个闪控球触发停止。   - "LONG_PRESS_ALL_STOP"：长按全部闪控球触发停止。   - "MAIN_WINDOW_DESTROY_STOP"：context关联的主窗口被销毁后触发停止。   - "SQUEEZE"：超出设备闪控球数量上限，被其他闪控球挤占停止。   - "FLOAT_VIEW_STOP"：与标准悬浮窗绑定后，绑定状态下跟随标准悬浮窗停止。   - "STOP_IN_SIDEBAR"：在侧边栏中被停止。 |
 
 **错误码：**
 
@@ -341,7 +343,7 @@ restoreMainWindow(want: Want): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -386,7 +388,8 @@ try {
 setFloatingBallVisibilityInApp(isVisible: boolean): Promise<void>
 ```
 
-设置闪控球在应用内是否可见。使用Promise异步回调。  
+设置闪控球在应用内是否可见。使用Promise异步回调。
+
 - 当应用处于多任务界面时（[生命周期状态](../../../windowmanager/window-overview.md#生命周期状态)为PAUSED），闪控球不可见。  
 - 默认情况（即未调用此接口设置时）和调用此接口传入true时：除多任务界面外，闪控球均可见。  
 - 调用此接口传入false时：当应用处于前台（[生命周期状态](../../../windowmanager/window-overview.md#生命周期状态)为SHOWN或者RESUMED）时，闪控球不可见；当应用处于  
@@ -408,7 +411,7 @@ setFloatingBallVisibilityInApp(isVisible: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -455,7 +458,7 @@ startFloatingBall(params: FloatingBallParams): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -510,7 +513,7 @@ stopFloatingBall(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -555,7 +558,7 @@ updateFloatingBall(params: FloatingBallParams): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

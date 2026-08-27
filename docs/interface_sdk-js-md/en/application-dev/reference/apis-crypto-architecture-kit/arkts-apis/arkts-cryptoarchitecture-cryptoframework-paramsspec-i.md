@@ -28,7 +28,7 @@ It applies to the symmetric block cipher modes that require parameters such as t
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## algName
@@ -37,7 +37,8 @@ import cryptoFramework from '@kit.CryptoArchitectureKit';
 algName: string
 ```
 
-Algorithm for symmetric encryption or decryption. The value can be:  
+Algorithm for symmetric encryption or decryption. The value can be:
+
 - **IvParamsSpec**: applicable to the CBC, CTR, OFB, and CFB modes.  
 - **GcmParamsSpec**: applicable to the GCM mode.  
 - **CcmParamsSpec**: applicable to the CCM mode.  

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.ConnectivityKit';
+import { socket } from '@kit.ConnectivityKit';
 ```
 
 ## sppWriteAsync
@@ -29,7 +29,7 @@ Asynchronous interface for writing data to the socket.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 

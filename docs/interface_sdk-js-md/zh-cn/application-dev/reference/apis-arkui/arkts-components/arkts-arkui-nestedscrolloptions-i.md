@@ -1,6 +1,8 @@
 # NestedScrollOptions
 
-nestedScroll属性参数对象。@interface NestedScrollOptions
+nestedScroll属性参数对象。
+
+@interface NestedScrollOptions
 
 **起始版本：** 23
 
@@ -17,7 +19,7 @@ nestedScroll属性参数对象。@interface NestedScrollOptions
 scrollBackward: NestedScrollMode
 ```
 
-滚动组件往起始端滚动时的嵌套滚动选项。NestedScrollMode.SELF_ONLY表示仅自身滚动，不与父组件联动；NestedScrollMode.SELF_FIRST表示自身先滚动，自身滚动到边缘后父组件滚动； NestedScrollMode.PARENT_FIRST表示父组件先滚动，父组件滚动到边缘后自身滚动。
+滚动组件往起始端滚动时的嵌套滚动选项。NestedScrollMode.SELF_ONLY表示仅自身滚动，不与父组件联动；NestedScrollMode.SELF_FIRST表示自身先滚动，自身滚动到边缘后父组件滚动；NestedScrollMode.PARENT_FIRST表示父组件先滚动，父组件滚动到边缘后自身滚动。
 
 **类型：** [NestedScrollMode](../arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
@@ -35,7 +37,7 @@ scrollBackward: NestedScrollMode
 scrollForward: NestedScrollMode
 ```
 
-滚动组件往末尾端滚动时的嵌套滚动选项。NestedScrollMode.SELF_ONLY表示仅自身滚动，不与父组件联动；NestedScrollMode.SELF_FIRST表示自身先滚动，自身滚动到边缘后父组件滚动； NestedScrollMode.PARENT_FIRST表示父组件先滚动，父组件滚动到边缘后自身滚动。
+滚动组件往末尾端滚动时的嵌套滚动选项。NestedScrollMode.SELF_ONLY表示仅自身滚动，不与父组件联动；NestedScrollMode.SELF_FIRST表示自身先滚动，自身滚动到边缘后父组件滚动；NestedScrollMode.PARENT_FIRST表示父组件先滚动，父组件滚动到边缘后自身滚动。
 
 **类型：** [NestedScrollMode](../arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 

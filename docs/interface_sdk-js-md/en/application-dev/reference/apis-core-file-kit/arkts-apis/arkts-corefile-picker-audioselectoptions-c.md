@@ -9,7 +9,7 @@ Defines the options for selecting audio clips.
 ## Modules to Import
 
 ```TypeScript
-import picker from '@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## maxSelectNumber
@@ -18,7 +18,11 @@ import picker from '@kit.CoreFileKit';
 maxSelectNumber?: number
 ```
 
-Maximum number of audio clips that can be selected.Default value: **1**Value range: 1 to 500
+Maximum number of audio clips that can be selected.
+
+Default value: **1**
+
+Value range: 1 to 500
 
 **Type:** number
 

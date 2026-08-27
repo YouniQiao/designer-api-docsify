@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## getPublishedRunningFormInfos
@@ -24,7 +24,7 @@ function getPublishedRunningFormInfos(): Promise<Array<formInfo.RunningFormInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;formInfo.RunningFormInfo & gt; & gt; | Promise对象。返回符合条件的卡片信息。 |
+| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Promise对象。返回符合条件的卡片信息。 |
 
 **错误码：**
 

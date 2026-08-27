@@ -9,7 +9,7 @@ Defines base properties of the **LocalSocket** object.
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## receiveBufferSize

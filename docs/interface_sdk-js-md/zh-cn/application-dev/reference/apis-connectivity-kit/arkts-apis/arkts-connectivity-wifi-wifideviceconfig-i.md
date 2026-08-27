@@ -1,6 +1,8 @@
 # WifiDeviceConfig
 
-WLAN设备配置信息。@interface WifiDeviceConfig
+WLAN设备配置信息。
+
+@interface WifiDeviceConfig
 
 **起始版本：** 6
 
@@ -13,10 +15,7 @@ WLAN设备配置信息。@interface WifiDeviceConfig
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## bssid

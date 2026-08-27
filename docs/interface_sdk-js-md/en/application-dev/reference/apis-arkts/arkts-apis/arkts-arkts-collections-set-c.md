@@ -6,7 +6,8 @@ A non-linear data structure.
 > 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
-- T: type, which can be any of the
+
+- T: type, which can be any of the  
 [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
 
 **Since:** 12
@@ -68,7 +69,7 @@ Checks whether a value exists in this ArkTS set, and if not, adds the value to t
 
 | Type | Description |
 | --- | --- |
-| Set & lt;T & gt; | Set object. |
+| Set&lt;T&gt; | Set object. |
 
 **Error codes:**
 
@@ -142,7 +143,7 @@ A constructor used to create an ArkTS set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | Iterable & lt;T & gt; | Yes | Object used to construct an ArkTS set. |
+| iterable | Iterable&lt;T&gt; | Yes | Object used to construct an ArkTS set. |
 
 **Error codes:**
 
@@ -228,7 +229,7 @@ Calls a callback function for each key-value pair in this ArkTS set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, value2: T, set: Set & lt;T & gt;) = & gt; void | Yes | Callback function to run for each key-value pair. |
+| callbackFn | (value: T, value2: T, set: Set&lt;T&gt;) =&gt; void | Yes | Callback function to run for each key-value pair. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import StaticSubscriberExtensionContext from '@kit.BasicServicesKit';
+import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -13,5 +13,5 @@ import StaticSubscriberExtensionContext from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [StaticSubscriberExtensionContext(StaticSubscriberExtensionContext)](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md) | StaticSubscriberExtensionContext模块是StaticSubscriberExtensionAbility的上下文环境，继承自ExtensionContext。StaticSubscriberExtensionContext模块提供StaticSubscriberExtensionAbility具有的接口和能力。 |
+| [StaticSubscriberExtensionContext](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md) | StaticSubscriberExtensionContext模块是StaticSubscriberExtensionAbility的上下文环境，继承自ExtensionContext。 |
 <!--DelEnd-->

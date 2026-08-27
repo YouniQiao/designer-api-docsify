@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## disableNetwork
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function disableNetwork(netId: number): boolean
 ```
 
-Disables a specified network.<p>The disabled network will not be associated with again.
+Disables a specified network.
+
+<p>The disabled network will not be associated with again.
 
 **Since:** 7
 

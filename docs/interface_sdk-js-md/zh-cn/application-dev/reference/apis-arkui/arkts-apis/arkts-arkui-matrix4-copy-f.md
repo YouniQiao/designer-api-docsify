@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import matrix4 from '@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## copy
@@ -28,7 +28,7 @@ Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的拷贝对象。 |
+| Matrix4Transit | 当前矩阵的拷贝对象。 |
 
 **示例**
 

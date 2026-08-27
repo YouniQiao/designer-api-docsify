@@ -93,7 +93,7 @@ int (*getColumnType)(OH_Cursor *cursor, int32_t columnIndex, OH_ColumnType *colu
 | -- | -- |
 | [OH_Cursor](capi-rdb-oh-cursor.md) *cursor | 表示指向[OH_Cursor](capi-rdb-oh-cursor.md)实例的指针。 |
 |  int32_t columnIndex | 表示结果集中指定列的索引，索引值从0开始。 |
-|  [OH_ColumnType](capi-oh-data-value-h.md#oh_columntype) *columnType | 该参数是输出参数，列值类型写入此变量。 |
+|  OH_ColumnType *columnType | 该参数是输出参数，列值类型写入此变量。 |
 
 **返回：**
 

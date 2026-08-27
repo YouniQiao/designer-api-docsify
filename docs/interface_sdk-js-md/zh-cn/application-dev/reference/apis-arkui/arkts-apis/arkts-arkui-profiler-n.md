@@ -1,6 +1,8 @@
 # Profiler
 
-inspector的性能分析（Profiler）工具。@namespace Profiler
+inspector的性能分析（Profiler）工具。
+
+@namespace Profiler
 
 **起始版本：** 8
 
@@ -11,7 +13,6 @@ inspector的性能分析（Profiler）工具。@namespace Profiler
 ## 导入模块
 
 ```TypeScript
-import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## 汇总

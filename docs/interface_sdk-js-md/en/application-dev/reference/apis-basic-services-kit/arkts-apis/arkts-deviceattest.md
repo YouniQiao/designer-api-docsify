@@ -1,6 +1,8 @@
 # @ohos.deviceAttest
 
-xts_device_attest authResult information@namespace deviceAttest
+xts_device_attest authResult information
+
+@namespace deviceAttest
 
 **Since:** 9
 
@@ -9,7 +11,7 @@ xts_device_attest authResult information@namespace deviceAttest
 ## Modules to Import
 
 ```TypeScript
-import deviceAttest from '@kit.BasicServicesKit';
+import { deviceAttest } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -29,5 +31,5 @@ import deviceAttest from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md) | Device attest result information.@interface AttestResultInfo |
+| [AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md) | Device attest result information. |
 <!--DelEnd-->

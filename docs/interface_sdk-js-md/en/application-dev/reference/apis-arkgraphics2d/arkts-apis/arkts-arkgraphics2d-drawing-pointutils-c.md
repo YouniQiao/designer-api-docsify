@@ -9,7 +9,7 @@ This class offers a comprehensive set of operations for handling common2D Point 
 ## Modules to Import
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## negate

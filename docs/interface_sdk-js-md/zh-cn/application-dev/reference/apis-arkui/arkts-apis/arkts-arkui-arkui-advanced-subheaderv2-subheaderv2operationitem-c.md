@@ -152,7 +152,9 @@ Sets the default focus state of the text or icon.
 id?: string
 ```
 
-子标题右侧操作项id。需要为子标题右侧操作项设置id的时候设置此参数，缺省时不设置此参数。默认值：undefined，表示不设置子标题右侧操作项id。
+子标题右侧操作项id。需要为子标题右侧操作项设置id的时候设置此参数，缺省时不设置此参数。
+
+默认值：undefined，表示不设置子标题右侧操作项id。
 
 **类型：** string
 

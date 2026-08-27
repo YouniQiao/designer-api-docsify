@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.MDMKit';
+import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## removeAllowedWifiList
@@ -12,7 +12,7 @@ import wifiManager from '@kit.MDMKit';
 function removeAllowedWifiList(admin: Want, list: Array<WifiAccessInfo>): void
 ```
 
-移除Wi-Fi允许名单。若移除允许名单中的部分Wi-Fi，则当前设备仅允许连接剩下未移除的Wi-Fi。若移除允许名单中的所有Wi-Fi，则当前设备可以连接任意Wi-Fi。适用于企业Wi-Fi策略调整场景，例如公司更换Wi-Fi网络 时移除旧网络限制、或解除部分Wi-Fi限制以允许员工连接新的办公网络。
+移除Wi-Fi允许名单。若移除允许名单中的部分Wi-Fi，则当前设备仅允许连接剩下未移除的Wi-Fi。若移除允许名单中的所有Wi-Fi，则当前设备可以连接任意Wi-Fi。适用于企业Wi-Fi策略调整场景，例如公司更换Wi-Fi网络时移除旧网络限制、或解除部分Wi-Fi限制以允许员工连接新的办公网络。
 
 **起始版本：** 19
 

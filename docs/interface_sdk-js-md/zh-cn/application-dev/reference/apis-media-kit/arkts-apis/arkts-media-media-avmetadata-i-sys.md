@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## gltf_offset
@@ -18,7 +18,7 @@ import media from '@kit.MediaKit';
 gltf_offset?: string
 ```
 
-GLTF 3D模型在媒体文件中的偏移。不支持AVRecorder设置该属性。 如果媒体文件没有GLTF 3D模型，则gltf_offset是undefined。
+GLTF 3D模型在媒体文件中的偏移。不支持AVRecorder设置该属性。如果媒体文件没有GLTF 3D模型，则gltf_offset是undefined。
 
 **类型：** string
 

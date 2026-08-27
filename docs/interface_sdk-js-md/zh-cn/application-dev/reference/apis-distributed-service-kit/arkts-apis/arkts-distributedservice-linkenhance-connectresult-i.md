@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import linkEnhance from '@kit.DistributedServiceKit';
+import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## deviceId
@@ -34,10 +34,12 @@ deviceId: string
 reason: number
 ```
 
-连接成功返回0，连接失败返回错误码：  
+连接成功返回0，连接失败返回错误码：
+
 - 32390200：表示客户端连接超时。  
 - 32390201：表示服务端服务未启动。  
-- 32390300：表示内部错误。  
+- 32390300：表示内部错误。
+
 更多关于错误码的详细介绍请参考[增强连接错误码](../errorcode-link-enhance.md)。
 
 **类型：** number

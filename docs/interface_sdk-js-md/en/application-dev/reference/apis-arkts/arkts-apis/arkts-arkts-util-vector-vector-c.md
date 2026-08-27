@@ -1,6 +1,7 @@
 # Vector
 
-Vector is a linear data structure that is implemented based on arrays. When the memory of a vector is used up, a larger contiguous memory area is automatically allocated, all the elements are copied to the new memory area, and the current memory area is reclaimed. Vector can be used to efficiently access elements. Both Vector and [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md) are implemented based on arrays, but Vector provides more interfaces for operating the arrays. Both of them can dynamically adjust the capacity. Vector doubles the capacity each time, whereas ArrayList increases the capacity by 50%. **Recommended use case**: Use Vector when the data volume is large. This topic uses the following to identify the use of generics:  
+Vector is a linear data structure that is implemented based on arrays. When the memory of a vector is used up, a larger contiguous memory area is automatically allocated, all the elements are copied to the new memory area, and the current memory area is reclaimed. Vector can be used to efficiently access elements. Both Vector and [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md) are implemented based on arrays, but Vector provides more interfaces for operating the arrays. Both of them can dynamically adjust the capacity. Vector doubles the capacity each time, whereas ArrayList increases the capacity by 50%. **Recommended use case**: Use Vector when the data volume is large. This topic uses the following to identify the use of generics:
+
 - T: Type
 
 > **NOTE：**
@@ -19,7 +20,7 @@ Vector is a linear data structure that is implemented based on arrays. When the 
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS';
+import { Vector } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -201,7 +202,7 @@ Converts this Vector into an array.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Array obtained. |
+| Array&lt;T&gt; | Array obtained. |
 
 **Examples**
 
@@ -232,7 +233,7 @@ Copies elements in this Vector into an array to overwrite elements of the same p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | Array & lt;T & gt; | Yes | Array to which the elements in the Vector will be copied. |
+| array | Array&lt;T&gt; | Yes | Array to which the elements in the Vector will be copied. |
 
 ## forEach
 
@@ -252,7 +253,7 @@ Uses a callback to traverse the elements in this Vector and obtain their positio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; void | Yes | Callback invoked for replacement. |
+| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; void | Yes | Callback invoked for replacement. |
 | thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Examples**
@@ -807,7 +808,7 @@ Replaces all elements in this Vector with new elements, and returns the new ones
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; T | Yes | Callback invoked for replacement. |
+| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; T | Yes | Callback invoked for replacement. |
 | thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Examples**
@@ -901,7 +902,7 @@ Sorts elements in this Vector.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) = & gt; number | No | Callback invoked for sorting. The default value is this instance. |
+| comparator | (firstValue: T, secondValue: T) =&gt; number | No | Callback invoked for sorting. The default value is this instance. |
 
 **Examples**
 

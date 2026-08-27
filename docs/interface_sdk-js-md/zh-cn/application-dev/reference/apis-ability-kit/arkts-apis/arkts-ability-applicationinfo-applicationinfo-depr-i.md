@@ -1,6 +1,6 @@
 # ApplicationInfo
 
-应用程序信息，未做特殊说明的属性，均通过 [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md) 获取。
+应用程序信息，未做特殊说明的属性，均通过[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md)获取。
 
 > **说明：**
 > 
@@ -236,7 +236,9 @@ readonly labelId: string
 readonly metaData: Map<string, Array<CustomizeData>>
 ```
 
-应用程序的自定义元信息。通过调用 [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md) 接口时，传入GET_APPLICATION_INFO_WITH_METADATA获取。
+应用程序的自定义元信息。
+
+通过调用[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md)接口时，传入GET_APPLICATION_INFO_WITH_METADATA获取。
 
 **类型：** Map&lt;string, Array&lt;[CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)&gt;&gt;
 
@@ -314,7 +316,9 @@ readonly name: string
 readonly permissions: Array<string>
 ```
 
-访问应用程序所需的权限。通过调用 [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md) 接口时，传入GET_APPLICATION_INFO_WITH_PERMISSION获取。
+访问应用程序所需的权限。
+
+通过调用[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md)接口时，传入GET_APPLICATION_INFO_WITH_PERMISSION获取。
 
 **类型：** Array&lt;string&gt;
 

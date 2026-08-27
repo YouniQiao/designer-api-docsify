@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## getPersistentPolicy

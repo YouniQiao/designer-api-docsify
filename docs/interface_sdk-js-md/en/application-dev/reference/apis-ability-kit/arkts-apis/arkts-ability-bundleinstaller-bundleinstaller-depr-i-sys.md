@@ -36,7 +36,7 @@ Install an application in a HAP.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFilePaths | Array & lt;string & gt; | Yes | Sandbox path where the HAP files of the bundle are stored. |
+| bundleFilePaths | Array&lt;string&gt; | Yes | Sandbox path where the HAP files of the bundle are stored. |
 | param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes | Parameters required for bundle installation. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes | Callback used to return the result. If install is successful, **err** is **undefined**, and return the installation status. Otherwise, **err** is an error object. |
 

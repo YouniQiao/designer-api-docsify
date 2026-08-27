@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getMifareUltralight
@@ -30,7 +30,7 @@ Obtains a **MifareUltralightTag** object, which allows access to the tags that u
 
 | Type | Description |
 | --- | --- |
-| [MifareUltralightTag](arkts-connectivity-nfctech-mifareultralighttag-i.md) | MifareUltralightTag** object obtained. |
+| MifareUltralightTag | MifareUltralightTag** object obtained. |
 
 **Error codes:**
 

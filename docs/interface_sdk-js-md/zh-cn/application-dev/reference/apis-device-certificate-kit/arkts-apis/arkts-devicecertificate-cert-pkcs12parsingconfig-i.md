@@ -53,7 +53,9 @@ needsOtherCerts?: boolean
 needsPrivateKey?: boolean
 ```
 
-表示是否获取私钥。默认为true。true为获取，返回PKCS8编码的私钥数据；false为不获取。
+表示是否获取私钥。默认为true。
+
+true为获取，返回PKCS8编码的私钥数据；false为不获取。
 
 **类型：** boolean
 

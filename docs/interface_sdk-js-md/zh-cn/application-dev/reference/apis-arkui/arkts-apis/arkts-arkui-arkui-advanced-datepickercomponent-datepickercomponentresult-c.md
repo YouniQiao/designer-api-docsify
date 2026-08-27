@@ -1,6 +1,6 @@
 # DatePickerComponentResult
 
-DatePickerComponentResult定义日期时间选择器的选择结果，包含用户选择的年、月、日、时、分、秒信息，用于在onChange和onScrollStop回调中 传递选择的具体日期时间值。
+DatePickerComponentResult定义日期时间选择器的选择结果，包含用户选择的年、月、日、时、分、秒信息，用于在onChange和onScrollStop回调中传递选择的具体日期时间值。
 
 **起始版本：** 26.0.0
 

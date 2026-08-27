@@ -31,7 +31,7 @@ Obtains the public key ID information supported by the phone.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the public key ID information supported by the mobile phone in the Tag-Length-Value (TLV) format. |
+| Promise&lt;string&gt; | Promise used to return the public key ID information supported by the mobile phone in the Tag-Length-Value (TLV) format. |
 
 **Error codes:**
 

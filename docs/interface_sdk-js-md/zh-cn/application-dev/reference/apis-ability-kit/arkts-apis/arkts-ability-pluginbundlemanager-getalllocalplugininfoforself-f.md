@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import pluginBundleManager from '@kit.AbilityKit';
+import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllLocalPluginInfoForSelf
@@ -26,7 +26,7 @@ function getAllLocalPluginInfoForSelf(): Promise<Array<PluginBundleInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;PluginBundleInfo & gt; & gt; | Promise对象，返回当前应用已安装的所有本地插件信息列表。 |
+| Promise&lt;Array&lt;PluginBundleInfo&gt;&gt; | Promise对象，返回当前应用已安装的所有本地插件信息列表。 |
 
 **错误码：**
 

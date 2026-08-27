@@ -9,7 +9,7 @@ InflateGetDictionary和deflateGetDictionary这两个函数会返回值的相关�
 ## 导入模块
 
 ```TypeScript
-import zlib from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## dictionaryLength

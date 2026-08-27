@@ -1,6 +1,12 @@
 # WebContextMenuParam
 
-WebContextMenuParam is a parameter class in the ArkWeb component used to carry context menu information displayed when a user number presses a web element or right-clicks. As the data carrier for the **onContextMenuShow** event callback, it encapsulates key information such as the menu popup position, link address, media type, selected text, and edit state.When customizing the context menu of a Web component, use WebContextMenuParam to obtain detailed information about the web element at the number press/right-click position (such as the link URL, image content, media type, input field type, and edit state), determine the user operation scenario, and decide whether to intercept the default menu and build custom menu items.When customizing the number press or right-click menu of a Web component (such as replacing the default menu, providing differentiated menu items based on element types, or previewing images), use WebContextMenuParam in the **onContextMenuShow** event callback to obtain context information.For sample code, see [onContextMenuShow](arkts-arkweb-web-attribute.md#oncontextmenushow).
+WebContextMenuParam is a parameter class in the ArkWeb component used to carry context menu information displayed when a user number presses a web element or right-clicks. As the data carrier for the **onContextMenuShow** event callback, it encapsulates key information such as the menu popup position, link address, media type, selected text, and edit state.
+
+When customizing the context menu of a Web component, use WebContextMenuParam to obtain detailed information about the web element at the number press/right-click position (such as the link URL, image content, media type, input field type, and edit state), determine the user operation scenario, and decide whether to intercept the default menu and build custom menu items.
+
+When customizing the number press or right-click menu of a Web component (such as replacing the default menu, providing differentiated menu items based on element types, or previewing images), use WebContextMenuParam in the **onContextMenuShow** event callback to obtain context information.
+
+For sample code, see [onContextMenuShow](arkts-arkweb-web-attribute.md#oncontextmenushow).
 
 **Since:** 9
 
@@ -9,9 +15,6 @@ WebContextMenuParam is a parameter class in the ArkWeb component used to carry c
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor

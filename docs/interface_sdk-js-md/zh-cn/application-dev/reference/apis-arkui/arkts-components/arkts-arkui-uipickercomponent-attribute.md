@@ -1,6 +1,8 @@
 # UIPickerComponent属性/事件
 
-除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：
+
+除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** UIPickerComponentAttribute extends CommonMethod<UIPickerComponentAttribute>
 
@@ -33,7 +35,7 @@ canLoop(isLoop: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否可循环滚动。    - true：可循环滚动。    - false：不可循环滚动。    默认值：true 当isLoop的值为undefined时，使用默认值。 当子组件个数小于或等于可见选项数量 （由[displayedItemCount](#displayeditemcount)设置，默认为7）时，无论isLoop设置为true 还是false，都不会循环滚动。 |
+| isLoop | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否可循环滚动。   - true：可循环滚动。   - false：不可循环滚动。   默认值：true 当isLoop的值为undefined时，使用默认值。当子组件个数小于或等于可见选项数量（由[displayedItemCount](#displayeditemcount)设置，默认为7）时，无论isLoop设置为true还是false，都不会循环滚动。 |
 
 ## displayedItemCount
 
@@ -41,7 +43,7 @@ canLoop(isLoop: Optional<boolean>)
 displayedItemCount(count: Optional<number>)
 ```
 
-设置UIPickerComponent容器可见选项的数量。未通过该接口设置时，可见选项的数量为7行。需要节省空间时减少可见项数量，需要提供更多预览信息时 增加可见项数量。此属性与[itemHeight](#itemheight)共同影响组件的显示效果，建议结合组件 height属性进行调整以保证完整显示。
+设置UIPickerComponent容器可见选项的数量。未通过该接口设置时，可见选项的数量为7行。需要节省空间时减少可见项数量，需要提供更多预览信息时增加可见项数量。此属性与[itemHeight](#itemheight)共同影响组件的显示效果，建议结合组件height属性进行调整以保证完整显示。
 
 **起始版本：** 26.0.0
 
@@ -55,7 +57,7 @@ displayedItemCount(count: Optional<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| count | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 可见选项数量。 取值范围：[2, 9]内的整数。 设置小数时，使用向下取整后的整数。 设置偶数时，自动转为大于该值的奇数（例如2变为3、8变为9）。 设置不在取值范围内时，使用默认值7行。 当count的值为undefined时，使用默认值7行。 |
+| count | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 可见选项数量。取值范围：[2, 9]内的整数。设置小数时，使用向下取整后的整数。设置偶数时，自动转为大于该值的奇数（例如2变为3、8变为9）。设置不在取值范围内时，使用默认值7行。当count的值为undefined时，使用默认值7行。 |
 
 ## enableHapticFeedback
 
@@ -63,7 +65,9 @@ displayedItemCount(count: Optional<number>)
 enableHapticFeedback(enable: Optional<boolean>)
 ```
 
-设置是否开启触控反馈。在需要增强用户交互体验的场景可开启触控反馈。开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：   
+设置是否开启触控反馈。在需要增强用户交互体验的场景可开启触控反馈。
+
+开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：   
 > 
 > "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
@@ -79,7 +83,7 @@ enableHapticFeedback(enable: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 设置是否开启触控反馈。    - true：开启触控反馈。    - false：不开启触控反馈。    默认值：true 当enable的值为undefined时，使用默认值。 开启后，是否存在触控反馈取决于系统硬件支持情况。 |
+| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 设置是否开启触控反馈。   - true：开启触控反馈。   - false：不开启触控反馈。   默认值：true 当enable的值为undefined时，使用默认值。开启后，是否存在触控反馈取决于系统硬件支持情况。 |
 
 ## itemHeight
 
@@ -87,7 +91,7 @@ enableHapticFeedback(enable: Optional<boolean>)
 itemHeight(height: Optional<LengthMetrics>)
 ```
 
-设置UIPickerComponent容器每个选项的高度。未通过该接口设置时，每个选项的高度为40vp。选项内容较多或需要更大字体显示时可增大高度以避免内容 裁剪，选项内容简洁或需要紧凑显示时可减小高度。此属性与 [displayedItemCount](#displayeditemcount)共同影响组件的显示效果，建议结合组件 height属性进行调整以保证完整显示。
+设置UIPickerComponent容器每个选项的高度。未通过该接口设置时，每个选项的高度为40vp。选项内容较多或需要更大字体显示时可增大高度以避免内容裁剪，选项内容简洁或需要紧凑显示时可减小高度。此属性与[displayedItemCount](#displayeditemcount)共同影响组件的显示效果，建议结合组件height属性进行调整以保证完整显示。
 
 **起始版本：** 26.0.0
 
@@ -101,7 +105,7 @@ itemHeight(height: Optional<LengthMetrics>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 | 选项高度。 单位：与[LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)一致。 取值范围：[40vp, 64vp] 设置小于40vp或大于64vp时，使用默认值40vp。 当height的值为undefined时，使用默认值40vp。 不支持“百分比”类型。 |
+| height | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | 是 | 选项高度。单位：与[LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)一致。取值范围：[40vp, 64vp] 设置小于40vp或大于64vp时，使用默认值40vp。当height的值为undefined时，使用默认值40vp。不支持“百分比”类型。 |
 
 ## onChange
 
@@ -130,7 +134,7 @@ onChange(callback: Optional<OnUIPickerComponentCallback>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 | 当选中项发生变化时触发的回调函数。 当callback的值为undefined时，不使用回调函数。 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 | 当选中项发生变化时触发的回调函数。当callback的值为undefined时，不使用回调函数。 |
 
 ## onScrollStop
 
@@ -138,7 +142,7 @@ onChange(callback: Optional<OnUIPickerComponentCallback>)
 onScrollStop(callback: Optional<OnUIPickerComponentCallback>)
 ```
 
-选择器滑动停止时，触发该事件。选择器滑动停止指某次行为触发的滑动动画完全结束。如果某次滑动动画还未结束时又触发了新的滑动动画， 则不属于滑动停止。适用于需要在滑动结束后提交最终选择结果、停止加载动画或执行一次性回调的场景。
+选择器滑动停止时，触发该事件。选择器滑动停止指某次行为触发的滑动动画完全结束。如果某次滑动动画还未结束时又触发了新的滑动动画，则不属于滑动停止。适用于需要在滑动结束后提交最终选择结果、停止加载动画或执行一次性回调的场景。
 
 > **说明：**
 > 
@@ -165,7 +169,7 @@ onScrollStop(callback: Optional<OnUIPickerComponentCallback>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 | 当选择器滑动停止时触发的回调函数。当callback的值为undefined时， 不使用回调函数。 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 | 当选择器滑动停止时触发的回调函数。当callback的值为undefined时，不使用回调函数。 |
 
 ## selectionIndicator
 
@@ -187,4 +191,4 @@ selectionIndicator(style: Optional<PickerIndicatorStyle>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | 是 | 选中项指示器的样式。 默认值： {type: PickerIndicatorType.BACKGROUND, borderRadius: {value:12, unit:LengthUnit.vp }, backgroundColor: 'sys.color.comp_background_tertiary'} 当style的值为undefined时，使用默认值。 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | 是 | 选中项指示器的样式。默认值：{type: PickerIndicatorType.BACKGROUND, borderRadius: {value:12, unit:LengthUnit.vp }, backgroundColor: 'sys.color.comp_background_tertiary'} 当style的值为undefined时，使用默认值。 |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import securityLabel from '@kit.CoreFileKit';
+import { securityLabel } from '@kit.CoreFileKit';
 ```
 
 ## setSecurityLabel
@@ -29,7 +29,7 @@ Sets the data security level for a file or directory. The level can only be adju
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

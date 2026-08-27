@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## setHotspotConfig
@@ -27,7 +26,7 @@ Set the hotspot configuration for the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) | Yes | Indicates the Wi-Fi hotspot configuration. The SSID and {@code securityType} must be available and correct. If {@code securityType} is not {@code open}, {@code preSharedKey} must be available and correct. |
+| config | HotspotConfig | Yes | Indicates the Wi-Fi hotspot configuration. The SSID and {@code securityType} must be available and correct. If {@code securityType} is not {@code open}, {@code preSharedKey} must be available and correct. |
 
 **Error codes:**
 

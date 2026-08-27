@@ -27,13 +27,13 @@ function getSystemTrustedCertificate(certUri: string): Promise<CMResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| certUri | string | 是 | 表示证书的唯一标识符。可通过 [getSystemTrustedCertificateList](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificatelist-f-sys.md)接口获取。 |
+| certUri | string | 是 | 表示证书的唯一标识符。可通过[getSystemTrustedCertificateList](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificatelist-f-sys.md)接口获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise对象，返回获取系统信任CA证书详细信息的结果，返回值为 [CMResult]{ |
+| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise对象，返回获取系统信任CA证书详细信息的结果，返回值为[CMResult]{ |
 
 **错误码：**
 

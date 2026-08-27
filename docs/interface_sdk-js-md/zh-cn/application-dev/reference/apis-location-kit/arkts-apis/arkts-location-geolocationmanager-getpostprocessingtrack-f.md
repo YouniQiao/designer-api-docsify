@@ -11,7 +11,7 @@
 function getPostProcessingTrack(sportsType: SportsType): Promise<Array<Location>>
 ```
 
-根据传入的[sportsType](arkts-location-geolocationmanager-sportstype-e.md)获取特定运动模式下的后处理轨迹。在调用此接口之前，需要先调用 geoLocationManager.on('locationChange') ，并在[ContinuousLocationRequest](arkts-location-geolocationmanager-continuouslocationrequest-i.md)入参中的 [SportsType](arkts-location-geolocationmanager-sportstype-e.md)配置正确的运动模式。当前仅支持滑雪模式。记录的运动轨迹会在24小时之后清除。
+根据传入的[sportsType](arkts-location-geolocationmanager-sportstype-e.md)获取特定运动模式下的后处理轨迹。在调用此接口之前，需要先调用geoLocationManager.on('locationChange')，并在[ContinuousLocationRequest](arkts-location-geolocationmanager-continuouslocationrequest-i.md)入参中的[SportsType](arkts-location-geolocationmanager-sportstype-e.md)配置正确的运动模式。当前仅支持滑雪模式。记录的运动轨迹会在24小时之后清除。
 
 **起始版本：** 26.0.0
 
@@ -33,7 +33,7 @@ function getPostProcessingTrack(sportsType: SportsType): Promise<Array<Location>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;Location & gt; & gt; | Promise对象，用于返回后处理运动轨迹。 |
+| Promise&lt;Array&lt;Location&gt;&gt; | Promise对象，用于返回后处理运动轨迹。 |
 
 **错误码：**
 

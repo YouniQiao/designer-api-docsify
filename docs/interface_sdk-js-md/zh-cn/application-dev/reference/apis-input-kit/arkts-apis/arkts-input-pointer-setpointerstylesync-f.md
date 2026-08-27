@@ -11,7 +11,7 @@
 function setPointerStyleSync(windowId: number, pointerStyle: PointerStyle): void
 ```
 
-设置指定窗口的鼠标样式类型，使用同步方式返回结果。此接口仅支持设置本应用进程内窗口的鼠标样式类型，如需通过UIExtensionAbility进程设置宿主窗口的鼠标样式类型，请参阅 [setCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcursor)。
+设置指定窗口的鼠标样式类型，使用同步方式返回结果。此接口仅支持设置本应用进程内窗口的鼠标样式类型，如需通过UIExtensionAbility进程设置宿主窗口的鼠标样式类型，请参阅[setCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcursor)。
 
 **起始版本：** 10
 
@@ -21,8 +21,8 @@ function setPointerStyleSync(windowId: number, pointerStyle: PointerStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | number | 是 | 窗口ID。取值范围为大于等于0的整数。窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。设置 结果可通过[getPointerStyleSync](arkts-input-pointer-getpointerstylesync-f.md)获取。 |
-| pointerStyle | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | 是 | 鼠标样式。不能传入DEVELOPER_DEFINED_ICON作为参数。 |
+| windowId | number | 是 | 窗口ID。取值范围为大于等于0的整数。窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。设置结果可通过[getPointerStyleSync](arkts-input-pointer-getpointerstylesync-f.md)获取。 |
+| pointerStyle | PointerStyle | 是 | 鼠标样式。不能传入DEVELOPER_DEFINED_ICON作为参数。 |
 
 **错误码：**
 

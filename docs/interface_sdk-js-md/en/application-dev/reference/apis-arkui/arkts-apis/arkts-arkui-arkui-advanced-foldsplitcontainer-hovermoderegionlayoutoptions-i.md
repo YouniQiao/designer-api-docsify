@@ -25,7 +25,9 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 extraRegionPosition?: ExtraRegionPosition
 ```
 
-Position information of the extra region. This setting takes effect only when **showExtraRegion** is set to **true**.Default value: **ExtraRegionPosition.top**.
+Position information of the extra region. This setting takes effect only when **showExtraRegion** is set to **true**.
+
+Default value: **ExtraRegionPosition.top**.
 
 **Type:** [ExtraRegionPosition](arkts-arkui-arkui-advanced-foldsplitcontainer-extraregionposition-e.md)
 
@@ -61,7 +63,9 @@ Width ratio between the primary and extra regions. This setting takes effect onl
 showExtraRegion?: boolean
 ```
 
-Whether to display the extra region in the half-folded state. The value **true** means to display the extra region in the half-folded state, and **false** means the opposite.Default value: **false**.
+Whether to display the extra region in the half-folded state. The value **true** means to display the extra region in the half-folded state, and **false** means the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 

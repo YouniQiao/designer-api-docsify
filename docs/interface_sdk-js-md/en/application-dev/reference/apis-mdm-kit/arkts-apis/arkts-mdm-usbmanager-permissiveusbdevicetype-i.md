@@ -1,6 +1,7 @@
 # PermissiveUsbDeviceType
 
-USB device type information. Partial field matching is supported.  
+USB device type information. Partial field matching is supported.
+
 - Compared with [UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md), the **subClass**, **protocol**, and **descriptor**  
 parameters in this API are optional, allowing for more flexible USB device disabling policies.  
 - Only the matching based on the **baseClass** parameter is supported.  
@@ -15,7 +16,7 @@ parameters in this API are optional, allowing for more flexible USB device disab
 ## Modules to Import
 
 ```TypeScript
-import usbManager from '@kit.MDMKit';
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## baseClass

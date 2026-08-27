@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## commitModify
@@ -32,7 +32,7 @@ commitModify(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -63,6 +63,7 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
   console.info('photoAsset get photoAssetTitle = ', photoAssetTitle);
   photoAsset.set(title, 'newTitle3');
   try {
+   // 将修改后的照片元数据提交到数据库进行持久化保存。
     await photoAsset.commitModify();
     let newPhotoAssetTitle: photoAccessHelper.MemberType = photoAsset.get(title);
     console.info('photoAsset get newPhotoAssetTitle = ', newPhotoAssetTitle);
@@ -88,6 +89,7 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
   };
   let albumList: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.Album> = await phAccessHelper.getAlbums(sendablePhotoAccessHelper.AlbumType.USER, sendablePhotoAccessHelper.AlbumSubtype.USER_GENERIC, albumFetchOptions);
   let album: sendablePhotoAccessHelper.Album = await albumList.getFirstObject();
+ // 修改相册名称并将修改提交到数据库进行持久化保存。
   album.albumName = 'hello';
   album.commitModify().then(() => {
     console.info('commitModify successfully');

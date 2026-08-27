@@ -1,6 +1,6 @@
 # Shape属性/事件
 
-除支持通用属性以及[图形绘制通用属性](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-common.md)外，还支持以下 属性：
+除支持通用属性以及[图形绘制通用属性](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-common.md)外，还支持以下属性：
 
 **继承/实现关系：** ShapeAttribute extends CommonMethod<ShapeAttribute>
 
@@ -11,7 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## antiAlias
@@ -42,7 +41,7 @@ antiAlias(value: boolean)
 fill(value: ResourceColor)
 ```
 
-设置填充区域的颜色，支持attributeModifier动态设置属性方法，异常值按照默认值处理。与通用属性foregroundColor同时设置时， 后设置的属性生效。
+设置填充区域的颜色，支持attributeModifier动态设置属性方法，异常值按照默认值处理。与通用属性foregroundColor同时设置时，后设置的属性生效。
 
 **起始版本：** 7
 
@@ -56,7 +55,7 @@ fill(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 填充区域颜色。默认值：Color.Black 异常值undefined、null、NaN和Infinity按照默认 值处理。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 填充区域颜色。默认值：Color.Black 异常值undefined、null、NaN和Infinity按照默认值处理。 |
 
 ## fillOpacity
 
@@ -78,7 +77,7 @@ fillOpacity(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 填充区域透明度。   **说明：**number格式取值范围是[0.0, 1.0]，若给定值小于0.0，则取值为0.0；若给 定值大于1.0，则取值为1.0，其余异常值按1.0处理。string格式支持number格式取值的字符串形式，取值范围与number格式相同。Resource格式支持系统资源或者应用资源中的字符串，取值 范围和number格式相同。默认值：1.0 |
+| value | number \| string \| Resource | 是 | 填充区域透明度。   **说明：**number格式取值范围是[0.0, 1.0]，若给定值小于0.0，则取值为0.0；若给定值大于1.0，则取值为1.0，其余异常值按1.0处理。string格式支持number格式取值的字符串形式，取值范围与number格式相同。Resource格式支持系统资源或者应用资源中的字符串，取值范围和number格式相同。默认值：1.0 |
 
 ## mesh
 
@@ -86,7 +85,9 @@ fillOpacity(value: number | string | Resource)
 mesh(value: Array<any>, column: number, row: number)
 ```
 
-设置网格效果。将图像分割为（row + 1）* （column + 1）的网格，每个网格交点坐标存储在数组中（每两个元素表示一个交点的x、y坐标）。通过数组value中的坐标值，重新定位网格顶点位置，实现图像局部扭曲。支持 attributeModifier动态设置属性方法。适用于需要实现图像变形效果的场景，如图片扭曲、波浪效果等视觉效果。坐标数组按行优先顺序存储。原始图像被均匀分割后，每个网格区域根据顶点的新坐标进行变换，最终形成扭曲效果。
+设置网格效果。将图像分割为（row + 1）* （column + 1）的网格，每个网格交点坐标存储在数组中（每两个元素表示一个交点的x、y坐标）。通过数组value中的坐标值，重新定位网格顶点位置，实现图像局部扭曲。支持attributeModifier动态设置属性方法。适用于需要实现图像变形效果的场景，如图片扭曲、波浪效果等视觉效果。
+
+坐标数组按行优先顺序存储。原始图像被均匀分割后，每个网格区域根据顶点的新坐标进行变换，最终形成扭曲效果。
 
 > **说明：**
 > 
@@ -106,9 +107,9 @@ mesh(value: Array<any>, column: number, row: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array & lt;any & gt; | 是 | 长度（row + 1）* （column + 1）* 2的数组，记录扭曲后的位图各个顶点位置。坐标系基于Shape组件显示区域，原点(0,0)位于左上角，x轴向右延伸，y 轴向下延伸。 默认单位：vp 设置异常值undefined、null时按照空数组处理。 |
-| column | number | 是 | mesh矩阵列数，取值范围≥0。 默认值：0 设置异常值undefined、null、NaN和Infinity时，column参数和row参数按默认值0处理，value参数按空数组处理。 |
-| row | number | 是 | mesh矩阵行数，取值范围≥0。 默认值：0 设置异常值undefined、null、NaN和Infinity时，column参数和row参数按默认值0处理，value参数按空数组处理。 |
+| value | Array&lt;any&gt; | 是 | 长度（row + 1）* （column + 1）* 2的数组，记录扭曲后的位图各个顶点位置。坐标系基于Shape组件显示区域，原点(0,0)位于左上角，x轴向右延伸，y轴向下延伸。默认单位：vp 设置异常值undefined、null时按照空数组处理。 |
+| column | number | 是 | mesh矩阵列数，取值范围≥0。默认值：0 设置异常值undefined、null、NaN和Infinity时，column参数和row参数按默认值0处理，value参数按空数组处理。 |
+| row | number | 是 | mesh矩阵行数，取值范围≥0。默认值：0 设置异常值undefined、null、NaN和Infinity时，column参数和row参数按默认值0处理，value参数按空数组处理。 |
 
 ## stroke
 
@@ -130,7 +131,7 @@ stroke(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 边框颜色。默认值：Color.Transparent异常值undefined和null按照默认值处理，NaN和 Infinity按照Color.Black处理。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 边框颜色。默认值：Color.Transparent异常值undefined和null按照默认值处理，NaN和Infinity按照Color.Black处理。 |
 
 ## strokeDashArray
 
@@ -152,7 +153,7 @@ strokeDashArray(value: Array<any>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array & lt;any & gt; | 是 | 定义Shape轮廓的虚线模式的数组，数组元素交替表示线段长度和间隙长度。默认值：[]（空数组）默认单位：vp 异常值undefined和 null按照默认值处理。   **说明：**空数组：实线偶数多元素数组：数组元素按顺序循环，如[a, b, c, d]表示线段长度a- & gt;间隙长度b- & gt;线段长度c- & gt;间隙长度d- & gt;线段长度a- & gt;... 奇数多元素数组：重复一次该数组元素，按偶数多元素数组的规则顺序循环，如[a, b, c]等效于[a, b, c, a, b, c]，表示线段长度a- & gt;间隙长度b- & gt;线段长度c- & gt;间隙长度a- & gt;线段长度b- & gt;间隙长 度c- & gt;线段长度a- & gt;... |
+| value | Array&lt;any&gt; | 是 | 定义Shape轮廓的虚线模式的数组，数组元素交替表示线段长度和间隙长度。默认值：[]（空数组）默认单位：vp 异常值undefined和null按照默认值处理。   **说明：**空数组：实线偶数多元素数组：数组元素按顺序循环，如[a, b, c, d]表示线段长度a-&gt;间隙长度b-&gt;线段长度c-&gt;间隙长度d-&gt;线段长度a-&gt;... 奇数多元素数组：重复一次该数组元素，按偶数多元素数组的规则顺序循环，如[a, b, c]等效于[a, b, c, a, b, c]，表示线段长度a-&gt;间隙长度b-&gt;线段长度c-&gt;间隙长度a-&gt;线段长度b-&gt;间隙长度c-&gt;线段长度a-&gt;... |
 
 ## strokeDashOffset
 
@@ -174,7 +175,7 @@ strokeDashOffset(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 边框绘制起点的偏移量。默认值：0默认单位：vp 异常值undefined和null按照默认值处理，NaN和Infinity会导致 strokeDashArray失效。<br>**起始版本：** 11 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 边框绘制起点的偏移量。默认值：0默认单位：vp 异常值undefined和null按照默认值处理，NaN和Infinity会导致strokeDashArray失效。<br>**起始版本：** 11 |
 
 ## strokeLineCap
 
@@ -226,7 +227,9 @@ strokeLineJoin(value: LineJoinStyle)
 strokeMiterLimit(value: Length)
 ```
 
-设置斜接长度与边框宽度比值的极限值，支持attributeModifier动态设置属性方法。斜接长度表示外边框外边交点到内边交点的距离，边框宽度即 strokeWidth属性的值。该属性取值需在strokeLineJoin属性取值LineJoinStyle.Miter时生效。该属性的合法值范围应当大于等于1.0，当取值范围在[0,1)时按1.0处理，其余异常值按默认值处理。
+设置斜接长度与边框宽度比值的极限值，支持attributeModifier动态设置属性方法。斜接长度表示外边框外边交点到内边交点的距离，边框宽度即strokeWidth属性的值。该属性取值需在strokeLineJoin属性取值LineJoinStyle.Miter时生效。
+
+该属性的合法值范围应当大于等于1.0，当取值范围在[0,1)时按1.0处理，其余异常值按默认值处理。
 
 **起始版本：** 7
 
@@ -240,7 +243,7 @@ strokeMiterLimit(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 斜接长度与边框宽度比值的极限值。默认值：4 异常值undefined、null和NaN按照默认值处理，Infinity会导致stroke失 效。<br>**起始版本：** 20 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 斜接长度与边框宽度比值的极限值。默认值：4 异常值undefined、null和NaN按照默认值处理，Infinity会导致stroke失效。<br>**起始版本：** 20 |
 
 ## strokeOpacity
 
@@ -248,7 +251,7 @@ strokeMiterLimit(value: Length)
 strokeOpacity(value: number | string | Resource)
 ```
 
-设置边框透明度，支持attributeModifier动态设置属性方法。该属性的取值范围是[0.0, 1.0]，若给定值小于0.0，则取值为0.0；若 给定值大于1.0，则取值为1.0。
+设置边框透明度，支持attributeModifier动态设置属性方法。该属性的取值范围是[0.0, 1.0]，若给定值小于0.0，则取值为0.0；若给定值大于1.0，则取值为1.0。
 
 **起始版本：** 7
 
@@ -262,7 +265,7 @@ strokeOpacity(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 边框透明度。默认值：[stroke](#stroke)接口设置的透明度。异常值 NaN按0.0处理，undefined、null和Infinity按1.0处理。 |
+| value | number \| string \| Resource | 是 | 边框透明度。默认值：[stroke](#stroke)接口设置的透明度。异常值NaN按0.0处理，undefined、null和Infinity按1.0处理。 |
 
 ## strokeWidth
 
@@ -284,7 +287,7 @@ strokeWidth(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 边框宽度，取值范围≥0。默认值：1 默认单位：vp异常值undefined、null和NaN按照默认值处理，Infinity按0处 理。<br>**起始版本：** 20 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 边框宽度，取值范围≥0。默认值：1 默认单位：vp异常值undefined、null和NaN按照默认值处理，Infinity按0处理。<br>**起始版本：** 20 |
 
 ## viewPort
 
@@ -292,7 +295,9 @@ strokeWidth(value: Length)
 viewPort(value: ViewportRect)
 ```
 
-设置形状的视口。视口定义了绘制内容的坐标系统和显示区域。视口的起始点坐标(x, y)和宽高(width, height)决定了绘制内容在组件中的显示位置和范围。当视口范围与组件尺寸不同时，绘制内容会自动缩放适配。视口常用于调整绘制内容的显示比例和 位置。
+设置形状的视口。
+
+视口定义了绘制内容的坐标系统和显示区域。视口的起始点坐标(x, y)和宽高(width, height)决定了绘制内容在组件中的显示位置和范围。当视口范围与组件尺寸不同时，绘制内容会自动缩放适配。视口常用于调整绘制内容的显示比例和位置。
 
 **起始版本：** 7
 
@@ -306,4 +311,4 @@ viewPort(value: ViewportRect)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ViewportRect](arkts-arkui-viewportrect-i.md) | 是 | Viewport绘制属性。 默认值：{x: 0, y: 0, width: 0, height: 0} 异常值undefined和null按照默认值处理。<br>**起始版本：** 18 |
+| value | [ViewportRect](arkts-arkui-viewportrect-i.md) | 是 | Viewport绘制属性。默认值：{x: 0, y: 0, width: 0, height: 0} 异常值undefined和null按照默认值处理。<br>**起始版本：** 18 |

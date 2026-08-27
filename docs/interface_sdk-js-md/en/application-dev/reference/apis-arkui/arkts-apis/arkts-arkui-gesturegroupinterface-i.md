@@ -56,7 +56,7 @@ Triggered when a tap cancellation event is received after a gesture is recognize
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback for the gesture event. |
+| event | () =&gt; void | Yes | Callback for the gesture event. |
 
 **Return value:**
 

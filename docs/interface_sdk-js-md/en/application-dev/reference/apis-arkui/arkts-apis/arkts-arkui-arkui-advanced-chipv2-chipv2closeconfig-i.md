@@ -22,7 +22,7 @@ fontSize?: LengthMetrics
 
 Set font size for the close icon.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 26.0.0
 

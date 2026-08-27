@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-drmkit-->
 
-- [@ohos.multimedia.drm](arkts-multimedia-drm.md)
+- [@ohos.multimedia.drm(Defines the DRM capability.)](arkts-multimedia-drm.md)
   - [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md)
   - [getMediaKeySystems](arkts-drm-drm-getmediakeysystems-f.md)
   - [getMediaKeySystemUuid](arkts-drm-drm-getmediakeysystemuuid-f.md)

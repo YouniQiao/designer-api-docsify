@@ -24,7 +24,7 @@ function getAddressesByName(host: string, callback: AsyncCallback<Array<NetAddre
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | host | string | 是 | 需要解析的主机名。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetAddress&gt;&gt; | 是 | 回调函数。当使用默认网络解析主机名成功获取所有IP地址，error为undefined，data为获取到的所有IP地址； 否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;NetAddress&gt;&gt; | 是 | 回调函数。当使用默认网络解析主机名成功获取所有IP地址，error为undefined，data为获取到的所有IP地址；否则为错误对象。 |
 
 **错误码：**
 
@@ -96,7 +96,7 @@ function getAddressesByName(host: string): Promise<Array<NetAddress>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;NetAddress & gt; & gt; | Promise对象。返回所有IP地址。 |
+| Promise&lt;Array&lt;NetAddress&gt;&gt; | Promise对象。返回所有IP地址。 |
 
 **错误码：**
 

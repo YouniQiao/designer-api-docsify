@@ -18,7 +18,17 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 height?: number | string
 ```
 
-形状的高度。类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。单位：vp默认值：0vp取值为异常值时按照0vp处理。不设置时默认值为0vp。
+形状的高度。
+
+类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。
+
+单位：vp
+
+默认值：0vp
+
+取值为异常值时按照0vp处理。
+
+不设置时默认值为0vp。
 
 **类型：** number \| string
 
@@ -38,7 +48,17 @@ height?: number | string
 width?: number | string
 ```
 
-形状的宽度。类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。单位：vp默认值：0vp取值为异常值时按照0vp处理。不设置时默认值为0vp。
+形状的宽度。
+
+类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。
+
+单位：vp
+
+默认值：0vp
+
+取值为异常值时按照0vp处理。
+
+不设置时默认值为0vp。
 
 **类型：** number \| string
 

@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usb from '@kit.BasicServicesKit';
-import usbManager from '@kit.BasicServicesKitManager';
-import serialManager from '@kit.BasicServicesKitManager.serial';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## connectDevice
@@ -14,7 +12,9 @@ import serialManager from '@kit.BasicServicesKitManager.serial';
 function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 ```
 
-Connects to a USB device.Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md) to obtain the USB device list, and then call [usb.requestRight](arkts-basicservices-usb-requestright-f.md) to request the device access permission.
+Connects to a USB device.
+
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md) to obtain the USB device list, and then call [usb.requestRight](arkts-basicservices-usb-requestright-f.md) to request the device access permission.
 
 **Since:** 8
 
@@ -28,13 +28,13 @@ Connects to a USB device.Before you do this, call [usb.getDevices](arkts-basicse
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | Yes | USB device information. |
+| device | USBDevice | Yes | USB device information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Readonly & lt;USBDevicePipe & gt; | USB device pipe for data transfer. |
+| Readonly&lt;USBDevicePipe&gt; | USB device pipe for data transfer. |
 
 **Examples**
 

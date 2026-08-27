@@ -17,7 +17,10 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 addText(text: string, textOperationOptions?: TextContentControllerOptions): number
 ```
 
-Inserts text at a specified position in the editable content. If no position is specified, the text is appended to the end of the existing content.This API does not work when the text is being dragged.  
+Inserts text at a specified position in the editable content. If no position is specified, the text is appended to the end of the existing content.
+
+This API does not work when the text is being dragged.
+
 **addText** only affects the UI performance within the application and has no effect on the internal logic of the input method application. Therefore, avoid calling this API for the preview text.
 
 **Since:** 15
@@ -67,7 +70,9 @@ Notifies the input method to clear the current preview text.
 deleteBackward(): void
 ```
 
-Deletes the character before the text cursor in the text box bound to the basic controller. If some text has been selected using the mouse or keyboard before this function is called, the selected text will be deleted.This API is not supported in preview display scenarios.
+Deletes the character before the text cursor in the text box bound to the basic controller. If some text has been selected using the mouse or keyboard before this function is called, the selected text will be deleted.
+
+This API is not supported in preview display scenarios.
 
 > **NOTE：**
 > 

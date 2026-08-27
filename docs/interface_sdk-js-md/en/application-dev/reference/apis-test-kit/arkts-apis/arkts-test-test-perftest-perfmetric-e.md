@@ -19,6 +19,7 @@ APP_START_COMPLETE_TIME**):
 > - **LIST_SWIPE_FPS**: The number of frames rendered and updated on the screen per second when the list is scrolled.
 > - Supported scenarios: list scrolling of the **List**, **Grid**, **Scroll**, and **WaterFlow** components in the ArkUI subsystem.
 > - During a test, only the first list scrolling frame rate in the specified application is collected.
+
 @enum { number }
 
 **Since:** 20
@@ -101,7 +102,9 @@ Physical memory (the proportionally allocated memory occupied by shared librarie
 APP_START_RESPONSE_TIME = 5
 ```
 
-Response latency of application startup, in milliseconds.Marks: 1) Delay calculation is restricted by system dotting reporting. The start time is the time when the click event is reported, and the end time of the response delay is the time when the system responds to the first frame after the click. It is different from the end-to-end user-perceived delay. 2) Application start delay can be collected in the following scenarios: clicking the application icon on the desktop; clicking the application on the Multi-Task Center; clicking the application icon on the Dock; clicking the application icon on the application center. 3) This metric does not support the test of current application. 4) During the test, only the data of the first startup of the specified application can be collected.
+Response latency of application startup, in milliseconds.
+
+Marks: 1) Delay calculation is restricted by system dotting reporting. The start time is the time when the click event is reported, and the end time of the response delay is the time when the system responds to the first frame after the click. It is different from the end-to-end user-perceived delay. 2) Application start delay can be collected in the following scenarios: clicking the application icon on the desktop; clicking the application on the Multi-Task Center; clicking the application icon on the Dock; clicking the application icon on the application center. 3) This metric does not support the test of current application. 4) During the test, only the data of the first startup of the specified application can be collected.
 
 **Since:** 20
 
@@ -115,7 +118,9 @@ Response latency of application startup, in milliseconds.Marks: 1) Delay calcula
 APP_START_COMPLETE_TIME = 6
 ```
 
-Completion latency of application startup, in milliseconds.Marks: 1) Delay calculation is restricted by system dotting reporting. The start time is the time when the click event is reported, and the end time of the completion delay is the time when the first frame is displayed after the application is started. It is different from the end-to-end user-perceived delay. 2) Application start delay can be collected in the following scenarios: clicking the application icon on the desktop; clicking the application on the Multi-Task Center; clicking the application icon on the Dock; clicking the application icon on the application center. 3) This metric does not support the test of current application. 4) During the test, only the data of the first start of specified application can be collected.
+Completion latency of application startup, in milliseconds.
+
+Marks: 1) Delay calculation is restricted by system dotting reporting. The start time is the time when the click event is reported, and the end time of the completion delay is the time when the first frame is displayed after the application is started. It is different from the end-to-end user-perceived delay. 2) Application start delay can be collected in the following scenarios: clicking the application icon on the desktop; clicking the application on the Multi-Task Center; clicking the application icon on the Dock; clicking the application icon on the application center. 3) This metric does not support the test of current application. 4) During the test, only the data of the first start of specified application can be collected.
 
 **Since:** 20
 
@@ -129,7 +134,9 @@ Completion latency of application startup, in milliseconds.Marks: 1) Delay calcu
 PAGE_SWITCH_COMPLETE_TIME = 7
 ```
 
-Completion latency of page switching in an application, in milliseconds.Marks: 1) Delay calculation is restricted by system dotting and reporting. The start time is the time when the click event is reported, and the end time of the completion delay is the time when the first frame is displayed after page is switched. It is different from the end-to-end user-perceived delay. 2) Page switching delay can be collected in the page switchover scenario of the Router or Navigation component. 3) During the test, only the data of the first page switching in specified application can be collected.
+Completion latency of page switching in an application, in milliseconds.
+
+Marks: 1) Delay calculation is restricted by system dotting and reporting. The start time is the time when the click event is reported, and the end time of the completion delay is the time when the first frame is displayed after page is switched. It is different from the end-to-end user-perceived delay. 2) Page switching delay can be collected in the page switchover scenario of the Router or Navigation component. 3) During the test, only the data of the first page switching in specified application can be collected.
 
 **Since:** 20
 
@@ -143,7 +150,9 @@ Completion latency of page switching in an application, in milliseconds.Marks: 1
 LIST_SWIPE_FPS = 8
 ```
 
-List scrolling frame rate in an application, in frames per second (fps).Mark: 1) List sliding frame rate: refers to the frequency at which the screen can be refreshed when the list is sliding. Only the sliding frame rate of the List, grid, scroll, and waterflow scroll components of ArkUI subsystems can be collected. 2) During the test, only the data of the first sliding of the component in specified application can be collected.
+List scrolling frame rate in an application, in frames per second (fps).
+
+Mark: 1) List sliding frame rate: refers to the frequency at which the screen can be refreshed when the list is sliding. Only the sliding frame rate of the List, grid, scroll, and waterflow scroll components of ArkUI subsystems can be collected. 2) During the test, only the data of the first sliding of the component in specified application can be collected.
 
 **Since:** 20
 

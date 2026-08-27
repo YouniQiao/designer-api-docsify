@@ -9,7 +9,7 @@ Represents media query list information.
 ## Modules to Import
 
 ```TypeScript
-import SystemMediaQuery, { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
+import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 ```
 
 ## addListener
@@ -30,7 +30,7 @@ Adds a listener for this **MediaQueryList** object. The listener must be added b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (event: MediaQueryEvent) = & gt; void | Yes | Callback invoked when the query condition changes. |
+| callback | (event: MediaQueryEvent) =&gt; void | Yes | Callback invoked when the query condition changes. |
 
 **Examples**
 
@@ -84,7 +84,7 @@ Removes the listener for this **MediaQueryList** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (event: MediaQueryEvent) = & gt; void | Yes | Callback invoked when the query condition changes. |
+| callback | (event: MediaQueryEvent) =&gt; void | Yes | Callback invoked when the query condition changes. |
 
 **Examples**
 

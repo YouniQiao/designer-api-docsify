@@ -1,7 +1,8 @@
 # AutoDeviceSwitchQuery
 
-自动切换镜头查询类，用于查询设备是否支持自动切换镜头。  
-[自动切换镜头能力](../../../media/camera/camera-auto-switch.md)仅支持折叠屏设备使用，如需使能该能力请参考 [enableAutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#enableautodeviceswitch)。
+自动切换镜头查询类，用于查询设备是否支持自动切换镜头。
+
+[自动切换镜头能力](../../../media/camera/camera-auto-switch.md)仅支持折叠屏设备使用，如需使能该能力请参考[enableAutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#enableautodeviceswitch)。
 
 **起始版本：** 13
 

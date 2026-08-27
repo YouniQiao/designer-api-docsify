@@ -11,7 +11,8 @@
 function getNetExtAttribute(netHandle: NetHandle): Promise<string>
 ```
 
-Obtains the extended attributes of the network specified by **netHandle** to determine its security level. This API uses a promise to return the result.  
+Obtains the extended attributes of the network specified by **netHandle** to determine its security level. This API uses a promise to return the result.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 20
@@ -24,13 +25,13 @@ Obtains the extended attributes of the network specified by **netHandle** to det
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Network handle. |
+| netHandle | NetHandle | Yes | Network handle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the network extension attributes. |
+| Promise&lt;string&gt; | Promise used to return the network extension attributes. |
 
 **Error codes:**
 

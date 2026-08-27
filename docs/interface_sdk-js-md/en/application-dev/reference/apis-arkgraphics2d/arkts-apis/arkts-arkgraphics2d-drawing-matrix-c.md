@@ -18,7 +18,7 @@ Implements a matrix. A 3 x 3 matrix is shown as below. Elements in the matrix fr
 ## Modules to Import
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -120,7 +120,7 @@ Obtains all element values of this matrix.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Array of matrix values obtained. The length is 9. Each value is a floating point number. |
+| Array&lt;number&gt; | Array of matrix values obtained. The length is 9. Each value is a floating point number. |
 
 **Examples**
 
@@ -379,13 +379,13 @@ Maps a source point array to a destination point array by means of matrix transf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Array & lt;common2D.Point & gt; | Yes | Array of source points. |
+| src | Array&lt;common2D.Point&gt; | Yes | Array of source points. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;common2D.Point & gt; | Array of points obtained. |
+| Array&lt;common2D.Point&gt; | Array of points obtained. |
 
 **Error codes:**
 
@@ -976,7 +976,7 @@ Sets parameters for this matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | Array & lt;number & gt; | Yes | Floating-point array that holds the parameter values, with the array length set to 9. The values in the array respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient, in ascending order of indexes. |
+| values | Array&lt;number&gt; | Yes | Floating-point array that holds the parameter values, with the array length set to 9. The values in the array respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient, in ascending order of indexes. |
 
 **Error codes:**
 
@@ -1010,7 +1010,7 @@ Updates the existing matrix with another matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| matrix | Array & lt;number & gt; \ | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Array or matrix for the update. |
+| matrix | Array&lt;number&gt; \| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes | Array or matrix for the update. |
 
 **Examples**
 
@@ -1039,8 +1039,8 @@ Sets this matrix to a transformation matrix that maps the source point array to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Array & lt;common2D.Point & gt; | Yes | Array of source points. The array length must be the same as the value of **count**. |
-| dst | Array & lt;common2D.Point & gt; | Yes | Array of destination points. The array length must be the same as the value of **count**. |
+| src | Array&lt;common2D.Point&gt; | Yes | Array of source points. The array length must be the same as the value of **count**. |
+| dst | Array&lt;common2D.Point&gt; | Yes | Array of destination points. The array length must be the same as the value of **count**. |
 | count | number | Yes | Number of points in each array. The value is an integer. |
 
 **Return value:**

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## getConnectedBLEDevices
@@ -30,7 +30,7 @@ Obtains the list of devices in the connected status. On API 10 and above, the pe
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Returns the list of device address. |
+| Array&lt;string&gt; | Returns the list of device address. |
 
 **Error codes:**
 

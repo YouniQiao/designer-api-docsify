@@ -1,6 +1,8 @@
 # Refresh properties/events
 
-In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.
+
+In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** RefreshAttribute extends CommonMethod<RefreshAttribute>
 
@@ -41,7 +43,9 @@ Sets the maximum pull-down distance.
 maxPullDownDistance(distance: number | Resource | undefined)
 ```
 
-Sets the maximum pull-down distance. The resource type is supported.If this API is not set, the maximum pull-down distance is **undefined**.
+Sets the maximum pull-down distance. The resource type is supported.
+
+If this API is not set, the maximum pull-down distance is **undefined**.
 
 **Since:** 26.0.0
 
@@ -81,7 +85,7 @@ Called when the pull-down distance changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;number & gt; | Yes | Callback used to listen for the pull-down distance changes. It is triggered when the pull-down distance changes and returns the current pull-down distance.Unit: vp |
+| callback | Callback&lt;number&gt; | Yes | Callback used to listen for the pull-down distance changes. It is triggered when the pull-down distance changes and returns the current pull-down distance.Unit: vp |
 
 ## onRefreshing
 
@@ -101,7 +105,7 @@ Called when the component starts refreshing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | Yes | Callback triggered when the component enters the refresh state. |
+| callback | () =&gt; void | Yes | Callback triggered when the component enters the refresh state. |
 
 ## onStateChange
 
@@ -121,7 +125,7 @@ Called when the refresh status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (state: RefreshStatus) = & gt; void | Yes |  |
+| callback | (state: RefreshStatus) =&gt; void | Yes |  |
 
 ## pullDownRatio
 
@@ -217,7 +221,9 @@ Sets the minimum pull-down offset required to trigger a refresh. If the distance
 refreshOffset(value: number | Resource)
 ```
 
-Sets the pull-down offset that triggers the refresh. When the pull-down distance is less than the value of this attribute, releasing the pull-down gesture does not trigger the refresh. The resource type is supported.If this API and [promptText](arkts-arkui-refreshoptions-i.md) are not set, the default offset is 64 vp. If [promptText](arkts-arkui-refreshoptions-i.md) is set, the default offset is 96 vp.
+Sets the pull-down offset that triggers the refresh. When the pull-down distance is less than the value of this attribute, releasing the pull-down gesture does not trigger the refresh. The resource type is supported.
+
+If this API and [promptText](arkts-arkui-refreshoptions-i.md) are not set, the default offset is 64 vp. If [promptText](arkts-arkui-refreshoptions-i.md) is set, the default offset is 96 vp.
 
 **Since:** 26.0.0
 
@@ -231,4 +237,4 @@ Sets the pull-down offset that triggers the refresh. When the pull-down distance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Pull-down offset.Unit: vp Value range: (0, +∞). If the value is 0 or a negative number, the default value will be used. |
+| value | number \| Resource | Yes | Pull-down offset.Unit: vp Value range: (0, +∞). If the value is 0 or a negative number, the default value will be used. |

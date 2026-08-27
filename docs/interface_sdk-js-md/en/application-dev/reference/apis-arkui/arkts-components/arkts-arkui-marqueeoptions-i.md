@@ -23,7 +23,11 @@ Describes the initialization options of the **Marquee** component.
 delay?: number
 ```
 
-The waiting time between each round of the marquee.Default value: 0.Unit: ms.
+The waiting time between each round of the marquee.
+
+Default value: 0.
+
+Unit: ms.
 
 **Type:** number
 
@@ -43,9 +47,13 @@ The waiting time between each round of the marquee.Default value: 0.Unit: ms.
 fromStart?: boolean
 ```
 
-Whether the text scrolls from the start.  
-**true**: Scroll from the start.  
-**false**: Scroll from the end.Default value: **true**.
+Whether the text scrolls from the start.
+
+**true**: Scroll from the start.
+
+**false**: Scroll from the end.
+
+Default value: **true**.
 
 **Type:** boolean
 
@@ -65,8 +73,13 @@ Whether the text scrolls from the start.
 loop?: number
 ```
 
-Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll continuously.Default value: **-1**  
-**NOTE：**Regardless of the value, the marquee scrolls only once on an ArkTS widget.
+Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll continuously.
+
+Default value: **-1**
+
+**NOTE：**
+
+Regardless of the value, the marquee scrolls only once on an ArkTS widget.
 
 **Type:** number
 
@@ -86,7 +99,9 @@ Number of times the marquee will scroll. If the value is less than or equal to *
 spacing?: LengthMetrics
 ```
 
-The spacing between two rounds of marquee.Default value is marquee width.
+The spacing between two rounds of marquee.
+
+Default value is marquee width.
 
 **Type:** LengthMetrics
 
@@ -124,9 +139,13 @@ Text to scroll.
 start: boolean
 ```
 
-Whether to start scrolling.  
-**true**: yes; **false**: no  
-**NOTE：**This parameter cannot be used to restart scrolling that has been completed.
+Whether to start scrolling.
+
+**true**: yes; **false**: no
+
+**NOTE：**
+
+This parameter cannot be used to restart scrolling that has been completed.
 
 **Type:** boolean
 
@@ -144,7 +163,11 @@ Whether to start scrolling.
 step?: number
 ```
 
-Step length of the scrolling animation text. If the value is greater than the text width of the marquee, the default value is used.Default value: **6**Unit: vp
+Step length of the scrolling animation text. If the value is greater than the text width of the marquee, the default value is used.
+
+Default value: **6**
+
+Unit: vp
 
 **Type:** number
 

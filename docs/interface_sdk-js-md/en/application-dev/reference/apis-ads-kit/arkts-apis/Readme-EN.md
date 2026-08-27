@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-adskit-->
 
-- [@ohos.advertising](arkts-advertising.md)
+- [@ohos.advertising(Ads Service Framework)](arkts-advertising.md)
   - [deleteWebAdInterface](arkts-ads-advertising-deletewebadinterface-f.md)
   - [getAdRequestBody](arkts-ads-advertising-getadrequestbody-f.md)
   - [parseAdResponse](arkts-ads-advertising-parseadresponse-f.md)
@@ -14,18 +14,18 @@
   - [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)
   - [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md)
   - [Advertisement](arkts-ads-advertising-advertisement-t.md)
-- [@ohos.advertising.AdComponent](arkts-advertising-adcomponent.md)
+- [@ohos.advertising.AdComponent(Ad Component)](arkts-advertising-adcomponent.md)
   - [AdComponent](arkts-ads-advertising-adcomponent-adcomponent-s.md)
-- [@ohos.advertising.AdsServiceExtensionAbility](arkts-advertising-adsserviceextensionability.md)
+- [@ohos.advertising.AdsServiceExtensionAbility(ExtensionAbility for Ads)](arkts-advertising-adsserviceextensionability.md)
   <!--Del-->
   - [AdsServiceExtensionAbility(system api)](arkts-ads-advertising-adsserviceextensionability-adsserviceextensionability-c-sys.md)<!--DelEnd-->
   - [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md)
-- [@ohos.advertising.AutoAdComponent](arkts-advertising-autoadcomponent.md)
+- [@ohos.advertising.AutoAdComponent(Carousel Ad Component)](arkts-advertising-autoadcomponent.md)
   - [AutoAdComponent](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md)
-- [@ohos.identifier.oaid](arkts-identifier-oaid.md)
+- [@ohos.identifier.oaid(OAID)](arkts-identifier-oaid.md)
   - [getOAID](arkts-ads-identifier-getoaid-f.md)
   <!--Del-->
   - [resetOAID(system api)](arkts-ads-identifier-resetoaid-f-sys.md)<!--DelEnd-->
 - advertising<!--arkts-adskit-advertising-->
-  - [advertisement](arkts-advertisement.md)
+  - [advertisement(Defines the advertisement data model)](arkts-advertisement.md)
     - [Advertisement](arkts-ads-advertisement-advertisement-i.md)

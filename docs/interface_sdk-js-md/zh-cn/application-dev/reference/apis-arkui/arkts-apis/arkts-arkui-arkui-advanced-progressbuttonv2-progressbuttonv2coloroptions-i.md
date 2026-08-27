@@ -1,6 +1,10 @@
 # ProgressButtonV2ColorOptions
 
-下载按钮色彩信息选项。设备行为差异：该接口在Wearable设备上使用时，应用程序运行异常，异常信息中提示接口未定义，在其他设备中可正常调用。@interface ProgressButtonV2ColorOptions
+下载按钮色彩信息选项。
+
+设备行为差异：该接口在Wearable设备上使用时，应用程序运行异常，异常信息中提示接口未定义，在其他设备中可正常调用。
+
+@interface ProgressButtonV2ColorOptions
 
 **起始版本：** 18
 
@@ -20,7 +24,7 @@ backgroundColor?: ColorMetrics
 
 按钮背景颜色。默认值：\\$r('sys.color.ohos_id_color_foreground_contrary')
 
-**类型：** ColorMetrics
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
@@ -38,7 +42,7 @@ borderColor?: ColorMetrics
 
 按钮描边颜色。默认值：#330A59F7
 
-**类型：** ColorMetrics
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
@@ -56,7 +60,7 @@ progressColor?: ColorMetrics
 
 进度条颜色。默认值：#330A59F7
 
-**类型：** ColorMetrics
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
@@ -74,7 +78,7 @@ textColor?: ColorMetrics
 
 按钮文本颜色。默认值：系统默认值(#CE000000)
 
-**类型：** ColorMetrics
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 

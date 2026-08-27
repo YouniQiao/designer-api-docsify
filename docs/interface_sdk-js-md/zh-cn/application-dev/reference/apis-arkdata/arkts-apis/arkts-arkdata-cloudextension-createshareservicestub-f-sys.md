@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import cloudExtension from '@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## createShareServiceStub
@@ -30,7 +30,7 @@ function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;rpc.RemoteObject & gt; | Promise对象，返回ShareCenter的RemoteObject对象。 |
+| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回ShareCenter的RemoteObject对象。 |
 
 **示例**
 

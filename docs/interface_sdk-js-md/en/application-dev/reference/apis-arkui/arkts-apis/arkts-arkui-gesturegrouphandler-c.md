@@ -55,7 +55,7 @@ Sets the cancellation callback for the gesture group handler. The callback is tr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback & lt;void & gt; | Yes | Callback invoked when the gesture group is cancelled. |
+| event | Callback&lt;void&gt; | Yes | Callback invoked when the gesture group is cancelled. |
 
 **Return value:**
 

@@ -9,7 +9,7 @@ Defines the callback that is invoked when the stub on the target UIAbility is di
 ## Modules to Import
 
 ```TypeScript
-import UIAbility, { Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## [[Call]]

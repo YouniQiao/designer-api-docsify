@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.MDMKit';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## getDisallowedUninstallBundles
@@ -162,7 +162,7 @@ Obtains the list of applications that are not allowed to be uninstalled by the c
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the applications that cannot be uninstalled by the current or specified user. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the applications that cannot be uninstalled by the current or specified user. |
 
 **Error codes:**
 

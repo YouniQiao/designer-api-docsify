@@ -54,7 +54,7 @@ Obtains the call status. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;CallState & gt; | Promise used to return the result. |
+| Promise&lt;CallState&gt; | Promise used to return the result. |
 
 **Examples**
 

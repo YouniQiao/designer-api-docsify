@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import usbManager from '@kit.BasicServicesKit';
-import serialManager from '@kit.BasicServicesKit.serial';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## connectDevice
@@ -13,7 +12,8 @@ import serialManager from '@kit.BasicServicesKit.serial';
 function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 ```
 
-根据getDevices()返回的设备信息打开USB设备，调用成功后建立设备连接通道，可以进行后续的数据传输和设备控制操作。使用完后需要调用 [usbManager.closePipe](arkts-basicservices-usbmanager-closepipe-f.md)关闭设备连接通道。如果USB服务异常，会返回`undefined`，注意需要对接口返回值做判空处理。
+根据getDevices()返回的设备信息打开USB设备，调用成功后建立设备连接通道，可以进行后续的数据传输和设备控制操作。使用完后需要调用[usbManager.closePipe](arkts-basicservices-usbmanager-closepipe-f.md)关闭设备连接通道。如果USB服务异常，会返回`undefined`，注意需要对接口返回值做判空处理。
+
 1. 调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md)获取设备信息以及USBDevice;
 2. 调用[usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md)请求使用该设备的权限。
 
@@ -25,13 +25,13 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | 是 | USB设备信息，用[getDevices](arkts-basicservices-usbmanager-getdevices-f.md)获取的busNum和devAddress确定设备，当前其他属性（如 name、vendorId等）不参与设备匹配。 |
+| device | USBDevice | 是 | USB设备信息，用[getDevices](arkts-basicservices-usbmanager-getdevices-f.md)获取的busNum和devAddress确定设备，当前其他属性（如name、vendorId等）不参与设备匹配。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Readonly & lt;USBDevicePipe & gt; | USB设备连接通道对象，用于后续的数据传输和设备控制操作。 |
+| Readonly&lt;USBDevicePipe&gt; | USB设备连接通道对象，用于后续的数据传输和设备控制操作。 |
 
 **错误码：**
 

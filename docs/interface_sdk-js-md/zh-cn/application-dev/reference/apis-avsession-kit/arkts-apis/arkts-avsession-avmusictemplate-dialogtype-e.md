@@ -1,6 +1,8 @@
 # DialogType
 
-表示对话框类型的枚举。@enum { number }
+表示对话框类型的枚举。
+
+@enum { number }
 
 **起始版本：** 23
 

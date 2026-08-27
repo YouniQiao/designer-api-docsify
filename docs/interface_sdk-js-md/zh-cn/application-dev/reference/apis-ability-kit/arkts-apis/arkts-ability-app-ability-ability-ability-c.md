@@ -1,6 +1,6 @@
 # Ability
 
-Ability类是应用生命周期调度的基本单元，是[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)和 [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的基类，提供系统配置更新回调和系统内存级别变化回调能力。该基类不支持开发者直接继 承，开发者应根据具体的业务场景选择使用[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)或 [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)，相关指南参见 [Ability Kit简介](../../../application-models/abilitykit-overview.md)。
+Ability类是应用生命周期调度的基本单元，是[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)和[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)的基类，提供系统配置更新回调和系统内存级别变化回调能力。该基类不支持开发者直接继承，开发者应根据具体的业务场景选择使用[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)或[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)，相关指南参见[Ability Kit简介](../../../application-models/abilitykit-overview.md)。
 
 **起始版本：** 9
 
@@ -9,10 +9,7 @@ Ability类是应用生命周期调度的基本单元，是[UIAbility](arkts-abil
 ## 导入模块
 
 ```TypeScript
-import Ability from '@kit.AbilityKit';
-import AbilityConstant from '@kit.AbilityKitConstant';
-import AbilityLifecycleCallback from '@kit.AbilityKitLifecycleCallback';
-import AbilityStage from '@kit.AbilityKitStage';
+import { Ability } from '@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdate
@@ -80,7 +77,7 @@ onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见 [AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md)。 |
+| level | AbilityConstant.MemoryLevel | 是 | 整机可用内存级别，对应的触发场景详见[AbilityConstant.MemoryLevel](arkts-ability-abilityconstant-memorylevel-e.md)。 |
 
 **示例**
 

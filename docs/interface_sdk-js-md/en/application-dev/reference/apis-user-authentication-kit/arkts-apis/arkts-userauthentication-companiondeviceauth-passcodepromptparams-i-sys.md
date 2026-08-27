@@ -1,6 +1,8 @@
 # PasscodePromptParams (System API)
 
-Params carried by the framework when prompting for a companion device passcode.@interface PasscodePromptParams
+Params carried by the framework when prompting for a companion device passcode.
+
+@interface PasscodePromptParams
 
 **Since:** 26.1.0
 
@@ -11,7 +13,7 @@ Params carried by the framework when prompting for a companion device passcode.@
 ## Modules to Import
 
 ```TypeScript
-import companionDeviceAuth from '@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## challenge

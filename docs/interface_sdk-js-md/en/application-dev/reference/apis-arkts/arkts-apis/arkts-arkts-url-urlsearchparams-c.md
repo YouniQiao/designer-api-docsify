@@ -27,7 +27,7 @@ Returns an iterator allowing to go through all key/value pairs contained in this
 
 **Deprecated since:** 9
 
-**Substitutes:** iterator]
+**Substitutes:** [Symbol.iterator]
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -116,7 +116,7 @@ A parameterized constructor used to create an URLSearchParams instance. As the i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| init | string[][] \| Record & lt;string, string & gt; \ | string \| URLSearchParams | No | init init |
+| init | string[][] \| Record&lt;string, string&gt; \| string \| URLSearchParams | No | init init |
 
 **Examples**
 
@@ -228,7 +228,7 @@ Callback functions are used to traverse key-value pairs on the URLSearchParams i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: string, key: string, searchParams: URLSearchParams) = & gt; void | Yes | The callback function to execute for each key-value pair |
+| callbackFn | (value: string, key: string, searchParams: URLSearchParams) =&gt; void | Yes | The callback function to execute for each key-value pair |
 | thisArg | Object | No | The value to use as this when executing callbackFn |
 
 **Examples**

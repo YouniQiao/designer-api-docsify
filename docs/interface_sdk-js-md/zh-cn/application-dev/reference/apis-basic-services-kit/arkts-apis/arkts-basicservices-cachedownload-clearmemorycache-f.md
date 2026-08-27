@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import cacheDownload from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## clearMemoryCache

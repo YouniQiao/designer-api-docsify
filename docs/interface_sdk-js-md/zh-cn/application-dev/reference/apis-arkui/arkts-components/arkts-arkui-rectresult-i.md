@@ -17,7 +17,9 @@
 height: number
 ```
 
-内容高度大小。单位：vp
+内容高度大小。
+
+单位：vp
 
 **类型：** number
 
@@ -35,7 +37,9 @@ height: number
 width: number
 ```
 
-内容宽度大小。单位：vp
+内容宽度大小。
+
+单位：vp
 
 **类型：** number
 
@@ -53,7 +57,9 @@ width: number
 x: number
 ```
 
-水平方向横坐标。单位：vp
+水平方向横坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -71,7 +77,9 @@ x: number
 y: number
 ```
 
-竖直方向纵坐标。单位：vp
+竖直方向纵坐标。
+
+单位：vp
 
 **类型：** number
 

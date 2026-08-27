@@ -1,11 +1,14 @@
 # WaterFlow
 
-瀑布流容器，由“行”和“列”分割的单元格所组成，通过容器自身的排列规则，将不同大小的“项目”自上而下，如瀑布般紧密布局。支持多列布局、分组混合布局、懒加载、自动计算列数和边缘渐隐等功能，适用于图片画廊、商品展示、内容信息流等需要展示不 同尺寸内容的场景。
+瀑布流容器，由“行”和“列”分割的单元格所组成，通过容器自身的排列规则，将不同大小的“项目”自上而下，如瀑布般紧密布局。支持多列布局、分组混合布局、懒加载、自动计算列数和边缘渐隐等功能，适用于图片画廊、商品展示、内容信息流等需要展示不同尺寸内容的场景。
+
 > **说明：** > > 该组件从API version 9 开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。 > > WaterFlow组件支持展示瀑布流布局，不支持编辑模式和子元素拖动功能。 > > 组件内部已绑定手势实现跟手滚动等功能，需要增加自定义手势操作时请参考手势拦截增强进行处理。
 
 ## 子组件
 
-仅支持FlowItem子组件和自定义组件。自定义组件在WaterFlow下使用时，建议使用FlowItem作为自定义组件的顶层组件，不建议给自定义组件设置属性和事件方法。支持通过渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和 [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
+仅支持FlowItem子组件和自定义组件。自定义组件在WaterFlow下使用时，建议使用FlowItem作为自定义组件的顶层组件，不建议给自定义组件设置属性和事件方法。
+
+支持通过渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、[ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)、[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)）动态生成子组件，更推荐使用LazyForEach或Repeat以优化性能。
 
 > **说明：**
 > 
@@ -60,16 +63,21 @@ WaterFlow(options?: WaterFlowOptions)
 
 | 名称 | 说明 |
 | --- | --- |
+| [UIWaterFlowEvent](arkts-arkui-uiwaterflowevent-i.md) | frameNode中[getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md)方法的返回值，可用于给WaterFlow节点设置滚动事件。 |
+| [WaterFlowOptions](arkts-arkui-waterflowoptions-i.md) | 瀑布流组件参数对象。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
+| [GetItemMainSizeByIndex](arkts-arkui-getitemmainsizebyindex-t.md) | 根据index获取指定Item的主轴大小。 |
+| [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md) | WaterFlow组件可见区域item变化事件的回调类型。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
+| [WaterFlowLayoutMode](arkts-arkui-waterflowlayoutmode-e.md) | 瀑布流组件布局模式枚举。 |
 
 ## 示例
 

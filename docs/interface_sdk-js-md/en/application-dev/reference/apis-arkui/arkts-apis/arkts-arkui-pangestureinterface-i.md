@@ -85,7 +85,7 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback for pan gesture cancellation. |
+| event | () =&gt; void | Yes | Callback for pan gesture cancellation. |
 
 **Return value:**
 
@@ -139,7 +139,7 @@ Registers the callback for pan gesture completion. This callback is triggered wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes | Callback for pan gesture completion. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for pan gesture completion. |
 
 **Return value:**
 
@@ -165,7 +165,7 @@ Registers the callback for successful pan gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes | Callback for successful pan gesture recognition. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for successful pan gesture recognition. |
 
 **Return value:**
 
@@ -191,7 +191,7 @@ Registers the callback for pan gesture updates. If **fingerList** contains multi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes | Callback for pan gesture updates. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for pan gesture updates. |
 
 **Return value:**
 

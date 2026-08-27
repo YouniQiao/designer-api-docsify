@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import StartupListener from '@kit.AbilityKit';
+import { StartupListener } from '@kit.AbilityKit';
 ```
 
 ## 汇总

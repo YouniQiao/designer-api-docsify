@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import uiEffect from '@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## distortFactor
@@ -116,7 +116,7 @@ refractionFactor : number
 ripplePosition?: Array<[number, number]>
 ```
 
-水波效果作用的位置。当需要在多个指定位置同时触发水波效果时传入此参数。不传入时默认无水波位置， 水波效果不生效。数组中每个位置包含x和y两个维度，坐标为归一化坐标，[0, 0]表示左上角， [1, 1]表示右下角。最多支持10个位置坐标，超出则整体无效。
+水波效果作用的位置。当需要在多个指定位置同时触发水波效果时传入此参数。不传入时默认无水波位置，水波效果不生效。数组中每个位置包含x和y两个维度，坐标为归一化坐标，[0, 0]表示左上角，[1, 1]表示右下角。最多支持10个位置坐标，超出则整体无效。
 
 **类型：** Array&lt;[number, number]&gt;
 

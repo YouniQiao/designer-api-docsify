@@ -1,6 +1,8 @@
 # CustomResult
 
-表示EAP认证处理结果的枚举。​**系统能力**​：SystemCapability.Communication.NetManager.Eap
+表示EAP认证处理结果的枚举。
+
+​**系统能力**​：SystemCapability.Communication.NetManager.Eap
 
 **起始版本：** 20
 

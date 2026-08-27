@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import inputMethodSystemPanelManager from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## sendPrivateCommand
@@ -26,13 +26,13 @@ Sends a private command to the system-default input method application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| commandData | Record & lt;string, CommandDataType & gt; | Yes | Command data to be sent. The maximum size is 32 KB, and a maximum of five commands are allowed. |
+| commandData | Record&lt;string, CommandDataType&gt; | Yes | Command data to be sent. The maximum size is 32 KB, and a maximum of five commands are allowed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

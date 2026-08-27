@@ -11,7 +11,7 @@ Defines the detailed permission usage information.
 ## Modules to Import
 
 ```TypeScript
-import privacyManager from '@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## activeStatus
@@ -36,7 +36,9 @@ Permission usage status.
 callingTokenId?: number
 ```
 
-Identity of the caller application. This field is invalid when **activeStatus** is **INACTIVE**.Default value: **0**.
+Identity of the caller application. This field is invalid when **activeStatus** is **INACTIVE**.
+
+Default value: **0**.
 
 **Type:** number
 
@@ -118,7 +120,9 @@ Token ID of the application whose permission usage changes are subscribed to.
 usedType?: PermissionUsedType
 ```
 
-Sensitive permission usage type. This value is invalid when activeStatus is INACTIVE.Default value: NORMAL_TYPE.
+Sensitive permission usage type. This value is invalid when activeStatus is INACTIVE.
+
+Default value: NORMAL_TYPE.
 
 **Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 

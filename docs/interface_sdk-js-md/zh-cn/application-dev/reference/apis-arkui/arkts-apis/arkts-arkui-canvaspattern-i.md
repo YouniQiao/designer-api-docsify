@@ -1,6 +1,6 @@
 # CanvasPattern
 
-一个Object对象，使用 [createPattern](arkts-arkui-canvasrenderer-c.md#createpattern) 方法创建，通过指定图像和重复方式创建图片填充的模板。
+一个Object对象，使用[createPattern](arkts-arkui-canvasrenderer-c.md#createpattern)方法创建，通过指定图像和重复方式创建图片填充的模板。
 
 **起始版本：** 8
 
@@ -31,4 +31,4 @@ setTransform(transform?: Matrix2D): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transform | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 | 转换矩阵。 异常值undefined和null按无效值不做矩阵变换处理。 默认值：不做矩阵变换。 |
+| transform | Matrix2D | 否 | 转换矩阵。异常值undefined和null按无效值不做矩阵变换处理。默认值：不做矩阵变换。 |

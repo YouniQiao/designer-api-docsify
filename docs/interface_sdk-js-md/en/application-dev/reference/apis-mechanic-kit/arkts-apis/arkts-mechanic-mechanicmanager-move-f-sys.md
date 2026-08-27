@@ -30,7 +30,7 @@ Move a mechanical device with the specified parameters.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Result & gt; | Promise that returns the execution result. |
+| Promise&lt;Result&gt; | Promise that returns the execution result. |
 
 **Error codes:**
 

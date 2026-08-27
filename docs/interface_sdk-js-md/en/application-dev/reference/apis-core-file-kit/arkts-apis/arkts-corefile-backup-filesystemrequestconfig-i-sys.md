@@ -1,6 +1,8 @@
 # FileSystemRequestConfig (System API)
 
-Parameters required to perform garbage collection (GC).@interface FileSystemRequestConfig
+Parameters required to perform garbage collection (GC).
+
+@interface FileSystemRequestConfig
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ Parameters required to perform garbage collection (GC).@interface FileSystemRequ
 ## Modules to Import
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## triggerType

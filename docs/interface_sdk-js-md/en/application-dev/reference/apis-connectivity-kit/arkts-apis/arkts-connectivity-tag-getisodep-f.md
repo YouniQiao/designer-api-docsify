@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getIsoDep
@@ -30,7 +30,7 @@ Obtains an **IsoDepTag** object, which allows access to the tags that use the Is
 
 | Type | Description |
 | --- | --- |
-| [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md) | IsoDepTag** object obtained. |
+| IsoDepTag | IsoDepTag** object obtained. |
 
 **Error codes:**
 

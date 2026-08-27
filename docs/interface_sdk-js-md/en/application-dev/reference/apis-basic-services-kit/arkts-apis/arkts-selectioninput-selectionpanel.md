@@ -29,10 +29,10 @@ import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [PanelInfo(Word Selection Panel)](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Defines attributes of the word selection panel, including its type, position, and size. You can specify the panel type (menu panel or main panel) using **panelType**, set the coordinates of the upper left corner of the panel using **x** and **y**, and set the panel size using **width** and **height**. These attributes collectively define the display form of the panel. |
+| [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Defines attributes of the word selection panel, including its type, position, and size. You can specify the panel type (menu panel or main panel) using **panelType**, set the coordinates of the upper left corner of the panel using **x** and **y**, and set the panel size using **width** and **height**. These attributes collectively define the display form of the panel. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PanelType(Word Selection Panel)](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) | Enumerates the word selection panel types, which defines the two-level architecture of the panel: menu panel (level 1) and main panel (level 2). |
+| [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) | Enumerates the word selection panel types, which defines the two-level architecture of the panel: menu panel (level 1) and main panel (level 2). |

@@ -187,13 +187,13 @@ Obtains the value of a specific certificate extension entry by OID.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | valueType | [ExtensionEntryType](arkts-devicecertificate-cert-extensionentrytype-e.md) | Yes | Type of the information to obtain. |
-| oid | [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Yes | OID of the certificate extension to obtain. |
+| oid | DataBlob | Yes | OID of the certificate extension to obtain. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Certificate extension object information obtained. |
+| DataBlob | Certificate extension object information obtained. |
 
 **Error codes:**
 

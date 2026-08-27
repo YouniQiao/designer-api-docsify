@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import securityManager from '@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## getWatermarkImageApps
@@ -33,7 +33,7 @@ Obtains the list of application bundle names for which watermarks have been set 
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of application bundle names for which watermarks have been set. |
+| Array&lt;string&gt; | List of application bundle names for which watermarks have been set. |
 
 **Error codes:**
 

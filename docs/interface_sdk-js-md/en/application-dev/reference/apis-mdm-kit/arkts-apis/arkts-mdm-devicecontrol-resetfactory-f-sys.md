@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import deviceControl from '@kit.MDMKit';
+import { deviceControl } from '@kit.MDMKit';
 ```
 
 ## resetFactory
@@ -99,7 +99,7 @@ Restores factory settings. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. If the operation fails, an error object will be thrown. |
+| Promise&lt;void&gt; | Promise that returns no value. If the operation fails, an error object will be thrown. |
 
 **Error codes:**
 

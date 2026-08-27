@@ -11,7 +11,7 @@ AbilityConstant provides enums related to abilities, including the window mode.
 ## Modules to Import
 
 ```TypeScript
-import AbilityConstant from '@kit.AbilityKit';
+import { AbilityConstant } from '@kit.AbilityKit';
 ```
 
 ## Summary

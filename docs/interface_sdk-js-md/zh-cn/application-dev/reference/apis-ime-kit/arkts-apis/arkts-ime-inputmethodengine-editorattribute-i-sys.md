@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## fluidLightMode
@@ -18,7 +18,7 @@ import inputMethodEngine from '@kit.IMEKit';
 readonly fluidLightMode?: FluidLightMode
 ```
 
-流光模式。未设置或设置非法值时，默认不使用流光模式。 该属性仅系统应用可以使用。
+流光模式。未设置或设置非法值时，默认不使用流光模式。该属性仅系统应用可以使用。
 
 **类型：** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 

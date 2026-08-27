@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import deviceSettings from '@kit.MDMKit';
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## getScreenOffTime
@@ -99,7 +99,7 @@ function getScreenOffTime(admin: Want): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回设备息屏时间（单位：毫秒）。 |
+| Promise&lt;number&gt; | Promise对象，返回设备息屏时间（单位：毫秒）。 |
 
 **错误码：**
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## code
@@ -34,7 +34,7 @@ readonly code:SyncResultCode
 readonly device:string
 ```
 
-表示同步的设备ID，可通过 [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) 等接口获取所有可信设备ID列表。
+表示同步的设备ID，可通过[getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)等接口获取所有可信设备ID列表。
 
 **类型：** string
 

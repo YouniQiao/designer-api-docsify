@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## getKeyboardRepeatRate
@@ -83,7 +82,7 @@ function getKeyboardRepeatRate(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回键盘按键的重复速率，单位为ms/次。 |
+| Promise&lt;number&gt; | Promise对象，返回键盘按键的重复速率，单位为ms/次。 |
 
 **错误码：**
 

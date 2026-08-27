@@ -162,7 +162,7 @@
   - [SwitchMode](arkts-media-media-switchmode-e.md)
   - [VideoScaleType](arkts-media-media-videoscaletype-e.md)
   - [VideoSourceType](arkts-media-media-videosourcetype-e.md)
-- [@ohos.multimedia.videoProcessing](arkts-multimedia-videoprocessing.md)
+- [@ohos.multimedia.videoProcessing(Provides the capability of video quality processing.)](arkts-multimedia-videoprocessing.md)
   - [createVideoProcessor](arkts-media-videoprocessing-createvideoprocessor-f.md)
   - [VideoProcessor](arkts-media-videoprocessing-videoprocessor-i.md)
   - [VideoProcessorAiHdrStatus](arkts-media-videoprocessing-videoprocessoraihdrstatus-i.md)

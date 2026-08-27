@@ -1,6 +1,8 @@
 # MediaEntity
 
-The definition of MediaEntity.@interface MediaEntity
+The definition of MediaEntity.
+
+@interface MediaEntity
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of MediaEntity.@interface MediaEntity
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## desc

@@ -1,6 +1,8 @@
 # Edges
 
-Defines the Edges.@interface Edges
+Defines the Edges.
+
+@interface Edges
 
 **起始版本：** 12
 

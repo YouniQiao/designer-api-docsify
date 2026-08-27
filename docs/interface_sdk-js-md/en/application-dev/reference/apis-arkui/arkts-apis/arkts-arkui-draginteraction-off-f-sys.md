@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dragInteraction from '@kit.ArkUI';
+import { dragInteraction } from '@kit.ArkUI';
 ```
 
 ## off('drag')

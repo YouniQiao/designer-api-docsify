@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import securityManager from '@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## getAllowedPermissionBundles
@@ -34,7 +34,7 @@ Obtains the list of applications in the permission exception list.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;common.ApplicationInstance & gt; | List of applications in the permission exception list. |
+| Array&lt;common.ApplicationInstance&gt; | List of applications in the permission exception list. |
 
 **Error codes:**
 

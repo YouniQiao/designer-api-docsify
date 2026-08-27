@@ -25,7 +25,7 @@ Removes a watcher used for event subscription.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watcher-i.md) | Yes | Watcher for event subscription. |
+| watcher | Watcher | Yes | Watcher for event subscription. |
 
 **Error codes:**
 

@@ -11,7 +11,7 @@ Haptics settings in tone scenario.
 ## Modules to Import
 
 ```TypeScript
-import systemSoundManager from '@kit.AudioKit';
+import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## hapticsUri

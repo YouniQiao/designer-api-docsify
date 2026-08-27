@@ -13,7 +13,7 @@ Defines the page routing parameters.
 ## Modules to Import
 
 ```TypeScript
-import SystemRouter, { BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
+import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, EnableAlertBeforeBackPageOptions, RouterOptions, RouterState } from '@kit.ArkUI';
 ```
 
 ## params
@@ -41,9 +41,12 @@ uri: string
 ```
 
 URI of the target page, in either of the following formats:
-1. Absolute path, which is provided by the page list in the **config.json** file. Examples:  
+
+1. Absolute path, which is provided by the page list in the **config.json** file. Examples:
+
 - pages/index/index  
-- pages/detail/detail  
+- pages/detail/detail
+
 2. Specific path. If the URI is a slash (/), the home page is displayed.
 
 **Type:** string

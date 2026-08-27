@@ -27,7 +27,7 @@ Queries system events.
 | --- | --- | --- | --- |
 | queryArg | [QueryArg](arkts-performanceanalysis-hisysevent-queryarg-i-sys.md) | Yes | Arguments for event query. |
 | rules | [QueryRule](arkts-performanceanalysis-hisysevent-queryrule-i-sys.md)[] | Yes | Array of event query rules. |
-| querier | [Querier](../../apis-security-guard-kit/arkts-apis/arkts-securityguard-securityguard-querier-i-sys.md) | Yes | Event query instance. |
+| querier | Querier | Yes | Event query instance. |
 
 **Error codes:**
 

@@ -15,7 +15,7 @@ Provides APIs to manage the file retrieval result.
 ## Modules to Import
 
 ```TypeScript
-import userFileManager from '@kit.CoreFileKit';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## close
@@ -131,7 +131,7 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;T & gt; & gt; | Promise that returns an array of all file assets in the result set. |
+| Promise&lt;Array&lt;T&gt;&gt; | Promise that returns an array of all file assets in the result set. |
 
 **Examples**
 
@@ -268,7 +268,7 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise that returns the first object in the result set. |
+| Promise&lt;T&gt; | Promise that returns the first object in the result set. |
 
 **Examples**
 
@@ -361,7 +361,7 @@ Obtains the last file asset in the result set. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise that returns the last object in the result set. |
+| Promise&lt;T&gt; | Promise that returns the last object in the result set. |
 
 **Examples**
 
@@ -389,7 +389,9 @@ async function example(mgr: userFileManager.UserFileManager) {
 getNextObject(callback: AsyncCallback<T>): void
 ```
 
-Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result.Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result.
+
+Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
 
 **Since:** 9
 
@@ -441,7 +443,9 @@ async function example(mgr: userFileManager.UserFileManager) {
 getNextObject(): Promise<T>
 ```
 
-Obtains the next file asset in the result set. This API uses a promise to return the result.Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses a promise to return the result.
+
+Before using this API, you must use [isAfterLast()](#isafterlast) to check whether the current position is the end of the result set.
 
 **Since:** 9
 
@@ -457,7 +461,7 @@ Obtains the next file asset in the result set. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise that returns the next object in the result set. |
+| Promise&lt;T&gt; | Promise that returns the next object in the result set. |
 
 **Examples**
 
@@ -566,7 +570,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt; | Promise that returns the file asset obtained. |
+| Promise&lt;T&gt; | Promise that returns the file asset obtained. |
 
 **Error codes:**
 

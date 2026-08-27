@@ -82,7 +82,7 @@ Obtains the touchpad pointer speed. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the touchpad pointer speed. The value range is [1,11]. |
+| Promise&lt;number&gt; | Promise used to return the touchpad pointer speed. The value range is [1,11]. |
 
 **Error codes:**
 

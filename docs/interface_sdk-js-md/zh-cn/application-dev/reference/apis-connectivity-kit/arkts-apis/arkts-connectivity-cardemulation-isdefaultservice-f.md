@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import cardEmulation from '@kit.ConnectivityKit';
+import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
 ## isDefaultService
@@ -27,7 +27,7 @@ function isDefaultService(elementName: ElementName, type: CardType): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | elementName | [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) | 是 | 所属应用声明NFC卡模拟能力的页面信息（至少包含bundleName、abilityName这两项的赋值），不可以为空。 |
-| type | [CardType](arkts-connectivity-cardemulation-cardtype-e.md) | 是 | 卡模拟业务类型。目前只支持默认支付应用查询。 |
+| type | CardType | 是 | 卡模拟业务类型。目前只支持默认支付应用查询。 |
 
 **返回值：**
 

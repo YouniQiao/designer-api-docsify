@@ -206,7 +206,7 @@ Subscribe to cache GNSS locations update messages.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cachedGnssLocationsChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | [CachedGnssLocationsRequest](arkts-location-geolocationmanager-cachedgnsslocationsrequest-i.md) | Yes | Indicates the cached GNSS locations request parameters. |
+| request | CachedGnssLocationsRequest | Yes | Indicates the cached GNSS locations request parameters. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;Location&gt;&gt; | Yes | Indicates the callback for reporting the cached GNSS locations. |
 
 **Error codes:**
@@ -384,7 +384,7 @@ Add a geofence and subscribe geofence status changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'gnssFenceStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md) | Yes | Indicates the Geofence configuration parameters. |
+| request | GeofenceRequest | Yes | Indicates the Geofence configuration parameters. |
 | want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | Yes | Indicates which ability to start when the geofence event is triggered. |
 
 **Error codes:**

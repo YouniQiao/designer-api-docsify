@@ -1,6 +1,8 @@
 # RenderResourceFactory
 
-Creates rendering resources that can be shared in multiple scenes ([Scene](arkts-arkgraphics3d-scene-c.md)) that share RenderContext.@interface RenderResourceFactory
+Creates rendering resources that can be shared in multiple scenes ([Scene](arkts-arkgraphics3d-scene-c.md)) that share RenderContext.
+
+@interface RenderResourceFactory
 
 **Since:** 20
 
@@ -26,7 +28,7 @@ Create a new scene from a SceneLoadParams.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the resource of creating a scene |
+| uri | ResourceStr | Yes | the resource of creating a scene |
 | param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | Yes | the params for scene load |
 
 **Return value:**

@@ -9,7 +9,7 @@ Describes the notification information about the change of a media asset.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## assetChangeDatas
@@ -32,8 +32,11 @@ Array of changed media assets. If all media assets need to be queried again, **a
 isForRecheck: boolean
 ```
 
-Whether the application should query all media assets again. **true** if the application should query all assets again, **false** otherwise.  
-**NOTE：**In scenarios involving bulk asset operations or abnormal notifications, **isForRecheck** will be **true**. In this case, the application should query all assets again.
+Whether the application should query all media assets again. **true** if the application should query all assets again, **false** otherwise.
+
+**NOTE：**
+
+In scenarios involving bulk asset operations or abnormal notifications, **isForRecheck** will be **true**. In this case, the application should query all assets again.
 
 **Type:** boolean
 

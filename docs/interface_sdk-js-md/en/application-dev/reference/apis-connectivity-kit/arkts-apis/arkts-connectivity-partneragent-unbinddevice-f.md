@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import partnerAgent from '@kit.ConnectivityKit';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## unbindDevice
@@ -26,13 +26,13 @@ Unbinds a partner device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes | The address of partner device. |
+| deviceAddress | PartnerDeviceAddress | Yes | The address of partner device. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

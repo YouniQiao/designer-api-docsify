@@ -17,7 +17,9 @@ This configuration is only available for the Text and RichEditor components.
 color?: ResourceColor
 ```
 
-Color of the entity after successful text detection.Default value: **'#ff0a59f7'**
+Color of the entity after successful text detection.
+
+Default value: **'#ff0a59f7'**
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -35,7 +37,19 @@ Color of the entity after successful text detection.Default value: **'#ff0a59f7'
 decoration?: DecorationStyleInterface
 ```
 
-Decoration style of the entity after successful text detection.Default value:{ type: TextDecorationType.Underline, color: same as the entity style: TextDecorationStyle.SOLID}
+Decoration style of the entity after successful text detection.
+
+Default value:
+
+{
+
+ type: TextDecorationType.Underline,
+
+ color: same as the entity
+
+ style: TextDecorationStyle.SOLID
+
+}
 
 **Type:** [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md)
 
@@ -53,7 +67,13 @@ Decoration style of the entity after successful text detection.Default value:{ 
 enablePreviewMenu?: boolean
 ```
 
-Whether to enable the preview menu displayed when number-pressing recognized text. The value **true** means to enable the preview menu, and **false** means the opposite.Default value: **false**When copyOptions is set to **None**, even if **enablePreviewMenu** is set to **true**, number-pressing AI entities will not display the preview menu.This API can be properly called on phones and tablets, but has no effect on other devices such as PCs, 2-in-1 devices, TVs, and wearables.
+Whether to enable the preview menu displayed when number-pressing recognized text. The value **true** means to enable the preview menu, and **false** means the opposite.
+
+Default value: **false**
+
+When copyOptions is set to **None**, even if **enablePreviewMenu** is set to **true**, number-pressing AI entities will not display the preview menu.
+
+This API can be properly called on phones and tablets, but has no effect on other devices such as PCs, 2-in-1 devices, TVs, and wearables.
 
 **Type:** boolean
 

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getSharedPhotoAssets
@@ -40,7 +40,7 @@ Fetch shared photo assets in an album.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;SharedPhotoAsset & gt; | Returns the shared photo assets |
+| Array&lt;SharedPhotoAsset&gt; | Returns the shared photo assets |
 
 **错误码：**
 

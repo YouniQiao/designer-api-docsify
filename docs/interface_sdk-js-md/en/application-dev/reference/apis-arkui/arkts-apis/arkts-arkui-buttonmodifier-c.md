@@ -1,6 +1,8 @@
 # ButtonModifier
 
-Defines Button Modifier@extends ButtonAttribute @implements AttributeModifier&lt;ButtonAttribute&gt;
+Defines Button Modifier
+
+@extends ButtonAttribute @implements AttributeModifier&lt;ButtonAttribute&gt;
 
 **Inheritance/Implementation:** ButtonModifier extends [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md#buttonattribute) and implements AttributeModifier<ButtonAttribute>
 

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## errCode
@@ -20,7 +20,7 @@ import photoAccessHelper from '@kit.MediaLibraryKit';
 errCode: number
 ```
 
-工具执行错误码。 取值限定为整数。
+工具执行错误码。取值限定为整数。
 
 **类型：** number
 

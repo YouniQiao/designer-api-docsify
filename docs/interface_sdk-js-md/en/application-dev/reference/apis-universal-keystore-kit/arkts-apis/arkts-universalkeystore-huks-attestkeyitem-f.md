@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import huks from '@kit.UniversalKeystoreKit';
-import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## attestKeyItem
@@ -13,7 +12,9 @@ import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 function attestKeyItem(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksReturnResult>): void
 ```
 
-Attests a key. This API uses an asynchronous callback to return the result.<!--RP6-->   
+Attests a key. This API uses an asynchronous callback to return the result.
+
+<!--RP6-->   
 > **NOTE：**
 > 
 > The certificate chain generated during non-anonymous certificate key attestation may contain the device
@@ -151,7 +152,9 @@ async function generateKeyThenAttestKey() {
 function attestKeyItem(keyAlias: string, options: HuksOptions): Promise<HuksReturnResult>
 ```
 
-Attests a key. This API uses a promise to return the result.<!--RP6-->   
+Attests a key. This API uses a promise to return the result.
+
+<!--RP6-->   
 > **NOTE：**
 > 
 > The certificate chain generated during non-anonymous certificate key attestation may contain the device

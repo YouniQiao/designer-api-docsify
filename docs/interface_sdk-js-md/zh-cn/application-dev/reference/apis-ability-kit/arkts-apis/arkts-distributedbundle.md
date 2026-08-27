@@ -22,7 +22,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedBundle from '@kit.AbilityKit';
+import { distributedBundle } from '@kit.AbilityKit';
 ```
 
 ## 汇总

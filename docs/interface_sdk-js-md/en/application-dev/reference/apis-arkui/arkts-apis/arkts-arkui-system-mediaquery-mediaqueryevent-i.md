@@ -9,7 +9,7 @@ Defines a media query event.
 ## Modules to Import
 
 ```TypeScript
-import SystemMediaQuery, { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
+import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 ```
 
 ## matches

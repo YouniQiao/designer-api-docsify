@@ -1,6 +1,8 @@
 # GeneratorDialogOptions (System API)
 
-Parameters used to open the ImageGeneratorDialog.@interface GeneratorDialogOptions
+Parameters used to open the ImageGeneratorDialog.
+
+@interface GeneratorDialogOptions
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ Parameters used to open the ImageGeneratorDialog.@interface GeneratorDialogOptio
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## content

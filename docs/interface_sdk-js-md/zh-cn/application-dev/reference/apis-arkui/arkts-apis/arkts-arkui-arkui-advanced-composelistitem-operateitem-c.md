@@ -1,6 +1,8 @@
 # OperateItem
 
-列表右侧显示的元素类型。同时配置多个属性时，按button、symbolStyle、image、icon与text组合、arrow、text、radio、checkbox、switch、icon的优先级选择右侧显示内容。icon可与text或subIcon组 合，arrow可与text组合；其他情况下仅显示优先级最高的内容。
+列表右侧显示的元素类型。
+
+同时配置多个属性时，按button、symbolStyle、image、icon与text组合、arrow、text、radio、checkbox、switch、icon的优先级选择右侧显示内容。icon可与text或subIcon组合，arrow可与text组合；其他情况下仅显示优先级最高的内容。
 
 **起始版本：** 10
 
@@ -10,7 +12,6 @@
 
 ```TypeScript
 import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from '@kit.ArkUI';
-import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, OperateButtonV2, OperateButtonV2Options, OperateCheckV2, OperateCheckV2Options, OperateIconV2, OperateIconV2Options, OperateItemV2, OperateItemV2Options } from '@kit.ArkUIV2';
 ```
 
 ## arrow
@@ -19,7 +20,9 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 arrow?: OperateIcon
 ```
 
-右侧元素为箭头，大小为12*24vp。默认不设置或设置为undefined，右侧箭头不显示。
+右侧元素为箭头，大小为12*24vp。
+
+默认不设置或设置为undefined，右侧箭头不显示。
 
 **类型：** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
 
@@ -37,7 +40,9 @@ arrow?: OperateIcon
 button?: OperateButton
 ```
 
-右侧元素为按钮。默认不设置或设置为undefined，右侧按钮不显示。
+右侧元素为按钮。
+
+默认不设置或设置为undefined，右侧按钮不显示。
 
 **类型：** [OperateButton](arkts-arkui-arkui-advanced-composelistitem-operatebutton-c.md)
 
@@ -55,7 +60,9 @@ button?: OperateButton
 checkbox?: OperateCheck
 ```
 
-右侧元素为多选框，大小为24*24vp。默认不设置或设置为undefined，右侧多选框不显示。
+右侧元素为多选框，大小为24*24vp。
+
+默认不设置或设置为undefined，右侧多选框不显示。
 
 **类型：** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
 
@@ -73,7 +80,9 @@ checkbox?: OperateCheck
 icon?: OperateIcon
 ```
 
-右侧元素的第一个图标，大小为24*24vp。默认不设置或设置为undefined，右侧图标不显示。
+右侧元素的第一个图标，大小为24*24vp。
+
+默认不设置或设置为undefined，右侧图标不显示。
 
 **类型：** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
 
@@ -91,7 +100,9 @@ icon?: OperateIcon
 image?: ResourceStr
 ```
 
-右侧元素为图片，大小为48*48vp。默认不设置或设置为undefined，右侧图片不显示。
+右侧元素为图片，大小为48*48vp。
+
+默认不设置或设置为undefined，右侧图片不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -109,7 +120,9 @@ image?: ResourceStr
 radio?: OperateCheck
 ```
 
-右侧元素为单选框，大小为24*24vp。默认不设置或设置为undefined，右侧单选框不显示。
+右侧元素为单选框，大小为24*24vp。
+
+默认不设置或设置为undefined，右侧单选框不显示。
 
 **类型：** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
 
@@ -127,7 +140,9 @@ radio?: OperateCheck
 subIcon?: OperateIcon
 ```
 
-右侧元素的第二个图标，大小为24*24vp。默认不设置或设置为undefined，右侧第二个图标不显示。
+右侧元素的第二个图标，大小为24*24vp。
+
+默认不设置或设置为undefined，右侧第二个图标不显示。
 
 **类型：** [OperateIcon](arkts-arkui-arkui-advanced-composelistitem-operateicon-c.md)
 
@@ -145,7 +160,9 @@ subIcon?: OperateIcon
 switch?: OperateCheck
 ```
 
-右侧元素为开关。默认不设置或设置为undefined，右侧开关不显示。
+右侧元素为开关。
+
+默认不设置或设置为undefined，右侧开关不显示。
 
 **类型：** [OperateCheck](arkts-arkui-arkui-advanced-composelistitem-operatecheck-c.md)
 
@@ -163,7 +180,9 @@ switch?: OperateCheck
 symbolStyle?: SymbolGlyphModifier
 ```
 
-右侧元素为Symbol图标资源，大小为48*48vp，优先级大于image，同时设置时只显示Symbol图标。默认不设置或设置为undefined，右侧Symbol图标不显示。
+右侧元素为Symbol图标资源，大小为48*48vp，优先级大于image，同时设置时只显示Symbol图标。
+
+默认不设置或设置为undefined，右侧Symbol图标不显示。
 
 **类型：** SymbolGlyphModifier
 
@@ -181,7 +200,9 @@ symbolStyle?: SymbolGlyphModifier
 text?: ResourceStr
 ```
 
-右侧元素为文字。默认不设置或设置为undefined，右侧文字不显示。
+右侧元素为文字。
+
+默认不设置或设置为undefined，右侧文字不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

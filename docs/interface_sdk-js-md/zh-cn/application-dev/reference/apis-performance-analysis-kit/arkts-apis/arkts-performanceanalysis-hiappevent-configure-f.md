@@ -23,7 +23,7 @@ function configure(config: ConfigOption): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | 是 | 应用事件打点配置项对象。 |
+| config | ConfigOption | 是 | 应用事件打点配置项对象。 |
 
 **错误码：**
 

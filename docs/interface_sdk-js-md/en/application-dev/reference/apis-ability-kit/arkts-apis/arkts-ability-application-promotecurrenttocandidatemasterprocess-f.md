@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import application from '@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## promoteCurrentToCandidateMasterProcess
@@ -12,7 +12,8 @@ import application from '@kit.AbilityKit';
 export function promoteCurrentToCandidateMasterProcess(insertToHead: boolean): Promise<void>
 ```
 
-Adds the current process into the [candidate master process](../../../application-models/ability-terminology.md#candidate-master-process) list. This API uses a promise to return the result. When the [master process](../../../application-models/ability-terminology.md#master-process) is destroyed and a UIAbility or UIExtensionAbility with **isolationProcess** set to **true** is restarted, the system takes corresponding actions based on whether there is a candidate master process.  
+Adds the current process into the [candidate master process](../../../application-models/ability-terminology.md#candidate-master-process) list. This API uses a promise to return the result. When the [master process](../../../application-models/ability-terminology.md#master-process) is destroyed and a UIAbility or UIExtensionAbility with **isolationProcess** set to **true** is restarted, the system takes corresponding actions based on whether there is a candidate master process.
+
 - If a candidate master process exists, the system sets the process at the head of the candidate master process  
 list as the new master process and triggers the [onNewProcessRequest](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onnewprocessrequest) callback.  
 - If no candidate master process exists, the system performs the following operations based on the component type:  
@@ -33,6 +34,7 @@ master process. If no available process exists, it creates an empty process as t
 > The **isolationProcess** field can be set to **true** in the
 > [module.json5](../../../quick-start/module-configuration-file.md) file, but only for the UIExtensionAbility of
 > the sys/commonUI type.
+
 <!--DelEnd-->
 
 **Since:** 20
@@ -51,7 +53,7 @@ master process. If no available process exists, it creates an empty process as t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no result. |
+| Promise&lt;void&gt; | Promise that returns no result. |
 
 **Error codes:**
 

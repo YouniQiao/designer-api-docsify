@@ -1,6 +1,8 @@
 # CalendarPicker properties/events
 
-In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.
+In addition to the universal attributes, the following attributes are supported.
+
+In addition to the universal events, the following events are supported.
 
 **Inheritance/Implementation:** CalendarPickerAttribute extends CommonMethod<CalendarPickerAttribute>
 
@@ -34,7 +36,7 @@ Sets how the picker is aligned with the entry component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alignType | [CalendarAlign](arkts-arkui-calendaralign-e.md) | Yes | Alignment type.Default value: **CalendarAlign.END**. |
-| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.Default value: **{dx: 0, dy: 0} |
+| offset | Offset | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.Default value: **{dx: 0, dy: 0} |
 
 ## edgeAlign
 
@@ -57,7 +59,7 @@ Sets how the picker is aligned with the entry component. Compared with [edgeAlig
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alignType | [Optional](arkts-arkui-optional-t.md)&lt;[CalendarAlign](arkts-arkui-calendaralign-e.md)&gt; | Yes | Alignment type.Default value: **CalendarAlign.END**.If the value of **alignType** is **undefined**, the default value is used. |
-| offset | [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md) | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.Default value: **{dx: 0, dy: 0} |
+| offset | Offset | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.Default value: **{dx: 0, dy: 0} |
 
 ## markToday
 
@@ -101,7 +103,7 @@ Triggered when a date is selected. This event cannot be triggered by two-way bou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;Date & gt; | Yes | Selected date value.<br>**Since:** 18 |
+| callback | Callback&lt;Date&gt; | Yes | Selected date value.<br>**Since:** 18 |
 
 ## onChange
 

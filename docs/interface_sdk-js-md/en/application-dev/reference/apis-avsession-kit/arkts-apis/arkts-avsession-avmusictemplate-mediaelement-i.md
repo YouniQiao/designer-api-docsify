@@ -1,6 +1,8 @@
 # MediaElement
 
-The definition of Singer/Radio/Banner.@extends MediaEntity @interface MediaElement
+The definition of Singer/Radio/Banner.
+
+@extends MediaEntity @interface MediaElement
 
 **Inheritance/Implementation:** MediaElement extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
@@ -13,5 +15,5 @@ The definition of Singer/Radio/Banner.@extends MediaEntity @interface MediaEleme
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```

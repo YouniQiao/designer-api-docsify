@@ -11,7 +11,7 @@ Defines the asset analysis configuration.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## extraInfos
@@ -20,7 +20,9 @@ import photoAccessHelper from '@kit.MediaLibraryKit';
 extraInfos?: string
 ```
 
-Extended information in JSON string format.Length range: (0, 500].
+Extended information in JSON string format.
+
+Length range: (0, 500].
 
 **Type:** string
 
@@ -56,7 +58,9 @@ Array of intelligent analysis types. The maximum size of the array is the number
 uris: string[]
 ```
 
-Asset URI array.Length range: [0, 100].
+Asset URI array.
+
+Length range: [0, 100].
 
 **Type:** string[]
 

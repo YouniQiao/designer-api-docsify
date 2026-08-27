@@ -44,7 +44,7 @@ Component generator. When the return value of [.templateId()](#templateid) does 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| itemGenerator | (repeatItem: RepeatItem & lt;T & gt;) = & gt; void | Yes | Component generator. |
+| itemGenerator | (repeatItem: RepeatItem&lt;T&gt;) =&gt; void | Yes | Component generator. |
 
 **Return value:**
 
@@ -86,7 +86,7 @@ Key generator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyGenerator | (item: T, index: number) = & gt; string | Yes | Key generator.   **item**: data item in the **arr** array. It is optional.    **index**: index of a data item in the **arr** array. It is optional. |
+| keyGenerator | (item: T, index: number) =&gt; string | Yes | Key generator.   **item**: data item in the **arr** array. It is optional.    **index**: index of a data item in the **arr** array. It is optional. |
 
 **Return value:**
 

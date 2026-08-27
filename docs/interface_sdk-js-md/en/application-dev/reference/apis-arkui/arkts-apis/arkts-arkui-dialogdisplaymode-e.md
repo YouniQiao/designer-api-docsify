@@ -1,6 +1,8 @@
 # DialogDisplayMode
 
-Dialog display mode.@enum { DialogDisplayMode }
+Dialog display mode.
+
+@enum { DialogDisplayMode }
 
 **Since:** 26.0.0
 

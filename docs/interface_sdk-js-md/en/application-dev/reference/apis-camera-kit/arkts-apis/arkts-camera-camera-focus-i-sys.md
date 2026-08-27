@@ -1,6 +1,8 @@
 # Focus
 
-**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md).It provides APIs related to focus operations.
+**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md).
+
+It provides APIs related to focus operations.
 
 **Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md)
 
@@ -48,7 +50,7 @@ function getFocusAssist(professionalPhotoSession: camera.ProfessionalPhotoSessio
   try {
     isFocusAssistOpened = professionalPhotoSession.getFocusAssist();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The getFocusAssist call failed. error code: ${err.code}`);
   }
@@ -93,7 +95,7 @@ function getFocusDriven(session: camera.VideoSessionForSys): camera.FocusDrivenT
   try {
     focusDrivenType = session.getFocusDriven();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Obtain the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The getFocusDriven call failed. error code: ${err.code}`);
   }
@@ -138,7 +140,7 @@ function getFocusRange(session: camera.VideoSessionForSys): camera.FocusRangeTyp
   try {
     focusRangeType = session.getFocusRange();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The getFocusRange call failed. error code: ${err.code}`);
   }
@@ -183,7 +185,7 @@ function setFocusAssist(professionalPhotoSession: camera.ProfessionalPhotoSessio
   try {
     professionalPhotoSession.setFocusAssist(false);
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The setFocusAssist call failed. error code: ${err.code}`);
   }
@@ -229,7 +231,7 @@ function setFocusDriven(session: camera.VideoSessionForSys, type: camera.FocusDr
   try {
     session.setFocusDriven(type);
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code on failure and handle it.
     let err = error as BusinessError;
     console.error(`The setFocusDriven call failed. error code: ${err.code}`);
   }
@@ -275,7 +277,7 @@ function setFocusRange(session: camera.VideoSessionForSys, type: camera.FocusRan
   try {
     session.setFocusRange(type);
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code on failure and handle it.
     let err = error as BusinessError;
     console.error(`The setFocusRange call failed. error code: ${err.code}`);
   }

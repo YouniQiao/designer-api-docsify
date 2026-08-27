@@ -3,16 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bas from '@kit.ConnectivityKit.bas';
-import common from '@kit.ConnectivityKit.common';
-import bluetooth from '@kit.ConnectivityKit';
-import map from '@kit.ConnectivityKit.map';
-import pan from '@kit.ConnectivityKit.pan';
-import pbap from '@kit.ConnectivityKit.pbap';
-import opp from '@kit.ConnectivityKit.opp';
-import socket from '@kit.ConnectivityKit.socket';
-import wearDetection from '@kit.ConnectivityKit.wearDetection';
-import bluetoothManager from '@kit.ConnectivityKitManager';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceClass
@@ -43,7 +34,7 @@ Obtains the class of a peer Bluetooth device.
 
 | Type | Description |
 | --- | --- |
-| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) | The class of the remote device, { |
+| DeviceClass | The class of the remote device, { |
 
 **Examples**
 

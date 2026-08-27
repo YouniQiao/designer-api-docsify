@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import onScreen from '@kit.MultimodalAwarenessKit';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## sendControlEvent
@@ -32,7 +32,7 @@ function sendControlEvent(event: ControlEvent): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。 |
 
 **错误码：**
 

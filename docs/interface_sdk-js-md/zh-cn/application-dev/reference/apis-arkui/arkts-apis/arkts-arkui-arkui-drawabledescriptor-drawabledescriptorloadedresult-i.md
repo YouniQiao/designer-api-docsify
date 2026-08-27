@@ -18,7 +18,9 @@ import { DrawableDescriptor, LayeredDrawableDescriptor, PixelMapDrawableDescript
 imageHeight: number
 ```
 
-图片的高度。单位：px
+图片的高度。
+
+单位：px
 
 **类型：** number
 
@@ -36,7 +38,9 @@ imageHeight: number
 imageWidth: number
 ```
 
-图片的宽度。单位：px
+图片的宽度。
+
+单位：px
 
 **类型：** number
 

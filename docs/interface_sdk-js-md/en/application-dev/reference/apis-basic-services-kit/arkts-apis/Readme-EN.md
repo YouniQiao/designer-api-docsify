@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-basicserviceskit-->
 
-- [@ohos.account.appAccount](arkts-account-appaccount.md)
+- [@ohos.account.appAccount(Application Account Management)](arkts-account-appaccount.md)
   - [createAppAccountManager](arkts-basicservices-appaccount-createappaccountmanager-f.md)
   - [Authenticator](arkts-basicservices-appaccount-authenticator-c.md)
   - [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)
@@ -18,7 +18,7 @@
   - [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md)
   - [Constants](arkts-basicservices-appaccount-constants-e.md)
   - [ResultCode](arkts-basicservices-appaccount-resultcode-e.md)
-- [@ohos.account.distributedAccount](arkts-account-distributedaccount.md)
+- [@ohos.account.distributedAccount(Distributed Account Management)](arkts-account-distributedaccount.md)
   - [getDistributedAccountAbility](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md)
   - [DistributedAccountAbility](arkts-basicservices-distributedaccount-distributedaccountability-i.md)
   <!--Del-->
@@ -208,7 +208,7 @@
   - [UploadFileType(system api)](arkts-basicservices-intelligentvoice-uploadfiletype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [WakeupIntelligentVoiceEventType(system api)](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceeventtype-e-sys.md)<!--DelEnd-->
-- [@ohos.annotation](arkts-annotation.md)
+- [@ohos.annotation(Annotation)](arkts-annotation.md)
   - [Available](arkts-basicservices-annotation-available-a.md)
   - [SuppressWarnings](arkts-basicservices-annotation-suppresswarnings-a.md)
   - [SuppressWarningsType](arkts-basicservices-annotation-suppresswarningstype-e.md)
@@ -221,10 +221,10 @@
   <!--Del-->
   - [StaticSubscriberExtensionAbility(system api)](arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.application.StaticSubscriberExtensionContext](arkts-application-staticsubscriberextensioncontext.md)<!--DelEnd-->
+- [@ohos.application.StaticSubscriberExtensionContext(StaticSubscriberExtensionContext)](arkts-application-staticsubscriberextensioncontext.md)<!--DelEnd-->
   <!--Del-->
   - [StaticSubscriberExtensionContext(system api)](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md)<!--DelEnd-->
-- [@ohos.base](arkts-base.md)
+- [@ohos.base(Public Callback Information)](arkts-base.md)
   - [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)
   - [BusinessError](arkts-basicservices-base-businesserror-i.md)
   - [Callback](arkts-basicservices-base-callback-i.md)
@@ -336,7 +336,7 @@
   - [DeviceTypes](arkts-basicservices-deviceinfo-devicetypes-e.md)
   - [PerformanceClassLevel](arkts-basicservices-deviceinfo-performanceclasslevel-e.md)
   - [Constants](arkts-basicservices-deviceinfo-con.md)
-- [@ohos.events.emitter](arkts-events-emitter.md)
+- [@ohos.events.emitter(Emitter)](arkts-events-emitter.md)
   - [emit](arkts-basicservices-emitter-emit-f.md)
   - [getListenerCount](arkts-basicservices-emitter-getlistenercount-f.md)
   - [off](arkts-basicservices-emitter-off-f.md)
@@ -558,7 +558,7 @@
   - [PrintPageType](arkts-basicservices-print-printpagetype-e.md)
   - [PrintQuality](arkts-basicservices-print-printquality-e.md)
   - [WatermarkHandleResult](arkts-basicservices-print-watermarkhandleresult-e.md)
-- [@ohos.request](arkts-request.md)
+- [@ohos.request(Upload and Download)](arkts-request.md)
   - [request](arkts-basicservices-request-n.md)
     - [agent](arkts-basicservices-request-agent-n.md)
       - [attachGroup](arkts-basicservices-agent-attachgroup-f.md)
@@ -611,7 +611,7 @@
     - [UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
     - [UploadTask](arkts-basicservices-request-uploadtask-i.md)
     - [Constants](arkts-basicservices-request-con.md)
-- [@ohos.request.cacheDownload](arkts-request-cachedownload.md)
+- [@ohos.request.cacheDownload(Download and Cache)](arkts-request-cachedownload.md)
   - [cancel](arkts-basicservices-cachedownload-cancel-f.md)
   - [clearFileCache](arkts-basicservices-cachedownload-clearfilecache-f.md)
   - [clearMemoryCache](arkts-basicservices-cachedownload-clearmemorycache-f.md)
@@ -637,7 +637,7 @@
   - [CacheStrategy](arkts-basicservices-cachedownload-cachestrategy-e.md)
   - [ErrorCode](arkts-basicservices-cachedownload-errorcode-e.md)
   - [SslType](arkts-basicservices-cachedownload-ssltype-e.md)
-- [@ohos.resourceschedule.systemload](arkts-resourceschedule-systemload.md)
+- [@ohos.resourceschedule.systemload(System Load Level Management)](arkts-resourceschedule-systemload.md)
   - [getLevel](arkts-basicservices-systemload-getlevel-f.md)
   - [off](arkts-basicservices-systemload-off-f.md)
   - [on](arkts-basicservices-systemload-on-f.md)
@@ -726,11 +726,11 @@
   - [StrongAuthReasonFlags(system api)](arkts-basicservices-screenlock-strongauthreasonflags-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UnlockPolicy(system api)](arkts-basicservices-screenlock-unlockpolicy-e-sys.md)<!--DelEnd-->
-- [@ohos.selectionInput.SelectionExtensionAbility](arkts-selectioninput-selectionextensionability.md)
+- [@ohos.selectionInput.SelectionExtensionAbility(SelectionExtensionAbility)](arkts-selectioninput-selectionextensionability.md)
   - [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md)
-- [@ohos.selectionInput.SelectionExtensionContext](arkts-selectioninput-selectionextensioncontext.md)
+- [@ohos.selectionInput.SelectionExtensionContext(Word Selection Extension Context)](arkts-selectioninput-selectionextensioncontext.md)
   - [SelectionExtensionContext](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md)
-- [@ohos.selectionInput.selectionManager](arkts-selectioninput-selectionmanager.md)
+- [@ohos.selectionInput.selectionManager(Word Selection Management)](arkts-selectioninput-selectionmanager.md)
   - [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)
   - [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md)
   - [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md)
@@ -741,7 +741,7 @@
   - [Panel(system api)](arkts-basicservices-selectionmanager-panel-i-sys.md)<!--DelEnd-->
   - [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)
   - [SelectionType](arkts-basicservices-selectionmanager-selectiontype-e.md)
-- [@ohos.selectionInput.SelectionPanel](arkts-selectioninput-selectionpanel.md)
+- [@ohos.selectionInput.SelectionPanel(Word Selection Panel)](arkts-selectioninput-selectionpanel.md)
   - [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md)
   - [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
 - [@ohos.settings](arkts-settings.md)
@@ -803,7 +803,7 @@
 - [@ohos.systemCapability](arkts-systemcapability.md)<!--DelEnd-->
   <!--Del-->
   - [querySystemCapabilities(system api)](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md)<!--DelEnd-->
-- [@ohos.systemDateTime](arkts-systemdatetime.md)
+- [@ohos.systemDateTime(System Time and Time Zone)](arkts-systemdatetime.md)
   - [getAutoTimeStatus](arkts-basicservices-systemdatetime-getautotimestatus-f.md)
   - [getCurrentTime](arkts-basicservices-systemdatetime-getcurrenttime-f.md)
   - [getDate](arkts-basicservices-systemdatetime-getdate-f.md)
@@ -846,7 +846,7 @@
   - [set(system api)](arkts-basicservices-systemparameterenhance-set-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setSync(system api)](arkts-basicservices-systemparameterenhance-setsync-f-sys.md)<!--DelEnd-->
-- [@ohos.systemTime](arkts-systemtime.md)
+- [@ohos.systemTime(System Time and Time Zone)](arkts-systemtime.md)
   - [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md)
   - [getDate](arkts-basicservices-systemtime-getdate-f.md)
   - [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md)
@@ -856,7 +856,7 @@
   - [setTime](arkts-basicservices-systemtime-settime-f.md)
   - [setTimezone](arkts-basicservices-systemtime-settimezone-f.md)
 <!--Del-->
-- [@ohos.systemTimer](arkts-systemtimer.md)<!--DelEnd-->
+- [@ohos.systemTimer(System Timer)](arkts-systemtimer.md)<!--DelEnd-->
   <!--Del-->
   - [createTimer(system api)](arkts-basicservices-systemtimer-createtimer-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -971,7 +971,7 @@
   - [UpgradeAction(system api)](arkts-basicservices-update-upgradeaction-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UpgradeStatus(system api)](arkts-basicservices-update-upgradestatus-e-sys.md)<!--DelEnd-->
-- [@ohos.usb](arkts-usb.md)
+- [@ohos.usb(USB Manager)](arkts-usb.md)
   - [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md)
   - [claimInterface](arkts-basicservices-usb-claiminterface-f.md)
   - [closePipe](arkts-basicservices-usb-closepipe-f.md)
@@ -1233,7 +1233,7 @@
   - [Device](arkts-basicservices-system-device-device-c.md)
   - [DeviceResponse](arkts-basicservices-system-device-deviceresponse-i.md)
   - [GetDeviceOptions](arkts-basicservices-system-device-getdeviceoptions-i.md)
-- [@system.request](arkts-system-request.md)
+- [@system.request(Upload and Download)](arkts-system-request.md)
   - [Request](arkts-basicservices-system-request-request-c.md)
   - [DownloadRequestOptions](arkts-basicservices-system-request-downloadrequestoptions-i.md)
   - [DownloadResponse](arkts-basicservices-system-request-downloadresponse-i.md)
@@ -1247,11 +1247,11 @@
   - [PrintExtensionContext](arkts-printextensioncontext.md)
     - [PrintExtensionContext](arkts-basicservices-printextensioncontext-c.md)
 - commonEvent<!--arkts-basicserviceskit-commonEvent-->
-  - [commonEventData](arkts-commoneventdata.md)
+  - [commonEventData(Common event data.)](arkts-commoneventdata.md)
     - [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md)
-  - [commonEventPublishData](arkts-commoneventpublishdata.md)
+  - [commonEventPublishData(The CommonEventPublishData module provides APIs for defining common event content and attributes.)](arkts-commoneventpublishdata.md)
     - [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md)
-  - [commonEventSubscribeInfo](arkts-commoneventsubscribeinfo.md)
+  - [commonEventSubscribeInfo(The CommonEventSubscribeInfo module provides APIs for providing subscriber information.)](arkts-commoneventsubscribeinfo.md)
     - [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md)
-  - [commonEventSubscriber](arkts-commoneventsubscriber.md)
+  - [commonEventSubscriber(The subscriber of common event)](arkts-commoneventsubscriber.md)
     - [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md)

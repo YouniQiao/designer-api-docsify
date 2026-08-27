@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screen from '@kit.ArkUI';
-import screenshot from '@kit.ArkUIshot';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## createVirtualScreen
@@ -101,7 +100,7 @@ Creates a virtual screen. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Screen & gt; | Promise used to return the created virtual screen. |
+| Promise&lt;Screen&gt; | Promise used to return the created virtual screen. |
 
 **Error codes:**
 

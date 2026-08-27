@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## on('connect')
@@ -25,7 +25,7 @@ function on(type: 'connect', sessionId: number,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'connect' | 是 | 事件回调类型，支持的事件为'connect'，完成 [abilityConnectionManager.connect()](arkts-distributedservice-abilityconnectionmanager-connect-f.md)调用，触发该事件。 |
+| type | 'connect' | 是 | 事件回调类型，支持的事件为'connect'，完成[abilityConnectionManager.connect()](arkts-distributedservice-abilityconnectionmanager-connect-f.md)调用，触发该事件。 |
 | sessionId | number | 是 | 创建的协同会话ID。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EventCallbackInfo](arkts-distributedservice-abilityconnectionmanager-eventcallbackinfo-i.md)&gt; | 是 | 注册的回调函数。 |
 
@@ -68,7 +68,7 @@ function on(type: 'disconnect', sessionId: number,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'disconnect' | 是 | 事件回调类型，支持的事件为'disconnect'，完成 [abilityConnectionManager.disconnect()](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md)调用，触发该事件。 |
+| type | 'disconnect' | 是 | 事件回调类型，支持的事件为'disconnect'，完成[abilityConnectionManager.disconnect()](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md)调用，触发该事件。 |
 | sessionId | number | 是 | 创建的协同会话ID。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EventCallbackInfo](arkts-distributedservice-abilityconnectionmanager-eventcallbackinfo-i.md)&gt; | 是 | 注册的回调函数。 |
 
@@ -111,7 +111,7 @@ function on(type: 'receiveMessage', sessionId: number,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'receiveMessage' | 是 | 事件回调类型，支持的事件为'receiveMessage'，完成 [abilityConnectionManager.sendMessage()](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md)调用， 触发该事件。 |
+| type | 'receiveMessage' | 是 | 事件回调类型，支持的事件为'receiveMessage'，完成[abilityConnectionManager.sendMessage()](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md)调用，触发该事件。 |
 | sessionId | number | 是 | 创建的协同会话ID。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EventCallbackInfo](arkts-distributedservice-abilityconnectionmanager-eventcallbackinfo-i.md)&gt; | 是 | 注册的回调函数。 |
 
@@ -154,7 +154,7 @@ function on(type: 'receiveData', sessionId: number,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'receiveData' | 是 | 事件回调类型，支持的事件为'receiveData'，完成 [abilityConnectionManager.sendData()](arkts-distributedservice-abilityconnectionmanager-senddata-f.md)调用， 触发该事件。 |
+| type | 'receiveData' | 是 | 事件回调类型，支持的事件为'receiveData'，完成[abilityConnectionManager.sendData()](arkts-distributedservice-abilityconnectionmanager-senddata-f.md)调用，触发该事件。 |
 | sessionId | number | 是 | 创建的协同会话ID。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EventCallbackInfo](arkts-distributedservice-abilityconnectionmanager-eventcallbackinfo-i.md)&gt; | 是 | 注册的回调函数。 |
 

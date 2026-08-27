@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## killProcessesByBundleName
@@ -34,7 +34,7 @@ function killProcessesByBundleName(bundleName: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | The Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | The Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

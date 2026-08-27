@@ -1,6 +1,8 @@
 # ComposeListItemV2
 
-该组件用于展示一系列宽度相同的列表项，适用于展示连续、多行的同类数据组合（如图片与文本）。该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于 [状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组 件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制列表项的数据和状态，实现更高效的用户界面刷新。
+该组件用于展示一系列宽度相同的列表项，适用于展示连续、多行的同类数据组合（如图片与文本）。
+
+该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于[状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以通过该组件更灵活地控制列表项的数据和状态，实现更高效的用户界面刷新。
 
 > **说明:**
 > 
@@ -26,7 +28,9 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 contentItemV2?: ContentItemV2
 ```
 
-定义列表项左侧以及中间元素。默认不设置或设置为undefined时，不显示左侧和中间元素。
+定义列表项左侧以及中间元素。
+
+默认不设置或设置为undefined时，不显示左侧和中间元素。
 
 **类型：** [ContentItemV2](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2-c.md)
 
@@ -44,7 +48,9 @@ contentItemV2?: ContentItemV2
 operateItemV2?: OperateItemV2
 ```
 
-定义列表项右侧元素。默认不设置或设置为undefined时，不显示右侧元素。
+定义列表项右侧元素。
+
+默认不设置或设置为undefined时，不显示右侧元素。
 
 **类型：** [OperateItemV2](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2-c.md)
 

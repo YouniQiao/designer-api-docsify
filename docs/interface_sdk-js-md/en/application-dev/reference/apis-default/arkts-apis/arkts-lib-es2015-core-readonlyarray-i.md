@@ -17,7 +17,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (this: void, value: T, index: number, obj: readonly T[]) = & gt; value is S | Yes |  |
+| predicate | (this: void, value: T, index: number, obj: readonly T[]) =&gt; value is S | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -34,7 +34,7 @@ find(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: T, index: number, obj: readonly T[]) = & gt; unknown | Yes |  |
+| predicate | (value: T, index: number, obj: readonly T[]) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -53,7 +53,7 @@ Returns the index of the first element in the array where predicate is true, and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: T, index: number, obj: readonly T[]) = & gt; unknown | Yes |  |
+| predicate | (value: T, index: number, obj: readonly T[]) =&gt; unknown | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**

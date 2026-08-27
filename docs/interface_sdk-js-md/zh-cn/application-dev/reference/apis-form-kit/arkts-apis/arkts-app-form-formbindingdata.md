@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import formBindingData from '@kit.FormKit';
+import { formBindingData } from '@kit.FormKit';
 ```
 
 ## 汇总
@@ -18,11 +18,11 @@ import formBindingData from '@kit.FormKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createFormBindingData(卡片数据绑定类)](arkts-form-formbindingdata-createformbindingdata-f.md) | 创建一个FormBindingData对象。 |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md) | 创建一个FormBindingData对象。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [FormBindingData(卡片数据绑定类)](arkts-form-formbindingdata-formbindingdata-i.md) | FormBindingData对象的属性定义。 |
-| [ProxyData(卡片数据绑定类)](arkts-form-formbindingdata-proxydata-i.md) | 卡片代理刷新订阅数据信息。 |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | FormBindingData对象的属性定义。 |
+| [ProxyData](arkts-form-formbindingdata-proxydata-i.md) | 卡片代理刷新订阅数据信息。 |

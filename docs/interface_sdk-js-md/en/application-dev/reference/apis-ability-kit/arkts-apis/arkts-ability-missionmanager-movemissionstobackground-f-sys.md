@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import missionManager from '@kit.AbilityKit';
+import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## moveMissionsToBackground
@@ -26,7 +26,7 @@ Switches a batch of missions to the background. The mission IDs returned are sor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | Array & lt;number & gt; | Yes | Array holding the mission IDs. |
+| missionIds | Array&lt;number&gt; | Yes | Array holding the mission IDs. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -93,13 +93,13 @@ Switches a batch of missions to the background. The mission IDs returned are sor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | Array & lt;number & gt; | Yes | Array holding the mission IDs. |
+| missionIds | Array&lt;number&gt; | Yes | Array holding the mission IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return an array of mission IDs. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return an array of mission IDs. |
 
 **Error codes:**
 

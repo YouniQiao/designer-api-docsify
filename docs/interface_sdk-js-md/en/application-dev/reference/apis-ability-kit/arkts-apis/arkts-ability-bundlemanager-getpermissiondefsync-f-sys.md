@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getPermissionDefSync
@@ -32,7 +32,7 @@ Obtains the **PermissionDef** struct based on the given permission name. This AP
 
 | Type | Description |
 | --- | --- |
-| [PermissionDef](arkts-ability-permissiondef-i-sys.md) | PermissionDef object. |
+| PermissionDef | PermissionDef object. |
 
 **Error codes:**
 

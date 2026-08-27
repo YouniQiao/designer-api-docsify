@@ -82,7 +82,7 @@ Set the pin during pairing when the pin type is PIN_TYPE_ENTER_PIN_CODE.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 

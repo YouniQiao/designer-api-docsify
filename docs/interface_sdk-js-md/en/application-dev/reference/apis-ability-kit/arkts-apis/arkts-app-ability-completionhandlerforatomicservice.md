@@ -8,7 +8,7 @@
 ## Modules to Import
 
 ```TypeScript
-import CompletionHandlerForAtomicService, { FailureCode } from '@kit.AbilityKit';
+import { CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit';
 ```
 
 ## Summary

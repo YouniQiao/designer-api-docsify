@@ -14,4 +14,4 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [KeyCode(键值)](arkts-input-multimodalinput-keycode-keycode-e.md) | 键值。 |
+| [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md) | 键值。 |

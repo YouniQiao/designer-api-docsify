@@ -13,7 +13,7 @@ This module provides the capability to subscribe to report the distance measurem
 ## Modules to Import
 
 ```TypeScript
-import spatialAwareness from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary
@@ -44,8 +44,8 @@ import spatialAwareness from '@kit.MultimodalAwarenessKit';
 
 | Name | Description |
 | --- | --- |
-| [DistanceRank](arkts-multimodalawareness-spatialawareness-distancerank-e-sys.md) | Enum for distance rank.@enum { string } DistanceRank |
-| [PositionRelativeToDoor](arkts-multimodalawareness-spatialawareness-positionrelativetodoor-e-sys.md) | Enum for identification result inside and outside the door@enum { number } PositionRelativeToDoor |
+| [DistanceRank](arkts-multimodalawareness-spatialawareness-distancerank-e-sys.md) | Enum for distance rank. |
+| [PositionRelativeToDoor](arkts-multimodalawareness-spatialawareness-positionrelativetodoor-e-sys.md) | Enum for identification result inside and outside the door |
 | [ReportingMode](arkts-multimodalawareness-spatialawareness-reportingmode-e-sys.md) | Enum for distance measurement result reporting modes. @enum { number } ReportingMode |
-| [TechnologyType](arkts-multimodalawareness-spatialawareness-technologytype-e-sys.md) | Enum for distance measurement technology types.@enum { number } TechnologyType |
+| [TechnologyType](arkts-multimodalawareness-spatialawareness-technologytype-e-sys.md) | Enum for distance measurement technology types. |
 <!--DelEnd-->

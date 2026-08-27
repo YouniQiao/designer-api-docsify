@@ -60,7 +60,8 @@ Custom content in the refreshing area. NOTE In API version 10 and earlier versio
 friction?: number | string
 ```
 
-Coefficient of friction, which indicates the component's sensitivity to the pull-down gesture. The value ranges from 0 to 100. Default value: 62  
+Coefficient of friction, which indicates the component's sensitivity to the pull-down gesture. The value ranges from 0 to 100. Default value: 62
+
 - 0 indicates that the component is not sensitive to the pull-down gesture.  
 - 100 indicates that the component is highly sensitive to the pull-down gesture.  
 - A larger value indicates a more sensitive response of the component to the pull-down gesture.

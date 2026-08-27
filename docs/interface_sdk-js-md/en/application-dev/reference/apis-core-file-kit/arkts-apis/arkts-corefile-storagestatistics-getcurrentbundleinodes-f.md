@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import storageStatistics from '@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getCurrentBundleInodes
@@ -24,7 +24,7 @@ Get the current bundle inodes.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | return Promise |
+| Promise&lt;number&gt; | return Promise |
 
 **Error codes:**
 

@@ -31,7 +31,7 @@ new(array: Iterable<bigint>): BigUint64Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | Iterable & lt;bigint & gt; | Yes |  |
+| array | Iterable&lt;bigint&gt; | Yes |  |
 
 **Return value:**
 
@@ -67,7 +67,7 @@ Creates an array from an array-like or iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;bigint & gt; | Yes |  |
+| arrayLike | ArrayLike&lt;bigint&gt; | Yes |  |
 
 **Return value:**
 
@@ -83,8 +83,8 @@ from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;U & gt; | Yes |  |
-| mapfn | (v: U, k: number) = & gt; bigint | Yes |  |
+| arrayLike | ArrayLike&lt;U&gt; | Yes |  |
+| mapfn | (v: U, k: number) =&gt; bigint | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**

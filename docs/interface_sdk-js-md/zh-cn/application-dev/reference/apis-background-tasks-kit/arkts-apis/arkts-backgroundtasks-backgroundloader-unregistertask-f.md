@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundLoader from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## unregisterTask
@@ -26,7 +26,7 @@ function unregisterTask(taskInfo: TaskInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| taskInfo | [TaskInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-taskinfo-i.md) | 是 |  |
+| taskInfo | TaskInfo | 是 |  |
 
 **错误码：**
 

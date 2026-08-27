@@ -13,5 +13,5 @@ HDR-enabled brightness blender (inherited from BrightnessBlender), used to add a
 ## Modules to Import
 
 ```TypeScript
-import uiEffect from '@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```

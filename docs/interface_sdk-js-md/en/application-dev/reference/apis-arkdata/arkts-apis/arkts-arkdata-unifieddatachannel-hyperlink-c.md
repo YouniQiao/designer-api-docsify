@@ -11,7 +11,7 @@ Represents the hyperlink data. It is a child class of [Text](arkts-arkdata-unifi
 ## Modules to Import
 
 ```TypeScript
-import unifiedDataChannel from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## description

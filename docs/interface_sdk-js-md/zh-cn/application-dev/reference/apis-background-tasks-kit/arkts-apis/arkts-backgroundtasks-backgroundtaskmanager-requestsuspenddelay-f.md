@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## requestSuspendDelay
@@ -33,7 +33,7 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 
 | 类型 | 说明 |
 | --- | --- |
-| [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md) | 返回短时任务信息。 |
+| DelaySuspendInfo | 返回短时任务信息。 |
 
 **错误码：**
 

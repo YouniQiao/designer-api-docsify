@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import startupManager from '@kit.AbilityKit';
+import { startupManager } from '@kit.AbilityKit';
 ```
 
 ## removeStartupTaskResult
@@ -12,7 +12,8 @@ import startupManager from '@kit.AbilityKit';
 function removeStartupTaskResult(startupTask: string): void
 ```
 
-删除指定启动任务或so预加载任务的初始化结果。  
+删除指定启动任务或so预加载任务的初始化结果。
+
 - 输入为启动任务名时，删除指定启动任务的初始化结果。  
 - 输入为so文件时，将该so文件置为未加载，缓存中已加载的so文件不会被移除。
 

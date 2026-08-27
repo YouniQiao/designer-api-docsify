@@ -9,9 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## xOffset
@@ -20,7 +17,9 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 xOffset: number
 ```
 
-以网页最左端为基准，水平过度滚动的偏移量。单位：vp。
+以网页最左端为基准，水平过度滚动的偏移量。
+
+单位：vp。
 
 **类型：** number
 
@@ -36,7 +35,9 @@ xOffset: number
 yOffset: number
 ```
 
-以网页最上端为基准，竖直过度滚动的偏移量。单位：vp。
+以网页最上端为基准，竖直过度滚动的偏移量。
+
+单位：vp。
 
 **类型：** number
 

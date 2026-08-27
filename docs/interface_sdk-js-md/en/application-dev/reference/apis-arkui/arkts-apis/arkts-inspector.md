@@ -1,11 +1,12 @@
 # inspector
 
-Profiler tools for inspectors.@namespace Profiler
+Profiler tools for inspectors.
+
+@namespace Profiler
 
 ## Modules to Import
 
 ```TypeScript
-import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## Summary
@@ -14,7 +15,7 @@ import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [Profiler](arkts-arkui-profiler-n.md) | Profiler tools for inspectors.@namespace Profiler |
+| [Profiler](arkts-arkui-profiler-n.md) | Profiler tools for inspectors. |
 
 <!--Del-->
 ### Functions(System API)

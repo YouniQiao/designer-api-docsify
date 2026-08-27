@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## publish
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function publish(request: NotificationRequest, callback: AsyncCallback<void>): void
 ```
 
-发布通知。使用callback异步回调。发布通知后，通知将以通知卡片的形式展示在设备的通知中心、状态栏等位置。 如果新发布通知与已发布通知的ID和标签都相同，则新通知将取代原有通知，实现通知的更新效果。
+发布通知。使用callback异步回调。
+
+发布通知后，通知将以通知卡片的形式展示在设备的通知中心、状态栏等位置。如果新发布通知与已发布通知的ID和标签都相同，则新通知将取代原有通知，实现通知的更新效果。
 
 **起始版本：** 9
 
@@ -30,7 +32,7 @@ cancelAll 取消当前应用所有已发布的通知。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | 是 | 设置发布通知的内容和相关配置信息。 |
+| request | NotificationRequest | 是 | 设置发布通知的内容和相关配置信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当发布通知成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -88,7 +90,9 @@ notificationManager.publish(notificationRequest, publishCallback);
 function publish(request: NotificationRequest): Promise<void>
 ```
 
-发布通知。使用Promise异步回调。发布通知后，通知将以通知卡片的形式展示在设备的通知中心、状态栏等位置。 如果新发布通知与已发布通知的ID和标签都相同，则新通知将取代原有通知，实现通知的更新效果。
+发布通知。使用Promise异步回调。
+
+发布通知后，通知将以通知卡片的形式展示在设备的通知中心、状态栏等位置。如果新发布通知与已发布通知的ID和标签都相同，则新通知将取代原有通知，实现通知的更新效果。
 
 **起始版本：** 9
 
@@ -106,13 +110,13 @@ cancelAll 取消当前应用所有已发布的通知。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md) | 是 | 设置发布通知的内容和相关配置信息。 |
+| request | NotificationRequest | 是 | 设置发布通知的内容和相关配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

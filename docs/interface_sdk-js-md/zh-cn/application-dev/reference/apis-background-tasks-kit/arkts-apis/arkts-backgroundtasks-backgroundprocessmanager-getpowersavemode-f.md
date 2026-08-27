@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundProcessManager from '@kit.BackgroundTasksKit';
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## getPowerSaveMode

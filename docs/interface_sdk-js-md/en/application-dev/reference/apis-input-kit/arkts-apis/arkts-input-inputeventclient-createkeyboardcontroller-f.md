@@ -25,7 +25,7 @@ Creates a keyboard controller for simulating key operations. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;KeyboardController & gt; | Promise used to return the keyboard controller instance. |
+| Promise&lt;KeyboardController&gt; | Promise used to return the keyboard controller instance. |
 
 **Error codes:**
 

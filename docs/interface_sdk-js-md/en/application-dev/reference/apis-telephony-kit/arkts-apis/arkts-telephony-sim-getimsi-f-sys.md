@@ -79,7 +79,7 @@ Get the international mobile subscriber ID.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the international mobile subscriber ID. |
+| Promise&lt;string&gt; | Returns the international mobile subscriber ID. |
 
 **Error codes:**
 

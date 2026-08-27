@@ -1,6 +1,8 @@
 # TextContentControllerOptions
 
-Defines the span options of TextContentController.@interface TextContentControllerOptions
+Defines the span options of TextContentController.
+
+@interface TextContentControllerOptions
 
 **起始版本：** 15
 

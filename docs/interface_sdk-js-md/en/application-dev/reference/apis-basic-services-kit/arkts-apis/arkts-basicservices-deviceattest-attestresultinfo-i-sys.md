@@ -1,6 +1,8 @@
 # AttestResultInfo (System API)
 
-Device attest result information.@interface AttestResultInfo
+Device attest result information.
+
+@interface AttestResultInfo
 
 **Since:** 9
 
@@ -11,7 +13,7 @@ Device attest result information.@interface AttestResultInfo
 ## Modules to Import
 
 ```TypeScript
-import deviceAttest from '@kit.BasicServicesKit';
+import { deviceAttest } from '@kit.BasicServicesKit';
 ```
 
 ## authResult

@@ -1,6 +1,8 @@
 # GenerateImageTaskPartialResult (System API)
 
-Configuration stream result for AI-generated image tasks.@interface GenerateImageTaskPartialResult
+Configuration stream result for AI-generated image tasks.
+
+@interface GenerateImageTaskPartialResult
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ Configuration stream result for AI-generated image tasks.@interface GenerateImag
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## imageData

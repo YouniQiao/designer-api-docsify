@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import errorManager from '@kit.AbilityKit';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## on('error')
@@ -12,7 +12,9 @@ import errorManager from '@kit.AbilityKit';
 function on(type: 'error', observer: ErrorObserver): number
 ```
 
-注册错误观测器。注册后可以捕获到应用产生的js crash，属于应用崩溃的一种。观测器捕获到该异常时应用不退出，建议在回调函数执行完后，增加同步退出操作。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注册错误观测器。注册后可以捕获到应用产生的js crash，属于应用崩溃的一种。观测器捕获到该异常时应用不退出，建议在回调函数执行完后，增加同步退出操作。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 9
 
@@ -25,13 +27,13 @@ function on(type: 'error', observer: ErrorObserver): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 填写'error'，表示错误观测器。 |
-| observer | [ErrorObserver](arkts-ability-errormanager-errorobserver-t.md) | 是 | 错误观测器。 |
+| observer | ErrorObserver | 是 | 错误观测器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 观测器的索引值，与观测器一一对应。可用于`errorManager.off`函数中的`observerId`参数。 没有具体的单位。结果返回值是observerId。 |
+| number | 观测器的索引值，与观测器一一对应。可用于`errorManager.off`函数中的`observerId`参数。没有具体的单位。结果返回值是observerId。 |
 
 **错误码：**
 
@@ -76,7 +78,9 @@ try {
 function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 ```
 
-注册主线程消息处理耗时监听器。注册后可以捕获到应用主线程处理消息的具体执行时间。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注册主线程消息处理耗时监听器。注册后可以捕获到应用主线程处理消息的具体执行时间。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 12
 
@@ -90,7 +94,7 @@ function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 | --- | --- | --- | --- |
 | type | 'loopObserver' | 是 | 填写'loopObserver'，表示注册主线程消息处理耗时监听器。 |
 | timeout | number | 是 | 表示事件执行阈值（单位：毫秒）。 阈值必须大于0。 单位为毫秒（ms）。 |
-| observer | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | 是 | 注册主线程消息处理耗时监听器。 |
+| observer | LoopObserver | 是 | 注册主线程消息处理耗时监听器。 |
 
 **错误码：**
 
@@ -126,7 +130,9 @@ try {
 function on(type: 'unhandledRejection', observer: UnhandledRejectionObserver): void
 ```
 
-注册被拒绝promise监听器。注册后可以捕获到当前线程中未被捕获到的promise rejection。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注册被拒绝promise监听器。注册后可以捕获到当前线程中未被捕获到的promise rejection。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 **起始版本：** 12
 
@@ -231,7 +237,9 @@ let promise1 = new Promise<void>(() => {}).then(() => {
 function on(type: 'freeze', observer: FreezeObserver): void
 ```
 
-注册应用主线程freeze监听。多次注册情况下，取最后一次注册的结果。仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
+注册应用主线程freeze监听。多次注册情况下，取最后一次注册的结果。
+
+仅在主线程中使用。使用线程出错时，将抛出错误码，因此建议使用try-catch逻辑进行处理。
 
 > **注意**：
 > 

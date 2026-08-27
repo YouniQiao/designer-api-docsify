@@ -9,7 +9,7 @@ Provides time zone management capabilities, such as time zone name translation, 
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getAppDefaultTimeZone
@@ -71,7 +71,7 @@ Obtains the list of time zone IDs supported by the system.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of time zone IDs supported by the system. |
+| Array&lt;string&gt; | List of time zone IDs supported by the system. |
 
 **Examples**
 
@@ -100,7 +100,7 @@ Obtains the list of time zone city IDs supported by the system.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of time zone city IDs supported by the system. |
+| Array&lt;string&gt; | List of time zone city IDs supported by the system. |
 
 **Examples**
 

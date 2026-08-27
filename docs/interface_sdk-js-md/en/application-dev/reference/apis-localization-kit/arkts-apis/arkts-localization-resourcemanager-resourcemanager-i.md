@@ -31,7 +31,7 @@ Provides the capability of accessing application resources and system resources.
 ## Modules to Import
 
 ```TypeScript
-import resourceManager from '@kit.LocalizationKit';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## addResource
@@ -105,7 +105,7 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | _AsyncCallback & lt;void & gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | _AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -166,7 +166,7 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -270,7 +270,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | AsyncCallback & lt;void & gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -312,7 +312,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -417,7 +417,7 @@ Obtains a Boolean value based on the specified resource object. This API returns
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -556,7 +556,7 @@ Obtains the color value corresponding to the specified resource ID. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | _AsyncCallback & lt;number & gt; | Yes | Callback used to return the color value (decimal). |
+| callback | _AsyncCallback&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -601,18 +601,6 @@ export default class EntryAbility extends UIAbility {
 ```
 
 ```TypeScript
-// Resource file path: src/main/resources/base/element/color.json
-{
-  "color": [
-    {
-      "name": "test",
-      "value": "#FFFFFF"
-    }
-  ]
-}
-```
-
-```TypeScript
 import { resourceManager } from '@kit.LocalizationKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -629,18 +617,6 @@ this.context.resourceManager.getColor(resource, (error: BusinessError, value: nu
     // Print the output result: getColor, result: 4294967295
   }
 });
-```
-
-```TypeScript
-// Resource file path: src/main/resources/base/element/color.json
-{
-  "color": [
-    {
-      "name": "test",
-      "value": "#FFFFFF"
-    }
-  ]
-}
 ```
 
 ```TypeScript
@@ -686,7 +662,7 @@ Obtains the color value corresponding to the specified resource ID. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the color value (decimal). |
+| Promise&lt;number&gt; | Promise used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -754,8 +730,8 @@ Obtains the color value corresponding to the specified resource object. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| callback | _AsyncCallback & lt;number & gt; | Yes | Callback used to return the color value (decimal). |
+| resource | Resource | Yes | Resource object. |
+| callback | _AsyncCallback&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -823,13 +799,13 @@ Obtains the color value corresponding to the specified resource object. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the color value (decimal). |
+| Promise&lt;number&gt; | Promise used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -892,7 +868,7 @@ Obtains the color value corresponding to the specified resource name. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | _AsyncCallback & lt;number & gt; | Yes | Callback used to return the color value (decimal). |
+| callback | _AsyncCallback&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -960,7 +936,7 @@ Obtains the color value corresponding to the specified resource name. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the color value (decimal). |
+| Promise&lt;number&gt; | Promise used to return the color value (decimal). |
 
 **Error codes:**
 
@@ -1166,7 +1142,7 @@ Obtains a color value based on the specified resource object. This API returns t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -1235,7 +1211,7 @@ Obtains the configuration of a device. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | _AsyncCallback & lt;Configuration & gt; | Yes | Callback used to return the device configuration. |
+| callback | _AsyncCallback&lt;Configuration&gt; | Yes | Callback used to return the device configuration. |
 
 **Examples**
 
@@ -1280,7 +1256,7 @@ Obtains the configuration of a device. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Configuration & gt; | Promise used to return the device configuration. |
+| Promise&lt;Configuration&gt; | Promise used to return the device configuration. |
 
 **Examples**
 
@@ -1323,7 +1299,7 @@ Obtains the device configuration. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | Device configuration. |
+| Configuration | Device configuration. |
 
 **Examples**
 
@@ -1361,7 +1337,7 @@ Obtains the device capabilities of a device. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | _AsyncCallback & lt;DeviceCapability & gt; | Yes | Callback used to return the device capability. |
+| callback | _AsyncCallback&lt;DeviceCapability&gt; | Yes | Callback used to return the device capability. |
 
 **Examples**
 
@@ -1406,7 +1382,7 @@ Obtains the device capabilities of a device. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;DeviceCapability & gt; | Promise used to return the device capability. |
+| Promise&lt;DeviceCapability&gt; | Promise used to return the device capability. |
 
 **Examples**
 
@@ -1449,7 +1425,7 @@ Obtains the device capability. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [DeviceCapability](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-partneragent-devicecapability-i.md) | Device capability. |
+| DeviceCapability | Device capability. |
 
 **Examples**
 
@@ -1497,7 +1473,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array & lt;string \ | number & gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -1587,7 +1563,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array & lt;string \ | number & gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -1678,9 +1654,9 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array & lt;string \ | number & gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -1840,7 +1816,7 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 | type | number | No | Icon type. The default value is **0**.    **0**: Icon resource of the application.    **1**: Layered icon resource of the application in the theme resource package. |
 
@@ -1994,7 +1970,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array & lt;string \ | number & gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -2084,7 +2060,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array & lt;string \ | number & gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -2175,9 +2151,9 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| args | Array & lt;string \ | number & gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -2264,7 +2240,7 @@ Obtains the language list of an application.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Language list. The strings in the list are comprised of the language, script (optional), and region (optional), which are connected by a hyphen (-). |
+| Array&lt;string&gt; | Language list. The strings in the list are comprised of the language, script (optional), and region (optional), which are connected by a hyphen (-). |
 
 **Error codes:**
 
@@ -2329,7 +2305,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | AsyncCallback & lt;Uint8Array & gt; | Yes | Callback used to return the media file content. |
+| callback | AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Examples**
 
@@ -2371,7 +2347,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the media file content. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
 
 **Examples**
 
@@ -2408,7 +2384,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | AsyncCallback & lt;string & gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Examples**
 
@@ -2450,7 +2426,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the Base64 encoding of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Examples**
 
@@ -2485,7 +2461,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | _AsyncCallback & lt;string & gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -2541,7 +2517,7 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
-| callback | _AsyncCallback & lt;string & gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -2601,7 +2577,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the Base64 encoding of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -2660,7 +2636,7 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the Base64 encoding of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -2777,7 +2753,7 @@ Obtains the content of the media file corresponding to the specified resource na
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes | Callback used to return the media file content. |
+| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -2833,7 +2809,7 @@ Obtains the media file content for the specified screen density based on the spe
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
-| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes | Callback used to return the media file content. |
+| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -2893,7 +2869,7 @@ Obtains the content of the media file corresponding to the specified resource na
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the media file content. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
 
 **Error codes:**
 
@@ -2952,7 +2928,7 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the media file content. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
 
 **Error codes:**
 
@@ -3074,8 +3050,8 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes | Callback used to return the media file content. |
+| resource | Resource | Yes | Resource object. |
+| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -3135,9 +3111,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
-| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes | Callback used to return the media file content. |
+| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -3197,13 +3173,13 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the media file content. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
 
 **Error codes:**
 
@@ -3261,14 +3237,14 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the media file content. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
 
 **Error codes:**
 
@@ -3321,7 +3297,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes | Callback used to return the media file content. |
+| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -3378,7 +3354,7 @@ Obtains the media file content for the specified screen density based on the spe
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
-| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes | Callback used to return the media file content. |
+| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
@@ -3438,7 +3414,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the media file content. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
 
 **Error codes:**
 
@@ -3497,7 +3473,7 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the media file content. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the media file content. |
 
 **Error codes:**
 
@@ -3555,8 +3531,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| callback | _AsyncCallback & lt;string & gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| resource | Resource | Yes | Resource object. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -3616,9 +3592,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
-| callback | _AsyncCallback & lt;string & gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -3678,13 +3654,13 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the Base64 encoding of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -3742,14 +3718,14 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the Base64 encoding of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -3802,7 +3778,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | _AsyncCallback & lt;string & gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -3858,7 +3834,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
-| callback | _AsyncCallback & lt;string & gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -3918,7 +3894,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the Base64 encoding of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -3977,7 +3953,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the Base64 encoding of the image. |
+| Promise&lt;string&gt; | Promise used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
@@ -4099,7 +4075,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
@@ -4232,7 +4208,7 @@ Obtains the media file content for the default or specified screen density based
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
 
 **Return value:**
@@ -4396,7 +4372,7 @@ Obtains an integer or float number based on the specified resource object. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -4549,7 +4525,9 @@ export default class EntryAbility extends UIAbility {
 getOverrideConfiguration(): Configuration
 ```
 
-Obtains the configuration of differentiated resources. This API returns the result synchronously.For both the common resource management object and the differentiated resource management object obtained through the [getOverrideResourceManager](#getoverrideresourcemanager) API, this API returns the same configuration information.
+Obtains the configuration of differentiated resources. This API returns the result synchronously.
+
+For both the common resource management object and the differentiated resource management object obtained through the [getOverrideResourceManager](#getoverrideresourcemanager) API, this API returns the same configuration information.
 
 **Since:** 12
 
@@ -4561,7 +4539,7 @@ Obtains the configuration of differentiated resources. This API returns the resu
 
 | Type | Description |
 | --- | --- |
-| [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | Configuration of differentiated resources. |
+| Configuration | Configuration of differentiated resources. |
 
 **Examples**
 
@@ -4592,7 +4570,9 @@ export default class EntryAbility extends UIAbility {
 getOverrideResourceManager(configuration?: Configuration): ResourceManager
 ```
 
-Obtains a **ResourceManager** object for loading differentiated resources. This API returns the result synchronously.The resource configuration (including the language, color mode, resolution, and orientation) obtained by a common **ResourceManager** object is determined by the system. With this API, an application can obtain resources of the specified configuration (that is, differentiated resources), for example, dark color resources in light color mode.
+Obtains a **ResourceManager** object for loading differentiated resources. This API returns the result synchronously.
+
+The resource configuration (including the language, color mode, resolution, and orientation) obtained by a common **ResourceManager** object is determined by the system. With this API, an application can obtain resources of the specified configuration (that is, differentiated resources), for example, dark color resources in light color mode.
 
 **Since:** 12
 
@@ -4604,7 +4584,7 @@ Obtains a **ResourceManager** object for loading differentiated resources. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | No | Resource configuration. After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getoverrideconfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. If no configuration is specified, the current system configuration is used. |
+| configuration | Configuration | No | Resource configuration. After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getoverrideconfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. If no configuration is specified, the current system configuration is used. |
 
 **Return value:**
 
@@ -4668,7 +4648,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| callback | AsyncCallback & lt;string & gt; | Yes | Callback used to return the obtained singular/plural string. |
+| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
 **Examples**
 
@@ -4718,7 +4698,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the obtained singular/plural string. |
+| Promise&lt;string&gt; | Promise used to return the obtained singular/plural string. |
 
 **Examples**
 
@@ -4763,7 +4743,7 @@ Obtains the plural string based on the specified resource name and the specified
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| callback | _AsyncCallback & lt;string & gt; | Yes | Callback used to return the obtained singular/plural string. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
 **Error codes:**
 
@@ -4846,7 +4826,7 @@ Obtains the plural string based on the specified resource name and the specified
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result, which is the singular/plural string corresponding to the specified resource name. |
+| Promise&lt;string&gt; | Promise used to return the result, which is the singular/plural string corresponding to the specified resource name. |
 
 **Error codes:**
 
@@ -5008,9 +4988,9 @@ Obtains the plural string based on the specified resource information and the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| callback | _AsyncCallback & lt;string & gt; | Yes | Callback used to return the obtained singular/plural string. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
 **Error codes:**
 
@@ -5095,14 +5075,14 @@ Obtains the plural string based on the specified resource information and the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the obtained singular/plural string. |
+| Promise&lt;string&gt; | Promise used to return the obtained singular/plural string. |
 
 **Error codes:**
 
@@ -5186,7 +5166,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| callback | _AsyncCallback & lt;string & gt; | Yes | Callback used to return the obtained singular/plural string. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
 **Error codes:**
 
@@ -5270,7 +5250,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the obtained singular/plural string. |
+| Promise&lt;string&gt; | Promise used to return the obtained singular/plural string. |
 
 **Error codes:**
 
@@ -5432,7 +5412,7 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
@@ -5520,7 +5500,7 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | _AsyncCallback & lt;RawFileDescriptor & gt; | Yes | Callback used to return the fd of the HAP. |
+| callback | _AsyncCallback&lt;RawFileDescriptor&gt; | Yes | Callback used to return the fd of the HAP. |
 
 **Error codes:**
 
@@ -5588,7 +5568,7 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;RawFileDescriptor & gt; | Promise used to return the fd of the HAP. |
+| Promise&lt;RawFileDescriptor&gt; | Promise used to return the fd of the HAP. |
 
 **Error codes:**
 
@@ -5654,7 +5634,7 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 
 | Type | Description |
 | --- | --- |
-| [RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md) | fd of the HAP where the rawfile is located. |
+| RawFileDescriptor | fd of the HAP where the rawfile is located. |
 
 **Error codes:**
 
@@ -5704,7 +5684,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | AsyncCallback & lt;Uint8Array & gt; | Yes | Callback used to return the rawfile content. |
+| callback | AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the rawfile content. |
 
 **Examples**
 
@@ -5748,7 +5728,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the rawfile content. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the rawfile content. |
 
 **Examples**
 
@@ -5783,7 +5763,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes | Callback used to return the content of the rawfile. |
+| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the content of the rawfile. |
 
 **Error codes:**
 
@@ -5842,7 +5822,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the content of the rawfile. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the content of the rawfile. |
 
 **Error codes:**
 
@@ -5949,7 +5929,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | AsyncCallback & lt;RawFileDescriptor & gt; | Yes | Callback used to return the obtained fd. |
+| callback | AsyncCallback&lt;RawFileDescriptor&gt; | Yes | Callback used to return the obtained fd. |
 
 **Examples**
 
@@ -5995,7 +5975,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;RawFileDescriptor & gt; | Promise used to return the obtained fd. |
+| Promise&lt;RawFileDescriptor&gt; | Promise used to return the obtained fd. |
 
 **Examples**
 
@@ -6037,7 +6017,7 @@ Obtains the list of directories and files in the specified subdirectory under **
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile subdirectory path relative to the **resources/rawfile** directory, such as **subdir**. The path must not start with a slash (/). An empty string **""** indicates that the list of directories and files in the **rawfile** root directory is obtained. |
-| callback | _AsyncCallback & lt;Array & lt;string & gt; & gt; | Yes | Callback used to return the list of directories and files in a rawfile subdirectory. |
+| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the list of directories and files in a rawfile subdirectory. |
 
 **Error codes:**
 
@@ -6097,7 +6077,7 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the list of directories and files in a rawfile subdirectory. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the list of directories and files in a rawfile subdirectory. |
 
 **Error codes:**
 
@@ -6157,7 +6137,7 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of folders and files in the **rawfile** directory. |
+| Array&lt;string&gt; | List of folders and files in the **rawfile** directory. |
 
 **Error codes:**
 
@@ -6278,7 +6258,7 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | AsyncCallback & lt;string & gt; | Yes | Callback used to return the obtained string. |
+| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
 
 **Examples**
 
@@ -6320,7 +6300,7 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the obtained string. |
+| Promise&lt;string&gt; | Promise used to return the obtained string. |
 
 **Examples**
 
@@ -6357,7 +6337,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | AsyncCallback & lt;Array & lt;string & gt; & gt; | Yes | Callback used to return the obtained string array. |
+| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
 
 **Examples**
 
@@ -6399,7 +6379,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the obtained string array. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the obtained string array. |
 
 **Examples**
 
@@ -6434,7 +6414,7 @@ Obtains the string array corresponding to the specified resource name. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | _AsyncCallback & lt;Array & lt;string & gt; & gt; | Yes | Callback used to return the obtained string array. |
+| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
 
 **Error codes:**
 
@@ -6507,7 +6487,7 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the obtained string array. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the obtained string array. |
 
 **Error codes:**
 
@@ -6579,7 +6559,7 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | String array corresponding to the specified resource name. |
+| Array&lt;string&gt; | String array corresponding to the specified resource name. |
 
 **Error codes:**
 
@@ -6652,8 +6632,8 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| callback | _AsyncCallback & lt;Array & lt;string & gt; & gt; | Yes | Callback used to return the obtained string array. |
+| resource | Resource | Yes | Resource object. |
+| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
 
 **Error codes:**
 
@@ -6725,13 +6705,13 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the obtained string array. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the obtained string array. |
 
 **Error codes:**
 
@@ -6798,7 +6778,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | _AsyncCallback & lt;Array & lt;string & gt; & gt; | Yes | Callback used to return the obtained string array. |
+| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
 
 **Error codes:**
 
@@ -6871,7 +6851,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the obtained string array. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the obtained string array. |
 
 **Error codes:**
 
@@ -6943,7 +6923,7 @@ Obtains the string array corresponding to the specified resource ID. This API re
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | String array corresponding to the specified resource ID. |
+| Array&lt;string&gt; | String array corresponding to the specified resource ID. |
 
 **Error codes:**
 
@@ -7016,13 +6996,13 @@ Obtains a string array based on the specified resource object. This API returns 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | String array corresponding to the specified resource object. |
+| Array&lt;string&gt; | String array corresponding to the specified resource object. |
 
 **Error codes:**
 
@@ -7090,7 +7070,7 @@ Obtains the string corresponding to the specified resource name. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | _AsyncCallback & lt;string & gt; | Yes | Callback used to return the obtained string. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
 
 **Error codes:**
 
@@ -7158,7 +7138,7 @@ Obtains the string corresponding to the specified resource name. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the obtained string. |
+| Promise&lt;string&gt; | Promise used to return the obtained string. |
 
 **Error codes:**
 
@@ -7288,7 +7268,7 @@ Obtains the string corresponding to the specified resource name, and replaces th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| args | Array & lt;string \ | number & gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -7428,7 +7408,7 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| args | Array & lt;string \ | number & gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -7504,7 +7484,7 @@ Obtains a string based on the specified resource object. This API returns the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -7579,8 +7559,8 @@ Obtains the string corresponding to the specified resource object, and replaces 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| args | Array & lt;string \ | number & gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
+| resource | Resource | Yes | Resource object. |
+| args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`.    **NOTE：** - `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. - In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
 **Return value:**
 
@@ -7656,8 +7636,8 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| callback | _AsyncCallback & lt;string & gt; | Yes | Callback used to return the obtained string. |
+| resource | Resource | Yes | Resource object. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
 
 **Error codes:**
 
@@ -7725,13 +7705,13 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the obtained string. |
+| Promise&lt;string&gt; | Promise used to return the obtained string. |
 
 **Error codes:**
 
@@ -7782,7 +7762,7 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | _AsyncCallback & lt;string & gt; | Yes | Callback used to return the obtained string. |
+| callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
 
 **Error codes:**
 
@@ -7822,37 +7802,6 @@ export default class EntryAbility extends UIAbility {
         });
     }
 }
-```
-
-```TypeScript
-// Resource file path: src/main/resources/base/element/string.json
-{
-  "string": [
-    {
-      "name": "test",
-      "value": "I'm a test string resource."
-    }
-  ]
-}
-```
-
-```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let resource: resourceManager.Resource = {
-  bundleName: "com.example.myapplication",
-  moduleName: "entry",
-  id: $r('app.string.test').id
-};
-this.context.resourceManager.getStringValue(resource, (error: BusinessError, value: string) => {
-  if (error != null) {
-    console.error(`callback getStringValue failed, error code: ${error.code}, message: ${error.message}.`);
-  } else {
-    console.info(`getStringValue, result: ${value}`);
-    // Print the output result: getStringValue, result: I'm a test string resource.
-  }
-});
 ```
 
 ```TypeScript
@@ -7898,7 +7847,7 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the obtained string. |
+| Promise&lt;string&gt; | Promise used to return the obtained string. |
 
 **Error codes:**
 
@@ -8021,7 +7970,7 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -8263,7 +8212,9 @@ export default class EntryAbility extends UIAbility {
 updateOverrideConfiguration(configuration: Configuration): void
 ```
 
-Updates the configuration of a differentiated resource management object.This API updates the configuration of the differentiated resource management object, regardless of whether it is called on the common resource management object or on the differentiated one obtained via [getOverrideResourceManager](#getoverrideresourcemanager).
+Updates the configuration of a differentiated resource management object.
+
+This API updates the configuration of the differentiated resource management object, regardless of whether it is called on the common resource management object or on the differentiated one obtained via [getOverrideResourceManager](#getoverrideresourcemanager).
 
 **Since:** 12
 
@@ -8275,7 +8226,7 @@ Updates the configuration of a differentiated resource management object.This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | Yes | Configuration of differentiated resources. After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getoverrideconfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. |
+| configuration | Configuration | Yes | Configuration of differentiated resources. After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getoverrideconfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. |
 
 **Error codes:**
 

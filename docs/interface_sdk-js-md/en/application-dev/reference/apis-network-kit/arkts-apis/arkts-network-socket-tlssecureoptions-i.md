@@ -9,7 +9,7 @@ TLS security options. When **cert** (local certificate) and **key** (private key
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## ca

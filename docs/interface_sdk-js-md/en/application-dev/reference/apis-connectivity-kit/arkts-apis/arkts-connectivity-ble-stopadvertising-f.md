@@ -172,7 +172,7 @@ Stops BLE advertising. Completely stop the advertising corresponding to the ID.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 

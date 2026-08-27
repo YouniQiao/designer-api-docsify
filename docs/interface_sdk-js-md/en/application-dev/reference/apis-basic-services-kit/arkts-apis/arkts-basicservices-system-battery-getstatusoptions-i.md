@@ -11,7 +11,7 @@ Object that contains the API calling result.
 ## Modules to Import
 
 ```TypeScript
-import Battery, { BatteryResponse, GetStatusOptions } from '@kit.BasicServicesKit';
+import { Battery, BatteryResponse, GetStatusOptions } from '@kit.BasicServicesKit';
 ```
 
 ## complete

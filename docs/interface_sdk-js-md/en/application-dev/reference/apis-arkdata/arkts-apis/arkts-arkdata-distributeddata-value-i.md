@@ -13,7 +13,6 @@ Defines the **value** object in a KV store.
 ## Modules to Import
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## type

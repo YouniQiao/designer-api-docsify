@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import restrictions from '@kit.MDMKit';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## isHdcDisabled
@@ -99,7 +99,7 @@ Queries whether HDC is disabled. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that HDC is disabled; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that HDC is disabled; the value **false** means the opposite. |
 
 **Error codes:**
 

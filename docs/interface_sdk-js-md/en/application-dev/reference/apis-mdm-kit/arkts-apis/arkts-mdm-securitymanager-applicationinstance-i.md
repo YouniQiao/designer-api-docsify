@@ -9,7 +9,7 @@ Application instance
 ## Modules to Import
 
 ```TypeScript
-import securityManager from '@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## accountId
@@ -50,7 +50,9 @@ The [unique identifier](../../apis-ability-kit/arkts-apis/arkts-ability-bundlein
 appIndex: number
 ```
 
-Index of the application clone. The default value is **0**.If **appIndex** is set to **0**, the main application is used. If **appIndex** is set to a value greater than 0, the application clone with the specified index is used.
+Index of the application clone. The default value is **0**.
+
+If **appIndex** is set to **0**, the main application is used. If **appIndex** is set to a value greater than 0, the application clone with the specified index is used.
 
 **Type:** number
 

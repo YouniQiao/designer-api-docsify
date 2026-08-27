@@ -11,7 +11,7 @@ Tool execution options.
 ## Modules to Import
 
 ```TypeScript
-import cliManager from '@kit.AbilityKit';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## background

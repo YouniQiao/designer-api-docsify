@@ -18,7 +18,9 @@ import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the arc button.Default value: **BlurStyle.NONE**
+Background blur style of the arc button.
+
+Default value: **BlurStyle.NONE**
 
 **Type:** BlurStyle
 
@@ -34,9 +36,13 @@ Background blur style of the arc button.Default value: **BlurStyle.NONE**
 backgroundColor?: ColorMetrics
 ```
 
-Background color of the arc button.This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**.Default value: **Color.Black**
+Background color of the arc button.
 
-**Type:** ColorMetrics
+This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**.
+
+Default value: **Color.Black**
+
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -50,9 +56,13 @@ Background color of the arc button.This property takes effect only when **ArcBut
 fontColor?: ColorMetrics
 ```
 
-Font color of the arc button.This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**.Default value: **Color.White**
+Font color of the arc button.
 
-**Type:** ColorMetrics
+This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**.
+
+Default value: **Color.White**
+
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -82,7 +92,9 @@ Font family of the arc button.
 fontMargin?: LocalizedMargin
 ```
 
-Margin of the arc button text.Default value: **{start:24vp, top: 10vp,end: 24vp, bottom:16vp }**
+Margin of the arc button text.
+
+Default value: **{start:24vp, top: 10vp,end: 24vp, bottom:16vp }**
 
 **Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
 
@@ -98,9 +110,11 @@ Margin of the arc button text.Default value: **{start:24vp, top: 10vp,end: 24vp,
 fontSize?: LengthMetrics
 ```
 
-Font size of the arc button.Default value: **19fp**
+Font size of the arc button.
 
-**Type:** LengthMetrics
+Default value: **19fp**
+
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 
@@ -114,7 +128,9 @@ Font size of the arc button.Default value: **19fp**
 fontStyle?: FontStyle
 ```
 
-Font style of the arc button.Default value: **FontStyle.Normal**
+Font style of the arc button.
+
+Default value: **FontStyle.Normal**
 
 **Type:** FontStyle
 
@@ -178,7 +194,9 @@ Callback triggered by touch actions on the arc button.
 position?: ArcButtonPosition
 ```
 
-Type of the arc button.Default value: **ArcButtonPosition.BOTTOM_EDGE**
+Type of the arc button.
+
+Default value: **ArcButtonPosition.BOTTOM_EDGE**
 
 **Type:** [ArcButtonPosition](arkts-arkui-arkui-advanced-arcbutton-arcbuttonposition-e.md)
 
@@ -194,9 +212,13 @@ Type of the arc button.Default value: **ArcButtonPosition.BOTTOM_EDGE**
 pressedFontColor?: ColorMetrics
 ```
 
-Font color of the arc button when pressed.This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**.Default value: **Color.White**
+Font color of the arc button when pressed.
 
-**Type:** ColorMetrics
+This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**.
+
+Default value: **Color.White**
+
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -210,7 +232,9 @@ Font color of the arc button when pressed.This property takes effect only when *
 progressConfig?: ArcButtonProgressConfig
 ```
 
-Parameters for the progress indicator of the **ArcButton** component. If this property is not set, the **ArcButton** component is displayed as a button (see [Example 1](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-1-setting-an-arc-button)). If this property is set, the component is displayed as a progress indicator (see [Example 2](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-2-setting-a-device-progress-indicator-button)). The progress indicator style is not affected by the settings of the [ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md) attribute.Default value: default values of all properties of [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
+Parameters for the progress indicator of the **ArcButton** component. If this property is not set, the **ArcButton** component is displayed as a button (see [Example 1](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-1-setting-an-arc-button)). If this property is set, the component is displayed as a progress indicator (see [Example 2](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-2-setting-a-device-progress-indicator-button)). The progress indicator style is not affected by the settings of the [ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md) attribute.
+
+Default value: default values of all properties of [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
 
 **Type:** [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
 
@@ -228,9 +252,11 @@ Parameters for the progress indicator of the **ArcButton** component. If this pr
 shadowColor?: ColorMetrics
 ```
 
-Shadow color of the arc button.Default value: **Color.Black**
+Shadow color of the arc button.
 
-**Type:** ColorMetrics
+Default value: **Color.Black**
+
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -244,7 +270,11 @@ Shadow color of the arc button.Default value: **Color.Black**
 shadowEnabled?: boolean
 ```
 
-Whether to enable the shadow for the arc button.Default value: **false**The value **true** means to enable the shadow, and **false** means the opposite.
+Whether to enable the shadow for the arc button.
+
+Default value: **false**
+
+The value **true** means to enable the shadow, and **false** means the opposite.
 
 **Type:** boolean
 
@@ -260,7 +290,9 @@ Whether to enable the shadow for the arc button.Default value: **false**The valu
 status?: ArcButtonStatus
 ```
 
-Status of the arc button.Default value: **ArcButtonStatus.NORMAL**
+Status of the arc button.
+
+Default value: **ArcButtonStatus.NORMAL**
 
 **Type:** [ArcButtonStatus](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstatus-e.md)
 
@@ -276,7 +308,9 @@ Status of the arc button.Default value: **ArcButtonStatus.NORMAL**
 styleMode?: ArcButtonStyleMode
 ```
 
-Style mode for the arc button. This style cannot be used together with the [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md) style.Default value: **ArcButtonStyleMode.EMPHASIZED_LIGHT**
+Style mode for the arc button. This style cannot be used together with the [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md) style.
+
+Default value: **ArcButtonStyleMode.EMPHASIZED_LIGHT**
 
 **Type:** [ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)
 

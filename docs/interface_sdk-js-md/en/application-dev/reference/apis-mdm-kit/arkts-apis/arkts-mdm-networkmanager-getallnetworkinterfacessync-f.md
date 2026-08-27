@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## getAllNetworkInterfacesSync
@@ -32,7 +32,7 @@ Obtains all activated wired network interfaces. This API is suitable for enterpr
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Names of all activated wired network interfaces. |
+| Array&lt;string&gt; | Names of all activated wired network interfaces. |
 
 **Error codes:**
 

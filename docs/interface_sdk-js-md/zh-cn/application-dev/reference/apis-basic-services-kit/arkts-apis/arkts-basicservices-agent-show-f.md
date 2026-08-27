@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## show
@@ -57,7 +56,7 @@ function show(id: string): Promise<TaskInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;TaskInfo & gt; | Promise对象。返回任务详细信息TaskInfo的Promise对象。 |
+| Promise&lt;TaskInfo&gt; | Promise对象。返回任务详细信息TaskInfo的Promise对象。 |
 
 **错误码：**
 

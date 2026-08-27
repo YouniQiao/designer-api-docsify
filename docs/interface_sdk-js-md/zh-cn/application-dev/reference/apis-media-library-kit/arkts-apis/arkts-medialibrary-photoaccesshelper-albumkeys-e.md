@@ -36,7 +36,10 @@ ALBUM_NAME = 'album_name'
 ALBUM_LPATH = 'lpath'
 ```
 
-相册的虚拟路径。支持的相册及对应的lpath值：  
+相册的虚拟路径。
+
+支持的相册及对应的lpath值：
+
 - 相机应用相册：'/DCIM/Camera'  
 - 截图应用相册：'/Pictures/Screenshots'  
 - 屏幕录制应用相册：'/Pictures/Screenrecords'  

@@ -85,7 +85,7 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback for the gesture event. |
+| event | () =&gt; void | Yes | Callback for the gesture event. |
 
 **Return value:**
 
@@ -139,7 +139,7 @@ Triggered when the last finger used for the rotation gesture is lifted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes | Callback for the gesture event. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for the gesture event. |
 
 **Return value:**
 
@@ -165,7 +165,7 @@ Triggered when the rotation gesture is recognized successfully.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes | Callback for the gesture event. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for the gesture event. |
 
 **Return value:**
 
@@ -191,7 +191,7 @@ Triggered during the movement of the rotation gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes | Callback for the gesture event. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for the gesture event. |
 
 **Return value:**
 

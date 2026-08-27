@@ -1,6 +1,8 @@
 # SwiperModifier
 
-Defines Swiper Modifier@extends SwiperAttribute @implements AttributeModifier&lt;SwiperAttribute&gt;
+Defines Swiper Modifier
+
+@extends SwiperAttribute @implements AttributeModifier&lt;SwiperAttribute&gt;
 
 **Inheritance/Implementation:** SwiperModifier extends [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md#swiperattribute) and implements AttributeModifier<SwiperAttribute>
 

@@ -11,7 +11,9 @@
 function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callback: AsyncCallback<string>): void
 ```
 
-将电话号码格式化为E.164表示形式，使用callback异步回调。待格式化的电话号码需要与传入的国家码相匹配，如中国电话号码需要传入国家码CN，否则格式化后的电话号码为null。
+将电话号码格式化为E.164表示形式，使用callback异步回调。
+
+待格式化的电话号码需要与传入的国家码相匹配，如中国电话号码需要传入国家码CN，否则格式化后的电话号码为null。
 
 **起始版本：** 7
 
@@ -56,7 +58,11 @@ call.formatPhoneNumberToE164("138xxxxxxxx", "CN", (err: BusinessError, data: str
 function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Promise<string>
 ```
 
-将电话号码格式化为E.164表示形式，使用Promise异步回调。待格式化的电话号码需要与传入的国家码相匹配，如中国电话号码需要传入国家码CN，否则格式化后的电话号码为null。支持所有国家码。
+将电话号码格式化为E.164表示形式，使用Promise异步回调。
+
+待格式化的电话号码需要与传入的国家码相匹配，如中国电话号码需要传入国家码CN，否则格式化后的电话号码为null。
+
+支持所有国家码。
 
 **起始版本：** 7
 
@@ -73,7 +79,7 @@ function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Prom
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | 以Promise形式异步返回将电话号码格式化为E.164表示形式的结果。 |
+| Promise&lt;string&gt; | 以Promise形式异步返回将电话号码格式化为E.164表示形式的结果。 |
 
 **错误码：**
 

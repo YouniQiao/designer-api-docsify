@@ -18,7 +18,7 @@ Provides OAuth authenticator callbacks.
 ## Modules to Import
 
 ```TypeScript
-import appAccount from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onRequestRedirected

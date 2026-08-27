@@ -16,7 +16,7 @@ UIAbility is an application component that has the UI. It inherits from
 ## Modules to Import
 
 ```TypeScript
-import UIAbility, { Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary

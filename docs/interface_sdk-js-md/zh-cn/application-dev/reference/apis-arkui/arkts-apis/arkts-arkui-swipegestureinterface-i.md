@@ -31,7 +31,7 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | { fingers?: number; direction?: SwipeDirection; speed?: number } | 否 | 设置快滑事件参数。     - fingers：触发快滑的最少手指数。   默认值：1 取值范围：[1, 10]     - direction：触发快滑手势的滑动方向。   默认值：SwipeDirection.All     - speed：识别快滑的最小速度。   默认值：100VP/s 取值范围：(0, +∞)    **说明：** 当滑动速度的值小于等于0时，会被转化为默认值。 |
+| value | { fingers?: number; direction?: SwipeDirection; speed?: number } | 否 | 设置快滑事件参数。    - fingers：触发快滑的最少手指数。   默认值：1 取值范围：[1, 10]     - direction：触发快滑手势的滑动方向。   默认值：SwipeDirection.All     - speed：识别快滑的最小速度。   默认值：100VP/s 取值范围：(0, +∞)    **说明：** 当滑动速度的值小于等于0时，会被转化为默认值。 |
 
 **返回值：**
 
@@ -45,7 +45,7 @@
 (options?: SwipeGestureHandlerOptions): SwipeGestureInterface
 ```
 
-设置快滑手势事件。与SwipeGesture)}相比， options参数新增了isFingerCountLimited，表示是否检查触摸屏幕的手指数量。
+设置快滑手势事件。与SwipeGesture)}相比，options参数新增了isFingerCountLimited，表示是否检查触摸屏幕的手指数量。
 
 **起始版本：** 15
 
@@ -85,7 +85,7 @@ Swipe手势识别成功时触发回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 | 手势事件回调函数。 |
+| event | (event: GestureEvent) =&gt; void | 是 | 手势事件回调函数。 |
 
 **返回值：**
 

@@ -204,7 +204,9 @@ Adds a right parenthesis to the predicate, similar to ")" in database queries. I
 BETWEEN = 13
 ```
 
-Matches fields within a specified range,including both endpoints (closed interval). It uses the first two elements of the **value** array, where the first element is the lower boundary and the second is the upper boundary. For example, in the array [1, 2, 3, 4], the first two elements are used, with 1 as the lower boundary and 2 as the upper boundary.
+Matches fields within a specified range,
+
+including both endpoints (closed interval). It uses the first two elements of the **value** array, where the first element is the lower boundary and the second is the upper boundary. For example, in the array [1, 2, 3, 4], the first two elements are used, with 1 as the lower boundary and 2 as the upper boundary.
 
 **Since:** 22
 
@@ -220,7 +222,9 @@ Matches fields within a specified range,including both endpoints (closed interva
 NOT_BETWEEN = 14
 ```
 
-Matches fields outside a specified range,excluding both endpoints (open interval). It uses the first two elements of the **value** array, where the first element is the lower boundary and the second is the upper boundary. For example, in the array [1, 2, 3, 4], the first two elements are used, with 1 as the lower boundary and 2 as the upper boundary.
+Matches fields outside a specified range,
+
+excluding both endpoints (open interval). It uses the first two elements of the **value** array, where the first element is the lower boundary and the second is the upper boundary. For example, in the array [1, 2, 3, 4], the first two elements are used, with 1 as the lower boundary and 2 as the upper boundary.
 
 **Since:** 22
 

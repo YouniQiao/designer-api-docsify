@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import uriPermissionManager from '@kit.AbilityKit';
+import { uriPermissionManager } from '@kit.AbilityKit';
 ```
 
 ## grantUriPermission
@@ -124,7 +124,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
+| Promise&lt;number&gt; | Promise used to return the result. If the operation is successful, **0** is returned; otherwise, **-1** is returned. |
 
 **Error codes:**
 
@@ -208,7 +208,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

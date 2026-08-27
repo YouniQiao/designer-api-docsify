@@ -79,7 +79,7 @@ Obtains the altitude based on the atmospheric pressure. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the altitude, in meters. |
+| Promise&lt;number&gt; | Promise used to return the altitude, in meters. |
 
 **Error codes:**
 

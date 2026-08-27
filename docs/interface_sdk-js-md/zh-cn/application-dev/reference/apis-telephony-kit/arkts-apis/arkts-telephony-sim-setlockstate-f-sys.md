@@ -26,7 +26,7 @@ Set the lock status of the SIM card in the specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| options | [LockInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-cloudextension-lockinfo-i-sys.md) | 是 | Indicates lock information. |
+| options | LockInfo | 是 | Indicates lock information. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LockStatusResponse](arkts-telephony-sim-lockstatusresponse-i-sys.md)&gt; | 是 | Indicates the callback for getting the response to obtain the SIM card lock status of the specified card slot. |
 
 **错误码：**
@@ -81,7 +81,7 @@ Set the lock status of the SIM card in the specified slot.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| options | [LockInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-cloudextension-lockinfo-i-sys.md) | 是 | Indicates lock information. |
+| options | LockInfo | 是 | Indicates lock information. |
 
 **返回值：**
 

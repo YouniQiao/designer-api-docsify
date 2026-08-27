@@ -78,7 +78,7 @@ Creates an object that has the specified prototype, and that optionally contains
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | o | object \| null | Yes |  |
-| properties | PropertyDescriptorMap & ThisType & lt;any & gt; | Yes |  |
+| properties | PropertyDescriptorMap & ThisType&lt;any&gt; | Yes |  |
 
 **Return value:**
 
@@ -97,7 +97,7 @@ Adds one or more properties to an object, and/or modifies attributes of existing
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | o | T | Yes |  |
-| properties | PropertyDescriptorMap & ThisType & lt;any & gt; | Yes |  |
+| properties | PropertyDescriptorMap & ThisType&lt;any&gt; | Yes |  |
 
 **Return value:**
 
@@ -117,7 +117,7 @@ Adds a property to an object, or modifies attributes of an existing property.
 | --- | --- | --- | --- |
 | o | T | Yes |  |
 | p | [PropertyKey](arkts-propertykey-t.md) | Yes |  |
-| attributes | PropertyDescriptor & ThisType & lt;any & gt; | Yes |  |
+| attributes | PropertyDescriptor & ThisType&lt;any&gt; | Yes |  |
 
 **Return value:**
 

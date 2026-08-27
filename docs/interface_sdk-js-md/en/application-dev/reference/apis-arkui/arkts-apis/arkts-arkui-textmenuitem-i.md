@@ -35,7 +35,9 @@ Menu name.
 icon?: ResourceStr
 ```
 
-Menu icon.Online images are not supported.
+Menu icon.
+
+Online images are not supported.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -71,7 +73,9 @@ Menu ID.
 labelInfo?: ResourceStr
 ```
 
-Shortcut key hint.This field is only supported on 2-in-1 devices.
+Shortcut key hint.
+
+This field is only supported on 2-in-1 devices.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

@@ -1,6 +1,8 @@
 # RowSplit属性/事件
 
-除支持通用属性外，还支持以下属性：支持通用事件。
+除支持通用属性外，还支持以下属性：
+
+支持通用事件。
 
 **继承/实现关系：** RowSplitAttribute extends CommonMethod<RowSplitAttribute>
 
@@ -35,4 +37,4 @@ resizeable(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 分割线是否可拖拽。设置为true时表示分割线可拖拽，设置为false时表示分割线不可拖拽。 默认值：false 非法值：按默认值处理。 |
+| value | boolean | 是 | 分割线是否可拖拽。设置为true时表示分割线可拖拽，设置为false时表示分割线不可拖拽。默认值：false 非法值：按默认值处理。 |

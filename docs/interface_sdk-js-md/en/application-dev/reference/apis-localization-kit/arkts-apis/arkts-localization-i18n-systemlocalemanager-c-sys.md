@@ -11,7 +11,7 @@ Provide some functions for settings and startup guide to select language or regi
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -60,7 +60,7 @@ Obtains the list of languages after sorting.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| languages | Array & lt;string & gt; | Yes | Valid IDs of the languages to be sorted. |
+| languages | Array&lt;string&gt; | Yes | Valid IDs of the languages to be sorted. |
 | options | [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | No | Language sorting option. |
 
 **Return value:**
@@ -114,7 +114,7 @@ Obtains the IDs of the countries or regions after sorting.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| regions | Array & lt;string & gt; | Yes | Valid IDs of the countries or regions to be sorted. |
+| regions | Array&lt;string&gt; | Yes | Valid IDs of the countries or regions to be sorted. |
 | options | [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | No | Country/region sorting option. By default, locale is the current system locale, isUseLocalName is false, and isSuggestedFirst is true. |
 
 **Return value:**

@@ -11,7 +11,7 @@ Configuration parameters for the distance measurement interface @interface Dista
 ## Modules to Import
 
 ```TypeScript
-import spatialAwareness from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## deviceList

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import insightIntentProvider from '@kit.AbilityKit';
+import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
 ## sendIntentResult
@@ -27,13 +27,13 @@ Send intent result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | instanceId | number | Yes | The insight intent instance ID. It is from InsightIntentEntryExecutor.context.instanceId. |
-| result | insightIntent.IntentResult & lt;T & gt; | Yes | The result of insight intent execution. |
+| result | insightIntent.IntentResult&lt;T&gt; | Yes | The result of insight intent execution. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

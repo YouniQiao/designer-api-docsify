@@ -21,7 +21,9 @@
 angle?: ParticlePropertyOptions<number, ACC_ANGLE_UPDATER>
 ```
 
-表示加速度方向（单位为角度）。默认值：{range:[0.0,0.0]}
+表示加速度方向（单位为角度）。
+
+默认值：{range:[0.0,0.0]}
 
 **类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, ACC_ANGLE_UPDATER&gt;
 
@@ -39,7 +41,9 @@ angle?: ParticlePropertyOptions<number, ACC_ANGLE_UPDATER>
 speed?: ParticlePropertyOptions<number, ACC_SPEED_UPDATER>
 ```
 
-表示加速度大小。默认值：{range:[0.0,0.0]}
+表示加速度大小。
+
+默认值：{range:[0.0,0.0]}
 
 **类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, ACC_SPEED_UPDATER&gt;
 

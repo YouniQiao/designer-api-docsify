@@ -17,7 +17,9 @@ TextStyleInterface
 fontColor?: ResourceColor
 ```
 
-Font color.Default value: theme color.
+Font color.
+
+Default value: theme color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -53,7 +55,9 @@ Font configuration. The default value is inherited from [FontConfigs](arkts-arku
 fontFamily?: ResourceStr
 ```
 
-Font family.Default value: theme font.
+Font family.
+
+Default value: theme font.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -71,7 +75,13 @@ Font family.Default value: theme font.
 fontSize?: LengthMetrics
 ```
 
-Font size.Default value: 16 fp.If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 16 fp is used instead.Unit: fp
+Font size.
+
+Default value: 16 fp.
+
+If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 16 fp is used instead.
+
+Unit: fp
 
 **Type:** LengthMetrics
 
@@ -89,7 +99,9 @@ Font size.Default value: 16 fp.If **unit** of **LengthMetrics** is percent, the 
 fontStyle?: FontStyle
 ```
 
-Font style.Default value: **FontStyle.Normal**.
+Font style.
+
+Default value: **FontStyle.Normal**.
 
 **Type:** FontStyle
 
@@ -107,7 +119,12 @@ Font style.Default value: **FontStyle.Normal**.
 fontVariations?: Array<FontVariation>
 ```
 
-Variable font attributes.Default value: **undefined**, indicating that variable font attributes are not set.The priority of **fontVariations** is higher than that of **fontWeight**.  
+Variable font attributes.
+
+Default value: **undefined**, indicating that variable font attributes are not set.
+
+The priority of **fontVariations** is higher than that of **fontWeight**.
+
 **Since**: 26.0.0
 
 **Type:** Array&lt;FontVariation&gt;
@@ -126,7 +143,9 @@ Variable font attributes.Default value: **undefined**, indicating that variable 
 fontWeight?: number | FontWeight | string
 ```
 
-Font weight.For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.
+Font weight.
+
+For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.
 
 **Type:** number \| FontWeight \| string
 
@@ -144,7 +163,9 @@ Font weight.For the number type, the value ranges from 100 to 900, at an interva
 strokeColor?: ResourceColor
 ```
 
-Text stroke color.Default value: text color. If invalid values are provided, the text color is used.
+Text stroke color.
+
+Default value: text color. If invalid values are provided, the text color is used.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -162,7 +183,10 @@ Text stroke color.Default value: text color. If invalid values are provided, the
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-Text stroke join style.Default value: **StrokeJoinStyle.MITER_JOIN**.  
+Text stroke join style.
+
+Default value: **StrokeJoinStyle.MITER_JOIN**.
+
 **Since**: 26.0.0.
 
 **Type:** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
@@ -181,7 +205,11 @@ Text stroke join style.Default value: **StrokeJoinStyle.MITER_JOIN**.
 strokeWidth?: LengthMetrics
 ```
 
-Text stroke width. If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 0 is used instead.If the value is less than 0, the text is solid. If the value is greater than 0, the text is hollow.Default value: **0**.
+Text stroke width. If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 0 is used instead.
+
+If the value is less than 0, the text is solid. If the value is greater than 0, the text is hollow.
+
+Default value: **0**.
 
 **Type:** LengthMetrics
 
@@ -199,7 +227,9 @@ Text stroke width. If **unit** of **LengthMetrics** is percent, the setting does
 superscript?: SuperscriptStyle
 ```
 
-Superscript or subscript for the text.Default value: **SuperscriptStyle.NORMAL**.
+Superscript or subscript for the text.
+
+Default value: **SuperscriptStyle.NORMAL**.
 
 **Type:** [SuperscriptStyle](arkts-arkui-superscriptstyle-e.md)
 

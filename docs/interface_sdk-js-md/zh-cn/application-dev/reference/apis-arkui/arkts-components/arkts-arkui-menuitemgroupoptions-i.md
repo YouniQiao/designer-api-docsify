@@ -17,7 +17,9 @@ MenuItem分组的标题和尾部信息。
 footer?: ResourceStr | CustomBuilder
 ```
 
-设置分组的菜单页脚，显示在分组中所有菜单项的底部。未设置时，不显示菜单页脚。
+设置分组的菜单页脚，显示在分组中所有菜单项的底部。
+
+未设置时，不显示菜单页脚。
 
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
@@ -33,7 +35,9 @@ footer?: ResourceStr | CustomBuilder
 header?: ResourceStr | CustomBuilder
 ```
 
-设置分组的标题，显示在分组中所有菜单项的顶部。未设置时，不显示标题。
+设置分组的标题，显示在分组中所有菜单项的顶部。
+
+未设置时，不显示标题。
 
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 

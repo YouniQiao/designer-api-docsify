@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedDeviceManager from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## icon
@@ -84,7 +84,8 @@ productId: string
 specName: string
 ```
 
-图片规格名称。取值范围：  
+图片规格名称。取值范围：
+
 - lg：大图，尺寸为1016064px。  
 - sm：小图，尺寸为65536px。
 

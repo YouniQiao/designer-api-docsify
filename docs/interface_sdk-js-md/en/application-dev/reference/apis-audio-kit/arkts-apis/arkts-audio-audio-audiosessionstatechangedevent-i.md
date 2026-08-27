@@ -9,8 +9,7 @@ Describes the event indicating that the audio session state changes.
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## stateChangeHint

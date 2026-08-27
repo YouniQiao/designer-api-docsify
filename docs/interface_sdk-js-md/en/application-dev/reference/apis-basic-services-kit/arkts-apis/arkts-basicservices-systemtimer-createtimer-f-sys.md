@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemTimer from '@kit.BasicServicesKit';
+import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
 ## createTimer
@@ -94,7 +94,7 @@ Creates a timer. This API uses a promise to return the timer ID.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the timer ID. |
+| Promise&lt;number&gt; | Promise used to return the timer ID. |
 
 **Error codes:**
 

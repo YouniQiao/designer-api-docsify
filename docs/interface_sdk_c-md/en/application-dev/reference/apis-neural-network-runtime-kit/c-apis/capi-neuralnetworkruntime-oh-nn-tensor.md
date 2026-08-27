@@ -28,6 +28,6 @@ Defines the tensor structure.It is usually used to construct data nodes and oper
 | uint32_t dimensionCount | Number of dimensions of the specified tensor |
 | const int32_t *dimensions | Dimension information (shape) of the specified tensor |
 | const [OH_NN_QuantParam](capi-neuralnetworkruntime-oh-nn-quantparam.md) *quantParam | Quantization information of the specified tensor. The data type must be [OH_NN_QuantParam](capi-neuralnetworkruntime-oh-nn-quantparam.md). |
-| [OH_NN_TensorType](capi-neural-network-runtime-type-h.md#oh_nn_tensortype) type | Specifies the tensor type. The value of <b>type</b> is related to the tensor usage.When the tensor is used as the input or output of the model, set <b>type</b> to [OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype).When a tensor is used as an operator parameter, select any enumerated value except [OH_NN_TENSOR](capi-neural-network-runtime-type-h.md#oh_nn_tensortype)from [OH_NN_TensorType](capi-neural-network-runtime-type-h.md#oh_nn_tensortype). |
+| [OH_NN_TensorType](capi-neural-network-runtime-type-h.md#oh_nn_tensortype) type |  |
 
 

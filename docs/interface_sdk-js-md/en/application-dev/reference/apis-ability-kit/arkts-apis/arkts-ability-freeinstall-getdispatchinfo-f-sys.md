@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import freeInstall from '@kit.AbilityKit';
+import { freeInstall } from '@kit.AbilityKit';
 ```
 
 ## getDispatchInfo
@@ -75,7 +75,7 @@ Obtains the dispatch information. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;DispatchInfo & gt; | Promise used to return the [DispatchInfo]{ |
+| Promise&lt;DispatchInfo&gt; | Promise used to return the [DispatchInfo]{ |
 
 **Error codes:**
 

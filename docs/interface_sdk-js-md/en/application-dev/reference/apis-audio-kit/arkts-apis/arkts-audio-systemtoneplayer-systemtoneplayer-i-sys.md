@@ -107,7 +107,7 @@ Obtains the supported haptics styles. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;systemSoundManager.ToneHapticsFeature & gt; & gt; | Promise used to return an array of the supported haptics styles. |
+| Promise&lt;Array&lt;systemSoundManager.ToneHapticsFeature&gt;&gt; | Promise used to return an array of the supported haptics styles. |
 
 **Error codes:**
 
@@ -144,7 +144,7 @@ Obtains the title of a system tone. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the title obtained. |
+| Promise&lt;string&gt; | Promise used to return the title obtained. |
 
 **Error codes:**
 
@@ -261,7 +261,9 @@ systemTonePlayer.off('error', callback);
 on(type: 'playFinished', streamId: number, callback: Callback<number>): void
 ```
 
-Subscribes to the event indicating that the ringtone playback is finished. This API uses an asynchronous callback to return the result.The object to listen for is an audio stream specified by **streamId**. If **streamId** is set to **0**, this API subscribes to the playback complete event of all audio streams of the player.
+Subscribes to the event indicating that the ringtone playback is finished. This API uses an asynchronous callback to return the result.
+
+The object to listen for is an audio stream specified by **streamId**. If **streamId** is set to **0**, this API subscribes to the playback complete event of all audio streams of the player.
 
 **Since:** 18
 
@@ -360,7 +362,7 @@ Prepares to play a system tone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -400,7 +402,7 @@ Releases the system tone player. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -470,7 +472,9 @@ try {
 setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 ```
 
-Sets a haptics style of the ringtone.Before calling this API, call [getSupportedHapticsFeatures](#getsupportedhapticsfeatures) to obtain the supported haptics styles. The setting fails if the haptics style to set is not supported.
+Sets a haptics style of the ringtone.
+
+Before calling this API, call [getSupportedHapticsFeatures](#getsupportedhapticsfeatures) to obtain the supported haptics styles. The setting fails if the haptics style to set is not supported.
 
 **Since:** 13
 
@@ -534,7 +538,7 @@ Start playing the system tone. By default, the audio and haptic will not be mute
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the stream ID. |
+| Promise&lt;number&gt; | Promise used to return the stream ID. |
 
 **Error codes:**
 
@@ -587,7 +591,7 @@ Stops playing a system tone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

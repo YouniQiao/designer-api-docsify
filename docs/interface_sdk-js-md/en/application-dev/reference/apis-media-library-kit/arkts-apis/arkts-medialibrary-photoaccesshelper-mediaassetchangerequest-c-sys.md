@@ -11,7 +11,7 @@ Represents a media asset change request.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addResource
@@ -36,7 +36,7 @@ Adds resources using **PhotoProxy** data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-resourcetype-e.md) | Yes | Type of the resource to add. |
+| type | ResourceType | Yes | Type of the resource to add. |
 | proxy | [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i.md) | Yes | PhotoProxy data of the resource to add. |
 
 **Error codes:**
@@ -93,7 +93,7 @@ Adds a resource using fileUri from file management directory
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-resourcetype-e.md) | Yes | Type of the resource to add. |
+| type | ResourceType | Yes | Type of the resource to add. |
 | fileUri | string | Yes | Data source of the resource to be added, which is specified by a URI in the application sandbox directory. |
 
 **Error codes:**
@@ -133,11 +133,17 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest
 ```
 
-Creates an asset change request with the specified file name.The file name must meet the following requirements:  
+Creates an asset change request with the specified file name.
+
+The file name must meet the following requirements:
+
 - A valid file name must include a base name and a supported image or video extension.  
 - The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.  
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+- The base name must not contain any invalid characters.
+
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |
+
+For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 11
 
@@ -151,7 +157,7 @@ Starting from API version 18, the following characters are considered invalid: \
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
 | displayName | string | Yes | File name of the image or video to create. |
-| options | [PhotoCreateOptions](arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md) | No | Options for creating an image or video asset. |
+| options | PhotoCreateOptions | No | Options for creating an image or video asset. |
 
 **Return value:**
 
@@ -226,7 +232,7 @@ Permanently deletes images or videos in batches by URI. The deleted images or vi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -287,7 +293,7 @@ Deletes cloud media assets to the trash in batches. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -337,13 +343,13 @@ Permanently deletes images or videos in batches. This API uses a promise to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Array of images or videos to be permanently deleted. The array can contain a maximum of 500 elements. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of images or videos to be permanently deleted. The array can contain a maximum of 500 elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -403,13 +409,13 @@ Permanently deletes images or video assets in batches by URI. This API uses a pr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| assetUris | Array & lt;string & gt; | Yes | Array of URIs of the images or videos to be permanently deleted. The array can contain a maximum of 500 elements. |
+| assetUris | Array&lt;string&gt; | Yes | Array of URIs of the images or videos to be permanently deleted. The array can contain a maximum of 500 elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -486,7 +492,7 @@ Deletes local media assets to the trash in batches. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -708,7 +714,7 @@ Sets the display mode of the composite image. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -821,7 +827,7 @@ Sets the effect of this moving photo.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [MovingPhotoEffectMode](arkts-medialibrary-sendablephotoaccesshelper-movingphotoeffectmode-e-sys.md) | Yes | Effect to set. |
+| mode | MovingPhotoEffectMode | Yes | Effect to set. |
 
 **Error codes:**
 

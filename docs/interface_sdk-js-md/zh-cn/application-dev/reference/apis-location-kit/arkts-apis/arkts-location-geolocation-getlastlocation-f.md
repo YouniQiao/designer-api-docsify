@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## getLastLocation
@@ -67,7 +67,7 @@ function getLastLocation(): Promise<Location>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Location & gt; | Promise对象，返回上次位置信息。 |
+| Promise&lt;Location&gt; | Promise对象，返回上次位置信息。 |
 
 **示例**
 

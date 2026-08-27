@@ -1,6 +1,8 @@
 # ItemDragInfo
 
-ItemDragInfo object description@interface ItemDragInfo
+ItemDragInfo object description
+
+@interface ItemDragInfo
 
 **Since:** 11
 

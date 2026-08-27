@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedDeviceManager from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## releaseDeviceManager
@@ -22,7 +22,7 @@ function releaseDeviceManager(deviceManager: DeviceManager): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceManager | [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | 是 | 通过createDeviceManager创建的设备管理器对象实例。 |
+| deviceManager | DeviceManager | 是 | 通过createDeviceManager创建的设备管理器对象实例。 |
 
 **错误码：**
 

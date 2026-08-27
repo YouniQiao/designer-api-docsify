@@ -19,8 +19,13 @@ BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有B
 value: ResourceStr
 ```
 
-提示内容的文本字符串。  
-**说明：**value为空字符串时不显示文本，仅显示圆点标记。从API version 20开始，支持ResourceStr类型。
+提示内容的文本字符串。
+
+**说明：**
+
+value为空字符串时不显示文本，仅显示圆点标记。
+
+从API version 20开始，支持ResourceStr类型。
 
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

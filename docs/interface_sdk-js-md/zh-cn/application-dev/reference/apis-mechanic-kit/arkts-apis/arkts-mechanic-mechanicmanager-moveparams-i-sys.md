@@ -35,7 +35,7 @@ angle: number
 distance: number
 ```
 
-移动距离。 取值限定为整数。
+移动距离。取值限定为整数。
 
 **类型：** number
 

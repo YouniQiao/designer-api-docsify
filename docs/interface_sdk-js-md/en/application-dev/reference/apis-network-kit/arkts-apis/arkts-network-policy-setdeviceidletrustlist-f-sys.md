@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## setDeviceIdleTrustlist
@@ -26,7 +26,7 @@ Adds applications specified by given UIDs to the device idle allowlist. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uids | Array & lt;number & gt; | Yes | Unique ID of the application. |
+| uids | Array&lt;number&gt; | Yes | Unique ID of the application. |
 | isAllowed | boolean | Yes | Whether to add the application to the allowlist. The value **true** means to add the application to the allowlist, and the value **false** means the opposite. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
@@ -72,14 +72,14 @@ Sets whether multiple UIDs are in the whitelist of the sleep firewall. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uids | Array & lt;number & gt; | Yes | Unique ID of the application. |
+| uids | Array&lt;number&gt; | Yes | Unique ID of the application. |
 | isAllowed | boolean | Yes | Whether to add the application to the allowlist. The value **true** means to add the application to the allowlist, and the value **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

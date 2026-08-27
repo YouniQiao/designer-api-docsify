@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import cardEmulation from '@kit.ConnectivityKit';
+import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
 ## off('hceCmd')
@@ -65,7 +65,7 @@ export default class EntryAbility extends UIAbility {
       bundleName: want.bundleName ?? '',
       abilityName: want.abilityName ?? '',
       moduleName: want.moduleName
-    }
+    };
     hceService.on('hceCmd', apduCallback);
   }
   onDestroy() {
@@ -129,7 +129,7 @@ export default class EntryAbility extends UIAbility {
       bundleName: want.bundleName ?? '',
       abilityName: want.abilityName ?? '',
       moduleName: want.moduleName
-    }
+    };
     const apduCallback: AsyncCallback<number[]> = (err, data) => {
       // 处理数据和异常
       console.info("got apdu data");
@@ -167,14 +167,14 @@ export default {
     cardEmulation.hasHceCapability();
     cardEmulation.isDefaultService(appName, cardEmulation.CardType.PAYMENT);
     cardEmulation.isDefaultService(appName, cardEmulation.CardType.OTHER);
-    let HceService = new cardEmulation.HceService();
+    let hceService = new cardEmulation.HceService();
 
-    HceService.start(appName, this.paymentAid);
-    HceService.on("hceCmd", (data) => {
+    hceService.start(appName, this.paymentAid);
+    hceService.on("hceCmd", (data) => {
       console.info('data:' + data);
       // 应用程序实际想要发送的数据， 此处仅作为示例
       let responseData = [0x1, 0x2];
-      HceService.transmit(responseData, () => {
+      hceService.transmit(responseData, () => {
         console.info('sendResponse start');
       });
       console.info('sendResponse end');
@@ -274,7 +274,7 @@ export default  {
             } else {
                 console.info('callback => Operation hceCmd failed. Cause: ${JSON.stringify(err.data)}');
             }
-        })
+        });
     }
 }
 ```
@@ -398,7 +398,7 @@ export default  {
         var hceService = new cardEmulation.HceService();
         hceService.startHCE([
             "F0010203040506", "A0000000041010"
-        ])
+        ]);
     }
 }
 ```
@@ -524,7 +524,7 @@ export default  {
 transmit(response: number[]): Promise<void>
 ```
 
-发送APDU数据到对端读卡设备，使用Promise异步回调。应用程序必须在 on收到读卡设备发送的APDU数据后，才调用该接口响应数 据。
+发送APDU数据到对端读卡设备，使用Promise异步回调。应用程序必须在on收到读卡设备发送的APDU数据后，才调用该接口响应数据。
 
 **起始版本：** 9
 
@@ -544,7 +544,7 @@ transmit(response: number[]): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -595,7 +595,7 @@ console.info("transmit Promise end.");
 transmit(response: number[], callback: AsyncCallback<void>): void
 ```
 
-发送APDU数据到对端读卡设备，应用程序必须在on收到读 卡设备发送的APDU数据后，才调用该接口响应数据。使用Callback异步回调。
+发送APDU数据到对端读卡设备，应用程序必须在on收到读卡设备发送的APDU数据后，才调用该接口响应数据。使用Callback异步回调。
 
 **起始版本：** 9
 

@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## create
@@ -34,7 +33,7 @@ Creates an upload or download task and adds it to the queue. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Application-based context. |
-| config | [Config](arkts-basicservices-agent-config-i.md) | Yes | Task configuration. |
+| config | Config | Yes | Task configuration. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Task&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Task** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -76,13 +75,13 @@ Creates an upload or download task and adds it to the queue. This API uses a pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Application-based context. |
-| config | [Config](arkts-basicservices-agent-config-i.md) | Yes | Task configuration. |
+| config | Config | Yes | Task configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Task & gt; | Promise used to return the created task. |
+| Promise&lt;Task&gt; | Promise used to return the created task. |
 
 **Error codes:**
 

@@ -1,6 +1,11 @@
 # @ohos.effectKit
 
-The Image Effect module provides basic capabilities for processing images, including brightness adjustment, blurring, grayscale adjustment, and intelligent color picking. It is applicable to scenarios such as adding filter effects in image editing apps, blurring the background image of app startup pages, automatically extracting UI theme colors, and analyzing image color schemes.This module is used for offline processing of image.PixelMap to obtain visual effects, while uiEffect (UI Effect Service) connects to the rendering service in real time to process screen frame buffers for dynamic visual effects.This module provides the following classes:  
+The Image Effect module provides basic capabilities for processing images, including brightness adjustment, blurring, grayscale adjustment, and intelligent color picking. It is applicable to scenarios such as adding filter effects in image editing apps, blurring the background image of app startup pages, automatically extracting UI theme colors, and analyzing image color schemes.
+
+This module is used for offline processing of image.PixelMap to obtain visual effects, while uiEffect (UI Effect Service) connects to the rendering service in real time to process screen frame buffers for dynamic visual effects.
+
+This module provides the following classes:
+
 - [Filter](arkts-arkgraphics2d-effectkit-filter-i.md): an effect class used to add a specified effect to the effect chain,  
 enabling combined processing of multiple image effects through chained calls.  
 - [Color](arkts-arkgraphics2d-effectkit-color-i.md): a class used to store the color picked.  
@@ -13,7 +18,7 @@ enabling combined processing of multiple image effects through chained calls.
 ## Modules to Import
 
 ```TypeScript
-import effectKit from '@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary

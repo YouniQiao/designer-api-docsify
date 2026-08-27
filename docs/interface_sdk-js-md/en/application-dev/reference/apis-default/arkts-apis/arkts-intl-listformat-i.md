@@ -17,7 +17,7 @@ Returns a string with a language-specific representation of the list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| list | Iterable & lt;string & gt; | Yes |  |
+| list | Iterable&lt;string&gt; | Yes |  |
 
 **Return value:**
 
@@ -37,7 +37,7 @@ Returns an Array of objects representing the different components that can be us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| list | Iterable & lt;string & gt; | Yes |  |
+| list | Iterable&lt;string&gt; | Yes |  |
 
 **Return value:**
 

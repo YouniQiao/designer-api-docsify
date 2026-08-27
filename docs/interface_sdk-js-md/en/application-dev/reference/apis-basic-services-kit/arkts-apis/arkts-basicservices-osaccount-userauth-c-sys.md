@@ -11,7 +11,7 @@ Provides APIs for user authentication.
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## auth
@@ -40,9 +40,9 @@ Performs authentication of the current user.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | challenge | Uint8Array | Yes | Challenge value, which is a random number used to improve security. |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
-| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication result. |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
+| authType | AuthType | Yes | Authentication credential type. |
+| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication result. |
+| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
 
 **Return value:**
 
@@ -126,10 +126,10 @@ Starts user authentication based on the specified challenge value, authenticatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | challenge | Uint8Array | Yes | Challenge value, which is a random number used to prevent replay attacks and improve security. |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
-| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication result. |
+| authType | AuthType | Yes | Authentication credential type. |
+| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication result. |
 | options | [AuthOptions](arkts-basicservices-osaccount-authoptions-i-sys.md) | Yes | Optional parameters for the authentication. |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
+| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
 
 **Return value:**
 
@@ -218,9 +218,9 @@ Authenticates a specified user. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
 | challenge | Uint8Array | Yes | Challenge value, which is a random number used to improve security. |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
-| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication result. |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
+| authType | AuthType | Yes | Authentication credential type. |
+| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication result. |
+| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
 
 **Return value:**
 
@@ -387,8 +387,8 @@ Obtains the available status of the authentication capability corresponding to t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication credential type. |
-| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Trust level of the authentication. |
+| authType | AuthType | Yes | Authentication credential type. |
+| authTrustLevel | AuthTrustLevel | Yes | Trust level of the authentication. |
 
 **Return value:**
 
@@ -692,7 +692,7 @@ Prepares for remote authentication. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -815,7 +815,7 @@ Sets the property for the initialization algorithm. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

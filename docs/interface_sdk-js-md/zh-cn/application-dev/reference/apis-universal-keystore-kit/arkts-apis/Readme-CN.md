@@ -7,7 +7,7 @@
   - [HuksCryptoExtensionParams](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparams-i.md)
   - [HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)
   - [HuksCryptoExtensionResultCode](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresultcode-e.md)
-- [@ohos.security.huks](arkts-security-huks.md)
+- [@ohos.security.huks(Universal Keystore)](arkts-security-huks.md)
   - [abort](arkts-universalkeystore-huks-abort-f.md)
   - [abortSession](arkts-universalkeystore-huks-abortsession-f.md)
   - [anonAttestKeyItem](arkts-universalkeystore-huks-anonattestkeyitem-f.md)
@@ -95,7 +95,7 @@
   - [HuksUnwrapSuite](arkts-universalkeystore-huks-huksunwrapsuite-e.md)
   - [HuksUserAuthMode](arkts-universalkeystore-huks-huksuserauthmode-e.md)
   - [HuksUserAuthType](arkts-universalkeystore-huks-huksuserauthtype-e.md)
-- [@ohos.security.huksExternalCrypto](arkts-security-huksexternalcrypto.md)
+- [@ohos.security.huksExternalCrypto(External Key Management)](arkts-security-huksexternalcrypto.md)
   <!--Del-->
   - [authUkeyPin(系统接口)](arkts-universalkeystore-huksexternalcrypto-authukeypin-f-sys.md)<!--DelEnd-->
   - [clearUkeyPinAuthState](arkts-universalkeystore-huksexternalcrypto-clearukeypinauthstate-f.md)

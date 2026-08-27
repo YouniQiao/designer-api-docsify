@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedBundleManager from '@kit.AbilityKit';
+import { distributedBundleManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

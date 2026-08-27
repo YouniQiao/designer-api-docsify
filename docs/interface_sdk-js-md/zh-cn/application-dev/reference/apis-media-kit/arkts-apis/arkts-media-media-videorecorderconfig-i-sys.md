@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## audioSourceType
@@ -68,7 +68,7 @@ profile: VideoRecorderProfile
 rotation?: number
 ```
 
-设置视频输出文件中的旋转角度，用于文件播放。仅mp4格式支持。 旋转角度取值为{0, 90, 180, 270}，默认值为0。
+设置视频输出文件中的旋转角度，用于文件播放。仅mp4格式支持。旋转角度取值为{0, 90, 180, 270}，默认值为0。
 
 **类型：** number
 
@@ -84,7 +84,7 @@ rotation?: number
 url: string
 ```
 
-视频输出URI。支持两种URI格式。 格式：scheme + "://" + "context"。 fd格式：fd://fd
+视频输出URI。支持两种URI格式。格式：scheme + "://" + "context"。fd格式：fd://fd
 
 **类型：** string
 

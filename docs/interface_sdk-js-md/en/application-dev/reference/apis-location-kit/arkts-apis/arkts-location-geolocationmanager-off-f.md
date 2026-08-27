@@ -326,7 +326,7 @@ Remove a geofence and unsubscribe geofence status changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'gnssFenceStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md) | Yes | Indicates the Geofence configuration parameters. |
+| request | GeofenceRequest | Yes | Indicates the Geofence configuration parameters. |
 | want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | Yes | Indicates which ability to start when the geofence event is triggered. |
 
 **Error codes:**

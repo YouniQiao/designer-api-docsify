@@ -23,15 +23,15 @@ export function verifyCertChain(cert: CertBlob[], caCert?: CertBlob, hostname?: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | [CertBlob[]](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certblob-i.md) | 是 | 要验证的证书链。 |
-| caCert | [CertBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certblob-i.md) | 否 | 入站自定义 CA 证书。 |
+| cert | CertBlob[] | 是 | 要验证的证书链。 |
+| caCert | CertBlob | 否 | 入站自定义 CA 证书。 |
 | hostname | string | 否 | 要验证的主机名。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;CertBlob[] & gt; | 返回一个 Promise，如果验证成功则解析为排序后的证书链（从叶子到根排序）。 |
+| Promise&lt;CertBlob[]&gt; | 返回一个 Promise，如果验证成功则解析为排序后的证书链（从叶子到根排序）。 |
 
 **错误码：**
 

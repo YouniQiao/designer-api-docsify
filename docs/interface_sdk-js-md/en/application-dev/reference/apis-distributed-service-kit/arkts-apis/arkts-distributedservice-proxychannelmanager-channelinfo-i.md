@@ -9,7 +9,7 @@ Input parameters of the function for opening a proxy channel, including the link
 ## Modules to Import
 
 ```TypeScript
-import proxyChannelManager from '@kit.DistributedServiceKit';
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## linkType

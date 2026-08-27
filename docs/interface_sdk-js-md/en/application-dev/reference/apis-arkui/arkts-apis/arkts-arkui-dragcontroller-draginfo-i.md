@@ -9,7 +9,7 @@ Defines the attributes required for initiating a drag action and information car
 ## Modules to Import
 
 ```TypeScript
-import dragController from '@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## autoHideComponentUniqueIds
@@ -18,7 +18,15 @@ import dragController from '@kit.ArkUI';
 autoHideComponentUniqueIds?: number | number[]
 ```
 
-Unique ID of the component that is automatically hidden by the system during proactive dragging. A single unique ID or an array of unique IDs can be passed.After the proactive dragging is successfully initiated, the system automatically hides the target component before displaying the drag preview window.If the proactive dragging source also needs to be hidden, its unique ID must be passed as well.The unique ID of a component can be obtained by using [UIContext.getFrameNodeById()](arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid) together with [FrameNode.getUniqueId()](arkts-arkui-framenode-c.md#getuniqueid).You need to restore the component display status as required in the drag end callback.
+Unique ID of the component that is automatically hidden by the system during proactive dragging. A single unique ID or an array of unique IDs can be passed.
+
+After the proactive dragging is successfully initiated, the system automatically hides the target component before displaying the drag preview window.
+
+If the proactive dragging source also needs to be hidden, its unique ID must be passed as well.
+
+The unique ID of a component can be obtained by using [UIContext.getFrameNodeById()](arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid) together with [FrameNode.getUniqueId()](arkts-arkui-framenode-c.md#getuniqueid).
+
+You need to restore the component display status as required in the drag end callback.
 
 **Type:** number \| number[]
 
@@ -36,7 +44,9 @@ Unique ID of the component that is automatically hidden by the system during pro
 data?: unifiedDataChannel.UnifiedData
 ```
 
-Data carried in the dragging process.The default value is null.
+Data carried in the dragging process.
+
+The default value is null.
 
 **Type:** unifiedDataChannel.UnifiedData
 
@@ -54,7 +64,9 @@ Data carried in the dragging process.The default value is null.
 dataLoadParams?: unifiedDataChannel.DataLoadParams
 ```
 
-Parameters for deferred data loading from the drag source. This API provides data loading parameters to the system instead of directly providing complete data objects. When the user drops data on the target application, the system will use these parameters to request the actual data from the drag source. If set together with **data**, **dataLoadParams** takes effect.The default value is null.
+Parameters for deferred data loading from the drag source. This API provides data loading parameters to the system instead of directly providing complete data objects. When the user drops data on the target application, the system will use these parameters to request the actual data from the drag source. If set together with **data**, **dataLoadParams** takes effect.
+
+The default value is null.
 
 **Type:** unifiedDataChannel.DataLoadParams
 
@@ -72,7 +84,9 @@ Parameters for deferred data loading from the drag source. This API provides dat
 extraParams?: string
 ```
 
-Additional information about the drag action. Not supported currently.The default value is null.
+Additional information about the drag action. Not supported currently.
+
+The default value is null.
 
 **Type:** string
 

@@ -1,6 +1,8 @@
 # ExifMetadata
 
-ExifMetadata implements Metadata Exchangeable Image File Format (Exif) metadata.
+ExifMetadata implements Metadata
+
+Exchangeable Image File Format (Exif) metadata.
 
 **Inheritance/Implementation:** ExifMetadata implements [Metadata](arkts-image-image-metadata-i.md)
 
@@ -11,7 +13,7 @@ ExifMetadata implements Metadata Exchangeable Image File Format (Exif) metadata.
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone
@@ -113,7 +115,7 @@ Obtains all properties and their values from the image metadata. This API return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Record & lt;string, string \ | null & gt; & gt; | Promise used to return the values of all properties. |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the values of all properties. |
 
 **Examples**
 
@@ -247,7 +249,7 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise that returns the binary data of the metadata. |
+| Promise&lt;ArrayBuffer&gt; | Promise that returns the binary data of the metadata. |
 
 **Examples**
 
@@ -351,7 +353,9 @@ async function heifsMetadataGetBlob(context: Context) {
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-Obtains the property values from image metadata. This API returns the result asynchronously through a promise.For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
+Obtains the property values from image metadata. This API returns the result asynchronously through a promise.
+
+For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
 
 **Since:** 23
 
@@ -363,13 +367,13 @@ Obtains the property values from image metadata. This API returns the result asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | Array & lt;string & gt; | Yes | Names of the properties to query. |
+| key | Array&lt;string&gt; | Yes | Names of the properties to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Record & lt;string, string \ | null & gt; & gt; | Promise used to return the obtained image metadata property values. |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the obtained image metadata property values. |
 
 **Error codes:**
 
@@ -510,7 +514,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -640,7 +644,9 @@ async function heifsMetadataSetBlob(context: Context) {
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
+
+For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
 
 **Since:** 23
 
@@ -652,13 +658,13 @@ Sets the values of specified properties in image metadata in batches. This API r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record & lt;string, string \ | null & gt; | Yes | Set of key-value pairs representing properties and corresponding values of the **ExifMetadata** object. |
+| records | Record&lt;string, string \| null&gt; | Yes | Set of key-value pairs representing properties and corresponding values of the **ExifMetadata** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

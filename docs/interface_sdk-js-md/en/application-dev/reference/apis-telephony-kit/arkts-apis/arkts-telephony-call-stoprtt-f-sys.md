@@ -32,7 +32,7 @@ Stop rtt.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the stopRtt. |
+| Promise&lt;void&gt; | The promise returned by the stopRtt. |
 
 **Error codes:**
 

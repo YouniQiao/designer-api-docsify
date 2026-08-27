@@ -1,6 +1,8 @@
 # MenuModifier
 
-Defines Menu Modifier@extends MenuAttribute @implements AttributeModifier&lt;MenuAttribute&gt;
+Defines Menu Modifier
+
+@extends MenuAttribute @implements AttributeModifier&lt;MenuAttribute&gt;
 
 **Inheritance/Implementation:** MenuModifier extends [MenuAttribute](../arkts-components/arkts-arkui-menu-attribute.md#menuattribute) and implements AttributeModifier<MenuAttribute>
 

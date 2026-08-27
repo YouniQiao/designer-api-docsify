@@ -278,7 +278,8 @@ error: string
 extraInfo?: string
 ```
 
-默认值为空。扩展属性，用于定义一些特定组件的属性，包含：  
+默认值为空。扩展属性，用于定义一些特定组件的属性，包含：
+
 - CheckboxGroupSelectedStatus：表示CheckboxGroup组件的选中状态，其中取值0表示已选中，取值1表示部分选中，取值2表示未选中。  
 - Row：Grid组件中聚焦item的行信息，表示该item在第几行。  
 - Column：Grid组件中聚焦的item的列，表示该item在第几列。  
@@ -625,7 +626,7 @@ screenRect: Rect
 scrollable: boolean
 ```
 
-表示元素是否可滚动。true表示元素可滚动，false表示元素不可滚动，默认值为false。在无障碍模式下，当accessibilityScrollable与scrollable取值冲突时，以 accessibilityScrollable属性值为准。
+表示元素是否可滚动。true表示元素可滚动，false表示元素不可滚动，默认值为false。在无障碍模式下，当accessibilityScrollable与scrollable取值冲突时，以accessibilityScrollable属性值为准。
 
 **类型：** boolean
 

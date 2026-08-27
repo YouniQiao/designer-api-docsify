@@ -97,7 +97,7 @@ layout(position: Position): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | [Position](../arkts-apis/arkts-arkui-display-position-i.md) | 是 | 绝对位置。 |
+| position | Position | 是 | 绝对位置。 |
 
 ## measureResult
 
@@ -105,7 +105,7 @@ layout(position: Position): void
 measureResult: MeasureResult
 ```
 
-子组件测量后的尺寸信息。 单位为： vp。
+子组件测量后的尺寸信息。单位为： vp。
 
 **类型：** [MeasureResult](arkts-arkui-measureresult-i.md)
 
@@ -123,7 +123,7 @@ measureResult: MeasureResult
 uniqueId?: number
 ```
 
-系统为子组件分配的唯一标识UniqueID。 取值应为≥0的整数。
+系统为子组件分配的唯一标识UniqueID。取值应为≥0的整数。
 
 **类型：** number
 

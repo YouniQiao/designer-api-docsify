@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import usbManager from '@kit.MDMKit';
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## removeAllowedUsbDevices
@@ -12,8 +12,10 @@ import usbManager from '@kit.MDMKit';
 function removeAllowedUsbDevices(admin: Want, usbDeviceIds: Array<UsbDeviceId>): void
 ```
 
-移除USB设备可用名单。  
-**使用场景**：  
+移除USB设备可用名单。
+
+**使用场景**：
+
 - 企业安全管理场景，需要撤销某些USB设备的访问权限  
 - 设备管理员需要动态调整允许使用的USB设备列表  
 - 当USB设备不再需要或存在安全风险时，从允许名单中移除
@@ -31,7 +33,7 @@ function removeAllowedUsbDevices(admin: Want, usbDeviceIds: Array<UsbDeviceId>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| usbDeviceIds | Array&lt;[UsbDeviceId](arkts-mdm-usbmanager-usbdeviceid-i.md)&gt; | 是 | USB设备ID数组，UsbDeviceId信息可以通过 [getDevices](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md)接口获取。 |
+| usbDeviceIds | Array&lt;[UsbDeviceId](arkts-mdm-usbmanager-usbdeviceid-i.md)&gt; | 是 | USB设备ID数组，UsbDeviceId信息可以通过[getDevices](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md)接口获取。 |
 
 **错误码：**
 

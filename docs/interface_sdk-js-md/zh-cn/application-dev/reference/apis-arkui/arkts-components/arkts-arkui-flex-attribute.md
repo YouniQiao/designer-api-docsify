@@ -1,6 +1,8 @@
 # Flex属性/事件
 
-支持通用属性。支持通用事件。
+支持通用属性。
+
+支持通用事件。
 
 **继承/实现关系：** FlexAttribute extends CommonMethod<FlexAttribute>
 

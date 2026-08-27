@@ -34,7 +34,7 @@ Get traffic plan info.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | The value of parameter. |
+| Promise&lt;number&gt; | The value of parameter. |
 
 **Error codes:**
 

@@ -23,14 +23,20 @@ How the color property is updated.
 config: ParticleColorPropertyUpdaterConfigs[UPDATER]
 ```
 
-Color updater configuration.The available options of **type** are as follows:
+Color updater configuration.
+
+The available options of **type** are as follows:
+
 1. **ParticleUpdater.NONE**: The property does not change. In this case,
 the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.NONE].
 2. **ParticleUpdater.RANDOM**: The property changes randomly. In this case,
 the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM].
 3. **ParticleUpdater.CURVE**: The property changes with the animation curve.
-In this case, the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE].  
-**NOTE：**When **type** is set to **ParticleUpdater.RANDOM** or **ParticleUpdater.CURVE**, the color configuration in **updater** has higher priority than that in **range**. During the animation period specified by updater, the color changes based on the color configuration in updater. Before the animation period specified by updater, the color changes based on the color configuration in range.
+In this case, the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE].
+
+**NOTE：**
+
+When **type** is set to **ParticleUpdater.RANDOM** or **ParticleUpdater.CURVE**, the color configuration in **updater** has higher priority than that in **range**. During the animation period specified by updater, the color changes based on the color configuration in updater. Before the animation period specified by updater, the color changes based on the color configuration in range.
 
 **Type:** ParticleColorPropertyUpdaterConfigs[UPDATER]
 
@@ -48,7 +54,9 @@ In this case, the **config** type is [ParticleColorPropertyUpdaterConfigs](arkts
 type: UPDATER
 ```
 
-Type of property updating.The default value of **type** is **ParticleUpdater.NONE**.
+Type of property updating.
+
+The default value of **type** is **ParticleUpdater.NONE**.
 
 **Type:** UPDATER
 

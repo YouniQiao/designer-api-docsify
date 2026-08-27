@@ -77,7 +77,7 @@ node?: FrameNode
 
 Node that triggers the gesture. The default value is **null**, indicating that no specific node triggers the gesture.
 
-**Type:** FrameNode
+**Type:** [FrameNode](arkts-arkui-framenode-c.md)
 
 **Since:** 20
 

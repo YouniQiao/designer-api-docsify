@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## sendMessage
@@ -12,7 +12,7 @@ import abilityConnectionManager from '@kit.DistributedServiceKit';
 function sendMessage(sessionId: number, msg: string): Promise<void>
 ```
 
-创建协同会话成功并获得会话ID、调用connect接口建立连接成功后，设备A或设备B可向对端设备发送文本信息。 使用Promise异步回调。
+创建协同会话成功并获得会话ID、调用connect接口建立连接成功后，设备A或设备B可向对端设备发送文本信息。使用Promise异步回调。
 
 **起始版本：** 18
 
@@ -31,7 +31,7 @@ function sendMessage(sessionId: number, msg: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的promise对象。消息发送成功时resolve，发送失败时reject。 |
+| Promise&lt;void&gt; | 无返回结果的promise对象。消息发送成功时resolve，发送失败时reject。 |
 
 **错误码：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formHost from '@kit.FormKit';
+import { formHost } from '@kit.FormKit';
 ```
 
 ## setFormsRecyclable
@@ -28,13 +28,13 @@ Sets widgets to be recyclable. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes | Array of widget IDs. |
+| formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Sets widgets to be recyclable. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes | Array of widget IDs. |
+| formIds | Array&lt;string&gt; | Yes | Array of widget IDs. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widgets are set to be recyclable, **error** is **undefined**; otherwise, an exception is thrown. |
 
 **Error codes:**

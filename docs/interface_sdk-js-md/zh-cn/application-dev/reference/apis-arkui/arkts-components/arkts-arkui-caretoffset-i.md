@@ -1,6 +1,8 @@
 # CaretOffset
 
-CaretOffset info.@interface CaretOffset
+CaretOffset info.
+
+@interface CaretOffset
 
 **起始版本：** 12
 

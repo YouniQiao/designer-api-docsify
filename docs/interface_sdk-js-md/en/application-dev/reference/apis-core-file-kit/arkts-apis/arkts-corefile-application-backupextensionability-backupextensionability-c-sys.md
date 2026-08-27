@@ -9,7 +9,7 @@ Class to be override for backup extension ability.
 ## Modules to Import
 
 ```TypeScript
-import BackupExtensionAbility, { BundleVersion } from '@kit.CoreFileKit';
+import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
 ```
 
 ## getBackupCompatibilityInfo
@@ -38,7 +38,7 @@ Callback to be called when getting application backup compatibilityInfo. Develop
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Return backup compatibilityInfo, support promise. |
+| Promise&lt;string&gt; | Return backup compatibilityInfo, support promise. |
 
 **Examples**
 
@@ -126,7 +126,7 @@ Callback to be called when getting application restore compatibilityInfo. Develo
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Return restore compatibilityInfo, support promise. |
+| Promise&lt;string&gt; | Return restore compatibilityInfo, support promise. |
 
 **Examples**
 

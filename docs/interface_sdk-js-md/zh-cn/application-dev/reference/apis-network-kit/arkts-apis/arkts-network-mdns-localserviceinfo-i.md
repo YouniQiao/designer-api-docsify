@@ -9,7 +9,7 @@ MDNS服务信息。
 ## 导入模块
 
 ```TypeScript
-import mdns from '@kit.NetworkKit';
+import { mdns } from '@kit.NetworkKit';
 ```
 
 ## host

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## reloadForms
@@ -35,7 +35,7 @@ Reloads widgets. For widgets with the same **moduleName**, **abilityName**, and 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the number of widgets requested for update. |
+| Promise&lt;number&gt; | Promise used to return the number of widgets requested for update. |
 
 **Error codes:**
 

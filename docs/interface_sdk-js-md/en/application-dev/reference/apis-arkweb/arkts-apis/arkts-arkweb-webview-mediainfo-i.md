@@ -47,7 +47,9 @@ Value of the **controlslist** attribute in **&lt;video&gt;** or **&lt;audio&gt;*
 controlsShown: boolean
 ```
 
-Whether the `&lt;video&gt;` or `&lt;audio&gt;` element has the `controls` attribute.The value **true** indicates that it has, and **false** indicates that it does not.
+Whether the `&lt;video&gt;` or `&lt;audio&gt;` element has the `controls` attribute.
+
+The value **true** indicates that it has, and **false** indicates that it does not.
 
 **Type:** boolean
 
@@ -123,7 +125,9 @@ Type of the media.
 muted: boolean
 ```
 
-Whether muted playback is required.The value **true** indicates muted playback, and **false** indicates non-muted playback.
+Whether muted playback is required.
+
+The value **true** indicates muted playback, and **false** indicates non-muted playback.
 
 **Type:** boolean
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## accountName
@@ -32,7 +32,9 @@ accountName: string
 additionalInfo?: Record<string, Object>
 ```
 
-域账号附加信息，默认为空。此接口仅可在Stage模型下使用。
+域账号附加信息，默认为空。
+
+此接口仅可在Stage模型下使用。
 
 **类型：** Record&lt;string, Object&gt;
 

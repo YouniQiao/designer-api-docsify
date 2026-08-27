@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationExtensionSubscription from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## subscribe
@@ -30,13 +30,13 @@ getSubscribeInfo obtains all
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NotificationExtensionSubscriptionInfo[]](arkts-notification-notificationextensionsubscriptioninfo-i.md) | Yes | List of subscribed notifications (in array). |
+| info | NotificationExtensionSubscriptionInfo[] | Yes | List of subscribed notifications (in array). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

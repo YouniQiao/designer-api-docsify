@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import font from '@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## registerFont
@@ -12,7 +12,9 @@ import font from '@kit.ArkUI';
 function registerFont(options: FontOptions): void
 ```
 
-在字体管理中注册自定义字体。该接口为异步接口，不支持并发调用。
+在字体管理中注册自定义字体。
+
+该接口为异步接口，不支持并发调用。
 
 > **说明：**
 > 

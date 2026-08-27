@@ -11,7 +11,7 @@
 function refreshGlobalHttpProxy(): Promise<HttpProxy>
 ```
 
-通知系统需要重新验证全局代理。 收到通知后，系统将重新处理全局代理的认证状态。
+通知系统需要重新验证全局代理。收到通知后，系统将重新处理全局代理的认证状态。
 
 **起始版本：** 26.0.0
 
@@ -25,7 +25,7 @@ function refreshGlobalHttpProxy(): Promise<HttpProxy>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;HttpProxy & gt; | 函数返回的Promise。 |
+| Promise&lt;HttpProxy&gt; | 函数返回的Promise。 |
 
 **错误码：**
 

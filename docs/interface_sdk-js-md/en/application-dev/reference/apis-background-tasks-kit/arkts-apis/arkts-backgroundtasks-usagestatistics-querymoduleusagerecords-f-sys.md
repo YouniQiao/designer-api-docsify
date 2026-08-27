@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usageStatistics from '@kit.BackgroundTasksKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryModuleUsageRecords
@@ -90,7 +90,7 @@ Queries recently module usage records with maxNum.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;HapModuleInfo & gt; & gt; | the promise returned by queryModuleUsageRecords. the { |
+| Promise&lt;Array&lt;HapModuleInfo&gt;&gt; | the promise returned by queryModuleUsageRecords. the { |
 
 **Error codes:**
 
@@ -202,7 +202,7 @@ Queries recently module usage records.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;HapModuleInfo & gt; & gt; | the promise returned by queryModuleUsageRecords. the { |
+| Promise&lt;Array&lt;HapModuleInfo&gt;&gt; | the promise returned by queryModuleUsageRecords. the { |
 
 **Error codes:**
 

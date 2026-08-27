@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## getBluetoothScanMode
@@ -30,7 +30,7 @@ Obtains the Bluetooth scanning mode of a device. On API 10 and above, the permis
 
 | Type | Description |
 | --- | --- |
-| [ScanMode](arkts-connectivity-connection-scanmode-e.md) | Returns the Bluetooth scanning mode, { |
+| ScanMode | Returns the Bluetooth scanning mode, { |
 
 **Error codes:**
 

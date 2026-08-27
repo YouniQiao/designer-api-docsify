@@ -114,7 +114,7 @@ Creates an **ImageBitmap** object using an **ImageSrc** object. The unit mode of
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | string | Yes | Image source. Local images are supported.  1. The string format is used to load local images, for example,   **ImageBitmap("common/images/example.jpg")**. For entry and feature modules, the start point of the image path for loading is the **ets** folder of the module. For HAR and shared modules, the start point is the **ets** folder of the entry or feature module into which they are built.For modules whose **type** is **"har"** or **"shared"**, you are advised to use [ImageSource](../../../media/image/image-decoding.md) to decode resource images into a unified **PixelMap** object for loading and use.  2. Supported image formats: BMP, JPG, PNG, SVG, and WEBP.  **NOTE：**  - ArkTS widgets do not support the strings with the **http://**, **datashare://**,   or **file://data/storage**. |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).If the value is **undefined**, **NaN**, or **Infinity**, the default value will be used. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).If the value is **undefined**, **NaN**, or **Infinity**, the default value will be used. |
 
 **Examples**
 
@@ -138,7 +138,7 @@ Creates an **ImageBitmap** object using a **PixelMap** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Image data source, which supports **PixelMap** objects. |
+| data | PixelMap | Yes | Image data source, which supports **PixelMap** objects. |
 
 **Examples**
 
@@ -164,8 +164,8 @@ Creates an **ImageBitmap** object using a **PixelMap** object. The unit mode of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Image data source, which supports **PixelMap** objects. |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md). |
+| data | PixelMap | Yes | Image data source, which supports **PixelMap** objects. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md). |
 
 **Examples**
 
@@ -191,8 +191,8 @@ Transfer a Resource object to construct an ImageBitmap object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Resource object |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No | the unit mode |
+| data | Resource | Yes | Resource object |
+| unit | LengthMetricsUnit | No | the unit mode |
 
 **Examples**
 
@@ -204,7 +204,9 @@ See [constructor](#constructor)
 readonly height: number
 ```
 
-Pixel height of the **ImageBitmap** object.Default unit: vp
+Pixel height of the **ImageBitmap** object.
+
+Default unit: vp
 
 **Type:** number
 
@@ -256,7 +258,9 @@ struct OffscreenCanvasPage {
 readonly width: number
 ```
 
-Pixel width of the **ImageBitmap** object.Default unit: vp
+Pixel width of the **ImageBitmap** object.
+
+Default unit: vp
 
 **Type:** number
 

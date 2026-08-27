@@ -1,6 +1,8 @@
 # BundleVersion
 
-恢复时所需要的版本信息，开发者可根据配置的版本号来判断本次恢复时的应用版本数据。@interface BundleVersion
+恢复时所需要的版本信息，开发者可根据配置的版本号来判断本次恢复时的应用版本数据。
+
+@interface BundleVersion
 
 **起始版本：** 10
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import BackupExtensionAbility, { BundleVersion } from '@kit.CoreFileKit';
+import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
 ```
 
 ## code

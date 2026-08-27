@@ -9,8 +9,7 @@ Provides APIs for the file manager application to download files from the Drive 
 ## Modules to Import
 
 ```TypeScript
-import cloudSync from '@kit.CoreFileKit';
-import cloudSyncManager from '@kit.CoreFileKitManager';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## cleanAllFileCache
@@ -31,7 +30,7 @@ Clean all downloaded files except those not yet migrated to the cloud or those t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -137,7 +136,7 @@ Query the total size of cached files.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Return the total size of cached files. |
+| Promise&lt;number&gt; | Return the total size of cached files. |
 
 **Error codes:**
 
@@ -351,7 +350,7 @@ Starts downloading a file from the Drive Kit to the local device. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -475,7 +474,9 @@ download.start(uri, (err: BusinessError) => {
 startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<number>
 ```
 
-Starts the batch download of a file from the Drive Kit. This API uses a promise to return the result.Different batch download tasks can be distinguished by the task ID returned.
+Starts the batch download of a file from the Drive Kit. This API uses a promise to return the result.
+
+Different batch download tasks can be distinguished by the task ID returned.
 
 **Since:** 20
 
@@ -485,14 +486,14 @@ Starts the batch download of a file from the Drive Kit. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | Array & lt;string & gt; | Yes | URI list. A maximum of 400 URIs can be transferred at a time. An error (22400004) will be thrown if the number of URIs exceeds 400. |
+| uris | Array&lt;string&gt; | Yes | URI list. A maximum of 400 URIs can be transferred at a time. An error (22400004) will be thrown if the number of URIs exceeds 400. |
 | fileType | [DownloadFileType](arkts-corefile-cloudsync-downloadfiletype-e.md) | No | File type. The default value is **CONTENT**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the ID of the batch download task. |
+| Promise&lt;number&gt; | Promise used to return the ID of the batch download task. |
 
 **Error codes:**
 
@@ -533,7 +534,9 @@ fileCache.startBatch(uriList, cloudSync.DownloadFileType.CONTENT).then((download
 stop(uri: string, needClean?: boolean): Promise<void>
 ```
 
-Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
+Stops downloading a file from the Drive Kit to the local device. This API uses a promise to return the result.
+
+When **stop()** is called, the current file download process terminates, and downloaded files are retained by default. You can call **start()** to resume the download.
 
 **Since:** 12
 
@@ -550,7 +553,7 @@ Stops downloading a file from the Drive Kit to the local device. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -584,7 +587,9 @@ fileCache.stop(uri, true).then(() => {
 stop(uri: string, callback: AsyncCallback<void>): void
 ```
 
-Stops downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result.When **stop()** is called, the current file download process terminates, and downloaded files are retained. You can call **start()** to resume the download.
+Stops downloading a file from the Drive Kit to the local device. This API uses an asynchronous callback to return the result.
+
+When **stop()** is called, the current file download process terminates, and downloaded files are retained. You can call **start()** to resume the download.
 
 **Since:** 11
 
@@ -646,7 +651,9 @@ download.stop(uri, (err: BusinessError) => {
 stopBatch(downloadId: number, needClean?: boolean): Promise<void>
 ```
 
-Stops the batch download task enabled by [startBatch](#startbatch) of a file from the Drive Kit. This API uses a promise to return the result.When **stopBatch()** is called, the batch download terminates. The **needClean** parameter determines whether to delete incompletely downloaded files.
+Stops the batch download task enabled by [startBatch](#startbatch) of a file from the Drive Kit. This API uses a promise to return the result.
+
+When **stopBatch()** is called, the batch download terminates. The **needClean** parameter determines whether to delete incompletely downloaded files.
 
 **Since:** 20
 
@@ -663,7 +670,7 @@ Stops the batch download task enabled by [startBatch](#startbatch) of a file fro
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

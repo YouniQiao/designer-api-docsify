@@ -26,7 +26,9 @@ Index of an application clone. It takes effect only for [application clones](../
 readonly applicationInfo: ApplicationInfo
 ```
 
-Application configuration information <!--Del-->. The information can be obtained by passing in **GET_ABILITY_INFO_WITH_APPLICATION** to the **abilityFlags** parameter of [queryAbilityInfo](arkts-ability-bundlemanager-queryabilityinfo-f-sys.md) <!--DelEnd-->.This field is not returned when the [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md) or [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md) is used to obtain ability information. You can obtain the related information by obtaining the [bundleInfo](arkts-ability-bundleinfo-i.md).appInfo object.
+Application configuration information <!--Del-->. The information can be obtained by passing in **GET_ABILITY_INFO_WITH_APPLICATION** to the **abilityFlags** parameter of [queryAbilityInfo](arkts-ability-bundlemanager-queryabilityinfo-f-sys.md) <!--DelEnd-->.
+
+This field is not returned when the [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md) or [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md) is used to obtain ability information. You can obtain the related information by obtaining the [bundleInfo](arkts-ability-bundleinfo-i.md).appInfo object.
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
@@ -122,7 +124,9 @@ Whether the ability is available, that is, whether it can be started or queried.
 readonly excludeFromDock: boolean
 ```
 
-Whether the ability icon can be hidden in the dock area. **true** if the ability icon can be hidden in the dock area, **false** otherwise.Note: This field does not take effect.
+Whether the ability icon can be hidden in the dock area. **true** if the ability icon can be hidden in the dock area, **false** otherwise.
+
+Note: This field does not take effect.
 
 **Type:** boolean
 
@@ -186,7 +190,9 @@ Resource ID of the ability icon. It is automatically generated during compilatio
 readonly label: string
 ```
 
-Resource descriptor of the ability name visible to users. It corresponds to the **label** field under **abilities** in the [module.json5](../../../quick-start/module-configuration-file.md) file.Note: Starting from API version 20, if [bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md) is used to obtain ability information, this field is the ability name visible to users.
+Resource descriptor of the ability name visible to users. It corresponds to the **label** field under **abilities** in the [module.json5](../../../quick-start/module-configuration-file.md) file.
+
+Note: Starting from API version 20, if [bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md) is used to obtain ability information, this field is the ability name visible to users.
 
 **Type:** string
 
@@ -346,7 +352,8 @@ Process name of the ability.
 readonly readPermission: string
 ```
 
-Permission required for reading the ability data.  
+Permission required for reading the ability data.
+
 **Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
@@ -395,7 +402,8 @@ Window modes supported by the ability.
 readonly type: bundleManager.AbilityType
 ```
 
-Ability type.  
+Ability type.
+
 **Model restriction**: This API can be used only in the FA model.
 
 **Type:** bundleManager.AbilityType
@@ -412,7 +420,8 @@ Ability type.
 readonly uri: string
 ```
 
-URI of the ability.  
+URI of the ability.
+
 **Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
@@ -445,7 +454,8 @@ Window size.
 readonly writePermission: string
 ```
 
-Permission required for writing data to the ability.  
+Permission required for writing data to the ability.
+
 **Model restriction**: This API can be used only in the FA model.
 
 **Type:** string

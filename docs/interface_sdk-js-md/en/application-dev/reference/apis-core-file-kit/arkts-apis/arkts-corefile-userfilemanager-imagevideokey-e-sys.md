@@ -306,7 +306,9 @@ User comment information.
 CAMERA_SHOT_KEY = 16
 ```
 
-Key for the Ultra Snapshot feature.This parameter is available only for the system camera, and the key value is defined by the system camera.
+Key for the Ultra Snapshot feature.
+
+This parameter is available only for the system camera, and the key value is defined by the system camera.
 
 **Since:** 10
 

@@ -18,6 +18,6 @@ Defines a union type for **Repeat** data source parameters.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Regular array type. |
-| ReadonlyArray & lt;T & gt; | Read-only array type, where the array object cannot be modified. |
-| Readonly & lt;Array & lt;T & gt; & gt; | Read-only array type, where the array object cannot be modified. |
+| Array&lt;T&gt; | Regular array type. |
+| ReadonlyArray&lt;T&gt; | Read-only array type, where the array object cannot be modified. |
+| Readonly&lt;Array&lt;T&gt;&gt; | Read-only array type, where the array object cannot be modified. |

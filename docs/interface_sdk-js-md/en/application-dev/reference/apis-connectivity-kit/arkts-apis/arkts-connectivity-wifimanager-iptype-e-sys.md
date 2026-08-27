@@ -1,6 +1,8 @@
 # IpType (System API)
 
-Wi-Fi IP type enumeration.@enum { number }
+Wi-Fi IP type enumeration.
+
+@enum { number }
 
 **Since:** 9
 

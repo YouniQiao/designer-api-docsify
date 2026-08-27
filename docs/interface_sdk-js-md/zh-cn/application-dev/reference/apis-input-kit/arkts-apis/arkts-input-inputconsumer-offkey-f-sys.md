@@ -25,7 +25,7 @@ function offKey(keyOptions: KeyOptions, callback?: KeyCommandCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-uitest-keyoptions-i.md) | 是 | 组合键选项，需与订阅时传入的keyOptions一致。 |
+| keyOptions | KeyOptions | 是 | 组合键选项，需与订阅时传入的keyOptions一致。 |
 | callback | [KeyCommandCallback](arkts-input-inputconsumer-keycommandcallback-t-sys.md) | 否 | 需要取消订阅的回调函数。若不填，则取消当前应用组合键选项已订阅的所有回调函数。 |
 
 **错误码：**

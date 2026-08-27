@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import asset from '@kit.AssetStoreKit';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## preQueryAsUser
@@ -33,7 +33,7 @@ Performs preprocessing for the asset query in the specified user space. This API
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return a challenge value. |
+| Promise&lt;Uint8Array&gt; | Promise used to return a challenge value. |
 
 **Error codes:**
 

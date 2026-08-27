@@ -29,7 +29,9 @@
 height?: LengthMetrics | string
 ```
 
-触摸热区的高度。默认值：LengthMetrics.percent(1)
+触摸热区的高度。
+
+默认值：LengthMetrics.percent(1)
 
 **类型：** LengthMetrics \| string
 
@@ -49,7 +51,9 @@ height?: LengthMetrics | string
 tool?: ResponseRegionSupportedTool
 ```
 
-触摸热区适用的输入工具类型。默认值：ResponseRegionSupportedTool.ALL
+触摸热区适用的输入工具类型。
+
+默认值：ResponseRegionSupportedTool.ALL
 
 **类型：** [ResponseRegionSupportedTool](../arkts-apis/arkts-arkui-responseregionsupportedtool-e.md)
 
@@ -69,7 +73,9 @@ tool?: ResponseRegionSupportedTool
 width?: LengthMetrics | string
 ```
 
-触摸热区的宽度。默认值：LengthMetrics.percent(1)
+触摸热区的宽度。
+
+默认值：LengthMetrics.percent(1)
 
 **类型：** LengthMetrics \| string
 
@@ -89,7 +95,9 @@ width?: LengthMetrics | string
 x?: LengthMetrics
 ```
 
-触摸点相对于组件左上角的x轴坐标。默认值：LengthMetrics.vp(0)
+触摸点相对于组件左上角的x轴坐标。
+
+默认值：LengthMetrics.vp(0)
 
 **类型：** LengthMetrics
 
@@ -109,7 +117,9 @@ x?: LengthMetrics
 y?: LengthMetrics
 ```
 
-触摸点相对于组件左上角的y轴坐标。默认值：LengthMetrics.vp(0)
+触摸点相对于组件左上角的y轴坐标。
+
+默认值：LengthMetrics.vp(0)
 
 **类型：** LengthMetrics
 

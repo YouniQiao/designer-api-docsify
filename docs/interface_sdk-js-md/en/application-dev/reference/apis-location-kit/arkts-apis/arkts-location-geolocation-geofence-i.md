@@ -1,6 +1,8 @@
 # Geofence
 
-Circular fence information.@interface Geofence
+Circular fence information.
+
+@interface Geofence
 
 **Since:** 8
 
@@ -15,7 +17,7 @@ Circular fence information.@interface Geofence
 ## Modules to Import
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## expiration

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setSmartReminderEnabled
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<void>
 ```
 
-Sets a smart reminder for cross-device collaboration. This API uses a promise to return the result.This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
+Sets a smart reminder for cross-device collaboration. This API uses a promise to return the result.
+
+This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
 **Since:** 12
 
@@ -33,7 +35,7 @@ Sets a smart reminder for cross-device collaboration. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import taskpool from '@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## isConcurrent
@@ -30,7 +30,7 @@ function isConcurrent(func: Function): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检查结果。如果被检查函数标注了 [ |
+| boolean | 检查结果。如果被检查函数标注了[ |
 
 **示例**
 

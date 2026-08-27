@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import carAwareness from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## 汇总
@@ -33,7 +33,7 @@ import carAwareness from '@kit.MultimodalAwarenessKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getCarAwareness](arkts-multimodalawareness-carawareness-getcarawareness-f-sys.md) | /** 关闭汽车感知，订阅汽车感知结果。 |
+| [getCarAwareness](arkts-multimodalawareness-carawareness-getcarawareness-f-sys.md) | /**关闭汽车感知，订阅汽车感知结果。 |
 | [offCarAwareness](arkts-multimodalawareness-carawareness-offcarawareness-f-sys.md) | 取消订阅汽车感知结果。 |
 | [onCarAwareness](arkts-multimodalawareness-carawareness-oncarawareness-f-sys.md) | 开启汽车感知，订阅汽车感知结果。如果不支持该功能，则不会回调，支持的能力可以通过getAllCapacityList方法获取。 |
 | [updateSpatialActionEnableStatus](arkts-multimodalawareness-carawareness-updatespatialactionenablestatus-f-sys.md) | 更新感知启用事件，当应用订阅功能时 |

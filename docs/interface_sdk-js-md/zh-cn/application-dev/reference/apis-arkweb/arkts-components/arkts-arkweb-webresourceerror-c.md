@@ -1,6 +1,6 @@
 # WebResourceError
 
-WebResourceError是Web组件中提供资源加载失败错误信息的类。该错误对象通过`onErrorReceive`和`onHttpErrorReceive`事件回调提供给应用，封装了错误详情用于调试和错误处理。通常与 WebResourceRequest配合使用以确定哪个资源加载失败。示例代码参考[onErrorReceive事件](arkts-arkweb-web-attribute.md#onerrorreceive)。
+WebResourceError是Web组件中提供资源加载失败错误信息的类。该错误对象通过`onErrorReceive`和`onHttpErrorReceive`事件回调提供给应用，封装了错误详情用于调试和错误处理。通常与WebResourceRequest配合使用以确定哪个资源加载失败。示例代码参考[onErrorReceive事件](arkts-arkweb-web-attribute.md#onerrorreceive)。
 
 **起始版本：** 8
 
@@ -9,9 +9,6 @@ WebResourceError是Web组件中提供资源加载失败错误信息的类。该�
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -34,7 +31,7 @@ WebResourceError的构造函数，创建WebResourceError对象，用于封装Web
 getCustomErrorCode(): number
 ```
 
-获取加载资源的自定义错误码。自定义错误码通过[WebSchemeHandlerResponse](../arkts-apis/arkts-arkweb-webview-webschemehandlerresponse-c.md)的 [setCustomErrorCode](../arkts-apis/arkts-arkweb-webview-webschemehandlerresponse-c.md#setcustomerrorcode)设置， 并通过[onErrorReceive](arkts-arkweb-web-attribute.md#onerrorreceive)事件直接传递给应用。
+获取加载资源的自定义错误码。自定义错误码通过[WebSchemeHandlerResponse](../arkts-apis/arkts-arkweb-webview-webschemehandlerresponse-c.md)的[setCustomErrorCode](../arkts-apis/arkts-arkweb-webview-webschemehandlerresponse-c.md#setcustomerrorcode)设置，并通过[onErrorReceive](arkts-arkweb-web-attribute.md#onerrorreceive)事件直接传递给应用。
 
 **起始版本：** 26.1.0
 

@@ -13,7 +13,7 @@ Defines the options for a **DateTimeOptions** object. Since API version 9, the *
 ## Modules to Import
 
 ```TypeScript
-import intl from '@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## dateStyle
@@ -22,7 +22,11 @@ import intl from '@kit.LocalizationKit';
 dateStyle?: string
 ```
 
-Date display format. The value can be:"number", "short", "medium", "full", or  "auto".For details about their display effects, see [Table 1](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Date display format. The value can be:
+
+"number", "short", "medium", "full", or  "auto".
+
+For details about their display effects, see [Table 1](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
@@ -44,7 +48,9 @@ Date display format. The value can be:"number", "short", "medium", "full", or
 day?: string
 ```
 
-Day display format. The value can be:"numeric" or  "2-digit".
+Day display format. The value can be:
+
+"numeric" or  "2-digit".
 
 **Type:** string
 
@@ -66,7 +72,11 @@ Day display format. The value can be:"numeric" or  "2-digit".
 dayPeriod?: string
 ```
 
-Time period display format. The value can be:"number", "short", "narrow", or  "auto".For details about their display effects, see [Table 10](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Time period display format. The value can be:
+
+"number", "short", "narrow", or  "auto".
+
+For details about their display effects, see [Table 10](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
@@ -88,7 +98,11 @@ Time period display format. The value can be:"number", "short", "narrow", or �
 era?: string
 ```
 
-Epoch display format. The value can be:"number", "short", "narrow", or  "auto".For details about their display effects, see [Table 9](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Epoch display format. The value can be:
+
+"number", "short", "narrow", or  "auto".
+
+For details about their display effects, see [Table 9](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
@@ -110,7 +124,8 @@ Epoch display format. The value can be:"number", "short", "narrow", or  "auto
 formatMatcher?: string
 ```
 
-Format matching algorithm. The value can be:  
+Format matching algorithm. The value can be:
+
 - "basic": exact match.  
 - "best fit": best match.
 
@@ -134,7 +149,9 @@ Format matching algorithm. The value can be:
 hour?: string
 ```
 
-Hour display format. The value can be:"numeric" or  "2-digit".
+Hour display format. The value can be:
+
+"numeric" or  "2-digit".
 
 **Type:** string
 
@@ -156,7 +173,11 @@ Hour display format. The value can be:"numeric" or  "2-digit".
 hour12?: boolean
 ```
 
-Whether to use the 12-hour clock. The value **true** means to use the 12-hour clock, and the value **false** means the opposite.If both **hour12** and **hourCycle** are set, **hourCycle** does not take effect.If **hour12** and **hourCycle** are not set and the 24-hour clock is turned on, the default value of **hour12** is **false**.
+Whether to use the 12-hour clock. The value **true** means to use the 12-hour clock, and the value **false** means the opposite.
+
+If both **hour12** and **hourCycle** are set, **hourCycle** does not take effect.
+
+If **hour12** and **hourCycle** are not set and the 24-hour clock is turned on, the default value of **hour12** is **false**.
 
 **Type:** boolean
 
@@ -178,7 +199,13 @@ Whether to use the 12-hour clock. The value **true** means to use the 12-hour cl
 hourCycle?: string
 ```
 
-Hour cycle. The value can be:"h11", "h12", "h23", or  "h24".For the display effects when **dateStyle** or **timeStyle** is not set, see [Table 5](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).For the display effects when **dateStyle** or **timeStyle** is not set, see [Table 6](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Hour cycle. The value can be:
+
+"h11", "h12", "h23", or  "h24".
+
+For the display effects when **dateStyle** or **timeStyle** is not set, see [Table 5](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+
+For the display effects when **dateStyle** or **timeStyle** is not set, see [Table 6](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
@@ -200,7 +227,9 @@ Hour cycle. The value can be:"h11", "h12", "h23", or  "h24".For the display e
 locale?: string
 ```
 
-Valid locale ID, for example, **zh-Hans-CN**.The default value is the current system locale.
+Valid locale ID, for example, **zh-Hans-CN**.
+
+The default value is the current system locale.
 
 **Type:** string
 
@@ -220,7 +249,8 @@ Valid locale ID, for example, **zh-Hans-CN**.The default value is the current sy
 localeMatcher?: string
 ```
 
-Locale matching algorithm. The value can be:  
+Locale matching algorithm. The value can be:
+
 - "lookup": exact match.  
 - "best fit": best match.
 
@@ -244,7 +274,9 @@ Locale matching algorithm. The value can be:
 minute?: string
 ```
 
-Minute display format. The value can be:"numeric" or  "2-digit".
+Minute display format. The value can be:
+
+"numeric" or  "2-digit".
 
 **Type:** string
 
@@ -266,7 +298,11 @@ Minute display format. The value can be:"numeric" or  "2-digit".
 month?: string
 ```
 
-Month display format. The value can be:"numeric", "2-digit", "number", "short", "narrow", or  "auto".For details about their display effects, see [Table 7](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Month display format. The value can be:
+
+"numeric", "2-digit", "number", "short", "narrow", or  "auto".
+
+For details about their display effects, see [Table 7](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
@@ -288,7 +324,8 @@ Month display format. The value can be:"numeric", "2-digit", "number", "short
 numberingSystem?: string
 ```
 
-Numbering system. The value can be:  
+Numbering system. The value can be:
+
 **adlm**, **ahom**, **arab**, **arabext**, **bali**, **beng**, **bhks**, **brah**, **cakm**, **cham**, **deva**, **diak**, **fullwide**, **gong**, **gonm**, **gujr**, **guru**, **hanidec**, **hmng**, **hmnp**, **java**, **kali**, **khmr**, **knda**, **lana**, **lanatham**, **laoo**, **latn**, **lepc**, **limb**, **mathbold**, **mathdbl**, **mathmono**, **mathsanb**, **mathsans**, **mlym**, **modi**, **mong**, **mroo**, **mtei**, **mymr**, **mymrshan**, **mymrtlng**, **newa**, **nkoo**, **olck**, **orya**, **osma**, **rohg**, **saur**, **segment**, **shrd**, **sind**, **sinh**, **sora**, **sund**, **takr**, **talu**, **tamldec**, **telu**, **thai**, **tibt**, **tirh**, **vaii**, **wara**, or **wcho**.
 
 **Type:** string
@@ -311,7 +348,9 @@ Numbering system. The value can be:
 second?: string
 ```
 
-Second display format. The value can be:"numeric" or  "2-digit".
+Second display format. The value can be:
+
+"numeric" or  "2-digit".
 
 **Type:** string
 
@@ -333,7 +372,11 @@ Second display format. The value can be:"numeric" or  "2-digit".
 timeStyle?: string
 ```
 
-Time display format. The value can be:"number", "short", "medium", "full", or  "auto".For details about their display effects, see [Table 2](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Time display format. The value can be:
+
+"number", "short", "medium", "full", or  "auto".
+
+For details about their display effects, see [Table 2](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
@@ -377,7 +420,11 @@ Time zone in use. The value is a valid IANA time zone ID.
 timeZoneName?: string
 ```
 
-Localized representation of a time zone name. The value can be:"number", "short", or  "auto".For details about their display effects, see [Table 8](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Localized representation of a time zone name. The value can be:
+
+"number", "short", or  "auto".
+
+For details about their display effects, see [Table 8](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
@@ -399,7 +446,11 @@ Localized representation of a time zone name. The value can be:"number", "short
 weekday?: string
 ```
 
-Week display format. The value can be:"number", "short", "narrow", or  "auto".For details about their display effects, see [Table 4](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Week display format. The value can be:
+
+"number", "short", "narrow", or  "auto".
+
+For details about their display effects, see [Table 4](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 
@@ -421,7 +472,11 @@ Week display format. The value can be:"number", "short", "narrow", or  "auto"
 year?: string
 ```
 
-Year display format. The value can be:"numeric" or  "2-digit".For details about their display effects, see [Table 3](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
+Year display format. The value can be:
+
+"numeric" or  "2-digit".
+
+For details about their display effects, see [Table 3](../../../reference/apis-localization-kit/js-apis-intl.md#appendix).
 
 **Type:** string
 

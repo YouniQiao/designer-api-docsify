@@ -1,6 +1,8 @@
 # PasteButton属性/事件
 
-不支持通用属性，仅继承安全控件通用属性。不支持通用事件，仅支持以下事件。
+不支持通用属性，仅继承安全控件通用属性。
+
+不支持通用事件，仅支持以下事件。
 
 **继承/实现关系：** PasteButtonAttribute extends SecurityComponentMethod<PasteButtonAttribute>
 
@@ -36,4 +38,4 @@ onClick(event: PasteButtonCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md) | 是 | 点击事件的回调函数，用于处理粘贴控件点击后的授权结果。 从API version 18开始，统一使用[PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md)，可额外获取error信息。<br>**起始版本：** 18 |
+| event | [PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md) | 是 | 点击事件的回调函数，用于处理粘贴控件点击后的授权结果。从API version 18开始，统一使用[PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md)，可额外获取error信息。<br>**起始版本：** 18 |

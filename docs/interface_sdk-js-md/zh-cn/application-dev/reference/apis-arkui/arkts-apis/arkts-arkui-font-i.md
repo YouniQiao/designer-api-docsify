@@ -1,6 +1,8 @@
 # Font
 
-Defines the font used for text.@interface Font
+Defines the font used for text.
+
+@interface Font
 
 **起始版本：** 11
 

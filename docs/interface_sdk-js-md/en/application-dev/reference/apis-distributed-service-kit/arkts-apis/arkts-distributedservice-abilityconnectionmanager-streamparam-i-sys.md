@@ -1,6 +1,8 @@
 # StreamParam (System API)
 
-Streaming configuration parameters.@interface StreamParam
+Streaming configuration parameters.
+
+@interface StreamParam
 
 **Since:** 18
 
@@ -11,7 +13,7 @@ Streaming configuration parameters.@interface StreamParam
 ## Modules to Import
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## bitrate

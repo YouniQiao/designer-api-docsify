@@ -19,7 +19,8 @@
 enableMirror(enabled: boolean): void
 ```
 
-启用/关闭镜像录像。  
+启用/关闭镜像录像。
+
 - 调用该接口前，需要通过[isMirrorSupported](#ismirrorsupported)查询是否支录像镜像功能。  
 - 启用/关闭录像镜像后，需要通过[getVideoRotation](#getvideorotation)获取录像旋转角度以及  
 [updateRotation](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md#updaterotation)更新旋转角度。
@@ -81,7 +82,9 @@ function enableMirror(videoOutput: camera.VideoOutput, mirrorMode: boolean, aVRe
 getActiveFrameRate(): FrameRateRange
 ```
 
-获取已设置的帧率范围。使用[setFrameRate](#setframerate)对录像流设置过帧率后可查询。
+获取已设置的帧率范围。
+
+使用[setFrameRate](#setframerate)对录像流设置过帧率后可查询。
 
 **起始版本：** 12
 
@@ -197,7 +200,8 @@ function getSupportedFrameRates(videoOutput: camera.VideoOutput): Array<camera.F
 getVideoRotation(deviceDegree?: number): ImageRotation
 ```
 
-获取录像旋转角度。  
+获取录像旋转角度。
+
 - 设备自然方向：设备默认使用方向。例如，直板机默认使用方向为竖屏（充电口向下）。  
 - 相机镜头角度：值等于相机图像顺时针旋转到设备自然方向的角度。例如，直板机后置相机传感器是横屏安装的，所以需要顺时针旋转90度到设备自然方向。
 
@@ -213,7 +217,7 @@ getVideoRotation(deviceDegree?: number): ImageRotation
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDegree | number | 否 | 设备旋转角度，单位度，取值范围[0, 360]。 从API version 23开始，入参deviceDegree为可选参数，当不传入参数时，由系统获取deviceDegree进行录像旋转角度计算。<br>**起始版本：** 23 |
+| deviceDegree | number | 否 | 设备旋转角度，单位度，取值范围[0, 360]。从API version 23开始，入参deviceDegree为可选参数，当不传入参数时，由系统获取deviceDegree进行录像旋转角度计算。<br>**起始版本：** 23 |
 
 **返回值：**
 
@@ -469,7 +473,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 监听事件，固定为'error'，videoOutput创建成功后可监听。录像接口调用出现错误时触发该事件并返回对应错误码，比如调用 [start](#start)，[CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release)接口时出现错误返 回对应错误信息。 |
+| type | 'error' | 是 | 监听事件，固定为'error'，videoOutput创建成功后可监听。录像接口调用出现错误时触发该事件并返回对应错误码，比如调用[start](#start)，[CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release)接口时出现错误返回对应错误信息。 |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 ## setFrameRate
@@ -478,7 +482,9 @@ on(type: 'error', callback: ErrorCallback): void
 setFrameRate(minFps: number, maxFps: number): void
 ```
 
-设置录像流帧率范围，设置的范围必须在支持的帧率范围内。进行设置前，可通过[getSupportedFrameRates](#getsupportedframerates)查询支持的帧率范围。
+设置录像流帧率范围，设置的范围必须在支持的帧率范围内。
+
+进行设置前，可通过[getSupportedFrameRates](#getsupportedframerates)查询支持的帧率范围。
 
 > **说明：**
 > 
@@ -539,7 +545,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动录制成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动录制成功，err为undefined，否则为错误对象。错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
 
 **错误码：**
 
@@ -638,7 +644,7 @@ start(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -825,7 +831,7 @@ stop(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 

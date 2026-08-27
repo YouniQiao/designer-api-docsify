@@ -37,9 +37,9 @@ Queries the UID of the application that initiates a specified network connection
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| protocol | [ProtocolType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-hid-protocoltype-e.md) | Yes | Type of a network protocol. |
-| local | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Source network address. |
-| remote | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Destination network address. |
+| protocol | ProtocolType | Yes | Type of a network protocol. |
+| local | NetAddress | Yes | Source network address. |
+| remote | NetAddress | Yes | Destination network address. |
 
 **Return value:**
 

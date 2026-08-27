@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-inputkit-->
 
-- [@ohos.multimodalInput.gestureEvent](arkts-multimodalinput-gestureevent.md)
+- [@ohos.multimodalInput.gestureEvent(Gesture Event)](arkts-multimodalinput-gestureevent.md)
   - [FourFingersSwipe](arkts-input-multimodalinput-gestureevent-fourfingersswipe-i.md)
   - [Pinch](arkts-input-multimodalinput-gestureevent-pinch-i.md)
   - [Rotate](arkts-input-multimodalinput-gestureevent-rotate-i.md)
@@ -13,12 +13,12 @@
   - [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
   <!--Del-->
   - [TouchGestureAction(system api)](arkts-input-multimodalinput-gestureevent-touchgestureaction-e-sys.md)<!--DelEnd-->
-- [@ohos.multimodalInput.infraredEmitter](arkts-multimodalinput-infraredemitter.md)
+- [@ohos.multimodalInput.infraredEmitter(IR Management)](arkts-multimodalinput-infraredemitter.md)
   - [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f.md)
   - [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md)
   - [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f.md)
   - [InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i.md)
-- [@ohos.multimodalInput.inputConsumer](arkts-multimodalinput-inputconsumer.md)
+- [@ohos.multimodalInput.inputConsumer(Global Shortcut Keys)](arkts-multimodalinput-inputconsumer.md)
   - [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md)
   <!--Del-->
   - [getShieldStatus(system api)](arkts-input-inputconsumer-getshieldstatus-f-sys.md)<!--DelEnd-->
@@ -44,7 +44,7 @@
   - [KeyCommandTriggerType(system api)](arkts-input-inputconsumer-keycommandtriggertype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ShieldMode(system api)](arkts-input-inputconsumer-shieldmode-e-sys.md)<!--DelEnd-->
-- [@ohos.multimodalInput.inputDevice](arkts-multimodalinput-inputdevice.md)
+- [@ohos.multimodalInput.inputDevice(Input Device)](arkts-multimodalinput-inputdevice.md)
   <!--Del-->
   - [bindToDisplay(system api)](arkts-input-inputdevice-bindtodisplay-f-sys.md)<!--DelEnd-->
   - [getDevice](arkts-input-inputdevice-getdevice-f.md)
@@ -79,7 +79,7 @@
   - [SourceType](arkts-input-inputdevice-sourcetype-t.md)
   - [FunctionKey](arkts-input-inputdevice-functionkey-e.md)
   - [KeyboardType](arkts-input-inputdevice-keyboardtype-e.md)
-- [@ohos.multimodalInput.inputDeviceCooperate](arkts-multimodalinput-inputdevicecooperate.md)
+- [@ohos.multimodalInput.inputDeviceCooperate(Screen Hopping)](arkts-multimodalinput-inputdevicecooperate.md)
   <!--Del-->
   - [enable(system api)](arkts-input-inputdevicecooperate-enable-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -94,9 +94,9 @@
   - [stop(system api)](arkts-input-inputdevicecooperate-stop-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [EventMsg(system api)](arkts-input-inputdevicecooperate-eventmsg-e-sys.md)<!--DelEnd-->
-- [@ohos.multimodalInput.inputEvent](arkts-multimodalinput-inputevent.md)
+- [@ohos.multimodalInput.inputEvent(Input Event)](arkts-multimodalinput-inputevent.md)
   - [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
-- [@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md)
+- [@ohos.multimodalInput.inputEventClient(Input Event Injection)](arkts-multimodalinput-inputeventclient.md)
   - [createKeyboardController](arkts-input-inputeventclient-createkeyboardcontroller-f.md)
   - [createMouseController](arkts-input-inputeventclient-createmousecontroller-f.md)
   - [createTouchController](arkts-input-inputeventclient-createtouchcontroller-f.md)
@@ -125,7 +125,7 @@
   - [TouchEventData(system api)](arkts-input-inputeventclient-toucheventdata-i-sys.md)<!--DelEnd-->
   - [TouchPoint](arkts-input-inputeventclient-touchpoint-i.md)
 <!--Del-->
-- [@ohos.multimodalInput.inputMonitor](arkts-multimodalinput-inputmonitor.md)<!--DelEnd-->
+- [@ohos.multimodalInput.inputMonitor(Input Monitor)](arkts-multimodalinput-inputmonitor.md)<!--DelEnd-->
   <!--Del-->
   - [off(system api)](arkts-input-inputmonitor-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -134,22 +134,22 @@
   - [queryTouchEvents(system api)](arkts-input-inputmonitor-querytouchevents-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TouchEventReceiver(system api)](arkts-input-inputmonitor-toucheventreceiver-t-sys.md)<!--DelEnd-->
-- [@ohos.multimodalInput.intentionCode](arkts-multimodalinput-intentioncode.md)
+- [@ohos.multimodalInput.intentionCode(Intention Code)](arkts-multimodalinput-intentioncode.md)
   - [IntentionCode](arkts-input-multimodalinput-intentioncode-intentioncode-e.md)
-- [@ohos.multimodalInput.keyCode](arkts-multimodalinput-keycode.md)
+- [@ohos.multimodalInput.keyCode(Keycode)](arkts-multimodalinput-keycode.md)
   - [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)
-- [@ohos.multimodalInput.keyEvent](arkts-multimodalinput-keyevent.md)
+- [@ohos.multimodalInput.keyEvent(Key Event)](arkts-multimodalinput-keyevent.md)
   - [Key](arkts-input-multimodalinput-keyevent-key-i.md)
   - [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)
   - [Action](arkts-input-multimodalinput-keyevent-action-e.md)
-- [@ohos.multimodalInput.mouseEvent](arkts-multimodalinput-mouseevent.md)
+- [@ohos.multimodalInput.mouseEvent(Mouse Event)](arkts-multimodalinput-mouseevent.md)
   - [AxisValue](arkts-input-multimodalinput-mouseevent-axisvalue-i.md)
   - [MouseEvent](arkts-input-multimodalinput-mouseevent-mouseevent-i.md)
   - [Action](arkts-input-multimodalinput-mouseevent-action-e.md)
   - [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md)
   - [Button](arkts-input-multimodalinput-mouseevent-button-e.md)
   - [ToolType](arkts-input-multimodalinput-mouseevent-tooltype-e.md)
-- [@ohos.multimodalInput.pointer](arkts-multimodalinput-pointer.md)
+- [@ohos.multimodalInput.pointer(Mouse Pointer)](arkts-multimodalinput-pointer.md)
   <!--Del-->
   - [getHoverScrollState(system api)](arkts-input-pointer-gethoverscrollstate-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -238,7 +238,7 @@
   - [PrimaryButton](arkts-input-pointer-primarybutton-e.md)
   - [RightClickType](arkts-input-pointer-rightclicktype-e.md)
 <!--Del-->
-- [@ohos.multimodalInput.shortKey](arkts-multimodalinput-shortkey.md)<!--DelEnd-->
+- [@ohos.multimodalInput.shortKey(Preset Global Shortcut Keys)](arkts-multimodalinput-shortkey.md)<!--DelEnd-->
   - [shortKey](arkts-input-shortkey-n.md)
     <!--Del-->
     - [setKeyDownDuration(system api)](arkts-input-shortkey-setkeydownduration-f-sys.md)<!--DelEnd-->
@@ -246,7 +246,7 @@
   - [FingerprintEvent(system api)](arkts-input-multimodalinput-shortkey-fingerprintevent-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FingerprintAction(system api)](arkts-input-multimodalinput-shortkey-fingerprintaction-e-sys.md)<!--DelEnd-->
-- [@ohos.multimodalInput.touchEvent](arkts-multimodalinput-touchevent.md)
+- [@ohos.multimodalInput.touchEvent(Touch Event)](arkts-multimodalinput-touchevent.md)
   - [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)
   <!--Del-->
   - [Touch(system api)](arkts-input-multimodalinput-touchevent-touch-i-sys.md)<!--DelEnd-->

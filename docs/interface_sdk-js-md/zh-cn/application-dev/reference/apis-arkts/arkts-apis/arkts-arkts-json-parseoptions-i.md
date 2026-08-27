@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import JSON from '@kit.ArkTS';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## bigIntMode

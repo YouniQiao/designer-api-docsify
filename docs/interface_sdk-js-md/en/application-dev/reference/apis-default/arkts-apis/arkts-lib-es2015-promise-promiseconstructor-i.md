@@ -17,7 +17,7 @@ Creates a new Promise.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| executor | (resolve: (value: T \| PromiseLike & lt;T & gt;) = & gt; void, reject: (reason?: any) = & gt; void) = & gt; void | Yes |  |
+| executor | (resolve: (value: T \| PromiseLike&lt;T&gt;) =&gt; void, reject: (reason?: any) =&gt; void) =&gt; void | Yes |  |
 
 **Return value:**
 
@@ -119,7 +119,7 @@ Creates a new resolved promise for the provided value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T \| PromiseLike & lt;T & gt; | Yes |  |
+| value | T \| PromiseLike&lt;T&gt; | Yes |  |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getSlotByBundle
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function getSlotByBundle(bundle: BundleOption, slotType: SlotType): Promise<NotificationSlot>
 ```
 
-Obtains a notification slot of a specified application. This API uses a promise to return the result.Before obtaining the notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f.md).
+Obtains a notification slot of a specified application. This API uses a promise to return the result.
+
+Before obtaining the notification slot, create a slot through [addSlot](arkts-notification-notificationmanager-addslot-f.md).
 
 **Since:** 12
 
@@ -26,14 +28,14 @@ Obtains a notification slot of a specified application. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes | Bundle information of the application. |
-| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
+| slotType | SlotType | Yes | Notification slot type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NotificationSlot & gt; | Promise used to return the result. |
+| Promise&lt;NotificationSlot&gt; | Promise used to return the result. |
 
 **Error codes:**
 

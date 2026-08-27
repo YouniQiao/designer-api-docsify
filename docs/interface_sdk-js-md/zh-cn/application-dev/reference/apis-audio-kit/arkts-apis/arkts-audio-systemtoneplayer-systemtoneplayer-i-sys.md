@@ -1,6 +1,6 @@
 # SystemTonePlayer（系统接口）
 
-系统提示音播放器提供了短信提示音、通知提示音的播放、配置、获取信息等功能。在调用SystemTonePlayer的接口前，需要先通过 [getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getsystemtoneplayer) 创建实例。
+系统提示音播放器提供了短信提示音、通知提示音的播放、配置、获取信息等功能。在调用SystemTonePlayer的接口前，需要先通过[getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getsystemtoneplayer)创建实例。
 
 **起始版本：** 11
 
@@ -107,7 +107,7 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;systemSoundManager.ToneHapticsFeature & gt; & gt; | Promise对象，返回当前支持的振动风格。 |
+| Promise&lt;Array&lt;systemSoundManager.ToneHapticsFeature&gt;&gt; | Promise对象，返回当前支持的振动风格。 |
 
 **错误码：**
 
@@ -144,7 +144,7 @@ getTitle(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回获取的系统提示音标题。 |
+| Promise&lt;string&gt; | Promise对象，返回获取的系统提示音标题。 |
 
 **错误码：**
 
@@ -261,7 +261,9 @@ systemTonePlayer.off('error', callback);
 on(type: 'playFinished', streamId: number, callback: Callback<number>): void
 ```
 
-监听铃音播放完成事件（当铃音播放完成时触发）。使用callback异步回调。监听对象为传入的streamId对应音频流。当streamId传入0时，监听本播放器对应的所有音频流。
+监听铃音播放完成事件（当铃音播放完成时触发）。使用callback异步回调。
+
+监听对象为传入的streamId对应音频流。当streamId传入0时，监听本播放器对应的所有音频流。
 
 **起始版本：** 18
 
@@ -274,7 +276,7 @@ on(type: 'playFinished', streamId: number, callback: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playFinished' | 是 | 事件回调类型，支持的事件为'playFinished'，当铃音播放完成时，触发该事件。 |
-| streamId | number | 是 | 监听对象为指定streamId对应的音频流，streamId通过[start](#start)获取。 当streamId传入0时，可监听当前播放器对应的所有音频流。 |
+| streamId | number | 是 | 监听对象为指定streamId对应的音频流，streamId通过[start](#start)获取。当streamId传入0时，可监听当前播放器对应的所有音频流。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 'playFinished'的回调方法。返回播放完成的音频流的streamId。 |
 
 **错误码：**
@@ -323,7 +325,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当铃音播放过程中发生错误时，触发该事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，返回错误码和错误信息。错误码请参考AVPlayer的 [on('error')](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#onerror)。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，返回错误码和错误信息。错误码请参考AVPlayer的[on('error')](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#onerror)。 |
 
 **错误码：**
 
@@ -360,7 +362,7 @@ prepare(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -400,7 +402,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -470,7 +472,9 @@ try {
 setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 ```
 
-设置播放铃音时的振动风格。调用本接口前，应该先调用[getSupportedHapticsFeatures](#getsupportedhapticsfeatures)查询 支持的振动风格，如果设置不支持的振动风格，则设置失败。
+设置播放铃音时的振动风格。
+
+调用本接口前，应该先调用[getSupportedHapticsFeatures](#getsupportedhapticsfeatures)查询支持的振动风格，如果设置不支持的振动风格，则设置失败。
 
 **起始版本：** 13
 
@@ -534,7 +538,7 @@ start(toneOptions?: SystemToneOptions): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回streamID。 |
+| Promise&lt;number&gt; | Promise对象，返回streamID。 |
 
 **错误码：**
 
@@ -587,7 +591,7 @@ stop(id: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise回调返回停止播放成功或失败。 |
+| Promise&lt;void&gt; | Promise回调返回停止播放成功或失败。 |
 
 **错误码：**
 

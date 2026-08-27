@@ -21,7 +21,7 @@ function getAddressesFromLocationName(request: GeoCodeRequest, callback: AsyncCa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md) | 是 | 设置地理编码请求的相关参数。 |
+| request | GeoCodeRequest | 是 | 设置地理编码请求的相关参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | 是 | 回调函数，返回地理编码结果。 |
 
 **错误码：**
@@ -70,13 +70,13 @@ function getAddressesFromLocationName(request: GeoCodeRequest): Promise<Array<Ge
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md) | 是 | 设置地理编码请求的相关参数。 |
+| request | GeoCodeRequest | 是 | 设置地理编码请求的相关参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;GeoAddress & gt; & gt; | Promise对象，返回地理编码查询结果。 |
+| Promise&lt;Array&lt;GeoAddress&gt;&gt; | Promise对象，返回地理编码查询结果。 |
 
 **错误码：**
 

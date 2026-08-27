@@ -108,7 +108,7 @@ progressButtonRadius?: LengthMetrics
 
 Set border rounded corner radius of progress.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 
@@ -126,7 +126,7 @@ progressButtonWidth?: LengthMetrics
 
 Sets the ProgressButtonV2 progressButtonWidth.
 
-**Type:** LengthMetrics
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 

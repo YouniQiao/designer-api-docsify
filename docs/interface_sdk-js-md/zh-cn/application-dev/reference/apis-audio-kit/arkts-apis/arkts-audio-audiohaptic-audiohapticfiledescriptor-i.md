@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import audioHaptic from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## fd

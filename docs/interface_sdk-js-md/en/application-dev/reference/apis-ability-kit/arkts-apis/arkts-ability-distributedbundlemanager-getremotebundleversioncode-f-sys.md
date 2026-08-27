@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import distributedBundleManager from '@kit.AbilityKit';
+import { distributedBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getRemoteBundleVersionCode
@@ -35,7 +35,7 @@ Obtains the version information of an app with a specified bundle name on a spec
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise object. If the call succeeds, the version information is returned; if the call fails, an error object is returned. |
+| Promise&lt;number&gt; | Promise object. If the call succeeds, the version information is returned; if the call fails, an error object is returned. |
 
 **Error codes:**
 

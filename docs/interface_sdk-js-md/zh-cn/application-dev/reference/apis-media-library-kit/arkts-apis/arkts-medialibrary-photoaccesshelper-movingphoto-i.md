@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getUri
@@ -114,7 +114,7 @@ requestContent(imageFileUri: string, videoFileUri: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -137,7 +137,7 @@ class MovingPhotoHandler implements photoAccessHelper.MediaAssetDataHandler<phot
       console.error('Error occurred when preparing data');
       return;
     }
-    // 应用需要确保待写入的uri是有效的。
+    // 应用应确保待写入的URI有效。
     let imageFileUri: string = "file://com.example.temptest/data/storage/el2/base/haps/ImageFile.jpg";
     let videoFileUri: string = "file://com.example.temptest/data/storage/el2/base/haps/VideoFile.mp4";
     try {
@@ -200,14 +200,14 @@ requestContent(resourceType: ResourceType, fileUri: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceType | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-resourcetype-e.md) | 是 | 所请求动态照片内容的资源类型。 |
+| resourceType | ResourceType | 是 | 所请求动态照片内容的资源类型。 |
 | fileUri | string | 是 | 待写入动态照片内容的uri。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -288,13 +288,13 @@ requestContent(resourceType: ResourceType): Promise<ArrayBuffer>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceType | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-resourcetype-e.md) | 是 | 所请求动态照片内容的资源类型。 |
+| resourceType | ResourceType | 是 | 所请求动态照片内容的资源类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象，返回包含所请求文件内容的ArrayBuffer。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回包含所请求文件内容的ArrayBuffer。 |
 
 **错误码：**
 

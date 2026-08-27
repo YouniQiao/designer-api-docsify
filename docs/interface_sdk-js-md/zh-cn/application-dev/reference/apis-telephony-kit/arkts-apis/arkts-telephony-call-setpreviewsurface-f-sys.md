@@ -26,13 +26,13 @@ function setPreviewSurface(callId: number, surfaceId: string): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callId | number | 是 | 呼叫Id。可以通过订阅callDetailsChange事件获得。 |
-| surfaceId | string | 是 | 预览窗口Id。surfaceId获取方式可参考 [getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid)。 |
+| surfaceId | string | 是 | 预览窗口Id。surfaceId获取方式可参考[getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式异步返回设置本端预览画面窗口结果。 |
+| Promise&lt;void&gt; | 以Promise形式异步返回设置本端预览画面窗口结果。 |
 
 **错误码：**
 

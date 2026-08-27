@@ -29,7 +29,7 @@ Get the set of all external log file paths
 
 | Type | Description |
 | --- | --- |
-| Set & lt;string & gt; | The set of all external log file paths |
+| Set&lt;string&gt; | The set of all external log file paths |
 
 ## getAllLogs
 
@@ -75,7 +75,7 @@ Get the first generated external log file paths of a given number
 
 | Type | Description |
 | --- | --- |
-| Set & lt;string & gt; | The set of qualified external log file paths |
+| Set&lt;string&gt; | The set of qualified external log file paths |
 
 ## getLogFilesGeneratedAfter
 
@@ -101,7 +101,7 @@ Get the set of all external log file paths which are after a given time
 
 | Type | Description |
 | --- | --- |
-| Set & lt;string & gt; | The set of all external log file paths which are after a given time |
+| Set&lt;string&gt; | The set of all external log file paths which are after a given time |
 
 ## getLogFilesGeneratedBefore
 
@@ -127,7 +127,7 @@ Get the set of all external log file paths which are before a given time
 
 | Type | Description |
 | --- | --- |
-| Set & lt;string & gt; | The set of all external log file paths which are before a given time |
+| Set&lt;string&gt; | The set of all external log file paths which are before a given time |
 
 ## getLogFilesLargerThan
 
@@ -153,7 +153,7 @@ Get the set of all external log file paths whose size are larger than a given am
 
 | Type | Description |
 | --- | --- |
-| Set & lt;string & gt; | The set of all external log file paths whose size are larger than a given amount |
+| Set&lt;string&gt; | The set of all external log file paths whose size are larger than a given amount |
 
 ## getLogFilesOfSysEvent
 
@@ -179,7 +179,7 @@ Get the set of all external log file paths of a given system event
 
 | Type | Description |
 | --- | --- |
-| Set & lt;string & gt; | The set of all external log file paths of a given system event |
+| Set&lt;string&gt; | The set of all external log file paths of a given system event |
 
 ## getLogFilesSmallerThan
 
@@ -205,7 +205,7 @@ Get the set of all external log file paths whose size are smaller than a given a
 
 | Type | Description |
 | --- | --- |
-| Set & lt;string & gt; | The set of all external log file paths whose size are smaller than a given amount |
+| Set&lt;string&gt; | The set of all external log file paths whose size are smaller than a given amount |
 
 ## getLogNumber
 

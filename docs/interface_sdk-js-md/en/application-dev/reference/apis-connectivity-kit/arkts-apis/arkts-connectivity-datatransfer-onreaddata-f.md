@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dataTransfer from '@kit.ConnectivityKit';
+import { dataTransfer } from '@kit.ConnectivityKit';
 ```
 
 ## onReadData
@@ -12,7 +12,9 @@ import dataTransfer from '@kit.ConnectivityKit';
 function onReadData(callback: Callback<DataParams>): void
 ```
 
-Subscribes to the port channel data receiving event. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to the port channel data receiving event. This API uses an asynchronous callback to return the result.
+
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 

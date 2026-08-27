@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## createOsAccountSubProfile
@@ -36,7 +36,7 @@ createOsAccountSubProfile(osAccountLocalId: number): Promise<OsAccountSubProfile
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | 是 | 目标系统账号的本地标识符。 取值范围为全体整数。 |
+| osAccountLocalId | number | 是 | 目标系统账号的本地标识符。取值范围为全体整数。 |
 
 **返回值：**
 
@@ -99,14 +99,14 @@ deleteOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | 是 | 目标系统账号的本地标识符。 取值范围为全体整数。 |
-| subProfileId | number | 是 | 子身份资料的标识符。 取值范围为全体整数。 |
+| osAccountLocalId | number | 是 | 目标系统账号的本地标识符。取值范围为全体整数。 |
+| subProfileId | number | 是 | 子身份资料的标识符。取值范围为全体整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -162,7 +162,7 @@ getOsAccountForegroundSubProfileId(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回系统账号的前台子身份资料标识符。 |
+| Promise&lt;number&gt; | Promise对象，返回系统账号的前台子身份资料标识符。 |
 
 **错误码：**
 
@@ -210,13 +210,13 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: number): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | 是 | 系统账号的本地标识符。 取值范围为全体整数。 |
+| osAccountLocalId | number | 是 | 系统账号的本地标识符。取值范围为全体整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回系统账号前台子身份资料的标识符。 |
+| Promise&lt;number&gt; | Promise对象，返回系统账号前台子身份资料的标识符。 |
 
 **错误码：**
 
@@ -268,13 +268,13 @@ getOsAccountLocalIdForSubProfile(subProfileId: number): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subProfileId | number | 是 | 子身份资料的标识符。 取值范围为全体整数。 |
+| subProfileId | number | 是 | 子身份资料的标识符。取值范围为全体整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回子身份资料所属系统账号的本地ID。 |
+| Promise&lt;number&gt; | Promise对象，返回子身份资料所属系统账号的本地ID。 |
 
 **错误码：**
 
@@ -327,7 +327,7 @@ getOsAccountSubProfile(subProfileId: number): Promise<OsAccountSubProfile>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subProfileId | number | 是 | 子身份资料的标识符。 取值范围为全体整数。 |
+| subProfileId | number | 是 | 子身份资料的标识符。取值范围为全体整数。 |
 
 **返回值：**
 
@@ -387,8 +387,8 @@ getOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | 是 | 系统账号的本地标识符。 取值范围为全体整数。 |
-| subProfileId | number | 是 | 子身份资料的标识符。 取值范围为全体整数。 |
+| osAccountLocalId | number | 是 | 系统账号的本地标识符。取值范围为全体整数。 |
+| subProfileId | number | 是 | 子身份资料的标识符。取值范围为全体整数。 |
 
 **返回值：**
 
@@ -449,7 +449,7 @@ getOsAccountSubProfileIds(): Promise<number[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number[] & gt; | Promise对象，返回子身份资料标识符列表。 |
+| Promise&lt;number[]&gt; | Promise对象，返回子身份资料标识符列表。 |
 
 **错误码：**
 
@@ -499,13 +499,13 @@ getOsAccountSubProfileIds(osAccountLocalId: number): Promise<number[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | 是 | 系统账号的本地标识符。 取值范围为全体整数。 |
+| osAccountLocalId | number | 是 | 系统账号的本地标识符。取值范围为全体整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number[] & gt; | Promise对象，返回指定系统账号的子身份资料标识符列表。 |
+| Promise&lt;number[]&gt; | Promise对象，返回指定系统账号的子身份资料标识符列表。 |
 
 **错误码：**
 
@@ -654,14 +654,14 @@ switchOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | number | 是 | 系统账号的本地标识符。 取值范围为全体整数。 |
-| subProfileId | number | 是 | 子身份资料的标识符。 取值范围为全体整数。 |
+| osAccountLocalId | number | 是 | 系统账号的本地标识符。取值范围为全体整数。 |
+| subProfileId | number | 是 | 子身份资料的标识符。取值范围为全体整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

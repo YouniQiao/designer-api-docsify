@@ -13,8 +13,7 @@ Implements user authentication.
 ## Modules to Import
 
 ```TypeScript
-import userAuth from '@kit.UserAuthenticationKit';
-import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## cancel
@@ -73,7 +72,8 @@ try {
 off: (name: AuthEventKey) => void
 ```
 
-Unsubscribes from the user authentication events of the specified type.  
+Unsubscribes from the user authentication events of the specified type.
+
 - **name**: indicates the authentication event type. The value **result** means to unsubscribe from the  
 authentication result, and the value **tip** means to unsubscribe from the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md).
 
@@ -134,7 +134,8 @@ try {
 on: (name: AuthEventKey, callback: AuthEvent) => void
 ```
 
-Subscribes to the user authentication events of the specified type.  
+Subscribes to the user authentication events of the specified type.
+
 - **name**: indicates the authentication event type. The value **result** means that the callback returns the  
 authentication result, and the value **tip** means that the callback returns the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md).  
 - **callback**: callback used to return the authentication result or tip information. For details, see  

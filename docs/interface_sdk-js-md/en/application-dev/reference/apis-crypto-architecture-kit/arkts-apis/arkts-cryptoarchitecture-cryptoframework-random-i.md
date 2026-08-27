@@ -11,7 +11,7 @@ Random interface, defining methods for generating random numbers. Before use, yo
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## enableHardwareEntropy
@@ -140,7 +140,7 @@ Generates a random number of the specified length. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;DataBlob & gt; | Promise used to return the random number generated. |
+| Promise&lt;DataBlob&gt; | Promise used to return the random number generated. |
 
 **Error codes:**
 
@@ -265,7 +265,7 @@ Generates a random number of the specified length. This API returns the result s
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Returns the generated random number. |
+| DataBlob | Returns the generated random number. |
 
 **Error codes:**
 
@@ -388,7 +388,7 @@ Sets a seed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| seed | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes | Seed to set. |
+| seed | DataBlob | Yes | Seed to set. |
 
 **Error codes:**
 

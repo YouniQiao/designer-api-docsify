@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import usbManager from '@kit.BasicServicesKit';
-import serialManager from '@kit.BasicServicesKit.serial';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## usbCancelTransfer
@@ -29,7 +28,7 @@ function usbCancelTransfer(transfer: UsbDataTransferParams): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | 是 | 被取消传输的参数，该参数与 [usbManager.usbSubmitTransfer](arkts-basicservices-usbmanager-usbsubmittransfer-f.md)接口的transfer参数相同。在调用该接口前需要通过 [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) claim通信接口。 |
+| transfer | [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md) | 是 | 被取消传输的参数，该参数与[usbManager.usbSubmitTransfer](arkts-basicservices-usbmanager-usbsubmittransfer-f.md)接口的transfer参数相同。在调用该接口前需要通过[usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md) claim通信接口。 |
 
 **错误码：**
 

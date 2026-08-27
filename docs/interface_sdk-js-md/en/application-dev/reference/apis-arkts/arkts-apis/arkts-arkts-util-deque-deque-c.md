@@ -116,7 +116,7 @@ Uses a callback to traverse each element in the **Deque** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, deque?: Deque & lt;T & gt;) = & gt; void | Yes | Callback invoked to traverse the elements in the Deque. |
+| callbackFn | (value: T, index?: number, deque?: Deque&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the Deque. |
 | thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**

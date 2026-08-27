@@ -11,18 +11,18 @@
 
 | Name | Description |
 | --- | --- |
-| [Decimal(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-math-decimal-decimal-c.md) | An arbitrary-precision Decimal type |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | An arbitrary-precision Decimal type |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [DecimalConfig(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-math-decimal-decimalconfig-i.md) | Provides configuration for decimal. |
+| [DecimalConfig](arkts-arkts-math-decimal-decimalconfig-i.md) | Provides configuration for decimal. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [Modulo(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-modulo-t.md) | The type used to set modulo |
-| [Rounding(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-rounding-t.md) | The type used to set rounding |
-| [Value(Defines the Decimal for ArkTS. Decimal support arbitrary precision decimal operation.)](arkts-arkts-value-t.md) | The type used to denote decimal value |
+| [Modulo](arkts-arkts-modulo-t.md) | The type used to set modulo |
+| [Rounding](arkts-arkts-rounding-t.md) | The type used to set rounding |
+| [Value](arkts-arkts-value-t.md) | The type used to denote decimal value |

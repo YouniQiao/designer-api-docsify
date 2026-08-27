@@ -61,7 +61,7 @@ Determines whether all the members of an array satisfy the specified test.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: bigint, index: number, array: BigInt64Array) = & gt; boolean | Yes |  |
+| predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; boolean | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -100,7 +100,7 @@ Returns the elements of an array that meet the condition specified in a callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: bigint, index: number, array: BigInt64Array) = & gt; any | Yes |  |
+| predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; any | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -119,7 +119,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: bigint, index: number, array: BigInt64Array) = & gt; boolean | Yes |  |
+| predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; boolean | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -138,7 +138,7 @@ Returns the index of the first element in the array where predicate is true, and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: bigint, index: number, array: BigInt64Array) = & gt; boolean | Yes |  |
+| predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; boolean | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -157,7 +157,7 @@ Performs the specified action for each element in an array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (value: bigint, index: number, array: BigInt64Array) = & gt; void | Yes |  |
+| callbackfn | (value: bigint, index: number, array: BigInt64Array) =&gt; void | Yes |  |
 | thisArg | any | No |  |
 
 ## includes
@@ -259,7 +259,7 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (value: bigint, index: number, array: BigInt64Array) = & gt; bigint | Yes |  |
+| callbackfn | (value: bigint, index: number, array: BigInt64Array) =&gt; bigint | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -278,7 +278,7 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: bigint, currentValue: bigint, currentIndex: number, array: BigInt64Array) = & gt; bigint | Yes |  |
+| callbackfn | (previousValue: bigint, currentValue: bigint, currentIndex: number, array: BigInt64Array) =&gt; bigint | Yes |  |
 
 **Return value:**
 
@@ -296,7 +296,7 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: bigint, currentIndex: number, array: BigInt64Array) = & gt; U | Yes |  |
+| callbackfn | (previousValue: U, currentValue: bigint, currentIndex: number, array: BigInt64Array) =&gt; U | Yes |  |
 | initialValue | U | Yes |  |
 
 **Return value:**
@@ -315,7 +315,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: bigint, currentValue: bigint, currentIndex: number, array: BigInt64Array) = & gt; bigint | Yes |  |
+| callbackfn | (previousValue: bigint, currentValue: bigint, currentIndex: number, array: BigInt64Array) =&gt; bigint | Yes |  |
 
 **Return value:**
 
@@ -333,7 +333,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: bigint, currentIndex: number, array: BigInt64Array) = & gt; U | Yes |  |
+| callbackfn | (previousValue: U, currentValue: bigint, currentIndex: number, array: BigInt64Array) =&gt; U | Yes |  |
 | initialValue | U | Yes |  |
 
 **Return value:**
@@ -364,7 +364,7 @@ Sets a value or an array of values.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;bigint & gt; | Yes |  |
+| array | ArrayLike&lt;bigint&gt; | Yes |  |
 | offset | number | No |  |
 
 ## slice
@@ -398,7 +398,7 @@ Determines whether the specified callback function returns true for any element 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: bigint, index: number, array: BigInt64Array) = & gt; boolean | Yes |  |
+| predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; boolean | Yes |  |
 | thisArg | any | No |  |
 
 **Return value:**
@@ -417,7 +417,7 @@ Sorts the array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compareFn | (a: bigint, b: bigint) = & gt; number \ | bigint | No |  |
+| compareFn | (a: bigint, b: bigint) =&gt; number \| bigint | No |  |
 
 **Return value:**
 

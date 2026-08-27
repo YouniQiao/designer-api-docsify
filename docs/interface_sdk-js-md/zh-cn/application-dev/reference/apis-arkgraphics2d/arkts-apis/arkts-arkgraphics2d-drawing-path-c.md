@@ -1,6 +1,6 @@
 # Path
 
-Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥曲线、二阶贝塞尔、三阶贝塞尔等基本图元组成， 支持路径的构造、变换、布尔运算、SVG路径解析与转换、测量与片段截取等能力。 未设置填充类型时，默认填充类型为WINDING，可通过[setFillType](#setfilltype)修改。
+Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥曲线、二阶贝塞尔、三阶贝塞尔等基本图元组成，支持路径的构造、变换、布尔运算、SVG路径解析与转换、测量与片段截取等能力。未设置填充类型时，默认填充类型为WINDING，可通过[setFillType](#setfilltype)修改。
 
 > **说明：**
 > 
@@ -15,7 +15,7 @@ Path是Drawing模块提供的复合几何路径类，由直线、圆弧、圆锥
 ## 导入模块
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## addArc
@@ -24,7 +24,7 @@ import drawing from '@kit.ArkGraphics2D';
 addArc(rect: common2D.Rect, startAngle: number, sweepAngle: number): void
 ```
 
-向路径添加一段圆弧。与[arcTo](#arcto)相比，addArc不会自动添加从路径最后点到弧线起点的连接线段，且通过common2D.Rect对象指定矩形边界。若需要自动连接弧线起点， 请使用arcTo；若仅需添加独立弧线，可使用addArc。
+向路径添加一段圆弧。与[arcTo](#arcto)相比，addArc不会自动添加从路径最后点到弧线起点的连接线段，且通过common2D.Rect对象指定矩形边界。若需要自动连接弧线起点，请使用arcTo；若仅需添加独立弧线，可使用addArc。
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ addArc(rect: common2D.Rect, startAngle: number, sweepAngle: number): void
 | --- | --- | --- | --- |
 | rect | common2D.Rect | 是 | 包含弧的椭圆的矩形边界。 |
 | startAngle | number | 是 | 弧的起始角度，单位为度，0°为x轴正方向，该参数为浮点数。当对90取余接近于0且sweepAngle不在(-360, 360)区间内时，将添加整个椭圆而非圆弧。 |
-| sweepAngle | number | 是 | 扫描角度，单位为度。正数表示顺时针方向，负数表示逆时针方向。当参数不在(-360, 360)区间内且startAngle对90取余接近于0时，将添加整个椭圆而非圆 弧；其余情况下实际扫描角度为该入参对360取余的结果。该参数为浮点数。 |
+| sweepAngle | number | 是 | 扫描角度，单位为度。正数表示顺时针方向，负数表示逆时针方向。当参数不在(-360, 360)区间内且startAngle对90取余接近于0时，将添加整个椭圆而非圆弧；其余情况下实际扫描角度为该入参对360取余的结果。该参数为浮点数。 |
 
 **错误码：**
 
@@ -72,7 +72,7 @@ addCircle(x: number, y: number, radius: number, pathDirection?: PathDirection): 
 | --- | --- | --- | --- |
 | x | number | 是 | 表示圆心的x轴坐标，该参数为浮点数。单位为物理像素px。 |
 | y | number | 是 | 表示圆心的y轴坐标，该参数为浮点数。单位为物理像素px。 |
-| radius | number | 是 | 表示圆形的半径，取值范围 & gt;0，该参数为浮点数，小于等于0时不会有任何效果。单位为物理像素px。 |
+| radius | number | 是 | 表示圆形的半径，取值范围&gt;0，该参数为浮点数，小于等于0时不会有任何效果。单位为物理像素px。 |
 | pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
@@ -142,8 +142,8 @@ addPath(path: Path, matrix?: Matrix | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 要添加到当前路径的源路径对象，经过矩阵变换后将被追加到当前路径中。 |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 | 表示矩阵对象，用于对源路径进行变换（如旋转、缩放、平移等）。当需要对源路径进行 几何变换后再添加到当前路径时传入此参数；当仅需原样添加源路径时可不传入，不传入时默认为单位矩阵（即不进行任何变换）。 |
+| path | Path | 是 | 要添加到当前路径的源路径对象，经过矩阵变换后将被追加到当前路径中。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 | 表示矩阵对象，用于对源路径进行变换（如旋转、缩放、平移等）。当需要对源路径进行几何变换后再添加到当前路径时传入此参数；当仅需原样添加源路径时可不传入，不传入时默认为单位矩阵（即不进行任何变换）。 |
 
 **错误码：**
 
@@ -181,7 +181,7 @@ addPolygon(points: Array<common2D.Point>, close: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| points | Array & lt;common2D.Point & gt; | 是 | 多边形各顶点的坐标点数组，按数组顺序依次连接各点形成连续线段。 |
+| points | Array&lt;common2D.Point&gt; | 是 | 多边形各顶点的坐标点数组，按数组顺序依次连接各点形成连续线段。 |
 | close | boolean | 是 | 表示是否将路径闭合，即是否添加路径起始点到终点的连线。true表示将路径闭合，false表示不将路径闭合。 |
 
 **错误码：**
@@ -259,7 +259,7 @@ addRoundRect(roundRect: RoundRect, pathDirection?: PathDirection): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 向路径中添加的圆角矩形对象，需为有效的RoundRect对象。 |
+| roundRect | RoundRect | 是 | 向路径中添加的圆角矩形对象，需为有效的RoundRect对象。 |
 | pathDirection | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | 否 | 表示路径方向。不传入时默认为顺时针方向。 |
 
 **错误码：**
@@ -309,7 +309,7 @@ approximate(acceptableError: number): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;number & gt; | 返回包含近似路径的点的数组，至少包含两个点。每个点由三个值组成： |
+| Array&lt;number&gt; | 返回包含近似路径的点的数组，至少包含两个点。每个点由三个值组成： |
 
 **错误码：**
 
@@ -337,7 +337,7 @@ for (let i = 0; i < points.length; i += 3) {
 arcTo(x1: number, y1: number, x2: number, y2: number, startDeg: number, sweepDeg: number): void
 ```
 
-给路径添加一段弧线。绘制弧线的方式为角度弧：首先指定一个矩形边界，取其内切椭圆；然后指定起始角度和扫描度数；最后从起始角度 扫描截取椭圆周长的一部分，即为绘制的弧线。另外会默认添加一条从路径最后点位置（若路径没有内容则默认值为 (0, 0)）到 弧线起始点位置的线段。若不需要自动添加连接线段，请使用[addArc](#addarc)。
+给路径添加一段弧线。绘制弧线的方式为角度弧：首先指定一个矩形边界，取其内切椭圆；然后指定起始角度和扫描度数；最后从起始角度扫描截取椭圆周长的一部分，即为绘制的弧线。另外会默认添加一条从路径最后点位置（若路径没有内容则默认值为 (0, 0)）到弧线起始点位置的线段。若不需要自动添加连接线段，请使用[addArc](#addarc)。
 
 **起始版本：** 11
 
@@ -354,7 +354,7 @@ arcTo(x1: number, y1: number, x2: number, y2: number, startDeg: number, sweepDeg
 | x2 | number | 是 | 矩形右下角的x坐标，该参数为浮点数。单位为物理像素px。 |
 | y2 | number | 是 | 矩形右下角的y坐标，该参数为浮点数。单位为物理像素px。 |
 | startDeg | number | 是 | 起始的角度。角度的起始方向（0°）为x轴正方向。单位为度。 |
-| sweepDeg | number | 是 | 扫描的度数，为正数时顺时针扫描，为负数时逆时针扫描。实际扫描的度数为该入参对360取模的结果。 单位为度。 |
+| sweepDeg | number | 是 | 扫描的度数，为正数时顺时针扫描，为负数时逆时针扫描。实际扫描的度数为该入参对360取模的结果。单位为度。 |
 
 **错误码：**
 
@@ -388,7 +388,7 @@ buildFromSvgString(str: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| str | string | 是 | SVG路径数据格式的字符串，用于描述绘制路径。支持M/m、L/l、H/h、V/v、C/c、S/s、Q/q、T/t、A/a、Z/z 等SVG路径命令，具体语法请参考SVG路径数据规范。传入不符合SVG路径格式的字符串时，解析失败，接口返回false。 |
+| str | string | 是 | SVG路径数据格式的字符串，用于描述绘制路径。支持M/m、L/l、H/h、V/v、C/c、S/s、Q/q、T/t、A/a、Z/z等SVG路径命令，具体语法请参考SVG路径数据规范。传入不符合SVG路径格式的字符串时，解析失败，接口返回false。 |
 
 **返回值：**
 
@@ -445,7 +445,7 @@ path.close();
 conicTo(ctrlX: number, ctrlY: number, endX: number, endY: number, weight: number): void
 ```
 
-在当前路径上添加一条路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线，其控制点为 (ctrlX, ctrlY)， 目标点为 (endX, endY)。与[quadTo](#quadto)相比，conicTo通过权重参数可更灵活地控制曲线形状： 权重为1时效果与quadTo相同，权重不为1时可精确表示圆弧、椭圆弧等圆锥曲线段。仅需标准二次贝塞尔 曲线时推荐使用quadTo，需要精确表示圆弧或灵活控制曲线形状时推荐使用conicTo。
+在当前路径上添加一条路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线，其控制点为 (ctrlX, ctrlY)，目标点为 (endX, endY)。与[quadTo](#quadto)相比，conicTo通过权重参数可更灵活地控制曲线形状：权重为1时效果与quadTo相同，权重不为1时可精确表示圆弧、椭圆弧等圆锥曲线段。仅需标准二次贝塞尔曲线时推荐使用quadTo，需要精确表示圆弧或灵活控制曲线形状时推荐使用conicTo。
 
 **起始版本：** 12
 
@@ -461,7 +461,7 @@ conicTo(ctrlX: number, ctrlY: number, endX: number, endY: number, weight: number
 | ctrlY | number | 是 | 控制点的y坐标，该参数为浮点数。单位为物理像素px。 |
 | endX | number | 是 | 目标点的x坐标，该参数为浮点数。单位为物理像素px。 |
 | endY | number | 是 | 目标点的y坐标，该参数为浮点数。单位为物理像素px。 |
-| weight | number | 是 | 表示曲线权重，决定了曲线的形状。值越大，曲线越接近控制点。 小于等于0时，效果与[lineTo](#lineto)相同； 值为1时，效果与[quadTo](#quadto)相同。该参数为浮点数。 |
+| weight | number | 是 | 表示曲线权重，决定了曲线的形状。值越大，曲线越接近控制点。小于等于0时，效果与[lineTo](#lineto)相同；值为1时，效果与[quadTo](#quadto)相同。该参数为浮点数。 |
 
 **错误码：**
 
@@ -552,7 +552,7 @@ constructor(path: Path)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 待复制的路径对象。 |
+| path | Path | 是 | 待复制的路径对象。 |
 
 **示例**
 
@@ -738,7 +738,17 @@ let rect = region.getBounds();
 getConicWeightData(): Array<number>
 ```
 
-获取路径的圆锥曲线权重数据。在路径（path）图元中，圆锥曲线数据采用有理贝塞尔曲线（Rational Bézier Curve）形式表示，其中每个控制点附带一个权重值（weight）。权重属于曲线定义的几何参数。主要作用如下：形状调控：权重值越大，曲线越靠近对应控制点；权重为1时退化为标准贝塞尔曲线；权重为0时该控制点不起作用。精确表示圆锥曲线：通过组合权重与二次贝塞尔曲线，可以精确表示圆弧、椭圆弧、抛物线等圆锥曲线段，无需使用分段逼近或专用椭圆弧指令。数据组织：权重通常以数组形式与点数据并列，按顺序对应每个控制点，与相应的指令verb（如[conicTo](#conicto)）配合使用。
+获取路径的圆锥曲线权重数据。
+
+在路径（path）图元中，圆锥曲线数据采用有理贝塞尔曲线（Rational Bézier Curve）形式表示，其中每个控制点附带一个权重值（weight）。权重属于曲线定义的几何参数。
+
+主要作用如下：
+
+形状调控：权重值越大，曲线越靠近对应控制点；权重为1时退化为标准贝塞尔曲线；权重为0时该控制点不起作用。
+
+精确表示圆锥曲线：通过组合权重与二次贝塞尔曲线，可以精确表示圆弧、椭圆弧、抛物线等圆锥曲线段，无需使用分段逼近或专用椭圆弧指令。
+
+数据组织：权重通常以数组形式与点数据并列，按顺序对应每个控制点，与相应的指令verb（如[conicTo](#conicto)）配合使用。
 
 **起始版本：** 26.0.0
 
@@ -750,7 +760,7 @@ getConicWeightData(): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;number & gt; | 类型为浮点数，取值范围≥0。取值为0.0时，该控制点完全无效，曲线不经过此点，曲线实际由其余控制点定义。取值为1.0时，该控制点对应的曲线变为标准贝塞尔曲线，此时权重不产生 额外形变效果。取值大于1时，权重值越大，曲线越靠近该控制点；小于1.0但大于0.0时，曲线则相对远离该控制点。 |
+| Array&lt;number&gt; | 类型为浮点数，取值范围≥0。取值为0.0时，该控制点完全无效，曲线不经过此点，曲线实际由其余控制点定义。取值为1.0时，该控制点对应的曲线变为标准贝塞尔曲线，此时权重不产生额外形变效果。取值大于1时，权重值越大，曲线越靠近该控制点；小于1.0但大于0.0时，曲线则相对远离该控制点。 |
 
 **示例**
 
@@ -876,7 +886,7 @@ getMatrix(forceClosed: boolean, distance: number, matrix: Matrix, flags: PathMea
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | forceClosed | boolean | 是 | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
-| distance | number | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。该参数为浮点数。 单位为物理像素px。 |
+| distance | number | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。该参数为浮点数。单位为物理像素px。 |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 用于存储获取到的变换矩阵的矩阵对象，该矩阵表示路径上指定距离处的坐标位置和朝向信息。 |
 | flags | [PathMeasureMatrixFlags](arkts-arkgraphics2d-drawing-pathmeasurematrixflags-e.md) | 是 | 矩阵信息维度枚举，用于指定获取的矩阵包含哪些维度信息。 |
 
@@ -941,7 +951,17 @@ let iter = path.getPathIterator();
 getPointData(): Array<common2D.Point>
 ```
 
-获取路径的点数据。在路径（path）图元中，点数据以数值序列的形式存在，与verb指令一一对应，用来精确指定绘图操作的几何坐标位置。点数据的主要类型包括：终点坐标：与[moveTo](#moveto)、[lineTo](#lineto)等指令配合，定义线段或移动的目标位置。控制点坐标：与曲线指令配合，用于定义贝塞尔曲线的形状（如三次曲线需要两个控制点和一个终点）。闭合点：通常不单独提供坐标，由[close](#close)指令隐式使用路径起点。
+获取路径的点数据。
+
+在路径（path）图元中，点数据以数值序列的形式存在，与verb指令一一对应，用来精确指定绘图操作的几何坐标位置。
+
+点数据的主要类型包括：
+
+终点坐标：与[moveTo](#moveto)、[lineTo](#lineto)等指令配合，定义线段或移动的目标位置。
+
+控制点坐标：与曲线指令配合，用于定义贝塞尔曲线的形状（如三次曲线需要两个控制点和一个终点）。
+
+闭合点：通常不单独提供坐标，由[close](#close)指令隐式使用路径起点。
 
 **起始版本：** 26.0.0
 
@@ -953,7 +973,7 @@ getPointData(): Array<common2D.Point>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;common2D.Point & gt; | 返回路径的点数据数组，每个元素为common2D.Point对象，其x、y坐标为浮点数。 理论取值范围为全体实数，但实际受限于渲染坐标系的有效范围（如-2^31到2^31-1或屏幕可见区域）；超出范围可能导致图形不可见或裁剪。 |
+| Array&lt;common2D.Point&gt; | 返回路径的点数据数组，每个元素为common2D.Point对象，其x、y坐标为浮点数。理论取值范围为全体实数，但实际受限于渲染坐标系的有效范围（如-2^31到2^31-1或屏幕可见区域）；超出范围可能导致图形不可见或裁剪。 |
 
 **示例**
 
@@ -986,7 +1006,7 @@ getPositionAndTangent(forceClosed: boolean, distance: number, position: common2D
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | forceClosed | boolean | 是 | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
-| distance | number | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。 该参数为浮点数。单位为物理像素px。 |
+| distance | number | 是 | 表示与路径起始点的距离，小于0时会被视作0，大于路径长度时会被视作路径长度。该参数为浮点数。单位为物理像素px。 |
 | position | common2D.Point | 是 | 存储获取到的距离路径起始点distance处的点的坐标。 |
 | tangent | common2D.Point | 是 | 存储获取到的距离路径起始点distance处的点的切线值，tangent.x表示该点切线的余弦值，tangent.y表示该点切线的正弦值。 |
 
@@ -994,7 +1014,7 @@ getPositionAndTangent(forceClosed: boolean, distance: number, position: common2D
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 表示是否成功获取距离路径起始点distance处的点的坐标和切线值的结果。 true表示获取成功，false表示获取失败，position和tangent不会被改变。 |
+| boolean | 表示是否成功获取距离路径起始点distance处的点的坐标和切线值的结果。true表示获取成功，false表示获取失败，position和tangent不会被改变。 |
 
 **错误码：**
 
@@ -1038,10 +1058,10 @@ getSegment(forceClosed: boolean, start: number, stop: number, startWithMoveTo: b
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | forceClosed | boolean | 是 | 表示是否按照闭合路径测量，true表示测量时路径会被强制视为已闭合，false表示会根据路径的实际闭合状态测量。 |
-| start | number | 是 | 表示与路径起始点的距离，距离路径起始点start距离的位置即为截取路径片段的起始点， 小于0时会被视作0，大于等于stop时会截取失败。该参数为浮点数。单位为物理像素px。 |
-| stop | number | 是 | 表示与路径起始点的距离，距离路径起始点stop距离的位置即为截取路径片段的终点， 小于等于start时会截取失败，大于路径长度时会被视作路径长度。该参数为浮点数。单位为物理像素px。 |
-| startWithMoveTo | boolean | 是 | 表示是否在目标路径执行[moveTo](#moveto) 移动到截取路径片段的起始点位置。true表示执行moveTo；false表示不执行moveTo。 |
-| dst | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 目标路径，截取成功时会将得到的路径片段追加到目标路径上，截取失败时不做改变。 |
+| start | number | 是 | 表示与路径起始点的距离，距离路径起始点start距离的位置即为截取路径片段的起始点，小于0时会被视作0，大于等于stop时会截取失败。该参数为浮点数。单位为物理像素px。 |
+| stop | number | 是 | 表示与路径起始点的距离，距离路径起始点stop距离的位置即为截取路径片段的终点，小于等于start时会截取失败，大于路径长度时会被视作路径长度。该参数为浮点数。单位为物理像素px。 |
+| startWithMoveTo | boolean | 是 | 表示是否在目标路径执行[moveTo](#moveto)移动到截取路径片段的起始点位置。true表示执行moveTo；false表示不执行moveTo。 |
+| dst | Path | 是 | 目标路径，截取成功时会将得到的路径片段追加到目标路径上，截取失败时不做改变。 |
 
 **返回值：**
 
@@ -1068,9 +1088,16 @@ console.info('getSegment-----result:  ' + path.getSegment(true, 10.0, 20.0, true
 getVerbData(): Array<PathIteratorVerb>
 ```
 
-获取路径的指令数据。在路径（path）图元中，指令数据verb用于描述路径构造过程中的基本绘图动作。指令数据以枚举的形式存在，每个取值对应一种几何操作类型，例如：  
-[moveTo](#moveto)：将当前绘图点移至指定坐标，不产生线段。  
-[lineTo](#lineto)：从当前点向指定点绘制直线段。  
+获取路径的指令数据。
+
+在路径（path）图元中，指令数据verb用于描述路径构造过程中的基本绘图动作。
+
+指令数据以枚举的形式存在，每个取值对应一种几何操作类型，例如：
+
+[moveTo](#moveto)：将当前绘图点移至指定坐标，不产生线段。
+
+[lineTo](#lineto)：从当前点向指定点绘制直线段。
+
 [close](#close)：将当前点与路径起点相连，形成封闭区域。
 
 **起始版本：** 26.0.0
@@ -1116,9 +1143,9 @@ interpolate(other: Path, weight: number, interpolatedPath: Path): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 表示另一条路径对象。 |
+| other | Path | 是 | 表示另一条路径对象。 |
 | weight | number | 是 | 表示插值权重，取值范围为[0.0, 1.0]。该参数为浮点数。 |
-| interpolatedPath | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 表示用于存储插值结果的目标路径对象。 |
+| interpolatedPath | Path | 是 | 表示用于存储插值结果的目标路径对象。 |
 
 **返回值：**
 
@@ -1260,7 +1287,7 @@ isEqual(path: Path): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 另一条路径对象。 |
+| path | Path | 是 | 另一条路径对象。 |
 
 **返回值：**
 
@@ -1302,7 +1329,7 @@ isInterpolate(other: Path): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 表示另一条路径对象。 |
+| other | Path | 是 | 表示另一条路径对象。 |
 
 **返回值：**
 
@@ -1445,7 +1472,7 @@ path.lineTo(10, 15);
 moveTo(x: number, y: number): void
 ```
 
-设置自定义路径的起始点位置。与[rMoveTo](#rmoveto)使用相对坐标不同，moveTo使用绝对坐标设置起始点。 当路径起点固定时，推荐使用moveTo；当路径需要基于当前位置动态构建时，推荐使用[rMoveTo](#rmoveto)。
+设置自定义路径的起始点位置。与[rMoveTo](#rmoveto)使用相对坐标不同，moveTo使用绝对坐标设置起始点。当路径起点固定时，推荐使用moveTo；当路径需要基于当前位置动态构建时，推荐使用[rMoveTo](#rmoveto)。
 
 **起始版本：** 11
 
@@ -1498,7 +1525,7 @@ offset(dx: number, dy: number): Path
 
 | 类型 | 说明 |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回当前路径偏移(dx,dy)后生成的新路径对象。 |
+| Path | 返回当前路径偏移(dx,dy)后生成的新路径对象。 |
 
 **错误码：**
 
@@ -1533,7 +1560,7 @@ op(path: Path, pathOp: PathOp): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 路径对象，用于与当前路径合并。 |
+| path | Path | 是 | 路径对象，用于与当前路径合并。 |
 | pathOp | [PathOp](arkts-arkgraphics2d-drawing-pathop-e.md) | 是 | 路径操作类型枚举，用于指定两条路径的布尔运算方式。 |
 
 **返回值：**
@@ -1604,7 +1631,7 @@ path.quadTo(10, 15, 10, 10);
 rConicTo(ctrlX: number, ctrlY: number, endX: number, endY: number, weight: number): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线。 与[conicTo](#conicto)使用绝对坐标不同，rConicTo使用相对于当前路径最后点位置的偏移量在当前路径上添加 圆锥曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的圆锥曲线。与[conicTo](#conicto)使用绝对坐标不同，rConicTo使用相对于当前路径最后点位置的偏移量在当前路径上添加圆锥曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1616,11 +1643,11 @@ rConicTo(ctrlX: number, ctrlY: number, endX: number, endY: number, weight: numbe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctrlX | number | 是 | 控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| ctrlY | number | 是 | 控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| endX | number | 是 | 目标点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| endY | number | 是 | 目标点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| weight | number | 是 | 表示曲线权重，决定了曲线的形状，越大越接近控制点。 若小于等于0则等同于使用[rLineTo](#rlineto)添加一条到结束点的线段， 若为1则等同于[rQuadTo](#rquadto)，该参数为浮点数。 |
+| ctrlX | number | 是 | 控制点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlY | number | 是 | 控制点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| endX | number | 是 | 目标点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| endY | number | 是 | 目标点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| weight | number | 是 | 表示曲线权重，决定了曲线的形状，越大越接近控制点。若小于等于0则等同于使用[rLineTo](#rlineto)添加一条到结束点的线段，若为1则等同于[rQuadTo](#rquadto)，该参数为浮点数。 |
 
 **错误码：**
 
@@ -1643,7 +1670,7 @@ path.rConicTo(200, 400, 100, 200, 0);
 rCubicTo(ctrlX1: number, ctrlY1: number, ctrlX2: number, ctrlY2: number, endX: number, endY: number): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的三阶贝塞尔曲线。 与[cubicTo](#cubicto)使用绝对坐标不同，rCubicTo使用相对于当前路径最后点位置的偏移量在当前路径上 添加三阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的三阶贝塞尔曲线。与[cubicTo](#cubicto)使用绝对坐标不同，rCubicTo使用相对于当前路径最后点位置的偏移量在当前路径上添加三阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1655,12 +1682,12 @@ rCubicTo(ctrlX1: number, ctrlY1: number, ctrlX2: number, ctrlY2: number, endX: n
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ctrlX1 | number | 是 | 第一个控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| ctrlY1 | number | 是 | 第一个控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| ctrlX2 | number | 是 | 第二个控制点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| ctrlY2 | number | 是 | 第二个控制点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| endX | number | 是 | 目标点相对于路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| endY | number | 是 | 目标点相对于路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlX1 | number | 是 | 第一个控制点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlY1 | number | 是 | 第一个控制点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlX2 | number | 是 | 第二个控制点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| ctrlY2 | number | 是 | 第二个控制点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| endX | number | 是 | 目标点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| endY | number | 是 | 目标点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
@@ -1753,7 +1780,7 @@ console.info('empty : ', empty);
 rLineTo(dx: number, dy: number): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。 与[lineTo](#lineto)使用绝对坐标不同，rLineTo使用相对于当前路径最后点位置的偏移量来指定目标点。 当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当目标点位置固定时，推荐使用绝对坐标方法。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的线段。与[lineTo](#lineto)使用绝对坐标不同，rLineTo使用相对于当前路径最后点位置的偏移量来指定目标点。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当目标点位置固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1765,8 +1792,8 @@ rLineTo(dx: number, dy: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | number | 是 | 目标点相对于当前路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| dy | number | 是 | 目标点相对于当前路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dx | number | 是 | 目标点相对于当前路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dy | number | 是 | 目标点相对于当前路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
@@ -1789,7 +1816,7 @@ path.rLineTo(400, 200);
 rMoveTo(dx: number, dy: number): void
 ```
 
-设置一个相对于当前路径最后点位置（若路径没有内容则默认为 (0, 0)）的路径起始点位置。 与[moveTo](#moveto)使用绝对坐标不同，rMoveTo使用相对于当前路径最后点位置的偏移量。 当路径需要基于当前位置动态构建时，推荐使用相对坐标方法（如rMoveTo、rLineTo等）；当路径起点固定时，推荐使用绝对坐标方法。
+设置一个相对于当前路径最后点位置（若路径没有内容则默认为 (0, 0)）的路径起始点位置。与[moveTo](#moveto)使用绝对坐标不同，rMoveTo使用相对于当前路径最后点位置的偏移量。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法（如rMoveTo、rLineTo等）；当路径起点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1801,8 +1828,8 @@ rMoveTo(dx: number, dy: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx | number | 是 | 路径新起始点相对于当前路径最后点位置的x轴偏移量， 正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
-| dy | number | 是 | 路径新起始点相对于当前路径最后点位置的y轴偏移量， 正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dx | number | 是 | 路径新起始点相对于当前路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dy | number | 是 | 路径新起始点相对于当前路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
@@ -1825,7 +1852,7 @@ path.rMoveTo(10, 10);
 rQuadTo(dx1: number, dy1: number, dx2: number, dy2: number): void
 ```
 
-使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的二阶贝塞尔曲线。 与[quadTo](#quadto)使用绝对坐标不同，rQuadTo使用相对于当前路径最后点位置的偏移量在当前路径上 添加二阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
+使用相对位置添加一条从路径最后点位置（若路径没有内容则默认为 (0, 0)）到目标点位置的二阶贝塞尔曲线。与[quadTo](#quadto)使用绝对坐标不同，rQuadTo使用相对于当前路径最后点位置的偏移量在当前路径上添加二阶贝塞尔曲线。当路径需要基于当前位置动态构建时，推荐使用相对坐标方法；当路径目标点固定时，推荐使用绝对坐标方法。
 
 **起始版本：** 12
 
@@ -1837,10 +1864,10 @@ rQuadTo(dx1: number, dy1: number, dx2: number, dy2: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dx1 | number | 是 | 控制点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
-| dy1 | number | 是 | 控制点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
-| dx2 | number | 是 | 目标点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
-| dy2 | number | 是 | 目标点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。 单位为物理像素px。 |
+| dx1 | number | 是 | 控制点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dy1 | number | 是 | 控制点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dx2 | number | 是 | 目标点相对于路径最后点位置的x轴偏移量，正数往x轴正方向偏移，负数往x轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
+| dy2 | number | 是 | 目标点相对于路径最后点位置的y轴偏移量，正数往y轴正方向偏移，负数往y轴负方向偏移，该参数为浮点数。单位为物理像素px。 |
 
 **错误码：**
 
@@ -1875,7 +1902,7 @@ set(src: Path): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 用于替换当前路径内容的源路径对象。 |
+| src | Path | 是 | 用于替换当前路径内容的源路径对象。 |
 
 **示例**
 
@@ -1939,8 +1966,8 @@ setLastPoint(x: number, y: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | 指定点的x轴坐标，该参数为浮点数。 0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
-| y | number | 是 | 指定点的y轴坐标，该参数为浮点数。 0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
+| x | number | 是 | 指定点的x轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点左侧，正数表示位于坐标原点右侧。单位为物理像素px。 |
+| y | number | 是 | 指定点的y轴坐标，该参数为浮点数。0表示坐标原点，负数表示位于坐标原点上侧，正数表示位于坐标原点下侧。单位为物理像素px。 |
 
 **示例**
 
@@ -1998,7 +2025,7 @@ transform(matrix: Matrix): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 表示对路径进行矩阵变换所使用的矩阵对象，该矩阵定义了变换的具体参数 （如缩放比例、旋转角度、平移距离等），路径中的所有点将按照该矩阵进行变换。 |
+| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 | 表示对路径进行矩阵变换所使用的矩阵对象，该矩阵定义了变换的具体参数（如缩放比例、旋转角度、平移距离等），路径中的所有点将按照该矩阵进行变换。 |
 
 **错误码：**
 

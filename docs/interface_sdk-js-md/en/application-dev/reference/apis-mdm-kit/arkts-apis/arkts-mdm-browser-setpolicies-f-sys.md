@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import browser from '@kit.MDMKit';
+import { browser } from '@kit.MDMKit';
 ```
 
 ## setPolicies
@@ -105,7 +105,7 @@ Sets the browsing policy for a specified browser. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object is thrown when the browser policy fails to be set. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when the browser policy fails to be set. |
 
 **Error codes:**
 

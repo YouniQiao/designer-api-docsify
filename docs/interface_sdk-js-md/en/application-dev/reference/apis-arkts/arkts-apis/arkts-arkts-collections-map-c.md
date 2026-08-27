@@ -6,8 +6,9 @@ A non-linear data structure.
 > 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
-- K: key.
-- V: value.
+
+- K: key.  
+- V: value.  
 The K and V types must be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
 
 **Since:** 12
@@ -110,7 +111,7 @@ A constructor used to create an ArkTS map.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | Iterable & lt;readonly [K, V] & gt; | Yes | Object used to construct the ArkTS map. |
+| iterable | Iterable&lt;readonly [K, V]&gt; | Yes | Object used to construct the ArkTS map. |
 
 **Error codes:**
 
@@ -231,7 +232,7 @@ Calls a callback function for each key-value pair in this ArkTS map.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: V, key: K, map: Map & lt;K, V & gt;) = & gt; void | Yes | Callback function to run for each key-value pair. |
+| callbackFn | (value: V, key: K, map: Map&lt;K, V&gt;) =&gt; void | Yes | Callback function to run for each key-value pair. |
 
 **Error codes:**
 
@@ -395,7 +396,7 @@ Updates this ArkTS map with key-value pairs from the specified ArkTS Map.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | Map & lt;K, V & gt; | Yes | ArkTS Map that provides key-value pairs. |
+| from | Map&lt;K, V&gt; | Yes | ArkTS Map that provides key-value pairs. |
 
 **Error codes:**
 
@@ -499,7 +500,7 @@ Adds or updates a key-value pair to this ArkTS map.
 
 | Type | Description |
 | --- | --- |
-| Map & lt;K, V & gt; | New map obtained. |
+| Map&lt;K, V&gt; | New map obtained. |
 
 **Error codes:**
 

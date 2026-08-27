@@ -23,7 +23,13 @@
 (value?: { fingers?: number; repeat?: boolean; duration?: number }): LongPressGestureInterface
 ```
 
-创建长按手势对象。继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)。当组件默认支持可拖拽时，如Text、TextInput、TextArea、HyperLink、Image和RichEditor等组件。长按手势与拖拽会出现冲突，事件优先级如下：当长按触发时间小于500毫秒时，系统优先响应长按事件而非拖拽事件。当长按触发时间达到或超过500毫秒时，系统优先响应拖拽事件而非长按事件。
+创建长按手势对象。继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)。
+
+当组件默认支持可拖拽时，如Text、TextInput、TextArea、HyperLink、Image和RichEditor等组件。长按手势与拖拽会出现冲突，事件优先级如下：
+
+当长按触发时间小于500毫秒时，系统优先响应长按事件而非拖拽事件。
+
+当长按触发时间达到或超过500毫秒时，系统优先响应拖拽事件而非长按事件。
 
 **起始版本：** 7
 
@@ -49,7 +55,13 @@
 (options?: LongPressGestureHandlerOptions): LongPressGestureInterface
 ```
 
-创建长按手势对象。与LongPressGesture)}相比， options参数新增了对isFingerCountLimited参数，表示是否检查触摸屏幕的手指数量。当组件默认支持可拖拽时，如Text、TextInput、TextArea、HyperLink、Image和RichEditor等组件。长按手势与拖拽会出现冲突，事件优先级如下：当长按触发时间小于500毫秒时，系统优先响应长按事件而非拖拽事件。当长按触发时间达到或超过500毫秒时，系统优先响应拖拽事件而非长按事件。
+创建长按手势对象。与LongPressGesture)}相比，options参数新增了对isFingerCountLimited参数，表示是否检查触摸屏幕的手指数量。
+
+当组件默认支持可拖拽时，如Text、TextInput、TextArea、HyperLink、Image和RichEditor等组件。长按手势与拖拽会出现冲突，事件优先级如下：
+
+当长按触发时间小于500毫秒时，系统优先响应长按事件而非拖拽事件。
+
+当长按触发时间达到或超过500毫秒时，系统优先响应拖拽事件而非长按事件。
 
 **起始版本：** 15
 
@@ -89,7 +101,7 @@ onAction(event: (event: GestureEvent) => void): LongPressGestureInterface
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 | 长按手势识别成功回调函数。 |
+| event | (event: GestureEvent) =&gt; void | 是 | 长按手势识别成功回调函数。 |
 
 **返回值：**
 
@@ -115,7 +127,7 @@ onActionCancel(event: () => void): LongPressGestureInterface
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | () = & gt; void | 是 | 长按手势取消回调函数。 |
+| event | () =&gt; void | 是 | 长按手势取消回调函数。 |
 
 **返回值：**
 
@@ -169,7 +181,7 @@ onActionEnd(event: (event: GestureEvent) => void): LongPressGestureInterface
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | 是 | 长按手势结束回调函数。 |
+| event | (event: GestureEvent) =&gt; void | 是 | 长按手势结束回调函数。 |
 
 **返回值：**
 

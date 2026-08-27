@@ -1,6 +1,8 @@
 # AgentProxy (System API)
 
-The proxy object of the AgentExtensionAbility, used to send messages to the AgentExtensionAbility, etc.@interface AgentProxy
+The proxy object of the AgentExtensionAbility, used to send messages to the AgentExtensionAbility, etc.
+
+@interface AgentProxy
 
 **Since:** 24
 

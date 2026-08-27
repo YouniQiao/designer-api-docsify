@@ -11,7 +11,6 @@ In addition to the [universal attributes](arkts-arkui-commonmethod-c.md), the fo
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## antiAlias
@@ -78,7 +77,7 @@ Sets the opacity of the fill area. This attribute can be dynamically set using a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Opacity of the fill area.   **NOTE：**For the number type, the value range is [0.0, 1.0]. A value less than 0.0 is treated as **0.0**. A value greater than 1.0 is treated as **1.0**. Any other invalid value is treated as **1.0**.For the string type, the value is a character string of the number type. The value range is the same as that of the number type.For the Resource type, the value is a character string from the system resource or application resource. The value range is the same as that of the number type.Default value: **1.0 |
+| value | number \| string \| Resource | Yes | Opacity of the fill area.   **NOTE：**For the number type, the value range is [0.0, 1.0]. A value less than 0.0 is treated as **0.0**. A value greater than 1.0 is treated as **1.0**. Any other invalid value is treated as **1.0**.For the string type, the value is a character string of the number type. The value range is the same as that of the number type.For the Resource type, the value is a character string from the system resource or application resource. The value range is the same as that of the number type.Default value: **1.0 |
 
 ## mesh
 
@@ -108,7 +107,7 @@ Sets the mesh effect. An image is divided into (row + 1) × (column + 1) meshes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array & lt;any & gt; | Yes | Array with a length of (row + 1) × (column + 1) × 2, which records the position of each vertex of the distorted bitmap.Invalid values **undefined** and **null** are treated as an empty array. If the value is set to an empty array, the values of **column** and **row** are handled as **0**, and the value is handled as an empty array. |
+| value | Array&lt;any&gt; | Yes | Array with a length of (row + 1) × (column + 1) × 2, which records the position of each vertex of the distorted bitmap.Invalid values **undefined** and **null** are treated as an empty array. If the value is set to an empty array, the values of **column** and **row** are handled as **0**, and the value is handled as an empty array. |
 | column | number | Yes | Number of mesh matrix columns.If the value is **undefined**, **null**, **NaN**, or **Infinity**, the values of **column** and **row** are treated as **0**, and the value of **value** is treated as an empty array. |
 | row | number | Yes | Number of mesh matrix rows.If the value is **undefined**, **null**, **NaN**, or **Infinity**, the values of **column** and **row** are treated as **0**, and the value of **value** is treated as an empty array. |
 
@@ -154,7 +153,7 @@ Sets the stroke dashes. This attribute can be dynamically set using attributeMod
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array & lt;any & gt; | Yes | Array defining the dash pattern for the shape outline. Elements alternate between dash length and gap length.Default value: **[]** (empty array)Default unit: vp The **undefined** and **null** values are invalid and treated as the default value.   **NOTE：**Empty array: solid line Even- numbered array: Elements cycle sequentially, for example, [a, b, c, d] represents: dash a - & gt; gap b - & gt; dash c - & gt; gap d - & gt; dash a - & gt; ...Odd-numbered array: Elements are duplicated to create an even-numbered array, for example, [a, b, c] becomes [a, b, c, a, b, c], representing: dash a - & gt; gap b - & gt; dash c - & gt; gap a - & gt; dash b - & gt; gap c - & gt; dash a - & gt; ... |
+| value | Array&lt;any&gt; | Yes | Array defining the dash pattern for the shape outline. Elements alternate between dash length and gap length.Default value: **[]** (empty array)Default unit: vp The **undefined** and **null** values are invalid and treated as the default value.   **NOTE：**Empty array: solid line Even- numbered array: Elements cycle sequentially, for example, [a, b, c, d] represents: dash a -&gt; gap b -&gt; dash c -&gt; gap d -&gt; dash a -&gt; ...Odd-numbered array: Elements are duplicated to create an even-numbered array, for example, [a, b, c] becomes [a, b, c, a, b, c], representing: dash a -&gt; gap b -&gt; dash c -&gt; gap a -&gt; dash b -&gt; gap c -&gt; dash a -&gt; ... |
 
 ## strokeDashOffset
 
@@ -228,7 +227,9 @@ Sets the join style of the stroke. This attribute can be dynamically set using a
 strokeMiterLimit(value: Length)
 ```
 
-Sets the limit on the ratio of the miter length to the value of stroke width used to draw a miter join. This attribute can be dynamically set using attributeModifier. The miter length indicates the distance from the outer tip to the inner corner of the miter. The border width is the value of **strokeWidth**. This attribute works only when **strokeLineJoin** is set to **LineJoinStyle.Miter**.The value must be greater than or equal to 1.0. If the value is in the [0, 1) range, the value **1.0** will be used. In other cases, the default value will be used.
+Sets the limit on the ratio of the miter length to the value of stroke width used to draw a miter join. This attribute can be dynamically set using attributeModifier. The miter length indicates the distance from the outer tip to the inner corner of the miter. The border width is the value of **strokeWidth**. This attribute works only when **strokeLineJoin** is set to **LineJoinStyle.Miter**.
+
+The value must be greater than or equal to 1.0. If the value is in the [0, 1) range, the value **1.0** will be used. In other cases, the default value will be used.
 
 **Since:** 7
 
@@ -264,7 +265,7 @@ Sets the stroke opacity. This attribute can be dynamically set using attributeMo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Stroke opacity.Default value: opacity set by the [stroke](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-shape.md#stroke) API Invalid value **NaN** is treated as **0.0**, while invalid values **undefined**, **null**, and **Infinity** are treated as **1.0**. |
+| value | number \| string \| Resource | Yes | Stroke opacity.Default value: opacity set by the [stroke](../../../reference/apis-arkui/arkui-ts/ts-drawing-components-shape.md#stroke) API Invalid value **NaN** is treated as **0.0**, while invalid values **undefined**, **null**, and **Infinity** are treated as **1.0**. |
 
 ## strokeWidth
 

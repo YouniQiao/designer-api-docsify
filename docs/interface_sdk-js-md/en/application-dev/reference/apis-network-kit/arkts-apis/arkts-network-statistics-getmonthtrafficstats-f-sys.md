@@ -33,7 +33,7 @@ Get this month traffic data of the cellular network.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | The statistics of the simId in this month. |
+| Promise&lt;number&gt; | The statistics of the simId in this month. |
 
 **Error codes:**
 

@@ -11,7 +11,7 @@ Defines an intent filter, which specifies the criteria for selecting target inte
 ## Modules to Import
 
 ```TypeScript
-import insightIntentDriver from '@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -92,8 +92,11 @@ Module name of the application to which the intent belongs.
 userId?: number
 ```
 
-ID of the user to which the intent belongs.  
-**NOTE：**If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
+ID of the user to which the intent belongs.
+
+**NOTE：**
+
+If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
 
 **Type:** number
 

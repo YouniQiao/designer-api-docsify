@@ -17,7 +17,11 @@ Provides size information of the **DrawingRenderingContext** object.
 height: number
 ```
 
-Height of the **DrawingRenderingContext** object, which corresponds to the height of the associated **Canvas** component.Default unit: vp.If the unit mode of the **DrawingRenderingContext** object is set to px, the unit is px.
+Height of the **DrawingRenderingContext** object, which corresponds to the height of the associated **Canvas** component.
+
+Default unit: vp.
+
+If the unit mode of the **DrawingRenderingContext** object is set to px, the unit is px.
 
 **Type:** number
 
@@ -69,7 +73,11 @@ struct OffscreenCanvasPage {
 width: number
 ```
 
-Width of the **DrawingRenderingContext** object, which corresponds to the width of the associated **Canvas** component.Default unit: vp.If the unit mode of the **DrawingRenderingContext** object is set to px, the unit is px.
+Width of the **DrawingRenderingContext** object, which corresponds to the width of the associated **Canvas** component.
+
+Default unit: vp.
+
+If the unit mode of the **DrawingRenderingContext** object is set to px, the unit is px.
 
 **Type:** number
 

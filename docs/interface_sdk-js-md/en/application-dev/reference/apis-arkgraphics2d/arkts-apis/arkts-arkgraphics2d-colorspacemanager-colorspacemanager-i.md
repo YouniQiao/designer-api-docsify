@@ -1,6 +1,8 @@
 # ColorSpaceManager
 
-Implements management of color space objects.Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md) to create a color space manager.
+Implements management of color space objects.
+
+Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md) to create a color space manager.
 
 **Since:** 9
 
@@ -9,7 +11,7 @@ Implements management of color space objects.Before calling any of the following
 ## Modules to Import
 
 ```TypeScript
-import colorSpaceManager from '@kit.ArkGraphics2D';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## getColorSpaceName
@@ -28,7 +30,7 @@ Obtains the color space type.
 
 | Type | Description |
 | --- | --- |
-| [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) | Color space type. |
+| ColorSpace | Color space type. |
 
 **Error codes:**
 
@@ -100,7 +102,7 @@ Obtains the coordinates of the white point in the color space.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Coordinates [x, y] of the white point. |
+| Array&lt;number&gt; | Coordinates [x, y] of the white point. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # NativeMediaPlayerConfig
 
-用于配置应用接管网页媒体播放功能接口[enableNativeMediaPlayer](arkts-arkweb-web-attribute.md#enablenativemediaplayer)的功能，支持是否开启及是否覆盖网页内容。适用于需要自定义媒体 播放行为的场景，提升媒体播放的集成度和用户体验。
+用于配置应用接管网页媒体播放功能接口[enableNativeMediaPlayer](arkts-arkweb-web-attribute.md#enablenativemediaplayer)的功能，支持是否开启及是否覆盖网页内容。适用于需要自定义媒体播放行为的场景，提升媒体播放的集成度和用户体验。
 
 **起始版本：** 12
 
@@ -9,9 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## enable
@@ -20,7 +17,11 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 enable: boolean
 ```
 
-是否开启应用接管网页媒体播放功能。true表示开启应用接管网页媒体播放功能，false表示关闭该功能。默认值：false。
+是否开启应用接管网页媒体播放功能。
+
+true表示开启应用接管网页媒体播放功能，false表示关闭该功能。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -36,7 +37,11 @@ enable: boolean
 shouldOverlay: boolean
 ```
 
-开启应用接管网页媒体播放功能后，应用接管网页视频的播放器画面是否覆盖网页内容。true表示改变视频图层的层级，覆盖网页内容。false表示保持原层级，嵌入在网页中。默认值：false。
+开启应用接管网页媒体播放功能后，应用接管网页视频的播放器画面是否覆盖网页内容。
+
+true表示改变视频图层的层级，覆盖网页内容。false表示保持原层级，嵌入在网页中。
+
+默认值：false。
 
 **类型：** boolean
 

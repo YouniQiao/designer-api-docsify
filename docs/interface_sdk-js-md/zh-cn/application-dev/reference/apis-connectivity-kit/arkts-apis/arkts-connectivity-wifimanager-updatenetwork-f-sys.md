@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## updateNetwork
@@ -27,13 +26,13 @@ function updateNetwork(config: WifiDeviceConfig): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 | 表示要更新的WLAN配置。 |
+| config | WifiDeviceConfig | 是 | 表示要更新的WLAN配置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 更新成功时返回更新后的WLAN配置中的网络ID； 如果列表中不包含指定的WLAN配置，则返回{ |
+| number | 更新成功时返回更新后的WLAN配置中的网络ID；如果列表中不包含指定的WLAN配置，则返回{ |
 
 **错误码：**
 

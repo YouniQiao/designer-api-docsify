@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wallpaper from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## isOperationAllowed
@@ -59,7 +59,7 @@ function isOperationAllowed(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | 异步回调函数，返回是否允许用户设置壁纸。如果允许返回true，否则返回false。 |
+| Promise&lt;boolean&gt; | 异步回调函数，返回是否允许用户设置壁纸。如果允许返回true，否则返回false。 |
 
 **示例**
 

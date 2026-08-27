@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import securityManager from '@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## uninstallUserCertificate
@@ -33,7 +33,7 @@ Uninstalls a user certificate. This API uses a promise to return the result. Thi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object is thrown when a user certificate fails to be uninstalled. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when a user certificate fails to be uninstalled. |
 
 **Error codes:**
 

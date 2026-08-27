@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## getSupportedProcessCachePids
@@ -38,7 +38,7 @@ Obtains the PIDs of processes that support quick startup after caching in a spec
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return an array containing the PIDs. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return an array containing the PIDs. |
 
 **Error codes:**
 

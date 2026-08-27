@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## constructTLSSocketInstance
@@ -53,7 +53,7 @@ function constructTLSSocketInstance(tcpSocket: TCPSocket): TLSSocket
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tcpSocket | [TCPSocket](arkts-network-socket-tcpsocket-i.md) | 是 | 需要进行升级的TCPSocket对象。 |
+| tcpSocket | TCPSocket | 是 | 需要进行升级的TCPSocket对象。 |
 
 **返回值：**
 

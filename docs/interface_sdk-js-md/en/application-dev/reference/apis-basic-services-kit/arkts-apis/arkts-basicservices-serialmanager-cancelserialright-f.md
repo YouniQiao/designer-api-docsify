@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import serialManager from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## cancelSerialRight

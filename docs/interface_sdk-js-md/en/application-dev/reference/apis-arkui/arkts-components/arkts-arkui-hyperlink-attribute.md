@@ -1,6 +1,8 @@
 # Hyperlink properties/events
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
+
+The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
 
 **Inheritance/Implementation:** HyperlinkAttribute extends CommonMethod<HyperlinkAttribute>
 
@@ -31,4 +33,4 @@ Sets the color of the hyperlink text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Color \| number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Color of the hyperlink text<!--RP1-->Default value: '#ff0 07dff', indicating blue.<!--RP1End--> |
+| value | Color \| number \| string \| Resource | Yes | Color of the hyperlink text<!--RP1-->Default value: '#ff0 07dff', indicating blue.<!--RP1End--> |

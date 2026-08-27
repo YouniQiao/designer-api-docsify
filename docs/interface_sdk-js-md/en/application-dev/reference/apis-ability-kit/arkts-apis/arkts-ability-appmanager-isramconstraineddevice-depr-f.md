@@ -25,7 +25,7 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the API call result and the result indicating whether the device is RAM-constrained. You can perform error handling or custom processing in this callback. **true** if the device is RAM -constrained, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the API call result and the result indicating whether the device is RAM-constrained. You can perform error handling or custom processing in this callback. **true** if the device is RAM -constrained, **false** otherwise. |
 
 **Examples**
 

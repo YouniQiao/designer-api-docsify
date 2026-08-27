@@ -8,7 +8,7 @@
   - [DataAbilityResult](arkts-ability-ability-dataabilityresult-t.md)
   - [PacMap](arkts-ability-ability-pacmap-t.md)
   - [StartAbilityParameter](arkts-ability-ability-startabilityparameter-t.md)
-- [@ohos.ability.dataUriUtils](arkts-ability-datauriutils.md)
+- [@ohos.ability.dataUriUtils(DataUriUtils模块)](arkts-ability-datauriutils.md)
   - [attachId](arkts-ability-datauriutils-attachid-depr-f.md)
   - [deleteId](arkts-ability-datauriutils-deleteid-depr-f.md)
   - [getId](arkts-ability-datauriutils-getid-depr-f.md)
@@ -43,7 +43,7 @@
   - [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md)
   - [terminateSelf](arkts-ability-particleability-terminateself-f.md)
   - [ErrorCode](arkts-ability-particleability-errorcode-e.md)
-- [@ohos.ability.screenLockFileManager](arkts-ability-screenlockfilemanager.md)
+- [@ohos.ability.screenLockFileManager(锁屏敏感数据管理)](arkts-ability-screenlockfilemanager.md)
   - [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md)
   <!--Del-->
   - [acquireAccess(系统接口)](arkts-ability-screenlockfilemanager-acquireaccess-f-sys.md)<!--DelEnd-->
@@ -63,7 +63,7 @@
   - [Flags](arkts-ability-wantconstant-flags-depr-e.md)
   <!--Del-->
   - [Flags(系统接口)](arkts-ability-wantconstant-flags-depr-e-sys.md)<!--DelEnd-->
-- [@ohos.abilityAccessCtrl](arkts-abilityaccessctrl.md)
+- [@ohos.abilityAccessCtrl(程序访问控制管理)](arkts-abilityaccessctrl.md)
   - [abilityAccessCtrl](arkts-ability-abilityaccessctrl-n.md)
     - [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md)
     - [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md)
@@ -82,7 +82,7 @@
   - [Context](arkts-ability-context-t.md)
   - [PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)
 <!--Del-->
-- [@ohos.abilityToolAccessCtrl](arkts-abilitytoolaccessctrl.md)<!--DelEnd-->
+- [@ohos.abilityToolAccessCtrl(This module provides the capabilities of tools access control)](arkts-abilitytoolaccessctrl.md)<!--DelEnd-->
   <!--Del-->
   - [generateControlledDevicePackage(系统接口)](arkts-ability-abilitytoolaccessctrl-generatecontrolleddevicepackage-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -325,7 +325,7 @@
 - [@ohos.app.ability.appMemoryOptimizer](arkts-app-ability-appmemoryoptimizer.md)
   - [evictFilePages](arkts-ability-appmemoryoptimizer-evictfilepages-f.md)
   - [evictModuleFilePages](arkts-ability-appmemoryoptimizer-evictmodulefilepages-f.md)
-- [@ohos.app.ability.appRecovery](arkts-app-ability-apprecovery.md)
+- [@ohos.app.ability.appRecovery(应用故障恢复)](arkts-app-ability-apprecovery.md)
   - [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)
   - [restartApp](arkts-ability-apprecovery-restartapp-f.md)
   - [saveAppState](arkts-ability-apprecovery-saveappstate-f.md)
@@ -495,7 +495,7 @@
   - [EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md)
 - [@ohos.app.ability.EnvironmentCallback](arkts-app-ability-environmentcallback.md)
   - [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md)
-- [@ohos.app.ability.errorManager](arkts-app-ability-errormanager.md)
+- [@ohos.app.ability.errorManager(错误管理模块)](arkts-app-ability-errormanager.md)
   - [off](arkts-ability-errormanager-off-f.md)
   - [on](arkts-ability-errormanager-on-f.md)
   - [setDefaultErrorHandler](arkts-ability-errormanager-setdefaulterrorhandler-f.md)
@@ -513,7 +513,7 @@
   - [ResourceType](arkts-ability-errormanager-resourcetype-e.md)
 - [@ohos.app.ability.ExtensionAbility](arkts-app-ability-extensionability.md)
   - [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
-- [@ohos.app.ability.hyperSnapManager](arkts-app-ability-hypersnapmanager.md)
+- [@ohos.app.ability.hyperSnapManager(应用快启管理)](arkts-app-ability-hypersnapmanager.md)
   - [requestRebuildHyperSnap](arkts-ability-hypersnapmanager-requestrebuildhypersnap-f.md)
   - [setHyperSnapEnabled](arkts-ability-hypersnapmanager-sethypersnapenabled-f.md)
 - [@ohos.app.ability.insightIntent](arkts-app-ability-insightintent.md)
@@ -660,7 +660,7 @@
   - [ApplicationQuickFixInfo(系统接口)](arkts-ability-quickfixmanager-applicationquickfixinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [HapModuleQuickFixInfo(系统接口)](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md)<!--DelEnd-->
-- [@ohos.app.ability.scriptManager](arkts-app-ability-scriptmanager.md)
+- [@ohos.app.ability.scriptManager(脚本管理)](arkts-app-ability-scriptmanager.md)
   - [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md)
   - [ArkTSScriptInfo](arkts-ability-scriptmanager-arktsscriptinfo-i.md)
   - [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md)
@@ -682,7 +682,7 @@
   - [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
   <!--Del-->
   - [StartOptions(系统接口)](arkts-ability-app-ability-startoptions-startoptions-c-sys.md)<!--DelEnd-->
-- [@ohos.app.ability.systemConfiguration](arkts-app-ability-systemconfiguration.md)
+- [@ohos.app.ability.systemConfiguration(系统环境模块)](arkts-app-ability-systemconfiguration.md)
   - [UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md)
   - [OnColorModeUpdatedFn](arkts-ability-systemconfiguration-oncolormodeupdatedfn-t.md)
   - [OnFontIdUpdatedFn](arkts-ability-systemconfiguration-onfontidupdatedfn-t.md)
@@ -779,7 +779,7 @@
   - [registerAgentCard(系统接口)](arkts-ability-agentmanager-registeragentcard-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateAgentCard(系统接口)](arkts-ability-agentmanager-updateagentcard-f-sys.md)<!--DelEnd-->
-- [@ohos.app.agent.AgentUIExtensionAbility](arkts-app-agent-agentuiextensionability.md)
+- [@ohos.app.agent.AgentUIExtensionAbility(带界面的智能体扩展组件)](arkts-app-agent-agentuiextensionability.md)
   - [AgentUIExtensionAbility](arkts-ability-app-agent-agentuiextensionability-agentuiextensionability-c.md)
 - [@ohos.app.appstartup.StartupConfig](arkts-app-appstartup-startupconfig.md)
   - [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md)
@@ -1446,7 +1446,7 @@
   - [MissionParameter(系统接口)](arkts-ability-distributedmissionmanager-missionparameter-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ContinueState(系统接口)](arkts-ability-distributedmissionmanager-continuestate-e-sys.md)<!--DelEnd-->
-- [@ohos.privacyManager](arkts-privacymanager.md)
+- [@ohos.privacyManager(Privacy Management)](arkts-privacymanager.md)
   <!--Del-->
   - [addPermissionUsedRecord(系统接口)](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md)<!--DelEnd-->
   <!--Del-->

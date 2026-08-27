@@ -34,6 +34,8 @@ Create TextTimer component.
 
 | Name | Description |
 | --- | --- |
+| [TextTimerConfiguration](arkts-arkui-texttimerconfiguration-i.md) | Defines the **TextTimer** configuration used by the **ContentModifier** API. |
+| [TextTimerOptions](arkts-arkui-texttimeroptions-i.md) | Sets the options used to build the **TextTimer** component. |
 
 ## Examples
 

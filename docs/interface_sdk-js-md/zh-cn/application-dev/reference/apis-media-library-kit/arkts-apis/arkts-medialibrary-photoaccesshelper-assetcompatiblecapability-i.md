@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## supportedHighResolution
@@ -18,7 +18,8 @@ import photoAccessHelper from '@kit.MediaLibraryKit';
 supportedHighResolution: boolean
 ```
 
-是否支持启用高分辨率资产。true表示支持，false表示不支持。  
+是否支持启用高分辨率资产。true表示支持，false表示不支持。
+
 **原子化服务API:** 从API version 24开始，该接口支持在原子化服务中使用。
 
 **类型：** boolean
@@ -37,7 +38,8 @@ supportedHighResolution: boolean
 supportedMimeType?: Array<string>
 ```
 
-支持MIME types的类型。  
+支持MIME types的类型。
+
 - 配置image/heic表示应用支持heif格式。  
 - 配置image/jpeg表示应用仅支持jpeg格式不支持heif格式。
 

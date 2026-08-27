@@ -1,6 +1,8 @@
 # FavoriteData
 
-收藏/订阅的定义。@interface FavoriteData
+收藏/订阅的定义。
+
+@interface FavoriteData
 
 **起始版本：** 23
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## favCounts

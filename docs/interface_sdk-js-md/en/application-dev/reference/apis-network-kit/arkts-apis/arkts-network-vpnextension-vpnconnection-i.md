@@ -9,7 +9,7 @@ Defines a VPN connection object. Before calling **VpnConnection** APIs, you need
 ## Modules to Import
 
 ```TypeScript
-import vpnExtension from '@kit.NetworkKit';
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## create
@@ -34,13 +34,13 @@ Creates a VPN based on the specified configuration. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [VpnConfig](arkts-network-vpnextension-vpnconfig-i.md) | Yes | VPN configuration. |
+| config | VpnConfig | Yes | VPN configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result, which is the file descriptor of the virtual network interface card (vNIC). |
+| Promise&lt;number&gt; | Promise used to return the result, which is the file descriptor of the virtual network interface card (vNIC). |
 
 **Error codes:**
 
@@ -148,7 +148,7 @@ Destroys a VPN. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -201,7 +201,7 @@ Destroys a VPN based on the specified VPN ID. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -237,7 +237,9 @@ export default class MyVpnExtAbility extends VpnExtensionAbility {
 generateVpnId(): Promise<string>
 ```
 
-Generates a unique VPN ID. This API uses a promise to return the result.To use the multi-VPN capability of the system, you need to call this API to generate a VPN ID and configure it in **VpnConfig**.
+Generates a unique VPN ID. This API uses a promise to return the result.
+
+To use the multi-VPN capability of the system, you need to call this API to generate a VPN ID and configure it in **VpnConfig**.
 
 > **NOTE：**
 > 
@@ -251,7 +253,7 @@ Generates a unique VPN ID. This API uses a promise to return the result.To use t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -302,7 +304,7 @@ Protects sockets against a VPN connection. The data sent through sockets is dire
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -362,7 +364,7 @@ Protects application processes against a VPN connection. The data sent through t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

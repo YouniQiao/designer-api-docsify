@@ -1,7 +1,9 @@
 # @ohos.dlpSetDlpFeature(DLP)
 
-This module provides APIs for controlling the Data Loss Prevention (DLP) feature, including enabling or disabling the DLP feature and returning the DLP status. It helps enterprises meet data security compliance requirements and implement access control and encryption protection for confidential files.  
-**Use scenarios**  
+This module provides APIs for controlling the Data Loss Prevention (DLP) feature, including enabling or disabling the DLP feature and returning the DLP status. It helps enterprises meet data security compliance requirements and implement access control and encryption protection for confidential files.
+
+**Use scenarios**
+
 - Data security compliance requirements must be met.  
 - Access control and encryption protection are provided for confidential files.
 
@@ -21,7 +23,7 @@ This module provides APIs for controlling the Data Loss Prevention (DLP) feature
 ## Modules to Import
 
 ```TypeScript
-import dlpSetDlpFeature from '@kit.DataProtectionKit';
+import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 ```
 
 ## Summary
@@ -31,7 +33,7 @@ import dlpSetDlpFeature from '@kit.DataProtectionKit';
 
 | Name | Description |
 | --- | --- |
-| [setDlpFeature(DLP)](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md) | Sets the DLP status. This API uses a promise to return the result. The system enables or disables the DLP protection function based on the DLP status specified using this API.When this feature is enabled, right-click the file to be encrypted, and the encryption option is displayed in the shortcut menu. Files in .txt, .pdf, .xls, .xlsx, .ppt, .pptx, .doc, and .docx formats can be encrypted.This API is used to enable or disable the DLP function in enterprise policies. |
+| [setDlpFeature](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md) | Sets the DLP status. This API uses a promise to return the result. The system enables or disables the DLP protection function based on the DLP status specified using this API. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -39,8 +41,8 @@ import dlpSetDlpFeature from '@kit.DataProtectionKit';
 
 | Name | Description |
 | --- | --- |
-| [DLPFeatureInfo(DLP)](arkts-dataprotection-dlpsetdlpfeature-dlpfeatureinfo-i-sys.md) | Sets the DLP status. |
-| [StatusInfoResult(DLP)](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md) | Describes the DLP settings. |
+| [DLPFeatureInfo](arkts-dataprotection-dlpsetdlpfeature-dlpfeatureinfo-i-sys.md) | Sets the DLP status. |
+| [StatusInfoResult](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md) | Describes the DLP settings. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -48,5 +50,5 @@ import dlpSetDlpFeature from '@kit.DataProtectionKit';
 
 | Name | Description |
 | --- | --- |
-| [DlpFeatureStatus(DLP)](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md) | Enumerates DLP statuses. |
+| [DlpFeatureStatus](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md) | Enumerates DLP statuses. |
 <!--DelEnd-->

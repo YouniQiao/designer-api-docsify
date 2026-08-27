@@ -9,8 +9,6 @@ A cleaner for releasing resources managed by developers through a developer-defi
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## register

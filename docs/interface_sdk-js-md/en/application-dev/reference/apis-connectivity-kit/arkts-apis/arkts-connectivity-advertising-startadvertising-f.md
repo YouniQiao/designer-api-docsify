@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import advertising from '@kit.ConnectivityKit';
+import { advertising } from '@kit.ConnectivityKit';
 ```
 
 ## startAdvertising
@@ -26,13 +26,13 @@ Starts NearLink advertising. This API uses a promise to return the result. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingParams | [AdvertisingParams](arkts-connectivity-advertising-advertisingparams-i.md) | Yes | Advertising parameters. |
+| advertisingParams | AdvertisingParams | Yes | Advertising parameters. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the advertising ID. The advertising ID is a unique ID randomly allocated. The value range is [0, 255]. Similar to [advertising.stopAdvertising]{ |
+| Promise&lt;number&gt; | Promise used to return the advertising ID. The advertising ID is a unique ID randomly allocated. The value range is [0, 255]. Similar to [advertising.stopAdvertising]{ |
 
 **Error codes:**
 

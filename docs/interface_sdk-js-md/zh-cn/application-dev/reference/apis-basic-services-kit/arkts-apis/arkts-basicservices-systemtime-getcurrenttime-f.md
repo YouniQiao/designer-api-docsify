@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import systemTime from '@kit.BasicServicesKit';
-import systemTimer from '@kit.BasicServicesKitr';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## getCurrentTime
@@ -124,13 +123,13 @@ function getCurrentTime(isNano?: boolean): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isNano | boolean | 否 | 返回结果是否为纳秒数，默认值为false。   - true：表示返回结果为纳秒数（ns）。    - false：表示返回结果为毫秒数 （ms）。 |
+| isNano | boolean | 否 | 返回结果是否为纳秒数，默认值为false。   - true：表示返回结果为纳秒数（ns）。    - false：表示返回结果为毫秒数（ms）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回自Unix纪元以来经过的时间。 |
+| Promise&lt;number&gt; | Promise对象，返回自Unix纪元以来经过的时间。 |
 
 **错误码：**
 

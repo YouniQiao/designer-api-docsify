@@ -82,7 +82,7 @@ Obtains the downlink traffic (in bytes) of the specified socket. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the downlink traffic (in bytes) of the socket. |
+| Promise&lt;number&gt; | Promise used to return the downlink traffic (in bytes) of the socket. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import batteryStats from '@kit.BasicServicesKit';
+import { batteryStats } from '@kit.BasicServicesKit';
 ```
 
 ## getHardwareUnitPowerValue
@@ -24,7 +24,7 @@ function getHardwareUnitPowerValue(type: ConsumptionType): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md) | 是 | 电量消耗类型，用于指定要查询的硬件单元耗电类型。可选值参见[ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md)， 如CONSUMPTION_TYPE_SCREEN用于查询屏幕耗电、CONSUMPTION_TYPE_BLUETOOTH用于查询蓝牙耗电、 CONSUMPTION_TYPE_WIFI用于查询无线网耗电等。 |
+| type | [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md) | 是 | 电量消耗类型，用于指定要查询的硬件单元耗电类型。可选值参见[ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md)，如CONSUMPTION_TYPE_SCREEN用于查询屏幕耗电、CONSUMPTION_TYPE_BLUETOOTH用于查询蓝牙耗电、CONSUMPTION_TYPE_WIFI用于查询无线网耗电等。 |
 
 **返回值：**
 

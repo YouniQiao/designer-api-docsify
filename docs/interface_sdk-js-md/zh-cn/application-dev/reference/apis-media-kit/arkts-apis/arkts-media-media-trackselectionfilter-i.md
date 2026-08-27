@@ -9,7 +9,7 @@ Describes the filter conditions for track selection.
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## maxAudioBitrate

@@ -27,14 +27,14 @@ function setNetExtAttribute(netHandle: NetHandle, netExtAttribute: string): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | 是 | 网络句柄。 |
+| netHandle | NetHandle | 是 | 网络句柄。 |
 | netExtAttribute | string | 是 | 需要设置的网络扩展属性。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

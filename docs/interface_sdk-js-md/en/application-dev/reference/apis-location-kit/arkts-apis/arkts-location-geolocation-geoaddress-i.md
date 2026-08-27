@@ -1,6 +1,8 @@
 # GeoAddress
 
-Data struct describes geographic locations.@interface GeoAddress
+Data struct describes geographic locations.
+
+@interface GeoAddress
 
 **Since:** 7
 
@@ -15,7 +17,7 @@ Data struct describes geographic locations.@interface GeoAddress
 ## Modules to Import
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## addressUrl

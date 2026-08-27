@@ -9,7 +9,7 @@ Defines the options of the visible interface on the screen.
 ## Modules to Import
 
 ```TypeScript
-import App, { AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } from '@kit.ArkUI';
+import { App, AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } from '@kit.ArkUI';
 ```
 
 ## complete

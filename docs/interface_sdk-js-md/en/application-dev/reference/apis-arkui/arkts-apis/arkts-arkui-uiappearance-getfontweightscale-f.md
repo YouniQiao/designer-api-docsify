@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import uiAppearance from '@kit.ArkUI';
+import { uiAppearance } from '@kit.ArkUI';
 ```
 
 ## getFontWeightScale
@@ -12,13 +12,16 @@ import uiAppearance from '@kit.ArkUI';
 function getFontWeightScale(): number
 ```
 
-Obtains the current font weight scale factor.<!--Del-->
+Obtains the current font weight scale factor.
+
+<!--Del-->
 
 > **NOTE：**
 
 > This API is a system API in API version 19 and earlier. Using this API requires the
 > [ohos.permission.UPDATE_CONFIGURATION](../../../security/AccessToken/permissions-for-system-apps.md#ohospermissionupdate_configuration)
 > permission.
+
 <!--DelEnd-->
 
 **Since:** 20

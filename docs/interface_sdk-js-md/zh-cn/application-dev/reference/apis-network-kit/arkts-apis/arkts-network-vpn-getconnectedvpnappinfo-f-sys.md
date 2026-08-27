@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import vpn from '@kit.NetworkKit';
-import vpnExtension from '@kit.NetworkKitExtension';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## getConnectedVpnAppInfo
@@ -27,7 +26,7 @@ function getConnectedVpnAppInfo(): Promise<Array<string>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | The promise returned by the connected VPN App Info. |
+| Promise&lt;Array&lt;string&gt;&gt; | The promise returned by the connected VPN App Info. |
 
 **错误码：**
 

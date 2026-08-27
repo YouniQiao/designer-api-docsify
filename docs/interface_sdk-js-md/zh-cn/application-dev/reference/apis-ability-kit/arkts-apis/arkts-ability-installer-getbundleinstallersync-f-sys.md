@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import installer from '@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## getBundleInstallerSync
@@ -24,7 +24,7 @@ function getBundleInstallerSync(): BundleInstaller
 
 | 类型 | 说明 |
 | --- | --- |
-| [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md) | BundleInstaller object. |
+| BundleInstaller | BundleInstaller object. |
 
 **错误码：**
 

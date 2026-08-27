@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemManager from '@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## startCollectLog
@@ -12,7 +12,8 @@ import systemManager from '@kit.MDMKit';
 function startCollectLog(admin: Want): Promise<void>
 ```
 
-Starts to collect the fault logs of the [FaultType](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogger-faulttype-e.md) type that have been generated and stored on the device's hard disk. The fault logs, application service logs, and system runtime logs that are not stored on the hard disk cannot be collected.  
+Starts to collect the fault logs of the [FaultType](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogger-faulttype-e.md) type that have been generated and stored on the device's hard disk. The fault logs, application service logs, and system runtime logs that are not stored on the hard disk cannot be collected.
+
 - After the API is called, the system starts a log collection task. The API returns a response immediately after  
 the task is started. The task may fail due to system performance constraints.  
 - This API can be called by multiple MDM apps. Logs collected by different MDM apps under different users are saved  
@@ -42,7 +43,7 @@ separately and do not affect each other. Only one MDM app can start a log collec
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. When a log collection task fails to be created, an error object is thrown. |
+| Promise&lt;void&gt; | Promise that returns no value. When a log collection task fails to be created, an error object is thrown. |
 
 **Error codes:**
 

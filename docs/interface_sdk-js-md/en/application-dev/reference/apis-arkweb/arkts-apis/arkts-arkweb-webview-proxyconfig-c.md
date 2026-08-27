@@ -95,7 +95,7 @@ Obtains the list of URLs that do not use the proxy.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of URLs that do not use the proxy. |
+| Array&lt;string&gt; | List of URLs that do not use the proxy. |
 
 **Examples**
 
@@ -200,7 +200,18 @@ For details about the sample code, see [removeProxyOverride](./arkts-apis-webvie
 insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 ```
 
-Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. If the schemeFilter parameter is not specified, the default value MATCH_ALL_SCHEMES will be used, and all URLs will use the specified proxy.The proxy format is [scheme://]host[:port].The scheme is optional and must be HTTP, HTTPS, or SOCKS. The default value of scheme is HTTP.The host is a bracketed IPv6 literal, an IPv4 literal, or one or more labels separated by dots.The port number is optional. The default port is 80 for HTTP, 443 for HTTPS, and 1080 for SOCKS.For example:  
+Inserts a proxy rule. URLs matching schemeFilter will use the specified proxy. If the schemeFilter parameter is not specified, the default value MATCH_ALL_SCHEMES will be used, and all URLs will use the specified proxy.
+
+The proxy format is [scheme://]host[:port].
+
+The scheme is optional and must be HTTP, HTTPS, or SOCKS. The default value of scheme is HTTP.
+
+The host is a bracketed IPv6 literal, an IPv4 literal, or one or more labels separated by dots.
+
+The port number is optional. The default port is 80 for HTTP, 443 for HTTPS, and 1080 for SOCKS.
+
+For example:
+
 - example.com host: example.com  
 - https://example.com scheme: https host: example.com  
 - example.com:8888 host: example.com port: 8888  

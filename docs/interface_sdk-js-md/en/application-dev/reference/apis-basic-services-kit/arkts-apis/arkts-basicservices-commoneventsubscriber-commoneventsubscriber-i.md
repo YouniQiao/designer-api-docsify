@@ -65,7 +65,7 @@ Aborts an ordered common event. This API is used with [finishCommonEvent](#finis
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -164,7 +164,7 @@ Clears the abort state of this ordered common event. Use this API together with 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -256,7 +256,7 @@ Finishes this ordered common event. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -320,7 +320,7 @@ Checks whether this ordered common event should be aborted. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The **true** indicates that the ordered common event is in the abort state; the value **false** indicates otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The **true** indicates that the ordered common event is in the abort state; the value **false** indicates otherwise. |
 
 **Examples**
 
@@ -413,7 +413,7 @@ Obtains the result code of an ordered common event. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result code. |
+| Promise&lt;number&gt; | Promise used to return the result code. |
 
 **Examples**
 
@@ -509,7 +509,7 @@ Obtains the data of an ordered common event. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result data (string type) of an ordered common event. |
+| Promise&lt;string&gt; | Promise used to return the result data (string type) of an ordered common event. |
 
 **Examples**
 
@@ -695,7 +695,7 @@ Checks whether the current common event is an ordered common event. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. Returns **true** if the common event is an ordered one; returns **false** if the common event is an unordered one. |
+| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the common event is an ordered one; returns **false** if the common event is an unordered one. |
 
 **Examples**
 
@@ -784,7 +784,7 @@ Checks whether the current common event is a sticky common event. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. Returns **true** if the common event is a sticky one; returns **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the common event is a sticky one; returns **false** otherwise. |
 
 **Examples**
 
@@ -884,7 +884,7 @@ Sets the result code of an ordered common event. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -967,7 +967,7 @@ Sets the result code and data of an ordered common event. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1123,7 +1123,7 @@ Sets the result data of an ordered common event. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

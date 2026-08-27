@@ -21,8 +21,19 @@
 space?: string | number
 ```
 
-横向布局元素间距。从API version 9开始，space为负数或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时不生效。默认值：0单位：vp非法值：按默认值处理。  
-**说明：**space取值是大于等于0的数字，或者可以转换为数字的字符串。
+横向布局元素间距。
+
+从API version 9开始，space为负数或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时不生效。
+
+默认值：0
+
+单位：vp
+
+非法值：按默认值处理。
+
+**说明：**
+
+space取值是大于等于0的数字，或者可以转换为数字的字符串。
 
 **类型：** string \| number
 

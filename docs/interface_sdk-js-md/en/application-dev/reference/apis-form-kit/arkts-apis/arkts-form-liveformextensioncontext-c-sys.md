@@ -152,7 +152,7 @@ Disconnect an ability to a service extension, in contrast to [connectServiceExte
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

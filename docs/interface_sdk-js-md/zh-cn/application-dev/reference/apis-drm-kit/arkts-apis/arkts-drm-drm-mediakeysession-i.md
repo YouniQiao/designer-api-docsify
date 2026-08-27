@@ -1,6 +1,6 @@
 # MediaKeySession
 
-支持媒体密钥管理。在调用MediaKeySession方法之前，必须使用 [createMediaKeySession](arkts-drm-drm-mediakeysystem-i.md#createmediakeysession) 获取一个MediaKeySession实例。
+支持媒体密钥管理。在调用MediaKeySession方法之前，必须使用[createMediaKeySession](arkts-drm-drm-mediakeysystem-i.md#createmediakeysession)获取一个MediaKeySession实例。
 
 **起始版本：** 11
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import drm from '@kit.DrmKit';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## checkMediaKeyStatus
@@ -141,8 +141,8 @@ generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: nu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mimeType | string | 是 | 媒体类型，DRM解决方案名称，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md) 查询。 |
-| initData | Uint8Array | 是 | 初始数据，即加密流中的PSSH box中的实际PSSH数据。可通过监听AVPlayer的'mediaKeySystemInfoUpdate'事件（ on('mediaKeySystemInfoUpdate') ）获取DRM信息，从中提取pssh字段生成initData。具体开发流程可参考 [基于AVPlayer播放DRM节目(ArkTS)](../../../media/drm/drm-avplayer-arkts-integration.md)。 |
+| mimeType | string | 是 | 媒体类型，DRM解决方案名称，可通过[isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md)查询。 |
+| initData | Uint8Array | 是 | 初始数据，即加密流中的PSSH box中的实际PSSH数据。可通过监听AVPlayer的'mediaKeySystemInfoUpdate'事件（on('mediaKeySystemInfoUpdate')）获取DRM信息，从中提取pssh字段生成initData。具体开发流程可参考[基于AVPlayer播放DRM节目(ArkTS)](../../../media/drm/drm-avplayer-arkts-integration.md)。 |
 | mediaKeyType | number | 是 | 媒体密钥类型。取值范围为[0, 1]。0表示在线，1表示离线。传入指定范围外的参数会导致参数校验失败，抛出错误码401。 |
 | options | [OptionsData](arkts-drm-drm-optionsdata-i.md)[] | 否 | 可选数据。默认值为空数组。 |
 
@@ -198,7 +198,7 @@ generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise对象，设备上的DRM解决方案支持离线媒体密钥释放处理，则返回离线媒体密钥释放请求。 |
+| Promise&lt;Uint8Array&gt; | Promise对象，设备上的DRM解决方案支持离线媒体密钥释放处理，则返回离线媒体密钥释放请求。 |
 
 **错误码：**
 
@@ -266,7 +266,9 @@ console.info(`contentProtectionLevel: ${contentProtectionLevel}`);
 off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-注销密钥请求事件监听。使用callback异步回调。该接口用于注销已在on('keyRequired')中注册的监听，当播放DRM节目需要获取媒体密钥时触发的事件。
+注销密钥请求事件监听。使用callback异步回调。
+
+该接口用于注销已在on('keyRequired')中注册的监听，当播放DRM节目需要获取媒体密钥时触发的事件。
 
 **起始版本：** 11
 
@@ -279,7 +281,7 @@ off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyRequired' | 是 | 监听事件类型，固定为'keyRequired'。 |
-| callback | (eventInfo: EventInfo) = & gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
@@ -307,7 +309,7 @@ off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyExpired' | 是 | 监听事件类型，固定为'keyExpired'。 |
-| callback | (eventInfo: EventInfo) = & gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
@@ -335,7 +337,7 @@ off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'vendorDefined' | 是 | 监听事件，固定为'vendorDefined'。 |
-| callback | (eventInfo: EventInfo) = & gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
@@ -363,7 +365,7 @@ off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'expirationUpdate' | 是 | 监听事件类型，固定为'expirationUpdate'。 |
-| callback | (eventInfo: EventInfo) = & gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
@@ -391,7 +393,7 @@ off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolea
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keysChange' | 是 | 监听事件类型，固定为'keysChange'。 |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | 否 | 回调函数，返回事件信息，包含密钥标识和密钥状态描述的列表及密钥是否可用。可选参数，不传时注销该事件类型的所有监听。 |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 否 | 回调函数，返回事件信息，包含密钥标识和密钥状态描述的列表及密钥是否可用。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
 
@@ -419,7 +421,7 @@ on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyRequired' | 是 | 事件类型，固定为'keyRequired'，当播放DRM节目需要获取媒体密钥时触发。 |
-| callback | (eventInfo: EventInfo) = & gt; void | 是 | 回调函数，返回事件信息。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
 
 **错误码：**
 
@@ -447,7 +449,7 @@ on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyExpired' | 是 | 监听事件类型，固定为'keyExpired'。密钥过期时触发。 |
-| callback | (eventInfo: EventInfo) = & gt; void | 是 | 回调函数，返回事件信息。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
 
 **错误码：**
 
@@ -475,7 +477,7 @@ on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'vendorDefined' | 是 | 监听事件，固定为'vendorDefined'。自定义事件发生时触发。 |
-| callback | (eventInfo: EventInfo) = & gt; void | 是 | 回调函数，返回事件信息。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
 
 **错误码：**
 
@@ -503,7 +505,7 @@ on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'expirationUpdate' | 是 | 监听事件类型，固定为'expirationUpdate'。密钥过期更新时触发。 |
-| callback | (eventInfo: EventInfo) = & gt; void | 是 | 回调函数，返回事件信息。 |
+| callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。 |
 
 **错误码：**
 
@@ -531,7 +533,7 @@ on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keysChange' | 是 | 监听事件类型，固定为'keysChange'。密钥变化时触发。 |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | 是 | 回调函数，返回事件信息，包含密钥标识和密钥状态描述的列表及密钥是否可用。 |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | 是 | 回调函数，返回事件信息，包含密钥标识和密钥状态描述的列表及密钥是否可用。 |
 
 **错误码：**
 
@@ -564,7 +566,7 @@ processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise对象，媒体密钥标识。 |
+| Promise&lt;Uint8Array&gt; | Promise对象，媒体密钥标识。 |
 
 **错误码：**
 
@@ -594,7 +596,9 @@ mediaKeySession.processMediaKeyResponse(mediaKeyResponse).then((mediaKeyId: Uint
 processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Promise<void>
 ```
 
-处理离线媒体密钥释放响应。使用Promise异步回调。如果设备上的DRM解决方案不支持离线媒体密钥释放，将抛出错误码24700101。
+处理离线媒体密钥释放响应。使用Promise异步回调。
+
+如果设备上的DRM解决方案不支持离线媒体密钥释放，将抛出错误码24700101。
 
 **起始版本：** 11
 
@@ -613,7 +617,7 @@ processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Pro
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -660,7 +664,7 @@ requireSecureDecoderModule(mimeType: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mimeType | string | 是 | 媒体类型，支持的媒体类型取决于DRM解决方案，可通过 [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md) 查询。 |
+| mimeType | string | 是 | 媒体类型，支持的媒体类型取决于DRM解决方案，可通过[isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md)查询。 |
 
 **返回值：**
 
@@ -710,7 +714,7 @@ restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

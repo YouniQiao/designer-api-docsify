@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import intl from '@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## dateStyle
@@ -22,7 +22,11 @@ import intl from '@kit.LocalizationKit';
 dateStyle?: string
 ```
 
-日期显示格式，取值包括："number", "short", "medium", "full", "auto"。不同取值的显示效果请参考[附录表1](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+日期显示格式，取值包括：
+
+"number", "short", "medium", "full", "auto"。
+
+不同取值的显示效果请参考[附录表1](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -44,7 +48,9 @@ dateStyle?: string
 day?: string
 ```
 
-日期的显示格式，取值包括："numeric", "2-digit"。
+日期的显示格式，取值包括：
+
+"numeric", "2-digit"。
 
 **类型：** string
 
@@ -66,7 +72,11 @@ day?: string
 dayPeriod?: string
 ```
 
-时段的显示格式，取值包括："number", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表10](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+时段的显示格式，取值包括：
+
+"number", "short", "narrow", "auto"。
+
+不同取值的显示效果请参考[附录表10](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -88,7 +98,11 @@ dayPeriod?: string
 era?: string
 ```
 
-纪元的显示格式，取值包括："number", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表9](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+纪元的显示格式，取值包括：
+
+"number", "short", "narrow", "auto"。
+
+不同取值的显示效果请参考[附录表9](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -110,7 +124,11 @@ era?: string
 formatMatcher?: string
 ```
 
-要使用的格式匹配算法，取值包括："basic"：精确匹配。"best fit"：最佳匹配。
+要使用的格式匹配算法，取值包括：
+
+"basic"：精确匹配。
+
+"best fit"：最佳匹配。
 
 **类型：** string
 
@@ -132,7 +150,9 @@ formatMatcher?: string
 hour?: string
 ```
 
-小时的显示格式，取值包括："numeric", "2-digit"。
+小时的显示格式，取值包括：
+
+"numeric", "2-digit"。
 
 **类型：** string
 
@@ -154,7 +174,11 @@ hour?: string
 hour12?: boolean
 ```
 
-true表示使用12小时制，false表示使用24小时制。同时设置hour12和hourCycle时，hourCycle不生效。若hour12和hourCycle未设置且系统24小时开关打开时，hour12属性的默认值为false。
+true表示使用12小时制，false表示使用24小时制。
+
+同时设置hour12和hourCycle时，hourCycle不生效。
+
+若hour12和hourCycle未设置且系统24小时开关打开时，hour12属性的默认值为false。
 
 **类型：** boolean
 
@@ -176,7 +200,13 @@ true表示使用12小时制，false表示使用24小时制。同时设置hour12�
 hourCycle?: string
 ```
 
-时制格式，取值包括："h11", "h12", "h23", "h24"。不设置dateStyle或timeStyle参数时的显示效果请参考[附录表5](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。设置dateStyle或timeStyle参数时的显示效果请参考[附录表6](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+时制格式，取值包括：
+
+"h11", "h12", "h23", "h24"。
+
+不设置dateStyle或timeStyle参数时的显示效果请参考[附录表5](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+
+设置dateStyle或timeStyle参数时的显示效果请参考[附录表6](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -198,7 +228,9 @@ hourCycle?: string
 locale?: string
 ```
 
-合法的区域ID，如：zh-Hans-CN。默认值：系统当前区域ID。
+合法的区域ID，如：zh-Hans-CN。
+
+默认值：系统当前区域ID。
 
 **类型：** string
 
@@ -218,7 +250,11 @@ locale?: string
 localeMatcher?: string
 ```
 
-要使用的区域匹配算法，取值包括："lookup"：精确匹配。"best fit"：最佳匹配。
+要使用的区域匹配算法，取值包括：
+
+"lookup"：精确匹配。
+
+"best fit"：最佳匹配。
 
 **类型：** string
 
@@ -240,7 +276,9 @@ localeMatcher?: string
 minute?: string
 ```
 
-分钟的显示格式，取值包括："numeric", "2-digit"。
+分钟的显示格式，取值包括：
+
+"numeric", "2-digit"。
 
 **类型：** string
 
@@ -262,7 +300,11 @@ minute?: string
 month?: string
 ```
 
-月份的显示格式，取值包括："numeric", "2-digit", "number", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表7](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+月份的显示格式，取值包括：
+
+"numeric", "2-digit", "number", "short", "narrow", "auto"。
+
+不同取值的显示效果请参考[附录表7](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -284,7 +326,9 @@ month?: string
 numberingSystem?: string
 ```
 
-数字系统，取值包括："adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide","gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham","laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong","mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment","shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii","wara", "wcho"。
+数字系统，取值包括：
+
+"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide","gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham","laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong","mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment","shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii","wara", "wcho"。
 
 **类型：** string
 
@@ -306,7 +350,9 @@ numberingSystem?: string
 second?: string
 ```
 
-秒钟的显示格式，取值包括："numeric", "2-digit"。
+秒钟的显示格式，取值包括：
+
+"numeric", "2-digit"。
 
 **类型：** string
 
@@ -328,7 +374,11 @@ second?: string
 timeStyle?: string
 ```
 
-时间显示格式，取值包括："number", "short", "medium", "full", "auto"。不同取值的显示效果请参考[附录表2](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+时间显示格式，取值包括：
+
+"number", "short", "medium", "full", "auto"。
+
+不同取值的显示效果请参考[附录表2](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -372,7 +422,11 @@ timeZone?: string
 timeZoneName?: string
 ```
 
-时区名称的本地化表示，取值包括："number", "short", "auto"。不同取值的显示效果请参考[附录表8](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+时区名称的本地化表示，取值包括：
+
+"number", "short", "auto"。
+
+不同取值的显示效果请参考[附录表8](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -394,7 +448,11 @@ timeZoneName?: string
 weekday?: string
 ```
 
-星期的显示格式，取值包括："number", "short", "narrow", "auto"。不同取值的显示效果请参考[附录表4](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+星期的显示格式，取值包括：
+
+"number", "short", "narrow", "auto"。
+
+不同取值的显示效果请参考[附录表4](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 
@@ -416,7 +474,11 @@ weekday?: string
 year?: string
 ```
 
-年份的显示格式，取值包括："numeric", "2-digit"。不同取值的显示效果请参考[附录表3](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+年份的显示格式，取值包括：
+
+"numeric", "2-digit"。
+
+不同取值的显示效果请参考[附录表3](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
 
 **类型：** string
 

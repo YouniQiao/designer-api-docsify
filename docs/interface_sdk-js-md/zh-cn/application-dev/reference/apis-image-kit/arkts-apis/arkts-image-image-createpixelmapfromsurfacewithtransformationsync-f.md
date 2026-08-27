@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPixelMapFromSurfaceWithTransformationSync
@@ -31,7 +31,7 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | A PixelMap instance if the operation is successful. Otherwise, an exception will be thrown. |
+| PixelMap | A PixelMap instance if the operation is successful. Otherwise, an exception will be thrown. |
 
 **错误码：**
 

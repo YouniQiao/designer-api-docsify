@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPicture
@@ -12,7 +12,9 @@ import image from '@kit.ImageKit';
 function createPicture(mainPixelmap : PixelMap): Picture
 ```
 
-Creates a Picture object based on a main PixelMap.Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates a Picture object based on a main PixelMap.
+
+Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
@@ -22,7 +24,7 @@ Creates a Picture object based on a main PixelMap.Images occupy a large amount o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mainPixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | Main PixelMap. |
+| mainPixelmap | PixelMap | Yes | Main PixelMap. |
 
 **Return value:**
 

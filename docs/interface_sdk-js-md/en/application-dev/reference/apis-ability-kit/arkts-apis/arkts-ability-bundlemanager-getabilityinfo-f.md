@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAbilityInfo
@@ -33,7 +33,7 @@ Obtains the ability information based on the given resource identifier and abili
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;AbilityInfo & gt; & gt; | Promise used to return an array of ability information. |
+| Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise used to return an array of ability information. |
 
 **Error codes:**
 

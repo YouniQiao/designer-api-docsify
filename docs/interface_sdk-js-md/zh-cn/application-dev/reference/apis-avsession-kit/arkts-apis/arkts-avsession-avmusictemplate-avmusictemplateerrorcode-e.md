@@ -1,6 +1,8 @@
 # AVMusicTemplateErrorCode
 
-表示错误码类型的枚举。@enum { number }
+表示错误码类型的枚举。
+
+@enum { number }
 
 **起始版本：** 23
 

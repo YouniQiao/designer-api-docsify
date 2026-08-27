@@ -9,7 +9,7 @@ This module provides basic capabilities for managing abstract color space object
 ## Modules to Import
 
 ```TypeScript
-import colorSpaceManager from '@kit.ArkGraphics2D';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary
@@ -18,18 +18,18 @@ import colorSpaceManager from '@kit.ArkGraphics2D';
 
 | Name | Description |
 | --- | --- |
-| [create(Color Space Management)](arkts-arkgraphics2d-colorspacemanager-create-f.md) | Creates a standard color space object. |
-| [create(Color Space Management)](arkts-arkgraphics2d-colorspacemanager-create-f.md) | Creates a custom color space object. |
+| [create](arkts-arkgraphics2d-colorspacemanager-create-f.md) | Creates a standard color space object. |
+| [create](arkts-arkgraphics2d-colorspacemanager-create-f.md) | Creates a custom color space object. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ColorSpaceManager(Color Space Management)](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Implements management of color space objects.Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md) to create a color space manager. |
-| [ColorSpacePrimaries(Color Space Management)](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md) | The three primary colors (red, green, blue) and white as defined by the color space standard, whose positions in the color space are represented by (x, y) coordinates based on real-world chromaticity. |
+| [ColorSpaceManager](arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Implements management of color space objects. |
+| [ColorSpacePrimaries](arkts-arkgraphics2d-colorspacemanager-colorspaceprimaries-i.md) | The three primary colors (red, green, blue) and white as defined by the color space standard, whose positions in the color space are represented by (x, y) coordinates based on real-world chromaticity. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ColorSpace(Color Space Management)](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | Enumerates the color space types. |
+| [ColorSpace](arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | Enumerates the color space types. |

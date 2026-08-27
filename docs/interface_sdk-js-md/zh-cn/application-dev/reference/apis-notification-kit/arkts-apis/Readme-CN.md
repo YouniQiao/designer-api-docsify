@@ -438,13 +438,13 @@
   - [ActionResult](arkts-notification-system-notification-actionresult-i.md)
   - [ShowNotificationOptions](arkts-notification-system-notification-shownotificationoptions-i.md)
 - notification<!--arkts-notificationkit-notification-->
-  - [notificationActionButton](arkts-notificationactionbutton.md)
+  - [notificationActionButton(Describes an action button displayed in a notification)](arkts-notificationactionbutton.md)
     - [NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)
-  - [NotificationCommonDef](arkts-notificationcommondef.md)
+  - [NotificationCommonDef(Some common definitions)](arkts-notificationcommondef.md)
     - [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
     - [GrantedBundleInfo](arkts-notification-notificationcommondef-grantedbundleinfo-i.md)
     - [UserGrantSetting](arkts-notification-notificationcommondef-usergrantsetting-i.md)
-  - [notificationContent](arkts-notificationcontent.md)
+  - [notificationContent(Some notification types and content)](arkts-notificationcontent.md)
     - [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
     <!--Del-->
     - [NotificationBasicContent(系统接口)](arkts-notification-notificationcontent-notificationbasiccontent-i-sys.md)<!--DelEnd-->
@@ -477,16 +477,16 @@
     - [LiveViewTypes(系统接口)](arkts-notification-notificationcontent-liveviewtypes-e-sys.md)<!--DelEnd-->
   - [NotificationExtensionContent](arkts-notificationextensioncontent.md)
     - [NotificationExtensionContent](arkts-notification-notificationextensioncontent-i.md)
-  - [NotificationExtensionSubscriptionInfo](arkts-notificationextensionsubscriptioninfo.md)
+  - [NotificationExtensionSubscriptionInfo(Describes a notification extension subscription info)](arkts-notificationextensionsubscriptioninfo.md)
     - [NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscriptioninfo-i.md)
-  - [notificationFlags](arkts-notificationflags.md)
+  - [notificationFlags(Some states and flags for notifications)](arkts-notificationflags.md)
     - [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md)
     <!--Del-->
     - [NotificationFlags(系统接口)](arkts-notification-notificationflags-notificationflags-i-sys.md)<!--DelEnd-->
     - [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
   - [NotificationInfo](arkts-notificationinfo.md)
     - [NotificationInfo](arkts-notification-notificationinfo-i.md)
-  - [notificationRequest](arkts-notificationrequest.md)
+  - [notificationRequest(Information carried when a notification is sent)](arkts-notificationrequest.md)
     - [DistributedOptions](arkts-notification-notificationrequest-distributedoptions-i.md)
     <!--Del-->
     - [DistributedOptions(系统接口)](arkts-notification-notificationrequest-distributedoptions-i-sys.md)<!--DelEnd-->
@@ -512,27 +512,27 @@
     - [MonitorEvent(系统接口)](arkts-notification-notificationrequest-monitorevent-e-sys.md)<!--DelEnd-->
     <!--Del-->
     - [TriggerType(系统接口)](arkts-notification-notificationrequest-triggertype-e-sys.md)<!--DelEnd-->
-  - [notificationSlot](arkts-notificationslot.md)
+  - [notificationSlot(Description of the notification channel)](arkts-notificationslot.md)
     - [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)
     <!--Del-->
     - [NotificationSlot(系统接口)](arkts-notification-notificationslot-notificationslot-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [notificationSorting](arkts-notificationsorting.md)<!--DelEnd-->
+  - [notificationSorting(Provides sorting information about an active notification)](arkts-notificationsorting.md)<!--DelEnd-->
     <!--Del-->
     - [NotificationSorting(系统接口)](arkts-notification-notificationsorting-notificationsorting-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [notificationSortingMap](arkts-notificationsortingmap.md)<!--DelEnd-->
+  - [notificationSortingMap(Provides sorting information about the active notifications among all the notifications that have been subscribed to)](arkts-notificationsortingmap.md)<!--DelEnd-->
     <!--Del-->
     - [NotificationSortingMap(系统接口)](arkts-notification-notificationsortingmap-notificationsortingmap-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [notificationSubscribeInfo](arkts-notificationsubscribeinfo.md)<!--DelEnd-->
+  - [notificationSubscribeInfo(Sets filter criteria of publishers for subscribing to desired notifications)](arkts-notificationsubscribeinfo.md)<!--DelEnd-->
     <!--Del-->
     - [NotificationSubscribeInfo(系统接口)](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [PictureOptions(系统接口)](arkts-notification-notificationsubscribeinfo-pictureoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [VoiceContentOptions(系统接口)](arkts-notification-notificationsubscribeinfo-voicecontentoptions-i-sys.md)<!--DelEnd-->
-  - [notificationSubscriber](arkts-notificationsubscriber.md)
+  - [notificationSubscriber(Provides methods that will be called back when the subscriber receives a new notification or a notification is canceled)](arkts-notificationsubscriber.md)
     <!--Del-->
     - [BadgeEnabledChangedCallback(系统接口)](arkts-notification-notificationsubscriber-badgeenabledchangedcallback-i-sys.md)<!--DelEnd-->
     <!--Del-->
@@ -561,7 +561,7 @@
     - [NotificationSwitchChangedCallback(系统接口)](arkts-notification-notificationswitchchangedcallback-t-sys.md)<!--DelEnd-->
     <!--Del-->
     - [SystemUpdateCallback(系统接口)](arkts-notification-systemupdatecallback-t-sys.md)<!--DelEnd-->
-  - [notificationTemplate](arkts-notificationtemplate.md)
+  - [notificationTemplate(Describes a NotificationTemplate instance)](arkts-notificationtemplate.md)
     - [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md)
-  - [notificationUserInput](arkts-notificationuserinput.md)
+  - [notificationUserInput(Describes a NotificationUserInput instance)](arkts-notificationuserinput.md)
     - [NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md)

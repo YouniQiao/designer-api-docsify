@@ -1,6 +1,8 @@
 # RepeatMode
 
-Defines the Border Image Repeat Mode.@enum { number }
+Defines the Border Image Repeat Mode.
+
+@enum { number }
 
 **Since:** 11
 

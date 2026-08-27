@@ -23,7 +23,9 @@ Provides style settings for the selected, unselected, and partially selected sta
 backgroundUri: ResourceStr
 ```
 
-Image path for the unselected star. You can use the default system image or a custom image.Resource configuration is supported since API version 20. For details, see [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
+Image path for the unselected star. You can use the default system image or a custom image.
+
+Resource configuration is supported since API version 20. For details, see [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -41,7 +43,9 @@ Image path for the unselected star. You can use the default system image or a cu
 foregroundUri: ResourceStr
 ```
 
-Image path for the selected star. You can use the default system image or a custom image.Resource configuration is supported since API version 20. For details, see [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
+Image path for the selected star. You can use the default system image or a custom image.
+
+Resource configuration is supported since API version 20. For details, see [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -59,7 +63,9 @@ Image path for the selected star. You can use the default system image or a cust
 secondaryUri?: ResourceStr
 ```
 
-Image path for the partially selected star. You can use the default system image or a custom image.Resource configuration is supported since API version 20. For details, see [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
+Image path for the partially selected star. You can use the default system image or a custom image.
+
+Resource configuration is supported since API version 20. For details, see [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

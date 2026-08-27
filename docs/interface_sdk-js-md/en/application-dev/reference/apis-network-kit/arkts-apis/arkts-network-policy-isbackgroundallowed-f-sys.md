@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## isBackgroundAllowed
@@ -71,7 +71,7 @@ Checks whether the current application is allowed to access the network in the b
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the background policy is allowed, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the background policy is allowed, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

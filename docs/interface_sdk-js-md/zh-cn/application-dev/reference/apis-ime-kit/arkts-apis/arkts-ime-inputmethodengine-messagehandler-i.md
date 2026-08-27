@@ -1,6 +1,6 @@
 # MessageHandler
 
-自定义通信对象。   
+自定义通信对象。  
 > **说明：**
    
 > 
@@ -26,7 +26,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## onMessage
@@ -35,7 +35,7 @@ import inputMethodEngine from '@kit.IMEKit';
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。   
+接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。  
 > **说明：**
    
 > 
@@ -81,7 +81,7 @@ inputMethodEngine.getInputMethodAbility()
 onTerminated(): void
 ```
 
-监听对象终止回调函数。   
+监听对象终止回调函数。  
 > **说明：**
    
 > 

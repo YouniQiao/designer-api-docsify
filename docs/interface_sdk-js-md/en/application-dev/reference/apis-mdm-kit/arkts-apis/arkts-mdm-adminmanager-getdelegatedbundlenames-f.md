@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## getDelegatedBundleNames
@@ -33,7 +33,7 @@ Queries the delegated applications that can access a delegation policy and outpu
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of delegated applications. |
+| Array&lt;string&gt; | List of delegated applications. |
 
 **Error codes:**
 

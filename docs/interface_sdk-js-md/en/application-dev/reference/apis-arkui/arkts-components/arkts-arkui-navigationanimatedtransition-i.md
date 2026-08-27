@@ -17,7 +17,8 @@ Defines the custom transition animation protocol. You need to implement this pro
 onTransitionEnd?: (success: boolean) => void
 ```
 
-Callback invoked when the transition is complete.  
+Callback invoked when the transition is complete.
+
 **success**: whether the transition is successful.
 
 **Since:** 11
@@ -40,7 +41,8 @@ Callback invoked when the transition is complete.
 transition: (transitionProxy: NavigationTransitionProxy) => void
 ```
 
-Callback for executing the custom transition animation.  
+Callback for executing the custom transition animation.
+
 **transitionProxy**: proxy for the custom transition animation.
 
 **Since:** 11
@@ -63,8 +65,11 @@ Callback for executing the custom transition animation.
 isInteractive?: boolean
 ```
 
-Whether the transition animation is interactive.  
-**true**: yes; **false**: no Default value: **false**
+Whether the transition animation is interactive.
+
+**true**: yes; **false**: no
+
+Default value: **false**
 
 **Type:** boolean
 
@@ -84,7 +89,13 @@ Whether the transition animation is interactive.
 timeout?: number
 ```
 
-Animation timeout time.Unit: ms Value range: [0, +��)Default value: no default value for interactive animations; 1000 ms for non-interactive animations.
+Animation timeout time.
+
+Unit: ms
+
+Value range: [0, +��)
+
+Default value: no default value for interactive animations; 1000 ms for non-interactive animations.
 
 **Type:** number
 

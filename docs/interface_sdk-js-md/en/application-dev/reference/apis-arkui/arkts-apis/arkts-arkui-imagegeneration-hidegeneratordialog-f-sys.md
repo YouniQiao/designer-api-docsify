@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## hideGeneratorDialog
@@ -32,4 +32,4 @@ Hide the AI image generation task popup.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the result of hide operation. |
+| Promise&lt;void&gt; | Returns the result of hide operation. |

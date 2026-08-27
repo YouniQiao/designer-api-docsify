@@ -62,13 +62,18 @@ Creates a save button with the specified icon, text and button type. When the us
 
 | Name | Description |
 | --- | --- |
+| [SaveButtonOptions](arkts-arkui-savebuttonoptions-i.md) | Defines options for the save button, including icon, text, and button type. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [SaveButtonCallback](arkts-arkui-savebuttoncallback-t.md) | Triggered when the **SaveButton** component is clicked. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [SaveButtonOnClickResult](arkts-arkui-savebuttononclickresult-e.md) | Enumerates the authorization results after the **SaveButton** component is tapped. |
+| [SaveDescription](arkts-arkui-savedescription-e.md) | Enumerates the text that can be displayed on the save button. |
+| [SaveIconStyle](arkts-arkui-saveiconstyle-e.md) | Enumerates icon styles of the **SaveButton** component. |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import effectKit from '@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## createEffect
@@ -32,7 +32,7 @@ Creates a Filter instance based on the input PixelMap. You can then add various 
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns a Filter instance with no effects added, or null if the operation fails. |
+| Filter | Returns a Filter instance with no effects added, or null if the operation fails. |
 
 **Examples**
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import formInfo from '@kit.FormKit';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## height
@@ -34,7 +34,7 @@ height: number
 left: number
 ```
 
-描述矩形的左上角顶点的 x 坐标，单位：vp，用于定位卡片区域的位置。范围参考 [请求参数约束](../../../form/arkts-ui-liveform-sceneanimation-development.md#请求参数约束)。
+描述矩形的左上角顶点的 x 坐标，单位：vp，用于定位卡片区域的位置。范围参考[请求参数约束](../../../form/arkts-ui-liveform-sceneanimation-development.md#请求参数约束)。
 
 **类型：** number
 
@@ -50,7 +50,7 @@ left: number
 top: number
 ```
 
-描述矩形的左上角顶点的 y 坐标，单位：vp，用于定位卡片区域的位置。范围参考 [请求参数约束](../../../form/arkts-ui-liveform-sceneanimation-development.md#请求参数约束)。
+描述矩形的左上角顶点的 y 坐标，单位：vp，用于定位卡片区域的位置。范围参考[请求参数约束](../../../form/arkts-ui-liveform-sceneanimation-development.md#请求参数约束)。
 
 **类型：** number
 

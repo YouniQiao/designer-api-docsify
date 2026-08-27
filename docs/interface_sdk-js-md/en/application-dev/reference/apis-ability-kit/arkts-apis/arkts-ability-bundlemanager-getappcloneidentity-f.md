@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAppCloneIdentity
@@ -30,7 +30,7 @@ Obtains the bundle name and clone index of a cloned application based on the giv
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;AppCloneIdentity & gt; | Promise used to return the application clone index. |
+| Promise&lt;AppCloneIdentity&gt; | Promise used to return the application clone index. |
 
 **Error codes:**
 

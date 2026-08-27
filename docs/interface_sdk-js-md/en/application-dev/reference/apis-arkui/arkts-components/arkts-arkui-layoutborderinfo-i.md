@@ -1,6 +1,8 @@
 # LayoutBorderInfo
 
-Provides the border information of the child component.@interface LayoutBorderInfo
+Provides the border information of the child component.
+
+@interface LayoutBorderInfo
 
 **Since:** 9
 

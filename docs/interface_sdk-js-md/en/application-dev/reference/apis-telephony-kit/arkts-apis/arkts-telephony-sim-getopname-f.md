@@ -77,7 +77,7 @@ Obtains the OpName of the SIM card in the specified slot. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 

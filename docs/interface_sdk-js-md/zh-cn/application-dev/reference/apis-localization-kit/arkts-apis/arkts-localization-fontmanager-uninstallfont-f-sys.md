@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import fontManager from '@kit.LocalizationKit';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## uninstallFont
@@ -26,13 +26,13 @@ function uninstallFont(fullName: string): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fullName | string | 是 | 需要卸载的字体名称，可通过打开.ttf或.ttc字体文件获取。 字体名称区分大小写，请确保与实际字体名称完全一致。 |
+| fullName | string | 是 | 需要卸载的字体名称，可通过打开.ttf或.ttc字体文件获取。字体名称区分大小写，请确保与实际字体名称完全一致。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回卸载结果。 |
+| Promise&lt;number&gt; | Promise对象，返回卸载结果。 |
 
 **错误码：**
 

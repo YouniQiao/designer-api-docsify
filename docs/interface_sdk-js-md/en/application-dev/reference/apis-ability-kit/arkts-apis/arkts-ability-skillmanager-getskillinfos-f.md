@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import skillManager from '@kit.AbilityKit';
+import { skillManager } from '@kit.AbilityKit';
 ```
 
 ## getSkillInfos
@@ -36,7 +36,7 @@ Obtains all SkillInfo of a specified application based on bundleName. To query i
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;SkillInfo & gt; & gt; | Returns the list of SkillInfo objects. |
+| Promise&lt;Array&lt;SkillInfo&gt;&gt; | Returns the list of SkillInfo objects. |
 
 **Error codes:**
 

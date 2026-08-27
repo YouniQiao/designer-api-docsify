@@ -1,6 +1,8 @@
 # RippleFieldOptions
 
-Defines ripple field options.@interface RippleFieldOptions
+Defines ripple field options.
+
+@interface RippleFieldOptions
 
 **Since:** 22
 

@@ -12,7 +12,9 @@
 INVALID = 0
 ```
 
-无效设备。从API version 12开始，该接口支持在原子化服务中使用。
+无效设备。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
 
@@ -26,7 +28,9 @@ INVALID = 0
 EARPIECE = 1
 ```
 
-听筒。从API version 12开始，该接口支持在原子化服务中使用。
+听筒。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
 
@@ -40,7 +44,9 @@ EARPIECE = 1
 SPEAKER = 2
 ```
 
-扬声器。从API version 12开始，该接口支持在原子化服务中使用。
+扬声器。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
 
@@ -54,7 +60,9 @@ SPEAKER = 2
 WIRED_HEADSET = 3
 ```
 
-有线耳机，带麦克风。从API version 12开始，该接口支持在原子化服务中使用。
+有线耳机，带麦克风。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
 
@@ -68,7 +76,9 @@ WIRED_HEADSET = 3
 WIRED_HEADPHONES = 4
 ```
 
-有线耳机，不带麦克风。从API version 12开始，该接口支持在原子化服务中使用。
+有线耳机，不带麦克风。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
 
@@ -82,7 +92,9 @@ WIRED_HEADPHONES = 4
 BLUETOOTH_SCO = 7
 ```
 
-蓝牙设备SCO（Synchronous Connection Oriented）连接。从API version 12开始，该接口支持在原子化服务中使用。
+蓝牙设备SCO（Synchronous Connection Oriented）连接。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
 
@@ -96,7 +108,9 @@ BLUETOOTH_SCO = 7
 BLUETOOTH_A2DP = 8
 ```
 
-蓝牙设备A2DP（Advanced Audio Distribution Profile）连接。从API version 12开始，该接口支持在原子化服务中使用。
+蓝牙设备A2DP（Advanced Audio Distribution Profile）连接。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
 
@@ -110,7 +124,9 @@ BLUETOOTH_A2DP = 8
 MIC = 15
 ```
 
-麦克风。从API version 12开始，该接口支持在原子化服务中使用。
+麦克风。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
 
@@ -124,7 +140,9 @@ MIC = 15
 USB_HEADSET = 22
 ```
 
-USB耳机，带麦克风。从API version 12开始，该接口支持在原子化服务中使用。
+USB耳机，带麦克风。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 7
 
@@ -138,7 +156,9 @@ USB耳机，带麦克风。从API version 12开始，该接口支持在原子化
 DISPLAY_PORT = 23
 ```
 
-DisplayPort（显示接口，简称DP），用于外接扩展设备。从API version 12开始，该接口支持在原子化服务中使用。
+DisplayPort（显示接口，简称DP），用于外接扩展设备。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 12
 
@@ -152,7 +172,9 @@ DisplayPort（显示接口，简称DP），用于外接扩展设备。从API ver
 REMOTE_CAST = 24
 ```
 
-音频被系统应用投送到其他的远程设备。从API version 12开始，该接口支持在原子化服务中使用。
+音频被系统应用投送到其他的远程设备。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 12
 
@@ -216,7 +238,9 @@ Distributed virtual audio device.
 HEARING_AID = 30
 ```
 
-助听器设备。Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declaredevicetypescompatibility).
+助听器设备。
+
+Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declaredevicetypescompatibility).
 
 **起始版本：** 26.0.0
 
@@ -228,7 +252,9 @@ HEARING_AID = 30
 NEARLINK = 31
 ```
 
-星闪设备。Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declaredevicetypescompatibility).
+星闪设备。
+
+Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declaredevicetypescompatibility).
 
 **起始版本：** 26.0.0
 
@@ -252,7 +278,9 @@ SYSTEM_PRIVATE = 200
 DEFAULT = 1000
 ```
 
-默认设备类型。从API version 12开始，该接口支持在原子化服务中使用。
+默认设备类型。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 9
 

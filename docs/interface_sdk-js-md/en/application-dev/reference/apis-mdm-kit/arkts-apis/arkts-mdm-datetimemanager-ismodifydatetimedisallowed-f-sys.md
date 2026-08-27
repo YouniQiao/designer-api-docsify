@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dateTimeManager from '@kit.MDMKit';
+import { dateTimeManager } from '@kit.MDMKit';
 ```
 
 ## isModifyDateTimeDisallowed
@@ -99,7 +99,7 @@ Queries whether the system time of a device can be modified. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the system time modification is disallowed, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the system time modification is disallowed, and **false** means the opposite. |
 
 **Error codes:**
 

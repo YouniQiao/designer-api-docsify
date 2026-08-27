@@ -1,6 +1,8 @@
 # ResultSet（系统接口）
 
-提供通过查询数据库生成的数据库结果集的访问方法。下列API示例中，需先使用[query](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#query)方法获取ResultSet实例，再调用对应方法。
+提供通过查询数据库生成的数据库结果集的访问方法。
+
+下列API示例中，需先使用[query](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#query)方法获取ResultSet实例，再调用对应方法。
 
 **起始版本：** 22
 
@@ -11,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## close
@@ -89,7 +91,7 @@ getRow(): ValuesBucket
 
 | 类型 | 说明 |
 | --- | --- |
-| [ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | 返回指定行的值。 |
+| ValuesBucket | 返回指定行的值。 |
 
 **错误码：**
 
@@ -138,7 +140,7 @@ getValue(columnIndex: number): ValueType
 
 | 类型 | 说明 |
 | --- | --- |
-| [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 表示允许的数据字段类型。 |
+| ValueType | 表示允许的数据字段类型。 |
 
 **错误码：**
 

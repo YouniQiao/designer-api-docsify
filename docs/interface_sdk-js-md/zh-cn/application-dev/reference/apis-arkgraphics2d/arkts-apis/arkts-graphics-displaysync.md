@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import displaySync from '@kit.ArkGraphics2D';
+import { displaySync } from '@kit.ArkGraphics2D';
 ```
 
 ## 汇总
@@ -24,5 +24,5 @@ import displaySync from '@kit.ArkGraphics2D';
 
 | 名称 | 说明 |
 | --- | --- |
-| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) | 期望帧率和回调函数设置实例。用于设置期望帧率范围、注册帧回调函数，以及启动和停止帧回调。 下列API示例中都需先使用displaySync.create()方法获取到DisplaySync实例，再通过此实例调用对应方法。 |
+| [DisplaySync](arkts-arkgraphics2d-displaysync-displaysync-i.md) | 期望帧率和回调函数设置实例。用于设置期望帧率范围、注册帧回调函数，以及启动和停止帧回调。下列API示例中都需先使用displaySync.create()方法获取到DisplaySync实例，再通过此实例调用对应方法。 |
 | [IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md) | 开发者可以从回调函数中获取帧绘制的时间戳信息，包含当前帧到达的时间timestamp和下一帧预期到达的时间targetTimestamp。 |

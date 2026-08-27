@@ -1,6 +1,6 @@
 # RemoteDevice
 
-提供远端设备的操作方法，使用前需要使用[remoteDevice.createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md)方法创建一个远端设备 [RemoteDevice](#remotedevice)实例。一个设备只需要创建一次，无需多次创建。
+提供远端设备的操作方法，使用前需要使用[remoteDevice.createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md)方法创建一个远端设备[RemoteDevice](#remotedevice)实例。一个设备只需要创建一次，无需多次创建。
 
 **起始版本：** 26.0.0
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import remoteDevice from '@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## getAcbState
@@ -18,7 +18,7 @@ import remoteDevice from '@kit.ConnectivityKit';
 getAcbState(): AcbState
 ```
 
-获取和远端设备的逻辑链路连接状态。适用于需要确认逻辑链路是否就绪的场景，如在进行数据传输或消息通信前检查逻辑链路状态。与 [getConnectionState](#getconnectionstate)获取设备层级连接状态不同，本接口获取逻辑链路（ACB）层级的连接状态。
+获取和远端设备的逻辑链路连接状态。适用于需要确认逻辑链路是否就绪的场景，如在进行数据传输或消息通信前检查逻辑链路状态。与[getConnectionState](#getconnectionstate)获取设备层级连接状态不同，本接口获取逻辑链路（ACB）层级的连接状态。
 
 **起始版本：** 26.0.0
 
@@ -32,7 +32,7 @@ getAcbState(): AcbState
 
 | 类型 | 说明 |
 | --- | --- |
-| [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md) | 和远端设备的逻辑链路连接状态。 |
+| AcbState | 和远端设备的逻辑链路连接状态。 |
 
 **错误码：**
 
@@ -62,7 +62,7 @@ getConnectionState(): ConnectionState
 
 | 类型 | 说明 |
 | --- | --- |
-| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) | 本端设备和远端设备的连接状态。 |
+| ConnectionState | 本端设备和远端设备的连接状态。 |
 
 **错误码：**
 
@@ -92,7 +92,7 @@ getDeviceClass(): DeviceClass
 
 | 类型 | 说明 |
 | --- | --- |
-| [DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md) | 远端设备类型。 |
+| DeviceClass | 远端设备类型。 |
 
 **错误码：**
 
@@ -182,7 +182,7 @@ getPairingState(): PairingState
 
 | 类型 | 说明 |
 | --- | --- |
-| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) | 和远端设备的配对状态。 |
+| PairingState | 和远端设备的配对状态。 |
 
 **错误码：**
 
@@ -212,7 +212,7 @@ startPairing(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

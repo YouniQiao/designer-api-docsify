@@ -17,7 +17,11 @@
 baseline: number
 ```
 
-当前行的基线与组件上边缘的距离。单位：[px](arkts-arkui-length-t.md)取值范围：大于等于0。
+当前行的基线与组件上边缘的距离。
+
+单位：[px](arkts-arkui-length-t.md)
+
+取值范围：大于等于0。
 
 **类型：** number
 
@@ -35,7 +39,11 @@ baseline: number
 bottom: number
 ```
 
-行底与组件上边缘的距离。单位：[px](arkts-arkui-length-t.md)取值范围：大于等于0。
+行底与组件上边缘的距离。
+
+单位：[px](arkts-arkui-length-t.md)
+
+取值范围：大于等于0。
 
 **类型：** number
 
@@ -71,7 +79,9 @@ direction: TextDirection
 end: number
 ```
 
-当前行的结束索引。取值范围：大于等于0。
+当前行的结束索引。
+
+取值范围：大于等于0。
 
 **类型：** number
 
@@ -89,7 +99,9 @@ end: number
 first: boolean
 ```
 
-当前行是否是段落的首行。true：首行；false：非首行。
+当前行是否是段落的首行。
+
+true：首行；false：非首行。
 
 **类型：** boolean
 
@@ -107,7 +119,9 @@ first: boolean
 start: number
 ```
 
-当前行的起始索引。取值范围：大于等于0。
+当前行的起始索引。
+
+取值范围：大于等于0。
 
 **类型：** number
 
@@ -125,7 +139,11 @@ start: number
 top: number
 ```
 
-行顶与组件上边缘的距离。单位：[px](arkts-arkui-length-t.md)取值范围：大于等于0。
+行顶与组件上边缘的距离。
+
+单位：[px](arkts-arkui-length-t.md)
+
+取值范围：大于等于0。
 
 **类型：** number
 
@@ -143,7 +161,11 @@ top: number
 x: number
 ```
 
-当前行相对于组件的水平偏移。direction为RTL时，返回当前行右侧与组件右边缘的距离。单位：[px](arkts-arkui-length-t.md)取值范围：大于等于0。
+当前行相对于组件的水平偏移。direction为RTL时，返回当前行右侧与组件右边缘的距离。
+
+单位：[px](arkts-arkui-length-t.md)
+
+取值范围：大于等于0。
 
 **类型：** number
 

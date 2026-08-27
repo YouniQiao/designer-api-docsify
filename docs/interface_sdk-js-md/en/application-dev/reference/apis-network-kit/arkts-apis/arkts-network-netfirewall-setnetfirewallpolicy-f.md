@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import netFirewall from '@kit.NetworkKit';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## setNetFirewallPolicy
@@ -36,7 +36,7 @@ Sets the firewall policy for a system user ID, including the firewall switch sta
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

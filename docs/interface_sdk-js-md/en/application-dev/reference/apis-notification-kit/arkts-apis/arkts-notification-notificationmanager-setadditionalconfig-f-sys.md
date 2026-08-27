@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setAdditionalConfig
@@ -33,7 +33,7 @@ Sets the additional system configuration information of the notification. This A
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. **0** indicates successful; other values indicate failed. |
+| Promise&lt;number&gt; | Promise used to return the result. **0** indicates successful; other values indicate failed. |
 
 **Error codes:**
 

@@ -23,7 +23,7 @@ function reportNetDisconnected(netHandle: NetHandle, callback: AsyncCallback<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | 是 | 网络句柄，参考[NetHandle](arkts-network-connection-nethandle-i.md)。 |
+| netHandle | NetHandle | 是 | 网络句柄，参考[NetHandle](arkts-network-connection-nethandle-i.md)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当向网络管理报告网络处于不可用状态成功时，error为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -76,13 +76,13 @@ function reportNetDisconnected(netHandle: NetHandle): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | 是 | 网络句柄。 |
+| netHandle | NetHandle | 是 | 网络句柄。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **错误码：**
 

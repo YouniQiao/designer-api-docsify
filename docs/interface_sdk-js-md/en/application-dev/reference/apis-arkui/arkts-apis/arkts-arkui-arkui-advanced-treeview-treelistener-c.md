@@ -10,7 +10,6 @@ Listener of the tree view component. You can bind it to the **TreeView** compone
 
 ```TypeScript
 import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
-import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUIV2';
 ```
 
 ## off
@@ -34,7 +33,7 @@ Registers a one-off listener.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | Yes | Listening type. |
-| callback | (callbackParam: CallbackParam) = & gt; void | No | Node information. |
+| callback | (callbackParam: CallbackParam) =&gt; void | No | Node information. |
 
 ## on
 
@@ -57,7 +56,7 @@ Declare class TreeListener
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | Yes | Listening type. |
-| callback | (callbackParam: CallbackParam) = & gt; void | Yes | Node information. |
+| callback | (callbackParam: CallbackParam) =&gt; void | Yes | Node information. |
 
 ## once
 
@@ -80,4 +79,4 @@ Declare class TreeListener
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | Yes | Listening type. |
-| callback | (callbackParam: CallbackParam) = & gt; void | Yes | Node information. |
+| callback | (callbackParam: CallbackParam) =&gt; void | Yes | Node information. |

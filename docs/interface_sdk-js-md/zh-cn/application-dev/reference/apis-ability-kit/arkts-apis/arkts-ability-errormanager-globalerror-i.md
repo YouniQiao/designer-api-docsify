@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import errorManager from '@kit.AbilityKit';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## instanceName
@@ -20,10 +20,14 @@ import errorManager from '@kit.AbilityKit';
 instanceName: string
 ```
 
-表示虚拟机实例名称。  
-**说明：**TaskPool线程中异常的instanceName标识规则：
-- globalErrorOccurred：标识为“TaskPool Thread + 方法名”；
-- globalUnhandledRejectionDetected：标识为“TaskPool Thread + 任务名”；
+表示虚拟机实例名称。
+
+**说明：**
+
+TaskPool线程中异常的instanceName标识规则：
+
+- globalErrorOccurred：标识为“TaskPool Thread + 方法名”；  
+- globalUnhandledRejectionDetected：标识为“TaskPool Thread + 任务名”；  
 - 若仅标识为“TaskPool Thread”，则表明异常源于异步回调内部。
 
 **类型：** string

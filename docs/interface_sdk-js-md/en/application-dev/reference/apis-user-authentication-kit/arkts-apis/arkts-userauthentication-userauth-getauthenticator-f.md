@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import userAuth from '@kit.UserAuthenticationKit';
-import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## getAuthenticator
@@ -27,7 +26,7 @@ Obtains an **Authenticator** instance for user authentication.
 
 | Type | Description |
 | --- | --- |
-| [Authenticator](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-appaccount-authenticator-c.md) | Authenticator** instance obtained. |
+| Authenticator | Authenticator** instance obtained. |
 
 **Examples**
 

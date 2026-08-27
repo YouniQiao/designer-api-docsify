@@ -13,7 +13,7 @@ Defines the input parameters of **cipher.rsa()**.
 ## Modules to Import
 
 ```TypeScript
-import Cipher, { CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
+import { Cipher, CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
 
 ## complete
@@ -84,6 +84,7 @@ action: string
 ```
 
 Action to perform. The options are as follows:
+
 1. **encrypt**: Encrypts data.
 2. **decrypt**: Decrypts data.
 
@@ -121,7 +122,9 @@ RSA key. It is a public key in encryption and a private key in decryption.
 text: string
 ```
 
-Text to be encrypted or decrypted.The text to be encrypted must be a common text and cannot exceed the length calculated based on the formula (keySize/8 - 66). **keySize** indicates the key length. For example, if the key length is 1024 bytes, the text cannot exceed 62 bytes (1024/8 - 66 = 62). The text to be decrypted must be a binary value encoded in Base64. The default format is used for Base64 encoding.
+Text to be encrypted or decrypted.
+
+The text to be encrypted must be a common text and cannot exceed the length calculated based on the formula (keySize/8 - 66). **keySize** indicates the key length. For example, if the key length is 1024 bytes, the text cannot exceed 62 bytes (1024/8 - 66 = 62). The text to be decrypted must be a binary value encoded in Base64. The default format is used for Base64 encoding.
 
 **Type:** string
 

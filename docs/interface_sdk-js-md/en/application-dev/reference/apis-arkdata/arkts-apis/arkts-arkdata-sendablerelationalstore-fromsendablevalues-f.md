@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import sendableRelationalStore from '@kit.ArkData';
+import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
 ## fromSendableValues
@@ -22,7 +22,7 @@ Converts the array data that can be passed across threads into the data that can
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | collections.Array & lt;ValueType & gt; | Yes | Array data that can be passed across threads. |
+| values | collections.Array&lt;ValueType&gt; | Yes | Array data that can be passed across threads. |
 
 **Return value:**
 

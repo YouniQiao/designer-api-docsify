@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## requestSuspendDelay
@@ -34,7 +34,7 @@ Requests a transient task.
 
 | Type | Description |
 | --- | --- |
-| [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md) | Information about the transient task. |
+| DelaySuspendInfo | Information about the transient task. |
 
 **Error codes:**
 

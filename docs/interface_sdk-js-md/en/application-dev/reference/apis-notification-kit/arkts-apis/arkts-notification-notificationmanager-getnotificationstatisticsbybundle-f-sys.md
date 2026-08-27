@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getNotificationStatisticsByBundle
@@ -26,7 +26,7 @@ Obtains notification statistics of a specified list of applications in batches. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | [BundleOption[]](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes | List of application bundle information. |
+| bundles | BundleOption[] | Yes | List of application bundle information. |
 
 **Return value:**
 

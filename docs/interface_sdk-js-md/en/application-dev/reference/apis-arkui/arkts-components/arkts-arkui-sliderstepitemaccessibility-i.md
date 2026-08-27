@@ -17,7 +17,9 @@ Provides accessibility configuration of the slider step markers.
 text?: ResourceStr
 ```
 
-Text for assistive technologies (for example, screen readers).Default value: **""**
+Text for assistive technologies (for example, screen readers).
+
+Default value: **""**
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

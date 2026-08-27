@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## appendBundles
@@ -34,7 +34,7 @@ appendBundles(remoteCapabilitiesFd: number, bundlesToBackup: string[], infos?: s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| remoteCapabilitiesFd | number | 是 | 保存远端设备能力信息的已打开JSON文件描述符。 可通过getLocalCapabilities方法获取该值。 |
+| remoteCapabilitiesFd | number | 是 | 保存远端设备能力信息的已打开JSON文件描述符。可通过getLocalCapabilities方法获取该值。 |
 | bundlesToBackup | string[] | 是 | 需要恢复的应用名称数组。 |
 | infos | string[] | 否 | 恢复时各应用所需扩展信息的数组。 |
 
@@ -42,7 +42,7 @@ appendBundles(remoteCapabilitiesFd: number, bundlesToBackup: string[], infos?: s
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -169,7 +169,7 @@ appendBundles(remoteCapabilitiesFd: number, bundlesToBackup: string[], callback:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| remoteCapabilitiesFd | number | 是 | 保存远端设备能力信息的已打开JSON文件描述符。 可通过getLocalCapabilities方法获取该值。 |
+| remoteCapabilitiesFd | number | 是 | 保存远端设备能力信息的已打开JSON文件描述符。可通过getLocalCapabilities方法获取该值。 |
 | bundlesToBackup | string[] | 是 | 需要恢复的应用名称数组。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 添加恢复应用完成后的异步回调。 |
 
@@ -508,7 +508,7 @@ cleanBundleTempDir(bundleName: string): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | 清理结果，true表示成功，false表示失败。 |
+| Promise&lt;boolean&gt; | 清理结果，true表示成功，false表示失败。 |
 
 **错误码：**
 
@@ -905,7 +905,7 @@ getApkFileHandle(path: string, fileName: string): Promise<FileData>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Promise对象，返回包含APK文件描述符的FileData。 返回的文件为临时文件，关闭后将自动删除。 |
+| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Promise对象，返回包含APK文件描述符的FileData。返回的文件为临时文件，关闭后将自动删除。 |
 
 **错误码：**
 
@@ -1013,7 +1013,7 @@ getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回应用的兼容性信息。 |
+| Promise&lt;string&gt; | Promise对象，返回应用的兼容性信息。 |
 
 **错误码：**
 
@@ -1219,7 +1219,7 @@ async function getIncBackupCompatibilityInfo() {
 getFileHandle(fileMeta: FileMeta): Promise<void>
 ```
 
-向服务端请求共享文件，该接口属于零拷贝能力。 开发者可通过onFileReady回调获取文件。 客户端完成文件处理后，调用publishFile发布文件。
+向服务端请求共享文件，该接口属于零拷贝能力。开发者可通过onFileReady回调获取文件。客户端完成文件处理后，调用publishFile发布文件。
 
 **起始版本：** 10
 
@@ -1233,13 +1233,13 @@ getFileHandle(fileMeta: FileMeta): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。所有文件都应来自备份流程或getLocalCapabilities方法。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1318,7 +1318,7 @@ async function getFileHandle() {
 getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ```
 
-向服务端请求共享文件，该接口属于零拷贝能力。 开发者可通过onFileReady回调获取文件。 客户端完成文件处理后，调用publishFile发布文件。
+向服务端请求共享文件，该接口属于零拷贝能力。开发者可通过onFileReady回调获取文件。客户端完成文件处理后，调用publishFile发布文件。
 
 **起始版本：** 10
 
@@ -1332,7 +1332,7 @@ getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。所有文件都应来自备份流程或getLocalCapabilities方法。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 获取文件句柄完成后的异步回调。 |
 
 **错误码：**
@@ -1409,7 +1409,7 @@ sessionRestore.getFileHandle(fileMeta, (err: BusinessError) => {
 getFileHandles(fileMeta: FileMeta): Promise<void>
 ```
 
-向服务端批量请求共享文件，该接口属于零拷贝能力。 开发者可通过onFileReadyBatch回调获取文件。 客户端完成文件处理后，调用publishFile发布文件。
+向服务端批量请求共享文件，该接口属于零拷贝能力。开发者可通过onFileReadyBatch回调获取文件。客户端完成文件处理后，调用publishFile发布文件。
 
 **起始版本：** 26.0.0
 
@@ -1425,13 +1425,13 @@ getFileHandles(fileMeta: FileMeta): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。所有文件都应来自 备份流程或getLocalCapabilities方法。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。所有文件都应来自备份流程或getLocalCapabilities方法。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1538,7 +1538,7 @@ getLocalCapabilities(): Promise<FileData>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将 自动删除。 |
+| Promise&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | Promise对象，返回包含本地能力文件描述符的FileData。返回的文件为临时文件，关闭后将自动删除。 |
 
 **错误码：**
 
@@ -1696,25 +1696,6 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md)提供的fileIo.stat等相关接口获取，能力文件内容示例：
-
-```TypeScript
-{
- "backupVersion" : "16.0",
- "bundleInfos" :[{
-   "allToBackup" : true,
-   "extensionName" : "BackupExtensionAbility",
-   "name" : "com.example.hiworld",
-   "needToInstall" : false,
-   "spaceOccupied" : 0,
-   "versionCode" : 1000000,
-   "versionName" : "1.0.0"
-   }],
- "deviceType" : "default",
- "systemFullName" : "OpenHarmony-4.0.0.0"
-}
-```
-
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 import { fileIo, backup } from '@kit.CoreFileKit';
@@ -1819,25 +1800,6 @@ async function getLocalCapabilitiesTest() {
     let err: BusinessError = error as BusinessError;
     console.error(`parse failed with code: ${err.code}, message: ${err.message}`);
   }
-}
-```
-
-能力文件可以通过[@ohos.file.fs](arkts-corefile-fileio-n.md)提供的fileIo.stat等相关接口获取，能力文件内容示例：
-
-```TypeScript
-{
- "backupVersion" : "16.0",
- "bundleInfos" :[{
-   "allToBackup" : true,
-   "extensionName" : "BackupExtensionAbility",
-   "name" : "com.example.hiworld",
-   "needToInstall" : false,
-   "spaceOccupied" : 0,
-   "versionCode" : 1000000,
-   "versionName" : "1.0.0"
-   }],
- "deviceType" : "default",
- "systemFullName" : "OpenHarmony-4.0.0.0"
 }
 ```
 
@@ -1996,7 +1958,7 @@ migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2090,7 +2052,7 @@ async function testMigrateFile() {
 publishFile(fileMeta: FileMeta): Promise<void>
 ```
 
-向备份服务发布文件句柄，通知服务端文件内容已准备完成。 该接口属于零拷贝能力。
+向备份服务发布文件句柄，通知服务端文件内容已准备完成。该接口属于零拷贝能力。
 
 **起始版本：** 10
 
@@ -2104,13 +2066,13 @@ publishFile(fileMeta: FileMeta): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。应确保备份框架已持有 通过getFileHandle获取的文件。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。应确保备份框架已持有通过getFileHandle获取的文件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2201,7 +2163,7 @@ g_session = createSessionRestore();
 publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ```
 
-向备份服务发布文件句柄，通知服务端文件内容已准备完成。 该接口属于零拷贝能力。
+向备份服务发布文件句柄，通知服务端文件内容已准备完成。该接口属于零拷贝能力。
 
 **起始版本：** 10
 
@@ -2215,7 +2177,7 @@ publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。应确保备份框架已持有 通过getFileHandle获取的文件。 |
+| fileMeta | [FileMeta](arkts-corefile-backup-filemeta-i-sys.md) | 是 | 待发送文件的元数据。应确保备份框架已持有通过getFileHandle获取的文件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 发布文件句柄完成后的异步回调。 |
 
 **错误码：**
@@ -2323,7 +2285,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

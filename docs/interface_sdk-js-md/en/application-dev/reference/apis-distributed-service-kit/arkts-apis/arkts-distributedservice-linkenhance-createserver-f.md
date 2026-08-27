@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import linkEnhance from '@kit.DistributedServiceKit';
+import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## createServer
@@ -32,7 +32,7 @@ Creates a **Server** object. After **start()** is called, the device can be conn
 
 | Type | Description |
 | --- | --- |
-| [Server](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-server-i.md) | Server** object created. |
+| Server | Server** object created. |
 
 **Error codes:**
 

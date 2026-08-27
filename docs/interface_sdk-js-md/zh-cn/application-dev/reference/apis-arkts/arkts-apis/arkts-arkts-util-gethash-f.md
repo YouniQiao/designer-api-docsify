@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## getHash
@@ -13,7 +11,7 @@ import JSON from '@kit.ArkTS.json';
 function getHash(object: object): number
 ```
 
-获取对象的哈希值。 如果尚未获取过哈希值，则生成一个随机哈希值，保存到对象的 **hash** 字段中并返回。如果已经获取过哈希值，则返回保存在 **hash** 字段中的哈希值（同一对象返回相同的值）。
+获取对象的哈希值。如果尚未获取过哈希值，则生成一个随机哈希值，保存到对象的 **hash** 字段中并返回。如果已经获取过哈希值，则返回保存在**hash** 字段中的哈希值（同一对象返回相同的值）。
 
 **起始版本：** 12
 

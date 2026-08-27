@@ -1,6 +1,8 @@
 # Camera
 
-Camera node, which inherits from Node.@extends Node @interface Camera
+Camera node, which inherits from Node.
+
+@extends Node @interface Camera
 
 **Inheritance/Implementation:** Camera extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
@@ -152,7 +154,7 @@ function Sub(l: Vec3, r: Vec3): Vec3 {
 }
 // Vector dot product, which returns the inner product of l and r.
 function Dot(l: Vec3, r: Vec3): number {
-  return l.x * r.x + l.y * r.y + r.z * l.z;
+  return l.x * r.x + l.y * r.y + l.z * r.z;
 }
 // Vector normalization, which returns the unit vector of l.
 function Normalize(l: Vec3): Vec3 {
@@ -221,7 +223,7 @@ function lookAt(node: Node, eye: Vec3, center: Vec3, up: Vec3) {
         y: m2.x - m0.z,
         z: m0.y - m1.x,
         w: t
-      }
+      };
     }
   }
   node.position = eye;

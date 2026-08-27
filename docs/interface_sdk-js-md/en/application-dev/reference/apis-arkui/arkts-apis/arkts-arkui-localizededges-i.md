@@ -1,6 +1,8 @@
 # LocalizedEdges
 
-Defines the LocalizedEdges.@interface LocalizedEdges
+Defines the LocalizedEdges.
+
+@interface LocalizedEdges
 
 **Since:** 12
 

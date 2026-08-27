@@ -9,7 +9,7 @@ This module provides APIs for applications to obtain custom configurations, such
 ## Modules to Import
 
 ```TypeScript
-import customConfig from '@kit.BasicServicesKit';
+import { customConfig } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

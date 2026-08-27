@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import recent from '@kit.CoreFileKit';
+import { recent } from '@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -30,7 +30,7 @@ Lists the files that are accessed recently.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;FileInfo & gt; | Returns the next level FileInfo Object. |
+| Array&lt;FileInfo&gt; | Returns the next level FileInfo Object. |
 
 **Error codes:**
 

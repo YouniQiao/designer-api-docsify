@@ -11,7 +11,7 @@ The FeatureAbility module provides APIs that enable user interaction. You can us
 ## Modules to Import
 
 ```TypeScript
-import featureAbility from '@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -33,8 +33,8 @@ import featureAbility from '@kit.AbilityKit';
 | [hasWindowFocus](arkts-ability-featureability-haswindowfocus-f.md) | Checks whether the main window of this ability has the focus. This API uses a promise to return the result. |
 | [startAbility](arkts-ability-featureability-startability-f.md) | Starts an ability. This API uses an asynchronous callback to return the result. |
 | [startAbility](arkts-ability-featureability-startability-f.md) | Starts an ability. This API uses a promise to return the result. |
-| [startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md) | Starts an ability. This API uses an asynchronous callback to return the result. The following situations may be possible for a started ability:  - Normally, you can call  [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md) to terminate the ability. The result is returned to the caller.  - If an exception occurs, for example, the ability is killed, an exception message, in which **resultCode** is  **-1**, is returned to the caller.  - If different applications call this API to start an ability that uses the singleton mode and then call  [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others. |
-| [startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md) | Starts an ability. This API uses a promise to return the result. The following situations may be possible for a started ability:  - Normally, you can call  [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md) to terminate the ability. The result is returned to the caller.  - If an exception occurs, for example, the ability is killed, an exception message, in which **resultCode** is  **-1**, is returned to the caller.  - If different applications call this API to start an ability that uses the singleton mode and then call  [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others. |
+| [startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md) | Starts an ability. This API uses an asynchronous callback to return the result. The following situations may be possible for a started ability: |
+| [startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md) | Starts an ability. This API uses a promise to return the result. The following situations may be possible for a started ability: |
 | [terminateSelf](arkts-ability-featureability-terminateself-f.md) | Terminates this ability. This API uses an asynchronous callback to return the result. |
 | [terminateSelf](arkts-ability-featureability-terminateself-f.md) | Terminates this ability. This API uses a promise to return the result. |
 | [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md) | Terminates this ability. This API uses an asynchronous callback to return the result. If the ability is started by calling [startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md), the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned to the caller when **terminateSelfWithResult** is called. |
@@ -44,7 +44,7 @@ import featureAbility from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AbilityStartSetting](arkts-ability-featureability-abilitystartsetting-e.md) | Defines the window property corresponding to this ability. The **abilityStartSetting** property is an object defined in the format of [**key: string]: any**, where **key** is an enumerated value of ** AbilityStartSetting** and **value** is an enumerated value of **AbilityWindowConfiguration**.The value is obtained through **featureAbility.AbilityStartSetting**. |
+| [AbilityStartSetting](arkts-ability-featureability-abilitystartsetting-e.md) | Defines the window property corresponding to this ability. The **abilityStartSetting** property is an object defined in the format of [**key: string]: any**, where **key** is an enumerated value of ** AbilityStartSetting** and **value** is an enumerated value of **AbilityWindowConfiguration**. |
 | [AbilityWindowConfiguration](arkts-ability-featureability-abilitywindowconfiguration-e.md) | Defines the window configuration corresponding to this ability. The configuration is obtained through **featureAbility.AbilityWindowConfiguration**. |
 | [DataAbilityOperationType](arkts-ability-featureability-dataabilityoperationtype-e.md) | Enumerates the operation types of a DataAbility. The DataAbility can use an enumerated value to specify the operation type when operating data in batches. |
 | [ErrorCode](arkts-ability-featureability-errorcode-e.md) | Enumerates the error codes that may be returned when an ability is started. |

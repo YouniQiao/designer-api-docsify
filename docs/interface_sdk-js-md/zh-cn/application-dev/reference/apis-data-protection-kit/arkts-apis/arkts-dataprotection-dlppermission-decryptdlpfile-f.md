@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## decryptDlpFile
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 ```
 
-将DLP文件解密生成明文文件，仅支持企业账号调用。使用Promise异步回调。该接口用于将DLP加密文件解密为明文文件，适用于拥有者权限用户导出或迁移文件。
+将DLP文件解密生成明文文件，仅支持企业账号调用。使用Promise异步回调。
+
+该接口用于将DLP加密文件解密为明文文件，适用于拥有者权限用户导出或迁移文件。
 
 > **说明：**
 > 
@@ -28,14 +30,14 @@ function decryptDlpFile(dlpFd: number, plaintextFd: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dlpFd | number | 是 | 待解密DLP文件的fd。取值范围为[0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2 & lt;sup & gt;31 & lt;/sup & gt;-1时，fd的 值被截断。 |
-| plaintextFd | number | 是 | 目标解密文件的fd。取值范围为[0, 2 & lt;sup & gt;31 & lt;/sup & gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2 & lt;sup & gt;31 & lt;/sup & gt;-1时 ，fd的值被截断。 |
+| dlpFd | number | 是 | 待解密DLP文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时，fd的值被截断。 |
+| plaintextFd | number | 是 | 目标解密文件的fd。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时，fd的值被截断。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

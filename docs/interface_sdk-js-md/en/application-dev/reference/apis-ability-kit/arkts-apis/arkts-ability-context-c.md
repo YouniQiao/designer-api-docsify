@@ -304,7 +304,7 @@ Obtains the shared directory based on a group ID. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. If no shared directory exists, null is returned. Only the encryption level EL2 is supported. |
+| Promise&lt;string&gt; | Promise used to return the result. If no shared directory exists, null is returned. Only the encryption level EL2 is supported. |
 
 **Error codes:**
 

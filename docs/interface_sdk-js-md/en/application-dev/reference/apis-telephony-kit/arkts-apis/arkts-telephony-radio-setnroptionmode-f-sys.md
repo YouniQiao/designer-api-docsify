@@ -85,7 +85,7 @@ Set the NR option mode.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns option result. |
+| Promise&lt;void&gt; | Returns option result. |
 
 **Error codes:**
 

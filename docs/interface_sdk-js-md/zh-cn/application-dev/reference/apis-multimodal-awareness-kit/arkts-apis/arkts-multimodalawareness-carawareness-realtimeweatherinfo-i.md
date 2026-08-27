@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import carAwareness from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## timestamp
@@ -18,7 +18,7 @@ import carAwareness from '@kit.MultimodalAwarenessKit';
 timestamp: number
 ```
 
-时间戳。 单位为：毫秒。
+时间戳。单位为：毫秒。
 
 **类型：** number
 
@@ -34,7 +34,7 @@ timestamp: number
 weather: number
 ```
 
-指示当前天气。 单位为：毫秒。取值限定为整数。
+指示当前天气。单位为：毫秒。取值限定为整数。
 
 **类型：** number
 

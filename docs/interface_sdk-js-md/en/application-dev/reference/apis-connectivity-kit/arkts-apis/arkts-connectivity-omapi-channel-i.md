@@ -9,7 +9,7 @@ A **Channel** instance indicates a channel set up by a **Session** instance. The
 ## Modules to Import
 
 ```TypeScript
-import omapi from '@kit.ConnectivityKit';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## close
@@ -118,7 +118,7 @@ Obtains the session used to open this channel.
 
 | Type | Description |
 | --- | --- |
-| [Session](../../apis-camera-kit/arkts-apis/arkts-camera-camera-session-i.md) | Session instance obtained. |
+| Session | Session instance obtained. |
 
 **Error codes:**
 
@@ -264,7 +264,7 @@ Transmits APDU data (as per ISO/IEC 7816) to the SE. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number[] & gt; | Promise used to return the response received, in a number array. If the chip captures an exception, an all zero value is returned. |
+| Promise&lt;number[]&gt; | Promise used to return the response received, in a number array. If the chip captures an exception, an all zero value is returned. |
 
 **Error codes:**
 

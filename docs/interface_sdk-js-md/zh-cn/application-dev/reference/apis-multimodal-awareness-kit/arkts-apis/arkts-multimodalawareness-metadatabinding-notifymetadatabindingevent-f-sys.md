@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import metadataBinding from '@kit.MultimodalAwarenessKit';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## notifyMetadataBindingEvent
@@ -30,7 +30,7 @@ function notifyMetadataBindingEvent(bundleName: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象。返回当前所在页面的applink信息。 |
+| Promise&lt;string&gt; | Promise对象。返回当前所在页面的applink信息。 |
 
 **错误码：**
 

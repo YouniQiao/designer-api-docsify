@@ -46,7 +46,9 @@ The ability does not respond.
 NORMAL = 2
 ```
 
-The ability exits normally because the user closes the application.Note: If the application process is forcibly terminated using methods not provided by Ability Kit, such as calling process.exit() or using the kernel **kill** command, the reason for the last exit is also reported as **NORMAL**.
+The ability exits normally because the user closes the application.
+
+Note: If the application process is forcibly terminated using methods not provided by Ability Kit, such as calling process.exit() or using the kernel **kill** command, the reason for the last exit is also reported as **NORMAL**.
 
 **Since:** 9
 
@@ -110,7 +112,9 @@ The ability exits due to [application freeze](../../../dfx/appfreeze-guidelines.
 PERFORMANCE_CONTROL = 6
 ```
 
-The ability exits due to system performance problems, for example, insufficient device memory.Note: This API will be deprecated. You are advised to use **RESOURCE_CONTROL** instead.
+The ability exits due to system performance problems, for example, insufficient device memory.
+
+Note: This API will be deprecated. You are advised to use **RESOURCE_CONTROL** instead.
 
 **Since:** 10
 
@@ -126,7 +130,8 @@ The ability exits due to system performance problems, for example, insufficient 
 RESOURCE_CONTROL = 7
 ```
 
-The ability exits due to improper use of system resources. The specific error cause can be obtained through [LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md). The possible causes are as follows:  
+The ability exits due to improper use of system resources. The specific error cause can be obtained through [LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md). The possible causes are as follows:
+
 - **CPU Highload**: The CPU load is high.  
 - **CPU_EXT Highload**: A fast CPU load detection is carried out.  
 - **IO Manage Control**: An I/O management and control operation is carried out.  

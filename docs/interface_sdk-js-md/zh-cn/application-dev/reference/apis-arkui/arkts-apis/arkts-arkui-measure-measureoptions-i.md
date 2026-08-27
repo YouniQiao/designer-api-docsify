@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import MeasureText, { MeasureOptions } from '@kit.ArkUI';
+import { MeasureText, MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## baselineOffset
@@ -18,7 +18,9 @@ import MeasureText, { MeasureOptions } from '@kit.ArkUI';
 baselineOffset?: number | string
 ```
 
-设置被计算文本基线的偏移量。默认值：0
+设置被计算文本基线的偏移量。
+
+默认值：0
 
 **类型：** number \| string
 
@@ -36,8 +38,11 @@ baselineOffset?: number | string
 constraintWidth?: number | string | Resource
 ```
 
-设置被计算文本布局宽度。  
-**说明：**默认单位为vp，不支持设置百分比字符串。若不设置，则文本SizeOptions宽度为单行布局所占最大宽度值，若设置则为设置值。
+设置被计算文本布局宽度。
+
+**说明：**
+
+默认单位为vp，不支持设置百分比字符串。若不设置，则文本SizeOptions宽度为单行布局所占最大宽度值，若设置则为设置值。
 
 **类型：** number \| string \| Resource
 
@@ -71,8 +76,15 @@ fontFamily?: string | Resource
 fontSize?: number | string | Resource
 ```
 
-设置被计算文本字体大小，fontSize为number类型时，使用vp单位。默认值：16  
-**说明：**不支持设置百分比字符串。从API version 12开始，fontSize为number类型时，使用fp单位。
+设置被计算文本字体大小，fontSize为number类型时，使用vp单位。
+
+默认值：16
+
+**说明：**
+
+不支持设置百分比字符串。
+
+从API version 12开始，fontSize为number类型时，使用fp单位。
 
 **类型：** number \| string \| Resource
 
@@ -88,7 +100,11 @@ fontSize?: number | string | Resource
 fontStyle?: number | FontStyle
 ```
 
-设置被计算文本字体样式。默认值：FontStyle.Normal number类型取值范围为[0,1]，取值间隔为1，依次对应FontStyle中的枚举值。
+设置被计算文本字体样式。
+
+默认值：FontStyle.Normal
+
+number类型取值范围为[0,1]，取值间隔为1，依次对应FontStyle中的枚举值。
 
 **类型：** number \| FontStyle
 
@@ -104,7 +120,9 @@ fontStyle?: number | FontStyle
 fontWeight?: number | string | FontWeight
 ```
 
-设置被计算文本的字体粗细，number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。默认值：FontWeight.Normal
+设置被计算文本的字体粗细，number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
+
+默认值：FontWeight.Normal
 
 **类型：** number \| string \| FontWeight
 
@@ -120,7 +138,9 @@ fontWeight?: number | string | FontWeight
 letterSpacing?: number | string
 ```
 
-设置被计算文本字符间距。默认值：0
+设置被计算文本字符间距。
+
+默认值：0
 
 **类型：** number \| string
 
@@ -154,7 +174,9 @@ lineHeight?: number | string | Resource
 maxLines?: number
 ```
 
-设置被计算文本最大行数。取值范围：[0, INT32_MAX]
+设置被计算文本最大行数。
+
+取值范围：[0, INT32_MAX]
 
 **类型：** number
 
@@ -172,7 +194,11 @@ maxLines?: number
 overflow?: number | TextOverflow
 ```
 
-设置被计算文本超长时的截断方式。默认值：1number类型取值范围为[0,3]，取值间隔为1，依次对应TextOverflow中的枚举值。
+设置被计算文本超长时的截断方式。
+
+默认值：1
+
+number类型取值范围为[0,3]，取值间隔为1，依次对应TextOverflow中的枚举值。
 
 **类型：** number \| [TextOverflow](arkts-arkui-textoverflow-e.md)
 
@@ -190,7 +216,11 @@ overflow?: number | TextOverflow
 textAlign?: number | TextAlign
 ```
 
-设置被计算文本水平方向的对齐方式。默认值：TextAlign.Start number类型取值范围为[0,3]，取值间隔为1，依次对应TextAlign中的枚举值。
+设置被计算文本水平方向的对齐方式。
+
+默认值：TextAlign.Start
+
+number类型取值范围为[0,3]，取值间隔为1，依次对应TextAlign中的枚举值。
 
 **类型：** number \| TextAlign
 
@@ -208,7 +238,11 @@ textAlign?: number | TextAlign
 textCase?: number | TextCase
 ```
 
-设置被计算文本大小写。默认值：TextCase.Normal number类型取值范围为[0,2]，取值间隔为1，依次对应TextCase中的枚举值。
+设置被计算文本大小写。
+
+默认值：TextCase.Normal
+
+number类型取值范围为[0,2]，取值间隔为1，依次对应TextCase中的枚举值。
 
 **类型：** number \| [TextCase](arkts-arkui-textcase-e.md)
 
@@ -260,8 +294,13 @@ textIndent?: number | string
 wordBreak?: WordBreak
 ```
 
-设置断行规则。默认值：WordBreak.BREAK_WORD  
-**说明：**WordBreak.BREAK_ALL与{overflow: TextOverflow.Ellipsis}，`maxLines`组合使用可实现英文单词按字母截断，超出部分以省略号显示。
+设置断行规则。
+
+默认值：WordBreak.BREAK_WORD
+
+**说明：**
+
+WordBreak.BREAK_ALL与{overflow: TextOverflow.Ellipsis}，`maxLines`组合使用可实现英文单词按字母截断，超出部分以省略号显示。
 
 **类型：** WordBreak
 

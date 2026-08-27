@@ -38,8 +38,17 @@ A constructor used to create an **ArcSliderValueOptions** instance.
 max?: number
 ```
 
-Maximum value.Default value: **100**  
-**NOTE：**If the value of **min** is greater than or equal to that of **max**, **min** is set to **0** and **max** **100**.If the value is not within the [min, max] range, the value of **min** or **max** is used, whichever is closer.@Trace
+Maximum value.
+
+Default value: **100**
+
+**NOTE：**
+
+If the value of **min** is greater than or equal to that of **max**, **min** is set to **0** and **max** **100**.
+
+If the value is not within the [min, max] range, the value of **min** or **max** is used, whichever is closer.
+
+@Trace
 
 **Type:** number
 
@@ -57,7 +66,11 @@ Maximum value.Default value: **100**
 min?: number
 ```
 
-Minimum value.Default value: **0**.@Trace
+Minimum value.
+
+Default value: **0**.
+
+@Trace
 
 **Type:** number
 
@@ -75,7 +88,11 @@ Minimum value.Default value: **0**.@Trace
 progress?: number
 ```
 
-Current progress.Default value: same as the value of **min**.@Trace
+Current progress.
+
+Default value: same as the value of **min**.
+
+@Trace
 
 **Type:** number
 

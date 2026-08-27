@@ -13,7 +13,7 @@ VideoPlayer is a class for video playback management. It provides APIs to manage
 ## Modules to Import
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getTrackDescription
@@ -186,7 +186,7 @@ Subscribes to the video buffering update event. This API works only under online
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bufferingUpdate' | Yes | Event type, which is **'bufferingUpdate'** in this case. |
-| callback | (infoType: BufferingInfoType, value: number) = & gt; void | Yes | Callback invoked when the event is triggered.The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md) is fixed at **0**. |
+| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md) is fixed at **0**. |
 
 ## on('startRenderFrame')
 
@@ -232,7 +232,7 @@ Subscribes to the video width and height change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'videoSizeChanged' | Yes | Event type, which is **'videoSizeChanged'** in this case. |
-| callback | (width: number, height: number) = & gt; void | Yes | Callback invoked when the event is triggered. **width** indicates the video width, and **height** indicates the video height. |
+| callback | (width: number, height: number) =&gt; void | Yes | Callback invoked when the event is triggered. **width** indicates the video width, and **height** indicates the video height. |
 
 ## on('audioInterrupt')
 
@@ -255,7 +255,7 @@ Subscribes to the audio interruption event. For details, see [audio.InterruptEve
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | Yes | Event type, which is **'audioInterrupt'** in this case. |
-| callback | (info: audio.InterruptEvent) = & gt; void | Yes | Callback invoked when the event is triggered. |
+| callback | (info: audio.InterruptEvent) =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on('error')
 
@@ -377,7 +377,7 @@ Pauses video playback. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -514,7 +514,7 @@ Starts video playback. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -614,7 +614,7 @@ Prepares for video playback. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -780,7 +780,7 @@ Releases the video playback resources. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -1007,7 +1007,7 @@ Resets video playback. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -1126,7 +1126,7 @@ Seeks to the specified playback position. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeMs | number | Yes | Position to seek to, in ms. The value range is [0, duration]. |
-| mode | [SeekMode](arkts-media-media-seekmode-e.md) | Yes | Seek mode. |
+| mode | SeekMode | Yes | Seek mode. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the new playback position; otherwise, **err** is an error object. |
 
 **Examples**
@@ -1176,13 +1176,13 @@ Seeks to the specified playback position. If **mode** is not specified, the prev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeMs | number | Yes | Position to seek to, in ms. The value range is [0, duration]. |
-| mode | [SeekMode](arkts-media-media-seekmode-e.md) | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. |
+| mode | SeekMode | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the playback position, in ms. |
+| Promise&lt;number&gt; | Promise used to return the playback position, in ms. |
 
 **Examples**
 
@@ -1288,7 +1288,7 @@ Sets a surface ID. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -1378,7 +1378,7 @@ Sets the playback speed. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the playback speed. For details, see [PlaybackSpeed]{ |
+| Promise&lt;number&gt; | Promise used to return the playback speed. For details, see [PlaybackSpeed]{ |
 
 **Examples**
 
@@ -1468,7 +1468,7 @@ Sets the volume. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -1580,7 +1580,7 @@ Stops video playback. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -1690,10 +1690,20 @@ Video duration, in ms. The value **-1** indicates the live mode.
 fdSrc: AVFileDescriptor
 ```
 
-Description of a video file. This property is required when video assets of an application are continuously stored in a file.Assume that a music file that stores continuous music assets consists of the following:Video 1 (address offset: 0, byte length: 100)Video 2 (address offset: 101; byte length: 50)Video 3 (address offset: 151, byte length: 150)
+Description of a video file. This property is required when video assets of an application are continuously stored in a file.
+
+Assume that a music file that stores continuous music assets consists of the following:
+
+Video 1 (address offset: 0, byte length: 100)
+
+Video 2 (address offset: 101; byte length: 50)
+
+Video 3 (address offset: 151, byte length: 150)
+
 1. To play video 1: AVFileDescriptor { fd = resource handle; offset = 0; length = 100; }
 2. To play video 2: AVFileDescriptor { fd = resource handle; offset = 101; length = 50; }
 3. To play video 3: AVFileDescriptor { fd = resource handle; offset = 151; length = 150; }
+
 To play an independent video file, use **src=fd://xx**.
 
 **Type:** [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md)
@@ -1766,15 +1776,22 @@ Video playback state.
 url: string
 ```
 
-Video URL. The video formats MP4, MPEG-TS, and MKV are supported.  
+Video URL. The video formats MP4, MPEG-TS, and MKV are supported.
+
 **Example of supported URLs**:
+
 1. FD: fd://xx
+
+
 
 2. HTTP: http://xx
 3. HTTPS: https://xx
 4. HLS: http://xx or https://xx
-5. File type: file://xx  
-**NOTE：**WebM is no longer supported since API version 11.
+5. File type: file://xx
+
+**NOTE：**
+
+WebM is no longer supported since API version 11.
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-dataprotectionkit-->
 
-- [@ohos.dlpPermission](arkts-dlppermission.md)
+- [@ohos.dlpPermission(DLP)](arkts-dlppermission.md)
   - [cancelRetentionState](arkts-dataprotection-dlppermission-cancelretentionstate-f.md)
   - [cleanSandboxAppConfig](arkts-dataprotection-dlppermission-cleansandboxappconfig-f.md)
   - [closeOpenedEnterpriseDlpFiles](arkts-dataprotection-dlppermission-closeopenedenterprisedlpfiles-f.md)
@@ -66,7 +66,7 @@
   - [GatheringPolicyType(system api)](arkts-dataprotection-dlppermission-gatheringpolicytype-e-sys.md)<!--DelEnd-->
   - [PluginCmd](arkts-dataprotection-dlppermission-plugincmd-e.md)
 <!--Del-->
-- [@ohos.dlpSetDlpFeature](arkts-dlpsetdlpfeature.md)<!--DelEnd-->
+- [@ohos.dlpSetDlpFeature(DLP)](arkts-dlpsetdlpfeature.md)<!--DelEnd-->
   <!--Del-->
   - [setDlpFeature(system api)](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -75,7 +75,7 @@
   - [StatusInfoResult(system api)](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DlpFeatureStatus(system api)](arkts-dataprotection-dlpsetdlpfeature-dlpfeaturestatus-e-sys.md)<!--DelEnd-->
-- [@ohos.security.identifySensitiveContent](arkts-security-identifysensitivecontent.md)
+- [@ohos.security.identifySensitiveContent(Identify sensitive file)](arkts-security-identifysensitivecontent.md)
   - [scanFile](arkts-dataprotection-identifysensitivecontent-scanfile-f.md)
   - [MatchResult](arkts-dataprotection-identifysensitivecontent-matchresult-i.md)
   - [Policy](arkts-dataprotection-identifysensitivecontent-policy-i.md)

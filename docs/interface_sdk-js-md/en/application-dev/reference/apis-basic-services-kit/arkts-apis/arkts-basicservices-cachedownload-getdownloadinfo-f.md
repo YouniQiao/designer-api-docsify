@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cacheDownload from '@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## getDownloadInfo
@@ -12,7 +12,8 @@ import cacheDownload from '@kit.BasicServicesKit';
 function getDownloadInfo(url: string): DownloadInfo | undefined
 ```
 
-Obtains the download information based on the URL. The download information is stored in the download information list in memory and is cleared when the application exits.  
+Obtains the download information based on the URL. The download information is stored in the download information list in memory and is cleared when the application exits.
+
 - If the specified URL is found in the download information list, the latest  
 [DownloadInfo](arkts-basicservices-cachedownload-downloadinfo-i.md) corresponding to the URL is returned.  
 - If the specified URL cannot be found in the download information list, **undefined** is returned.  

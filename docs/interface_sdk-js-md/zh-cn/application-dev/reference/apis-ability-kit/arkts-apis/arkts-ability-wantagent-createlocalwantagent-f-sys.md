@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wantAgent, { WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## createLocalWantAgent
@@ -30,7 +30,7 @@ function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [LocalWantAgentInfo](arkts-ability-wantagent-localwantagentinfo-t-sys.md) | 是 | Information about the local WantAgent object to create. |
+| info | LocalWantAgentInfo | 是 | Information about the local WantAgent object to create. |
 
 **返回值：**
 

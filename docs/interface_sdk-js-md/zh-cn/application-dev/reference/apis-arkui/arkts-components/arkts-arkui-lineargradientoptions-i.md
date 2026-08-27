@@ -21,7 +21,9 @@
 angle?: number | string
 ```
 
-Defines starting angle of linear gradient.Anonymous Object Rectification.
+Defines starting angle of linear gradient.
+
+Anonymous Object Rectification.
 
 **类型：** number \| string
 
@@ -41,7 +43,9 @@ Defines starting angle of linear gradient.Anonymous Object Rectification.
 colors: Array<[ResourceColor, number]>
 ```
 
-Defines color description for gradients.Anonymous Object Rectification.
+Defines color description for gradients.
+
+Anonymous Object Rectification.
 
 **类型：** Array&lt;[ResourceColor, number]&gt;
 
@@ -59,7 +63,9 @@ Defines color description for gradients.Anonymous Object Rectification.
 direction?: GradientDirection
 ```
 
-Defines the direction of linear gradient.Anonymous Object Rectification.
+Defines the direction of linear gradient.
+
+Anonymous Object Rectification.
 
 **类型：** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 
@@ -79,7 +85,9 @@ Defines the direction of linear gradient.Anonymous Object Rectification.
 repeating?: boolean
 ```
 
-Defines gradient colors with repeated coloring.Anonymous Object Rectification.
+Defines gradient colors with repeated coloring.
+
+Anonymous Object Rectification.
 
 **类型：** boolean
 

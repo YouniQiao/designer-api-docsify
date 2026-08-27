@@ -12,7 +12,9 @@
 REASON_UNKNOWN = 0
 ```
 
-未知原因。从API version 12开始，该接口支持在原子化服务中使用。
+未知原因。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -26,7 +28,9 @@ REASON_UNKNOWN = 0
 REASON_NEW_DEVICE_AVAILABLE = 1
 ```
 
-新设备可用。从API version 12开始，该接口支持在原子化服务中使用。
+新设备可用。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -40,7 +44,9 @@ REASON_NEW_DEVICE_AVAILABLE = 1
 REASON_OLD_DEVICE_UNAVAILABLE = 2
 ```
 
-旧设备不可用。报告此原因时，应考虑暂停音频播放。从API version 12开始，该接口支持在原子化服务中使用。
+旧设备不可用。报告此原因时，应考虑暂停音频播放。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 
@@ -54,7 +60,9 @@ REASON_OLD_DEVICE_UNAVAILABLE = 2
 REASON_OVERRODE = 3
 ```
 
-强选。从API version 12开始，该接口支持在原子化服务中使用。
+强选。
+
+从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 11
 

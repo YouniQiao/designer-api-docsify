@@ -37,7 +37,7 @@ Dumps the original heap snapshot of the VM for the current thread and generates 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Path of the generated snapshot file. (Application Sandbox) |
+| Promise&lt;string&gt; | Path of the generated snapshot file. (Application Sandbox) |
 
 **Error codes:**
 
@@ -100,7 +100,7 @@ Dumps the original heap snapshot of the VM for the current thread and clears the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Path of the generated snapshot file. (Application Sandbox) |
+| Promise&lt;string&gt; | Path of the generated snapshot file. (Application Sandbox) |
 
 **Error codes:**
 
@@ -165,7 +165,7 @@ Dumps the original heap snapshot of the VM for the current thread or the process
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Array of paths of the generated snapshot files. (Application Sandbox) |
+| Promise&lt;Array&lt;string&gt;&gt; | Array of paths of the generated snapshot files. (Application Sandbox) |
 
 **Error codes:**
 

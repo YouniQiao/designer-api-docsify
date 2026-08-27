@@ -1,6 +1,6 @@
 # LastExitReason
 
-Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)方法根据 launchParam.lastExitReason的不同类型执行相应操作。
+Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)方法根据launchParam.lastExitReason的不同类型执行相应操作。
 
 **起始版本：** 9
 
@@ -46,8 +46,9 @@ Ability组件未响应。
 NORMAL = 2
 ```
 
-用户主动关闭应用，应用程序正常退出。  
-**说明：**当开发者直接调用process.exit()、内核kill命令等非Ability Kit提供的能 力强制退出应用进程时，也会返回NORMAL。
+用户主动关闭应用，应用程序正常退出。
+
+**说明：**当开发者直接调用process.exit()、内核kill命令等非Ability Kit提供的能力强制退出应用进程时，也会返回NORMAL。
 
 **起始版本：** 9
 
@@ -111,7 +112,8 @@ APP_FREEZE = 5
 PERFORMANCE_CONTROL = 6
 ```
 
-因系统性能问题（如设备内存不足）导致的应用程序退出。  
+因系统性能问题（如设备内存不足）导致的应用程序退出。
+
 **说明：**该接口即将废弃，建议使用RESOURCE_CONTROL替代。
 
 **起始版本：** 10
@@ -128,7 +130,8 @@ PERFORMANCE_CONTROL = 6
 RESOURCE_CONTROL = 7
 ```
 
-系统资源使用不当导致的应用程序退出。具体错误原因可以通过[LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md)获取，可能原因如下:  
+系统资源使用不当导致的应用程序退出。具体错误原因可以通过[LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md)获取，可能原因如下:
+
 - CPU Highload，CPU高负载。  
 - CPU_EXT Highload，快速CPU负载检测。  
 - IO Manage Control，I/O管控。  

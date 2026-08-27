@@ -1,6 +1,8 @@
 # Text properties/events
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
+
+In addition to the [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md), the following events are supported.
 
 **Inheritance/Implementation:** TextAttribute extends CommonMethod<TextAttribute>
 
@@ -11,10 +13,6 @@ In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, Con@kit.ArkUIMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UICon@kit.ArkUI, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUICon@kit.ArkUI, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@ohos.arkui.UICon@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@ohos.arkui.UICon@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@ohos.arkui.UICon@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@ohos.arkui.UICon@kit.ArkUI';
 ```
 
 ## baselineOffset
@@ -23,7 +21,11 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 baselineOffset(value: number | ResourceStr)
 ```
 
-Sets the offset of the text baseline.Percentage values follow default display behavior.A positive value moves the content upwards, while a negative value moves it downwards.
+Sets the offset of the text baseline.
+
+Percentage values follow default display behavior.
+
+A positive value moves the content upwards, while a negative value moves it downwards.
 
 **Since:** 7
 
@@ -46,7 +48,11 @@ bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: 
     options?: SelectionMenuOptions)
 ```
 
-Sets the custom selection menu.The number-press response duration of **bindSelectionMenu** is 600 ms while that of [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) is 800 ms. When both are bound and their triggering methods are set to number press, **bindSelectionMenu** takes precedence.When the custom menu is too number, it is recommended that nest a Scroll component inside to prevent the keyboard from being obscured.
+Sets the custom selection menu.
+
+The number-press response duration of **bindSelectionMenu** is 600 ms while that of [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) is 800 ms. When both are bound and their triggering methods are set to number press, **bindSelectionMenu** takes precedence.
+
+When the custom menu is too number, it is recommended that nest a Scroll component inside to prevent the keyboard from being obscured.
 
 > **NOTE：**
 > 
@@ -73,7 +79,7 @@ Sets the custom selection menu.The number-press response duration of **bindSelec
 | spanType | [TextSpanType](arkts-arkui-textspantype-e.md) | Yes | Span type of the menu.Default value: **TextSpanType.TEXT |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Content of the menu. |
 | responseType | [TextResponseType](arkts-arkui-textresponsetype-e.md) | Yes | Response type of the menu.Default value: **TextResponseType.LONG_PRESS |
-| options | [SelectionMenuOptions](../arkts-apis/arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | No | Options of the menu. |
+| options | SelectionMenuOptions | No | Options of the menu. |
 
 ## caretColor
 
@@ -154,15 +160,24 @@ Applies a transition animation to text content. Supports numeric flip animation 
 copyOption(value: CopyOptions)
 ```
 
-Sets whether copy and paste operations are allowed.Since API version 20, copied text from the **Text** component includes HTML-formatted content in the pasteboard.  
+Sets whether copy and paste operations are allowed.
+
+Since API version 20, copied text from the **Text** component includes HTML-formatted content in the pasteboard.
+
 - When the **Text** component contains child elements, only Span and  
 ImageSpan support HTML-formatted pasteboard content.  
-- For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion scope.  
-When **copyOption** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**:  
+- For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion scope.
+
+When **copyOption** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**:
+
 - A number press on the text will display a menu that offers the copy and select-all options.  
 - By default, selected text is draggable. To disable dragging, set **draggable** to **false**.  
 - To support **Ctrl+C** copying, also set [textSelectable](#textselectable) to  
-**TextSelectableMode.SELECTABLE_FOCUSABLE**.The **Text** component listens for **onClick**, which is a non-bubbling event. To allow parent components to respond to clicks within the **Text** area, use [parallelGesture](arkts-arkui-commonmethod-c.md#parallelgesture) on the parent. For implementation guidance, see [Example 7: Setting Text Recognition](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-7-setting-text-recognition).Because widgets do not have the number press event, the menu will not be displayed when users number press text.
+**TextSelectableMode.SELECTABLE_FOCUSABLE**.
+
+The **Text** component listens for **onClick**, which is a non-bubbling event. To allow parent components to respond to clicks within the **Text** area, use [parallelGesture](arkts-arkui-commonmethod-c.md#parallelgesture) on the parent. For implementation guidance, see [Example 7: Setting Text Recognition](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-7-setting-text-recognition).
+
+Because widgets do not have the number press event, the menu will not be displayed when users number press text.
 
 **Since:** 9
 
@@ -176,7 +191,7 @@ When **copyOption** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Whether copy and paste operations are allowed.Default value: **CopyOptions.None |
+| value | CopyOptions | Yes | Whether copy and paste operations are allowed.Default value: **CopyOptions.None |
 
 ## dataDetectorConfig
 
@@ -184,7 +199,9 @@ When **copyOption** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice
 dataDetectorConfig(config: TextDataDetectorConfig)
 ```
 
-Configures text recognition settings, including entity types to detect, display styles for detected entities, and number-press preview options.This API must be used together with [enableDataDetector](#enabledatadetector). It takes effect only when **enableDataDetector** is set to **true**.
+Configures text recognition settings, including entity types to detect, display styles for detected entities, and number-press preview options.
+
+This API must be used together with [enableDataDetector](#enabledatadetector). It takes effect only when **enableDataDetector** is set to **true**.
 
 **Since:** 11
 
@@ -236,7 +253,11 @@ Style and color of the text decorative line.
 draggable(value: boolean)
 ```
 
-Sets the drag effect of the selected text.This attribute cannot be used together with the onDragStart event.If set to **true**, **draggable** must be used in conjunction with CopyOptions. When **copyOptions** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**, the selected text becomes draggable and can be copied into a text box.
+Sets the drag effect of the selected text.
+
+This attribute cannot be used together with the onDragStart event.
+
+If set to **true**, **draggable** must be used in conjunction with CopyOptions. When **copyOptions** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**, the selected text becomes draggable and can be copied into a text box.
 
 **Since:** 9
 
@@ -256,7 +277,10 @@ Sets the drag effect of the selected text.This attribute cannot be used together
 editMenuOptions(editMenu: EditMenuOptions)
 ```
 
-Sets the extended options for the custom menu, including the text content, icon, and callback.When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems) or  
+Sets the extended options for the custom menu, including the text content, icon, and callback.
+
+When [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems) or
+
 [disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems) is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the onCreateMenu callback of **editMenuOptions**.
 
 > **NOTE：**
@@ -287,7 +311,10 @@ Sets the extended options for the custom menu, including the text content, icon,
 ellipsisMode(value: EllipsisMode)
 ```
 
-Sets the ellipsis position.For the settings to work, **overflow** must be set to **TextOverflow.Ellipsis** and **maxLines** must be specified. Setting **ellipsisMode** alone does not take effect.  
+Sets the ellipsis position.
+
+For the settings to work, **overflow** must be set to **TextOverflow.Ellipsis** and **maxLines** must be specified. Setting **ellipsisMode** alone does not take effect.
+
 **EllipsisMode.START** and **EllipsisMode.CENTER** take effect only when text overflows in a single line.
 
 **Since:** 11
@@ -302,7 +329,7 @@ Sets the ellipsis position.For the settings to work, **overflow** must be set to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [EllipsisMode](#ellipsismode) | Yes | Ellipsis position.Default value: **EllipsisMode.END |
+| value | EllipsisMode | Yes | Ellipsis position.Default value: **EllipsisMode.END |
 
 ## enableAutoSpacing
 
@@ -332,7 +359,9 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 enableDataDetector(enable: boolean)
 ```
 
-Sets whether to enable special entity detection within the text. Special entities are detected when **enableDataDetector** is set to **true**.The style of detected entities is as follows: the font color is changed to blue, and a blue underline is added.
+Sets whether to enable special entity detection within the text. Special entities are detected when **enableDataDetector** is set to **true**.
+
+The style of detected entities is as follows: the font color is changed to blue, and a blue underline is added.
 
 > **NOTE：**
 > 
@@ -340,6 +369,7 @@ Sets whether to enable special entity detection within the text. Special entitie
 > 
 > - When [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, text special entity
 > detection is not performed.
+
 <!--RP2--><!--RP2End-->
 
 **Since:** 11
@@ -362,7 +392,9 @@ Sets whether to enable special entity detection within the text. Special entitie
 enableHapticFeedback(isEnabled: boolean)
 ```
 
-Sets whether to enable haptic feedback.To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project.
+Sets whether to enable haptic feedback.
+
+To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project.
 
 > **NOTE：**
 > 
@@ -388,7 +420,11 @@ Sets whether to enable haptic feedback.To enable haptic feedback, you must decla
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition.When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default.This feature is only effective when CopyOptions is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
+Sets whether to enable entity recognition for selected text. This API only works on devices that provide text recognition.
+
+When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default.
+
+This feature is only effective when CopyOptions is set to **CopyOptions.LocalDevice** or **CopyOptions.CrossDevice**.
 
 **Since:** 22
 
@@ -446,7 +482,7 @@ Sets the text style, covering the font size, font width, font family, and font s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](#font) | Yes | Text style. |
+| value | Font | Yes | Text style. |
 
 ## font
 
@@ -454,7 +490,9 @@ Sets the text style, covering the font size, font width, font family, and font s
 font(fontValue: Font, options?: FontSettingOptions)
 ```
 
-Sets the font style, with support for font settings.It is only effective for the **Text** component, not for its child components.
+Sets the font style, with support for font settings.
+
+It is only effective for the **Text** component, not for its child components.
 
 **Since:** 12
 
@@ -470,7 +508,7 @@ Sets the font style, with support for font settings.It is only effective for the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontValue | [Font](#font) | Yes | Sets the text style. |
+| fontValue | Font | Yes | Sets the text style. |
 | options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | No | Font settings. |
 
 ## fontColor
@@ -519,7 +557,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Font family. Default font: **'HarmonyOS Sans'**To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. |
+| value | string \| Resource | Yes | Font family. Default font: **'HarmonyOS Sans'**To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. |
 
 ## fontFeature
 
@@ -527,7 +565,15 @@ Sets the font family.
 fontFeature(value: string)
 ```
 
-Sets the font feature, for example, monospaced digits.Format: normal \| \&lt;feature-tag-value\&gt;Format of **\&lt;feature-tag-value\&gt;**: \&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]There can be multiple **\&lt;feature-tag-value\&gt;** values, which are separated by commas (,).For example, the input format for monospaced clock fonts is "ss01" on.
+Sets the font feature, for example, monospaced digits.
+
+Format: normal \| \&lt;feature-tag-value\&gt;
+
+Format of **\&lt;feature-tag-value\&gt;**: \&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]
+
+There can be multiple **\&lt;feature-tag-value\&gt;** values, which are separated by commas (,).
+
+For example, the input format for monospaced clock fonts is "ss01" on.
 
 > **NOTE：**
 > 
@@ -587,7 +633,7 @@ Sets the text size.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. This parameter cannot be set in percentage.Default value: **16fp**Default value on wearable devices: **15fp |
+| value | number \| string \| Resource | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. This parameter cannot be set in percentage.Default value: **16fp**Default value on wearable devices: **15fp |
 
 ## fontStyle
 
@@ -609,7 +655,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](#fontstyle) | Yes | Font style.Default value: **FontStyle.Normal |
+| value | FontStyle | Yes | Font style.Default value: **FontStyle.Normal |
 
 ## fontVariations
 
@@ -631,7 +677,7 @@ Set the font variation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontVariations | Array & lt;FontVariation & gt; | Yes | Indicates the text font variation. |
+| fontVariations | Array&lt;FontVariation&gt; | Yes | Indicates the text font variation. |
 
 ## fontWeight
 
@@ -661,7 +707,9 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptions)
 ```
 
-Sets the text font weight, with support for font settings.It is only effective for the **Text** component, not for its child components.<!--RP4--><!--RP4End-->
+Sets the text font weight, with support for font settings.
+
+It is only effective for the **Text** component, not for its child components.<!--RP4--><!--RP4End-->
 
 **Since:** 12
 
@@ -708,7 +756,10 @@ Whether half leading is enabled. Half leading refers to splitting the leading in
 heightAdaptivePolicy(value: TextHeightAdaptivePolicy)
 ```
 
-Sets the font size adjustment strategy for adaptive text layout.The available modes are as follows:  
+Sets the font size adjustment strategy for adaptive text layout.
+
+The available modes are as follows:
+
 - **MAX_LINES_FIRST**: prioritizes using the [maxLines](#maxlines) attribute to control text  
 height. If the **maxLines** setting results in a layout beyond the layout constraints, the text will shrink to a font size between [minFontSize](#minfontsize) and [maxFontSize](#maxfontsize) to allow for more content to be shown.  
 - **MIN_FONT_SIZE_FIRST**: prioritizes using the **minFontSize** attribute to control text height. If the text fits  
@@ -758,7 +809,9 @@ Sets whether to add spacing to the first and last lines to avoid text truncation
 incrementalUpdatePolicy(policy: IncrementalUpdatePolicy | undefined)
 ```
 
-Sets the incremental update policy for text rendering.This API takes effect only when Text content contains a StyledString. Default value is IncrementalUpdatePolicy.NONE.
+Sets the incremental update policy for text rendering.
+
+This API takes effect only when Text content contains a StyledString. Default value is IncrementalUpdatePolicy.NONE.
 
 **Since:** 26.0.0
 
@@ -780,7 +833,13 @@ Sets the incremental update policy for text rendering.This API takes effect only
 letterSpacing(value: number | ResourceStr)
 ```
 
-Sets the letter spacing for a text style.If the value specified is a percentage or **0**, the default value is used. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.Negative values compress text. Excessive compression may reduce content area to zero, hiding content.This setting applies to every character, including those at line endings.
+Sets the letter spacing for a text style.
+
+If the value specified is a percentage or **0**, the default value is used. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
+
+Negative values compress text. Excessive compression may reduce content area to zero, hiding content.
+
+This setting applies to every character, including those at line endings.
 
 **Since:** 7
 
@@ -824,7 +883,9 @@ Sets the line break rule. This attribute takes effect only when [wordBreak](#wor
 lineHeight(value: number | string | Resource)
 ```
 
-Sets the text line height.If the value is less than or equal to **0**, the line height is unrestricted and adapts to the font size. When the value is a number, the unit is fp. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
+Sets the text line height.
+
+If the value is less than or equal to **0**, the line height is unrestricted and adapts to the font size. When the value is a number, the unit is fp. For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
 
 > **NOTE：**
 > 
@@ -844,7 +905,7 @@ Sets the text line height.If the value is less than or equal to **0**, the line 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Text line height. |
+| value | number \| string \| Resource | Yes | Text line height. |
 
 ## lineHeightMultiple
 
@@ -852,7 +913,9 @@ Sets the text line height.If the value is less than or equal to **0**, the line 
 lineHeightMultiple(value: number | undefined)
 ```
 
-Sets the line height of text in multiple mode.The line height equals the input parameter **value** multiplied by **fontHeight**.
+Sets the line height of text in multiple mode.
+
+The line height equals the input parameter **value** multiplied by **fontHeight**.
 
 > **NOTE：**
 > 
@@ -895,7 +958,7 @@ Sets the line spacing of the text. If the value specified is less than or equal 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Line spacing. Default value: **0 |
+| value | LengthMetrics | Yes | Line spacing. Default value: **0 |
 
 ## lineSpacing
 
@@ -917,7 +980,7 @@ Sets the line spacing for text. When **LineSpacingOptions** is not specified, li
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Line spacing. Values less than or equal to 0 are treated as the default value **0**. |
+| value | LengthMetrics | Yes | Line spacing. Values less than or equal to 0 are treated as the default value **0**. |
 | options | [LineSpacingOptions](../arkts-apis/arkts-arkui-linespacingoptions-i.md) | No | Line spacing configuration options.Default value: **{ onlyBetweenLines: false } |
 
 ## marqueeOptions
@@ -926,7 +989,9 @@ Sets the line spacing for text. When **LineSpacingOptions** is not specified, li
 marqueeOptions(options: Optional<TextMarqueeOptions>)
 ```
 
-Sets the marquee effect for text.The **marqueeOptions** settings take effect only when **textOverflow** is set to **TextOverflow.MARQUEE**.
+Sets the marquee effect for text.
+
+The **marqueeOptions** settings take effect only when **textOverflow** is set to **TextOverflow.MARQUEE**.
 
 **Since:** 18
 
@@ -962,7 +1027,7 @@ Sets the maximum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Maximum font scale factor for text.Value range: [1, +∞)   **NOTE：**Values less than 1 are treated as **1**. Other invalid values are ineffective by default. |
+| scale | number \| Resource | Yes | Maximum font scale factor for text.Value range: [1, +∞)   **NOTE：**Values less than 1 are treated as **1**. Other invalid values are ineffective by default. |
 
 ## maxFontSize
 
@@ -970,7 +1035,17 @@ Sets the maximum font scale factor for text.
 maxFontSize(value: number | string | Resource)
 ```
 
-Sets the maximum font size.For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.For the setting to take effect, this attribute must be used together with [minFontSize](#minfontsize) and [maxLines](#maxlines), or layout constraint settings.When the adaptive font size is used, the **fontSize** settings do not take effect.If the value of **maxFontSize** is less than or equal to 0 or is less than the value of **minFontSize**, the adaptive font sizing feature is disabled. In such cases, the [fontSize](#fontsize) attribute is used instead. If **fontSize** is not set, the default value will apply.Since API version 18, adaptive font sizing is supported on child components and styled strings, and text segments without an explicitly defined font size will automatically adjust based on the available space.
+Sets the maximum font size.
+
+For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
+
+For the setting to take effect, this attribute must be used together with [minFontSize](#minfontsize) and [maxLines](#maxlines), or layout constraint settings.
+
+When the adaptive font size is used, the **fontSize** settings do not take effect.
+
+If the value of **maxFontSize** is less than or equal to 0 or is less than the value of **minFontSize**, the adaptive font sizing feature is disabled. In such cases, the [fontSize](#fontsize) attribute is used instead. If **fontSize** is not set, the default value will apply.
+
+Since API version 18, adaptive font sizing is supported on child components and styled strings, and text segments without an explicitly defined font size will automatically adjust based on the available space.
 
 **Since:** 7
 
@@ -984,7 +1059,7 @@ Sets the maximum font size.For the string type, numeric string values with optio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Maximum font size.Unit: fp |
+| value | number \| string \| Resource | Yes | Maximum font size.Unit: fp |
 
 ## maxLineHeight
 
@@ -992,7 +1067,9 @@ Sets the maximum font size.For the string type, numeric string values with optio
 maxLineHeight(value: LengthMetrics | undefined)
 ```
 
-Sets the maximum line height of text. If the value is less than or equal to 0, the maximum line height is unrestricted.If **maxLineHeight** is less than **minLineHeight**, **maxLineHeight** takes effect using the value of **minLineHeight**.
+Sets the maximum line height of text. If the value is less than or equal to 0, the maximum line height is unrestricted.
+
+If **maxLineHeight** is less than **minLineHeight**, **maxLineHeight** takes effect using the value of **minLineHeight**.
 
 **Since:** 22
 
@@ -1016,7 +1093,9 @@ Sets the maximum line height of text. If the value is less than or equal to 0, t
 maxLines(value: number)
 ```
 
-Sets the maximum number of lines for text.By default, text is automatically folded. If this attribute is specified, the text will not exceed the specified number of lines. If there is extra text, you can use [textOverflow](#textoverflow) to specify how it is displayed.
+Sets the maximum number of lines for text.
+
+By default, text is automatically folded. If this attribute is specified, the text will not exceed the specified number of lines. If there is extra text, you can use [textOverflow](#textoverflow) to specify how it is displayed.
 
 **Since:** 7
 
@@ -1052,7 +1131,7 @@ Sets the minimum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Minimum font scale factor for text.Value range: [0, 1]   **NOTE：**Values less than 0 are treated as 0, and values greater than 1 are treated as 1. Other invalid values do not take effect by default. |
+| scale | number \| Resource | Yes | Minimum font scale factor for text.Value range: [0, 1]   **NOTE：**Values less than 0 are treated as 0, and values greater than 1 are treated as 1. Other invalid values do not take effect by default. |
 
 ## minFontSize
 
@@ -1060,7 +1139,17 @@ Sets the minimum font scale factor for text.
 minFontSize(value: number | string | Resource)
 ```
 
-Sets the minimum font size.For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.For the setting to take effect, this attribute must be used together with [maxFontSize](#maxfontsize) and [maxLines](#maxlines), or layout constraint settings.When the adaptive font size is used, the **fontSize** settings do not take effect.If the value of **minFontSize** is less than or equal to 0, the adaptive font sizing feature is disabled. In such cases, the [fontSize](#fontsize) attribute is used instead. If **fontSize** is not set, the default value will apply.Since API version 18, adaptive font sizing is supported on child components and styled strings, and text segments without an explicitly defined font size will automatically adjust based on the available space.
+Sets the minimum font size.
+
+For the string type, numeric string values with optional units, for example, **"10"** or **"10fp"**, are supported.
+
+For the setting to take effect, this attribute must be used together with [maxFontSize](#maxfontsize) and [maxLines](#maxlines), or layout constraint settings.
+
+When the adaptive font size is used, the **fontSize** settings do not take effect.
+
+If the value of **minFontSize** is less than or equal to 0, the adaptive font sizing feature is disabled. In such cases, the [fontSize](#fontsize) attribute is used instead. If **fontSize** is not set, the default value will apply.
+
+Since API version 18, adaptive font sizing is supported on child components and styled strings, and text segments without an explicitly defined font size will automatically adjust based on the available space.
 
 **Since:** 7
 
@@ -1074,7 +1163,7 @@ Sets the minimum font size.For the string type, numeric string values with optio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Minimum font size.Unit: fp |
+| value | number \| string \| Resource | Yes | Minimum font size.Unit: fp |
 
 ## minLineHeight
 
@@ -1106,7 +1195,13 @@ Sets the minimum line height of text. If the value is less than or equal to 0, t
 minLines(minLines: Optional<number>)
 ```
 
-Sets the minimum number of lines for text.If the actual text height is less than the height for the minimum number of lines, the component uses the height corresponding to the minimum number of lines.When this API and [maxLines](#maxlines) are both set, the minimum line height cannot exceed the maximum line height.If constraintSize is set for the text, the component height is confined within the constraintSize bounds.
+Sets the minimum number of lines for text.
+
+If the actual text height is less than the height for the minimum number of lines, the component uses the height corresponding to the minimum number of lines.
+
+When this API and [maxLines](#maxlines) are both set, the minimum line height cannot exceed the maximum line height.
+
+If constraintSize is set for the text, the component height is confined within the constraintSize bounds.
 
 **Since:** 22
 
@@ -1144,7 +1239,7 @@ Called when data is copied to the pasteboard, which is displayed when the text b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (value: string) = & gt; void | Yes | Callback of the listened event. |
+| callback | (value: string) =&gt; void | Yes | Callback of the listened event. |
 
 ## onMarqueeStateChange
 
@@ -1188,7 +1283,7 @@ Called when the text selection position changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (selectionStart: number, selectionEnd: number) = & gt; void | Yes | Callback of the listened event. |
+| callback | (selectionStart: number, selectionEnd: number) =&gt; void | Yes | Callback of the listened event. |
 
 ## onWillCopy
 
@@ -1196,7 +1291,8 @@ Called when the text selection position changes.
 onWillCopy(callback: Callback<string, boolean>)
 ```
 
-Called before the copy operation is performed.  
+Called before the copy operation is performed.
+
 **Since**: 26.0.0
 
 **Since:** 26.0.0
@@ -1211,7 +1307,7 @@ Called before the copy operation is performed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;string, boolean & gt; | Yes | The string type indicates the text to be copied.The boolean type indicates whether the text can be copied. The value **true** means yes and **false** means no. |
+| callback | Callback&lt;string, boolean&gt; | Yes | The string type indicates the text to be copied.The boolean type indicates whether the text can be copied. The value **true** means yes and **false** means no. |
 
 ## optimizeTrailingSpace
 
@@ -1219,10 +1315,15 @@ Called before the copy operation is performed.
 optimizeTrailingSpace(optimize: Optional<boolean>)
 ```
 
-Sets whether to optimize trailing spaces at line endings during text layout, resolving alignment display issues caused by trailing spaces.When **Text.optimizeTrailingSpace** is set to **true**:  
+Sets whether to optimize trailing spaces at line endings during text layout, resolving alignment display issues caused by trailing spaces.
+
+When **Text.optimizeTrailingSpace** is set to **true**:
+
 * Trailing space optimization applies to multi-line text, single-line text, and text and image layouts (particularly noticeable with **TextAlign.Center** or **TextAlign.End**).  
 * For text containing only spaces, decoration lines, shadows, and background colors follow the space text display.  
-* Leading spaces are not optimized. When text with trailing spaces wraps, trailing spaces on each line are optimized based on component width.When optimizing pure space text by setting [optimizeTrailingSpace](#optimizetrailingspace) to **true**, you cannot simultaneously set backgroundColor, [decoration](#decoration), and [textAlign](#textalign) attributes.
+* Leading spaces are not optimized. When text with trailing spaces wraps, trailing spaces on each line are optimized based on component width.
+
+When optimizing pure space text by setting [optimizeTrailingSpace](#optimizetrailingspace) to **true**, you cannot simultaneously set backgroundColor, [decoration](#decoration), and [textAlign](#textalign) attributes.
 
 **Since:** 20
 
@@ -1244,7 +1345,10 @@ Sets whether to optimize trailing spaces at line endings during text layout, res
 orphanCharOptimization(enabled: Optional<boolean>)
 ```
 
-Sets whether to enable orphan character optimization during text typesetting. If this attribute is not set, orphan character optimization is disabled by default.Orphan character optimization improves the text layout by handling the orphan character (the first Chinese character of the last line of a paragraph) more efficiently. When enabled, it adjusts line breaks to avoid orphan characters as much as possible. This feature takes effect only when [wordBreak](#wordbreak) is not **BREAK_ALL** and [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md) of the first [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md) of the text to be typeset is either **"zh-Hans"** or **"zh-Hant"**.  
+Sets whether to enable orphan character optimization during text typesetting. If this attribute is not set, orphan character optimization is disabled by default.
+
+Orphan character optimization improves the text layout by handling the orphan character (the first Chinese character of the last line of a paragraph) more efficiently. When enabled, it adjusts line breaks to avoid orphan characters as much as possible. This feature takes effect only when [wordBreak](#wordbreak) is not **BREAK_ALL** and [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md) of the first [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md) of the text to be typeset is either **"zh-Hans"** or **"zh-Hant"**.
+
 **Since**: 26.0.0
 
 **Since:** 26.0.0
@@ -1355,7 +1459,19 @@ Applies a transition animation to text content. Supports numeric flip animation 
 selection(selectionStart: number, selectionEnd: number)
 ```
 
-Sets text selection.The selected text is highlighted, with selection handles and the text selection menu displayed.If [copyOption](#copyoption) is set to **CopyOptions.None**, the setting of the **selection** attribute does not take effect.If [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, the setting of the **selection** attribute does not take effect.If the value of **selectionStart** is greater than or equal to that of **selectionEnd**, no text will be selected. The value range is [0, textSize], where **textSize** indicates the maximum number of characters in the text content. If the value is less than 0, the value **0** will be used. If the value is greater than **textSize**, **textSize** will be used.If the selection range falls within a truncated or invisible area, selection is ignored. When clip is set to **false**, the text outside the parent component can be selected.You can obtain the selection range change result through the [onTextSelectionChange](#ontextselectionchange) API.
+Sets text selection.
+
+The selected text is highlighted, with selection handles and the text selection menu displayed.
+
+If [copyOption](#copyoption) is set to **CopyOptions.None**, the setting of the **selection** attribute does not take effect.
+
+If [textOverflow](#textoverflow) is set to **TextOverflow.MARQUEE**, the setting of the **selection** attribute does not take effect.
+
+If the value of **selectionStart** is greater than or equal to that of **selectionEnd**, no text will be selected. The value range is [0, textSize], where **textSize** indicates the maximum number of characters in the text content. If the value is less than 0, the value **0** will be used. If the value is greater than **textSize**, **textSize** will be used.
+
+If the selection range falls within a truncated or invisible area, selection is ignored. When clip is set to **false**, the text outside the parent component can be selected.
+
+You can obtain the selection range change result through the [onTextSelectionChange](#ontextselectionchange) API.
 
 **Since:** 11
 
@@ -1400,7 +1516,9 @@ Applies gradient or solid color effects to text. Supports [RadialGradientStyle](
 tailIndents(value: Optional<LengthMetrics | Array<LengthMetrics>>)
 ```
 
-Specify the tail indentation for each line in a text block.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: When a single LengthMetrics value is provided, all lines share the same tail indent. When an array is provided, the i-th element specifies the tail indent for the i-th line. If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines. Negative values are treated as 0. If the value is set to undefined, the default value 0 is used. </p>
+Specify the tail indentation for each line in a text block.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: When a single LengthMetrics value is provided, all lines share the same tail indent. When an array is provided, the i-th element specifies the tail indent for the i-th line. If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines. Negative values are treated as 0. If the value is set to undefined, the default value 0 is used. </p>
 
 **Since:** 26.0.0
 
@@ -1414,7 +1532,7 @@ Specify the tail indentation for each line in a text block.<p>&lt;strong&gt;NOTE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics \| Array & lt;LengthMetrics & gt; & gt; | Yes | The tail indent value(s).Default value is 0. |
+| value | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics \| Array&lt;LengthMetrics&gt;&gt; | Yes | The tail indent value(s).Default value is 0. |
 
 ## textAlign
 
@@ -1422,10 +1540,16 @@ Specify the tail indentation for each line in a text block.<p>&lt;strong&gt;NOTE
 textAlign(value: TextAlign)
 ```
 
-Sets the horizontal alignment of the text.The text takes up the full width of the **Text** component.The vertical position of the text paragraph can be controlled by the align attribute, but the horizontal position cannot be controlled by **align** in this component. The specific effects are as follows:  
+Sets the horizontal alignment of the text.
+
+The text takes up the full width of the **Text** component.
+
+The vertical position of the text paragraph can be controlled by the align attribute, but the horizontal position cannot be controlled by **align** in this component. The specific effects are as follows:
+
 - **Alignment.TopStart**, **Alignment.Top**, **Alignment.TopEnd**: Content aligns to the top.  
 - **Alignment.Start**, **Alignment.Center**, **Alignment.End**: Content is centered vertically.  
-- **Alignment.BottomStart**, **Alignment.Bottom**, **Alignment.BottomEnd:** Content aligns to the bottom.  
+- **Alignment.BottomStart**, **Alignment.Bottom**, **Alignment.BottomEnd:** Content aligns to the bottom.
+
 When **textAlign** is set to **TextAlign.JUSTIFY**, the [wordBreak](#wordbreak) property must be configured according to the text content. The last line of text aligns to the start horizontally and does not participate in justification.
 
 > **NOTE：**
@@ -1446,7 +1570,7 @@ When **textAlign** is set to **TextAlign.JUSTIFY**, the [wordBreak](#wordbreak) 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextAlign](#textalign) | Yes | Horizontal alignment of the text.Default value: **TextAlign.Start**Default value on wearable devices: **TextAlign.Center |
+| value | TextAlign | Yes | Horizontal alignment of the text.Default value: **TextAlign.Start**Default value on wearable devices: **TextAlign.Center |
 
 ## textCase
 
@@ -1476,7 +1600,9 @@ Sets the text case.
 textContentAlign(textContentAlign: Optional<TextContentAlign>)
 ```
 
-Sets the vertical alignment of the text content area within the component.This API takes effect only when the height of the text content exceeds the component's height.
+Sets the vertical alignment of the text content area within the component.
+
+This API takes effect only when the height of the text content exceeds the component's height.
 
 **Since:** 21
 
@@ -1542,7 +1668,10 @@ Sets the indent of the first line text.
 textOverflow(options: TextOverflowOptions)
 ```
 
-Sets the display mode for overflowing text.When [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) is set to **TextOverflow.None**, **TextOverflow.Clip**, or **TextOverflow.Ellipsis**:  
+Sets the display mode for overflowing text.
+
+When [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) is set to **TextOverflow.None**, **TextOverflow.Clip**, or **TextOverflow.Ellipsis**:
+
 - **TextOverflow.None** or **TextOverflow.Clip**: Text is truncated when it exceeds the maximum number of lines.  
 - **TextOverflow.Ellipsis**: Overflowing text is replaced with an ellipsis (...).  
 - This must be used with [maxLines](#maxlines) for the settings to take effect.  
@@ -1551,7 +1680,10 @@ Sets the display mode for overflowing text.When [TextOverflowOptions](arkts-arku
 - Line wrapping behavior is governed by [lineBreakStrategy](#linebreakstrategy) which takes  
 effect only when [wordBreak](#wordbreak) is not **WordBreak.BREAK_ALL**. Hyphens are not supported.  
 - Since API version 11, it is recommended that you configure both [textOverflow](#textoverflow)  
-and [wordBreak](#wordbreak) to control truncation behavior. For details, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-4-setting-text-wrapping-and-line-breaking) <!--RP1--><!--RP1End-->.When **TextOverflowOptions** is set to **TextOverflow.MARQUEE**:  
+and [wordBreak](#wordbreak) to control truncation behavior. For details, see [Example 4](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-4-setting-text-wrapping-and-line-breaking) <!--RP1--><!--RP1End-->.
+
+When **TextOverflowOptions** is set to **TextOverflow.MARQUEE**:
+
 - Text scrolls horizontally within a single line.  
 - [maxLines](#maxlines) and[copyOption](#copyoption) are ignored.  
 - The clip attribute of the **Text** component defaults to **true**.  
@@ -1581,7 +1713,9 @@ images are allowed to scroll within a single line.
 textSelectable(mode: TextSelectableMode)
 ```
 
-Sets whether the text is selectable and focusable.This attribute must be used in conjunction with [copyOption](#copyoption).
+Sets whether the text is selectable and focusable.
+
+This attribute must be used in conjunction with [copyOption](#copyoption).
 
 **Since:** 12
 
@@ -1603,7 +1737,11 @@ Sets whether the text is selectable and focusable.This attribute must be used in
 textShadow(value: ShadowOptions | Array<ShadowOptions>)
 ```
 
-Sets the text shadow.Intelligent color extraction is not supported for the **type**, **fill**, and **color** fields of the **ShadowOptions** object.Since API version 11, this API supports input parameters in an array to implement multiple text shadows.
+Sets the text shadow.
+
+Intelligent color extraction is not supported for the **type**, **fill**, and **color** fields of the **ShadowOptions** object.
+
+Since API version 11, this API supports input parameters in an array to implement multiple text shadows.
 
 **Since:** 10
 
@@ -1661,7 +1799,11 @@ Sets the vertical alignment of the text.
 wordBreak(value: WordBreak)
 ```
 
-Sets the word break rule.By default, when **wordBreak** is not called or is set to **WordBreak.BREAK_WORD**, text is broken by word. (for example, English text is broken at word boundaries).To break text by character, with the excess part displayed as an ellipsis (...), use **WordBreak.BREAK_ALL** in combination with **{overflow: TextOverflow.Ellipsis}** and **maxLines**.
+Sets the word break rule.
+
+By default, when **wordBreak** is not called or is set to **WordBreak.BREAK_WORD**, text is broken by word. (for example, English text is broken at word boundaries).
+
+To break text by character, with the excess part displayed as an ellipsis (...), use **WordBreak.BREAK_ALL** in combination with **{overflow: TextOverflow.Ellipsis}** and **maxLines**.
 
 **Since:** 11
 
@@ -1675,4 +1817,4 @@ Sets the word break rule.By default, when **wordBreak** is not called or is set 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [WordBreak](#wordbreak) | Yes | Word break rule.Default value: **WordBreak.BREAK_WORD |
+| value | WordBreak | Yes | Word break rule.Default value: **WordBreak.BREAK_WORD |

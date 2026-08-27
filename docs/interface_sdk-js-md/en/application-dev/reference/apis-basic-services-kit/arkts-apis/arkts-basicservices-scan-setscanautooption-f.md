@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import scan from '@kit.BasicServicesKit';
+import { scan } from '@kit.BasicServicesKit';
 ```
 
 ## setScanAutoOption
@@ -31,7 +31,7 @@ Sets the scan option to auto mode. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

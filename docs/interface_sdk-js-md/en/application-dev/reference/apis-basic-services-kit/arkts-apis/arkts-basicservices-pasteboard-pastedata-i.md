@@ -9,7 +9,7 @@ Implements a **PasteData** object. PasteData contains one or more data records (
 ## Modules to Import
 
 ```TypeScript
-import pasteboard from '@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## addHtmlRecord
@@ -94,7 +94,7 @@ Adds a data record to the PasteData, and adds its type to **mimeTypes** in [Past
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mimeType | string | Yes | MIME type of PasteData. The length cannot exceed 1024 bytes. |
-| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Data content. |
+| value | ValueType | Yes | Data content. |
 
 **Error codes:**
 
@@ -223,7 +223,7 @@ Obtains types of [PasteDataProperty](arkts-basicservices-pasteboard-pastedatapro
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Data types of the PasteData. |
+| Array&lt;string&gt; | Data types of the PasteData. |
 
 **Examples**
 

@@ -9,7 +9,7 @@ Defines the size property.
 ## Modules to Import
 
 ```TypeScript
-import componentUtils from '@kit.ArkUI';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## height
@@ -18,7 +18,9 @@ import componentUtils from '@kit.ArkUI';
 height: number
 ```
 
-Component height.Unit: px
+Component height.
+
+Unit: px
 
 **Type:** number
 
@@ -36,7 +38,9 @@ Component height.Unit: px
 width: number
 ```
 
-Component width.Unit: px
+Component width.
+
+Unit: px
 
 **Type:** number
 

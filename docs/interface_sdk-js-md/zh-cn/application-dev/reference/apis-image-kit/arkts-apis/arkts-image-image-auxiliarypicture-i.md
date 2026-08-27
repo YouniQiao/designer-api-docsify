@@ -1,6 +1,10 @@
 # AuxiliaryPicture
 
-AuxiliaryPicture类，用于读取或写入图像的辅助图数据以及获取图像的辅助图信息。目前支持的辅助图类型可参考[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) 。在调用AuxiliaryPicture的方法前，需要通过[image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md)或Picture的 [getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture)创建一个AuxiliaryPicture实例。由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用[release](#release)方法及时释放对象。释放时应确保该实例的所有异步方法 均执行完成，且后续不再使用该对象。
+AuxiliaryPicture类，用于读取或写入图像的辅助图数据以及获取图像的辅助图信息。目前支持的辅助图类型可参考[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md)。
+
+在调用AuxiliaryPicture的方法前，需要通过[image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md)或Picture的[getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture)创建一个AuxiliaryPicture实例。
+
+由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用[release](#release)方法及时释放对象。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该对象。
 
 > **说明：**
 > 
@@ -13,7 +17,7 @@ AuxiliaryPicture类，用于读取或写入图像的辅助图数据以及获取�
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## getAuxiliaryPictureInfo
@@ -72,7 +76,7 @@ getMetadata(metadataType: MetadataType): Promise<Metadata>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Metadata & gt; | Promise对象，返回元数据的Promise对象。 |
+| Promise&lt;Metadata&gt; | Promise对象，返回元数据的Promise对象。 |
 
 **错误码：**
 
@@ -162,7 +166,7 @@ readPixelsToBuffer(): Promise<ArrayBuffer>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象。返回辅助图像素数据。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象。返回辅助图像素数据。 |
 
 **示例**
 
@@ -197,7 +201,11 @@ async function ReadPixelsToBuffer(context: Context) {
 release():void
 ```
 
-释放辅助图对象，无返回值。由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用该方法，及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+释放辅助图对象，无返回值。
+
+由于图片占用内存较大，所以当AuxiliaryPicture对象使用完成后，应主动调用该方法，及时释放内存。
+
+释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **起始版本：** 13
 
@@ -298,13 +306,13 @@ setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | 是 | 元数据的类型，用于设置对应的元数据。 |
-| metadata | [Metadata](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-metadata-t.md) | 是 | 元数据对象。 |
+| metadata | Metadata | 是 | 元数据对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -401,7 +409,7 @@ writePixelsFromBuffer(data: ArrayBuffer): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -9,7 +9,7 @@ Represents detailed file information. Before calling any API of the **Stat()** c
 ## Modules to Import
 
 ```TypeScript
-import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## isBlockDevice
@@ -246,7 +246,8 @@ let isSymbolicLink = fileIo.statSync(filePath).isSymbolicLink();
 readonly atime: number
 ```
 
-Time when the file was last accessed. The value is the number of seconds elapsed since 00:00:00 on January 1, 1970.  
+Time when the file was last accessed. The value is the number of seconds elapsed since 00:00:00 on January 1, 1970.
+
 **Note：**: Currently, user data partitions are mounted in **noatime** mode by default, and **atime** update is disabled.
 
 **Type:** number
@@ -263,7 +264,8 @@ Time when the file was last accessed. The value is the number of seconds elapsed
 readonly atimeNs?:bigint
 ```
 
-Time of the last access to the file. The value is the number of nanoseconds elapsed since 00:00:00 on January 1, 19 70.  
+Time of the last access to the file. The value is the number of nanoseconds elapsed since 00:00:00 on January 1, 19 70.
+
 **Note：**: Currently, user data partitions are mounted in **noatime** mode by default, and **atime** update is disabled.
 
 **Type:** bigint
@@ -348,7 +350,10 @@ File location, which indicates whether the file is stored in a local device or i
 readonly mode: number
 ```
 
-File permissions. The meaning of each bit is as follows:Note: The following values are in octal format. The return values are in decimal format. You need to convert the values.  
+File permissions. The meaning of each bit is as follows:
+
+Note: The following values are in octal format. The return values are in decimal format. You need to convert the values.
+
 - **0o400**: The user has the read permission on a regular file or a directory entry.  
 - **0o200**: The user has the permission to write a regular file or create and delete a directory entry.  
 - **0o100**: The user has the permission to execute a regular file or search for the specified path in a directory.  

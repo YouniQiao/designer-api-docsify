@@ -1,6 +1,8 @@
 # @ohos.resourceschedule.deviceStandby
 
-Provides methods for managing device standby, including the methods for querying standby status and exemption list.@namespace deviceStandby
+Provides methods for managing device standby, including the methods for querying standby status and exemption list.
+
+@namespace deviceStandby
 
 **Since:** 10
 
@@ -9,7 +11,7 @@ Provides methods for managing device standby, including the methods for querying
 ## Modules to Import
 
 ```TypeScript
-import deviceStandby from '@kit.BackgroundTasksKit';
+import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary
@@ -30,8 +32,8 @@ import deviceStandby from '@kit.BackgroundTasksKit';
 
 | Name | Description |
 | --- | --- |
-| [ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md) | Information about an exempted application.@interface ExemptedAppInfo |
-| [ResourceRequest](arkts-backgroundtasks-devicestandby-resourcerequest-i-sys.md) | The request of standby resources.@interface ResourceRequest |
+| [ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md) | Information about an exempted application. |
+| [ResourceRequest](arkts-backgroundtasks-devicestandby-resourcerequest-i-sys.md) | The request of standby resources. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -39,5 +41,5 @@ import deviceStandby from '@kit.BackgroundTasksKit';
 
 | Name | Description |
 | --- | --- |
-| [ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md) | The type of exemption resources requested by the application.@enum { number } |
+| [ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md) | The type of exemption resources requested by the application. |
 <!--DelEnd-->

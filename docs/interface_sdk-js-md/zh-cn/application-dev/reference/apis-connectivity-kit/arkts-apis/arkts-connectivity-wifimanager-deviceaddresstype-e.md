@@ -1,6 +1,6 @@
 # DeviceAddressType
 
-WLAN设备地址（mac/bssid）类型。 @enum { number }
+WLAN设备地址（mac/bssid）类型。@enum { number }
 
 **起始版本：** 12
 

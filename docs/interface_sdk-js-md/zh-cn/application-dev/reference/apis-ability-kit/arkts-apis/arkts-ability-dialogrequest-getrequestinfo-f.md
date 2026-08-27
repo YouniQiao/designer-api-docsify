@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import dialogRequest from '@kit.AbilityKit';
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## getRequestInfo
@@ -32,7 +32,7 @@ function getRequestInfo(want: Want): RequestInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [RequestInfo](arkts-ability-dialogrequest-requestinfo-i.md) | 请求方RequestInfo，用于绑定模态窗口。 |
+| RequestInfo | 请求方RequestInfo，用于绑定模态窗口。 |
 
 **错误码：**
 

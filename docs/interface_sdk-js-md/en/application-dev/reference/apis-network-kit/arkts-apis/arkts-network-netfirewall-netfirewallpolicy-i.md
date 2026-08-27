@@ -9,7 +9,7 @@ Defines the firewall policy, including the firewall switch status and default in
 ## Modules to Import
 
 ```TypeScript
-import netFirewall from '@kit.NetworkKit';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## inAction

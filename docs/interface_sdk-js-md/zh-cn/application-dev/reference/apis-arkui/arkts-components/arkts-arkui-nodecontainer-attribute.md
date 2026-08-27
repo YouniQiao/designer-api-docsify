@@ -1,6 +1,8 @@
 # NodeContainer属性/事件
 
-支持通用属性，但不支持动态属性设置。支持通用事件。
+支持通用属性，但不支持动态属性设置。
+
+支持通用事件。
 
 **继承/实现关系：** NodeContainerAttribute extends CommonMethod<NodeContainerAttribute>
 

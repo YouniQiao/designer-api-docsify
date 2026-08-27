@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## showToast
@@ -36,7 +36,7 @@ Creates and displays a toast.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Yes | Toast configuration options. |
+| options | ShowToastOptions | Yes | Toast configuration options. |
 
 **Error codes:**
 
@@ -46,33 +46,6 @@ Creates and displays a toast.
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 **Examples**
-
-```TypeScript
-import { promptAction } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-@Entry
-@Component
-struct toastExample {
-  build() {
-    Column() {
-      Button('Show toast').fontSize(20)
-        .onClick(() => {
-          try {
-            promptAction.showToast({
-              message: 'Hello World',
-              duration: 2000
-            });
-          } catch (error) {
-            let message = (error as BusinessError).message;
-            let code = (error as BusinessError).code;
-            console.error(`showToast args error code is ${code}, message is ${message}`);
-          };
-        })
-    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-  }
-}
-```
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';

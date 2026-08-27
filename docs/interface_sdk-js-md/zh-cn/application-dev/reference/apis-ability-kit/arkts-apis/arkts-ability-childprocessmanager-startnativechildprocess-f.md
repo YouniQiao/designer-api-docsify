@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import childProcessManager from '@kit.AbilityKit';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## startNativeChildProcess
@@ -17,7 +17,8 @@ function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, opt
 > **说明：**
 > 
 > 调用该接口创建的子进程不会继承父进程资源，子进程创建成功会返回子进程pid，然后加载参数中指定的动态链接库文件并执行子进程的入口函数，入口函数执行完后子进程会自动销毁。调用该接口的进程销毁后，所创建的子进程也会一并销毁。
-**设备行为差异**：从API version 13开始，该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。 从API version 14开始，该接口在PC/2in1、Tablet中可正常调用，在其他设备类型中返回801错误码。
+
+**设备行为差异**：从API version 13开始，该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。从API version 14开始，该接口在PC/2in1、Tablet中可正常调用，在其他设备类型中返回801错误码。
 
 **起始版本：** 13
 
@@ -37,7 +38,7 @@ function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, opt
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回子进程pid。 |
+| Promise&lt;number&gt; | Promise对象，返回子进程pid。 |
 
 **错误码：**
 
@@ -83,7 +84,7 @@ void Main(NativeChildProcess_Args args)
 
 ```TypeScript
 // 主进程：
-// 使用childProcessManager.startNativeChildProcess方法启动子进程:
+// 使用childProcessManager.startNativeChildProcess方法启动子进程：
 import { common, ChildProcessArgs, ChildProcessOptions, childProcessManager } from '@kit.AbilityKit';
 import { fileIo } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';

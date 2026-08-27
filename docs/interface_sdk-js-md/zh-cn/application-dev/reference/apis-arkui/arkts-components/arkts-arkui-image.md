@@ -1,10 +1,15 @@
 # Image
 
-Image为图片组件，常用于在应用中显示图片。Image支持加载[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)、 [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)和[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)类型的数据源，支持png、jpg、jpeg、bmp、svg、webp、gif 、heif和tiff类型的图片格式，不支持apng和svga格式。
+Image为图片组件，常用于在应用中显示图片。Image支持加载[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)、[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)和[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)类型的数据源，支持png、jpg、jpeg、bmp、svg、webp、gif、heif和tiff类型的图片格式，不支持apng和svga格式。
+
 > **说明：** > > - 从API version 23开始，图片类型新增支持tiff格式。 > > - 该组件从API版本26.0.0开始支持WithTheme。 > > - 使用快捷组合键对Image组件复制时，Image组件必须处于获焦状态，如何获焦请参考[设置组件是否可获焦](../../../ui/arkts-common-events-focus-event.md#设置组件是否可获焦)。 > Image组件默认不获焦，需将focusable属性设置为true，即可使用Tab键将焦点切换到组件上，再将 > [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch)属性设置为true，即可实现点击获焦。 > > - 图片格式支持SVG图源，SVG标签文档请参考SVG标签说明。 > > - 动图的播放依赖于Image节点的可见性变化，其默认行为是不播放的。当节点可见时，通过回调启动动画，当节点不可见时，停止动画。可见性状态的判断是通过 > [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) > 事件触发的，当可见阈值ratios大于0时，表明Image处于可见状态。 > > - Image组件播放GIF动图时，帧时长取自GIF文件中各帧的delay time字段。当某帧的时长值小于等于0时，系统会将其修正为100ms；当某帧的时长值大于0时，系统直接使用该原始值，不做最小帧时长限制。
+
 需要权限
+
 使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
+
 子组件
+
 无
 
 ## Image
@@ -13,7 +18,13 @@ Image为图片组件，常用于在应用中显示图片。Image支持加载[Pix
 Image(src: PixelMap | ResourceStr | DrawableDescriptor)
 ```
 
-通过图片数据源获取图片，用于后续渲染展示。Image组件加载图片失败或图片尺寸为0时，图片组件大小自动为0，不跟随父组件的布局约束。Image组件默认按照居中裁剪，例如组件宽高设置相同，原图长宽不等，此时按照中间区域进行裁剪。Image加载成功且组件不设置宽高时，其显示大小自适应父组件。
+通过图片数据源获取图片，用于后续渲染展示。
+
+Image组件加载图片失败或图片尺寸为0时，图片组件大小自动为0，不跟随父组件的布局约束。
+
+Image组件默认按照居中裁剪，例如组件宽高设置相同，原图长宽不等，此时按照中间区域进行裁剪。
+
+Image加载成功且组件不设置宽高时，其显示大小自适应父组件。
 
 > **说明：**
 > 
@@ -49,7 +60,7 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考 [加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。  1. PixelMap格式为像素图，常用于图片编辑的场景。  2. ResourceStr包含Resource和string格式。  string格式可用于加载网络图片和本地图片。当 使用相对路径显示图片时，不支持跨包/跨模块调用该 Image组件，建议使用Resource格式来管理需全局使用的图片资源。  从DevEco Studio 6.0.0 Beta2版本开始，新建工程或模块时，默认创建的模块不会对非resource目录下的资源进行打包，需使能相关开关：模块的build-profile.json5中 buildOption > resOptions > copyCodeResource > enable 设置为true。  - 支持`Base64`字符串。  - 传入的字符串为https网络图片地址时，建议参考 示例2（下载与显示静态网络图片）。  - 支持file://路径前缀的字符串，应用沙箱URI：file://<bundleName>/<sandboxPath>。应用沙箱路径URI构造可参考 [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)。沙箱路径需要使用 [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包 路径下的文件有可读权限。  Resource格式可以跨包/跨模块访问资源文件，是访问本地图片的推荐方式，具体示例参考 [访问跨HAP/HSP包资源](../../../quick-start/resource-categories-and-access.md#访问跨haphsp包资源)。 3. 当传入资源id或name为普通图片 时，生成DrawableDescriptor对象。传入 [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型可播放PixelMap数组动画。  **说明：** - ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。 - ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。 1. PixelMap格式为像素图，常用于图片编辑的场景。 2. ResourceStr包含Resource和string格式。 string格式可用于加载网络图片和本地图片。当使用相对路径显示图片时，不支持跨包/跨模块调用该Image组件，建议使用Resource格式来管理需全局使用的图片资源。 从DevEco Studio 6.0.0 Beta2版本开始，新建工程或模块时，默认创建的模块不会对非resource目录下的资源进行打包，需使能相关开关：模块的build-profile.json5中buildOption > resOptions > copyCodeResource > enable 设置为true。 - 支持`Base64`字符串。 - 传入的字符串为https网络图片地址时，建议参考示例2（下载与显示静态网络图片）。 - 支持file://路径前缀的字符串，应用沙箱URI：file://<bundleName>/<sandboxPath>。应用沙箱路径URI构造可参考[constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor)。沙箱路径需要使用[fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md)方法将路径转换为应用沙箱URI，然后传入显示。同时需要保证目录包路径下的文件有可读权限。 Resource格式可以跨包/跨模块访问资源文件，是访问本地图片的推荐方式，具体示例参考[访问跨HAP/HSP包资源](../../../quick-start/resource-categories-and-access.md#访问跨haphsp包资源)。 3. 当传入资源id或name为普通图片时，生成DrawableDescriptor对象。传入[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)类型可播放PixelMap数组动画。 **说明：** - ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。 - ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
 
 ## Image
 
@@ -73,7 +84,7 @@ src新增[ImageContent](arkts-arkui-imagecontent-e.md)类型，可指定对应�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考 [加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。  PixelMap、ResourceStr和DrawableDescriptor的使用请参考 Image的src参数说明。   传入[ImageContent](arkts-arkui-imagecontent-e.md)类型，指定图像内容。  **说明：** - ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。 - ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。 PixelMap、ResourceStr和DrawableDescriptor的使用请参考Image的src参数说明。  传入[ImageContent](arkts-arkui-imagecontent-e.md)类型，指定图像内容。 **说明：** - ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。 - ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
 
 ## Image
 
@@ -120,7 +131,7 @@ Image新增[ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)参数
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考 [加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。  PixelMap、ResourceStr和DrawableDescriptor的使用请参考 Image的src参数说明。  **说明：** - ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。 - ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。 PixelMap、ResourceStr和DrawableDescriptor的使用请参考Image的src参数说明。 **说明：** - ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。 - ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
 | imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | 是 | 给组件设置一个AI分析选项，通过此项可配置分析类型或绑定一个分析控制器。 |
 
 ## Image
@@ -154,16 +165,33 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor,
 
 | 名称 | 说明 |
 | --- | --- |
+| [ImageAlt](arkts-arkui-imagealt-i.md) | 设置图片占位图。 |
+| [ImageError](arkts-arkui-imageerror-i.md) | 图片加载异常时触发回调的返回对象。 |
+| [ImageSourceSize](arkts-arkui-imagesourcesize-i.md) | 图片解码尺寸。 |
+| [ResizableOptions](arkts-arkui-resizableoptions-i.md) | 图像拉伸时可调整大小的图像选项。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
+| [BusinessError](arkts-arkui-businesserror-t.md) | 图片加载异常返回的错误信息。 |
+| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 作为Image组件的入参对象。 |
+| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | 颜色滤波器对象。 |
+| [DrawingLattice](arkts-arkui-drawinglattice-t.md) | 将图片按照矩形网格进行划分。 |
+| [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | 图片加载异常时触发此回调。 |
+| [ImageMatrix](arkts-arkui-imagematrix-t.md) | 当前的矩阵对象。 |
+| [RequestDownloadInfo](arkts-arkui-requestdownloadinfo-t.md) | 用于描述网络图片加载失败或异常时的下载信息。该对象包含本次下载任务的资源信息、网络信息以及性能统计信息，可用于定位加载异常的具体原因。 |
+| [ResolutionQuality](arkts-arkui-resolutionquality-t-sys.md) | 分辨率质量等级类型。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
+| [DynamicRangeMode](arkts-arkui-dynamicrangemode-e.md) | 期望展示的图像动态范围。 |
+| [ImageContent](arkts-arkui-imagecontent-e.md) | 指定图像内容。 |
+| [ImageInterpolation](arkts-arkui-imageinterpolation-e.md) | 图片的渲染模式。 |
+| [ImageRenderMode](arkts-arkui-imagerendermode-e.md) | 图片的渲染模式。 |
+| [ImageRotateOrientation](arkts-arkui-imagerotateorientation-e.md) | 期望的图像内容显示方向。 |
 
 ## 示例
 

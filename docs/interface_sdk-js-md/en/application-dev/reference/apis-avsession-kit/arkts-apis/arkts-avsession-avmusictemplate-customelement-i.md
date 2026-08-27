@@ -1,6 +1,8 @@
 # CustomElement
 
-Custom elements of mine page.@extends OperResult @interface CustomElement
+Custom elements of mine page.
+
+@extends OperResult @interface CustomElement
 
 **Inheritance/Implementation:** CustomElement extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
 
@@ -11,7 +13,7 @@ Custom elements of mine page.@extends OperResult @interface CustomElement
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## customCompilations

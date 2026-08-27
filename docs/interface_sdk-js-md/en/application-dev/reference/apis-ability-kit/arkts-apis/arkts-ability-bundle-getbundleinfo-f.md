@@ -3,22 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appControl from '@kit.AbilityKit.appControl';
-import bundleManager from '@kit.AbilityKit.bundleManager';
-import bundleMonitor from '@kit.AbilityKit.bundleMonitor';
-import bundleResourceManager from '@kit.AbilityKit.bundleResourceManager';
-import bundle from '@kit.AbilityKit';
-import defaultAppManager from '@kit.AbilityKit.defaultAppManager';
-import distributedBundleManager from '@kit.AbilityKit.distributedBundleManager';
-import freeInstall from '@kit.AbilityKit.freeInstall';
-import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit.innerBundleManager';
-import installer from '@kit.AbilityKit.installer';
-import launcherBundleManager from '@kit.AbilityKit.launcherBundleManager';
-import overlay from '@kit.AbilityKit.overlay';
-import shortcutManager from '@kit.AbilityKit.shortcutManager';
-import skillManager from '@kit.AbilityKit.skillManager';
-import appDomainVerify from '@kit.AbilityKit.appDomainVerify';
-import pluginBundleManager from '@kit.AbilityKit.pluginBundleManager';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## getBundleInfo
@@ -28,7 +13,9 @@ function getBundleInfo(bundleName: string,
     bundleFlags: number, options: BundleOptions, callback: AsyncCallback<BundleInfo>): void
 ```
 
-Obtains the bundle information based on a given bundle name and bundle options. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
+Obtains the bundle information based on a given bundle name and bundle options. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -46,7 +33,7 @@ Obtains the bundle information based on a given bundle name and bundle options. 
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
-| options | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | Yes | Includes **userId**. |
+| options | BundleOptions | Yes | Includes **userId**. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)&gt; | Yes | Callback used to return the bundle information. |
 
 **Examples**
@@ -109,7 +96,9 @@ bundle.getBundleInfo(bundleName, bundleFlags, options, (err, data) => {
 function getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<BundleInfo>): void
 ```
 
-Obtains the bundle information based on a given bundle name. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
+Obtains the bundle information based on a given bundle name. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -140,7 +129,9 @@ See [getBundleInfo](#getbundleinfo)
 function getBundleInfo(bundleName: string, bundleFlags: number, options?: BundleOptions): Promise<BundleInfo>
 ```
 
-Obtains the bundle information based on a given bundle name. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
+Obtains the bundle information based on a given bundle name. This API uses a promise to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -158,7 +149,7 @@ Obtains the bundle information based on a given bundle name. This API uses a pro
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the bundle information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
-| options | [BundleOptions](arkts-ability-bundle-bundleoptions-i.md) | No | Options that contain the user ID. |
+| options | BundleOptions | No | Options that contain the user ID. |
 
 **Return value:**
 

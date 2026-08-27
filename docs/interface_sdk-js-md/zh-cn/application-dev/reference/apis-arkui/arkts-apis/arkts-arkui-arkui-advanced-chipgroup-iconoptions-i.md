@@ -10,7 +10,6 @@ IconOptions定义图标的通用属性。
 
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUIV2';
 ```
 
 ## size
@@ -19,10 +18,14 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 size?: SizeOptions
 ```
 
-图标大小，不支持百分比。当需要自定义图标尺寸时设置此参数。默认值：  
+图标大小，不支持百分比。当需要自定义图标尺寸时设置此参数。
+
+默认值：
+
 - ChipItemStyle.size为ChipSize.SMALL时，默认值为：{width: \$r('sys.float.chip_small_icon_size'), height: \$r('  
 sys.float.chip_small_icon_size')}  
-- 其他情况下，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('sys.float.chip_normal_icon_size')}  
+- 其他情况下，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('sys.float.chip_normal_icon_size')}
+
 值为undefined时，按默认值处理。
 
 **类型：** [SizeOptions](arkts-arkui-sizeoptions-i.md)

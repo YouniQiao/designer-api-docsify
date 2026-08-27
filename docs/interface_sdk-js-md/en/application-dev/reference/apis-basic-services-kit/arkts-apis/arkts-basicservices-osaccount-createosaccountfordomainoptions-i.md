@@ -13,5 +13,5 @@ Represents a set of optional parameters for creating an OS account bound to the 
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```

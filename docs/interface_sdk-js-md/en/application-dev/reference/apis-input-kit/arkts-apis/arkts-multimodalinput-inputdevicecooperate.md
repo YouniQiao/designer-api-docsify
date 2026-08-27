@@ -13,7 +13,7 @@ The **inputDeviceCooperate** module implements screen hopping for two or more ne
 ## Modules to Import
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKit';
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## Summary
@@ -23,16 +23,16 @@ import inputDeviceCooperate from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [enable(Screen Hopping)](arkts-input-inputdevicecooperate-enable-f-sys.md) | Enables or disables screen hopping. This API uses an asynchronous callback to return the result. |
-| [enable(Screen Hopping)](arkts-input-inputdevicecooperate-enable-f-sys.md) | Specifies whether to enable screen hopping. This API uses a promise to return the result. |
-| [getState(Screen Hopping)](arkts-input-inputdevicecooperate-getstate-f-sys.md) | Obtains the state of the screen hopping switch. This API uses an asynchronous callback to return the result. |
-| [getState(Screen Hopping)](arkts-input-inputdevicecooperate-getstate-f-sys.md) | Checks whether screen hopping is enabled. This API uses a promise to return the result. |
-| off(Screen Hopping) | Deregisters the listener for screen hopping status changes. This API uses an asynchronous callback to return the result. |
-| on(Screen Hopping) | Registers a listener for screen hopping state changes. This API uses an asynchronous callback to return the result. |
-| [start(Screen Hopping)](arkts-input-inputdevicecooperate-start-f-sys.md) | Starts screen hopping. This API uses an asynchronous callback to return the result. |
-| [start(Screen Hopping)](arkts-input-inputdevicecooperate-start-f-sys.md) | Starts screen hopping. This API uses a promise to return the result. |
-| [stop(Screen Hopping)](arkts-input-inputdevicecooperate-stop-f-sys.md) | Stops screen hopping. This API uses an asynchronous callback to return the result. |
-| [stop(Screen Hopping)](arkts-input-inputdevicecooperate-stop-f-sys.md) | Stops screen hopping. This API uses a promise to return the result. |
+| [enable](arkts-input-inputdevicecooperate-enable-f-sys.md) | Enables or disables screen hopping. This API uses an asynchronous callback to return the result. |
+| [enable](arkts-input-inputdevicecooperate-enable-f-sys.md) | Specifies whether to enable screen hopping. This API uses a promise to return the result. |
+| [getState](arkts-input-inputdevicecooperate-getstate-f-sys.md) | Obtains the state of the screen hopping switch. This API uses an asynchronous callback to return the result. |
+| [getState](arkts-input-inputdevicecooperate-getstate-f-sys.md) | Checks whether screen hopping is enabled. This API uses a promise to return the result. |
+| off | Deregisters the listener for screen hopping status changes. This API uses an asynchronous callback to return the result. |
+| on | Registers a listener for screen hopping state changes. This API uses an asynchronous callback to return the result. |
+| [start](arkts-input-inputdevicecooperate-start-f-sys.md) | Starts screen hopping. This API uses an asynchronous callback to return the result. |
+| [start](arkts-input-inputdevicecooperate-start-f-sys.md) | Starts screen hopping. This API uses a promise to return the result. |
+| [stop](arkts-input-inputdevicecooperate-stop-f-sys.md) | Stops screen hopping. This API uses an asynchronous callback to return the result. |
+| [stop](arkts-input-inputdevicecooperate-stop-f-sys.md) | Stops screen hopping. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -40,5 +40,5 @@ import inputDeviceCooperate from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [EventMsg(Screen Hopping)](arkts-input-inputdevicecooperate-eventmsg-e-sys.md) | Enumerates screen hopping events. |
+| [EventMsg](arkts-input-inputdevicecooperate-eventmsg-e-sys.md) | Enumerates screen hopping events. |
 <!--DelEnd-->

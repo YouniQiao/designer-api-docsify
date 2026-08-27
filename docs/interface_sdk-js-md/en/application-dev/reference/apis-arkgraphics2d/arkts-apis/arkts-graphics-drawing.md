@@ -16,7 +16,7 @@ During application development, you often need to draw different elements. Typic
 ## Modules to Import
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary
@@ -32,13 +32,13 @@ import drawing from '@kit.ArkGraphics2D';
 | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Implements an image filter. |
 | [Lattice](arkts-arkgraphics2d-drawing-lattice-c.md) | Lattice object. which is used to divide an image by lattice. |
 | [MaskFilter](arkts-arkgraphics2d-drawing-maskfilter-c.md) | Implements a mask filter. |
-| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Implements a matrix. A 3 x 3 matrix is shown as below. Elements in the matrix from left to right and from top to bottom respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient. If (x & lt;sub & gt;1 & lt;/sub & gt;, y & lt;sub & gt;1 & lt;/sub & gt;) is the source coordinate point, (x & lt;sub & gt;2 & lt;/sub & gt;, y & lt;sub & gt;2 & lt;/sub & gt;) is the coordinate point obtained by transforming the source coordinate point using the matrix, then the relationship between the two coordinate points is as follows: |
+| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Implements a matrix. A 3 x 3 matrix is shown as below. Elements in the matrix from left to right and from top to bottom respectively represent a horizontal scale coefficient, a horizontal skew coefficient, a horizontal translation coefficient, a vertical skew coefficient, a vertical scale coefficient, a vertical translation coefficient, an X-axis perspective coefficient, a Y-axis perspective coefficient, and a perspective scale coefficient. If (x&lt;sub&gt;1&lt;/sub&gt;, y&lt;sub&gt;1&lt;/sub&gt;) is the source coordinate point, (x&lt;sub&gt;2&lt;/sub&gt;, y&lt;sub&gt;2&lt;/sub&gt;) is the coordinate point obtained by transforming the source coordinate point using the matrix, then the relationship between the two coordinate points is as follows: |
 | [Path](arkts-arkgraphics2d-drawing-path-c.md) | A compound geometric path consisting of line segments, arcs, quadratic Bezier curves, and cubic Bezier curves. |
 | [PathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md) | Implements a path effect. |
 | [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | Implements a path operation iterator. You can read path operation instructions by traversing the iterator. |
 | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | Defines a pen, which is used to describe the style and color to outline a shape. |
 | [PointUtils](arkts-arkgraphics2d-drawing-pointutils-c.md) | This class offers a comprehensive set of operations for handling common2D Point objects. |
-| [RectUtils](arkts-arkgraphics2d-drawing-rectutils-c.md) | This module provides tools for processing rectangles. Use scenarios: 1. Quickly create rectangles and get their basic features, like making a new rectangle, copying one, and obtaining its width, height, and center point. 2. Calculate and adjust boundaries, such as obtaining the inclusion relationship, calculating and updating intersections and unions between rectangles, and updating boundary values. |
+| [RectUtils](arkts-arkgraphics2d-drawing-rectutils-c.md) | This module provides tools for processing rectangles. Use scenarios: |
 | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Describes a region, which is used to describe the region where the shape can be drawn. |
 | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Rounded rectangle. |
 | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | Implements sampling options. |

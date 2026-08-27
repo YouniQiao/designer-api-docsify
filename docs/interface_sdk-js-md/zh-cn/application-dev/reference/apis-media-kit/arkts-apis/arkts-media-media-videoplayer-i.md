@@ -1,6 +1,6 @@
 # VideoPlayer
 
-视频播放管理类，用于管理和播放视频媒体。在调用VideoPlayer的方法前，需要先通过 [createVideoPlayer()](arkts-media-media-createvideoplayer-f.md)构建 一个VideoPlayer实例。
+视频播放管理类，用于管理和播放视频媒体。在调用VideoPlayer的方法前，需要先通过[createVideoPlayer()](arkts-media-media-createvideoplayer-f.md)构建一个VideoPlayer实例。
 
 > **说明：**
 > 
@@ -17,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getTrackDescription
@@ -46,7 +46,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | 是 | 回调函数。获取视频轨道信息成功时，err为undefined，data为获取到的视频轨道信息 MediaDescription数组，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | 是 | 回调函数。获取视频轨道信息成功时，err为undefined，data为获取到的视频轨道信息MediaDescription数组，否则为错误对象。 |
 
 **示例**
 
@@ -213,7 +213,7 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'bufferingUpdate' | 是 | 视频缓存事件回调类型，支持的事件：'bufferingUpdate'。 |
-| callback | (infoType: BufferingInfoType, value: number) = & gt; void | 是 | 视频缓存事件回调方法。    [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md)value值固定为0。 |
+| callback | (infoType: BufferingInfoType, value: number) =&gt; void | 是 | 视频缓存事件回调方法。    [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md)value值固定为0。 |
 
 ## on('startRenderFrame')
 
@@ -271,7 +271,7 @@ on(type: 'videoSizeChanged', callback: (width: number, height: number) => void):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'videoSizeChanged' | 是 | 视频播放宽高变化事件回调类型，支持的事件：'videoSizeChanged'。 |
-| callback | (width: number, height: number) = & gt; void | 是 | 视频播放宽高变化事件回调方法，width表示宽，height表示高。 |
+| callback | (width: number, height: number) =&gt; void | 是 | 视频播放宽高变化事件回调方法，width表示宽，height表示高。 |
 
 ## on('audioInterrupt')
 
@@ -300,7 +300,7 @@ on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioInterrupt' | 是 | 音频焦点变化事件回调类型，支持的事件：'audioInterrupt'。 |
-| callback | (info: audio.InterruptEvent) = & gt; void | 是 | 音频焦点变化事件回调方法。 |
+| callback | (info: audio.InterruptEvent) =&gt; void | 是 | 音频焦点变化事件回调方法。 |
 
 ## on('error')
 
@@ -438,7 +438,7 @@ pause(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 暂停播放视频的Promise返回值。 |
+| Promise&lt;void&gt; | 暂停播放视频的Promise返回值。 |
 
 **示例**
 
@@ -585,7 +585,7 @@ play(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 开始播放视频的Promise返回值。 |
+| Promise&lt;void&gt; | 开始播放视频的Promise返回值。 |
 
 **示例**
 
@@ -695,7 +695,7 @@ prepare(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 准备播放视频的Promise返回值。 |
+| Promise&lt;void&gt; | 准备播放视频的Promise返回值。 |
 
 **示例**
 
@@ -871,7 +871,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 释放视频资源的Promise返回值。 |
+| Promise&lt;void&gt; | 释放视频资源的Promise返回值。 |
 
 **示例**
 
@@ -1103,7 +1103,7 @@ reset(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
 
@@ -1230,7 +1230,7 @@ seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为[0, duration]。 |
-| mode | [SeekMode](arkts-media-media-seekmode-e.md) | 是 | 跳转模式。 |
+| mode | SeekMode | 是 | 跳转模式。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。跳转到指定播放位置成功时，err为undefined，data为获取到的跳转到的播放位置，否则为错误对象。 |
 
 **示例**
@@ -1284,13 +1284,13 @@ seek(timeMs: number, mode?: SeekMode): Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为[0, duration]。 |
-| mode | [SeekMode](arkts-media-media-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式。 |
+| mode | SeekMode | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 跳转到指定播放位置的Promise返回值，单位ms。 |
+| Promise&lt;number&gt; | 跳转到指定播放位置的Promise返回值，单位ms。 |
 
 **示例**
 
@@ -1349,7 +1349,7 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考 XComponent。 |
+| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考XComponent。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置SurfaceId成功，err为undefined，否则为错误对象。 |
 
 **示例**
@@ -1394,13 +1394,13 @@ setDisplaySurface(surfaceId: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考 XComponent。 |
+| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考XComponent。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 设置SurfaceId的Promise返回值。 |
+| Promise&lt;void&gt; | 设置SurfaceId的Promise返回值。 |
 
 **示例**
 
@@ -1500,7 +1500,7 @@ setSpeed(speed: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回设置的播放速度，具体见 [PlaybackSpeed]{ |
+| Promise&lt;number&gt; | Promise对象，返回设置的播放速度，具体见[PlaybackSpeed]{ |
 
 **示例**
 
@@ -1600,7 +1600,7 @@ setVolume(vol: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 设置音量的Promise返回值。 |
+| Promise&lt;void&gt; | 设置音量的Promise返回值。 |
 
 **示例**
 
@@ -1722,7 +1722,7 @@ stop(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 停止播放视频的Promise返回值。 |
+| Promise&lt;void&gt; | 停止播放视频的Promise返回值。 |
 
 **示例**
 
@@ -1832,11 +1832,22 @@ readonly duration: number
 fdSrc: AVFileDescriptor
 ```
 
-视频媒体文件描述，使用场景：应用中的视频资源被连续存储在同一个文件中。  
-**使用示例**：假设一个连续存储的音乐文件:视频1(地址偏移:0，字节长度:100)视频2(地址偏移:101，字节长度:50)视频3(地址偏移:151，字节长度:150)
+视频媒体文件描述，使用场景：应用中的视频资源被连续存储在同一个文件中。
+
+**使用示例**：
+
+假设一个连续存储的音乐文件:
+
+视频1(地址偏移:0，字节长度:100)
+
+视频2(地址偏移:101，字节长度:50)
+
+视频3(地址偏移:151，字节长度:150)
+
 1. 播放视频1：AVFileDescriptor { fd = 资源句柄; offset = 0; length = 100; }
 2. 播放视频2：AVFileDescriptor { fd = 资源句柄; offset = 101; length = 50; }
 3. 播放视频3：AVFileDescriptor { fd = 资源句柄; offset = 151; length = 150; }
+
 假设是一个独立的视频文件: 请使用src=fd://xx
 
 **类型：** [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md)
@@ -1909,15 +1920,22 @@ readonly state: VideoPlayState
 url: string
 ```
 
-视频媒体URL，支持当前主流的视频格式(mp4、mpeg-ts、mkv)。  
+视频媒体URL，支持当前主流的视频格式(mp4、mpeg-ts、mkv)。
+
 **支持路径示例**：
+
 1. fd类型播放：fd://xx
+
+
 
 2. http网络播放: http://xx
 3. https网络播放: https://xx
 4. hls网络播放路径：http://xx或者https://xx
-5. file类型: file://xx  
-**说明：**从API version 11开始不支持webm。
+5. file类型: file://xx
+
+**说明：**
+
+从API version 11开始不支持webm。
 
 **类型：** string
 

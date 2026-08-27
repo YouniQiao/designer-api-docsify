@@ -1,6 +1,8 @@
 # WindowAnimationController (System API)
 
-Window animation controller.@interface WindowAnimationController
+Window animation controller.
+
+@interface WindowAnimationController
 
 **Since:** 9
 
@@ -11,7 +13,7 @@ Window animation controller.@interface WindowAnimationController
 ## Modules to Import
 
 ```TypeScript
-import windowAnimationManager from '@kit.ArkUI';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## onAppTransition
@@ -35,8 +37,8 @@ Called on application transition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | Window target of the source application. |
-| toWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | Window target of the destination application. |
+| fromWindowTarget | WindowAnimationTarget | Yes | Window target of the source application. |
+| toWindowTarget | WindowAnimationTarget | Yes | Window target of the destination application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Examples**
@@ -63,7 +65,7 @@ Called on closing a window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| closingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes |  |
+| closingWindowTarget | WindowAnimationTarget | Yes |  |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Examples**
@@ -91,7 +93,7 @@ Called on minimizing a window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minimizingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | Window target of the minimizing window. |
+| minimizingWindowTarget | WindowAnimationTarget | Yes | Window target of the minimizing window. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Examples**
@@ -145,7 +147,7 @@ Called on starting an application form launcher.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | indicates Window target of the starting application. |
+| startingWindowTarget | WindowAnimationTarget | Yes | indicates Window target of the starting application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Examples**
@@ -173,7 +175,7 @@ Called on starting an application form other.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | Window target of the starting application. |
+| startingWindowTarget | WindowAnimationTarget | Yes | Window target of the starting application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Examples**
@@ -201,7 +203,7 @@ Called on starting an application form recent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | Window target of the starting application. |
+| startingWindowTarget | WindowAnimationTarget | Yes | Window target of the starting application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 
 **Examples**
@@ -229,8 +231,8 @@ Called on window animation targets update.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullScreenWindowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | Yes | The fullscreen window target. |
-| floatingWindowTargets | Array & lt;WindowAnimationTarget & gt; | Yes | All the floating window targets. |
+| fullScreenWindowTarget | WindowAnimationTarget | Yes | The fullscreen window target. |
+| floatingWindowTargets | Array&lt;WindowAnimationTarget&gt; | Yes | All the floating window targets. |
 
 **Examples**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithDirectory
@@ -30,7 +30,7 @@ function createMediaSourceWithDirectory(path: string): Promise< MediaSource | un
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[MediaSource](arkts-media-media-mediasource-i.md) \| undefined & gt; | Promise对象。成功时返回MediaSource实例，失败时返回undefined。 |
+| Promise&lt;[MediaSource](arkts-media-media-mediasource-i.md) \| undefined&gt; | Promise对象。成功时返回MediaSource实例，失败时返回undefined。 |
 
 **错误码：**
 

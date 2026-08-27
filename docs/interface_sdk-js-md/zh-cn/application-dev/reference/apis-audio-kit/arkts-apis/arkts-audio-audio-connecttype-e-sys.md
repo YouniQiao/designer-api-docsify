@@ -1,6 +1,8 @@
 # ConnectType（系统接口）
 
-枚举，设备连接类型。@enum { number }
+枚举，设备连接类型。
+
+@enum { number }
 
 **起始版本：** 9
 

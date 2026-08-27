@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## convertGlobalToRelativeCoordinate
@@ -24,7 +24,7 @@ Converts global coordinates (based on the top-left corner of the primary screen)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | [Position](arkts-arkui-display-position-i.md) | Yes | Global coordinates to convert. |
+| position | Position | Yes | Global coordinates to convert. |
 | displayId | number | No | Display ID for the relative coordinates. If this parameter is passed, the coordinates are converted relative to this screen. If it is not provided, the coordinates are converted to the screen where the global coordinates are located, or the primary screen if they are not on any screen. |
 
 **Return value:**

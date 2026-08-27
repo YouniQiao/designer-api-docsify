@@ -9,7 +9,6 @@ Provides information about an input device.
 ## Modules to Import
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## axisRanges
@@ -76,7 +75,9 @@ Unique ID of the input device. If a physical device is repeatedly plugged and un
 isLocal?: boolean
 ```
 
-Whether the input device is a local device.The value **true** indicates that the device is a local device, and the value **false** indicates that the device is a non-local device.
+Whether the input device is a local device.
+
+The value **true** indicates that the device is a local device, and the value **false** indicates that the device is a non-local device.
 
 **Type:** boolean
 
@@ -90,7 +91,9 @@ Whether the input device is a local device.The value **true** indicates that the
 isVirtual?: boolean
 ```
 
-Whether the input device is a virtual device.The value **true** indicates that the device is a virtual device, and the value **false** indicates that the device is a non-virtual device.
+Whether the input device is a virtual device.
+
+The value **true** indicates that the device is a virtual device, and the value **false** indicates that the device is a non-virtual device.
 
 **Type:** boolean
 

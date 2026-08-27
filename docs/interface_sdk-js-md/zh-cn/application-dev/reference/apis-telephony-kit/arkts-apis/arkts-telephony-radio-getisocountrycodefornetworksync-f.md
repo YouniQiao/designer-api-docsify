@@ -33,6 +33,10 @@ function getISOCountryCodeForNetworkSync(slotId: number): string
 
 ```TypeScript
 let slotId: number = 0;
-let countryISO: string = radio.getISOCountryCodeForNetworkSync(slotId);
-console.info(`the country ISO is:` + countryISO);
+try {
+    let countryISO: string = radio.getISOCountryCodeForNetworkSync(slotId);
+    console.info(`the country ISO is:` + countryISO);
+} catch (err) {
+    console.error(`getISOCountryCodeForNetworkSync failed, err->${JSON.stringify(err)}`);
+}
 ```

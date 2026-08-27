@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleArchiveInfoSync
@@ -33,7 +33,7 @@ function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: number): Bun
 
 | 类型 | 说明 |
 | --- | --- |
-| [BundleInfo](arkts-ability-bundleinfo-i.md) | 返回BundleInfo对象。 |
+| BundleInfo | 返回BundleInfo对象。 |
 
 **错误码：**
 

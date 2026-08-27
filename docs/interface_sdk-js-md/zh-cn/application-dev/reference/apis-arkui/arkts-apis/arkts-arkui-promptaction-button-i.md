@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## color
@@ -34,7 +34,7 @@ color: string | Resource
 primary?: boolean
 ```
 
-在弹窗获焦且未进行tab键走焦时，按钮是否默认响应Enter键。多个Button时，只允许一个Button的该字段配置为true， 否则所有Button均不响应。多重弹窗可自动获焦连续响应。 值为true表示按钮默认响应Enter键，值为false时，按钮不默认响应Enter键。 默认值：false
+在弹窗获焦且未进行tab键走焦时，按钮是否默认响应Enter键。多个Button时，只允许一个Button的该字段配置为true，否则所有Button均不响应。多重弹窗可自动获焦连续响应。值为true表示按钮默认响应Enter键，值为false时，按钮不默认响应Enter键。默认值：false
 
 **类型：** boolean
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## castAudio
@@ -12,7 +12,9 @@ import avSession from '@kit.AVSessionKit';
 function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>, callback: AsyncCallback<void>): void
 ```
 
-投播会话到指定设备列表。结果通过callback异步回调方式返回。需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。
+投播会话到指定设备列表。结果通过callback异步回调方式返回。
+
+需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。
 
 **起始版本：** 9
 
@@ -27,7 +29,7 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) \| 'all' | 是 | 会话令牌。SessionToken表示单个token；字符串`'all'`指所有token。 |
-| audioDevices | Array & lt;audio.AudioDeviceDescriptor & gt; | 是 | 媒体设备列表。 |
+| audioDevices | Array&lt;audio.AudioDeviceDescriptor&gt; | 是 | 媒体设备列表。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当投播成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
@@ -67,7 +69,9 @@ audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data)
 function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.AudioDeviceDescriptor>): Promise<void>
 ```
 
-投播会话到指定设备列表。结果通过Promise异步回调方式返回。调用此接口之前，需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。
+投播会话到指定设备列表。结果通过Promise异步回调方式返回。
+
+调用此接口之前，需要导入`ohos.multimedia.audio`模块获取AudioDeviceDescriptor的相关描述。
 
 **起始版本：** 9
 
@@ -82,13 +86,13 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) \| 'all' | 是 | 会话令牌。SessionToken表示单个token；字符串`'all'`指所有token。 |
-| audioDevices | Array & lt;audio.AudioDeviceDescriptor & gt; | 是 | 媒体设备列表。 |
+| audioDevices | Array&lt;audio.AudioDeviceDescriptor&gt; | 是 | 媒体设备列表。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。当投播成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | Promise对象。当投播成功，无返回结果，否则返回错误对象。 |
 
 **错误码：**
 

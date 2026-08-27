@@ -13,7 +13,7 @@ Defines the shared photo asset
 ## 导入模块
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cameraShotKey
@@ -54,7 +54,7 @@ Path data of photo asset
 dateAdded: number
 ```
 
-Added date of photo asset 单位为： ms，取值应为≥0的整数。
+Added date of photo asset单位为： ms，取值应为≥0的整数。
 
 **类型：** number
 
@@ -102,7 +102,7 @@ The day of the file created
 dateModified: number
 ```
 
-Modify date of photo asset 单位为： ms，取值应为≥0的整数。
+Modify date of photo asset单位为： ms，取值应为≥0的整数。
 
 **类型：** number
 
@@ -150,7 +150,7 @@ The month of the file created
 dateTaken: number
 ```
 
-DateTaken of photo asset 单位为： ms，取值应为≥0的整数。
+DateTaken of photo asset单位为： ms，取值应为≥0的整数。
 
 **类型：** number
 
@@ -230,7 +230,7 @@ Display name of photo asset
 duration: number
 ```
 
-Duration of video photo asset 单位为： ms，取值应为≥0的整数。
+Duration of video photo asset单位为： ms，取值应为≥0的整数。
 
 **类型：** number
 
@@ -278,7 +278,7 @@ File id of photo asset
 height: number
 ```
 
-Height of photo asset 单位为： px，取值应为≥0的整数。
+Height of photo asset单位为： px，取值应为≥0的整数。
 
 **类型：** number
 
@@ -374,7 +374,7 @@ Effect mode of moving photo
 orientation: number
 ```
 
-Orientation of photo asset 单位为： deg，取值应为[0,359]内的整数。
+Orientation of photo asset单位为： deg，取值应为[0,359]内的整数。
 
 **类型：** number
 
@@ -422,7 +422,7 @@ Position of photo asset
 size: number
 ```
 
-Size of photo asset 单位为： Byte，取值应为≥0的整数。
+Size of photo asset单位为： Byte，取值应为≥0的整数。
 
 **类型：** number
 
@@ -566,7 +566,7 @@ User comment info of photo asset
 width: number
 ```
 
-Width of photo asset 单位为： px，取值应为≥0的整数。
+Width of photo asset单位为： px，取值应为≥0的整数。
 
 **类型：** number
 

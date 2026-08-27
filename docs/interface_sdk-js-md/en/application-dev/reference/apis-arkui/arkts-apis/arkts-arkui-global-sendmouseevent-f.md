@@ -23,7 +23,7 @@ Send mouse event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [MouseEvent](../arkts-components/arkts-arkui-mouseevent-i.md) | Yes | MouseEvent to be sent. |
+| event | MouseEvent | Yes | MouseEvent to be sent. |
 
 **Return value:**
 

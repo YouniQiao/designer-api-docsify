@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAppProvisionInfoSync
@@ -12,7 +12,9 @@ import bundleManager from '@kit.AbilityKit';
 function getAppProvisionInfoSync(bundleName: string, userId?: number): AppProvisionInfo
 ```
 
-Obtains the provision profile based on the given bundle name and user ID. This API returns the result synchronously.No permission is required for obtaining the caller's own information.
+Obtains the provision profile based on the given bundle name and user ID. This API returns the result synchronously.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
@@ -33,7 +35,7 @@ Obtains the provision profile based on the given bundle name and user ID. This A
 
 | Type | Description |
 | --- | --- |
-| [AppProvisionInfo](arkts-ability-bundlemanager-appprovisioninfo-t-sys.md) | Provision profile. |
+| AppProvisionInfo | Provision profile. |
 
 **Error codes:**
 

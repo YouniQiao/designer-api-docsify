@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getDeveloperIds
@@ -32,7 +32,7 @@ Obtains all the developer IDs of the current user based on the given application
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | An array of strings. |
+| Array&lt;string&gt; | An array of strings. |
 
 **Error codes:**
 

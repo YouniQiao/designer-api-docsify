@@ -9,7 +9,7 @@ Describes the settings for filtering media files by type and size.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## photoViewMimeType

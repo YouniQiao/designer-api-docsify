@@ -152,4 +152,4 @@ Buffer input for shader animation
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | Array & lt;number & gt; | Yes | The uniform buffer of shader input |
+| buffer | Array&lt;number&gt; | Yes | The uniform buffer of shader input |

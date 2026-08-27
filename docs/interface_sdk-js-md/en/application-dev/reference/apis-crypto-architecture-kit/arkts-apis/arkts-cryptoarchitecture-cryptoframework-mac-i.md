@@ -11,7 +11,7 @@ Message authentication code (MAC) interface, defining methods for calculating MA
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## doFinal
@@ -88,7 +88,7 @@ Finishes the MAC computation and obtains the MAC computation result. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;DataBlob & gt; | Promise used to return the MAC computation result. |
+| Promise&lt;DataBlob&gt; | Promise used to return the MAC computation result. |
 
 **Error codes:**
 
@@ -138,7 +138,7 @@ Finishes the MAC computation. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | MAC computation result. |
+| DataBlob | MAC computation result. |
 
 **Error codes:**
 
@@ -292,7 +292,7 @@ Initializes the MAC computation using a symmetric key. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -358,7 +358,7 @@ Updates the MAC status. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes | Data to pass in. |
+| input | DataBlob | Yes | Data to pass in. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -395,13 +395,13 @@ Updates the MAC status. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes | Data to pass in. |
+| input | DataBlob | Yes | Data to pass in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -437,7 +437,7 @@ Updates the MAC status. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes | Data to pass in. |
+| input | DataBlob | Yes | Data to pass in. |
 
 **Error codes:**
 

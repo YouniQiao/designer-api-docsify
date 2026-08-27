@@ -35,7 +35,9 @@ globalPosition: Position
 height: Length
 ```
 
-目标元素的高度。单位：vp
+目标元素的高度。
+
+单位：vp
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
@@ -71,7 +73,9 @@ position: Position
 width: Length
 ```
 
-目标元素的宽度。单位：vp
+目标元素的宽度。
+
+单位：vp
 
 **类型：** [Length](arkts-arkui-length-t.md)
 

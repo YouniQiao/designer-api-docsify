@@ -25,7 +25,7 @@ Notifies the system that global proxy re-authentication is required. Upon receiv
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;HttpProxy & gt; | the promise returned by the function. |
+| Promise&lt;HttpProxy&gt; | the promise returned by the function. |
 
 **Error codes:**
 

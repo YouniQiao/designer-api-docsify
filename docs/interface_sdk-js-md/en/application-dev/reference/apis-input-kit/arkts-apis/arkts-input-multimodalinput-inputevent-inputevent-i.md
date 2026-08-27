@@ -1,6 +1,8 @@
 # InputEvent
 
-The **inputEvent** module provides the basic events reported by the device.@interface InputEvent [since 9 - 11]
+The **inputEvent** module provides the basic events reported by the device.
+
+@interface InputEvent [since 9 - 11]
 
 **Since:** 9
 

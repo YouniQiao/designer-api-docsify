@@ -1,6 +1,8 @@
 # PolicyFile (System API)
 
-Provides policy file information.@interface PolicyFile
+Provides policy file information.
+
+@interface PolicyFile
 
 **Since:** 12
 
@@ -11,7 +13,7 @@ Provides policy file information.@interface PolicyFile
 ## Modules to Import
 
 ```TypeScript
-import securityGuard from '@kit.SecurityGuardKit';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## fd

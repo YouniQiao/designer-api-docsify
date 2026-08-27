@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## auth
@@ -40,9 +40,9 @@ auth(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | challenge | Uint8Array | 是 | 指示挑战值，挑战值为一个随机数，用于提升安全性。 |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | 是 | 指示认证类型。 |
-| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | 是 | 指示认证结果的信任级别。 |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 | 回调对象，返回认证结果。 |
+| authType | AuthType | 是 | 指示认证类型。 |
+| authTrustLevel | AuthTrustLevel | 是 | 指示认证结果的信任级别。 |
+| callback | IUserAuthCallback | 是 | 回调对象，返回认证结果。 |
 
 **返回值：**
 
@@ -126,10 +126,10 @@ auth(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | challenge | Uint8Array | 是 | 指示挑战值，挑战值为一个随机数，用于防止重放攻击，提升安全性。 |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | 是 | 指示认证类型。 |
-| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | 是 | 指示认证结果的信任级别。 |
+| authType | AuthType | 是 | 指示认证类型。 |
+| authTrustLevel | AuthTrustLevel | 是 | 指示认证结果的信任级别。 |
 | options | [AuthOptions](arkts-basicservices-osaccount-authoptions-i-sys.md) | 是 | 指示认证用户的可选参数集合。 |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 | 回调对象，返回认证结果。 |
+| callback | IUserAuthCallback | 是 | 回调对象，返回认证结果。 |
 
 **返回值：**
 
@@ -218,9 +218,9 @@ authUser(
 | --- | --- | --- | --- |
 | userId | number | 是 | 指示用户身份。 |
 | challenge | Uint8Array | 是 | 指示挑战值，挑战值为一个随机数，用于提升安全性。 |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | 是 | 指示认证类型。 |
-| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | 是 | 指示认证结果的信任级别。 |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 | 回调对象，返回认证结果。 |
+| authType | AuthType | 是 | 指示认证类型。 |
+| authTrustLevel | AuthTrustLevel | 是 | 指示认证结果的信任级别。 |
+| callback | IUserAuthCallback | 是 | 回调对象，返回认证结果。 |
 
 **返回值：**
 
@@ -387,8 +387,8 @@ getAvailableStatus(authType: AuthType, authTrustLevel: AuthTrustLevel): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| authType | [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md) | 是 | 认证类型。 |
-| authTrustLevel | [AuthTrustLevel](arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | 是 | 认证的可信等级。 |
+| authType | AuthType | 是 | 认证类型。 |
+| authTrustLevel | AuthTrustLevel | 是 | 认证的可信等级。 |
 
 **返回值：**
 
@@ -692,7 +692,7 @@ prepareRemoteAuth(remoteNetworkId: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -815,7 +815,7 @@ setProperty(request: SetPropertyRequest): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -67,7 +67,10 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 enableHapticFeedback?: boolean
 ```
 
-设置是否启用触控反馈。默认值：true  
+设置是否启用触控反馈。
+
+默认值：true
+
 - true：启用触控反馈，适用于需要增强用户交互体验的场景，如游戏、乐器类应用等。  
 - false：不启用触控反馈，适用于不需要触觉反馈或需要节省设备资源的场景。
 
@@ -123,7 +126,8 @@ end?: Date
 loop?: boolean
 ```
 
-设置是否启用循环模式。  
+设置是否启用循环模式。
+
 - true：启用循环模式，支持滚动到边界时继续循环选择。  
 - false：不启用循环模式，滚动到边界时停止。
 

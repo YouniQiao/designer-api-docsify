@@ -1,6 +1,8 @@
 # HeifsMetadata
 
-HeifsMetadata implements Metadata HEIF序列图像元数据类，用于存储图像的元数据。
+HeifsMetadata implements Metadata
+
+HEIF序列图像元数据类，用于存储图像的元数据。
 
 **继承/实现关系：** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md)
 
@@ -11,7 +13,7 @@ HeifsMetadata implements Metadata HEIF序列图像元数据类，用于存储图
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone
@@ -101,7 +103,9 @@ async function heifsMetadataCreateInstance(context: Context) {
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-获取图片中所有元数据的属性的值。使用Promise异步回调。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+获取图片中所有元数据的属性的值。使用Promise异步回调。
+
+要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
 **起始版本：** 23
 
@@ -113,7 +117,7 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Record & lt;string, string \ | null & gt; & gt; | Promise对象，返回元数据拥有的所有属性的值。 |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据拥有的所有属性的值。 |
 
 **示例**
 
@@ -247,7 +251,7 @@ getBlob(): Promise<ArrayBuffer>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象，返回元数据的二进制数据。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回元数据的二进制数据。 |
 
 **示例**
 
@@ -351,7 +355,9 @@ async function heifsMetadataGetBlob(context: Context) {
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-获取图像元数据的属性值。使用Promise异步回调。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+获取图像元数据的属性值。使用Promise异步回调。
+
+要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
 **起始版本：** 23
 
@@ -363,13 +369,13 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | Array & lt;string & gt; | 是 | 要获取的值的属性名称。 |
+| key | Array&lt;string&gt; | 是 | 要获取的值的属性名称。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Record & lt;string, string \ | null & gt; & gt; | Promise对象，返回元数据要获取的属性的值，如果获取失败则返回错误码。 |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise对象，返回元数据要获取的属性的值，如果获取失败则返回错误码。 |
 
 **错误码：**
 
@@ -510,7 +516,7 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -640,7 +646,9 @@ async function heifsMetadataSetBlob(context: Context) {
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-批量设置图片元数据中的指定属性的值。使用Promise异步回调。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+批量设置图片元数据中的指定属性的值。使用Promise异步回调。
+
+要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
 
 **起始版本：** 23
 
@@ -652,13 +660,13 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record & lt;string, string \ | null & gt; | 是 | 用户要修改HeifsMetadata对象的属性和值的键值对集合。 |
+| records | Record&lt;string, string \| null&gt; | 是 | 用户要修改HeifsMetadata对象的属性和值的键值对集合。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -796,7 +804,11 @@ async function heifsMetadataSetProperties(context: Context) {
 readonly heifsCanvasHeight?: number
 ```
 
-HEIF序列图片的画布高度。单位为像素（px）。该值为正整数。
+HEIF序列图片的画布高度。
+
+单位为像素（px）。
+
+该值为正整数。
 
 **类型：** number
 
@@ -812,7 +824,11 @@ HEIF序列图片的画布高度。单位为像素（px）。该值为正整数�
 readonly heifsCanvasWidth?: number
 ```
 
-HEIF序列图片的画布宽度。单位为像素（px）。该值为正整数。
+HEIF序列图片的画布宽度。
+
+单位为像素（px）。
+
+该值为正整数。
 
 **类型：** number
 
@@ -844,7 +860,11 @@ HEIF序列图片的每帧播放时长。单位为毫秒（ms）。
 readonly heifsUnclampedDelayTime?: number
 ```
 
-HEIF序列图片每帧未钳制的延迟时长。单位为毫秒（ms）。该值为正整数。
+HEIF序列图片每帧未钳制的延迟时长。
+
+单位为毫秒（ms）。
+
+该值为正整数。
 
 **类型：** number
 

@@ -1,6 +1,8 @@
 # GridRowModifier
 
-Defines GridRow Modifier@extends GridRowAttribute @implements AttributeModifier&lt;GridRowAttribute&gt;
+Defines GridRow Modifier
+
+@extends GridRowAttribute @implements AttributeModifier&lt;GridRowAttribute&gt;
 
 **Inheritance/Implementation:** GridRowModifier extends [GridRowAttribute](../arkts-components/arkts-arkui-gridrow-attribute.md#gridrowattribute) and implements AttributeModifier<GridRowAttribute>
 

@@ -18,5 +18,5 @@ Defines the callback used to return the data retrieval progress information and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progressInfo | [ProgressInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-progressinfo-i.md) | Yes | Progress information to report. |
+| progressInfo | ProgressInfo | Yes | Progress information to report. |
 | data | UnifiedData \| null | Yes | Data obtained when the progress reaches 100. If the progress does not reach 10 0, **null** is returned. |

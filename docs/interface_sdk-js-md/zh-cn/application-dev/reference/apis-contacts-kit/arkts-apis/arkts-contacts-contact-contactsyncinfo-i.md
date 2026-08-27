@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## completedBatches
@@ -18,7 +18,9 @@ import contact from '@kit.ContactsKit';
 completedBatches: Array<number>
 ```
 
-表示已成功同步的联系人的批处理标识符数组。值的范围是从1到totalBatches。
+表示已成功同步的联系人的批处理标识符数组。
+
+值的范围是从1到totalBatches。
 
 **类型：** Array&lt;number&gt;
 

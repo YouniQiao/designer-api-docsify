@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import taskpool from '@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## executeDelayed
@@ -31,14 +31,14 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | delayTime | number | 是 | 延时时间。单位：ms。delayTime值必须要大于等于0。 |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 | 需要延时执行的任务。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 延时执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| task | Task | 是 | 需要延时执行的任务。 |
+| priority | Priority | 否 | 延时执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Object & gt; | Promise对象，返回任务函数的执行结果。 |
+| Promise&lt;Object&gt; | Promise对象，返回任务函数的执行结果。 |
 
 **错误码：**
 
@@ -78,7 +78,7 @@ taskpool.executeDelayed(1000, task).then(() => { // 1000: delayTime is 1000ms
 function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: GenericsTask<A, R>, priority?: Priority): Promise<R>
 ```
 
-延时执行泛型任务，使用Promise异步回调。 executeDelayed任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。
+延时执行泛型任务，使用Promise异步回调。executeDelayed任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。
 
 **起始版本：** 13
 
@@ -92,13 +92,13 @@ function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: Gen
 | --- | --- | --- | --- |
 | delayTime | number | 是 | 延时时间。单位：ms。delayTime值必须要大于等于0。 |
 | task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 | 需要延时执行的泛型任务。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 延时执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | Priority | 否 | 延时执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;R & gt; | Promise对象，返回任务函数的执行结果。 |
+| Promise&lt;R&gt; | Promise对象，返回任务函数的执行结果。 |
 
 **错误码：**
 

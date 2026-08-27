@@ -9,10 +9,7 @@ Defines the ad display parameters.
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit.AdComponent';
-import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
-import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
-import advertising from '@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## [key: string]
@@ -21,9 +18,12 @@ import advertising from '@kit.AdsKit';
 [key: string]: number | boolean | string | undefined
 ```
 
-Custom parameter.  
+Custom parameter.
+
 - refreshTime: An optional custom parameter for the AutoAdComponent,  
-used to control the ad rotation interval. Type number, unit: ms, value range [30000, 120000]. If not set or the value is non-numeric or less than or equal to 0, no rotation occurs, and only the first ad content in the ad response is displayed. Values less than 30000 are set to 30000, and values greater than 120000 are set to 120000.<!--RP3--><!--RP3End-->
+used to control the ad rotation interval. Type number, unit: ms, value range [30000, 120000]. If not set or the value is non-numeric or less than or equal to 0, no rotation occurs, and only the first ad content in the ad response is displayed. Values less than 30000 are set to 30000, and values greater than 120000 are set to 120000.
+
+<!--RP3--><!--RP3End-->
 
 **Type:** number \| boolean \| string \| undefined
 
@@ -39,7 +39,8 @@ used to control the ad rotation interval. Type number, unit: ms, value range [30
 audioFocusType?: number
 ```
 
-Scenario type for obtaining audio focus during video playback.  
+Scenario type for obtaining audio focus during video playback.
+
 - 0: Obtain focus during both muted and non-muted video playback.  
 - 1: Do not obtain focus during muted video playback.  
 - 2: Do not obtain focus during either muted or non-muted video playback.  
@@ -76,9 +77,11 @@ Media custom data. Used for the server to notify the media server that a user sh
 mute?: boolean
 ```
 
-Whether to mute the ad video playback.  
+Whether to mute the ad video playback.
+
 - true: Mute playback.  
-- false: Non-mute playback.  
+- false: Non-mute playback.
+
 If not set, the business logic prevails.
 
 **Type:** boolean
@@ -95,7 +98,8 @@ If not set, the business logic prevails.
 useMobileDataReminder?: boolean
 ```
 
-Whether to display a pop-up notification to the user when using mobile data to play videos or download apps.  
+Whether to display a pop-up notification to the user when using mobile data to play videos or download apps.
+
 - true: Display pop-up notification.  
 - false: Do not display pop-up notification.  
 - This parameter depends on the traffic pop-up feature,  

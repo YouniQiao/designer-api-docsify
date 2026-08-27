@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import overlay from '@kit.AbilityKit';
+import { overlay } from '@kit.AbilityKit';
 ```
 
 ## getOverlayModuleInfoByBundleName
@@ -13,7 +13,9 @@ function getOverlayModuleInfoByBundleName(bundleName: string,
       callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result.No permission is required when the specified application is the caller itself.
+Obtains the information about all modules with the overlay feature in another application. This API uses an asynchronous callback to return the result.
+
+No permission is required when the specified application is the caller itself.
 
 **Since:** 10
 
@@ -71,7 +73,9 @@ try {
 function getOverlayModuleInfoByBundleName(bundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-Obtains the information about a module with the overlay feature in another application. This API uses an asynchronous callback to return the result.No permission is required when the specified application is the caller itself.
+Obtains the information about a module with the overlay feature in another application. This API uses an asynchronous callback to return the result.
+
+No permission is required when the specified application is the caller itself.
 
 **Since:** 10
 
@@ -133,7 +137,9 @@ try {
 function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>
 ```
 
-Obtains the information about a module with the overlay feature in another application. This API uses a promise to return the result.No permission is required when the specified application is the caller itself.
+Obtains the information about a module with the overlay feature in another application. This API uses a promise to return the result.
+
+No permission is required when the specified application is the caller itself.
 
 **Since:** 10
 
@@ -154,7 +160,7 @@ Obtains the information about a module with the overlay feature in another appli
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;OverlayModuleInfo & gt; & gt; | Promise used to return the result, which is an array of [OverlayModuleInfo]{ |
+| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Promise used to return the result, which is an array of [OverlayModuleInfo]{ |
 
 **Error codes:**
 

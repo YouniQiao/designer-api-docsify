@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## cleanBundleCacheFiles
@@ -12,7 +12,9 @@ import bundleManager from '@kit.AbilityKit';
 function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Clears the bundle cache based on the given bundle name. This API uses an asynchronous callback to return the result.No permission is required when the caller clears its own cache.
+Clears the bundle cache based on the given bundle name. This API uses an asynchronous callback to return the result.
+
+No permission is required when the caller clears its own cache.
 
 **Since:** 9
 
@@ -69,7 +71,9 @@ try {
 function cleanBundleCacheFiles(bundleName: string): Promise<void>
 ```
 
-Clears the bundle cache based on the given bundle name. This API uses a promise to return the result.No permission is required when the caller clears its own cache.
+Clears the bundle cache based on the given bundle name. This API uses a promise to return the result.
+
+No permission is required when the caller clears its own cache.
 
 **Since:** 9
 
@@ -89,7 +93,7 @@ Clears the bundle cache based on the given bundle name. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. If clearing the cache files fails, an error object is thrown. |
+| Promise&lt;void&gt; | Promise that returns no value. If clearing the cache files fails, an error object is thrown. |
 
 **Error codes:**
 
@@ -129,7 +133,9 @@ try {
 function cleanBundleCacheFiles(bundleName: string, appIndex: number): Promise<void>
 ```
 
-Clears the bundle cache based on the given bundle name and application index. This API uses a promise to return the result.No permission is required when the caller clears its own cache.
+Clears the bundle cache based on the given bundle name and application index. This API uses a promise to return the result.
+
+No permission is required when the caller clears its own cache.
 
 **Since:** 15
 
@@ -150,7 +156,7 @@ Clears the bundle cache based on the given bundle name and application index. Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. If clearing the cache files fails, an error object is thrown. |
+| Promise&lt;void&gt; | Promise that returns no value. If clearing the cache files fails, an error object is thrown. |
 
 **Error codes:**
 

@@ -11,8 +11,7 @@ Describes audio capturer data that contains processed audio data and microphone 
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## data

@@ -11,7 +11,7 @@ Message digest interface, defining methods for calculating message digests. Befo
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## digest
@@ -86,7 +86,7 @@ Generates a message digest. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;DataBlob & gt; | Promise used to return the message digest generated. |
+| Promise&lt;DataBlob&gt; | Promise used to return the message digest generated. |
 
 **Error codes:**
 
@@ -216,7 +216,7 @@ Generates a message digest. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Message digest generated. |
+| DataBlob | Message digest generated. |
 
 **Error codes:**
 
@@ -388,7 +388,7 @@ Updates the message digest status. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes | Data to pass in. |
+| input | DataBlob | Yes | Data to pass in. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -427,13 +427,13 @@ Updates the message digest status. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes | Data to pass in. |
+| input | DataBlob | Yes | Data to pass in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -469,7 +469,7 @@ Updates the message digest status. This API returns the result synchronously. **
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| input | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes | Data to pass in. |
+| input | DataBlob | Yes | Data to pass in. |
 
 **Error codes:**
 

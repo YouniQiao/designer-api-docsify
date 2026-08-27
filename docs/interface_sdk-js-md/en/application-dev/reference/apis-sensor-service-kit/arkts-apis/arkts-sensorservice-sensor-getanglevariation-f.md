@@ -22,8 +22,8 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| currentRotationMatrix | Array & lt;number & gt; | Yes | Current rotation matrix. |
-| preRotationMatrix | Array & lt;number & gt; | Yes | The other rotation matrix. |
+| currentRotationMatrix | Array&lt;number&gt; | Yes | Current rotation matrix. |
+| preRotationMatrix | Array&lt;number&gt; | Yes | The other rotation matrix. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the angle change around the z, x, and y axes, in degrees. |
 
 **Error codes:**
@@ -88,14 +88,14 @@ Obtains the angle change between two rotation matrices. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| currentRotationMatrix | Array & lt;number & gt; | Yes | Current rotation matrix. |
-| preRotationMatrix | Array & lt;number & gt; | Yes | The other rotation matrix. |
+| currentRotationMatrix | Array&lt;number&gt; | Yes | Current rotation matrix. |
+| preRotationMatrix | Array&lt;number&gt; | Yes | The other rotation matrix. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the angle change around the z, x, and y axes, in degrees. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the angle change around the z, x, and y axes, in degrees. |
 
 **Error codes:**
 

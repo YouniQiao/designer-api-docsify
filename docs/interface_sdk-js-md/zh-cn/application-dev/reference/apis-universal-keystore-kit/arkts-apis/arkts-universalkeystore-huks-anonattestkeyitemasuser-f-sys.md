@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import huks from '@kit.UniversalKeystoreKit';
-import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## anonAttestKeyItemAsUser
@@ -13,7 +12,9 @@ import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 function anonAttestKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksReturnResult>
 ```
 
-指定用户身份获取匿名化密钥证书，使用Promise方式异步返回结果。该操作需要联网进行，且耗时较长。
+指定用户身份获取匿名化密钥证书，使用Promise方式异步返回结果。
+
+该操作需要联网进行，且耗时较长。
 
 **起始版本：** 12
 

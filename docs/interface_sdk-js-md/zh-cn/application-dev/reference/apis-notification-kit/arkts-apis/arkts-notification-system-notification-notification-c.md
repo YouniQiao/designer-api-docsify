@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import Notification, { ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
+import { Notification, ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
 ```
 
 ## show

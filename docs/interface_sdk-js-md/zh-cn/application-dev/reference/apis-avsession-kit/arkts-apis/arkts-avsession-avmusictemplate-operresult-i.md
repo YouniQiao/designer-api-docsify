@@ -1,6 +1,8 @@
 # OperResult
 
-操作结果的定义。@interface OperResult
+操作结果的定义。
+
+@interface OperResult
 
 **起始版本：** 23
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## errorCode

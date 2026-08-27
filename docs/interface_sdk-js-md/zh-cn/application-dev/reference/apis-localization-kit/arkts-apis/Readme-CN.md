@@ -1,7 +1,7 @@
 # ArkTS API<!--arkts-localizationkit-->
 
 <!--Del-->
-- [@ohos.fontManager](arkts-fontmanager.md)<!--DelEnd-->
+- [@ohos.fontManager(字体管理)](arkts-fontmanager.md)<!--DelEnd-->
   <!--Del-->
   - [dataMigration(系统接口)](arkts-localization-fontmanager-datamigration-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -12,7 +12,7 @@
   - [DataMigrationCallback(系统接口)](arkts-localization-fontmanager-datamigrationcallback-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DataMigrationProgress(系统接口)](arkts-localization-fontmanager-datamigrationprogress-i-sys.md)<!--DelEnd-->
-- [@ohos.i18n](arkts-i18n.md)
+- [@ohos.i18n(国际化-I18n)](arkts-i18n.md)
   - [addPreferredLanguage](arkts-localization-i18n-addpreferredlanguage-f.md)
   - [getCalendar](arkts-localization-i18n-getcalendar-f.md)
   - [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md)
@@ -89,7 +89,7 @@
   - [TemperatureType](arkts-localization-i18n-temperaturetype-e.md)
   - [UnitUsage](arkts-localization-i18n-unitusage-e.md)
   - [WeekDay](arkts-localization-i18n-weekday-e.md)
-- [@ohos.intl](arkts-intl.md)
+- [@ohos.intl(国际化-Intl)](arkts-intl.md)
   - [Collator](arkts-localization-intl-collator-c.md)
   - [DateTimeFormat](arkts-localization-intl-datetimeformat-c.md)
   - [Locale](arkts-localization-intl-locale-c.md)
@@ -103,7 +103,7 @@
   - [PluralRulesOptions](arkts-localization-intl-pluralrulesoptions-i.md)
   - [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md)
   - [RelativeTimeFormatResolvedOptions](arkts-localization-intl-relativetimeformatresolvedoptions-i.md)
-- [@ohos.resourceManager](arkts-resourcemanager.md)
+- [@ohos.resourceManager(资源管理)](arkts-resourcemanager.md)
   - [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md)
   - [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md)
   - [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md)
@@ -117,7 +117,7 @@
   - [DeviceType](arkts-localization-resourcemanager-devicetype-e.md)
   - [Direction](arkts-localization-resourcemanager-direction-e.md)
   - [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)
-- [@ohos.sendableResourceManager](arkts-sendableresourcemanager.md)
+- [@ohos.sendableResourceManager(资源管理)](arkts-sendableresourcemanager.md)
   - [resourceToSendableResource](arkts-localization-sendableresourcemanager-resourcetosendableresource-f.md)
   - [sendableResourceToResource](arkts-localization-sendableresourcemanager-sendableresourcetoresource-f.md)
   - [Resource](arkts-localization-sendableresourcemanager-resource-t.md)

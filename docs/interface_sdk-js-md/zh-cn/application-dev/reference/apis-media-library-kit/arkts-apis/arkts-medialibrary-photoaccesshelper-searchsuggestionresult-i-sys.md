@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## count
@@ -20,7 +20,7 @@ import photoAccessHelper from '@kit.MediaLibraryKit';
 count: number
 ```
 
-搜索推荐词场景的照片数量 取值范围为全体整数。
+搜索推荐词场景的照片数量取值范围为全体整数。
 
 **类型：** number
 

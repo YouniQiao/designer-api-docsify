@@ -97,7 +97,7 @@ Applies the specified position constraints to the child component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | [Position](../arkts-apis/arkts-arkui-display-position-i.md) | Yes | Absolute position. |
+| position | Position | Yes | Absolute position. |
 
 ## measureResult
 

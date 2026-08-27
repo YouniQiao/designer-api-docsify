@@ -1,6 +1,10 @@
 # KVStoreResultSet
 
-提供获取数据库结果集的相关方法，包括查询和移动数据读取位置等。同时允许打开的结果集的最大数量为8个。KVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。在调用KVStoreResultSet的方法前，需要先通过 getKVStore 构建一个SingleKVStore或者DeviceKVStore实例。
+提供获取数据库结果集的相关方法，包括查询和移动数据读取位置等。同时允许打开的结果集的最大数量为8个。
+
+KVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。
+
+在调用KVStoreResultSet的方法前，需要先通过getKVStore构建一个SingleKVStore或者DeviceKVStore实例。
 
 > **说明：**
 > 
@@ -13,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedKVStore from '@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## getCount
@@ -76,7 +80,7 @@ getEntry(): Entry
 
 | 类型 | 说明 |
 | --- | --- |
-| [Entry](arkts-arkdata-distributeddata-entry-i.md) | 返回键值对。 |
+| Entry | 返回键值对。 |
 
 **示例**
 
@@ -105,7 +109,7 @@ try {
 getPosition(): number
 ```
 
-获取结果集中当前的读取位置。读取位置会因[moveToFirst](#movetofirst)、 [moveToLast](#movetolast)等操作而发生变化。
+获取结果集中当前的读取位置。读取位置会因[moveToFirst](#movetofirst)、[moveToLast](#movetolast)等操作而发生变化。
 
 **起始版本：** 9
 
@@ -117,7 +121,7 @@ getPosition(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回当前读取位置。取值范围 & gt;= -1，值为 -1 时表示还未开始读取，值为 0 时表示第一行。 |
+| number | 返回当前读取位置。取值范围&gt;= -1，值为 -1 时表示还未开始读取，值为 0 时表示第一行。 |
 
 **示例**
 

@@ -33,7 +33,7 @@ interval: number
 locationScenario: UserActivityScenario | PowerConsumptionScenario
 ```
 
-表示定位的场景信息。取值范围见[UserActivityScenario](arkts-location-geolocationmanager-useractivityscenario-e.md)和 [PowerConsumptionScenario](arkts-location-geolocationmanager-powerconsumptionscenario-e.md)的定义。
+表示定位的场景信息。取值范围见[UserActivityScenario](arkts-location-geolocationmanager-useractivityscenario-e.md)和[PowerConsumptionScenario](arkts-location-geolocationmanager-powerconsumptionscenario-e.md)的定义。
 
 **类型：** [UserActivityScenario](arkts-location-geolocationmanager-useractivityscenario-e.md) \| [PowerConsumptionScenario](arkts-location-geolocationmanager-powerconsumptionscenario-e.md)
 
@@ -49,7 +49,9 @@ locationScenario: UserActivityScenario | PowerConsumptionScenario
 needPoi?: boolean
 ```
 
-表示是否需要获取当前位置附近的POI信息。false代表不需要获取当前位置附近的POI信息，true代表需要获取当前位置附近的POI信息。不设置时，默认值为false。该参数仅在精确位置功能场景（即同时授权了ohos.permission.APPROXIMATELY_LOCATION和ohos.permission.LOCATION 权限）下有效，模糊位置功能生效场景（即仅授权了 ohos.permission.APPROXIMATELY_LOCATION 权限）下不返回POI信息。
+表示是否需要获取当前位置附近的POI信息。false代表不需要获取当前位置附近的POI信息，true代表需要获取当前位置附近的POI信息。不设置时，默认值为false。
+
+该参数仅在精确位置功能场景（即同时授权了ohos.permission.APPROXIMATELY_LOCATION和ohos.permission.LOCATION 权限）下有效，模糊位置功能生效场景（即仅授权了ohos.permission.APPROXIMATELY_LOCATION 权限）下不返回POI信息。
 
 **类型：** boolean
 
@@ -65,7 +67,7 @@ needPoi?: boolean
 sportsType?: SportsType
 ```
 
-表示运动模式。取值范围见[SportsType](arkts-location-geolocationmanager-sportstype-e.md)定义。此参数仅在locationScenario设置为 UserActivityScenario.SPORT时有效。默认值为0，表示该参数不生效。
+表示运动模式。取值范围见[SportsType](arkts-location-geolocationmanager-sportstype-e.md)定义。此参数仅在locationScenario设置为UserActivityScenario.SPORT时有效。默认值为0，表示该参数不生效。
 
 **类型：** [SportsType](arkts-location-geolocationmanager-sportstype-e.md)
 

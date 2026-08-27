@@ -25,7 +25,9 @@
 columns?: number | "auto"
 ```
 
-当前布局总列数，number类型需为正整数。设置为number时使用固定列数布局；设置为'auto'时，系统根据设备宽度类型自动确定列数（XS为2列，SM为4列，MD为8列，LG为12列）。传入0或负数时视为未设置，系统自动确定列 数。默认值：'auto'
+当前布局总列数，number类型需为正整数。设置为number时使用固定列数布局；设置为'auto'时，系统根据设备宽度类型自动确定列数（XS为2列，SM为4列，MD为8列，LG为12列）。传入0或负数时视为未设置，系统自动确定列数。
+
+默认值：'auto'
 
 **类型：** number \| "auto"
 
@@ -79,7 +81,9 @@ margin?: number | string
 sizeType?: SizeType
 ```
 
-设置设备宽度类型，用于响应式布局。默认值：SizeType.Auto
+设置设备宽度类型，用于响应式布局。
+
+默认值：SizeType.Auto
 
 **类型：** [SizeType](arkts-arkui-sizetype-e.md)
 

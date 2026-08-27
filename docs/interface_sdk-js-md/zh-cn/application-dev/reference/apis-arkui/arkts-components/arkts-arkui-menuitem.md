@@ -1,7 +1,9 @@
 # MenuItem
 
 用来展示菜单中具体的菜单选项。
+
 > **说明：**
+
 > - 该组件从API版本26.0.0开始支持WithTheme。
 
 ## 子组件
@@ -32,3 +34,4 @@ MenuItem(value?: MenuItemOptions | CustomBuilder)
 
 | 名称 | 说明 |
 | --- | --- |
+| [MenuItemOptions](arkts-arkui-menuitemoptions-i.md) | Menu中的菜单项信息。 |

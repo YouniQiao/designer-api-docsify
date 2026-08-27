@@ -14,7 +14,7 @@ Defines a **TLSSocketConnection** object, that is, the connection between the TL
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## close
@@ -164,7 +164,7 @@ Closes a **TLSSocketServer** connection. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -477,7 +477,7 @@ Obtains the cipher suite negotiated by both communication parties after a **TLSS
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the result. If the operation fails, an error message is returned. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -560,7 +560,7 @@ Obtains the local socket address of a **TLSSocketConnection** connection. This A
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NetAddress & gt; | Promise used to return the result. |
+| Promise&lt;NetAddress&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -875,7 +875,7 @@ Obtains the remote address of a TLS socket server connection. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NetAddress & gt; | Promise used to return the result. If the operation fails, an error message is returned. |
+| Promise&lt;NetAddress&gt; | Promise used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
@@ -1246,7 +1246,7 @@ Obtains the signing algorithm negotiated by both communication parties after a *
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1336,7 +1336,7 @@ Obtains the file descriptor of a TLSSocketConnection connection. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the socket file descriptor. |
+| Promise&lt;number&gt; | Promise used to return the socket file descriptor. |
 
 **Error codes:**
 
@@ -2152,7 +2152,7 @@ Sends a message to the server after a **TLSSocketServer** connection is establis
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Promise used to return the result. If the operation is successful, no value is returned. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

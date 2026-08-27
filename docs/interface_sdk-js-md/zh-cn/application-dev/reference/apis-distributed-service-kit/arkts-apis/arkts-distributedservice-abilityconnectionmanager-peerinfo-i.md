@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## abilityName
@@ -50,7 +50,7 @@ bundleName: string
 deviceId: string
 ```
 
-对端设备的网络ID，用于标识要连接的远程设备。 可通过分布式设备管理接口getAvailableDeviceListSync获取。
+对端设备的网络ID，用于标识要连接的远程设备。可通过分布式设备管理接口getAvailableDeviceListSync获取。
 
 **类型：** string
 
@@ -82,7 +82,7 @@ moduleName: string
 serviceName?: string
 ```
 
-应用设置的服务名称。若设置此值，需与createAbilityConnectionSession接口的serviceName参数保持一致。 不设置此值时，使用默认服务名称。
+应用设置的服务名称。若设置此值，需与createAbilityConnectionSession接口的serviceName参数保持一致。不设置此值时，使用默认服务名称。
 
 **类型：** string
 

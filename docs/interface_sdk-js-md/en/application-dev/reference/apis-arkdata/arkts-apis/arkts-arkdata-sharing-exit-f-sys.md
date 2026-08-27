@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cloudData from '@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## exit
@@ -74,7 +74,7 @@ Exits the share of the specified shared resource. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Result & lt;void & gt; & gt; | Promise used to return the result. |
+| Promise&lt;Result&lt;void&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

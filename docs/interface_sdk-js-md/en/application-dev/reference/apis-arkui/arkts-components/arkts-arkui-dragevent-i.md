@@ -214,7 +214,7 @@ Obtains the pressed status of modifier keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array & lt;string & gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl' \| 'Alt' \| 'Shift'.   **NOTE：**This API is not supported in stylus scenarios. |
+| keys | Array&lt;string&gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl' \| 'Alt' \| 'Shift'.   **NOTE：**This API is not supported in stylus scenarios. |
 
 **Return value:**
 
@@ -599,7 +599,9 @@ Set the uniqueId or uniqueId array of components that need to be automatically h
 dragBehavior: DragBehavior
 ```
 
-Copy or paste mode.Default value: **DragBehavior.COPY**
+Copy or paste mode.
+
+Default value: **DragBehavior.COPY**
 
 **Type:** [DragBehavior](arkts-arkui-dragbehavior-e.md)
 
@@ -619,7 +621,15 @@ Copy or paste mode.Default value: **DragBehavior.COPY**
 useCustomDropAnimation: boolean
 ```
 
-Whether to disable the default drop animation when the dragging ends.If this parameter is set to **true**, the default drop animation is disabled, and the custom one is used.If this parameter is not set or is set to **false**, the default drop animation takes effect. When [setResult](#setresult) is set to **DRAG_SUCCESSFUL**, a shrink-out animation takes effect. Otherwise, an expand-out animation takes effect.When the default drop animation is not disabled, avoid implementing custom animations to prevent conflicts.Default value: **false**
+Whether to disable the default drop animation when the dragging ends.
+
+If this parameter is set to **true**, the default drop animation is disabled, and the custom one is used.
+
+If this parameter is not set or is set to **false**, the default drop animation takes effect. When [setResult](#setresult) is set to **DRAG_SUCCESSFUL**, a shrink-out animation takes effect. Otherwise, an expand-out animation takes effect.
+
+When the default drop animation is not disabled, avoid implementing custom animations to prevent conflicts.
+
+Default value: **false**
 
 **Type:** boolean
 

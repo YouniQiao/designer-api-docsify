@@ -19,8 +19,15 @@
 showInSubWindow?: boolean
 ```
 
-是否在子窗口显示菜单。true：在子窗口显示菜单；false：不在子窗显示菜单。默认值：2in1设备上为true，其他设备为false。  
-**说明：**仅对2in1设备生效。
+是否在子窗口显示菜单。
+
+true：在子窗口显示菜单；false：不在子窗显示菜单。
+
+默认值：2in1设备上为true，其他设备为false。
+
+**说明：**
+
+仅对2in1设备生效。
 
 **类型：** boolean
 
@@ -40,8 +47,11 @@ showInSubWindow?: boolean
 title?: ResourceStr
 ```
 
-菜单标题。  
-**说明：**仅在content设置为Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; 时生效。
+菜单标题。
+
+**说明：**
+
+仅在content设置为Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; 时生效。
 
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

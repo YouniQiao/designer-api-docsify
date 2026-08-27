@@ -23,7 +23,7 @@ function getCameraManager(context: Context): CameraManager
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文。 |
+| context | Context | 是 | 应用上下文。 |
 
 **返回值：**
 

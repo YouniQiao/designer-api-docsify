@@ -9,7 +9,7 @@ The **UserStatus** module, designed for user state awareness, empowers the syste
 ## Modules to Import
 
 ```TypeScript
-import userStatus from '@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary
@@ -19,7 +19,7 @@ import userStatus from '@kit.MultimodalAwarenessKit';
 | Name | Description |
 | --- | --- |
 | [off](arkts-multimodalawareness-userstatus-off-f.md#offuseragegroupdetected) | Disables the age group detection function. |
-| [on](arkts-multimodalawareness-userstatus-on-f.md#onuseragegroupdetected) | Enables the age group detection function.When the function is enabled, the application can recommend content based on the age group detection result. |
+| [on](arkts-multimodalawareness-userstatus-on-f.md#onuseragegroupdetected) | Enables the age group detection function. |
 
 <!--Del-->
 ### Functions(System API)

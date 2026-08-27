@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## openToast
@@ -38,13 +38,13 @@ Shows a toast. This API uses a promise to return the toast ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Yes | Toast configuration options. |
+| options | ShowToastOptions | Yes | Toast configuration options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise that returns the toast ID for use with **closeToast**. |
+| Promise&lt;number&gt; | Promise that returns the toast ID for use with **closeToast**. |
 
 **Error codes:**
 

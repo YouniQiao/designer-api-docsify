@@ -39,7 +39,9 @@ editable(value: boolean | EditMode)
 onSelect(event: (isSelected: boolean) => void)
 ```
 
-ListItem元素被鼠标框选的状态改变时触发回调。外层List组件设置multiSelectable为true开启鼠标框选，且当前ListItem的 [selectable](#selectable)属性为true时，触发该回调。
+ListItem元素被鼠标框选的状态改变时触发回调。
+
+外层List组件设置multiSelectable为true开启鼠标框选，且当前ListItem的[selectable](#selectable)属性为true时，触发该回调。
 
 **起始版本：** 8
 
@@ -53,7 +55,7 @@ ListItem元素被鼠标框选的状态改变时触发回调。外层List组件�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (isSelected: boolean) = & gt; void | 是 |  |
+| event | (isSelected: boolean) =&gt; void | 是 |  |
 
 ## selectable
 
@@ -61,7 +63,7 @@ ListItem元素被鼠标框选的状态改变时触发回调。外层List组件�
 selectable(value: boolean)
 ```
 
-设置当前ListItem元素是否可以被鼠标框选。外层List组件设置multiSelectable为true开启鼠标框选 时，ListItem的框选才生效。
+设置当前ListItem元素是否可以被鼠标框选。外层List组件设置multiSelectable为true开启鼠标框选时，ListItem的框选才生效。
 
 **起始版本：** 8
 
@@ -83,7 +85,7 @@ selectable(value: boolean)
 selected(value: boolean)
 ```
 
-设置当前ListItem选中状态。该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。该属性需要在设置 多态样式前使用才能生效选中态样式。
+设置当前ListItem选中状态。该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。该属性需要在设置多态样式前使用才能生效选中态样式。
 
 **起始版本：** 10
 
@@ -99,7 +101,7 @@ selected(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 当前ListItem选中状态。设置为true时为选中状态，设置为false时为默认状态。默认值：false   **说明：** 需要在设置多态样式前使用才能生效选 中态样式。 |
+| value | boolean | 是 | 当前ListItem选中状态。设置为true时为选中状态，设置为false时为默认状态。默认值：false   **说明：** 需要在设置多态样式前使用才能生效选中态样式。 |
 
 ## sticky
 

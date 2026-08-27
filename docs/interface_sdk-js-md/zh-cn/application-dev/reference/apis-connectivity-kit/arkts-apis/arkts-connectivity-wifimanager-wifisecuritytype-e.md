@@ -1,6 +1,6 @@
 # WifiSecurityType
 
-描述WLAN加密类型。 @enum { number }
+描述WLAN加密类型。@enum { number }
 
 **起始版本：** 12
 

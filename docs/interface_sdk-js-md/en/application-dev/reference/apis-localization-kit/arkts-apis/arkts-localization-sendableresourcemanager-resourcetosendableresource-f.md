@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import sendableResourceManager from '@kit.LocalizationKit';
+import { sendableResourceManager } from '@kit.LocalizationKit';
 ```
 
 ## resourceToSendableResource
@@ -24,13 +24,13 @@ Converts a `Resource` object to a `SendableResource` object that can be used for
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource** object. |
+| resource | Resource | Yes | Resource** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | SendableResource** object after conversion. |
+| SendableResource | SendableResource** object after conversion. |
 
 **Error codes:**
 

@@ -26,13 +26,13 @@ function controlCamera(callId: number, cameraId: string): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callId | number | 是 | 呼叫Id。可以通过订阅callDetailsChange事件获得。 |
-| cameraId | string | 是 | 相机ID。cameraId获取方式可参考相机管理 [getSupportedCameras](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#getsupportedcameras)接口。 |
+| cameraId | string | 是 | 相机ID。cameraId获取方式可参考相机管理[getSupportedCameras](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#getsupportedcameras)接口。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式异步返回设置开启，关闭，切换相机结果。 |
+| Promise&lt;void&gt; | 以Promise形式异步返回设置开启，关闭，切换相机结果。 |
 
 **错误码：**
 

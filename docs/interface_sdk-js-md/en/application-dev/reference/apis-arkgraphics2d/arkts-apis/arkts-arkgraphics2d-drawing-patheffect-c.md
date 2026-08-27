@@ -18,7 +18,7 @@ Implements a path effect.
 ## Modules to Import
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createComposePathEffect
@@ -122,7 +122,7 @@ Creates a **PathEffect** object that converts a path into a dotted line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| intervals | Array & lt;number & gt; | Yes | Array of the lengths of the ON (solid line) and OFF (blank) parts of the dashed path. The number of elements in the array must be an even number and greater than or equal to 2. The value of this parameter is a positive integer. |
+| intervals | Array&lt;number&gt; | Yes | Array of the lengths of the ON (solid line) and OFF (blank) parts of the dashed path. The number of elements in the array must be an even number and greater than or equal to 2. The value of this parameter is a positive integer. |
 | phase | number | Yes | Offset used during drawing. The value is a floating point number. |
 
 **Return value:**
@@ -208,7 +208,7 @@ Creates a dashed path effect based on the shape described by a path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path that defines the shape to be used for filling each dash in the pattern. |
+| path | Path | Yes | Path that defines the shape to be used for filling each dash in the pattern. |
 | advance | number | Yes | Distance between two consecutive dashes. The value is a floating point number greater than 0. Otherwise, an error code is thrown. |
 | phase | number | Yes | Starting offset of the dash pattern. The value is a floating point number. The actual offset used is the absolute value of this value modulo the value of **advance**. |
 | style | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | Yes | Style of the dashed path effect. |

@@ -9,7 +9,7 @@ Describes data carried by the emitted event.
 ## Modules to Import
 
 ```TypeScript
-import emitter from '@kit.BasicServicesKit';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## data

@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getP2pLocalDevice
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function getP2pLocalDevice(): Promise<WifiP2pDevice>
 ```
 
-获取本设备的信息。 如果未获取ohos.permission.GET_WIFI_LOCAL_MAC权限，返回的WifiP2pDevice中的DeviceAddress将设置为"00:00:00:00:00:00"。
+获取本设备的信息。如果未获取ohos.permission.GET_WIFI_LOCAL_MAC权限，返回的WifiP2pDevice中的DeviceAddress将设置为"00:00:00:00:00:00"。
 
 **起始版本：** 11
 
@@ -25,7 +24,7 @@ function getP2pLocalDevice(): Promise<WifiP2pDevice>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;WifiP2pDevice & gt; | 返回本设备的信息。 |
+| Promise&lt;WifiP2pDevice&gt; | 返回本设备的信息。 |
 
 **错误码：**
 
@@ -60,7 +59,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getP2pLocalDevice(callback: AsyncCallback<WifiP2pDevice>): void
 ```
 
-获取本设备的信息。 如果未获取ohos.permission.GET_WIFI_LOCAL_MAC权限，返回的WifiP2pDevice中的DeviceAddress将设置为"00:00:00:00:00:00"。
+获取本设备的信息。如果未获取ohos.permission.GET_WIFI_LOCAL_MAC权限，返回的WifiP2pDevice中的DeviceAddress将设置为"00:00:00:00:00:00"。
 
 **起始版本：** 11
 

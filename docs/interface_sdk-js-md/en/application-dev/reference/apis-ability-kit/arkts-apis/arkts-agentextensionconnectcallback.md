@@ -7,5 +7,5 @@
 
 | Name | Description |
 | --- | --- |
-| [AgentExtensionConnectCallback](arkts-ability-agentextensionconnectcallback-i-sys.md) | Agent extension connect callback.@interface AgentExtensionConnectCallback |
+| [AgentExtensionConnectCallback](arkts-ability-agentextensionconnectcallback-i-sys.md) | Agent extension connect callback. |
 <!--DelEnd-->

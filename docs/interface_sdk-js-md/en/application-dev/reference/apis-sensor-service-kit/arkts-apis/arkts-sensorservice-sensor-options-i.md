@@ -33,7 +33,9 @@ Frequency at which a sensor reports data. The default value is 200,000,000 ns. T
 sensorInfoParam?: SensorInfoParam
 ```
 
-Sensor parameters, including **deviceId** and **sensorIndex**.This API can be used in atomic services since API version 19.
+Sensor parameters, including **deviceId** and **sensorIndex**.
+
+This API can be used in atomic services since API version 19.
 
 **Type:** [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md)
 

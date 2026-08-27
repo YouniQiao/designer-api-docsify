@@ -9,7 +9,7 @@ animator简易动画参数对象。与AnimatorOptions相比，部分动画参数
 ## 导入模块
 
 ```TypeScript
-import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -129,7 +129,7 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | [PlayMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-playmode-e.md) | 是 | 设置animator动画播放方向。默认值：PlayMode.Normal |
+| direction | PlayMode | 是 | 设置animator动画播放方向。默认值：PlayMode.Normal |
 
 **返回值：**
 

@@ -1,6 +1,8 @@
 # FloatViewController
 
-Defines a float view controller instance, which is used to start and stop the float view and register callbacks.Before calling the following APIs, you must use [floatView.create()](arkts-arkui-floatview-create-f.md) to create a float view controller instance (that is, **floatViewController**).
+Defines a float view controller instance, which is used to start and stop the float view and register callbacks.
+
+Before calling the following APIs, you must use [floatView.create()](arkts-arkui-floatview-create-f.md) to create a float view controller instance (that is, **floatViewController**).
 
 **Since:** 26.0.0
 
@@ -9,7 +11,7 @@ Defines a float view controller instance, which is used to start and stop the fl
 ## Modules to Import
 
 ```TypeScript
-import floatView from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## getWindowProperties
@@ -318,13 +320,13 @@ Restores the main window of the float view to display in the foreground. If this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParameters | Record & lt;string, Object & gt; | No | Custom parameters passed to the main window when the main window of the float view is restored. The main window will receive the parameters when the onNewWant callback is triggered. The default value is empty, indicating that no custom parameters are passed to the main window. |
+| wantParameters | Record&lt;string, Object&gt; | No | Custom parameters passed to the main window when the main window of the float view is restored. The main window will receive the parameters when the onNewWant callback is triggered. The default value is empty, indicating that no custom parameters are passed to the main window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -364,7 +366,9 @@ try {
 setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 ```
 
-Sets whether the float view is visible when the application is running in the foreground. This API uses a promise to return the result.After the float view is created and before this API is called, the float view is visible by default when the application is running in the foreground.
+Sets whether the float view is visible when the application is running in the foreground. This API uses a promise to return the result.
+
+After the float view is created and before this API is called, the float view is visible by default when the application is running in the foreground.
 
 **Since:** 26.0.0
 
@@ -382,7 +386,7 @@ Sets whether the float view is visible when the application is running in the fo
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -428,13 +432,13 @@ Loads the content of a page, with its path specified in the current project, for
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page content which needs to be loaded to the window. The path needs to be configured in the **main_pages.json** file of the project. The path cannot be a relative path and must be the same as the value of **src** in the **main_pages.json** file. |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | Page-level UI state storage unit, which is used to transfer the state attribute for the page. By default, the value is empty. |
+| storage | LocalStorage | No | Page-level UI state storage unit, which is used to transfer the state attribute for the page. By default, the value is empty. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -481,13 +485,13 @@ Sets the UI content of a [named route](../../../ui/arkts-routing.md#named-route)
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the named route page. |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | The data object shared within the content instance loaded by the window. |
+| storage | LocalStorage | No | The data object shared within the content instance loaded by the window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -568,7 +572,7 @@ Sets the size of the float view. You are advised to call the [getFloatViewLimits
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -621,7 +625,7 @@ Starts the float view. The return value of this API does not indicate that the s
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -671,7 +675,7 @@ Stops the float view. The return value of this API does not indicate that the st
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -724,7 +728,7 @@ Switches the template of the flow view and changes the window size. You are advi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

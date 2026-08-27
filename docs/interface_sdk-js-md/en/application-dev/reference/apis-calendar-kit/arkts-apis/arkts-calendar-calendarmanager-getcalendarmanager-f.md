@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import calendarManager from '@kit.CalendarKit';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## getCalendarManager

@@ -9,9 +9,6 @@ Defines the callback information triggered when an apple-touch-icon URL is recei
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## precomposed
@@ -20,7 +17,8 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 precomposed: boolean
 ```
 
-Whether the apple-touch-icon is precomposed.  
+Whether the apple-touch-icon is precomposed.
+
 **true** indicates that the apple-touch-icon is precomposed, and **false** indicates the opposite.
 
 **Type:** boolean

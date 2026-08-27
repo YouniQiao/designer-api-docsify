@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## createMicInAudioCapturer
@@ -35,7 +34,7 @@ Obtains a special [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) instance
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null & gt; | Promise used to return the audio capturer instance, or null if any error occurs. |
+| Promise&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null&gt; | Promise used to return the audio capturer instance, or null if any error occurs. |
 
 **Error codes:**
 

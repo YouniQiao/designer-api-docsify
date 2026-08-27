@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import commonEventManager from '@kit.BasicServicesKitManager';
 ```
 
 ## 汇总

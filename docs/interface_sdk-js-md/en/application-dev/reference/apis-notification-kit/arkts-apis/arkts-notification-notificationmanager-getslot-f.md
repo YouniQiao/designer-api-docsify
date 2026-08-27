@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getSlot
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void
 ```
 
-Obtains a notification slot of a specified type. This API uses an asynchronous callback to return the result.This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
+Obtains a notification slot of a specified type. This API uses an asynchronous callback to return the result.
+
+This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
 
 **Since:** 9
 
@@ -30,7 +32,7 @@ removeAllSlots removes all notification slots
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type, such as social communication, service reminder, and content consultation. |
+| slotType | SlotType | Yes | Notification slot type, such as social communication, service reminder, and content consultation. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationSlot&gt; | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -66,7 +68,9 @@ notificationManager.getSlot(slotType, getSlotCallback);
 function getSlot(slotType: SlotType): Promise<NotificationSlot>
 ```
 
-Obtains a notification slot of a specified type. This API uses a promise to return the result.This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
+Obtains a notification slot of a specified type. This API uses a promise to return the result.
+
+This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
 
 **Since:** 9
 
@@ -84,13 +88,13 @@ removeAllSlots removes all
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type, such as social communication, service reminder, and content consultation. |
+| slotType | SlotType | Yes | Notification slot type, such as social communication, service reminder, and content consultation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NotificationSlot & gt; | Promise used to return the result. |
+| Promise&lt;NotificationSlot&gt; | Promise used to return the result. |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@ Defines an application that creates the contact.
 ## Modules to Import
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## bundleName

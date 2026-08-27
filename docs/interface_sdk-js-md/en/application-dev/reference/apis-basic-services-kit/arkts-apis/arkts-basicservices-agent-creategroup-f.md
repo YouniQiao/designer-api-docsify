@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## createGroup
@@ -29,7 +28,7 @@ Creates a group based on [GroupConfig](arkts-basicservices-agent-groupconfig-i.m
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the ID of the created group. |
+| Promise&lt;string&gt; | Promise used to return the ID of the created group. |
 
 **Error codes:**
 

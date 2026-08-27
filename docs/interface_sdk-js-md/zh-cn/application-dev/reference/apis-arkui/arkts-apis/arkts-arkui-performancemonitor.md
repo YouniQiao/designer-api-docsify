@@ -19,7 +19,7 @@
 ## 导入模块
 
 ```TypeScript
-import performanceMonitor from '@kit.ArkUI';
+import { performanceMonitor } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -29,9 +29,9 @@ import performanceMonitor from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [begin(性能监测)](arkts-arkui-performancemonitor-begin-f-sys.md) | 用于标记用户场景开始，用户场景开始时调用此接口。 |
-| [end(性能监测)](arkts-arkui-performancemonitor-end-f-sys.md) | 用于标记用户场景结束，用户场景结束时调用此接口。 |
-| [recordInputEventTime(性能监测)](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md) | 记录动效场景开始前，用户输入触发事件类型与时间。 |
+| [begin](arkts-arkui-performancemonitor-begin-f-sys.md) | 用于标记用户场景开始，用户场景开始时调用此接口。 |
+| [end](arkts-arkui-performancemonitor-end-f-sys.md) | 用于标记用户场景结束，用户场景结束时调用此接口。 |
+| [recordInputEventTime](arkts-arkui-performancemonitor-recordinputeventtime-f-sys.md) | 记录动效场景开始前，用户输入触发事件类型与时间。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -39,6 +39,6 @@ import performanceMonitor from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ActionType(性能监测)](arkts-arkui-performancemonitor-actiontype-e-sys.md) | 用户场景（通常为具有动效的场景）触发模式枚举。 |
-| [SourceType(性能监测)](arkts-arkui-performancemonitor-sourcetype-e-sys.md) | 用户场景触发源类型枚举。 |
+| [ActionType](arkts-arkui-performancemonitor-actiontype-e-sys.md) | 用户场景（通常为具有动效的场景）触发模式枚举。 |
+| [SourceType](arkts-arkui-performancemonitor-sourcetype-e-sys.md) | 用户场景触发源类型枚举。 |
 <!--DelEnd-->

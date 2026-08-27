@@ -1,6 +1,8 @@
 # LocalizedPadding
 
-Defines the localized padding property.@interface LocalizedPadding
+Defines the localized padding property.
+
+@interface LocalizedPadding
 
 **起始版本：** 12
 

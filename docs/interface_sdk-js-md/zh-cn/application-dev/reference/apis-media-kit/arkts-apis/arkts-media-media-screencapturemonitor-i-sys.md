@@ -11,7 +11,7 @@ A class that provides APIs to query and monitor the system screen recorder statu
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## off('systemScreenRecorder')

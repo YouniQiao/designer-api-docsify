@@ -60,8 +60,8 @@
 | [FunctionConstructor](arkts-lib-es5-functionconstructor-i.md) |  |
 | [IArguments](arkts-lib-es5-iarguments-i.md) |  |
 | [ImportAssertions](arkts-lib-es5-importassertions-i.md) | The type for the `assert` property of the optional second argument to `import()`. |
-| [ImportCallOptions](arkts-lib-es5-importcalloptions-i.md) | The type for the optional second argument to `import()`.If your host environment supports additional options, this type may be augmented via interface merging. |
-| [ImportMeta](arkts-lib-es5-importmeta-i.md) | The type of `import.meta`.If you need to declare that a given property exists on `import.meta`, this type may be augmented via interface merging. |
+| [ImportCallOptions](arkts-lib-es5-importcalloptions-i.md) | The type for the optional second argument to `import()`. |
+| [ImportMeta](arkts-lib-es5-importmeta-i.md) | The type of `import.meta`. |
 | [Int16Array](arkts-lib-es5-int16array-i.md) | A typed array of 16-bit signed integer values. The contents are initialized to 0. If the requested number of bytes could not be allocated an exception is raised. |
 | [Int16ArrayConstructor](arkts-lib-es5-int16arrayconstructor-i.md) |  |
 | [Int32Array](arkts-lib-es5-int32array-i.md) | A typed array of 32-bit signed integer values. The contents are initialized to 0. If the requested number of bytes could not be allocated an exception is raised. |

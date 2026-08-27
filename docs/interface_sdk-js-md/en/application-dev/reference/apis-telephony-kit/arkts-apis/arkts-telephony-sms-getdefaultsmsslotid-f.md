@@ -51,7 +51,7 @@ Obtains the default slot ID of the SIM card used to send SMS messages. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. |
+| Promise&lt;number&gt; | Promise used to return the result. |
 
 **Examples**
 

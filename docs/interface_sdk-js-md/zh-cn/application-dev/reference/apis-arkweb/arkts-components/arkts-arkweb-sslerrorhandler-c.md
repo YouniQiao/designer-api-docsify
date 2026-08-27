@@ -1,6 +1,6 @@
 # SslErrorHandler
 
-SslErrorHandler是Web组件中处理SSL证书验证错误的类。当加载安全页面时遇到SSL证书错误（如证书过期、主机名不匹配、不受信任的CA），应用可通过onSslErrorEvent回调获取SslErrorHandler实 例，并决定是否继续加载或取消导航。示例代码参考[onSslErrorEvent](arkts-arkweb-web-attribute.md#onsslerrorevent)事件。
+SslErrorHandler是Web组件中处理SSL证书验证错误的类。当加载安全页面时遇到SSL证书错误（如证书过期、主机名不匹配、不受信任的CA），应用可通过onSslErrorEvent回调获取SslErrorHandler实例，并决定是否继续加载或取消导航。示例代码参考[onSslErrorEvent](arkts-arkweb-web-attribute.md#onsslerrorevent)事件。
 
 **起始版本：** 9
 
@@ -9,9 +9,6 @@ SslErrorHandler是Web组件中处理SSL证书验证错误的类。当加载安�
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -58,7 +55,7 @@ handleCancel(abortLoading: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| abortLoading | boolean | 是 | 是否在取消请求后停止加载页面。 true表示停止加载页面，false表示继续加载页面。 |
+| abortLoading | boolean | 是 | 是否在取消请求后停止加载页面。true表示停止加载页面，false表示继续加载页面。 |
 
 ## handleConfirm
 

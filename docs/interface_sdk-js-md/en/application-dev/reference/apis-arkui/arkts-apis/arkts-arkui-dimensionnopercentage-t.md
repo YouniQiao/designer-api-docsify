@@ -16,8 +16,8 @@ The percentage length union type is not supported.
 
 | Type | Description |
 | --- | --- |
-| [PX](arkts-arkui-px-t.md) | Length in px. |
-| [VP](arkts-arkui-vp-t.md) | Length in vp. |
-| [FP](arkts-arkui-fp-t.md) | Length in fp. |
-| [LPX](arkts-arkui-lpx-t.md) | Length in lpx. |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Resource reference type, which is used to set the value of a component attribute. |
+| PX | Length in px. |
+| VP | Length in vp. |
+| FP | Length in fp. |
+| LPX | Length in lpx. |
+| Resource | Resource reference type, which is used to set the value of a component attribute. |

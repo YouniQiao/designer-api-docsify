@@ -9,7 +9,7 @@ Preferences实例配置选项。
 ## 导入模块
 
 ```TypeScript
-import preferences from '@kit.ArkData';
+import { preferences } from '@kit.ArkData';
 ```
 
 ## dataGroupId
@@ -18,8 +18,12 @@ import preferences from '@kit.ArkData';
 dataGroupId?: string | null | undefined
 ```
 
-应用组ID，<!--RP1-->暂不支持指定dataGroupId在对应共享沙箱路径下创建Preferences实例。<!--RP1End-->为可选参数。指定在此dataGroupId对应的沙箱路径下创建Preferences实例。当此参数不填时，默认在本应用沙箱目录下创建Preferences实例。  
-**模型约束：** 此属性仅在Stage模型下可用。  
+应用组ID，<!--RP1-->暂不支持指定dataGroupId在对应共享沙箱路径下创建Preferences实例。<!--RP1End-->
+
+为可选参数。指定在此dataGroupId对应的沙箱路径下创建Preferences实例。当此参数不填时，默认在本应用沙箱目录下创建Preferences实例。
+
+**模型约束：** 此属性仅在Stage模型下可用。
+
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **类型：** string \| null \| undefined
@@ -38,7 +42,8 @@ dataGroupId?: string | null | undefined
 name: string
 ```
 
-Preferences实例的名称。名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。  
+Preferences实例的名称。名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。
+
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
 **类型：** string
@@ -55,7 +60,8 @@ Preferences实例的名称。名称长度需大于零且小于等于255字节，
 storageType?: StorageType | null | undefined
 ```
 
-存储模式，为可选参数。表示当前Preferences实例需要使用的存储模式。当此参数不填时，默认使用XML存储模式。当选择某种存储模式创建Preferences后，不支持中途切换存储模式。  
+存储模式，为可选参数。表示当前Preferences实例需要使用的存储模式。当此参数不填时，默认使用XML存储模式。当选择某种存储模式创建Preferences后，不支持中途切换存储模式。
+
 **原子化服务API：** 从API version 18开始，该参数支持在原子化服务中使用。
 
 **类型：** [StorageType](arkts-arkdata-preferences-storagetype-e.md) \| null \| undefined

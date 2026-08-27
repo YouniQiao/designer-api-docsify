@@ -63,9 +63,11 @@ Dark color brightness threshold. The value must be an integer in the range of [0
 region?: Edges<LengthMetrics>
 ```
 
-Sample area offset relative to the component, calculated from the component's upper left corner as the reference point.The component's own area is used by default.
+Sample area offset relative to the component, calculated from the component's upper left corner as the reference point.
 
-**Type:** Edges&lt;LengthMetrics&gt;
+The component's own area is used by default.
+
+**Type:** [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt;
 
 **Since:** 23
 

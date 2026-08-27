@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screenLockFileManager from '@kit.AbilityKit';
+import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
 ## releaseAccess
@@ -12,7 +12,9 @@ import screenLockFileManager from '@kit.AbilityKit';
 function releaseAccess(dataType: DataType): ReleaseStatus
 ```
 
-Releases the permission to access a specified type of sensitive data under the lock screen synchronously. After the release is successful, the reference count of the sensitive data key decreases. When the reference count reaches zero, the key can be destroyed after the screen has been locked for the system-configured duration threshold.Before calling this API, ensure that the app has enabled the sensitive data protection under lock screen feature and that the permission has been successfully requested by calling the [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md) API first.
+Releases the permission to access a specified type of sensitive data under the lock screen synchronously. After the release is successful, the reference count of the sensitive data key decreases. When the reference count reaches zero, the key can be destroyed after the screen has been locked for the system-configured duration threshold.
+
+Before calling this API, ensure that the app has enabled the sensitive data protection under lock screen feature and that the permission has been successfully requested by calling the [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md) API first.
 
 **Since:** 12
 
@@ -26,7 +28,7 @@ Releases the permission to access a specified type of sensitive data under the l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataType | [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | Yes | Type of sensitive data that is accessible on the lock screen. The dataType must be consistent with the dataType used in the acquireAccess API. |
+| dataType | DataType | Yes | Type of sensitive data that is accessible on the lock screen. The dataType must be consistent with the dataType used in the acquireAccess API. |
 
 **Return value:**
 

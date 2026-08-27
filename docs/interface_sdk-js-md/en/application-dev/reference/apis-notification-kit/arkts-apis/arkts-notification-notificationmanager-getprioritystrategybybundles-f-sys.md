@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getPriorityStrategyByBundles
@@ -28,13 +28,13 @@ Obtains the application priority notification strategies in batches. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | Array & lt;BundleOption & gt; | Yes | Array of application bundles. |
+| bundles | Array&lt;BundleOption&gt; | Yes | Array of application bundles. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Map & lt;BundleOption, number & gt; & gt; | Promise used to return the key-value pair set of the application notification priority strategies. |
+| Promise&lt;Map&lt;BundleOption, number&gt;&gt; | Promise used to return the key-value pair set of the application notification priority strategies. |
 
 **Error codes:**
 

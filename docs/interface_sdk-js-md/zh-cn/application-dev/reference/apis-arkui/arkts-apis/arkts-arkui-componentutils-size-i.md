@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import componentUtils from '@kit.ArkUI';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## height
@@ -18,7 +18,9 @@ import componentUtils from '@kit.ArkUI';
 height: number
 ```
 
-组件高度。单位: px
+组件高度。
+
+单位: px
 
 **类型：** number
 
@@ -36,7 +38,9 @@ height: number
 width: number
 ```
 
-组件宽度。单位: px
+组件宽度。
+
+单位: px
 
 **类型：** number
 

@@ -18,7 +18,7 @@ Describes a region, which is used to describe the region where the shape can be 
 ## Modules to Import
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -93,7 +93,7 @@ Copies a **Region** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes | Region to be copied. |
+| region | Region | Yes | Region to be copied. |
 
 **Examples**
 
@@ -184,7 +184,7 @@ Obtains a new path that is the boundary of the existing region.
 
 | Type | Description |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | Path of the boundary of the existing region. |
+| Path | Path of the boundary of the existing region. |
 
 **Examples**
 
@@ -358,7 +358,7 @@ Checks whether another region is equal to this region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes | Region** object. |
+| other | Region | Yes | Region** object. |
 
 **Return value:**
 
@@ -530,7 +530,7 @@ Checks whether another region is contained in this region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes | Region** object. |
+| other | Region | Yes | Region** object. |
 
 **Return value:**
 
@@ -646,7 +646,7 @@ Performs an operation on this region and another region, and stores the resultin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes | Region** object. |
+| region | Region | Yes | Region** object. |
 | regionOp | [RegionOp](arkts-arkgraphics2d-drawing-regionop-e.md) | Yes | Operation mode of the region. |
 
 **Return value:**
@@ -832,7 +832,7 @@ Checks whether the existing region does not intersect with another region. Actua
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes | Region** object. |
+| region | Region | Yes | Region** object. |
 
 **Return value:**
 
@@ -917,8 +917,8 @@ Sets a region that matches the outline of a path within the cropping area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object. |
-| clip | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes | Region** object. |
+| path | Path | Yes | Path** object. |
+| clip | Region | Yes | Region** object. |
 
 **Return value:**
 
@@ -1040,7 +1040,7 @@ Sets the existing region to another region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes | Region to be set. |
+| region | Region | Yes | Region to be set. |
 
 **Examples**
 

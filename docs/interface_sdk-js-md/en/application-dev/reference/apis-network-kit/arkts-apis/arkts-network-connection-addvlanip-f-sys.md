@@ -34,13 +34,13 @@ Adds a specified IP address and subnet mask for the VLAN specified by **vlanId**
 | --- | --- | --- | --- |
 | ifName | string | Yes | NIC name. |
 | vlanId | number | Yes | VLAN ID. The value range is [0, 4094]. |
-| address | [LinkAddress](arkts-network-vpnextension-linkaddress-t.md) | Yes | Network link information. |
+| address | LinkAddress | Yes | Network link information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

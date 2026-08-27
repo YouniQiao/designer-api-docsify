@@ -31,7 +31,7 @@ Verifies the authorization package from the controlled device. This function ver
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean[] & gt; | Promise used to return \\${boolean[]}. |
+| Promise&lt;boolean[]&gt; | Promise used to return \\${boolean[]}. |
 
 **Error codes:**
 

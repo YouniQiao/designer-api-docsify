@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import featureAbility from '@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## hasWindowFocus
@@ -60,7 +60,7 @@ function hasWindowFocus(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。如果此Ability当前具有视窗焦点，则返回true；否则返回false。 |
+| Promise&lt;boolean&gt; | Promise对象。如果此Ability当前具有视窗焦点，则返回true；否则返回false。 |
 
 **示例**
 

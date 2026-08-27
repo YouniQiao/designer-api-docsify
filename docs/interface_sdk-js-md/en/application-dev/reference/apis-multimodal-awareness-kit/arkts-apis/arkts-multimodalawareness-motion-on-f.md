@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import motion from '@kit.MultimodalAwarenessKit';
+import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## on('operatingHandChanged')
@@ -12,7 +12,9 @@ import motion from '@kit.MultimodalAwarenessKit';
 function on(type: 'operatingHandChanged', callback: Callback<OperatingHandStatus>): void
 ```
 
-Subscribes to operating hand change events.If the device does not support this function, error code 801 is returned.
+Subscribes to operating hand change events.
+
+If the device does not support this function, error code 801 is returned.
 
 **Since:** 15
 

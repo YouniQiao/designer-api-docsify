@@ -9,7 +9,7 @@ ImageSource的初始化选项。
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## svgResourceLimitLevel
@@ -18,7 +18,7 @@ import image from '@kit.ImageKit';
 svgResourceLimitLevel?: SVGResourceLimitLevel
 ```
 
-SVG图像解析和绘制时使用的资源限制。 该限制于SVG元数据解析前生效，因此也应用于图像信息获取。该限制对非SVG图像无效。 默认值：默认值为[NONE](arkts-image-image-svgresourcelimitlevel-e-sys.md#none)，它使用 系统定义的默认资源限制，不会禁用SVG资源保护。
+SVG图像解析和绘制时使用的资源限制。该限制于SVG元数据解析前生效，因此也应用于图像信息获取。该限制对非SVG图像无效。默认值：默认值为[NONE](arkts-image-image-svgresourcelimitlevel-e-sys.md#none)，它使用系统定义的默认资源限制，不会禁用SVG资源保护。
 
 **类型：** [SVGResourceLimitLevel](arkts-image-image-svgresourcelimitlevel-e-sys.md)
 

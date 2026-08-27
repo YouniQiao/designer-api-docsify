@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import uiAppearance from '@kit.ArkUI';
+import { uiAppearance } from '@kit.ArkUI';
 ```
 
 ## setFontScale
@@ -12,7 +12,8 @@ import uiAppearance from '@kit.ArkUI';
 function setFontScale(fontScale: number): Promise<void>
 ```
 
-Sets the system font scale.  
+Sets the system font scale.
+
 **Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
 **Since:** 12
@@ -33,7 +34,7 @@ Sets the system font scale.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function |
+| Promise&lt;void&gt; | the promise returned by the function |
 
 **Error codes:**
 

@@ -11,7 +11,7 @@ Provides utilities for ECC key parameter generation and point conversion based o
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## convertPoint
@@ -47,7 +47,7 @@ Converts the specified point data into a **Point** object based on the curve nam
 
 | Type | Description |
 | --- | --- |
-| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Point** object obtained. |
+| Point | Point** object obtained. |
 
 **Error codes:**
 
@@ -140,7 +140,7 @@ Obtains the point data in the specified format from a **Point** object. Currentl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | curveName | string | Yes | Elliptic curve name, that is, the NID. |
-| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes | Point** object of the elliptic curve. |
+| point | Point | Yes | Point** object of the elliptic curve. |
 | format | string | Yes | Format of the point data to obtain. Currently, the value can be **COMPRESSED** or **UNCOMPRESSED** only. |
 
 **Return value:**

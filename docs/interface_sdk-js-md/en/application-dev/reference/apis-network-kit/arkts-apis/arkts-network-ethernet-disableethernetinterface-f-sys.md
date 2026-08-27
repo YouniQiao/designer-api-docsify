@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import ethernet from '@kit.NetworkKit';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## disableEthernetInterface
@@ -28,7 +28,7 @@ Disable the ethernet interface.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned when the ethernet interface is disabled. |
+| Promise&lt;void&gt; | The promise returned when the ethernet interface is disabled. |
 
 **Error codes:**
 

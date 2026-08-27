@@ -12,7 +12,9 @@
 [key:string]: Object
 ```
 
-自定义参数。<!--RP1--><!--RP1End-->
+自定义参数。
+
+<!--RP1--><!--RP1End-->
 
 **类型：** Object
 
@@ -28,13 +30,15 @@
 adType: number
 ```
 
-广告类型。  
+广告类型。
+
 - 1：开屏广告。  
 - 3：原生广告。  
 - 7：激励广告。  
 - 8：横幅广告。  
 - 12：插屏广告。  
-- 60：贴片广告。  
+- 60：贴片广告。
+
 不填默认为原生广告类型。
 
 **类型：** number
@@ -51,7 +55,8 @@ adType: number
 clicked: boolean
 ```
 
-广告是否被点击。  
+广告是否被点击。
+
 - true：被点击。  
 - false：未被点击。
 
@@ -69,7 +74,8 @@ clicked: boolean
 rewarded: boolean
 ```
 
-广告是否获得奖励。  
+广告是否获得奖励。
+
 - true：获得奖励。  
 - false：没有获得奖励。
 
@@ -87,7 +93,15 @@ rewarded: boolean
 rewardVerifyConfig: Map<string, string>
 ```
 
-服务器验证参数。{customData: "test",userId: "12345"}
+服务器验证参数。
+
+{
+
+customData: "test",
+
+userId: "12345"
+
+}
 
 **类型：** Map&lt;string, string&gt;
 
@@ -103,7 +117,8 @@ rewardVerifyConfig: Map<string, string>
 shown: boolean
 ```
 
-广告是否展示。  
+广告是否展示。
+
 - true：展示。  
 - false：未展示。
 

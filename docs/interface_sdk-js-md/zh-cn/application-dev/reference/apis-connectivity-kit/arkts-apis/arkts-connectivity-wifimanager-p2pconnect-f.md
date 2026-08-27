@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## p2pConnect
@@ -25,7 +24,7 @@ function p2pConnect(config: WifiP2PConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [WifiP2PConfig](arkts-connectivity-wifi-wifip2pconfig-i.md) | 是 | 表示连接到指定群组的配置。 |
+| config | WifiP2PConfig | 是 | 表示连接到指定群组的配置。 |
 
 **错误码：**
 

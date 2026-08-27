@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import intelligentScene from '@kit.BasicServicesKit';
+import { intelligentScene } from '@kit.BasicServicesKit';
 ```
 
 ## isDoNotDisturbEnabled
@@ -26,7 +26,7 @@ Checks whether Do Not Disturb is enabled on this device. The Do Not Disturb stat
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Returns whether Do Not Disturb is enabled. |
+| Promise&lt;boolean&gt; | Returns whether Do Not Disturb is enabled. |
 
 **Error codes:**
 

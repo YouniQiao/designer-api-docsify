@@ -95,8 +95,11 @@ Information about the exit page.
 isInteractive?: boolean
 ```
 
-Whether the transition animation is interactive.  
-**true**: yes; **false**: no Default value: **false**
+Whether the transition animation is interactive.
+
+**true**: yes; **false**: no
+
+Default value: **false**
 
 **Type:** boolean
 

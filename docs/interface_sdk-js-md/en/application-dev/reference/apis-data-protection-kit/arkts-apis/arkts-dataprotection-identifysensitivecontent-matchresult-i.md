@@ -9,7 +9,7 @@ Displays the identification result of sensitive content.
 ## Modules to Import
 
 ```TypeScript
-import identifySensitiveContent from '@kit.DataProtectionKit';
+import { identifySensitiveContent } from '@kit.DataProtectionKit';
 ```
 
 ## matchContent

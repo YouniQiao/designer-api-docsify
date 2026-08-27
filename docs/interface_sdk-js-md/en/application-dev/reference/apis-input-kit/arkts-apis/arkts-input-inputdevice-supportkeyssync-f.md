@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## supportKeysSync
@@ -29,7 +28,7 @@ Checks whether the input device supports the specified keys.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;boolean & gt; | Result indicating whether the input device supports the keycode value. The value **true** indicates yes, and the value **false** indicates no. |
+| Array&lt;boolean&gt; | Result indicating whether the input device supports the keycode value. The value **true** indicates yes, and the value **false** indicates no. |
 
 **Error codes:**
 

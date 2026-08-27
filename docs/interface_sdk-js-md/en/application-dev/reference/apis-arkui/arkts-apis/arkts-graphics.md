@@ -65,7 +65,7 @@ The **Graphics** module provides APIs for defining attributes of a custom node.
 | --- | --- |
 | [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | Sets the uniform radius of the four corners. |
 | [CornerRadius](arkts-arkui-cornerradius-t.md) | Sets the semi-axis lengths for the x-axis and y-axis of the rounded corners. |
-| [Matrix4](arkts-arkui-matrix4-t.md) | Sets a 4x4 matrix.The **Matrix4** type is used to set transformation information for components. The following is an example:  ``` const transform: Matrix4 = [ 1, 0, 45, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ] ```. |
+| [Matrix4](arkts-arkui-matrix4-t.md) | Sets a 4x4 matrix. |
 | [Offset](arkts-arkui-offset-t.md) | Sets the offset of the component or effect. |
 | [Pivot](arkts-arkui-pivot-t.md) | Sets the pivot of the component. As the rotation or scaling center of the component, the pivot affects the rotation and scaling effects. |
 | [Position](arkts-arkui-position-t.md) | Sets or returns the position of the component. |

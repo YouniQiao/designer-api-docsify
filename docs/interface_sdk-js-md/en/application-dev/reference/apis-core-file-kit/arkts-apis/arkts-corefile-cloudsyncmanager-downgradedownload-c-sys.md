@@ -1,6 +1,8 @@
 # DowngradeDownload (System API)
 
-Full download: provides the capability of downloading cloud data for applications.It supports the full download of cloud application files.
+Full download: provides the capability of downloading cloud data for applications.
+
+It supports the full download of cloud application files.
 
 **Since:** 20
 
@@ -11,7 +13,7 @@ Full download: provides the capability of downloading cloud data for application
 ## Modules to Import
 
 ```TypeScript
-import cloudSyncManager from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -111,7 +113,9 @@ downgradeMgr.getCloudFileInfo().then((fileInfo: cloudSyncManager.CloudFileInfo) 
 startDownload(callback: Callback<DownloadProgress>): Promise<void>
 ```
 
-Starts the full download for the specified application's cloud files. This API uses a promise to return the result. This API uses an asynchronous callback to return the result.Repeated triggering of a full download task will throw an error (22400006).
+Starts the full download for the specified application's cloud files. This API uses a promise to return the result. This API uses an asynchronous callback to return the result.
+
+Repeated triggering of a full download task will throw an error (22400006).
 
 **Since:** 20
 
@@ -131,7 +135,7 @@ Starts the full download for the specified application's cloud files. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -224,7 +228,7 @@ Stops the full download task triggered by [startDownload](#startdownload). This 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

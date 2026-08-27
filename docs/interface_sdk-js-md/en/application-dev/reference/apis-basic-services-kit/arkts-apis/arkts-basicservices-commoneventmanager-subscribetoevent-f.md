@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import commonEventManager from '@kit.BasicServicesKit';
+import { commonEventManager } from '@kit.BasicServicesKit';
 ```
 
 ## subscribeToEvent
@@ -24,14 +24,14 @@ Subscribes to a common event. This API uses a promise to return the result, indi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscriber | [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | Yes | Subscriber object. |
+| subscriber | CommonEventSubscriber | Yes | Subscriber object. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;CommonEventData&gt; | Yes | Callback to be invoked when a common event is subscribed to. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

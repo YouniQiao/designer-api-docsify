@@ -9,7 +9,7 @@ Gainmap图单个通道的数据内容，参考ISO 21496-1。
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## alternateOffset

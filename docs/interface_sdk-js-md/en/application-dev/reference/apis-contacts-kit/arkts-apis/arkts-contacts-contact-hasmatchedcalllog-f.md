@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## hasMatchedCallLog
@@ -28,7 +28,7 @@ Checks whether there are call records that meet the specified conditions. By def
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Indicates the context of the application or capability. |
+| context | Context | Yes | Indicates the context of the application or capability. |
 | phoneNumber | string | Yes | Phone number of the contacts. |
 | minDuration | number | Yes | Minimum call duration, in seconds. The value must be greater than 0. |
 
@@ -36,7 +36,7 @@ Checks whether there are call records that meet the specified conditions. By def
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result of whether there are call records that meet the specified conditions. The value **true** indicates that there are such records, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result of whether there are call records that meet the specified conditions. The value **true** indicates that there are such records, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -88,7 +88,7 @@ Checks whether there are call records that meet the specified conditions. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Indicates the context of the application or capability. |
+| context | Context | Yes | Indicates the context of the application or capability. |
 | phoneNumber | string | Yes | Phone number of the contacts. |
 | minDuration | number | Yes | Minimum call duration, in seconds. The value must be greater than 0. |
 | withinTime | number | Yes | Period of time that the start time and end time of calls should be within, in seconds. This period starts from the current time. A maximum of six hours can be set. If the query duration exceeds six hours, the query duration is six hours by default. |
@@ -97,7 +97,7 @@ Checks whether there are call records that meet the specified conditions. This A
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result of whether there are call records that meet the specified conditions. The value **true** indicates that there are such records, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result of whether there are call records that meet the specified conditions. The value **true** indicates that there are such records, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

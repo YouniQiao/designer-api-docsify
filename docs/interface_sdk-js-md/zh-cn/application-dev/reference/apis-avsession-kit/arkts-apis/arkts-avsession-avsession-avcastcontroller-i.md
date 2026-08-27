@@ -1,6 +1,6 @@
 # AVCastController
 
-在投播建立后，调用[avSession.AVSession.getAVCastController](arkts-avsession-avsession-avsession-i.md#getavcastcontroller)后， 返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件， 获取会话元数据，播放状态信息等操作。
+在投播建立后，调用[avSession.AVSession.getAVCastController](arkts-avsession-avsession-avsession-i.md#getavcastcontroller)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
 
 > **说明：**
 > 
@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## getAVPlaybackState
@@ -194,7 +194,7 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| decoderType | [DecoderType](arkts-avsession-avsession-decodertype-e.md) | 是 | 设备所支持的解码格式。 设备所支持的解码格式包括： 'OH_AVCODEC_MIMETYPE_VIDEO_AVC'：VIDEO AVC， 'OH_AVCODEC_MIMETYPE_VIDEO_HEVC'：VIDEO HEVC， 'OH_AVCODEC_MIMETYPE_AUDIO_VIVID'：AUDIO AV3A。 |
+| decoderType | [DecoderType](arkts-avsession-avsession-decodertype-e.md) | 是 | 设备所支持的解码格式。设备所支持的解码格式包括：'OH_AVCODEC_MIMETYPE_VIDEO_AVC'：VIDEO AVC，'OH_AVCODEC_MIMETYPE_VIDEO_HEVC'：VIDEO HEVC，'OH_AVCODEC_MIMETYPE_AUDIO_VIVID'：AUDIO AV3A。 |
 
 **返回值：**
 
@@ -276,7 +276,7 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;hdrCapability.HDRFormat & gt; & gt; | Promise对象。返回远端设备所支持的HDR能力。 |
+| Promise&lt;Array&lt;hdrCapability.HDRFormat&gt;&gt; | Promise对象。返回远端设备所支持的HDR能力。 |
 
 **错误码：**
 
@@ -317,7 +317,7 @@ getSupportedPlaySpeeds(): Promise<Array<number>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise对象。返回远端设备所支持的倍速播放列表。 |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise对象。返回远端设备所支持的倍速播放列表。 |
 
 **错误码：**
 
@@ -433,7 +433,7 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | 是 |  |
-| callback | (state: AVPlaybackState) = & gt; void | 否 | 回调函数，参数state是变化后的播放状态。 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | (state: AVPlaybackState) =&gt; void | 否 | 回调函数，参数state是变化后的播放状态。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -540,7 +540,7 @@ off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'requestPlay' | 是 | 取消对应的监听事件，支持事件`'requestPlay'`。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 否 | 回调函数，参数AVQueueItem是当前正在播放的媒体内容。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可 选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 否 | 回调函数，参数AVQueueItem是当前正在播放的媒体内容。当监听事件取消成功，err为undefined，否则返回错误对象。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -619,7 +619,7 @@ off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandTy
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'validCommandChange' | 是 | 取消对应的监听事件，支持事件`'validCommandChange'`。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 否 | 回调函数。参数commands是有效命令的集合。 该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 否 | 回调函数。参数commands是有效命令的集合。该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
@@ -916,7 +916,9 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void): void
 ```
 
-设置播放状态变化的监听事件。使用callback异步回调。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放状态变化的监听事件。使用callback异步回调。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -929,8 +931,8 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playbackStateChange' | 是 |  |
-| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | 是 | 'all'表示关注播放状态所有字段变化；Array & lt;keyof AVPlaybackState & gt;表示关注 Array中的字段变化。 |
-| callback | (state: AVPlaybackState) = & gt; void | 是 | 回调函数，参数state是变化后的播放状态。 |
+| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | 是 | 'all'表示关注播放状态所有字段变化；Array&lt;keyof AVPlaybackState&gt;表示关注Array中的字段变化。 |
+| callback | (state: AVPlaybackState) =&gt; void | 是 | 回调函数，参数state是变化后的播放状态。 |
 
 **错误码：**
 
@@ -945,7 +947,9 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 ```
 
-设置投播当前播放媒体内容的监听事件。使用callback异步回调。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置投播当前播放媒体内容的监听事件。使用callback异步回调。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -973,7 +977,9 @@ on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 on(type: 'playNext', callback: Callback<void>): void
 ```
 
-设置播放下一首资源的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放下一首资源的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -1001,7 +1007,9 @@ on(type: 'playNext', callback: Callback<void>): void
 on(type: 'playPrevious', callback: Callback<void>): void
 ```
 
-设置播放上一首资源的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放上一首资源的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -1029,7 +1037,9 @@ on(type: 'playPrevious', callback: Callback<void>): void
 on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 ```
 
-设置请求播放的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置请求播放的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
 
@@ -1055,7 +1065,9 @@ on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 on(type: 'endOfStream', callback: Callback<void>): void
 ```
 
-设置播放结束的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放结束的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
 
@@ -1081,7 +1093,9 @@ on(type: 'endOfStream', callback: Callback<void>): void
 on(type: 'seekDone', callback: Callback<number>): void
 ```
 
-设置seek结束的监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置seek结束的监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -1109,7 +1123,9 @@ on(type: 'seekDone', callback: Callback<number>): void
 on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)
 ```
 
-会话支持的有效命令变化监听事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+会话支持的有效命令变化监听事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
 
@@ -1136,7 +1152,9 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 on(type: 'videoSizeChange', callback: (width: number, height: number) => void): void
 ```
 
-媒体控制器监听视频尺寸变化变化的事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+媒体控制器监听视频尺寸变化变化的事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 12
 
@@ -1147,7 +1165,7 @@ on(type: 'videoSizeChange', callback: (width: number, height: number) => void): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'videoSizeChange' | 是 | 事件回调类型，支持事件`'videoSizeChange'`：当检测到会话的合法命令发生改变时，触发该事件。 |
-| callback | (width: number, height: number) = & gt; void | 是 | 回调函数。 |
+| callback | (width: number, height: number) =&gt; void | 是 | 回调函数。 |
 
 **错误码：**
 
@@ -1172,7 +1190,9 @@ avCastController.on('videoSizeChange', (width: number, height: number) => {
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听远端播放器的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听远端播放器的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
@@ -1206,7 +1226,9 @@ on(type: 'error', callback: ErrorCallback): void
 on(type: 'castControlGenericError', callback: ErrorCallback): void
 ```
 
-监听投播通用错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听投播通用错误事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
 
@@ -1247,7 +1269,9 @@ on(type: 'castControlGenericError', callback: ErrorCallback): void
 on(type: 'castControlIoError', callback: ErrorCallback): void
 ```
 
-监听投播输入/输出的错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听投播输入/输出的错误事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
 
@@ -1291,7 +1315,9 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 on(type: 'castControlParsingError', callback: ErrorCallback): void
 ```
 
-监听投播解析的错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听投播解析的错误事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
 
@@ -1323,7 +1349,9 @@ on(type: 'castControlParsingError', callback: ErrorCallback): void
 on(type: 'castControlDecodingError', callback: ErrorCallback): void
 ```
 
-监听投播解码的错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听投播解码的错误事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
 
@@ -1356,7 +1384,9 @@ on(type: 'castControlDecodingError', callback: ErrorCallback): void
 on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 ```
 
-监听投播音频渲染器的错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听投播音频渲染器的错误事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
 
@@ -1386,7 +1416,9 @@ on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 on(type: 'castControlDrmError', callback: ErrorCallback): void
 ```
 
-监听投播drm的错误事件。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+监听投播drm的错误事件。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 13
 
@@ -1423,7 +1455,9 @@ on(type: 'castControlDrmError', callback: ErrorCallback): void
 on(type: 'keyRequest', callback: KeyRequestCallback): void
 ```
 
-在线DRM资源投播时，设置许可证请求的事件监听。每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+在线DRM资源投播时，设置许可证请求的事件监听。
+
+每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 12
 
@@ -1553,7 +1587,7 @@ prepare(item: AVQueueItem): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。当命令发送成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | Promise对象。当命令发送成功，无返回结果，否则返回错误对象。 |
 
 **错误码：**
 
@@ -1616,7 +1650,7 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，当处理许可证响应成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | Promise对象，当处理许可证响应成功，无返回结果，否则返回错误对象。 |
 
 **错误码：**
 
@@ -1696,7 +1730,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，controller销毁成功，无结果返回，否则返回错误对象。 |
+| Promise&lt;void&gt; | Promise对象，controller销毁成功，无结果返回，否则返回错误对象。 |
 
 **错误码：**
 
@@ -1779,7 +1813,7 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。当命令发送成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | Promise对象。当命令发送成功，无返回结果，否则返回错误对象。 |
 
 **错误码：**
 
@@ -1819,13 +1853,13 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record & lt;string, Object & gt; | 是 | 应用程序填充的自定义数据。 |
+| data | Record&lt;string, Object&gt; | 是 | 应用程序填充的自定义数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1979,7 +2013,7 @@ start(item: AVQueueItem): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。当命令发送成功，无返回结果，否则返回错误对象。 |
+| Promise&lt;void&gt; | Promise对象。当命令发送成功，无返回结果，否则返回错误对象。 |
 
 **错误码：**
 
@@ -2041,7 +2075,7 @@ update(item: AVQueueItem): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 通过promise回调成功 |
+| Promise&lt;void&gt; | 通过promise回调成功 |
 
 **错误码：**
 

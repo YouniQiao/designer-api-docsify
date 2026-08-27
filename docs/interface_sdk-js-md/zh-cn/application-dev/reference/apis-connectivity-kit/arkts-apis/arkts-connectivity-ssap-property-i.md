@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import ssap from '@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## descriptors
@@ -34,7 +34,7 @@ descriptors?: PropertyDescriptor[]
 operation?: number
 ```
 
-表示Property支持的操作方式，默认值为READABLE|WRITE_NO_RESPONSE，即可读并可写（以无响应方式）。如要使属性支持相应的操作，需要对该字段赋值，例如赋值为：READABLE | WRITE_NO_RESPONSE | NOTIFY。取值范围[0, 15]，各比特位对应的操作方式详见[Operation](arkts-connectivity-ssap-operation-e.md)。 取值限定为整数。
+表示Property支持的操作方式，默认值为READABLE|WRITE_NO_RESPONSE，即可读并可写（以无响应方式）。如要使属性支持相应的操作，需要对该字段赋值，例如赋值为：READABLE | WRITE_NO_RESPONSE | NOTIFY。取值范围[0, 15]，各比特位对应的操作方式详见[Operation](arkts-connectivity-ssap-operation-e.md)。取值限定为整数。
 
 **类型：** number
 

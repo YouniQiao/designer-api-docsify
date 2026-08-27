@@ -9,7 +9,7 @@ Serial port object, which provides information and communication capabilities of
 ## Modules to Import
 
 ```TypeScript
-import serial from '@kit.BasicServicesKit';
+import { serial } from '@kit.BasicServicesKit';
 ```
 
 ## close
@@ -30,7 +30,7 @@ Closes the serial port device. This API returns the result asynchronously throug
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -57,7 +57,7 @@ Waits until all write requests are complete. This API returns the result asynchr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -85,7 +85,7 @@ Flushes the serial port buffer. This API returns the result asynchronously throu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -113,7 +113,7 @@ Obtains the CTS signal status. This API returns the result asynchronously throug
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the CTS signal status, indicating whether data can be sent. |
+| Promise&lt;boolean&gt; | Promise used to return the CTS signal status, indicating whether data can be sent. |
 
 **Error codes:**
 
@@ -141,7 +141,7 @@ Obtains the DSR signal status. This API returns the result asynchronously throug
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates the remote end is ready, and **false** indicates the remote end is not ready. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates the remote end is ready, and **false** indicates the remote end is not ready. |
 
 **Error codes:**
 
@@ -284,7 +284,7 @@ Enables the port. This API returns the result asynchronously through a promise.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -314,7 +314,7 @@ Sends a BRK signal. This API returns the result asynchronously through a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -348,7 +348,7 @@ Sets the DTR signal status. Use Promise asynchronous callbacks.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -382,7 +382,7 @@ Sets the RTS signal. This API returns the result asynchronously through a promis
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -417,7 +417,7 @@ Sends data. This API returns the result asynchronously through a promise.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the length of the data written. |
+| Promise&lt;number&gt; | Promise used to return the length of the data written. |
 
 **Error codes:**
 

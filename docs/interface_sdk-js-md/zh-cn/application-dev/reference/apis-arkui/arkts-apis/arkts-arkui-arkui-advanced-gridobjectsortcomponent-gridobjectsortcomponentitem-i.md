@@ -18,7 +18,9 @@ import { GridObjectSortComponentType, GridObjectSortComponentItem, GridObjectSor
 id: number | string
 ```
 
-数据id序号，不可重复。默认值：空字符串。
+数据id序号，不可重复。
+
+默认值：空字符串。
 
 **类型：** number \| string
 
@@ -36,7 +38,11 @@ id: number | string
 order: number
 ```
 
-顺序序号，数值越小排序越靠前。取值范围：大于等于0。默认值：0
+顺序序号，数值越小排序越靠前。
+
+取值范围：大于等于0。
+
+默认值：0
 
 **类型：** number
 

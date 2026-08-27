@@ -17,7 +17,9 @@ Describes the left and right arrow attributes.
 arrowColor?: ResourceColor
 ```
 
-Color of the arrow.Default value: **'#182431'**
+Color of the arrow.
+
+Default value: **'#182431'**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -37,8 +39,21 @@ Color of the arrow.Default value: **'#182431'**
 arrowSize?: Length
 ```
 
-Size of the arrow.On both sides of the navigation indicator:Default value: **18vp**.On both sides of the component:Default value: **24vp**.  
-**NOTE：**If **showBackground** is set to **true**, the value of **arrowSize** is 3/4 of the value of **backgroundSize**.Percentage values are not supported.
+Size of the arrow.
+
+On both sides of the navigation indicator:
+
+Default value: **18vp**.
+
+On both sides of the component:
+
+Default value: **24vp**.
+
+**NOTE：**
+
+If **showBackground** is set to **true**, the value of **arrowSize** is 3/4 of the value of **backgroundSize**.
+
+Percentage values are not supported.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -58,7 +73,15 @@ Size of the arrow.On both sides of the navigation indicator:Default value: **18v
 backgroundColor?: ResourceColor
 ```
 
-Color of the background.On both sides of the navigation indicator:Default value: **'#00000000'**.On both sides of the component:Default value: **'#19182431'**.
+Color of the background.
+
+On both sides of the navigation indicator:
+
+Default value: **'#00000000'**.
+
+On both sides of the component:
+
+Default value: **'#19182431'**.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -78,7 +101,17 @@ Color of the background.On both sides of the navigation indicator:Default value:
 backgroundSize?: Length
 ```
 
-Size of the background.On both sides of the navigation indicator:Default value: **24vp**.On both sides of the component:Default value: **32vp**.Percentage values are not supported.
+Size of the background.
+
+On both sides of the navigation indicator:
+
+Default value: **24vp**.
+
+On both sides of the component:
+
+Default value: **32vp**.
+
+Percentage values are not supported.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -98,7 +131,9 @@ Size of the background.On both sides of the navigation indicator:Default value: 
 isSidebarMiddle?: boolean
 ```
 
-Whether the arrow is centered on both sides of the **Swiper** component. The value **true** means that the arrow is centered on both sides of the **Swiper** component, and **false** means that the arrow is show on either side of the navigation indicator.Default value: **false**.
+Whether the arrow is centered on both sides of the **Swiper** component. The value **true** means that the arrow is centered on both sides of the **Swiper** component, and **false** means that the arrow is show on either side of the navigation indicator.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -118,7 +153,9 @@ Whether the arrow is centered on both sides of the **Swiper** component. The val
 showBackground?: boolean
 ```
 
-Whether to show the background for the arrow. The value **true** means to show the background for the arrow, and **false** means the opposite.Default value: **false**.
+Whether to show the background for the arrow. The value **true** means to show the background for the arrow, and **false** means the opposite.
+
+Default value: **false**.
 
 **Type:** boolean
 

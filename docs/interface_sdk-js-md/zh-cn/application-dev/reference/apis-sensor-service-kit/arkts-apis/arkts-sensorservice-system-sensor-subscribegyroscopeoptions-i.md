@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import Sensor, { AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
+import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
 ```
 
 ## fail
@@ -77,9 +77,9 @@ success: (data: GyroscopeResponse) => void
 interval: string
 ```
 
-频率参数，陀螺仪的回调函数执行频率。 默认值：'normal'。 可选值：   
--'game'：极高的回调频率，20ms/次，适用于游戏场景。   
--'ui'：较高的回调频率，60ms/次，适用于UI更新场景。   
+频率参数，陀螺仪的回调函数执行频率。默认值：'normal'。可选值：  
+-'game'：极高的回调频率，20ms/次，适用于游戏场景。  
+-'ui'：较高的回调频率，60ms/次，适用于UI更新场景。  
 -'normal'：普通的回调频率，200ms/次，适用于低功耗场景。
 
 **类型：** string

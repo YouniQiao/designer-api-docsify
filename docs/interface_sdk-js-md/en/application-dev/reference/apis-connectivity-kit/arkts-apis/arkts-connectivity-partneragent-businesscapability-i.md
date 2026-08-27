@@ -9,7 +9,7 @@ Describes the business capabilities of the application.
 ## Modules to Import
 
 ```TypeScript
-import partnerAgent from '@kit.ConnectivityKit';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## supportMediaControl

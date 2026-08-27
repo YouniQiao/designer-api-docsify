@@ -20,7 +20,7 @@ controller: CustomDialogController
 
 Sets the controller.
 
-**Type:** [CustomDialogController](../../apis-arkui/arkts-apis/arkts-arkui-customdialogcontroller-c.md)
+**Type:** CustomDialogController
 
 **Since:** 11
 

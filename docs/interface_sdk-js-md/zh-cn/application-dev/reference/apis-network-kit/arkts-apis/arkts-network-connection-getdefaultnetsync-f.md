@@ -38,7 +38,7 @@ function getDefaultNetSync(): NetHandle
 
 | 类型 | 说明 |
 | --- | --- |
-| [NetHandle](arkts-network-connection-nethandle-i.md) | 以同步方式返回默认网络的网络句柄。 |
+| NetHandle | 以同步方式返回默认网络的网络句柄。 |
 
 **错误码：**
 

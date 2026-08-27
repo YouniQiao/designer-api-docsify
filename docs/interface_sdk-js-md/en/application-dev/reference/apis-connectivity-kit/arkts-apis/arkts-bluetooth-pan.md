@@ -11,7 +11,7 @@ Provides methods to accessing bluetooth PAN(Personal Area Networking Profile)-re
 ## Modules to Import
 
 ```TypeScript
-import pan from '@kit.ConnectivityKit';
+import { pan } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

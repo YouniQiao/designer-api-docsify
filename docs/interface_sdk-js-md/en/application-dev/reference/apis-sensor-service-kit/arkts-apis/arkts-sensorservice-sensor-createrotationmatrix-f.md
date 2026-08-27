@@ -25,7 +25,7 @@ Converts a rotation vector into a rotation matrix. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationVector | Array & lt;number & gt; | Yes | Rotation vector to convert. |
+| rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the rotation matrix. |
 
 **Examples**
@@ -67,13 +67,13 @@ Converts a rotation vector into a rotation matrix. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationVector | Array & lt;number & gt; | Yes | Rotation vector to convert. |
+| rotationVector | Array&lt;number&gt; | Yes | Rotation vector to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the rotation matrix. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the rotation matrix. |
 
 **Examples**
 
@@ -113,8 +113,8 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gravity | Array & lt;number & gt; | Yes | Gravity vector. |
-| geomagnetic | Array & lt;number & gt; | Yes | Geomagnetic vector. |
+| gravity | Array&lt;number&gt; | Yes | Gravity vector. |
+| geomagnetic | Array&lt;number&gt; | Yes | Geomagnetic vector. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | Yes | Callback used to return the rotation matrix. |
 
 **Examples**
@@ -154,8 +154,8 @@ Obtains the rotation matrix based on a gravity vector and geomagnetic vector. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gravity | Array & lt;number & gt; | Yes | Gravity vector. |
-| geomagnetic | Array & lt;number & gt; | Yes | Geomagnetic vector. |
+| gravity | Array&lt;number&gt; | Yes | Gravity vector. |
+| geomagnetic | Array&lt;number&gt; | Yes | Geomagnetic vector. |
 
 **Return value:**
 

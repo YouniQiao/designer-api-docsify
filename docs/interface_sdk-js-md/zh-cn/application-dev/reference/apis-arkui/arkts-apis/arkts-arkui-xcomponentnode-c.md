@@ -1,6 +1,8 @@
 # XComponentNode
 
-定义XComponent Node。@extends FrameNode
+定义XComponent Node。
+
+@extends FrameNode
 
 **继承/实现关系：** XComponentNode extends FrameNode
 

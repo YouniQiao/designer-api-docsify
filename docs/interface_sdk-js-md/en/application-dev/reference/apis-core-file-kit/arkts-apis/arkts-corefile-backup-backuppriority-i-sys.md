@@ -1,6 +1,8 @@
 # BackupPriority (System API)
 
-Control backup and restore priority sequence@interface BackupPriority
+Control backup and restore priority sequence
+
+@interface BackupPriority
 
 **Since:** 12
 
@@ -11,7 +13,7 @@ Control backup and restore priority sequence@interface BackupPriority
 ## Modules to Import
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## priority

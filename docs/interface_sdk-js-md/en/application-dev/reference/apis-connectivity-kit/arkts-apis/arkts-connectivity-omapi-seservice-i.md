@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import omapi from '@kit.ConnectivityKit';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## getReaders

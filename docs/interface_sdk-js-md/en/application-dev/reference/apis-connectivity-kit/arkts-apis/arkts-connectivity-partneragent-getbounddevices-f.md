@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import partnerAgent from '@kit.ConnectivityKit';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## getBoundDevices
@@ -26,7 +26,7 @@ Gets the list of addresses of the bound partner device for this application.
 
 | Type | Description |
 | --- | --- |
-| [PartnerDeviceAddress[]](arkts-connectivity-partnerdeviceaddress-t.md) | Returns the list of addresses of partner device. |
+| PartnerDeviceAddress[] | Returns the list of addresses of partner device. |
 
 **Error codes:**
 

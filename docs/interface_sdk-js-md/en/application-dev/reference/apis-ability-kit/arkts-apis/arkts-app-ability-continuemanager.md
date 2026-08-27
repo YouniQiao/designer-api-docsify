@@ -11,7 +11,7 @@ The continueManager module provides capabilities for managing cross-device appli
 ## Modules to Import
 
 ```TypeScript
-import continueManager from '@kit.AbilityKit';
+import { continueManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

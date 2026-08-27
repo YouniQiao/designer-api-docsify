@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import drm from '@kit.DrmKit';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## getMediaKeySystemUuid

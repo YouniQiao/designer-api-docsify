@@ -10,7 +10,6 @@
 
 ```TypeScript
 import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
-import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUIV2';
 ```
 
 ## confirm
@@ -37,7 +36,9 @@ confirm?: ButtonOptions
 content?: ResourceStr
 ```
 
-选择弹出框内容。默认不设置或设置为undefined，弹出框内容不显示。
+选择弹出框内容。
+
+默认不设置或设置为undefined，弹出框内容不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -55,7 +56,8 @@ content?: ResourceStr
 controller: CustomDialogController
 ```
 
-选择弹出框控制器，用于控制弹出框的显示和隐藏。  
+选择弹出框控制器，用于控制弹出框的显示和隐藏。
+
 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
@@ -92,7 +94,11 @@ radioContent: Array<SheetInfo>
 selectedIndex?: number
 ```
 
-选择弹出框的选中项。取值范围：大于等于-1的整数。默认值：-1，没有选中项。若设置数值小于-1，按没有选中项处理。
+选择弹出框的选中项。
+
+取值范围：大于等于-1的整数。
+
+默认值：-1，没有选中项。若设置数值小于-1，按没有选中项处理。
 
 **类型：** number
 
@@ -128,7 +134,9 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。
+
+默认值：ThemeColorMode.SYSTEM
 
 **类型：** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
@@ -146,7 +154,8 @@ themeColorMode?: ThemeColorMode
 title: ResourceStr
 ```
 
-选择弹出框标题。  
+选择弹出框标题。
+
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)

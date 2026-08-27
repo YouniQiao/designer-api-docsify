@@ -3,9 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKitManager';
-import notificationSubscribe from '@kit.NotificationKitSubscribe';
-import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## isDistributedEnabled
@@ -67,7 +64,7 @@ function isDistributedEnabled(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise方式返回设备是否支持分布式通知的结果。 |
+| Promise&lt;boolean&gt; | Promise方式返回设备是否支持分布式通知的结果。 |
 
 **示例**
 

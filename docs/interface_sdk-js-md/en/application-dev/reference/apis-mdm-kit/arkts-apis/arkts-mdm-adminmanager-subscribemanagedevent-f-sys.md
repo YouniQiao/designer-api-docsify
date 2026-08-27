@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## subscribeManagedEvent
@@ -102,7 +102,7 @@ Subscribes to system management events. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. When a system event fails to be subscribed to, an error object is thrown. |
+| Promise&lt;void&gt; | Promise that returns no value. When a system event fails to be subscribed to, an error object is thrown. |
 
 **Error codes:**
 

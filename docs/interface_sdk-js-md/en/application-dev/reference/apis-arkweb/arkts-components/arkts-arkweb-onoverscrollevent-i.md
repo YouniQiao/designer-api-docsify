@@ -9,9 +9,6 @@ Defines the callback information triggered when the web page is overscrolled, in
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## xOffset
@@ -20,7 +17,9 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 xOffset: number
 ```
 
-Horizontal overscroll offset based on the leftmost edge of the web page.Unit: vp.
+Horizontal overscroll offset based on the leftmost edge of the web page.
+
+Unit: vp.
 
 **Type:** number
 
@@ -36,7 +35,9 @@ Horizontal overscroll offset based on the leftmost edge of the web page.Unit: vp
 yOffset: number
 ```
 
-Vertical overscroll offset based on the top edge of the web page.Unit: vp.
+Vertical overscroll offset based on the top edge of the web page.
+
+Unit: vp.
 
 **Type:** number
 

@@ -93,7 +93,7 @@ Obtains the mouse pointer style type. This API can obtain only the mouse pointer
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PointerStyle & gt; | Promise object, which is used to return the mouse pointer style. |
+| Promise&lt;PointerStyle&gt; | Promise object, which is used to return the mouse pointer style. |
 
 **Error codes:**
 

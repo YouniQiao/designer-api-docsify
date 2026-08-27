@@ -55,7 +55,7 @@ Sets the callback for pan gesture cancellation. This callback is triggered when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback & lt;void & gt; | Yes | Callback invoked when the pan gesture is cancelled. |
+| event | Callback&lt;void&gt; | Yes | Callback invoked when the pan gesture is cancelled. |
 
 **Return value:**
 

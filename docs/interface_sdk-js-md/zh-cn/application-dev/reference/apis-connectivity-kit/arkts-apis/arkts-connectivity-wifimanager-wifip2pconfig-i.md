@@ -9,8 +9,7 @@ P2P配置信息。
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## deviceAddress
@@ -89,7 +88,7 @@ groupName: string
 netId: number
 ```
 
-群组网络ID。创建群组时，-1表示创建临时组， -2表示创建永久组
+群组网络ID。创建群组时，-1表示创建临时组，-2表示创建永久组
 
 **类型：** number
 

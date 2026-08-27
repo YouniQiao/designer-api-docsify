@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## isOpenSoftApAllowed
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function isOpenSoftApAllowed(): boolean
 ```
 
-检查在某些情况下是否可以操作WLAN热点。当飞行模式开启 且不支持softap与sta共存，也不支持信号桥接时， 热点开关无法操作。
+检查在某些情况下是否可以操作WLAN热点。当飞行模式开启且不支持softap与sta共存，也不支持信号桥接时，热点开关无法操作。
 
 **起始版本：** 18
 

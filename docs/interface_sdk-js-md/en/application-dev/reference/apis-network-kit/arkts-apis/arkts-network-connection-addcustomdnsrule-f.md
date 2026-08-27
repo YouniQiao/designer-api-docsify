@@ -32,7 +32,7 @@ Adds custom DNS rules for the specified host of the current application. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Name of the custom host. |
-| ip | Array & lt;string & gt; | Yes | List of IP addresses mapped to the host name. |
+| ip | Array&lt;string&gt; | Yes | List of IP addresses mapped to the host name. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mapping is added successfully, **error** is **undefined**. Otherwise, **error** is an error object. |
 
 **Error codes:**
@@ -88,13 +88,13 @@ Adds custom DNS rules for the specified host of the current application. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | host | string | Yes | Name of the custom host. |
-| ip | Array & lt;string & gt; | Yes | List of IP addresses mapped to the host name. |
+| ip | Array&lt;string&gt; | Yes | List of IP addresses mapped to the host name. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

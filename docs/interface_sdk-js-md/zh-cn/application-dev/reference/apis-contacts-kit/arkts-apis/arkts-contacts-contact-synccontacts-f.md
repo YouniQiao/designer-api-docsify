@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## syncContacts
@@ -12,7 +12,9 @@ import contact from '@kit.ContactsKit';
 function syncContacts(context: Context, mode: ContactSyncMode, progress: ContactSyncProgress, contacts: Array<Contact>): Promise<Array<number>>
 ```
 
-批量同步多个联系人至联系人数据库。每次最多可批量同步400个联系人。调用方必须处于前台。
+批量同步多个联系人至联系人数据库。
+
+每次最多可批量同步400个联系人。调用方必须处于前台。
 
 **起始版本：** 26.0.0
 
@@ -28,7 +30,7 @@ function syncContacts(context: Context, mode: ContactSyncMode, progress: Contact
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| context | Context | 是 | 应用上下文Context。 |
 | mode | [ContactSyncMode](arkts-contacts-contact-contactsyncmode-e.md) | 是 | 表示联系人同步模式的类型。 |
 | progress | [ContactSyncProgress](arkts-contacts-contact-contactsyncprogress-i.md) | 是 | 表示联系人同步进度的相关信息。 |
 | contacts | Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 表示需要同步至数据库的联系人信息数组。 |
@@ -37,7 +39,7 @@ function syncContacts(context: Context, mode: ContactSyncMode, progress: Contact
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | 返回联系人创建结果的数组。有效的联系人ID (可为通过 { |
+| Promise&lt;Array&lt;number&gt;&gt; | 返回联系人创建结果的数组。有效的联系人ID (可为通过 { |
 
 **错误码：**
 

@@ -1,6 +1,6 @@
 # ModelType
 
-模型类型枚举 @enum { number }
+模型类型枚举@enum { number }
 
 **起始版本：** 12
 

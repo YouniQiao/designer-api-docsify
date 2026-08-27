@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import power from '@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## rebootDevice

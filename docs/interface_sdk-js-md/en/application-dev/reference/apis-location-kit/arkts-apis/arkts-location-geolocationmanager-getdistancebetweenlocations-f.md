@@ -23,8 +23,8 @@ Obtains the distance between two locations.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| location1 | [Location](arkts-location-geolocationmanager-location-i.md) | Yes | Indicates first location. |
-| location2 | [Location](arkts-location-geolocationmanager-location-i.md) | Yes | Indicates second location. |
+| location1 | Location | Yes | Indicates first location. |
+| location2 | Location | Yes | Indicates second location. |
 
 **Return value:**
 

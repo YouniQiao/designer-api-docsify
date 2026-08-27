@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getReminderInfoByBundles
@@ -26,7 +26,7 @@ Batch obtains reminders of specified applications. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | Array & lt;BundleOption & gt; | Yes | Bundles whose reminders are to be obtained. |
+| bundles | Array&lt;BundleOption&gt; | Yes | Bundles whose reminders are to be obtained. |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## stopStream
@@ -12,7 +12,7 @@ import abilityConnectionManager from '@kit.DistributedServiceKit';
 function stopStream(streamId: number): void
 ```
 
-停止指定传输流，使传输流停止发送或接收视频数据。需与startStream()方法配对使用， 在不需要传输数据时应调用此方法停止传输流，最后调用destroyStream()销毁传输流以释放资源。 使用场景包括视频通话暂停、用户关闭摄像头、切换前后摄像头等需要临时停止视频传输时调用。
+停止指定传输流，使传输流停止发送或接收视频数据。需与startStream()方法配对使用，在不需要传输数据时应调用此方法停止传输流，最后调用destroyStream()销毁传输流以释放资源。使用场景包括视频通话暂停、用户关闭摄像头、切换前后摄像头等需要临时停止视频传输时调用。
 
 **起始版本：** 18
 

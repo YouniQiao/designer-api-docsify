@@ -9,10 +9,7 @@ Enumerates the callbacks used for the request for loading an ad.
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit.AdComponent';
-import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
-import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
-import advertising from '@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## onAdLoadFailure
@@ -84,7 +81,7 @@ Called when an ad request is successful.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ads | Array & lt;Advertisement & gt; | Yes | Ad data. |
+| ads | Array&lt;Advertisement&gt; | Yes | Ad data. |
 
 **Examples**
 

@@ -19,7 +19,8 @@ VideoOutput implements output information used in a video session. It inherits f
 enableMirror(enabled: boolean): void
 ```
 
-Enables or disables mirror recording.  
+Enables or disables mirror recording.
+
 - Before calling this API, check whether mirror recording is supported by using  
 [isMirrorSupported](#ismirrorsupported).  
 - After enabling or disabling mirror recording, call  
@@ -82,7 +83,9 @@ function enableMirror(videoOutput: camera.VideoOutput, mirrorMode: boolean, aVRe
 getActiveFrameRate(): FrameRateRange
 ```
 
-Obtains the configured frame rate range.This API is valid only after [setFrameRate](#setframerate) is called to set a frame rate range for video streams.
+Obtains the configured frame rate range.
+
+This API is valid only after [setFrameRate](#setframerate) is called to set a frame rate range for video streams.
 
 **Since:** 12
 
@@ -198,7 +201,8 @@ function getSupportedFrameRates(videoOutput: camera.VideoOutput): Array<camera.F
 getVideoRotation(deviceDegree?: number): ImageRotation
 ```
 
-Obtains the video rotation angle.  
+Obtains the video rotation angle.
+
 - Device' natural orientation: the default orientation for using a device. For example, the default orientation  
 of the bar-type phone is in portrait mode, with the charging port facing downward.  
 - Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's  
@@ -481,7 +485,9 @@ Subscribes to VideoOutput error events. This API uses an asynchronous callback t
 setFrameRate(minFps: number, maxFps: number): void
 ```
 
-Sets a frame rate range for video streams. The range must be within the supported frame rate range,which can be obtained by calling [getSupportedFrameRates](#getsupportedframerates).
+Sets a frame rate range for video streams. The range must be within the supported frame rate range,
+
+which can be obtained by calling [getSupportedFrameRates](#getsupportedframerates).
 
 > **NOTE：**
 > 
@@ -643,7 +649,7 @@ Starts video recording. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -830,7 +836,7 @@ Stops video recording. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

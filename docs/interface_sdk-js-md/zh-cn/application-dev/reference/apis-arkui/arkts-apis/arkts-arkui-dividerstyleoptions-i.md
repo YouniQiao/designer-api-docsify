@@ -1,6 +1,8 @@
 # DividerStyleOptions
 
-Defines the struct of DividerStyleOptions.@interface DividerStyleOptions
+Defines the struct of DividerStyleOptions.
+
+@interface DividerStyleOptions
 
 **起始版本：** 12
 

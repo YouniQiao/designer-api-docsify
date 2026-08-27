@@ -74,7 +74,7 @@ Captures a photo with the default photo capture parameters. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -177,7 +177,7 @@ Captures a photo with the specified photo capture parameters. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -265,7 +265,9 @@ function enableAutoExtendedGainmapDelivery(photoOutput: camera.PhotoOutput): voi
 enableMirror(enabled: boolean): void
 ```
 
-Enables or disables dynamic photo capture.Before calling this API, check whether moving photo capture is supported by calling [isMovingPhotoSupported](#ismovingphotosupported) and whether mirroring is supported by calling [isMirrorSupported](#ismirrorsupported).
+Enables or disables dynamic photo capture.
+
+Before calling this API, check whether moving photo capture is supported by calling [isMovingPhotoSupported](#ismovingphotosupported) and whether mirroring is supported by calling [isMirrorSupported](#ismirrorsupported).
 
 **Since:** 13
 
@@ -430,7 +432,8 @@ function testGetActiveProfile(previewOutput: camera.PreviewOutput): camera.Profi
 getPhotoRotation(deviceDegree?: number): ImageRotation
 ```
 
-Obtains the photo rotation angle.  
+Obtains the photo rotation angle.
+
 - Device' natural orientation: the default orientation for using a device. For example, the default orientation  
 of the bar-type phone is in portrait mode, with the charging port facing downward.  
 - Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's  
@@ -1289,7 +1292,9 @@ function setMovingPhotoVideoCodecTypes(photoOutput: camera.PhotoOutput, videoCod
 setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization): void
 ```
 
-Sets the photo quality prioritization strategy.Before setting the strategy, you can call [isPhotoQualityPrioritizationSupported](#isphotoqualityprioritizationsupported) to check whether the device supports the specified photo quality prioritization strategy.
+Sets the photo quality prioritization strategy.
+
+Before setting the strategy, you can call [isPhotoQualityPrioritizationSupported](#isphotoqualityprioritizationsupported) to check whether the device supports the specified photo quality prioritization strategy.
 
 **Since:** 21
 

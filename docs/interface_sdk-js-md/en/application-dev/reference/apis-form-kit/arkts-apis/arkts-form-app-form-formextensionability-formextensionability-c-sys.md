@@ -9,7 +9,7 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 ## Modules to Import
 
 ```TypeScript
-import FormExtensionAbility from '@kit.FormKit';
+import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
 ## onAcquireFormData
@@ -39,7 +39,7 @@ Called when the system acquire the form data.
 | Type | Description |
 | --- | --- |
 | object | Returns the wantParams object.<br>**Applicable version:** 10 |
-| Record & lt;string, Object & gt; | Returns the wantParams object.<br>**Applicable version:** 11 and later |
+| Record&lt;string, Object&gt; | Returns the wantParams object.<br>**Applicable version:** 11 and later |
 
 **Examples**
 
@@ -85,7 +85,7 @@ Called when the system shares the form.
 | Type | Description |
 | --- | --- |
 | object | Returns the wantParams object.<br>**Applicable version:** 9 - 10 |
-| Record & lt;string, Object & gt; | Returns the wantParams object.<br>**Applicable version:** 11 and later |
+| Record&lt;string, Object&gt; | Returns the wantParams object.<br>**Applicable version:** 11 and later |
 
 **Examples**
 

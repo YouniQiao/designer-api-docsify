@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import brightness from '@kit.BasicServicesKit';
+import { brightness } from '@kit.BasicServicesKit';
 ```
 
 ## setValue

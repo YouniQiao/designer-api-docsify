@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## getInputMethodEngine
@@ -12,7 +12,7 @@ import inputMethodEngine from '@kit.IMEKit';
 function getInputMethodEngine(): InputMethodEngine
 ```
 
-获取输入法应用客户端实例[InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md)（输入法引擎）。 输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件等。   
+获取输入法应用客户端实例[InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md)（输入法引擎）。输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件等。  
 > **说明：**
    
 > 

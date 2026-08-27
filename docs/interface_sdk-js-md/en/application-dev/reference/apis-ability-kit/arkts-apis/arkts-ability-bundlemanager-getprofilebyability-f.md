@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getProfileByAbility
@@ -103,7 +103,7 @@ Obtains the JSON string array of the current application's configuration file ba
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the array of JSON strings obtained. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the array of JSON strings obtained. |
 
 **Error codes:**
 

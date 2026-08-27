@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import BackupExtensionContext from '@kit.CoreFileKit';
+import { BackupExtensionContext } from '@kit.CoreFileKit';
 ```
 
 ## 汇总
@@ -12,4 +12,4 @@ import BackupExtensionContext from '@kit.CoreFileKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [BackupExtensionContext](arkts-corefile-file-backupextensioncontext-backupextensioncontext-c.md) | BackupExtensionAbility的上下文环境，继承自ExtensionContext。 用于在备份恢复过程中获取EL1（设备级加密区）或EL2（用户级加密区）对应的临时目录。@extends ExtensionContext |
+| [BackupExtensionContext](arkts-corefile-file-backupextensioncontext-backupextensioncontext-c.md) | BackupExtensionAbility的上下文环境，继承自ExtensionContext。用于在备份恢复过程中获取EL1（设备级加密区）或EL2（用户级加密区）对应的临时目录。 |

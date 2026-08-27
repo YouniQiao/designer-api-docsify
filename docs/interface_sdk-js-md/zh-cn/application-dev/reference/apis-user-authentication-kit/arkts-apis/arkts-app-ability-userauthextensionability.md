@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import UserAuthExtensionAbility from '@kit.UserAuthenticationKit';
+import { UserAuthExtensionAbility } from '@kit.UserAuthenticationKit';
 ```
 
 ## 汇总
@@ -12,4 +12,4 @@ import UserAuthExtensionAbility from '@kit.UserAuthenticationKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [UserAuthExtensionAbility(用户认证扩展能力组件)](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c.md) | 用户认证扩展能力组件@extends UIExtensionAbility |
+| [UserAuthExtensionAbility](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c.md) | 用户认证扩展能力组件 |

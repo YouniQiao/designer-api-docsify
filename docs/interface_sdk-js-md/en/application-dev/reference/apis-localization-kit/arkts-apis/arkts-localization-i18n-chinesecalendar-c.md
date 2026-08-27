@@ -11,7 +11,7 @@ Provide a ChineseCalendar interface which could handle unique characteristics of
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## checkLeapMonth

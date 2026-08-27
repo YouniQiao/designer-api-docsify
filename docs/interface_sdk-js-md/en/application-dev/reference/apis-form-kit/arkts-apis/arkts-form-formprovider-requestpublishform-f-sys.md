@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## requestPublishForm
@@ -169,7 +169,7 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the widget ID. |
+| Promise&lt;string&gt; | Promise used to return the widget ID. |
 
 **Error codes:**
 

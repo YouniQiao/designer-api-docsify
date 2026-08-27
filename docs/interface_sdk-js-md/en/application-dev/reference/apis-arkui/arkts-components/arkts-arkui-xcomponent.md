@@ -1,6 +1,7 @@
 # XComponent
 
 **XComponent** provides a [surface](../../../ui/napi-xcomponent-guidelines.md#overview) for graphics rendering and media data input into your view. You can customize the position and size of the surface as needed. For details, see [Native XComponent](../../../ui/napi-xcomponent-guidelines.md).
+
 > **NOTE**
 
 ## Child Components
@@ -35,7 +36,9 @@ Constructor parameters
 XComponent(value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
 ```
 
-Creates an **XComponent** component, whose lifecycle callbacks can be triggered from the native side.This API is deprecated since API version 12. You are advised to use [XComponent(options: XComponentOptions)](../../../reference/apis-arkui/arkui-ts/ts-basic-components-xcomponent.md#xcomponent12) instead.
+Creates an **XComponent** component, whose lifecycle callbacks can be triggered from the native side.
+
+This API is deprecated since API version 12. You are advised to use [XComponent(options: XComponentOptions)](../../../reference/apis-arkui/arkui-ts/ts-basic-components-xcomponent.md#xcomponent12) instead.
 
 **Since:** 10
 
@@ -101,16 +104,23 @@ Obtains an **XComponent** node instance on the native side, and registers the li
 
 | Name | Description |
 | --- | --- |
+| [NativeXComponentParameters](arkts-arkui-nativexcomponentparameters-i.md) | Defines the options of the **XComponent**. An XComponent created with such constructor parameters can pass its corresponding FrameNode object to the Native side, enabling the use of NDK APIs for surface lifecycle–related settings and [component event listening](../../../ui/ndk-listen-to-component-events.md). |
+| [SurfaceConfig](arkts-arkui-surfaceconfig-i.md) | Describes whether the surface held by the **XComponent** is treated as opaque during rendering. |
+| [SurfaceRect](arkts-arkui-surfacerect-i.md) | Describes the rectangle of the surface held by the **XComponent**. |
+| [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | Defines whether the orientation of the surface held by the current **XComponent** is locked when the screen rotates. |
+| [XComponentOptions](arkts-arkui-xcomponentoptions-i.md) | Defines the options of the **XComponent**. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | Triggered after the surface held by **XComponent** is created. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [HdrType](arkts-arkui-hdrtype-e.md) | Sets the HDR type of the XComponent. |
 
 ## Examples
 

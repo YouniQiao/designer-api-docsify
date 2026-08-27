@@ -1,6 +1,6 @@
 # @ohos.app.agent.agentConstant
 
-agentConstant模块提供Agent相关的常量，包括Agent卡片类型[AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md)，用于在调用Agent相关接口（如 agentManager）时标识和区分Agent卡片的类型。
+agentConstant模块提供Agent相关的常量，包括Agent卡片类型[AgentCardType](arkts-ability-agentconstant-agentcardtype-e.md)，用于在调用Agent相关接口（如agentManager）时标识和区分Agent卡片的类型。
 
 **起始版本：** 26.0.0
 
@@ -11,7 +11,7 @@ agentConstant模块提供Agent相关的常量，包括Agent卡片类型[AgentCar
 ## 导入模块
 
 ```TypeScript
-import agentConstant from '@kit.AbilityKit';
+import { agentConstant } from '@kit.AbilityKit';
 ```
 
 ## 汇总

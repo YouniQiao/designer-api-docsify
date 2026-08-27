@@ -12,7 +12,9 @@ Enumerates the priorities available for created tasks. The task priority applies
 HIGH = 0
 ```
 
-The task has a high priority.This API can be used in atomic services since API version 11.
+The task has a high priority.
+
+This API can be used in atomic services since API version 11.
 
 **Since:** 9
 
@@ -26,7 +28,9 @@ The task has a high priority.This API can be used in atomic services since API v
 MEDIUM = 1
 ```
 
-The task has a medium priority.This API can be used in atomic services since API version 11.
+The task has a medium priority.
+
+This API can be used in atomic services since API version 11.
 
 **Since:** 9
 
@@ -40,7 +44,9 @@ The task has a medium priority.This API can be used in atomic services since API
 LOW = 2
 ```
 
-The task has a low priority.This API can be used in atomic services since API version 11.
+The task has a low priority.
+
+This API can be used in atomic services since API version 11.
 
 **Since:** 9
 
@@ -54,7 +60,9 @@ The task has a low priority.This API can be used in atomic services since API ve
 IDLE = 3
 ```
 
-The task is a background task.This API can be used in atomic services since API version 12.
+The task is a background task.
+
+This API can be used in atomic services since API version 12.
 
 **Since:** 12
 

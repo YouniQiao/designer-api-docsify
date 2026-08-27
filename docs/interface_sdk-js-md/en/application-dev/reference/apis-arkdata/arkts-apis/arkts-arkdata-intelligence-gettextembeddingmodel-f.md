@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import intelligence from '@kit.ArkData';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## getTextEmbeddingModel

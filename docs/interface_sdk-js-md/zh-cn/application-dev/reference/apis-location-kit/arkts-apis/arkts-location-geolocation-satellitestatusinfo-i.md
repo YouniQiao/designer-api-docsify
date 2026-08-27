@@ -1,6 +1,8 @@
 # SatelliteStatusInfo
 
-卫星状态信息。@interface SatelliteStatusInfo
+卫星状态信息。
+
+@interface SatelliteStatusInfo
 
 **起始版本：** 8
 
@@ -15,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## altitudes

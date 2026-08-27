@@ -9,7 +9,7 @@ Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definiti
 ## Modules to Import
 
 ```TypeScript
-import pasteboard from '@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## addEntry
@@ -29,7 +29,7 @@ Adds PasteData of an extra type to **PasteDataRecord**. The type added using thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of extra data. The value can be a predefined MIME type listed in [Constants](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. The value of **mimeType** cannot exceed 1024 bytes. |
-| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Content of extra data. |
+| value | ValueType | Yes | Content of extra data. |
 
 **Error codes:**
 
@@ -113,7 +113,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the text obtained from the conversion. |
+| Promise&lt;string&gt; | Promise used to return the text obtained from the conversion. |
 
 **Examples**
 
@@ -150,7 +150,7 @@ Obtains data of the specified type from **PasteDataRecord**.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ValueType & gt; | Promise used to return the data of the specified type in **PasteDataRecord**. If **PasteDataRecord** contains data of multiple types, the non-**PasteDataRecord** data of the default type can be obtained only through this API. |
+| Promise&lt;ValueType&gt; | Promise used to return the data of the specified type in **PasteDataRecord**. If **PasteDataRecord** contains data of multiple types, the non-**PasteDataRecord** data of the default type can be obtained only through this API. |
 
 **Error codes:**
 
@@ -197,13 +197,13 @@ Obtains the intersection of the input types and the types of the PasteData.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array & lt;string & gt; | Yes | List of the types. |
+| types | Array&lt;string&gt; | Yes | List of the types. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Intersection of the input types and the types of the PasteData obtained. |
+| Array&lt;string&gt; | Intersection of the input types and the types of the PasteData obtained. |
 
 **Error codes:**
 

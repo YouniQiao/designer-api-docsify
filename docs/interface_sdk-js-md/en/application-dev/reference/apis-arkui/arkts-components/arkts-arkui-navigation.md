@@ -1,12 +1,18 @@
 # Navigation
 
 The **Navigation** component is the root view container for navigation. It typically functions as the root container of a page and includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of **Navigation**) and non-home page content (child components of NavDestination) through routing.
+
 > **NOTE**
+
 > - Since API version 11, this component supports the safe area attribute by default, with the default attribute > value being > **expandSafeArea([SafeAreaType.SYSTEM, SafeAreaType.KEYBOARD, SafeAreaType.CUTOUT], [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM])**. > You can override this attribute to change the default behavior. In earlier versions, you need to use the > [expandSafeArea](arkts-arkui-commonmethod-c.md#expandsafearea) attribute to implement the safe area feature. > > - When [NavBar](arkts-arkui-navbar-t.md) is nested within a **Navigation** component, the lifecycle of the inner > **NavDestination** component does not synchronize with the outer **NavDestination** component or the lifecycle of a > modal. > > - If the [title](arkts-arkui-navigation-attribute.md#title) and [subTitle](arkts-arkui-navigation-attribute.md#subtitle) are not set > and [hideBackButton](arkts-arkui-navigation-attribute.md#hidebackbutton) is set to **true**, the title bar is not displayed. > > - During subpage navigation within **Navigation**, the new page actively requests focus. > > - You are not advised to use stack operations in aboutToAppear, as the > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation > failures.
 
 ## Child Components
 
-Supported Since API version 9, it is recommended that this component be used together with the NavRouter component.Since API version 10, it is recommended that this component be used together with the [NavPathStack](arkts-arkui-navpathstack-c.md) component and [navDestination](arkts-arkui-navigation-attribute.md#navdestination) attribute for page routing.
+Supported
+
+Since API version 9, it is recommended that this component be used together with the NavRouter component.
+
+Since API version 10, it is recommended that this component be used together with the [NavPathStack](arkts-arkui-navpathstack-c.md) component and [navDestination](arkts-arkui-navigation-attribute.md#navdestination) attribute for page routing.
 
 ## Navigation
 
@@ -73,16 +79,49 @@ Binds a routing stack to the **Navigation** component and specifies a **NavDesti
 
 | Name | Description |
 | --- | --- |
+| [HomePathInfo](arkts-arkui-homepathinfo-i.md) | Defines the home page **NavDestination** information. |
+| [MoreButtonOptions](arkts-arkui-morebuttonoptions-i.md) | Defines the options for the more button menu. |
+| [NavContentInfo](arkts-arkui-navcontentinfo-i.md) | Provides the destination information. |
+| [NavigationAnimatedTransition](arkts-arkui-navigationanimatedtransition-i.md) | Defines the custom transition animation protocol. You need to implement this protocol to define the redirection animation of the navigation route. |
+| [NavigationCommonTitle](arkts-arkui-navigationcommontitle-i.md) | Defines a general title for the **Navigation** component. |
+| [NavigationConfiguration](arkts-arkui-navigationconfiguration-i.md) | Navigation configuration options. |
+| [NavigationCustomTitle](arkts-arkui-navigationcustomtitle-i.md) | Defines a custom title for the **Navigation** component. |
+| [NavigationDividerStyle](arkts-arkui-navigationdividerstyle-i.md) | Color of the navigation divider and the upper and lower margins of the **Navigation** component. |
+| [NavigationInterception](arkts-arkui-navigationinterception-i.md) | Describes the object to be intercepted during navigation redirection. |
+| [NavigationMenuItem](arkts-arkui-navigationmenuitem-i.md) | Defines the navigation menu item, including the menu icon and menu information. |
+| [NavigationMenuOptions](arkts-arkui-navigationmenuoptions-i.md) | Defines options for menu items in the upper right corner of the page. |
+| [NavigationOptions](arkts-arkui-navigationoptions-i.md) | Defines the routing stack operation options. |
+| [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) | Defines the title bar options. |
+| [NavigationToolbarOptions](arkts-arkui-navigationtoolbaroptions-i.md) | Defines the toolbar options. |
+| [NavigationTransitionProxy](arkts-arkui-navigationtransitionproxy-i.md) | Implements a custom transition animation proxy. |
+| [PopInfo](arkts-arkui-popinfo-i.md) | Provides the callback information returned when a page is popped out of the routing stack. |
+| [PreloadOptions](arkts-arkui-preloadoptions-i.md) | Indicates options for preloading a page. |
+| [ScrollEffectOptions](arkts-arkui-scrolleffectoptions-i.md) | Defines the scroll effect options for the title bar. |
+| [ToolbarItem](arkts-arkui-toolbaritem-i.md) | Provides customizable parameters of the toolbar. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [InterceptionCallback](arkts-arkui-interceptioncallback-t.md) | Defines the callback triggered before a navigation page is redirected. |
+| [InterceptionModeCallback](arkts-arkui-interceptionmodecallback-t.md) | Implements an interception callback invoked when the display mode of the **Navigation** component switches between single-column and split-column. |
+| [InterceptionShowCallback](arkts-arkui-interceptionshowcallback-t.md) | Represents the interception callback invoked before and after page redirection. |
+| [Material](arkts-arkui-material-t.md) | Import the Material type for Navigation. |
+| [NavBar](arkts-arkui-navbar-t.md) | Defines the name of the navigation home page. |
+| [SystemBarStyle](arkts-arkui-systembarstyle-t.md) | Describes the properties of the status bar. These properties are valid for the page-level status bar. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [BarStyle](arkts-arkui-barstyle-e.md) | Enumerates the layout styles of the title bar and toolbar. Note that this API is not supported for the toolbar in **NavDestination**. |
+| [LaunchMode](arkts-arkui-launchmode-e.md) | Enumerates the operation modes for the routing stack. |
+| [NavBarPosition](arkts-arkui-navbarposition-e.md) | Position of the navigation page. |
+| [NavigationMode](arkts-arkui-navigationmode-e.md) | Display mode of the navigation page. When **Navigation** is displayed in split-column mode, a divider is displayed between the navigation page and the content area. |
+| [NavigationOperation](arkts-arkui-navigationoperation-e.md) | Enumerates the page redirection types. |
+| [NavigationTitleMode](arkts-arkui-navigationtitlemode-e.md) | Enumerates the display modes of the title bar. |
+| [ScrollEffectType](arkts-arkui-scrolleffecttype-e.md) | Enumerates the scroll effect types. |
+| [ToolbarItemStatus](arkts-arkui-toolbaritemstatus-e.md) | Enumerates the toolbar item states. |
 
 ## Examples
 
@@ -909,28 +948,6 @@ export class CustomTransition {
 }
 ```
 
-Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
-
-```TypeScript
-{
-  "routerMap": [
-    {
-      "name": "pageOne",
-      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
-      "buildFunction": "PageOneBuilder",
-      "data": {
-        "description": "this is pageOne"
-      }
-    },
-    {
-      "name": "pageTwo",
-      "pageSourceFile": "src/main/ets/pages/PageTwo.ets",
-      "buildFunction": "PageTwoBuilder"
-    }
-  ]
-}
-```
-
 This example demonstrates how to use the APIs in [NavPathStack](#navpathstack10) to pass parameters back to the previous page.
 
 ```TypeScript
@@ -1193,28 +1210,6 @@ export struct PageTwo {
       this.pathStack = context.pathStack;
     })
   }
-}
-```
-
-Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
-
-```TypeScript
-{
-  "routerMap": [
-    {
-      "name": "pageOne",
-      "pageSourceFile": "src/main/ets/pages/PageOne.ets",
-      "buildFunction": "PageOneBuilder",
-      "data": {
-        "description": "this is pageOne"
-      }
-    },
-    {
-      "name": "pageTwo",
-      "pageSourceFile": "src/main/ets/pages/PageTwo.ets",
-      "buildFunction": "PageTwoBuilder"
-    }
-  ]
 }
 ```
 
@@ -1779,23 +1774,6 @@ struct NavigationExample3 {
     .height('100%')
     .title('Navigation')
   }
-}
-```
-
-Configure "routerMap": "$profile:router_map" in the module field of the configuration file [module.json5](../../../quick-start/module-configuration-file.md) located in the src/main directory, and add the router_map.json file to the src/main/resources/base/profile directory. The following is an example of router_map.json:
-
-```TypeScript
-{
-  "routerMap": [
-    {
-      "name": "pageOne",
-      "pageSourceFile": "src/main/ets/pages/Index.ets",
-      "buildFunction": "PageOneBuilder",
-      "data": {
-        "description": "this is pageOne"
-      }
-    }
-  ]
 }
 ```
 

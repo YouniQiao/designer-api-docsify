@@ -53,7 +53,7 @@ Triggered when the selected state of the list item for multiselect changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (isSelected: boolean) = & gt; void | Yes |  |
+| event | (isSelected: boolean) =&gt; void | Yes |  |
 
 ## selectable
 

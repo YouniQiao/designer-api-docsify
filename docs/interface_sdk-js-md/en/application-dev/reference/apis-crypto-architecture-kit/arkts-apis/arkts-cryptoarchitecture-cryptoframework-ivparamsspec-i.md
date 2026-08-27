@@ -21,7 +21,7 @@ This is applicable to block cipher modes that require an IV, such as CBC, CTR, O
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## iv
@@ -30,7 +30,8 @@ import cryptoFramework from '@kit.CryptoArchitectureKit';
 iv: DataBlob
 ```
 
-IV parameter for encryption/decryption. Common lengths are listed below:  
+IV parameter for encryption/decryption. Common lengths are listed below:
+
 - In the CBC, CTR, OFB, or CFB mode of AES: The IV length is 16 bytes.  
 - In the CBC, OFB, or CFB mode of 3DES: The IV length is 8 bytes.  
 - In the CBC, CTR, OFB, or CFB mode of SM4&lt;sup&gt;10+&lt;/sup&gt;: The IV length is 16 bytes.

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## checkPersistentPermission
@@ -28,7 +28,7 @@ function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<b
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;boolean & gt; & gt; | Promise对象，返回URI权限的持久化状态数组。 |
+| Promise&lt;Array&lt;boolean&gt;&gt; | Promise对象，返回URI权限的持久化状态数组。 |
 
 **错误码：**
 

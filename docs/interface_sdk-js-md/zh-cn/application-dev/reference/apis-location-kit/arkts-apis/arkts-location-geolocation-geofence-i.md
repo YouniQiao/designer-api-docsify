@@ -1,6 +1,8 @@
 # Geofence
 
-GNSS围栏的配置参数。目前只支持圆形围栏。@interface Geofence
+GNSS围栏的配置参数。目前只支持圆形围栏。
+
+@interface Geofence
 
 **起始版本：** 8
 
@@ -15,7 +17,7 @@ GNSS围栏的配置参数。目前只支持圆形围栏。@interface Geofence
 ## 导入模块
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## expiration

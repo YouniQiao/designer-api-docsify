@@ -1,6 +1,8 @@
 # StationInfo (System API)
 
-Wi-Fi station information.@interface StationInfo
+Wi-Fi station information.
+
+@interface StationInfo
 
 **Since:** 7
 
@@ -15,10 +17,7 @@ Wi-Fi station information.@interface StationInfo
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## ipAddress

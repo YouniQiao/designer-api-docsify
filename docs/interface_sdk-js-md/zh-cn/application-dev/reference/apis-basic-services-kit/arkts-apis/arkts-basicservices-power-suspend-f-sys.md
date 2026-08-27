@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import power from '@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## suspend
@@ -16,7 +16,7 @@ function suspend(isImmediate?: boolean): void
 
 调用此方法后设备将进入睡眠，如需恢复到活动状态，需调用power.wakeup唤醒设备。
 
-与hibernate方法的区别：suspend为较浅的低功耗睡眠状态（灭屏后进入睡眠）， hibernate为更深的休眠状态（休眠前可选择清理内存）。需快速恢复设备活动时选择suspend，需最大程度节省电量时选择hibernate。
+与hibernate方法的区别：suspend为较浅的低功耗睡眠状态（灭屏后进入睡眠），hibernate为更深的休眠状态（休眠前可选择清理内存）。需快速恢复设备活动时选择suspend，需最大程度节省电量时选择hibernate。
 
 **起始版本：** 9
 

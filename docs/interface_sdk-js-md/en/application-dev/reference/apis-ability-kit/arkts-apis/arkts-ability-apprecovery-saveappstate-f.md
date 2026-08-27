@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appRecovery from '@kit.AbilityKit';
+import { appRecovery } from '@kit.AbilityKit';
 ```
 
 ## saveAppState

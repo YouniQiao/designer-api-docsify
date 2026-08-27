@@ -31,7 +31,7 @@ Obtains the supported white balance hue adjustment range.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Hue adjustment range. If the API call fails, **undefined** is returned. |
+| Array&lt;number&gt; | Hue adjustment range. If the API call fails, **undefined** is returned. |
 
 **Error codes:**
 
@@ -74,7 +74,7 @@ Obtains the range of white balance values in manual white balance mode.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Range of white balance values, for example, [2800, ...,10000], in units of K (Kelvin). The actual value depends on the bottom-layer capability. If the API call fails, undefined is returned. |
+| Array&lt;number&gt; | Range of white balance values, for example, [2800, ...,10000], in units of K (Kelvin). The actual value depends on the bottom-layer capability. If the API call fails, undefined is returned. |
 
 **Error codes:**
 

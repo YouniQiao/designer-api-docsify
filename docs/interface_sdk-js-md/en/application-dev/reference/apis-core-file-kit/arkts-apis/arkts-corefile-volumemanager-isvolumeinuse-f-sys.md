@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import volumeManager from '@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## isVolumeInUse
@@ -34,7 +34,7 @@ Query whether the specified volume is currently in use. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return whether the specified volume is currently in use. |
+| Promise&lt;boolean&gt; | Promise used to return whether the specified volume is currently in use. |
 
 **Error codes:**
 

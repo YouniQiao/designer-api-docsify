@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor
@@ -32,7 +32,7 @@ constructor(album: Album)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | 是 | 智慧相册。 |
+| album | Album | 是 | 智慧相册。 |
 
 **错误码：**
 
@@ -141,9 +141,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     fetchColumns: [],
     predicates: predicates
   };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
-  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
-  let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
+    let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
+    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+  } catch (err) {
+    console.error(`MediaAlbumChangeRequest constructorDemo failed with error: ${err.code}, ${err.message}`);
+  }
 }
 ```
 
@@ -167,13 +171,13 @@ getOrderPosition(assets: Array<PhotoAsset>): Promise<Array<number>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | 是 | 需要获取顺序位置的相册中资产。 |
+| assets | Array&lt;PhotoAsset&gt; | 是 | 需要获取顺序位置的相册中资产。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | 相册中资产的顺序位置值。 |
+| Promise&lt;Array&lt;number&gt;&gt; | 相册中资产的顺序位置值。 |
 
 **错误码：**
 
@@ -242,7 +246,7 @@ getRelationship(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | 获取的人像相册中的人物关系。 |
+| Promise&lt;string&gt; | 获取的人像相册中的人物关系。 |
 
 **错误码：**
 
@@ -257,7 +261,7 @@ getRelationship(): Promise<string>
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
 
-async function GetRelationshipExample(context: Context) {
+async function getRelationshipExample(context: Context) {
   try {
     console.info('getRelationship');
     let helper: photoAccessHelper.PhotoAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);

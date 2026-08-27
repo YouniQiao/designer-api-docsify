@@ -1,6 +1,8 @@
 # ReminderRequestTimer
 
-ReminderRequestTimer extends ReminderRequest Defines a reminder for a scheduled timer.
+ReminderRequestTimer extends ReminderRequest
+
+Defines a reminder for a scheduled timer.
 
 **Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
 
@@ -11,7 +13,7 @@ ReminderRequestTimer extends ReminderRequest Defines a reminder for a scheduled 
 ## Modules to Import
 
 ```TypeScript
-import reminderAgentManager from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## repeatCount
@@ -20,7 +22,9 @@ import reminderAgentManager from '@kit.BackgroundTasksKit';
 repeatCount?: number
 ```
 
-Number of repetitions. The default value is **0**, indicating infinite repetitions. This parameter must be used together with **repeatInterval**.The value range is [0, +∞). If the value is out of range, error code 401 is returned.
+Number of repetitions. The default value is **0**, indicating infinite repetitions. This parameter must be used together with **repeatInterval**.
+
+The value range is [0, +∞). If the value is out of range, error code 401 is returned.
 
 **Type:** number
 
@@ -36,7 +40,9 @@ Number of repetitions. The default value is **0**, indicating infinite repetitio
 repeatInterval?: number
 ```
 
-Repeat interval. There is no default value. If no value is set, there is no repeat interval. This parameter must be used together with **repeatCount**.The value range is [86400, +∞), in seconds. If the value is out of range, error code 401 is returned.
+Repeat interval. There is no default value. If no value is set, there is no repeat interval. This parameter must be used together with **repeatCount**.
+
+The value range is [86400, +∞), in seconds. If the value is out of range, error code 401 is returned.
 
 **Type:** number
 
@@ -52,7 +58,9 @@ Repeat interval. There is no default value. If no value is set, there is no repe
 triggerTimeInSeconds: number
 ```
 
-Number of seconds in the countdown timer.Unit: s
+Number of seconds in the countdown timer.
+
+Unit: s
 
 **Type:** number
 

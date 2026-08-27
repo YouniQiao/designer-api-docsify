@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getNdef
@@ -30,7 +30,7 @@ function getNdef(tagInfo: TagInfo): NdefTag
 
 | 类型 | 说明 |
 | --- | --- |
-| [NdefTag](arkts-connectivity-nfctech-ndeftag-i.md) | NDEF类型Tag对象，通过该对象访问NDEF类型的相关接口。 |
+| NdefTag | NDEF类型Tag对象，通过该对象访问NDEF类型的相关接口。 |
 
 **错误码：**
 

@@ -1,6 +1,8 @@
 # DivElement
 
-The &lt;div&gt; component provides a div container.@extends Element @interface DivElement
+The &lt;div&gt; component provides a div container.
+
+@extends Element @interface DivElement
 
 **Inheritance/Implementation:** DivElement extends [Element](arkts-arkui-viewmodel-element-i.md)
 

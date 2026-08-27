@@ -26,14 +26,14 @@ Writes event information to the event file of the current day. This API uses a p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventName | string | Yes | Application event name. |
-| eventType | [EventType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes | Application event type. |
+| eventType | EventType | Yes | Application event type. |
 | keyValues | object | Yes | Application event key-value pair params. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to asynchronously process the callback in the **then()** and **catch()** methods when event writing succeeded or failed. |
+| Promise&lt;void&gt; | Promise used to asynchronously process the callback in the **then()** and **catch()** methods when event writing succeeded or failed. |
 
 **Examples**
 
@@ -76,7 +76,7 @@ Writes event information to the event file of the current day. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventName | string | Yes | Application event name. |
-| eventType | [EventType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes | Application event type. |
+| eventType | EventType | Yes | Application event type. |
 | keyValues | object | Yes | Application event key-value pair params. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. |
 

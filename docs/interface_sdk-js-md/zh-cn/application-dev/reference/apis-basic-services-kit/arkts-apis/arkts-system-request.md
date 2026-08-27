@@ -9,7 +9,7 @@ system.request部件主要给应用提供上传下载文件的基础能力。
 ## 导入模块
 
 ```TypeScript
-import Request, { DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from '@kit.BasicServicesKit';
+import { Request, DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOptions, OnDownloadCompleteResponse, RequestData, RequestFile, UploadRequestOptions, UploadResponse } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -18,17 +18,17 @@ import Request, { DownloadRequestOptions, DownloadResponse, OnDownloadCompleteOp
 
 | 名称 | 说明 |
 | --- | --- |
-| [Request(上传下载)](arkts-basicservices-system-request-request-c.md) |  |
+| [Request](arkts-basicservices-system-request-request-c.md) |  |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [DownloadRequestOptions(上传下载)](arkts-basicservices-system-request-downloadrequestoptions-i.md) |  |
-| [DownloadResponse(上传下载)](arkts-basicservices-system-request-downloadresponse-i.md) |  |
-| [OnDownloadCompleteOptions(上传下载)](arkts-basicservices-system-request-ondownloadcompleteoptions-i.md) |  |
-| [OnDownloadCompleteResponse(上传下载)](arkts-basicservices-system-request-ondownloadcompleteresponse-i.md) |  |
-| [RequestData(上传下载)](arkts-basicservices-system-request-requestdata-i.md) |  |
-| [RequestFile(上传下载)](arkts-basicservices-system-request-requestfile-i.md) |  |
-| [UploadRequestOptions(上传下载)](arkts-basicservices-system-request-uploadrequestoptions-i.md) |  |
-| [UploadResponse(上传下载)](arkts-basicservices-system-request-uploadresponse-i.md) |  |
+| [DownloadRequestOptions](arkts-basicservices-system-request-downloadrequestoptions-i.md) |  |
+| [DownloadResponse](arkts-basicservices-system-request-downloadresponse-i.md) |  |
+| [OnDownloadCompleteOptions](arkts-basicservices-system-request-ondownloadcompleteoptions-i.md) |  |
+| [OnDownloadCompleteResponse](arkts-basicservices-system-request-ondownloadcompleteresponse-i.md) |  |
+| [RequestData](arkts-basicservices-system-request-requestdata-i.md) |  |
+| [RequestFile](arkts-basicservices-system-request-requestfile-i.md) |  |
+| [UploadRequestOptions](arkts-basicservices-system-request-uploadrequestoptions-i.md) |  |
+| [UploadResponse](arkts-basicservices-system-request-uploadresponse-i.md) |  |

@@ -42,7 +42,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { sim } from '@kit.TelephonyKit';
 
 sim.getCardType(0, (err: BusinessError, data: sim.CardType) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+    if (err) {
+        console.err(`getCardType failed. callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`callback: data->${JSON.stringify(data)}`);
 });
 ```
 
@@ -69,7 +73,7 @@ function getCardType(slotId: number): Promise<CardType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;CardType & gt; | 以Promise形式返回指定卡槽SIM卡的卡类型。 |
+| Promise&lt;CardType&gt; | 以Promise形式返回指定卡槽SIM卡的卡类型。 |
 
 **错误码：**
 

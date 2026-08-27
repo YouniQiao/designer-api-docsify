@@ -23,8 +23,8 @@ Searching for a specified target.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Target infomation. |
-| params | [SearchParams](../../apis-arkui/arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md) | Yes | Parameters to use when searching. |
+| target | TargetInfo | Yes | Target infomation. |
+| params | SearchParams | Yes | Parameters to use when searching. |
 
 **Return value:**
 

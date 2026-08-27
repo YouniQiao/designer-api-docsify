@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wantAgent, { WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## getUid
@@ -130,7 +130,7 @@ Obtains the user ID of a WantAgent object. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the user ID. |
+| Promise&lt;number&gt; | Promise used to return the user ID. |
 
 **Error codes:**
 

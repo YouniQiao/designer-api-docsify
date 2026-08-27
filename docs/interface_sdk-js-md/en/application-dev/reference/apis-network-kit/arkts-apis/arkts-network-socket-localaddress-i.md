@@ -9,7 +9,7 @@ Defines the address of a local socket file. When the address is passed for bindi
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## address

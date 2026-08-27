@@ -46,7 +46,10 @@ The authorization is canceled.
 AUTHORIZATION_INTERACTION_NOT_ALLOWED = 12300302
 ```
 
-Authorization is rejected because user interaction is not allowed.Possible causes:
+Authorization is rejected because user interaction is not allowed.
+
+Possible causes:
+
 1. The caller is in the background.
 2. The value of **isInteractionAllowed** is **false**.
 3. The specified interaction context is invalid.
@@ -81,7 +84,9 @@ Authorization is rejected because the authorization rules are not met. For examp
 AUTHORIZATION_SERVICE_BUSY = 12300304
 ```
 
-Authorization service is busy.Possible cause: Another authorization is being processed.
+Authorization service is busy.
+
+Possible cause: Another authorization is being processed.
 
 **Since:** 24
 

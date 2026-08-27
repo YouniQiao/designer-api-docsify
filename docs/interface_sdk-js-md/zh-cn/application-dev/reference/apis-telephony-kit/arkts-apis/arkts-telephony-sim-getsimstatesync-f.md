@@ -27,7 +27,7 @@ function getSimStateSync(slotId: number): SimState
 
 | 类型 | 说明 |
 | --- | --- |
-| [SimState](arkts-telephony-sim-simstate-e.md) | 返回获取指定卡槽的SIM卡状态。 |
+| SimState | 返回获取指定卡槽的SIM卡状态。 |
 
 **示例**
 

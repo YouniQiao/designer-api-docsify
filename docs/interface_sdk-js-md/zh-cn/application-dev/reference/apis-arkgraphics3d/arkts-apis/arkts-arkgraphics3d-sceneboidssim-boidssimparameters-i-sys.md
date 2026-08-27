@@ -94,7 +94,7 @@ boundaryMaxPos?: Vec3
 boundaryMinPos?: Vec3
 ```
 
-约束个体运动范围的轴对齐包围盒最小角点，各分量单位为m。 当boundaryMinPos的任一分量大于或等于boundaryMaxPos对应分量时，该个体视为无边界约束。默认值为(0, 0, 0)。
+约束个体运动范围的轴对齐包围盒最小角点，各分量单位为m。当boundaryMinPos的任一分量大于或等于boundaryMaxPos对应分量时，该个体视为无边界约束。默认值为(0, 0, 0)。
 
 **类型：** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 

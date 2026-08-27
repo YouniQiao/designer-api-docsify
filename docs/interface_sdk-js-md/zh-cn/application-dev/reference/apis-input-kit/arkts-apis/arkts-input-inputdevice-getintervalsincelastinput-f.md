@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## getIntervalSinceLastInput
@@ -22,7 +21,7 @@ function getIntervalSinceLastInput(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回距离上次系统输入事件的时间间隔，单位为微秒（μs）。 |
+| Promise&lt;number&gt; | Promise对象，返回距离上次系统输入事件的时间间隔，单位为微秒（μs）。 |
 
 **示例**
 

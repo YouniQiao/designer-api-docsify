@@ -1,6 +1,8 @@
 # FileSystemRequestConfig（系统接口）
 
-配置系统执行碎片清理所需的参数。@interface FileSystemRequestConfig
+配置系统执行碎片清理所需的参数。
+
+@interface FileSystemRequestConfig
 
 **起始版本：** 23
 
@@ -11,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## triggerType

@@ -25,7 +25,7 @@ Obtains the traffic statistics of all applications on the specified network with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| networkInfo | [NetworkInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-cachedownload-networkinfo-i.md) | Yes | Network information. For details, see [NetworkInfo](arkts-network-statistics-networkinfo-i.md). |
+| networkInfo | NetworkInfo | Yes | Network information. For details, see [NetworkInfo](arkts-network-statistics-networkinfo-i.md). |
 
 **Return value:**
 

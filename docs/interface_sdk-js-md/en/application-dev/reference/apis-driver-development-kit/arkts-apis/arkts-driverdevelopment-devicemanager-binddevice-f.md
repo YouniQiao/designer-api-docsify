@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import deviceManager from '@kit.DriverDevelopmentKit';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## bindDevice
@@ -100,7 +100,7 @@ Binds a peripheral device based on the device information returned by **queryDev
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;{deviceId: number; remote: rpc.IRemoteObject; | > } Promise used to return an object containing the device ID and **IRemoteObject**. |
+| Promise&lt;{deviceId: number; remote: rpc.IRemoteObject; | > } Promise used to return an object containing the device ID and **IRemoteObject**. |
 
 **Error codes:**
 

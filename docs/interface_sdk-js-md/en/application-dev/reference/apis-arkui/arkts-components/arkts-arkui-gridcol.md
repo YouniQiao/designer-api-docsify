@@ -30,6 +30,8 @@ Creates a **GridCol** component.
 
 | Name | Description |
 | --- | --- |
+| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md) | Describes the numbers of grid columns occupied by the **GridCol** component on devices with different width types. |
+| [GridColOptions](arkts-arkui-gridcoloptions-i.md) | Defines the options of the **GridCol** component. |
 
 ## Examples
 

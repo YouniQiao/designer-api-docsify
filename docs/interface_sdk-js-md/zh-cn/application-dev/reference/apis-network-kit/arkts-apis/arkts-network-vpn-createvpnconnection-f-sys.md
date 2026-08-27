@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import vpn from '@kit.NetworkKit';
-import vpnExtension from '@kit.NetworkKitExtension';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## createVpnConnection
@@ -31,7 +30,7 @@ function createVpnConnection(context: AbilityContext): VpnConnection
 
 | 类型 | 说明 |
 | --- | --- |
-| [VpnConnection](arkts-network-vpnextension-vpnconnection-i.md) | 返回一个 VPN 连接对象。 |
+| VpnConnection | 返回一个 VPN 连接对象。 |
 
 **错误码：**
 

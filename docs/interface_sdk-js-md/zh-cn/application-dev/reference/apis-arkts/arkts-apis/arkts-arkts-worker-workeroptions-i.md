@@ -9,7 +9,7 @@ Worker构造函数的选项，用于为Worker添加其他信息。
 ## 导入模块
 
 ```TypeScript
-import worker, { DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
+import { worker, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, EventTarget, MessageEvent, MessageEvents, PostMessageOptions, ThreadWorkerGlobalScope, WorkerEventListener, WorkerEventTarget, WorkerOptions, ThreadWorkerPriority, Priority } from '@kit.ArkTS';
 ```
 
 ## name
@@ -18,7 +18,7 @@ import worker, { DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, E
 name?: string
 ```
 
-Worker的名称。默认值为undefined，此时线程名称为'WorkerThread'。 非默认值情况下，对应的线程名称带有'WorkerThread_'前缀。比如name为'testName'时，对应的线程名称为'WorkerThread_testName'。 线程名称可通过HeapMemoryInfo的threadName获取。
+Worker的名称。默认值为undefined，此时线程名称为'WorkerThread'。非默认值情况下，对应的线程名称带有'WorkerThread_'前缀。比如name为'testName'时，对应的线程名称为'WorkerThread_testName'。线程名称可通过HeapMemoryInfo的threadName获取。
 
 **类型：** string
 

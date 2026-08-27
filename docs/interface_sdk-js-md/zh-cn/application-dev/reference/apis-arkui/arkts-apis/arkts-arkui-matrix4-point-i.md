@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import matrix4 from '@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## x
@@ -18,7 +18,9 @@ import matrix4 from '@kit.ArkUI';
 x: number
 ```
 
-x轴坐标。取值范围：(-∞, +∞)
+x轴坐标。
+
+取值范围：(-∞, +∞)
 
 **类型：** number
 
@@ -36,7 +38,9 @@ x轴坐标。取值范围：(-∞, +∞)
 y: number
 ```
 
-y轴坐标。取值范围：(-∞, +∞)
+y轴坐标。
+
+取值范围：(-∞, +∞)
 
 **类型：** number
 

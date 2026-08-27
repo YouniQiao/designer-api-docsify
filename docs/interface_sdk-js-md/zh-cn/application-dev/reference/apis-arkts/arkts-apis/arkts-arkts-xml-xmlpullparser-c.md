@@ -70,7 +70,7 @@ parse(option: ParseOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | 是 | XML解析选项。 |
+| option | ParseOptions | 是 | XML解析选项。 |
 
 **示例**
 
@@ -122,4 +122,4 @@ parseXml(option: ParseOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | 是 | XML解析选项。 |
+| option | ParseOptions | 是 | XML解析选项。 |

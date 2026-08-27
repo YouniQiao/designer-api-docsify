@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import request from '@kit.BasicServicesKit';
-import cacheDownload from '@kit.BasicServicesKit.cacheDownload';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## getTask
@@ -31,7 +30,7 @@ Obtains task information based on the task ID. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Task & gt; | Promise used to return the created task. |
+| Promise&lt;Task&gt; | Promise used to return the created task. |
 
 **Error codes:**
 

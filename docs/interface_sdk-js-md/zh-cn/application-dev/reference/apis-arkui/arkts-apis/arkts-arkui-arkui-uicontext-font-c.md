@@ -91,7 +91,9 @@ struct Index {
 getSystemFontList(): Array<string>
 ```
 
-获取系统支持的字体列表。该接口仅在PC/2in1设备上生效，在其他设备上返回空数组。
+获取系统支持的字体列表。
+
+该接口仅在PC/2in1设备上生效，在其他设备上返回空数组。
 
 > **说明：**
 > 推荐使用[getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md)接口获取系统最新支持的字体列表数据。
@@ -108,7 +110,7 @@ getSystemFontList(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 系统支持的字体名称列表，返回的名称可用于getFontByName方法查询对应字体的详细信息。 |
+| Array&lt;string&gt; | 系统支持的字体名称列表，返回的名称可用于getFontByName方法查询对应字体的详细信息。 |
 
 **示例**
 
@@ -143,7 +145,11 @@ struct Index {
 registerFont(options: font.FontOptions): void
 ```
 
-在字体管理中注册自定义字体。推荐使用字体引擎的[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)接口注册自定义字体。该接口为异步接口，字体注册为异步过程，不支持并发调用。由于注册是异步完成的，建议在页面初始化阶段（如aboutToAppear）提前调用，以确保字体在使用前已注册完成。
+在字体管理中注册自定义字体。
+
+推荐使用字体引擎的[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)接口注册自定义字体。
+
+该接口为异步接口，字体注册为异步过程，不支持并发调用。由于注册是异步完成的，建议在页面初始化阶段（如aboutToAppear）提前调用，以确保字体在使用前已注册完成。
 
 **起始版本：** 10
 
@@ -157,7 +163,7 @@ registerFont(options: font.FontOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | font.FontOptions | 是 | 注册的自定义字体信息。    **说明：**设置注册字体文件的路径，读取系统沙箱路径内的资源时，建议使用file://路径前缀的字符串，需要确保沙箱目录路径下的文件存在并且有可读权限。 |
+| options | font.FontOptions | 是 | 注册的自定义字体信息。   **说明：**设置注册字体文件的路径，读取系统沙箱路径内的资源时，建议使用file://路径前缀的字符串，需要确保沙箱目录路径下的文件存在并且有可读权限。 |
 
 **示例**
 

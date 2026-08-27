@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## capacity
@@ -58,7 +58,9 @@ fileIo.closeSync(file);
 flip(): void
 ```
 
-翻转文件映射区，将写入准备状态切换为读取准备状态。调用后，limit被设置为当前position的值，position被重置为0。推荐在一系列[write()](#write)操作完成后，调用此方法准备后续的[read()](#read)操作。
+翻转文件映射区，将写入准备状态切换为读取准备状态。调用后，limit被设置为当前position的值，position被重置为0。
+
+推荐在一系列[write()](#write)操作完成后，调用此方法准备后续的[read()](#read)操作。
 
 **起始版本：** 26.0.0
 
@@ -179,7 +181,7 @@ fileIo.closeSync(file);
 msync(): Promise<void>
 ```
 
-将整个文件映射区的数据同步到磁盘文件。使用Promise异步回调。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+将整个文件映射区的数据同步到磁盘文件。使用Promise异步回调。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
@@ -191,7 +193,7 @@ msync(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **错误码：**
 
@@ -232,7 +234,7 @@ mapping.msync().then(() => {
 msync(position: number, length: number): Promise<void>
 ```
 
-将文件映射区指定范围内的数据同步到磁盘文件。使用Promise异步回调。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+将文件映射区指定范围内的数据同步到磁盘文件。使用Promise异步回调。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
@@ -251,7 +253,7 @@ msync(position: number, length: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **错误码：**
 
@@ -292,7 +294,7 @@ mapping.msync(50, buffer.byteLength).then(() => {
 msyncSync(): void
 ```
 
-以同步方法将整个文件映射区的数据同步到磁盘文件。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+以同步方法将整个文件映射区的数据同步到磁盘文件。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
@@ -336,7 +338,7 @@ fileIo.closeSync(file);
 msyncSync(position: number, length: number): void
 ```
 
-以同步方法将文件映射区指定范围内的数据同步到磁盘文件。 注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
+以同步方法将文件映射区指定范围内的数据同步到磁盘文件。注意：如果文件不在本地设备上，调用此接口不保证所有更改都已持久化存储。
 
 **起始版本：** 26.0.0
 
@@ -547,7 +549,7 @@ setLimit(limit: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| limit | number | 是 | 要设置的可读写区域上界值，单位为Byte。取值需大于等于0，且小于等于当前[capacity](#capacity)。 若所设值小于文件映射区的当前位置，则当前位置将自动调整至该值。 |
+| limit | number | 是 | 要设置的可读写区域上界值，单位为Byte。取值需大于等于0，且小于等于当前[capacity](#capacity)。若所设值小于文件映射区的当前位置，则当前位置将自动调整至该值。 |
 
 **错误码：**
 
@@ -627,7 +629,7 @@ unmap(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回值。 |
+| Promise&lt;void&gt; | Promise对象。无返回值。 |
 
 **错误码：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screenshot from '@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## saveHdrPicture
@@ -12,7 +12,8 @@ import screenshot from '@kit.ArkUI';
 function saveHdrPicture(options?: HdrScreenshotOptions): Promise<Array<image.PixelMap>>
 ```
 
-Obtains a screenshot. This API uses a promise to return the result. SDR stands for Standard Dynamic Range, and HDR stands for High Dynamic Range.  
+Obtains a screenshot. This API uses a promise to return the result. SDR stands for Standard Dynamic Range, and HDR stands for High Dynamic Range.
+
 - If the screen contains HDR resources (even if they are partially obscured), this API returns an array with both  
 SDR and HDR PixelMaps, regardless of whether HDR is enabled.  
 - If there are no HDR resources, it returns an array with a single SDR PixelMap. Unlike the  
@@ -38,7 +39,7 @@ SDR and HDR PixelMaps, regardless of whether HDR is enabled.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;image.PixelMap & gt; & gt; | Promise used to return an array of PixelMap objects. If the screen contains HDR resources (even if they are partially obscured), the array contains two PixelMaps: the first is an SDR PixelMap, and the second is an HDR PixelMap. If there are no HDR resources, the array contains a single SDR PixelMap. |
+| Promise&lt;Array&lt;image.PixelMap&gt;&gt; | Promise used to return an array of PixelMap objects. If the screen contains HDR resources (even if they are partially obscured), the array contains two PixelMaps: the first is an SDR PixelMap, and the second is an HDR PixelMap. If there are no HDR resources, the array contains a single SDR PixelMap. |
 
 **Error codes:**
 

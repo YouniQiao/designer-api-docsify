@@ -83,7 +83,7 @@ Set the index number of the main SIM card slot.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the setPrimarySlotId. |
+| Promise&lt;void&gt; | The promise returned by the setPrimarySlotId. |
 
 **Error codes:**
 

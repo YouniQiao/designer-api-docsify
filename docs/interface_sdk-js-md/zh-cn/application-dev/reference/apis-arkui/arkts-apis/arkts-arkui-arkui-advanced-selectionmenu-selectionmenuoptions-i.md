@@ -18,8 +18,13 @@ import { EditorEventInfo, EditorMenuOptions, ExpandedMenuOptions, SelectionMenu,
 onCopy?: (event?: EditorEventInfo) => void
 ```
 
-替代内置系统菜单复制项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置复制功能。  
-**说明：**event为返回信息。
+替代内置系统菜单复制项的事件回调。
+
+生效前提是一定要有controller参数，有系统默认菜单才能替换内置复制功能。
+
+**说明：**
+
+event为返回信息。
 
 **起始版本：** 11
 
@@ -41,8 +46,13 @@ onCopy?: (event?: EditorEventInfo) => void
 onCut?: (event?: EditorEventInfo) => void
 ```
 
-替代内置系统菜单剪切项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置剪切功能。  
-**说明：**event为返回信息。
+替代内置系统菜单剪切项的事件回调。
+
+生效前提是一定要有controller参数，有系统默认菜单才能替换内置剪切功能。
+
+**说明：**
+
+event为返回信息。
 
 **起始版本：** 11
 
@@ -64,8 +74,13 @@ onCut?: (event?: EditorEventInfo) => void
 onPaste?: (event?: EditorEventInfo) => void
 ```
 
-替代内置系统菜单粘贴项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置粘贴功能。  
-**说明：**event为返回信息。
+替代内置系统菜单粘贴项的事件回调。
+
+生效前提是一定要有controller参数，有系统默认菜单才能替换内置粘贴功能。
+
+**说明：**
+
+event为返回信息。
 
 **起始版本：** 11
 
@@ -87,8 +102,13 @@ onPaste?: (event?: EditorEventInfo) => void
 onSelectAll?: (event?: EditorEventInfo) => void
 ```
 
-替代内置系统菜单全选项的事件回调。生效前提是一定要有controller参数，有系统默认菜单才能替换内置全选功能。  
-**说明：**event为返回信息。
+替代内置系统菜单全选项的事件回调。
+
+生效前提是一定要有controller参数，有系统默认菜单才能替换内置全选功能。
+
+**说明：**
+
+event为返回信息。
 
 **起始版本：** 11
 
@@ -110,7 +130,7 @@ onSelectAll?: (event?: EditorEventInfo) => void
 backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-菜单背景板使用的系统材质，用于实现菜单背景的视觉效果（如模糊、透明度等）。不同系统材质包含不同的属性，影响最终的显示效果。具体材质类型及属性请参考 [uiMaterial.Material](../../../reference/apis-arkui/arkts-apis-uimaterial.md#material)。默认值：undefined，无材质效果。
+菜单背景板使用的系统材质，用于实现菜单背景的视觉效果（如模糊、透明度等）。不同系统材质包含不同的属性，影响最终的显示效果。具体材质类型及属性请参考[uiMaterial.Material](../../../reference/apis-arkui/arkts-apis-uimaterial.md#material)。默认值：undefined，无材质效果。
 
 **类型：** uiMaterial.Material
 
@@ -128,7 +148,13 @@ backgroundSystemMaterial?: uiMaterial.Material
 controller?: RichEditorController
 ```
 
-扩展下拉菜单。expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
+扩展下拉菜单。
+
+expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。
+
+expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。
+
+controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
 
 **类型：** [RichEditorController](../arkts-components/arkts-arkui-richeditorcontroller-c.md)
 
@@ -146,7 +172,13 @@ controller?: RichEditorController
 editorMenuOptions?: Array<EditorMenuOptions>
 ```
 
-编辑菜单。editorMenuOptions未配置时，不显示编辑菜单。同时配置EditorMenuOptions中action和builder时，点击图标会同时响应。点击编辑菜单图标默认不关闭整个菜单，应用可以通过action接口配置RichEditorController的closeSelectionMenu主动关闭菜单。
+编辑菜单。
+
+editorMenuOptions未配置时，不显示编辑菜单。
+
+同时配置EditorMenuOptions中action和builder时，点击图标会同时响应。
+
+点击编辑菜单图标默认不关闭整个菜单，应用可以通过action接口配置RichEditorController的closeSelectionMenu主动关闭菜单。
 
 **类型：** Array&lt;[EditorMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-editormenuoptions-i.md)&gt;
 
@@ -164,7 +196,13 @@ editorMenuOptions?: Array<EditorMenuOptions>
 expandedMenuOptions?: Array<ExpandedMenuOptions>
 ```
 
-扩展下拉菜单。expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
+扩展下拉菜单。
+
+expandedMenuOptions参数为空时无更多按钮，不显示扩展下拉菜单。
+
+expandedMenuOptions参数不为空时显示更多按钮，配置菜单项收起在更多按钮中，点击更多按钮展示。
+
+controller为空时不显示更多按钮，expandedMenuOptions参数不为空则在下拉菜单中显示。
 
 **类型：** Array&lt;[ExpandedMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-expandedmenuoptions-i.md)&gt;
 

@@ -100,7 +100,9 @@ Delete text in TextRange.
 getCaretOffset() : CaretOffset
 ```
 
-Get the index and relative position of the CaretOffset.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: If this API is called when the caret position is updated in the current frame, it will not take effect. For the Search component, the returned position information is the offset of the first character relative to the search icon in the component. If no text is entered in the Search component, the return value contains the position information relative to the component. The location information in the return value is the location of the caret relative to the editable component. </p>
+Get the index and relative position of the CaretOffset.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: If this API is called when the caret position is updated in the current frame, it will not take effect. For the Search component, the returned position information is the offset of the first character relative to the search icon in the component. If no text is entered in the Search component, the return value contains the position information relative to the component. The location information in the return value is the location of the caret relative to the editable component. </p>
 
 **起始版本：** 12
 
@@ -166,7 +168,9 @@ Get the lines number of the text content. The getTextContentLineCount type is us
 getTextContentRect() : RectResult
 ```
 
-Get the start and end positions of the text content.<p>&lt;strong&gt;NOTE&lt;/strong&gt;: If no text is entered, the return value contains the position information, but the size is 0. The position information is the offset of the first character relative to the editable area. For the Search component, the returned position information is the offset of the first character relative to the search icon in the component. If there is input, the width in the return value is the fixed width of the editable area. </p>
+Get the start and end positions of the text content.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt;: If no text is entered, the return value contains the position information, but the size is 0. The position information is the offset of the first character relative to the editable area. For the Search component, the returned position information is the offset of the first character relative to the search icon in the component. If there is input, the width in the return value is the fixed width of the editable area. </p>
 
 **起始版本：** 11
 
@@ -202,7 +206,7 @@ scrollToVisible(range?: TextRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | 可见区范围。 若该参数非法，则本方法不会生效。 |
+| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | 可见区范围。若该参数非法，则本方法不会生效。 |
 
 ## setStyledPlaceholder
 
@@ -224,4 +228,4 @@ setStyledPlaceholder(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 设置提示文本样式的属性字符串 若传入的入参无效，则本接口不生效 |
+| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 设置提示文本样式的属性字符串若传入的入参无效，则本接口不生效 |

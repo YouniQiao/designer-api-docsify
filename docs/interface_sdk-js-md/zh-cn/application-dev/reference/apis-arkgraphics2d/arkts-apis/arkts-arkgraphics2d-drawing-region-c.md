@@ -17,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -90,7 +90,7 @@ constructor(region: Region)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | 是 | 用于拷贝的区域。 |
+| region | Region | 是 | 用于拷贝的区域。 |
 
 **示例**
 
@@ -181,7 +181,7 @@ getBoundaryPath(): Path
 
 | 类型 | 说明 |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回当前区域边界的路径。 |
+| Path | 返回当前区域边界的路径。 |
 
 **示例**
 
@@ -353,7 +353,7 @@ isEqual(other: Region): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | 是 | 用于与当前区域进行比较的其他区域对象。 |
+| other | Region | 是 | 用于与当前区域进行比较的其他区域对象。 |
 
 **返回值：**
 
@@ -525,7 +525,7 @@ isRegionContained(other: Region): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | 是 | 用于判断是否在当前区域内的其他区域对象。 |
+| other | Region | 是 | 用于判断是否在当前区域内的其他区域对象。 |
 
 **返回值：**
 
@@ -641,7 +641,7 @@ op(region: Region, regionOp: RegionOp): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | 是 | 用于与当前区域进行运算的指定区域对象。 |
+| region | Region | 是 | 用于与当前区域进行运算的指定区域对象。 |
 | regionOp | [RegionOp](arkts-arkgraphics2d-drawing-regionop-e.md) | 是 | 区域运算操作类型。 |
 
 **返回值：**
@@ -827,7 +827,7 @@ quickRejectRegion(region: Region): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | 是 | 用于判断是否与当前区域不相交的指定区域对象。 |
+| region | Region | 是 | 用于判断是否与当前区域不相交的指定区域对象。 |
 
 **返回值：**
 
@@ -912,8 +912,8 @@ setPath(path: Path, clip: Region): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 用于设置区域轮廓的路径对象。 |
-| clip | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | 是 | 裁剪区域对象，用于限定路径轮廓的有效范围，仅路径在裁剪区域内的部分会被用于设置区域。 |
+| path | Path | 是 | 用于设置区域轮廓的路径对象。 |
+| clip | Region | 是 | 裁剪区域对象，用于限定路径轮廓的有效范围，仅路径在裁剪区域内的部分会被用于设置区域。 |
 
 **返回值：**
 
@@ -1035,7 +1035,7 @@ setRegion(region: Region): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | 是 | 用于设置当前区域内容的源区域对象。 |
+| region | Region | 是 | 用于设置当前区域内容的源区域对象。 |
 
 **示例**
 

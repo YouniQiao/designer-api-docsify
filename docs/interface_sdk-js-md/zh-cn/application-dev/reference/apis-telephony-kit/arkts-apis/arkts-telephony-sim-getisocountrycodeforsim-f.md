@@ -42,7 +42,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { sim } from '@kit.TelephonyKit';
 
 sim.getISOCountryCodeForSim(0, (err: BusinessError, data: string) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+    if (err) {
+        console.err(`getISOCountryCodeForSim failed. callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`callback: data->${JSON.stringify(data)}`);
 });
 ```
 
@@ -69,7 +73,7 @@ function getISOCountryCodeForSim(slotId: number): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | 以Promise形式返回获取指定卡槽SIM卡的ISO国家码。例如：CN(中国)。 |
+| Promise&lt;string&gt; | 以Promise形式返回获取指定卡槽SIM卡的ISO国家码。例如：CN(中国)。 |
 
 **错误码：**
 

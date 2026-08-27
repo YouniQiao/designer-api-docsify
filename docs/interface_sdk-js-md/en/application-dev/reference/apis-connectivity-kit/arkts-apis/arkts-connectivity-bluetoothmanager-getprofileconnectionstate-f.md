@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## getProfileConnectionState
@@ -30,13 +30,13 @@ Obtains the connection state of profile. On API 10 and above, the permission req
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | [ProfileId](arkts-connectivity-constant-profileid-e.md) | Yes | The profile id. |
+| profileId | ProfileId | Yes | The profile id. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | Returns the connection state. |
+| ProfileConnectionState | Returns the connection state. |
 
 **Error codes:**
 

@@ -40,7 +40,13 @@ ChipGroupV2Padding的构造函数。
 public bottom: Length
 ```
 
-ChipGroupV2的下方内边距（不支持百分比）。默认值：14单位：vp值为undefined时，按默认值处理。
+ChipGroupV2的下方内边距（不支持百分比）。
+
+默认值：14
+
+单位：vp
+
+值为undefined时，按默认值处理。
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
@@ -58,7 +64,13 @@ ChipGroupV2的下方内边距（不支持百分比）。默认值：14单位：v
 public top: Length
 ```
 
-ChipGroupV2的上方内边距（不支持百分比）。默认值：14单位：vp值为undefined时，按默认值处理。
+ChipGroupV2的上方内边距（不支持百分比）。
+
+默认值：14
+
+单位：vp
+
+值为undefined时，按默认值处理。
 
 **类型：** [Length](arkts-arkui-length-t.md)
 

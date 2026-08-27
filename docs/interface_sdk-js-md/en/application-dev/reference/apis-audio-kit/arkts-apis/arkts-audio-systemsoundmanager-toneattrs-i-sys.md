@@ -11,7 +11,7 @@ Tone attributes.
 ## Modules to Import
 
 ```TypeScript
-import systemSoundManager from '@kit.AudioKit';
+import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## getCategory
@@ -132,7 +132,7 @@ Gets media type. This function returns [AUDIO](arkts-audio-systemsoundmanager-me
 
 | Type | Description |
 | --- | --- |
-| [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | Media type. |
+| MediaType | Media type. |
 
 **Error codes:**
 
@@ -306,7 +306,7 @@ Sets media type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | Yes | Target media type. |
+| type | MediaType | Yes | Target media type. |
 
 **Error codes:**
 

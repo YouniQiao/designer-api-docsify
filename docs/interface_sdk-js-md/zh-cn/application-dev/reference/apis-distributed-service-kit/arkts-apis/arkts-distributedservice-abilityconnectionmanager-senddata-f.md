@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## sendData
@@ -12,7 +12,7 @@ import abilityConnectionManager from '@kit.DistributedServiceKit';
 function sendData(sessionId: number, data: ArrayBuffer): Promise<void>
 ```
 
-创建协同会话成功并获得会话ID、应用连接成功后，设备A或设备B可向对端设备发送 [ArrayBuffer](../../../arkts-utils/arraybuffer-object.md)字节流。使用Promise异步回调。
+创建协同会话成功并获得会话ID、应用连接成功后，设备A或设备B可向对端设备发送[ArrayBuffer](../../../arkts-utils/arraybuffer-object.md)字节流。使用Promise异步回调。
 
 **起始版本：** 18
 
@@ -31,7 +31,7 @@ function sendData(sessionId: number, data: ArrayBuffer): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的promise对象。 |
 
 **错误码：**
 

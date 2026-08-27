@@ -9,7 +9,7 @@ Represents optional configuration items for the ISO8601DateTimeFormat object. Th
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## dateFormat

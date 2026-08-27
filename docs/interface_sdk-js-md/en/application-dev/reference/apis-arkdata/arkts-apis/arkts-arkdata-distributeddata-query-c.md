@@ -13,7 +13,6 @@ Provides APIs to create a **Query** object, which defines different data query c
 ## Modules to Import
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## and
@@ -36,7 +35,7 @@ Creates a **Query** object with the AND condition.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -73,7 +72,7 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -114,15 +113,6 @@ deviceId(deviceId: string): Query
 
 Creates a **Query** object with the device ID as the key prefix.
 
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by <!--RP1--
-> 
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
-> <!--RP1End-->The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
-
 **Since:** 8
 
 **Deprecated since:** 9
@@ -141,7 +131,7 @@ Creates a **Query** object with the device ID as the key prefix.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -175,7 +165,7 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -219,7 +209,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -295,7 +285,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -337,7 +327,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -379,7 +369,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -421,7 +411,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -462,7 +452,7 @@ Creates a **Query** object to search for the records whose value is not **null**
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -503,7 +493,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -545,7 +535,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -587,7 +577,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -629,7 +619,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -671,7 +661,7 @@ Creates a **Query** object to specify the number of records in the query result 
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -716,7 +706,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -758,7 +748,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -800,7 +790,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -835,7 +825,7 @@ Creates a **Query** object with the OR condition.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -878,7 +868,7 @@ Creates a **Query** object to sort the query results in ascending order.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -920,7 +910,7 @@ Creates a **Query** object to sort the query results in descending order.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -962,7 +952,7 @@ Creates a **Query** object with a specified key prefix.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -998,7 +988,7 @@ Resets the **Query** object.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object reset. |
+| Query | Query** object reset. |
 
 **Examples**
 
@@ -1041,7 +1031,7 @@ Creates a **Query** object with an index preferentially used for query.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 
@@ -1084,7 +1074,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Examples**
 

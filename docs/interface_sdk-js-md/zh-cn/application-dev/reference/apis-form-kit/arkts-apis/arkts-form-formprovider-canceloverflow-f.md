@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## cancelOverflow
@@ -12,7 +12,7 @@ import formProvider from '@kit.FormKit';
 function cancelOverflow(formId: string): Promise<void>
 ```
 
-卡片提供方发起取消互动卡片动效请求，只针对[场景动效类型互动卡片](../../../form/arkts-ui-widget-configuration.md#sceneanimationparams标签)生效，使用 Promise异步回调。
+卡片提供方发起取消互动卡片动效请求，只针对[场景动效类型互动卡片](../../../form/arkts-ui-widget-configuration.md#sceneanimationparams标签)生效，使用Promise异步回调。
 
 > **说明：**
 > 
@@ -37,7 +37,7 @@ function cancelOverflow(formId: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

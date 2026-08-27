@@ -17,7 +17,11 @@
 height?: number
 ```
 
-自定义绘制Span的高。默认值：不传入时默认取Text组件的fontSize值作为CustomSpan的高度。单位：[vp](arkts-arkui-length-t.md)
+自定义绘制Span的高。
+
+默认值：不传入时默认取Text组件的fontSize值作为CustomSpan的高度。
+
+单位：[vp](arkts-arkui-length-t.md)
 
 **类型：** number
 
@@ -35,7 +39,9 @@ height?: number
 width: number
 ```
 
-自定义绘制Span的宽。单位：[vp](arkts-arkui-length-t.md)
+自定义绘制Span的宽。
+
+单位：[vp](arkts-arkui-length-t.md)
 
 **类型：** number
 

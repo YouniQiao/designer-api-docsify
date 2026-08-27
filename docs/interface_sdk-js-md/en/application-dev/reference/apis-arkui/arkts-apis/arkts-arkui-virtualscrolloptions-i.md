@@ -17,7 +17,10 @@ Configures the expected total number of data items to be loaded in lazy loading 
 onLazyLoading?(index: number): void
 ```
 
-(Optional) Lazily loads data at a specified index. You need to provide a data loading method.The **onLazyLoading** method must be used in lazy loading scenarios. You can implement a custom method to write data to a specified index in the data source. The processing rules for **onLazyLoading** are as follows:  
+(Optional) Lazily loads data at a specified index. You need to provide a data loading method.
+
+The **onLazyLoading** method must be used in lazy loading scenarios. You can implement a custom method to write data to a specified index in the data source. The processing rules for **onLazyLoading** are as follows:
+
 - Before reading the data corresponding to an index in the data source, the **Repeat** component checks whether  
 data exists at the index.  
 - If no data exists but the **onLazyLoading** method is implemented, **Repeat** calls this method.  
@@ -65,7 +68,12 @@ List() {
 onTotalCount?(): number
 ```
 
-(Optional) Calculates the expected total number of data items to be loaded. You need to provide a calculation method, and its return value may not be equal to the data source length (length of the array passed to **Repeat**).Both the return values of [totalCount](#virtualscrolloptions) and **onTotalCount()** indicate the expected total number of data items to be loaded. You can directly set the **totalCount** attribute to specify the expected total number of data items to be loaded, or use **onTotalCount()** to set a custom method to calculate the expected total number of data items to be loaded. Use either **totalCount** or **onTotalCount**. If neither is set, the default value is used. If both are set, **totalCount** is ignored.The data loading rules for different return values of **onTotalCount()** are the same as those for **totalCount**. The details are as follows:  
+(Optional) Calculates the expected total number of data items to be loaded. You need to provide a calculation method, and its return value may not be equal to the data source length (length of the array passed to **Repeat**).
+
+Both the return values of [totalCount](#virtualscrolloptions) and **onTotalCount()** indicate the expected total number of data items to be loaded. You can directly set the **totalCount** attribute to specify the expected total number of data items to be loaded, or use **onTotalCount()** to set a custom method to calculate the expected total number of data items to be loaded. Use either **totalCount** or **onTotalCount**. If neither is set, the default value is used. If both are set, **totalCount** is ignored.
+
+The data loading rules for different return values of **onTotalCount()** are the same as those for **totalCount**. The details are as follows:
+
 - If the return value of **onTotalCount()** is **0**, no data is loaded.  
 - If the return value of **onTotalCount()** is in the range (0, Data source length], only data in the index range  
 [0, Return value – 1] is loaded.  
@@ -112,9 +120,13 @@ Memory optimization strategy for Repeat VirtualScroll.
 reusable?: boolean
 ```
 
-Whether to enable the reuse feature.  
-**true**: Enable the reuse feature.  
-**false**: Disable the reuse feature.Default value: **true**.
+Whether to enable the reuse feature.
+
+**true**: Enable the reuse feature.
+
+**false**: Disable the reuse feature.
+
+Default value: **true**.
 
 **Type:** boolean
 
@@ -132,7 +144,19 @@ Whether to enable the reuse feature.
 totalCount?: number
 ```
 
-Expected total number of data items to be loaded, which may not be equal to the data source length (length of the array passed to **Repeat**).Value range: natural numbers If **totalCount** is not specified or exceeds the value range, **totalCount** takes the value of the data source length, and the list scrolls normally.If **totalCount** is set to **0**, no data is loaded.If the value of **totalCount** is in the range (0, Data source length], only data in the range [0, **totalCount** – 1] is rendered on the GUI.If the value of **totalCount** is greater than the data source length, the **Repeat** component renders data in the range [0, **totalCount** – 1], and the scrollbar style of the container component changes according to the value of **totalCount**. During the scrolling of the container component, the application must ensure that subsequent data is requested before the list is about to reach the end of the data source. You need to handle error scenarios (such as network delays) for data requests until all data sources are loaded; otherwise, scrolling exceptions may occur during list scrolling. You are advised to use [onLazyLoading](#onlazyloading) to implement lazy loading.In addition to the **totalCount** attribute, you can also use the [onTotalCount](#ontotalcount) method to set a custom method to calculate the expected total number of data items to be loaded.
+Expected total number of data items to be loaded, which may not be equal to the data source length (length of the array passed to **Repeat**).
+
+Value range: natural numbers
+
+If **totalCount** is not specified or exceeds the value range, **totalCount** takes the value of the data source length, and the list scrolls normally.
+
+If **totalCount** is set to **0**, no data is loaded.
+
+If the value of **totalCount** is in the range (0, Data source length], only data in the range [0, **totalCount** – 1] is rendered on the GUI.
+
+If the value of **totalCount** is greater than the data source length, the **Repeat** component renders data in the range [0, **totalCount** – 1], and the scrollbar style of the container component changes according to the value of **totalCount**. During the scrolling of the container component, the application must ensure that subsequent data is requested before the list is about to reach the end of the data source. You need to handle error scenarios (such as network delays) for data requests until all data sources are loaded; otherwise, scrolling exceptions may occur during list scrolling. You are advised to use [onLazyLoading](#onlazyloading) to implement lazy loading.
+
+In addition to the **totalCount** attribute, you can also use the [onTotalCount](#ontotalcount) method to set a custom method to calculate the expected total number of data items to be loaded.
 
 **Type:** number
 

@@ -23,8 +23,15 @@ Provides configuration options for the **Rating** component.
 indicator?: boolean
 ```
 
-Whether the component is used as an indicator. If this parameter is set to **true**, the rating value cannot be changed.Default value: **false**  
-**NOTE：**When **indicator** is set to **true**, the default component height is 12.0 vp, and the component width is calculated as follows: Height x Value of **stars**.When **indicator** is set to **false**, the default component height is 28.0 vp, and the component width is calculated as follows: Height x Value of **stars**.
+Whether the component is used as an indicator. If this parameter is set to **true**, the rating value cannot be changed.
+
+Default value: **false**
+
+**NOTE：**
+
+When **indicator** is set to **true**, the default component height is 12.0 vp, and the component width is calculated as follows: Height x Value of **stars**.
+
+When **indicator** is set to **false**, the default component height is 28.0 vp, and the component width is calculated as follows: Height x Value of **stars**.
 
 **Type:** boolean
 
@@ -42,7 +49,15 @@ Whether the component is used as an indicator. If this parameter is set to **tru
 rating: number
 ```
 
-Value to rate.Default value: **0**Value range: [0, stars]Values less than 0 are treated as **0**, and values greater than the value of [stars](arkts-arkui-rating-attribute.md#stars) are treated as the value of **stars**.This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Value to rate.
+
+Default value: **0**
+
+Value range: [0, stars]
+
+Values less than 0 are treated as **0**, and values greater than the value of [stars](arkts-arkui-rating-attribute.md#stars) are treated as the value of **stars**.
+
+This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** number
 

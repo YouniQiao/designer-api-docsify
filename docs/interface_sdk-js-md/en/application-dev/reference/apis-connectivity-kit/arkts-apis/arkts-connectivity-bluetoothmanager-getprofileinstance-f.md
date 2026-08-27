@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## getProfileInstance
@@ -26,13 +26,13 @@ Obtains the instance of profile.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | [ProfileId](arkts-connectivity-constant-profileid-e.md) | Yes | The profile id.. |
+| profileId | ProfileId | Yes | The profile id.. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| A2dpSourceProfile \| HandsFreeAudioGatewayProfile \| HidHostProfile \| [PanProfile](arkts-connectivity-pan-panprofile-i.md) | Returns the instance of profile. |
+| A2dpSourceProfile \| HandsFreeAudioGatewayProfile \| HidHostProfile \| PanProfile | Returns the instance of profile. |
 
 **Error codes:**
 

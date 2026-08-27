@@ -45,7 +45,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let slotId: number = 0;
 radio.getNetworkState(slotId, (err: BusinessError, data: radio.NetworkState) => {
     if (err) {
-        console.error(`getNetworkState failed, callback: err->${JSON.stringify(err)}`);
+        console.error(`getNetworkState failed, callback: err code: ${err.code}, message: ${err.message}`);
         return;
     }
     console.info(`getNetworkState success, callback: data->${JSON.stringify(data)}`);
@@ -77,7 +77,7 @@ function getNetworkState(slotId?: number): Promise<NetworkState>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;NetworkState & gt; | Promise对象，返回网络状态。 |
+| Promise&lt;NetworkState&gt; | Promise对象，返回网络状态。 |
 
 **错误码：**
 
@@ -95,11 +95,13 @@ function getNetworkState(slotId?: number): Promise<NetworkState>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// 指定卡槽ID，0表示卡槽1
 let slotId: number = 0;
+// 获取网络状态，使用Promise异步回调
 radio.getNetworkState(slotId).then((data: radio.NetworkState) => {
     console.info(`getNetworkState success, promise: data->${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-    console.error(`getNetworkState failed, promise: err->${JSON.stringify(err)}`);
+    console.error(`getNetworkState failed, promise: err code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -142,7 +144,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 radio.getNetworkState((err: BusinessError, data: radio.NetworkState) => {
     if (err) {
-        console.error(`getNetworkState failed, callback: err->${JSON.stringify(err)}`);
+        console.error(`getNetworkState failed, callback: err code: ${err.code}, message: ${err.message}`);
         return;
     }
     console.info(`getNetworkState success, callback: data->${JSON.stringify(data)}`);

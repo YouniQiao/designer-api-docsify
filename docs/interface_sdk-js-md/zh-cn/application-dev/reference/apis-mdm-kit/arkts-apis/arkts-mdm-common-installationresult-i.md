@@ -1,6 +1,8 @@
 # InstallationResult
 
-应用安装结果。该对象目前在 [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult) 作为回调入参使用。
+应用安装结果。
+
+该对象目前在[EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult)作为回调入参使用。
 
 **起始版本：** 22
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import common from '@kit.MDMKit';
+import { common } from '@kit.MDMKit';
 ```
 
 ## message

@@ -1,6 +1,8 @@
 # TreeView
 
-The **TreeView** component represents a tree view used to display a hierarchical list of items. Each item can contain subitems, which may be expanded or collapsed.This component is applicable in productivity applications, such as side navigation bars in notepad, email, and Gallery applications.
+The **TreeView** component represents a tree view used to display a hierarchical list of items. Each item can contain subitems, which may be expanded or collapsed.
+
+This component is applicable in productivity applications, such as side navigation bars in notepad, email, and Gallery applications.
 
 > **NOTE：**
 > 
@@ -19,7 +21,6 @@ The **TreeView** component represents a tree view used to display a hierarchical
 
 ```TypeScript
 import { CallbackParam, NodeParam, TreeController, TreeListenType, TreeListener, TreeListenerManager, TreeView } from '@kit.ArkUI';
-import { CallbackParamV2, NodeParamV2, TreeControllerV2, TreeListenerV2, TreeListenerManagerV2, TreeViewV2 } from '@kit.ArkUIV2';
 ```
 
 ## treeController

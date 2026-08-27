@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllNewPreinstalledApplicationInfo
@@ -28,7 +28,7 @@ Obtains PreinstalledApplicationInfo of all newly added preinstalled applications
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;PreinstalledApplicationInfo & gt; & gt; | Returns a list of PreinstalledApplicationInfo objects. |
+| Promise&lt;Array&lt;PreinstalledApplicationInfo&gt;&gt; | Returns a list of PreinstalledApplicationInfo objects. |
 
 **Error codes:**
 

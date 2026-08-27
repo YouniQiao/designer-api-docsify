@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## connectToCandidateConfig
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function connectToCandidateConfig(networkId: number): void
 ```
 
-通过networkId连接到指定的候选热点，只允许连接自己添加的配置。此方法一次连接一个配置。 应用必须在前台运行。
+通过networkId连接到指定的候选热点，只允许连接自己添加的配置。此方法一次连接一个配置。应用必须在前台运行。
 
 **起始版本：** 12
 
@@ -81,7 +80,7 @@ function connectToCandidateConfig(settings: ConnectSettings): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 返回用于返回操作结果的Promise对象。 如果操作失败，返回错误信息。 |
+| Promise&lt;void&gt; | 返回用于返回操作结果的Promise对象。如果操作失败，返回错误信息。 |
 
 **错误码：**
 

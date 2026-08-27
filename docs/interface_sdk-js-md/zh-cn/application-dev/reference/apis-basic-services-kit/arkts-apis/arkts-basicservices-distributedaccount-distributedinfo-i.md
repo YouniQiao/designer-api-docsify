@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedAccount from '@kit.BasicServicesKit';
+import { distributedAccount } from '@kit.BasicServicesKit';
 ```
 
 ## avatar
@@ -32,10 +32,14 @@ avatar?: string
 event: string
 ```
 
-分布式账号登录状态，包括登录、登出、Token失效和注销，分别对应以下字符串：  
-- Ohos.account.event.LOGIN  
-- Ohos.account.event.LOGOUT  
-- Ohos.account.event.TOKEN_INVALID  
+分布式账号登录状态，包括登录、登出、Token失效和注销，分别对应以下字符串：
+
+- Ohos.account.event.LOGIN
+
+- Ohos.account.event.LOGOUT
+
+- Ohos.account.event.TOKEN_INVALID
+
 - Ohos.account.event.LOGOFF
 
 **类型：** string

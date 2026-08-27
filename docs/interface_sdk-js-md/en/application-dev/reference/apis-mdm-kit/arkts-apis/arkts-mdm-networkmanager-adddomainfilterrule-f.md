@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## addDomainFilterRule
@@ -12,7 +12,10 @@ import networkManager from '@kit.MDMKit';
 function addDomainFilterRule(admin: Want, domainFilterRule: DomainFilterRule): void
 ```
 
-Adds domain name filtering rules for the device.In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.  
+Adds domain name filtering rules for the device.
+
+In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.
+
 [LogType](arkts-mdm-networkmanager-logtype-e.md) is supported since API version 23.
 
 > **NOTE：**

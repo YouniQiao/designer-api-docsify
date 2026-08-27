@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## createKVManager
@@ -26,7 +25,7 @@ function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVMana
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | 是 | 提供KVManager实例的配置信息，包括调用方的Bundle名称和用户信息。 |
+| config | KVManagerConfig | 是 | 提供KVManager实例的配置信息，包括调用方的Bundle名称和用户信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVManager&gt; | 是 | 回调函数。返回创建的KVManager对象实例。 |
 
 **示例**
@@ -43,14 +42,14 @@ try {
     }
     distributedData.createKVManager(kvManagerConfig, function (err, manager) {
         if (err) {
-            console.log("Failed to create KVManager: "  + JSON.stringify(err));
+            console.error("Failed to create KVManager: "  + JSON.stringify(err));
             return;
         }
-        console.log("Succeeded in creating KVManager");
+        console.info("Succeeded in creating KVManager");
         kvManager = manager;
     });
 } catch (e) {
-    console.log("An unexpected error occurred. Error:" + e);
+    console.error("An unexpected error occurred. Error:" + e);
 }
 ```
 
@@ -75,13 +74,13 @@ function createKVManager(config: KVManagerConfig): Promise<KVManager>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | 是 | 提供KVManager实例的配置信息，包括调用方的包名和用户信息。 |
+| config | KVManagerConfig | 是 | 提供KVManager实例的配置信息，包括调用方的包名和用户信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;KVManager & gt; | Promise对象。返回创建的KVManager对象实例。 |
+| Promise&lt;KVManager&gt; | Promise对象。返回创建的KVManager对象实例。 |
 
 **示例**
 
@@ -95,12 +94,12 @@ try {
     }
   }
   distributedData.createKVManager(kvManagerConfig).then((manager) => {
-    console.log("Succeeded in creating KVManager");
+    console.info("Succeeded in creating KVManager");
     kvManager = manager;
   }).catch((err) => {
     console.error("Failed to create KVManager: " + JSON.stringify(err));
   });
 } catch (e) {
-  console.log("An unexpected error occurred. Error:" + e);
+  console.error("An unexpected error occurred. Error:" + e);
 }
 ```

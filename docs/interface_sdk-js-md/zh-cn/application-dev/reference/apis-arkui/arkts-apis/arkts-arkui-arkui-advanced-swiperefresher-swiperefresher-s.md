@@ -20,7 +20,6 @@
 
 ```TypeScript
 import { SwipeRefresher } from '@kit.ArkUI';
-import { SwipeRefresherV2 } from '@kit.ArkUIV2';
 ```
 
 ## content
@@ -29,7 +28,10 @@ import { SwipeRefresherV2 } from '@kit.ArkUIV2';
 content?: ResourceStr
 ```
 
-内容加载时显示的文本。默认值：空字符串。  
+内容加载时显示的文本。
+
+默认值：空字符串。
+
 **说明：**如果文本大于列宽时，文本被截断。从API version 20开始，支持Resource类型。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
@@ -48,7 +50,11 @@ content?: ResourceStr
 isLoading: boolean
 ```
 
-当前是否正在加载。true：正在加载。false：未在加载。
+当前是否正在加载。
+
+true：正在加载。
+
+false：未在加载。
 
 **类型：** boolean
 

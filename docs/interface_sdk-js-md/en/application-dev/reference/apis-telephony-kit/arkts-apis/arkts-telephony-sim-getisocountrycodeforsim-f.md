@@ -69,7 +69,7 @@ Obtains the ISO country code of the SIM card in the specified slot. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result, which is the ISO country code of the SIM card in the specified slot, for example, **CN** (China). |
+| Promise&lt;string&gt; | Promise used to return the result, which is the ISO country code of the SIM card in the specified slot, for example, **CN** (China). |
 
 **Error codes:**
 

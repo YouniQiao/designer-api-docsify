@@ -1,6 +1,8 @@
 # EmbeddedType
 
-Enum of EmbeddedType@enum { number }
+Enum of EmbeddedType
+
+@enum { number }
 
 **起始版本：** 12
 

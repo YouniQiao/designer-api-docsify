@@ -1,6 +1,7 @@
 # domain(Application Event Logging)
 
-Provides domain name constants.  
+Provides domain name constants.
+
 | Name| Type | Read Only | Description | | --- | ------ | ------ | ---------- | | OS | string | Yes| System domain.|
 
 **Since:** 11
@@ -18,4 +19,4 @@ Provides domain name constants.
 
 | Name | Description |
 | --- | --- |
-| [OS(Application Event Logging)](arkts-performanceanalysis-domain-con.md#os) | System domain. |
+| [OS](arkts-performanceanalysis-domain-con.md#os) | System domain. |

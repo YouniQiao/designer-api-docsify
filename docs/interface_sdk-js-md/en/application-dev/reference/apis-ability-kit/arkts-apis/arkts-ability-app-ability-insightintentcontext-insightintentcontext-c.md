@@ -9,7 +9,7 @@ The module provides the context for intent execution. It is used as a property i
 ## Modules to Import
 
 ```TypeScript
-import InsightIntentContext from '@kit.AbilityKit';
+import { InsightIntentContext } from '@kit.AbilityKit';
 ```
 
 ## setReturnModeForUIAbilityForeground
@@ -261,7 +261,7 @@ Starts a UIAbility. This API can only be used to start UIAbility components with
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

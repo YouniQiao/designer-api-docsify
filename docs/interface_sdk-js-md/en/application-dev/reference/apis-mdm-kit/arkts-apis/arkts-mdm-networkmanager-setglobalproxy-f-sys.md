@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## setGlobalProxy
@@ -111,7 +111,7 @@ Sets the global network proxy. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object will be thrown if the operation fails. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object will be thrown if the operation fails. |
 
 **Error codes:**
 

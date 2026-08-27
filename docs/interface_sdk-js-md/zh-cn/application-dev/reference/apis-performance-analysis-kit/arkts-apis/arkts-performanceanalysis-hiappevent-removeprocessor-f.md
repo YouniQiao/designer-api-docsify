@@ -23,7 +23,7 @@ function removeProcessor(id: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | number | 是 | 上报事件数据处理者ID。值大于0。由调用[addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md)或 [addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md)接口返回值所得。 |
+| id | number | 是 | 上报事件数据处理者ID。值大于0。由调用[addProcessor](arkts-performanceanalysis-hiappevent-addprocessor-f.md)或[addProcessorFromConfig](arkts-performanceanalysis-hiappevent-addprocessorfromconfig-f.md)接口返回值所得。 |
 
 **错误码：**
 

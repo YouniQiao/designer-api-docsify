@@ -3,8 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## getMainThreadStackTrace
@@ -13,7 +11,7 @@ import JSON from '@kit.ArkTS.json';
 function getMainThreadStackTrace(): string
 ```
 
-获取主线程的栈追踪信息，最多返回 64 层调用帧。 该接口可能对主线程性能产生影响，建议仅在必要时使用，如日志记录、错误分析或调试场景。
+获取主线程的栈追踪信息，最多返回 64 层调用帧。该接口可能对主线程性能产生影响，建议仅在必要时使用，如日志记录、错误分析或调试场景。
 
 **起始版本：** 20
 

@@ -27,7 +27,7 @@ Generate out-of-band data of the local device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transport | [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md) | Yes | Indicates the transport of a remote Bluetooth device. |
+| transport | BluetoothTransport | Yes | Indicates the transport of a remote Bluetooth device. |
 
 **Return value:**
 

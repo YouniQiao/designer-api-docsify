@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## killProcessesInBatch
@@ -26,13 +26,13 @@ Kills processes in batches. This API uses a promise to return the result. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pids | Array & lt;number & gt; | Yes | Array of process IDs. |
+| pids | Array&lt;number&gt; | Yes | Array of process IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

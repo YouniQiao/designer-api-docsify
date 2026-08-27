@@ -19,7 +19,7 @@ validate(certChain: CertChainData, callback: AsyncCallback<void>): void
 
 表示校验X.509证书链。使用Callback异步回调。
 
-由于端侧系统时间不可信，证书链校验不包含对证书有效时间的校验。如果需要检查证书的时间有效性，可使用X.509证书的 [checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate)方法进行检查。详见 [证书规格](../../../security/DeviceCertificateKit/certificate-framework-overview.md#证书规格)。
+由于端侧系统时间不可信，证书链校验不包含对证书有效时间的校验。如果需要检查证书的时间有效性，可使用X.509证书的[checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate)方法进行检查。详见[证书规格](../../../security/DeviceCertificateKit/certificate-framework-overview.md#证书规格)。
 
 **起始版本：** 9
 
@@ -150,7 +150,7 @@ validate(certChain: CertChainData): Promise<void>
 
 表示校验X.509证书链。使用Promise方式返回结果。
 
-由于端侧系统时间不可信，证书链校验不包含对证书有效时间的校验。如果需要检查证书的时间有效性，可使用X.509证书的 [checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate)方法进行检查。详见 [证书规格](../../../security/DeviceCertificateKit/certificate-framework-overview.md#证书规格)。
+由于端侧系统时间不可信，证书链校验不包含对证书有效时间的校验。如果需要检查证书的时间有效性，可使用X.509证书的[checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate)方法进行检查。详见[证书规格](../../../security/DeviceCertificateKit/certificate-framework-overview.md#证书规格)。
 
 **起始版本：** 9
 
@@ -168,7 +168,7 @@ validate(certChain: CertChainData): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -305,7 +305,7 @@ validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidati
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | 是 | 待验证的证书。 |
+| cert | X509Cert | 是 | 待验证的证书。 |
 | params | [CertValidationParams](arkts-devicecertificate-cert-certvalidationparams-i.md) | 是 | 证书验证参数。 |
 
 **返回值：**

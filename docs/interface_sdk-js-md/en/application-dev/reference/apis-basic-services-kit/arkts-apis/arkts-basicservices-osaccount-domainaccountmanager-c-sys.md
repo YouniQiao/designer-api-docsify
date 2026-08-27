@@ -9,7 +9,7 @@ Provides APIs for domain account management.
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## auth
@@ -34,7 +34,7 @@ Authenticates a domain account.
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
 | credential | Uint8Array | Yes | Credentials of the domain account. |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
+| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -155,7 +155,7 @@ Authenticates a specified domain account. You can specify authentication options
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
 | credential | Uint8Array | Yes | Credentials of the domain account. |
 | options | [DomainAccountAuthOptions](arkts-basicservices-osaccount-domainaccountauthoptions-i-sys.md) | Yes | Options for domain account authentication. |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
+| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -228,7 +228,7 @@ Authenticates a domain account in a pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
+| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -289,7 +289,7 @@ Authenticates a domain account in a pop-up window.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | Local ID of the OS account bound to the domain account. |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the authentication result. |
+| callback | IUserAuthCallback | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
 
@@ -347,7 +347,7 @@ Obtains the business access token of a domain account. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| businessParams | Record & lt;string, Object & gt; | Yes | Business parameters. The specific formats vary depending on the domain plug-in. |
+| businessParams | Record&lt;string, Object&gt; | Yes | Business parameters. The specific formats vary depending on the domain plug-in. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. If the business access token is obtained successfully, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -408,13 +408,13 @@ Obtains the business access token of a domain account. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| businessParams | Record & lt;string, Object & gt; | Yes | Business parameters. The specific formats vary depending on the domain plug-in. |
+| businessParams | Record&lt;string, Object&gt; | Yes | Business parameters. The specific formats vary depending on the domain plug-in. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the business access token obtained. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the business access token obtained. |
 
 **Error codes:**
 
@@ -671,7 +671,7 @@ Checks whether a domain account exists. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the specified domain account exists; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the specified domain account exists; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -736,7 +736,7 @@ Checks whether the authentication of a domain account has expired. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the specified domain account has expired; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the specified domain account has expired; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -960,7 +960,7 @@ Updates the token of a domain account. An empty token means an invalid token. Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

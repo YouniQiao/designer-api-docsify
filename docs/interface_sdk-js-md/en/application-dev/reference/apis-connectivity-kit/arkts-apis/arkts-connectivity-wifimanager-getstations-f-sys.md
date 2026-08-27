@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getStations
@@ -27,7 +26,7 @@ Obtain the list of stations that are connected to the Wi-Fi hotspot. This method
 
 | Type | Description |
 | --- | --- |
-| Array & lt;StationInfo & gt; | the list of clients that are connected to the Wi-Fi hotspot. |
+| Array&lt;StationInfo&gt; | the list of clients that are connected to the Wi-Fi hotspot. |
 
 **Error codes:**
 

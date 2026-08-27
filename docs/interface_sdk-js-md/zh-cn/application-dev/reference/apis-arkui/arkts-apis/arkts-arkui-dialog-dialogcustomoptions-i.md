@@ -1,6 +1,6 @@
 # DialogCustomOptions
 
-自定义样式对话框的选项。 对话内容作为present()方法的第一个参数提供。 不在此选项对象中。
+自定义样式对话框的选项。对话内容作为present()方法的第一个参数提供。不在此选项对象中。
 
 **继承/实现关系：** DialogCustomOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)
 
@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import dialog, { DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from '@kit.ArkUI';
+import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, DialogResult, DialogDismissal, DialogBaseController } from '@kit.ArkUI';
 ```
 
 ## customStyle

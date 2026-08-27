@@ -26,7 +26,7 @@ static load(uri: ResourceStr, param: SceneLoadParams):Promise<Scene>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 待加载的模型文件资源路径。 |
+| uri | ResourceStr | 是 | 待加载的模型文件资源路径。 |
 | param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | 是 | 场景加载参数。 |
 
 **返回值：**

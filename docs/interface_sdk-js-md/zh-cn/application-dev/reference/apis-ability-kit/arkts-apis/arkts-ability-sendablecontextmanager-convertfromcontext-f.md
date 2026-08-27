@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendableContextManager from '@kit.AbilityKit';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## convertFromContext
@@ -32,7 +32,7 @@ function convertFromContext(context: common.Context): SendableContext
 
 | 类型 | 说明 |
 | --- | --- |
-| [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | [SendableContext]{ |
+| SendableContext | [SendableContext]{ |
 
 **错误码：**
 

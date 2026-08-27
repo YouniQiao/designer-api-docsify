@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import usbManager from '@kit.MDMKit';
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## removeDisallowedUsbDevices
@@ -12,8 +12,10 @@ import usbManager from '@kit.MDMKit';
 function removeDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType>): void
 ```
 
-移除禁止使用的USB设备类型。  
-**使用场景**：  
+移除禁止使用的USB设备类型。
+
+**使用场景**：
+
 - 企业安全管理场景，需要解除对某些USB设备类型的禁用  
 - 设备管理员需要动态调整禁止使用的USB设备类型列表  
 - 当某些USB设备类型不再存在安全风险时，从禁用名单中移除
@@ -31,7 +33,7 @@ function removeDisallowedUsbDevices(admin: Want, usbDevices: Array<UsbDeviceType
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| usbDevices | Array&lt;[UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md)&gt; | 是 | 要移除的USB设备类型的数组，UsbDeviceType信息可以通过 [getDevices](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md)接口获取。 |
+| usbDevices | Array&lt;[UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md)&gt; | 是 | 要移除的USB设备类型的数组，UsbDeviceType信息可以通过[getDevices](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md)接口获取。 |
 
 **错误码：**
 

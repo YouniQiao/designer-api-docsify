@@ -21,9 +21,9 @@ Calls the function with the specified object as the this value and the elements 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | (this: T, ...args: A) = & gt; R | Yes |  |
+| target | (this: T, ...args: A) =&gt; R | Yes |  |
 | thisArgument | T | Yes |  |
-| argumentsList | Readonly & lt;A & gt; | Yes |  |
+| argumentsList | Readonly&lt;A&gt; | Yes |  |
 
 **Return value:**
 
@@ -42,7 +42,7 @@ function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any
 | --- | --- | --- | --- |
 | target | Function | Yes |  |
 | thisArgument | any | Yes |  |
-| argumentsList | ArrayLike & lt;any & gt; | Yes |  |
+| argumentsList | ArrayLike&lt;any&gt; | Yes |  |
 
 **Return value:**
 

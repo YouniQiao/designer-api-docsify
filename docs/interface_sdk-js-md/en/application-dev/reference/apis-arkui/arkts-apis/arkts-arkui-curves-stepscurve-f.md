@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import curves from '@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## stepsCurve
@@ -31,7 +31,7 @@ Creates a step curve.
 
 | Type | Description |
 | --- | --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) | Interpolation curve. |
+| ICurve | Interpolation curve. |
 
 **Examples**
 

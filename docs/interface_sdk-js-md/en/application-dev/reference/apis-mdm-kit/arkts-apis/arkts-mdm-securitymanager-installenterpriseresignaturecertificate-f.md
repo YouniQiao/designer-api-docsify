@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import securityManager from '@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## installEnterpriseReSignatureCertificate
@@ -12,12 +12,23 @@ import securityManager from '@kit.MDMKit';
 function installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: string, fd: number, accountId: number): void
 ```
 
-Installs the enterprise application re-signing certificate. After the installation is successful, the enterprise can use the certificate to re-sign applications.A maximum of 10 distinct certificates can be deployed per user. The certificate alias serves as a unique identifier for each certificate and cannot be duplicated during deployment. To update a certificate with an existing alias, you must first uninstall the old certificate by calling [uninstallEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-uninstallenterpriseresignaturecertificate-f.md).The installed certificates are retained on the device and will not be removed when the MDM app is uninstalled or the admin privilege is deactivated.In the enterprise app distribution scenario, you can use the re-signing certificate to re- sign enterprise apps. After re-signing, the app package is provided to enterprise administrators, who can then install the re-signed app on enterprise devices where the corresponding re-signing certificate has been deployed.Process of using the enterprise application re-signing certificate:
+Installs the enterprise application re-signing certificate. After the installation is successful, the enterprise can use the certificate to re-sign applications.
+
+A maximum of 10 distinct certificates can be deployed per user. The certificate alias serves as a unique identifier for each certificate and cannot be duplicated during deployment. To update a certificate with an existing alias, you must first uninstall the old certificate by calling [uninstallEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-uninstallenterpriseresignaturecertificate-f.md).
+
+The installed certificates are retained on the device and will not be removed when the MDM app is uninstalled or the admin privilege is deactivated.
+
+In the enterprise app distribution scenario, you can use the re-signing certificate to re- sign enterprise apps. After re-signing, the app package is provided to enterprise administrators, who can then install the re-signed app on enterprise devices where the corresponding re-signing certificate has been deployed.
+
+Process of using the enterprise application re-signing certificate:
+
 1. Install the enterprise application re-signing certificate through the MDM application.
 2. Re-sign the original HAP package using a signing tool (**ohos-signer** or the DevEco Studio signing plugin).
 3. Install the re-signed app (through the enterprise private app store).
 4. Launch and run the app.
+
 Specifications:
+
 1. Apps signed with the old certificate will continue to run normally after a new re-signing certificate is
 installed.
 2. After a new enterprise signing certificate is installed for an installed enterprise app, if the installed app

@@ -9,7 +9,7 @@ Represents the service data.
 ## Modules to Import
 
 ```TypeScript
-import advertising from '@kit.ConnectivityKit';
+import { advertising } from '@kit.ConnectivityKit';
 ```
 
 ## serviceData

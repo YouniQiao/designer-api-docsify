@@ -25,7 +25,9 @@ Sets the target component for focus movement based on key presses. If it is not 
 backward?: string
 ```
 
-ID of the component to focus on when **Shift+Tab** is pressed.The default value resets **backward** to empty.
+ID of the component to focus on when **Shift+Tab** is pressed.
+
+The default value resets **backward** to empty.
 
 **Type:** string
 
@@ -43,7 +45,9 @@ ID of the component to focus on when **Shift+Tab** is pressed.The default value 
 down?: string
 ```
 
-ID of the component to focus on when the down arrow key is pressed.The default value resets **down** to empty.
+ID of the component to focus on when the down arrow key is pressed.
+
+The default value resets **down** to empty.
 
 **Type:** string
 
@@ -61,7 +65,9 @@ ID of the component to focus on when the down arrow key is pressed.The default v
 forward?: string
 ```
 
-ID of the component to focus on when the **Tab** key is pressed.The default value resets **forward** to empty.
+ID of the component to focus on when the **Tab** key is pressed.
+
+The default value resets **forward** to empty.
 
 **Type:** string
 
@@ -79,7 +85,9 @@ ID of the component to focus on when the **Tab** key is pressed.The default valu
 left?: string
 ```
 
-ID of the component to focus on when the left arrow key is pressed.The default value resets **left** to empty.
+ID of the component to focus on when the left arrow key is pressed.
+
+The default value resets **left** to empty.
 
 **Type:** string
 
@@ -97,7 +105,9 @@ ID of the component to focus on when the left arrow key is pressed.The default v
 right?: string
 ```
 
-ID of the component to focus on when the right arrow key is pressed.The default value resets **right** to empty.
+ID of the component to focus on when the right arrow key is pressed.
+
+The default value resets **right** to empty.
 
 **Type:** string
 
@@ -115,7 +125,9 @@ ID of the component to focus on when the right arrow key is pressed.The default 
 up?: string
 ```
 
-ID of the component to focus on when the up arrow key is pressed.The default value resets **up** to empty.
+ID of the component to focus on when the up arrow key is pressed.
+
+The default value resets **up** to empty.
 
 **Type:** string
 

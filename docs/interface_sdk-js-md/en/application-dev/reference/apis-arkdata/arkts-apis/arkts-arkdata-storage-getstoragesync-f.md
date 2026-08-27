@@ -29,7 +29,7 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 | Type | Description |
 | --- | --- |
-| [Storage](arkts-arkdata-system-storage-storage-c.md) | Storage** instance used for data storage operations. |
+| Storage | Storage** instance used for data storage operations. |
 
 **Examples**
 

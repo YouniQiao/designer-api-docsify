@@ -1,6 +1,8 @@
 # TypedArray
 
-TypedArray inherits the features and methods of Int8Array@extends Int8Array
+TypedArray inherits the features and methods of Int8Array
+
+@extends Int8Array
 
 **Inheritance/Implementation:** TypedArray extends Int8Array
 
@@ -13,5 +15,5 @@ TypedArray inherits the features and methods of Int8Array@extends Int8Array
 ## Modules to Import
 
 ```TypeScript
-import fastbuffer from '@kit.ArkTS';
+import { fastbuffer } from '@kit.ArkTS';
 ```

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import BackupExtensionAbility, { BundleVersion } from '@kit.CoreFileKit';
+import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
 ```
 
 ## 汇总
@@ -26,4 +26,4 @@ import BackupExtensionAbility, { BundleVersion } from '@kit.CoreFileKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | 恢复时所需要的版本信息，开发者可根据配置的版本号来判断本次恢复时的应用版本数据。@interface BundleVersion |
+| [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | 恢复时所需要的版本信息，开发者可根据配置的版本号来判断本次恢复时的应用版本数据。 |

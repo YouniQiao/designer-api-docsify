@@ -1,6 +1,8 @@
 # ParticleConfigs
 
-Defines the particle configs.@interface ParticleConfigs
+Defines the particle configs.
+
+@interface ParticleConfigs
 
 **Since:** 10
 

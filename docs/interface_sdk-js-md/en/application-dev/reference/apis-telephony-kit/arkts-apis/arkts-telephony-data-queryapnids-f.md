@@ -29,7 +29,7 @@ Obtains the APN ID corresponding to the specified **ApnInfo**. This API returns 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

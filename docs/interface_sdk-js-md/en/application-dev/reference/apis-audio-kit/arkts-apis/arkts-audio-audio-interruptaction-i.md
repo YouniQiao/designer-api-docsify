@@ -13,8 +13,7 @@ Describes the callback invoked for audio interruption or focus gain events.When 
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## actionType

@@ -1,6 +1,6 @@
 # NativeMediaPlayerBridge
 
-NativeMediaPlayerBridge 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md)回调函数的返回值类 型，是接管网页媒体的播放器和 ArkWeb 内核之间的一个接口类。ArkWeb 内核通过该接口类的实例对象控制应用创建的用于接管网页媒体的播放器。该接口允许应用使用自定义的媒体播放器接管网页中的媒体内容播放，同时，该接口还支持播放 器的挂起和恢复机制。
+NativeMediaPlayerBridge 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md)回调函数的返回值类型，是接管网页媒体的播放器和 ArkWeb 内核之间的一个接口类。ArkWeb 内核通过该接口类的实例对象控制应用创建的用于接管网页媒体的播放器。该接口允许应用使用自定义的媒体播放器接管网页中的媒体内容播放，同时，该接口还支持播放器的挂起和恢复机制。
 
 **起始版本：** 12
 
@@ -213,7 +213,7 @@ seek(targetTime: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetTime | number | 是 | 播放跳转到的时间点，从媒体开始播放时计算。 单位：秒。 |
+| targetTime | number | 是 | 播放跳转到的时间点，从媒体开始播放时计算。单位：秒。 |
 
 **示例**
 
@@ -237,7 +237,7 @@ setMuted(muted: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| muted | boolean | 是 | 是否静音。 true表示静音，false表示未静音。 |
+| muted | boolean | 是 | 是否静音。true表示静音，false表示未静音。 |
 
 **示例**
 
@@ -261,7 +261,7 @@ setPlaybackRate(playbackRate: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| playbackRate | number | 是 | 播放速率。 取值范围：[0, 10.0]，其中1表示原速播放。超出取值范围时，按边界值自动修正。 |
+| playbackRate | number | 是 | 播放速率。取值范围：[0, 10.0]，其中1表示原速播放。超出取值范围时，按边界值自动修正。 |
 
 **示例**
 
@@ -285,7 +285,7 @@ setVolume(volume: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volume | number | 是 | 播放器的音量。 取值范围：[0, 1.0]，其中0表示静音，1.0表示最大音量。超出取值范围时，按边界值自动修正。 |
+| volume | number | 是 | 播放器的音量。取值范围：[0, 1.0]，其中0表示静音，1.0表示最大音量。超出取值范围时，按边界值自动修正。 |
 
 **示例**
 
@@ -331,10 +331,10 @@ updateRect(x: number, y: number, width: number, height: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | surface相对于Web组件的x坐标信息。 单位：px。 |
-| y | number | 是 | surface相对于Web组件的y坐标信息。 单位：px。 |
-| width | number | 是 | surface的宽度。 单位：px。 |
-| height | number | 是 | surface的高度。 单位：px。 |
+| x | number | 是 | surface相对于Web组件的x坐标信息。单位：px。 |
+| y | number | 是 | surface相对于Web组件的y坐标信息。单位：px。 |
+| width | number | 是 | surface的宽度。单位：px。 |
+| height | number | 是 | surface的高度。单位：px。 |
 
 **示例**
 

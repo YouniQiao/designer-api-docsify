@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isNotificationSlotEnabledByBundles
@@ -26,14 +26,14 @@ Checks whether a notification slot type is enabled for the specified application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | Array & lt;BundleOption & gt; | Yes | Array of bundle information of the applications. The maximum length is 1000 and cannot be empty. |
-| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Notification slot type. All bundles share the same slot type. |
+| bundles | Array&lt;BundleOption&gt; | Yes | Array of bundle information of the applications. The maximum length is 1000 and cannot be empty. |
+| type | SlotType | Yes | Notification slot type. All bundles share the same slot type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Map & lt;BundleOption, boolean & gt; & gt; | Promise used to return the result. The key is the bundle information, and the value **true** means that the notification slot type is enabled, and **false** means the opposite. Bundles whose slot has not been created will not appear in the result. |
+| Promise&lt;Map&lt;BundleOption, boolean&gt;&gt; | Promise used to return the result. The key is the bundle information, and the value **true** means that the notification slot type is enabled, and **false** means the opposite. Bundles whose slot has not been created will not appear in the result. |
 
 **Error codes:**
 

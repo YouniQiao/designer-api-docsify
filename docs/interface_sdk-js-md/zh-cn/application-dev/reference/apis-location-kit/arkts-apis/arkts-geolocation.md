@@ -1,6 +1,8 @@
 # @ohos.geolocation
 
-位置服务提供GNSS定位、网络定位、地理编码、逆地理编码、国家码和地理围栏等基本功能。@namespace geolocation
+位置服务提供GNSS定位、网络定位、地理编码、逆地理编码、国家码和地理围栏等基本功能。
+
+@namespace geolocation
 
 **起始版本：** 7
 
@@ -15,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## 汇总
@@ -62,17 +64,17 @@ import geolocation from '@kit.LocationKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [CachedGnssLocationsRequest](arkts-location-geolocation-cachedgnsslocationsrequest-i.md) | 请求订阅GNSS缓存位置上报功能接口的配置参数。@interface CachedGnssLocationsRequest |
-| [CurrentLocationRequest](arkts-location-geolocation-currentlocationrequest-i.md) | 当前位置信息请求参数。@interface CurrentLocationRequest |
-| [GeoAddress](arkts-location-geolocation-geoaddress-i.md) | 地理编码地址信息。@interface GeoAddress |
-| [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | 地理编码请求参数。@interface GeoCodeRequest |
-| [Geofence](arkts-location-geolocation-geofence-i.md) | GNSS围栏的配置参数。目前只支持圆形围栏。@interface Geofence |
-| [GeofenceRequest](arkts-location-geolocation-geofencerequest-i.md) | 请求添加GNSS围栏消息中携带的参数，包括定位场景和围栏信息。@interface GeofenceRequest |
-| [Location](arkts-location-geolocation-location-i.md) | 位置信息。@interface Location |
-| [LocationCommand](arkts-location-geolocation-locationcommand-i.md) | 扩展命令参数。@interface LocationCommand |
-| [LocationRequest](arkts-location-geolocation-locationrequest-i.md) | 位置信息请求参数。@interface LocationRequest |
-| [ReverseGeoCodeRequest](arkts-location-geolocation-reversegeocoderequest-i.md) | 逆地理编码请求参数。@interface ReverseGeoCodeRequest |
-| [SatelliteStatusInfo](arkts-location-geolocation-satellitestatusinfo-i.md) | 卫星状态信息。@interface SatelliteStatusInfo |
+| [CachedGnssLocationsRequest](arkts-location-geolocation-cachedgnsslocationsrequest-i.md) | 请求订阅GNSS缓存位置上报功能接口的配置参数。 |
+| [CurrentLocationRequest](arkts-location-geolocation-currentlocationrequest-i.md) | 当前位置信息请求参数。 |
+| [GeoAddress](arkts-location-geolocation-geoaddress-i.md) | 地理编码地址信息。 |
+| [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | 地理编码请求参数。 |
+| [Geofence](arkts-location-geolocation-geofence-i.md) | GNSS围栏的配置参数。目前只支持圆形围栏。 |
+| [GeofenceRequest](arkts-location-geolocation-geofencerequest-i.md) | 请求添加GNSS围栏消息中携带的参数，包括定位场景和围栏信息。 |
+| [Location](arkts-location-geolocation-location-i.md) | 位置信息。 |
+| [LocationCommand](arkts-location-geolocation-locationcommand-i.md) | 扩展命令参数。 |
+| [LocationRequest](arkts-location-geolocation-locationrequest-i.md) | 位置信息请求参数。 |
+| [ReverseGeoCodeRequest](arkts-location-geolocation-reversegeocoderequest-i.md) | 逆地理编码请求参数。 |
+| [SatelliteStatusInfo](arkts-location-geolocation-satellitestatusinfo-i.md) | 卫星状态信息。 |
 
 ### 枚举
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleInfo
@@ -12,7 +12,9 @@ import bundleManager from '@kit.AbilityKit';
 function getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<BundleInfo>): void
 ```
 
-Obtains the bundle information based on the given bundle name and bundle flags. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
+Obtains the bundle information based on the given bundle name and bundle flags. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 14
 
@@ -70,7 +72,9 @@ try {
 function getBundleInfo(bundleName: string, bundleFlags: number, userId: number, callback: AsyncCallback<BundleInfo>): void
 ```
 
-Obtains the BundleInfo based on the given bundle name, bundle flags, and user ID. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
+Obtains the BundleInfo based on the given bundle name, bundle flags, and user ID. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 14
 
@@ -156,7 +160,9 @@ try {
 function getBundleInfo(bundleName: string, bundleFlags: number, userId?: number): Promise<BundleInfo>
 ```
 
-Obtains the bundle information based on the given bundle name, bundle flags, and user ID. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
+Obtains the bundle information based on the given bundle name, bundle flags, and user ID. This API uses a promise to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 14
 
@@ -176,7 +182,7 @@ Obtains the bundle information based on the given bundle name, bundle flags, and
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BundleInfo & gt; | Promise used to return the bundle information obtained. |
+| Promise&lt;BundleInfo&gt; | Promise used to return the bundle information obtained. |
 
 **Error codes:**
 

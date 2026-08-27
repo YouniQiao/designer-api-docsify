@@ -1,6 +1,8 @@
 # SliderModifier
 
-Defines Slider Modifier@extends SliderAttribute @implements AttributeModifier&lt;SliderAttribute&gt;
+Defines Slider Modifier
+
+@extends SliderAttribute @implements AttributeModifier&lt;SliderAttribute&gt;
 
 **Inheritance/Implementation:** SliderModifier extends [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md#sliderattribute) and implements AttributeModifier<SliderAttribute>
 

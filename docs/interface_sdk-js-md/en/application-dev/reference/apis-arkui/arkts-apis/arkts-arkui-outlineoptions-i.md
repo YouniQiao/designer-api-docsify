@@ -1,6 +1,8 @@
 # OutlineOptions
 
-Defines the options of outline.@interface OutlineOptions
+Defines the options of outline.
+
+@interface OutlineOptions
 
 **Since:** 12
 

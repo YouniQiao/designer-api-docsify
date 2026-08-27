@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import distributedMissionManager from '@kit.AbilityKit';
+import { distributedMissionManager } from '@kit.AbilityKit';
 ```
 
 ## stopSyncRemoteMissions
@@ -28,7 +28,7 @@ Stops synchronizing the remote mission list. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes | Parameters required for synchronization. |
+| parameter | MissionDeviceInfo | Yes | Parameters required for synchronization. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the synchronization is stopped, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -84,13 +84,13 @@ Stops synchronizing the remote mission list. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [MissionDeviceInfo](arkts-ability-missiondeviceinfo-i-sys.md) | Yes | Parameters required for synchronization. |
+| parameter | MissionDeviceInfo | Yes | Parameters required for synchronization. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

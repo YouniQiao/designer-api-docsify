@@ -15,7 +15,6 @@
 
 ```TypeScript
 import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog, TipsDialog, CustomContentDialog, PopoverDialog, PopoverOptions } from '@kit.ArkUI';
-import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, AdvancedDialogV2ButtonAction, AdvancedDialogV2OnCheckedChange, ConfirmDialogV2, LoadingDialogV2, SelectDialogV2, TipsDialogV2, CustomContentDialogV2, PopoverDialogV2, PopoverDialogV2OnVisibleChange, PopoverDialogV2Options } from '@kit.ArkUIV2';
 ```
 
 ## action
@@ -40,7 +39,9 @@ action?: () => void
 background?: ResourceColor
 ```
 
-按钮的背景色。默认值跟随buttonStyle。
+按钮的背景色。
+
+默认值跟随buttonStyle。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -58,7 +59,9 @@ background?: ResourceColor
 buttonStyle?: ButtonStyleMode
 ```
 
-按钮的样式。默认值：2in1设备为ButtonStyleMode.NORMAL，其他设备为ButtonStyleMode.TEXTUAL。
+按钮的样式。
+
+默认值：2in1设备为ButtonStyleMode.NORMAL，其他设备为ButtonStyleMode.TEXTUAL。
 
 **类型：** [ButtonStyleMode](../arkts-components/arkts-arkui-buttonstylemode-e.md)
 
@@ -78,7 +81,13 @@ buttonStyle?: ButtonStyleMode
 defaultFocus?: boolean
 ```
 
-按钮是否设置默认焦点。true：按钮是默认焦点。false：按钮不是默认焦点。默认值：false
+按钮是否设置默认焦点。
+
+true：按钮是默认焦点。
+
+false：按钮不是默认焦点。
+
+默认值：false
 
 **类型：** boolean
 
@@ -98,7 +107,9 @@ defaultFocus?: boolean
 fontColor?: ResourceColor
 ```
 
-按钮的字体颜色。默认值跟随buttonStyle。
+按钮的字体颜色。
+
+默认值跟随buttonStyle。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -116,7 +127,9 @@ fontColor?: ResourceColor
 role?: ButtonRole
 ```
 
-按钮的角色。默认值：ButtonRole.NORMAL
+按钮的角色。
+
+默认值：ButtonRole.NORMAL
 
 **类型：** [ButtonRole](../arkts-components/arkts-arkui-buttonrole-e.md)
 
@@ -136,7 +149,9 @@ role?: ButtonRole
 textAlign?: TextAlign
 ```
 
-按钮文本的对齐方式。默认值：TextAlign.Start
+按钮文本的对齐方式。
+
+默认值：TextAlign.Start
 
 **类型：** TextAlign
 

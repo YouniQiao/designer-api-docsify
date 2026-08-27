@@ -1,6 +1,8 @@
 # TextDecorationOptions
 
-Defines the options of decoration.@interface TextDecorationOptions
+Defines the options of decoration.
+
+@interface TextDecorationOptions
 
 **起始版本：** 12
 

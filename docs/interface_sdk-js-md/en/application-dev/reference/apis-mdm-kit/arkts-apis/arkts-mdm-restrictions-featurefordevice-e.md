@@ -222,7 +222,10 @@ Device fingerprint authentication capability. Enable device fingerprint authenti
 USB = 15
 ```
 
-Device USB capability. Disabling this capability prohibits the use of external USB devices (the device cannot act as a USB host to connect external devices).If the device USB capability is disabled in any of the following scenarios, a policy conflict will be reported:
+Device USB capability. Disabling this capability prohibits the use of external USB devices (the device cannot act as a USB host to connect external devices).
+
+If the device USB capability is disabled in any of the following scenarios, a policy conflict will be reported:
+
 1. A list of allowed USB devices has been configured via the  
 [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md) API.
 2. USB storage device access policy has been set to read-only or disabled via the  
@@ -328,7 +331,9 @@ MTP server capability, currently supported only on phone and tablets.
 SAMBA_CLIENT = 22
 ```
 
-Samba client capability, currently supported only on PC/2-in-1 devices.Samba is a free software that implements the SMB protocol on Linux and UNIX systems, consisting of both server and client programs. Server Message Block (SMB) is a communication protocol for sharing files and printers over the local area network (LAN). It provides resource-sharing services, such as files and printers, among different computers within the LAN. As a client/server protocol, SMB allows clients to access shared resources hosted on servers.
+Samba client capability, currently supported only on PC/2-in-1 devices.
+
+Samba is a free software that implements the SMB protocol on Linux and UNIX systems, consisting of both server and client programs. Server Message Block (SMB) is a communication protocol for sharing files and printers over the local area network (LAN). It provides resource-sharing services, such as files and printers, among different computers within the LAN. As a client/server protocol, SMB allows clients to access shared resources hosted on servers.
 
 **Since:** 26.0.0
 
@@ -527,7 +532,9 @@ APP_CLONE = 35
 EXTERNAL_STORAGE_CARD = 36
 ```
 
-External storage capability. Disabling this feature prohibits the use of external storage and unmounts currently connected external storage. If files are in use during unmounting, unmounting may fail with error code 9200013.After external storage is disabled and then enabled again, you need to manually reconnect the external storage.
+External storage capability. Disabling this feature prohibits the use of external storage and unmounts currently connected external storage. If files are in use during unmounting, unmounting may fail with error code 9200013.
+
+After external storage is disabled and then enabled again, you need to manually reconnect the external storage.
 
 **Since:** 26.0.0
 
@@ -598,6 +605,7 @@ USB_SERIAL = 41
 ```
 
 Device USB-to-serial port capability. After the capability is disabled, external USB-to-serial port devices will be unavailable. Disabling the USB-to-Serial capability in any of the following scenario will trigger a policy conflict:
+
 1. A list of allowed USB devices has been configured via the  
 [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md) API.
 2. The device ([USB](#featurefordevice)) capability has been disabled.

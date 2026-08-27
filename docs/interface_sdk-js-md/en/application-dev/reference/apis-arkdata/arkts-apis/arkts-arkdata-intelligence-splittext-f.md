@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import intelligence from '@kit.ArkData';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## splitText
@@ -29,7 +29,7 @@ Splits text.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | The promise used to return the result. |
+| Promise&lt;Array&lt;string&gt;&gt; | The promise used to return the result. |
 
 **Error codes:**
 

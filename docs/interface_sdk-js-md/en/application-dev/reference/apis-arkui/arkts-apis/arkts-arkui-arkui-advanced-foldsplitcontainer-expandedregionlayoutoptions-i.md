@@ -18,7 +18,9 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 extraRegionPosition?: ExtraRegionPosition
 ```
 
-Position information of the extra region. This setting takes effect only when **isExtraRegionPerpendicular** is set to **false**.Default value: **ExtraRegionPosition.top**.
+Position information of the extra region. This setting takes effect only when **isExtraRegionPerpendicular** is set to **false**.
+
+Default value: **ExtraRegionPosition.top**.
 
 **Type:** [ExtraRegionPosition](arkts-arkui-arkui-advanced-foldsplitcontainer-extraregionposition-e.md)
 
@@ -54,7 +56,9 @@ Width ratio between the primary and extra regions. This setting takes effect onl
 isExtraRegionPerpendicular?: boolean
 ```
 
-Whether the extra region extends perpendicularly through the entire component from top to bottom. The value **true** means that the extra region extends perpendicularly through the entire component from top to bottom, and **false** means the opposite. This setting takes effect only when **extra** is effective.Default value: **true**.
+Whether the extra region extends perpendicularly through the entire component from top to bottom. The value **true** means that the extra region extends perpendicularly through the entire component from top to bottom, and **false** means the opposite. This setting takes effect only when **extra** is effective.
+
+Default value: **true**.
 
 **Type:** boolean
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import selectionManager from '@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## createPanel
@@ -12,7 +12,9 @@ import selectionManager from '@kit.BasicServicesKit';
 function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>
 ```
 
-Creates a word selection panel, which is used to display the service-related operation UI or text processing result. After the panel is used, call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) to destroy the panel and release resources. This API uses a promise to return the result.Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) and one [MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) can be created for one word selection application.
+Creates a word selection panel, which is used to display the service-related operation UI or text processing result. After the panel is used, call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) to destroy the panel and release resources. This API uses a promise to return the result.
+
+Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) and one [MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) can be created for one word selection application.
 
 **Since:** 24
 
@@ -31,7 +33,7 @@ Creates a word selection panel, which is used to display the service-related ope
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Panel & gt; | Promise used to return the **Panel** object created, which can be used to set, display, hide, and move the panel, and subscribe to events. |
+| Promise&lt;Panel&gt; | Promise used to return the **Panel** object created, which can be used to set, display, hide, and move the panel, and subscribe to events. |
 
 **Error codes:**
 

@@ -21,7 +21,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 componentId?: number
 ```
 
-目标节点所在的自定义组件的UniqueID。当上述id指定为string类型时，可通过此属性圈定范围。 方便开发者在一定范围内保证id: string的唯一性。
+目标节点所在的自定义组件的UniqueID。当上述id指定为string类型时，可通过此属性圈定范围。方便开发者在一定范围内保证id: string的唯一性。
 
 **类型：** number
 

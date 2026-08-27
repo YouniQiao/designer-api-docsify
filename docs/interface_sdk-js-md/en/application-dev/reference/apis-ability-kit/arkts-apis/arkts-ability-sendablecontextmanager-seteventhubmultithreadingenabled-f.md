@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import sendableContextManager from '@kit.AbilityKit';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## setEventHubMultithreadingEnabled

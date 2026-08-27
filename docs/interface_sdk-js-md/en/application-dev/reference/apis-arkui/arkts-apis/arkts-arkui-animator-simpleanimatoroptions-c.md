@@ -9,7 +9,7 @@ Defines a simple animation parameter object. Unlike **AnimatorOptions**, this ob
 ## Modules to Import
 
 ```TypeScript
-import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -129,7 +129,7 @@ Sets the playback direction for this animator animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | [PlayMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-playmode-e.md) | Yes | Playback direction.Default value: **PlayMode.Normal |
+| direction | PlayMode | Yes | Playback direction.Default value: **PlayMode.Normal |
 
 **Return value:**
 

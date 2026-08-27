@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## delHotspotBlockList
@@ -27,7 +26,7 @@ function delHotspotBlockList(stationInfo: StationInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| stationInfo | [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md) | 是 | 将要从黑名单中删除的站点。 |
+| stationInfo | StationInfo | 是 | 将要从黑名单中删除的站点。 |
 
 **错误码：**
 

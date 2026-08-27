@@ -31,7 +31,7 @@ Add a beacon fence.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | The promise returned by the function, for reporting the ID of beacon fence. |
+| Promise&lt;number&gt; | The promise returned by the function, for reporting the ID of beacon fence. |
 
 **Error codes:**
 

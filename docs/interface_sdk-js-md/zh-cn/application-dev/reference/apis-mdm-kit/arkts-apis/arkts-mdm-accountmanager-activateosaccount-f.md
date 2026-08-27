@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import accountManager from '@kit.MDMKit';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## activateOsAccount
@@ -27,13 +27,13 @@ function activateOsAccount(admin: Want, accountId: number): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| accountId | number | 是 | 系统账号ID。切换不存在的系统账号，会报错误码9200012。切换受限制的系统账号，例如使用 [addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md)创建的系统账号，会报错误码9201041。 |
+| accountId | number | 是 | 系统账号ID。切换不存在的系统账号，会报错误码9200012。切换受限制的系统账号，例如使用[addOsAccountAsync](arkts-mdm-accountmanager-addosaccountasync-f.md)创建的系统账号，会报错误码9201041。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。当切换系统账号失败时，会抛出错误对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。当切换系统账号失败时，会抛出错误对象。 |
 
 **错误码：**
 

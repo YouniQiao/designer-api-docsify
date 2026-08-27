@@ -9,7 +9,7 @@ Class of fence extension ability.
 ## Modules to Import
 
 ```TypeScript
-import FenceExtensionAbility from '@kit.LocationKit';
+import { FenceExtensionAbility } from '@kit.LocationKit';
 ```
 
 ## onDestroy
@@ -58,7 +58,7 @@ Called back when geofence status is change.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | transition | geoLocationManager.GeofenceTransition | Yes | Geofence transition status |
-| additions | Record & lt;string, string & gt; | Yes | Indicates additional information |
+| additions | Record&lt;string, string&gt; | Yes | Indicates additional information |
 
 **Examples**
 

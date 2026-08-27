@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## updateTemplateFormDetailInfo
@@ -26,13 +26,13 @@ Updates the static configuration information of a specified template widget on t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateFormInfo | Array & lt;formInfo.TemplateFormDetailInfo & gt; | Yes | Static configuration information of a specified template widget. |
+| templateFormInfo | Array&lt;formInfo.TemplateFormDetailInfo&gt; | Yes | Static configuration information of a specified template widget. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import router from '@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## getState
@@ -35,7 +35,7 @@ Obtains state information about the page at the top of the navigation stack.
 
 | Type | Description |
 | --- | --- |
-| [RouterState](arkts-arkui-system-router-routerstate-i.md) | Page routing state. |
+| RouterState | Page routing state. |
 
 **Examples**
 

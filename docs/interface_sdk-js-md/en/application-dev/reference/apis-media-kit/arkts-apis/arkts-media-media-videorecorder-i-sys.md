@@ -11,7 +11,7 @@ The maintenance of this interface has been stopped since version api 9. Please u
 ## Modules to Import
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getInputSurface
@@ -93,7 +93,7 @@ get input surface. it must be called between prepare completed and start.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | A Promise instance used to return the input surface id in string. |
+| Promise&lt;string&gt; | A Promise instance used to return the input surface id in string. |
 
 **Error codes:**
 
@@ -276,7 +276,7 @@ Pauses video recording.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return when pause completed. |
+| Promise&lt;void&gt; | A Promise instance used to return when pause completed. |
 
 **Error codes:**
 
@@ -447,7 +447,7 @@ Prepares for recording.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return when prepare completed. |
+| Promise&lt;void&gt; | A Promise instance used to return when prepare completed. |
 
 **Error codes:**
 
@@ -636,7 +636,7 @@ Releases resources used for video recording.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return when release completed. |
+| Promise&lt;void&gt; | A Promise instance used to return when release completed. |
 
 **Error codes:**
 
@@ -874,7 +874,7 @@ Resets video recording. Before resetting video recording, you must call stop() t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return when reset completed. |
+| Promise&lt;void&gt; | A Promise instance used to return when reset completed. |
 
 **Error codes:**
 
@@ -1006,7 +1006,7 @@ Resumes video recording.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return when resume completed. |
+| Promise&lt;void&gt; | A Promise instance used to return when resume completed. |
 
 **Error codes:**
 
@@ -1130,7 +1130,7 @@ Starts video recording.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return when start completed. |
+| Promise&lt;void&gt; | A Promise instance used to return when start completed. |
 
 **Error codes:**
 
@@ -1282,7 +1282,7 @@ Stops video recording.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return when stop completed. |
+| Promise&lt;void&gt; | A Promise instance used to return when stop completed. |
 
 **Error codes:**
 

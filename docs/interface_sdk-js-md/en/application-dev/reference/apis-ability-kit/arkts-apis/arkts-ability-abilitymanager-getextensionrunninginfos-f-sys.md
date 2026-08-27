@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import abilityManager from '@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## getExtensionRunningInfos
@@ -26,13 +26,13 @@ Obtains the ExtensionAbility running information. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upperLimit | number | Yes | Maximum number of messages that can be obtained. The maximum value is 2 & lt;sup & gt;31 & lt;/sup & gt;-1. |
+| upperLimit | number | Yes | Maximum number of messages that can be obtained. The maximum value is 2&lt;sup&gt;31&lt;/sup&gt;-1. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;ExtensionRunningInfo & gt; & gt; | Promise used to return the API call result and the ExtensionAbility running information. You can perform error handling or other custom processing. |
+| Promise&lt;Array&lt;ExtensionRunningInfo&gt;&gt; | Promise used to return the API call result and the ExtensionAbility running information. You can perform error handling or other custom processing. |
 
 **Error codes:**
 
@@ -84,7 +84,7 @@ Obtains the ExtensionAbility running information. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upperLimit | number | Yes | Maximum number of messages that can be obtained. The maximum value is 2 & lt;sup & gt;31 & lt;/sup & gt;-1. |
+| upperLimit | number | Yes | Maximum number of messages that can be obtained. The maximum value is 2&lt;sup&gt;31&lt;/sup&gt;-1. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ExtensionRunningInfo&gt;&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the ExtensionAbility running information obtained. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**

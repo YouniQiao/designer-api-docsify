@@ -29,7 +29,7 @@ Add a geofence.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | The promise returned by the function, for reporting the ID of geofence. |
+| Promise&lt;number&gt; | The promise returned by the function, for reporting the ID of geofence. |
 
 **Error codes:**
 

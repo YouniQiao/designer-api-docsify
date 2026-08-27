@@ -39,7 +39,9 @@ The data type used to describe a rectangular area.
 height?: Length
 ```
 
-Height of the touch target.Default value: **'100%'**
+Height of the touch target.
+
+Default value: **'100%'**
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -57,7 +59,9 @@ Height of the touch target.Default value: **'100%'**
 width?: Length
 ```
 
-Width of the touch target.Default value: **'100%'**
+Width of the touch target.
+
+Default value: **'100%'**
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -75,7 +79,9 @@ Width of the touch target.Default value: **'100%'**
 x?: Length
 ```
 
-X coordinate of the touch point relative to the upper left corner of the component.Default value: **0vp**
+X coordinate of the touch point relative to the upper left corner of the component.
+
+Default value: **0vp**
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -93,7 +99,9 @@ X coordinate of the touch point relative to the upper left corner of the compone
 y?: Length
 ```
 
-Y coordinate of the touch point relative to the upper left corner of the component.Default value: **0vp**
+Y coordinate of the touch point relative to the upper left corner of the component.
+
+Default value: **0vp**
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

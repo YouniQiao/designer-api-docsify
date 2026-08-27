@@ -73,7 +73,7 @@ Obtain the number of cached GNSS locations.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | The promise returned by the function. |
+| Promise&lt;number&gt; | The promise returned by the function. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import sendablePreferences from '@kit.ArkData';
+import { sendablePreferences } from '@kit.ArkData';
 ```
 
 ## getPreferencesSync
@@ -24,14 +24,14 @@ Obtains a **Preferences** instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Application context. |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | Configuration options of the **Preferences** instance. |
+| context | Context | Yes | Application context. |
+| options | Options | Yes | Configuration options of the **Preferences** instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Preferences](arkts-arkdata-preferences-preferences-i.md) | Preferences** instance obtained. |
+| Preferences | Preferences** instance obtained. |
 
 **Error codes:**
 

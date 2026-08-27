@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import config from '@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## off('enabledAccessibilityExtensionListChange')
@@ -26,8 +26,8 @@ function off(type: 'enabledAccessibilityExtensionListChange', callback?: Callbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'enabledAccessibilityExtensionListChange' | 是 | 参数固定为'enabledAccessibilityExtensionListChange'，指定取消监听的事 件类型为启用的辅助扩展的列表变化。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与on('enabledAccessibilityExtensionListChange')的 callback一致。缺省时，表示注销所有已注册事件。 |
+| type | 'enabledAccessibilityExtensionListChange' | 是 | 参数固定为'enabledAccessibilityExtensionListChange'，指定取消监听的事件类型为启用的辅助扩展的列表变化。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与on('enabledAccessibilityExtensionListChange')的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 
@@ -70,8 +70,8 @@ function off(type: 'installedAccessibilityListChange', callback?: Callback<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'installedAccessibilityListChange' | 是 | 参数固定为'installedAccessibilityListChange'，指定取消监听的事件类型为已安装的辅助扩展的列 表变化。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与on('installedAccessibilityListChange')的callback一致。缺 省时，表示注销所有已注册事件。 |
+| type | 'installedAccessibilityListChange' | 是 | 参数固定为'installedAccessibilityListChange'，指定取消监听的事件类型为已安装的辅助扩展的列表变化。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 回调函数，取消指定callback对象的事件响应。需与on('installedAccessibilityListChange')的callback一致。缺省时，表示注销所有已注册事件。 |
 
 **错误码：**
 

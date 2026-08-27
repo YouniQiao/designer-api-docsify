@@ -9,7 +9,7 @@ Defines a **RunningLock** object.
 ## Modules to Import
 
 ```TypeScript
-import runningLock from '@kit.BasicServicesKit';
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## hold

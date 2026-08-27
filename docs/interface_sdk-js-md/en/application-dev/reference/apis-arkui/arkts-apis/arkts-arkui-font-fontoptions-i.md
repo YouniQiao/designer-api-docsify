@@ -17,7 +17,7 @@ Information about the custom font to register.
 ## Modules to Import
 
 ```TypeScript
-import font from '@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## familyName
@@ -42,8 +42,11 @@ Name of the custom font to register.
 familySrc: string | Resource
 ```
 
-Path of the custom font file to register.  
-**NOTE：**If the font file to specify is a resource located within the system sandbox directory, you are advised to use a string with the **file://** path prefix. Ensure the target file exists in the sandbox path and has read permissions granted.
+Path of the custom font file to register.
+
+**NOTE：**
+
+If the font file to specify is a resource located within the system sandbox directory, you are advised to use a string with the **file://** path prefix. Ensure the target file exists in the sandbox path and has read permissions granted.
 
 **Type:** string \| Resource
 

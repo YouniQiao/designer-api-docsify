@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import settings from '@kit.BasicServicesKit';
-import settingsLite from '@kit.BasicServicesKitLite';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## isDoubleClickAppForSelf
@@ -26,7 +25,7 @@ function isDoubleClickAppForSelf(): Promise<boolean>
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Check result. { |
+| Promise&lt;boolean&gt; | Check result. { |
 
 **Examples**
 

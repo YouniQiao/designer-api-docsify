@@ -1,6 +1,6 @@
 # Reader
 
-Reader的实例表示该设备支持的SE，如果支持eSE、SIM和SIM2，则返回3个实例，其中SIM2从API version 22开始支持。通过 [SEService.getReaders](arkts-connectivity-omapi-seservice-i.md#getreaders)获取Reader实例。
+Reader的实例表示该设备支持的SE，如果支持eSE、SIM和SIM2，则返回3个实例，其中SIM2从API version 22开始支持。通过[SEService.getReaders](arkts-connectivity-omapi-seservice-i.md#getreaders)获取Reader实例。
 
 **起始版本：** 10
 
@@ -9,7 +9,7 @@ Reader的实例表示该设备支持的SE，如果支持eSE、SIM和SIM2，则�
 ## 导入模块
 
 ```TypeScript
-import omapi from '@kit.ConnectivityKit';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## closeSessions
@@ -166,7 +166,7 @@ openSession(): Session
 
 | 类型 | 说明 |
 | --- | --- |
-| [Session](../../apis-camera-kit/arkts-apis/arkts-camera-camera-session-i.md) | 连接会话Session实例。 |
+| Session | 连接会话Session实例。 |
 
 **错误码：**
 

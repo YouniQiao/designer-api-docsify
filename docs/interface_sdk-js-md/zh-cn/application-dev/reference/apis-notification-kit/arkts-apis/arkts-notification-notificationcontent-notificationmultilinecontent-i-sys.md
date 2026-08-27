@@ -25,7 +25,7 @@
 lineWantAgents?: Array<WantAgent>
 ```
 
-点击多行文本中某一行文本消息触发的wantAgent。不同行的文本分别对应于不同的wantAgent。该字段配置的行数不能大于 [lines](arkts-notification-notificationcontent-notificationmultilinecontent-i.md)字段配置的行数。默认为空。
+点击多行文本中某一行文本消息触发的wantAgent。不同行的文本分别对应于不同的wantAgent。该字段配置的行数不能大于[lines](arkts-notification-notificationcontent-notificationmultilinecontent-i.md)字段配置的行数。默认为空。
 
 **类型：** Array&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)&gt;
 

@@ -11,7 +11,7 @@ Options for obtaining the bundle statistics.
 ## Modules to Import
 
 ```TypeScript
-import storageStatistics from '@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## index

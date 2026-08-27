@@ -16,7 +16,7 @@ WebNativeMessagingExtensionAbility is a base class for web native message commun
 ## Modules to Import
 
 ```TypeScript
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionAbility, ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## Summary

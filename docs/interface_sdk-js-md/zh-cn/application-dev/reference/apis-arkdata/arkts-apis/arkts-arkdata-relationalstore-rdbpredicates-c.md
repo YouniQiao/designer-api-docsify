@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## and
@@ -28,7 +28,7 @@ and(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回带有和条件的谓词。 |
+| RdbPredicates | 返回带有和条件的谓词。 |
 
 **示例**
 
@@ -63,7 +63,7 @@ beginsWith(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -95,7 +95,7 @@ beginWrap(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回带有左括号的谓词。 |
+| RdbPredicates | 返回带有左括号的谓词。 |
 
 **示例**
 
@@ -126,14 +126,14 @@ between(field: string, low: ValueType, high: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
+| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
+| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -202,7 +202,7 @@ contains(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -234,7 +234,7 @@ distinct(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回可用于过滤重复记录的谓词。 |
+| RdbPredicates | 返回可用于过滤重复记录的谓词。 |
 
 **示例**
 
@@ -266,7 +266,7 @@ endsWith(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -298,7 +298,7 @@ endWrap(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回带有右括号的谓词。 |
+| RdbPredicates | 返回带有右括号的谓词。 |
 
 **示例**
 
@@ -329,13 +329,13 @@ equalTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -368,13 +368,13 @@ glob(field: string, value: string): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 支持通配符，*表示0个、1个或多个数字或字符，?表示1个数字或字符。 |
+| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节。支持通配符，*表示0个、1个或多个数字或字符，?表示1个数字或字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -407,13 +407,13 @@ greaterThan(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -446,13 +446,13 @@ greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -484,13 +484,13 @@ groupBy(fields: Array<string>): RdbPredicates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fields | Array & lt;string & gt; | 是 | 指定分组依赖的列名。 |
+| fields | Array&lt;string&gt; | 是 | 指定分组依赖的列名。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回分组查询列的谓词。 |
+| RdbPredicates | 返回分组查询列的谓词。 |
 
 **错误码：**
 
@@ -521,14 +521,14 @@ having(conditions: string, args?: Array<ValueType>): RdbPredicates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| conditions | string | 是 | 用于过滤使用[groupBy](#groupby)获得的数据，conditions参数不能为空 字符串且必须与[groupBy](#groupby)配合使用。 |
-| args | Array & lt;ValueType & gt; | 否 | 条件中使用的参数，用来替换条件语句中的占位符，不传时默认为空数组。 |
+| conditions | string | 是 | 用于过滤使用[groupBy](#groupby)获得的数据，conditions参数不能为空字符串且必须与[groupBy](#groupby)配合使用。 |
+| args | Array&lt;ValueType&gt; | 否 | 条件中使用的参数，用来替换条件语句中的占位符，不传时默认为空数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -557,13 +557,13 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | Array & lt;ValueType & gt; | 是 | 以ValueType型数组形式指定的要匹配的值。 |
+| value | Array&lt;ValueType&gt; | 是 | 以ValueType型数组形式指定的要匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -595,7 +595,7 @@ inAllDevices(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **示例**
 
@@ -630,13 +630,13 @@ inDevices(devices: Array<string>): RdbPredicates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| devices | Array & lt;string & gt; | 是 | 指定的组网内的远程设备ID。 |
+| devices | Array&lt;string&gt; | 是 | 指定的组网内的远程设备ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -691,7 +691,7 @@ indexedBy(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回具有指定索引列的谓词。 |
+| RdbPredicates | 返回具有指定索引列的谓词。 |
 
 **错误码：**
 
@@ -728,7 +728,7 @@ isNotNull(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -765,7 +765,7 @@ isNull(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -797,13 +797,13 @@ lessThan(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -836,13 +836,13 @@ lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -881,7 +881,7 @@ like(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -919,7 +919,7 @@ limitAs(value: number): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回可用于设置最大数据记录数的谓词。 |
+| RdbPredicates | 返回可用于设置最大数据记录数的谓词。 |
 
 **错误码：**
 
@@ -951,14 +951,14 @@ notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
+| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
+| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -997,7 +997,7 @@ notContains(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -1030,13 +1030,13 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -1069,13 +1069,13 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | Array & lt;ValueType & gt; | 是 | 以ValueType数组形式指定的要匹配的值。 |
+| value | Array&lt;ValueType&gt; | 是 | 以ValueType数组形式指定的要匹配的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -1114,7 +1114,7 @@ notLike(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -1152,7 +1152,7 @@ offsetAs(rowOffset: number): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回具有指定返回结果起始位置的谓词。 |
+| RdbPredicates | 返回具有指定返回结果起始位置的谓词。 |
 
 **错误码：**
 
@@ -1183,7 +1183,7 @@ or(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回带有或条件的谓词。 |
+| RdbPredicates | 返回带有或条件的谓词。 |
 
 **示例**
 
@@ -1217,7 +1217,7 @@ orderByAsc(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
@@ -1254,7 +1254,7 @@ orderByDesc(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 

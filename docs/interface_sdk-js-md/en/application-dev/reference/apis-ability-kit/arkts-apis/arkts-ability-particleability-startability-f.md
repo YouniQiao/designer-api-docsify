@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import particleAbility from '@kit.AbilityKit';
+import { particleAbility } from '@kit.AbilityKit';
 ```
 
 ## startAbility
@@ -91,7 +91,7 @@ Starts a ParticleAbility. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. Promise that returns no value. |
+| Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
 
 **Examples**
 

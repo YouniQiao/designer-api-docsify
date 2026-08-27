@@ -14,4 +14,4 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [InputEvent(输入事件)](arkts-input-multimodalinput-inputevent-inputevent-i.md) | 输入事件。@interface InputEvent [since 9 - 11] |
+| [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md) | 输入事件。 |

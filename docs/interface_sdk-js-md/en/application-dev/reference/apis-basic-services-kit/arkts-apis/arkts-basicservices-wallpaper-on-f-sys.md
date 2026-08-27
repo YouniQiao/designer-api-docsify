@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wallpaper from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## on('wallpaperChange')
@@ -28,7 +28,7 @@ Registers a listener for wallpaper changes to receive notifications about the ch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wallpaperChange' | Yes | the incoming wallpaperChange table open receiver when the user modifies the wallpaper settings. |
-| callback | (wallpaperType: WallpaperType, resourceType: WallpaperResourceType, uri?: string) = & gt; void | Yes | wallpaperType indicates the wallpaper type. resourceType indicates the resource type of the wallpaper. uri indicates the wallpaper resource address. |
+| callback | (wallpaperType: WallpaperType, resourceType: WallpaperResourceType, uri?: string) =&gt; void | Yes | wallpaperType indicates the wallpaper type. resourceType indicates the resource type of the wallpaper. uri indicates the wallpaper resource address. |
 
 **Error codes:**
 

@@ -1,6 +1,6 @@
 # Filter
 
-图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。 在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md)创建一个Filter实例。 在添加效果后，需调用[getEffectPixelMap](#geteffectpixelmap)获取处理后的图像。
+图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md)创建一个Filter实例。在添加效果后，需调用[getEffectPixelMap](#geteffectpixelmap)获取处理后的图像。
 
 **起始版本：** 9
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import effectKit from '@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## blur
@@ -18,7 +18,7 @@ import effectKit from '@kit.ArkGraphics2D';
 blur(radius: number): Filter
 ```
 
-将模糊效果添加到效果链表中，返回链表的实例。着色器平铺模式使用DECAL，如需指定平铺模式， 可使用[blur](#blur)接口。 常用于实现背景虚化效果、隐私信息遮挡、毛玻璃背景效果、弹窗背景模糊等场景。
+将模糊效果添加到效果链表中，返回链表的实例。着色器平铺模式使用DECAL，如需指定平铺模式，可使用[blur](#blur)接口。常用于实现背景虚化效果、隐私信息遮挡、毛玻璃背景效果、弹窗背景模糊等场景。
 
 > **说明：**
 > 
@@ -42,7 +42,7 @@ blur(radius: number): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
 
 **示例**
 
@@ -116,7 +116,7 @@ struct Index {
 blur(radius: number, tileMode: TileMode): Filter
 ```
 
-将模糊效果添加到效果链表中，返回链表的实例。支持选择着色器效果平铺模式， 常用于实现背景虚化效果、隐私信息遮挡、毛玻璃背景效果、弹窗背景模糊等场景。
+将模糊效果添加到效果链表中，返回链表的实例。支持选择着色器效果平铺模式，常用于实现背景虚化效果、隐私信息遮挡、毛玻璃背景效果、弹窗背景模糊等场景。
 
 > **说明：**
 > 
@@ -131,13 +131,13 @@ blur(radius: number, tileMode: TileMode): Filter
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | radius | number | 是 | 模糊半径，单位为px，取值范围为[0, +∞)。模糊半径值越大，模糊效果越明显。传入负数时无效果。 |
-| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 | 着色器效果平铺模式。影响图像边缘的模糊效果。 |
+| tileMode | TileMode | 是 | 着色器效果平铺模式。影响图像边缘的模糊效果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
 
 **示例**
 
@@ -211,7 +211,7 @@ struct Index {
 brightness(bright: number): Filter
 ```
 
-将高亮效果添加到效果链表中，返回链表的实例。该方法通过调整图像亮度实现高亮效果， 常用于暗图增亮处理、图片预览亮度增强、夜间模式图片适配等场景。
+将高亮效果添加到效果链表中，返回链表的实例。该方法通过调整图像亮度实现高亮效果，常用于暗图增亮处理、图片预览亮度增强、夜间模式图片适配等场景。
 
 **起始版本：** 9
 
@@ -231,7 +231,7 @@ brightness(bright: number): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
 
 **示例**
 
@@ -305,11 +305,11 @@ struct Index {
 getEffectPixelMap(): Promise<image.PixelMap>
 ```
 
-获取已添加链表效果的源图像的image.PixelMap，默认使用CPU渲染，使用Promise异步回调。 如需指定渲染模式，可使用[getEffectPixelMap](#geteffectpixelmap)接口。 常用于图片处理后需要保存或显示结果的场景。
+获取已添加链表效果的源图像的image.PixelMap，默认使用CPU渲染，使用Promise异步回调。如需指定渲染模式，可使用[getEffectPixelMap](#geteffectpixelmap)接口。常用于图片处理后需要保存或显示结果的场景。
 
 > **说明：**
 > 
-> 该方法默认使用CPU渲染，着色器平铺模式仅支持DECAL，其他模式（CLAMP、REPEAT、MIRROR）暂不支持。 如需使用GPU渲染或了解渲染模式对TileMode的影响，请参见[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)和 [getEffectPixelMap](#geteffectpixelmap)。
+> 该方法默认使用CPU渲染，着色器平铺模式仅支持DECAL，其他模式（CLAMP、REPEAT、MIRROR）暂不支持。 如需使用GPU渲染或了解渲染模式对TileMode的影响，请参见[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)和[getEffectPixelMap](#geteffectpixelmap)。
 
 **起始版本：** 11
 
@@ -323,7 +323,7 @@ getEffectPixelMap(): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
+| Promise&lt;image.PixelMap&gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
 
 **示例**
 
@@ -375,13 +375,13 @@ getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| useCpuRender | boolean | 是 | 指定渲染模式。true表示使用CPU渲染，false表示使用GPU渲染。 使用GPU渲染时，着色器效果平铺模式[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)的支持范围与CPU渲染不同，详见TileMode说明。 |
+| useCpuRender | boolean | 是 | 指定渲染模式。true表示使用CPU渲染，false表示使用GPU渲染。使用GPU渲染时，着色器效果平铺模式[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)的支持范围与CPU渲染不同，详见TileMode说明。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
+| Promise&lt;image.PixelMap&gt; | Promise对象。返回已添加链表效果的源图像的image.PixelMap。 |
 
 **示例**
 
@@ -462,7 +462,7 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
 grayscale(): Filter
 ```
 
-将灰度效果添加到效果链表中，返回链表的实例。该方法将彩色图像转换为灰度图像，通过加权计算RGB值得到灰度值。 常用于黑白风格照片生成、图片预处理去色、灰度图标制作等场景。
+将灰度效果添加到效果链表中，返回链表的实例。该方法将彩色图像转换为灰度图像，通过加权计算RGB值得到灰度值。常用于黑白风格照片生成、图片预处理去色、灰度图标制作等场景。
 
 **起始版本：** 9
 
@@ -476,7 +476,7 @@ grayscale(): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
 
 **示例**
 
@@ -548,7 +548,7 @@ struct Index {
 invert(): Filter
 ```
 
-将反转效果添加到效果链表中，返回链表的实例。该方法将图像的RGB颜色值进行反转， 常用于实现底片效果、图片艺术处理、夜间模式适配等场景。
+将反转效果添加到效果链表中，返回链表的实例。该方法将图像的RGB颜色值进行反转，常用于实现底片效果、图片艺术处理、夜间模式适配等场景。
 
 **起始版本：** 12
 
@@ -558,7 +558,7 @@ invert(): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
 
 **示例**
 
@@ -630,7 +630,7 @@ struct Index {
 setColorMatrix(colorMatrix: Array<number>): Filter
 ```
 
-通过自定义颜色矩阵对图像进行颜色变换处理，将效果添加到效果链表中，返回链表的实例。 常用于实现预设滤镜不支持的自定义颜色效果，如复古色调、冷暖色调调整等场景。
+通过自定义颜色矩阵对图像进行颜色变换处理，将效果添加到效果链表中，返回链表的实例。常用于实现预设滤镜不支持的自定义颜色效果，如复古色调、冷暖色调调整等场景。
 
 **起始版本：** 12
 
@@ -640,13 +640,13 @@ setColorMatrix(colorMatrix: Array<number>): Filter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorMatrix | Array & lt;number & gt; | 是 | 自定义颜色矩阵。用于创建效果滤镜的4x5大小的矩阵，数组长度必须为20， 前4列对应R、G、B、A通道的变换系数，第5列为常量偏移值。建议元素取值为[-1, 1]，超出此范围可能导致颜色值溢出或产生非预期效果。数组长度不为20时返回null。 |
+| colorMatrix | Array&lt;number&gt; | 是 | 自定义颜色矩阵。用于创建效果滤镜的4x5大小的矩阵，数组长度必须为20，前4列对应R、G、B、A通道的变换系数，第5列为常量偏移值。建议元素取值为[-1, 1]，超出此范围可能导致颜色值溢出或产生非预期效果。数组长度不为20时返回null。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
+| Filter | 返回已添加效果的Filter实例，用于继续添加效果或获取处理后的图像。 |
 
 **错误码：**
 

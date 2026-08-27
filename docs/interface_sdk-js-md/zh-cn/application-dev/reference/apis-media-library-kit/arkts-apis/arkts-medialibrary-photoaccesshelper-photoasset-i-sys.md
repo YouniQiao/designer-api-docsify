@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancelPhotoRequest
@@ -87,7 +87,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>): void
 ```
 
-提交编辑数据以及编辑后的图片或视频。使用callback异步回调。通过uri将编辑后的文件传递给媒体库，uri是编辑后的文件在应用沙箱下的FileUri，可参考 [FileUri](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md)。
+提交编辑数据以及编辑后的图片或视频。使用callback异步回调。
+
+通过uri将编辑后的文件传递给媒体库，uri是编辑后的文件在应用沙箱下的FileUri，可参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md)。
 
 > **注意：**
 > 
@@ -160,7 +162,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 commitEditedAsset(editData: string, uri: string): Promise<void>
 ```
 
-提交编辑数据以及编辑后的图片或视频。使用Promise异步回调。通过uri将编辑后的文件传递给媒体库，uri是编辑后的文件在应用沙箱下的FileUri，可参考 [FileUri](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md)。
+提交编辑数据以及编辑后的图片或视频。使用Promise异步回调。
+
+通过uri将编辑后的文件传递给媒体库，uri是编辑后的文件在应用沙箱下的FileUri，可参考[FileUri](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md)。
 
 > **注意：**
 > 
@@ -185,7 +189,7 @@ commitEditedAsset(editData: string, uri: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -250,7 +254,7 @@ convertImageFormat(title: string, imageFormat: SupportedImageFormat): Promise<Ph
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PhotoAsset & gt; | Promise对象，返回转码后文件的PhotoAsset。 |
+| Promise&lt;PhotoAsset&gt; | Promise对象，返回转码后文件的PhotoAsset。 |
 
 **错误码：**
 
@@ -278,7 +282,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   let photoAsset = await fetchResult.getFirstObject();
   try {
     let newPhotoAsset = await photoAsset.convertImageFormat('test', photoAccessHelper.SupportedImageFormat.AVFILE_FORMAT_JPG);
-    console.error(`convertImageFormat success.`);
+    console.info(`convertImageFormat success.`);
   } catch (err) {
     console.error(`convertImageFormat failed. error: ${err.code}, ${err.message}`);
   }
@@ -305,7 +309,7 @@ createTemporaryCompatibleDuplicate(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -365,7 +369,7 @@ getAnalysisData(analysisType: AnalysisType): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Returns analysis info into a json string |
+| Promise&lt;string&gt; | Returns analysis info into a json string |
 
 **错误码：**
 
@@ -411,7 +415,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getEditData(): Promise<MediaAssetEditData>
 ```
 
-获得资产编辑数据。使用Promise异步回调。如果资源未编辑过，则返回的编辑数据的内容为空字符串。
+获得资产编辑数据。使用Promise异步回调。
+
+如果资源未编辑过，则返回的编辑数据的内容为空字符串。
 
 **起始版本：** 11
 
@@ -468,7 +474,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(callback: AsyncCallback<string>): void
 ```
 
-读取jpg格式图片的Exif标签，并返回json格式的字符串。使用callback异步回调。此接口中获取的Exif标签信息是由 [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)模块提供。Exif标签详细信息请参考 [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md)。
+读取jpg格式图片的Exif标签，并返回json格式的字符串。使用callback异步回调。
+
+此接口中获取的Exif标签信息是由 [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)模块提供。Exif标签详细信息请参考[image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md)。
 
 > **注意：**
 > 
@@ -541,7 +549,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(): Promise<string>
 ```
 
-读取jpg格式图片的Exif标签，并返回json格式的字符串。使用Promise异步回调。此接口中获取的Exif标签信息是由[image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) 模块提供。Exif标签详细信息请参考 [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
+读取jpg格式图片的Exif标签，并返回json格式的字符串。使用Promise异步回调。
+
+此接口中获取的Exif标签信息是由[image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) 模块提供。Exif标签详细信息请参考[image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
 
 > **注意：**
 > 
@@ -561,7 +571,7 @@ getExif(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | 返回Exif标签组成的json格式的字符串。 |
+| Promise&lt;string&gt; | 返回Exif标签组成的json格式的字符串。 |
 
 **错误码：**
 
@@ -628,7 +638,7 @@ getKeyFrameThumbnail(beginFrameTimeMs: number, type: ThumbnailType): Promise<ima
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise对象，返回缩略图的PixelMap。若获取不到，默认返回封面帧 |
+| Promise&lt;image.PixelMap&gt; | Promise对象，返回缩略图的PixelMap。若获取不到，默认返回封面帧 |
 
 **错误码：**
 
@@ -644,7 +654,6 @@ getKeyFrameThumbnail(beginFrameTimeMs: number, type: ThumbnailType): Promise<ima
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
 
 ```TypeScript
-import { common }  from '@kit.AbilityKit';
 import { dataSharePredicates } from '@kit.ArkData';
 import { image } from '@kit.ImageKit';
 
@@ -688,7 +697,7 @@ getReadOnlyFdWithCached(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 返回打开文件的Fd。 |
+| Promise&lt;number&gt; | 返回打开文件的Fd。 |
 
 **错误码：**
 
@@ -760,7 +769,7 @@ getThumbnailData(type: ThumbnailType): Promise<ArrayBuffer>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象，返回缩略图的ArrayBuffer。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，返回缩略图的ArrayBuffer。 |
 
 **错误码：**
 
@@ -788,7 +797,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   let asset = await fetchResult.getFirstObject();
   console.info('asset displayName = ', asset.displayName);
   asset.getThumbnailData(photoAccessHelper.ThumbnailType.LCD).then((buffer: ArrayBuffer) => {
-    console.info('getThumbnailData successful, buffer byteLength = ${buffer.byteLength}');
+    console.info(`getThumbnailData successful, buffer byteLength = ${buffer.byteLength}`);
   }).catch((err: BusinessError) => {
     console.error(`getThumbnailData fail with error: ${err.code}, ${err.message}`);
   });
@@ -815,7 +824,7 @@ isEdited(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback对象，返回图片或视频资源是否被编辑过。 true为被编辑过，false为没有被编辑过，默认是false。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Callback对象，返回图片或视频资源是否被编辑过。true为被编辑过，false为没有被编辑过，默认是false。 |
 
 **错误码：**
 
@@ -880,7 +889,7 @@ isEdited(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象，返回图片或视频资源是否被编辑过。 true为被编辑过，false为没有被编辑过，默认是false。 |
+| Promise&lt;boolean&gt; | Promise对象，返回图片或视频资源是否被编辑过。true为被编辑过，false为没有被编辑过，默认是false。 |
 
 **错误码：**
 
@@ -926,7 +935,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 open(mode: string, callback: AsyncCallback<number>): void
 ```
 
-打开当前文件。使用callback异步回调。该接口返回的文件描述符在使用完毕后需要调用close进行释放。
+打开当前文件。使用callback异步回调。
+
+该接口返回的文件描述符在使用完毕后需要调用close进行释放。
 
 > **说明：**
 > 
@@ -987,7 +998,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 open(mode: string): Promise<number>
 ```
 
-打开当前文件。使用Promise异步回调。该接口返回的文件描述符在使用完毕后需要调用close进行释放。
+打开当前文件。使用Promise异步回调。
+
+该接口返回的文件描述符在使用完毕后需要调用close进行释放。
 
 > **说明：**
 > 
@@ -1015,7 +1028,7 @@ open(mode: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回文件描述符。 |
+| Promise&lt;number&gt; | Promise对象，返回文件描述符。 |
 
 **错误码：**
 
@@ -1056,7 +1069,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestEditData(callback: AsyncCallback<string>): void
 ```
 
-获得图片或视频资源的编辑数据。使用callback异步回调。如果资源未编辑过，则返回一个空字符串。
+获得图片或视频资源的编辑数据。使用callback异步回调。
+
+如果资源未编辑过，则返回一个空字符串。
 
 **起始版本：** 11
 
@@ -1117,7 +1132,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestEditData(): Promise<string>
 ```
 
-获得图片或视频资源的编辑数据。使用Promise异步回调。如果资源未编辑过，则返回一个空字符串。
+获得图片或视频资源的编辑数据。使用Promise异步回调。
+
+如果资源未编辑过，则返回一个空字符串。
 
 **起始版本：** 11
 
@@ -1131,7 +1148,7 @@ requestEditData(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回图片或视频资源的编辑数据。 |
+| Promise&lt;string&gt; | Promise对象，返回图片或视频资源的编辑数据。 |
 
 **错误码：**
 
@@ -1173,7 +1190,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestPhoto(callback: AsyncCallback<image.PixelMap>): string
 ```
 
-通过callback的形式，获取资源的快速缩略图和普通缩略图。快速缩略图尺寸为128*128，普通缩略图尺寸为256*256。应用调用接口后，callback将返回两次缩略图对象，第一次为快速缩略图， 第二次为普通缩略图。
+通过callback的形式，获取资源的快速缩略图和普通缩略图。
+
+快速缩略图尺寸为128*128，普通缩略图尺寸为256*256。应用调用接口后，callback将返回两次缩略图对象，第一次为快速缩略图，第二次为普通缩略图。
 
 **起始版本：** 11
 
@@ -1391,7 +1410,7 @@ requestSource(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回源文件fd。 |
+| Promise&lt;number&gt; | Promise对象，返回源文件fd。 |
 
 **错误码：**
 
@@ -1516,7 +1535,7 @@ revertToOriginal(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -1545,10 +1564,10 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOptions);
     let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
     if (photoAsset === undefined) {
-      console.error('getHiddenAlbumsViewCallback albums is undefined');
+      console.error('revertToOriginal photoAsset is undefined');
       return;
     }
-    photoAsset.revertToOriginal();
+    await photoAsset.revertToOriginal();
     console.info('revertToOriginal is successful');
   } catch (err) {
     console.error(`revertToOriginalPromiseDemo failed with error: ${err.code}, ${err.message}`);
@@ -1649,7 +1668,7 @@ setFavorite(favoriteState: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -1696,7 +1715,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void
 ```
 
-将文件设置为隐私文件。使用callback异步回调。隐私文件存在隐私相册中，用户通过隐私相册去获取隐私文件后可以通过设置hiddenState为false来从隐私相册中移除。
+将文件设置为隐私文件。使用callback异步回调。
+
+隐私文件存在隐私相册中，用户通过隐私相册去获取隐私文件后可以通过设置hiddenState为false来从隐私相册中移除。
 
 **起始版本：** 10
 
@@ -1759,7 +1780,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setHidden(hiddenState: boolean): Promise<void>
 ```
 
-将文件设置为隐私文件。使用Promise异步回调。隐私文件存在隐私相册中，用户通过隐私相册去获取隐私文件后可以通过设置hiddenState为false来从隐私相册中移除。
+将文件设置为隐私文件。使用Promise异步回调。
+
+隐私文件存在隐私相册中，用户通过隐私相册去获取隐私文件后可以通过设置hiddenState为false来从隐私相册中移除。
 
 **起始版本：** 10
 
@@ -1783,7 +1806,7 @@ setHidden(hiddenState: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | callback返回void。 |
+| Promise&lt;void&gt; | callback返回void。 |
 
 **错误码：**
 
@@ -1829,7 +1852,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setPending(pendingState: boolean, callback: AsyncCallback<void>): void
 ```
 
-为图片或视频资源设置pending状态。使用callback异步回调。将文件通过`setPending(true)`设置为pending状态后，只能通过`setPending(false)`解除pending状态。 可以通过`photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)`的方式获取是否为pending状态，pending状态下返回true， 否则返回false。
+为图片或视频资源设置pending状态。使用callback异步回调。
+
+将文件通过`setPending(true)`设置为pending状态后，只能通过`setPending(false)`解除pending状态。可以通过`photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)`的方式获取是否为pending状态，pending状态下返回true，否则返回false。
 
 > **注意：**
 > 
@@ -1894,7 +1919,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setPending(pendingState: boolean): Promise<void>
 ```
 
-为图片或视频资源设置pending状态。使用Promise异步回调。将文件通过`setPending(true)`设置为pending状态后，只能通过`setPending(false)`解除pending状态。 可以通过`photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)`的方式获取是否为pending状态，pending状态下返回true， 否则返回false。
+为图片或视频资源设置pending状态。使用Promise异步回调。
+
+将文件通过`setPending(true)`设置为pending状态后，只能通过`setPending(false)`解除pending状态。可以通过`photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)`的方式获取是否为pending状态，pending状态下返回true，否则返回false。
 
 > **注意：**
 > 
@@ -1918,7 +1945,7 @@ setPending(pendingState: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 
@@ -1941,7 +1968,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     let photoAsset = await phAccessHelper.createAsset(testFileName);
     await photoAsset.setPending(true);
     // add asset resource.
-    photoAsset.setPending(false);
+    await photoAsset.setPending(false);
   } catch (err) {
     console.error(`setPendingPromiseDemo failed with error: ${err.code}, ${err.message}`);
   }
@@ -2046,7 +2073,7 @@ setUserComment(userComment: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，返回void。 |
+| Promise&lt;void&gt; | Promise对象，返回void。 |
 
 **错误码：**
 

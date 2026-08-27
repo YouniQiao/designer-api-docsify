@@ -1,6 +1,8 @@
 # ReverseGeoCodeRequest
 
-Configuring parameters in reverse geocode requests@interface ReverseGeoCodeRequest
+Configuring parameters in reverse geocode requests
+
+@interface ReverseGeoCodeRequest
 
 **Since:** 7
 
@@ -15,7 +17,7 @@ Configuring parameters in reverse geocode requests@interface ReverseGeoCodeReque
 ## Modules to Import
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## latitude

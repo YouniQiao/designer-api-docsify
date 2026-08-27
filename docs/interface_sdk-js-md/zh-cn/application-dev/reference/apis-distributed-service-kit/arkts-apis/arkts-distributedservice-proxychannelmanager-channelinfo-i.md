@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import proxyChannelManager from '@kit.DistributedServiceKit';
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## linkType

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAppCloneIdentityBySandboxDataDir
@@ -30,7 +30,7 @@ Obtains the identity information of an application, including the bundle name an
 
 | Type | Description |
 | --- | --- |
-| [AppCloneIdentity](arkts-ability-bundlemanager-appcloneidentity-t.md) | Bundle name and clone index of the application. |
+| AppCloneIdentity | Bundle name and clone index of the application. |
 
 **Examples**
 

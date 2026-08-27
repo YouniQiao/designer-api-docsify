@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedKVStore from '@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## MAX_BATCH_SIZE

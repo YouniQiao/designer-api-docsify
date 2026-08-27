@@ -1,6 +1,8 @@
 # VelocityFieldOptions
 
-Parameter used to describe the velocity field of particles.@interface VelocityFieldOptions
+Parameter used to describe the velocity field of particles.
+
+@interface VelocityFieldOptions
 
 **Since:** 22
 

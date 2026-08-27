@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isNotificationSlotEnabled
@@ -26,8 +26,8 @@ function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType, callbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 应用的包信息。 |
-| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 | 渠道类型。 |
+| bundle | BundleOption | 是 | 应用的包信息。 |
+| type | SlotType | 是 | 渠道类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 获取渠道使能状态回调函数（true：使能，false：禁止）。 |
 
 **错误码：**
@@ -84,14 +84,14 @@ function isNotificationSlotEnabled(bundle: BundleOption, type: SlotType): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 应用的包信息。 |
-| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 | 渠道类型。 |
+| bundle | BundleOption | 是 | 应用的包信息。 |
+| type | SlotType | 是 | 渠道类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | 以Promise形式返回指定类型的渠道使能状态（true：使能，false：禁止）。 |
+| Promise&lt;boolean&gt; | 以Promise形式返回指定类型的渠道使能状态（true：使能，false：禁止）。 |
 
 **错误码：**
 

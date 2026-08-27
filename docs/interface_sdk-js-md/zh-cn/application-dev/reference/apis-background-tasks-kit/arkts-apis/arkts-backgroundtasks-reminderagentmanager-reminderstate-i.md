@@ -1,6 +1,7 @@
 # ReminderState
 
 代理提醒状态信息。状态信息会在如下两种情况发送通知：
+
 1. 用户点击代理提醒的通知按钮时，如果应用进程存在，则会发送用户点击的按钮类型的通知给应用。
 如果应用未运行，则无法收到通知。
 2. 由于第1点不能保证应用可以收到通知，因此应用注册新的回调函数时，会将该应用下所有用户点击的按钮类型回调给应用。
@@ -13,7 +14,7 @@
 ## 导入模块
 
 ```TypeScript
-import reminderAgentManager from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## buttonType
@@ -38,7 +39,8 @@ buttonType: ActionButtonType
 isMessageResent: boolean
 ```
 
-信息是否为重复发送。  
+信息是否为重复发送。
+
 - false：信息首次发送。具体场景包括：用户点击代理提醒的通知按钮时，应用进程存在；用户点击代理提醒的通知按钮时，应用未运行，后续应用注册新的回调函数。  
 - true：信息重复发送，具体场景为：应用进程存在，用户点击代理提醒的通知按钮后，应用注册新的回调函数。
 

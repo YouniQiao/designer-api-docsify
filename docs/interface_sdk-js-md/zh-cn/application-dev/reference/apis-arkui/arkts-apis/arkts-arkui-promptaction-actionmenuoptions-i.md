@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## buttons
@@ -41,7 +41,7 @@ buttons: [
 immersiveMode?: ImmersiveMode
 ```
 
-设置页面内菜单蒙层效果。   
+设置页面内菜单蒙层效果。  
 **说明：**
 - 默认值：ImmersiveMode.DEFAULT
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
@@ -64,7 +64,7 @@ immersiveMode?: ImmersiveMode
 isModal?: boolean
 ```
 
-菜单是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与菜单周围其他控件进行交互，即蒙层区域无法事件透传。 值为false表示为非模态窗口且无蒙层，可以与菜单周围其他控件进行交互。 默认值：true
+菜单是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与菜单周围其他控件进行交互，即蒙层区域无法事件透传。值为false表示为非模态窗口且无蒙层，可以与菜单周围其他控件进行交互。默认值：true
 
 **类型：** boolean
 
@@ -84,7 +84,7 @@ isModal?: boolean
 levelMode?: LevelMode
 ```
 
-设置菜单显示层级。   
+设置菜单显示层级。  
 **说明：**
 - 默认值：LevelMode.OVERLAY
 - 当且仅当showInSubWindow属性设置为false时生效。
@@ -107,7 +107,7 @@ levelMode?: LevelMode
 levelUniqueId?: number
 ```
 
-设置页面级菜单需要显示的层级下的节点UniqueID。 取值范围：大于等于0的数字。   
+设置页面级菜单需要显示的层级下的节点UniqueID。取值范围：大于等于0的数字。  
 **说明：**
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
@@ -127,9 +127,9 @@ levelUniqueId?: number
 onDidAppear?: Callback<void>
 ```
 
-菜单弹出后的事件回调。   
+菜单弹出后的事件回调。  
 **说明：**
-1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。 
+1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 2.快速点击弹出，关闭菜单时，onWillDisappear在onDidAppear前生效。
 
 **类型：** Callback&lt;void&gt;
@@ -148,7 +148,7 @@ onDidAppear?: Callback<void>
 onDidDisappear?: Callback<void>
 ```
 
-菜单消失后的事件回调。   
+菜单消失后的事件回调。  
 **说明：**
 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
@@ -168,7 +168,7 @@ onDidDisappear?: Callback<void>
 onWillAppear?: Callback<void>
 ```
 
-菜单显示动效前的事件回调。   
+菜单显示动效前的事件回调。  
 **说明：**
 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
@@ -188,7 +188,7 @@ onWillAppear?: Callback<void>
 onWillDisappear?: Callback<void>
 ```
 
-菜单退出动效前的事件回调。   
+菜单退出动效前的事件回调。  
 **说明：**
 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
@@ -208,7 +208,7 @@ onWillDisappear?: Callback<void>
 showInSubWindow?: boolean
 ```
 
-某操作菜单需要显示在主窗口之外时，是否在子窗口显示此菜单。值为true表示在子窗口显示菜单。 默认值：false，在子窗口不显示菜单。   
+某操作菜单需要显示在主窗口之外时，是否在子窗口显示此菜单。值为true表示在子窗口显示菜单。默认值：false，在子窗口不显示菜单。  
 **说明：**
 - showInSubWindow为true的菜单无法触发显示另一个showInSubWindow为true的菜单。
 - 若在UIExtension中设置showInSubWindow为true, 菜单将基于UIExtension的宿主窗口对齐。
@@ -231,7 +231,7 @@ showInSubWindow?: boolean
 systemMaterial?: SystemUiMaterial
 ```
 
-设置弹窗的系统材质。 默认值：[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)的style为 ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)对象。 设置undefined时与默认值保持一致。不同的材质具有不同的效果，可以影响弹窗的背景色、边框、阴影等视觉属性。
+设置弹窗的系统材质。默认值：[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md)的style为ImmersiveStyle.ULTRA_THICK的[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)对象。设置undefined时与默认值保持一致。不同的材质具有不同的效果，可以影响弹窗的背景色、边框、阴影等视觉属性。
 
 **类型：** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t-sys.md)
 
@@ -249,7 +249,7 @@ systemMaterial?: SystemUiMaterial
 title?: string | Resource
 ```
 
-标题文本。 默认值：undefined，取值为undefined默认不显示标题。
+标题文本。默认值：undefined，取值为undefined默认不显示标题。
 
 **类型：** string \| Resource
 

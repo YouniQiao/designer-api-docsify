@@ -1,8 +1,8 @@
 # ParamsSpec
 
-加解密参数，在进行对称加解密时需要构造其子类对象，并将子类对象传入 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法。
+加解密参数，在进行对称加解密时需要构造其子类对象，并将子类对象传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法。
 
-适用于需要iv等参数的对称加解密模式（对于无iv等参数的模式如ECB模式，无需构造，在 [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)中传入null即可）。
+适用于需要iv等参数的对称加解密模式（对于无iv等参数的模式如ECB模式，无需构造，在[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)中传入null即可）。
 
 > **说明：**
 > 
@@ -24,7 +24,7 @@
 ## 导入模块
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## algName
@@ -33,7 +33,8 @@ import cryptoFramework from '@kit.CryptoArchitectureKit';
 algName: string
 ```
 
-指明对称加解密参数的算法模式。可选值如下：  
+指明对称加解密参数的算法模式。可选值如下：
+
 - "IvParamsSpec"：适用于CBC|CTR|OFB|CFB模式。  
 - "GcmParamsSpec"：适用于GCM模式。  
 - "CcmParamsSpec"：适用于CCM模式。  

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## getBackgroundTaskState
@@ -34,7 +34,7 @@ function getBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): UserAuthRes
 
 | 类型 | 说明 |
 | --- | --- |
-| [UserAuthResult](arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | 授权结果。 |
+| UserAuthResult | 授权结果。 |
 
 **错误码：**
 

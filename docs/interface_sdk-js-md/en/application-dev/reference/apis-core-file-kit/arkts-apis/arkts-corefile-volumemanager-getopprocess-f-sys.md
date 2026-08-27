@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import volumeManager from '@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## getOpProcess
@@ -34,7 +34,7 @@ Gets the operation progress of a volume. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the operation progress. |
+| Promise&lt;number&gt; | Promise used to return the operation progress. |
 
 **Error codes:**
 

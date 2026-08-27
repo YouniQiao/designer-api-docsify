@@ -1,6 +1,8 @@
 # EffectFlag（系统接口）
 
-枚举，音效分类。@enum { number }
+枚举，音效分类。
+
+@enum { number }
 
 **起始版本：** 18
 

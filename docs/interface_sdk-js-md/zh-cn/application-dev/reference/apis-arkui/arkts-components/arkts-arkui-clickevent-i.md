@@ -41,7 +41,8 @@ getCurrentLocalPosition?(): Coordinate2D
 preventDefault: () => void
 ```
 
-阻止默认事件。  
+阻止默认事件。
+
 **说明：** 该接口仅支持部分组件使用，当前支持组件：RichEditor、Hyperlink，不支持的组件使用时会抛出异常。暂不支持异步调用和提供Modifier接口。
 
 **起始版本：** 12
@@ -64,7 +65,9 @@ preventDefault: () => void
 displayX: number
 ```
 
-点击位置在当前应用屏幕坐标系中的X坐标。单位：vp
+点击位置在当前应用屏幕坐标系中的X坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -82,7 +85,9 @@ displayX: number
 displayY: number
 ```
 
-点击位置在当前应用屏幕坐标系中的Y坐标。单位：vp
+点击位置在当前应用屏幕坐标系中的Y坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -100,7 +105,11 @@ displayY: number
 globalDisplayX?: number
 ```
 
-点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。单位：vp取值范围：[0, +∞)
+点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的X坐标。
+
+单位：vp
+
+取值范围：[0, +∞)
 
 **类型：** number
 
@@ -118,7 +127,11 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。单位：vp取值范围：[0, +∞)
+点击位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
+
+单位：vp
+
+取值范围：[0, +∞)
 
 **类型：** number
 
@@ -154,7 +167,9 @@ hand?: InteractionHand
 screenX: number
 ```
 
-点击位置在当前应用窗口坐标系中的X坐标。单位：vp
+点击位置在当前应用窗口坐标系中的X坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -172,7 +187,9 @@ screenX: number
 screenY: number
 ```
 
-点击位置在当前应用窗口坐标系中的Y坐标。单位：vp
+点击位置在当前应用窗口坐标系中的Y坐标。
+
+单位：vp
 
 **类型：** number
 
@@ -190,7 +207,9 @@ screenY: number
 windowX: number
 ```
 
-点击位置在当前应用窗口坐标系中的X坐标。onClick的distanceThreshold设置后，点击位置为抬手点。单位：vp
+点击位置在当前应用窗口坐标系中的X坐标。onClick的distanceThreshold设置后，点击位置为抬手点。
+
+单位：vp
 
 **类型：** number
 
@@ -208,7 +227,9 @@ windowX: number
 windowY: number
 ```
 
-点击位置在当前应用窗口坐标系中的Y坐标。onClick的distanceThreshold设置后，点击位置为抬手点。单位：vp
+点击位置在当前应用窗口坐标系中的Y坐标。onClick的distanceThreshold设置后，点击位置为抬手点。
+
+单位：vp
 
 **类型：** number
 
@@ -226,7 +247,9 @@ windowY: number
 x: number
 ```
 
-点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。onClick的 [distanceThreshold](arkts-arkui-commonmethod-c.md#onclick)设置后，点击位置为抬手 点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。单位：vp
+点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。onClick的[distanceThreshold](arkts-arkui-commonmethod-c.md#onclick)设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
+
+单位：vp
 
 **类型：** number
 
@@ -244,7 +267,9 @@ x: number
 y: number
 ```
 
-点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。onClick的distanceThreshold设置后，点击位置为抬手点。触发事件的是键盘或手柄 时，点击位置为被点击元素的中心点。单位：vp
+点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的Y坐标。onClick的distanceThreshold设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
+
+单位：vp
 
 **类型：** number
 

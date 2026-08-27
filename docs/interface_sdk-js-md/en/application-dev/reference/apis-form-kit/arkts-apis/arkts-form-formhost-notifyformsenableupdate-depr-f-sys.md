@@ -33,7 +33,7 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes | List of widget IDs. |
+| formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
 | isEnableUpdate | boolean | Yes | Whether to make the widgets updatable. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent, **error** is undefined; otherwise, **error** is an error object. |
 
@@ -75,14 +75,14 @@ Instructs the widgets to enable or disable updates. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes | List of widget IDs. |
+| formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
 | isEnableUpdate | boolean | Yes | Whether to make the widgets updatable. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

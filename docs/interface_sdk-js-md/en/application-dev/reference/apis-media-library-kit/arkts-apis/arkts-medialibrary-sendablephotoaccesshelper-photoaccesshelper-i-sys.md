@@ -11,7 +11,7 @@ Helper functions to access photos and albums.
 ## Modules to Import
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## createAsset
@@ -20,11 +20,17 @@ import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
 createAsset(displayName: string): Promise<PhotoAsset>
 ```
 
-Creates an asset with the specified file name. This API uses a promise to return the result.The file name must meet the following requirements:  
+Creates an asset with the specified file name. This API uses a promise to return the result.
+
+The file name must meet the following requirements:
+
 - A valid file name must include a base name and a supported image or video extension.  
 - The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.  
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+- The base name must not contain any invalid characters.
+
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |
+
+For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 12
 
@@ -44,7 +50,7 @@ Starting from API version 18, the following characters are considered invalid: \
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PhotoAsset & gt; | Promise used to return the created asset. |
+| Promise&lt;PhotoAsset&gt; | Promise used to return the created asset. |
 
 **Error codes:**
 
@@ -81,11 +87,17 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions): Promise<PhotoAsset>
 ```
 
-Creates an asset with the specified file name and options. This API uses a promise to return the result.The file name must meet the following requirements:  
+Creates an asset with the specified file name and options. This API uses a promise to return the result.
+
+The file name must meet the following requirements:
+
 - A valid file name must include a base name and a supported image or video extension.  
 - The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.  
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+- The base name must not contain any invalid characters.
+
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |
+
+For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 12
 
@@ -106,7 +118,7 @@ Starting from API version 18, the following characters are considered invalid: \
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PhotoAsset & gt; | Promise used to return the created asset. |
+| Promise&lt;PhotoAsset&gt; | Promise used to return the created asset. |
 
 **Error codes:**
 
@@ -170,7 +182,7 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;FetchResult & lt;Album & gt; & gt; | Promise used to return the result. |
+| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -263,7 +275,7 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PhotoAsset[] & gt; | Promise used to return the PhotoAsset object array (which may be empty). |
+| Promise&lt;PhotoAsset[]&gt; | Promise used to return the PhotoAsset object array (which may be empty). |
 
 **Error codes:**
 
@@ -326,7 +338,7 @@ Fetch shared photo assets.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;SharedPhotoAsset & gt; | Returns the shared photo assets |
+| Array&lt;SharedPhotoAsset&gt; | Returns the shared photo assets |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import font from '@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## name
@@ -36,7 +36,9 @@ name: string
 weight: number
 ```
 
-当weight&gt;0时表示此字体集只包含所指定weight的字体，当weight=0时，表示此字体集包含所有字体。可返回的值有0、100、400、700、900。
+当weight&gt;0时表示此字体集只包含所指定weight的字体，当weight=0时，表示此字体集包含所有字体。
+
+可返回的值有0、100、400、700、900。
 
 **类型：** number
 

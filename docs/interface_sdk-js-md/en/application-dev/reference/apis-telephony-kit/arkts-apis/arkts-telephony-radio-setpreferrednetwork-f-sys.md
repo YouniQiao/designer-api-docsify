@@ -85,7 +85,7 @@ Set the preferred network for the specified SIM card slot.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the setPreferredNetwork. |
+| Promise&lt;void&gt; | The promise returned by the setPreferredNetwork. |
 
 **Error codes:**
 

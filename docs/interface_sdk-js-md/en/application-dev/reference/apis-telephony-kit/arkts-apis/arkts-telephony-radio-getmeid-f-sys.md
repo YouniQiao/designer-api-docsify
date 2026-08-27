@@ -82,7 +82,7 @@ Obtains the MEID of a specified card slot of the device.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the MEID. Returns an empty string if the MEID does not exist. |
+| Promise&lt;string&gt; | Returns the MEID. Returns an empty string if the MEID does not exist. |
 
 **Error codes:**
 

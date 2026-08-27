@@ -27,7 +27,7 @@ Obtains information about the sensor of a specific type. This API returns the re
 
 | Type | Description |
 | --- | --- |
-| [Sensor](arkts-sensorservice-system-sensor-sensor-c.md) | Sensor information. |
+| Sensor | Sensor information. |
 
 **Error codes:**
 

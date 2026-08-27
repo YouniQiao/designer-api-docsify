@@ -33,4 +33,4 @@ Sets the list of coordinates through which the polyline passes. This attribute c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array & lt;any & gt; | Yes | List of coordinates that the polyline passes through. A two-dimensional array is passed, and each subarray indicates the `[x, y]` coordinates of a vertex.Default value: **[]** (empty array) Default unit: vp The **undefined** and **null** values are invalid and treated as the default value. |
+| value | Array&lt;any&gt; | Yes | List of coordinates that the polyline passes through. A two-dimensional array is passed, and each subarray indicates the `[x, y]` coordinates of a vertex.Default value: **[]** (empty array) Default unit: vp The **undefined** and **null** values are invalid and treated as the default value. |

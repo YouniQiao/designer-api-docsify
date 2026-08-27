@@ -1,6 +1,8 @@
 # SystemSoundPlayer
 
-音效播放器提供了加载、卸载和播放系统声音的功能。SystemSoundPlayer需要和 [@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md)配合使用， 才能完成管理系统音效的功能。
+音效播放器提供了加载、卸载和播放系统声音的功能。
+
+SystemSoundPlayer需要和[@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md)配合使用，才能完成管理系统音效的功能。
 
 **起始版本：** 23
 
@@ -30,7 +32,7 @@ load(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -76,7 +78,7 @@ play(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -116,7 +118,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -160,7 +162,7 @@ unload(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

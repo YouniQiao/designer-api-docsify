@@ -9,7 +9,7 @@ The ComponentObserver is used to listen for layout, draw and drawChildren events
 ## Modules to Import
 
 ```TypeScript
-import inspector from '@kit.ArkUI';
+import { inspector } from '@kit.ArkUI';
 ```
 
 ## off('layout')
@@ -33,7 +33,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'layout' | Yes | type of the listened event.<br>**Since:** 12 |
-| callback | () = & gt; void | No | callback of the listened event.<br>**Since:** 12 |
+| callback | () =&gt; void | No | callback of the listened event.<br>**Since:** 12 |
 
 ## off('draw')
 
@@ -56,7 +56,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'draw' | Yes | type of the listened event.<br>**Since:** 12 |
-| callback | () = & gt; void | No | callback of the listened event.<br>**Since:** 12 |
+| callback | () =&gt; void | No | callback of the listened event.<br>**Since:** 12 |
 
 ## off('drawChildren')
 
@@ -252,7 +252,7 @@ Registers a callback with the corresponding query condition by using the handle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'layout' | Yes | type of the listened event.<br>**Since:** 12 |
-| callback | () = & gt; void | Yes | callback of the listened event.<br>**Since:** 12 |
+| callback | () =&gt; void | Yes | callback of the listened event.<br>**Since:** 12 |
 
 ## on('draw')
 
@@ -275,7 +275,7 @@ Registers a callback with the corresponding query condition by using the handle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'draw' | Yes | type of the listened event.<br>**Since:** 12 |
-| callback | () = & gt; void | Yes | callback of the listened event.<br>**Since:** 12 |
+| callback | () =&gt; void | Yes | callback of the listened event.<br>**Since:** 12 |
 
 ## on('drawChildren')
 

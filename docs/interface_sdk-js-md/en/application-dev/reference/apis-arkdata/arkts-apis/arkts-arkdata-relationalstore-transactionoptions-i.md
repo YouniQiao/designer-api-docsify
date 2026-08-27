@@ -9,7 +9,7 @@ Represents the configuration of a transaction object.
 ## Modules to Import
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## transactionType
@@ -18,7 +18,9 @@ import relationalStore from '@kit.ArkData';
 transactionType?: TransactionType
 ```
 
-Transaction object type.Default value: **DEFERRED**.
+Transaction object type.
+
+Default value: **DEFERRED**.
 
 **Type:** [TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md)
 

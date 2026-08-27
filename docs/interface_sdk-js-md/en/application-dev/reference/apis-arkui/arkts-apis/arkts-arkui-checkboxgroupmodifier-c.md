@@ -1,6 +1,8 @@
 # CheckboxGroupModifier
 
-Defines CheckboxGroup Modifier@extends CheckboxGroupAttribute @implements AttributeModifier&lt;CheckboxGroupAttribute&gt;
+Defines CheckboxGroup Modifier
+
+@extends CheckboxGroupAttribute @implements AttributeModifier&lt;CheckboxGroupAttribute&gt;
 
 **Inheritance/Implementation:** CheckboxGroupModifier extends [CheckboxGroupAttribute](../arkts-components/arkts-arkui-checkboxgroup-attribute.md#checkboxgroupattribute) and implements AttributeModifier<CheckboxGroupAttribute>
 

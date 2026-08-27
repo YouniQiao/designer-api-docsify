@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## analyzePrintEvents
@@ -28,14 +28,14 @@ function analyzePrintEvents(printerId: string, eventType: string): Promise<strin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| printerId | string | 是 | 打印机ID。 要分析的打印机ID。 |
-| eventType | string | 是 | 前卫类型。 需要分析的事件类型。 |
+| printerId | string | 是 | 打印机ID。要分析的打印机ID。 |
+| eventType | string | 是 | 前卫类型。需要分析的事件类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | the promise returned by the function. |
+| Promise&lt;string&gt; | the promise returned by the function. |
 
 **错误码：**
 

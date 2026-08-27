@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import floatView from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## bind
@@ -51,7 +51,7 @@ Binds the float view and floating ball. You need to create the [float view contr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import launcherBundleManager from '@kit.AbilityKit';
+import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllLauncherAbilityInfo
@@ -88,7 +88,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;LauncherAbilityInfo & gt; & gt; | Promise used to return the array of [LauncherAbilityInfo]{ |
+| Promise&lt;Array&lt;LauncherAbilityInfo&gt;&gt; | Promise used to return the array of [LauncherAbilityInfo]{ |
 
 **Error codes:**
 

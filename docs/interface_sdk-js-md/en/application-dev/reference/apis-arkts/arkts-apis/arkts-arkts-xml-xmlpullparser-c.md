@@ -70,7 +70,7 @@ Starts parsing the XML file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes | Parse options for XmlPullParser, the interface including two Boolean variables and three callback functions. |
+| option | ParseOptions | Yes | Parse options for XmlPullParser, the interface including two Boolean variables and three callback functions. |
 
 **Examples**
 
@@ -122,4 +122,4 @@ Parses XML information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes | XML parsing options. |
+| option | ParseOptions | Yes | XML parsing options. |

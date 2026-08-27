@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import config from '@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## get
@@ -32,7 +32,7 @@ get(): Promise<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;T & gt; | Promise对象，返回对应属性值。 |
+| Promise&lt;T&gt; | Promise对象，返回对应属性值。 |
 
 **错误码：**
 
@@ -142,7 +142,9 @@ config.highContrastText.off(callback);
 on(callback: Callback<T>): void
 ```
 
-添加属性变化监听。使用callback异步回调。需与[off](#off)配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
+添加属性变化监听。使用callback异步回调。
+
+需与[off](#off)配对使用，在不需要监听时调用off取消注册，避免资源泄漏。
 
 **起始版本：** 9
 
@@ -202,7 +204,7 @@ set(value: T): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

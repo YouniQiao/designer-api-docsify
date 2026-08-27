@@ -1,6 +1,8 @@
 # MemberPurchaseInfo
 
-会员购买信息的定义。@interface MediaElement
+会员购买信息的定义。
+
+@interface MediaElement
 
 **起始版本：** 23
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## diagramContent

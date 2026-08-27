@@ -20,7 +20,7 @@ Set value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | [since 20] { string } content [since 8 - 19] |
+| content | string \| Resource | Yes | [since 20] { string } content [since 8 - 19] |
 
 ## Summary
 

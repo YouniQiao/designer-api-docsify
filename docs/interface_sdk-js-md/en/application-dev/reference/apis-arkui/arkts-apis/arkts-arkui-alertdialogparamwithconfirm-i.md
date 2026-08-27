@@ -1,6 +1,8 @@
 # AlertDialogParamWithConfirm
 
-Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).Priorities of the **confirm** parameters: **fontColor** and **backgroundColor**   
+Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
+
+Priorities of the **confirm** parameters: **fontColor** and **backgroundColor**   
 > **style**
 > **defaultFocus**
 

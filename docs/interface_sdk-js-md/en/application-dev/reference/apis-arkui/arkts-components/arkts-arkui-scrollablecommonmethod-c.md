@@ -1,6 +1,8 @@
 # ScrollableCommonMethod
 
-CommonScrollableMethod@extends CommonMethod&lt;T&gt;
+CommonScrollableMethod
+
+@extends CommonMethod&lt;T&gt;
 
 **Inheritance/Implementation:** ScrollableCommonMethod extends CommonMethod<T>
 
@@ -61,7 +63,7 @@ Sets whether to enable the back-to-top feature for a scrollable component when t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backToTop | boolean | Yes | Whether to enable the back-to-top feature for a scrollable component when the status bar is touched. Default value: & lt;em & gt;false & lt;/em & gt; |
+| backToTop | boolean | Yes | Whether to enable the back-to-top feature for a scrollable component when the status bar is touched. Default value: &lt;em&gt;false&lt;/em&gt; |
 
 **Return value:**
 
@@ -117,7 +119,7 @@ Sets the offset from the end of the content to the boundary of the scrollable di
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Offset from the end of the content to the boundary of the scrollable display area. Default value: & lt;em & gt;0 & lt;/em & gt; Unit: vp |
+| offset | number \| Resource | Yes | Offset from the end of the content to the boundary of the scrollable display area. Default value: &lt;em&gt;0&lt;/em&gt; Unit: vp |
 
 **Return value:**
 
@@ -145,7 +147,7 @@ Sets the offset from the start of the content to the boundary of the scrollable 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Offset from the start of the content to the boundary of the scrollable display area. Default value: & lt;em & gt;0 & lt;/em & gt; Unit: vp |
+| offset | number \| Resource | Yes | Offset from the start of the content to the boundary of the scrollable display area. Default value: &lt;em&gt;0&lt;/em&gt; Unit: vp |
 
 **Return value:**
 
@@ -201,8 +203,8 @@ Sets the effect used when the scroll boundary is reached.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported. Default value: & lt;em & gt;EdgeEffect.None & lt;/em & gt; for the & lt;em & gt;Grid & lt;/em & gt;, & lt;em & gt;Scroll & lt;/em & gt;, and & lt;em & gt;WaterFlow & lt;/em & gt; components and & lt;em & gt;EdgeEffect.Spring & lt;/em & gt; for the & lt;em & gt;List & lt;/em & gt; component |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value & lt;em & gt;{ alwaysEnabled: true } & lt;/em & gt; means to enable the scroll effect, and & lt;em & gt;{ alwaysEnabled: false } & lt;/em & gt; means the opposite. Default value: & lt;em & gt;{ alwaysEnabled: false } & lt;/em & gt; for the & lt;em & gt;List & lt;/em & gt;, & lt;em & gt;Grid & lt;/em & gt;, and & lt;em & gt;WaterFlow & lt;/em & gt; components, and & lt;em & gt;{ alwaysEnabled: true } & lt;/em & gt; for the & lt;em & gt;Scroll & lt;/em & gt; component |
+| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported. Default value: &lt;em&gt;EdgeEffect.None&lt;/em&gt; for the &lt;em&gt;Grid&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components and &lt;em&gt;EdgeEffect.Spring&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt; component |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; means to enable the scroll effect, and &lt;em&gt;{ alwaysEnabled: false }&lt;/em&gt; means the opposite. Default value:&lt;em&gt;{ alwaysEnabled: false }&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow &lt;/em&gt; components, and &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; for the &lt;em&gt;Scroll&lt;/em&gt; component |
 
 **Return value:**
 
@@ -230,7 +232,7 @@ Sets whether to support scroll gestures.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures.Default value: & lt;em & gt;true & lt;/em & gt; |
+| value | boolean | Yes | Whether to support scroll gestures.Default value: &lt;em&gt;true&lt;/em&gt; |
 
 **Return value:**
 
@@ -315,7 +317,7 @@ Sets the maximum initial velocity at the start of the fling animation that occur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speedLimit | number | Yes | Maximum initial velocity at the start of the fling animation. Default value: & lt;em & gt;9000 & lt;/em & gt; Unit: vp/s Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used. |
+| speedLimit | number | Yes | Maximum initial velocity at the start of the fling animation. Default value: &lt;em&gt;9000&lt;/em&gt; Unit: vp/s Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used. |
 
 **Return value:**
 
@@ -343,7 +345,7 @@ Sets the friction coefficient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Friction coefficient. |
+| value | number \| Resource | Yes | Friction coefficient. |
 
 **Return value:**
 
@@ -489,7 +491,7 @@ Triggered when the scrollable component reaches the end position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback function, triggered when the scrollable reaches the end position. |
+| event | () =&gt; void | Yes | Callback function, triggered when the scrollable reaches the end position. |
 
 **Return value:**
 
@@ -517,7 +519,7 @@ Triggered when the scrollable component reaches the start position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback function, triggered when the scrollable reaches the start position. |
+| event | () =&gt; void | Yes | Callback function, triggered when the scrollable reaches the start position. |
 
 **Return value:**
 
@@ -549,7 +551,7 @@ Triggered when the scrollable component scrolls.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (scrollOffset: number, scrollState: ScrollState) = & gt; void | Yes | callback of scrollable, scrollOffset is offset per frame scrolling, ScrollState is current scroll state. |
+| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | Yes | callback of scrollable, scrollOffset is offset per frame scrolling, ScrollState is current scroll state. |
 
 **Return value:**
 
@@ -577,7 +579,7 @@ Triggered when the scrollable component starts scrolling initiated by the user's
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback function, triggered when the scrollable starts scrolling. |
+| event | () =&gt; void | Yes | Callback function, triggered when the scrollable starts scrolling. |
 
 **Return value:**
 
@@ -605,7 +607,7 @@ Triggered when scrolling stops after the user's finger leaves the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback function, triggered when the scrollable stops scrolling. |
+| event | () =&gt; void | Yes | Callback function, triggered when the scrollable stops scrolling. |
 
 **Return value:**
 
@@ -751,7 +753,7 @@ Sets the scrollbar state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.Default value: & lt;em & gt;BarState.Auto & lt;/em & gt; for the & lt;em & gt;List & lt;/em & gt;, & lt;em & gt;Grid & lt;/em & gt;, and & lt;em & gt;Scroll & lt;/em & gt; components and & lt;em & gt;BarState.Off & lt;/em & gt; for the & lt;em & gt;WaterFlow & lt;/em & gt; component |
+| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.Default value: &lt;em&gt;BarState.Auto&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em &gt;Grid&lt;/em&gt;, and &lt;em&gt;Scroll&lt;/em&gt; components and &lt;em&gt;BarState.Off&lt;/em&gt; for the &lt;em&gt;WaterFlow&lt;/em&gt; component |
 
 **Return value:**
 
@@ -779,7 +781,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Color \| number \| string | Yes | Scrollbar color.Default value: & lt;em & gt;'\#182431' & lt;/em & gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, & lt;em & gt;0xffffff & lt;/em & gt;. A string value indicates a color in RGB or ARGB format, for example, & lt;em & gt;'# ffffff' & lt;/em & gt;. |
+| color | Color \| number \| string | Yes | Scrollbar color.Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'# ffffff'&lt;/em&gt;. |
 
 **Return value:**
 
@@ -807,7 +809,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Color \| number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Scrollbar color.Default value: & lt;em & gt;'\#182431' & lt;/em & gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, & lt;em & gt;0xffffff & lt;/em & gt;. A string value indicates a color in RGB or ARGB format, for example, & lt;em & gt;'#ffffff' & lt;/em & gt;. |
+| color | Color \| number \| string \| Resource | Yes | Scrollbar color.Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
 
 **Return value:**
 
@@ -891,7 +893,7 @@ Sets the scrollbar width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes | Scrollbar width.Default value: & lt;em & gt;4 & lt;/em & gt; Unit: vp If this parameter is set to a value less than or equal to 0, the default value is used. The value & lt;em & gt;0 & lt;/em & gt; means not to show the scrollbar. |
+| value | number \| string | Yes | Scrollbar width.Default value: &lt;em&gt;4&lt;/em&gt; Unit: vp If this parameter is set to a value less than or equal to 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
 
 **Return value:**
 
@@ -919,7 +921,7 @@ Sets the scrollbar width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Scrollbar width. Unit: vp Default value: & lt;em & gt;4 & lt;/em & gt; If this parameter is set to a value less than 0, the default value is used. The value & lt;em & gt;0 & lt;/em & gt; means not to show the scrollbar. |
+| value | number \| string \| Resource | Yes | Scrollbar width. Unit: vp Default value: &lt;em&gt;4&lt;/em&gt; If this parameter is set to a value less than 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
 
 **Return value:**
 

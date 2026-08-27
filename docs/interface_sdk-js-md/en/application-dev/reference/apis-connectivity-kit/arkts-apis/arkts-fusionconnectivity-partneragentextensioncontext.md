@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import PartnerAgentExtensionContext from '@kit.ConnectivityKit';
+import { PartnerAgentExtensionContext } from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -12,4 +12,4 @@ import PartnerAgentExtensionContext from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [PartnerAgentExtensionContext](arkts-connectivity-fusionconnectivity-partneragentextensioncontext-partneragentextensioncontext-c.md) | Class for the context of the PartnerAgentExtensionAbility.@extends ExtensionContext |
+| [PartnerAgentExtensionContext](arkts-connectivity-fusionconnectivity-partneragentextensioncontext-partneragentextensioncontext-c.md) | Class for the context of the PartnerAgentExtensionAbility. |

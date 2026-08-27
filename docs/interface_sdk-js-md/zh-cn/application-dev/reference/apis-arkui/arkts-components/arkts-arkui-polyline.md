@@ -1,6 +1,7 @@
 # Polyline
 
 折线绘制组件。
+
 > **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > 该组件从API version 20开始支持使用AttributeUpdater类的 > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#属性)接口更新构造参数。
 
 ## 子组件
@@ -49,7 +50,7 @@ Polyline(options?: PolylineOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | 否 | Polyline绘制区域，用于设置Polyline组件的宽度和高度。当需要指定Polyline的绘制区域大小时传入此参数，不传入时使用默认宽度和高度（均 为0）。  异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | 否 | Polyline绘制区域，用于设置Polyline组件的宽度和高度。当需要指定Polyline的绘制区域大小时传入此参数，不传入时使用默认宽度和高度（均为0）。 异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## 汇总
 
@@ -57,6 +58,7 @@ Polyline(options?: PolylineOptions)
 
 | 名称 | 说明 |
 | --- | --- |
+| [PolylineOptions](arkts-arkui-polylineoptions-i.md) | 用于描述Polyline组件绘制属性。 |
 
 ## 示例
 

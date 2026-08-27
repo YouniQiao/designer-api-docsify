@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## getDisallowedRunningBundlesSync
@@ -33,7 +33,7 @@ Obtains applications that are not allowed to run by the current user or specifie
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Applications that are not allowed to run by the current user or specified user. |
+| Array&lt;string&gt; | Applications that are not allowed to run by the current user or specified user. |
 
 **Error codes:**
 
@@ -92,7 +92,7 @@ Obtains the application running blocklist of the current user or specified user.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Application running blocklist of the current user or specified user. |
+| Array&lt;string&gt; | Application running blocklist of the current user or specified user. |
 
 **Error codes:**
 

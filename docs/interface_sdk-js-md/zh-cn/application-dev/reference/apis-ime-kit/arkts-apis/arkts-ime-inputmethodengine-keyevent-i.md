@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## keyAction
@@ -18,8 +18,8 @@ import inputMethodEngine from '@kit.IMEKit';
 readonly keyAction: number
 ```
 
-按键事件类型。   
-- 当值为2时，表示按下事件；   
+按键事件类型。  
+- 当值为2时，表示按下事件；  
 - 当值为3时，表示抬起事件。
 
 **类型：** number

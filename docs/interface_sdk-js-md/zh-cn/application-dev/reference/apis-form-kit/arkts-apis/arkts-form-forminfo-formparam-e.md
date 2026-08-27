@@ -248,7 +248,7 @@ ORIGINAL_FORM_KEY = 'ohos.extra.param.key.original_form_id'
 EDIT_FORM_KEY = 'ohos.extra.param.key.edit_form_id'
 ```
 
-在半模态页面的卡片编辑中，通过onAddForm回调函数传递该key表示被编辑的卡片id，用来确保预览卡片与被编辑卡片信息同步。如果卡片onAddForm回调函数中携带了该key，则说明当前卡片为半模态页面中的预览卡片，需要基 于被编辑卡片来筛选预览卡片内容。
+在半模态页面的卡片编辑中，通过onAddForm回调函数传递该key表示被编辑的卡片id，用来确保预览卡片与被编辑卡片信息同步。如果卡片onAddForm回调函数中携带了该key，则说明当前卡片为半模态页面中的预览卡片，需要基于被编辑卡片来筛选预览卡片内容。
 
 **起始版本：** 22
 

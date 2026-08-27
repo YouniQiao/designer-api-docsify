@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## completeButtonText
@@ -20,7 +20,9 @@ import photoAccessHelper from '@kit.MediaLibraryKit';
 completeButtonText?: CompleteButtonText
 ```
 
-完成按钮显示的内容。完成按钮指在界面右下方，用户点击表示图片选择已完成的按钮。
+完成按钮显示的内容。
+
+完成按钮指在界面右下方，用户点击表示图片选择已完成的按钮。
 
 **类型：** [CompleteButtonText](arkts-medialibrary-photoaccesshelper-completebuttontext-e.md)
 
@@ -36,7 +38,9 @@ completeButtonText?: CompleteButtonText
 contextRecoveryInfo?: ContextRecoveryInfo
 ```
 
-用于恢复上次退出时PhotoPicker现场的信息。上次完成选择时photoPicker将返回contextRecoveryInfo给应用，应用可使用返回的contextRecoveryInfo，在下次启动时恢复上次使用picker，最后浏览的宫格界面。
+用于恢复上次退出时PhotoPicker现场的信息。
+
+上次完成选择时photoPicker将返回contextRecoveryInfo给应用，应用可使用返回的contextRecoveryInfo，在下次启动时恢复上次使用picker，最后浏览的宫格界面。
 
 **类型：** [ContextRecoveryInfo](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md)
 
@@ -52,7 +56,8 @@ contextRecoveryInfo?: ContextRecoveryInfo
 isDestroyedWithNavigation?: boolean
 ```
 
-是否支持跟随[Navigation](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navigation-1)销毁，true 表示支持，false表示不支持，默认为false。  
+是否支持跟随[Navigation](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#navigation-1)销毁，true表示支持，false表示不支持，默认为false。
+
 **模型约束**： 此接口仅可在Stage模型下使用。
 
 **类型：** boolean
@@ -103,8 +108,10 @@ isOriginalSupported?: boolean
 isReturnToPhotoBrowserEnabled?: boolean
 ```
 
-在单选模式下，拍完照是否能自动跳转到大图预览模式，true表示支持，false表示不支持，默认为false。  
-**注意：** 该参数配置为true时仅在[SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md)为BROWSER_MODE（大图预览模式）或者 BROWSER_AND_SELECT_MODE（兼容模式）并且 [BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md)参数为true时生效。  
+在单选模式下，拍完照是否能自动跳转到大图预览模式，true表示支持，false表示不支持，默认为false。
+
+**注意：** 该参数配置为true时仅在[SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md)为BROWSER_MODE（大图预览模式）或者BROWSER_AND_SELECT_MODE（兼容模式）并且[BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md)参数为true时生效。
+
 **模型约束**： 此接口仅可在Stage模型下使用。
 
 **类型：** boolean
@@ -159,7 +166,9 @@ isSelectionOrderAdjustable?: boolean
 maxPhotoSelectNumber?: number
 ```
 
-支持设置的图片最大的选择数量。单位：个。受到最大选择总数的限制，最大值为500。默认为500。
+支持设置的图片最大的选择数量。单位：个。
+
+受到最大选择总数的限制，最大值为500。默认为500。
 
 **类型：** number
 
@@ -177,7 +186,9 @@ maxPhotoSelectNumber?: number
 maxVideoSelectNumber?: number
 ```
 
-支持设置的视频最大的选择数量。单位：个。受到系统中所有媒体文件最大选择总数的限制，最大值为500。默认为500。
+支持设置的视频最大的选择数量。单位：个。
+
+受到系统中所有媒体文件最大选择总数的限制，最大值为500。默认为500。
 
 **类型：** number
 
@@ -195,7 +206,7 @@ maxVideoSelectNumber?: number
 pickerColorMode?: PickerColorMode
 ```
 
-选择器颜色模式。Picker上其他组件的深色/浅色模式（不包括背景色）。 包括搜索框、摄像头入口、使用图库的安全提示、推荐气泡等。 属性通常与**backgroundColor**配合使用。默认值为**PickerColorMode.AUTO**。 遵循系统的深色/浅色模式。 设置此属性时，请避免使用**PickerColorMode.LIGHT**与深色背景颜色搭配使用，因为这样可能会使 组件或难以看到的文本。避免使用**PickerColorMode.DARK**与浅色背景颜色相同 理由。
+选择器颜色模式。Picker上其他组件的深色/浅色模式（不包括背景色）。包括搜索框、摄像头入口、使用图库的安全提示、推荐气泡等。属性通常与**backgroundColor**配合使用。默认值为**PickerColorMode.AUTO**。遵循系统的深色/浅色模式。设置此属性时，请避免使用**PickerColorMode.LIGHT**与深色背景颜色搭配使用，因为这样可能会使组件或难以看到的文本。避免使用**PickerColorMode.DARK**与浅色背景颜色相同理由。
 
 **类型：** [PickerColorMode](arkts-medialibrary-photoaccesshelper-pickercolormode-e.md)
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -72,7 +72,7 @@ getHolidayInfoItemArray(year?: number): Array<HolidayInfoItem>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| year | number | 否 | 年，例如2023。 默认值：当前年份。 |
+| year | number | 否 | 年，例如2023。默认值：当前年份。 |
 
 **返回值：**
 
@@ -121,7 +121,7 @@ isHoliday(date?: Date): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date | 否 | 时间日期。    **说明：** 月份从0开始计数，0表示一月。 默认值：当前日期。 |
+| date | Date | 否 | 时间日期。   **说明：** 月份从0开始计数，0表示一月。默认值：当前日期。 |
 
 **返回值：**
 

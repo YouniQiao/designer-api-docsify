@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import deviceStandby from '@kit.BackgroundTasksKit';
+import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## releaseExemptionResource

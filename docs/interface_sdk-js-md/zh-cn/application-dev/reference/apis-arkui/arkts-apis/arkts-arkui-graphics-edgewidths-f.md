@@ -20,7 +20,7 @@ export function edgeWidths(all: number): Edges<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| all | number | 是 | 边框宽度，单位为vp。 取值范围：[0, +∞) 负数按默认值处理。 |
+| all | number | 是 | 边框宽度，单位为vp。取值范围：[0, +∞) 负数按默认值处理。 |
 
 **返回值：**
 

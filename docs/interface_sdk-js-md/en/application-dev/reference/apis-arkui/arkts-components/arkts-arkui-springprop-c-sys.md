@@ -13,7 +13,6 @@ Customize spring properties.
 ## Modules to Import
 
 ```TypeScript
-import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@ohos.@kit.ArkUI';
 ```
 
 ## constructor

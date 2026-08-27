@@ -1,7 +1,9 @@
 # Menu
 
 以垂直列表形式显示的菜单。Menu组件支持配置菜单项、子菜单、图标、分隔线等内容，可用于展示操作选项、功能入口等场景。
+
 > **说明：**
+
 > - Menu组件需和 > [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu)或 > [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) > 方法配合使用，不支持作为普通组件单独使用。
 
 ## 子组件
@@ -51,6 +53,7 @@ Menu()
 
 | 名称 | 说明 |
 | --- | --- |
+| [SubMenuExpandingMode](arkts-arkui-submenuexpandingmode-e.md) | Menu子菜单展开样式枚举。 |
 
 ## 示例
 

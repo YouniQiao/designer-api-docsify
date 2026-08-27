@@ -17,7 +17,9 @@
 font?: Font
 ```
 
-设置提示文本样式。默认值遵循主题设置。
+设置提示文本样式。
+
+默认值遵循主题设置。
 
 **类型：** Font
 
@@ -35,7 +37,9 @@ font?: Font
 fontColor?: ResourceColor
 ```
 
-设置提示文本颜色。默认值遵循主题设置。
+设置提示文本颜色。
+
+默认值遵循主题设置。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

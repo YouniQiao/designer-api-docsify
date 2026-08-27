@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import zlib from '@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## getOriginalSize
@@ -30,15 +30,15 @@ Obtains the original size of a compressed file. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise object, which returns the original size of the compressed file, in bytes. |
+| Promise&lt;number&gt; | Promise object, which returns the original size of the compressed file, in bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [900001](../../apis-ability-kit/errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
-| [900003](../../apis-ability-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged. |
+| [900001](../errorcode-zlib.md#900001-invalid-source-file) | The input source file is invalid. |
+| [900003](../errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) | The input source file is not in ZIP format or is damaged. |
 
 **Examples**
 

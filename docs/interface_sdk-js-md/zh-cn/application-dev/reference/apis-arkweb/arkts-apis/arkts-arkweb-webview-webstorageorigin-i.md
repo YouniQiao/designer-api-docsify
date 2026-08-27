@@ -1,6 +1,8 @@
 # WebStorageOrigin
 
-提供Web SQL数据库的使用信息。@interface WebStorageOrigin [since 9 - 11]
+提供Web SQL数据库的使用信息。
+
+@interface WebStorageOrigin [since 9 - 11]
 
 **起始版本：** 9
 
@@ -33,7 +35,9 @@ origin: string
 quota: number
 ```
 
-指定源的存储配额。单位：byte。
+指定源的存储配额。
+
+单位：byte。
 
 **类型：** number
 
@@ -49,7 +53,9 @@ quota: number
 usage: number
 ```
 
-指定源的存储量。单位：byte。
+指定源的存储量。
+
+单位：byte。
 
 **类型：** number
 

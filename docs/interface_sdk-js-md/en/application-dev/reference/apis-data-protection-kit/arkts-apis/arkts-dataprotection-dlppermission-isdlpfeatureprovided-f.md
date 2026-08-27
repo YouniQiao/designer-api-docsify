@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## isDLPFeatureProvided
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function isDLPFeatureProvided(): Promise<boolean>
 ```
 
-Checks whether the current system provides the encryption protection feature. This API is available only for enterprise devices and must be enabled by the [MDM](../../../mdm/mdm-kit-intro.md) kit. After the API is successfully called, the query result is returned, indicating whether the system supports DLP encryption. This API uses a promise to return the result.This API checks whether the current system supports the DLP encryption function, so that compatibility processing or function degradation can be performed on devices that do not support this function.
+Checks whether the current system provides the encryption protection feature. This API is available only for enterprise devices and must be enabled by the [MDM](../../../mdm/mdm-kit-intro.md) kit. After the API is successfully called, the query result is returned, indicating whether the system supports DLP encryption. This API uses a promise to return the result.
+
+This API checks whether the current system supports the DLP encryption function, so that compatibility processing or function degradation can be performed on devices that do not support this function.
 
 > **NOTE：**
 > 
@@ -27,7 +29,7 @@ Checks whether the current system provides the encryption protection feature. Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 
 **Error codes:**
 

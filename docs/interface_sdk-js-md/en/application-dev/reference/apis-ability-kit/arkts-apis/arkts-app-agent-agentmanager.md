@@ -1,6 +1,8 @@
 # @ohos.app.agent.agentManager
 
-The module provides the capability to interact with agents in the system.@namespace agentManager
+The module provides the capability to interact with agents in the system.
+
+@namespace agentManager
 
 **Since:** 24
 
@@ -13,7 +15,7 @@ The module provides the capability to interact with agents in the system.@namesp
 ## Modules to Import
 
 ```TypeScript
-import agentManager from '@kit.AbilityKit';
+import { agentManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

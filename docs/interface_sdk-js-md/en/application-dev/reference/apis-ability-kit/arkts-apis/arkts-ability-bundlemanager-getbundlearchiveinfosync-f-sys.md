@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleArchiveInfoSync
@@ -33,7 +33,7 @@ Obtains the bundle information based on the given HAP file path and bundle flags
 
 | Type | Description |
 | --- | --- |
-| [BundleInfo](arkts-ability-bundleinfo-i.md) | Bundle information obtained. |
+| BundleInfo | Bundle information obtained. |
 
 **Error codes:**
 

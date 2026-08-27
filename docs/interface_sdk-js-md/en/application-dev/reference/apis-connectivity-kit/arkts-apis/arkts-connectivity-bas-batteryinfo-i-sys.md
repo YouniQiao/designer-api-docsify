@@ -11,7 +11,7 @@ Describe the contents of the battery information.
 ## Modules to Import
 
 ```TypeScript
-import bas from '@kit.ConnectivityKit';
+import { bas } from '@kit.ConnectivityKit';
 ```
 
 ## batteryLevel

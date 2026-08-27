@@ -42,13 +42,13 @@ Closes a custom dialog box corresponding to **dialogContent**. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogContent | ComponentContent & lt;T & gt; | Yes | Content of the custom dialog box. |
+| dialogContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content of the custom dialog box. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -230,13 +230,13 @@ Closes the menu corresponding to the provided content. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent & lt;T & gt; | Yes | Content displayed in the menu. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the menu. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -322,13 +322,13 @@ Closes the popup corresponding to the provided **content**. This API uses a prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent & lt;T & gt; | Yes | Content displayed in the popup. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the popup. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -466,7 +466,9 @@ struct Index {
 getTopOrder(): LevelOrder
 ```
 
-Obtains the order of the topmost dialog box.This API returns the order of the dialog box currently at the top layer. This information can be used to specify the desired order for subsequent dialog boxes.
+Obtains the order of the topmost dialog box.
+
+This API returns the order of the dialog box currently at the top layer. This information can be used to specify the desired order for subsequent dialog boxes.
 
 **Since:** 18
 
@@ -564,14 +566,14 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogContent | ComponentContent & lt;T & gt; | Yes | Content of the custom dialog box. |
+| dialogContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content of the custom dialog box. |
 | options | promptAction.BaseDialogOptions | No | Dialog box style.Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -685,7 +687,9 @@ struct Index {
 openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 ```
 
-Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**.+ *
+Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**.
+
++ *
 
 **Since:** 12
 
@@ -705,7 +709,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise that returns the dialog box ID for use with **closeCustomDialog**. |
+| Promise&lt;number&gt; | Promise that returns the dialog box ID for use with **closeCustomDialog**. |
 
 **Error codes:**
 
@@ -796,7 +800,9 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
     options?: promptAction.BaseDialogOptions): Promise<void>
 ```
 
-Opens a custom dialog box corresponding to **dialogContent**. This API uses a promise to return the result. A dialog box controller can be bound to the custom dialog box, allowing for subsequent control of the dialog box through the controller.The dialog box displayed through this API has its content fully following style settings of **dialogContent**. It is displayed in the same way where **customStyle** is set to **true**.
+Opens a custom dialog box corresponding to **dialogContent**. This API uses a promise to return the result. A dialog box controller can be bound to the custom dialog box, allowing for subsequent control of the dialog box through the controller.
+
+The dialog box displayed through this API has its content fully following style settings of **dialogContent**. It is displayed in the same way where **customStyle** is set to **true**.
 
 **Since:** 18
 
@@ -810,7 +816,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogContent | ComponentContent & lt;T & gt; | Yes | Content of the custom dialog box. |
+| dialogContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content of the custom dialog box. |
 | controller | promptAction.DialogController | Yes | Controller of the custom dialog box. |
 | options | promptAction.BaseDialogOptions | No | Style of the custom dialog box.Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
@@ -818,7 +824,7 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -929,7 +935,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent & lt;T & gt; | Yes | Content displayed in the menu. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the menu. |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
 | options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | No | Style of the menu.   **NOTE：**The **title** property is not effective.The **preview** parameter supports only the **MenuPreviewMode** type. |
 
@@ -937,7 +943,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1034,7 +1040,7 @@ Creates and displays a popup with the specified content. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent & lt;T & gt; | Yes | Content displayed in the popup. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the popup. |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Information about the target component to bind. |
 | options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | No | Style of the popup. |
 
@@ -1042,7 +1048,7 @@ Creates and displays a popup with the specified content. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1166,7 +1172,7 @@ Displays a toast. This API uses a promise to return the toast ID for use with **
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise that returns the toast ID for use with **closeToast**. |
+| Promise&lt;number&gt; | Promise that returns the toast ID for use with **closeToast**. |
 
 **Error codes:**
 
@@ -1228,7 +1234,9 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
     options?: promptAction.DialogOptions): Promise<number>
 ```
 
-Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**.The dialog box ID can be included in the dialog box content for related operations. A dialog box controller can be bound to the custom dialog box, allowing for subsequent control of the dialog box through the controller.
+Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**.
+
+The dialog box ID can be included in the dialog box content for related operations. A dialog box controller can be bound to the custom dialog box, allowing for subsequent control of the dialog box through the controller.
 
 **Since:** 18
 
@@ -1250,7 +1258,7 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise Promise used to return the custom dialog box ID. |
+| Promise&lt;number&gt; | Promise Promise used to return the custom dialog box ID. |
 
 **Error codes:**
 
@@ -1554,7 +1562,7 @@ Creates and displays an action menu. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;promptAction.ActionMenuSuccessResponse & gt; | callback - Promise that returns the action menu response. |
+| Promise&lt;promptAction.ActionMenuSuccessResponse&gt; | callback - Promise that returns the action menu response. |
 
 **Error codes:**
 
@@ -1708,7 +1716,7 @@ Creates and displays a dialog box. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;promptAction.ShowDialogSuccessResponse & gt; | Promise that returns the dialog box response. |
+| Promise&lt;promptAction.ShowDialogSuccessResponse&gt; | Promise that returns the dialog box response. |
 
 **Error codes:**
 
@@ -1841,14 +1849,14 @@ Updates a custom dialog box corresponding to **dialogContent**. This API uses a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dialogContent | ComponentContent & lt;T & gt; | Yes | Content of the custom dialog box. |
+| dialogContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content of the custom dialog box. |
 | options | promptAction.BaseDialogOptions | Yes | Dialog box style. Currently, only **alignment**, **offset**, **autoCancel**, and **maskColor** can be updated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1954,7 +1962,7 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent & lt;T & gt; | Yes | Content displayed in the menu. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the menu. |
 | options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | Yes | Style of the menu.   **NOTE：** 1. Updating for the following is not supported: **showInSubWindow**, **preview**, **previewAnimationOptions**, **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**, **onDidAppear**, **onWillDisappear**, and **onDidDisappear**. 2. The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md). However, this API does not support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by setting a boolean value. |
 | partialUpdate | boolean | No | Whether to update the menu in incremental mode. Default value: **false**.   **NOTE：** 1. **true**: incremental update, where the specified properties in **options** are updated, and other properties stay at their current value. 2. **false**: full update, where all properties except those specified in **options** are restored to default values. |
 
@@ -1962,7 +1970,7 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2054,7 +2062,7 @@ Updates the style of the popup corresponding to the provided **content**. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent & lt;T & gt; | Yes | Content displayed in the popup. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content displayed in the popup. |
 | options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | Yes | Style of the popup.   **NOTE：**Updating the following properties is not supported: **showInSubWindow**, **focusable**, **onStateChange**, **onWillDismiss**, and **transition**. |
 | partialUpdate | boolean | No | Whether to update the popup in incremental mode.Default value: **false**   **NOTE：**  **true**: Incremental update. Only specified attributes in **options** are updated, and the other attributes retain their current values. If the attribute value passed in **options** is invalid or **undefined**, the attribute is not updated.    **false**: Full update. Specified attributes in **options** are updated, and the other attributes are restored to their default values. |
 
@@ -2062,7 +2070,7 @@ Updates the style of the popup corresponding to the provided **content**. This A
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

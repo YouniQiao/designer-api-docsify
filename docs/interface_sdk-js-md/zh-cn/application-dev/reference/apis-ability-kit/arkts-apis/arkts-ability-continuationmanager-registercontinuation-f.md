@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import continuationManager from '@kit.AbilityKit';
+import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## registerContinuation
@@ -86,7 +86,7 @@ function registerContinuation(options: ContinuationExtraParams, callback: AsyncC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 是 | 过滤可选择设备列表的额外参数。 |
+| options | ContinuationExtraParams | 是 | 过滤可选择设备列表的额外参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | AsyncCallback形式返回流转管理服务连接后生成的token。 |
 
 **错误码：**
@@ -147,13 +147,13 @@ function registerContinuation(options?: ContinuationExtraParams): Promise<number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | 否 | 过滤可选择设备列表的额外参数，该参数可缺省。 |
+| options | ContinuationExtraParams | 否 | 过滤可选择设备列表的额外参数，该参数可缺省。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise形式返回流转管理服务连接后生成的token。 |
+| Promise&lt;number&gt; | Promise形式返回流转管理服务连接后生成的token。 |
 
 **错误码：**
 

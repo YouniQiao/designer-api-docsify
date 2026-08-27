@@ -25,7 +25,7 @@ function isFusionFenceSupported(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true：支持融合围栏能力。 false：不支持融合围栏能力。 |
+| boolean | true：支持融合围栏能力。false：不支持融合围栏能力。 |
 
 **错误码：**
 

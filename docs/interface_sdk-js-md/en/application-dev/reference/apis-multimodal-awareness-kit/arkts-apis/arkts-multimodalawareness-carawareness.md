@@ -11,7 +11,7 @@ This module provides the capability to use car awareness
 ## Modules to Import
 
 ```TypeScript
-import carAwareness from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary

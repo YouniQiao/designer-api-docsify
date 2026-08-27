@@ -17,7 +17,9 @@
 color?: ResourceColor | EdgeColors
 ```
 
-设置外描边颜色。默认值：#19ffffff
+设置外描边颜色。
+
+默认值：#19ffffff
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors
 
@@ -35,7 +37,9 @@ color?: ResourceColor | EdgeColors
 width?: Dimension | EdgeOutlineWidths
 ```
 
-设置外描边宽度，不支持百分比。默认值：0
+设置外描边宽度，不支持百分比。
+
+默认值：0
 
 **类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
 

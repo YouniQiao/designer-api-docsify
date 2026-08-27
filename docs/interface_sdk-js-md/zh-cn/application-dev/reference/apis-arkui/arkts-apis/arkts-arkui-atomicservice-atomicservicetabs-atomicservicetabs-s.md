@@ -52,7 +52,7 @@ barBackgroundColor?: ResourceColor
 barOverlap?: boolean
 ```
 
-设置TabBar是否背景变模糊并叠加在TabContent之上。 true表示TabBar背景变模糊并叠加在TabContent之上，false表示TabBar背景不变模糊且不叠加在TabContent之上。默认值为true。
+设置TabBar是否背景变模糊并叠加在TabContent之上。true表示TabBar背景变模糊并叠加在TabContent之上，false表示TabBar背景不变模糊且不叠加在TabContent之上。默认值为true。
 
 **类型：** boolean
 
@@ -116,7 +116,7 @@ layoutMode?: LayoutMode
 onChange?: Callback<number>
 ```
 
-Tabs页签切换后触发的事件，回调参数为切换后的页签索引，索引值从0开始。 当onContentWillChange回调返回false拦截页面切换时，该事件不会被触发。默认值为空。
+Tabs页签切换后触发的事件，回调参数为切换后的页签索引，索引值从0开始。当onContentWillChange回调返回false拦截页面切换时，该事件不会被触发。默认值为空。
 
 **类型：** Callback&lt;number&gt;
 

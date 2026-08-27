@@ -1,6 +1,8 @@
 # TextAreaModifier
 
-Defines TextArea Modifier@extends TextAreaAttribute @implements AttributeModifier&lt;TextAreaAttribute&gt;
+Defines TextArea Modifier
+
+@extends TextAreaAttribute @implements AttributeModifier&lt;TextAreaAttribute&gt;
 
 **Inheritance/Implementation:** TextAreaModifier extends [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md#textareaattribute) and implements AttributeModifier<TextAreaAttribute>
 

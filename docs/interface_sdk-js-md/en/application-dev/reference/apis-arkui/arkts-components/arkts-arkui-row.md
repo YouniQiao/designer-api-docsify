@@ -64,3 +64,5 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 
 | Name | Description |
 | --- | --- |
+| [RowOptions](arkts-arkui-rowoptions-i.md) | Sets the spacing between child components of the **Row** component. |
+| [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md) | Sets the spacing between child components of the **Row** component. |

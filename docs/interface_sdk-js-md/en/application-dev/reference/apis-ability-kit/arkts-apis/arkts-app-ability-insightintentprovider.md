@@ -11,7 +11,7 @@ Insight intent Provider. @namespace insightIntentProvider
 ## Modules to Import
 
 ```TypeScript
-import insightIntentProvider from '@kit.AbilityKit';
+import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
 ## Summary

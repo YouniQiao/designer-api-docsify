@@ -12,7 +12,7 @@ Base64 编码格式枚举。
 BASIC = 0
 ```
 
-基本格式。 从 API version 11 开始，该接口支持在原子化服务中使用。
+基本格式。从 API version 11 开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 10
 
@@ -26,7 +26,7 @@ BASIC = 0
 MIME = 1
 ```
 
-MIME 格式。 从 API version 11 开始，该接口支持在原子化服务中使用。
+MIME 格式。从 API version 11 开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 10
 
@@ -40,7 +40,9 @@ MIME 格式。 从 API version 11 开始，该接口支持在原子化服务中�
 BASIC_URL_SAFE = 2
 ```
 
-BASIC_URL_SAFE 格式。该值从 API version 12 开始支持。 从 API version 12 开始，该接口支持在原子化服务中使用。
+BASIC_URL_SAFE 格式。
+
+该值从 API version 12 开始支持。从 API version 12 开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 12
 
@@ -54,7 +56,9 @@ BASIC_URL_SAFE 格式。该值从 API version 12 开始支持。 从 API version
 MIME_URL_SAFE = 3
 ```
 
-MIME_URL_SAFE 格式。该值从 API version 12 开始支持。 从 API version 12 开始，该接口支持在原子化服务中使用。
+MIME_URL_SAFE 格式。
+
+该值从 API version 12 开始支持。从 API version 12 开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 12
 

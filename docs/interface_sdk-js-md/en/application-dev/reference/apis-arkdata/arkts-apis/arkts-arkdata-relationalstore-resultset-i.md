@@ -1,6 +1,10 @@
 # ResultSet
 
-Provides APIs to access the result set obtained by querying the RDB store. This result set is the collection of results returned with the **query()** method called.The **ResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.For the following APIs, you should use either [query] [query](arkts-arkdata-relationalstore-rdbstore-i.md#query), [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount), [remoteQuery] [remoteQuery](arkts-arkdata-relationalstore-rdbstore-i.md#remotequery), or [queryLockedRow](arkts-arkdata-relationalstore-rdbstore-i.md#querylockedrow) to obtain the **ResultSet** instance first, and then use this instance to call the corresponding method.
+Provides APIs to access the result set obtained by querying the RDB store. This result set is the collection of results returned with the **query()** method called.
+
+The **ResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.
+
+For the following APIs, you should use either [query] [query](arkts-arkdata-relationalstore-rdbstore-i.md#query), [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount), [remoteQuery] [remoteQuery](arkts-arkdata-relationalstore-rdbstore-i.md#remotequery), or [queryLockedRow](arkts-arkdata-relationalstore-rdbstore-i.md#querylockedrow) to obtain the **ResultSet** instance first, and then use this instance to call the corresponding method.
 
 **Since:** 9
 
@@ -9,7 +13,7 @@ Provides APIs to access the result set obtained by querying the RDB store. This 
 ## Modules to Import
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## close
@@ -75,7 +79,7 @@ Obtains the value from the specified column in the current row, and returns the 
 
 | Type | Description |
 | --- | --- |
-| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | Value obtained. |
+| Asset | Value obtained. |
 
 **Error codes:**
 
@@ -148,7 +152,7 @@ Obtains the value from the specified column in the current row, and returns the 
 
 | Type | Description |
 | --- | --- |
-| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) | Value obtained. |
+| Assets | Value obtained. |
 
 **Error codes:**
 
@@ -205,7 +209,9 @@ async function getAssetsExample(store : relationalStore.RdbStore) {
 getBlob(columnIndex: number): Uint8Array
 ```
 
-Obtains the value from the specified column in the current row, and returns it in a byte array.If the type of the value in the specified column is INTEGER, DOUBLE, TEXT, or BLOB, the value will be converted into a byte array and returned. If the column is null/empty, an empty byte array will be returned. If the value is of any other type, 14800000 will be returned.
+Obtains the value from the specified column in the current row, and returns it in a byte array.
+
+If the type of the value in the specified column is INTEGER, DOUBLE, TEXT, or BLOB, the value will be converted into a byte array and returned. If the column is null/empty, an empty byte array will be returned. If the value is of any other type, 14800000 will be returned.
 
 **Since:** 9
 
@@ -433,7 +439,9 @@ async function getColumnNameExample(store : relationalStore.RdbStore){
 getColumnNames(): Array<string>
 ```
 
-Obtains the names of all columns in the result set.The column names are returned in a string array. The sequence of strings in the array is the same as that of columns in the result set.
+Obtains the names of all columns in the result set.
+
+The column names are returned in a string array. The sequence of strings in the array is the same as that of columns in the result set.
 
 **Since:** 23
 
@@ -445,7 +453,7 @@ Obtains the names of all columns in the result set.The column names are returned
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Names of all columns in the result set obtained. Duplicate column names can be obtained. |
+| Array&lt;string&gt; | Names of all columns in the result set obtained. Duplicate column names can be obtained. |
 
 **Error codes:**
 
@@ -749,7 +757,9 @@ async function getCurrentRowDataExample(store : relationalStore.RdbStore) {
 getDouble(columnIndex: number): number
 ```
 
-Obtains the value from the specified column in the current row, and returns a value of Double type.If the type of the value in the specified column is INTEGER, DOUBLE, TEXT, or BLOB, a value of Double type will be returned. If the column is null/empty, **0.0** will be returned. If the value is of any other type, 14800000 will be returned.
+Obtains the value from the specified column in the current row, and returns a value of Double type.
+
+If the type of the value in the specified column is INTEGER, DOUBLE, TEXT, or BLOB, a value of Double type will be returned. If the column is null/empty, **0.0** will be returned. If the value is of any other type, 14800000 will be returned.
 
 **Since:** 9
 
@@ -828,7 +838,9 @@ async function getDoubleExample(store : relationalStore.RdbStore) {
 getLong(columnIndex: number): number
 ```
 
-Obtains the value from the specified column in the current row, and returns a value of Long type.If the type of the value in the specified column is INTEGER, DOUBLE, TEXT, or BLOB, a value of Long type will be returned. If the column is null/empty, **0** will be returned. If the value is of any other type, 14800000 will be returned. If the data type in the specified column is INTEGER and the value is greater than **Number.MAX_SAFE_INTEGER** or less than **Number.MIN_SAFE_INTEGER**, you are advised to use the [getString](#getstring) API to obtain the value without losing precision. If the data type in the specified column is DOUBLE, you are advised to use the [getDouble](#getdouble) API to obtain the value without losing precision.
+Obtains the value from the specified column in the current row, and returns a value of Long type.
+
+If the type of the value in the specified column is INTEGER, DOUBLE, TEXT, or BLOB, a value of Long type will be returned. If the column is null/empty, **0** will be returned. If the value is of any other type, 14800000 will be returned. If the data type in the specified column is INTEGER and the value is greater than **Number.MAX_SAFE_INTEGER** or less than **Number.MIN_SAFE_INTEGER**, you are advised to use the [getString](#getstring) API to obtain the value without losing precision. If the data type in the specified column is DOUBLE, you are advised to use the [getDouble](#getdouble) API to obtain the value without losing precision.
 
 **Since:** 9
 
@@ -917,7 +929,7 @@ Obtains this row.
 
 | Type | Description |
 | --- | --- |
-| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Value of the specified row. If the result set contains duplicate column names, the return value is not as expected. You are advised to use the [getCurrentRowData]{ |
+| ValuesBucket | Value of the specified row. If the result set contains duplicate column names, the return value is not as expected. You are advised to use the [getCurrentRowData]{ |
 
 **Error codes:**
 
@@ -991,7 +1003,7 @@ Obtains a specified amount of data from the result set. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;ValuesBucket & gt; & gt; | Promise used to return **maxCount** rows of data obtained. If the number of remaining records is less than **maxCount**, the remaining records are returned. Returning an empty array indicates that the end of the result set is reached. If the result set contains duplicate column names, the return values are not as expected. You are advised to use the [getRowsData]{ |
+| Promise&lt;Array&lt;ValuesBucket&gt;&gt; | Promise used to return **maxCount** rows of data obtained. If the number of remaining records is less than **maxCount**, the remaining records are returned. Returning an empty array indicates that the end of the result set is reached. If the result set contains duplicate column names, the return values are not as expected. You are advised to use the [getRowsData]{ |
 
 **Error codes:**
 
@@ -1303,7 +1315,9 @@ export default class EntryAbility extends UIAbility {
 getString(columnIndex: number): string
 ```
 
-Obtains the value from the specified column in the current row, and returns it in the form of a string.If the type of the value in the specified column is INTEGER, DOUBLE, TEXT, or BLOB, a string will be returned. If the value type is INTEGER and the column is null/empty, an empty string **""** will be returned. If the value is of any other type, 14800000 will be returned. If the value in the current column is of the DOUBLE type, the precision may be lost. You are advised to use [getDouble](#getdouble) to obtain the value.
+Obtains the value from the specified column in the current row, and returns it in the form of a string.
+
+If the type of the value in the specified column is INTEGER, DOUBLE, TEXT, or BLOB, a string will be returned. If the value type is INTEGER and the column is null/empty, an empty string **""** will be returned. If the value is of any other type, 14800000 will be returned. If the value in the current column is of the DOUBLE type, the precision may be lost. You are advised to use [getDouble](#getdouble) to obtain the value.
 
 **Since:** 9
 
@@ -1392,7 +1406,7 @@ Obtains the value from the specified column in the current row. If the value typ
 
 | Type | Description |
 | --- | --- |
-| [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Allowed data field types. |
+| ValueType | Allowed data field types. |
 
 **Error codes:**
 
@@ -1975,7 +1989,9 @@ Number of rows in the result set.
 rowIndex: number
 ```
 
-Index of the current row in the result set.Default value: **-1**. The index position starts from **0**.
+Index of the current row in the result set.
+
+Default value: **-1**. The index position starts from **0**.
 
 **Type:** number
 

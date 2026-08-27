@@ -1,6 +1,8 @@
 # SessionCategory（系统接口）
 
-表示不同场景会话类别的枚举。@enum { number }
+表示不同场景会话类别的枚举。
+
+@enum { number }
 
 **起始版本：** 22
 

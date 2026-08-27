@@ -9,7 +9,7 @@ Implements a serial queue, in which all tasks are executed in sequence.
 ## Modules to Import
 
 ```TypeScript
-import taskpool from '@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -30,7 +30,7 @@ A constructor used to create a **SequenceRunner** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Examples**
 
@@ -64,7 +64,7 @@ A constructor used to create a **SequenceRunner** instance. This instance repres
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of a serial queue. |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Examples**
 
@@ -96,13 +96,13 @@ Adds a task to the serial queue for execution. Before using this API, you must c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be added to the serial queue. |
+| task | Task | Yes | Task to be added to the serial queue. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Object & gt; | Promise used to return the task execution result. |
+| Promise&lt;Object&gt; | Promise used to return the task execution result. |
 
 **Error codes:**
 

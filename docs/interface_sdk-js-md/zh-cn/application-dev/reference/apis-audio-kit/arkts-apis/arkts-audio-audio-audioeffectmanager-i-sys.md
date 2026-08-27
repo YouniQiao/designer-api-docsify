@@ -1,6 +1,6 @@
 # AudioEffectManager（系统接口）
 
-音频效果管理。在使用AudioEffectManager的接口前，需要使用[getEffectManager](arkts-audio-audio-audiomanager-i-sys.md#geteffectmanager)获取 AudioEffectManager实例。
+音频效果管理。在使用AudioEffectManager的接口前，需要使用[getEffectManager](arkts-audio-audio-audiomanager-i-sys.md#geteffectmanager)获取AudioEffectManager实例。
 
 **起始版本：** 18
 
@@ -11,8 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## getAudioEffectProperty
@@ -316,7 +315,7 @@ offNoiseReductionSettingChange(device: AudioDeviceDescriptor,
 onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 ```
 
-订阅系统音频分离效果使能状态变更事件。 系统中的音频分离效果状态可由系统播放控制应用设定，其他应用程序可以使用本接口监听状态变更事件。
+订阅系统音频分离效果使能状态变更事件。系统中的音频分离效果状态可由系统播放控制应用设定，其他应用程序可以使用本接口监听状态变更事件。
 
 **起始版本：** 26.0.0
 
@@ -458,13 +457,13 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number
 | --- | --- | --- | --- |
 | enabled | boolean | 是 | 音频分离效果的启用状态。true表示启用，false表示禁用。 |
 | uid | number | 是 | 表示目标应用进程ID。 |
-| streamId | number | 否 | 目标音频播放流的ID，默认值为-1。如果没有传入此参数，则根据uid控制应用级别的音频分离效果开关。播放应用可通过 [AudioRenderer.getAudioStreamIdSync](arkts-audio-audio-audiorenderer-i.md#getaudiostreamidsync)获取 streamId。 |
+| streamId | number | 否 | 目标音频播放流的ID，默认值为-1。如果没有传入此参数，则根据uid控制应用级别的音频分离效果开关。播放应用可通过[AudioRenderer.getAudioStreamIdSync](arkts-audio-audio-audiorenderer-i.md#getaudiostreamidsync)获取streamId。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -518,7 +517,7 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: number):
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

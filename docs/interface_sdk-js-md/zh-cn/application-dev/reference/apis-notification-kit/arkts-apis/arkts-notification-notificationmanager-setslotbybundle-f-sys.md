@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setSlotByBundle
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用的通知渠道。使用callback异步回调。设置前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f.md)创建通知渠道。
+设置指定应用的通知渠道。使用callback异步回调。
+
+设置前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f.md)创建通知渠道。
 
 **起始版本：** 9
 
@@ -26,8 +28,8 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 指定应用的包信息。 |
-| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md) | 是 | 通知渠道。 |
+| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| slot | NotificationSlot | 是 | 通知渠道。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设定通知渠道回调函数。 |
 
 **错误码：**
@@ -71,7 +73,9 @@ notificationManager.setSlotByBundle(bundle, notificationSlot, setSlotByBundleCal
 function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<void>
 ```
 
-设置指定应用的通知渠道。使用Promise异步回调。设置前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f.md)创建通知渠道。
+设置指定应用的通知渠道。使用Promise异步回调。
+
+设置前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f.md)创建通知渠道。
 
 **起始版本：** 9
 
@@ -85,14 +89,14 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 指定应用的包信息。 |
-| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md) | 是 | 通知渠道。 |
+| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| slot | NotificationSlot | 是 | 通知渠道。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

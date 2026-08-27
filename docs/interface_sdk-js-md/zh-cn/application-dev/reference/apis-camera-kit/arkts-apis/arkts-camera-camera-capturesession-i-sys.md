@@ -1,6 +1,6 @@
 # CaptureSession
 
-拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相 机功能(录像，拍照)。
+拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能(录像，拍照)。
 
 > **说明：**
 > 
@@ -119,7 +119,7 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;number & gt; | Array of levels supported. |
+| Array&lt;number&gt; | Array of levels supported. |
 
 **错误码：**
 

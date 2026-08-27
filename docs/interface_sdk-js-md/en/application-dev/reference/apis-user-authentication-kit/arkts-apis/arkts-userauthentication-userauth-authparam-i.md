@@ -9,8 +9,7 @@ Defines the user authentication parameters. This API is used to configure user a
 ## Modules to Import
 
 ```TypeScript
-import userAuth from '@kit.UserAuthenticationKit';
-import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## authTrustLevel
@@ -19,12 +18,14 @@ import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
 authTrustLevel: AuthTrustLevel
 ```
 
-Authentication trust level. The authentication trust level determines the security strength of authentication. Select a proper level based on the security requirements of the service scenario:  
+Authentication trust level. The authentication trust level determines the security strength of authentication. Select a proper level based on the security requirements of the service scenario:
+
 - **ATL1**: Applies to low-security scenarios such as service risk control and common personal data query.  
 - **ATL2**: Applies to medium-security scenarios such as application login and maintaining the screen-unlocked  
 state of a device.  
 - **ATL3**: Applies to high-security scenarios such as device unlocking.  
-- **ATL4**: Applies to high-security scenarios such as small-amount payment.  
+- **ATL4**: Applies to high-security scenarios such as small-amount payment.
+
 For details, see [Principles for Classifying Biometric Authentication Trust Levels](../../../security/UserAuthenticationKit/user-authentication-overview.md#principles-for-classifying-biometric-authentication-trust-levels).
 
 **Type:** AuthTrustLevel
@@ -89,7 +90,8 @@ Information about the authentication result reuse. After this parameter is set, 
 skipLockedBiometricAuth?: boolean
 ```
 
-Whether to skip the frozen authentication mode and automatically switch to another mode. If no alternative authentication mode is available, the widget is closed and an authentication freeze error code is returned.  
+Whether to skip the frozen authentication mode and automatically switch to another mode. If no alternative authentication mode is available, the widget is closed and an authentication freeze error code is returned.
+
 - **true**: When biometric authentication is locked, the countdown UI is skipped and the system directly switches  
 to another authentication mode (for example, switching from a locked fingerprint to PIN). This is suitable for scenarios where quick authentication is desired.  
 - **false** (default): The countdown is not skipped. The user must wait for the lock countdown to end before  

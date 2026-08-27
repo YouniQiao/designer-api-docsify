@@ -1,6 +1,8 @@
 # Location
 
-Provides information about geographic locations@interface Location
+Provides information about geographic locations
+
+@interface Location
 
 **Since:** 7
 
@@ -15,7 +17,7 @@ Provides information about geographic locations@interface Location
 ## Modules to Import
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## accuracy

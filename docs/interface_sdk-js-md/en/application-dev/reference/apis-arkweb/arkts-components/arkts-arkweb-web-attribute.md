@@ -11,9 +11,6 @@ Defines the Web attribute functions.
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## aiSessionOptions
@@ -956,7 +953,7 @@ Sets the clipboard copy scope option. If this attribute is not explicitly called
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CopyOptions](#copyoptions) | Yes | Pasteboard copy options. When **undefined** or **null** is passed in, the value is **CopyOptions.None**. |
+| value | CopyOptions | Yes | Pasteboard copy options. When **undefined** or **null** is passed in, the value is **CopyOptions.None**. |
 
 **Examples**
 
@@ -984,7 +981,9 @@ struct WebComponent {
 darkMode(mode: WebDarkMode)
 ```
 
-Sets the dark mode of the **Web** component. If this attribute is not explicitly called, dark mode is disabled by default.When dark mode is enabled, the **Web** component enables the dark style defined in the media query **prefers-color-scheme** of the web page. If it is not defined, the web page remains unchanged. To enable forcible dark mode, use this API with [forceDarkAccess](#forcedarkaccess). For details about how to use dark mode, see [Setting Dark Mode](../../../web/web-set-dark-mode.md).
+Sets the dark mode of the **Web** component. If this attribute is not explicitly called, dark mode is disabled by default.
+
+When dark mode is enabled, the **Web** component enables the dark style defined in the media query **prefers-color-scheme** of the web page. If it is not defined, the web page remains unchanged. To enable forcible dark mode, use this API with [forceDarkAccess](#forcedarkaccess). For details about how to use dark mode, see [Setting Dark Mode](../../../web/web-set-dark-mode.md).
 
 **Since:** 9
 
@@ -1071,7 +1070,12 @@ struct WebComponent {
 dataDetectorConfig(config: TextDataDetectorConfig)
 ```
 
-Configures text recognition settings.This API must be used together with [enableDataDetector](#enabledatadetector). It takes effect only when **enableDataDetector** is set to **true**.When entities A and B overlap, the following rules are followed:
+Configures text recognition settings.
+
+This API must be used together with [enableDataDetector](#enabledatadetector). It takes effect only when **enableDataDetector** is set to **true**.
+
+When entities A and B overlap, the following rules are followed:
+
 1. If A is a subset of B (A ⊂ B), then B is retained; otherwise, A is retained.
 2. If A is not a subset of B (A ⊄ B) and B is not a subset of A (B ⊄ A), and if the starting point of A is earlier
 than that of B (A.start &lt; B.start), then A is retained; otherwise, B is retained.
@@ -1141,7 +1145,9 @@ HTML file to be loaded:
 defaultFixedFontSize(size: number)
 ```
 
-Sets the default fixed font size for the web page. For HTML elements that use the **monospace** font and do not specify **font-size**, the font size is rendered based on this value.When this attribute is not explicitly called, the default fixed font size is **13**.
+Sets the default fixed font size for the web page. For HTML elements that use the **monospace** font and do not specify **font-size**, the font size is rendered based on this value.
+
+When this attribute is not explicitly called, the default fixed font size is **13**.
 
 **Since:** 9
 
@@ -1182,7 +1188,9 @@ struct WebComponent {
 defaultFontSize(size: number)
 ```
 
-Sets the default font size for the web page. For HTML elements that use non-monospace fonts and do not specify **font-size**, the font size is rendered based on this value.When this attribute is not explicitly called, the default font size of the web page is **16**.
+Sets the default font size for the web page. For HTML elements that use non-monospace fonts and do not specify **font-size**, the font size is rendered based on this value.
+
+When this attribute is not explicitly called, the default font size of the web page is **16**.
 
 **Since:** 9
 
@@ -1336,7 +1344,14 @@ Sets a custom text selection menu for the **Web** component.
 > 
 > It is not recommended to use both at the same time. Choose based on the degree of customization required.
 > You can use this attribute to customize a text menu.
-You can use onCreateMenu to modify, add, and delete menu options. If you do not want to display the text menu, return an empty array.You can use onMenuItemClick to customize the callback for menu options. This function is triggered after a menu option is clicked and determines whether to execute the default callback based on the return value. If **true** is returned, the system callback is not executed. If **false** is returned, the system callback is executed.In [onPrepareMenu&lt;sup&gt;20+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#properties-1), this callback is triggered after the text selection area changes and before the menu is displayed. You can modify, add, or delete menu options in the callback to dynamically update the menu.If this method is used together with [selectionMenuOptions&lt;sup&gt;(deprecated)&lt;/sup&gt;](#selectionmenuoptions), the **selectionMenuOptions&lt;sup  
+
+You can use onCreateMenu to modify, add, and delete menu options. If you do not want to display the text menu, return an empty array.
+
+You can use onMenuItemClick to customize the callback for menu options. This function is triggered after a menu option is clicked and determines whether to execute the default callback based on the return value. If **true** is returned, the system callback is not executed. If **false** is returned, the system callback is executed.
+
+In [onPrepareMenu&lt;sup&gt;20+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#properties-1), this callback is triggered after the text selection area changes and before the menu is displayed. You can modify, add, or delete menu options in the callback to dynamically update the menu.
+
+If this method is used together with [selectionMenuOptions&lt;sup&gt;(deprecated)&lt;/sup&gt;](#selectionmenuoptions), the **selectionMenuOptions&lt;sup  
 &gt; (deprecated) &lt;/sup&gt;** method does not take effect.
 
 **Since:** 12
@@ -1483,11 +1498,14 @@ HTML file to be loaded:
 enableAutoFill(value: boolean)
 ```
 
-Sets whether to enable web page autofill. By default, this feature is enabled.<!--RP1-->
+Sets whether to enable web page autofill. By default, this feature is enabled.
+
+<!--RP1-->
 
 > **NOTE：**
 > 
 > The autofill feature of this API depends on SmartFill service and Password Autofill Service.
+
 <!--RP1End-->
 
 **Since:** 23
@@ -1563,7 +1581,14 @@ Sets whether to recognize special entities of web texts, such as emails, phone n
 > If **enableDataDetector** is set to **true** and [dataDetectorConfig](#datadetectorconfig) is
 > not set, all types of entities will be recognized, and the **color** and **decoration** attributes of the
 > recognized entities will be changed to the following styles:
-<!--code_no_check-->When **enableDataDetector** is set to **true** and [copyOptions](#copyoptions) is set to **CopyOptions.LocalDevice**, the AI menu feature is activated. In this case, after text is selected on the web page, the text selection menu can display the corresponding AI menu items, including **url** (open link), **email** (create new email), **phoneNumber** (call), **address** (navigate to the location), and **dateTime** (create new schedule reminder) from [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md).When the AI menu takes effect, the corresponding option can be displayed only when the selection contains a complete AI entity. This menu item and the askAI menu item in [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md) do not appear at the same time.For details about the application scenario, see [Using Smart Text Data Detector](../../../web/web-data-detector.md).
+
+<!--code_no_check-->
+
+When **enableDataDetector** is set to **true** and [copyOptions](#copyoptions) is set to **CopyOptions.LocalDevice**, the AI menu feature is activated. In this case, after text is selected on the web page, the text selection menu can display the corresponding AI menu items, including **url** (open link), **email** (create new email), **phoneNumber** (call), **address** (navigate to the location), and **dateTime** (create new schedule reminder) from [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md).
+
+When the AI menu takes effect, the corresponding option can be displayed only when the selection contains a complete AI entity. This menu item and the askAI menu item in [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md) do not appear at the same time.
+
+For details about the application scenario, see [Using Smart Text Data Detector](../../../web/web-data-detector.md).
 
 **Since:** 20
 
@@ -2114,7 +2139,13 @@ struct WebComponent {
 enableSelectedDataDetector(enable: boolean)
 ```
 
-Sets whether to enable the AI menu feature for text selection menu. After the AI menu feature is enabled, the email, phone number, website, date, and address in the selection can be identified, and the corresponding AI menu items are displayed in the text selection menu. By default, the AI menu feature is enabled.When the AI menu feature is enabled, after text is selected on the web page, the text selection menu can display the corresponding AI menu items, including **url** (open link), **email** (create new email), **phoneNumber** (call), **address** (navigate to the location), and **dateTime** (create new schedule) from [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md).When the AI menu takes effect, the corresponding option can be displayed only when the selection contains a complete AI entity. This menu item and the askAI menu item in [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md) do not appear at the same time.For details about the application scenario, see [Using Smart Text Data Detector](../../../web/web-data-detector.md).
+Sets whether to enable the AI menu feature for text selection menu. After the AI menu feature is enabled, the email, phone number, website, date, and address in the selection can be identified, and the corresponding AI menu items are displayed in the text selection menu. By default, the AI menu feature is enabled.
+
+When the AI menu feature is enabled, after text is selected on the web page, the text selection menu can display the corresponding AI menu items, including **url** (open link), **email** (create new email), **phoneNumber** (call), **address** (navigate to the location), and **dateTime** (create new schedule) from [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md).
+
+When the AI menu takes effect, the corresponding option can be displayed only when the selection contains a complete AI entity. This menu item and the askAI menu item in [TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md) do not appear at the same time.
+
+For details about the application scenario, see [Using Smart Text Data Detector](../../../web/web-data-detector.md).
 
 **Since:** 22
 
@@ -2307,7 +2338,9 @@ struct WebComponent {
 forceDisplayScrollBar(enabled: boolean)
 ```
 
-Sets whether the scroll bar is always visible. Under the always-visible settings, when the page size exceeds one page, the scroll bar appears and remains visible. When this attribute is not explicitly called, the scroll bar is not always visible by default.When **layoutMode** is set to **WebLayoutMode.FIT_CONTENT**, the **enabled** parameter is set to **false**.
+Sets whether the scroll bar is always visible. Under the always-visible settings, when the page size exceeds one page, the scroll bar appears and remains visible. When this attribute is not explicitly called, the scroll bar is not always visible by default.
+
+When **layoutMode** is set to **WebLayoutMode.FIT_CONTENT**, the **enabled** parameter is set to **false**.
 
 > **NOTE：**
 > 
@@ -2392,7 +2425,7 @@ Sets whether to enable the forcible zoom functionality for the **Web** component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to comply with the zoom restriction specified by the ** & lt;meta name="viewport" & gt;** tag on the web page. The value **true** means to not comply with the web page zoom restriction, and **false** means the opposite. When **undefined** or **null** is passed in, the attribute setting does not take effect. |
+| enable | boolean | Yes | Whether to comply with the zoom restriction specified by the **&lt;meta name="viewport"&gt;** tag on the web page. The value **true** means to not comply with the web page zoom restriction, and **false** means the opposite. When **undefined** or **null** is passed in, the attribute setting does not take effect. |
 
 **Examples**
 
@@ -3004,7 +3037,9 @@ HTML file to be loaded.
 keyboardAvoidMode(mode: WebKeyboardAvoidMode)
 ```
 
-Sets the custom soft keyboard avoidance mode.If the keyboard avoidance mode set in **UIContext** is [KeyboardAvoidMode.RESIZE](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md), this API does not take effect.
+Sets the custom soft keyboard avoidance mode.
+
+If the keyboard avoidance mode set in **UIContext** is [KeyboardAvoidMode.RESIZE](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md), this API does not take effect.
 
 **Since:** 12
 
@@ -3335,7 +3370,9 @@ HTML file to be loaded:
 minFontSize(size: number)
 ```
 
-Sets the minimum font size for the web page. If the font size of HTML elements is smaller than the value set by this API, the font size is rendered based on the value set by this API.When no attribute is explicitly called, the default minimum font size of the web page is **8**.
+Sets the minimum font size for the web page. If the font size of HTML elements is smaller than the value set by this API, the font size is rendered based on the value set by this API.
+
+When no attribute is explicitly called, the default minimum font size of the web page is **8**.
 
 **Since:** 9
 
@@ -3376,9 +3413,13 @@ struct WebComponent {
 minLogicalFontSize(size: number)
 ```
 
-Sets the minimum logical font size for the web page.For HTML elements whose font size is not specified:
+Sets the minimum logical font size for the web page.
+
+For HTML elements whose font size is not specified:
+
 1. If the font size of the element is smaller than the value set by this API, the font size is rendered based on the API value.
 2. If **minLogicalFontSize** and **minFontSize** are both set, the larger value of the two will be used for elements whose font size is not specified.
+
 When this attribute is not explicitly called, the default minimum logical font size of the web page is **8**.
 
 **Since:** 9
@@ -3460,7 +3501,9 @@ struct WebComponent {
 multiWindowAccess(multiWindow: boolean)
 ```
 
-Sets whether to enable the multi-window permission. If this attribute is not explicitly called, the permission is disabled by default.Enabling the multi-window permission requires implementation of the **onWindowNew** event. For the sample code, see [onWindowNew](#onwindownew).
+Sets whether to enable the multi-window permission. If this attribute is not explicitly called, the permission is disabled by default.
+
+Enabling the multi-window permission requires implementation of the **onWindowNew** event. For the sample code, see [onWindowNew](#onwindownew).
 
 **Since:** 9
 
@@ -3678,7 +3721,7 @@ Triggered to check whether a bound **Web** instance exists based on the name whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;void & gt; | Yes | Callback triggered on a new page after **window.open** is triggered on the original page. |
+| callback | Callback&lt;void&gt; | Yes | Callback triggered on a new page after **window.open** is triggered on the original page. |
 
 **Examples**
 
@@ -4035,7 +4078,9 @@ HTML file to be loaded:
 onCameraCaptureStateChange(callback: OnCameraCaptureStateChangeCallback)
 ```
 
-Triggered to notify the user of the camera state on the current web page, which can be **None**, **Active**, or **Paused**. This API uses an asynchronous callback to return the result.You can use the **startCamera**, **stopCamera**, and **closeCamera** APIs to enable, pause, and stop the camera respectively. For details about how to use them, see [startCamera](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#startcamera).
+Triggered to notify the user of the camera state on the current web page, which can be **None**, **Active**, or **Paused**. This API uses an asynchronous callback to return the result.
+
+You can use the **startCamera**, **stopCamera**, and **closeCamera** APIs to enable, pause, and stop the camera respectively. For details about how to use them, see [startCamera](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#startcamera).
 
 > **NOTE：**
 > 
@@ -4832,7 +4877,11 @@ HTML file to be loaded:
 onControllerAttached(callback: () => void)
 ```
 
-Triggered when the controller is successfully bound to the **Web** component. The controller must be **WebviewController**. Do not call APIs related to the **Web** component before this callback event. Otherwise, a js-error exception will be thrown.The web page has not been loaded when the callback is called. Therefore, APIs related to web page operations, such as [zoomIn](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomin), [zoomOut](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomout), cannot be used in the callback. You can use APIs irrelevant to web page operations, such as [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl), [getWebId](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getwebid).For details about the component lifecycle, see [Lifecycle of the Web Component](../../../web/web-event-sequence.md).
+Triggered when the controller is successfully bound to the **Web** component. The controller must be **WebviewController**. Do not call APIs related to the **Web** component before this callback event. Otherwise, a js-error exception will be thrown.
+
+The web page has not been loaded when the callback is called. Therefore, APIs related to web page operations, such as [zoomIn](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomin), [zoomOut](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomout), cannot be used in the callback. You can use APIs irrelevant to web page operations, such as [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl), [getWebId](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getwebid).
+
+For details about the component lifecycle, see [Lifecycle of the Web Component](../../../web/web-event-sequence.md).
 
 **Since:** 10
 
@@ -4844,7 +4893,7 @@ Triggered when the controller is successfully bound to the **Web** component. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | Yes | Callback invoked when the ArkWeb controller is successfully initialized. |
+| callback | () =&gt; void | Yes | Callback invoked when the ArkWeb controller is successfully initialized. |
 
 **Examples**
 
@@ -5205,7 +5254,7 @@ Triggered to process an HTML form whose input type is **file**, in response to t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (event?: { callback: Function, fileSelector: object }) = & gt; void | Yes | Callback to be executed when the file selector is triggered. |
+| callback | (event?: { callback: Function, fileSelector: object }) =&gt; void | Yes | Callback to be executed when the file selector is triggered. |
 
 ## onFirstContentfulPaint
 
@@ -5420,7 +5469,7 @@ Triggered when the **Web** component exits full screen mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | Yes | Callback invoked when the component exits full screen mode. |
+| callback | () =&gt; void | Yes | Callback invoked when the component exits full screen mode. |
 
 **Examples**
 
@@ -5469,7 +5518,7 @@ Triggered to notify the user that the request for obtaining the geolocation info
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | Yes | Callback invoked when the request for obtaining geolocation information has been canceled. |
+| callback | () =&gt; void | Yes | Callback invoked when the request for obtaining geolocation information has been canceled. |
 
 **Examples**
 
@@ -6011,7 +6060,7 @@ Triggered when the key event is intercepted and before it is consumed by the web
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (event: KeyEvent) = & gt; boolean | Yes | Key event that is triggered. The return value is of the Boolean type. The value **true** means to pass the **KeyEvent** to the web kernel, and **false** means the opposite. |
+| callback | (event: KeyEvent) =&gt; boolean | Yes | Key event that is triggered. The return value is of the Boolean type. The value **true** means to pass the **KeyEvent** to the web kernel, and **false** means the opposite. |
 
 **Examples**
 
@@ -6362,7 +6411,9 @@ struct WebComponent {
 onMicrophoneCaptureStateChange(callback: OnMicrophoneCaptureStateChangeCallback)
 ```
 
-Triggered to notify the user of the microphone state on the current web page, which can be **None**, **Active**, or **Paused**. This API uses an asynchronous callback to return the result.You can use the **resumeMicrophone**, **pauseMicrophone**, and **stopMicrophone** APIs to resume, pause, and stop the microphone. For details about how to use them, see [resumeMicrophone](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#resumemicrophone).
+Triggered to notify the user of the microphone state on the current web page, which can be **None**, **Active**, or **Paused**. This API uses an asynchronous callback to return the result.
+
+You can use the **resumeMicrophone**, **pauseMicrophone**, and **stopMicrophone** APIs to resume, pause, and stop the microphone. For details about how to use them, see [resumeMicrophone](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#resumemicrophone).
 
 > **NOTE：**
 > 
@@ -6527,7 +6578,7 @@ Triggered when a finger touches a same-layer tag.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (event: NativeEmbedTouchInfo) = & gt; void | Yes | Callback invoked when a finger touches a same-layer tag. |
+| callback | (event: NativeEmbedTouchInfo) =&gt; void | Yes | Callback invoked when a finger touches a same-layer tag. |
 
 **Examples**
 
@@ -6695,7 +6746,7 @@ Triggered when the lifecycle of the same-layer tag changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (event: NativeEmbedDataInfo) = & gt; void | Yes | Callback invoked when the lifecycle of the same-layer tag changes. |
+| callback | (event: NativeEmbedDataInfo) =&gt; void | Yes | Callback invoked when the lifecycle of the same-layer tag changes. |
 
 **Examples**
 
@@ -6866,7 +6917,8 @@ HTML file to be loaded:
 onNativeEmbedMouseEvent(callback: MouseInfoCallback)
 ```
 
-Triggered when the following operations are performed on the same-layer tag:  
+Triggered when the following operations are performed on the same-layer tag:
+
 - Tapping or holding with the left, middle, or right mouse button.  
 - Tapping or holding the left, middle, or right mouse button using the touchpad.
 
@@ -8074,7 +8126,13 @@ struct WebComponent {
 onRenderExited(callback: Callback<OnRenderExitedEvent>)
 ```
 
-Triggered when the rendering process exits abnormally.A rendering process may be shared by multiple **Web** components. Each affected **Web** component triggers this callback.You can call the bound **webviewController** APIs to restore the web page when this callback is triggered. For example, [refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) and [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl).For details about the component lifecycle, see [Lifecycle of the Web Components](../../../web/web-event-sequence.md).
+Triggered when the rendering process exits abnormally.
+
+A rendering process may be shared by multiple **Web** components. Each affected **Web** component triggers this callback.
+
+You can call the bound **webviewController** APIs to restore the web page when this callback is triggered. For example, [refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) and [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl).
+
+For details about the component lifecycle, see [Lifecycle of the Web Components](../../../web/web-event-sequence.md).
 
 **Since:** 9
 
@@ -8118,7 +8176,13 @@ struct WebComponent {
 onRenderExited(callback: (event?: { detail: object }) => boolean)
 ```
 
-Triggered when the rendering process exits due to an error or crash.A rendering process may be shared by multiple **Web** components. Each affected **Web** component triggers this callback.You can call the bound **WebViewController** APIs to restore the web page when this callback is triggered. For example, [refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) and [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl).For details, see [Lifecycle of the Web Component](../../../web/web-event-sequence.md).
+Triggered when the rendering process exits due to an error or crash.
+
+A rendering process may be shared by multiple **Web** components. Each affected **Web** component triggers this callback.
+
+You can call the bound **WebViewController** APIs to restore the web page when this callback is triggered. For example, [refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) and [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl).
+
+For details, see [Lifecycle of the Web Component](../../../web/web-event-sequence.md).
 
 **Since:** 8
 
@@ -8132,7 +8196,7 @@ Triggered when the rendering process exits due to an error or crash.A rendering 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (event?: { detail: object }) = & gt; boolean | Yes | Callback triggered when the rendering process exits abnormally. |
+| callback | (event?: { detail: object }) =&gt; boolean | Yes | Callback triggered when the rendering process exits abnormally. |
 
 **Examples**
 
@@ -8144,7 +8208,11 @@ See [onRenderExited](#onrenderexited)
 onRenderProcessNotResponding(callback: OnRenderProcessNotRespondingCallback)
 ```
 
-Triggered when the rendering process does not respond. If the **Web** component cannot process the input event or navigate to a new URL within a proper time range, the web page process is considered unresponsive and the callback is triggered.If the web page process does not respond, this callback may be triggered until the web page process responds again. In this case, [onRenderProcessResponding](#onrenderprocessresponding) is triggered.You can terminate the associated rendering process through [terminateRenderProcess](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#terminaterenderprocess), which may affect other **Web** components in the same rendering process.
+Triggered when the rendering process does not respond. If the **Web** component cannot process the input event or navigate to a new URL within a proper time range, the web page process is considered unresponsive and the callback is triggered.
+
+If the web page process does not respond, this callback may be triggered until the web page process responds again. In this case, [onRenderProcessResponding](#onrenderprocessresponding) is triggered.
+
+You can terminate the associated rendering process through [terminateRenderProcess](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#terminaterenderprocess), which may affect other **Web** components in the same rendering process.
 
 **Since:** 12
 
@@ -8237,7 +8305,7 @@ Triggered when the **Web** component obtains the focus. If the **Web** component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | Yes | Callback triggered when a web page obtains the focus. |
+| callback | () =&gt; void | Yes | Callback triggered when a web page obtains the focus. |
 
 **Examples**
 
@@ -8878,7 +8946,9 @@ struct WebComponent {
 onSslErrorEventReceive(callback: Callback<OnSslErrorEventReceiveEvent>)
 ```
 
-Triggered to notify the host application when an SSL error occurs while loading the main-frame resource.To support errors for loading subframe resources, use the [OnSslErrorEvent](#onsslerrorevent) API.
+Triggered to notify the host application when an SSL error occurs while loading the main-frame resource.
+
+To support errors for loading subframe resources, use the [OnSslErrorEvent](#onsslerrorevent) API.
 
 > **NOTE：**
 > 
@@ -9010,7 +9080,7 @@ Triggered when an SSL error occurs during resource loading.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (event?: { handler: Function, error: object }) = & gt; void | Yes | Callback triggered when a web page detects an SSL error. |
+| callback | (event?: { handler: Function, error: object }) =&gt; void | Yes | Callback triggered when a web page detects an SSL error. |
 
 ## onTextSelectionChange
 
@@ -9183,7 +9253,7 @@ Triggered when the **Web** component is about to access a URL. This API is used 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (event?: { data: string \| WebResourceRequest }) = & gt; boolean | Yes | URL information. The return value is of the Boolean type. If **true** is returned, the access is blocked. Otherwise, the access is allowed. |
+| callback | (event?: { data: string \| WebResourceRequest }) =&gt; boolean | Yes | URL information. The return value is of the Boolean type. If **true** is returned, the access is blocked. Otherwise, the access is allowed. |
 
 **Examples**
 
@@ -9404,7 +9474,7 @@ Triggered when this window is closed. This API works in the same way as [onWindo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | Yes | Callback invoked when the window is closed. |
+| callback | () =&gt; void | Yes | Callback invoked when the window is closed. |
 
 **Examples**
 
@@ -9434,7 +9504,15 @@ struct WebComponent {
 onWindowNew(callback: Callback<OnWindowNewEvent>)
 ```
 
-Triggered to notify the user of a new window creation request, when **multiWindowAccess** is enabled.If the [setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller) API is not called, the render process will be blocked.If no new window is created, set this parameter to **null** when invoking the [setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller) API to notify the **Web** component that no new window is created.The new window cannot be directly overlaid on the original **Web** component, and its URL (for example, address bar) must be clearly displayed in the same way as the main page to prevent confusion. If visible management of trusted URLs cannot be implemented, consider prohibiting the creation of new windows.Note that the source of a new window request cannot be reliably traced. The request may be initiated by a third- party iframe. By default, the application needs to take defense measures such as sandbox isolation and permission restriction to ensure security.
+Triggered to notify the user of a new window creation request, when **multiWindowAccess** is enabled.
+
+If the [setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller) API is not called, the render process will be blocked.
+
+If no new window is created, set this parameter to **null** when invoking the [setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller) API to notify the **Web** component that no new window is created.
+
+The new window cannot be directly overlaid on the original **Web** component, and its URL (for example, address bar) must be clearly displayed in the same way as the main page to prevent confusion. If visible management of trusted URLs cannot be implemented, consider prohibiting the creation of new windows.
+
+Note that the source of a new window request cannot be reliably traced. The request may be initiated by a third- party iframe. By default, the application needs to take defense measures such as sandbox isolation and permission restriction to ensure security.
 
 **Since:** 9
 
@@ -9652,7 +9730,13 @@ build() {
 optimizeParserBudget(optimizeParserBudget: boolean)
 ```
 
-Sets whether to enable segment-based HTML parsing optimization. If no attribute is explicitly called, the parsing time is used as the segment point by default.To avoid occupying too many main thread resources and enable progressive loading of web pages, the ArkWeb kernel uses the segment-based parsing policy when parsing the HTML files. By default, the ArkWeb kernel uses the parsing time as the segment point. When the parsing time exceeds the threshold, the parsing is interrupted and then the layout and rendering operations are performed.After optimization is enabled, the ArkWeb kernel not only checks whether the parsing time exceeds the limit, but also additionally determines whether the number of parsed tokens (the smallest parsing units of an HTML document, such as `&lt;div&gt;`, `attr="xxx"`, etc.) exceeds the threshold specified by the kernel, and lowers this threshold. When the FCP (First Contentful Paint) of the page is triggered, the default interrupt judgment logic is restored. This makes the parsing operations before FCP more frequent, thereby increasing the possibility that the first-frame content is parsed and enters the rendering phase earlier, while effectively reducing the rendering workload of the first frame, ultimately advancing the FCP time.When the FCP of a page is triggered, the default segment parsing logic is restored. Therefore, the segment-based HTML parsing optimization takes effect only for the first page loaded by each **Web** component.
+Sets whether to enable segment-based HTML parsing optimization. If no attribute is explicitly called, the parsing time is used as the segment point by default.
+
+To avoid occupying too many main thread resources and enable progressive loading of web pages, the ArkWeb kernel uses the segment-based parsing policy when parsing the HTML files. By default, the ArkWeb kernel uses the parsing time as the segment point. When the parsing time exceeds the threshold, the parsing is interrupted and then the layout and rendering operations are performed.
+
+After optimization is enabled, the ArkWeb kernel not only checks whether the parsing time exceeds the limit, but also additionally determines whether the number of parsed tokens (the smallest parsing units of an HTML document, such as `&lt;div&gt;`, `attr="xxx"`, etc.) exceeds the threshold specified by the kernel, and lowers this threshold. When the FCP (First Contentful Paint) of the page is triggered, the default interrupt judgment logic is restored. This makes the parsing operations before FCP more frequent, thereby increasing the possibility that the first-frame content is parsed and enters the rendering phase earlier, while effectively reducing the rendering workload of the first frame, ultimately advancing the FCP time.
+
+When the FCP of a page is triggered, the default segment parsing logic is restored. Therefore, the segment-based HTML parsing optimization takes effect only for the first page loaded by each **Web** component.
 
 **Since:** 15
 
@@ -9831,7 +9915,13 @@ struct WebComponent {
 registerNativeEmbedRule(tag: string, type:string)
 ```
 
-Registers the HTML tag name and type for same-layer rendering. The tag name only supports &lt;object\&gt; and &lt;embed\&gt;. The tag type only supports visible ASCII characters.If the specified type is the same as the W3C standard &lt;object\&gt; or &lt;embed\&gt; type, the ArkWeb kernel identifies the type as a non-same-layer tag.This API is also controlled by **enableNativeEmbedMode** and does not take effect when same-layer rendering is disabled. When this API is not used, the ArkWeb kernel recognizes the &lt;embed\&gt; tags with the "native/" prefix as same-layer tags.For details, see [Using Same-Layer Rendering](../../../web/web-same-layer.md#rendering-text-boxes-at-the-same-layer-on-web-pages).
+Registers the HTML tag name and type for same-layer rendering. The tag name only supports &lt;object\&gt; and &lt;embed\&gt;. The tag type only supports visible ASCII characters.
+
+If the specified type is the same as the W3C standard &lt;object\&gt; or &lt;embed\&gt; type, the ArkWeb kernel identifies the type as a non-same-layer tag.
+
+This API is also controlled by **enableNativeEmbedMode** and does not take effect when same-layer rendering is disabled. When this API is not used, the ArkWeb kernel recognizes the &lt;embed\&gt; tags with the "native/" prefix as same-layer tags.
+
+For details, see [Using Same-Layer Rendering](../../../web/web-same-layer.md#rendering-text-boxes-at-the-same-layer-on-web-pages).
 
 **Since:** 12
 
@@ -10245,7 +10335,9 @@ struct WebComponent {
 selectionMenuOptions(expandedMenuOptions: Array<ExpandedMenuItemOptions>)
 ```
 
-Sets the extended options of the custom context menu on selection, including the text content, icon, and callback.The API only supports the selection of plain text; if the selected content contains images or other non-text elements, the **action** information may display garbled content.
+Sets the extended options of the custom context menu on selection, including the text content, icon, and callback.
+
+The API only supports the selection of plain text; if the selected content contains images or other non-text elements, the **action** information may display garbled content.
 
 > **NOTE：**
 > 
@@ -10337,7 +10429,9 @@ Sets whether to save form data. When this attribute is not explicitly called, th
 textAutosizing(textAutosizing: boolean)
 ```
 
-Sets whether to enable automatic font sizing for the **Web** component. When no attribute is explicitly called, automatic font sizing is enabled for the **Web** component by default.After automatic font sizing takes effect, any text smaller than 16 px is enlarged to fall between 16 px and 32 px. This eliminates readability issues on narrow screens (viewport &lt; 980 px) where mobile-specific layouts are absent.
+Sets whether to enable automatic font sizing for the **Web** component. When no attribute is explicitly called, automatic font sizing is enabled for the **Web** component by default.
+
+After automatic font sizing takes effect, any text smaller than 16 px is enlarged to fall between 16 px and 32 px. This eliminates readability issues on narrow screens (viewport &lt; 980 px) where mobile-specific layouts are absent.
 
 &gt; **NOTE：**
 > 
@@ -10606,7 +10700,9 @@ Scroll Test
 webCursiveFont(family: string)
 ```
 
-Sets the cursive font family of the web page to render HTML elements that use the **cursive** font.When this attribute is not explicitly called, the default cursive font family of the web page is **cursive**.
+Sets the cursive font family of the web page to render HTML elements that use the **cursive** font.
+
+When this attribute is not explicitly called, the default cursive font family of the web page is **cursive**.
 
 **Since:** 9
 
@@ -10647,7 +10743,9 @@ struct WebComponent {
 webFantasyFont(family: string)
 ```
 
-Sets the fantasy font family of the web page to render HTML elements that use the **fantasy** font.When this attribute is not explicitly called, the default fantasy font family of the web page is **fantasy**.
+Sets the fantasy font family of the web page to render HTML elements that use the **fantasy** font.
+
+When this attribute is not explicitly called, the default fantasy font family of the web page is **fantasy**.
 
 **Since:** 9
 
@@ -10687,7 +10785,9 @@ struct WebComponent {
 webFixedFont(family: string)
 ```
 
-Sets the fixed font family of the web page to render HTML elements that use the **monospace** font.When this attribute is not explicitly called, the default fixed font family of the web page is **monospace**.
+Sets the fixed font family of the web page to render HTML elements that use the **monospace** font.
+
+When this attribute is not explicitly called, the default fixed font family of the web page is **monospace**.
 
 **Since:** 9
 
@@ -10728,7 +10828,9 @@ struct WebComponent {
 webSansSerifFont(family: string)
 ```
 
-Sets the sans-serif font family of the web page to render HTML elements that use the **sans-serif** font.When this attribute is not explicitly called, the sans-serif font family of the web page is **sans-serif** by default.
+Sets the sans-serif font family of the web page to render HTML elements that use the **sans-serif** font.
+
+When this attribute is not explicitly called, the sans-serif font family of the web page is **sans-serif** by default.
 
 **Since:** 9
 
@@ -10769,7 +10871,9 @@ struct WebComponent {
 webSerifFont(family: string)
 ```
 
-Sets the serif font family of the web page to render HTML elements that use the **serif** font.When this attribute is not explicitly called, the default serif font family of the web page is **serif**.
+Sets the serif font family of the web page to render HTML elements that use the **serif** font.
+
+When this attribute is not explicitly called, the default serif font family of the web page is **serif**.
 
 **Since:** 9
 
@@ -10810,7 +10914,9 @@ struct WebComponent {
 webStandardFont(family: string)
 ```
 
-Sets the standard font family of the web page to render HTML elements whose font style is not specified.When this attribute is not explicitly called, the default standard font family of the web page is **sans-serif**.
+Sets the standard font family of the web page to render HTML elements whose font style is not specified.
+
+When this attribute is not explicitly called, the default standard font family of the web page is **sans-serif**.
 
 **Since:** 9
 
@@ -10865,7 +10971,7 @@ Sets whether to support the **viewport** attribute of the HTML **\&lt;meta&gt;**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wideViewModeAccess | boolean | Yes | Whether to support the **viewport** attribute of the HTML ** & lt;meta & gt;** tag. The value **true** means to support the **viewport** attribute of the HTML ** & lt;meta & gt;** tag, and **false** means the opposite. |
+| wideViewModeAccess | boolean | Yes | Whether to support the **viewport** attribute of the HTML **&lt;meta&gt;** tag. The value **true** means to support the **viewport** attribute of the HTML **&lt;meta&gt;** tag, and **false** means the opposite. |
 
 ## zoomAccess
 
@@ -10913,7 +11019,9 @@ struct WebComponent {
 zoomControlAccess(zoomControlAccess: boolean)
 ```
 
-Sets whether to allow zooming by pressing **Ctrl + '-/+'** or **Ctrl** + mouse wheel/touchpad.If this attribute is not explicitly called, zooming by pressing **Ctrl + '-/+'** or **Ctrl** + mouse wheel/touchpad is allowed by default.
+Sets whether to allow zooming by pressing **Ctrl + '-/+'** or **Ctrl** + mouse wheel/touchpad.
+
+If this attribute is not explicitly called, zooming by pressing **Ctrl + '-/+'** or **Ctrl** + mouse wheel/touchpad is allowed by default.
 
 **Since:** 22
 

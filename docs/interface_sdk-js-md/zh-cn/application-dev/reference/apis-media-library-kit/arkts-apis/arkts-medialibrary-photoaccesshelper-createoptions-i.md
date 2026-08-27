@@ -1,6 +1,9 @@
 # CreateOptions
 
-图片或视频的创建选项。title参数的规格如下：  
+图片或视频的创建选项。
+
+title参数的规格如下：
+
 - 不应包含扩展名。  
 - 文件名字符串长度为1~255。
 
@@ -11,7 +14,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## subtype

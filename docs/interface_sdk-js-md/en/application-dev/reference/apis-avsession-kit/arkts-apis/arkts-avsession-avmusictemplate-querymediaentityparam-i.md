@@ -1,6 +1,8 @@
 # QueryMediaEntityParam
 
-The definition of QueryMediaEntityParam.@interface QueryMediaEntityParam
+The definition of QueryMediaEntityParam.
+
+@interface QueryMediaEntityParam
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of QueryMediaEntityParam.@interface QueryMediaEntityParam
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## entityId

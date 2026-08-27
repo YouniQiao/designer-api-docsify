@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## updateNetwork
@@ -27,7 +26,7 @@ Update the specified Wi-Fi configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | Indicates the Wi-Fi configuration to update. |
+| config | WifiDeviceConfig | Yes | Indicates the Wi-Fi configuration to update. |
 
 **Return value:**
 

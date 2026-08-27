@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import webNativeMessagingExtensionManager from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
 ```
 
 ## disconnectNative
@@ -32,7 +32,7 @@ Disconnects the connection of a specified web native message extension.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

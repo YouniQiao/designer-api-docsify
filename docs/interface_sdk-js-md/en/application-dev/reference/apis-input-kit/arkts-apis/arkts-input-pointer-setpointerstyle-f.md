@@ -22,7 +22,7 @@ Sets the mouse pointer style type for a specified window. This API can set only 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowId | number | Yes | Window ID. The value is an integer greater than or equal to 0. If the window ID is valid and the corresponding window exists, the mouse pointer style of the window can be set properly. If the window ID is valid but the window does not exist, the mouse pointer style can also be set properly. The result can be obtained through [getPointerStyle](arkts-input-pointer-getpointerstyle-f.md). |
-| pointerStyle | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | Yes | Pointer style. Do not pass **DEVELOPER_DEFINED_ICON**. |
+| pointerStyle | PointerStyle | Yes | Pointer style. Do not pass **DEVELOPER_DEFINED_ICON**. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -90,13 +90,13 @@ Sets the mouse pointer style type for a specified window. This API can set only 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowId | number | Yes | Window ID. The value is an integer greater than or equal to 0. If the window ID is valid and the corresponding window exists, the mouse pointer style of the window can be set properly. If the window ID is valid but the window does not exist, the mouse pointer style can also be set properly. The result can be obtained through [getPointerStyle](arkts-input-pointer-getpointerstyle-f.md). |
-| pointerStyle | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | Yes | Pointer style. |
+| pointerStyle | PointerStyle | Yes | Pointer style. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

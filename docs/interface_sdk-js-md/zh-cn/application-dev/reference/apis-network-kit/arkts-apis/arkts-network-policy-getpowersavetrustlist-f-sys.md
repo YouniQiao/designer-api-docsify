@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## getPowerSaveTrustlist
@@ -71,7 +71,7 @@ function getPowerSaveTrustlist(): Promise<Array<number>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | 以 Promise 形式返回设定结果。 |
+| Promise&lt;Array&lt;number&gt;&gt; | 以 Promise 形式返回设定结果。 |
 
 **错误码：**
 

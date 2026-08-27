@@ -1,6 +1,8 @@
 # ContentClipMode
 
-表示滚动容器的内容裁剪模式。@enum { number }
+表示滚动容器的内容裁剪模式。
+
+@enum { number }
 
 **起始版本：** 14
 

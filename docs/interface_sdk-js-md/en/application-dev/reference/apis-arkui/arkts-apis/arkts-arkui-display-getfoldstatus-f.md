@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## getFoldStatus
@@ -24,7 +24,7 @@ Obtains the fold status of this foldable device.
 
 | Type | Description |
 | --- | --- |
-| [FoldStatus](arkts-arkui-foldstatus-e.md) | Fold status of the device. |
+| FoldStatus | Fold status of the device. |
 
 **Error codes:**
 

@@ -40,7 +40,9 @@ lockScreenEnabled?: NotificationFlagStatus
 soundEnabled?: NotificationFlagStatus
 ```
 
-是否启用声音提示功能。默认值为TYPE_NONE。从API version 23开始成为可写参数，设置时仅[TYPE_CLOSE](arkts-notification-notificationflags-notificationflagstatus-e.md)会生效。@readonly [since 8 - 22]
+是否启用声音提示功能。默认值为TYPE_NONE。从API version 23开始成为可写参数，设置时仅[TYPE_CLOSE](arkts-notification-notificationflags-notificationflagstatus-e.md)会生效。
+
+@readonly [since 8 - 22]
 
 **类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
 
@@ -54,7 +56,9 @@ soundEnabled?: NotificationFlagStatus
 vibrationEnabled?: NotificationFlagStatus
 ```
 
-是否启用振动提醒功能。默认值为TYPE_NONE。从API version 23开始成为可写参数，设置时仅[TYPE_CLOSE](arkts-notification-notificationflags-notificationflagstatus-e.md)会生效。@readonly [since 8 - 22]
+是否启用振动提醒功能。默认值为TYPE_NONE。从API version 23开始成为可写参数，设置时仅[TYPE_CLOSE](arkts-notification-notificationflags-notificationflagstatus-e.md)会生效。
+
+@readonly [since 8 - 22]
 
 **类型：** [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md)
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## constructTLSSocketInstance
@@ -55,7 +55,7 @@ Upgrades a **TCPSocket** connection to a **TLSSocket** connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tcpSocket | [TCPSocket](arkts-network-socket-tcpsocket-i.md) | Yes | TCPSocket** connection to be upgraded. |
+| tcpSocket | TCPSocket | Yes | TCPSocket** connection to be upgraded. |
 
 **Return value:**
 

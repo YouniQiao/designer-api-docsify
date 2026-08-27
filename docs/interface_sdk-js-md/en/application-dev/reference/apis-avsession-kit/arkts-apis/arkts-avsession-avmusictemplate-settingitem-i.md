@@ -1,6 +1,8 @@
 # SettingItem
 
-The definition of setting Information.@interface SettingItem
+The definition of setting Information.
+
+@interface SettingItem
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of setting Information.@interface SettingItem
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## desc

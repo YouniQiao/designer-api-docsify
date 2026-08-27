@@ -131,7 +131,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

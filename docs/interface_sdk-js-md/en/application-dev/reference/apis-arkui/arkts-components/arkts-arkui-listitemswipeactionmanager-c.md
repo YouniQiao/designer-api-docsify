@@ -31,7 +31,7 @@ Collapses the swipe action menu for the specified list item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) | Yes | The ListItem FrameNode. |
+| node | FrameNode | Yes | The ListItem FrameNode. |
 
 **Error codes:**
 
@@ -60,7 +60,7 @@ Expands the swipe action menu for the specified list item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) | Yes | The ListItem FrameNode. |
+| node | FrameNode | Yes | The ListItem FrameNode. |
 | direction | [ListItemSwipeActionDirection](arkts-arkui-listitemswipeactiondirection-e.md) | Yes | The direction to expand. |
 
 **Error codes:**

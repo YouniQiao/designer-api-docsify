@@ -1,6 +1,8 @@
 # CalendarDialogOptions
 
-Defines the configuration options of the calendar picker dialog box.Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
+Defines the configuration options of the calendar picker dialog box.
+
+Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
 
 > **NOTE：**
 > 
@@ -25,7 +27,9 @@ Defines the configuration options of the calendar picker dialog box.Inherits fro
 distortionMode?: DistortionMode
 ```
 
-Sets the distortion animation mode for the dialog.Default Value: DistortionMode.DISTORTION_AUTO
+Sets the distortion animation mode for the dialog.
+
+Default Value: DistortionMode.DISTORTION_AUTO
 
 **Type:** [DistortionMode](arkts-arkui-distortionmode-e-sys.md)
 
@@ -45,7 +49,9 @@ Sets the distortion animation mode for the dialog.Default Value: DistortionMode.
 edgeLightMode?: EdgeLightMode
 ```
 
-Sets the edge light animation mode for the dialog.Default value: EdgeLightMode.EDGELIGHT_AUTO
+Sets the edge light animation mode for the dialog.
+
+Default value: EdgeLightMode.EDGELIGHT_AUTO
 
 **Type:** [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md)
 

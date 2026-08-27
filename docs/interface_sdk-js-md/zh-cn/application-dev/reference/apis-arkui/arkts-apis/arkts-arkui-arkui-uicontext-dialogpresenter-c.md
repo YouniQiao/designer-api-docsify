@@ -21,7 +21,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 dismiss(target: number | ComponentContent<Object>): Promise<void>
 ```
 
-关闭对话框。 接受对话ID（由当前返回）或ComponentContent引用。
+关闭对话框。接受对话ID（由当前返回）或ComponentContent引用。
 
 **起始版本：** 26.1.0
 
@@ -35,13 +35,13 @@ dismiss(target: number | ComponentContent<Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | number \| ComponentContent & lt;Object & gt; | 是 | 要取消的对话ID或组件内容。 |
+| target | number \| [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | 是 | 要取消的对话ID或组件内容。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 不会返回任何值的Promise。 |
+| Promise&lt;void&gt; | 不会返回任何值的Promise。 |
 
 **错误码：**
 
@@ -91,7 +91,9 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>, options?: dialog.DialogCustomOptions): Promise<DialogResult>
 ```
 
-提供一个自定义样式的对话框，其中包含所提供的内容。content参数通过联合类型接受CustomBuilder或ComponentContent： -CustomBuilder：自定义对话框内容的生成器函数。  
+提供一个自定义样式的对话框，其中包含所提供的内容。
+
+content参数通过联合类型接受CustomBuilder或ComponentContent：-CustomBuilder：自定义对话框内容的生成器函数。  
 - ComponentContent：支持状态驱动更新的ComponentContent。
 
 > **说明：**
@@ -109,7 +111,7 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent & lt;Object & gt; | 是 | 自定义对话框内容。 |
+| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | 是 | 自定义对话框内容。 |
 | options | dialog.DialogCustomOptions | 否 | 自定义对话框选项。 |
 
 **返回值：**
@@ -147,14 +149,14 @@ update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ComponentContent & lt;Object & gt; | 是 | 用于标识对话框的内容。 |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; | 是 | 用于标识对话框的内容。 |
 | options | dialog.DialogBaseOptions | 否 | 要更新的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 不会返回任何值的Promise。 |
+| Promise&lt;void&gt; | 不会返回任何值的Promise。 |
 
 **错误码：**
 

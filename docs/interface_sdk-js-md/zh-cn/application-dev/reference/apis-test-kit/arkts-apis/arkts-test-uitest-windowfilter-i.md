@@ -18,7 +18,9 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 active?: boolean
 ```
 
-窗口是否正与用户进行交互，true：交互状态，false：未交互状态，默认值为false。从API version 11开始，该接口支持在原子化服务中使用。
+窗口是否正与用户进行交互，true：交互状态，false：未交互状态，默认值为false。
+
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** boolean
 
@@ -34,7 +36,9 @@ active?: boolean
 actived?: boolean
 ```
 
-窗口是否正与用户进行交互，true：交互状态，false：未交互状态，默认值为false。从API version 11开始废弃，建议使用active替代。
+窗口是否正与用户进行交互，true：交互状态，false：未交互状态，默认值为false。
+
+从API version 11开始废弃，建议使用active替代。
 
 **类型：** boolean
 
@@ -52,7 +56,9 @@ actived?: boolean
 bundleName?: string
 ```
 
-窗口归属应用的包名，默认值为空，用于在多窗口场景下根据应用包名筛选目标窗口。从API version 11开始，该接口支持在原子化服务中使用。
+窗口归属应用的包名，默认值为空，用于在多窗口场景下根据应用包名筛选目标窗口。
+
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
@@ -68,7 +74,9 @@ bundleName?: string
 displayId?: number
 ```
 
-窗口所属的屏幕ID。取值大于或等于0的整数。默认值为设备默认屏幕ID。从API version 20开始，该接口支持在原子化服务中使用。
+窗口所属的屏幕ID。取值大于或等于0的整数。默认值为设备默认屏幕ID。
+
+从API version 20开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -84,7 +92,9 @@ displayId?: number
 focused?: boolean
 ```
 
-窗口是否处于获焦状态，true：获焦状态，false：未获焦状态，默认值为false。从API version 11开始，该接口支持在原子化服务中使用。
+窗口是否处于获焦状态，true：获焦状态，false：未获焦状态，默认值为false。
+
+从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** boolean
 

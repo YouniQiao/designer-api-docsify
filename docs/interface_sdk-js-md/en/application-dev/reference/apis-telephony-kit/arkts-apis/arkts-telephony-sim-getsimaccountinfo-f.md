@@ -11,7 +11,8 @@
 function getSimAccountInfo(slotId: number, callback: AsyncCallback<IccAccountInfo>): void
 ```
 
-Obtains SIM card account information. This API uses an asynchronous callback to return the result.  
+Obtains SIM card account information. This API uses an asynchronous callback to return the result.
+
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
 > **NOTE：**
@@ -64,7 +65,8 @@ sim.getSimAccountInfo(0, (err:BusinessError , data: sim.IccAccountInfo) => {
 function getSimAccountInfo(slotId: number): Promise<IccAccountInfo>
 ```
 
-Obtains SIM card account information. This API uses a promise to return the result.  
+Obtains SIM card account information. This API uses a promise to return the result.
+
 **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
 > **NOTE：**

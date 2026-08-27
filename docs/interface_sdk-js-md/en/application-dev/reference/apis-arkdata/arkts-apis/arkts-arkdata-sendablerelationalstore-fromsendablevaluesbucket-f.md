@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import sendableRelationalStore from '@kit.ArkData';
+import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
 ## fromSendableValuesBucket
@@ -22,7 +22,7 @@ Converts a KV pair that can be passed across threads into the data that cannot b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| valuesBucket | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Data that can be passed across threads. |
+| valuesBucket | ValuesBucket | Yes | Data that can be passed across threads. |
 
 **Return value:**
 

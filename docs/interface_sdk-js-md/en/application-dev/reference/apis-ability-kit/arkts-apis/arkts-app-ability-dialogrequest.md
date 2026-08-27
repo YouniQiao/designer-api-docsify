@@ -1,6 +1,8 @@
 # @ohos.app.ability.dialogRequest
 
-The dialogRequest module provides APIs related to modal dialog box processing, including obtaining the request information (used to bind a modal dialog box) and request callback (used to set the request result).A modal dialog box is a system-level dialog box that blocks interactions such as mouse clicks, keyboard input, and touch events on the underlying page. The page can only be interacted with after the modal dialog box is closed.
+The dialogRequest module provides APIs related to modal dialog box processing, including obtaining the request information (used to bind a modal dialog box) and request callback (used to set the request result).
+
+A modal dialog box is a system-level dialog box that blocks interactions such as mouse clicks, keyboard input, and touch events on the underlying page. The page can only be interacted with after the modal dialog box is closed.
 
 > **NOTE：**
 > 
@@ -15,7 +17,7 @@ The dialogRequest module provides APIs related to modal dialog box processing, i
 ## Modules to Import
 
 ```TypeScript
-import dialogRequest from '@kit.AbilityKit';
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -25,7 +27,7 @@ import dialogRequest from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md) | Obtains the request callback from Want. |
-| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md) | > **NOTE：** >  > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request information can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. Obtains the request information from Want. |
+| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md) | > **NOTE：** >  > This API can be used by a ServiceExtensionAbility. If the ServiceExtensionAbility implements modal dialog boxes, > the request information can be obtained from Want. If this API is used in other scenarios, no return value is > obtained. |
 
 ### Interfaces
 

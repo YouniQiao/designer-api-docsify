@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import uriPermissionManager from '@kit.AbilityKit';
+import { uriPermissionManager } from '@kit.AbilityKit';
 ```
 
 ## grantUriPermissionByKeyAsCaller
@@ -35,7 +35,7 @@ Grants the URI access permission of the specified application to the target appl
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@ Defines the file filtering configuration used by **listFile()**.
 ## Modules to Import
 
 ```TypeScript
-import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## displayName
@@ -34,7 +34,9 @@ Locate files that fuzzy match the specified file names, which are of the OR rela
 excludeMedia?: boolean
 ```
 
-Whether to exclude the files already in **Media**.The value **true** means to exclude the files already in **Media**; the value **false** means not to exclude the files already in **Media**.
+Whether to exclude the files already in **Media**.
+
+The value **true** means to exclude the files already in **Media**; the value **false** means not to exclude the files already in **Media**.
 
 **Type:** boolean
 

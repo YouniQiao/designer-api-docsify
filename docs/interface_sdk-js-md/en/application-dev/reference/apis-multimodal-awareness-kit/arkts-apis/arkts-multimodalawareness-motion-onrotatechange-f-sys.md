@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import motion from '@kit.MultimodalAwarenessKit';
+import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## onRotateChange

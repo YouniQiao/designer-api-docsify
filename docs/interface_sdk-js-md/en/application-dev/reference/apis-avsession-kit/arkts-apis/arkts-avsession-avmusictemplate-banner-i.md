@@ -1,6 +1,8 @@
 # Banner
 
-The definition of Banner.@extends MediaEntity @interface Banner
+The definition of Banner.
+
+@extends MediaEntity @interface Banner
 
 **Inheritance/Implementation:** Banner extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
@@ -11,7 +13,7 @@ The definition of Banner.@extends MediaEntity @interface Banner
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## isSupportOnePlay

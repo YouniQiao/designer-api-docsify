@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dragInteraction from '@kit.ArkUI';
+import { dragInteraction } from '@kit.ArkUI';
 ```
 
 ## getDataSummary
@@ -24,7 +24,7 @@ Obtains the data summary of all dragged objects.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Summary & gt; | Data summary of all dragged objects, including their type and data length. |
+| Array&lt;Summary&gt; | Data summary of all dragged objects, including their type and data length. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # @ohos.security.certManager
 
-The **certManager** module provides system-level certificate management capabilities to implement management and secure use of certificates throughout their lifecycle (installation, storage, use, and destruction).It can be used to verify the HTTPS certificate chain of the application server , and log in to the website or application server using two-way HTTPS.
+The **certManager** module provides system-level certificate management capabilities to implement management and secure use of certificates throughout their lifecycle (installation, storage, use, and destruction).
+
+It can be used to verify the HTTPS certificate chain of the application server , and log in to the website or application server using two-way HTTPS.
 
 **Since:** 11
 

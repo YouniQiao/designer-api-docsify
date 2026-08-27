@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import prompt from '@kit.ArkUI';
-import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUIAction';
+import { prompt } from '@kit.ArkUI';
 ```
 
 ## showActionMenu
@@ -27,7 +26,7 @@ Displays the menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | Options. |
+| options | ActionMenuOptions | Yes | Options. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | Yes |  |
 
 **Examples**
@@ -76,13 +75,13 @@ Displays the menu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | Options. |
+| options | ActionMenuOptions | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ActionMenuSuccessResponse & gt; |  |
+| Promise&lt;ActionMenuSuccessResponse&gt; |  |
 
 **Examples**
 

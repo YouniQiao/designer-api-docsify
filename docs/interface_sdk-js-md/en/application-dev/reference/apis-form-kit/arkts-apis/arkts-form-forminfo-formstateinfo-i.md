@@ -9,7 +9,7 @@ Provides state information about a form.
 ## Modules to Import
 
 ```TypeScript
-import formInfo from '@kit.FormKit';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## formState

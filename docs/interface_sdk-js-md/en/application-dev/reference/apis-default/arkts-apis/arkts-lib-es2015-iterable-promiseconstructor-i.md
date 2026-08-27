@@ -17,7 +17,7 @@ Creates a Promise that is resolved with an array of results when all of the prov
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | Iterable & lt;T \ | PromiseLike & lt;T & gt; & gt; | Yes |  |
+| values | Iterable&lt;T \| PromiseLike&lt;T&gt;&gt; | Yes |  |
 
 **Return value:**
 
@@ -35,7 +35,7 @@ Creates a Promise that is resolved or rejected when any of the provided Promises
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | Iterable & lt;T \ | PromiseLike & lt;T & gt; & gt; | Yes |  |
+| values | Iterable&lt;T \| PromiseLike&lt;T&gt;&gt; | Yes |  |
 
 **Return value:**
 

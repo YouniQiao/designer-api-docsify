@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## addCandidateConfig
@@ -27,13 +26,13 @@ Add a specified candidate hotspot configuration and returns the networkId. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | candidate config. |
+| config | WifiDeviceConfig | Yes | candidate config. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Returns { |
+| Promise&lt;number&gt; | Returns { |
 
 **Error codes:**
 
@@ -86,7 +85,7 @@ Add a specified candidate hotspot configuration and returns the networkId. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | candidate config. |
+| config | WifiDeviceConfig | Yes | candidate config. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Indicates call back of addCandidateConfig. |
 
 **Error codes:**

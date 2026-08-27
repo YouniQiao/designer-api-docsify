@@ -1,6 +1,8 @@
 # PathPolicyInfo
 
-Policy information to manager permissions on a path.@interface PathPolicyInfo
+Policy information to manager permissions on a path.
+
+@interface PathPolicyInfo
 
 **Since:** 15
 
@@ -9,7 +11,7 @@ Policy information to manager permissions on a path.@interface PathPolicyInfo
 ## Modules to Import
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## operationMode

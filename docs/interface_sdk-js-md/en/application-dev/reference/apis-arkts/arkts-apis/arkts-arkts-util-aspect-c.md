@@ -9,8 +9,6 @@ Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be 
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## addAfter

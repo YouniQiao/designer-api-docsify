@@ -43,7 +43,13 @@ constructor(option?: StackLayoutAlgorithmOptions)
 public alignContent?: LocalizedAlignment
 ```
 
-设置子组件在堆叠布局算法中对齐格式。默认值：LocalizedAlignment.CENTER非法值：按默认值处理。装饰器类型：@Trace
+设置子组件在堆叠布局算法中对齐格式。
+
+默认值：LocalizedAlignment.CENTER
+
+非法值：按默认值处理。
+
+装饰器类型：@Trace
 
 **类型：** [LocalizedAlignment](arkts-arkui-localizedalignment-e.md)
 

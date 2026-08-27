@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
+import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## data
@@ -34,7 +34,7 @@ data: KVObject
 jsonPath?: string
 ```
 
-存放模板路径的external.json文件的路径。 当需要通过外部配置文件直接加载模板而非通过request通信获取时传入此参数；当jsonPath字段不为空时不触发request通信，直接从external.json中读取模板路径。 不传入或为空时，触发request通信向组件提供方请求模板。
+存放模板路径的external.json文件的路径。当需要通过外部配置文件直接加载模板而非通过request通信获取时传入此参数；当jsonPath字段不为空时不触发request通信，直接从external.json中读取模板路径。不传入或为空时，触发request通信向组件提供方请求模板。
 
 **类型：** string
 

@@ -9,7 +9,7 @@ Describes application resource information, including the bundle name, module na
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.MDMKit';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## bundleName

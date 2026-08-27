@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getDeviceMacAddress
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function getDeviceMacAddress(): string[]
 ```
 
-获取WLAN设备的MAC地址。必须先使能WLAN。 MAC地址是唯一的，无法更改。
+获取WLAN设备的MAC地址。必须先使能WLAN。MAC地址是唯一的，无法更改。
 
 **起始版本：** 15
 

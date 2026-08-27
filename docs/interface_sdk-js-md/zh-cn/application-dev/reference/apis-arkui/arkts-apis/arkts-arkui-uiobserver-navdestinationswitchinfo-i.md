@@ -9,7 +9,7 @@ Navigation组件页面切换的信息。
 ## 导入模块
 
 ```TypeScript
-import uiObserver from '@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## context
@@ -38,7 +38,7 @@ from: NavDestinationInfo | NavBar
 
 From navigation content info.
 
-**类型：** NavDestinationInfo \| [NavBar](../arkts-components/arkts-arkui-navbar-t.md)
+**类型：** NavDestinationInfo \| NavBar
 
 **起始版本：** 12
 
@@ -56,7 +56,7 @@ operation: NavigationOperation
 
 The operation type.
 
-**类型：** [NavigationOperation](../arkts-components/arkts-arkui-navigationoperation-e.md)
+**类型：** NavigationOperation
 
 **起始版本：** 12
 
@@ -74,7 +74,7 @@ to: NavDestinationInfo | NavBar
 
 To navigation content info.
 
-**类型：** NavDestinationInfo \| [NavBar](../arkts-components/arkts-arkui-navbar-t.md)
+**类型：** NavDestinationInfo \| NavBar
 
 **起始版本：** 12
 

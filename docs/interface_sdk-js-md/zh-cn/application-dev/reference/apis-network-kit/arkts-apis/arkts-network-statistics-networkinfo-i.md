@@ -31,7 +31,8 @@ endTime: number
 simId?: number
 ```
 
-SIM卡ID。默认值为uint32_t类型最大值。  
+SIM卡ID。默认值为uint32_t类型最大值。
+
 **注意：** 当type为蜂窝网络时，需指定本字段。
 
 **类型：** number
@@ -60,7 +61,8 @@ startTime: number
 type: NetBearType
 ```
 
-网络类型。  
+网络类型。
+
 **注意：** 当type为蜂窝网络时，需指定simId字段。
 
 **类型：** NetBearType

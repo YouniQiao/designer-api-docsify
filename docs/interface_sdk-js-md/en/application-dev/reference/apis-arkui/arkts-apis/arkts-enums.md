@@ -11,11 +11,11 @@
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityHoverType](arkts-arkui-accessibilityhovertype-e.md) | Type of accessibility hover event.@enum {number} |
+| [AccessibilityHoverType](arkts-arkui-accessibilityhovertype-e.md) | Type of accessibility hover event. |
 | [Alignment](arkts-arkui-alignment-e.md) | Alignment enumeration description. |
 | [AnimationPropertyType](arkts-arkui-animationpropertytype-e.md) | Enumerates animatable property types for component animations. |
 | [AnimationStatus](arkts-arkui-animationstatus-e.md) | Animation status. |
-| [AppRotation](arkts-arkui-approtation-e.md) | Enumerates the app rotation.@enum { number } |
+| [AppRotation](arkts-arkui-approtation-e.md) | Enumerates the app rotation. |
 | [ArrowPointPosition](arkts-arkui-arrowpointposition-e.md) | ArrowPointPosition enumeration description |
 | [Axis](arkts-arkui-axis-e.md) | Defines the axis direction. |
 | [AxisAction](arkts-arkui-axisaction-e.md) | Enumerates the types of axis actions for axis events. |
@@ -34,19 +34,19 @@
 | [CrownSensitivity](arkts-arkui-crownsensitivity-e.md) | Enumerates the sensitivity levels for crown rotation. |
 | [Curve](arkts-arkui-curve-e.md) | Enumerates the interpolation curves. For details about the animation, see <!--RP1--> [Bezier Curve](../../../../design/ux-design/animation-attributes.md)<!--RP1End-->. |
 | [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md) | The Button Style of dialog, |
-| [DialogDisplayMode](arkts-arkui-dialogdisplaymode-e.md) | Dialog display mode.@enum { DialogDisplayMode } |
+| [DialogDisplayMode](arkts-arkui-dialogdisplaymode-e.md) | Dialog display mode. |
 | [Direction](arkts-arkui-direction-e.md) | Sets the horizontal layout of elements. |
-| [DividerMode](arkts-arkui-dividermode-e.md) | Menu divider mode.@enum { number } |
+| [DividerMode](arkts-arkui-dividermode-e.md) | Menu divider mode. |
 | [Edge](arkts-arkui-edge-e.md) | Edge. |
 | [EdgeEffect](arkts-arkui-edgeeffect-e.md) | Sliding effect |
 | [EllipsisMode](arkts-arkui-ellipsismode-e.md) | The position of ellipsis. |
-| [EmbeddedType](arkts-arkui-embeddedtype-e.md) | Enum of EmbeddedType@enum { number } |
+| [EmbeddedType](arkts-arkui-embeddedtype-e.md) | Enum of EmbeddedType |
 | [EventQueryType](arkts-arkui-eventquerytype-e.md) | Enumerates interaction event types that can be queried. |
 | [FillMode](arkts-arkui-fillmode-e.md) | Sets the status before and after execution of the animation in the current playback direction. |
 | [FlexAlign](arkts-arkui-flexalign-e.md) | FlexAlign enumeration description. |
 | [FlexDirection](arkts-arkui-flexdirection-e.md) | FlexDirection enumeration description |
 | [FlexWrap](arkts-arkui-flexwrap-e.md) | FlexWrap enumeration description |
-| [FocusDrawLevel](arkts-arkui-focusdrawlevel-e.md) | Type of focus draw level.@enum {number} |
+| [FocusDrawLevel](arkts-arkui-focusdrawlevel-e.md) | Type of focus draw level. |
 | [FocusWrapMode](arkts-arkui-focuswrapmode-e.md) | Enumerates focus wrapping modes for cross-axis directional navigation. |
 | [FoldStatus](arkts-arkui-foldstatus-e.md) | Enumerates the fold status. |
 | [FontStyle](arkts-arkui-fontstyle-e.md) | Font style. |
@@ -55,7 +55,7 @@
 | [GestureCollectIntervention](arkts-arkui-gesturecollectintervention-e.md) | Define the gesture and events collection intervention operations. |
 | [GestureShortcut](arkts-arkui-gestureshortcut-e.md) | Define the smart gesture shortcut priority enumeration. |
 | [GradientDirection](arkts-arkui-gradientdirection-e.md) | GradientDirection enumeration description |
-| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) | Enumerates the height breakpoint values corresponding to different window aspect ratio thresholds. The values are returned through [getWindowHeightBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getwindowheightbreakpoint).The following table lists default aspect ratio breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window aspect ratios. Device manufacturers may customize these thresholds through product-specific configurations when needed. |
+| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) | Enumerates the height breakpoint values corresponding to different window aspect ratio thresholds. The values are returned through [getWindowHeightBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getwindowheightbreakpoint). |
 | [HitTestMode](arkts-arkui-hittestmode-e.md) | Sets the response logic and node blocking rules for the hit test. |
 | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) | HorizontalAlign enumeration description. |
 | [HoverEffect](arkts-arkui-hovereffect-e.md) | Sets the hover effect of the component. |
@@ -72,7 +72,7 @@
 | [LineBreakStrategy](arkts-arkui-linebreakstrategy-e.md) | The line break rule. |
 | [LineCapStyle](arkts-arkui-linecapstyle-e.md) | LineCapStyle enumeration description |
 | [LineJoinStyle](arkts-arkui-linejoinstyle-e.md) | Line Join Style |
-| [LocalizedAlignment](arkts-arkui-localizedalignment-e.md) | LocalizedAlignment enumeration description.@enum { string } |
+| [LocalizedAlignment](arkts-arkui-localizedalignment-e.md) | LocalizedAlignment enumeration description. |
 | [MarqueeUpdateStrategy](arkts-arkui-marqueeupdatestrategy-e.md) | The scrolling strategy for the marquee after its attributes are updated. |
 | [ModifierKey](arkts-arkui-modifierkey-e.md) | Enumerates the input method modifier keys. |
 | [MouseAction](arkts-arkui-mouseaction-e.md) | Sets the action type of a mouse operation. |
@@ -81,12 +81,12 @@
 | [ObscuredReasons](arkts-arkui-obscuredreasons-e.md) | Sets how the component content is obscured. |
 | [OperateIntention](arkts-arkui-operateintention-e.md) | Define the smart gesture's operation intention. |
 | [OptionWidthMode](arkts-arkui-optionwidthmode-e.md) | Decide whether the width of select menu fit the trigger or content |
-| [PageFlipMode](arkts-arkui-pageflipmode-e.md) | Page flip mode of Swiper and Tabs on mouse wheel event.@enum { number } PageFlipMode |
-| [PixelRoundCalcPolicy](arkts-arkui-pixelroundcalcpolicy-e.md) | Pixel Round Direction@enum { number } |
-| [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | Pixel Round Mode@enum { number } |
+| [PageFlipMode](arkts-arkui-pageflipmode-e.md) | Page flip mode of Swiper and Tabs on mouse wheel event. |
+| [PixelRoundCalcPolicy](arkts-arkui-pixelroundcalcpolicy-e.md) | Pixel Round Direction |
+| [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | Pixel Round Mode |
 | [Placement](arkts-arkui-placement-e.md) | Placement enumeration description |
 | [PlayMode](arkts-arkui-playmode-e.md) | Animation playback mode. |
-| [PresetFillType](arkts-arkui-presetfilltype-e.md) | Specify the number of columns for different responsive breakpoints.@enum { number } |
+| [PresetFillType](arkts-arkui-presetfilltype-e.md) | Specify the number of columns for different responsive breakpoints. |
 | [RawInputEventType](arkts-arkui-rawinputeventtype-e.md) | Enumerates the raw input event types. |
 | [RelateType](arkts-arkui-relatetype-e.md) | RelateType enumeration description |
 | [RenderFit](arkts-arkui-renderfit-e.md) | Enumerates the modes in which the final state of the component's content is rendered during its width and height animation process. |
@@ -104,17 +104,17 @@
 | [TextHeightAdaptivePolicy](arkts-arkui-textheightadaptivepolicy-e.md) | The mode of adjusting the text font size to adapt to the layout. |
 | [TextOverflow](arkts-arkui-textoverflow-e.md) | Display mode when the text is too number. |
 | [TextSelectableMode](arkts-arkui-textselectablemode-e.md) | Sets whether text can be selected and focused on. |
-| [TipsAnchorType](arkts-arkui-tipsanchortype-e.md) | Follow position type.@enum { number } |
-| [TitleHeight](arkts-arkui-titleheight-e.md) | Title height.@enum { number } |
+| [TipsAnchorType](arkts-arkui-tipsanchortype-e.md) | Follow position type. |
+| [TitleHeight](arkts-arkui-titleheight-e.md) | Title height. |
 | [TouchType](arkts-arkui-touchtype-e.md) | Sets the trigger status type of a touch operation. |
 | [TransitionType](arkts-arkui-transitiontype-e.md) | TransitionType enumeration description. |
-| [UIMaterialAnimationMode](arkts-arkui-uimaterialanimationmode-e.md) | Enumerates the component animation modes under the UI material effect.@enum { number } |
+| [UIMaterialAnimationMode](arkts-arkui-uimaterialanimationmode-e.md) | Enumerates the component animation modes under the UI material effect. |
 | [VerticalAlign](arkts-arkui-verticalalign-e.md) | VerticalAlign enumeration description |
 | [Visibility](arkts-arkui-visibility-e.md) | Defines the visibility and layout placeholder status of the component. |
 | [Week](arkts-arkui-week-e.md) | Week Enum value |
-| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getwindowwidthbreakpoint).The following table lists default width breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window width breakpoints. Device manufacturers may customize these thresholds through product-specific configurations when needed. |
+| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getwindowwidthbreakpoint). |
 | [WordBreak](arkts-arkui-wordbreak-e.md) | The word break rule. |
-| [XComponentType](arkts-arkui-xcomponenttype-e.md) | The type of XComponent@enum { number } |
+| [XComponentType](arkts-arkui-xcomponenttype-e.md) | The type of XComponent |
 
 <!--Del-->
 ### Enums(System API)

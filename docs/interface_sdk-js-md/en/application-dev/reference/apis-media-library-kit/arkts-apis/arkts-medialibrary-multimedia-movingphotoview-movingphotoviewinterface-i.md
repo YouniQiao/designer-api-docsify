@@ -1,6 +1,8 @@
 # MovingPhotoViewInterface
 
-Defines the moving photo view interface.@interface MovingPhotoViewInterface
+Defines the moving photo view interface.
+
+@interface MovingPhotoViewInterface
 
 **Since:** 12
 

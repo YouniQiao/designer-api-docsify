@@ -9,7 +9,7 @@ Provides the device configurations
 ## Modules to Import
 
 ```TypeScript
-import mindSporeLite from '@kit.MindSporeLiteKit';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## cpu

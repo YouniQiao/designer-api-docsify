@@ -1,6 +1,8 @@
 # CommonModifier
 
-Defines Common Modifier@extends CommonAttribute @implements AttributeModifier&lt;CommonAttribute&gt;
+Defines Common Modifier
+
+@extends CommonAttribute @implements AttributeModifier&lt;CommonAttribute&gt;
 
 **Inheritance/Implementation:** CommonModifier extends [CommonAttribute](../arkts-components/arkts-arkui-common-attribute.md#commonattribute) and implements AttributeModifier<CommonAttribute>
 

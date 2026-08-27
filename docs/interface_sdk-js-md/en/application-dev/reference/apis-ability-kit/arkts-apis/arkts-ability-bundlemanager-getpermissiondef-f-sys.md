@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getPermissionDef
@@ -87,7 +87,7 @@ Obtains the PermissionDef struct based on the given permission name. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PermissionDef & gt; | Promise used to return the PermissionDef object obtained. |
+| Promise&lt;PermissionDef&gt; | Promise used to return the PermissionDef object obtained. |
 
 **Error codes:**
 

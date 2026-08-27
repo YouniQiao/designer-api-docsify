@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getApplicationInfo
@@ -12,7 +12,9 @@ import bundleManager from '@kit.AbilityKit';
 function getApplicationInfo(bundleName: string, appFlags: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-Obtains the application information based on the given bundle name and application flags. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
+Obtains the application information based on the given bundle name and application flags. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -71,7 +73,9 @@ try {
 function getApplicationInfo(bundleName: string, appFlags: number, userId: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-Obtains the application information based on the given bundle name, application flags, and user ID. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
+Obtains the application information based on the given bundle name, application flags, and user ID. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -133,7 +137,9 @@ try {
 function getApplicationInfo(bundleName: string, appFlags: number, userId?: number): Promise<ApplicationInfo>
 ```
 
-Obtains the application information based on the given bundle name, application flags, and user ID. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
+Obtains the application information based on the given bundle name, application flags, and user ID. This API uses a promise to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -155,7 +161,7 @@ Obtains the application information based on the given bundle name, application 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ApplicationInfo & gt; | Promise used to return the application information. |
+| Promise&lt;ApplicationInfo&gt; | Promise used to return the application information. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## on('add' | 'remove' | 'change')
@@ -116,7 +116,13 @@ See on
 function on(type: 'foldStatusChange', callback: Callback<FoldStatus>): void
 ```
 
-Subscribes to fold status change events of the foldable device.To subscribe to display mode change events of foldable devices, use display.on('foldDisplayModeChange').The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status.To check whether the content is displayed on the inner or outer screen of the foldable device, use display.on('foldDisplayModeChange').
+Subscribes to fold status change events of the foldable device.
+
+To subscribe to display mode change events of foldable devices, use display.on('foldDisplayModeChange').
+
+The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status.
+
+To check whether the content is displayed on the inner or outer screen of the foldable device, use display.on('foldDisplayModeChange').
 
 **Since:** 10
 
@@ -240,7 +246,11 @@ display.on('captureStatusChange', callback);
 function on(type: 'foldDisplayModeChange', callback: Callback<FoldDisplayMode>): void
 ```
 
-Subscribes to display mode change events of the foldable device.To subscribe to fold status change events of foldable devices, use display.on('foldStatusChange').The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status.
+Subscribes to display mode change events of the foldable device.
+
+To subscribe to fold status change events of foldable devices, use display.on('foldStatusChange').
+
+The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status.
 
 **Since:** 10
 

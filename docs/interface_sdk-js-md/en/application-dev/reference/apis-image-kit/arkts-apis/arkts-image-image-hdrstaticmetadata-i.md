@@ -9,7 +9,7 @@ Describes the static metadata keys, that is, the values available for **HDR_STAT
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## displayPrimariesX
@@ -46,7 +46,9 @@ The Y-coordinate of the primary colors. Specifies the normalized Y-coordinates o
 maxContentLightLevel: number
 ```
 
-Maximum brightness of displayed content.The value is measured in units of 1, with a maximum allowed value of 65,535.
+Maximum brightness of displayed content.
+
+The value is measured in units of 1, with a maximum allowed value of 65,535.
 
 **Type:** number
 
@@ -60,7 +62,9 @@ Maximum brightness of displayed content.The value is measured in units of 1, wit
 maxFrameAverageLightLevel: number
 ```
 
-Maximum average brightness of displayed content.The value is measured in units of 1, with a maximum allowed value of 65,535.
+Maximum average brightness of displayed content.
+
+The value is measured in units of 1, with a maximum allowed value of 65,535.
 
 **Type:** number
 
@@ -74,7 +78,9 @@ Maximum average brightness of displayed content.The value is measured in units o
 maxLuminance: number
 ```
 
-Maximum luminance of the image's primary display. The value is measured in units of 1, with a maximum allowed value of 65,535.Unit:nit.
+Maximum luminance of the image's primary display. The value is measured in units of 1, with a maximum allowed value of 65,535.
+
+Unit:nit.
 
 **Type:** number
 
@@ -88,7 +94,9 @@ Maximum luminance of the image's primary display. The value is measured in units
 minLuminance: number
 ```
 
-Minimum luminance of the image's primary display.The value is measured in units of 0.0001, with a maximum allowed value of 6.55535.
+Minimum luminance of the image's primary display.
+
+The value is measured in units of 0.0001, with a maximum allowed value of 6.55535.
 
 **Type:** number
 
@@ -102,7 +110,9 @@ Minimum luminance of the image's primary display.The value is measured in units 
 whitePointX: number
 ```
 
-The X-coordinate of the white point value. Specifies the normalized X-coordinate of the white point.The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
+The X-coordinate of the white point value. Specifies the normalized X-coordinate of the white point.
+
+The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
 **Type:** number
 
@@ -116,7 +126,9 @@ The X-coordinate of the white point value. Specifies the normalized X-coordinate
 whitePointY: number
 ```
 
-The Y-coordinate of the white point value. Specifies the normalized Y-coordinate of the white point.The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
+The Y-coordinate of the white point value. Specifies the normalized Y-coordinate of the white point.
+
+The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
 **Type:** number
 

@@ -1,6 +1,8 @@
 # RotationChangeResult
 
-应用在窗口旋转变化时返回的信息，系统会根据此信息改变当前窗口矩形区域大小。当返回主窗口旋转变化的信息时，系统不改变主窗口的大小。应用窗口与系统窗口大小存在限制，具体限制与相关规则可见 [resize](arkts-arkui-window-window-i.md#resize)。
+应用在窗口旋转变化时返回的信息，系统会根据此信息改变当前窗口矩形区域大小。当返回主窗口旋转变化的信息时，系统不改变主窗口的大小。
+
+应用窗口与系统窗口大小存在限制，具体限制与相关规则可见[resize](arkts-arkui-window-window-i.md#resize)。
 
 **起始版本：** 19
 
@@ -9,9 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## rectType

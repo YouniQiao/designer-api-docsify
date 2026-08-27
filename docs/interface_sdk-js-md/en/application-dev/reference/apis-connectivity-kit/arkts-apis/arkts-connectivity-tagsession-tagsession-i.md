@@ -497,7 +497,7 @@ Sends data to the tag. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number[] & gt; | Promise used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| Promise&lt;number[]&gt; | Promise used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Examples**
 
@@ -706,7 +706,7 @@ Sends data to the tag. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number[] & gt; | Promise used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
+| Promise&lt;number[]&gt; | Promise used to return the response from the tag. The response consists of hexadecimal numbers ranging from **0x00** to **0xFF**. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # WaterFlowModifier
 
-Defines WaterFlow Modifier@extends WaterFlowAttribute @implements AttributeModifier&lt;WaterFlowAttribute&gt;
+Defines WaterFlow Modifier
+
+@extends WaterFlowAttribute @implements AttributeModifier&lt;WaterFlowAttribute&gt;
 
 **Inheritance/Implementation:** WaterFlowModifier extends [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md#waterflowattribute) and implements AttributeModifier<WaterFlowAttribute>
 

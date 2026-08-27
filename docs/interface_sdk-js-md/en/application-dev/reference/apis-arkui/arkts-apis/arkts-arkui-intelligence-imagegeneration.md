@@ -1,6 +1,8 @@
 # @ohos.arkui.intelligence.imageGeneration
 
-Module for AI-generated images using UI Component.@namespace imageGeneration
+Module for AI-generated images using UI Component.
+
+@namespace imageGeneration
 
 **Since:** 23
 
@@ -13,7 +15,7 @@ Module for AI-generated images using UI Component.@namespace imageGeneration
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -42,21 +44,21 @@ import imageGeneration from '@kit.ArkUI';
 | --- | --- |
 | [CustomImportIcon](arkts-arkui-imagegeneration-customimporticon-i-sys.md) | Customize the import icon, which is used to add images and text from the application side. |
 | [CustomImportResult](arkts-arkui-imagegeneration-customimportresult-i-sys.md) | The result of import operation for custom import icon. |
-| [GenerateImageTaskParams](arkts-arkui-imagegeneration-generateimagetaskparams-i-sys.md) | Configuration parameter options for AI-generated image tasks.@interface GenerateImageTaskParams |
-| [GenerateImageTaskPartialResult](arkts-arkui-imagegeneration-generateimagetaskpartialresult-i-sys.md) | Configuration stream result for AI-generated image tasks.@interface GenerateImageTaskPartialResult |
-| [GenerateImageTaskResult](arkts-arkui-imagegeneration-generateimagetaskresult-i-sys.md) | Configuration result for AI-generated image tasks.@interface GenerateImageTaskResult |
-| [GenerateTextTaskPartialResult](arkts-arkui-imagegeneration-generatetexttaskpartialresult-i-sys.md) | Configuration stream result for AI-generated text tasks.@interface GenerateTextTaskPartialResult |
-| [GenerateTextTaskResult](arkts-arkui-imagegeneration-generatetexttaskresult-i-sys.md) | Configuration result for AI-generated text tasks.@interface GenerateTextTaskResult |
-| [GeneratorDialogOptions](arkts-arkui-imagegeneration-generatordialogoptions-i-sys.md) | Parameters used to open the ImageGeneratorDialog.@interface GeneratorDialogOptions |
-| [GeneratorNodeGraphOptions](arkts-arkui-imagegeneration-generatornodegraphoptions-i-sys.md) | Parameters used to open the NodeGraphComponent.@interface GeneratorNodeGraphOptions |
-| [GeneratorResult](arkts-arkui-imagegeneration-generatorresult-i-sys.md) | The result of AI-generated images@interface GeneratorResult |
-| [GeneratorResultPageIcon](arkts-arkui-imagegeneration-generatorresultpageicon-i-sys.md) | Custom icon object in the generation result page of ImageGeneratorDialog.@interface GeneratorResultPageIcon |
-| [ImageGenerationModel](arkts-arkui-imagegeneration-imagegenerationmodel-i-sys.md) | AI Image Model Abstract Interface.@interface ImageGenerationModel |
-| [ImageItem](arkts-arkui-imagegeneration-imageitem-i-sys.md) | Image information for AI-generated images.@interface ImageItem |
-| [ImageStyle](arkts-arkui-imagegeneration-imagestyle-i-sys.md) | Style types supported by AI image generation models, like Graffiti, Watercolor.@interface ImageStyle |
-| [LiveViewInfo](arkts-arkui-imagegeneration-liveviewinfo-i-sys.md) | Information for LiveView in AI image generation.@interface LiveViewInfo |
-| [TaskStatistic](arkts-arkui-imagegeneration-taskstatistic-i-sys.md) | Statistics Related to AI Image Generation Tasks.@interface TaskStatistic |
-| [TextGenerationModel](arkts-arkui-imagegeneration-textgenerationmodel-i-sys.md) | AI Text Model Abstract Interface.@interface TextGenerationModel |
+| [GenerateImageTaskParams](arkts-arkui-imagegeneration-generateimagetaskparams-i-sys.md) | Configuration parameter options for AI-generated image tasks. |
+| [GenerateImageTaskPartialResult](arkts-arkui-imagegeneration-generateimagetaskpartialresult-i-sys.md) | Configuration stream result for AI-generated image tasks. |
+| [GenerateImageTaskResult](arkts-arkui-imagegeneration-generateimagetaskresult-i-sys.md) | Configuration result for AI-generated image tasks. |
+| [GenerateTextTaskPartialResult](arkts-arkui-imagegeneration-generatetexttaskpartialresult-i-sys.md) | Configuration stream result for AI-generated text tasks. |
+| [GenerateTextTaskResult](arkts-arkui-imagegeneration-generatetexttaskresult-i-sys.md) | Configuration result for AI-generated text tasks. |
+| [GeneratorDialogOptions](arkts-arkui-imagegeneration-generatordialogoptions-i-sys.md) | Parameters used to open the ImageGeneratorDialog. |
+| [GeneratorNodeGraphOptions](arkts-arkui-imagegeneration-generatornodegraphoptions-i-sys.md) | Parameters used to open the NodeGraphComponent. |
+| [GeneratorResult](arkts-arkui-imagegeneration-generatorresult-i-sys.md) | The result of AI-generated images |
+| [GeneratorResultPageIcon](arkts-arkui-imagegeneration-generatorresultpageicon-i-sys.md) | Custom icon object in the generation result page of ImageGeneratorDialog. |
+| [ImageGenerationModel](arkts-arkui-imagegeneration-imagegenerationmodel-i-sys.md) | AI Image Model Abstract Interface. |
+| [ImageItem](arkts-arkui-imagegeneration-imageitem-i-sys.md) | Image information for AI-generated images. |
+| [ImageStyle](arkts-arkui-imagegeneration-imagestyle-i-sys.md) | Style types supported by AI image generation models, like Graffiti, Watercolor. |
+| [LiveViewInfo](arkts-arkui-imagegeneration-liveviewinfo-i-sys.md) | Information for LiveView in AI image generation. |
+| [TaskStatistic](arkts-arkui-imagegeneration-taskstatistic-i-sys.md) | Statistics Related to AI Image Generation Tasks. |
+| [TextGenerationModel](arkts-arkui-imagegeneration-textgenerationmodel-i-sys.md) | AI Text Model Abstract Interface. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -64,7 +66,7 @@ import imageGeneration from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [PartialResultType](arkts-arkui-imagegeneration-partialresulttype-e-sys.md) | Provides stream output result type definition.@enum { number } Constants |
+| [PartialResultType](arkts-arkui-imagegeneration-partialresulttype-e-sys.md) | Provides stream output result type definition. |
 <!--DelEnd-->
 
 <!--Del-->

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import process from '@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## runCmd
@@ -34,4 +34,4 @@ Returns a child process object and spawns a new ChildProcess to run the command.
 
 | Type | Description |
 | --- | --- |
-| [ChildProcess](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-childprocess-childprocess-c.md) | Returns a child process object. |
+| ChildProcess | Returns a child process object. |

@@ -56,7 +56,7 @@ Gets the context object for off-screen drawing.
 
 | Type | Description |
 | --- | --- |
-| [OffscreenCanvasRenderingContext2D](arkts-arkui-viewmodel-offscreencanvasrenderingcontext2d-i.md) | a render canvas for the offScreen Canvas object. |
+| OffscreenCanvasRenderingContext2D | a render canvas for the offScreen Canvas object. |
 
 ## toDataURL
 

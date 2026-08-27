@@ -11,7 +11,7 @@ Represents a media asset change request.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addResource
@@ -37,7 +37,7 @@ Adds resources from the application sandbox based on the file URI. For details a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-resourcetype-e.md) | Yes | Type of the resource to add. |
+| type | ResourceType | Yes | Type of the resource to add. |
 | fileUri | string | Yes | Data source of the resource to be added, which is specified by a URI in the application sandbox directory. Example: **'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.jpg'**. |
 
 **Error codes:**
@@ -94,7 +94,7 @@ Adds a resource using **ArrayBuffer** data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-resourcetype-e.md) | Yes | Type of the resource to add. |
+| type | ResourceType | Yes | Type of the resource to add. |
 | data | ArrayBuffer | Yes | Data of the resource to add. |
 
 **Error codes:**
@@ -144,7 +144,7 @@ Constructor used to initialize an asset change request.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | Yes | Assets to change. |
+| asset | PhotoAsset | Yes | Assets to change. |
 
 **Error codes:**
 
@@ -192,7 +192,7 @@ Create an asset change request based on the file type and filename extension.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
+| photoType | PhotoType | Yes | Type of the file to create, which can be **IMAGE** or **VIDEO**. |
 | extension | string | Yes | File name extension, for example, **'jpg'**. |
 | options | [CreateOptions](arkts-medialibrary-photoaccesshelper-createoptions-i.md) | No | Options for creating the image or video asset, for example, **{title: 'testPhoto'}**. The file name must not contain any invalid characters, which are:.. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
@@ -240,7 +240,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 static createImageAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-Creates an image asset change request.For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+Creates an image asset change request.
+
+For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **Since:** 11
 
@@ -294,7 +296,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetChangeRequest
 ```
 
-Creates a video asset change request.For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
+Creates a video asset change request.
+
+For details about data source of the asset to be created, see [@ohos.file.fileuri (File URI)](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md).
 
 **Since:** 11
 
@@ -359,13 +363,13 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Array of media assets to delete. The array can contain a maximum of 300 elements.<!--Del-->System applications are not subject to this limitation.<!--DelEnd--> |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of media assets to delete. The array can contain a maximum of 300 elements.<!--Del-->System applications are not subject to this limitation.<!--DelEnd--> |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -419,13 +423,13 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| uriList | Array & lt;string & gt; | Yes | URIs of the media assets to delete. The array can contain a maximum of 300 elements.<!--Del-->System applications are not subject to this limitation.<!--DelEnd--> |
+| uriList | Array&lt;string&gt; | Yes | URIs of the media assets to delete. The array can contain a maximum of 300 elements.<!--Del-->System applications are not subject to this limitation.<!--DelEnd--> |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -522,7 +526,7 @@ Obtains the asset in this asset change request.
 
 | Type | Description |
 | --- | --- |
-| [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | Asset obtained. |
+| PhotoAsset | Asset obtained. |
 
 **Error codes:**
 
@@ -574,7 +578,7 @@ Obtains the handler used for writing a file to cache. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the write handle obtained. |
+| Promise&lt;number&gt; | Promise used to return the write handle obtained. |
 
 **Error codes:**
 

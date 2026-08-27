@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import formInfo from '@kit.FormKit';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## area
@@ -50,8 +50,10 @@ duration: number
 useDefaultAnimation?: boolean
 ```
 
-互动卡片状态切换时是否启动系统提供的默认动效，默认为true。  
-- true：表示系统提供默认切换动效。  
+互动卡片状态切换时是否启动系统提供的默认动效，默认为true。
+
+- true：表示系统提供默认切换动效。
+
 - false：表示系统不提供切换动效，画面直接切换，适合切换时非激活态和激活态UI完全一致的场景。
 
 **类型：** boolean

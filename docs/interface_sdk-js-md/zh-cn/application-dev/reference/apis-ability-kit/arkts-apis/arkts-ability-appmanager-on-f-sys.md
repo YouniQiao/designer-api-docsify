@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## on('applicationState')
@@ -27,14 +27,14 @@ function on(type: 'applicationState', observer: ApplicationStateObserver, filter
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'applicationState' | 是 | 调用接口类型，固定填'applicationState'字符串。 |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 | 应用状态监听器，用于监听应用的生命周期变化。 |
+| observer | ApplicationStateObserver | 是 | 应用状态监听器，用于监听应用的生命周期变化。 |
 | filter | [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) | 是 | 应用生命周期变化事件的过滤器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 已注册监听器ID，可用于 [off]{ |
+| number | 已注册监听器ID，可用于[off]{ |
 
 **错误码：**
 
@@ -118,7 +118,7 @@ function on(type: 'appForegroundState', observer: AppForegroundStateObserver): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'appForegroundState' | 是 | 调用接口类型，固定填'appForegroundState'字符串。 |
-| observer | [AppForegroundStateObserver](arkts-ability-appmanager-appforegroundstateobserver-t-sys.md) | 是 | 应用状态监听器，用于监听应用的启动和退出。 |
+| observer | AppForegroundStateObserver | 是 | 应用状态监听器，用于监听应用的启动和退出。 |
 
 **错误码：**
 
@@ -172,7 +172,7 @@ function on(type: 'abilityFirstFrameState', observer: AbilityFirstFrameStateObse
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'abilityFirstFrameState' | 是 | 调用接口类型，固定填'abilityFirstFrameState'字符串。 |
-| observer | [AbilityFirstFrameStateObserver](arkts-ability-appmanager-abilityfirstframestateobserver-t-sys.md) | 是 | 表示待注册的Ability首帧绘制完成事件观察者对象。 |
+| observer | AbilityFirstFrameStateObserver | 是 | 表示待注册的Ability首帧绘制完成事件观察者对象。 |
 | bundleName | string | 否 | 表示待监听的Ability的应用bundleName，不填表示注册监听所有应用ability首帧绘制完成事件。 |
 
 **错误码：**

@@ -17,7 +17,9 @@
 preventDefault?: Callback<void>
 ```
 
-阻止系统默认复制事件。省略时，执行系统默认复制行为。
+阻止系统默认复制事件。
+
+省略时，执行系统默认复制行为。
 
 **类型：** Callback&lt;void&gt;
 

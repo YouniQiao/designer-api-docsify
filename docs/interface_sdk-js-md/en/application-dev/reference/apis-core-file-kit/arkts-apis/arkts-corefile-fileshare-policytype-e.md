@@ -1,6 +1,8 @@
 # PolicyType
 
-Indicates the policy type of the path.@enum { number } policyType
+Indicates the policy type of the path.
+
+@enum { number } policyType
 
 **Since:** 15
 

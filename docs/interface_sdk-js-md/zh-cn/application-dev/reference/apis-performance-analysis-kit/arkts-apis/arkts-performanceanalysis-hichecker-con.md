@@ -54,7 +54,8 @@ The process rule check ability Arkui performance
 const RULE_THREAD_CHECK_NETWORK_USAGE = 2n
 ```
 
-检测规则，检测线程是否调用网络耗时接口。  
+检测规则，检测线程是否调用网络耗时接口。
+
 **起始版本**: 26.0.0
 
 **起始版本：** 26.0.0

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import hardwareManager from '@kit.DistributedServiceKit';
+import { hardwareManager } from '@kit.DistributedServiceKit';
 ```
 
 ## resumeDistributedHardware
@@ -32,7 +32,7 @@ Resumes the distributed hardware service on the controlled device. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

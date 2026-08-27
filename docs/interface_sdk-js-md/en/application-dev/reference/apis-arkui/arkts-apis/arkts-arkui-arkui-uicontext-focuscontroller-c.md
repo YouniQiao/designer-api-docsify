@@ -152,7 +152,9 @@ struct ClearFocusExample {
 isActive(): boolean
 ```
 
-Obtains the focus activation state of the UI instance.For details about the focus activation state, see [Basic Concepts](../../../ui/arkts-common-events-focus-event.md#basic-concepts).
+Obtains the focus activation state of the UI instance.
+
+For details about the focus activation state, see [Basic Concepts](../../../ui/arkts-common-events-focus-event.md#basic-concepts).
 
 **Since:** 20
 

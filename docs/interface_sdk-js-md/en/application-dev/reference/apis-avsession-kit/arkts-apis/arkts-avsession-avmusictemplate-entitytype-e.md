@@ -1,6 +1,8 @@
 # EntityType
 
-Enumeration of media resource type.@enum { number }
+Enumeration of media resource type.
+
+@enum { number }
 
 **Since:** 23
 

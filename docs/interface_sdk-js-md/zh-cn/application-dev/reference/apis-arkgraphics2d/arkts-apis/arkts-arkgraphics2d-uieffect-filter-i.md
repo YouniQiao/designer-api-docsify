@@ -1,6 +1,6 @@
 # Filter
 
-Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添加到组件上。在调用Filter的方法前， 需要先通过[createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md)创建一个Filter实例。
+Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添加到组件上。在调用Filter的方法前，需要先通过[createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md)创建一个Filter实例。
 
 **起始版本：** 12
 
@@ -9,7 +9,7 @@ Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添�
 ## 导入模块
 
 ```TypeScript
-import uiEffect from '@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## blur
@@ -28,13 +28,13 @@ blur(blurRadius: number): Filter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| blurRadius | number | 是 | 模糊半径，单位为px。 取值需大于等于0，模糊半径越大，模糊效果越强。 模糊半径为0时无模糊效果。传入负数时自动修正为0。 |
+| blurRadius | number | 是 | 模糊半径，单位为px。取值需大于等于0，模糊半径越大，模糊效果越强。模糊半径为0时无模糊效果。传入负数时自动修正为0。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回挂载了模糊效果的Filter，支持链式调用继续添加其他效果。 |
+| Filter | 返回挂载了模糊效果的Filter，支持链式调用继续添加其他效果。 |
 
 **示例**
 
@@ -74,7 +74,11 @@ struct UIEffectFilterExample {
 hdrBrightnessRatio(ratio: number): Filter
 ```
 
-为组件内容添加HDR（高动态范围成像）提亮效果。不建议嵌套使用，强行嵌套使用可能造成过曝现象。提亮效果需要开启HDR渲染管线才能生效，某些场景下即使尝试触发HDR渲染管线也无法开启HDR，例如：设备硬件规格不支持HDR。设备当前支持最大提亮倍数为设备当前的最大亮度除以设备SDR参考白亮度得到的值。
+为组件内容添加HDR（高动态范围成像）提亮效果。不建议嵌套使用，强行嵌套使用可能造成过曝现象。
+
+提亮效果需要开启HDR渲染管线才能生效，某些场景下即使尝试触发HDR渲染管线也无法开启HDR，例如：设备硬件规格不支持HDR。
+
+设备当前支持最大提亮倍数为设备当前的最大亮度除以设备SDR参考白亮度得到的值。
 
 > **说明：**
 > 
@@ -91,13 +95,13 @@ hdrBrightnessRatio(ratio: number): Filter
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ratio | number | 是 | 提亮倍数，取值范围为[1.0, 设备当前支持的最大提亮倍数]。 小于1.0按1.0处理；等于1.0不做处理；大于1.0尝试触发HDR渲染管线； 超过最大倍数按最大倍数处理。 |
+| ratio | number | 是 | 提亮倍数，取值范围为[1.0, 设备当前支持的最大提亮倍数]。小于1.0按1.0处理；等于1.0不做处理；大于1.0尝试触发HDR渲染管线；超过最大倍数按最大倍数处理。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回挂载了HDR提亮效果的Filter，支持链式调用继续添加其他效果。 |
+| Filter | 返回挂载了HDR提亮效果的Filter，支持链式调用继续添加其他效果。 |
 
 **错误码：**
 

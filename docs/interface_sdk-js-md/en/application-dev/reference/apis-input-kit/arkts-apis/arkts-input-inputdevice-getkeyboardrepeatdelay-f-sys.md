@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## getKeyboardRepeatDelay
@@ -83,7 +82,7 @@ Obtains the keyboard repeat delay. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the keyboard repeat delay. |
+| Promise&lt;number&gt; | Promise used to return the keyboard repeat delay. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import contact from '@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## queryContactSyncInfo
@@ -12,7 +12,9 @@ import contact from '@kit.ContactsKit';
 function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>
 ```
 
-Queries information about ongoing contact synchronization for the calling application.If the returned contact synchronization information is empty, the invoking party does not synchronize contacts or the contact synchronization is complete.
+Queries information about ongoing contact synchronization for the calling application.
+
+If the returned contact synchronization information is empty, the invoking party does not synchronize contacts or the contact synchronization is complete.
 
 **Since:** 26.0.0
 
@@ -28,7 +30,7 @@ Queries information about ongoing contact synchronization for the calling applic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Indicates the context of the application or capability. |
+| context | Context | Yes | Indicates the context of the application or capability. |
 
 **Return value:**
 

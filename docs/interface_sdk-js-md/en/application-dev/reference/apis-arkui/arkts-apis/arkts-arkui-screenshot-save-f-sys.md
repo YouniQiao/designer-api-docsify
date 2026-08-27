@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screenshot from '@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## save
@@ -151,7 +151,7 @@ Obtains a screenshot. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return a PixelMap object. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return a PixelMap object. |
 
 **Error codes:**
 

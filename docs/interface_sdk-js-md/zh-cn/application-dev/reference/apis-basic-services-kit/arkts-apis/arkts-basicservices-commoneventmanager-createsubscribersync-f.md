@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import commonEventManager from '@kit.BasicServicesKit';
+import { commonEventManager } from '@kit.BasicServicesKit';
 ```
 
 ## createSubscriberSync
@@ -24,13 +24,13 @@ function createSubscriberSync(subscribeInfo: CommonEventSubscribeInfo): CommonEv
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | 是 | 表示订阅信息。 |
+| subscribeInfo | CommonEventSubscribeInfo | 是 | 表示订阅信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | 返回订阅者对象。 |
+| CommonEventSubscriber | 返回订阅者对象。 |
 
 **错误码：**
 

@@ -33,7 +33,7 @@ Obtains the pair state of a specified device.
 
 | Type | Description |
 | --- | --- |
-| [BondState](arkts-connectivity-connection-bondstate-e.md) | Returns the pair state. |
+| BondState | Returns the pair state. |
 
 **Error codes:**
 

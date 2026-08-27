@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## disableNotificationFeature
@@ -27,13 +27,13 @@ Disables the application from publishing notifications by adding the application
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | disabled | boolean | Yes | Whether to enable the permission control list for publishing notifications (**true**: enabled; **false**: disabled). |
-| bundleList | Array & lt;string & gt; | Yes | Application list under the permission control list. The bundle name is used to represent a specific application. |
+| bundleList | Array&lt;string&gt; | Yes | Application list under the permission control list. The bundle name is used to represent a specific application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -87,14 +87,14 @@ Disables the application from publishing notifications by adding the application
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | disabled | boolean | Yes | Whether to enable the notification permission control list. The value **true** indicates that the notification permission control list is enabled; **false** indicates the opposite. |
-| bundleList | Array & lt;string & gt; | Yes | Bundles under the permission control list. The bundle name is used to represent a specific application. |
+| bundleList | Array&lt;string&gt; | Yes | Bundles under the permission control list. The bundle name is used to represent a specific application. |
 | userId | number | Yes | User ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

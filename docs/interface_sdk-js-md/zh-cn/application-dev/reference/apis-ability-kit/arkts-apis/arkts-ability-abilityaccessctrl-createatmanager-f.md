@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityAccessCtrl, { Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
+import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from '@kit.AbilityKit';
 ```
 
 ## createAtManager

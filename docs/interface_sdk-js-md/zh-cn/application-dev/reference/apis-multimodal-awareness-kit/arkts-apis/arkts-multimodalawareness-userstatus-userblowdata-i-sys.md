@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import userStatus from '@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## blowDirection
@@ -22,7 +22,7 @@ import userStatus from '@kit.MultimodalAwarenessKit';
 blowDirection?: number
 ```
 
-表示吹气方向。取值范围[0,2]。0：未吹气，1：底部麦克风，2：顶部麦克风。 取值范围为全体整数。
+表示吹气方向。取值范围[0,2]。0：未吹气，1：底部麦克风，2：顶部麦克风。取值范围为全体整数。
 
 **类型：** number
 
@@ -40,7 +40,7 @@ blowDirection?: number
 emotion?: number
 ```
 
-表示用户情绪级别。取值范围[0,5]。0：非常愉悦，1：有点愉悦，2：平静，3：有点不愉悦，4：大怒，5：大哭。 取值限定为整数。
+表示用户情绪级别。取值范围[0,5]。0：非常愉悦，1：有点愉悦，2：平静，3：有点不愉悦，4：大怒，5：大哭。取值限定为整数。
 
 **类型：** number
 

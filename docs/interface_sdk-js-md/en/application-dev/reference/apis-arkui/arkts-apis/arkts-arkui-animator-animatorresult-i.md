@@ -9,7 +9,7 @@ Defines the animator result.
 ## Modules to Import
 
 ```TypeScript
-import Animator, { AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
+import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
 ## cancel
@@ -62,7 +62,9 @@ animator.finish();
 oncancel: () => void
 ```
 
-Called when this animation is canceled.Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onCancel** instead.
+Called when this animation is canceled.
+
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onCancel** instead.
 
 **Since:** 6
 
@@ -96,7 +98,9 @@ Called when this animation is canceled.
 onfinish: () => void
 ```
 
-Called when this animation is finished.Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFinish** instead.
+Called when this animation is finished.
+
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFinish** instead.
 
 **Since:** 6
 
@@ -130,7 +134,9 @@ Called when this animation is finished.
 onframe: (progress: number) => void
 ```
 
-Called when a frame is received.Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFrame** instead.
+Called when a frame is received.
+
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onFrame** instead.
 
 **Since:** 6
 
@@ -154,7 +160,8 @@ Called when a frame is received.Note: This API is supported since API version 6 
 onFrame: (progress: number) => void
 ```
 
-Called when a frame is received.  
+Called when a frame is received.
+
 **progress**: current value of the animation. Value range: [begin, end] defined in [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md). Default value range: [0, 1]
 
 **Since:** 12
@@ -177,7 +184,9 @@ Called when a frame is received.
 onrepeat: () => void
 ```
 
-Called when this animation repeats.Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onRepeat** instead.
+Called when this animation repeats.
+
+Note: This API is supported since API version 6 and deprecated since API version 12. You are advised to use **onRepeat** instead.
 
 **Since:** 6
 

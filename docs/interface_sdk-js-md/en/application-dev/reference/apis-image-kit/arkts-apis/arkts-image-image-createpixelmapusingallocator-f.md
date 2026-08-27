@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPixelMapUsingAllocator
@@ -31,7 +31,7 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | A Promise instance used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | A Promise instance used to return the PixelMap object. |
 
 **Error codes:**
 

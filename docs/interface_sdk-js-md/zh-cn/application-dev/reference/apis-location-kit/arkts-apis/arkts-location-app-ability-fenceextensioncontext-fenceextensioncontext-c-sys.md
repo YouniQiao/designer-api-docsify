@@ -1,6 +1,8 @@
 # FenceExtensionContext
 
-FenceExtensionContext，继承自ExtensionContext，是FenceExtensionAbility的上下文环境。@extends ExtensionContext
+FenceExtensionContext，继承自ExtensionContext，是FenceExtensionAbility的上下文环境。
+
+@extends ExtensionContext
 
 **继承/实现关系：** FenceExtensionContext extends ExtensionContext
 
@@ -11,7 +13,7 @@ FenceExtensionContext，继承自ExtensionContext，是FenceExtensionAbility的�
 ## 导入模块
 
 ```TypeScript
-import FenceExtensionContext from '@kit.LocationKit';
+import { FenceExtensionContext } from '@kit.LocationKit';
 ```
 
 ## startAbility
@@ -40,7 +42,7 @@ startAbility(want: Want): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **错误码：**
 

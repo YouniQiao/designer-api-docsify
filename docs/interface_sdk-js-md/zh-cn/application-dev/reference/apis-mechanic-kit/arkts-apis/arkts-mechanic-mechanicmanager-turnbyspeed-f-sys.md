@@ -23,15 +23,15 @@ function turnBySpeed(mechId: number, angleSpeed: number, duration: number): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | number | 是 | 具身设备ID。 取值限定为整数。 |
+| mechId | number | 是 | 具身设备ID。取值限定为整数。 |
 | angleSpeed | number | 是 | 角速度。 |
-| duration | number | 是 | 转动时长，单位ms。 取值限定为整数。 |
+| duration | number | 是 | 转动时长，单位ms。取值限定为整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Result & gt; | 202 - 非系统应用 |
+| Promise&lt;Result&gt; | 202 - 非系统应用 |
 
 **错误码：**
 

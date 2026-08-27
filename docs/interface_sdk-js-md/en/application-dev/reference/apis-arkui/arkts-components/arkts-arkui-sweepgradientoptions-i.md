@@ -41,7 +41,9 @@ Center of the sweep gradient, that is, the coordinates relative to the upper lef
 colors: Array<[ResourceColor, number]>
 ```
 
-Array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped. **ResourceColor** represents the color. **number** represents the stop position of the color, with a range of [0, 1.0]. Values less than 0 are treated as **0**, and values greater than 1.0 are treated as **1.0**. **0** indicates the start of the gradient; **1.0** indicates the end. To achieve multi-color gradients, the **number** parameters in the array should be set in ascending order. If a later number is less than a previous one, it is treated as equal to the previous value.Default value: **[]**, meaning no gradient effect.
+Array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped. **ResourceColor** represents the color. **number** represents the stop position of the color, with a range of [0, 1.0]. Values less than 0 are treated as **0**, and values greater than 1.0 are treated as **1.0**. **0** indicates the start of the gradient; **1.0** indicates the end. To achieve multi-color gradients, the **number** parameters in the array should be set in ascending order. If a later number is less than a previous one, it is treated as equal to the previous value.
+
+Default value: **[]**, meaning no gradient effect.
 
 **Type:** Array&lt;[ResourceColor, number]&gt;
 
@@ -59,7 +61,11 @@ Array of color stops, each of which consists of a color and its stop position. I
 end?: number | string
 ```
 
-End point of the sweep gradient.Default value: **0**.When specified as a string, valid values are pure numbers or numbers followed by units: "deg" (degrees), "rad" (radians), "grad" (gradians), or "turn" (turns). Examples: "90", "90deg", "1.57rad". The value is limited to 0 to 36 0 degrees after unit conversion. Values less than 0 degrees are treated as 0 degrees; values greater than 360 degrees are treated as 360 degrees.
+End point of the sweep gradient.
+
+Default value: **0**.
+
+When specified as a string, valid values are pure numbers or numbers followed by units: "deg" (degrees), "rad" (radians), "grad" (gradians), or "turn" (turns). Examples: "90", "90deg", "1.57rad". The value is limited to 0 to 36 0 degrees after unit conversion. Values less than 0 degrees are treated as 0 degrees; values greater than 360 degrees are treated as 360 degrees.
 
 **Type:** number \| string
 
@@ -97,8 +103,12 @@ Array of color stops, each of which consists of a color and its stop position. I
 repeating?: boolean
 ```
 
-Whether the colors are repeated.Default value: **false**.  
-**true**: The colors are repeated.  
+Whether the colors are repeated.
+
+Default value: **false**.
+
+**true**: The colors are repeated.
+
 **false**: The colors are not repeated.
 
 **Type:** boolean
@@ -119,7 +129,9 @@ Whether the colors are repeated.Default value: **false**.
 rotation?: number | string
 ```
 
-Rotation angle of the sweep gradient. Default value: **0**.When specified as a string, valid values are pure numbers or numbers followed by units: "deg" (degrees), "rad" (radians), "grad" (gradians), or "turn" (turns). Examples: "90", "90deg", "1.57rad". The value is limited to 0 to 36 0 degrees after unit conversion. Values less than 0 degrees are treated as 0 degrees; values greater than 360 degrees are treated as 360 degrees.
+Rotation angle of the sweep gradient. Default value: **0**.
+
+When specified as a string, valid values are pure numbers or numbers followed by units: "deg" (degrees), "rad" (radians), "grad" (gradians), or "turn" (turns). Examples: "90", "90deg", "1.57rad". The value is limited to 0 to 36 0 degrees after unit conversion. Values less than 0 degrees are treated as 0 degrees; values greater than 360 degrees are treated as 360 degrees.
 
 **Type:** number \| string
 
@@ -139,7 +151,11 @@ Rotation angle of the sweep gradient. Default value: **0**.When specified as a s
 start?: number | string
 ```
 
-Start point of the sweep gradient.Default value: **0**.When specified as a string, valid values are pure numbers or numbers followed by units: "deg" (degrees), "rad" (radians), "grad" (gradians), or "turn" (turns). Examples: "90", "90deg", "1.57rad". The value is limited to 0 to 36 0 degrees after unit conversion. Values less than 0 degrees are treated as 0 degrees; values greater than 360 degrees are treated as 360 degrees.
+Start point of the sweep gradient.
+
+Default value: **0**.
+
+When specified as a string, valid values are pure numbers or numbers followed by units: "deg" (degrees), "rad" (radians), "grad" (gradians), or "turn" (turns). Examples: "90", "90deg", "1.57rad". The value is limited to 0 to 36 0 degrees after unit conversion. Values less than 0 degrees are treated as 0 degrees; values greater than 360 degrees are treated as 360 degrees.
 
 **Type:** number \| string
 

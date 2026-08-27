@@ -36,8 +36,10 @@ Decorator and component information associated with the observable object. If th
 isObserved: boolean
 ```
 
-Whether an object can be observed.  
-**true**: The object can be observed.  
+Whether an object can be observed.
+
+**true**: The object can be observed.
+
 **false**: The object cannot be observed.
 
 **Type:** boolean
@@ -56,7 +58,12 @@ Whether an object can be observed.
 reason: string
 ```
 
-Reason for the object's observability.For the object that cannot be observed: The object itself cannot be observed.For the object that can be observed:
+Reason for the object's observability.
+
+For the object that cannot be observed: The object itself cannot be observed.
+
+For the object that can be observed:
+
 1. The V1 object is decorated by the [@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md)
 decorator or the object is converted by the [makeV1Observed](arkts-arkui-arkui-statemanagement-uiutils-c.md#makev1observed) method.
 2. The V1 object is decorated by the [@Observed](../../../ui/state-management/arkts-observed-and-objectlink.md)

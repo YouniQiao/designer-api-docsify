@@ -2,7 +2,7 @@
 
 - [@ohos.application.DistributedExtensionAbility](arkts-application-distributedextensionability.md)
   - [DistributedExtensionAbility](arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md)
-- [@ohos.application.DistributedExtensionContext](arkts-application-distributedextensioncontext.md)
+- [@ohos.application.DistributedExtensionContext(Distributed Extension Context)](arkts-application-distributedextensioncontext.md)
   - [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md)
 <!--Del-->
 - [@ohos.cooperate](arkts-cooperate.md)<!--DelEnd-->
@@ -168,13 +168,13 @@
   - [StreamRole(系统接口)](arkts-distributedservice-abilityconnectionmanager-streamrole-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [VideoPixelFormat(系统接口)](arkts-distributedservice-abilityconnectionmanager-videopixelformat-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedsched.linkEnhance](arkts-distributedsched-linkenhance.md)
+- [@ohos.distributedsched.linkEnhance(增强连接)](arkts-distributedsched-linkenhance.md)
   - [createConnection](arkts-distributedservice-linkenhance-createconnection-f.md)
   - [createServer](arkts-distributedservice-linkenhance-createserver-f.md)
   - [Connection](arkts-distributedservice-linkenhance-connection-i.md)
   - [ConnectResult](arkts-distributedservice-linkenhance-connectresult-i.md)
   - [Server](arkts-distributedservice-linkenhance-server-i.md)
-- [@ohos.distributedsched.proxyChannelManager](arkts-distributedsched-proxychannelmanager.md)
+- [@ohos.distributedsched.proxyChannelManager(代理通道管理)](arkts-distributedsched-proxychannelmanager.md)
   - [closeProxyChannel](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md)
   - [off](arkts-distributedservice-proxychannelmanager-off-f.md)
   - [on](arkts-distributedservice-proxychannelmanager-on-f.md)
@@ -186,7 +186,7 @@
   - [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md)
   - [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md)
 <!--Del-->
-- [@ohos.distributedSoftBus.conversation](arkts-distributedsoftbus-conversation.md)<!--DelEnd-->
+- [@ohos.distributedSoftBus.conversation(跨设备唤醒与消息传输)](arkts-distributedsoftbus-conversation.md)<!--DelEnd-->
   <!--Del-->
   - [getTrustedDevices(系统接口)](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dataShare from '@kit.ArkData';
-import dataSharePredicates from '@kit.ArkDataPredicates';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## disableSilentProxy
@@ -13,7 +12,10 @@ import dataSharePredicates from '@kit.ArkDataPredicates';
 function disableSilentProxy(context: Context, uri?: string): Promise<void>
 ```
 
-Disables silent access. This API uses a promise to return the result.Observe the following when using this API:  
+Disables silent access. This API uses a promise to return the result.
+
+Observe the following when using this API:
+
 - The data provider calls this API to disable silent access.  
 - Whether silent access is disabled is determined based on the return value of this API and the  
 **isSilentProxyEnable** field in the [data_share_config.json](../../../database/share-data-by-datashareextensionability-sys.md) file together.  
@@ -39,7 +41,7 @@ Disables silent access. This API uses a promise to return the result.Observe the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | returns no value. |
+| Promise&lt;void&gt; | returns no value. |
 
 **Error codes:**
 

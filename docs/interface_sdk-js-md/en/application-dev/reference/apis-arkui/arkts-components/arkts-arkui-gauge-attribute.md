@@ -1,6 +1,8 @@
 # Gauge properties/events
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
+
+The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
 
 **Inheritance/Implementation:** GaugeAttribute extends CommonMethod<GaugeAttribute>
 
@@ -19,7 +21,17 @@ In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts
 colors(colors: ResourceColor | LinearGradient | Array<[ResourceColor | LinearGradient, number]>)
 ```
 
-Sets the colors of the gauge.Since API version 11, this API follows the following rules:If the data type is [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md), the ring is of the monochrome type.If the data type is LinearGradient, the ring is of the gradient type.If the data type is Array, the ring is of the gradient type. The first parameter indicates the color value. If it is set to a non-color value, the color of 0xFFE84026 is used. The second parameter indicates the color weight. If it is set to a negative number or a non-numeric value, the color weight is 0.A ring of the gradient type contains a maximum of nine color segments. If there are more than nine segments, the excess is not displayed.
+Sets the colors of the gauge.
+
+Since API version 11, this API follows the following rules:
+
+If the data type is [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md), the ring is of the monochrome type.
+
+If the data type is LinearGradient, the ring is of the gradient type.
+
+If the data type is Array, the ring is of the gradient type. The first parameter indicates the color value. If it is set to a non-color value, the color of 0xFFE84026 is used. The second parameter indicates the color weight. If it is set to a negative number or a non-numeric value, the color weight is 0.
+
+A ring of the gradient type contains a maximum of nine color segments. If there are more than nine segments, the excess is not displayed.
 
 **Since:** 8
 
@@ -33,7 +45,7 @@ Sets the colors of the gauge.Since API version 11, this API follows the followin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colors | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient \| Array & lt;[ResourceColor \ | LinearGradient, number] & gt; | Yes | Colors of the gauge. You can set colors for individual segments.Default value in API version 9: **Color.Black**Default value in API version 11:If no color is provided or the array is empty, the ring color will be a gradient consisting of the following colors: 0xFF64BB5C, 0xFFF7CE00, and 0xFFE84026.If a color value is provided but invalid, the ring will be in the color of 0xFFE84026.Colors with a weight of 0 are not displayed in the ring. If all weights are 0, the ring is not displayed.<br>**Since:** 11 |
+| colors | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient \| Array&lt;[ResourceColor \| LinearGradient, number]&gt; | Yes | Colors of the gauge. You can set colors for individual segments.Default value in API version 9: **Color.Black**Default value in API version 11:If no color is provided or the array is empty, the ring color will be a gradient consisting of the following colors: 0xFF64BB5C, 0xFFF7CE00, and 0xFFE84026.If a color value is provided but invalid, the ring will be in the color of 0xFFE84026.Colors with a weight of 0 are not displayed in the ring. If all weights are 0, the ring is not displayed.<br>**Since:** 11 |
 
 ## contentModifier
 

@@ -29,7 +29,7 @@ Obtains the X.509 certificate list.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;X509Cert & gt; | X.509 certificate list obtained. |
+| Array&lt;X509Cert&gt; | X.509 certificate list obtained. |
 
 **Error codes:**
 

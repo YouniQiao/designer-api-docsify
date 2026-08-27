@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cloudData from '@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## allocResourceAndShare
@@ -32,13 +32,13 @@ Allocates a shared resource ID based on the data that matches the specified pred
 | storeId | string | Yes | Name of the RDB store. |
 | predicates | relationalStore.RdbPredicates | Yes | Predicates for matching the data to share. |
 | participants | Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | Yes | Participants of the share. |
-| columns | Array & lt;string & gt; | No | Columns in which the data is located. The default value is undefined, which means column names are not returned. |
+| columns | Array&lt;string&gt; | No | Columns in which the data is located. The default value is undefined, which means column names are not returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;relationalStore.ResultSet & gt; | Promise used to return the result set of the data to share. |
+| Promise&lt;relationalStore.ResultSet&gt; | Promise used to return the result set of the data to share. |
 
 **Error codes:**
 
@@ -187,7 +187,7 @@ Allocates a shared resource ID based on the data that matches the specified pred
 | storeId | string | Yes | Name of the RDB store. |
 | predicates | relationalStore.RdbPredicates | Yes | Predicates for matching the data to share. |
 | participants | Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | Yes | Participants of the share. |
-| columns | Array & lt;string & gt; | Yes | Columns in which the data is located. |
+| columns | Array&lt;string&gt; | Yes | Columns in which the data is located. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;relationalStore.ResultSet&gt; | Yes | Callback used to return the result set of the data to share. |
 
 **Error codes:**

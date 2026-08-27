@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import scriptManager from '@kit.AbilityKit';
+import { scriptManager } from '@kit.AbilityKit';
 ```
 
 ## completeArkTSScriptInApp
@@ -28,13 +28,13 @@ complete arkTS script for in-app skills.
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | Yes | Ability context, Used for temporary file authorization. |
 | requestCode | string | Yes | Identifying the current operation. It is from ArkTSScriptInfo.requestCode. |
-| result | [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) | Yes | The result of arkTS script execution. |
+| result | ExecuteResult | Yes | The result of arkTS script execution. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

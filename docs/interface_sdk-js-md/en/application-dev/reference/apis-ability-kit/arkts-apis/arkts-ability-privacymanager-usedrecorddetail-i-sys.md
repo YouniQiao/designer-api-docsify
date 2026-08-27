@@ -11,7 +11,7 @@ Represents the details of a single access record.
 ## Modules to Import
 
 ```TypeScript
-import privacyManager from '@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## accessDuration
@@ -36,7 +36,9 @@ Access duration. Unit: milliseconds.
 count?: number
 ```
 
-Number of accesses. In accessRecords, it indicates the number of successful accesses; in rejectRecords, it indicates the number of failures or rejections.Default value: 0.
+Number of accesses. In accessRecords, it indicates the number of successful accesses; in rejectRecords, it indicates the number of failures or rejections.
+
+Default value: 0.
 
 **Type:** number
 
@@ -52,9 +54,11 @@ Number of accesses. In accessRecords, it indicates the number of successful acce
 lockScreenStatus?: number
 ```
 
-Lock screen status at the time of access.  
+Lock screen status at the time of access.
+
 - 1: Indicates permission usage in a non-lock-screen scenario.  
-- 2: Indicates permission usage in a lock-screen scenario.  
+- 2: Indicates permission usage in a lock-screen scenario.
+
 Default value: 1.
 
 **Type:** number
@@ -103,7 +107,9 @@ Access timestamp. Unit: milliseconds.
 usedType?: PermissionUsedType
 ```
 
-Sensitive permission access method.Default value: NORMAL_TYPE.
+Sensitive permission access method.
+
+Default value: NORMAL_TYPE.
 
 **Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 

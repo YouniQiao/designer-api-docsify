@@ -20,6 +20,7 @@ The [universal attributes](../arkts-components/arkts-arkui-commonmethod-c.md) ar
 > [measure](arkts-arkui-framenode-c.md#measure) and [layout](arkts-arkui-framenode-c.md#layout) methods
 > of the child component [FrameNode](arkts-arkui-framenode-c.md) have a higher priority than the
 > ignoreLayoutSafeArea attribute.
+
 The [universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
 
 **Inheritance/Implementation:** DynamicLayoutAttribute extends CommonMethod<DynamicLayoutAttribute>

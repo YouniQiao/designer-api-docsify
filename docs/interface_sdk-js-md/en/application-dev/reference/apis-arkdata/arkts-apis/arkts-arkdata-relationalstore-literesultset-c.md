@@ -1,6 +1,10 @@
 # LiteResultSet
 
-Defines APIs to access the result set obtained by querying the RDB store. This result set is the collection of results returned with the **query()** method called.The **LiteResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.In the following API examples, you need to obtain an **LiteResultSet** instance by using a query method, such as [queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount) or [querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount), and then call the corresponding method through this instance.
+Defines APIs to access the result set obtained by querying the RDB store. This result set is the collection of results returned with the **query()** method called.
+
+The **LiteResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.
+
+In the following API examples, you need to obtain an **LiteResultSet** instance by using a query method, such as [queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount) or [querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount), and then call the corresponding method through this instance.
 
 > **NOTE：**
 > 
@@ -13,7 +17,7 @@ Defines APIs to access the result set obtained by querying the RDB store. This r
 ## Modules to Import
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## close
@@ -58,7 +62,9 @@ async function closeExample(store : relationalStore.RdbStore) {
 getAsset(columnIndex: number): Asset
 ```
 
-Obtains the value in the specified column in the current row as an [Asset](arkts-arkdata-relationalstore-asset-i.md).If the data type of the current column is Asset, the value is returned as an Asset. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Asset, 14800041 is returned.
+Obtains the value in the specified column in the current row as an [Asset](arkts-arkdata-relationalstore-asset-i.md).
+
+If the data type of the current column is Asset, the value is returned as an Asset. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Asset, 14800041 is returned.
 
 **Since:** 23
 
@@ -76,7 +82,7 @@ Obtains the value in the specified column in the current row as an [Asset](arkts
 
 | Type | Description |
 | --- | --- |
-| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | Value obtained. |
+| Asset | Value obtained. |
 
 **Error codes:**
 
@@ -117,7 +123,9 @@ async function getAssetExample(store : relationalStore.RdbStore) {
 getAssets(columnIndex: number): Assets
 ```
 
-Obtains the value in the specified column in the current row as [Assets](arkts-arkdata-relationalstore-assets-t.md).If the data type of the current column is Assets, the value is returned as Assets. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Assets, 14800041 is returned.
+Obtains the value in the specified column in the current row as [Assets](arkts-arkdata-relationalstore-assets-t.md).
+
+If the data type of the current column is Assets, the value is returned as Assets. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Assets, 14800041 is returned.
 
 **Since:** 23
 
@@ -135,7 +143,7 @@ Obtains the value in the specified column in the current row as [Assets](arkts-a
 
 | Type | Description |
 | --- | --- |
-| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) | Value obtained. |
+| Assets | Value obtained. |
 
 **Error codes:**
 
@@ -176,7 +184,11 @@ async function getAssetsExample(store : relationalStore.RdbStore) {
 getBlob(columnIndex: number): Uint8Array
 ```
 
-Obtains the value in the specified column in the current row as a byte array.If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB, the data is converted to a byte array and returned. If the content of the column is null/empty, an empty byte array is returned.If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
+Obtains the value in the specified column in the current row as a byte array.
+
+If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB, the data is converted to a byte array and returned. If the content of the column is null/empty, an empty byte array is returned.
+
+If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
 
 **Since:** 23
 
@@ -371,7 +383,9 @@ async function getColumnNameExample(store : relationalStore.RdbStore){
 getColumnNames(): Array<string>
 ```
 
-Obtains the names of all columns in the result set.The column names are returned in a string array. The sequence of strings in the array is the same as that of columns in the result set.
+Obtains the names of all columns in the result set.
+
+The column names are returned in a string array. The sequence of strings in the array is the same as that of columns in the result set.
 
 **Since:** 23
 
@@ -383,7 +397,7 @@ Obtains the names of all columns in the result set.The column names are returned
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Names of all columns in the result set obtained. Duplicate column names can be obtained. |
+| Array&lt;string&gt; | Names of all columns in the result set obtained. Duplicate column names can be obtained. |
 
 **Error codes:**
 
@@ -669,7 +683,11 @@ async function getCurrentRowDataExample(store : relationalStore.RdbStore) {
 getDouble(columnIndex: number): number
 ```
 
-Obtains the value in the specified column in the current row as a Double.If the data type of the current column is INTEGER, DOUBLE, or TEXT, the value is converted to the Double type and returned. Non-numeric TEXT and BLOB types return **0.0**. If the content of the column is null/empty, **0.0** is returned.If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
+Obtains the value in the specified column in the current row as a Double.
+
+If the data type of the current column is INTEGER, DOUBLE, or TEXT, the value is converted to the Double type and returned. Non-numeric TEXT and BLOB types return **0.0**. If the content of the column is null/empty, **0.0** is returned.
+
+If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
 
 **Since:** 23
 
@@ -734,7 +752,11 @@ async function getDoubleExample(store : relationalStore.RdbStore) {
 getLong(columnIndex: number): number
 ```
 
-Obtains the value from the specified column in the current row, and returns a value of Long type.If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB, a value of Long type is returned. If the column is null, **0** is returned. If the data type is INTEGER and the value is greater than **Number.MAX_SAFE_INTEGER** or less than **Number.MIN_SAFE_INTEGER**, you are advised to use the [getString](#getstring) API to obtain the value without losing precision. If the data type in the specified column is DOUBLE, you are advised to use the [getDouble](#getdouble) API to obtain the value without precision loss.If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
+Obtains the value from the specified column in the current row, and returns a value of Long type.
+
+If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB, a value of Long type is returned. If the column is null, **0** is returned. If the data type is INTEGER and the value is greater than **Number.MAX_SAFE_INTEGER** or less than **Number.MIN_SAFE_INTEGER**, you are advised to use the [getString](#getstring) API to obtain the value without losing precision. If the data type in the specified column is DOUBLE, you are advised to use the [getDouble](#getdouble) API to obtain the value without precision loss.
+
+If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
 
 **Since:** 23
 
@@ -811,7 +833,7 @@ Obtains data for the current row.
 
 | Type | Description |
 | --- | --- |
-| [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Value of the specified row. If the result set contains duplicate column names, the return value is not as expected. You are advised to use the [getCurrentRowData]{ |
+| ValuesBucket | Value of the specified row. If the result set contains duplicate column names, the return value is not as expected. You are advised to use the [getCurrentRowData]{ |
 
 **Error codes:**
 
@@ -877,7 +899,7 @@ Obtains a specified amount of data from the result set. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;ValuesBucket & gt; & gt; | Promise used to return **maxCount** rows of data obtained. If the number of remaining records is less than **maxCount**, the remaining records are returned. Returning an empty array indicates that the end of the result set is reached. If the result set contains duplicate column names, the return values are not as expected. You are advised to use the [getRowsData]{ |
+| Promise&lt;Array&lt;ValuesBucket&gt;&gt; | Promise used to return **maxCount** rows of data obtained. If the number of remaining records is less than **maxCount**, the remaining records are returned. Returning an empty array indicates that the end of the result set is reached. If the result set contains duplicate column names, the return values are not as expected. You are advised to use the [getRowsData]{ |
 
 **Error codes:**
 
@@ -1090,7 +1112,13 @@ async function getRowsDataExample(store : relationalStore.RdbStore) {
 getString(columnIndex: number): string
 ```
 
-Obtains the value in the specified column in the current row as a string.If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB type, the value is returned as a string. If the content of the column is null/empty, an empty string **""** is returned.If the data type of the current column is DOUBLE, precision loss may occur. You are advised to use [getDouble](#getdouble) API to obtain the value.If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
+Obtains the value in the specified column in the current row as a string.
+
+If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB type, the value is returned as a string. If the content of the column is null/empty, an empty string **""** is returned.
+
+If the data type of the current column is DOUBLE, precision loss may occur. You are advised to use [getDouble](#getdouble) API to obtain the value.
+
+If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
 
 **Since:** 23
 
@@ -1149,7 +1177,9 @@ async function getStringExample(store : relationalStore.RdbStore) {
 getValue(columnIndex: number): ValueType
 ```
 
-Obtains the value of the specified column in the current row.If the value type is INTEGER and the value is greater than **Number.MAX_SAFE_INTEGER** or less than **Number.MIN_SAFE_INTEGER**, you are advised to use the [getString](#getstring) API to obtain the value without precision loss.
+Obtains the value of the specified column in the current row.
+
+If the value type is INTEGER and the value is greater than **Number.MAX_SAFE_INTEGER** or less than **Number.MIN_SAFE_INTEGER**, you are advised to use the [getString](#getstring) API to obtain the value without precision loss.
 
 **Since:** 23
 
@@ -1167,7 +1197,7 @@ Obtains the value of the specified column in the current row.If the value type i
 
 | Type | Description |
 | --- | --- |
-| [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Type of the data field returned. |
+| ValueType | Type of the data field returned. |
 
 **Error codes:**
 

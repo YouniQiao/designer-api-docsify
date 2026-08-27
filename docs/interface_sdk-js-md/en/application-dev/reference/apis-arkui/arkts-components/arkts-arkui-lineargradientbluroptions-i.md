@@ -17,7 +17,11 @@ Linear Gradient Blur Interface
 direction: GradientDirection
 ```
 
-Gradient blur direction.Default value:GradientDirection.Bottom
+Gradient blur direction.
+
+Default value:
+
+GradientDirection.Bottom
 
 **Type:** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
 

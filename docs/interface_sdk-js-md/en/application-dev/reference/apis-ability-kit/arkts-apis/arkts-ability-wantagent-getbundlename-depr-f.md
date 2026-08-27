@@ -113,7 +113,7 @@ Obtains the bundle name of a WantAgent.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the bundle name of the { |
+| Promise&lt;string&gt; | Returns the bundle name of the { |
 
 **Examples**
 

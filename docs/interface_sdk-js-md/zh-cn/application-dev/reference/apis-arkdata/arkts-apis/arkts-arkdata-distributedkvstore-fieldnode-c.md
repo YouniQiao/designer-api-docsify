@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedKVStore from '@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## appendChild
@@ -30,7 +30,7 @@ appendChild(child: FieldNode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| child | [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md) | 是 | 要附加的子节点。 |
+| child | FieldNode | 是 | 要附加的子节点。 |
 
 **返回值：**
 

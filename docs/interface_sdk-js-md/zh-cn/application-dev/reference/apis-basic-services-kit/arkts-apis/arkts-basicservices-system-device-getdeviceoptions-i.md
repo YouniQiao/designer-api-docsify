@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import Device, { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
+import { Device, DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -34,7 +34,9 @@ complete?: () => void
 fail?: (data: any, code: number) => void
 ```
 
-接口调用失败的回调函数，在接口调用失败时执行。data为失败时返回的错误信息对象或错误描述字符串，code为失败返回的错误码。code:200，表示返回结果中存在无法获得的信息。建议设置此回调以处理错误情况。
+接口调用失败的回调函数，在接口调用失败时执行。data为失败时返回的错误信息对象或错误描述字符串，code为失败返回的错误码。
+
+code:200，表示返回结果中存在无法获得的信息。建议设置此回调以处理错误情况。
 
 **起始版本：** 3
 

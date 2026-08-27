@@ -1,6 +1,8 @@
 # EmbeddedType
 
-Enum of EmbeddedType@enum { number }
+Enum of EmbeddedType
+
+@enum { number }
 
 **Since:** 12
 

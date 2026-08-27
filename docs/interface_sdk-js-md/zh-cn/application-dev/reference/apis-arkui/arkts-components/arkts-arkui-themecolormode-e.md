@@ -1,6 +1,8 @@
 # ThemeColorMode
 
-设置颜色模式。@enum { number }
+设置颜色模式。
+
+@enum { number }
 
 **起始版本：** 11
 

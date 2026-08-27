@@ -18,7 +18,9 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 buttons?: AdvancedDialogV2Button[]
 ```
 
-弹出框操作区按钮，最多支持4个按钮。默认不显示。
+弹出框操作区按钮，最多支持4个按钮。
+
+默认不显示。
 
 **类型：** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)[]
 
@@ -36,7 +38,9 @@ buttons?: AdvancedDialogV2Button[]
 contentAreaPadding?: LocalizedPadding
 ```
 
-弹出框内容区内边距。默认不显示。
+弹出框内容区内边距。
+
+默认不显示。
 
 **类型：** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
@@ -72,7 +76,10 @@ contentBuilder: CustomBuilder
 primaryTitle?: ResourceStr
 ```
 
-弹出框标题。默认不显示。  
+弹出框标题。
+
+默认不显示。
+
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
@@ -91,7 +98,10 @@ primaryTitle?: ResourceStr
 secondaryTitle?: ResourceStr
 ```
 
-弹出框辅助文本。默认不显示。  
+弹出框辅助文本。
+
+默认不显示。
+
 **说明：** 辅助文本超过两行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)

@@ -1,6 +1,8 @@
 # WebStorageOrigin
 
-Provides usage information of the Web SQL Database.@interface WebStorageOrigin [since 9 - 11]
+Provides usage information of the Web SQL Database.
+
+@interface WebStorageOrigin [since 9 - 11]
 
 **Since:** 9
 
@@ -33,7 +35,9 @@ Index of the origin.
 quota: number
 ```
 
-Storage quota of the specified source.Unit: byte.
+Storage quota of the specified source.
+
+Unit: byte.
 
 **Type:** number
 
@@ -49,7 +53,9 @@ Storage quota of the specified source.Unit: byte.
 usage: number
 ```
 
-Storage usage of the specified source.Unit: byte.
+Storage usage of the specified source.
+
+Unit: byte.
 
 **Type:** number
 

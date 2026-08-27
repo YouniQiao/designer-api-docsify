@@ -17,9 +17,15 @@
 applyContent(): WrappedBuilder<[T]>
 ```
 
-定制内容区的Builder。  
-**T参数支持范围:**ButtonConfiguration、CheckBoxConfiguration、DataPanelConfiguration、TextClockConfiguration、ToggleConfiguration、GaugeConfiguration、LoadingProgressConfiguration、RadioConfiguration、ProgressConfiguration、RatingConfiguration、SliderConfiguration  
-**属性支持范围:**支持通用属性enabled，contentModifier。
+定制内容区的Builder。
+
+**T参数支持范围:**
+
+ButtonConfiguration、CheckBoxConfiguration、DataPanelConfiguration、TextClockConfiguration、ToggleConfiguration、GaugeConfiguration、LoadingProgressConfiguration、RadioConfiguration、ProgressConfiguration、RatingConfiguration、SliderConfiguration
+
+**属性支持范围:**
+
+支持通用属性enabled，contentModifier。
 
 **起始版本：** 12
 
@@ -33,4 +39,4 @@ applyContent(): WrappedBuilder<[T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;[T]&gt; | 组件的属性类，用来区别不同组件自定义内容区后所需要的不同信息，比如Button组件的ButtonConfiguration，Checkbox组件的 CheckBoxConfiguration等。 |
+| [WrappedBuilder](arkts-arkui-wrappedbuilder-c.md)&lt;[T]&gt; | 组件的属性类，用来区别不同组件自定义内容区后所需要的不同信息，比如Button组件的ButtonConfiguration，Checkbox组件的CheckBoxConfiguration等。 |

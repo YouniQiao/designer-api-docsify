@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## isCaptured
@@ -61,7 +61,7 @@ Check whether the device is captured, projected, or recorded by any app in the b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleNameList | Array & lt;string & gt; | Yes | The list of application bundle names that need to be checked. The max size of array is 100. |
+| bundleNameList | Array&lt;string&gt; | Yes | The list of application bundle names that need to be checked. The max size of array is 100. |
 
 **Return value:**
 

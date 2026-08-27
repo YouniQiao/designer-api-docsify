@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## createAsyKeyGenerator
@@ -14,7 +14,7 @@ function createAsyKeyGenerator(algName: string): AsyKeyGenerator
 
 创建对应算法的非对称密钥生成器实例。
 
-支持的规格详见 [非对称密钥生成和转换规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md)。
+支持的规格详见[非对称密钥生成和转换规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md)。
 
 **起始版本：** 9
 
@@ -28,7 +28,7 @@ function createAsyKeyGenerator(algName: string): AsyKeyGenerator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| algName | string | 是 | 非对称密钥生成支持的算法名。详见 [非对称密钥生成和转换规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md) 一节中的“字符串参数”。 |
+| algName | string | 是 | 非对称密钥生成支持的算法名。详见[非对称密钥生成和转换规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md)一节中的“字符串参数”。 |
 
 **返回值：**
 

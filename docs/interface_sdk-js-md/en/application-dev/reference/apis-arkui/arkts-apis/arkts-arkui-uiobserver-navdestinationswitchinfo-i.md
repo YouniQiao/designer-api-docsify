@@ -9,7 +9,7 @@ Provides the information about page switching of the **Navigation** component.
 ## Modules to Import
 
 ```TypeScript
-import uiObserver from '@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## context
@@ -38,7 +38,7 @@ from: NavDestinationInfo | NavBar
 
 Source page for page switching.
 
-**Type:** NavDestinationInfo \| [NavBar](../arkts-components/arkts-arkui-navbar-t.md)
+**Type:** NavDestinationInfo \| NavBar
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ operation: NavigationOperation
 
 Page switching operation type.
 
-**Type:** [NavigationOperation](../arkts-components/arkts-arkui-navigationoperation-e.md)
+**Type:** NavigationOperation
 
 **Since:** 12
 
@@ -74,7 +74,7 @@ to: NavDestinationInfo | NavBar
 
 Destination page for page switching.
 
-**Type:** NavDestinationInfo \| [NavBar](../arkts-components/arkts-arkui-navbar-t.md)
+**Type:** NavDestinationInfo \| NavBar
 
 **Since:** 12
 

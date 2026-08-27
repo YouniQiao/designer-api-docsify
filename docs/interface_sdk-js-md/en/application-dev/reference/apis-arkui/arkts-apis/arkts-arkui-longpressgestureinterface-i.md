@@ -24,7 +24,13 @@
 (value?: { fingers?: number; repeat?: boolean; duration?: number }): LongPressGestureInterface
 ```
 
-Creates a number press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**, **Image**, and **RichEditor**, the number press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:If the number press duration is less than 500 milliseconds, the system prioritizes the number press event over the drag event.If the number press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the number press event.
+Creates a number press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
+
+In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**, **Image**, and **RichEditor**, the number press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
+
+If the number press duration is less than 500 milliseconds, the system prioritizes the number press event over the drag event.
+
+If the number press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the number press event.
 
 **Since:** 7
 
@@ -50,7 +56,13 @@ Creates a number press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-
 (options?: LongPressGestureHandlerOptions): LongPressGestureInterface
 ```
 
-Creates a number press gesture. Compared with LongPressGesture)}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**, **Image**, and **RichEditor**, the number press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:If the number press duration is less than 500 milliseconds, the system prioritizes the number press event over the drag event.If the number press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the number press event.
+Creates a number press gesture. Compared with LongPressGesture)}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+
+In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**, **Image**, and **RichEditor**, the number press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
+
+If the number press duration is less than 500 milliseconds, the system prioritizes the number press event over the drag event.
+
+If the number press duration reaches or exceeds 500 milliseconds, the system prioritizes the drag event over the number press event.
 
 **Since:** 15
 
@@ -90,7 +102,7 @@ Registers the callback for successful number press gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes | Callback for successful number press gesture recognition. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for successful number press gesture recognition. |
 
 **Return value:**
 
@@ -116,7 +128,7 @@ Registers the callback for number press gesture cancellation. This callback is t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | () = & gt; void | Yes | Callback for number press gesture cancellation. |
+| event | () =&gt; void | Yes | Callback for number press gesture cancellation. |
 
 **Return value:**
 
@@ -170,7 +182,7 @@ Registers the callback for number press gesture completion. This callback is tri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: GestureEvent) = & gt; void | Yes | Callback for number press gesture completion. |
+| event | (event: GestureEvent) =&gt; void | Yes | Callback for number press gesture completion. |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## showActionMenu
@@ -16,9 +16,9 @@ function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<Acti
 
 > **说明：**
 > 
-> - 从API version 9开始支持，从API version 18开始废弃，建议使用showActionMenu替代。 showActionMenu需先通过UIContext中的 [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取 [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md)对象，然后通过该对象进行调用。且直接使用showActionMenu可能导致 [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
+> - 从API version 9开始支持，从API version 18开始废弃，建议使用showActionMenu替代。 showActionMenu需先通过UIContext中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取[PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md)对象，然后通过该对象进行调用。且直接使用showActionMenu可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
 > 
-> - 从API version 11开始，可以通过使用UIContext中的 [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取当前UI上下文关联的 [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md)对象。
+> - 从API version 11开始，可以通过使用UIContext中的 [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取当前UI上下文关联的[PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md)对象。
 
 **起始版本：** 9
 
@@ -34,8 +34,8 @@ function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<Acti
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | 是 | 操作菜单选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | 是 | 回调函数。弹出操作菜单成功时，err为undefined， data为获取到的操作菜单响应结果；失败时，err为错误对象。 |
+| options | ActionMenuOptions | 是 | 操作菜单选项。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | 是 | 回调函数。弹出操作菜单成功时，err为undefined，data为获取到的操作菜单响应结果；失败时，err为错误对象。 |
 
 **错误码：**
 
@@ -161,9 +161,9 @@ function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessRe
 
 > **说明：**
 > 
-> - 从API version 9开始支持，从API version 18开始废弃，建议使用showActionMenu替代。 showActionMenu需先通过UIContext中的 [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取 [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md)对象，然后通过该对象进行调用。且直接使用showActionMenu可能导致 [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
+> - 从API version 9开始支持，从API version 18开始废弃，建议使用showActionMenu替代。 showActionMenu需先通过UIContext中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取[PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md)对象，然后通过该对象进行调用。且直接使用showActionMenu可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
 > 
-> - 从API version 10开始，可以通过使用UIContext中的 [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取当前UI上下文关联的 [PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md)对象。
+> - 从API version 10开始，可以通过使用UIContext中的 [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取当前UI上下文关联的[PromptAction](arkts-arkui-arkui-uicontext-promptaction-c.md)对象。
 
 **起始版本：** 9
 
@@ -179,13 +179,13 @@ function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessRe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | 是 | 操作菜单选项。 |
+| options | ActionMenuOptions | 是 | 操作菜单选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ActionMenuSuccessResponse & gt; | Promise对象，返回菜单的响应结果。 |
+| Promise&lt;ActionMenuSuccessResponse&gt; | Promise对象，返回菜单的响应结果。 |
 
 **错误码：**
 
@@ -195,30 +195,6 @@ function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessRe
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 **示例**
-
-```TypeScript
-import { promptAction } from '@kit.ArkUI';
-
-promptAction.showActionMenu({
-  title: 'showActionMenu Title Info',
-  buttons: [
-    {
-      text: 'item1',
-      color: '#666666'
-    },
-    {
-      text: 'item2',
-      color: '#000000'
-    },
-  ]
-})
-  .then(data => {
-    console.info('showActionMenu success, click button: ' + data.index);
-  })
-  .catch((err: Error) => {
-    console.info('showActionMenu error: ' + err);
-  })
-```
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';

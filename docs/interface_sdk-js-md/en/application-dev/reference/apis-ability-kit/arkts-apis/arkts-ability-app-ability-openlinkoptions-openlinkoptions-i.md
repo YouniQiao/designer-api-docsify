@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import OpenLinkOptions from '@kit.AbilityKit';
+import { OpenLinkOptions } from '@kit.AbilityKit';
 ```
 
 ## appLinkingOnly
@@ -18,11 +18,14 @@ import OpenLinkOptions from '@kit.AbilityKit';
 appLinkingOnly?: boolean
 ```
 
-Whether the UIAbility must be started using <!--RP1--> [App Linking](../../../application-models/app-linking-startup.md)<!--RP1End-->.  
+Whether the UIAbility must be started using <!--RP1--> [App Linking](../../../application-models/app-linking-startup.md)<!--RP1End-->.
+
 - If this parameter is set to **true** and no UIAbility matches the URL in App Linking, the result is returned  
 directly.  
 - If this parameter is set to **false** and no UIAbility matches the URL in App Linking, App Linking falls back to  
-[Deep Linking](../../../application-models/deep-linking-startup.md). The default value is **false**.When the aa command is used to implicitly start an ability, you can set **--pb appLinkingOnly true** or **--pb appLinkingOnly false** to start the ability in App Linking mode.
+[Deep Linking](../../../application-models/deep-linking-startup.md). The default value is **false**.
+
+When the aa command is used to implicitly start an ability, you can set **--pb appLinkingOnly true** or **--pb appLinkingOnly false** to start the ability in App Linking mode.
 
 **Type:** boolean
 
@@ -58,9 +61,11 @@ Operation class used to handle the result of an application launch request.
 hideFailureTipDialog?: boolean
 ```
 
-Whether to display a "No app available" dialog box when a suitable application is not found using [Deep Linking](../../../application-models/deep-linking-startup.md).  
+Whether to display a "No app available" dialog box when a suitable application is not found using [Deep Linking](../../../application-models/deep-linking-startup.md).
+
 - **true**: The "No app available" dialog box is not displayed.  
-- **false**: The "No app available" dialog box is displayed. The default value is **false**.  
+- **false**: The "No app available" dialog box is displayed. The default value is **false**.
+
 Note: If **appLinkingOnly** is set to **true**, the Deep Linking process is not triggered, and this field does not take effect.
 
 **Type:** boolean
@@ -81,7 +86,9 @@ Note: If **appLinkingOnly** is set to **true**, the Deep Linking process is not 
 parameters?: Record<string, Object>
 ```
 
-List of parameters in Want.Note: For details about the usage rules, see **parameters** in [want](arkts-ability-app-ability-want-want-c.md).
+List of parameters in Want.
+
+Note: For details about the usage rules, see **parameters** in [want](arkts-ability-app-ability-want-want-c.md).
 
 **Type:** Record&lt;string, Object&gt;
 

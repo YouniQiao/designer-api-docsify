@@ -1,7 +1,9 @@
 # SideBarContainer
 
 The **SideBarContainer** component contains a sidebar and content area as its child components. The sidebar is the first child component and can be shown or hidden as needed. The content area is the second child component.
+
 > **NOTE**
+
 > The APIs of this module are supported since API version 8. Updates will be marked with a superscript to indicate > their
 
 ## Child Components
@@ -49,11 +51,16 @@ Creates a sidebar container.
 
 | Name | Description |
 | --- | --- |
+| [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md) | Describes the icons of the sidebar control button. |
+| [ButtonStyle](arkts-arkui-buttonstyle-i.md) | Describes the style of the sidebar control button. |
+| [DividerStyle](arkts-arkui-dividerstyle-i.md) | Sets the divider style. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | Enumerates the types of sidebar containers. |
+| [SideBarPosition](arkts-arkui-sidebarposition-e.md) | Enumerates the positions of the sidebar. |
 
 ## Examples
 

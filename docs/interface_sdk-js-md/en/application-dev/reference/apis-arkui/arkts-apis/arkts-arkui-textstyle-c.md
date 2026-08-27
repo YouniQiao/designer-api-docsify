@@ -57,7 +57,9 @@ Text color of the styled string.
 readonly fontConfigs?: FontConfigs
 ```
 
-Font configuration of the styled string.Default value: **undefined**, indicating that fontConfigs is not set.
+Font configuration of the styled string.
+
+Default value: **undefined**, indicating that fontConfigs is not set.
 
 **Type:** [FontConfigs](arkts-arkui-fontconfigs-i.md)
 
@@ -75,7 +77,9 @@ Font configuration of the styled string.Default value: **undefined**, indicating
 readonly fontFamily?: string
 ```
 
-Font family of the styled string.Returns **undefined** by default.
+Font family of the styled string.
+
+Returns **undefined** by default.
 
 **Type:** string
 
@@ -93,7 +97,9 @@ Font family of the styled string.Returns **undefined** by default.
 readonly fontSize?: number
 ```
 
-Font size of the styled string.Unit: vp
+Font size of the styled string.
+
+Unit: vp
 
 **Type:** number
 
@@ -129,7 +135,10 @@ Font style of the styled string.
 readonly fontVariations?: Array<FontVariation>
 ```
 
-Array of variable font attributes.Default value: **undefined**, indicating that variable font attributes are not set.  
+Array of variable font attributes.
+
+Default value: **undefined**, indicating that variable font attributes are not set.
+
 **Since**: 26.0.0
 
 **Type:** Array&lt;FontVariation&gt;
@@ -166,7 +175,9 @@ Font weight of the styled string.
 readonly strokeColor?: ResourceColor
 ```
 
-Text stroke color of the styled string.Default value: same as the text color.
+Text stroke color of the styled string.
+
+Default value: same as the text color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -184,7 +195,10 @@ Text stroke color of the styled string.Default value: same as the text color.
 readonly strokeJoinStyle?: StrokeJoinStyle
 ```
 
-Text stroke join style of the styled string.Default value: **StrokeJoinStyle.MITER_JOIN**.  
+Text stroke join style of the styled string.
+
+Default value: **StrokeJoinStyle.MITER_JOIN**.
+
 **Since**: 26.0.0.
 
 **Type:** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
@@ -203,7 +217,9 @@ Text stroke join style of the styled string.Default value: **StrokeJoinStyle.MIT
 readonly strokeWidth?: number
 ```
 
-Text stroke width of the styled string.Default value: **0**, in vp.
+Text stroke width of the styled string.
+
+Default value: **0**, in vp.
 
 **Type:** number
 
@@ -221,7 +237,9 @@ Text stroke width of the styled string.Default value: **0**, in vp.
 readonly superscript?: SuperscriptStyle
 ```
 
-Superscript or subscript for the styled string.Default value: **SuperscriptStyle.NORMAL**.
+Superscript or subscript for the styled string.
+
+Default value: **SuperscriptStyle.NORMAL**.
 
 **Type:** [SuperscriptStyle](arkts-arkui-superscriptstyle-e.md)
 

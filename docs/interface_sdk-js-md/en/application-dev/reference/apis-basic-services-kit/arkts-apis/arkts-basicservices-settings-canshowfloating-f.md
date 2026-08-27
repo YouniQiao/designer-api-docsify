@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import settings from '@kit.BasicServicesKit';
-import settingsLite from '@kit.BasicServicesKitLite';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## canShowFloating
@@ -58,7 +57,7 @@ Checks whether a specified application can show as a floating window.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Returns { |
+| Promise&lt;boolean&gt; | Returns { |
 
 **Examples**
 

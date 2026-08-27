@@ -9,7 +9,7 @@ Provides APIs for managing OS accounts.
 ## Modules to Import
 
 ```TypeScript
-import osAccount from '@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## activateOsAccount
@@ -98,7 +98,7 @@ Activates an OS account. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -141,7 +141,9 @@ try {
 activateOsAccount(localId: number, displayId: number): Promise<void>
 ```
 
-Activates (Starts on the foreground or switches to) the target OS account on the specified logical display. This API uses a promise to return the result.Currently, cross-logical-display activation is not supported. That is, you cannot activate an OS account that is already running on the foreground of another logical display on the specified logical display.
+Activates (Starts on the foreground or switches to) the target OS account on the specified logical display. This API uses a promise to return the result.
+
+Currently, cross-logical-display activation is not supported. That is, you cannot activate an OS account that is already running on the foreground of another logical display on the specified logical display.
 
 **Since:** 23
 
@@ -162,7 +164,7 @@ Activates (Starts on the foreground or switches to) the target OS account on the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -228,7 +230,7 @@ Binds a domain account to an OS account. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -560,7 +562,7 @@ Deactivates an OS account. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -671,7 +673,7 @@ Obtains the bundle ID based on the specified UID. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the bundle ID obtained. |
+| Promise&lt;number&gt; | Promise used to return the bundle ID obtained. |
 
 **Error codes:**
 
@@ -777,7 +779,7 @@ Obtains all the enabled constraints of an OS account. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return all the enabled [constraints](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) of the OS account. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return all the enabled [constraints](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) of the OS account. |
 
 **Error codes:**
 
@@ -836,7 +838,7 @@ Obtains the logical display ID of the specified foreground OS account. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the logical display ID. |
+| Promise&lt;number&gt; | Promise used to return the logical display ID. |
 
 **Error codes:**
 
@@ -892,7 +894,7 @@ Obtains the ID of the foreground OS account running on a specified logical displ
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the OS account ID. |
+| Promise&lt;number&gt; | Promise used to return the OS account ID. |
 
 **Error codes:**
 
@@ -1120,7 +1122,7 @@ Obtains the profile photo of an OS account. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the profile photo information obtained. |
+| Promise&lt;string&gt; | Promise used to return the profile photo information obtained. |
 
 **Error codes:**
 
@@ -1282,7 +1284,7 @@ Checks whether the current process belongs to the main OS account. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. If **true** is returned, the current process belongs to the main OS account. If **false** is returned, the current process does not belong to the main OS account. |
+| Promise&lt;boolean&gt; | Promise used to return the result. If **true** is returned, the current process belongs to the main OS account. If **false** is returned, the current process does not belong to the main OS account. |
 
 **Error codes:**
 
@@ -1336,7 +1338,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -1396,7 +1398,7 @@ Checks whether a constraint is enabled for an OS account. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -1456,7 +1458,7 @@ Checks whether an OS account has been unlocked. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the OS account has been unlocked; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the OS account has been unlocked; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -2089,7 +2091,7 @@ Queries the maximum number of OS accounts allowed to log in to the system. This 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. |
+| Promise&lt;number&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -2182,7 +2184,7 @@ Queries the maximum number of OS accounts that can be created. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. |
+| Promise&lt;number&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -2460,7 +2462,7 @@ Removes an OS account. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2524,7 +2526,7 @@ Removes a specified OS account based on the options. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2586,7 +2588,7 @@ Sets or removes constraints for an OS account. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| constraints | Array & lt;string & gt; | Yes | [Constraints](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) to set or remove. |
+| constraints | Array&lt;string&gt; | Yes | [Constraints](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) to set or remove. |
 | enable | boolean | Yes | Set or remove constraints. The value **true** means to set constraints, and **false** means to remove constraints. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
@@ -2647,14 +2649,14 @@ Sets or removes constraints for an OS account. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| constraints | Array & lt;string & gt; | Yes | [Constraints](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) to set or remove. |
+| constraints | Array&lt;string&gt; | Yes | [Constraints](../../../reference/apis-basic-services-kit/appendix-osAccount-constraints.md) to set or remove. |
 | enable | boolean | Yes | Set or remove constraints. The value **true** means to set constraints, and **false** means to remove constraints. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2776,7 +2778,7 @@ Sets the name of an OS account. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2902,7 +2904,7 @@ Sets a profile photo for an OS account. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2969,7 +2971,7 @@ Sets the type of a specified OS account. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

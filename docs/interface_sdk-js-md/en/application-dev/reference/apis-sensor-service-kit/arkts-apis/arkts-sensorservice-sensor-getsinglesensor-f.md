@@ -84,7 +84,7 @@ Obtains information about the sensor of a specific type. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Sensor & gt; | Promise used to return the sensor information. |
+| Promise&lt;Sensor&gt; | Promise used to return the sensor information. |
 
 **Error codes:**
 

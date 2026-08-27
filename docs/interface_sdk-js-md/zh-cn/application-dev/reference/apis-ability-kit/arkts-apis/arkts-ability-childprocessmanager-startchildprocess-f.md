@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import childProcessManager from '@kit.AbilityKit';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## startChildProcess
@@ -20,6 +20,7 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<numb
 > ，[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)函数执行完后子进程会自动销毁。
 > 
 > 调用该接口创建的子进程不支持异步ArkTS API调用，仅支持同步ArkTS API调用。
+
 **设备行为差异**：该接口在Tablet、PC/2in1中可正常调用，在其他设备类型中返回16000061错误码。
 
 **起始版本：** 11
@@ -33,13 +34,13 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<numb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | srcEntry | string | 是 | 子进程源文件路径，只支持源文件放在entry类型的模块中，以src/main为根目录。例如子进程文件在entry模块下src/main/ets/process/ DemoProcess.ets，则srcEntry为"./ets/process/DemoProcess.ets"。另外，需要确保子进程源文件被其它文件引用到，防止被构建工具优化掉。（详见下方示例代码） |
-| startMode | [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | 是 | 子进程启动模式。SELF_FORK（值为0）：从App自身进程Fork子进程，继承父进程资源，不能使用Binder IPC和其他进程通信，否则会导致子进程崩溃退出； APP_SPAWN_FORK（值为1）：从AppSpawn Fork子进程，不继承父进程资源，可使用Binder IPC和其他进程通信。 |
+| startMode | [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | 是 | 子进程启动模式。SELF_FORK（值为0）：从App自身进程Fork子进程，继承父进程资源，不能使用Binder IPC和其他进程通信，否则会导致子进程崩溃退出；APP_SPAWN_FORK（值为1）：从AppSpawn Fork子进程，不继承父进程资源，可使用Binder IPC和其他进程通信。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回子进程pid。 |
+| Promise&lt;number&gt; | Promise对象，返回子进程pid。 |
 
 **错误码：**
 
@@ -53,7 +54,7 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<numb
 **示例**
 
 ```TypeScript
-// 在entry模块的src/main/ets/process下创建DemoProcess.ets子进程类:
+// 在entry模块的src/main/ets/process下创建DemoProcess.ets子进程类：
 // entry/src/main/ets/process/DemoProcess.ets
 import { ChildProcess } from '@kit.AbilityKit';
 
@@ -65,7 +66,7 @@ export default class DemoProcess extends ChildProcess {
 ```
 
 ```TypeScript
-// 使用childProcessManager.startChildProcess方法启动子进程:
+// 使用childProcessManager.startChildProcess方法启动子进程：
 // entry/src/main/ets/tool/Tool.ets
 import { childProcessManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -99,6 +100,7 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 > ，[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)函数执行完后子进程会自动销毁。
 > 
 > 调用该接口创建的子进程不支持异步ArkTS API调用，仅支持同步ArkTS API调用。
+
 **设备行为差异**：该接口在Tablet、PC/2in1中可正常调用，在其他设备类型中返回16000061错误码。
 
 **起始版本：** 11
@@ -112,7 +114,7 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | srcEntry | string | 是 | 子进程源文件路径，只支持源文件放在entry类型的模块中，以src/main为根目录。例如子进程文件在entry模块下src/main/ets/process/ DemoProcess.ets，则srcEntry为"./ets/process/DemoProcess.ets"。另外，需要确保子进程源文件被其它文件引用到，防止被构建工具优化掉。（详见下方示例代码） |
-| startMode | [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | 是 | 子进程启动模式。从App自身进程Fork子进程，继承父进程资源，不能使用Binder IPC和其他进程通信，否则会导致子进程崩溃退出； APP_SPAWN_FORK（值为1）：从AppSpawn Fork子进程，不继承父进程资源，可使用Binder IPC和其他进程通信。 |
+| startMode | [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | 是 | 子进程启动模式。从App自身进程Fork子进程，继承父进程资源，不能使用Binder IPC和其他进程通信，否则会导致子进程崩溃退出；APP_SPAWN_FORK（值为1）：从AppSpawn Fork子进程，不继承父进程资源，可使用Binder IPC和其他进程通信。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当子进程启动成功，err为undefined，data为获取到的子进程pid；否则为错误对象。 |
 
 **错误码：**
@@ -127,7 +129,7 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 **示例**
 
 ```TypeScript
-// 在entry模块的src/main/ets/process下创建DemoProcess.ets子进程类:
+// 在entry模块的src/main/ets/process下创建DemoProcess.ets子进程类：
 // entry/src/main/ets/process/DemoProcess.ets
 import { ChildProcess } from '@kit.AbilityKit';
 
@@ -139,7 +141,7 @@ export default class DemoProcess extends ChildProcess {
 ```
 
 ```TypeScript
-// 使用childProcessManager.startChildProcess方法启动子进程:
+// 使用childProcessManager.startChildProcess方法启动子进程：
 // entry/src/main/ets/tool/Tool.ets
 import { childProcessManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';

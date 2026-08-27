@@ -35,7 +35,9 @@ Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#even
 displayX?: number
 ```
 
-X coordinate of the cursor or stylus position in the coordinate system of the current screen window.Unit: vp.
+X coordinate of the cursor or stylus position in the coordinate system of the current screen window.
+
+Unit: vp.
 
 **Type:** number
 
@@ -53,7 +55,9 @@ X coordinate of the cursor or stylus position in the coordinate system of the cu
 displayY?: number
 ```
 
-Y coordinate of the cursor or stylus position in the coordinate system of the current screen window.Unit: vp.
+Y coordinate of the cursor or stylus position in the coordinate system of the current screen window.
+
+Unit: vp.
 
 **Type:** number
 
@@ -71,7 +75,11 @@ Y coordinate of the cursor or stylus position in the coordinate system of the cu
 globalDisplayX?: number
 ```
 
-X coordinate of the cursor or stylus position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).Unit: vp.Value range: (-∞, +∞).
+X coordinate of the cursor or stylus position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
+
+Unit: vp.
+
+Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -89,7 +97,11 @@ X coordinate of the cursor or stylus position in the [global coordinate system](
 globalDisplayY?: number
 ```
 
-Y coordinate of the cursor or stylus position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).Unit: vp.Value range: (-∞, +∞).
+Y coordinate of the cursor or stylus position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
+
+Unit: vp.
+
+Value range: (-∞, +∞).
 
 **Type:** number
 
@@ -107,7 +119,9 @@ Y coordinate of the cursor or stylus position in the [global coordinate system](
 windowX?: number
 ```
 
-X coordinate of the cursor or stylus position in the coordinate system of the current application window.Unit: vp.
+X coordinate of the cursor or stylus position in the coordinate system of the current application window.
+
+Unit: vp.
 
 **Type:** number
 
@@ -125,7 +139,9 @@ X coordinate of the cursor or stylus position in the coordinate system of the cu
 windowY?: number
 ```
 
-Y coordinate of the cursor or stylus position in the coordinate system of the current application window.Unit: vp.
+Y coordinate of the cursor or stylus position in the coordinate system of the current application window.
+
+Unit: vp.
 
 **Type:** number
 
@@ -143,7 +159,9 @@ Y coordinate of the cursor or stylus position in the coordinate system of the cu
 x?: number
 ```
 
-X coordinate of the cursor or stylus position in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the current component.Unit: vp.
+X coordinate of the cursor or stylus position in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the current component.
+
+Unit: vp.
 
 **Type:** number
 
@@ -161,7 +179,9 @@ X coordinate of the cursor or stylus position in the [component coordinate syste
 y?: number
 ```
 
-Y coordinate of the cursor or stylus position in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the current component.Unit: vp.
+Y coordinate of the cursor or stylus position in the [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the current component.
+
+Unit: vp.
 
 **Type:** number
 

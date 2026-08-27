@@ -139,7 +139,7 @@ A constructor that creates an ArkTS Int16Array from an iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | Iterable & lt;number & gt; | Yes | An iterable collection of numbers used to construct an ArkTS Int16Array object. |
+| elements | Iterable&lt;number&gt; | Yes | An iterable collection of numbers used to construct an ArkTS Int16Array object. |
 
 **Error codes:**
 
@@ -165,7 +165,7 @@ A constructor that creates an ArkTS Int16Array from an array-like object or ArkT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; \ | ArrayBuffer | Yes | Object used to construct the ArkTS Int16Array. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 2. |
+| array | ArrayLike&lt;number&gt; \| ArrayBuffer | Yes | Object used to construct the ArkTS Int16Array. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 2. |
 
 **Error codes:**
 
@@ -475,7 +475,7 @@ Creates an ArkTS Int16Array from an array-like or iterator object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;number & gt; | Yes | Array-like object used to construct the ArkTS Int16Array. |
+| arrayLike | ArrayLike&lt;number&gt; | Yes | Array-like object used to construct the ArkTS Int16Array. |
 
 **Return value:**
 
@@ -501,7 +501,7 @@ Creates an ArkTS Int16Array from an array-like object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;T & gt; | Yes | Array-like object used to construct the ArkTS Int16Array. |
+| arrayLike | ArrayLike&lt;T&gt; | Yes | Array-like object used to construct the ArkTS Int16Array. |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | Yes | A mapping function to call on every element of the array. |
 
 **Return value:**
@@ -528,7 +528,7 @@ Creates an ArkTS Int16Array from an iterator object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | Iterable & lt;number & gt; | Yes | Iterator object used to construct the ArkTS Int16Array. |
+| arrayLike | Iterable&lt;number&gt; | Yes | Iterator object used to construct the ArkTS Int16Array. |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;number, number&gt; | No | Mapping function. If no value is passed in, no special processing is conducted on the elements. |
 
 **Return value:**
@@ -971,7 +971,7 @@ Writes the elements in an array-like object to the given start position in seque
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | ArrayLike & lt;number & gt; | Yes | Array-like object whose elements will be written. |
+| array | ArrayLike&lt;number&gt; | Yes | Array-like object whose elements will be written. |
 | offset | number | No | Start position for writing data. The default value is 0. |
 
 **Error codes:**

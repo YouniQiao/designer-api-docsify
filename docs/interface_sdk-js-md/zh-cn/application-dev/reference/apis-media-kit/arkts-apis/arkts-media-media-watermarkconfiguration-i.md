@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## height
@@ -18,7 +18,7 @@ import media from '@kit.MediaKit';
 height?: number
 ```
 
-水印图片的高度。 取值为正整数，取值范围为[1, 4096]，单位为像素（px）。
+水印图片的高度。取值为正整数，取值范围为[1, 4096]，单位为像素（px）。
 
 **类型：** number
 
@@ -34,7 +34,7 @@ height?: number
 left: number
 ```
 
-水印相对于视频左侧位置的偏移量。 取值为整数，单位为像素（px）。
+水印相对于视频左侧位置的偏移量。取值为整数，单位为像素（px）。
 
 **类型：** number
 
@@ -50,7 +50,7 @@ left: number
 top: number
 ```
 
-水印相对于视频顶部位置的偏移量。 取值为整数，单位为像素（px）。
+水印相对于视频顶部位置的偏移量。取值为整数，单位为像素（px）。
 
 **类型：** number
 
@@ -66,7 +66,7 @@ top: number
 width?: number
 ```
 
-水印图片的宽度。 取值为正整数，取值范围为[1, 4096]，单位为像素（px）。
+水印图片的宽度。取值为正整数，取值范围为[1, 4096]，单位为像素（px）。
 
 **类型：** number
 

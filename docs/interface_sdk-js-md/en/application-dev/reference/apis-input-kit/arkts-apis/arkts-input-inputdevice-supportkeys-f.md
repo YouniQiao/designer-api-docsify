@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## supportKeys
@@ -84,7 +83,7 @@ Checks whether the input device supports the specified keys. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;boolean & gt; & gt; | Promise object, returning the query result. true indicates supported, false indicates not supported. |
+| Promise&lt;Array&lt;boolean&gt;&gt; | Promise object, returning the query result. true indicates supported, false indicates not supported. |
 
 **Error codes:**
 

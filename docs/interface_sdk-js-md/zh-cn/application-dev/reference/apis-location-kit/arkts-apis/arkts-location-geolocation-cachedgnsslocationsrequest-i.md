@@ -1,6 +1,8 @@
 # CachedGnssLocationsRequest
 
-请求订阅GNSS缓存位置上报功能接口的配置参数。@interface CachedGnssLocationsRequest
+请求订阅GNSS缓存位置上报功能接口的配置参数。
+
+@interface CachedGnssLocationsRequest
 
 **起始版本：** 8
 
@@ -15,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## reportingPeriodSec
@@ -42,7 +44,7 @@ reportingPeriodSec: number
 wakeUpCacheQueueFull: boolean
 ```
 
-GNSS芯片底层缓存队列满之后是否主动唤醒AP芯片。 true表示GNSS芯片底层缓存队列满之后会主动唤醒AP芯片，并把缓存位置上报给应用。 false表示GNSS芯片底层缓存队列满之后不会主动唤醒AP芯片，会把缓存位置直接丢弃。
+GNSS芯片底层缓存队列满之后是否主动唤醒AP芯片。true表示GNSS芯片底层缓存队列满之后会主动唤醒AP芯片，并把缓存位置上报给应用。false表示GNSS芯片底层缓存队列满之后不会主动唤醒AP芯片，会把缓存位置直接丢弃。
 
 **类型：** boolean
 

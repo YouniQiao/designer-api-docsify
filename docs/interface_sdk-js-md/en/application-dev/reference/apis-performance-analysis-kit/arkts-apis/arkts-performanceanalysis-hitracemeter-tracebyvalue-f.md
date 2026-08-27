@@ -11,7 +11,9 @@
 function traceByValue(name: string, count: number): void
 ```
 
-Traces the value changes of an integer variable.Since API version 19, you are advised to use the [traceByValue](#tracebyvalue) API to specify the trace output level.
+Traces the value changes of an integer variable.
+
+Since API version 19, you are advised to use the [traceByValue](#tracebyvalue) API to specify the trace output level.
 
 **Since:** 8
 

@@ -1,6 +1,8 @@
 # ContainerSpanModifier
 
-Defines ContainerSpan modifier, the base class for quick use modifier ability@extends ContainerSpanAttribute @implements AttributeModifier&lt;ContainerSpanAttribute&gt;
+Defines ContainerSpan modifier, the base class for quick use modifier ability
+
+@extends ContainerSpanAttribute @implements AttributeModifier&lt;ContainerSpanAttribute&gt;
 
 **Inheritance/Implementation:** ContainerSpanModifier extends [ContainerSpanAttribute](../arkts-components/arkts-arkui-containerspan-attribute.md#containerspanattribute) and implements AttributeModifier<ContainerSpanAttribute>
 

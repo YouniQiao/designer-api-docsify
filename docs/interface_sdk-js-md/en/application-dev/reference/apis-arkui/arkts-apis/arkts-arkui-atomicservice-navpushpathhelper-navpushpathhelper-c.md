@@ -58,7 +58,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -76,7 +76,9 @@ Checks for the target subpackage and, if it is not present, initiates a download
 pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+
+Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -96,7 +98,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -135,7 +137,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -176,7 +178,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -214,7 +216,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -228,7 +230,9 @@ Checks for the target subpackage and, if it is not present, initiates a download
 pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pushes the NavDestination page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+
+Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -248,7 +252,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -283,7 +287,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -320,7 +324,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -354,7 +358,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -368,7 +372,9 @@ Checks for the target subpackage and, if it is not present, initiates a download
 replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pops the top page from the current navigation stack. This API uses a promise to handle asynchronous operations.Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
+Checks for the target subpackage and, if it is not present, initiates a download using the specified module name. Once the subpackage is downloaded, the API pops the top page from the current navigation stack. This API uses a promise to handle asynchronous operations.
+
+Depending on the LaunchMode specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -388,7 +394,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -423,7 +429,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

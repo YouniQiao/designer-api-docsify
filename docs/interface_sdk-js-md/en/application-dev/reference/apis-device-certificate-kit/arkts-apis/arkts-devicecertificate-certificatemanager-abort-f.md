@@ -81,7 +81,7 @@ Aborts the signing or signature verification operation. This method is mutually 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

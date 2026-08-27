@@ -1,6 +1,8 @@
 # Ranking
 
-The definition of Ranking.@extends MediaEntity @interface Ranking
+The definition of Ranking.
+
+@extends MediaEntity @interface Ranking
 
 **Inheritance/Implementation:** Ranking extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
 
@@ -11,7 +13,7 @@ The definition of Ranking.@extends MediaEntity @interface Ranking
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## topElements

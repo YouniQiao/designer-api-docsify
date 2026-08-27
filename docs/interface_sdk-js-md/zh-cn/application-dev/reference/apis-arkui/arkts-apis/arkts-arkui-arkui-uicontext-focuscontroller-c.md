@@ -151,7 +151,9 @@ struct ClearFocusExample {
 isActive(): boolean
 ```
 
-返回UI实例的焦点激活态。焦点激活态可参考[基础概念：焦点激活态](../../../ui/arkts-common-events-focus-event.md#基础概念)。
+返回UI实例的焦点激活态。
+
+焦点激活态可参考[基础概念：焦点激活态](../../../ui/arkts-common-events-focus-event.md#基础概念)。
 
 **起始版本：** 20
 
@@ -323,7 +325,7 @@ setAutoFocusTransfer(isAutoFocusTransfer: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isAutoFocusTransfer | boolean | 是 | 设置页面切换时，新的页面是否需要主动获取焦点，例如[Router](arkts-router.md)、 Navigation、Menu、Dialog、 Popup等。true表示需要主动获取焦点，false表示不需要主动获取焦点。默认值为true。 |
+| isAutoFocusTransfer | boolean | 是 | 设置页面切换时，新的页面是否需要主动获取焦点，例如[Router](arkts-router.md)、Navigation、Menu、Dialog、Popup等。true表示需要主动获取焦点，false表示不需要主动获取焦点。默认值为true。 |
 
 **示例**
 

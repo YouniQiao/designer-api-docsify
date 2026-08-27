@@ -41,7 +41,7 @@ Decrypts the CMS message of the **ENVELOPED_DATA** content type. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the decryption result. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the decryption result. |
 
 **Error codes:**
 
@@ -160,7 +160,7 @@ Obtains the certificate from CMS message of the **SIGNED_DATA** type by passing 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;X509Cert & gt; & gt; | Promise used to return a certificate set. |
+| Promise&lt;Array&lt;X509Cert&gt;&gt; | Promise used to return a certificate set. |
 
 **Error codes:**
 
@@ -306,7 +306,7 @@ Obtains the content data from CMS message of the **SIGNED_DATA** type. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the content data. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the content data. |
 
 **Error codes:**
 
@@ -605,7 +605,7 @@ Set the CMS message data. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -754,7 +754,7 @@ Verifies the CMS message of the **SIGNED_DATA** content type. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

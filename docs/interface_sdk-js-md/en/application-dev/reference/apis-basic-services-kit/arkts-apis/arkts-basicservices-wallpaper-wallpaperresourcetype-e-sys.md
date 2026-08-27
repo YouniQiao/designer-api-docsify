@@ -1,6 +1,8 @@
 # WallpaperResourceType (System API)
 
-Indicates the resource type of the wallpaper.@enum { number } WallpaperResourceType
+Indicates the resource type of the wallpaper.
+
+@enum { number } WallpaperResourceType
 
 **Since:** 10
 

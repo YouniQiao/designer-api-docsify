@@ -9,7 +9,7 @@ PhotoAsset provides APIs for encapsulating file asset attributes.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## clone
@@ -36,7 +36,7 @@ Clones a media asset. The file name can be set, but the file type cannot be chan
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PhotoAsset & gt; | Promise used to return the [PhotoAsset]{ |
+| Promise&lt;PhotoAsset&gt; | Promise used to return the [PhotoAsset]{ |
 
 **Error codes:**
 
@@ -161,7 +161,7 @@ Closes the current file. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -315,7 +315,7 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -418,7 +418,7 @@ Obtains a **PhotoAsset** member parameter.
 
 | Type | Description |
 | --- | --- |
-| [MemberType](arkts-medialibrary-photoaccesshelper-membertype-t.md) | PhotoAsset** member parameter obtained. |
+| MemberType | PhotoAsset** member parameter obtained. |
 
 **Error codes:**
 
@@ -459,7 +459,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getReadOnlyFd(callback: AsyncCallback<number>): void
 ```
 
-Opens this file in read-only mode. This API uses an asynchronous callback to return the result.The returned FD must be closed when it is not required.
+Opens this file in read-only mode. This API uses an asynchronous callback to return the result.
+
+The returned FD must be closed when it is not required.
 
 **Since:** 10
 
@@ -520,7 +522,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getReadOnlyFd(): Promise<number>
 ```
 
-Opens this file in read-only mode. This API uses a promise to return the result.The returned FD must be closed when it is not required.
+Opens this file in read-only mode. This API uses a promise to return the result.
+
+The returned FD must be closed when it is not required.
 
 **Since:** 10
 
@@ -536,7 +540,7 @@ Opens this file in read-only mode. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the FD of the file opened. |
+| Promise&lt;number&gt; | Promise used to return the FD of the file opened. |
 
 **Error codes:**
 
@@ -731,7 +735,7 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return the PixelMap of the thumbnail. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the PixelMap of the thumbnail. |
 
 **Error codes:**
 

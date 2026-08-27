@@ -1,6 +1,8 @@
 # PickerElement
 
-The &lt;picker&gt; component supports common, date, time, and multi-column text.@interface PickerElement
+The &lt;picker&gt; component supports common, date, time, and multi-column text.
+
+@interface PickerElement
 
 **Since:** 4
 

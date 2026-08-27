@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getLinkedInfoSync
@@ -25,7 +24,7 @@ Obtain connection information about the Wi-Fi connection.this apireturns the res
 
 | Type | Description |
 | --- | --- |
-| [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md) | Returns Wi-Fi linked information. |
+| WifiLinkedInfo | Returns Wi-Fi linked information. |
 
 **Error codes:**
 

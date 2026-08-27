@@ -53,7 +53,9 @@ layoutStyle?: ImageAttachmentLayoutStyle
 objectFit?: ImageFit
 ```
 
-设置图片的缩放类型，当前枚举类型不支持ImageFit.MATRIX。具体枚举及说明请参考ImageFit。默认值：ImageFit.Cover。
+设置图片的缩放类型，当前枚举类型不支持ImageFit.MATRIX。具体枚举及说明请参考ImageFit。
+
+默认值：ImageFit.Cover。
 
 **类型：** [ImageFit](arkts-arkui-imagefit-e.md)
 
@@ -107,7 +109,9 @@ resourceValue: Optional<ResourceStr>
 size?: SizeOptions
 ```
 
-设置图片大小，不支持百分比。size的默认值与objectFit的值有关，不同的objectFit的值对应size的默认值不同。
+设置图片大小，不支持百分比。
+
+size的默认值与objectFit的值有关，不同的objectFit的值对应size的默认值不同。
 
 **类型：** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
@@ -125,7 +129,11 @@ size?: SizeOptions
 supportSvg2?: boolean
 ```
 
-获取属性字符串是否开启SVG标签解析能力增强功能。true：支持SVG解析新能力；false：保持原有SVG解析能力。默认值：false
+获取属性字符串是否开启SVG标签解析能力增强功能。
+
+true：支持SVG解析新能力；false：保持原有SVG解析能力。
+
+默认值：false
 
 **类型：** boolean
 
@@ -143,7 +151,11 @@ supportSvg2?: boolean
 syncLoad?: boolean
 ```
 
-是否同步加载图片，默认是异步加载。同步加载时阻塞UI线程，不会显示占位图。true：同步加载；false：异步加载。默认值：false
+是否同步加载图片，默认是异步加载。同步加载时阻塞UI线程，不会显示占位图。
+
+true：同步加载；false：异步加载。
+
+默认值：false
 
 **类型：** boolean
 
@@ -161,7 +173,9 @@ syncLoad?: boolean
 verticalAlign?: ImageSpanAlignment
 ```
 
-设置图片基于文本的对齐方式。具体枚举及说明请参考ImageSpanAlignment。默认值：ImageSpanAlignment.BOTTOM。
+设置图片基于文本的对齐方式。具体枚举及说明请参考ImageSpanAlignment。
+
+默认值：ImageSpanAlignment.BOTTOM。
 
 **类型：** [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
 

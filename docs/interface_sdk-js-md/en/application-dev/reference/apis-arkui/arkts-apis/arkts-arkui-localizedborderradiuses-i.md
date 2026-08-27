@@ -1,6 +1,8 @@
 # LocalizedBorderRadiuses
 
-Defines the localized border radius property.@interface LocalizedBorderRadiuses
+Defines the localized border radius property.
+
+@interface LocalizedBorderRadiuses
 
 **Since:** 12
 

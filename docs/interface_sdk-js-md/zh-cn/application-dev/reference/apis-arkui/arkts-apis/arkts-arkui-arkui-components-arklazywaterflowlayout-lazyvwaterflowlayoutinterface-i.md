@@ -1,6 +1,8 @@
 # LazyVWaterFlowLayoutInterface
 
-定义懒加载垂直瀑布流布局组件。@interface LazyVWaterFlowLayoutInterface
+定义懒加载垂直瀑布流布局组件。
+
+@interface LazyVWaterFlowLayoutInterface
 
 **起始版本：** 26.0.0
 

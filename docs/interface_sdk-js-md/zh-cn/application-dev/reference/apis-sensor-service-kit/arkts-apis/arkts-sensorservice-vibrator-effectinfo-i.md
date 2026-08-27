@@ -17,7 +17,7 @@
 isEffectSupported: boolean
 ```
 
-预置效果是否受支持。true表示支持该预置振动效果，可用于 [startVibration](arkts-sensorservice-vibrator-startvibration-f.md) ；false表示不支持，使用该effectId触发振动可能效果不佳。
+预置效果是否受支持。true表示支持该预置振动效果，可用于[startVibration](arkts-sensorservice-vibrator-startvibration-f.md)；false表示不支持，使用该effectId触发振动可能效果不佳。
 
 **类型：** boolean
 

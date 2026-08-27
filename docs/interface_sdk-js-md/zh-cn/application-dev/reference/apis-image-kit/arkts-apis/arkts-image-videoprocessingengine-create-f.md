@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import videoProcessingEngine from '@kit.ImageKit';
+import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
 ## create

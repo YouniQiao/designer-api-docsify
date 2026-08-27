@@ -9,7 +9,7 @@ Provides a callback for setting the modal dialog box request result.
 ## Modules to Import
 
 ```TypeScript
-import dialogRequest from '@kit.AbilityKit';
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## setRequestResult
@@ -30,7 +30,7 @@ Sets the result of the request for the modal dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | [RequestResult](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-requestresult-i-sys.md) | Yes | Request result to set. |
+| result | RequestResult | Yes | Request result to set. |
 
 **Error codes:**
 

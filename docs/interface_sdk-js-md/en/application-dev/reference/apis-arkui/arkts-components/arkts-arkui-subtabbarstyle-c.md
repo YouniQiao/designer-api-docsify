@@ -79,7 +79,7 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes | Content on the tab.   **NOTE：** 1. Custom content does not support the **labelStyle** attribute. 2. If the custom content exceeds the content box of the tab page, the excess part is not displayed. 3. If the custom content is within the content box of the tab page, it is aligned in the center. 4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | Yes | Content on the tab.   **NOTE：** 1. Custom content does not support the **labelStyle** attribute. 2. If the custom content exceeds the content box of the tab page, the excess part is not displayed. 3. If the custom content is within the content box of the tab page, it is aligned in the center. 4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
 
 ## id
 
@@ -241,7 +241,7 @@ Static constructor used to create a **SubTabBarStyle** instance. You can set cus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes | Content on the tab. You can set custom content with **ComponentContent**.   **NOTE：** 1. Custom content does not support the **labelStyle** attribute. 2. If the custom content exceeds the content box of the tab page, the excess part is not displayed. 3. If the custom content is within the content box of the tab page, it is aligned in the center. 4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
+| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | Yes | Content on the tab. You can set custom content with **ComponentContent**.   **NOTE：** 1. Custom content does not support the **labelStyle** attribute. 2. If the custom content exceeds the content box of the tab page, the excess part is not displayed. 3. If the custom content is within the content box of the tab page, it is aligned in the center. 4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
 
 **Return value:**
 

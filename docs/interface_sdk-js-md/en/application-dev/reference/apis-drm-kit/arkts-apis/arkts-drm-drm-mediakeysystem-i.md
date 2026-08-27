@@ -9,7 +9,7 @@ MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM
 ## Modules to Import
 
 ```TypeScript
-import drm from '@kit.DrmKit';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## clearOfflineMediaKeys
@@ -504,7 +504,7 @@ Unsubscribes from events indicating that the application requests a device certi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md). |
-| callback | (eventInfo: EventInfo) = & gt; void | No | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -532,7 +532,7 @@ Subscribes to events indicating that the application requests a device certifica
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keySystemRequired' | Yes | Event type. This event is available for listening after a MediaKeySystem instance is created by calling [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md). It is triggered when a device certificate is required. |
-| callback | (eventInfo: EventInfo) = & gt; void | Yes | Callback used to return the event information. The occurrence of this event signals the need to request a device certificate. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. The occurrence of this event signals the need to request a device certificate. |
 
 **Error codes:**
 
@@ -565,7 +565,7 @@ Processes the response to a previously generated device certificate request. Thi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

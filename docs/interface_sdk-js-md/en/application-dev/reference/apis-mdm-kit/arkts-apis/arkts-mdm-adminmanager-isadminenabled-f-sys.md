@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## isAdminEnabled
@@ -139,7 +139,7 @@ Checks whether a device administrator application of the current or specified us
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the device administrator application is enabled; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the device administrator application is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 

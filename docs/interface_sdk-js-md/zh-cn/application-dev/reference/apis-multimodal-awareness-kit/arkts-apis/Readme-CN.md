@@ -28,7 +28,7 @@
   - [Capability](arkts-multimodalawareness-carawareness-capability-e.md)
   <!--Del-->
   - [Capability(系统接口)](arkts-multimodalawareness-carawareness-capability-e-sys.md)<!--DelEnd-->
-- [@ohos.multimodalAwareness.deviceStatus](arkts-multimodalawareness-devicestatus.md)
+- [@ohos.multimodalAwareness.deviceStatus(设备状态感知)](arkts-multimodalawareness-devicestatus.md)
   <!--Del-->
   - [getDeviceRotationRadian(系统接口)](arkts-multimodalawareness-devicestatus-getdevicerotationradian-f-sys.md)<!--DelEnd-->
   - [off](arkts-multimodalawareness-devicestatus-off-f.md)
@@ -36,7 +36,7 @@
   <!--Del-->
   - [DeviceRotationRadian(系统接口)](arkts-multimodalawareness-devicestatus-devicerotationradian-i-sys.md)<!--DelEnd-->
   - [SteadyStandingStatus](arkts-multimodalawareness-devicestatus-steadystandingstatus-e.md)
-- [@ohos.multimodalAwareness.metadataBinding](arkts-multimodalawareness-metadatabinding.md)
+- [@ohos.multimodalAwareness.metadataBinding(记忆链接)](arkts-multimodalawareness-metadatabinding.md)
   <!--Del-->
   - [decodeImage(系统接口)](arkts-multimodalawareness-metadatabinding-decodeimage-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -46,7 +46,7 @@
   - [off](arkts-multimodalawareness-metadatabinding-off-f.md)
   - [on](arkts-multimodalawareness-metadatabinding-on-f.md)
   - [submitMetadata](arkts-multimodalawareness-metadatabinding-submitmetadata-f.md)
-- [@ohos.multimodalAwareness.motion](arkts-multimodalawareness-motion.md)
+- [@ohos.multimodalAwareness.motion(动作感知能力)](arkts-multimodalawareness-motion.md)
   - [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md)
   - [off](arkts-multimodalawareness-motion-off-f.md)
   <!--Del-->
@@ -82,7 +82,7 @@
   - [PickupEvent(系统接口)](arkts-multimodalawareness-motion-pickupevent-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [RotateEvent(系统接口)](arkts-multimodalawareness-motion-rotateevent-e-sys.md)<!--DelEnd-->
-- [@ohos.multimodalAwareness.onScreen](arkts-multimodalawareness-onscreen.md)
+- [@ohos.multimodalAwareness.onScreen(屏上感知)](arkts-multimodalawareness-onscreen.md)
   <!--Del-->
   - [apperceive(系统接口)](arkts-multimodalawareness-onscreen-apperceive-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -130,7 +130,7 @@
   <!--Del-->
   - [Scenario(系统接口)](arkts-multimodalawareness-onscreen-scenario-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.multimodalAwareness.spatialAwareness](arkts-multimodalawareness-spatialawareness.md)<!--DelEnd-->
+- [@ohos.multimodalAwareness.spatialAwareness(空间感知)](arkts-multimodalawareness-spatialawareness.md)<!--DelEnd-->
   <!--Del-->
   - [offDistanceMeasure(系统接口)](arkts-multimodalawareness-spatialawareness-offdistancemeasure-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -153,7 +153,7 @@
   - [ReportingMode(系统接口)](arkts-multimodalawareness-spatialawareness-reportingmode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TechnologyType(系统接口)](arkts-multimodalawareness-spatialawareness-technologytype-e-sys.md)<!--DelEnd-->
-- [@ohos.multimodalAwareness.userStatus](arkts-multimodalawareness-userstatus.md)
+- [@ohos.multimodalAwareness.userStatus(用户状态感知)](arkts-multimodalawareness-userstatus.md)
   <!--Del-->
   - [configure(系统接口)](arkts-multimodalawareness-userstatus-configure-f-sys.md)<!--DelEnd-->
   - [off](arkts-multimodalawareness-userstatus-off-f.md)
@@ -190,7 +190,7 @@
   - [UserStatusAtomicCap(系统接口)](arkts-multimodalawareness-userstatus-userstatusatomiccap-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UserStatusFeature(系统接口)](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md)<!--DelEnd-->
-- [@ohos.stationary](arkts-stationary.md)
+- [@ohos.stationary(设备状态感知框架)](arkts-stationary.md)
   - [off](arkts-multimodalawareness-stationary-off-f.md)
   - [on](arkts-multimodalawareness-stationary-on-f.md)
   - [once](arkts-multimodalawareness-stationary-once-f.md)

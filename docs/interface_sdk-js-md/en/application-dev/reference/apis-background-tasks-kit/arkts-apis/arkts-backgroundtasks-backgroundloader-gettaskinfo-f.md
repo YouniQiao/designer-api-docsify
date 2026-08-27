@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import backgroundLoader from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## getTaskInfo
@@ -32,7 +32,7 @@ Obtains the information of a background load task. This API returns the result v
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;TaskInfo & gt; | Promise used to return the TaskInfo. |
+| Promise&lt;TaskInfo&gt; | Promise used to return the TaskInfo. |
 
 **Error codes:**
 

@@ -9,8 +9,7 @@ USB数据传输参数对象，包含USB数据传输所需的所有参数，用�
 ## 导入模块
 
 ```TypeScript
-import usbManager from '@kit.BasicServicesKit';
-import serialManager from '@kit.BasicServicesKit.serial';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## buffer
@@ -61,7 +60,7 @@ devPipe: USBDevicePipe
 endpoint: number
 ```
 
-端点地址，取值范围为[1, 255]的正整数。需要调用[getDevices](arkts-basicservices-usbmanager-getdevices-f.md)获取设备信息，通过endpoint的address属性确定端点信息，通过direction 属性确定端点方向。
+端点地址，取值范围为[1, 255]的正整数。需要调用[getDevices](arkts-basicservices-usbmanager-getdevices-f.md)获取设备信息，通过endpoint的address属性确定端点信息，通过direction属性确定端点方向。
 
 **类型：** number
 

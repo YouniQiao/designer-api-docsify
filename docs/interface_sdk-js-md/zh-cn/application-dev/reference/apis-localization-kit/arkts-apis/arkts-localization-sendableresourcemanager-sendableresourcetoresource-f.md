@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendableResourceManager from '@kit.LocalizationKit';
+import { sendableResourceManager } from '@kit.LocalizationKit';
 ```
 
 ## sendableResourceToResource
@@ -24,13 +24,13 @@ export function sendableResourceToResource(resource: SendableResource): Resource
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | 是 | SendableResource对象。 |
+| resource | SendableResource | 是 | SendableResource对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Resource](arkts-localization-resource-resource-i.md) | 转换后的Resource对象。 |
+| Resource | 转换后的Resource对象。 |
 
 **错误码：**
 

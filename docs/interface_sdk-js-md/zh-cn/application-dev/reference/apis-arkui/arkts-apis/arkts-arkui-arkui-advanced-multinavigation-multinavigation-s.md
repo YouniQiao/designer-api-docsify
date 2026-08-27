@@ -1,6 +1,6 @@
 # MultiNavigation
 
-MultiNavigation是一个支持分栏导航的组件，提供多层页面栈管理能力，通过MultiNavPathStack统一管理主页、详情页、全屏页等不同类型页面的导航栈。 支持左起右清栈等智能路由策略，适用于平板、折叠屏等大尺寸设备的复杂导航场景，能够优化页面跳转体验、提升用户操作效率。
+MultiNavigation是一个支持分栏导航的组件，提供多层页面栈管理能力，通过MultiNavPathStack统一管理主页、详情页、全屏页等不同类型页面的导航栈。支持左起右清栈等智能路由策略，适用于平板、折叠屏等大尺寸设备的复杂导航场景，能够优化页面跳转体验、提升用户操作效率。
 
 > **说明：**
 
@@ -10,6 +10,7 @@ MultiNavigation是一个支持分栏导航的组件，提供多层页面栈管�
 > [pushDestination](ts-basic-components-navigation.md#pushdestination11)等)，可能会发生无法预期的问题。
 
 > MultiNavigation在深层嵌套场景下，可能存在路由动效异常的问题。
+
 @struct { MultiNavigation }
 
 **起始版本：** 14

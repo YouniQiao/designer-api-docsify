@@ -1,6 +1,10 @@
 # WebContextMenuResult
 
-WebContextMenuResult is a class in the ArkWeb component used to handle context menu events (triggered by number- pressing a page element or right-clicking). It provides developers with a set of menu operation execution capabilities, including text editing operations (copy, paste, cut, select all, undo, redo, paste and match style), image operations (copy image, save image), menu control (close menu), and password auto-fill.Developers typically use WebContextMenuResult when they need to customize the context menu behavior of the Web component. Obtain a WebContextMenuResult instance through the **onContextMenuShow** event callback, and use the menu context information provided by **WebContextMenuParam** to determine the user operation scenario and call the corresponding response method, thereby implementing custom menu interaction logic. If the developer does not perform any menu response operation, the **closeContextMenu** method must be called to close the menu.For details about the sample code, see [onContextMenuShow&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkweb-web-attribute.md#oncontextmenushow).
+WebContextMenuResult is a class in the ArkWeb component used to handle context menu events (triggered by number- pressing a page element or right-clicking). It provides developers with a set of menu operation execution capabilities, including text editing operations (copy, paste, cut, select all, undo, redo, paste and match style), image operations (copy image, save image), menu control (close menu), and password auto-fill.
+
+Developers typically use WebContextMenuResult when they need to customize the context menu behavior of the Web component. Obtain a WebContextMenuResult instance through the **onContextMenuShow** event callback, and use the menu context information provided by **WebContextMenuParam** to determine the user operation scenario and call the corresponding response method, thereby implementing custom menu interaction logic. If the developer does not perform any menu response operation, the **closeContextMenu** method must be called to close the menu.
+
+For details about the sample code, see [onContextMenuShow&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkweb-web-attribute.md#oncontextmenushow).
 
 **Since:** 9
 
@@ -9,9 +13,6 @@ WebContextMenuResult is a class in the ArkWeb component used to handle context m
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## closeContextMenu

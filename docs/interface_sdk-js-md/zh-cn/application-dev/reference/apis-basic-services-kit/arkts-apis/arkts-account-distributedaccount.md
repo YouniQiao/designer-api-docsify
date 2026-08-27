@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedAccount from '@kit.BasicServicesKit';
+import { distributedAccount } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -18,25 +18,25 @@ import distributedAccount from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getDistributedAccountAbility(分布式账号管理)](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md) | 获取分布式账号的单实例对象。 |
+| [getDistributedAccountAbility](arkts-basicservices-distributedaccount-getdistributedaccountability-f.md) | 获取分布式账号的单实例对象。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [DistributedAccountAbility(分布式账号管理)](arkts-basicservices-distributedaccount-distributedaccountability-i.md) | 提供查询和更新分布式账号登录状态方法（使用前需要先获取分布式账号的单实例对象）。 |
-| [DistributedInfo(分布式账号管理)](arkts-basicservices-distributedaccount-distributedinfo-i.md) | 提供操作系统账号的分布式账号信息。 |
+| [DistributedAccountAbility](arkts-basicservices-distributedaccount-distributedaccountability-i.md) | 提供查询和更新分布式账号登录状态方法（使用前需要先获取分布式账号的单实例对象）。 |
+| [DistributedInfo](arkts-basicservices-distributedaccount-distributedinfo-i.md) | 提供操作系统账号的分布式账号信息。 |
 
 <!--Del-->
 ### 接口（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [DistributedAccountAbility(分布式账号管理)](arkts-basicservices-distributedaccount-distributedaccountability-i-sys.md) | 提供查询和更新分布式账号登录状态方法（使用前需要先获取分布式账号的单实例对象）。 |
+| [DistributedAccountAbility](arkts-basicservices-distributedaccount-distributedaccountability-i-sys.md) | 提供查询和更新分布式账号登录状态方法（使用前需要先获取分布式账号的单实例对象）。 |
 <!--DelEnd-->
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [DistributedAccountStatus(分布式账号管理)](arkts-basicservices-distributedaccount-distributedaccountstatus-e.md) | 表示分布式账号状态枚举。 |
+| [DistributedAccountStatus](arkts-basicservices-distributedaccount-distributedaccountstatus-e.md) | 表示分布式账号状态枚举。 |

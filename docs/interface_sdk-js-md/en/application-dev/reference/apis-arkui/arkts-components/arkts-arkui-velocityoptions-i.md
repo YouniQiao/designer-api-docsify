@@ -1,6 +1,7 @@
 # VelocityOptions
 
-Defines velocity options.  
+Defines velocity options.
+
 *   
 > **NOTE：**
 

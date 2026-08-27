@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## reloadAllForms
@@ -12,7 +12,7 @@ import formProvider from '@kit.FormKit';
 function reloadAllForms(context: UIAbilityContext): Promise<number>
 ```
 
-在应用主进程通过本接口可以通知FormExtension进程批量更新当前应用下已经加桌的所有卡片，仅支持在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)中调用，使用Promise异步回 调。
+在应用主进程通过本接口可以通知FormExtension进程批量更新当前应用下已经加桌的所有卡片，仅支持在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)中调用，使用Promise异步回调。
 
 **起始版本：** 22
 
@@ -32,7 +32,7 @@ function reloadAllForms(context: UIAbilityContext): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象。返回请求更新卡片的数量。 |
+| Promise&lt;number&gt; | Promise对象。返回请求更新卡片的数量。 |
 
 **错误码：**
 

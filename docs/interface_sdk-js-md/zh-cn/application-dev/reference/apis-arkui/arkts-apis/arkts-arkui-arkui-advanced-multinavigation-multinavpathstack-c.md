@@ -1,6 +1,6 @@
 # MultiNavPathStack
 
-MultiNavigation的路由栈仅支持由使用方自行创建，不支持通过回调方式获取。请勿使用NavDestination的 onReady等类似事件或接口来获取NavPathStack并进行栈操作，因为这可能会导致不可预知的问题。
+MultiNavigation的路由栈仅支持由使用方自行创建，不支持通过回调方式获取。请勿使用NavDestination的onReady等类似事件或接口来获取NavPathStack并进行栈操作，因为这可能会导致不可预知的问题。
 
 **继承/实现关系：** MultiNavPathStack extends [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
 
@@ -104,7 +104,7 @@ getAllPathName(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 返回栈中所有NavDestination页面的名称，数组元素按栈底到栈顶的顺序排列。 |
+| Array&lt;string&gt; | 返回栈中所有NavDestination页面的名称，数组元素按栈底到栈顶的顺序排列。 |
 
 ## getIndexByName
 
@@ -132,7 +132,7 @@ getIndexByName(name: string): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;number & gt; | Indexes of all the matching navigation destination pages. |
+| Array&lt;number&gt; | Indexes of all the matching navigation destination pages. |
 
 ## getParamByIndex
 
@@ -188,7 +188,7 @@ getParamByName(name: string): Array<Object>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;Object & gt; | 返回全部名为name的NavDestination页面的参数信息。 |
+| Array&lt;Object&gt; | 返回全部名为name的NavDestination页面的参数信息。 |
 
 ## keepBottomPage
 
@@ -565,7 +565,7 @@ pushPathByName(
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。需要与NavDestinationBuildFunction中注册的页面名称一致。 |
 | param | Object | 是 | NavDestination页面详细参数，用于向目标页面传递自定义数据。具体字段规格请参考NavDestination相关文档。 |
-| onPop | base.Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | 否 | Callback回调，用于页面出栈时触发该回调处理返回结果。省略时不触发回调处理。 可通过pop方法、popToName方法、popToIndex方法的result参数传递数据给此回调。 |
+| onPop | base.Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | 否 | Callback回调，用于页面出栈时触发该回调处理返回结果。省略时不触发回调处理。可通过pop方法、popToName方法、popToIndex方法的result参数传递数据给此回调。 |
 | animated | boolean | 否 | 是否支持转场动画。默认值：true true：支持转场动画。false：不支持转场动画。 |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
 
@@ -589,7 +589,7 @@ removeByIndexes(indexes: Array<number>): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| indexes | Array & lt;number & gt; | 是 | 待删除NavDestination页面的索引值数组。number类型的取值范围：[0, +∞)。超出范围时操作不生效。 |
+| indexes | Array&lt;number&gt; | 是 | 待删除NavDestination页面的索引值数组。number类型的取值范围：[0, +∞)。超出范围时操作不生效。 |
 
 **返回值：**
 

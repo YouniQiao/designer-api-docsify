@@ -9,7 +9,7 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 ## Modules to Import
 
 ```TypeScript
-import StartupTask from '@kit.AbilityKit';
+import { StartupTask } from '@kit.AbilityKit';
 ```
 
 ## init
@@ -36,7 +36,7 @@ Called when all the dependent startup tasks are complete. You can initialize the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Object \ | void & gt; | Promise used to return the execution result. |
+| Promise&lt;Object \| void&gt; | Promise used to return the execution result. |
 
 **Examples**
 

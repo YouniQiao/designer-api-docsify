@@ -9,8 +9,6 @@ Provides APIs to check different types of built-in objects, such as ArrayBuffer,
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## constructor

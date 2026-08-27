@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import AbilityConstant from '@kit.AbilityKit';
+import { AbilityConstant } from '@kit.AbilityKit';
 ```
 
 ## exitMsg

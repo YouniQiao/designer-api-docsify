@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import deviceSettings from '@kit.MDMKit';
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## setScreenOffTime

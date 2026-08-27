@@ -4,7 +4,6 @@
 
 ```TypeScript
 import { SwipeRefresher } from '@kit.ArkUI';
-import { SwipeRefresherV2 } from '@kit.ArkUIV2';
 ```
 
 ## Summary
@@ -14,3 +13,32 @@ import { SwipeRefresherV2 } from '@kit.ArkUIV2';
 | Name | Description |
 | --- | --- |
 | [SwipeRefresher](arkts-arkui-arkui-advanced-swiperefresher-swiperefresher-s.md) | Declare component SwipeRefresher |
+
+## Examples
+
+This example demonstrates how setting the content parameter to empty or non-empty strings and toggling the isLoading parameter between true and false affects the loading effect.
+
+```TypeScript
+import { SwipeRefresher } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      SwipeRefresher({
+        content: 'Loading',
+        isLoading: true
+      })
+      SwipeRefresher({
+        content: '',
+        isLoading: true
+      })
+      SwipeRefresher({
+        content: 'Loading',
+        isLoading: false
+      })
+    }
+  }
+}
+```

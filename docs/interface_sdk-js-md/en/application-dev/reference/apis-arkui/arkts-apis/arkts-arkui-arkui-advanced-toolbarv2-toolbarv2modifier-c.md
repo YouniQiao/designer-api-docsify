@@ -60,7 +60,7 @@ Sets the height of the toolBarV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | toolBarV2's height. |
+| height | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | toolBarV2's height. |
 
 **Return value:**
 
@@ -88,7 +88,7 @@ Sets the left and right padding of the toolbarV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| padding | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | left and right padding. |
+| padding | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | left and right padding. |
 
 **Return value:**
 

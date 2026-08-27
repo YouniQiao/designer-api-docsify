@@ -9,8 +9,7 @@ Describes the event received by the application when the audio stream device is 
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## changeReason

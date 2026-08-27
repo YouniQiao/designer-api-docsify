@@ -53,3 +53,4 @@ Defines the constructor of Polygon component.
 
 | Name | Description |
 | --- | --- |
+| [PolygonOptions](arkts-arkui-polygonoptions-i.md) | Describes the options of the polygon. |

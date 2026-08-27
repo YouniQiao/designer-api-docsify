@@ -1,6 +1,8 @@
 # RichEditorParagraphStyleOptions
 
-段落样式选项。继承自[RichEditorRange](arkts-arkui-richeditorrange-i.md)。
+段落样式选项。
+
+继承自[RichEditorRange](arkts-arkui-richeditorrange-i.md)。
 
 > **说明：**
 > 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import eap from '@kit.NetworkKit';
+import { eap } from '@kit.NetworkKit';
 ```
 
 ## logOffEthEap

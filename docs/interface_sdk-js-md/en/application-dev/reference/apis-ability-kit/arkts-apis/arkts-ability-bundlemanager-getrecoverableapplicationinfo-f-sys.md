@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getRecoverableApplicationInfo
@@ -77,7 +77,7 @@ Obtains information about all preinstalled applications that can be restored. Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;RecoverableApplicationInfo & gt; & gt; | Promise used to return the information about all recoverable applications. |
+| Promise&lt;Array&lt;RecoverableApplicationInfo&gt;&gt; | Promise used to return the information about all recoverable applications. |
 
 **Error codes:**
 

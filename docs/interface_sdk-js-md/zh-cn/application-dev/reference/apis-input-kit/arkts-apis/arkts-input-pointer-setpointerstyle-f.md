@@ -11,7 +11,7 @@
 function setPointerStyle(windowId: number, pointerStyle: PointerStyle, callback: AsyncCallback<void>): void
 ```
 
-设置指定窗口的鼠标样式类型，此接口仅支持设置本应用进程内窗口的鼠标样式类型，如需通过UIExtensionAbility进程设置宿主窗口的鼠标样式类型，请参阅 [setCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcursor)，使用callback异步回调。
+设置指定窗口的鼠标样式类型，此接口仅支持设置本应用进程内窗口的鼠标样式类型，如需通过UIExtensionAbility进程设置宿主窗口的鼠标样式类型，请参阅[setCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcursor)，使用callback异步回调。
 
 **起始版本：** 9
 
@@ -21,8 +21,8 @@ function setPointerStyle(windowId: number, pointerStyle: PointerStyle, callback:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | number | 是 | 窗口ID。取值范围为大于等于0的整数。窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。设置 结果可通过[getPointerStyle](arkts-input-pointer-getpointerstyle-f.md)获取。 |
-| pointerStyle | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | 是 | 鼠标样式。 不能传入DEVELOPER_DEFINED_ICON作为参数。 |
+| windowId | number | 是 | 窗口ID。取值范围为大于等于0的整数。窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。设置结果可通过[getPointerStyle](arkts-input-pointer-getpointerstyle-f.md)获取。 |
+| pointerStyle | PointerStyle | 是 | 鼠标样式。 不能传入DEVELOPER_DEFINED_ICON作为参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置鼠标样式类型成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -78,7 +78,7 @@ struct Index {
 function setPointerStyle(windowId: number, pointerStyle: PointerStyle): Promise<void>
 ```
 
-设置指定窗口的鼠标样式类型，此接口仅支持设置本应用进程内窗口的鼠标样式类型，如需通过UIExtensionAbility进程设置宿主窗口的鼠标样式类型，请参阅 [setCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcursor)，使用Promise异步回调。
+设置指定窗口的鼠标样式类型，此接口仅支持设置本应用进程内窗口的鼠标样式类型，如需通过UIExtensionAbility进程设置宿主窗口的鼠标样式类型，请参阅[setCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcursor)，使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -88,14 +88,14 @@ function setPointerStyle(windowId: number, pointerStyle: PointerStyle): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | number | 是 | 窗口ID。取值范围为大于等于0的整数。窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。设置 结果可通过[getPointerStyle](arkts-input-pointer-getpointerstyle-f.md)获取。 |
-| pointerStyle | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | 是 | 鼠标样式。不能传入DEVELOPER_DEFINED_ICON作为参数。 |
+| windowId | number | 是 | 窗口ID。取值范围为大于等于0的整数。窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。设置结果可通过[getPointerStyle](arkts-input-pointer-getpointerstyle-f.md)获取。 |
+| pointerStyle | PointerStyle | 是 | 鼠标样式。不能传入DEVELOPER_DEFINED_ICON作为参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

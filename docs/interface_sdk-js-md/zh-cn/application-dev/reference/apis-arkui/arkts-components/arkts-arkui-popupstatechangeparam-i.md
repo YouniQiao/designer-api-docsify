@@ -1,6 +1,8 @@
 # PopupStateChangeParam
 
-气泡的显示状态。@interface PopupStateChangeParam
+气泡的显示状态。
+
+@interface PopupStateChangeParam
 
 **起始版本：** 18
 

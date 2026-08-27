@@ -16,7 +16,7 @@ The **FormExtensionAbility** module provides lifecycle callbacks invoked when a 
 ## Modules to Import
 
 ```TypeScript
-import FormExtensionAbility from '@kit.FormKit';
+import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
 ## Summary

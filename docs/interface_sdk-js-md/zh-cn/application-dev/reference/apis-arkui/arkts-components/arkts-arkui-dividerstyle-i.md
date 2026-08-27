@@ -17,7 +17,9 @@
 color?: ResourceColor
 ```
 
-分割线的颜色。默认值：#33182431
+分割线的颜色。
+
+默认值：#33182431
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -35,7 +37,13 @@ color?: ResourceColor
 endMargin?: Length
 ```
 
-分割线与侧边栏底端的距离（不支持百分比设置）。默认值：0.0单位：vp取值范围：[0, +∞)。设置为小于0的值时，按默认值显示。
+分割线与侧边栏底端的距离（不支持百分比设置）。
+
+默认值：0.0
+
+单位：vp
+
+取值范围：[0, +∞)。设置为小于0的值时，按默认值显示。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -55,7 +63,13 @@ endMargin?: Length
 startMargin?: Length
 ```
 
-分割线与侧边栏顶端的距离（不支持百分比设置）。默认值：0.0单位：vp取值范围：[0, +∞)。设置为小于0的值时，按默认值显示。
+分割线与侧边栏顶端的距离（不支持百分比设置）。
+
+默认值：0.0
+
+单位：vp
+
+取值范围：[0, +∞)。设置为小于0的值时，按默认值显示。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -75,7 +89,13 @@ startMargin?: Length
 strokeWidth: Length
 ```
 
-分割线的线宽（不支持百分比设置）。默认值：0.0单位：vp取值范围：[0, +∞)。设置为小于0的值时，按默认值显示。
+分割线的线宽（不支持百分比设置）。
+
+默认值：0.0
+
+单位：vp
+
+取值范围：[0, +∞)。设置为小于0的值时，按默认值显示。
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

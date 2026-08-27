@@ -3,12 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import inputMethod from '@kit.IMEKit';
-import inputMethodEngine from '@kit.IMEKitEngine';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
-import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
-import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## getDefaultInputMethod
@@ -31,7 +26,7 @@ function getDefaultInputMethod(userId?: number): InputMethodProperty
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | number | 否 | 用户ID。取值范围为有效用户的ID。如果不提供：    - 如果调用者不是用户0的应用，该值默认为调用者的用户ID。    - 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| userId | number | 否 | 用户ID。取值范围为有效用户的ID。如果不提供：   - 如果调用者不是用户0的应用，该值默认为调用者的用户ID。   - 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
 
 **返回值：**
 

@@ -9,7 +9,7 @@ Defines the predicates for an RDB store. This class determines whether the condi
 ## Modules to Import
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## and
@@ -28,7 +28,7 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Examples**
 
@@ -63,7 +63,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -95,7 +95,7 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Examples**
 
@@ -126,14 +126,14 @@ Creates an **RdbPredicates** object to search for the records that are within th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value of the range to set. |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value of the range to set. |
+| low | ValueType | Yes | Minimum value of the range to set. |
+| high | ValueType | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -202,7 +202,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -234,7 +234,7 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object that can filter out duplicate records. |
+| RdbPredicates | RdbPredicates** object that can filter out duplicate records. |
 
 **Examples**
 
@@ -266,7 +266,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -298,7 +298,7 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Examples**
 
@@ -329,13 +329,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -374,7 +374,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -407,13 +407,13 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -446,13 +446,13 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -484,13 +484,13 @@ Creates a **RdbPredicates** object to group the query results based on the speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fields | Array & lt;string & gt; | Yes | Names of columns to group. |
+| fields | Array&lt;string&gt; | Yes | Names of columns to group. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Predicates that group rows with the same value. |
+| RdbPredicates | Predicates that group rows with the same value. |
 
 **Error codes:**
 
@@ -522,13 +522,13 @@ Filters for group data that meets the conditions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | conditions | string | Yes | Condition used to filter the data obtained using [groupBy](#groupby). This parameter cannot be empty and must be used with [groupBy](#groupby). |
-| args | Array & lt;ValueType & gt; | No | Parameters used in **conditions**, which replace the placeholder in the conditional statement. If this parameter is not specified, the default value is an empty array. |
+| args | Array&lt;ValueType&gt; | No | Parameters used in **conditions**, which replace the placeholder in the conditional statement. If this parameter is not specified, the default value is an empty array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -559,13 +559,13 @@ Creates an **RdbPredicates** object to search for the records that are in the gi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | Array & lt;ValueType & gt; | Yes | Array of **ValueType**s to match. |
+| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -597,7 +597,7 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Examples**
 
@@ -629,13 +629,13 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| devices | Array & lt;string & gt; | Yes | IDs of the remote devices to connect. |
+| devices | Array&lt;string&gt; | Yes | IDs of the remote devices to connect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -690,7 +690,7 @@ Creates a **RdbPredicates** object to specify the index column.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -727,7 +727,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -764,7 +764,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -796,13 +796,13 @@ Creates an **RdbPredicates** object to search for the records that are less than
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -835,13 +835,13 @@ Creates an **RdbPredicates** object to search for the records that are less than
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -880,7 +880,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -918,7 +918,7 @@ Creates a **RdbPredicates** object to limit the number of records.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Predicates that specify the maximum number of records. |
+| RdbPredicates | Predicates that specify the maximum number of records. |
 
 **Error codes:**
 
@@ -950,14 +950,14 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| low | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value of the range to set. |
-| high | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value of the range to set. |
+| low | ValueType | Yes | Minimum value of the range to set. |
+| high | ValueType | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -996,7 +996,7 @@ Creates an **RdbPredicates** object to search for the records that do not contai
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -1029,13 +1029,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -1068,13 +1068,13 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | Array & lt;ValueType & gt; | Yes | Array of **ValueType**s to match. |
+| value | Array&lt;ValueType&gt; | Yes | Array of **ValueType**s to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -1113,7 +1113,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -1151,7 +1151,7 @@ Creates an **RdbPredicates** object to set the start position of the query resul
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Predicates that specify the start position of the returned result. |
+| RdbPredicates | Predicates that specify the start position of the returned result. |
 
 **Error codes:**
 
@@ -1182,7 +1182,7 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Examples**
 
@@ -1216,7 +1216,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
@@ -1253,7 +1253,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 

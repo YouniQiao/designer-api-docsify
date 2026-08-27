@@ -49,7 +49,9 @@ cancel?: () => void
 alignment?: DialogAlignment
 ```
 
-弹窗在竖直方向上的对齐方式。默认值：DialogAlignment.Default
+弹窗在竖直方向上的对齐方式。
+
+默认值：DialogAlignment.Default
 
 **类型：** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
 
@@ -65,7 +67,9 @@ alignment?: DialogAlignment
 autoCancel?: boolean
 ```
 
-是否允许点击遮障层退出，true表示关闭弹窗。false表示不关闭弹窗。默认值：true
+是否允许点击遮障层退出，true表示关闭弹窗。false表示不关闭弹窗。
+
+默认值：true
 
 **类型：** boolean
 
@@ -81,8 +85,13 @@ autoCancel?: boolean
 backgroundBlurStyle?: BlurStyle
 ```
 
-弹窗背板模糊材质。默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。  
-**说明：**设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
+弹窗背板模糊材质。
+
+默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。
+
+**说明：**
+
+设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
 **类型：** BlurStyle
 
@@ -120,8 +129,13 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 backgroundColor?: ResourceColor
 ```
 
-设置弹窗背板填充。默认值：Color.Transparent  
-**说明：** 如果同时设置了内容构造器的背景色，则backgroundColor会被内容构造器的背景色覆盖。backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
+设置弹窗背板填充。
+
+默认值：Color.Transparent
+
+**说明：** 如果同时设置了内容构造器的背景色，则backgroundColor会被内容构造器的背景色覆盖。
+
+backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -157,7 +171,11 @@ backgroundEffect?: BackgroundEffectOptions
 borderColor?: ResourceColor | EdgeColors
 ```
 
-设置弹窗背板的边框颜色。默认值：Color.Black如果使用borderColor属性，需要和borderWidth属性一起使用。
+设置弹窗背板的边框颜色。
+
+默认值：Color.Black
+
+如果使用borderColor属性，需要和borderWidth属性一起使用。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors
 
@@ -175,7 +193,11 @@ borderColor?: ResourceColor | EdgeColors
 borderStyle?: BorderStyle | EdgeStyles
 ```
 
-设置弹窗背板的边框样式。默认值：BorderStyle.Solid如果使用borderStyle属性，需要和borderWidth属性一起使用。
+设置弹窗背板的边框样式。
+
+默认值：BorderStyle.Solid
+
+如果使用borderStyle属性，需要和borderWidth属性一起使用。
 
 **类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
 
@@ -193,7 +215,15 @@ borderStyle?: BorderStyle | EdgeStyles
 borderWidth?: Dimension | EdgeWidths
 ```
 
-设置弹窗背板的边框宽度。可分别设置4个边框宽度。默认值：0。百分比参数方式：以父元素弹窗宽的百分比来设置弹窗的边框宽度。当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。
+设置弹窗背板的边框宽度。
+
+可分别设置4个边框宽度。
+
+默认值：0。
+
+百分比参数方式：以父元素弹窗宽的百分比来设置弹窗的边框宽度。
+
+当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。
 
 **类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths
 
@@ -211,8 +241,13 @@ borderWidth?: Dimension | EdgeWidths
 builder: any
 ```
 
-自定义弹窗内容构造器。  
-**说明：**若builder构造器使用回调函数作为入参，请注意使用this绑定问题，如builder: custombuilder({ callback: ()=&gt; {...}})。若在builder中监听数据变化可以使用@Link或@Consume，而其他方式如@Prop、@ObjectLink不适用此场景。
+自定义弹窗内容构造器。
+
+**说明：**
+
+若builder构造器使用回调函数作为入参，请注意使用this绑定问题，如builder: custombuilder({ callback: ()=&gt; {...}})。
+
+若在builder中监听数据变化可以使用@Link或@Consume，而其他方式如@Prop、@ObjectLink不适用此场景。
 
 **类型：** any
 
@@ -228,8 +263,17 @@ builder: any
 closeAnimation?: AnimateParam
 ```
 
-自定义设置弹窗关闭的动画效果相关参数。  
-**说明：**tempo默认值为1，当设置小于等于0的值时按默认值处理。iterations默认值为1，默认播放一次，设置为其他数值时按默认值处理。playMode控制动画播放模式，默认值为PlayMode.Normal，设置为其他数值时按照默认值处理。页面转场切换时，建议使用默认关闭动效。
+自定义设置弹窗关闭的动画效果相关参数。
+
+**说明：**
+
+tempo默认值为1，当设置小于等于0的值时按默认值处理。
+
+iterations默认值为1，默认播放一次，设置为其他数值时按默认值处理。
+
+playMode控制动画播放模式，默认值为PlayMode.Normal，设置为其他数值时按照默认值处理。
+
+页面转场切换时，建议使用默认关闭动效。
 
 **类型：** [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md)
 
@@ -247,8 +291,13 @@ closeAnimation?: AnimateParam
 cornerRadius?: Dimension | BorderRadiuses
 ```
 
-设置背板的圆角半径。可分别设置4个圆角的半径。默认值：{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }  
-**说明：**自定义弹窗默认的背板圆角半径为32vp，如果需要使用cornerRadius属性，请和 borderRadius属性一起使用。
+设置背板的圆角半径。
+
+可分别设置4个圆角的半径。
+
+默认值：{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
+
+**说明：**自定义弹窗默认的背板圆角半径为32vp，如果需要使用cornerRadius属性，请和borderRadius属性一起使用。
 
 **类型：** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
@@ -266,12 +315,19 @@ cornerRadius?: Dimension | BorderRadiuses
 customStyle?: boolean
 ```
 
-弹窗容器样式是否自定义。值为true表示弹窗容器样式能自定义，值为false表示弹窗容器样式不能自定义。默认值：false设置为false时：
+弹窗容器样式是否自定义。值为true表示弹窗容器样式能自定义，值为false表示弹窗容器样式不能自定义。
+
+默认值：false
+
+设置为false时：
+
 1. 默认圆角为32vp。
 2. 未设置弹窗宽度高度：弹窗容器的宽度根据栅格系统自适应。高度自适应自定义的内容节点。
 3. 设置弹窗宽度高度：弹窗容器的宽度不超过默认样式下的最大宽度（自定义节点设置100%的宽度），弹窗容器的高度不超过默认样式下的最大高度（自定义节点设置100%的高度）。
 4. 受安全区域的影响，弹窗显示区域将排除安全区域。例如在PC/2in1设备上避让屏幕边缘以及窗口标题栏。
+
 设置为true时：
+
 1. 圆角为0，弹窗背景色为透明色。
 2. 不支持设置弹窗宽度、高度、边框宽度、边框样式、边框颜色以及阴影宽度。
 3. 弹窗显示区域为屏幕。
@@ -290,8 +346,13 @@ customStyle?: boolean
 displayModeInSubWindow?: DialogDisplayMode
 ```
 
-弹窗在子窗口中的显示模式。取值范围及显示效果请参考DialogDisplayMode枚举说明，例如SCREEN_BASED表示弹窗在屏幕居中显示，WINDOW_BASED表示弹窗在应用窗口居中显示。默认值：DialogDisplayMode.SCREEN_BASED  
-**说明：**仅当showInSubWindow设置为true时生效。
+弹窗在子窗口中的显示模式。取值范围及显示效果请参考DialogDisplayMode枚举说明，例如SCREEN_BASED表示弹窗在屏幕居中显示，WINDOW_BASED表示弹窗在应用窗口居中显示。
+
+默认值：DialogDisplayMode.SCREEN_BASED
+
+**说明：**
+
+仅当showInSubWindow设置为true时生效。
 
 **类型：** [DialogDisplayMode](arkts-arkui-dialogdisplaymode-e.md)
 
@@ -311,8 +372,13 @@ displayModeInSubWindow?: DialogDisplayMode
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态。值为true时响应悬停态，值为false时不响应悬停态。默认值：false，默认不响应。  
-**说明：**PC/2in1设备弹窗默认显示在上半屏，在enableHoverMode设置为true时，可以通过设置hoverModeArea参数显示在下半屏。其他设备弹窗在enableHoverMode设置为true时默认显示在下半屏，可以通 过设置hoverModeArea参数显示在上半屏。
+是否响应悬停态。值为true时响应悬停态，值为false时不响应悬停态。
+
+默认值：false，默认不响应。
+
+**说明：**
+
+PC/2in1设备弹窗默认显示在上半屏，在enableHoverMode设置为true时，可以通过设置hoverModeArea参数显示在下半屏。其他设备弹窗在enableHoverMode设置为true时默认显示在下半屏，可以通过设置hoverModeArea参数显示在上半屏。
 
 **类型：** boolean
 
@@ -332,8 +398,13 @@ enableHoverMode?: boolean
 focusable?: boolean
 ```
 
-设置弹窗是否获取焦点。值为true表示获取焦点，值为false表示不获取焦点。默认值：true  
-**说明：**只有弹出覆盖在当前窗口之上的弹窗才可以获取焦点。
+设置弹窗是否获取焦点。值为true表示获取焦点，值为false表示不获取焦点。
+
+默认值：true
+
+**说明：**
+
+只有弹出覆盖在当前窗口之上的弹窗才可以获取焦点。
 
 **类型：** boolean
 
@@ -353,7 +424,11 @@ focusable?: boolean
 gridCount?: number
 ```
 
-弹窗宽度占[栅格宽度](../../../ui/arkts-layout-development-grid-layout.md)的个数。默认为按照窗口大小自适应，异常值按默认值处理，最大栅格数为系统最大栅格数。取值范围：大于等于0的整数。
+弹窗宽度占[栅格宽度](../../../ui/arkts-layout-development-grid-layout.md)的个数。
+
+默认为按照窗口大小自适应，异常值按默认值处理，最大栅格数为系统最大栅格数。
+
+取值范围：大于等于0的整数。
 
 **类型：** number
 
@@ -369,9 +444,11 @@ gridCount?: number
 height?: Dimension
 ```
 
-设置弹窗背板的高度。  
+设置弹窗背板的高度。
+
 **说明：**
-- 弹窗高度默认最大值：0.9 *（窗口高度 - 安全区域）。
+
+- 弹窗高度默认最大值：0.9 *（窗口高度 - 安全区域）。  
 - 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。
 
 **类型：** [Dimension](arkts-arkui-dimension-t.md)
@@ -390,7 +467,9 @@ height?: Dimension
 hoverModeArea?: HoverModeAreaType
 ```
 
-悬停态下弹窗默认展示区域。默认值：HoverModeAreaType.BOTTOM_SCREEN。
+悬停态下弹窗默认展示区域。
+
+默认值：HoverModeAreaType.BOTTOM_SCREEN。
 
 **类型：** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
@@ -410,9 +489,11 @@ hoverModeArea?: HoverModeAreaType
 immersiveMode?: ImmersiveMode
 ```
 
-设置页面内弹窗蒙层效果。  
+设置页面内弹窗蒙层效果。
+
 **说明：**
-- 默认值：ImmersiveMode.DEFAULT
+
+- 默认值：ImmersiveMode.DEFAULT  
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** ImmersiveMode
@@ -433,7 +514,9 @@ immersiveMode?: ImmersiveMode
 isModal?: boolean
 ```
 
-弹窗是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与弹窗周围其他控件进行交互，即蒙层区域无法事件透传。值为false表示为非模态窗口且无蒙层，可以与弹窗周围其他控件进行交互。默认值：true
+弹窗是否为模态窗口。值为true表示为模态窗口且有蒙层，不可与弹窗周围其他控件进行交互，即蒙层区域无法事件透传。值为false表示为非模态窗口且无蒙层，可以与弹窗周围其他控件进行交互。
+
+默认值：true
 
 **类型：** boolean
 
@@ -453,10 +536,12 @@ isModal?: boolean
 keyboardAvoidDistance?: LengthMetrics
 ```
 
-弹窗避让键盘后，和键盘之间的距离。  
+弹窗避让键盘后，和键盘之间的距离。
+
 **说明：**
-- 默认值：16vp。
-- 默认单位：vp。
+
+- 默认值：16vp。  
+- 默认单位：vp。  
 - 当且仅当keyboardAvoidMode属性设置为DEFAULT时生效。
 
 **类型：** LengthMetrics
@@ -475,7 +560,9 @@ keyboardAvoidDistance?: LengthMetrics
 keyboardAvoidMode?: KeyboardAvoidMode
 ```
 
-用于设置弹窗是否在拉起软键盘时进行自动避让。默认值：KeyboardAvoidMode.DEFAULT
+用于设置弹窗是否在拉起软键盘时进行自动避让。
+
+默认值：KeyboardAvoidMode.DEFAULT
 
 **类型：** KeyboardAvoidMode
 
@@ -495,9 +582,11 @@ keyboardAvoidMode?: KeyboardAvoidMode
 levelMode?: LevelMode
 ```
 
-设置弹窗显示层级。  
+设置弹窗显示层级。
+
 **说明：**
-- 默认值：LevelMode.OVERLAY。
+
+- 默认值：LevelMode.OVERLAY。  
 - 当且仅当showInSubWindow属性设置为false时生效。
 
 **类型：** LevelMode
@@ -518,9 +607,11 @@ levelMode?: LevelMode
 levelOrder?: LevelOrder
 ```
 
-设置弹窗显示的顺序。  
+设置弹窗显示的顺序。
+
 **说明：**
-- 默认值：LevelOrder.clamp(0)
+
+- 默认值：LevelOrder.clamp(0)  
 - 不支持动态刷新顺序。
 
 **类型：** LevelOrder
@@ -541,8 +632,12 @@ levelOrder?: LevelOrder
 levelUniqueId?: number
 ```
 
-设置页面级弹窗需要显示的层级下的节点UniqueID，UniqueID可以通过[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid)获取。取值范围：大于等于0的数字。  
+设置页面级弹窗需要显示的层级下的节点UniqueID，UniqueID可以通过[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid)获取。
+
+取值范围：大于等于0的数字。
+
 **说明：**
+
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** number
@@ -561,7 +656,9 @@ levelUniqueId?: number
 maskColor?: ResourceColor
 ```
 
-自定义蒙层颜色。默认值：0x33000000
+自定义蒙层颜色。
+
+默认值：0x33000000
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -579,8 +676,13 @@ maskColor?: ResourceColor
 maskRect?: Rectangle
 ```
 
-弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。默认值：{ x: 0, y: 0, width: '100%', height: '100%' }  
-**说明：**showInSubWindow为true时，maskRect不生效。
+弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。
+
+默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
+
+**说明：**
+
+showInSubWindow为true时，maskRect不生效。
 
 **类型：** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
 
@@ -598,7 +700,9 @@ maskRect?: Rectangle
 offset?: Offset
 ```
 
-弹窗相对alignment所在位置的偏移量。默认值：{ dx: 0, dy: 0 }
+弹窗相对alignment所在位置的偏移量。
+
+默认值：{ dx: 0, dy: 0 }
 
 **类型：** Offset
 
@@ -614,11 +718,16 @@ offset?: Offset
 onDidAppear?: Callback<void>
 ```
 
-弹窗弹出后的事件回调。  
+弹窗弹出后的事件回调。
+
 **说明：**
+
 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+
 2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
+
 3.快速点击弹出，关闭弹窗时，onWillDisappear在onDidAppear前生效。
+
 4.弹窗入场动效未完成时彻底关闭弹窗，动效打断，onDidAppear不会触发。
 
 **类型：** Callback&lt;void&gt;
@@ -637,8 +746,10 @@ onDidAppear?: Callback<void>
 onDidDisappear?: Callback<void>
 ```
 
-弹窗消失后的事件回调。  
+弹窗消失后的事件回调。
+
 **说明：**
+
 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
 **类型：** Callback&lt;void&gt;
@@ -657,9 +768,12 @@ onDidDisappear?: Callback<void>
 onWillAppear?: Callback<void>
 ```
 
-弹窗显示动效前的事件回调。  
+弹窗显示动效前的事件回调。
+
 **说明：**
+
 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
+
 2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
 
 **类型：** Callback&lt;void&gt;
@@ -678,8 +792,10 @@ onWillAppear?: Callback<void>
 onWillDisappear?: Callback<void>
 ```
 
-弹窗退出动效前的事件回调。  
+弹窗退出动效前的事件回调。
+
 **说明：**
+
 1.正常时序依次为：onWillAppear&gt;&gt;onDidAppear&gt;&gt;onWillDisappear&gt;&gt;onDidDisappear。
 
 **类型：** Callback&lt;void&gt;
@@ -698,9 +814,12 @@ onWillDisappear?: Callback<void>
 onWillDismiss?: Callback<DismissDialogAction>
 ```
 
-交互式关闭回调函数。  
+交互式关闭回调函数。
+
 **说明：**
-1.当用户执行点击遮障层关闭、侧滑（左滑/右滑）、三键back、键盘ESC关闭交互操作时，如果注册该回调函数，则不会立刻关闭弹窗。在回调函数中可以通过reason得到阻拦关闭弹窗的操作类型，从而根据原因选择是否能关闭弹窗。当前组件 返回的reason中，暂不支持CLOSE_BUTTON的枚举值。
+
+1.当用户执行点击遮障层关闭、侧滑（左滑/右滑）、三键back、键盘ESC关闭交互操作时，如果注册该回调函数，则不会立刻关闭弹窗。在回调函数中可以通过reason得到阻拦关闭弹窗的操作类型，从而根据原因选择是否能关闭弹窗。当前组件返回的reason中，暂不支持CLOSE_BUTTON的枚举值。
+
 2.在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
 **类型：** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
@@ -719,8 +838,15 @@ onWillDismiss?: Callback<DismissDialogAction>
 openAnimation?: AnimateParam
 ```
 
-自定义设置弹窗弹出的动画效果相关参数。未设置时使用系统默认弹出动画。  
-**说明：**tempo默认值为1，当设置小于等于0的值时按默认值处理。iterations默认值为1，默认播放一次，设置为其他数值时按默认值处理。playMode控制动画播放模式，默认值为PlayMode.Normal，设置为其他数值时按照默认值处理。
+自定义设置弹窗弹出的动画效果相关参数。未设置时使用系统默认弹出动画。
+
+**说明：**
+
+tempo默认值为1，当设置小于等于0的值时按默认值处理。
+
+iterations默认值为1，默认播放一次，设置为其他数值时按默认值处理。
+
+playMode控制动画播放模式，默认值为PlayMode.Normal，设置为其他数值时按照默认值处理。
 
 **类型：** [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md)
 
@@ -738,7 +864,9 @@ openAnimation?: AnimateParam
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-设置弹窗背板的阴影。当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
+设置弹窗背板的阴影。
+
+当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
 **类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
@@ -756,8 +884,11 @@ shadow?: ShadowOptions | ShadowStyle
 showInSubWindow?: boolean
 ```
 
-某弹窗需要显示在主窗口之外时，是否在子窗口显示此弹窗。值为true表示在子窗口显示弹窗。默认值：false，弹窗显示在应用内，而非独立子窗口。  
-**说明：**showInSubWindow为true的弹窗无法触发显示另一个showInSubWindow为true的弹窗。不建议在showInSubWindow为true的弹窗中使用CalendarPicker、 CalendarPickerDialog、DatePickerDialog、TextPickerDialog、TimePickerDialog、Toast组件，弹窗会影响上述组件行为。
+某弹窗需要显示在主窗口之外时，是否在子窗口显示此弹窗。值为true表示在子窗口显示弹窗。
+
+默认值：false，弹窗显示在应用内，而非独立子窗口。
+
+**说明：**showInSubWindow为true的弹窗无法触发显示另一个showInSubWindow为true的弹窗。不建议在showInSubWindow为true的弹窗中使用CalendarPicker、CalendarPickerDialog、DatePickerDialog、TextPickerDialog、TimePickerDialog、Toast组件，弹窗会影响上述组件行为。
 
 **类型：** boolean
 
@@ -777,12 +908,14 @@ showInSubWindow?: boolean
 systemMaterial?: SystemUiMaterial
 ```
 
-设置弹窗的系统材质。  
+设置弹窗的系统材质。
+
 **说明：**
-- 默认值：ImmersiveOptions的style为
-ImmersiveStyle.ULTRA_THICK的 ImmersiveMaterial对象。设置undefined时与默认值保持 一致。  
+
+- 默认值：ImmersiveOptions的style为  
+ImmersiveStyle.ULTRA_THICK的ImmersiveMaterial对象。设置undefined时与默认值保持一致。  
 - 不同的材质具有不同的效果，该接口影响背景色backgroundColor、背景模糊  
-backgroundBlurStyle 、背景效果backgroundEffect、边框颜色 borderColor、边框宽度borderWidth、阴影 shadow，不建议与上述接口一起使用。
+backgroundBlurStyle、背景效果backgroundEffect、边框颜色borderColor、边框宽度borderWidth、阴影shadow，不建议与上述接口一起使用。
 
 **类型：** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t-sys.md)
 
@@ -800,9 +933,11 @@ backgroundBlurStyle 、背景效果backgroundEffect、边框颜色 borderColor�
 width?: Dimension
 ```
 
-设置弹窗背板的宽度。  
+设置弹窗背板的宽度。
+
 **说明：**
-- 弹窗宽度默认最大值：400vp。
+
+- 弹窗宽度默认最大值：400vp。  
 - 百分比参数方式：弹窗参考宽度为所在窗口的宽度，在此基础上调小或调大。
 
 **类型：** [Dimension](arkts-arkui-dimension-t.md)

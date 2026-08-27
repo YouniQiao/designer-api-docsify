@@ -9,7 +9,7 @@ Provides APIs for SM2 cryptographic operations.
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## genCipherTextBySpec
@@ -37,7 +37,7 @@ Generates SM2 ciphertext in ASN.1 format.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | SM2 ciphertext in ASN.1 format. |
+| DataBlob | SM2 ciphertext in ASN.1 format. |
 
 **Error codes:**
 
@@ -87,7 +87,7 @@ Obtains SM2 ciphertext parameters from the SM2 ciphertext in ASN.1 format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cipherText | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | Yes | SM2 ciphertext in ASN.1 format. |
+| cipherText | DataBlob | Yes | SM2 ciphertext in ASN.1 format. |
 | mode | string | No | Order of the SM2 parameters in the ciphertext. Currently, only C1C3C2 is supported. If this parameter is left empty or is an empty string, the default value is used. |
 
 **Return value:**

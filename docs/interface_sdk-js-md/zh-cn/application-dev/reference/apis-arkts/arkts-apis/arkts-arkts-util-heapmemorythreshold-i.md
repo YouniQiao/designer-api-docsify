@@ -1,6 +1,8 @@
 # HeapMemoryThreshold
 
-描述 GC 后触发已注册回调的堆内存预警阈值。@interface HeapMemoryThreshold
+描述 GC 后触发已注册回调的堆内存预警阈值。
+
+@interface HeapMemoryThreshold
 
 **起始版本：** 24
 
@@ -9,8 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## localHeapThreshold
@@ -19,7 +19,7 @@ import JSON from '@kit.ArkTS.json';
 localHeapThreshold?: number
 ```
 
-该值为 70 到 95 之间的整数，表示 GC 后触发回调的 local 堆内存百分比阈值。超出此范围的值会被自动限制到有效范围内。 若未设置，则不会因 local 堆内存压力而触发回调。
+该值为 70 到 95 之间的整数，表示 GC 后触发回调的 local 堆内存百分比阈值。超出此范围的值会被自动限制到有效范围内。若未设置，则不会因 local 堆内存压力而触发回调。
 
 **类型：** number
 
@@ -35,7 +35,7 @@ localHeapThreshold?: number
 processHeapThreshold?: number
 ```
 
-该值为 70 到 95 之间的整数，表示 GC 后触发回调的进程总堆内存百分比阈值。超出此范围的值会被自动限制到有效范围内。 若未设置，则不会因进程堆内存压力而触发回调。
+该值为 70 到 95 之间的整数，表示 GC 后触发回调的进程总堆内存百分比阈值。超出此范围的值会被自动限制到有效范围内。若未设置，则不会因进程堆内存压力而触发回调。
 
 **类型：** number
 
@@ -51,7 +51,7 @@ processHeapThreshold?: number
 sharedHeapThreshold?: number
 ```
 
-该值为 70 到 95 之间的整数，表示 GC 后触发回调的 shared 堆内存百分比阈值。超出此范围的值会被自动限制到有效范围内。 若未设置，则不会因 shared 堆内存压力而触发回调。
+该值为 70 到 95 之间的整数，表示 GC 后触发回调的 shared 堆内存百分比阈值。超出此范围的值会被自动限制到有效范围内。若未设置，则不会因 shared 堆内存压力而触发回调。
 
 **类型：** number
 

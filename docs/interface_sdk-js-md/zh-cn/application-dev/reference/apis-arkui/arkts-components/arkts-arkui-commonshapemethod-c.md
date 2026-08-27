@@ -1,6 +1,8 @@
 # CommonShapeMethod
 
-CommonShapeMethod@extends CommonMethod&lt;T&gt;
+CommonShapeMethod
+
+@extends CommonMethod&lt;T&gt;
 
 **继承/实现关系：** CommonShapeMethod extends CommonMethod<T>
 
@@ -89,7 +91,7 @@ fill Opacity
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |  |
+| value | number \| string \| Resource | 是 |  |
 
 **返回值：**
 
@@ -145,7 +147,7 @@ Sets the gap for the border.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array & lt;any & gt; | 是 |  |
+| value | Array&lt;any&gt; | 是 |  |
 
 **返回值：**
 
@@ -285,7 +287,7 @@ Sets the opacity of the border.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |  |
+| value | number \| string \| Resource | 是 |  |
 
 **返回值：**
 

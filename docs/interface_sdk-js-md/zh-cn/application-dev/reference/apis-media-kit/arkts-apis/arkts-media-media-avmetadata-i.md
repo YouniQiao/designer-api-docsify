@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## album
@@ -244,7 +244,7 @@ location?: Location
 mimeType?: string
 ```
 
-媒体资源的mime类型。不支持AVRecorder设置该属性。 一些示例的mimeType类型包括: "video/mp4", "audio/mp4", "audio/amr-wb"
+媒体资源的mime类型。不支持AVRecorder设置该属性。一些示例的mimeType类型包括: "video/mp4", "audio/mp4", "audio/amr-wb"
 
 **类型：** string
 

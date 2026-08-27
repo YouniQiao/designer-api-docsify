@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import formHost from '@kit.FormKit';
+import { formHost } from '@kit.FormKit';
 ```
 
 ## releaseForm
@@ -82,7 +82,7 @@ function releaseForm(formId: string, isReleaseCache: boolean, callback: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
-| isReleaseCache | boolean | 是 | 表示是否释放缓存。 true: 表示释放缓存。 false: 表示不释放缓存。 |
+| isReleaseCache | boolean | 是 | 表示是否释放缓存。true: 表示释放缓存。false: 表示不释放缓存。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放指定的卡片成功，error为undefined；否则为错误对象。 |
 
 **错误码：**
@@ -138,13 +138,13 @@ function releaseForm(formId: string, isReleaseCache?: boolean): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formId | string | 是 | 卡片标识。 |
-| isReleaseCache | boolean | 否 | 表示是否释放缓存，默认为false。 true: 表示释放缓存。 false: 表示不释放缓存。 |
+| isReleaseCache | boolean | 否 | 表示是否释放缓存，默认为false。true: 表示释放缓存。false: 表示不释放缓存。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

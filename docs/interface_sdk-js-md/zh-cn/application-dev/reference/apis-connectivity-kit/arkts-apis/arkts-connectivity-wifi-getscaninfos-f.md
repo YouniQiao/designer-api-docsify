@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getScanInfos
@@ -31,7 +28,7 @@ function getScanInfos(): Promise<Array<WifiScanInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;WifiScanInfo & gt; & gt; | 返回扫描到的热点列表。 |
+| Promise&lt;Array&lt;WifiScanInfo&gt;&gt; | 返回扫描到的热点列表。 |
 
 **示例**
 

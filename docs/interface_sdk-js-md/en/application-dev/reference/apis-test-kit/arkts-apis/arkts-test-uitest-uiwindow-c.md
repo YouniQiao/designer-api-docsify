@@ -30,7 +30,7 @@ Closes a window. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -71,7 +71,7 @@ Focuses a window. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -165,7 +165,7 @@ Obtains the bundle name of the application to which a window belongs. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the bundle name of the application to which the window belongs. |
+| Promise&lt;string&gt; | Promise used to return the bundle name of the application to which the window belongs. |
 
 **Error codes:**
 
@@ -208,7 +208,7 @@ Obtains the ID of the display to which a window belongs. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the ID of the display to which the window belongs. |
+| Promise&lt;number&gt; | Promise used to return the ID of the display to which the window belongs. |
 
 **Error codes:**
 
@@ -259,7 +259,7 @@ Obtains the window title. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the window title. |
+| Promise&lt;string&gt; | Promise used to return the window title. |
 
 **Error codes:**
 
@@ -339,7 +339,7 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -381,7 +381,7 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return whether the window is active. The value **true** indicates that the window is active, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -421,7 +421,7 @@ Checks whether a window is focused. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result of whether the window is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result of whether the window is focused. The value **true** indicates that the component is focused, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -491,7 +491,7 @@ Maximizes a window. A window can be resumed to its previous mode using [resume](
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -532,7 +532,7 @@ Minimizes a window. A window can be resumed to its previous mode using [resume](
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -580,7 +580,7 @@ Moves a window to the target point. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -630,7 +630,7 @@ Resizes a window based on the specified width, height, and direction. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -659,7 +659,7 @@ Resumes a window to its previous mode. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -700,7 +700,7 @@ Switches to the split-screen mode. A window can be resumed to its previous mode 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

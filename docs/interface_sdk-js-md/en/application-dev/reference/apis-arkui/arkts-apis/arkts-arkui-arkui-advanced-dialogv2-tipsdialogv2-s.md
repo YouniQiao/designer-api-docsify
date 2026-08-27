@@ -1,6 +1,8 @@
 # TipsDialogV2
 
-Declare CustomDialog TipsDialogV2@struct { TipsDialogV2 }
+Declare CustomDialog TipsDialogV2
+
+@struct { TipsDialogV2 }
 
 **Since:** 18
 

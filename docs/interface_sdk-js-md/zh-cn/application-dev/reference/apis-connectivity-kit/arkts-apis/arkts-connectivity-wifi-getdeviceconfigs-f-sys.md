@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getDeviceConfigs
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function getDeviceConfigs(): Array<WifiDeviceConfig>
 ```
 
-获取网络配置。<p>只能获取本应用创建的网络配置。
+获取网络配置。
+
+<p>只能获取本应用创建的网络配置。
 
 **起始版本：** 7
 
@@ -33,7 +32,7 @@ function getDeviceConfigs(): Array<WifiDeviceConfig>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;WifiDeviceConfig & gt; | 网络配置信息的数组。 |
+| Array&lt;WifiDeviceConfig&gt; | 网络配置信息的数组。 |
 
 **示例**
 

@@ -2630,7 +2630,7 @@ Sets vertex attrib pointer
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Data type |
 | normalized | [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Whether to normalize |
 | stride | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Stride |
-| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| offset | [GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
 
 ## viewport
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import featureAbility from '@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## connectAbility

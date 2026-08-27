@@ -15,7 +15,7 @@ Manager a2dp source profile.
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## connect
@@ -197,7 +197,7 @@ Obtains the playing state of device. On API 10 and above, the permission require
 
 | Type | Description |
 | --- | --- |
-| [PlayingState](arkts-connectivity-a2dp-playingstate-e.md) | Returns { |
+| PlayingState | Returns { |
 
 **Error codes:**
 

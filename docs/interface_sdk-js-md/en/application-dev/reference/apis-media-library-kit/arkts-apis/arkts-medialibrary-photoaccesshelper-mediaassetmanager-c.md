@@ -9,7 +9,7 @@ The MediaAssetManager class is used for manipulating the read and write operatio
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cancelRequest
@@ -37,7 +37,7 @@ Cancels a request for the asset, the callback of which has not been triggered ye
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -140,7 +140,7 @@ Requests an image quickly. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | Yes | Image to request. |
+| asset | PhotoAsset | Yes | Image to request. |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | Yes | Options for requesting the image. |
 | dataHandler | [QuickImageDataHandler](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md)&lt;image.Picture&gt; | Yes | Media asset handler, which invokes a callback to return the image when the requested image is ready. |
 
@@ -148,7 +148,7 @@ Requests an image quickly. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the request ID, which can be used in [cancelRequest]{ |
+| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest]{ |
 
 **Error codes:**
 
@@ -217,7 +217,7 @@ Requests an image. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | Yes | Image to request. |
+| asset | PhotoAsset | Yes | Image to request. |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | Yes | Options for requesting the image. |
 | dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;image.ImageSource&gt; | Yes | Media asset handler, which invokes a callback to return the image when the requested image is ready. |
 
@@ -225,7 +225,7 @@ Requests an image. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the request ID, which can be used in [cancelRequest]{ |
+| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest]{ |
 
 **Error codes:**
 
@@ -302,7 +302,7 @@ Requests image data. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | Yes | Image to request. |
+| asset | PhotoAsset | Yes | Image to request. |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | Yes | Options for requesting the image. |
 | dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;ArrayBuffer&gt; | Yes | Media asset handler, which invokes a callback to return the image when the requested image is ready. |
 
@@ -310,7 +310,7 @@ Requests image data. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the request ID, which can be used in [cancelRequest]{ |
+| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest]{ |
 
 **Error codes:**
 
@@ -386,7 +386,7 @@ Requests a moving photo object, which can be used to request the asset data of t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | Yes | Image to request. |
+| asset | PhotoAsset | Yes | Image to request. |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | Yes | Options for requesting the image. |
 | dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;[MovingPhoto](arkts-medialibrary-photoaccesshelper-movingphoto-i.md)&gt; | Yes | Media asset handler, which invokes a callback to return the image when the requested image is ready. |
 
@@ -394,7 +394,7 @@ Requests a moving photo object, which can be used to request the asset data of t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the request ID, which can be used in [cancelRequest]{ |
+| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest]{ |
 
 **Error codes:**
 
@@ -470,7 +470,7 @@ Requests a video and saves it to the specified sandbox directory. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
-| asset | [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | Yes | Image to request. |
+| asset | PhotoAsset | Yes | Image to request. |
 | requestOptions | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | Yes | Options for requesting the video asset. |
 | fileUri | string | Yes | URI of the sandbox directory, to which the requested video asset is to be saved. Example: **'file://com.example.temptest/data/storage/el2/base/haps/entry/files/test.mp4'**. |
 | dataHandler | [MediaAssetDataHandler](arkts-medialibrary-photoaccesshelper-mediaassetdatahandler-i.md)&lt;boolean&gt; | Yes | Media asset handler. When the requested video is written to the specified directory, a callback is triggered. If the video is successfully written, **true** is returned. Otherwise, **false** is returned. |
@@ -479,7 +479,7 @@ Requests a video and saves it to the specified sandbox directory. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the request ID, which can be used in [cancelRequest]{ |
+| Promise&lt;string&gt; | Promise used to return the request ID, which can be used in [cancelRequest]{ |
 
 **Error codes:**
 

@@ -9,7 +9,7 @@ Represents the configuration for saving a media asset (image or video) to the me
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## fileNameExtension
@@ -66,7 +66,8 @@ Image or video file subtype. The default value is **DEFAULT**. See [PhotoSubtype
 title?: string
 ```
 
-Title of the image or video. If this parameter is not passed, the system generates a title. The title must meet the following requirements:  
+Title of the image or video. If this parameter is not passed, the system generates a title. The title must meet the following requirements:
+
 - It must not contain a file name extension.  
 - The total length of the file name, which is in the format of title+file name extension, must be between 1 and 2  
 55 characters.  

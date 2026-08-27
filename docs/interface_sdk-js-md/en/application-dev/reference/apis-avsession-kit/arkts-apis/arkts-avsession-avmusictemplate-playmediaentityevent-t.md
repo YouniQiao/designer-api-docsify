@@ -22,4 +22,4 @@ The play media entity event.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | (void) returned through promise |
+| Promise&lt;void&gt; | (void) returned through promise |

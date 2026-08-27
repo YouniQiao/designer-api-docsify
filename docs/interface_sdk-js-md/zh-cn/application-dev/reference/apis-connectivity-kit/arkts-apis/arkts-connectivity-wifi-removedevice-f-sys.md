@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## removeDevice
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function removeDevice(id: number): boolean
 ```
 
-移除指定的网络配置。<p>删除WLAN网络后，其配置将从网络配置列表中删除。 如果正在连接该WLAN网络，连接将被中断。 应用只能删除自己创建的WLAN网络。
+移除指定的网络配置。
+
+<p>删除WLAN网络后，其配置将从网络配置列表中删除。如果正在连接该WLAN网络，连接将被中断。应用只能删除自己创建的WLAN网络。
 
 **起始版本：** 7
 
@@ -33,7 +32,7 @@ function removeDevice(id: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | number | 是 | WLAN网络的ID， 可通过{ |
+| id | number | 是 | WLAN网络的ID，可通过{ |
 
 **返回值：**
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## 汇总
@@ -27,8 +27,8 @@ import print from '@kit.BasicServicesKit';
 | [notifyWatermarkComplete](arkts-basicservices-print-notifywatermarkcomplete-f.md) | 通知水印处理完成。 |
 | [off](arkts-basicservices-print-off-f.md#offprinterchange) | 取消注册打印机变动事件回调，使用callback回调。 |
 | [on](arkts-basicservices-print-on-f.md#onprinterchange) | 注册打印机变动事件回调，使用callback回调。 |
-| [print](arkts-basicservices-print-f.md) | 打印接口，传入文件进行打印，使用callback异步回调。拉起系统打印预览界面，需要使用[print](arkts-basicservices-print-f.md)接口，传入 context。 |
-| [print](arkts-basicservices-print-f.md) | 打印接口，传入文件进行打印，使用Promise异步回调。拉起系统打印预览界面，需要使用[print](arkts-basicservices-print-f.md)接口，传入 context。 |
+| [print](arkts-basicservices-print-f.md) | 打印接口，传入文件进行打印，使用callback异步回调。拉起系统打印预览界面，需要使用[print](arkts-basicservices-print-f.md)接口，传入context。 |
+| [print](arkts-basicservices-print-f.md) | 打印接口，传入文件进行打印，使用Promise异步回调。拉起系统打印预览界面，需要使用[print](arkts-basicservices-print-f.md)接口，传入context。 |
 | [print](arkts-basicservices-print-f.md) | 打印接口，传入文件进行打印，使用callback异步回调。 |
 | [print](arkts-basicservices-print-f.md) | 打印接口，传入文件进行打印，使用Promise异步回调。 |
 | [print](arkts-basicservices-print-f.md) | 打印接口，传入文件进行打印，三方应用需要更新打印文件，使用Promise异步回调。当前支持的文件类型：".pdf"。 |
@@ -181,5 +181,5 @@ import print from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [PrinterInfoQueryCallback](arkts-basicservices-print-printerinfoquerycallback-t-sys.md) | 定义注册监听printInfoQuery事件的回调类型。 printInfo的值表示打印机信息。 ppdInfo的值表示所有打印机的ppd信息。 |
+| [PrinterInfoQueryCallback](arkts-basicservices-print-printerinfoquerycallback-t-sys.md) | 定义注册监听printInfoQuery事件的回调类型。printInfo的值表示打印机信息。ppdInfo的值表示所有打印机的ppd信息。 |
 <!--DelEnd-->

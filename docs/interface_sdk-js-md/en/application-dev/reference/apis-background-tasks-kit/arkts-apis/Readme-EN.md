@@ -10,7 +10,7 @@
   - [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-depr-e.md)
   <!--Del-->
   - [BackgroundMode(system api)](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-depr-e-sys.md)<!--DelEnd-->
-- [@ohos.bundleState](arkts-bundlestate.md)
+- [@ohos.bundleState(Device Usage Statistics)](arkts-bundlestate.md)
   - [isIdleState](arkts-backgroundtasks-bundlestate-isidlestate-f.md)
   - [queryAppUsagePriorityGroup](arkts-backgroundtasks-bundlestate-queryappusageprioritygroup-f.md)
   <!--Del-->
@@ -24,7 +24,7 @@
   - [BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)
   - [BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)
   - [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md)
-- [@ohos.reminderAgent](arkts-reminderagent.md)
+- [@ohos.reminderAgent(Agent-powered Reminder)](arkts-reminderagent.md)
   - [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md)
   - [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md)
   - [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md)
@@ -41,7 +41,7 @@
   - [WantAgent](arkts-backgroundtasks-reminderagent-wantagent-i.md)
   - [ActionButtonType](arkts-backgroundtasks-reminderagent-actionbuttontype-e.md)
   - [ReminderType](arkts-backgroundtasks-reminderagent-remindertype-e.md)
-- [@ohos.reminderAgentManager](arkts-reminderagentmanager.md)
+- [@ohos.reminderAgentManager(Agent-powered Reminder)](arkts-reminderagentmanager.md)
   - [addExcludeDate](arkts-backgroundtasks-reminderagentmanager-addexcludedate-f.md)
   - [addNotificationSlot](arkts-backgroundtasks-reminderagentmanager-addnotificationslot-f.md)
   - [cancelAllReminders](arkts-backgroundtasks-reminderagentmanager-cancelallreminders-f.md)
@@ -90,7 +90,7 @@
   - [TaskStopInfo](arkts-backgroundtasks-backgroundloader-taskstopinfo-i.md)
   - [StopCode](arkts-backgroundtasks-backgroundloader-stopcode-e.md)
   - [Constants](arkts-backgroundtasks-backgroundloader-con.md)
-- [@ohos.resourceschedule.backgroundProcessManager](arkts-resourceschedule-backgroundprocessmanager.md)
+- [@ohos.resourceschedule.backgroundProcessManager(Background Child Process Management)](arkts-resourceschedule-backgroundprocessmanager.md)
   - [getPowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-getpowersavemode-f.md)
   - [isPowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-ispowersavemode-f.md)
   - [resetProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-resetprocesspriority-f.md)

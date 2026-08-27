@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getP2pGroups
@@ -27,7 +26,7 @@ Obtain information about the groups.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;WifiP2pGroupInfo & gt; & gt; | Returns the information about own device info. |
+| Promise&lt;Array&lt;WifiP2pGroupInfo&gt;&gt; | Returns the information about own device info. |
 
 **Error codes:**
 

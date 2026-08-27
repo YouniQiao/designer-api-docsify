@@ -1,6 +1,6 @@
 # SoundPool
 
-音频池提供了系统声音的加载、播放、音量设置、循环设置、停止播放和资源卸载等功能，在调用SoundPool的接口前，需要先通过 [createSoundPool](arkts-media-media-createsoundpool-f.md) 创建实例。
+音频池提供了系统声音的加载、播放、音量设置、循环设置、停止播放和资源卸载等功能，在调用SoundPool的接口前，需要先通过[createSoundPool](arkts-media-media-createsoundpool-f.md)创建实例。
 
 > **说明：**
 > 
@@ -33,7 +33,11 @@
 load(uri: string, callback: AsyncCallback<number>): void
 ```
 
-加载音频资源。使用callback异步回调。通过callback异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。该方法不支持加载rawfile目录资源，需要通过 [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) 或者 [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) 实现。
+加载音频资源。使用callback异步回调。
+
+通过callback异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。
+
+该方法不支持加载rawfile目录资源，需要通过[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)或者[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load)实现。
 
 > **说明：**
 > 
@@ -66,7 +70,11 @@ load(uri: string, callback: AsyncCallback<number>): void
 load(uri: string): Promise<number>
 ```
 
-加载音频资源。使用Promise异步回调。通过Promise异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。该方法不支持加载rawfile目录资源，需要通过 [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) 或者 [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load) 实现。
+加载音频资源。使用Promise异步回调。
+
+通过Promise异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。
+
+该方法不支持加载rawfile目录资源，需要通过[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)或者[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load)实现。
 
 > **说明：**
 > 
@@ -88,7 +96,7 @@ load(uri: string): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回资源的id，有效值大于0。 |
+| Promise&lt;number&gt; | Promise对象，返回资源的id，有效值大于0。 |
 
 **错误码：**
 
@@ -104,7 +112,9 @@ load(uri: string): Promise<number>
 load(fd: number, offset: number, length: number, callback: AsyncCallback<number>): void
 ```
 
-加载音频资源。使用callback异步回调。通过callback异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
+加载音频资源。使用callback异步回调。
+
+通过callback异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
 
 > **说明：**
 > 
@@ -120,7 +130,7 @@ load(fd: number, offset: number, length: number, callback: AsyncCallback<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fd | number | 是 | 资源句柄，通过 [resourceManager.getRawFd](../../../reference/apis-localization-kit/js-apis-resource-manager.md) 获取。 |
+| fd | number | 是 | 资源句柄，通过[getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getrawfd)获取。 |
 | offset | number | 是 | 资源偏移量，需要基于预置资源的信息输入，非法值会造成音视频资源解析错误。 |
 | length | number | 是 | 资源长度，需要基于预置资源的信息输入，非法值会造成音视频资源解析错误。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 获取回调的soundID，有效值大于0。 |
@@ -139,7 +149,9 @@ load(fd: number, offset: number, length: number, callback: AsyncCallback<number>
 load(fd: number, offset: number, length: number): Promise<number>
 ```
 
-加载音频资源。使用Promise异步回调。通过Promise异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
+加载音频资源。使用Promise异步回调。
+
+通过Promise异步回调获取资源ID，入参可手动传入资源信息或通过读取应用内置资源自动获取。
 
 > **说明：**
 > 
@@ -155,7 +167,7 @@ load(fd: number, offset: number, length: number): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fd | number | 是 | 资源句柄，通过 [resourceManager.getRawFd](../../../reference/apis-localization-kit/js-apis-resource-manager.md) 获取。 |
+| fd | number | 是 | 资源句柄，通过[getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getrawfd)获取。 |
 | offset | number | 是 | 资源偏移量，需要基于预置资源的信息输入，非法值会造成音视频资源解析错误。 |
 | length | number | 是 | 资源长度，需要基于预置资源的信息输入，非法值会造成音视频资源解析错误。 |
 
@@ -163,7 +175,7 @@ load(fd: number, offset: number, length: number): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回soundID，有效值大于0。 |
+| Promise&lt;number&gt; | Promise对象，返回soundID，有效值大于0。 |
 
 **错误码：**
 
@@ -262,7 +274,7 @@ off(type: 'errorOccurred', callback?: Callback<ErrorInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'errorOccurred' | 是 | 事件回调类型，取消注册的事件为'errorOccurred'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 否 | 错误事件回调方法。在使用播放器的过程中发生错误时，提供错误信息[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)，不设置callback 时不提供相关信息。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 否 | 错误事件回调方法。在使用播放器的过程中发生错误时，提供错误信息[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)，不设置callback时不提供相关信息。 |
 
 ## on('loadComplete')
 
@@ -308,7 +320,7 @@ on(type: 'playFinished', callback: Callback<void>): void
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool)的错误事件，该事件仅用于错误提示。使 用callback异步回调。
+监听[SoundPool](#soundpool)的错误事件，该事件仅用于错误提示。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -327,7 +339,11 @@ on(type: 'error', callback: ErrorCallback): void
 on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
 ```
 
-音频池资源播放完成监听，同时返回播放结束的音频的streamId。使用callback异步回调。当仅单独注册on('playFinished')事件回调或者 on('playFinishedWithStreamId')事件回调 时，当音频播放完成的时候，都会触发注册的回调。当同时注册on('playFinished')事件回调和 on('playFinishedWithStreamId')事件回调 时，当音频播放完成的时候，仅会触发'playFinishedWithStreamId'事件回调，不会触发'playFinished'事件回调。
+音频池资源播放完成监听，同时返回播放结束的音频的streamId。使用callback异步回调。
+
+当仅单独注册on('playFinished')事件回调或者on('playFinishedWithStreamId')事件回调时，当音频播放完成的时候，都会触发注册的回调。
+
+当同时注册on('playFinished')事件回调和on('playFinishedWithStreamId')事件回调时，当音频播放完成的时候，仅会触发'playFinishedWithStreamId'事件回调，不会触发'playFinished'事件回调。
 
 **起始版本：** 18
 
@@ -346,7 +362,7 @@ on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
 on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
 ```
 
-监听[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool)的错误事件，并返回包含错误码、错误发 生阶段、资源ID和音频流ID的[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)。使用callback异步回调。
+监听[SoundPool](#soundpool)的错误事件，并返回包含错误码、错误发生阶段、资源ID和音频流ID的[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)。使用callback异步回调。
 
 **起始版本：** 20
 
@@ -437,7 +453,7 @@ play(soundID: number, params?: PlayParameters): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回音频流ID，有效值大于0。 |
+| Promise&lt;number&gt; | Promise对象，返回音频流ID，有效值大于0。 |
 
 **错误码：**
 
@@ -487,7 +503,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -501,7 +517,7 @@ release(): Promise<void>
 setInterruptMode(interruptMode: media.SoundInterruptMode): void
 ```
 
-设置同一ID音频在播放时的打断模式。创建soundPool之后，该接口仅在首次调用soundPool的Play函数之前设置有效，期间可多次设置，否则将默认使用 [SAME_SOUND_INTERRUPT](../../../reference/apis-media-kit/arkts-media-media-soundinterruptmode-e.md)，即对同一ID的音频，如果前者尚未播放完成，后者在播放前会先打断前 者的播放。
+设置同一ID音频在播放时的打断模式。创建soundPool之后，该接口仅在首次调用soundPool的Play函数之前设置有效，期间可多次设置，否则将默认使用[SAME_SOUND_INTERRUPT](arkts-media-media-soundinterruptmode-e.md#same_sound_interrupt)，即对同一ID的音频，如果前者尚未播放完成，后者在播放前会先打断前者的播放。
 
 **起始版本：** 23
 
@@ -566,7 +582,7 @@ setLoop(streamID: number, loop: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -627,7 +643,7 @@ setPriority(streamID: number, priority: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -688,7 +704,7 @@ setRate(streamID: number, rate: audio.AudioRendererRate): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -751,7 +767,7 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number): Promise<vo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -810,7 +826,7 @@ stop(streamID: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -869,7 +885,7 @@ unload(soundID: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -361,7 +361,7 @@ function setLightPaintingType(lightPaintingPhotoSession: camera.LightPaintingPho
     let type: camera.LightPaintingType = camera.LightPaintingType.TRAFFIC_TRAILS;
     lightPaintingPhotoSession.setLightPaintingType(type);
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it.
     let err = error as BusinessError;
     console.error(`The setLightPaintingType call failed. error code: ${err.code}`);
   }

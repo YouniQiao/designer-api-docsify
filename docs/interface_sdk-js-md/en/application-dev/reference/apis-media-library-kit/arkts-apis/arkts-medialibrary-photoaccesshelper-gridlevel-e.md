@@ -1,6 +1,8 @@
 # GridLevel
 
-Enumeration type of grid level.@enum { number } GridLevel
+Enumeration type of grid level.
+
+@enum { number } GridLevel
 
 **Since:** 23
 

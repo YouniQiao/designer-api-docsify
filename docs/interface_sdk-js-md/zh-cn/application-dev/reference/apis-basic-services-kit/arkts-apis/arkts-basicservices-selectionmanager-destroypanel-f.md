@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import selectionManager from '@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## destroyPanel
@@ -24,13 +24,13 @@ function destroyPanel(panel: Panel): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| panel | [Panel](arkts-basicservices-selectionmanager-panel-i.md) | 是 | 要销毁的面板对象。 |
+| panel | Panel | 是 | 要销毁的面板对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

@@ -9,7 +9,7 @@ Defines the status of the socket connection.
 ## Modules to Import
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## isBound

@@ -1,6 +1,7 @@
 # DynamicComponent(System API) (System API)
 
 **DynamicComponent**用于支持在本页面内嵌入显示独立Abc（.abc文件）提供的UI，展示的内容在Worker线程中运行。
+
 通常用于动态加载Abc页面的模块化开发场景。通过Worker线程隔离运行Abc UI，避免阻塞主线程，提升应用流畅度。
 
 ## 子组件
@@ -35,8 +36,11 @@ DynamicComponent(options: DynamicOptions)
 
 | 名称 | 说明 |
 | --- | --- |
+| [DynamicOptions](arkts-arkui-dynamicoptions-i-sys.md) | 用于在DynamicComponent构造时传递参数。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
+| [ErrorCallback](arkts-arkui-errorcallback-t-sys.md) | 错误回调类型，用于接收异常信息。 |
+| [Worker](arkts-arkui-worker-t-sys.md) | 用于运行Abc的Worker线程对象。 |

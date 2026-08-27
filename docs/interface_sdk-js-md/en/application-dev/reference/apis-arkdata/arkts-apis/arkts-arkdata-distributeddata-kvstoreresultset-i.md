@@ -13,7 +13,6 @@ Provides APIs to obtain the KV store result sets, and query and move the data re
 ## Modules to Import
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## getCount
@@ -77,7 +76,7 @@ Obtains the KV pair from the current position.
 
 | Type | Description |
 | --- | --- |
-| [Entry](arkts-arkdata-distributeddata-entry-i.md) | KV pair obtained. |
+| Entry | KV pair obtained. |
 
 **Examples**
 

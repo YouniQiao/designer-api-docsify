@@ -1,6 +1,8 @@
 # AccessRule（系统接口）
 
-访问规则。@interface AccessRule
+访问规则。
+
+@interface AccessRule
 
 **起始版本：** 20
 

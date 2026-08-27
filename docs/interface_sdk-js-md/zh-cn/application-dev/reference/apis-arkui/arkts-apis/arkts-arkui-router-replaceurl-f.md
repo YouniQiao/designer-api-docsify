@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import router from '@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## replaceUrl
@@ -40,7 +40,7 @@ function replaceUrl(options: RouterOptions, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 | 替换页面描述信息。 |
+| options | RouterOptions | 是 | 替换页面描述信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异常响应回调。 |
 
 **错误码：**
@@ -111,13 +111,13 @@ function replaceUrl(options: RouterOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 | 替换页面描述信息。 |
+| options | RouterOptions | 是 | 替换页面描述信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 异常返回结果。 |
+| Promise&lt;void&gt; | 异常返回结果。 |
 
 **错误码：**
 
@@ -189,7 +189,7 @@ function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 | 替换页面描述信息。 |
+| options | RouterOptions | 是 | 替换页面描述信息。 |
 | mode | [RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 替换页面使用的模式。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异常响应回调。 |
 
@@ -261,14 +261,14 @@ function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 | 替换页面描述信息。 |
+| options | RouterOptions | 是 | 替换页面描述信息。 |
 | mode | [RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 跳转页面使用的模式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 异常返回结果。 |
+| Promise&lt;void&gt; | 异常返回结果。 |
 
 **错误码：**
 

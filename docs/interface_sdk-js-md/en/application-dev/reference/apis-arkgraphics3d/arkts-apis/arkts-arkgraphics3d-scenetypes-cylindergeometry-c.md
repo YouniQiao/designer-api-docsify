@@ -6,6 +6,7 @@ A cylinder geometry type that inherits from GeometryDefinition.
 > 
 > You must ensure that all three parameters are set correctly.
 > Invalid values may prevent cylinder creation or cause undefined behavior.
+
 @extends GeometryDefinition
 
 **Inheritance/Implementation:** CylinderGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)

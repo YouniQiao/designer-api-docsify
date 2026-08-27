@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import selectionManager from '@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## hide
@@ -18,7 +18,7 @@ import selectionManager from '@kit.BasicServicesKit';
 hide(): Promise<void>
 ```
 
-隐藏当前划词面板，与[show](#show)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到 Panel实例后调用。使用Promise异步回调。如不主动调用，面板在失焦时会自动隐藏。
+隐藏当前划词面板，与[show](#show)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。使用Promise异步回调。如不主动调用，面板在失焦时会自动隐藏。
 
 **起始版本：** 24
 
@@ -28,7 +28,7 @@ hide(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -75,7 +75,7 @@ moveToGlobalDisplay(x: number, y: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -107,7 +107,7 @@ try {
 off(type: 'destroyed', callback?: Callback<void>): void
 ```
 
-取消订阅划词面板销毁事件，与on('destroyed')搭配使 用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
+取消订阅划词面板销毁事件，与on('destroyed')搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -137,7 +137,7 @@ try {
 off(type: 'hidden', callback?: Callback<void>): void
 ```
 
-取消订阅划词面板隐藏事件，与on('hidden')搭配使用。需通过 [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
+取消订阅划词面板隐藏事件，与on('hidden')搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -167,7 +167,7 @@ try {
 on(type: 'destroyed', callback: Callback<void>): void
 ```
 
-订阅划词面板销毁事件，与off('destroyed')搭配使 用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
+订阅划词面板销毁事件，与off('destroyed')搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -199,7 +199,7 @@ try {
 on(type: 'hidden', callback: Callback<void>): void
 ```
 
-订阅划词面板隐藏事件，与off('hidden')搭配使用。面板调用 [hide](#hide)隐藏或失焦自动隐藏时触发该事件。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到 Panel实例后调用。
+订阅划词面板隐藏事件，与off('hidden')搭配使用。面板调用[hide](#hide)隐藏或失焦自动隐藏时触发该事件。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -231,7 +231,7 @@ try {
 setUiContent(path: string): Promise<void>
 ```
 
-为当前的划词面板设置界面内容，例如展示翻译结果、搜索建议或自定义操作按钮等。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。使用Promise 异步回调。
+为当前的划词面板设置界面内容，例如展示翻译结果、搜索建议或自定义操作按钮等。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -249,7 +249,7 @@ setUiContent(path: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -281,7 +281,7 @@ try {
 show(): Promise<void>
 ```
 
-显示划词面板，与[hide](#hide)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到 Panel实例后调用。使用Promise异步回调。
+显示划词面板，与[hide](#hide)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -293,7 +293,7 @@ show(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -321,7 +321,7 @@ selectionPanel.show().then(() => {
 startMoving(): Promise<void>
 ```
 
-设置划词面板可随鼠标、触控板或触屏拖动移动位置，指针释放后自动停止移动。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。使用Promise异步 回调。该接口需在onTouch的回调函数中调用，并且事件类型为TouchType.Down。
+设置划词面板可随鼠标、触控板或触屏拖动移动位置，指针释放后自动停止移动。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)获取到Panel实例后调用。使用Promise异步回调。该接口需在onTouch的回调函数中调用，并且事件类型为TouchType.Down。
 
 **起始版本：** 24
 
@@ -333,7 +333,7 @@ startMoving(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

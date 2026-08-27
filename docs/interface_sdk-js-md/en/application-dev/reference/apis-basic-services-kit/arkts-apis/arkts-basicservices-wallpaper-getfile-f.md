@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wallpaper from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## getFile
@@ -70,7 +70,7 @@ Obtains a file of the wallpaper of the specified type. Returns the file descript
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | the promise returned by the function. |
+| Promise&lt;number&gt; | the promise returned by the function. |
 
 **Examples**
 

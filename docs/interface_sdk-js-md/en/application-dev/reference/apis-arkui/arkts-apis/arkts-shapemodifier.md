@@ -6,4 +6,4 @@
 
 | Name | Description |
 | --- | --- |
-| [ShapeModifier](arkts-arkui-shapemodifier-c.md) | Defines Shape Modifier@extends ShapeAttribute @implements AttributeModifier & lt;ShapeAttribute & gt; |
+| [ShapeModifier](arkts-arkui-shapemodifier-c.md) | Defines Shape Modifier |

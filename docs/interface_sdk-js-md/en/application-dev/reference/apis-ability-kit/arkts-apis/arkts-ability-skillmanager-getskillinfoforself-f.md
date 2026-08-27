@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import skillManager from '@kit.AbilityKit';
+import { skillManager } from '@kit.AbilityKit';
 ```
 
 ## getSkillInfoForSelf
@@ -34,7 +34,7 @@ Obtains SkillInfo of the calling application based on moduleName and skillName.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;SkillInfo & gt; | Returns the SkillInfo object of the specified skill. |
+| Promise&lt;SkillInfo&gt; | Returns the SkillInfo object of the specified skill. |
 
 **Error codes:**
 

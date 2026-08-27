@@ -1,6 +1,8 @@
 # ContentModifier
 
-Defines the content modifier.@interface ContentModifier
+Defines the content modifier.
+
+@interface ContentModifier
 
 **Since:** 12
 

@@ -1,6 +1,8 @@
 # AudioVolumeMode
 
-表示音量模式的枚举。@enum { number }
+表示音量模式的枚举。
+
+@enum { number }
 
 **起始版本：** 19
 

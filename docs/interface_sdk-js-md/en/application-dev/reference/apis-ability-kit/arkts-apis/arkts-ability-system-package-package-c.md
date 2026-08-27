@@ -4,6 +4,7 @@
 > **NOTE：**
 > 
 > This API has been supported since API version 3 and deprecated since API version 9.
+
 Checks whether a bundle has been installed.
 
 **Since:** 3
@@ -15,7 +16,7 @@ Checks whether a bundle has been installed.
 ## Modules to Import
 
 ```TypeScript
-import Package, { CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
+import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
 ```
 
 ## hasInstalled
@@ -38,7 +39,7 @@ Checks whether an application exists, or whether a native application has been i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | Yes | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) |
+| options | [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | Yes | Options |
 
 **Examples**
 

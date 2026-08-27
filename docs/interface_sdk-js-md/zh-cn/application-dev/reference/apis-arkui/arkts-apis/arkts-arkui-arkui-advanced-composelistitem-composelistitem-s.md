@@ -18,7 +18,6 @@
 
 ```TypeScript
 import { ComposeListItem, ContentItem, IconType, OperateButton, OperateCheck, OperateIcon, OperateItem } from '@kit.ArkUI';
-import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, OperateButtonV2, OperateButtonV2Options, OperateCheckV2, OperateCheckV2Options, OperateIconV2, OperateIconV2Options, OperateItemV2, OperateItemV2Options } from '@kit.ArkUIV2';
 ```
 
 ## contentItem
@@ -27,7 +26,9 @@ import { ComposeListItemV2, ContentItemV2, ContentItemV2Options, IconTypeV2, Ope
 contentItem?: ContentItem
 ```
 
-定义左侧以及中间元素。默认不设置或设置为undefined时，左侧和中间元素不显示。
+定义左侧以及中间元素。
+
+默认不设置或设置为undefined时，左侧和中间元素不显示。
 
 **类型：** [ContentItem](arkts-arkui-arkui-advanced-composelistitem-contentitem-c.md)
 
@@ -45,7 +46,9 @@ contentItem?: ContentItem
 operateItem?: OperateItem
 ```
 
-定义右侧元素。默认不设置或设置为undefined时，右侧元素不显示。
+定义右侧元素。
+
+默认不设置或设置为undefined时，右侧元素不显示。
 
 **类型：** [OperateItem](arkts-arkui-arkui-advanced-composelistitem-operateitem-c.md)
 

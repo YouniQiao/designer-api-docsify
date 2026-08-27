@@ -53,7 +53,7 @@ function isFocusAssistSupported(professionalPhotoSession: camera.ProfessionalPho
   try {
     status = professionalPhotoSession.isFocusAssistSupported();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The isFocusAssistSupported call failed. error code: ${err.code}`);
   }
@@ -105,7 +105,7 @@ function isFocusDrivenTypeSupported(session: camera.VideoSessionForSys, type: ca
   try {
     status = session.isFocusDrivenTypeSupported(type);
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The isFocusDrivenTypeSupported call failed. error code: ${err.code}`);
   }
@@ -157,7 +157,7 @@ function isFocusRangeTypeSupported(session: camera.VideoSessionForSys, type: cam
   try {
     status = session.isFocusRangeTypeSupported(type);
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The isFocusRangeTypeSupported call failed. error code: ${err.code}`);
   }

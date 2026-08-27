@@ -9,7 +9,7 @@ Defines the network access policy information.
 ## Modules to Import
 
 ```TypeScript
-import policy from '@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## allowCellular
@@ -18,8 +18,10 @@ import policy from '@kit.NetworkKit';
 allowCellular: boolean
 ```
 
-Whether to allow Internet access over the cellular network.  
-**true**: yes.  
+Whether to allow Internet access over the cellular network.
+
+**true**: yes.
+
 **false**: no.
 
 **Type:** boolean
@@ -36,8 +38,10 @@ Whether to allow Internet access over the cellular network.
 allowWiFi: boolean
 ```
 
-Whether to allow Internet access over Wi-Fi.  
-**true**: yes;  
+Whether to allow Internet access over Wi-Fi.
+
+**true**: yes;
+
 **false**: no.
 
 **Type:** boolean

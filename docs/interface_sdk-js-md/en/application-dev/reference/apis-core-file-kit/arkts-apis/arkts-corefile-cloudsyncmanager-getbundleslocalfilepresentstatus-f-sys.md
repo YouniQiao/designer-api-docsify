@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import cloudSyncManager from '@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## getBundlesLocalFilePresentStatus
@@ -26,7 +26,7 @@ Obtains the existence status of local files for multiple applications and checks
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleNames | Array & lt;string & gt; | Yes | Array of application bundle names to be checked. Each element is the bundle name of an application. |
+| bundleNames | Array&lt;string&gt; | Yes | Array of application bundle names to be checked. Each element is the bundle name of an application. |
 
 **Return value:**
 

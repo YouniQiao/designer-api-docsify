@@ -1,6 +1,8 @@
 # UserAuthInstance
 
-用于执行用户身份认证，并支持使用统一用户身份认证控件。该接口提供了完整的用户认证能力，包括订阅认证结果、订阅认证中间状态、启动认证和取消认证等操作。通过统一认证控件，可以为用户提供标准化的认证界面和一致的认证体验。使用以下接口前，需先通过[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md)方法获取UserAuthInstance对象。
+用于执行用户身份认证，并支持使用统一用户身份认证控件。该接口提供了完整的用户认证能力，包括订阅认证结果、订阅认证中间状态、启动认证和取消认证等操作。通过统一认证控件，可以为用户提供标准化的认证界面和一致的认证体验。
+
+使用以下接口前，需先通过[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md)方法获取UserAuthInstance对象。
 
 > **说明：**
 > 
@@ -13,8 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import userAuth from '@kit.UserAuthenticationKit';
-import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## cancel
@@ -111,7 +112,7 @@ off(type: 'result', callback?: IAuthCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'result' | 是 | 订阅事件类型，表明该事件用来返回认证结果。 |
-| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | 否 | 认证接口的回调函数，用于返回认证结果。当不传该参数时默认值为调用 [on('result')](#onresult)接口时传递的参数值。 |
+| callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | 否 | 认证接口的回调函数，用于返回认证结果。当不传该参数时默认值为调用[on('result')](#onresult)接口时传递的参数值。 |
 
 **错误码：**
 
@@ -187,8 +188,8 @@ off(type: 'authTip', callback?: AuthTipCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'authTip' | 是 | 取消订阅的事件类型，支持的事件为'authTip'，当[start()](#start)调用完成，发起身份认 证并调用[on('authTip')](#onauthtip)订阅该事件后，调用该 方法可取消订阅，不会再触发该事件。 |
-| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | 否 | 认证接口的回调函数，用于返回认证中间状态。 当不传该参数时默认值为调用 [on('authTip')](#onauthtip)接口时传递的参数值。 |
+| type | 'authTip' | 是 | 取消订阅的事件类型，支持的事件为'authTip'，当[start()](#start)调用完成，发起身份认证并调用[on('authTip')](#onauthtip)订阅该事件后，调用该方法可取消订阅，不会再触发该事件。 |
+| callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | 否 | 认证接口的回调函数，用于返回认证中间状态。 当不传该参数时默认值为调用[on('authTip')](#onauthtip)接口时传递的参数值。 |
 
 **错误码：**
 
@@ -206,7 +207,7 @@ off(type: 'authTip', callback?: AuthTipCallback): void
 on(type: 'result', callback: IAuthCallback): void
 ```
 
-订阅用户身份认证的最终结果。通过该接口获取到的是用户在认证控件完成身份认证交互后的最终身份认证结果。认证控件消失前，用户中间的认证不通过尝试并不会通过该接口返回，只有最终的认证结果（成功或最终失败）会通过此接口返回。如果需要感 知整个认证过程中用户的每一次认证不通过尝试和中间状态，请通过 [on('authTip')](#onauthtip)接口订阅。
+订阅用户身份认证的最终结果。通过该接口获取到的是用户在认证控件完成身份认证交互后的最终身份认证结果。认证控件消失前，用户中间的认证不通过尝试并不会通过该接口返回，只有最终的认证结果（成功或最终失败）会通过此接口返回。如果需要感知整个认证过程中用户的每一次认证不通过尝试和中间状态，请通过[on('authTip')](#onauthtip)接口订阅。
 
 > **说明：**
 > 
@@ -225,7 +226,7 @@ on(type: 'result', callback: IAuthCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'result' | 是 | 订阅事件类型，表明该事件用来返回认证结果，当[start()](#start)调用完成，发起身份认证并完成认证 交互后，触发该事件。 |
+| type | 'result' | 是 | 订阅事件类型，表明该事件用来返回认证结果，当[start()](#start)调用完成，发起身份认证并完成认证交互后，触发该事件。 |
 | callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | 是 | 认证接口的回调函数，用于返回认证结果。 |
 
 **错误码：**
@@ -319,7 +320,7 @@ on(type: 'authTip', callback: AuthTipCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'authTip' | 是 | 订阅事件类型，支持的事件为'authTip'，当[start()](#start)调用完成，发起身份认证，触 发该事件。 |
+| type | 'authTip' | 是 | 订阅事件类型，支持的事件为'authTip'，当[start()](#start)调用完成，发起身份认证，触发该事件。 |
 | callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | 是 | 认证接口的回调函数，用于返回认证中间状态。 |
 
 **错误码：**

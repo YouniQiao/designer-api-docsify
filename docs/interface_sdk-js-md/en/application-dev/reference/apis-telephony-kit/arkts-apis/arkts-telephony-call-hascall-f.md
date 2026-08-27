@@ -54,7 +54,7 @@ Checks whether a call is in progress. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that a call is in progress, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that a call is in progress, and the value **false** indicates the opposite. |
 
 **Examples**
 

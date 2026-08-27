@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleResourceManager from '@kit.AbilityKit';
+import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## getAllBundleResourceInfo
@@ -105,7 +105,7 @@ Obtains the bundle resource information of all applications based on the given r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;BundleResourceInfo & gt; & gt; | Promise used to return the BundleResourceInfo array. |
+| Promise&lt;Array&lt;BundleResourceInfo&gt;&gt; | Promise used to return the BundleResourceInfo array. |
 
 **Error codes:**
 

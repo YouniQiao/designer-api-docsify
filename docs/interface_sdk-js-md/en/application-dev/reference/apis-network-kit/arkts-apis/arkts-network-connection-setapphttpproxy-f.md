@@ -27,7 +27,7 @@ Sets the application-level HTTP proxy configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpProxy | [HttpProxy](arkts-network-ethernet-httpproxy-t.md) | Yes | Application-level HTTP proxy configuration. |
+| httpProxy | HttpProxy | Yes | Application-level HTTP proxy configuration. |
 
 **Error codes:**
 

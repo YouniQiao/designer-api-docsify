@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import functionManager from '@kit.AbilityKit';
+import { functionManager } from '@kit.AbilityKit';
 ```
 
 ## invokeFunction
@@ -31,7 +31,7 @@ Invoke a function by functionNamespace and functionName.
 | --- | --- | --- | --- |
 | functionNamespace | string | Yes | The namespace of the target function. |
 | functionName | string | Yes | The name of the target function. |
-| args | Record & lt;string, Object & gt; | Yes | The input arguments for the function. |
+| args | Record&lt;string, Object&gt; | Yes | The input arguments for the function. |
 | options | [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i-sys.md) | No | The options for this invocation. |
 
 **Return value:**

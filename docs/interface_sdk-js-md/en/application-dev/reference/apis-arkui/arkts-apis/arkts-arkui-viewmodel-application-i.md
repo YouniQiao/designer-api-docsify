@@ -1,6 +1,8 @@
 # Application
 
-Application@interface Application
+Application
+
+@interface Application
 
 **Since:** 4
 

@@ -35,7 +35,9 @@ Position of the top-left corner of the target element in the current window coor
 height: Length
 ```
 
-Height of the target element.Unit: vp
+Height of the target element.
+
+Unit: vp
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
@@ -71,7 +73,9 @@ Position of the top-left corner of the target element in the [component coordina
 width: Length
 ```
 
-Width of the target element.Unit: vp
+Width of the target element.
+
+Unit: vp
 
 **Type:** [Length](arkts-arkui-length-t.md)
 

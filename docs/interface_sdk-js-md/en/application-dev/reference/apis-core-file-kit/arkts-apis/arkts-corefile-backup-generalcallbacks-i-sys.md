@@ -1,6 +1,8 @@
 # GeneralCallbacks (System API)
 
-General callbacks for both backup and restore procedure. The backup service will notify the client by these callbacks.@interface GeneralCallbacks
+General callbacks for both backup and restore procedure. The backup service will notify the client by these callbacks.
+
+@interface GeneralCallbacks
 
 **Since:** 10
 
@@ -11,7 +13,7 @@ General callbacks for both backup and restore procedure. The backup service will
 ## Modules to Import
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## onBackupSizeReport

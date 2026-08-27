@@ -1,6 +1,6 @@
 # VideoRecorder（系统接口）
 
-该接口自API version 9起停止维护，建议使用AVRecorder。 视频录制管理类，用于视频录制。在调用VideoRecorder的方法前，必须先通过createVideoRecorder()创建一个VideoRecorder实例。
+该接口自API version 9起停止维护，建议使用AVRecorder。视频录制管理类，用于视频录制。在调用VideoRecorder的方法前，必须先通过createVideoRecorder()创建一个VideoRecorder实例。
 
 **起始版本：** 9
 
@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getInputSurface
@@ -93,7 +93,7 @@ getInputSurface(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回输入surface id字符串。 |
+| Promise&lt;string&gt; | Promise对象，返回输入surface id字符串。 |
 
 **错误码：**
 
@@ -276,7 +276,7 @@ pause(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，暂停录制完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，暂停录制完成时返回。 |
 
 **错误码：**
 
@@ -447,7 +447,7 @@ prepare(config: VideoRecorderConfig): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，准备录制完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，准备录制完成时返回。 |
 
 **错误码：**
 
@@ -636,7 +636,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，释放资源完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，释放资源完成时返回。 |
 
 **错误码：**
 
@@ -774,7 +774,7 @@ videoPlayer.release().then(() => {
 reset(callback: AsyncCallback<void>): void
 ```
 
-重置视频录制。 在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
+重置视频录制。在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
 
 **起始版本：** 9
 
@@ -857,7 +857,7 @@ videoPlayer.reset((err: BusinessError) => {
 reset(): Promise<void>
 ```
 
-重置视频录制。 在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
+重置视频录制。在重置之前，必须先调用stop()停止录制。重置后，必须调用prepare()设置录制配置以进行下一次录制。
 
 **起始版本：** 9
 
@@ -869,7 +869,7 @@ reset(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，重置完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，重置完成时返回。 |
 
 **错误码：**
 
@@ -1001,7 +1001,7 @@ resume(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，恢复录制完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，恢复录制完成时返回。 |
 
 **错误码：**
 
@@ -1125,7 +1125,7 @@ start(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，开始录制完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，开始录制完成时返回。 |
 
 **错误码：**
 
@@ -1277,7 +1277,7 @@ stop(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，停止录制完成时返回。 |
+| Promise&lt;void&gt; | Promise对象，停止录制完成时返回。 |
 
 **错误码：**
 

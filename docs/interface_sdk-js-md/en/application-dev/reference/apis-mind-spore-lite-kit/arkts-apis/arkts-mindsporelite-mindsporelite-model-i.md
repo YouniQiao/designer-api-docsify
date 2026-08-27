@@ -9,7 +9,7 @@ Provides manages model function. Including get inputs, predict ,resize.
 ## Modules to Import
 
 ```TypeScript
-import mindSporeLite from '@kit.MindSporeLiteKit';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## exportModel
@@ -373,7 +373,7 @@ resize model input
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
-| dims | Array & lt;Array & lt;number & gt; & gt; | Yes | indicates the target new shape array |
+| dims | Array&lt;Array&lt;number&gt;&gt; | Yes | indicates the target new shape array |
 
 **Return value:**
 
@@ -472,7 +472,7 @@ Setup training with virtual batches
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| virtualBatchMultiplier | number | Yes | virtual batch multiplier, use any number & lt; 1 to disable |
+| virtualBatchMultiplier | number | Yes | virtual batch multiplier, use any number &lt; 1 to disable |
 | lr | number | Yes | learning rate to use for virtual batch, -1 for internal configuration |
 | momentum | number | Yes | batch norm momentum to use for virtual batch, -1 for internal configuration |
 

@@ -1,6 +1,12 @@
 # ImageReceiver
 
-ImageReceiver类，用于获取组件surface id、接收最新的图片和读取下一张图片以及释放ImageReceiver实例。ImageReceiver作为图片的接收方和消费者，其参数属性实际上不会对接收到的图片产生影响。 图片属性的配置应在发送方和生产者上进行，如相机预览流 [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput) 。在调用以下方法前需要先通过[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md)创建ImageReceiver实例。从API version 23开始，更推荐使用[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md)，通过传入 [ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md)创建ImageReceiver实例。由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](#release) 方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+ImageReceiver类，用于获取组件surface id、接收最新的图片和读取下一张图片以及释放ImageReceiver实例。ImageReceiver作为图片的接收方和消费者，其参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方和生产者上进行，如相机预览流[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput)。
+
+在调用以下方法前需要先通过[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md)创建ImageReceiver实例。
+
+从API version 23开始，更推荐使用[image.createImageReceiver](arkts-image-image-createimagereceiver-f.md)，通过传入[ImageReceiverOptions](arkts-image-image-imagereceiveroptions-i.md)创建ImageReceiver实例。
+
+由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 > **说明：**
 > 
@@ -13,7 +19,7 @@ ImageReceiver类，用于获取组件surface id、接收最新的图片和读取
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## getReceivingSurfaceId
@@ -66,7 +72,7 @@ getReceivingSurfaceId(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回surface id。 |
+| Promise&lt;string&gt; | Promise对象，返回surface id。 |
 
 **示例**
 
@@ -223,7 +229,7 @@ readLatestImage(): Promise<Image>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Image & gt; | Promise对象，返回最新图片。 |
+| Promise&lt;Image&gt; | Promise对象，返回最新图片。 |
 
 **示例**
 
@@ -327,7 +333,7 @@ readNextImage(): Promise<Image>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Image & gt; | Promise对象，返回下一张图片。 |
+| Promise&lt;Image&gt; | Promise对象，返回下一张图片。 |
 
 **示例**
 
@@ -362,7 +368,11 @@ async function ReadNextImage(receiver : image.ImageReceiver) {
 release(callback: AsyncCallback<void>): void
 ```
 
-释放ImageReceiver实例。使用callback异步回调。由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放ImageReceiver实例。使用callback异步回调。
+
+由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用该方法，及时释放内存。
+
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 9
 
@@ -467,7 +477,11 @@ function release(pixelMap: image.PixelMap) {
 release(): Promise<void>
 ```
 
-释放ImageReceiver实例。使用Promise异步回调。由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放ImageReceiver实例。使用Promise异步回调。
+
+由于图片占用内存较大，所以当ImageReceiver实例使用完成后，应主动调用该方法，及时释放内存。
+
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 9
 
@@ -477,7 +491,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 

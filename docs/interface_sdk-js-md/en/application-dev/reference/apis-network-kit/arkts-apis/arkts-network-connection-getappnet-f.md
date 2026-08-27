@@ -63,7 +63,7 @@ Obtains the network information bound to an application. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NetHandle & gt; | Promise used to return the result. |
+| Promise&lt;NetHandle&gt; | Promise used to return the result. |
 
 **Error codes:**
 

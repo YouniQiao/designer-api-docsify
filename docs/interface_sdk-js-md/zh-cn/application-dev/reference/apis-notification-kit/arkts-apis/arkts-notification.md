@@ -13,9 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKitManager';
-import notificationSubscribe from '@kit.NotificationKitSubscribe';
-import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## 汇总
@@ -43,8 +40,8 @@ import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubs
 | [getSlots](arkts-notification-notification-getslots-depr-f.md#getslots) | 获取此应用程序的所有通知通道（Promise形式）。 |
 | [isDistributedEnabled](arkts-notification-notification-isdistributedenabled-depr-f.md#isdistributedenabled) | 查询设备是否支持分布式通知（Callback形式）。 |
 | [isDistributedEnabled](arkts-notification-notification-isdistributedenabled-depr-f.md#isdistributedenabled) | 查询设备是否支持分布式通知（Promise形式）。 |
-| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate) | 在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。 |
-| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate) | 在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前， 可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。 |
+| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate) | 在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。 |
+| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate) | 在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。 |
 | [publish](arkts-notification-notification-publish-depr-f.md#publish) | 发布通知（callback形式）。 |
 | [publish](arkts-notification-notification-publish-depr-f.md#publish) | 发布通知（Promise形式）。 |
 | [removeAllSlots](arkts-notification-notification-removeallslots-depr-f.md#removeallslots) | 删除所有通知通道（callback形式）。 |

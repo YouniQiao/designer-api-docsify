@@ -166,7 +166,7 @@ Compressed texture image 2D from PBO offset
 | height | webgl.GLsizei | Yes | Height |
 | border | webgl.GLint | Yes | Border |
 | imageSize | webgl.GLsizei | Yes | Image size |
-| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| offset | webgl.GLintptr | Yes | Offset |
 
 ## compressedTexImage2D
 
@@ -242,7 +242,7 @@ Compressed texture sub image 2D from PBO offset
 | height | webgl.GLsizei | Yes | Height |
 | format | webgl.GLenum | Yes | [Format](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-format-e.md) |
 | imageSize | webgl.GLsizei | Yes | Image size |
-| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| offset | webgl.GLintptr | Yes | Offset |
 
 ## compressedTexSubImage2D
 
@@ -350,7 +350,7 @@ Reads pixels from the framebuffer to PBO offset
 | height | webgl.GLsizei | Yes | Height |
 | format | webgl.GLenum | Yes | Pixel format |
 | type | webgl.GLenum | Yes | Pixel type |
-| offset | webgl.GLintptr | Yes | [Offset](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-offset-i.md) |
+| offset | webgl.GLintptr | Yes | Offset |
 
 ## readPixels
 

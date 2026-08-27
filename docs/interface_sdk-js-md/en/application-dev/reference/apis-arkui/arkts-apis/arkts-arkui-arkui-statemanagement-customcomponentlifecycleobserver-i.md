@@ -80,7 +80,7 @@ Called when a reusable custom component is re-added to the node tree from the ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Record & lt;string, Object \ | undefined \| null & gt; | No | The value is not **undefined** in the reuse callback of the V1 component and is **undefined** in the reuse callback of the V2 component. |
+| params | Record&lt;string, Object \| undefined \| null&gt; | No | The value is not **undefined** in the reuse callback of the V1 component and is **undefined** in the reuse callback of the V2 component. |
 
 ## onDidBuild
 

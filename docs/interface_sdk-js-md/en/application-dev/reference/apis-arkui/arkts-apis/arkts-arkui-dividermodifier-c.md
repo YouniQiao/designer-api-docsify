@@ -1,6 +1,8 @@
 # DividerModifier
 
-Defines Divider Modifier@extends DividerAttribute @implements AttributeModifier&lt;DividerAttribute&gt;
+Defines Divider Modifier
+
+@extends DividerAttribute @implements AttributeModifier&lt;DividerAttribute&gt;
 
 **Inheritance/Implementation:** DividerModifier extends [DividerAttribute](../arkts-components/arkts-arkui-divider-attribute.md#dividerattribute) and implements AttributeModifier<DividerAttribute>
 

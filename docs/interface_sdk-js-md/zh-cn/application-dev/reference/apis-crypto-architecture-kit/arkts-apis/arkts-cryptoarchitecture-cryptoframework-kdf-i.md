@@ -1,6 +1,6 @@
 # Kdf
 
-密钥派生函数（KDF）接口，定义基于密钥派生参数派生密钥的方法。调用前，需通过 [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md)方法创建一个Kdf实例。
+密钥派生函数（KDF）接口，定义基于密钥派生参数派生密钥的方法。调用前，需通过[createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md)方法创建一个Kdf实例。
 
 **起始版本：** 11
 
@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## generateSecret
@@ -118,7 +118,7 @@ generateSecret(params: KdfSpec): Promise<DataBlob>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;DataBlob & gt; | Promise对象，返回派生的密钥。 |
+| Promise&lt;DataBlob&gt; | Promise对象，返回派生的密钥。 |
 
 **错误码：**
 
@@ -183,7 +183,7 @@ generateSecretSync(params: KdfSpec): DataBlob
 
 基于传入的密钥派生参数进行密钥派生，通过同步方式返回派生得到的密钥。
 
-**说明：** 建议优先使用异步API，generateSecret。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+**说明：** 建议优先使用异步API，generateSecret。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -201,7 +201,7 @@ generateSecretSync(params: KdfSpec): DataBlob
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 用于获取派生得到的密钥DataBlob数据。 |
+| DataBlob | 用于获取派生得到的密钥DataBlob数据。 |
 
 **错误码：**
 

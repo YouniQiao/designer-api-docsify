@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import hyperSnapManager from '@kit.AbilityKit';
+import { hyperSnapManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总
@@ -20,5 +20,5 @@ import hyperSnapManager from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [requestRebuildHyperSnap(应用快启管理)](arkts-ability-hypersnapmanager-requestrebuildhypersnap-f.md) | 请求重新初始化应用快启。此方法会销毁当前进程已经初始化的快启数据，系统将在合适的时机重新进行快启初始化。 |
-| [setHyperSnapEnabled(应用快启管理)](arkts-ability-hypersnapmanager-sethypersnapenabled-f.md) | 启用或禁用应用的快启功能。 |
+| [requestRebuildHyperSnap](arkts-ability-hypersnapmanager-requestrebuildhypersnap-f.md) | 请求重新初始化应用快启。 |
+| [setHyperSnapEnabled](arkts-ability-hypersnapmanager-sethypersnapenabled-f.md) | 启用或禁用应用的快启功能。 |

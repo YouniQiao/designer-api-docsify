@@ -9,7 +9,7 @@ UIExtensionContentSession is the UI operation class for the UIExtensionAbility. 
 ## Modules to Import
 
 ```TypeScript
-import UIExtensionContentSession from '@kit.AbilityKit';
+import { UIExtensionContentSession } from '@kit.AbilityKit';
 ```
 
 ## getUIExtensionWindowProxy
@@ -97,7 +97,7 @@ Loads a page for the [UIExtensionAbility](arkts-ability-app-ability-uiextensiona
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page to load. The path is configured using the [pages](../../../quick-start/module-configuration-file.md#pages) tag in the [module.json5](../../../quick-start/module-configuration-file.md) file. |
-| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | No | A page-level UI state storage unit, which is used to pass state properties to the page. |
+| storage | LocalStorage | No | A page-level UI state storage unit, which is used to pass state properties to the page. |
 
 **Error codes:**
 
@@ -151,7 +151,7 @@ Loads a [named route](../../../ui/arkts-routing.md#named-route) page for a [UIEx
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the named route page. |
-| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | No | A page-level UI state storage unit, which is used to pass state properties to the page. |
+| storage | LocalStorage | No | A page-level UI state storage unit, which is used to pass state properties to the page. |
 
 **Error codes:**
 
@@ -243,7 +243,7 @@ Enables or disables the window privacy mode of the host application. A window in
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -364,7 +364,7 @@ Implicitly starts a given type of UIExtensionAbility. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the UIExtensionAbility. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules). |
-| wantParam | Record & lt;string, Object & gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
+| wantParam | Record&lt;string, Object&gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Execution result of starting the UIExtensionAbility. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
@@ -436,14 +436,14 @@ Implicitly starts a given type of UIExtensionAbility. This API uses a promise to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the UIExtensionAbility. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules). |
-| wantParam | Record & lt;string, Object & gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
+| wantParam | Record&lt;string, Object&gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Execution result of starting the UIExtensionAbility. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -571,7 +571,7 @@ Destroys this UIExtensionAbility and closes the corresponding window of the host
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -702,7 +702,7 @@ Destroys this UIExtensionAbility, closes the corresponding window of the host ap
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

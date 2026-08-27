@@ -66,7 +66,7 @@ Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, o
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 

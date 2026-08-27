@@ -1,6 +1,8 @@
 # DialogType
 
-Enumeration of dialog type.@enum { number }
+Enumeration of dialog type.
+
+@enum { number }
 
 **Since:** 23
 

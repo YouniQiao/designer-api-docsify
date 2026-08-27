@@ -18,8 +18,8 @@ Adds a property to an object, or modifies attributes of an existing property.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | object | Yes |  |
-| propertyKey | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |  |
-| attributes | PropertyDescriptor & ThisType & lt;any & gt; | Yes |  |
+| propertyKey | PropertyKey | Yes |  |
+| attributes | PropertyDescriptor & ThisType&lt;any&gt; | Yes |  |
 
 **Return value:**
 

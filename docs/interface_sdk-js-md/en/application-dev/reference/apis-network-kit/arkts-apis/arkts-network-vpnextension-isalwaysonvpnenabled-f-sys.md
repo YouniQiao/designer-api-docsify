@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import vpnExtension from '@kit.NetworkKit';
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## isAlwaysOnVpnEnabled
@@ -34,7 +34,7 @@ Obtains the status of the **always on** mode. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the **always on** mode is enabled, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the **always on** mode is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

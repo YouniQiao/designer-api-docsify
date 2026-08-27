@@ -30,7 +30,7 @@ interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Pro
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | reqContext | [HttpRequestContext](arkts-network-http-httprequestcontext-i.md) | 是 | the context of the target HTTP request. |
-| rspContext | [HttpResponse](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-httpresponse-i.md) | 是 | the context of the target HTTP response. |
+| rspContext | HttpResponse | 是 | the context of the target HTTP response. |
 
 **返回值：**
 

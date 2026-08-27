@@ -1,6 +1,8 @@
 # WebElement
 
-The &lt;web&gt; component is a container for displaying web page content.@extends Element @interface WebElement
+The &lt;web&gt; component is a container for displaying web page content.
+
+@extends Element @interface WebElement
 
 **Inheritance/Implementation:** WebElement extends [Element](arkts-arkui-viewmodel-element-i.md)
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import PartnerAgentExtensionAbility from '@kit.ConnectivityKit';
+import { PartnerAgentExtensionAbility } from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -12,7 +12,7 @@ import PartnerAgentExtensionAbility from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md) | Class for the PartnerAgentExtensionAbility. Applications can use this ability to discover devices.@extends ExtensionAbility |
+| [PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md) | Class for the PartnerAgentExtensionAbility. Applications can use this ability to discover devices. |
 
 ### Types
 

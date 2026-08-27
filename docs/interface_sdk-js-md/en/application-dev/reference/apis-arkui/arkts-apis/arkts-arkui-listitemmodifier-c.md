@@ -1,6 +1,8 @@
 # ListItemModifier
 
-Defines ListItem Modifier@extends ListItemAttribute @implements AttributeModifier&lt;ListItemAttribute&gt;
+Defines ListItem Modifier
+
+@extends ListItemAttribute @implements AttributeModifier&lt;ListItemAttribute&gt;
 
 **Inheritance/Implementation:** ListItemModifier extends [ListItemAttribute](../arkts-components/arkts-arkui-listitem-attribute.md#listitemattribute) and implements AttributeModifier<ListItemAttribute>
 

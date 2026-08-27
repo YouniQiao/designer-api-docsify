@@ -1,6 +1,6 @@
 # TCPSocket
 
-TCPSocket连接。在调用TCPSocket的方法前，需要先通过[socket.constructTCPSocketInstance](arkts-network-socket-constructtcpsocketinstance-f.md)创建 TCPSocket对象。
+TCPSocket连接。在调用TCPSocket的方法前，需要先通过[socket.constructTCPSocketInstance](arkts-network-socket-constructtcpsocketinstance-f.md)创建TCPSocket对象。
 
 **起始版本：** 7
 
@@ -9,7 +9,7 @@ TCPSocket连接。在调用TCPSocket的方法前，需要先通过[socket.constr
 ## 导入模块
 
 ```TypeScript
-import socket from '@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## bind
@@ -38,7 +38,7 @@ bind(address: NetAddress, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 本端地址信息，参考 [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| address | NetAddress | 是 | 本端地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误、错误信息。 |
 
 **错误码：**
@@ -130,13 +130,13 @@ bind(address: NetAddress): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 本端地址信息，参考 [NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| address | NetAddress | 是 | 本端地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式返回TCPSocket绑定本机的IP地址和端口的结果。 |
+| Promise&lt;void&gt; | 以Promise形式返回TCPSocket绑定本机的IP地址和端口的结果。 |
 
 **错误码：**
 
@@ -342,7 +342,7 @@ close(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -679,7 +679,7 @@ connect(options: TCPConnectOptions): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式返回TCPSocket连接到指定的IP地址和端口的结果。 |
+| Promise&lt;void&gt; | 以Promise形式返回TCPSocket连接到指定的IP地址和端口的结果。 |
 
 **错误码：**
 
@@ -771,7 +771,7 @@ getLocalAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;NetAddress & gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| Promise&lt;NetAddress&gt; | 以Promise形式返回获取本地socket地址的结果。 |
 
 **错误码：**
 
@@ -1096,7 +1096,7 @@ getRemoteAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;NetAddress & gt; | 以Promise形式返回获取对端socket地址的结果。 |
+| Promise&lt;NetAddress&gt; | 以Promise形式返回获取对端socket地址的结果。 |
 
 **错误码：**
 
@@ -1270,7 +1270,7 @@ getSocketFd(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 以Promise形式返回socket的文件描述符。 |
+| Promise&lt;number&gt; | 以Promise形式返回socket的文件描述符。 |
 
 **示例**
 
@@ -2322,7 +2322,7 @@ send(options: TCPSendOptions): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -2619,7 +2619,7 @@ setExtraOptions(options: TCPExtraOptions): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

@@ -33,7 +33,7 @@ Obtains the supported time-lapse shooting interval range.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Interval range, in ms. The value depends on the underlying capability. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Array&lt;number&gt; | Interval range, in ms. The value depends on the underlying capability. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
@@ -52,7 +52,7 @@ function getSupportedTimeLapseIntervalRange(timeLapsePhotoSession: camera.TimeLa
   try {
     intervalRange = timeLapsePhotoSession.getSupportedTimeLapseIntervalRange();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The getSupportedTimeLapseIntervalRange call failed. error code: ${err.code}`);
   }
@@ -97,7 +97,7 @@ function getTimeLapseInterval(timeLapsePhotoSession: camera.TimeLapsePhotoSessio
   try {
     interval = timeLapsePhotoSession.getTimeLapseInterval();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The getTimeLapseInterval call failed. error code: ${err.code}`);
   }
@@ -142,7 +142,7 @@ function getTimeLapsePreviewType(timeLapsePhotoSession: camera.TimeLapsePhotoSes
   try {
     type = timeLapsePhotoSession.getTimeLapsePreviewType();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The getTimeLapsePreviewType call failed. error code: ${err.code}`);
   }
@@ -187,7 +187,7 @@ function getTimeLapseRecordState(timeLapsePhotoSession: camera.TimeLapsePhotoSes
   try {
     state = timeLapsePhotoSession.getTimeLapseRecordState();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The getTimeLapseRecordState call failed. error code: ${err.code}`);
   }
@@ -232,7 +232,7 @@ function isTryAENeeded(timeLapsePhotoSession: camera.TimeLapsePhotoSession): boo
   try {
     needed = timeLapsePhotoSession.isTryAENeeded();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The isTryAENeeded call failed. error code: ${err.code}`);
   }
@@ -754,7 +754,7 @@ function setTimeLapseInterval(timeLapsePhotoSession: camera.TimeLapsePhotoSessio
     let interval: number = 10000;
     timeLapsePhotoSession.setTimeLapseInterval(interval);
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The setTimeLapseInterval call failed. error code: ${err.code}`);
   }
@@ -798,7 +798,7 @@ function setTimeLapsePreviewType(timeLapsePhotoSession: camera.TimeLapsePhotoSes
   try {
     timeLapsePhotoSession.setTimeLapsePreviewType(camera.TimeLapsePreviewType.LIGHT);
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The setTimeLapsePreviewType call failed. error code: ${err.code}`);
   }
@@ -842,7 +842,7 @@ function setTimeLapseRecordState(timeLapsePhotoSession: camera.TimeLapsePhotoSes
   try {
     timeLapsePhotoSession.setTimeLapseRecordState(camera.TimeLapseRecordState.RECORDING);
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code on failure and handle it.
     let err = error as BusinessError;
     console.error(`The setTimeLapseRecordState call failed. error code: ${err.code}`);
   }
@@ -880,7 +880,7 @@ function startTryAE(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
   try {
     timeLapsePhotoSession.startTryAE();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code on failure and handle it.
     let err = error as BusinessError;
     console.error(`The startTryAE call failed. error code: ${err.code}`);
   }
@@ -918,7 +918,7 @@ function stopTryAE(timeLapsePhotoSession: camera.TimeLapsePhotoSession): void {
   try {
     timeLapsePhotoSession.stopTryAE();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code on failure and handle it.
     let err = error as BusinessError;
     console.error(`The stopTryAE call failed. error code: ${err.code}`);
   }

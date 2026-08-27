@@ -1,6 +1,8 @@
 # DismissContentCoverAction
 
-Component content cover dismiss@interface DismissContentCoverAction
+Component content cover dismiss
+
+@interface DismissContentCoverAction
 
 **起始版本：** 12
 

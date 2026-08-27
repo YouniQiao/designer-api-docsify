@@ -9,7 +9,7 @@ Provides the string collation capability.
 ## Modules to Import
 
 ```TypeScript
-import intl from '@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## compare
@@ -128,8 +128,8 @@ Creates a **Collator** object based on the specified locale and options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | string \| Array & lt;string & gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
-| options | [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | No | Options for creating a **Collator** object. |
+| locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
+| options | CollatorOptions | No | Options for creating a **Collator** object. |
 
 **Examples**
 
@@ -158,7 +158,7 @@ Obtains the options for creating a **Collator** object.
 
 | Type | Description |
 | --- | --- |
-| [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | Options for creating a **Collator** object. |
+| CollatorOptions | Options for creating a **Collator** object. |
 
 **Examples**
 

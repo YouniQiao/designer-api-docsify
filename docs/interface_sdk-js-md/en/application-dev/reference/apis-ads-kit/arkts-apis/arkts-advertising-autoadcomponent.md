@@ -12,4 +12,4 @@ import { AutoAdComponent } from '@kit.AdsKit';
 
 | Name | Description |
 | --- | --- |
-| [AutoAdComponent(Carousel Ad Component)](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | The AutoAdComponent module provides the capability of displaying carousel ads. |
+| [AutoAdComponent](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | The AutoAdComponent module provides the capability of displaying carousel ads. |

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import connectedTag from '@kit.ConnectivityKit';
+import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
 ## off("notify")
@@ -36,7 +36,7 @@ function nfcStatusCb(rfState: connectedTag.NfcRfType) {
     console.info("connectedTag on Callback rfState: ", rfState);
 }
 
-// 有源nfc标签的使用流程
+// 有源NFC标签的使用流程
 async function nfcTagTestOn(): Promise<void> {
     try {
         console.info("connectedTag initialize");

@@ -1,6 +1,8 @@
 # MissionCallback (System API)
 
-MissionCallback registered by app.@interface MissionCallback
+MissionCallback registered by app.
+
+@interface MissionCallback
 
 **Since:** 9
 

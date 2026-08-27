@@ -177,7 +177,7 @@ recycleInvisibleImageMemory(enabled: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 使能开关项：true开启，false关闭； 默认不开启，由系统应用按需开启。 默认值：false 默认值：false 默认值：false 默认值：false 配置为异常undefined时，恢复为默认值false |
+| enabled | boolean | 是 | 使能开关项：true开启，false关闭；默认不开启，由系统应用按需开启。默认值：false 默认值：false 默认值：false 默认值：false 配置为异常undefined时，恢复为默认值false |
 
 **示例**
 

@@ -1,6 +1,8 @@
 # BackupExtensionContext
 
-The context of an ability or an application. It allows access to application-specific resources. Can only be obtained through the ability.@extends ExtensionContext
+The context of an ability or an application. It allows access to application-specific resources. Can only be obtained through the ability.
+
+@extends ExtensionContext
 
 **Inheritance/Implementation:** BackupExtensionContext extends ExtensionContext
 
@@ -11,7 +13,7 @@ The context of an ability or an application. It allows access to application-spe
 ## Modules to Import
 
 ```TypeScript
-import BackupExtensionContext from '@kit.CoreFileKit';
+import { BackupExtensionContext } from '@kit.CoreFileKit';
 ```
 
 ## backupDir

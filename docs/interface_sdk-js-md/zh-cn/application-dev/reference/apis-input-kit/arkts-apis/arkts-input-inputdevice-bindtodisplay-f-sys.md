@@ -3,7 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## bindToDisplay
@@ -12,7 +11,7 @@ import inputDeviceCooperate from '@kit.InputKitCooperate';
 function bindToDisplay(inputDeviceId: number, displayId: number): Promise<void>
 ```
 
-将输入设备绑定到显示器。仅支持外接USB和蓝牙的鼠标、触摸板、键盘和游戏手柄。绑定后，输入设备将固定在指定显示器所在的显示器组上操作。使用Promise异步回调。
+将输入设备绑定到显示器组。仅支持外接USB和蓝牙的鼠标、触摸板、键盘和游戏手柄。绑定后，输入设备将固定在指定显示器所在的显示器组上操作。使用Promise异步回调。
 
 **起始版本：** 26.1.0
 
@@ -28,21 +27,21 @@ function bindToDisplay(inputDeviceId: number, displayId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputDeviceId | number | 是 | 输入设备的ID。如果输入服务重启或输入设备重连，此ID可能会发生变化。 |
-| displayId | number | 是 | 目标显示器的ID。 |
+| inputDeviceId | number | 是 | 输入设备的ID。如果输入服务重启或输入设备重连，此ID可能会发生变化。取值应为≥0的整数。 |
+| displayId | number | 是 | 目标显示器的ID。取值应为≥0的整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. The application does not have the required permission. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
 | [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
 | [3900001](../errorcode-inputdevice.md#3900001-指定的设备不存在) | The specified input device does not exist. |
 | [3900004](../errorcode-inputdevice.md#3900004-指定的显示器不存在) | The specified display does not exist. |

@@ -9,7 +9,7 @@ The **Metadata** class provides APIs for storing image metadata. For details abo
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone
@@ -28,7 +28,7 @@ Clones the metadata. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Metadata & gt; | Promise used to return the metadata instance. |
+| Promise&lt;Metadata&gt; | Promise used to return the metadata instance. |
 
 **Examples**
 
@@ -65,7 +65,9 @@ async function Clone(context: Context) {
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and values from the image's metadata. This API uses a promise to return the result.For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+Obtains all properties and values from the image's metadata. This API uses a promise to return the result.
+
+For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
 
 **Since:** 13
 
@@ -75,7 +77,7 @@ Obtains all properties and values from the image's metadata. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Record & lt;string, string \ | null & gt; & gt; | Promise used to return the values of all properties. |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the values of all properties. |
 
 **Examples**
 
@@ -209,7 +211,7 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise that returns the binary data of the metadata. |
+| Promise&lt;ArrayBuffer&gt; | Promise that returns the binary data of the metadata. |
 
 **Examples**
 
@@ -323,13 +325,13 @@ Obtains the values of properties from the image's metadata. This API uses a prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | Array & lt;string & gt; | Yes | Names of the properties. |
+| key | Array&lt;string&gt; | Yes | Names of the properties. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Record & lt;string, string \ | null & gt; & gt; | Promise used to return the property values. If the operation fails, an error code is returned. |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the property values. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -471,7 +473,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -601,7 +603,9 @@ async function heifsMetadataSetBlob(context: Context) {
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of properties for the image's metadata. This API uses a promise to return the result.For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+Sets the values of properties for the image's metadata. This API uses a promise to return the result.
+
+For details about how to query the property values, see [PropertyKey](arkts-image-image-propertykey-e.md), [FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md), [GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
 
 **Since:** 13
 
@@ -611,13 +615,13 @@ Sets the values of properties for the image's metadata. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record & lt;string, string \ | null & gt; | Yes | Array of properties and their values. |
+| records | Record&lt;string, string \| null&gt; | Yes | Array of properties and their values. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. If the operation fails, an error code is returned. |
+| Promise&lt;void&gt; | Promise that returns no value. If the operation fails, an error code is returned. |
 
 **Error codes:**
 

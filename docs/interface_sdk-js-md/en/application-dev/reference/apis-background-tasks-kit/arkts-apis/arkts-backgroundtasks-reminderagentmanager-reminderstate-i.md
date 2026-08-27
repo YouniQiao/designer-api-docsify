@@ -1,6 +1,7 @@
 # ReminderState
 
 Defines the agent-powered reminder state information, for which notifications are triggered in the following scenarios:
+
 1. When a user taps a button on an agent-powered reminder notification,
 a notification specifying the tapped button type is sent to the application if it is running. If the application is not running, the notification will not be received.
 2. Since the above scenario cannot guarantee that the application receives the notification,
@@ -13,7 +14,7 @@ all callbacks associated with user-tapped button types under the application are
 ## Modules to Import
 
 ```TypeScript
-import reminderAgentManager from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## buttonType
@@ -38,7 +39,8 @@ Button type.
 isMessageResent: boolean
 ```
 
-Whether a message is sent repeatedly.  
+Whether a message is sent repeatedly.
+
 - **false**: The message is sent for the first time. Applicable scenarios: The application is running when the  
 user taps a button on the agent-powered reminder notification; the application is not running when the user taps the button, and the application registers a new callback function afterward.  
 - **true**: The message is sent repeatedly. Applicable scenario: The application is running and registers a new  

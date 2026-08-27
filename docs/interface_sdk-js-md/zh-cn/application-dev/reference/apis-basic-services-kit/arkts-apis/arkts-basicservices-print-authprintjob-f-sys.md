@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## authPrintJob
@@ -28,15 +28,15 @@ function authPrintJob(jobId: string, userName: string, password: string): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| jobId | string | 是 | 打印作业ID。 要打印的作业ID。 |
-| userName | string | 是 | 用户名。 用户名。 |
-| password | string | 是 | 用户密码。 用户密码。 |
+| jobId | string | 是 | 打印作业ID。要打印的作业ID。 |
+| userName | string | 是 | 用户名。用户名。 |
+| password | string | 是 | 用户密码。用户密码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | the promise returned by the function. |
+| Promise&lt;boolean&gt; | the promise returned by the function. |
 
 **错误码：**
 

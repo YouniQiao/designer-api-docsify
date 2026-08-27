@@ -17,12 +17,12 @@ The **infraredEmitter** module generates IR signals of the specified frequency a
 
 | Name | Description |
 | --- | --- |
-| [getInfraredFrequencies(IR Management)](arkts-input-infraredemitter-getinfraredfrequencies-f.md) | Queries the frequency range of IR signals supported by the device. |
-| [hasIrEmitter(IR Management)](arkts-input-infraredemitter-hasiremitter-f.md) | Checks whether the device has an infrared transmitter. This API uses a promise to return the result. |
-| [transmitInfrared(IR Management)](arkts-input-infraredemitter-transmitinfrared-f.md) | Generates IR signals at the specified frequency and level. |
+| [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f.md) | Queries the frequency range of IR signals supported by the device. |
+| [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md) | Checks whether the device has an infrared transmitter. This API uses a promise to return the result. |
+| [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f.md) | Generates IR signals at the specified frequency and level. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [InfraredFrequency(IR Management)](arkts-input-infraredemitter-infraredfrequency-i.md) | Defines the frequency range of IR signals. |
+| [InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i.md) | Defines the frequency range of IR signals. |

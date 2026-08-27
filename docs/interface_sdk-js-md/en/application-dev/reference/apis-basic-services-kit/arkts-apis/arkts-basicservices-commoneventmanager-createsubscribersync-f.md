@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import commonEventManager from '@kit.BasicServicesKit';
+import { commonEventManager } from '@kit.BasicServicesKit';
 ```
 
 ## createSubscriberSync
@@ -24,13 +24,13 @@ Creates a subscriber synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subscribeInfo | [CommonEventSubscribeInfo](arkts-basicservices-commoneventmanager-commoneventsubscribeinfo-t.md) | Yes | Subscriber information. |
+| subscribeInfo | CommonEventSubscribeInfo | Yes | Subscriber information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CommonEventSubscriber](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md) | Promise used to return the subscriber object. |
+| CommonEventSubscriber | Promise used to return the subscriber object. |
 
 **Error codes:**
 

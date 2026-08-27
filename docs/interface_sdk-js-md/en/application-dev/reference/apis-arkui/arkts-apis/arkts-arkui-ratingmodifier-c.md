@@ -1,6 +1,8 @@
 # RatingModifier
 
-Defines Rating Modifier@extends RatingAttribute @implements AttributeModifier&lt;RatingAttribute&gt;
+Defines Rating Modifier
+
+@extends RatingAttribute @implements AttributeModifier&lt;RatingAttribute&gt;
 
 **Inheritance/Implementation:** RatingModifier extends [RatingAttribute](../arkts-components/arkts-arkui-rating-attribute.md#ratingattribute) and implements AttributeModifier<RatingAttribute>
 

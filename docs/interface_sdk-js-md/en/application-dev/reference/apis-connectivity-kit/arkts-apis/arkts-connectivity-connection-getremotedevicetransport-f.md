@@ -29,7 +29,7 @@ Get the transport of the bluetooth device.
 
 | Type | Description |
 | --- | --- |
-| [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md) | The transport of bluetooth device. |
+| BluetoothTransport | The transport of bluetooth device. |
 
 **Error codes:**
 

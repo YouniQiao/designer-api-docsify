@@ -1,6 +1,8 @@
 # MarqueeUpdateStrategy
 
-Marquee scrolling strategy after text update@enum { number }
+Marquee scrolling strategy after text update
+
+@enum { number }
 
 **起始版本：** 12
 

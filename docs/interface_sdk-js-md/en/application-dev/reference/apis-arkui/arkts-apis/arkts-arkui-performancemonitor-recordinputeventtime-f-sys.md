@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import performanceMonitor from '@kit.ArkUI';
+import { performanceMonitor } from '@kit.ArkUI';
 ```
 
 ## recordInputEventTime
@@ -26,8 +26,8 @@ Records the trigger event type and time before the start of the animation scene.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | Yes | Trigger mode of the user scene. |
-| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | Trigger source of the user scene. |
+| type | ActionType | Yes | Trigger mode of the user scene. |
+| sourceType | SourceType | Yes | Trigger source of the user scene. |
 | time | number | Yes | Scenario trigger timestamp (in ms), for example, **1751508570794**. Values equal to or less than 0 will be automatically converted to the current system time, while positive values will be used as- is. Incorrect parameters may cause abnormal response latency metrics. |
 
 **Error codes:**

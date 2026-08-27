@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## isCaptured
@@ -24,7 +24,7 @@ function isCaptured(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | boolean值，返回设备的屏幕显示信息是否存在被获取的情况。返回true表示设备的屏幕信息存在被获取的情况，可能为：设备正处于截屏、投屏、录屏状态，或已创建虚拟屏幕(虚拟屏幕可能被应用获 取屏幕图像)；返回false则表示设备的屏幕信息不存在被获取的情况。 |
+| boolean | boolean值，返回设备的屏幕显示信息是否存在被获取的情况。返回true表示设备的屏幕信息存在被获取的情况，可能为：设备正处于截屏、投屏、录屏状态，或已创建虚拟屏幕(虚拟屏幕可能被应用获取屏幕图像)；返回false则表示设备的屏幕信息不存在被获取的情况。 |
 
 **错误码：**
 
@@ -61,7 +61,7 @@ function isCaptured(bundleNameList: Array<string>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleNameList | Array & lt;string & gt; | 是 | 需要检查的应用包名称列表。数组的最大大小为100。 |
+| bundleNameList | Array&lt;string&gt; | 是 | 需要检查的应用包名称列表。数组的最大大小为100。 |
 
 **返回值：**
 

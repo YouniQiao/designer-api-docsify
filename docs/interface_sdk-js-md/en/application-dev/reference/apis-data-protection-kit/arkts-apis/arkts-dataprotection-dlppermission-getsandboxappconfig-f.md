@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## getSandboxAppConfig
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function getSandboxAppConfig(): Promise<string>
 ```
 
-Obtains sandbox application configuration. This API uses a promise to return the result.This API obtains the sandbox application configuration, which can be used to read or verify the current configuration status.
+Obtains sandbox application configuration. This API uses a promise to return the result.
+
+This API obtains the sandbox application configuration, which can be used to read or verify the current configuration status.
 
 **Since:** 11
 
@@ -22,7 +24,7 @@ Obtains sandbox application configuration. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 

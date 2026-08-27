@@ -33,7 +33,7 @@ Sets the gap between columns. Values less than 0 are treated as the default valu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Gap between columns.Default value: **0vp**. |
+| value | LengthMetrics | Yes | Gap between columns.Default value: **0vp**. |
 
 **Return value:**
 
@@ -145,7 +145,7 @@ Sets the gap between rows. Values less than 0 are treated as the default value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Gap between rows.Default value: **0vp |
+| value | LengthMetrics | Yes | Gap between rows.Default value: **0vp |
 
 **Return value:**
 

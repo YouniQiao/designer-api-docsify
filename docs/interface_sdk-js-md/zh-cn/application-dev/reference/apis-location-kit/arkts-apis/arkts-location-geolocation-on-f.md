@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## on('locationChange')
@@ -29,7 +29,7 @@ function on(type: 'locationChange', request: LocationRequest, callback: Callback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'locationChange' | 是 | 设置事件类型。type为“locationChange”，表示位置变化。 |
-| request | [LocationRequest](arkts-location-geolocation-locationrequest-i.md) | 是 | 设置位置请求参数。 |
+| request | LocationRequest | 是 | 设置位置请求参数。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | 是 | 回调函数，返回位置信息。 |
 
 **示例**
@@ -103,7 +103,7 @@ function on(type: 'cachedGnssLocationsReporting', request: CachedGnssLocationsRe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cachedGnssLocationsReporting' | 是 | 设置事件类型。type为“cachedGnssLocationsReporting”，表示GNSS缓存定位结果上报。 |
-| request | [CachedGnssLocationsRequest](arkts-location-geolocationmanager-cachedgnsslocationsrequest-i.md) | 是 | GNSS缓存功能配置参数。 |
+| request | CachedGnssLocationsRequest | 是 | GNSS缓存功能配置参数。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;Location&gt;&gt; | 是 | 回调函数，返回GNSS缓存位置。 |
 
 **示例**
@@ -213,7 +213,7 @@ function on(type: 'fenceStatusChange', request: GeofenceRequest, want: WantAgent
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'fenceStatusChange' | 是 | 设置事件类型。type为“fenceStatusChange”，表示订阅围栏事件上报。 |
-| request | [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md) | 是 | 围栏的配置参数。 |
+| request | GeofenceRequest | 是 | 围栏的配置参数。 |
 | want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | 是 | 用于接收地理围栏事件上报（进出围栏）。 |
 
 **示例**

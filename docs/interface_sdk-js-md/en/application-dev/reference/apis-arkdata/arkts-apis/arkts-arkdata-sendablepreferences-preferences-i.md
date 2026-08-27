@@ -11,7 +11,7 @@ Provides APIs for obtaining and modifying **Preferences** instances. **Preferenc
 ## Modules to Import
 
 ```TypeScript
-import sendablePreferences from '@kit.ArkData';
+import { sendablePreferences } from '@kit.ArkData';
 ```
 
 ## clear
@@ -32,7 +32,7 @@ Clears this **Preferences** instance. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -103,7 +103,7 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -176,7 +176,7 @@ Flushes the data in this **Preferences** instance to the persistent file. This A
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -248,7 +248,7 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;lang.ISendable & gt; | Promise used to return the value obtained. |
+| Promise&lt;lang.ISendable&gt; | Promise used to return the value obtained. |
 
 **Error codes:**
 
@@ -290,7 +290,7 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;lang.ISendable & gt; | Promise used to return the KV pairs obtained. |
+| Promise&lt;lang.ISendable&gt; | Promise used to return the KV pairs obtained. |
 
 **Error codes:**
 
@@ -416,7 +416,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the **Preferences** instance contains the KV pair; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the **Preferences** instance contains the KV pair; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -597,7 +597,7 @@ Unsubscribes from changes of specific data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
-| keys | Array & lt;string & gt; | Yes | Keys to be unsubscribed from. If this parameter is not specified, this API unsubscribes from the changes of all keys. |
+| keys | Array&lt;string&gt; | Yes | Keys to be unsubscribed from. If this parameter is not specified, this API unsubscribes from the changes of all keys. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
 
 **Error codes:**
@@ -738,7 +738,7 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
-| keys | Array & lt;string & gt; | Yes | Keys to be observed. |
+| keys | Array&lt;string&gt; | Yes | Keys to be observed. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | Yes | Callback used to return the KV pairs changed. The keys are the keys observed, and the values are the new values. The values support the following types: number, string, boolean, bigint, and serializable object. |
 
 **Error codes:**
@@ -793,7 +793,7 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import formObserver from '@kit.FormKit';
+import { formObserver } from '@kit.FormKit';
 ```
 
 ## getRunningFormInfosByFilter
@@ -36,7 +36,7 @@ function getRunningFormInfosByFilter(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;formInfo.RunningFormInfo & gt; & gt; | Promise对象。返回已添加的卡片信息列表。 |
+| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Promise对象。返回已添加的卡片信息列表。 |
 
 **错误码：**
 
@@ -104,7 +104,7 @@ function getRunningFormInfosByFilter(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | formProviderFilter | formInfo.FormProviderFilter | 是 | 卡片提供方应用信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 是 | 回调函数。返回已添加的卡片信息列表。error为undefined，data为查询到的卡片信 息列表；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | 是 | 回调函数。返回已添加的卡片信息列表。error为undefined，data为查询到的卡片信息列表；否则为错误对象。 |
 
 **错误码：**
 

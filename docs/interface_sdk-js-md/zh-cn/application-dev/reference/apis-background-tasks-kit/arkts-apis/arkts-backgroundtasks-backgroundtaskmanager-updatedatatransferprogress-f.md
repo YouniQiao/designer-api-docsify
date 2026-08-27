@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## updateDataTransferProgress
@@ -26,7 +26,7 @@ function updateDataTransferProgress(context: Context, progressInfo: DataTransfer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用运行的上下文。 |
+| context | Context | 是 | 应用运行的上下文。 |
 | progressInfo | [DataTransferProgress](arkts-backgroundtasks-backgroundtaskmanager-datatransferprogress-i.md) | 是 | 长时任务通知进度信息。 |
 
 **错误码：**

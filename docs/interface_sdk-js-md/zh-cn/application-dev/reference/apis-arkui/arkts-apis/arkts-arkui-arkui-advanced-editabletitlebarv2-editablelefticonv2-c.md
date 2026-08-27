@@ -56,7 +56,13 @@ public onAction?: OnActionCallback
 public defaultFocus: boolean
 ```
 
-是否默认获取焦点。true：获焦。false：不获焦。默认值：false。
+是否默认获取焦点。
+
+true：获焦。
+
+false：不获焦。
+
+默认值：false。
 
 **类型：** boolean
 
@@ -76,7 +82,9 @@ public defaultFocus: boolean
 public iconType: EditableLeftIconTypeV2
 ```
 
-图标类型。默认值：EditableLeftIconTypeV2.Back。
+图标类型。
+
+默认值：EditableLeftIconTypeV2.Back。
 
 **类型：** [EditableLeftIconTypeV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticontypev2-e.md)
 

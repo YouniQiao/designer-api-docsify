@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## onBadgeNumberQuery
@@ -26,7 +26,7 @@ Registers a callback for querying the number of application badges.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (bundle: BundleOption) = & gt; Promise & lt;number & gt; | Yes | Number of target application badges. |
+| callback | (bundle: BundleOption) =&gt; Promise&lt;number&gt; | Yes | Number of target application badges. |
 
 **Error codes:**
 

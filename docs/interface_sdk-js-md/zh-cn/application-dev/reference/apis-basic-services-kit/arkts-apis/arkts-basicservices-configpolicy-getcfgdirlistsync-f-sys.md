@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import configPolicy from '@kit.BasicServicesKit';
+import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
 ## getCfgDirListSync
@@ -24,7 +24,7 @@ function getCfgDirListSync(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 返回配置层级目录列表。 |
+| Array&lt;string&gt; | 返回配置层级目录列表。 |
 
 **示例**
 

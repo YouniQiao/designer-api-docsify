@@ -11,7 +11,7 @@ Provides APIs to manage albums.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## deleteAssets
@@ -43,7 +43,7 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Array of the image or video assets to delete. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image or video assets to delete. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
@@ -117,13 +117,13 @@ Deletes image or video assets from the trash. Before the operation, ensure that 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Array of the image or video assets to delete. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image or video assets to delete. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -265,7 +265,7 @@ Obtains the face identifier on the cover of a portrait album or group photo albu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return **tag_id** of the portrait album, **group_tag** of the group photo album, or an empty string if no face identifier is found. |
+| Promise&lt;string&gt; | Promise used to return **tag_id** of the portrait album, **group_tag** of the group photo album, or an empty string if no face identifier is found. |
 
 **Error codes:**
 
@@ -366,14 +366,14 @@ Obtains portrait album assets that meet filter criteria.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| optionCheck | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Fetch options, which limit the number of assets returned. |
+| optionCheck | FetchOptions | Yes | Fetch options, which limit the number of assets returned. |
 | filter | string | No | Filter option, which must be a JSON string. Currently, only **currentFileId** is supported, which indicates the file ID of the currently displayed featured portrait card. An example is '{"currentFileId":"123"}'. If this parameter is not provided, assets are returned from the beginning. If **currentFileId** is provided, assets with scores less than or equal to the calculated score based on the **currentFileId** are returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;FetchResult & lt;PhotoAsset & gt; & gt; | Promise used to return the image information. |
+| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise used to return the image information. |
 
 **Error codes:**
 
@@ -466,7 +466,7 @@ Recovers image or video assets from the trash. Before the operation, ensure that
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Array of the image or video assets to recover. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image or video assets to recover. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
@@ -535,13 +535,13 @@ Recovers image or video assets from the trash. Before the operation, ensure that
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Array of the image or video assets to recover. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the image or video assets to recover. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -683,7 +683,7 @@ Sets the cover of the user album. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

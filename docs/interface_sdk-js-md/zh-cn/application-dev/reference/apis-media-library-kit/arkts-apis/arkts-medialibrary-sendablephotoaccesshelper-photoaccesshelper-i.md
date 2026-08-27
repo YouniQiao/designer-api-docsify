@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## createAsset
@@ -20,7 +20,9 @@ import sendablePhotoAccessHelper from '@kit.MediaLibraryKit';
 createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper.CreateOptions): Promise<string>
 ```
 
-指定文件类型、后缀和创建选项，创建图片或视频资源。使用Promise异步回调。此接口在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件创建媒体资源，详情请参考 [保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md).
+指定文件类型、后缀和创建选项，创建图片或视频资源。使用Promise异步回调。
+
+此接口在未申请相册管理模块权限'ohos.permission.WRITE_IMAGEVIDEO'时，可以使用安全控件创建媒体资源，详情请参考[保存媒体库资源](../../../media/medialibrary/photoAccessHelper-savebutton.md).
 
 **起始版本：** 12
 
@@ -34,15 +36,15 @@ createAsset(photoType: PhotoType, extension: string, options?: photoAccessHelper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| photoType | [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md) | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
+| photoType | PhotoType | 是 | 创建的文件类型，IMAGE或者VIDEO类型。 |
 | extension | string | 是 | 文件名后缀参数，例如：'jpg'。字符串长度的取值范围为[1, 255]。. |
-| options | photoAccessHelper.CreateOptions | 否 | 创建选项，例如{title: 'testPhoto'}。 文件名中不允许出现非法英文字符。 API18开始，非法字符包括： \ / : * ? " & lt; & gt; \ | API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
+| options | photoAccessHelper.CreateOptions | 否 | 创建选项，例如{title: 'testPhoto'}。文件名中不允许出现非法英文字符。API18开始，非法字符包括： \ / : * ? " &lt; &gt; \| API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; \| { } [ ] |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回创建的图片和视频的uri。 |
+| Promise&lt;string&gt; | Promise对象，返回创建的图片和视频的uri。 |
 
 **错误码：**
 
@@ -82,7 +84,9 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 getAlbums(options: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>
 ```
 
-根据检索选项获取相册。使用Promise异步回调。获取相册前需先保证相册存在。
+根据检索选项获取相册。使用Promise异步回调。
+
+获取相册前需先保证相册存在。
 
 **起始版本：** 12
 
@@ -100,7 +104,7 @@ getAlbums(options: photoAccessHelper.FetchOptions): Promise<FetchResult<Album>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;FetchResult & lt;Album & gt; & gt; | Promise对象，返回获取相册的结果集。 |
+| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise对象，返回获取相册的结果集。 |
 
 **错误码：**
 
@@ -152,7 +156,9 @@ getAlbums(
     ): Promise<FetchResult<Album>>
 ```
 
-根据检索选项和相册类型获取相册。使用Promise异步回调。获取相册前需先保证相册存在。
+根据检索选项和相册类型获取相册。使用Promise异步回调。
+
+获取相册前需先保证相册存在。
 
 **起始版本：** 12
 
@@ -164,15 +170,15 @@ getAlbums(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md) | 是 | 相册类型。 |
-| subtype | [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md) | 是 | 相册子类型。 |
+| type | AlbumType | 是 | 相册类型。 |
+| subtype | AlbumSubtype | 是 | 相册子类型。 |
 | options | photoAccessHelper.FetchOptions | 否 | 检索选项，不填时默认根据相册类型检索。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;FetchResult & lt;Album & gt; & gt; | Promise对象，返回获取相册的结果集。 |
+| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise对象，返回获取相册的结果集。 |
 
 **错误码：**
 
@@ -238,7 +244,7 @@ getAssets(options: photoAccessHelper.FetchOptions): Promise<FetchResult<PhotoAss
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;FetchResult & lt;PhotoAsset & gt; & gt; | Promise对象，返回图片和视频数据结果集。 |
+| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise对象，返回图片和视频数据结果集。 |
 
 **错误码：**
 
@@ -324,14 +330,14 @@ getBurstAssets(burstKey: string, options: photoAccessHelper.FetchOptions): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| burstKey | string | 是 | 一组连拍照片的唯一标识：uuid（可传入 [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md)的BURST_KEY）。 字符串长度为36字节。 |
+| burstKey | string | 是 | 一组连拍照片的唯一标识：uuid（可传入[PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md)的BURST_KEY）。字符串长度为36字节。 |
 | options | photoAccessHelper.FetchOptions | 是 | 连拍照片检索选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;FetchResult & lt;PhotoAsset & gt; & gt; | Promise对象，返回连拍照片数据结果集。 |
+| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; | Promise对象，返回连拍照片数据结果集。 |
 
 **错误码：**
 
@@ -358,12 +364,19 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
   };
   let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
   let photoAssetList: Array<sendablePhotoAccessHelper.PhotoAsset> = await fetchResult.getAllObjects();
+  if (!photoAssetList || photoAssetList.length === 0) {
+  console.info('photoAssetList is empty');
+  return;
+  }
   let photoAsset: sendablePhotoAccessHelper.PhotoAsset;
   // burstKey为36位的uuid，可以根据photoAccessHelper.PhotoKeys获取。
   for(photoAsset of photoAssetList){
+    // 获取BURST_KEY（连拍照片唯一标识的键名），用于后续从photoAsset中提取burstKey值。
     let burstKey: string = photoAccessHelper.PhotoKeys.BURST_KEY.toString();
+    // 获取照片的burstKey（连拍照片唯一标识），用于后续查询同一连拍组下的所有照片。
     let photoAccessBurstKey: photoAccessHelper.MemberType = photoAsset.get(burstKey).toString();
     try {
+      // 根据burstKey查询同一连拍组下的所有照片资源。
       let fetchResult: sendablePhotoAccessHelper.FetchResult<sendablePhotoAccessHelper.PhotoAsset> = await
       phAccessHelper.getBurstAssets(photoAccessBurstKey, fetchOption);
       if (fetchResult !== undefined) {
@@ -396,7 +409,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -414,13 +427,13 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
   try {
     console.info('use function...');
   } catch (err) {
-    console.error(`function error ...`);
+    console.error(`function error. Code: ${err.code}, message: ${err.message}`);
   }finally{
       try{
           phAccessHelper?.release();
           console.info(`release success`);
       } catch(e){
-          console.error(`release error :${e}`);
+          console.error(`release error. Code: ${e.code}, message: ${e.message}`);
       }
   }
 }

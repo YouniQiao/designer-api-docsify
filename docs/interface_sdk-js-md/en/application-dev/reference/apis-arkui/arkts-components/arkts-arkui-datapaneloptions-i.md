@@ -19,7 +19,9 @@ max?: number
 
 - When set to a value greater than 0, this parameter indicates the maximum value in the **values** list.  
 - When set to a value equal to or smaller than 0, this parameter indicates the sum of values in the **values**  
-list, and the values are displayed proportionally based on their relative sizes.Default value: **100**
+list, and the values are displayed proportionally based on their relative sizes.
+
+Default value: **100**
 
 **Type:** number
 
@@ -37,7 +39,9 @@ list, and the values are displayed proportionally based on their relative sizes.
 type?: DataPanelType
 ```
 
-Type of the data panel (dynamic modification is not supported).Default value: **DataPanelType.Circle**
+Type of the data panel (dynamic modification is not supported).
+
+Default value: **DataPanelType.Circle**
 
 **Type:** [DataPanelType](arkts-arkui-datapaneltype-e.md)
 

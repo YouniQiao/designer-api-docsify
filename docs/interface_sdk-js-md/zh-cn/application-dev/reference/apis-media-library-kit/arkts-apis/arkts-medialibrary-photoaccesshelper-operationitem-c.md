@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## field
@@ -18,7 +18,13 @@ import photoAccessHelper from '@kit.MediaLibraryKit';
 field?: PhotoKeys
 ```
 
-数据表中的列名。当前仅支持如下关键字段：URI、PHOTO_TYPE、DISPLAY_NAME、SIZE、DURATION、WIDTH、HEIGHT、ORIENTATION、FAVORITE、TITLE、POSITION、 PHOTO_SUBTYPE、DYNAMIC_RANGE_TYPE、COVER_POSITION、BURST_KEY、LCD_SIZE、THM_SIZE、DETAIL_TIME、MEDIA_SUFFIX、 OWNER_ALBUM_ID、ASPECT_RATIO、DATE_TAKEN_MS&lt;sup&gt;24+&lt;/sup&gt;通过[select](arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)接口配置此参数时，输入非法字段会抛出错误码401；通 过PhotoPickerComponent (PhotoPicker组件)配置此参数时，输入非法字段无 onPickerControllerReady回调。非条件谓词如and、or、beginWrap、endWrap等不涉及该字段。
+数据表中的列名。
+
+当前仅支持如下关键字段：URI、PHOTO_TYPE、DISPLAY_NAME、SIZE、DURATION、WIDTH、HEIGHT、ORIENTATION、FAVORITE、TITLE、POSITION、PHOTO_SUBTYPE、DYNAMIC_RANGE_TYPE、COVER_POSITION、BURST_KEY、LCD_SIZE、THM_SIZE、DETAIL_TIME、MEDIA_SUFFIX、OWNER_ALBUM_ID、ASPECT_RATIO、DATE_TAKEN_MS&lt;sup&gt;24+&lt;/sup&gt;
+
+通过[select](arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)接口配置此参数时，输入非法字段会抛出错误码401；通过PhotoPickerComponent (PhotoPicker组件)配置此参数时，输入非法字段无onPickerControllerReady回调。
+
+非条件谓词如and、or、beginWrap、endWrap等不涉及该字段。
 
 **类型：** [PhotoKeys](arkts-medialibrary-photoaccesshelper-photokeys-e.md)
 
@@ -54,7 +60,11 @@ operationType: OperationType
 value?: Array<OperationValueType>
 ```
 
-不同谓词所需匹配的值。非条件谓词如and、or、beginWrap、endWrap等不涉及该字段。限制最大长度为10，超出则取前10个值。
+不同谓词所需匹配的值。
+
+非条件谓词如and、or、beginWrap、endWrap等不涉及该字段。
+
+限制最大长度为10，超出则取前10个值。
 
 **类型：** Array&lt;[OperationValueType](arkts-medialibrary-photoaccesshelper-operationvaluetype-t.md)&gt;
 

@@ -1,6 +1,7 @@
 # SideBarContainer
 
 提供侧边栏可以显示和隐藏的容器，通过子组件定义侧边栏和内容区，第一个子组件表示侧边栏，第二个子组件表示内容区。
+
 > **说明：**
 
 ## 子组件
@@ -45,11 +46,16 @@ SideBarContainer(type?: SideBarContainerType)
 
 | 名称 | 说明 |
 | --- | --- |
+| [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md) | 设置侧边栏控制按钮的图标。 |
+| [ButtonStyle](arkts-arkui-buttonstyle-i.md) | 设置侧边栏控制按钮的样式。 |
+| [DividerStyle](arkts-arkui-dividerstyle-i.md) | 设置分割线的样式。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
+| [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | 容器内侧边栏样式枚举。 |
+| [SideBarPosition](arkts-arkui-sidebarposition-e.md) | 侧边栏显示位置。 |
 
 ## 示例
 

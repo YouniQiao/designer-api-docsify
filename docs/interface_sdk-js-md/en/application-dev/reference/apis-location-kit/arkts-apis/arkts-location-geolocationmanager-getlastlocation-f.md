@@ -25,7 +25,7 @@ Obtain last known location.
 
 | Type | Description |
 | --- | --- |
-| [Location](arkts-location-geolocationmanager-location-i.md) | The last known location information. |
+| Location | The last known location information. |
 
 **Error codes:**
 

@@ -29,7 +29,7 @@ Obtains the supported color spaces.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;colorSpaceManager.ColorSpace & gt; | Array of color spaces supported. If the API call fails, undefined is returned. |
+| Array&lt;colorSpaceManager.ColorSpace&gt; | Array of color spaces supported. If the API call fails, undefined is returned. |
 
 **Error codes:**
 

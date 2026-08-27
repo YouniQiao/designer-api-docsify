@@ -1,11 +1,11 @@
 # ArkTS API<!--arkts-performanceanalysiskit-->
 
-- [@ohos.faultLogger](arkts-faultlogger.md)
+- [@ohos.faultLogger(故障日志获取)](arkts-faultlogger.md)
   - [query](arkts-performanceanalysis-faultlogger-query-f.md)
   - [querySelfFaultLog](arkts-performanceanalysis-faultlogger-queryselffaultlog-f.md)
   - [FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)
   - [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md)
-- [@ohos.hiAppEvent](arkts-hiappevent.md)
+- [@ohos.hiAppEvent(应用事件打点)](arkts-hiappevent.md)
   - [hiAppEvent](arkts-performanceanalysis-hiappevent-depr-n.md)
     - [Event](arkts-performanceanalysis-hiappevent-event-depr-n.md)
       - [常量](arkts-performanceanalysis-event-depr-con.md)
@@ -124,7 +124,7 @@
   - [EventType(系统接口)](arkts-performanceanalysis-hisysevent-eventtype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [RuleType(系统接口)](arkts-performanceanalysis-hisysevent-ruletype-e-sys.md)<!--DelEnd-->
-- [@ohos.hiTraceChain](arkts-hitracechain.md)
+- [@ohos.hiTraceChain(分布式跟踪)](arkts-hitracechain.md)
   - [begin](arkts-performanceanalysis-hitracechain-begin-f.md)
   - [clearId](arkts-performanceanalysis-hitracechain-clearid-f.md)
   - [createSpan](arkts-performanceanalysis-hitracechain-createspan-f.md)
@@ -139,7 +139,7 @@
   - [HiTraceCommunicationMode](arkts-performanceanalysis-hitracechain-hitracecommunicationmode-e.md)
   - [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md)
   - [HiTraceTracepointType](arkts-performanceanalysis-hitracechain-hitracetracepointtype-e.md)
-- [@ohos.hiTraceMeter](arkts-hitracemeter.md)
+- [@ohos.hiTraceMeter(性能打点)](arkts-hitracemeter.md)
   - [finishAsyncTrace](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md)
   - [finishSyncTrace](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md)
   - [finishTrace](arkts-performanceanalysis-hitracemeter-finishtrace-f.md)
@@ -152,11 +152,11 @@
   - [unregisterTraceListener](arkts-performanceanalysis-hitracemeter-unregistertracelistener-f.md)
   - [TraceEventListener](arkts-performanceanalysis-hitracemeter-traceeventlistener-t.md)
   - [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md)
-- [@ohos.hiviewdfx.FaultLogExtensionAbility](arkts-hiviewdfx-faultlogextensionability.md)
+- [@ohos.hiviewdfx.FaultLogExtensionAbility(故障延迟通知)](arkts-hiviewdfx-faultlogextensionability.md)
   - [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md)
-- [@ohos.hiviewdfx.FaultLogExtensionContext](arkts-hiviewdfx-faultlogextensioncontext.md)
+- [@ohos.hiviewdfx.FaultLogExtensionContext(故障延迟通知上下文)](arkts-hiviewdfx-faultlogextensioncontext.md)
   - [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md)
-- [@ohos.hiviewdfx.hiAppEvent](arkts-hiviewdfx-hiappevent.md)
+- [@ohos.hiviewdfx.hiAppEvent(应用事件打点)](arkts-hiviewdfx-hiappevent.md)
   - [hiAppEvent](arkts-performanceanalysis-hiappevent-n.md)
     - [domain](arkts-performanceanalysis-hiappevent-domain-n.md)
       - [常量](arkts-performanceanalysis-domain-con.md)

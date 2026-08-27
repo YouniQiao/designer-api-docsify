@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usageStatistics from '@kit.BackgroundTasksKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## setAppGroup
@@ -91,7 +91,7 @@ Set app group by bundleName.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by setAppGroup. |
+| Promise&lt;void&gt; | the promise returned by setAppGroup. |
 
 **Error codes:**
 

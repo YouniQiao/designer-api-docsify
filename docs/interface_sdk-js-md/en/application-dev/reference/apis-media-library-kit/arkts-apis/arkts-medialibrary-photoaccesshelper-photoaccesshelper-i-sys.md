@@ -9,7 +9,7 @@ Helper functions to access photos and albums.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## acquireDebugDatabase
@@ -37,7 +37,7 @@ Start medialibrary database backup and wait for returning with backup informatio
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Map & lt;string, string & gt; & gt; | The returning with backup information, which includes FILE_FD, FILE_NAME and FILE_SIZE. |
+| Promise&lt;Map&lt;string, string&gt;&gt; | The returning with backup information, which includes FILE_FD, FILE_NAME and FILE_SIZE. |
 
 **Error codes:**
 
@@ -66,7 +66,7 @@ Obtains the values of specified properties for an array of [PhotoAsset](arkts-me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | [PhotoAsset[]](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | Yes | Array of files for which property values are to be retrieved. |
+| assets | PhotoAsset[] | Yes | Array of files for which property values are to be retrieved. |
 | members | string[] | Yes | Array of properties for which values are to be retrieved. |
 
 **Return value:**
@@ -169,7 +169,7 @@ Cancels the execution of an intelligent analysis tool.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -208,7 +208,7 @@ Cancels the permission for accessing a URI from an application. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. The value **0** means the operation is successful, and the value **-1** means the opposite. |
+| Promise&lt;number&gt; | Promise used to return the result. The value **0** means the operation is successful, and the value **-1** means the opposite. |
 
 **Error codes:**
 
@@ -262,7 +262,7 @@ Whether deep storage space optimization can be performed.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates [startDeepOptimizeSpace()]{ |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates [startDeepOptimizeSpace()]{ |
 
 **Error codes:**
 
@@ -309,15 +309,15 @@ clone assets to Album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | [PhotoAsset[]](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) | Yes | Assets to be cloned. |
-| target | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | Yes | Target Album. |
+| assets | PhotoAsset[] | Yes | Assets to be cloned. |
+| target | Album | Yes | Target Album. |
 | option | [BatchOperationOptions](arkts-medialibrary-photoaccesshelper-batchoperationoptions-i-sys.md) | No | Option for performing batch operations on assets. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PhotoAsset[] & gt; | Returns list of successful assets. |
+| Promise&lt;PhotoAsset[]&gt; | Returns list of successful assets. |
 
 **Error codes:**
 
@@ -377,20 +377,20 @@ Convert Asset Attributes to Compatibility Attributes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | Yes | need to be converted. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | need to be converted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;PhotoAsset & gt; & gt; | Promise used to return Converted assets. |
+| Promise&lt;Array&lt;PhotoAsset&gt;&gt; | Promise used to return Converted assets. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:  1. Invalid Array & lt;PhotoAsset & gt;. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:  1. Invalid Array&lt;PhotoAsset&gt;. |
 
 ## createAlbum
 
@@ -398,10 +398,15 @@ Convert Asset Attributes to Compatibility Attributes
 createAlbum(name: string, callback: AsyncCallback<Album>): void
 ```
 
-Creates an album. This API uses an asynchronous callback to return the result.The album name must meet the following requirements:  
+Creates an album. This API uses an asynchronous callback to return the result.
+
+The album name must meet the following requirements:
+
 - The total length of the album name must be between 1 and 255 characters.  
-- It must not contain any invalid characters, which are:  
-. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
+- It must not contain any invalid characters, which are:
+
+. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+
 - Duplicate album names are not allowed.
 
 **Since:** 10
@@ -458,10 +463,15 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAlbum(name: string): Promise<Album>
 ```
 
-Creates an album. This API uses a promise to return the result.The album name must meet the following requirements:  
+Creates an album. This API uses a promise to return the result.
+
+The album name must meet the following requirements:
+
 - The total length of the album name must be between 1 and 255 characters.  
-- It must not contain any invalid characters, which are:  
-. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
+- It must not contain any invalid characters, which are:
+
+. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+
 - Duplicate album names are not allowed.
 
 **Since:** 10
@@ -486,7 +496,7 @@ Creates an album. This API uses a promise to return the result.The album name mu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Album & gt; | Promise used to return the created album instance. |
+| Promise&lt;Album&gt; | Promise used to return the created album instance. |
 
 **Error codes:**
 
@@ -523,11 +533,17 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(displayName: string, callback: AsyncCallback<PhotoAsset>): void
 ```
 
-Creates an image or video asset with the specified file name. This API uses an asynchronous callback to return the result.The file name must meet the following requirements:  
+Creates an image or video asset with the specified file name. This API uses an asynchronous callback to return the result.
+
+The file name must meet the following requirements:
+
 - A valid file name must include a base name and a supported image or video extension.  
 - The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.  
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+- The base name must not contain any invalid characters.
+
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |
+
+For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 10
 
@@ -580,11 +596,17 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(displayName: string): Promise<PhotoAsset>
 ```
 
-Creates an image or video asset with the specified file name. This API uses a promise to return the result.The file name must meet the following requirements:  
+Creates an image or video asset with the specified file name. This API uses a promise to return the result.
+
+The file name must meet the following requirements:
+
 - A valid file name must include a base name and a supported image or video extension.  
 - The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.  
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+- The base name must not contain any invalid characters.
+
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |
+
+For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 10
 
@@ -604,7 +626,7 @@ Starting from API version 18, the following characters are considered invalid: \
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PhotoAsset & gt; | Promise used to return the created image and video asset. |
+| Promise&lt;PhotoAsset&gt; | Promise used to return the created image and video asset. |
 
 **Error codes:**
 
@@ -641,11 +663,17 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(displayName: string, options: PhotoCreateOptions): Promise<PhotoAsset>
 ```
 
-Creates an image or video asset with the specified file name and options. This API uses a promise to return the result.The file name must meet the following requirements:  
+Creates an image or video asset with the specified file name and options. This API uses a promise to return the result.
+
+The file name must meet the following requirements:
+
 - A valid file name must include a base name and a supported image or video extension.  
 - The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.  
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+- The base name must not contain any invalid characters.
+
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |
+
+For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 10
 
@@ -660,13 +688,13 @@ Starting from API version 18, the following characters are considered invalid: \
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| options | [PhotoCreateOptions](arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md) | Yes | Options for creating an image or video asset. |
+| options | PhotoCreateOptions | Yes | Options for creating an image or video asset. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PhotoAsset & gt; | Promise used to return the created image and video asset. |
+| Promise&lt;PhotoAsset&gt; | Promise used to return the created image and video asset. |
 
 **Error codes:**
 
@@ -706,11 +734,17 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(displayName: string, options: PhotoCreateOptions, callback: AsyncCallback<PhotoAsset>): void
 ```
 
-Creates an image or video asset with the specified file name and options. This API uses an asynchronous callback to return the result.The file name must meet the following requirements:  
+Creates an image or video asset with the specified file name and options. This API uses an asynchronous callback to return the result.
+
+The file name must meet the following requirements:
+
 - A valid file name must include a base name and a supported image or video extension.  
 - The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.  
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+- The base name must not contain any invalid characters.
+
+Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |
+
+For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 10
 
@@ -725,7 +759,7 @@ Starting from API version 18, the following characters are considered invalid: \
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | displayName | string | Yes | File name of the image or video to create. |
-| options | [PhotoCreateOptions](arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md) | Yes | Options for creating an image or video asset. |
+| options | PhotoCreateOptions | Yes | Options for creating an image or video asset. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoAsset&gt; | Yes | Callback used to return the image or video created. |
 
 **Error codes:**
@@ -790,7 +824,7 @@ Creates media assets for an application with the specified token ID. The returne
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the URIs of the media asset files in the media library. The target application (identified by **tokenId**) can write the media assets based on the URIs without requesting the write permission. If the URIs fail to be generated, a batch creation error code will be returned. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the media asset files in the media library. The target application (identified by **tokenId**) can write the media assets based on the URIs without requesting the write permission. If the URIs fail to be generated, a batch creation error code will be returned. |
 
 **Error codes:**
 
@@ -859,7 +893,7 @@ Creates assets for the current application or other applications in the specifie
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the URIs of the media asset files in the media library. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the media asset files in the media library. |
 
 **Error codes:**
 
@@ -941,7 +975,7 @@ Creates assets with a temporary permission. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the URIs of the media asset files in the media library. The target application (identified by **appid**) can write the media assets based on the URIs without requesting the write permission. If the URIs fail to be generated, a batch creation error code will be returned. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the URIs of the media asset files in the media library. The target application (identified by **appid**) can write the media assets based on the URIs without requesting the write permission. If the URIs fail to be generated, a batch creation error code will be returned. |
 
 **Error codes:**
 
@@ -1016,7 +1050,7 @@ Batch create assets, which also support to choose whether specifying an album an
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string[] & gt; | Returns the asset uris, which is null when creation failed. |
+| Promise&lt;string[]&gt; | Returns the asset uris, which is null when creation failed. |
 
 **Error codes:**
 
@@ -1083,7 +1117,7 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| albums | Array & lt;Album & gt; | Yes | Albums to delete. |
+| albums | Array&lt;Album&gt; | Yes | Albums to delete. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
@@ -1149,13 +1183,13 @@ Deletes user albums. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| albums | Array & lt;Album & gt; | Yes | Albums to delete. |
+| albums | Array&lt;Album&gt; | Yes | Albums to delete. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1219,7 +1253,7 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uriList | Array & lt;string & gt; | Yes | URIs of the media files to delete. |
+| uriList | Array&lt;string&gt; | Yes | URIs of the media files to delete. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
@@ -1291,13 +1325,13 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uriList | Array & lt;string & gt; | Yes | URIs of the media files to delete. |
+| uriList | Array&lt;string&gt; | Yes | URIs of the media files to delete. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1367,7 +1401,7 @@ Get the corresponding albumId of a bundleName.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Return the corresponding albumId of the a bundleName. |
+| Promise&lt;number&gt; | Return the corresponding albumId of the a bundleName. |
 
 **Error codes:**
 
@@ -1418,13 +1452,13 @@ Obtains album information by album IDs. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| albumIds | Array & lt;number & gt; | Yes | Array of album IDs. |
+| albumIds | Array&lt;number&gt; | Yes | Array of album IDs. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Map & lt;number, Album & gt; & gt; | Promise used to return the map object that contains the album information. |
+| Promise&lt;Map&lt;number, Album&gt;&gt; | Promise used to return the map object that contains the album information. |
 
 **Error codes:**
 
@@ -1528,14 +1562,14 @@ Obtain the URI list to be transcoded based on bundleName, photoAsset list, and c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | The app bundleName. |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Array of the assets. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Array of the assets. |
 | compatibleFlag | number | No | Compatible configuration mask flag. The value should be an integer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the media library file uri list that needs to be transcoded. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the media library file uri list that needs to be transcoded. |
 
 **Error codes:**
 
@@ -1578,7 +1612,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getClonedAlbumUris(oldUris: Array<string>): Promise<Map<string, string>>
 ```
 
-Obtains the current URIs of cloned albums. This API uses a promise to return the result.To control the size of the database table space, the system automatically deletes the previously stored clone data during each clone operation. As a result, this API only keeps the mapping between the user's new and old device URIs from the latest clone operation.
+Obtains the current URIs of cloned albums. This API uses a promise to return the result.
+
+To control the size of the database table space, the system automatically deletes the previously stored clone data during each clone operation. As a result, this API only keeps the mapping between the user's new and old device URIs from the latest clone operation.
 
 **Since:** 22
 
@@ -1592,13 +1628,13 @@ Obtains the current URIs of cloned albums. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldUris | Array & lt;string & gt; | Yes | Array of old URIs before cloning. |
+| oldUris | Array&lt;string&gt; | Yes | Array of old URIs before cloning. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Map & lt;string, string & gt; & gt; | Promise used to return a map of URIs. |
+| Promise&lt;Map&lt;string, string&gt;&gt; | Promise used to return a map of URIs. |
 
 **Error codes:**
 
@@ -1637,7 +1673,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getClonedAssetUris(oldUris: Array<string>): Promise<Map<string, string>>
 ```
 
-Obtains the current URIs of cloned assets. This API uses a promise to return the result.To control the size of the database table space, the system automatically deletes the previously stored clone data during each clone operation. As a result, this API only keeps the mapping between the user's new and old device URIs from the latest clone operation.
+Obtains the current URIs of cloned assets. This API uses a promise to return the result.
+
+To control the size of the database table space, the system automatically deletes the previously stored clone data during each clone operation. As a result, this API only keeps the mapping between the user's new and old device URIs from the latest clone operation.
 
 **Since:** 22
 
@@ -1651,13 +1689,13 @@ Obtains the current URIs of cloned assets. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oldUris | Array & lt;string & gt; | Yes | Array of old URIs before cloning. |
+| oldUris | Array&lt;string&gt; | Yes | Array of old URIs before cloning. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Map & lt;string, string & gt; & gt; | Promise used to return a map of URIs. |
+| Promise&lt;Map&lt;string, string&gt;&gt; | Promise used to return a map of URIs. |
 
 **Error codes:**
 
@@ -1716,7 +1754,7 @@ Obtains the asset analysis progress. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return a string in JSON format. The string indicates the asset analysis progress. |
+| Promise&lt;string&gt; | Promise used to return a string in JSON format. The string indicates the asset analysis progress. |
 
 **Error codes:**
 
@@ -1751,7 +1789,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getDeepOptimizeSpace(): Promise<number>
 ```
 
-Obtains the size of the deep storage space. Unit:Byte{s}.This API is time-consuming. Before using this API, you are advised to call [canPerformDeepOptimizeSpace()] [canPerformDeepOptimizeSpace](#canperformdeepoptimizespace) and call this API only when true is returned.
+Obtains the size of the deep storage space. Unit:Byte{s}.
+
+This API is time-consuming. Before using this API, you are advised to call [canPerformDeepOptimizeSpace()] [canPerformDeepOptimizeSpace](#canperformdeepoptimizespace) and call this API only when true is returned.
 
 **Since:** 26.0.0
 
@@ -1767,7 +1807,7 @@ Obtains the size of the deep storage space. Unit:Byte{s}.This API is time-consum
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return size. The size indicates the size of the deep storage space. |
+| Promise&lt;number&gt; | Promise used to return size. The size indicates the size of the deep storage space. |
 
 **Error codes:**
 
@@ -1816,7 +1856,7 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | Yes | Display mode of hidden albums. |
-| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. |
+| options | FetchOptions | Yes | Retrieval options. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FetchResult&lt;Album&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -1981,13 +2021,13 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [HiddenPhotosDisplayMode](arkts-medialibrary-photoaccesshelper-hiddenphotosdisplaymode-e-sys.md) | Yes | Display mode of hidden albums. |
-| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | No | Options for retrieving the files. If this parameter is not specified, the files are retrieved based on the display mode of hidden files. |
+| options | FetchOptions | No | Options for retrieving the files. If this parameter is not specified, the files are retrieved based on the display mode of hidden files. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;FetchResult & lt;Album & gt; & gt; | Promise used to return the result. |
+| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -2074,7 +2114,7 @@ Obtains the index construction progress. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return a string in JSON format. The string indicates the number of images that have been analyzed, the total number of images, the number of videos that have been analyzed, and the total number of videos. |
+| Promise&lt;string&gt; | Promise used to return a string in JSON format. The string indicates the number of images that have been analyzed, the total number of images, the number of videos that have been analyzed, and the total number of videos. |
 
 **Error codes:**
 
@@ -2132,7 +2172,7 @@ Obtains the sorting order for system, user, and source albums. This API uses a p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | orderStyle | number | Yes | Sorting style for albums. The value **0** means the phone style, and **1** means the PC style. |
-| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
+| options | FetchOptions | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
 
 **Return value:**
 
@@ -2185,7 +2225,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getPhotoAlbums(options?: FetchOptions): Promise<FetchResult<Album>>
 ```
 
-Obtains system, user, and source albums based on the specified options. This API uses a promise to return the result.Before the operation, ensure that the albums to obtain exist.
+Obtains system, user, and source albums based on the specified options. This API uses a promise to return the result.
+
+Before the operation, ensure that the albums to obtain exist.
 
 **Since:** 20
 
@@ -2199,13 +2241,13 @@ Obtains system, user, and source albums based on the specified options. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
+| options | FetchOptions | No | Retrieval options. If this parameter is not specified, the albums are obtained based on the album type by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;FetchResult & lt;Album & gt; & gt; | Promise used to return the result. |
+| Promise&lt;FetchResult&lt;Album&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -2264,13 +2306,13 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetsData | [ValuesBucket[]](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Array of asset records. Each element in the array contains the column name and value of the asset. The array can contain a maximum of 500 elements. Each element in the array must contain the following asset column information: **file_id**, **data**, **display_name**, **media_type**, and **subtype**. |
+| assetsData | ValuesBucket[] | Yes | Array of asset records. Each element in the array contains the column name and value of the asset. The array can contain a maximum of 500 elements. Each element in the array must contain the following asset column information: **file_id**, **data**, **display_name**, **media_type**, and **subtype**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PhotoAsset[] & gt; | Promise used to return the PhotoAsset object array (which may be empty). |
+| Promise&lt;PhotoAsset[]&gt; | Promise used to return the PhotoAsset object array (which may be empty). |
 
 **Error codes:**
 
@@ -2329,7 +2371,7 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 | --- | --- | --- | --- |
 | photoUri | string | Yes | URI of the media asset whose index is to be obtained. |
 | albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the media assets in the Gallery are obtained by default. |
-| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
+| options | FetchOptions | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the index obtained. |
 
 **Error codes:**
@@ -2406,13 +2448,13 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 | --- | --- | --- | --- |
 | photoUri | string | Yes | URI of the media asset whose index is to be obtained. |
 | albumUri | string | Yes | Album URI, which can be an empty string. If it is an empty string, all the media assets in the Gallery are obtained by default. |
-| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
+| options | FetchOptions | Yes | Retrieval options. Only one search condition or sorting mode must be set in **predicates**. If no value is set or multiple search criteria or sorting modes are set, the API cannot be called successfully. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the index obtained. |
+| Promise&lt;number&gt; | Promise used to return the index obtained. |
 
 **Error codes:**
 
@@ -2545,13 +2587,13 @@ Obtains the shared photo assets.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) | Yes | Options for obtaining the shared photo assets. |
+| options | FetchOptions | Yes | Options for obtaining the shared photo assets. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;SharedPhotoAsset & gt; | Shared photo assets obtained. |
+| Array&lt;SharedPhotoAsset&gt; | Shared photo assets obtained. |
 
 **Error codes:**
 
@@ -2620,7 +2662,7 @@ Grants an application the permission to access a URI. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. The value **0** means that the permission is granted to the application. The value **1** means that the application already has the permission. The value **-1** means that the permission fails to be granted. |
+| Promise&lt;number&gt; | Promise used to return the result. The value **0** means that the permission is granted to the application. The value **1** means that the application already has the permission. The value **-1** means that the permission fails to be granted. |
 
 **Error codes:**
 
@@ -2679,7 +2721,7 @@ Grants an application the permission to access multiple URIs. This API uses a pr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tokenId | number | Yes | ID of the target application. |
-| uriList | Array & lt;string & gt; | Yes | A list of URIs, which cannot exceed 1000. |
+| uriList | Array&lt;string&gt; | Yes | A list of URIs, which cannot exceed 1000. |
 | photoPermissionType | [PhotoPermissionType](arkts-medialibrary-photoaccesshelper-photopermissiontype-e-sys.md) | Yes | Type of the permission to be granted. For details, see the enum. |
 | hideSensitiveType | [HideSensitiveType](arkts-medialibrary-photoaccesshelper-hidesensitivetype-e-sys.md) | Yes | Type of the information to hide. This parameter is reserved. Currently, any enumerated value of **HideSensitiveType** can be passed in. |
 
@@ -2687,7 +2729,7 @@ Grants an application the permission to access multiple URIs. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the result. The value **0** means that the permission is granted to the application. The value **-1** means that the permission fails to be granted. |
+| Promise&lt;number&gt; | Promise used to return the result. The value **0** means that the permission is granted to the application. The value **-1** means that the permission fails to be granted. |
 
 **Error codes:**
 
@@ -2752,7 +2794,7 @@ Triggers the execution of an analysis tool. This API uses an asynchronous callba
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the task ID. |
+| Promise&lt;string&gt; | Promise used to return the task ID. |
 
 **Error codes:**
 
@@ -2789,7 +2831,7 @@ Checks whether a temporary JPEG copy should be created for an application. This 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Check result for whether a temporary JPEG copy should be created for the application. **true** if a temporary JPEG copy should be created, **false** otherwise. |
+| Promise&lt;boolean&gt; | Check result for whether a temporary JPEG copy should be created for the application. **true** if a temporary JPEG copy should be created, **false** otherwise. |
 
 **Error codes:**
 
@@ -2843,7 +2885,7 @@ Checks whether the specified media data is ready.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the media data is ready, and **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the media data is ready, and **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -2907,7 +2949,7 @@ modify the default cover order of album.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns void. |
+| Promise&lt;void&gt; | Returns void. |
 
 **Error codes:**
 
@@ -2977,7 +3019,7 @@ modify the default cover order of hidden album.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns void. |
+| Promise&lt;void&gt; | Returns void. |
 
 **Error codes:**
 
@@ -3806,7 +3848,7 @@ Queries data in the database using the specified SQL statement. This API does no
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ResultSet & gt; | Promise used to return a **ResultSet** object. If the operation fails, an exception is thrown. |
+| Promise&lt;ResultSet&gt; | Promise used to return a **ResultSet** object. If the operation fails, an exception is thrown. |
 
 **Error codes:**
 
@@ -3865,7 +3907,7 @@ Release medialibrary database backup resources incluses closing backup database 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Return void. |
+| Promise&lt;void&gt; | Return void. |
 
 **Error codes:**
 
@@ -3896,7 +3938,7 @@ Removes the Gallery widget information bound to a single image from the database
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [FormInfo](../../apis-form-kit/arkts-apis/arkts-form-forminfo-forminfo-i.md) | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
+| info | FormInfo | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
@@ -3953,13 +3995,13 @@ Removes the Gallery widget information bound to a single image from the database
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [FormInfo](../../apis-form-kit/arkts-apis/arkts-form-forminfo-forminfo-i.md) | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
+| info | FormInfo | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -4019,7 +4061,7 @@ Removes the Gallery widget information bound to a group of images from the datab
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -4070,7 +4112,7 @@ Saves the Gallery widget information bound to a single image to the database. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [FormInfo](../../apis-form-kit/arkts-apis/arkts-form-forminfo-forminfo-i.md) | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
+| info | FormInfo | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 **Error codes:**
@@ -4136,13 +4178,13 @@ Saves the Gallery widget information bound to a single image to the database. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [FormInfo](../../apis-form-kit/arkts-apis/arkts-form-forminfo-forminfo-i.md) | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
+| info | FormInfo | Yes | Information about the Gallery widget to save, which includes the ID of the widget and the URI of the image bound to the widget. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -4211,7 +4253,7 @@ Saves the Gallery widget information bound to a group of images to the database.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -4289,7 +4331,7 @@ Sets the asset compatibility capability based on the bundle name. You can obtain
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -4344,7 +4386,7 @@ Sets the sorting order for system, user, and source albums. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -4417,7 +4459,7 @@ Configure the preferred compatible mode configured by the application based on b
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns void. |
+| Promise&lt;void&gt; | Returns void. |
 
 **Error codes:**
 
@@ -4471,13 +4513,13 @@ Starts asset analysis.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md) | Yes | Smart analysis type. Only **ANALYSIS_SEARCH_INDEX** is supported. |
-| assetUris | Array & lt;string & gt; | No | Array of asset URIs.    - If this parameter is specified, only the given assets are analyzed.    - If this parameter is left blank, full analysis is performed. |
+| assetUris | Array&lt;string&gt; | No | Array of asset URIs.    - If this parameter is specified, only the given assets are analyzed.    - If this parameter is left blank, full analysis is performed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the task ID of the service. |
+| Promise&lt;number&gt; | Promise used to return the task ID of the service. |
 
 **Error codes:**
 
@@ -4536,7 +4578,7 @@ Starts asynchronous asset analysis. This API uses an asynchronous callback to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the service task ID. |
+| Promise&lt;number&gt; | Promise used to return the service task ID. |
 
 **Error codes:**
 
@@ -4579,7 +4621,9 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 startDeepOptimizeSpace(callback?: Callback<DeepOptimizeSpaceProgress>): Promise<void>
 ```
 
-Start deep optimize storage space.Before using this API, you are advised to call [canPerformDeepOptimizeSpace()] [canPerformDeepOptimizeSpace](#canperformdeepoptimizespace) and call this API only when true is returned.
+Start deep optimize storage space.
+
+Before using this API, you are advised to call [canPerformDeepOptimizeSpace()] [canPerformDeepOptimizeSpace](#canperformdeepoptimizespace) and call this API only when true is returned.
 
 **Since:** 26.0.0
 
@@ -4601,7 +4645,7 @@ Start deep optimize storage space.Before using this API, you are advised to call
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -4837,7 +4881,7 @@ Stop deep optimize storage space.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -4935,7 +4979,7 @@ Updates the information about a Gallery widget and saves the information to the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

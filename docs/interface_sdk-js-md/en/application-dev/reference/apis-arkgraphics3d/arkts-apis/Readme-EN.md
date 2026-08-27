@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-arkgraphics3d-->
 
-- [@ohos.graphics.scene](arkts-graphics-scene.md)
+- [@ohos.graphics.scene(ArkGraphics 3D)](arkts-graphics-scene.md)
 - graphics3d<!--arkts-arkgraphics3d-graphics3d-->
   - [Scene](arkts-scene.md)
     - [PCFConfig](arkts-arkgraphics3d-scene-pcfconfig-c.md)

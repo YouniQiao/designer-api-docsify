@@ -1,6 +1,8 @@
 # Macro
 
-**Macro** inherits from [MacroQuery](arkts-camera-camera-macroquery-i.md).It provides the API to enable macro photography.
+**Macro** inherits from [MacroQuery](arkts-camera-camera-macroquery-i.md).
+
+It provides the API to enable macro photography.
 
 **Inheritance/Implementation:** Macro extends [MacroQuery](arkts-camera-camera-macroquery-i.md)
 

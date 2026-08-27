@@ -17,7 +17,7 @@ Defines the rectangular region for capturing the component snapshot, with coordi
 ## Modules to Import
 
 ```TypeScript
-import componentSnapshot from '@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## bottom
@@ -26,7 +26,11 @@ import componentSnapshot from '@kit.ArkUI';
 bottom: number
 ```
 
-Y-coordinate of the lower right corner of the rectangular region.Unit: px.Value range: [0, Component height].
+Y-coordinate of the lower right corner of the rectangular region.
+
+Unit: px.
+
+Value range: [0, Component height].
 
 **Type:** number
 
@@ -44,7 +48,13 @@ Y-coordinate of the lower right corner of the rectangular region.Unit: px.Value 
 end: number
 ```
 
-For LTR layouts: X-coordinate of the lower right corner of the rectangular region.For RTL layouts: X-coordinate of the lower left corner of the rectangular region.Unit: px.Value range: [0, Component width].
+For LTR layouts: X-coordinate of the lower right corner of the rectangular region.
+
+For RTL layouts: X-coordinate of the lower left corner of the rectangular region.
+
+Unit: px.
+
+Value range: [0, Component width].
 
 **Type:** number
 
@@ -62,7 +72,13 @@ For LTR layouts: X-coordinate of the lower right corner of the rectangular regio
 start: number
 ```
 
-For LTR layouts: X-coordinate of the upper left corner of the rectangular region.For RTL layouts: X-coordinate of the upper right corner of the rectangular region.Unit: px.Value range: [0, Component width].
+For LTR layouts: X-coordinate of the upper left corner of the rectangular region.
+
+For RTL layouts: X-coordinate of the upper right corner of the rectangular region.
+
+Unit: px.
+
+Value range: [0, Component width].
 
 **Type:** number
 
@@ -80,7 +96,13 @@ For LTR layouts: X-coordinate of the upper left corner of the rectangular region
 top: number
 ```
 
-For LTR layouts: Y-coordinate of the upper left corner of the rectangular region.For RTL layouts: Y-coordinate of the upper right corner of the rectangular region.Unit: px.Value range: [0, Component height].
+For LTR layouts: Y-coordinate of the upper left corner of the rectangular region.
+
+For RTL layouts: Y-coordinate of the upper right corner of the rectangular region.
+
+Unit: px.
+
+Value range: [0, Component height].
 
 **Type:** number
 

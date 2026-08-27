@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleInfoForSelf
@@ -30,7 +30,7 @@ Obtains the bundle information of the current application based on the given bun
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BundleInfo & gt; | Promise used to return the bundle information. |
+| Promise&lt;BundleInfo&gt; | Promise used to return the bundle information. |
 
 **Error codes:**
 

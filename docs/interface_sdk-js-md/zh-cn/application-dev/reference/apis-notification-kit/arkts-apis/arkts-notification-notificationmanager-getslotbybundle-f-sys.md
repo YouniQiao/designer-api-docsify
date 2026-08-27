@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getSlotByBundle
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function getSlotByBundle(bundle: BundleOption, slotType: SlotType): Promise<NotificationSlot>
 ```
 
-获取指定应用指定类型的通知渠道。使用Promise异步回调。获取前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f.md)创建通知渠道。
+获取指定应用指定类型的通知渠道。使用Promise异步回调。
+
+获取前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f.md)创建通知渠道。
 
 **起始版本：** 12
 
@@ -26,14 +28,14 @@ function getSlotByBundle(bundle: BundleOption, slotType: SlotType): Promise<Noti
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 指定应用的包信息。 |
-| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 | 渠道类型。 |
+| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| slotType | SlotType | 是 | 渠道类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;NotificationSlot & gt; | 以Promise形式返回获取指定应用指定类型的通知渠道。 |
+| Promise&lt;NotificationSlot&gt; | 以Promise形式返回获取指定应用指定类型的通知渠道。 |
 
 **错误码：**
 

@@ -11,7 +11,7 @@ Defines the user age group detection result.
 ## Modules to Import
 
 ```TypeScript
-import userStatus from '@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## ageGroup

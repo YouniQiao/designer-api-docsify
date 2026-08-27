@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendableContextManager from '@kit.AbilityKit';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## convertToUIAbilityContext
@@ -26,7 +26,7 @@ function convertToUIAbilityContext(sendableContext: SendableContext): common.UIA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | 是 |  |
+| sendableContext | SendableContext | 是 |  |
 
 **返回值：**
 

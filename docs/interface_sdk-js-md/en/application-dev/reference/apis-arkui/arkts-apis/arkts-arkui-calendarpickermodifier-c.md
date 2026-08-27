@@ -1,6 +1,8 @@
 # CalendarPickerModifier
 
-Defines CalendarPicker Modifier@extends CalendarPickerAttribute @implements AttributeModifier&lt;CalendarPickerAttribute&gt;
+Defines CalendarPicker Modifier
+
+@extends CalendarPickerAttribute @implements AttributeModifier&lt;CalendarPickerAttribute&gt;
 
 **Inheritance/Implementation:** CalendarPickerModifier extends [CalendarPickerAttribute](../arkts-components/arkts-arkui-calendarpicker-attribute.md#calendarpickerattribute) and implements AttributeModifier<CalendarPickerAttribute>
 

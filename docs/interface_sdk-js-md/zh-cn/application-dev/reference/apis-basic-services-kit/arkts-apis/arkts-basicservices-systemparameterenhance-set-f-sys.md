@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import systemParameterEnhance from '@kit.BasicServicesKit';
+import { systemParameterEnhance } from '@kit.BasicServicesKit';
 ```
 
 ## set
@@ -81,7 +81,7 @@ function set(key: string, value: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise实例，用于异步获取结果。 |
+| Promise&lt;void&gt; | Promise实例，用于异步获取结果。 |
 
 **错误码：**
 

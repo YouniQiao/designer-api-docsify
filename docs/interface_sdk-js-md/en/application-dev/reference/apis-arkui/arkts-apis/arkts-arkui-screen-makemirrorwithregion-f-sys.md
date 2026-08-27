@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screen from '@kit.ArkUI';
-import screenshot from '@kit.ArkUIshot';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## makeMirrorWithRegion
@@ -26,14 +25,14 @@ Sets a rectangle on the screen to mirror mode. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mainScreen | number | Yes | ID of the primary screen. The ID must be a non-negative integer. |
-| mirrorScreen | Array & lt;number & gt; | Yes | Array of IDs of secondary screens. Each ID must be a positive integer. |
-| mainScreenRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | Rectangle on the primary screen to be mirrored. |
+| mirrorScreen | Array&lt;number&gt; | Yes | Array of IDs of secondary screens. Each ID must be a positive integer. |
+| mainScreenRegion | Rect | Yes | Rectangle on the primary screen to be mirrored. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the group ID of the secondary screens, where the ID is a positive integer. |
+| Promise&lt;number&gt; | Promise used to return the group ID of the secondary screens, where the ID is a positive integer. |
 
 **Error codes:**
 

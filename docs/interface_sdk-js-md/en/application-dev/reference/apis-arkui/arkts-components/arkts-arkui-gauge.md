@@ -1,6 +1,7 @@
 # Gauge
 
 The **Gauge** component represents a gauge that displays data in a circular format.
+
 > **NOTE** > > - This component supports WithTheme since API version 26.0.0.
 
 ## Child Components
@@ -46,6 +47,10 @@ Creates a gauge.
 
 | Name | Description |
 | --- | --- |
+| [GaugeConfiguration](arkts-arkui-gaugeconfiguration-i.md) | You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
+| [GaugeIndicatorOptions](arkts-arkui-gaugeindicatoroptions-i.md) | Provides gauge indicator options. |
+| [GaugeOptions](arkts-arkui-gaugeoptions-i.md) | Provides gauge options. |
+| [GaugeShadowOptions](arkts-arkui-gaugeshadowoptions-i.md) | Inherits from [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) and has all attributes of **MultiShadowOptions**. |
 
 ## Examples
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import overlay from '@kit.AbilityKit';
+import { overlay } from '@kit.AbilityKit';
 ```
 
 ## getOverlayModuleInfo
@@ -80,7 +80,7 @@ Obtains the OverlayModuleInfo about a module with the overlay feature in the cur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;OverlayModuleInfo & gt; | Promise used to return the result, which is an [OverlayModuleInfo]{ |
+| Promise&lt;OverlayModuleInfo&gt; | Promise used to return the result, which is an [OverlayModuleInfo]{ |
 
 **Error codes:**
 

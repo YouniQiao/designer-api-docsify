@@ -1,6 +1,8 @@
 # TaskStatistic (System API)
 
-Statistics Related to AI Image Generation Tasks.@interface TaskStatistic
+Statistics Related to AI Image Generation Tasks.
+
+@interface TaskStatistic
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ Statistics Related to AI Image Generation Tasks.@interface TaskStatistic
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## generationTime

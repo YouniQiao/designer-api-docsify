@@ -48,25 +48,302 @@ Invoked on a per-frame basis until the entrance animation is complete, with the 
 
 | Name | Description |
 | --- | --- |
+| [PageTransitionExitInterface](arkts-arkui-pagetransitionexitinterface-i.md) | Provide an interface to set transition style when a page exits. |
+| [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | Parameters of the exit or entrance animation. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md) | Represents the callback for page transition events. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [RouteType](arkts-arkui-routetype-e.md) | Sets the type of page transition. |
+| [SlideEffect](arkts-arkui-slideeffect-e.md) | Slide-in and slide-out effects for page transitions. |
 
 ## Examples
 
+Method 1: Configure different entrance and exit animations based on different transition types.
+
 ```TypeScript
-pageTransition() {
+// Index.ets
+@Entry
+@Component
+struct Index {
+  @State scale1: number = 1;
+  @State opacity1: number = 1;
+
+  build() {
+    Column() {
+      // Replace $r("app.media.transition_image1") with the image resource file you use.
+      Image($r("app.media.transition_image1")).width('100%').height('100%')
+    }
+    .width('100%')
+    .height('100%')
+    .scale({ x: this.scale1 })
+    .opacity(this.opacity1)
+    .onClick(() => {
+      this.getUIContext().getRouter().pushUrl({ url: 'pages/Page1' });
+    })
+  }
+
+  pageTransition() {
     PageTransitionEnter({ duration: 1200, curve: Curve.Linear })
-      // During the transition animation, the entrance animation has a type that represents the route type, and a progress that increases from 0 to 1.
       .onEnter((type: RouteType, progress: number) => {
-        // Service logic
+        if (type == RouteType.Push || type == RouteType.Pop) {
+          this.scale1 = progress;
+          this.opacity1 = progress;
+        }
+      })
+    PageTransitionExit({ duration: 1200, curve: Curve.Ease })
+      .onExit((type: RouteType, progress: number) => {
+        if (type == RouteType.Push) {
+          this.scale1 = 1 - progress;
+          this.opacity1 = 1 - progress;
+        }
       })
   }
+}
+```
+
+```TypeScript
+// Page1.ets
+@Entry
+@Component
+struct Page1 {
+  @State scale2: number = 1;
+  @State opacity2: number = 1;
+
+  build() {
+    Column() {
+      // Replace $r("app.media.transition_image2") with the image resource file you use.
+      Image($r("app.media.transition_image2")).width('100%').height('100%') // Store the image in the media folder.
+    }
+    .width('100%')
+    .height('100%')
+    .scale({ x: this.scale2 })
+    .opacity(this.opacity2)
+    .onClick(() => {
+      this.getUIContext().getRouter().pushUrl({ url: 'pages/Index' });
+    })
+  }
+
+  pageTransition() {
+    PageTransitionEnter({ duration: 1200, curve: Curve.Linear })
+      .onEnter((type: RouteType, progress: number) => {
+        if (type == RouteType.Push || type == RouteType.Pop) {
+          this.scale2 = progress;
+        }
+        this.opacity2 = progress;
+      })
+    PageTransitionExit({ duration: 1200, curve: Curve.Ease })
+      .onExit((type: RouteType, progress: number) => {
+        if (type == RouteType.Pop) {
+          this.scale2 = 1 - progress;
+          this.opacity2 = 1 - progress;
+        }
+      })
+  }
+}
+```
+
+Method 2: The entrance animation of the current page is configured to slide in from the left, and the exit animation is configured to translate with opacity change.
+
+```TypeScript
+// Index.ets 
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      // Replace $r('app.media.bg1') with the image resource file you use.
+      Image($r('app.media.bg1')).width('100%').height('100%') // The image is stored in the media folder.
+    }
+    .onClick(() => {
+      this.getUIContext().getRouter().pushUrl({ url: 'pages/Page1' });
+    })
+  }
+
+  // Use the default effects provided by the system, such as translation, scaling, and opacity.
+  pageTransition() {
+    // Set the duration of the entrance animation to 1200 ms, in the purpose of matching the duration of the exit animation of the other page.
+    PageTransitionEnter({ duration: 1200 })
+      .slide(SlideEffect.Left)
+    // Set the duration of the exit animation to 1000 ms, in the purpose of matching the duration of the entrance animation of the other page.
+    PageTransitionExit({ duration: 1000 })
+      .translate({ x: 100.0, y: 100.0 })
+      .opacity(0)
+  }
+}
+```
+
+```TypeScript
+// Page1.ets
+@Entry
+@Component
+struct Page1 {
+  build() {
+    Column() {
+      // Replace $r('app.media.bg2') with the image resource file you use.
+      Image($r('app.media.bg2')).width('100%').height('100%') // The image is stored in the media folder.
+    }
+    .onClick(() => {
+      this.getUIContext().getRouter().pushUrl({ url: 'pages/Index' });
+    })
+  }
+
+  // Use the default effects provided by the system, such as translation, scaling, and opacity.
+  pageTransition() {
+    // Set the duration of the entrance animation to 1000 ms, in the purpose of matching the duration of the exit animation of the other page.
+    PageTransitionEnter({ duration: 1000 })
+      .slide(SlideEffect.Left)
+    // Set the duration of the exit animation to 1200 ms, in the purpose of matching the duration of the entrance animation of the other page.
+    PageTransitionExit({ duration: 1200 })
+      .translate({ x: 100.0, y: 100.0 })
+      .opacity(0)
+  }
+}
+```
+
+Method 1: Configure the various entrance and exit translation effects provided, with the system language layout mode set to right-to-left (RTL).
+
+```TypeScript
+// Index.ets
+@Entry
+@Component
+struct Index {
+  @State scale1: number = 1;
+  @State opacity1: number = 1;
+
+  build() {
+    Column() {
+      Button("Page 1").onClick(() => {
+        this.getUIContext().getRouter().pushUrl({
+          url: "pages/Page1"
+        })
+      })
+        .width(200)
+        .height(60)
+        .fontSize(36)
+      Text("START")
+        .fontSize(36)
+        .textAlign(TextAlign.Center)
+    }
+    .scale({ x: this.scale1 })
+    .opacity(this.opacity1)
+    .height("100%")
+    .width("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+
+  // Method 2: Use the default effects provided by the system, such as translation, scaling, and opacity.
+  pageTransition() {
+    // Set the entrance animation.
+    PageTransitionEnter({ duration: 200 })
+      .slide(SlideEffect.START)
+    // Set the exit animation.
+    PageTransitionExit({ delay: 100 })
+      .slide(SlideEffect.START) //Left
+  }
+}
+```
+
+```TypeScript
+// Page1.ets
+@Entry
+@Component
+struct Page1 {
+  @State scale1: number = 1;
+  @State opacity1: number = 1;
+
+  build() {
+    Column() {
+      Button("Page 2").onClick(() => {
+        this.getUIContext().getRouter().pushUrl({
+          url: "pages/Index"
+        });
+      })
+        .width(200)
+        .height(60)
+        .fontSize(36)
+      Text("END")
+        .fontSize(36)
+        .textAlign(TextAlign.Center)
+    }
+    .scale({ x: this.scale1 })
+    .opacity(this.opacity1)
+    .height("100%")
+    .width("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+
+  // Method 2: Use the default effects provided by the system, such as translation, scaling, and opacity.
+  pageTransition() {
+    PageTransitionEnter({ duration: 200 })
+      .slide(SlideEffect.END) //Right
+    PageTransitionExit({ delay: 100 })
+      .slide(SlideEffect.END) //Right
+  }
+}
+```
+
+Customization method 2: Use the system's default entrance and exit effects, with the system language layout mode set to right-to-left (RTL).
+
+```TypeScript
+// Index.ets
+@Entry
+@Component
+struct Index {
+  @State scale1: number = 1;
+  @State opacity1: number = 1;
+
+  build() {
+    Column() {
+      Button("Page 1").onClick(() => {
+        this.getUIContext().getRouter().pushUrl({
+          url: "pages/Page1"
+        });
+      })
+        .width(200)
+        .height(60)
+        .fontSize(36)
+    }
+    .scale({ x: this.scale1 })
+    .opacity(this.opacity1)
+    .height("100%")
+    .width("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+```TypeScript
+// Page1.ets
+@Entry
+@Component
+struct Page1 {
+  @State scale1: number = 1;
+  @State opacity1: number = 1;
+
+  build() {
+    Column() {
+      Button("Page 2").onClick(() => {
+        this.getUIContext().getRouter().pushUrl({
+          url: "pages/Index"
+        });
+      })
+        .width(200)
+        .height(60)
+        .fontSize(36)
+    }
+    .scale({ x: this.scale1 })
+    .opacity(this.opacity1)
+    .height("100%")
+    .width("100%")
+    .justifyContent(FlexAlign.Center)
+  }
+}
 ```

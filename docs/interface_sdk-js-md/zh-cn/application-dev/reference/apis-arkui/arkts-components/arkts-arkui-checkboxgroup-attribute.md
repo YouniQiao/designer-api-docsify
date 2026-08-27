@@ -1,6 +1,8 @@
 # CheckboxGroup属性/事件
 
-除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：
+
+除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** CheckboxGroupAttribute extends CommonMethod<CheckboxGroupAttribute>
 
@@ -35,7 +37,7 @@ checkboxShape(value: CheckBoxShape)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | 是 | 设置CheckboxGroup组件形状，包括圆形和圆角方形。默认值：CheckBoxShape.CIRCLE    **说明：**CheckboxGroup组件将按照设置的形状显示。CheckboxGroup内所有未单独设置shape类型的Checkbox，其形状将与CheckboxGroup保持一致。CheckboxGroup内 已单独设置shape类型的Checkbox，其形状将优先于CheckboxGroup的设置，按照自身设置显示。 |
+| value | [CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md) | 是 | 设置CheckboxGroup组件形状，包括圆形和圆角方形。默认值：CheckBoxShape.CIRCLE    **说明：**CheckboxGroup组件将按照设置的形状显示。CheckboxGroup内所有未单独设置shape类型的Checkbox，其形状将与CheckboxGroup保持一致。CheckboxGroup内已单独设置shape类型的Checkbox，其形状将优先于CheckboxGroup的设置，按照自身设置显示。 |
 
 ## checkboxShape
 
@@ -59,7 +61,7 @@ checkboxShape(shape: Optional<CheckBoxShape>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shape | [Optional](arkts-arkui-optional-t.md)&lt;[CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md)&gt; | 是 | 设置CheckboxGroup组件形状，包括圆形和圆角方形。当shape的值为undefined时，默认值为 CheckBoxShape.CIRCLE。   **说明：**CheckboxGroup组件将按照设置的形状显示。CheckboxGroup内所有未单独设置shape类型的Checkbox，其形状 将与CheckboxGroup保持一致。CheckboxGroup内已单独设置shape类型的Checkbox，其形状将优先于CheckboxGroup的设置，按照自身设置显示。 |
+| shape | [Optional](arkts-arkui-optional-t.md)&lt;[CheckBoxShape](../arkts-apis/arkts-arkui-checkboxshape-e.md)&gt; | 是 | 设置CheckboxGroup组件形状，包括圆形和圆角方形。当shape的值为undefined时，默认值为CheckBoxShape.CIRCLE。   **说明：**CheckboxGroup组件将按照设置的形状显示。CheckboxGroup内所有未单独设置shape类型的Checkbox，其形状将与CheckboxGroup保持一致。CheckboxGroup内已单独设置shape类型的Checkbox，其形状将优先于CheckboxGroup的设置，按照自身设置显示。 |
 
 ## contentModifier
 
@@ -159,7 +161,7 @@ CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化�
 onChange(callback: Optional<OnCheckboxGroupChangeCallback>)
 ```
 
-CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化时，触发回调。与 [onChange](#onchange)相比，callback参数新增了对 undefined类型的支持。在与带有缓存功能的组件（如List）配合使用时，需注意未创建的Checkbox的选中状态对回调结果的影响。
+CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化时，触发回调。与[onChange](#onchange)相比，callback参数新增了对undefined类型的支持。在与带有缓存功能的组件（如List）配合使用时，需注意未创建的Checkbox的选中状态对回调结果的影响。
 
 **起始版本：** 18
 
@@ -183,7 +185,13 @@ CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化�
 selectAll(value: boolean)
 ```
 
-设置是否全选。若同组的Checkbox显式设置了select属性，则Checkbox的优先级高。在与带有缓存功能的组件（如List）配合使用时，未创建的Checkbox选中状态需由开发者控制。从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+设置是否全选。若同组的Checkbox显式设置了select属性，则Checkbox的优先级高。
+
+在与带有缓存功能的组件（如List）配合使用时，未创建的Checkbox选中状态需由开发者控制。
+
+从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+
+从API version 18开始，该属性支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 8
 
@@ -205,7 +213,11 @@ selectAll(value: boolean)
 selectAll(isAllSelected: Optional<boolean>)
 ```
 
-设置是否全选。若同组的Checkbox显式设置了select属性，则Checkbox的优先级高。与 [selectAll](#selectall)相比，isAllSelected参数新增了对undefined类型的支持。在与带有缓存功能的组件（如List）配合使用时，未创建的Checkbox选中状态需由开发者控制。该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)、 [!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+设置是否全选。若同组的Checkbox显式设置了select属性，则Checkbox的优先级高。与[selectAll](#selectall)相比，isAllSelected参数新增了对undefined类型的支持。
+
+在与带有缓存功能的组件（如List）配合使用时，未创建的Checkbox选中状态需由开发者控制。
+
+该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)、[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **起始版本：** 18
 
@@ -221,7 +233,7 @@ selectAll(isAllSelected: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isAllSelected | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否全选。当isAllSelected的值为undefined时取默认值false。值为true时，多选框群组将全部被选 中；值为false时，多选框群组将全部取消选中。 |
+| isAllSelected | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否全选。当isAllSelected的值为undefined时取默认值false。值为true时，多选框群组将全部被选中；值为false时，多选框群组将全部取消选中。 |
 
 ## selectedColor
 
@@ -243,7 +255,7 @@ selectedColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 被选中或部分选中状态的颜色。默认值：\\$r('sys.color.ohos_id_color_text_primary_activated')异常 值按照默认值处理。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 被选中或部分选中状态的颜色。默认值：\\$r('sys.color.ohos_id_color_text_primary_activated')异常值按照默认值处理。 |
 
 ## selectedColor
 
@@ -251,7 +263,7 @@ selectedColor(value: ResourceColor)
 selectedColor(resColor: Optional<ResourceColor>)
 ```
 
-设置被选中或部分选中状态的颜色。与[selectedColor](#selectedcolor)相比，resColor参数新增了对 undefined类型的支持。
+设置被选中或部分选中状态的颜色。与[selectedColor](#selectedcolor)相比，resColor参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -297,7 +309,7 @@ unselectedColor(value: ResourceColor)
 unselectedColor(resColor: Optional<ResourceColor>)
 ```
 
-设置非选中状态边框颜色。与[unselectedColor](#unselectedcolor)&lt;sup&gt;10+&lt;/sup&gt;相比， resColor参数新增了对undefined类型的支持。
+设置非选中状态边框颜色。与[unselectedColor](#unselectedcolor)&lt;sup&gt;10+&lt;/sup&gt;相比，resColor参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 

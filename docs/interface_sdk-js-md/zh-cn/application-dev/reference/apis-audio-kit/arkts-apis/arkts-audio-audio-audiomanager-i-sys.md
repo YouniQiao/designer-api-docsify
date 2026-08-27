@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## disableSafeMediaVolume
@@ -19,7 +18,7 @@ import audioHaptic from '@kit.AudioKitHaptic';
 disableSafeMediaVolume(): Promise<void>
 ```
 
-设置安全音量为非激活状态。使用Promise异步回调。 设置为非激活状态后，当设备长时间高音量播放时，不再自动提醒用户降低到安全音量。
+设置安全音量为非激活状态。使用Promise异步回调。设置为非激活状态后，当设备长时间高音量播放时，不再自动提醒用户降低到安全音量。
 
 **起始版本：** 12
 
@@ -33,7 +32,7 @@ disableSafeMediaVolume(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 
@@ -142,13 +141,13 @@ getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<str
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mainKey | string | 是 | Main key of the audio parameters to get. |
-| subKeys | Array & lt;string & gt; | 否 | Sub keys of the audio parameters to get. |
+| subKeys | Array&lt;string&gt; | 否 | Sub keys of the audio parameters to get. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Record & lt;string, string & gt; & gt; | Promise对象，返回获取的音频参数的值。 |
+| Promise&lt;Record&lt;string, string&gt;&gt; | Promise对象，返回获取的音频参数的值。 |
 
 **错误码：**
 
@@ -290,7 +289,7 @@ audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
 reportPlaybackCaptureUserAllowed(streamId: number, allowed: boolean): Promise<void>
 ```
 
-报告用户允许的结果，以响应来自特定系统应用的播放捕获请求给音频系统。 系统将根据该结果继续启动播放捕获或返回失败。 该 API 使用 Promise 来返回结果。
+报告用户允许的结果，以响应来自特定系统应用的播放捕获请求给音频系统。系统将根据该结果继续启动播放捕获或返回失败。该 API 使用 Promise 来返回结果。
 
 **起始版本：** 26.1.0
 
@@ -313,7 +312,7 @@ reportPlaybackCaptureUserAllowed(streamId: number, allowed: boolean): Promise<vo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **错误码：**
 
@@ -382,7 +381,7 @@ setAudioScene(scene: AudioScene): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **示例**
 
@@ -417,13 +416,13 @@ setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mainKey | string | 是 | 被设置的音频参数的主键。 |
-| kvpairs | Record & lt;string, string & gt; | 是 | 被设置的音频参数的子键值对。 |
+| kvpairs | Record&lt;string, string&gt; | 是 | 被设置的音频参数的子键值对。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象。无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
 **错误码：**
 

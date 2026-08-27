@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundLoader from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## 汇总
@@ -22,7 +22,7 @@ import backgroundLoader from '@kit.BackgroundTasksKit';
 | --- | --- |
 | [finishTask](arkts-backgroundtasks-backgroundloader-finishtask-f.md) | 结束后台加载任务。 |
 | [getTaskInfo](arkts-backgroundtasks-backgroundloader-gettaskinfo-f.md) | 获取后台预取任务信息。 |
-| [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md) | 注册后台加载任务。 使用 callee.on(ON_START)来接受系统测触发的任务 |
+| [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md) | 注册后台加载任务。使用 callee.on(ON_START)来接受系统测触发的任务 |
 | [unregisterTask](arkts-backgroundtasks-backgroundloader-unregistertask-f.md) | 取消注册后台加载任务。 |
 
 ### 接口

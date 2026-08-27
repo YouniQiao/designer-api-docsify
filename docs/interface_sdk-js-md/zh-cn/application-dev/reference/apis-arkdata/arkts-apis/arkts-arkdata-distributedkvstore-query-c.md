@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedKVStore from '@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## and
@@ -30,7 +30,7 @@ and(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
+| Query | 返回查询对象。 |
 
 **示例**
 
@@ -70,7 +70,7 @@ beginGroup(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -160,7 +160,7 @@ deviceId(deviceId: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -203,7 +203,7 @@ endGroup(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **示例**
 
@@ -257,7 +257,7 @@ equalTo(field: string, value: number | number | string | boolean): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -352,7 +352,7 @@ greaterThan(field: string, value: number | number | string | boolean): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -410,7 +410,7 @@ greaterThanOrEqualTo(field: string, value: number | number | string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -468,7 +468,7 @@ inNumber(field: string, valueList: number[] | number[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -526,7 +526,7 @@ inString(field: string, valueList: string[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -583,7 +583,7 @@ isNotNull(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -640,7 +640,7 @@ isNull(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -698,7 +698,7 @@ lessThan(field: string, value: number | number | string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -756,7 +756,7 @@ lessThanOrEqualTo(field: string, value: number | number | string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -814,7 +814,7 @@ like(field: string, value: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -865,7 +865,7 @@ limit(total: number, offset: number): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -926,7 +926,7 @@ notEqualTo(field: string, value: number | number | string | boolean): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -984,7 +984,7 @@ notInNumber(field: string, valueList: number[] | number[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -1042,7 +1042,7 @@ notInString(field: string, valueList: string[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -1086,7 +1086,7 @@ or(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
+| Query | 返回查询对象。 |
 
 **示例**
 
@@ -1139,7 +1139,7 @@ orderByAsc(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -1197,7 +1197,7 @@ orderByDesc(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -1242,13 +1242,13 @@ prefixKey(prefix: string): Query
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| prefix | string | 是 | 表示指定的键前缀，长度范围为0-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，不能包含'^'。包含'^'将导致谓 词失效，查询结果会返回数据库中的所有数据。 |
+| prefix | string | 是 | 表示指定的键前缀，长度范围为0-[MAX_KEY_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md)，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -1293,7 +1293,7 @@ reset(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回重置后的Query对象，所有已添加的谓词条件被清空，可用于重新构建查询条件。 |
+| Query | 返回重置后的Query对象，所有已添加的谓词条件被清空，可用于重新构建查询条件。 |
 
 **示例**
 
@@ -1339,7 +1339,7 @@ setSuggestIndex(index: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 
@@ -1398,7 +1398,7 @@ unlike(field: string, value: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 **错误码：**
 

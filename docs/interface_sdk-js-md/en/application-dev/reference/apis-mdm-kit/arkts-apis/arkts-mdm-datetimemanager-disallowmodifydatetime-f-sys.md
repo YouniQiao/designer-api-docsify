@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dateTimeManager from '@kit.MDMKit';
+import { dateTimeManager } from '@kit.MDMKit';
 ```
 
 ## disallowModifyDateTime
@@ -101,7 +101,7 @@ Disallows the device to modify the system time. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object is thrown when the device fails to modify the system time. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when the device fails to modify the system time. |
 
 **Error codes:**
 

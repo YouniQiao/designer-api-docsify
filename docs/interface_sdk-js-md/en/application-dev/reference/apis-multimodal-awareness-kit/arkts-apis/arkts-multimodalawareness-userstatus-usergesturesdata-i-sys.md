@@ -13,7 +13,7 @@ Defines user gesture data.
 ## Modules to Import
 
 ```TypeScript
-import userStatus from '@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## directionAngle

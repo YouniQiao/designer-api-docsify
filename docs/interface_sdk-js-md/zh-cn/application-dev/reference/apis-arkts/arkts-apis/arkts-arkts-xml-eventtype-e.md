@@ -1,7 +1,9 @@
 # EventType
 
-事件类型枚举，定义了XmlPullParser在解析XML过程中可能触发的各类事件。解析时事件按START_DOCUMENT→START_TAG→TEXT/CDSECT→END_TAG→END_DOCUMENT等顺序依次触发， 开发者可通过tokenValueCallbackFunction回调接收对应事件。  
-**ArkTS-Dyn起始版本：** 8  
+事件类型枚举，定义了XmlPullParser在解析XML过程中可能触发的各类事件。解析时事件按START_DOCUMENT→START_TAG→TEXT/CDSECT→END_TAG→END_DOCUMENT等顺序依次触发，开发者可通过tokenValueCallbackFunction回调接收对应事件。
+
+**ArkTS-Dyn起始版本：** 8
+
 **ArkTS-Sta起始版本：** 23
 
 **起始版本：** 8

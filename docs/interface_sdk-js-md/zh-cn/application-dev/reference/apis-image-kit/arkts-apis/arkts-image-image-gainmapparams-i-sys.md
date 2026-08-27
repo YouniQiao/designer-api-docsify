@@ -11,7 +11,7 @@ Gainmap（增益图）参数设置选项。
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## isFullSizeGainmap
@@ -20,7 +20,9 @@ import image from '@kit.ImageKit';
 isFullSizeGainmap: boolean
 ```
 
-返回Picture中的Gainmap（增益图）是否使用全尺寸图。true表示使用全尺寸图，宽高和主图一致；false表示不使用全尺寸图，宽高均为主图的一半。默认值为false。
+返回Picture中的Gainmap（增益图）是否使用全尺寸图。
+
+true表示使用全尺寸图，宽高和主图一致；false表示不使用全尺寸图，宽高均为主图的一半。默认值为false。
 
 **类型：** boolean
 

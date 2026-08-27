@@ -18,7 +18,11 @@ import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstru
 onChange?: ArcSliderChangeHandler
 ```
 
-Callback invoked to notify the application when the progress value of the arc slider changes.Default value: If this parameter is not provided, no callback will be invoked.@Trace
+Callback invoked to notify the application when the progress value of the arc slider changes.
+
+Default value: If this parameter is not provided, no callback will be invoked.
+
+@Trace
 
 **Since:** 18
 
@@ -32,7 +36,11 @@ Callback invoked to notify the application when the progress value of the arc sl
 onEnlarge?: ArcSliderEnlargeHandler
 ```
 
-Callback invoked to notify the application when the arc slider is enlarged or reduced.Default value: If this parameter is not provided, no callback will be invoked.@Trace
+Callback invoked to notify the application when the arc slider is enlarged or reduced.
+
+Default value: If this parameter is not provided, no callback will be invoked.
+
+@Trace
 
 **Since:** 18
 
@@ -46,7 +54,11 @@ Callback invoked to notify the application when the arc slider is enlarged or re
 onTouch?: ArcSliderTouchHandler
 ```
 
-Callback invoked to notify the application when the arc slider is touched.Default value: If this parameter is not provided, no callback will be invoked.@Trace
+Callback invoked to notify the application when the arc slider is touched.
+
+Default value: If this parameter is not provided, no callback will be invoked.
+
+@Trace
 
 **Since:** 18
 
@@ -60,7 +72,11 @@ Callback invoked to notify the application when the arc slider is touched.Defaul
 digitalCrownSensitivity?: CrownSensitivity
 ```
 
-Sensitivity to the digital crown rotation.Default value: **CrownSensitivity.MEDIUM**@Trace
+Sensitivity to the digital crown rotation.
+
+Default value: **CrownSensitivity.MEDIUM**
+
+@Trace
 
 **Type:** [CrownSensitivity](arkts-arkui-crownsensitivity-e.md)
 
@@ -76,7 +92,11 @@ Sensitivity to the digital crown rotation.Default value: **CrownSensitivity.MEDI
 layoutOptions?: ArcSliderLayoutOptions
 ```
 
-Style of the arc slider.Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)@Trace
+Style of the arc slider.
+
+Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
+
+@Trace
 
 **Type:** [ArcSliderLayoutOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
@@ -92,7 +112,11 @@ Style of the arc slider.Default value: default values of all properties of [ArcS
 styleOptions?: ArcSliderStyleOptions
 ```
 
-Style of the arc slider.Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)@Trace
+Style of the arc slider.
+
+Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
+
+@Trace
 
 **Type:** [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
@@ -108,7 +132,11 @@ Style of the arc slider.Default value: default values of all properties of [ArcS
 valueOptions?: ArcSliderValueOptions
 ```
 
-Style of the arc slider.Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)@Trace
+Style of the arc slider.
+
+Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
+
+@Trace
 
 **Type:** [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 

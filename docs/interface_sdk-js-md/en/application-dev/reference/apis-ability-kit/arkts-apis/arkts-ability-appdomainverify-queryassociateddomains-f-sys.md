@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appDomainVerify from '@kit.AbilityKit';
+import { appDomainVerify } from '@kit.AbilityKit';
 ```
 
 ## queryAssociatedDomains

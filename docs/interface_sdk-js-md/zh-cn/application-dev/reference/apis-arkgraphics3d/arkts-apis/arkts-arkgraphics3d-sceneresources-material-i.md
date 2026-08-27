@@ -1,6 +1,8 @@
 # Material
 
-材质类型，继承自SceneResource。@extends SceneResource @interface Material
+材质类型，继承自SceneResource。
+
+@extends SceneResource @interface Material
 
 **继承/实现关系：** Material extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
@@ -14,7 +16,7 @@
 alphaCutoff?: number
 ```
 
-透明通道阈值，如果像素的alpha值等于或高于此阈值，则渲染该像素；如果低于此阈值，则不会渲染该像素。 设置值小于1时，则开启该模式，取值范围为[0, 1]，默认值为1。
+透明通道阈值，如果像素的alpha值等于或高于此阈值，则渲染该像素；如果低于此阈值，则不会渲染该像素。设置值小于1时，则开启该模式，取值范围为[0, 1]，默认值为1。
 
 **类型：** number
 

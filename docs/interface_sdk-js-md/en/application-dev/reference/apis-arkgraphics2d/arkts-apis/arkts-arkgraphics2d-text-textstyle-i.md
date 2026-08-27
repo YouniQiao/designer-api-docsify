@@ -9,7 +9,7 @@ Represents a text style, which controls the visual appearance attributes of text
 ## Modules to Import
 
 ```TypeScript
-import text from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## backgroundRect
@@ -228,7 +228,9 @@ Font style. The default value is **NORMAL**.
 fontTypefaces?: Array<drawing.Typeface>
 ```
 
-Array of specified typesetting font objects, used to prioritize the specified font objects for text shaping and skip the font matching process. When a font object in the array cannot shape some characters, the unshaped characters will be shaped using the system font. The default value is an empty array, indicating that no font object is specified and the default font matching process is used.When fontTypefaces is set together with [TextStyle](#textstyle).fontFamilies, fontTypefaces takes precedence.
+Array of specified typesetting font objects, used to prioritize the specified font objects for text shaping and skip the font matching process. When a font object in the array cannot shape some characters, the unshaped characters will be shaped using the system font. The default value is an empty array, indicating that no font object is specified and the default font matching process is used.
+
+When fontTypefaces is set together with [TextStyle](#textstyle).fontFamilies, fontTypefaces takes precedence.
 
 **Type:** Array&lt;drawing.Typeface&gt;
 

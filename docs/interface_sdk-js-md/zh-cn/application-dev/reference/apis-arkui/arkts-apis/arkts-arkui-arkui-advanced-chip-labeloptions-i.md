@@ -15,9 +15,6 @@ LabelOptions定义文本属性。
 
 ```TypeScript
 import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, LabelOptions, PrefixIconOptions, SuffixIconOptions, ChipSymbolGlyphOptions, AccessibilitySelectedType, AccessibilityOptions, CloseOptions, ChipSuffixSymbolGlyphOptions } from '@kit.ArkUI';
-import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2SuffixImageIconConfig, ChipV2SuffixImageIcon, ChipV2Icon, ChipV2PrefixImageIconConfig, ChipV2PrefixImageIcon, ChipV2AccessibilityConfig, ChipV2Accessibility, ChipV2CloseConfig, ChipV2CloseIcon, ChipV2SymbolIconConfig, ChipV2SymbolIcon, ChipV2PrefixSymbolIconConfig, ChipV2PrefixSymbolIcon, ChipV2SuffixSymbolIconConfig, ChipV2SuffixSymbolIcon, ChipV2LabelMarginConfig, ChipV2LocalizedLabelMarginConfig, ChipV2LabelConfig, ChipV2Label, IChipV2OptionsConfig, ChipV2Options, ChipV2 } from '@kit.ArkUIV2';
-import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUIGroup';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUIGroupV2';
 ```
 
 ## activatedFontColor
@@ -26,7 +23,11 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 activatedFontColor?: ResourceColor
 ```
 
-Chip激活时的文字颜色。默认值：\$r('sys.color.ohos_id_color_text_primary_contrary')值为undefined时，按默认值处理。
+Chip激活时的文字颜色。
+
+默认值：\$r('sys.color.ohos_id_color_text_primary_contrary')
+
+值为undefined时，按默认值处理。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -44,7 +45,11 @@ Chip激活时的文字颜色。默认值：\$r('sys.color.ohos_id_color_text_pri
 fontColor?: ResourceColor
 ```
 
-文字颜色。默认值：\$r('sys.color.ohos_id_color_text_primary')值为undefined时，按默认值处理。
+文字颜色。
+
+默认值：\$r('sys.color.ohos_id_color_text_primary')
+
+值为undefined时，按默认值处理。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -62,7 +67,11 @@ fontColor?: ResourceColor
 fontFamily?: string
 ```
 
-设置Chip组件文本的字体样式。默认值："HarmonyOS Sans"值为undefined时，按默认值处理。
+设置Chip组件文本的字体样式。
+
+默认值："HarmonyOS Sans"
+
+值为undefined时，按默认值处理。
 
 **类型：** string
 
@@ -80,7 +89,15 @@ fontFamily?: string
 fontSize?: Dimension
 ```
 
-字体大小，不支持百分比，传入百分比时按默认值处理。传入负数时，按默认值处理。默认值：\$r('sys.float.ohos_id_text_size_button2')单位：fp值为undefined时，按默认值处理。
+字体大小，不支持百分比，传入百分比时按默认值处理。
+
+传入负数时，按默认值处理。
+
+默认值：\$r('sys.float.ohos_id_text_size_button2')
+
+单位：fp
+
+值为undefined时，按默认值处理。
 
 **类型：** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -98,7 +115,17 @@ fontSize?: Dimension
 labelMargin?: LabelMarginOptions
 ```
 
-文本与左右侧图标之间间距。默认值：size为ChipSize.SMALL时，{ left: 4, right: 4 }size为ChipSize.NORMAL时，{ left: 6, right: 6 }单位：vp值为undefined时，按默认值处理。
+文本与左右侧图标之间间距。
+
+默认值：
+
+size为ChipSize.SMALL时，{ left: 4, right: 4 }
+
+size为ChipSize.NORMAL时，{ left: 6, right: 6 }
+
+单位：vp
+
+值为undefined时，按默认值处理。
 
 **类型：** [LabelMarginOptions](arkts-arkui-arkui-advanced-chip-labelmarginoptions-i.md)
 
@@ -116,7 +143,19 @@ labelMargin?: LabelMarginOptions
 localizedLabelMargin?: LocalizedLabelMarginOptions
 ```
 
-本地化文本与左右侧图标之间间距。默认值：size为ChipSize.SMALL时，`{ start: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')) }`size为ChipSize.NORMAL时，`{ start: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')) }`值为undefined时，按默认值处理。
+本地化文本与左右侧图标之间间距。
+
+默认值：
+
+size为ChipSize.SMALL时，
+
+`{ start: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_small_text_margin')) }`
+
+size为ChipSize.NORMAL时，
+
+`{ start: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')), end: LengthMetrics.resource(\$r('sys.float.chip_normal_text_margin')) }`
+
+值为undefined时，按默认值处理。
 
 **类型：** [LocalizedLabelMarginOptions](arkts-arkui-arkui-advanced-chip-localizedlabelmarginoptions-i.md)
 

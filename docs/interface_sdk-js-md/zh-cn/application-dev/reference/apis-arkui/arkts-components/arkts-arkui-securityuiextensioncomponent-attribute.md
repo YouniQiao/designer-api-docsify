@@ -1,6 +1,8 @@
 # SecurityUIExtensionComponent属性/事件
 
-支持通用属性。支持以下事件：
+支持通用属性。
+
+支持以下事件：
 
 **继承/实现关系：** SecurityUIExtensionComponentAttribute extends CommonMethod<SecurityUIExtensionComponentAttribute>
 

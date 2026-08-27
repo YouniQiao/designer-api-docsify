@@ -1,6 +1,8 @@
 # CanvasRenderingContext2D
 
-CanvasRenderingContext2D allows you to draw rectangles, text, images, and other objects on a canvas. You can call getContext('2d') on canvas to obtain a CanvasRenderingContext2D object.@interface CanvasRenderingContext2D
+CanvasRenderingContext2D allows you to draw rectangles, text, images, and other objects on a canvas. You can call getContext('2d') on canvas to obtain a CanvasRenderingContext2D object.
+
+@interface CanvasRenderingContext2D
 
 **Since:** 4
 
@@ -170,7 +172,7 @@ Creates an ImageData object.
 
 | Type | Description |
 | --- | --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Returns the newly created FunctionCallable object. |
+| ImageData | Returns the newly created FunctionCallable object. |
 
 ## createImageData
 
@@ -190,13 +192,13 @@ Creates an ImageData object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | ImageData object with the same width and height copied from the original ImageData object. |
+| imageData | ImageData | Yes | ImageData object with the same width and height copied from the original ImageData object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Returns the newly created FunctionCallable object. |
+| ImageData | Returns the newly created FunctionCallable object. |
 
 ## createLinearGradient
 
@@ -297,7 +299,7 @@ Creates a pattern for image filling based on a specified source image and repeti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | Source image. |
+| image | Image | Yes | Source image. |
 | repetition | string | Yes | Repetition mode. The value can be "repeat", "repeat-x", "repeat-y", or "no-repeat". |
 
 **Return value:**
@@ -355,7 +357,7 @@ Draws an image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | Image resource. |
+| image | Image | Yes | Image resource. |
 | dx | number | Yes | X-coordinate of the upper left corner of the drawing area on the canvas. |
 | dy | number | Yes | Y-coordinate of the upper left corner of the drawing area on the canvas. |
 | dWidth | number | Yes | Width of the drawing area. |
@@ -389,7 +391,7 @@ Draws an image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | Image resource. |
+| image | Image | Yes | Image resource. |
 | sx | number | Yes | X-coordinate of the upper left corner of the rectangle used to crop the source image. |
 | sy | number | Yes | Y-coordinate of the upper left corner of the rectangle used to crop the source image. |
 | sWidth | number | Yes | Target width of the image to crop. |
@@ -583,7 +585,7 @@ ImageData object created with pixels in the specified area on the canvas.
 
 | Type | Description |
 | --- | --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData object that contains pixels in the specified area on the canvas. |
+| ImageData | ImageData object that contains pixels in the specified area on the canvas. |
 
 ## getLineDash
 
@@ -603,7 +605,7 @@ Obtains the dash line style.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Interval of alternate line segments and the length of spacing. |
+| Array&lt;number&gt; | Interval of alternate line segments and the length of spacing. |
 
 ## getPixelMap
 
@@ -720,7 +722,7 @@ Puts the ImageData onto a rectangular area on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | ImageData object with pixels to put onto the canvas. |
+| imageData | ImageData | Yes | ImageData object with pixels to put onto the canvas. |
 | dx | number | Yes | X-axis offset of the rectangle area on the canvas. |
 | dy | number | Yes | Y-axis offset of the rectangle area on the canvas. |
 
@@ -750,7 +752,7 @@ Puts the ImageData onto a rectangular area on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | ImageData object with pixels to put onto the canvas. |
+| imageData | ImageData | Yes | ImageData object with pixels to put onto the canvas. |
 | dx | number | Yes | X-axis offset of the rectangle area on the canvas. |
 | dy | number | Yes | Y-axis offset of the rectangle area on the canvas. |
 | dirtyX | number | Yes | X-axis offset of the upper left corner of the rectangle area relative to that of the source image. |
@@ -891,7 +893,7 @@ Sets the dash line style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| segments | Array & lt;number & gt; | Yes | Interval of alternate line segments and the length of spacing. |
+| segments | Array&lt;number&gt; | Yes | Interval of alternate line segments and the length of spacing. |
 
 ## setTransform
 
@@ -1022,7 +1024,7 @@ Draws the Bitmap to the current canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bitmap | [ImageBitmap](../arkts-components/arkts-arkui-imagebitmap-c.md) | Yes |  |
+| bitmap | ImageBitmap | Yes |  |
 
 ## transform
 

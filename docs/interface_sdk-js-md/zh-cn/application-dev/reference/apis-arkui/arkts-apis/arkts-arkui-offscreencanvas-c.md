@@ -1,13 +1,20 @@
 # OffscreenCanvas
 
-OffscreenCanvas组件用于绘制自定义图形。使用[Canvas](arkts-arkui-canvas-con.md)组件或 [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) 对象时，渲染、动画和用户交互通常发生在应用程序的主线程上，与画布动画和渲染相关的计算可能会影响 应用程序性能。OffscreenCanvas提供了一个可以在屏幕外渲染的画布，这样可以在单独的线程中运行一些任务， 从而避免影响应用程序主线程性能。
+OffscreenCanvas组件用于绘制自定义图形。
+
+使用[Canvas](arkts-arkui-canvas-con.md)组件或[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)对象时，渲染、动画和用户交互通常发生在应用程序的主线程上，与画布动画和渲染相关的计算可能会影响应用程序性能。OffscreenCanvas提供了一个可以在屏幕外渲染的画布，这样可以在单独的线程中运行一些任务，从而避免影响应用程序主线程性能。
 
 > **说明：**
 > 
 > OffscreenCanvas无法在ServiceExtensionAbility中使用，ServiceExtensionAbility中建议使用
 > [Drawing模块](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-drawing.md)
 > 进行离屏绘制。
-## 子组件不支持。@extends CanvasRenderer [since 8 - 10]
+
+## 子组件
+
+不支持。
+
+@extends CanvasRenderer [since 8 - 10]
 
 **起始版本：** 8
 
@@ -38,8 +45,8 @@ constructor(width: number, height: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | number | 是 | OffscreenCanvas组件的宽度。 异常值NaN和Infinity按无效值处理。 默认单位为vp。 |
-| height | number | 是 | OffscreenCanvas组件的高度。 异常值NaN和Infinity按无效值处理。 默认单位为vp。 |
+| width | number | 是 | OffscreenCanvas组件的宽度。异常值NaN和Infinity按无效值处理。默认单位为vp。 |
+| height | number | 是 | OffscreenCanvas组件的高度。异常值NaN和Infinity按无效值处理。默认单位为vp。 |
 
 **示例**
 
@@ -105,9 +112,9 @@ constructor(width: number, height: number, unit: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | number | 是 | OffscreenCanvas组件的宽度。 异常值NaN和Infinity按无效值处理。 默认单位为vp。 |
-| height | number | 是 | OffscreenCanvas组件的高度。 异常值NaN和Infinity按无效值处理。 默认单位为vp。 |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 是 | 用来配置OffscreenCanvas对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。 异常值NaN和Infinity按默认值处理。 默认值：DEFAULT。 |
+| width | number | 是 | OffscreenCanvas组件的宽度。异常值NaN和Infinity按无效值处理。默认单位为vp。 |
+| height | number | 是 | OffscreenCanvas组件的高度。异常值NaN和Infinity按无效值处理。默认单位为vp。 |
+| unit | LengthMetricsUnit | 是 | 用来配置OffscreenCanvas对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。异常值NaN和Infinity按默认值处理。默认值：DEFAULT。 |
 
 **示例**
 
@@ -133,14 +140,14 @@ getContext(contextType: "2d", options?: RenderingContextSettings): OffscreenCanv
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| contextType | "2d" | 是 | OffscreenCanvas组件绘图上下文的类型，当前仅支持"2d"类型。 "2d"：创建一个表示二维渲染上下文的OffscreenCanvasRenderingContext2D对象。 异常值undefined和null按无效值处理，当前接口返回undefined。 |
-| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数， 见[RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md)。 异常值undefined和null按RenderingContextSettings的默认值处理。 默认值：null。 |
+| contextType | "2d" | 是 | OffscreenCanvas组件绘图上下文的类型，当前仅支持"2d"类型。"2d"：创建一个表示二维渲染上下文的OffscreenCanvasRenderingContext2D对象。异常值undefined和null按无效值处理，当前接口返回undefined。 |
+| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数，见[RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md)。异常值undefined和null按RenderingContextSettings的默认值处理。默认值：null。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) | OffscreenCanvas组件的绘图上下文。 如果getContext方法的入参contextType为"2d"以外类型（包括null或者undefined），返回undefined， 使用前应判断返回值是否为undefined。 |
+| [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) | OffscreenCanvas组件的绘图上下文。如果getContext方法的入参contextType为"2d"以外类型（包括null或者undefined），返回undefined，使用前应判断返回值是否为undefined。 |
 
 **示例**
 
@@ -290,7 +297,7 @@ struct PutImageData {
 height: number
 ```
 
-OffscreenCanvas组件的高度。 默认单位为vp。
+OffscreenCanvas组件的高度。默认单位为vp。
 
 **类型：** number
 
@@ -342,7 +349,7 @@ struct OffscreenCanvasPage {
 width: number
 ```
 
-OffscreenCanvas组件的宽度。 默认单位为vp。
+OffscreenCanvas组件的宽度。默认单位为vp。
 
 **类型：** number
 

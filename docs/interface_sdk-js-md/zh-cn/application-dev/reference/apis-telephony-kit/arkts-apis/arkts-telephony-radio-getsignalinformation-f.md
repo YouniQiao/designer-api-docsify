@@ -22,7 +22,7 @@ function getSignalInformation(slotId: number, callback: AsyncCallback<Array<Sign
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | 是 | 回调函数，返回从 [SignalInformation](arkts-telephony-radio-signalinformation-i.md)中派生出的子类对象的数组。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;SignalInformation&gt;&gt; | 是 | 回调函数，返回从[SignalInformation](arkts-telephony-radio-signalinformation-i.md)中派生出的子类对象的数组。 |
 
 **错误码：**
 
@@ -42,7 +42,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let slotId: number = 0;
 radio.getSignalInformation(slotId, (err: BusinessError, data: Array<radio.SignalInformation>) => {
     if (err) {
-        console.error(`getSignalInformation failed, callback: err->${JSON.stringify(err)}`);
+        console.error(`getSignalInformation failed, callback: err code: ${err.code}, message: ${err.message}`);
         return;
     }
     console.info(`getSignalInformation success, callback: data->${JSON.stringify(data)}`);
@@ -72,7 +72,7 @@ function getSignalInformation(slotId: number): Promise<Array<SignalInformation>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;SignalInformation & gt; & gt; | 以Promise形式返回网络信号强度[SignalInformation]{ |
+| Promise&lt;Array&lt;SignalInformation&gt;&gt; | 以Promise形式返回网络信号强度[SignalInformation]{ |
 
 **错误码：**
 
@@ -93,6 +93,6 @@ let slotId: number = 0;
 radio.getSignalInformation(slotId).then((data: Array<radio.SignalInformation>) => {
     console.info(`getSignalInformation success, promise: data->${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-    console.error(`getSignalInformation failed, promise: err->${JSON.stringify(err)}`);
+    console.error(`getSignalInformation failed, promise: err code: ${err.code}, message: ${err.message}`);
 });
 ```

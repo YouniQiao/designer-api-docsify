@@ -35,7 +35,9 @@ Linkage data.
 text: string | Resource
 ```
 
-Text information.Note: Text truncation occurs when content exceeds column width.
+Text information.
+
+Note: Text truncation occurs when content exceeds column width.
 
 **Type:** string \| Resource
 

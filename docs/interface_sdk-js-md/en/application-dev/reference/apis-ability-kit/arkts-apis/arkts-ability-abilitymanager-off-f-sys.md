@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import abilityManager from '@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## off('abilityForegroundState')
@@ -27,7 +27,7 @@ Unregisters the observer used to listen for ability start or exit events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'abilityForegroundState' | Yes | Event type. It is fixed at **'abilityForegroundState'**. |
-| observer | [AbilityForegroundStateObserver](arkts-ability-abilitymanager-abilityforegroundstateobserver-t-sys.md) | No | Observer used to listen for ability start or exit events. If this parameter is not set, all observers associated with the specified event are deregistered. If this parameter is set, only the specified observer is deregistered. |
+| observer | AbilityForegroundStateObserver | No | Observer used to listen for ability start or exit events. If this parameter is not set, all observers associated with the specified event are deregistered. If this parameter is set, only the specified observer is deregistered. |
 
 **Error codes:**
 

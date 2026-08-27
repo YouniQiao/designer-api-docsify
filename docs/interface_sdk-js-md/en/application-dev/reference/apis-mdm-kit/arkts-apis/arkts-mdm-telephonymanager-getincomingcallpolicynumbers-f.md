@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import telephonyManager from '@kit.MDMKit';
+import { telephonyManager } from '@kit.MDMKit';
 ```
 
 ## getIncomingCallPolicyNumbers
@@ -33,7 +33,7 @@ Obtains the trustlist or blocklist for incoming calls.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | An array of numbers in the incoming call blocklist or trustlist. |
+| Array&lt;string&gt; | An array of numbers in the incoming call blocklist or trustlist. |
 
 **Error codes:**
 
@@ -95,7 +95,7 @@ Obtains the trustlist or blocklist for incoming calls.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | An array of numbers in the incoming call blocklist or trustlist. |
+| Array&lt;string&gt; | An array of numbers in the incoming call blocklist or trustlist. |
 
 **Error codes:**
 

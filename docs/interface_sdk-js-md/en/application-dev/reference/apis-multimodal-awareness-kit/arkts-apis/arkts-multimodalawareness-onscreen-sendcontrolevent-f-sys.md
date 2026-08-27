@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import onScreen from '@kit.MultimodalAwarenessKit';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## sendControlEvent
@@ -32,7 +32,7 @@ If the target window is displayed on the screen, you can use this API to send sc
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 **Error codes:**
 

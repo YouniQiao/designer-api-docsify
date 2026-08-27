@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wantAgent, { WantAgent } from '@kit.AbilityKit';
+import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
 ## getOperationType
@@ -127,7 +127,7 @@ Obtains the operation type of a WantAgent object. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Returns the OperationType of the WantAgent. |
+| Promise&lt;number&gt; | Returns the OperationType of the WantAgent. |
 
 **Error codes:**
 

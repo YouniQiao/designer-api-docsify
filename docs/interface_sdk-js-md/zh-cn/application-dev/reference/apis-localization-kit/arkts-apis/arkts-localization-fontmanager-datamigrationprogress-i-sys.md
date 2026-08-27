@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import fontManager from '@kit.LocalizationKit';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## progressPercentage
@@ -20,7 +20,7 @@ import fontManager from '@kit.LocalizationKit';
 progressPercentage: number
 ```
 
-数据迁移百分比进度，进度值根据已迁移的字体文件数量或大小计算，可能不是均匀增长。当progressPercentage为100时，迁移任务即将完成，onResult回调即将被调用。 取值范围为[0, 100]。
+数据迁移百分比进度，进度值根据已迁移的字体文件数量或大小计算，可能不是均匀增长。当progressPercentage为100时，迁移任务即将完成，onResult回调即将被调用。取值范围为[0, 100]。
 
 **类型：** number
 
@@ -36,7 +36,7 @@ progressPercentage: number
 timeRemaining: number
 ```
 
-预计剩余时间，可能因设备性能、文件大小、系统负载等因素而有所差异。 取值范围为非负整数，最小值为0。 单位为s。
+预计剩余时间，可能因设备性能、文件大小、系统负载等因素而有所差异。取值范围为非负整数，最小值为0。单位为s。
 
 **类型：** number
 

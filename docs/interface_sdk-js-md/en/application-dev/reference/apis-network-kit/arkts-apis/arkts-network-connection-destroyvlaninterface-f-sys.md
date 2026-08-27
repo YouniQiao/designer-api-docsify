@@ -39,7 +39,7 @@ Deletes a VLAN specified by **vlanId** from a specified Ethernet NIC. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

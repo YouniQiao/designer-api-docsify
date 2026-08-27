@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import distributedDeviceManager from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## onlineStatus
@@ -20,7 +20,8 @@ import distributedDeviceManager from '@kit.DistributedServiceKit';
 onlineStatus : number
 ```
 
-设备在线状态，包括  
+设备在线状态，包括
+
 - 0：表示设备处于离线状态。  
 - 1：表示设备处于在线状态。
 

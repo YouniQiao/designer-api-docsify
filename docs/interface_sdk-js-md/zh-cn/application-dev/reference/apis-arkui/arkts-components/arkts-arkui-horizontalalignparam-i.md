@@ -1,6 +1,8 @@
 # HorizontalAlignParam
 
-定义相对容器的水平对齐规则。@interface HorizontalAlignParam
+定义相对容器的水平对齐规则。
+
+@interface HorizontalAlignParam
 
 **起始版本：** 23
 
@@ -17,7 +19,9 @@
 align: HorizontalAlign
 ```
 
-Sets the horizontal alignment relative to the anchor component.Anonymous Object Rectification
+Sets the horizontal alignment relative to the anchor component.
+
+Anonymous Object Rectification
 
 **类型：** [HorizontalAlign](../arkts-apis/arkts-arkui-horizontalalign-e.md)
 
@@ -35,7 +39,9 @@ Sets the horizontal alignment relative to the anchor component.Anonymous Object 
 anchor: string
 ```
 
-Specifies the anchor component Anonymous Object Rectification
+Specifies the anchor component
+
+Anonymous Object Rectification
 
 **类型：** string
 

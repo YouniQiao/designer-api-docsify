@@ -13,8 +13,6 @@ The LruBuffer algorithm replaces the least used data with new data when the buff
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## [Symbol.iterator]
@@ -29,7 +27,7 @@ Specifies the default iterator for an object.
 
 **Deprecated since:** 9
 
-**Substitutes:** iterator]
+**Substitutes:** [Symbol.iterator]
 
 **System capability:** SystemCapability.Utils.Lang
 

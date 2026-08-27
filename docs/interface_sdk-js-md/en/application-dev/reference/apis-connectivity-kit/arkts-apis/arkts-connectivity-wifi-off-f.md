@@ -3,10 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## off('wifiStateChange')
@@ -15,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
 function off(type: 'wifiStateChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi status change events.<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
+Unsubscribe Wi-Fi status change events.
+
+<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
 
 **Since:** 7
 
@@ -57,7 +56,9 @@ wifi.off("wifiStateChange", recvPowerNotifyFunc);
 function off(type: 'wifiConnectionChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi connection change events.<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
+Unsubscribe Wi-Fi connection change events.
+
+<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
 
 **Since:** 7
 
@@ -99,7 +100,9 @@ wifi.off("wifiConnectionChange", recvWifiConnectionChangeFunc);
 function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi scan status change events.<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
+Unsubscribe Wi-Fi scan status change events.
+
+<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
 
 **Since:** 7
 
@@ -141,7 +144,9 @@ wifi.off("wifiScanStateChange", recvWifiScanStateChangeFunc);
 function off(type: 'wifiRssiChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi rssi change events.<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
+Unsubscribe Wi-Fi rssi change events.
+
+<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
 
 **Since:** 7
 
@@ -183,7 +188,9 @@ wifi.off("wifiRssiChange", recvWifiRssiChangeFunc);
 function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi hotspot state change events.<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
+Unsubscribe Wi-Fi hotspot state change events.
+
+<p>All callback functions will be deregistered If there is no specific callback parameter.</p>
 
 **Since:** 7
 

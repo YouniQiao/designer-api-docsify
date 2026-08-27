@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import opp from '@kit.ConnectivityKit';
+import { opp } from '@kit.ConnectivityKit';
 ```
 
 ## createOppServerProfile

@@ -1,6 +1,6 @@
 # RunningLock
 
-阻止系统睡眠或使能接近光控制亮灭屏的锁，不同的锁类型具有不同的功能，详见[RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md)。 需结合[create](arkts-basicservices-runninglock-create-f.md)创建锁、[hold](#hold)持锁、[unhold](#unhold)释放锁使用。具体使用方法见示例。
+阻止系统睡眠或使能接近光控制亮灭屏的锁，不同的锁类型具有不同的功能，详见[RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md)。需结合[create](arkts-basicservices-runninglock-create-f.md)创建锁、[hold](#hold)持锁、[unhold](#unhold)释放锁使用。具体使用方法见示例。
 
 **起始版本：** 7
 
@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import runningLock from '@kit.BasicServicesKit';
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## hold
@@ -18,7 +18,7 @@ import runningLock from '@kit.BasicServicesKit';
 hold(timeout: number): void
 ```
 
-锁定和持有RunningLock。适用于应用需要在后台持续运行（如后台下载、长时间定位追踪等）时阻止系统睡眠的场景或通话时需要接近光控制亮灭屏的场景等。调用此方法后， 必须在使用完毕时调用unhold()释放锁，或者在调用时设置超时释放时间由系统自动释放，与unhold()方法配对使用。未释放锁会导致阻止睡眠或者控制亮灭屏功能持续生效。
+锁定和持有RunningLock。适用于应用需要在后台持续运行（如后台下载、长时间定位追踪等）时阻止系统睡眠的场景或通话时需要接近光控制亮灭屏的场景等。调用此方法后，必须在使用完毕时调用unhold()释放锁，或者在调用时设置超时释放时间由系统自动释放，与unhold()方法配对使用。未释放锁会导致阻止睡眠或者控制亮灭屏功能持续生效。
 
 **起始版本：** 9
 
@@ -30,7 +30,7 @@ hold(timeout: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeout | number | 是 | 锁定和持有RunningLock的时长，单位：毫秒。   **-1**：永久持锁，需要主动释放。   **0**：默认3s后超时释放。    ** & gt;0**：按传入值超时释放。 |
+| timeout | number | 是 | 锁定和持有RunningLock的时长，单位：毫秒。   **-1**：永久持锁，需要主动释放。   **0**：默认3s后超时释放。    **&gt;0**：按传入值超时释放。 |
 
 **错误码：**
 

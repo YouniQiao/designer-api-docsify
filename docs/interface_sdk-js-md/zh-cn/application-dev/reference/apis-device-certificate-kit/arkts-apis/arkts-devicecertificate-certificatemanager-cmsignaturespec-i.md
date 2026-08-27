@@ -17,7 +17,7 @@
 digest?: CmKeyDigest
 ```
 
-表示摘要算法的枚举。 默认值： CM_DIGEST_SHA256，表示使用SHA256摘要算法。
+表示摘要算法的枚举。默认值： CM_DIGEST_SHA256，表示使用SHA256摘要算法。
 
 **类型：** [CmKeyDigest](arkts-devicecertificate-certificatemanager-cmkeydigest-e.md)
 
@@ -31,7 +31,7 @@ digest?: CmKeyDigest
 padding?: CmKeyPadding
 ```
 
-表示填充方式的枚举 默认值： CM_PADDING_PSS，表示使用PSS填充方式。
+表示填充方式的枚举默认值： CM_PADDING_PSS，表示使用PSS填充方式。
 
 **类型：** [CmKeyPadding](arkts-devicecertificate-certificatemanager-cmkeypadding-e.md)
 

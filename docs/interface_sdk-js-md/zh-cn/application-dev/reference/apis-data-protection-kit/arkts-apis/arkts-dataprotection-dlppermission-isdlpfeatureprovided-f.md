@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## isDLPFeatureProvided
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function isDLPFeatureProvided(): Promise<boolean>
 ```
 
-查询当前系统是否提供加密保护特性，仅支持企业设备且需[MDM（Mobile Device Management，移动设备管理）](../../../mdm/mdm-kit-intro.md)配置使能。调用成功后返回查询结果， 用于判断系统是否支持DLP加密功能。使用Promise异步回调。该接口用于判断当前系统是否支持DLP加密功能，以便在不支持的设备上做兼容处理或功能降级。
+查询当前系统是否提供加密保护特性，仅支持企业设备且需[MDM（Mobile Device Management，移动设备管理）](../../../mdm/mdm-kit-intro.md)配置使能。调用成功后返回查询结果，用于判断系统是否支持DLP加密功能。使用Promise异步回调。
+
+该接口用于判断当前系统是否支持DLP加密功能，以便在不支持的设备上做兼容处理或功能降级。
 
 > **说明：**
 > 
@@ -26,7 +28,7 @@ function isDLPFeatureProvided(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Pomise对象。返回true表示当前系统提供加密保护特性，返回false表示不提供加密保护特性。 |
+| Promise&lt;boolean&gt; | Pomise对象。返回true表示当前系统提供加密保护特性，返回false表示不提供加密保护特性。 |
 
 **错误码：**
 

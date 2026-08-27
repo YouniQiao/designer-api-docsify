@@ -1,6 +1,8 @@
 # SwipeRefresherV2
 
-Declare component SwipeRefresherV2@struct { SwipeRefresherV2 }
+Declare component SwipeRefresherV2
+
+@struct { SwipeRefresherV2 }
 
 **Since:** 26.0.0
 

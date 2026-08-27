@@ -9,9 +9,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## isRealTitle
@@ -20,7 +17,9 @@ import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.A
 isRealTitle?: boolean
 ```
 
-document标题来源，true表示来自网页的title标签，false表示该title是根据url自动生成。默认值：false
+document标题来源，true表示来自网页的title标签，false表示该title是根据url自动生成。
+
+默认值：false
 
 **类型：** boolean
 

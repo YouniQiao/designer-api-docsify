@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import workScheduler from '@kit.BackgroundTasksKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## isLastWorkTimeOut
@@ -35,7 +35,7 @@ function isLastWorkTimeOut(workId: number, callback: AsyncCallback<void>): boole
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检查延迟任务最后一次执行是否超时，如果workId有效，则返回从WorkSchedulerService获取的任务最后一次执行是否超时；否则，抛出异常。true，对应workId延迟任务最 后一次执行超时，false，对应workId延迟任务最后一次执行未超时。 |
+| boolean | 检查延迟任务最后一次执行是否超时，如果workId有效，则返回从WorkSchedulerService获取的任务最后一次执行是否超时；否则，抛出异常。true，对应workId延迟任务最后一次执行超时，false，对应workId延迟任务最后一次执行未超时。 |
 
 **错误码：**
 
@@ -147,7 +147,7 @@ function isLastWorkTimeOut(workId: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回true表示指定任务的最后一次执行超时，false表示未超时。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示指定任务的最后一次执行超时，false表示未超时。 |
 
 **错误码：**
 

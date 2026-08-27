@@ -27,3 +27,30 @@ Construct the ability component. Called when the ability component is used.
 | value | { want: import('../api/@ohos.app.ability.Want').default } | Yes |  |
 
 ## Summary
+
+## Examples
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct MyComponent {
+
+  build() {
+      Column() {
+          AbilityComponent({
+              want: {
+                  bundleName: '',
+                  abilityName: ''
+              },
+          })
+          .onConnect(() => {
+              console.log('AbilityComponent connect')
+          })
+          .onDisconnect(() => {
+              console.log('AbilityComponent disconnect')
+          })
+      }
+  }
+}
+```

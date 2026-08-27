@@ -87,7 +87,9 @@ Icon path of the toolbar item.
 status?: ToolbarItemStatus
 ```
 
-Status of a toolbar item.Default value: **ToolbarItemStatus.NORMAL**
+Status of a toolbar item.
+
+Default value: **ToolbarItemStatus.NORMAL**
 
 **Type:** [ToolbarItemStatus](arkts-arkui-toolbaritemstatus-e.md)
 

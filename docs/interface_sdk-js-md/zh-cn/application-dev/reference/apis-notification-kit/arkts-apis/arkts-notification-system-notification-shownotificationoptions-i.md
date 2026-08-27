@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import Notification, { ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
+import { Notification, ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
 ```
 
 ## clickAction
@@ -18,7 +18,9 @@ import Notification, { ActionResult, ShowNotificationOptions } from '@kit.Notifi
 clickAction?: ActionResult
 ```
 
-通知被点击后触发的行为。从API version 7开始不再维护。
+通知被点击后触发的行为。
+
+从API version 7开始不再维护。
 
 **类型：** [ActionResult](arkts-notification-system-notification-actionresult-i.md)
 

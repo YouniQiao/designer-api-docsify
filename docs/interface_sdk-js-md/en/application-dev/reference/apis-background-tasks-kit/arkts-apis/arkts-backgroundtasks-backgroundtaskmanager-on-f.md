@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## on('continuousTaskCancel')
@@ -64,7 +64,9 @@ export default class EntryAbility extends UIAbility {
 function on(type: 'continuousTaskSuspend', callback: Callback<ContinuousTaskSuspendInfo>): void
 ```
 
-Registers a listener for continuous task suspension. This API uses an asynchronous callback to return the result. After the callback is registered, if the system detects for the first time that the application does not execute the corresponding service, the system does not directly cancel the continuous task. Instead, it will mark the task as suspended. If the detection failures persist, the system will cancel the continuous task.When a continuous task is suspended, the application will be suspended when switched to the background and automatically activated when brought back to the foreground.
+Registers a listener for continuous task suspension. This API uses an asynchronous callback to return the result. After the callback is registered, if the system detects for the first time that the application does not execute the corresponding service, the system does not directly cancel the continuous task. Instead, it will mark the task as suspended. If the detection failures persist, the system will cancel the continuous task.
+
+When a continuous task is suspended, the application will be suspended when switched to the background and automatically activated when brought back to the foreground.
 
 **Since:** 20
 

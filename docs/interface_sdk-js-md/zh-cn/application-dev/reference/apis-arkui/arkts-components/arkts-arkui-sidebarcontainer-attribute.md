@@ -1,6 +1,8 @@
 # SideBarContainer属性/事件
 
-除支持通用属性外，还支持以下属性：除支持通用事件外，还支持以下事件：
+除支持通用属性外，还支持以下属性：
+
+除支持通用事件外，还支持以下事件：
 
 **继承/实现关系：** SideBarContainerAttribute extends CommonMethod<SideBarContainerAttribute>
 
@@ -19,7 +21,9 @@
 autoHide(value: boolean)
 ```
 
-设置当侧边栏拖拽到小于最小宽度后，是否自动隐藏。受minSideBarWidth属性方法影响，minSideBarWidth属性方法未设置值使用默认值。 自动隐藏后showSideBar属性值同步更新为false，并触发onChange事件。拖拽过程中判断是否要自动隐藏。小于最小宽度时需要拖拽越界一定距离（具体距离由系统实现决定）后触发自动隐藏，具有阻尼效果，避免误操作。
+设置当侧边栏拖拽到小于最小宽度后，是否自动隐藏。受minSideBarWidth属性方法影响，minSideBarWidth属性方法未设置值使用默认值。自动隐藏后showSideBar属性值同步更新为false，并触发onChange事件。
+
+拖拽过程中判断是否要自动隐藏。小于最小宽度时需要拖拽越界一定距离（具体距离由系统实现决定）后触发自动隐藏，具有阻尼效果，避免误操作。
 
 **起始版本：** 9
 
@@ -73,7 +77,7 @@ divider(value: DividerStyle | null)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DividerStyle](arkts-arkui-dividerstyle-i.md) \| null | 是 | 分割线的样式。默认为DividerStyle：显示分割线。   - null或undefined：行为不做处理，分割线样式保持默认值，不做任何改 变。   **说明：** API version 11及以下版本，null效果为不显示分割线。 |
+| value | [DividerStyle](arkts-arkui-dividerstyle-i.md) \| null | 是 | 分割线的样式。默认为DividerStyle：显示分割线。   - null或undefined：行为不做处理，分割线样式保持默认值，不做任何改变。   **说明：** API version 11及以下版本，null效果为不显示分割线。 |
 
 ## maxSideBarWidth
 
@@ -81,7 +85,9 @@ divider(value: DividerStyle | null)
 maxSideBarWidth(value: number)
 ```
 
-设置侧边栏最大宽度。设置为小于0的值时按默认值显示。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。maxSideBarWidth优先于侧边栏子组件maxWidth，maxSideBarWidth未设置时默认值优先级高于侧边栏子组件maxWidth。
+设置侧边栏最大宽度。设置为小于0的值时按默认值显示。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。
+
+maxSideBarWidth优先于侧边栏子组件maxWidth，maxSideBarWidth未设置时默认值优先级高于侧边栏子组件maxWidth。
 
 **起始版本：** 8
 
@@ -93,7 +99,7 @@ maxSideBarWidth(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 侧边栏最大宽度。默认值：280vp单位：vp取值范围： [0, +∞)异常值时取默认值。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。 |
+| value | number | 是 | 侧边栏最大宽度。默认值：280vp单位：vp取值范围：[0, +∞)异常值时取默认值。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。 |
 
 ## maxSideBarWidth
 
@@ -101,7 +107,9 @@ maxSideBarWidth(value: number)
 maxSideBarWidth(value: Length)
 ```
 
-设置侧边栏最大宽度。设置为小于0的值时按默认值显示。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。与 [maxSideBarWidth](#maxsidebarwidth)相比，value参数新增了对百分比字符串和其他 像素单位的支持。maxSideBarWidth优先于侧边栏子组件maxWidth，maxSideBarWidth未设置时默认值优先级高于侧边栏子组件maxWidth。
+设置侧边栏最大宽度。设置为小于0的值时按默认值显示。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。与[maxSideBarWidth](#maxsidebarwidth)相比，value参数新增了对百分比字符串和其他像素单位的支持。
+
+maxSideBarWidth优先于侧边栏子组件maxWidth，maxSideBarWidth未设置时默认值优先级高于侧边栏子组件maxWidth。
 
 **起始版本：** 9
 
@@ -113,7 +121,7 @@ maxSideBarWidth(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 侧边栏最大宽度。默认值：280vp单位：vp取值范围： [0, +∞)异常值时取默认值。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 侧边栏最大宽度。默认值：280vp单位：vp取值范围：[0, +∞)异常值时取默认值。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。 |
 
 ## minContentWidth
 
@@ -121,11 +129,21 @@ maxSideBarWidth(value: Length)
 minContentWidth(value: Dimension)
 ```
 
-设置SideBarContainer组件内容区可显示的最小宽度。设置为小于0，内容区显示的最小宽度为360vp，未设置该属性时，组件内容区的可缩小到0。Embed场景下，增大组件尺寸时仅增大内容区的尺寸。缩小组件尺寸时，先缩小内容区的尺寸至minContentWidth。继续缩小组件尺寸时，保持内容区宽度minContentWidth不变，优先缩小侧边栏的尺寸。当缩小侧边栏的尺寸至minSideBarWidth后，继续缩小组件尺寸时，  
+设置SideBarContainer组件内容区可显示的最小宽度。
+
+设置为小于0，内容区显示的最小宽度为360vp，未设置该属性时，组件内容区的可缩小到0。
+
+Embed场景下，增大组件尺寸时仅增大内容区的尺寸。
+
+缩小组件尺寸时，先缩小内容区的尺寸至minContentWidth。继续缩小组件尺寸时，保持内容区宽度minContentWidth不变，优先缩小侧边栏的尺寸。
+
+当缩小侧边栏的尺寸至minSideBarWidth后，继续缩小组件尺寸时，
+
 - 如果[autoHide](#autohide)属性为false，则会保持侧边栏宽度  
-[minSideBarWidth](#minsidebarwidth)和内容区宽度minContentWidth不变，但内容区会被截断显 示；  
-- 如果autoHide属性为true，则会优先隐藏侧边栏，然后继续缩小至内容区宽度minContentWidth后，内容区宽度保持不变，但内容区会被截断显示。  
-minContentWidth优先于侧边栏的[maxSideBarWidth](#maxsidebarwidth)与 sideBarWidth属性，minContentWidth未设置时默认值优先级低于设置的minSideBarWidth与maxSideBarWidth属性。
+[minSideBarWidth](#minsidebarwidth)和内容区宽度minContentWidth不变，但内容区会被截断显示；  
+- 如果autoHide属性为true，则会优先隐藏侧边栏，然后继续缩小至内容区宽度minContentWidth后，内容区宽度保持不变，但内容区会被截断显示。
+
+minContentWidth优先于侧边栏的[maxSideBarWidth](#maxsidebarwidth)与sideBarWidth属性，minContentWidth未设置时默认值优先级低于设置的minSideBarWidth与maxSideBarWidth属性。
 
 **起始版本：** 10
 
@@ -147,7 +165,9 @@ minContentWidth优先于侧边栏的[maxSideBarWidth](#maxsidebarwidth)与 sideB
 minSideBarWidth(value: number)
 ```
 
-设置侧边栏最小宽度。设置为小于0的值时按默认值显示。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。minSideBarWidth优先于侧边栏子组件minWidth，minSideBarWidth未设置时默认值优先级高于侧边栏子组件minWidth。
+设置侧边栏最小宽度。设置为小于0的值时按默认值显示。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。
+
+minSideBarWidth优先于侧边栏子组件minWidth，minSideBarWidth未设置时默认值优先级高于侧边栏子组件minWidth。
 
 **起始版本：** 8
 
@@ -159,7 +179,7 @@ minSideBarWidth(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 侧边栏最小宽度。。 单位为：vp。取值范围：[0, +∞)。默认值：API version 9及以下版本默认值为200vp，API version 10及以上版本的默认值为240vp。 |
+| value | number | 是 | 侧边栏最小宽度。。单位为：vp。取值范围：[0, +∞)。默认值：API version 9及以下版本默认值为200vp，API version 10及以上版本的默认值为240vp。 |
 
 ## minSideBarWidth
 
@@ -167,7 +187,9 @@ minSideBarWidth(value: number)
 minSideBarWidth(value: Length)
 ```
 
-设置侧边栏最小宽度。设置为小于0的值时按默认值显示。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。与 [minSideBarWidth](#minsidebarwidth)相比，value参数新增了对百分比字符串和其他 像素单位的支持。minSideBarWidth优先于侧边栏子组件minWidth，minSideBarWidth未设置时默认值优先级高于侧边栏子组件minWidth。
+设置侧边栏最小宽度。设置为小于0的值时按默认值显示。值不能超过侧边栏容器本身宽度，超过则使用侧边栏容器本身宽度。与[minSideBarWidth](#minsidebarwidth)相比，value参数新增了对百分比字符串和其他像素单位的支持。
+
+minSideBarWidth优先于侧边栏子组件minWidth，minSideBarWidth未设置时默认值优先级高于侧边栏子组件minWidth。
 
 **起始版本：** 9
 
@@ -179,7 +201,7 @@ minSideBarWidth(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 侧边栏最小宽度。默认值：API version 9及以下版本默认值为200vp， API version 10的默认值为240vp。单位：vp取值范围：[0, +∞)异常值时取默认值。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 侧边栏最小宽度。默认值：API version 9及以下版本默认值为200vp，API version 10的默认值为240vp。单位：vp取值范围：[0, +∞)异常值时取默认值。 |
 
 ## onChange
 
@@ -187,7 +209,10 @@ minSideBarWidth(value: Length)
 onChange(callback: (value: boolean) => void)
 ```
 
-当侧边栏的状态在显示和隐藏之间切换时触发回调。触发该事件的条件：
+当侧边栏的状态在显示和隐藏之间切换时触发回调。
+
+触发该事件的条件：
+
 1. showSideBar属性值变换时。
 2. showSideBar属性自适应行为变化时。
 3. 分割线拖拽触发[autoHide](#autohide)时。
@@ -202,7 +227,7 @@ onChange(callback: (value: boolean) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (value: boolean) = & gt; void | 是 | true表示显示，false表示隐藏。 |
+| callback | (value: boolean) =&gt; void | 是 | true表示显示，false表示隐藏。 |
 
 ## showControlButton
 
@@ -230,7 +255,11 @@ showControlButton(value: boolean)
 showSideBar(value: boolean)
 ```
 
-设置是否显示侧边栏。设置该属性值后会触发侧边栏的显示/当showSideBar属性未设置时，依据组件大小进行自动显示：小于minSideBarWidth + minContentWidth时默认不显示侧边栏，大于等于时默认显示侧边栏。从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
+设置是否显示侧边栏。设置该属性值后会触发侧边栏的显示/
+
+当showSideBar属性未设置时，依据组件大小进行自动显示：小于minSideBarWidth + minContentWidth时默认不显示侧边栏，大于等于时默认显示侧边栏。
+
+从API version 10开始，该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
 **起始版本：** 8
 
@@ -308,7 +337,9 @@ sideBarPosition(value: SideBarPosition)
 sideBarWidth(value: number)
 ```
 
-设置侧边栏的宽度。设置为小于0的值时按默认值显示。受minSideBarWidth和maxSideBarWidth限制，当设置的值不在限制范围内时，取最近的边界值。从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。
+设置侧边栏的宽度。设置为小于0的值时按默认值显示。受minSideBarWidth和maxSideBarWidth限制，当设置的值不在限制范围内时，取最近的边界值。
+
+从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。
 
 **起始版本：** 8
 
@@ -320,7 +351,7 @@ sideBarWidth(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 侧边栏的宽度。默认值：240vp单位：vp取值范围： [0, +∞)异常值时取默认值。   **说明：** API version 10以下版本的默认值为200vp，API version 10及以上版本的默认值为240vp。 |
+| value | number | 是 | 侧边栏的宽度。默认值：240vp单位：vp取值范围：[0, +∞)异常值时取默认值。   **说明：** API version 10以下版本的默认值为200vp，API version 10及以上版本的默认值为240vp。 |
 
 ## sideBarWidth
 
@@ -328,7 +359,9 @@ sideBarWidth(value: number)
 sideBarWidth(value: Length)
 ```
 
-设置侧边栏的宽度。设置为小于0的值时按默认值显示。受minSideBarWidth和maxSideBarWidth限制，当设置的值不在限制范围内时，取最近的边界值。 与[sideBarWidth](#sidebarwidth)相比，value参数新增了对百分比字符串和其他[像素单位](ts-pixel-units.md)的支持。从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。
+设置侧边栏的宽度。设置为小于0的值时按默认值显示。受minSideBarWidth和maxSideBarWidth限制，当设置的值不在限制范围内时，取最近的边界值。与[sideBarWidth](#sidebarwidth)相比，value参数新增了对百分比字符串和其他[像素单位](ts-pixel-units.md)的支持。
+
+从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。
 
 **起始版本：** 9
 
@@ -340,4 +373,4 @@ sideBarWidth(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 侧边栏的宽度。默认值：240vp单位：vp取值范围： [0, +∞)异常值时取默认值。   **说明：** API version 9的默认值为200vp，API version 10及以上版本的默认值为240vp。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 侧边栏的宽度。默认值：240vp单位：vp取值范围：[0, +∞)异常值时取默认值。   **说明：** API version 9的默认值为200vp，API version 10及以上版本的默认值为240vp。 |

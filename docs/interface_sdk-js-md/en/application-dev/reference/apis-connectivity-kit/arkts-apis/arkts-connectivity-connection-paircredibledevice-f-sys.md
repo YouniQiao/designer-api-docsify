@@ -28,7 +28,7 @@ Starts pairing with a credible remote Bluetooth device with transport. This inte
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| transport | [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md) | Yes | the transport of the remote device to pair. |
+| transport | BluetoothTransport | Yes | the transport of the remote device to pair. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of pairCredibleDevice. |
 
 **Error codes:**
@@ -85,13 +85,13 @@ Starts pairing with a credible remote Bluetooth device with transport. This inte
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| transport | [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md) | Yes | the transport of the remote device to pair. |
+| transport | BluetoothTransport | Yes | the transport of the remote device to pair. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the promise object. |
+| Promise&lt;void&gt; | Returns the promise object. |
 
 **Error codes:**
 

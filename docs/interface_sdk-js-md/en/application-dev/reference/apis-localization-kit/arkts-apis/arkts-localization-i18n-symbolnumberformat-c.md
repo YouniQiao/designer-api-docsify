@@ -11,7 +11,7 @@ Provide a Number formatting interface that supports custom symbols. This interfa
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor

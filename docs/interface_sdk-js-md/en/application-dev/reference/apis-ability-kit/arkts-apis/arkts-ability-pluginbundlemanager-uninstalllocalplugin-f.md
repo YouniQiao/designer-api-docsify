@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import pluginBundleManager from '@kit.AbilityKit';
+import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
 ## uninstallLocalPlugin
@@ -32,7 +32,7 @@ Uninstall the plugin for self application.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise returned by the function. |
+| Promise&lt;void&gt; | Promise returned by the function. |
 
 **Error codes:**
 

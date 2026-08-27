@@ -1,6 +1,8 @@
 # StaticSubscriberExtensionContext (System API)
 
-The **StaticSubscriberExtensionContext** module, inherited from **ExtensionContext**, provides context for **StaticSubscriberExtensionAbility**.You can use the APIs of this module to start **StaticSubscriberExtensionAbility**.
+The **StaticSubscriberExtensionContext** module, inherited from **ExtensionContext**, provides context for **StaticSubscriberExtensionAbility**.
+
+You can use the APIs of this module to start **StaticSubscriberExtensionAbility**.
 
 **Inheritance/Implementation:** StaticSubscriberExtensionContext extends ExtensionContext
 
@@ -13,7 +15,7 @@ The **StaticSubscriberExtensionContext** module, inherited from **ExtensionConte
 ## Modules to Import
 
 ```TypeScript
-import StaticSubscriberExtensionContext from '@kit.BasicServicesKit';
+import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
 ```
 
 ## startAbility
@@ -125,7 +127,7 @@ Starts an ability that belongs to the same application as this **StaticSubscribe
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

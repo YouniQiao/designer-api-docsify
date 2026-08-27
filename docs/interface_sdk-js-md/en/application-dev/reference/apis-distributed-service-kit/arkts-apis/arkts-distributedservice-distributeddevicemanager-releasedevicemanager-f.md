@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import distributedDeviceManager from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## releaseDeviceManager
@@ -22,7 +22,7 @@ Releases a **DeviceManager** instance that is no longer used.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceManager | [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | Yes | DeviceManager** instance to release. |
+| deviceManager | DeviceManager | Yes | DeviceManager** instance to release. |
 
 **Error codes:**
 

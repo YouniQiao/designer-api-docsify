@@ -25,10 +25,10 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [createFormBindingData(卡片数据绑定类)](arkts-form-formbindingdata-createformbindingdata-depr-f.md#createformbindingdata) | 创建一个FormBindingData对象。 |
+| [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md#createformbindingdata) | 创建一个FormBindingData对象。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [FormBindingData(卡片数据绑定类)](arkts-form-formbindingdata-formbindingdata-depr-i.md) | FormBindingData提供卡片数据绑定的能力，用于存储卡片需要展示的数据。 |
+| [FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md) | FormBindingData提供卡片数据绑定的能力，用于存储卡片需要展示的数据。 |

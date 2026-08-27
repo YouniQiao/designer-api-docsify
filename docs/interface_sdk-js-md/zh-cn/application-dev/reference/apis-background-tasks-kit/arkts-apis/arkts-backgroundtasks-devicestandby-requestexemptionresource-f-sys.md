@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import deviceStandby from '@kit.BackgroundTasksKit';
+import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## requestExemptionResource

@@ -6,7 +6,8 @@ A linear data structure that is implemented on arrays and can be passed between 
 > 
 > - This module can be imported only to ArkTS files (with the file name extension .ets).
 > This section uses the following to identify the use of generics:
-- T: type, which can be any of the
+
+- T: type, which can be any of the  
 [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
 
 **Inheritance/Implementation:** Array implements ConcatArray<T>
@@ -97,13 +98,13 @@ Concatenates this ArkTS array with one or more arrays.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | ConcatArray & lt;T & gt;[] | Yes | Concatenates this ArkTS array with one or more arrays. |
+| items | ConcatArray&lt;T&gt;[] | Yes | Concatenates this ArkTS array with one or more arrays. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | New array generated. Not a valid array. |
+| Array&lt;T&gt; | New array generated. Not a valid array. |
 
 **Error codes:**
 
@@ -205,7 +206,7 @@ Checks whether all elements in a specified ArkTS Array are contained in this Ark
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | Array & lt;T & gt; | Yes | ArkTS Array whose elements are to be checked. |
+| elements | Array&lt;T&gt; | Yes | ArkTS Array whose elements are to be checked. |
 
 **Return value:**
 
@@ -281,7 +282,7 @@ Copies elements within a given range from this ArkTS array to another position i
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | ArkTS array after being modified. Possible causes: |
+| Array&lt;T&gt; | ArkTS array after being modified. Possible causes: |
 
 **Error codes:**
 
@@ -315,7 +316,7 @@ Creates an ArkTS array of a fixed length, with each element set to a given initi
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Newly created ArkTS array. |
+| Array&lt;T&gt; | Newly created ArkTS array. |
 
 **Error codes:**
 
@@ -437,7 +438,7 @@ Fills elements in the specified range of this ArkTS array with a given value.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Filled array. |
+| Array&lt;T&gt; | Filled array. |
 
 **Error codes:**
 
@@ -464,13 +465,13 @@ Returns a new array containing all elements that pass a test provided by a callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: T, index: number, array: Array & lt;T & gt;) = & gt; boolean | Yes | Function that takes three arguments. It is used to filter elements. The value **true** means that the current element passes the test and should be retained in the new array. The value **false** means that the current element fails the test and should be excluded from the new array. |
+| predicate | (value: T, index: number, array: Array&lt;T&gt;) =&gt; boolean | Yes | Function that takes three arguments. It is used to filter elements. The value **true** means that the current element passes the test and should be retained in the new array. The value **false** means that the current element fails the test and should be excluded from the new array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | New array containing elements that pass the test. |
+| Array&lt;T&gt; | New array containing elements that pass the test. |
 
 **Error codes:**
 
@@ -497,7 +498,7 @@ Returns the value of the first element that passes a test provided by a callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: T, index: number, obj: Array & lt;T & gt;) = & gt; boolean | Yes | Function that takes three arguments. It is used to filter elements. The value **true** means that the current element meets the conditions, the traversal stops, and that element is returned. The value **false** means that the current element does not meet the condition, and the traversal continues until the element that meets the condition is found or the entire array is traversed. |
+| predicate | (value: T, index: number, obj: Array&lt;T&gt;) =&gt; boolean | Yes | Function that takes three arguments. It is used to filter elements. The value **true** means that the current element meets the conditions, the traversal stops, and that element is returned. The value **false** means that the current element does not meet the condition, and the traversal continues until the element that meets the condition is found or the entire array is traversed. |
 
 **Return value:**
 
@@ -530,7 +531,7 @@ Returns the index of the first element that passes a test provided by a callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicate | (value: T, index: number, obj: Array & lt;T & gt;) = & gt; boolean | Yes | Function that takes three arguments. It is used to filter elements. The value **true** means that the current element meets the conditions, the traversal stops, and the index of that element is returned. The value **false** means that the current element does not meet the condition, and the traversal continues until the element that meets the condition is found or the entire array is traversed. |
+| predicate | (value: T, index: number, obj: Array&lt;T&gt;) =&gt; boolean | Yes | Function that takes three arguments. It is used to filter elements. The value **true** means that the current element meets the conditions, the traversal stops, and the index of that element is returned. The value **false** means that the current element does not meet the condition, and the traversal continues until the element that meets the condition is found or the entire array is traversed. |
 
 **Return value:**
 
@@ -563,7 +564,7 @@ Calls a callback function for each element in this ArkTS Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index: number, array: Array & lt;T & gt;) = & gt; void | Yes | Callback function to run for each element. |
+| callbackFn | (value: T, index: number, array: Array&lt;T&gt;) =&gt; void | Yes | Callback function to run for each element. |
 
 **Error codes:**
 
@@ -590,13 +591,13 @@ Creates an ArkTS array from an array-like object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;T & gt; | Yes | Array-like object. |
+| arrayLike | ArrayLike&lt;T&gt; | Yes | Array-like object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Newly created ArkTS array. |
+| Array&lt;T&gt; | Newly created ArkTS array. |
 
 **Error codes:**
 
@@ -622,13 +623,13 @@ Creates an ArkTS array from an iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | Iterable & lt;T & gt; | Yes | Array-like object. |
+| iterable | Iterable&lt;T&gt; | Yes | Array-like object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Newly created ArkTS array. |
+| Array&lt;T&gt; | Newly created ArkTS array. |
 
 **Error codes:**
 
@@ -654,14 +655,14 @@ Creates an ArkTS array from an array-like object, and uses a custom function to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;T & gt; \ | Iterable & lt;T & gt; | Yes | Array-like object. |
+| arrayLike | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | Yes | Array-like object. |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;T, T&gt; | Yes | Functions used to process the array elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Newly created ArkTS array. |
+| Array&lt;T&gt; | Newly created ArkTS array. |
 
 ## from
 
@@ -681,14 +682,14 @@ Creates an ArkTS array from an array-like object, and uses a custom function to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike & lt;U & gt; \ | Iterable & lt;U & gt; | Yes | Array-like object. |
+| arrayLike | ArrayLike&lt;U&gt; \| Iterable&lt;U&gt; | Yes | Array-like object. |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;U, T&gt; | Yes | Functions used to process the array elements. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Newly created ArkTS array. |
+| Array&lt;T&gt; | Newly created ArkTS array. |
 
 ## includes
 
@@ -896,13 +897,13 @@ Calls a callback function for each element in this ArkTS Array and returns a new
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index: number, array: Array & lt;T & gt;) = & gt; U | Yes | Callback function to run for each element. |
+| callbackFn | (value: T, index: number, array: Array&lt;T&gt;) =&gt; U | Yes | Callback function to run for each element. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;U & gt; | New array containing the result of the callback function. |
+| Array&lt;U&gt; | New array containing the result of the callback function. |
 
 **Error codes:**
 
@@ -935,7 +936,7 @@ Creates an ArkTS array with a variable number of parameters.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Newly created ArkTS array. Possible causes: |
+| Array&lt;T&gt; | Newly created ArkTS array. Possible causes: |
 
 ## pop
 
@@ -1015,7 +1016,7 @@ Calls a callback function for each element in this ArkTS array, uses the previou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (previousValue: T, currentValue: T, currentIndex: number, array: Array & lt;T & gt;) = & gt; T | Yes | Function that takes four arguments. It performs an operation on each element and passes the result as an accumulated value to the next element. |
+| callbackFn | (previousValue: T, currentValue: T, currentIndex: number, array: Array&lt;T&gt;) =&gt; T | Yes | Function that takes four arguments. It performs an operation on each element and passes the result as an accumulated value to the next element. |
 
 **Return value:**
 
@@ -1051,7 +1052,7 @@ Similar to the previous API, this API takes an initial value as the second param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (previousValue: U, currentValue: T, currentIndex: number, array: Array & lt;T & gt;) = & gt; U | Yes | Function that takes four arguments. It performs an operation on each element and passes the result as an accumulated value to the next element. |
+| callbackFn | (previousValue: U, currentValue: T, currentIndex: number, array: Array&lt;T&gt;) =&gt; U | Yes | Function that takes four arguments. It performs an operation on each element and passes the result as an accumulated value to the next element. |
 | initialValue | U | Yes | Initial value of the accumulator. |
 
 **Return value:**
@@ -1154,7 +1155,7 @@ Retains only the elements in this ArkTS Array that are contained in the specifie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | Array & lt;T & gt; | Yes | ArkTS Array whose elements are to be retained. |
+| elements | Array&lt;T&gt; | Yes | ArkTS Array whose elements are to be retained. |
 
 **Return value:**
 
@@ -1257,7 +1258,7 @@ Reverses elements in this ArkTS array and returns a reference to the same array.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Reversed ArkTS array. |
+| Array&lt;T&gt; | Reversed ArkTS array. |
 
 **Error codes:**
 
@@ -1345,7 +1346,7 @@ Selects a range of elements in this ArkTS array to create an array.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | New array containing the selected elements. |
+| Array&lt;T&gt; | New array containing the selected elements. |
 
 **Error codes:**
 
@@ -1405,13 +1406,13 @@ Sorts elements in this ArkTS array and returns a new array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| compareFn | (a: T, b: T) = & gt; number | No | Function that determines the sort order. By default, elements are sorted in ascending order. |
+| compareFn | (a: T, b: T) =&gt; number | No | Function that determines the sort order. By default, elements are sorted in ascending order. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Array with the sorted elements. |
+| Array&lt;T&gt; | Array with the sorted elements. |
 
 **Error codes:**
 
@@ -1438,13 +1439,13 @@ Removes elements from a specified position (start) and all elements after the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | Index from which the removal starts. If -array.length = & lt; start & lt; 0, the removal starts from start + array.length. If start & lt; -array.length, the removal starts from 0. |
+| start | number | Yes | Index from which the removal starts. If -array.length =&lt; start &lt; 0, the removal starts from start + array.length. If start &lt; -array.length, the removal starts from 0. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Array** object that contains the removed elements. If no element is removed, an empty **Array** object is returned.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| Array&lt;T&gt; | Array** object that contains the removed elements. If no element is removed, an empty **Array** object is returned.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 
@@ -1471,7 +1472,7 @@ Removes elements from a specified position in an array, and inserts new elements
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | Index from which the removal starts. If -array.length = & lt; start & lt; 0, the removal starts from start + array.length. If start & lt; -array.length, the removal starts from 0. |
+| start | number | Yes | Index from which the removal starts. If -array.length =&lt; start &lt; 0, the removal starts from start + array.length. If start &lt; -array.length, the removal starts from 0. |
 | deleteCount | number | Yes | Number of elements to remove. |
 | items | T[] | Yes | New elements to insert from the start position. If no value is passed in, only the elements in the array are removed. |
 
@@ -1479,7 +1480,7 @@ Removes elements from a specified position in an array, and inserts new elements
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Array** object that contains the removed elements. If no element is removed, an empty **Array** object is returned. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| Array&lt;T&gt; | Array** object that contains the removed elements. If no element is removed, an empty **Array** object is returned. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 **Error codes:**
 

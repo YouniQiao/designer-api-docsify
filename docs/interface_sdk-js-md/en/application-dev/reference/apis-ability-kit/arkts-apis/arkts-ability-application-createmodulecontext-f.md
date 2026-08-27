@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import application from '@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## createModuleContext

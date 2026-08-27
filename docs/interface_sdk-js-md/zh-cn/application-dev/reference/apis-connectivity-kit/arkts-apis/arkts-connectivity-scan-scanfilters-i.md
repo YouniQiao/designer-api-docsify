@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import scan from '@kit.ConnectivityKit';
+import { scan } from '@kit.ConnectivityKit';
 ```
 
 ## address
@@ -98,7 +98,7 @@ manufacturerId?: number
 rssi?: number
 ```
 
-过滤信号强度大于或等于该信号强度门限值的广播报文，取值范围[-128, 127]，单位：dBm。建议设置[-90, 20]范围内的门限值。若未配置则默认不对信号强度进行过滤。 取值限定为整数。
+过滤信号强度大于或等于该信号强度门限值的广播报文，取值范围[-128, 127]，单位：dBm。建议设置[-90, 20]范围内的门限值。若未配置则默认不对信号强度进行过滤。取值限定为整数。
 
 **类型：** number
 

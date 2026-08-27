@@ -14,7 +14,6 @@ Describes the options of the viewport.
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## height
@@ -23,7 +22,13 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@ohos.arkui.@ki
 height?: Length
 ```
 
-Height of the viewport. The value must be greater than or equal to 0.Default value: **0**Default unit: vp Invalid values are treated as the default value.
+Height of the viewport. The value must be greater than or equal to 0.
+
+Default value: **0**
+
+Default unit: vp
+
+Invalid values are treated as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -41,7 +46,13 @@ Height of the viewport. The value must be greater than or equal to 0.Default val
 width?: Length
 ```
 
-Width of the viewport. The value must be greater than or equal to 0.Default value: **0**Default unit: vp Invalid values are treated as the default value.
+Width of the viewport. The value must be greater than or equal to 0.
+
+Default value: **0**
+
+Default unit: vp
+
+Invalid values are treated as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -59,7 +70,13 @@ Width of the viewport. The value must be greater than or equal to 0.Default valu
 x?: Length
 ```
 
-Horizontal coordinate of the start point of the viewport.Default value: **0**Default unit: vp Invalid values are treated as the default value.
+Horizontal coordinate of the start point of the viewport.
+
+Default value: **0**
+
+Default unit: vp
+
+Invalid values are treated as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -77,7 +94,13 @@ Horizontal coordinate of the start point of the viewport.Default value: **0**Def
 y?: Length
 ```
 
-Vertical coordinate of the start point of the viewport.Default value: **0**Default unit: vp Invalid values are treated as the default value.
+Vertical coordinate of the start point of the viewport.
+
+Default value: **0**
+
+Default unit: vp
+
+Invalid values are treated as the default value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

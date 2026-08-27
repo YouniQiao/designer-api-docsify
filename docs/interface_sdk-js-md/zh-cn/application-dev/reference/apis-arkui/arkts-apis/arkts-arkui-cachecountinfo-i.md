@@ -1,6 +1,8 @@
 # CacheCountInfo
 
-定义缓存计数信息。@interface CacheCountInfo
+定义缓存计数信息。
+
+@interface CacheCountInfo
 
 **起始版本：** 22
 

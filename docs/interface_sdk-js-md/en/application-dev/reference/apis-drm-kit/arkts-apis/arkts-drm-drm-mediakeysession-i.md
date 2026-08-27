@@ -9,7 +9,7 @@ MediaKeySession implements media key management. Before calling any API in Media
 ## Modules to Import
 
 ```TypeScript
-import drm from '@kit.DrmKit';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## checkMediaKeyStatus
@@ -198,7 +198,7 @@ Generates a request to release offline media keys. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return the request generated if the DRM solution on the device supports the release of offline media keys. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the request generated if the DRM solution on the device supports the release of offline media keys. |
 
 **Error codes:**
 
@@ -279,7 +279,7 @@ Unsubscribes from events indicating that the application requests a media key. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyRequired' | Yes | Event type. The value is fixed at **'keyRequired'**. |
-| callback | (eventInfo: EventInfo) = & gt; void | No | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -307,7 +307,7 @@ Unsubscribes from events indicating that a media key expires. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyExpired' | Yes | Event type. The value is fixed at **'keyExpired'**. |
-| callback | (eventInfo: EventInfo) = & gt; void | No | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -335,7 +335,7 @@ Unsubscribes from vendor-defined events. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'vendorDefined' | Yes | Event type. The value is fixed at **'vendorDefined'**. |
-| callback | (eventInfo: EventInfo) = & gt; void | No | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -363,7 +363,7 @@ Unsubscribes from events indicating that a media key is updated upon expiry. Thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'expirationUpdate' | Yes | Event type. The value is fixed at **'expirationUpdate'**. |
-| callback | (eventInfo: EventInfo) = & gt; void | No | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -391,7 +391,7 @@ Unsubscribes from events indicating that a media key changes. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keysChange' | Yes | Event type. The value is fixed at **'keysChange'**. |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | No | Callback used to return the event information, including a list of key IDs, descriptions of their statuses, and whether each key is available. |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | No | Callback used to return the event information, including a list of key IDs, descriptions of their statuses, and whether each key is available. |
 
 **Error codes:**
 
@@ -419,7 +419,7 @@ Subscribes to events indicating that the application requests a media key. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyRequired' | Yes | Event type. The value is fixed at **'keyRequired'**, which is triggered when the application requires a media key. |
-| callback | (eventInfo: EventInfo) = & gt; void | Yes | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -447,7 +447,7 @@ Subscribes to events indicating that a media key expires. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyExpired' | Yes | Event type. The value is fixed at **'keyExpired'**, which is triggered when a media key expires. |
-| callback | (eventInfo: EventInfo) = & gt; void | Yes | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -475,7 +475,7 @@ Subscribes to vendor-defined events. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'vendorDefined' | Yes | Event type. The value is fixed at **'vendorDefined'**, which is triggered when a vendor-defined event occurs. |
-| callback | (eventInfo: EventInfo) = & gt; void | Yes | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -503,7 +503,7 @@ Subscribes to events indicating that a media key is updated upon expiry. This AP
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'expirationUpdate' | Yes | Event type. The value is fixed at **'expirationUpdate'**, which is triggered when a media key is updated upon expiry. |
-| callback | (eventInfo: EventInfo) = & gt; void | Yes | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
@@ -531,7 +531,7 @@ Subscribes to events indicating that a media key changes. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keysChange' | Yes | Event type. The value is fixed at **'keysChange'**, which is triggered when a media key changes. |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) = & gt; void | Yes | Callback used to return the event information, including a list of key IDs, descriptions of their statuses, and whether each key is available. |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | Yes | Callback used to return the event information, including a list of key IDs, descriptions of their statuses, and whether each key is available. |
 
 **Error codes:**
 
@@ -564,7 +564,7 @@ Processes a media key response. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Uint8Array & gt; | Promise used to return an array of media key IDs. |
+| Promise&lt;Uint8Array&gt; | Promise used to return an array of media key IDs. |
 
 **Error codes:**
 
@@ -613,7 +613,7 @@ Processes a response to a request for releasing offline media keys. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result if the DRM solution on the device supports the release of offline media keys. |
+| Promise&lt;void&gt; | Promise used to return the result if the DRM solution on the device supports the release of offline media keys. |
 
 **Error codes:**
 
@@ -710,7 +710,7 @@ Restores offline media keys. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import omapi from '@kit.ConnectivityKit';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## off('stateChanged')
@@ -49,7 +49,7 @@ function seStateOffCb(data: omapi.ServiceState) {
 }
 
 function secureElementDemo() {
-    try{
+    try {
         omapi.createService().then((data) => {
             seService = data;
             if (seService == undefined || !seService.isConnected()) {
@@ -57,7 +57,7 @@ function secureElementDemo() {
                 return;
             }
             hilog.info(0x0000, 'testTag', 'seservice state connected');
-        }).catch((error : BusinessError)=> {
+        }).catch((error : BusinessError) => {
             hilog.error(0x0000, 'testTag', 'createService error %{public}s', JSON.stringify(error));
         });
         omapi.on('stateChanged', seStateOnCb);
@@ -66,7 +66,7 @@ function secureElementDemo() {
             hilog.error(0x0000, 'testTag', 'omapi on error %{public}s', JSON.stringify(error));
         }
     }
-    try{
+    try {
         omapi.off('stateChanged', seStateOffCb);
     } catch (error) {
         if (error as BusinessError) {

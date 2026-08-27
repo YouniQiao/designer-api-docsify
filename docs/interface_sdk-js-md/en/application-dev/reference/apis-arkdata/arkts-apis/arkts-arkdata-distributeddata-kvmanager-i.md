@@ -13,7 +13,6 @@ Creates a **KVManager** object to obtain KV store information. Before calling an
 ## Modules to Import
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## closeKVStore
@@ -96,7 +95,7 @@ Closes a KV store. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -207,7 +206,7 @@ Deletes a KV store. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -303,7 +302,7 @@ Obtains the IDs of all KV stores that are created by getKVStore() and have not b
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string[] & gt; | Promise used to return the IDs of all created KV stores. |
+| Promise&lt;string[]&gt; | Promise used to return the IDs of all created KV stores. |
 
 **Examples**
 
@@ -343,13 +342,13 @@ Creates and obtains a KV store. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | storeId | string | Yes | Unique identifier of the KV store. The length cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | Configuration of the KV store. |
+| options | Options | Yes | Configuration of the KV store. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;T & gt;, & lt;T extends KVStore & gt; | Promise used to return the KV store instance created. |
+| Promise&lt;T&gt;, &lt;T extends KVStore&gt; | Promise used to return the KV store instance created. |
 
 **Examples**
 
@@ -397,7 +396,7 @@ Creates and obtains a KV store. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | storeId | string | Yes | Unique identifier of the KV store. The length cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributeddata-constants-n.md). |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | Configuration of the KV store. |
+| options | Options | Yes | Configuration of the KV store. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the KV store instance created. |
 
 **Examples**

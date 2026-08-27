@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## addLocale
@@ -30,7 +30,7 @@ addLocale(locale: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。 |
 
 **示例**
 
@@ -94,7 +94,7 @@ getIndexList(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 当前区域的索引列表。第一个元素和最后一个元素为“...”。 |
+| Array&lt;string&gt; | 当前区域的索引列表。第一个元素和最后一个元素为“...”。 |
 
 **示例**
 

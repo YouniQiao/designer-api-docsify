@@ -1,6 +1,8 @@
 # AudioConcurrencyMode
 
-Enumerates the audio concurrency modes.@enum { number } [since 12 - 24]
+Enumerates the audio concurrency modes.
+
+@enum { number } [since 12 - 24]
 
 **Since:** 12
 

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import pluginBundleManager from '@kit.AbilityKit';
+import { pluginBundleManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

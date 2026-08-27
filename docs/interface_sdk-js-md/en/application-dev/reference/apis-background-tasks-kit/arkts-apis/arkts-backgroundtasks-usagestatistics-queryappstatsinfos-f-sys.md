@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usageStatistics from '@kit.BackgroundTasksKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryAppStatsInfos
@@ -12,7 +12,9 @@ import usageStatistics from '@kit.BackgroundTasksKit';
 function queryAppStatsInfos(begin: number, end: number): Promise<AppStatsMap>
 ```
 
-Queries usage information about each application within a specified period.This method queries usage information at the BY_OPTIMIZED interval by default.
+Queries usage information about each application within a specified period.
+
+This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **Since:** 15
 

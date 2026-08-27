@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import agentManager from '@kit.AbilityKit';
+import { agentManager } from '@kit.AbilityKit';
 ```
 
 ## updateAgentCard
@@ -34,7 +34,7 @@ Updates the AgentCard within specified agent id.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

@@ -26,7 +26,9 @@ Enumerates the storage types of preferences.
 XML = 0
 ```
 
-[XML](../../../database/data-persistence-by-preferences.md#xml) format, which is the default storage type of **Preferences**.In this mode, data is stored in XML format. Data operations are performed in the memory. To persist data, call **flush()**.
+[XML](../../../database/data-persistence-by-preferences.md#xml) format, which is the default storage type of **Preferences**.
+
+In this mode, data is stored in XML format. Data operations are performed in the memory. To persist data, call **flush()**.
 
 **Since:** 18
 
@@ -40,7 +42,9 @@ XML = 0
 GSKV
 ```
 
-[GSKV](../../../database/data-persistence-by-preferences.md#gskv) format.Data is stored in GSKV mode. Data operations are flushed on a real-time basis without calling **flush()**.
+[GSKV](../../../database/data-persistence-by-preferences.md#gskv) format.
+
+Data is stored in GSKV mode. Data operations are flushed on a real-time basis without calling **flush()**.
 
 **Since:** 18
 

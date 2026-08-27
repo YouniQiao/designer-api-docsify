@@ -146,7 +146,7 @@ Obtains the application type.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the type of this app. |
+| Promise&lt;string&gt; | Returns the type of this app. |
 
 ## getAppVersionInfo
 
@@ -226,7 +226,7 @@ Obtains the bundle name of the current ability.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | The Bundle name of the current capability. |
+| Promise&lt;string&gt; | The Bundle name of the current capability. |
 
 ## getCacheDir
 
@@ -266,7 +266,7 @@ Obtains the cache directory of this application on the internal storage.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the internal storage directory of the application. |
+| Promise&lt;string&gt; | Returns the internal storage directory of the application. |
 
 ## getCallingBundle
 
@@ -306,7 +306,7 @@ Obtains the bundle name of the ability that called the current ability.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the Bundle name of the ability caller. |
+| Promise&lt;string&gt; | Returns the Bundle name of the ability caller. |
 
 ## getDisplayOrientation
 
@@ -346,7 +346,7 @@ Obtains the current display orientation of this ability.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;bundle.DisplayOrientation & gt; | Indicates the screen display direction. |
+| Promise&lt;bundle.DisplayOrientation&gt; | Indicates the screen display direction. |
 
 ## getElementName
 
@@ -430,7 +430,7 @@ Obtains the absolute path to the application-specific cache directory
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Return the cache directory of the application. |
+| Promise&lt;string&gt; | Return the cache directory of the application. |
 
 ## getFilesDir
 
@@ -470,7 +470,7 @@ Obtains the file directory of this application on the internal storage.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Return the file directory of this application on internal storage. |
+| Promise&lt;string&gt; | Return the file directory of this application on internal storage. |
 
 ## getHapModuleInfo
 
@@ -530,7 +530,7 @@ Obtains the distributed file path for storing ability or application data files.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the distributed file path of the Ability or application. If it is the first call, a directory will be created. |
+| Promise&lt;string&gt; | Returns the distributed file path of the Ability or application. If it is the first call, a directory will be created. |
 
 ## getOrCreateDistributedDir
 
@@ -570,7 +570,7 @@ Get the local root dir of an app. If it is the first call, the dir will be creat
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | the root dir |
+| Promise&lt;string&gt; | the root dir |
 
 ## getOrCreateLocalDir
 
@@ -670,7 +670,7 @@ Obtains the name of the current process.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns the name of the current process. |
+| Promise&lt;string&gt; | Returns the name of the current process. |
 
 ## isUpdatingConfigurations
 
@@ -710,7 +710,7 @@ Checks whether the configuration of this ability is changing.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | true if the configuration of this ability is changing and false otherwise. |
+| Promise&lt;boolean&gt; | true if the configuration of this ability is changing and false otherwise. |
 
 ## printDrawnCompleted
 
@@ -750,7 +750,7 @@ Inform the system of the time required for drawing this Page ability.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise form returns the result. |
+| Promise&lt;void&gt; | The promise form returns the result. |
 
 ## requestPermissionsFromUser
 
@@ -774,7 +774,7 @@ Requests certain permissions from the system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissions | Array & lt;string & gt; | Yes | Indicates the list of permissions to be requested.parameter cannot be null. |
+| permissions | Array&lt;string&gt; | Yes | Indicates the list of permissions to be requested.parameter cannot be null. |
 | requestCode | number | Yes | Indicates the request code to be passed to the PermissionRequestResult |
 | resultCallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)&gt; | Yes | Return authorization result information. |
 
@@ -796,7 +796,7 @@ Requests certain permissions from the system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| permissions | Array & lt;string & gt; | Yes | Indicates the list of permissions to be requested.Parameter cannot be null. |
+| permissions | Array&lt;string&gt; | Yes | Indicates the list of permissions to be requested.Parameter cannot be null. |
 | requestCode | number | Yes | Indicates the request code to be passed to the PermissionRequestResult |
 
 **Return value:**
@@ -850,7 +850,7 @@ Sets the display orientation of the current ability.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 ## setShowOnLockScreen
 
@@ -901,7 +901,7 @@ Sets whether to show this ability on top of the lock screen whenever the lock sc
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 ## setWakeUpScreen
 
@@ -956,7 +956,7 @@ Sets whether to wake up the screen when this ability is restored.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | the promise returned by the function. |
 
 ## verifyPermission
 
@@ -983,7 +983,7 @@ Verify whether the specified permission is allowed for a particular pid and uid 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | asynchronous callback with { |
+| Promise&lt;number&gt; | asynchronous callback with { |
 
 ## verifyPermission
 

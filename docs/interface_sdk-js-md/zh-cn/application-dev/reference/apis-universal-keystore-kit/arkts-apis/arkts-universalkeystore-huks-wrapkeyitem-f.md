@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import huks from '@kit.UniversalKeystoreKit';
-import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## wrapKeyItem
@@ -18,6 +17,7 @@ function wrapKeyItem(keyAlias: string, params: HuksOptions): Promise<HuksReturnR
 > **说明：**
 > 
 > 加密导出[HuksKeySecurityLevel](arkts-universalkeystore-huks-hukskeysecuritylevel-e.md)中定义的SE安全级别密钥需要ohos.permission.ACCESS_SE_KEY权限。
+
 <!--Del-->该功能暂不支持。<!--DelEnd-->
 
 **起始版本：** 20

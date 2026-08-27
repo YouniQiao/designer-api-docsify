@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendableImage from '@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## convertToPixelMap
@@ -22,7 +22,7 @@ Creates a image PixelMap from sendable image PixelMap.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | the src pixelmap. |
+| pixelmap | PixelMap | 是 | the src pixelmap. |
 
 **返回值：**
 

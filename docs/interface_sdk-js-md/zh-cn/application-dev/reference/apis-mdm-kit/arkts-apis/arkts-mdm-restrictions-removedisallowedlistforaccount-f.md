@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import restrictions from '@kit.MDMKit';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## removeDisallowedListForAccount
@@ -28,8 +28,8 @@ function removeDisallowedListForAccount(admin: Want, feature: string, list: Arra
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | feature | string | 是 | feature名称。   - snapshotSkip：屏幕快照能力。 |
-| list | Array & lt;string & gt; | 是 | 包名等内容的名单集合。 |
-| accountId | number | 是 | 用户ID，取值范围：大于等于0。accountId可以通过 [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
+| list | Array&lt;string&gt; | 是 | 包名等内容的名单集合。 |
+| accountId | number | 是 | 用户ID，取值范围：大于等于0。accountId可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)等接口来获取。 |
 
 **错误码：**
 

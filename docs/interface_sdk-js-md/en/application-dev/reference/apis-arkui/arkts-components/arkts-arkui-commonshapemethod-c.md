@@ -1,6 +1,8 @@
 # CommonShapeMethod
 
-CommonShapeMethod@extends CommonMethod&lt;T&gt;
+CommonShapeMethod
+
+@extends CommonMethod&lt;T&gt;
 
 **Inheritance/Implementation:** CommonShapeMethod extends CommonMethod<T>
 
@@ -89,7 +91,7 @@ Sets the opacity of the fill area. The value range is [0.0, 1.0]. A value less t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Opacity of the fill area. Default value: 1 |
+| value | number \| string \| Resource | Yes | Opacity of the fill area. Default value: 1 |
 
 **Return value:**
 
@@ -145,7 +147,7 @@ Sets stroke dashes. The value must be greater than or equal to 0. Invalid values
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array & lt;any & gt; | Yes | Stroke dashes. Default value: [] Default unit: vp |
+| value | Array&lt;any&gt; | Yes | Stroke dashes. Default value: [] Default unit: vp |
 
 **Return value:**
 
@@ -285,7 +287,7 @@ Sets the stroke opacity. The value range is [0.0, 1.0]. A value less than 0.0 ev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Stroke opacity. Default value: 1 |
+| value | number \| string \| Resource | Yes | Stroke opacity. Default value: 1 |
 
 **Return value:**
 

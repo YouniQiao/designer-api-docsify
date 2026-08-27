@@ -9,7 +9,7 @@ Filter effect class, used to apply corresponding effects to specified components
 ## Modules to Import
 
 ```TypeScript
-import uiEffect from '@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## blur
@@ -34,7 +34,7 @@ Adds a blur effect to the component.
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the blur effect attached, supporting chained calls to add other effects. |
+| Filter | Returns the Filter with the blur effect attached, supporting chained calls to add other effects. |
 
 **Examples**
 
@@ -74,7 +74,11 @@ struct UIEffectFilterExample {
 hdrBrightnessRatio(ratio: number): Filter
 ```
 
-Adds an HDR (High Dynamic Range) brightening effect to the component content. Nesting is not recommended, as forced nesting may cause overexposure.The brightening effect requires the HDR rendering pipeline to be enabled to take effect. In some scenarios, HDR cannot be enabled even if an attempt is made to trigger the HDR rendering pipeline, for example, when the device hardware specifications do not support HDR.The maximum supported brightness boost multiple is calculated as the device's current maximum brightness divided by its SDR reference white luminance.
+Adds an HDR (High Dynamic Range) brightening effect to the component content. Nesting is not recommended, as forced nesting may cause overexposure.
+
+The brightening effect requires the HDR rendering pipeline to be enabled to take effect. In some scenarios, HDR cannot be enabled even if an attempt is made to trigger the HDR rendering pipeline, for example, when the device hardware specifications do not support HDR.
+
+The maximum supported brightness boost multiple is calculated as the device's current maximum brightness divided by its SDR reference white luminance.
 
 > **NOTE：**
 > 
@@ -98,7 +102,7 @@ Adds an HDR (High Dynamic Range) brightening effect to the component content. Ne
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the HDR brightening effect attached, supporting chained calls to add other effects. |
+| Filter | Returns the Filter with the HDR brightening effect attached, supporting chained calls to add other effects. |
 
 **Error codes:**
 

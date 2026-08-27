@@ -1,6 +1,6 @@
 # RemoteAbilityInfo（系统接口）
 
-包含远程的ability信息，通过接口 [distributedBundle.getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md) 获取。
+包含远程的ability信息，通过接口[distributedBundle.getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md)获取。
 
 > **说明：**
 > 

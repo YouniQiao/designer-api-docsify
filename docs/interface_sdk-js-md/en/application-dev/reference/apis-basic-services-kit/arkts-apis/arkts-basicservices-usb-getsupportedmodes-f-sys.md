@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usb from '@kit.BasicServicesKit';
-import usbManager from '@kit.BasicServicesKitManager';
-import serialManager from '@kit.BasicServicesKitManager.serial';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## getSupportedModes
@@ -36,7 +34,7 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 | Type | Description |
 | --- | --- |
-| [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md) | Mask combination for the supported mode list. |
+| PortModeType | Mask combination for the supported mode list. |
 
 **Examples**
 

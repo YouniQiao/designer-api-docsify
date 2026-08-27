@@ -1,6 +1,6 @@
 # CompletionHandlerForAtomicService
 
-CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](#onatomicservicerequestsuccess) 和 [onAtomicServiceRequestFailure](#onatomicservicerequestfailure) 两个回调函数，分别在打开原子化服务成功和失败时回调。
+CompletionHandlerForAtomicService提供了[onAtomicServiceRequestSuccess](#onatomicservicerequestsuccess)和[onAtomicServiceRequestFailure](#onatomicservicerequestfailure)两个回调函数，分别在打开原子化服务成功和失败时回调。
 
 **起始版本：** 20
 
@@ -9,7 +9,7 @@ CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](#onat
 ## 导入模块
 
 ```TypeScript
-import CompletionHandlerForAtomicService, { FailureCode } from '@kit.AbilityKit';
+import { CompletionHandlerForAtomicService, FailureCode } from '@kit.AbilityKit';
 ```
 
 ## onAtomicServiceRequestFailure

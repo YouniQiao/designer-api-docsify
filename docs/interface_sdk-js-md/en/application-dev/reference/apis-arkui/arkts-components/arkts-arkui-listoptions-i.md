@@ -23,7 +23,9 @@ Defines the options of the **List** component.
 initialIndex?: number
 ```
 
-Index of the item to be displayed at the start when the list is initially loaded. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; If the set value is a negative number or is greater than the index of the last item in the list, the value is invalid. In this case, the default value will be used. </p>
+Index of the item to be displayed at the start when the list is initially loaded. Anonymous Object Rectification.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; If the set value is a negative number or is greater than the index of the last item in the list, the value is invalid. In this case, the default value will be used. </p>
 
 **Type:** number
 
@@ -43,7 +45,9 @@ Index of the item to be displayed at the start when the list is initially loaded
 scroller?: Scroller
 ```
 
-Scroller, which can be bound to scrollable components. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; The scroller cannot be bound to other scrollable components. </p>
+Scroller, which can be bound to scrollable components. Anonymous Object Rectification.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; The scroller cannot be bound to other scrollable components. </p>
 
 **Type:** [Scroller](arkts-arkui-scroller-c.md)
 
@@ -61,7 +65,9 @@ Scroller, which can be bound to scrollable components. Anonymous Object Rectific
 space?: number | string
 ```
 
-Spacing between list items along the main axis. Default value: **0** If the parameter type is number, the unit is vp. Anonymous Object Rectification.<p>&lt;strong&gt;NOTE&lt;/strong&gt; If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used. If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing. Child components of &lt;em&gt;List&lt;/em&gt; whose &lt;em&gt;visibility&lt;/em&gt; attribute is set to &lt;em&gt;None&lt;/em&gt; are not displayed, but the spacing above and below them still takes effect. </p>
+Spacing between list items along the main axis. Default value: **0** If the parameter type is number, the unit is vp. Anonymous Object Rectification.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used. If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing. Child components of &lt;em&gt;List&lt;/em&gt; whose &lt;em&gt;visibility&lt;/em&gt; attribute is set to &lt;em&gt;None&lt;/em&gt; are not displayed, but the spacing above and below them still takes effect. </p>
 
 **Type:** number \| string
 
@@ -81,7 +87,9 @@ Spacing between list items along the main axis. Default value: **0** If the para
 spaceWidth?: Dimension
 ```
 
-Spacing between list items along the main axis.<p>&lt;strong&gt;NOTE&lt;/strong&gt; If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used. If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing. Child components of &lt;em&gt;ListItemGroup&lt;/em&gt; whose &lt;em&gt;visibility&lt;/em&gt; attribute is set to &lt;em&gt;None&lt;/em&gt; are not displayed, but the spacing above and below them still takes effect. If both spaceWidth and space are set, spaceWidth will take precedence. </p>
+Spacing between list items along the main axis.
+
+<p>&lt;strong&gt;NOTE&lt;/strong&gt; If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used. If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing. Child components of &lt;em&gt;ListItemGroup&lt;/em&gt; whose &lt;em&gt;visibility&lt;/em&gt; attribute is set to &lt;em&gt;None&lt;/em&gt; are not displayed, but the spacing above and below them still takes effect. If both spaceWidth and space are set, spaceWidth will take precedence. </p>
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 

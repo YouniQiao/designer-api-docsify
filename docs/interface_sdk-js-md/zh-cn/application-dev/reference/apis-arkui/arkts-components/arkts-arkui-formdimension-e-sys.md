@@ -70,7 +70,8 @@ Dimension_4_4 = 3
 Dimension_2_1
 ```
 
-2*1 卡片  
+2*1 卡片
+
 **说明:** 该字段从API version 9开始支持，从API version 20开始废弃。
 
 **起始版本：** 9

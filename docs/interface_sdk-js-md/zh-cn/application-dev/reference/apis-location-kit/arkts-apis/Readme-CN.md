@@ -33,7 +33,7 @@
   - [LocationPrivacyType](arkts-location-geolocation-locationprivacytype-e.md)
   - [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
   - [LocationRequestScenario](arkts-location-geolocation-locationrequestscenario-e.md)
-- [@ohos.geoLocationManager](arkts-geolocationmanager.md)
+- [@ohos.geoLocationManager(位置服务)](arkts-geolocationmanager.md)
   - [addBeaconFence](arkts-location-geolocationmanager-addbeaconfence-f.md)
   <!--Del-->
   - [addFusionFence(系统接口)](arkts-location-geolocationmanager-addfusionfence-f-sys.md)<!--DelEnd-->

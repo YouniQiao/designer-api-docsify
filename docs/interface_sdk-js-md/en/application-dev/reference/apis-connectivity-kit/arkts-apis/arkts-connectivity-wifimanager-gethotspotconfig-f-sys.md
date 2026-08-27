@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getHotspotConfig
@@ -27,7 +26,7 @@ Obtain the Wi-Fi hotspot configuration.
 
 | Type | Description |
 | --- | --- |
-| [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) | Returns the configuration of an existed or enabled Wi-Fi hotspot. |
+| HotspotConfig | Returns the configuration of an existed or enabled Wi-Fi hotspot. |
 
 **Error codes:**
 

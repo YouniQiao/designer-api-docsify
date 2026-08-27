@@ -9,7 +9,7 @@ Implements an asynchronous queue, for which you can specify the task execution c
 ## Modules to Import
 
 ```TypeScript
-import taskpool from '@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -108,14 +108,14 @@ Adds a task to the asynchronous queue for execution. Before using this API, you 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be added to the asynchronous queue. |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| task | Task | Yes | Task to be added to the asynchronous queue. |
+| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Object & gt; | Promise used to return the task execution result. |
+| Promise&lt;Object&gt; | Promise used to return the task execution result. |
 
 **Error codes:**
 

@@ -4,7 +4,7 @@
 export @interface Available
 ```
 
-提供API注解能力，用于标记API支持的最低可用版本。 此注解可以标注在类、接口、函数、变量、类型、模块、枚举上。 在源码定义处添加注解后，编译工具会在使用处检查潜在的兼容性问题。 当minApiVersion大于build-profile.json5中指定的compatibleSdkVersion字段，会生成兼容性警告。
+提供API注解能力，用于标记API支持的最低可用版本。此注解可以标注在类、接口、函数、变量、类型、模块、枚举上。在源码定义处添加注解后，编译工具会在使用处检查潜在的兼容性问题。当minApiVersion大于build-profile.json5中指定的compatibleSdkVersion字段，会生成兼容性警告。
 
 **起始版本：** 22
 
@@ -22,7 +22,7 @@ import { Available, SuppressWarnings, SuppressWarningsType } from '@kit.BasicSer
 minApiVersion: string = ''
 ```
 
-minApiVersion用于标识最低可用版本，由两部分组成：系统类型+版本号。仅当系统类型为OpenHarmony时可省略系统类型。例如：'OpenHarmony 20'，'20'。 当minApiVersion大于build-profile.json5中指定的compatibleSdkVersion字段时，会生成兼容性警告。传入无效格式时，编译器会报错提示格式不正确。
+minApiVersion用于标识最低可用版本，由两部分组成：系统类型+版本号。仅当系统类型为OpenHarmony时可省略系统类型。例如：'OpenHarmony 20'，'20'。当minApiVersion大于build-profile.json5中指定的compatibleSdkVersion字段时，会生成兼容性警告。传入无效格式时，编译器会报错提示格式不正确。
 
 **类型：** string
 

@@ -17,8 +17,10 @@
 lock?: boolean
 ```
 
-屏幕旋转时是否锁定surface的方向。 如果不设置此参数，默认值为false，表示不锁定方向。  
-**true**：屏幕旋转时锁定surface的方向。  
+屏幕旋转时是否锁定surface的方向。如果不设置此参数，默认值为false，表示不锁定方向。
+
+**true**：屏幕旋转时锁定surface的方向。
+
 **false**：屏幕旋转时不锁定surface的方向。
 
 **类型：** boolean

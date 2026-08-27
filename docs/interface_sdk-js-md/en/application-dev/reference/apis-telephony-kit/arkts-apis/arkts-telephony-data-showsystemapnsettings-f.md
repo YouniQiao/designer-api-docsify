@@ -29,4 +29,4 @@ Open the system APN selection menu, which is presented in a semi-modal form and 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |

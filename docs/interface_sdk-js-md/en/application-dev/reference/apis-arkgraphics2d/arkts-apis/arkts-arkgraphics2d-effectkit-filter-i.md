@@ -9,7 +9,7 @@ An image effect class used to add a specified effect to the effect chain through
 ## Modules to Import
 
 ```TypeScript
-import effectKit from '@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## blur
@@ -42,7 +42,7 @@ Adds the blur effect to the effect chain and returns the instance of the chain. 
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
+| Filter | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
 
 **Examples**
 
@@ -131,13 +131,13 @@ Adds the blur effect to the effect chain and returns the instance of the chain. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | radius | number | Yes | Blur radius, in px. Value range: [0, +∞). A larger blur radius produces a more pronounced blur effect. No effect is applied when a negative value is passed in. |
-| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Shader tile mode, which affects the blur effect at the image edges. |
+| tileMode | TileMode | Yes | Shader tile mode, which affects the blur effect at the image edges. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns a Filter instance with the added effects, for continuing to add effects or obtaining the processed image. |
+| Filter | Returns a Filter instance with the added effects, for continuing to add effects or obtaining the processed image. |
 
 **Examples**
 
@@ -231,7 +231,7 @@ Adds the brightness effect to the effect chain and returns the instance of the c
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
+| Filter | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
 
 **Examples**
 
@@ -323,7 +323,7 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return the image.PixelMap of the source image with the effect chain applied. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the image.PixelMap of the source image with the effect chain applied. |
 
 **Examples**
 
@@ -381,7 +381,7 @@ Obtains image.PixelMap of the source image with the linked list effect. The rend
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return image.PixelMap of the source image. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return image.PixelMap of the source image. |
 
 **Examples**
 
@@ -476,7 +476,7 @@ Adds the grayscale effect to the effect chain and returns the instance of the ch
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
+| Filter | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
 
 **Examples**
 
@@ -558,7 +558,7 @@ Adds the invert effect to the effect chain and returns the instance of the chain
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
+| Filter | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
 
 **Examples**
 
@@ -640,13 +640,13 @@ Performs color transformation on the image using a custom color matrix, adds the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMatrix | Array & lt;number & gt; | Yes | Custom color matrix. A 4x5 matrix used to create an effect filter. The array length must be 20. The first four columns correspond to the transformation coefficients of the R, G, B, and A channels, and the fifth column is the constant offset value. It is recommended that the element values be in the range [-1, 1]. Values outside this range may cause color value overflow or unexpected effects. If the array length is not 20, null is returned. |
+| colorMatrix | Array&lt;number&gt; | Yes | Custom color matrix. A 4x5 matrix used to create an effect filter. The array length must be 20. The first four columns correspond to the transformation coefficients of the R, G, B, and A channels, and the fifth column is the constant offset value. It is recommended that the element values be in the range [-1, 1]. Values outside this range may cause color value overflow or unexpected effects. If the array length is not 20, null is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Filter instance with effects added, which can be used to add more effects or obtain the processed image. |
+| Filter | Filter instance with effects added, which can be used to add more effects or obtain the processed image. |
 
 **Error codes:**
 

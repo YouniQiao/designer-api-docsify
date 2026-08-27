@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import serialManager from '@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## getPortList
@@ -22,7 +22,7 @@ Obtains the serial port device list, including the device name and port number.
 
 | Type | Description |
 | --- | --- |
-| Readonly & lt;SerialPort & gt;[] | Serial port information list. |
+| Readonly&lt;SerialPort&gt;[] | Serial port information list. |
 
 **Examples**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleArchiveInfo
@@ -28,7 +28,7 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number, callback
 | --- | --- | --- | --- |
 | hapFilePath | string | 是 | 表示存储HAP的路径，路径应该是当前应用程序数据目录的相对路径。 |
 | bundleFlags | number | 是 | 表示用于指定要返回的BundleInfo对象中包含的信息的标志。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为 undefined，data为获取到的BundleInfo；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的BundleInfo；否则为错误对象。 |
 
 **错误码：**
 
@@ -91,7 +91,7 @@ function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: number): Promis
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;BundleInfo & gt; | Promise对象，返回BundleInfo。 |
+| Promise&lt;BundleInfo&gt; | Promise对象，返回BundleInfo。 |
 
 **错误码：**
 

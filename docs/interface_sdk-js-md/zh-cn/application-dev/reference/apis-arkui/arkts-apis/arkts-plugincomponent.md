@@ -16,7 +16,7 @@
 ## 导入模块
 
 ```TypeScript
-import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
+import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -25,10 +25,10 @@ import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [pluginComponentManager(PluginComponentManager)](arkts-arkui-plugincomponentmanager-n.md) | 插件组件管理器，提供插件组件的请求、推送和事件监听等管理能力。 |
+| [pluginComponentManager](arkts-arkui-plugincomponentmanager-n.md) | 插件组件管理器，提供插件组件的请求、推送和事件监听等管理能力。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [PluginComponentTemplate(PluginComponentManager)](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md) | 插件组件模板参数。 |
+| [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md) | 插件组件模板参数。 |

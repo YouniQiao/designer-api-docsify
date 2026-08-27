@@ -68,7 +68,11 @@ Set system-styled materials for the component. Different materials have differen
 readonly buttonBackgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the segmented button.Default value: **undefined**This property is read-only.
+Background blur style of the segmented button.
+
+Default value: **undefined**
+
+This property is read-only.
 
 **Type:** BlurStyle
 
@@ -86,7 +90,11 @@ Background blur style of the segmented button.Default value: **undefined**This p
 readonly buttonBackgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Background blur style options of the segmented button.Default value: **undefined**This property is read-only.
+Background blur style options of the segmented button.
+
+Default value: **undefined**
+
+This property is read-only.
 
 **Type:** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
 
@@ -104,9 +112,15 @@ Background blur style options of the segmented button.Default value: **undefined
 readonly buttonBackgroundColor?: ColorMetrics
 ```
 
-Background color of the segmented button.Default value: **\$r('sys.color.segment_button_v2_tab_button_background')**If the value is **undefined**, the default value is used.This property is read-only.
+Background color of the segmented button.
 
-**Type:** ColorMetrics
+Default value: **\$r('sys.color.segment_button_v2_tab_button_background')**
+
+If the value is **undefined**, the default value is used.
+
+This property is read-only.
+
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -122,7 +136,11 @@ Background color of the segmented button.Default value: **\$r('sys.color.segment
 readonly buttonBackgroundEffect?: BackgroundEffectOptions
 ```
 
-Background blur effect options of the segmented button.Default value: **undefined**This property is read-only.
+Background blur effect options of the segmented button.
+
+Default value: **undefined**
+
+This property is read-only.
 
 **Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
 
@@ -140,9 +158,17 @@ Background blur effect options of the segmented button.Default value: **undefine
 readonly buttonBorderRadius?: LengthMetrics
 ```
 
-Background border radius of the segmented button.Value range: [0, +∞)Default value: **\$r('sys.float.segment_button_v2_background_corner_radius')**If the value is out of the range, the default value is used.This property is read-only.
+Background border radius of the segmented button.
 
-**Type:** LengthMetrics
+Value range: [0, +∞)
+
+Default value: **\$r('sys.float.segment_button_v2_background_corner_radius')**
+
+If the value is out of the range, the default value is used.
+
+This property is read-only.
+
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 
@@ -158,9 +184,17 @@ Background border radius of the segmented button.Value range: [0, +∞)Default v
 readonly buttonMinHeight?: LengthMetrics
 ```
 
-Minimum height of the segmented button.Value range: [0, +∞)Default value: **\$r('sys.float.segment_button_v2_singleline_background_height')** for text-only buttons and icon- only buttons, and **\$r('sys.float.segment_button_v2_doubleline_background_height')** for buttons with both an icon and text.If the value is out of the range, the default value is used.This property is read-only.
+Minimum height of the segmented button.
 
-**Type:** LengthMetrics
+Value range: [0, +∞)
+
+Default value: **\$r('sys.float.segment_button_v2_singleline_background_height')** for text-only buttons and icon- only buttons, and **\$r('sys.float.segment_button_v2_doubleline_background_height')** for buttons with both an icon and text.
+
+If the value is out of the range, the default value is used.
+
+This property is read-only.
+
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 
@@ -176,9 +210,17 @@ Minimum height of the segmented button.Value range: [0, +∞)Default value: **\$
 readonly buttonPadding?: LengthMetrics
 ```
 
-Padding of the segmented button.Value range: [0, +∞)Default value: **\$r('sys.float.padding_level1')**If the value is out of the range, the default value is used.This property is read-only.
+Padding of the segmented button.
 
-**Type:** LengthMetrics
+Value range: [0, +∞)
+
+Default value: **\$r('sys.float.padding_level1')**
+
+If the value is out of the range, the default value is used.
+
+This property is read-only.
+
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 
@@ -212,9 +254,17 @@ Enable animation when selectedIndexes change.
 readonly itemBorderRadius?: LengthMetrics
 ```
 
-Border radius of segmented button items.Value range: [0, +∞)Default value: **\$r('sys.float.segment_button_v2_selected_corner_radius')**.If the value is out of the range, the default value is used.This property is read-only.
+Border radius of segmented button items.
 
-**Type:** LengthMetrics
+Value range: [0, +∞)
+
+Default value: **\$r('sys.float.segment_button_v2_selected_corner_radius')**.
+
+If the value is out of the range, the default value is used.
+
+This property is read-only.
+
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 
@@ -230,10 +280,19 @@ Border radius of segmented button items.Value range: [0, +∞)Default value: **\
 readonly itemFontColor?: ColorMetrics
 ```
 
-Font color of the selected segmented button item.Default value: **\$r('sys.color.font_primary')**.If the value is **undefined**, the default value is used.  
-**NOTE：**When **fontColor** of **textModifier** is set for **items**, **itemSelectedFontColor** has no effect.This property is read-only.
+Font color of the selected segmented button item.
 
-**Type:** ColorMetrics
+Default value: **\$r('sys.color.font_primary')**.
+
+If the value is **undefined**, the default value is used.
+
+**NOTE：**
+
+When **fontColor** of **textModifier** is set for **items**, **itemSelectedFontColor** has no effect.
+
+This property is read-only.
+
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -249,10 +308,21 @@ Font color of the selected segmented button item.Default value: **\$r('sys.color
 readonly itemFontSize?: LengthMetrics
 ```
 
-Font size of unselected segmented button items.Value range: [0, +∞)Default value: **14fp**  
-**NOTE：**Percentage values are not supported. If an invalid value is set, the default value is used.When **fontSize** of **textModifier** is set for **items**, **itemFontSize** has no effect.This property is read-only.
+Font size of unselected segmented button items.
 
-**Type:** LengthMetrics
+Value range: [0, +∞)
+
+Default value: **14fp**
+
+**NOTE：**
+
+Percentage values are not supported. If an invalid value is set, the default value is used.
+
+When **fontSize** of **textModifier** is set for **items**, **itemFontSize** has no effect.
+
+This property is read-only.
+
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 
@@ -268,8 +338,17 @@ Font size of unselected segmented button items.Value range: [0, +∞)Default val
 readonly itemFontWeight?: FontWeight
 ```
 
-Font weight of unselected segmented button items.Default value: **FontWeight.Medium**If the value is out of the range, the default value is used.  
-**NOTE：**When **fontWeight** of **textModifier** is set for **items**, **itemFontWeight** has no effect.This property is read-only.
+Font weight of unselected segmented button items.
+
+Default value: **FontWeight.Medium**
+
+If the value is out of the range, the default value is used.
+
+**NOTE：**
+
+When **fontWeight** of **textModifier** is set for **items**, **itemFontWeight** has no effect.
+
+This property is read-only.
 
 **Type:** FontWeight
 
@@ -287,10 +366,19 @@ Font weight of unselected segmented button items.Default value: **FontWeight.Med
 readonly itemIconFillColor?: ColorMetrics
 ```
 
-Icon color of unselected segmented button items.Default value: **\$r('sys.color.font_secondary')**If the value is **undefined**, the default value is used.  
-**NOTE：**When **fillColor** of **iconModifier** is set for **items**, **itemIconFillColor** has no effect.This property is read-only.
+Icon color of unselected segmented button items.
 
-**Type:** ColorMetrics
+Default value: **\$r('sys.color.font_secondary')**
+
+If the value is **undefined**, the default value is used.
+
+**NOTE：**
+
+When **fillColor** of **iconModifier** is set for **items**, **itemIconFillColor** has no effect.
+
+This property is read-only.
+
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -306,10 +394,21 @@ Icon color of unselected segmented button items.Default value: **\$r('sys.color.
 readonly itemIconSize?: SizeT<LengthMetrics>
 ```
 
-Image-type icon size of segmented button items.Value range: [0, +∞)Default value: **{ width: LengthMetrics.vp(24), height: LengthMetrics.vp(24) }**.If the value is out of the range, the default value is used.  
-**NOTE：**When **width** and **height** of **iconModifier** are set for **items**, **itemIconSize** has no effect.This property is read-only.
+Image-type icon size of segmented button items.
 
-**Type:** SizeT&lt;LengthMetrics&gt;
+Value range: [0, +∞)
+
+Default value: **{ width: LengthMetrics.vp(24), height: LengthMetrics.vp(24) }**.
+
+If the value is out of the range, the default value is used.
+
+**NOTE：**
+
+When **width** and **height** of **iconModifier** are set for **items**, **itemIconSize** has no effect.
+
+This property is read-only.
+
+**Type:** [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt;
 
 **Since:** 18
 
@@ -325,8 +424,17 @@ Image-type icon size of segmented button items.Value range: [0, +∞)Default val
 readonly itemMaxFontScale?: number | Resource
 ```
 
-Maximum font scale factor of the segmented button item text.Value range: [1, 2]Default value: **1**  
-**NOTE：**A value less than 1 is treated as **1**. A value greater than 2 is treated as **2**. Abnormal values are ineffective by default.This property is read-only.
+Maximum font scale factor of the segmented button item text.
+
+Value range: [1, 2]
+
+Default value: **1**
+
+**NOTE：**
+
+A value less than 1 is treated as **1**. A value greater than 2 is treated as **2**. Abnormal values are ineffective by default.
+
+This property is read-only.
 
 **Type:** number \| Resource
 
@@ -344,8 +452,17 @@ Maximum font scale factor of the segmented button item text.Value range: [1, 2]D
 readonly itemMinFontScale?: number | Resource
 ```
 
-Minimum font scale factor of the segmented button item text.Value range: [0, 1]Default value: **0**  
-**NOTE：**A value less than 0 is treated as **0**. A value greater than 1 is treated as **1**. Abnormal values are ineffective by default.This property is read-only.
+Minimum font scale factor of the segmented button item text.
+
+Value range: [0, 1]
+
+Default value: **0**
+
+**NOTE：**
+
+A value less than 0 is treated as **0**. A value greater than 1 is treated as **1**. Abnormal values are ineffective by default.
+
+This property is read-only.
 
 **Type:** number \| Resource
 
@@ -363,10 +480,19 @@ Minimum font scale factor of the segmented button item text.Value range: [0, 1]D
 readonly itemMinHeight?: LengthMetrics
 ```
 
-Minimum height of the segmented button item.Value range: [0, +∞)Default value:  
-**\$r('sys.float.segment_button_v2_singleline_selected_height')** for text-only buttons and icon-only buttons, and **\$r('sys.float.segment_button_v2_doubleline_selected_height')** for buttons with both an icon and text.If the value is out of the range, the default value is used.This property is read-only.
+Minimum height of the segmented button item.
 
-**Type:** LengthMetrics
+Value range: [0, +∞)
+
+Default value:
+
+**\$r('sys.float.segment_button_v2_singleline_selected_height')** for text-only buttons and icon-only buttons, and **\$r('sys.float.segment_button_v2_doubleline_selected_height')** for buttons with both an icon and text.
+
+If the value is out of the range, the default value is used.
+
+This property is read-only.
+
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 
@@ -382,7 +508,13 @@ Minimum height of the segmented button item.Value range: [0, +∞)Default value:
 readonly itemPadding?: LocalizedPadding
 ```
 
-Padding of the segmented button item.Default value: **{top: LengthMetrics.resource (\$r('sys.float.padding_level2')), bottom: LengthMetrics. resource (\$r('sys.float.padding_level2')), start: LengthMetrics.resource(\$r('sys.float.padding_level4')), end: LengthMetrics.resource(\$r('sys.float.padding_level4'))}**If the value is **undefined**, the default value is used.This property is read-only.
+Padding of the segmented button item.
+
+Default value: **{top: LengthMetrics.resource (\$r('sys.float.padding_level2')), bottom: LengthMetrics. resource (\$r('sys.float.padding_level2')), start: LengthMetrics.resource(\$r('sys.float.padding_level4')), end: LengthMetrics.resource(\$r('sys.float.padding_level4'))}**
+
+If the value is **undefined**, the default value is used.
+
+This property is read-only.
 
 **Type:** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
@@ -400,7 +532,11 @@ Padding of the segmented button item.Default value: **{top: LengthMetrics.resour
 readonly items: SegmentButtonV2Items
 ```
 
-Items of the segmented button.If the value is **undefined**, the option information is not displayed.This property is read-only.
+Items of the segmented button.
+
+If the value is **undefined**, the option information is not displayed.
+
+This property is read-only.
 
 **Type:** [SegmentButtonV2Items](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md)
 
@@ -418,9 +554,15 @@ Items of the segmented button.If the value is **undefined**, the option informat
 readonly itemSelectedBackgroundColor?: ColorMetrics
 ```
 
-Background color of the selected segmented button item.Default value: **\$r('sys.color.segment_button_v2_tab_selected_item_background')**If the value is **undefined**, the default value is used.This property is read-only.
+Background color of the selected segmented button item.
 
-**Type:** ColorMetrics
+Default value: **\$r('sys.color.segment_button_v2_tab_selected_item_background')**
+
+If the value is **undefined**, the default value is used.
+
+This property is read-only.
+
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -436,10 +578,19 @@ Background color of the selected segmented button item.Default value: **\$r('sys
 readonly itemSelectedFontColor?: ColorMetrics
 ```
 
-Font color of the selected segmented button item.Default value: **\$r('sys.color.font_primary')**.If the value is **undefined**, the default value is used.  
-**NOTE：**When **fontColor** of **textModifier** is set for **items**, **itemSelectedFontColor** has no effect.This property is read-only.
+Font color of the selected segmented button item.
 
-**Type:** ColorMetrics
+Default value: **\$r('sys.color.font_primary')**.
+
+If the value is **undefined**, the default value is used.
+
+**NOTE：**
+
+When **fontColor** of **textModifier** is set for **items**, **itemSelectedFontColor** has no effect.
+
+This property is read-only.
+
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -455,10 +606,21 @@ Font color of the selected segmented button item.Default value: **\$r('sys.color
 readonly itemSelectedFontSize?: LengthMetrics
 ```
 
-Font size of the selected segmented button item.Value range: [0, +∞)Default value: **14fp**  
-**NOTE：**Percentage values are not supported. If an invalid value is set, the default value is used.When **fontSize** of **textModifier** is set for **items**, **itemSelectedFontSize** has no effect.This property is read-only.
+Font size of the selected segmented button item.
 
-**Type:** LengthMetrics
+Value range: [0, +∞)
+
+Default value: **14fp**
+
+**NOTE：**
+
+Percentage values are not supported. If an invalid value is set, the default value is used.
+
+When **fontSize** of **textModifier** is set for **items**, **itemSelectedFontSize** has no effect.
+
+This property is read-only.
+
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 
@@ -474,8 +636,17 @@ Font size of the selected segmented button item.Value range: [0, +∞)Default va
 readonly itemSelectedFontWeight?: FontWeight
 ```
 
-Font weight of the selected segmented button item.Default value: **FontWeight.Medium**If the value is out of the range, the default value is used.  
-**NOTE：**When **fontWeight** of **textModifier** is set for **items**, **itemSelectedFontWeight** has no effect.This property is read-only.
+Font weight of the selected segmented button item.
+
+Default value: **FontWeight.Medium**
+
+If the value is out of the range, the default value is used.
+
+**NOTE：**
+
+When **fontWeight** of **textModifier** is set for **items**, **itemSelectedFontWeight** has no effect.
+
+This property is read-only.
 
 **Type:** FontWeight
 
@@ -493,10 +664,19 @@ Font weight of the selected segmented button item.Default value: **FontWeight.Me
 readonly itemSelectedIconFillColor?: ColorMetrics
 ```
 
-Icon color of the selected segmented button item.Default value: **\$r('sys.color.font_primary')**If the value is **undefined**, the default value is used.  
-**NOTE：**When **fillColor** of **iconModifier** is set for **items**, **itemSelectedIconFillColor** has no effect.This property is read-only.
+Icon color of the selected segmented button item.
 
-**Type:** ColorMetrics
+Default value: **\$r('sys.color.font_primary')**
+
+If the value is **undefined**, the default value is used.
+
+**NOTE：**
+
+When **fillColor** of **iconModifier** is set for **items**, **itemSelectedIconFillColor** has no effect.
+
+This property is read-only.
+
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -512,10 +692,19 @@ Icon color of the selected segmented button item.Default value: **\$r('sys.color
 readonly itemSelectedSymbolFontColor?: ColorMetrics
 ```
 
-HM Symbol icon color of the selected segmented button item.Default value: **\$r('sys.color.font_primary')**If the value is **undefined**, the default value is used.  
-**NOTE：**When **fontColor** of **symbolModifier** is set for **items**, **itemSelectedSymbolFontColor** has no effect.This property is read-only.
+HM Symbol icon color of the selected segmented button item.
 
-**Type:** ColorMetrics
+Default value: **\$r('sys.color.font_primary')**
+
+If the value is **undefined**, the default value is used.
+
+**NOTE：**
+
+When **fontColor** of **symbolModifier** is set for **items**, **itemSelectedSymbolFontColor** has no effect.
+
+This property is read-only.
+
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -531,7 +720,13 @@ HM Symbol icon color of the selected segmented button item.Default value: **\$r(
 readonly itemShadow?: ShadowOptions | ShadowStyle
 ```
 
-Shadow of the segmented button item.Default value: **ShadowStyle.OUTER_DEFAULT_XS**If the value is out of the range, the default value is used.This property is read-only.
+Shadow of the segmented button item.
+
+Default value: **ShadowStyle.OUTER_DEFAULT_XS**
+
+If the value is out of the range, the default value is used.
+
+This property is read-only.
 
 **Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
@@ -549,10 +744,19 @@ Shadow of the segmented button item.Default value: **ShadowStyle.OUTER_DEFAULT_X
 readonly itemSpace?: LengthMetrics
 ```
 
-Space between segmented button items.Value range: [0, +∞)Default value: **LengthMetrics.vp(0)**  
-**NOTE：**Percentage values are not supported. If an invalid value is set, the default value is used.This property is read-only.
+Space between segmented button items.
 
-**Type:** LengthMetrics
+Value range: [0, +∞)
+
+Default value: **LengthMetrics.vp(0)**
+
+**NOTE：**
+
+Percentage values are not supported. If an invalid value is set, the default value is used.
+
+This property is read-only.
+
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 
@@ -568,10 +772,19 @@ Space between segmented button items.Value range: [0, +∞)Default value: **Leng
 readonly itemSymbolFontColor?: ColorMetrics
 ```
 
-HM Symbol icon color of unselected segmented button items.Default value: **\$r('sys.color.font_secondary')**If the value is **undefined**, the default value is used.  
-**NOTE：**When **fontColor** of **symbolModifier** is set for **items**, **itemSymbolFontColor** has no effect.This property is read-only.
+HM Symbol icon color of unselected segmented button items.
 
-**Type:** ColorMetrics
+Default value: **\$r('sys.color.font_secondary')**
+
+If the value is **undefined**, the default value is used.
+
+**NOTE：**
+
+When **fontColor** of **symbolModifier** is set for **items**, **itemSymbolFontColor** has no effect.
+
+This property is read-only.
+
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -587,10 +800,21 @@ HM Symbol icon color of unselected segmented button items.Default value: **\$r('
 readonly itemSymbolFontSize?: LengthMetrics
 ```
 
-HM Symbol icon size of segmented button items.Value range: [0, +∞)Default value: **20fp**  
-**NOTE：**Percentage values are not supported. If an invalid value is set, the default value is used.When **fontSize** of **symbolModifier** is set for **items**, **itemSymbolFontSize** has no effect.This property is read-only.
+HM Symbol icon size of segmented button items.
 
-**Type:** LengthMetrics
+Value range: [0, +∞)
+
+Default value: **20fp**
+
+**NOTE：**
+
+Percentage values are not supported. If an invalid value is set, the default value is used.
+
+When **fontSize** of **symbolModifier** is set for **items**, **itemSymbolFontSize** has no effect.
+
+This property is read-only.
+
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 
@@ -606,7 +830,13 @@ HM Symbol icon size of segmented button items.Value range: [0, +∞)Default valu
 readonly languageDirection?: Direction
 ```
 
-Language direction of the segmented button.Default value: **Direction.Auto**If the value is out of the range, the default value is used.This property is read-only.
+Language direction of the segmented button.
+
+Default value: **Direction.Auto**
+
+If the value is out of the range, the default value is used.
+
+This property is read-only.
 
 **Type:** Direction
 
@@ -642,7 +872,11 @@ Callback invoked when a segmented button item is clicked.
 readonly selectedIndex: number
 ```
 
-Index of the selected segmented button item. The index is zero-based and increments by 1.If the value is undefined, no item is selected. If the value is a non-positive value, the default value **0** is used.This property is read-only.
+Index of the selected segmented button item. The index is zero-based and increments by 1.
+
+If the value is undefined, no item is selected. If the value is a non-positive value, the default value **0** is used.
+
+This property is read-only.
 
 **Type:** number
 

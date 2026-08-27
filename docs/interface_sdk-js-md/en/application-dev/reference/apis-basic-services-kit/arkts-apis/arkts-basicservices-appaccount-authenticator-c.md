@@ -9,7 +9,7 @@ Defines an authenticator.
 ## Modules to Import
 
 ```TypeScript
-import appAccount from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addAccountImplicitly
@@ -107,7 +107,7 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value contains a maximum of 512 characters. |
 | authType | string | Yes | Authentication type. The value is user-defined and contains a maximum of 1024 characters. |
-| options | Record & lt;string, Object & gt; | Yes | Options for the authentication. |
+| options | Record&lt;string, Object&gt; | Yes | Options for the authentication. |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Examples**
@@ -299,7 +299,7 @@ Checks the account labels. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value contains a maximum of 512 characters. |
-| labels | Array & lt;string & gt; | Yes | Labels to check. |
+| labels | Array&lt;string&gt; | Yes | Labels to check. |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Examples**

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getNfcATag
@@ -32,4 +32,4 @@ function getNfcATag(tagInfo: TagInfo): NfcATag
 
 | 类型 | 说明 |
 | --- | --- |
-| [NfcATag](arkts-connectivity-tag-nfcatag-t.md) | NFC A类型Tag对象。 |
+| NfcATag | NFC A类型Tag对象。 |

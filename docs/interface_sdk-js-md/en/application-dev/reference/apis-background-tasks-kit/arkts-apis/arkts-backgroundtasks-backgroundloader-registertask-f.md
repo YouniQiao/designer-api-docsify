@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import backgroundLoader from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## registerTask
@@ -26,7 +26,7 @@ Register background load task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskInfo | [TaskInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-taskinfo-i.md) | Yes |  |
+| taskInfo | TaskInfo | Yes |  |
 
 **Error codes:**
 

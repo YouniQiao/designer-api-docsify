@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import autoStartupManager from '@kit.AbilityKit';
+import { autoStartupManager } from '@kit.AbilityKit';
 ```
 
 ## cancelApplicationAutoStartup
@@ -95,7 +95,7 @@ Cancels the auto-startup setting for an application component. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

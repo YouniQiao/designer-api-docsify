@@ -1,6 +1,8 @@
 # DialogActionInfo
 
-The definition of dialog action result.@interface DialogActionInfo
+The definition of dialog action result.
+
+@interface DialogActionInfo
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of dialog action result.@interface DialogActionInfo
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## clickedBtnId

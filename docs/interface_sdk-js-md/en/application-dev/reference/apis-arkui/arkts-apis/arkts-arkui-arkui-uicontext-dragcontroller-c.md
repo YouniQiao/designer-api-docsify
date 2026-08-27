@@ -427,8 +427,8 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;{ event: DragEvent, extraParams: string | > } Callback used to return the result. |
-| Promise & lt;dragController.DragEventParam & gt; | A Promise with the drag event information.<br>**Applicable version:** 12 and later |
+| Promise&lt;{ event: DragEvent, extraParams: string | > } Callback used to return the result. |
+| Promise&lt;dragController.DragEventParam&gt; | A Promise with the drag event information.<br>**Applicable version:** 12 and later |
 
 **Error codes:**
 

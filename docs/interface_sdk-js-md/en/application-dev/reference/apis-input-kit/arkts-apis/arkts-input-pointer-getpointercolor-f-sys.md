@@ -82,7 +82,7 @@ Obtains the current mouse pointer color. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the mouse pointer color. |
+| Promise&lt;number&gt; | Promise used to return the mouse pointer color. |
 
 **Error codes:**
 

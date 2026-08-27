@@ -11,7 +11,8 @@
 function isDefaultNetMeteredSync(): boolean
 ```
 
-Checks whether the data traffic over the current network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API returns the result synchronously.  
+Checks whether the data traffic over the current network is metered. For example, data traffic over Wi-Fi is not metered, whereas that over cellular networks is. This API returns the result synchronously.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 10

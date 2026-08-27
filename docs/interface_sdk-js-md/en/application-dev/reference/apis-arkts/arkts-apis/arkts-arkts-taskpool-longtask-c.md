@@ -13,7 +13,7 @@ Describes a continuous task. **LongTask** inherits from [Task](arkts-arkts-taskp
 ## Modules to Import
 
 ```TypeScript
-import taskpool from '@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 **Examples**

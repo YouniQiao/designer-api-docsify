@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendablePreferences from '@kit.ArkData';
+import { sendablePreferences } from '@kit.ArkData';
 ```
 
 ## removePreferencesFromCache
@@ -12,7 +12,9 @@ import sendablePreferences from '@kit.ArkData';
 function removePreferencesFromCache(context: Context, options: Options): Promise<void>
 ```
 
-从缓存中移除指定的Preferences实例，使用Promise异步回调。应用首次调用[getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用 [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次 getPreferences将会重新读取持久化文件，生成新的Preferences实例。
+从缓存中移除指定的Preferences实例，使用Promise异步回调。
+
+应用首次调用[getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用[getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次getPreferences将会重新读取持久化文件，生成新的Preferences实例。
 
 **起始版本：** 12
 
@@ -24,14 +26,14 @@ function removePreferencesFromCache(context: Context, options: Options): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文。 |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 | 与Preferences实例相关的配置选项。 |
+| context | Context | 是 | 应用上下文。 |
+| options | Options | 是 | 与Preferences实例相关的配置选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 **错误码：**
 

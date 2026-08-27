@@ -1,6 +1,6 @@
 # Badge
 
-信息标记容器组件，可以附加在单个组件上用于信息提醒。支持数字、字符串和圆点三种标记形式，可自定义标记样式（文本颜色、大小、标记颜色和大小）和显示位置。适用于需要提示用户有新消息或未读消息的场景，例如未读消息计数、新功能提示等，帮助用户 快速识别和关注重要信息，提升用户体验。
+信息标记容器组件，可以附加在单个组件上用于信息提醒。支持数字、字符串和圆点三种标记形式，可自定义标记样式（文本颜色、大小、标记颜色和大小）和显示位置。适用于需要提示用户有新消息或未读消息的场景，例如未读消息计数、新功能提示等，帮助用户快速识别和关注重要信息，提升用户体验。
 
 ## 子组件
 
@@ -67,11 +67,16 @@ Badge(value: BadgeParamWithString)
 
 | 名称 | 说明 |
 | --- | --- |
+| [BadgeParam](arkts-arkui-badgeparam-i.md) | 包含用于创建Badge组件的基础参数。 |
+| [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) | BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有BadgeParam的全部属性。 |
+| [BadgeParamWithString](arkts-arkui-badgeparamwithstring-i.md) | BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badgeparam-i.md)，具有BadgeParam的全部属性。 |
+| [BadgeStyle](arkts-arkui-badgestyle-i.md) | Badge的样式。包括文本颜色、大小、字重、标记颜色和标记大小。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
+| [BadgePosition](arkts-arkui-badgeposition-e.md) | 标记显示位置。 |
 
 ## 示例
 

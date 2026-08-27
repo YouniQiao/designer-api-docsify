@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import scan from '@kit.ConnectivityKit';
+import { scan } from '@kit.ConnectivityKit';
 ```
 
 ## startScan
@@ -27,13 +27,13 @@ Starts NearLink scanning. This API uses a promise to return the result. You need
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filters | [ScanFilters](arkts-connectivity-scan-scanfilters-i.md)[] \| null | Yes | Filter criteria for NearLink advertising. Devices that meet the filter criteria will be reported. If the filter is not enabled, **null** is passed. If this parameter is set to **null**, all discoverable NearLink devices nearby will be scanned. However, this method is not recommended as it may pick up unexpected devices and increase power consumption. |
-| options | [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md) | No | Scan options. The low power consumption mode is used by default. |
+| options | ScanOptions | No | Scan options. The low power consumption mode is used by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

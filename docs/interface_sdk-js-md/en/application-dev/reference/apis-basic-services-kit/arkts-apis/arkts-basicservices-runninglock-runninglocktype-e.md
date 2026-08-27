@@ -12,8 +12,11 @@ Enumerates the types of **RunningLock** objects.
 BACKGROUND = 1
 ```
 
-A lock that prevents the system from entering sleep mode when the screen is off.  
-**NOTE：**This parameter is supported since API version 7 and deprecated since API version 10.
+A lock that prevents the system from entering sleep mode when the screen is off.
+
+**NOTE：**
+
+This parameter is supported since API version 7 and deprecated since API version 10.
 
 **Since:** 7
 

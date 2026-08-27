@@ -9,7 +9,7 @@ Represents the background load task information, which is used to register task.
 ## Modules to Import
 
 ```TypeScript
-import backgroundLoader from '@kit.BackgroundTasksKit';
+import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName

@@ -34,12 +34,21 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 addLocalInputEventMonitor(eventMask: number, listener: InputEventListener): InputEventMonitor
 ```
 
-Registers a local input event monitor.The "Local" in the interface name indicates that the monitor is only valid within the current UIContext, and does not affect other UIContext instances. Each UIContext maintains its own independent list of monitors.Performance Warning: Do not perform time-consuming operations in the callback!Monitor Object Notes:  
+Registers a local input event monitor.
+
+The "Local" in the interface name indicates that the monitor is only valid within the current UIContext, and does not affect other UIContext instances. Each UIContext maintains its own independent list of monitors.
+
+Performance Warning: Do not perform time-consuming operations in the callback!
+
+Monitor Object Notes:
+
 - The returned Monitor object is a unique identifier created by the system.  
 - Developers cannot actively construct or forge this object.  
 - Must save the returned monitor object reference for subsequent cancellation.  
-- It is recommended to use a variable to save it to avoid losing the reference.  
-Usage Examples:  
+- It is recommended to use a variable to save it to avoid losing the reference.
+
+Usage Examples:
+
 ```typescript
 // Monitor a single event type
 const monitor1 = uiContext.addLocalInputEventMonitor(
@@ -186,7 +195,7 @@ Adds transition animations for state changes in closure code.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | Animation settings. |
-| event | () = & gt; void | Yes | Closure function that displays the animation. The system automatically inserts the transition animation if the state changes in the closure function. |
+| event | () =&gt; void | Yes | Closure function that displays the animation. The system automatically inserts the transition animation if the state changes in the closure function. |
 
 **Examples**
 
@@ -524,13 +533,13 @@ Closes the sheet corresponding to **bindSheetContent**. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bindSheetContent | ComponentContent & lt;T & gt; | Yes | Content to display on the sheet. |
+| bindSheetContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content to display on the sheet. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -963,7 +972,7 @@ Dispach keyboard event to the frameNode with inspector key.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | node | number \| string | Yes | The uniqueId or inspector key of the target FrameNode. |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | The key event to be sent. |
+| event | KeyEvent | Yes | The key event to be sent. |
 
 **Return value:**
 
@@ -1275,7 +1284,7 @@ Get the FrameNode attached to current window by id.
 
 | Type | Description |
 | --- | --- |
-| FrameNode \| null | The instance of FrameNode. |
+| [FrameNode](arkts-arkui-framenode-c.md) \| null | The instance of FrameNode. |
 
 **Examples**
 
@@ -1537,7 +1546,7 @@ Obtains the component tree and component attributes. This API has a number proce
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filters | Array & lt;string & gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported:    **"id"**: unique ID of the component.    **"src"**: source of the resource.    **"content"**: information or data contained in the element, component, or object.    **"editable"**: whether the component is editable.    **"scrollable"**: whether the component is scrollable.    **"selectable"**: whether the component is selectable.    **"focusable"**: whether the component is focusable.    **"focused"**: whether the component is currently focused. If **filters** includes one or more fields, unspecified fields will be filtered out from the results. If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. The following filter field is supported since API version 20:    **"isLayoutInspector"**: whether the component tree contains custom components. If **filters** is omitted or does not contain **"isLayoutInspector"**, the returned component tree will not include custom component details. Other filter fields are used only in testing scenarios. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported:    **"id"**: unique ID of the component.    **"src"**: source of the resource.    **"content"**: information or data contained in the element, component, or object.    **"editable"**: whether the component is editable.    **"scrollable"**: whether the component is scrollable.    **"selectable"**: whether the component is selectable.    **"focusable"**: whether the component is focusable.    **"focused"**: whether the component is currently focused. If **filters** includes one or more fields, unspecified fields will be filtered out from the results. If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. The following filter field is supported since API version 20:    **"isLayoutInspector"**: whether the component tree contains custom components. If **filters** is omitted or does not contain **"isLayoutInspector"**, the returned component tree will not include custom component details. Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
@@ -1639,7 +1648,7 @@ Obtains the attributes of the specified component and its child components. This
 | --- | --- | --- | --- |
 | id | string | Yes | ID of the target component. |
 | depth | number | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of the specified component are obtained. If the value is **2**, the attributes of the specified component and its level-1 child components are obtained. The rest can be deduced by analogy. |
-| filters | Array & lt;string & gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported:    **"id"**: unique ID of the component.    **"src"**: source of the resource.    **"content"**: information or data contained in the element, component, or object.    **"editable"**: whether the component is editable.    **"scrollable"**: whether the component is scrollable.    **"selectable"**: whether the component is selectable.    **"focusable"**: whether the component is focusable.    **"focused"**: whether the component is currently focused. If **filters** includes one or more fields, unspecified fields will be filtered out from the results. If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. Other filter fields are used only in testing scenarios. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported:    **"id"**: unique ID of the component.    **"src"**: source of the resource.    **"content"**: information or data contained in the element, component, or object.    **"editable"**: whether the component is editable.    **"scrollable"**: whether the component is scrollable.    **"selectable"**: whether the component is selectable.    **"focusable"**: whether the component is focusable.    **"focused"**: whether the component is currently focused. If **filters** includes one or more fields, unspecified fields will be filtered out from the results. If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
@@ -1776,7 +1785,7 @@ Get FrameNode by id.
 
 | Type | Description |
 | --- | --- |
-| FrameNode \| null | The instance of FrameNode. |
+| [FrameNode](arkts-arkui-framenode-c.md) \| null | The instance of FrameNode. |
 
 **Examples**
 
@@ -1789,6 +1798,7 @@ getFrameNodeByUniqueId(id: number): FrameNode | null
 ```
 
 Get FrameNode by uniqueId. Obtains the entity node, FrameNode, of a component on the component tree using its uniqueId. The return value depends on the type of component associated with the uniqueId.
+
 1. If the uniqueId corresponds to a built-in component, the associated FrameNode is returned.
 2. If the uniqueId corresponds to a custom component: If the component has rendered content, its root node is
 returned, with the type __Common__; if the component has no rendered content, the FrameNode of its first child component is returned.
@@ -1812,7 +1822,7 @@ returned, with the type __Common__; if the component has no rendered content, th
 
 | Type | Description |
 | --- | --- |
-| FrameNode \| null | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
+| [FrameNode](arkts-arkui-framenode-c.md) \| null | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
 
 **Examples**
 
@@ -2367,7 +2377,7 @@ Obtains the root node of the page corresponding to the UIContext.
 
 | Type | Description |
 | --- | --- |
-| FrameNode \| null | FrameNode of the root node of the page or **null**. |
+| [FrameNode](arkts-arkui-framenode-c.md) \| null | FrameNode of the root node of the page or **null**. |
 
 **Error codes:**
 
@@ -3365,7 +3375,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bindSheetContent | ComponentContent & lt;T & gt; | Yes | Content to display on the sheet. |
+| bindSheetContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content to display on the sheet. |
 | sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | No | Style of the sheet.   **NOTE：** 1. **SheetOptions.uiContext** cannot be set. Its value is fixed to the **UIContext** object of the current instance. 2. If **targetId** is not passed in, **SheetOptions.preferType** cannot be set to **POPUP**; if **POPUP** is set, it will be replaced with **CENTER**. 3. If **targetId** is not passed in, **SheetOptions.mode** cannot be set to **EMBEDDED**; the default mode is **OVERLAY**. 4. For the default values of other attributes, see [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md). |
 | targetId | number | No | ID of the component to be bound. If this parameter is not set, no component is bound. If the ID does not exist, the error code 120004 is returned. Returns error code 401 if **undefined** is passed in. |
 
@@ -3373,7 +3383,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -3752,8 +3762,10 @@ struct MatrixExample {
 removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 ```
 
-Removes a local input event monitor.  
-**Important Notes**:  
+Removes a local input event monitor.
+
+**Important Notes**:
+
 - Only Monitor objects returned by addLocalInputEventMonitor can be removed.  
 - Cannot unregister a monitor by manually constructing an object.  
 - If an invalid object is passed, the system silently ignores it.
@@ -3973,7 +3985,7 @@ Run custom functions inside the UIContext scope.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | Yes | The function called through UIContext. |
+| callback | () =&gt; void | Yes | The function called through UIContext. |
 
 **Examples**
 
@@ -4356,7 +4368,9 @@ export default class EntryAbility extends UIAbility {
 static setResourceManagerCacheMaxCountForHSP(count: number): void
 ```
 
-Set the upper limit for the cache count of HSP resource management objects.If the upper limit of the cache is set too high, there is a risk of excessive memory overhead. It is recommended to configure it according to actual needs.
+Set the upper limit for the cache count of HSP resource management objects.
+
+If the upper limit of the cache is set too high, there is a risk of excessive memory overhead. It is recommended to configure it according to actual needs.
 
 **Since:** 21
 
@@ -4913,7 +4927,7 @@ Updates the style of the sheet corresponding to the provided **bindSheetContent*
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bindSheetContent | ComponentContent & lt;T & gt; | Yes | Content to display on the sheet. |
+| bindSheetContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content to display on the sheet. |
 | sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | Yes | Style of the sheet.   **NOTE：** **SheetOptions.UIContext** and **SheetOptions.mode** cannot be updated. |
 | partialUpdate | boolean | No | Whether to update the sheet in incremental mode.Default value: **false**   **NOTE：** 1. **true**: incremental update, where the specified properties in **SheetOptions** are updated, and other properties stay at their current value. 2. **false**: full update, where all properties except those specified in **SheetOptions** are restored to default values. |
 
@@ -4921,7 +4935,7 @@ Updates the style of the sheet corresponding to the provided **bindSheetContent*
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -9,8 +9,7 @@ Represents the batch download progress of a file from the Drive Kit.
 ## Modules to Import
 
 ```TypeScript
-import cloudSync from '@kit.CoreFileKit';
-import cloudSyncManager from '@kit.CoreFileKitManager';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## getFailedFiles
@@ -85,7 +84,7 @@ Obtains the list of files that are successfully downloaded in batches.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of URIs of the files that are successfully downloaded. The value is an array. |
+| Array&lt;string&gt; | List of URIs of the files that are successfully downloaded. The value is an array. |
 
 **Error codes:**
 

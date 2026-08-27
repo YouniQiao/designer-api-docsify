@@ -11,7 +11,7 @@ Describes the result of check notifications.
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## code
@@ -20,8 +20,10 @@ import notificationManager from '@kit.NotificationKit';
 code: number
 ```
 
-Result code.  
-**0**: display.  
+Result code.
+
+**0**: display.
+
 **1**: no display.
 
 **Type:** number

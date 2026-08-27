@@ -11,7 +11,7 @@ Represents a component description file.
 ## Modules to Import
 
 ```TypeScript
-import update from '@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## componentId
@@ -20,7 +20,11 @@ import update from '@kit.BasicServicesKit';
 componentId: string
 ```
 
-Component ID, which uniquely identifies a component in the upgrade package.Use scenarios: Pass this parameter to obtain the description of the corresponding component when calling **getNewVersionDescription**. Use this parameter to distinguish different components when displaying version details.How to obtain: Obtain the value of **componentId** of the corresponding component from the **versionComponents** array in the version check result.
+Component ID, which uniquely identifies a component in the upgrade package.
+
+Use scenarios: Pass this parameter to obtain the description of the corresponding component when calling **getNewVersionDescription**. Use this parameter to distinguish different components when displaying version details.
+
+How to obtain: Obtain the value of **componentId** of the corresponding component from the **versionComponents** array in the version check result.
 
 **Type:** string
 

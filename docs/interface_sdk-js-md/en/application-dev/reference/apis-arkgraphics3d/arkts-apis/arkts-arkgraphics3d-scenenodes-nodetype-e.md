@@ -1,6 +1,8 @@
 # NodeType
 
-Enumerates the node types.@enum { number }
+Enumerates the node types.
+
+@enum { number }
 
 **Since:** 12
 

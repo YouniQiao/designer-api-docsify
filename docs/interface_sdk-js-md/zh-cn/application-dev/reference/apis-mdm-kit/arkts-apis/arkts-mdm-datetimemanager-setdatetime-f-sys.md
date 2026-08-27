@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import dateTimeManager from '@kit.MDMKit';
+import { dateTimeManager } from '@kit.MDMKit';
 ```
 
 ## setDateTime
@@ -102,7 +102,7 @@ function setDateTime(admin: Want, time: number): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **错误码：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import BackupExtensionAbility, { BundleVersion } from '@kit.CoreFileKit';
+import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -26,4 +26,4 @@ import BackupExtensionAbility, { BundleVersion } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Describe bundle version@interface BundleVersion |
+| [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md) | Describe bundle version |

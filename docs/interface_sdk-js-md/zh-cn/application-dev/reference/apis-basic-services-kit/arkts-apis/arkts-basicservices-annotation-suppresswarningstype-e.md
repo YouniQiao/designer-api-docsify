@@ -12,7 +12,7 @@
 COMPATIBILITY = 'compatibility'
 ```
 
-支持消除兼容性告警。 当调用API的起始版本高于工程设置的兼容SDK版本时（build-profile.json5中指定的compatibleSdkVersion）产生的告警。 建议在已做版本判断或兼容性处理时使用，避免盲目抑制告警导致低版本设备运行异常。
+支持消除兼容性告警。当调用API的起始版本高于工程设置的兼容SDK版本时（build-profile.json5中指定的compatibleSdkVersion）产生的告警。建议在已做版本判断或兼容性处理时使用，避免盲目抑制告警导致低版本设备运行异常。
 
 **起始版本：** 23
 

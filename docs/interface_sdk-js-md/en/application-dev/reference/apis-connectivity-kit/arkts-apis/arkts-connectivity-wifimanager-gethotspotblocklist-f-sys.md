@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getHotspotBlockList
@@ -27,7 +26,7 @@ Get all the stations in the block list. If does't have the permission of ohos.pe
 
 | Type | Description |
 | --- | --- |
-| Array & lt;StationInfo & gt; | stations in the block list. |
+| Array&lt;StationInfo&gt; | stations in the block list. |
 
 **Error codes:**
 

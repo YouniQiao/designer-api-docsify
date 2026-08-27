@@ -32,7 +32,7 @@ Obtains the exposure compensation values of the camera device.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Array of compensation values. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Array&lt;number&gt; | Array of compensation values. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 

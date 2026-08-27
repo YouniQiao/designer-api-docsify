@@ -9,7 +9,7 @@ The **DriverExtensionAbility** module provides the ExtensionAbility related to d
 ## Modules to Import
 
 ```TypeScript
-import DriverExtensionAbility, { DriverExtensionContext } from '@kit.DriverDevelopmentKit';
+import { DriverExtensionAbility, DriverExtensionContext } from '@kit.DriverDevelopmentKit';
 ```
 
 ## onConnect
@@ -36,7 +36,7 @@ Called following **onCreate()** when a DriverExtensionAbility is started by call
 
 | Type | Description |
 | --- | --- |
-| rpc.RemoteObject \| Promise & lt;rpc.RemoteObject & gt; | RemoteObject** object used for communication between the server and client, or promise used to return the value. |
+| rpc.RemoteObject \| Promise&lt;rpc.RemoteObject&gt; | RemoteObject** object used for communication between the server and client, or promise used to return the value. |
 
 **Examples**
 
@@ -156,13 +156,13 @@ Dumps client information. It is recommended that developers don't DUMP sensitive
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Array & lt;string & gt; | Yes | Parameters in the form of a command. |
+| params | Array&lt;string&gt; | Yes | Parameters in the form of a command. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | String array used to dump client information. |
+| Array&lt;string&gt; | String array used to dump client information. |
 
 **Examples**
 

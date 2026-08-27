@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## isAbilityEnabledSync
@@ -24,7 +24,7 @@ function isAbilityEnabledSync(info: AbilityInfo): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [AbilityInfo](arkts-ability-abilityinfo-i.md) | 是 | 表示关于检查ability的信息。 |
+| info | AbilityInfo | 是 | 表示关于检查ability的信息。 |
 
 **返回值：**
 

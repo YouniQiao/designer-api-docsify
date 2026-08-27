@@ -1,6 +1,6 @@
 # WifiCategory
 
-WLAN类别。 @enum { number }
+WLAN类别。@enum { number }
 
 **起始版本：** 12
 

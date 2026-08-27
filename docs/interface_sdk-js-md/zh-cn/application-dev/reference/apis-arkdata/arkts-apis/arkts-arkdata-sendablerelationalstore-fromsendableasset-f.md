@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendableRelationalStore from '@kit.ArkData';
+import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
 ## fromSendableAsset
@@ -22,7 +22,7 @@ function fromSendableAsset(asset: Asset): NonSendableAsset
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| asset | [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | 是 | 可跨线程传递的Asset数据。 |
+| asset | Asset | 是 | 可跨线程传递的Asset数据。 |
 
 **返回值：**
 

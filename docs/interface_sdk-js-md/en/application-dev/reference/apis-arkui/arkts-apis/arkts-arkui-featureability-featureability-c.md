@@ -32,7 +32,7 @@ Calls an AA.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
+| Promise&lt;string&gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
 
 ## continueAbility
 
@@ -209,7 +209,7 @@ Subscribe to events of an AA.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
+| Promise&lt;string&gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
 
 ## subscribeMsg
 
@@ -255,7 +255,7 @@ Unsubscribe from events of an AA.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
+| Promise&lt;string&gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
 
 ## unsubscribeMsg
 

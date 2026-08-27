@@ -1,6 +1,8 @@
 # MediaTab
 
-The definition of the tab page.@interface MediaTab
+The definition of the tab page.
+
+@interface MediaTab
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of the tab page.@interface MediaTab
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## extraDataJson

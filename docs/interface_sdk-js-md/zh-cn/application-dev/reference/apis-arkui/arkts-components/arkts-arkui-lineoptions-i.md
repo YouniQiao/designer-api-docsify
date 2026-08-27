@@ -21,7 +21,11 @@
 height?: Length
 ```
 
-高度。值为异常值或缺省时，根据startPoint和endPoint自动计算所需的绘制区域高度。默认单位：vp
+高度。
+
+值为异常值或缺省时，根据startPoint和endPoint自动计算所需的绘制区域高度。
+
+默认单位：vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -39,7 +43,11 @@ height?: Length
 width?: Length
 ```
 
-宽度。值为异常值或缺省时，根据startPoint和endPoint自动计算所需的绘制区域宽度。默认单位：vp
+宽度。
+
+值为异常值或缺省时，根据startPoint和endPoint自动计算所需的绘制区域宽度。
+
+默认单位：vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

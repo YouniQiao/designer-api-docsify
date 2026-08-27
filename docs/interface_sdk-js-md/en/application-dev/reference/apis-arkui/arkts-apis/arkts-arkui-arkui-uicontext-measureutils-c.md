@@ -58,7 +58,7 @@ Converts a styled string into an array of corresponding [Paragraph](../../apis-a
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Paragraph & gt; | Array of [Paragraph]{ |
+| Array&lt;Paragraph&gt; | Array of [Paragraph]{ |
 
 **Examples**
 

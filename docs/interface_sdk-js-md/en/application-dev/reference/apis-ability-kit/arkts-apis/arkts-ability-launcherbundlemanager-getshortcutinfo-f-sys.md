@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import launcherBundleManager from '@kit.AbilityKit';
+import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getShortcutInfo
@@ -12,7 +12,9 @@ import launcherBundleManager from '@kit.AbilityKit';
 function getShortcutInfo(bundleName :string, callback: AsyncCallback<Array<ShortcutInfo>>) : void
 ```
 
-Obtains the shortcut information of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md). This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
+Obtains the shortcut information of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md). This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -69,7 +71,9 @@ try {
 function getShortcutInfo(bundleName : string) : Promise<Array<ShortcutInfo>>
 ```
 
-Obtains the shortcut information of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md). This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
+Obtains the shortcut information of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md). This API uses a promise to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 9
 
@@ -89,7 +93,7 @@ Obtains the shortcut information of the current user based on the given bundle n
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;ShortcutInfo & gt; & gt; | Promise used to return the array of [ShortcutInfo]{ |
+| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise used to return the array of [ShortcutInfo]{ |
 
 **Error codes:**
 

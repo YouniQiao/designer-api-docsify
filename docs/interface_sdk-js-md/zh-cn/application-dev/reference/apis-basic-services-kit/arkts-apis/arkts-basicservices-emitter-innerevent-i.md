@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import emitter from '@kit.BasicServicesKit';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## eventId

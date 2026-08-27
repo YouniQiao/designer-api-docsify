@@ -350,13 +350,13 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [Storage(数据存储)](arkts-arkdata-system-storage-storage-c.md) |  |
+| [Storage](arkts-arkdata-system-storage-storage-c.md) |  |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [ClearStorageOptions(数据存储)](arkts-arkdata-system-storage-clearstorageoptions-i.md) |  |
-| [DeleteStorageOptions(数据存储)](arkts-arkdata-system-storage-deletestorageoptions-i.md) |  |
-| [GetStorageOptions(数据存储)](arkts-arkdata-system-storage-getstorageoptions-i.md) |  |
-| [SetStorageOptions(数据存储)](arkts-arkdata-system-storage-setstorageoptions-i.md) |  |
+| [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md) |  |
+| [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md) |  |
+| [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md) |  |
+| [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md) |  |

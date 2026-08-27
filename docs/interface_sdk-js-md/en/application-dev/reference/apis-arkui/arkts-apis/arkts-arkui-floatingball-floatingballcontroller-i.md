@@ -1,6 +1,8 @@
 # FloatingBallController
 
-Implements a floating ball controller instance, which is used to start, update, and stop floating balls, and register callbacks.Before calling any of the following APIs, you must use [floatingBall.create()](arkts-arkui-floatingball-create-f.md) to create a floating ball controller instance.
+Implements a floating ball controller instance, which is used to start, update, and stop floating balls, and register callbacks.
+
+Before calling any of the following APIs, you must use [floatingBall.create()](arkts-arkui-floatingball-create-f.md) to create a floating ball controller instance.
 
 **Since:** 20
 
@@ -9,7 +11,7 @@ Implements a floating ball controller instance, which is used to start, update, 
 ## Modules to Import
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI';
+import { floatingBall } from '@kit.ArkUI';
 ```
 
 ## getFloatingBallWindowInfo
@@ -341,7 +343,7 @@ Restores the main window of the application and loads the specified page. This A
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -386,7 +388,8 @@ try {
 setFloatingBallVisibilityInApp(isVisible: boolean): Promise<void>
 ```
 
-Sets whether the floating ball is visible in the application. This API uses a promise to return the result.  
+Sets whether the floating ball is visible in the application. This API uses a promise to return the result.
+
 - When the application is on the recent tasks screen (the  
 [lifecycle state](../../../windowmanager/window-overview.md#lifecycle-states) is **PAUSED**), the floating ball is invisible.  
 - By default (when this API is not called) or when this API is called with the value **true** passed in, the  
@@ -410,7 +413,7 @@ is in the foreground (the [lifecycle state](../../../windowmanager/window-overvi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -457,7 +460,7 @@ Starts the floating ball. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -512,7 +515,7 @@ Stops the floating ball. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -557,7 +560,7 @@ Updates the floating ball. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

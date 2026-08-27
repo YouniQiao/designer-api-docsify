@@ -1,6 +1,8 @@
 # LazyColumnLayoutAttribute
 
-Defines the lazy column layout attribute.@extends CommonMethod&lt;LazyColumnLayoutAttribute&gt;
+Defines the lazy column layout attribute.
+
+@extends CommonMethod&lt;LazyColumnLayoutAttribute&gt;
 
 **Inheritance/Implementation:** LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>
 

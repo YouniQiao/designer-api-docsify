@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getSignatureInfo
@@ -30,7 +30,7 @@ function getSignatureInfo(uid: number): SignatureInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [SignatureInfo](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-signatureinfo-i.md) | 返回SignatureInfo对象。 |
+| SignatureInfo | 返回SignatureInfo对象。 |
 
 **错误码：**
 

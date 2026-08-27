@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import kioskManager from '@kit.AbilityKit';
+import { kioskManager } from '@kit.AbilityKit';
 ```
 
 ## exitKioskMode
@@ -30,7 +30,7 @@ Exits kiosk mode. This API uses a promise to return the result. This API takes e
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

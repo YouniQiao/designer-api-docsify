@@ -1,6 +1,8 @@
 # CalendarDialogOptions
 
-日历选择器弹窗选项。继承自[CalendarOptions](arkts-arkui-calendaroptions-i.md)。
+日历选择器弹窗选项。
+
+继承自[CalendarOptions](arkts-arkui-calendaroptions-i.md)。
 
 > **说明：**
 > 

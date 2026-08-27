@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wallpaper from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## getWallpaperByState
@@ -34,7 +34,7 @@ Obtains the default pixel map of a wallpaper of the specified device type. Retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | the promise returned by the function. |
+| Promise&lt;image.PixelMap&gt; | the promise returned by the function. |
 
 **Error codes:**
 

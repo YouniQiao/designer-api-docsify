@@ -19,7 +19,9 @@ Provides the parameters of the pan gesture handler. Inherits from [BaseHandlerOp
 direction?: PanDirection
 ```
 
-Pan direction. The value supports the AND (&) and OR (|) operations.Default value: **PanDirection.All**
+Pan direction. The value supports the AND (&) and OR (|) operations.
+
+Default value: **PanDirection.All**
 
 **Type:** [PanDirection](arkts-arkui-pandirection-e.md)
 
@@ -37,8 +39,19 @@ Pan direction. The value supports the AND (&) and OR (|) operations.Default valu
 distance?: number
 ```
 
-Minimum pan distance to trigger the gesture, in vp.Default value: **8** for the stylus and **5** for other input sources  
-**NOTE：**If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.Value range: [0, +∞). If the value specified is less than 0, the default value is used.Since API version 19, the default value is **8**, in vp, for the stylus.When configuring this field with [gestureModifier](../arkts-components/arkts-arkui-commonmethod-c.md#gesturemodifier), the unit is px.
+Minimum pan distance to trigger the gesture, in vp.
+
+Default value: **8** for the stylus and **5** for other input sources
+
+**NOTE：**
+
+If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.
+
+Value range: [0, +∞). If the value specified is less than 0, the default value is used.
+
+Since API version 19, the default value is **8**, in vp, for the stylus.
+
+When configuring this field with [gestureModifier](../arkts-components/arkts-arkui-commonmethod-c.md#gesturemodifier), the unit is px.
 
 **Type:** number
 
@@ -56,7 +69,11 @@ Minimum pan distance to trigger the gesture, in vp.Default value: **8** for the 
 distanceMap?: Map<SourceTool, number>
 ```
 
-Minimum pan distance for different input sources to trigger the gesture, in vp.Default value: **8** for the stylus and **5** for other input sources Value range: [0, +∞). If the value specified is less than 0, the default value is used.
+Minimum pan distance for different input sources to trigger the gesture, in vp.
+
+Default value: **8** for the stylus and **5** for other input sources
+
+Value range: [0, +∞). If the value specified is less than 0, the default value is used.
 
 **Type:** Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), number&gt;
 
@@ -74,8 +91,15 @@ Minimum pan distance for different input sources to trigger the gesture, in vp.D
 fingers?: number
 ```
 
-Minimum number of fingers to trigger a pan gesture. The value ranges from 1 to 10.Default value: **1**Value range: [1, 10]  
-**NOTE：**If the value is less than 1 or is not set, the default value is used.
+Minimum number of fingers to trigger a pan gesture. The value ranges from 1 to 10.
+
+Default value: **1**
+
+Value range: [1, 10]
+
+**NOTE：**
+
+If the value is less than 1 or is not set, the default value is used.
 
 **Type:** number
 

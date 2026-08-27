@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import screenLockFileManager from '@kit.AbilityKit';
+import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
 ## queryAppKeyState

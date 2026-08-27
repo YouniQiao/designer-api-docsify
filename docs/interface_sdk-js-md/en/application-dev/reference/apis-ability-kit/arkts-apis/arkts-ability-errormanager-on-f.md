@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import errorManager from '@kit.AbilityKit';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## on('error')
@@ -12,7 +12,9 @@ import errorManager from '@kit.AbilityKit';
 function on(type: 'error', observer: ErrorObserver): number
 ```
 
-Registers an error observer. Once registered, it can capture JavaScript crashes occurring within the application, which are a type of application crash. When the observer captures such an exception, the application will not exit automatically. You are advised to add a synchronous exit operation after the callback function completes.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+Registers an error observer. Once registered, it can capture JavaScript crashes occurring within the application, which are a type of application crash. When the observer captures such an exception, the application will not exit automatically. You are advised to add a synchronous exit operation after the callback function completes.
+
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 9
 
@@ -25,7 +27,7 @@ Registers an error observer. Once registered, it can capture JavaScript crashes 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. It is fixed at **'error'**. |
-| observer | [ErrorObserver](arkts-ability-errormanager-errorobserver-t.md) | Yes | Error observer instance. |
+| observer | ErrorObserver | Yes | Error observer instance. |
 
 **Return value:**
 
@@ -76,7 +78,9 @@ try {
 function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 ```
 
-Registers an observer for the message processing duration of the main thread. After the registration, the execution time of a message processed by the main thread of the application can be captured.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+Registers an observer for the message processing duration of the main thread. After the registration, the execution time of a message processed by the main thread of the application can be captured.
+
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 12
 
@@ -90,7 +94,7 @@ Registers an observer for the message processing duration of the main thread. Af
 | --- | --- | --- | --- |
 | type | 'loopObserver' | Yes | Event type. It is fixed at **'loopObserver'**, indicating an observer for the message processing duration of the main thread. |
 | timeout | number | Yes | Event execution threshold, in milliseconds. The value must be greater than **0**.The unit is milliseconds(ms). |
-| observer | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | Yes | Observer to register. |
+| observer | LoopObserver | Yes | Observer to register. |
 
 **Error codes:**
 
@@ -119,7 +123,9 @@ errorManager.on("loopObserver", 1, observer);
 function on(type: 'unhandledRejection', observer: UnhandledRejectionObserver): void
 ```
 
-Registers an observer for the promise rejection. After the registration, a rejected promise that is not captured in the current thread of the application can be captured.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+Registers an observer for the promise rejection. After the registration, a rejected promise that is not captured in the current thread of the application can be captured.
+
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 **Since:** 12
 
@@ -224,7 +230,9 @@ let promise1 = new Promise<void>(() => {}).then(() => {
 function on(type: 'freeze', observer: FreezeObserver): void
 ```
 
-Registers an observer for the main thread freeze event of the application. If the observer is registered multiple times, only the last one takes effect.This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
+Registers an observer for the main thread freeze event of the application. If the observer is registered multiple times, only the last one takes effect.
+
+This API can only be used in the main thread. If a thread error occurs, an error code is thrown. You are advised to handle it with try-catch logic.
 
 > **NOTE：**
 > 

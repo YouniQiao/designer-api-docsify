@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wallpaper from '@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## getFile
@@ -70,7 +70,7 @@ function getFile(wallpaperType: WallpaperType): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 调用成功则返回壁纸文件描述符ID，调用失败则返回error信息。 |
+| Promise&lt;number&gt; | 调用成功则返回壁纸文件描述符ID，调用失败则返回error信息。 |
 
 **示例**
 

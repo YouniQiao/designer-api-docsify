@@ -28,7 +28,8 @@ Public data channel.
 DRAG = 'Drag'
 ```
 
-Channel in which data can be dragged and dropped.  
+Channel in which data can be dragged and dropped.
+
 **Use scenario**: This API is used to share data across applications in drag-and-drop scenarios.
 
 **Since:** 14
@@ -43,7 +44,8 @@ Channel in which data can be dragged and dropped.
 SYSTEM_SHARE = 'SystemShare'
 ```
 
-Data channel of the system sharing type.  
+Data channel of the system sharing type.
+
 **Use scenario**: This API is used to share data across applications in system sharing scenarios.
 
 **Since:** 20
@@ -58,7 +60,8 @@ Data channel of the system sharing type.
 PICKER = 'Picker'
 ```
 
-Data channel of the picker type.  
+Data channel of the picker type.
+
 **Use scenario**: This API is used to share data across applications in the scenarios where a picker is used.
 
 **Since:** 20
@@ -73,7 +76,8 @@ Data channel of the picker type.
 MENU = 'Menu'
 ```
 
-Data channel of the menu type.  
+Data channel of the menu type.
+
 **Use scenario**: This API is used to share data across applications in the shortcut menu.
 
 **Since:** 20

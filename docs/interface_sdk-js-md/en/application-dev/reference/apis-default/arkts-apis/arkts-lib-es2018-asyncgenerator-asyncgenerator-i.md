@@ -41,7 +41,7 @@ return(value: TReturn | PromiseLike<TReturn>): Promise<IteratorResult<T, TReturn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | TReturn \| PromiseLike & lt;TReturn & gt; | Yes |  |
+| value | TReturn \| PromiseLike&lt;TReturn&gt; | Yes |  |
 
 **Return value:**
 

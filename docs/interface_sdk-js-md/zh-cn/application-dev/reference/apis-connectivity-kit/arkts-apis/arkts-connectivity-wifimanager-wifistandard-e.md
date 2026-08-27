@@ -1,6 +1,6 @@
 # WifiStandard
 
-WLAN标准。 @enum { number }
+WLAN标准。@enum { number }
 
 **起始版本：** 10
 

@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## enableHiLinkHandshake
@@ -29,7 +28,7 @@ function enableHiLinkHandshake(isHiLinkEnable: boolean, bssid: string, config: W
 | --- | --- | --- | --- |
 | isHiLinkEnable | boolean | 是 | 表示是否使能HiLink。 |
 | bssid | string | 是 | 表示WLAN bssid。 |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | 是 | 表示WLAN设备配置。 |
+| config | WifiDeviceConfig | 是 | 表示WLAN设备配置。 |
 
 **错误码：**
 

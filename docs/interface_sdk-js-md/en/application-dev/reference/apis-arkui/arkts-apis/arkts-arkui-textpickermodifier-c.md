@@ -1,6 +1,8 @@
 # TextPickerModifier
 
-Defines TextPicker Modifier@extends TextPickerAttribute @implements AttributeModifier&lt;TextPickerAttribute&gt;
+Defines TextPicker Modifier
+
+@extends TextPickerAttribute @implements AttributeModifier&lt;TextPickerAttribute&gt;
 
 **Inheritance/Implementation:** TextPickerModifier extends [TextPickerAttribute](../arkts-components/arkts-arkui-textpicker-attribute.md#textpickerattribute) and implements AttributeModifier<TextPickerAttribute>
 

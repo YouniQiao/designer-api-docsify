@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import videoProcessingEngine from '@kit.ImageKit';
+import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
 ## deinitializeEnvironment
@@ -24,7 +24,7 @@ Deinitialize global environment for image processing.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 

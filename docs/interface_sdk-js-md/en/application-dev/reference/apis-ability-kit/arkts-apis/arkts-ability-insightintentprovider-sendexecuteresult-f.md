@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import insightIntentProvider from '@kit.AbilityKit';
+import { insightIntentProvider } from '@kit.AbilityKit';
 ```
 
 ## sendExecuteResult
@@ -33,7 +33,7 @@ Send execute result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

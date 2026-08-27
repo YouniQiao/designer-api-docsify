@@ -43,6 +43,7 @@
 - [Media Library Kit (237)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md)
 - [Multimodal Awareness Kit (119)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-carawareness.md)
 - [Network Kit (483)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-network-kit/arkts-apis/arkts-app-ability-vpnextensionability.md)
+- [Neural Network Runtime Kit (13)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-neural-network-runtime-kit/c-apis/capi-neural-network-runtime-type-h.md)
 - [Notification Kit (350)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-notification-kit/arkts-apis/arkts-application-notificationsubscriberextensionability.md)
 - [Performance Analysis Kit (246)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-performance-analysis-kit/arkts-apis/arkts-faultlogger.md)
 - [Security Guard Kit (17)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-security-guard-kit/arkts-apis/arkts-security-securityguard.md)

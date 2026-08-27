@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import performanceMonitor from '@kit.ArkUI';
+import { performanceMonitor } from '@kit.ArkUI';
 ```
 
 ## begin
@@ -27,7 +27,7 @@ Marks the start of a user scene. Call this API when the scene begins.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scene | string | Yes | User scene ID. The string length is unlimited, but it is recommended that you keep it within 255 characters. The format is recommended to use uppercase letters connected by underscores, for example, **LAUNCHER_APP_LAUNCH_FROM_ICON**. |
-| startInputType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | Yes | Trigger mode of the user scene. |
+| startInputType | ActionType | Yes | Trigger mode of the user scene. |
 | note | string | No | Remarks for the user scene. The string length is unlimited, but it is recommended that you keep it within 255 characters. This field is optional. If provided, the performance metrics report will include the remark information; if not provided, there is no impact. |
 
 **Examples**

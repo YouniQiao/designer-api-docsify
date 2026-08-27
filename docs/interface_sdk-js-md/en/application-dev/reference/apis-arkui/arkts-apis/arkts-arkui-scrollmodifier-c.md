@@ -1,6 +1,8 @@
 # ScrollModifier
 
-Defines Scroll Modifier@extends ScrollAttribute @implements AttributeModifier&lt;ScrollAttribute&gt;
+Defines Scroll Modifier
+
+@extends ScrollAttribute @implements AttributeModifier&lt;ScrollAttribute&gt;
 
 **Inheritance/Implementation:** ScrollModifier extends [ScrollAttribute](../arkts-components/arkts-arkui-scroll-attribute.md#scrollattribute) and implements AttributeModifier<ScrollAttribute>
 

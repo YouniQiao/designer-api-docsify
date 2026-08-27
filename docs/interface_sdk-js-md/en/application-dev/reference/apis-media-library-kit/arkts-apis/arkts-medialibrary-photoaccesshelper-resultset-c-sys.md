@@ -1,6 +1,8 @@
 # ResultSet (System API)
 
-Defines APIs to access the result set obtained by querying the RDB store.Before calling any of the following APIs, you must use [query](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#query) to obtain a ResultSet instance.
+Defines APIs to access the result set obtained by querying the RDB store.
+
+Before calling any of the following APIs, you must use [query](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i-sys.md#query) to obtain a ResultSet instance.
 
 **Since:** 22
 
@@ -11,7 +13,7 @@ Defines APIs to access the result set obtained by querying the RDB store.Before 
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## close
@@ -89,7 +91,7 @@ Obtains the values of all columns in the specified row.
 
 | Type | Description |
 | --- | --- |
-| [ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-rdb-valuesbucket-t.md) | Values of all columns in the specified row. |
+| ValuesBucket | Values of all columns in the specified row. |
 
 **Error codes:**
 
@@ -138,7 +140,7 @@ Obtains the value of the specified column in the current row.
 
 | Type | Description |
 | --- | --- |
-| [ValueType](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Allowed data field types. |
+| ValueType | Allowed data field types. |
 
 **Error codes:**
 

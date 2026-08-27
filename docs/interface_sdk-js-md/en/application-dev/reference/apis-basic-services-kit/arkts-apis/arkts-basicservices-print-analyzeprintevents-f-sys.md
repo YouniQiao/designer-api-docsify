@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## analyzePrintEvents
@@ -35,7 +35,7 @@ Analyze print events.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | the promise returned by the function. |
+| Promise&lt;string&gt; | the promise returned by the function. |
 
 **Error codes:**
 

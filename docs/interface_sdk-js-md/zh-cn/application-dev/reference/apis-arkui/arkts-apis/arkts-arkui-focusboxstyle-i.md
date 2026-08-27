@@ -17,7 +17,9 @@
 margin?: LengthMetrics
 ```
 
-焦点框相对组件边缘的距离。正数代表外侧，负数代表内侧。不支持百分比。
+焦点框相对组件边缘的距离。
+
+正数代表外侧，负数代表内侧。不支持百分比。
 
 **类型：** LengthMetrics
 
@@ -53,7 +55,9 @@ strokeColor?: ColorMetrics
 strokeWidth?: LengthMetrics
 ```
 
-焦点框宽度。不支持负数与百分比。
+焦点框宽度。
+
+不支持负数与百分比。
 
 **类型：** LengthMetrics
 

@@ -9,9 +9,6 @@ Defines Web options through the [API](../../../reference/apis-arkweb/arkts-basic
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## controller
@@ -36,7 +33,9 @@ Controller used to control various behaviors of the Web component, including pag
 emulateTouchFromMouseEvent? : boolean
 ```
 
-Whether to convert mouse events to touch events. The value **true** indicates that mouse events are converted to touch events, which is suitable for scenarios where touch and mouse interaction behaviors need to be unified; **false** indicates that mouse events are not converted to touch events.Default value: **false**.
+Whether to convert mouse events to touch events. The value **true** indicates that mouse events are converted to touch events, which is suitable for scenarios where touch and mouse interaction behaviors need to be unified; **false** indicates that mouse events are not converted to touch events.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -50,7 +49,11 @@ Whether to convert mouse events to touch events. The value **true** indicates th
 incognitoMode? : boolean
 ```
 
-Whether the current Webview is created in incognito mode. The value **true** indicates incognito mode, and **false** indicates normal mode.Default value: **false**.The value is **false** when undefined or null is passed in.<!--RP1--><!--RP1End-->
+Whether the current Webview is created in incognito mode. The value **true** indicates incognito mode, and **false** indicates normal mode.
+
+Default value: **false**.
+
+The value is **false** when undefined or null is passed in.<!--RP1--><!--RP1End-->
 
 **Type:** boolean
 
@@ -82,7 +85,9 @@ Rendering mode of the current Web component. `RenderMode.ASYNC_RENDER` indicates
 sharedRenderProcessToken? : string
 ```
 
-Token that specifies the shared render process for the current Web component. In multi-render-process mode, Web components with the same token preferentially attempt to reuse the bound render process. The binding occurs during the initialization phase of the render process. When a render process has no associated Web component, its binding relationship is removed.Default value: **""**.
+Token that specifies the shared render process for the current Web component. In multi-render-process mode, Web components with the same token preferentially attempt to reuse the bound render process. The binding occurs during the initialization phase of the render process. When a render process has no associated Web component, its binding relationship is removed.
+
+Default value: **""**.
 
 **Type:** string
 
@@ -96,7 +101,9 @@ Token that specifies the shared render process for the current Web component. In
 src: string | Resource
 ```
 
-Web page resource address. If a local resource file is accessed, use the resource protocol or \$rawfile resource reference. If a local resource file in the sandbox path outside the app package is loaded (HTML and TXT file types are supported), use file:// sandbox file path.src cannot be dynamically changed through a state variable (for example, @State). To change the address, reload the page through [loadUrl()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl).
+Web page resource address. If a local resource file is accessed, use the resource protocol or \$rawfile resource reference. If a local resource file in the sandbox path outside the app package is loaded (HTML and TXT file types are supported), use file:// sandbox file path.
+
+src cannot be dynamically changed through a state variable (for example, @State). To change the address, reload the page through [loadUrl()](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl).
 
 **Type:** string \| Resource
 

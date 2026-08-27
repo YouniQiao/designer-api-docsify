@@ -12,14 +12,14 @@ import { LazyVWaterFlowLayout, LazyVWaterFlowLayoutAttribute, LazyWaterFlowLayou
 
 | Name | Description |
 | --- | --- |
-| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md) | Defines the lazy vertical waterflow layout attribute.@extends LazyWaterFlowLayoutAttribute & lt;LazyVWaterFlowLayoutAttribute & gt; |
-| [LazyWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazywaterflowlayoutattribute-c.md) | Defines the lazy waterflow layout attribute.@extends CommonMethod & lt;T & gt; |
+| [LazyVWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutattribute-c.md) | Defines the lazy vertical waterflow layout attribute. |
+| [LazyWaterFlowLayoutAttribute](arkts-arkui-arkui-components-arklazywaterflowlayout-lazywaterflowlayoutattribute-c.md) | Defines the lazy waterflow layout attribute. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [LazyVWaterFlowLayoutInterface](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutinterface-i.md) | Defines the lazy vertical waterflow layout component.@interface LazyVWaterFlowLayoutInterface |
+| [LazyVWaterFlowLayoutInterface](arkts-arkui-arkui-components-arklazywaterflowlayout-lazyvwaterflowlayoutinterface-i.md) | Defines the lazy vertical waterflow layout component. |
 
 ### Constants
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import uniformTypeDescriptor from '@kit.ArkData';
+import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## unregisterTypeDescriptors
@@ -30,13 +30,13 @@ Unregister one or more type descriptors from the system by the given type IDs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typeIds | Array & lt;string & gt; | Yes | The list of type IDs to be unregistered. |
+| typeIds | Array&lt;string&gt; | Yes | The list of type IDs to be unregistered. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

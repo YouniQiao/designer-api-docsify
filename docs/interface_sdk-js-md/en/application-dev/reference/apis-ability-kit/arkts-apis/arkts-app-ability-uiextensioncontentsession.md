@@ -13,7 +13,7 @@ UIExtensionContentSession is the UI operation class for the
 ## Modules to Import
 
 ```TypeScript
-import UIExtensionContentSession from '@kit.AbilityKit';
+import { UIExtensionContentSession } from '@kit.AbilityKit';
 ```
 
 ## Summary

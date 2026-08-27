@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import appAccount from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onRequestContinued
@@ -131,7 +131,7 @@ onResult: (code: number, result?: AuthResult) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | code | number | 是 |  |
-| result | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | 否 |  |
+| result | AuthResult | 否 |  |
 
 **示例**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import text from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## getSystemFontFullNamesByType
@@ -30,7 +30,7 @@ Obtains the full names of all fonts of the specified type. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the full names of all fonts of the specified type. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the full names of all fonts of the specified type. |
 
 **Error codes:**
 

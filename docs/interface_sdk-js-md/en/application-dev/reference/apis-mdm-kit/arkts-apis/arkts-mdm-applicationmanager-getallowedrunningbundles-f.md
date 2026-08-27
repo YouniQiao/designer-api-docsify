@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## getAllowedRunningBundles
@@ -33,7 +33,7 @@ Obtains the list of applications allowed to run by a specified user.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of applications allowed to run by a specified user. |
+| Array&lt;string&gt; | List of applications allowed to run by a specified user. |
 
 **Error codes:**
 
@@ -91,7 +91,7 @@ Obtains the application running trustlist of a specified user.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of applications allowed to run by a specified user. |
+| Array&lt;string&gt; | List of applications allowed to run by a specified user. |
 
 **Error codes:**
 

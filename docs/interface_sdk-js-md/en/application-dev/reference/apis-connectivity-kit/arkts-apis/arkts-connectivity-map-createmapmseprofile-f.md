@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import map from '@kit.ConnectivityKit';
+import { map } from '@kit.ConnectivityKit';
 ```
 
 ## createMapMseProfile

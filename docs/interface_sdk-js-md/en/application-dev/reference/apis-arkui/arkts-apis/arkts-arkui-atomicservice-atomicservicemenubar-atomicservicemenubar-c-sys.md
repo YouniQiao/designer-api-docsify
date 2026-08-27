@@ -36,7 +36,7 @@ A constructor used to create an **AtomicServiceMenuBar** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes | Context information of the current atomic service. |
+| uiContext | UIContext | Yes | Context information of the current atomic service. |
 
 ## setVisible
 

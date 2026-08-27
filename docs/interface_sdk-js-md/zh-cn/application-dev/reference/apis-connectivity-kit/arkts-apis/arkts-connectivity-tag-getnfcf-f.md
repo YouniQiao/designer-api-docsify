@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getNfcF
@@ -30,7 +30,7 @@ function getNfcF(tagInfo: TagInfo): NfcFTag
 
 | 类型 | 说明 |
 | --- | --- |
-| [NfcFTag](arkts-connectivity-tag-nfcftag-t.md) | NFC F类型Tag对象。 |
+| NfcFTag | NFC F类型Tag对象。 |
 
 **错误码：**
 

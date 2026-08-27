@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import statfs from '@kit.CoreFileKit';
+import { statfs } from '@kit.CoreFileKit';
 ```
 
 ## getTotalSize
@@ -28,7 +28,7 @@ Obtains the total size of the specified file system, in bytes. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the total size obtained, in bytes. |
+| Promise&lt;number&gt; | Promise used to return the total size obtained, in bytes. |
 
 **Error codes:**
 

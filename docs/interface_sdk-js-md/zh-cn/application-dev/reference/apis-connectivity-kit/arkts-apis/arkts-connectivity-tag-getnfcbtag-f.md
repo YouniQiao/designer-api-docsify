@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getNfcBTag
@@ -32,4 +32,4 @@ function getNfcBTag(tagInfo: TagInfo): NfcBTag
 
 | 类型 | 说明 |
 | --- | --- |
-| [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md) | NFC B类型Tag对象。 |
+| NfcBTag | NFC B类型Tag对象。 |

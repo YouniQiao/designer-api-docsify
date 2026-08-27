@@ -9,12 +9,7 @@ In the following API examples, you must first use [getController](arkts-ime-inpu
 ## Modules to Import
 
 ```TypeScript
-import inputMethod from '@kit.IMEKit';
-import inputMethodEngine from '@kit.IMEKitEngine';
-import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKitList';
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit.Panel';
-import { InputMethodExtraConfig } from '@kit.IMEKit.ExtraConfig';
-import inputMethodSystemPanelManager from '@kit.IMEKitSystemPanelManager';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## attach
@@ -105,7 +100,7 @@ Attaches a self-drawing component to the input method. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -159,13 +154,13 @@ Attaches a self-drawing component to the input method. This API uses a promise t
 | --- | --- | --- | --- |
 | showKeyboard | boolean | Yes | Whether to start the input method keyboard after the self-drawing component is attached to the input method.    - **true** means to start the input method keyboard.    - **false** means not to start the input method keyboard. |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration of the edit box. |
-| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Yes | Reason for requesting the keyboard. |
+| requestKeyboardReason | RequestKeyboardReason | Yes | Reason for requesting the keyboard. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -219,13 +214,13 @@ Attaches a self-drawing component to the input method. This API uses a promise t
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UIContext** instance. |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration of the edit box. |
-| attachOptions | [AttachOptions](arkts-ime-inputmethod-attachoptions-i.md) | No | Additional options for binding. |
+| attachOptions | AttachOptions | No | Additional options for binding. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -322,7 +317,7 @@ Updates the information about the selected text in this edit box, to notify the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -400,7 +395,7 @@ Detaches the self-drawing component from the input method. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -442,7 +437,7 @@ Discards the text that is being typed. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. Promise that returns no value. |
+| Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
 
 **Error codes:**
 
@@ -534,7 +529,7 @@ Hides the soft keyboard. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -630,7 +625,7 @@ Exits the text editing mode. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -735,7 +730,7 @@ Disables listening for the text insertion event of the input method.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'insertText' | Yes | Listening type. The value is fixed at **'insertText'**. |
-| callback | (text: string) = & gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (text: string) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -768,7 +763,7 @@ Disables listening for the leftward delete event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deleteLeft' | Yes | Listening type. The value is fixed at **'deleteLeft'**. |
-| callback | (length: number) = & gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (length: number) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -801,7 +796,7 @@ Disables listening for the rightward delete event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deleteRight' | Yes | Listening type. The value is fixed at `deleteRight`. |
-| callback | (length: number) = & gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (length: number) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -833,7 +828,7 @@ Disables listening for the input method soft keyboard status event of the input 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sendKeyboardStatus' | Yes | Listening type. The value is fixed at **'sendKeyboardStatus'**. |
-| callback | (keyboardStatus: KeyboardStatus) = & gt; void | No | Callback used for disable listening. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (keyboardStatus: KeyboardStatus) =&gt; void | No | Callback used for disable listening. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -866,7 +861,7 @@ Disables listening for the function key sending event of the input method.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sendFunctionKey' | Yes | Listening type. The value is fixed at **'sendFunctionKey'**. |
-| callback | (functionKey: FunctionKey) = & gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (functionKey: FunctionKey) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -899,7 +894,7 @@ Disables listening for the cursor movement event of the input method.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'moveCursor' | Yes | Listening type. The value is fixed at **'moveCursor'**. |
-| callback | (direction: Direction) = & gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (direction: Direction) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -932,7 +927,7 @@ Disables listening for the extended action handling event of the input method. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'handleExtendAction' | Yes | Listening type. The value is fixed at **'handleExtendAction'**. |
-| callback | (action: ExtendAction) = & gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (action: ExtendAction) =&gt; void | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -965,7 +960,7 @@ Disables listening for the event of obtaining the length of text deleted leftwar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getLeftTextOfCursor' | Yes | Listening type. The value is fixed at **'getLeftTextOfCursor'**. |
-| callback | (length: number) = & gt; string | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (length: number) =&gt; string | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -998,7 +993,7 @@ Disables listening for the event of obtaining the length of text deleted rightwa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getRightTextOfCursor' | Yes | Listening type. The value is fixed at **'getRightTextOfCursor'**. |
-| callback | (length: number) = & gt; string | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | (length: number) =&gt; string | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -1031,7 +1026,7 @@ Disables listening for the event of obtaining the index of text at the cursor. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getTextIndexAtCursor' | Yes | Listening type. The value is fixed at **'getTextIndexAtCursor'**. |
-| callback | () = & gt; number | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | () =&gt; number | No | Callback used for disable listening, which must be the same as that passed by the **on** API. If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Examples**
 
@@ -1217,7 +1212,7 @@ Enables listening for the text insertion event of the input method. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'insertText' | Yes | Listening type. The value is fixed at **'insertText'**. |
-| callback | (text: string) = & gt; void | Yes | Callback used to return the text to be inserted. The application needs to operate the content in the edit box based on the text content returned in the callback. |
+| callback | (text: string) =&gt; void | Yes | Callback used to return the text to be inserted. The application needs to operate the content in the edit box based on the text content returned in the callback. |
 
 **Error codes:**
 
@@ -1264,7 +1259,7 @@ Enables listening for the leftward delete event. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deleteLeft' | Yes | Listening type. The value is fixed at **'deleteLeft'**. |
-| callback | (length: number) = & gt; void | Yes | Callback used to return the length of the text to be deleted leftward. The application needs to operate the content in the edit box based on the length returned in the callback. |
+| callback | (length: number) =&gt; void | Yes | Callback used to return the length of the text to be deleted leftward. The application needs to operate the content in the edit box based on the length returned in the callback. |
 
 **Error codes:**
 
@@ -1298,7 +1293,7 @@ Enables listening for the rightward delete event. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deleteRight' | Yes | Listening type. The value is fixed at **'deleteRight'**. |
-| callback | (length: number) = & gt; void | Yes | Callback used to return the length of the text to be deleted rightward. The application needs to operate the content in the edit box based on the length returned in the callback. |
+| callback | (length: number) =&gt; void | Yes | Callback used to return the length of the text to be deleted rightward. The application needs to operate the content in the edit box based on the length returned in the callback. |
 
 **Error codes:**
 
@@ -1332,7 +1327,7 @@ Enables listening for the soft keyboard status event of the input method. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sendKeyboardStatus' | Yes | Listening type. The value is fixed at **'sendKeyboardStatus'**. |
-| callback | (keyboardStatus: KeyboardStatus) = & gt; void | Yes | Callback used to return the soft keyboard status. The application needs to perform operations based on the soft keyboard state returned in the callback. |
+| callback | (keyboardStatus: KeyboardStatus) =&gt; void | Yes | Callback used to return the soft keyboard status. The application needs to perform operations based on the soft keyboard state returned in the callback. |
 
 **Error codes:**
 
@@ -1366,7 +1361,7 @@ Enables listening for the function key sending event of the input method. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sendFunctionKey' | Yes | Listening type. The value is fixed at **'sendFunctionKey'**. |
-| callback | (functionKey: FunctionKey) = & gt; void | Yes | Callback used to return the function key information sent by the input method. The application needs to perform operations based on the function key information returned in the callback. |
+| callback | (functionKey: FunctionKey) =&gt; void | Yes | Callback used to return the function key information sent by the input method. The application needs to perform operations based on the function key information returned in the callback. |
 
 **Error codes:**
 
@@ -1400,7 +1395,7 @@ Enables listening for the cursor movement event of the input method. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'moveCursor' | Yes | Listening type. The value is fixed at **'moveCursor'**. |
-| callback | (direction: Direction) = & gt; void | Yes | Callback used to return the cursor movement direction. The application needs to change the cursor position based on the cursor movement direction returned in the callback. |
+| callback | (direction: Direction) =&gt; void | Yes | Callback used to return the cursor movement direction. The application needs to change the cursor position based on the cursor movement direction returned in the callback. |
 
 **Error codes:**
 
@@ -1434,7 +1429,7 @@ Enables listening for the extended action handling event of the input method. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'handleExtendAction' | Yes | Listening type. The value is fixed at **'handleExtendAction'**. |
-| callback | (action: ExtendAction) = & gt; void | Yes | Callback used to return the extended action type. The application needs to perform operations based on the extended action type returned in the callback. |
+| callback | (action: ExtendAction) =&gt; void | Yes | Callback used to return the extended action type. The application needs to perform operations based on the extended action type returned in the callback. |
 
 **Error codes:**
 
@@ -1468,7 +1463,7 @@ Enables listening for the event of obtaining the length of text deleted leftward
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getLeftTextOfCursor' | Yes | Listening type. The value is fixed at **'getLeftTextOfCursor'**. |
-| callback | (length: number) = & gt; string | Yes | Callback used to obtain the text of the specified length deleted leftward. |
+| callback | (length: number) =&gt; string | Yes | Callback used to obtain the text of the specified length deleted leftward. |
 
 **Error codes:**
 
@@ -1504,7 +1499,7 @@ Enables listening for the event of obtaining the length of text deleted rightwar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getRightTextOfCursor' | Yes | Listening type. The value is fixed at **'getRightTextOfCursor'**. |
-| callback | (length: number) = & gt; string | Yes | Callback used to obtain the text of the specified length deleted rightward. |
+| callback | (length: number) =&gt; string | Yes | Callback used to obtain the text of the specified length deleted rightward. |
 
 **Error codes:**
 
@@ -1540,7 +1535,7 @@ Enables listening for the event of obtaining the index of text at the cursor. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'getTextIndexAtCursor' | Yes | Listening type. The value is fixed at **'getTextIndexAtCursor'**. |
-| callback | () = & gt; number | Yes | Callback used to obtain the index of text at the cursor. |
+| callback | () =&gt; number | Yes | Callback used to obtain the index of text at the cursor. |
 
 **Error codes:**
 
@@ -1693,7 +1688,7 @@ Registers or unregisters MessageHandler.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | This object receives custom communication data from the input method application through [onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated). If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback will be triggered. |
+| msgHandler | MessageHandler | No | This object receives custom communication data from the input method application through [onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated). If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback will be triggered. |
 
 **Error codes:**
 
@@ -1752,7 +1747,7 @@ Sends the custom communication to the input method application. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1854,7 +1849,7 @@ Sets the window to be avoided by the input method. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1948,7 +1943,7 @@ Shows the soft keyboard. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2036,7 +2031,7 @@ Enters the text editing mode. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2079,13 +2074,13 @@ Enters the text editing mode. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Yes | Reason for requesting the keyboard. |
+| requestKeyboardReason | RequestKeyboardReason | Yes | Reason for requesting the keyboard. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2179,7 +2174,7 @@ Ends this input session. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Examples**
 
@@ -2266,7 +2261,7 @@ Ends this input session. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -2356,7 +2351,7 @@ Updates the attribute information of this edit box. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -2450,7 +2445,7 @@ Updates the cursor information in this edit box. This API can be called to notif
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

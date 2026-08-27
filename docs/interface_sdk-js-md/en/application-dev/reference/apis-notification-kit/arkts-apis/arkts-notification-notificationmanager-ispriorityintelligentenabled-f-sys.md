@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isPriorityIntelligentEnabled
@@ -28,7 +28,7 @@ Obtains whether the intelligent priority notification service is enabled. This A
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise that contains the enabling status of the intelligent priority notification service. |
+| Promise&lt;boolean&gt; | Promise that contains the enabling status of the intelligent priority notification service. |
 
 **Error codes:**
 

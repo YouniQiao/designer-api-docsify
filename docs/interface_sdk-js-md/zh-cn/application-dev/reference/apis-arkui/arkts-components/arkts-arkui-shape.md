@@ -1,15 +1,20 @@
 # Shape
 
 绘制组件的父组件，描述所有绘制组件均支持的通用属性。
-Shape组件通过定义视口、填充、边框等属性，支持矢量图形的绘制和组合。Shape作为容器组件，可包含Rect、Circle、Path等绘制子组件，实现类似SVG（Scalable Vector Graphics，可缩放矢量图形）的矢 量图形绘制能力。
+
+Shape组件通过定义视口、填充、边框等属性，支持矢量图形的绘制和组合。Shape作为容器组件，可包含Rect、Circle、Path等绘制子组件，实现类似SVG（Scalable Vector Graphics，可缩放矢量图形）的矢量图形绘制能力。
+
 Shape组件的两种使用方式：
+
 1、绘制组件使用Shape作为父组件，实现类似SVG的矢量图形的组合绘制。
+
 2、绘制组件单独使用，用于在页面上绘制指定的图形。
+
 > **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > 该组件从API version 20开始支持使用AttributeUpdater类的 > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#属性)接口更新构造参数。
 
 ## 子组件
 
-包含Rect、Path、Circle、[Ellipse](../arkts-apis/arkts-arkui-canvaspath-c.md#ellipse)、Polyline、 [Polygon](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-gnssfence-i-sys.md#polygon)、Image、Text、[Column](arkts-arkui-astcresource-i-sys.md#column)、Row和Shape子组件。
+包含Rect、Path、Circle、[Ellipse](../arkts-apis/arkts-arkui-canvaspath-c.md#ellipse)、Polyline、[Polygon](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-gnssfence-i-sys.md#polygon)、Image、Text、[Column](arkts-arkui-astcresource-i-sys.md#column)、Row和Shape子组件。
 
 ## Shape
 
@@ -29,7 +34,7 @@ Use the new function to create Shape.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 否 |  |
+| value | PixelMap | 否 |  |
 
 ## Shape
 
@@ -37,7 +42,9 @@ Use the new function to create Shape.
 Shape(value: PixelMap)
 ```
 
-用于绘制Shape组件的构造函数。从API version 9开始，该接口支持在ArkTS卡片中使用，卡片中不支持使用PixelMap对象。
+用于绘制Shape组件的构造函数。
+
+从API version 9开始，该接口支持在ArkTS卡片中使用，卡片中不支持使用PixelMap对象。
 
 **起始版本：** 7
 
@@ -49,7 +56,7 @@ Shape(value: PixelMap)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 绘制目标，可将图形绘制在指定的PixelMap对象中，若未设置，则默认在当前绘制目标中进行绘制。 异常值undefined和null按照无效值处理，本次设置不生效。 |
+| value | PixelMap | 是 | 绘制目标，可将图形绘制在指定的PixelMap对象中，若未设置，则默认在当前绘制目标中进行绘制。 异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## Shape
 
@@ -73,6 +80,7 @@ Called when a component is drawn.
 
 | 名称 | 说明 |
 | --- | --- |
+| [ViewportRect](arkts-arkui-viewportrect-i.md) | 用于描述Viewport的绘制属性。 |
 
 ## 示例
 

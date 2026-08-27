@@ -15,11 +15,11 @@ The **keyEvent** module provides key events reported by a device. It is inherite
 
 | Name | Description |
 | --- | --- |
-| [Key(Key Event)](arkts-input-multimodalinput-keyevent-key-i.md) | Defines a key.@interface Key [since 9 - 11] |
-| [KeyEvent(Key Event)](arkts-input-multimodalinput-keyevent-keyevent-i.md) | Key event.@interface KeyEvent [since 9 - 11] |
+| [Key](arkts-input-multimodalinput-keyevent-key-i.md) | Defines a key. |
+| [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | Key event. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [Action(Key Event)](arkts-input-multimodalinput-keyevent-action-e.md) | Key event type. |
+| [Action](arkts-input-multimodalinput-keyevent-action-e.md) | Key event type. |

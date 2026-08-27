@@ -12,7 +12,8 @@ PermissionRequestResult is the result object of a permission request. Developers
 authResults: Array<number>
 ```
 
-Authorization result corresponding to each requested permission.  
+Authorization result corresponding to each requested permission.
+
 - -1: Not authorized. Starting from API version 12, you can combine this with dialogShownResults to further  
 determine the reason: if dialogShownResults is true, it means the user explicitly denied the request this time; if false, it means the current state does not require a dialog to be shown, and the user usually needs to go to system settings to make changes.  
 - 0: Authorized, the application can continue to access protected resources associated with this permission.  
@@ -35,10 +36,13 @@ the special request conditions for this permission are not met. Developers shoul
 dialogShownResults?: Array<boolean>
 ```
 
-Indicates whether an authorization dialog was actually shown for each permission during this request process.  
+Indicates whether an authorization dialog was actually shown for each permission during this request process.
+
 - true: The system has shown the authorization dialog.  
 - false: The system did not show a dialog, usually because the current permission state, permission type, or system  
-policy does not allow proceeding with the dialog authorization path.When authResults is -1, combining it with this field can further distinguish between "rejected by the user this time" and "dialog is no longer shown currently". If this field is not returned, it means this result does not include the authorization dialog display status.
+policy does not allow proceeding with the dialog authorization path.
+
+When authResults is -1, combining it with this field can further distinguish between "rejected by the user this time" and "dialog is no longer shown currently". If this field is not returned, it means this result does not include the authorization dialog display status.
 
 **Type:** Array&lt;boolean&gt;
 
@@ -56,7 +60,8 @@ policy does not allow proceeding with the dialog authorization path.When authRes
 errorReasons?: Array<number>
 ```
 
-Reason code corresponding to each permission request. Mainly used to explain the specific reasons for authorization failure, invalid request, or inability to show a dialog. If this field is not returned, it means this result does not include reason codes.  
+Reason code corresponding to each permission request. Mainly used to explain the specific reasons for authorization failure, invalid request, or inability to show a dialog. If this field is not returned, it means this result does not include reason codes.
+
 - 0: This request is valid.  
 - 1: Invalid permission name, please check the permission name format and value.  
 - 2: Permission not declared, please declare this permission in module.json.  

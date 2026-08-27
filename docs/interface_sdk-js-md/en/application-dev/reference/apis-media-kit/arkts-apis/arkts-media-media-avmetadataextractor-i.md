@@ -1,6 +1,8 @@
 # AVMetadataExtractor
 
-AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md) to create an AVMetadataExtractor instance.For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
+AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md) to create an AVMetadataExtractor instance.
+
+For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
 
 **Since:** 11
 
@@ -9,7 +11,7 @@ AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtai
 ## Modules to Import
 
 ```TypeScript
-import media from '@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## cancelAllFetchFrames
@@ -107,7 +109,7 @@ Obtains the cover of the audio album. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return the album cover. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the album cover. |
 
 **Error codes:**
 
@@ -160,7 +162,7 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return the video thumbnail. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
@@ -266,7 +268,7 @@ Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap \ | undefined & gt; | Promise used to return the video thumbnail. |
+| Promise&lt;image.PixelMap \| undefined&gt; | Promise used to return the video thumbnail. |
 
 **Error codes:**
 
@@ -528,7 +530,7 @@ Obtains the media metadata. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;AVMetadata & gt; | Promise used to return the result, which is an AVMetadata instance. |
+| Promise&lt;AVMetadata&gt; | Promise used to return the result, which is an AVMetadata instance. |
 
 **Error codes:**
 
@@ -579,7 +581,7 @@ Obtains the media metadata. You can set the maximum timeout interval (**timeoutM
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;AVMetadata \ | undefined & gt; | Promise used to return the audio and video metadata object (**AVMetadata**) asynchronously. |
+| Promise&lt;AVMetadata \| undefined&gt; | Promise used to return the audio and video metadata object (**AVMetadata**) asynchronously. |
 
 **Error codes:**
 
@@ -747,7 +749,7 @@ Releases this AVMetadataExtractor instance. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -900,7 +902,7 @@ Sets the data source for a network on-demand resource. Only network metadata ([f
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL of the media resource. 1. The video formats MP4, MPEG-TS, and MKV are supported. 2. The audio formats M4A, AAC, MP3, OGG, WAV, FLAC, and AMR are supported.    **Example of supported URLs**: 1. HTTP: http://xx 2. HTTPS: https://xx Note: HLS/DASH and live streaming resources are not supported. |
-| headers | Record & lt;string, string & gt; | No | Custom HTTP headers for accessing the network resource. The default value is empty. |
+| headers | Record&lt;string, string&gt; | No | Custom HTTP headers for accessing the network resource. The default value is empty. |
 
 **Examples**
 
@@ -931,7 +933,9 @@ media.createAVMetadataExtractor(async (error: BusinessError, extractor: media.AV
 dataSrc ?: AVDataSrcDescriptor
 ```
 
-Streaming media resource descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**.When an application obtains a media file from the remote, you can set **dataSrc** to obtain the metadata before the application finishes the downloading.
+Streaming media resource descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**.
+
+When an application obtains a media file from the remote, you can set **dataSrc** to obtain the metadata before the application finishes the downloading.
 
 **Type:** [AVDataSrcDescriptor](arkts-media-media-avdatasrcdescriptor-i.md)
 
@@ -945,8 +949,13 @@ Streaming media resource descriptor, which specifies the data source. Before obt
 fdSrc ?: AVFileDescriptor
 ```
 
-Media file descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**.There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.  
-**NOTE：**After the resource handle (FD) is transferred to an AVMetadataExtractor instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVMetadataExtractor use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
+Media file descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**.
+
+There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
+
+**NOTE：**
+
+After the resource handle (FD) is transferred to an AVMetadataExtractor instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVMetadataExtractor use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 
 **Type:** [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md)
 

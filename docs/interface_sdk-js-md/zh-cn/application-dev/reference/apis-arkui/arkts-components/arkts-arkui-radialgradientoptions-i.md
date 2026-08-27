@@ -21,7 +21,9 @@
 center: [Length, Length]
 ```
 
-Defines center point for radial gradient.Anonymous Object Rectification.
+Defines center point for radial gradient.
+
+Anonymous Object Rectification.
 
 **类型：** [Length, Length]
 
@@ -39,7 +41,9 @@ Defines center point for radial gradient.Anonymous Object Rectification.
 colors: Array<[ResourceColor, number]>
 ```
 
-Defines color description for gradients.Anonymous Object Rectification.
+Defines color description for gradients.
+
+Anonymous Object Rectification.
 
 **类型：** Array&lt;[ResourceColor, number]&gt;
 
@@ -57,7 +61,9 @@ Defines color description for gradients.Anonymous Object Rectification.
 radius: Length
 ```
 
-Defines radius of the radial gradient.Anonymous Object Rectification.
+Defines radius of the radial gradient.
+
+Anonymous Object Rectification.
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -75,7 +81,9 @@ Defines radius of the radial gradient.Anonymous Object Rectification.
 repeating?: boolean
 ```
 
-Defines gradient colors with repeated coloring.Anonymous Object Rectification.
+Defines gradient colors with repeated coloring.
+
+Anonymous Object Rectification.
 
 **类型：** boolean
 

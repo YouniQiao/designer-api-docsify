@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import screenshot from '@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## save
@@ -151,7 +151,7 @@ function save(options?: ScreenshotOptions): Promise<image.PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return a PixelMap object. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return a PixelMap object. |
 
 **错误码：**
 

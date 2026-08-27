@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import hyperSnapManager from '@kit.AbilityKit';
+import { hyperSnapManager } from '@kit.AbilityKit';
 ```
 
 ## requestRebuildHyperSnap
@@ -12,7 +12,10 @@ import hyperSnapManager from '@kit.AbilityKit';
 function requestRebuildHyperSnap(): void
 ```
 
-Requests the recreation of the Hyper Snap process snapshot for the application.When compatibility issues arise with an existing snapshot, this method triggers destruction of the current snapshot process. The system will subsequently generate a new snapshot at an optimal time to resolve compatibility problems while maintaining launch performance benefits.  
+Requests the recreation of the Hyper Snap process snapshot for the application.
+
+When compatibility issues arise with an existing snapshot, this method triggers destruction of the current snapshot process. The system will subsequently generate a new snapshot at an optimal time to resolve compatibility problems while maintaining launch performance benefits.
+
 **Notes:**  
 - The system ultimately determines whether and when to recreate the snapshot. Invoking this method only submits  
 a request; actual snapshot recreation depends on system policies and resource availability.  

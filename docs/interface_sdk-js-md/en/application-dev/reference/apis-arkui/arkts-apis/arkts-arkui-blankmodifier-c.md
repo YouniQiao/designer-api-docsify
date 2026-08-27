@@ -1,6 +1,8 @@
 # BlankModifier
 
-Defines Blank Modifier@extends BlankAttribute @implements AttributeModifier&lt;BlankAttribute&gt;
+Defines Blank Modifier
+
+@extends BlankAttribute @implements AttributeModifier&lt;BlankAttribute&gt;
 
 **Inheritance/Implementation:** BlankModifier extends [BlankAttribute](../arkts-components/arkts-arkui-blank-attribute.md#blankattribute) and implements AttributeModifier<BlankAttribute>
 

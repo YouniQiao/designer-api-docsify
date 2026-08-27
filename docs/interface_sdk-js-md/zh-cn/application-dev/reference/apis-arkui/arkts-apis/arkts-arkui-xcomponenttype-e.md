@@ -1,6 +1,8 @@
 # XComponentType
 
-The type of XComponent@enum { number }
+The type of XComponent
+
+@enum { number }
 
 **起始版本：** 12
 

@@ -1,6 +1,8 @@
 # Counter属性/事件
 
-除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
+除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。
+
+除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
 
 **继承/实现关系：** CounterAttribute extends CommonMethod<CounterAttribute>
 
@@ -33,7 +35,7 @@ enableDec(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | “减少”按钮禁用或使能。 默认值：true，true表示使能“减少”按钮，false表示禁用“减少”按钮。 |
+| value | boolean | 是 | “减少”按钮禁用或使能。默认值：true，true表示使能“减少”按钮，false表示禁用“减少”按钮。 |
 
 ## enableInc
 
@@ -55,7 +57,7 @@ enableInc(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | “增加”按钮禁用或使能。 默认值：true，true表示使能“增加”按钮，false表示禁用“增加”按钮。 |
+| value | boolean | 是 | “增加”按钮禁用或使能。默认值：true，true表示使能“增加”按钮，false表示禁用“增加”按钮。 |
 
 ## onDec
 

@@ -12,7 +12,9 @@
 SOURCE_TYPE_WAKEUP = 3
 ```
 
-语音唤醒音频流录制音频源。ohos.permission.MANAGE_INTELLIGENT_VOICE
+语音唤醒音频流录制音频源。
+
+ohos.permission.MANAGE_INTELLIGENT_VOICE
 
 **起始版本：** 10
 
@@ -26,7 +28,9 @@ SOURCE_TYPE_WAKEUP = 3
 SOURCE_TYPE_VOICE_CALL = 4
 ```
 
-通话录音的音频源。ohos.permission.RECORD_VOICE_CALL
+通话录音的音频源。
+
+ohos.permission.RECORD_VOICE_CALL
 
 **起始版本：** 11
 
@@ -54,7 +58,9 @@ SOURCE_TYPE_VOICE_TRANSCRIPTION = 12
 SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT = 19
 ```
 
-未处理的语音助手音频源。此接口仅可在Stage模型下使用。
+未处理的语音助手音频源。
+
+此接口仅可在Stage模型下使用。
 
 **起始版本：** 23
 

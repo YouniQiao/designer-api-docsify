@@ -1,6 +1,7 @@
 # MenuItemGroup
 
 The **MenuItemGroup** component represents a group of menu items.
+
 > **NOTE** > > This component is supported since API version 9. Newly added APIs will be marked with a superscript to indicate > their
 
 ## Child Components
@@ -35,3 +36,4 @@ MenuItemGroup(value?: MenuItemGroupOptions)
 
 | Name | Description |
 | --- | --- |
+| [MenuItemGroupOptions](arkts-arkui-menuitemgroupoptions-i.md) | Describes the header and footer of the menu item group. |

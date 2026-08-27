@@ -9,7 +9,7 @@ Class to be override for backup extension ability.
 ## Modules to Import
 
 ```TypeScript
-import BackupExtensionAbility, { BundleVersion } from '@kit.CoreFileKit';
+import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
 ```
 
 ## onBackup
@@ -60,7 +60,7 @@ Callback to be called when the backup procedure is started. Developer could over
 
 | Type | Description |
 | --- | --- |
-| string \| Promise & lt;string & gt; | Return backup result, support promise, the result is a JSON string, it includes type, errorCode and errorInfo now. |
+| string \| Promise&lt;string&gt; | Return backup result, support promise, the result is a JSON string, it includes type, errorCode and errorInfo now. |
 
 **Examples**
 
@@ -245,7 +245,7 @@ Callback to be called before extension ability exits. Developer could override t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise returned by the function |
+| Promise&lt;void&gt; | the promise returned by the function |
 
 **Examples**
 
@@ -337,7 +337,7 @@ Callback to be called when the restore procedure is started. Developer could ove
 
 | Type | Description |
 | --- | --- |
-| string \| Promise & lt;string & gt; | Return restore result, support promise. the result is a JSON string, it includes type, errorCode and errorInfo now. |
+| string \| Promise&lt;string&gt; | Return restore result, support promise. the result is a JSON string, it includes type, errorCode and errorInfo now. |
 
 **Examples**
 

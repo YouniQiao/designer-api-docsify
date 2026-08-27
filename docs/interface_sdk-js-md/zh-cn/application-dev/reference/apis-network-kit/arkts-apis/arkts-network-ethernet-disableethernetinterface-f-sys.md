@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import ethernet from '@kit.NetworkKit';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## disableEthernetInterface
@@ -28,7 +28,7 @@ function disableEthernetInterface(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 禁用以太网接口成功返回的Promise。 |
+| Promise&lt;void&gt; | 禁用以太网接口成功返回的Promise。 |
 
 **错误码：**
 

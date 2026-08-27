@@ -169,7 +169,7 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return the snapshot object. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the snapshot object. |
 
 **Error codes:**
 
@@ -258,7 +258,7 @@ Captures a snapshot of the provided component content. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent & lt;T & gt; | Yes | Component content to be captured. This is the content currently displayed in the **UIContext**. |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Component content to be captured. This is the content currently displayed in the **UIContext**. |
 | delay | number | No | Delay time for triggering the screenshot command. When the layout includes an image component, it is necessary to set a delay time to allow the system to decode the image resources. The decoding time is subject to the resource size. In light of this, whenever possible, use pixel map resources that do not require decoding.When PixelMap resources are used or when syncLoad is set to **true** for the **Image** component, you can set **delay** to **0** to forcibly capture snapshots without waiting. This delay time does not refer to the time from the API call to the return: As the system needs to temporarily construct the passed-in **builder** offscreen, the return time is usually longer than this delay.Note: In the **builder** passed in, state variables should not be used to control the construction of child components. If they are used, they should not change when the API is called, so as to avoid unexpected snapshot results.Value range: [0, +∞). If the value is less than 0, the default value is used.Default value: **300**Unit: ms |
 | checkImageStatus | boolean | No | Whether to verify the image decoding status before taking a snapshot. If the value is **true**, the system checks whether all **Image** components have been decoded before taking the snapshot. If the check is not completed, the system aborts the snapshot and returns an exception.Default value: **false**. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. You can specify the scale ratio for the pixelmap during rendering and whether to force the system to complete all rendering commands before taking the snapshot. |
@@ -267,7 +267,7 @@ Captures a snapshot of the provided component content. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return the snapshot object. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the snapshot object. |
 
 **Error codes:**
 
@@ -471,7 +471,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return the snapshot object. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the snapshot object. |
 
 **Error codes:**
 
@@ -812,7 +812,7 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;image.PixelMap & gt; | Promise used to return the snapshot object. |
+| Promise&lt;image.PixelMap&gt; | Promise used to return the snapshot object. |
 
 **Error codes:**
 

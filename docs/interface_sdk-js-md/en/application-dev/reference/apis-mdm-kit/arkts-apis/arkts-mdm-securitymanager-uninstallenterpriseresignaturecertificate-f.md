@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import securityManager from '@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## uninstallEnterpriseReSignatureCertificate
@@ -12,7 +12,10 @@ import securityManager from '@kit.MDMKit';
 function uninstallEnterpriseReSignatureCertificate(admin: Want, certificateAlias: string, accountId: number): void
 ```
 
-Uninstalls the enterprise application re-signing certificate. After the enterprise re-signing certificate is uninstalled, the applications signed using this certificate can run properly before the device is restarted, but cannot run after the device is restarted.Usage scenarios:
+Uninstalls the enterprise application re-signing certificate. After the enterprise re-signing certificate is uninstalled, the applications signed using this certificate can run properly before the device is restarted, but cannot run after the device is restarted.
+
+Usage scenarios:
+
 1. Installing a new certificate: After a new certificate is installed via the  
 [installEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-installenterpriseresignaturecertificate-f.md) API, applications re-signed using the new certificate can run properly. If the application corresponding to the old signing certificate is a super device administrator application, the application must be deactivated before the certificate can be uninstalled. Otherwise, after the certificate is uninstalled, the application cannot be uninstalled or run.
 2. Restoring a mistakenly deleted certificate: After a mistakenly deleted certificate is re-installed via the  

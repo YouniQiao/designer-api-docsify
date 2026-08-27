@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usbManager from '@kit.MDMKit';
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## addAllowedUsbDevices
@@ -12,11 +12,17 @@ import usbManager from '@kit.MDMKit';
 function addAllowedUsbDevices(admin: Want, usbDeviceIds: Array<UsbDeviceId>): void
 ```
 
-Adds allowed USB devices.Use cases:  
+Adds allowed USB devices.
+
+Use cases:
+
 - Restrict access to only specific USB devices in enterprise security management scenarios.  
 - Enable device administrators to precisely control which USB devices can be recognized and used.  
 - Work with the [removeAllowedUsbDevices](arkts-mdm-usbmanager-removeallowedusbdevices-f.md) API to implement dynamic  
-management of USB devices.A policy conflict is reported when this API is called in the following scenarios:
+management of USB devices.
+
+A policy conflict is reported when this API is called in the following scenarios:
+
 1. The USB capability or the USB-to-serial capability of the device has been disabled via [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md).
 2. The USB storage device access policy has been disabled using the [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md) API.
 3. Disallowed USB device types have been added using the [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md) API.

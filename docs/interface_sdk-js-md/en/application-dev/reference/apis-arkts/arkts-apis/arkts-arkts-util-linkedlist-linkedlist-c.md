@@ -278,7 +278,7 @@ Converts this LinkedList into an array and returns the array.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Array obtained. |
+| Array&lt;T&gt; | Array obtained. |
 
 **Error codes:**
 
@@ -316,7 +316,7 @@ Uses a callback to traverse the elements in this LinkedList and obtain their ind
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, LinkedList?: LinkedList & lt;T & gt;) = & gt; void | Yes | Callback invoked to traverse the elements in the LinkedList. |
+| callbackFn | (value: T, index?: number, LinkedList?: LinkedList&lt;T&gt;) =&gt; void | Yes | Callback invoked to traverse the elements in the LinkedList. |
 | thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**

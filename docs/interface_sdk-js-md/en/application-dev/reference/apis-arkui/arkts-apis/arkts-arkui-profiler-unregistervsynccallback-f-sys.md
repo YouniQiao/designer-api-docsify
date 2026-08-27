@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## unregisterVsyncCallback

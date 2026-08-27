@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## queryTrafficStats
@@ -56,7 +56,7 @@ Queries the data usage of a specified application within a specified period for 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;statistics.NetStatsInfo & gt; | Promise used to return the historical traffic information object. |
+| Promise&lt;statistics.NetStatsInfo&gt; | Promise used to return the historical traffic information object. |
 
 **Error codes:**
 

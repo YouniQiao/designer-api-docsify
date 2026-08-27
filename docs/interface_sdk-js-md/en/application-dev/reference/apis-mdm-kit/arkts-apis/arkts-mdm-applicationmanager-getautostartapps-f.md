@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## getAutoStartApps
@@ -94,21 +94,6 @@ try {
 } catch(err) {
   console.error(`Failed to get auto start apps. Code: ${err.code}, message: ${err.message}`);
 }
-```
-
-```TypeScript
-// Return value example.
-[
-  {
-    "bundleName": "com.example.edmtest",
-    "abilityName": "EntryAbility",
-    // Supported since API version 24.
-    "parameters": {
-      "isHiddenStart": false
-    }
-  },
-  // ...
-]
 ```
 
 

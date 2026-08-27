@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## getRdbStoreSync
@@ -24,14 +24,14 @@ Obtains a RDB store. You can set parameters of the RDB store as required. This i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes | Indicates the context of an application or ability. |
-| config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | Yes | Indicates the [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) configuration of the database related to this RDB store. |
+| context | Context | Yes | Indicates the context of an application or ability. |
+| config | StoreConfig | Yes | Indicates the [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) configuration of the database related to this RDB store. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md) | The RDB store { |
+| RdbStore | The RDB store { |
 
 **Error codes:**
 

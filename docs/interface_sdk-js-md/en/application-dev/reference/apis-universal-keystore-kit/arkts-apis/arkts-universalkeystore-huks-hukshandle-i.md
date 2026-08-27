@@ -18,8 +18,7 @@ Defines the struct for a HUKS handle.
 ## Modules to Import
 
 ```TypeScript
-import huks from '@kit.UniversalKeystoreKit';
-import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## errorCode
@@ -28,7 +27,9 @@ import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 errorCode: number
 ```
 
-Reserved field.Note: This API is deprecated since API version 9. No substitute API is provided.
+Reserved field.
+
+Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** number
 
@@ -44,7 +45,9 @@ Reserved field.Note: This API is deprecated since API version 9. No substitute A
 handle: number
 ```
 
-Reserved field.Note: This API is deprecated since API version 9. No substitute API is provided.
+Reserved field.
+
+Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** number
 
@@ -60,7 +63,9 @@ Reserved field.Note: This API is deprecated since API version 9. No substitute A
 token?: Uint8Array
 ```
 
-Reserved field.Note: This API is deprecated since API version 9. No substitute API is provided.
+Reserved field.
+
+Note: This API is deprecated since API version 9. No substitute API is provided.
 
 **Type:** Uint8Array
 

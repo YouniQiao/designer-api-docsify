@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getLinkedInfoSync
@@ -13,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function getLinkedInfoSync(): WifiLinkedInfo
 ```
 
-获取WLAN连接信息。此接口同步返回结果。 如果未获取ohos.permission.GET_WIFI_PEERS_MAC权限，返回随机bssid。
+获取WLAN连接信息。此接口同步返回结果。如果未获取ohos.permission.GET_WIFI_PEERS_MAC权限，返回随机bssid。
 
 **起始版本：** 18
 
@@ -25,7 +24,7 @@ function getLinkedInfoSync(): WifiLinkedInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i.md) | 返回WLAN连接信息。 |
+| WifiLinkedInfo | 返回WLAN连接信息。 |
 
 **错误码：**
 

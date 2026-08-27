@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import workScheduler from '@kit.BackgroundTasksKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName
@@ -34,7 +34,9 @@ abilityName: string
 batteryLevel?: number
 ```
 
-电量。取值范围：[0, 100]
+电量。
+
+取值范围：[0, 100]
 
 **类型：** number
 
@@ -98,7 +100,7 @@ chargerType?: ChargingType
 earliestStartTime?: number
 ```
 
-任务首次执行时间距离任务申请时间的间隔，单位：ms，默认为0，范围大于等于0。 取值范围为全体整数。
+任务首次执行时间距离任务申请时间的间隔，单位：ms，默认为0，范围大于等于0。取值范围为全体整数。
 
 **类型：** number
 
@@ -130,7 +132,8 @@ idleWaitTime?: number
 isCharging?: boolean
 ```
 
-是否充电，默认为false。  
+是否充电，默认为false。
+
 - true表示充电触发延迟任务回调。  
 - false表示不充电触发延迟任务回调。
 
@@ -148,7 +151,8 @@ isCharging?: boolean
 isDeepIdle?: boolean
 ```
 
-是否要求设备进入空闲状态，默认为false。  
+是否要求设备进入空闲状态，默认为false。
+
 - true表示需要。  
 - false表示不需要。
 
@@ -166,7 +170,8 @@ isDeepIdle?: boolean
 isPersisted?: boolean
 ```
 
-注册的延迟任务是否可保存在系统中，默认为false。  
+注册的延迟任务是否可保存在系统中，默认为false。
+
 - true表示可保存，即系统重启后，任务可恢复。  
 - false表示不可保存。
 
@@ -184,7 +189,8 @@ isPersisted?: boolean
 isRepeat?: boolean
 ```
 
-是否循环任务，默认为false。  
+是否循环任务，默认为false。
+
 - true表示循环任务。  
 - false表示非循环任务。
 

@@ -1,6 +1,10 @@
 # Client
 
-Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server.Before using the methods of this class, use the [ssap.createClient](arkts-connectivity-ssap-createclient-f.md) method to construct an instance of this class.An app only needs to create one [Client](arkts-connectivity-ssap-client-i.md) instance for a remote device. Repeated creation will increase unnecessary resource overhead.
+Represents a SSAP client class. It provides APIs for connecting to and transmitting data with the server.
+
+Before using the methods of this class, use the [ssap.createClient](arkts-connectivity-ssap-createclient-f.md) method to construct an instance of this class.
+
+An app only needs to create one [Client](arkts-connectivity-ssap-client-i.md) instance for a remote device. Repeated creation will increase unnecessary resource overhead.
 
 **Since:** 26.0.0
 
@@ -9,7 +13,7 @@ Represents a SSAP client class. It provides APIs for connecting to and transmitt
 ## Modules to Import
 
 ```TypeScript
-import ssap from '@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## callMethod
@@ -81,7 +85,9 @@ Unsubscribes from event notification events. This API uses an asynchronous callb
 onEventNotify(callback: Callback<Event>): void
 ```
 
-Subscribes to event notification events. For example, in a device status monitoring scenario, the client subscribes to events to receive status change notifications (such as device alarms and data updates) pushed by the server in real time. This API uses an asynchronous callback to return the result.The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
+Subscribes to event notification events. For example, in a device status monitoring scenario, the client subscribes to events to receive status change notifications (such as device alarms and data updates) pushed by the server in real time. This API uses an asynchronous callback to return the result.
+
+The app must have the **ohos.permission.ACCESS_NEARLINK** permission to receive this event.
 
 **Since:** 26.0.0
 
@@ -125,7 +131,7 @@ Reads a server descriptor. This API can be used only after a connection is estab
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PropertyDescriptor & gt; | Promise used to return the **PropertyDescriptor** object read from the server. |
+| Promise&lt;PropertyDescriptor&gt; | Promise used to return the **PropertyDescriptor** object read from the server. |
 
 **Error codes:**
 
@@ -167,7 +173,7 @@ Enables or disables indication for property value change. When the property valu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -187,7 +193,9 @@ Enables or disables indication for property value change. When the property valu
 writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 ```
 
-Rewrites the server descriptor. This API uses a promise to return the result.This API does not support writing the client property configuration descriptor (**CLIENT_PROPERTY_CONFIG**). To configure the client property notification or indication, use [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification) or [setPropertyIndication](#setpropertyindication)
+Rewrites the server descriptor. This API uses a promise to return the result.
+
+This API does not support writing the client property configuration descriptor (**CLIENT_PROPERTY_CONFIG**). To configure the client property notification or indication, use [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification) or [setPropertyIndication](#setpropertyindication)
 
 **Since:** 26.0.0
 
@@ -209,7 +217,7 @@ Rewrites the server descriptor. This API uses a promise to return the result.Thi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import particleAbility from '@kit.AbilityKit';
+import { particleAbility } from '@kit.AbilityKit';
 ```
 
 ## connectAbility

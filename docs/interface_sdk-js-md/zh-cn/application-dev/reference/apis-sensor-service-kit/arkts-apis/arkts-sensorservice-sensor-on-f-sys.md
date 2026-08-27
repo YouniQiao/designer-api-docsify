@@ -11,7 +11,7 @@
 function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: Options): void
 ```
 
-订阅颜色传感器数据变化。通过回调函数异步上报颜色传感器数据，数据格式为ColorResponse对象，包含lightIntensity（光照强度）和colorTemperature（色温）两个number类型字段。 当开发者需要获取环境光照强度和色温信息以实现屏幕自动亮度调节、拍照色温补偿、环境光线监测等功能时，使用此接口。 该接口为异步回调方式，传感器数据变化时通过callback回调上报，无Promise返回值。
+订阅颜色传感器数据变化。通过回调函数异步上报颜色传感器数据，数据格式为ColorResponse对象，包含lightIntensity（光照强度）和colorTemperature（色温）两个number类型字段。当开发者需要获取环境光照强度和色温信息以实现屏幕自动亮度调节、拍照色温补偿、环境光线监测等功能时，使用此接口。该接口为异步回调方式，传感器数据变化时通过callback回调上报，无Promise返回值。
 
 **起始版本：** 10
 
@@ -25,7 +25,7 @@ function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: O
 | --- | --- | --- | --- |
 | type | SensorId.COLOR | 是 | 传感器类型，该值固定为SensorId.COLOR。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ColorResponse](arkts-sensorservice-sensor-colorresponse-i-sys.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为ColorResponse。 |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 否 | 可选参数列表，用于设置传感器上报频率。默认值：200000000ns。不传入时使用默认频率。 |
+| options | Options | 否 | 可选参数列表，用于设置传感器上报频率。默认值：200000000ns。不传入时使用默认频率。 |
 
 **错误码：**
 
@@ -62,7 +62,7 @@ try{
 function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Options): void
 ```
 
-订阅吸收比率传感器数据变化。通过回调函数异步上报SAR传感器数据，数据格式为SarResponse对象，包含absorptionRatio（吸收率）一个number类型字段。 当开发者需要监测设备电磁波吸收率以实现通信安全监测、辐射检测等功能时，使用此接口。 该接口为异步回调方式，传感器数据变化时通过callback回调上报，无Promise返回值。
+订阅吸收比率传感器数据变化。通过回调函数异步上报SAR传感器数据，数据格式为SarResponse对象，包含absorptionRatio（吸收率）一个number类型字段。当开发者需要监测设备电磁波吸收率以实现通信安全监测、辐射检测等功能时，使用此接口。该接口为异步回调方式，传感器数据变化时通过callback回调上报，无Promise返回值。
 
 **起始版本：** 10
 
@@ -76,7 +76,7 @@ function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Optio
 | --- | --- | --- | --- |
 | type | SensorId.SAR | 是 | 传感器类型，该值固定为SensorId.SAR。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SarResponse](arkts-sensorservice-sensor-sarresponse-i-sys.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为SarResponse。 |
-| options | [Options](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 否 | 可选参数列表，用于设置传感器上报频率。默认值：200000000ns。不传入时使用默认频率。 |
+| options | Options | 否 | 可选参数列表，用于设置传感器上报频率。默认值：200000000ns。不传入时使用默认频率。 |
 
 **错误码：**
 

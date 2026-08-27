@@ -1,6 +1,7 @@
 # RectUtils
 
 This module provides tools for processing rectangles. Use scenarios:
+
 1. Quickly create rectangles and get their basic features, like making a new rectangle, copying one, and obtaining its width, height, and center point.
 2. Calculate and adjust boundaries, such as obtaining the inclusion relationship, calculating and updating intersections and unions between rectangles, and updating boundary values.
 
@@ -20,7 +21,7 @@ This module provides tools for processing rectangles. Use scenarios:
 ## Modules to Import
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## centerX

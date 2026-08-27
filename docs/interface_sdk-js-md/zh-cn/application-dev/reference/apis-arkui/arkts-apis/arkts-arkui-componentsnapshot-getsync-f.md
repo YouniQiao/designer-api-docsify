@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import componentSnapshot from '@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## getSync

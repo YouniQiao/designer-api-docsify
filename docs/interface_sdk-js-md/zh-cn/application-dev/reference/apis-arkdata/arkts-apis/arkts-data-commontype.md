@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import commonType from '@kit.ArkData';
+import { commonType } from '@kit.ArkData';
 ```
 
 ## 汇总

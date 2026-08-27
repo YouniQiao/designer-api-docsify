@@ -9,7 +9,7 @@ Provides system attribute configuration functions, including translating languag
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## addPreferredLanguage
@@ -79,7 +79,7 @@ Gets collations supported by system locale.
 
 | Type | Description |
 | --- | --- |
-| Map & lt;string, string & gt; | The map will containing the collation's identifier and name. If the map is empty of the collation for given locale does not need to be set. |
+| Map&lt;string, string&gt; | The map will containing the collation's identifier and name. If the map is empty of the collation for given locale does not need to be set. |
 
 **Error codes:**
 
@@ -119,7 +119,7 @@ Gets measurements supported by system locale.
 
 | Type | Description |
 | --- | --- |
-| Map & lt;string, string & gt; | a map will containing identifier and name of measurements supported by system locale. |
+| Map&lt;string, string&gt; | a map will containing identifier and name of measurements supported by system locale. |
 
 **Error codes:**
 
@@ -159,7 +159,7 @@ Gets numbering systems supported by system locale.
 
 | Type | Description |
 | --- | --- |
-| Map & lt;string, string & gt; | a map will containing the numbering system 's identifier and sample. If the map is empty, there is no local digit for given locale. |
+| Map&lt;string, string&gt; | a map will containing the numbering system 's identifier and sample. If the map is empty, there is no local digit for given locale. |
 
 **Error codes:**
 
@@ -199,7 +199,7 @@ Gets commonly used number patterns for system locale.
 
 | Type | Description |
 | --- | --- |
-| Map & lt;string, string & gt; | a map containing the used number patterns and example of system locale. |
+| Map&lt;string, string&gt; | a map containing the used number patterns and example of system locale. |
 
 **Error codes:**
 
@@ -239,7 +239,7 @@ Gets numerical date patterns and examples supported by system locale.
 
 | Type | Description |
 | --- | --- |
-| Map & lt;string, string & gt; | a map containing the date patterns and examples |
+| Map&lt;string, string&gt; | a map containing the date patterns and examples |
 
 **Error codes:**
 

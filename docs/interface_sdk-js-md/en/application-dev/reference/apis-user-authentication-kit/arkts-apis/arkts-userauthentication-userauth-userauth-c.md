@@ -13,8 +13,7 @@ Provides APIs for managing the **UserAuth** object.
 ## Modules to Import
 
 ```TypeScript
-import userAuth from '@kit.UserAuthenticationKit';
-import UserAuthIcon from '@kit.UserAuthenticationKitIcon';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## auth
@@ -46,8 +45,8 @@ Starts user authentication. This API uses a callback to return the result.
 | --- | --- | --- | --- |
 | challenge | Uint8Array | Yes | Challenge value, which can be passed in Uint8Array([]) format. |
 | authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
-| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Authentication trust level. |
-| callback | [IUserAuthCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the result. |
+| authTrustLevel | AuthTrustLevel | Yes | Authentication trust level. |
+| callback | IUserAuthCallback | Yes | Callback used to return the result. |
 
 **Return value:**
 
@@ -171,7 +170,7 @@ Checks whether the specified authentication capability is supported.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
-| authTrustLevel | [AuthTrustLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Authentication trust level. |
+| authTrustLevel | AuthTrustLevel | Yes | Authentication trust level. |
 
 **Return value:**
 

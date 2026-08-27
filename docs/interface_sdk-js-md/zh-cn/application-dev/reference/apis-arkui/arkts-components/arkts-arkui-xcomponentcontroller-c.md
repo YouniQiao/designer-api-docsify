@@ -1,6 +1,6 @@
 # XComponentController
 
-定义XComponent的控制器。 您可以将该控制器绑定到XComponent，以通过控制器调用组件接口。
+定义XComponent的控制器。您可以将该控制器绑定到XComponent，以通过控制器调用组件接口。
 
 **起始版本：** 8
 
@@ -37,7 +37,7 @@ xComponentController: XComponentController = new XComponentController();
 getXComponentContext(): Object
 ```
 
-获取XComponent对象的context。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+获取XComponent对象的context。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **起始版本：** 8
 
@@ -49,7 +49,7 @@ getXComponentContext(): Object
 
 | 类型 | 说明 |
 | --- | --- |
-| Object | XComponent对象的context。 context中包含的接口由开发者定义。 context作为onLoad回调的第一个参数传入。 |
+| Object | XComponent对象的context。context中包含的接口由开发者定义。context作为onLoad回调的第一个参数传入。 |
 
 ## getXComponentSurfaceId
 
@@ -57,7 +57,7 @@ getXComponentContext(): Object
 getXComponentSurfaceId(): string
 ```
 
-获取XComponent所持有的surface的ID，可用于@ohos相关接口。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+获取XComponent所持有的surface的ID，可用于@ohos相关接口。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **起始版本：** 9
 
@@ -102,7 +102,7 @@ getXComponentSurfaceId(): string
 getXComponentSurfaceRect(): SurfaceRect
 ```
 
-获取XComponent所持有的surface的矩形。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+获取XComponent所持有的surface的矩形。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **起始版本：** 12
 
@@ -124,7 +124,7 @@ getXComponentSurfaceRect(): SurfaceRect
 getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 ```
 
-获取屏幕旋转时此XComponent所持有的surface的方向是否锁定。 该接口仅在XComponent的type设置为SURFACE("surface")时生效。
+获取屏幕旋转时此XComponent所持有的surface的方向是否锁定。该接口仅在XComponent的type设置为SURFACE("surface")时生效。
 
 **起始版本：** 12
 
@@ -160,7 +160,7 @@ lockCanvas(): DrawingCanvas | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) \| null | 返回用于在XComponent创建的surface上绘制的Canvas。 如果surface不可用，则返回null。 |
+| [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) \| null | 返回用于在XComponent创建的surface上绘制的Canvas。如果surface不可用，则返回null。 |
 
 ## onSurfaceChanged
 
@@ -168,8 +168,9 @@ lockCanvas(): DrawingCanvas | null
 onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 ```
 
-当XComponent所持有的surface大小发生变化时触发（包括XComponent以指定大小创建时）。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。  
-**说明：** 仅当XComponent组件未设置libraryname参数时，会进行该回调。
+当XComponent所持有的surface大小发生变化时触发（包括XComponent以指定大小创建时）。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+
+**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **起始版本：** 12
 
@@ -192,8 +193,9 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 onSurfaceCreated(surfaceId: string): void
 ```
 
-当XComponent所持有的surface创建完成时触发。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。  
-**说明：** 仅当XComponent组件未设置libraryname参数时，会进行该回调。
+当XComponent所持有的surface创建完成时触发。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+
+**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **起始版本：** 12
 
@@ -215,8 +217,9 @@ onSurfaceCreated(surfaceId: string): void
 onSurfaceDestroyed(surfaceId: string): void
 ```
 
-当XComponent所持有的surface销毁时触发。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。  
-**说明：** 仅当XComponent组件未设置libraryname参数时，会进行该回调。
+当XComponent所持有的surface销毁时触发。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+
+**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
 
 **起始版本：** 12
 
@@ -264,7 +267,7 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 setXComponentSurfaceRect(rect: SurfaceRect): void
 ```
 
-设置XComponent所持有的surface的矩形。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+设置XComponent所持有的surface的矩形。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
 
 **起始版本：** 12
 
@@ -286,7 +289,7 @@ setXComponentSurfaceRect(rect: SurfaceRect): void
 setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 ```
 
-设置屏幕旋转时是否锁定此XComponent所持有的surface的方向。 该接口仅在XComponent的type设置为SURFACE("surface")时生效。
+设置屏幕旋转时是否锁定此XComponent所持有的surface的方向。该接口仅在XComponent的type设置为SURFACE("surface")时生效。
 
 **起始版本：** 12
 
@@ -311,7 +314,9 @@ setXComponentSurfaceSize(value: {
   }): void
 ```
 
-设置XComponent所持有的surface的宽度和高度。 该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。单位：px。
+设置XComponent所持有的surface的宽度和高度。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+
+单位：px。
 
 **起始版本：** 9
 
@@ -333,7 +338,11 @@ setXComponentSurfaceSize(value: {
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-配置AI分析并启动AI分析功能，使用前需先启用图像AI分析能力[enableAnalyzer](arkts-arkui-xcomponent-attribute.md#enableanalyzer)，仅type为SURFACE或TEXTURE时有效。使用Promise异步回调来返回结果。由于用于分析的图像帧是调用此接口时捕获的帧，因此请注意此接口的调用时机。如果在执行完成之前重复调用此接口，将触发错误回调。
+配置AI分析并启动AI分析功能，使用前需先启用图像AI分析能力[enableAnalyzer](arkts-arkui-xcomponent-attribute.md#enableanalyzer)，仅type为SURFACE或TEXTURE时有效。使用Promise异步回调来返回结果。
+
+由于用于分析的图像帧是调用此接口时捕获的帧，因此请注意此接口的调用时机。
+
+如果在执行完成之前重复调用此接口，将触发错误回调。
 
 > **说明：**
 
@@ -359,7 +368,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 用于返回结果的Promise。 |
+| Promise&lt;void&gt; | 用于返回结果的Promise。 |
 
 **错误码：**
 

@@ -10,18 +10,18 @@ The **NotificationFlags** module describes the notification flags. An applicatio
 
 | Name | Description |
 | --- | --- |
-| [NotificationFlags(Some states and flags for notifications)](arkts-notification-notificationflags-notificationflags-i.md) | Defines the notification flags. |
+| [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md) | Defines the notification flags. |
 
 <!--Del-->
 ### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [NotificationFlags(Some states and flags for notifications)](arkts-notification-notificationflags-notificationflags-i-sys.md) | Defines the notification flags. |
+| [NotificationFlags](arkts-notification-notificationflags-notificationflags-i-sys.md) | Defines the notification flags. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [NotificationFlagStatus(Some states and flags for notifications)](arkts-notification-notificationflags-notificationflagstatus-e.md) | Enumerates the notification flag states. |
+| [NotificationFlagStatus](arkts-notification-notificationflags-notificationflagstatus-e.md) | Enumerates the notification flag states. |

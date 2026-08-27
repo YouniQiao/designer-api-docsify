@@ -1,6 +1,8 @@
 # ModelConfig
 
-Manages configurations of the embedding model.@interface ModelConfig
+Manages configurations of the embedding model.
+
+@interface ModelConfig
 
 **Since:** 15
 
@@ -9,7 +11,7 @@ Manages configurations of the embedding model.@interface ModelConfig
 ## Modules to Import
 
 ```TypeScript
-import intelligence from '@kit.ArkData';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## cachePath

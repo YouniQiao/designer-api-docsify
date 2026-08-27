@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import geolocation from '@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## sendCommand
@@ -28,7 +28,7 @@ function sendCommand(command: LocationCommand, callback: AsyncCallback<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | 是 | 指定目标场景，和将要发送的命令（字符串）。 |
+| command | LocationCommand | 是 | 指定目标场景，和将要发送的命令（字符串）。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示命令发送成功；返回false表示命令发送失败。 |
 
 **示例**
@@ -69,13 +69,13 @@ function sendCommand(command: LocationCommand): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | 是 | 指定目标场景，和将要发送的命令（字符串）。 |
+| command | LocationCommand | 是 | 指定目标场景，和将要发送的命令（字符串）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象，返回true表示命令发送成功；返回false表示命令发送失败。 |
+| Promise&lt;boolean&gt; | Promise对象，返回true表示命令发送成功；返回false表示命令发送失败。 |
 
 **示例**
 

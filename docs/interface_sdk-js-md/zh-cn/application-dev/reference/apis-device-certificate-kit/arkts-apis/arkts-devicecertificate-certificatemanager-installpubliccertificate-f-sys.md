@@ -34,7 +34,7 @@ function installPublicCertificate(keystore: Uint8Array, keystorePwd: string) : P
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise对象，返回安装用户公共凭据的结果，返回值为 [CMResult]{ |
+| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise对象，返回安装用户公共凭据的结果，返回值为[CMResult]{ |
 
 **错误码：**
 

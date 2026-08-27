@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import netFirewall from '@kit.NetworkKit';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## addNetFirewallRule
@@ -83,7 +83,7 @@ function addNetFirewallRule(rule: NetFirewallRule): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | 以Promise形式返回防火墙规则ID，防火墙规则ID由系统自动生成。 |
+| Promise&lt;number&gt; | 以Promise形式返回防火墙规则ID，防火墙规则ID由系统自动生成。 |
 
 **错误码：**
 
@@ -178,6 +178,15 @@ let domainRule: netFirewall.NetFirewallRule = {
     },{
       isWildcard: true,
       domain: "*.example.cn"
+    },{
+      isWildcard: true,
+      domain: "*w.example.cn"  // 从API版本26.0.0开始支持
+    },{
+      isWildcard: true,
+      domain: "www.example.*"  // 从API版本26.0.0开始支持
+    },{
+      isWildcard: true,
+      domain: "www.example.c*"  // 从API版本26.0.0开始支持
     }],
   userId: 100,
   interface:"wlan0" // 从API版本26.0.0开始支持

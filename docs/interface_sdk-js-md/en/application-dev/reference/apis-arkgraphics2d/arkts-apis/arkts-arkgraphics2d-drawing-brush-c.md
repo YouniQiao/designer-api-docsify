@@ -16,7 +16,7 @@ Defines a brush, which is used to describe the style and color to fill in a shap
 ## Modules to Import
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -170,7 +170,7 @@ import { common2D, drawing } from '@kit.ArkGraphics2D';
 const color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
 const brush = new drawing.Brush();
 brush.setColor(color);
-let colorGet = brush.getColor();
+let currentColor = brush.getColor();
 ```
 
 ```TypeScript
@@ -203,11 +203,11 @@ Obtains the brush color. The difference between this method and [getColor](#getc
 **Examples**
 
 ```TypeScript
-import { common2D, drawing, colorSpaceManager } from "@kit.ArkGraphics2D";
+import { common2D, drawing, colorSpaceManager } from '@kit.ArkGraphics2D';
 
 const brush = new drawing.Brush();
 let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
-let color4f:common2D.Color4f = {alpha:1, red:0.5, green:0.4, blue:0.7};
+let color4f: common2D.Color4f = { alpha: 1, red: 0.5, green: 0.4, blue: 0.7 };
 brush.setColor4f(color4f, colorSpace);
 let color = brush.getColor4f();
 ```
@@ -238,17 +238,17 @@ Obtains the color filter of this brush.
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 **Examples**
 
 ```TypeScript
-import {drawing} from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 
 let brush = new drawing.Brush();
-let setColorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
-brush.setColorFilter(setColorFilter);
-let filter = brush.getColorFilter();
+let colorFilter = drawing.ColorFilter.createSRGBGammaToLinear();
+brush.setColorFilter(colorFilter);
+let currentFilter = brush.getColorFilter();
 ```
 
 ```TypeScript
@@ -286,8 +286,8 @@ import { common2D, drawing } from '@kit.ArkGraphics2D';
 let color : common2D.Color = { alpha: 255, red: 255, green: 0, blue: 0 };
 let brush = new drawing.Brush();
 brush.setColor(color);
-let hex_color: number = brush.getHexColor();
-console.info('getHexColor: ', hex_color.toString(16));
+let hexColor: number = brush.getHexColor();
+console.info('getHexColor: ', hexColor.toString(16));
 ```
 
 ```TypeScript
@@ -476,7 +476,7 @@ Sets a blend mode for this brush. If this API is not called, the default blend m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | Yes | Blend mode. |
+| mode | BlendMode | Yes | Blend mode. |
 
 **Error codes:**
 
@@ -647,11 +647,11 @@ Sets the color and standard color gamut for this brush. The difference between t
 **Examples**
 
 ```TypeScript
-import { common2D, drawing, colorSpaceManager } from "@kit.ArkGraphics2D";
+import { common2D, drawing, colorSpaceManager } from '@kit.ArkGraphics2D';
 
 const brush = new drawing.Brush();
 let colorSpace = colorSpaceManager.create(colorSpaceManager.ColorSpace.BT2020_HLG);
-let color4f:common2D.Color4f = {alpha:1, red:0.5, green:0.4, blue:0.7};
+let color4f: common2D.Color4f = { alpha: 1, red: 0.5, green: 0.4, blue: 0.7 };
 brush.setColor4f(color4f, colorSpace);
 ```
 
@@ -733,11 +733,11 @@ Sets an image filter for this brush.
 **Examples**
 
 ```TypeScript
-import {drawing} from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 
 let brush = new drawing.Brush();
-let imgFilter = drawing.ImageFilter.createBlurImageFilter(5, 10, drawing.TileMode.DECAL);
-brush.setImageFilter(imgFilter);
+let imageFilter = drawing.ImageFilter.createBlurImageFilter(5, 10, drawing.TileMode.DECAL);
+brush.setImageFilter(imageFilter);
 brush.setImageFilter(null);
 ```
 
@@ -778,12 +778,11 @@ Adds a mask filter for this brush.
 **Examples**
 
 ```TypeScript
-import { RenderNode } from '@kit.ArkUI';
-import { common2D, drawing } from '@kit.ArkGraphics2D';
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { drawing } from '@kit.ArkGraphics2D';
 
 class DrawingRenderNode extends RenderNode {
   draw(context : DrawContext) {
-    const canvas = context.canvas;
     const brush = new drawing.Brush();
     let maskFilter = drawing.MaskFilter.createBlurMaskFilter(drawing.BlurType.OUTER, 10);
     brush.setMaskFilter(maskFilter);
@@ -876,7 +875,7 @@ Sets a shadow layer for this brush. The shadow layer effect takes effect only wh
 **Examples**
 
 ```TypeScript
-import { RenderNode } from '@kit.ArkUI';
+import { RenderNode, DrawContext } from '@kit.ArkUI';
 import { common2D, drawing } from '@kit.ArkGraphics2D';
 
 class DrawingRenderNode extends RenderNode {
@@ -885,12 +884,12 @@ class DrawingRenderNode extends RenderNode {
     let font = new drawing.Font();
     font.setSize(60);
 
-    let textBlob = drawing.TextBlob.makeFromString("hello", font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
+    let textBlob = drawing.TextBlob.makeFromString('hello', font, drawing.TextEncoding.TEXT_ENCODING_UTF8);
     let pen = new drawing.Pen();
     pen.setStrokeWidth(2.0);
 
-    let pen_color : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
-    pen.setColor(pen_color);
+    let penColor : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
+    pen.setColor(penColor);
     canvas.attachPen(pen);
     canvas.drawTextBlob(textBlob, 100, 100);
     canvas.detachPen();
@@ -903,8 +902,8 @@ class DrawingRenderNode extends RenderNode {
     canvas.detachPen();
 
     let brush = new drawing.Brush();
-    let brush_color : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
-    brush.setColor(brush_color);
+    let brushColor : common2D.Color = {alpha: 0xFF, red: 0xFF, green: 0x00, blue: 0x00};
+    brush.setColor(brushColor);
     canvas.attachBrush(brush);
     canvas.drawTextBlob(textBlob, 300, 100);
     canvas.detachBrush();

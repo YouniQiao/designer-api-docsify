@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import shortcutManager from '@kit.AbilityKit';
+import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## getAllDesktopShortcutInfo
@@ -32,7 +32,7 @@ Obtains the information about all shortcuts of the given user.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;ShortcutInfo & gt; & gt; | Promise that returns the shortcut information defined in the application configuration file. |
+| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; | Promise that returns the shortcut information defined in the application configuration file. |
 
 **Error codes:**
 

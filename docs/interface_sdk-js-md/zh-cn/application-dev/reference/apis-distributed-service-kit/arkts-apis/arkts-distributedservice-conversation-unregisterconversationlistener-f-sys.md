@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import conversation from '@kit.DistributedServiceKit';
+import { conversation } from '@kit.DistributedServiceKit';
 ```
 
 ## unregisterConversationListener
@@ -12,7 +12,7 @@ import conversation from '@kit.DistributedServiceKit';
 function unregisterConversationListener(bundleName: string, abilityName: string): void
 ```
 
-注销指定Bundle名和Ability名的会话监听。需与注册监听器 [registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md)配对使用，用于注销已注册的会话监听器。 在不再需要接收消息时应调用注销监听器以释放资源，未注销会导致资源持续占用。同一Bundle名和Ability名只能注册一个监听器， 重复注册会覆盖之前的监听器，注销后将移除当前生效的监听器。调用此接口后，应用将不再接收对应Bundle名和Ability名的会话数据。 如果之前未注册过指定Bundle名和Ability名的监听器，此接口同样返回成功。
+注销指定Bundle名和Ability名的会话监听。需与注册监听器[registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md)配对使用，用于注销已注册的会话监听器。在不再需要接收消息时应调用注销监听器以释放资源，未注销会导致资源持续占用。同一Bundle名和Ability名只能注册一个监听器，重复注册会覆盖之前的监听器，注销后将移除当前生效的监听器。调用此接口后，应用将不再接收对应Bundle名和Ability名的会话数据。如果之前未注册过指定Bundle名和Ability名的监听器，此接口同样返回成功。
 
 **起始版本：** 26.1.0
 
@@ -28,8 +28,8 @@ function unregisterConversationListener(bundleName: string, abilityName: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleName | string | 是 | 要取消监听的Bundle名，Bundle名长度范围为1-127字节，需与注册监听时使用的Bundle名一致。 传入无效或空值时返回错误码401。 |
-| abilityName | string | 是 | 要取消监听的Ability名，Ability名长度范围为1-127字节，需与注册监听时使用的Ability名一致。 传入无效或空值时返回错误码401。 |
+| bundleName | string | 是 | 要取消监听的Bundle名，Bundle名长度范围为1-127字节，需与注册监听时使用的Bundle名一致。传入无效或空值时返回错误码401。 |
+| abilityName | string | 是 | 要取消监听的Ability名，Ability名长度范围为1-127字节，需与注册监听时使用的Ability名一致。传入无效或空值时返回错误码401。 |
 
 **错误码：**
 

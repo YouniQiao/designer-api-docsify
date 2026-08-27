@@ -10,7 +10,6 @@ ChipGroup组件提供操作块群组能力，支持单选或多选模式，可�
 
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUIV2';
 ```
 
 ## iconBackgroundSystemMaterial
@@ -19,7 +18,11 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 iconBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-设置组件系统材质样式。不同材质具有不同的效果，能够影响组件的backgroundColor、 [border](../arkts-components/arkts-arkui-commonmethod-c.md#border)、shadow视觉属性。设置自 动反色的系统材质时，fontColor如果使用系统预定义的可反色颜色资源（如`\$r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。默认值：undefined值为undefined时，不应用材质样式。
+设置组件系统材质样式。不同材质具有不同的效果，能够影响组件的backgroundColor、[border](../arkts-components/arkts-arkui-commonmethod-c.md#border)、shadow视觉属性。设置自动反色的系统材质时，fontColor如果使用系统预定义的可反色颜色资源（如`\$r('sys.color.font_primary')`），颜色自动适配到材质背景色的反色。
+
+默认值：undefined
+
+值为undefined时，不应用材质样式。
 
 **类型：** uiMaterial.Material
 

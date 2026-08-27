@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleResourceManager from '@kit.AbilityKit';
+import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## getAllLauncherAbilityResourceInfo
@@ -106,7 +106,7 @@ Obtains the resource information of the entry abilities of the current applicati
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;LauncherAbilityResourceInfo & gt; & gt; | Promise used to return the LauncherAbilityResourceInfo array. |
+| Promise&lt;Array&lt;LauncherAbilityResourceInfo&gt;&gt; | Promise used to return the LauncherAbilityResourceInfo array. |
 
 **Error codes:**
 

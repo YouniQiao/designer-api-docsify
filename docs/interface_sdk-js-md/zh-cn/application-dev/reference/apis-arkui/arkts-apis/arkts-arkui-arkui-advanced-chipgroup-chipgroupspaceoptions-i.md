@@ -10,7 +10,6 @@ ChipGroupSpaceOptions 定义了ChipGroup左右内边距，以及Chip与Chip之�
 
 ```TypeScript
 import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions, ChipItemStyle, ChipGroupSpaceOptions, IconItemOptions, IconGroupSuffix, ChipGroup, SuffixImageIconOptions, SymbolItemOptions } from '@kit.ArkUI';
-import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2ItemStyleConfig, ChipGroupV2ItemStyle, ChipGroupV2SpaceConfig, ChipGroupV2Space, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2PaddingConfig, ChipGroupV2Padding, ChipGroupV2IconGroupSuffix, ChipGroupV2 } from '@kit.ArkUIV2';
 ```
 
 ## endSpace
@@ -19,7 +18,15 @@ import { ChipGroupV2ItemConfig, ChipGroupV2Item, ChipGroupV2Items, ChipGroupV2It
 endSpace?: Length
 ```
 
-右侧内边距（不支持百分比）。传入负数、百分比或无效字符串格式时，使用默认值。默认值：16单位：vp值为undefined时，按默认值处理。
+右侧内边距（不支持百分比）。
+
+传入负数、百分比或无效字符串格式时，使用默认值。
+
+默认值：16
+
+单位：vp
+
+值为undefined时，按默认值处理。
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
@@ -37,8 +44,21 @@ endSpace?: Length
 itemSpace?: string | number
 ```
 
-Chip与Chip之间的间距（不支持百分比）。取值范围：number类型：大于等于0的数值（如：0、8、16、24.5）。string类型：单位为fp | vp | px | lpx且数值部分大于等于0的字符串（如："8vp"、"16fp"、"12px"、"10lpx"）。  
-**说明：**传入负数、百分比或无效字符串格式时，使用默认值。默认值：8单位：vp值为undefined时，按默认值处理。
+Chip与Chip之间的间距（不支持百分比）。
+
+取值范围：
+
+number类型：大于等于0的数值（如：0、8、16、24.5）。
+
+string类型：单位为fp | vp | px | lpx且数值部分大于等于0的字符串（如："8vp"、"16fp"、"12px"、"10lpx"）。
+
+**说明：**传入负数、百分比或无效字符串格式时，使用默认值。
+
+默认值：8
+
+单位：vp
+
+值为undefined时，按默认值处理。
 
 **类型：** string \| number
 
@@ -56,7 +76,15 @@ Chip与Chip之间的间距（不支持百分比）。取值范围：number类型
 startSpace?: Length
 ```
 
-左侧内边距（不支持百分比）。传入负数、百分比或无效字符串格式时，使用默认值。默认值：16单位：vp值为undefined时，按默认值处理。
+左侧内边距（不支持百分比）。
+
+传入负数、百分比或无效字符串格式时，使用默认值。
+
+默认值：16
+
+单位：vp
+
+值为undefined时，按默认值处理。
 
 **类型：** [Length](arkts-arkui-length-t.md)
 

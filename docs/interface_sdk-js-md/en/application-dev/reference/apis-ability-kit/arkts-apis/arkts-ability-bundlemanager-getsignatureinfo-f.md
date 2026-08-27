@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getSignatureInfo
@@ -30,7 +30,7 @@ Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md)
 
 | Type | Description |
 | --- | --- |
-| [SignatureInfo](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-signatureinfo-i.md) | SignatureInfo object. |
+| SignatureInfo | SignatureInfo object. |
 
 **Error codes:**
 

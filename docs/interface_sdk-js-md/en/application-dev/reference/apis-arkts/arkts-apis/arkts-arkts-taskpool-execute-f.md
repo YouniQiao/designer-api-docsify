@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import taskpool from '@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## execute
@@ -31,8 +31,8 @@ Places a function to be executed in the internal queue of the task pool. The fun
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;unknown & gt; | <br>**Applicable version:** 9 - 11 |
-| Promise & lt;Object & gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
+| Promise&lt;unknown&gt; | <br>**Applicable version:** 9 - 11 |
+| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
 
 **Error codes:**
 
@@ -75,14 +75,14 @@ Verifies the passed-in parameter types and return value type of a concurrent fun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | (...args: A) = & gt; R \ | Promise & lt;R & gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
+| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes | Function to be executed. The function must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types of the function, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
 | args | A | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;R & gt; | Promise used to return an object that carries the function execution result. |
+| Promise&lt;R&gt; | Promise used to return an object that carries the function execution result. |
 
 **Error codes:**
 
@@ -142,15 +142,15 @@ Places a task in the internal queue of the task pool. The task will not be execu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be executed. |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
+| task | Task | Yes | Task to be executed. |
+| priority | Priority | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;unknown & gt; | <br>**Applicable version:** 9 - 17 |
-| Promise & lt;Object & gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
+| Promise&lt;unknown&gt; | <br>**Applicable version:** 9 - 17 |
+| Promise&lt;Object&gt; | Promise used to return an object that carries the function execution result.<br>**Applicable version:** 11 and later |
 
 **Error codes:**
 
@@ -239,13 +239,13 @@ Places the generic task in the internal queue of the task pool. The parameter ty
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes | Generic task to be executed. |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
+| priority | Priority | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;R & gt; | Promise used to return an object that carries the function execution result. |
+| Promise&lt;R&gt; | Promise used to return an object that carries the function execution result. |
 
 **Error codes:**
 
@@ -299,13 +299,13 @@ Places a task group in the internal queue of the task pool. The tasks in the tas
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | Yes | Task group to be executed. |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task group. The default value is **taskpool.Priority.MEDIUM**. |
+| priority | Priority | No | Priority of the task group. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Object[] & gt; | Promise used to return an object array that carries the function execution result. |
+| Promise&lt;Object[]&gt; | Promise used to return an object array that carries the function execution result. |
 
 **Error codes:**
 
@@ -362,14 +362,14 @@ Execute a concurrent task with Configs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be executed. |
+| task | Task | Yes | Task to be executed. |
 | configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes | Configs of the task. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Object & gt; |  |
+| Promise&lt;Object&gt; |  |
 
 **Error codes:**
 
@@ -591,7 +591,7 @@ Execute a concurrent generics task with Configs.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;R & gt; |  |
+| Promise&lt;R&gt; |  |
 
 **Error codes:**
 
@@ -633,7 +633,7 @@ Execute a concurrent task group with Configs.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Object[] & gt; |  |
+| Promise&lt;Object[]&gt; |  |
 
 **Error codes:**
 

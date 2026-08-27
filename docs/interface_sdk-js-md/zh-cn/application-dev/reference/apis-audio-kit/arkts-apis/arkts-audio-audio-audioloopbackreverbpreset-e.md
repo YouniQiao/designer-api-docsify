@@ -1,6 +1,8 @@
 # AudioLoopbackReverbPreset
 
-表示返听混响模式的枚举。@enum { number }
+表示返听混响模式的枚举。
+
+@enum { number }
 
 **起始版本：** 21
 

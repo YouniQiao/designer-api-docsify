@@ -1,6 +1,10 @@
 # StartAnimationParams
 
-启动动画配置。仅对同应用的不同ability间跳转生效。仅对全屏应用生效。
+启动动画配置。
+
+仅对同应用的不同ability间跳转生效。
+
+仅对全屏应用生效。
 
 **起始版本：** 20
 
@@ -9,9 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## type

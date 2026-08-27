@@ -13,7 +13,7 @@ In the following API examples, you must first use on('inputStart') to obtain a *
 ## Modules to Import
 
 ```TypeScript
-import inputMethodEngine from '@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## deleteBackward
@@ -101,7 +101,7 @@ Deletes the fixed-length text after the cursor. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the deletion is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the deletion is successful, and **false** means the opposite. |
 
 **Examples**
 
@@ -220,7 +220,7 @@ Deletes the fixed-length text before the cursor. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the deletion is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the deletion is successful, and **false** means the opposite. |
 
 **Examples**
 
@@ -331,7 +331,7 @@ Obtains the specific-length text after the cursor. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the specific-length text after the cursor. |
+| Promise&lt;string&gt; | Promise used to return the specific-length text after the cursor. |
 
 **Examples**
 
@@ -532,7 +532,7 @@ Obtains the specific-length text before the cursor. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the specific-length text before the cursor. |
+| Promise&lt;string&gt; | Promise used to return the specific-length text before the cursor. |
 
 **Examples**
 
@@ -642,7 +642,7 @@ Inserts text. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the insertion is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the insertion is successful, and **false** means the opposite. |
 
 **Examples**
 
@@ -760,7 +760,7 @@ Sends the function key. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the setting is successful, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the setting is successful, and **false** means the opposite. |
 
 **Examples**
 

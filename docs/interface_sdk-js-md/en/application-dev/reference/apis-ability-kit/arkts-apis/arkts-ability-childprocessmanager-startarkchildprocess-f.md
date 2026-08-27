@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import childProcessManager from '@kit.AbilityKit';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## startArkChildProcess
@@ -41,7 +41,7 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the PID of the child process. |
+| Promise&lt;number&gt; | Promise used to return the PID of the child process. |
 
 **Error codes:**
 

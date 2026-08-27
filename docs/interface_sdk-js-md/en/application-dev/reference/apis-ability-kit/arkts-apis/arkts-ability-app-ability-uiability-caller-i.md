@@ -9,7 +9,7 @@ A Caller UIAbility can use the [startAbilityByCall](arkts-ability-uiabilityconte
 ## Modules to Import
 
 ```TypeScript
-import UIAbility, { Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
+import { UIAbility, Callee, CalleeCallback, Caller, OnReleaseCallback, OnRemoteStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## call
@@ -37,7 +37,7 @@ Used by a Caller UIAbility to send serialized data, as agreed upon by both parti
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -131,7 +131,7 @@ Used by a Caller UIAbility to send serialized data to a Callee UIAbility and ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;rpc.MessageSequence & gt; | Promise used to return the response data from the Callee UIAbility. |
+| Promise&lt;rpc.MessageSequence&gt; | Promise used to return the response data from the Callee UIAbility. |
 
 **Error codes:**
 

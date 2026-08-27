@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## checkPersistentPermission
@@ -28,7 +28,7 @@ Check persistent permissions for the URI.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;boolean & gt; & gt; | Returns the persistent state of uri permissions. |
+| Promise&lt;Array&lt;boolean&gt;&gt; | Returns the persistent state of uri permissions. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # Region
 
-表示区域信息。继承自[lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。
+表示区域信息。
+
+继承自[lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。
 
 **继承/实现关系：** Region extends lang.ISendable
 
@@ -11,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendableImage from '@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## size

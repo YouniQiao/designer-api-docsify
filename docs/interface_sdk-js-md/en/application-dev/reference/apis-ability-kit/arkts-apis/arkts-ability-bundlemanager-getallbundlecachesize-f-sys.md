@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllBundleCacheSize
@@ -12,7 +12,9 @@ import bundleManager from '@kit.AbilityKit';
 function getAllBundleCacheSize(): Promise<number>
 ```
 
-Obtains the global cache size. This API uses a promise to return the result.It is not possible to obtain the cache of applications that are currently running or have been granted the "AllowAppDataNotCleared" privilege as specified in the [application configuration guide](../../../../device-dev/subsystems/subsys-app-privilege-config-guide.md).
+Obtains the global cache size. This API uses a promise to return the result.
+
+It is not possible to obtain the cache of applications that are currently running or have been granted the "AllowAppDataNotCleared" privilege as specified in the [application configuration guide](../../../../device-dev/subsystems/subsys-app-privilege-config-guide.md).
 
 **Since:** 15
 
@@ -26,7 +28,7 @@ Obtains the global cache size. This API uses a promise to return the result.It i
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the size of the global cache, in bytes. |
+| Promise&lt;number&gt; | Promise used to return the size of the global cache, in bytes. |
 
 **Error codes:**
 

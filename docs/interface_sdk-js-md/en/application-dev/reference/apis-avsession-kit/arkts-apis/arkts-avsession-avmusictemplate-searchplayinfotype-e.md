@@ -1,6 +1,8 @@
 # SearchPlayInfoType
 
-Enumeration of SearchPlayInfoType.@enum { string }
+Enumeration of SearchPlayInfoType.
+
+@enum { string }
 
 **Since:** 23
 

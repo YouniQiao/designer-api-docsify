@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import selectionManager from '@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## createPanel
@@ -12,7 +12,9 @@ import selectionManager from '@kit.BasicServicesKit';
 function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>
 ```
 
-创建划词面板，用于向用户展示业务相关的操作界面或文本处理结果，使用完毕后需调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md)销毁面板释放资源。使用Promise异步回调。单个划词应用仅允许创建一个[MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)和一个 [MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)。
+创建划词面板，用于向用户展示业务相关的操作界面或文本处理结果，使用完毕后需调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md)销毁面板释放资源。使用Promise异步回调。
+
+单个划词应用仅允许创建一个[MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)和一个[MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)。
 
 **起始版本：** 24
 
@@ -31,7 +33,7 @@ function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Panel & gt; | Promise对象，返回当前创建的划词面板对象，可用于面板内容设置、显示、隐藏、移动及事件订阅等管理操作。 |
+| Promise&lt;Panel&gt; | Promise对象，返回当前创建的划词面板对象，可用于面板内容设置、显示、隐藏、移动及事件订阅等管理操作。 |
 
 **错误码：**
 

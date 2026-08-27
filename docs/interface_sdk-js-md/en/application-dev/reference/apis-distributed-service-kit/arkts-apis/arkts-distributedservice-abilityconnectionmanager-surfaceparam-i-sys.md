@@ -1,6 +1,8 @@
 # SurfaceParam (System API)
 
-Surface configuration parameters.@interface SurfaceParam
+Surface configuration parameters.
+
+@interface SurfaceParam
 
 **Since:** 18
 
@@ -11,7 +13,7 @@ Surface configuration parameters.@interface SurfaceParam
 ## Modules to Import
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## flip

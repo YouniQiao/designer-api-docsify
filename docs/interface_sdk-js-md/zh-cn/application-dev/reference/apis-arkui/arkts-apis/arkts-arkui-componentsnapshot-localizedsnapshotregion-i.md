@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import componentSnapshot from '@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## bottom
@@ -24,7 +24,11 @@ import componentSnapshot from '@kit.ArkUI';
 bottom: number
 ```
 
-截图区域矩形右下角的y轴坐标。单位：px取值范围：[0, 组件高度]
+截图区域矩形右下角的y轴坐标。
+
+单位：px
+
+取值范围：[0, 组件高度]
 
 **类型：** number
 
@@ -42,7 +46,11 @@ bottom: number
 end: number
 ```
 
-布局方向为LTR时表示截图区域矩形右下角的x轴坐标，布局方向为RTL时表示截图区域矩形左下角的x轴坐标。单位：px取值范围：[0, 组件宽度]
+布局方向为LTR时表示截图区域矩形右下角的x轴坐标，布局方向为RTL时表示截图区域矩形左下角的x轴坐标。
+
+单位：px
+
+取值范围：[0, 组件宽度]
 
 **类型：** number
 
@@ -60,7 +68,11 @@ end: number
 start: number
 ```
 
-布局方向为LTR时表示截图区域矩形左上角的x轴坐标，布局方向为RTL时表示截图区域矩形右上角的x轴坐标。单位：px取值范围：[0, 组件宽度]
+布局方向为LTR时表示截图区域矩形左上角的x轴坐标，布局方向为RTL时表示截图区域矩形右上角的x轴坐标。
+
+单位：px
+
+取值范围：[0, 组件宽度]
 
 **类型：** number
 
@@ -78,7 +90,11 @@ start: number
 top: number
 ```
 
-布局方向为LTR时表示截图区域矩形左上角的y轴坐标，布局方向为RTL时表示截图区域矩形右上角的y轴坐标。单位：px取值范围：[0, 组件高度]
+布局方向为LTR时表示截图区域矩形左上角的y轴坐标，布局方向为RTL时表示截图区域矩形右上角的y轴坐标。
+
+单位：px
+
+取值范围：[0, 组件高度]
 
 **类型：** number
 

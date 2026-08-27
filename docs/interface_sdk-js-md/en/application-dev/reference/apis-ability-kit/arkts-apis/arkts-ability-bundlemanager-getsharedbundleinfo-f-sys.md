@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getSharedBundleInfo
@@ -12,7 +12,9 @@ import bundleManager from '@kit.AbilityKit';
 function getSharedBundleInfo(bundleName: string,  moduleName: string, callback: AsyncCallback<Array<SharedBundleInfo>>): void
 ```
 
-Obtains the shared bundle information based on the given bundle name. This API uses an asynchronous callback to return the result.No permission is required for obtaining the caller's own information.
+Obtains the shared bundle information based on the given bundle name. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
@@ -71,7 +73,9 @@ try {
 function getSharedBundleInfo(bundleName: string, moduleName: string): Promise<Array<SharedBundleInfo>>
 ```
 
-Obtains the shared bundle information based on the given bundle name. This API uses a promise to return the result.No permission is required for obtaining the caller's own information.
+Obtains the shared bundle information based on the given bundle name. This API uses a promise to return the result.
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
@@ -92,7 +96,7 @@ Obtains the shared bundle information based on the given bundle name. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;SharedBundleInfo & gt; & gt; | Promise used to return the shared bundle information obtained. |
+| Promise&lt;Array&lt;SharedBundleInfo&gt;&gt; | Promise used to return the shared bundle information obtained. |
 
 **Error codes:**
 

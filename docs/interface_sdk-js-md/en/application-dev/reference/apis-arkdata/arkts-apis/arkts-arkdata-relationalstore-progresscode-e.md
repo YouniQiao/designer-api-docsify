@@ -60,7 +60,9 @@ The cloud is unavailable.
 LOCKED_BY_OTHERS = 4
 ```
 
-The device-cloud sync of another device is being performed.The sync of the local device can be performed only when the cloud resources are available.
+The device-cloud sync of another device is being performed.
+
+The sync of the local device can be performed only when the cloud resources are available.
 
 **Since:** 10
 

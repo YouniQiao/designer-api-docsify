@@ -28,5 +28,5 @@ function getMaxSimCount(): number
 ```TypeScript
 import { sim } from '@kit.TelephonyKit';
 
-console.info("Result: "+ sim.getMaxSimCount());
+console.info('Result: '+ sim.getMaxSimCount());
 ```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import ssap from '@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## createServer
@@ -26,7 +26,7 @@ Creates an SSAP server instance.
 
 | Type | Description |
 | --- | --- |
-| [Server](arkts-connectivity-ssap-server-i.md) | SSAP server instance. |
+| Server | SSAP server instance. |
 
 **Error codes:**
 

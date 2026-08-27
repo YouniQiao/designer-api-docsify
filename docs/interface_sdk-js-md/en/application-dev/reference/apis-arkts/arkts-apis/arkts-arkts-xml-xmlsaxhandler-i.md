@@ -141,7 +141,7 @@ CallBack function triggered at the beginning of the element
 | elementName | string | Yes | Name of the element |
 | namespaceURI | string \| undefined | Yes | URI of the namespace |
 | qName | string \| undefined | Yes | Fully qualified name with namespace |
-| attributes | Map & lt;string, string & gt; | Yes | attributes mapping |
+| attributes | Map&lt;string, string&gt; | Yes | attributes mapping |
 
 **Examples**
 

@@ -17,7 +17,7 @@ LightWeightSet可用于存储一系列值，存储元素中value唯一。
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个JavaScript对象。 不建议在Symbol.iterator中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+返回一个迭代器，迭代器的每一项都是一个JavaScript对象。不建议在Symbol.iterator中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
 
 **起始版本：** 8
 
@@ -29,7 +29,7 @@ LightWeightSet可用于存储一系列值，存储元素中value唯一。
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;T & gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
+| IterableIterator&lt;T&gt; | 返回遍历LightWeightSet中所有元素的迭代器对象，每一项为容器中的元素值。 |
 
 **错误码：**
 
@@ -225,7 +225,7 @@ let lightWeightSet = new LightWeightSet<number | string>();
 entries(): IterableIterator<[T, T]>
 ```
 
-返回包含此容器中所有元素对的新迭代器对象，每个元素对由相同值组成[value, value]。 不建议在entries中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+返回包含此容器中所有元素对的新迭代器对象，每个元素对由相同值组成[value, value]。不建议在entries中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
 
 **起始版本：** 8
 
@@ -237,7 +237,7 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;[T, T] & gt; | 返回包含LightWeightSet中所有键值对的迭代器对象，每一项为[key, value]结构的数组。 |
+| IterableIterator&lt;[T, T]&gt; | 返回包含LightWeightSet中所有键值对的迭代器对象，每一项为[key, value]结构的数组。 |
 
 **错误码：**
 
@@ -324,7 +324,7 @@ console.info("result:", result);  // result: true
 forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisArg?: Object): void
 ```
 
-通过回调函数来遍历LightWeightSet实例对象上的元素。 不建议在forEach函数中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+通过回调函数来遍历LightWeightSet实例对象上的元素。不建议在forEach函数中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
 
 **起始版本：** 8
 
@@ -336,7 +336,7 @@ forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: LightWeightSet & lt;T & gt;) = & gt; void | 是 | 回调函数，用于遍历LightWeightSet实例对象上的元素及其下标。 callbackFn（必填）接受最多三个参数的函数。 value 当前遍历到的元素的值，默认值为首个元素的值。 key 当前遍历到的元素（与value相同），默认值为首个元素。 set 当前调用forEach方法的实例对象，默认值为当前实例对象。 |
+| callbackFn | (value?: T, key?: T, set?: LightWeightSet&lt;T&gt;) =&gt; void | 是 | 回调函数，用于遍历LightWeightSet实例对象上的元素及其下标。callbackFn（必填）接受最多三个参数的函数。value 当前遍历到的元素的值，默认值为首个元素的值。key 当前遍历到的元素（与value相同），默认值为首个元素。set 当前调用forEach方法的实例对象，默认值为当前实例对象。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值。当需要改变回调函数中的this指向时传入此参数，不需要改变this指向时可省略。不传入时默认值为当前实例对象。 |
 
 **错误码：**
@@ -394,7 +394,7 @@ getIndexOf(key: T): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 在LightWeightSet中指定数据的下标。若LightWeightSet中没有要查找的元素，则返回一个负值。 表示目标哈希值应该插入的位置，插入位置是从1开始计数的，负号表示这是一个插入位置而不是索引。 |
+| number | 在LightWeightSet中指定数据的下标。若LightWeightSet中没有要查找的元素，则返回一个负值。表示目标哈希值应该插入的位置，插入位置是从1开始计数的，负号表示这是一个插入位置而不是索引。 |
 
 **错误码：**
 
@@ -717,7 +717,7 @@ toArray(): Array<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;T & gt; | 返回包含此容器中所有元素的数组。 |
+| Array&lt;T&gt; | 返回包含此容器中所有元素的数组。 |
 
 **错误码：**
 
@@ -786,7 +786,7 @@ values(): IterableIterator<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;T & gt; | 返回包含LightWeightSet中所有value的迭代器对象。 |
+| IterableIterator&lt;T&gt; | 返回包含LightWeightSet中所有value的迭代器对象。 |
 
 **错误码：**
 

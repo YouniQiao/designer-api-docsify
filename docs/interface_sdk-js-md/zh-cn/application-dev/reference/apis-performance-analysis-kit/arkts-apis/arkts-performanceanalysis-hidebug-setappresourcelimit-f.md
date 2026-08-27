@@ -11,7 +11,9 @@
 function setAppResourceLimit(type: string, value: number, enableDebugLog: boolean): void
 ```
 
-设置应用的文件描述符数量、线程数量、JS内存或Native内存资源限制。主要应用场景在于构造内存泄漏故障，参见订阅资源泄漏事件（ArkTS）、 订阅资源泄漏事件（C/C++）。
+设置应用的文件描述符数量、线程数量、JS内存或Native内存资源限制。
+
+主要应用场景在于构造内存泄漏故障，参见订阅资源泄漏事件（ArkTS）、订阅资源泄漏事件（C/C++）。
 
 > **注意**：
 > 
@@ -27,9 +29,9 @@ function setAppResourceLimit(type: string, value: number, enableDebugLog: boolea
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | 泄漏资源类型，共四种：   - pss_memory（native内存）   - js_heap（js堆内存）   - fd（文件描述符）   - thread（线 程） |
-| value | number | 是 | 对应泄漏资源类型的最大值，范围：   - pss_memory类型：`[1024, 4 * 1024 * 1024]`（单位：KB）   - js_heap类型： `[85, 95]`（分配给JS堆内存上限的85%~95%）   - fd类型：`[10, 10000]`   - thread类型：`[1, 1000]`。超出范围会导致功能失效。 |
-| enableDebugLog | boolean | 是 | 是否启用外部调试日志。外部调试日志请仅在灰度版本（正式版本发布之前，先向一小部分用户推出的测试版本）中启用，因为收集调试日志会占用大量的cpu资源和内存资源， 可能会引起应用流畅性问题。true：启用外部调试日志。false：禁用外部调试日志。 |
+| type | string | 是 | 泄漏资源类型，共四种：   - pss_memory（native内存）   - js_heap（js堆内存）   - fd（文件描述符）   - thread（线程） |
+| value | number | 是 | 对应泄漏资源类型的最大值，范围：   - pss_memory类型：`[1024, 4 * 1024 * 1024]`（单位：KB）   - js_heap类型：`[85, 95]`（分配给JS堆内存上限的85%~95%）   - fd类型：`[10, 10000]`   - thread类型：`[1, 1000]`。超出范围会导致功能失效。 |
+| enableDebugLog | boolean | 是 | 是否启用外部调试日志。外部调试日志请仅在灰度版本（正式版本发布之前，先向一小部分用户推出的测试版本）中启用，因为收集调试日志会占用大量的cpu资源和内存资源，可能会引起应用流畅性问题。true：启用外部调试日志。false：禁用外部调试日志。 |
 
 **错误码：**
 

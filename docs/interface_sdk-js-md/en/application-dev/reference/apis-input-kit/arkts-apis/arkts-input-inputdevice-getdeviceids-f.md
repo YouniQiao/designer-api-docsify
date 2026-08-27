@@ -3,7 +3,6 @@
 ## Modules to Import
 
 ```TypeScript
-import inputDeviceCooperate from '@kit.InputKitCooperate';
 ```
 
 ## getDeviceIds
@@ -86,7 +85,7 @@ Obtains the IDs of all input devices. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the IDs of all input devices. **id** is the unique ID of an input device. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the IDs of all input devices. **id** is the unique ID of an input device. |
 
 **Examples**
 

@@ -9,7 +9,7 @@ Defines the options for saving documents.
 ## Modules to Import
 
 ```TypeScript
-import picker from '@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## autoCreateEmptyFile
@@ -52,7 +52,9 @@ URI of the file or directory that can be selected. It is empty by default (the r
 fileSuffixChoices?: Array<string>
 ```
 
-Document suffix of the document to save.The value is a string array. Each element specifies an option, which includes at most two parts with a vertical bar (|) in between. The first part is the description, and the second part is the document suffix. If there is no "|", the option does not have the description. By default, all documents are saved.
+Document suffix of the document to save.
+
+The value is a string array. Each element specifies an option, which includes at most two parts with a vertical bar (|) in between. The first part is the description, and the second part is the document suffix. If there is no "|", the option does not have the description. By default, all documents are saved.
 
 **Type:** Array&lt;string&gt;
 
@@ -84,7 +86,9 @@ Name of the document to save. If this parameter is not specified, the user needs
 pickerMode?: DocumentPickerMode
 ```
 
-Mode for starting Picker.Default value: **DEFAULT**. If **pickerMode** is **DOWNLOAD**, the settings of **newFileNames**, **defaultFilePathUri**, and **fileSuffixChoices** do not take effect.
+Mode for starting Picker.
+
+Default value: **DEFAULT**. If **pickerMode** is **DOWNLOAD**, the settings of **newFileNames**, **defaultFilePathUri**, and **fileSuffixChoices** do not take effect.
 
 **Type:** [DocumentPickerMode](arkts-corefile-picker-documentpickermode-e.md)
 

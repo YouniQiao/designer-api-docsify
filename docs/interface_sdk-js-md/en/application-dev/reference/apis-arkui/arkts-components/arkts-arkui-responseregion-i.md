@@ -36,7 +36,9 @@ Defines a touch target consisting of an input tool type, touch position, and siz
 height?: LengthMetrics | string
 ```
 
-Height of the touch target.Default value: **LengthMetrics.percent(1)**
+Height of the touch target.
+
+Default value: **LengthMetrics.percent(1)**
 
 **Type:** LengthMetrics \| string
 
@@ -56,7 +58,9 @@ Height of the touch target.Default value: **LengthMetrics.percent(1)**
 tool?: ResponseRegionSupportedTool
 ```
 
-Type of the input tool applicable to the touch target.Default value: **ResponseRegionSupportedTool.ALL**
+Type of the input tool applicable to the touch target.
+
+Default value: **ResponseRegionSupportedTool.ALL**
 
 **Type:** [ResponseRegionSupportedTool](../arkts-apis/arkts-arkui-responseregionsupportedtool-e.md)
 
@@ -76,7 +80,9 @@ Type of the input tool applicable to the touch target.Default value: **ResponseR
 width?: LengthMetrics | string
 ```
 
-Width of the touch target.Default value: **LengthMetrics.percent(1)**
+Width of the touch target.
+
+Default value: **LengthMetrics.percent(1)**
 
 **Type:** LengthMetrics \| string
 
@@ -96,7 +102,9 @@ Width of the touch target.Default value: **LengthMetrics.percent(1)**
 x?: LengthMetrics
 ```
 
-X coordinate of the touch point relative to the upper left corner of the component.Default value: **LengthMetrics.vp(0)**
+X coordinate of the touch point relative to the upper left corner of the component.
+
+Default value: **LengthMetrics.vp(0)**
 
 **Type:** LengthMetrics
 
@@ -116,7 +124,9 @@ X coordinate of the touch point relative to the upper left corner of the compone
 y?: LengthMetrics
 ```
 
-Y coordinate of the touch point relative to the upper left corner of the component.Default value: **LengthMetrics.vp(0)**
+Y coordinate of the touch point relative to the upper left corner of the component.
+
+Default value: **LengthMetrics.vp(0)**
 
 **Type:** LengthMetrics
 

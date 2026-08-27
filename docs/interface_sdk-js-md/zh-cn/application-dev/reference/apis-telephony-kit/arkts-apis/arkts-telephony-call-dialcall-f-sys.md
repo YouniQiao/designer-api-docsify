@@ -85,13 +85,13 @@ function dialCall(phoneNumber: string, options?: DialCallOptions): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | phoneNumber | string | 是 | 电话号码。 |
-| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | 否 | 通话参数，携带呼叫的其他配置信息。不填该参数则默认使用如下配置，参考 [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md)。   - 帐户Id：卡槽1。    - 音视频类型：语音通话。    - 拨号场景：普通呼叫。    - 拨号类 型：运营商通话。 |
+| options | [DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md) | 否 | 通话参数，携带呼叫的其他配置信息。不填该参数则默认使用如下配置，参考[DialCallOptions](arkts-telephony-call-dialcalloptions-i-sys.md)。   - 帐户Id：卡槽1。    - 音视频类型：语音通话。    - 拨号场景：普通呼叫。    - 拨号类型：运营商通话。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 以Promise形式异步返回拨号结果。 |
+| Promise&lt;void&gt; | 以Promise形式异步返回拨号结果。 |
 
 **错误码：**
 

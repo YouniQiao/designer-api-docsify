@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dialogSession from '@kit.AbilityKit';
+import { dialogSession } from '@kit.AbilityKit';
 ```
 
 ## sendDialogResult
@@ -34,7 +34,7 @@ Sends a request for a dialog box. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

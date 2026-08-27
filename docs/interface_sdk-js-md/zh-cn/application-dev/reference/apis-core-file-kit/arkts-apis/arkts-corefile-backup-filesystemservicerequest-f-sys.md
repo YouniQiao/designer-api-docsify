@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## fileSystemServiceRequest
@@ -28,13 +28,13 @@ function fileSystemServiceRequest(config: FileSystemRequestConfig): Promise<numb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [FileSystemRequestConfig](arkts-corefile-backup-filesystemrequestconfig-i-sys.md) | 是 | 碎片清理的配置参数。 triggerType取值为0，writeSize取值范围为0至2097152 MB，waitTime取值范围为0至300秒。 |
+| config | [FileSystemRequestConfig](arkts-corefile-backup-filesystemrequestconfig-i-sys.md) | 是 | 碎片清理的配置参数。triggerType取值为0，writeSize取值范围为0至2097152 MB，waitTime取值范围为0至300秒。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回碎片清理的错误码。 |
+| Promise&lt;number&gt; | Promise对象，返回碎片清理的错误码。 |
 
 **错误码：**
 

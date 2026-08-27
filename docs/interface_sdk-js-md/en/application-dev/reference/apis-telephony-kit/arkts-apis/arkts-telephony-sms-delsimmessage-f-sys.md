@@ -82,7 +82,7 @@ Deletes a message from the SIM card. If the specified **msgIndex** is invalid, a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

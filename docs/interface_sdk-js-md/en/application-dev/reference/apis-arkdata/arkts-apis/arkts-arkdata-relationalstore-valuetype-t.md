@@ -18,7 +18,7 @@ Indicates possible value types
 | string | The value is a string |
 | boolean | The value is a boolean |
 | Uint8Array | The value is an array of the Uint8 |
-| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | The value is an asset [since 10] |
-| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) | The value is an array of the asset [since 10] |
+| Asset | The value is an asset [since 10] |
+| Assets | The value is an array of the asset [since 10] |
 | Float32Array | The value is an array of the float32 [since 12] |
 | bigint | The value is an integer of any length [since 12] |

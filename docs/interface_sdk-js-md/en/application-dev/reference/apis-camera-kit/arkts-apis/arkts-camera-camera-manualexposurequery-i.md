@@ -58,7 +58,7 @@ Gets the supported manual exposure duration range, units: microseconds.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | The array of manual exposure range. |
+| Array&lt;number&gt; | The array of manual exposure range. |
 
 **Error codes:**
 

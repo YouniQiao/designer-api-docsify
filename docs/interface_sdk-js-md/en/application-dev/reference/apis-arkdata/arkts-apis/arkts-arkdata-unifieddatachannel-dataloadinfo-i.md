@@ -1,6 +1,7 @@
 # DataLoadInfo
 
-Defines type and quantity of the data to load.  
+Defines type and quantity of the data to load.
+
 - Used by the **data sender** to define the data range that can be provided. This field is mandatory.  
 - Used by the **data receiver** to define the expected data type and quantity. This field is optional.
 
@@ -11,7 +12,7 @@ Defines type and quantity of the data to load.
 ## Modules to Import
 
 ```TypeScript
-import unifiedDataChannel from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## recordCount

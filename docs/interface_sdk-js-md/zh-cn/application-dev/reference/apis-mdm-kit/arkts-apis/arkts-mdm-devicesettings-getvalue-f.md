@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import deviceSettings from '@kit.MDMKit';
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## getValue
@@ -27,7 +27,7 @@ function getValue(admin: Want, item: string): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
-| item | string | 是 | 设备设置策略类型。   - screenOff：设备息屏策略，对于PC/2in1设备，支持查询电池供电下的设备息屏策略。   - powerPolicy：设备电源策略，仅对 PC/2in1设备生效，仅支持查询电池供电下的设备电源策略。   - eyeComfort：从API version 23开始支持，护眼模式开关状态。 |
+| item | string | 是 | 设备设置策略类型。   - screenOff：设备息屏策略，对于PC/2in1设备，支持查询电池供电下的设备息屏策略。   - powerPolicy：设备电源策略，仅对PC/2in1设备生效，仅支持查询电池供电下的设备电源策略。   - eyeComfort：从API version 23开始支持，护眼模式开关状态。 |
 
 **返回值：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import application from '@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## exitMasterProcessRole
@@ -24,7 +24,7 @@ Relinquishes the [master-process](../../../application-models/ability-terminolog
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

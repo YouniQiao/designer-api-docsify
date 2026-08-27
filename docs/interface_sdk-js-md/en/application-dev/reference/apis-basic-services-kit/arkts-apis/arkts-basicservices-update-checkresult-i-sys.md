@@ -11,7 +11,7 @@ Indicates the version check result.
 ## Modules to Import
 
 ```TypeScript
-import update from '@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## isExistNewVersion

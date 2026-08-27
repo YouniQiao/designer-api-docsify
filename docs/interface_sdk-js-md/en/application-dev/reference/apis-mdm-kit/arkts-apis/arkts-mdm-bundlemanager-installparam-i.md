@@ -9,7 +9,7 @@ Defines the parameters for application installation.
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.MDMKit';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## installFlag
@@ -18,7 +18,8 @@ import bundleManager from '@kit.MDMKit';
 installFlag?: number
 ```
 
-Installation flag.  
+Installation flag.
+
 **0** (default value) indicates fresh installation of the application, **1** indicates overlay installation of the application, and **2** indicates installation-free.
 
 **Type:** number

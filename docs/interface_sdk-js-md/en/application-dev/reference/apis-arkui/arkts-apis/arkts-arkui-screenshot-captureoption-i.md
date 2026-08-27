@@ -9,7 +9,7 @@ Describes the capture options.
 ## Modules to Import
 
 ```TypeScript
-import screenshot from '@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## blackWindowIds

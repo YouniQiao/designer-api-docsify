@@ -9,7 +9,7 @@ Defines the IP parameters of the firewall rule. The IP address type can be IPv4 
 ## Modules to Import
 
 ```TypeScript
-import netFirewall from '@kit.NetworkKit';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## address
@@ -46,8 +46,11 @@ End IP address. This parameter is mandatory and valid only when type is set to *
 family?: number
 ```
 
-**1**: IPv4.  
-**2**: IPv6.The default value is **IPv4**. Other values are not supported currently.
+**1**: IPv4.
+
+**2**: IPv6.
+
+The default value is **IPv4**. Other values are not supported currently.
 
 **Type:** number
 
@@ -61,7 +64,11 @@ family?: number
 mask?: number
 ```
 
-IPv4: subnet mask.IPv6: address prefix.This parameter is mandatory and valid only when type is set to **1**.
+IPv4: subnet mask.
+
+IPv6: address prefix.
+
+This parameter is mandatory and valid only when type is set to **1**.
 
 **Type:** number
 
@@ -89,7 +96,8 @@ Start IP address. This parameter is mandatory and valid only when type is set to
 type: number
 ```
 
-**1**: IP address or subnet. In this case, the **address** and **mask** fields must be specified. When a single IP address is used, the **mask** field must be set to **32**.  
+**1**: IP address or subnet. In this case, the **address** and **mask** fields must be specified. When a single IP address is used, the **mask** field must be set to **32**.
+
 **2**: IP address segment. In this case, the **startIp** and **endIp** fields must be specified.
 
 **Type:** number

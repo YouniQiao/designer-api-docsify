@@ -1,6 +1,6 @@
 # PlainArray
 
-PlainArray可用于存储具有关联关系的key-value键值对集合，其中key值唯一且类型为number，每个key对应一个value。 PlainArray依据泛型定义，采用轻量级结构。
+PlainArray可用于存储具有关联关系的key-value键值对集合，其中key值唯一且类型为number，每个key对应一个value。PlainArray依据泛型定义，采用轻量级结构。
 
 **起始版本：** 8
 
@@ -29,7 +29,7 @@ PlainArray可用于存储具有关联关系的key-value键值对集合，其中k
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;[number, T] & gt; | 返回一个迭代器。 |
+| IterableIterator&lt;[number, T]&gt; | 返回一个迭代器。 |
 
 **错误码：**
 
@@ -209,7 +209,7 @@ forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, PlainArray?: PlainArray & lt;T & gt;) = & gt; void | 是 | 回调函数。 |
+| callbackFn | (value: T, index?: number, PlainArray?: PlainArray&lt;T&gt;) =&gt; void | 是 | 回调函数。 |
 | thisArg | Object | 否 | callbackFn被调用时用作this值，默认值为当前实例对象。 |
 
 **错误码：**

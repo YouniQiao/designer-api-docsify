@@ -9,7 +9,7 @@ The **ImageReceiver** class provides APIs to obtain the surface ID of a componen
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## getReceivingSurfaceId
@@ -62,7 +62,7 @@ Obtains a surface ID for the camera or other components. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the surface ID. |
+| Promise&lt;string&gt; | Promise used to return the surface ID. |
 
 **Examples**
 
@@ -222,7 +222,7 @@ Reads the latest image from the ImageReceiver instance. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Image & gt; | Promise used to return the latest image. |
+| Promise&lt;Image&gt; | Promise used to return the latest image. |
 
 **Examples**
 
@@ -328,7 +328,7 @@ Reads the next image from the ImageReceiver instance. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Image & gt; | Promise used to return the next image. |
+| Promise&lt;Image&gt; | Promise used to return the next image. |
 
 **Examples**
 
@@ -362,7 +362,11 @@ async function ReadNextImage(receiver : image.ImageReceiver) {
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImageReceiver instance. This API uses an asynchronous callback to return the result.Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImageReceiver instance. This API uses an asynchronous callback to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -467,7 +471,11 @@ function release(pixelMap: image.PixelMap) {
 release(): Promise<void>
 ```
 
-Releases this ImageReceiver instance. This API uses a promise to return the result.Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this ImageReceiver instance. This API uses a promise to return the result.
+
+Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -477,7 +485,7 @@ Releases this ImageReceiver instance. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

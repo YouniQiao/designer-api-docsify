@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemManager from '@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## notifyUpdatePackages
@@ -38,7 +38,7 @@ Notifies the system of the update packages. In intranet updates, call this API t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object will be thrown if the operation fails. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object will be thrown if the operation fails. |
 
 **Error codes:**
 

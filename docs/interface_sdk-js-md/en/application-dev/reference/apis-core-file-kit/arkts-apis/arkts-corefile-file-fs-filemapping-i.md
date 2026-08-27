@@ -9,7 +9,7 @@ File mapping object. Before invoking the FileMapping method, you need to use the
 ## Modules to Import
 
 ```TypeScript
-import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## capacity
@@ -191,7 +191,7 @@ Synchronizes the dirty page data in the entire file mapping area to the disk fil
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise object. No return value. |
+| Promise&lt;void&gt; | Promise object. No return value. |
 
 **Error codes:**
 
@@ -251,7 +251,7 @@ Synchronizes the dirty page data in the specified range of the file mapping area
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise object. No return value. |
+| Promise&lt;void&gt; | Promise object. No return value. |
 
 **Error codes:**
 
@@ -627,7 +627,7 @@ Releases the file mapping area and use the promise asynchronous callback functio
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise object. No return value. |
+| Promise&lt;void&gt; | Promise object. No return value. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # WebDownloadManager
 
-WebDownloadManager is a static management class for download tasks of the Web component in the ArkWeb framework. It manages all file download processes triggered by the Web component. Developers can use this class to set a download delegate to receive download progress callbacks and resume failed download tasks. All methods of this class are static methods and take effect globally within the entire app.WebDownloadManager works together with [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md) and [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md): WebDownloadManager is responsible for lifecycle management and delegate setting of download tasks, WebDownloadDelegate reports download progress and status change events to the app layer, and WebDownloadItem represents a single download task entity, supporting operations such as pause, resume, and cancel.
+WebDownloadManager is a static management class for download tasks of the Web component in the ArkWeb framework. It manages all file download processes triggered by the Web component. Developers can use this class to set a download delegate to receive download progress callbacks and resume failed download tasks. All methods of this class are static methods and take effect globally within the entire app.
+
+WebDownloadManager works together with [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md) and [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md): WebDownloadManager is responsible for lifecycle management and delegate setting of download tasks, WebDownloadDelegate reports download progress and status change events to the app layer, and WebDownloadItem represents a single download task entity, supporting operations such as pause, resume, and cancel.
 
 **Since:** 11
 

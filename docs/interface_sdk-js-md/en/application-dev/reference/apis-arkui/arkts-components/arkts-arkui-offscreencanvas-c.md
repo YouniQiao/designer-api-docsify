@@ -1,6 +1,8 @@
 # OffscreenCanvas
 
-The **OffscreenCanvas** component is used to draw custom graphics.When the Canvas component or **CanvasRenderingContext2D** object is used, rendering, animation, and user interaction usually occur on the main thread of the application. Calculations related to canvas animation and rendering may affect application performance. **OffscreenCanvas** allows for rendering off the screen. This means that some tasks can be run in a separate thread to reduce the load on the main thread.
+The **OffscreenCanvas** component is used to draw custom graphics.
+
+When the Canvas component or **CanvasRenderingContext2D** object is used, rendering, animation, and user interaction usually occur on the main thread of the application. Calculations related to canvas animation and rendering may affect application performance. **OffscreenCanvas** allows for rendering off the screen. This means that some tasks can be run in a separate thread to reduce the load on the main thread.
 
 > **NOTE：**
 > 
@@ -8,6 +10,7 @@ The **OffscreenCanvas** component is used to draw custom graphics.When the Canva
 > that you use the
 > [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)
 > for offscreen drawing in ServiceExtensionAbility.
+
 @extends CanvasRenderer [since 8 - 10]
 
 **Since:** 8
@@ -108,7 +111,7 @@ Constructs an **OffscreenCanvas** object for creating an offscreen canvas object
 | --- | --- | --- | --- |
 | width | number | Yes | Width of the offscreen canvas.    **NaN** and **Infinity** are treated as invalid values.Default unit: vp |
 | height | number | Yes | Height of the offscreen canvas.    **NaN** and **Infinity** are treated as invalid values.Default unit: vp |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes | Unit mode of the OffscreenCanvas object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).Invalid values **NaN** and **Infinity** are treated as the default value.Default value: **DEFAULT**. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the OffscreenCanvas object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).Invalid values **NaN** and **Infinity** are treated as the default value.Default value: **DEFAULT**. |
 
 **Examples**
 
@@ -291,7 +294,9 @@ struct PutImageData {
 height: number
 ```
 
-Height of the offscreen canvas.Default unit: vp
+Height of the offscreen canvas.
+
+Default unit: vp
 
 **Type:** number
 
@@ -343,7 +348,9 @@ struct OffscreenCanvasPage {
 width: number
 ```
 
-Width of the offscreen canvas.Default unit: vp
+Width of the offscreen canvas.
+
+Default unit: vp
 
 **Type:** number
 

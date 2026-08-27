@@ -17,7 +17,9 @@
 beaconFence?: BeaconFence
 ```
 
-beacon围栏的参数配置。仅beacon围栏使用。从API version 20开始，支持该字段。
+beacon围栏的参数配置。仅beacon围栏使用。
+
+从API version 20开始，支持该字段。
 
 **类型：** [BeaconFence](arkts-location-geolocationmanager-beaconfence-i.md)
 

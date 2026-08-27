@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleArchiveInfo
@@ -91,7 +91,7 @@ Obtains the bundle information based on the given HAP file path and bundle flags
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BundleInfo & gt; | Promise used to return the bundle information obtained. |
+| Promise&lt;BundleInfo&gt; | Promise used to return the bundle information obtained. |
 
 **Error codes:**
 

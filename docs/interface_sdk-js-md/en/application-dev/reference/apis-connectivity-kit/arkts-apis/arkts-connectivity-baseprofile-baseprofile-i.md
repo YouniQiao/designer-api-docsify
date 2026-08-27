@@ -33,7 +33,7 @@ Obtains the connected devices list of profile. On API 26.0.0 and above, if the a
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Returns the address of connected devices list. |
+| Array&lt;string&gt; | Returns the address of connected devices list. |
 
 **Error codes:**
 
@@ -86,7 +86,7 @@ Obtains the profile connection state.
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) | Returns the connection state. |
+| ProfileConnectionState | Returns the connection state. |
 
 **Error codes:**
 

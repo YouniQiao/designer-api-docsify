@@ -19,7 +19,7 @@
 want: Want
 ```
 
-要加载的Abc信息。 Want对象的parameters中需包含以下字段： resourcePath：资源路径，需为.hap文件路径； abcPath：经verifyAbc校验后的Abc文件路径，需以'/abcs'开头； entryPoint：Abc入口，格式为'bundleName/页面路径'。
+要加载的Abc信息。Want对象的parameters中需包含以下字段：resourcePath：资源路径，需为.hap文件路径；abcPath：经verifyAbc校验后的Abc文件路径，需以'/abcs'开头；entryPoint：Abc入口，格式为'bundleName/页面路径'。
 
 **类型：** [Want](arkts-arkui-want-t-sys.md)
 

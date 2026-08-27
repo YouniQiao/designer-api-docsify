@@ -1,6 +1,8 @@
 # FormComponentModifier (System API)
 
-Defines FormComponent Modifier@extends FormComponentAttribute @implements AttributeModifier&lt;FormComponentAttribute&gt;
+Defines FormComponent Modifier
+
+@extends FormComponentAttribute @implements AttributeModifier&lt;FormComponentAttribute&gt;
 
 **Inheritance/Implementation:** FormComponentModifier extends [FormComponentAttribute](../arkts-components/arkts-arkui-formcomponent-attribute.md#formcomponentattribute-system-api) and implements AttributeModifier<FormComponentAttribute>
 

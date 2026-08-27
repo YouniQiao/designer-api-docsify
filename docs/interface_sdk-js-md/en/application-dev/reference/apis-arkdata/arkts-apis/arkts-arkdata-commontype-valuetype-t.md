@@ -18,5 +18,5 @@ Enumerates the value types, which vary with the parameter function.
 | string | The value is a string. |
 | boolean | The value is true or false. |
 | Uint8Array | The value is an array of 8-bit unsigned integers. |
-| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | The value is an instance of the Asset type. |
-| [Assets](arkts-arkdata-sendablerelationalstore-assets-t.md) | The value is an instance of the Assets type. |
+| Asset | The value is an instance of the Asset type. |
+| Assets | The value is an instance of the Assets type. |

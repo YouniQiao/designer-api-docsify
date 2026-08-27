@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import floatView from '@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## bind
@@ -13,7 +13,7 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
     floatingBallParams: floatingBall.FloatingBallParams): Promise<void>
 ```
 
-绑定标准悬浮窗和闪控球。需要先创建[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和 [闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)，且均未启动。使用Promise异步回调。
+绑定标准悬浮窗和闪控球。需要先创建[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和[闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)，且均未启动。使用Promise异步回调。
 
 > **说明：**
 > 
@@ -47,7 +47,7 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

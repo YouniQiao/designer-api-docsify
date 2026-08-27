@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import uiMaterial from '@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## getMaterialInfo

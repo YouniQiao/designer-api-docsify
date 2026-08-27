@@ -84,13 +84,13 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the value. |
+| Promise&lt;void&gt; | Promise used to return the value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter invalid. Possible causes:   1. The parameter type is not Array & lt;number & gt;.   2. The parameter is an empty array.   3. The parameter contains an invalid index. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter invalid. Possible causes:   1. The parameter type is not Array&lt;number&gt;.   2. The parameter is an empty array.   3. The parameter contains an invalid index. |
 
 ## setTabBarOpacity
 
@@ -152,4 +152,4 @@ Sets the translation distance of the tab bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes | Translation distance of the tab bar. |
+| translate | TranslateOptions | Yes | Translation distance of the tab bar. |

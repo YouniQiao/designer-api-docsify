@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import performanceMonitor from '@kit.ArkUI';
+import { performanceMonitor } from '@kit.ArkUI';
 ```
 
 ## end

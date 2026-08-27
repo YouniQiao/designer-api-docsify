@@ -1,10 +1,13 @@
 # AccessibilityExtensionContext
 
-The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**.The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection.
+The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**.
+
+The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection.
 
 ## Usage
 
-Before using AccessibilityExtensionContext, obtain an AccessibilityExtensionContext instance through an AccessibilityExtensionAbility subclass instance.  
+Before using AccessibilityExtensionContext, obtain an AccessibilityExtensionContext instance through an AccessibilityExtensionAbility subclass instance.
+
 ```ts
 import { AccessibilityExtensionAbility } from '@kit.AccessibilityKit';
 class EntryAbility extends AccessibilityExtensionAbility {
@@ -117,7 +120,9 @@ export default class AccessibilityManager {
 getAccessibilityFocusedElement(): Promise<AccessibilityElement>
 ```
 
-Obtains the element that currently has the accessibility focus. This API uses a promise to return the result.The accessibility focus refers to the node currently focused by the accessibility service, which is different from the input focus.
+Obtains the element that currently has the accessibility focus. This API uses a promise to return the result.
+
+The accessibility focus refers to the node currently focused by the accessibility service, which is different from the input focus.
 
 **Since:** 20
 
@@ -276,7 +281,9 @@ export default class AccessibilityManager {
 getDefaultFocusedElementIds(windowId: number): Promise<Array<number>>
 ```
 
-Queries the list of default focus element IDs customized by the app. This API uses a promise to return the result.Default focus refers to the element that the accessibility service prioritizes for focusing when a window is opened.
+Queries the list of default focus element IDs customized by the app. This API uses a promise to return the result.
+
+Default focus refers to the element that the accessibility service prioritizes for focusing when a window is opened.
 
 **Since:** 18
 
@@ -294,7 +301,7 @@ Queries the list of default focus element IDs customized by the app. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise used to return the list of custom default focus IDs in the current window. |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise used to return the list of custom default focus IDs in the current window. |
 
 **Error codes:**
 
@@ -437,7 +444,9 @@ export default class AccessibilityManager {
 getRootInActiveWindow(windowId?: number): Promise<AccessibilityElement>
 ```
 
-Obtains the root element of the accessibility node tree of the active window. This API uses a promise to return the result.The active window refers to the foreground app window that currently gains focus.
+Obtains the root element of the accessibility node tree of the active window. This API uses a promise to return the result.
+
+The active window refers to the foreground app window that currently gains focus.
 
 **Since:** 20
 
@@ -585,7 +594,9 @@ export default class AccessibilityManager {
 notifyDisconnect(): void
 ```
 
-Notifies the accessibility service that the accessibility extension service can be closed.This function must be used together with the pre-disconnection registration API on('preDisconnect'). If the pre-disconnection registration function has not been called, calling this function directly has no effect.
+Notifies the accessibility service that the accessibility extension service can be closed.
+
+This function must be used together with the pre-disconnection registration API on('preDisconnect'). If the pre-disconnection registration function has not been called, calling this function directly has no effect.
 
 **Since:** 20
 
@@ -722,7 +733,9 @@ export default class AccessibilityManager {
 on(type: 'preDisconnect', callback: Callback<void>): void
 ```
 
-Registers a callback with the accessibility service, which is invoked before the accessibility service closes this Accessibility Extension Service. This API uses an asynchronous callback to return the result.This registration function must be used together with [notifyDisconnect](#notifydisconnect). If [notifyDisconnect](#notifydisconnect) is not called, the Accessibility Extension Service is automatically closed after a default wait of 30 seconds.
+Registers a callback with the accessibility service, which is invoked before the accessibility service closes this Accessibility Extension Service. This API uses an asynchronous callback to return the result.
+
+This registration function must be used together with [notifyDisconnect](#notifydisconnect). If [notifyDisconnect](#notifydisconnect) is not called, the Accessibility Extension Service is automatically closed after a default wait of 30 seconds.
 
 **Since:** 20
 
@@ -899,7 +912,7 @@ Starts a foreground page. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

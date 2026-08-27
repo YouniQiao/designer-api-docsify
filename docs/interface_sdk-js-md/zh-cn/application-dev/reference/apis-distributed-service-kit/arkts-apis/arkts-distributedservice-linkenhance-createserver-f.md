@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import linkEnhance from '@kit.DistributedServiceKit';
+import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## createServer
@@ -32,7 +32,7 @@ function createServer(name: string): Server
 
 | 类型 | 说明 |
 | --- | --- |
-| [Server](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-server-i.md) | 创建成功的服务对象。 |
+| Server | 创建成功的服务对象。 |
 
 **错误码：**
 

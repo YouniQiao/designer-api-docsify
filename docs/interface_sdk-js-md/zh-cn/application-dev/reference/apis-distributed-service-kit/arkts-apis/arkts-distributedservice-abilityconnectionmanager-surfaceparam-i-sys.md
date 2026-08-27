@@ -1,6 +1,8 @@
 # SurfaceParam（系统接口）
 
-Surface配置参数。@interface SurfaceParam
+Surface配置参数。
+
+@interface SurfaceParam
 
 **起始版本：** 18
 
@@ -11,7 +13,7 @@ Surface配置参数。@interface SurfaceParam
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## flip
@@ -38,7 +40,7 @@ flip?: FlipOptions
 format?: VideoPixelFormat
 ```
 
-视频像素格式，此选项必须在发送端配置。 必须在流启动前设置，设置后不可更新。
+视频像素格式，此选项必须在发送端配置。必须在流启动前设置，设置后不可更新。
 
 **类型：** [VideoPixelFormat](arkts-distributedservice-abilityconnectionmanager-videopixelformat-e-sys.md)
 
@@ -74,7 +76,7 @@ height: number
 rotation?: number
 ```
 
-表示视频的旋转角度（取值范围为{0, 90, 180, 270}，默认值为0）。 0表示不旋转，90表示向右旋转90度（适合竖屏视频），180表示旋转180度，270表示向左旋转90度。 不传入时默认为0。
+表示视频的旋转角度（取值范围为{0, 90, 180, 270}，默认值为0）。0表示不旋转，90表示向右旋转90度（适合竖屏视频），180表示旋转180度，270表示向左旋转90度。不传入时默认为0。
 
 **类型：** number
 

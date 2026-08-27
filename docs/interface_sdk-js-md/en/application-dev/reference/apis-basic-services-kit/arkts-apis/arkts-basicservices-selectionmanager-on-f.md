@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import selectionManager from '@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## on('selectionCompleted')
@@ -12,7 +12,8 @@ import selectionManager from '@kit.BasicServicesKit';
 function on(type: 'selectionCompleted', callback: Callback<SelectionInfo>): void
 ```
 
-Subscribes to the word selection completion event. This API is used together with off('selectionCompleted').  
+Subscribes to the word selection completion event. This API is used together with off('selectionCompleted').
+
 off('selectionCompleted') is used to unsubscribe from the event.
 
 **Since:** 24

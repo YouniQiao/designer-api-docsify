@@ -1,6 +1,8 @@
 # MetallicRoughnessMaterial
 
-用于实现真实感外观的材质资源。 采用基于物理渲染（PBR）的金属-粗糙度模型，通过调节金属度和粗糙度参数，可模拟金属、塑料等不同材质的表面光照与反射效果，继承自Material。@extends Material @interface MetallicRoughnessMaterial
+用于实现真实感外观的材质资源。采用基于物理渲染（PBR）的金属-粗糙度模型，通过调节金属度和粗糙度参数，可模拟金属、塑料等不同材质的表面光照与反射效果，继承自Material。
+
+@extends Material @interface MetallicRoughnessMaterial
 
 **继承/实现关系：** MetallicRoughnessMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
 
@@ -98,7 +100,7 @@ emissive: MaterialProperty
 material: MaterialProperty
 ```
 
-金属材质参数。 粗糙度（Roughness）：表达材质因其表面细微的结构细节所导致的反光强弱程度。 金属度（Metallic）：表达材质的金属属性。 反射度（Reflectance）：材质的光反射率。
+金属材质参数。粗糙度（Roughness）：表达材质因其表面细微的结构细节所导致的反光强弱程度。金属度（Metallic）：表达材质的金属属性。反射度（Reflectance）：材质的光反射率。
 
 **类型：** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 

@@ -11,7 +11,7 @@ Returns the list of onscreen awareness information.
 ## Modules to Import
 
 ```TypeScript
-import onScreen from '@kit.MultimodalAwarenessKit';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## appIndex

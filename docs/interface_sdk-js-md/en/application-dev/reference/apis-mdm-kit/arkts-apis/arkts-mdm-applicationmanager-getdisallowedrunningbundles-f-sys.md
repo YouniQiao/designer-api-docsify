@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## getDisallowedRunningBundles
@@ -162,7 +162,7 @@ Obtains applications that are not allowed to run under the current user or a spe
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the applications that are not allowed to run by the current user or specified user. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the applications that are not allowed to run by the current user or specified user. |
 
 **Error codes:**
 

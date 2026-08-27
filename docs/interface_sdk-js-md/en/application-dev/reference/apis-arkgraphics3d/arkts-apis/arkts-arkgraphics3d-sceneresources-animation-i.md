@@ -1,6 +1,8 @@
 # Animation
 
-Animation resource, which inherits from SceneResource.@extends SceneResource @interface Animation
+Animation resource, which inherits from SceneResource.
+
+@extends SceneResource @interface Animation
 
 **Inheritance/Implementation:** Animation extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
@@ -31,7 +33,7 @@ function finish(): void {
   scene.then(async (result: Scene) => {
     if (result && result.animations && result.animations[0]) {
       let anim: Animation = result.animations[0];
-      // Finish the playing of the animation and set its progress of **1** (finished).
+      // Jump directly to the end of the animation and set the animation progress to 1.
       anim.finish();
     }
   });
@@ -263,7 +265,7 @@ function stop(): void {
   scene.then(async (result: Scene) => {
     if (result && result.animations && result.animations[0]) {
       let anim: Animation = result.animations[0];
-      // Stop playing the animation and set its progress to 0 (not started).
+      // Stop playing the animation and set the animation progress to 0.
       anim.stop();
     }
   });

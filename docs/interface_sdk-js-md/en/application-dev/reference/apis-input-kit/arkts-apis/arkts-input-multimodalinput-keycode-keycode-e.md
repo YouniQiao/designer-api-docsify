@@ -72,7 +72,10 @@ Search key
 KEYCODE_MEDIA_PLAY_PAUSE = 10
 ```
 
-Play/Pause key Difference between this key and **KEYCODE_PLAYPAUSE**:  
+Play/Pause key
+
+Difference between this key and **KEYCODE_PLAYPAUSE**:
+
 **KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.
 
 **Since:** 9
@@ -2261,7 +2264,10 @@ Page Down key
 KEYCODE_PLAYPAUSE = 2630
 ```
 
-Play/Pause key Difference between this key and **KEYCODE_MEDIA_PLAY_PAUSE**:  
+Play/Pause key
+
+Difference between this key and **KEYCODE_MEDIA_PLAY_PAUSE**:
+
 **KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.
 
 **Since:** 9
@@ -3474,8 +3480,10 @@ Keyboard Input-assisted Cancel key
 KEYCODE_MOUSE_ASSISTANT = 2732
 ```
 
-Mouse AI assistant key.  
-**Starting Version:** 26.0.0  
+Mouse AI assistant key.
+
+**Starting Version:** 26.0.0
+
 **Model constraint:** This API can only be used in the stage model.
 
 **Since:** 26.0.0
@@ -3490,8 +3498,10 @@ Mouse AI assistant key.
 KEYCODE_MOUSE_INTELLIGENCE_SELECTION = 2733
 ```
 
-Mouse smart selection key.  
-**Starting Version:** 26.0.0  
+Mouse smart selection key.
+
+**Starting Version:** 26.0.0
+
 **Model constraint:** This API can only be used in the stage model.
 
 **Since:** 26.0.0
@@ -3506,8 +3516,10 @@ Mouse smart selection key.
 KEYCODE_AOD_SINGLE_CLICK = 2740
 ```
 
-Phone touchscreen single-click event, used in Always-On Display (AOD) mode.  
-**Starting Version:** 26.0.0  
+Phone touchscreen single-click event, used in Always-On Display (AOD) mode.
+
+**Starting Version:** 26.0.0
+
 **Model constraint:** This API can only be used in the stage model.
 
 **Since:** 26.0.0
@@ -4254,8 +4266,10 @@ Left button of the smart watch
 KEYCODE_XKEY = 3232
 ```
 
-Custom hotkey  
-**Since:** 26.0.0  
+Custom hotkey
+
+**Since:** 26.0.0
+
 **Model restriction:** This API can only be used in the stage model.
 
 **Since:** 26.0.0
@@ -4270,8 +4284,10 @@ Custom hotkey
 KEYCODE_FINGERPRINT_SLIDE_UP = 3233
 ```
 
-Smart control key slide-up  
-**Since:** 26.0.0  
+Smart control key slide-up
+
+**Since:** 26.0.0
+
 **Model restriction:** This API can only be used in the stage model.
 
 **Since:** 26.0.0
@@ -4286,8 +4302,10 @@ Smart control key slide-up
 KEYCODE_FINGERPRINT_SLIDE_DOWN = 3234
 ```
 
-Smart control key slide-down  
-**Since:** 26.0.0  
+Smart control key slide-down
+
+**Since:** 26.0.0
+
 **Model restriction:** This API can only be used in the stage model.
 
 **Since:** 26.0.0

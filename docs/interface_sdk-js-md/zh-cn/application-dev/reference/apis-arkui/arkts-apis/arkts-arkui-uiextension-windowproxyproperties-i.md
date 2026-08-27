@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import uiExtension from '@kit.ArkUI';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## uiExtensionHostWindowProxyRect

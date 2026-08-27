@@ -1,6 +1,8 @@
 # SecurityComponentMethod
 
-The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.This module is mainly used in the following scenarios:  
+The universal attributes module for security components enables unified configuration of universal attributes such as layout, size, text, icon, color, border, and interaction behaviors.
+
+This module is mainly used in the following scenarios:  
 - Set layout, size, text, icon, color, border, and interaction-related attributes for security components  
 such as PasteButton and SaveButton.  
 - Adjust the display effect and interaction experience of security components while ensuring compliance with  
@@ -21,7 +23,8 @@ security components. Configures layout, size, text, icon, color, border, and int
 
 ## Child Components
 
-- Not supported  
+- Not supported
+
 Defines the method of a security component.
 
 **Since:** 10

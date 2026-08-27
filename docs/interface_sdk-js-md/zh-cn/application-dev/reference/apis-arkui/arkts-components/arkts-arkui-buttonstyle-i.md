@@ -17,7 +17,19 @@
 height?: number
 ```
 
-设置侧边栏控制按钮的高度。默认值：API version 9及之前版本：32vp从API version 10开始：24vp单位：vp取值范围：[0, +∞)异常值时取默认值。
+设置侧边栏控制按钮的高度。
+
+默认值：
+
+API version 9及之前版本：32vp
+
+从API version 10开始：24vp
+
+单位：vp
+
+取值范围：[0, +∞)
+
+异常值时取默认值。
 
 **类型：** number
 
@@ -33,7 +45,9 @@ height?: number
 icons?: ButtonIconOptions
 ```
 
-设置侧边栏控制按钮的图标。资源获取错误以及未设置该属性时，使用默认图标。
+设置侧边栏控制按钮的图标。
+
+资源获取错误以及未设置该属性时，使用默认图标。
 
 **类型：** [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md)
 
@@ -49,7 +63,15 @@ icons?: ButtonIconOptions
 left?: number
 ```
 
-设置侧边栏控制按钮距离容器左界限的间距。默认值：16vp单位：vp取值范围：[0, +∞)异常值时取默认值。
+设置侧边栏控制按钮距离容器左界限的间距。
+
+默认值：16vp
+
+单位：vp
+
+取值范围：[0, +∞)
+
+异常值时取默认值。
 
 **类型：** number
 
@@ -65,7 +87,15 @@ left?: number
 top?: number
 ```
 
-设置侧边栏控制按钮距离容器上界限的间距。默认值：48vp单位：vp取值范围：[0, +∞)异常值时取默认值。
+设置侧边栏控制按钮距离容器上界限的间距。
+
+默认值：48vp
+
+单位：vp
+
+取值范围：[0, +∞)
+
+异常值时取默认值。
 
 **类型：** number
 
@@ -81,7 +111,19 @@ top?: number
 width?: number
 ```
 
-设置侧边栏控制按钮的宽度。默认值：API version 9及之前版本：32vp从API version 10开始：24vp单位：vp取值范围：[0, +∞)异常值时取默认值。
+设置侧边栏控制按钮的宽度。
+
+默认值：
+
+API version 9及之前版本：32vp
+
+从API version 10开始：24vp
+
+单位：vp
+
+取值范围：[0, +∞)
+
+异常值时取默认值。
 
 **类型：** number
 

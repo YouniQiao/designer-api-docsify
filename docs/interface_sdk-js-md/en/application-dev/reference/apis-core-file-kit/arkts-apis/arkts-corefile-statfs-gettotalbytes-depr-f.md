@@ -71,7 +71,7 @@ Obtains the total size of the specified file system, in byte. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the total size obtained, in bytes. |
+| Promise&lt;number&gt; | Promise used to return the total size obtained, in bytes. |
 
 **Examples**
 

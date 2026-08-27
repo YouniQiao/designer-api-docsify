@@ -70,7 +70,7 @@ Obtains information about all sensors on the device. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;Sensor & gt; & gt; | Promise used to return the sensor list. |
+| Promise&lt;Array&lt;Sensor&gt;&gt; | Promise used to return the sensor list. |
 
 **Error codes:**
 

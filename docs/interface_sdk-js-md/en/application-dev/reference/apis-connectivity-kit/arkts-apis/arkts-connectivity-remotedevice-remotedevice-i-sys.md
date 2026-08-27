@@ -9,7 +9,7 @@ Provides the method for operating on a remote device. Before using this method, 
 ## Modules to Import
 
 ```TypeScript
-import remoteDevice from '@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## cancelDevicePairing
@@ -34,7 +34,7 @@ Cancels the ongoing pairing request. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -67,7 +67,7 @@ Initiates a connection request to a remote device. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -100,7 +100,7 @@ Disconnects from the remote device. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -196,7 +196,7 @@ Obtains the received signal strength indicator (RSSI) of a remote device. This A
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the RSSI value. |
+| Promise&lt;number&gt; | Promise used to return the RSSI value. |
 
 **Error codes:**
 
@@ -229,7 +229,7 @@ Removes a paired device. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -262,7 +262,7 @@ Sets the interval for connecting to a remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interval | [ConnectionInterval](arkts-connectivity-remotedevice-connectioninterval-t-sys.md) | Yes | Connection interval to be set. |
+| interval | ConnectionInterval | Yes | Connection interval to be set. |
 
 **Error codes:**
 
@@ -368,7 +368,7 @@ Sets the pairing passcode. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -402,7 +402,7 @@ Initiates pairing with a trusted remote device without a dialog box. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

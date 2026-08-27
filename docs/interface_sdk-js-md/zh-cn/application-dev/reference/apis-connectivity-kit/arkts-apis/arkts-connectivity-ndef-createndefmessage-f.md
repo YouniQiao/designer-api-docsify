@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## createNdefMessage
@@ -30,7 +30,7 @@ function createNdefMessage(data: number[]): NdefMessage
 
 | 类型 | 说明 |
 | --- | --- |
-| [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | NDEF标签的Message，详见NDEF技术规范《NFCForum-TS-NDEF_1.0》。 |
+| NdefMessage | NDEF标签的Message，详见NDEF技术规范《NFCForum-TS-NDEF_1.0》。 |
 
 **错误码：**
 
@@ -63,7 +63,7 @@ function createNdefMessage(ndefRecords: NdefRecord[]): NdefMessage
 
 | 类型 | 说明 |
 | --- | --- |
-| [NdefMessage](arkts-connectivity-nfctech-ndefmessage-i.md) | NDEF标签的Message，详见NDEF技术规范《NFCForum-TS-NDEF_1.0》。 |
+| NdefMessage | NDEF标签的Message，详见NDEF技术规范《NFCForum-TS-NDEF_1.0》。 |
 
 **错误码：**
 

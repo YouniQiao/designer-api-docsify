@@ -31,7 +31,7 @@ Stop ManualNetworkScan.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | the promise return stopManualNetworkScan. |
+| Promise&lt;void&gt; | the promise return stopManualNetworkScan. |
 
 **Error codes:**
 

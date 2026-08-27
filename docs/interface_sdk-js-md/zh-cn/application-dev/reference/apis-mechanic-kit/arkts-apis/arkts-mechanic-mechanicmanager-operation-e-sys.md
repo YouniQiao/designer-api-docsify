@@ -1,6 +1,8 @@
 # Operation（系统接口）
 
-用户操作@enum { number }
+用户操作
+
+@enum { number }
 
 **起始版本：** 20
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## setBluetoothScanMode
@@ -30,7 +30,7 @@ Sets the Bluetooth scan mode for a device. On API 10 and above, the permission r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [ScanMode](arkts-connectivity-connection-scanmode-e.md) | Yes | Indicates the Bluetooth scan mode to set, [ScanMode](arkts-connectivity-bluetoothmanager-scanmode-e.md). |
+| mode | ScanMode | Yes | Indicates the Bluetooth scan mode to set, [ScanMode](arkts-connectivity-bluetoothmanager-scanmode-e.md). |
 | duration | number | Yes | Indicates the duration in seconds, in which the host is discoverable. |
 
 **Error codes:**

@@ -9,7 +9,7 @@ MovingPhoto provides APIs for managing a moving photo instance.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getUri
@@ -110,7 +110,7 @@ Requests the image data and video data of this moving photo and writes them to t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -196,14 +196,14 @@ Requests the moving photo content of the specified resource type and writes it t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceType | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-resourcetype-e.md) | Yes | Resource type of the moving photo content to request. |
+| resourceType | ResourceType | Yes | Resource type of the moving photo content to request. |
 | fileUri | string | Yes | URI to which the moving photo content is to be written. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -284,13 +284,13 @@ Requests the moving photo content of the specified resource type and returns it 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceType | [ResourceType](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-resourcetype-e.md) | Yes | Resource type of the moving photo content to request. |
+| resourceType | ResourceType | Yes | Resource type of the moving photo content to request. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise used to return the requested content in an ArrayBuffer. |
+| Promise&lt;ArrayBuffer&gt; | Promise used to return the requested content in an ArrayBuffer. |
 
 **Error codes:**
 

@@ -11,7 +11,7 @@ sendableContextManager模块提供Context与[SendableContext](arkts-ability-send
 ## 导入模块
 
 ```TypeScript
-import sendableContextManager from '@kit.AbilityKit';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

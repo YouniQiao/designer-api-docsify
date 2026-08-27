@@ -1,7 +1,7 @@
 # ArkTS API<!--arkts-localizationkit-->
 
 <!--Del-->
-- [@ohos.fontManager](arkts-fontmanager.md)<!--DelEnd-->
+- [@ohos.fontManager(Font Management)](arkts-fontmanager.md)<!--DelEnd-->
   <!--Del-->
   - [dataMigration(system api)](arkts-localization-fontmanager-datamigration-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -103,7 +103,7 @@
   - [PluralRulesOptions](arkts-localization-intl-pluralrulesoptions-i.md)
   - [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md)
   - [RelativeTimeFormatResolvedOptions](arkts-localization-intl-relativetimeformatresolvedoptions-i.md)
-- [@ohos.resourceManager](arkts-resourcemanager.md)
+- [@ohos.resourceManager(Resource Management)](arkts-resourcemanager.md)
   - [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md)
   - [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md)
   - [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md)
@@ -117,7 +117,7 @@
   - [DeviceType](arkts-localization-resourcemanager-devicetype-e.md)
   - [Direction](arkts-localization-resourcemanager-direction-e.md)
   - [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)
-- [@ohos.sendableResourceManager](arkts-sendableresourcemanager.md)
+- [@ohos.sendableResourceManager(Resource Manager)](arkts-sendableresourcemanager.md)
   - [resourceToSendableResource](arkts-localization-sendableresourcemanager-resourcetosendableresource-f.md)
   - [sendableResourceToResource](arkts-localization-sendableresourcemanager-sendableresourcetoresource-f.md)
   - [Resource](arkts-localization-sendableresourcemanager-resource-t.md)

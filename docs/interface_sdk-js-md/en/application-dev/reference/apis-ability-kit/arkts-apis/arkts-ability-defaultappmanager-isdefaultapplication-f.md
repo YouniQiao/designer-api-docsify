@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import defaultAppManager from '@kit.AbilityKit';
+import { defaultAppManager } from '@kit.AbilityKit';
 ```
 
 ## isDefaultApplication
@@ -70,7 +70,7 @@ Checks whether this application is the default application of a system-defined a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result, indicating whether the application is the default application. **true** if the application is the default application, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result, indicating whether the application is the default application. **true** if the application is the default application, **false** otherwise. |
 
 **Error codes:**
 

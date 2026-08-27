@@ -29,7 +29,7 @@ Puts the **Blob** data into an **ArrayBuffer** object. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; |  |
+| Promise&lt;ArrayBuffer&gt; |  |
 
 **Examples**
 
@@ -138,7 +138,7 @@ Decodes data using UTF-8 and returns a string. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; |  |
+| Promise&lt;string&gt; |  |
 
 **Examples**
 

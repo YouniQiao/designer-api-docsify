@@ -136,7 +136,7 @@ Pre-creates @Reusable/@ReusableV2 decorated components and places them in this r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise parsed when the idle task is successfully completed. This promise returns no value. |
+| Promise&lt;void&gt; | Promise parsed when the idle task is successfully completed. This promise returns no value. |
 
 **Examples**
 

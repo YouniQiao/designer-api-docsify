@@ -39,7 +39,17 @@ A constructor used to create a text background style.
 readonly textBackgroundStyle: TextBackgroundStyle
 ```
 
-Text background color of the styled string.Default value:{color: Color.Transparent,radius: 0}
+Text background color of the styled string.
+
+Default value:
+
+{
+
+color: Color.Transparent,
+
+radius: 0
+
+}
 
 **Type:** [TextBackgroundStyle](../arkts-components/arkts-arkui-textbackgroundstyle-i.md)
 

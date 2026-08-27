@@ -1,6 +1,8 @@
 # WebCookieManager
 
-WebCookieManager is the cookie manager for Web components, providing global management capabilities for cookies in Web components. With this class, developers can obtain, set, save, and clear cookies, as well as control cookie permissions. All methods of this class are static, and all Web components in an app share a single WebCookieManager instance. The cookie format complies with the [RFC6265](https://www.rfc-editor.org/info/rfc6265/) standard.When browsing web pages in Privacy Mode, data such as cookies and caches are not written to local persistent storage. After the Web component in Privacy Mode is destroyed, this data is cleared and not retained.
+WebCookieManager is the cookie manager for Web components, providing global management capabilities for cookies in Web components. With this class, developers can obtain, set, save, and clear cookies, as well as control cookie permissions. All methods of this class are static, and all Web components in an app share a single WebCookieManager instance. The cookie format complies with the [RFC6265](https://www.rfc-editor.org/info/rfc6265/) standard.
+
+When browsing web pages in Privacy Mode, data such as cookies and caches are not written to local persistent storage. After the Web component in Privacy Mode is destroyed, this data is cleared and not retained.
 
 > **NOTE：**
 > 
@@ -33,7 +35,7 @@ Clears all cookies, including session cookies and persistent cookies. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -190,7 +192,7 @@ Clears all session cookies. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -373,7 +375,7 @@ Sets a single cookie value for a specified URL. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -461,7 +463,7 @@ Sets a single cookie value for a specified URL. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -962,7 +964,7 @@ Obtains the cookie value of a specified URL. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1028,7 +1030,7 @@ Obtains the cookie value of a specified URL. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. |
+| Promise&lt;string&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1097,7 +1099,7 @@ Obtains the cookies corresponding to a specified URL. The parameter incognito sp
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to obtain the cookies corresponding to the specified URL. |
+| Promise&lt;string&gt; | Promise used to obtain the cookies corresponding to the specified URL. |
 
 **Error codes:**
 
@@ -1633,7 +1635,7 @@ Saves all cookies that can be obtained through fetchCookie and need to be persis
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the operation result. |
+| Promise&lt;void&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 

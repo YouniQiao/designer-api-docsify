@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import agentManager from '@kit.AbilityKit';
+import { agentManager } from '@kit.AbilityKit';
 ```
 
 ## disconnectServiceExtensionAbility
@@ -33,7 +33,7 @@ Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

@@ -1,6 +1,8 @@
 # LifecycleForm
 
-interface of form lifecycle.@interface LifecycleForm
+interface of form lifecycle.
+
+@interface LifecycleForm
 
 **Since:** 7
 
@@ -162,4 +164,4 @@ Called when the form provider receives form events from the system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newStatus | Record & lt;string, number & gt; | Yes | Indicates the form events occurred. The key in the {@code Map} object indicates form ID,and the value indicates the event type, which can be either [FORM_VISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_visible) or [FORM_INVISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_invisible). [FORM_VISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_visible) means that the form becomes visible, and [FORM_INVISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_invisible) means that the form becomes invisible. |
+| newStatus | Record&lt;string, number&gt; | Yes | Indicates the form events occurred. The key in the {@code Map} object indicates form ID,and the value indicates the event type, which can be either [FORM_VISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_visible) or [FORM_INVISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_invisible). [FORM_VISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_visible) means that the form becomes visible, and [FORM_INVISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_invisible) means that the form becomes invisible. |

@@ -23,7 +23,9 @@ Offset of the overlay from the upper left corner. By default, the overlay is in 
 x?: number
 ```
 
-Horizontal offset.Unit: vp.
+Horizontal offset.
+
+Unit: vp.
 
 **Type:** number
 
@@ -41,7 +43,9 @@ Horizontal offset.Unit: vp.
 y?: number
 ```
 
-Vertical offset.Unit: vp.
+Vertical offset.
+
+Unit: vp.
 
 **Type:** number
 

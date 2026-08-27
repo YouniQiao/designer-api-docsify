@@ -1,11 +1,17 @@
 # Image
 
 The **Image** component is usually used to display images in applications. It supports data sources of the following types: [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md), [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md), and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md). Supported image formats include PNG, JPG, JPEG, BMP, SVG, WEBP, GIF, HEIF, and TIFF. Note that the APNG and SVGA formats are not supported.
+
 > **NOTE**
+
 > - This component supports the TIFF image format since API version 23. > > - When keyboard shortcuts are used to copy an **Image** component, the **Image** component must be in a focused > state. For instructions on how to set focus, see > [Setting Whether a Component Is Focusable] > (../../../ui/arkts-common-events-focus-event.md#setting-whether-a-component-is-focusable). > By default, the **Image** component is not focusable. To enable it to gain focus, set both the > focusable and [focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch) attributes to > **true**. > > - The **Image** component supports SVG image sources. For details about SVG tags, see SVG Tags. > > - For animated images, animation playback is disabled by default and depends on the visibility of the **Image** > component. When the component is visible, the animation is started through the callback. When the component is > invisible, the animation is stopped. The visibility status of the **Image** component can be identified through the > > [onVisibleAreaChange] > [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange) > event. If the value of **ratios** is greater than 0, the component is visible. > > - For details about how to resolve white block issues during image loading, see > [Solution to White Image Blocks] > (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution). > For details about how to address slow image loading, see > [Optimizing Preset Image Loading] > (https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-compression-improve- > performance#section91526132216). >
+
 Required Permissions
+
 The **ohos.permission.INTERNET** permission is required for using online images. For details about how to apply for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
+
 Child Components
+
 Not supported
 
 ## Image
@@ -14,7 +20,13 @@ Not supported
 Image(src: PixelMap | ResourceStr | DrawableDescriptor)
 ```
 
-Obtains an image from the specified source for subsequent rendering and display.If the **Image** component fails to obtain the image or the obtained image size is 0, the **Image** component is automatically resized to 0 and does not follow the layout constraints of its parent component.By default, the **Image** component crops images to keep their center. For example, if the component has the same width and height, it crops any image whose width and height are different, so as to keep its center.If the **Image** component does not have its width and height set, its size adapts to that of its parent component once the image is successfully loaded.
+Obtains an image from the specified source for subsequent rendering and display.
+
+If the **Image** component fails to obtain the image or the obtained image size is 0, the **Image** component is automatically resized to 0 and does not follow the layout constraints of its parent component.
+
+By default, the **Image** component crops images to keep their center. For example, if the component has the same width and height, it crops any image whose width and height are different, so as to keep its center.
+
+If the **Image** component does not have its width and height set, its size adapts to that of its parent component once the image is successfully loaded.
 
 > **NOTE：**
 > 
@@ -180,13 +192,30 @@ Set src and ai options to obtain images
 
 | Name | Description |
 | --- | --- |
+| [ImageAlt](arkts-arkui-imagealt-i.md) | Sets the placeholder image. |
+| [ImageError](arkts-arkui-imageerror-i.md) | Describes the object returned by the image loading error callback. |
+| [ImageSourceSize](arkts-arkui-imagesourcesize-i.md) | Defines source size of image. |
+| [ResizableOptions](arkts-arkui-resizableoptions-i.md) | Defines the resizable image options. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [BusinessError](arkts-arkui-businesserror-t.md) | Represents the error information returned when an error occurs during image loading. |
+| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | Represents a parameter object for the **Image** component. |
+| [DrawingColorFilter](arkts-arkui-drawingcolorfilter-t.md) | Represents a color filter object. |
+| [DrawingLattice](arkts-arkui-drawinglattice-t.md) | Represents a matrix grid object that divides an image into a rectangular grid. |
+| [ImageErrorCallback](arkts-arkui-imageerrorcallback-t.md) | Triggered when an error occurs during image loading. |
+| [ImageMatrix](arkts-arkui-imagematrix-t.md) | Represents the current matrix object. |
+| [RequestDownloadInfo](arkts-arkui-requestdownloadinfo-t.md) | Describes the download information when an online image fails to load or encounters an exception. This object contains resource information, network information, and performance statistics of the download task, which can be used to locate the cause of the loading exception. |
+| [ResolutionQuality](arkts-arkui-resolutionquality-t-sys.md) | Enumerates all the levels available for the image resolution quality. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [DynamicRangeMode](arkts-arkui-dynamicrangemode-e.md) | Describes the dynamic range of the image to be displayed. |
+| [ImageContent](arkts-arkui-imagecontent-e.md) | Defines the image content. |
+| [ImageInterpolation](arkts-arkui-imageinterpolation-e.md) | Interpolation effect of the image. |
+| [ImageRenderMode](arkts-arkui-imagerendermode-e.md) | Interpolation effect of the image. |
+| [ImageRotateOrientation](arkts-arkui-imagerotateorientation-e.md) | Describes the desired display orientation for image content. |

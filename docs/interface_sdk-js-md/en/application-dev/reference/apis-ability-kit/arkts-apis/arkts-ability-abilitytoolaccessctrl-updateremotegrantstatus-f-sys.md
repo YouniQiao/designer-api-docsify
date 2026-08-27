@@ -31,7 +31,7 @@ Updates the remote grant status. This function enables or disables the remote au
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

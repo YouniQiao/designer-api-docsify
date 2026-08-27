@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import power from '@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## unregisterShutdownCallback
@@ -12,7 +12,7 @@ import power from '@kit.BasicServicesKit';
 function unregisterShutdownCallback(callback?: Callback<void>): void
 ```
 
-取消订阅电源关机或重启的回调提醒。使用callback同步回调。 此方法与power.registerShutdownCallback配对使用，必须在先调用registerShutdownCallback订阅回调后，再调用此方法取消订阅。
+取消订阅电源关机或重启的回调提醒。使用callback同步回调。此方法与power.registerShutdownCallback配对使用，必须在先调用registerShutdownCallback订阅回调后，再调用此方法取消订阅。
 
 **起始版本：** 23
 

@@ -1,6 +1,8 @@
 # ExtensionAbilityType
 
-Enumerates the types of ExtensionAbility components.<!--RP2--><!--RP2End-->
+Enumerates the types of ExtensionAbility components.
+
+<!--RP2--><!--RP2End-->
 
 **Since:** 9
 

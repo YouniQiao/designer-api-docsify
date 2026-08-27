@@ -1,6 +1,8 @@
 # ExemptedAppInfo (System API)
 
-Information about an exempted application.@interface ExemptedAppInfo
+Information about an exempted application.
+
+@interface ExemptedAppInfo
 
 **Since:** 10
 
@@ -11,7 +13,7 @@ Information about an exempted application.@interface ExemptedAppInfo
 ## Modules to Import
 
 ```TypeScript
-import deviceStandby from '@kit.BackgroundTasksKit';
+import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## duration

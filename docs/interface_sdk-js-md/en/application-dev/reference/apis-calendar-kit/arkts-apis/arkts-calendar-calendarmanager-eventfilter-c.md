@@ -1,6 +1,8 @@
 # EventFilter
 
-Implements an event filter.You can use [filterById()](#filterbyid), [filterByTime()](#filterbytime), [filterByTitle()](#filterbytitle) to obtain an event filter, and then pass the filter in getEvents() for filtering.
+Implements an event filter.
+
+You can use [filterById()](#filterbyid), [filterByTime()](#filterbytime), [filterByTitle()](#filterbytitle) to obtain an event filter, and then pass the filter in getEvents() for filtering.
 
 **Since:** 10
 
@@ -9,7 +11,7 @@ Implements an event filter.You can use [filterById()](#filterbyid), [filterByTim
 ## Modules to Import
 
 ```TypeScript
-import calendarManager from '@kit.CalendarKit';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## filterById

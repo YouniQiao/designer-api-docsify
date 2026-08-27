@@ -76,7 +76,7 @@ Checks whether the IMS service is enabled. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the IMS service is enabled, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the IMS service is enabled, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

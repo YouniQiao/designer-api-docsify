@@ -1,6 +1,8 @@
 # RowSplitModifier
 
-Defines RowSplit Modifier@extends RowSplitAttribute @implements AttributeModifier&lt;RowSplitAttribute&gt;
+Defines RowSplit Modifier
+
+@extends RowSplitAttribute @implements AttributeModifier&lt;RowSplitAttribute&gt;
 
 **Inheritance/Implementation:** RowSplitModifier extends [RowSplitAttribute](../arkts-components/arkts-arkui-rowsplit-attribute.md#rowsplitattribute) and implements AttributeModifier<RowSplitAttribute>
 

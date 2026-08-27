@@ -11,9 +11,7 @@ Defines the base information of the interaction UI to be displayed after the cur
 ## Modules to Import
 
 ```TypeScript
-import insightIntent from '@kit.AbilityKit';
-import insightIntentDriver from '@kit.AbilityKitDriver';
-import insightIntentProvider from '@kit.AbilityKitProvider';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## interactionUIType

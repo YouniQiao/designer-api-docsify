@@ -1,6 +1,8 @@
 # TextLine
 
-Implements a carrier that describes the basic text line structure of a paragraph.Before calling any of the following APIs, you must use [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines) of the [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) class or [createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createline) of the [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) class to create a **TextLine** object.
+Implements a carrier that describes the basic text line structure of a paragraph.
+
+Before calling any of the following APIs, you must use [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines) of the [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) class or [createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createline) of the [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) class to create a **TextLine** object.
 
 **Since:** 12
 
@@ -9,7 +11,7 @@ Implements a carrier that describes the basic text line structure of a paragraph
 ## Modules to Import
 
 ```TypeScript
-import text from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## createTruncatedLine
@@ -31,7 +33,7 @@ Creates a truncated text line object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | width | number | Yes | Line width after truncation, which is a floating-point value in physical pixels (px). |
-| ellipsisMode | [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md) | Yes | Ellipsis mode. Currently, only **START** and **END** are supported. |
+| ellipsisMode | EllipsisMode | Yes | Ellipsis mode. Currently, only **START** and **END** are supported. |
 | ellipsis | string | Yes | String used to mark truncation. |
 
 **Return value:**
@@ -314,7 +316,7 @@ Obtains the range of the text in this text line in the entire paragraph.
 
 | Type | Description |
 | --- | --- |
-| [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Range of the text in this text line in the entire paragraph. |
+| Range | Range of the text in this text line in the entire paragraph. |
 
 **Examples**
 

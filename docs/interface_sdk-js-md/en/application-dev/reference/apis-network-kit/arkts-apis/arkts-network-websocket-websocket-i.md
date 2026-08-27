@@ -134,7 +134,7 @@ Closes a WebSocket connection based on the specified options. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -357,7 +357,7 @@ Establishes a WebSocket connection to a given URL. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 
@@ -497,7 +497,7 @@ Unsubscribes from WebSocket server message receiving events. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.    **message**: event indicating that a message has been received from the server. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer & gt; | No | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | No | Callback used to return the result. |
 
 **Examples**
 
@@ -704,7 +704,7 @@ Subscribes to WebSocket server message receiving events. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Event type.    **message**: event indicating that a message has been received from the server. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer & gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| ArrayBuffer&gt; | Yes | Callback used to return the result. |
 
 **Examples**
 
@@ -794,7 +794,9 @@ ws.on('close', (err: BusinessError, value: webSocket.CloseResult) => {
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to WebSocket error events. This API uses an asynchronous callback to return the result.The error code of the [error](#onerror) event callback is described as follows: WebSocket is essentially an HTTP protocol upgrade. If the server agrees to the upgrade, the server returns 101. The status code indicates that the protocol is switched from HTTP to WebSocket (the **open** callback is triggered). If the server rejects the upgrade or other exceptions occur, the server returns 200, indicating that the server only processes the request as a common HTTP request.
+Subscribes to WebSocket error events. This API uses an asynchronous callback to return the result.
+
+The error code of the [error](#onerror) event callback is described as follows: WebSocket is essentially an HTTP protocol upgrade. If the server agrees to the upgrade, the server returns 101. The status code indicates that the protocol is switched from HTTP to WebSocket (the **open** callback is triggered). If the server rejects the upgrade or other exceptions occur, the server returns 200, indicating that the server only processes the request as a common HTTP request.
 
 **Since:** 6
 
@@ -968,7 +970,7 @@ Sends data through the WebSocket connection. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 **Error codes:**
 

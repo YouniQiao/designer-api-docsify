@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import systemParameterEnhance from '@kit.BasicServicesKit';
+import { systemParameterEnhance } from '@kit.BasicServicesKit';
 ```
 
 ## set
@@ -80,7 +80,7 @@ Sets a value of the specified key. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the execution result. |
+| Promise&lt;void&gt; | Promise used to return the execution result. |
 
 **Error codes:**
 

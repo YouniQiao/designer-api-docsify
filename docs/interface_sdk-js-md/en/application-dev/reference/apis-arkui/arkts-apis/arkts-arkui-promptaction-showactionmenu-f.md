@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import promptAction, { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## showActionMenu
@@ -34,7 +34,7 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | Action menu options. |
+| options | ActionMenuOptions | Yes | Action menu options. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
 
 **Error codes:**
@@ -179,13 +179,13 @@ Creates and displays an action menu in the given settings. This API uses a promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | Promise that returns the action menu response. |
+| options | ActionMenuOptions | Yes | Promise that returns the action menu response. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ActionMenuSuccessResponse & gt; | Promise that returns the action menu response. |
+| Promise&lt;ActionMenuSuccessResponse&gt; | Promise that returns the action menu response. |
 
 **Error codes:**
 
@@ -195,30 +195,6 @@ Creates and displays an action menu in the given settings. This API uses a promi
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 **Examples**
-
-```TypeScript
-import { promptAction } from '@kit.ArkUI';
-
-promptAction.showActionMenu({
-  title: 'showActionMenu Title Info',
-  buttons: [
-    {
-      text: 'item1',
-      color: '#666666'
-    },
-    {
-      text: 'item2',
-      color: '#000000'
-    },
-  ]
-})
-  .then(data => {
-    console.info('showActionMenu success, click button: ' + data.index);
-  })
-  .catch((err: Error) => {
-    console.info('showActionMenu error: ' + err);
-  })
-```
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';

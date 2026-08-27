@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import quickFixManager from '@kit.AbilityKit';
+import { quickFixManager } from '@kit.AbilityKit';
 ```
 
 ## revokeQuickFix
@@ -80,7 +80,7 @@ Revokes quick fix. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

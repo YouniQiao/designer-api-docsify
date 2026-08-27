@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## isRequestPublishFormSupported
@@ -24,7 +24,7 @@ function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回查询结果的回调函数。 true: 表示可以发布卡片到卡片使用方。 false: 表示不可以发布卡片到卡片使用方。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 返回查询结果的回调函数。true: 表示可以发布卡片到卡片使用方。false: 表示不可以发布卡片到卡片使用方。 |
 
 **错误码：**
 
@@ -94,7 +94,7 @@ function isRequestPublishFormSupported(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。返回是否可以发布卡片到卡片使用方的结果。 |
+| Promise&lt;boolean&gt; | Promise对象。返回是否可以发布卡片到卡片使用方的结果。 |
 
 **错误码：**
 

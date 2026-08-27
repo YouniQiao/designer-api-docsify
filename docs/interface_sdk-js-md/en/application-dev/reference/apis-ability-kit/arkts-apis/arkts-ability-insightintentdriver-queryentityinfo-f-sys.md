@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import insightIntentDriver from '@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## queryEntityInfo
@@ -34,7 +34,7 @@ Query insight intent entity information.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;Record & lt;string, Object & gt; & gt; & gt; | Returns the insight intent entity information. |
+| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | Returns the insight intent entity information. |
 
 **Error codes:**
 

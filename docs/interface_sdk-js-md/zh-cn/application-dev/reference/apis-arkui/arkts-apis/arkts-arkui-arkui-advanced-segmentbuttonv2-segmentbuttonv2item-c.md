@@ -38,7 +38,13 @@ constructor(options: SegmentButtonV2ItemOptions)
 accessibilityDescription?: ResourceStr
 ```
 
-分段按钮选项无障碍说明accessibilityDescription。默认值：""值为undefined时，按默认值处理。装饰器类型：@Trace
+分段按钮选项无障碍说明accessibilityDescription。
+
+默认值：""
+
+值为undefined时，按默认值处理。
+
+装饰器类型：@Trace
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -56,7 +62,13 @@ accessibilityDescription?: ResourceStr
 accessibilityLevel?: string
 ```
 
-分段按钮选项无障碍重要性accessibilityLevel。默认值："auto"值为undefined时，按默认值处理。装饰器类型：@Trace
+分段按钮选项无障碍重要性accessibilityLevel。
+
+默认值："auto"
+
+值为undefined时，按默认值处理。
+
+装饰器类型：@Trace
 
 **类型：** string
 
@@ -74,7 +86,13 @@ accessibilityLevel?: string
 accessibilityText?: ResourceStr
 ```
 
-分段按钮选项的无障碍文本accessibilityText。默认值：""值为undefined时，按默认值处理。装饰器类型：@Trace
+分段按钮选项的无障碍文本accessibilityText。
+
+默认值：""
+
+值为undefined时，按默认值处理。
+
+装饰器类型：@Trace
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -92,7 +110,15 @@ accessibilityText?: ResourceStr
 enabled: boolean
 ```
 
-分段按钮选项是否可用。默认值：true true：可用；false：不可用。值为undefined时，按默认值处理。装饰器类型：@Trace
+分段按钮选项是否可用。
+
+默认值：true
+
+true：可用；false：不可用。
+
+值为undefined时，按默认值处理。
+
+装饰器类型：@Trace
 
 **类型：** boolean
 
@@ -110,7 +136,11 @@ enabled: boolean
 icon?: ResourceStr
 ```
 
-分段按钮选项图片类型图标。默认值：undefined装饰器类型：@Trace
+分段按钮选项图片类型图标。
+
+默认值：undefined
+
+装饰器类型：@Trace
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -128,9 +158,13 @@ icon?: ResourceStr
 iconModifier?: ImageModifier
 ```
 
-分段按钮选项图片类型图标属性的样式修改器。默认值：undefined装饰器类型：@Trace
+分段按钮选项图片类型图标属性的样式修改器。
 
-**类型：** [ImageModifier](../arkts-components/arkts-arkui-imagemodifier-t.md)
+默认值：undefined
+
+装饰器类型：@Trace
+
+**类型：** ImageModifier
 
 **起始版本：** 18
 
@@ -146,7 +180,7 @@ iconModifier?: ImageModifier
 get isHybrid(): boolean
 ```
 
-检查分段按钮选项是否已配置文本和图标。与[hasHybrid](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md#hashybrid)的区别：hasHybrid用于检查整个选项集合是否包含图文混合选项，本接口用于检查单个选 项是否已配置文本和图标。
+检查分段按钮选项是否已配置文本和图标。与[hasHybrid](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md#hashybrid)的区别：hasHybrid用于检查整个选项集合是否包含图文混合选项，本接口用于检查单个选项是否已配置文本和图标。
 
 **类型：** boolean
 
@@ -164,7 +198,11 @@ get isHybrid(): boolean
 symbol?: Resource
 ```
 
-分段按钮选项的HM Symbol类型图标。默认值：undefined装饰器类型：@Trace
+分段按钮选项的HM Symbol类型图标。
+
+默认值：undefined
+
+装饰器类型：@Trace
 
 **类型：** Resource
 
@@ -182,7 +220,11 @@ symbol?: Resource
 symbolModifier?: SymbolGlyphModifier
 ```
 
-分段按钮选项HM Symbol类型图标属性样式修改器。默认值：undefined装饰器类型：@Trace
+分段按钮选项HM Symbol类型图标属性样式修改器。
+
+默认值：undefined
+
+装饰器类型：@Trace
 
 **类型：** SymbolGlyphModifier
 
@@ -200,7 +242,11 @@ symbolModifier?: SymbolGlyphModifier
 text?: ResourceStr
 ```
 
-分段按钮选项文本。默认值：undefined装饰器类型：@Trace
+分段按钮选项文本。
+
+默认值：undefined
+
+装饰器类型：@Trace
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -218,9 +264,13 @@ text?: ResourceStr
 textModifier?: TextModifier
 ```
 
-分段按钮选项文本属性样式修改器。默认值：undefined装饰器类型：@Trace
+分段按钮选项文本属性样式修改器。
 
-**类型：** [TextModifier](arkts-arkui-textmodifier-c.md)
+默认值：undefined
+
+装饰器类型：@Trace
+
+**类型：** TextModifier
 
 **起始版本：** 18
 

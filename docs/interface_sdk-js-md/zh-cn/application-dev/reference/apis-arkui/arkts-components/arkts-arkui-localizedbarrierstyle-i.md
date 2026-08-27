@@ -35,7 +35,13 @@ barrier的id，用于标识屏障，子组件可通过此id引用该屏障作为
 localizedDirection : LocalizedBarrierDirection
 ```
 
-指定barrier的方向。水平屏障线（TOP/BOTTOM）仅能作为组件垂直方向锚点（top或bottom），用于水平方向锚点时位置视为0。垂直屏障线（START/END，支持LTR/RTL镜像）仅能作为组件水平方向锚点（start或end），用于垂直方向 锚点时位置视为0。默认值：LocalizedBarrierDirection.START非法值：按默认值处理。
+指定barrier的方向。
+
+水平屏障线（TOP/BOTTOM）仅能作为组件垂直方向锚点（top或bottom），用于水平方向锚点时位置视为0。垂直屏障线（START/END，支持LTR/RTL镜像）仅能作为组件水平方向锚点（start或end），用于垂直方向锚点时位置视为0。
+
+默认值：LocalizedBarrierDirection.START
+
+非法值：按默认值处理。
 
 **类型：** [LocalizedBarrierDirection](arkts-arkui-localizedbarrierdirection-e.md)
 

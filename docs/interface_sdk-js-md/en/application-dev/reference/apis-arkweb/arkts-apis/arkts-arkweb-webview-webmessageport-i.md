@@ -1,6 +1,8 @@
 # WebMessagePort
 
-WebMessagePort is a message port interface in the Web component used for bidirectional communication between the app side (ArkTS) and the HTML5 side (JavaScript). A pair of associated ports is created through createWebMessagePorts, with one port sent to the HTML5 side and the other retained on the app side, enabling cross- runtime message passing. WebMessagePort supports two message protocols: the basic protocol uses WebMessage as the message carrier (postMessageEvent/onMessageEvent), and the extended protocol uses WebMessageExt to support richer data types (postMessageEventExt/onMessageEventExt).@interface WebMessagePort [since 9 - 11]
+WebMessagePort is a message port interface in the Web component used for bidirectional communication between the app side (ArkTS) and the HTML5 side (JavaScript). A pair of associated ports is created through createWebMessagePorts, with one port sent to the HTML5 side and the other retained on the app side, enabling cross- runtime message passing. WebMessagePort supports two message protocols: the basic protocol uses WebMessage as the message carrier (postMessageEvent/onMessageEvent), and the extended protocol uses WebMessageExt to support richer data types (postMessageEventExt/onMessageEventExt).
+
+@interface WebMessagePort [since 9 - 11]
 
 **Since:** 9
 
@@ -87,7 +89,7 @@ Registers a callback on the application message port to receive messages of the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (result: WebMessage) = & gt; void | Yes | Message received. |
+| callback | (result: WebMessage) =&gt; void | Yes | Message received. |
 
 **Error codes:**
 
@@ -156,7 +158,7 @@ Registers a callback on the application message port to receive messages of the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (result: WebMessageExt) = & gt; void | Yes | Message received. |
+| callback | (result: WebMessageExt) =&gt; void | Yes | Message received. |
 
 **Error codes:**
 
@@ -559,7 +561,11 @@ Sends a message of the [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md
 isExtentionType?: boolean
 ```
 
-Whether to use the extended interface such as postMessageEventExt and onMessageEventExt when creating a WebMessagePort.The value true means to use the extended interface, and false means the opposite.Default value: false.
+Whether to use the extended interface such as postMessageEventExt and onMessageEventExt when creating a WebMessagePort.
+
+The value true means to use the extended interface, and false means the opposite.
+
+Default value: false.
 
 **Type:** boolean
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import screenLockFileManager from '@kit.AbilityKit';
+import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
 ## queryAppKeyState

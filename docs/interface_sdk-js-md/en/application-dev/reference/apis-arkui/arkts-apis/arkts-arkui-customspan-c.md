@@ -1,6 +1,8 @@
 # CustomSpan
 
-Describes the custom span. Only the base class is provided. You need to define the specific implementation.The drag preview of a custom span is blank.
+Describes the custom span. Only the base class is provided. You need to define the specific implementation.
+
+The drag preview of a custom span is blank.
 
 **Since:** 12
 
@@ -47,7 +49,7 @@ Called to draw a custom span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | Drawing context.   **NOTE：**The **canvas** method of **DrawContext** obtains the canvas of the **Text** component. As such, the custom span does not extend beyond the area of the **Text** component. |
+| context | DrawContext | Yes | Drawing context.   **NOTE：**The **canvas** method of **DrawContext** obtains the canvas of the **Text** component. As such, the custom span does not extend beyond the area of the **Text** component. |
 | drawInfo | [CustomSpanDrawInfo](arkts-arkui-customspandrawinfo-i.md) | Yes | Drawing information of the custom span. |
 
 ## onMeasure

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import imageGeneration from '@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## restoreGeneratorDialog
@@ -32,4 +32,4 @@ Restore the AI image generation task popup.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns the result of restore operation. |
+| Promise&lt;void&gt; | Returns the result of restore operation. |

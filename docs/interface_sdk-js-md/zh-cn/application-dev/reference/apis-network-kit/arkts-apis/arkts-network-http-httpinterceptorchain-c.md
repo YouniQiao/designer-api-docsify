@@ -122,7 +122,7 @@ public apply(httpRequest: HttpRequest): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| httpRequest | [HttpRequest](arkts-network-connection-httprequest-t.md) | 是 | 要发起HTTP请求的[HttpRequest](arkts-network-http-httprequest-i.md)。 |
+| httpRequest | HttpRequest | 是 | 要发起HTTP请求的[HttpRequest](arkts-network-http-httprequest-i.md)。 |
 
 **返回值：**
 

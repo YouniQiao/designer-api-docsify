@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getAppDefaultTimeZone
@@ -18,7 +18,7 @@ import i18n from '@kit.LocalizationKit';
 static getAppDefaultTimeZone(): TimeZone
 ```
 
-获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](#setappdefaulttimezonebyid)设置了默认时区，则返回设置的默认时区对象；否 则，返回系统时区对象。
+获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](#setappdefaulttimezonebyid)设置了默认时区，则返回设置的默认时区对象；否则，返回系统时区对象。
 
 **起始版本：** 26.0.0
 
@@ -71,7 +71,7 @@ static getAvailableIDs(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 系统支持的时区ID列表。 |
+| Array&lt;string&gt; | 系统支持的时区ID列表。 |
 
 **示例**
 
@@ -100,7 +100,7 @@ static getAvailableZoneCityIDs(): Array<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;string & gt; | 系统支持的时区城市ID列表。 |
+| Array&lt;string&gt; | 系统支持的时区城市ID列表。 |
 
 **示例**
 
@@ -130,7 +130,7 @@ static getCityDisplayName(cityID: string, locale: string): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | cityID | string | 是 | 时区城市ID。 |
-| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组 成。 |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。 |
 
 **返回值：**
 
@@ -164,7 +164,7 @@ getDisplayName(locale?: string, isDST?: boolean): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| locale | string | 否 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区 组成。默认值：系统当前区域ID。 |
+| locale | string | 否 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)，由语言、脚本、国家地区组成。默认值：系统当前区域ID。 |
 | isDST | boolean | 否 | true表示显示夏令时信息，false表示不显示夏令时信息。默认值：false。 |
 
 **返回值：**
@@ -422,7 +422,7 @@ public isDaylightSavingTime(date: Date): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date | 是 | 时间日期。    **说明：** 月份从0开始计数，0表示一月。 |
+| date | Date | 是 | 时间日期。   **说明：** 月份从0开始计数，0表示一月。 |
 
 **返回值：**
 

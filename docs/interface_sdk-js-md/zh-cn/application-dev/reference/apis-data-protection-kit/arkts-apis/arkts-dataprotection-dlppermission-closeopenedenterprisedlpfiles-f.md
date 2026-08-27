@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## closeOpenedEnterpriseDlpFiles
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function closeOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<void>
 ```
 
-关闭当前打开的所有符合指定选项的企业DLP文件。使用Promise异步回调。在需要批量关闭企业DLP文件、清理文件资源或应用退出前释放文件句柄时调用该接口。
+关闭当前打开的所有符合指定选项的企业DLP文件。使用Promise异步回调。
+
+在需要批量关闭企业DLP文件、清理文件资源或应用退出前释放文件句柄时调用该接口。
 
 > **说明：**
 > 
@@ -30,13 +32,13 @@ function closeOpenedEnterpriseDlpFiles(options?: DlpFileQueryOptions): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DlpFileQueryOptions](arkts-dataprotection-dlppermission-dlpfilequeryoptions-i.md) | 否 | 企业DLP文件的查询选项。当需要按分类标签筛选关闭特定企业DLP文件时传入此参数，当需要关闭所有企业DLP文件时可不传此参数。不传入或传入空 字符串时，关闭所有企业DLP文件。 |
+| options | [DlpFileQueryOptions](arkts-dataprotection-dlppermission-dlpfilequeryoptions-i.md) | 否 | 企业DLP文件的查询选项。当需要按分类标签筛选关闭特定企业DLP文件时传入此参数，当需要关闭所有企业DLP文件时可不传此参数。不传入或传入空字符串时，关闭所有企业DLP文件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

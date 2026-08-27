@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import formHost from '@kit.FormKit';
+import { formHost } from '@kit.FormKit';
 ```
 
 ## setPublishFormResult

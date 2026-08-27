@@ -1,6 +1,8 @@
 # Environment
 
-Environment resource, which inherits from SceneResource.@extends SceneResource @interface Environment
+Environment resource, which inherits from SceneResource.
+
+@extends SceneResource @interface Environment
 
 **Inheritance/Implementation:** Environment extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 

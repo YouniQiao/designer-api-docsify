@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import taskpool from '@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## cancel
@@ -24,7 +24,7 @@ Cancels a task in the task pool. If the task is in the internal queue of the tas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to cancel. |
+| task | Task | Yes | Task to cancel. |
 
 **Error codes:**
 

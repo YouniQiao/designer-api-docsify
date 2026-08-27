@@ -39,7 +39,11 @@ Implements a sound pool that provides APIs for loading, unloading, playing, and 
 load(uri: string, callback: AsyncCallback<number>): void
 ```
 
-Loads a sound. This API uses an asynchronous callback to return the result.This API uses an asynchronous callback to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained.This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load).
+Loads a sound. This API uses an asynchronous callback to return the result.
+
+This API uses an asynchronous callback to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained.
+
+This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load).
 
 > **NOTE：**
 > 
@@ -75,7 +79,11 @@ Loads a sound. This API uses an asynchronous callback to return the result.This 
 load(uri: string): Promise<number>
 ```
 
-Loads a sound. This API uses a promise to return the result.This API uses a promise to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained.This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load).
+Loads a sound. This API uses a promise to return the result.
+
+This API uses a promise to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained.
+
+This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load).
 
 > **NOTE：**
 > 
@@ -100,7 +108,7 @@ Loads a sound. This API uses a promise to return the result.This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the sound ID. A valid value must be greater than 0 |
+| Promise&lt;number&gt; | Promise used to return the sound ID. A valid value must be greater than 0 |
 
 **Error codes:**
 
@@ -116,7 +124,9 @@ Loads a sound. This API uses a promise to return the result.This API uses a prom
 load(fd: number, offset: number, length: number, callback: AsyncCallback<number>): void
 ```
 
-Loads a sound. This API uses an asynchronous callback to return the result.This API uses an asynchronous callback to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
+Loads a sound. This API uses an asynchronous callback to return the result.
+
+This API uses an asynchronous callback to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
 
 > **NOTE：**
 > 
@@ -154,7 +164,9 @@ Loads a sound. This API uses an asynchronous callback to return the result.This 
 load(fd: number, offset: number, length: number): Promise<number>
 ```
 
-Loads a sound. This API uses a promise to return the result.This API uses a promise to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
+Loads a sound. This API uses a promise to return the result.
+
+This API uses a promise to obtain the resource ID. For the input parameter, resource information can be passed in manually or acquired automatically by reading the application's built-in resources.
 
 > **NOTE：**
 > 
@@ -181,7 +193,7 @@ Loads a sound. This API uses a promise to return the result.This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the sound ID. A valid value must be greater than 0 |
+| Promise&lt;number&gt; | Promise used to return the sound ID. A valid value must be greater than 0 |
 
 **Error codes:**
 
@@ -307,7 +319,11 @@ Subscribes to events indicating that a sound finishes loading. This API uses an 
 on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
 ```
 
-Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing. This API uses an asynchronous callback to return the result.When only on('playFinished') or on('playFinishedWithStreamId') is subscribed to, the registered callback is triggered when the audio playback is complete.When both on('playFinished') and on('playFinishedWithStreamId') are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
+Subscribes to events indicating the completion of audio playback and returns the stream ID of the audio that finishes playing. This API uses an asynchronous callback to return the result.
+
+When only on('playFinished') or on('playFinishedWithStreamId') is subscribed to, the registered callback is triggered when the audio playback is complete.
+
+When both on('playFinished') and on('playFinishedWithStreamId') are subscribed to, the 'playFinishedWithStreamId' callback is triggered, but the 'playFinished' callback is not triggered, when the audio playback is complete.
 
 **Since:** 18
 
@@ -455,7 +471,7 @@ Plays a sound and obtains the stream ID. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the audio stream ID. A valid value must be greater than 0 |
+| Promise&lt;number&gt; | Promise used to return the audio stream ID. A valid value must be greater than 0 |
 
 **Error codes:**
 
@@ -505,7 +521,7 @@ Releases a **SoundPool** instance. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -584,7 +600,7 @@ Sets the loop mode. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -645,7 +661,7 @@ Sets the priority for an audio stream. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -706,7 +722,7 @@ Sets the playback rate for an audio stream. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -769,7 +785,7 @@ Sets the volume for an audio stream. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -828,7 +844,7 @@ Stops audio playback. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -887,7 +903,7 @@ Unloads a sound. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

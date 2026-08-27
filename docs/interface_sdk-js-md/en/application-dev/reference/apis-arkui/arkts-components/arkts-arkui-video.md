@@ -28,11 +28,18 @@ Defines the constructor of video component.
 
 | Name | Description |
 | --- | --- |
+| [FullscreenInfo](arkts-arkui-fullscreeninfo-i.md) | Describes whether the video is in full-screen playback mode. |
+| [PlaybackInfo](arkts-arkui-playbackinfo-i.md) | Describes the current progress of video playback. |
+| [PosterOptions](arkts-arkui-posteroptions-i.md) | Defines display options for the first frame of the video. |
+| [PreparedInfo](arkts-arkui-preparedinfo-i.md) | Describes the duration of the video. |
+| [VideoOptions](arkts-arkui-videooptions-i.md) | Defines the options of the **Video** component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [PlaybackSpeed](arkts-arkui-playbackspeed-e.md) | Enumerates video playback speed options. |
+| [SeekMode](arkts-arkui-seekmode-e.md) | Enumerates video seek modes. |
 
 ## Examples
 

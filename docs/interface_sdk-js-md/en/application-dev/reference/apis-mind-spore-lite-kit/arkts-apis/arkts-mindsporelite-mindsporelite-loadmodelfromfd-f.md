@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import mindSporeLite from '@kit.MindSporeLiteKit';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## loadModelFromFd
@@ -27,7 +27,7 @@ Creates a Model instance file description
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | model | number | Yes | model indicates model file description to be loaded |
-| context | [Context](arkts-mindsporelite-mindsporelite-context-i.md) | No | context indicates model context information |
+| context | Context | No | context indicates model context information |
 
 **Return value:**
 
@@ -134,7 +134,7 @@ Create a Model instance from file description
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | model | number | Yes | model indicates model file description to be loaded |
-| context | [Context](arkts-mindsporelite-mindsporelite-context-i.md) | Yes | context indicates model context information |
+| context | Context | Yes | context indicates model context information |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
 
 **Error codes:**

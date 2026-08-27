@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## getFoldStatus
@@ -24,7 +24,7 @@ function getFoldStatus(): FoldStatus
 
 | 类型 | 说明 |
 | --- | --- |
-| [FoldStatus](arkts-arkui-foldstatus-e.md) | FoldStatus对象，返回当前可折叠设备的折叠状态。 |
+| FoldStatus | FoldStatus对象，返回当前可折叠设备的折叠状态。 |
 
 **错误码：**
 

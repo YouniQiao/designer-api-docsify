@@ -19,7 +19,7 @@ The **Vibrator** module provides APIs for controlling LED lights and vibrators. 
 ## Modules to Import
 
 ```TypeScript
-import Vibrator, { VibrateOptions } from '@kit.SensorServiceKit';
+import { Vibrator, VibrateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## Summary

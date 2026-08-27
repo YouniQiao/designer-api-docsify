@@ -32,7 +32,7 @@ Uses the specified camera to make a video call. If **cameraId** is left empty, t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result of starting, closing, or switching a camera. |
+| Promise&lt;void&gt; | Promise used to return the result of starting, closing, or switching a camera. |
 
 **Error codes:**
 

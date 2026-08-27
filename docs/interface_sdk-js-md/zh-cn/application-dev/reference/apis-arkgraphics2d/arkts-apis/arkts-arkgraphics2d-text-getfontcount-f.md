@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import text from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## getFontCount
@@ -12,7 +12,9 @@ import text from '@kit.ArkGraphics2D';
 function getFontCount(path: string | Resource) : number
 ```
 
-根据字体文件路径获取包含的字体文件数。如果字体文件未找到、字体文件路径无效、字体文件无权限或者文件非字体格式，返回0。
+根据字体文件路径获取包含的字体文件数。
+
+如果字体文件未找到、字体文件路径无效、字体文件无权限或者文件非字体格式，返回0。
 
 **起始版本：** 23
 
@@ -26,7 +28,7 @@ function getFontCount(path: string | Resource) : number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要查询的字体文件的路径，应为 "file:// + 字体文件绝对路径" 或 \\$rawfile('工程中resources/rawfile目录下的文件名称')。 |
+| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要查询的字体文件的路径，应为 "file:// + 字体文件绝对路径" 或\\$rawfile('工程中resources/rawfile目录下的文件名称')。 |
 
 **返回值：**
 

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleMonitor from '@kit.AbilityKit';
+import { bundleMonitor } from '@kit.AbilityKit';
 ```
 
 ## appIndex

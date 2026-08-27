@@ -13,16 +13,7 @@ Manages GATT client. Before calling an Gatt client method, you must use [createG
 ## Modules to Import
 
 ```TypeScript
-import bas from '@kit.ConnectivityKit.bas';
-import common from '@kit.ConnectivityKit.common';
-import bluetooth from '@kit.ConnectivityKit';
-import map from '@kit.ConnectivityKit.map';
-import pan from '@kit.ConnectivityKit.pan';
-import pbap from '@kit.ConnectivityKit.pbap';
-import opp from '@kit.ConnectivityKit.opp';
-import socket from '@kit.ConnectivityKit.socket';
-import wearDetection from '@kit.ConnectivityKit.wearDetection';
-import bluetoothManager from '@kit.ConnectivityKitManager';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## close
@@ -31,7 +22,9 @@ import bluetoothManager from '@kit.ConnectivityKitManager';
 close(): boolean
 ```
 
-Disables a BLE peripheral device.This method unregisters the device and clears the registered callbacks and handles.
+Disables a BLE peripheral device.
+
+This method unregisters the device and clears the registered callbacks and handles.
 
 **Since:** 7
 
@@ -62,7 +55,9 @@ let ret : boolean = device.close();
 connect(): boolean
 ```
 
-Connects to a BLE peripheral device.The 'BLEConnectionStateChange' event is subscribed to return the connection state.
+Connects to a BLE peripheral device.
+
+The 'BLEConnectionStateChange' event is subscribed to return the connection state.
 
 **Since:** 7
 
@@ -176,7 +171,7 @@ Obtains the name of BLE peripheral device.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Returns a string representation of the name if obtained; returns { |
+| Promise&lt;string&gt; | Returns a string representation of the name if obtained; returns { |
 
 **Examples**
 
@@ -247,7 +242,7 @@ Get the RSSI value of this BLE peripheral device.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Returns the RSSI value. |
+| Promise&lt;number&gt; | Returns the RSSI value. |
 
 **Examples**
 
@@ -326,7 +321,7 @@ Starts discovering services.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;GattService & gt; & gt; | Returns the list of services { |
+| Promise&lt;Array&lt;GattService&gt;&gt; | Returns the list of services { |
 
 **Examples**
 
@@ -498,7 +493,7 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
 
 **Examples**
@@ -555,13 +550,13 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BLECharacteristic & gt; | Promise used to return the characteristic value read. |
+| Promise&lt;BLECharacteristic&gt; | Promise used to return the characteristic value read. |
 
 **Examples**
 
@@ -608,7 +603,7 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
+| descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
 
 **Examples**
@@ -655,13 +650,13 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
+| descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BLEDescriptor & gt; | Promise used to return the descriptor read. |
+| Promise&lt;BLEDescriptor&gt; | Promise used to return the descriptor read. |
 
 **Examples**
 
@@ -735,7 +730,7 @@ Enables or disables notification of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | BLE characteristic to listen for. |
+| characteristic | BLECharacteristic | Yes | BLE characteristic to listen for. |
 | enable | boolean | Yes | Specifies whether to enable notification of the characteristic. The value {@code true} indicates that notification is enabled, and the value {@code false} indicates that notification is disabled. |
 
 **Return value:**
@@ -785,7 +780,7 @@ Writes the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
 
 **Return value:**
 
@@ -842,7 +837,7 @@ Writes the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to write. |
+| descriptor | BLEDescriptor | Yes | Indicates the descriptor to write. |
 
 **Return value:**
 

@@ -155,7 +155,9 @@ acceptButtonStyle?: PickerDialogButtonStyle
 alignment?: DialogAlignment
 ```
 
-弹窗在竖直方向上的对齐方式。默认值：DialogAlignment.Default
+弹窗在竖直方向上的对齐方式。
+
+默认值：DialogAlignment.Default
 
 **类型：** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
@@ -297,9 +299,11 @@ cancelButtonStyle?: PickerDialogButtonStyle
 canLoop?: boolean
 ```
 
-设置是否可循环滚动。  
+设置是否可循环滚动。
+
 - true：可循环。  
-- false：不可循环。  
+- false：不可循环。
+
 默认值：true
 
 **类型：** boolean
@@ -344,7 +348,9 @@ defaultPickerItemHeight?: number | string
 defaultTextStyle?: TextPickerTextStyle
 ```
 
-设置关闭滑动过程中文本样式变化动效时的各个选项的文本样式，仅当disableTextStyleAnimation为true时生效。默认值：与[Text组件默认值相同。
+设置关闭滑动过程中文本样式变化动效时的各个选项的文本样式，仅当disableTextStyleAnimation为true时生效。
+
+默认值：与[Text组件默认值相同。
 
 **类型：** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
@@ -362,7 +368,8 @@ defaultTextStyle?: TextPickerTextStyle
 disableTextStyleAnimation?: boolean
 ```
 
-设置是否关闭滑动过程中文本样式变化的动效。  
+设置是否关闭滑动过程中文本样式变化的动效。
+
 - true：关闭文本样式变化动效。  
 - false：不关闭文本样式变化动效。
 
@@ -430,7 +437,8 @@ overflow: TextOverflow.CLIP
 enableHapticFeedback?: boolean
 ```
 
-设置是否开启触控反馈。  
+设置是否开启触控反馈。
+
 - true：开启触控反馈。  
 - false：不开启触控反馈。
 
@@ -461,9 +469,11 @@ enableHapticFeedback?: boolean
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态。  
+是否响应悬停态。
+
 - true：响应悬停态。  
-- false：不响应悬停态。  
+- false：不响应悬停态。
+
 默认值：false
 
 **类型：** boolean
@@ -484,7 +494,9 @@ enableHoverMode?: boolean
 hoverModeArea?: HoverModeAreaType
 ```
 
-设置悬停态下弹窗默认展示区域，仅在enableHoverMode为true时生效。默认值：HoverModeAreaType.BOTTOM_SCREEN
+设置悬停态下弹窗默认展示区域，仅在enableHoverMode为true时生效。
+
+默认值：HoverModeAreaType.BOTTOM_SCREEN
 
 **类型：** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
 
@@ -504,7 +516,9 @@ hoverModeArea?: HoverModeAreaType
 maskRect?: Rectangle
 ```
 
-弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
+弹窗遮蔽层区域，在遮蔽层区域内的事件不透传，在遮蔽层区域外的事件透传。
+
+默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
 
 **类型：** [Rectangle](arkts-arkui-rectangle-i.md)
 
@@ -522,7 +536,9 @@ maskRect?: Rectangle
 offset?: Offset
 ```
 
-弹窗相对alignment所在位置的偏移量。当需要微调弹窗位置时设置此参数，不设置时弹窗按alignment对齐位置显示。默认值：{ dx: 0 , dy: 0 }
+弹窗相对alignment所在位置的偏移量。当需要微调弹窗位置时设置此参数，不设置时弹窗按alignment对齐位置显示。
+
+默认值：{ dx: 0 , dy: 0 }
 
 **类型：** Offset
 
@@ -558,7 +574,9 @@ onAccept?: Callback<TextPickerResult>
 onChange?: Callback<TextPickerResult>
 ```
 
-滑动弹窗中的选择器后，选项归位至选中项位置时，触发该回调，用于获取最终选择结果。回调会在滑动动画结束后触发，如果需要快速获取索引值变化，建议使用onEnterSelectedArea接口。
+滑动弹窗中的选择器后，选项归位至选中项位置时，触发该回调，用于获取最终选择结果。
+
+回调会在滑动动画结束后触发，如果需要快速获取索引值变化，建议使用onEnterSelectedArea接口。
 
 **类型：** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
@@ -576,7 +594,7 @@ onChange?: Callback<TextPickerResult>
 onEnterSelectedArea?: Callback<TextPickerResult>
 ```
 
-滑动过程中，选项进入分割线区域内，触发该回调。与onChange事件的差别在于，该事件的触发时机早于onChange事件，当当前滑动列滑动距离超过选中项 高度的一半时，选项此时已经进入分割线区域内，会触发该事件。
+滑动过程中，选项进入分割线区域内，触发该回调。与onChange事件的差别在于，该事件的触发时机早于onChange事件，当当前滑动列滑动距离超过选中项高度的一半时，选项此时已经进入分割线区域内，会触发该事件。
 
 > **说明：**
 > 
@@ -599,7 +617,7 @@ onEnterSelectedArea?: Callback<TextPickerResult>
 onScrollStop?: Callback<TextPickerResult>
 ```
 
-滑动弹窗中的选择器的选择列停止时，触发该回调，用于监听物理滑动停止事件。两者触发时机略有不同，onChange侧重于选项选中状态， onScrollStop侧重于滑动动作结束。
+滑动弹窗中的选择器的选择列停止时，触发该回调，用于监听物理滑动停止事件。两者触发时机略有不同，onChange侧重于选项选中状态，onScrollStop侧重于滑动动作结束。
 
 **类型：** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
@@ -689,7 +707,9 @@ overflow: TextOverflow.CLIP
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-设置弹窗背板的阴影。当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM
+设置弹窗背板的阴影。
+
+当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM
 
 **类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
@@ -736,7 +756,9 @@ systemMaterial?: SystemUiMaterial
 textStyle?: TextPickerTextStyle
 ```
 
-设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。默认值：
+设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。
+
+默认值：
 
 {color: '#ff182431', font: {size: '16fp', weight: FontWeight.Regular }, minFontSize: 0, maxFontSize: 0, overflow: TextOverflow.CLIP }
 

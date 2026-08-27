@@ -72,7 +72,9 @@ async function preview(cameraManager: camera.CameraManager, cameraInfo: camera.C
 enableBandwidthCompression(enabled: boolean): void
 ```
 
-Enables preview bandwidth compression.Before enabling this feature, you can call [isBandwidthCompressionSupported](#isbandwidthcompressionsupported) to check whether the device supports preview bandwidth compression.
+Enables preview bandwidth compression.
+
+Before enabling this feature, you can call [isBandwidthCompressionSupported](#isbandwidthcompressionsupported) to check whether the device supports preview bandwidth compression.
 
 > **NOTE：**
 > 
@@ -122,7 +124,9 @@ function enableBandwidthCompression(previewOutput: camera.PreviewOutput, enabled
 getActiveFrameRate(): FrameRateRange
 ```
 
-Obtains the configured frame rate range.This API is valid only after [setFrameRate](#setframerate) is called to set a frame rate range for preview streams.
+Obtains the configured frame rate range.
+
+This API is valid only after [setFrameRate](#setframerate) is called to set a frame rate range for preview streams.
 
 **Since:** 12
 
@@ -218,7 +222,8 @@ function testGetActiveProfile(previewOutput: camera.PreviewOutput): camera.Profi
 getPreviewRotation(displayRotation?: number): ImageRotation
 ```
 
-Obtains the preview rotation angle.  
+Obtains the preview rotation angle.
+
 - Device' natural orientation: the default orientation for using a device. For example, the default orientation  
 of the bar-type phone is in portrait mode, with the charging port facing downward.  
 - Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's  
@@ -523,7 +528,9 @@ Subscribes to PreviewOutput error events. This API uses an asynchronous callback
 setFrameRate(minFps: number, maxFps: number): void
 ```
 
-Sets a frame rate range for preview streams. The range must be within the supported frame rate range,which can be obtained by calling [getSupportedFrameRates](#getsupportedframerates).
+Sets a frame rate range for preview streams. The range must be within the supported frame rate range,
+
+which can be obtained by calling [getSupportedFrameRates](#getsupportedframerates).
 
 > **NOTE：**
 > 
@@ -759,7 +766,7 @@ Starts to output preview streams. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -949,7 +956,7 @@ Stops outputting preview streams. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

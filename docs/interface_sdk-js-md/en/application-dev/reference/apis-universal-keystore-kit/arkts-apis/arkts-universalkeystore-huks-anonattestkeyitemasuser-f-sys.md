@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import huks from '@kit.UniversalKeystoreKit';
-import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## anonAttestKeyItemAsUser
@@ -13,7 +12,9 @@ import huksExternalCrypto from '@kit.UniversalKeystoreKitExternalCrypto';
 function anonAttestKeyItemAsUser(userId: number, keyAlias: string, huksOptions: HuksOptions): Promise<HuksReturnResult>
 ```
 
-Performs anonymous key attestation. This API uses a promise to return the result.This operation requires Internet access and takes time.
+Performs anonymous key attestation. This API uses a promise to return the result.
+
+This operation requires Internet access and takes time.
 
 **Since:** 12
 

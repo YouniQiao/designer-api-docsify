@@ -7,5 +7,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [RecoverableApplicationInfo](arkts-ability-recoverableapplicationinfo-i-sys.md) | 预置应用被卸载后可以恢复的预置应用信息，通过接口 [bundleManager.getRecoverableApplicationInfo](arkts-ability-bundlemanager-getrecoverableapplicationinfo-f-sys.md) 获取。 |
+| [RecoverableApplicationInfo](arkts-ability-recoverableapplicationinfo-i-sys.md) | 预置应用被卸载后可以恢复的预置应用信息，通过接口[bundleManager.getRecoverableApplicationInfo](arkts-ability-bundlemanager-getrecoverableapplicationinfo-f-sys.md)获取。 |
 <!--DelEnd-->

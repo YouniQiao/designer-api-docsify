@@ -1,6 +1,6 @@
 # Channel
 
-Channel的实例表示在某个Session实例上创建通道，可能为基础通道或逻辑通道。通过 [Session.openBasicChannel](arkts-connectivity-omapi-session-i.md#openbasicchannel)或 [Session.openLogicalChannel](arkts-connectivity-omapi-session-i.md#openlogicalchannel)获取Channel实例。
+Channel的实例表示在某个Session实例上创建通道，可能为基础通道或逻辑通道。通过[Session.openBasicChannel](arkts-connectivity-omapi-session-i.md#openbasicchannel)或[Session.openLogicalChannel](arkts-connectivity-omapi-session-i.md#openlogicalchannel)获取Channel实例。
 
 **起始版本：** 10
 
@@ -9,7 +9,7 @@ Channel的实例表示在某个Session实例上创建通道，可能为基础通
 ## 导入模块
 
 ```TypeScript
-import omapi from '@kit.ConnectivityKit';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## close
@@ -118,7 +118,7 @@ getSession(): Session
 
 | 类型 | 说明 |
 | --- | --- |
-| [Session](../../apis-camera-kit/arkts-apis/arkts-camera-camera-session-i.md) | 该Channel绑定的Session 对象。 |
+| Session | 该Channel绑定的Session 对象。 |
 
 **错误码：**
 
@@ -264,7 +264,7 @@ transmit(command: number[]): Promise<number[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number[] & gt; | 以Promise形式异步返回接收到的响应APDU数据，number数组。若芯片捕获异常则返回全0。 |
+| Promise&lt;number[]&gt; | 以Promise形式异步返回接收到的响应APDU数据，number数组。若芯片捕获异常则返回全0。 |
 
 **错误码：**
 
@@ -339,12 +339,12 @@ let seChannel : omapi.Channel;
 let cmdData = [0x01, 0x02, 0x03, 0x04]; // 请更改为正确的data
 try {
     seChannel.transmit(cmdData, (error, response) => {
-    if (error) {
-        hilog.error(0x0000, 'testTag', 'transmit error %{public}s', JSON.stringify(error));
-    } else {
-        // 若芯片捕获异常则response返回全0
-        hilog.info(0x0000, 'testTag', 'transmit response = %{public}s.', JSON.stringify(response));
-    }
+        if (error) {
+            hilog.error(0x0000, 'testTag', 'transmit error %{public}s', JSON.stringify(error));
+        } else {
+            // 若芯片捕获异常则response返回全0
+            hilog.info(0x0000, 'testTag', 'transmit response = %{public}s.', JSON.stringify(response));
+        }
     });
 } catch (exception) {
     hilog.error(0x0000, 'testTag', 'transmit exception %{public}s', JSON.stringify(exception));

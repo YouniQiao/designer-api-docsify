@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## removeCandidateConfig
@@ -33,7 +32,7 @@ Remove a specified candidate hotspot configuration, only the configuration which
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Return results. |
+| Promise&lt;void&gt; | Return results. |
 
 **Error codes:**
 

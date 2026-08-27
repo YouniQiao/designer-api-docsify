@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import faceAuth from '@kit.UserAuthenticationKit';
+import { faceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## constructor
@@ -42,7 +42,7 @@ let faceAuthManager = new faceAuth.FaceAuthManager();
 setSurfaceId(surfaceId: string): void
 ```
 
-用于在录入人脸时设置人脸预览界面的SurfaceId。该接口需要配合 [addCredential](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addcredential)使用，通过 [getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid)方法获取XComponent组件的SurfaceId来显示人脸预览画面。
+用于在录入人脸时设置人脸预览界面的SurfaceId。该接口需要配合[addCredential](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addcredential)使用，通过[getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid)方法获取XComponent组件的SurfaceId来显示人脸预览画面。
 
 **起始版本：** 9
 
@@ -56,7 +56,7 @@ setSurfaceId(surfaceId: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | XComponent持有Surface的ID。用于在人脸录入过程中显示人脸 预览画面。    **说明：**需在XComponent完成初始化后，通过[getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid)方法 获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
+| surfaceId | string | 是 | XComponent持有Surface的ID。用于在人脸录入过程中显示人脸预览画面。   **说明：**需在XComponent完成初始化后，通过[getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid)方法获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
 
 **错误码：**
 

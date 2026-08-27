@@ -1,6 +1,6 @@
 # ChineseCalendar
 
-提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。 继承自[Calendar](arkts-localization-i18n-calendar-c.md)，支持[Calendar](arkts-localization-i18n-calendar-c.md)的方法。
+提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。继承自[Calendar](arkts-localization-i18n-calendar-c.md)，支持[Calendar](arkts-localization-i18n-calendar-c.md)的方法。
 
 **继承/实现关系：** ChineseCalendar extends [Calendar](arkts-localization-i18n-calendar-c.md)
 
@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## checkLeapMonth
@@ -34,9 +34,9 @@ public static checkLeapMonth(gregorianYear: number, cyclicalYear: number, month:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| gregorianYear | number | 是 | 公历的年。 取值范围：[1900, 2100]。 |
-| cyclicalYear | number | 是 | 农历的干支年。 取值范围：[1, 60]。 |
-| month | number | 是 | 农历的月。    **说明：** 月份从0开始计数，0表示一月。 |
+| gregorianYear | number | 是 | 公历的年。取值范围：[1900, 2100]。 |
+| cyclicalYear | number | 是 | 农历的干支年。取值范围：[1, 60]。 |
+| month | number | 是 | 农历的月。   **说明：** 月份从0开始计数，0表示一月。 |
 
 **返回值：**
 

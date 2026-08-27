@@ -39,7 +39,11 @@ Array of index items.
 selected: number
 ```
 
-Index of the initial selected item. If the value is out of range, the default value **0** is used. When this parameter and the [selected](arkts-arkui-alphabetindexer-attribute.md#selected) property are set at the same time, the **selected** property has a higher priority.Value range: [0, arrayValue.length-1]This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Index of the initial selected item. If the value is out of range, the default value **0** is used. When this parameter and the [selected](arkts-arkui-alphabetindexer-attribute.md#selected) property are set at the same time, the **selected** property has a higher priority.
+
+Value range: [0, arrayValue.length-1]
+
+This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** number
 

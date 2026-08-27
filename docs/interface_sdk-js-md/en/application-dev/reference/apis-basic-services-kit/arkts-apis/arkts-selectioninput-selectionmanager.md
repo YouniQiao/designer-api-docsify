@@ -28,7 +28,7 @@ This module provides word selection management capabilities, including creating,
 ## Modules to Import
 
 ```TypeScript
-import selectionManager from '@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -37,29 +37,29 @@ import selectionManager from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [createPanel(Word Selection Management)](arkts-basicservices-selectionmanager-createpanel-f.md) | Creates a word selection panel, which is used to display the service-related operation UI or text processing result. After the panel is used, call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) to destroy the panel and release resources. This API uses a promise to return the result.Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) and one [MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) can be created for one word selection application. |
-| [destroyPanel(Word Selection Management)](arkts-basicservices-selectionmanager-destroypanel-f.md) | Destroys the word selection panel. This API is used together with [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md) to destroy the panel object created by **createPanel()**. This API uses a promise to return the result. |
-| [getSelectionContent(Word Selection Management)](arkts-basicservices-selectionmanager-getselectioncontent-f.md) | Obtains the content of the selected text. This API uses a promise to return the result. This API must be called in the on('selectionCompleted') callback and is valid only after the word selection completion event is triggered. |
-| [off(Word Selection Management)](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted) | Unsubscribes from the word selection completion event. This API is used together with on('selectionCompleted'). |
-| [on(Word Selection Management)](arkts-basicservices-selectionmanager-on-f.md#onselectioncompleted) | Subscribes to the word selection completion event. This API is used together with off('selectionCompleted').  off('selectionCompleted') is used to unsubscribe from the event. |
+| [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md) | Creates a word selection panel, which is used to display the service-related operation UI or text processing result. After the panel is used, call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) to destroy the panel and release resources. This API uses a promise to return the result. |
+| [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) | Destroys the word selection panel. This API is used together with [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md) to destroy the panel object created by **createPanel()**. This API uses a promise to return the result. |
+| [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md) | Obtains the content of the selected text. This API uses a promise to return the result. This API must be called in the on('selectionCompleted') callback and is valid only after the word selection completion event is triggered. |
+| [off](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted) | Unsubscribes from the word selection completion event. This API is used together with on('selectionCompleted'). |
+| [on](arkts-basicservices-selectionmanager-on-f.md#onselectioncompleted) | Subscribes to the word selection completion event. This API is used together with off('selectionCompleted'). |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Panel(Word Selection Management)](arkts-basicservices-selectionmanager-panel-i.md) | Describes a **Panel** object, which is created using [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md). This method can be used to set, display, hide, and move the panel, as well as subscribe to events. It is applicable to scenarios where a custom operation UI needs to be displayed to users after word selection is complete. |
-| [SelectionInfo(Word Selection Management)](arkts-basicservices-selectionmanager-selectioninfo-i.md) | Defines the information of a word selection event. |
+| [Panel](arkts-basicservices-selectionmanager-panel-i.md) | Describes a **Panel** object, which is created using [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md). This method can be used to set, display, hide, and move the panel, as well as subscribe to events. It is applicable to scenarios where a custom operation UI needs to be displayed to users after word selection is complete. |
+| [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md) | Defines the information of a word selection event. |
 
 <!--Del-->
 ### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
-| [Panel(Word Selection Management)](arkts-basicservices-selectionmanager-panel-i-sys.md) | Describes a **Panel** object, which is created using [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md). This method can be used to set, display, hide, and move the panel, as well as subscribe to events. It is applicable to scenarios where a custom operation UI needs to be displayed to users after word selection is complete. |
+| [Panel](arkts-basicservices-selectionmanager-panel-i-sys.md) | Describes a **Panel** object, which is created using [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md). This method can be used to set, display, hide, and move the panel, as well as subscribe to events. It is applicable to scenarios where a custom operation UI needs to be displayed to users after word selection is complete. |
 <!--DelEnd-->
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [SelectionType(Word Selection Management)](arkts-basicservices-selectionmanager-selectiontype-e.md) | Enumerates the word selection types.  \| Name \| Value\| Description \| \| ------------ \| -- \| ------------------ \| \| MOUSE_MOVE \| 1 \| Word selection by sliding the mouse or touchpad. \| \| DOUBLE_CLICK \| 2 \| Word selection by number-clicking the mouse or touchpad. \| \| TRIPLE_CLICK \| 3 \| Word selection by triple-clicking the mouse or touchpad. \| |
+| [SelectionType](arkts-basicservices-selectionmanager-selectiontype-e.md) | Enumerates the word selection types. |

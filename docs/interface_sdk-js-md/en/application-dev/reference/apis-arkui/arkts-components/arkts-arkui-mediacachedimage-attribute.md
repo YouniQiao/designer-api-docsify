@@ -1,6 +1,8 @@
 # MediaCachedImage properties/events
 
-Attributes of MediaCachedImage inherited from ImageAttribute.@extends ImageAttribute
+Attributes of MediaCachedImage inherited from ImageAttribute.
+
+@extends ImageAttribute
 
 **Inheritance/Implementation:** MediaCachedImageAttribute extends [ImageAttribute](arkts-arkui-image-attribute.md#imageattribute)
 

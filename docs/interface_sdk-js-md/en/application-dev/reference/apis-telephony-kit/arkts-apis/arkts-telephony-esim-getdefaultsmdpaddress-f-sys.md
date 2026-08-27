@@ -31,7 +31,7 @@ Obtains the default SM-DP+ address stored in the eUICC. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the SM-DP+ address. |
+| Promise&lt;string&gt; | Promise used to return the SM-DP+ address. |
 
 **Error codes:**
 

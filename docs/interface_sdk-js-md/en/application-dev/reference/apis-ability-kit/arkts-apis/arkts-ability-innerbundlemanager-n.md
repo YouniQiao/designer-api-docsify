@@ -23,7 +23,7 @@ The module provides APIs for the Home Screen application.
 ## Modules to Import
 
 ```TypeScript
-import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit';
+import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary

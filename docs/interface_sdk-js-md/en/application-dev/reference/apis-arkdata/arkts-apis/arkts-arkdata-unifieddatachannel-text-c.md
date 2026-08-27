@@ -11,7 +11,7 @@ Represents the text data. It is a child class of [UnifiedRecord](arkts-arkdata-u
 ## Modules to Import
 
 ```TypeScript
-import unifiedDataChannel from '@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## details
@@ -20,7 +20,17 @@ import unifiedDataChannel from '@kit.ArkData';
 details?: Record<string, string>
 ```
 
-A dictionary type object, where both the key and value are of the string type and are used to describe the text content. For example, a data object with the following content can be created to describe a text file:{"title":"Title of the file","content":"Content of the file"}The default value is an empty dictionary object.
+A dictionary type object, where both the key and value are of the string type and are used to describe the text content. For example, a data object with the following content can be created to describe a text file:
+
+{
+
+"title":"Title of the file",
+
+"content":"Content of the file"
+
+}
+
+The default value is an empty dictionary object.
 
 **Type:** Record&lt;string, string&gt;
 

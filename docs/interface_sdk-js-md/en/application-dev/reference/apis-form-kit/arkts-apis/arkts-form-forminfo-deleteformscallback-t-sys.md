@@ -18,7 +18,7 @@ callback for deleting the forms.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formIds | Array & lt;string & gt; | Yes | the form Id list of the forms to delete. |
+| formIds | Array&lt;string&gt; | Yes | the form Id list of the forms to delete. |
 
 **Examples**
 

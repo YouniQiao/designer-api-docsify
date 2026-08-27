@@ -55,7 +55,7 @@ Sets the callback for pinch gesture cancellation. This callback is triggered whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback & lt;void & gt; | Yes | Callback invoked when the pinch gesture is cancelled. No gesture event information is returned. |
+| event | Callback&lt;void&gt; | Yes | Callback invoked when the pinch gesture is cancelled. No gesture event information is returned. |
 
 **Return value:**
 

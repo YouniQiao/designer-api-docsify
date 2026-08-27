@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendableRelationalStore from '@kit.ArkData';
+import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
 ## fromSendableValuesBucket
@@ -22,7 +22,7 @@ function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| valuesBucket | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 可用于跨线程传递的ValuesBucket数据。 |
+| valuesBucket | ValuesBucket | 是 | 可用于跨线程传递的ValuesBucket数据。 |
 
 **返回值：**
 

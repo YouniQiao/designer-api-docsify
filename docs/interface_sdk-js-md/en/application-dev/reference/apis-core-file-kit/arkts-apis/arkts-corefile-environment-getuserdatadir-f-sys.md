@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import Environment from '@kit.CoreFileKit';
+import { Environment } from '@kit.CoreFileKit';
 ```
 
 ## getUserDataDir
@@ -24,7 +24,7 @@ Obtains the root directory of user files. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the root directory of user files. |
+| Promise&lt;string&gt; | Promise used to return the root directory of user files. |
 
 **Error codes:**
 

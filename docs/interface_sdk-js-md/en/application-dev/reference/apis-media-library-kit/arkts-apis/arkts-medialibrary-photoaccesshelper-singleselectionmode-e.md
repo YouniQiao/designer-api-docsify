@@ -1,6 +1,8 @@
 # SingleSelectionMode
 
-Enumeration type of single selection mode@enum { number } SingleSelectionMode
+Enumeration type of single selection mode
+
+@enum { number } SingleSelectionMode
 
 **Since:** 18
 

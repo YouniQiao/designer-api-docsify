@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import font from '@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## getFontByName

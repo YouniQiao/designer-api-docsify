@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import spatialAwareness from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## onDistanceMeasure

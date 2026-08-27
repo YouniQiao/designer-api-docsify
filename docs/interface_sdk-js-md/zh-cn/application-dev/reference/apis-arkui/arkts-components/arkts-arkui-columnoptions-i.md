@@ -21,8 +21,21 @@
 space?: string | number
 ```
 
-纵向布局元素垂直方向间距。space为负数或者[justifyContent](arkts-arkui-column-attribute.md#justifycontent)设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、 FlexAlign.SpaceEvenly时，space不生效。取值范围：[0, +∞)默认值：0非法值：按默认值处理。单位：vp  
-**说明：**space取值是大于等于0的数字，或者可以转换为非负数字的字符串。
+纵向布局元素垂直方向间距。
+
+space为负数或者[justifyContent](arkts-arkui-column-attribute.md#justifycontent)设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space不生效。
+
+取值范围：[0, +∞)
+
+默认值：0
+
+非法值：按默认值处理。
+
+单位：vp
+
+**说明：**
+
+space取值是大于等于0的数字，或者可以转换为非负数字的字符串。
 
 **类型：** string \| number
 

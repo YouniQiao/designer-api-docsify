@@ -73,7 +73,9 @@ carrierToNoiseDensitys: Array<number>
 satelliteAdditionalInfo?: Array<number>
 ```
 
-表示卫星的附加信息。每个比特位代表不同含义，具体定义参见[SatelliteAdditionalInfo](arkts-location-geolocationmanager-satelliteadditionalinfo-e.md)。
+表示卫星的附加信息。
+
+每个比特位代表不同含义，具体定义参见[SatelliteAdditionalInfo](arkts-location-geolocationmanager-satelliteadditionalinfo-e.md)。
 
 **类型：** Array&lt;number&gt;
 

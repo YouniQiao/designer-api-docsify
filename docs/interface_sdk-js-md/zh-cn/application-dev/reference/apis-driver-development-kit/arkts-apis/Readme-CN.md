@@ -3,7 +3,7 @@
 - [@ohos.app.ability.DriverExtensionAbility](arkts-app-ability-driverextensionability.md)
   - [DriverExtensionAbility](arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md)
   - [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md)
-- [@ohos.driver.deviceManager](arkts-driver-devicemanager.md)
+- [@ohos.driver.deviceManager(外设管理)](arkts-driver-devicemanager.md)
   - [bindDevice](arkts-driverdevelopment-devicemanager-binddevice-f.md)
   - [bindDeviceDriver](arkts-driverdevelopment-devicemanager-binddevicedriver-f.md)
   - [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md)
@@ -29,5 +29,5 @@
   - [USBInterfaceDesc(系统接口)](arkts-driverdevelopment-devicemanager-usbinterfacedesc-i-sys.md)<!--DelEnd-->
   - [BusType](arkts-driverdevelopment-devicemanager-bustype-e.md)
 - application<!--arkts-driverdevelopmentkit-application-->
-  - [DriverExtensionContext](arkts-driverextensioncontext.md)
+  - [DriverExtensionContext(Defines the context of driver extension)](arkts-driverextensioncontext.md)
     - [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-c.md)

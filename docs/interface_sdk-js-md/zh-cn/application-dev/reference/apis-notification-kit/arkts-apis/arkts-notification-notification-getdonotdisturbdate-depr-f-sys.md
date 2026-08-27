@@ -3,9 +3,6 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKitManager';
-import notificationSubscribe from '@kit.NotificationKitSubscribe';
-import notificationExtensionSubscription from '@kit.NotificationKitExtensionSubscription';
 ```
 
 ## getDoNotDisturbDate
@@ -75,7 +72,7 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;DoNotDisturbDate & gt; | 以Promise形式返回查询到的免打扰时间。 |
+| Promise&lt;DoNotDisturbDate&gt; | 以Promise形式返回查询到的免打扰时间。 |
 
 **示例**
 
@@ -166,7 +163,7 @@ function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;DoNotDisturbDate & gt; | 以Promise形式返回查询到的免打扰时间。 |
+| Promise&lt;DoNotDisturbDate&gt; | 以Promise形式返回查询到的免打扰时间。 |
 
 **示例**
 

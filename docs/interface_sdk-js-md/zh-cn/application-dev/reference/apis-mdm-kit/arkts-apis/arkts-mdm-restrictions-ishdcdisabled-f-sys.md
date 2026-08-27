@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import restrictions from '@kit.MDMKit';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## isHdcDisabled
@@ -99,7 +99,7 @@ function isHdcDisabled(admin: Want): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise对象。Promise方式返回HDC是否被禁用，true表示HDC被禁用，false表示HDC未被禁用。 |
+| Promise&lt;boolean&gt; | Promise对象。Promise方式返回HDC是否被禁用，true表示HDC被禁用，false表示HDC未被禁用。 |
 
 **错误码：**
 

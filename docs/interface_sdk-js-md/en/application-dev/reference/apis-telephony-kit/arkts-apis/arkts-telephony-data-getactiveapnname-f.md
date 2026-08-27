@@ -11,7 +11,8 @@
 function getActiveApnName(): Promise<string>
 ```
 
-Obtains the access point name (APN) of the default SIM card used for mobile data. This API returns the result asynchronously.  
+Obtains the access point name (APN) of the default SIM card used for mobile data. This API returns the result asynchronously.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 20
@@ -24,7 +25,7 @@ Obtains the access point name (APN) of the default SIM card used for mobile data
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the result. If mobile data is not activated, an empty string is returned. |
+| Promise&lt;string&gt; | Promise used to return the result. If mobile data is not activated, an empty string is returned. |
 
 **Error codes:**
 

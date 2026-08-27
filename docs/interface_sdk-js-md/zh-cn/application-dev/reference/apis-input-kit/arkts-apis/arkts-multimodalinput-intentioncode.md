@@ -14,4 +14,4 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [IntentionCode(意图事件)](arkts-input-multimodalinput-intentioncode-intentioncode-e.md) | 意图事件枚举值。 |
+| [IntentionCode](arkts-input-multimodalinput-intentioncode-intentioncode-e.md) | 意图事件枚举值。 |

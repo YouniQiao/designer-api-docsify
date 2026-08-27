@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import accountManager from '@kit.MDMKit';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## activateOsAccount
@@ -33,7 +33,7 @@ Switches the system account. Currently, this API is supported only on phones and
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. If the operation fails., an error object is thrown. |
+| Promise&lt;void&gt; | Promise that returns no value. If the operation fails., an error object is thrown. |
 
 **Error codes:**
 

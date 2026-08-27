@@ -1,6 +1,8 @@
 # Text属性/事件
 
-除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
+除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性。
+
+除支持[通用事件](arkts-arkui-commonmethod-c.md)外，还支持以下事件。
 
 **继承/实现关系：** TextAttribute extends CommonMethod<TextAttribute>
 
@@ -11,10 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import { AtomicServiceBar, ComponentUtils, Con@kit.ArkUIMenuController, CursorController, DialogPresenter, DragController, Font, KeyboardAvoidMode, MediaQuery, OverlayManager, PromptAction, Router, UICon@kit.ArkUI, UIInspector, UIObserver, PageInfo, SwiperDynamicSyncScene, SwiperDynamicSyncSceneType, MarqueeDynamicSyncScene, MarqueeDynamicSyncSceneType, MeasureUtils, FrameCallback, OverlayManagerOptions, TargetInfo, TextMenuController, NodeIdentity, NodeRenderState, NodeRenderStateChangeCallback, Magnifier, ResolvedUICon@kit.ArkUI, TextSelectionClearPolicy, CustomKeyboardContinueFeature, BackgroundLuminanceSamplingConfigs, LuminanceSampler } from '@ohos.arkui.UICon@kit.ArkUI';
-import { GestureListenerType, GestureActionPhase, GestureTriggerInfo, GestureObserverConfigs, GestureListenerCallback } from '@ohos.arkui.UICon@kit.ArkUI';
-import { SwiperContentInfo, SwiperItemInfo } from '@ohos.arkui.UICon@kit.ArkUI';
-import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@ohos.arkui.UICon@kit.ArkUI';
 ```
 
 ## baselineOffset
@@ -23,7 +21,9 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 baselineOffset(value: number | ResourceStr)
 ```
 
-设置文本基线的偏移量，可用于调整文本与其他元素（如图片、图标）的基线对齐，或在图文混排、数学公式、化学公式等需要精确垂直对齐的特殊排版场景中使用。未通过该接口设置时，默认偏移量为0。正数内容向上偏移，负数向下偏移。
+设置文本基线的偏移量，可用于调整文本与其他元素（如图片、图标）的基线对齐，或在图文混排、数学公式、化学公式等需要精确垂直对齐的特殊排版场景中使用。未通过该接口设置时，默认偏移量为0。
+
+正数内容向上偏移，负数向下偏移。
 
 **起始版本：** 7
 
@@ -37,7 +37,7 @@ baselineOffset(value: number | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本基线的偏移量。设置该值为百分比时，按0显示。 单位：fp 从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
+| value | number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本基线的偏移量。设置该值为百分比时，按0显示。单位：fp 从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
 
 ## bindSelectionMenu
 
@@ -46,7 +46,17 @@ bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: 
     options?: SelectionMenuOptions)
 ```
 
-设置自定义选择菜单。未通过该接口设置时，默认菜单类型为TextSpanType.TEXT，响应类型为TextResponseType.LONG_PRESS。bindSelectionMenu的长按响应时长为600ms， [bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu) 的长按响应时长为800ms，当两者同时绑定且触发方式均为长按时，优先响应bindSelectionMenu。自定义菜单超长时，建议内部嵌套使用Scroll组件，避免键盘被遮挡。从API版本26.0.0开始，文本组件调用该接口时，options中的menuType属性传入MenuType.PREVIEW_MENU，设置图片预览菜单的能力生效。如果要使用图片预览菜单，需要同时把spanType设置为TextSpanType.IMAGE，responseType设置为TextResponseType.LONG_PRESS，options中的menuType设置为 MenuType.PREVIEW_MENU才会生效。当[copyOption](#copyoption)为CopyOptions.None时，设置图片预览菜单将不会生效。
+设置自定义选择菜单。未通过该接口设置时，默认菜单类型为TextSpanType.TEXT，响应类型为TextResponseType.LONG_PRESS。
+
+bindSelectionMenu的长按响应时长为600ms，[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)的长按响应时长为800ms，当两者同时绑定且触发方式均为长按时，优先响应bindSelectionMenu。
+
+自定义菜单超长时，建议内部嵌套使用Scroll组件，避免键盘被遮挡。
+
+从API版本26.0.0开始，文本组件调用该接口时，options中的menuType属性传入MenuType.PREVIEW_MENU，设置图片预览菜单的能力生效。
+
+如果要使用图片预览菜单，需要同时把spanType设置为TextSpanType.IMAGE，responseType设置为TextResponseType.LONG_PRESS，options中的menuType设置为MenuType.PREVIEW_MENU才会生效。
+
+当[copyOption](#copyoption)为CopyOptions.None时，设置图片预览菜单将不会生效。
 
 > **说明：**
 > 
@@ -71,7 +81,7 @@ bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: 
 | spanType | [TextSpanType](arkts-arkui-textspantype-e.md) | 是 | 选择菜单的类型。 |
 | content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 选择菜单的内容。 |
 | responseType | [TextResponseType](arkts-arkui-textresponsetype-e.md) | 是 | 选择菜单的响应类型。 |
-| options | [SelectionMenuOptions](../arkts-apis/arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | 否 | 选择菜单的配置选项，用于自定义选择菜单的行为。包含菜单出现、消失、显示、隐藏等回调配置项。 默认值：不设置时，使用系统默认的选择菜单配置。 |
+| options | SelectionMenuOptions | 否 | 选择菜单的配置选项，用于自定义选择菜单的行为。包含菜单出现、消失、显示、隐藏等回调配置项。默认值：不设置时，使用系统默认的选择菜单配置。 |
 
 ## caretColor
 
@@ -121,7 +131,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启行首标点符号压缩。 true表示开启行首标点符号压缩；false表示不开启行首标点符号压缩。 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启行首标点符号压缩。true表示开启行首标点符号压缩；false表示不开启行首标点符号压缩。 |
 
 ## contentTransition
 
@@ -143,7 +153,7 @@ contentTransition(transition: Optional<ContentTransition>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transition | [Optional](arkts-arkui-optional-t.md)&lt;[ContentTransition](../arkts-apis/arkts-arkui-contenttransition-c.md)&gt; | 是 | 文本动效属性，用于配置文本内容变化时的过渡动画效果。可设置为数字翻牌动效 [NumericTextTransition](../arkts-apis/arkts-arkui-numerictexttransition-c.md)，实现数字变化时的翻牌动画效果。 |
+| transition | [Optional](arkts-arkui-optional-t.md)&lt;[ContentTransition](../arkts-apis/arkts-arkui-contenttransition-c.md)&gt; | 是 | 文本动效属性，用于配置文本内容变化时的过渡动画效果。可设置为数字翻牌动效[NumericTextTransition](../arkts-apis/arkts-arkui-numerictexttransition-c.md)，实现数字变化时的翻牌动画效果。 |
 
 ## copyOption
 
@@ -151,14 +161,24 @@ contentTransition(transition: Optional<ContentTransition>)
 copyOption(value: CopyOptions)
 ```
 
-设置组件是否支持文本可复制粘贴。未通过该接口设置时，默认值为CopyOptions.None，不支持文本可复制粘贴。多个属性的功能依赖copyOption的设置，包括[selection](#selection)、 [setTextSelection](arkts-arkui-textcontroller-c.md#settextselection)、[draggable](#draggable)、 [enableSelectedDataDetector](#enableselecteddatadetector)、 [textSelectable](#textselectable)等，具体依赖条件请参考各属性说明。从API version 20开始，当Text组件执行复制操作时，会将HTML格式的内容添加到剪贴板中。  
+设置组件是否支持文本可复制粘贴。未通过该接口设置时，默认值为CopyOptions.None，不支持文本可复制粘贴。
+
+多个属性的功能依赖copyOption的设置，包括[selection](#selection)、[setTextSelection](arkts-arkui-textcontroller-c.md#settextselection)、[draggable](#draggable)、[enableSelectedDataDetector](#enableselecteddatadetector)、[textSelectable](#textselectable)等，具体依赖条件请参考各属性说明。
+
+从API version 20开始，当Text组件执行复制操作时，会将HTML格式的内容添加到剪贴板中。
+
 - 当Text组件包含子组件时，仅支持Span和ImageSpan子组件向剪贴板中添加HTML格式的内容。  
-- 设置Text组件的属性字符串时，请参考属性字符串[toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml)接口文档，以了解支持转换为HTML的范围。  
-设置copyOption为CopyOptions.InApp或者CopyOptions.LocalDevice时：  
+- 设置Text组件的属性字符串时，请参考属性字符串[toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#tohtml)接口文档，以了解支持转换为HTML的范围。
+
+设置copyOption为CopyOptions.InApp或者CopyOptions.LocalDevice时：
+
 - 长按文本，会弹出文本选择菜单，可选中文本并进行复制、全选操作。  
 - 默认情况下，长按选中文本可拖拽。若要取消此功能，可将 `draggable` 设置为 `false`。  
-- 若需要支持Ctrl+C复制，需同时设置[textSelectable](#textselectable)为TextSelectableMode.SELECTABLE_FOCUSABLE。  
-此时Text会监听onClick事件，手势事件为非冒泡事件，若需要点击Text组件区域响应父组件的点击手势事件，建议在父组件上使用 [parallelGesture](arkts-arkui-commonmethod-c.md#parallelgesture)绑定手势识别，也可参考 示例7（设置文本识别）。由于卡片没有长按事件，此场景下长按文本，不会弹出文本选择菜单。
+- 若需要支持Ctrl+C复制，需同时设置[textSelectable](#textselectable)为TextSelectableMode.SELECTABLE_FOCUSABLE。
+
+此时Text会监听onClick事件，手势事件为非冒泡事件，若需要点击Text组件区域响应父组件的点击手势事件，建议在父组件上使用[parallelGesture](arkts-arkui-commonmethod-c.md#parallelgesture)绑定手势识别，也可参考示例7（设置文本识别）。
+
+由于卡片没有长按事件，此场景下长按文本，不会弹出文本选择菜单。
 
 **起始版本：** 9
 
@@ -172,7 +192,7 @@ copyOption(value: CopyOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CopyOptions](../arkts-apis/arkts-arkui-copyoptions-e.md) | 是 | 组件是否支持文本可复制粘贴。 |
+| value | CopyOptions | 是 | 组件是否支持文本可复制粘贴。 |
 
 ## dataDetectorConfig
 
@@ -180,7 +200,9 @@ copyOption(value: CopyOptions)
 dataDetectorConfig(config: TextDataDetectorConfig)
 ```
 
-设置文本识别配置，可配置识别类型、实体显示样式，以及是否开启长按预览等。需配合[enableDataDetector](#enabledatadetector)一起使用，设置enableDataDetector为true时，dataDetectorConfig的配 置才能生效。
+设置文本识别配置，可配置识别类型、实体显示样式，以及是否开启长按预览等。
+
+需配合[enableDataDetector](#enabledatadetector)一起使用，设置enableDataDetector为true时，dataDetectorConfig的配置才能生效。
 
 **起始版本：** 11
 
@@ -194,7 +216,7 @@ dataDetectorConfig(config: TextDataDetectorConfig)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [TextDataDetectorConfig](../arkts-apis/arkts-arkui-textdatadetectorconfig-i.md) | 是 | 文本识别配置对象，用于配置文本识别的具体行为。可配置识别类型（如电话号码、网址、邮箱、地址、日期等）、实体显示样式，以及是否开启长按预览等。需配 合[enableDataDetector](#enabledatadetector)一起使用。 |
+| config | [TextDataDetectorConfig](../arkts-apis/arkts-arkui-textdatadetectorconfig-i.md) | 是 | 文本识别配置对象，用于配置文本识别的具体行为。可配置识别类型（如电话号码、网址、邮箱、地址、日期等）、实体显示样式，以及是否开启长按预览等。需配合[enableDataDetector](#enabledatadetector)一起使用。 |
 
 ## decoration
 
@@ -202,7 +224,17 @@ dataDetectorConfig(config: TextDataDetectorConfig)
 decoration(value: DecorationStyleInterface)
 ```
 
-设置文本装饰线样式及其颜色。未通过该接口设置时，默认文本装饰线样式为：{&nbsp;type:&nbsp;TextDecorationType.None,&nbsp;color:&nbsp;Color.Black,&nbsp;style:&nbsp;TextDecorationStyle.SOLID&nbsp;}
+设置文本装饰线样式及其颜色。未通过该接口设置时，默认文本装饰线样式为：
+
+{
+
+&nbsp;type:&nbsp;TextDecorationType.None,
+
+&nbsp;color:&nbsp;Color.Black,
+
+&nbsp;style:&nbsp;TextDecorationStyle.SOLID&nbsp;
+
+}
 
 > **说明：**
 > 
@@ -222,7 +254,7 @@ decoration(value: DecorationStyleInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](../arkts-apis/arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线样式对象。    **说明：** style参数不支持卡片能力。<br>**起始版本：** 12 |
+| value | [DecorationStyleInterface](../arkts-apis/arkts-arkui-decorationstyleinterface-i.md) | 是 | 文本装饰线样式对象。   **说明：** style参数不支持卡片能力。<br>**起始版本：** 12 |
 
 ## draggable
 
@@ -230,7 +262,11 @@ decoration(value: DecorationStyleInterface)
 draggable(value: boolean)
 ```
 
-设置选中文本拖拽效果。未通过该接口设置时，默认选中文本不可拖拽。不能和onDragStart事件同时使用。当draggable设置为true时，需配合CopyOptions使用，设置copyOptions为CopyOptions.InApp或者CopyOptions.LocalDevice，支 持对选中文本的拖拽及复制到输入框。
+设置选中文本拖拽效果。未通过该接口设置时，默认选中文本不可拖拽。
+
+不能和onDragStart事件同时使用。
+
+当draggable设置为true时，需配合CopyOptions使用，设置copyOptions为CopyOptions.InApp或者CopyOptions.LocalDevice，支持对选中文本的拖拽及复制到输入框。
 
 **起始版本：** 9
 
@@ -242,7 +278,7 @@ draggable(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 选中文本拖拽效果。 true表示选中文本可拖拽，false表示不可拖拽。 |
+| value | boolean | 是 | 选中文本拖拽效果。true表示选中文本可拖拽，false表示不可拖拽。 |
 
 ## editMenuOptions
 
@@ -250,7 +286,9 @@ draggable(value: boolean)
 editMenuOptions(editMenu: EditMenuOptions)
 ```
 
-设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或 [disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
+设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。
+
+调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablemenuitems)或[disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disablesystemservicemenuitems)接口屏蔽文本选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。
 
 > **说明：**
 > 
@@ -278,7 +316,11 @@ editMenuOptions(editMenu: EditMenuOptions)
 ellipsisMode(value: EllipsisMode)
 ```
 
-设置省略位置。未通过该接口设置时，默认在行尾省略（EllipsisMode.END）。ellipsisMode属性需要与overflow设置为TextOverflow.Ellipsis以及maxLines属性一起使用，单独设置ellipsisMode属性不生效。EllipsisMode.START和EllipsisMode.CENTER仅在单行文本超长时生效。
+设置省略位置。未通过该接口设置时，默认在行尾省略（EllipsisMode.END）。
+
+ellipsisMode属性需要与overflow设置为TextOverflow.Ellipsis以及maxLines属性一起使用，单独设置ellipsisMode属性不生效。
+
+EllipsisMode.START和EllipsisMode.CENTER仅在单行文本超长时生效。
 
 **起始版本：** 11
 
@@ -292,7 +334,7 @@ ellipsisMode(value: EllipsisMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [EllipsisMode](#ellipsismode) | 是 | 省略位置。 |
+| value | EllipsisMode | 是 | 省略位置。 |
 
 ## enableAutoSpacing
 
@@ -314,7 +356,7 @@ enableAutoSpacing(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启中文与西文的自动间距。 true为开启自动间距，false为不开启。 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启中文与西文的自动间距。true为开启自动间距，false为不开启。 |
 
 ## enableDataDetector
 
@@ -322,13 +364,16 @@ enableAutoSpacing(enabled: Optional<boolean>)
 enableDataDetector(enable: boolean)
 ```
 
-设置是否进行文本特殊实体识别，可自动识别文本中的电话号码、网址、邮箱、地址、日期等实体信息，适用于聊天消息、评论内容、文章正文等需要智能识别和交互的场景。未通过该接口设置时，默认不进行文本特殊实体识别。当 enableDataDetector设置为true时，识别特殊实体。所识别实体的样式如下，即字体颜色改为蓝色、并添加蓝色下划线。
+设置是否进行文本特殊实体识别，可自动识别文本中的电话号码、网址、邮箱、地址、日期等实体信息，适用于聊天消息、评论内容、文章正文等需要智能识别和交互的场景。未通过该接口设置时，默认不进行文本特殊实体识别。当enableDataDetector设置为true时，识别特殊实体。
+
+所识别实体的样式如下，即字体颜色改为蓝色、并添加蓝色下划线。
 
 > **说明：**
 > 
 > - 设备底层需要具备文本识别能力，该接口才能生效。
 > 
 > - 当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE时，不进行文本特殊实体识别。
+
 <!--RP2--><!--RP2End-->
 
 **起始版本：** 11
@@ -343,7 +388,7 @@ enableDataDetector(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否可进行文本特殊实体识别。 true表示可识别，false表示不可识别。 |
+| enable | boolean | 是 | 是否可进行文本特殊实体识别。true表示可识别，false表示不可识别。 |
 
 ## enableHapticFeedback
 
@@ -351,7 +396,9 @@ enableDataDetector(enable: boolean)
 enableHapticFeedback(isEnabled: boolean)
 ```
 
-设置是否开启触控反馈。未通过该接口设置时，默认开启触控反馈。开启触控反馈时，需要在工程的[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启振动权限，配 置如下：
+设置是否开启触控反馈。未通过该接口设置时，默认开启触控反馈。
+
+开启触控反馈时，需要在工程的[module.json5配置文件](../../../quick-start/module-configuration-file.md)中配置requestPermissions字段开启振动权限，配置如下：
 
 > **说明：**
 > 
@@ -369,7 +416,7 @@ enableHapticFeedback(isEnabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isEnabled | boolean | 是 | 是否开启触控反馈。 true表示开启，false表示不开启。 |
+| isEnabled | boolean | 是 | 是否开启触控反馈。true表示开启，false表示不开启。 |
 
 ## enableSelectedDataDetector
 
@@ -377,7 +424,17 @@ enableHapticFeedback(isEnabled: boolean)
 enableSelectedDataDetector(enable: boolean | undefined)
 ```
 
-设置是否对选中文本进行实体识别。该接口依赖设备底层应具有文本识别能力，否则设置不会生效。未通过该接口设置时，默认对选中文本进行实体识别。启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。AI菜单功能启用时，在组件中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md)中的url（打开链接）、email（新建邮件）、phoneNumber（ 呼叫）、address（导航前往）、dateTime（新建日程）。AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md)中的askAI菜单项不同时出现。需要CopyOptions为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时，本功能生效。在[SelectionContainer](../arkts-apis/arkts-arkui-arkui-components-selectioncontainer-con.md)跨节点选中场景中该属性 无效，在文本选择菜单中不会展示对应的AI菜单项。
+设置是否对选中文本进行实体识别。该接口依赖设备底层应具有文本识别能力，否则设置不会生效。未通过该接口设置时，默认对选中文本进行实体识别。
+
+启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。
+
+AI菜单功能启用时，在组件中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md)中的url（打开链接）、email（新建邮件）、phoneNumber（呼叫）、address（导航前往）、dateTime（新建日程）。
+
+AI菜单生效时，选中范围内需包括且仅包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](../arkts-apis/arkts-arkui-textmenuitemid-c.md)中的askAI菜单项不同时出现。
+
+需要CopyOptions为CopyOptions.LocalDevice或CopyOptions.CROSS_DEVICE时，本功能生效。
+
+在[SelectionContainer](../arkts-apis/arkts-arkui-arkui-components-selectioncontainer-con.md)跨节点选中场景中该属性无效，在文本选择菜单中不会展示对应的AI菜单项。
 
 **起始版本：** 22
 
@@ -391,7 +448,7 @@ enableSelectedDataDetector(enable: boolean | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean \| undefined | 是 | 是否对选中文本进行实体识别。 true：开启识别，false：关闭识别。 |
+| enable | boolean \| undefined | 是 | 是否对选中文本进行实体识别。true：开启识别，false：关闭识别。 |
 
 ## fallbackLineSpacing
 
@@ -413,7 +470,7 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 行高是否基于文字实际高度自适应。 true表示行高基于文字实际高度自适应；false表示行高不基于文字实际高度自适应。 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 行高是否基于文字实际高度自适应。true表示行高基于文字实际高度自适应；false表示行高不基于文字实际高度自适应。 |
 
 ## font
 
@@ -421,7 +478,11 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 font(value: Font)
 ```
 
-设置文本样式。未通过该接口设置时，使用系统默认字体样式配置。包括字体大小、字体粗细、字体族和字体风格。仅Text组件生效，其子组件不生效。
+设置文本样式。未通过该接口设置时，使用系统默认字体样式配置。
+
+包括字体大小、字体粗细、字体族和字体风格。
+
+仅Text组件生效，其子组件不生效。
 
 **起始版本：** 10
 
@@ -435,7 +496,7 @@ font(value: Font)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Font](#font) | 是 | 文本样式。 |
+| value | Font | 是 | 文本样式。 |
 
 ## font
 
@@ -443,7 +504,9 @@ font(value: Font)
 font(fontValue: Font, options?: FontSettingOptions)
 ```
 
-设置文本样式，支持设置字体配置项。仅Text组件生效，其子组件不生效。
+设置文本样式，支持设置字体配置项。
+
+仅Text组件生效，其子组件不生效。
 
 **起始版本：** 12
 
@@ -459,8 +522,8 @@ font(fontValue: Font, options?: FontSettingOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fontValue | [Font](#font) | 是 | 设置文本样式。 |
-| options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | 否 | 设置字体配置项。 默认值：不设置时，使用默认字体配置，详见FontSettingOptions。 |
+| fontValue | Font | 是 | 设置文本样式。 |
+| options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | 否 | 设置字体配置项。默认值：不设置时，使用默认字体配置，详见FontSettingOptions。 |
 
 ## fontColor
 
@@ -508,7 +571,7 @@ fontFamily(value: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 字体族。使用多个字体时，请用逗号','分隔，字体的优先级按顺序生效。例如：'Arial,HarmonyOS Sans'。 |
+| value | string \| Resource | 是 | 字体族。使用多个字体时，请用逗号','分隔，字体的优先级按顺序生效。例如：'Arial,HarmonyOS Sans'。 |
 
 ## fontFeature
 
@@ -516,7 +579,15 @@ fontFamily(value: string | Resource)
 fontFeature(value: string)
 ```
 
-设置文字特性效果，比如数字等宽的特性。格式为：normal \| \&lt;feature-tag-value\&gt;\&lt;feature-tag-value\&gt;的格式为：\&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]\&lt;feature-tag-value\&gt;的个数可以有多个，中间用','隔开。例如，使用等宽数字的输入格式为："ss01" on。
+设置文字特性效果，比如数字等宽的特性。
+
+格式为：normal \| \&lt;feature-tag-value\&gt;
+
+\&lt;feature-tag-value\&gt;的格式为：\&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]
+
+\&lt;feature-tag-value\&gt;的个数可以有多个，中间用','隔开。
+
+例如，使用等宽数字的输入格式为："ss01" on。
 
 > **说明：**
 > 
@@ -545,7 +616,7 @@ fontFeature(value: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string | 是 | 文字特性效果，格式为：normal \|   & lt;feature-tag-value & gt;。 & lt;feature-tag-value & gt;的格式为： & lt;string & gt; [ & lt;integer & gt; \ | on \| off]，多个之间用','隔开。例如："ss01" on。 |
+| value | string | 是 | 文字特性效果，格式为：normal \| &lt;feature-tag-value&gt;。&lt;feature-tag-value&gt;的格式为：&lt;string&gt; [&lt;integer&gt; \| on \| off]，多个之间用','隔开。例如："ss01" on。 |
 
 ## fontSize
 
@@ -571,7 +642,7 @@ fontSize(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 字体大小。fontSize为number类型时，使用fp单位。string类型支持number类型取值的字符串形式，可以附带单位，例如"1 0"、"10fp"。不支持设置百分比字符串。 |
+| value | number \| string \| Resource | 是 | 字体大小。fontSize为number类型时，使用fp单位。string类型支持number类型取值的字符串形式，可以附带单位，例如"1 0"、"10fp"。不支持设置百分比字符串。 |
 
 ## fontStyle
 
@@ -593,7 +664,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [FontStyle](#fontstyle) | 是 | 字体样式。 |
+| value | FontStyle | 是 | 字体样式。 |
 
 ## fontVariations
 
@@ -615,7 +686,7 @@ fontVariations(fontVariations: Array<FontVariation>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fontVariations | Array & lt;FontVariation & gt; | 是 | 可变字体的属性数组，数组成员为可变字体的各种属性。fontVariations属性的优先级高于 [fontWeight](#fontweight) 。 |
+| fontVariations | Array&lt;FontVariation&gt; | 是 | 可变字体的属性数组，数组成员为可变字体的各种属性。fontVariations属性的优先级高于[fontWeight](#fontweight)。 |
 
 ## fontWeight
 
@@ -623,7 +694,9 @@ fontVariations(fontVariations: Array<FontVariation>)
 fontWeight(value: number | FontWeight | ResourceStr)
 ```
 
-设置文本的字体粗细，设置过大可能会在不同字体下有截断。未通过该接口设置时，默认字体粗细为FontWeight.Normal。Wearable设备上默认字体粗细为FontWeight.Regular。仅Text组件生效，其子组件不生效。
+设置文本的字体粗细，设置过大可能会在不同字体下有截断。未通过该接口设置时，默认字体粗细为FontWeight.Normal。Wearable设备上默认字体粗细为FontWeight.Regular。
+
+仅Text组件生效，其子组件不生效。
 
 **起始版本：** 7
 
@@ -637,7 +710,7 @@ fontWeight(value: number | FontWeight | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细。 number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。 从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
+| value | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本的字体粗细。number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
 
 ## fontWeight
 
@@ -645,7 +718,9 @@ fontWeight(value: number | FontWeight | ResourceStr)
 fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptions)
 ```
 
-设置文本字重，支持设置字体配置项。设置过大可能会在不同字体下有截断。[fontVariations](#fontvariations)属性的优先级高于本属性，同时设置时以 fontVariations的值为准。未通过该接口设置时，默认文本字重为FontWeight.Normal。Wearable设备上默认文本字重为FontWeight.Regular。仅Text组件生效，其子组件不生效。<!--RP4--><!--RP4End-->
+设置文本字重，支持设置字体配置项。设置过大可能会在不同字体下有截断。[fontVariations](#fontvariations)属性的优先级高于本属性，同时设置时以fontVariations的值为准。未通过该接口设置时，默认文本字重为FontWeight.Normal。Wearable设备上默认文本字重为FontWeight.Regular。
+
+仅Text组件生效，其子组件不生效。<!--RP4--><!--RP4End-->
 
 **起始版本：** 12
 
@@ -661,8 +736,8 @@ fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| weight | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 设置文本字重 number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。 传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。 从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
-| options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | 否 | 设置字体配置项，用于启用可变字重调节功能。当需要使用可变字体的字重属性进行精细调节时传入此参数（设置enableVariableFontWeight为 true）。不传入时使用默认字体配置（禁用可变字重调节，仅支持整百字重值）。 enableVariableFontWeight为false时禁用可变字重调节，weight取整百值时字重为weight，非整百值时字重为400；enableVariableFontWeight为true时启用可变 字重调节，weight取任意整数时字重为weight。 |
+| weight | number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 设置文本字重number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
+| options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | 否 | 设置字体配置项，用于启用可变字重调节功能。当需要使用可变字体的字重属性进行精细调节时传入此参数（设置enableVariableFontWeight为true）。不传入时使用默认字体配置（禁用可变字重调节，仅支持整百字重值）。enableVariableFontWeight为false时禁用可变字重调节，weight取整百值时字重为weight，非整百值时字重为400；enableVariableFontWeight为true时启用可变字重调节，weight取任意整数时字重为weight。 |
 
 ## halfLeading
 
@@ -688,7 +763,7 @@ halfLeading(halfLeading: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| halfLeading | boolean | 是 | 设置文本是否垂直居中。与[textVerticalAlign](#textverticalalign)同时配置时， halfLeading不生效。 true表示将行间距平分至行的顶部与底部，false则不平分。 |
+| halfLeading | boolean | 是 | 设置文本是否垂直居中。与[textVerticalAlign](#textverticalalign)同时配置时，halfLeading不生效。true表示将行间距平分至行的顶部与底部，false则不平分。 |
 
 ## heightAdaptivePolicy
 
@@ -696,7 +771,10 @@ halfLeading(halfLeading: boolean)
 heightAdaptivePolicy(value: TextHeightAdaptivePolicy)
 ```
 
-设置文本自适应布局调整字号的方式。未通过该接口设置时，默认文本自适应高度的方式为TextHeightAdaptivePolicy.MAX_LINES_FIRST。规则如下：  
+设置文本自适应布局调整字号的方式。未通过该接口设置时，默认文本自适应高度的方式为TextHeightAdaptivePolicy.MAX_LINES_FIRST。
+
+规则如下：
+
 - MAX_LINES_FIRST模式：优先使用[maxLines](#maxlines)属性来调整文本高度。如果使用maxLines属性的布局大小超过了布局约束，则尝试在  
 [minFontSize](#minfontsize)和[maxFontSize](#maxfontsize)的范围内缩小字体以显示更多文本。  
 - MIN_FONT_SIZE_FIRST模式：优先使用minFontSize属性来调整文本高度。如果使用minFontSize属性可以将文本布局在一行中，则尝试在minFontSize和maxFontSize的范围内增大字体并使  
@@ -738,7 +816,7 @@ includeFontPadding(include: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否在首行和尾行增加间距以避免文字截断。 true表示在首行和尾行增加间距；false表示在首行和尾行不增加间距。 |
+| include | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否在首行和尾行增加间距以避免文字截断。true表示在首行和尾行增加间距；false表示在首行和尾行不增加间距。 |
 
 ## incrementalUpdatePolicy
 
@@ -746,7 +824,9 @@ includeFontPadding(include: Optional<boolean>)
 incrementalUpdatePolicy(policy: IncrementalUpdatePolicy | undefined)
 ```
 
-设置文本渲染的增量更新策略。未通过该接口设置时，默认为IncrementalUpdatePolicy.NONE。该接口仅在Text内容包含属性字符串（StyledString）时生效。
+设置文本渲染的增量更新策略。未通过该接口设置时，默认为IncrementalUpdatePolicy.NONE。
+
+该接口仅在Text内容包含属性字符串（StyledString）时生效。
 
 **起始版本：** 26.0.0
 
@@ -760,7 +840,7 @@ incrementalUpdatePolicy(policy: IncrementalUpdatePolicy | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | [IncrementalUpdatePolicy](../arkts-apis/arkts-arkui-incrementalupdatepolicy-e.md) \| undefined | 是 | 文本渲染的增量更新策略。 设置为undefined时，按IncrementalUpdatePolicy.NONE处理。 |
+| policy | [IncrementalUpdatePolicy](../arkts-apis/arkts-arkui-incrementalupdatepolicy-e.md) \| undefined | 是 | 文本渲染的增量更新策略。设置为undefined时，按IncrementalUpdatePolicy.NONE处理。 |
 
 ## letterSpacing
 
@@ -768,7 +848,13 @@ incrementalUpdatePolicy(policy: IncrementalUpdatePolicy | undefined)
 letterSpacing(value: number | ResourceStr)
 ```
 
-设置文本字符间距。未通过该接口设置时，默认文本字符间距为0。设置该值为百分比时，按默认值显示。设置该值为0时，按默认值显示。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。当取值为负值时，文字会被压缩。负值过小时会将组件内容区大小压缩为0，导致内容无法显示。对每个字符生效，包括行尾字符。
+设置文本字符间距。未通过该接口设置时，默认文本字符间距为0。
+
+设置该值为百分比时，按默认值显示。设置该值为0时，按默认值显示。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。
+
+当取值为负值时，文字会被压缩。负值过小时会将组件内容区大小压缩为0，导致内容无法显示。
+
+对每个字符生效，包括行尾字符。
 
 **起始版本：** 7
 
@@ -782,7 +868,7 @@ letterSpacing(value: number | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本字符间距。 单位：[fp](../arkts-apis/arkts-arkui-length-t.md) 从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
+| value | number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 文本字符间距。单位：[fp](../arkts-apis/arkts-arkui-length-t.md) 从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
 
 ## lineBreakStrategy
 
@@ -790,7 +876,7 @@ letterSpacing(value: number | ResourceStr)
 lineBreakStrategy(strategy: LineBreakStrategy)
 ```
 
-设置折行规则。该属性在[wordBreak](#wordbreak)不等于WordBreak.BREAK_ALL的时候生效，且不支持连词符。未通过该接口设置时，默认折行规则为 LineBreakStrategy.GREEDY。
+设置折行规则。该属性在[wordBreak](#wordbreak)不等于WordBreak.BREAK_ALL的时候生效，且不支持连词符。未通过该接口设置时，默认折行规则为LineBreakStrategy.GREEDY。
 
 **起始版本：** 12
 
@@ -812,7 +898,11 @@ lineBreakStrategy(strategy: LineBreakStrategy)
 lineHeight(value: number | string | Resource)
 ```
 
-设置文本行高。当与[lineHeightMultiple](#lineheightmultiple)同时设置且lineHeightMultiple使用有效值时，lineHeight的设置不生效，以 lineHeightMultiple为准。设置值不大于0时，不限制文本行高，自适应字体大小，number类型时单位为fp。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。
+设置文本行高。
+
+当与[lineHeightMultiple](#lineheightmultiple)同时设置且lineHeightMultiple使用有效值时，lineHeight的设置不生效，以lineHeightMultiple为准。
+
+设置值不大于0时，不限制文本行高，自适应字体大小，number类型时单位为fp。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。
 
 > **说明：**
 > 
@@ -830,7 +920,7 @@ lineHeight(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 文本行高。number类型时单位为fp。 |
+| value | number \| string \| Resource | 是 | 文本行高。number类型时单位为fp。 |
 
 ## lineHeightMultiple
 
@@ -838,7 +928,9 @@ lineHeight(value: number | string | Resource)
 lineHeightMultiple(value: number | undefined)
 ```
 
-使用倍数模式设置文本的行高。设置行高为入参（value）与字高（fontHeight）的乘积。
+使用倍数模式设置文本的行高。
+
+设置行高为入参（value）与字高（fontHeight）的乘积。
 
 > **说明：**
 > 
@@ -861,7 +953,7 @@ lineHeightMultiple(value: number | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| undefined | 是 | 使用行高的倍数数值。 取值范围：[0, +∞)    **说明：** - 设置的值小于0时，lineHeightMultiple不生效。 - 设置的值等于0时，等效于设置为1，表现为行高没有变化。 - 支持小数输入。 |
+| value | number \| undefined | 是 | 使用行高的倍数数值。取值范围：[0, +∞)    **说明：** - 设置的值小于0时，lineHeightMultiple不生效。 - 设置的值等于0时，等效于设置为1，表现为行高没有变化。 - 支持小数输入。 |
 
 ## lineSpacing
 
@@ -869,7 +961,9 @@ lineHeightMultiple(value: number | undefined)
 lineSpacing(value: LengthMetrics)
 ```
 
-设置文本的行间距，设置值小于0时，取默认值0。未通过该接口设置时，默认行间距为0。当与[lineHeightMultiple](#lineheightmultiple)同时设置且lineHeightMultiple使用有效值时，lineSpacing的设置不生效，以 lineHeightMultiple为准。
+设置文本的行间距，设置值小于0时，取默认值0。未通过该接口设置时，默认行间距为0。
+
+当与[lineHeightMultiple](#lineheightmultiple)同时设置且lineHeightMultiple使用有效值时，lineSpacing的设置不生效，以lineHeightMultiple为准。
 
 **起始版本：** 12
 
@@ -883,7 +977,7 @@ lineSpacing(value: LengthMetrics)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 文本的行间距。 取值范围：[0, +∞)。设置值小于0时，取默认值0。 |
+| value | LengthMetrics | 是 | 文本的行间距。取值范围：[0, +∞)。设置值小于0时，取默认值0。 |
 
 ## lineSpacing
 
@@ -891,7 +985,9 @@ lineSpacing(value: LengthMetrics)
 lineSpacing(value: LengthMetrics, options?: LineSpacingOptions)
 ```
 
-设置文本的行间距。当不配置LineSpacingOptions时，首行上方和尾行下方默认会有行间距。当与[lineHeightMultiple](#lineheightmultiple)同时设置且lineHeightMultiple使用有效值时，lineSpacing的设置不生效，以 lineHeightMultiple为准。
+设置文本的行间距。当不配置LineSpacingOptions时，首行上方和尾行下方默认会有行间距。
+
+当与[lineHeightMultiple](#lineheightmultiple)同时设置且lineHeightMultiple使用有效值时，lineSpacing的设置不生效，以lineHeightMultiple为准。
 
 **起始版本：** 20
 
@@ -905,8 +1001,8 @@ lineSpacing(value: LengthMetrics, options?: LineSpacingOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 文本的行间距。设置值不大于0时，取默认值0。 |
-| options | [LineSpacingOptions](../arkts-apis/arkts-arkui-linespacingoptions-i.md) | 否 | 设置行间距配置项。 默认值：{ onlyBetweenLines: false } |
+| value | LengthMetrics | 是 | 文本的行间距。设置值不大于0时，取默认值0。 |
+| options | [LineSpacingOptions](../arkts-apis/arkts-arkui-linespacingoptions-i.md) | 否 | 设置行间距配置项。默认值：{ onlyBetweenLines: false } |
 
 ## marqueeOptions
 
@@ -914,7 +1010,9 @@ lineSpacing(value: LengthMetrics, options?: LineSpacingOptions)
 marqueeOptions(options: Optional<TextMarqueeOptions>)
 ```
 
-设置文本跑马灯模式的配置项。当textOverflow设置为TextOverflow.MARQUEE时，marqueeOptions的设置才能生效。
+设置文本跑马灯模式的配置项。
+
+当textOverflow设置为TextOverflow.MARQUEE时，marqueeOptions的设置才能生效。
 
 **起始版本：** 18
 
@@ -928,7 +1026,7 @@ marqueeOptions(options: Optional<TextMarqueeOptions>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;[TextMarqueeOptions](arkts-arkui-textmarqueeoptions-i.md)&gt; | 是 | 当Text组件的textOverflow属性设置为MARQUEE时，可通过marqueeOptions设置跑马灯动效具体的属性，如 开关、步长、循环次数、方向等。 |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[TextMarqueeOptions](arkts-arkui-textmarqueeoptions-i.md)&gt; | 是 | 当Text组件的textOverflow属性设置为MARQUEE时，可通过marqueeOptions设置跑马灯动效具体的属性，如开关、步长、循环次数、方向等。 |
 
 ## maxFontScale
 
@@ -950,7 +1048,7 @@ maxFontScale(scale: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 文本最大的字体缩放倍数。 取值范围：[1, +∞)    **说明：** 设置的值小于1时，按值为1处理，其余异常值默认不生效。 |
+| scale | number \| Resource | 是 | 文本最大的字体缩放倍数。取值范围：[1, +∞)    **说明：** 设置的值小于1时，按值为1处理，其余异常值默认不生效。 |
 
 ## maxFontSize
 
@@ -958,7 +1056,17 @@ maxFontScale(scale: number | Resource)
 maxFontSize(value: number | string | Resource)
 ```
 
-设置文本最大显示字号。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。需配合[minFontSize](#minfontsize)以及[maxLines](#maxlines)或布局大小限制使用，单独设置不生效。自适应字号生效时，fontSize设置不生效。maxFontSize小于等于0或者maxFontSize小于minFontSize时，自适应字号不生效，此时按照[fontSize](#fontsize)属性的值生效，未设置时按照其默认值生 效。从API version 18开始支持在子组件和属性字符串上生效，未设置字号的部分会自适应。
+设置文本最大显示字号。
+
+string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。
+
+需配合[minFontSize](#minfontsize)以及[maxLines](#maxlines)或布局大小限制使用，单独设置不生效。
+
+自适应字号生效时，fontSize设置不生效。
+
+maxFontSize小于等于0或者maxFontSize小于minFontSize时，自适应字号不生效，此时按照[fontSize](#fontsize)属性的值生效，未设置时按照其默认值生效。
+
+从API version 18开始支持在子组件和属性字符串上生效，未设置字号的部分会自适应。
 
 **起始版本：** 7
 
@@ -972,7 +1080,7 @@ maxFontSize(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 文本最大显示字号。 取值范围：大于0且大于等于minFontSize。 单位：[fp](../arkts-apis/arkts-arkui-length-t.md)    **说明：** 设置的值≤0或小于minFontSize时，自适应字号不生效，此时按照fontSize属性的值生效。 |
+| value | number \| string \| Resource | 是 | 文本最大显示字号。取值范围：大于0且大于等于minFontSize。单位：[fp](../arkts-apis/arkts-arkui-length-t.md)    **说明：** 设置的值≤0或小于minFontSize时，自适应字号不生效，此时按照fontSize属性的值生效。 |
 
 ## maxLineHeight
 
@@ -980,7 +1088,9 @@ maxFontSize(value: number | string | Resource)
 maxLineHeight(value: LengthMetrics | undefined)
 ```
 
-设置文本的最大行高，设置值不大于0时，最大行高不受限制。未通过该接口设置时，最大行高不受限制（值为undefined）。maxLineHeight小于minLineHeight时，maxLineHeight按照minLineHeight属性的值生效。
+设置文本的最大行高，设置值不大于0时，最大行高不受限制。未通过该接口设置时，最大行高不受限制（值为undefined）。
+
+maxLineHeight小于minLineHeight时，maxLineHeight按照minLineHeight属性的值生效。
 
 **起始版本：** 22
 
@@ -996,7 +1106,7 @@ maxLineHeight(value: LengthMetrics | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LengthMetrics \| undefined | 是 | 文本的最大行高，不支持百分比。 设置的值不大于0时按0处理，设置为0时，最大行高不受限制。 |
+| value | LengthMetrics \| undefined | 是 | 文本的最大行高，不支持百分比。设置的值不大于0时按0处理，设置为0时，最大行高不受限制。 |
 
 ## maxLines
 
@@ -1004,7 +1114,9 @@ maxLineHeight(value: LengthMetrics | undefined)
 maxLines(value: number)
 ```
 
-设置文本的最大行数。与[minLines](#minlines)同时配置时，最小行数显示范围不会超过maxLines设置的限制。默认情况下，文本是自动折行的，如果指定此属性，则文本最多不会超过指定的行数。如果有多余的文本，可以通过[textOverflow](#textoverflow)来指定截断方式。
+设置文本的最大行数。与[minLines](#minlines)同时配置时，最小行数显示范围不会超过maxLines设置的限制。
+
+默认情况下，文本是自动折行的，如果指定此属性，则文本最多不会超过指定的行数。如果有多余的文本，可以通过[textOverflow](#textoverflow)来指定截断方式。
 
 **起始版本：** 7
 
@@ -1018,7 +1130,7 @@ maxLines(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 文本的最大行数。    **说明：** 取值范围：[0, INT32_MAX] 设置为0时，不显示文本内容。 |
+| value | number | 是 | 文本的最大行数。   **说明：** 取值范围：[0, INT32_MAX] 设置为0时，不显示文本内容。 |
 
 ## minFontScale
 
@@ -1040,7 +1152,7 @@ minFontScale(scale: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 文本最小的字体缩放倍数。 取值范围：[0, 1]    **说明：** 设置的值小于0时按0处理，大于1时按1处理，其余异常值默认不生效。 |
+| scale | number \| Resource | 是 | 文本最小的字体缩放倍数。取值范围：[0, 1]    **说明：** 设置的值小于0时按0处理，大于1时按1处理，其余异常值默认不生效。 |
 
 ## minFontSize
 
@@ -1048,7 +1160,17 @@ minFontScale(scale: number | Resource)
 minFontSize(value: number | string | Resource)
 ```
 
-设置文本最小显示字号。string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。需配合[maxFontSize](#maxfontsize)以及[maxLines](#maxlines)或布局大小限制使用，单独设置不生效。自适应字号生效时，fontSize设置不生效。minFontSize小于或等于0时，自适应字号不生效，此时按照[fontSize](#fontsize)属性的值生效，未设置时按照其默认值生效。从API version 18开始，支持在子组件和属性字符串上生效，未设置字号的部分会自适应。
+设置文本最小显示字号。
+
+string类型支持number类型取值的字符串形式，可以附带单位，例如"10"、"10fp"。
+
+需配合[maxFontSize](#maxfontsize)以及[maxLines](#maxlines)或布局大小限制使用，单独设置不生效。
+
+自适应字号生效时，fontSize设置不生效。
+
+minFontSize小于或等于0时，自适应字号不生效，此时按照[fontSize](#fontsize)属性的值生效，未设置时按照其默认值生效。
+
+从API version 18开始，支持在子组件和属性字符串上生效，未设置字号的部分会自适应。
 
 **起始版本：** 7
 
@@ -1062,7 +1184,7 @@ minFontSize(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 文本最小显示字号。 取值范围：大于0。 单位：[fp](../arkts-apis/arkts-arkui-length-t.md)    **说明：** 设置的值≤0时，自适应字号不生效，此时按照fontSize属性的值生效。 |
+| value | number \| string \| Resource | 是 | 文本最小显示字号。取值范围：大于0。单位：[fp](../arkts-apis/arkts-arkui-length-t.md)    **说明：** 设置的值≤0时，自适应字号不生效，此时按照fontSize属性的值生效。 |
 
 ## minLineHeight
 
@@ -1070,7 +1192,7 @@ minFontSize(value: number | string | Resource)
 minLineHeight(value: LengthMetrics | undefined)
 ```
 
-设置文本的最小行高，设置值不大于0时，取默认值0。当[maxLineHeight](#maxlineheight)的设置值小于minLineHeight时，maxLineHeight会按照 minLineHeight的值生效。
+设置文本的最小行高，设置值不大于0时，取默认值0。当[maxLineHeight](#maxlineheight)的设置值小于minLineHeight时，maxLineHeight会按照minLineHeight的值生效。
 
 **起始版本：** 22
 
@@ -1086,7 +1208,7 @@ minLineHeight(value: LengthMetrics | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LengthMetrics \| undefined | 是 | 文本的最小行高，不支持百分比。 设置的值不大于0时按0处理。 |
+| value | LengthMetrics \| undefined | 是 | 文本的最小行高，不支持百分比。设置的值不大于0时按0处理。 |
 
 ## minLines
 
@@ -1094,7 +1216,13 @@ minLineHeight(value: LengthMetrics | undefined)
 minLines(minLines: Optional<number>)
 ```
 
-设置文本显示的最小行数。如果实际文本高度小于最小行数对应的高度，最后显示高度为最小行数对应的高度。与[maxLines](#maxlines)同时配置时，最小行数对应的显示高度不会超过最大行数对应的高度限制。如果文本设置了constraintSize，那么组件最后显示高度会在 constraintSize约束内。
+设置文本显示的最小行数。
+
+如果实际文本高度小于最小行数对应的高度，最后显示高度为最小行数对应的高度。
+
+与[maxLines](#maxlines)同时配置时，最小行数对应的显示高度不会超过最大行数对应的高度限制。
+
+如果文本设置了constraintSize，那么组件最后显示高度会在constraintSize约束内。
 
 **起始版本：** 22
 
@@ -1110,7 +1238,7 @@ minLines(minLines: Optional<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| minLines | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 文本最小行数。 取值范围：[0, INT32_MAX] 设置的值小于0时按0处理。    **说明：** 与[maxLines](#maxlines)同时配置时，最小行数对应的显示高度不会超过最大行数对应的高度限制。 |
+| minLines | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | 是 | 文本最小行数。取值范围：[0, INT32_MAX] 设置的值小于0时按0处理。   **说明：** 与[maxLines](#maxlines)同时配置时，最小行数对应的显示高度不会超过最大行数对应的高度限制。 |
 
 ## onCopy
 
@@ -1132,7 +1260,7 @@ onCopy(callback: (value: string) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (value: string) = & gt; void | 是 | Callback of the listened event. |
+| callback | (value: string) =&gt; void | 是 | Callback of the listened event. |
 
 ## onMarqueeStateChange
 
@@ -1176,7 +1304,7 @@ onTextSelectionChange(callback: (selectionStart: number, selectionEnd: number) =
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (selectionStart: number, selectionEnd: number) = & gt; void | 是 | Callback of the listened event. |
+| callback | (selectionStart: number, selectionEnd: number) =&gt; void | 是 | Callback of the listened event. |
 
 ## onWillCopy
 
@@ -1208,7 +1336,7 @@ onWillCopy(callback: Callback<string, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback & lt;string, boolean & gt; | 是 | string为将要被复制的文本内容；boolean表示当前文本是否允许被复制，true：允许文本被复制；false：不允许文本被复制。 |
+| callback | Callback&lt;string, boolean&gt; | 是 | string为将要被复制的文本内容；boolean表示当前文本是否允许被复制，true：允许文本被复制；false：不允许文本被复制。 |
 
 ## optimizeTrailingSpace
 
@@ -1216,10 +1344,15 @@ onWillCopy(callback: Callback<string, boolean>)
 optimizeTrailingSpace(optimize: Optional<boolean>)
 ```
 
-设置是否在文本布局过程中优化每行末尾的空格，可解决行尾空格影响对齐显示效果问题。未通过该接口设置时，默认不优化每行末尾的空格。设置Text.optimizeTrailingSpace为true时：  
+设置是否在文本布局过程中优化每行末尾的空格，可解决行尾空格影响对齐显示效果问题。未通过该接口设置时，默认不优化每行末尾的空格。
+
+设置Text.optimizeTrailingSpace为true时：
+
 * 多行、单行、图文混排等多种情况下均会优化行尾空格（TextAlign.Center或TextAlign.End时，优化效果明显）；  
 * 纯空格文本时，修饰线、阴影、背景色跟随空格文本显示；  
-* 行首空格不在优化范围内，行尾文本强制换行，每行行尾空格根据组件宽度优化行尾空格。当纯空格文本设置优化行尾空格[optimizeTrailingSpace](#optimizetrailingspace)为true时，不允许同时设置文本背景色 backgroundColor、空格装饰线 [decoration](#decoration)和对齐[textAlign](#textalign)三个属性。
+* 行首空格不在优化范围内，行尾文本强制换行，每行行尾空格根据组件宽度优化行尾空格。
+
+当纯空格文本设置优化行尾空格[optimizeTrailingSpace](#optimizetrailingspace)为true时，不允许同时设置文本背景色backgroundColor、空格装饰线[decoration](#decoration)和对齐[textAlign](#textalign)三个属性。
 
 **起始版本：** 20
 
@@ -1233,7 +1366,7 @@ optimizeTrailingSpace(optimize: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| optimize | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否优化每行末尾的空格。 true表示优化末尾空格，false则不优化。 |
+| optimize | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否优化每行末尾的空格。true表示优化末尾空格，false则不优化。 |
 
 ## orphanCharOptimization
 
@@ -1241,7 +1374,9 @@ optimizeTrailingSpace(optimize: Optional<boolean>)
 orphanCharOptimization(enabled: Optional<boolean>)
 ```
 
-设置文本排版时是否使能孤字优化。不通过该接口设置，默认不使能孤字优化。孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](#wordbreak)为非 BREAK_ALL并且待排版文本首个[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)的 [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)为“zh-Hans”或“zh-Hant”时生效。
+设置文本排版时是否使能孤字优化。不通过该接口设置，默认不使能孤字优化。
+
+孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](#wordbreak)为非BREAK_ALL并且待排版文本首个[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)的[locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)为“zh-Hans”或“zh-Hant”时生效。
 
 **起始版本：** 26.0.0
 
@@ -1253,7 +1388,7 @@ orphanCharOptimization(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 段落最后一行是否使能孤字优化。 true表示使能孤字优化，false表示不使能孤字优化。 值为undefined或null时，不使能孤字优化。 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 段落最后一行是否使能孤字优化。true表示使能孤字优化，false表示不使能孤字优化。值为undefined或null时，不使能孤字优化。 |
 
 ## privacySensitive
 
@@ -1277,7 +1412,7 @@ privacySensitive(supported: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| supported | boolean | 是 | 是否支持卡片敏感隐私信息。 true表示支持卡片敏感隐私信息，隐私模式下文字将被遮罩为横杠"-"样式；false表示不支持卡片敏感隐私信息，隐私模式下文字正常显示。    **说明：** 设置为null则表示不敏感。 进入隐私模式需要卡片框架支持。隐私遮罩的类型可以通过[obscured](arkts-arkui-commonmethod-c.md#obscured)配置。 |
+| supported | boolean | 是 | 是否支持卡片敏感隐私信息。true表示支持卡片敏感隐私信息，隐私模式下文字将被遮罩为横杠"-"样式；false表示不支持卡片敏感隐私信息，隐私模式下文字正常显示。   **说明：** 设置为null则表示不敏感。进入隐私模式需要卡片框架支持。隐私遮罩的类型可以通过[obscured](arkts-arkui-commonmethod-c.md#obscured)配置。 |
 
 ## punctuationOverflow
 
@@ -1299,7 +1434,7 @@ punctuationOverflow(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否启用行尾标点符号悬挂。 true表示启用行尾标点符号悬挂，false表示不启用行尾标点符号悬挂。设置为undefined或null时，不启用标点符号悬挂。 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否启用行尾标点符号悬挂。true表示启用行尾标点符号悬挂，false表示不启用行尾标点符号悬挂。设置为undefined或null时，不启用标点符号悬挂。 |
 
 ## selectedBackgroundColor
 
@@ -1343,7 +1478,7 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | 是 | 文本拖拽时的背板样式。 设置为undefined时：背板颜色跟随主题，浅色模式显示白色，深色模式显示黑色。 |
+| value | [SelectedDragPreviewStyle](../arkts-apis/arkts-arkui-selecteddragpreviewstyle-i.md) \| undefined | 是 | 文本拖拽时的背板样式。设置为undefined时：背板颜色跟随主题，浅色模式显示白色，深色模式显示黑色。 |
 
 ## selection
 
@@ -1351,7 +1486,19 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 selection(selectionStart: number, selectionEnd: number)
 ```
 
-设置选中区域。未通过该接口设置时，默认不设置选中区域（selectionStart和selectionEnd均为-1）。选中区域高亮且显示手柄和文本选择菜单。当[copyOption](#copyoption)设置为CopyOptions.None时，设置selection属性不生效。当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE时，设置selection属性不生效。当selectionStart大于等于selectionEnd时不选中。可选范围为[0, textSize]，其中textSize为文本内容最大字符数，入参小于0时处理为0，大于textSize时处理为textSize。当selectionStart或selectionEnd位于截断的不可见区域时，文本不选中。当clip设置为false时，超出父组件的文本可以被 选中。可通过[onTextSelectionChange](#ontextselectionchange)接口获取选中区域位置变化结果。
+设置选中区域。未通过该接口设置时，默认不设置选中区域（selectionStart和selectionEnd均为-1）。
+
+选中区域高亮且显示手柄和文本选择菜单。
+
+当[copyOption](#copyoption)设置为CopyOptions.None时，设置selection属性不生效。
+
+当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE时，设置selection属性不生效。
+
+当selectionStart大于等于selectionEnd时不选中。可选范围为[0, textSize]，其中textSize为文本内容最大字符数，入参小于0时处理为0，大于textSize时处理为textSize。
+
+当selectionStart或selectionEnd位于截断的不可见区域时，文本不选中。当clip设置为false时，超出父组件的文本可以被选中。
+
+可通过[onTextSelectionChange](#ontextselectionchange)接口获取选中区域位置变化结果。
 
 **起始版本：** 11
 
@@ -1365,8 +1512,8 @@ selection(selectionStart: number, selectionEnd: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectionStart | number | 是 | 所选文本的起始位置。 取值范围：[0, textSize]，其中textSize为文本内容最大字符数。入参小于0时处理为0，大于textSize时处理为textSize。 |
-| selectionEnd | number | 是 | 所选文本的结束位置。 取值范围：[0, textSize]，其中textSize为文本内容最大字符数。入参小于0时处理为0，大于textSize时处理为textSize。 |
+| selectionStart | number | 是 | 所选文本的起始位置。取值范围：[0, textSize]，其中textSize为文本内容最大字符数。入参小于0时处理为0，大于textSize时处理为textSize。 |
+| selectionEnd | number | 是 | 所选文本的结束位置。取值范围：[0, textSize]，其中textSize为文本内容最大字符数。入参小于0时处理为0，大于textSize时处理为textSize。 |
 
 ## shaderStyle
 
@@ -1374,7 +1521,7 @@ selection(selectionStart: number, selectionEnd: number)
 shaderStyle(shader: ShaderStyle)
 ```
 
-可以显示为径向渐变[RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)或线性渐变[LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md)或纯色 [ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md)的效果，shaderStyle的优先级高于[fontColor](#fontcolor)和AI识别，纯色建议 使用[fontColor](#fontcolor)。
+可以显示为径向渐变[RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)或线性渐变[LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md)或纯色[ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md)的效果，shaderStyle的优先级高于[fontColor](#fontcolor)和AI识别，纯色建议使用[fontColor](#fontcolor)。
 
 **起始版本：** 20
 
@@ -1388,7 +1535,7 @@ shaderStyle(shader: ShaderStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shader | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) | 是 | 径向渐变或线性渐变或纯色。 根据传入的参数区分处理径向渐变[RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)或线性渐变 [LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md)或纯色[ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md)，最终设置到Text文本上显示为渐变 色效果。    **说明：** 当设置为径向渐变[RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)时，若 [RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md)的center参数设置到组件范围外时，可将repeating参数设置为true，此时渐变效果会更明显。 |
+| shader | [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md) | 是 | 径向渐变或线性渐变或纯色。根据传入的参数区分处理径向渐变[RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)或线性渐变[LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md)或纯色[ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md)，最终设置到Text文本上显示为渐变色效果。   **说明：** 当设置为径向渐变[RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md)时，若[RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md)的center参数设置到组件范围外时，可将repeating参数设置为true，此时渐变效果会更明显。 |
 
 ## tailIndents
 
@@ -1410,7 +1557,7 @@ tailIndents(value: Optional<LengthMetrics | Array<LengthMetrics>>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics \| Array & lt;LengthMetrics & gt; & gt; | 是 | 指定文本每一行尾部缩进。当提供一个单独的LengthMetrics值时，所有行共享相同的尾部缩进； 当提供一个数组时，第i个元素指定第i行的尾部缩进；如果文本行数超过数组长度，则数组中的最后一个元素将用于剩余的行。不支持百分比。 取值范围：大于等于0。设置负数时，按默认值处理。 |
+| value | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics \| Array&lt;LengthMetrics&gt;&gt; | 是 | 指定文本每一行尾部缩进。当提供一个单独的LengthMetrics值时，所有行共享相同的尾部缩进；当提供一个数组时，第i个元素指定第i行的尾部缩进；如果文本行数超过数组长度，则数组中的最后一个元素将用于剩余的行。不支持百分比。取值范围：大于等于0。设置负数时，按默认值处理。 |
 
 ## textAlign
 
@@ -1418,10 +1565,18 @@ tailIndents(value: Optional<LengthMetrics | Array<LengthMetrics>>)
 textAlign(value: TextAlign)
 ```
 
-设置文本段落在水平方向的对齐方式。未通过该接口设置时，默认文本段落在水平方向的对齐方式为TextAlign.Start。Wearable设备上默认为TextAlign.Center。当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE且文本可滚动时，textAlign属性不生效。文本段落宽度占满Text组件宽度。可通过align属性控制文本段落在垂直方向上的位置，此组件中不可通过align属性控制文本段落在水平方向上的位置，具体效果如下：  
+设置文本段落在水平方向的对齐方式。未通过该接口设置时，默认文本段落在水平方向的对齐方式为TextAlign.Start。Wearable设备上默认为TextAlign.Center。
+
+当[textOverflow](#textoverflow)设置为TextOverflow.MARQUEE且文本可滚动时，textAlign属性不生效。
+
+文本段落宽度占满Text组件宽度。
+
+可通过align属性控制文本段落在垂直方向上的位置，此组件中不可通过align属性控制文本段落在水平方向上的位置，具体效果如下：
+
 - Alignment.TopStart、Alignment.Top、Alignment.TopEnd：内容顶部对齐。  
 - Alignment.Start、Alignment.Center、Alignment.End：内容垂直居中。  
-- Alignment.BottomStart、Alignment.Bottom、Alignment.BottomEnd：内容底部对齐。  
+- Alignment.BottomStart、Alignment.Bottom、Alignment.BottomEnd：内容底部对齐。
+
 当textAlign属性设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordbreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。
 
 > **说明：**
@@ -1440,7 +1595,7 @@ textAlign(value: TextAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextAlign](#textalign) | 是 | 文本段落在水平方向的对齐方式。    **说明：** 当设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordbreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。 |
+| value | TextAlign | 是 | 文本段落在水平方向的对齐方式。   **说明：** 当设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordbreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。 |
 
 ## textCase
 
@@ -1470,7 +1625,9 @@ textCase(value: TextCase)
 textContentAlign(textContentAlign: Optional<TextContentAlign>)
 ```
 
-设置文本内容区在组件内的垂直对齐方式。此接口可以在文本内容区高度大于组件高度时生效，确保文本内容区的对齐方式正确显示。
+设置文本内容区在组件内的垂直对齐方式。
+
+此接口可以在文本内容区高度大于组件高度时生效，确保文本内容区的对齐方式正确显示。
 
 **起始版本：** 21
 
@@ -1484,7 +1641,7 @@ textContentAlign(textContentAlign: Optional<TextContentAlign>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| textContentAlign | [Optional](arkts-arkui-optional-t.md)&lt;[TextContentAlign](../arkts-apis/arkts-arkui-textcontentalign-e.md)&gt; | 是 | 文本内容区在组件内的垂直对齐方式。 默认(undefined和异常值情况下)和align属性设置为Center效果一致。 |
+| textContentAlign | [Optional](arkts-arkui-optional-t.md)&lt;[TextContentAlign](../arkts-apis/arkts-arkui-textcontentalign-e.md)&gt; | 是 | 文本内容区在组件内的垂直对齐方式。默认(undefined和异常值情况下)和align属性设置为Center效果一致。 |
 
 ## textDirection
 
@@ -1506,7 +1663,7 @@ textDirection(direction: TextDirection | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | TextDirection \| undefined | 是 | 文本排版方向。 设置为undefined时，按照TextDirection.DEFAULT处理，表现为文本排版方向遵循组件布局方向。 |
+| direction | TextDirection \| undefined | 是 | 文本排版方向。设置为undefined时，按照TextDirection.DEFAULT处理，表现为文本排版方向遵循组件布局方向。 |
 
 ## textIndent
 
@@ -1528,7 +1685,7 @@ textIndent(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 首行文本缩进。 单位：[fp](../arkts-apis/arkts-arkui-length-t.md) 取值范围：大于等于0。设置负数时，按默认值处理。 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 首行文本缩进。单位：[fp](../arkts-apis/arkts-arkui-length-t.md) 取值范围：大于等于0。设置负数时，按默认值处理。 |
 
 ## textOverflow
 
@@ -1536,7 +1693,10 @@ textIndent(value: Length)
 textOverflow(options: TextOverflowOptions)
 ```
 
-设置文本超长时的显示方式。当[TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md)设置为TextOverflow.None、TextOverflow.Clip或TextOverflow.Ellipsis时：  
+设置文本超长时的显示方式。
+
+当[TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md)设置为TextOverflow.None、TextOverflow.Clip或TextOverflow.Ellipsis时：
+
 - 设置为TextOverflow.None、TextOverflow.Clip，文本超长时按最大行截断显示。  
 - 设置为TextOverflow.Ellipsis，文本超长时超出显示区域的文本用省略号代替。  
 - 需配合[maxLines](#maxlines)使用，单独设置不生效。  
@@ -1545,10 +1705,13 @@ textOverflow(options: TextOverflowOptions)
 - 折行规则参考[lineBreakStrategy](#linebreakstrategy)。该属性在[wordBreak](#wordbreak)不等  
 于WordBreak.BREAK_ALL的时候生效，不支持连词符。  
 - 从API version 11开始，建议优先组合[textOverflow](#textoverflow)和  
-[wordBreak](#wordbreak)属性来设置截断方式，具体详见 示例4（设置文本断行及折行）<!--RP1--><!--RP1 End-->。当TextOverflowOptions设置为TextOverflow.MARQUEE时：  
+[wordBreak](#wordbreak)属性来设置截断方式，具体详见示例4（设置文本断行及折行）<!--RP1--><!--RP1 End-->。
+
+当TextOverflowOptions设置为TextOverflow.MARQUEE时：
+
 - 文本在一行内滚动显示。  
 - 设置[maxLines](#maxlines)、[copyOption](#copyoption)、  
-[selection](#selection)属性均不生效，且不能进行文本特殊实体识别（即 [enableDataDetector](#enabledatadetector)设置enable为true时不生效）。  
+[selection](#selection)属性均不生效，且不能进行文本特殊实体识别（即[enableDataDetector](#enabledatadetector)设置enable为true时不生效）。  
 - Text组件clip属性默认为true。  
 - 属性字符串的[CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md)不支持跑马灯模式。  
 - [textAlign](#textalign)属性的生效规则：当文本不可滚动时，textAlign属性生效；当文本可滚动时，textAlign属性不生效。  
@@ -1574,7 +1737,9 @@ textOverflow(options: TextOverflowOptions)
 textSelectable(mode: TextSelectableMode)
 ```
 
-设置是否支持文本可选择、可获焦。未通过该接口设置时，默认文本可选择、不可获焦（TextSelectableMode.SELECTABLE_UNFOCUSABLE）。需配合[copyOption](#copyoption)使用。当copyOption设置为CopyOptions.None时，设置textSelectable属性不生效。
+设置是否支持文本可选择、可获焦。未通过该接口设置时，默认文本可选择、不可获焦（TextSelectableMode.SELECTABLE_UNFOCUSABLE）。
+
+需配合[copyOption](#copyoption)使用。当copyOption设置为CopyOptions.None时，设置textSelectable属性不生效。
 
 **起始版本：** 12
 
@@ -1596,7 +1761,11 @@ textSelectable(mode: TextSelectableMode)
 textShadow(value: ShadowOptions | Array<ShadowOptions>)
 ```
 
-设置文字阴影效果。不支持ShadowOptions对象中的type、fill字段和color字段的智能取色模式。从API version 11开始，该接口支持以数组形式入参，实现多重文字阴影。
+设置文字阴影效果。
+
+不支持ShadowOptions对象中的type、fill字段和color字段的智能取色模式。
+
+从API version 11开始，该接口支持以数组形式入参，实现多重文字阴影。
 
 **起始版本：** 10
 
@@ -1612,7 +1781,7 @@ textShadow(value: ShadowOptions | Array<ShadowOptions>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | 是 | 文字阴影效果，用于配置文字阴影的视觉表现。ShadowOptions包含radius（阴影半径）、color（阴影颜色 ）、offsetX（水平偏移）、offsetY（垂直偏移）等配置项。不支持type、fill字段和color字段的智能取色模式。从API version 11开始支持以数组形式入参，实现多重文字阴影。<br>**起始版本：** 11 |
+| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | 是 | 文字阴影效果，用于配置文字阴影的视觉表现。ShadowOptions包含radius（阴影半径）、color（阴影颜色）、offsetX（水平偏移）、offsetY（垂直偏移）等配置项。不支持type、fill字段和color字段的智能取色模式。从API version 11开始支持以数组形式入参，实现多重文字阴影。<br>**起始版本：** 11 |
 
 ## textVerticalAlign
 
@@ -1650,7 +1819,11 @@ textVerticalAlign(textVerticalAlign: Optional<TextVerticalAlign>)
 wordBreak(value: WordBreak)
 ```
 
-设置断行规则。未通过该接口设置时，默认断行规则为WordBreak.BREAK_WORD。默认情况下，不调用wordBreak或者设置WordBreak.BREAK_WORD时，文本截断按字进行。例如，英文以单词为最小单位进行截断。WordBreak.BREAK_ALL与{overflow:&nbsp;TextOverflow.Ellipsis}、maxLines组合使用，可实现英文单词按字母截断，超出部分以省略号显示。
+设置断行规则。未通过该接口设置时，默认断行规则为WordBreak.BREAK_WORD。
+
+默认情况下，不调用wordBreak或者设置WordBreak.BREAK_WORD时，文本截断按字进行。例如，英文以单词为最小单位进行截断。
+
+WordBreak.BREAK_ALL与{overflow:&nbsp;TextOverflow.Ellipsis}、maxLines组合使用，可实现英文单词按字母截断，超出部分以省略号显示。
 
 **起始版本：** 11
 
@@ -1664,4 +1837,4 @@ wordBreak(value: WordBreak)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [WordBreak](#wordbreak) | 是 | 断行规则。 |
+| value | WordBreak | 是 | 断行规则。 |

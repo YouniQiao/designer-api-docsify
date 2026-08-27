@@ -27,9 +27,9 @@ constructor(width: number, height: number, settings?: RenderingContextSettings)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | number | 是 | 离屏画布的宽度，默认单位：vp。 异常值NaN和Infinity按无效值处理。 |
-| height | number | 是 | 离屏画布的高度，默认单位：vp。 异常值NaN和Infinity按无效值处理。 |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数， 见RenderingContextSettings接口描述。 异常值undefined按RenderingContextSettings的默认值处理。 默认值：null。 |
+| width | number | 是 | 离屏画布的宽度，默认单位：vp。异常值NaN和Infinity按无效值处理。 |
+| height | number | 是 | 离屏画布的高度，默认单位：vp。异常值NaN和Infinity按无效值处理。 |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数，见RenderingContextSettings接口描述。异常值undefined按RenderingContextSettings的默认值处理。默认值：null。 |
 
 **示例**
 
@@ -95,10 +95,10 @@ constructor(width: number, height: number, settings?: RenderingContextSettings, 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | number | 是 | 离屏画布的宽度，默认单位：vp。 异常值NaN和Infinity按无效值处理。 |
-| height | number | 是 | 离屏画布的高度，默认单位：vp。 异常值NaN和Infinity按无效值处理。 |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数， 见RenderingContextSettings接口描述。 异常值undefined按RenderingContextSettings的默认值处理。 默认值：null。 |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的单位模式， 配置后无法动态更改，配置方法同 [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。 异常值undefined、NaN和Infinity按默认值处理。 默认值：DEFAULT。 |
+| width | number | 是 | 离屏画布的宽度，默认单位：vp。异常值NaN和Infinity按无效值处理。 |
+| height | number | 是 | 离屏画布的高度，默认单位：vp。异常值NaN和Infinity按无效值处理。 |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数，见RenderingContextSettings接口描述。异常值undefined按RenderingContextSettings的默认值处理。默认值：null。 |
+| unit | LengthMetricsUnit | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
 
 **示例**
 
@@ -124,8 +124,8 @@ toDataURL(type?: string, quality?: any): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 否 | 用于指定图像格式。 可选参数为："image/png"（无损压缩，适合需要精确像素的场景）、"image/jpeg"（有损压缩，适合照片类图像）、"image/webp"（高效压缩，适合网络传输场景）。 异常值undefined或null按默认值处理。 默认值：image/png |
-| quality | any | 否 | 在指定图片格式为image/jpeg或image/webp的情况下，可以从0到1的区间内选择图片的质量，0-0.5适合快速传输或低带宽场景，0.6-0.8适合普通场景，0.9-1. 0适合高质量需求。如果超出取值范围，将会使用默认值0.92。 异常值undefined、null、NaN和Infinity按默认值处理。 默认值：0.92 |
+| type | string | 否 | 用于指定图像格式。可选参数为："image/png"（无损压缩，适合需要精确像素的场景）、"image/jpeg"（有损压缩，适合照片类图像）、"image/webp"（高效压缩，适合网络传输场景）。异常值undefined或null按默认值处理。默认值：image/png |
+| quality | any | 否 | 在指定图片格式为image/jpeg或image/webp的情况下，可以从0到1的区间内选择图片的质量，0-0.5适合快速传输或低带宽场景，0.6-0.8适合普通场景，0.9-1. 0适合高质量需求。如果超出取值范围，将会使用默认值0.92。异常值undefined、null、NaN和Infinity按默认值处理。默认值：0.92 |
 
 **返回值：**
 

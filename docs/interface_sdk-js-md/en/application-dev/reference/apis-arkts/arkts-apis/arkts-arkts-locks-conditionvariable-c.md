@@ -9,7 +9,7 @@ Object used for thread synchronization.
 ## Modules to Import
 
 ```TypeScript
-import ArkTSUtils from '@kit.ArkTS';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -98,7 +98,7 @@ Waits for the ConditionVariable to be notified.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A promise will be resolved once the ConditionVariable is notified.. |
+| Promise&lt;void&gt; | A promise will be resolved once the ConditionVariable is notified.. |
 
 ## waitFor
 
@@ -124,4 +124,4 @@ Waits for the ConditionVariable to be notified, or until the specified time limi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | A promise that will be resolved once the ConditionVariable is notified or the specified time limit is reached. |
+| Promise&lt;void&gt; | A promise that will be resolved once the ConditionVariable is notified or the specified time limit is reached. |

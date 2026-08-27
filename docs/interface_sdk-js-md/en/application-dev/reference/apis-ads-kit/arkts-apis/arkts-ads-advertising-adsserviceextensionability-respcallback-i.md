@@ -9,7 +9,7 @@ Ad request callback.
 ## Modules to Import
 
 ```TypeScript
-import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit';
+import { AdsServiceExtensionAbility, RespCallback } from '@kit.AdsKit';
 ```
 
 ## [[Call]]
@@ -28,7 +28,7 @@ Data in the ad request callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| respData | Map & lt;string, Array & lt;advertising.Advertisement & gt; & gt; | Yes | Callback data of ad requests. It is a mapping collection that takes ad unit ID as the key and stores acquired ad content. |
+| respData | Map&lt;string, Array&lt;advertising.Advertisement&gt;&gt; | Yes | Callback data of ad requests. It is a mapping collection that takes ad unit ID as the key and stores acquired ad content. |
 
 **Examples**
 

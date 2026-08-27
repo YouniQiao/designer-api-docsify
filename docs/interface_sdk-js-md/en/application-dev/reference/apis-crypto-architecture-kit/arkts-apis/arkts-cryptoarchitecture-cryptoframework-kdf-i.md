@@ -11,7 +11,7 @@ Key derivation function (KDF) interface, defining methods for deriving keys base
 ## Modules to Import
 
 ```TypeScript
-import cryptoFramework from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## generateSecret
@@ -118,7 +118,7 @@ Generates a key based on the specified key derivation parameters. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;DataBlob & gt; | Promise used to return the derived key. |
+| Promise&lt;DataBlob&gt; | Promise used to return the derived key. |
 
 **Error codes:**
 
@@ -201,7 +201,7 @@ Generates a key based on the specified key derivation parameters. This API retur
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | The derived key. |
+| DataBlob | The derived key. |
 
 **Error codes:**
 

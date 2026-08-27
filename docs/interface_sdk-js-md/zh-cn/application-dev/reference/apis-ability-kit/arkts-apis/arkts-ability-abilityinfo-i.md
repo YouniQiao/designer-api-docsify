@@ -26,8 +26,9 @@ readonly appIndex: number
 readonly applicationInfo: ApplicationInfo
 ```
 
-应用程序的配置信息<!--Del-->，可以通过调用 [queryAbilityInfo](arkts-ability-bundlemanager-queryabilityinfo-f-sys.md) 接口，abilityFlags参数传入GET_ABILITY_INFO_WITH_APPLICATION获取<!--DelEnd-->。  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)或 者 [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md) 接口获取AbilityInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-i.md).appInfo对象来获取相关信息。
+应用程序的配置信息<!--Del-->，可以通过调用[queryAbilityInfo](arkts-ability-bundlemanager-queryabilityinfo-f-sys.md)接口，abilityFlags参数传入GET_ABILITY_INFO_WITH_APPLICATION获取<!--DelEnd-->。
+
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)或者[getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md)接口获取AbilityInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-i.md).appInfo对象来获取相关信息。
 
 **类型：** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
@@ -59,7 +60,7 @@ readonly bundleName: string
 readonly description: string
 ```
 
-Ability的描述，对应[module.json5](../../../quick-start/module-configuration-file.md)中abilities下配置的description字段，用于描述当前 ability提供的页面内容和功能作用。
+Ability的描述，对应[module.json5](../../../quick-start/module-configuration-file.md)中abilities下配置的description字段，用于描述当前ability提供的页面内容和功能作用。
 
 **类型：** string
 
@@ -107,7 +108,7 @@ Ability支持的设备类型，来源于module.json5配置的[deviceTypes](../..
 readonly enabled: boolean
 ```
 
-Ability是否可用，可用表示可以拉起或者查询，不可用时调用[getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md) 查询ability需要携带GET_ABILITY_INFO_WITH_DISABLE的AbilityFlag，取值为true表示Ability可用，取值为false表示Ability不可用。
+Ability是否可用，可用表示可以拉起或者查询，不可用时调用[getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md)查询ability需要携带GET_ABILITY_INFO_WITH_DISABLE的AbilityFlag，取值为true表示Ability可用，取值为false表示Ability不可用。
 
 **类型：** boolean
 
@@ -123,7 +124,8 @@ Ability是否可用，可用表示可以拉起或者查询，不可用时调用[
 readonly excludeFromDock: boolean
 ```
 
-判断Ability是否可以在dock区域隐藏图标，取值为true表示可以隐藏，取值为false不可以隐藏。  
+判断Ability是否可以在dock区域隐藏图标，取值为true表示可以隐藏，取值为false不可以隐藏。
+
 **说明：** 该字段不生效。
 
 **类型：** boolean
@@ -188,8 +190,9 @@ Ability的图标资源id，是编译构建时根据应用配置abilities下的ic
 readonly label: string
 ```
 
-Ability对用户显示的名称的资源描述符，对应[module.json5](../../../quick-start/module-configuration-file.md)中abilities下配置的label字段。  
-**说明：** 从API version 20开始，如果是通过 [bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md)获取Ability信息，该字段为 Ability对用户显示的名称。
+Ability对用户显示的名称的资源描述符，对应[module.json5](../../../quick-start/module-configuration-file.md)中abilities下配置的label字段。
+
+**说明：** 从API version 20开始，如果是通过[bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md)获取Ability信息，该字段为Ability对用户显示的名称。
 
 **类型：** string
 
@@ -237,7 +240,7 @@ Ability的启动模式，在启动的时候是否以多实例启动，详情参�
 readonly metadata: Array<Metadata>
 ```
 
-Ability的元信息。可以配置成系统定义的参数，使用系统提供的能力，例如[快捷方式](../../../quick-start/module-configuration-file.md#shortcuts标签)、 [窗口元数据配置](../../../windowmanager/window-config-m.md)等。也可以自定义配置参数，通过调用 [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)接 口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_ABILITY和GET_BUNDLE_INFO_WITH_METADATA获取。
+Ability的元信息。可以配置成系统定义的参数，使用系统提供的能力，例如[快捷方式](../../../quick-start/module-configuration-file.md#shortcuts标签)、[窗口元数据配置](../../../windowmanager/window-config-m.md)等。也可以自定义配置参数，通过调用[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_ABILITY和GET_BUNDLE_INFO_WITH_METADATA获取。
 
 **类型：** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 
@@ -285,7 +288,7 @@ Ability名称。
 readonly orientation: bundleManager.DisplayOrientation
 ```
 
-Ability的显示模式。来源于[module.json5](../../../quick-start/module-configuration-file.md)中abilities标签下配置的orientation字段，如果 module.json5配置文件中orientation配置枚举，orientation属性有值且非0，取值详情参考 [显示模式枚举](arkts-ability-bundlemanager-displayorientation-e.md)；如果配置文件中配置的是资源索引，orientation属性值为0。
+Ability的显示模式。来源于[module.json5](../../../quick-start/module-configuration-file.md)中abilities标签下配置的orientation字段，如果module.json5配置文件中orientation配置枚举，orientation属性有值且非0，取值详情参考[显示模式枚举](arkts-ability-bundlemanager-displayorientation-e.md)；如果配置文件中配置的是资源索引，orientation属性值为0。
 
 **类型：** bundleManager.DisplayOrientation
 
@@ -301,7 +304,7 @@ Ability的显示模式。来源于[module.json5](../../../quick-start/module-con
 readonly orientationId: number
 ```
 
-Ability的显示模式资源id。来源于[module.json5](../../../quick-start/module-configuration-file.md)中abilities标签下的orientation字段，如 果module.json5配置文件中orientation配置枚举，orientationId属性值为0；如果配置文件中配置的是资源索引，orientationId属性值为非0，为编译构建时生成的资源id索引。当 orientationId不为0时表示当前显示模式为自定义配置，需要使用orientationId去资源管理获取对应的资源，当orientationId为0时表示未配置资源。
+Ability的显示模式资源id。来源于[module.json5](../../../quick-start/module-configuration-file.md)中abilities标签下的orientation字段，如果module.json5配置文件中orientation配置枚举，orientationId属性值为0；如果配置文件中配置的是资源索引，orientationId属性值为非0，为编译构建时生成的资源id索引。当orientationId不为0时表示当前显示模式为自定义配置，需要使用orientationId去资源管理获取对应的资源，当orientationId为0时表示未配置资源。
 
 **类型：** number
 
@@ -349,7 +352,8 @@ Ability的进程名称。
 readonly readPermission: string
 ```
 
-读取Ability数据所需的权限。  
+读取Ability数据所需的权限。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string
@@ -398,7 +402,8 @@ Ability支持的窗口模式。
 readonly type: bundleManager.AbilityType
 ```
 
-Ability类型。  
+Ability类型。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** bundleManager.AbilityType
@@ -415,7 +420,8 @@ Ability类型。
 readonly uri: string
 ```
 
-获取Ability的统一资源标识符（URI）。  
+获取Ability的统一资源标识符（URI）。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string
@@ -448,7 +454,8 @@ Ability窗口尺寸。
 readonly writePermission: string
 ```
 
-向Ability写数据所需的权限。  
+向Ability写数据所需的权限。
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string

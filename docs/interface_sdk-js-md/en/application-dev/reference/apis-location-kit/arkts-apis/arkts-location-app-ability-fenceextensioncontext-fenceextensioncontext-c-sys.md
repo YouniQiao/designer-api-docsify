@@ -1,6 +1,8 @@
 # FenceExtensionContext
 
-class of static subscriber extension context.@extends ExtensionContext
+class of static subscriber extension context.
+
+@extends ExtensionContext
 
 **Inheritance/Implementation:** FenceExtensionContext extends ExtensionContext
 
@@ -11,7 +13,7 @@ class of static subscriber extension context.@extends ExtensionContext
 ## Modules to Import
 
 ```TypeScript
-import FenceExtensionContext from '@kit.LocationKit';
+import { FenceExtensionContext } from '@kit.LocationKit';
 ```
 
 ## startAbility
@@ -40,7 +42,7 @@ Starts a new service extension ability. If the target service extension ability 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | The promise returned by the function. |
 
 **Error codes:**
 

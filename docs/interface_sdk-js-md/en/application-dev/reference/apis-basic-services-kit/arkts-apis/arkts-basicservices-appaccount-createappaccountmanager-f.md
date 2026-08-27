@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appAccount from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## createAppAccountManager

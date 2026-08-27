@@ -3,9 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## getLastWindow
@@ -14,7 +12,9 @@ import window from '@kit.ArkUI';
 function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 ```
 
-Obtains the topmost layer child window of the current application. This API uses an asynchronous callback to return the result.If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow), the main window of the application is returned.
+Obtains the topmost layer child window of the current application. This API uses an asynchronous callback to return the result.
+
+If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow), the main window of the application is returned.
 
 **Since:** 9
 
@@ -89,7 +89,9 @@ export default class EntryAbility extends UIAbility {
 function getLastWindow(ctx: BaseContext): Promise<Window>
 ```
 
-Obtains the topmost layer child window of the current application. This API uses a promise to return the result.If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow), the main window of the application is returned.
+Obtains the topmost layer child window of the current application. This API uses a promise to return the result.
+
+If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow), the main window of the application is returned.
 
 **Since:** 9
 

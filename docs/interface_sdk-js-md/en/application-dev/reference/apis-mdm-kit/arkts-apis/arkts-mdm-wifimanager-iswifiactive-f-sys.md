@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.MDMKit';
+import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## isWifiActive
@@ -99,7 +99,7 @@ Queries the Wi-Fi status of the current device. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the Wi-Fi status. |
+| Promise&lt;boolean&gt; | Promise used to return the Wi-Fi status. |
 
 **Error codes:**
 

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import formInfo from '@kit.FormKit';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## abilityName
@@ -74,8 +74,10 @@ formName: string
 isRepeatAdditionSupported: boolean
 ```
 
-卡片是否支持重复添加。  
-- true：支持重复添加。  
+卡片是否支持重复添加。
+
+- true：支持重复添加。
+
 - false：不支持重复添加。
 
 **类型：** boolean
@@ -94,8 +96,10 @@ isRepeatAdditionSupported: boolean
 isShowInFormCenter: boolean
 ```
 
-卡片是否在卡片中心展示。  
-- true：在卡片中心展示。  
+卡片是否在卡片中心展示。
+
+- true：在卡片中心展示。
+
 - false：不在卡片中心展示。
 
 **类型：** boolean

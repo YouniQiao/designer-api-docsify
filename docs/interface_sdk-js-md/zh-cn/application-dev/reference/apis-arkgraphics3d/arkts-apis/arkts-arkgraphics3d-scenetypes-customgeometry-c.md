@@ -1,6 +1,8 @@
 # CustomGeometry
 
-自定义几何类型，继承自GeometryDefinition。@extends GeometryDefinition
+自定义几何类型，继承自GeometryDefinition。
+
+@extends GeometryDefinition
 
 **继承/实现关系：** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
 

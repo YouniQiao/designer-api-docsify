@@ -1,6 +1,8 @@
 # WordBreak
 
-Enum of word break@enum { number }
+Enum of word break
+
+@enum { number }
 
 **起始版本：** 11
 

@@ -1,11 +1,12 @@
 # inspector
 
-inspector的性能分析（Profiler）工具。@namespace Profiler
+inspector的性能分析（Profiler）工具。
+
+@namespace Profiler
 
 ## 导入模块
 
 ```TypeScript
-import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 ```
 
 ## 汇总
@@ -14,7 +15,7 @@ import @kit.ArkUI from '@ohos.arkui.@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [Profiler](arkts-arkui-profiler-n.md) | inspector的性能分析（Profiler）工具。@namespace Profiler |
+| [Profiler](arkts-arkui-profiler-n.md) | inspector的性能分析（Profiler）工具。 |
 
 <!--Del-->
 ### 函数（系统接口）

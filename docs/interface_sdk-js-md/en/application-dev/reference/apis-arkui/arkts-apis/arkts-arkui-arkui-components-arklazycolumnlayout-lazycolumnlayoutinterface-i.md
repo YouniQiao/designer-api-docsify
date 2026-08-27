@@ -1,6 +1,8 @@
 # LazyColumnLayoutInterface
 
-Defines the lazy column layout component.@interface LazyColumnLayoutInterface
+Defines the lazy column layout component.
+
+@interface LazyColumnLayoutInterface
 
 **Since:** 26.0.0
 

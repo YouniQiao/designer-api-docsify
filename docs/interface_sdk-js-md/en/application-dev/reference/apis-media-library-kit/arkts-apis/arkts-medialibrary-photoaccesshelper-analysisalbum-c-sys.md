@@ -11,7 +11,7 @@ Implements an **Analysis** album.
 ## Modules to Import
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor
@@ -32,7 +32,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | Yes | Highlights** album. |
+| album | Album | Yes | Highlights** album. |
 
 **Error codes:**
 
@@ -167,13 +167,13 @@ Obtains the sequence of assets in the **Analysis** album.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | Yes | Assets in the album whose sequence needs to be obtained. |
+| assets | Array&lt;PhotoAsset&gt; | Yes | Assets in the album whose sequence needs to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Sequence number of an asset in the album. |
+| Promise&lt;Array&lt;number&gt;&gt; | Sequence number of an asset in the album. |
 
 **Error codes:**
 
@@ -242,7 +242,7 @@ Obtains the relationships of a person in the portrait album.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Relationships of the person in the portrait album. |
+| Promise&lt;string&gt; | Relationships of the person in the portrait album. |
 
 **Error codes:**
 

@@ -19,7 +19,7 @@ Attaches a callback that is invoked when the Promise is settled (fulfilled or re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| onfinally | (() = & gt; void) \ | undefined \| null | No |  |
+| onfinally | (() =&gt; void) \| undefined \| null | No |  |
 
 **Return value:**
 

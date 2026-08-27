@@ -1,6 +1,8 @@
 # Run
 
-Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md) class.Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the [TextLine](arkts-arkgraphics2d-text-textline-c.md) class to create a **Run** object.
+Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md) class.
+
+Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the [TextLine](arkts-arkgraphics2d-text-textline-c.md) class to create a **Run** object.
 
 **Since:** 12
 
@@ -9,7 +11,7 @@ Represents a text typesetting unit, which is a continuous text segment with the 
 ## Modules to Import
 
 ```TypeScript
-import text from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## getAdvances
@@ -30,13 +32,13 @@ Obtains the glyph width array of each glyph within the specified range of the ru
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of the glyph position to be obtained. **range.start** indicates the start position of the range, and **range.end** indicates the range length. If the length is **0**, the range starts from **range.start** and ends at the end of the run. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
+| range | Range | Yes | Range of the glyph position to be obtained. **range.start** indicates the start position of the range, and **range.end** indicates the range length. If the length is **0**, the range starts from **range.start** and ends at the end of the run. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;common2D.Point & gt; | Returns the glyph width array of each glyph in the run unit relative to the horizontal direction. In [common2D.Point]{ |
+| Array&lt;common2D.Point&gt; | Returns the glyph width array of each glyph in the run unit relative to the horizontal direction. In [common2D.Point]{ |
 
 **Examples**
 
@@ -121,7 +123,7 @@ Obtains the index of each glyph in this run.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Array holding the index of each glyph in the run. |
+| Array&lt;number&gt; | Array holding the index of each glyph in the run. |
 
 **Examples**
 
@@ -147,13 +149,13 @@ Obtains the index of each glyph in the specified range of this run.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of glyph indices to obtain. **range.start** indicates the starting position of the range, and **range.end** indicates the length of the range. When **range.end** is **0**, glyphs are fetched from **range.start** to the end of the rendered block. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
+| range | Range | Yes | Range of glyph indices to obtain. **range.start** indicates the starting position of the range, and **range.end** indicates the length of the range. When **range.end** is **0**, glyphs are fetched from **range.start** to the end of the rendered block. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Array holding the index of each glyph in the run. |
+| Array&lt;number&gt; | Array holding the index of each glyph in the run. |
 
 **Examples**
 
@@ -241,7 +243,7 @@ Obtains the offset of each glyph in this run relative to its index.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;common2D.Point & gt; | Array holding the offset of each glyph in the run relative to its index. |
+| Array&lt;common2D.Point&gt; | Array holding the offset of each glyph in the run relative to its index. |
 
 **Examples**
 
@@ -267,7 +269,7 @@ Obtains the position of each glyph relative to the respective line in this run.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;common2D.Point & gt; | Array holding the position of each glyph relative to the respective line in the run. |
+| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line in the run. |
 
 **Examples**
 
@@ -293,13 +295,13 @@ Obtains the position array of each glyph relative to the respective line within 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of the glyphs, where **range.start** indicates the start position of the range, and **range.end** indicates the length of the range. If the length is **0**, the range is from **range.start** to the end of the run. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
+| range | Range | Yes | Range of the glyphs, where **range.start** indicates the start position of the range, and **range.end** indicates the length of the range. If the length is **0**, the range is from **range.start** to the end of the run. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;common2D.Point & gt; | Array holding the position of each glyph relative to the respective line in the run. |
+| Array&lt;common2D.Point&gt; | Array holding the position of each glyph relative to the respective line in the run. |
 
 **Examples**
 
@@ -347,13 +349,13 @@ Obtains an array of character indices for glyphs within a specified range of thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | No | Range of character indices to be obtained. **range.start** indicates the starting position of the range, and **range.end** indicates the range length. If the length is 0, characters are retrieved from **range.start** to the end of the rendered block. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. If this parameter is not passed, the entire run is obtained. |
+| range | Range | No | Range of character indices to be obtained. **range.start** indicates the starting position of the range, and **range.end** indicates the range length. If the length is 0, characters are retrieved from **range.start** to the end of the rendered block. If **range.end** or **range.start** is set to a negative value, **null**, or **undefined**, **undefined** is returned. If this parameter is not passed, the entire run is obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Array of character indices. |
+| Array&lt;number&gt; | Array of character indices. |
 
 **Examples**
 
@@ -401,7 +403,7 @@ Obtains the range of glyphs generated by this run.
 
 | Type | Description |
 | --- | --- |
-| [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Range of the glyphs, where **start** indicates the start position of the range, which is the index relative to the entire paragraph, and **end** indicates the length of the range. |
+| Range | Range of the glyphs, where **start** indicates the start position of the range, which is the index relative to the entire paragraph, and **end** indicates the length of the range. |
 
 **Examples**
 
@@ -429,7 +431,7 @@ Obtains the text direction of the run.
 
 | Type | Description |
 | --- | --- |
-| [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md) | Obtains the text direction of the run. |
+| TextDirection | Obtains the text direction of the run. |
 
 **Examples**
 
@@ -457,7 +459,7 @@ Obtains the text style of this typesetting unit.
 
 | Type | Description |
 | --- | --- |
-| [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | Text style of this typesetting unit. |
+| TextStyle | Text style of this typesetting unit. |
 
 **Examples**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import print from '@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## getAddedPrinters
@@ -24,7 +24,7 @@ Obtains the list of printers added to the system. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return a list of all added printers. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return a list of all added printers. |
 
 **Error codes:**
 

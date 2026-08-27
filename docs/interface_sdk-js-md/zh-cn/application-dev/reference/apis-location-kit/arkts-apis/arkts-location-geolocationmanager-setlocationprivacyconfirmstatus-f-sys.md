@@ -25,8 +25,8 @@ function setLocationPrivacyConfirmStatus(type: LocationPrivacyType, isConfirmed:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [LocationPrivacyType](arkts-location-geolocation-locationprivacytype-e.md) | 是 | 指定隐私申明场景，例如开机向导中的隐私申明、开启网络定位功能时弹出的隐私申明等。 |
-| isConfirmed | boolean | 是 | true：用户同意定位服务隐私申明。 false：用户不同意定位服务隐私申明。 |
+| type | LocationPrivacyType | 是 | 指定隐私申明场景，例如开机向导中的隐私申明、开启网络定位功能时弹出的隐私申明等。 |
+| isConfirmed | boolean | 是 | true：用户同意定位服务隐私申明。false：用户不同意定位服务隐私申明。 |
 
 **错误码：**
 

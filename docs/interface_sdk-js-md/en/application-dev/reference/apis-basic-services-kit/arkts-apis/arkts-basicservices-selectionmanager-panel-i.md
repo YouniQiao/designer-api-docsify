@@ -9,7 +9,7 @@ Describes a **Panel** object, which is created using [createPanel](arkts-basicse
 ## Modules to Import
 
 ```TypeScript
-import selectionManager from '@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## hide
@@ -28,7 +28,7 @@ Hides the word selection panel. This API is used together with [show](#show). Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ Moves the word selection panel to the specified coordinates in the global coordi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -249,7 +249,7 @@ Sets the UI content for the current word selection panel, for example, to displa
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -293,7 +293,7 @@ Shows the word selection panel. This API is used together with [hide](#hide). Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -333,7 +333,7 @@ Sets whether the word selection panel can be dragged along with the mouse, touch
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

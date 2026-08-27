@@ -1,6 +1,8 @@
 # SecurityEventInfo (System API)
 
-Provides the conditions of on/off.@interface SecurityEventInfo
+Provides the conditions of on/off.
+
+@interface SecurityEventInfo
 
 **Since:** 12
 
@@ -11,7 +13,7 @@ Provides the conditions of on/off.@interface SecurityEventInfo
 ## Modules to Import
 
 ```TypeScript
-import securityGuard from '@kit.SecurityGuardKit';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## eventId

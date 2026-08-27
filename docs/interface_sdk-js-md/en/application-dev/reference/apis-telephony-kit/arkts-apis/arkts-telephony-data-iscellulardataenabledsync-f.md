@@ -11,7 +11,8 @@
 function isCellularDataEnabledSync(): boolean
 ```
 
-Checks whether the cellular data service is enabled. This API returns the result synchronously.  
+Checks whether the cellular data service is enabled. This API returns the result synchronously.
+
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since:** 12

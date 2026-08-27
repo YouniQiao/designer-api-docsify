@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setSlotFlagsByBundle
@@ -26,14 +26,14 @@ Sets the slot flags for a specified application. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes | Bundle information of the application. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
 | slotFlags | number | Yes | Notification slot flags.   - Bit 0: sound alert. The value **0** means to disable the feature, and **1** means the opposite.   - Bit 1: locking the screen. The value **0** means to disable the feature, and **1** means the opposite.   - Bit 2: banner. The value **0** means to disable the feature, and **1** means the opposite.   - Bit 3: turning on the screen. The value **0** means to disable the feature, and **1** means the opposite.   - Bit 4: vibration. The value **0** means to disable the feature, and **1** means the opposite.   - Bit 5: notification icon in the status bar. The value **0** means to disable the feature, and **1** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

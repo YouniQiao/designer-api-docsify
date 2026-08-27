@@ -1,6 +1,8 @@
 # UserInfo
 
-The definition of User information.@interface UserInfo
+The definition of User information.
+
+@interface UserInfo
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of User information.@interface UserInfo
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## isLogin

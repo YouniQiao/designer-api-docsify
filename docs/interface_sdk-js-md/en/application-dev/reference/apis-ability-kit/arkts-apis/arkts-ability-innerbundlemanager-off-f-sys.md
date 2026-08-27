@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import innerBundleManager, { BundleStatusCallback } from '@kit.AbilityKit';
+import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## off('BundleStatusChange')
@@ -76,4 +76,4 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return a successful result or error information. |
+| Promise&lt;string&gt; | Promise used to return a successful result or error information. |

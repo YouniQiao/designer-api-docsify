@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import launcherBundleManager from '@kit.AbilityKit';
+import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
 ## getShortcutInfoSync
@@ -12,7 +12,9 @@ import launcherBundleManager from '@kit.AbilityKit';
 function getShortcutInfoSync(bundleName: string): Array<ShortcutInfo>
 ```
 
-Obtains the shortcut information of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md).No permission is required for obtaining the caller's own information.
+Obtains the shortcut information of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md).
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 10
 
@@ -32,7 +34,7 @@ Obtains the shortcut information of the current user based on the given bundle n
 
 | Type | Description |
 | --- | --- |
-| Array & lt;ShortcutInfo & gt; | Array of the [ShortcutInfo]{ |
+| Array&lt;ShortcutInfo&gt; | Array of the [ShortcutInfo]{ |
 
 **Error codes:**
 
@@ -68,7 +70,9 @@ try {
 function getShortcutInfoSync(bundleName: string, userId: number): Array<ShortcutInfo>
 ```
 
-Obtains the shortcut information of the specified user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md).No permission is required for obtaining the caller's own information.
+Obtains the shortcut information of the specified user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md).
+
+No permission is required for obtaining the caller's own information.
 
 **Since:** 13
 
@@ -89,7 +93,7 @@ Obtains the shortcut information of the specified user based on the given bundle
 
 | Type | Description |
 | --- | --- |
-| Array & lt;ShortcutInfo & gt; | Array of the [ShortcutInfo]{ |
+| Array&lt;ShortcutInfo&gt; | Array of the [ShortcutInfo]{ |
 
 **Error codes:**
 

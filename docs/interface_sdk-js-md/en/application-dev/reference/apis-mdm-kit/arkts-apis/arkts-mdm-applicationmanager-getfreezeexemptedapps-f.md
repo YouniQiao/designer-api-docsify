@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## getFreezeExemptedApps
@@ -32,7 +32,7 @@ Obtains the background freeze-exempt application list of all users on the curren
 
 | Type | Description |
 | --- | --- |
-| Array & lt;common.ApplicationInstance & gt; | Array of the background freeze-exempt application list. |
+| Array&lt;common.ApplicationInstance&gt; | Array of the background freeze-exempt application list. |
 
 **Error codes:**
 
@@ -89,7 +89,7 @@ Obtains the background freeze-exempt application list of all users on the curren
 
 | Type | Description |
 | --- | --- |
-| Array & lt;common.ApplicationInstance & gt; | Array of the background freeze-exempt application list. |
+| Array&lt;common.ApplicationInstance&gt; | Array of the background freeze-exempt application list. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import continuationManager from '@kit.AbilityKit';
+import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## unregisterContinuation
@@ -92,7 +92,7 @@ Unregisters the continuation management service. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

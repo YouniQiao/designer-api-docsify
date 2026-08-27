@@ -9,9 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import floatingBall from '@kit.ArkUI.floatingBall';
-import floatView from '@kit.ArkUI.floatView';
-import window from '@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## focusOnShow
@@ -20,7 +18,7 @@ import window from '@kit.ArkUI';
 focusOnShow?: boolean
 ```
 
-窗口调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)显示时是否自动获焦，默认为true。该参数对 主窗、模态窗、dialog窗口不生效。
+窗口调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)显示时是否自动获焦，默认为true。该参数对主窗、模态窗、dialog窗口不生效。
 
 **类型：** boolean
 

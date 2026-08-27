@@ -1,6 +1,8 @@
 # Shader
 
-Shader resource, which inherits from SceneResource.@extends SceneResource @interface Shader
+Shader resource, which inherits from SceneResource.
+
+@extends SceneResource @interface Shader
 
 **Inheritance/Implementation:** Shader extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 
@@ -26,7 +28,7 @@ Sets the inputs for the shader. This API delivers better performance than direct
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputs | Record & lt;string, number \ | [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt; | Yes | A mapping of strings to values for setting shader inputs. |
+| inputs | Record&lt;string, number \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt; | Yes | A mapping of strings to values for setting shader inputs. |
 
 **Examples**
 
@@ -54,14 +56,14 @@ function setinputs(): void {
       if (!image) {
         return;
       }
-      // Bind the shader to the texture.
+      // Set the shader of the material.
       material.colorShader = shader;
       // Set the shader inputs.
       material.colorShader.setShaderInputs({
         "uTime": 1.0,
         "uVelocity": {x: 1.0, y: 1.0, z:-1.0, w:-1.0},
         "uTexture": image
-      })
+      });
     }
   });
 }

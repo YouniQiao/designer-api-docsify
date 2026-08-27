@@ -11,7 +11,7 @@ Describes the object related to the exception event name, message, error stack i
 ## Modules to Import
 
 ```TypeScript
-import errorManager from '@kit.AbilityKit';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## instanceName
@@ -20,10 +20,14 @@ import errorManager from '@kit.AbilityKit';
 instanceName: string
 ```
 
-Name of a VM instance.  
-**NOTE：**Rules for the **instanceName** field in exceptions in the TaskPool thread:
-- **globalErrorOccurred** events: identified as "TaskPool Thread + method name".
-- **globalUnhandledRejectionDetected** events: identified as "TaskPool Thread + task name".
+Name of a VM instance.
+
+**NOTE：**
+
+Rules for the **instanceName** field in exceptions in the TaskPool thread:
+
+- **globalErrorOccurred** events: identified as "TaskPool Thread + method name".  
+- **globalUnhandledRejectionDetected** events: identified as "TaskPool Thread + task name".  
 - If identified as "TaskPool Thread" only, the exception occurs within an asynchronous callback.
 
 **Type:** string

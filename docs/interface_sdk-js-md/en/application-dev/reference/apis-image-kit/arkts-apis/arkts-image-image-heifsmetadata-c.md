@@ -1,6 +1,8 @@
 # HeifsMetadata
 
-HeifsMetadata implements Metadata HEIF image sequence metadata.
+HeifsMetadata implements Metadata
+
+HEIF image sequence metadata.
 
 **Inheritance/Implementation:** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md)
 
@@ -11,7 +13,7 @@ HeifsMetadata implements Metadata HEIF image sequence metadata.
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone
@@ -101,7 +103,9 @@ async function heifsMetadataCreateInstance(context: Context) {
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise.For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise.
+
+For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
 
 **Since:** 23
 
@@ -113,7 +117,7 @@ Obtains all properties and their values from the image metadata. This API return
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Record & lt;string, string \ | null & gt; & gt; | Promise used to return the values of all properties. |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the values of all properties. |
 
 **Examples**
 
@@ -247,7 +251,7 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise that returns the binary data of the metadata. |
+| Promise&lt;ArrayBuffer&gt; | Promise that returns the binary data of the metadata. |
 
 **Examples**
 
@@ -363,13 +367,13 @@ Obtains the property values of image metadata. This API returns the result async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | Array & lt;string & gt; | Yes | Names of the properties to query. |
+| key | Array&lt;string&gt; | Yes | Names of the properties to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Record & lt;string, string \ | null & gt; & gt; | Promise used to return the property values. If the operation fails, an error code is returned. |
+| Promise&lt;Record&lt;string, string \| null&gt;&gt; | Promise used to return the property values. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
@@ -510,7 +514,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -640,7 +644,9 @@ async function heifsMetadataSetBlob(context: Context) {
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
+
+For details about the properties, see [HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
 
 **Since:** 23
 
@@ -652,13 +658,13 @@ Sets the values of specified properties in image metadata in batches. This API r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | Record & lt;string, string \ | null & gt; | Yes | Set of key-value pairs representing the **HeifsMetadata** properties and corresponding values. |
+| records | Record&lt;string, string \| null&gt; | Yes | Set of key-value pairs representing the **HeifsMetadata** properties and corresponding values. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

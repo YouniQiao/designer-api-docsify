@@ -34,11 +34,25 @@ Creates a progress indicator.
 
 | Name | Description |
 | --- | --- |
+| [CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md) | Capsule style options. |
+| [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md) | Provides common style configuration options for the progress indicator. |
+| [EclipseStyleOptions](arkts-arkui-eclipsestyleoptions-i.md) | Options of the eclipse style. The eclipse style visualizes the progress in a way similar to the moon waxing from new to full. |
+| [LinearStyleOptions](arkts-arkui-linearstyleoptions-i.md) | Linear style options. |
+| [ProgressConfiguration](arkts-arkui-progressconfiguration-i.md) | Provides progress indicator configuration. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md). |
+| [ProgressOptions](arkts-arkui-progressoptions-i.md) | Defines progress bar options. |
+| [ProgressStyleMap](arkts-arkui-progressstylemap-i.md) | Defines the mapping between progress indicators and styles. |
+| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md) | Defines the progress bar style options. |
+| [RingStyleOptions](arkts-arkui-ringstyleoptions-i.md) | Options of the ring style without scales. |
+| [ScaleRingStyleOptions](arkts-arkui-scaleringstyleoptions-i.md) | Options of the ring style with scales. |
+| [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) | Defines the scan effect options. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [ProgressStatus](arkts-arkui-progressstatus-e.md) | Current state of the progress indicator. |
+| [ProgressStyle](arkts-arkui-progressstyle-e.md) | Enumerates progress indicator styles. |
+| [ProgressType](arkts-arkui-progresstype-e.md) | Enumerates progress indicator types. |
 
 ## Examples
 

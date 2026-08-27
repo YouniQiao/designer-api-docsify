@@ -52,3 +52,4 @@ Defines the constructor of Path component
 
 | Name | Description |
 | --- | --- |
+| [PathOptions](arkts-arkui-pathoptions-i.md) | Describes the options of the path. |

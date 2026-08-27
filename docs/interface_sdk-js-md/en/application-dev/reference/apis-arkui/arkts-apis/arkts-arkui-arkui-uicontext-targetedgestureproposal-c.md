@@ -25,7 +25,7 @@ node: FrameNode
 
 Target node that handles the current smart gesture.
 
-**Type:** FrameNode
+**Type:** [FrameNode](arkts-arkui-framenode-c.md)
 
 **Since:** 26.0.0
 

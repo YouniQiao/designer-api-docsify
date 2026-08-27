@@ -26,13 +26,13 @@ Obtains the traffic statistics of the specified application on the specified net
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | Application UID. |
-| networkInfo | [NetworkInfo](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-cachedownload-networkinfo-i.md) | Yes | Network information. For details, see [NetworkInfo](arkts-network-statistics-networkinfo-i.md). |
+| networkInfo | NetworkInfo | Yes | Network information. For details, see [NetworkInfo](arkts-network-statistics-networkinfo-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NetStatsInfoSequence & gt; | Promise used to return the result, which is the historical traffic statistics of the application. |
+| Promise&lt;NetStatsInfoSequence&gt; | Promise used to return the result, which is the historical traffic statistics of the application. |
 
 **Error codes:**
 

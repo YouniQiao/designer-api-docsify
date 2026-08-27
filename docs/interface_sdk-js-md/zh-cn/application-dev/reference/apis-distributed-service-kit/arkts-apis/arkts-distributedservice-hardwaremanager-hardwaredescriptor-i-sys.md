@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import hardwareManager from '@kit.DistributedServiceKit';
+import { hardwareManager } from '@kit.DistributedServiceKit';
 ```
 
 ## srcNetworkId

@@ -1,6 +1,8 @@
 # SceneType
 
-Enumeration type of scene.@enum { number } SceneType
+Enumeration type of scene.
+
+@enum { number } SceneType
 
 **Since:** 23
 

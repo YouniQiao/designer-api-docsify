@@ -82,7 +82,7 @@ iconStyle?: IconStyle
 onDialogClick?: Callback<void>
 ```
 
-点击弹框任意位置后触发的用户自定义动作。默认调用closeDialog方法关闭弹框。 说明：点击关闭按钮区域时仅触发onDialogClose，不触发本回调；若需同时触发，请在onDialogClose中显式调用本回调逻辑。
+点击弹框任意位置后触发的用户自定义动作。默认调用closeDialog方法关闭弹框。说明：点击关闭按钮区域时仅触发onDialogClose，不触发本回调；若需同时触发，请在onDialogClose中显式调用本回调逻辑。
 
 **类型：** Callback&lt;void&gt;
 

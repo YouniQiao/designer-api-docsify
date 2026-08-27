@@ -35,7 +35,7 @@ Stops the **watcher** instance. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | return Promise |
+| Promise&lt;void&gt; | return Promise |
 
 **Examples**
 

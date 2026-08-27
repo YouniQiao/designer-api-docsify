@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import netFirewall from '@kit.NetworkKit';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## getNetFirewallPolicy

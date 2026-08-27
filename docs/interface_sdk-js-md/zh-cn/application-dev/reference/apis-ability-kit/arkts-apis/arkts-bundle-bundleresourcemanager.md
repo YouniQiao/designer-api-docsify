@@ -1,6 +1,6 @@
 # @ohos.bundle.bundleResourceManager
 
-本模块提供应用资源数据查询能力，支持[BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md)和 [LauncherAbilityResourceInfo](arkts-ability-launcherabilityresourceinfo-i-sys.md)等信息的查询。
+本模块提供应用资源数据查询能力，支持[BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md)和[LauncherAbilityResourceInfo](arkts-ability-launcherabilityresourceinfo-i-sys.md)等信息的查询。
 
 > **说明：**
 > 
@@ -17,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleResourceManager from '@kit.AbilityKit';
+import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## 汇总

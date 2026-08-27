@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import application from '@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## getApplicationContext
@@ -12,7 +12,7 @@ import application from '@kit.AbilityKit';
 export function getApplicationContext(): ApplicationContext
 ```
 
-获取应用上下文。开发者使用该接口时，无需依赖Context基类。 重复调用该接口，将生成新的ApplicationContext对象。
+获取应用上下文。开发者使用该接口时，无需依赖Context基类。重复调用该接口，将生成新的ApplicationContext对象。
 
 **起始版本：** 14
 

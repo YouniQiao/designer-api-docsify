@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## decomposeToPicture
@@ -26,14 +26,14 @@ function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOption
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 | HDR PixelMap，像素格式需为RGBA_F16、RGBA_1010102、YCBCR_P010或YCRCB_P010。 |
+| hdrPixelMap | PixelMap | 是 | HDR PixelMap，像素格式需为RGBA_F16、RGBA_1010102、YCBCR_P010或YCRCB_P010。 |
 | options | [HdrDecomposeOptions](arkts-image-image-hdrdecomposeoptions-i-sys.md) | 否 | HDR分解配置选项，包含增益图尺寸和像素格式设置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined & gt; | Promise对象。返回包含SDR PixelMap和增益图的Picture对象。 |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined&gt; | Promise对象。返回包含SDR PixelMap和增益图的Picture对象。 |
 
 **错误码：**
 

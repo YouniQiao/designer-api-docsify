@@ -15,7 +15,7 @@ new <K extends object, V>(iterable: Iterable<readonly [K, V]>): WeakMap<K, V>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | Iterable & lt;readonly [K, V] & gt; | Yes |  |
+| iterable | Iterable&lt;readonly [K, V]&gt; | Yes |  |
 
 **Return value:**
 

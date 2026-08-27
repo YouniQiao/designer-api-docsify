@@ -1,6 +1,8 @@
 # PopoverDialogV2
 
-Declare struct PopoverDialogV2@struct { PopoverDialogV2 }
+Declare struct PopoverDialogV2
+
+@struct { PopoverDialogV2 }
 
 **Since:** 18
 

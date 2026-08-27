@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.MDMKit';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## getDisallowedUninstallBundlesSync
@@ -33,7 +33,7 @@ Obtains the bundles that cannot be uninstalled by the current or specified user.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Array of bundles that cannot be uninstalled by the user. |
+| Array&lt;string&gt; | Array of bundles that cannot be uninstalled by the user. |
 
 **Error codes:**
 
@@ -93,7 +93,7 @@ Obtains the bundles that are not allowed to be uninstalled by the current or spe
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of bundles that are not allowed to be uninstalled by the user. |
+| Array&lt;string&gt; | List of bundles that are not allowed to be uninstalled by the user. |
 
 **Error codes:**
 

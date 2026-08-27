@@ -1,6 +1,8 @@
 # Progress properties/events
 
-In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.The [universal events][universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
+In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts/ts-component-general-attributes.md), the following attributes are supported.
+
+The [universal events][universal events](../../../reference/apis-arkui/arkui-ts/ts-component-general-events.md) are supported.
 
 **Inheritance/Implementation:** ProgressAttribute extends CommonMethod<ProgressAttribute<Type>>
 
@@ -19,7 +21,11 @@ In addition to the [universal attributes](../../../reference/apis-arkui/arkui-ts
 color(value: ResourceColor | LinearGradient)
 ```
 
-Sets the foreground color of the progress indicator.Since API version 10, LinearGradient can be used to set a gradient color for the ring style. Setting opacity is not recommended for the ring type. If opacity is required, use DataPanel.Since API version 23, LinearGradient can be used to set gradient colors for the linear and capsule styles. In API version 22 and earlier versions, setting gradient colors via **LinearGradient** for the **Linear** and **Capsule** styles will not render the custom colors; the system's default theme colors will be used instead.
+Sets the foreground color of the progress indicator.
+
+Since API version 10, LinearGradient can be used to set a gradient color for the ring style. Setting opacity is not recommended for the ring type. If opacity is required, use DataPanel.
+
+Since API version 23, LinearGradient can be used to set gradient colors for the linear and capsule styles. In API version 22 and earlier versions, setting gradient colors via **LinearGradient** for the **Linear** and **Capsule** styles will not render the custom colors; the system's default theme colors will be used instead.
 
 **Since:** 7
 
@@ -33,7 +39,7 @@ Sets the foreground color of the progress indicator.Since API version 10, Linear
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md) | Yes | Foreground color of the progress indicator.Default value:  - Capsule:      API version 9 or earlier: **'#ff007dff'**   API version 10: **'#33006cde'**   API version 11 or later: **'#33007dff'**   - Ring:      API version 9 or earlier: **'#ff007dff'**   API version 10 or later: start: **'#ff86c1ff'**, end: **'#ff254ff7'**   - Other styles: **'#ff007dff' |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| LinearGradient | Yes | Foreground color of the progress indicator.Default value:  - Capsule:      API version 9 or earlier: **'#ff007dff'**   API version 10: **'#33006cde'**   API version 11 or later: **'#33007dff'**   - Ring:      API version 9 or earlier: **'#ff007dff'**   API version 10 or later: start: **'#ff86c1ff'**, end: **'#ff254ff7'**   - Other styles: **'#ff007dff' |
 
 ## contentModifier
 
@@ -105,7 +111,7 @@ Sets the component style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Style](#style) | Yes | Component style.   - **CapsuleStyleOptions**: capsule style.   - **RingStyleOptions**: ring style.   - **LinearStyleOptions**: linear style.   - **ScaleRingStyleOptions**: determinate ring style.   - **EclipseStyleOptions**: eclipse style.   - **ProgressStyleOptions**: **strokeWidth**, **scaleCount**, and **scaleWidth** of a progress indicator. This parameter is valid only for the progress indicator that supports these style settings. |
+| value | Style | Yes | Component style.   - **CapsuleStyleOptions**: capsule style.   - **RingStyleOptions**: ring style.   - **LinearStyleOptions**: linear style.   - **ScaleRingStyleOptions**: determinate ring style.   - **EclipseStyleOptions**: eclipse style.   - **ProgressStyleOptions**: **strokeWidth**, **scaleCount**, and **scaleWidth** of a progress indicator. This parameter is valid only for the progress indicator that supports these style settings. |
 
 ## value
 

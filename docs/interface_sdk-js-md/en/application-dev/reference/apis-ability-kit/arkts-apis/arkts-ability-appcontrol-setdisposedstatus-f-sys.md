@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appControl from '@kit.AbilityKit';
+import { appControl } from '@kit.AbilityKit';
 ```
 
 ## setDisposedStatus
@@ -93,7 +93,7 @@ Sets the disposed status for an application. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

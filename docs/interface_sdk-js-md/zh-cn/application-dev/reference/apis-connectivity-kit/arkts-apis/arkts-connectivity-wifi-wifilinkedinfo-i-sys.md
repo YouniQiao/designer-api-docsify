@@ -1,6 +1,8 @@
 # WifiLinkedInfo
 
-WLAN连接信息。@interface WifiLinkedInfo
+WLAN连接信息。
+
+@interface WifiLinkedInfo
 
 **起始版本：** 6
 
@@ -13,10 +15,7 @@ WLAN连接信息。@interface WifiLinkedInfo
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## chload

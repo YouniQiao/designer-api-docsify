@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getDynamicIcon
@@ -32,7 +32,7 @@ Obtains the module name corresponding to the dynamic icon based on the specified
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the API call result and module name corresponding to the dynamic icon. |
+| Promise&lt;string&gt; | Promise used to return the API call result and module name corresponding to the dynamic icon. |
 
 **Error codes:**
 

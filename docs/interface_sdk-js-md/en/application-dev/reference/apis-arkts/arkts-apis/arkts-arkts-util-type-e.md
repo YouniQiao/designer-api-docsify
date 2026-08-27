@@ -40,7 +40,9 @@ MIME format. This API can be used in atomic services since API version 11.
 BASIC_URL_SAFE = 2
 ```
 
-BASIC_URL_SAFE format.This value is supported since API version 12. This API can be used in atomic services since API version 12.
+BASIC_URL_SAFE format.
+
+This value is supported since API version 12. This API can be used in atomic services since API version 12.
 
 **Since:** 12
 
@@ -54,7 +56,9 @@ BASIC_URL_SAFE format.This value is supported since API version 12. This API can
 MIME_URL_SAFE = 3
 ```
 
-MIME_URL_SAFE format.This value is supported since API version 12. This API can be used in atomic services since API version 12.
+MIME_URL_SAFE format.
+
+This value is supported since API version 12. This API can be used in atomic services since API version 12.
 
 **Since:** 12
 

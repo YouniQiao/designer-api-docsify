@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import matrix4 from '@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## combine
@@ -28,13 +28,13 @@ Matrix的叠加函数，可以将两个矩阵的效果叠加起来生成一个�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 是 | 待叠加的矩阵对象。 |
+| options | Matrix4Transit | 是 | 待叠加的矩阵对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 叠加后的矩阵对象。 |
+| Matrix4Transit | 叠加后的矩阵对象。 |
 
 **示例**
 

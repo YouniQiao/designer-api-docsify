@@ -1,6 +1,7 @@
 # @ohos.multimedia.audioHaptic
 
-Audio-haptic enables users to get rhythmic auditory and haptic feedback while having incoming calls or messages.  
+Audio-haptic enables users to get rhythmic auditory and haptic feedback while having incoming calls or messages.
+
 **Device behavior difference**: For a device without a vibration component, no vibration effect is generated.
 
 **Since:** 11
@@ -10,7 +11,7 @@ Audio-haptic enables users to get rhythmic auditory and haptic feedback while ha
 ## Modules to Import
 
 ```TypeScript
-import audioHaptic from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## Summary

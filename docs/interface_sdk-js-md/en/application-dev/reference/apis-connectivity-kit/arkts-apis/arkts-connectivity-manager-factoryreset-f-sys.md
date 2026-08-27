@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import manager from '@kit.ConnectivityKit';
+import { manager } from '@kit.ConnectivityKit';
 ```
 
 ## factoryReset
@@ -28,7 +28,7 @@ Restores a device to its factory settings. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

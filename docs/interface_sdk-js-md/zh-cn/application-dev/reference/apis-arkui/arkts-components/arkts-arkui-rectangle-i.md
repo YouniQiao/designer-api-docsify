@@ -31,7 +31,9 @@
 height?: Length
 ```
 
-触摸热区的高度。默认值：'100%'
+触摸热区的高度。
+
+默认值：'100%'
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -49,7 +51,9 @@ height?: Length
 width?: Length
 ```
 
-触摸热区的宽度。默认值：'100%'
+触摸热区的宽度。
+
+默认值：'100%'
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -67,7 +71,9 @@ width?: Length
 x?: Length
 ```
 
-触摸点相对于组件左上角的x轴坐标。默认值：0vp
+触摸点相对于组件左上角的x轴坐标。
+
+默认值：0vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
@@ -85,7 +91,9 @@ x?: Length
 y?: Length
 ```
 
-触摸点相对于组件左上角的y轴坐标。默认值：0vp
+触摸点相对于组件左上角的y轴坐标。
+
+默认值：0vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

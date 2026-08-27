@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import appManager from '@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## isSharedBundleRunning
@@ -33,7 +33,7 @@ Checks whether the shared library is in use. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. **true** if the shared library is in use, **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result. **true** if the shared library is in use, **false** otherwise. |
 
 **Error codes:**
 

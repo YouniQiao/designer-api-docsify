@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## getAVCastController
@@ -12,7 +12,9 @@ import avSession from '@kit.AVSessionKit';
 function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController>): void
 ```
 
-设备建立连接后，获取投播控制器。结果通过callback异步回调方式返回。此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
+设备建立连接后，获取投播控制器。结果通过callback异步回调方式返回。
+
+此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
 
 **起始版本：** 10
 
@@ -82,7 +84,9 @@ struct Index {
 function getAVCastController(sessionId: string): Promise<AVCastController>
 ```
 
-设备建立连接后，获取投播控制器。结果通过Promise方式返回。此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
+设备建立连接后，获取投播控制器。结果通过Promise方式返回。
+
+此功能在本端和远端都可以使用，通过该接口可以获取一个相同的控制器，进行投播音频的播放控制。
 
 **起始版本：** 10
 

@@ -11,7 +11,7 @@
 function getActiveGeoFences(): Promise<Map<number, Geofence>>
 ```
 
-查询当前有效的围栏信息。使用Promise异步回调。调用该接口前建议先通过 [geoLocationManager.isGnssFenceServiceSupported](arkts-location-geolocationmanager-isgnssfenceservicesupported-f.md)接口判断对应能力是否支持。
+查询当前有效的围栏信息。使用Promise异步回调。调用该接口前建议先通过[geoLocationManager.isGnssFenceServiceSupported](arkts-location-geolocationmanager-isgnssfenceservicesupported-f.md)接口判断对应能力是否支持。
 
 **起始版本：** 23
 
@@ -23,7 +23,7 @@ function getActiveGeoFences(): Promise<Map<number, Geofence>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Map & lt;number, Geofence & gt; & gt; | Promise对象，返回有效的围栏信息。Map中的key值为fenceId，value值为对应围栏的具体信息。 |
+| Promise&lt;Map&lt;number, Geofence&gt;&gt; | Promise对象，返回有效的围栏信息。Map中的key值为fenceId，value值为对应围栏的具体信息。 |
 
 **错误码：**
 

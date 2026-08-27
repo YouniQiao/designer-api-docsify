@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import particleAbility from '@kit.AbilityKit';
+import { particleAbility } from '@kit.AbilityKit';
 ```
 
 ## cancelBackgroundRunning
@@ -70,7 +70,7 @@ Requests to cancel a continuous task from the system. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. Promise that returns no value. |
+| Promise&lt;void&gt; | Promise used to return the result. Promise that returns no value. |
 
 **Examples**
 

@@ -1,6 +1,8 @@
 # LayoutInfo
 
-Provides the child component layout information.@interface LayoutInfo
+Provides the child component layout information.
+
+@interface LayoutInfo
 
 **Since:** 9
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import childProcessManager from '@kit.AbilityKit';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## isArkChildProcessSupported

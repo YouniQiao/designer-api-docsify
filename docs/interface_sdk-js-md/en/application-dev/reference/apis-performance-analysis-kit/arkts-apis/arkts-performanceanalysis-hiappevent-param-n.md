@@ -1,6 +1,7 @@
 # param(Application Event Logging)
 
-Provides parameter name constants.  
+Provides parameter name constants.
+
 | Name | Type | Read Only | Description | | ------------------------------- | ------ | ------ | ------------------ | | USER_ID | string | Yes| Custom user ID. | | DISTRIBUTED_SERVICE_NAME | string | Yes| Distributed service name. | | DISTRIBUTED_SERVICE_INSTANCE_ID | string | Yes| Distributed service instance ID.|
 
 **Since:** 9
@@ -18,6 +19,6 @@ Provides parameter name constants.
 
 | Name | Description |
 | --- | --- |
-| [USER_ID(Application Event Logging)](arkts-performanceanalysis-param-con.md#user_id) | Custom user ID. |
-| [DISTRIBUTED_SERVICE_NAME(Application Event Logging)](arkts-performanceanalysis-param-con.md#distributed_service_name) | Distributed service name. |
-| [DISTRIBUTED_SERVICE_INSTANCE_ID(Application Event Logging)](arkts-performanceanalysis-param-con.md#distributed_service_instance_id) | Distributed service instance ID. |
+| [USER_ID](arkts-performanceanalysis-param-con.md#user_id) | Custom user ID. |
+| [DISTRIBUTED_SERVICE_NAME](arkts-performanceanalysis-param-con.md#distributed_service_name) | Distributed service name. |
+| [DISTRIBUTED_SERVICE_INSTANCE_ID](arkts-performanceanalysis-param-con.md#distributed_service_instance_id) | Distributed service instance ID. |

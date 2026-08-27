@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import thermal from '@kit.BasicServicesKit';
+import { thermal } from '@kit.BasicServicesKit';
 ```
 
 ## registerThermalLevelCallback
@@ -12,7 +12,7 @@ import thermal from '@kit.BasicServicesKit';
 function registerThermalLevelCallback(callback: Callback<ThermalLevel>): void
 ```
 
-订阅热档位变化时的回调提醒。当设备温度跨越档位阈值导致热档位发生变化时，系统自动触发回调通知， 通过callback返回变化后的热档位等级。使用callback异步回调。此方法与thermal.unregisterThermalLevelCallback配对使用， 用于取消先前注册的热档位回调。
+订阅热档位变化时的回调提醒。当设备温度跨越档位阈值导致热档位发生变化时，系统自动触发回调通知，通过callback返回变化后的热档位等级。使用callback异步回调。此方法与thermal.unregisterThermalLevelCallback配对使用，用于取消先前注册的热档位回调。
 
 **起始版本：** 9
 

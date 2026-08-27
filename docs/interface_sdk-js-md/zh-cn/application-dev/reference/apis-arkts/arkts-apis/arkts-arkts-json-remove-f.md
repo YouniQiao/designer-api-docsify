@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import JSON from '@kit.ArkTS';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## remove
@@ -12,7 +12,7 @@ import JSON from '@kit.ArkTS';
 function remove(obj: object, property: string): void
 ```
 
-从ArkTS对象中删除某种属性，可用于[JSON.parse](arkts-arkts-json-parse-f.md)解析JSON字符串之后，如清理敏感字段、移除冗余数据等场景。 JSON.remove接口仅支持最外层为字典形式（即大括号而非中括号包围）的合法JSON串。
+从ArkTS对象中删除某种属性，可用于[JSON.parse](arkts-arkts-json-parse-f.md)解析JSON字符串之后，如清理敏感字段、移除冗余数据等场景。JSON.remove接口仅支持最外层为字典形式（即大括号而非中括号包围）的合法JSON串。
 
 **起始版本：** 12
 

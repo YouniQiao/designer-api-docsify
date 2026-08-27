@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import carAwareness from '@kit.MultimodalAwarenessKit';
+import { carAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## onCarAwareness
@@ -27,7 +27,7 @@ Enables vehicle awareness and subscribes to vehicle awareness results. If this f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| capability | [Capability](arkts-multimodalawareness-carawareness-capability-e.md) | Yes | Specific capability. |
+| capability | Capability | Yes | Specific capability. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CarAwarenessInfo](arkts-multimodalawareness-carawareness-carawarenessinfo-i-sys.md)[]&gt; | Yes | Callback used to return obtaining corresponding capability data. |
 | options | [CarAwarenessOptions](arkts-multimodalawareness-carawareness-carawarenessoptions-i-sys.md) | No | Indicates options to specific capability. |
 

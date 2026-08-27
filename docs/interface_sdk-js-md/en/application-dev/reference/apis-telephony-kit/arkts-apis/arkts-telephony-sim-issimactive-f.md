@@ -58,7 +58,7 @@ Checks whether the SIM card in the specified slot is activated. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 
 **Examples**
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import fastbuffer from '@kit.ArkTS';
+import { fastbuffer } from '@kit.ArkTS';
 ```
 
 ## byteLength

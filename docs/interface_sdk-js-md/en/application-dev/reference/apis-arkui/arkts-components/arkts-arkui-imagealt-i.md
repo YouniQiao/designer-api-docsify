@@ -9,7 +9,6 @@ Sets the placeholder image.
 ## Modules to Import
 
 ```TypeScript
-import @kit.ArkUIGeneration from '@ohos.arkui.intelligence.@kit.ArkUIGeneration';
 ```
 
 ## error

@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import systemSoundManager from '@kit.AudioKit';
+import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## hapticsUri

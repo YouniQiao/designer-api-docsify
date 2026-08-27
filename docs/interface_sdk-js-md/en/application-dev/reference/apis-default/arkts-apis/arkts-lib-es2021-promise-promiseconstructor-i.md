@@ -37,7 +37,7 @@ The any function returns a promise that is fulfilled by the first given promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | Iterable & lt;T \ | PromiseLike & lt;T & gt; & gt; | Yes |  |
+| values | Iterable&lt;T \| PromiseLike&lt;T&gt;&gt; | Yes |  |
 
 **Return value:**
 

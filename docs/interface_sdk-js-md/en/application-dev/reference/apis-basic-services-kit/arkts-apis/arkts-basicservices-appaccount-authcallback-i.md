@@ -9,7 +9,7 @@ Defines authenticator callbacks.
 ## Modules to Import
 
 ```TypeScript
-import appAccount from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onRequestContinued
@@ -131,7 +131,7 @@ Called to return the result of an authentication request.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | code | number | Yes |  |
-| result | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | No |  |
+| result | AuthResult | No |  |
 
 **Examples**
 

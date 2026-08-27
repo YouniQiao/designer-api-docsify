@@ -10,7 +10,6 @@ Provides APIs for setting the height (**height**), background color (**backgroun
 
 ```TypeScript
 import { ItemState, ToolBar, ToolBarOption, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
-import { ToolBarV2ItemState, ToolBarV2SymbolGlyph, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemText, ToolBarV2ItemTextOptions, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemImageOptions, ToolBarV2, ToolBarV2Item, ToolBarV2ItemOptions, ToolBarV2Modifier, ToolBarV2ItemAction } from '@kit.ArkUIV2';
 ```
 
 ## backgroundColor
@@ -61,7 +60,7 @@ Sets the height of the toolbar. By overriding this API, you can implement custom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Height of the toolbar. The default height of the toolbar is 56 vp, which does not include the divider. |
+| height | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | Height of the toolbar. The default height of the toolbar is 56 vp, which does not include the divider. |
 
 **Return value:**
 
@@ -89,7 +88,7 @@ Sets the left and right padding of the toolbar. By overriding this API, you can 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| padding | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Left and right padding of the toolbar, which is effective only when there are fewer than five items. By default, the padding is 24 vp when there are fewer than five items and 0 when there are five or more items. |
+| padding | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | Left and right padding of the toolbar, which is effective only when there are fewer than five items. By default, the padding is 24 vp when there are fewer than five items and 0 when there are five or more items. |
 
 **Return value:**
 

@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import componentSnapshot from '@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## maxHeight
@@ -18,7 +18,11 @@ import componentSnapshot from '@kit.ArkUI';
 maxHeight: number
 ```
 
-组件截图的最大高度限制。取值范围：（-∞，+∞）单位：px
+组件截图的最大高度限制。
+
+取值范围：（-∞，+∞）
+
+单位：px
 
 **类型：** number
 
@@ -36,7 +40,11 @@ maxHeight: number
 maxWidth: number
 ```
 
-组件截图的最大宽度限制。取值范围：（-∞，+∞）单位：px
+组件截图的最大宽度限制。
+
+取值范围：（-∞，+∞）
+
+单位：px
 
 **类型：** number
 

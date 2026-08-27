@@ -121,7 +121,7 @@ Called when a connection fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | number | Yes | Error code returned when connection to the specified ability fails.For details about the error codes, see [Universal Error Codes](../../errorcode-universal.md) and [Ability Error Codes](../errorcode-ability.md).201 - The application does not have permission to call the interface.16000001 - The specified ability does not exist.16000002 - Incorrect ability type.16000004 - Cannot start an invisible component.16000005 - The specified process does not have the permission.16000006 - Cross-user operations are not allowed.16000008 - The crowdtesting application expires.16000053 - The ability is not on the top of the UI.16000055 - Installation-free timed out.16000050 - Internal error. |
+| code | number | Yes | Error code returned when connection to the specified ability fails.  For details about the error codes, see [Universal Error Codes](../../errorcode-universal.md) and [Ability Error Codes](../errorcode-ability.md).  201 - The application does not have permission to call the interface.  16000001 - The specified ability does not exist.  16000002 - Incorrect ability type.  16000004 - Cannot start an invisible component.  16000005 - The specified process does not have the permission.  16000006 - Cross-user operations are not allowed.  16000008 - The crowdtesting application expires.  16000053 - The ability is not on the top of the UI.  16000055 - Installation-free timed out.  16000050 - Internal error. |
 
 **Examples**
 

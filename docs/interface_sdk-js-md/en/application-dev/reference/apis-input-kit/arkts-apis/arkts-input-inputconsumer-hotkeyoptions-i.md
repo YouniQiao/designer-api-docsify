@@ -17,7 +17,9 @@ Defines shortcut key options.
 finalKey: number
 ```
 
-Modified key, which can be any key except the modifier keys and Meta key. For details about the keys, see [@ohos.multimodalInput.keyCode (Keycode)](arkts-input-multimodalinput-keycode-keycode-e.md).For example, in **Ctrl+Shift+Esc**, **Esc** is the modifier key.
+Modified key, which can be any key except the modifier keys and Meta key. For details about the keys, see [@ohos.multimodalInput.keyCode (Keycode)](arkts-input-multimodalinput-keycode-keycode-e.md).
+
+For example, in **Ctrl+Shift+Esc**, **Esc** is the modifier key.
 
 **Type:** number
 
@@ -45,7 +47,9 @@ Whether to report repeated key events. The value **true** means to report repeat
 preKeys: Array<number>
 ```
 
-Modifier key set (including Ctrl, Shift, and Alt). One to four modifier keys are supported. There is no requirement on the sequence of modifier keys.For example, in **Ctrl+Shift+Esc**, **Ctrl** and **Shift** are modifier keys.
+Modifier key set (including Ctrl, Shift, and Alt). One to four modifier keys are supported. There is no requirement on the sequence of modifier keys.
+
+For example, in **Ctrl+Shift+Esc**, **Ctrl** and **Shift** are modifier keys.
 
 **Type:** Array&lt;number&gt;
 

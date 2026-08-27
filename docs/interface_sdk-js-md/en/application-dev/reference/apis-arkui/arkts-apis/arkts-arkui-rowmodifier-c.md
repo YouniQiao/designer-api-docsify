@@ -1,6 +1,8 @@
 # RowModifier
 
-Defines Row Modifier@extends RowAttribute @implements AttributeModifier&lt;RowAttribute&gt;
+Defines Row Modifier
+
+@extends RowAttribute @implements AttributeModifier&lt;RowAttribute&gt;
 
 **Inheritance/Implementation:** RowModifier extends [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md#rowattribute) and implements AttributeModifier<RowAttribute>
 

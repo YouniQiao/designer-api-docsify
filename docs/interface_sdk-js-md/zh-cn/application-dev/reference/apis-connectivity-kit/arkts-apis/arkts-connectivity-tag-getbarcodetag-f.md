@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import tag from '@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getBarcodeTag
@@ -30,7 +30,7 @@ function getBarcodeTag(tagInfo: TagInfo): BarcodeTag
 
 | 类型 | 说明 |
 | --- | --- |
-| [BarcodeTag](arkts-connectivity-tag-barcodetag-t.md) | BarcodeTag类型Tag对象。 |
+| BarcodeTag | BarcodeTag类型Tag对象。 |
 
 **错误码：**
 

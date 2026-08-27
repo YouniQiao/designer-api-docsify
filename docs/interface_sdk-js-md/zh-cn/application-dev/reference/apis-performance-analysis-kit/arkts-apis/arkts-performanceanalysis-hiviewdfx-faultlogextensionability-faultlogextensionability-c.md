@@ -1,7 +1,12 @@
 # FaultLogExtensionAbility
 
-本模块实现故障的延迟通知功能。  
-[HiAppEvent](arkts-performanceanalysis-hiappevent-n.md)订阅崩溃、应用冻屏事件时， 只有当应用下次启动后才能接收上一次的事件。如果应用无法启动或长时间未打开，则存在故障无法及时上 报的局限性。本模块作为该场景的补充。在应用实现FaultLogExtensionAbility后，当应用发生崩溃或冻屏时， 系统服务预计会在30分钟后拉起FaultLogExtensionAbility。开发者可在[onFaultReportReady](#onfaultreportready)中订阅并处理故障事件。
+本模块实现故障的延迟通知功能。
+
+[HiAppEvent](arkts-performanceanalysis-hiappevent-n.md)订阅崩溃、应用冻屏事件时，只有当应用下次启动后才能接收上一次的事件。如果应用无法启动或长时间未打开，则存在故障无法及时上报的局限性。
+
+本模块作为该场景的补充。在应用实现FaultLogExtensionAbility后，当应用发生崩溃或冻屏时，系统服务预计会在30分钟后拉起FaultLogExtensionAbility。
+
+开发者可在[onFaultReportReady](#onfaultreportready)中订阅并处理故障事件。
 
 > **说明：**
 > 
@@ -49,7 +54,7 @@ export default class MyFaultLogExtension extends FaultLogExtensionAbility {
 onDisconnect(): void
 ```
 
-FaultLogExtensionAbility生命周期回调。当系统服务完成断开连接时调用此接口， 用于释放资源清理运行状态，该方法可选择性重写。
+FaultLogExtensionAbility生命周期回调。当系统服务完成断开连接时调用此接口，用于释放资源清理运行状态，该方法可选择性重写。
 
 **起始版本：** 21
 
@@ -73,7 +78,7 @@ export default class MyFaultLogExtension extends FaultLogExtensionAbility {
 onFaultReportReady(): void
 ```
 
-FaultLogExtensionAbility回调。系统服务通知FaultLogExtensionAbility可以进行故障处理时，回调此接口， 可以在该方法中订阅故障事件进行处理。
+FaultLogExtensionAbility回调。系统服务通知FaultLogExtensionAbility可以进行故障处理时，回调此接口，可以在该方法中订阅故障事件进行处理。
 
 **起始版本：** 21
 
@@ -110,7 +115,7 @@ export default class MyFaultLogExtension extends FaultLogExtensionAbility {
 context: FaultLogExtensionContext
 ```
 
-FaultLogExtensionAbility的上下文环境， 继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
+FaultLogExtensionAbility的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)。
 
 **类型：** [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md)
 

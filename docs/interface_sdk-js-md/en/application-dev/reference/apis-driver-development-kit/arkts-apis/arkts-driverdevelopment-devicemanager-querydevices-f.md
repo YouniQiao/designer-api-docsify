@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import deviceManager from '@kit.DriverDevelopmentKit';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## queryDevices
@@ -30,7 +30,7 @@ Queries the list of peripheral devices. If the device has no peripheral device c
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Readonly & lt;Device & gt; & gt; | List of peripheral devices obtained. |
+| Array&lt;Readonly&lt;Device&gt;&gt; | List of peripheral devices obtained. |
 
 **Error codes:**
 

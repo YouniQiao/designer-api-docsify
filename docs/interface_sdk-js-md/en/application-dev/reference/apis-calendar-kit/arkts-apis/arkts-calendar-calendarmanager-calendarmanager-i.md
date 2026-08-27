@@ -9,7 +9,7 @@ Before calling any of the following APIs to manage the calendar, you must use [g
 ## Modules to Import
 
 ```TypeScript
-import calendarManager from '@kit.CalendarKit';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## createCalendar
@@ -38,7 +38,7 @@ Creates a Calendar object based on the calendar account information. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Calendar & gt; | Promise used to return the created Calendar object. |
+| Promise&lt;Calendar&gt; | Promise used to return the created Calendar object. |
 
 **Error codes:**
 
@@ -148,13 +148,13 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md) | Yes | Calendar object to delete. The default account cannot be deleted. |
+| calendar | Calendar | Yes | Calendar object to delete. The default account cannot be deleted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -217,7 +217,7 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md) | Yes | Calendar object to delete. The default account cannot be deleted. |
+| calendar | Calendar | Yes | Calendar object to delete. The default account cannot be deleted. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback that returns no value. |
 
 **Error codes:**
@@ -270,7 +270,9 @@ calendarMgr?.createCalendar(calendarAccount).then((data: calendarManager.Calenda
 editEvent(event: Event): Promise<number>
 ```
 
-Edits an event on the event creation page, with no event ID specified in **Event**. The **instanceStartTime**, **instanceEndTime**, **identifier**, **attendee**, **service**, **isLunar**, and **timeZone** attributes cannot be set. Important events cannot be added either. This API uses a promise to return the result.Events created using this API can be obtained and modified by the system calendar. Third-party applications can obtain and modify the events after they requested the **READ_WHOLE_CALENDAR** permission and the **WRITE_WHOLE_CALENDAR** permission, respectively.
+Edits an event on the event creation page, with no event ID specified in **Event**. The **instanceStartTime**, **instanceEndTime**, **identifier**, **attendee**, **service**, **isLunar**, and **timeZone** attributes cannot be set. Important events cannot be added either. This API uses a promise to return the result.
+
+Events created using this API can be obtained and modified by the system calendar. Third-party applications can obtain and modify the events after they requested the **READ_WHOLE_CALENDAR** permission and the **WRITE_WHOLE_CALENDAR** permission, respectively.
 
 **Since:** 12
 
@@ -282,13 +284,13 @@ Edits an event on the event creation page, with no event ID specified in **Event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event** object. |
+| event | Event | Yes | Event** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the event creation fails, no value is returned; if the value is less than **0**, the event creation is canceled; if the value is greater than **0**, the event creation is successful. The return value cannot be **0 |
+| Promise&lt;number&gt; | Promise used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the event creation fails, no value is returned; if the value is less than **0**, the event creation is canceled; if the value is greater than **0**, the event creation is successful. The return value cannot be **0 |
 
 **Examples**
 
@@ -329,7 +331,7 @@ Obtains the created and default Calendar objects of the current application. Thi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Calendar[] & gt; | Promise used to return an array of obtained Calendar objects. |
+| Promise&lt;Calendar[]&gt; | Promise used to return an array of obtained Calendar objects. |
 
 **Error codes:**
 
@@ -441,7 +443,7 @@ Obtains the default or specified Calendar object. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Calendar & gt; | the promise returned by the function. |
+| Promise&lt;Calendar&gt; | the promise returned by the function. |
 
 **Error codes:**
 

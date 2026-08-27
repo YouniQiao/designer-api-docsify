@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## offset
@@ -20,7 +20,7 @@ import photoAccessHelper from '@kit.MediaLibraryKit';
 offset: number
 ```
 
-分页偏移量。 取值限定为整数。
+分页偏移量。取值限定为整数。
 
 **类型：** number
 
@@ -38,7 +38,7 @@ offset: number
 queryString: string
 ```
 
-由用户输入的LLM分析生成的查询字符串。 最大长度为1000且不能为空。
+由用户输入的LLM分析生成的查询字符串。最大长度为1000且不能为空。
 
 **类型：** string
 
@@ -56,7 +56,7 @@ queryString: string
 size: number
 ```
 
-每个查询要返回的结果数。 取值限定为整数。
+每个查询要返回的结果数。取值限定为整数。
 
 **类型：** number
 

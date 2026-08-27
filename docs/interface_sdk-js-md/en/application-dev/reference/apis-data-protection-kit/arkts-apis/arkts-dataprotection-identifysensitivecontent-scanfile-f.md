@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import identifySensitiveContent from '@kit.DataProtectionKit';
+import { identifySensitiveContent } from '@kit.DataProtectionKit';
 ```
 
 ## scanFile
@@ -25,7 +25,7 @@ Identifies sensitive content in a specified file based on the configured policy 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | File path identified. The path must be a physical path. The file to which the path points must exist and can be accessed. |
-| identifyPolicies | Array & lt;Policy & gt; | Yes | An array of policies used to identify sensitive content. Each policy defines an identification rule (tags, keywords, and regular expressions). The system scans file content based on these rules and returns the matching result. |
+| identifyPolicies | Array&lt;Policy&gt; | Yes | An array of policies used to identify sensitive content. Each policy defines an identification rule (tags, keywords, and regular expressions). The system scans file content based on these rules and returns the matching result. |
 
 **Return value:**
 

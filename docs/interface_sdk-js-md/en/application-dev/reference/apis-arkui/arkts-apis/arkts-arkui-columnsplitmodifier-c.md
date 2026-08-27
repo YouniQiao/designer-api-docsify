@@ -1,6 +1,8 @@
 # ColumnSplitModifier
 
-Defines ColumnSplit Modifier@extends ColumnSplitAttribute @implements AttributeModifier&lt;ColumnSplitAttribute&gt;
+Defines ColumnSplit Modifier
+
+@extends ColumnSplitAttribute @implements AttributeModifier&lt;ColumnSplitAttribute&gt;
 
 **Inheritance/Implementation:** ColumnSplitModifier extends [ColumnSplitAttribute](../arkts-components/arkts-arkui-columnsplit-attribute.md#columnsplitattribute) and implements AttributeModifier<ColumnSplitAttribute>
 

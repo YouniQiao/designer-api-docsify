@@ -1,6 +1,8 @@
 # GridContainerOptions
 
-Defines the options of GridContainer.@interface GridContainerOptions
+Defines the options of GridContainer.
+
+@interface GridContainerOptions
 
 **Since:** 7
 

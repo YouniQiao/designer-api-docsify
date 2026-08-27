@@ -13,7 +13,6 @@
 ## 导入模块
 
 ```TypeScript
-import distributedDataObject from '@kit.ArkDataObject';
 ```
 
 ## deleteEntries
@@ -58,9 +57,9 @@ deviceId: string
 try {
     let query = new distributedData.Query();
     query.deviceId("deviceId");
-    console.log("query is " + query.getSqlLike());
+    console.info("query is " + query.getSqlLike());
 } catch (e) {
-    console.log("should be ok on Method Chaining : " + e);
+    console.error("should be ok on Method Chaining : " + e);
 }
 ```
 

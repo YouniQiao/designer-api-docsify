@@ -73,7 +73,7 @@ Sets the font style of the digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font style of the digit-style navigation indicator.Only the **size** and **weight** parameters in **Font** are adjustable. Setting **family** and **style** has no effect.Default value:{size:?14,?weight:?FontWeight.Normal?} |
+| value | Font | Yes | Font style of the digit-style navigation indicator.Only the **size** and **weight** parameters in **Font** are adjustable. Setting **family** and **style** has no effect.Default value:{size:?14,?weight:?FontWeight.Normal?} |
 
 **Return value:**
 
@@ -133,7 +133,7 @@ Sets the font style of the selected digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font style of the selected digit-style navigation indicator.Default value:{?size:?1 4,?weight:?FontWeight.Normal?} |
+| value | Font | Yes | Font style of the selected digit-style navigation indicator.Default value:{?size:?1 4,?weight:?FontWeight.Normal?} |
 
 **Return value:**
 

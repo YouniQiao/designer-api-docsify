@@ -71,7 +71,7 @@ Obtains the free size of the specified file system, in bytes. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the free size obtained, in bytes. |
+| Promise&lt;number&gt; | Promise used to return the free size obtained, in bytes. |
 
 **Examples**
 

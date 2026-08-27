@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import application from '@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## createModuleContext

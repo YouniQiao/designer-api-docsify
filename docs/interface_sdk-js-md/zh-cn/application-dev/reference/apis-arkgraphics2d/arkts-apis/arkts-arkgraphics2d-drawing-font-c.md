@@ -15,7 +15,7 @@ Font类用于描述字型绘制时所使用的属性（如大小、字体、粗�
 ## 导入模块
 
 ```TypeScript
-import drawing from '@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## countText
@@ -78,13 +78,13 @@ createPathForGlyph(index: number): Path
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 字形索引，可由 [textToGlyphs](#texttoglyphs)生成。 |
+| index | number | 是 | 字形索引，可由[textToGlyphs](#texttoglyphs)生成。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回指定字形的路径轮廓。 |
+| Path | 返回指定字形的路径轮廓。 |
 
 **示例**
 
@@ -230,13 +230,13 @@ getBounds(glyphs: Array<number>): Array<common2D.Rect>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphs | Array & lt;number & gt; | 是 | 字形索引数组，可由 [textToGlyphs](#texttoglyphs)生成。 |
+| glyphs | Array&lt;number&gt; | 是 | 字形索引数组，可由[textToGlyphs](#texttoglyphs)生成。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;common2D.Rect & gt; | 返回字形边界矩形数组。 |
+| Array&lt;common2D.Rect&gt; | 返回字形边界矩形数组。 |
 
 **示例**
 
@@ -457,7 +457,7 @@ getTextPath(text: string, byteLength: number, x: number, y: number): Path
 
 | 类型 | 说明 |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回获取到的文本的路径轮廓。 |
+| Path | 返回获取到的文本的路径轮廓。 |
 
 **错误码：**
 
@@ -512,7 +512,7 @@ getTextPathWithFallback(text: string, byteLength: number, x: number, y: number):
 
 | 类型 | 说明 |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回获取到的文本路径轮廓。路径对象创建失败时返回undefined。 |
+| Path | 返回获取到的文本路径轮廓。路径对象创建失败时返回undefined。 |
 
 **示例**
 
@@ -584,13 +584,13 @@ getWidths(glyphs: Array<number>): Array<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphs | Array & lt;number & gt; | 是 | 字形索引数组，可由 [textToGlyphs](#texttoglyphs)生成。 |
+| glyphs | Array&lt;number&gt; | 是 | 字形索引数组，可由[textToGlyphs](#texttoglyphs)生成。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;number & gt; | 返回字形宽度数组，浮点数。单位为物理像素px。 |
+| Array&lt;number&gt; | 返回字形宽度数组，浮点数。单位为物理像素px。 |
 
 **错误码：**
 
@@ -882,7 +882,7 @@ measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待测量的单个字符。字符串长度必须为1。 |
-| features | Array & lt;FontFeature & gt; | 是 | 字体特征对象数组。参数为空数组时使用TTF（TrueType Font）文件中预设的字体特征。 |
+| features | Array&lt;FontFeature&gt; | 是 | 字体特征对象数组。参数为空数组时使用TTF（TrueType Font）文件中预设的字体特征。 |
 
 **返回值：**
 
@@ -937,7 +937,7 @@ measureText(text: string, encoding: TextEncoding): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待测量的文本内容，将按encoding指定的编码方式进行解析。 |
-| encoding | [TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | 是 | 指定文本的编码格式。 |
+| encoding | TextEncoding | 是 | 指定文本的编码格式。 |
 
 **返回值：**
 
@@ -1361,13 +1361,13 @@ textToGlyphs(text: string, glyphCount?: number): Array<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待转换为字形索引的文本字符串。 |
-| glyphCount | number | 否 | 文本表示的字符数量，该参数为整数。传入时必须与[countText](#counttext)获取的值相等，不传入时默认为 text表示的字符数量。 |
+| glyphCount | number | 否 | 文本表示的字符数量，该参数为整数。传入时必须与[countText](#counttext)获取的值相等，不传入时默认为text表示的字符数量。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;number & gt; | 返回转换得到的字形索引数组。 |
+| Array&lt;number&gt; | 返回转换得到的字形索引数组。 |
 
 **错误码：**
 

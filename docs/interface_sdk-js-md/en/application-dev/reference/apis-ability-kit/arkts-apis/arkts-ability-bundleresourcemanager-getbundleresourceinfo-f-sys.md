@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleResourceManager from '@kit.AbilityKit';
+import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleResourceInfo
@@ -33,7 +33,7 @@ Obtains the resource information of an application based on the given bundle nam
 
 | Type | Description |
 | --- | --- |
-| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) | Resource information of the application obtained. |
+| BundleResourceInfo | Resource information of the application obtained. |
 
 **Error codes:**
 
@@ -110,7 +110,7 @@ Obtains the resource information of an application based on the given bundle nam
 
 | Type | Description |
 | --- | --- |
-| [BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) | Resource information of the application obtained. |
+| BundleResourceInfo | Resource information of the application obtained. |
 
 **Error codes:**
 

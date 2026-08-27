@@ -117,7 +117,7 @@ Locks a metadata object (such as a cat or dog face) for tracking.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes | Point used to lock the metadata object for tracking. |
+| point | Point | Yes | Point used to lock the metadata object for tracking. |
 
 **Error codes:**
 
@@ -395,7 +395,7 @@ Starts to output metadata. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -582,7 +582,7 @@ Stops outputting metadata. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

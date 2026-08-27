@@ -22,7 +22,7 @@ function hasOperatorPrivileges(slotId: number, callback: AsyncCallback<boolean>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotId | number | 是 | 卡槽ID。   - 0：卡槽1。   - 1：卡槽2。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。 返回检查应用（调用者）是否已被授予运营商权限。   - true：授权。   - false：未授权（未插入SIM卡或停 用）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。 返回检查应用（调用者）是否已被授予运营商权限。   - true：授权。   - false：未授权（未插入SIM卡或停用）。 |
 
 **错误码：**
 
@@ -41,7 +41,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { sim } from '@kit.TelephonyKit';
 
 sim.hasOperatorPrivileges(0, (err: BusinessError, data: boolean) => {
-    console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+    if (err) {
+        console.err(`hasOperatorPrivileges failed. callback: err->${JSON.stringify(err)}`);
+        return;
+    }
+    console.info(`callback: data->${JSON.stringify(data)}`);
 });
 ```
 
@@ -68,7 +72,7 @@ function hasOperatorPrivileges(slotId: number): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;boolean & gt; | 以Promise形式返回检查应用(调用者)是否已被授予运营商权限。 |
+| Promise&lt;boolean&gt; | 以Promise形式返回检查应用(调用者)是否已被授予运营商权限。 |
 
 **错误码：**
 

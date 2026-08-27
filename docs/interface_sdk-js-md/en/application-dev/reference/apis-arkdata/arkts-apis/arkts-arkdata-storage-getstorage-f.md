@@ -73,7 +73,7 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Storage & gt; | Promise used to return the result. |
+| Promise&lt;Storage&gt; | Promise used to return the result. |
 
 **Examples**
 

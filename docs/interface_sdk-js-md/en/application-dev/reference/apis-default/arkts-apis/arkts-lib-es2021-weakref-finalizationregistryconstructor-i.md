@@ -17,7 +17,7 @@ Creates a finalization registry with an associated cleanup callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cleanupCallback | (heldValue: T) = & gt; void | Yes |  |
+| cleanupCallback | (heldValue: T) =&gt; void | Yes |  |
 
 **Return value:**
 

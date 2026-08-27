@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import Package, { CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
+import { Package, CheckPackageHasInstalledOptions, CheckPackageHasInstalledResponse } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -18,11 +18,11 @@ import Package, { CheckPackageHasInstalledOptions, CheckPackageHasInstalledRespo
 
 | Name | Description |
 | --- | --- |
-| [Package](arkts-ability-system-package-package-c.md) | > **NOTE：** >  > This API has been supported since API version 3 and deprecated since API version 9. Checks whether a bundle has been installed. |
+| [Package](arkts-ability-system-package-package-c.md) | > **NOTE：** >  > This API has been supported since API version 3 and deprecated since API version 9. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | > **NOTE：** >  > This API has been supported since API version 3 and deprecated since API version 9. Checks whether a bundle has been installed. |
-| [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md) | > **NOTE：** >  > This API has been supported since API version 3 and deprecated since API version 9. Checks whether a bundle has been installed. |
+| [CheckPackageHasInstalledOptions](arkts-ability-system-package-checkpackagehasinstalledoptions-i.md) | > **NOTE：** >  > This API has been supported since API version 3 and deprecated since API version 9. |
+| [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md) | > **NOTE：** >  > This API has been supported since API version 3 and deprecated since API version 9. |

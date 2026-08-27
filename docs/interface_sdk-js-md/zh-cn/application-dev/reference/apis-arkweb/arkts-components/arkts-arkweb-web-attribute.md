@@ -11,9 +11,6 @@
 ## 导入模块
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## aiSessionOptions
@@ -34,7 +31,7 @@ aiSessionOptions(aiSessions: Array<AISessionEvent>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| aiSessions | Array&lt;[AISessionEvent](arkts-arkweb-aisessionevent-i.md)&gt; | 是 | 前端AI会话配置对象数组，每个对象包含AI会话类型及对应的生命周期回调方法。当前仅支持 [AISessionType](arkts-arkweb-aisessiontype-e.md)中包含的模型。 |
+| aiSessions | Array&lt;[AISessionEvent](arkts-arkweb-aisessionevent-i.md)&gt; | 是 | 前端AI会话配置对象数组，每个对象包含AI会话类型及对应的生命周期回调方法。当前仅支持[AISessionType](arkts-arkweb-aisessiontype-e.md)中包含的模型。 |
 
 **示例**
 
@@ -174,7 +171,7 @@ allowWindowOpenMethod(flag : boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flag | boolean | 是 | true表示网页可以通过JavaScript自动打开新窗口，该属性为false时，用户行为仍可通过JavaScript自动打开新窗口，但非用户行为不能通过JavaScript自动打开新窗口。 此处的用户行为是指，在用户对Web组件进行点击等操作后，同时在5秒内请求打开新窗口（window.open）的行为。 默认值与系统属性关联，当系统属性`persist.web.allowWindowOpenMethod.enabled`为true时，默认值为true，如果未设置系统属性则默认值为false。 |
+| flag | boolean | 是 | true表示网页可以通过JavaScript自动打开新窗口，该属性为false时，用户行为仍可通过JavaScript自动打开新窗口，但非用户行为不能通过JavaScript自动打开新窗口。此处的用户行为是指，在用户对Web组件进行点击等操作后，同时在5秒内请求打开新窗口（window.open）的行为。默认值与系统属性关联，当系统属性`persist.web.allowWindowOpenMethod.enabled`为true时，默认值为true，如果未设置系统属性则默认值为false。 |
 
 **示例**
 
@@ -280,7 +277,7 @@ backToTop(backToTop: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| backToTop | boolean | 是 | 是否启用Web点击状态栏回顶，true表示启用，false表示不启用。 传入undefined或null时为true。 |
+| backToTop | boolean | 是 | 是否启用Web点击状态栏回顶，true表示启用，false表示不启用。传入undefined或null时为true。 |
 
 **示例**
 
@@ -756,7 +753,7 @@ blockNetwork(block: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| block | boolean | 是 | 设置Web组件是否允许从网络加载资源。 true表示不允许从网络加载资源，false表示允许从网络加载资源。 传入undefined或null时为false。 |
+| block | boolean | 是 | 设置Web组件是否允许从网络加载资源。true表示不允许从网络加载资源，false表示允许从网络加载资源。传入undefined或null时为false。 |
 
 **示例**
 
@@ -857,7 +854,7 @@ bypassVsyncCondition(condition: WebBypassVsyncCondition)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| condition | [WebBypassVsyncCondition](arkts-arkweb-webbypassvsynccondition-e.md) | 是 | 触发渲染流程跳过vsync调度的条件。 传入undefined或null时为NONE。 |
+| condition | [WebBypassVsyncCondition](arkts-arkweb-webbypassvsynccondition-e.md) | 是 | 触发渲染流程跳过vsync调度的条件。传入undefined或null时为NONE。 |
 
 **示例**
 
@@ -902,7 +899,7 @@ cacheMode(cacheMode: CacheMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| cacheMode | [CacheMode](arkts-arkweb-cachemode-e.md) | 是 | 要设置的缓存模式。 传入undefined或null时为CacheMode.Default。 |
+| cacheMode | [CacheMode](arkts-arkweb-cachemode-e.md) | 是 | 要设置的缓存模式。传入undefined或null时为CacheMode.Default。 |
 
 **示例**
 
@@ -948,7 +945,7 @@ copyOptions(value: CopyOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CopyOptions](#copyoptions) | 是 | 要设置的剪贴板复制范围选项。 传入undefined或null时为CopyOptions.None。 |
+| value | CopyOptions | 是 | 要设置的剪贴板复制范围选项。传入undefined或null时为CopyOptions.None。 |
 
 **示例**
 
@@ -976,7 +973,9 @@ struct WebComponent {
 darkMode(mode: WebDarkMode)
 ```
 
-设置Web深色模式。当属性没有显式调用时，默认关闭。当深色模式开启时，Web将启用媒体查询prefers-color-scheme中网页所定义的深色样式，若网页未定义深色样式，则保持原状。如需开启强制深色模式，建议配合 [forceDarkAccess](#forcedarkaccess)使用。深色模式具体用法可参考[Web深色模式适配](../../../web/web-set-dark-mode.md)。
+设置Web深色模式。当属性没有显式调用时，默认关闭。
+
+当深色模式开启时，Web将启用媒体查询prefers-color-scheme中网页所定义的深色样式，若网页未定义深色样式，则保持原状。如需开启强制深色模式，建议配合[forceDarkAccess](#forcedarkaccess)使用。深色模式具体用法可参考[Web深色模式适配](../../../web/web-set-dark-mode.md)。
 
 **起始版本：** 9
 
@@ -988,7 +987,7 @@ darkMode(mode: WebDarkMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebDarkMode](arkts-arkweb-webdarkmode-e.md) | 是 | 设置Web的深色模式为关闭、开启或跟随系统。 传入null或undefined时为`WebDarkMode.Off`。 |
+| mode | [WebDarkMode](arkts-arkweb-webdarkmode-e.md) | 是 | 设置Web的深色模式为关闭、开启或跟随系统。传入null或undefined时为`WebDarkMode.Off`。 |
 
 **示例**
 
@@ -1034,7 +1033,7 @@ databaseAccess(databaseAccess: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| databaseAccess | boolean | 是 | 设置是否开启Web SQL数据库存储API权限。 true表示开启，false表示关闭。 传入undefined或null时为false。 |
+| databaseAccess | boolean | 是 | 设置是否开启Web SQL数据库存储API权限。true表示开启，false表示关闭。传入undefined或null时为false。 |
 
 **示例**
 
@@ -1062,7 +1061,12 @@ struct WebComponent {
 dataDetectorConfig(config: TextDataDetectorConfig)
 ```
 
-设置文本识别配置。需配合[enableDataDetector](#enabledatadetector)一起使用，设置enableDataDetector为true时，dataDetectorConfig的配置 才能生效。当两个实体A、B重叠时，按以下规则保留实体：
+设置文本识别配置。
+
+需配合[enableDataDetector](#enabledatadetector)一起使用，设置enableDataDetector为true时，dataDetectorConfig的配置才能生效。
+
+当两个实体A、B重叠时，按以下规则保留实体：
+
 1. 若A&nbsp;⊂&nbsp;B，则保留B，反之则保留A。
 2. 当A&nbsp;⊄&nbsp;B且B&nbsp;⊄&nbsp;A时，若A.start&nbsp;&lt;&nbsp;B.start，则保留A，反之则保留B。
 
@@ -1131,7 +1135,9 @@ struct WebComponent {
 defaultFixedFontSize(size: number)
 ```
 
-设置网页的默认等宽字体大小。对于html前端使用monospace字体且未指定font-size样式的元素，将按此值渲染字体大小。当属性没有显式调用时，默认等宽字体大小为13。
+设置网页的默认等宽字体大小。对于html前端使用monospace字体且未指定font-size样式的元素，将按此值渲染字体大小。
+
+当属性没有显式调用时，默认等宽字体大小为13。
 
 **起始版本：** 9
 
@@ -1143,7 +1149,7 @@ defaultFixedFontSize(size: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | number | 是 | 设置网页的默认等宽字体大小，单位px。 输入值的范围为[-2^31, 2^31-1]，实际渲染时超过72px的值按照72px进行渲染，低于1px的值按照1px进行渲染。 传入null或undefined时为13。 |
+| size | number | 是 | 设置网页的默认等宽字体大小，单位px。输入值的范围为[-2^31, 2^31-1]，实际渲染时超过72px的值按照72px进行渲染，低于1px的值按照1px进行渲染。传入null或undefined时为13。 |
 
 **示例**
 
@@ -1172,7 +1178,9 @@ struct WebComponent {
 defaultFontSize(size: number)
 ```
 
-设置网页的默认字体大小。对于html前端使用非monospace字体且未指定font-size样式的元素，将按此值渲染字体大小。当属性没有显式调用时，网页的默认字体大小为16。
+设置网页的默认字体大小。对于html前端使用非monospace字体且未指定font-size样式的元素，将按此值渲染字体大小。
+
+当属性没有显式调用时，网页的默认字体大小为16。
 
 **起始版本：** 9
 
@@ -1184,7 +1192,7 @@ defaultFontSize(size: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | number | 是 | 设置网页的默认字体大小，单位px。 输入值的范围为[-2^31, 2^31-1]，实际渲染时超过72px的值按照72px进行渲染，低于1px的值按照1px进行渲染。 传入null或undefined时为16。 |
+| size | number | 是 | 设置网页的默认字体大小，单位px。输入值的范围为[-2^31, 2^31-1]，实际渲染时超过72px的值按照72px进行渲染，低于1px的值按照1px进行渲染。传入null或undefined时为16。 |
 
 **示例**
 
@@ -1225,7 +1233,7 @@ defaultTextEncodingFormat(textEncodingFormat: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| textEncodingFormat | string | 是 | 默认字符编码。 传入null或undefined时为"UTF-8"。 |
+| textEncodingFormat | string | 是 | 默认字符编码。传入null或undefined时为"UTF-8"。 |
 
 **示例**
 
@@ -1284,7 +1292,7 @@ domStorageAccess(domStorageAccess: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| domStorageAccess | boolean | 是 | 设置是否开启文档对象模型存储接口（DOM Storage API）权限。 true表示开启，false表示不开启。 传入undefined或null时为false。 |
+| domStorageAccess | boolean | 是 | 设置是否开启文档对象模型存储接口（DOM Storage API）权限。true表示开启，false表示不开启。传入undefined或null时为false。 |
 
 **示例**
 
@@ -1324,7 +1332,14 @@ editMenuOptions(editMenu: EditMenuOptions)
 > 
 > 两者不宜同时使用，建议根据自定义程度需求选择。
 > 用户可以通过该属性设置自定义的文本菜单。
-在onCreateMenu中，可以修改、增加、删除菜单选项，如果希望不显示文本菜单，需要返回空数组。在onMenuItemClick中，可以自定义菜单选项的回调函数。该函数在菜单选项被点击后触发，并根据返回值决定是否执行系统默认的回调。返回true 不执行系统回调，返回false继续执行系统回调。在[onPrepareMenu&lt;sup&gt;20+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#属性-1)中，当文本选择区域变化后显示菜单之前触发该 回调，可在该回调中进行修改、增加、删除菜单选项，实现动态更新菜单。本接口在与[selectionMenuOptions&lt;sup&gt;(deprecated)&lt;/sup&gt;](#selectionmenuoptions)同时使用时，会使 selectionMenuOptions&lt;sup&gt;(deprecated)&lt;/sup&gt;不生效。
+
+在onCreateMenu中，可以修改、增加、删除菜单选项，如果希望不显示文本菜单，需要返回空数组。
+
+在onMenuItemClick中，可以自定义菜单选项的回调函数。该函数在菜单选项被点击后触发，并根据返回值决定是否执行系统默认的回调。返回true不执行系统回调，返回false继续执行系统回调。
+
+在[onPrepareMenu&lt;sup&gt;20+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#属性-1)中，当文本选择区域变化后显示菜单之前触发该回调，可在该回调中进行修改、增加、删除菜单选项，实现动态更新菜单。
+
+本接口在与[selectionMenuOptions&lt;sup&gt;(deprecated)&lt;/sup&gt;](#selectionmenuoptions)同时使用时，会使selectionMenuOptions&lt;sup&gt;(deprecated)&lt;/sup&gt;不生效。
 
 **起始版本：** 12
 
@@ -1334,7 +1349,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| editMenu | [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md) | 是 | Web自定义文本菜单选项。 菜单项数量，及菜单的content大小、icon图标尺寸，与ArkUI Menu组件保持一致。 菜单中系统自带的id枚举值（[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)）在Web中仅支持CUT、COPY、PASTE、SELECT_ALL、TRANSLATE、SEARCH、 AI_WRITER七项。 onMenuItemClick函数中textRange参数在Web中无意义，传入值为-1。 |
+| editMenu | [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md) | 是 | Web自定义文本菜单选项。菜单项数量，及菜单的content大小、icon图标尺寸，与ArkUI Menu组件保持一致。菜单中系统自带的id枚举值（[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)）在Web中仅支持CUT、COPY、PASTE、SELECT_ALL、TRANSLATE、SEARCH、AI_WRITER七项。onMenuItemClick函数中textRange参数在Web中无意义，传入值为-1。 |
 
 **示例**
 
@@ -1470,11 +1485,14 @@ struct WebComponent {
 enableAutoFill(value: boolean)
 ```
 
-设置是否启用网页自动填充，默认开启。<!--RP1-->
+设置是否启用网页自动填充，默认开启。
+
+<!--RP1-->
 
 > **说明：**
 > 
 > 本接口的自动填充功能，依赖“智能填充服务”和“密码填充服务”的支持。
+
 <!--RP1End-->
 
 **起始版本：** 23
@@ -1485,7 +1503,7 @@ enableAutoFill(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否启用网页自动填充，true表示启用，false表示不启用。 传入undefined或null时为true。 |
+| value | boolean | 是 | 是否启用网页自动填充，true表示启用，false表示不启用。传入undefined或null时为true。 |
 
 **示例**
 
@@ -1548,7 +1566,14 @@ enableDataDetector(enable: boolean)
 > [enableSelectedDataDetector](#enableselecteddatadetector)等属性依赖此属性开启时才能正常生效。
 > 当enableDataDetector设置为true，同时不设置[dataDetectorConfig](#datadetectorconfig)属性时，默认识别所有类型的实体，所识别实体的
 > color和decoration会被更改为如下样式：
-<!--code_no_check-->当enableDataDetector设置为true且[copyOptions](#copyoptions)设置为CopyOptions.LocalDevice时，AI菜单功能将被激活。此时，在 网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)中的url（打开链接）、email（新建邮件）、phoneNumber（呼叫）、address （导航至该位置）、dateTime（新建日程提醒）。AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)中的askAI菜单项不同时出现。示例使用场景详见[使用Web组件的智能分词能力](../../../web/web-data-detector.md)。
+
+<!--code_no_check-->
+
+当enableDataDetector设置为true且[copyOptions](#copyoptions)设置为CopyOptions.LocalDevice时，AI菜单功能将被激活。此时，在网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)中的url（打开链接）、email（新建邮件）、phoneNumber（呼叫）、address（导航至该位置）、dateTime（新建日程提醒）。
+
+AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)中的askAI菜单项不同时出现。
+
+示例使用场景详见[使用Web组件的智能分词能力](../../../web/web-data-detector.md)。
 
 **起始版本：** 20
 
@@ -1558,7 +1583,7 @@ enableDataDetector(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否启用Web文本识别，true表示启用，false表示不启用。 传入undefined或null时属性设置不生效。 |
+| enable | boolean | 是 | 是否启用Web文本识别，true表示启用，false表示不启用。传入undefined或null时属性设置不生效。 |
 
 **示例**
 
@@ -1620,7 +1645,7 @@ enableDefaultContextMenu(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否启用默认右键上下文菜单，true表示启用，false表示不启用。 传入undefined或null时为false。 |
+| enable | boolean | 是 | 是否启用默认右键上下文菜单，true表示启用，false表示不启用。传入undefined或null时为false。 |
 
 **示例**
 
@@ -1682,7 +1707,7 @@ enableFollowSystemFontWeight(follow: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| follow | boolean | 是 | 设置Web组件是否开启字重跟随系统设置变化。 true表示字重跟随系统设置中的字体粗细变化，系统设置改变时字重跟随变化。false表示字重不再跟随系统设置中的字体粗细变化，系统设置改变时维持当前字重不变。 传入undefined或null时为false。 |
+| follow | boolean | 是 | 设置Web组件是否开启字重跟随系统设置变化。true表示字重跟随系统设置中的字体粗细变化，系统设置改变时字重跟随变化。false表示字重不再跟随系统设置中的字体粗细变化，系统设置改变时维持当前字重不变。传入undefined或null时为false。 |
 
 **示例**
 
@@ -1728,7 +1753,7 @@ enableFullscreenVideoOverlay(enabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 设置 Web 组件是否开启覆盖式全屏播放功能。 true 表示开启该功能。 false 表示不开启。 传入 undefined 或 null 时为 false。 |
+| enabled | boolean | 是 | 设置 Web 组件是否开启覆盖式全屏播放功能。true 表示开启该功能。false 表示不开启。传入 undefined 或 null 时为 false。 |
 
 **示例**
 
@@ -1766,7 +1791,7 @@ enableHapticFeedback(enabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 是否开启振动。 true表示开启振动，false表示不开启振动。 传入undefined或null时保持默认值，即开启振动。 |
+| enabled | boolean | 是 | 是否开启振动。true表示开启振动，false表示不开启振动。传入undefined或null时保持默认值，即开启振动。 |
 
 **示例**
 
@@ -1828,7 +1853,7 @@ enableImageAnalyzer(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否启用网页图片AI分析，true表示启用，false表示不启用。 传入undefined或null时重置为true。 |
+| enable | boolean | 是 | 是否启用网页图片AI分析，true表示启用，false表示不启用。传入undefined或null时重置为true。 |
 
 **示例**
 
@@ -1900,7 +1925,7 @@ enableMediaNetworkProxy(enabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 设置Web组件是否开启媒体资源网络请求代理功能。 true表示开启该功能。 false表示不开启。 |
+| enabled | boolean | 是 | 设置Web组件是否开启媒体资源网络请求代理功能。true表示开启该功能。false表示不开启。 |
 
 **示例**
 
@@ -1945,7 +1970,7 @@ enableNativeEmbedMode(enabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 是否开启同层渲染功能。 true表示开启同层渲染功能，false表示不开启同层渲染功能。 传入undefined或null时为false。 |
+| enabled | boolean | 是 | 是否开启同层渲染功能。true表示开启同层渲染功能，false表示不开启同层渲染功能。传入undefined或null时为false。 |
 
 **示例**
 
@@ -1984,7 +2009,7 @@ enableNativeMediaPlayer(config: NativeMediaPlayerConfig)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [NativeMediaPlayerConfig](arkts-arkweb-nativemediaplayerconfig-i.md) | 是 | 应用接管网页媒体播放功能的配置对象。包含以下属性：enable（boolean 类型，是否开启该功能，默认为 false）， shouldOverlay（boolean 类型，当功能开启后，应用接管网页视频的播放器画面是否覆盖网页内容，默认为 false）。 传入 undefined 或 null 时为`{enable: false, shouldOverlay: false}`。 |
+| config | [NativeMediaPlayerConfig](arkts-arkweb-nativemediaplayerconfig-i.md) | 是 | 应用接管网页媒体播放功能的配置对象。包含以下属性：enable（boolean 类型，是否开启该功能，默认为 false），shouldOverlay（boolean 类型，当功能开启后，应用接管网页视频的播放器画面是否覆盖网页内容，默认为 false）。传入 undefined 或 null 时为`{enable: false, shouldOverlay: false}`。 |
 
 **示例**
 
@@ -2012,7 +2037,7 @@ struct WebComponent {
 enableScrollDirectionalLock(value: boolean, type: ScrollDirectionalLockType)
 ```
 
-设置Web组件滑动方向锁定，防止用户在斜向滑动时同时触发水平和垂直滚动，提升滚动体验。不调用该方法设置时，默认在嵌套滚动场景下支持滑动方向锁定。ALL模式适用于所有需要锁定滑动的场景，NESTED_SCROLL模式仅适用于嵌套滚动 场景。
+设置Web组件滑动方向锁定，防止用户在斜向滑动时同时触发水平和垂直滚动，提升滚动体验。不调用该方法设置时，默认在嵌套滚动场景下支持滑动方向锁定。ALL模式适用于所有需要锁定滑动的场景，NESTED_SCROLL模式仅适用于嵌套滚动场景。
 
 **起始版本：** 26.0.0
 
@@ -2056,7 +2081,13 @@ struct WebComponent {
 enableSelectedDataDetector(enable: boolean)
 ```
 
-设置是否启用文本选择的AI菜单功能，启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。AI菜单功能启用时，在网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)中的url（打开链接）、email（新建邮件）、phoneNumber（ 呼叫）、address（导航前往）、dateTime（新建日程）。AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)中的askAI菜单项不同时出现。示例使用场景详见[使用Web组件的智能分词能力](../../../web/web-data-detector.md)。
+设置是否启用文本选择的AI菜单功能，启用后可识别选区中的邮件、电话、网址、日期、地址等，并在文本选择菜单中展示对应的AI菜单项。默认启用AI菜单功能。
+
+AI菜单功能启用时，在网页中选中文本后，文本选择菜单能够展示对应的AI菜单项，包括[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)中的url（打开链接）、email（新建邮件）、phoneNumber（呼叫）、address（导航前往）、dateTime（新建日程）。
+
+AI菜单生效时，需在选中范围内，包括一个完整的AI实体，才能展示对应的选项。该菜单项与[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)中的askAI菜单项不同时出现。
+
+示例使用场景详见[使用Web组件的智能分词能力](../../../web/web-data-detector.md)。
 
 **起始版本：** 22
 
@@ -2066,7 +2097,7 @@ enableSelectedDataDetector(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否启用Web文本识别，true表示启用，false表示不启用。 传入undefined或null时属性重置为默认值。 |
+| enable | boolean | 是 | 是否启用Web文本识别，true表示启用，false表示不启用。传入undefined或null时属性重置为默认值。 |
 
 **示例**
 
@@ -2120,7 +2151,7 @@ enableWebAVSession(enabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 设置是否支持应用对接到播控中心。 true表示支持应用对接到播控中心，false表示不支持应用对接到播控中心。 传入undefined或null时为true。 |
+| enabled | boolean | 是 | 设置是否支持应用对接到播控中心。true表示支持应用对接到播控中心，false表示不支持应用对接到播控中心。传入undefined或null时为true。 |
 
 **示例**
 
@@ -2166,7 +2197,7 @@ struct WebComponent {
 fileAccess(fileAccess: boolean)
 ```
 
-设置是否开启应用中文件系统的访问。[\$rawfile(filepath/filename)](../../../quick-start/resource-categories-and-access.md#资源访问)中的文件不受该 属性影响而被限制访问。API version 11及以前，当属性没有显式调用时，默认开启应用中文件系统的访问。API version 12及以后，当属性没有显式调用时，默认不开启应用中文件系统的访问。
+设置是否开启应用中文件系统的访问。[\$rawfile(filepath/filename)](../../../quick-start/resource-categories-and-access.md#资源访问)中的文件不受该属性影响而被限制访问。API version 11及以前，当属性没有显式调用时，默认开启应用中文件系统的访问。API version 12及以后，当属性没有显式调用时，默认不开启应用中文件系统的访问。
 
 **起始版本：** 8
 
@@ -2178,7 +2209,7 @@ fileAccess(fileAccess: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fileAccess | boolean | 是 | 设置是否开启应用中文件系统的访问。 true表示开启，false表示不开启。 同时，当fileAccess为false的时候，仅只读资源目录`/data/storage/el1/bundle/entry/resources/resfile`里面的资源依然可以通过file协议访问，不受 fileAccess管控。 API version 11及以前，传入undefined或null时为true，API version 12及以后传入undefined或null时为false。 |
+| fileAccess | boolean | 是 | 设置是否开启应用中文件系统的访问。true表示开启，false表示不开启。同时，当fileAccess为false的时候，仅只读资源目录`/data/storage/el1/bundle/entry/resources/resfile`里面的资源依然可以通过file协议访问，不受fileAccess管控。API version 11及以前，传入undefined或null时为true，API version 12及以后传入undefined或null时为false。 |
 
 **示例**
 
@@ -2218,7 +2249,7 @@ forceDarkAccess(access: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| access | boolean | 是 | 设置网页是否开启强制深色模式。 true表示开启，false表示设置不开启。 传入null或undefined时为false。 |
+| access | boolean | 是 | 设置网页是否开启强制深色模式。true表示开启，false表示设置不开启。传入null或undefined时为false。 |
 
 **示例**
 
@@ -2249,7 +2280,9 @@ struct WebComponent {
 forceDisplayScrollBar(enabled: boolean)
 ```
 
-设置滚动条是否常驻。在常驻状态下，当页面大小超过一页时，滚动条出现且不消失。该属性没有显式调用时，默认设置滚动条不常驻。全量展开模式下不支持滚动条常驻，即layoutMode为WebLayoutMode.FIT_CONTENT模式时，参数enabled为false。
+设置滚动条是否常驻。在常驻状态下，当页面大小超过一页时，滚动条出现且不消失。该属性没有显式调用时，默认设置滚动条不常驻。
+
+全量展开模式下不支持滚动条常驻，即layoutMode为WebLayoutMode.FIT_CONTENT模式时，参数enabled为false。
 
 > **说明：**
 > 
@@ -2267,7 +2300,7 @@ forceDisplayScrollBar(enabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 滚动条是否常驻。 true表示滚动条常驻，false表示滚动条不常驻。 当layoutMode为WebLayoutMode.FIT_CONTENT模式时，enabled参数强制为false，设置true也不生效。 传入undefined或null时属性设置不生效。 |
+| enabled | boolean | 是 | 滚动条是否常驻。true表示滚动条常驻，false表示滚动条不常驻。当layoutMode为WebLayoutMode.FIT_CONTENT模式时，enabled参数强制为false，设置true也不生效。传入undefined或null时属性设置不生效。 |
 
 **示例**
 
@@ -2330,7 +2363,7 @@ forceEnableZoom(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 设置是否遵从网页中`&lt;meta name="viewport"&gt;`标签设置的缩放限制。 设置为`true`时，不遵从网页缩放限制；设置为`false`时，遵从网页缩放限制。 传入`undefined`与`null`时属性设置不生效。 |
+| enable | boolean | 是 | 设置是否遵从网页中`&lt;meta name="viewport"&gt;`标签设置的缩放限制。设置为`true`时，不遵从网页缩放限制；设置为`false`时，遵从网页缩放限制。传入`undefined`与`null`时属性设置不生效。 |
 
 **示例**
 
@@ -2387,7 +2420,7 @@ geolocationAccess(geolocationAccess: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| geolocationAccess | boolean | 是 | 设置是否开启获取地理位置权限。 true表示开启，false表示不开启。 传入undefined或null时为false。 |
+| geolocationAccess | boolean | 是 | 设置是否开启获取地理位置权限。true表示开启，false表示不开启。传入undefined或null时为false。 |
 
 **示例**
 
@@ -2487,7 +2520,7 @@ horizontalScrollBarAccess(horizontalScrollBar: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| horizontalScrollBar | boolean | 是 | 设置是否显示横向滚动条。 true表示显示，false表示不显示。 传入undefined或null时为false。 |
+| horizontalScrollBar | boolean | 是 | 设置是否显示横向滚动条。true表示显示，false表示不显示。传入undefined或null时为false。 |
 
 **示例**
 
@@ -2571,7 +2604,7 @@ imageAccess(imageAccess: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| imageAccess | boolean | 是 | 设置是否允许自动加载图片资源。 true 表示允许，false 表示不允许。 传入 undefined 或 null 时为 false。 |
+| imageAccess | boolean | 是 | 设置是否允许自动加载图片资源。true 表示允许，false 表示不允许。传入 undefined 或 null 时为 false。 |
 
 **示例**
 
@@ -2611,7 +2644,7 @@ initialScale(percent: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| percent | number | 是 | 要设置的整体页面的缩放百分比。 取值范围：(0, 1000]。 传入undefined或null时属性设置不生效。 |
+| percent | number | 是 | 要设置的整体页面的缩放百分比。取值范围：(0, 1000]。传入undefined或null时属性设置不生效。 |
 
 **示例**
 
@@ -2652,7 +2685,7 @@ javaScriptAccess(javaScriptAccess: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| javaScriptAccess | boolean | 是 | 是否允许执行JavaScript脚本。 true表示允许，false表示不允许。 传入undefined或null时为false。 |
+| javaScriptAccess | boolean | 是 | 是否允许执行JavaScript脚本。true表示允许，false表示不允许。传入undefined或null时为false。 |
 
 **示例**
 
@@ -2703,7 +2736,7 @@ javaScriptOnDocumentEnd(scripts: Array<ScriptItem>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scripts | Array&lt;[ScriptItem](arkts-arkweb-scriptitem-i.md)&gt; | 是 | 需要注入的ScriptItem数组。 传入undefined或null时不将JavaScript脚本注入到Web组件中。 |
+| scripts | Array&lt;[ScriptItem](arkts-arkweb-scriptitem-i.md)&gt; | 是 | 需要注入的ScriptItem数组。传入undefined或null时不将JavaScript脚本注入到Web组件中。 |
 
 **示例**
 
@@ -2780,7 +2813,7 @@ javaScriptOnDocumentStart(scripts: Array<ScriptItem>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scripts | Array&lt;[ScriptItem](arkts-arkweb-scriptitem-i.md)&gt; | 是 | 需要注入的ScriptItem数组。 传入undefined或null时不将JavaScript脚本注入到Web组件中。 |
+| scripts | Array&lt;[ScriptItem](arkts-arkweb-scriptitem-i.md)&gt; | 是 | 需要注入的ScriptItem数组。传入undefined或null时不将JavaScript脚本注入到Web组件中。 |
 
 ## javaScriptProxy
 
@@ -2788,7 +2821,7 @@ javaScriptOnDocumentStart(scripts: Array<ScriptItem>)
 javaScriptProxy(javaScriptProxy: JavaScriptProxy)
 ```
 
-将javaScriptProxy中的ArkTS对象注册到Web组件中，该对象将使用JavaScriptProxy中指定的名称注册到网页的所有框架中，包括所有iframe，这使得JavaScript可以调用 javaScriptProxy中ArkTS对象的方法。
+将javaScriptProxy中的ArkTS对象注册到Web组件中，该对象将使用JavaScriptProxy中指定的名称注册到网页的所有框架中，包括所有iframe，这使得JavaScript可以调用javaScriptProxy中ArkTS对象的方法。
 
 > **说明：**
 > 
@@ -2814,7 +2847,7 @@ javaScriptProxy(javaScriptProxy: JavaScriptProxy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| javaScriptProxy | [JavaScriptProxy](arkts-arkweb-javascriptproxy-i.md) | 是 | 参与注册的对象。只能声明方法，不能声明属性。 传入undefined或null时不将javaScriptProxy中的ArkTS对象注册到Web组件中。<br>**起始版本：** 12 |
+| javaScriptProxy | [JavaScriptProxy](arkts-arkweb-javascriptproxy-i.md) | 是 | 参与注册的对象。只能声明方法，不能声明属性。传入undefined或null时不将javaScriptProxy中的ArkTS对象注册到Web组件中。<br>**起始版本：** 12 |
 
 **示例**
 
@@ -2934,7 +2967,9 @@ struct WebComponent {
 keyboardAvoidMode(mode: WebKeyboardAvoidMode)
 ```
 
-Web组件自定义软件键盘避让模式。当UIContext设置的键盘避让模式为[KeyboardAvoidMode.RESIZE](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)模式时，该接口功能不生效。
+Web组件自定义软件键盘避让模式。
+
+当UIContext设置的键盘避让模式为[KeyboardAvoidMode.RESIZE](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)模式时，该接口功能不生效。
 
 **起始版本：** 12
 
@@ -2946,7 +2981,7 @@ Web组件自定义软件键盘避让模式。当UIContext设置的键盘避让�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebKeyboardAvoidMode](arkts-arkweb-webkeyboardavoidmode-e.md) | 是 | Web软键盘避让模式。 嵌套滚动场景下不推荐使用web软键盘避让，包括RESIZE_VISUAL与RESIZE_CONTENT。 默认值：`WebKeyboardAvoidMode.RESIZE_CONTENT`避让行为。 |
+| mode | [WebKeyboardAvoidMode](arkts-arkweb-webkeyboardavoidmode-e.md) | 是 | Web软键盘避让模式。嵌套滚动场景下不推荐使用web软键盘避让，包括RESIZE_VISUAL与RESIZE_CONTENT。默认值：`WebKeyboardAvoidMode.RESIZE_CONTENT`避让行为。 |
 
 **示例**
 
@@ -3032,7 +3067,7 @@ layoutMode(mode: WebLayoutMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [WebLayoutMode](arkts-arkweb-weblayoutmode-e.md) | 是 | 设置Web布局模式，跟随系统或自适应布局。 传入null或undefined时为`WebLayoutMode.NONE` |
+| mode | [WebLayoutMode](arkts-arkweb-weblayoutmode-e.md) | 是 | 设置Web布局模式，跟随系统或自适应布局。传入null或undefined时为`WebLayoutMode.NONE` |
 
 **示例**
 
@@ -3108,7 +3143,7 @@ mediaOptions(options: WebMediaOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [WebMediaOptions](arkts-arkweb-webmediaoptions-i.md) | 是 | 设置Web的媒体策略。 属性参数更新后需重新播放音频方可生效。 传入undefined或null时为`{resumeInterval: 0, audioExclusive: true}` |
+| options | [WebMediaOptions](arkts-arkweb-webmediaoptions-i.md) | 是 | 设置Web的媒体策略。属性参数更新后需重新播放音频方可生效。传入undefined或null时为`{resumeInterval: 0, audioExclusive: true}` |
 
 **示例**
 
@@ -3149,7 +3184,7 @@ mediaPlayGestureAccess(access: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| access | boolean | 是 | 设置有声视频的自动播放是否需要用户手动点击。 true 表示需要用户手动点击，false 表示不需要，能自动播放。 传入 undefined 或 null 时为 false。 |
+| access | boolean | 是 | 设置有声视频的自动播放是否需要用户手动点击。true 表示需要用户手动点击，false 表示不需要，能自动播放。传入 undefined 或 null 时为 false。 |
 
 **示例**
 
@@ -3215,7 +3250,7 @@ metaViewport(enabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 是否支持meta标签的viewport属性。 true表示支持meta标签的viewport属性，将解析viewport属性，并根据viewport属性布局。 false表示不支持meta标签的viewport属性，将不解析viewport属性，进行默认布局。 传入null或undefined时为true。 |
+| enabled | boolean | 是 | 是否支持meta标签的viewport属性。true表示支持meta标签的viewport属性，将解析viewport属性，并根据viewport属性布局。false表示不支持meta标签的viewport属性，将不解析viewport属性，进行默认布局。传入null或undefined时为true。 |
 
 **示例**
 
@@ -3258,7 +3293,9 @@ struct WebComponent {
 minFontSize(size: number)
 ```
 
-设置网页字体大小最小值。对于html前端元素，若元素字体大小低于该接口设置值，将采用接口设置值渲染字体大小。当属性没有显式调用时，默认网页字体大小最小值为8。
+设置网页字体大小最小值。对于html前端元素，若元素字体大小低于该接口设置值，将采用接口设置值渲染字体大小。
+
+当属性没有显式调用时，默认网页字体大小最小值为8。
 
 **起始版本：** 9
 
@@ -3270,7 +3307,7 @@ minFontSize(size: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | number | 是 | 设置网页字体大小最小值，单位px。 输入值的范围为[-2^31, 2^31-1]，实际渲染时超过72px的值按照72px进行渲染，低于1px的值按照1px进行渲染。 传入null或undefined时为8。 |
+| size | number | 是 | 设置网页字体大小最小值，单位px。输入值的范围为[-2^31, 2^31-1]，实际渲染时超过72px的值按照72px进行渲染，低于1px的值按照1px进行渲染。传入null或undefined时为8。 |
 
 **示例**
 
@@ -3299,9 +3336,13 @@ struct WebComponent {
 minLogicalFontSize(size: number)
 ```
 
-设置网页逻辑字体大小最小值。对于html前端未指定font-size样式的元素：
+设置网页逻辑字体大小最小值。
+
+对于html前端未指定font-size样式的元素：
+
 1. 若元素字体大小低于该接口设置值，将采用接口设置值渲染字体大小。
 2. 若minLogicalFontSize和minFontSize同时设置时，对于未指定font-size样式元素，将采用两者中的较大值。
+
 当属性没有显式调用时，默认网页逻辑字体大小最小值为8。
 
 **起始版本：** 9
@@ -3314,7 +3355,7 @@ minLogicalFontSize(size: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | number | 是 | 设置网页逻辑字体大小最小值，单位px。 输入值的范围为[-2^31, 2^31-1]，实际渲染时超过72px的值按照72px进行渲染，低于1px的值按照1px进行渲染。 传入null或undefined时为8。 |
+| size | number | 是 | 设置网页逻辑字体大小最小值，单位px。输入值的范围为[-2^31, 2^31-1]，实际渲染时超过72px的值按照72px进行渲染，低于1px的值按照1px进行渲染。传入null或undefined时为8。 |
 
 **示例**
 
@@ -3355,7 +3396,7 @@ mixedMode(mixedMode: MixedMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mixedMode | [MixedMode](arkts-arkweb-mixedmode-e.md) | 是 | 要设置的混合内容模式。 传入undefined或null时为MixedMode.All。 |
+| mixedMode | [MixedMode](arkts-arkweb-mixedmode-e.md) | 是 | 要设置的混合内容模式。传入undefined或null时为MixedMode.All。 |
 
 **示例**
 
@@ -3383,7 +3424,9 @@ struct WebComponent {
 multiWindowAccess(multiWindow: boolean)
 ```
 
-设置是否开启多窗口权限。当属性没有显式调用时，默认不开启。使能多窗口权限时，需要实现onWindowNew事件，示例代码参考[onWindowNew](#onwindownew)。
+设置是否开启多窗口权限。当属性没有显式调用时，默认不开启。
+
+使能多窗口权限时，需要实现onWindowNew事件，示例代码参考[onWindowNew](#onwindownew)。
 
 **起始版本：** 9
 
@@ -3395,7 +3438,7 @@ multiWindowAccess(multiWindow: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| multiWindow | boolean | 是 | 设置是否开启多窗口权限。 true表示开启，false表示不开启。 |
+| multiWindow | boolean | 是 | 设置是否开启多窗口权限。true表示开启，false表示不开启。 |
 
 ## nativeEmbedOptions
 
@@ -3403,7 +3446,7 @@ multiWindowAccess(multiWindow: boolean)
 nativeEmbedOptions(options?: EmbedOptions)
 ```
 
-设置同层渲染相关配置，该属性仅在[enableNativeEmbedMode](#enablenativeembedmode)开启时生效，不支持动态修改。当属性没有显式调用时，默认为 `{supportDefaultIntrinsicSize: false}`。
+设置同层渲染相关配置，该属性仅在[enableNativeEmbedMode](#enablenativeembedmode)开启时生效，不支持动态修改。当属性没有显式调用时，默认为`{supportDefaultIntrinsicSize: false}`。
 
 **起始版本：** 16
 
@@ -3413,7 +3456,7 @@ nativeEmbedOptions(options?: EmbedOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EmbedOptions](arkts-arkweb-embedoptions-i.md) | 否 | 同层渲染相关配置。 传入undefined或null时为`{supportDefaultIntrinsicSize: false}`。 |
+| options | [EmbedOptions](arkts-arkweb-embedoptions-i.md) | 否 | 同层渲染相关配置。传入undefined或null时为`{supportDefaultIntrinsicSize: false}`。 |
 
 **示例**
 
@@ -3485,7 +3528,7 @@ nestedScroll(value: NestedScrollOptions | NestedScrollOptionsExt)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](../../apis-arkui/arkts-components/arkts-arkui-nestedscrolloptions-i.md) \| [NestedScrollOptionsExt](arkts-arkweb-nestedscrolloptionsext-i.md) | 是 | 可滚动组件滚动时的嵌套滚动选项。 value为NestedScrollOptions（向前、向后两个方向）类型时，scrollForward、scrollBackward默认滚动选项为 [NestedScrollMode.SELF_FIRST](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)。 value为NestedScrollOptionsExt（上下左右四个方向）类型时，scrollUp、scrollDown、scrollLeft、scrollRight默认滚动选项为 NestedScrollMode.SELF_FIRST。<br>**起始版本：** 14 |
+| value | [NestedScrollOptions](../../apis-arkui/arkts-components/arkts-arkui-nestedscrolloptions-i.md) \| [NestedScrollOptionsExt](arkts-arkweb-nestedscrolloptionsext-i.md) | 是 | 可滚动组件滚动时的嵌套滚动选项。value为NestedScrollOptions（向前、向后两个方向）类型时，scrollForward、scrollBackward默认滚动选项为[NestedScrollMode.SELF_FIRST](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)。value为NestedScrollOptionsExt（上下左右四个方向）类型时，scrollUp、scrollDown、scrollLeft、scrollRight默认滚动选项为NestedScrollMode.SELF_FIRST。<br>**起始版本：** 14 |
 
 **示例**
 
@@ -3579,7 +3622,7 @@ struct WebComponent {
 onActivateContent(callback: Callback<void>)
 ```
 
-Web页面触发window.open(url, name)时，会根据name查找是否存在已绑定的Web实例。若存在，该实例将收到此回调以通知应用需将其展示至前端；若不存在，则通过 [onWindowNew](#onwindownew)通知应用创建新Web实例。
+Web页面触发window.open(url, name)时，会根据name查找是否存在已绑定的Web实例。若存在，该实例将收到此回调以通知应用需将其展示至前端；若不存在，则通过[onWindowNew](#onwindownew)通知应用创建新Web实例。
 
 > **说明：**
 > 
@@ -3596,7 +3639,7 @@ Web页面触发window.open(url, name)时，会根据name查找是否存在已绑
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback & lt;void & gt; | 是 | 再次在原页面触发window.open后，在已打开的新页面触发该回调。 |
+| callback | Callback&lt;void&gt; | 是 | 再次在原页面触发window.open后，在已打开的新页面触发该回调。 |
 
 **示例**
 
@@ -3735,7 +3778,7 @@ struct WebComponent {
 onAlert(callback: Callback<OnAlertEvent, boolean>)
 ```
 
-网页触发alert()告警弹窗时触发回调。若不调用[handleCancel](arkts-arkweb-jsresult-c.md#handlecancel)或[handleConfirm](arkts-arkweb-jsresult-c.md#handleconfirm)接 口，会造成渲染进程阻塞。
+网页触发alert()告警弹窗时触发回调。若不调用[handleCancel](arkts-arkweb-jsresult-c.md#handlecancel)或[handleConfirm](arkts-arkweb-jsresult-c.md#handleconfirm)接口，会造成渲染进程阻塞。
 
 **起始版本：** 8
 
@@ -3747,7 +3790,7 @@ onAlert(callback: Callback<OnAlertEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[OnAlertEvent](arkts-arkweb-onalertevent-i.md), boolean&gt; | 是 | 网页触发alert()告警弹窗时触发。 返回值boolean。当回调返回true时，应用可调用自定义弹窗能力（包括确认和取消），并根据用户的确认或取消操作调用JsResult通知Web组件最终确认结果。当回调返回false时，弹窗的处理结果会被视为取 消。<br>**起始版本：** 12 |
+| callback | Callback&lt;[OnAlertEvent](arkts-arkweb-onalertevent-i.md), boolean&gt; | 是 | 网页触发alert()告警弹窗时触发。返回值boolean。当回调返回true时，应用可调用自定义弹窗能力（包括确认和取消），并根据用户的确认或取消操作调用JsResult通知Web组件最终确认结果。当回调返回false时，弹窗的处理结果会被视为取消。<br>**起始版本：** 12 |
 
 **示例**
 
@@ -3878,7 +3921,7 @@ onBeforeUnload(callback: Callback<OnBeforeUnloadEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[OnBeforeUnloadEvent](arkts-arkweb-onbeforeunloadevent-i.md), boolean&gt; | 是 | 即将完成页面刷新或关闭当前页面时触发。 返回值boolean。当回调返回true时，应用可以调用自定义弹窗能力（包括确认和取消），并且需要根据用户的确认或取消操作调用JsResult通知Web组件最终是否离开当前页面。当回调返回false时，函数中绘制的 自定义弹窗无效。<br>**起始版本：** 12 |
+| callback | Callback&lt;[OnBeforeUnloadEvent](arkts-arkweb-onbeforeunloadevent-i.md), boolean&gt; | 是 | 即将完成页面刷新或关闭当前页面时触发。返回值boolean。当回调返回true时，应用可以调用自定义弹窗能力（包括确认和取消），并且需要根据用户的确认或取消操作调用JsResult通知Web组件最终是否离开当前页面。当回调返回false时，函数中绘制的自定义弹窗无效。<br>**起始版本：** 12 |
 
 **示例**
 
@@ -3954,7 +3997,9 @@ struct WebComponent {
 onCameraCaptureStateChange(callback: OnCameraCaptureStateChangeCallback)
 ```
 
-通知应用当前网页的摄像头状态，摄像头有三个状态：无状态、捕获中、暂停中。使用callback异步回调。可以通过startCamera，stopCamera，closeCamera这三个接口来切换摄像头的状态。这三个接口分别对应开启，暂停，停止摄像头功能。示例使用场景详见 [startCamera](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#startcamera)。
+通知应用当前网页的摄像头状态，摄像头有三个状态：无状态、捕获中、暂停中。使用callback异步回调。
+
+可以通过startCamera，stopCamera，closeCamera这三个接口来切换摄像头的状态。这三个接口分别对应开启，暂停，停止摄像头功能。示例使用场景详见[startCamera](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#startcamera)。
 
 > **说明：**
 > 
@@ -4406,7 +4451,7 @@ struct Index {
 onConfirm(callback: Callback<OnConfirmEvent, boolean>)
 ```
 
-网页调用confirm()告警时触发此回调。若不调用[handleCancel](arkts-arkweb-jsresult-c.md#handlecancel)或[handleConfirm](arkts-arkweb-jsresult-c.md#handleconfirm) 接口，会造成渲染进程阻塞。
+网页调用confirm()告警时触发此回调。若不调用[handleCancel](arkts-arkweb-jsresult-c.md#handlecancel)或[handleConfirm](arkts-arkweb-jsresult-c.md#handleconfirm)接口，会造成渲染进程阻塞。
 
 **起始版本：** 8
 
@@ -4418,7 +4463,7 @@ onConfirm(callback: Callback<OnConfirmEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[OnConfirmEvent](arkts-arkweb-onconfirmevent-i.md), boolean&gt; | 是 | 网页调用confirm()告警时触发。 返回值boolean。当回调返回true时，应用可以调用自定义弹窗能力（包括确认和取消），并且需要根据用户的确认或取消操作调用JsResult通知Web组件最终确认结果。当回调返回false时，弹窗的处理结果会被视 为取消。<br>**起始版本：** 12 |
+| callback | Callback&lt;[OnConfirmEvent](arkts-arkweb-onconfirmevent-i.md), boolean&gt; | 是 | 网页调用confirm()告警时触发。返回值boolean。当回调返回true时，应用可以调用自定义弹窗能力（包括确认和取消），并且需要根据用户的确认或取消操作调用JsResult通知Web组件最终确认结果。当回调返回false时，弹窗的处理结果会被视为取消。<br>**起始版本：** 12 |
 
 **示例**
 
@@ -4516,7 +4561,7 @@ onConsole(callback: Callback<OnConsoleEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[OnConsoleEvent](arkts-arkweb-onconsoleevent-i.md), boolean&gt; | 是 | 网页收到JavaScript控制台消息时触发。 返回值boolean。当返回true时，该条消息将不会再打印至hilog日志，返回false时仍会打印至hilog日志。<br>**起始版本：** 12 |
+| callback | Callback&lt;[OnConsoleEvent](arkts-arkweb-onconsoleevent-i.md), boolean&gt; | 是 | 网页收到JavaScript控制台消息时触发。返回值boolean。当返回true时，该条消息将不会再打印至hilog日志，返回false时仍会打印至hilog日志。<br>**起始版本：** 12 |
 
 **示例**
 
@@ -4627,7 +4672,7 @@ onContextMenuShow(callback: Callback<OnContextMenuShowEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[OnContextMenuShowEvent](arkts-arkweb-oncontextmenushowevent-i.md), boolean&gt; | 是 | 调用时触发的回调，以允许自定义显示上下文菜单。 返回值boolean。返回true表示触发自定义菜单，返回false表示触发的自定义菜单无效，将使用系统默认菜单。<br>**起始版本：** 12 |
+| callback | Callback&lt;[OnContextMenuShowEvent](arkts-arkweb-oncontextmenushowevent-i.md), boolean&gt; | 是 | 调用时触发的回调，以允许自定义显示上下文菜单。返回值boolean。返回true表示触发自定义菜单，返回false表示触发的自定义菜单无效，将使用系统默认菜单。<br>**起始版本：** 12 |
 
 **示例**
 
@@ -4814,7 +4859,11 @@ struct WebComponent {
 onControllerAttached(callback: () => void)
 ```
 
-当Controller成功绑定到Web组件时触发该回调，并且该Controller必须为WebviewController，且禁止在该事件回调前调用Web组件相关的接口，否则会抛出js-error异常。因该回调调用时网页还未加载，无法在回调中使用有关操作网页的接口，例如[zoomIn](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomin)、 [zoomOut](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomout)等，可以使用 [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)、 [getWebId](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getwebid)等操作网页不相关的接口。组件生命周期详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
+当Controller成功绑定到Web组件时触发该回调，并且该Controller必须为WebviewController，且禁止在该事件回调前调用Web组件相关的接口，否则会抛出js-error异常。
+
+因该回调调用时网页还未加载，无法在回调中使用有关操作网页的接口，例如[zoomIn](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomin)、[zoomOut](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoomout)等，可以使用[loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)、[getWebId](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getwebid)等操作网页不相关的接口。
+
+组件生命周期详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
 
 **起始版本：** 10
 
@@ -4826,7 +4875,7 @@ onControllerAttached(callback: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | 是 | 当ArkWeb控制器初始化成功时触发的回调。 |
+| callback | () =&gt; void | 是 | 当ArkWeb控制器初始化成功时触发的回调。 |
 
 **示例**
 
@@ -5071,7 +5120,7 @@ struct WebComponent {
 onErrorReceive(callback: Callback<OnErrorReceiveEvent>)
 ```
 
-网页加载遇到错误时触发该回调。主资源与子资源出错都会回调该接口，可以通过[isMainFrame](arkts-arkweb-webresourcerequest-c.md#ismainframe)来判断是否是主资源报错。出于性能考虑，建议此回调中尽量执 行简单逻辑。在无网络的情况下，触发此回调。
+网页加载遇到错误时触发该回调。主资源与子资源出错都会回调该接口，可以通过[isMainFrame](arkts-arkweb-webresourcerequest-c.md#ismainframe)来判断是否是主资源报错。出于性能考虑，建议此回调中尽量执行简单逻辑。在无网络的情况下，触发此回调。
 
 **起始版本：** 8
 
@@ -5185,7 +5234,7 @@ onFileSelectorShow(callback: (event?: { callback: Function, fileSelector: object
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (event?: { callback: Function, fileSelector: object }) = & gt; void | 是 | 当触发文件选择器时需要执行的回调。 |
+| callback | (event?: { callback: Function, fileSelector: object }) =&gt; void | 是 | 当触发文件选择器时需要执行的回调。 |
 
 ## onFirstContentfulPaint
 
@@ -5393,7 +5442,7 @@ onFullScreenExit(callback: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | 是 | 退出全屏模式时的回调函数，无参数。 |
+| callback | () =&gt; void | 是 | 退出全屏模式时的回调函数，无参数。 |
 
 **示例**
 
@@ -5442,7 +5491,7 @@ onGeolocationHide(callback: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | 是 | 地理位置信息获取请求已被取消的回调函数。 |
+| callback | () =&gt; void | 是 | 地理位置信息获取请求已被取消的回调函数。 |
 
 **示例**
 
@@ -5473,7 +5522,7 @@ struct WebComponent {
 onGeolocationShow(callback: Callback<OnGeolocationShowEvent>)
 ```
 
-通知用户收到地理位置信息获取请求，需配置"ohos.permission.LOCATION"、"ohos.permission.APPROXIMATELY_LOCATION"权限。使用callback异步回调。用于显示自定义的位置 权限申请弹窗、实现位置服务说明、根据应用需求选择是否授权，提供更好的位置权限管理体验。
+通知用户收到地理位置信息获取请求，需配置"ohos.permission.LOCATION"、"ohos.permission.APPROXIMATELY_LOCATION"权限。使用callback异步回调。用于显示自定义的位置权限申请弹窗、实现位置服务说明、根据应用需求选择是否授权，提供更好的位置权限管理体验。
 
 **起始版本：** 8
 
@@ -5594,7 +5643,7 @@ onHttpAuthRequest(callback: Callback<OnHttpAuthRequestEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[OnHttpAuthRequestEvent](arkts-arkweb-onhttpauthrequestevent-i.md), boolean&gt; | 是 | 当浏览器需要用户的凭据时触发。 返回值boolean。返回true表示HTTP认证成功，返回false表示HTTP认证失败。<br>**起始版本：** 12 |
+| callback | Callback&lt;[OnHttpAuthRequestEvent](arkts-arkweb-onhttpauthrequestevent-i.md), boolean&gt; | 是 | 当浏览器需要用户的凭据时触发。返回值boolean。返回true表示HTTP认证成功，返回false表示HTTP认证失败。<br>**起始版本：** 12 |
 
 **示例**
 
@@ -6029,7 +6078,7 @@ onInterceptKeyEvent(callback: (event: KeyEvent) => boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (event: KeyEvent) = & gt; boolean | 是 | 触发的KeyEvent事件。 返回值为boolean类型，true表示将该KeyEvent传入Webview内核，false表示不将该KeyEvent传入Webview内核。 |
+| callback | (event: KeyEvent) =&gt; boolean | 是 | 触发的KeyEvent事件。返回值为boolean类型，true表示将该KeyEvent传入Webview内核，false表示不将该KeyEvent传入Webview内核。 |
 
 **示例**
 
@@ -6063,7 +6112,7 @@ struct WebComponent {
 onInterceptRequest(callback: Callback<OnInterceptRequestEvent, WebResourceResponse>)
 ```
 
-当Web组件加载URL之前触发该回调，用于拦截URL并返回响应数据。`onInterceptRequest`可拦截所有跳转请求并返回响应数据，但无法访问POST请求体（Body）内容，且不支持分片缓冲（buffer）类型数据获取。 此类场景需改用[WebSchemeHandler](../arkts-apis/arkts-arkweb-webview-webschemehandler-c.md)实现，依据具体业务需求进行判断。
+当Web组件加载URL之前触发该回调，用于拦截URL并返回响应数据。`onInterceptRequest`可拦截所有跳转请求并返回响应数据，但无法访问POST请求体（Body）内容，且不支持分片缓冲（buffer）类型数据获取。此类场景需改用[WebSchemeHandler](../arkts-apis/arkts-arkweb-webview-webschemehandler-c.md)实现，依据具体业务需求进行判断。
 
 **起始版本：** 9
 
@@ -6075,7 +6124,7 @@ onInterceptRequest(callback: Callback<OnInterceptRequestEvent, WebResourceRespon
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[OnInterceptRequestEvent](arkts-arkweb-oninterceptrequestevent-i.md), [WebResourceResponse](arkts-arkweb-webresourceresponse-c.md)&gt; | 是 | 当Web组件加载url之前触发此回调。 返回值WebResourceResponse。返回响应数据则按照响应数据加载，无响应数据则返回null表示按照原来的方式加载。<br>**起始版本：** 12 |
+| callback | Callback&lt;[OnInterceptRequestEvent](arkts-arkweb-oninterceptrequestevent-i.md), [WebResourceResponse](arkts-arkweb-webresourceresponse-c.md)&gt; | 是 | 当Web组件加载url之前触发此回调。返回值WebResourceResponse。返回响应数据则按照响应数据加载，无响应数据则返回null表示按照原来的方式加载。<br>**起始版本：** 12 |
 
 **示例**
 
@@ -6087,7 +6136,7 @@ import { webview } from '@kit.ArkWeb';
 @Component
 struct WebComponent {
   controller: webview.WebviewController = new webview.WebviewController();
-  responseWeb: webview.WebResourceResponse = new webview.WebResourceResponse();
+  responseWeb: WebResourceResponse = new WebResourceResponse();
   heads: Header[] = new Array();
   webData: string = "<!DOCTYPE html>\n" +
     "<html>\n" +
@@ -6204,7 +6253,7 @@ onlineImageAccess(onlineImageAccess: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| onlineImageAccess | boolean | 是 | 设置是否允许从网络加载图片资源。 true 表示允许，false 表示不允许。 传入 undefined 或 null 时为 false。 |
+| onlineImageAccess | boolean | 是 | 设置是否允许从网络加载图片资源。true 表示允许，false 表示不允许。传入 undefined 或 null 时为 false。 |
 
 **示例**
 
@@ -6301,7 +6350,7 @@ onLoadIntercept(callback: Callback<OnLoadInterceptEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[OnLoadInterceptEvent](arkts-arkweb-onloadinterceptevent-i.md), boolean&gt; | 是 | 导航触发时的回调包括iframe导航，在回调中可以选择允许或者取消此次导航。 返回值为boolean类型。返回true表示取消此次导航，false表示允许此次导航。 返回undefined或null时为false。<br>**起始版本：** 12 |
+| callback | Callback&lt;[OnLoadInterceptEvent](arkts-arkweb-onloadinterceptevent-i.md), boolean&gt; | 是 | 导航触发时的回调包括iframe导航，在回调中可以选择允许或者取消此次导航。返回值为boolean类型。返回true表示取消此次导航，false表示允许此次导航。返回undefined或null时为false。<br>**起始版本：** 12 |
 
 **示例**
 
@@ -6335,7 +6384,7 @@ struct WebComponent {
 onLoadStarted(callback: Callback<OnLoadStartedEvent>)
 ```
 
-通知宿主应用页面开始加载。此方法在每次主frame加载时调用一次，因此对于包含iframes或frameset的页面，onLoadStarted仅针对主frame调用一次。这意味着当嵌入式frame的内容发生变化时，如点击 iframe中的链接或Fragment跳转（即跳转到#fragment_id的导航）等，不会调用onLoadStarted。
+通知宿主应用页面开始加载。此方法在每次主frame加载时调用一次，因此对于包含iframes或frameset的页面，onLoadStarted仅针对主frame调用一次。这意味着当嵌入式frame的内容发生变化时，如点击iframe中的链接或Fragment跳转（即跳转到#fragment_id的导航）等，不会调用onLoadStarted。
 
 > **说明：**
 > 
@@ -6381,7 +6430,9 @@ struct WebComponent {
 onMicrophoneCaptureStateChange(callback: OnMicrophoneCaptureStateChangeCallback)
 ```
 
-通知应用当前网页中麦克风状态，麦克风有三个状态：未工作、捕获中、暂停中。使用callback异步回调。可以通过resumeMicrophone，pauseMicrophone，stopMicrophone这三个接口来切换麦克风的状态。这三个接口功能分别对应解除暂停，暂停，停止麦克风。示例使用场景详见 [resumeMicrophone&lt;sup&gt;23+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#resumemicrophone)。
+通知应用当前网页中麦克风状态，麦克风有三个状态：未工作、捕获中、暂停中。使用callback异步回调。
+
+可以通过resumeMicrophone，pauseMicrophone，stopMicrophone这三个接口来切换麦克风的状态。这三个接口功能分别对应解除暂停，暂停，停止麦克风。示例使用场景详见[resumeMicrophone&lt;sup&gt;23+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#resumemicrophone)。
 
 > **说明：**
 > 
@@ -6539,7 +6590,7 @@ onNativeEmbedGestureEvent(callback: (event: NativeEmbedTouchInfo) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (event: NativeEmbedTouchInfo) = & gt; void | 是 | 手指触摸到同层标签时触发该回调。 |
+| callback | (event: NativeEmbedTouchInfo) =&gt; void | 是 | 手指触摸到同层标签时触发该回调。 |
 
 **示例**
 
@@ -6700,7 +6751,10 @@ onNativeEmbedLifecycleChange(callback: (event: NativeEmbedDataInfo) => void)
 > **说明：**
 > 
 > - 本接口与onNativeEmbedVisibilityChange都监控同层标签状态，但监控维度不同。
-onNativeEmbedLifecycleChange监控生命周期状态（如CREATE/UPDATE/DESTROY/ENTER_BFCACHE/LEAVE_BFCACHE），适用于处理标签的创建、销毁、缓存等生命周期事件。onNativeEmbedVisibilityChange监控视口内的可见性变化（Visible/Hidden），适用于处理标签滚动进出视口的场景。两者可根据实际需求配合使用或单独使用。
+
+onNativeEmbedLifecycleChange监控生命周期状态（如CREATE/UPDATE/DESTROY/ENTER_BFCACHE/LEAVE_BFCACHE），适用于处理标签的创建、销毁、缓存等生命周期事件。
+
+onNativeEmbedVisibilityChange监控视口内的可见性变化（Visible/Hidden），适用于处理标签滚动进出视口的场景。两者可根据实际需求配合使用或单独使用。
 
 **起始版本：** 11
 
@@ -6712,7 +6766,7 @@ onNativeEmbedLifecycleChange监控生命周期状态（如CREATE/UPDATE/DESTROY/
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (event: NativeEmbedDataInfo) = & gt; void | 是 | 同层标签生命周期变化时触发该回调。 |
+| callback | (event: NativeEmbedDataInfo) =&gt; void | 是 | 同层标签生命周期变化时触发该回调。 |
 
 **示例**
 
@@ -6883,7 +6937,8 @@ struct WebComponent {
 onNativeEmbedMouseEvent(callback: MouseInfoCallback)
 ```
 
-在同层标签上执行以下行为时触发该回调：  
+在同层标签上执行以下行为时触发该回调：
+
 - 使用鼠标左键、中键、右键进行点击或长按。  
 - 使用触摸板进行对应鼠标左键、中键、右键点击长按的操作。
 
@@ -7183,7 +7238,7 @@ onNativeEmbedObjectParamChange(callback: OnNativeEmbedObjectParamChangeCallback)
 onNativeEmbedVisibilityChange(callback: OnNativeEmbedVisibilityChangeCallback)
 ```
 
-当网页中同层标签（例如&lt;embed\&gt;标签或&lt;object\&gt;标签）在视口内的可见性发生变化时，将触发该回调。同层标签默认不可见，若在页面首次加载时已可见，则会上报；若不可见，则不会上报。同层标签全部不可见才视为不可见，部分可见或 全部可见则视为可见。获取因同层标签CSS属性（包括visibility、display以及尺寸变化）导致的可见状态变化，需配置 [nativeEmbedOptions](#nativeembedoptions)，并将[EmbedOptions](arkts-arkweb-embedoptions-i.md)中的 supportCssDisplayChange参数设为true。
+当网页中同层标签（例如&lt;embed\&gt;标签或&lt;object\&gt;标签）在视口内的可见性发生变化时，将触发该回调。同层标签默认不可见，若在页面首次加载时已可见，则会上报；若不可见，则不会上报。同层标签全部不可见才视为不可见，部分可见或全部可见则视为可见。获取因同层标签CSS属性（包括visibility、display以及尺寸变化）导致的可见状态变化，需配置[nativeEmbedOptions](#nativeembedoptions)，并将[EmbedOptions](arkts-arkweb-embedoptions-i.md)中的supportCssDisplayChange参数设为true。
 
 **起始版本：** 12
 
@@ -7461,7 +7516,7 @@ onOverrideUrlLoading(callback: OnOverrideUrlLoadingCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnOverrideUrlLoadingCallback](arkts-arkweb-onoverrideurlloadingcallback-t.md) | 是 | onOverrideUrlLoading的回调。 返回值boolean。返回true表示中止加载URL，返回false表示继续在Web中加载URL。 |
+| callback | [OnOverrideUrlLoadingCallback](arkts-arkweb-onoverrideurlloadingcallback-t.md) | 是 | onOverrideUrlLoading的回调。返回值boolean。返回true表示中止加载URL，返回false表示继续在Web中加载URL。 |
 
 **示例**
 
@@ -7765,7 +7820,7 @@ struct WebComponent {
 onPermissionRequest(callback: Callback<OnPermissionRequestEvent>)
 ```
 
-通知收到获取权限请求，需配置"ohos.permission.CAMERA"、"ohos.permission.MICROPHONE"权限。用于自定义权限申请弹窗样式、实现细粒度的权限控制、在特定条件下拒绝或授予权限请求，提供更好 的权限管理体验。
+通知收到获取权限请求，需配置"ohos.permission.CAMERA"、"ohos.permission.MICROPHONE"权限。用于自定义权限申请弹窗样式、实现细粒度的权限控制、在特定条件下拒绝或授予权限请求，提供更好的权限管理体验。
 
 **起始版本：** 9
 
@@ -7928,7 +7983,7 @@ struct WebComponent {
 onPrompt(callback: Callback<OnPromptEvent, boolean>)
 ```
 
-网页调用prompt()告警时触发此回调。若不调用[handleCancel](arkts-arkweb-jsresult-c.md#handlecancel)或 [handlePromptConfirm](arkts-arkweb-jsresult-c.md#handlepromptconfirm)接口，会造成渲染进程阻塞。
+网页调用prompt()告警时触发此回调。若不调用[handleCancel](arkts-arkweb-jsresult-c.md#handlecancel)或[handlePromptConfirm](arkts-arkweb-jsresult-c.md#handlepromptconfirm)接口，会造成渲染进程阻塞。
 
 **起始版本：** 9
 
@@ -7940,7 +7995,7 @@ onPrompt(callback: Callback<OnPromptEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[OnPromptEvent](arkts-arkweb-onpromptevent-i.md), boolean&gt; | 是 | 网页调用prompt()告警时触发。 返回值boolean。当回调返回true时，应用可以调用自定义弹窗能力（包括确认、取消和输入），并且需要根据用户的确认或取消操作调用JsResult通知Web组件最终处理结果。当回调返回false时，弹窗的处理结果 会被视为取消。<br>**起始版本：** 12 |
+| callback | Callback&lt;[OnPromptEvent](arkts-arkweb-onpromptevent-i.md), boolean&gt; | 是 | 网页调用prompt()告警时触发。返回值boolean。当回调返回true时，应用可以调用自定义弹窗能力（包括确认、取消和输入），并且需要根据用户的确认或取消操作调用JsResult通知Web组件最终处理结果。当回调返回false时，弹窗的处理结果会被视为取消。<br>**起始版本：** 12 |
 
 **示例**
 
@@ -8102,7 +8157,13 @@ struct WebComponent {
 onRenderExited(callback: Callback<OnRenderExitedEvent>)
 ```
 
-应用渲染进程异常退出时触发该回调。多个Web组件可能共享单个渲染进程，每个受影响的Web组件都会触发该回调。应用处理该回调时，可以调用绑定的webviewController相关接口来恢复页面。例如[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) 、[loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)等。组件生命周期回调详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
+应用渲染进程异常退出时触发该回调。
+
+多个Web组件可能共享单个渲染进程，每个受影响的Web组件都会触发该回调。
+
+应用处理该回调时，可以调用绑定的webviewController相关接口来恢复页面。例如[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)、[loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)等。
+
+组件生命周期回调详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
 
 **起始版本：** 9
 
@@ -8146,7 +8207,13 @@ struct WebComponent {
 onRenderExited(callback: (event?: { detail: object }) => boolean)
 ```
 
-应用渲染进程因错误或崩溃退出时触发回调。多个Web组件可能共享单个渲染进程，每个受影响的Web组件都会触发该回调。应用处理该回调时，可以调用绑定的WebViewController接口来恢复页面。例如[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)、 [loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)等。详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
+应用渲染进程因错误或崩溃退出时触发回调。
+
+多个Web组件可能共享单个渲染进程，每个受影响的Web组件都会触发该回调。
+
+应用处理该回调时，可以调用绑定的WebViewController接口来恢复页面。例如[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)、[loadUrl](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#loadurl)等。
+
+详情可参考[Web组件的生命周期](../../../web/web-event-sequence.md)。
 
 **起始版本：** 8
 
@@ -8160,7 +8227,7 @@ onRenderExited(callback: (event?: { detail: object }) => boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (event?: { detail: object }) = & gt; boolean | 是 | 渲染过程退出时触发。 |
+| callback | (event?: { detail: object }) =&gt; boolean | 是 | 渲染过程退出时触发。 |
 
 **示例**
 
@@ -8172,7 +8239,11 @@ onRenderExited(callback: (event?: { detail: object }) => boolean)
 onRenderProcessNotResponding(callback: OnRenderProcessNotRespondingCallback)
 ```
 
-渲染进程无响应时触发该回调函数。如果Web组件无法处理输入事件，或者无法在合理的时间范围内导航到新的URL，则认为网页进程无响应，并将触发该回调。只要网页进程一直无响应，此回调仍可能会持续触发，直到网页进程再次响应，此时[onRenderProcessResponding](#onrenderprocessresponding)将会触发。应用可以通过WebviewController接口 [terminateRenderProcess](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#terminaterenderprocess)来终止关联的渲染进程，这可能会影响 同一渲染进程的其他Web组件。
+渲染进程无响应时触发该回调函数。如果Web组件无法处理输入事件，或者无法在合理的时间范围内导航到新的URL，则认为网页进程无响应，并将触发该回调。
+
+只要网页进程一直无响应，此回调仍可能会持续触发，直到网页进程再次响应，此时[onRenderProcessResponding](#onrenderprocessresponding)将会触发。
+
+应用可以通过WebviewController接口[terminateRenderProcess](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#terminaterenderprocess)来终止关联的渲染进程，这可能会影响同一渲染进程的其他Web组件。
 
 **起始版本：** 12
 
@@ -8265,7 +8336,7 @@ onRequestSelected(callback: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | 是 | 当网页获取焦点时触发的回调。 |
+| callback | () =&gt; void | 是 | 当网页获取焦点时触发的回调。 |
 
 **示例**
 
@@ -8649,7 +8720,7 @@ onShowFileSelector(callback: Callback<OnShowFileSelectorEvent, boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | Callback&lt;[OnShowFileSelectorEvent](arkts-arkweb-onshowfileselectorevent-i.md), boolean&gt; | 是 | 通知Web组件文件选择的结果。 返回值boolean。当返回值为true时，应用可以自定义“选择文件”的响应行为。当返回值为false时，函数中绘制的自定义弹窗无效，Web组件将使用系统默认的“选择文件”处理界面。<br>**起始版本：** 12 |
+| callback | Callback&lt;[OnShowFileSelectorEvent](arkts-arkweb-onshowfileselectorevent-i.md), boolean&gt; | 是 | 通知Web组件文件选择的结果。返回值boolean。当返回值为true时，应用可以自定义“选择文件”的响应行为。当返回值为false时，函数中绘制的自定义弹窗无效，Web组件将使用系统默认的“选择文件”处理界面。<br>**起始版本：** 12 |
 
 **示例**
 
@@ -8918,7 +8989,9 @@ struct WebComponent {
 onSslErrorEventReceive(callback: Callback<OnSslErrorEventReceiveEvent>)
 ```
 
-通知用户加载资源时发生SSL错误，只支持主资源。如果需要支持子资源，请使用[OnSslErrorEvent](#onsslerrorevent)接口。
+通知用户加载资源时发生SSL错误，只支持主资源。
+
+如果需要支持子资源，请使用[OnSslErrorEvent](#onsslerrorevent)接口。
 
 > **说明：**
 > 
@@ -9048,7 +9121,7 @@ onSslErrorReceive(callback: (event?: { handler: Function, error: object }) => vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (event?: { handler: Function, error: object }) = & gt; void | 是 | 当网页检测到SSL错误时触发的回调。 |
+| callback | (event?: { handler: Function, error: object }) =&gt; void | 是 | 当网页检测到SSL错误时触发的回调。 |
 
 ## onTextSelectionChange
 
@@ -9220,7 +9293,7 @@ onUrlLoadIntercept(callback: (event?: { data: string | WebResourceRequest }) => 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (event?: { data: string \| WebResourceRequest }) = & gt; boolean | 是 | url的相关信息。 返回值：boolean，true表示阻止此次加载，false表示允许此次加载。 |
+| callback | (event?: { data: string \| WebResourceRequest }) =&gt; boolean | 是 | url的相关信息。返回值：boolean，true表示阻止此次加载，false表示允许此次加载。 |
 
 **示例**
 
@@ -9440,7 +9513,7 @@ onWindowExit(callback: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | () = & gt; void | 是 | 窗口请求关闭的回调函数。 |
+| callback | () =&gt; void | 是 | 窗口请求关闭的回调函数。 |
 
 **示例**
 
@@ -9470,7 +9543,15 @@ struct WebComponent {
 onWindowNew(callback: Callback<OnWindowNewEvent>)
 ```
 
-在开启multiWindowAccess（多窗口访问）属性的情况下，通知应用有新建窗口请求。如需获取更丰富的窗口信息建议使用onWindowNewExt。若不调用[setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller)接口，会造成渲染进程阻塞。如果没有创建新窗口，调用[setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller)接口时设置成null，通知Web没有创建新窗口。新窗口需避免直接覆盖在原Web组件上，且应与主页面以相同形式明确显示其URL（如地址栏）以防止用户混淆。若无法实现可信的URL可视化管理，则需考虑禁止创建新窗口。需注意：新窗口请求来源无法可靠追溯，可能由第三方iframe发起，应用需默认采取沙箱隔离、限制权限等防御性措施以确保安全。
+在开启multiWindowAccess（多窗口访问）属性的情况下，通知应用有新建窗口请求。如需获取更丰富的窗口信息建议使用onWindowNewExt。
+
+若不调用[setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller)接口，会造成渲染进程阻塞。
+
+如果没有创建新窗口，调用[setWebController](arkts-arkweb-controllerhandler-c.md#setwebcontroller)接口时设置成null，通知Web没有创建新窗口。
+
+新窗口需避免直接覆盖在原Web组件上，且应与主页面以相同形式明确显示其URL（如地址栏）以防止用户混淆。若无法实现可信的URL可视化管理，则需考虑禁止创建新窗口。
+
+需注意：新窗口请求来源无法可靠追溯，可能由第三方iframe发起，应用需默认采取沙箱隔离、限制权限等防御性措施以确保安全。
 
 **起始版本：** 9
 
@@ -9682,7 +9763,13 @@ build() {
 optimizeParserBudget(optimizeParserBudget: boolean)
 ```
 
-设置是否开启分段解析HTML优化。当属性没有显式调用时，默认使用解析时间作为HTML分段解析的分段点。ArkWeb内核在解析HTML文档结构时采取分段解析策略，旨在避免过多占用主线程资源，并使网页具有渐进式加载能力。ArkWeb内核默认使用解析时间作为分段点，当单次解析时间超过阈值时，会中断解析，随后进行布局和渲染操作。开启优化后，ArkWeb内核将不仅检查解析时间是否超出限制，还会额外判断解析的Token（HTML文档的最小解析单位，例如`&lt;div&gt;`、`attr="xxx"`等）数量是否超过内核规定的阈值，并下调此阈值。当页面的FCP（ First Contentful Paint 首次内容绘制）触发时会恢复成默认的中断判断逻辑。这将使得网页在FCP到来之前的解析操作更频繁，从而提高首帧内容被提前解析完成并进入渲染阶段的可能性，同时有效缩减首帧渲染的工作量，最终实 现FCP时间提前。由于页面的FCP触发时会恢复成默认分段解析逻辑，因此分段解析HTML优化仅对每个Web组件加载的首个页面生效。
+设置是否开启分段解析HTML优化。当属性没有显式调用时，默认使用解析时间作为HTML分段解析的分段点。
+
+ArkWeb内核在解析HTML文档结构时采取分段解析策略，旨在避免过多占用主线程资源，并使网页具有渐进式加载能力。ArkWeb内核默认使用解析时间作为分段点，当单次解析时间超过阈值时，会中断解析，随后进行布局和渲染操作。
+
+开启优化后，ArkWeb内核将不仅检查解析时间是否超出限制，还会额外判断解析的Token（HTML文档的最小解析单位，例如`&lt;div&gt;`、`attr="xxx"`等）数量是否超过内核规定的阈值，并下调此阈值。当页面的FCP（First Contentful Paint 首次内容绘制）触发时会恢复成默认的中断判断逻辑。这将使得网页在FCP到来之前的解析操作更频繁，从而提高首帧内容被提前解析完成并进入渲染阶段的可能性，同时有效缩减首帧渲染的工作量，最终实现FCP时间提前。
+
+由于页面的FCP触发时会恢复成默认分段解析逻辑，因此分段解析HTML优化仅对每个Web组件加载的首个页面生效。
 
 **起始版本：** 15
 
@@ -9692,7 +9779,7 @@ optimizeParserBudget(optimizeParserBudget: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| optimizeParserBudget | boolean | 是 | 设置开启分段解析HTML优化。 true表示使用解析个数代替解析时间作为HTML分段解析的分段点，并减少每段解析的个数上限。false表示使用解析时间作为HTML分段解析的分段点。 传入undefined或null时为false。 |
+| optimizeParserBudget | boolean | 是 | 设置开启分段解析HTML优化。true表示使用解析个数代替解析时间作为HTML分段解析的分段点，并减少每段解析的个数上限。false表示使用解析时间作为HTML分段解析的分段点。传入undefined或null时为false。 |
 
 **示例**
 
@@ -9731,7 +9818,7 @@ overScrollMode(mode: OverScrollMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [OverScrollMode](arkts-arkweb-overscrollmode-e.md) | 是 | 设置Web的过滚动模式为关闭或开启。 传入undefined或null时为OverScrollMode.NEVER。 |
+| mode | [OverScrollMode](arkts-arkweb-overscrollmode-e.md) | 是 | 设置Web的过滚动模式为关闭或开启。传入undefined或null时为OverScrollMode.NEVER。 |
 
 **示例**
 
@@ -9771,7 +9858,7 @@ overviewModeAccess(overviewModeAccess: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| overviewModeAccess | boolean | 是 | 设置是否使用概览模式加载网页。 true表示使用，false表示不使用。 传入undefined或null时为false。 |
+| overviewModeAccess | boolean | 是 | 设置是否使用概览模式加载网页。true表示使用，false表示不使用。传入undefined或null时为false。 |
 
 **示例**
 
@@ -9813,7 +9900,7 @@ password(password: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| password | boolean | 是 | 设置为true时，表示允许Web保存密码。 设置为false时，表示不允许Web保存密码。 传入undefined或null时为false。 |
+| password | boolean | 是 | 设置为true时，表示允许Web保存密码。设置为false时，表示不允许Web保存密码。传入undefined或null时为false。 |
 
 ## pinchSmooth
 
@@ -9833,7 +9920,7 @@ pinchSmooth(isEnabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isEnabled | boolean | 是 | 网页是否开启捏合流畅模式。 true表示设置网页开启捏合流畅模式，false表示设置网页不开启捏合流畅模式。 传入undefined或null时为false。 |
+| isEnabled | boolean | 是 | 网页是否开启捏合流畅模式。true表示设置网页开启捏合流畅模式，false表示设置网页不开启捏合流畅模式。传入undefined或null时为false。 |
 
 **示例**
 
@@ -9861,7 +9948,13 @@ struct WebComponent {
 registerNativeEmbedRule(tag: string, type:string)
 ```
 
-注册使用同层渲染的HTML标签名和类型。标签名仅支持使用&lt;object\&gt;和&lt;embed\&gt;。标签类型只能使用ASCII可显示字符。若指定类型与W3C定义的&lt;object\&gt;或&lt;embed\&gt;标准类型重合，ArkWeb内核将其识别为非同层标签。本接口同样受enableNativeEmbedMode接口控制，在未使能同层渲染时本接口无效。在不使用本接口的情况下，ArkWeb内核默认将"native/"前缀类型的&lt;embed\&gt;标签识别为同层标签。具体使用详情请参考[同层渲染](../../../web/web-same-layer.md#web页面中同层渲染输入框)指南。
+注册使用同层渲染的HTML标签名和类型。标签名仅支持使用&lt;object\&gt;和&lt;embed\&gt;。标签类型只能使用ASCII可显示字符。
+
+若指定类型与W3C定义的&lt;object\&gt;或&lt;embed\&gt;标准类型重合，ArkWeb内核将其识别为非同层标签。
+
+本接口同样受enableNativeEmbedMode接口控制，在未使能同层渲染时本接口无效。在不使用本接口的情况下，ArkWeb内核默认将"native/"前缀类型的&lt;embed\&gt;标签识别为同层标签。
+
+具体使用详情请参考[同层渲染](../../../web/web-same-layer.md#web页面中同层渲染输入框)指南。
 
 **起始版本：** 12
 
@@ -10077,7 +10170,7 @@ runJavaScriptOnDocumentEnd(scripts: Array<ScriptItem>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scripts | Array&lt;[ScriptItem](arkts-arkweb-scriptitem-i.md)&gt; | 是 | 需要注入的ScriptItem数组。 传入undefined或null时不将JavaScript脚本注入到Web组件中。 |
+| scripts | Array&lt;[ScriptItem](arkts-arkweb-scriptitem-i.md)&gt; | 是 | 需要注入的ScriptItem数组。传入undefined或null时不将JavaScript脚本注入到Web组件中。 |
 
 **示例**
 
@@ -10149,7 +10242,7 @@ runJavaScriptOnDocumentStart(scripts: Array<ScriptItem>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scripts | Array&lt;[ScriptItem](arkts-arkweb-scriptitem-i.md)&gt; | 是 | 需要注入的ScriptItem数组。 传入undefined或null时不将JavaScript脚本注入到Web组件中。 |
+| scripts | Array&lt;[ScriptItem](arkts-arkweb-scriptitem-i.md)&gt; | 是 | 需要注入的ScriptItem数组。传入undefined或null时不将JavaScript脚本注入到Web组件中。 |
 
 ## runJavaScriptOnHeadEnd
 
@@ -10173,7 +10266,7 @@ runJavaScriptOnHeadEnd(scripts: Array<ScriptItem>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scripts | Array&lt;[ScriptItem](arkts-arkweb-scriptitem-i.md)&gt; | 是 | 需要注入的ScriptItem数组。 传入undefined或null时不将JavaScript脚本注入到Web组件中。 |
+| scripts | Array&lt;[ScriptItem](arkts-arkweb-scriptitem-i.md)&gt; | 是 | 需要注入的ScriptItem数组。传入undefined或null时不将JavaScript脚本注入到Web组件中。 |
 
 **示例**
 
@@ -10227,7 +10320,7 @@ Hello world!
 scrollbarLayoutPolicy(policy: ScrollbarLayoutPolicy)
 ```
 
-选择Web组件内垂直滚动条的布局方式，用于适配不同语言的书写方向。CONTENT模式适用于需要跟随网页CSS direction属性的场景，SYSTEM模式适用于多语言应用中需要跟随系统语言方向设置的场景，如阿拉伯语、希伯来语等从 右到左书写的语言。
+选择Web组件内垂直滚动条的布局方式，用于适配不同语言的书写方向。CONTENT模式适用于需要跟随网页CSS direction属性的场景，SYSTEM模式适用于多语言应用中需要跟随系统语言方向设置的场景，如阿拉伯语、希伯来语等从右到左书写的语言。
 
 **起始版本：** 26.0.0
 
@@ -10239,7 +10332,7 @@ scrollbarLayoutPolicy(policy: ScrollbarLayoutPolicy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | [ScrollbarLayoutPolicy](arkts-arkweb-scrollbarlayoutpolicy-e.md) | 是 | 设置Web组件内垂直滚动条布局模式。可选值：CONTENT（跟随网页css的direction属性设置），SYSTEM（根据系统语种的左右书写方向 进行布局，对于从右向左书写的语言，滚动条将布局在左侧。对于网页内嵌套的多层滚动条均适用）。 |
+| policy | [ScrollbarLayoutPolicy](arkts-arkweb-scrollbarlayoutpolicy-e.md) | 是 | 设置Web组件内垂直滚动条布局模式。可选值：CONTENT（跟随网页css的direction属性设置），SYSTEM（根据系统语种的左右书写方向进行布局，对于从右向左书写的语言，滚动条将布局在左侧。对于网页内嵌套的多层滚动条均适用）。 |
 
 **示例**
 
@@ -10270,7 +10363,9 @@ struct WebComponent {
 selectionMenuOptions(expandedMenuOptions: Array<ExpandedMenuItemOptions>)
 ```
 
-Web组件自定义菜单扩展项接口，允许用户设置扩展项的文本内容、图标、回调方法。该接口只支持选中纯文本，当选中内容包含图片及其他非文本内容时，action信息中会显示乱码。
+Web组件自定义菜单扩展项接口，允许用户设置扩展项的文本内容、图标、回调方法。
+
+该接口只支持选中纯文本，当选中内容包含图片及其他非文本内容时，action信息中会显示乱码。
 
 > **说明：**
 > 
@@ -10288,7 +10383,7 @@ Web组件自定义菜单扩展项接口，允许用户设置扩展项的文本�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| expandedMenuOptions | Array&lt;[ExpandedMenuItemOptions](arkts-arkweb-expandedmenuitemoptions-i.md)&gt; | 是 | 扩展菜单选项。菜单项数量，及菜单的content大小、startIcon图标尺寸，与 ArkUI Menu组件保持一致。 |
+| expandedMenuOptions | Array&lt;[ExpandedMenuItemOptions](arkts-arkweb-expandedmenuitemoptions-i.md)&gt; | 是 | 扩展菜单选项。菜单项数量，及菜单的content大小、startIcon图标尺寸，与ArkUI Menu组件保持一致。 |
 
 **示例**
 
@@ -10354,7 +10449,7 @@ tableData(tableData: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tableData | boolean | 是 | 设置为true时，表示允许Web保存表单数据。 设置为false时，表示不允许Web保存表单数据。 传入undefined或null时为true。 |
+| tableData | boolean | 是 | 设置为true时，表示允许Web保存表单数据。设置为false时，表示不允许Web保存表单数据。传入undefined或null时为true。 |
 
 ## textAutosizing
 
@@ -10362,7 +10457,9 @@ tableData(tableData: boolean)
 textAutosizing(textAutosizing: boolean)
 ```
 
-设置Web组件是否开启文本字体大小自动调整。当属性没有显式调用时，Web组件默认开启文本字体大小自动调整。文本字体大小自动调整生效后，对于字号过小的文本将自动加大字号至16px~32px，避免屏幕较小（默认视口宽度 &lt; 980px）的设备因为缺少移动端适配出现字体过小的可读性问题。
+设置Web组件是否开启文本字体大小自动调整。当属性没有显式调用时，Web组件默认开启文本字体大小自动调整。
+
+文本字体大小自动调整生效后，对于字号过小的文本将自动加大字号至16px~32px，避免屏幕较小（默认视口宽度 &lt; 980px）的设备因为缺少移动端适配出现字体过小的可读性问题。
 
 &gt; **说明：**
 > 
@@ -10386,7 +10483,7 @@ textAutosizing(textAutosizing: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| textAutosizing | boolean | 是 | 文本自动调整大小。 true表示文本自动调整大小，false表示文本不自动调整大小。 传入undefined或null时为true。 |
+| textAutosizing | boolean | 是 | 文本自动调整大小。true表示文本自动调整大小，false表示文本不自动调整大小。传入undefined或null时为true。 |
 
 **示例**
 
@@ -10428,7 +10525,7 @@ textZoomAtio(textZoomAtio: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| textZoomAtio | number | 是 | 要设置的页面的文本缩放百分比。100表示原始大小，大于100表示放大，小于100表示缩小。 取值范围为(0, 2147483647]。 |
+| textZoomAtio | number | 是 | 要设置的页面的文本缩放百分比。100表示原始大小，大于100表示放大，小于100表示缩小。取值范围为(0, 2147483647]。 |
 
 **示例**
 
@@ -10466,7 +10563,7 @@ textZoomRatio(textZoomRatio: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| textZoomRatio | number | 是 | 要设置的页面的文本缩放百分比，100表示原始大小，大于100表示放大，小于100表示缩小。 取值为整数，范围为(0, 2147483647]。 |
+| textZoomRatio | number | 是 | 要设置的页面的文本缩放百分比，100表示原始大小，大于100表示放大，小于100表示缩小。取值为整数，范围为(0, 2147483647]。 |
 
 **示例**
 
@@ -10556,7 +10653,7 @@ verticalScrollBarAccess(verticalScrollBar: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| verticalScrollBar | boolean | 是 | 设置是否显示纵向滚动条。 true表示显示，false表示不显示。 传入undefined或null时为false。 |
+| verticalScrollBar | boolean | 是 | 设置是否显示纵向滚动条。true表示显示，false表示不显示。传入undefined或null时为false。 |
 
 **示例**
 
@@ -10628,7 +10725,9 @@ Scroll Test
 webCursiveFont(family: string)
 ```
 
-设置网页的cursive font字体库，用于渲染html前端使用cursive字体的元素。当属性没有显式调用时，默认网页的cursive font字体库为cursive。
+设置网页的cursive font字体库，用于渲染html前端使用cursive字体的元素。
+
+当属性没有显式调用时，默认网页的cursive font字体库为cursive。
 
 **起始版本：** 9
 
@@ -10640,7 +10739,7 @@ webCursiveFont(family: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| family | string | 是 | 设置网页的cursive font字体库。 传入null或undefined时为cursive。 |
+| family | string | 是 | 设置网页的cursive font字体库。传入null或undefined时为cursive。 |
 
 **示例**
 
@@ -10669,7 +10768,9 @@ struct WebComponent {
 webFantasyFont(family: string)
 ```
 
-设置网页的fantasy font字体库，用于渲染html前端使用fantasy字体的元素。当属性没有显式调用时，默认网页的fantasy font字体库为fantasy。
+设置网页的fantasy font字体库，用于渲染html前端使用fantasy字体的元素。
+
+当属性没有显式调用时，默认网页的fantasy font字体库为fantasy。
 
 **起始版本：** 9
 
@@ -10681,7 +10782,7 @@ webFantasyFont(family: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| family | string | 是 | 设置网页的fantasy font字体库。 传入null或undefined时为fantasy。 |
+| family | string | 是 | 设置网页的fantasy font字体库。传入null或undefined时为fantasy。 |
 
 **示例**
 
@@ -10709,7 +10810,9 @@ struct WebComponent {
 webFixedFont(family: string)
 ```
 
-设置网页的fixed font字体库，用于渲染html前端使用monospace字体的元素。当属性没有显式调用时，默认网页的fixed font字体库为monospace。
+设置网页的fixed font字体库，用于渲染html前端使用monospace字体的元素。
+
+当属性没有显式调用时，默认网页的fixed font字体库为monospace。
 
 **起始版本：** 9
 
@@ -10721,7 +10824,7 @@ webFixedFont(family: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| family | string | 是 | 设置网页的fixed font字体库，传入值为字体名称字符串，如"monospace"、"Arial"等。 传入null或undefined时为monospace。 |
+| family | string | 是 | 设置网页的fixed font字体库，传入值为字体名称字符串，如"monospace"、"Arial"等。传入null或undefined时为monospace。 |
 
 **示例**
 
@@ -10750,7 +10853,9 @@ struct WebComponent {
 webSansSerifFont(family: string)
 ```
 
-设置网页的sans-serif font字体库，用于渲染html前端使用sans-serif字体的元素。当属性没有显式调用时，默认网页的sans-serif font字体库为sans-serif。
+设置网页的sans-serif font字体库，用于渲染html前端使用sans-serif字体的元素。
+
+当属性没有显式调用时，默认网页的sans-serif font字体库为sans-serif。
 
 **起始版本：** 9
 
@@ -10762,7 +10867,7 @@ webSansSerifFont(family: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| family | string | 是 | 设置网页的sans-serif font字体库。 传入null或undefined时为sans-serif。 |
+| family | string | 是 | 设置网页的sans-serif font字体库。传入null或undefined时为sans-serif。 |
 
 **示例**
 
@@ -10791,7 +10896,9 @@ struct WebComponent {
 webSerifFont(family: string)
 ```
 
-设置网页的serif font字体库，用于渲染html前端使用serif字体的元素。当属性没有显式调用时，默认网页的serif font字体库为serif。
+设置网页的serif font字体库，用于渲染html前端使用serif字体的元素。
+
+当属性没有显式调用时，默认网页的serif font字体库为serif。
 
 **起始版本：** 9
 
@@ -10803,7 +10910,7 @@ webSerifFont(family: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| family | string | 是 | 设置网页的serif font字体库。 传入null或undefined时为serif。 |
+| family | string | 是 | 设置网页的serif font字体库。传入null或undefined时为serif。 |
 
 **示例**
 
@@ -10832,7 +10939,9 @@ struct WebComponent {
 webStandardFont(family: string)
 ```
 
-设置网页的standard font字体库，用于渲染html前端未指定字体样式的元素。当属性没有显式调用时，默认网页的standard font字体库为sans-serif。
+设置网页的standard font字体库，用于渲染html前端未指定字体样式的元素。
+
+当属性没有显式调用时，默认网页的standard font字体库为sans-serif。
 
 **起始版本：** 9
 
@@ -10844,7 +10953,7 @@ webStandardFont(family: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| family | string | 是 | 设置网页的standard font字体库。 传入null或undefined时为sans-serif。 |
+| family | string | 是 | 设置网页的standard font字体库。传入null或undefined时为sans-serif。 |
 
 **示例**
 
@@ -10887,7 +10996,7 @@ wideViewModeAccess(wideViewModeAccess: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wideViewModeAccess | boolean | 是 | 设置Web是否支持html中meta标签的viewport属性。true表示支持html中meta标签的viewport属性，false表示 不支持html中meta标签的viewport属性。 |
+| wideViewModeAccess | boolean | 是 | 设置Web是否支持html中meta标签的viewport属性。true表示支持html中meta标签的viewport属性，false表示不支持html中meta标签的viewport属性。 |
 
 ## zoomAccess
 
@@ -10907,7 +11016,7 @@ zoomAccess(zoomAccess: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| zoomAccess | boolean | 是 | 设置是否支持手势进行缩放。 true表示支持，false表示不支持。 传入undefined或null时为false。 |
+| zoomAccess | boolean | 是 | 设置是否支持手势进行缩放。true表示支持，false表示不支持。传入undefined或null时为false。 |
 
 **示例**
 
@@ -10935,7 +11044,9 @@ struct WebComponent {
 zoomControlAccess(zoomControlAccess: boolean)
 ```
 
-设置是否允许通过组合按键（Ctrl+'-/+'或Ctrl+鼠标滚轮/触摸板）进行缩放。当属性没有显式调用时，默认允许通过组合按键进行缩放。
+设置是否允许通过组合按键（Ctrl+'-/+'或Ctrl+鼠标滚轮/触摸板）进行缩放。
+
+当属性没有显式调用时，默认允许通过组合按键进行缩放。
 
 **起始版本：** 22
 

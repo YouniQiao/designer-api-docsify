@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityId
@@ -46,7 +46,7 @@ UIAbility名称。
 appIndex?: number
 ```
 
-应用分身ID。 取值范围为全体整数。
+应用分身ID。取值范围为全体整数。
 
 **类型：** number
 

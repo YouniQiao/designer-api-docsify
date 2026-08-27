@@ -25,7 +25,7 @@ function getNetCapabilitiesSync(netHandle: NetHandle): NetCapabilities
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | 是 | 网络句柄。 |
+| netHandle | NetHandle | 是 | 网络句柄。 |
 
 **返回值：**
 

@@ -17,7 +17,13 @@ barrier参数，用于定义一条barrier的id、方向和生成时所依赖的�
 direction : BarrierDirection
 ```
 
-指定barrier的方向。水平屏障线（TOP/BOTTOM）仅能作为组件垂直方向锚点（top或bottom），用于水平方向锚点时位置视为0。垂直屏障线（LEFT/RIGHT）仅能作为组件水平方向锚点（left或right），用于垂直方向锚点时位置视为0。默认值：BarrierDirection.LEFT非法值：按默认值处理。
+指定barrier的方向。
+
+水平屏障线（TOP/BOTTOM）仅能作为组件垂直方向锚点（top或bottom），用于水平方向锚点时位置视为0。垂直屏障线（LEFT/RIGHT）仅能作为组件水平方向锚点（left或right），用于垂直方向锚点时位置视为0。
+
+默认值：BarrierDirection.LEFT
+
+非法值：按默认值处理。
 
 **类型：** [BarrierDirection](arkts-arkui-barrierdirection-e.md)
 
@@ -53,7 +59,7 @@ barrier的id，用于标识屏障，子组件可通过此id引用该屏障作为
 referencedId : Array<string>
 ```
 
-指定生成barrier所依赖的组件。将需要作为屏障基准的组件id放入数组，至少包含一个有效组件ID，不存在的ID会被忽略。barrier根据组件边界计算位置：LEFT取最左侧，RIGHT取最右侧，TOP取最上方，BOTTOM取最下 方。
+指定生成barrier所依赖的组件。将需要作为屏障基准的组件id放入数组，至少包含一个有效组件ID，不存在的ID会被忽略。barrier根据组件边界计算位置：LEFT取最左侧，RIGHT取最右侧，TOP取最上方，BOTTOM取最下方。
 
 **类型：** Array&lt;string&gt;
 

@@ -26,9 +26,6 @@ PermissionRequest is an object used by the **Web** component to grant or deny pe
 ## Modules to Import
 
 ```TypeScript
-import { WebNetErrorList } from '@ohos.@kit.ArkWeb.netErrorList';
-import WebNativeMessagingExtensionAbility, { ConnectionInfo } from '@ohos.@kit.ArkWeb.WebNativeMessagingExtensionAbility';
-import @kit.ArkWebNativeMessagingExtensionManager from '@ohos.@kit.ArkWeb.@kit.ArkWebNativeMessagingExtensionManager';
 ```
 
 ## constructor
@@ -77,7 +74,7 @@ Obtains the list of permission resources requested by the web page. For details 
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of accessible resources requested by the web page. |
+| Array&lt;string&gt; | List of accessible resources requested by the web page. |
 
 ## getOrigin
 
@@ -117,4 +114,4 @@ Grants the permission requested by the web page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resources | Array & lt;string & gt; | Yes | List of permission resources granted to the web page, which must be obtained through getAccessibleResource(). For the type, see [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md). After this parameter is passed in, the web page will obtain access to the specified resources. If an empty list is passed in, all permission requests are denied. |
+| resources | Array&lt;string&gt; | Yes | List of permission resources granted to the web page, which must be obtained through getAccessibleResource(). For the type, see [ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md). After this parameter is passed in, the web page will obtain access to the specified resources. If an empty list is passed in, all permission requests are denied. |

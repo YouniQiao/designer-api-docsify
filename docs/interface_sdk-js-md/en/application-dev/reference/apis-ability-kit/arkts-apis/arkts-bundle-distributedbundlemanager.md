@@ -15,7 +15,7 @@ The module provides APIs for managing distributed bundles.
 ## Modules to Import
 
 ```TypeScript
-import distributedBundleManager from '@kit.AbilityKit';
+import { distributedBundleManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

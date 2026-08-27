@@ -1,6 +1,8 @@
 # UserAuthExtensionAbility (System API)
 
-The class of user authentication extension ability.@extends UIExtensionAbility
+The class of user authentication extension ability.
+
+@extends UIExtensionAbility
 
 **Inheritance/Implementation:** UserAuthExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 
@@ -15,5 +17,5 @@ The class of user authentication extension ability.@extends UIExtensionAbility
 ## Modules to Import
 
 ```TypeScript
-import UserAuthExtensionAbility from '@kit.UserAuthenticationKit';
+import { UserAuthExtensionAbility } from '@kit.UserAuthenticationKit';
 ```

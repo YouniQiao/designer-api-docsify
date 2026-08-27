@@ -1,6 +1,10 @@
 # EmbeddedComponent属性/事件
 
-支持通用属性。与屏幕坐标相关的事件信息，根据**EmbeddedComponent**的位置、宽高进行转换后，传递给EmbeddedUIExtensionAbility处理。不支持点击事件等通用事件。仅支持以下事件。
+支持通用属性。
+
+与屏幕坐标相关的事件信息，根据**EmbeddedComponent**的位置、宽高进行转换后，传递给EmbeddedUIExtensionAbility处理。
+
+不支持点击事件等通用事件。仅支持以下事件。
 
 **继承/实现关系：** EmbeddedComponentAttribute extends CommonMethod<EmbeddedComponentAttribute>
 
@@ -59,7 +63,7 @@ onError(callback: import('../api/@ohos.base').ErrorCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | import('../api/@ohos.base').ErrorCallback | 是 | 用于返回 [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)类型错误信息的回调。基于**code**、**name**和**message**参数可以获取并处理错误信息。 |
+| callback | import('../api/@ohos.base').ErrorCallback | 是 | 用于返回[BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)类型错误信息的回调。基于**code**、**name**和**message**参数可以获取并处理错误信息。 |
 
 ## onTerminated
 
@@ -67,7 +71,7 @@ onError(callback: import('../api/@ohos.base').ErrorCallback)
 onTerminated(callback: import('../api/@ohos.base').Callback<TerminationInfo>)
 ```
 
-当启动的EmbeddedUIExtensionAbility通过调用 [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateselfwithresult) 或 [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateself) 正常退出时回调。
+当启动的EmbeddedUIExtensionAbility通过调用[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateselfwithresult)或[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateself)正常退出时回调。
 
 > **说明：**
 > 

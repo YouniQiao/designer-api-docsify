@@ -9,7 +9,7 @@ The **deviceManager** module provides APIs for managing peripheral devices, incl
 ## Modules to Import
 
 ```TypeScript
-import deviceManager from '@kit.DriverDevelopmentKit';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## Summary

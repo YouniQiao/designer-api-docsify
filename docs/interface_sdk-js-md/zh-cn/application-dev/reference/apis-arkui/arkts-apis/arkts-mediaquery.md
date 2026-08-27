@@ -16,7 +16,7 @@
 ## 导入模块
 
 ```TypeScript
-import mediaquery from '@kit.ArkUI';
+import { mediaquery } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -25,11 +25,11 @@ import mediaquery from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [matchMediaSync(媒体查询)](arkts-arkui-mediaquery-matchmediasync-f.md) | 设置媒体查询的查询条件，并返回对应的监听句柄。 |
+| [matchMediaSync](arkts-arkui-mediaquery-matchmediasync-f.md) | 设置媒体查询的查询条件，并返回对应的监听句柄。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [MediaQueryListener(媒体查询)](arkts-arkui-mediaquery-mediaquerylistener-i.md) | 媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。继承自[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)。 |
-| [MediaQueryResult(媒体查询)](arkts-arkui-mediaquery-mediaqueryresult-i.md) | 用于执行媒体查询操作。 |
+| [MediaQueryListener](arkts-arkui-mediaquery-mediaquerylistener-i.md) | 媒体查询的句柄，并包含了申请句柄时的首次查询结果。媒体查询根据设置的条件语句，比如'(width &lt;= 600vp)'，比较系统信息，若首次查询时相关信息未初始化，matches返回false。 |
+| [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md) | 用于执行媒体查询操作。 |

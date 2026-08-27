@@ -17,33 +17,33 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityActionOptions](arkts-arkui-accessibilityactionoptions-i.md) | 包含无障碍操作的参数的结构体。@interface AccessibilityActionOptions |
-| [AccessibilityCustomAction](arkts-arkui-accessibilitycustomaction-i.md) | 定义AccessibilityCustomAction的结构体，可以在可访问性下的自定义操作处理中处理。@interface AccessibilityCustomAction |
+| [AccessibilityActionOptions](arkts-arkui-accessibilityactionoptions-i.md) | 包含无障碍操作的参数的结构体。 |
+| [AccessibilityCustomAction](arkts-arkui-accessibilitycustomaction-i.md) | 定义AccessibilityCustomAction的结构体，可以在可访问性下的自定义操作处理中处理。 |
 | [AccessibilityNextFocusParams](arkts-arkui-accessibilitynextfocusparams-i.md) | 定义用于配置下一个可访问性焦点转换的参数的结构。 |
-| [AccessibilityOptions](arkts-arkui-accessibilityoptions-i.md) | Defines the struct of AccessibilityOptions.@interface AccessibilityOptions |
+| [AccessibilityOptions](arkts-arkui-accessibilityoptions-i.md) | Defines the struct of AccessibilityOptions. |
 | [Area](arkts-arkui-area-i.md) | 区域类型，用于存储元素所占的区域信息。 |
-| [Bias](arkts-arkui-bias-i.md) | Defines the Bias.@interface Bias |
-| [BorderOptions](arkts-arkui-borderoptions-i.md) | Defines the options of border.@interface BorderOptions |
-| [CacheCountInfo](arkts-arkui-cachecountinfo-i.md) | 定义缓存计数信息。@interface CacheCountInfo |
-| [ChainWeightOptions](arkts-arkui-chainweightoptions-i.md) | Defines the ChainWeightOptions interface.@interface ChainWeightOptions |
-| [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) | Defines the constrain size options.@interface ConstraintSizeOptions |
+| [Bias](arkts-arkui-bias-i.md) | Defines the Bias. |
+| [BorderOptions](arkts-arkui-borderoptions-i.md) | Defines the options of border. |
+| [CacheCountInfo](arkts-arkui-cachecountinfo-i.md) | 定义缓存计数信息。 |
+| [ChainWeightOptions](arkts-arkui-chainweightoptions-i.md) | Defines the ChainWeightOptions interface. |
+| [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) | Defines the constrain size options. |
 | [Coordinate2D](arkts-arkui-coordinate2d-i.md) | 描述一个二维坐标。 |
-| [DirectionalEdgesT](arkts-arkui-directionaledgest-i.md) | Defines the DirectionalEdgesT interface.@interface DirectionalEdgesT |
-| [DividerStyleOptions](arkts-arkui-dividerstyleoptions-i.md) | Defines the struct of DividerStyleOptions.@interface DividerStyleOptions |
-| [Edges](arkts-arkui-edges-i.md) | Defines the Edges.@interface Edges |
-| [Font](arkts-arkui-font-i.md) | Defines the font used for text.@interface Font |
-| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) | 定义一个适合WaterFlow、Grid、List和Swiper组件的响应式item布局。@interface ItemFillPolicy |
-| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md) | Defines the localized border radius property.@interface LocalizedBorderRadiuses |
-| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md) | Defines the localized border color property.@interface LocalizedEdgeColors |
-| [LocalizedEdges](arkts-arkui-localizededges-i.md) | Defines the LocalizedEdges.@interface LocalizedEdges |
-| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md) | Defines the localized border width property.@interface LocalizedEdgeWidths |
-| [LocalizedPadding](arkts-arkui-localizedpadding-i.md) | Defines the localized padding property.@interface LocalizedPadding |
-| [LocalizedPosition](arkts-arkui-localizedposition-i.md) | Defines the LocalizedPosition.@interface LocalizedPosition |
-| [MarkStyle](arkts-arkui-markstyle-i.md) | Define the style of checkbox mark.@interface MarkStyle |
-| [OutlineOptions](arkts-arkui-outlineoptions-i.md) | 定义外描边的参数选项@interface OutlineOptions |
-| [Position](arkts-arkui-position-i.md) | 定义位置。@interface Position |
-| [ScrollBarMargin](arkts-arkui-scrollbarmargin-i.md) | 定义滚动条边距选项。@interface ScrollBarMargin |
-| [SizeOptions](arkts-arkui-sizeoptions-i.md) | 定义尺寸选项。@interface SizeOptions |
+| [DirectionalEdgesT](arkts-arkui-directionaledgest-i.md) | Defines the DirectionalEdgesT interface. |
+| [DividerStyleOptions](arkts-arkui-dividerstyleoptions-i.md) | Defines the struct of DividerStyleOptions. |
+| [Edges](arkts-arkui-edges-i.md) | Defines the Edges. |
+| [Font](arkts-arkui-font-i.md) | Defines the font used for text. |
+| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) | 定义一个适合WaterFlow、Grid、List和Swiper组件的响应式item布局。 |
+| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md) | Defines the localized border radius property. |
+| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md) | Defines the localized border color property. |
+| [LocalizedEdges](arkts-arkui-localizededges-i.md) | Defines the LocalizedEdges. |
+| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md) | Defines the localized border width property. |
+| [LocalizedPadding](arkts-arkui-localizedpadding-i.md) | Defines the localized padding property. |
+| [LocalizedPosition](arkts-arkui-localizedposition-i.md) | Defines the LocalizedPosition. |
+| [MarkStyle](arkts-arkui-markstyle-i.md) | Define the style of checkbox mark. |
+| [OutlineOptions](arkts-arkui-outlineoptions-i.md) | 定义外描边的参数选项 |
+| [Position](arkts-arkui-position-i.md) | 定义位置。 |
+| [ScrollBarMargin](arkts-arkui-scrollbarmargin-i.md) | 定义滚动条边距选项。 |
+| [SizeOptions](arkts-arkui-sizeoptions-i.md) | 定义尺寸选项。 |
 | [TouchPoint](arkts-arkui-touchpoint-i.md) | 配置跟手点坐标，不配置时，默认居中。 |
 
 ### 类型

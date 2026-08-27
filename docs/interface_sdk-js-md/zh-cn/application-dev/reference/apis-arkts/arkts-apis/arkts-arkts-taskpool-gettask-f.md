@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import taskpool from '@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## getTask
@@ -32,7 +32,7 @@ function getTask(taskId: number, taskName?: string): Task | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| taskId | number | 是 | 任务ID。 该值应为整数。 |
+| taskId | number | 是 | 任务ID。该值应为整数。 |
 | taskName | string | 否 | 任务名称。默认值为undefined。 |
 
 **返回值：**

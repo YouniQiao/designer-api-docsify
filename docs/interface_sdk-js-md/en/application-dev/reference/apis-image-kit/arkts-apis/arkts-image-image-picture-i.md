@@ -1,6 +1,8 @@
 # Picture
 
-An image that contains special information can be decoded into a picture object, which generally contains the main picture, auxiliary picture, and metadata. The main picture contains most information about the image and is mainly used to render the image. The auxiliary picture is used to store data related to but different from the main picture, revealing more comprehensive details. The metadata is generally used to store information about the image file. The picture object class is used to read or write picture objects. Before calling any API in Picture, you must use [image.createPicture](arkts-image-image-createpicture-f.md) to create a Picture object.Images occupy a large amount of memory. When you finish using a Picture instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+An image that contains special information can be decoded into a picture object, which generally contains the main picture, auxiliary picture, and metadata. The main picture contains most information about the image and is mainly used to render the image. The auxiliary picture is used to store data related to but different from the main picture, revealing more comprehensive details. The metadata is generally used to store information about the image file. The picture object class is used to read or write picture objects. Before calling any API in Picture, you must use [image.createPicture](arkts-image-image-createpicture-f.md) to create a Picture object.
+
+Images occupy a large amount of memory. When you finish using a Picture instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
@@ -9,7 +11,7 @@ An image that contains special information can be decoded into a picture object,
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## getAuxiliaryPicture
@@ -115,7 +117,7 @@ Generates a High Dynamic Range (HDR) image and obtains its PixelMap object. This
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | Promise used to return the PixelMap object. |
+| Promise&lt;PixelMap&gt; | Promise used to return the PixelMap object. |
 
 **Error codes:**
 
@@ -154,7 +156,9 @@ async function GetHdrComposedPixelmap(pictureObj : image.Picture) {
 getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap | undefined>
 ```
 
-Composites an HDR image and returns PixelMap of the image. Composition options (such as PixelMapFormat) can be passed. This API uses a promise to return the result.The Picture object that calls this API must contain the main picture, gain map, and metadata.
+Composites an HDR image and returns PixelMap of the image. Composition options (such as PixelMapFormat) can be passed. This API uses a promise to return the result.
+
+The Picture object that calls this API must contain the main picture, gain map, and metadata.
 
 **Since:** 23
 
@@ -172,7 +176,7 @@ Composites an HDR image and returns PixelMap of the image. Composition options (
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;PixelMap \ | undefined & gt; | Promise, which returns the PixelMap object or **undefined**. |
+| Promise&lt;PixelMap \| undefined&gt; | Promise, which returns the PixelMap object or **undefined**. |
 
 **Error codes:**
 
@@ -228,7 +232,7 @@ Obtains the PixelMap object of the main picture. This API returns the result syn
 
 | Type | Description |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. |
+| PixelMap | PixelMap object. |
 
 **Examples**
 
@@ -276,7 +280,7 @@ Obtains the metadata of this Picture object. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Metadata & gt; | Promise used to return the metadata. |
+| Promise&lt;Metadata&gt; | Promise used to return the metadata. |
 
 **Error codes:**
 
@@ -325,7 +329,9 @@ async function GetPictureObjMetadataProperties(pictureObj : image.Picture) {
 hdrComposeToMainPixelmap(): Promise<void>
 ```
 
-Invokes the VPE algorithm to compose the main pixelmap and gainmap. The composed result will replace the main pixelmap of the current picture object.The Picture object that calls this API must contain the main pixelmap, gain map.
+Invokes the VPE algorithm to compose the main pixelmap and gainmap. The composed result will replace the main pixelmap of the current picture object.
+
+The Picture object that calls this API must contain the main pixelmap, gain map.
 
 **Since:** 26.0.0
 
@@ -337,7 +343,7 @@ Invokes the VPE algorithm to compose the main pixelmap and gainmap. The composed
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -499,7 +505,11 @@ async function marshal() {
 release(): void
 ```
 
-Releases this Picture object.Images occupy a large amount of memory. When you finish using a Picture instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this Picture object.
+
+Images occupy a large amount of memory. When you finish using a Picture instance, call this API to free the memory promptly.
+
+Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
@@ -610,7 +620,7 @@ Sets the PixelMap object of the picture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | PixelMap object. |
+| pixelmap | PixelMap | Yes | PixelMap object. |
 
 **Error codes:**
 
@@ -635,13 +645,13 @@ Sets the metadata for this Picture object. This API uses a promise to return the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | metadataType | [MetadataType](arkts-image-image-metadatatype-e.md) | Yes | Metadata type. |
-| metadata | [Metadata](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-metadata-t.md) | Yes | Metadata object. |
+| metadata | Metadata | Yes | Metadata object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

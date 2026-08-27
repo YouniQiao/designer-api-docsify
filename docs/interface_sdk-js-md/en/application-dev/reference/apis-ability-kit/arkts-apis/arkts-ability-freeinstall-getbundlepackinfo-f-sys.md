@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import freeInstall from '@kit.AbilityKit';
+import { freeInstall } from '@kit.AbilityKit';
 ```
 
 ## getBundlePackInfo
@@ -89,7 +89,7 @@ Obtains bundlePackInfo based on **bundleName** and **bundlePackFlag**. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;BundlePackInfo & gt; | Promise used to return the BundlePackInfo object obtained. |
+| Promise&lt;BundlePackInfo&gt; | Promise used to return the BundlePackInfo object obtained. |
 
 **Error codes:**
 

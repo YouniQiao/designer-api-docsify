@@ -13,8 +13,6 @@ The Scope interface is used to describe the valid range of a field.
 ## Modules to Import
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## clamp

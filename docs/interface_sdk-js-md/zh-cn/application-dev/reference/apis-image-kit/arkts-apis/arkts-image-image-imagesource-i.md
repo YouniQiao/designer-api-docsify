@@ -1,6 +1,12 @@
 # ImageSource
 
-ImageSource类，用于获取图片相关信息。在调用ImageSource的方法前，需要先通过[image.createImageSource](arkts-image-image-createimagesource-f.md)构建一个ImageSource实例。ImageSource的所有方法均不支持并发调用。由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](#release)方法及时 释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+ImageSource类，用于获取图片相关信息。
+
+在调用ImageSource的方法前，需要先通过[image.createImageSource](arkts-image-image-createimagesource-f.md)构建一个ImageSource实例。
+
+ImageSource的所有方法均不支持并发调用。
+
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 6
 
@@ -9,7 +15,7 @@ ImageSource类，用于获取图片相关信息。在调用ImageSource的方法�
 ## 导入模块
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createImageRawData
@@ -68,7 +74,11 @@ async function createImageRawData(imageSourceObj: image.ImageSource) {
 createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 ```
 
-通过图片解码参数创建Picture对象。使用Promise异步回调。由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用[release](arkts-image-image-picture-i.md#release)方法，及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+通过图片解码参数创建Picture对象。使用Promise异步回调。
+
+由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用[release](arkts-image-image-picture-i.md#release)方法，及时释放内存。
+
+释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 **起始版本：** 13
 
@@ -174,7 +184,9 @@ async function CreatePictures(imageSourceObj : image.ImageSource) {
 createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 ```
 
-通过图片解码参数创建PixelMap对象。使用Promise异步回调。从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md)，该接口可以指定输出pixelMap的 内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考 [图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
+通过图片解码参数创建PixelMap对象。使用Promise异步回调。
+
+从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 > **说明：**
 > 
@@ -202,7 +214,7 @@ createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | Promise对象，返回PixelMap。 |
+| Promise&lt;PixelMap&gt; | Promise对象，返回PixelMap。 |
 
 **示例**
 
@@ -224,7 +236,9 @@ async function CreatePixelMap(imageSourceObj : image.ImageSource) {
 createPixelMap(callback: AsyncCallback<PixelMap>): void
 ```
 
-通过默认参数创建PixelMap对象。使用callback异步回调。从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md)，该接口可以指定输出pixelMap的 内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考 [图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
+通过默认参数创建PixelMap对象。使用callback异步回调。
+
+从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 > **说明：**
 > 
@@ -270,7 +284,9 @@ async function CreatePixelMap(imageSourceObj : image.ImageSource) {
 createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): void
 ```
 
-通过图片解码参数创建PixelMap对象。使用callback异步回调。从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md)，该接口可以指定输出pixelMap的 内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考 [图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
+通过图片解码参数创建PixelMap对象。使用callback异步回调。
+
+从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 > **说明：**
 > 
@@ -328,7 +344,9 @@ async function CreatePixelMap(imageSourceObj : image.ImageSource) {
 createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 ```
 
-通过图片解码参数创建PixelMap数组。使用Promise异步回调。针对动态图（如Gif、Webp），该接口会返回每帧图片数据；针对静态图，该接口会返回唯一的一帧图片数据。
+通过图片解码参数创建PixelMap数组。使用Promise异步回调。
+
+针对动态图（如Gif、Webp），该接口会返回每帧图片数据；针对静态图，该接口会返回唯一的一帧图片数据。
 
 > **说明：**
 > 
@@ -355,7 +373,7 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;PixelMap & gt; & gt; | 异步返回PixelMap数组。 |
+| Promise&lt;Array&lt;PixelMap&gt;&gt; | 异步返回PixelMap数组。 |
 
 **错误码：**
 
@@ -403,7 +421,9 @@ async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
 createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 ```
 
-通过默认参数创建PixelMap数组。使用callback异步回调。针对动态图（如Gif、Webp），该接口会返回每帧图片数据；针对静态图，该接口会返回唯一的一帧图片数据。
+通过默认参数创建PixelMap数组。使用callback异步回调。
+
+针对动态图（如Gif、Webp），该接口会返回每帧图片数据；针对静态图，该接口会返回唯一的一帧图片数据。
 
 > **说明：**
 > 
@@ -423,7 +443,7 @@ createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | 是 | 回调函数，当创建PixelMap对象数组成功，err为undefined，data为获取到的PixelMap对象数组；否 则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | 是 | 回调函数，当创建PixelMap对象数组成功，err为undefined，data为获取到的PixelMap对象数组；否则为错误对象。 |
 
 **错误码：**
 
@@ -465,7 +485,9 @@ async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
 createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<PixelMap>>): void
 ```
 
-通过图片解码参数创建PixelMap数组。使用callback异步回调。针对动态图（如Gif、Webp），该接口会返回每帧图片数据；针对静态图，该接口会返回唯一的一帧图片数据。
+通过图片解码参数创建PixelMap数组。使用callback异步回调。
+
+针对动态图（如Gif、Webp），该接口会返回每帧图片数据；针对静态图，该接口会返回唯一的一帧图片数据。
 
 > **说明：**
 > 
@@ -486,7 +508,7 @@ createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<Pixel
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [DecodingOptions](arkts-image-image-decodingoptions-i.md) | 是 | 解码参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | 是 | 回调函数，当创建PixelMap对象数组成功，err为undefined，data为获取到的PixelMap对象数组；否 则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;PixelMap&gt;&gt; | 是 | 回调函数，当创建PixelMap对象数组成功，err为undefined，data为获取到的PixelMap对象数组；否则为错误对象。 |
 
 **错误码：**
 
@@ -536,7 +558,13 @@ async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
 createPixelMapSync(options?: DecodingOptions): PixelMap
 ```
 
-通过图片解码参数同步创建PixelMap对象。由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。从API version 15开始，推荐使用[createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md)，该接口可以指定输出 pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考 [图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
+通过图片解码参数同步创建PixelMap对象。
+
+由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。
+
+释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+
+从API version 15开始，推荐使用[createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 > **说明：**
 > 
@@ -557,7 +585,7 @@ createPixelMapSync(options?: DecodingOptions): PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | 用于同步返回创建结果。 |
+| PixelMap | 用于同步返回创建结果。 |
 
 **示例**
 
@@ -592,7 +620,7 @@ function CreatePixelMapSync(context : Context) {
 createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: AllocatorType): Promise<PixelMap>
 ```
 
-使用指定的分配器根据图像解码参数异步创建PixelMap对象。使用Promise异步回调。接口使用详情请参考 [图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
+使用指定的分配器根据图像解码参数异步创建PixelMap对象。使用Promise异步回调。接口使用详情请参考[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 > **说明：**
 > 
@@ -617,7 +645,7 @@ createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: Allocato
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PixelMap & gt; | Promise对象，返回PixelMap。 |
+| Promise&lt;PixelMap&gt; | Promise对象，返回PixelMap。 |
 
 **错误码：**
 
@@ -664,7 +692,11 @@ async function CreatePixelMapUsingAllocator(context : Context) {
 createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: AllocatorType): PixelMap
 ```
 
-根据指定的分配器同步创建一个基于图像解码参数的PixelMap对象。接口使用详情请参考[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+根据指定的分配器同步创建一个基于图像解码参数的PixelMap对象。接口使用详情请参考[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
+
+由于图片占用内存较大，所以当PixelMap对象使用完成后，应主动调用[release](arkts-image-image-pixelmap-i.md#release)方法，及时释放内存。
+
+释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
 > **说明：**
 > 
@@ -686,7 +718,7 @@ createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: Allo
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | 用于同步返回创建结果。 |
+| PixelMap | 用于同步返回创建结果。 |
 
 **错误码：**
 
@@ -733,7 +765,11 @@ async function CreatePixelMapUsingAllocator(context : Context) {
 createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undefined>
 ```
 
-通过图片解码参数创建缩略图PixelMap对象。使用Promise异步回调。当前支持对JPEG和HEIF格式的图片创建缩略图PixelMap对象。优先解码图片文件中包含的缩略图。若图片文件中没有缩略图，则对原图进行解码。
+通过图片解码参数创建缩略图PixelMap对象。使用Promise异步回调。
+
+当前支持对JPEG和HEIF格式的图片创建缩略图PixelMap对象。
+
+优先解码图片文件中包含的缩略图。若图片文件中没有缩略图，则对原图进行解码。
 
 > **说明：**
 > 
@@ -753,13 +789,13 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。 默认表现：    - 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。    - 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
+| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。默认表现：   - 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。   - 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;PixelMap \ | undefined & gt; | Promise对象，返回PixelMap。 |
+| Promise&lt;PixelMap \| undefined&gt; | Promise对象，返回PixelMap。 |
 
 **错误码：**
 
@@ -814,7 +850,11 @@ async function CreateThumbnail(imageSource: image.ImageSource): Promise<image.Pi
 createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 ```
 
-通过图片解码参数同步创建缩略图。返回创建结果对应的[PixelMap](arkts-image-image-pixelmap-i.md)对象。当前支持对JPEG和HEIF格式的图片创建缩略图PixelMap对象。优先解码图片文件中包含的缩略图。若图片文件中没有缩略图，则对原图进行解码。
+通过图片解码参数同步创建缩略图。返回创建结果对应的[PixelMap](arkts-image-image-pixelmap-i.md)对象。
+
+当前支持对JPEG和HEIF格式的图片创建缩略图PixelMap对象。
+
+优先解码图片文件中包含的缩略图。若图片文件中没有缩略图，则对原图进行解码。
 
 > **说明：**
 > 
@@ -835,7 +875,7 @@ createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。 默认表现：    - 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。    - 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
+| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。默认表现：   - 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。   - 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
 
 **返回值：**
 
@@ -907,7 +947,7 @@ getDelayTimeList(): Promise<Array<number>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise对象，返回延迟时间数组。 |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise对象，返回延迟时间数组。 |
 
 **错误码：**
 
@@ -999,7 +1039,7 @@ getDisposalTypeList(): Promise<Array<number>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;Array & lt;number & gt; & gt; | Promise对象，返回帧过渡模式数组。 |
+| Promise&lt;Array&lt;number&gt;&gt; | Promise对象，返回帧过渡模式数组。 |
 
 **错误码：**
 
@@ -1040,7 +1080,7 @@ getFrameCount(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回图像帧数。 |
+| Promise&lt;number&gt; | Promise对象，返回图像帧数。 |
 
 **错误码：**
 
@@ -1138,7 +1178,7 @@ getImageInfo(index: number, callback: AsyncCallback<ImageInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为： [0, (帧数-1)]。 |
+| index | number | 是 | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为：[0, (帧数-1)]。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 | 回调函数。当获取图片信息成功，err为undefined，data为获取到的图片信息；否则为错误对象。 |
 
 **示例**
@@ -1229,7 +1269,7 @@ getImageInfo(index?: number): Promise<ImageInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 否 | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为： [0, (帧数-1)]。 |
+| index | number | 否 | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为：[0, (帧数-1)]。 |
 
 **返回值：**
 
@@ -1273,7 +1313,7 @@ getImageInfoSync(index?: number): ImageInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 否 | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为： [0, (帧数-1)]。 |
+| index | number | 否 | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为：[0, (帧数-1)]。 |
 
 **返回值：**
 
@@ -1305,7 +1345,9 @@ function GetImageInfoSync(context : Context) {
 getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|null>>
 ```
 
-批量获取图片中的指定属性键的值。使用Promise异步回调。该接口仅支持JPEG、PNG、HEIF、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+批量获取图片中的指定属性键的值。使用Promise异步回调。
+
+该接口仅支持JPEG、PNG、HEIF、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 **起始版本：** 12
 
@@ -1321,7 +1363,7 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null & gt; & gt; | Promise对象，返回图片属性值，如获取失败则返回null。 |
+| Promise&lt;Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null&gt;&gt; | Promise对象，返回图片属性值，如获取失败则返回null。 |
 
 **错误码：**
 
@@ -1360,7 +1402,9 @@ async function GetImageProperties(imageSourceObj : image.ImageSource) {
 getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<string>
 ```
 
-获取图片中给定索引处图像的指定属性键的值。使用Promise异步回调。该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+获取图片中给定索引处图像的指定属性键的值。使用Promise异步回调。
+
+该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 **起始版本：** 11
 
@@ -1377,7 +1421,7 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回图片属性值，如获取失败则返回属性默认值。 |
+| Promise&lt;string&gt; | Promise对象，返回图片属性值，如获取失败则返回属性默认值。 |
 
 **错误码：**
 
@@ -1418,7 +1462,9 @@ async function GetImageProperty(imageSourceObj : image.ImageSource) {
 getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>
 ```
 
-获取图片中给定索引处图像的指定属性键的值。使用Promise异步回调。该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+获取图片中给定索引处图像的指定属性键的值。使用Promise异步回调。
+
+该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：**
 > 
@@ -1445,7 +1491,7 @@ getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回图片属性值，如获取失败则返回属性默认值。 |
+| Promise&lt;string&gt; | Promise对象，返回图片属性值，如获取失败则返回属性默认值。 |
 
 **示例**
 
@@ -1468,7 +1514,9 @@ async function GetImageProperty(imageSourceObj : image.ImageSource) {
 getImageProperty(key: string, callback: AsyncCallback<string>): void
 ```
 
-获取图片中给定索引处图像的指定属性键的值。使用callback异步回调。该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+获取图片中给定索引处图像的指定属性键的值。使用callback异步回调。
+
+该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：**
 > 
@@ -1513,7 +1561,9 @@ async function GetImageProperty(imageSourceObj : image.ImageSource) {
 getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void
 ```
 
-获取图片指定属性键的值。使用callback异步回调。该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+获取图片指定属性键的值。使用callback异步回调。
+
+该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：**
 > 
@@ -1618,7 +1668,9 @@ function GetImagePropertySync(context : Context) {
 modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 ```
 
-批量通过指定的键修改图片属性的值。使用Promise异步回调。该接口仅支持JPEG、PNG、HEIF和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+批量通过指定的键修改图片属性的值。使用Promise异步回调。
+
+该接口仅支持JPEG、PNG、HEIF和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：**
 > 
@@ -1635,13 +1687,13 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null & gt; | 是 | 包含图片属性名和属性值的数组。 |
+| records | Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null&gt; | 是 | 包含图片属性名和属性值的数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1704,13 +1756,13 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record & lt;string, string \ | null & gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
+| records | Record&lt;string, string \| null&gt; | 是 | 包含图片属性名和属性值的键值对集合。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1750,7 +1802,9 @@ async function ModifyImagePropertiesEnhanced(imageSourceObj : image.ImageSource)
 modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 ```
 
-通过指定的键修改图片属性的值。使用Promise异步回调。该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+通过指定的键修改图片属性的值。使用Promise异步回调。
+
+该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：**
 > 
@@ -1774,7 +1828,7 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -1810,7 +1864,9 @@ async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
 modifyImageProperty(key: string, value: string): Promise<void>
 ```
 
-通过指定的键修改图片属性的值。使用Promise异步回调。该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+通过指定的键修改图片属性的值。使用Promise异步回调。
+
+该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：**
 > 
@@ -1841,7 +1897,7 @@ modifyImageProperty(key: string, value: string): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -1867,7 +1923,9 @@ async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
 modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-通过指定的键修改图片属性的值。使用callback异步回调。仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+通过指定的键修改图片属性的值。使用callback异步回调。
+
+仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：**
 > 
@@ -1917,7 +1975,9 @@ async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
 readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadata>
 ```
 
-读取图像源的元数据，使用propertyKeys指定元数据字段。使用Promise异步回调。该接口仅支持JPEG、PNG、HEIF、WebP、DNG、GIF、TIFF、HEIFS、JFIF和AVIS（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+读取图像源的元数据，使用propertyKeys指定元数据字段。使用Promise异步回调。
+
+该接口仅支持JPEG、PNG、HEIF、WebP、DNG、GIF、TIFF、HEIFS、JFIF和AVIS（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：**
 > 
@@ -1975,7 +2035,7 @@ readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadat
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; | Promise对象，返回ImageMetadata对象，其中含有图片属性名对应的metadata对象，通过ImageMetadata中的metadata对 象可以获取图片属性值。 |
+| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; | Promise对象，返回ImageMetadata对象，其中含有图片属性名对应的metadata对象，通过ImageMetadata中的metadata对象可以获取图片属性值。 |
 
 **错误码：**
 
@@ -2010,7 +2070,9 @@ async function ReadImageMetadata(imageSourceObj : image.ImageSource) {
 readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise<ImageMetadata>
 ```
 
-读取图像源的元数据，使用metadataTypes指定元数据类型。若未指定metadataTypes，则返回所有支持的元数据。使用Promise异步回调。该接口仅支持JPEG、PNG、HEIF、WebP、DNG、GIF、TIFF、HEIFS、JFIF和AVIS（不同硬件设备支持情况不同）文件。
+读取图像源的元数据，使用metadataTypes指定元数据类型。若未指定metadataTypes，则返回所有支持的元数据。使用Promise异步回调。
+
+该接口仅支持JPEG、PNG、HEIF、WebP、DNG、GIF、TIFF、HEIFS、JFIF和AVIS（不同硬件设备支持情况不同）文件。
 
 > **说明：**
 > 
@@ -2054,7 +2116,7 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; | Promise对象。返回的ImageMetadata对象中含有对应的metadata对象，通过ImageMetadata中的metadata对象可以获取图 片属性值。 |
+| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; | Promise对象。返回的ImageMetadata对象中含有对应的metadata对象，通过ImageMetadata中的metadata对象可以获取图片属性值。 |
 
 **错误码：**
 
@@ -2088,7 +2150,11 @@ async function ReadImageMetadataByType(imageSource : image.ImageSource, type: im
 release(callback: AsyncCallback<void>): void
 ```
 
-释放ImageSource实例。使用callback异步回调。由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放ImageSource实例。使用callback异步回调。
+
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用该方法，及时释放内存。
+
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 6
 
@@ -2193,7 +2259,11 @@ function release(pixelMap: image.PixelMap) {
 release(): Promise<void>
 ```
 
-释放ImageSource实例。使用Promise异步回调。由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用该方法，及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+释放ImageSource实例。使用Promise异步回调。
+
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用该方法，及时释放内存。
+
+释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 6
 
@@ -2203,7 +2273,7 @@ release(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -2305,7 +2375,7 @@ updateData(buf: ArrayBuffer, isFinished: boolean, offset: number, length: number
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -2407,7 +2477,7 @@ writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2442,7 +2512,11 @@ async function WriteImageMetadata(imageSourceObj : image.ImageSource) {
 readonly supportedFormats: Array<string>
 ```
 
-支持的图片格式。包括：PNG、JPEG、BMP、GIF、WebP、DNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、WBMP&lt;sup&gt;23+&lt;/sup&gt;、HEIFS&lt;sup&gt;23+&lt;/sup&gt;、TIFF&lt;sup&gt;23+&lt;/sup&gt;。从API版本2 6.0.0开始，增加支持AVIF、AVIS格式。部分格式的解码能力依赖于具体的设备硬件，建议在调用前使用[image.getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md)接口， 动态查询当前设备上的解码能力。
+支持的图片格式。
+
+包括：PNG、JPEG、BMP、GIF、WebP、DNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、WBMP&lt;sup&gt;23+&lt;/sup&gt;、HEIFS&lt;sup&gt;23+&lt;/sup&gt;、TIFF&lt;sup&gt;23+&lt;/sup&gt;。从API版本2 6.0.0开始，增加支持AVIF、AVIS格式。
+
+部分格式的解码能力依赖于具体的设备硬件，建议在调用前使用[image.getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md)接口，动态查询当前设备上的解码能力。
 
 **类型：** Array&lt;string&gt;
 

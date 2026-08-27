@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import applicationManager from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## getUserNonStopApps
@@ -32,7 +32,7 @@ Obtains the non-stoppable application list of all users on the current device.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;common.ApplicationInstance & gt; | Array of non-stoppable applications. |
+| Array&lt;common.ApplicationInstance&gt; | Array of non-stoppable applications. |
 
 **Error codes:**
 
@@ -89,7 +89,7 @@ Obtains the non-stoppable application list of all users on the current device.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;common.ApplicationInstance & gt; | Array of non-stoppable applications. |
+| Array&lt;common.ApplicationInstance&gt; | Array of non-stoppable applications. |
 
 **Error codes:**
 

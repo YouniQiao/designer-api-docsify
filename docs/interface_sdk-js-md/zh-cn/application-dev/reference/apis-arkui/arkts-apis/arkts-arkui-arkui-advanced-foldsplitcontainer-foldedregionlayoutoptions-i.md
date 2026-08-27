@@ -18,7 +18,9 @@ import { ExtraRegionPosition, ExpandedRegionLayoutOptions, HoverModeRegionLayout
 verticalSplitRatio?: number
 ```
 
-主要区域高度与次要区域高度的比值。取值可使用PresetSplitRatio预设值或自定义数值，取值范围为(0, +∞)，传入小于等于0的值时使用默认值。此字段仅在折叠态布局下生效。例如：取值为1.5时，表示主要区域高度是次要区域 高度的1.5倍（即3:2比例）。默认值：[PresetSplitRatio](arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md).LAYOUT_1V1
+主要区域高度与次要区域高度的比值。取值可使用PresetSplitRatio预设值或自定义数值，取值范围为(0, +∞)，传入小于等于0的值时使用默认值。此字段仅在折叠态布局下生效。例如：取值为1.5时，表示主要区域高度是次要区域高度的1.5倍（即3:2比例）。
+
+默认值：[PresetSplitRatio](arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md).LAYOUT_1V1
 
 **类型：** number
 

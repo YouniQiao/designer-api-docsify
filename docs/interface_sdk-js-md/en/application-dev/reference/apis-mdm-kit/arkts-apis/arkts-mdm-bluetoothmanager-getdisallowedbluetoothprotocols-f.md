@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.MDMKit';
+import { bluetoothManager } from '@kit.MDMKit';
 ```
 
 ## getDisallowedBluetoothProtocols
@@ -33,7 +33,7 @@ Obtains the disallowed Bluetooth protocols of a specified user.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Protocol & gt; | Array of disallowed Bluetooth protocols. |
+| Array&lt;Protocol&gt; | Array of disallowed Bluetooth protocols. |
 
 **Error codes:**
 
@@ -102,7 +102,7 @@ Obtains the list of disallowed Bluetooth protocols for a specified user under a 
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Protocol & gt; | Array of disallowed Bluetooth protocols. |
+| Array&lt;Protocol&gt; | Array of disallowed Bluetooth protocols. |
 
 **Error codes:**
 

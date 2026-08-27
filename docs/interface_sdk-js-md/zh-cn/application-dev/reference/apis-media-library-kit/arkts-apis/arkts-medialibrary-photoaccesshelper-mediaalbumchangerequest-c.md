@@ -1,6 +1,8 @@
 # MediaAlbumChangeRequest
 
-MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).相册变更请求。
+MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md).
+
+相册变更请求。
 
 > **说明：**
 > 
@@ -15,7 +17,7 @@ MediaAlbumChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## addAssets
@@ -34,7 +36,7 @@ addAssets(assets: Array<PhotoAsset>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | 是 | 待添加到相册中的资产数组。 |
+| assets | Array&lt;PhotoAsset&gt; | 是 | 待添加到相册中的资产数组。 |
 
 **错误码：**
 
@@ -90,7 +92,7 @@ constructor(album: Album)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | 是 | 需要变更的相册。 |
+| album | Album | 是 | 需要变更的相册。 |
 
 **错误码：**
 
@@ -199,9 +201,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     fetchColumns: [],
     predicates: predicates
   };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
-  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
-  let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
+    let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
+    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+  } catch (err) {
+    console.error(`MediaAlbumChangeRequest constructorDemo failed with error: ${err.code}, ${err.message}`);
+  }
 }
 ```
 
@@ -229,7 +235,7 @@ getAlbum(): Album
 
 | 类型 | 说明 |
 | --- | --- |
-| [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | 返回当前相册变更请求中的相册。 |
+| Album | 返回当前相册变更请求中的相册。 |
 
 **错误码：**
 
@@ -274,7 +280,7 @@ removeAssets(assets: Array<PhotoAsset>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assets | Array & lt;PhotoAsset & gt; | 是 | 待从相册中移除的资产数组。 |
+| assets | Array&lt;PhotoAsset&gt; | 是 | 待从相册中移除的资产数组。 |
 
 **错误码：**
 
@@ -320,10 +326,15 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setAlbumName(name: string): void
 ```
 
-设置相册名称。相册名参数规格：  
+设置相册名称。
+
+相册名参数规格：
+
 - 相册名字符串长度为1~255。  
-- 不允许出现的非法英文字符，包括：  
-. \ / : * ? " ' ` &lt; &gt; | { } [ ]  
+- 不允许出现的非法英文字符，包括：
+
+. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+
 - 英文字符大小写不敏感。  
 - 相册名不允许重名。
 
@@ -371,7 +382,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 readonly comment: string
 ```
 
-用于[MediaChangeRequest](arkts-apis-photoAccessHelper-i.md#mediachangerequest)类型校验。 如果类（如MediaAlbumChangeRequest）对象可以访问，就说明该类是MediaChangeRequest的实现类
+用于[MediaChangeRequest](arkts-apis-photoAccessHelper-i.md#mediachangerequest)类型校验。如果类（如MediaAlbumChangeRequest）对象可以访问，就说明该类是MediaChangeRequest的实现类
 
 **类型：** string
 

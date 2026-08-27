@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import networkManager from '@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## addApn
@@ -27,7 +27,7 @@ Adds an access point name (APN).
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| apnInfo | Record & lt;string, string & gt; | Yes | APN information to be added. After the setting, the system uses these parameters to configure the mobile data network access point, affecting the network connection method and data transmission path.    - **apnName**: APN identifier, which is mandatory.    - **mcc**: 3-digit mobile country code (MCC), which is mandatory.    - **mnc**: 2-digit or 3-digit mobile network code (MNC), which is mandatory.    - **apn**: access point name, which is mandatory.    - **type**: APN service type, which is optional.    - **user**: user name for APN authentication, which is optional.    - **password**: password for APN authentication, which is optional.    - **proxy**: address of the proxy server for a common data connection, which is optional.    - **mmsproxy**: dedicated proxy address of the MMS service, which is optional.    - **authType**: authentication protocol type of the APN, which is optional. |
+| apnInfo | Record&lt;string, string&gt; | Yes | APN information to be added. After the setting, the system uses these parameters to configure the mobile data network access point, affecting the network connection method and data transmission path.    - **apnName**: APN identifier, which is mandatory.    - **mcc**: 3-digit mobile country code (MCC), which is mandatory.    - **mnc**: 2-digit or 3-digit mobile network code (MNC), which is mandatory.    - **apn**: access point name, which is mandatory.    - **type**: APN service type, which is optional.    - **user**: user name for APN authentication, which is optional.    - **password**: password for APN authentication, which is optional.    - **proxy**: address of the proxy server for a common data connection, which is optional.    - **mmsproxy**: dedicated proxy address of the MMS service, which is optional.    - **authType**: authentication protocol type of the APN, which is optional. |
 
 **Error codes:**
 

@@ -76,7 +76,8 @@ export default class EntryAbility extends UIAbility {
 off(event: string, callback?: Function): void
 ```
 
-Unsubscribes from an event.  
+Unsubscribes from an event.
+
 - If **callback** is specified, this API unsubscribes from the given event with the specified callback.  
 - If **callback** is not specified, this API unsubscribes from the given event with all callbacks.
 

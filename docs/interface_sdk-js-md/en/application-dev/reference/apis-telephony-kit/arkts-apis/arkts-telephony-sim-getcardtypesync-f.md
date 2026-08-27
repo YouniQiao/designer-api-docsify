@@ -27,7 +27,7 @@ Obtains the type of the SIM card in the specified slot.
 
 | Type | Description |
 | --- | --- |
-| [CardType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-cardemulation-cardtype-e.md) | Type of the SIM card in the specified slot. |
+| CardType | Type of the SIM card in the specified slot. |
 
 **Examples**
 

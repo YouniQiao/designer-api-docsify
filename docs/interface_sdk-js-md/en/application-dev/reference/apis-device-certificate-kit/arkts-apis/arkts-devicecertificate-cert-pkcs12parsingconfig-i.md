@@ -53,7 +53,8 @@ Whether to obtain other certificates. The default value is **false**. **true**: 
 needsPrivateKey?: boolean
 ```
 
-Whether to obtain the private key. The default value is **true**.  
+Whether to obtain the private key. The default value is **true**.
+
 **true**: To obtain the private key in PKCS #8 format; **false**: Not to obtain the private key.
 
 **Type:** boolean

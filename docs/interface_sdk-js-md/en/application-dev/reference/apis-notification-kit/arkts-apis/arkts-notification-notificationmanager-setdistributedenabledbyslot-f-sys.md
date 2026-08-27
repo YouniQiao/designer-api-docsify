@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## setDistributedEnabledBySlot
@@ -26,7 +26,7 @@ Sets whether notifications of a specified slot can be sent to devices of a speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slot | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Types of the notification slot. |
+| slot | SlotType | Yes | Types of the notification slot. |
 | deviceType | string | Yes | Device type.Since API version 18, the following device types are supported:   - **headset**: wearable audio device   - **liteWearable**: lite wearable   - **wearable**: wearable   Since API version 20, the following device types are supported:   - **headset**: wearable audio device   - **liteWearable**: lite wearable   - **wearable**: wearable   - **current**: current device   - **2in1**: PC   - **tablet**: tablet |
 | enabled | boolean | Yes | Whether to enable cross-device collaboration for notifications. The value **true** means to enable cross-device collaboration, and **false** means the opposite. |
 
@@ -34,7 +34,7 @@ Sets whether notifications of a specified slot can be sent to devices of a speci
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

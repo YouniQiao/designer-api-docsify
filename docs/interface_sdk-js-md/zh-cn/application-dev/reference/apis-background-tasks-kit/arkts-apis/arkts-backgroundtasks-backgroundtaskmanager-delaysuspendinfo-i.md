@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import backgroundTaskManager from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## actualDelayTime
@@ -18,8 +18,9 @@ import backgroundTaskManager from '@kit.BackgroundTasksKit';
 actualDelayTime: number
 ```
 
-Actual duration of the transient task requested by the application, in milliseconds. Unit:ms  
-**说明：** 申请时间最长为3分钟，低电量（[BatteryCapacityLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md)为LEVEL_LOW） 时最长为1分钟。
+Actual duration of the transient task requested by the application, in milliseconds. Unit:ms
+
+**说明：** 申请时间最长为3分钟，低电量（[BatteryCapacityLevel](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md)为LEVEL_LOW）时最长为1分钟。
 
 **类型：** number
 

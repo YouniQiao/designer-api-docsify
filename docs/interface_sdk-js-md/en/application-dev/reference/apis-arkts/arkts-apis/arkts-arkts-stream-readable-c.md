@@ -143,7 +143,7 @@ A data read API that needs to be implemented in child classes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Number of bytes to read. Value range: 0 & lt;= size & lt;= Number.MAX_VALUE |
+| size | number | Yes | Number of bytes to read. Value range: 0 &lt;= size &lt;= Number.MAX_VALUE |
 
 **Examples**
 

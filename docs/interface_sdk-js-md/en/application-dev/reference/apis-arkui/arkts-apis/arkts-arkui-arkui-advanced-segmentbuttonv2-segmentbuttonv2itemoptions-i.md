@@ -25,7 +25,13 @@ import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesCha
 accessibilityDescription?: ResourceStr
 ```
 
-Accessibility description of the segmented button item.Default value: **""**If the value is **undefined**, the default value is used.Decorator type: @Trace
+Accessibility description of the segmented button item.
+
+Default value: **""**
+
+If the value is **undefined**, the default value is used.
+
+Decorator type: @Trace
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -43,7 +49,13 @@ Accessibility description of the segmented button item.Default value: **""**If t
 accessibilityLevel?: string
 ```
 
-Accessibility level of the segmented button item.Default value: **"auto"**If the value is **undefined**, the default value is used.Decorator type: @Trace
+Accessibility level of the segmented button item.
+
+Default value: **"auto"**
+
+If the value is **undefined**, the default value is used.
+
+Decorator type: @Trace
 
 **Type:** string
 
@@ -61,7 +73,13 @@ Accessibility level of the segmented button item.Default value: **"auto"**If the
 accessibilityText?: ResourceStr
 ```
 
-Accessibility text of the segmented button item.Default value: **""**If the value is **undefined**, the default value is used.Decorator type: @Trace
+Accessibility text of the segmented button item.
+
+Default value: **""**
+
+If the value is **undefined**, the default value is used.
+
+Decorator type: @Trace
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -79,8 +97,15 @@ Accessibility text of the segmented button item.Default value: **""**If the valu
 enabled?: boolean
 ```
 
-Whether the segmented button item is enabled.Default value: **true**  
-**true**: enabled. **false**: disabled.If the value is **undefined**, the default value is used.Decorator type: @Trace
+Whether the segmented button item is enabled.
+
+Default value: **true**
+
+**true**: enabled. **false**: disabled.
+
+If the value is **undefined**, the default value is used.
+
+Decorator type: @Trace
 
 **Type:** boolean
 
@@ -98,7 +123,11 @@ Whether the segmented button item is enabled.Default value: **true**
 icon?: ResourceStr
 ```
 
-Image icon of the segmented button item.Default value: **undefined**Decorator type: @Trace
+Image icon of the segmented button item.
+
+Default value: **undefined**
+
+Decorator type: @Trace
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -116,9 +145,13 @@ Image icon of the segmented button item.Default value: **undefined**Decorator ty
 iconModifier?: ImageModifier
 ```
 
-Image icon modifier for the segmented button item.Default value: **undefined**Decorator type: @Trace
+Image icon modifier for the segmented button item.
 
-**Type:** ImageModifier
+Default value: **undefined**
+
+Decorator type: @Trace
+
+**Type:** [ImageModifier](arkts-arkui-imagemodifier-c.md)
 
 **Since:** 18
 
@@ -134,7 +167,11 @@ Image icon modifier for the segmented button item.Default value: **undefined**De
 symbol?: Resource
 ```
 
-HM Symbol icon of the segmented button item.Default value: **undefined**Decorator type: @Trace
+HM Symbol icon of the segmented button item.
+
+Default value: **undefined**
+
+Decorator type: @Trace
 
 **Type:** Resource
 
@@ -152,9 +189,13 @@ HM Symbol icon of the segmented button item.Default value: **undefined**Decorato
 symbolModifier?: SymbolGlyphModifier
 ```
 
-HM Symbol icon modifier for the segmented button item.Default value: **undefined**Decorator type: @Trace
+HM Symbol icon modifier for the segmented button item.
 
-**Type:** SymbolGlyphModifier
+Default value: **undefined**
+
+Decorator type: @Trace
+
+**Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 18
 
@@ -170,7 +211,11 @@ HM Symbol icon modifier for the segmented button item.Default value: **undefined
 text?: ResourceStr
 ```
 
-Text of the segmented button item.Default value: **undefined**Decorator type: @Trace
+Text of the segmented button item.
+
+Default value: **undefined**
+
+Decorator type: @Trace
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -188,7 +233,11 @@ Text of the segmented button item.Default value: **undefined**Decorator type: @T
 textModifier?: TextModifier
 ```
 
-Text modifier for the segmented button item.Default value: **undefined**Decorator type: @Trace
+Text modifier for the segmented button item.
+
+Default value: **undefined**
+
+Decorator type: @Trace
 
 **Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 

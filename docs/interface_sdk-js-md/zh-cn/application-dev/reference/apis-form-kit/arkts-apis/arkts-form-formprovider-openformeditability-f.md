@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import formProvider from '@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## openFormEditAbility
@@ -24,7 +24,7 @@ function openFormEditAbility(abilityName: string, formId: string, isMainPage?: b
 | --- | --- | --- | --- |
 | abilityName | string | 是 | 编辑页的ability名称。 |
 | formId | string | 是 | 卡片标识。 |
-| isMainPage | boolean | 否 | 是否为主编辑页。    - true：表示是主编辑页，适合首次配置卡片基本信息的场景。    - false：表示不是主编辑页，适合进行卡片细节调整或高级配置的场景。    默认值：true（通常首次编辑卡片时使用默认值即可）。 |
+| isMainPage | boolean | 否 | 是否为主编辑页。   - true：表示是主编辑页，适合首次配置卡片基本信息的场景。   - false：表示不是主编辑页，适合进行卡片细节调整或高级配置的场景。   默认值：true（通常首次编辑卡片时使用默认值即可）。 |
 
 **错误码：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import sendableRelationalStore from '@kit.ArkData';
+import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
 ## toSendableAsset
@@ -28,7 +28,7 @@ Converts the asset data that cannot be passed across threads into the data that 
 
 | Type | Description |
 | --- | --- |
-| [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | Asset data that can be passed across threads. |
+| Asset | Asset data that can be passed across threads. |
 
 **Error codes:**
 

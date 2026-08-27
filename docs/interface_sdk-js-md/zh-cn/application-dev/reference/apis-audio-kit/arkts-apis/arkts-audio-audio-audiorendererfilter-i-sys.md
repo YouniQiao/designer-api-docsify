@@ -11,8 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## rendererId
@@ -21,7 +20,9 @@ import audioHaptic from '@kit.AudioKitHaptic';
 rendererId?: number
 ```
 
-音频流唯一id。SystemCapability.Multimedia.Audio.Renderer
+音频流唯一id。
+
+SystemCapability.Multimedia.Audio.Renderer
 
 **类型：** number
 
@@ -37,7 +38,9 @@ rendererId?: number
 rendererInfo?: AudioRendererInfo
 ```
 
-表示渲染器信息。SystemCapability.Multimedia.Audio.Renderer
+表示渲染器信息。
+
+SystemCapability.Multimedia.Audio.Renderer
 
 **类型：** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 
@@ -53,7 +56,9 @@ rendererInfo?: AudioRendererInfo
 uid?: number
 ```
 
-表示应用ID。SystemCapability.Multimedia.Audio.Core
+表示应用ID。
+
+SystemCapability.Multimedia.Audio.Core
 
 **类型：** number
 

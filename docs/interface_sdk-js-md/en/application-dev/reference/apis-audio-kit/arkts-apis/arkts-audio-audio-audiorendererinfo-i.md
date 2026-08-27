@@ -9,8 +9,7 @@ Describes audio renderer information.
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## content
@@ -37,7 +36,9 @@ Audio content type.
 rendererFlags: number
 ```
 
-Flags that control the renderer behavior.Set this parameter to **0**.
+Flags that control the renderer behavior.
+
+Set this parameter to **0**.
 
 **Type:** number
 

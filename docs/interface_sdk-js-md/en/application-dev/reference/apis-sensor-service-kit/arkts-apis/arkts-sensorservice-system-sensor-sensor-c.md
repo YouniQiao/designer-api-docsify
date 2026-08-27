@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import Sensor, { AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
+import { Sensor, AccelerometerResponse, BarometerResponse, CompassResponse, DeviceOrientationResponse, GetOnBodyStateOptions, GyroscopeResponse, HeartRateResponse, LightResponse, OnBodyStateResponse, ProximityResponse, StepCounterResponse, SubscribeBarometerOptions, SubscribeCompassOptions, SubscribeDeviceOrientationOptions, SubscribeGyroscopeOptions, SubscribeHeartRateOptions, SubscribeLightOptions, SubscribeOnBodyStateOptions, SubscribeProximityOptions, SubscribeStepCounterOptions, subscribeAccelerometerOptions } from '@kit.SensorServiceKit';
 ```
 
 ## getOnBodyState
@@ -136,7 +136,9 @@ Subscribes to data changes of the compass sensor. If this API is called multiple
 static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void
 ```
 
-Subscribes to data changes of the device orientation sensor.If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
+Subscribes to data changes of the device orientation sensor.
+
+If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
 
 > **NOTE：**
 > 
@@ -166,7 +168,9 @@ Subscribes to data changes of the device orientation sensor.If this API is calle
 static subscribeGyroscope(options: SubscribeGyroscopeOptions): void
 ```
 
-Subscribes to data changes of the gyroscope sensor.If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
+Subscribes to data changes of the gyroscope sensor.
+
+If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
 
 > **NOTE：**
 > 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import update from '@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## getOnlineUpdater
@@ -12,9 +12,14 @@ import update from '@kit.BasicServicesKit';
 function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 ```
 
-Obtains an **OnlineUpdater** object, which can be used to check for new versions online, download update packages, and install update packages. This API can be used in scenarios such as OTA upgrade (for details, see Upgrading Service Terms) of client applications and online system upgrade. This API can help users obtain system updates in a timely manner, improving upgrade efficiency and user experience.  
-**Overview**This API obtains an **OnlineUpdater** object through the system service interface. The object provides core functions such as checking for new versions, downloading update packages, and installing update packages.  
-**Constraints**  
+Obtains an **OnlineUpdater** object, which can be used to check for new versions online, download update packages, and install update packages. This API can be used in scenarios such as OTA upgrade (for details, see Upgrading Service Terms) of client applications and online system upgrade. This API can help users obtain system updates in a timely manner, improving upgrade efficiency and user experience.
+
+**Overview**
+
+This API obtains an **OnlineUpdater** object through the system service interface. The object provides core functions such as checking for new versions, downloading update packages, and installing update packages.
+
+**Constraints**
+
 - The upgrade package management server deployed by the vendor is required for checking for new versions and  
 downloading update packages.
 

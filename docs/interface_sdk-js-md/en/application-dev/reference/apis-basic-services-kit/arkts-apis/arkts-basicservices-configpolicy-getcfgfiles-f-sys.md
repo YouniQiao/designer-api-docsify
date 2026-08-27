@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import configPolicy from '@kit.BasicServicesKit';
+import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
 ## getCfgFiles
@@ -164,7 +164,7 @@ Obtains a list of all files with the specified names, in ascending order of prio
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the file list. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the file list. |
 
 **Error codes:**
 
@@ -219,7 +219,7 @@ Obtains a list of all files of a specified file name based on the provided follo
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return the file list. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the file list. |
 
 **Error codes:**
 

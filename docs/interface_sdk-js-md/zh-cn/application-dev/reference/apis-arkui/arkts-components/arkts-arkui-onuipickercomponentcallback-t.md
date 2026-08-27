@@ -4,7 +4,7 @@
 declare type OnUIPickerComponentCallback = (selectedIndex: number) => void
 ```
 
-定义[onChange](arkts-arkui-uipickercomponent-attribute.md#onchange)和 [onScrollStop](arkts-arkui-uipickercomponent-attribute.md#onscrollstop)事件的回调类型。
+定义[onChange](arkts-arkui-uipickercomponent-attribute.md#onchange)和[onScrollStop](arkts-arkui-uipickercomponent-attribute.md#onscrollstop)事件的回调类型。
 
 **起始版本：** 22
 
@@ -18,4 +18,4 @@ declare type OnUIPickerComponentCallback = (selectedIndex: number) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectedIndex | number | 是 | 当前选中项的索引值。  取值范围：[0, 子组件的个数-1]内的整数。 |
+| selectedIndex | number | 是 | 当前选中项的索引值。 取值范围：[0, 子组件的个数-1]内的整数。 |

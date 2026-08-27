@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getNotificationParameters
@@ -12,7 +12,7 @@ import notificationManager from '@kit.NotificationKit';
 function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>
 ```
 
-获取通知[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)中wantAgent字段的部分信息。使用Promise异 步回调。
+获取通知[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)中wantAgent字段的部分信息。使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -31,7 +31,7 @@ function getNotificationParameters(id: number, label?: string): Promise<Notifica
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;NotificationParameters & gt; | Promise对象，返回wantAgent的部分信息。 |
+| Promise&lt;NotificationParameters&gt; | Promise对象，返回wantAgent的部分信息。 |
 
 **错误码：**
 

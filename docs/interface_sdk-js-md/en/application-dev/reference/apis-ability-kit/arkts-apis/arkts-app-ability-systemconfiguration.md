@@ -1,6 +1,8 @@
 # @ohos.app.ability.systemConfiguration
 
-The class of a system configuration.@namespace systemConfiguration
+The class of a system configuration.
+
+@namespace systemConfiguration
 
 **Since:** 24
 
@@ -11,7 +13,7 @@ The class of a system configuration.@namespace systemConfiguration
 ## Modules to Import
 
 ```TypeScript
-import systemConfiguration from '@kit.AbilityKit';
+import { systemConfiguration } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -15,7 +15,7 @@ Registers the callback capability with the system ability (SA). This API is used
 ## Modules to Import
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## connectServer
@@ -24,7 +24,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 connectServer(requestId: string, requestData: string, callback: Callback<string>): void
 ```
 
-This API is called by the SA. After the request of connecting to the cloud server is processed, the result is returned the SA using a callback.This API can be used in enterprise account authentication and cloud permission verification to enable communication between the SA and the cloud server.
+This API is called by the SA. After the request of connecting to the cloud server is processed, the result is returned the SA using a callback.
+
+This API can be used in enterprise account authentication and cloud permission verification to enable communication between the SA and the cloud server.
 
 > **NOTE：**
 > 

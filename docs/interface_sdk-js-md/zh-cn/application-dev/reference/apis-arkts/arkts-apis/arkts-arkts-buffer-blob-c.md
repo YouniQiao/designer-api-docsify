@@ -29,7 +29,7 @@ arrayBuffer(): Promise<ArrayBuffer>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;ArrayBuffer & gt; | Promise对象，resolve返回包含Blob数据的ArrayBuffer，reject返回错误信息。 |
+| Promise&lt;ArrayBuffer&gt; | Promise对象，resolve返回包含Blob数据的ArrayBuffer，reject返回错误信息。 |
 
 **示例**
 
@@ -64,7 +64,7 @@ constructor(sources: string[] | ArrayBuffer[] | TypedArray[] | DataView[] | Blob
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sources | string[] \| ArrayBuffer[] \| TypedArray[] \| DataView[] \| [Blob](arkts-arkts-buffer-blob-c.md)[] | 是 | Blob实例的数据源。 |
-| options | Object | 否 | options:   - endings：含义为结束符'\n'的字符串如何被输出，为'transparent'或'native'。native代表行结束符会跟随系 统。'transparent'代表会保持Blob中保存的结束符不变。此参数非必填，默认值为'transparent'。   - type：Blob内容类型。其目的是让类型传达数据的MIME媒体类型，但是不执行类型格 式的验证。此参数非必填，默认参数为''。 |
+| options | Object | 否 | options:   - endings：含义为结束符'\n'的字符串如何被输出，为'transparent'或'native'。native代表行结束符会跟随系统。'transparent'代表会保持Blob中保存的结束符不变。此参数非必填，默认值为'transparent'。   - type：Blob内容类型。其目的是让类型传达数据的MIME媒体类型，但是不执行类型格式的验证。此参数非必填，默认参数为''。 |
 
 **示例**
 
@@ -138,7 +138,7 @@ text(): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，resolve返回以utf8解码后的字符串，reject返回错误信息。 |
+| Promise&lt;string&gt; | Promise对象，resolve返回以utf8解码后的字符串，reject返回错误信息。 |
 
 **示例**
 

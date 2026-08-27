@@ -134,7 +134,7 @@ Retrieves HTTP authentication credentials for a given host and realm. This API r
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Array of the matching user names and passwords is returned if the operation is successful; otherwise, an empty array is returned. |
+| Array&lt;string&gt; | Array of the matching user names and passwords is returned if the operation is successful; otherwise, an empty array is returned. |
 
 **Error codes:**
 

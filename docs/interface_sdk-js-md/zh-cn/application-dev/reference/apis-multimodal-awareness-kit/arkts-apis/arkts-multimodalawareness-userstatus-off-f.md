@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import userStatus from '@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## off('userAgeGroupDetected')
@@ -29,7 +29,7 @@ function off(type: 'userAgeGroupDetected', callback?: Callback<UserClassificatio
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'userAgeGroupDetected' | 是 | 事件类型。type为“userAgeGroupDetected”，表示年龄群组检测功能。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md)&gt; | 否 | 回调函数，返回检测结果。需要取消监听的回调函数，需与订阅时传入的回调函数一致。 若不填，则取消当前监听该事件的所有回调函数。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md)&gt; | 否 | 回调函数，返回检测结果。需要取消监听的回调函数，需与订阅时传入的回调函数一致。若不填，则取消当前监听该事件的所有回调函数。 |
 
 **错误码：**
 

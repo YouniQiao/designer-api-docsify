@@ -1,6 +1,8 @@
 # LineBreakStrategy
 
-Enum of line break strategy@enum { number }
+Enum of line break strategy
+
+@enum { number }
 
 **起始版本：** 12
 

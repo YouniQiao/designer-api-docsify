@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import dragInteraction from '@kit.ArkUI';
+import { dragInteraction } from '@kit.ArkUI';
 ```
 
 ## 汇总

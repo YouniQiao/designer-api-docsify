@@ -18,7 +18,9 @@ import { UiComponent, UiDriver, BY, By } from '@kit.TestKit';
 displayId?: number
 ```
 
-坐标点所属的屏幕ID，取值范围：大于等于0的整数。默认值为设备默认屏幕ID。从API version 20开始，该接口支持在原子化服务中使用。
+坐标点所属的屏幕ID，取值范围：大于等于0的整数。默认值为设备默认屏幕ID。
+
+从API version 20开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -34,8 +36,13 @@ displayId?: number
 x: number
 ```
 
-坐标点的横坐标，取值大于等于0的整数，单位：px。  
-**说明：** 从API version 20开始，该属性不再为只读属性。从API version 11开始，该接口支持在原子化服务中使用。@readonly [since 9-19]
+坐标点的横坐标，取值大于等于0的整数，单位：px。
+
+**说明：** 从API version 20开始，该属性不再为只读属性。
+
+从API version 11开始，该接口支持在原子化服务中使用。
+
+@readonly [since 9-19]
 
 **类型：** number
 
@@ -51,8 +58,13 @@ x: number
 y: number
 ```
 
-坐标点的纵坐标，取值大于等于0的整数，单位：px。  
-**说明：** 从API version 20开始，该属性不再为只读属性。从API version 11开始，该接口支持在原子化服务中使用。@readonly [since 9-19]
+坐标点的纵坐标，取值大于等于0的整数，单位：px。
+
+**说明：** 从API version 20开始，该属性不再为只读属性。
+
+从API version 11开始，该接口支持在原子化服务中使用。
+
+@readonly [since 9-19]
 
 **类型：** number
 

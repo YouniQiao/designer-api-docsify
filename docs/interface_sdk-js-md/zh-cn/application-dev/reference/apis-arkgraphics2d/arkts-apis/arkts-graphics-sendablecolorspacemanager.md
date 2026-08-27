@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import sendableColorSpaceManager from '@kit.ArkGraphics2D';
+import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## 汇总
@@ -18,17 +18,17 @@ import sendableColorSpaceManager from '@kit.ArkGraphics2D';
 
 | 名称 | 说明 |
 | --- | --- |
-| [create(可共享的色彩管理)](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md) | 创建标准可共享的色彩管理实例。 |
-| [create(可共享的色彩管理)](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md) | 创建用户自定义可共享的色彩管理实例。 |
+| [create](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md) | 创建标准可共享的色彩管理实例。 |
+| [create](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md) | 创建用户自定义可共享的色彩管理实例。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [ColorSpaceManager(可共享的色彩管理)](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | 当前可共享的色彩管理实例。ColorSpaceManager是用于管理和操作色域对象的核心类，提供了获取色域类型、白点值、gamma值等功能，并支持在ArkTS并发实例间传递。下列API示例中都需先使用[create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md)获取到ColorSpaceManager实例，再通过此实例调用对应方法。 |
+| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | 当前可共享的色彩管理实例。ColorSpaceManager是用于管理和操作色域对象的核心类，提供了获取色域类型、白点值、gamma值等功能，并支持在ArkTS并发实例间传递。 |
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [ISendable(可共享的色彩管理)](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md) | 为与当前模块的接口规范保持一致，定义了ISendable类型别名。 |
+| [ISendable](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md) | 为与当前模块的接口规范保持一致，定义了ISendable类型别名。 |

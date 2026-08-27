@@ -3,8 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import usbManager from '@kit.BasicServicesKit';
-import serialManager from '@kit.BasicServicesKit.serial';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## addDeviceAccessRight
@@ -13,7 +12,8 @@ import serialManager from '@kit.BasicServicesKit.serial';
 function addDeviceAccessRight(tokenId: string, deviceName: string): boolean
 ```
 
-添加应用访问设备的权限。系统应用默认拥有访问设备权限，调用此接口不会产生影响。适用于系统设置应用、设备管理应用等需要为第三方应用授权访问USB设备的场景。授权立即生效并持久化存储，设备重启后仍然有效。授权范围为指定的USB设备实 例，多个应用可以同时获得同一设备的访问权限。  
+添加应用访问设备的权限。系统应用默认拥有访问设备权限，调用此接口不会产生影响。适用于系统设置应用、设备管理应用等需要为第三方应用授权访问USB设备的场景。授权立即生效并持久化存储，设备重启后仍然有效。授权范围为指定的USB设备实例，多个应用可以同时获得同一设备的访问权限。
+
 [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md)会触发弹窗请求用户授权；addDeviceAccessRight不会触发弹窗，而是直接添加应用程序访问设备的权限。
 
 **起始版本：** 12
@@ -28,8 +28,8 @@ function addDeviceAccessRight(tokenId: string, deviceName: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenId | string | 是 | 应用的唯一标识符，可通过 [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md)获取。 |
-| deviceName | string | 是 | 设备名称，格式为'bus-port'，例如'1-1'，可通过[getDevices](arkts-basicservices-usbmanager-getdevices-f.md)接口获取设备列表后得到设备 名称。 |
+| tokenId | string | 是 | 应用的唯一标识符，可通过[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md)获取。 |
+| deviceName | string | 是 | 设备名称，格式为'bus-port'，例如'1-1'，可通过[getDevices](arkts-basicservices-usbmanager-getdevices-f.md)接口获取设备列表后得到设备名称。 |
 
 **返回值：**
 

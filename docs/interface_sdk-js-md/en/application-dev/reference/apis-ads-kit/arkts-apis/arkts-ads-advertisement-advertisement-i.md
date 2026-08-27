@@ -12,7 +12,9 @@ This module provides the requested ad content.
 [key:string]: Object
 ```
 
-Custom parameters.<!--RP1--><!--RP1End-->
+Custom parameters.
+
+<!--RP1--><!--RP1End-->
 
 **Type:** Object
 
@@ -28,13 +30,15 @@ Custom parameters.<!--RP1--><!--RP1End-->
 adType: number
 ```
 
-Ad type.  
+Ad type.
+
 - 1: Splash ad.  
 - 3: Native ad.  
 - 7: Rewarded ad.  
 - 8: Banner ad.  
 - 12: Interstitial ad.  
-- 60: Roll ad.  
+- 60: Roll ad.
+
 If not filled, the default is native ad type.
 
 **Type:** number
@@ -51,7 +55,8 @@ If not filled, the default is native ad type.
 clicked: boolean
 ```
 
-Whether the ad is clicked.  
+Whether the ad is clicked.
+
 - **true**: The ad is clicked.  
 - **false**: The ad is not clicked.
 
@@ -69,7 +74,8 @@ Whether the ad is clicked.
 rewarded: boolean
 ```
 
-Whether users get rewarded for watching or clicking the ad.  
+Whether users get rewarded for watching or clicking the ad.
+
 - **true**: Users get rewarded.  
 - **false**: Users do not get rewarded.
 
@@ -87,7 +93,15 @@ Whether users get rewarded for watching or clicking the ad.
 rewardVerifyConfig: Map<string, string>
 ```
 
-Server verification parameters.{customData: "test",userId: "12345"}
+Server verification parameters.
+
+{
+
+customData: "test",
+
+userId: "12345"
+
+}
 
 **Type:** Map&lt;string, string&gt;
 
@@ -103,7 +117,8 @@ Server verification parameters.{customData: "test",userId: "12345"}
 shown: boolean
 ```
 
-Whether the ad is shown.  
+Whether the ad is shown.
+
 - **true**: The ad is shown.  
 - **false**: The ad is not shown.
 

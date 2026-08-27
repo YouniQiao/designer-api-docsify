@@ -1,6 +1,8 @@
 # FileManifestData (System API)
 
-Manifest file information in incremental data. FileManifestData is useful when doing IPC with the backup service.@interface FileManifestData
+Manifest file information in incremental data. FileManifestData is useful when doing IPC with the backup service.
+
+@interface FileManifestData
 
 **Since:** 12
 
@@ -11,7 +13,7 @@ Manifest file information in incremental data. FileManifestData is useful when d
 ## Modules to Import
 
 ```TypeScript
-import backup from '@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## manifestFd

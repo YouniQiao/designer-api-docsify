@@ -9,8 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## networkId
@@ -35,7 +34,7 @@ networkId: string
 percentage?: number
 ```
 
-音量百分比，取值范围为[0, 100]。 取值限定为整数。
+音量百分比，取值范围为[0, 100]。取值限定为整数。
 
 **类型：** number
 

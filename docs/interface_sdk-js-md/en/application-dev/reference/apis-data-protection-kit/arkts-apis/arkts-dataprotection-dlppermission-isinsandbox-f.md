@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## isInSandbox
@@ -12,7 +12,9 @@ import dlpPermission from '@kit.DataProtectionKit';
 function isInSandbox(): Promise<boolean>
 ```
 
-Checks whether this application is running in a DLP sandbox environment. This API uses a promise to return the result.This API is used to determine whether the current application is running in a DLP sandbox environment. If it is, the system can perform operations or call APIs for sandbox applications.
+Checks whether this application is running in a DLP sandbox environment. This API uses a promise to return the result.
+
+This API is used to determine whether the current application is running in a DLP sandbox environment. If it is, the system can perform operations or call APIs for sandbox applications.
 
 **Since:** 10
 
@@ -22,7 +24,7 @@ Checks whether this application is running in a DLP sandbox environment. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the application is running in a sandbox; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the application is running in a sandbox; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -51,7 +53,9 @@ dlpPermission.isInSandbox().then((isInSandbox) => { // Check whether the applica
 function isInSandbox(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this application is running in a DLP sandbox environment. This API uses an asynchronous callback to return the result.This API is used to determine whether the current application is running in a DLP sandbox environment. If it is, the system can perform operations or call APIs for sandbox applications.
+Checks whether this application is running in a DLP sandbox environment. This API uses an asynchronous callback to return the result.
+
+This API is used to determine whether the current application is running in a DLP sandbox environment. If it is, the system can perform operations or call APIs for sandbox applications.
 
 **Since:** 10
 

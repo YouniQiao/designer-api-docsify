@@ -61,7 +61,9 @@ exitFullscreen()
 pause(): Promise<void>
 ```
 
-暂停播放视频，显示当前帧，再次播放时从当前位置继续播放。使用Promise异步回调。只能在正在播放的状态下调用，其他情况下调用pause()方法会失败。
+暂停播放视频，显示当前帧，再次播放时从当前位置继续播放。使用Promise异步回调。
+
+只能在正在播放的状态下调用，其他情况下调用pause()方法会失败。
 
 **起始版本：** 26.0.0
 
@@ -75,7 +77,7 @@ pause(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 ## requestFullscreen
 
@@ -101,7 +103,7 @@ requestFullscreen(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否全屏（填充满应用窗口）播放。 true：请求全屏播放；false：不请求全屏播放。 |
+| value | boolean | 是 | 是否全屏（填充满应用窗口）播放。true：请求全屏播放；false：不请求全屏播放。 |
 
 ## reset
 
@@ -123,7 +125,7 @@ reset(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 ## setCurrentTime
 
@@ -149,8 +151,8 @@ setCurrentTime(value: number, seekMode?: SeekMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 视频播放进度位置。 取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md)] 当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。 单位：s |
-| seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | 否 | 跳转模式。 异常值undefined、null、NaN和Infinity按PreviousKeyframe处理。 默认值：PreviousKeyframe |
+| value | number | 是 | 视频播放进度位置。取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md)] 当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。单位：s |
+| seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | 否 | 跳转模式。异常值undefined、null、NaN和Infinity按PreviousKeyframe处理。默认值：PreviousKeyframe |
 
 ## start
 
@@ -158,7 +160,9 @@ setCurrentTime(value: number, seekMode?: SeekMode)
 start(): Promise<void>
 ```
 
-开始播放视频。使用Promise异步回调。视频准备完成前（未收到[onPrepared](arkts-arkui-video-attribute.md#onprepared)回调）调用start()方法会失败。
+开始播放视频。使用Promise异步回调。
+
+视频准备完成前（未收到[onPrepared](arkts-arkui-video-attribute.md#onprepared)回调）调用start()方法会失败。
 
 **起始版本：** 26.0.0
 
@@ -172,7 +176,7 @@ start(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 ## stop
 
@@ -194,4 +198,4 @@ stop(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，无返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |

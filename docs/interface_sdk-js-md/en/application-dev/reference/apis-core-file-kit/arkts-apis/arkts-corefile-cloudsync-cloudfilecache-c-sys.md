@@ -9,8 +9,7 @@ Provides APIs for the file manager application to download files from the Drive 
 ## Modules to Import
 
 ```TypeScript
-import cloudSync from '@kit.CoreFileKit';
-import cloudSyncManager from '@kit.CoreFileKitManager';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## cleanCache
@@ -120,13 +119,13 @@ Query the download state of the cloud file list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uris | Array & lt;string & gt; | Yes | uris of queryed files. |
+| uris | Array&lt;string&gt; | Yes | uris of queryed files. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;DownloadProgress & gt; & gt; | Return Promise. |
+| Promise&lt;Array&lt;DownloadProgress&gt;&gt; | Return Promise. |
 
 **Error codes:**
 

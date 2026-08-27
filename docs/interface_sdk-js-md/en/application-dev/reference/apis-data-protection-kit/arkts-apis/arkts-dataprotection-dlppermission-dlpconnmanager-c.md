@@ -14,7 +14,7 @@ Calls **registerPlugin** and **unregisterPlugin** to register or unregister call
 ## Modules to Import
 
 ```TypeScript
-import dlpPermission from '@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## constructor
@@ -78,7 +78,7 @@ Registers a callback with the SA.
 
 | Type | Description |
 | --- | --- |
-| number | Registration result. The unique ID of the callback is returned. The value range is [0, 2 & lt;sup & gt;53 & lt;/sup & gt;-1]. |
+| number | Registration result. The unique ID of the callback is returned. The value range is [0, 2&lt;sup&gt;53&lt;/sup&gt;-1]. |
 
 **Error codes:**
 
@@ -122,7 +122,9 @@ let pluginId: number = dlpPermission.DlpConnManager.registerPlugin(new DataCapsu
 static unregisterPlugin(): void
 ```
 
-Unregisters a callback from the SA.This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released.
+Unregisters a callback from the SA.
+
+This API unregisters a callback and releases resources when an application exits, ensuring that the callback capability is correctly released.
 
 > **NOTE：**
 > 

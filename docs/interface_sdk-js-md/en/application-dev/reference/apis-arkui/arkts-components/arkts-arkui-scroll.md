@@ -28,16 +28,33 @@ Called when a scrollable container is set.
 
 | Name | Description |
 | --- | --- |
+| [OffsetOptions](arkts-arkui-offsetoptions-i.md) | Provides parameters for setting the initial scrolling offset. |
+| [OffsetResult](arkts-arkui-offsetresult-i.md) | Represents the offset values resulting from a scroll operation. |
+| [OnScrollFrameBeginHandlerResult](arkts-arkui-onscrollframebeginhandlerresult-i.md) | The data returned by the event handler when onScrollFrameBegin. |
+| [ScrollAnimationOptions](arkts-arkui-scrollanimationoptions-i.md) | Provides parameters for customizing scroll animations. |
+| [ScrollEdgeOptions](arkts-arkui-scrolledgeoptions-i.md) | Provides parameters for scrolling to the edge of a scrollable container. |
+| [ScrollOptions](arkts-arkui-scrolloptions-i.md) | Provides parameters for scrolling to a specific position in a scrollable container. |
+| [ScrollPageOptions](arkts-arkui-scrollpageoptions-i.md) | Provides parameters for page scrolling behavior. |
+| [ScrollSnapOptions](arkts-arkui-scrollsnapoptions-i.md) | Defines a scroll snapping mode object. |
+| [ScrollToIndexOptions](arkts-arkui-scrolltoindexoptions-i.md) | Provides parameters for scrolling to a specific index. |
+| [UIScrollEvent](arkts-arkui-uiscrollevent-i.md) | Defines a UIScrollableCommonEvent which is used to set different common event to target component. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [OnScrollEdgeCallback](arkts-arkui-onscrolledgecallback-t.md) | Represents the callback triggered when scrolling reaches an edge. |
+| [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) | Represents the callback triggered before each frame scrolling starts. |
+| [ScrollOnDidZoomCallback](arkts-arkui-scrollondidzoomcallback-t.md) | callback of Scroll, using in onDidZoom. |
+| [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) | Represents the callback triggered when the &lt;em&gt;Scroll&lt;/em&gt; component scrolls. |
+| [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md) | Called before scroll to allow developer to control real offset the Scroll can scroll. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
+| [ScrollAlign](arkts-arkui-scrollalign-e.md) | Enumerates alignment modes. |
+| [ScrollDirection](arkts-arkui-scrolldirection-e.md) | Enumerates the scrolling directions. |
 
 ## Examples
 

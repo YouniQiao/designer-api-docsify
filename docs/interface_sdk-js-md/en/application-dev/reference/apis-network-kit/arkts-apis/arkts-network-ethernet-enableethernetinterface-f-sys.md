@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import ethernet from '@kit.NetworkKit';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## enableEthernetInterface
@@ -28,7 +28,7 @@ Enable the ethernet interface.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned when the ethernet interface is enabled. |
+| Promise&lt;void&gt; | The promise returned when the ethernet interface is enabled. |
 
 **Error codes:**
 

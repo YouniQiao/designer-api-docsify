@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getSyncNotificationEnabledWithoutApp
@@ -90,7 +90,7 @@ Obtains whether the notification sync feature is enabled for devices where the a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means that the notification sync feature is enabled, and **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the notification sync feature is enabled, and **false** means the opposite. |
 
 **Error codes:**
 

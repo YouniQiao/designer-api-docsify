@@ -72,7 +72,7 @@ Changes children main size by removing or replacing existing elements and/or add
 | --- | --- | --- | --- |
 | start | number | Yes | Zero-based index at which to start changing the children main size. |
 | deleteCount | number | No | Indicating the number of children main size to remove from start. |
-| childrenSize | Array & lt;number & gt; | No | Add the new children main size, beginning from start. |
+| childrenSize | Array&lt;number&gt; | No | Add the new children main size, beginning from start. |
 
 **Error codes:**
 

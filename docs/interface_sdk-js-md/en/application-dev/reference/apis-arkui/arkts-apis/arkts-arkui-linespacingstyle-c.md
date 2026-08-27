@@ -17,7 +17,8 @@ Describes the text line spacing style.
 constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 ```
 
-A constructor used to create a text line spacing style.  
+A constructor used to create a text line spacing style.
+
 **Since**: 26.0.0
 
 **Since:** 26.0.0
@@ -32,7 +33,7 @@ A constructor used to create a text line spacing style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineSpacing | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line spacing.Default value: **0.0**Value range: [0, +∞)    **NOTE：**If **value** of **LengthMetrics** is less than 0, the default value **0.0** is used. |
+| lineSpacing | LengthMetrics | Yes | Text line spacing.Default value: **0.0**Value range: [0, +∞)    **NOTE：**If **value** of **LengthMetrics** is less than 0, the default value **0.0** is used. |
 | options | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | No | Line spacing options.Default value: **{ onlyBetweenLines: false } |
 
 ## lineSpacing
@@ -41,7 +42,11 @@ A constructor used to create a text line spacing style.
 readonly lineSpacing: number
 ```
 
-Text line spacing.Value range: 0, +∞)Unit: [vp
+Text line spacing.
+
+Value range: 0, +∞)
+
+Unit: [vp
 
 **Type:** number
 

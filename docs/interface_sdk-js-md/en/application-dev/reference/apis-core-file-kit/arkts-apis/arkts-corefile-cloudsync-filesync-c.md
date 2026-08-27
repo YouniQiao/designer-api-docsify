@@ -9,8 +9,7 @@ Provides APIs for the file manager application to perform device-cloud sync of t
 ## Modules to Import
 
 ```TypeScript
-import cloudSync from '@kit.CoreFileKit';
-import cloudSyncManager from '@kit.CoreFileKitManager';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -61,7 +60,7 @@ Obtains the last sync time. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the last sync time. |
+| Promise&lt;number&gt; | Promise used to return the last sync time. |
 
 **Error codes:**
 
@@ -220,7 +219,7 @@ Starts device-cloud sync of a file. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -332,7 +331,9 @@ gallerySync.start((err: BusinessError) => {
 stop(): Promise<void>
 ```
 
-Stops device-cloud sync of a file. This API uses a promise to return the result.Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
+Stops device-cloud sync of a file. This API uses a promise to return the result.
+
+Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
 
 **Since:** 12
 
@@ -342,7 +343,7 @@ Stops device-cloud sync of a file. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -383,7 +384,9 @@ gallerySync.stop().then(() => {
 stop(callback: AsyncCallback<void>): void
 ```
 
-Stops device-cloud sync of a file. This API uses an asynchronous callback to return the result.Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
+Stops device-cloud sync of a file. This API uses an asynchronous callback to return the result.
+
+Calling **stop** will stop the sync process. To resume the sync, call [start](#start).
 
 **Since:** 12
 

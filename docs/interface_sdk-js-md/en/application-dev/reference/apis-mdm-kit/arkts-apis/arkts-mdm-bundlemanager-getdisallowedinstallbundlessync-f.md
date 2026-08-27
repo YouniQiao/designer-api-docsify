@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.MDMKit';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## getDisallowedInstallBundlesSync
@@ -33,7 +33,7 @@ Obtains the applications that cannot be installed by the current or specified us
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Array of applications that cannot be installed by the current user. |
+| Array&lt;string&gt; | Array of applications that cannot be installed by the current user. |
 
 **Error codes:**
 
@@ -93,7 +93,7 @@ Obtains the applications that cannot be installed by the current or specified us
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of bundles that are not allowed to be installed by the current or specified user. |
+| Array&lt;string&gt; | List of bundles that are not allowed to be installed by the current or specified user. |
 
 **Error codes:**
 

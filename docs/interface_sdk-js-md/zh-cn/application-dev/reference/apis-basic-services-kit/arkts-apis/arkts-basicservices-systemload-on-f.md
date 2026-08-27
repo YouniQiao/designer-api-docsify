@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import systemLoad from '@kit.BasicServicesKit';
+import { systemLoad } from '@kit.BasicServicesKit';
 ```
 
 ## on('systemLoadChange')

@@ -1,6 +1,8 @@
 # IndicatorComponent properties/events
 
-Defines the IndicatorComponent attribute functions.@extends CommonMethod&lt;IndicatorComponentAttribute&gt;
+Defines the IndicatorComponent attribute functions.
+
+@extends CommonMethod&lt;IndicatorComponentAttribute&gt;
 
 **Inheritance/Implementation:** IndicatorComponentAttribute extends CommonMethod<IndicatorComponentAttribute>
 
@@ -107,7 +109,7 @@ Called when the index value changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | Callback & lt;number & gt; | Yes |  |
+| event | Callback&lt;number&gt; | Yes |  |
 
 ## style
 

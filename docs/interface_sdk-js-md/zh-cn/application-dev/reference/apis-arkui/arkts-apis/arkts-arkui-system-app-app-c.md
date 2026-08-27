@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import App, { AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } from '@kit.ArkUI';
+import { App, AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } from '@kit.ArkUI';
 ```
 
 ## getInfo
@@ -18,7 +18,9 @@ import App, { AppResponse, RequestFullWindowOptions, ScreenOnVisibleOptions } fr
 static getInfo(): AppResponse
 ```
 
-获取当前应用配置文件中声明的信息。在Stage模型下接口返回值为null。从API version9开始，推荐使用 [bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md) 。
+获取当前应用配置文件中声明的信息。在Stage模型下接口返回值为null。
+
+从API version9开始，推荐使用[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md)。
 
 **起始版本：** 3
 
@@ -188,7 +190,9 @@ export default class Req {
 static screenOnVisible(options?: ScreenOnVisibleOptions): void
 ```
 
-定义屏幕唤醒时是否保持应用可见。该接口从API version 8 开始废弃。
+定义屏幕唤醒时是否保持应用可见。
+
+该接口从API version 8 开始废弃。
 
 **起始版本：** 3
 
@@ -257,7 +261,9 @@ struct Index {
 static setImageFileCacheSize(value: number): void
 ```
 
-设置图像文件在解码前在磁盘上的缓存大小（字节）。如果未设置，应用程序将在磁盘上缓存 100MB 的图像文件。
+设置图像文件在解码前在磁盘上的缓存大小（字节）。
+
+如果未设置，应用程序将在磁盘上缓存 100MB 的图像文件。
 
 **起始版本：** 7
 
@@ -344,7 +350,9 @@ struct Index {
 static terminate(): void
 ```
 
-退出当前Ability。在Stage模型下接口功能不生效。从API version 7开始，推荐使用[`@ohos.ability.featureAbility`](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md)。
+退出当前Ability。在Stage模型下接口功能不生效。
+
+从API version 7开始，推荐使用[`@ohos.ability.featureAbility`](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md)。
 
 **起始版本：** 3
 

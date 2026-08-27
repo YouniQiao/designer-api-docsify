@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## getQuerySqlInfo
@@ -22,8 +22,8 @@ Obtains the SQL statement used to query data. This API returns the result synchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes | RdbPredicates** object that matches the specified field. |
-| columns | Array & lt;string & gt; | No | Columns to be queried. If this parameter is not specified, all columns are queried. |
+| predicates | RdbPredicates | Yes | RdbPredicates** object that matches the specified field. |
+| columns | Array&lt;string&gt; | No | Columns to be queried. If this parameter is not specified, all columns are queried. |
 
 **Return value:**
 

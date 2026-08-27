@@ -31,15 +31,15 @@ function getConnectOwnerUid(protocol: ProtocolType, local: NetAddress, remote: N
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| protocol | [ProtocolType](arkts-network-connection-protocoltype-e.md) | 是 | 网络协议的类型。 |
-| local | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 源网络地址。 |
-| remote | [NetAddress](arkts-network-connection-netaddress-i.md) | 是 | 目标网络地址。 |
+| protocol | ProtocolType | 是 | 网络协议的类型。 |
+| local | NetAddress | 是 | 源网络地址。 |
+| remote | NetAddress | 是 | 目标网络地址。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;number & gt; | Promise对象，返回应用程序的UID。如果不存在匹配的UID则返回-1。 |
+| Promise&lt;number&gt; | Promise对象，返回应用程序的UID。如果不存在匹配的UID则返回-1。 |
 
 **错误码：**
 

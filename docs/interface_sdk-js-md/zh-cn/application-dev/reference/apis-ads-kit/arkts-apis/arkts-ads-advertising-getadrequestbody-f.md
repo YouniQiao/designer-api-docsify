@@ -3,10 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit.AdComponent';
-import AdsServiceExtensionAbility, { RespCallback } from '@kit.AdsKit.AdsServiceExtensionAbility';
-import { AutoAdComponent } from '@kit.AdsKit.AutoAdComponent';
-import advertising from '@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## getAdRequestBody
@@ -25,14 +22,14 @@ function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| adParams | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)[] | 是 | 广告请求参数。 **说明：** 该接口体的adId参数可以为空。 |
+| adParams | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)[] | 是 | 广告请求参数。**说明：** 该接口体的adId参数可以为空。 |
 | adOptions | [AdOptions](arkts-ads-advertising-adoptions-i.md) | 是 | 广告配置参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回字符类型的广告数据。 |
+| Promise&lt;string&gt; | Promise对象，返回字符类型的广告数据。 |
 
 **错误码：**
 

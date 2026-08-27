@@ -9,7 +9,7 @@ This module provides the capability of content processing for images, including 
 ## Modules to Import
 
 ```TypeScript
-import videoProcessingEngine from '@kit.ImageKit';
+import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
 ## Summary
@@ -18,18 +18,18 @@ import videoProcessingEngine from '@kit.ImageKit';
 
 | Name | Description |
 | --- | --- |
-| [create(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-create-f.md) | Create an image processing instance. |
-| [deinitializeEnvironment(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-deinitializeenvironment-f.md) | Deinitialize global environment for image processing. |
-| [initializeEnvironment(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-initializeenvironment-f.md) | Initialize global environment for image processing. |
+| [create](arkts-image-videoprocessingengine-create-f.md) | Create an image processing instance. |
+| [deinitializeEnvironment](arkts-image-videoprocessingengine-deinitializeenvironment-f.md) | Deinitialize global environment for image processing. |
+| [initializeEnvironment](arkts-image-videoprocessingengine-initializeenvironment-f.md) | Initialize global environment for image processing. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ImageProcessor(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-imageprocessor-i.md) | Provides the ImageProcessor type, including the processing function. |
+| [ImageProcessor](arkts-image-videoprocessingengine-imageprocessor-i.md) | Provides the ImageProcessor type, including the processing function. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [QualityLevel(Provides the capability of image quality processing.)](arkts-image-videoprocessingengine-qualitylevel-e.md) | Levels of processing quality for detail enhancement. @enum {number} |
+| [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | Levels of processing quality for detail enhancement. @enum {number} |

@@ -48,7 +48,8 @@ extraInfo?: Record<string, Object>
 isLocalUpdateOnly?: boolean
 ```
 
-实况窗是否只在本地更新。默认为false。  
+实况窗是否只在本地更新。默认为false。
+
 - true：是。  
 - false：否。
 

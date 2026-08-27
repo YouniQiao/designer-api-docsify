@@ -11,7 +11,11 @@
 function registerTraceListener(callback: TraceEventListener): number
 ```
 
-Registers a callback to notify whether the application trace capture is enabled. This API uses a synchronous callback to return the result.After the registration is successful, the callback is executed immediately. Subsequent callbacks are executed when the application trace capture status changes.Callbacks are stored in the application process. A maximum of 10 callbacks can be registered in a process.
+Registers a callback to notify whether the application trace capture is enabled. This API uses a synchronous callback to return the result.
+
+After the registration is successful, the callback is executed immediately. Subsequent callbacks are executed when the application trace capture status changes.
+
+Callbacks are stored in the application process. A maximum of 10 callbacks can be registered in a process.
 
 > **NOTE：**
 > 
@@ -37,7 +41,7 @@ Registers a callback to notify whether the application trace capture is enabled.
 
 | Type | Description |
 | --- | --- |
-| number | Callback registration status. & gt;= 0: The registration is successful. The callback index for deregistration is returned. The index ranges from 0 to 9. **-1**: The maximum number of callbacks has been reached. **-2**: Invalid parameter. The parameter is not of the **TraceEventListener** type. |
+| number | Callback registration status. &gt;= 0: The registration is successful. The callback index for deregistration is returned. The index ranges from 0 to 9. **-1**: The maximum number of callbacks has been reached. **-2**: Invalid parameter. The parameter is not of the **TraceEventListener** type. |
 
 **Examples**
 

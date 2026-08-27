@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationManager from '@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getActiveNotifications
@@ -12,7 +12,9 @@ import notificationManager from '@kit.NotificationKit';
 function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void
 ```
 
-Obtains the active notifications of this application. This API uses an asynchronous callback to return the result.This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification.
+Obtains the active notifications of this application. This API uses an asynchronous callback to return the result.
+
+This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification.
 
 **Since:** 9
 
@@ -59,7 +61,9 @@ notificationManager.getActiveNotifications(getActiveNotificationsCallback);
 function getActiveNotifications(): Promise<Array<NotificationRequest>>
 ```
 
-Obtains the active notifications of this application. This API uses a promise to return the result.This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification.
+Obtains the active notifications of this application. This API uses a promise to return the result.
+
+This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification.
 
 **Since:** 9
 
@@ -73,7 +77,7 @@ setBadgeNumber sets the notification
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;NotificationRequest & gt; & gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;NotificationRequest&gt;&gt; | Promise used to return the result. |
 
 **Error codes:**
 

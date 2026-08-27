@@ -32,8 +32,12 @@ Creates a **PluginComponent** to display the UI provided by an external applicat
 
 | Name | Description |
 | --- | --- |
+| [PluginComponentOptions](arkts-arkui-plugincomponentoptions-i-sys.md) | Defines options for constructing a **PluginComponent**. |
+| [PluginComponentTemplate](arkts-arkui-plugincomponenttemplate-i-sys.md) | [PluginComponentTemplate](arkts-arkui-plugincomponenttemplate-i-sys.md) |
+| [PluginErrorData](arkts-arkui-pluginerrordata-i-sys.md) | Data provided when the error occurs. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
+| [PluginErrorCallback](arkts-arkui-pluginerrorcallback-t-sys.md) | Callback invoked when an error occurs. |

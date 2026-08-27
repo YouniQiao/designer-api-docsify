@@ -1,6 +1,8 @@
 # IpInfo
 
-WLAN IP信息。@interface IpInfo
+WLAN IP信息。
+
+@interface IpInfo
 
 **起始版本：** 7
 
@@ -13,10 +15,7 @@ WLAN IP信息。@interface IpInfo
 ## 导入模块
 
 ```TypeScript
-import wifi from '@kit.ConnectivityKit';
-import wifiext from '@kit.ConnectivityKitext';
-import wifiManager from '@kit.ConnectivityKitManager';
-import wifiManagerExt from '@kit.ConnectivityKitManagerExt';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## gateway

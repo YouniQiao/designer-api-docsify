@@ -9,7 +9,7 @@ Provides system attribute configuration functions, including translating languag
 ## Modules to Import
 
 ```TypeScript
-import i18n from '@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getAppPreferredLanguage
@@ -233,7 +233,7 @@ Obtains the list of preferred languages.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of preferred languages. |
+| Array&lt;string&gt; | List of preferred languages. |
 
 **Examples**
 
@@ -323,7 +323,7 @@ Obtains the list of countries/regions supported for the specified language.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of countries/regions supported for the specified language. |
+| Array&lt;string&gt; | List of countries/regions supported for the specified language. |
 
 **Error codes:**
 
@@ -353,7 +353,7 @@ try {
 static getSystemLanguage(): string
 ```
 
-Obtains the current system language. To listen for system language changes, enable listening for [COMMON_EVENT_LOCALE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed). For details, see [System Language and Region](../../../internationalization/i18n-system-language-region.md#how-to-develop).
+Obtains the current system language. To listen for system language changes, enable listening for [COMMON_EVENT_LOCALE_CHANGED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_locale_changed). For details, see [System Language and Region](../../../internationalization/i18n-system-language-region.md#how-to-develop).
 
 **Since:** 9
 
@@ -401,7 +401,7 @@ Obtains the list of system languages. Since API version 11, this API is supporte
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | List of system languages. |
+| Array&lt;string&gt; | List of system languages. |
 
 **Examples**
 
@@ -456,7 +456,7 @@ let locale: string = i18n.getSystemLocale();
 static getSystemLocaleInstance(): Intl.Locale
 ```
 
-Obtains the current system locale. To listen for system locale changes, enable listening for [COMMON_EVENT_LOCALE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed). For details, see [System Language and Region](../../../internationalization/i18n-system-language-region.md#how-to-develop).
+Obtains the current system locale. To listen for system locale changes, enable listening for [COMMON_EVENT_LOCALE_CHANGED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_locale_changed). For details, see [System Language and Region](../../../internationalization/i18n-system-language-region.md#how-to-develop).
 
 **Since:** 20
 
@@ -484,7 +484,7 @@ let systemLocale: Intl.Locale = i18n.System.getSystemLocaleInstance();
 static getSystemRegion(): string
 ```
 
-Obtains the current system country/region. To listen for system region changes, enable listening for [COMMON_EVENT_LOCALE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed). For details, see [System Language and Region](../../../internationalization/i18n-system-language-region.md#how-to-develop).
+Obtains the current system country/region. To listen for system region changes, enable listening for [COMMON_EVENT_LOCALE_CHANGED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_locale_changed). For details, see [System Language and Region](../../../internationalization/i18n-system-language-region.md#how-to-develop).
 
 **Since:** 9
 
@@ -621,7 +621,7 @@ let usingLocalDigit: boolean = i18n.System.getUsingLocalDigit();
 static is24HourClock(): boolean
 ```
 
-Checks whether the 24-hour clock is used. To listen for system time format changes, enable listening for [COMMON_EVENT_TIME_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_time_changed). For details, see [User Preference](../../../internationalization/i18n-user-preferences.md#how-to-develop).
+Checks whether the 24-hour clock is used. To listen for system time format changes, enable listening for [COMMON_EVENT_TIME_CHANGED](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-support-e.md#common_event_time_changed). For details, see [User Preference](../../../internationalization/i18n-user-preferences.md#how-to-develop).
 
 **Since:** 9
 

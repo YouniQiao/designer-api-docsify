@@ -125,7 +125,7 @@ Asynchronously sends data to the ability started by the component host through t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record & lt;string, Object & gt; | Yes | Data to be asynchronously sent to the started **UIExtensionAbility**. |
+| data | Record&lt;string, Object&gt; | Yes | Data to be asynchronously sent to the started **UIExtensionAbility**. |
 
 ## sendSync
 
@@ -147,13 +147,13 @@ Synchronously sends data to the ability started by the component host through th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Record & lt;string, Object & gt; | Yes | Data to be synchronously sent to the started **UIExtensionAbility**. |
+| data | Record&lt;string, Object&gt; | Yes | Data to be synchronously sent to the started **UIExtensionAbility**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Record & lt;string, Object & gt; | Data returned by the extension ability. |
+| Record&lt;string, Object&gt; | Data returned by the extension ability. |
 
 **Error codes:**
 

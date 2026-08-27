@@ -195,7 +195,7 @@ Converts this List into an array and returns the array.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;T & gt; | Array obtained. |
+| Array&lt;T&gt; | Array obtained. |
 
 **Error codes:**
 
@@ -280,7 +280,7 @@ Uses a callback to traverse each element in the **List** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, List?: List & lt;T & gt;) = & gt; void | Yes | Callback used to return the result. |
+| callbackFn | (value: T, index?: number, List?: List&lt;T&gt;) =&gt; void | Yes | Callback used to return the result. |
 | thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**
@@ -797,7 +797,7 @@ Replaces all elements in this List with new elements, and returns the new ones.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackFn | (value: T, index?: number, list?: List & lt;T & gt;) = & gt; T | Yes | Callback invoked for the replacement. |
+| callbackFn | (value: T, index?: number, list?: List&lt;T&gt;) =&gt; T | Yes | Callback invoked for the replacement. |
 | thisArg | Object | No | Value of **this** to use when **callbackFn** is invoked. The default value is this instance. |
 
 **Error codes:**

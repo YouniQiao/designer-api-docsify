@@ -82,7 +82,7 @@ Obtains the touchpad number-tap and drag switch state. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** indicates that the touchpad number-tap and drag switch is enabled, and the value **false** indicates that the touchpad number-tap and drag switch is disabled. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the touchpad number-tap and drag switch is enabled, and the value **false** indicates that the touchpad number-tap and drag switch is disabled. |
 
 **Error codes:**
 

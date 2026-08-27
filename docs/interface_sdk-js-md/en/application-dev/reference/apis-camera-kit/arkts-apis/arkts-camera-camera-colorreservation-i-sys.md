@@ -52,7 +52,7 @@ function getColorReservation(session: camera.VideoSessionForSys): camera.ColorRe
   try {
     colorReservation = session.getColorReservation();
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code on failure and handle it.
     let err = error as BusinessError;
     console.error(`The setColorReservation call failed. error code: ${err.code}`);
   }
@@ -99,7 +99,7 @@ function setColorReservation(session: camera.VideoSessionForSys, type: camera.Co
   try {
     session.setColorReservation(type);
   } catch (error) {
-    // If the operation fails, error.code is returned and processed.
+    // Return the error code error.code and handle it on failure.
     let err = error as BusinessError;
     console.error(`The setColorReservation call failed. error code: ${err.code}`);
   }

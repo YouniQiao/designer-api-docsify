@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## getScanInfoList
@@ -27,7 +26,7 @@ Obtain the scanned station list. If does't have the permission of ohos.permissio
 
 | Type | Description |
 | --- | --- |
-| Array & lt;WifiScanInfo & gt; | Returns information about scanned Wi-Fi hotspot if any. |
+| Array&lt;WifiScanInfo&gt; | Returns information about scanned Wi-Fi hotspot if any. |
 
 **Error codes:**
 

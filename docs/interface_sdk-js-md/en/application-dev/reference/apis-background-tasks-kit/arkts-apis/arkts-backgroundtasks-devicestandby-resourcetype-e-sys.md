@@ -1,6 +1,8 @@
 # ResourceType (System API)
 
-The type of exemption resources requested by the application.@enum { number }
+The type of exemption resources requested by the application.
+
+@enum { number }
 
 **Since:** 10
 

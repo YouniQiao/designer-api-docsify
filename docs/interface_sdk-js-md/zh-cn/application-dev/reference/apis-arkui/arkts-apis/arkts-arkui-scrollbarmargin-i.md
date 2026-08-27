@@ -1,6 +1,8 @@
 # ScrollBarMargin
 
-定义滚动条边距选项。@interface ScrollBarMargin
+定义滚动条边距选项。
+
+@interface ScrollBarMargin
 
 **起始版本：** 20
 

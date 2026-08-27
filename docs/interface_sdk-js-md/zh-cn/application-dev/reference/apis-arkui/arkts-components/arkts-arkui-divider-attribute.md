@@ -1,6 +1,8 @@
 # Divider属性/事件
 
-除支持通用属性外，还支持以下属性：支持通用事件。
+除支持通用属性外，还支持以下属性：
+
+支持通用事件。
 
 **继承/实现关系：** DividerAttribute extends CommonMethod<DividerAttribute>
 
@@ -33,7 +35,7 @@ color(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 分割线颜色。默认值：'#33182431' 非法值：按默认值处理。 支持通过 WithTheme设置通用分割线颜色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 分割线颜色。默认值：'#33182431' 非法值：按默认值处理。 支持通过WithTheme设置通用分割线颜色。 |
 
 ## lineCap
 

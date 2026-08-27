@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import SystemMediaQuery, { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
+import { SystemMediaQuery, MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 ```
 
 ## 汇总
@@ -12,7 +12,7 @@ import SystemMediaQuery, { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [MediaQuery](arkts-arkui-system-mediaquery-mediaquery-c.md) | 提供根据不同媒体类型定义不同的样式。 定义MediaQuery接口。 |
+| [MediaQuery](arkts-arkui-system-mediaquery-mediaquery-c.md) | 提供根据不同媒体类型定义不同的样式。定义MediaQuery接口。 |
 
 ### 接口
 

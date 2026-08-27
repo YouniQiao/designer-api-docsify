@@ -1,6 +1,8 @@
 # NavPathStack
 
-A navigation controller that manages all child pages in the **Navigation** component with a stack data structure and provides stack operation methods for controlling page transitions.Starting from API version 12, **NavPathStack** is inheritable. Objects of a derived class can replace those of the base class. For details, see [Example 10](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-10-defining-a-derived-class-of-navpathstack).
+A navigation controller that manages all child pages in the **Navigation** component with a stack data structure and provides stack operation methods for controlling page transitions.
+
+Starting from API version 12, **NavPathStack** is inheritable. Objects of a derived class can replace those of the base class. For details, see [Example 10](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-10-defining-a-derived-class-of-navpathstack).
 
 > **NOTE：**
 > 
@@ -105,7 +107,7 @@ Obtains the names of all navigation destination pages in the routing stack.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Names of all navigation destination pages in the routing stack. |
+| Array&lt;string&gt; | Names of all navigation destination pages in the routing stack. |
 
 ## getIndexByName
 
@@ -133,7 +135,7 @@ Obtains the indexes of all the navigation destination pages that match **name**.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Indexes of all the matching navigation destination pages. If no pages with the specified name exist in the routing stack, an empty array is returned. The index range is [0, routing stack size - 1]. |
+| Array&lt;number&gt; | Indexes of all the matching navigation destination pages. If no pages with the specified name exist in the routing stack, an empty array is returned. The index range is [0, routing stack size - 1]. |
 
 ## getParamByIndex
 
@@ -189,7 +191,7 @@ Obtains the parameter information of all **NavDestination** pages with the speci
 
 | Type | Description |
 | --- | --- |
-| Array & lt;unknown & gt; | Parameter information of all **NavDestination** pages with the specified name. **unknown** can represent a user-defined type. |
+| Array&lt;unknown&gt; | Parameter information of all **NavDestination** pages with the specified name. **unknown** can represent a user-defined type. |
 
 ## getParent
 
@@ -197,7 +199,9 @@ Obtains the parameter information of all **NavDestination** pages with the speci
 getParent(): NavPathStack | null
 ```
 
-Obtains the parent navigation path stack.When a **Navigation** component is nested (directly or indirectly) inside another **Navigation** component, the **NavPathStack** of the inner component can obtain the **NavPathStack** of the outer component.
+Obtains the parent navigation path stack.
+
+When a **Navigation** component is nested (directly or indirectly) inside another **Navigation** component, the **NavPathStack** of the inner component can obtain the **NavPathStack** of the outer component.
 
 **Since:** 11
 
@@ -521,7 +525,7 @@ Preloads navigation destination page specified by **info**. The preload page wil
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | The promise returned by function. |
+| Promise&lt;void&gt; | The promise returned by function. |
 
 **Error codes:**
 
@@ -564,7 +568,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -608,7 +612,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -653,7 +657,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -699,7 +703,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -825,7 +829,7 @@ Removes the navigation destination pages specified by **indexes** from the routi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indexes | Array & lt;number & gt; | Yes | Array of indexes of the navigation destination pages to remove. The index is zero-based. |
+| indexes | Array&lt;number&gt; | Yes | Array of indexes of the navigation destination pages to remove. The index is zero-based. |
 
 **Return value:**
 
@@ -916,7 +920,7 @@ Performs a replacement operation on the routing stack. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 

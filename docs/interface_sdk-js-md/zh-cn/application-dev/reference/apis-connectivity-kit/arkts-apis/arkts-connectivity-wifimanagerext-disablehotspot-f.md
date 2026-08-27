@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import wifiManagerExt from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## disableHotspot
@@ -12,7 +12,7 @@ import wifiManagerExt from '@kit.ConnectivityKit';
 function disableHotspot(): void
 ```
 
-去使能WLAN热点。 如果禁用WLAN热点后Wi-Fi处于启用状态，则Wi-Fi可能会被重新启用。
+去使能WLAN热点。如果禁用WLAN热点后Wi-Fi处于启用状态，则Wi-Fi可能会被重新启用。
 
 **起始版本：** 9
 

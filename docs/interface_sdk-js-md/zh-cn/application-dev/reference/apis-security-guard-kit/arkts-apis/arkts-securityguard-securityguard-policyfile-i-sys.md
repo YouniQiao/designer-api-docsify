@@ -1,6 +1,8 @@
 # PolicyFile（系统接口）
 
-配置文件信息。@interface PolicyFile
+配置文件信息。
+
+@interface PolicyFile
 
 **起始版本：** 12
 
@@ -11,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import securityGuard from '@kit.SecurityGuardKit';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## fd

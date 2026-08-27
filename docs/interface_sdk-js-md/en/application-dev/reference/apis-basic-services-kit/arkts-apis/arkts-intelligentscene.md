@@ -1,6 +1,8 @@
 # @ohos.intelligentScene
 
-This module provides system focus modes and Do Not Disturb data access abilities.@namespace intelligentScene
+This module provides system focus modes and Do Not Disturb data access abilities.
+
+@namespace intelligentScene
 
 **Since:** 23
 
@@ -11,7 +13,7 @@ This module provides system focus modes and Do Not Disturb data access abilities
 ## Modules to Import
 
 ```TypeScript
-import intelligentScene from '@kit.BasicServicesKit';
+import { intelligentScene } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

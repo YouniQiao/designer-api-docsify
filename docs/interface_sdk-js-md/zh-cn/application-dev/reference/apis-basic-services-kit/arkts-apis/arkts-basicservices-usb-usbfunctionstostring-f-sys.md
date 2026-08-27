@@ -3,9 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import usb from '@kit.BasicServicesKit';
-import usbManager from '@kit.BasicServicesKitManager';
-import serialManager from '@kit.BasicServicesKitManager.serial';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## usbFunctionsToString
@@ -30,7 +28,7 @@ function usbFunctionsToString(funcs: FunctionType): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | 是 | 功能列表对应数字掩码。 |
+| funcs | FunctionType | 是 | 功能列表对应数字掩码。 |
 
 **返回值：**
 

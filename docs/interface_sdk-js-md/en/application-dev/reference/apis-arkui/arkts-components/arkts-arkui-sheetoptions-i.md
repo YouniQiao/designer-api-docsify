@@ -556,6 +556,7 @@ radiusRenderStrategy?: RenderStrategy
 ```
 
 Define strategy for drawing rounded corners. NOTE
+
 1. **RenderStrategy.FAST**: The current component and its child components will be drawn directly
 onto the canvas with rounded corners applied.
 2. **RenderStrategy.OFFSCREEN**: The current component and its child components will first be rendered onto

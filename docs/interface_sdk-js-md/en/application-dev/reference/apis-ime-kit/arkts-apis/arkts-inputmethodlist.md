@@ -89,11 +89,63 @@ import { InputMethodListDialog, PatternOptions, Pattern } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [InputMethodListDialog(Input Method List)](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md) | InputMethodListDialog({controller: CustomDialogController, patternOptions?: PatternOptions}) Implements a dialog box showing the input method list. |
+| [InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md) | InputMethodListDialog({controller: CustomDialogController, patternOptions?: PatternOptions}) Implements a dialog box showing the input method list. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [Pattern(Input Method List)](arkts-ime-inputmethodlist-pattern-i.md) |  |
-| [PatternOptions(Input Method List)](arkts-ime-inputmethodlist-patternoptions-i.md) |  |
+| [Pattern](arkts-ime-inputmethodlist-pattern-i.md) |  |
+| [PatternOptions](arkts-ime-inputmethodlist-patternoptions-i.md) |  |
+
+## Examples
+
+```TypeScript
+import { Pattern, PatternOptions } from '@kit.IMEKit';
+
+@Entry
+// Configure the component.
+@Component
+struct SettingsItem {
+  @State defaultPattern: number = 1;
+  private oneHandAction: PatternOptions = {
+    defaultSelected: this.defaultPattern,
+    patterns: [ // Icons in patterns can be used only after the corresponding icon resources have been added to the resource directory of the project.
+      {
+        icon: $r('app.media.hand_icon'), // Icon resource for the input method mode option, for example, the icon for the one-handed mode.
+        selectedIcon: $r('app.media.hand_icon_selected') // Icon resource for the input method mode option in the selected state, for example, the icon for the one-handed mode in the selected state.
+      },
+      {
+        icon: $r('app.media.hand_icon1'),
+        selectedIcon: $r('app.media.hand_icon_selected1')
+      },
+      {
+        icon: $r('app.media.hand_icon2'),
+        selectedIcon: $r('app.media.hand_icon_selected2'),
+      }],
+    action:(index: number)=>{
+      console.info(`pattern is changed, current is ${index}`);
+      this.defaultPattern = index;
+    }
+  };
+  private listController: CustomDialogController = new CustomDialogController({
+    builder: InputMethodListDialog({ patternOptions: this.oneHandAction }),
+    customStyle: true,
+    maskColor: '#00000000'
+  });
+
+  build() {
+    Column() {
+      Flex({ direction: FlexDirection.Column,
+        alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+        Text("Input Method List").fontSize(20)
+      }
+    }
+    .width("13%")
+    .id('bindInputMethod')
+    .onClick((event?: ClickEvent) => {
+      this.listController.open();
+    })
+  }
+}
+```

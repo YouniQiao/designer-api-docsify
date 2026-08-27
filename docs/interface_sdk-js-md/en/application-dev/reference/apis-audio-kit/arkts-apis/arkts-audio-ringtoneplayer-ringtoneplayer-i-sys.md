@@ -73,7 +73,7 @@ Sets ringtone parameters. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -149,7 +149,7 @@ Obtains the information about the audio renderer used by the ringtone. This API 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;audio.AudioRendererInfo & gt; | Promise used to return the renderer information. |
+| Promise&lt;audio.AudioRendererInfo&gt; | Promise used to return the renderer information. |
 
 **Examples**
 
@@ -219,7 +219,7 @@ Obtains the title of the ringtone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the title obtained. |
+| Promise&lt;string&gt; | Promise used to return the title obtained. |
 
 **Examples**
 
@@ -396,7 +396,7 @@ Releases the ringtone player. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -462,7 +462,7 @@ Starts playing the ringtone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -528,7 +528,7 @@ Stops playing the ringtone. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

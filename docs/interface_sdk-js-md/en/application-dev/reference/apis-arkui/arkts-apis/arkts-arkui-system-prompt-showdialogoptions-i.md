@@ -1,6 +1,8 @@
 # ShowDialogOptions
 
-Defines the option of show dialog.@interface ShowDialogOptions
+Defines the option of show dialog.
+
+@interface ShowDialogOptions
 
 **Since:** 11
 
@@ -9,7 +11,7 @@ Defines the option of show dialog.@interface ShowDialogOptions
 ## Modules to Import
 
 ```TypeScript
-import Prompt, { Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
+import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuccessResponse, ShowToastOptions } from '@kit.ArkUI';
 ```
 
 ## cancel

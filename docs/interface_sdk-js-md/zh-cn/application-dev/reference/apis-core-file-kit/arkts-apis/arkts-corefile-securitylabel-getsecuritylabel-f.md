@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import securityLabel from '@kit.CoreFileKit';
+import { securityLabel } from '@kit.CoreFileKit';
 ```
 
 ## getSecurityLabel
@@ -28,7 +28,7 @@ function getSecurityLabel(path: string): Promise<string>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;string & gt; | Promise对象，返回数据安全等级。 |
+| Promise&lt;string&gt; | Promise对象，返回数据安全等级。 |
 
 **错误码：**
 

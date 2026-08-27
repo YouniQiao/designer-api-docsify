@@ -12,7 +12,9 @@
 NOTIFY_CHANGE_YUV_READY = 3
 ```
 
-分段式拍照场景下高质量图已准备完成。图像的清晰度、色彩准确度等质量指标可在请求图像的回调中判断： [OnDataPrepared](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md#ondataprepared)。
+分段式拍照场景下高质量图已准备完成。
+
+图像的清晰度、色彩准确度等质量指标可在请求图像的回调中判断：[OnDataPrepared](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md#ondataprepared)。
 
 **起始版本：** 23
 

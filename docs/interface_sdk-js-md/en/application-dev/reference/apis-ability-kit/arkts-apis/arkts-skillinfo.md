@@ -12,4 +12,4 @@
 
 | Name | Description |
 | --- | --- |
-| [SkillType](arkts-ability-skillinfo-skilltype-e.md) | Enumerates the skill types.@enum { number } |
+| [SkillType](arkts-ability-skillinfo-skilltype-e.md) | Enumerates the skill types. |

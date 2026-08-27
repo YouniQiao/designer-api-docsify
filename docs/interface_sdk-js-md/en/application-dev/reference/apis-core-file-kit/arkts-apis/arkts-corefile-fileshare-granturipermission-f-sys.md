@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import fileShare from '@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## grantUriPermission
@@ -99,7 +99,7 @@ Provides grant uri permission for app
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | no callback return Promise otherwise return void |
+| Promise&lt;void&gt; | no callback return Promise otherwise return void |
 
 **Error codes:**
 
@@ -162,7 +162,7 @@ Grant URI permissions for an application.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Returns void. |
+| Promise&lt;void&gt; | Returns void. |
 
 **Error codes:**
 

@@ -24,7 +24,7 @@
 buttonType?: ButtonType
 ```
 
-设置粘贴控件的按钮形状。 Capsule。 默认值：ButtonType。
+设置粘贴控件的按钮形状。Capsule。默认值：ButtonType。
 
 **类型：** ButtonType
 
@@ -42,7 +42,7 @@ buttonType?: ButtonType
 icon?: PasteIconStyle
 ```
 
-设置粘贴控件的图标风格。 默认值：不显示图标。 若同时也不传text，控件将显示为默认样式。
+设置粘贴控件的图标风格。默认值：不显示图标。若同时也不传text，控件将显示为默认样式。
 
 **类型：** [PasteIconStyle](arkts-arkui-pasteiconstyle-e.md)
 
@@ -60,7 +60,7 @@ icon?: PasteIconStyle
 text?: PasteDescription
 ```
 
-设置粘贴控件的文本描述。 默认值：不显示文本描述。 若同时也不传icon，控件将显示为默认样式。
+设置粘贴控件的文本描述。默认值：不显示文本描述。若同时也不传icon，控件将显示为默认样式。
 
 **类型：** [PasteDescription](arkts-arkui-pastedescription-e.md)
 

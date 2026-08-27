@@ -1,6 +1,8 @@
 # WidthBreakpoint
 
-Type of window width breakpoint.@enum { number }
+Type of window width breakpoint.
+
+@enum { number }
 
 **起始版本：** 22
 

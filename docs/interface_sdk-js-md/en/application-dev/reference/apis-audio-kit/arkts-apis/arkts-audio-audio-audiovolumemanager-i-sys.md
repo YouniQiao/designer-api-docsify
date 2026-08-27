@@ -1,6 +1,8 @@
 # AudioVolumeManager
 
-This interface implements audio volume management.Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager) to obtain an AudioVolumeManager instance.
+This interface implements audio volume management.
+
+Before calling any API in AudioVolumeManager, you must use [getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager) to obtain an AudioVolumeManager instance.
 
 > **NOTE：**
 > 
@@ -13,8 +15,7 @@ This interface implements audio volume management.Before calling any API in Audi
 ## Modules to Import
 
 ```TypeScript
-import audio from '@kit.AudioKit';
-import audioHaptic from '@kit.AudioKitHaptic';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## forceVolumeKeyControlType
@@ -123,7 +124,7 @@ Get the volume for specified app with range from 0 to 100. Applications with sam
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;number & gt; | Promise used to return the application's volume percentage. |
+| Promise&lt;number&gt; | Promise used to return the application's volume percentage. |
 
 **Error codes:**
 
@@ -596,7 +597,7 @@ Gets the volume db value that system calculate by volume type, volume level and 
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | volumeLevel | number | Yes | Volume level. |
-| device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | Yes | Output device type. |
+| device | DeviceType | Yes | Output device type. |
 
 **Return value:**
 
@@ -638,7 +639,7 @@ Checks whether the app volume is muted. If there are multiple callers setting mu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. |
+| Promise&lt;boolean&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1114,7 +1115,7 @@ Change mute state of specified application volume. If there are multiple callers
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1162,7 +1163,7 @@ Sets the volume for specified app with range from 0 to 100. Applications with sa
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1212,7 +1213,7 @@ Sets the volume for specific uid application. This method uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1250,7 +1251,7 @@ Sets the system volume percentage, using an integer ranging from minimum system 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -1299,7 +1300,7 @@ Sets the mute state for the VoIP audio capture stream of a specified application
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1340,7 +1341,7 @@ Sets the mute state for the VoIP audio renderer stream of a specified applicatio
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

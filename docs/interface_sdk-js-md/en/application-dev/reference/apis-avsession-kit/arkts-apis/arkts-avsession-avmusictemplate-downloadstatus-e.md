@@ -1,6 +1,8 @@
 # DownloadStatus
 
-Enumeration of DownloadStatus.@enum { number }
+Enumeration of DownloadStatus.
+
+@enum { number }
 
 **Since:** 23
 

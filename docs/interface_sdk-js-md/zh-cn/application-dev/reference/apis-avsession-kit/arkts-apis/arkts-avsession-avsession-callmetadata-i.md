@@ -1,6 +1,8 @@
 # CallMetadata
 
-通话会话元数据相关属性。@interface CallMetadata [since 11 - 11]
+通话会话元数据相关属性。
+
+@interface CallMetadata [since 11 - 11]
 
 **起始版本：** 11
 
@@ -9,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import avSession from '@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## avatar

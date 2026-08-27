@@ -1,6 +1,8 @@
 # SettingContent
 
-The definition of setting content@interface SettingContent
+The definition of setting content
+
+@interface SettingContent
 
 **Since:** 23
 
@@ -9,7 +11,7 @@ The definition of setting content@interface SettingContent
 ## Modules to Import
 
 ```TypeScript
-import avMusicTemplate from '@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## imageTags

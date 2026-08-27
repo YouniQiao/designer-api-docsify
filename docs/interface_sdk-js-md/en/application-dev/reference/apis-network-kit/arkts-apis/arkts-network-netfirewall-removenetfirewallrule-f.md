@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import netFirewall from '@kit.NetworkKit';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## removeNetFirewallRule
@@ -12,7 +12,8 @@ import netFirewall from '@kit.NetworkKit';
 function removeNetFirewallRule(userId: number, ruleId: number): Promise<void>
 ```
 
-Deletes a specified firewall rule of a system user ID. This API uses a promise to return the result.  
+Deletes a specified firewall rule of a system user ID. This API uses a promise to return the result.
+
 **Required permission**: ohos.permission.MANAGE_NET_FIREWALL
 
 **Since:** 15
@@ -32,7 +33,7 @@ Deletes a specified firewall rule of a system user ID. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.MDMKit';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## uninstall
@@ -41,7 +41,7 @@ Uninstalls a specified bundle of the current or specified user. The **isKeepData
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object will be thrown if the application fails to be uninstalled. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object will be thrown if the application fails to be uninstalled. |
 
 **Error codes:**
 

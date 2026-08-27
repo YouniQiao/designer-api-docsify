@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import fontManager from '@kit.LocalizationKit';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## onHeartBeat
@@ -118,7 +118,7 @@ onResult(result : number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | number | 是 | 数据迁移结果。 0：数据迁移成功。 1：无需进行数据迁移。 2：获取用户ID失败。 3：检查目录失败。 4：初始化缓存目录失败。 5：打开源文件失败。 6：拷贝失败。 7：文件重命名失败。 8：文件删除失败。 |
+| result | number | 是 | 数据迁移结果。0：数据迁移成功。1：无需进行数据迁移。2：获取用户ID失败。3：检查目录失败。4：初始化缓存目录失败。5：打开源文件失败。6：拷贝失败。7：文件重命名失败。8：文件删除失败。 |
 
 **示例**
 

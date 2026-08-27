@@ -11,7 +11,7 @@
 function getGeofenceSupportedCoordTypes(): Array<CoordinateSystemType>
 ```
 
-获取地理围栏功能支持的坐标系列表。调用该接口前建议先通过 [geoLocationManager.isGnssFenceServiceSupported](arkts-location-geolocationmanager-isgnssfenceservicesupported-f.md)接口判断对应能力是否支持。
+获取地理围栏功能支持的坐标系列表。调用该接口前建议先通过[geoLocationManager.isGnssFenceServiceSupported](arkts-location-geolocationmanager-isgnssfenceservicesupported-f.md)接口判断对应能力是否支持。
 
 **起始版本：** 12
 
@@ -21,7 +21,7 @@ function getGeofenceSupportedCoordTypes(): Array<CoordinateSystemType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array & lt;CoordinateSystemType & gt; | 地理围栏功能支持的坐标系列表。 |
+| Array&lt;CoordinateSystemType&gt; | 地理围栏功能支持的坐标系列表。 |
 
 **错误码：**
 

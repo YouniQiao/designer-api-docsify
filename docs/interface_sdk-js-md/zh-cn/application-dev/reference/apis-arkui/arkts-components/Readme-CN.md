@@ -442,7 +442,7 @@
   - [px2vp](arkts-arkui-common-px2vp-f.md)
   - [vp2px](arkts-arkui-common-vp2px-f.md)
   - [wrapBuilder](arkts-arkui-common-wrapbuilder-f.md)
-- [Component3D](arkts-arkui-component3d.md)
+- [Component3D(Defines 3D component)](arkts-arkui-component3d.md)
   - [Component3D属性/事件](arkts-arkui-component3d-attribute.md)
   - [SceneOptions](arkts-arkui-sceneoptions-i.md)
   - [Scene](arkts-arkui-scene-t.md)
@@ -508,7 +508,7 @@
   - [Vector4(系统接口)](arkts-arkui-vector4-t-sys.md)<!--DelEnd-->
 - [Divider](arkts-arkui-divider.md)
   - [Divider属性/事件](arkts-arkui-divider-attribute.md)
-- [DynamicComponent](arkts-arkui-dynamiccomponent-sys.md)
+- [DynamicComponent(System API)](arkts-arkui-dynamiccomponent-sys.md)
   - [DynamicComponent属性/事件](arkts-arkui-dynamiccomponent-attribute.md)
   <!--Del-->
   - [DynamicOptions(系统接口)](arkts-arkui-dynamicoptions-i-sys.md)<!--DelEnd-->
@@ -547,7 +547,7 @@
   - [WindowStatusType](arkts-arkui-windowstatustype-t.md)
 - [ForEach](arkts-arkui-foreach.md)
   - [ForEach属性/事件](arkts-arkui-foreach-attribute.md)
-- [FormComponent](arkts-arkui-formcomponent-sys.md)
+- [FormComponent(系统接口)](arkts-arkui-formcomponent-sys.md)
   - [FormComponent属性/事件](arkts-arkui-formcomponent-attribute.md)
   <!--Del-->
   - [ErrorInformation(系统接口)](arkts-arkui-errorinformation-i-sys.md)<!--DelEnd-->
@@ -849,7 +849,7 @@
   - [CircleStyleOptions](arkts-arkui-circlestyleoptions-i.md)
   - [PatternLockChallengeResult](arkts-arkui-patternlockchallengeresult-e.md)
   - [PatternLockController](arkts-arkui-patternlockcontroller-c.md)
-- [PluginComponent](arkts-arkui-plugincomponent-sys.md)
+- [PluginComponent(System API)](arkts-arkui-plugincomponent-sys.md)
   - [PluginComponent属性/事件](arkts-arkui-plugincomponent-attribute.md)
   <!--Del-->
   - [PluginComponentOptions(系统接口)](arkts-arkui-plugincomponentoptions-i-sys.md)<!--DelEnd-->
@@ -1031,7 +1031,7 @@
   - [CancelButtonStyle](arkts-arkui-cancelbuttonstyle-e.md)
   - [SearchType](arkts-arkui-searchtype-e.md)
   - [SearchController](arkts-arkui-searchcontroller-c.md)
-- [SecurityUIExtensionComponent](arkts-arkui-securityuiextensioncomponent-sys.md)
+- [SecurityUIExtensionComponent(System API)](arkts-arkui-securityuiextensioncomponent-sys.md)
   - [SecurityUIExtensionComponent属性/事件](arkts-arkui-securityuiextensioncomponent-attribute.md)
   <!--Del-->
   - [SecurityUIExtensionOptions(系统接口)](arkts-arkui-securityuiextensionoptions-i-sys.md)<!--DelEnd-->
@@ -1250,11 +1250,11 @@
   - [ToggleConfiguration](arkts-arkui-toggleconfiguration-i.md)
   - [ToggleOptions](arkts-arkui-toggleoptions-i.md)
   - [ToggleType](arkts-arkui-toggletype-e.md)
-- [ToolBarItem](arkts-arkui-toolbaritem.md)
+- [ToolBarItem(定义toolbar属性。)](arkts-arkui-toolbaritem.md)
   - [ToolBarItem属性/事件](arkts-arkui-toolbaritem-attribute.md)
   - [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md)
   - [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md)
-- [UIExtensionComponent](arkts-arkui-uiextensioncomponent-sys.md)
+- [UIExtensionComponent(System API)](arkts-arkui-uiextensioncomponent-sys.md)
   - [UIExtensionComponent属性/事件](arkts-arkui-uiextensioncomponent-attribute.md)
   <!--Del-->
   - [TerminationInfo(系统接口)](arkts-arkui-terminationinfo-i-sys.md)<!--DelEnd-->

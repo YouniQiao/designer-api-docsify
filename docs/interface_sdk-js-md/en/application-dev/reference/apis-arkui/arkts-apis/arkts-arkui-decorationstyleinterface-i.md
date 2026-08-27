@@ -25,7 +25,9 @@ Describes the API object for text decoration line styles.
 color?: ResourceColor
 ```
 
-Color of the text decorative line.Default value: **Color.Black**.
+Color of the text decorative line.
+
+Default value: **Color.Black**.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
@@ -43,7 +45,9 @@ Color of the text decorative line.Default value: **Color.Black**.
 style?: TextDecorationStyle
 ```
 
-Style of the text decorative line.Default value: **TextDecorationStyle.SOLID**.
+Style of the text decorative line.
+
+Default value: **TextDecorationStyle.SOLID**.
 
 **Type:** TextDecorationStyle
 
@@ -61,7 +65,13 @@ Style of the text decorative line.Default value: **TextDecorationStyle.SOLID**.
 thicknessScale?: number
 ```
 
-Scale factor for the decoration line thickness.Default value: **1.0**.Value range: [0, +∞).Note: Negative values are treated as the default value.
+Scale factor for the decoration line thickness.
+
+Default value: **1.0**.
+
+Value range: [0, +∞).
+
+Note: Negative values are treated as the default value.
 
 **Type:** number
 
@@ -79,7 +89,9 @@ Scale factor for the decoration line thickness.Default value: **1.0**.Value rang
 type: TextDecorationType
 ```
 
-Type of the text decorative line.Default value: **TextDecorationType.None**.
+Type of the text decorative line.
+
+Default value: **TextDecorationType.None**.
 
 **Type:** TextDecorationType
 

@@ -44,7 +44,11 @@ Scrolling state. Triggered when the list is dragged with the finger, when the sc
 Fling
 ```
 
-Inertial scrolling state. Triggered by all animated scroll actions. This includes: Inertial scrolling that occurs after a fling;Bounce-back scrolling when the swipe reaches the edge; Inertial scrolling after quickly dragging the built-in scrollbar and releasing;Scrolling controlled by the animated methods provided by the scroller.
+Inertial scrolling state. Triggered by all animated scroll actions. This includes: Inertial scrolling that occurs after a fling;
+
+Bounce-back scrolling when the swipe reaches the edge; Inertial scrolling after quickly dragging the built-in scrollbar and releasing;
+
+Scrolling controlled by the animated methods provided by the scroller.
 
 **Since:** 7
 

@@ -51,7 +51,7 @@ Obtains the information about the resource request header.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;WebHeader & gt; | Information about the resource request header. |
+| Array&lt;WebHeader&gt; | Information about the resource request header. |
 
 **Examples**
 

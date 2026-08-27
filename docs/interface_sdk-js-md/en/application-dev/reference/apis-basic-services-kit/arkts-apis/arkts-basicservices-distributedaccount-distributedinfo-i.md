@@ -9,7 +9,7 @@ Represents the distributed account information about an OS account.
 ## Modules to Import
 
 ```TypeScript
-import distributedAccount from '@kit.BasicServicesKit';
+import { distributedAccount } from '@kit.BasicServicesKit';
 ```
 
 ## avatar
@@ -32,10 +32,14 @@ Avatar of the distributed account. Set this parameter when the user avatar needs
 event: string
 ```
 
-Login state of the distributed account. The state can be login, logout, token invalid, or logoff, which correspond to the following strings respectively:  
-- Ohos.account.event.LOGIN  
-- Ohos.account.event.LOGOUT  
-- Ohos.account.event.TOKEN_INVALID  
+Login state of the distributed account. The state can be login, logout, token invalid, or logoff, which correspond to the following strings respectively:
+
+- Ohos.account.event.LOGIN
+
+- Ohos.account.event.LOGOUT
+
+- Ohos.account.event.TOKEN_INVALID
+
 - Ohos.account.event.LOGOFF
 
 **Type:** string

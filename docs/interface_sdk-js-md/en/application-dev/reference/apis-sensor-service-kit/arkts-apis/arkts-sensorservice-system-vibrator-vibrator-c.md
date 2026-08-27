@@ -13,7 +13,7 @@
 ## Modules to Import
 
 ```TypeScript
-import Vibrator, { VibrateOptions } from '@kit.SensorServiceKit';
+import { Vibrator, VibrateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## vibrate

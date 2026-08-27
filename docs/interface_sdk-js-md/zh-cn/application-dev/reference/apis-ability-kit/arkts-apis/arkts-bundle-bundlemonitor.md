@@ -1,6 +1,8 @@
 # @ohos.bundle.bundleMonitor
 
-本模块提供监听应用安装，卸载，更新的能力。@namespace bundleMonitor
+本模块提供监听应用安装，卸载，更新的能力。
+
+@namespace bundleMonitor
 
 **起始版本：** 9
 
@@ -11,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import bundleMonitor from '@kit.AbilityKit';
+import { bundleMonitor } from '@kit.AbilityKit';
 ```
 
 ## 汇总

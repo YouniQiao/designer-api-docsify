@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bluetoothManager from '@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## getState
@@ -30,7 +30,7 @@ Obtains the Bluetooth status of a device. On API 10 and above, the permission re
 
 | Type | Description |
 | --- | --- |
-| [BluetoothState](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md) | Returns the Bluetooth status, which can be { |
+| BluetoothState | Returns the Bluetooth status, which can be { |
 
 **Error codes:**
 

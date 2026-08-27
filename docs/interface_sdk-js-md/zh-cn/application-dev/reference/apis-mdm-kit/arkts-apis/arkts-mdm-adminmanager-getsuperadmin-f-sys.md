@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## getSuperAdmin

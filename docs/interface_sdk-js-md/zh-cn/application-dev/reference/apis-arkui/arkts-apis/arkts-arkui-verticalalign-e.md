@@ -1,6 +1,8 @@
 # VerticalAlign
 
-VerticalAlign enumeration description@enum { number }
+VerticalAlign enumeration description
+
+@enum { number }
 
 **起始版本：** 11
 

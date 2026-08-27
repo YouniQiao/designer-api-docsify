@@ -54,6 +54,7 @@ Called when using the navigator.
 
 | Name | Description |
 | --- | --- |
+| [NavigationType](arkts-arkui-navigationtype-e.md) | Navigation type. |
 
 ## Examples
 

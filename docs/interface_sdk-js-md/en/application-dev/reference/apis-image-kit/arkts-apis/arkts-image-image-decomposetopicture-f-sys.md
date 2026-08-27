@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import image from '@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## decomposeToPicture
@@ -26,14 +26,14 @@ Decomposes an HDR Pixelmap object to a Picture object which contains an SDR Pixe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | An HDR PixelMap, whose PixelMapFormat should be RGBA_F16\RGBA_1010102\YCBCR_P010\YCRCB_P010. |
+| hdrPixelMap | PixelMap | Yes | An HDR PixelMap, whose PixelMapFormat should be RGBA_F16\RGBA_1010102\YCBCR_P010\YCRCB_P010. |
 | options | [HdrDecomposeOptions](arkts-image-image-hdrdecomposeoptions-i-sys.md) | No | The HDR decomposition configurations. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined & gt; | Promise used to return the Picture object. |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined&gt; | Promise used to return the Picture object. |
 
 **Error codes:**
 

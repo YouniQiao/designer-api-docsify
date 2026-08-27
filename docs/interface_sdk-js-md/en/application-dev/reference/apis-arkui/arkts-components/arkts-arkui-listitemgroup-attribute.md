@@ -48,7 +48,11 @@ divider(
   )
 ```
 
-Sets the style of the divider for the list items. By default, there is no divider.strokeWidth, startMargin, and endMargin cannot be set in percentage.When a list item has polymorphic styles applied, the dividers above and below the pressed child component are not rendered.
+Sets the style of the divider for the list items. By default, there is no divider.
+
+strokeWidth, startMargin, and endMargin cannot be set in percentage.
+
+When a list item has polymorphic styles applied, the dividers above and below the pressed child component are not rendered.
 
 **Since:** 9
 

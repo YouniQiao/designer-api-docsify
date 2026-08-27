@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## off('wifiStateChange')
@@ -13,7 +12,9 @@ import wifiManagerExt from '@kit.ConnectivityKitExt';
 function off(type: 'wifiStateChange', callback?: Callback<number>): void
 ```
 
-Unsubscribe Wi-Fi status change events.All callback functions will be deregistered If there is no specific callback parameter.
+Unsubscribe Wi-Fi status change events.
+
+All callback functions will be deregistered If there is no specific callback parameter.
 
 **Since:** 12
 

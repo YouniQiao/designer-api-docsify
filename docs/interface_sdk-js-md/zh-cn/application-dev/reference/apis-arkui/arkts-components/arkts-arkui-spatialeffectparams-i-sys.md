@@ -1,6 +1,8 @@
 # SpatialEffectParams（系统接口）
 
-空间效果选项。@interface SpatialEffectParams
+空间效果选项。
+
+@interface SpatialEffectParams
 
 **起始版本：** 26.0.0
 
@@ -19,7 +21,7 @@
 occlusionWeight?: number
 ```
 
-空间效果的遮挡权重。 取值范围:[0, 1]。默认值:0。
+空间效果的遮挡权重。取值范围:[0, 1]。默认值:0。
 
 **类型：** number
 

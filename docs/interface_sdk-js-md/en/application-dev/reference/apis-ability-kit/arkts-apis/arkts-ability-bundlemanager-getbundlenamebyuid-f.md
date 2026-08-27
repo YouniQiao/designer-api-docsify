@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import bundleManager from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getBundleNameByUid
@@ -82,7 +82,7 @@ Obtains the bundle name based on the given UID. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the bundle name obtained. |
+| Promise&lt;string&gt; | Promise used to return the bundle name obtained. |
 
 **Error codes:**
 

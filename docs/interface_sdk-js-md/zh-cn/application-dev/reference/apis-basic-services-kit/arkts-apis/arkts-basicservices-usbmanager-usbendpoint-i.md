@@ -10,6 +10,7 @@ USB端点，用于主机与设备之间数据传输的通信端点。通过[USBI
 > 协议层打包时依赖type决定传输特性，包括数据包格式、错误处理机制、超时策略等。
 
 
+
 **起始版本：** 9
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -17,8 +18,7 @@ USB端点，用于主机与设备之间数据传输的通信端点。通过[USBI
 ## 导入模块
 
 ```TypeScript
-import usbManager from '@kit.BasicServicesKit';
-import serialManager from '@kit.BasicServicesKit.serial';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## address

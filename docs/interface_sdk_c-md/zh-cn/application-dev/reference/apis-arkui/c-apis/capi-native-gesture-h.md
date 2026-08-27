@@ -458,7 +458,7 @@ ArkUI_NodeHandle OH_ArkUI_TouchRecognizer_GetNodeHandle(const ArkUI_TouchRecogni
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_NodeHandle | 触摸识别器对应的组件句柄。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | 触摸识别器对应的组件句柄。 |
 
 ### OH_ArkUI_TouchRecognizer_CancelTouch()
 
@@ -531,7 +531,7 @@ const ArkUI_UIInputEvent* OH_ArkUI_GestureEvent_GetRawInputEvent(const ArkUI_Ges
 
 | 类型 | 说明 |
 | -- | -- |
-| [const ArkUI_UIInputEvent*](capi-arkui-eventmodule-arkui-uiinputevent.md) | 手势事件的原始输入事件。 |
+| const ArkUI_UIInputEvent* | 手势事件的原始输入事件。 |
 
 ### OH_ArkUI_LongPress_GetRepeatCount()
 
@@ -843,7 +843,7 @@ ArkUI_NodeHandle OH_ArkUI_GestureEvent_GetNode(const ArkUI_GestureEvent* event)
 
 | 类型 | 说明 |
 | -- | -- |
-| ArkUI_NodeHandle | 绑定该手势的ArkUI组件。若返回Null，则表示event是无效值。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | 绑定该手势的ArkUI组件。若返回Null，则表示event是无效值。 |
 
 ### OH_ArkUI_GetResponseRecognizersFromInterruptInfo()
 

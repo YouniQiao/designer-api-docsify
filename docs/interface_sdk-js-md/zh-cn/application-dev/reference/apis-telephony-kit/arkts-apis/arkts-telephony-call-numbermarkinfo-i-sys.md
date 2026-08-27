@@ -19,8 +19,10 @@
 isCloud?: boolean
 ```
 
-号码的标记是否来自云端，默认为false。  
--true：是  
+号码的标记是否来自云端，默认为false。
+
+-true：是
+
 -false：否
 
 **类型：** boolean

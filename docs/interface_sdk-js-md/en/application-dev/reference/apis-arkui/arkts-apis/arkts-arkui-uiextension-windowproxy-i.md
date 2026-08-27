@@ -9,7 +9,7 @@ The proxy of the UIExtension window.
 ## Modules to Import
 
 ```TypeScript
-import uiExtension from '@kit.ArkUI';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## createSubWindowWithOptions
@@ -39,7 +39,7 @@ Creates a subwindow for this window proxy. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;window.Window & gt; | Promise used to return the subwindow created. |
+| Promise&lt;window.Window&gt; | Promise used to return the subwindow created. |
 
 **Error codes:**
 
@@ -124,7 +124,7 @@ Create subwindow.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;window.Window & gt; | Promise used to return the subwindow. |
+| Promise&lt;window.Window&gt; | Promise used to return the subwindow. |
 
 **Error codes:**
 
@@ -258,7 +258,7 @@ Sets the events that the component (**EmbeddedComponent** or **UIExtensionCompon
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -585,7 +585,9 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 properties: WindowProxyProperties
 ```
 
-Information about the component (**EmbeddedComponent** or **UIExtensionComponent**).Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the on('windowSizeChange') callback.
+Information about the component (**EmbeddedComponent** or **UIExtensionComponent**).
+
+Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the on('windowSizeChange') callback.
 
 **Type:** [WindowProxyProperties](arkts-arkui-uiextension-windowproxyproperties-i.md)
 

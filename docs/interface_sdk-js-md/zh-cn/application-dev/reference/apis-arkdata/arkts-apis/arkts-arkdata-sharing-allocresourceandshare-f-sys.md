@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import cloudData from '@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## allocResourceAndShare
@@ -17,7 +17,7 @@ function allocResourceAndShare(
     ): Promise<relationalStore.ResultSet>
 ```
 
-根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集。 如果指定了列字段，则返回的结果集中同时包含对应列的字段值，使用Promise异步回调。
+根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集。如果指定了列字段，则返回的结果集中同时包含对应列的字段值，使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -32,13 +32,13 @@ function allocResourceAndShare(
 | storeId | string | 是 | 数据库名称。 |
 | predicates | relationalStore.RdbPredicates | 是 | 表示查找共享资源标识的数据的谓词条件。 |
 | participants | Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | 是 | 端云共享的参与者。 |
-| columns | Array & lt;string & gt; | 否 | 表示要查找的列字段名。默认为undefined，不返回列字段。 |
+| columns | Array&lt;string&gt; | 否 | 表示要查找的列字段名。默认为undefined，不返回列字段。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;relationalStore.ResultSet & gt; | Promise对象，返回查询并共享的共享资源标识结果集。 |
+| Promise&lt;relationalStore.ResultSet&gt; | Promise对象，返回查询并共享的共享资源标识结果集。 |
 
 **错误码：**
 
@@ -192,7 +192,7 @@ function allocResourceAndShare(
     ): void
 ```
 
-根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集 并根据指定的列字段，返回的结果集中同时包含对应列的字段值，使用callback异步回调。
+根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集并根据指定的列字段，返回的结果集中同时包含对应列的字段值，使用callback异步回调。
 
 **起始版本：** 11
 
@@ -207,7 +207,7 @@ function allocResourceAndShare(
 | storeId | string | 是 | 数据库名称。 |
 | predicates | relationalStore.RdbPredicates | 是 | 表示查找共享资源标识的数据的谓词条件。 |
 | participants | Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | 是 | 端云共享的参与者。 |
-| columns | Array & lt;string & gt; | 是 | 表示要查找的列字段名。 |
+| columns | Array&lt;string&gt; | 是 | 表示要查找的列字段名。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;relationalStore.ResultSet&gt; | 是 | 回调函数。返回查询并共享的共享资源标识结果集。 |
 
 **错误码：**

@@ -145,7 +145,9 @@ directionAccuracy?: number
 isFromMock?: boolean
 ```
 
-true：位置信息来自于位置模拟功能。false：位置信息不是来自于位置模拟功能。
+true：位置信息来自于位置模拟功能。
+
+false：位置信息不是来自于位置模拟功能。
 
 **类型：** boolean
 

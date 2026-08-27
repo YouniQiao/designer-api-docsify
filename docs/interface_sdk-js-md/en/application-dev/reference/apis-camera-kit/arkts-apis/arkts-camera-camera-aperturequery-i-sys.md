@@ -29,7 +29,7 @@ Obtains the supported virtual apertures.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Array of virtual apertures supported. |
+| Array&lt;number&gt; | Array of virtual apertures supported. |
 
 **Error codes:**
 

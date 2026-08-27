@@ -1,6 +1,10 @@
 # @ohos.wifiManagerExt
 
-Provides extended methods to operate or manage Wi-Fi.<p>The APIs involved in this file are non-general APIs. These extended APIs are only used by some product types, such as routers. Common products should not use these APIs.</p>@namespace wifiManagerExt
+Provides extended methods to operate or manage Wi-Fi.
+
+<p>The APIs involved in this file are non-general APIs. These extended APIs are only used by some product types, such as routers. Common products should not use these APIs.</p>
+
+@namespace wifiManagerExt
 
 **Since:** 9
 
@@ -9,7 +13,7 @@ Provides extended methods to operate or manage Wi-Fi.<p>The APIs involved in thi
 ## Modules to Import
 
 ```TypeScript
-import wifiManagerExt from '@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -30,4 +34,4 @@ import wifiManagerExt from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md) | The power Mode enumeration.@enum { number } PowerMode |
+| [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md) | The power Mode enumeration. |

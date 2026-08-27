@@ -9,7 +9,7 @@ Defines the application account manager, which is used to manage account informa
 ## Modules to Import
 
 ```TypeScript
-import appAccount from '@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addAccount
@@ -123,7 +123,7 @@ Adds an application account name and additional information. This API uses a pro
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -318,7 +318,7 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | name | string | Yes | Name of the application account. The value contains a maximum of 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the bundle name of the application. The value contains a maximum of 1024 characters. |
 | authType | string | Yes | Authentication type. The value is user-defined and contains a maximum of 1024 characters. |
-| options | Record & lt;string, Object & gt; | Yes | Options for the authentication. |
+| options | Record&lt;string, Object&gt; | Yes | Options for the authentication. |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 **Error codes:**
@@ -479,7 +479,7 @@ Checks whether an application account has specific labels. This API uses an asyn
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value contains a maximum of 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the bundle name of the application. The value contains a maximum of 1024 characters. |
-| labels | Array & lt;string & gt; | Yes | Labels to check. |
+| labels | Array&lt;string&gt; | Yes | Labels to check. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** or **false**. The value **true** means the application account has the labels; the value **false** means the opposite. If the operation fails, **err** is an error object. |
 
 **Error codes:**
@@ -533,13 +533,13 @@ Checks whether an application account has specific labels. This API uses a promi
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value contains a maximum of 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the bundle name of the application. The value contains a maximum of 1024 characters. |
-| labels | Array & lt;string & gt; | Yes | Labels to check. |
+| labels | Array&lt;string&gt; | Yes | Labels to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the application account has the labels; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the application account has the labels; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -644,7 +644,7 @@ Checks whether the caller can access the account data that belongs to the target
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the application can access the account data; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the application can access the account data; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -750,7 +750,7 @@ Checks whether data synchronization is enabled for an application account. This 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 **Examples**
 
@@ -839,7 +839,7 @@ Checks the visibility of an authorization token of the specified authentication 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -943,7 +943,7 @@ Checks whether data synchronization is enabled for an application account. This 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -1057,7 +1057,7 @@ Checks the visibility of an authorization token of the specified authentication 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;boolean & gt; | Promise used to return the result. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
 
 **Examples**
 
@@ -1197,7 +1197,7 @@ Creates an application account with custom data. This API uses a promise to retu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1459,7 +1459,7 @@ Deletes an application account. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -1550,7 +1550,7 @@ Deletes the authorization token of the specified authentication type for an appl
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1651,7 +1651,7 @@ Deletes the credential for the specified type of an application account. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1762,7 +1762,7 @@ Deletes the authorization token of the specified authentication type for an appl
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -1849,7 +1849,7 @@ Disables an application account from accessing an application. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -1940,7 +1940,7 @@ Enables an application to access an application account. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -2031,7 +2031,7 @@ Obtains the credential of an application account. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the credential obtained. |
+| Promise&lt;string&gt; | Promise used to return the credential obtained. |
 
 **Examples**
 
@@ -2119,7 +2119,7 @@ Obtains additional information of an application account. Additional information
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the additional information of the application account. |
+| Promise&lt;string&gt; | Promise used to return the additional information of the application account. |
 
 **Examples**
 
@@ -2763,7 +2763,7 @@ Obtains data to be associated with an application account. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the data obtained. |
+| Promise&lt;string&gt; | Promise used to return the data obtained. |
 
 **Examples**
 
@@ -3180,7 +3180,7 @@ Obtains the authorization list of the specified authentication type for an appli
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return a list of authorized bundles. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return a list of authorized bundles. |
 
 **Error codes:**
 
@@ -3284,7 +3284,7 @@ Obtains the authorization token of the specified authentication type for an appl
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the authorization token obtained. |
+| Promise&lt;string&gt; | Promise used to return the authorization token obtained. |
 
 **Error codes:**
 
@@ -3385,7 +3385,7 @@ Obtains the credential of an application account. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the credential obtained. |
+| Promise&lt;string&gt; | Promise used to return the credential obtained. |
 
 **Error codes:**
 
@@ -3486,7 +3486,7 @@ Obtains the custom data of an application account based on the specified key. Th
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the custom data value obtained. |
+| Promise&lt;string&gt; | Promise used to return the custom data value obtained. |
 
 **Error codes:**
 
@@ -3640,7 +3640,7 @@ Obtains the authorization list of the specified authentication type for an appli
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | Promise used to return a list of authorized bundles. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return a list of authorized bundles. |
 
 **Examples**
 
@@ -3734,7 +3734,7 @@ Obtains the authorization token of the specified authentication type for an appl
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;string & gt; | Promise used to return the authorization token obtained. |
+| Promise&lt;string&gt; | Promise used to return the authorization token obtained. |
 
 **Examples**
 
@@ -3874,7 +3874,7 @@ Subscribes to account information changes of apps.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type to subscribe to. The value is **'change'**. An event will be reported when the account information changes. |
-| owners | Array & lt;string & gt; | Yes | Application bundle names of the account. |
+| owners | Array&lt;string&gt; | Yes | Application bundle names of the account. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
 
 **Examples**
@@ -3911,7 +3911,7 @@ Subscribes to account information changes of apps.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'accountChange' | Yes | Event type to subscribe to. The value is **'accountChange'**. |
-| owners | Array & lt;string & gt; | Yes | Application bundle names of the account. |
+| owners | Array&lt;string&gt; | Yes | Application bundle names of the account. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
 
 **Error codes:**
@@ -4107,7 +4107,7 @@ Removes an application account. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -4321,7 +4321,7 @@ Sets a credential for an application account. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -4412,7 +4412,7 @@ Sets additional information for an application account. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -4500,7 +4500,7 @@ Sets the access to the data of an account for an application. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -4610,7 +4610,7 @@ Sets data synchronization for an application account. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -4703,7 +4703,7 @@ Sets data to be associated with an application account. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -4899,7 +4899,7 @@ Sets an authorization token of the specific authentication type for an applicati
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -5012,7 +5012,7 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -5116,7 +5116,7 @@ Sets a credential for an application account. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -5218,7 +5218,7 @@ Sets custom data for an application account. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -5319,7 +5319,7 @@ Sets data synchronization for an application account. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -5427,7 +5427,7 @@ Sets an authorization token of the specific authentication type for an applicati
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 
@@ -5529,7 +5529,7 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
 

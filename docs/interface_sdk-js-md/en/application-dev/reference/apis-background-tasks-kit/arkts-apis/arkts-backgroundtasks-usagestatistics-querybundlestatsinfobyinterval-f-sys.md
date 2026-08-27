@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import usageStatistics from '@kit.BackgroundTasksKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryBundleStatsInfoByInterval
@@ -31,7 +31,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Yes | Indicates the interval at which the usage statistics are queried. The value can be BY_OPTIMIZED, BY_DAILY, BY_WEEKLY, BY_MONTHLY, or BY_ANNUALLY. |
+| byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried. The value can be BY_OPTIMIZED, BY_DAILY, BY_WEEKLY, BY_MONTHLY, or BY_ANNUALLY. |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. Unit:ms |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. Unit:ms |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleStatsInfo&gt;&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the list of [BundleStatsInfo](arkts-backgroundtasks-usagestatistics-bundlestatsinfo-i-sys.md) objects containing the usage information about each bundle. Otherwise, **err** is an error object. |
@@ -95,7 +95,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Yes | Indicates the interval at which the usage statistics are queried. The value can be BY_OPTIMIZED, BY_DAILY, BY_WEEKLY, BY_MONTHLY, or BY_ANNUALLY. |
+| byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried. The value can be BY_OPTIMIZED, BY_DAILY, BY_WEEKLY, BY_MONTHLY, or BY_ANNUALLY. |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. Unit:ms |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. Unit:ms |
 
@@ -103,7 +103,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;BundleStatsInfo & gt; & gt; | Promise used to return the usage information about each bundle. |
+| Promise&lt;Array&lt;BundleStatsInfo&gt;&gt; | Promise used to return the usage information about each bundle. |
 
 **Error codes:**
 

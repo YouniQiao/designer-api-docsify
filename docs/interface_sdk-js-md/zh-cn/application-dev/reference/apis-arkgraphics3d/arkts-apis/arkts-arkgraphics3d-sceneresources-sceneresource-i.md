@@ -1,6 +1,8 @@
 # SceneResource
 
-用于表示场景中的资源。@interface SceneResource
+用于表示场景中的资源。
+
+@interface SceneResource
 
 **起始版本：** 12
 
@@ -78,7 +80,7 @@ readonly uri?: ResourceStr
 
 需要加载的资源，默认值为undefined。
 
-**类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 12
 

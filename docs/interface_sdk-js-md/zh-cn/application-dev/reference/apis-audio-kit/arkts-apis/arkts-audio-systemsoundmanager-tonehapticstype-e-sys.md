@@ -1,6 +1,8 @@
 # ToneHapticsType（系统接口）
 
-枚举，系统铃音的振动类型。@enum { number }
+枚举，系统铃音的振动类型。
+
+@enum { number }
 
 **起始版本：** 14
 

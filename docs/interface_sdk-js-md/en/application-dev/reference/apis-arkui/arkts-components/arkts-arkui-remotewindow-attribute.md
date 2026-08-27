@@ -1,6 +1,8 @@
 # RemoteWindow properties/events
 
-Inheritance CommonMethod Set Styles@extends CommonMethod&lt;RemoteWindowAttribute&gt;
+Inheritance CommonMethod Set Styles
+
+@extends CommonMethod&lt;RemoteWindowAttribute&gt;
 
 **Inheritance/Implementation:** RemoteWindowAttribute extends CommonMethod<RemoteWindowAttribute>
 

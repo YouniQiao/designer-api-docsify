@@ -17,17 +17,17 @@ The module provides APIs for an application to use the system camera to take pho
 
 | Name | Description |
 | --- | --- |
-| [pick(Camera Picker)](arkts-camera-camerapicker-pick-f.md) | Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result. |
+| [pick](arkts-camera-camerapicker-pick-f.md) | Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result. |
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [PickerProfile(Camera Picker)](arkts-camera-camerapicker-pickerprofile-c.md) | Defines the configuration information about the camera picker. |
-| [PickerResult(Camera Picker)](arkts-camera-camerapicker-pickerresult-c.md) | Defines the processing result of the camera picker. |
+| [PickerProfile](arkts-camera-camerapicker-pickerprofile-c.md) | Defines the configuration information about the camera picker. |
+| [PickerResult](arkts-camera-camerapicker-pickerresult-c.md) | Defines the processing result of the camera picker. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [PickerMediaType(Camera Picker)](arkts-camera-camerapicker-pickermediatype-e.md) | Enumerates the media types displayed in the camera picker. |
+| [PickerMediaType](arkts-camera-camerapicker-pickermediatype-e.md) | Enumerates the media types displayed in the camera picker. |

@@ -1,6 +1,6 @@
 # MediaHighlightAlbumChangeRequest（系统接口）
 
-时刻相册变更请求，MediaHighlightAlbumChangeRequest继承自 [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md)。
+时刻相册变更请求，MediaHighlightAlbumChangeRequest继承自[MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md)。
 
 **继承/实现关系：** MediaHighlightAlbumChangeRequest extends [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md)
 
@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import photoAccessHelper from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## constructor
@@ -34,7 +34,7 @@ constructor(album: Album)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| album | [Album](arkts-medialibrary-sendablephotoaccesshelper-album-i.md) | 是 | 时刻相册。 |
+| album | Album | 是 | 时刻相册。 |
 
 **错误码：**
 
@@ -143,9 +143,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     fetchColumns: [],
     predicates: predicates
   };
-  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
-  let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
-  let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+  try {
+    let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.Album> = await phAccessHelper.getAlbums(photoAccessHelper.AlbumType.USER, photoAccessHelper.AlbumSubtype.USER_GENERIC, fetchOptions);
+    let album: photoAccessHelper.Album = await fetchResult.getFirstObject();
+    let albumChangeRequest: photoAccessHelper.MediaAlbumChangeRequest = new photoAccessHelper.MediaAlbumChangeRequest(album);
+  } catch (err) {
+    console.error(`MediaAlbumChangeRequest constructorDemo failed with error: ${err.code}, ${err.message}`);
+  }
 }
 ```
 
@@ -170,7 +174,7 @@ setHighlightAttribute(attribute: HighlightAlbumChangeAttribute, value: string): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | attribute | [HighlightAlbumChangeAttribute](arkts-medialibrary-photoaccesshelper-highlightalbumchangeattribute-e-sys.md) | 是 | 需要设置的时刻属性。 |
-| value | string | 是 | 需要设置的时刻属性值。 当attribute为**IS_VIEWED** 或者 **IS_FAVORITE**, 时，取值为"0"或"1"； 当attribute为 **NOTIFICATION_TIME**时，取值范围为长度在8字节以内的数字字符串， 例如"12345678"。 |
+| value | string | 是 | 需要设置的时刻属性值。当attribute为**IS_VIEWED** 或者 **IS_FAVORITE**, 时，取值为"0"或"1"；当attribute为 **NOTIFICATION_TIME**时，取值范围为长度在8字节以内的数字字符串，例如"12345678"。 |
 
 **错误码：**
 
@@ -204,7 +208,7 @@ async function example(context: Context) {
     albumFetchResult.close();
     let highlightAlbumChangeAttribute: photoAccessHelper.HighlightAlbumChangeAttribute =
       photoAccessHelper.HighlightAlbumChangeAttribute.IS_VIEWED;
-    let value: string = "1";
+    let value: string = '1';
     let changeRequest: photoAccessHelper.MediaHighlightAlbumChangeRequest =
       new photoAccessHelper.MediaHighlightAlbumChangeRequest(highlightAlbum);
     changeRequest.setHighlightAttribute(highlightAlbumChangeAttribute, value);

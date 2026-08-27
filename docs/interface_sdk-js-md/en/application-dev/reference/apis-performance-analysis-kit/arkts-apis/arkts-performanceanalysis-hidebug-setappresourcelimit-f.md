@@ -11,7 +11,9 @@
 function setAppResourceLimit(type: string, value: number, enableDebugLog: boolean): void
 ```
 
-Sets the number of FDs, number of threads, JS memory, or native memory limit of the application.This API is used to construct a memory leak. For details, see Subscribing to Resource Leak Events (ArkTS) and Subscribing to Resource Leak Events (C/C++).
+Sets the number of FDs, number of threads, JS memory, or native memory limit of the application.
+
+This API is used to construct a memory leak. For details, see Subscribing to Resource Leak Events (ArkTS) and Subscribing to Resource Leak Events (C/C++).
 
 > **NOTE：**
 > 

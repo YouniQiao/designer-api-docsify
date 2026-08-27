@@ -36,9 +36,9 @@ constructor(width: number, height: number, data?: Uint8ClampedArray)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | number | 是 | 矩形区域宽度，默认单位为vp。 异常值NaN和Infinity按0处理。 |
-| height | number | 是 | 矩形区域高度，默认单位为vp。 异常值NaN和Infinity按0处理。 |
-| data | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-uint8clampedarray-c.md) | 否 | 一维数组，保存了相应的颜色数据，数据值范围为0到255。 传入异常值undefined时，data为undefined。 默认值：值全为0的一维数组。 |
+| width | number | 是 | 矩形区域宽度，默认单位为vp。异常值NaN和Infinity按0处理。 |
+| height | number | 是 | 矩形区域高度，默认单位为vp。异常值NaN和Infinity按0处理。 |
+| data | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-uint8clampedarray-c.md) | 否 | 一维数组，保存了相应的颜色数据，数据值范围为0到255。传入异常值undefined时，data为undefined。默认值：值全为0的一维数组。 |
 
 **示例**
 
@@ -88,7 +88,7 @@ struct LengthMetricsUnitDemo {
 constructor(width: number, height: number, data?: Uint8ClampedArray, unit?: LengthMetricsUnit)
 ```
 
-创建宽为width，高为height，像素为data的ImageData，如果data未定义，则填充值全为0的一维数组， 支持使用unit配置ImageData对象的单位模式。
+创建宽为width，高为height，像素为data的ImageData，如果data未定义，则填充值全为0的一维数组，支持使用unit配置ImageData对象的单位模式。
 
 **起始版本：** 12
 
@@ -104,10 +104,10 @@ constructor(width: number, height: number, data?: Uint8ClampedArray, unit?: Leng
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | number | 是 | 矩形区域宽度，默认单位为vp。 异常值NaN和Infinity按0处理。 |
-| height | number | 是 | 矩形区域高度，默认单位为vp。 异常值NaN和Infinity按0处理。 |
-| data | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-uint8clampedarray-c.md) | 否 | 一维数组，保存了相应的颜色数据，数据值范围为0到255。 传入异常值undefined时，data为undefined。 默认值：值全为0的一维数组。 |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 否 | 用来配置ImageData对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。 异常值undefined、NaN和Infinity按默认值处理。 默认值：DEFAULT。 |
+| width | number | 是 | 矩形区域宽度，默认单位为vp。异常值NaN和Infinity按0处理。 |
+| height | number | 是 | 矩形区域高度，默认单位为vp。异常值NaN和Infinity按0处理。 |
+| data | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-uint8clampedarray-c.md) | 否 | 一维数组，保存了相应的颜色数据，数据值范围为0到255。传入异常值undefined时，data为undefined。默认值：值全为0的一维数组。 |
+| unit | LengthMetricsUnit | 否 | 用来配置ImageData对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
 
 **示例**
 
@@ -137,7 +137,7 @@ readonly data: Uint8ClampedArray
 readonly height: number
 ```
 
-矩形区域实际像素高度。 单位为px。
+矩形区域实际像素高度。单位为px。
 
 **类型：** number
 
@@ -189,7 +189,7 @@ struct OffscreenCanvasPage {
 readonly width: number
 ```
 
-矩形区域实际像素宽度。 单位为px。
+矩形区域实际像素宽度。单位为px。
 
 > **说明：**
 > 

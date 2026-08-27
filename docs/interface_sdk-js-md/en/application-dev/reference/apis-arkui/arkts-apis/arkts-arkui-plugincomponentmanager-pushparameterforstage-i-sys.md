@@ -11,7 +11,7 @@ Plugin component push parameters which is used in push function.
 ## Modules to Import
 
 ```TypeScript
-import pluginComponentManager, { PluginComponentTemplate } from '@kit.ArkUI';
+import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## data

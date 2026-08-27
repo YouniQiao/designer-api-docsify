@@ -1,6 +1,10 @@
 # DatePicker properties/events
 
-In addition to the universal attributes, the following attributes are supported.In addition to the universal events, the following events are supported.@extends CommonMethod [since 8 - 10] @extends CommonMethod&lt;DatePickerAttribute&gt; [since 11]
+In addition to the universal attributes, the following attributes are supported.
+
+In addition to the universal events, the following events are supported.
+
+@extends CommonMethod [since 8 - 10] @extends CommonMethod&lt;DatePickerAttribute&gt; [since 11]
 
 **Inheritance/Implementation:** DatePickerAttribute extends CommonMethod<DatePickerAttribute>
 
@@ -171,7 +175,9 @@ Sets whether to display dates in lunar calendar format. Compared to [lunar](#lun
 onChange(callback: (value: DatePickerResult) => void)
 ```
 
-Triggered when the date picker snaps to the selected item. This event cannot be triggered by two-way bound state variables.This API is supported since API version 8 and deprecated since API version 10. You are advised to use [onDateChange](#ondatechange) instead.
+Triggered when the date picker snaps to the selected item. This event cannot be triggered by two-way bound state variables.
+
+This API is supported since API version 8 and deprecated since API version 10. You are advised to use [onDateChange](#ondatechange) instead.
 
 **Since:** 8
 
@@ -185,7 +191,7 @@ Triggered when the date picker snaps to the selected item. This event cannot be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (value: DatePickerResult) = & gt; void | Yes | Selected time. |
+| callback | (value: DatePickerResult) =&gt; void | Yes | Selected time. |
 
 ## onDateChange
 
@@ -207,7 +213,7 @@ Triggered when the date picker snaps to the selected item. This event cannot be 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback & lt;Date & gt; | Yes | Selected date, where the year, month, and day portions are subject to the selection, the hour and minute portions are subject to the current system time, and the second portion is always **00**.<br>**Since:** 18 |
+| callback | Callback&lt;Date&gt; | Yes | Selected date, where the year, month, and day portions are subject to the selection, the hour and minute portions are subject to the current system time, and the second portion is always **00**.<br>**Since:** 18 |
 
 ## onDateChange
 

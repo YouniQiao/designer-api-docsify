@@ -13,8 +13,6 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 ## 导入模块
 
 ```TypeScript
-import Vector from '@kit.ArkTS.Vector';
-import JSON from '@kit.ArkTS.json';
 ```
 
 ## [Symbol.iterator]
@@ -29,7 +27,7 @@ import JSON from '@kit.ArkTS.json';
 
 **废弃版本：** 9
 
-**替代接口：** iterator]
+**替代接口：** [Symbol.iterator]
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -37,7 +35,7 @@ import JSON from '@kit.ArkTS.json';
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;[K, V] & gt; | 返回以键值对形式的二维数组。 |
+| IterableIterator&lt;[K, V]&gt; | 返回以键值对形式的二维数组。 |
 
 **示例**
 
@@ -287,7 +285,7 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 | 说明 |
 | --- | --- |
-| IterableIterator & lt;[K, V] & gt; | 可迭代的数组。 |
+| IterableIterator&lt;[K, V]&gt; | 可迭代的数组。 |
 
 **示例**
 
@@ -775,7 +773,7 @@ remove(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V \| undefined | 包含被移除键值对的 **Optional** 对象。如果 key 不存在，则返回空的 **Optional** 对象；如果 **key** 传入 **null**，则抛出错误。 |
+| V \| undefined | 包含被移除键值对的 **Optional** 对象。如果 key 不存在，则返回空的 **Optional**对象；如果 **key** 传入 **null**，则抛出错误。 |
 
 **示例**
 

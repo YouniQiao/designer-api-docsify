@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import Configuration, { LocaleResponse } from '@kit.ArkUI';
+import { Configuration, LocaleResponse } from '@kit.ArkUI';
 ```
 
 ## Summary

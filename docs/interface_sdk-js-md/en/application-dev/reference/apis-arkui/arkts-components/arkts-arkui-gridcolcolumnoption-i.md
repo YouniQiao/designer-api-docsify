@@ -1,6 +1,7 @@
 # GridColColumnOption
 
-Describes the numbers of grid columns occupied by the **GridCol** component on devices with different width types.  
+Describes the numbers of grid columns occupied by the **GridCol** component on devices with different width types.
+
 - In versions earlier than API version 20: When you configure **GridCol** column spans only at specific breakpoints,  
 unconfigured breakpoints inherit values from the next smaller configured breakpoint. If no smaller breakpoint is configured, the default value of **1** is used. <!--code_no_check-->  
  ```ts

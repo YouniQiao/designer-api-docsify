@@ -21,7 +21,9 @@
 align?: Alignment
 ```
 
-设置浮层相对于组件的方位。默认值：TopStart
+设置浮层相对于组件的方位。
+
+默认值：TopStart
 
 **类型：** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 

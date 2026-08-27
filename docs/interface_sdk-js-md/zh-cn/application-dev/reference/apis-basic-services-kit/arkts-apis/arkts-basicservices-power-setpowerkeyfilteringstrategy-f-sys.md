@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import power from '@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## setPowerKeyFilteringStrategy
@@ -12,7 +12,9 @@ import power from '@kit.BasicServicesKit';
 function setPowerKeyFilteringStrategy(strategy: PowerKeyFilteringStrategy): void
 ```
 
-设置电源键过滤策略，在电源服务订阅电源键事件后，用于配置电源键事件的处理方式。电源键过滤策略见[power.PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md)接口。
+设置电源键过滤策略，在电源服务订阅电源键事件后，用于配置电源键事件的处理方式。
+
+电源键过滤策略见[power.PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md)接口。
 
 **起始版本：** 21
 

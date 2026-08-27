@@ -35,7 +35,7 @@ Sets traffic calibration data. You can use this API to set traffic data during t
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

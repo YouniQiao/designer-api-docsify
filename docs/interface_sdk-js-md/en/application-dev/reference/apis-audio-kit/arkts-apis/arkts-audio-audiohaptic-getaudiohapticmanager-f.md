@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import audioHaptic from '@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## getAudioHapticManager

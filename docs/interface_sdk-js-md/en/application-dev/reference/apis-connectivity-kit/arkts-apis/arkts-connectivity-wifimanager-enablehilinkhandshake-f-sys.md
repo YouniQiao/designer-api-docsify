@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import wifiManager from '@kit.ConnectivityKit';
-import wifiManagerExt from '@kit.ConnectivityKitExt';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## enableHiLinkHandshake
@@ -29,7 +28,7 @@ Enable hiLink handshake.
 | --- | --- | --- | --- |
 | isHiLinkEnable | boolean | Yes | Indicates the HiLink enable or not. |
 | bssid | string | Yes | Indicates the Wi-Fi bssid. |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes | Indicates the Wi-Fi device config. |
+| config | WifiDeviceConfig | Yes | Indicates the Wi-Fi device config. |
 
 **Error codes:**
 

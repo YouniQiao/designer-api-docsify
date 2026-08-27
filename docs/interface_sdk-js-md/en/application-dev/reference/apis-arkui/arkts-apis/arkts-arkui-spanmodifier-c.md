@@ -1,6 +1,8 @@
 # SpanModifier
 
-Defines Span Modifier@extends SpanAttribute @implements AttributeModifier&lt;SpanAttribute&gt;
+Defines Span Modifier
+
+@extends SpanAttribute @implements AttributeModifier&lt;SpanAttribute&gt;
 
 **Inheritance/Implementation:** SpanModifier extends [SpanAttribute](../arkts-components/arkts-arkui-span-attribute.md#spanattribute) and implements AttributeModifier<SpanAttribute>
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import startupManager from '@kit.AbilityKit';
+import { startupManager } from '@kit.AbilityKit';
 ```
 
 ## removeStartupTaskResult
@@ -12,7 +12,8 @@ import startupManager from '@kit.AbilityKit';
 function removeStartupTaskResult(startupTask: string): void
 ```
 
-Removes the initialization result of a startup task or .so file preloading task.  
+Removes the initialization result of a startup task or .so file preloading task.
+
 - If a startup task name is passed, the initialization result of that startup task is removed.  
 - If a .so file is passed, the .so file is set to the unloaded state, but the loaded .so file in the cache is not  
 removed.

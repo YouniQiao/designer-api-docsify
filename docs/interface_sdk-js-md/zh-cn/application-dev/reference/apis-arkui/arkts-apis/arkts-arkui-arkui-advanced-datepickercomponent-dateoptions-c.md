@@ -1,6 +1,8 @@
 # DateOptions
 
-DateOptions定义日期选择器的选项。继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)。
+DateOptions定义日期选择器的选项。
+
+继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)。
 
 **继承/实现关系：** DateOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)
 
@@ -20,7 +22,8 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 lunar?: boolean
 ```
 
-指定是否显示为农历。  
+指定是否显示为农历。
+
 - true：显示为农历，适用于需要传统农历日期的场景，如传统节日、农历生日、农历纪念日等。  
 - false：不显示为农历，适用于使用公历日期的场景。
 
@@ -48,7 +51,9 @@ lunar?: boolean
 mode?: DateMode
 ```
 
-定义日期选择器的模式。默认值：DateMode.DATE
+定义日期选择器的模式。
+
+默认值：DateMode.DATE
 
 **类型：** [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md)
 

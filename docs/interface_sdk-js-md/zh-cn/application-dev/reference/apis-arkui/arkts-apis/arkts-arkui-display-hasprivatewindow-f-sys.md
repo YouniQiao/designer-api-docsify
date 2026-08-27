@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import display from '@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## hasPrivateWindow
@@ -12,7 +12,7 @@ import display from '@kit.ArkUI';
 function hasPrivateWindow(displayId: number): boolean
 ```
 
-查询指定display对象上是否有可见的隐私窗口。可通过 [setWindowPrivacyMode()](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowprivacymode9)接口设置隐私窗口。 隐私窗口内容将无法被截屏或录屏。
+查询指定display对象上是否有可见的隐私窗口。可通过[setWindowPrivacyMode()](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowprivacymode9)接口设置隐私窗口。隐私窗口内容将无法被截屏或录屏。
 
 **起始版本：** 9
 

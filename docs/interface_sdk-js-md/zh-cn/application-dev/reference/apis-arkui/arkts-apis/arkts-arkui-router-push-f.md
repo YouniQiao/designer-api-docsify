@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import router from '@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## push
@@ -31,7 +31,7 @@ function push(options: RouterOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 | 跳转页面描述信息。 |
+| options | RouterOptions | 是 | 跳转页面描述信息。 |
 
 **示例**
 

@@ -1,6 +1,6 @@
 # AtomicServiceOptions
 
-**AtomicServiceOptions**可以作为 [openAtomicService()](arkts-ability-uiabilitycontext-c.md#openatomicservice)的入参，用于携带参数。继承自 [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)。
+**AtomicServiceOptions**可以作为[openAtomicService()](arkts-ability-uiabilitycontext-c.md#openatomicservice)的入参，用于携带参数。继承自[StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)。
 
 **继承/实现关系：** AtomicServiceOptions extends [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
 
@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import AtomicServiceOptions from '@kit.AbilityKit';
+import { AtomicServiceOptions } from '@kit.AbilityKit';
 ```
 
 ## completionHandlerForAtomicService

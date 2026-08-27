@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import deviceStandby from '@kit.BackgroundTasksKit';
+import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## 汇总
@@ -23,10 +23,10 @@ import deviceStandby from '@kit.BackgroundTasksKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getExemptedApps(设备待机模块)](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md) | 获取进入待机模式的应用名单，使用Callback异步回调。 |
-| [getExemptedApps(设备待机模块)](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md) | 获取进入待机模式的应用名单，使用Promise异步回调。 |
-| [releaseExemptionResource(设备待机模块)](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md) | 取消应用订阅申请豁免。 |
-| [requestExemptionResource(设备待机模块)](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md) | 应用订阅申请豁免，使应用临时不进入待机管控。 |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md) | 获取进入待机模式的应用名单，使用Callback异步回调。 |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md) | 获取进入待机模式的应用名单，使用Promise异步回调。 |
+| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md) | 取消应用订阅申请豁免。 |
+| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md) | 应用订阅申请豁免，使应用临时不进入待机管控。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -34,8 +34,8 @@ import deviceStandby from '@kit.BackgroundTasksKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ExemptedAppInfo(设备待机模块)](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md) | 豁免应用信息，未进入待机管控的应用信息。 |
-| [ResourceRequest(设备待机模块)](arkts-backgroundtasks-devicestandby-resourcerequest-i-sys.md) | 待机资源请求体。 |
+| [ExemptedAppInfo](arkts-backgroundtasks-devicestandby-exemptedappinfo-i-sys.md) | 豁免应用信息，未进入待机管控的应用信息。 |
+| [ResourceRequest](arkts-backgroundtasks-devicestandby-resourcerequest-i-sys.md) | 待机资源请求体。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -43,5 +43,5 @@ import deviceStandby from '@kit.BackgroundTasksKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ResourceType(设备待机模块)](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md) | 非待机应用资源枚举。 |
+| [ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md) | 非待机应用资源枚举。 |
 <!--DelEnd-->

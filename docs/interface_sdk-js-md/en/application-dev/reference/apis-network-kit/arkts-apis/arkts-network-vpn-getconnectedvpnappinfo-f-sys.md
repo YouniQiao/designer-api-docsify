@@ -3,8 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import vpn from '@kit.NetworkKit';
-import vpnExtension from '@kit.NetworkKitExtension';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## getConnectedVpnAppInfo
@@ -27,7 +26,7 @@ Get the connected VPN App Info.
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;Array & lt;string & gt; & gt; | The promise returned by the connected VPN App Info. |
+| Promise&lt;Array&lt;string&gt;&gt; | The promise returned by the connected VPN App Info. |
 
 **Error codes:**
 

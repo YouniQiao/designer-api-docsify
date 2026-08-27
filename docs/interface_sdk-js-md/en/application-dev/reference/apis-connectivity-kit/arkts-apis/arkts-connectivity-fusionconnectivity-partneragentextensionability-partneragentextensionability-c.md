@@ -1,6 +1,8 @@
 # PartnerAgentExtensionAbility
 
-Class for the PartnerAgentExtensionAbility. Applications can use this ability to discover devices.@extends ExtensionAbility
+Class for the PartnerAgentExtensionAbility. Applications can use this ability to discover devices.
+
+@extends ExtensionAbility
 
 **Inheritance/Implementation:** PartnerAgentExtensionAbility extends ExtensionAbility
 
@@ -11,7 +13,7 @@ Class for the PartnerAgentExtensionAbility. Applications can use this ability to
 ## Modules to Import
 
 ```TypeScript
-import PartnerAgentExtensionAbility from '@kit.ConnectivityKit';
+import { PartnerAgentExtensionAbility } from '@kit.ConnectivityKit';
 ```
 
 ## onDestroyWithReason

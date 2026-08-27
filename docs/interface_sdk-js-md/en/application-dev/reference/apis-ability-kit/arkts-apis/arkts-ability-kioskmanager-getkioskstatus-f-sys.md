@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import kioskManager from '@kit.AbilityKit';
+import { kioskManager } from '@kit.AbilityKit';
 ```
 
 ## getKioskStatus
@@ -26,7 +26,7 @@ Obtains the Kiosk mode status information, including whether the system is in ki
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;KioskStatus & gt; | Promise used to return the kiosk mode status information. |
+| Promise&lt;KioskStatus&gt; | Promise used to return the kiosk mode status information. |
 
 **Error codes:**
 

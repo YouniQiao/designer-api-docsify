@@ -1,6 +1,8 @@
 # WorkSchedulerExtensionContext
 
-The **WorkSchedulerExtensionContext** module, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md), provides a context environment for the **WorkSchedulerExtensionAbility**.This module provides APIs for accessing the resources of a **WorkSchedulerExtensionAbility**.
+The **WorkSchedulerExtensionContext** module, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md), provides a context environment for the **WorkSchedulerExtensionAbility**.
+
+This module provides APIs for accessing the resources of a **WorkSchedulerExtensionAbility**.
 
 **Inheritance/Implementation:** WorkSchedulerExtensionContext extends ExtensionContext
 
@@ -34,7 +36,7 @@ Starts a **ServiceExtensionAbility**. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -110,7 +112,7 @@ Stops a **ServiceExtensionAbility**. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

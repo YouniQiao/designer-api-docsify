@@ -9,7 +9,7 @@ Records the number of affected data rows and the result set.
 ## Modules to Import
 
 ```TypeScript
-import relationalStore from '@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## changed
@@ -18,7 +18,9 @@ import relationalStore from '@kit.ArkData';
 readonly changed: number
 ```
 
-Number of affected rows.@readonly
+Number of affected rows.
+
+@readonly
 
 **Type:** number
 
@@ -34,7 +36,9 @@ Number of affected rows.@readonly
 readonly resultSet: LiteResultSet
 ```
 
-Result set of the affected data. Defaults to 1,024 rows of data, with a maximum supported limit of 32,766 rows supported; excess rows will be discarded.@readonly
+Result set of the affected data. Defaults to 1,024 rows of data, with a maximum supported limit of 32,766 rows supported; excess rows will be discarded.
+
+@readonly
 
 **Type:** [LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)
 

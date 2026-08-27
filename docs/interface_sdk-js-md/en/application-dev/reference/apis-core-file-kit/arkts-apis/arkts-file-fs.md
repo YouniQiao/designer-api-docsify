@@ -5,7 +5,7 @@ FileIO
 ## Modules to Import
 
 ```TypeScript
-import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
+import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -20,21 +20,21 @@ import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 
 | Name | Description |
 | --- | --- |
-| [access](arkts-corefile-file-fs-access-f.md) | Checks whether the file or directory exists or has the operation permission. This API uses a promise to return the result.If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown. |
+| [access](arkts-corefile-file-fs-access-f.md) | Checks whether the file or directory exists or has the operation permission. This API uses a promise to return the result. |
 | [access](arkts-corefile-file-fs-access-f.md) | Checks whether a file or directory exists. This API uses an asynchronous callback to return the result. |
-| [access](arkts-corefile-file-fs-access-f.md) | Checks whether the file or directory is stored locally or has the operation permission. This API uses a promise to return the result.If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown. |
-| [accessSync](arkts-corefile-file-fs-accesssync-f.md) | Checks whether a file or directory exists or has the operation permission. This API returns the result synchronously.If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown. |
-| [accessSync](arkts-corefile-file-fs-accesssync-f.md) | Checks whether a file or directory is stored locally or has the operation permission. This API returns the result synchronously.If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown. |
+| [access](arkts-corefile-file-fs-access-f.md) | Checks whether the file or directory is stored locally or has the operation permission. This API uses a promise to return the result. |
+| [accessSync](arkts-corefile-file-fs-accesssync-f.md) | Checks whether a file or directory exists or has the operation permission. This API returns the result synchronously. |
+| [accessSync](arkts-corefile-file-fs-accesssync-f.md) | Checks whether a file or directory is stored locally or has the operation permission. This API returns the result synchronously. |
 | [close](arkts-corefile-file-fs-close-f.md) | Closes a file or directory. This API uses a promise to return the result. |
 | [close](arkts-corefile-file-fs-close-f.md) | Closes a file or directory. This API uses an asynchronous callback to return the result. |
 | [closeSync](arkts-corefile-file-fs-closesync-f.md) | Closes a file or directory. This API returns the result synchronously. |
 | [connectDfs](arkts-corefile-file-fs-connectdfs-f.md) | Triggers connection. If the peer device is abnormal, [onStatus](arkts-corefile-file-fs-dfslisteners-i.md#onstatus) in **DfsListeners** will be called to notify the application. |
-| [copy](arkts-corefile-file-fs-copy-f.md) | Copies a file or directory. This API uses a promise to return the result.File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory.A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500. |
-| [copy](arkts-corefile-file-fs-copy-f.md) | Copies a file or directory. This API uses an asynchronous callback to return the result.File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500. |
-| [copy](arkts-corefile-file-fs-copy-f.md) | Copies a file or directory. This API uses an asynchronous callback to return the result.File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500. |
+| [copy](arkts-corefile-file-fs-copy-f.md) | Copies a file or directory. This API uses a promise to return the result. |
+| [copy](arkts-corefile-file-fs-copy-f.md) | Copies a file or directory. This API uses an asynchronous callback to return the result. |
+| [copy](arkts-corefile-file-fs-copy-f.md) | Copies a file or directory. This API uses an asynchronous callback to return the result. |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md) | Copies the source directory to the destination path. This API uses a promise to return the result. |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md) | Copies the source directory to the destination directory. This API uses an asynchronous callback to return the result. |
-| [copyDir](arkts-corefile-file-fs-copydir-f.md) | Copies the source directory to the destination path. This API uses an asynchronous callback to return the result.An exception will be thrown if the destination directory contains a directory with the same name as the source directory and there are files with the same name in the conflicting directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array\&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt; format. |
+| [copyDir](arkts-corefile-file-fs-copydir-f.md) | Copies the source directory to the destination path. This API uses an asynchronous callback to return the result. |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md) | Copies the source directory to the destination directory. You can set the copy mode. This API uses an asynchronous callback to return the result. |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md) | Copies the source directory to the destination path. You can set the copy mode. This API uses an asynchronous callback to return the result. |
 | [copyDirSync](arkts-corefile-file-fs-copydirsync-f.md) | Copies the source directory to the destination path. This API returns the result synchronously. |
@@ -65,12 +65,12 @@ import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 | [fsyncSync](arkts-corefile-file-fs-fsyncsync-f.md) | Synchronizes the cached data of a file to storage. This API returns the result synchronously. |
 | [getxattr](arkts-corefile-file-fs-getxattr-f.md) | Obtains an extended attribute of a file or directory. This API uses a promise to return the result. |
 | [getxattrSync](arkts-corefile-file-fs-getxattrsync-f.md) | Obtains an extended attribute of a file or directory. This API returns the result synchronously. |
-| [listFile](arkts-corefile-file-fs-listfile-f.md) | Lists the names of all files and directories in the current path. Filtering is supported. This API uses a promise to return the result.You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/). |
-| [listFile](arkts-corefile-file-fs-listfile-f.md) | Lists the names of all files and directories in the current path. Filtering is supported. This API uses an asynchronous callback to return the result.You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/). |
-| [listFile](arkts-corefile-file-fs-listfile-f.md) | Lists the names of all files and directories in the current path. Filtering is supported. This API uses an asynchronous callback to return the result.You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/). |
+| [listFile](arkts-corefile-file-fs-listfile-f.md) | Lists the names of all files and directories in the current path. Filtering is supported. This API uses a promise to return the result. |
+| [listFile](arkts-corefile-file-fs-listfile-f.md) | Lists the names of all files and directories in the current path. Filtering is supported. This API uses an asynchronous callback to return the result. |
+| [listFile](arkts-corefile-file-fs-listfile-f.md) | Lists the names of all files and directories in the current path. Filtering is supported. This API uses an asynchronous callback to return the result. |
 | [listFileExt](arkts-corefile-file-fs-listfileext-f.md) | Lists all file names in a directory. This API uses a promise to return the result. This API supports recursive listing of all file names and custom file name filtering. The returned result starts with a slash (/) and contains the subdirectory. |
 | [listFileExtSync](arkts-corefile-file-fs-listfileextsync-f.md) | Lists all file names in a directory. This API returns the result synchronously. This API supports recursive listing of all file names and custom file name filtering. The returned result starts with a slash (/) and contains the subdirectory. |
-| [listFileSync](arkts-corefile-file-fs-listfilesync-f.md) | Lists the names of all files and directories in the current directory. This API returns the result synchronously. Filtering is supported.You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/). |
+| [listFileSync](arkts-corefile-file-fs-listfilesync-f.md) | Lists the names of all files and directories in the current directory. This API returns the result synchronously. Filtering is supported. |
 | [lseek](arkts-corefile-file-fs-lseek-f.md) | Adjusts the position of the file offset pointer. |
 | [lstat](arkts-corefile-file-fs-lstat-f.md) | Obtains information about a symbolic link that is used to refer to a file or directory. This API uses a promise to return the result. |
 | [lstat](arkts-corefile-file-fs-lstat-f.md) | Obtains information about a symbolic link that is used to refer to a file or directory. This API uses an asynchronous callback to return the result. |
@@ -88,7 +88,7 @@ import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 | [mmapSync](arkts-corefile-file-fs-mmapsync-f.md) | Creates a file mapping object based on a file descriptor or file object by using the synchronization method. Maps file contents to memory for efficient read and write access to files. Note: In the read/write mode (MappingMode.READ_WRITE), if the mapping range exceeds the raw file size, the file size will be automatically expanded. |
 | [moveDir](arkts-corefile-file-fs-movedir-f.md) | Moves the source directory to the destination directory. This API uses a promise to return the result. |
 | [moveDir](arkts-corefile-file-fs-movedir-f.md) | Moves the source directory to the destination directory. This API uses an asynchronous callback to return the result. |
-| [moveDir](arkts-corefile-file-fs-movedir-f.md) | Moves the source directory to the destination directory. This API uses an asynchronous callback to return the result.An exception will be thrown if a directory conflict occurs, that is, the destination directory contains a directory with the same name as the source directory. |
+| [moveDir](arkts-corefile-file-fs-movedir-f.md) | Moves the source directory to the destination directory. This API uses an asynchronous callback to return the result. |
 | [moveDir](arkts-corefile-file-fs-movedir-f.md) | Moves the source directory to the destination directory. You can set the move mode. This API uses an asynchronous callback to return the result. |
 | [moveDir](arkts-corefile-file-fs-movedir-f.md) | Moves the source directory to the destination directory. You can set the move mode. This API uses an asynchronous callback to return the result. |
 | [moveDirSync](arkts-corefile-file-fs-movedirsync-f.md) | Moves the source directory to the destination directory. This API returns the result synchronously. |
@@ -98,7 +98,7 @@ import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 | [moveFileSync](arkts-corefile-file-fs-movefilesync-f.md) | Moves a file. This API returns the result synchronously. |
 | [open](arkts-corefile-file-fs-open-f.md) | Opens a file or directory. This API uses a promise to return the result. This API supports the use of a URI. |
 | [open](arkts-corefile-file-fs-open-f.md) | Opens a file or directory. This API uses an asynchronous callback to return the result. This API supports the use of a URI. |
-| [open](arkts-corefile-file-fs-open-f.md) | Opens a file or directory with the specified mode. This API uses an asynchronous callback to return the result.This API supports the use of a URI. |
+| [open](arkts-corefile-file-fs-open-f.md) | Opens a file or directory with the specified mode. This API uses an asynchronous callback to return the result. |
 | [openSync](arkts-corefile-file-fs-opensync-f.md) | Opens a file or directory. This API returns the result synchronously. This API supports the use of a URI. |
 | [read](arkts-corefile-file-fs-read-f.md) | Reads file data. This API uses a promise to return the result. |
 | [read](arkts-corefile-file-fs-read-f.md) | Reads data from a file. This API uses an asynchronous callback to return the result. |
@@ -143,8 +143,8 @@ import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 
 | Name | Description |
 | --- | --- |
-| [AtomicFile](arkts-corefile-file-fs-atomicfile-c.md) | AtomicFile is a class used to perform atomic read and write operations on files.A temporary file is written and renamed to the original file location, which ensures file integrity. If the write operation fails, the temporary file is deleted without modifying the original file content.You can call **finishWrite()** or **failWrite()** to write or roll back file content. |
-| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | Defines a readable stream. You need to use [fileIo.createReadStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatereadstream12) to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readableoptions-i.md).The data obtained by **ReadStream** is a decoded string. Currently, only the UTF-8 format is supported. |
+| [AtomicFile](arkts-corefile-file-fs-atomicfile-c.md) | AtomicFile is a class used to perform atomic read and write operations on files. |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | Defines a readable stream. You need to use [fileIo.createReadStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatereadstream12) to create a **ReadStream** instance, which is inherited from [stream.Readable](../../apis-arkts/arkts-apis/arkts-arkts-stream-readableoptions-i.md). |
 | [TaskSignal](arkts-corefile-file-fs-tasksignal-c.md) | Provides APIs for interrupting a copy task. |
 | [WriteStream](arkts-corefile-file-fs-writestream-c.md) | Defines a writeable stream. You need to use [fileIo.createWriteStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatewritestream12) to create a **WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md). |
 
@@ -174,7 +174,7 @@ import fileIo, { ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 | [Stream](arkts-corefile-file-fs-stream-i.md) | Provides API for stream operations. Before calling any API of **Stream**, you need to create a **Stream** instance by using [fileIo.createStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream) or [fileIo.fdopenStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream). |
 | [Watcher](arkts-corefile-file-fs-watcher-i.md) | Provides APIs for observing the changes of files or directories. Before using the APIs of **Watcher**, call **createWatcher()** to create a **Watcher** object. |
 | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | Defines the event to observe. |
-| [WatchEventListener](arkts-corefile-file-fs-watcheventlistener-i.md) | (event: WatchEvent): void Provides APIs for observing events. |
+| [WatchEventListener](arkts-corefile-file-fs-watcheventlistener-i.md) | (event: WatchEvent): void |
 | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Defines the options used in **write()**. It inherits from [Options](arkts-corefile-file-fs-options-i.md). |
 | [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | Defines the options used in **createWriteStream()**. |
 

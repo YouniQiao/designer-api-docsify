@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import identifySensitiveContent from '@kit.DataProtectionKit';
+import { identifySensitiveContent } from '@kit.DataProtectionKit';
 ```
 
 ## matchContent

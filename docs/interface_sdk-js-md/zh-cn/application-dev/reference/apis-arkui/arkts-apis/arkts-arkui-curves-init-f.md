@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import curves from '@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## init
@@ -30,7 +30,7 @@ function init(curve?: Curve): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| curve | [Curve](arkts-arkui-curve-e.md) | 否 | 曲线类型。默认值：Curve.Linear |
+| curve | Curve | 否 | 曲线类型。默认值：Curve.Linear |
 
 **返回值：**
 

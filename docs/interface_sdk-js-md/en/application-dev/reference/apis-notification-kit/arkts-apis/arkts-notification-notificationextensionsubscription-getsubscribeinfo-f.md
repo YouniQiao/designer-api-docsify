@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import notificationExtensionSubscription from '@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## getSubscribeInfo
@@ -28,7 +28,7 @@ subscribe subscribes
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;NotificationExtensionSubscriptionInfo[] & gt; | Promise used to return the [NotificationExtensionSubscriptionInfo[]]{ |
+| Promise&lt;NotificationExtensionSubscriptionInfo[]&gt; | Promise used to return the [NotificationExtensionSubscriptionInfo[]]{ |
 
 **Error codes:**
 

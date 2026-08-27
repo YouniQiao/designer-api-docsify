@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import quickFixManager from '@kit.AbilityKit';
+import { quickFixManager } from '@kit.AbilityKit';
 ```
 
 ## bundleName

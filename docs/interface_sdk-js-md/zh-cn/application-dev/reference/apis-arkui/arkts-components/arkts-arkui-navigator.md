@@ -1,6 +1,7 @@
 # Navigator
 
 路由容器组件，提供路由跳转能力。
+
 > **说明：**
 
 ## 子组件
@@ -37,13 +38,15 @@ Navigator(value?: { target: string; type?: NavigationType })
 Navigator()
 ```
 
-在使用Navigator时调用。NavigationAttribute为Navigation组件的属性。
+在使用Navigator时调用。
+
+NavigationAttribute为Navigation组件的属性。
 
 **起始版本：** 7
 
 **废弃版本：** 13
 
-**替代接口：** [NavigationAttribute](arkts-arkui-navigation-attribute.md#navigationattribute)
+**替代接口：** [NavigationAttribute](arkts-arkui-navigation-attribute.md)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -55,6 +58,7 @@ Navigator()
 
 | 名称 | 说明 |
 | --- | --- |
+| [NavigationType](arkts-arkui-navigationtype-e.md) | 路由的跳转方式。 |
 
 ## 示例
 

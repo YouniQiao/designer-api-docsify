@@ -9,7 +9,7 @@
 ## 导入模块
 
 ```TypeScript
-import abilityConnectionManager from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## eventMsg
@@ -18,7 +18,7 @@ import abilityConnectionManager from '@kit.DistributedServiceKit';
 eventMsg?: string
 ```
 
-表示协同事件的消息内容。eventType为SEND_FAILURE或COLOR_SPACE_CONVERSION_FAILURE时存在， 包含事件相关的详细消息信息。
+表示协同事件的消息内容。eventType为SEND_FAILURE或COLOR_SPACE_CONVERSION_FAILURE时存在，包含事件相关的详细消息信息。
 
 **类型：** string
 

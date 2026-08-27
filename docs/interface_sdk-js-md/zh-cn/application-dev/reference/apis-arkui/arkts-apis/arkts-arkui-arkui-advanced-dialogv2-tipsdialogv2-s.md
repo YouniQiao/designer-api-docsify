@@ -18,7 +18,9 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 onCheckedChange?: AdvancedDialogV2OnCheckedChange
 ```
 
-选择框的选中状态改变事件。默认无事件。
+选择框的选中状态改变事件。
+
+默认无事件。
 
 **起始版本：** 18
 
@@ -34,7 +36,9 @@ onCheckedChange?: AdvancedDialogV2OnCheckedChange
 checked?: boolean
 ```
 
-checked为true时，表示选择框已选中。checked为false时，表示选择框未选中。默认值：false
+checked为true时，表示选择框已选中。checked为false时，表示选择框未选中。
+
+默认值：false
 
 **类型：** boolean
 
@@ -52,7 +56,9 @@ checked为true时，表示选择框已选中。checked为false时，表示选择
 checkTips?: ResourceStr
 ```
 
-选择框的提示内容。默认不显示。
+选择框的提示内容。
+
+默认不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -70,7 +76,9 @@ checkTips?: ResourceStr
 content?: ResourceStr
 ```
 
-提示弹出框内容。默认不显示。
+提示弹出框内容。
+
+默认不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -88,7 +96,9 @@ content?: ResourceStr
 imageBorderColor?: ColorMetrics
 ```
 
-图片描边颜色。默认值：Color.Black
+图片描边颜色。
+
+默认值：Color.Black
 
 **类型：** ColorMetrics
 
@@ -106,7 +116,9 @@ imageBorderColor?: ColorMetrics
 imageBorderWidth?: LengthMetrics
 ```
 
-图片描边宽度。默认无描边效果。
+图片描边宽度。
+
+默认无描边效果。
 
 **类型：** LengthMetrics
 
@@ -142,7 +154,9 @@ imageRes: ResourceStr | PixelMap
 imageSize?: SizeOptions
 ```
 
-自定义图片尺寸。默认值：64*64vp
+自定义图片尺寸。
+
+默认值：64*64vp
 
 **类型：** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
@@ -160,7 +174,9 @@ imageSize?: SizeOptions
 primaryButton?: AdvancedDialogV2Button
 ```
 
-提示弹出框左侧按钮。默认不显示。
+提示弹出框左侧按钮。
+
+默认不显示。
 
 **类型：** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
@@ -178,7 +194,9 @@ primaryButton?: AdvancedDialogV2Button
 secondaryButton?: AdvancedDialogV2Button
 ```
 
-提示弹出框右侧按钮。默认不显示。
+提示弹出框右侧按钮。
+
+默认不显示。
 
 **类型：** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
@@ -196,7 +214,10 @@ secondaryButton?: AdvancedDialogV2Button
 title?: ResourceStr
 ```
 
-提示弹出框标题。默认不显示。  
+提示弹出框标题。
+
+默认不显示。
+
 **说明：** 标题超过两行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)

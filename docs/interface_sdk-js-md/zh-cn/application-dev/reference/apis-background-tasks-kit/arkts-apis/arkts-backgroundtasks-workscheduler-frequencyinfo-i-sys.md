@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import workScheduler from '@kit.BackgroundTasksKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## interval
@@ -20,7 +20,7 @@ import workScheduler from '@kit.BackgroundTasksKit';
 interval: number
 ```
 
-执行频率。 单位为：毫秒。
+执行频率。单位为：毫秒。
 
 **类型：** number
 
@@ -38,7 +38,7 @@ interval: number
 uid: number
 ```
 
-应用uid。 取值限定为整数。
+应用uid。取值限定为整数。
 
 **类型：** number
 
@@ -56,7 +56,7 @@ uid: number
 workId: number
 ```
 
-延迟任务id。 取值限定为整数。
+延迟任务id。取值限定为整数。
 
 **类型：** number
 

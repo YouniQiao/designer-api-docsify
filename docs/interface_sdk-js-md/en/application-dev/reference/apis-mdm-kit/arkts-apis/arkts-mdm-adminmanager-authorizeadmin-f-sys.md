@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import adminManager from '@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## authorizeAdmin
@@ -96,7 +96,7 @@ Authorizes the administrator permission to a specified application. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. An error object is thrown when the permissions of a specified application administrator fail to be granted. |
+| Promise&lt;void&gt; | Promise that returns no value. An error object is thrown when the permissions of a specified application administrator fail to be granted. |
 
 **Error codes:**
 

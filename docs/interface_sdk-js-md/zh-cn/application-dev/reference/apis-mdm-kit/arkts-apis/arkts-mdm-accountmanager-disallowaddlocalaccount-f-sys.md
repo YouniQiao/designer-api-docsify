@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import accountManager from '@kit.MDMKit';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## disallowAddLocalAccount
@@ -101,7 +101,7 @@ function disallowAddLocalAccount(admin: Want, disallow: boolean): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | 无返回结果的Promise对象。当禁止创建本地账号失败时，抛出错误对象。 |
+| Promise&lt;void&gt; | 无返回结果的Promise对象。当禁止创建本地账号失败时，抛出错误对象。 |
 
 **错误码：**
 

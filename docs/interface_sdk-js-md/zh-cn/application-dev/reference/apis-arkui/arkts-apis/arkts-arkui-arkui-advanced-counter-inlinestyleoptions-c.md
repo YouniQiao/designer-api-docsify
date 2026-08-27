@@ -1,6 +1,8 @@
 # InlineStyleOptions
 
-InlineStyleOptions定义了数值内联型Counter的属性和事件。继承于[CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md)。
+InlineStyleOptions定义了数值内联型Counter的属性和事件。
+
+继承于[CommonOptions](arkts-arkui-arkui-advanced-counter-commonoptions-c.md)。
 
 > **说明：**
 > 
@@ -16,7 +18,6 @@ InlineStyleOptions定义了数值内联型Counter的属性和事件。继承于[
 
 ```TypeScript
 import { CounterComponent, CounterOptions, CounterType, DateData } from '@kit.ArkUI';
-import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type } from '@kit.ArkUIV2';
 ```
 
 ## onChange
@@ -25,7 +26,13 @@ import { CounterV2Component, CounterV2Options, CounterV2DateData, CounterV2Type 
 onChange?: (value: number) => void
 ```
 
-数值改变时，返回当前值。使用场景：当需要在数值变化时执行自定义操作（如更新关联UI、记录日志、保存状态等）时传入此回调。value：当前显示的数值。默认值：数值改变时，不返回值。值为undefined时，按默认值处理。
+数值改变时，返回当前值。使用场景：当需要在数值变化时执行自定义操作（如更新关联UI、记录日志、保存状态等）时传入此回调。
+
+value：当前显示的数值。
+
+默认值：数值改变时，不返回值。
+
+值为undefined时，按默认值处理。
 
 **起始版本：** 11
 
@@ -47,7 +54,15 @@ onChange?: (value: number) => void
 max?: number
 ```
 
-设置Counter的最大值。默认值：999取值范围：[min, +∞)超出取值范围时（即设置值小于min），按min处理。值为undefined时，按默认值处理。
+设置Counter的最大值。
+
+默认值：999
+
+取值范围：[min, +∞)
+
+超出取值范围时（即设置值小于min），按min处理。
+
+值为undefined时，按默认值处理。
 
 **类型：** number
 
@@ -67,7 +82,15 @@ max?: number
 min?: number
 ```
 
-设置Counter的最小值。默认值：0取值范围：(-∞, max]超出取值范围时（即设置值大于max），按max处理。值为undefined时，按默认值处理。
+设置Counter的最小值。
+
+默认值：0
+
+取值范围：(-∞, max]
+
+超出取值范围时（即设置值大于max），按max处理。
+
+值为undefined时，按默认值处理。
 
 **类型：** number
 
@@ -87,7 +110,17 @@ min?: number
 textWidth?: number
 ```
 
-设置数值文本的宽度。默认值：自适应文本宽度。取值范围：[0, +∞)单位：vp超出取值范围时（即设置值小于0），按0处理。值为undefined时，按默认值处理。
+设置数值文本的宽度。
+
+默认值：自适应文本宽度。
+
+取值范围：[0, +∞)
+
+单位：vp
+
+超出取值范围时（即设置值小于0），按0处理。
+
+值为undefined时，按默认值处理。
 
 **类型：** number
 
@@ -107,7 +140,13 @@ textWidth?: number
 value?: number
 ```
 
-设置Counter的初始值。默认值：0取值范围：[min, max]，其中min和max分别对应下述Counter的最小值和最大值（min默认为0，max默认为999）。超出取值范围时，如果值小于min，按min处理；如果值大于max，按max处理。
+设置Counter的初始值。
+
+默认值：0
+
+取值范围：[min, max]，其中min和max分别对应下述Counter的最小值和最大值（min默认为0，max默认为999）。
+
+超出取值范围时，如果值小于min，按min处理；如果值大于max，按max处理。
 
 **类型：** number
 

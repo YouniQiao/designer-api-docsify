@@ -1,6 +1,8 @@
 # Paragraph
 
-Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing.Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **Paragraph** object.
+Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing.
+
+Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **Paragraph** object.
 
 **Since:** 12
 
@@ -9,7 +11,7 @@ Implements a carrier that stores the text content and style. You can perform ope
 ## Modules to Import
 
 ```TypeScript
-import text from '@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## didExceedMaxLines
@@ -44,7 +46,9 @@ let didExceed = paragraph.didExceedMaxLines();
 forceReuseRasterResult(isForce: boolean): void
 ```
 
-Sets whether to force reuse of the rasterization result. If this API is not called, the system allows updating the rasterization result by default.This API is suitable for scenarios where the text content remains unchanged but [paint](#paint) needs to be called multiple times for drawing. By reusing the rasterization result, repeated rasterization calculations can be avoided to improve drawing performance. After this setting is applied, it takes effect the next time [paint](#paint) is called for drawing.
+Sets whether to force reuse of the rasterization result. If this API is not called, the system allows updating the rasterization result by default.
+
+This API is suitable for scenarios where the text content remains unchanged but [paint](#paint) needs to be called multiple times for drawing. By reusing the rasterization result, repeated rasterization calculations can be avoided to improve drawing performance. After this setting is applied, it takes effect the next time [paint](#paint) is called for drawing.
 
 **Since:** 26.0.0
 
@@ -132,7 +136,7 @@ Obtains the actually visible text range in the specified line, excluding any ove
 
 | Type | Description |
 | --- | --- |
-| [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Text range obtained. If the line index is invalid, **start** and **end** are both **0**. |
+| Range | Text range obtained. If the line index is invalid, **start** and **end** are both **0**. |
 
 **Examples**
 
@@ -194,7 +198,7 @@ Obtains the character position information closest to the given coordinates.
 
 | Type | Description |
 | --- | --- |
-| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | Character position. |
+| PositionWithAffinity | Character position. |
 
 **Error codes:**
 
@@ -258,14 +262,14 @@ Obtains the character range corresponding to the specified glyph range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| glyphRange | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Glyph range. |
+| glyphRange | Range | Yes | Glyph range. |
 | encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character range indicates the byte range. For UTF-16 encoding, the returned character range indicates the UTF-16 encoding unit range. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Range & gt; | Character range. If the array contains one element, it indicates the character range. If the array contains two elements, the first element indicates the character range, and the second element indicates the actual glyph range. |
+| Array&lt;Range&gt; | Character range. If the array contains one element, it indicates the character range. If the array contains two elements, the first element indicates the character range, and the second element indicates the actual glyph range. |
 
 **Error codes:**
 
@@ -333,7 +337,7 @@ Obtains the position of a glyph closest to the given coordinates.
 
 | Type | Description |
 | --- | --- |
-| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | Position of the glyph. |
+| PositionWithAffinity | Position of the glyph. |
 
 **Examples**
 
@@ -361,14 +365,14 @@ Obtains the glyph range corresponding to the specified character range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characterRange | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Character range. |
+| characterRange | Range | Yes | Character range. |
 | encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned actual character range indicates the byte range. For UTF-16 encoding, the returned actual character range indicates the UTF-16 encoding unit range. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Range & gt; | Glyph range. The array contains two elements. The first element indicates the glyph range, and the second element indicates the actual character range. |
+| Array&lt;Range&gt; | Glyph range. The array contains two elements. The first element indicates the glyph range, and the second element indicates the actual character range. |
 
 **Error codes:**
 
@@ -539,7 +543,7 @@ Obtains an array of line measurement information.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;LineMetrics & gt; | Array of line measurement information. |
+| Array&lt;LineMetrics&gt; | Array of line measurement information. |
 
 **Examples**
 
@@ -761,7 +765,7 @@ Obtains the style configuration of a paragraph.
 
 | Type | Description |
 | --- | --- |
-| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | Style configuration of the paragraph. |
+| ParagraphStyle | Style configuration of the paragraph. |
 
 **Examples**
 
@@ -886,7 +890,7 @@ Obtains the rectangles occupied by all placeholders in the text.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;TextBox & gt; | Array holding the rectangles obtained. |
+| Array&lt;TextBox&gt; | Array holding the rectangles obtained. |
 
 **Examples**
 
@@ -912,15 +916,15 @@ Obtains the rectangles occupied by the characters in the range of the text under
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of the text. |
-| widthStyle | [RectWidthStyle](arkts-arkgraphics2d-text-rectwidthstyle-e.md) | Yes | Width of the rectangle. |
-| heightStyle | [RectHeightStyle](arkts-arkgraphics2d-text-rectheightstyle-e.md) | Yes | Height of the rectangle. |
+| range | Range | Yes | Range of the text. |
+| widthStyle | RectWidthStyle | Yes | Width of the rectangle. |
+| heightStyle | RectHeightStyle | Yes | Height of the rectangle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array & lt;TextBox & gt; | Array holding the rectangles obtained. |
+| Array&lt;TextBox&gt; | Array holding the rectangles obtained. |
 
 **Examples**
 
@@ -1018,8 +1022,12 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)) or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)).  
-**NOTE：**The returned range depends on the specific truncation of the paragraph (for example, whether the maximum number of lines or ellipsis is set):
+Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)) or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)).
+
+**NOTE：**
+
+The returned range depends on the specific truncation of the paragraph (for example, whether the maximum number of lines or ellipsis is set):
+
 | Scenario| Description| |---|---| | Text is not truncated.| The range includes all typeset text.| | Only maxLines truncation is set (no ellipsis).| the text from the first line to the end of the maxLines line.| | EllipsisMode.END| The range is the text before the ellipsis.| | EllipsisMode.START| The value is the text after the ellipsis.| | EllipsisMode.MIDDLE| the text range before and after the ellipsis is returned.| | EllipsisMode.MULTILINE_START| the text range before and after the ellipsis is returned.| | EllipsisMode.MULTILINE_MIDDLE| the text range before and after the ellipsis is returned.|
 
 **Since:** 26.0.0
@@ -1034,7 +1042,7 @@ Obtains the range of text that is visible on the screen in a paragraph. Excludes
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Range & gt; | Array of the visible text range of a paragraph. The range is the index of the UTF-16 encoding unit. |
+| Array&lt;Range&gt; | Array of the visible text range of a paragraph. The range is the index of the UTF-16 encoding unit. |
 
 **Examples**
 
@@ -1066,7 +1074,7 @@ Obtains the range of the word where the glyph with a given offset is located.
 
 | Type | Description |
 | --- | --- |
-| [Range](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Range of the word. |
+| Range | Range of the word. |
 
 **Examples**
 
@@ -1098,7 +1106,7 @@ Performs layout and calculates the positions of all glyphs. This API uses a prom
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

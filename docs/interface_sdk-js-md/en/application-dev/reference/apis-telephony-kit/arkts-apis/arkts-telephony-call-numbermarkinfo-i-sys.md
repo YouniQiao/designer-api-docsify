@@ -19,7 +19,8 @@ Defines a number mark.
 isCloud?: boolean
 ```
 
-Whether the number mark is from the cloud. The default value is **false**.  
+Whether the number mark is from the cloud. The default value is **false**.
+
 - **true**: yes  
 - **false**: no
 

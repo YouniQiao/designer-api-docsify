@@ -9,7 +9,7 @@ The wantConstant module provides the actions, entities, and flags used in Want o
 ## Modules to Import
 
 ```TypeScript
-import wantConstant from '@kit.AbilityKit';
+import { wantConstant } from '@kit.AbilityKit';
 ```
 
 ## Summary

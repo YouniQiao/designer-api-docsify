@@ -45,7 +45,11 @@ Constructs the stack layout algorithm class.
 public alignContent?: LocalizedAlignment
 ```
 
-Alignment mode of child components in the stack layout algorithm.Default value: **LocalizedAlignment.CENTER**Invalid values are treated as the default value.
+Alignment mode of child components in the stack layout algorithm.
+
+Default value: **LocalizedAlignment.CENTER**
+
+Invalid values are treated as the default value.
 
 **Type:** [LocalizedAlignment](arkts-arkui-localizedalignment-e.md)
 

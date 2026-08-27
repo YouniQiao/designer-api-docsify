@@ -99,7 +99,7 @@ Obtains the names of all navigation destination pages in the navigation stack.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;string & gt; | Names of all navigation destination pages in the navigation stack. |
+| Array&lt;string&gt; | Names of all navigation destination pages in the navigation stack. |
 
 ## getIndexByName
 
@@ -127,7 +127,7 @@ Obtains the indexes of all the navigation destination pages that match **name**.
 
 | Type | Description |
 | --- | --- |
-| Array & lt;number & gt; | Indexes of all the matching navigation destination pages. |
+| Array&lt;number&gt; | Indexes of all the matching navigation destination pages. |
 
 ## getParamByIndex
 
@@ -183,7 +183,7 @@ Obtains the parameter information of all the navigation destination pages that m
 
 | Type | Description |
 | --- | --- |
-| Array & lt;Object & gt; | Parameter information of all the matching navigation destination pages. |
+| Array&lt;Object&gt; | Parameter information of all the matching navigation destination pages. |
 
 ## keepBottomPage
 
@@ -568,7 +568,7 @@ Removes the navigation destination pages specified by **indexes** from the navig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indexes | Array & lt;number & gt; | Yes | Array of indexes of the navigation destination pages to remove.Value range of the number type: [0, +∞). |
+| indexes | Array&lt;number&gt; | Yes | Array of indexes of the navigation destination pages to remove.Value range of the number type: [0, +∞). |
 
 **Return value:**
 

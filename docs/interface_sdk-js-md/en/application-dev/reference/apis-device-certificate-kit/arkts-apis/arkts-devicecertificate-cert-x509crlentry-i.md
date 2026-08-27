@@ -33,7 +33,7 @@ Obtains the issuer name of the revoked certificate.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Issuer name of the revoked certificate obtained. |
+| DataBlob | Issuer name of the revoked certificate obtained. |
 
 **Error codes:**
 
@@ -836,7 +836,7 @@ Obtains the CRL entry extensions in DER format.
 
 | Type | Description |
 | --- | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | X.509 CRL entry extensions obtained. |
+| DataBlob | X.509 CRL entry extensions obtained. |
 
 **Error codes:**
 

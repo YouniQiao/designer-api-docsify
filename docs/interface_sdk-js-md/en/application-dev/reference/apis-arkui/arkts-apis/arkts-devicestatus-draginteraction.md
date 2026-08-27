@@ -15,7 +15,7 @@ The **dragInteraction** module provides the APIs to enable and disable listening
 ## Modules to Import
 
 ```TypeScript
-import dragInteraction from '@kit.ArkUI';
+import { dragInteraction } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -40,7 +40,7 @@ Cancels the prefetching of a specified data item from the dataset. This API can 
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; \ | void | Promise when this API is executed asynchronously; no return value when this API is executed synchronously. The promise only indicates that the operation is completed and contains no actual return content. |
+| Promise&lt;void&gt; \| void | Promise when this API is executed asynchronously; no return value when this API is executed synchronously. The promise only indicates that the operation is completed and contains no actual return content. |
 
 ## prefetch
 
@@ -68,4 +68,4 @@ Prefetches a specified data item from the dataset. This API can be either synchr
 
 | Type | Description |
 | --- | --- |
-| Promise & lt;void & gt; \ | void | Promise when this API is executed asynchronously; no return value when this API is executed synchronously. The promise only indicates that the operation is completed and contains no actual return content. |
+| Promise&lt;void&gt; \| void | Promise when this API is executed asynchronously; no return value when this API is executed synchronously. The promise only indicates that the operation is completed and contains no actual return content. |

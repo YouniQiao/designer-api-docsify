@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import videoProcessingEngine from '@kit.ImageKit';
+import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
 ## initializeEnvironment
@@ -24,7 +24,7 @@ function initializeEnvironment(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise & lt;void & gt; | Promise对象，用于返回操作结果。 操作失败时返回错误信息。 |
+| Promise&lt;void&gt; | Promise对象，用于返回操作结果。操作失败时返回错误信息。 |
 
 **错误码：**
 

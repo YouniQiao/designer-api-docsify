@@ -21,7 +21,7 @@ import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [LaunchController(System API)](arkts-arkui-arkui-advanced-innerfullscreenlaunchcomponent-launchcontroller-c-sys.md) | Controller for launching the atomic service. |
+| [LaunchController](arkts-arkui-arkui-advanced-innerfullscreenlaunchcomponent-launchcontroller-c-sys.md) | Controller for launching the atomic service. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -29,7 +29,7 @@ import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [InnerFullScreenLaunchComponent(System API)](arkts-arkui-arkui-advanced-innerfullscreenlaunchcomponent-innerfullscreenlaunchcomponent-s-sys.md) | **InnerFullScreenLaunchComponent** is a component that allows the invoker to choose the timing for launching an atomic service. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner. |
+| [InnerFullScreenLaunchComponent](arkts-arkui-arkui-advanced-innerfullscreenlaunchcomponent-innerfullscreenlaunchcomponent-s-sys.md) | **InnerFullScreenLaunchComponent** is a component that allows the invoker to choose the timing for launching an atomic service. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -37,5 +37,53 @@ import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [LaunchAtomicServiceCallback(System API)](arkts-arkui-launchatomicservicecallback-t-sys.md) | Triggered when an atomic service is launched. |
+| [LaunchAtomicServiceCallback](arkts-arkui-launchatomicservicecallback-t-sys.md) | Triggered when an atomic service is launched. |
 <!--DelEnd-->
+
+## Examples
+
+```TypeScript
+import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+
+  @Builder
+  ColumnChild() {
+    Column() {
+      Text('InnerFullScreenLaunchComponent').fontSize(16).margin({top: 100})
+      Button('Start Sunrise/Sunset')
+        .onClick(()=>{
+          let appId1: string = '576****************';
+          this.controller.launchAtomicService(appId1, {});
+        }).height(30).width('50%').margin({top: 50})
+      Button('Start Top-up')
+        .onClick(()=>{
+          let appId2: string = '576****************';
+          this.controller.launchAtomicService(appId2, {});
+        }).height(30).width('50%').margin({top: 50})
+    }.backgroundColor(Color.Pink).height('100%').width('100%')
+  }
+  controller: LaunchController = new LaunchController();
+
+  build() {
+    Column() {
+      InnerFullScreenLaunchComponent({
+          content: this.ColumnChild,
+          controller: this.controller,
+          onReceive: (data) => {
+            console.info("onReceive, data: " + data['ohos.atomicService.window']);
+          },
+          onError: (err: Error) => {
+            console.error("onError, err: " + JSON.stringify(err));
+          },
+          onTerminated: (info: TerminationInfo) => {
+            console.info("onTerminated, info: " + JSON.stringify(info));
+          }
+        })
+    }
+    .width('100%').height('100%')
+  }
+}
+```

@@ -12,7 +12,11 @@ Describes the desired display orientation for image content.
 AUTO = 0
 ```
 
-Use EXIF metadata for display orientation, with support for rotation and mirroring.Images of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) types do not contain header information. When this API is called, the image display effect remains unchanged.
+Use EXIF metadata for display orientation, with support for rotation and mirroring.
+
+Images of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) types do not contain header information. When this API is called, the image display effect remains unchanged.
+
+
 
 **Since:** 14
 
@@ -50,6 +54,8 @@ RIGHT = 2
 
 Display the image after rotating it 90 degrees clockwise.
 
+
+
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
@@ -67,6 +73,8 @@ DOWN = 3
 ```
 
 Display the image after rotating it 180 degrees clockwise.
+
+
 
 **Since:** 14
 
@@ -86,6 +94,8 @@ LEFT = 4
 
 Display the image after rotating it 270 degrees clockwise.
 
+
+
 **Since:** 14
 
 **Model restriction:** This API can be used only in the stage model.
@@ -103,6 +113,8 @@ UP_MIRRORED = 5
 ```
 
 Display the image after flipping it horizontally.
+
+
 
 **Since:** 20
 
@@ -122,6 +134,8 @@ RIGHT_MIRRORED = 6
 
 Display the image after flipping it horizontally and then rotating it 90 degrees clockwise.
 
+
+
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
@@ -140,6 +154,8 @@ DOWN_MIRRORED = 7
 
 Display the image after flipping it vertically.
 
+
+
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
@@ -157,6 +173,8 @@ LEFT_MIRRORED = 8
 ```
 
 Display the image after flipping it horizontally and then rotating it 270 degrees clockwise.
+
+
 
 **Since:** 20
 
