@@ -27,3 +27,21 @@ The current output device information. It will be undefined if this is a local s
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 
 **System API:** This is a system API.
+
+## userId
+
+```TypeScript
+userId?: number
+```
+
+The userId to which this session belongs. The value should be an integer.
+
+**Type:** number
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.AVSession.Manager
+
+**System API:** This is a system API.

@@ -23,11 +23,17 @@ import { avSession } from '@kit.AVSessionKit';
 | [getAVSession](arkts-avsession-avsession-getavsession-f.md) | Get an AVSession instance if already created. |
 | [isDesktopLyricSupported](arkts-avsession-avsession-isdesktoplyricsupported-f.md) | Whether desktop lyric feature is supported. |
 | [offSessionCreate](arkts-avsession-avsession-offsessioncreate-f.md) | Unregister session create callback |
+| [offSessionCreateForAudioZone](arkts-avsession-avsession-offsessioncreateforaudiozone-f.md) | Unregister session create callback for a specific audio zone. |
 | [offSessionDestroy](arkts-avsession-avsession-offsessiondestroy-f.md) | Unregister session destroy callback |
+| [offSessionDestroyForAudioZone](arkts-avsession-avsession-offsessiondestroyforaudiozone-f.md) | Unregister session destroy callback for a specific audio zone. |
 | [offTopSessionChange](arkts-avsession-avsession-offtopsessionchange-f.md) | Unregister top session changed callback |
+| [offTopSessionChangeForAudioZone](arkts-avsession-avsession-offtopsessionchangeforaudiozone-f.md) | Unregister top session changed callback for a specific audio zone. |
 | [onSessionCreate](arkts-avsession-avsession-onsessioncreate-f.md) | Register session create callback |
+| [onSessionCreateForAudioZone](arkts-avsession-avsession-onsessioncreateforaudiozone-f.md) | Register session create callback for a specific audio zone. |
 | [onSessionDestroy](arkts-avsession-avsession-onsessiondestroy-f.md) | Register session destroy callback |
+| [onSessionDestroyForAudioZone](arkts-avsession-avsession-onsessiondestroyforaudiozone-f.md) | Register session destroy callback for a specific audio zone. |
 | [onTopSessionChange](arkts-avsession-avsession-ontopsessionchange-f.md) | Register top session changed callback |
+| [onTopSessionChangeForAudioZone](arkts-avsession-avsession-ontopsessionchangeforaudiozone-f.md) | Register top session changed callback for a specific audio zone. |
 
 <!--Del-->
 ### Functions(System API)
@@ -46,6 +52,7 @@ import { avSession } from '@kit.AVSessionKit';
 | [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md) | Get history avsession records. These sessions have been destroyed. |
 | [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md) | Get history avsession records. These sessions have been destroyed. |
 | [getSessionDescriptors](arkts-avsession-avsession-getsessiondescriptors-f-sys.md) | Get session descriptors of the system based on different session category. |
+| [getSessionDescriptorsForAudioZone](arkts-avsession-avsession-getsessiondescriptorsforaudiozone-f-sys.md) | Get session descriptors for a unique audio zone across different session category. |
 | off | Unregister session create callback |
 | off | Unregister session destroy callback |
 | off | Unregister top session changed callback |
@@ -77,6 +84,7 @@ import { avSession } from '@kit.AVSessionKit';
 | [setDiscoverable](arkts-avsession-avsession-setdiscoverable-f-sys.md) | Enable or disable device to be discoverable, used at sink side. |
 | [startAVPlayback](arkts-avsession-avsession-startavplayback-f-sys.md) | Start an application for media playback. |
 | [startAVPlayback](arkts-avsession-avsession-startavplayback-f-sys.md) | Start an application for media playback with command info. |
+| [startAVPlaybackForAudioZone](arkts-avsession-avsession-startavplaybackforaudiozone-f-sys.md) | Start an application for media playback with command info for an specific audio zone. |
 | [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md) | Start device discovery. |
 | [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md) | Start device discovery. |
 | [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md) | Start device discovery. |
@@ -129,6 +137,7 @@ import { avSession } from '@kit.AVSessionKit';
 | --- | --- |
 | [AVCastController](arkts-avsession-avsession-avcastcontroller-i-sys.md) | AVCastController definition used to implement a remote control when a cast is connected |
 | [AVQueueInfo](arkts-avsession-avsession-avqueueinfo-i-sys.md) | The play list information definition. |
+| [AVSessionController](arkts-avsession-avsession-avsessioncontroller-i-sys.md) | Session controller,used to control media playback and get media information |
 | [AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md) | The description of the session |
 | [DeviceInfo](arkts-avsession-avsession-deviceinfo-i-sys.md) | Device Information Definition |
 | [DeviceState](arkts-avsession-avsession-devicestate-i-sys.md) | Device state used to describe states including discovery, authentication and other scenes. |

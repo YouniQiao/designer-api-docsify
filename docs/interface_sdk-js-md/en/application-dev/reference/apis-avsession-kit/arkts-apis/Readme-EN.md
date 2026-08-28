@@ -128,25 +128,33 @@
   - [getHistoricalSessionDescriptors(system api)](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getSessionDescriptors(system api)](arkts-avsession-avsession-getsessiondescriptors-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getSessionDescriptorsForAudioZone(system api)](arkts-avsession-avsession-getsessiondescriptorsforaudiozone-f-sys.md)<!--DelEnd-->
   - [isDesktopLyricSupported](arkts-avsession-avsession-isdesktoplyricsupported-f.md)
   <!--Del-->
   - [off(system api)](arkts-avsession-avsession-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offActiveSessionChanged(system api)](arkts-avsession-avsession-offactivesessionchanged-f-sys.md)<!--DelEnd-->
   - [offSessionCreate](arkts-avsession-avsession-offsessioncreate-f.md)
+  - [offSessionCreateForAudioZone](arkts-avsession-avsession-offsessioncreateforaudiozone-f.md)
   - [offSessionDestroy](arkts-avsession-avsession-offsessiondestroy-f.md)
+  - [offSessionDestroyForAudioZone](arkts-avsession-avsession-offsessiondestroyforaudiozone-f.md)
   <!--Del-->
   - [offSystemCommonEvent(system api)](arkts-avsession-avsession-offsystemcommonevent-f-sys.md)<!--DelEnd-->
   - [offTopSessionChange](arkts-avsession-avsession-offtopsessionchange-f.md)
+  - [offTopSessionChangeForAudioZone](arkts-avsession-avsession-offtopsessionchangeforaudiozone-f.md)
   <!--Del-->
   - [on(system api)](arkts-avsession-avsession-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onActiveSessionChanged(system api)](arkts-avsession-avsession-onactivesessionchanged-f-sys.md)<!--DelEnd-->
   - [onSessionCreate](arkts-avsession-avsession-onsessioncreate-f.md)
+  - [onSessionCreateForAudioZone](arkts-avsession-avsession-onsessioncreateforaudiozone-f.md)
   - [onSessionDestroy](arkts-avsession-avsession-onsessiondestroy-f.md)
+  - [onSessionDestroyForAudioZone](arkts-avsession-avsession-onsessiondestroyforaudiozone-f.md)
   <!--Del-->
   - [onSystemCommonEvent(system api)](arkts-avsession-avsession-onsystemcommonevent-f-sys.md)<!--DelEnd-->
   - [onTopSessionChange](arkts-avsession-avsession-ontopsessionchange-f.md)
+  - [onTopSessionChangeForAudioZone](arkts-avsession-avsession-ontopsessionchangeforaudiozone-f.md)
   <!--Del-->
   - [sendSystemAVKeyEvent(system api)](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -157,6 +165,8 @@
   - [setDiscoverable(system api)](arkts-avsession-avsession-setdiscoverable-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [startAVPlayback(system api)](arkts-avsession-avsession-startavplayback-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [startAVPlaybackForAudioZone(system api)](arkts-avsession-avsession-startavplaybackforaudiozone-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [startCastDeviceDiscovery(system api)](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -186,6 +196,8 @@
   - [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)
   - [AVSession](arkts-avsession-avsession-avsession-i.md)
   - [AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)
+  <!--Del-->
+  - [AVSessionController(system api)](arkts-avsession-avsession-avsessioncontroller-i-sys.md)<!--DelEnd-->
   - [AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i.md)
   <!--Del-->
   - [AVSessionDescriptor(system api)](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)<!--DelEnd-->

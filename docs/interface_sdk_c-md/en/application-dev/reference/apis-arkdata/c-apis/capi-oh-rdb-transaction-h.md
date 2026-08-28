@@ -242,7 +242,7 @@ Inserts a row of data into the target table and support conflict resolution.
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | Represents a pointer to an instance of OH_Rdb_Transaction. |
 | const char *table | Represents the target table. |
 | const OH_VBucket *row | Represents the row data to be inserted into the table. |
-| Rdb_ConflictResolution resolution | Represents the resolution when conflict occurs. |
+| [Rdb_ConflictResolution](capi-oh-rdb-types-h.md#rdb_conflictresolution) resolution | Represents the resolution when conflict occurs. |
 | int64_t *rowId | Represents row line number when insert successfully. |
 
 **Returns**:
@@ -270,7 +270,7 @@ Inserts a batch of data into the target table.A maximum of 32766 parameters can 
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | Represents a pointer to an instance of OH_Rdb_Transaction. |
 | const char *table | Represents the target table. |
 | const OH_Data_VBuckets *rows | Represents the rows data to be inserted into the table. |
-| Rdb_ConflictResolution resolution | Represents the resolution when conflict occurs. |
+| [Rdb_ConflictResolution](capi-oh-rdb-types-h.md#rdb_conflictresolution) resolution | Represents the resolution when conflict occurs. |
 | int64_t *changes | Represents the number of successful insertions. |
 
 **Returns**:
@@ -325,7 +325,7 @@ Updates data in the database based on specified conditions and support conflict 
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | Represents a pointer to an instance of OH_Rdb_Transaction. |
 | const OH_VBucket *row | Represents the row data to be updated into the table. |
 | const OH_Predicates *predicates | Represents the specified update condition by the instance object of OH_Predicates. |
-| Rdb_ConflictResolution resolution | Represents the resolution when conflict occurs. |
+| [Rdb_ConflictResolution](capi-oh-rdb-types-h.md#rdb_conflictresolution) resolution | Represents the resolution when conflict occurs. |
 | int64_t *changes | Represents the number of successful insertions. |
 
 **Returns**:
@@ -485,7 +485,7 @@ Executes an SQL statement that contains specified parameters.
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | Represents a pointer to an instance of OH_Rdb_Transaction. |
 | const char *sql | Represents the SQL statement to execute. |
 | const OH_Data_Values *args | Represents the values of the parameters in the SQL statement. |
-| [OH_Data_Value](capi-rdb-oh-data-value.md) **result | Represents a pointer to OH_Data_Value instance when the execution is successful.The memory must be released through the OH_Value_Destroy interface after the use is complete. |
+| OH_Data_Value **result | Represents a pointer to OH_Data_Value instance when the execution is successful.The memory must be released through the OH_Value_Destroy interface after the use is complete. |
 
 **Returns**:
 
@@ -541,8 +541,8 @@ Inserts a batch of data into the target table and output change info to context.
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | Represents a pointer to an instance of OH_Rdb_Transaction. |
 | const char *table | Represents the target table. |
 | const OH_Data_VBuckets *rows | Represents the rows data to be inserted into the table. |
-| Rdb_ConflictResolution resolution | Represents the resolution when conflict occurs. |
-| OH_RDB_ReturningContext *context | Represents a pointer to a pointer to an [OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md) instance. |
+| [Rdb_ConflictResolution](capi-oh-rdb-types-h.md#rdb_conflictresolution) resolution | Represents the resolution when conflict occurs. |
+| [OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md) *context | Represents a pointer to a pointer to an [OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md) instance. |
 
 **Returns**:
 
@@ -574,8 +574,8 @@ Updates data in the database based on specified conditions and output change inf
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | Represents a pointer to an instance of OH_Rdb_Transaction. |
 | OH_VBucket *row | Represents the row data to be updated into the table. |
 | OH_Predicates *predicates | Represents a pointer to an {link OH_Predicates} instance. |
-| Rdb_ConflictResolution resolution | Represents the resolution when conflict occurs. |
-| OH_RDB_ReturningContext *context | Represents a pointer to a pointer to an [OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md) instance. |
+| [Rdb_ConflictResolution](capi-oh-rdb-types-h.md#rdb_conflictresolution) resolution | Represents the resolution when conflict occurs. |
+| [OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md) *context | Represents a pointer to a pointer to an [OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md) instance. |
 
 **Returns**:
 
@@ -606,7 +606,7 @@ Deletes data from the database based on specified conditions and output change i
 | -- | -- |
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | Represents a pointer to an instance of OH_Rdb_Transaction. |
 | OH_Predicates *predicates | Represents a pointer to an [OH_Predicates](capi-rdb-oh-predicates.md) instance. |
-| OH_RDB_ReturningContext *context | Represents a pointer to a pointer to an [OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md) instance. |
+| [OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md) *context | Represents a pointer to a pointer to an [OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md) instance. |
 
 **Returns**:
 

@@ -402,7 +402,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputSurface(OH_ImageEffect *imageEffec
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | 效果器指针。 |
-| [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) *nativeWindow | 指向OHNativeWindow实例的指针。 |
+| OHNativeWindow *nativeWindow | 指向OHNativeWindow实例的指针。 |
 
 **返回：**
 
@@ -429,7 +429,7 @@ ImageEffect_ErrorCode OH_ImageEffect_GetInputSurface(OH_ImageEffect *imageEffect
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | 效果器指针。 |
-| [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) **nativeWindow | 指向OHNativeWindow实例的指针。 |
+| OHNativeWindow **nativeWindow | 指向OHNativeWindow实例的指针。 |
 
 **返回：**
 
@@ -456,7 +456,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputPixelmap(OH_ImageEffect *imageEffec
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | 效果器指针。 |
-| OH_PixelmapNative *pixelmap | 指向OH_PixelmapNative实例的指针。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) *pixelmap | 指向OH_PixelmapNative实例的指针。 |
 
 **返回：**
 
@@ -483,7 +483,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputPixelmap(OH_ImageEffect *imageEffe
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | 效果器指针。 |
-| OH_PixelmapNative *pixelmap | 指向OH_PixelmapNative实例的指针。 |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) *pixelmap | 指向OH_PixelmapNative实例的指针。 |
 
 **返回：**
 
@@ -510,7 +510,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputNativeBuffer(OH_ImageEffect *imageE
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | 效果器指针。 |
-| OH_NativeBuffer *nativeBuffer | 指向OH_NativeBuffer实例的指针。 |
+| [OH_NativeBuffer](capi-image-nativemodule-oh-nativebuffer.md) *nativeBuffer | 指向OH_NativeBuffer实例的指针。 |
 
 **返回：**
 
@@ -537,7 +537,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputNativeBuffer(OH_ImageEffect *image
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | 效果器指针。 |
-| OH_NativeBuffer *nativeBuffer | 指向OH_NativeBuffer实例的指针，允许为空，当输入为空时渲染结果返回到输入的OH_NativeBuffer对象上。 |
+| [OH_NativeBuffer](capi-image-nativemodule-oh-nativebuffer.md) *nativeBuffer | 指向OH_NativeBuffer实例的指针，允许为空，当输入为空时渲染结果返回到输入的OH_NativeBuffer对象上。 |
 
 **返回：**
 
@@ -618,7 +618,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetInputPicture(OH_ImageEffect *imageEffect
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | 效果器指针。 |
-| OH_PictureNative *picture | 指向OH_PictureNative实例的指针。 |
+| [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | 指向OH_PictureNative实例的指针。 |
 
 **返回：**
 
@@ -645,7 +645,7 @@ ImageEffect_ErrorCode OH_ImageEffect_SetOutputPicture(OH_ImageEffect *imageEffec
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ImageEffect](capi-imageeffect-oh-imageeffect.md) *imageEffect | 效果器指针。 |
-| OH_PictureNative *picture | 指向OH_PictureNative实例的指针，允许为空，当输入为空时渲染结果返回到输入的OH_PictureNative对象上。 |
+| [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) *picture | 指向OH_PictureNative实例的指针，允许为空，当输入为空时渲染结果返回到输入的OH_PictureNative对象上。 |
 
 **返回：**
 

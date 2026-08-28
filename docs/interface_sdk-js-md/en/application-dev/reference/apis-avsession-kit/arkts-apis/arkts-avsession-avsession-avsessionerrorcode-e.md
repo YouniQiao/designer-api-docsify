@@ -933,3 +933,17 @@ An error occurs when the DRM processes the key response.
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+## ERR_CODE_SERVICE_NOT_RUNNING
+
+```TypeScript
+ERR_CODE_SERVICE_NOT_RUNNING = 6700101
+```
+
+Session service is not running.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.AVSession.Manager

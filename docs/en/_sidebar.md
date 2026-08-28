@@ -11,7 +11,7 @@
 - [Asset Store Kit (52)](interface_sdk-js-md/en/application-dev/reference/apis-asset-store-kit/arkts-apis/arkts-security-asset.md)
 - [Audio Kit (297)](interface_sdk-js-md/en/application-dev/reference/apis-audio-kit/arkts-apis/arkts-multimedia-audio.md)
 - [Avcodec Kit (62)](interface_sdk_c-md/en/application-dev/reference/apis-avcodec-kit/c-apis/capi-media-types-h.md)
-- [Avsession Kit (222)](interface_sdk-js-md/en/application-dev/reference/apis-avsession-kit/arkts-apis/arkts-app-ability-mediacontrolextensionability.md)
+- [Avsession Kit (231)](interface_sdk-js-md/en/application-dev/reference/apis-avsession-kit/arkts-apis/arkts-app-ability-mediacontrolextensionability.md)
 - [Background Tasks Kit (203)](interface_sdk-js-md/en/application-dev/reference/apis-background-tasks-kit/arkts-apis/arkts-backgroundtaskmanager.md)
 - [Basic Services Kit (965)](interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-account-appaccount.md)
 - [Calendar Kit (19)](interface_sdk-js-md/en/application-dev/reference/apis-calendar-kit/arkts-apis/arkts-calendarmanager.md)
