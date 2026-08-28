@@ -18,6 +18,8 @@ A decorator of the [@InsightIntentLink](../../../reference/apis-ability-kit/js-a
 
 **Since:** 20
 
+**Decorator:** @InsightIntentLink
+
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -33,6 +35,8 @@ PAGE = '@InsightIntentPage'
 A decorator of the [@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage) type.
 
 **Since:** 20
+
+**Decorator:** @InsightIntentPage
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ A decorator of the [@InsightIntentEntry](../../../reference/apis-ability-kit/js-
 
 **Since:** 20
 
+**Decorator:** @InsightIntentEntry
+
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -66,6 +72,8 @@ A decorator of the [@InsightIntentFunctionMethod](../../../reference/apis-abilit
 
 **Since:** 20
 
+**Decorator:** @InsightIntentFunctionMethod
+
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -81,6 +89,8 @@ FORM = '@InsightIntentForm'
 A decorator of the [@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform) type.
 
 **Since:** 20
+
+**Decorator:** @InsightIntentForm
 
 **Model restriction:** This API can be used only in the stage model.
 

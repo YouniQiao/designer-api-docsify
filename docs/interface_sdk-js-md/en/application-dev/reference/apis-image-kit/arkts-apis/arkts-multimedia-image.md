@@ -193,6 +193,7 @@ import { image } from '@kit.ImageKit';
 | [GainmapParams](arkts-image-image-gainmapparams-i-sys.md) | Describes gainmap generation parameters. |
 | [HdrDecomposeOptions](arkts-image-image-hdrdecomposeoptions-i-sys.md) | Describes the options for decomposing an HDR Pixelmap to a Picture containing an SDR PixelMap and a gainmap. |
 | [ImageSource](arkts-image-image-imagesource-i-sys.md) | The **ImageSource** class provides APIs to obtain image information. |
+| [PackingOption](arkts-image-image-packingoption-i-sys.md) | Describes the options for image encoding. |
 | [SourceOptions](arkts-image-image-sourceoptions-i-sys.md) | Defines image source initialization options. |
 <!--DelEnd-->
 

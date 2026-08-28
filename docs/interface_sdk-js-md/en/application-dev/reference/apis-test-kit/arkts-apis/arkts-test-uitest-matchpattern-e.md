@@ -6,6 +6,8 @@ Enumerates the match patterns supported for component attributes.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## EQUALS
 
 ```TypeScript
@@ -19,6 +21,8 @@ Equals the given value.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## CONTAINS
 
@@ -34,6 +38,8 @@ Contains the given value.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## STARTS_WITH
 
 ```TypeScript
@@ -47,6 +53,8 @@ Starts with the given value.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## ENDS_WITH
 
@@ -62,6 +70,8 @@ Ends with the given value.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## REG_EXP
 
 ```TypeScript
@@ -76,6 +86,8 @@ Uses regular expression matching.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## REG_EXP_ICASE
 
 ```TypeScript
@@ -89,3 +101,5 @@ Uses case-insensitive regular expression matching.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

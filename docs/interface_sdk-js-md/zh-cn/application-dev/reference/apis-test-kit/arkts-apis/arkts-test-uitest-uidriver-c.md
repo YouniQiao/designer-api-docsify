@@ -14,6 +14,8 @@ UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按�
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## 导入模块
 
 ```TypeScript
@@ -40,6 +42,8 @@ assertComponentExist(by: By): Promise<void>
 **替代接口：** [assertComponentExist](arkts-test-uitest-driver-c.md#assertcomponentexist)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -92,6 +96,8 @@ UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异�
 **替代接口：** [click](arkts-test-uitest-component-c.md#click)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -150,6 +156,8 @@ static create(): UiDriver
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -186,6 +194,8 @@ UiDriver对象在给定的时间内延时。使用Promise异步回调。
 **替代接口：** [delayMs](arkts-test-uitest-driver-c.md#delayms)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -240,6 +250,8 @@ UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异�
 **替代接口：** [doubleClick](arkts-test-uitest-component-c.md#doubleclick)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -296,6 +308,8 @@ findComponent(by: By): Promise<UiComponent>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -340,6 +354,8 @@ findComponents(by: By): Promise<Array<UiComponent>>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -383,6 +399,8 @@ UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使
 **替代接口：** [longClick](arkts-test-uitest-component-c.md#longclick)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -439,6 +457,8 @@ UiDriver对象进行点击BACK键的操作。使用Promise异步回调。
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -486,6 +506,8 @@ UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的
 **替代接口：** [screenCap](arkts-test-uitest-driver-c.md#screencap)(savePath: string)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -541,6 +563,8 @@ UiDriver对象采取如下操作：从给出的起始坐标点滑向给出的目
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -587,6 +611,8 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 **替代接口：** [triggerKey](arkts-test-uitest-driver-c.md#triggerkey)(keyCode: int)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 

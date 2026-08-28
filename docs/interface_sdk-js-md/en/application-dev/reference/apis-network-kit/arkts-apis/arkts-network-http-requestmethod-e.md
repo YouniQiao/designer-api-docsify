@@ -104,6 +104,8 @@ Performs a message loopback test along the path to the target resource.
 
 **System capability:** SystemCapability.Communication.NetStack
 
+**Test API:** This is a test API.
+
 ## CONNECT
 
 ```TypeScript

@@ -365,6 +365,8 @@ Checks whether all elements in this ArkTS array meet a given condition.
 
 **System capability:** SystemCapability.Utils.Lang
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -461,6 +463,8 @@ Returns a new array containing all elements that pass a test provided by a callb
 
 **System capability:** SystemCapability.Utils.Lang
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -494,6 +498,8 @@ Returns the value of the first element that passes a test provided by a callback
 
 **System capability:** SystemCapability.Utils.Lang
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -526,6 +532,8 @@ Returns the index of the first element that passes a test provided by a callback
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -1221,6 +1229,8 @@ Retains only the elements in this ArkTS Array that satisfy the specified predica
 
 **System capability:** SystemCapability.Utils.Lang
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1368,6 +1378,8 @@ Checks whether this ArkTS array contains an element that meets certain condition
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Test API:** This is a test API.
 
 **Parameters:**
 

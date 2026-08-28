@@ -6,6 +6,8 @@ The **UiWindow** class represents a window on the UI and provides APIs for obtai
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -25,6 +27,8 @@ Closes a window. This API uses a promise to return the result.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -67,6 +71,8 @@ Focuses a window. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -106,6 +112,8 @@ Obtains the bounds information of a window. This API uses a promise to return th
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -161,6 +169,8 @@ Obtains the bundle name of the application to which a window belongs. This API u
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -203,6 +213,8 @@ Obtains the ID of the display to which a window belongs. This API uses a promise
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -255,6 +267,8 @@ Obtains the window title. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -295,6 +309,8 @@ Obtains the window mode. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -334,6 +350,8 @@ Checks whether a window is active. This API uses a promise to return the result.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -377,6 +395,8 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -416,6 +436,8 @@ Checks whether a window is focused. This API uses a promise to return the result
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -487,6 +509,8 @@ Maximizes a window. A window can be resumed to its previous mode using [resume](
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -528,6 +552,8 @@ Minimizes a window. A window can be resumed to its previous mode using [resume](
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -568,6 +594,8 @@ Moves a window to the target point. This API uses a promise to return the result
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -618,6 +646,8 @@ Resizes a window based on the specified width, height, and direction. This API u
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -654,6 +684,8 @@ Resumes a window to its previous mode. This API uses a promise to return the res
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -695,6 +727,8 @@ Switches to the split-screen mode. A window can be resumed to its previous mode 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 

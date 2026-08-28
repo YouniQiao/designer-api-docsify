@@ -14,6 +14,8 @@ UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属�
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## 导入模块
 
 ```TypeScript
@@ -39,6 +41,8 @@ click(): Promise<void>
 **替代接口：** [click](arkts-test-uitest-component-c.md#click)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -93,6 +97,8 @@ doubleClick(): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -143,6 +149,8 @@ getId(): Promise<number>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -182,6 +190,8 @@ getKey(): Promise<string>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -220,6 +230,8 @@ getText(): Promise<string>
 **替代接口：** [getText](arkts-test-uitest-component-c.md#gettext)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -271,6 +283,8 @@ getType(): Promise<string>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -320,6 +334,8 @@ inputText(text: string): Promise<void>
 **替代接口：** [inputText](arkts-test-uitest-component-c.md#inputtext)(text: string)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -380,6 +396,8 @@ isClickable(): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -438,6 +456,8 @@ isEnabled(): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -495,6 +515,8 @@ isFocused(): Promise<boolean>
 **替代接口：** [isFocused](arkts-test-uitest-component-c.md#isfocused)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -565,6 +587,8 @@ isScrollable(): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -622,6 +646,8 @@ isSelected(): Promise<boolean>
 **替代接口：** [isSelected](arkts-test-uitest-component-c.md#isselected)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -681,6 +707,8 @@ longClick(): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -730,6 +758,8 @@ scrollSearch(by: By): Promise<UiComponent>
 **替代接口：** [scrollSearch](arkts-test-uitest-component-c.md#scrollsearch)(on: On)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 

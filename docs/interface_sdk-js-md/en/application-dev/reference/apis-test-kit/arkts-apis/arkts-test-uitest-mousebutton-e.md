@@ -6,6 +6,8 @@ Describes the injected simulated mouse button.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## MOUSE_BUTTON_LEFT
 
 ```TypeScript
@@ -19,6 +21,8 @@ Left button on the mouse.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## MOUSE_BUTTON_RIGHT
 
@@ -34,6 +38,8 @@ Right button on the mouse.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## MOUSE_BUTTON_MIDDLE
 
 ```TypeScript
@@ -47,3 +53,5 @@ MIDDLE button on the mouse.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

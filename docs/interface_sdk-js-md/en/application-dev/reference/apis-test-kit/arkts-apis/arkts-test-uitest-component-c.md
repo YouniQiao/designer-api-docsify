@@ -6,6 +6,8 @@ Represents a component on the UI and provides APIs for obtaining component attri
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -25,6 +27,8 @@ Clears the text information of a component. This API takes effect only for edita
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -65,6 +69,8 @@ Clicks this component. This API uses a promise to return the result.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -120,6 +126,8 @@ Double-clicks this component. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -170,6 +178,8 @@ Drags a component to the target component. This method is valid only for compone
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -222,6 +232,8 @@ Obtains the bounds information of this component. This API uses a promise to ret
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -277,6 +289,8 @@ Obtains the center point of the area occupied by this component. This API uses a
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -317,6 +331,8 @@ Obtains the description of this component. This API uses a promise to return the
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -356,6 +372,8 @@ Obtains the ID of the display to which the component belongs. This API uses a pr
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -408,6 +426,8 @@ Obtains the hint text of a component. This API uses a promise to return the resu
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -448,6 +468,8 @@ Obtains the ID of this component. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -487,6 +509,8 @@ Obtains the text information of this component. This API uses a promise to retur
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -534,6 +558,8 @@ Obtains the text information of this component. This API uses a promise to retur
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -586,6 +612,8 @@ Obtains the type of this component. This API uses a promise to return the result
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -636,6 +664,8 @@ Clears the original text in a component and inputs the specified text. This API 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -698,6 +728,8 @@ Inputs text to a component in a specified text input mode. This API takes effect
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -747,6 +779,8 @@ Obtains the checkable status of this component. This API uses a promise to retur
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -791,6 +825,8 @@ Obtains the checked status of this component. This API uses a promise to return 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -834,6 +870,8 @@ Obtains the clickable status of this component. This API uses a promise to retur
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -894,6 +932,8 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -952,6 +992,8 @@ Checks whether a component is focused. This API uses a promise to return the res
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -1023,6 +1065,8 @@ Obtains the number-clickable status of this component. This API uses a promise t
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -1066,6 +1110,8 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -1126,6 +1172,8 @@ Obtains the selected status of this component. This API uses a promise to return
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -1185,6 +1233,8 @@ Long-clicks this component. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -1236,6 +1286,8 @@ Pinches in a component at the specified scale. This method is valid only for com
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1283,6 +1335,8 @@ Pinches out a component at the specified scale. This method is valid only for co
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1329,6 +1383,8 @@ Scrolls on this component to search for the target component. This API is applic
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -1380,6 +1436,8 @@ Scrolls on this component to search for the target component. This API is applic
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1429,6 +1487,8 @@ Scrolls to the bottom of this component. This API is applicable to components th
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1475,6 +1535,8 @@ Scrolls to the top of this component. This API is applicable to components that 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 

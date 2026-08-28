@@ -16,6 +16,8 @@ All APIs provided in the **On** class are synchronous. You are advised to use th
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -35,6 +37,8 @@ Specifies that the target component is located after the given feature component
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -81,6 +85,8 @@ Specifies that the target component is located before the given feature componen
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -126,6 +132,8 @@ Specifies the display to which the target component belongs.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -166,6 +174,8 @@ Specifies the checkable attribute of the target component.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -208,6 +218,8 @@ Specifies the checked attribute of the target component.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -249,6 +261,8 @@ Specifies the clickable attribute of the target component.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -289,6 +303,8 @@ Specifies the description of the target component. Multiple match patterns are s
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -332,6 +348,8 @@ Specifies the enabled attribute of the target component.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -373,6 +391,8 @@ Specifies the focused attribute of the target component.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -413,6 +433,8 @@ Specifies the hint text attribute of the target component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -456,6 +478,8 @@ Specifies the ID attribute of the target component.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -496,6 +520,8 @@ Specifies the **id** attribute and match pattern of the target component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -539,6 +565,8 @@ Specifies that the target component is located within the given application wind
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -579,6 +607,8 @@ Specifies that the target component is located after the given attribute compone
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -622,6 +652,8 @@ Specifies that the target component is located before the given attribute compon
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -663,6 +695,8 @@ Specifies the number-clickable attribute of the target component.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -712,6 +746,8 @@ Specifies the text content and text matching pattern of the component.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -754,6 +790,8 @@ Specifies the scrollable attribute of the target component.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -794,6 +832,8 @@ Specifies the selected attribute of the target component.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -843,6 +883,8 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -885,6 +927,8 @@ Specifies the type attribute of the target component.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -925,6 +969,8 @@ Specifies the **type** attribute and match pattern of the target component.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -968,6 +1014,8 @@ Specifies that the target component is located within the given attribute compon
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1009,6 +1057,8 @@ Specifies that the target component is located within the given feature componen
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 

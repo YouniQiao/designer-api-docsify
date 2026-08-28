@@ -6,6 +6,8 @@ Describes the display rotation of the device.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## ROTATION_0
 
 ```TypeScript
@@ -19,6 +21,8 @@ The device display is not rotated and is in its original vertical orientation.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## ROTATION_90
 
@@ -34,6 +38,8 @@ The device display rotates 90° clockwise and is in landscape orientation.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## ROTATION_180
 
 ```TypeScript
@@ -48,6 +54,8 @@ The device display rotates 180° clockwise and is in reverse vertical orientatio
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## ROTATION_270
 
 ```TypeScript
@@ -61,3 +69,5 @@ The device display rotates 270° clockwise and is in reverse landscape orientati
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

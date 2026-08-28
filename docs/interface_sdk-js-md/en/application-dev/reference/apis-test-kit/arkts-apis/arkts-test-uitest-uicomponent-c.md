@@ -10,6 +10,8 @@ In **UiTest**, the **UiComponent** class represents a component on the UI and pr
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -31,6 +33,8 @@ Clicks this component. This API uses a promise to return the result.
 **Substitutes:** [click](arkts-test-uitest-component-c.md#click)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -81,6 +85,8 @@ Double-clicks this component. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -127,6 +133,8 @@ Obtains the ID of this component. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -162,6 +170,8 @@ Obtains the key of this component. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -196,6 +206,8 @@ Obtains the text information of this component. This API uses a promise to retur
 **Substitutes:** [getText](arkts-test-uitest-component-c.md#gettext)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -243,6 +255,8 @@ Obtains the type of this component. This API uses a promise to return the result
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -288,6 +302,8 @@ Inputs text to a component. This API takes effect only for editable text compone
 **Substitutes:** [inputText](arkts-test-uitest-component-c.md#inputtext)(text: string)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -344,6 +360,8 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -398,6 +416,8 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -451,6 +471,8 @@ Obtains the focused status of this component. This API uses a promise to return 
 **Substitutes:** [isFocused](arkts-test-uitest-component-c.md#isfocused)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -517,6 +539,8 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -570,6 +594,8 @@ Obtains the selected status of this component. This API uses a promise to return
 **Substitutes:** [isSelected](arkts-test-uitest-component-c.md#isselected)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -625,6 +651,8 @@ Long-clicks this component. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -670,6 +698,8 @@ Scrolls on this component to search for the target component (applicable to comp
 **Substitutes:** [scrollSearch](arkts-test-uitest-component-c.md#scrollsearch)(on: On)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 

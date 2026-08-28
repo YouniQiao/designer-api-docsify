@@ -6,6 +6,8 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## WINDOW_UNDEFINED
 
 ```TypeScript
@@ -22,6 +24,8 @@ WINDOW_UNDEFINED = 0
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## WINDOW_ADDED
 
 ```TypeScript
@@ -35,6 +39,8 @@ WINDOW_ADDED = 1
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 ## WINDOW_REMOVED
 
@@ -50,6 +56,8 @@ WINDOW_REMOVED = 2
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## WINDOW_BOUNDS_CHANGED
 
 ```TypeScript
@@ -63,3 +71,5 @@ WINDOW_BOUNDS_CHANGED = 3
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。

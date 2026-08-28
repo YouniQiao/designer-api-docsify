@@ -8,6 +8,8 @@ declare type PromptActionCommonState = import('../api/@ohos.promptAction').promp
 
 **起始版本：** 20
 
+**装饰器类型：** @ohos
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。

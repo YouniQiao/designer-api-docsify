@@ -10,6 +10,8 @@ The **AbilityDelegator** module can listen for and manage the lifecycle changes 
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 ## addAbilityMonitor
 
 ```TypeScript
@@ -703,6 +705,8 @@ Finishes the test and prints log information to the unit test console. This API 
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -750,6 +754,8 @@ Finishes the test and prints log information to the unit test console. This API 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -976,6 +982,8 @@ Prints log information to the unit test console. This API uses an asynchronous c
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1016,6 +1024,8 @@ Prints log information to the unit test console. This API uses a promise to retu
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1055,6 +1065,8 @@ Prints log information to the unit test console.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Test API:** This is a test API.
 
 **Parameters:**
 

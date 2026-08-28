@@ -8,6 +8,8 @@ Provides methods for controlling the 3d scene
 
 **Since:** 12
 
+**Decorator:** @ohos
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

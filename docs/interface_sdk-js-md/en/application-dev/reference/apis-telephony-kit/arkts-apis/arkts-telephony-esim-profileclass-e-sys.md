@@ -36,6 +36,8 @@ Test profile.
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 ## PROFILE_CLASS_PROVISIONING
 
 ```TypeScript

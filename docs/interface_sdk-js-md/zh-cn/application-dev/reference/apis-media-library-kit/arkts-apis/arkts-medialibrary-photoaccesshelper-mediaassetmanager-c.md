@@ -485,6 +485,8 @@ static requestVideoFile(
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |

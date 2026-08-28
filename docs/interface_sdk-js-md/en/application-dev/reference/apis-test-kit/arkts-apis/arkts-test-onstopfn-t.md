@@ -13,3 +13,5 @@ Stop all test cases.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Test API:** This is a test API.

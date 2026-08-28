@@ -6,6 +6,8 @@ Implements a **PointerMatrix** object that stores coordinates and behaviors of e
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -25,6 +27,8 @@ Creates a **PointerMatrix** object and returns the object created. This API is a
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -69,6 +73,8 @@ Sets the coordinates for the action corresponding to the specified finger and st
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 

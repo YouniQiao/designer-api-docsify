@@ -19,6 +19,8 @@ Send mouse event.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |

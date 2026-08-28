@@ -6,6 +6,8 @@ Provides information about the UI event.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -28,6 +30,8 @@ Bundle name of the application.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## componentEventType
 
 ```TypeScript
@@ -43,6 +47,8 @@ Component operation event type. If it is not a component operation event, [COMPO
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## componentId
 
@@ -60,6 +66,8 @@ Component ID. If it is not a component operation event, an empty string is retur
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## componentRect
 
 ```TypeScript
@@ -76,6 +84,8 @@ Component border information. If it is not a component operation event, a [Rect]
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## text
 
 ```TypeScript
@@ -91,6 +101,8 @@ Text information of the component or window.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Examples**
 
@@ -123,6 +135,8 @@ Component or window type.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Examples**
 
@@ -163,6 +177,8 @@ Window change event type. If the event is not a window change event, [WINDOW_UND
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## windowId
 
 ```TypeScript
@@ -178,3 +194,5 @@ ID of the window to which the component belongs. If it is not a component operat
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

@@ -277,6 +277,8 @@ Checks whether all elements in this ArkTS Uint16Array meet a given condition.
 
 **System capability:** SystemCapability.Utils.Lang
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -345,6 +347,8 @@ Returns a new ArkTS Uint16Array that contains all elements that meet the given c
 
 **System capability:** SystemCapability.Utils.Lang
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -378,6 +382,8 @@ Returns the value of the first element that passes a test provided by a callback
 
 **System capability:** SystemCapability.Utils.Lang
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -410,6 +416,8 @@ Returns the index of the first element that passes a test provided by a callback
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -1028,6 +1036,8 @@ Checks whether any element in this ArkTS Uint16Array meets a given condition.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Utils.Lang
+
+**Test API:** This is a test API.
 
 **Parameters:**
 

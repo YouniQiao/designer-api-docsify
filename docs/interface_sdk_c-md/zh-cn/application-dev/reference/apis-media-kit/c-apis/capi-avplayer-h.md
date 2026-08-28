@@ -659,7 +659,7 @@ OH_AVErrCode OH_AVPlayer_SetAudioRendererInfo(OH_AVPlayer *player, OH_AudioStrea
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AVPlayer *player | 指向OH_AVPlayer实例的指针。 |
-| OH_AudioStream_Usage streamUsage | player音频流设置的类型。 |
+| [OH_AudioStream_Usage](../AudioKit/capi-native-audiostream-base-h.md#oh_audiostream_usage) streamUsage | player音频流设置的类型。 |
 
 **返回：**
 
@@ -684,7 +684,7 @@ OH_AVErrCode OH_AVPlayer_SetAudioInterruptMode(OH_AVPlayer *player, OH_AudioInte
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AVPlayer *player | 指向OH_AVPlayer实例的指针。 |
-| OH_AudioInterrupt_Mode interruptMode | player音频流使用的打断模式。 |
+| [OH_AudioInterrupt_Mode](../AudioKit/capi-native-audiostream-base-h.md#oh_audiointerrupt_mode) interruptMode | player音频流使用的打断模式。 |
 
 **返回：**
 
@@ -709,7 +709,7 @@ OH_AVErrCode OH_AVPlayer_SetAudioEffectMode(OH_AVPlayer *player, OH_AudioStream_
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AVPlayer *player | 指向OH_AVPlayer实例的指针。 |
-| OH_AudioStream_AudioEffectMode effectMode | player音频流使用的音效模式。 |
+| [OH_AudioStream_AudioEffectMode](../AudioKit/capi-native-audiostream-base-h.md#oh_audiostream_audioeffectmode) effectMode | player音频流使用的音效模式。 |
 
 **返回：**
 
@@ -759,7 +759,7 @@ OH_AVErrCode OH_AVPlayer_SetVideoSurface(OH_AVPlayer *player, OHNativeWindow *wi
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AVPlayer *player | 指向OH_AVPlayer实例的指针。 |
-| [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) *window | 指向OHNativeWindow实例的指针。 |
+| OHNativeWindow *window | 指向OHNativeWindow实例的指针。 |
 
 **返回：**
 
@@ -1140,7 +1140,7 @@ OH_AVErrCode OH_AVPlayer_SetVolumeMode(OH_AVPlayer *player, OH_AudioStream_Volum
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AVPlayer *player | 指向OH_AVPlayer实例的指针。 |
-| OH_AudioStream_VolumeMode volumeMode | 指定音频流音量模式。 |
+| [OH_AudioStream_VolumeMode](../AudioKit/capi-native-audiostream-base-h.md#oh_audiostream_volumemode) volumeMode | 指定音频流音量模式。 |
 
 **返回：**
 
@@ -2035,7 +2035,7 @@ OH_AVPlayerVideoOutput* OH_AVPlayer_SetVideoSideOutput(OH_AVPlayer *player, OHNa
 | 参数项 | 描述 |
 | -- | -- |
 | OH_AVPlayer *player | 指向OH_AVPlayer实例的指针。 |
-| [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) *window | 指向OHNativeWindow实例的指针，请参见[OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
+| OHNativeWindow *window | 指向OHNativeWindow实例的指针，请参见[OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
 
 **返回：**
 

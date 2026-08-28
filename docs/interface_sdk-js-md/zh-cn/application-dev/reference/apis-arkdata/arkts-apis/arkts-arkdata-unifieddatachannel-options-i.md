@@ -52,6 +52,8 @@ UDMF中数据对象的唯一标识符，可通过[insertData](arkts-arkdata-unif
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+**测试接口：** 此接口为测试接口。
+
 ## visibility
 
 ```TypeScript

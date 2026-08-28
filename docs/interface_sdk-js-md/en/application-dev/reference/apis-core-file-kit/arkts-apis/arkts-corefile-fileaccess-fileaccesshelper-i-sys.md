@@ -229,6 +229,8 @@ Copies a file or directory. This API uses a promise to return the result.
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -331,6 +333,8 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -393,6 +397,8 @@ Copies a file or directory. If a file with the same name already exists, you can
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -459,6 +465,8 @@ Copies a file with an alternative file name. This API uses a promise to return t
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -549,6 +557,8 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 **System capability:** SystemCapability.FileManagement.UserFileService
 
 **System API:** This is a system API.
+
+**Test API:** This is a test API.
 
 **Parameters:**
 

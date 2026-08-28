@@ -20,6 +20,8 @@
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
+**测试接口：** 此接口为测试接口。
+
 ## 导入模块
 
 ```TypeScript
@@ -92,6 +94,8 @@ closeRawFd(path: string, callback: _AsyncCallback<void>): void
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -147,6 +151,8 @@ closeRawFd(path: string): Promise<void>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -204,6 +210,8 @@ closeRawFdSync(path: string): void
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -257,6 +265,8 @@ closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -293,6 +303,8 @@ closeRawFileDescriptor(path: string): Promise<void>
 **替代接口：** [closeRawFd](#closerawfd)(path: string)
 
 **系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -5483,6 +5495,8 @@ getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -5545,6 +5559,8 @@ getRawFd(path: string): Promise<RawFileDescriptor>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -5612,6 +5628,8 @@ getRawFdSync(path: string): RawFileDescriptor
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -5667,6 +5685,8 @@ getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -5705,6 +5725,8 @@ getRawFile(path: string): Promise<Uint8Array>
 **替代接口：** [getRawFileContent](#getrawfilecontent)(path: string)
 
 **系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -5745,6 +5767,8 @@ getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -5799,6 +5823,8 @@ getRawFileContent(path: string): Promise<Uint8Array>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -5857,6 +5883,8 @@ getRawFileContentSync(path: string): Uint8Array
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -5912,6 +5940,8 @@ getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): 
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -5952,6 +5982,8 @@ getRawFileDescriptor(path: string): Promise<RawFileDescriptor>
 **替代接口：** [getRawFd](#getrawfd)(path: string)
 
 **系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -8064,6 +8096,8 @@ isRawDir(path: string): boolean
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Global.ResourceManager
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 

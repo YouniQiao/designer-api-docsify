@@ -144,6 +144,8 @@ If an invalid value is passed, the default value will be used.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Test API:** This is a test API.
+
 ## src
 
 ```TypeScript

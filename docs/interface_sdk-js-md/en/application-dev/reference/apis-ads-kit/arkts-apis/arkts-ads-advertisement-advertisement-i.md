@@ -111,6 +111,8 @@ userId: "12345"
 
 **System capability:** SystemCapability.Advertising.Ads
 
+**Test API:** This is a test API.
+
 ## shown
 
 ```TypeScript

@@ -19,6 +19,8 @@ export declare function getInspectorTree(): Object
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |

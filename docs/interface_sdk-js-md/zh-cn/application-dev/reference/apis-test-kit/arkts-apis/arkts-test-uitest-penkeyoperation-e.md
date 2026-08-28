@@ -6,6 +6,8 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## CLICK
 
 ```TypeScript
@@ -20,6 +22,8 @@ CLICK = 0
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## DOUBLE_CLICK
 
 ```TypeScript
@@ -33,3 +37,5 @@ DOUBLE_CLICK = 1
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。

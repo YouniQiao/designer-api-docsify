@@ -8,6 +8,8 @@
 
 **系统接口：** 此接口为系统接口。
 
+**测试接口：** 此接口为测试接口。
+
 ## 导入模块
 
 ```TypeScript
@@ -30,6 +32,8 @@ killSignal?: number | string
 
 **系统接口：** 此接口为系统接口。
 
+**测试接口：** 此接口为测试接口。
+
 ## maxBuffer
 
 ```TypeScript
@@ -46,6 +50,8 @@ maxBuffer?: number
 
 **系统接口：** 此接口为系统接口。
 
+**测试接口：** 此接口为测试接口。
+
 ## timeout
 
 ```TypeScript
@@ -61,3 +67,5 @@ timeout?: number
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
+
+**测试接口：** 此接口为测试接口。

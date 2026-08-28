@@ -6,6 +6,8 @@ Represents the options for key operations.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -28,6 +30,8 @@ The first keyCode to press during the operation. If not set, no key event will b
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## key2
 
 ```TypeScript
@@ -43,3 +47,5 @@ The second KeyCode to press during the operation. If not set, no key event will 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

@@ -465,6 +465,8 @@ Requests a video and saves it to the specified sandbox directory. This API uses 
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |

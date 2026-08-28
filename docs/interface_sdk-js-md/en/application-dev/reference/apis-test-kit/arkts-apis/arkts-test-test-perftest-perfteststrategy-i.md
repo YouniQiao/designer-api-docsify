@@ -13,6 +13,8 @@ Represents the performance test strategy.
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -34,6 +36,8 @@ Code segment to test. The input parameter is a callback function, which needs to
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## bundleName
 
 ```TypeScript
@@ -49,6 +53,8 @@ Bundle name of the application to test. The format must be the same as that of *
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This is a test API.
 
 ## iterations
 
@@ -66,6 +72,8 @@ Number of test iterations. The value must be an integer greater than 0. The defa
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## metrics
 
 ```TypeScript
@@ -81,6 +89,8 @@ Array of performance metrics to test. If the array is empty, no performance metr
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This is a test API.
 
 ## resetCode
 
@@ -98,6 +108,8 @@ Code segment for resetting the environment after the test is complete. This para
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## timeout
 
 ```TypeScript
@@ -113,3 +125,5 @@ resetCode**) at a time. The value is an integer greater than 0, in milliseconds.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This is a test API.

@@ -6,6 +6,8 @@ Represents the measurement result data corresponding to the performance metric.
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -27,6 +29,8 @@ Average value of the measurement data of each round (the value **-1** is exclude
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## maximum
 
 ```TypeScript
@@ -42,6 +46,8 @@ Maximum value of the measurement data of each round (the value **-1** is exclude
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This is a test API.
 
 ## metric
 
@@ -59,6 +65,8 @@ Performance metric to test.
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## minimum
 
 ```TypeScript
@@ -75,6 +83,8 @@ Minimum value of the measurement data of each round (the value **-1** is exclude
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## roundValues
 
 ```TypeScript
@@ -90,3 +100,5 @@ Measurement data value of each round of the tested performance metric. The unit 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This is a test API.

@@ -77,7 +77,7 @@ InputMethod_ErrorCode OH_InputMethodProxy_ShowTextInput(InputMethod_InputMethodP
 | 参数项 | 描述 |
 | -- | -- |
 | [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) *inputMethodProxy | 输入指针，表示指向[InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md)实例的指针。inputMethodProxy由调用[OH_InputMethodController_Attach](capi-inputmethod-controller-capi-h.md#oh_inputmethodcontroller_attach)获取。该指针不可为NULL，若传入NULL指针将返回IME_ERR_NULL_POINTER错误码。Detach后该指针失效。 |
-| InputMethod_AttachOptions *options | 输入指针，表示指向[InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md)实例的指针，用于获取配置选项。该指针不可为NULL，若传入NULL指针将返回IME_ERR_NULL_POINTER错误码。此接口中只需关注[InputMethod_RequestKeyboardReason](capi-inputmethod-types-capi-h.md#inputmethod_requestkeyboardreason)属性，表示请求键盘输入的原因。AttachOptions中的ShowKeyboard属性在此接口中始终为true，无需额外关注。 |
+| [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) *options | 输入指针，表示指向[InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md)实例的指针，用于获取配置选项。该指针不可为NULL，若传入NULL指针将返回IME_ERR_NULL_POINTER错误码。此接口中只需关注[InputMethod_RequestKeyboardReason](capi-inputmethod-types-capi-h.md#inputmethod_requestkeyboardreason)属性，表示请求键盘输入的原因。AttachOptions中的ShowKeyboard属性在此接口中始终为true，无需额外关注。 |
 
 **返回：**
 
@@ -205,7 +205,7 @@ InputMethod_ErrorCode OH_InputMethodProxy_SendPrivateCommand(InputMethod_InputMe
 | 参数项 | 描述 |
 | -- | -- |
 | [InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md) *inputMethodProxy | 输入指针，表示指向[InputMethod_InputMethodProxy](capi-inputmethod-inputmethod-inputmethodproxy.md)实例的指针。inputMethodProxy由调用[OH_InputMethodController_Attach](capi-inputmethod-controller-capi-h.md#oh_inputmethodcontroller_attach)获取。该指针不可为NULL，若传入NULL指针将返回IME_ERR_NULL_POINTER错误码。Detach后该指针失效。 |
-| [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md) *privateCommand[] | 输入指针，私有命令数组，每个元素为指向InputMethod_PrivateCommand实例的指针。由调用者创建并分配内存，函数仅读取数据。该指针不可为NULL。单个命令对象最大大小为32KB（包含key和value的总大小），超出可能导致传输失败。数组最大长度为5（即size参数最大为5）。 |
+| InputMethod_PrivateCommand *privateCommand[] | 输入指针，私有命令数组，每个元素为指向InputMethod_PrivateCommand实例的指针。由调用者创建并分配内存，函数仅读取数据。该指针不可为NULL。单个命令对象最大大小为32KB（包含key和value的总大小），超出可能导致传输失败。数组最大长度为5（即size参数最大为5）。 |
 | size_t size | 输入参数，私有命令数组的元素个数。取值范围：大于0且不超过5。超过5将返回IME_ERR_PARAMCHECK错误码。 |
 
 **返回：**

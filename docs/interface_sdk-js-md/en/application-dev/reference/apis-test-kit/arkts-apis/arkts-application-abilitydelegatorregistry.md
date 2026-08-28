@@ -10,6 +10,8 @@ The **AbilityDelegatorRegistry** module provides APIs for storing global registe
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript

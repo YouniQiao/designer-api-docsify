@@ -6,6 +6,8 @@ Pen key operation type enum.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## CLICK
 
 ```TypeScript
@@ -20,6 +22,8 @@ Single click.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## DOUBLE_CLICK
 
 ```TypeScript
@@ -33,3 +37,5 @@ Double click.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

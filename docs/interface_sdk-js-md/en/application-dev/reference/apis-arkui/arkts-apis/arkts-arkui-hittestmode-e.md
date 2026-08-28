@@ -13,6 +13,8 @@ Sets the response logic and node blocking rules for the hit test.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Test API:** This is a test API.
+
 ## Default
 
 ```TypeScript
@@ -28,6 +30,8 @@ Default hit test mode. The node itself and its child nodes respond to the hit te
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Test API:** This is a test API.
 
 ## Block
 
@@ -45,6 +49,8 @@ The node itself responds to the hit test and blocks the hit test of child nodes,
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Test API:** This is a test API.
+
 ## Transparent
 
 ```TypeScript
@@ -61,6 +67,8 @@ Both the node itself and its child nodes respond to the hit test and do not bloc
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Test API:** This is a test API.
+
 ## None
 
 ```TypeScript
@@ -76,6 +84,8 @@ The node itself does not respond to the hit test and does not block the hit test
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Test API:** This is a test API.
 
 ## BLOCK_HIERARCHY
 
@@ -95,6 +105,8 @@ The node itself and its child nodes respond to the hit test, preventing all sibl
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Test API:** This is a test API.
+
 ## BLOCK_DESCENDANTS
 
 ```TypeScript
@@ -112,3 +124,5 @@ The node itself does not respond to the hit test, and all its descendants (child
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Test API:** This is a test API.

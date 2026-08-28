@@ -6,6 +6,8 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## EQUALS
 
 ```TypeScript
@@ -21,6 +23,8 @@ EQUALS = 0
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 ## CONTAINS
 
@@ -38,6 +42,8 @@ CONTAINS = 1
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## STARTS_WITH
 
 ```TypeScript
@@ -53,6 +59,8 @@ STARTS_WITH = 2
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 ## ENDS_WITH
 
@@ -70,6 +78,8 @@ ENDS_WITH = 3
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## REG_EXP
 
 ```TypeScript
@@ -86,6 +96,8 @@ REG_EXP = 4
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## REG_EXP_ICASE
 
 ```TypeScript
@@ -101,3 +113,5 @@ REG_EXP_ICASE = 5
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。

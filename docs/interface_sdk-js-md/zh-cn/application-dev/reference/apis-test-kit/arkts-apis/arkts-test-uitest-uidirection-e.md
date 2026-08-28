@@ -6,6 +6,8 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## LEFT
 
 ```TypeScript
@@ -19,6 +21,8 @@ LEFT = 0
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 ## RIGHT
 
@@ -34,6 +38,8 @@ RIGHT = 1
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## UP
 
 ```TypeScript
@@ -48,6 +54,8 @@ UP = 2
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## DOWN
 
 ```TypeScript
@@ -61,3 +69,5 @@ DOWN = 3
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。

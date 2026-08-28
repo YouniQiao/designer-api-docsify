@@ -18,3 +18,5 @@ Unregisters vsync callback.
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
+
+**Test API:** This is a test API.

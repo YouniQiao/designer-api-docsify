@@ -44,6 +44,8 @@
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+**测试接口：** 此接口为测试接口。
+
 ## DURATION
 
 ```TypeScript
@@ -57,6 +59,8 @@ DURATION = 0
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
+
+**测试接口：** 此接口为测试接口。
 
 ## CPU_LOAD
 
@@ -72,6 +76,8 @@ CPU_LOAD = 1
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+**测试接口：** 此接口为测试接口。
+
 ## CPU_USAGE
 
 ```TypeScript
@@ -85,6 +91,8 @@ CPU_USAGE = 2
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
+
+**测试接口：** 此接口为测试接口。
 
 ## MEMORY_RSS
 
@@ -100,6 +108,8 @@ MEMORY_RSS = 3
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+**测试接口：** 此接口为测试接口。
+
 ## MEMORY_PSS
 
 ```TypeScript
@@ -113,6 +123,8 @@ MEMORY_PSS = 4
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
+
+**测试接口：** 此接口为测试接口。
 
 ## APP_START_RESPONSE_TIME
 
@@ -128,6 +140,8 @@ APP_START_RESPONSE_TIME = 5
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+**测试接口：** 此接口为测试接口。
+
 ## APP_START_COMPLETE_TIME
 
 ```TypeScript
@@ -141,6 +155,8 @@ APP_START_COMPLETE_TIME = 6
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
+
+**测试接口：** 此接口为测试接口。
 
 ## PAGE_SWITCH_COMPLETE_TIME
 
@@ -156,6 +172,8 @@ PAGE_SWITCH_COMPLETE_TIME = 7
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+**测试接口：** 此接口为测试接口。
+
 ## LIST_SWIPE_FPS
 
 ```TypeScript
@@ -169,3 +187,5 @@ LIST_SWIPE_FPS = 8
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
+
+**测试接口：** 此接口为测试接口。

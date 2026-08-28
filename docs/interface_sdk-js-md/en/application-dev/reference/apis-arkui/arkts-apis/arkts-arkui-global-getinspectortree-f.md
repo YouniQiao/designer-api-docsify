@@ -19,6 +19,8 @@ Get components tree.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |

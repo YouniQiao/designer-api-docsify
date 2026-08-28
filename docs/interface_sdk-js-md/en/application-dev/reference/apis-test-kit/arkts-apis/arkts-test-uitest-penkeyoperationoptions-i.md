@@ -6,6 +6,8 @@ Pen key operation options.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -27,3 +29,5 @@ The coordinate point for air mouse mode operations. Required when key is AIR_MOU
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

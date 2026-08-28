@@ -8,6 +8,8 @@ Represents a matrix grid object that divides an image into a rectangular grid.
 
 **Since:** 12
 
+**Decorator:** @ohos
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.

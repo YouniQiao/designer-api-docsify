@@ -53,6 +53,8 @@ Called when an error occurs during the running of the started EmbeddedUIExtensio
 
 **Since:** 12
 
+**Decorator:** @ohos
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -78,6 +80,8 @@ Triggered when the the launched EmbeddedUIExtensionAbility exits normally by cal
 > This API cannot be called within attributeModifier.
 
 **Since:** 12
+
+**Decorator:** @ohos
 
 **Model restriction:** This API can be used only in the stage model.
 

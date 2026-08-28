@@ -137,6 +137,8 @@ The callback parameter is an array of digits, where each digit represents the in
 
 **Since:** 11
 
+**Decorator:** @ohos
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.

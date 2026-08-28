@@ -111,6 +111,8 @@ userId: "12345"
 
 **系统能力：** SystemCapability.Advertising.Ads
 
+**测试接口：** 此接口为测试接口。
+
 ## shown
 
 ```TypeScript

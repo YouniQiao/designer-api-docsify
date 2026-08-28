@@ -6,6 +6,8 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## MOUSE_BUTTON_LEFT
 
 ```TypeScript
@@ -19,6 +21,8 @@ MOUSE_BUTTON_LEFT = 0
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 ## MOUSE_BUTTON_RIGHT
 
@@ -34,6 +38,8 @@ MOUSE_BUTTON_RIGHT = 1
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## MOUSE_BUTTON_MIDDLE
 
 ```TypeScript
@@ -47,3 +53,5 @@ MOUSE_BUTTON_MIDDLE = 2
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。

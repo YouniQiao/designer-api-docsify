@@ -369,6 +369,8 @@ Checks whether the current OS account is a test account. This API uses an asynch
 
 **System capability:** SystemCapability.Account.OsAccount
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -413,6 +415,8 @@ Checks whether the current OS account is a test account. This API uses a promise
 **Since:** 9
 
 **System capability:** SystemCapability.Account.OsAccount
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -3340,6 +3344,8 @@ Checks whether the current OS account is a test account. This API uses an asynch
 
 **System capability:** SystemCapability.Account.OsAccount
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -3381,6 +3387,8 @@ Checks whether the current OS account is a test account. This API uses a promise
 **Substitutes:** [checkOsAccountTestable](#checkosaccounttestable)()
 
 **System capability:** SystemCapability.Account.OsAccount
+
+**Test API:** This is a test API.
 
 **Return value:**
 

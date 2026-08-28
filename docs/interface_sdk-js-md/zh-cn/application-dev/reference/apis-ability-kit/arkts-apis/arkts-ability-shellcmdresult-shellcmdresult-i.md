@@ -10,6 +10,8 @@
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+**测试接口：** 此接口为测试接口。
+
 ## exitCode
 
 ```TypeScript

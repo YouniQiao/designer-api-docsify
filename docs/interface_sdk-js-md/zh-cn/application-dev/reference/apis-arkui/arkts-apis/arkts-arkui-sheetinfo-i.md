@@ -43,6 +43,8 @@ string格式可用于加载网络图片和本地图片，常用于加载网络�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**测试接口：** 此接口为测试接口。
+
 ## title
 
 ```TypeScript

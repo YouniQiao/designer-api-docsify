@@ -88,6 +88,8 @@ domainName?: string
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+**测试接口：** 此接口为测试接口。
+
 ## family
 
 ```TypeScript

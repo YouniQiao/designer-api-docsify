@@ -12,6 +12,8 @@ Provides style settings for the selected, unselected, and partially selected sta
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript

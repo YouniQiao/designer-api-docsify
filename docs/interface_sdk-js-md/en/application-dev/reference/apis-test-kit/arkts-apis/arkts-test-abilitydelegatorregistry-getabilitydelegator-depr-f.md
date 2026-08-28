@@ -21,6 +21,8 @@ Obtains the **AbilityDelegator** object of the application.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |

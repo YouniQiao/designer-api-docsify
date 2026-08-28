@@ -117,3 +117,5 @@ Example: **file://media/Photo/path/to/file.img**. Only foreground tasks are supp
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
+
+**Test API:** This is a test API.

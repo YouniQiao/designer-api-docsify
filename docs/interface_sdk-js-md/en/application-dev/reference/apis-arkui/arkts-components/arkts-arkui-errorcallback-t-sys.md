@@ -8,6 +8,8 @@ Defines the error callback type, which is used to receive exception information.
 
 **Since:** 26.0.0
 
+**Decorator:** @ohos
+
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

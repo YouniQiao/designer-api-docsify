@@ -684,6 +684,8 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 **Since:** 11
 
+**Decorator:** @ohos
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -793,6 +795,8 @@ pushPathByName(name: string, param: Object, onPop: import('../api/@ohos.base').C
 Pushes the navigation destination page specified by **name**, with the data specified by **param**, to the routing stack. This API uses the **onPop** callback to receive the result returned when the page is popped out of the stack.
 
 **Since:** 11
+
+**Decorator:** @ohos
 
 **Model restriction:** This API can be used only in the stage model.
 

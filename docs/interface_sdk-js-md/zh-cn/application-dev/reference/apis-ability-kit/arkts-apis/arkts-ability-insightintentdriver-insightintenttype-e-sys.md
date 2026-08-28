@@ -18,6 +18,8 @@ LINK = '@InsightIntentLink'
 
 **起始版本：** 20
 
+**装饰器类型：** @InsightIntentLink
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -33,6 +35,8 @@ PAGE = '@InsightIntentPage'
 [@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage)类型装饰器。
 
 **起始版本：** 20
+
+**装饰器类型：** @InsightIntentPage
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,6 +54,8 @@ ENTRY = '@InsightIntentEntry'
 
 **起始版本：** 20
 
+**装饰器类型：** @InsightIntentEntry
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -66,6 +72,8 @@ FUNCTION = '@InsightIntentFunctionMethod'
 
 **起始版本：** 20
 
+**装饰器类型：** @InsightIntentFunctionMethod
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -81,6 +89,8 @@ FORM = '@InsightIntentForm'
 [@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)类型装饰器。
 
 **起始版本：** 20
+
+**装饰器类型：** @InsightIntentForm
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

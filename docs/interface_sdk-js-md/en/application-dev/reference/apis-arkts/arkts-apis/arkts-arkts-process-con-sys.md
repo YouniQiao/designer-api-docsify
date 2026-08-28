@@ -14,6 +14,8 @@ Returns the numeric valid group ID of the process
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 ## euid
 
 ```TypeScript
@@ -27,6 +29,8 @@ Return the numeric valid user identity of the process
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
+
+**Test API:** This is a test API.
 
 ## gid
 
@@ -42,6 +46,8 @@ Returns the numeric group id of the process
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 ## groups
 
 ```TypeScript
@@ -56,6 +62,8 @@ Return an array with supplementary group id
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 ## ppid
 
 ```TypeScript
@@ -69,3 +77,5 @@ Return ppid is The pid of the current child process
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
+
+**Test API:** This is a test API.

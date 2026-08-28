@@ -6,6 +6,8 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## COMPONENT_UNDEFINED
 
 ```TypeScript
@@ -22,6 +24,8 @@ COMPONENT_UNDEFINED = 0
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## COMPONENT_CLICKED
 
 ```TypeScript
@@ -35,6 +39,8 @@ COMPONENT_CLICKED = 1
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 ## COMPONENT_LONG_CLICKED
 
@@ -50,6 +56,8 @@ COMPONENT_LONG_CLICKED = 2
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## COMPONENT_SCROLL_START
 
 ```TypeScript
@@ -63,6 +71,8 @@ COMPONENT_SCROLL_START = 3
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 ## COMPONENT_SCROLL_END
 
@@ -78,6 +88,8 @@ COMPONENT_SCROLL_END = 4
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## COMPONENT_TEXT_CHANGED
 
 ```TypeScript
@@ -91,3 +103,5 @@ COMPONENT_TEXT_CHANGED = 5
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。

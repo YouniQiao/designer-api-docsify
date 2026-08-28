@@ -2131,6 +2131,8 @@ Sets the stencil operation
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -2152,6 +2154,8 @@ Sets the stencil operation separately for front and back faces
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -3630,6 +3634,8 @@ Enable cap: depth test
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
+**Test API:** This is a test API.
 
 ## DEPTH_WRITEMASK
 
@@ -5807,6 +5813,8 @@ Enable cap: scissor test
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
 
+**Test API:** This is a test API.
+
 ## SHADER_TYPE
 
 ```TypeScript
@@ -6206,6 +6214,8 @@ Enable cap: stencil test
 **Model restriction:** This API can be used only in the FA model.
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
+
+**Test API:** This is a test API.
 
 ## STENCIL_VALUE_MASK
 

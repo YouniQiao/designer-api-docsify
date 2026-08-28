@@ -20,6 +20,8 @@ All APIs provided in the **By** class are synchronous. You are advised to use th
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -41,6 +43,8 @@ Specifies the clickable attribute of the target component.
 **Substitutes:** [clickable](arkts-test-uitest-on-c.md#clickable)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -79,6 +83,8 @@ Specifies the enabled attribute of the target component.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -115,6 +121,8 @@ Specifies the focused attribute of the target component.
 **Substitutes:** [focused](arkts-test-uitest-on-c.md#focused)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -153,6 +161,8 @@ Specifies the ID attribute of the target component.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -189,6 +199,8 @@ Specifies that the target component is located after the given attribute compone
 **Substitutes:** [isAfter](arkts-test-uitest-on-c.md#isafter)(on: On)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -228,6 +240,8 @@ Specifies that the target component is located before the given attribute compon
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -266,6 +280,8 @@ Specifies the key attribute of the target component.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -302,6 +318,8 @@ Specifies the scrollable attribute of the target component.
 **Substitutes:** [scrollable](arkts-test-uitest-on-c.md#scrollable)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -340,6 +358,8 @@ Specifies the selected status of the target component.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -376,6 +396,8 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 **Substitutes:** [text](arkts-test-uitest-on-c.md#text)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -414,6 +436,8 @@ Specifies the type attribute of the target component.
 **Substitutes:** [type](arkts-test-uitest-on-c.md#type)(tp: string)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 

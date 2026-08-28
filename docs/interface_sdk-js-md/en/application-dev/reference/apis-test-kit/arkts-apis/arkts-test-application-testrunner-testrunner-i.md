@@ -6,6 +6,8 @@ Base class for the test framework. If you want to implement your own unit test f
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -24,6 +26,8 @@ Prepare the unit testing environment for running test cases.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Test API:** This is a test API.
 
 **Examples**
 
@@ -55,6 +59,8 @@ Run all test cases.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Test API:** This is a test API.
 
 **Examples**
 
@@ -88,6 +94,8 @@ Stop all test cases.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Test API:** This is a test API.
 
 **Examples**
 

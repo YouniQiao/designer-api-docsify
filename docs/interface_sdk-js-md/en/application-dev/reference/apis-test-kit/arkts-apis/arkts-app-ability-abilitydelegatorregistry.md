@@ -10,6 +10,8 @@
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript

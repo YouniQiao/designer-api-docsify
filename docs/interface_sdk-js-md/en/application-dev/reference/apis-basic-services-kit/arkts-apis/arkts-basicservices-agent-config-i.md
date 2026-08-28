@@ -458,6 +458,8 @@ Since API version 20, the default file path can be the cache path of the caller 
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
+**Test API:** This is a test API.
+
 ## timeout
 
 ```TypeScript

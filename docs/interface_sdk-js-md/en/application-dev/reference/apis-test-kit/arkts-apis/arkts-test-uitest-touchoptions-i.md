@@ -6,6 +6,8 @@ Common options for touch operations.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -28,6 +30,8 @@ Duration of the operation in milliseconds. Value range: The value should be &gt;
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## pressure
 
 ```TypeScript
@@ -44,6 +48,8 @@ Pressure value of the touch. The value range is [0, 1]. The default value is **0
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## speed
 
 ```TypeScript
@@ -59,3 +65,5 @@ Speed of touch action. Value range:[200, 40000] Unit: px/s. If the value is out 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

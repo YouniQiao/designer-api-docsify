@@ -248,6 +248,8 @@ sign(x: number): number
 
 Returns the sign of the x, indicating whether x is positive, negative or zero.
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |

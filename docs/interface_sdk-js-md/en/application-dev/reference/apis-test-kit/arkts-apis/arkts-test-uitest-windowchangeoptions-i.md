@@ -6,6 +6,8 @@ Describes the extended configuration of window change event listening, which is 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -28,6 +30,8 @@ Bundle name of the window to be listened for. By default, all windows are listen
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## timeout
 
 ```TypeScript
@@ -43,3 +47,5 @@ Listening timeout interval, in milliseconds. The value is an integer greater tha
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

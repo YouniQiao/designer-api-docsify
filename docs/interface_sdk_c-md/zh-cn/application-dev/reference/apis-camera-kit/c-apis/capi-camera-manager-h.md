@@ -557,7 +557,7 @@ Camera_ErrorCode OH_CameraManager_CreatePreviewOutput(Camera_Manager* cameraMana
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | 相机管理器实例。 |
 | [const Camera_Profile](capi-oh-camera-camera-profile.md)* profile | 用于创建Camera_PreviewOutput实例的相机流配置文件。 |
 | const char* surfaceId | 用于创建Camera_PreviewOutput实例的surfaceId。 |
-| Camera_PreviewOutput** previewOutput | 如果方法调用成功，将创建Camera_PreviewOutput实例。 |
+| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)** previewOutput | 如果方法调用成功，将创建Camera_PreviewOutput实例。 |
 
 **返回：**
 
@@ -583,7 +583,7 @@ Camera_ErrorCode OH_CameraManager_CreatePreviewOutputUsedInPreconfig(Camera_Mana
 | -- | -- |
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | 相机管理器实例。 |
 | const char* surfaceId | 用于创建Camera_PreviewOutput实例的surfaceId。 |
-| Camera_PreviewOutput** previewOutput | 如果方法调用成功，将创建Camera_PreviewOutput实例。 |
+| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)** previewOutput | 如果方法调用成功，将创建Camera_PreviewOutput实例。 |
 
 **返回：**
 
@@ -609,7 +609,7 @@ Camera_ErrorCode OH_CameraManager_CreateDeferredPreviewOutput(const Camera_Manag
 | -- | -- |
 | [const Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | 相机管理器实例。 |
 | [const Camera_Profile](capi-oh-camera-camera-profile.md)* profile | 用于创建Camera_PreviewOutput实例的相机流配置文件。 |
-| Camera_PreviewOutput** previewOutput | 如果方法调用成功，将创建Camera_PreviewOutput实例。 |
+| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)** previewOutput | 如果方法调用成功，将创建Camera_PreviewOutput实例。 |
 
 **返回：**
 
@@ -715,7 +715,7 @@ Camera_ErrorCode OH_CameraManager_CreateVideoOutput(Camera_Manager* cameraManage
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | 相机管理器实例。 |
 | [const Camera_VideoProfile](capi-oh-camera-camera-videoprofile.md)* profile | 用于创建Camera_VideoOutput实例的录像配置文件。 |
 | const char* surfaceId | 用于创建Camera_VideoOutput实例的surfaceId。 |
-| [Camera_VideoOutput](capi-oh-camera-camera-videooutput.md)** videoOutput | 如果方法调用成功，将创建Camera_VideoOutput实例。 |
+| Camera_VideoOutput** videoOutput | 如果方法调用成功，将创建Camera_VideoOutput实例。 |
 
 **返回：**
 
@@ -741,7 +741,7 @@ Camera_ErrorCode OH_CameraManager_CreateVideoOutputUsedInPreconfig(Camera_Manage
 | -- | -- |
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | 相机管理器实例。 |
 | const char* surfaceId | 用于创建Camera_VideoOutput实例的surfaceId。 |
-| [Camera_VideoOutput](capi-oh-camera-camera-videooutput.md)** videoOutput | 如果方法调用成功，将创建Camera_VideoOutput实例。 |
+| Camera_VideoOutput** videoOutput | 如果方法调用成功，将创建Camera_VideoOutput实例。 |
 
 **返回：**
 

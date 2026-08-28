@@ -26,6 +26,8 @@ Checks whether the system is undergoing a stability test. This API uses an async
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -67,6 +69,8 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 **Substitutes:** [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-f.md)
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Test API:** This is a test API.
 
 **Return value:**
 

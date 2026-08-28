@@ -10,6 +10,8 @@ The **AbilityDelegatorArgs** module provides APIs to obtain an **AbilityDelegato
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 ## bundleName
 
 ```TypeScript
@@ -25,6 +27,8 @@ Bundle name of the application to test.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Test API:** This is a test API.
 
 ## parameters
 
@@ -42,6 +46,8 @@ Parameters of the unit test that is started currently.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 ## testCaseNames
 
 ```TypeScript
@@ -58,6 +64,8 @@ Test case name.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 ## testRunnerClassName
 
 ```TypeScript
@@ -73,6 +81,8 @@ Names of the test case executors.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Test API:** This is a test API.
 
 **Examples**
 

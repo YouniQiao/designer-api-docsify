@@ -6,6 +6,8 @@ Represents the rectangle area on the device screen.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -28,6 +30,8 @@ Y coordinate of the lower right corner of the component border, in pixels. The v
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## displayId
 
 ```TypeScript
@@ -43,6 +47,8 @@ ID of the display to which the component border belongs. The value is an integer
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## left
 
@@ -60,6 +66,8 @@ X coordinate of the upper left corner of the component border, in pixels. The va
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## right
 
 ```TypeScript
@@ -76,6 +84,8 @@ X coordinate of the lower right corner of the component border, in pixels. The v
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## top
 
 ```TypeScript
@@ -91,3 +101,5 @@ Y coordinate of the upper left corner of the component border, in pixels. The va
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

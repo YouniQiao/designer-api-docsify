@@ -6,6 +6,8 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## FULLSCREEN
 
 ```TypeScript
@@ -19,6 +21,8 @@ FULLSCREEN = 0
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 ## PRIMARY
 
@@ -34,6 +38,8 @@ PRIMARY = 1
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## SECONDARY
 
 ```TypeScript
@@ -48,6 +54,8 @@ SECONDARY = 2
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## FLOATING
 
 ```TypeScript
@@ -61,3 +69,5 @@ FLOATING = 3
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。

@@ -35,6 +35,8 @@ every(predicate: (value: number, index: number, array: Float32Array) => unknown,
 
 Determines whether all the members of an array satisfy the specified test.
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |

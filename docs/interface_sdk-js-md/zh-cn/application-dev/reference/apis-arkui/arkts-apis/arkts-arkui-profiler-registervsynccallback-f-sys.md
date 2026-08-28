@@ -19,6 +19,8 @@ function registerVsyncCallback(callback: (info: string) => void): void
 
 **系统接口：** 此接口为系统接口。
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |

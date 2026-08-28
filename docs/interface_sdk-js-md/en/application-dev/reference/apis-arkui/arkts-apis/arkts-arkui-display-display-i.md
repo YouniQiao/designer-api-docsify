@@ -163,6 +163,8 @@ Get current display capability, including foldstatus, displaymode, rotation, and
 
 **System capability:** SystemCapability.Window.SessionManager
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |

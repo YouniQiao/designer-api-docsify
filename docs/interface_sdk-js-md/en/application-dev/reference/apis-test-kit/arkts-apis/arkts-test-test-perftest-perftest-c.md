@@ -6,6 +6,8 @@ Represents the general entry of the white-box performance test framework. It pro
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -24,6 +26,8 @@ Creates a [PerfTest](#perftest) object and returns the object created. This API 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -89,6 +93,8 @@ Destroys the **PerfTest** object to release the resources occupied by the object
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 **Error codes:**
 
 | Error Code ID | Error Message |
@@ -133,6 +139,8 @@ Obtains the measurement data of a specified performance metric. This method must
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -192,6 +200,8 @@ Runs a performance test, iteratively executes test code segments based on the co
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 

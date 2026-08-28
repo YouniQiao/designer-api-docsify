@@ -60,6 +60,8 @@ oriUri: string
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+**测试接口：** 此接口为测试接口。
+
 ## uniformDataType
 
 ```TypeScript

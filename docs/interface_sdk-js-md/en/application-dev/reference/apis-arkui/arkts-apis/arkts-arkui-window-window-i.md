@@ -1758,6 +1758,8 @@ Get window state snapshot, including isPcMode information.
 
 **System capability:** SystemCapability.Window.SessionManager
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |

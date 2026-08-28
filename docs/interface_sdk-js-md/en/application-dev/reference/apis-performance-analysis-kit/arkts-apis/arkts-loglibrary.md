@@ -8,6 +8,8 @@ The **logLibrary** module provides APIs for obtaining various system maintenance
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript

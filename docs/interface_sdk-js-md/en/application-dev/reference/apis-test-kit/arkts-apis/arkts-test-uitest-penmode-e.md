@@ -6,6 +6,8 @@ Pen mode enum.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## HANDWRITING
 
 ```TypeScript
@@ -20,6 +22,8 @@ Handwriting mode.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## AIR_MOUSE
 
 ```TypeScript
@@ -33,3 +37,5 @@ Air mouse mode.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

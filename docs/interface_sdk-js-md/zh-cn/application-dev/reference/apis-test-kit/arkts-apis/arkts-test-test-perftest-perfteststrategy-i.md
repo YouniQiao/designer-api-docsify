@@ -13,6 +13,8 @@
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+**测试接口：** 此接口为测试接口。
+
 ## 导入模块
 
 ```TypeScript
@@ -34,6 +36,8 @@ actionCode: Callback<Callback<boolean>>
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+**测试接口：** 此接口为测试接口。
+
 ## bundleName
 
 ```TypeScript
@@ -49,6 +53,8 @@ bundleName?: string
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
+
+**测试接口：** 此接口为测试接口。
 
 ## iterations
 
@@ -66,6 +72,8 @@ iterations?: number
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+**测试接口：** 此接口为测试接口。
+
 ## metrics
 
 ```TypeScript
@@ -81,6 +89,8 @@ metrics: Array<PerfMetric>
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
+
+**测试接口：** 此接口为测试接口。
 
 ## resetCode
 
@@ -98,6 +108,8 @@ resetCode?: Callback<Callback<boolean>>
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+**测试接口：** 此接口为测试接口。
+
 ## timeout
 
 ```TypeScript
@@ -113,3 +125,5 @@ timeout?: number
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
+
+**测试接口：** 此接口为测试接口。

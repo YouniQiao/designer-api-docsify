@@ -20,6 +20,8 @@ Remove registered event
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |

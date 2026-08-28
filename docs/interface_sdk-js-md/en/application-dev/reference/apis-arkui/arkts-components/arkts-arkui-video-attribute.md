@@ -207,6 +207,8 @@ Called when playback fails.
 
 **Since:** 7
 
+**Decorator:** @ohos
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

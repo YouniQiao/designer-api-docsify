@@ -10,6 +10,8 @@ The **ShellCmdResult** module provides the shell command execution result.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 ## exitCode
 
 ```TypeScript

@@ -194,6 +194,7 @@ import { image } from '@kit.ImageKit';
 | [GainmapParams](arkts-image-image-gainmapparams-i-sys.md) | Gainmap（增益图）参数设置选项。 |
 | [HdrDecomposeOptions](arkts-image-image-hdrdecomposeoptions-i-sys.md) | HDR PixelMap分解为Picture的配置选项，分解后的Picture包含一张SDR主图和一张增益图（GainMap）。 |
 | [ImageSource](arkts-image-image-imagesource-i-sys.md) | ImageSource类，用于获取图片相关信息。 |
+| [PackingOption](arkts-image-image-packingoption-i-sys.md) | 表示图片编码选项。 |
 | [SourceOptions](arkts-image-image-sourceoptions-i-sys.md) | ImageSource的初始化选项。 |
 <!--DelEnd-->
 

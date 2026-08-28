@@ -67,6 +67,8 @@ A value that is not a number. In equality comparisons, NaN does not equal any va
 
 **Type:** number
 
+**Test API:** This is a test API.
+
 ## NEGATIVE_INFINITY
 
 ```TypeScript

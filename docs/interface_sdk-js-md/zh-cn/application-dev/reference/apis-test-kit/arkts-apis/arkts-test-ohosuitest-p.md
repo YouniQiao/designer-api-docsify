@@ -18,6 +18,8 @@ declare const BY: By
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## ON
 
 ```TypeScript
@@ -33,3 +35,5 @@ declare const ON: On
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。

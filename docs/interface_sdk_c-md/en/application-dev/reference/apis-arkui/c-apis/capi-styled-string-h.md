@@ -5950,7 +5950,7 @@ Sets the image drawing color filter in the image style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| const OH_Drawing_ColorFilter* drawingColorFilter | Pointer to the image drawing color filter. |
+| [const OH_Drawing_ColorFilter](../ArkGraphics2D/capi-drawing-oh-drawing-colorfilter.md)* drawingColorFilter | Pointer to the image drawing color filter. |
 
 **Returns**:
 
@@ -5978,7 +5978,7 @@ Obtains the image drawing color filter in the image style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| OH_Drawing_ColorFilter* drawingColorFilter | Pointer to the image drawing color filter. |
+| [OH_Drawing_ColorFilter](../ArkGraphics2D/capi-drawing-oh-drawing-colorfilter.md)* drawingColorFilter | Pointer to the image drawing color filter. |
 
 **Returns**:
 
@@ -6180,7 +6180,7 @@ Sets the resizable image lattice in the image style.
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| const OH_Drawing_Lattice* lattice | [in] Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md). |
+| [const OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md)* lattice | [in] Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md). |
 
 **Returns**:
 
@@ -6208,7 +6208,7 @@ Obtains the resizable image lattice in the image style.
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| OH_Drawing_Lattice* lattice | [out] Output parameter. Pointer to the image resizable lattice.The type is [OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md). |
+| [OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md)* lattice | [out] Output parameter. Pointer to the image resizable lattice.The type is [OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md). |
 
 **Returns**:
 

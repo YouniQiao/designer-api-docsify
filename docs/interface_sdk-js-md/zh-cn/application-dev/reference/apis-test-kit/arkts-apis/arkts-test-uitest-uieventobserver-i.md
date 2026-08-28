@@ -6,6 +6,8 @@ UI事件监听器。
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## 导入模块
 
 ```TypeScript
@@ -25,6 +27,8 @@ once(type: 'toastShow', callback: Callback<UIElementInfo>): void
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -75,6 +79,8 @@ once(type: 'dialogShow', callback: Callback<UIElementInfo>): void
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -119,6 +125,8 @@ once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowCh
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -173,6 +181,8 @@ once(type: 'componentEventOccur', componentEventType: ComponentEventType, option
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 

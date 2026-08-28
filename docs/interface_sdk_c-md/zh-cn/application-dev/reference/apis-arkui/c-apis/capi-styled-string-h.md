@@ -54,7 +54,7 @@
 | [void OH_ArkUI_StyledString_PushTextStyle(ArkUI_StyledString* handle, OH_Drawing_TextStyle* style)](#oh_arkui_styledstring_pushtextstyle) | 将新的排版风格设置到当前格式化字符串样式栈顶。 |
 | [void OH_ArkUI_StyledString_AddText(ArkUI_StyledString* handle, const char* content)](#oh_arkui_styledstring_addtext) | 基于当前格式化字符串样式设置对应的文本内容。所添加的文本将使用当前栈顶的排版样式，该样式 <br> 由[OH_ArkUI_StyledString_PushTextStyle](capi-styled-string-h.md#oh_arkui_styledstring_pushtextstyle)压入。当栈顶样式通过[OH_ArkUI_StyledString_PopTextStyle](capi-styled-string-h.md#oh_arkui_styledstring_poptextstyle) <br> 出栈后，后续添加的文本将使用新的栈顶样式。 |
 | [void OH_ArkUI_StyledString_PopTextStyle(ArkUI_StyledString* handle)](#oh_arkui_styledstring_poptextstyle) | 将当前格式化字符串对象中栈顶样式出栈。 |
-| [OH_Drawing_Typography* OH_ArkUI_StyledString_CreateTypography(ArkUI_StyledString* handle)](#oh_arkui_styledstring_createtypography) | 基于格式化字符串对象创建指向[OH_Drawing_Typography](capi-drawing-oh-drawing-typography.md)对象的指针，用于提前进行文本测算排版。 |
+| [OH_Drawing_Typography* OH_ArkUI_StyledString_CreateTypography(ArkUI_StyledString* handle)](#oh_arkui_styledstring_createtypography) | 基于格式化字符串对象创建指向[OH_Drawing_Typography](../ArkGraphics2D/capi-drawing-oh-drawing-typography.md)对象的指针，用于提前进行文本测算排版。 |
 | [void OH_ArkUI_StyledString_AddPlaceholder(ArkUI_StyledString* handle, OH_Drawing_PlaceholderSpan* placeholder)](#oh_arkui_styledstring_addplaceholder) | 设置占位符，用于在格式化字符串中预留指定宽高的空白区域或嵌入自定义内容。其尺寸等信息由 <br> [OH_Drawing_PlaceholderSpan](../ArkGraphics2D/capi-drawing-oh-drawing-placeholderspan.md)指定。 |
 | [ArkUI_StyledString_Descriptor* OH_ArkUI_StyledString_Descriptor_Create(void)](#oh_arkui_styledstring_descriptor_create) | 创建属性字符串数据对象。 |
 | [void OH_ArkUI_StyledString_Descriptor_Destroy(ArkUI_StyledString_Descriptor* descriptor)](#oh_arkui_styledstring_descriptor_destroy) | 释放ArkUI_StyledString_Descriptor对象占用的内存。 |
@@ -279,9 +279,9 @@
 | [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetLineMetrics(ArkUI_TextLayoutManager* layoutManager, int32_t lineNumber, OH_Drawing_LineMetrics* outMetrics)](#oh_arkui_textlayoutmanager_getlinemetrics) | 获取指定行的行信息、文本样式信息、以及字体属性信息。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterPositionAtCoordinate(ArkUI_TextLayoutManager* layoutManager, double dx, double dy, OH_Drawing_PositionAndAffinity** outPos)](#oh_arkui_textlayoutmanager_getcharacterpositionatcoordinate) | 获取距离指定坐标最近的字符的位置信息。与OH_ArkUI_TextLayoutManager_GetGlyphPositionAtCoordinate的区别：此方法返回字符级别的位置信息，适用于文本编辑、光标定位等基于字符编码的场景；而GetGlyphPositionAtCoordinate返回字形级别的位置信息，适用于渲染相关的精确定位场景。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterPositionAtCoordinateWithEncoding(ArkUI_TextLayoutManager* layoutManager, double dx, double dy, OH_ArkUI_TextEncoding encoding, OH_Drawing_PositionAndAffinity** outPos)](#oh_arkui_textlayoutmanager_getcharacterpositionatcoordinatewithencoding) | 根据指定编码类型，获取距离指定坐标最近的字符位置信息。 |
-| [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRange(ArkUI_TextLayoutManager* layoutManager, OH_Drawing_Range* charRange, OH_Drawing_Range** outGlyphRange, OH_Drawing_Range** outActualCharRange)](#oh_arkui_textlayoutmanager_getglyphrangeforcharacterrange) | 获取由指定字符索引范围所生成的字形索引范围以及实际的字符索引范围。例如文本为"世界Hello"，其中文本"世"的字形索引范围为[0, 1]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 3]。如果指定的字符索引范围是[0, 1]，但无法解析出三分之一个汉字，所以实际的字符索引范围是[0, 3]。outGlyphRange、outActualCharRange返回的[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象在使用完成后，需通过[OH_Drawing_ReleaseRangeBuffer](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer)释放。 |
+| [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRange(ArkUI_TextLayoutManager* layoutManager, OH_Drawing_Range* charRange, OH_Drawing_Range** outGlyphRange, OH_Drawing_Range** outActualCharRange)](#oh_arkui_textlayoutmanager_getglyphrangeforcharacterrange) | 获取由指定字符索引范围所生成的字形索引范围以及实际的字符索引范围。例如文本为"世界Hello"，其中文本"世"的字形索引范围为[0, 1]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 3]。如果指定的字符索引范围是[0, 1]，但无法解析出三分之一个汉字，所以实际的字符索引范围是[0, 3]。outGlyphRange、outActualCharRange返回的[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象在使用完成后，需通过[OH_Drawing_ReleaseRangeBuffer](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer)释放。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRangeWithEncoding(ArkUI_TextLayoutManager* layoutManager, OH_Drawing_Range* charRange, OH_ArkUI_TextEncoding encoding, OH_Drawing_Range** outGlyphRange, OH_Drawing_Range** outActualCharRange)](#oh_arkui_textlayoutmanager_getglyphrangeforcharacterrangewithencoding) | 根据指定编码类型和文本字符范围，获取字形范围以及实际的字符范围。 |
-| [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRange(ArkUI_TextLayoutManager* layoutManager, OH_Drawing_Range* glyphRange, OH_Drawing_Range** outCharRange, OH_Drawing_Range** outActualGlyphRange)](#oh_arkui_textlayoutmanager_getcharacterrangeforglyphrange) | 获取由指定字形索引范围所生成的字符索引范围以及实际的字形索引范围。 <br> 例如文本为"世界Hello"，其字形索引范围为[0, 7]，一个汉字占三个字符，所以其对应的字符 <br> 索引范围为[0, 11]。 <br> 如果指定的索引范围是[0, 11]，但字形一共只有7个，所以实际的字形索引范围是[0, 7]。 <br> outCharRange、outActualGlyphRange返回的[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象在使用完成后，需通过 <br> [OH_Drawing_ReleaseRangeBuffer](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer)释放。 |
+| [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRange(ArkUI_TextLayoutManager* layoutManager, OH_Drawing_Range* glyphRange, OH_Drawing_Range** outCharRange, OH_Drawing_Range** outActualGlyphRange)](#oh_arkui_textlayoutmanager_getcharacterrangeforglyphrange) | 获取由指定字形索引范围所生成的字符索引范围以及实际的字形索引范围。 <br> 例如文本为"世界Hello"，其字形索引范围为[0, 7]，一个汉字占三个字符，所以其对应的字符 <br> 索引范围为[0, 11]。 <br> 如果指定的索引范围是[0, 11]，但字形一共只有7个，所以实际的字形索引范围是[0, 7]。 <br> outCharRange、outActualGlyphRange返回的[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象在使用完成后，需通过 <br> [OH_Drawing_ReleaseRangeBuffer](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer)释放。 |
 | [ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRangeWithEncoding(ArkUI_TextLayoutManager* layoutManager, OH_Drawing_Range* glyphRange, OH_ArkUI_TextEncoding encoding, OH_Drawing_Range** outCharRange, OH_Drawing_Range** outActualGlyphRange)](#oh_arkui_textlayoutmanager_getcharacterrangeforglyphrangewithencoding) | 根据指定编码类型和文本字形范围，获取字符范围以及实际的字形范围。 |
 | [ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_SetLinearGradient(OH_ArkUI_ParagraphStyle* paragraphStyle, const OH_ArkUI_LinearGradientOptions* linearGradient)](#oh_arkui_paragraphstyle_setlineargradient) | 设置段落样式的线性渐变。 |
 | [ArkUI_ErrorCode OH_ArkUI_ParagraphStyle_GetLinearGradient(const OH_ArkUI_ParagraphStyle* paragraphStyle, OH_ArkUI_LinearGradientOptions* linearGradient)](#oh_arkui_paragraphstyle_getlineargradient) | 获取段落样式的线性渐变。 |
@@ -477,10 +477,10 @@ OH_Drawing_Typography* OH_ArkUI_StyledString_CreateTypography(ArkUI_StyledString
 
 **描述**
 
-基于格式化字符串对象创建指向[OH_Drawing_Typography](capi-drawing-oh-drawing-typography.md)对象的指针，用于提前进行文本测算排版。
+基于格式化字符串对象创建指向[OH_Drawing_Typography](../ArkGraphics2D/capi-drawing-oh-drawing-typography.md)对象的指针，用于提前进行文本测算排版。
 
 >**说明：** 
->[OH_Drawing_Typography](capi-drawing-oh-drawing-typography.md)对象的生命周期由应用管理，当应用销毁该对象时，应同步 
+>[OH_Drawing_Typography](../ArkGraphics2D/capi-drawing-oh-drawing-typography.md)对象的生命周期由应用管理，当应用销毁该对象时，应同步 
  *       调用[NODE_TEXT_CONTENT_WITH_STYLED_STRING](capi-native-node-h.md#arkui_nodeattributetype)对应的reset方法进行置空，避免野指针崩溃风险。
 
 **起始版本：** 12
@@ -5567,7 +5567,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_SetDrawingColorFilter(OH_ArkUI_ImageAtt
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| const OH_Drawing_ColorFilter* drawingColorFilter | 图片颜色滤镜。 |
+| [const OH_Drawing_ColorFilter](../ArkGraphics2D/capi-drawing-oh-drawing-colorfilter.md)* drawingColorFilter | 图片颜色滤镜。 |
 
 **返回：**
 
@@ -5592,7 +5592,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetDrawingColorFilter(const OH_ArkUI_Im
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| OH_Drawing_ColorFilter* drawingColorFilter | 图片颜色滤镜。 |
+| [OH_Drawing_ColorFilter](../ArkGraphics2D/capi-drawing-oh-drawing-colorfilter.md)* drawingColorFilter | 图片颜色滤镜。 |
 
 **返回：**
 
@@ -5776,7 +5776,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_SetResizableLattice(OH_ArkUI_ImageAttac
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| const OH_Drawing_Lattice* lattice | [in] 图片拉伸栅格，类型为[OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md)。 |
+| [const OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md)* lattice | [in] 图片拉伸栅格，类型为[OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md)。 |
 
 **返回：**
 
@@ -5801,7 +5801,7 @@ ArkUI_ErrorCode OH_ArkUI_ImageAttachment_GetResizableLattice(const OH_ArkUI_Imag
 | 参数项 | 描述 |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] 指向[OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)对象的指针。 |
-| OH_Drawing_Lattice* lattice | [out] 输出参数，指向图片拉伸栅格的指针，类型为[OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md)。 |
+| [OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md)* lattice | [out] 输出参数，指向图片拉伸栅格的指针，类型为[OH_Drawing_Lattice](../ArkGraphics2D/capi-drawing-oh-drawing-lattice.md)。 |
 
 **返回：**
 
@@ -6029,7 +6029,7 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterPositionAtCoordinate(ArkU
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | 指向[ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)对象的指针。 |
 | double dx | 相对于控件的x坐标，单位为px。 |
 | double dy | 相对于控件的y坐标，单位为px。 |
-| OH_Drawing_PositionAndAffinity** outPos | 指向[OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md)对象的二级指针。 |
+| OH_Drawing_PositionAndAffinity** outPos | 指向[OH_Drawing_PositionAndAffinity](../ArkGraphics2D/capi-drawing-oh-drawing-positionandaffinity.md)对象的二级指针。 |
 
 **返回：**
 
@@ -6057,7 +6057,7 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterPositionAtCoordinateWithE
 | double dx | 相对于控件的x坐标，单位为px。 |
 | double dy | 相对于控件的y坐标，单位为px。 |
 | [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | 字符索引范围使用的编码类型。 |
-| OH_Drawing_PositionAndAffinity** outPos | 指向[OH_Drawing_PositionAndAffinity](capi-drawing-oh-drawing-positionandaffinity.md)对象的二级指针。 |
+| OH_Drawing_PositionAndAffinity** outPos | 指向[OH_Drawing_PositionAndAffinity](../ArkGraphics2D/capi-drawing-oh-drawing-positionandaffinity.md)对象的二级指针。 |
 
 **返回：**
 
@@ -6073,7 +6073,7 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRange(ArkUI_
 
 **描述**
 
-获取由指定字符索引范围所生成的字形索引范围以及实际的字符索引范围。例如文本为"世界Hello"，其中文本"世"的字形索引范围为[0, 1]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 3]。如果指定的字符索引范围是[0, 1]，但无法解析出三分之一个汉字，所以实际的字符索引范围是[0, 3]。outGlyphRange、outActualCharRange返回的[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象在使用完成后，需通过[OH_Drawing_ReleaseRangeBuffer](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer)释放。
+获取由指定字符索引范围所生成的字形索引范围以及实际的字符索引范围。例如文本为"世界Hello"，其中文本"世"的字形索引范围为[0, 1]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 3]。如果指定的字符索引范围是[0, 1]，但无法解析出三分之一个汉字，所以实际的字符索引范围是[0, 3]。outGlyphRange、outActualCharRange返回的[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象在使用完成后，需通过[OH_Drawing_ReleaseRangeBuffer](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer)释放。
 
 **起始版本：** 24
 
@@ -6082,9 +6082,9 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRange(ArkUI_
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | 指向[ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)对象的指针。 |
-| OH_Drawing_Range* charRange | 指向[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象的指针，表示字符索引范围。 |
-| OH_Drawing_Range** outGlyphRange | 指向[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象的二级指针，表示字形索引范围。 |
-| OH_Drawing_Range** outActualCharRange | 指向[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象的二级指针，表示实际的字符索引范围。 |
+| OH_Drawing_Range* charRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字符索引范围。 |
+| OH_Drawing_Range** outGlyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示字形索引范围。 |
+| OH_Drawing_Range** outActualCharRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示实际的字符索引范围。 |
 
 **返回：**
 
@@ -6103,7 +6103,7 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRangeWithEnc
 根据指定编码类型和文本字符范围，获取字形范围以及实际的字符范围。
 
 >**说明：** 
->outGlyphRange、outActualCharRange返回的[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象在使用完成后，需通过 
+>outGlyphRange、outActualCharRange返回的[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象在使用完成后，需通过 
  *       [OH_Drawing_ReleaseRangeBuffer](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer)释放。
 
 **起始版本：** 26.0.0
@@ -6113,10 +6113,10 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetGlyphRangeForCharacterRangeWithEnc
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | 指向[ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)对象的指针。 |
-| OH_Drawing_Range* charRange | 指向[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象的指针，表示字符索引范围。 |
+| OH_Drawing_Range* charRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字符索引范围。 |
 | [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | 字符索引范围使用的编码类型。 |
-| OH_Drawing_Range** outGlyphRange | 指向[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象的指针，表示字符索引范围。 |
-| OH_Drawing_Range** outActualCharRange | 指向[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象的二级指针，表示字形索引范围。 |
+| OH_Drawing_Range** outGlyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字符索引范围。 |
+| OH_Drawing_Range** outActualCharRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示字形索引范围。 |
 
 **返回：**
 
@@ -6132,7 +6132,7 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRange(ArkUI_
 
 **描述**
 
-获取由指定字形索引范围所生成的字符索引范围以及实际的字形索引范围。 <br> 例如文本为"世界Hello"，其字形索引范围为[0, 7]，一个汉字占三个字符，所以其对应的字符 <br> 索引范围为[0, 11]。 <br> 如果指定的索引范围是[0, 11]，但字形一共只有7个，所以实际的字形索引范围是[0, 7]。 <br> outCharRange、outActualGlyphRange返回的[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象在使用完成后，需通过 <br> [OH_Drawing_ReleaseRangeBuffer](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer)释放。
+获取由指定字形索引范围所生成的字符索引范围以及实际的字形索引范围。 <br> 例如文本为"世界Hello"，其字形索引范围为[0, 7]，一个汉字占三个字符，所以其对应的字符 <br> 索引范围为[0, 11]。 <br> 如果指定的索引范围是[0, 11]，但字形一共只有7个，所以实际的字形索引范围是[0, 7]。 <br> outCharRange、outActualGlyphRange返回的[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象在使用完成后，需通过 <br> [OH_Drawing_ReleaseRangeBuffer](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer)释放。
 
 **起始版本：** 24
 
@@ -6141,9 +6141,9 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRange(ArkUI_
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | 指向[ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)对象的指针。 |
-| OH_Drawing_Range* glyphRange | 指向[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象的指针，表示字形索引范围。 |
-| OH_Drawing_Range** outCharRange | 指向[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象的二级指针，表示字符索引范围。 |
-| OH_Drawing_Range** outActualGlyphRange | 指向[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象的二级指针，表示实际的字形索引范围。 |
+| OH_Drawing_Range* glyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字形索引范围。 |
+| OH_Drawing_Range** outCharRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示字符索引范围。 |
+| OH_Drawing_Range** outActualGlyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示实际的字形索引范围。 |
 
 **返回：**
 
@@ -6162,7 +6162,7 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRangeWithEnc
 根据指定编码类型和文本字形范围，获取字符范围以及实际的字形范围。
 
 >**说明：** 
->outCharRange、outActualGlyphRange返回的[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象在使用完成后，需通过 
+>outCharRange、outActualGlyphRange返回的[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象在使用完成后，需通过 
  *       [OH_Drawing_ReleaseRangeBuffer](../ArkGraphics2D/capi-drawing-text-typography-h.md#oh_drawing_releaserangebuffer)释放。
 
 **起始版本：** 26.0.0
@@ -6172,10 +6172,10 @@ ArkUI_ErrorCode OH_ArkUI_TextLayoutManager_GetCharacterRangeForGlyphRangeWithEnc
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)* layoutManager | 指向[ArkUI_TextLayoutManager](capi-arkui-nativemodule-arkui-textlayoutmanager.md)对象的指针。 |
-| OH_Drawing_Range* glyphRange | 指向[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象的指针，表示字形索引范围。 |
+| OH_Drawing_Range* glyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的指针，表示字形索引范围。 |
 | [OH_ArkUI_TextEncoding](capi-styled-string-h.md#oh_arkui_textencoding) encoding | 字符索引范围使用的编码类型。 |
-| OH_Drawing_Range** outCharRange | 指向[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象的二级指针，表示字符索引范围。 |
-| OH_Drawing_Range** outActualGlyphRange | 指向[OH_Drawing_Range](capi-drawing-oh-drawing-range.md)对象的二级指针，表示实际的字形索引范围。 |
+| OH_Drawing_Range** outCharRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示字符索引范围。 |
+| OH_Drawing_Range** outActualGlyphRange | 指向[OH_Drawing_Range](../ArkGraphics2D/capi-drawing-oh-drawing-range.md)对象的二级指针，表示实际的字形索引范围。 |
 
 **返回：**
 

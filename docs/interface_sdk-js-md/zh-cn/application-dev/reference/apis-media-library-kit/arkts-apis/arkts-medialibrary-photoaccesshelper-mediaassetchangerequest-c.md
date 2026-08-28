@@ -38,6 +38,8 @@ addResource(type: ResourceType, fileUri: string): void
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -254,6 +256,8 @@ static createImageAssetRequest(context: Context, fileUri: string): MediaAssetCha
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -307,6 +311,8 @@ static createVideoAssetRequest(context: Context, fileUri: string): MediaAssetCha
 **起始版本：** 11
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 

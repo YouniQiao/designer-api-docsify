@@ -6,6 +6,8 @@ UiTest框架在API9中，Component类代表了UI界面上的一个控件，提�
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## 导入模块
 
 ```TypeScript
@@ -25,6 +27,8 @@ clearText(): Promise<void>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -65,6 +69,8 @@ click(): Promise<void>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -120,6 +126,8 @@ doubleClick(): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -170,6 +178,8 @@ dragTo(target: Component): Promise<void>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -222,6 +232,8 @@ getBounds(): Promise<Rect>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -277,6 +289,8 @@ getBoundsCenter(): Promise<Point>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -317,6 +331,8 @@ getDescription(): Promise<string>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -356,6 +372,8 @@ getDisplayId(): Promise<number>
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -408,6 +426,8 @@ getHint(): Promise<string>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -448,6 +468,8 @@ getId(): Promise<string>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -487,6 +509,8 @@ getOriginalText(): Promise<string>
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -534,6 +558,8 @@ getText(): Promise<string>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -586,6 +612,8 @@ getType(): Promise<string>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -636,6 +664,8 @@ inputText(text: string): Promise<void>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -698,6 +728,8 @@ inputText(text: string, mode: InputTextMode): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -747,6 +779,8 @@ isCheckable(): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -791,6 +825,8 @@ isChecked(): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -834,6 +870,8 @@ isClickable(): Promise<boolean>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -894,6 +932,8 @@ isEnabled(): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -952,6 +992,8 @@ isFocused(): Promise<boolean>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -1023,6 +1065,8 @@ isLongClickable(): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -1066,6 +1110,8 @@ isScrollable(): Promise<boolean>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -1126,6 +1172,8 @@ isSelected(): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -1185,6 +1233,8 @@ longClick(): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -1236,6 +1286,8 @@ pinchIn(scale: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -1283,6 +1335,8 @@ pinchOut(scale: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -1329,6 +1383,8 @@ scrollSearch(on: On): Promise<Component>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -1380,6 +1436,8 @@ scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -1429,6 +1487,8 @@ scrollToBottom(speed?: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -1475,6 +1535,8 @@ scrollToTop(speed?: number): Promise<void>
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 

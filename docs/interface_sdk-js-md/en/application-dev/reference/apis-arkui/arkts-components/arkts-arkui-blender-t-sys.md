@@ -8,6 +8,8 @@ Blender
 
 **Since:** 13
 
+**Decorator:** @ohos
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 13.

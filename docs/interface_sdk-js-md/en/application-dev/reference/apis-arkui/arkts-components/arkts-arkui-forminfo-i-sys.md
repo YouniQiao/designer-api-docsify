@@ -206,6 +206,8 @@ The want of the form.
 
 **Since:** 12
 
+**Decorator:** @ohos
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

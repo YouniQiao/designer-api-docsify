@@ -28,6 +28,8 @@ Provides the capability of accessing application resources and system resources.
 
 **System capability:** SystemCapability.Global.ResourceManager
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -100,6 +102,8 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 
 **System capability:** SystemCapability.Global.ResourceManager
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -155,6 +159,8 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Global.ResourceManager
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -212,6 +218,8 @@ Closes the file descriptor (fd) of the HAP where the **rawfile** file in the **r
 
 **System capability:** SystemCapability.Global.ResourceManager
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -265,6 +273,8 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **System capability:** SystemCapability.Global.ResourceManager
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -301,6 +311,8 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 **Substitutes:** [closeRawFd](#closerawfd)(path: string)
 
 **System capability:** SystemCapability.Global.ResourceManager
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -5495,6 +5507,8 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 **System capability:** SystemCapability.Global.ResourceManager
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -5557,6 +5571,8 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Global.ResourceManager
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -5624,6 +5640,8 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 
 **System capability:** SystemCapability.Global.ResourceManager
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -5679,6 +5697,8 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **System capability:** SystemCapability.Global.ResourceManager
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -5717,6 +5737,8 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 **Substitutes:** [getRawFileContent](#getrawfilecontent)(path: string)
 
 **System capability:** SystemCapability.Global.ResourceManager
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -5757,6 +5779,8 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Global.ResourceManager
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -5811,6 +5835,8 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Global.ResourceManager
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -5869,6 +5895,8 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 **System capability:** SystemCapability.Global.ResourceManager
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -5924,6 +5952,8 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **System capability:** SystemCapability.Global.ResourceManager
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -5964,6 +5994,8 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 **Substitutes:** [getRawFd](#getrawfd)(path: string)
 
 **System capability:** SystemCapability.Global.ResourceManager
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -8079,6 +8111,8 @@ Checks whether a path is a subdirectory in the **rawfile** directory. This API r
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Global.ResourceManager
+
+**Test API:** This is a test API.
 
 **Parameters:**
 

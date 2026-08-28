@@ -6,6 +6,8 @@ Enumerates the window change event types that can be listened for.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## WINDOW_UNDEFINED
 
 ```TypeScript
@@ -19,6 +21,8 @@ Non-window change event. Note: This value can only be used as a return value. If
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## WINDOW_ADDED
 
@@ -34,6 +38,8 @@ Window adding event.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## WINDOW_REMOVED
 
 ```TypeScript
@@ -48,6 +54,8 @@ Window removing event.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## WINDOW_BOUNDS_CHANGED
 
 ```TypeScript
@@ -61,3 +69,5 @@ Window bounds change event.
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

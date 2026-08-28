@@ -6,6 +6,8 @@ Provides the flag attributes of this window.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -28,6 +30,8 @@ Whether the window is interacting with the user. The value **true** indicates th
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## actived
 
 ```TypeScript
@@ -48,6 +52,8 @@ This API is supported since API version 9 and deprecated since API version 11. Y
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## bundleName
 
 ```TypeScript
@@ -63,6 +69,8 @@ Bundle name of the application to which the window belongs, which is used to fil
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## displayId
 
@@ -80,6 +88,8 @@ ID of the display to which the window belongs. The default value is the default 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## focused
 
 ```TypeScript
@@ -95,6 +105,8 @@ Whether the window is focused. The value **true** indicates that the window is f
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Examples**
 
@@ -127,3 +139,5 @@ Window title, which is used to filter the target window in multi-window scenario
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

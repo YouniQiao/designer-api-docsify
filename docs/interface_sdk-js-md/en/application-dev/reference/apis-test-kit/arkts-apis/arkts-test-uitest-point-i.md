@@ -6,6 +6,8 @@ Represents the point on the device screen.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -28,6 +30,8 @@ ID of the display to which the coordinate point belongs. The default value is th
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## x
 
 ```TypeScript
@@ -46,6 +50,8 @@ Horizontal coordinate of a coordinate point, in pixels. The value is an integer 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## y
 
 ```TypeScript
@@ -63,3 +69,5 @@ Vertical coordinate of a coordinate point, in pixels. The value is an integer gr
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

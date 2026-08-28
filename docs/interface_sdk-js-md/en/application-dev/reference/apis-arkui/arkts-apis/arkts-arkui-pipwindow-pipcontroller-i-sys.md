@@ -28,6 +28,8 @@ Returns a Boolean value that indicates whether picture-in-picture is supported
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |

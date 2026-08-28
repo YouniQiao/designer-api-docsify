@@ -8,6 +8,8 @@ Defines the configuration parameters for drag hover detection.
 
 **Since:** 20
 
+**Decorator:** @ohos
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.

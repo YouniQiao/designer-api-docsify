@@ -145,6 +145,8 @@ Resource格式可以跨包/跨模块访问资源文件。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+**测试接口：** 此接口为测试接口。
+
 ## src
 
 ```TypeScript

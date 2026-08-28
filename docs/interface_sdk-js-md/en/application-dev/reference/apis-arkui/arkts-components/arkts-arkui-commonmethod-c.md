@@ -4181,6 +4181,8 @@ Sets the hit test mode for a component. If **hitTestBehavior** is not set, the c
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -4452,6 +4454,8 @@ Key. User can set an key to the component to identify it.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -5540,6 +5544,8 @@ Allows the current component to customize the hit test and control child compone
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -6028,6 +6034,8 @@ Triggered after events and gestures on the current node and higher-priority node
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -6468,6 +6476,8 @@ Binds a custom event interception callback to a component.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -7984,6 +7994,8 @@ Provides a callback to set the parallel relationship between built-in gestures a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -8011,6 +8023,8 @@ Provides a callback to set the parallel relationship between gestures of the cur
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Test API:** This is a test API.
 
 **Parameters:**
 

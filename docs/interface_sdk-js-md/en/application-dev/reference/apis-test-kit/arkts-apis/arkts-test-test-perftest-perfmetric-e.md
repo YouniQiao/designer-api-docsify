@@ -26,6 +26,8 @@ APP_START_COMPLETE_TIME**):
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## DURATION
 
 ```TypeScript
@@ -39,6 +41,8 @@ Execution duration of a code segment, in milliseconds.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This is a test API.
 
 ## CPU_LOAD
 
@@ -54,6 +58,8 @@ CPU load of the application process, in percentage.
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## CPU_USAGE
 
 ```TypeScript
@@ -67,6 +73,8 @@ CPU usage of the application process, in percentage.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This is a test API.
 
 ## MEMORY_RSS
 
@@ -82,6 +90,8 @@ Physical memory (including the shared library) occupied by the application proce
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## MEMORY_PSS
 
 ```TypeScript
@@ -95,6 +105,8 @@ Physical memory (the proportionally allocated memory occupied by shared librarie
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This is a test API.
 
 ## APP_START_RESPONSE_TIME
 
@@ -112,6 +124,8 @@ Marks: 1) Delay calculation is restricted by system dotting reporting. The start
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## APP_START_COMPLETE_TIME
 
 ```TypeScript
@@ -127,6 +141,8 @@ Marks: 1) Delay calculation is restricted by system dotting reporting. The start
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This is a test API.
 
 ## PAGE_SWITCH_COMPLETE_TIME
 
@@ -144,6 +160,8 @@ Marks: 1) Delay calculation is restricted by system dotting and reporting. The s
 
 **System capability:** SystemCapability.Test.PerfTest
 
+**Test API:** This is a test API.
+
 ## LIST_SWIPE_FPS
 
 ```TypeScript
@@ -159,3 +177,5 @@ Mark: 1) List sliding frame rate: refers to the frequency at which the screen ca
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This is a test API.

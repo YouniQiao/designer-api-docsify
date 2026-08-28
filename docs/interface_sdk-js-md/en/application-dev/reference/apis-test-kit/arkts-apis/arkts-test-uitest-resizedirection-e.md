@@ -6,6 +6,8 @@ Enumerates the directions in which a window can be resized.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## LEFT
 
 ```TypeScript
@@ -19,6 +21,8 @@ Left.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## RIGHT
 
@@ -34,6 +38,8 @@ Right.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## UP
 
 ```TypeScript
@@ -47,6 +53,8 @@ Up.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## DOWN
 
@@ -62,6 +70,8 @@ Down.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## LEFT_UP
 
 ```TypeScript
@@ -75,6 +85,8 @@ Upper left.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## LEFT_DOWN
 
@@ -90,6 +102,8 @@ Lower left.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## RIGHT_UP
 
 ```TypeScript
@@ -104,6 +118,8 @@ Upper right.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## RIGHT_DOWN
 
 ```TypeScript
@@ -117,3 +133,5 @@ Lower right.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

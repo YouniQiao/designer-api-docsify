@@ -10,6 +10,8 @@ AbilityDelegatorArgs模块提供在应用程序执行测试用例期间，获取
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+**测试接口：** 此接口为测试接口。
+
 ## bundleName
 
 ```TypeScript

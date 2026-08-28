@@ -6,6 +6,8 @@ Describes the text input mode.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -28,6 +30,8 @@ Whether to input text in addition mode. The value **true** means to input text i
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## paste
 
 ```TypeScript
@@ -45,3 +49,5 @@ Whether to copy and paste text. The value **true** means to copy and paste text,
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

@@ -8,6 +8,8 @@ Provides the ConditionType type,including timeout, killSignal, maxBuffer.
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -30,6 +32,8 @@ Signal sent to the child process when the running time of a child process exceed
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 ## maxBuffer
 
 ```TypeScript
@@ -46,6 +50,8 @@ Maximum buffer size for the standard input and output of the child process.
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 ## timeout
 
 ```TypeScript
@@ -61,3 +67,5 @@ Maximum running time (in ms) of the child process.
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
+
+**Test API:** This is a test API.

@@ -30,7 +30,7 @@
 - [Form Kit (173)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-form-kit/arkts-apis/arkts-app-form-formagent.md)
 - [Function Flow Runtime Kit (29)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-function-flow-runtime-kit/c-apis/capi-condition-variable-h.md)
 - [Game Controller Kit (15)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-game-controller-kit/c-apis/capi-game-pad-event-h.md)
-- [Image Kit (226)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-image-kit/arkts-apis/arkts-multimedia-image.md)
+- [Image Kit (227)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-image-kit/arkts-apis/arkts-multimedia-image.md)
 - [Ime Kit (138)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ime-kit/arkts-apis/arkts-inputmethod.md)
 - [Input Kit (196)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-input-kit/arkts-apis/arkts-multimodalinput-gestureevent.md)
 - [Ipc Kit (36)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ipc-kit/arkts-apis/arkts-rpc.md)

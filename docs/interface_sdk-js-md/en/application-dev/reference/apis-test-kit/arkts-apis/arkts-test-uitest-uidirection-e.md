@@ -6,6 +6,8 @@ Describes the direction of a UI operation such as fling.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## LEFT
 
 ```TypeScript
@@ -19,6 +21,8 @@ Leftward.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## RIGHT
 
@@ -34,6 +38,8 @@ Rightward.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## UP
 
 ```TypeScript
@@ -48,6 +54,8 @@ Upward.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## DOWN
 
 ```TypeScript
@@ -61,3 +69,5 @@ Downward.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

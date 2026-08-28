@@ -8,6 +8,8 @@ The childprocess object can be used to create a new process.
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -28,6 +30,8 @@ Close the target process
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 ## getErrorOutput
 
 ```TypeScript
@@ -41,6 +45,8 @@ Return it as 'Uint8Array of the stderr until EOF
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -62,6 +68,8 @@ Return it as 'Uint8Array' of the stdout until EOF
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -81,6 +89,8 @@ Send a signal to process
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -115,6 +125,8 @@ Return 'number' is the target process exit code
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -137,6 +149,8 @@ Return exitCode is the exit code of the current child process
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 ## killed
 
 ```TypeScript
@@ -152,6 +166,8 @@ Return boolean is whether the current process signal is sent successfully
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
+
+**Test API:** This is a test API.
 
 ## pid
 
@@ -169,6 +185,8 @@ Return pid is the pid of the current process
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 ## ppid
 
 ```TypeScript
@@ -184,3 +202,5 @@ Return ppid is the pid of the current child process
 **System capability:** SystemCapability.Utils.Lang
 
 **System API:** This is a system API.
+
+**Test API:** This is a test API.

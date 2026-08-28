@@ -6,6 +6,8 @@ UI事件的相关信息。
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## 导入模块
 
 ```TypeScript
@@ -30,6 +32,8 @@ readonly bundleName: string
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## componentEventType
 
 ```TypeScript
@@ -47,6 +51,8 @@ readonly componentEventType?: ComponentEventType
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 ## componentId
 
@@ -66,6 +72,8 @@ readonly componentId?: string
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## componentRect
 
 ```TypeScript
@@ -84,6 +92,8 @@ readonly componentRect?: Rect
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## text
 
 ```TypeScript
@@ -99,6 +109,8 @@ readonly text: string
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **示例**
 
@@ -133,6 +145,8 @@ readonly type: string
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **示例**
 
@@ -175,6 +189,8 @@ readonly windowChangeType?: WindowChangeType
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## windowId
 
 ```TypeScript
@@ -192,3 +208,5 @@ readonly windowId?: number
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。

@@ -6,6 +6,8 @@ Describes information about the touchpad swipe gesture option.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -28,6 +30,8 @@ Swipe speed. Value range:[200, 40000] Unit: px/s. Throws error code 17000007 if 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## stay
 
 ```TypeScript
@@ -43,3 +47,5 @@ Whether the swipe gesture stays on the touchpad for 1s before it is lifted. The 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

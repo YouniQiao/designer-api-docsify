@@ -75,6 +75,8 @@
   - [InitializationOptions](arkts-image-image-initializationoptions-i.md)
   - [Metadata](arkts-image-image-metadata-i.md)
   - [PackingOption](arkts-image-image-packingoption-i.md)
+  <!--Del-->
+  - [PackingOption(system api)](arkts-image-image-packingoption-i-sys.md)<!--DelEnd-->
   - [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md)
   - [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md)
   - [PackingSizeLimit](arkts-image-image-packingsizelimit-i.md)

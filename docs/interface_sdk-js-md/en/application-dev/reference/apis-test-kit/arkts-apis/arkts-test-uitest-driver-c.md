@@ -6,6 +6,8 @@ The **Driver** class is the main entrance of the UiTest framework. This class pr
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -25,6 +27,8 @@ Asserts whether a component matches the specified attributes exists on the curre
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -71,6 +75,8 @@ Clicks the target coordinate point. This method can be used only on the default 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -130,6 +136,8 @@ Clicks the target coordinate point. This API uses a promise to return the result
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -174,6 +182,8 @@ Click on the specified location on the screen, with optional touch options.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -225,6 +235,8 @@ Creates a **Driver** object and returns the object created. This API is a static
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -261,6 +273,8 @@ Creates a UI event listener [UIEventObserver](arkts-test-uitest-uieventobserver-
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 
@@ -299,6 +313,8 @@ Injects a crown rotation event. You can specify the rotation speed. This API use
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -349,6 +365,8 @@ Delays a duration of time. This API uses a promise to return the result.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -404,6 +422,8 @@ Double-clicks the target coordinate point. This method can be used only on the d
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -461,6 +481,8 @@ Double-clicks the target coordinate point. This API uses a promise to return the
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -505,6 +527,8 @@ Drags from the start coordinate point to the target coordinate point. This metho
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -555,6 +579,8 @@ Drags from the start point to the target point. You can specify the drag speed a
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -602,6 +628,8 @@ Drag on the screen between the specified points with optional settings.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -656,6 +684,8 @@ Dumps the current layout information and saves it as a JSON file. This method is
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -702,6 +732,8 @@ Searches for the target component based on the specified attributes. This API us
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -750,6 +782,8 @@ Searches for all matched components based on the specified attributes and saves 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -797,6 +831,8 @@ Searches for a window based on the specified attributes. This API uses a promise
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -841,6 +877,8 @@ Simulates a fling operation. This API uses a promise to return the result.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -890,6 +928,8 @@ Simulates a fling operation with the specified direction and speed. This API use
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -935,6 +975,8 @@ Simulates a fling operation on a specified display with the specified direction 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -988,6 +1030,8 @@ Obtains the display density of the current device. This API uses a promise to re
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -1025,6 +1069,8 @@ Obtains the density of the specified display of the current device. This API use
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -1076,6 +1122,8 @@ Obtains the display rotation of the current device. This API uses a promise to r
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -1113,6 +1161,8 @@ Obtains the display rotation of the specified device. This API uses a promise to
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -1164,6 +1214,8 @@ Obtains the display size of the current device. This API uses a promise to retur
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -1201,6 +1253,8 @@ Obtains the size of the specified display on the current device. This API uses a
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -1250,6 +1304,8 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -1305,6 +1361,8 @@ Injects a multi-finger operation into a device. This method applies to test scen
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -1368,6 +1426,8 @@ Simulates a continuous multi-point pen injection operation. This method is appli
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1422,6 +1482,8 @@ Inputs text at a specified coordinate without clearing the original text in the 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1473,6 +1535,8 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -1532,6 +1596,8 @@ Drags from the start point to the end point and checks whether the target compon
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1581,6 +1647,8 @@ Long-clicks at the specified coordinates and checks whether the target component
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1627,6 +1695,8 @@ Swipes from the start point to the end point and checks whether the target compo
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -1680,6 +1750,8 @@ Simulates a knuckle knock on the display. This API uses a promise to return the 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1728,6 +1800,8 @@ Long-clicks the target coordinate point. This method can be used only on the def
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -1785,6 +1859,8 @@ Long-clicks the target coordinate point for a specified duration. This API uses 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1830,6 +1906,8 @@ LongClick on the specified location on the screen, with optional touch settings.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -1882,6 +1960,8 @@ Injects a mouse click action at the specified coordinates, with the optional key
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -1929,6 +2009,8 @@ Injects a number-click action at the specified coordinates, with the optional ke
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -1978,6 +2060,8 @@ Drags the mouse pointer from the start point to the end point. This API uses a p
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -2024,6 +2108,8 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -2072,6 +2158,8 @@ Hold down the left mouse button and drag on the screen between the specified poi
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -2130,6 +2218,8 @@ Injects a mouse number-click action at the specified coordinates, with the optio
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -2178,6 +2268,8 @@ Injects a mouse number-click action at the specified coordinates, with the optio
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -2229,6 +2321,8 @@ Moves the mouse cursor to the target point. This API uses a promise to return th
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -2273,6 +2367,8 @@ Moves the mouse pointer from the start point to the end point, with a visible mo
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -2320,6 +2416,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -2369,6 +2467,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -2420,6 +2520,8 @@ Simulates a pen click operation. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -2464,6 +2566,8 @@ Simulates a pen number-click operation. This API uses a promise to return the re
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -2510,6 +2614,8 @@ Simulates a pen number-click operation. This API uses a promise to return the re
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -2555,6 +2661,8 @@ Simulates a pen swipe operation. This API uses a promise to return the result.
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -2609,6 +2717,8 @@ Simulates pressing the Back button. This API uses a promise to return the result
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -2657,6 +2767,8 @@ Simulates pressing the Back button on a specified screen. This API uses a promis
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -2702,6 +2814,8 @@ Injects an operation of returning to the home screen on the device. This API use
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -2739,6 +2853,8 @@ Injects an operation of returning to the home screen on the specified display. T
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -2784,6 +2900,8 @@ Captures the current screen and saves it as a PNG image to the given save path. 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -2840,6 +2958,8 @@ Captures the specified screen and saves it as a PNG image to the given save path
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -2885,6 +3005,8 @@ Captures the specified area of the current screen and saves the captured screens
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -2937,6 +3059,8 @@ Sets the display rotation of the current scene. This API uses a promise to retur
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -2982,6 +3106,8 @@ Enables or disables display rotation. This method is applicable to scenarios whe
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -3026,6 +3152,8 @@ Swipes from the start coordinate point to the target coordinate point. This meth
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -3078,6 +3206,8 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -3124,6 +3254,8 @@ Swipe on the screen between the specified points with optional touch options.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -3177,6 +3309,8 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -3224,6 +3358,8 @@ Simulates a two-finger scroll gesture on the touchpad. This API uses a promise t
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -3274,6 +3410,8 @@ Triggers a combination key event based on the specified key code values. This AP
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -3322,6 +3460,8 @@ Triggers a combination key event based on the specified key code values on the s
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -3369,6 +3509,8 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -3427,6 +3569,8 @@ Triggers a key event by passing the key code value on the specified screen. This
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -3479,6 +3623,8 @@ HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK opera
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -3534,6 +3680,8 @@ Searches for the target component based on the attributes within a specified tim
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -3580,6 +3728,8 @@ Checks whether all components on the current UI are idle. This method is applica
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -3625,6 +3775,8 @@ Wakes up the current display. This API uses a promise to return the result.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Return value:**
 

@@ -22,6 +22,8 @@ Migrates files from the source path to the destination path. This API uses a pro
 
 **System API:** This is a system API.
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |

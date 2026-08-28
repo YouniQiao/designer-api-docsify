@@ -6,6 +6,8 @@ Enumerates the component operation event types that can be listened for.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## COMPONENT_UNDEFINED
 
 ```TypeScript
@@ -22,6 +24,8 @@ Note: This value can only be used as a return value. If it is passed in an API, 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## COMPONENT_CLICKED
 
 ```TypeScript
@@ -35,6 +39,8 @@ Component clicked event.
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## COMPONENT_LONG_CLICKED
 
@@ -50,6 +56,8 @@ Component number-clicked event.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## COMPONENT_SCROLL_START
 
 ```TypeScript
@@ -63,6 +71,8 @@ Component scroll start event.
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## COMPONENT_SCROLL_END
 
@@ -78,6 +88,8 @@ Component scroll end event.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## COMPONENT_TEXT_CHANGED
 
 ```TypeScript
@@ -91,3 +103,5 @@ Text change event of the [text input component](../../../ui/arkts-common-compone
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

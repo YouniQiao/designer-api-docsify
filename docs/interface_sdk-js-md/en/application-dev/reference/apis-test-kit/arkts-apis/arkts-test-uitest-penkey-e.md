@@ -6,6 +6,8 @@ Pen key type enum.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## HANDWRITING
 
 ```TypeScript
@@ -19,6 +21,8 @@ Handwriting key.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## SMART
 
@@ -34,6 +38,8 @@ Smart key.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## AIR_MOUSE
 
 ```TypeScript
@@ -47,3 +53,5 @@ Air mouse key.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

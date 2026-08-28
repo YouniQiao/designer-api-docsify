@@ -21,6 +21,8 @@ Creates a **SecurityUIExtensionComponent** component to embed and display the UI
 
 **Since:** 26.0.0
 
+**Decorator:** @ohos
+
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

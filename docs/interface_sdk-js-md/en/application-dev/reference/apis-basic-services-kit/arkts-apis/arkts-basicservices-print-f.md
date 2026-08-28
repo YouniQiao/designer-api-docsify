@@ -269,6 +269,8 @@ Prints a file. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Print.PrintFramework
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |

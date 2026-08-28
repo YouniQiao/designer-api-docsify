@@ -261,6 +261,8 @@ function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttribu
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |

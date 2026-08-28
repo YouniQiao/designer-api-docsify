@@ -25,6 +25,8 @@ Checks whether the system is undergoing a stability test. This API uses an async
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -71,6 +73,8 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Test API:** This is a test API.
 
 **Return value:**
 

@@ -49,6 +49,8 @@ every<S extends T>(predicate: (value: T, index: number, array: T[]) => value is 
 
 Determines whether all the members of an array satisfy the specified test.
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -67,6 +69,8 @@ every(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any
 ```
 
 Determines whether all the members of an array satisfy the specified test.
+
+**Test API:** This is a test API.
 
 **Parameters:**
 

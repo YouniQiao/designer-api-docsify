@@ -14,6 +14,8 @@ const egid: number
 
 **系统接口：** 此接口为系统接口。
 
+**测试接口：** 此接口为测试接口。
+
 ## euid
 
 ```TypeScript
@@ -27,6 +29,8 @@ const euid: number
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
+
+**测试接口：** 此接口为测试接口。
 
 ## gid
 
@@ -42,6 +46,8 @@ const gid: number
 
 **系统接口：** 此接口为系统接口。
 
+**测试接口：** 此接口为测试接口。
+
 ## groups
 
 ```TypeScript
@@ -56,6 +62,8 @@ const groups: number[]
 
 **系统接口：** 此接口为系统接口。
 
+**测试接口：** 此接口为测试接口。
+
 ## ppid
 
 ```TypeScript
@@ -69,3 +77,5 @@ const ppid: number
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
+
+**测试接口：** 此接口为测试接口。

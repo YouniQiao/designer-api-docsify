@@ -24,6 +24,8 @@ By类提供的所有API均为同步接口，建议使用者通过静态构造器
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 ## 导入模块
 
 ```TypeScript
@@ -49,6 +51,8 @@ clickable(b?: boolean): By
 **替代接口：** [clickable](arkts-test-uitest-on-c.md#clickable)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -91,6 +95,8 @@ enabled(b?: boolean): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -131,6 +137,8 @@ focused(b?: boolean): By
 **替代接口：** [focused](arkts-test-uitest-on-c.md#focused)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -173,6 +181,8 @@ id(id: number): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -213,6 +223,8 @@ isAfter(by: By): By
 **替代接口：** [isAfter](arkts-test-uitest-on-c.md#isafter)(on: On)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -256,6 +268,8 @@ isBefore(by: By): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -298,6 +312,8 @@ key(key: string): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -338,6 +354,8 @@ scrollable(b?: boolean): By
 **替代接口：** [scrollable](arkts-test-uitest-on-c.md#scrollable)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -380,6 +398,8 @@ selected(b?: boolean): By
 
 **系统能力：** SystemCapability.Test.UiTest
 
+**测试接口：** 此接口为测试接口。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -420,6 +440,8 @@ text(txt: string, pattern?: MatchPattern): By
 **替代接口：** [text](arkts-test-uitest-on-c.md#text)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -462,6 +484,8 @@ type(tp: string): By
 **替代接口：** [type](arkts-test-uitest-on-c.md#type)(tp: string)
 
 **系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 

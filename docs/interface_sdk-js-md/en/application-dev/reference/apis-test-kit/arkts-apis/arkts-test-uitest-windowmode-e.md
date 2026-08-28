@@ -6,6 +6,8 @@ Enumerates the window modes.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## FULLSCREEN
 
 ```TypeScript
@@ -19,6 +21,8 @@ Full-screen mode.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 ## PRIMARY
 
@@ -34,6 +38,8 @@ Primary window mode.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## SECONDARY
 
 ```TypeScript
@@ -48,6 +54,8 @@ Secondary window mode.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## FLOATING
 
 ```TypeScript
@@ -61,3 +69,5 @@ Floating window mode.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.

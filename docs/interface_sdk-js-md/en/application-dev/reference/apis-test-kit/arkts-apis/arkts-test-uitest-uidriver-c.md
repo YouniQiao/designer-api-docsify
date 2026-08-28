@@ -10,6 +10,8 @@ The **UiDriver** class is the main entry to the UiTest framework. It provides AP
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## Modules to Import
 
 ```TypeScript
@@ -31,6 +33,8 @@ Asserts that a component that matches the given attributes exists on the current
 **Substitutes:** [assertComponentExist](arkts-test-uitest-driver-c.md#assertcomponentexist)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -79,6 +83,8 @@ Clicks a specific point of this **UiDriver** object based on the given coordinat
 **Substitutes:** [click](arkts-test-uitest-component-c.md#click)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -138,6 +144,8 @@ Creates a **UiDriver** object and returns the object created. This API is a stat
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -170,6 +178,8 @@ Delays a duration of time. This API uses a promise to return the result.
 **Substitutes:** [delayMs](arkts-test-uitest-driver-c.md#delayms)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -220,6 +230,8 @@ Double-clicks a specific point of this **UiDriver** object based on the given co
 **Substitutes:** [doubleClick](arkts-test-uitest-component-c.md#doubleclick)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -272,6 +284,8 @@ Searches this **UiDriver** object for the target component that matches the give
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -312,6 +326,8 @@ Searches this **UiDriver** object for all components that match the given attrib
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -351,6 +367,8 @@ Long-clicks a specific point of this **UiDriver** object based on the given coor
 **Substitutes:** [longClick](arkts-test-uitest-component-c.md#longclick)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -403,6 +421,8 @@ Presses the Back button on this **UiDriver** object. This API uses a promise to 
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Return value:**
 
 | Type | Description |
@@ -446,6 +466,8 @@ Captures the current screen of this **UiDriver** object and saves it as a PNG im
 **Substitutes:** [screenCap](arkts-test-uitest-driver-c.md#screencap)(savePath: string)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 
@@ -497,6 +519,8 @@ Swipes on this **UiDriver** object from the start point to the end point based o
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
@@ -539,6 +563,8 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 **Substitutes:** [triggerKey](arkts-test-uitest-driver-c.md#triggerkey)(keyCode: int)
 
 **System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This is a test API.
 
 **Parameters:**
 

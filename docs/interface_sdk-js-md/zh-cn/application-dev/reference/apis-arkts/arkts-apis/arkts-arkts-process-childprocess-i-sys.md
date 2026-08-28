@@ -8,6 +8,8 @@ childprocess 对象可用于创建新的进程。
 
 **系统接口：** 此接口为系统接口。
 
+**测试接口：** 此接口为测试接口。
+
 ## 导入模块
 
 ```TypeScript
@@ -28,6 +30,8 @@ close(): void
 
 **系统接口：** 此接口为系统接口。
 
+**测试接口：** 此接口为测试接口。
+
 ## getErrorOutput
 
 ```TypeScript
@@ -41,6 +45,8 @@ getErrorOutput(): Promise<Uint8Array>
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 
@@ -62,6 +68,8 @@ getOutput(): Promise<Uint8Array>
 
 **系统接口：** 此接口为系统接口。
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -81,6 +89,8 @@ kill(signal: number | string): void
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -118,6 +128,8 @@ wait(): Promise<number>
 
 **系统接口：** 此接口为系统接口。
 
+**测试接口：** 此接口为测试接口。
+
 **返回值：**
 
 | 类型 | 说明 |
@@ -140,6 +152,8 @@ readonly exitCode: number
 
 **系统接口：** 此接口为系统接口。
 
+**测试接口：** 此接口为测试接口。
+
 ## killed
 
 ```TypeScript
@@ -155,6 +169,8 @@ readonly killed: boolean
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
+
+**测试接口：** 此接口为测试接口。
 
 ## pid
 
@@ -172,6 +188,8 @@ readonly pid: number
 
 **系统接口：** 此接口为系统接口。
 
+**测试接口：** 此接口为测试接口。
+
 ## ppid
 
 ```TypeScript
@@ -187,3 +205,5 @@ readonly ppid: number
 **系统能力：** SystemCapability.Utils.Lang
 
 **系统接口：** 此接口为系统接口。
+
+**测试接口：** 此接口为测试接口。

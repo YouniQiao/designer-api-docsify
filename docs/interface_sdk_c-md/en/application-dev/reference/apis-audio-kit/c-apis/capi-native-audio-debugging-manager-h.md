@@ -150,7 +150,7 @@ Prints full audio runtime snapshot for target audio session manager instance.The
 | Parameter | Description |
 | -- | -- |
 | [OH_AudioDebuggingManager](capi-ohaudio-oh-audiodebuggingmanager.md) *manager | [OH_AudioDebuggingManager](capi-ohaudio-oh-audiodebuggingmanager.md) handle provided by [OH_AudioManager_GetAudioDebuggingManager](capi-native-audio-debugging-manager-h.md#oh_audiomanager_getaudiodebuggingmanager). |
-| [OH_AudioSessionManager](capi-ohaudio-oh-audiosessionmanager.md) *session | Pointer to the target audio session manager instance to print snapshot. |
+| OH_AudioSessionManager *session | Pointer to the target audio session manager instance to print snapshot. |
 | int32_t fd | is a file descriptor, indicates the location that the snapshot information will be written to.If the fd is less than 0 or no writable, the snapshot information will be printed into the running log,otherwise the snapshot will be written into the file. |
 
 **Returns**:

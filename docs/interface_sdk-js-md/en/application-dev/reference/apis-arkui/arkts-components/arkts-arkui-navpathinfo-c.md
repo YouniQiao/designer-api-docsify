@@ -21,6 +21,8 @@ Creates a **NavPathInfo** object.
 
 **Since:** 10
 
+**Decorator:** @ohos
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -117,6 +119,8 @@ Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop), [popToName](ark
 **Type:** import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt;
 
 **Since:** 11
+
+**Decorator:** @ohos
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -8,6 +8,8 @@ declare type ReceiveCallback = import('../api/@ohos.base').Callback<Record<strin
 
 **起始版本：** 18
 
+**装饰器类型：** @ohos
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

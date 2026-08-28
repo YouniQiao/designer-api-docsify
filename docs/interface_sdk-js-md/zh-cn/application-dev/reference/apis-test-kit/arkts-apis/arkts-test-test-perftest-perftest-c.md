@@ -6,6 +6,8 @@ PerfTest类为白盒性能测试框架的总入口。提供测试任务创建、
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+**测试接口：** 此接口为测试接口。
+
 ## 导入模块
 
 ```TypeScript
@@ -24,6 +26,8 @@ static create(strategy: PerfTestStrategy): PerfTest
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -89,6 +93,8 @@ destroy(): void
 
 **系统能力：** SystemCapability.Test.PerfTest
 
+**测试接口：** 此接口为测试接口。
+
 **错误码：**
 
 | 错误码ID | 错误信息 |
@@ -133,6 +139,8 @@ getMeasureResult(metric: PerfMetric): PerfMeasureResult
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
+
+**测试接口：** 此接口为测试接口。
 
 **参数：**
 
@@ -192,6 +200,8 @@ run(): Promise<void>
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Test.PerfTest
+
+**测试接口：** 此接口为测试接口。
 
 **返回值：**
 

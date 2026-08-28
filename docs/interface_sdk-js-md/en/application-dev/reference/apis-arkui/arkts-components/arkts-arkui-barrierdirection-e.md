@@ -6,6 +6,8 @@ Defines the direction of a barrier.
 
 **System capability:** SystemCapability.Test.UiTest
 
+**Test API:** This is a test API.
+
 ## LEFT
 
 ```TypeScript
