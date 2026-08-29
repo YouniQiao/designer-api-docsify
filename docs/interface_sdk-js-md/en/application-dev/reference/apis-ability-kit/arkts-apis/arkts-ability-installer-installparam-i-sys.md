@@ -113,7 +113,9 @@ application's manifest, including the bundle name. It is used in the scenario of
 - **ohos.bms.param.installBundleName**: The value is the bundle name of the application. It is used in  
 application installation scenarios and supported since API version 23. If this field is passed during installation, the [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f.md) API can be called to obtain the installation status of the application.  
 - **ohos.bms.param.installAllowDowngrade**: If the value is **true**, the application can be installed in  
-downgrade mode (supported since API version 23). That is, if a higher version of the application is already installed on the device, a lower version can be installed over it. Only third-party applications with the signing certificate distribution type set to **app_gallery** or the signing certificate type set to **debug** support downgrade installation. To use downgrade installation, you must request the ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE permissions.
+downgrade mode (supported since API version 23). That is, if a higher version of the application is already installed on the device, a lower version can be installed over it. Only third-party applications with the signing certificate distribution type set to **app_gallery** or the signing certificate type set to **debug** support downgrade installation. To use downgrade installation, you must request the ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE permissions.  
+- **ohos.bms.param.deviceModeDistributionPolicy**: The value is a decimal string of a  
+[DeviceModeDistributionPolicy](arkts-ability-bundlemanager-devicemodedistributionpolicy-e-sys.md) enum value (for example, **"4"**). It specifies the device mode distribution policy for the application being installed (supported since API version 26.1.0). If this key is not present, the policy defaults to **UNSPECIFIED** (0). If the value is invalid (not a decimal string integer or out of range [0, 8]), this key is ignored and the policy defaults to **UNSPECIFIED**.
 
 **Type:** Array&lt;Parameters&gt;
 

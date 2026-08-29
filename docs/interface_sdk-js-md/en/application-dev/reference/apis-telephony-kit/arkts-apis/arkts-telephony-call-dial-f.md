@@ -22,8 +22,6 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 
 **Deprecated since:** 9
 
-**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md)
-
 **Required permissions:** ohos.permission.PLACE_CALL
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -66,8 +64,6 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 **Since:** 6
 
 **Deprecated since:** 9
-
-**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md)
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -118,8 +114,6 @@ Initiates a call. This API uses an asynchronous callback to return the result.
 **Since:** 6
 
 **Deprecated since:** 9
-
-**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md)
 
 **Required permissions:** ohos.permission.PLACE_CALL
 

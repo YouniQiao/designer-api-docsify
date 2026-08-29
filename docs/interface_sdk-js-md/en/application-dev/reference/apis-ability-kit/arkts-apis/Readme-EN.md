@@ -1063,6 +1063,8 @@
   <!--Del-->
   - [enableDynamicIcon(system api)](arkts-ability-bundlemanager-enabledynamicicon-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [filterBundleListByDeviceModeDistributionPolicies(system api)](arkts-ability-bundlemanager-filterbundlelistbydevicemodedistributionpolicies-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [getAbilityIcon(system api)](arkts-ability-bundlemanager-getabilityicon-f-sys.md)<!--DelEnd-->
   - [getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md)
   <!--Del-->
@@ -1257,6 +1259,8 @@
   - [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e.md)
   - [BundleType](arkts-ability-bundlemanager-bundletype-e.md)
   - [CompatiblePolicy](arkts-ability-bundlemanager-compatiblepolicy-e.md)
+  <!--Del-->
+  - [DeviceModeDistributionPolicy(system api)](arkts-ability-bundlemanager-devicemodedistributionpolicy-e-sys.md)<!--DelEnd-->
   - [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
   <!--Del-->
   - [ExtensionAbilityFlag(system api)](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md)<!--DelEnd-->

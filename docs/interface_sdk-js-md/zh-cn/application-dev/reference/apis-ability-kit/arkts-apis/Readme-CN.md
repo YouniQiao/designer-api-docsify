@@ -992,6 +992,8 @@
   <!--Del-->
   - [enableDynamicIcon(系统接口)](arkts-ability-bundlemanager-enabledynamicicon-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [filterBundleListByDeviceModeDistributionPolicies(系统接口)](arkts-ability-bundlemanager-filterbundlelistbydevicemodedistributionpolicies-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [getAbilityIcon(系统接口)](arkts-ability-bundlemanager-getabilityicon-f-sys.md)<!--DelEnd-->
   - [getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md)
   <!--Del-->
@@ -1180,6 +1182,8 @@
   - [BundleInstallStatus(系统接口)](arkts-ability-bundlemanager-bundleinstallstatus-e-sys.md)<!--DelEnd-->
   - [BundleType](arkts-ability-bundlemanager-bundletype-e.md)
   - [CompatiblePolicy](arkts-ability-bundlemanager-compatiblepolicy-e.md)
+  <!--Del-->
+  - [DeviceModeDistributionPolicy(系统接口)](arkts-ability-bundlemanager-devicemodedistributionpolicy-e-sys.md)<!--DelEnd-->
   - [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
   <!--Del-->
   - [ExtensionAbilityFlag(系统接口)](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md)<!--DelEnd-->

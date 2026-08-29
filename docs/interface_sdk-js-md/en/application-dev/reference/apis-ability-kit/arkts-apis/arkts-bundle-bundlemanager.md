@@ -63,6 +63,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [disableDynamicIcon](arkts-ability-bundlemanager-disabledynamicicon-f-sys.md) | Disables the dynamic icon based on the given bundle name and bundle options. This API uses a promise to return the result. |
 | [enableDynamicIcon](arkts-ability-bundlemanager-enabledynamicicon-f-sys.md) | Enables the dynamic icon based on the given bundle name and module name. This API uses a promise to return the result. |
 | [enableDynamicIcon](arkts-ability-bundlemanager-enabledynamicicon-f-sys.md) | Enables the dynamic icon based on the given bundle name, module name, and bundle options. This API uses a promise to return the result. |
+| [filterBundleListByDeviceModeDistributionPolicies](arkts-ability-bundlemanager-filterbundlelistbydevicemodedistributionpolicies-f-sys.md) | Filters the bundle list by device mode distribution policies. This API uses a promise to return the result. |
 | [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md) | Obtains the PixelMap of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result. |
 | [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md) | Obtains the PixelMap of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result. |
 | [getAbilityLabel](arkts-ability-bundlemanager-getabilitylabel-f-sys.md) | Obtains the ability label based on the given bundle name, module name, and ability name. This API uses an asynchronous callback to return the result. |
@@ -187,6 +188,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md) | Enumerates the application flags, which indicate the type of application information to obtain. |
 | [ApplicationInfoFlag](arkts-ability-bundlemanager-applicationinfoflag-e-sys.md) | Enumerates the application information flag, which describes the status between an application and user. |
 | [BundleFlag](arkts-ability-bundlemanager-bundleflag-e-sys.md) | Enumerates the bundle flags, which indicate the type of bundle information to obtain. |
+| [DeviceModeDistributionPolicy](arkts-ability-bundlemanager-devicemodedistributionpolicy-e-sys.md) | Define the enumeration of device mode distribution policies, which is used to specify how an application is distributed on a device. |
 | [ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md) | Enumerates the ExtensionAbility flags, which indicate the type of ExtensionAbility information to obtain. |
 | [ProfileType](arkts-ability-bundlemanager-profiletype-e-sys.md) | Enumerates the types of profiles (also called application files). |
 <!--DelEnd-->

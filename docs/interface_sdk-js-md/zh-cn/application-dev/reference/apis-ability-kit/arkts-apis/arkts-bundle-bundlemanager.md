@@ -62,6 +62,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [disableDynamicIcon](arkts-ability-bundlemanager-disabledynamicicon-f-sys.md) | 根据给定的bundleName和option禁用动态图标。使用Promise异步回调。 |
 | [enableDynamicIcon](arkts-ability-bundlemanager-enabledynamicicon-f-sys.md) | 根据给定的bundleName、moduleName使能动态图标。使用Promise异步回调。 |
 | [enableDynamicIcon](arkts-ability-bundlemanager-enabledynamicicon-f-sys.md) | 根据给定的bundleName、moduleName和option使能动态图标。使用Promise异步回调。 |
+| [filterBundleListByDeviceModeDistributionPolicies](arkts-ability-bundlemanager-filterbundlelistbydevicemodedistributionpolicies-f-sys.md) | 支持按设备模式分发策略过滤应用列表。该接口使用promise返回结果。 |
 | [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md) | 通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)，使用callback异步回调。 |
 | [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md) | 通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)，使用Promise异步回调。 |
 | [getAbilityLabel](arkts-ability-bundlemanager-getabilitylabel-f-sys.md) | 获取指定bundleName、moduleName和abilityName的label。使用callback异步回调。 |
@@ -184,6 +185,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [ApplicationInfoFlag](arkts-ability-bundlemanager-applicationinfoflag-e-sys.md) | 标识应用和用户之间的各种状态类型。 |
 | [BundleFlag](arkts-ability-bundlemanager-bundleflag-e-sys.md) | 包信息标志，指示需要获取的包信息的内容。 |
 | [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e-sys.md) | 标识应用的安装状态。 |
+| [DeviceModeDistributionPolicy](arkts-ability-bundlemanager-devicemodedistributionpolicy-e-sys.md) | 定义设备模式分发策略枚举，用于指定应用程序如何分发到设备上。 |
 | [ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md) | 扩展组件信息标志，指示需要获取的扩展组件信息的内容。 |
 | [ProfileType](arkts-ability-bundlemanager-profiletype-e-sys.md) | 标识配置文件类型。 |
 <!--DelEnd-->

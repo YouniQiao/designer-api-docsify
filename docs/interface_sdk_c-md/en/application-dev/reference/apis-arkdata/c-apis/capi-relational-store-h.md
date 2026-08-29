@@ -799,7 +799,7 @@ Creates an [OH_VObject](capi-rdb-oh-vobject.md) instance.
 
 | Type | Description |
 | -- | -- |
-| OH_VObject * | If the creation is successful, a pointer to the instance of the @link OH_VObject} structure is returned,  otherwise NULL is returned. |
+| [OH_VObject *](capi-rdb-oh-vobject.md) | If the creation is successful, a pointer to the instance of the @link OH_VObject} structure is returned,  otherwise NULL is returned. |
 
 **Reference**:
 
@@ -1780,7 +1780,7 @@ Set table to be distributed table.
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
 | const char *tableName | Indicates the name of the table to check. |
 | const char *columnName | Indicates the name of the column corresponding to the primary key.If the table has no primary key , please pass in "rowid". |
-| OH_VObject *values | Indicates the primary keys of the rows to check.If the table has no primary key , please pass in the row-ids of the rows to check. |
+| [OH_VObject](capi-rdb-oh-vobject.md) *values | Indicates the primary keys of the rows to check.If the table has no primary key , please pass in the row-ids of the rows to check. |
 
 **Returns**:
 

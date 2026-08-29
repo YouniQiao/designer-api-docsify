@@ -1,4 +1,4 @@
-- [Ability Kit (1475)](interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ability.md)
+- [Ability Kit (1477)](interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ability.md)
 - [Accessibility Kit (126)](interface_sdk-js-md/en/application-dev/reference/apis-accessibility-kit/arkts-apis/arkts-accessibility.md)
 - [Ads Kit (27)](interface_sdk-js-md/en/application-dev/reference/apis-ads-kit/arkts-apis/arkts-advertising.md)
 - [Api10 Less Deprecated Modules (4)](interface_sdk-js-md/en/application-dev/reference/apis-api10-less-deprecated-modules/arkts-apis/arkts-bytrace.md)

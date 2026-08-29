@@ -423,7 +423,7 @@ Request to set playback position.
 | Parameter | Description |
 | -- | -- |
 | [OH_AVSession](capi-ohavsession-oh-avsession.md)* avsession | The avsession instance pointer |
-| [AVSession_PlaybackPosition](capi-ohavsession-avsession-playbackposition.md)* playbackPosition | The playbackPosition to set |
+| AVSession_PlaybackPosition* playbackPosition | The playbackPosition to set |
 
 **Returns**:
 
@@ -957,7 +957,7 @@ Acquire current output device.
 | Parameter | Description |
 | -- | -- |
 | [OH_AVSession](capi-ohavsession-oh-avsession.md)* avsession | The avsession instance pointer |
-| AVSession_OutputDeviceInfo** outputDeviceInfo | Pointer [AVSession_OutputDeviceInfo](capi-ohavsession-avsession-outputdeviceinfo.md) to a variable to receive the OutputDeviceInfoDo not release the outputDeviceInfo pointer separately, instead call [OH_AVSession_ReleaseOutputDevice](capi-native-avsession-h.md#oh_avsession_releaseoutputdevice)to release the outputDeviceInfo when it is not used anymore. |
+| [AVSession_OutputDeviceInfo](capi-ohavsession-avsession-outputdeviceinfo.md)** outputDeviceInfo | Pointer [AVSession_OutputDeviceInfo](capi-ohavsession-avsession-outputdeviceinfo.md) to a variable to receive the OutputDeviceInfoDo not release the outputDeviceInfo pointer separately, instead call [OH_AVSession_ReleaseOutputDevice](capi-native-avsession-h.md#oh_avsession_releaseoutputdevice)to release the outputDeviceInfo when it is not used anymore. |
 
 **Returns**:
 
@@ -982,7 +982,7 @@ Release outputDeviceInfo object.
 | Parameter | Description |
 | -- | -- |
 | [OH_AVSession](capi-ohavsession-oh-avsession.md)* avsession | The avsession instance pointer |
-| AVSession_OutputDeviceInfo *outputDeviceInfo | outputdeivce should be released. |
+| [AVSession_OutputDeviceInfo](capi-ohavsession-avsession-outputdeviceinfo.md) *outputDeviceInfo | outputdeivce should be released. |
 
 **Returns**:
 
