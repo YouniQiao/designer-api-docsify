@@ -20,7 +20,7 @@ begin: number
 
 动画插值起点。
 
-**说明:** 会影响[onFrame](../../../reference/apis-arkui/js-apis-animator.md#属性)回调的入参值。
+**说明:** 会影响[onFrame](arkts-arkui-animator-animatorresult-i.md#onframe)回调的入参值。
 
 默认值：0
 
@@ -38,7 +38,7 @@ begin: number
 delay: number
 ```
 
-动画延时播放时长，单位毫秒，设置为0时，表示不延时。设置为负数时动画提前播放，如果提前播放的时长大于动画总时长，动画直接过渡到终点。
+动画延时播放时长，单位毫秒，设置为0时，表示不延时。设置为负数时动画提前播放，如果提前播放的时长大于动画总时长（由duration和iterations参数共同决定），动画直接过渡到终点。
 
 默认值：0
 
@@ -79,7 +79,7 @@ struct AnimatorTest {
 direction: "normal" | "reverse" | "alternate" | "alternate-reverse"
 ```
 
-动画播放模式。
+动画播放方向。
 
 'normal'： 动画正向循环播放。
 
@@ -90,6 +90,8 @@ direction: "normal" | "reverse" | "alternate" | "alternate-reverse"
 'alternate-reverse'：动画反向交替循环播放，奇数次反向播放，偶数次正向播放。
 
 默认值：'normal'
+
+**说明：** 使用interpolating-spring曲线时，direction固定设置为'normal'，其他设置无效。
 
 **类型：** "normal" \| "reverse" \| "alternate" \| "alternate-reverse"
 
@@ -134,6 +136,8 @@ duration: number
 
 默认值：0
 
+**说明：** 使用interpolating-spring曲线时，duration不生效，由弹簧参数决定。
+
 **类型：** number
 
 **起始版本：** 6
@@ -173,7 +177,7 @@ easing: string
 
 动画插值曲线，支持的曲线类型可参考表1。
 
-非法字符串时取:"ease"。
+非法字符串时取："ease"。
 
 **类型：** string
 
@@ -214,7 +218,7 @@ end: number
 
 动画插值终点。
 
-**说明:** 会影响[onFrame](../../../reference/apis-arkui/js-apis-animator.md#属性)回调的入参值。
+**说明:** 会影响[onFrame](arkts-arkui-animator-animatorresult-i.md#onframe)回调的入参值。
 
 默认值：1
 
@@ -232,7 +236,7 @@ end: number
 fill: "none" | "forwards" | "backwards" | "both"
 ```
 
-动画执行后是否恢复到初始状态，动画执行后，动画结束时的状态（在最后一个关键帧中定义）将保留。
+动画填充模式，决定动画执行前（delay期间）和执行后是否将关键帧样式应用到目标上。
 
 'none'：在动画执行之前和之后都不会应用任何样式到目标上。
 
@@ -280,6 +284,8 @@ iterations: number
 ```
 
 动画播放次数。设置为0时不播放，设置为-1时无限次播放，设置大于0时为播放次数。
+
+**说明：** 使用interpolating-spring曲线时，iterations固定设置为1，其他设置无效。
 
 **说明:** 设置为除-1外其他负数视为无效取值，无效取值动画默认播放1次。
 

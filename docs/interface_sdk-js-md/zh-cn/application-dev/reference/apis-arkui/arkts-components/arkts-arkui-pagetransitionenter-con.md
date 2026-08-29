@@ -6,7 +6,7 @@
 declare const PageTransitionExit: PageTransitionExitInterface
 ```
 
-Defines PageTransitionExit Component.
+定义PageTransitionExit组件。
 
 **起始版本：** 7
 

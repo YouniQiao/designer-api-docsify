@@ -21,9 +21,9 @@
 angle: ParticleTuple<number, number>
 ```
 
-表示速度的方向（单位为角度）。以元素几何中心为坐标原点，水平方向为X轴，正数表示顺时针方向旋转角度。
+表示速度的方向，单位为度（°）。以元素几何中心为坐标原点，水平方向为X轴，正数表示顺时针方向旋转角度。
 
-默认值：[0.0,0.0]
+默认值：{range:[0.0,0.0]}
 
 **类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
@@ -43,7 +43,7 @@ speed: ParticleTuple<number, number>
 
 表示速度大小。
 
-默认值：[0.0,0.0]
+默认值：{range:[0.0,0.0]}
 
 **类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 

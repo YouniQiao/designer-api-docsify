@@ -2,8 +2,6 @@
 
 系统材质类型枚举。
 
-@enum { number } [since 23 - 24]
-
 **起始版本：** 26.0.0
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

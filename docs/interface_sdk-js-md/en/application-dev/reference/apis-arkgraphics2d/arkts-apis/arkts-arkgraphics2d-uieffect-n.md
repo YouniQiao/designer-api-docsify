@@ -32,6 +32,7 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | [createBrightnessBlender](arkts-arkgraphics2d-uieffect-createbrightnessblender-f-sys.md) | Creates a BrightnessBlender instance for adding a brightness effect to a component. |
 | [createHdrBrightnessBlender](arkts-arkgraphics2d-uieffect-createhdrbrightnessblender-f-sys.md) | Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness effect to a component. |
 | [createHdrDarkenBlender](arkts-arkgraphics2d-uieffect-createhdrdarkenblender-f-sys.md) | Creates an HdrDarkenBlender instance for HDR layer darken blending effect. |
+| [createColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-createcolorfulbrightnessblender-f-sys.md) | Creates a ColorfulBrightnessBlender instance for adding a colorful brightness darken effect to a component. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -62,6 +63,8 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | [LiquidMaterialEffectParam](arkts-arkgraphics2d-uieffect-liquidmaterialeffectparam-i-sys.md) | Material effect parameters, used to control the display properties of the material such as refraction, reflection, perturbation, and overlay color. |
 | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | Brightness blender, used to add a brightness effect to a specified component. Before calling BrightnessBlender, you need to first create a BrightnessBlender instance through createBrightnessBlender. |
 | [HdrDarkenBlender](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | HDR-adaptive darken blender, used to add a darken effect to a specified component. Before calling HdrDarkenBlender, you need to first create an HdrDarkenBlender instance through createHdrDarkenBlender. |
+| [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md) | Parameter list of ColorfulBrightnessBlenderOptions, used to configure various properties of the colorful brightness darken effect, including the foreground darken weight, brightness darken strength, luma difference threshold, and HDR switch parameters. |
+| [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | Colorful brightness darken blender, used to add a colorful brightness darken effect to a specified component. Before calling ColorfulBrightnessBlender, you need to first create a ColorfulBrightnessBlender instance through createColorfulBrightnessBlender. |
 | [Color](arkts-arkgraphics2d-uieffect-color-i-sys.md) | RGBA color description. |
 <!--DelEnd-->
 

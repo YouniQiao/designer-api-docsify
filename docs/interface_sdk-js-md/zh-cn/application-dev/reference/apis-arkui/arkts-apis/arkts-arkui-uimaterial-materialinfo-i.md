@@ -18,7 +18,7 @@ import { uiMaterial } from '@kit.ArkUI';
 state: MaterialState
 ```
 
-材质使能状态配置。
+材质使能状态配置，决定当前应用沉浸式系统材质的使能模式。不同状态影响组件默认是否开启沉浸式系统材质效果，具体参考[MaterialState](arkts-arkui-uimaterial-materialstate-e.md)枚举说明。
 
 **类型：** [MaterialState](arkts-arkui-uimaterial-materialstate-e.md)
 
@@ -38,7 +38,7 @@ state: MaterialState
 type: MaterialType
 ```
 
-材质类型标识，表示当前配置对应的材质类型。该值仅用于类型标识，不映射到底层功能。
+系统材质类型标识，表示当前配置对应的材质类型。该值仅用于类型标识，不映射到底层功能。
 
 **类型：** MaterialType
 

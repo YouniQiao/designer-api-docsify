@@ -1,9 +1,5 @@
 # DismissContentCoverAction
 
-Component content cover dismiss
-
-@interface DismissContentCoverAction
-
 **起始版本：** 12
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,7 +15,7 @@ Component content cover dismiss
 dismiss: Callback<void>
 ```
 
-全屏模态页面关闭回调函数。开发者需要退出页面时调用。
+全屏模态页面关闭回调函数。须在onWillDismiss回调中调用此方法以关闭全屏模态页面；未调用时，全屏模态页面将保持打开状态不关闭。
 
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 

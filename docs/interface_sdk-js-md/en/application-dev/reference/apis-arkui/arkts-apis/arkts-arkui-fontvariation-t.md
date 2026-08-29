@@ -14,6 +14,8 @@ Define the FontVariation type.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.1.0.
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** import('../api/@ohos.graphics.text').default.FontVariation

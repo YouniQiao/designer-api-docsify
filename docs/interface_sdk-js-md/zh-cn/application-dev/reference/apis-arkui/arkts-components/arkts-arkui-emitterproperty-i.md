@@ -17,7 +17,7 @@
 annulusRegion?: ParticleAnnulusRegion
 ```
 
-环形发射器参数。需要对应index的发射器形状为环形才生效。
+环形发射器参数。需要对应index的发射器形状为环形才生效，且对于环形发射器，position和size不生效。
 
 **类型：** [ParticleAnnulusRegion](arkts-arkui-particleannulusregion-i.md)
 
@@ -37,7 +37,7 @@ emitRate?: number
 
 发射器发射速率，即每秒发射粒子的数量。
 
-未传入时保持其当前的发射速率， 传入值小于0时取默认值5。emitRate值超过5000时会极大影响性能，建议设置参数小于5000。
+未传入时保持其当前的发射速率， 传入值小于0时取默认值5。emitRate值超过5000时会严重影响性能，可能导致帧率大幅下降，建议设置参数小于5000。
 
 **类型：** number
 
@@ -52,7 +52,7 @@ emitRate?: number
 ## index
 
 ```TypeScript
-index : number
+index: number
 ```
 
 索引，取整，按初始化参数中发射器的数组索引指定对应的发射器。异常默认值为0。
@@ -73,9 +73,9 @@ index : number
 position?: PositionT<number>
 ```
 
-发射器位置的数组，只支持number类型。
+发射器位置，只支持number类型。
 
-未传入时保持其当前的发射器位置。需传入两个有效参数，若其中一个为异常值，则position不生效。
+未传入时保持其当前的发射器位置。需传入两个有效参数，若其中一个为异常值，则position不生效。当对应index的发射器形状为环形（ANNULUS）时，position不生效。
 
 x、y的取值范围：(-∞, +∞)。
 
@@ -95,9 +95,9 @@ x、y的取值范围：(-∞, +∞)。
 size?: SizeT<number>
 ```
 
-发射窗口的大小，只支持number类型。
+发射器的大小，只支持number类型。
 
-未传入时保持其当前发射窗口大小。需传入两个有效参数且都大于0，若其中一个为异常值，则size不生效。
+未传入时保持其当前发射器大小。需传入两个有效参数且都大于0，若其中一个为异常值，则size不生效。当对应index的发射器形状为环形（ANNULUS）时，size不生效。
 
 **类型：** [SizeT](arkts-arkui-sizet-t.md)&lt;number&gt;
 

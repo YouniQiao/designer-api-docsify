@@ -4,7 +4,7 @@
 declare type PositionT<T> = import('../api/arkui/Graphics').PositionT<T>
 ```
 
-Defines the PositionT type.
+用于设置或返回组件的位置。
 
 **起始版本：** 12
 

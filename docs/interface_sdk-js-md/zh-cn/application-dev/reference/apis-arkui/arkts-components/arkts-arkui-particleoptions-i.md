@@ -21,7 +21,7 @@ acceleration?: AccelerationOptions<ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER>
 
 **说明：**
 
-speed表示加速度大小，angle表示加速度方向（单位为角度）。
+speed表示加速度大小，angle表示加速度方向（单位：度）。
 
 默认值：{ speed:{range:[0.0,0.0]},angle:{range:[0.0,0.0]} }
 
@@ -47,7 +47,7 @@ color?: ParticleColorPropertyOptions<COLOR_UPDATER>
 
 **说明：**
 
-默认值：{ range:[Color.White,Color.White] } 。图片粒子不支持设置颜色。
+默认值：{ range:[Color.White,Color.White] }。图片粒子不支持设置颜色。
 
 **类型：** [ParticleColorPropertyOptions](arkts-arkui-particlecolorpropertyoptions-i.md)&lt;COLOR_UPDATER&gt;
 
@@ -129,7 +129,7 @@ scale?: ParticlePropertyOptions<number, SCALE_UPDATER>
 spin?: ParticlePropertyOptions<number, SPIN_UPDATER>
 ```
 
-粒子自旋角度配置。
+粒子自旋角度配置，单位为度（°）。
 
 默认值：{range:[0.0,0.0]}
 
@@ -157,7 +157,7 @@ velocity?: VelocityOptions
 
 **说明：**
 
-speed表示速度大小。angle表示速度的方向（单位为角度），以元素几何中心为坐标原点，水平方向为X轴，正数表示顺时针方向旋转角度。
+speed表示速度大小。angle表示速度的方向（单位：度），以元素几何中心为坐标原点，水平方向为X轴，正数表示顺时针方向旋转角度。
 
 默认值：{ speed:[0.0,0.0],angle:[0.0,0.0] }
 

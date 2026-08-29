@@ -2,6 +2,8 @@
 
 可滑动面板，提供一种轻量的内容展示窗口，方便在不同尺寸中切换。
 
+> **说明：** > > 从API version 12开始，该组件不再维护，推荐使用通用属性[bindSheet](arkts-arkui-commonmethod-c.md#bindsheet)。
+
 ## Panel
 
 ```TypeScript
@@ -9,6 +11,10 @@ Panel(show: boolean)
 ```
 
 滑动面板组件。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 12开始废弃。
 
 **起始版本：** 7
 
@@ -22,7 +28,7 @@ Panel(show: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| show | boolean | 是 | 控制Panel显示或隐藏，true表示显示面板，false表示隐藏面板。 |
+| show | boolean | 是 | 控制Panel显示或隐藏，true表示显示面板，false表示隐藏面板。 **说明：**  如果设置为false时，则不占位隐藏。Visibility.None或show之间有一个生效时，都会生效不占位隐藏。 属性show的优先级高于此参数，当属性show被设置时，本参数可能不生效。 |
 
 ## 汇总
 
@@ -30,9 +36,9 @@ Panel(show: boolean)
 
 | 名称 | 说明 |
 | --- | --- |
-| [PanelHeight](arkts-arkui-panelheight-e.md) | 自定义内容显示区域的枚举。 |
-| [PanelMode](arkts-arkui-panelmode-e.md) | 设置滑动面板的初始状态 |
-| [PanelType](arkts-arkui-paneltype-e.md) | 设置滑动面板的类型 |
+| [PanelHeight](arkts-arkui-panelheight-e.md) | 设置可滑动面板的高度。 |
+| [PanelMode](arkts-arkui-panelmode-e.md) | 设置可滑动面板的初始状态 |
+| [PanelType](arkts-arkui-paneltype-e.md) | 设置可滑动面板的类型 |
 
 ## 示例
 

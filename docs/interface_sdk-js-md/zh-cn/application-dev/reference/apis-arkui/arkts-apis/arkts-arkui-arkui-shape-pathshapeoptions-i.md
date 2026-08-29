@@ -18,7 +18,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 commands?: string
 ```
 
-绘制路径的指令。默认值为空字符串，不设置时不绘制路径。更多说明请参考commands支持的绘制命令。
+绘制路径的指令。默认值为空字符串，不设置时不绘制路径。
 
 **类型：** string
 

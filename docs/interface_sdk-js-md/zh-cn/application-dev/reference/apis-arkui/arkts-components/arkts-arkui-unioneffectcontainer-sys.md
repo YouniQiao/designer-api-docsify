@@ -1,6 +1,6 @@
 # UnionEffectContainer (System API)
 
-Defines UnionEffectContainer Component.
+定义UnionEffectContainer组件.
 
 ## UnionEffectContainer
 
@@ -8,7 +8,7 @@ Defines UnionEffectContainer Component.
 UnionEffectContainer(options?: UnionEffectContainerOptions)
 ```
 
-Specify the construction options for the UnionEffectContainer to create the UnionEffectContainer component.
+创建形状融合容器组件。
 
 **起始版本：** 23
 
@@ -22,7 +22,7 @@ Specify the construction options for the UnionEffectContainer to create the Unio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [UnionEffectContainerOptions](arkts-arkui-unioneffectcontaineroptions-i-sys.md) | 否 | UnionEffectContainer constructor options. |
+| options | [UnionEffectContainerOptions](arkts-arkui-unioneffectcontaineroptions-i-sys.md) | 否 | UnionEffectContainer构造参数，用于决定收集到的后代组件形状的融合形变程度。 默认值：{spacing:0} |
 
 ## 汇总
 
@@ -36,7 +36,7 @@ Specify the construction options for the UnionEffectContainer to create the Unio
 
 | 名称 | 说明 |
 | --- | --- |
-| [UnionMode](arkts-arkui-unionmode-e-sys.md) | 融合效果枚举。 |
+| [UnionMode](arkts-arkui-unionmode-e-sys.md) | 设置融合效果模式。 |
 
 ## 示例
 

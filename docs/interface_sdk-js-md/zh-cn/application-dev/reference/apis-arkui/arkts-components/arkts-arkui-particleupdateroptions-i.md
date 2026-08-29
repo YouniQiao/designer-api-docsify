@@ -1,6 +1,6 @@
 # ParticleUpdaterOptions
 
-颜色属性变化配置。
+属性变化配置。
 
 > **说明：**
 > 
@@ -45,7 +45,7 @@ config: ParticlePropertyUpdaterConfigs<TYPE>[UPDATER]
 type: UPDATER
 ```
 
-表示颜色属性变化类型。
+表示属性变化类型。
 
 默认值：type默认为ParticleUpdater.NONE。
 

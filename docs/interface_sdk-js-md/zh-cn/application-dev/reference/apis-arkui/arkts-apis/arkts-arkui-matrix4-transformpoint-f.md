@@ -14,8 +14,6 @@ function transformPoint(options: [number, number]): [number, number]
 
 Matrix的坐标点转换函数，可以将当前的变换效果作用到一个坐标点上。
 
-> **说明：**
-
 **起始版本：** 7
 
 **废弃版本：** 10
@@ -34,7 +32,7 @@ Matrix的坐标点转换函数，可以将当前的变换效果作用到一个�
 
 | 类型 | 说明 |
 | --- | --- |
-| [number, number] | 返回矩阵变换后的Point对象。 |
+| [number, number] | 返回矩阵变换后的坐标点，格式为[x, y]。 |
 
 **示例**
 

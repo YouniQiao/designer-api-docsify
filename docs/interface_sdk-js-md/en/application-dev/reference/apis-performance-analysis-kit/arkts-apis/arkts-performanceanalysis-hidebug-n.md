@@ -69,6 +69,7 @@ HiDebug provides multiple methods for debugging and profiling applications. With
 | [getGwpAsanGrayscaleState](arkts-performanceanalysis-hidebug-getgwpasangrayscalestate-f.md) | Obtains the number of remaining days for enabling GWP-ASan. |
 | [setProcDumpInSharedOOM](arkts-performanceanalysis-hidebug-setprocdumpinsharedoom-f.md) | Changes the dump heap snapshot from the thread-level to the process-level. |
 | [getRssInfo](arkts-performanceanalysis-hidebug-getrssinfo-f.md) | Obtains the physical memory usage of the application process. Reads data from the **\/proc/{pid}/status** node. |
+| [getAppRunningUniqueId](arkts-performanceanalysis-hidebug-getapprunninguniqueid-f.md) | Obtains the running unique identifier of the application. |
 
 ### Interfaces
 

@@ -37,6 +37,7 @@
     - [getAppNativeMemInfo](arkts-performanceanalysis-hidebug-getappnativememinfo-f.md)
     - [getAppNativeMemInfoAsync](arkts-performanceanalysis-hidebug-getappnativememinfoasync-f.md)
     - [getAppNativeMemInfoWithCache](arkts-performanceanalysis-hidebug-getappnativememinfowithcache-f.md)
+    - [getAppRunningUniqueId](arkts-performanceanalysis-hidebug-getapprunninguniqueid-f.md)
     - [getAppThreadCpuUsage](arkts-performanceanalysis-hidebug-getappthreadcpuusage-f.md)
     - [getAppVMMemoryInfo](arkts-performanceanalysis-hidebug-getappvmmemoryinfo-f.md)
     - [getAppVMObjectUsedSize](arkts-performanceanalysis-hidebug-getappvmobjectusedsize-f.md)

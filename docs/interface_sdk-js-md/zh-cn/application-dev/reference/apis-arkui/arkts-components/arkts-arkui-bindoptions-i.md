@@ -17,7 +17,7 @@
 onAppear?: () => void
 ```
 
-半模态页面显示（动画结束后）回调函数。
+半模态页面显示（动画结束后）回调函数。不设置时不触发回调。
 
 **起始版本：** 10
 
@@ -33,7 +33,7 @@ onAppear?: () => void
 onDisappear?: () => void
 ```
 
-半模态页面回退（动画结束后）回调函数。
+半模态页面回退（动画结束后）回调函数。不设置时不触发回调。
 
 **起始版本：** 10
 
@@ -49,7 +49,7 @@ onDisappear?: () => void
 onWillAppear?: () => void
 ```
 
-半模态页面显示（动画开始前）回调函数。
+半模态页面显示（动画开始前）回调函数。与onAppear的时序关系：onWillAppear在显示动画开始前触发，onAppear在显示动画结束后触发，两者可同时使用。如需在动画开始前做准备工作建议使用onWillAppear，如需在动画结束后做UI更新建议使用onAppear。不设置时不触发回调。
 
 **起始版本：** 12
 
@@ -65,7 +65,7 @@ onWillAppear?: () => void
 onWillDisappear?: () => void
 ```
 
-半模态页面回退（动画开始前）回调函数。
+半模态页面回退（动画开始前）回调函数。与onDisappear的时序关系：onWillDisappear在回退动画开始前触发，onDisappear在回退动画结束后触发，两者可同时使用。如需在动画开始前做状态保存建议使用onWillDisappear，如需在动画结束后做资源释放建议使用onDisappear。不设置时不触发回调。
 
 **说明：**
 
@@ -88,6 +88,10 @@ backgroundColor?: ResourceColor
 半模态页面的背板颜色。
 
 默认值：Color.White。
+
+**说明：**
+
+设置systemMaterial属性时，该属性效果可能被覆盖，不建议与systemMaterial一起使用。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

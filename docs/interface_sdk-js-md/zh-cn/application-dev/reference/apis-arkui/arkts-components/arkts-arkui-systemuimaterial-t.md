@@ -1,4 +1,4 @@
-# SystemUiMaterial（系统接口）
+# SystemUiMaterial
 
 ```TypeScript
 declare type SystemUiMaterial = import('../api/@ohos.arkui.uiMaterial').default.Material
@@ -14,10 +14,8 @@ declare type SystemUiMaterial = import('../api/@ohos.arkui.uiMaterial').default.
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**系统接口：** 此接口为系统接口。
 
 **属性类型：** import('../api/@ohos.arkui.uiMaterial').default.Material

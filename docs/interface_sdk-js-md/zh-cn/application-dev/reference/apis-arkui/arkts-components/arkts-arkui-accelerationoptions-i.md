@@ -21,7 +21,7 @@
 angle?: ParticlePropertyOptions<number, ACC_ANGLE_UPDATER>
 ```
 
-表示加速度方向（单位为角度）。
+表示加速度方向，单位为度（°）。
 
 默认值：{range:[0.0,0.0]}
 
@@ -41,7 +41,7 @@ angle?: ParticlePropertyOptions<number, ACC_ANGLE_UPDATER>
 speed?: ParticlePropertyOptions<number, ACC_SPEED_UPDATER>
 ```
 
-表示加速度大小。
+表示加速度大小。单位：vp/s²
 
 默认值：{range:[0.0,0.0]}
 

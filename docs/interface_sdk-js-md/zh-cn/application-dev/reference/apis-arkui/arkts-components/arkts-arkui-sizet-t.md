@@ -4,7 +4,7 @@
 declare type SizeT<T> = import('../api/arkui/Graphics').SizeT<T>
 ```
 
-Defines the SizeT type.
+定义Size类型。
 
 **起始版本：** 12
 

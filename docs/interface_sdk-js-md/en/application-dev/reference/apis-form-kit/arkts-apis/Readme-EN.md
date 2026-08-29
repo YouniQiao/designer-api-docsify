@@ -3,7 +3,11 @@
 <!--Del-->
 - [@ohos.app.form.formAgent](arkts-app-form-formagent.md)<!--DelEnd-->
   <!--Del-->
+  - [getAvailableFormHostServices(system api)](arkts-form-formagent-getavailableformhostservices-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [requestPublishForm(system api)](arkts-form-formagent-requestpublishform-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [requestPublishFormCrossDevice(system api)](arkts-form-formagent-requestpublishformcrossdevice-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateFormCrossBundle(system api)](arkts-form-formagent-updateformcrossbundle-f-sys.md)<!--DelEnd-->
 - [@ohos.app.form.formBindingData](arkts-app-form-formbindingdata.md)
@@ -83,6 +87,8 @@
   <!--Del-->
   - [recycleForms(system api)](arkts-form-formhost-recycleforms-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [registerFormHostService(system api)](arkts-form-formhost-registerformhostservice-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [releaseForm(system api)](arkts-form-formhost-releaseform-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [requestForm(system api)](arkts-form-formhost-requestform-f-sys.md)<!--DelEnd-->
@@ -97,6 +103,8 @@
   <!--Del-->
   - [shareForm(system api)](arkts-form-formhost-shareform-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [unregisterFormHostService(system api)](arkts-form-formhost-unregisterformhostservice-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [updateFormLocation(system api)](arkts-form-formhost-updateformlocation-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateFormLockedState(system api)](arkts-form-formhost-updateformlockedstate-f-sys.md)<!--DelEnd-->
@@ -107,6 +115,8 @@
   - [ChangeSceneAnimationStateRequest(system api)](arkts-form-forminfo-changesceneanimationstaterequest-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FormCustomConfig(system api)](arkts-form-forminfo-formcustomconfig-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FormHostServiceInfo(system api)](arkts-form-forminfo-formhostserviceinfo-i-sys.md)<!--DelEnd-->
   - [FormInfo](arkts-form-forminfo-forminfo-i.md)
   <!--Del-->
   - [FormInfo(system api)](arkts-form-forminfo-forminfo-i-sys.md)<!--DelEnd-->
@@ -122,7 +132,11 @@
   <!--Del-->
   - [OverflowRequest(system api)](arkts-form-forminfo-overflowrequest-i-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [PeerFormHostServiceInfo(system api)](arkts-form-forminfo-peerformhostserviceinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [PublishFormCrossBundleInfo(system api)](arkts-form-forminfo-publishformcrossbundleinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PublishFormCrossDeviceResult(system api)](arkts-form-forminfo-publishformcrossdeviceresult-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [PublishFormResult(system api)](arkts-form-forminfo-publishformresult-i-sys.md)<!--DelEnd-->
   - [Rect](arkts-form-forminfo-rect-i.md)

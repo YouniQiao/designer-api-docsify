@@ -32,6 +32,7 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | [createBrightnessBlender](arkts-arkgraphics2d-uieffect-createbrightnessblender-f-sys.md) | 创建BrightnessBlender实例用于给组件添加提亮效果。 |
 | [createHdrBrightnessBlender](arkts-arkgraphics2d-uieffect-createhdrbrightnessblender-f-sys.md) | 创建HdrBrightnessBlender实例用于给组件添加支持HDR的提亮效果。 |
 | [createHdrDarkenBlender](arkts-arkgraphics2d-uieffect-createhdrdarkenblender-f-sys.md) | 创建HdrDarkenBlender实例用于HDR图层的压暗混合效果。 |
+| [createColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-createcolorfulbrightnessblender-f-sys.md) | 创建ColorfulBrightnessBlender实例用于给组件添加彩色提亮压暗效果。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -62,6 +63,8 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | [LiquidMaterialEffectParam](arkts-arkgraphics2d-uieffect-liquidmaterialeffectparam-i-sys.md) | 材质效果参数，用于控制材质的折射、反射、扰动和叠加颜色等显示属性。 |
 | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | 提亮混合器，用于将提亮效果添加到指定的组件上。在调用BrightnessBlender前，需要先通过createBrightnessBlender创建一个BrightnessBlender实例。 |
 | [HdrDarkenBlender](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | 支持HDR的压暗混合器，用于将压暗效果添加到指定的组件上。在调用HdrDarkenBlender前，需要先通过createHdrDarkenBlender创建一个HdrDarkenBlender实例。 |
+| [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md) | ColorfulBrightnessBlenderOptions的参数列表，用于配置彩色提亮压暗效果的各项属性，包括前景压暗权重、提亮压暗强度、亮度差阈值和hdr开关参数。 |
+| [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | 彩色提亮压暗混合器，用于将提亮效果添加到指定的组件上。在调用ColorfulBrightnessBlender前，需要先通过createColorfulBrightnessBlender创建一个ColorfulBrightnessBlender实例。 |
 | [Color](arkts-arkgraphics2d-uieffect-color-i-sys.md) | RGBA格式的颜色描述。 |
 <!--DelEnd-->
 

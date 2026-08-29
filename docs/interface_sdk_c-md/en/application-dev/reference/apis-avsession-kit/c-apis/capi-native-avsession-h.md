@@ -373,7 +373,7 @@ Request to set av metadata.
 | Parameter | Description |
 | -- | -- |
 | [OH_AVSession](capi-ohavsession-oh-avsession.md)* avsession | The avsession instance pointer |
-| OH_AVMetadata* avmetadata | The metadata to set |
+| [OH_AVMetadata](capi-ohavsession-oh-avmetadatastruct.md)* avmetadata | The metadata to set |
 
 **Returns**:
 
@@ -957,7 +957,7 @@ Acquire current output device.
 | Parameter | Description |
 | -- | -- |
 | [OH_AVSession](capi-ohavsession-oh-avsession.md)* avsession | The avsession instance pointer |
-| [AVSession_OutputDeviceInfo](capi-ohavsession-avsession-outputdeviceinfo.md)** outputDeviceInfo | Pointer [AVSession_OutputDeviceInfo](capi-ohavsession-avsession-outputdeviceinfo.md) to a variable to receive the OutputDeviceInfoDo not release the outputDeviceInfo pointer separately, instead call [OH_AVSession_ReleaseOutputDevice](capi-native-avsession-h.md#oh_avsession_releaseoutputdevice)to release the outputDeviceInfo when it is not used anymore. |
+| AVSession_OutputDeviceInfo** outputDeviceInfo | Pointer [AVSession_OutputDeviceInfo](capi-ohavsession-avsession-outputdeviceinfo.md) to a variable to receive the OutputDeviceInfoDo not release the outputDeviceInfo pointer separately, instead call [OH_AVSession_ReleaseOutputDevice](capi-native-avsession-h.md#oh_avsession_releaseoutputdevice)to release the outputDeviceInfo when it is not used anymore. |
 
 **Returns**:
 
@@ -982,7 +982,7 @@ Release outputDeviceInfo object.
 | Parameter | Description |
 | -- | -- |
 | [OH_AVSession](capi-ohavsession-oh-avsession.md)* avsession | The avsession instance pointer |
-| [AVSession_OutputDeviceInfo](capi-ohavsession-avsession-outputdeviceinfo.md) *outputDeviceInfo | outputdeivce should be released. |
+| AVSession_OutputDeviceInfo *outputDeviceInfo | outputdeivce should be released. |
 
 **Returns**:
 

@@ -60,7 +60,7 @@ ELLIPSE = 'ellipse'
 ANNULUS = 'annulus'
 ```
 
-粒子发射器为环形。
+粒子发射器为环形。使用此形状时必须配置annulusRegion参数，且position和size参数不生效。
 
 **起始版本：** 20
 

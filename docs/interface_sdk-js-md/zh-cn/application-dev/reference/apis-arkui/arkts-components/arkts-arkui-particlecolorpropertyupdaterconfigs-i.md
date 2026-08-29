@@ -53,7 +53,7 @@
 [ParticleUpdater.RANDOM]: ParticleColorOptions
 ```
 
-表示变化方式为均匀变化的时候，在区间内随机生成一个差值。r、g、b、a四个颜色通道每秒分别使用差值叠加当前颜色值，生成目标颜色值。实现颜色随机变化的效果。
+表示变化方式为随机变化的时候，对每个粒子在变化区间内随机生成一个差值。r、g、b、a四个颜色通道每秒分别使用差值叠加当前颜色值，生成目标颜色值。实现颜色随机变化的效果。
 
 **类型：** [ParticleColorOptions](arkts-arkui-particlecoloroptions-i.md)
 

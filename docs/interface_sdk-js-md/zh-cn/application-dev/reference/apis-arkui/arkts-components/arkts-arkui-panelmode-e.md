@@ -1,6 +1,10 @@
 # PanelMode
 
-设置滑动面板的初始状态
+设置可滑动面板的初始状态
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 12开始废弃。
 
 **起始版本：** 7
 
@@ -14,7 +18,7 @@
 Mini = 0
 ```
 
-类型为minibar和foldable时，为最小状态；类型为temporary，则不生效。
+类型为Minibar和Foldable时，为最小状态；类型为Temporary，则不生效。
 
 **起始版本：** 7
 
@@ -30,7 +34,7 @@ Mini = 0
 Half
 ```
 
-类型为foldable和temporary时，为类半屏状态；类型为minibar，则不生效。
+类型为Foldable和Temporary时，为类半屏状态；类型为Minibar，则不生效。
 
 **起始版本：** 7
 
@@ -46,7 +50,7 @@ Half
 Full
 ```
 
-类全屏状态。
+类型为Minibar、Foldable和Temporary时，为类全屏状态；类型为CUSTOM，则不生效。
 
 **起始版本：** 7
 

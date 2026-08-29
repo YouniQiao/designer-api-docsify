@@ -38,3 +38,17 @@ Thread ID.
 **Since:** 12
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
+
+## threadName
+
+```TypeScript
+threadName?: string
+```
+
+Thread name.
+
+**Type:** string
+
+**Since:** 26.1.0
+
+**System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug

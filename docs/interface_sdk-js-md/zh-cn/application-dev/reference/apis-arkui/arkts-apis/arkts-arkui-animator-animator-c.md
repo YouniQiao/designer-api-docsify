@@ -22,10 +22,8 @@ static create(options: AnimatorOptions): AnimatorResult
 
 > **说明：**
 > 
-> -
-> 
 > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
-> createAnimator来明确UI的执行上下文。
+> [createAnimator](arkts-arkui-arkui-uicontext-uicontext-c.md#createanimator)来明确UI的执行上下文。
 
 **起始版本：** 9
 
@@ -41,13 +39,13 @@ static create(options: AnimatorOptions): AnimatorResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 | 定义动画选项。 |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 | 动画配置选项，包含播放时长、插值曲线、延时、填充模式、播放方向、播放次数及插值起止值等参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator结果接口。 |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | 动画控制对象，可用于设置动画过程中的回调函数。 |
 
 **错误码：**
 
@@ -95,13 +93,13 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | 是 | 定义动画参数选项。 |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | 是 | 定义动画选项。AnimatorOptions适用于需要完整自定义所有动画参数的场景；SimpleAnimatorOptions适用于仅需指定起点和终点的简易动画场景，其余参数使用默认值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator结果接口。 |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | 动画控制对象，可设置动画过程中的回调函数。 |
 
 **错误码：**
 
@@ -125,15 +123,18 @@ animator.create(options); // 建议使用 UIContext.createAnimator()接口
 static createAnimator(options: AnimatorOptions): AnimatorResult
 ```
 
-创建动画。
+创建动画。本模块功能依赖UI的执行上下文，不可在UI上下文不明确的地方使用，推荐通过使用UIContext中的createAnimator接口明确UI上下文。
 
 > **说明：**
+> 
+> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的
+> [createAnimator](arkts-arkui-arkui-uicontext-uicontext-c.md#createanimator)来明确UI的执行上下文。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [create](#create)(options: AnimatorOptions)
+**替代接口：** create
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -141,13 +142,13 @@ static createAnimator(options: AnimatorOptions): AnimatorResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 | 定义动画选项。 |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 | 动画配置选项，用于定义动画的播放时长、插值曲线、延时、填充模式、播放方向、播放次数及插值起止值等参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator结果接口。 |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | 动画控制对象，可设置动画过程中的回调函数。 |
 
 **示例**
 

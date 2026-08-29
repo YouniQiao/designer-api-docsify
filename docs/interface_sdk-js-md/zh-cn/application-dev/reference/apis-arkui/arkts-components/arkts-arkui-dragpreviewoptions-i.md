@@ -59,7 +59,7 @@ modifier?: ImageModifier
 
 5.材质效果，从API版本26.0.0开始支持。
 
-通过[systemMaterial](arkts-arkui-commonmethod-c-sys.md#systemmaterial)设置系统材质效果。
+通过[systemMaterial](arkts-arkui-commonmethod-c.md#systemmaterial)设置系统材质效果。
 
 默认值：空，拖拽背板不设置背板图样式。
 

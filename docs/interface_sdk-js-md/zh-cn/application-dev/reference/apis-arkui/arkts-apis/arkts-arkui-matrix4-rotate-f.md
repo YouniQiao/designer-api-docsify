@@ -12,9 +12,7 @@ import { matrix4 } from '@kit.ArkUI';
 function rotate(options: RotateOption): Matrix4Transit
 ```
 
-Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。
-
-> **说明：**
+Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。会改变调用该函数的原始矩阵。
 
 **起始版本：** 7
 
@@ -28,7 +26,7 @@ Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | 是 | 设置旋转参数。 |
+| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | 是 | 旋转配置参数，用于设置旋转轴向量(x/y/z)、旋转角度及变换中心点偏移值。 |
 
 **返回值：**
 

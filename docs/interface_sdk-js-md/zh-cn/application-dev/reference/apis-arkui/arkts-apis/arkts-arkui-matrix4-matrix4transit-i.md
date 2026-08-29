@@ -1,6 +1,13 @@
 # Matrix4Transit
 
-矩阵对象。
+矩阵对象。支持通过链式调用translate、scale、rotate、skew等方法组合多种变换效果。
+
+> **说明：**
+> 
+> 多个变换方法链式调用时，变换的顺序会影响最终结果。例如，先translate后scale与先scale后translate会产生不同的变换效果，需根据预期效果选择正确的调用顺序。
+> 
+> translate、scale、rotate、skew、combine、invert方法会改变调用该函数的原始矩阵。如需保留原始矩阵不被修改，请先调用copy()再进行变换操作，例如：matrix.copy()
+> .translate({x:100})。
 
 **起始版本：** 7
 
@@ -18,7 +25,7 @@ import { matrix4 } from '@kit.ArkUI';
 combine(options: Matrix4Transit): Matrix4Transit
 ```
 
-Matrix的叠加函数，可以将两个矩阵的效果叠加起来生成一个新的矩阵对象。会改变调用该函数的原始矩阵。
+Matrix的叠加函数，可以为当前矩阵增加另一个矩阵的叠加效果，生成一个新的矩阵对象。会改变调用该函数的原始矩阵。
 
 **起始版本：** 7
 
@@ -30,7 +37,7 @@ Matrix的叠加函数，可以将两个矩阵的效果叠加起来生成一个�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | Matrix4Transit | 是 | 待叠加的矩阵对象。 |
+| options | Matrix4Transit | 是 | 待叠加的矩阵对象，其变换效果将与当前矩阵进行叠加（矩阵相乘），生成新的变换矩阵。 |
 
 **返回值：**
 
@@ -163,7 +170,7 @@ struct Test {
 invert(): Matrix4Transit
 ```
 
-Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效果正好相反。会改变调用该函数的原始矩阵。
+Matrix的逆函数，会改变调用该函数的原始矩阵，将其变换为逆矩阵并返回。逆矩阵与原始矩阵相乘结果为单位矩阵。
 
 **起始版本：** 7
 
@@ -323,7 +330,7 @@ struct Test {
 setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit
 ```
 
-将一个多边形的顶点坐标映射到另外一个多边形的顶点坐标。
+将一个多边形的顶点坐标映射到另外一个多边形的顶点坐标。适用于需要进行自定义形变的场景，如图片透视校正、实现3D视觉效果、卡片翻转效果等。
 
 **起始版本：** 12
 
@@ -337,7 +344,7 @@ setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | 是 | 映射相关的参数。 |
+| options | [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | 是 | 多边形映射参数，用于指定源多边形顶点坐标和目标多边形顶点坐标的映射关系。 |
 
 **返回值：**
 
@@ -394,8 +401,8 @@ Matrix的倾斜函数，可以为当前矩阵增加x轴/y轴倾斜效果。会�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | 设置x轴倾斜参数。 |
-| y | number | 是 | 设置y轴倾斜参数。 |
+| x | number | 是 | x轴倾斜参数，用于设置x轴方向的倾斜程度，值为剪切因子（即tan值）。值为0时无倾斜，正值沿x轴正方向倾斜，负值沿x轴负方向倾斜。 |
+| y | number | 是 | y轴倾斜参数，用于设置y轴方向的倾斜程度，值为剪切因子（即tan值）。值为0时无倾斜，正值沿y轴正方向倾斜，负值沿y轴负方向倾斜。 |
 
 **返回值：**
 
@@ -447,13 +454,13 @@ Matrix的坐标点转换函数，可以将当前的变换效果作用到一个�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [number, number] | 是 | 需要转换的坐标点。 |
+| options | [number, number] | 是 | 需要转换的坐标点，格式为[x, y]，其中x为横坐标、y为纵坐标，单位为px。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [number, number] | 返回矩阵变换后的Point对象。 |
+| [number, number] | 返回矩阵变换后的坐标点，格式为[x, y]。 |
 
 **示例**
 

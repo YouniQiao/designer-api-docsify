@@ -20,5 +20,19 @@ import { hyperSnapManager } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [getLastError](arkts-ability-hypersnapmanager-getlasterror-f.md) | 获取指定场景下当前应用的最后一次Hyper Snap错误信息。每个场景的错误信息独立存储，并在请求成功后清除。设备重启后，所有错误信息都会被清除。 |
 | [requestRebuildHyperSnap](arkts-ability-hypersnapmanager-requestrebuildhypersnap-f.md) | 请求重新初始化应用快启。 |
 | [setHyperSnapEnabled](arkts-ability-hypersnapmanager-sethypersnapenabled-f.md) | 启用或禁用应用的快启功能。 |
+
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [HyperSnapErrorInfo](arkts-ability-hypersnapmanager-hypersnaperrorinfo-i.md) | 描述Hyper Snap的错误信息。 |
+
+### 枚举
+
+| 名称 | 说明 |
+| --- | --- |
+| [HyperSnapErrorCode](arkts-ability-hypersnapmanager-hypersnaperrorcode-e.md) | 枚举Hyper Snap错误码。 |
+| [HyperSnapErrorType](arkts-ability-hypersnapmanager-hypersnaperrortype-e.md) | 枚举Hyper Snap错误类型。 |

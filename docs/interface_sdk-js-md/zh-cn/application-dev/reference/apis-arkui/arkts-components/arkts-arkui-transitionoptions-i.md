@@ -30,7 +30,7 @@ TransitionOptions通过指定结构体内的参数来指定转场效果。
 opacity?: number
 ```
 
-设置组件转场时的透明度效果，为插入时起点和删除时终点的值。
+设置组件转场时的透明度效果，为插入时起点和删除时终点的值。当需要实现淡入淡出过渡效果时设置此属性；未设置时，若同时未设置其他转场效果，默认产生透明度转场效果（相当于opacity为0），若已设置其他转场效果，则不产生透明度转场效果。
 
 取值范围： [0, 1]
 
@@ -62,9 +62,11 @@ rotate?: RotateOptions
 
 -z：竖向的旋转向量分量。
 
-- centerX、centerY指旋转中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为旋转中心点。
+- centerX、centerY指旋转中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为旋转中心点。字符串格式支持百分比（如"50%"）。
 
-- 中心点为(0, 0)代表组件的左上角。
+- 中心点为(0, 0)代表组件的左上角。
+
+- 设置centerX、centerY为非法字符串时（例如，"illegalString"），默认值为"0"。
 
 **类型：** [RotateOptions](arkts-arkui-rotateoptions-i.md)
 
@@ -82,17 +84,17 @@ rotate?: RotateOptions
 scale?: ScaleOptions
 ```
 
-设置组件转场时的缩放效果，为插入时起点和删除时终点的值。
+设置组件转场时的缩放效果，为插入时起点和删除时终点的值。设置的缩放值在组件当前的scale属性上进行乘法叠加，如组件当前scale值为0.8，当转场缩放值设置为0.5时，组件入场动画的缩放值将从0.8×0.5=0.4开始执行。
 
 -x：横向放大倍数（或缩小比例）。
 
 -y：纵向放大倍数（或缩小比例）。
 
--z：当前为二维显示，该参数无效 。
+-z：当前为二维显示，该参数无效。
 
-- centerX、centerY指缩放中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为缩放中心点。
+- centerX、centerY指缩放中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为缩放中心点。
 
-- 中心点为(0, 0)代表组件的左上角。
+- 中心点为(0, 0)代表组件的左上角。
 
 **说明：**
 
@@ -120,7 +122,7 @@ translate?: TranslateOptions
 
 -y：纵向的平移距离。
 
--z：竖向的平移距离。
+-z：深度方向的平移距离。
 
 **类型：** [TranslateOptions](arkts-arkui-translateoptions-i.md)
 
@@ -138,7 +140,7 @@ translate?: TranslateOptions
 type?: TransitionType
 ```
 
-指定该转场样式生效的场景。
+指定该转场效果生效的场景。
 
 默认值：TransitionType.All
 

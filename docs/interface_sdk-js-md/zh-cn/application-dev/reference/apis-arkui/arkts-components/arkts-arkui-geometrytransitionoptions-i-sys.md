@@ -1,7 +1,5 @@
 # GeometryTransitionOptions
 
-@interface GeometryTransitionOptions
-
 **起始版本：** 11
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

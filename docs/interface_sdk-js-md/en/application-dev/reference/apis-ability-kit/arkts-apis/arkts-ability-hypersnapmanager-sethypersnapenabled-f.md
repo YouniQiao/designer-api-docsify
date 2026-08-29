@@ -9,7 +9,7 @@ import { hyperSnapManager } from '@kit.AbilityKit';
 ## setHyperSnapEnabled
 
 ```TypeScript
-function setHyperSnapEnabled(enableFlag : boolean): void
+function setHyperSnapEnabled(enableFlag: boolean): void
 ```
 
 Enables or disables the Hyper Snap performance optimization for the application.

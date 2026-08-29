@@ -17,7 +17,7 @@
 adaptiveColor?: AdaptiveColor
 ```
 
-背景模糊效果使用的取色模式，默认为DEFAULT。使用AVERAGE时color必须带有透明度，取色模式才生效。
+背景模糊效果使用的取色模式，默认为DEFAULT。使用AVERAGE时color必须带有透明度，取色模式才生效；若color不带透明度，取色模式不生效。
 
 **类型：** [AdaptiveColor](arkts-arkui-adaptivecolor-e.md)
 
@@ -57,7 +57,7 @@ blurOptions?: BlurOptions
 brightness?: number
 ```
 
-亮度，取值范围：[0, +∞)，默认为1。推荐取值范围：[0, 2]。
+亮度，取值范围：[0, +∞)，默认为1。推荐取值范围：[0, 2]。传入负数时，恢复为默认值1。超出推荐取值范围时，效果可能不符合预期。
 
 **类型：** number
 
@@ -77,7 +77,7 @@ brightness?: number
 color?: ResourceColor
 ```
 
-颜色，默认透明色。
+背景效果的蒙版颜色，默认透明色。当adaptiveColor为AVERAGE时，color必须带有透明度，取色模式才生效。设置不同颜色值会在背景模糊效果上叠加对应颜色的蒙版层。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -97,7 +97,7 @@ color?: ResourceColor
 inactiveColor?: ResourceColor
 ```
 
-模糊不生效时使用的背景色。该参数需配合policy参数使用。当policy使模糊失效时，控件模糊效果会被移除，如果设置了inactiveColor会使用inactiveColor作为控件背景色。
+模糊不生效时使用的背景色。该参数需配合policy参数使用。当policy使模糊失效时，组件模糊效果会被移除。如果设置了inactiveColor，会使用inactiveColor作为组件背景色；如果未设置inactiveColor，组件背景色恢复为默认透明色。默认不设置inactiveColor背景色。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -139,7 +139,7 @@ policy?: BlurStyleActivePolicy
 radius: number
 ```
 
-模糊半径，取值范围：[0, +∞)，默认为0。
+模糊半径，单位：vp。取值范围：[0, +∞)，默认为0。
 
 **类型：** number
 
@@ -157,7 +157,7 @@ radius: number
 saturation?: number
 ```
 
-饱和度，取值范围：[0, +∞)，默认为1。推荐取值范围：[0, 50]。
+饱和度，取值范围：[0, +∞)，默认为1。推荐取值范围：[0, 50]。传入负数时，恢复为默认值1。超出推荐取值范围时，效果可能不符合预期。
 
 **类型：** number
 

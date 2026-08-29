@@ -42,6 +42,8 @@
 | [Image_ErrorCode OH_PackingOptions_SetNeedsPackProperties(OH_PackingOptions *options, bool needsPackProperties)](#oh_packingoptions_setneedspackproperties) | 设置OH_PackingOptions结构体的needsPackProperties参数。<br>使用场景：当需要在编码输出中保留或写入图片属性信息（例如Exif）时，将needsPackProperties设置为true。如果只关心像素内容、希望减少输出数据体积或目标格式不需要保留属性信息，可设置为false。<br>使用约束：options不能为空指针。 |
 | [Image_ErrorCode OH_PackingOptions_GetNeedsPackDfxData(OH_PackingOptions *options, bool *needsPackDfxData)](#oh_packingoptions_getneedspackdfxdata) | 获取OH_PackingOptions结构体中的needsPackDfxData参数。 |
 | [Image_ErrorCode OH_PackingOptions_SetNeedsPackDfxData(OH_PackingOptions *options, bool needsPackDfxData)](#oh_packingoptions_setneedspackdfxdata) | 设置OH_PackingOptions结构体中的needsPackDfxData参数。 |
+| [Image_ErrorCode OH_PackingOptions_SetC2paDataSize(OH_PackingOptions *options, uint32_t c2paDataSize)](#oh_packingoptions_setc2padatasize) | 设置OH_PackingOptions结构体中的C2PA数据大小，默认值为0，表示不预留空间。 |
+| [Image_ErrorCode OH_PackingOptions_GetC2paDataSize(const OH_PackingOptions *options, uint32_t *c2paDataSize)](#oh_packingoptions_getc2padatasize) | 获取OH_PackingOptions结构体中的C2PA数据大小。 |
 | [Image_ErrorCode OH_PackingOptions_GetDesiredDynamicRange(OH_PackingOptions *options, int32_t* desiredDynamicRange)](#oh_packingoptions_getdesireddynamicrange) | 获取编码时期望的图片动态范围。<br>使用约束：options和desiredDynamicRange均不能为空指针。接口返回失败时，输出参数内容不应使用。 |
 | [Image_ErrorCode OH_PackingOptions_SetDesiredDynamicRange(OH_PackingOptions *options, int32_t desiredDynamicRange)](#oh_packingoptions_setdesireddynamicrange) | 设置编码时期望的图片动态范围。<br>使用约束：options不能为空指针。 |
 | [Image_ErrorCode OH_PackingOptions_Release(OH_PackingOptions *options)](#oh_packingoptions_release) | 释放OH_PackingOptions指针。<br>使用约束：options不能为空指针。<br>资源管理：由[OH_PackingOptions_Create](capi-image-packer-native-h.md#oh_packingoptions_create)成功创建的对象，都应在编码完成后调用本接口释放。释放OH_PackingOptions不会影响已经完成的编码输出，也不会释放OH_ImagePackerNative对象；调用该接口后，options指向的OH_PackingOptions对象会被释放，不应继续使用。 |
@@ -337,6 +339,56 @@ Image_ErrorCode OH_PackingOptions_SetNeedsPackDfxData(OH_PackingOptions *options
 | 类型 | 说明 |
 | -- | -- |
 | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>      <br><li>IMAGE_SUCCESS：执行成功。</li>      <br><li>202：非系统应用程序调用该接口则返回此错误码。</li>      <br><li>IMAGE_PACKER_INVALID_PARAMETER：options为空指针。</li>      <br></ul> |
+
+### OH_PackingOptions_SetC2paDataSize()
+
+```c
+Image_ErrorCode OH_PackingOptions_SetC2paDataSize(OH_PackingOptions *options, uint32_t c2paDataSize)
+```
+
+**描述**
+
+设置OH_PackingOptions结构体中的C2PA数据大小，默认值为0，表示不预留空间。
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OH_PackingOptions](capi-image-nativemodule-oh-packingoptions.md) *options | [in] 指向OH_PackingOptions结构体的指针，不能为NULL。 |
+| uint32_t c2paDataSize | [in] C2PA数据预留空间大小，单位为字节。 |
+
+**返回：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>           <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) 操作成功。</li>          <li>202 非系统应用程序调用该接口。</li>          <li>[IMAGE_PACKER_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options为NULL。</li>          </ul> |
+
+### OH_PackingOptions_GetC2paDataSize()
+
+```c
+Image_ErrorCode OH_PackingOptions_GetC2paDataSize(const OH_PackingOptions *options, uint32_t *c2paDataSize)
+```
+
+**描述**
+
+获取OH_PackingOptions结构体中的C2PA数据大小。
+
+**起始版本：** 26.1.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_PackingOptions](capi-image-nativemodule-oh-packingoptions.md) *options | [in] 指向OH_PackingOptions结构体的指针，不能为NULL。 |
+| uint32_t *c2paDataSize | [out] 指向C2PA数据大小的指针，单位为字节，不能为NULL。如果函数执行失败，c2paDataSize指向的内容保持不变。 |
+
+**返回：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>           <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) 操作成功。</li>          <li>202 非系统应用程序调用该接口。</li>          <li>[IMAGE_PACKER_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options或c2paDataSize为NULL。</li>          </ul> |
 
 ### OH_PackingOptions_GetDesiredDynamicRange()
 

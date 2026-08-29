@@ -21,7 +21,9 @@ import { formAgent } from '@kit.FormKit';
 
 | Name | Description |
 | --- | --- |
+| [getAvailableFormHostServices](arkts-form-formagent-getavailableformhostservices-f-sys.md) | Get available form host service info list. |
 | [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md) | Requests to publish a widget to the widget host. This API uses an asynchronous callback to return the result. The widget host is usually the home screen. |
 | [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md) | Requests to publish a widget to the widget host. This API uses a promise to return the result. The widget host is usually the home screen. |
+| [requestPublishFormCrossDevice](arkts-form-formagent-requestpublishformcrossdevice-f-sys.md) | Requests to publish a form to the form host service of the remote device. |
 | [updateFormCrossBundle](arkts-form-formagent-updateformcrossbundle-f-sys.md) | Updates a widget by cross bundle. This API uses a promise to return the result. |
 <!--DelEnd-->

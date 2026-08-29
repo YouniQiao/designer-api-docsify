@@ -131,7 +131,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_GetExtensionInstance(AbilityRun
 
 | 参数项 | 描述 |
 | -- | -- |
-| AbilityRuntime_ExtensionInstanceHandle baseInstance | [AbilityRuntime_ExtensionInstanceHandle](../AbilityKit/capi-abilityruntime-abilityruntime-extensioninstance8h.md)实例。 |
+| [AbilityRuntime_ExtensionInstanceHandle](../AbilityKit/capi-abilityruntime-abilityruntime-extensioninstance8h.md) baseInstance | [AbilityRuntime_ExtensionInstanceHandle](../AbilityKit/capi-abilityruntime-abilityruntime-extensioninstance8h.md)实例。 |
 | [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) *ceInstance | 输出参数。调用成功后，该指针指向OE Extension实例对象。 |
 
 **返回：**
@@ -721,7 +721,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_SetSnapshot(ContentEmbed_Object
 | 参数项 | 描述 |
 | -- | -- |
 | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md)实例。 |
-| [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md) *pixelMap | 文档快照的像素图对象，详细信息参考[OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)。 |
+| OH_PixelmapNative *pixelMap | 文档快照的像素图对象，详细信息参考[OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md)。 |
 
 **返回：**
 

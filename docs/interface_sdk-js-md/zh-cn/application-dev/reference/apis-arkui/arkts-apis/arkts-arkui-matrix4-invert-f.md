@@ -12,9 +12,7 @@ import { matrix4 } from '@kit.ArkUI';
 function invert(): Matrix4Transit
 ```
 
-Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效果正好相反。
-
-> **说明：**
+Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效果正好相反。会改变调用该函数的原始矩阵。
 
 **起始版本：** 7
 

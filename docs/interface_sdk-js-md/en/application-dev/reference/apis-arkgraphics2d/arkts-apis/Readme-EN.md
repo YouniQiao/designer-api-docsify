@@ -161,6 +161,8 @@
   - [uiEffect](arkts-arkgraphics2d-uieffect-n.md)
     <!--Del-->
     - [createBrightnessBlender(system api)](arkts-arkgraphics2d-uieffect-createbrightnessblender-f-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [createColorfulBrightnessBlender(system api)](arkts-arkgraphics2d-uieffect-createcolorfulbrightnessblender-f-sys.md)<!--DelEnd-->
     - [createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md)
     - [createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md)
     <!--Del-->
@@ -177,6 +179,10 @@
     - [BrightnessParam(system api)](arkts-arkgraphics2d-uieffect-brightnessparam-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [Color(system api)](arkts-arkgraphics2d-uieffect-color-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [ColorfulBrightnessBlender(system api)](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [ColorfulBrightnessBlenderOptions(system api)](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md)<!--DelEnd-->
     - [Filter](arkts-arkgraphics2d-uieffect-filter-i.md)
     <!--Del-->
     - [Filter(system api)](arkts-arkgraphics2d-uieffect-filter-i-sys.md)<!--DelEnd-->

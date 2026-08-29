@@ -108,6 +108,8 @@
   - [BaseEvent](arkts-arkui-baseevent-i.md)
   - [BindOptions](arkts-arkui-bindoptions-i.md)
   - [BlurOptions](arkts-arkui-bluroptions-i.md)
+  <!--Del-->
+  - [BlurSnapshotOptions(系统接口)](arkts-arkui-blursnapshotoptions-i-sys.md)<!--DelEnd-->
   - [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)
   - [BorderImageOption](arkts-arkui-borderimageoption-i.md)
   - [Callback](arkts-arkui-callback-i.md)
@@ -319,8 +321,7 @@
   - [SpringLoadingContext](arkts-arkui-springloadingcontext-t.md)
   - [Summary](arkts-arkui-summary-t.md)
   - [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
-  <!--Del-->
-  - [SystemUiMaterial(系统接口)](arkts-arkui-systemuimaterial-t-sys.md)<!--DelEnd-->
+  - [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
   - [Theme](arkts-arkui-theme-t.md)
   - [TipsMessageType](arkts-arkui-tipsmessagetype-t.md)
   - [TouchTestDoneCallback](arkts-arkui-touchtestdonecallback-t.md)

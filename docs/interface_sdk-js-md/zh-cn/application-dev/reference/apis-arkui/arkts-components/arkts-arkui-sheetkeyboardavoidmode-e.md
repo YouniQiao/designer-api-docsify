@@ -84,7 +84,7 @@ TRANSLATE_AND_SCROLL = 3
 POPUP_SHEET = 4
 ```
 
-设置半模态popup样式弹窗避让软键盘。
+设置半模态popup样式弹窗避让软键盘。该避让方式仅在[preferType](arkts-arkui-sheetoptions-i.md)设置为[SheetType.POPUP](arkts-arkui-sheettype-e.md)（跟手弹窗样式）时生效，其他弹窗样式不支持此避让方式。
 
 1. 避让软键盘时，在popup样式弹窗当前显示位置无法容纳弹窗尺寸的前提下，遵循先垂直翻转避让，后尝试90°水平旋转避让的规则调整显示位置，以预设方向为下方为例，调整避让顺序依次为：下、上、右、左。
 2. 如果设置的对齐方式导致组件布局超出窗口范围，将根据该对齐方式在水平或垂直方向上进行位移，直至组件完全显示在窗口内。

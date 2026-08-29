@@ -46,6 +46,10 @@ count: number
 
 表示发射的粒子总数，count取值&gt;=-1,当count为-1表示粒子总数无限大。
 
+**说明：**
+
+当count为-1时发射器将持续发射粒子，如果不需要持续产生大量粒子，建议不要将count设置为-1，可能对性能造成较大影响，建议配合合理的emitRate和lifetime设置以避免性能问题。
+
 **类型：** number
 
 **起始版本：** 10
@@ -84,7 +88,7 @@ lifetime?: number
 lifetimeRange?: number
 ```
 
-表示粒子生命周期取值范围，设置lifetimeRange后粒子的生命周期为[lifetime-lifetimeRange, lifetime+lifetimeRange]中间的一个随机整数。lifetimeRange默认值为0，取值范围为0到正无穷。设置为负值时取默认值。
+表示粒子生命周期取值范围，单位：毫秒(ms)。设置lifetimeRange后粒子的生命周期为[lifetime-lifetimeRange, lifetime+lifetimeRange]中间的一个随机整数。lifetimeRange默认值为0，取值范围为0到正无穷。设置为负值时取默认值。
 
 **类型：** number
 
@@ -104,7 +108,7 @@ lifetimeRange?: number
 type: PARTICLE
 ```
 
-表示粒子类型，可以选择图片或者是点。
+表示粒子类型，可以选择图片或点。
 
 **类型：** PARTICLE
 

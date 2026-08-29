@@ -17,7 +17,9 @@
 position?: PositionT<number>
 ```
 
-The coordinates of the center position of the field. The top-left corner of the component is the origin of the coordinate system. The coordinate unit is vp.
+粒子场的区域中心位置。坐标单位为vp。
+
+默认值：{x:0, y:0}
 
 **类型：** [PositionT](arkts-arkui-positiont-t.md)&lt;number&gt;
 
@@ -37,7 +39,9 @@ The coordinates of the center position of the field. The top-left corner of the 
 shape?: DisturbanceFieldShape
 ```
 
-The shape of the field
+粒子场的区域形状。
+
+默认值：DisturbanceFieldShape.RECT
 
 **类型：** [DisturbanceFieldShape](arkts-arkui-disturbancefieldshape-e.md)
 
@@ -57,7 +61,17 @@ The shape of the field
 size?: SizeT<number>
 ```
 
-The size of the field. The unit of value is vp.
+粒子场的区域大小。值的单位为vp。
+
+默认值：{width:0, height:0}
+
+取值范围：
+
+width：[0, +∞)
+
+height：[0, +∞)
+
+当size的width（或height）设置为负值时取width（或height）的默认值。
 
 **类型：** [SizeT](arkts-arkui-sizet-t.md)&lt;number&gt;
 

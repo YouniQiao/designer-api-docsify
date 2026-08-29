@@ -99,6 +99,7 @@ enum OH_CaptureMode
 | OH_CAPTURE_HOME_SCREEN = 0 | capture home screen |
 | OH_CAPTURE_SPECIFIED_SCREEN = 1 | capture a specified screen |
 | OH_CAPTURE_SPECIFIED_WINDOW = 2 | capture a specified window |
+| OH_CAPTURE_VIRTUAL_EXTENDED_SCREEN = 3 | 创建一个虚拟扩展屏幕并录制其内容。<br>**起始版本：** 26.1.0 |
 
 ### OH_AudioCaptureSourceType
 

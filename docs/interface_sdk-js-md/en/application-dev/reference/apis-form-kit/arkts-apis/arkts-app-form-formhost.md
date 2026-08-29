@@ -80,6 +80,7 @@ import { formHost } from '@kit.FormKit';
 | [recoverForms](arkts-form-formhost-recoverforms-f-sys.md) | Recovers recycled widgets and updates their status to non-recyclable, or updates the status of widgets to non- recyclable if the widgets are not recycled. This API uses a promise to return the result. |
 | [recoverForms](arkts-form-formhost-recoverforms-f-sys.md) | Recovers widgets. This API uses an asynchronous callback to return the result. |
 | [recycleForms](arkts-form-formhost-recycleforms-f-sys.md) | Recycles widgets, that is, reclaiming widget memory. This API uses a promise to return the result. |
+| [registerFormHostService](arkts-form-formhost-registerformhostservice-f-sys.md) | Register the form host service info. |
 | [releaseForm](arkts-form-formhost-releaseform-f-sys.md) | Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager still retains the widget cache and storage information. This API uses an asynchronous callback to return the result. |
 | [releaseForm](arkts-form-formhost-releaseform-f-sys.md) | Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager retains the storage information about the widget and retains or releases the cache information based on the setting. This API uses an asynchronous callback to return the result. |
 | [releaseForm](arkts-form-formhost-releaseform-f-sys.md) | Releases a widget. After this API is called, the application can no longer use the widget, but the Widget Manager retains the storage information about the widget and retains or releases the cache information based on the setting. This API uses a promise to return the result. |
@@ -93,6 +94,7 @@ import { formHost } from '@kit.FormKit';
 | [setRouterProxy](arkts-form-formhost-setrouterproxy-f-sys.md) | Sets a router proxy for widgets and obtains the Want information required for redirection. This API uses a promise to return the result. This API uses a promise to return the result. |
 | [shareForm](arkts-form-formhost-shareform-f-sys.md) | Shares a specified widget with a remote device. This API uses an asynchronous callback to return the result. |
 | [shareForm](arkts-form-formhost-shareform-f-sys.md) | Shares a specified widget with a remote device. This API uses a promise to return the result. |
+| [unregisterFormHostService](arkts-form-formhost-unregisterformhostservice-f-sys.md) | Unregister the form host service info. |
 | [updateFormLocation](arkts-form-formhost-updateformlocation-f-sys.md) | Updates the widget location. |
 | [updateFormLockedState](arkts-form-formhost-updateformlockedstate-f-sys.md) | Notifies the update of the widget lock state. This API uses a promise to return the result. If an application is locked, its widget will also be locked and masked in a locked style. To use the widget, you need to enter the password set for the widget. |
 | [updateFormSize](arkts-form-formhost-updateformsize-f-sys.md) | Updates the size of the widget. |

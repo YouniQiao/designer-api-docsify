@@ -1,6 +1,6 @@
 # AnimatorResult
 
-定义Animator结果接口。
+定义AnimatorResult接口，提供动画播放状态回调及动画控制方法。
 
 **起始版本：** 6
 
@@ -18,7 +18,7 @@ import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from
 cancel(): void
 ```
 
-取消动画，会触发[onCancel](../../../reference/apis-arkui/js-apis-animator.md#属性)回调。此接口和[finish](#finish)接口功能上没有区别，仅触发的回调不同，建议使用finish接口结束动画。
+取消动画，会触发[onCancel](#oncancel)回调。此接口和[finish](#finish)接口功能上没有区别，仅触发的回调不同，建议使用finish接口结束动画。调用此方法时会触发一次额外的[onFrame](#onframe)回调，返回值是动画终点值，可能导致属性值在一帧内跳变至终点。
 
 **起始版本：** 6
 
@@ -41,7 +41,7 @@ animator.cancel();
 finish(): void
 ```
 
-结束动画，会触发[onFinish](../../../reference/apis-arkui/js-apis-animator.md#属性)回调。
+结束动画，会触发[onFinish](#onfinish)回调。与[cancel](#cancel)方法功能相同，但cancel()触发[onCancel](#oncancel)回调，建议使用finish方法结束动画。调用此方法时会触发一次额外的[onFrame](#onframe)回调，返回值是动画终点值，可能导致属性值在一帧内跳变至终点。若希望动画在中途暂停，可先将onFrame设置为空函数，再调用finish。
 
 **起始版本：** 6
 
@@ -66,7 +66,7 @@ oncancel: () => void
 
 动画被取消时回调。
 
-**说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onCancel。
+**说明：** 从API version 6开始支持，从API version 12开始废弃，推荐使用[onCancel](#oncancel)。
 
 **起始版本：** 6
 
@@ -102,7 +102,7 @@ onfinish: () => void
 
 动画完成时回调。
 
-**说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onFinish。
+**说明：** 从API version 6开始支持，从API version 12开始废弃，推荐使用[onFinish](#onfinish)。
 
 **起始版本：** 6
 
@@ -138,7 +138,7 @@ onframe: (progress: number) => void
 
 接收到帧时回调。
 
-**说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onFrame。
+**说明：** 从API version 6开始支持，从API version 12开始废弃，推荐使用[onFrame](#onframe)。
 
 **起始版本：** 6
 
@@ -166,6 +166,8 @@ onFrame: (progress: number) => void
 
 progress表示动画的当前值。取值范围为[AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md)定义的[begin, end]，默认取值范围为[0, 1]。
 
+**说明：** 调用cancel、finish方法时，会触发一次额外的onFrame回调，返回值为动画终点值。
+
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -188,7 +190,7 @@ onrepeat: () => void
 
 动画重复时回调。
 
-**说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onRepeat。
+**说明：** 从API version 6开始支持，从API version 12开始废弃，推荐使用[onRepeat](#onrepeat)。
 
 **起始版本：** 6
 
@@ -222,7 +224,7 @@ onRepeat: () => void
 pause(): void
 ```
 
-暂停动画。
+暂停动画。暂停后可调用[play](#play)方法恢复播放，也可调用[finish](#finish)或[cancel](#cancel)方法结束动画。
 
 **起始版本：** 6
 
@@ -245,7 +247,7 @@ animator.pause();
 play(): void
 ```
 
-启动动画。动画会保留上一次的播放状态，比如播放状态设置reverse后，再次播放会保留reverse的播放状态。
+启动动画。动画暂停后调用此方法可恢复播放。动画会保留上一次的播放状态，比如播放状态设置reverse后，再次播放会保留reverse的播放状态。动画结束后（[onFinish](#onfinish)或[onCancel](#oncancel)回调触发后）可再次调用此方法重新播放动画。
 
 **起始版本：** 6
 
@@ -268,7 +270,7 @@ animator.play();
 reset(options: AnimatorOptions): void
 ```
 
-重置当前animator动画参数。
+重置当前animator动画参数。建议在动画未开始播放或播放结束后（[onFinish](#onfinish)或[onCancel](#oncancel)回调触发后）调用此方法，重置后需调用[play](#play)方法重新启动动画。
 
 **起始版本：** 9
 
@@ -280,7 +282,7 @@ reset(options: AnimatorOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 | 定义动画选项。 |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 | 动画配置选项，用于定义动画的播放时长、插值曲线、延时、填充模式、播放方向、播放次数及插值起止值等参数。 |
 
 **错误码：**
 
@@ -334,7 +336,7 @@ struct AnimatorTest {
 reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 ```
 
-重置当前animator动画参数。与[reset](#reset)相比，新增对[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)类型入参的支持。
+重置当前animator动画参数。与[reset](#reset)相比，新增对[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)类型入参的支持。建议在动画未开始播放或播放结束后（[onFinish](#onfinish)或[onCancel](#oncancel)回调触发后）调用此方法，重新设置动画参数后调用[play](#play)启动新动画。
 
 **起始版本：** 18
 
@@ -388,7 +390,7 @@ animatorResult.reset(optionsNew);
 reverse(): void
 ```
 
-以相反的顺序播放动画。使用interpolating-spring曲线时此接口无效。
+以相反的顺序播放动画。使用interpolating-spring曲线时此接口无效。调用reverse后动画将以相反方向继续播放，可通过[pause](#pause)暂停或[finish](#finish)结束动画。
 
 **起始版本：** 6
 
@@ -411,7 +413,7 @@ animator.reverse();
 setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void
 ```
 
-设置期望的帧率范围。
+设置期望的帧率范围，包含最小、最大和期望帧率值。
 
 **起始版本：** 12
 
@@ -469,17 +471,17 @@ struct AnimatorTest {
 update(options: AnimatorOptions): void
 ```
 
-更新当前动画器。
+更新当前animator动画参数。
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃。建议使用[reset](#reset)替代。
+> 从API version 6开始支持，从API version 9开始废弃。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [reset](#reset)(options: AnimatorOptions)
+**替代接口：** reset
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -487,7 +489,7 @@ update(options: AnimatorOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 | 定义动画选项。 |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | 是 | 动画配置选项，用于定义动画的播放时长、插值曲线、延时、填充模式、播放方向、播放次数及插值起止值等参数。 |
 
 **示例**
 

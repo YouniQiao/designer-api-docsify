@@ -44,6 +44,7 @@ The file declares the APIs used to obtain image data from the native layer.
 | [Image_ErrorCode OH_ImageReceiverNative_Release(OH_ImageReceiverNative* receiver)](#oh_imagereceivernative_release) | - | Releases an OH_ImageReceiverNative object. |
 | [Image_ErrorCode OH_ImageReceiverNative_OnImageArrive(OH_ImageReceiverNative* receiver, OH_ImageReceiver_ImageArriveCallback callback, void *userData)](#oh_imagereceivernative_onimagearrive) | - |  |
 | [Image_ErrorCode OH_ImageReceiverNative_OffImageArrive(OH_ImageReceiverNative* receiver, OH_ImageReceiver_ImageArriveCallback callback)](#oh_imagereceivernative_offimagearrive) | - |  |
+| [Image_ErrorCode OH_ImageReceiverNative_SetMemoryName(const OH_ImageReceiverNative* receiver, const char *name, uint32_t size)](#oh_imagereceivernative_setmemoryname) | - | Sets the memory name for an OH_ImageReceiverNative object.Only visible ASCII characters are supported. Spaces, newlines, tabs, and other controlcharacters will be filtered out. If the filtered result consists entirely of digits,a prefix "ImageReceiver:" will be automatically prepended. The filtered size must notexceed 256 bytes (including the null terminator). |
 
 ## Function description
 
@@ -533,5 +534,31 @@ Image_ErrorCode OH_ImageReceiverNative_OffImageArrive(OH_ImageReceiverNative* re
 | Type | Description |
 | -- | -- |
 | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_SUCCESS - Operation succeeded.      <br>[Image_ErrorCode](capi-image-common-h.md#image_errorcode) IMAGE_RECEIVER_INVALID_PARAMETER - <b>receiver</b> is empty or <b>callback</b> is not registered. |
+
+### OH_ImageReceiverNative_SetMemoryName()
+
+```c
+Image_ErrorCode OH_ImageReceiverNative_SetMemoryName(const OH_ImageReceiverNative* receiver, const char *name, uint32_t size)
+```
+
+**Description**
+
+Sets the memory name for an OH_ImageReceiverNative object.Only visible ASCII characters are supported. Spaces, newlines, tabs, and other controlcharacters will be filtered out. If the filtered result consists entirely of digits,a prefix "ImageReceiver:" will be automatically prepended. The filtered size must notexceed 256 bytes (including the null terminator).
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_ImageReceiverNative](capi-image-nativemodule-oh-imagereceivernative.md)* receiver | [in] Pointer to an OH_ImageReceiverNative object. It must not be NULL. |
+| const char *name | [in] Pointer to the memory name string to set. It must not be NULL.The string must be null-terminated. |
+| uint32_t size | [in] The size of the name string in bytes, including the null terminator.The value must be greater than 0. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>           <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the operation is successful.</li>          <li>[IMAGE_RECEIVER_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if receiver or name is NULL, or size is 0,              or name contains no visible characters after filtering, or filtered size exceeds 256 bytes.</li>          </ul> |
 
 

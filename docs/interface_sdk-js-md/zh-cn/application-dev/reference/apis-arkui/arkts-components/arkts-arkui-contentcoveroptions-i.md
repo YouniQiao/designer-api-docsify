@@ -21,7 +21,7 @@
 enableSafeArea?: boolean
 ```
 
-全屏模态是否适配安全区域，true表示全屏模态适配安全区域，将内容限制在安全区内，避让导航条和状态栏，false表示不做处理，和之前的样式保持一致。默认值为false。
+全屏模态是否适配安全区域，true表示全屏模态适配安全区域，将内容限制在安全区域内，避让导航条和状态栏，false表示不适配安全区域，全屏模态页面内容不受安全区域限制，不避让导航条和状态栏，不做处理，和之前的样式保持一致。默认值为false。
 
 **类型：** boolean
 
@@ -43,11 +43,13 @@ modalTransition?: ModalTransition
 
 全屏模态页面的系统转场方式。
 
+取值原则：DEFAULT-上下切换过渡，NONE-无动画过渡，ALPHA-透明渐变过渡。
+
 默认值：ModalTransition.DEFAULT。
 
 **说明：**
 
-与transition同时设置时，此属性不生效。
+与transition同时设置时，此属性不生效，仅transition生效。
 
 **类型：** [ModalTransition](arkts-arkui-modaltransition-e.md)
 
@@ -71,7 +73,7 @@ onWillDismiss?: Callback<DismissContentCoverAction>
 
 **说明：**
 
-当用户执行back事件关闭交互操作时，如果注册该回调函数，则不会立刻关闭。在回调函数中可以通过reason得到阻拦关闭页面的操作类型，从而根据原因选择是否关闭全屏模态页面。在onWillDismiss回调中，不能再做onWillDismiss拦截。
+当用户通过返回键等操作触发关闭全屏模态页面时，如果注册该回调函数，则不会立刻关闭。在回调函数中可以通过reason得到拦截关闭页面的操作类型，从而根据原因选择是否关闭全屏模态页面。如需关闭，须在回调中调用DismissContentCoverAction.dismiss()方法；如不调用dismiss()，全屏模态页面将保持打开状态不会关闭。在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
 **类型：** [Callback](arkts-arkui-callback-i.md)&lt;[DismissContentCoverAction](arkts-arkui-dismisscontentcoveraction-i.md)&gt;
 
@@ -90,6 +92,10 @@ transition?: TransitionEffect
 ```
 
 全屏模态页面的自定义转场方式。
+
+**说明：**
+
+未设置时默认不使用自定义转场，使用modalTransition的系统转场方式，与modalTransition同时设置时，仅transition生效，modalTransition属性不生效。
 
 **类型：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 

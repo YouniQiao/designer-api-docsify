@@ -19,6 +19,8 @@ objectFit?: ImageFit
 
 图片显示模式。
 
+默认值：ImageFit.Cover
+
 **类型：** [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md)
 
 **默认值：** ImageFit.Cover
@@ -37,7 +39,7 @@ objectFit?: ImageFit
 size: ParticleTuple<Dimension, Dimension>
 ```
 
-图像尺寸。
+图像尺寸，第一个参数为图像宽度，第二个参数为图像高度。
 
 默认值：[0, 0]
 

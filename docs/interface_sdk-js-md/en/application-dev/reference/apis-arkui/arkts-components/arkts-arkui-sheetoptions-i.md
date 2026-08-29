@@ -109,6 +109,24 @@ Defines the sheet's border width.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## closeButtonMaterial
+
+```TypeScript
+closeButtonMaterial?: SystemUiMaterial
+```
+
+System material effect of the close button. Default value: **undefined**, indicating that no material is set.
+
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## detents
 
 ```TypeScript
@@ -574,6 +592,24 @@ an off-screen canvas, then undergo a rounded corner clipping, and finally be dra
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## scrollBarState
+
+```TypeScript
+scrollBarState?: BarState
+```
+
+Scroll bar display state of the built-in Scroll component in bindSheet. Default value: **BarState.Off**.
+
+**Type:** [BarState](../arkts-apis/arkts-arkui-barstate-e.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## scrollSizeMode
 
 ```TypeScript
@@ -685,6 +721,45 @@ Defines the sheet title
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## titleBarBackgroundBlur
+
+```TypeScript
+titleBarBackgroundBlur?: SheetTitleBarBackgroundBlurOptions
+```
+
+Background blur effect of the title bar. Supports customizing blur parameters via options.
+
+**Type:** [SheetTitleBarBackgroundBlurOptions](arkts-arkui-sheettitlebarbackgroundbluroptions-i.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## titleBarHoverMode
+
+```TypeScript
+titleBarHoverMode?: SheetTitleBarHoverMode
+```
+
+Title bar hover mode.  
+- STANDARD: The title bar and content are arranged vertically without overlapping.  
+- STACK: The title bar overlays on top of the content. Developers need to add padding to avoid occlusion.  
+Default value: **SheetTitleBarHoverMode.STANDARD**.
+
+**Type:** [SheetTitleBarHoverMode](arkts-arkui-sheettitlebarhovermode-e.md)
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -266,6 +266,7 @@
   - [SheetOptions](arkts-arkui-sheetoptions-i.md)
   <!--Del-->
   - [SheetOptions(system api)](arkts-arkui-sheetoptions-i-sys.md)<!--DelEnd-->
+  - [SheetTitleBarBackgroundBlurOptions](arkts-arkui-sheettitlebarbackgroundbluroptions-i.md)
   - [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md)
   - [SizeResult](arkts-arkui-sizeresult-i.md)
   - [SmartGestureShortcutOptions](arkts-arkui-smartgestureshortcutoptions-i.md)
@@ -413,6 +414,8 @@
   - [SheetKeyboardAvoidMode](arkts-arkui-sheetkeyboardavoidmode-e.md)
   - [SheetMode](arkts-arkui-sheetmode-e.md)
   - [SheetSize](arkts-arkui-sheetsize-e.md)
+  - [SheetTitleBarBackgroundBlur](arkts-arkui-sheettitlebarbackgroundblur-e.md)
+  - [SheetTitleBarHoverMode](arkts-arkui-sheettitlebarhovermode-e.md)
   - [SheetType](arkts-arkui-sheettype-e.md)
   - [SourceTool](arkts-arkui-sourcetool-e.md)
   - [SourceType](arkts-arkui-sourcetype-e.md)

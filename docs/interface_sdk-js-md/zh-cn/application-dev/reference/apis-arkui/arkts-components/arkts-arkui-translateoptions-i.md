@@ -1,8 +1,6 @@
 # TranslateOptions
 
-Defines the options of translate.
-
-@interface TranslateOptions
+定义平移选项。
 
 **起始版本：** 7
 
@@ -19,7 +17,13 @@ Defines the options of translate.
 x?: number | string
 ```
 
-Translation distance along the x-axis. For the number type, the unit is VP, and the value range is (-∞, +∞). For the string type, the value follows the format of length string type.
+x轴的平移距离。
+
+类型为number时，单位为vp，取值范围为(-∞, +∞)。
+
+默认值：0
+
+类型为string时，形式参考[Length](../arkts-apis/arkts-arkui-length-t.md)的string类型。
 
 **类型：** number \| string
 
@@ -37,7 +41,13 @@ Translation distance along the x-axis. For the number type, the unit is VP, and 
 y?: number | string
 ```
 
-The param of y direction.
+y轴的平移距离。
+
+类型为number时，单位为vp，取值范围为(-∞, +∞)。
+
+默认值：0
+
+类型为string时，形式参考[Length](../arkts-apis/arkts-arkui-length-t.md)的string类型。
 
 **类型：** number \| string
 
@@ -55,7 +65,13 @@ The param of y direction.
 z?: number | string
 ```
 
-The param of z direction.
+z轴的平移距离。z轴方向移动时由于观察点位置不变，z的值接近观察点组件会有放大效果，远离则缩小。
+
+类型为number时，单位为vp，取值范围为(-∞, +∞)。
+
+默认值：0
+
+类型为string时，形式参考[Length](../arkts-apis/arkts-arkui-length-t.md)的string类型。
 
 **类型：** number \| string
 

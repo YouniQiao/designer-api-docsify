@@ -42,6 +42,8 @@ The file declares the APIs for image encoding.
 | [Image_ErrorCode OH_PackingOptions_SetNeedsPackProperties(OH_PackingOptions *options, bool needsPackProperties)](#oh_packingoptions_setneedspackproperties) | Sets the **needsPackProperties** parameter in the OH_PackingOptions struct. |
 | [Image_ErrorCode OH_PackingOptions_GetNeedsPackDfxData(OH_PackingOptions *options, bool *needsPackDfxData)](#oh_packingoptions_getneedspackdfxdata) | Obtains the **needsPackDfxData** parameter in the OH_PackingOptions struct. |
 | [Image_ErrorCode OH_PackingOptions_SetNeedsPackDfxData(OH_PackingOptions *options, bool needsPackDfxData)](#oh_packingoptions_setneedspackdfxdata) | Sets the **needsPackDfxData** parameter in the OH_PackingOptions struct. |
+| [Image_ErrorCode OH_PackingOptions_SetC2paDataSize(OH_PackingOptions *options, uint32_t c2paDataSize)](#oh_packingoptions_setc2padatasize) | Sets the C2PA data size in the OH_PackingOptions struct. The default value is 0, indicating no reserved spaceis added. |
+| [Image_ErrorCode OH_PackingOptions_GetC2paDataSize(const OH_PackingOptions *options, uint32_t *c2paDataSize)](#oh_packingoptions_getc2padatasize) | Obtains the C2PA data size in the OH_PackingOptions struct. |
 | [Image_ErrorCode OH_PackingOptions_GetDesiredDynamicRange(OH_PackingOptions *options, int32_t* desiredDynamicRange)](#oh_packingoptions_getdesireddynamicrange) | Obtains the desired dynamic range during encoding. |
 | [Image_ErrorCode OH_PackingOptions_SetDesiredDynamicRange(OH_PackingOptions *options, int32_t desiredDynamicRange)](#oh_packingoptions_setdesireddynamicrange) | Sets the desired dynamic range during encoding. |
 | [Image_ErrorCode OH_PackingOptions_Release(OH_PackingOptions *options)](#oh_packingoptions_release) | Releases the pointer to an OH_PackingOptions struct. |
@@ -337,6 +339,56 @@ Sets the **needsPackDfxData** parameter in the OH_PackingOptions struct.
 | Type | Description |
 | -- | -- |
 | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_PACKER_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li>          </ul> |
+
+### OH_PackingOptions_SetC2paDataSize()
+
+```c
+Image_ErrorCode OH_PackingOptions_SetC2paDataSize(OH_PackingOptions *options, uint32_t c2paDataSize)
+```
+
+**Description**
+
+Sets the C2PA data size in the OH_PackingOptions struct. The default value is 0, indicating no reserved spaceis added.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_PackingOptions](capi-image-nativemodule-oh-packingoptions.md) *options | [in] Pointer to an OH_PackingOptions struct. It must not be NULL. |
+| uint32_t c2paDataSize | [in] Reserved space size for C2PA data, in bytes. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>           <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the operation is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_PACKER_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if options is NULL.</li>          </ul> |
+
+### OH_PackingOptions_GetC2paDataSize()
+
+```c
+Image_ErrorCode OH_PackingOptions_GetC2paDataSize(const OH_PackingOptions *options, uint32_t *c2paDataSize)
+```
+
+**Description**
+
+Obtains the C2PA data size in the OH_PackingOptions struct.
+
+**Since**: 26.1.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_PackingOptions](capi-image-nativemodule-oh-packingoptions.md) *options | [in] Pointer to an OH_PackingOptions struct. It must not be NULL. |
+| uint32_t *c2paDataSize | [out] Pointer to the C2PA data size obtained, in bytes. It must not be NULL.If the function fails, the content of c2paDataSize is unchanged. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul>           <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the operation is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_PACKER_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if options or c2paDataSize is NULL.</li>          </ul> |
 
 ### OH_PackingOptions_GetDesiredDynamicRange()
 

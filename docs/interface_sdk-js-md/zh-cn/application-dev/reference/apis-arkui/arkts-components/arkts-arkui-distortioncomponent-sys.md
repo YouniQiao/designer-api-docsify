@@ -8,7 +8,7 @@ Defines DistortionComponent.
 DistortionComponent(options?: DistortionComponentOptions)
 ```
 
-Creates a DistortionComponent with content.
+创建提供空间扭曲形变视效的组件。
 
 **起始版本：** 26.0.0
 
@@ -22,7 +22,7 @@ Creates a DistortionComponent with content.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DistortionComponentOptions](arkts-arkui-distortioncomponentoptions-i-sys.md) | 否 | DistortionComponent Options. |
+| options | [DistortionComponentOptions](arkts-arkui-distortioncomponentoptions-i-sys.md) | 否 | 空间扭曲形变选项，用于配置组件的空间形变效果。不设置该参数或该参数设置为undefined时组件正常渲染、不施加任何形变效果。 |
 
 ## 汇总
 

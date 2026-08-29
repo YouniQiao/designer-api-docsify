@@ -31,7 +31,7 @@ function init(
   ): Matrix4Transit
 ```
 
-Matrix的构造函数，可以通过传入的参数创建一个四阶矩阵，矩阵为列优先。
+Matrix的构造函数，可以通过传入的参数创建一个四阶矩阵，矩阵为列优先，即输入数组的16个值按列依次填充至矩阵：array[0]~array[3]为第1列，array[4]~array[7]为第2列，array[8]~array [11]为第3列，array[12]~array[15]为第4列。当仅需单位矩阵时，推荐使用matrix4.identity()。
 
 **起始版本：** 7
 
@@ -43,7 +43,7 @@ Matrix的构造函数，可以通过传入的参数创建一个四阶矩阵，�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number     ] | 是 | 参数为长度为16（4*4）的number数组, 详情见四阶矩阵说明。各number取值范围：(-∞, +∞)默认值：    [1, 0, 0, 0,0, 1, 0, 0,0, 0, 1, 0,0, 0, 0, 1] |
+| options | [       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number     ] | 是 | 参数为长度为16（4*4）的number数组，详情见四阶矩阵说明。各number取值范围：(-∞, +∞) 默认值：   [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1] |
 
 **返回值：**
 

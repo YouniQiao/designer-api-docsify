@@ -2,6 +2,10 @@
 
 除支持通用属性外还支持以下属性：
 
+支持通用事件。
+
+@extends CommonMethod&lt;ParticleAttribute&gt;
+
 **继承/实现关系：** ParticleAttribute extends CommonMethod<ParticleAttribute>
 
 **起始版本：** 10
@@ -33,7 +37,7 @@ disturbanceFields(fields: Array<DisturbanceFieldOptions>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fields | Array&lt;[DisturbanceFieldOptions](arkts-arkui-disturbancefieldoptions-i.md)&gt; | 是 | 扰动场数组。 |
+| fields | Array&lt;[DisturbanceFieldOptions](arkts-arkui-disturbancefieldoptions-i.md)&gt; | 是 | 扰动场数组。用于设置粒子运动轨迹的干扰效果，通过配置多个扰动场可对粒子施加排斥力或吸引力，改变粒子的运动轨迹。 |
 
 ## emitter
 
@@ -41,7 +45,7 @@ disturbanceFields(fields: Array<DisturbanceFieldOptions>)
 emitter(value: Array<EmitterProperty>)
 ```
 
-支持发射器位置动态更新
+支持发射器属性动态更新。通过EmitterProperty中的index指定需要更新的发射器（按初始化参数中发射器的数组索引），可动态更新发射器的发射速率、位置、大小和环形区域参数。必须先通过Particle接口创建粒子动画并配置发射器，再通过emitter()属性动态更新对应发射器的参数，emitter()属性仅更新已有发射器的参数，不能新增发射器。
 
 **起始版本：** 12
 
@@ -55,7 +59,7 @@ emitter(value: Array<EmitterProperty>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;[EmitterProperty](arkts-arkui-emitterproperty-i.md)&gt; | 是 | 需要更新的emitter参数数组 |
+| value | Array&lt;[EmitterProperty](arkts-arkui-emitterproperty-i.md)&gt; | 是 | 需要更新的发射器参数数组。 |
 
 ## rippleFields
 

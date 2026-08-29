@@ -926,7 +926,7 @@ systemMaterial?: SystemUiMaterial
 
 默认值： undefined
 
-**类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t-sys.md)
+**类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **起始版本：** 26.0.0
 

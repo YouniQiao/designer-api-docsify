@@ -1,7 +1,5 @@
 # GeometryTransitionOptions
 
-@interface GeometryTransitionOptions
-
 **起始版本：** 11
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,7 +15,7 @@
 follow?: boolean
 ```
 
-仅用于if范式下标记始终在组件树上的组件是否跟随做共享动画。true代表跟随做共享动画，false代表不跟随做共享动画。
+仅用于if范式下标记始终在组件树上的组件是否跟随共享元素转场。if范式是指在build()方法中使用if条件语句控制组件显隐的声明式UI开发模式。true表示跟随共享元素转场，false表示不跟随共享元素转场。
 
 默认值：false
 

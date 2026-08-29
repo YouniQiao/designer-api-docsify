@@ -1,6 +1,6 @@
 # Particle
 
-Defines Particle Component.
+定义Particle组件。
 
 ## Particle
 
@@ -48,7 +48,7 @@ Anonymous Object Rectification.
 | [FieldRegion](arkts-arkui-fieldregion-i.md) | 用于设置粒子场的区域信息。 |
 | [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md) | 设置图片选项。 |
 | [ParticleAnnulusRegion](arkts-arkui-particleannulusregion-i.md) | 用于设置环形发射器区域的配置信息。 |
-| [ParticleColorOptions](arkts-arkui-particlecoloroptions-i.md) | 颜色变化方式为均匀变化的时候，在区间内随机生成一个差值。r、g、b、a四个颜色通道每秒分别使用差值叠加当前颜色值，生成目标颜色值。实现颜色随机变化的效果。 |
+| [ParticleColorOptions](arkts-arkui-particlecoloroptions-i.md) | 颜色变化方式为随机变化的时候，在区间内随机生成一个差值。r、g、b、a四个颜色通道每秒分别使用差值叠加当前颜色值，生成目标颜色值。实现颜色随机变化的效果。 |
 | [ParticleColorPropertyOptions](arkts-arkui-particlecolorpropertyoptions-i.md) | 设置粒子颜色属性更新器配置。 |
 | [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-i.md) | 设置粒子颜色属性更新器的配置。 |
 | [ParticleColorUpdaterOptions](arkts-arkui-particlecolorupdateroptions-i.md) | 颜色属性变化配置。 |
@@ -58,7 +58,7 @@ Anonymous Object Rectification.
 | [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md) | 设置粒子属性选项。 |
 | [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-i.md) | 设置粒子属性更新器配置。 |
 | [Particles](arkts-arkui-particles-i.md) | 粒子动画的集合。 |
-| [ParticleUpdaterOptions](arkts-arkui-particleupdateroptions-i.md) | 颜色属性变化配置。 |
+| [ParticleUpdaterOptions](arkts-arkui-particleupdateroptions-i.md) | 属性变化配置。 |
 | [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md) | 设置粒子半径。 |
 | [RippleFieldOptions](arkts-arkui-ripplefieldoptions-i.md) | 用于描述粒子波动场信息的参数。 |
 | [VelocityFieldOptions](arkts-arkui-velocityfieldoptions-i.md) | 用于描述粒子速度场信息的参数。 |
@@ -68,9 +68,9 @@ Anonymous Object Rectification.
 
 | 名称 | 说明 |
 | --- | --- |
-| [ParticleTuple](arkts-arkui-particletuple-t.md) | 粒子元组，表示定义一些动画参数的类型。 |
-| [PositionT](arkts-arkui-positiont-t.md) | Defines the PositionT type. |
-| [SizeT](arkts-arkui-sizet-t.md) | Defines the SizeT type. |
+| [ParticleTuple](arkts-arkui-particletuple-t.md) | 粒子元组，表示定义动画参数配置值对的类型。 |
+| [PositionT](arkts-arkui-positiont-t.md) | 用于设置或返回组件的位置。 |
+| [SizeT](arkts-arkui-sizet-t.md) | 定义Size类型。 |
 | [Vector2T](arkts-arkui-vector2t-t.md) | 定义Vector2T类型。其中Vector2T类型包含x和y两个属性值。 |
 
 ### 枚举
@@ -78,7 +78,7 @@ Anonymous Object Rectification.
 | 名称 | 说明 |
 | --- | --- |
 | [DistributionType](arkts-arkui-distributiontype-e.md) | 初始颜色随机值分布类型。 |
-| [DisturbanceFieldShape](arkts-arkui-disturbancefieldshape-e.md) | 粒子形状。 |
+| [DisturbanceFieldShape](arkts-arkui-disturbancefieldshape-e.md) | 扰动场形状。 |
 | [ParticleEmitterShape](arkts-arkui-particleemittershape-e.md) | 粒子发射器形状。 |
 | [ParticleType](arkts-arkui-particletype-e.md) | 粒子类型。 |
 | [ParticleUpdater](arkts-arkui-particleupdater-e.md) | 粒子变化类型。 |

@@ -2,9 +2,7 @@
 
 阴影属性集合，用于设置阴影的模糊半径、阴影的颜色、X轴和Y轴的偏移量。
 
-@interface ShadowOptions
-
-**起始版本：** 11
+**起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,11 +31,11 @@ color?: Color | string | Resource | ColoringStrategy
 
 **类型：** Color \| string \| Resource \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)
 
-**起始版本：** 11
+**起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +57,7 @@ textShadow中该字段不生效。
 
 **默认值：** false
 
-**起始版本：** 12
+**起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -167,7 +165,7 @@ type?: ShadowType
 
 **默认值：** ShadowType.COLOR
 
-**起始版本：** 11
+**起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

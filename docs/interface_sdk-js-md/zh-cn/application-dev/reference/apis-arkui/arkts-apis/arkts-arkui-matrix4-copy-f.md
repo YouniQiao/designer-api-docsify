@@ -14,8 +14,6 @@ function copy(): Matrix4Transit
 
 Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。
 
-> **说明：**
-
 **起始版本：** 7
 
 **废弃版本：** 10

@@ -35,15 +35,16 @@ Common()
 | [BackgroundBrightnessOptions](arkts-arkui-backgroundbrightnessoptions-i.md) | 背景亮度选项。 |
 | [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md) | 背景效果参数。 |
 | [BackgroundImageOptions](arkts-arkui-backgroundimageoptions-i.md) | 定义背景图选项。 |
-| [BackgroundOptions](arkts-arkui-backgroundoptions-i.md) | 指定背景选项 |
+| [BackgroundOptions](arkts-arkui-backgroundoptions-i.md) | background配置选项。 |
 | [BaseEvent](arkts-arkui-baseevent-i.md) | 基础事件类型。 |
 | [BindOptions](arkts-arkui-bindoptions-i.md) | 半模态、全模态的公共配置接口。 |
 | [BlurOptions](arkts-arkui-bluroptions-i.md) | 灰阶模糊参数。 |
-| [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md) | 内容模糊选项。 |
+| [BlurSnapshotOptions](arkts-arkui-blursnapshotoptions-i-sys.md) | 模糊快照优化选项。设置该对象后，将开启模糊优化。 |
+| [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md) | 模糊样式选项，用于配置模糊效果的深浅色模式、取色模式、灰阶模糊参数和模糊程度。 |
 | [BorderImageOption](arkts-arkui-borderimageoption-i.md) | Border image option |
 | [Callback](arkts-arkui-callback-i.md) | 定义基础的回调函数。 |
 | [CaretOffset](arkts-arkui-caretoffset-i.md) | CaretOffset info. |
-| [ClickEffect](arkts-arkui-clickeffect-i.md) | 定义点击效果。 |
+| [ClickEffect](arkts-arkui-clickeffect-i.md) | 定义点击回弹效果。 |
 | [ClickEvent](arkts-arkui-clickevent-i.md) | 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。 |
 | [CommonConfiguration](arkts-arkui-commonconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。 |
 | [ComponentOptions](arkts-arkui-componentoptions-i.md) | 自定义组件参数，用于配置是否支持组件冻结和全局复用池，适用于需要优化自定义组件性能表现和提升组件复用效率的场景。 |
@@ -58,7 +59,7 @@ Common()
 | [DepthColorRGB](arkts-arkui-depthcolorrgb-i-sys.md) | 深度空间中的RGB颜色。 |
 | [DepthVector3](arkts-arkui-depthvector3-i-sys.md) | 深度空间中的三维向量。 |
 | [DepthVector4](arkts-arkui-depthvector4-i-sys.md) | 深度空间中的4D向量。 |
-| [DismissContentCoverAction](arkts-arkui-dismisscontentcoveraction-i.md) | Component content cover dismiss |
+| [DismissContentCoverAction](arkts-arkui-dismisscontentcoveraction-i.md) |  |
 | [DismissPopupAction](arkts-arkui-dismisspopupaction-i.md) | 气泡关闭的信息。 |
 | [DismissSheetAction](arkts-arkui-dismisssheetaction-i.md) | 半模态关闭前的回调。 |
 | [DragEvent](arkts-arkui-dragevent-i.md) | 拖拽事件信息。 |
@@ -75,12 +76,12 @@ Common()
 | [FadingEdgeOptions](arkts-arkui-fadingedgeoptions-i.md) | fadingEdge属性边缘渐隐参数对象。 |
 | [FocusAxisEvent](arkts-arkui-focusaxisevent-i.md) | 焦点轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md)。 |
 | [FocusMovement](arkts-arkui-focusmovement-i.md) | 设置对应的按键对应的走焦目的组件，缺省则遵循默认走焦规则。 |
-| [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md) | 继承自[BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)，设置内容模糊选项。 |
-| [ForegroundEffectOptions](arkts-arkui-foregroundeffectoptions-i.md) | 前景效果参数。 |
+| [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md) | 继承自[BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)，内容模糊样式选项。 |
+| [ForegroundEffectOptions](arkts-arkui-foregroundeffectoptions-i.md) | 前景效果参数，用于配置组件前景的模糊半径，控制前景内容的模糊程度。 |
 | [GeometryInfo](arkts-arkui-geometryinfo-i.md) | 父组件（自定义组件）布局信息，继承自[SizeResult](arkts-arkui-sizeresult-i.md)。 |
-| [GeometryTransitionOptions](arkts-arkui-geometrytransitionoptions-i.md) | @interface GeometryTransitionOptions |
+| [GeometryTransitionOptions](arkts-arkui-geometrytransitionoptions-i.md) |  |
 | [GestureModifier](arkts-arkui-gesturemodifier-i.md) | 开发者需要自定义class实现GestureModifier接口。 |
-| [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md) | 定义引力中心的参数。 |
+| [GravityCenterOptions](arkts-arkui-gravitycenteroptions-i-sys.md) | 定义引力中心参数。 |
 | [HistoricalPoint](arkts-arkui-historicalpoint-i.md) | 历史点信息。 |
 | [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md) | 定义相对容器的水平对齐规则。 |
 | [HoverEvent](arkts-arkui-hoverevent-i.md) | 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。 |
@@ -90,19 +91,19 @@ Common()
 | [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) | Define the ratio of characters entered by the the percentage of InputCounterOptions. |
 | [InputEventInterceptResult](arkts-arkui-inputeventinterceptresult-i.md) | 输入事件拦截结果接口，用于监听器回调[InputEventListener](arkts-arkui-inputeventlistener-t.md)返回是否拦截的决策。 |
 | [InputEventMonitor](arkts-arkui-inputeventmonitor-i.md) | 输入事件监听器标识对象。 |
-| [InvertOptions](arkts-arkui-invertoptions-i.md) | 前景智能取反色。 |
+| [InvertOptions](arkts-arkui-invertoptions-i.md) | 前景智能取反色。基于灰度阈值区间决定反色取值，参见[invert](arkts-arkui-commonmethod-c.md#invert)中的详细机制说明。 |
 | [ItemDragEventHandler](arkts-arkui-itemdrageventhandler-i.md) | 定义拖拽事件 |
 | [ItemDragInfo](arkts-arkui-itemdraginfo-i.md) | 拖拽点信息对象。 |
 | [KeyEvent](arkts-arkui-keyevent-i.md) | 按键事件信息。 |
 | [KeyframeAnimateParam](arkts-arkui-keyframeanimateparam-i.md) | 动画选项设置。 |
-| [KeyframeState](arkts-arkui-keyframestate-i.md) | 设置关键帧选项。 |
+| [KeyframeState](arkts-arkui-keyframestate-i.md) | 关键帧状态设置。 |
 | [Layoutable](arkts-arkui-layoutable-i.md) | 子组件布局信息。 |
 | [LayoutBorderInfo](arkts-arkui-layoutborderinfo-i.md) | 子组件边框信息 |
 | [LayoutChild](arkts-arkui-layoutchild-i.md) | 布局和测量发生时，框架传递给子组件的信息。 |
 | [LayoutInfo](arkts-arkui-layoutinfo-i.md) | 子组件布局位置信息 |
 | [LightSource](arkts-arkui-lightsource-i-sys.md) | 一个组件支持添加1个光源。 |
 | [LinearGradient](arkts-arkui-lineargradient-i.md) | Linear Gradient Interface |
-| [LinearGradientBlurOptions](arkts-arkui-lineargradientbluroptions-i.md) | @interface LinearGradientBlurOptions |
+| [LinearGradientBlurOptions](arkts-arkui-lineargradientbluroptions-i.md) |  |
 | [LinearGradientOptions](arkts-arkui-lineargradientoptions-i.md) | 线性渐变的参数。 |
 | [LocalizedAlignRuleOptions](arkts-arkui-localizedalignruleoptions-i.md) | Defines the Localized align rule options of relative container. |
 | [LocalizedHorizontalAlignParam](arkts-arkui-localizedhorizontalalignparam-i.md) | Defines the localized horizontal align param of relative container. |
@@ -114,9 +115,9 @@ Common()
 | [MenuMaskType](arkts-arkui-menumasktype-i.md) | 设置蒙层样式。 |
 | [MenuOptions](arkts-arkui-menuoptions-i.md) | 配置弹出菜单的参数，继承自[ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)。 |
 | [MonitorDecoratorOptions](arkts-arkui-monitordecoratoroptions-i.md) | @Monitor装饰器的配置选项。 |
-| [MotionBlurAnchor](arkts-arkui-motionbluranchor-i.md) | Define motion blur anchor coordinates. |
+| [MotionBlurAnchor](arkts-arkui-motionbluranchor-i.md) | 运动模糊锚点坐标。 |
 | [MotionBlurOptions](arkts-arkui-motionbluroptions-i.md) | 运动模糊选项。 |
-| [MotionPathOptions](arkts-arkui-motionpathoptions-i.md) | 设置组件的运动路径。 |
+| [MotionPathOptions](arkts-arkui-motionpathoptions-i.md) | 路径动画的运动路径参数选项。 |
 | [MouseEvent](arkts-arkui-mouseevent-i.md) | 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。 |
 | [MouseHistoricalPoint](arkts-arkui-mousehistoricalpoint-i.md) | 鼠标事件历史点信息。 |
 | [MultiShadowOptions](arkts-arkui-multishadowoptions-i.md) | 投影样式参数。 |
@@ -146,10 +147,10 @@ Common()
 | [ReuseOptions](arkts-arkui-reuseoptions-i.md) | 复用选项，用于配置复用标识ID，相同复用标识ID的组件会被互相复用，提高复用匹配的精确度。 |
 | [RotateAngleOptions](arkts-arkui-rotateangleoptions-i.md) | 指定各轴旋转角的旋转参数选项。 |
 | [RotateOptions](arkts-arkui-rotateoptions-i.md) | 组件旋转参数。 |
-| [ScaleOptions](arkts-arkui-scaleoptions-i.md) |  |
+| [ScaleOptions](arkts-arkui-scaleoptions-i.md) | 定义缩放选项。 |
 | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | Defines the selection options. |
 | [ShadowOptions](arkts-arkui-shadowoptions-i.md) | 阴影属性集合，用于设置阴影的模糊半径、阴影的颜色、X轴和Y轴的偏移量。 |
-| [sharedTransitionOptions](arkts-arkui-sharedtransitionoptions-i.md) | 共享元素转场动画参数。 |
+| [sharedTransitionOptions](arkts-arkui-sharedtransitionoptions-i.md) | 共享元素转场动效参数。 |
 | [SheetDismiss](arkts-arkui-sheetdismiss-i.md) | 控制半模态的关闭。 |
 | [SheetOptions](arkts-arkui-sheetoptions-i.md) | 继承自[BindOptions](arkts-arkui-bindoptions-i.md)。 |
 | [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) | 半模态面板的标题。 |
@@ -167,7 +168,7 @@ Common()
 | [TouchEvent](arkts-arkui-touchevent-i.md) | 继承于[BaseEvent](arkts-arkui-baseevent-i.md)。在非事件注入场景下，changedTouches是按屏幕刷新率重采样的点，而touches是按器件刷新率上报的点，因此changedTouches与touches的数据可能不同。 |
 | [TouchObject](arkts-arkui-touchobject-i.md) | 触摸事件类型。 |
 | [TransitionOptions](arkts-arkui-transitionoptions-i.md) | TransitionOptions通过指定结构体内的参数来指定转场效果。 |
-| [TranslateOptions](arkts-arkui-translateoptions-i.md) | Defines the options of translate. |
+| [TranslateOptions](arkts-arkui-translateoptions-i.md) | 定义平移选项。 |
 | [UICommonEvent](arkts-arkui-uicommonevent-i.md) | 用于设置基础事件回调。方法入参为undefined的时候，重置对应的事件回调。 |
 | [UIGestureEvent](arkts-arkui-uigestureevent-i.md) | 用于设置组件绑定的手势。 |
 | [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md) | 用于设置滚动事件回调。 |
@@ -236,12 +237,12 @@ Common()
 | [SpringLoadingContext](arkts-arkui-springloadingcontext-t.md) | 定义回调上下文信息的类，用于在悬停检测回调中传递给应用程序，使其能访问拖拽状态。 |
 | [Summary](arkts-arkui-summary-t.md) | 拖拽相关数据的简介。 |
 | [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md) | SymbolGlyphModifier类型，用于设置自定义图标小符号。 |
-| [SystemUiMaterial](arkts-arkui-systemuimaterial-t-sys.md) | 系统材质对象基类。 |
+| [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md) | 系统材质对象基类。 |
 | [Theme](arkts-arkui-theme-t.md) | 主题对象。 |
 | [TipsMessageType](arkts-arkui-tipsmessagetype-t.md) | 悬浮气泡弹窗信息。 |
 | [TouchTestDoneCallback](arkts-arkui-touchtestdonecallback-t.md) | 动态指定手势识别器是否参与手势处理的回调事件类型，回调内参数的生命周期跟随回调本身，参数内的方法仅支持在回调内同步使用。 |
 | [TransitionEffects](arkts-arkui-transitioneffects-t.md) | 定义所有转场效果。 |
-| [TransitionFinishCallback](arkts-arkui-transitionfinishcallback-t.md) | 组件转场动画的结束回调类型。 |
+| [TransitionFinishCallback](arkts-arkui-transitionfinishcallback-t.md) | 定义组件转场动画结束回调的类型。 |
 | [UIContext](arkts-arkui-uicontext-t.md) | [UIContext](arkts-arkui-uicontext-t.md) |
 | [UnifiedData](arkts-arkui-unifieddata-t.md) | 拖拽相关的数据。 |
 | [UniformDataType](arkts-arkui-uniformdatatype-t.md) | 标准化数据类型。 |
@@ -260,7 +261,7 @@ Common()
 | [AdaptiveColor](arkts-arkui-adaptivecolor-e.md) | 取色模式。 |
 | [AnchoredColorMode](arkts-arkui-anchoredcolormode-e.md) | 配置组件主题跟随的颜色模式。 |
 | [AvailableLayoutArea](arkts-arkui-availablelayoutarea-e.md) | 预览图宽高设置为百分比时的参考可布局区域大小。 |
-| [BlendApplyType](arkts-arkui-blendapplytype-e.md) | 指示如何将指定的混合模式应用于视图的内容。 |
+| [BlendApplyType](arkts-arkui-blendapplytype-e.md) | 标识如何将指定的混合模式应用于视图的内容。 |
 | [BlendMode](arkts-arkui-blendmode-e.md) | 混合模式。 |
 | [BlurStyle](arkts-arkui-blurstyle-e.md) | 模糊样式类型。 |
 | [BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md) | 定义背景模糊激活策略。 |
@@ -275,7 +276,7 @@ Common()
 | [DragResult](arkts-arkui-dragresult-e.md) | 定义拖拽操作的结果及组件的落入选定状态。 |
 | [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md) | 边缘光效动画模式枚举。 |
 | [EffectEdge](arkts-arkui-effectedge-e.md) | 表示当前边缘效果要生效的边缘。 |
-| [EffectType](arkts-arkui-effecttype-e.md) | 使用效果模板种类的枚举值。 |
+| [EffectType](arkts-arkui-effecttype-e.md) | 效果模板类型的枚举值。效果模板为预设的视觉效果参数配置，包含模糊半径、饱和度、亮度和颜色等参数。 |
 | [FinishCallbackType](arkts-arkui-finishcallbacktype-e.md) | 动画中定义onFinish回调的类型。 |
 | [HapticFeedbackMode](arkts-arkui-hapticfeedbackmode-e.md) | 菜单弹出时振动效果。 |
 | [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md) | 悬停态显示区域类型。 |

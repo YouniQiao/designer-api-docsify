@@ -562,6 +562,34 @@ function release(pixelMap: image.PixelMap) {
 }
 ```
 
+## setMemoryName
+
+```TypeScript
+setMemoryName(name: string): void
+```
+
+Sets the memory name for the ImageReceiver instance. This API returns the result synchronously.
+
+Only visible ASCII characters are supported. Spaces, newlines, tabs, and other control characters will be filtered out. If the filtered result consists entirely of digits, a prefix "ImageReceiver:" will be automatically prepended.The length of name must not exceed 256 bytes.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Multimedia.Image.ImageReceiver
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| name | string | Yes | Memory name to set. The maximum length is 256. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [7900201](../errorcode-image.md#7900201-invalid-parameter) | Invalid parameter. Possible causes: &lt;ol&gt;&lt;li&gt;Name is empty.&lt;/li&gt; &lt;li&gt;Name contains no visible characters after filtering.&lt;/li&gt; &lt;li&gt;The length of name exceeds 256 bytes.&lt;/li&gt; &lt;li&gt;Ensure the name parameter contains visible ASCII characters.&lt;/li&gt;&lt;/ol&gt; |
+
 ## capacity
 
 ```TypeScript

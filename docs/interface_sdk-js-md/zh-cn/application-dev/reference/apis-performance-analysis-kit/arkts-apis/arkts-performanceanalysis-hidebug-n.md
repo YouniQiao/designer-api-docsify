@@ -69,6 +69,7 @@
 | [getGwpAsanGrayscaleState](arkts-performanceanalysis-hidebug-getgwpasangrayscalestate-f.md) | 获取当前GWP-ASan剩余使能天数。 |
 | [setProcDumpInSharedOOM](arkts-performanceanalysis-hidebug-setprocdumpinsharedoom-f.md) | 将转储的堆快照由线程级改为进程级。 |
 | [getRssInfo](arkts-performanceanalysis-hidebug-getrssinfo-f.md) | 获取应用程序进程的物理内存使用信息。读取/proc/{pid}/status节点的数据。 |
+| [getAppRunningUniqueId](arkts-performanceanalysis-hidebug-getapprunninguniqueid-f.md) | 获取应用程序的运行唯一标识符。 |
 
 ### 接口
 

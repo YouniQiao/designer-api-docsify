@@ -12,7 +12,7 @@ import { matrix4 } from '@kit.ArkUI';
 function identity(): Matrix4Transit
 ```
 
-Matrix的初始化函数，可以返回一个单位矩阵对象。
+Matrix的初始化函数，可以返回一个初始的单位矩阵对象，可作为后续矩阵变换操作的基础。
 
 **起始版本：** 7
 

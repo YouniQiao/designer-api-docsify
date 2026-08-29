@@ -1,6 +1,6 @@
 # ClickEffect
 
-定义点击效果。
+定义点击回弹效果。
 
 **起始版本：** 10
 
@@ -17,13 +17,13 @@
 level: ClickEffectLevel
 ```
 
-设置当前组件的点击回弹效果。
+点击回弹效果级别，其取值影响scale的默认缩放比例。
 
 默认值：ClickEffectLevel.LIGHT
 
 **说明：**
 
-当level为undefined或者null时， ClickEffect采用ClickEffectLevel.LIGHT对应的回弹效果，缩放比参照scale说明。
+当level为undefined或者null时， ClickEffect采用ClickEffectLevel.LIGHT对应的回弹效果，缩放比的具体默认值请参见下方scale属性说明。
 
 **类型：** [ClickEffectLevel](../arkts-apis/arkts-arkui-clickeffectlevel-e.md)
 
@@ -43,7 +43,7 @@ level: ClickEffectLevel
 scale?: number
 ```
 
-回弹缩放比例，支持在设置ClickEffectLevel的基础上微调。
+回弹缩放比例，取值范围(0, 1]，支持在设置ClickEffectLevel的基础上微调。超出取值范围时，使用当前level对应的默认缩放比例。
 
 **说明：**
 

@@ -14,7 +14,7 @@
 Linear = 0
 ```
 
-Linear. Indicates that the animation has the same velocity from start to finish.
+表示动画从头到尾的速度都是相同的。
 
 **起始版本：** 7
 
@@ -28,7 +28,7 @@ Linear. Indicates that the animation has the same velocity from start to finish.
 Ease = 1
 ```
 
-Ease. Indicates that the animation starts at a low speed, then speeds up, and slows down before the end, CubicBezier(0.25, 0.1, 0.25, 1.0).
+表示动画以低速开始，然后加快，在结束前变慢，cubic-bezier(0.25, 0.1, 0.25, 1.0)。
 
 **起始版本：** 7
 
@@ -42,7 +42,7 @@ Ease. Indicates that the animation starts at a low speed, then speeds up, and sl
 EaseIn = 2
 ```
 
-EaseIn. Indicates that the animation starts at a low speed, Cubic Bezier (0.42, 0.0, 1.0, 1.0).
+表示动画以低速开始，cubic-bezier(0.42, 0.0, 1.0, 1.0)。
 
 **起始版本：** 7
 
@@ -56,7 +56,7 @@ EaseIn. Indicates that the animation starts at a low speed, Cubic Bezier (0.42, 
 EaseOut = 3
 ```
 
-EaseOut. Indicates that the animation ends at low speed, CubicBezier (0.0, 0.0, 0.58, 1.0).
+表示动画以低速结束，cubic-bezier(0.0, 0.0, 0.58, 1.0)。
 
 **起始版本：** 7
 
@@ -70,7 +70,7 @@ EaseOut. Indicates that the animation ends at low speed, CubicBezier (0.0, 0.0, 
 EaseInOut = 4
 ```
 
-EaseInOut. Indicates that the animation starts and ends at low speed, CubicBezier (0.42, 0.0, 0.58, 1.0).
+表示动画以低速开始和结束，cubic-bezier(0.42, 0.0, 0.58, 1.0)。
 
 **起始版本：** 7
 
@@ -84,7 +84,7 @@ EaseInOut. Indicates that the animation starts and ends at low speed, CubicBezie
 FastOutSlowIn = 5
 ```
 
-FastOutSlowIn. Standard curve, cubic-bezier (0.4, 0.0, 0.2, 1.0).
+标准曲线，cubic-bezier(0.4, 0.0, 0.2, 1.0)。
 
 **起始版本：** 7
 
@@ -98,7 +98,7 @@ FastOutSlowIn. Standard curve, cubic-bezier (0.4, 0.0, 0.2, 1.0).
 LinearOutSlowIn = 6
 ```
 
-LinearOutSlowIn. Deceleration curve, cubic-bezier (0.0, 0.0, 0.2, 1.0).
+减速曲线，cubic-bezier(0.0, 0.0, 0.2, 1.0)。
 
 **起始版本：** 7
 
@@ -112,7 +112,7 @@ LinearOutSlowIn. Deceleration curve, cubic-bezier (0.0, 0.0, 0.2, 1.0).
 FastOutLinearIn = 7
 ```
 
-FastOutLinearIn. Acceleration curve, cubic-bezier (0.4, 0.0, 1.0, 1.0).
+加速曲线，cubic-bezier(0.4, 0.0, 1.0, 1.0)。
 
 **起始版本：** 7
 
@@ -126,7 +126,7 @@ FastOutLinearIn. Acceleration curve, cubic-bezier (0.4, 0.0, 1.0, 1.0).
 ExtremeDeceleration = 8
 ```
 
-ExtremeDeceleration. Abrupt curve, cubic-bezier (0.0, 0.0, 0.0, 1.0).
+急缓曲线，cubic-bezier(0.0, 0.0, 0.0, 1.0)。
 
 **起始版本：** 7
 
@@ -140,7 +140,7 @@ ExtremeDeceleration. Abrupt curve, cubic-bezier (0.0, 0.0, 0.0, 1.0).
 Sharp = 9
 ```
 
-Sharp. Sharp curves, cubic-bezier (0.33, 0.0, 0.67, 1.0).
+锐利曲线，cubic-bezier(0.33, 0.0, 0.67, 1.0)。
 
 **起始版本：** 7
 
@@ -154,7 +154,7 @@ Sharp. Sharp curves, cubic-bezier (0.33, 0.0, 0.67, 1.0).
 Rhythm = 10
 ```
 
-Rhythm. Rhythmic curve, cubic-bezier (0.7, 0.0, 0.2, 1.0).
+节奏曲线，cubic-bezier(0.7, 0.0, 0.2, 1.0)。
 
 **起始版本：** 7
 
@@ -168,7 +168,7 @@ Rhythm. Rhythmic curve, cubic-bezier (0.7, 0.0, 0.2, 1.0).
 Smooth = 11
 ```
 
-Smooth. Smooth curves, cubic-bezier (0.4, 0.0, 0.4, 1.0).
+平滑曲线，cubic-bezier(0.4, 0.0, 0.4, 1.0)。
 
 **起始版本：** 7
 
@@ -182,7 +182,7 @@ Smooth. Smooth curves, cubic-bezier (0.4, 0.0, 0.4, 1.0).
 Friction = 12
 ```
 
-Friction. Damping curves, CubicBezier (0.2, 0.0, 0.2, 1.0).
+阻尼曲线，cubic-bezier(0.2, 0.0, 0.2, 1.0)。
 
 **起始版本：** 7
 

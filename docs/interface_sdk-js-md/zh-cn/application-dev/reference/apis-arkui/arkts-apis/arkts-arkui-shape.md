@@ -21,7 +21,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 | [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) | 用于clipShape和maskShape接口的圆形形状。 |
 | [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md) | 提供形状的偏移、填充和位置设置等通用方法的基类。 |
 | [EllipseShape](arkts-arkui-arkui-shape-ellipseshape-c.md) | 用于clipShape和maskShape接口的椭圆形状。 |
-| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) | 用于clipShape和maskShape接口的路径形状。 |
+| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) | 用于clipShape和maskShape接口的路径形状，继承自[CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)。 |
 | [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | 用于clipShape和maskShape接口的矩形形状。 |
 
 ### 接口

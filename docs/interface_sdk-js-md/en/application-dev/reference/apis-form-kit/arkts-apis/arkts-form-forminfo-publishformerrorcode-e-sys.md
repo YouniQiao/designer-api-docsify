@@ -87,3 +87,19 @@ Indicates that the host does not support the form.
 **System capability:** SystemCapability.Ability.Form
 
 **System API:** This is a system API.
+
+## HOST_FORM_LIMIT
+
+```TypeScript
+HOST_FORM_LIMIT = 5
+```
+
+Indicates that the number of forms added to the host exceeds the upper limit.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.

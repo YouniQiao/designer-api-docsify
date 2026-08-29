@@ -14,7 +14,7 @@
   - [WindowAnimationFinishedCallback(系统接口)](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [WindowAnimationTarget(系统接口)](arkts-arkui-windowanimationmanager-windowanimationtarget-i-sys.md)<!--DelEnd-->
-- [@ohos.animator](arkts-animator.md)
+- [@ohos.animator(动画)](arkts-animator.md)
   - [Animator](arkts-arkui-animator-animator-c.md)
   - [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)
   - [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md)
@@ -703,8 +703,14 @@
   - [WindowProxyProperties](arkts-arkui-uiextension-windowproxyproperties-i.md)
   - [EventFlag](arkts-arkui-uiextension-eventflag-e.md)
   - [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md)
-- [@ohos.arkui.uiMaterial](arkts-arkui-uimaterial.md)
+- [@ohos.arkui.uiMaterial(系统材质)](arkts-arkui-uimaterial.md)
+  <!--Del-->
+  - [convertToECMaterial(系统接口)](arkts-arkui-uimaterial-converttoecmaterial-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [convertToECSubMaterial(系统接口)](arkts-arkui-uimaterial-converttoecsubmaterial-f-sys.md)<!--DelEnd-->
+  - [getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md)
   - [getMaterialInfo](arkts-arkui-uimaterial-getmaterialinfo-f.md)
+  - [isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md)
   - [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)
   - [Material](arkts-arkui-uimaterial-material-c.md)
   <!--Del-->
@@ -715,6 +721,9 @@
   <!--Del-->
   - [MaterialOptions(系统接口)](arkts-arkui-uimaterial-materialoptions-i-sys.md)<!--DelEnd-->
   - [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md)
+  <!--Del-->
+  - [ImmersiveStyle(系统接口)](arkts-arkui-uimaterial-immersivestyle-e-sys.md)<!--DelEnd-->
+  - [MaterialLevel](arkts-arkui-uimaterial-materiallevel-e.md)
   - [MaterialState](arkts-arkui-uimaterial-materialstate-e.md)
   - [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
   <!--Del-->
@@ -777,7 +786,7 @@
   - [TitlePosition](arkts-arkui-atomicservice-interstitialdialogaction-titleposition-e.md)
 - [@ohos.atomicservice.NavPushPathHelper(Defines provides a push method for the target page in the routing table.)](arkts-atomicservice-navpushpathhelper.md)
   - [NavPushPathHelper](arkts-arkui-atomicservice-navpushpathhelper-navpushpathhelper-c.md)
-- [@ohos.curves](arkts-curves.md)
+- [@ohos.curves(插值计算)](arkts-curves.md)
   - [cubicBezier](arkts-arkui-curves-cubicbezier-f.md)
   - [cubicBezierCurve](arkts-arkui-curves-cubicbeziercurve-f.md)
   - [customCurve](arkts-arkui-curves-customcurve-f.md)
@@ -790,7 +799,15 @@
   - [springMotion](arkts-arkui-curves-springmotion-f.md)
   - [steps](arkts-arkui-curves-steps-f.md)
   - [stepsCurve](arkts-arkui-curves-stepscurve-f.md)
+  <!--Del-->
+  - [trailOptimizedInterpolatingSpring(系统接口)](arkts-arkui-curves-trailoptimizedinterpolatingspring-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [trailOptimizedResponsiveSpringMotion(系统接口)](arkts-arkui-curves-trailoptimizedresponsivespringmotion-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [trailOptimizedSpringMotion(系统接口)](arkts-arkui-curves-trailoptimizedspringmotion-f-sys.md)<!--DelEnd-->
   - [ICurve](arkts-arkui-curves-icurve-i.md)
+  <!--Del-->
+  - [TrailOptimization(系统接口)](arkts-arkui-curves-trailoptimization-i-sys.md)<!--DelEnd-->
   - [Curve](arkts-arkui-curves-curve-e.md)
 <!--Del-->
 - [@ohos.deviceStatus.dragInteraction](arkts-devicestatus-draginteraction.md)<!--DelEnd-->
@@ -883,7 +900,7 @@
   - [UIFontFallbackGroupInfo](arkts-arkui-font-uifontfallbackgroupinfo-i.md)
   - [UIFontFallbackInfo](arkts-arkui-font-uifontfallbackinfo-i.md)
   - [UIFontGenericInfo](arkts-arkui-font-uifontgenericinfo-i.md)
-- [@ohos.matrix4](arkts-matrix4.md)
+- [@ohos.matrix4(矩阵变换)](arkts-matrix4.md)
   - [combine](arkts-arkui-matrix4-combine-f.md)
   - [copy](arkts-arkui-matrix4-copy-f.md)
   - [identity](arkts-arkui-matrix4-identity-f.md)

@@ -40,7 +40,7 @@ Requests to publish a widget to the widget host. This API uses an asynchronous c
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the maximum allowed.<br>**Applicable version:** 26.1.0 and later |
 | [16501008](../errorcode-form.md#16501008-adding-a-widget-to-the-home-screen-times-out) | Waiting for the form addition to the desktop timed out.<br>**Applicable version:** 12 and later |
-| 16501017 | There is no space to publish form.<br>**Applicable version:** 26.1.0 and later |
+| 16501017 | There is no space to publish the form.<br>**Applicable version:** 26.1.0 and later |
 | 16501018 | This form does not support publishing.<br>**Applicable version:** 26.1.0 and later |
 
 **Examples**
@@ -112,7 +112,7 @@ Requests to publish a widget to the widget host. This API uses a promise to retu
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the maximum allowed.<br>**Applicable version:** 26.1.0 and later |
 | [16501008](../errorcode-form.md#16501008-adding-a-widget-to-the-home-screen-times-out) | Waiting for the form addition to the desktop timed out.<br>**Applicable version:** 12 and later |
-| 16501017 | There is no space to publish form.<br>**Applicable version:** 26.1.0 and later |
+| 16501017 | There is no space to publish the form.<br>**Applicable version:** 26.1.0 and later |
 | 16501018 | This form does not support publishing.<br>**Applicable version:** 26.1.0 and later |
 
 **Examples**

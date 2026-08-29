@@ -1,13 +1,14 @@
 # sharedTransitionOptions
 
-共享元素转场动画参数。
+共享元素转场动效参数。
 
 > **说明：**
 > 
 > type为SharedTransitionEffectType.Exchange时motionPath才会生效。
 > 
-> type为SharedTransitionEffectType.Exchange时，效果为对匹配的共享元素产生位置、大小的过渡（可通过配置组件的border观察），不支持内容的过渡效果。例如，Text组件在两个页面上使用不同的
-> fontSize属性值，即绘制内容有大小差异，在sharedTransition动画结束后的最后一帧，Text的fontSize效果会突变为跳转目标页fontSize的效果。
+> type为SharedTransitionEffectType.Exchange时，效果为对匹配的共享元素产生位置、大小的过渡（可通过配置组件的border观察），不支持组件绘制内容的过渡效果（可通过为共享元素组件配置border
+> 属性来观察位置和大小变化的过渡范围）。例如，Text组件在两个页面上使用不同的fontSize属性值，即绘制内容有大小差异，在sharedTransition动画结束后的最后一帧，Text的fontSize效果会突变为跳转目标页
+> fontSize的效果。
 
 **起始版本：** 7
 
@@ -96,7 +97,7 @@ duration?: number
 motionPath?: MotionPathOptions
 ```
 
-运动路径信息。
+运动路径信息，用于定义共享元素转场时的运动轨迹。不设置时不启用运动路径效果。仅在type为SharedTransitionEffectType.Exchange时生效。
 
 **类型：** [MotionPathOptions](arkts-arkui-motionpathoptions-i.md)
 
@@ -112,7 +113,7 @@ motionPath?: MotionPathOptions
 type?: SharedTransitionEffectType
 ```
 
-动画类型。
+动画类型，决定共享元素转场时的过渡方式。Exchange类型产生位置、大小的过渡动画（不支持内容过渡效果），其他类型详见[SharedTransitionEffectType](../arkts-apis/arkts-arkui-sharedtransitioneffecttype-e.md)。
 
 默认值：SharedTransitionEffectType.Exchange
 
@@ -132,11 +133,13 @@ type?: SharedTransitionEffectType
 zIndex?: number
 ```
 
-设置Z轴。
+设置共享元素在转场动画期间的Z轴堆叠顺序。
 
 取值范围：(-∞, +∞)
 
 默认值：0
+
+数值越大，该共享元素在转场过程中越靠前（显示在上层），越不容易被其他共享元素遮挡。此zIndex仅在共享元素转场动画期间生效，控制共享元素相对于其他同时参与转场的共享元素在Z轴上的堆叠顺序，不参与页面内普通组件的静态布局层级控制（页面内组件的静态布局层级由组件通用属性[zIndex](arkts-arkui-commonmethod-c.md#zindex)控制）。
 
 **类型：** number
 

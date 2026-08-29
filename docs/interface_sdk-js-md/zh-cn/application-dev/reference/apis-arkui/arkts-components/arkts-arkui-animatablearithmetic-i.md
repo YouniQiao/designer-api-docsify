@@ -17,7 +17,7 @@
 equals(rhs: AnimatableArithmetic<T>): boolean
 ```
 
-定义该数据类型的相等判断规则。
+定义该数据类型的相等判断规则，在动画过程中用于识别数据是否发生改变，若当前值与目标值相等则不再触发动画过渡。需与AnimatableArithmetic\&lt;T\&gt;接口的其他方法一同实现，才能使自定义数据类型参与动画的插值运算。
 
 **起始版本：** 10
 
@@ -31,7 +31,7 @@ equals(rhs: AnimatableArithmetic<T>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 是 | 和自身比较相等的另一个数据对象。 |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 是 | 与当前对象判断是否相等的另一个数据对象。 |
 
 **返回值：**
 
@@ -45,7 +45,7 @@ equals(rhs: AnimatableArithmetic<T>): boolean
 multiply(scale: number): AnimatableArithmetic<T>
 ```
 
-定义该数据类型的乘法运算规则。
+定义该数据类型的乘法运算规则，在动画插值运算中用于按动画进度比例（0到1之间）对差值进行缩放，缩放后的差值将通过plus运算加到起始值上。需与AnimatableArithmetic\&lt;T\&gt;接口的其他方法一同实现，才能使自定义数据类型参与动画的插值运算。
 
 **起始版本：** 10
 
@@ -59,13 +59,13 @@ multiply(scale: number): AnimatableArithmetic<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | number | 是 | 乘法运算的系数。 |
+| scale | number | 是 | 乘法运算的系数，取值范围为[0, +∞)，动画插值时典型取值范围为[0, 1]。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 乘法运算的结果。 |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 乘法运算的结果，用于动画插值过程中按系数缩放数据以计算中间帧数据。 |
 
 ## plus
 
@@ -73,7 +73,7 @@ multiply(scale: number): AnimatableArithmetic<T>
 plus(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 ```
 
-定义数据类型的加法运算规则。
+定义该数据类型的加法运算规则。需与AnimatableArithmetic\&lt;T\&gt;接口的其他方法一同实现，才能使自定义数据类型参与动画的插值运算。
 
 **起始版本：** 10
 
@@ -87,13 +87,13 @@ plus(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 是 | 加法运算的对象。 |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 是 | 与自身进行加法运算的另一个数据对象，应与当前对象为相同的具体类型实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 加法运算的结果。 |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 加法运算的结果，用于动画插值过程中计算两个数据之间的中间值。 |
 
 ## subtract
 
@@ -101,7 +101,7 @@ plus(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 subtract(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 ```
 
-定义该数据类型的减法运算规则。
+定义该数据类型的减法运算规则，在动画插值运算中用于计算起始值与目标值之间的差值，差值将作为乘法运算的输入。需与AnimatableArithmetic\&lt;T\&gt;接口的其他方法一同实现，才能使自定义数据类型参与动画的插值运算。
 
 **起始版本：** 10
 
@@ -115,10 +115,10 @@ subtract(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 是 | 减法运算的对象。 |
+| rhs | [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 是 | 与自身进行减法运算的另一个数据对象，应与当前对象为相同的具体类型实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 减法运算的结果。 |
+| [AnimatableArithmetic](arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | 减法运算的结果，用于动画插值过程中计算数据差值以得到中间帧数据。 |

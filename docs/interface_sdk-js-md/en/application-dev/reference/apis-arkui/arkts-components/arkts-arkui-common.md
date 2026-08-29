@@ -157,6 +157,7 @@ Constructor
 | [sharedTransitionOptions](arkts-arkui-sharedtransitionoptions-i.md) | Parameters of the shared element transition animation. |
 | [SheetDismiss](arkts-arkui-sheetdismiss-i.md) | Component sheet dismiss |
 | [SheetOptions](arkts-arkui-sheetoptions-i.md) | Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md). |
+| [SheetTitleBarBackgroundBlurOptions](arkts-arkui-sheettitlebarbackgroundbluroptions-i.md) | Custom options for title bar background blur. All sub-properties are optional; unset properties use system default values. |
 | [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) | Component sheet title options |
 | [SizeResult](arkts-arkui-sizeresult-i.md) | > **NOTE：**
 > 
@@ -317,6 +318,8 @@ Constructor
 | [SheetKeyboardAvoidMode](arkts-arkui-sheetkeyboardavoidmode-e.md) | Define the mode of sheet how to avoid keyboard. |
 | [SheetMode](arkts-arkui-sheetmode-e.md) | Define the display mode of the sheet. |
 | [SheetSize](arkts-arkui-sheetsize-e.md) | Defines sheet size type. |
+| [SheetTitleBarBackgroundBlur](arkts-arkui-sheettitlebarbackgroundblur-e.md) | Enum of title bar background blur styles. |
+| [SheetTitleBarHoverMode](arkts-arkui-sheettitlebarhovermode-e.md) | Enum of title bar hover modes. |
 | [SheetType](arkts-arkui-sheettype-e.md) | Defines the sheet type. |
 | [SourceTool](arkts-arkui-sourcetool-e.md) | Enumerates the input source tool types. |
 | [SourceType](arkts-arkui-sourcetype-e.md) | Enumerates the input source device types. |

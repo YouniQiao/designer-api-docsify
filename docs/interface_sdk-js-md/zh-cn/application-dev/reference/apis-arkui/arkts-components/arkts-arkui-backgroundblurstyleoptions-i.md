@@ -19,7 +19,7 @@
 inactiveColor?: ResourceColor
 ```
 
-模糊不生效时使用的背景色。该参数需配合policy参数使用。当policy使模糊失效时，控件模糊效果会被移除，如果设置了inactiveColor会使用inactiveColor作为控件背景色。
+模糊不生效时使用的背景色。该参数需配合policy参数使用。当policy使模糊失效时，组件模糊效果会被移除，如果设置了inactiveColor会使用inactiveColor作为组件背景色。默认不设置inactiveColor背景色。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 

@@ -2,6 +2,16 @@
 
 动画效果相关参数。
 
+> **PlayMode说明：**
+> 
+> - PlayMode推荐使用PlayMode.Normal和PlayMode.Alternate，此场景下动画的第一轮是正向播放的。如使用PlayMode.Reverse和PlayMode.AlternateReverse，则动画
+> 的第一轮是逆向播放的，在动画刚开始时会跳变到终止状态，然后逆向播放动画。
+> 
+> - 使用PlayMode.Alternate或PlayMode.AlternateReverse时，开发者应保证动画最终状态和状态变量的取值一致，即应保证动画的最后一轮是正向播放的。使用PlayMode.Alternate时，
+> iterations应为奇数，否则动画最终状态和状态变量的取值可能不一致。使用PlayMode.AlternateReverse时，iterations应为偶数，否则动画最终状态和状态变量的取值可能不一致。
+> 
+> - 不推荐使用PlayMode.Reverse，此场景下不仅会导致动画刚开始就跳变到终止状态，也会导致动画最终状态和状态变量的取值不同。
+
 **起始版本：** 7
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,9 +27,9 @@
 onFinish?: () => void
 ```
 
-动画播放完成回调。UIAbility从前台切换至后台时会立即结束仍在步进中的有限循环动画，触发播放完成回调。
+动画播放完成回调，回调触发时机受finishCallbackType参数影响，详见finishCallbackType说明。UIAbility从前台切换至后台时会立即结束仍在步进中的有限循环动画，触发播放完成回调。
 
-在设置的开发者选项中关闭过渡动画，以及tempo设置为+∞时，动画播放完成回调会立即执行。
+在系统设置的开发者选项中关闭过渡动画，以及tempo设置为+∞时，动画播放完成回调会立即执行。
 
 **起始版本：** 7
 
@@ -43,7 +53,7 @@ curve?: Curve | string | ICurve
 
 "linear"：动画线性变化。
 
-"ease"：动画开始和结束时的速度较慢，cubic-bezier(0.25、0.1、0.25、1.0)。
+"ease"：动画开始和结束时的速度较慢，cubic-bezier(0.25, 0.1, 0.25, 1.0)。
 
 "ease-in"：动画播放速度先慢后快，cubic-bezier(0.42, 0.0, 1.0, 1.0)。
 
@@ -81,6 +91,8 @@ curve?: Curve | string | ICurve
 
 默认值：Curve.EaseInOut
 
+**说明：** 当curve传入的string值不在上述可选值范围内时，使用默认值Curve.EaseInOut。当curve配置为弹簧类曲线（interpolating-spring、responsive-spring- motion、spring-motion）时，duration参数不生效。
+
 **类型：** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
 **默认值：** Curve.EaseInOut
@@ -99,15 +111,15 @@ curve?: Curve | string | ICurve
 delay?: number
 ```
 
-动画延迟播放时间，单位为ms(毫秒)，默认不延时播放。
+动画延迟播放时间，单位为ms（毫秒），默认不延迟播放。
 
 默认值：0
 
 取值范围：(-∞, +∞)
 
-**说明：**1.delay&gt;=0为延迟播放，delay&lt;0表示提前播放。对于delay&lt;0的情况：当delay的绝对值小于实际动画时长，动画将在开始后第一帧直接运动到delay绝对值的时刻的状态；当delay的绝对值大于等于实际动画时长，动画将在开始后第一帧直接运动到终点状态。其中实际动画时长等于单次动画时长乘以动画播放次数。
+**说明：**1.delay&gt;=0为延迟播放，delay&lt;0表示提前播放。对于delay&lt;0的情况：当delay的绝对值小于实际动画时长，动画将在开始后第一帧直接运动到delay绝对值的时刻的状态；当delay的绝对值大于等于实际动画时长，动画将在开始后第一帧直接运动到终点状态。其中实际动画时长等于单次动画时长乘以动画播放次数，同时受tempo（播放速度）影响。
 
-2. 设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。
+2. 设置浮点类型的值时，截断取整。例如，设置值为1.2，按照1处理。
 
 **类型：** number
 
@@ -125,7 +137,9 @@ delay?: number
 duration?: number
 ```
 
-动画持续时间，单位为毫秒。
+动画持续时间，单位为ms（毫秒）。
+
+取值范围：[0, +∞)
 
 默认值：1000
 
@@ -133,8 +147,8 @@ duration?: number
 
 2. 可以通过在持续时间为0的动画闭包函数中改变属性，以实现停止该属性动画的效果。
 3. 设置小于0的值时按0处理。
-4. 设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。
-5. curve配置[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md)、[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md)、[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)曲线时，duration不生效。
+4. 设置浮点类型的值时，截断取整。例如，设置值为1.2，按照1处理。
+5. curve配置[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md)、[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md)、[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md)曲线时，duration不生效，动画持续时间由弹簧曲线自身的物理参数（mass、stiffness、damping等）决定。
 
 **类型：** number
 
@@ -154,7 +168,7 @@ duration?: number
 expectedFrameRateRange?: ExpectedFrameRateRange
 ```
 
-设置动画的期望帧率。
+设置动画的期望帧率。相关使用约束请参考ExpectedFrameRateRange说明。设置为0时，期望帧率将跟随应用的帧率；超出取值范围时自动修正为边界值。未设置时，动画将按应用默认帧率运行。
 
 **类型：** [ExpectedFrameRateRange](arkts-arkui-expectedframeraterange-i.md)
 
@@ -172,7 +186,7 @@ expectedFrameRateRange?: ExpectedFrameRateRange
 finishCallbackType?: FinishCallbackType
 ```
 
-在动画中定义onFinish回调的类型。
+在动画中定义onFinish回调的类型，需先设置onFinish回调，此参数才有效。
 
 默认值：FinishCallbackType.REMOVED
 
@@ -194,13 +208,13 @@ finishCallbackType?: FinishCallbackType
 iterations?: number
 ```
 
-动画播放次数。默认播放一次，设置为-1时表示无限次播放。设置为0时表示无动画效果。
+动画播放次数。默认播放一次，设置为-1时表示无限次播放。设置为0时表示无动画效果。使用PlayMode.Alternate时iterations应为奇数，使用PlayMode.AlternateReverse时iterations应为偶数，以保证动画最终状态和状态变量的取值一致，详见PlayMode说明。
 
 默认值：1
 
 取值范围：[-1, +∞)
 
-**说明：**设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。
+**说明：**设置浮点类型的值时，截断取整。例如，设置值为1.2，按照1处理。
 
 **类型：** number
 
@@ -218,21 +232,11 @@ iterations?: number
 playMode?: PlayMode
 ```
 
-动画播放模式，默认播放完成后从头开始播放。
+动画播放模式。各模式完整行为说明：PlayMode.Normal每轮正向播放，播放完成后从头开始重复；PlayMode.Alternate正逆交替播放，第一轮正向，第二轮逆向，依次交替；PlayMode.Reverse每轮逆向播放，动画开始时跳变到终止状态后逆向播放；PlayMode.AlternateReverse逆正交替播放，第一轮逆向（动画开始时跳变到终止状态），第二轮正向，依次交替。
 
 默认值：PlayMode.Normal
 
 相关使用约束请参考PlayMode说明。
-
-> **PlayMode说明：**
-> 
-> - PlayMode推荐使用PlayMode.Normal和PlayMode.Alternate，此场景下动画的第一轮是正向播放的。如使用PlayMode.Reverse和PlayMode.AlternateReverse，则动画
-> 的第一轮是逆向播放的，在动画刚开始时会跳变到终止状态，然后逆向播放动画。
-> 
-> - 使用PlayMode.Alternate或PlayMode.AlternateReverse时，开发者应保证动画最终状态和状态变量的取值一致，即应保证动画的最后一轮是正向播放的。使用PlayMode.Alternate时，
-> iterations应为奇数。使用PlayMode.AlternateReverse时，iterations应为偶数。
-> 
-> - 不推荐使用PlayMode.Reverse，此场景下不仅会导致动画刚开始就跳变到终止状态，也会导致动画最终状态和状态变量的取值不同。
 
 **类型：** PlayMode
 
@@ -254,7 +258,7 @@ tempo?: number
 
 动画播放速度，值越大动画播放越快，值越小播放越慢，为0时无动画效果。
 
-当设置为+∞时，动画会在当帧结束，动画结束回调会立即执行。
+当设置为+∞时，动画会在当前帧结束，动画结束回调会立即执行。
 
 默认值：1.0
 

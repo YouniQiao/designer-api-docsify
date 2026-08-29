@@ -17,7 +17,7 @@
 subtitle?: ResourceStr
 ```
 
-半模态面板的副标题。
+半模态面板的副标题。不传入时默认不显示副标题。当需要在标题下方补充说明文字时传入此参数。
 
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

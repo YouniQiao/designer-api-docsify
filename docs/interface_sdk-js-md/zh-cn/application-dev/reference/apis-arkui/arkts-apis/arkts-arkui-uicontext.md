@@ -79,7 +79,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 
 | 名称 | 说明 |
 | --- | --- |
-| [BackgroundLuminanceSamplingConfigs](arkts-arkui-arkui-uicontext-backgroundluminancesamplingconfigs-i-sys.md) | 背景取色参数配置。 |
+| [BackgroundLuminanceSamplingConfigs](arkts-arkui-arkui-uicontext-backgroundluminancesamplingconfigs-i-sys.md) | 背景亮度采样参数配置。背景亮度采样用于定期从组件背景区域取色，根据亮度阈值判定背景的明暗程度，以支持组件自适应明暗风格等场景。 |
 <!--DelEnd-->
 
 ### 枚举

@@ -27,7 +27,7 @@
 center?: PositionT<LengthMetrics>
 ```
 
-The coordinates of the center of the annulus
+圆环的圆心坐标，组件的左上角为坐标原点。默认值：{x:LengthMetrics.percent(0.5),y:LengthMetrics.percent(0.5)}
 
 **类型：** [PositionT](arkts-arkui-positiont-t.md)&lt;LengthMetrics&gt;
 
@@ -47,7 +47,13 @@ The coordinates of the center of the annulus
 endAngle?: number
 ```
 
-The end angle of the annulus, in degree
+圆环的结束角度。
+
+单位：度（°）
+
+取值范围：(-∞, +∞)
+
+默认值：360
 
 **类型：** number
 
@@ -67,7 +73,7 @@ The end angle of the annulus, in degree
 innerRadius: LengthMetrics
 ```
 
-The inner radius of the annulus
+圆环的内圆半径。小于零或使用百分比单位时按零进行处理。当outerRadius小于innerRadius时，会将当前较小的值作为新的内圆半径，将较大的值作为新的外圆半径。
 
 **类型：** LengthMetrics
 
@@ -85,7 +91,7 @@ The inner radius of the annulus
 outerRadius: LengthMetrics
 ```
 
-The outer radius of the annulus
+圆环的外圆半径。小于零或使用百分比单位时按零进行处理。当outerRadius小于innerRadius时，会将当前较小的值作为新的内圆半径，将较大的值作为新的外圆半径。
 
 **类型：** LengthMetrics
 
@@ -103,7 +109,13 @@ The outer radius of the annulus
 startAngle?: number
 ```
 
-The start angle of the annulus, in degree
+圆环的起始角度。
+
+单位：度（°）
+
+取值范围：(-∞, +∞)
+
+默认值：0
 
 **类型：** number
 

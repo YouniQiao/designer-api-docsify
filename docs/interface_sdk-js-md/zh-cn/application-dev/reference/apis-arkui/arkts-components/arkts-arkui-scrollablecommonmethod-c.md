@@ -309,7 +309,7 @@ fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T
 > 
 > fadingEdge生效时，建议不在设置fadingEdge属性的组件上设置[background](arkts-arkui-commonmethod-c.md#background)相关属性，会影响渐隐的显示效果。
 > 
-> fadingEdge生效时，建议不在设置fadingEdge属性的组件以及其子组件上设置[systemMaterial](arkts-arkui-commonmethod-c-sys.md#systemmaterial)相关属性，会影响系统材质的显示效果，
+> fadingEdge生效时，建议不在设置fadingEdge属性的组件以及其子组件上设置[systemMaterial](arkts-arkui-commonmethod-c.md#systemmaterial)相关属性，会影响系统材质的显示效果，
 > 导致材质效果与预期效果不一致。
 > 
 > fadingEdge生效时，设置fadingEdge属性的组件会裁剪到边界，在该组件上设置[clip](arkts-arkui-commonmethod-c.md#clip)属性为false不生效。

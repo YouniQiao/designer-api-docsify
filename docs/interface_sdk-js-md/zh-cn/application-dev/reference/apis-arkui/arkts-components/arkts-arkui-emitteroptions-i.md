@@ -17,7 +17,7 @@
 annulusRegion?: ParticleAnnulusRegion
 ```
 
-环形发射器参数。需要发射器形状为环形（即shape参数为ParticleEmitterShape.ANNULUS）时才生效，且对于环形发射器，形状信息必须通过annulusRegion参数指定，position和size不生效。
+环形发射器参数。需要发射器形状为环形（即shape参数为ParticleEmitterShape.ANNULUS）时才生效，且对于环形发射器，形状信息必须通过annulusRegion参数指定，position和size不生效。未设置时，发射器不使用环形区域参数。
 
 **类型：** [ParticleAnnulusRegion](arkts-arkui-particleannulusregion-i.md)
 
@@ -37,7 +37,7 @@ annulusRegion?: ParticleAnnulusRegion
 emitRate?: number
 ```
 
-发射器发射速率（即每秒发射粒子数）。 默认值：5，小于0时取默认值5。emitRate值超过5000时会极大影响性能，建议设置参数小于5000。
+发射器发射速率（即每秒发射粒子数）。 默认值：5，小于0时取默认值5。emitRate值超过5000时会严重影响性能，可能导致帧率大幅下降，建议设置参数小于5000。
 
 **类型：** number
 
@@ -59,7 +59,7 @@ particle: EmitterParticleOptions<PARTICLE>
 
 粒子配置。
 
--type表示粒子类型，可以选择图片或者是点。
+-type表示粒子类型，可以选择图片或点。
 
 -config表示对应类型的配置。
 
@@ -92,7 +92,7 @@ lifetimeRange表示粒子生命周期取值范围，设置lifetimeRange后粒子
 position?: ParticleTuple<Dimension, Dimension>
 ```
 
-发射器位置（距离组件左上角的位置。第一个参数为x方向上的相对偏移，第二个参数为y轴方向相对偏移。）
+发射器位置（距离组件左上角的位置。第一个参数为x方向上的相对偏移，第二个参数为y轴方向相对偏移。）。当发射器形状为环形（即shape为ParticleEmitterShape.ANNULUS）时，此属性不生效，需通过annulusRegion参数指定形状信息。
 
 默认值：`[0.0, 0.0]`
 
@@ -136,7 +136,7 @@ shape?: ParticleEmitterShape
 size?: ParticleTuple<Dimension, Dimension>
 ```
 
-发射窗口的大小。第一个参数为发射器宽，第二个参数为发射器高。
+发射器的大小。第一个参数为发射器宽，第二个参数为发射器高。当发射器形状为环形（即shape为ParticleEmitterShape.ANNULUS）时，此属性不生效，需通过annulusRegion参数指定形状信息。
 
 默认值：`['100%','100%']`(即发射窗口占满Particle组件)
 
