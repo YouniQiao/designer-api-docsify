@@ -38,7 +38,7 @@ controlType: ControlType
 
 拦截指定应用程序的不同策略。
 
-**类型：** [ControlType](arkts-ability-appcontrol-controltype-e-sys.md)
+**类型：** ControlType
 
 **起始版本：** 11
 

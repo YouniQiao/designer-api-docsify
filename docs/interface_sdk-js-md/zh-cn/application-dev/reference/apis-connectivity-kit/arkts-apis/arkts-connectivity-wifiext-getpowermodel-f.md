@@ -12,7 +12,11 @@ import { wifiext } from '@kit.ConnectivityKit';
 function getPowerModel(): Promise<PowerModel>
 ```
 
-获取功率模式。
+获取功率模式，使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -28,7 +32,7 @@ function getPowerModel(): Promise<PowerModel>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt; | 返回当前的WLAN功率模式。返回值小于零表示失败。 |
+| Promise&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt; | Promise对象。表示功率模式。 |
 
 
 ## getPowerModel
@@ -37,7 +41,11 @@ function getPowerModel(): Promise<PowerModel>
 function getPowerModel(callback: AsyncCallback<PowerModel>): void
 ```
 
-获取功率模式。
+获取功率模式。使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 

@@ -12,9 +12,11 @@ import { wifi } from '@kit.ConnectivityKit';
 function off(type: 'wifiStateChange', callback?: Callback<number>): void
 ```
 
-取消订阅WLAN状态改变事件。
+取消注册Wi-Fi状态改变事件。
 
-<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -30,8 +32,8 @@ function off(type: 'wifiStateChange', callback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'wifiStateChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。0:未激活，1:已激活，2:激活中，3:去激活中 |
+| type | 'wifiStateChange' | 是 | 固定填"wifiStateChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。如果callback不填，将取消注册该事件关联的所有回调函数。 |
 
 **示例**
 
@@ -56,9 +58,11 @@ wifi.off("wifiStateChange", recvPowerNotifyFunc);
 function off(type: 'wifiConnectionChange', callback?: Callback<number>): void
 ```
 
-取消订阅WLAN连接状态改变事件。
+取消注册Wi-Fi连接状态改变事件。
 
-<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -74,8 +78,8 @@ function off(type: 'wifiConnectionChange', callback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'wifiConnectionChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。0:已断开，1:已连接 |
+| type | 'wifiConnectionChange' | 是 | 固定填"wifiConnectionChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 连接状态改变回调函数。如果callback不填，将取消注册该事件关联的所有回调函数。 |
 
 **示例**
 
@@ -100,9 +104,11 @@ wifi.off("wifiConnectionChange", recvWifiConnectionChangeFunc);
 function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
 ```
 
-取消订阅WLAN扫描状态改变事件。
+取消注册扫描状态改变事件。
 
-<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -118,8 +124,8 @@ function off(type: 'wifiScanStateChange', callback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'wifiScanStateChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。0:扫描失败，1:扫描成功 |
+| type | 'wifiScanStateChange' | 是 | 固定填"wifiScanStateChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。如果callback不填，将取消注册该事件关联的所有回调函数。 |
 
 **示例**
 
@@ -144,9 +150,11 @@ wifi.off("wifiScanStateChange", recvWifiScanStateChangeFunc);
 function off(type: 'wifiRssiChange', callback?: Callback<number>): void
 ```
 
-取消订阅WLAN RSSI改变事件。
+取消注册RSSI状态改变事件。
 
-<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -162,8 +170,8 @@ function off(type: 'wifiRssiChange', callback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'wifiRssiChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数 |
+| type | 'wifiRssiChange' | 是 | 固定填"wifiRssiChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。如果callback不填，将取消注册该事件关联的所有回调函数。 |
 
 **示例**
 
@@ -188,9 +196,11 @@ wifi.off("wifiRssiChange", recvWifiRssiChangeFunc);
 function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 ```
 
-取消订阅WLAN热点状态改变事件。
+取消注册热点状态改变事件。
 
-<p>如果没有指定callback参数，将取消注册该事件关联的所有回调函数。</p>
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -206,8 +216,8 @@ function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'hotspotStateChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。0:未激活，1:已激活，2:激活中，3:去激活中 |
+| type | 'hotspotStateChange' | 是 | 固定填"hotspotStateChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。如果callback不填，将取消注册该事件关联的所有回调函数。 |
 
 
 ## off('p2pStateChange')
@@ -216,7 +226,11 @@ function off(type: 'hotspotStateChange', callback?: Callback<number>): void
 function off(type: 'p2pStateChange', callback?: Callback<number>): void
 ```
 
-取消订阅P2P状态改变事件。
+取消注册P2P开关状态改变事件。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -232,8 +246,8 @@ function off(type: 'p2pStateChange', callback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'p2pStateChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。1:空闲，2:打开中，3:已打开，4:关闭中，5:已关闭 |
+| type | 'p2pStateChange' | 是 | 固定填"p2pStateChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。如果callback不填，将取消注册该事件关联的所有回调函数。 |
 
 **示例**
 
@@ -258,7 +272,11 @@ wifi.off("p2pStateChange", recvP2pStateChangeFunc);
 function off(type: 'p2pConnectionChange', callback?: Callback<WifiP2pLinkedInfo>): void
 ```
 
-取消订阅P2P连接改变事件。
+取消注册P2P连接状态改变事件。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -274,8 +292,8 @@ function off(type: 'p2pConnectionChange', callback?: Callback<WifiP2pLinkedInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'p2pConnectionChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pLinkedInfo&gt; | 否 | 状态改变回调函数 |
+| type | 'p2pConnectionChange' | 是 | 固定填"p2pConnectionChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pLinkedInfo&gt; | 否 | 状态改变回调函数。如果callback不填，将取消注册该事件关联的所有回调函数。 |
 
 **示例**
 
@@ -300,7 +318,11 @@ wifi.off("p2pConnectionChange", recvP2pConnectionChangeFunc);
 function off(type: 'p2pDeviceChange', callback?: Callback<WifiP2pDevice>): void
 ```
 
-取消订阅P2P本地设备改变事件。
+取消注册P2P设备状态改变事件。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -316,8 +338,8 @@ function off(type: 'p2pDeviceChange', callback?: Callback<WifiP2pDevice>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'p2pDeviceChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice&gt; | 否 | 状态改变回调函数 |
+| type | 'p2pDeviceChange' | 是 | 固定填"p2pDeviceChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice&gt; | 否 | 状态改变回调函数。如果callback不填，将取消注册该事件关联的所有回调函数。 |
 
 **示例**
 
@@ -342,7 +364,11 @@ wifi.off("p2pDeviceChange", recvP2pDeviceChangeFunc);
 function off(type: 'p2pPeerDeviceChange', callback?: Callback<WifiP2pDevice[]>): void
 ```
 
-取消订阅P2P对端设备改变事件。
+取消注册P2P对端设备状态改变事件。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -358,8 +384,8 @@ function off(type: 'p2pPeerDeviceChange', callback?: Callback<WifiP2pDevice[]>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'p2pPeerDeviceChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice[]&gt; | 否 | 状态改变回调函数 |
+| type | 'p2pPeerDeviceChange' | 是 | 固定填"p2pPeerDeviceChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice[]&gt; | 否 | 状态改变回调函数。如果callback不填，将取消注册该事件关联的所有回调函数。 |
 
 **示例**
 
@@ -384,7 +410,11 @@ wifi.off("p2pPeerDeviceChange", recvP2pPeerDeviceChangeFunc);
 function off(type: 'p2pPersistentGroupChange', callback?: Callback<void>): void
 ```
 
-取消订阅P2P持久群组改变事件。
+取消注册P2P永久组状态改变事件。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -400,8 +430,8 @@ function off(type: 'p2pPersistentGroupChange', callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'p2pPersistentGroupChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 状态改变回调函数 |
+| type | 'p2pPersistentGroupChange' | 是 | 固定填"p2pPersistentGroupChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | 状态改变回调函数。如果callback不填，将取消注册该事件关联的所有回调函数。 |
 
 **示例**
 
@@ -426,7 +456,11 @@ wifi.off("p2pPersistentGroupChange", recvP2pPersistentGroupChangeFunc);
 function off(type: 'p2pDiscoveryChange', callback?: Callback<number>): void
 ```
 
-取消订阅P2P发现事件。
+取消注册发现设备状态改变事件。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -442,8 +476,8 @@ function off(type: 'p2pDiscoveryChange', callback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'p2pDiscoveryChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数 |
+| type | 'p2pDiscoveryChange' | 是 | 固定填"p2pDiscoveryChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。如果callback不填，将取消注册该事件关联的所有回调函数。 |
 
 **示例**
 

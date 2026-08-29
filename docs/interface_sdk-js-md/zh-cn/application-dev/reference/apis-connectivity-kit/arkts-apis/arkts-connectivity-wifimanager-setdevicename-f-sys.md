@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function setDeviceName(devName: string): void
 ```
 
-设置WLAN P2P设备的名称。
+设置设备名称。
 
 **起始版本：** 9
 
@@ -26,7 +26,7 @@ function setDeviceName(devName: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| devName | string | 是 | 表示要设置的名称。 |
+| devName | string | 是 | 设备名称。 |
 
 **错误码：**
 

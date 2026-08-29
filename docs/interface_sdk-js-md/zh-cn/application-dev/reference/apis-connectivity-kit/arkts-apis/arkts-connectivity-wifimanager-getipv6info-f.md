@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getIpv6Info(): Ipv6Info
 ```
 
-获取WLAN连接的IPv6信息。IPv6信息包括主机IP地址、网关地址和DNS信息。
+获取IPV6信息。
 
 **起始版本：** 10
 
@@ -24,7 +24,7 @@ function getIpv6Info(): Ipv6Info
 
 | 类型 | 说明 |
 | --- | --- |
-| [Ipv6Info](arkts-connectivity-wifimanager-ipv6info-i.md) | 返回WLAN连接的IPv6信息。 |
+| [Ipv6Info](arkts-connectivity-wifimanager-ipv6info-i.md) | IPv6信息。 |
 
 **错误码：**
 

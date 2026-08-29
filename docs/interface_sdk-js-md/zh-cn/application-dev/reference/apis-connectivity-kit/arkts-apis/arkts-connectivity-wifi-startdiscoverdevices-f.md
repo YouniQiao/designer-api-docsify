@@ -12,7 +12,11 @@ import { wifi } from '@kit.ConnectivityKit';
 function startDiscoverDevices(): boolean
 ```
 
-发现WLAN P2P设备。
+开始发现设备。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -28,7 +32,7 @@ function startDiscoverDevices(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作成功时返回{ |
+| boolean | true:操作执行成功， false:操作执行失败。 |
 
 **示例**
 

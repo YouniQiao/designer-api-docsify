@@ -26,7 +26,7 @@ function getScanAlwaysAllowed(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 扫描运行状态为true时返回{ |
+| boolean | 是否始终允许扫描。true表示允许触发扫描，false表示在禁用Wi-Fi时不允许触发扫描。 |
 
 **错误码：**
 

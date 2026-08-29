@@ -1341,7 +1341,7 @@ getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | _AsyncCallback&lt;[DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md)&gt; | 是 | 回调函数，返回设备的DeviceCapability。 |
+| callback | _AsyncCallback&lt;DeviceCapability&gt; | 是 | 回调函数，返回设备的DeviceCapability。 |
 
 **示例**
 
@@ -1386,7 +1386,7 @@ getDeviceCapability(): Promise<DeviceCapability>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md)&gt; | Promise对象，返回设备的DeviceCapability。 |
+| Promise&lt;DeviceCapability&gt; | Promise对象，返回设备的DeviceCapability。 |
 
 **示例**
 
@@ -1429,7 +1429,7 @@ getDeviceCapabilitySync(): DeviceCapability
 
 | 类型 | 说明 |
 | --- | --- |
-| [DeviceCapability](arkts-localization-resourcemanager-devicecapability-c.md) | 设备的DeviceCapability。 |
+| DeviceCapability | 设备的DeviceCapability。 |
 
 **示例**
 

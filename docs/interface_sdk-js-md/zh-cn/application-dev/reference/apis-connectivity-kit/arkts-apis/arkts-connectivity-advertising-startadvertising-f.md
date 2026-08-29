@@ -26,7 +26,7 @@ function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| advertisingParams | [AdvertisingParams](arkts-connectivity-advertising-advertisingparams-i.md) | 是 | 广播相关参数。 |
+| advertisingParams | AdvertisingParams | 是 | 广播相关参数。 |
 
 **返回值：**
 

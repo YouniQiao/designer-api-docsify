@@ -18,7 +18,7 @@ Obtains the disabled status of a setting item.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getUserRestricted](#getuserrestricted)(admin: Want, settingsItem: SettingsForDevice)
+**Substitutes:** [getUserRestricted](arkts-mdm-restrictions-getuserrestricted-f.md)(admin: Want, settingsItem: SettingsForDevice)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 

@@ -12,7 +12,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function getPowerMode(): Promise<PowerMode>
 ```
 
-获取功率模式。
+获取功率模式，使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -24,7 +24,7 @@ function getPowerMode(): Promise<PowerMode>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)&gt; |  |
+| Promise&lt;[PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)&gt; | Promise对象。表示功率模式。 |
 
 **错误码：**
 
@@ -59,7 +59,7 @@ async function getWifiPowerMode() {
 function getPowerMode(callback: AsyncCallback<PowerMode>): void
 ```
 
-获取功率模式。
+获取功率模式。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -71,7 +71,7 @@ function getPowerMode(callback: AsyncCallback<PowerMode>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)&gt; | 是 | 回调函数。当操作成功时，err为0，data表示功率模式。如果err为非0，表示处理出现错误。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)&gt; | 是 | 回调函数。当操作成功时，err为0，data表示功率模式。如果err为非0，表示获取功率模式操作出现错误。 |
 
 **错误码：**
 

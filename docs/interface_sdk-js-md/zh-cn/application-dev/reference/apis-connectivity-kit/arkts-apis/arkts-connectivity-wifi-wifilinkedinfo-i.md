@@ -1,8 +1,10 @@
 # WifiLinkedInfo
 
-WLAN连接信息。
+提供Wi-Fi连接的相关信息。
 
-@interface WifiLinkedInfo
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃。
 
 **起始版本：** 6
 
@@ -24,7 +26,7 @@ import { wifi } from '@kit.ConnectivityKit';
 band: number
 ```
 
-WLAN AP的频段。
+Wi-Fi接入点的频段。1表示2.4GHz；2表示5GHz。
 
 **类型：** number
 
@@ -42,7 +44,7 @@ WLAN AP的频段。
 bssid: string
 ```
 
-WLAN热点的BSSID
+热点的BSSID，例如：00:11:22:33:44:55。
 
 **类型：** string
 
@@ -60,7 +62,7 @@ WLAN热点的BSSID
 connState: ConnState
 ```
 
-此WLAN连接的状态。
+Wi-Fi连接状态。
 
 **类型：** ConnState
 
@@ -78,7 +80,7 @@ connState: ConnState
 frequency: number
 ```
 
-WLAN AP的频率。
+Wi-Fi接入点的频率，单位：MHz。
 
 **类型：** number
 
@@ -96,7 +98,7 @@ WLAN AP的频率。
 ipAddress: number
 ```
 
-此WLAN连接的IP地址。
+Wi-Fi连接的IP地址。
 
 **类型：** number
 
@@ -114,7 +116,7 @@ ipAddress: number
 isHidden: boolean
 ```
 
-此WLAN连接的AP的SSID是否隐藏。
+Wi-Fi接入点是否是隐藏网络。true:是隐藏网络，false:不是隐藏网络。
 
 **类型：** boolean
 
@@ -132,7 +134,7 @@ isHidden: boolean
 isRestricted: boolean
 ```
 
-此WLAN连接是否限制数据量。
+Wi-Fi接入点是否限制数据量。true: 限制，false:不限制。
 
 **类型：** boolean
 
@@ -150,7 +152,7 @@ isRestricted: boolean
 linkSpeed: number
 ```
 
-WLAN AP的速度。
+Wi-Fi接入点的速度，单位Mbps。
 
 **类型：** number
 
@@ -168,7 +170,7 @@ WLAN AP的速度。
 macAddress: string
 ```
 
-设备的WLAN MAC地址。
+设备的MAC地址。
 
 **类型：** string
 
@@ -186,7 +188,7 @@ macAddress: string
 rssi: number
 ```
 
-WLAN AP的RSSI(dBm)。
+热点的信号强度(dBm)。
 
 **类型：** number
 
@@ -204,7 +206,7 @@ WLAN AP的RSSI(dBm)。
 ssid: string
 ```
 
-WLAN热点的SSID
+热点的SSID，最大长度为32字节，编码格式为UTF-8。
 
 **类型：** string
 

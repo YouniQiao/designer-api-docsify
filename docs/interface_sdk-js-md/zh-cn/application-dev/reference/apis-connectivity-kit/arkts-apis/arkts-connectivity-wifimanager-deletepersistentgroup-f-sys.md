@@ -12,7 +12,9 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function deletePersistentGroup(netId: number): void
 ```
 
-删除指定网络ID的持久P2P群组。
+删除指定网络ID的永久Wi-Fi组配置。该接口用于清除已保存的Wi-Fi网络配置信息，使其不再自动连接。
+
+- 根据网络ID删除之前与P2P设备建立的永久组信息，后续与该P2P设备进行P2P连接时需要重新进行P2P协商。
 
 **起始版本：** 9
 
@@ -26,7 +28,7 @@ function deletePersistentGroup(netId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| netId | number | 是 | 表示要删除的群组的网络ID。 |
+| netId | number | 是 | 组的ID。 |
 
 **错误码：**
 

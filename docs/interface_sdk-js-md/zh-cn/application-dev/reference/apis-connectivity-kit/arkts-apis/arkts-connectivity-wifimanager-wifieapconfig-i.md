@@ -1,6 +1,9 @@
 # WifiEapConfig
 
-WLAN EAP配置。
+可扩展身份验证协议配置信息。
+
+- WifiEapConfig是一个用于配置Wi-Fi网络EAP认证的类型。  
+- 包含EAP认证方式、第二阶段认证方式、身份信息、密码、证书等配置项。
 
 **起始版本：** 10
 
@@ -18,7 +21,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 altSubjectMatch: string
 ```
 
-备用主题匹配
+替代主题匹配。
 
 **类型：** string
 
@@ -32,7 +35,7 @@ altSubjectMatch: string
 anonymousIdentity: string
 ```
 
-匿名身份信息
+匿名身份。暂未使用。
 
 **类型：** string
 
@@ -46,7 +49,7 @@ anonymousIdentity: string
 caCertAlias: string
 ```
 
-CA证书别名
+CA证书别名。
 
 **类型：** string
 
@@ -60,7 +63,7 @@ CA证书别名
 caPath: string
 ```
 
-CA证书路径
+CA证书路径。
 
 **类型：** string
 
@@ -74,7 +77,7 @@ CA证书路径
 certEntry: Uint8Array
 ```
 
-用户证书内容
+CA证书内容。当eapMethod为EAP_TLS时，如果该字段为空，则clientCertAlias不能为空。
 
 **类型：** Uint8Array
 
@@ -88,7 +91,7 @@ certEntry: Uint8Array
 certPassword: string
 ```
 
-用户证书密码
+CA证书密码，最大长度为128字节。
 
 **类型：** string
 
@@ -102,7 +105,7 @@ certPassword: string
 clientCertAlias: string
 ```
 
-客户端证书别名
+客户端证书别名。
 
 **类型：** string
 
@@ -116,7 +119,7 @@ clientCertAlias: string
 domainSuffixMatch: string
 ```
 
-域名后缀匹配
+域后缀匹配。
 
 **类型：** string
 
@@ -130,7 +133,7 @@ domainSuffixMatch: string
 eapMethod: EapMethod
 ```
 
-EAP认证方式
+EAP认证方式。
 
 **类型：** EapMethod
 
@@ -144,7 +147,7 @@ EAP认证方式
 eapSubId: number
 ```
 
-SIM卡的子ID
+SIM卡的子ID。
 
 **类型：** number
 
@@ -158,7 +161,7 @@ SIM卡的子ID
 identity: string
 ```
 
-身份信息
+身份信息。当eapMethod为EAP_PEAP、EAP_TLS或EAP_PWD时，该字段不能为空串。
 
 **类型：** string
 
@@ -172,7 +175,7 @@ identity: string
 password: string
 ```
 
-密码
+密码。当eapMethod为EAP_PEAP或EAP_PWD时，该字段不能为空串，最大长度为128字节。
 
 **类型：** string
 
@@ -186,7 +189,7 @@ password: string
 phase2Method: Phase2Method
 ```
 
-Phase 2认证方式
+第二阶段认证方式。只有eapMethod为EAP_PEAP或EAP_TTLS时需要填写。
 
 **类型：** Phase2Method
 
@@ -200,7 +203,7 @@ Phase 2认证方式
 plmn: string
 ```
 
-Passpoint凭据提供者的公共陆地移动网络（PLMN）
+公共陆地移动网的直通凭证提供商。
 
 **类型：** string
 
@@ -214,7 +217,7 @@ Passpoint凭据提供者的公共陆地移动网络（PLMN）
 realm: string
 ```
 
-Passpoint凭据的Realm
+通行证凭证的领域。
 
 **类型：** string
 

@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function startPortalCertification(): void
 ```
 
-启动Portal认证。
+启动Portal认证流程，用于处理需要Web页面认证的公共Wi-Fi网络（如酒店、机场、咖啡厅等场所的网络）。
 
 **起始版本：** 11
 

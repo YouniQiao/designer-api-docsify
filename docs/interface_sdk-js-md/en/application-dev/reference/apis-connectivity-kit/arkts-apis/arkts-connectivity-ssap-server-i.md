@@ -4,7 +4,7 @@ Represents a SSAP server class, which provides APIs for connecting to and exchan
 
 Before using the methods of this class, you need to call [ssap.createServer](arkts-connectivity-ssap-createserver-f.md) to create an instance of this class.
 
-An app only needs to create one [Server](#server) instance. Repeated creation will increase unnecessary resource overhead.
+An app only needs to create one [Server](arkts-connectivity-ssap-server-i.md) instance. Repeated creation will increase unnecessary resource overhead.
 
 **Since:** 26.0.0
 

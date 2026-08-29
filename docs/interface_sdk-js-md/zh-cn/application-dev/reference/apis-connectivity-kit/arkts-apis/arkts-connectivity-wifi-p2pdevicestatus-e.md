@@ -1,8 +1,10 @@
 # P2pDeviceStatus
 
-P2P设备状态。
+表示设备状态的枚举。
 
-@enum { number } P2pDeviceStatus
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -18,7 +20,7 @@ P2P设备状态。
 CONNECTED = 0
 ```
 
-表示P2P设备已连接。
+连接状态。
 
 **起始版本：** 8
 
@@ -34,7 +36,7 @@ CONNECTED = 0
 INVITED = 1
 ```
 
-表示P2P设备已邀请。
+邀请状态。
 
 **起始版本：** 8
 
@@ -50,7 +52,7 @@ INVITED = 1
 FAILED = 2
 ```
 
-表示P2P设备失败。
+失败状态。
 
 **起始版本：** 8
 
@@ -66,7 +68,7 @@ FAILED = 2
 AVAILABLE = 3
 ```
 
-表示P2P设备可用。
+可用状态。
 
 **起始版本：** 8
 
@@ -82,7 +84,7 @@ AVAILABLE = 3
 UNAVAILABLE = 4
 ```
 
-表示P2P设备不可用。
+不可用状态。
 
 **起始版本：** 8
 

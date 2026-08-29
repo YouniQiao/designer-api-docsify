@@ -91,7 +91,7 @@ Queries the APN parameter information. This API is suitable for enterprise mobil
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| apnId | string | Yes | Specified APN ID. After the setting, the system queries the detailed parameter settings corresponding to the APN ID. You can obtain device information using [networkManager.queryApn](#queryapn). |
+| apnId | string | Yes | Specified APN ID. After the setting, the system queries the detailed parameter settings corresponding to the APN ID. You can obtain device information using [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md). |
 
 **Return value:**
 

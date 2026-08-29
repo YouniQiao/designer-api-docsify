@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getDeviceMacAddress(): string[]
 ```
 
-获取WLAN设备的MAC地址。必须先使能WLAN。MAC地址是唯一的，无法更改。
+获取设备的MAC地址。
 
 **起始版本：** 15
 
@@ -24,7 +24,7 @@ function getDeviceMacAddress(): string[]
 
 | 类型 | 说明 |
 | --- | --- |
-| string[] | 返回WLAN设备的MAC地址。 |
+| string[] | MAC地址。 |
 
 **错误码：**
 

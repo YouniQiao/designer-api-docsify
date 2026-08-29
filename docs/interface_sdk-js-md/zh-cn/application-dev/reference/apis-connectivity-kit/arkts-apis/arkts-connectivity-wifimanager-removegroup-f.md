@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function removeGroup(): void
 ```
 
-移除P2P群组。
+移除群组。
 
 **起始版本：** 9
 

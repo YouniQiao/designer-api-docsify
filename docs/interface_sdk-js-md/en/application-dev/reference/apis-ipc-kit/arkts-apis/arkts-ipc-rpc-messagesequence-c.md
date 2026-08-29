@@ -4411,7 +4411,7 @@ try {
 writeRemoteObject(obj: IRemoteObject): void
 ```
 
-Serializes the remote object and writes it to the [MessageSequence](#messagesequence) object.
+Serializes the remote object and writes it to the [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) object.
 
 **Since:** 9
 

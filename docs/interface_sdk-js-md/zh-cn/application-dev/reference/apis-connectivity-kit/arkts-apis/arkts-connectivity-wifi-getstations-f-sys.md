@@ -14,8 +14,6 @@ function getStations(): Array<StationInfo>
 
 获取连接的设备。
 
-<p>该方法只能在作为热点的设备上使用。
-
 **起始版本：** 7
 
 **废弃版本：** 9

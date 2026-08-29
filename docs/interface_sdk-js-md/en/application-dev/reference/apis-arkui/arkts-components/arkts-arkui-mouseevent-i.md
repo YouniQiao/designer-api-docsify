@@ -43,7 +43,7 @@ getHistoricalPoints?(): Array<MouseHistoricalPoint>
 
 Obtains all historical point information of the current frame. Historical points can be used to achieve smoother drawing effects.
 
-This API can only be called from [MouseEvent](#mouseevent) to obtain information about historical points of the current frame when [onMouse](arkts-arkui-commonmethod-c.md#onmouse) is triggered. The mouse event reporting frequency per frame varies across different devices. Typically, only one mouse event is reported per frame. If the number of [MouseEvent](#mouseevent) instances received in the current frame is greater than 1, the last point of that frame is returned via [onMouse](arkts-arkui-commonmethod-c.md#onmouse), and the remaining points are treated as historical points.
+This API can only be called from [MouseEvent](arkts-arkui-mouseevent-i.md) to obtain information about historical points of the current frame when [onMouse](arkts-arkui-commonmethod-c.md#onmouse) is triggered. The mouse event reporting frequency per frame varies across different devices. Typically, only one mouse event is reported per frame. If the number of [MouseEvent](arkts-arkui-mouseevent-i.md) instances received in the current frame is greater than 1, the last point of that frame is returned via [onMouse](arkts-arkui-commonmethod-c.md#onmouse), and the remaining points are treated as historical points.
 
 **Since:** 26.0.0
 

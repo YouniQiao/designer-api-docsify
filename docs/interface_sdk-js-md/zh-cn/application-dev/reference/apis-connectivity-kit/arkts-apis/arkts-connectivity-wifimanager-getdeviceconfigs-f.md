@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getDeviceConfigs(): Array<WifiDeviceConfig>
 ```
 
-获取所有已存在的WLAN配置列表。
+获取网络配置。
 
 **起始版本：** 15
 
@@ -24,7 +24,7 @@ function getDeviceConfigs(): Array<WifiDeviceConfig>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;WifiDeviceConfig&gt; | 返回您在应用上创建的所有已存在的WLAN配置列表。 |
+| Array&lt;WifiDeviceConfig&gt; | 网络配置数组。 |
 
 **错误码：**
 

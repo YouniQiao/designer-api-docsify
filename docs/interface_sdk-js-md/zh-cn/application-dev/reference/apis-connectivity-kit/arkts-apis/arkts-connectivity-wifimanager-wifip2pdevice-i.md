@@ -1,6 +1,6 @@
 # WifiP2pDevice
 
-P2P设备信息。
+表示P2P设备信息。
 
 **起始版本：** 9
 
@@ -18,7 +18,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 deviceAddress: string
 ```
 
-设备MAC地址
+设备MAC地址。
 
 **类型：** string
 
@@ -32,7 +32,7 @@ deviceAddress: string
 deviceAddressType?: DeviceAddressType
 ```
 
-设备MAC地址类型
+设备MAC地址类型。
 
 **类型：** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
@@ -46,7 +46,7 @@ deviceAddressType?: DeviceAddressType
 deviceName: string
 ```
 
-设备名称
+设备名称。
 
 **类型：** string
 
@@ -60,7 +60,7 @@ deviceName: string
 deviceStatus: P2pDeviceStatus
 ```
 
-设备状态
+设备状态。
 
 **类型：** P2pDeviceStatus
 
@@ -74,7 +74,7 @@ deviceStatus: P2pDeviceStatus
 groupCapabilities: number
 ```
 
-设备群组能力
+群组能力。
 
 **类型：** number
 
@@ -88,7 +88,7 @@ groupCapabilities: number
 primaryDeviceType: string
 ```
 
-主设备类型
+主设备类型。
 
 **类型：** string
 

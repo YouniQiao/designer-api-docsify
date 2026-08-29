@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getIpInfo(): IpInfo
 ```
 
-获取WLAN连接的IPv4信息。IP信息包括主机IP地址、网关地址和DNS信息。
+获取IPV4信息。
 
 **起始版本：** 9
 
@@ -24,7 +24,7 @@ function getIpInfo(): IpInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| IpInfo | 返回WLAN连接的IP信息。 |
+| IpInfo | IP信息。 |
 
 **错误码：**
 

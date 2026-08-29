@@ -332,7 +332,7 @@ Copies a compression stream. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | For details, see [Zip&lt;sup&gt;12+&lt;/sup&gt;](#zip). |
+| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | For details, see [Zip&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zip-i.md). |
 
 **Return value:**
 
@@ -1641,7 +1641,7 @@ Copies a decompression stream. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | For details, see [Zip&lt;sup&gt;12+&lt;/sup&gt;](#zip). |
+| source | [Zip](arkts-basicservices-zlib-zip-i.md) | Yes | For details, see [Zip&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zip-i.md). |
 
 **Return value:**
 

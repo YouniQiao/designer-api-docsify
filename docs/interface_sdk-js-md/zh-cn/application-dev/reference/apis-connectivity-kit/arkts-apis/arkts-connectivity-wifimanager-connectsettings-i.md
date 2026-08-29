@@ -1,6 +1,6 @@
 # ConnectSettings
 
-描述WLAN连接的设置信息。
+连接Wi-Fi设置信息。
 
 **起始版本：** 26.0.0
 
@@ -18,7 +18,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 addNetworkToSystem?: boolean
 ```
 
-是否将网络添加到系统中进行连接。默认为false，如果设置为true，在连接之前会将网络添加到系统中，且无法再次获取。
+是否添加网络到系统，true表示将建议网络添加到系统网络中，false表示保持建议网络，默认false 。
 
 **类型：** boolean
 
@@ -36,7 +36,7 @@ addNetworkToSystem?: boolean
 networkId: number
 ```
 
-WLAN连接的唯一标识ID。
+候选网络配置的ID。
 
 **类型：** number
 
@@ -54,7 +54,7 @@ WLAN连接的唯一标识ID。
 userActionTimeout?: number
 ```
 
-用户操作超时阈值（单位为秒）。最大值不能超过30，默认为10。
+提示用户进行信任确认弹框显示时间（单位秒）有效值范围1-30秒，默认10秒 。
 
 **类型：** number
 
@@ -72,7 +72,7 @@ userActionTimeout?: number
 withUserAction?: boolean
 ```
 
-随用户操作返回，默认值为false。
+连接时是否提示用户进行信任确认，true表示与connectToCandidateConfigWithUserAction接口功能一致，false表示不提示用户进行信任确认，默认false 。
 
 **类型：** boolean
 

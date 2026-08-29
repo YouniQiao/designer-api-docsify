@@ -78,7 +78,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 | [PathMeasureMatrixFlags](arkts-arkgraphics2d-drawing-pathmeasurematrixflags-e.md) | Enumerates the dimensions of matrix information in path measurement. It is often used in animation scenarios where objects move along a path. |
 | [PathOp](arkts-arkgraphics2d-drawing-pathop-e.md) | Enumerates the path operation types. It is often used in path combination and clipping scenarios. |
 | [PointMode](arkts-arkgraphics2d-drawing-pointmode-e.md) | Enumerates the modes for drawing multiple points in an array. |
-| [RectType](arkts-arkgraphics2d-drawing-recttype-e.md) | Enumerates the types of rectangles used to fill the lattices. Used only in [Lattice](#ohosgraphicsdrawing). |
+| [RectType](arkts-arkgraphics2d-drawing-recttype-e.md) | Enumerates the types of rectangles used to fill the lattices. Used only in [Lattice](arkts-graphics-drawing.md). |
 | [RegionOp](arkts-arkgraphics2d-drawing-regionop-e.md) | Enumerates the operations for combining two regions. |
 | [ScaleToFit](arkts-arkgraphics2d-drawing-scaletofit-e.md) | Enumerates the modes of scaling a source rectangle into a destination rectangle. |
 | [ShadowFlag](arkts-arkgraphics2d-drawing-shadowflag-e.md) | Enumerates the shadow drawing behaviors. |

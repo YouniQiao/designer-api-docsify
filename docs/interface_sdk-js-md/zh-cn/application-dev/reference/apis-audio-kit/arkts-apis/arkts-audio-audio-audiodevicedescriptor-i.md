@@ -102,7 +102,7 @@ SystemCapability.Multimedia.Audio.Device
 
 从API version 12开始，该接口支持在原子化服务中使用。
 
-**类型：** [DeviceRole](arkts-audio-audio-devicerole-e.md)
+**类型：** DeviceRole
 
 **起始版本：** 7
 

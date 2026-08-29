@@ -122,7 +122,7 @@ USER_NAME = 10
 
 用户名输入模式，无特殊限制。
 
-在已启用密码保险箱的情况下，支持用户名的自动保存和自动填充，用于配合[InputType.Password](#inputtype)、[InputType.NUMBER_PASSWORD](#inputtype)、[InputType.NEW_PASSWORD](#inputtype)完成用户名密码配对填充。
+在已启用密码保险箱的情况下，支持用户名的自动保存和自动填充，用于配合[InputType.Password](arkts-arkui-inputtype-e.md)、[InputType.NUMBER_PASSWORD](arkts-arkui-inputtype-e.md)、[InputType.NEW_PASSWORD](arkts-arkui-inputtype-e.md)完成用户名密码配对填充。
 
 **起始版本：** 11
 

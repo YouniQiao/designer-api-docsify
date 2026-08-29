@@ -14,6 +14,10 @@ function setPowerMode(mode: PowerMode): void
 
 设置功率模式。
 
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 10开始废弃。
+
 **起始版本：** 9
 
 **废弃版本：** 10
@@ -26,7 +30,7 @@ function setPowerMode(mode: PowerMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md) | 是 |  |
+| mode | [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md) | 是 | 功率模式。 |
 
 **错误码：**
 

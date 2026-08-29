@@ -72,7 +72,7 @@ async function exifMetadataClone(context: Context) {
 static createInstance(): ExifMetadata
 ```
 
-Creates an empty [ExifMetadata](#exifmetadata) instance.
+Creates an empty [ExifMetadata](arkts-image-image-exifmetadata-c.md) instance.
 
 **Since:** 23
 

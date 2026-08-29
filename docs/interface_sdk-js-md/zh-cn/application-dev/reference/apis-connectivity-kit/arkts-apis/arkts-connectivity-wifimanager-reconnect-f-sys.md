@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function reconnect(): void
 ```
 
-重新连接当前网络。
+重新连接网络。
 
 **起始版本：** 9
 

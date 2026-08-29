@@ -70,7 +70,7 @@ onTotalCount?(): number
 
 (Optional) Calculates the expected total number of data items to be loaded. You need to provide a calculation method, and its return value may not be equal to the data source length (length of the array passed to **Repeat**).
 
-Both the return values of [totalCount](#virtualscrolloptions) and **onTotalCount()** indicate the expected total number of data items to be loaded. You can directly set the **totalCount** attribute to specify the expected total number of data items to be loaded, or use **onTotalCount()** to set a custom method to calculate the expected total number of data items to be loaded. Use either **totalCount** or **onTotalCount**. If neither is set, the default value is used. If both are set, **totalCount** is ignored.
+Both the return values of [totalCount](arkts-arkui-virtualscrolloptions-i.md) and **onTotalCount()** indicate the expected total number of data items to be loaded. You can directly set the **totalCount** attribute to specify the expected total number of data items to be loaded, or use **onTotalCount()** to set a custom method to calculate the expected total number of data items to be loaded. Use either **totalCount** or **onTotalCount**. If neither is set, the default value is used. If both are set, **totalCount** is ignored.
 
 The data loading rules for different return values of **onTotalCount()** are the same as those for **totalCount**. The details are as follows:
 

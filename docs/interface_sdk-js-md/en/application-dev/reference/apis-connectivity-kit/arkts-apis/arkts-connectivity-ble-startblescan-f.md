@@ -18,7 +18,7 @@ Starts scanning for specified BLE devices with filters. On API 10 and above, the
 
 **Deprecated since:** 10
 
-**Substitutes:** [startBLEScan](#startblescan)
+**Substitutes:** [startBLEScan](arkts-connectivity-ble-startblescan-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

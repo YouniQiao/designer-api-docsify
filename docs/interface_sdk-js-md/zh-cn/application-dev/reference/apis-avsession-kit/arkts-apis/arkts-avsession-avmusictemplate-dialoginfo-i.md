@@ -70,7 +70,7 @@ dialogType: DialogType
 
 对话框的类型。
 
-**类型：** [DialogType](arkts-avsession-avmusictemplate-dialogtype-e.md)
+**类型：** DialogType
 
 **起始版本：** 23
 

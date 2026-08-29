@@ -1,8 +1,10 @@
 # WifiScanInfo
 
-描述扫描到的WLAN信息。
+Wi-Fi热点信息。
 
-@interface WifiScanInfo
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃。
 
 **起始版本：** 6
 
@@ -24,7 +26,7 @@ import { wifi } from '@kit.ConnectivityKit';
 band: number
 ```
 
-频段，1:2.4G，2:5G
+Wi-Fi接入点的频段。1表示2.4GHz；2表示5GHz。
 
 **类型：** number
 
@@ -42,7 +44,7 @@ band: number
 bssid: string
 ```
 
-WLAN BSSID(MAC)：长度为6
+热点的BSSID，例如：00:11:22:33:44:55。
 
 **类型：** string
 
@@ -60,7 +62,7 @@ WLAN BSSID(MAC)：长度为6
 capabilities: string
 ```
 
-热点能力
+热点能力。
 
 **类型：** string
 
@@ -78,7 +80,7 @@ capabilities: string
 channelWidth: number
 ```
 
-带宽
+Wi-Fi接入点的带宽。
 
 **类型：** number
 
@@ -96,7 +98,7 @@ channelWidth: number
 frequency: number
 ```
 
-频率
+Wi-Fi接入点的频率，单位：MHz。
 
 **类型：** number
 
@@ -114,7 +116,7 @@ frequency: number
 rssi: number
 ```
 
-接收信号强度指示(RSSI)
+热点的信号强度(dBm)。
 
 **类型：** number
 
@@ -132,7 +134,7 @@ rssi: number
 securityType: WifiSecurityType
 ```
 
-加密类型：参考WifiSecurityType的定义
+Wi-Fi加密类型。
 
 **类型：** WifiSecurityType
 
@@ -150,7 +152,7 @@ securityType: WifiSecurityType
 ssid: string
 ```
 
-WLAN SSID：最大长度为32
+热点的SSID，最大长度为32字节，编码格式为UTF-8。
 
 **类型：** string
 
@@ -168,7 +170,7 @@ WLAN SSID：最大长度为32
 timestamp: number
 ```
 
-时间戳
+时间戳。
 
 **类型：** number
 

@@ -12,9 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function disableHotspot(): boolean
 ```
 
-去使能热点。
-
-<p>该方法是异步的。去使能热点后，如果WLAN已使能，WLAN可能会被重新使能。
+关闭热点。
 
 **起始版本：** 7
 
@@ -32,7 +30,7 @@ function disableHotspot(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作成功时返回{ |
+| boolean | true:操作成功， false:操作失败。 |
 
 **示例**
 

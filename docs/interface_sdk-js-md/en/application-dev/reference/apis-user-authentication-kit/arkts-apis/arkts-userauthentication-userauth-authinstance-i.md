@@ -26,8 +26,8 @@ Cancels this authentication.
 
 > **NOTE：**
 > 
-> Use the obtained [AuthInstance](#authinstance) object to call this API to cancel authentication.
-> This [AuthInstance](#authinstance) must be the object that is currently performing
+> Use the obtained [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) object to call this API to cancel authentication.
+> This [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) must be the object that is currently performing
 > authentication.
 
 **Since:** 9
@@ -79,7 +79,7 @@ authentication result, and the value **tip** means to unsubscribe from the authe
 
 > **NOTE：**
 > 
-> The [AuthInstance](#authinstance) instance used to invoke this API must be the one used to
+> The [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) instance used to invoke this API must be the one used to
 > subscribe to the event.
 
 **Since:** 9
@@ -143,7 +143,7 @@ authentication result, and the value **tip** means that the callback returns the
 
 > **NOTE：**
 > 
-> Use the [AuthInstance](#authinstance) instance obtained to call this API.
+> Use the [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) instance obtained to call this API.
 
 **Since:** 9
 
@@ -216,7 +216,7 @@ Starts authentication.
 
 > **NOTE：**
 > 
-> Use the obtained [AuthInstance](#authinstance) object to call this API for authentication.
+> Use the obtained [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) object to call this API for authentication.
 
 **Since:** 9
 

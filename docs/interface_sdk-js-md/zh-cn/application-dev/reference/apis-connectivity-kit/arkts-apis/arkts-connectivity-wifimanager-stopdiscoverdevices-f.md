@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function stopDiscoverDevices(): void
 ```
 
-停止发现WLAN P2P设备。
+停止发现设备。
 
 **起始版本：** 9
 

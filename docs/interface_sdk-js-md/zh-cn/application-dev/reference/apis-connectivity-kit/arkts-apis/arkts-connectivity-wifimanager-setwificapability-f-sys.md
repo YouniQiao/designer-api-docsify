@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function setWifiCapability(capability: WifiCapability, enable: boolean): void
 ```
 
-设置WLAN能力。
+设置Wi-Fi能力。
 
 **起始版本：** 26.0.0
 
@@ -28,8 +28,8 @@ function setWifiCapability(capability: WifiCapability, enable: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| capability | [WifiCapability](arkts-connectivity-wifimanager-wificapability-e.md) | 是 | 标识WLAN能力枚举。 |
-| enable | boolean | 是 | 是否使能WLAN能力，{@code true}表示使能，{@code false}表示不使能。 |
+| capability | [WifiCapability](arkts-connectivity-wifimanager-wificapability-e.md) | 是 | wifi能力枚举。 |
+| enable | boolean | 是 | 是否开启Wi-Fi能力，true表示开启，false表示关闭。 |
 
 **错误码：**
 

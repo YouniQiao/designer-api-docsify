@@ -30,7 +30,7 @@ function disconnect(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作成功时返回{ |
+| boolean | true:操作成功， false:操作失败。 |
 
 **示例**
 

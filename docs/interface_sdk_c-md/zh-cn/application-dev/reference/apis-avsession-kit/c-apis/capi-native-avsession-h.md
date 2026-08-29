@@ -373,7 +373,7 @@ AVSession_ErrCode OH_AVSession_SetAVMetadata(OH_AVSession* avsession, OH_AVMetad
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AVSession](capi-ohavsession-oh-avsession.md)* avsession | 媒体会话对象。 |
-| [OH_AVMetadata](capi-ohavsession-oh-avmetadatastruct.md)* avmetadata | 设置媒体元数据信息。 |
+| OH_AVMetadata* avmetadata | 设置媒体元数据信息。 |
 
 **返回：**
 
@@ -423,7 +423,7 @@ AVSession_ErrCode OH_AVSession_SetPlaybackPosition(OH_AVSession* avsession, AVSe
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AVSession](capi-ohavsession-oh-avsession.md)* avsession | 媒体会话对象。 |
-| AVSession_PlaybackPosition* playbackPosition | 播放位置对象。 |
+| [AVSession_PlaybackPosition](capi-ohavsession-avsession-playbackposition.md)* playbackPosition | 播放位置对象。 |
 
 **返回：**
 

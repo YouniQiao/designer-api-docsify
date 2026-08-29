@@ -30,7 +30,7 @@ function isHotspotDualBandSupported(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true:支持，{ |
+| boolean | true:支持， false:不支持。 |
 
 **示例**
 

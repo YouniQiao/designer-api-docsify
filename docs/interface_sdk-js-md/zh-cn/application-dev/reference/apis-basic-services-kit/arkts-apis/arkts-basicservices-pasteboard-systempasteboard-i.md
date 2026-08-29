@@ -289,6 +289,8 @@ getData(callback: AsyncCallback<PasteData>): void
 
 读取系统剪贴板内容，使用callback异步回调。将剪贴板数据封装为PasteData对象返回。调用此方法后，系统将从剪贴板服务读取当前内容，通过callback返回PasteData对象。读取成功后，应用可以通过PasteData对象的方法获取具体的数据内容（如文本、HTML、URI等）。适用于需要异步读取剪贴板内容的场景，如UI响应优先、避免阻塞主线程。与[getDataSync](#getdatasync)相比，getData不会阻塞UI线程，适合处理大量数据或远端数据。
 
+应用使用自定义控件访问剪贴板内容需[申请访问剪贴板权限](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md)。应用[使用粘贴控件](../../../security/AccessToken/pastebutton.md)访问剪贴板内容，无需申请权限。
+
 **起始版本：** 9
 
 **需要权限：** 
@@ -337,6 +339,8 @@ getData(): Promise<PasteData>
 ```
 
 读取系统剪贴板内容，将剪贴板数据封装为PasteData对象返回，使用Promise异步回调。适用于需要异步读取剪贴板内容的场景，如UI响应优先、避免阻塞主线程。适用于应用需要使用标准化数据结构[UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)读取剪贴板数据的场景。
+
+应用使用自定义控件访问剪贴板内容需[申请访问剪贴板权限](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md)。应用[使用粘贴控件](../../../security/AccessToken/pastebutton.md)访问剪贴板内容，无需申请权限。
 
 **起始版本：** 9
 
@@ -420,7 +424,9 @@ try {
 getDataSync(): PasteData
 ```
 
-读取系统剪贴板内容，此接口为同步接口。适用于应用需要在关键业务流程中同步获取剪贴板数据，或需要立即处理剪贴板内容的场景。避免在UI线程调用此接口，以免阻塞界面；处理大量数据或远端数据时，建议使用异步接口[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata)。
+读取系统剪贴板内容，此接口为同步接口。适用于应用需要在关键业务流程中同步获取剪贴板数据，或需要立即处理剪贴板内容的场景。避免在UI线程调用此接口，以免阻塞界面；处理大量数据或远端数据时，建议使用异步接口[getData](#getdata)。
+
+应用使用自定义控件访问剪贴板内容需[申请访问剪贴板权限](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md)。应用[使用粘贴控件](../../../security/AccessToken/pastebutton.md)访问剪贴板内容，无需申请权限。
 
 **起始版本：** 11
 
@@ -463,6 +469,8 @@ getDataWithProgress(params: GetDataParams): Promise<PasteData>
 ```
 
 获取剪贴板的内容和进度，使用Promise异步回调，不支持对文件夹的拷贝。对于大文件拷贝操作，建议设置进度监听以跟踪拷贝进度，避免在UI线程长时间等待；建议合理设置目标路径以确保有足够的存储空间。适用于大文件粘贴场景。在此场景下，可通过此回调显示拷贝进度，或监听拷贝过程以便在必要时取消操作。
+
+应用使用自定义控件访问剪贴板内容需[申请访问剪贴板权限](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md)。应用[使用粘贴控件](../../../security/AccessToken/pastebutton.md)访问剪贴板内容，无需申请权限。
 
 **起始版本：** 15
 
@@ -663,6 +671,8 @@ getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 
 读取系统剪贴板内容，使用Promise异步回调。适用于需要使用标准化数据结构[UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)进行跨应用数据交换的场景。当应用需要与其他支持UnifiedData的应用进行数据共享，或需要处理复杂的多类型数据时，使用本接口。与[getData](#getdata)相比，getUnifiedData提供了更标准化的数据格式。
 
+应用使用自定义控件访问剪贴板内容需[申请访问剪贴板权限](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md)。应用[使用粘贴控件](../../../security/AccessToken/pastebutton.md)访问剪贴板内容，无需申请权限。
+
 **起始版本：** 12
 
 **需要权限：** ohos.permission.READ_PASTEBOARD
@@ -711,6 +721,8 @@ getUnifiedDataSync(): unifiedDataChannel.UnifiedData
 ```
 
 读取系统剪贴板内容，此接口为同步接口。适用于需要同步使用标准化数据结构UnifiedData进行跨应用数据交换的场景。当应用需要在关键业务流程中立即获取剪贴板数据，且需要与其他支持UnifiedData的应用进行数据共享时使用。由于获取剪贴板中数据的时延受数据量大小与网络环境的影响，调用此接口可能耗时较长，建议开发者在非UI线程调用。
+
+应用使用自定义控件访问剪贴板内容需[申请访问剪贴板权限](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md)。应用[使用粘贴控件](../../../security/AccessToken/pastebutton.md)访问剪贴板内容，无需申请权限。
 
 **起始版本：** 12
 

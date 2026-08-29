@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getCountryCode(): string
 ```
 
-获取设备的国家码。
+获取国家码信息。
 
 **起始版本：** 9
 
@@ -24,7 +24,7 @@ function getCountryCode(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回此设备的国家码。 |
+| string | 国家码。 |
 
 **错误码：**
 

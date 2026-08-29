@@ -150,7 +150,7 @@ superuser do (execution with superuser privileges). Currently, it is supported o
 DISTRIBUTED_TRANSMISSION_OUTGOING = 9
 ```
 
-Distributed one-way data transmission between devices (only data transmission to other devices is supported). Disabling distributed one-way data transmission capability between devices after the distributed management service ([DISTRIBUTED_TRANSMISSION](#featureforaccount)) has been disabled will result in a policy conflict.
+Distributed one-way data transmission between devices (only data transmission to other devices is supported). Disabling distributed one-way data transmission capability between devices after the distributed management service ([DISTRIBUTED_TRANSMISSION](arkts-mdm-restrictions-featureforaccount-e.md)) has been disabled will result in a policy conflict.
 
 **Since:** 26.0.0
 

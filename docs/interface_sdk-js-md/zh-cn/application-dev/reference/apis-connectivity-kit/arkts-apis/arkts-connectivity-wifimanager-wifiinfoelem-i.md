@@ -1,6 +1,6 @@
 # WifiInfoElem
 
-WLAN信息元素。
+Wi-Fi热点信息。
 
 **起始版本：** 9
 
@@ -18,7 +18,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 content: Uint8Array
 ```
 
-元素内容
+元素内容。
 
 **类型：** Uint8Array
 
@@ -32,7 +32,7 @@ content: Uint8Array
 eid: number
 ```
 
-元素ID
+元素ID。
 
 **类型：** number
 

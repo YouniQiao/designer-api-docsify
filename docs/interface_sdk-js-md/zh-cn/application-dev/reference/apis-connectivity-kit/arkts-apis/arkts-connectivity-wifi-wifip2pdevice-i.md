@@ -1,8 +1,10 @@
 # WifiP2pDevice
 
-P2P设备信息。
+表示P2P设备信息。
 
-@interface WifiP2pDevice
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -24,7 +26,7 @@ import { wifi } from '@kit.ConnectivityKit';
 deviceAddress: string
 ```
 
-设备MAC地址
+设备MAC地址。
 
 **类型：** string
 
@@ -42,7 +44,7 @@ deviceAddress: string
 deviceName: string
 ```
 
-设备名称
+设备名称。
 
 **类型：** string
 
@@ -60,7 +62,7 @@ deviceName: string
 deviceStatus: P2pDeviceStatus
 ```
 
-设备状态
+设备状态。
 
 **类型：** P2pDeviceStatus
 
@@ -78,7 +80,7 @@ deviceStatus: P2pDeviceStatus
 groupCapabilitys: number
 ```
 
-设备群组能力
+群组能力，以位掩码形式表示群组支持的特性。
 
 **类型：** number
 
@@ -96,7 +98,7 @@ groupCapabilitys: number
 primaryDeviceType: string
 ```
 
-主要设备类型
+主设备类型。
 
 **类型：** string
 

@@ -27,7 +27,7 @@ function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filters | [ScanFilters](arkts-connectivity-scan-scanfilters-i.md)[] \| null | 是 | 扫描星闪广播的过滤条件集合，符合过滤条件的设备会被上报。若不使能过滤器则传入null。若该参数设置为null，将扫描所有可发现的周边星闪设备，但是不建议使用此方式，可能扫描到非预期设备，并增加功耗。 |
-| options | [ScanOptions](arkts-connectivity-scan-scanoptions-i.md) | 否 | 表示扫描选项。默认为低功耗模式。 |
+| options | ScanOptions | 否 | 表示扫描选项。默认为低功耗模式。 |
 
 **返回值：**
 

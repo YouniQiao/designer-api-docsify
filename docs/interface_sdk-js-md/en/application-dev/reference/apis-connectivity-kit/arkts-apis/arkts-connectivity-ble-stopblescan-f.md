@@ -18,7 +18,7 @@ Stops BLE scanning. On API 10 and above, the permission required by this interfa
 
 **Deprecated since:** 10
 
-**Substitutes:** [stopBLEScan](#stopblescan)
+**Substitutes:** [stopBLEScan](arkts-connectivity-ble-stopblescan-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

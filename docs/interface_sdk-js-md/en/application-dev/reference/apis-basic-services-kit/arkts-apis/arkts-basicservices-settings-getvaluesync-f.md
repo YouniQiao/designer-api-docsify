@@ -18,7 +18,7 @@ Get value from settingsdata(synchronous method)
 
 **Deprecated since:** 9
 
-**Substitutes:** [getValueSync](#getvaluesync)
+**Substitutes:** [getValueSync](arkts-basicservices-settings-getvaluesync-f.md)
 
 **Model restriction:** This API can be used only in the FA model.
 

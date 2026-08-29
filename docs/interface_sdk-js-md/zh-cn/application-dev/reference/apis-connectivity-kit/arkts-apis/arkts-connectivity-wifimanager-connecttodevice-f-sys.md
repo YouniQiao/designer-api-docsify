@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function connectToDevice(config: WifiDeviceConfig): void
 ```
 
-连接到指定网络（如果当前已经连接到热点，请先使用disconnect()接口断开连接）。
+连接到指定网络（如果当前已经连接到热点，请先断开连接）。
 
 **起始版本：** 9
 
@@ -26,7 +26,7 @@ function connectToDevice(config: WifiDeviceConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | 是 | 表示连接到WLAN热点的设备配置。 |
+| config | WifiDeviceConfig | 是 | Wi-Fi配置信息。如果bssidType未指定值，则bssidType默认为随机设备地址类型。 |
 
 **错误码：**
 

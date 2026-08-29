@@ -12,7 +12,16 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function connectToCandidateConfigWithUserAction(networkId: number): Promise<void>
 ```
 
-通过networkId连接到指定的候选热点，并等待用户响应结果。只允许连接自己添加的配置。此方法一次连接一个配置。应用必须在前台运行。
+该接口用于应用连接到用户添加的候选网络，并在连接时提示用户进行信任确认。使用Promise异步回调。
+
+- 调用此接口时，系统将提示用户确认是否信任并连接到指定的候选网络。  
+- 用户确认是连接过程中的必要步骤，未获得用户信任确认前，连接操作不会执行。  
+- 建议在发起连接前先通过startScan接口触发一次Wi-Fi扫描，通过  
+wifiManager.on('wifiScanStateChange')方法监听到扫描结果刷新后再连接，以提高连接成功率。
+
+> **说明：**
+> 
+> 调用[wifiManager.connectToCandidateConfig](arkts-connectivity-wifimanager-connecttocandidateconfig-f.md)连接候选网络时，不会返回用户响应结果。
 
 **起始版本：** 20
 
@@ -26,13 +35,13 @@ function connectToCandidateConfigWithUserAction(networkId: number): Promise<void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| networkId | number | 是 | 将要连接的网络ID。networkId的值不能小于0。 |
+| networkId | number | 是 | 候选网络配置的ID，ID不能小于0。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回用于返回操作结果的Promise对象。如果操作失败，返回错误信息。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

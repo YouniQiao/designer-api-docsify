@@ -1,6 +1,6 @@
 # DataShareHelperOptions (System API)
 
-Represents the optional parameters of [DataShareHelper](#datasharehelperoptions-system-api).
+Represents the optional parameters of [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md).
 
 **Since:** 10
 
@@ -20,9 +20,9 @@ import { dataShare } from '@kit.ArkData';
 isProxy?: boolean
 ```
 
-Whether the [DataShareHelper](#datasharehelperoptions-system-api) is in proxy mode. The default value is **false**.
+Whether the [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) is in proxy mode. The default value is **false**.
 
-If the value is **true**, the [DataShareHelper](#datasharehelperoptions-system-api) to be created is in proxy mode, and all operations will not open the data provider application unless the database does not exist. If the database does not exist, [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) will start the data provider to create a database.
+If the value is **true**, the [DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) to be created is in proxy mode, and all operations will not open the data provider application unless the database does not exist. If the database does not exist, [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) will start the data provider to create a database.
 
 **Type:** boolean
 

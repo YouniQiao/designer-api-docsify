@@ -1,8 +1,10 @@
 # GroupOwnerBand
 
-P2P群组所有者频段。
+表示群组带宽的枚举。
 
-@enum { number } GroupOwnerBand
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -18,7 +20,7 @@ P2P群组所有者频段。
 GO_BAND_AUTO = 0
 ```
 
-默认频段。
+自动模式。
 
 **起始版本：** 8
 
@@ -34,7 +36,7 @@ GO_BAND_AUTO = 0
 GO_BAND_2GHZ = 1
 ```
 
-2.4G频段。
+2GHz。
 
 **起始版本：** 8
 
@@ -50,7 +52,7 @@ GO_BAND_2GHZ = 1
 GO_BAND_5GHZ = 2
 ```
 
-5G频段。
+5GHz。
 
 **起始版本：** 8
 

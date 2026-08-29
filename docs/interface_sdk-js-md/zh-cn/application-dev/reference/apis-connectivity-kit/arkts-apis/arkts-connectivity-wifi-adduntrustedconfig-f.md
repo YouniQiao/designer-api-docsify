@@ -14,7 +14,9 @@ function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 
 添加不可信网络配置，使用Promise异步回调。
 
-<p>该方法一次添加一个配置。添加该配置后，设备将决定是否连接到热点。
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -30,13 +32,13 @@ function addUntrustedConfig(config: WifiDeviceConfig): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | 是 | WLAN配置信息。 |
+| config | WifiDeviceConfig | 是 | Wi-Fi配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | 表示操作结果，{ |
+| Promise&lt;boolean&gt; | Promise对象。表示操作结果，true: 成功， false: 失败。 |
 
 **示例**
 
@@ -80,7 +82,9 @@ function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<bo
 
 添加不可信网络配置，使用callback异步回调。
 
-<p>该方法一次添加一个配置。添加该配置后，设备将决定是否连接到热点。
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -96,8 +100,8 @@ function addUntrustedConfig(config: WifiDeviceConfig, callback: AsyncCallback<bo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | 是 | WLAN配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |  |
+| config | WifiDeviceConfig | 是 | Wi-Fi配置信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当操作成功时，异步错误对象error为0，data表示操作结果，true: 成功， false: 失败。如果异步错误对象error为非0，表示处理出现错误。 |
 
 **示例**
 

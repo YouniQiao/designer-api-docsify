@@ -86,7 +86,7 @@ This callback can also be invoked through the **rebuild()** method of **NodeCont
 > 
 > NodeContainer does not support cross-instance reuse. If
 > NodeContainer is reused across instances and
-> [NodeController](#nodecontroller) of NodeContainer
+> [NodeController](arkts-arkui-nodecontroller-c.md) of NodeContainer
 > triggers the [makeNode](#makenode) callback method, the
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) object in the input parameter may be undefined. In this case, you need
 > to check whether the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) object in the input parameter is undefined, which

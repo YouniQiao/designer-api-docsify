@@ -12,7 +12,11 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function enableHotspot(): void
 ```
 
-使能WLAN热点。该方法为异步方法。启用WLAN热点后，Wi-Fi可能会被禁用。
+启用Wi-Fi热点。
+
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 10开始废弃。
 
 **起始版本：** 9
 

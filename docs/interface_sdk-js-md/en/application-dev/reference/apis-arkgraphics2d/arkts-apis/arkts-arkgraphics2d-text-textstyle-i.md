@@ -230,7 +230,7 @@ fontTypefaces?: Array<drawing.Typeface>
 
 Array of specified typesetting font objects, used to prioritize the specified font objects for text shaping and skip the font matching process. When a font object in the array cannot shape some characters, the unshaped characters will be shaped using the system font. The default value is an empty array, indicating that no font object is specified and the default font matching process is used.
 
-When fontTypefaces is set together with [TextStyle](#textstyle).fontFamilies, fontTypefaces takes precedence.
+When fontTypefaces is set together with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).fontFamilies, fontTypefaces takes precedence.
 
 **Type:** Array&lt;drawing.Typeface&gt;
 
@@ -360,7 +360,7 @@ Character spacing, a floating-point value in physical pixels (px) with a default
 lineHeightMaximum?: number
 ```
 
-Maximum line height, in physical pixels (px). If the line height is scaled, the maximum line height takes effect when [TextStyle](#textstyle).heightScale is greater than 0. The value is a positive floating point number. The default value is **Number.MAX_VALUE**.
+Maximum line height, in physical pixels (px). If the line height is scaled, the maximum line height takes effect when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale is greater than 0. The value is a positive floating point number. The default value is **Number.MAX_VALUE**.
 
 **Type:** number
 
@@ -376,7 +376,7 @@ Maximum line height, in physical pixels (px). If the line height is scaled, the 
 lineHeightMinimum?: number
 ```
 
-Minimum line height, in physical pixels (px). If the line height is scaled, the minimum line height takes effect when [TextStyle](#textstyle).heightScale is greater than 0. The value is a non-negative floating point number. The default value is **0**.
+Minimum line height, in physical pixels (px). If the line height is scaled, the minimum line height takes effect when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale is greater than 0. The value is a non-negative floating point number. The default value is **0**.
 
 **Type:** number
 

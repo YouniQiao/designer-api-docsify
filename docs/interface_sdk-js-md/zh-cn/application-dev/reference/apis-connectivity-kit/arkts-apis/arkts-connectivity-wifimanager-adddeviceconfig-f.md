@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 ```
 
-添加WLAN连接配置到设备。添加配置时将更新配置。
+添加网络配置。使用Promise异步回调。
 
 **起始版本：** 15
 
@@ -24,13 +24,13 @@ function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | 是 | 表示连接到WLAN网络的设备配置。 |
+| config | WifiDeviceConfig | 是 | Wi-Fi配置信息。如果bssidType无指定值，则bssidType默认为随机设备地址类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 添加配置时返回{ |
+| Promise&lt;number&gt; | Promise对象。表示网络配置ID。 |
 
 **错误码：**
 
@@ -70,7 +70,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void
 ```
 
-添加WLAN连接配置到设备。添加配置时将更新配置。
+添加网络配置。使用callback异步回调。
 
 **起始版本：** 15
 
@@ -82,8 +82,8 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | 是 | 表示连接到WLAN网络的设备配置。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 表示addDeviceConfig的回调函数。 |
+| config | WifiDeviceConfig | 是 | Wi-Fi配置信息。如果bssidType无指定值，则bssidType默认为随机设备地址类型。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当操作成功时，error为0，data为添加的网络配置ID，如果data值为-1，表示添加失败。当操作错误，error为非0值。 |
 
 **错误码：**
 

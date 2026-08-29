@@ -122,7 +122,7 @@ import { window } from '@kit.ArkUI';
 | [Window](arkts-arkui-window-window-i.md) | Represents a window instance, which is the basic unit managed by the window manager. |
 | [ShowWindowOptions](arkts-arkui-window-showwindowoptions-i.md) | Describes the parameters for displaying a child window or system window. |
 | [SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md) | Describes the parameters used for creating a child window. |
-| [WindowStage](arkts-arkui-window-windowstage-i.md) | Implements a window manager, which manages each basic window unit, that is, [Window](#window) instance. |
+| [WindowStage](arkts-arkui-window-windowstage-i.md) | Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance. |
 | [WindowLayoutInfo](arkts-arkui-window-windowlayoutinfo-i.md) | Describes the information about the window layout. |
 | [WindowInfoOptions](arkts-arkui-window-windowinfooptions-i.md) | Filter criteria for window information. |
 
@@ -146,7 +146,7 @@ import { window } from '@kit.ArkUI';
 | [WindowCreateParams](arkts-arkui-window-windowcreateparams-i-sys.md) | Describes the window parameters during application startup. |
 | [Window](arkts-arkui-window-window-i-sys.md) | Represents a window instance, which is the basic unit managed by the window manager. |
 | [SubWindowOptions](arkts-arkui-window-subwindowoptions-i-sys.md) | Describes the parameters used for creating a child window. |
-| [WindowStage](arkts-arkui-window-windowstage-i-sys.md) | Implements a window manager, which manages each basic window unit, that is, [Window](#window) instance. |
+| [WindowStage](arkts-arkui-window-windowstage-i-sys.md) | Implements a window manager, which manages each basic window unit, that is, [Window](arkts-arkui-window-n.md) instance. |
 | [SystemWindowOptions](arkts-arkui-window-systemwindowoptions-i-sys.md) | Describes the parameters for creating a system window. |
 | [ExtensionWindowConfig](arkts-arkui-window-extensionwindowconfig-i-sys.md) | Describes the parameters for creating a window for a UI ServiceExtensionAbility. |
 <!--DelEnd-->

@@ -1,6 +1,6 @@
 # WifiProxyConfig（系统接口）
 
-WLAN代理配置。
+Wifi 代理配置。
 
 **起始版本：** 10
 
@@ -20,7 +20,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 exclusionObjects?: string
 ```
 
-手动配置代理的排除对象。对象之间用','分隔。
+手动配置代理的排除对象，对象用“,”分隔。
 
 **类型：** string
 
@@ -36,7 +36,7 @@ exclusionObjects?: string
 pacWebAddress?: string
 ```
 
-自动配置代理的PAC网址。
+自动配置代理的PAC web 地址。
 
 **类型：** string
 
@@ -52,7 +52,7 @@ pacWebAddress?: string
 proxyMethod?: ProxyMethod
 ```
 
-WLAN代理方式
+代理方法。
 
 **类型：** [ProxyMethod](arkts-connectivity-wifimanager-proxymethod-e-sys.md)
 

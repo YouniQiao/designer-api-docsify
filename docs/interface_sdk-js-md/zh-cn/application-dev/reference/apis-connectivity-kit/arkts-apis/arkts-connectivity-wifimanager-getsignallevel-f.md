@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getSignalLevel(rssi: number, band: number): number
 ```
 
-根据WLAN RSSI和频段计算WLAN信号强度。
+查询Wi-Fi信号强度。
 
 **起始版本：** 9
 
@@ -24,14 +24,14 @@ function getSignalLevel(rssi: number, band: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rssi | number | 是 | 表示WLAN RSSI。 |
-| band | number | 是 | 表示WLAN频段。 |
+| rssi | number | 是 | 热点的信号强度(dBm)。 |
+| band | number | 是 | Wi-Fi接入点的频段，1表示2.4GHz；2表示5GHz。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回WLAN信号强度，范围从0到4。 |
+| number | 信号强度，取值范围为[0, 4]。 |
 
 **错误码：**
 

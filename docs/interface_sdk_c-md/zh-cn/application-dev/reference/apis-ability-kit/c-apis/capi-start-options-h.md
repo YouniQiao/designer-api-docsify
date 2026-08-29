@@ -112,7 +112,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsWindowMode(AbilityRunt
 | 参数项 | 描述 |
 | -- | -- |
 | AbilityRuntime_StartOptions *startOptions | AbilityRuntime_StartOptions对象。 |
-| AbilityRuntime_WindowMode windowMode | 启动Ability时的窗口模式。取值范围参见AbilityRuntime_WindowMode。 |
+| [AbilityRuntime_WindowMode](capi-context-constant-h.md#abilityruntime_windowmode) windowMode | 启动Ability时的窗口模式。取值范围参见AbilityRuntime_WindowMode。 |
 
 **返回：**
 
@@ -287,7 +287,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsStartVisibility(Abilit
 | 参数项 | 描述 |
 | -- | -- |
 | AbilityRuntime_StartOptions *startOptions | AbilityRuntime_StartOptions对象，包含启动Ability时的显示模式配置信息。 |
-| AbilityRuntime_StartVisibility startVisibility | 需要设置的显示模式。取值范围参见AbilityRuntime_StartVisibility。 |
+| [AbilityRuntime_StartVisibility](capi-context-constant-h.md#abilityruntime_startvisibility) startVisibility | 需要设置的显示模式。取值范围参见AbilityRuntime_StartVisibility。 |
 
 **返回：**
 
@@ -387,7 +387,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_SetStartOptionsSupportedWindowModes(A
 | 参数项 | 描述 |
 | -- | -- |
 | AbilityRuntime_StartOptions *startOptions | AbilityRuntime_StartOptions对象。 |
-| AbilityRuntime_SupportedWindowMode *supportedWindowModes | 启动Ability时的组件所支持的窗口模式。取值范围参见AbilityRuntime_SupportedWindowMode。 |
+| [AbilityRuntime_SupportedWindowMode](capi-context-constant-h.md#abilityruntime_supportedwindowmode) *supportedWindowModes | 启动Ability时的组件所支持的窗口模式。取值范围参见AbilityRuntime_SupportedWindowMode。 |
 | size_t size | 组件所支持的窗口模式大小。 |
 
 **返回：**
@@ -513,7 +513,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsWindowModeValue(Abilit
 | 参数项 | 描述 |
 | -- | -- |
 | AbilityRuntime_StartOptions *startOptions | AbilityRuntime_StartOptions对象。 |
-| AbilityRuntime_WindowMode *windowMode | 指向启动Ability时窗口模式的指针。取值范围参见AbilityRuntime_WindowMode。 |
+| [AbilityRuntime_WindowMode](capi-context-constant-h.md#abilityruntime_windowmode) *windowMode | 指向启动Ability时窗口模式的指针。取值范围参见AbilityRuntime_WindowMode。 |
 
 **返回：**
 
@@ -688,7 +688,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsStartVisibilityValue(A
 | 参数项 | 描述 |
 | -- | -- |
 | AbilityRuntime_StartOptions *startOptions | AbilityRuntime_StartOptions对象。 |
-| AbilityRuntime_StartVisibility *startVisibility | 指向启动Ability时窗口和dock栏图标显示模式的指针。取值范围参见AbilityRuntime_StartVisibility。 |
+| [AbilityRuntime_StartVisibility](capi-context-constant-h.md#abilityruntime_startvisibility) *startVisibility | 指向启动Ability时窗口和dock栏图标显示模式的指针。取值范围参见AbilityRuntime_StartVisibility。 |
 
 **返回：**
 
@@ -747,7 +747,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_GetStartOptionsSupportedWindowModesVa
 | 参数项 | 描述 |
 | -- | -- |
 | AbilityRuntime_StartOptions *startOptions | AbilityRuntime_StartOptions对象。 |
-| AbilityRuntime_SupportedWindowMode **supportedWindowModes | 指向获取到的组件所支持窗口模式数组指针的二级指针，不能为空，且调用前必须指向空指针。取值范围参见AbilityRuntime_SupportedWindowMode。使用完毕后，需要调用free释放。 |
+| [AbilityRuntime_SupportedWindowMode](capi-context-constant-h.md#abilityruntime_supportedwindowmode) **supportedWindowModes | 指向获取到的组件所支持窗口模式数组指针的二级指针，不能为空，且调用前必须指向空指针。取值范围参见AbilityRuntime_SupportedWindowMode。使用完毕后，需要调用free释放。 |
 | size_t *size | 指向获取到的组件所支持窗口模式数量的指针，不能为空。 |
 
 **返回：**

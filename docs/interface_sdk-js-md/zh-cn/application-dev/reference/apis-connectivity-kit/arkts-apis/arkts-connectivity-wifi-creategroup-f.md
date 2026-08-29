@@ -12,7 +12,11 @@ import { wifi } from '@kit.ConnectivityKit';
 function createGroup(config: WifiP2PConfig): boolean
 ```
 
-创建P2P群组。
+创建群组。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -28,13 +32,13 @@ function createGroup(config: WifiP2PConfig): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiP2PConfig | 是 | 创建群组的配置。 |
+| config | WifiP2PConfig | 是 | 群组配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作成功时返回{ |
+| boolean | true:创建群组操作执行成功， false:创建群组操作执行失败。 |
 
 **示例**
 

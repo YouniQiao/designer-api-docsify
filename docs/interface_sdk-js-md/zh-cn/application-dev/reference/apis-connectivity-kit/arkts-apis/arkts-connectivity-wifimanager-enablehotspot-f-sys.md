@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function enableHotspot(): void
 ```
 
-启动WLAN热点功能。此方法为异步方法。WLAN热点使能后，WLAN可能会被关闭。
+开启热点，异步接口，是否打开成功需要注册并监听hotspotStateChange的回调。
 
 **起始版本：** 9
 

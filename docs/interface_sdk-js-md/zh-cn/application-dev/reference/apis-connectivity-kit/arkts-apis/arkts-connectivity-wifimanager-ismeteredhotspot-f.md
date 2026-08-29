@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function isMeteredHotspot(): boolean
 ```
 
-查询热点是否为按流量计费热点。
+查询设备当前连接的wifi是否是手机热点。
 
 **起始版本：** 11
 
@@ -24,7 +24,7 @@ function isMeteredHotspot(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 热点为按流量计费热点时返回{ |
+| boolean | true:是手机热点， false:不是手机热点。 |
 
 **错误码：**
 

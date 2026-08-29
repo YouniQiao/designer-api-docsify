@@ -4,6 +4,16 @@ ChipGroupV2组件提供操作块群组容器，支持单选或多选、自定义
 
 该组件基于[状态管理（V2）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)实现，相较于[状态管理（V1）](../../../ui/state-management/arkts-state-management-overview.md#状态管理v1)，状态管理（V2）增强了对数据对象的深度观察与管理能力，不再局限于组件层级。借助状态管理（V2），开发者可以更灵活地控制组件的数据和状态，实现更高效的用户界面刷新。
 
+## 导入模块
+
+```ts
+import { ChipV2Size, ChipGroupV2 } from '@kit.ArkUI';
+```
+
+## 子组件
+
+不支持设置子组件。
+
 **起始版本：** 26.0.0
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

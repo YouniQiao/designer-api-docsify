@@ -18,7 +18,7 @@ Requests notification to be enabled for this application. This API uses an async
 
 **Deprecated since:** 12
 
-**Substitutes:** [requestEnableNotification](#requestenablenotification)
+**Substitutes:** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md)
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -149,7 +149,7 @@ Requests notification to be enabled for this application. This API uses a promis
 
 **Deprecated since:** 12
 
-**Substitutes:** [requestEnableNotification](#requestenablenotification)
+**Substitutes:** [requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md)
 
 **System capability:** SystemCapability.Notification.Notification
 

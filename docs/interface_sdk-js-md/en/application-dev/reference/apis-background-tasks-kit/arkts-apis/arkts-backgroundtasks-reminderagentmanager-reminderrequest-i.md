@@ -232,7 +232,7 @@ The value ranges from 0 to1800, in seconds. The default value is **1**.
 
 If the value is **0**, the system notification tone is used.
 
-If the value is greater than 0 and [ReminderRequest.customRingUri](#reminderrequest) is set, the reminder rings on the specified channel [ReminderRequest.ringChannel](#reminderrequest). Otherwise, the custom notification tone of the agent-powered reminder is used.
+If the value is greater than 0 and [ReminderRequest.customRingUri](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) is set, the reminder rings on the specified channel [ReminderRequest.ringChannel](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md). Otherwise, the custom notification tone of the agent-powered reminder is used.
 
 The device vibrates when the reminder rings. Since API version 26.0.0, number vibration is supported, and the vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates once quickly when the reminder rings.
 

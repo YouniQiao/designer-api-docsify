@@ -12,7 +12,11 @@ import { wifi } from '@kit.ConnectivityKit';
 function isFeatureSupported(featureId: number): boolean
 ```
 
-判断设备是否支持相关WLAN特性。
+判断设备是否支持指定featureId对应的Wi-Fi特性。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -34,7 +38,7 @@ function isFeatureSupported(featureId: number): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true:支持，false:不支持。 |
+| boolean | true:支持， false:不支持。 |
 
 **示例**
 

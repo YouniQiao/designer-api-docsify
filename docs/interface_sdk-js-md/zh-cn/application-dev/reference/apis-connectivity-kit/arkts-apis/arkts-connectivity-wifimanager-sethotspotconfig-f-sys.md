@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function setHotspotConfig(config: HotspotConfig): void
 ```
 
-设置设备的热点配置。
+设置Wi-Fi热点的配置信息，包括SSID、加密方式、密码、带宽、信道、最大连接STA数量等。
 
 **起始版本：** 9
 
@@ -26,7 +26,7 @@ function setHotspotConfig(config: HotspotConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | HotspotConfig | 是 | 表示WLAN热点配置。SSID和{@code securityType}必须有效且正确。如果{@code securityType}不是{@code open}，{@code preSharedKey}必须有效且正确。 |
+| config | HotspotConfig | 是 | 热点配置信息。 |
 
 **错误码：**
 

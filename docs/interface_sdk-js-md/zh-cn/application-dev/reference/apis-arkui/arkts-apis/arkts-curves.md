@@ -59,4 +59,4 @@ import { curves } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [Curve](arkts-arkui-curves-curve-e.md) | 插值曲线和动效请参考<!--RP1-->[贝塞尔曲线](#ohoscurves插值计算)<!--RP1End-->。 |
+| [Curve](arkts-arkui-curves-curve-e.md) | 插值曲线和动效请参考<!--RP1-->[贝塞尔曲线](arkts-curves.md)<!--RP1End-->。 |

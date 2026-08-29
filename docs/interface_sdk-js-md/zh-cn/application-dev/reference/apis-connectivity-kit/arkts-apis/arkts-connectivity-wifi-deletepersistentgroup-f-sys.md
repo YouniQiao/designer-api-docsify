@@ -12,7 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function deletePersistentGroup(netId: number): boolean
 ```
 
-删除指定网络ID的持久P2P群组。
+删除永久组。
 
 **起始版本：** 8
 
@@ -30,13 +30,13 @@ function deletePersistentGroup(netId: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| netId | number | 是 |  |
+| netId | number | 是 | 组的ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作成功时返回{ |
+| boolean | 删除永久组操作是否执行成功。true:操作执行成功，false:操作执行失败。 |
 
 **示例**
 

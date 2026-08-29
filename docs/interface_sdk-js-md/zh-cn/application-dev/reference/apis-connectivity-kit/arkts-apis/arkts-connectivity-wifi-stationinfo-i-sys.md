@@ -1,8 +1,6 @@
 # StationInfo（系统接口）
 
-WLAN站点信息。
-
-@interface StationInfo
+接入的设备信息。
 
 **起始版本：** 7
 
@@ -26,7 +24,7 @@ import { wifi } from '@kit.ConnectivityKit';
 ipAddress: string
 ```
 
-WLAN客户端的IP地址
+IP地址。
 
 **类型：** string
 
@@ -46,7 +44,7 @@ WLAN客户端的IP地址
 macAddress: string
 ```
 
-WLAN客户端的MAC地址
+MAC地址。
 
 **类型：** string
 
@@ -66,7 +64,7 @@ WLAN客户端的MAC地址
 name: string
 ```
 
-WLAN客户端的网络名称
+设备名称。
 
 **类型：** string
 

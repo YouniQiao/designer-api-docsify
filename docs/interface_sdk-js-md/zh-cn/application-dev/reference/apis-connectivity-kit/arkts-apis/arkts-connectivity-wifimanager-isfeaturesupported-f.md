@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function isFeatureSupported(featureId: number): boolean
 ```
 
-检查设备是否支持指定特性。
+判断设备是否支持指定的Wi-Fi特性。
 
 **起始版本：** 9
 
@@ -24,13 +24,13 @@ function isFeatureSupported(featureId: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| featureId | number | 是 | 表示特性的ID。 |
+| featureId | number | 是 | 特性ID值。枚举值如下：   - 0x0001: 基础结构模式特性。   - 0x0002: 5 GHz带宽特性。   - 0x0004: GAS/ANQP特性。   - 0x0008: Wifi-Direct特性。   - 0x0010: Soft AP特性。   - 0x0040: Wi-Fi AWare组网特性。   - 0x8000: AP STA共存特性。   - 0x8000000: WPA3-Personal SAE特性。   - 0x10000000: WPA3-Enterprise Suite-B。   - 0x20000000: 增强开放特性。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 此设备支持指定特性时返回{ |
+| boolean | true:支持， false:不支持。 |
 
 **错误码：**
 

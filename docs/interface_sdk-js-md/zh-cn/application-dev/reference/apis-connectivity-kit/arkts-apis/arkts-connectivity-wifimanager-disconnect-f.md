@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function disconnect(): void
 ```
 
-断开STA与WLAN热点之间的连接。
+断开Wi-Fi连接。
 
 **起始版本：** 15
 

@@ -31,7 +31,7 @@ addColorStop(offset: number, color: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 是 | 设置渐变点距离起点的位置占总体长度的比例，范围为[0, 1]。设置offset&lt;0或offset&gt;1无渐变效果。异常值undefined和null按无效值处理，不添加该断点。NaN会导致CanvasGradient对象异常，无法正常生成渐变效果；Infinity会导致整个CanvasGradient不生效。 |
+| offset | number | 是 | 设置渐变断点距离起点的位置占总体长度的比例，范围为[0, 1]。设置offset&lt;0或offset&gt;1无渐变效果。异常值undefined和null按无效值处理，不添加该断点。NaN会导致CanvasGradient对象异常，无法正常生成渐变效果；Infinity会导致整个CanvasGradient不生效。 |
 | color | string | 是 | 设置渐变的颜色。string类型支持'rgb(255, 255, 255)'、'rgba(255, 255, 255, 1.0)'、'#RGB'、'#ARGB'、'#RRGGBB'、'#AARRGGBB'格式，参考[ResourceColor](arkts-arkui-resourcecolor-t.md)中string类型说明。未按格式设置颜色无渐变效果。设置null和undefined时按无效值处理，不添加该断点。 |
 
 **示例**

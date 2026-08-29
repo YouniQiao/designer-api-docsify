@@ -492,7 +492,7 @@ signSync(data: DataBlob | null): DataBlob
 
 Signs the data. This API returns the result synchronously.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [sign](#sign). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, [sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 
@@ -722,11 +722,11 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 Updates data to be signed. This API uses an asynchronous callback to return the result.
 
-This API can be called only after the [Sign](#sign) instance is initialized by using [init](#init) or [initSync](#initsync).
+This API can be called only after the [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) instance is initialized by using [init](#init) or [initSync](#initsync).
 
 > **NOTE：**
 > 
-> You can call **update** multiple times or do not use **update** (call [sign](#sign) after
+> You can call **update** multiple times or do not use **update** (call [sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) after
 > [init](#init)), depending on the data volume.
 > 
 > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
@@ -775,12 +775,12 @@ update(data: DataBlob): Promise<void>
 
 Updates data to be signed. This API uses a promise to return the result.
 
-Before using this API, you must initialize the [Sign](#sign) instance by using [init()](#init).
+Before using this API, you must initialize the [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) instance by using [init()](#init).
 
 > **NOTE：**
 > 
 > You can call **update** multiple times or do not use **update** (call
-> [sign](#sign) after
+> [sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) after
 > [init](#init)), depending on the
 > data volume.
 > 
@@ -834,7 +834,7 @@ updateSync(data: DataBlob): void
 
 Updates data to be signed. This API returns the result synchronously.
 
-This API can be called only after the [Sign](#sign) instance is initialized by using [initSync()](#initsync).
+This API can be called only after the [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) instance is initialized by using [initSync()](#initsync).
 
 > **NOTE：**
 > 

@@ -14,8 +14,6 @@ function getSupportedFeatures(): number
 
 查询设备支持的特性。
 
-<p>检查设备是否支持指定特性。
-
 **起始版本：** 7
 
 **废弃版本：** 9
@@ -32,4 +30,4 @@ function getSupportedFeatures(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 支持的特性值。 |
+| number | 支持的特性值。特性值枚举： |

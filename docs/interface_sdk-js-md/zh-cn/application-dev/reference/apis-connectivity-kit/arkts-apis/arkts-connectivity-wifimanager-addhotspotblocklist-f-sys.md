@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function addHotspotBlockList(stationInfo: StationInfo): void
 ```
 
-将站点添加到黑名单，该站点无法访问热点。
+将设备添加到热点的阻止连接设备列表中，列表中的设备将不能访问热点。
 
 **起始版本：** 11
 
@@ -26,7 +26,7 @@ function addHotspotBlockList(stationInfo: StationInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| stationInfo | StationInfo | 是 | 将要添加到黑名单的站点。 |
+| stationInfo | StationInfo | 是 | 将添加到热点的阻止列表中的设备。 |
 
 **错误码：**
 

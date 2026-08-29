@@ -150,7 +150,7 @@ export default class EntryAbility extends UIAbility {
 isModeSupported(): boolean
 ```
 
-Checks whether **BackgroundTaskMode** specified in [ContinuousTaskRequest](#continuoustaskrequest) is supported. For details, see [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md).
+Checks whether **BackgroundTaskMode** specified in [ContinuousTaskRequest](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md) is supported. For details, see [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md).
 
 **Since:** 21
 

@@ -14,6 +14,8 @@ function getScanResults(): Promise<Array<WifiScanInfo>>
 
 获取扫描结果，使用Promise异步回调。
 
+- 返回一个Promise对象，解析后得到一个包含多个WifiScanInfo对象的数组，每个对象表示一个Wi-Fi网络的扫描信息。
+
 **起始版本：** 9
 
 **废弃版本：** 10
@@ -28,7 +30,7 @@ function getScanResults(): Promise<Array<WifiScanInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;WifiScanInfo&gt;&gt; | 返回扫描到的WLAN热点信息（如果有）。 |
+| Promise&lt;Array&lt;WifiScanInfo&gt;&gt; | Promise对象。返回扫描到的热点列表。 |
 
 **错误码：**
 
@@ -91,6 +93,8 @@ function getScanResults(callback: AsyncCallback<Array<WifiScanInfo>>): void
 ```
 
 获取扫描结果，使用callback异步回调。
+
+- 通过回调函数返回一个包含多个WifiScanInfo对象的数组，每个对象表示一个Wi-Fi网络的扫描信息。
 
 **起始版本：** 9
 

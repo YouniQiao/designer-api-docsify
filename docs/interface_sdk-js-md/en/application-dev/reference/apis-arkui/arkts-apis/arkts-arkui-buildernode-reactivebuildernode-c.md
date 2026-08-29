@@ -1954,7 +1954,7 @@ ReactiveBuilderNode completes the reuse event transfer between internal and exte
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | Object | No | Parameter used to reuse [ReactiveBuilderNode](#reactivebuildernode). This parameter is passed to all top-level custom components within the [ReactiveBuilderNode](#reactivebuildernode) during reuse and must include all required constructor parameters for each component; otherwise, undefined behavior may occur. Calling this method synchronously triggers the [aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10) lifecycle callback of internal custom components, with this parameter as the callback input. Default value: **undefined**, in which case the custom components in the ReactiveBuilderNode will use their original construction data source. |
+| param | Object | No | Parameter used to reuse [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md). This parameter is passed to all top-level custom components within the [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md) during reuse and must include all required constructor parameters for each component; otherwise, undefined behavior may occur. Calling this method synchronously triggers the [aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10) lifecycle callback of internal custom components, with this parameter as the callback input. Default value: **undefined**, in which case the custom components in the ReactiveBuilderNode will use their original construction data source. |
 
 **Examples**
 

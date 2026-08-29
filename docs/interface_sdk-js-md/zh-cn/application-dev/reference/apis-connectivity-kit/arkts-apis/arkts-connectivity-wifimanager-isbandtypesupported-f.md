@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function isBandTypeSupported(bandType: WifiBandType): boolean
 ```
 
-检查当前设备是否支持指定频段。
+判断当前频段是否支持。
 
 **起始版本：** 10
 
@@ -24,13 +24,13 @@ function isBandTypeSupported(bandType: WifiBandType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bandType | [WifiBandType](arkts-connectivity-wifimanager-wifibandtype-e.md) | 是 | 表示频段类型。 |
+| bandType | [WifiBandType](arkts-connectivity-wifimanager-wifibandtype-e.md) | 是 | Wifi 频段类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 支持指定频段时返回{ |
+| boolean | true:支持， false:不支持。 |
 
 **错误码：**
 

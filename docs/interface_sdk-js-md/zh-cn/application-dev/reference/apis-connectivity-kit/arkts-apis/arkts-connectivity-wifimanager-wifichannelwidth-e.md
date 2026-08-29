@@ -1,6 +1,6 @@
 # WifiChannelWidth
 
-描述WLAN信道带宽。@enum { number }
+表示带宽类型的枚举。
 
 **起始版本：** 9
 
@@ -12,7 +12,7 @@
 WIDTH_20MHZ = 0
 ```
 
-20MHz。
+20MHZ。
 
 **起始版本：** 9
 
@@ -24,7 +24,7 @@ WIDTH_20MHZ = 0
 WIDTH_40MHZ = 1
 ```
 
-40MHz。
+40MHZ。
 
 **起始版本：** 9
 
@@ -36,7 +36,7 @@ WIDTH_40MHZ = 1
 WIDTH_80MHZ = 2
 ```
 
-80MHz。
+80MHZ。
 
 **起始版本：** 9
 
@@ -48,7 +48,7 @@ WIDTH_80MHZ = 2
 WIDTH_160MHZ = 3
 ```
 
-160MHz。
+160MHZ。
 
 **起始版本：** 9
 
@@ -60,7 +60,7 @@ WIDTH_160MHZ = 3
 WIDTH_80MHZ_PLUS = 4
 ```
 
-80MHz以上。
+80MHZ&lt;sup&gt;+&lt;/sup&gt;。
 
 **起始版本：** 9
 
@@ -72,7 +72,7 @@ WIDTH_80MHZ_PLUS = 4
 WIDTH_INVALID
 ```
 
-无效。
+无效值
 
 **起始版本：** 9
 

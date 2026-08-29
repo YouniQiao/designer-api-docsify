@@ -1,6 +1,6 @@
 # DisconnectedReason（系统接口）
 
-WLAN断开原因。@enum { number }
+表示Wi-Fi断开原因的枚举，用于诊断网络连接问题和优化连接策略。
 
 **起始版本：** 10
 
@@ -14,7 +14,7 @@ WLAN断开原因。@enum { number }
 DISC_REASON_DEFAULT = 0
 ```
 
-默认原因
+默认原因。
 
 **起始版本：** 10
 
@@ -28,7 +28,7 @@ DISC_REASON_DEFAULT = 0
 DISC_REASON_WRONG_PWD = 1
 ```
 
-密码错误
+密码错误。
 
 **起始版本：** 10
 
@@ -42,7 +42,7 @@ DISC_REASON_WRONG_PWD = 1
 DISC_REASON_CONNECTION_FULL = 2
 ```
 
-路由器的连接数已达到最大数量限制
+路由器的连接数已达到最大数量限制。
 
 **起始版本：** 10
 

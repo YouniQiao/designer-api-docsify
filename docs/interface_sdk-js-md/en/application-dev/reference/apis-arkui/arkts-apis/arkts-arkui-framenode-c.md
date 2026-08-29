@@ -10,7 +10,7 @@
 > 
 > - FrameNode objects do not support JSON serialization.
 > 
-> - When the API of the [FrameNode](#framenode) object is invoked in the scenario of
+> - When the API of the [FrameNode](arkts-arkui-framenode-c.md) object is invoked in the scenario of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the
 > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runscopedtask) API of
 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to specify the UI context. For details, see

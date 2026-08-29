@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getScanResultsSync(): Array<WifiScanInfo>
 ```
 
-获取扫描结果，使用同步方式返回扫描到的WLAN热点信息（如果有）。
+获取扫描结果，使用同步方式返回一个包含多个WifiScanInfo对象的数组，每个对象表示一个Wi-Fi网络的扫描信息。
 
 **起始版本：** 9
 
@@ -28,7 +28,7 @@ function getScanResultsSync(): Array<WifiScanInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;WifiScanInfo&gt; | 返回扫描到的WLAN热点信息（如果有）。 |
+| Array&lt;WifiScanInfo&gt; | 扫描结果数组。 |
 
 **错误码：**
 

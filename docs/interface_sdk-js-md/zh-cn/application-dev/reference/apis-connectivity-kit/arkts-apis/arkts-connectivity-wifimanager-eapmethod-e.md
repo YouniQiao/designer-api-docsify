@@ -1,6 +1,6 @@
 # EapMethod
 
-WLAN EAP认证方式。@enum { number }
+表示EAP认证方式的枚举。
 
 **起始版本：** 10
 

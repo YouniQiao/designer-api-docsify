@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getWifiCapability(capability: WifiCapability): boolean
 ```
 
-获取WLAN支持的能力。
+获取Wi-Fi支持的能力。
 
 **起始版本：** 26.0.0
 
@@ -28,13 +28,13 @@ function getWifiCapability(capability: WifiCapability): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| capability | [WifiCapability](arkts-connectivity-wifimanager-wificapability-e.md) | 是 | 标识WLAN能力枚举。 |
+| capability | [WifiCapability](arkts-connectivity-wifimanager-wificapability-e.md) | 是 | wifi能力枚举。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 如果指定的能力已使能，返回{ |
+| boolean | true:已使能， false:未使能。 |
 
 **错误码：**
 

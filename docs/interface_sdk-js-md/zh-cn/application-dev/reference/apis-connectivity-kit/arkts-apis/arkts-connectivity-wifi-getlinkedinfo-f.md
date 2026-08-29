@@ -12,7 +12,11 @@ import { wifi } from '@kit.ConnectivityKit';
 function getLinkedInfo(): Promise<WifiLinkedInfo>
 ```
 
-获取WLAN连接信息。使用Promise异步回调。
+获取Wi-Fi连接信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃。
 
 **起始版本：** 6
 
@@ -28,7 +32,7 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;WifiLinkedInfo&gt; | 表示WLAN连接信息。 |
+| Promise&lt;WifiLinkedInfo&gt; | Promise对象。表示Wi-Fi连接信息。 |
 
 **示例**
 
@@ -57,7 +61,11 @@ wifi.getLinkedInfo().then(data => {
 function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 ```
 
-获取WLAN连接信息。使用callback异步回调。
+获取Wi-Fi连接信息。使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃。
 
 **起始版本：** 6
 
@@ -73,7 +81,7 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | 是 | 回调函数。当获取成功时，err为0，data表示Wi-Fi连接信息。如果err为非0，表示处理出现错误。 |
 
 **示例**
 

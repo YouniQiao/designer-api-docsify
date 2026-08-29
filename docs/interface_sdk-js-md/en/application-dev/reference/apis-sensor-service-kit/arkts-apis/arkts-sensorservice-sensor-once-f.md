@@ -995,7 +995,7 @@ Subscribes to only one data change of the acceleration sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once)(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;)
+**Substitutes:** [once](arkts-sensorservice-sensor-once-f.md)(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 

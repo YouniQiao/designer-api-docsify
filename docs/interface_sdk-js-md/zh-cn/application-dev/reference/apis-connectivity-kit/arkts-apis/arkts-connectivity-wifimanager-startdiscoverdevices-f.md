@@ -12,11 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function startDiscoverDevices(): void
 ```
 
-开始发现WLAN P2P设备。
+开始发现设备。调用此方法后，可调用[stopDiscoverDevices](arkts-connectivity-wifimanager-stopdiscoverdevices-f.md)停止发现设备以释放资源。
 
-**起始版本：** 10
+**起始版本：** 9
 
-**需要权限：** ohos.permission.GET_WIFI_INFO
+**需要权限：** 
+- API版本10+：ohos.permission.GET_WIFI_INFO
+- API版本9：ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 

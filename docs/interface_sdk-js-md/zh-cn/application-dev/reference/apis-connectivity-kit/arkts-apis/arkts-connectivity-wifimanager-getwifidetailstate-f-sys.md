@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getWifiDetailState(): WifiDetailState
 ```
 
-获取WLAN开关详细状态。
+获取Wi-Fi开关详细状态。
 
 **起始版本：** 12
 
@@ -26,7 +26,7 @@ function getWifiDetailState(): WifiDetailState
 
 | 类型 | 说明 |
 | --- | --- |
-| [WifiDetailState](arkts-connectivity-wifimanager-wifidetailstate-e-sys.md) | 返回WLAN状态信息。 |
+| [WifiDetailState](arkts-connectivity-wifimanager-wifidetailstate-e-sys.md) | Wi-Fi枚举状态。 |
 
 **错误码：**
 

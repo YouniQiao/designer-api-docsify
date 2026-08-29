@@ -150,7 +150,7 @@ superuser do，表示以超级用户执行，当前仅支持PC/2in1设备使用�
 DISTRIBUTED_TRANSMISSION_OUTGOING = 9
 ```
 
-设备间分布式单向传输数据的能力（仅包含向其他设备传输数据）。当已禁用分布式管理服务（[DISTRIBUTED_TRANSMISSION](#featureforaccount)），再禁用设备间分布式单向传输数据的能力，会报策略冲突。
+设备间分布式单向传输数据的能力（仅包含向其他设备传输数据）。当已禁用分布式管理服务（[DISTRIBUTED_TRANSMISSION](arkts-mdm-restrictions-featureforaccount-e.md)），再禁用设备间分布式单向传输数据的能力，会报策略冲突。
 
 **起始版本：** 26.0.0
 

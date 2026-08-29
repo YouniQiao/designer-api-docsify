@@ -67,7 +67,7 @@ Obtains a **SimpleDateTimeFormat** object based on the specified skeleton. For d
 
 **Deprecated since:** 20
 
-**Substitutes:** [getSimpleDateTimeFormatBySkeleton](#getsimpledatetimeformatbyskeleton)(skeleton: string, locale?: Intl.Locale)
+**Substitutes:** [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md)(skeleton: string, locale?: Intl.Locale)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

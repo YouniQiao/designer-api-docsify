@@ -876,7 +876,7 @@ readonly comment: string
 
 用于MediaChangeRequest类型校验。
 
-如果类（如[MediaAssetChangeRequest](#mediaassetchangerequest)或[MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md)）对象可以访问，就说明该类是MediaChangeRequest的实现类。
+如果类（如[MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md)或[MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md)）对象可以访问，就说明该类是MediaChangeRequest的实现类。
 
 **类型：** string
 

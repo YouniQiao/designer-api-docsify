@@ -12,7 +12,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function removeDevice(id: number): void
 ```
 
-通过networkId移除WLAN DeviceConfig。WLAN DeviceConfig移除后，其配置将从WLAN配置列表中删除。如果该WLAN DeviceConfig正在连接中，则连接将被中断。应用只能删除自己创建的WLAN DeviceConfig。
+移除网络配置。
+
+- 通过网络配置ID删除已保存的Wi-Fi网络配置信息。  
+- 移除后对应的网络配置将不再可用，设备也不会再自动连接该网络。
 
 **起始版本：** 15
 
@@ -24,7 +27,7 @@ function removeDevice(id: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | number | 是 | 表示WLAN DeviceConfig的ID。networkId的值不能小于0。 |
+| id | number | 是 | 网络配置ID。 |
 
 **错误码：**
 

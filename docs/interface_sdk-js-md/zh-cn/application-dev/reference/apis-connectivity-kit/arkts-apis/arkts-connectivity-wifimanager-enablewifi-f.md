@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function enableWifi(): void
 ```
 
-启动WLAN。
+启动Wi-Fi。
 
 **起始版本：** 15
 

@@ -18,7 +18,7 @@ create a JavaScript Gatt server instance.
 
 **Deprecated since:** 10
 
-**Substitutes:** [createGattServer](#creategattserver)
+**Substitutes:** [createGattServer](arkts-connectivity-ble-creategattserver-f.md)
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

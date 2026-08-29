@@ -1,5 +1,504 @@
 # ArkTS API<!--arkts-connectivitykit-->
 
+- [@ohos.bluetooth(蓝牙)](arkts-bluetooth.md)
+  - [bluetooth](arkts-connectivity-bluetooth-n.md)
+    - [BLE](arkts-connectivity-bluetooth-ble-n.md)
+      - [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)
+      - [createGattServer](arkts-connectivity-ble-creategattserver-f.md)
+      - [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md)
+      - [off](arkts-connectivity-ble-off-f.md)
+      - [on](arkts-connectivity-ble-on-f.md)
+      - [startBLEScan](arkts-connectivity-ble-startblescan-f.md)
+      - [stopBLEScan](arkts-connectivity-ble-stopblescan-f.md)
+    <!--Del-->
+    - [cancelPairedDevice(系统接口)](arkts-connectivity-bluetooth-cancelpaireddevice-f-sys.md)<!--DelEnd-->
+    - [disableBluetooth](arkts-connectivity-bluetooth-disablebluetooth-f.md)
+    - [enableBluetooth](arkts-connectivity-bluetooth-enablebluetooth-f.md)
+    - [getBluetoothScanMode](arkts-connectivity-bluetooth-getbluetoothscanmode-f.md)
+    - [getBtConnectionState](arkts-connectivity-bluetooth-getbtconnectionstate-f.md)
+    - [getLocalName](arkts-connectivity-bluetooth-getlocalname-f.md)
+    - [getPairedDevices](arkts-connectivity-bluetooth-getpaireddevices-f.md)
+    - [getProfile](arkts-connectivity-bluetooth-getprofile-f.md)
+    - [getProfileConnState](arkts-connectivity-bluetooth-getprofileconnstate-f.md)
+    - [getRemoteDeviceClass](arkts-connectivity-bluetooth-getremotedeviceclass-f.md)
+    - [getRemoteDeviceName](arkts-connectivity-bluetooth-getremotedevicename-f.md)
+    - [getState](arkts-connectivity-bluetooth-getstate-f.md)
+    - [off](arkts-connectivity-bluetooth-off-f.md)
+    - [on](arkts-connectivity-bluetooth-on-f.md)
+    - [pairDevice](arkts-connectivity-bluetooth-pairdevice-f.md)
+    - [setBluetoothScanMode](arkts-connectivity-bluetooth-setbluetoothscanmode-f.md)
+    - [setDevicePairingConfirmation](arkts-connectivity-bluetooth-setdevicepairingconfirmation-f.md)
+    - [setLocalName](arkts-connectivity-bluetooth-setlocalname-f.md)
+    - [sppAccept](arkts-connectivity-bluetooth-sppaccept-f.md)
+    - [sppCloseClientSocket](arkts-connectivity-bluetooth-sppcloseclientsocket-f.md)
+    - [sppCloseServerSocket](arkts-connectivity-bluetooth-sppcloseserversocket-f.md)
+    - [sppConnect](arkts-connectivity-bluetooth-sppconnect-f.md)
+    - [sppListen](arkts-connectivity-bluetooth-spplisten-f.md)
+    - [sppWrite](arkts-connectivity-bluetooth-sppwrite-f.md)
+    - [startBluetoothDiscovery](arkts-connectivity-bluetooth-startbluetoothdiscovery-f.md)
+    - [stopBluetoothDiscovery](arkts-connectivity-bluetooth-stopbluetoothdiscovery-f.md)
+    - [A2dpSourceProfile](arkts-connectivity-bluetooth-a2dpsourceprofile-i.md)
+    - [AdvertiseData](arkts-connectivity-bluetooth-advertisedata-i.md)
+    - [AdvertiseSetting](arkts-connectivity-bluetooth-advertisesetting-i.md)
+    - [BaseProfile](arkts-connectivity-bluetooth-baseprofile-i.md)
+    - [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md)
+    - [BLEConnectChangedState](arkts-connectivity-bluetooth-bleconnectchangedstate-i.md)
+    - [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md)
+    - [BondStateParam](arkts-connectivity-bluetooth-bondstateparam-i.md)
+    - [CharacteristicReadReq](arkts-connectivity-bluetooth-characteristicreadreq-i.md)
+    - [CharacteristicWriteReq](arkts-connectivity-bluetooth-characteristicwritereq-i.md)
+    - [DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)
+    - [DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)
+    - [DeviceClass](arkts-connectivity-bluetooth-deviceclass-i.md)
+    - [GattClientDevice](arkts-connectivity-bluetooth-gattclientdevice-i.md)
+    - [GattServer](arkts-connectivity-bluetooth-gattserver-i.md)
+    - [GattService](arkts-connectivity-bluetooth-gattservice-i.md)
+    - [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetooth-handsfreeaudiogatewayprofile-i.md)
+    - [ManufactureData](arkts-connectivity-bluetooth-manufacturedata-i.md)
+    - [NotifyCharacteristic](arkts-connectivity-bluetooth-notifycharacteristic-i.md)
+    - [PinRequiredParam](arkts-connectivity-bluetooth-pinrequiredparam-i.md)
+    - [ScanFilter](arkts-connectivity-bluetooth-scanfilter-i.md)
+    - [ScanOptions](arkts-connectivity-bluetooth-scanoptions-i.md)
+    - [ScanResult](arkts-connectivity-bluetooth-scanresult-i.md)
+    - [ServerResponse](arkts-connectivity-bluetooth-serverresponse-i.md)
+    - [ServiceData](arkts-connectivity-bluetooth-servicedata-i.md)
+    - [SppOption](arkts-connectivity-bluetooth-sppoption-i.md)
+    - [StateChangeParam](arkts-connectivity-bluetooth-statechangeparam-i.md)
+    - [BluetoothState](arkts-connectivity-bluetooth-bluetoothstate-e.md)
+    - [BondState](arkts-connectivity-bluetooth-bondstate-e.md)
+    - [MajorClass](arkts-connectivity-bluetooth-majorclass-e.md)
+    - [MajorMinorClass](arkts-connectivity-bluetooth-majorminorclass-e.md)
+    - [MatchMode](arkts-connectivity-bluetooth-matchmode-e.md)
+    - [PlayingState](arkts-connectivity-bluetooth-playingstate-e.md)
+    - [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md)
+    - [ProfileId](arkts-connectivity-bluetooth-profileid-e.md)
+    - [ScanDuty](arkts-connectivity-bluetooth-scanduty-e.md)
+    - [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md)
+    - [SppType](arkts-connectivity-bluetooth-spptype-e.md)
+- [@ohos.bluetooth.a2dp(蓝牙a2dp模块)](arkts-bluetooth-a2dp.md)
+  - [createA2dpSrcProfile](arkts-connectivity-a2dp-createa2dpsrcprofile-f.md)
+  - [A2dpSourceProfile](arkts-connectivity-a2dp-a2dpsourceprofile-i.md)
+  <!--Del-->
+  - [A2dpSourceProfile(系统接口)](arkts-connectivity-a2dp-a2dpsourceprofile-i-sys.md)<!--DelEnd-->
+  - [CodecInfo](arkts-connectivity-a2dp-codecinfo-i.md)
+  - [CodecInfoList](arkts-connectivity-a2dp-codecinfolist-i.md)
+  - [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md)
+  - [CodecBitRate](arkts-connectivity-a2dp-codecbitrate-e.md)
+  - [CodecBitsPerSample](arkts-connectivity-a2dp-codecbitspersample-e.md)
+  - [CodecChannelMode](arkts-connectivity-a2dp-codecchannelmode-e.md)
+  - [CodecFrameLength](arkts-connectivity-a2dp-codecframelength-e.md)
+  - [CodecSampleRate](arkts-connectivity-a2dp-codecsamplerate-e.md)
+  - [CodecType](arkts-connectivity-a2dp-codectype-e.md)
+  - [PlayingState](arkts-connectivity-a2dp-playingstate-e.md)
+- [@ohos.bluetooth.access(蓝牙access模块)](arkts-bluetooth-access.md)
+  - [addPersistentDeviceId](arkts-connectivity-access-addpersistentdeviceid-f.md)
+  - [convertUuid](arkts-connectivity-access-convertuuid-f.md)
+  - [deletePersistentDeviceId](arkts-connectivity-access-deletepersistentdeviceid-f.md)
+  - [disableBluetooth](arkts-connectivity-access-disablebluetooth-f.md)
+  - [disableBluetoothAsync](arkts-connectivity-access-disablebluetoothasync-f.md)
+  - [enableBluetooth](arkts-connectivity-access-enablebluetooth-f.md)
+  - [enableBluetoothAsync](arkts-connectivity-access-enablebluetoothasync-f.md)
+  <!--Del-->
+  - [factoryReset(系统接口)](arkts-connectivity-access-factoryreset-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getLocalAddress(系统接口)](arkts-connectivity-access-getlocaladdress-f-sys.md)<!--DelEnd-->
+  - [getPersistentDeviceIds](arkts-connectivity-access-getpersistentdeviceids-f.md)
+  - [getState](arkts-connectivity-access-getstate-f.md)
+  - [isBluetoothSupported](arkts-connectivity-access-isbluetoothsupported-f.md)
+  - [isValidRandomDeviceId](arkts-connectivity-access-isvalidrandomdeviceid-f.md)
+  <!--Del-->
+  - [notifyDialogResult(系统接口)](arkts-connectivity-access-notifydialogresult-f-sys.md)<!--DelEnd-->
+  - [off](arkts-connectivity-access-off-f.md)
+  - [on](arkts-connectivity-access-on-f.md)
+  <!--Del-->
+  - [restrictBluetooth(系统接口)](arkts-connectivity-access-restrictbluetooth-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NotifyDialogResultParams(系统接口)](arkts-connectivity-access-notifydialogresultparams-i-sys.md)<!--DelEnd-->
+  - [BluetoothState](arkts-connectivity-access-bluetoothstate-e.md)
+  <!--Del-->
+  - [DialogType(系统接口)](arkts-connectivity-access-dialogtype-e-sys.md)<!--DelEnd-->
+<!--Del-->
+- [@ohos.bluetooth.bas(蓝牙bas模块)](arkts-bluetooth-bas.md)<!--DelEnd-->
+  <!--Del-->
+  - [getRemoteDeviceBatteryInfo(系统接口)](arkts-connectivity-bas-getremotedevicebatteryinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [isBasSupported(系统接口)](arkts-connectivity-bas-isbassupported-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [offBatteryChange(系统接口)](arkts-connectivity-bas-offbatterychange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onBatteryChange(系统接口)](arkts-connectivity-bas-onbatterychange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [BatteryInfo(系统接口)](arkts-connectivity-bas-batteryinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [BluetoothAddress(系统接口)](arkts-connectivity-bas-bluetoothaddress-t-sys.md)<!--DelEnd-->
+- [@ohos.bluetooth.baseProfile(蓝牙baseProfile模块)](arkts-bluetooth-baseprofile.md)
+  - [BaseProfile](arkts-connectivity-baseprofile-baseprofile-i.md)
+  <!--Del-->
+  - [BaseProfile(系统接口)](arkts-connectivity-baseprofile-baseprofile-i-sys.md)<!--DelEnd-->
+  - [StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md)
+  - [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md)
+  <!--Del-->
+  - [ConnectionStrategy(系统接口)](arkts-connectivity-baseprofile-connectionstrategy-e-sys.md)<!--DelEnd-->
+  - [DisconnectCause](arkts-connectivity-baseprofile-disconnectcause-e.md)
+  - [PanRole](arkts-connectivity-baseprofile-panrole-e.md)
+- [@ohos.bluetooth.ble(蓝牙ble模块)](arkts-bluetooth-ble.md)
+  - [createBleScanner](arkts-connectivity-ble-createblescanner-f.md)
+  - [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)
+  - [createGattServer](arkts-connectivity-ble-creategattserver-f.md)
+  - [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md)
+  - [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md)
+  - [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md)
+  - [off](arkts-connectivity-ble-off-f.md)
+  - [on](arkts-connectivity-ble-on-f.md)
+  - [startAdvertising](arkts-connectivity-ble-startadvertising-f.md)
+  - [startBLEScan](arkts-connectivity-ble-startblescan-f.md)
+  - [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md)
+  - [stopBLEScan](arkts-connectivity-ble-stopblescan-f.md)
+  - [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md)
+  - [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md)
+  - [AdvertisingDisableParams](arkts-connectivity-ble-advertisingdisableparams-i.md)
+  - [AdvertisingEnableParams](arkts-connectivity-ble-advertisingenableparams-i.md)
+  - [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md)
+  - [AdvertisingStateChangeInfo](arkts-connectivity-ble-advertisingstatechangeinfo-i.md)
+  - [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md)
+  - [BLEConnectionChangeState](arkts-connectivity-ble-bleconnectionchangestate-i.md)
+  - [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md)
+  - [BleScanner](arkts-connectivity-ble-blescanner-i.md)
+  - [CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md)
+  - [CharacteristicWriteRequest](arkts-connectivity-ble-characteristicwriterequest-i.md)
+  - [DescriptorReadRequest](arkts-connectivity-ble-descriptorreadrequest-i.md)
+  - [DescriptorWriteRequest](arkts-connectivity-ble-descriptorwriterequest-i.md)
+  - [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md)
+  <!--Del-->
+  - [GattClientDevice(系统接口)](arkts-connectivity-ble-gattclientdevice-i-sys.md)<!--DelEnd-->
+  - [GattPermissions](arkts-connectivity-ble-gattpermissions-i.md)
+  - [GattProperties](arkts-connectivity-ble-gattproperties-i.md)
+  <!--Del-->
+  - [GattRspContext(系统接口)](arkts-connectivity-ble-gattrspcontext-i-sys.md)<!--DelEnd-->
+  - [GattServer](arkts-connectivity-ble-gattserver-i.md)
+  - [GattService](arkts-connectivity-ble-gattservice-i.md)
+  - [GattSetting](arkts-connectivity-ble-gattsetting-i.md)
+  - [ManufactureData](arkts-connectivity-ble-manufacturedata-i.md)
+  - [NotifyCharacteristic](arkts-connectivity-ble-notifycharacteristic-i.md)
+  - [PhyValue](arkts-connectivity-ble-phyvalue-i.md)
+  <!--Del-->
+  - [ScanEnhanceMode(系统接口)](arkts-connectivity-ble-scanenhancemode-i-sys.md)<!--DelEnd-->
+  - [ScanFilter](arkts-connectivity-ble-scanfilter-i.md)
+  <!--Del-->
+  - [ScanFilter(系统接口)](arkts-connectivity-ble-scanfilter-i-sys.md)<!--DelEnd-->
+  - [ScanOptions](arkts-connectivity-ble-scanoptions-i.md)
+  <!--Del-->
+  - [ScanOptions(系统接口)](arkts-connectivity-ble-scanoptions-i-sys.md)<!--DelEnd-->
+  - [ScanReport](arkts-connectivity-ble-scanreport-i.md)
+  - [ScanResult](arkts-connectivity-ble-scanresult-i.md)
+  - [ServerResponse](arkts-connectivity-ble-serverresponse-i.md)
+  - [ServiceData](arkts-connectivity-ble-servicedata-i.md)
+  - [BluetoothAddress](arkts-connectivity-ble-bluetoothaddress-t.md)
+  - [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md)
+  - [ProfileConnectionState](arkts-connectivity-ble-profileconnectionstate-t.md)
+  - [AdvertisingState](arkts-connectivity-ble-advertisingstate-e.md)
+  - [BlePhy](arkts-connectivity-ble-blephy-e.md)
+  - [BleProfile](arkts-connectivity-ble-bleprofile-e.md)
+  - [CodedPhyMode](arkts-connectivity-ble-codedphymode-e.md)
+  - [ConnectionParam](arkts-connectivity-ble-connectionparam-e.md)
+  <!--Del-->
+  - [EnhanceMode(系统接口)](arkts-connectivity-ble-enhancemode-e-sys.md)<!--DelEnd-->
+  - [GattDisconnectReason](arkts-connectivity-ble-gattdisconnectreason-e.md)
+  - [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md)
+  - [MatchMode](arkts-connectivity-ble-matchmode-e.md)
+  - [PhyType](arkts-connectivity-ble-phytype-e.md)
+  - [ScanDuty](arkts-connectivity-ble-scanduty-e.md)
+  - [ScanReportMode](arkts-connectivity-ble-scanreportmode-e.md)
+  - [ScanReportType](arkts-connectivity-ble-scanreporttype-e.md)
+- [@ohos.bluetooth.common(蓝牙common模块)](arkts-bluetooth-common.md)
+  - [BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md)
+  - [BluetoothAddressType](arkts-connectivity-common-bluetoothaddresstype-e.md)
+  - [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md)
+- [@ohos.bluetooth.connection(蓝牙connection模块)](arkts-bluetooth-connection.md)
+  <!--Del-->
+  - [cancelPairedDevice(系统接口)](arkts-connectivity-connection-cancelpaireddevice-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [cancelPairingDevice(系统接口)](arkts-connectivity-connection-cancelpairingdevice-f-sys.md)<!--DelEnd-->
+  - [connectAllowedProfiles](arkts-connectivity-connection-connectallowedprofiles-f.md)
+  <!--Del-->
+  - [controlDeviceAction(系统接口)](arkts-connectivity-connection-controldeviceaction-f-sys.md)<!--DelEnd-->
+  - [disconnectAllowedProfiles](arkts-connectivity-connection-disconnectallowedprofiles-f.md)
+  <!--Del-->
+  - [disconnectAllowedProfiles(系统接口)](arkts-connectivity-connection-disconnectallowedprofiles-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [generateLocalOobData(系统接口)](arkts-connectivity-connection-generatelocaloobdata-f-sys.md)<!--DelEnd-->
+  - [getBluetoothScanMode](arkts-connectivity-connection-getbluetoothscanmode-f.md)
+  <!--Del-->
+  - [getCarKeyDfxData(系统接口)](arkts-connectivity-connection-getcarkeydfxdata-f-sys.md)<!--DelEnd-->
+  - [getLastConnectionTime](arkts-connectivity-connection-getlastconnectiontime-f.md)
+  - [getLocalName](arkts-connectivity-connection-getlocalname-f.md)
+  <!--Del-->
+  - [getLocalProfileUuids(系统接口)](arkts-connectivity-connection-getlocalprofileuuids-f-sys.md)<!--DelEnd-->
+  - [getPairedDevices](arkts-connectivity-connection-getpaireddevices-f.md)
+  - [getPairState](arkts-connectivity-connection-getpairstate-f.md)
+  - [getProfileConnectionState](arkts-connectivity-connection-getprofileconnectionstate-f.md)
+  - [getRemoteDeviceBatteryInfo](arkts-connectivity-connection-getremotedevicebatteryinfo-f.md)
+  - [getRemoteDeviceClass](arkts-connectivity-connection-getremotedeviceclass-f.md)
+  - [getRemoteDeviceName](arkts-connectivity-connection-getremotedevicename-f.md)
+  - [getRemoteDeviceTransport](arkts-connectivity-connection-getremotedevicetransport-f.md)
+  <!--Del-->
+  - [getRemoteDeviceType(系统接口)](arkts-connectivity-connection-getremotedevicetype-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getRemoteProductId(系统接口)](arkts-connectivity-connection-getremoteproductid-f-sys.md)<!--DelEnd-->
+  - [getRemoteProfileUuids](arkts-connectivity-connection-getremoteprofileuuids-f.md)
+  - [getVirtualAddressByHash](arkts-connectivity-connection-getvirtualaddressbyhash-f.md)
+  - [isBluetoothDiscovering](arkts-connectivity-connection-isbluetoothdiscovering-f.md)
+  - [off](arkts-connectivity-connection-off-f.md)
+  - [offAclStateChange](arkts-connectivity-connection-offaclstatechange-f.md)
+  - [offScanModeChange](arkts-connectivity-connection-offscanmodechange-f.md)
+  - [on](arkts-connectivity-connection-on-f.md)
+  - [onAclStateChange](arkts-connectivity-connection-onaclstatechange-f.md)
+  - [onScanModeChange](arkts-connectivity-connection-onscanmodechange-f.md)
+  <!--Del-->
+  - [pairCredibleDevice(系统接口)](arkts-connectivity-connection-paircredibledevice-f-sys.md)<!--DelEnd-->
+  - [pairDevice](arkts-connectivity-connection-pairdevice-f.md)
+  <!--Del-->
+  - [pairDeviceOutOfBand(系统接口)](arkts-connectivity-connection-pairdeviceoutofband-f-sys.md)<!--DelEnd-->
+  - [setBluetoothScanMode](arkts-connectivity-connection-setbluetoothscanmode-f.md)
+  <!--Del-->
+  - [setCarKeyDfxData(系统接口)](arkts-connectivity-connection-setcarkeydfxdata-f-sys.md)<!--DelEnd-->
+  - [setDevicePairingConfirmation](arkts-connectivity-connection-setdevicepairingconfirmation-f.md)
+  - [setDevicePinCode](arkts-connectivity-connection-setdevicepincode-f.md)
+  - [setLocalName](arkts-connectivity-connection-setlocalname-f.md)
+  - [setRemoteDeviceName](arkts-connectivity-connection-setremotedevicename-f.md)
+  <!--Del-->
+  - [setRemoteDeviceType(系统接口)](arkts-connectivity-connection-setremotedevicetype-f-sys.md)<!--DelEnd-->
+  - [startBluetoothDiscovery](arkts-connectivity-connection-startbluetoothdiscovery-f.md)
+  <!--Del-->
+  - [startPairOutOfBand(系统接口)](arkts-connectivity-connection-startpairoutofband-f-sys.md)<!--DelEnd-->
+  - [stopBluetoothDiscovery](arkts-connectivity-connection-stopbluetoothdiscovery-f.md)
+  <!--Del-->
+  - [updateCloudBluetoothDevice(系统接口)](arkts-connectivity-connection-updatecloudbluetoothdevice-f-sys.md)<!--DelEnd-->
+  - [AclStateResult](arkts-connectivity-connection-aclstateresult-i.md)
+  - [BatteryInfo](arkts-connectivity-connection-batteryinfo-i.md)
+  <!--Del-->
+  - [BatteryInfo(系统接口)](arkts-connectivity-connection-batteryinfo-i-sys.md)<!--DelEnd-->
+  - [BondStateParam](arkts-connectivity-connection-bondstateparam-i.md)
+  <!--Del-->
+  - [ControlDeviceActionParams(系统接口)](arkts-connectivity-connection-controldeviceactionparams-i-sys.md)<!--DelEnd-->
+  - [DeviceClass](arkts-connectivity-connection-deviceclass-i.md)
+  - [DiscoveryResult](arkts-connectivity-connection-discoveryresult-i.md)
+  <!--Del-->
+  - [OobData(系统接口)](arkts-connectivity-connection-oobdata-i-sys.md)<!--DelEnd-->
+  - [PinRequiredParam](arkts-connectivity-connection-pinrequiredparam-i.md)
+  <!--Del-->
+  - [PinRequiredParam(系统接口)](arkts-connectivity-connection-pinrequiredparam-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [TrustedPairedDevice(系统接口)](arkts-connectivity-connection-trustedpaireddevice-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [TrustedPairedDevices(系统接口)](arkts-connectivity-connection-trustedpaireddevices-i-sys.md)<!--DelEnd-->
+  - [BluetoothAddress](arkts-connectivity-connection-bluetoothaddress-t.md)
+  - [MajorClass](arkts-connectivity-connection-majorclass-t.md)
+  - [MajorMinorClass](arkts-connectivity-connection-majorminorclass-t.md)
+  - [ProfileConnectionState](arkts-connectivity-connection-profileconnectionstate-t.md)
+  - [ProfileId](arkts-connectivity-connection-profileid-t.md)
+  - [ProfileUuids](arkts-connectivity-connection-profileuuids-t.md)
+  - [AclState](arkts-connectivity-connection-aclstate-e.md)
+  - [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)
+  - [BondState](arkts-connectivity-connection-bondstate-e.md)
+  <!--Del-->
+  - [CarKeyActionType(系统接口)](arkts-connectivity-connection-carkeyactiontype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ControlObject(系统接口)](arkts-connectivity-connection-controlobject-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ControlType(系统接口)](arkts-connectivity-connection-controltype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ControlTypeValue(系统接口)](arkts-connectivity-connection-controltypevalue-e-sys.md)<!--DelEnd-->
+  - [DeviceChargeState](arkts-connectivity-connection-devicechargestate-e.md)
+  <!--Del-->
+  - [DeviceRole(系统接口)](arkts-connectivity-connection-devicerole-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DeviceType(系统接口)](arkts-connectivity-connection-devicetype-e-sys.md)<!--DelEnd-->
+  - [HashAlgorithmType](arkts-connectivity-connection-hashalgorithmtype-e.md)
+  <!--Del-->
+  - [PinType(系统接口)](arkts-connectivity-connection-pintype-e-sys.md)<!--DelEnd-->
+  - [ScanMode](arkts-connectivity-connection-scanmode-e.md)
+  - [UnbondCause](arkts-connectivity-connection-unbondcause-e.md)
+- [@ohos.bluetooth.constant(蓝牙constant模块)](arkts-bluetooth-constant.md)
+  <!--Del-->
+  - [AccessAuthorization(系统接口)](arkts-connectivity-constant-accessauthorization-e-sys.md)<!--DelEnd-->
+  - [MajorClass](arkts-connectivity-constant-majorclass-e.md)
+  - [MajorMinorClass](arkts-connectivity-constant-majorminorclass-e.md)
+  - [ProfileConnectionState](arkts-connectivity-constant-profileconnectionstate-e.md)
+  - [ProfileId](arkts-connectivity-constant-profileid-e.md)
+  - [ProfileUuids](arkts-connectivity-constant-profileuuids-e.md)
+- [@ohos.bluetooth.hfp(蓝牙hfp模块)](arkts-bluetooth-hfp.md)
+  - [createHfpAgProfile](arkts-connectivity-hfp-createhfpagprofile-f.md)
+  - [createHfpHfProfile](arkts-connectivity-hfp-createhfphfprofile-f.md)
+  <!--Del-->
+  - [HandsFreeAudioGatewayProfile(系统接口)](arkts-connectivity-hfp-handsfreeaudiogatewayprofile-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [HandsFreeHfProfile(系统接口)](arkts-connectivity-hfp-handsfreehfprofile-i-sys.md)<!--DelEnd-->
+  - [BaseProfile](arkts-connectivity-hfp-baseprofile-t.md)
+- [@ohos.bluetooth.hid(蓝牙hid模块)](arkts-bluetooth-hid.md)
+  - [createHidDeviceProfile](arkts-connectivity-hid-createhiddeviceprofile-f.md)
+  - [createHidHostProfile](arkts-connectivity-hid-createhidhostprofile-f.md)
+  - [GetReportData](arkts-connectivity-hid-getreportdata-i.md)
+  - [HidDeviceProfile](arkts-connectivity-hid-hiddeviceprofile-i.md)
+  - [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md)
+  - [HidDeviceSdp](arkts-connectivity-hid-hiddevicesdp-i.md)
+  <!--Del-->
+  - [HidHostProfile(系统接口)](arkts-connectivity-hid-hidhostprofile-i-sys.md)<!--DelEnd-->
+  - [InterruptData](arkts-connectivity-hid-interruptdata-i.md)
+  - [ProtocolData](arkts-connectivity-hid-protocoldata-i.md)
+  - [SetReportData](arkts-connectivity-hid-setreportdata-i.md)
+  - [BaseProfile](arkts-connectivity-hid-baseprofile-t.md)
+  - [BluetoothAddress](arkts-connectivity-hid-bluetoothaddress-t.md)
+  - [ErrorReason](arkts-connectivity-hid-errorreason-e.md)
+  - [ProtocolType](arkts-connectivity-hid-protocoltype-e.md)
+  - [ReportType](arkts-connectivity-hid-reporttype-e.md)
+  - [ServiceType](arkts-connectivity-hid-servicetype-e.md)
+  - [Subclass](arkts-connectivity-hid-subclass-e.md)
+- [@ohos.bluetooth.map(蓝牙map模块)](arkts-bluetooth-map.md)
+  - [createMapMseProfile](arkts-connectivity-map-createmapmseprofile-f.md)
+  <!--Del-->
+  - [MapMseProfile(系统接口)](arkts-connectivity-map-mapmseprofile-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AccessAuthorization(系统接口)](arkts-connectivity-map-accessauthorization-t-sys.md)<!--DelEnd-->
+  - [BaseProfile](arkts-connectivity-map-baseprofile-t.md)
+- [@ohos.bluetooth.opp(蓝牙opp模块)](arkts-bluetooth-opp.md)
+  <!--Del-->
+  - [createOppServerProfile(系统接口)](arkts-connectivity-opp-createoppserverprofile-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileHolder(系统接口)](arkts-connectivity-opp-fileholder-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [OppServerProfile(系统接口)](arkts-connectivity-opp-oppserverprofile-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [OppTransferInformation(系统接口)](arkts-connectivity-opp-opptransferinformation-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DirectionType(系统接口)](arkts-connectivity-opp-directiontype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [TransferResult(系统接口)](arkts-connectivity-opp-transferresult-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [TransferStatus(系统接口)](arkts-connectivity-opp-transferstatus-e-sys.md)<!--DelEnd-->
+- [@ohos.bluetooth.pan(蓝牙pan模块)](arkts-bluetooth-pan.md)
+  - [createPanProfile](arkts-connectivity-pan-createpanprofile-f.md)
+  - [PanProfile](arkts-connectivity-pan-panprofile-i.md)
+  <!--Del-->
+  - [PanProfile(系统接口)](arkts-connectivity-pan-panprofile-i-sys.md)<!--DelEnd-->
+  - [BaseProfile](arkts-connectivity-pan-baseprofile-t.md)
+- [@ohos.bluetooth.pbap(蓝牙pbap模块)](arkts-bluetooth-pbap.md)
+  - [createPbapServerProfile](arkts-connectivity-pbap-createpbapserverprofile-f.md)
+  <!--Del-->
+  - [PbapServerProfile(系统接口)](arkts-connectivity-pbap-pbapserverprofile-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AccessAuthorization(系统接口)](arkts-connectivity-pbap-accessauthorization-t-sys.md)<!--DelEnd-->
+  - [BaseProfile](arkts-connectivity-pbap-baseprofile-t.md)
+  <!--Del-->
+  - [ShareType(系统接口)](arkts-connectivity-pbap-sharetype-e-sys.md)<!--DelEnd-->
+- [@ohos.bluetooth.socket(蓝牙socket模块)](arkts-bluetooth-socket.md)
+  - [getDeviceId](arkts-connectivity-socket-getdeviceid-f.md)
+  - [getL2capPsm](arkts-connectivity-socket-getl2cappsm-f.md)
+  - [getMaxReceiveDataSize](arkts-connectivity-socket-getmaxreceivedatasize-f.md)
+  - [getMaxTransmitDataSize](arkts-connectivity-socket-getmaxtransmitdatasize-f.md)
+  - [isConnected](arkts-connectivity-socket-isconnected-f.md)
+  - [off](arkts-connectivity-socket-off-f.md)
+  - [on](arkts-connectivity-socket-on-f.md)
+  - [sppAccept](arkts-connectivity-socket-sppaccept-f.md)
+  - [sppCloseClientSocket](arkts-connectivity-socket-sppcloseclientsocket-f.md)
+  - [sppCloseServerSocket](arkts-connectivity-socket-sppcloseserversocket-f.md)
+  - [sppConnect](arkts-connectivity-socket-sppconnect-f.md)
+  - [sppListen](arkts-connectivity-socket-spplisten-f.md)
+  - [sppReadAsync](arkts-connectivity-socket-sppreadasync-f.md)
+  - [sppWrite](arkts-connectivity-socket-sppwrite-f.md)
+  - [sppWriteAsync](arkts-connectivity-socket-sppwriteasync-f.md)
+  - [SppOptions](arkts-connectivity-socket-sppoptions-i.md)
+  - [SppType](arkts-connectivity-socket-spptype-e.md)
+- [@ohos.bluetooth.wearDetection(蓝牙佩戴检测模块)](arkts-bluetooth-weardetection.md)
+  <!--Del-->
+  - [disableWearDetection(系统接口)](arkts-connectivity-weardetection-disableweardetection-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [enableWearDetection(系统接口)](arkts-connectivity-weardetection-enableweardetection-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [isWearDetectionEnabled(系统接口)](arkts-connectivity-weardetection-isweardetectionenabled-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [isWearDetectionSupported(系统接口)](arkts-connectivity-weardetection-isweardetectionsupported-f-sys.md)<!--DelEnd-->
+- [@ohos.bluetoothManager(蓝牙)](arkts-bluetoothmanager.md)
+  - [bluetoothManager](arkts-connectivity-bluetoothmanager-n.md)
+    - [BLE](arkts-connectivity-bluetoothmanager-ble-n.md)
+      - [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)
+      - [createGattServer](arkts-connectivity-ble-creategattserver-f.md)
+      - [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md)
+      - [off](arkts-connectivity-ble-off-f.md)
+      - [on](arkts-connectivity-ble-on-f.md)
+      - [startBLEScan](arkts-connectivity-ble-startblescan-f.md)
+      - [stopBLEScan](arkts-connectivity-ble-stopblescan-f.md)
+    <!--Del-->
+    - [cancelPairedDevice(系统接口)](arkts-connectivity-bluetoothmanager-cancelpaireddevice-f-sys.md)<!--DelEnd-->
+    - [disableBluetooth](arkts-connectivity-bluetoothmanager-disablebluetooth-f.md)
+    - [enableBluetooth](arkts-connectivity-bluetoothmanager-enablebluetooth-f.md)
+    - [getBluetoothScanMode](arkts-connectivity-bluetoothmanager-getbluetoothscanmode-f.md)
+    - [getBtConnectionState](arkts-connectivity-bluetoothmanager-getbtconnectionstate-f.md)
+    - [getLocalName](arkts-connectivity-bluetoothmanager-getlocalname-f.md)
+    - [getPairedDevices](arkts-connectivity-bluetoothmanager-getpaireddevices-f.md)
+    - [getProfileConnectionState](arkts-connectivity-bluetoothmanager-getprofileconnectionstate-f.md)
+    - [getProfileInstance](arkts-connectivity-bluetoothmanager-getprofileinstance-f.md)
+    - [getRemoteDeviceClass](arkts-connectivity-bluetoothmanager-getremotedeviceclass-f.md)
+    - [getRemoteDeviceName](arkts-connectivity-bluetoothmanager-getremotedevicename-f.md)
+    - [getState](arkts-connectivity-bluetoothmanager-getstate-f.md)
+    - [off](arkts-connectivity-bluetoothmanager-off-f.md)
+    - [on](arkts-connectivity-bluetoothmanager-on-f.md)
+    - [pairDevice](arkts-connectivity-bluetoothmanager-pairdevice-f.md)
+    - [setBluetoothScanMode](arkts-connectivity-bluetoothmanager-setbluetoothscanmode-f.md)
+    - [setDevicePairingConfirmation](arkts-connectivity-bluetoothmanager-setdevicepairingconfirmation-f.md)
+    - [setLocalName](arkts-connectivity-bluetoothmanager-setlocalname-f.md)
+    - [sppAccept](arkts-connectivity-bluetoothmanager-sppaccept-f.md)
+    - [sppCloseClientSocket](arkts-connectivity-bluetoothmanager-sppcloseclientsocket-f.md)
+    - [sppCloseServerSocket](arkts-connectivity-bluetoothmanager-sppcloseserversocket-f.md)
+    - [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md)
+    - [sppListen](arkts-connectivity-bluetoothmanager-spplisten-f.md)
+    - [sppWrite](arkts-connectivity-bluetoothmanager-sppwrite-f.md)
+    - [startBluetoothDiscovery](arkts-connectivity-bluetoothmanager-startbluetoothdiscovery-f.md)
+    - [stopBluetoothDiscovery](arkts-connectivity-bluetoothmanager-stopbluetoothdiscovery-f.md)
+    - [A2dpSourceProfile](arkts-connectivity-bluetoothmanager-a2dpsourceprofile-i.md)
+    - [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md)
+    - [AdvertiseSetting](arkts-connectivity-bluetoothmanager-advertisesetting-i.md)
+    - [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md)
+    - [BLECharacteristic](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md)
+    - [BLEConnectChangedState](arkts-connectivity-bluetoothmanager-bleconnectchangedstate-i.md)
+    - [BLEDescriptor](arkts-connectivity-bluetoothmanager-bledescriptor-i.md)
+    - [BondStateParam](arkts-connectivity-bluetoothmanager-bondstateparam-i.md)
+    - [CharacteristicReadRequest](arkts-connectivity-bluetoothmanager-characteristicreadrequest-i.md)
+    - [CharacteristicWriteRequest](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md)
+    - [DescriptorReadRequest](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md)
+    - [DescriptorWriteRequest](arkts-connectivity-bluetoothmanager-descriptorwriterequest-i.md)
+    - [DeviceClass](arkts-connectivity-bluetoothmanager-deviceclass-i.md)
+    - [GattClientDevice](arkts-connectivity-bluetoothmanager-gattclientdevice-i.md)
+    - [GattServer](arkts-connectivity-bluetoothmanager-gattserver-i.md)
+    - [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md)
+    - [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetoothmanager-handsfreeaudiogatewayprofile-i.md)
+    - [HidHostProfile](arkts-connectivity-bluetoothmanager-hidhostprofile-i.md)
+    <!--Del-->
+    - [HidHostProfile(系统接口)](arkts-connectivity-bluetoothmanager-hidhostprofile-i-sys.md)<!--DelEnd-->
+    - [ManufactureData](arkts-connectivity-bluetoothmanager-manufacturedata-i.md)
+    - [NotifyCharacteristic](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md)
+    - [PanProfile](arkts-connectivity-bluetoothmanager-panprofile-i.md)
+    <!--Del-->
+    - [PanProfile(系统接口)](arkts-connectivity-bluetoothmanager-panprofile-i-sys.md)<!--DelEnd-->
+    - [PinRequiredParam](arkts-connectivity-bluetoothmanager-pinrequiredparam-i.md)
+    - [ScanFilter](arkts-connectivity-bluetoothmanager-scanfilter-i.md)
+    - [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md)
+    - [ScanResult](arkts-connectivity-bluetoothmanager-scanresult-i.md)
+    - [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md)
+    - [ServiceData](arkts-connectivity-bluetoothmanager-servicedata-i.md)
+    - [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md)
+    - [StateChangeParam](arkts-connectivity-bluetoothmanager-statechangeparam-i.md)
+    - [BluetoothState](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md)
+    - [BondState](arkts-connectivity-bluetoothmanager-bondstate-e.md)
+    - [MajorClass](arkts-connectivity-bluetoothmanager-majorclass-e.md)
+    - [MajorMinorClass](arkts-connectivity-bluetoothmanager-majorminorclass-e.md)
+    - [MatchMode](arkts-connectivity-bluetoothmanager-matchmode-e.md)
+    - [PlayingState](arkts-connectivity-bluetoothmanager-playingstate-e.md)
+    - [ProfileConnectionState](arkts-connectivity-bluetoothmanager-profileconnectionstate-e.md)
+    - [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md)
+    - [ScanDuty](arkts-connectivity-bluetoothmanager-scanduty-e.md)
+    - [ScanMode](arkts-connectivity-bluetoothmanager-scanmode-e.md)
+    - [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md)
 - [@ohos.connectedTag(有源标签)](arkts-connectedtag.md)
   - [init](arkts-connectivity-connectedtag-init-f.md)
   - [initialize](arkts-connectivity-connectedtag-initialize-f.md)
@@ -12,6 +511,45 @@
   - [write](arkts-connectivity-connectedtag-write-f.md)
   - [writeNdefTag](arkts-connectivity-connectedtag-writendeftag-f.md)
   - [NfcRfType](arkts-connectivity-connectedtag-nfcrftype-e.md)
+- [@ohos.FusionConnectivity.partnerAgent(系统接口)](arkts-fusionconnectivity-partneragent.md)
+  - [bindDevice](arkts-connectivity-partneragent-binddevice-f.md)
+  <!--Del-->
+  - [disableDeviceControl(系统接口)](arkts-connectivity-partneragent-disabledevicecontrol-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [enableDeviceControl(系统接口)](arkts-connectivity-partneragent-enabledevicecontrol-f-sys.md)<!--DelEnd-->
+  - [getBoundDevices](arkts-connectivity-partneragent-getbounddevices-f.md)
+  - [isDeviceBound](arkts-connectivity-partneragent-isdevicebound-f.md)
+  - [isDeviceControlEnabled](arkts-connectivity-partneragent-isdevicecontrolenabled-f.md)
+  - [isPartnerAgentSupported](arkts-connectivity-partneragent-ispartneragentsupported-f.md)
+  - [unbindDevice](arkts-connectivity-partneragent-unbinddevice-f.md)
+  - [BusinessCapability](arkts-connectivity-partneragent-businesscapability-i.md)
+  - [DeviceCapability](arkts-connectivity-partneragent-devicecapability-i.md)
+  - [PartnerDeviceAddress](arkts-connectivity-partneragent-partnerdeviceaddress-i.md)
+  - [PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragent-partneragentextensionabilitydestroyreason-e.md)
+- [@ohos.FusionConnectivity.PartnerAgentExtensionAbility(支持设备状态通知的ExtensionAbility组件)](arkts-fusionconnectivity-partneragentextensionability.md)
+  - [PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md)
+  - [PartnerAgentExtensionAbilityDestroyReason](arkts-connectivity-partneragentextensionabilitydestroyreason-t.md)
+  - [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md)
+- [@ohos.FusionConnectivity.PartnerAgentExtensionContext(设备状态通知能力上下文)](arkts-fusionconnectivity-partneragentextensioncontext.md)
+  - [PartnerAgentExtensionContext](arkts-connectivity-fusionconnectivity-partneragentextensioncontext-partneragentextensioncontext-c.md)
+- [@ohos.FusionConnectivity.ranging(融合测距模块)](arkts-fusionconnectivity-ranging.md)
+  - [getRangingCapability](arkts-connectivity-ranging-getrangingcapability-f.md)
+  - [isRangingSupported](arkts-connectivity-ranging-israngingsupported-f.md)
+  - [offRangingStateChange](arkts-connectivity-ranging-offrangingstatechange-f.md)
+  - [onRangingStateChange](arkts-connectivity-ranging-onrangingstatechange-f.md)
+  - [startPassiveRanging](arkts-connectivity-ranging-startpassiveranging-f.md)
+  - [startRanging](arkts-connectivity-ranging-startranging-f.md)
+  - [stopPassiveRanging](arkts-connectivity-ranging-stoppassiveranging-f.md)
+  - [stopRanging](arkts-connectivity-ranging-stopranging-f.md)
+  - [RangingCapabilitySupported](arkts-connectivity-ranging-rangingcapabilitysupported-i.md)
+  - [RangingMeasurement](arkts-connectivity-ranging-rangingmeasurement-i.md)
+  - [RangingParams](arkts-connectivity-ranging-rangingparams-i.md)
+  - [RangingResult](arkts-connectivity-ranging-rangingresult-i.md)
+  - [RangingStateChangeInfo](arkts-connectivity-ranging-rangingstatechangeinfo-i.md)
+  - [RangingConfidence](arkts-connectivity-ranging-rangingconfidence-e.md)
+  - [RangingState](arkts-connectivity-ranging-rangingstate-e.md)
+  - [RangingStoppedCause](arkts-connectivity-ranging-rangingstoppedcause-e.md)
+  - [RangingTypes](arkts-connectivity-ranging-rangingtypes-e.md)
 - [@ohos.nearlink.advertising(星闪广播能力)](arkts-nearlink-advertising.md)
   - [offAdvertisingStateChange](arkts-connectivity-advertising-offadvertisingstatechange-f.md)
   - [onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md)
@@ -223,7 +761,7 @@
   - [SEService](arkts-connectivity-omapi-seservice-i.md)
   - [Session](arkts-connectivity-omapi-session-i.md)
   - [ServiceState](arkts-connectivity-omapi-servicestate-e.md)
-- [@ohos.wifi](arkts-wifi.md)
+- [@ohos.wifi(WLAN)](arkts-wifi.md)
   <!--Del-->
   - [addDeviceConfig(系统接口)](arkts-connectivity-wifi-adddeviceconfig-f-sys.md)<!--DelEnd-->
   - [addUntrustedConfig](arkts-connectivity-wifi-adduntrustedconfig-f.md)
@@ -325,14 +863,14 @@
   <!--Del-->
   - [SuppState(系统接口)](arkts-connectivity-wifi-suppstate-e-sys.md)<!--DelEnd-->
   - [WifiSecurityType](arkts-connectivity-wifi-wifisecuritytype-e.md)
-- [@ohos.wifiext](arkts-wifiext.md)
+- [@ohos.wifiext(WLAN扩展接口)](arkts-wifiext.md)
   - [disableHotspot](arkts-connectivity-wifiext-disablehotspot-f.md)
   - [enableHotspot](arkts-connectivity-wifiext-enablehotspot-f.md)
   - [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md)
   - [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md)
   - [setPowerModel](arkts-connectivity-wifiext-setpowermodel-f.md)
   - [PowerModel](arkts-connectivity-wifiext-powermodel-e.md)
-- [@ohos.wifiManager](arkts-wifimanager.md)
+- [@ohos.wifiManager(WLAN)](arkts-wifimanager.md)
   - [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md)
   - [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md)
   <!--Del-->
@@ -406,8 +944,7 @@
   - [isBandTypeSupported](arkts-connectivity-wifimanager-isbandtypesupported-f.md)
   - [isConnected](arkts-connectivity-wifimanager-isconnected-f.md)
   - [isFeatureSupported](arkts-connectivity-wifimanager-isfeaturesupported-f.md)
-  <!--Del-->
-  - [isHotspotActive(系统接口)](arkts-connectivity-wifimanager-ishotspotactive-f-sys.md)<!--DelEnd-->
+  - [isHotspotActive](arkts-connectivity-wifimanager-ishotspotactive-f.md)
   <!--Del-->
   - [isHotspotDualBandSupported(系统接口)](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md)<!--DelEnd-->
   - [isMeteredHotspot](arkts-connectivity-wifimanager-ismeteredhotspot-f.md)
@@ -506,7 +1043,7 @@
   - [WifiLinkType](arkts-connectivity-wifimanager-wifilinktype-e.md)
   - [WifiSecurityType](arkts-connectivity-wifimanager-wifisecuritytype-e.md)
   - [WifiStandard](arkts-connectivity-wifimanager-wifistandard-e.md)
-- [@ohos.wifiManagerExt](arkts-wifimanagerext.md)
+- [@ohos.wifiManagerExt(WLAN扩展接口)](arkts-wifimanagerext.md)
   - [disableHotspot](arkts-connectivity-wifimanagerext-disablehotspot-f.md)
   - [enableHotspot](arkts-connectivity-wifimanagerext-enablehotspot-f.md)
   - [getPowerMode](arkts-connectivity-wifimanagerext-getpowermode-f.md)

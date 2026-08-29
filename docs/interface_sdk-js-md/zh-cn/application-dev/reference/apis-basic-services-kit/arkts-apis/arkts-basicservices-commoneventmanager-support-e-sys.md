@@ -810,6 +810,24 @@ COMMON_EVENT_SCREEN_LOCK_EXITING = 'usual.event.SCREEN_LOCK_EXITING'
 
 **系统接口：** 此接口为系统接口。
 
+## COMMON_EVENT_DATA_VOLUME_STATUS_REPORT
+
+```TypeScript
+COMMON_EVENT_DATA_VOLUME_STATUS_REPORT = 'usual.event.DATA_VOLUME_STATUS_REPORT'
+```
+
+PC场景在有扩展数据磁盘场景下，表示特定卷是否为可使用的状态。在开机扩展磁盘挂载完成或者用户解锁后广播。
+
+此事件仅在PC/2in1设备上支持。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Notification.CommonEvent
+
+**系统接口：** 此接口为系统接口。
+
 ## COMMON_EVENT_SANDBOX_BUNDLE_ADDED
 
 ```TypeScript

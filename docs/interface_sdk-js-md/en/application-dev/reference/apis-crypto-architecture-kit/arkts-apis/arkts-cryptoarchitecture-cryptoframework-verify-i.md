@@ -504,12 +504,12 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 Updates the data for signature verification. This API uses an asynchronous callback to return the result.
 
-This API can be called only after the [Verify](#verify) instance is initialized using [init](#init) or [initSync](#initsync).
+This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized using [init](#init) or [initSync](#initsync).
 
 > **NOTE：**
 > 
 > You can call **update** multiple times or do not use **update** (call
-> [verify](#verify)
+> [verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md)
 > after [init](#init)), depending on
 > the data volume.
 > 
@@ -560,7 +560,7 @@ update(data: DataBlob): Promise<void>
 
 Updates the data for signature verification. This API uses a promise to return the result.
 
-This API can be called only after the [Verify](#verify) instance is initialized using [init()](#init).
+This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized using [init()](#init).
 
 > **NOTE：**
 > 
@@ -620,7 +620,7 @@ updateSync(data: DataBlob): void
 
 Updates the data for signature verification. This API returns the result synchronously.
 
-This API can be called only after the [Verify](#verify) instance is initialized by using [initSync()](#initsync).
+This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) instance is initialized by using [initSync()](#initsync).
 
 > **NOTE：**
 > 
@@ -820,7 +820,7 @@ verifySync(data: DataBlob | null, signatureData: DataBlob): boolean
 
 Verifies the signature. This API returns the verification result synchronously.
 
-**NOTE：**It is recommended to prioritize the use of asynchronous API, [verify](#verify). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**NOTE：**It is recommended to prioritize the use of asynchronous API, [verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md). Synchronous API may take a number time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
 **Since:** 12
 

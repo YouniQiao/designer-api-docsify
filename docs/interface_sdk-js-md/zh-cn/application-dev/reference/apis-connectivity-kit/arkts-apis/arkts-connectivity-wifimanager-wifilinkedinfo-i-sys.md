@@ -1,8 +1,8 @@
 # WifiLinkedInfo
 
-WLAN连接信息。
+Wi-Fi连接信息。
 
-**起始版本：** 12
+**起始版本：** 9
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -18,7 +18,9 @@ import { wifiManager } from '@kit.ConnectivityKit';
 chload: number
 ```
 
-此WLAN连接的负载值。值越大表示负载越高。
+连接负载，值越大表示负载越高。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -34,7 +36,9 @@ chload: number
 isHiLinkProNetwork?: boolean
 ```
 
-WLAN热点是否是HiLinkPro网络。
+是否是HiLinkPro网络。true表示是HiLinkPro网络，false表示不是HiLinkPro网络。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** boolean
 
@@ -50,7 +54,9 @@ WLAN热点是否是HiLinkPro网络。
 networkId: number
 ```
 
-WLAN连接的唯一标识ID。
+网络配置ID。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -66,7 +72,9 @@ WLAN连接的唯一标识ID。
 snr: number
 ```
 
-此WLAN连接的信噪比（SNR）。
+信噪比，单位：dB。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -82,7 +90,9 @@ snr: number
 suppState: SuppState
 ```
 
-此WLAN连接的supplicant状态。
+请求状态。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** SuppState
 
@@ -98,7 +108,9 @@ suppState: SuppState
 wifiTxRxValid?: boolean
 ```
 
-WLAN的Tx和Rx是否都正常工作
+。用于指示Wi-Fi的发送（Tx, Transmitting）和接收（Rx, Receiving）功能是否都在正常工作。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** boolean
 

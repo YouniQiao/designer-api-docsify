@@ -1,6 +1,6 @@
 # AVAdsController
 
-广告内容控制接口
+广告内容控制接口，用于管理广告播放控制器中的广告资源及监听广告事件，支持添加和移除广告源、跳过当前广告、禁用剩余广告等，适用于需要在视频播放过程中插入和管理广告内容的场景。通过[createAVAdsController](arkts-media-media-createavadscontroller-f.md)创建实例。
 
 **起始版本：** 26.0.0
 
@@ -18,7 +18,7 @@ import { media } from '@kit.MediaKit';
 addAdsMediaSource(src: MediaSource, start: number): Promise<string>
 ```
 
-向广告控制器添加广告媒体源，指定广告在主媒体资源播放进度中的插入位置。使用Promise异步回调。
+向广告控制器添加广告媒体源，指定广告在主媒体资源播放进度中的插入位置。例如，可在视频播放器中的主内容播放前插入片头广告，或在播放过程中插入片间广告。如果同一位置插入多个广告，则按添加顺序依次播放。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -31,7 +31,7 @@ addAdsMediaSource(src: MediaSource, start: number): Promise<string>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | [MediaSource](arkts-media-media-mediasource-i.md) | 是 | 要插入到主内容中播放的媒体源。 |
-| start | number | 是 | 广告媒体源在主媒体资源播放进度中的插入位置，从主媒体资源开始播放时计算。Unit: 单位为毫秒（ms）。 |
+| start | number | 是 | 广告媒体源在主媒体资源播放进度中的插入位置，从主媒体资源开始播放时计算。单位为毫秒（ms）。取值限定为非负整数，且不得超过主媒体资源的总时长，否则会触发错误码5400108。 |
 
 **返回值：**
 

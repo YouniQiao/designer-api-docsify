@@ -51,7 +51,7 @@ MMSC address.
 mmsConfig?: MmsConfig
 ```
 
-MMS configuration file. For details, see [MmsParams](#mmsparams-system-api).
+MMS configuration file. For details, see [MmsParams](arkts-telephony-sms-mmsparams-i-sys.md).
 
 **Type:** [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md)
 

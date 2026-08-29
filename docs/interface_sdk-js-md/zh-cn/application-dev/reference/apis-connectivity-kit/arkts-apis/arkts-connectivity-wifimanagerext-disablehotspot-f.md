@@ -12,7 +12,11 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 function disableHotspot(): void
 ```
 
-去使能WLAN热点。如果禁用WLAN热点后Wi-Fi处于启用状态，则Wi-Fi可能会被重新启用。
+禁用Wi-Fi热点。
+
+> **说明：**
+> 
+> 从API version 9开始支持，从API version 10开始废弃。
 
 **起始版本：** 9
 

@@ -176,7 +176,7 @@ import { media } from '@kit.MediaKit';
 | --- | --- |
 | [AudioState](arkts-media-media-audiostate-t.md) | Describes the audio playback state. You can obtain the state through the **state** property. |
 | [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md) | Enumerates the states of the download task. |
-| [AVPlayerState](arkts-media-media-avplayerstate-t.md) | Describes the state of the [AVPlayer](#ohosmultimediamedia). Your application can proactively obtain the AVPlayer state through the **state** property or obtain the reported AVPlayer state by subscribing to the [stateChange](arkts-media-media-avplayer-i.md#onstatechange) event. For details about the rules for state transition, see [Audio Playback](../../../media/media/using-avplayer-for-playback.md). |
+| [AVPlayerState](arkts-media-media-avplayerstate-t.md) | Describes the state of the [AVPlayer](arkts-multimedia-media.md). Your application can proactively obtain the AVPlayer state through the **state** property or obtain the reported AVPlayer state by subscribing to the [stateChange](arkts-media-media-avplayer-i.md#onstatechange) event. For details about the rules for state transition, see [Audio Playback](../../../media/media/using-avplayer-for-playback.md). |
 | [AVRecorderState](arkts-media-media-avrecorderstate-t.md) | Enumerates the AVRecorder states. You can obtain the state through the **state** property. |
 | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | Describes the callback function of the ad content playback start event. |
 | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | Describes the callback function for the ad media resource loading error event. |

@@ -12,7 +12,11 @@ import { wifiext } from '@kit.ConnectivityKit';
 function disableHotspot(): boolean
 ```
 
-去使能WLAN热点。
+禁用Wi-Fi热点。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 

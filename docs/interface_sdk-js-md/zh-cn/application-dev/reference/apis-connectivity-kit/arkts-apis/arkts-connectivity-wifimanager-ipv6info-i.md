@@ -1,6 +1,6 @@
 # Ipv6Info
 
-WLAN IPv6信息。
+Ipv6信息。
 
 **起始版本：** 10
 
@@ -18,7 +18,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 gateway: string
 ```
 
-WLAN连接的网关
+网关。
 
 **类型：** string
 
@@ -32,7 +32,7 @@ WLAN连接的网关
 globalIpv6Address: string
 ```
 
-WLAN连接的全局IPv6地址
+全局Ipv6地址。
 
 **类型：** string
 
@@ -46,7 +46,7 @@ WLAN连接的全局IPv6地址
 linkIpv6Address: string
 ```
 
-WLAN连接的链路IPv6地址
+链路Ipv6地址。
 
 **类型：** string
 
@@ -60,7 +60,7 @@ WLAN连接的链路IPv6地址
 netmask: string
 ```
 
-WLAN连接的网络掩码
+网络掩码。
 
 **类型：** string
 
@@ -74,7 +74,7 @@ WLAN连接的网络掩码
 primaryDNS: string
 ```
 
-WLAN连接的主DNS服务器IPV6地址
+主DNS服务器Ipv6地址。
 
 **类型：** string
 
@@ -88,7 +88,7 @@ WLAN连接的主DNS服务器IPV6地址
 randomGlobalIpv6Address: string
 ```
 
-WLAN连接的随机全局IPv6地址
+随机全局Ipv6地址。 预留字段，暂不支持。
 
 **类型：** string
 
@@ -102,7 +102,7 @@ WLAN连接的随机全局IPv6地址
 randomUniqueIpv6Address?: string
 ```
 
-WLAN连接的随机唯一IPv6地址
+随机唯一本地Ipv6地址。
 
 **类型：** string
 
@@ -116,7 +116,7 @@ WLAN连接的随机唯一IPv6地址
 secondDNS: string
 ```
 
-WLAN连接的备DNS服务器IPV6地址
+备DNS服务器Ipv6地址。
 
 **类型：** string
 
@@ -130,7 +130,7 @@ WLAN连接的备DNS服务器IPV6地址
 uniqueIpv6Address?: string
 ```
 
-WLAN连接的唯一IPv6地址
+唯一本地Ipv6地址。
 
 **类型：** string
 

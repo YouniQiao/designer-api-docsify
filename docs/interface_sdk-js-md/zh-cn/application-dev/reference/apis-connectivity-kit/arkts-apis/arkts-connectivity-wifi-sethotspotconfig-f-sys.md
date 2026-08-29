@@ -14,8 +14,6 @@ function setHotspotConfig(config: HotspotConfig): boolean
 
 设置热点配置信息。
 
-<p>仅支持配置OPEN和WPA2 PSK热点。
-
 **起始版本：** 7
 
 **废弃版本：** 9
@@ -32,13 +30,13 @@ function setHotspotConfig(config: HotspotConfig): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | HotspotConfig | 是 |  |
+| config | HotspotConfig | 是 | 热点配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作成功时返回{ |
+| boolean | true:操作成功， false:操作失败。 |
 
 **示例**
 

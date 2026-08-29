@@ -1,8 +1,10 @@
 # P2pConnectState
 
-P2P连接状态。
+表示P2P连接状态的枚举。
 
-@enum { number } P2pConnectState
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -18,7 +20,7 @@ P2P连接状态。
 DISCONNECTED = 0
 ```
 
-P2P已断开连接。
+断开状态。
 
 **起始版本：** 8
 
@@ -34,7 +36,7 @@ P2P已断开连接。
 CONNECTED = 1
 ```
 
-P2P已连接。
+连接状态。
 
 **起始版本：** 8
 

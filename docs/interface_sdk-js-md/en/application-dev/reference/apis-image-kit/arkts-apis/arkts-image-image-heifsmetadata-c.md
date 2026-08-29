@@ -72,7 +72,7 @@ async function heifsMetadataClone(context: Context) {
 static createInstance(): HeifsMetadata
 ```
 
-Creates an empty [HeifsMetadata](#heifsmetadata) instance.
+Creates an empty [HeifsMetadata](arkts-image-image-heifsmetadata-c.md) instance.
 
 **Since:** 23
 

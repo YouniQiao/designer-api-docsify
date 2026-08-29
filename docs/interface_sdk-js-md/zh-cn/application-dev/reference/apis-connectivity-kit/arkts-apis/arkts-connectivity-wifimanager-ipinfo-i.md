@@ -1,6 +1,6 @@
 # IpInfo
 
-WLAN IP信息。
+IPV4信息。
 
 **起始版本：** 9
 
@@ -18,7 +18,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 gateway: number
 ```
 
-WLAN连接的网关
+网关。
 
 **类型：** number
 
@@ -32,7 +32,7 @@ WLAN连接的网关
 ipAddress: number
 ```
 
-WLAN连接的IP地址
+IP地址。（ipAddress值为number类型，需要转换为IP常用格式，具体请参考[IP格式转换](https://developer.huawei.com/consumer/cn/doc/harmonyos-faqs/faqs-connectivity-4)）。
 
 **类型：** number
 
@@ -46,7 +46,7 @@ WLAN连接的IP地址
 leaseDuration: number
 ```
 
-WLAN连接的IP地址租用时长
+IP地址租用时长，单位：秒。
 
 **类型：** number
 
@@ -60,7 +60,7 @@ WLAN连接的IP地址租用时长
 netmask: number
 ```
 
-WLAN连接的网络掩码
+掩码。
 
 **类型：** number
 
@@ -74,7 +74,7 @@ WLAN连接的网络掩码
 primaryDns: number
 ```
 
-WLAN连接的主DNS服务器IP地址
+主DNS服务器IP地址。
 
 **类型：** number
 
@@ -88,7 +88,7 @@ WLAN连接的主DNS服务器IP地址
 secondDns: number
 ```
 
-WLAN连接的备DNS服务器IP地址
+备DNS服务器IP地址。
 
 **类型：** number
 
@@ -102,7 +102,7 @@ WLAN连接的备DNS服务器IP地址
 serverIp: number
 ```
 
-WLAN连接的DHCP服务器IP地址
+DHCP服务端IP地址。
 
 **类型：** number
 

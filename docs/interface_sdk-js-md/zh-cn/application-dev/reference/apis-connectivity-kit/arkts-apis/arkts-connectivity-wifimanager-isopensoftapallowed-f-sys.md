@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function isOpenSoftApAllowed(): boolean
 ```
 
-检查在某些情况下是否可以操作WLAN热点。当飞行模式开启且不支持softap与sta共存，也不支持信号桥接时，热点开关无法操作。
+检查在某些情况下是否能够操作Wi-Fi热点。当飞行模式开启时，如果系统不支持SoftAP和STA共存，也不支持信号桥接，则无法操作热点开关。
 
 **起始版本：** 18
 
@@ -26,7 +26,7 @@ function isOpenSoftApAllowed(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 可以操作WLAN热点时返回{ |
+| boolean | true:允许， false:不允许。 |
 
 **错误码：**
 

@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function updateNetwork(config: WifiDeviceConfig): number
 ```
 
-更新指定的WLAN配置。
+更新网络配置。
 
 **起始版本：** 9
 
@@ -26,13 +26,13 @@ function updateNetwork(config: WifiDeviceConfig): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | 是 | 表示要更新的WLAN配置。 |
+| config | WifiDeviceConfig | 是 | Wi-Fi配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 更新成功时返回更新后的WLAN配置中的网络ID；如果列表中不包含指定的WLAN配置，则返回{ |
+| number | 返回更新的网络配置ID，如果值为-1表示更新失败。 |
 
 **错误码：**
 

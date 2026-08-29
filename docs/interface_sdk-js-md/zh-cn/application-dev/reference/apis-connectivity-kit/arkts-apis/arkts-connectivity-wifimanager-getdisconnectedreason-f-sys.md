@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getDisconnectedReason(): DisconnectedReason
 ```
 
-获取最近的断开连接原因。
+获取最近一次断连原因。
 
 **起始版本：** 10
 
@@ -26,7 +26,7 @@ function getDisconnectedReason(): DisconnectedReason
 
 | 类型 | 说明 |
 | --- | --- |
-| DisconnectedReason | 返回最近的断开连接原因。 |
+| DisconnectedReason | 最近断开的原因 |
 
 **错误码：**
 

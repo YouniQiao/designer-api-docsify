@@ -2,8 +2,6 @@
 
 表示功率模式的枚举。
 
-@enum { number } PowerMode
-
 **起始版本：** 9
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Extension

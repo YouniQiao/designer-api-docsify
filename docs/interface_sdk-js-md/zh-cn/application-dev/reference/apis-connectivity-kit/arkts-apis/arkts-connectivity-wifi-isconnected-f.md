@@ -12,7 +12,11 @@ import { wifi } from '@kit.ConnectivityKit';
 function isConnected(): boolean
 ```
 
-查询WLAN是否已连接。
+查询Wi-Fi是否已连接。
+
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -28,4 +32,4 @@ function isConnected(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true:已连接，false:未连接。 |
+| boolean | true:已连接， false:未连接。 |

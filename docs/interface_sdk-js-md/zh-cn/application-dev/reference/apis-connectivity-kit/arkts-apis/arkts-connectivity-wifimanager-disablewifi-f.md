@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function disableWifi(): void
 ```
 
-关闭WLAN。
+关闭Wi-Fi。
 
 **起始版本：** 20
 

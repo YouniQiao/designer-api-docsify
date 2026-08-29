@@ -5,7 +5,7 @@ The **formInfo** module provides types and enums related to the widget informati
 > **NOTE：**
 
 > - This topic describes only system APIs provided by the module. For details about its public APIs, see
-> [@ohos.app.form.formInfo (formInfo)](#ohosappformforminfo).
+> [@ohos.app.form.formInfo (formInfo)](arkts-app-form-forminfo.md).
 
 **Since:** 9
 

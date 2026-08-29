@@ -68,7 +68,7 @@ try{
 equals(typeDescriptor: TypeDescriptor): boolean
 ```
 
-Checks whether this data type is the same as the specified uniform data type. That is, compares **typeId**s of two [TypeDescriptor](#typedescriptor) objects.
+Checks whether this data type is the same as the specified uniform data type. That is, compares **typeId**s of two [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) objects.
 
 **Since:** 11
 

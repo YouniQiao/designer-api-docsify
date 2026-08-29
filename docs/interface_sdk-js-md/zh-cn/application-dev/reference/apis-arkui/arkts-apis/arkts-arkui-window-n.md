@@ -120,7 +120,7 @@ import { window } from '@kit.ArkUI';
 | [Window](arkts-arkui-window-window-i.md) | 当前窗口实例，窗口管理器管理的基本单元。 |
 | [ShowWindowOptions](arkts-arkui-window-showwindowoptions-i.md) | 显示子窗口或系统窗口时的参数。 |
 | [SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md) | 子窗口创建参数。 |
-| [WindowStage](arkts-arkui-window-windowstage-i.md) | 窗口管理器。管理各个基本窗口单元，即[Window](#window)实例。 |
+| [WindowStage](arkts-arkui-window-windowstage-i.md) | 窗口管理器。管理各个基本窗口单元，即[Window](arkts-arkui-window-n.md)实例。 |
 | [WindowLayoutInfo](arkts-arkui-window-windowlayoutinfo-i.md) | 窗口布局信息。 |
 | [WindowInfoOptions](arkts-arkui-window-windowinfooptions-i.md) | 窗口布局信息过滤选项。 |
 
@@ -143,7 +143,7 @@ import { window } from '@kit.ArkUI';
 | [WindowCreateParams](arkts-arkui-window-windowcreateparams-i-sys.md) | 应用启动时的窗口参数配置。 |
 | [Window](arkts-arkui-window-window-i-sys.md) | 当前窗口实例，窗口管理器管理的基本单元。 |
 | [SubWindowOptions](arkts-arkui-window-subwindowoptions-i-sys.md) | 子窗口创建参数。 |
-| [WindowStage](arkts-arkui-window-windowstage-i-sys.md) | 窗口管理器。管理各个基本窗口单元，即[Window](#window)实例。 |
+| [WindowStage](arkts-arkui-window-windowstage-i-sys.md) | 窗口管理器。管理各个基本窗口单元，即[Window](arkts-arkui-window-n.md)实例。 |
 | [SystemWindowOptions](arkts-arkui-window-systemwindowoptions-i-sys.md) | 系统窗口的创建参数。 |
 | [ExtensionWindowConfig](arkts-arkui-window-extensionwindowconfig-i-sys.md) | 创建扩展窗口时需要配置的参数。 |
 <!--DelEnd-->

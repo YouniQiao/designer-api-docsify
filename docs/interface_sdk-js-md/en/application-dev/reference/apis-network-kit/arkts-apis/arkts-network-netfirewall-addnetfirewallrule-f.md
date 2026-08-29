@@ -18,10 +18,10 @@ Adds a firewall rule for the system user ID. The supported rule types are IP, Do
 > 
 > 1. The priority of firewall rules is described as follows (there is no requirement on the call sequence of
 > [setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md) and
-> [addNetFirewallRule](#addnetfirewallrule)):
+> [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md)):
 > 
 > - Call [setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md) to set the default policy to **DENY** and call
-> [addNetFirewallRule](#addnetfirewallrule) to add an explicit rule. The priorities of the rules
+> [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md) to add an explicit rule. The priorities of the rules
 > are as follows:
 > 
 > - Explicit denying rule
@@ -31,7 +31,7 @@ Adds a firewall rule for the system user ID. The supported rule types are IP, Do
 > - Default denying policy
 > 
 > - Call [setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md) to set the default policy to **ALLOW** and call
-> [addNetFirewallRule](#addnetfirewallrule) to add an explicit rule. The priorities of the rules
+> [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md) to add an explicit rule. The priorities of the rules
 > are as follows:
 > 
 > - Explicit allowing rule

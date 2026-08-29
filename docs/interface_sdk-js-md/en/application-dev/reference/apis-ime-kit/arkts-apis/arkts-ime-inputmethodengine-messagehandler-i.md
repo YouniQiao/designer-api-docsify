@@ -36,7 +36,7 @@ Receives the custom data callback sent by the edit box application attached to t
    
 > 
    
-> This callback is triggered when the registered [MessageHandler](#messagehandler) receives custom communication data sent by the edit box application attached to the input method application.
+> This callback is triggered when the registered [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) receives custom communication data sent by the edit box application attached to the input method application.
    
 > 
    
@@ -84,11 +84,11 @@ Listens for MessageHandler termination.
    
 > 
    
-> When an application registers a new [MessageHandler](#messagehandler) object, the [onTerminated](#onterminated) callback of the penultimate registered [MessageHandler](#messagehandler) object is triggered.
+> When an application registers a new [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object, the [onTerminated](#onterminated) callback of the penultimate registered [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is triggered.
    
 > 
    
-> When an application unregisters a new [MessageHandler](#messagehandler) object, the [onTerminated](#onterminated) callback of the registered [MessageHandler](#messagehandler) object is triggered.
+> When an application unregisters a new [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object, the [onTerminated](#onterminated) callback of the registered [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is triggered.
 
 **Since:** 15
 

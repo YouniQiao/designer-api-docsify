@@ -9,8 +9,16 @@ CounterV2组件用于精确调节数值，包含列表型、紧凑型、数值�
 > - 如果CounterV2设置通用属性和通用事件，编译工具链会
 > 额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到CounterV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议为CounterV2设置通用属性
 > 和通用事件。
-> 
-> - 该组件接口仅可在Stage模型下使用。
+
+## 导入模块
+
+```ts
+import { CounterV2Type, CounterV2Component, CounterV2Options, CounterV2DateData } from '@kit.ArkUI';
+```
+
+## 子组件
+
+无
 
 **起始版本：** 26.0.0
 

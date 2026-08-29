@@ -1,8 +1,6 @@
 # HotspotConfig（系统接口）
 
-WLAN热点配置信息。
-
-@interface HotspotConfig
+热点配置信息。
 
 **起始版本：** 7
 
@@ -26,7 +24,7 @@ import { wifi } from '@kit.ConnectivityKit';
 band: number
 ```
 
-WLAN热点的频段
+热点的带宽。1: 2.4G, 2: 5G, 3: 双模频段
 
 **类型：** number
 
@@ -46,7 +44,7 @@ WLAN热点的频段
 maxConn: number
 ```
 
-WLAN热点允许的最大连接数
+最大设备连接数。
 
 **类型：** number
 
@@ -66,7 +64,7 @@ WLAN热点允许的最大连接数
 preSharedKey: string
 ```
 
-WLAN热点的密码
+热点的密钥。
 
 **类型：** string
 
@@ -86,7 +84,7 @@ WLAN热点的密码
 securityType: WifiSecurityType
 ```
 
-WLAN热点的加密类型
+加密类型。
 
 **类型：** WifiSecurityType
 
@@ -106,7 +104,7 @@ WLAN热点的加密类型
 ssid: string
 ```
 
-WLAN热点的SSID
+热点的SSID，编码格式为UTF-8。
 
 **类型：** string
 

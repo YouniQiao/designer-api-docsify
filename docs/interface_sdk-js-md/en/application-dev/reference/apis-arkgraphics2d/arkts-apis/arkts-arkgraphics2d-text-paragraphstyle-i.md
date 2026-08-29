@@ -159,7 +159,7 @@ Sets whether to use padding at the beginning and end of a line in text layout. *
 lineSpacing?: number
 ```
 
-Line spacing, in physical pixels (px). The default value is **0**. lineSpacing is not restricted by lineHeightMaximum and lineHeightMinimum in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md). The last line retains line spacing by default. You can disable line spacing for the last line by setting [ParagraphStyle](#paragraphstyle)'s textHeightBehavior to DISABLE_ALL or DISABLE_LAST_ASCENT.
+Line spacing, in physical pixels (px). The default value is **0**. lineSpacing is not restricted by lineHeightMaximum and lineHeightMinimum in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md). The last line retains line spacing by default. You can disable line spacing for the last line by setting [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)'s textHeightBehavior to DISABLE_ALL or DISABLE_LAST_ASCENT.
 
 **Type:** number
 

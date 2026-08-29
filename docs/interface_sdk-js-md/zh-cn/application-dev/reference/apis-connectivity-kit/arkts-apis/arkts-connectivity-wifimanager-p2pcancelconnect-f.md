@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function p2pCancelConnect(): void
 ```
 
-停止正在建立的P2P连接。
+在P2P连接过程中，取消P2P连接。
 
 **起始版本：** 9
 

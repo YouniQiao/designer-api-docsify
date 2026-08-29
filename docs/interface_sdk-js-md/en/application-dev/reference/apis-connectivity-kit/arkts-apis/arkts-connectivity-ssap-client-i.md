@@ -4,7 +4,7 @@ Represents a SSAP client class. It provides APIs for connecting to and transmitt
 
 Before using the methods of this class, use the [ssap.createClient](arkts-connectivity-ssap-createclient-f.md) method to construct an instance of this class.
 
-An app only needs to create one [Client](#client) instance for a remote device. Repeated creation will increase unnecessary resource overhead.
+An app only needs to create one [Client](arkts-connectivity-ssap-client-i.md) instance for a remote device. Repeated creation will increase unnecessary resource overhead.
 
 **Since:** 26.0.0
 

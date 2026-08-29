@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function off(type: 'streamChange', callback?: Callback<number>): void
 ```
 
-取消注册WLAN流量改变事件。如果未指定callback参数，将取消注册该事件关联的所有回调函数。
+取消注册Wi-Fi流变更事件。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -26,8 +26,8 @@ function off(type: 'streamChange', callback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'streamChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
+| type | 'streamChange' | 是 | 固定填"streamChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数，返回0:无，1:向下，2:向上，3:双向。 |
 
 **错误码：**
 
@@ -62,7 +62,7 @@ wifiManager.off("streamChange", recvStreamChangeFunc);
 function off(type: 'deviceConfigChange', callback?: Callback<number>): void
 ```
 
-注册设备配置改变事件。
+取消注册Wi-Fi设备配置更改事件。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -76,8 +76,8 @@ function off(type: 'deviceConfigChange', callback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'deviceConfigChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数。如果未指定callback参数，将取消注册该事件关联的所有回调函数。, 0: config is added, 1: config is changed, 2: config is removed. |
+| type | 'deviceConfigChange' | 是 | 固定填"deviceConfigChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 状态改变回调函数，返回值为 0: 添加配置。1: 更改配置。2: 删除配置。 |
 
 **错误码：**
 
@@ -112,7 +112,7 @@ wifiManager.off("deviceConfigChange", recvDeviceConfigChangeFunc);
 function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void
 ```
 
-取消注册热点STA加入事件。如果未指定callback参数，将取消注册该事件关联的所有回调函数。
+取消注册Wi-Fi热点的STA加入事件。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -126,8 +126,8 @@ function off(type: 'hotspotStaJoin', callback?: Callback<StationInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'hotspotStaJoin' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 否 | 状态改变回调函数。如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
+| type | 'hotspotStaJoin' | 是 | 固定填"hotspotStaJoin"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 否 | 状态改变回调函数。 |
 
 **错误码：**
 
@@ -162,7 +162,7 @@ wifiManager.off("hotspotStaJoin", recvHotspotStaJoinFunc);
 function off(type: 'hotspotStaLeave', callback?: Callback<StationInfo>): void
 ```
 
-取消注册热点STA离开事件。
+取消注册Wi-Fi热点STA离开事件。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -176,8 +176,8 @@ function off(type: 'hotspotStaLeave', callback?: Callback<StationInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'hotspotStaLeave' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 否 | 状态改变回调函数。如果未指定callback参数，将取消注册该事件关联的所有回调函数。 |
+| type | 'hotspotStaLeave' | 是 | 固定填"hotspotStaLeave"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 否 | 状态改变回调函数。 |
 
 **错误码：**
 

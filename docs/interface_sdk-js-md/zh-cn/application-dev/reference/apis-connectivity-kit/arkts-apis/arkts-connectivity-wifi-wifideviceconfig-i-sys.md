@@ -1,8 +1,10 @@
 # WifiDeviceConfig
 
-WLAN设备配置信息。
+Wi-Fi配置信息。
 
-@interface WifiDeviceConfig
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃。
 
 **起始版本：** 6
 
@@ -24,7 +26,9 @@ import { wifi } from '@kit.ConnectivityKit';
 creatorUid: number
 ```
 
-WLAN配置创建者的UID
+创建用户的ID。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -44,7 +48,9 @@ WLAN配置创建者的UID
 disableReason: number
 ```
 
-禁用原因
+禁用原因。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -64,7 +70,9 @@ disableReason: number
 ipType: IpType
 ```
 
-IP类型
+IP地址类型。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** IpType
 
@@ -84,7 +92,9 @@ IP类型
 netId: number
 ```
 
-分配的网络ID
+分配的网络ID。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -92,7 +102,7 @@ netId: number
 
 **废弃版本：** 9
 
-**替代接口：** [netId](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#netid)
+**替代接口：** [netId](arkts-connectivity-wifimanager-wifideviceconfig-i.md#netid)
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -104,7 +114,9 @@ netId: number
 randomMacAddr: string
 ```
 
-随机MAC地址，长度为6
+随机MAC地址。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** string
 
@@ -124,7 +136,9 @@ randomMacAddr: string
 randomMacType: number
 ```
 
-随机MAC类型
+随机MAC类型。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -144,7 +158,9 @@ randomMacType: number
 staticIp: IpConfig
 ```
 
-静态IP配置
+静态IPv4配置信息。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** IpConfig
 

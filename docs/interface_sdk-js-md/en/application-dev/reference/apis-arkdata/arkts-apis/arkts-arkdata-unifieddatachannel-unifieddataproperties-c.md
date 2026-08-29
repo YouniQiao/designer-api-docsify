@@ -52,7 +52,7 @@ Object of the dictionary type used to set other properties. The default value is
 shareOptions?: ShareOptions
 ```
 
-Range, in which [UnifiedData](#unifieddataproperties) can be used. The default value is **CROSS_APP**.
+Range, in which [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md) can be used. The default value is **CROSS_APP**.
 
 **Type:** [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)
 
@@ -88,7 +88,7 @@ Customized tag. The default value is an empty string.
 readonly timestamp?: Date
 ```
 
-Timestamp when [UnifiedData](#unifieddataproperties) is generated. The default value is January 1, 1970 (UTC).
+Timestamp when [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md) is generated. The default value is January 1, 1970 (UTC).
 
 **Type:** Date
 

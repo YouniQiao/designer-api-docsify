@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function connectToNetwork(networkId: number): void
 ```
 
-通过networkId连接到WLAN热点。
+应用使用该接口连接到热点。
 
 **起始版本：** 15
 
@@ -24,7 +24,7 @@ function connectToNetwork(networkId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| networkId | number | 是 | 已连接网络的ID。networkId的值不能小于0。 |
+| networkId | number | 是 | 候选网络配置的ID。 |
 
 **错误码：**
 

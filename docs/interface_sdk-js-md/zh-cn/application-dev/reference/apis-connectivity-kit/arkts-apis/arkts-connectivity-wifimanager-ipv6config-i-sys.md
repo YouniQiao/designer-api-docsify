@@ -1,6 +1,6 @@
 # Ipv6Config（系统接口）
 
-WLAN Ipv6配置信息。
+Wi-Fi IPv6配置信息。
 
 **起始版本：** 20
 
@@ -20,7 +20,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 dnsServers: Array<string>
 ```
 
-DNS服务器。
+DNS 服务器。
 
 **类型：** Array&lt;string&gt;
 

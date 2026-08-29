@@ -23,7 +23,7 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 constructor()
 ```
 
-Represents a constructor for instantiating [DlpConnManager](#dlpconnmanager).
+Represents a constructor for instantiating [DlpConnManager](arkts-dataprotection-dlppermission-dlpconnmanager-c.md).
 
 **Since:** 21
 

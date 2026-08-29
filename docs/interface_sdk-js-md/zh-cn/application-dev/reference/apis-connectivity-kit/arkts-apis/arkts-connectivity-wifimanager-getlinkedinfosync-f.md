@@ -12,7 +12,14 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getLinkedInfoSync(): WifiLinkedInfo
 ```
 
-获取WLAN连接信息。此接口同步返回结果。如果未获取ohos.permission.GET_WIFI_PEERS_MAC权限，返回随机bssid。
+获取Wi-Fi连接信息，使用同步方式返回结果。
+
+> **说明：**
+> 
+> - 当macType是1（设备MAC地址），获取macAddress还需申请ohos.permission.GET_WIFI_LOCAL_MAC权限（API8-15仅面向系统应用开放。从API 16开始，在PC/2in1设备
+> 上面向普通应用开放，在其余设备上仍仅面向系统应用开放），无该权限时，macAddress返回为空。
+> 
+> - 如果应用申请了ohos.permission.GET_WIFI_PEERS_MAC权限，则返回结果中的bssid为真实BSSID地址，否则为随机设备地址。
 
 **起始版本：** 18
 
@@ -24,7 +31,7 @@ function getLinkedInfoSync(): WifiLinkedInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| WifiLinkedInfo | 返回WLAN连接信息。 |
+| WifiLinkedInfo | 表示Wi-Fi连接信息。 |
 
 **错误码：**
 

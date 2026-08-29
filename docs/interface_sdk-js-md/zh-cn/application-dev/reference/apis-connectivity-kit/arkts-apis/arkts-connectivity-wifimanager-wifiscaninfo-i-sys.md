@@ -1,8 +1,8 @@
 # WifiScanInfo
 
-描述WLAN扫描信息。
+Wi-Fi热点信息。
 
-**起始版本：** 12
+**起始版本：** 9
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -18,7 +18,9 @@ import { wifiManager } from '@kit.ConnectivityKit';
 isHiLinkProNetwork?: boolean
 ```
 
-WLAN热点是否是HiLinkPro网络。
+是否是HiLinkPro网络。true表示是HiLinkPro网络，false表示不是HiLinkPro网络。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** boolean
 

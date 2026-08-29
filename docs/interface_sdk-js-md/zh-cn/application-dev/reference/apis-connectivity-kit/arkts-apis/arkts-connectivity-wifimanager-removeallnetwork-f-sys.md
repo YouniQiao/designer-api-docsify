@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function removeAllNetwork(): void
 ```
 
-移除所有已保存的WLAN配置。
+移除所有网络配置。
 
 **起始版本：** 9
 

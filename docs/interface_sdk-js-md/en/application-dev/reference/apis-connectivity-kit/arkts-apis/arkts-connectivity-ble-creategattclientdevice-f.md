@@ -18,7 +18,7 @@ create a JavaScript Gatt client device instance.
 
 **Deprecated since:** 10
 
-**Substitutes:** [createGattClientDevice](#creategattclientdevice)
+**Substitutes:** [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

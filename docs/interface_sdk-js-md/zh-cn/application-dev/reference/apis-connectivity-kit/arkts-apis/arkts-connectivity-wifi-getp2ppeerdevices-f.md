@@ -12,7 +12,11 @@ import { wifi } from '@kit.ConnectivityKit';
 function getP2pPeerDevices(): Promise<WifiP2pDevice[]>
 ```
 
-获取发现的设备信息。
+获取P2P对端设备列表信息。使用Promise异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -28,7 +32,7 @@ function getP2pPeerDevices(): Promise<WifiP2pDevice[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;WifiP2pDevice[]&gt; | 发现的设备列表。 |
+| Promise&lt;WifiP2pDevice[]&gt; | Promise对象。表示对端设备列表信息。 |
 
 **示例**
 
@@ -55,7 +59,11 @@ wifi.getP2pPeerDevices().then(data => {
 function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void
 ```
 
-获取发现的设备信息。
+获取P2P对端设备列表信息。使用callback异步回调。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -71,7 +79,7 @@ function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice[]&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice[]&gt; | 是 | 回调函数。当操作成功时，err为0，data表示对端设备列表信息。如果err为非0，表示处理出现错误。 |
 
 **示例**
 

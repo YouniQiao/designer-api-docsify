@@ -30,13 +30,13 @@ function connectToDevice(config: WifiDeviceConfig): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | 是 | WLAN配置信息。 |
+| config | WifiDeviceConfig | 是 | Wi-Fi配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作成功时返回{ |
+| boolean | true:操作成功， false:操作失败。 |
 
 **示例**
 

@@ -1,8 +1,10 @@
 # WifiDeviceConfig
 
-WLAN设备配置信息。
+Wi-Fi配置信息。
 
-@interface WifiDeviceConfig
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃。
 
 **起始版本：** 6
 
@@ -24,7 +26,7 @@ import { wifi } from '@kit.ConnectivityKit';
 bssid: string
 ```
 
-WLAN BSSID(MAC)：长度为6
+热点的BSSID，例如：00:11:22:33:44:55。
 
 **类型：** string
 
@@ -42,7 +44,7 @@ WLAN BSSID(MAC)：长度为6
 isHiddenSsid: boolean
 ```
 
-是否隐藏SSID，false(默认):不隐藏
+是否是隐藏网络。true:是隐藏网络，false:不是隐藏网络。
 
 **类型：** boolean
 
@@ -60,7 +62,7 @@ isHiddenSsid: boolean
 preSharedKey: string
 ```
 
-WLAN密钥：最大长度为64
+热点的密钥，最大长度为64字节。
 
 **类型：** string
 
@@ -78,7 +80,7 @@ WLAN密钥：最大长度为64
 securityType: WifiSecurityType
 ```
 
-加密类型：参考WifiSecurityType的定义
+加密类型。
 
 **类型：** WifiSecurityType
 
@@ -96,7 +98,7 @@ securityType: WifiSecurityType
 ssid: string
 ```
 
-WLAN SSID：最大长度为32
+热点的SSID，最大长度为32字节，编码格式为UTF-8。
 
 **类型：** string
 

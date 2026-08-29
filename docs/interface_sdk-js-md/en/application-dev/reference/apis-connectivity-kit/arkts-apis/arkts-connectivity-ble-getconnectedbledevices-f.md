@@ -18,7 +18,7 @@ Obtains the list of devices in the connected status. On API 10 and above, the pe
 
 **Deprecated since:** 10
 
-**Substitutes:** [getConnectedBLEDevices](#getconnectedbledevices)
+**Substitutes:** [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH

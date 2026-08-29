@@ -75,7 +75,7 @@ status: TransferStatus
 
 转移状态。
 
-**类型：** [TransferStatus](arkts-telephony-call-transferstatus-e.md)
+**类型：** TransferStatus
 
 **起始版本：** 26.0.0
 

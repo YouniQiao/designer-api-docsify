@@ -33,7 +33,7 @@ shouldDismiss?: (sheetDismiss: SheetDismiss) => void
 
 同时注册onWillSpringBackWhenDismiss回调时，下拉关闭的回弹行为由onWillSpringBackWhenDismiss控制。
 
-shouldDismiss与[onWillDismiss](#sheetoptions)同为半模态交互式关闭回调函数，不建议同时注册两者。若需获取关闭操作类型并自主决定是否关闭，建议使用[onWillDismiss](#sheetoptions)替代shouldDismiss。
+shouldDismiss与[onWillDismiss](arkts-arkui-sheetoptions-i.md)同为半模态交互式关闭回调函数，不建议同时注册两者。若需获取关闭操作类型并自主决定是否关闭，建议使用[onWillDismiss](arkts-arkui-sheetoptions-i.md)替代shouldDismiss。
 
 建议在[二次确认](../../../ui/arkts-sheet-page.md#二次确认能力)场景使用。
 
@@ -392,7 +392,7 @@ height?: SheetSize | Length
 hoverModeArea?: HoverModeAreaType
 ```
 
-悬停态下弹窗默认展示区域。该属性仅在[enableHoverMode](#sheetoptions)设置为true时生效。
+悬停态下弹窗默认展示区域。该属性仅在[enableHoverMode](arkts-arkui-sheetoptions-i.md)设置为true时生效。
 
 默认值：HoverModeAreaType.BOTTOM_SCREEN
 
@@ -466,7 +466,7 @@ maskColor?: ResourceColor
 modalTransition?: ModalTransition
 ```
 
-bindSheet全屏模态样式的系统转场方式。该属性仅在[preferType](#sheetoptions)设置为[SheetType.CONTENT_COVER](arkts-arkui-sheettype-e.md)（全屏弹窗样式）时生效，其他弹窗样式设置该属性无效。
+bindSheet全屏模态样式的系统转场方式。该属性仅在[preferType](arkts-arkui-sheetoptions-i.md)设置为[SheetType.CONTENT_COVER](arkts-arkui-sheettype-e.md)（全屏弹窗样式）时生效，其他弹窗样式设置该属性无效。
 
 默认值：ModalTransition.DEFAULT
 
@@ -700,7 +700,7 @@ placement?: Placement
 placementOnTarget?: boolean
 ```
 
-半模态popup样式弹窗在当前窗口下，四个方向均无法容纳该弹窗大小时，设置是否允许其覆盖在目标节点上。侧边弹窗样式下该属性只支持气泡样式。该属性需配合[placement](#sheetoptions)属性使用，placementOnTarget的处理方式基于placement设定的显示方向。
+半模态popup样式弹窗在当前窗口下，四个方向均无法容纳该弹窗大小时，设置是否允许其覆盖在目标节点上。侧边弹窗样式下该属性只支持气泡样式。该属性需配合[placement](arkts-arkui-sheetoptions-i.md)属性使用，placementOnTarget的处理方式基于placement设定的显示方向。
 
 默认值：true
 

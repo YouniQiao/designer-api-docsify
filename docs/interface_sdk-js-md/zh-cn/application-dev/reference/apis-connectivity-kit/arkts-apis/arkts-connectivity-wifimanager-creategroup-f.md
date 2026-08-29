@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function createGroup(config: WifiP2PConfig): void
 ```
 
-创建P2P群组。
+创建群组。创建群组后，可调用[removeGroup](arkts-connectivity-wifimanager-removegroup-f.md)移除已创建的群组。
 
 **起始版本：** 9
 
@@ -24,7 +24,7 @@ function createGroup(config: WifiP2PConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiP2PConfig | 是 | 表示群组的配置。 |
+| config | WifiP2PConfig | 是 | 群组配置信息。如果DeviceAddressType未指定值，则DeviceAddressType默认为随机设备地址类型。 |
 
 **错误码：**
 

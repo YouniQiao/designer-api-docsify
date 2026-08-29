@@ -44,3 +44,4 @@ Unregister the form host service info.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | 16501019 | A form service not owned by you cannot be unregistered. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |

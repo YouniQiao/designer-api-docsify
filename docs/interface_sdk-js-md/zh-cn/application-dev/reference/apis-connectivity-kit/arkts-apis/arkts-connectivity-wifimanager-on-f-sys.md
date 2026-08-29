@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function on(type: 'streamChange', callback: Callback<number>): void
 ```
 
-注册WLAN流量改变事件。
+注册Wi-Fi流变更事件，在业务退出时，要调用off(type: 'streamChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -26,8 +26,8 @@ function on(type: 'streamChange', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'streamChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回1：下行流量，2：上行流量，3：双向流量。 |
+| type | 'streamChange' | 是 | 固定填"streamChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数，返回0:无，1:向下，2:向上，3:双向。 |
 
 **错误码：**
 
@@ -46,7 +46,7 @@ function on(type: 'streamChange', callback: Callback<number>): void
 function on(type: 'deviceConfigChange', callback: Callback<number>): void
 ```
 
-注册设备配置改变事件。
+注册Wi-Fi设备配置更改事件，在业务退出时，要调用off(type: 'deviceConfigChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -60,8 +60,8 @@ function on(type: 'deviceConfigChange', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'deviceConfigChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回0：配置已添加，1：配置已更改，2：配置已删除。 |
+| type | 'deviceConfigChange' | 是 | 固定填"deviceConfigChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数，返回值为 0: 添加配置。1: 更改配置。2: 删除配置。 |
 
 **错误码：**
 
@@ -80,7 +80,7 @@ function on(type: 'deviceConfigChange', callback: Callback<number>): void
 function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void
 ```
 
-注册热点STA加入事件。
+注册Wi-Fi热点STA加入事件，在业务退出时，要调用off(type: 'hotspotStaJoin', callback?: Callback&lt;StationInfo&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -94,7 +94,7 @@ function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'hotspotStaJoin' | 是 | 事件名称。 |
+| type | 'hotspotStaJoin' | 是 | 固定填"hotspotStaJoin"字符串。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 是 | 状态改变回调函数。 |
 
 **错误码：**
@@ -114,7 +114,7 @@ function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void
 function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void
 ```
 
-注册热点STA离开事件。
+注册Wi-Fi热点STA离开事件，在业务退出时，要调用off(type: 'hotspotStaLeave', callback?: Callback&lt;StationInfo&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -128,7 +128,7 @@ function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'hotspotStaLeave' | 是 | 事件名称。 |
+| type | 'hotspotStaLeave' | 是 | 固定填"hotspotStaLeave"字符串。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 是 | 状态改变回调函数。 |
 
 **错误码：**

@@ -1,8 +1,10 @@
 # DeviceAddressType
 
-WLAN设备地址（mac/bssid）类型。@enum { number }
+Wi-Fi设备地址（MAC/BSSID）类型。是标识Wi-Fi设备或接入点的唯一地址。
 
-**起始版本：** 12
+在Wi-Fi相关操作中，如连接指定的Wi-Fi网络、获取设备信息等，需要使用DeviceAddressType类型的参数。
+
+**起始版本：** 10
 
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
@@ -12,9 +14,9 @@ WLAN设备地址（mac/bssid）类型。@enum { number }
 RANDOM_DEVICE_ADDRESS
 ```
 
-随机设备地址
+随机设备地址。
 
-**起始版本：** 12
+**起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -26,9 +28,9 @@ RANDOM_DEVICE_ADDRESS
 REAL_DEVICE_ADDRESS
 ```
 
-真实设备地址
+真实设备地址。
 
-**起始版本：** 12
+**起始版本：** 10
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

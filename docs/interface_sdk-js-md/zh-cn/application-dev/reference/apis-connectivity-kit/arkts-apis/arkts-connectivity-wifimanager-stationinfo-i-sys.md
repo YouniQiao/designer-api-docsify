@@ -1,6 +1,6 @@
 # StationInfo（系统接口）
 
-WLAN站点信息。
+接入的设备信息。包含连接到Wi-Fi网络的设备详细信息。
 
 **起始版本：** 9
 
@@ -20,7 +20,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 ipAddress: string
 ```
 
-WLAN客户端的IP地址
+IP地址。
 
 **类型：** string
 
@@ -36,7 +36,7 @@ WLAN客户端的IP地址
 macAddress: string
 ```
 
-WLAN客户端的MAC地址
+MAC地址。
 
 **类型：** string
 
@@ -52,7 +52,7 @@ WLAN客户端的MAC地址
 macAddressType?: DeviceAddressType
 ```
 
-WLAN客户端的MAC地址类型
+MAC地址类型。
 
 **类型：** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
@@ -68,7 +68,7 @@ WLAN客户端的MAC地址类型
 name: string
 ```
 
-WLAN客户端的网络名称
+设备名称。
 
 **类型：** string
 

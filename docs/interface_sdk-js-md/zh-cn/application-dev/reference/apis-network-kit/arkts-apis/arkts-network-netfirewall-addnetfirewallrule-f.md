@@ -17,10 +17,10 @@ function addNetFirewallRule(rule: NetFirewallRule): Promise<number>
 > **说明：**
 > 
 > 1. 防火墙规则优先级说明（[setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md)和
-> [addNetFirewallRule](#addnetfirewallrule)无调用顺序要求）：
+> [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md)无调用顺序要求）：
 > 
 > - 调用[setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md)设置默认策略为阻止，调用
-> [addNetFirewallRule](#addnetfirewallrule)新增显式规则，规则优先级由高到低为：
+> [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md)新增显式规则，规则优先级由高到低为：
 > 
 > - 显式阻止规则
 > 
@@ -29,7 +29,7 @@ function addNetFirewallRule(rule: NetFirewallRule): Promise<number>
 > - 默认阻止策略
 > 
 > - 调用[setNetFirePolicy](arkts-network-netfirewall-setnetfirewallpolicy-f.md)设置默认策略为允许，调用
-> [addNetFirewallRule](#addnetfirewallrule)新增显式规则，规则优先级由高到低为：
+> [addNetFirewallRule](arkts-network-netfirewall-addnetfirewallrule-f.md)新增显式规则，规则优先级由高到低为：
 > 
 > - 显式允许规则
 > 

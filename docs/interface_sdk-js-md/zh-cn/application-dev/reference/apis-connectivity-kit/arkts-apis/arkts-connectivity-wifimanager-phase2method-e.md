@@ -1,6 +1,6 @@
 # Phase2Method
 
-WLAN Phase 2认证方式。@enum { number }
+表示第二阶段认证方式的枚举。
 
 **起始版本：** 10
 

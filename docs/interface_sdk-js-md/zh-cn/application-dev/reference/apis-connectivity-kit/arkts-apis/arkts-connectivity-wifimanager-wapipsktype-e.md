@@ -1,6 +1,6 @@
 # WapiPskType
 
-描述WAPI预共享密钥类型。@enum { number }
+WAPI认证方式的枚举。
 
 **起始版本：** 12
 
@@ -12,7 +12,7 @@
 WAPI_PSK_ASCII = 0
 ```
 
-WAPI预共享密钥的ASCII字符类型。
+ASCII类型。
 
 **起始版本：** 12
 
@@ -24,7 +24,7 @@ WAPI预共享密钥的ASCII字符类型。
 WAPI_PSK_HEX = 1
 ```
 
-WAPI预共享密钥的HEX字符类型。
+HEX类型。
 
 **起始版本：** 12
 

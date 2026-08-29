@@ -1,8 +1,6 @@
 # SuppState（系统接口）
 
-supplicant状态枚举。
-
-@enum { number }
+表示请求状态的枚举。
 
 **起始版本：** 9
 
@@ -16,7 +14,7 @@ supplicant状态枚举。
 DISCONNECTED
 ```
 
-supplicant未与AP关联或已断开连接。
+已断开。
 
 **起始版本：** 9
 
@@ -30,7 +28,7 @@ supplicant未与AP关联或已断开连接。
 INTERFACE_DISABLED
 ```
 
-网络接口已去使能。
+接口禁用。
 
 **起始版本：** 9
 
@@ -44,7 +42,7 @@ INTERFACE_DISABLED
 INACTIVE
 ```
 
-supplicant已去使能。
+未激活。
 
 **起始版本：** 9
 
@@ -58,7 +56,7 @@ supplicant已去使能。
 SCANNING
 ```
 
-supplicant正在扫描WLAN连接。
+扫描中。
 
 **起始版本：** 9
 
@@ -72,7 +70,7 @@ supplicant正在扫描WLAN连接。
 AUTHENTICATING
 ```
 
-supplicant正在与指定AP进行认证。
+认证中。
 
 **起始版本：** 9
 
@@ -86,7 +84,7 @@ supplicant正在与指定AP进行认证。
 ASSOCIATING
 ```
 
-supplicant正在与指定AP进行关联。
+关联中。
 
 **起始版本：** 9
 
@@ -100,7 +98,7 @@ supplicant正在与指定AP进行关联。
 ASSOCIATED
 ```
 
-supplicant已与指定AP关联。
+已关联。
 
 **起始版本：** 9
 
@@ -114,7 +112,7 @@ supplicant已与指定AP关联。
 FOUR_WAY_HANDSHAKE
 ```
 
-四次握手正在进行中。
+四次握手。
 
 **起始版本：** 9
 
@@ -128,7 +126,7 @@ FOUR_WAY_HANDSHAKE
 GROUP_HANDSHAKE
 ```
 
-群组握手正在进行中。
+组握手。
 
 **起始版本：** 9
 
@@ -156,7 +154,7 @@ COMPLETED
 UNINITIALIZED
 ```
 
-与supplicant建立连接失败。
+连接建立失败。
 
 **起始版本：** 9
 
@@ -170,7 +168,7 @@ UNINITIALIZED
 INVALID
 ```
 
-supplicant处于未知或无效状态。
+无效值。
 
 **起始版本：** 9
 

@@ -1,6 +1,10 @@
 # WifiP2pGroupInfo
 
-P2P群组信息。@interface WifiP2pGroupInfo
+表示P2P群组相关信息。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -22,7 +26,7 @@ import { wifi } from '@kit.ConnectivityKit';
 clientDevices: WifiP2pDevice[]
 ```
 
-客户端列表
+接入的设备列表信息。
 
 **类型：** WifiP2pDevice[]
 
@@ -40,7 +44,7 @@ clientDevices: WifiP2pDevice[]
 frequency: number
 ```
 
-频率
+群组的频率，单位：MHz。
 
 **类型：** number
 
@@ -58,7 +62,7 @@ frequency: number
 goIpAddress: string
 ```
 
-群组所有者IP地址
+群组IP地址。
 
 **类型：** string
 
@@ -76,7 +80,7 @@ goIpAddress: string
 groupName: string
 ```
 
-群组名称
+群组名称。
 
 **类型：** string
 
@@ -94,7 +98,7 @@ groupName: string
 interface: string
 ```
 
-接口名称
+接口名称。
 
 **类型：** string
 
@@ -112,7 +116,7 @@ interface: string
 isP2pGo: boolean
 ```
 
-是否为群组所有者
+是否是群主。true:是群主，false:不是群主。
 
 **类型：** boolean
 
@@ -130,7 +134,7 @@ isP2pGo: boolean
 networkId: number
 ```
 
-网络ID
+网络ID。
 
 **类型：** number
 
@@ -148,7 +152,7 @@ networkId: number
 ownerInfo: WifiP2pDevice
 ```
 
-群组所有者信息
+群组的设备信息。
 
 **类型：** WifiP2pDevice
 
@@ -166,7 +170,7 @@ ownerInfo: WifiP2pDevice
 passphrase: string
 ```
 
-群组密码短语
+群组密钥。
 
 **类型：** string
 

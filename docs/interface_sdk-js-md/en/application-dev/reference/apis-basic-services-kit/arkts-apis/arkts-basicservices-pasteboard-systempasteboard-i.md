@@ -289,6 +289,8 @@ getData(callback: AsyncCallback<PasteData>): void
 
 Obtains a **PasteData** object from the pasteboard. This API uses an asynchronous callback to return the result.
 
+While most applications must [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md), those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
+
 **Since:** 9
 
 **Required permissions:** 
@@ -337,6 +339,8 @@ getData(): Promise<PasteData>
 ```
 
 Obtains a **PasteData** object from the pasteboard. This API uses a promise to return the result.
+
+While most applications must [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md), those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
 
 **Since:** 9
 
@@ -420,7 +424,11 @@ try {
 getDataSync(): PasteData
 ```
 
-Obtains a **PasteData** object from the pasteboard. This API returns the result synchronously.
+Obtains a **PasteData** object from the pasteboard. This API returns the result synchronously. This API is used to obtain pasteboard data synchronously in key service processes or process pasteboard data immediately.
+
+Do not call this API in the UI thread to prevent blocking the UI. Use the asynchronous API [getData](#getdata) to process a large amount of data or remote data.
+
+While most applications must [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md), those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
 
 **Since:** 11
 
@@ -463,6 +471,8 @@ getDataWithProgress(params: GetDataParams): Promise<PasteData>
 ```
 
 Obtains the PasteData from the system pasteboard with system progress. This API uses a promise to return the result. Folders cannot be copied.
+
+While most applications must [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md), those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
 
 **Since:** 15
 
@@ -663,6 +673,8 @@ getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 
 Obtains a **PasteData** object from the system pasteboard. This API uses a promise to return the result.
 
+While most applications must [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md), those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
+
 **Since:** 12
 
 **Required permissions:** ohos.permission.READ_PASTEBOARD
@@ -711,6 +723,8 @@ getUnifiedDataSync(): unifiedDataChannel.UnifiedData
 ```
 
 Obtains a **UnifiedData** object from the system pasteboard. This API returns the result synchronously.
+
+While most applications must [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md), those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
 
 **Since:** 12
 

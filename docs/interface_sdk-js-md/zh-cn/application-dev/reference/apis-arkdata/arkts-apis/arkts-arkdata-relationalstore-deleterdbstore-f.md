@@ -14,7 +14,7 @@ function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<
 
 删除数据库文件，使用callback异步回调。
 
-删除成功后，建议将数据库对象置为null。建立数据库时，若在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置了自定义路径，则调用此接口进行删库无效，必须使用[deleteRdbStore](#deleterdbstore) 接口进行删库。
+删除成功后，建议将数据库对象置为null。建立数据库时，若在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置了自定义路径，则调用此接口进行删库无效，必须使用[deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md) 接口进行删库。
 
 当使用向量数据库时，在调用deleteRdbStore接口前，应当确保向量数据库已打开的RdbStore和ResultSet均已成功关闭。
 
@@ -177,7 +177,7 @@ function deleteRdbStore(context: Context, name: string): Promise<void>
 
 删除数据库文件，使用Promise异步回调。
 
-删除成功后，建议将数据库对象置为null。建立数据库时，若在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置了自定义路径，则调用此接口进行删库无效，必须使用[deleteRdbStore](#deleterdbstore) 接口进行删库。
+删除成功后，建议将数据库对象置为null。建立数据库时，若在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)中配置了自定义路径，则调用此接口进行删库无效，必须使用[deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md) 接口进行删库。
 
 当使用向量数据库时，在调用deleteRdbStore接口前，应当确保向量数据库已打开的RdbStore和ResultSet均已成功关闭。
 

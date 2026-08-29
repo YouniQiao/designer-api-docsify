@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function disableNetwork(netId: number): void
 ```
 
-通过networkId去使能指定的DeviceConfig。去使能后的DeviceConfig将不再被关联。
+关闭网络配置。
 
 **起始版本：** 9
 
@@ -26,7 +26,7 @@ function disableNetwork(netId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| netId | number | 是 | 标识要去使能的网络。networkId的值不能小于0。 |
+| netId | number | 是 | 网络配置ID。 |
 
 **错误码：**
 
@@ -59,7 +59,7 @@ try {
 function disableNetwork(netId: number, blockDuration: number): void
 ```
 
-通过networkId在一段时间内去使能指定的DeviceConfig。去使能后的DeviceConfig将不再被关联。
+禁用网络连接，将已连接的网络断开，且在设置的时间范围内无法自动回连。
 
 **起始版本：** 23
 
@@ -73,8 +73,8 @@ function disableNetwork(netId: number, blockDuration: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| netId | number | 是 | 标识要去使能的网络。networkId的值不能小于0。 |
-| blockDuration | number | 是 | 表示网络去使能的持续时间（单位为秒），如果值为-1，表示永久去使能。 |
+| netId | number | 是 | 网络配置ID。 |
+| blockDuration | number | 是 | 禁用网络时长，单位：秒。 |
 
 **错误码：**
 

@@ -1,6 +1,10 @@
 # WifiP2PConfig
 
-P2P配置。@interface WifiP2PConfig
+表示P2P配置信息。
+
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -22,7 +26,7 @@ import { wifi } from '@kit.ConnectivityKit';
 deviceAddress: string
 ```
 
-设备MAC地址
+设备地址。
 
 **类型：** string
 
@@ -40,7 +44,7 @@ deviceAddress: string
 goBand: GroupOwnerBand
 ```
 
-群组所有者频段
+群组带宽。
 
 **类型：** GroupOwnerBand
 
@@ -58,7 +62,7 @@ goBand: GroupOwnerBand
 groupName: string
 ```
 
-群组名称
+群组名称。
 
 **类型：** string
 
@@ -76,7 +80,7 @@ groupName: string
 netId: number
 ```
 
-群组网络ID。创建群组时，-1表示创建临时群组，-2表示创建持久群组
+网络ID。创建群组时-1表示创建临时组，-2表示创建永久组。
 
 **类型：** number
 
@@ -94,7 +98,7 @@ netId: number
 passphrase: string
 ```
 
-此{@code WifiP2pConfig}实例的密码短语
+群组密钥。
 
 **类型：** string
 

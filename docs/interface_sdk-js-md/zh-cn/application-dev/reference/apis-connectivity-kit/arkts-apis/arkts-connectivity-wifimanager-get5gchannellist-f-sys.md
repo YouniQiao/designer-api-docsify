@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function get5GChannelList(): Array<number>
 ```
 
-获取设备支持的5G信道列表。
+获取当前设备支持的5G信道列表。
 
 **起始版本：** 10
 
@@ -26,7 +26,7 @@ function get5GChannelList(): Array<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;number&gt; | 返回5G信道列表。 |
+| Array&lt;number&gt; | 设备支持的5G信道列表。 |
 
 **错误码：**
 

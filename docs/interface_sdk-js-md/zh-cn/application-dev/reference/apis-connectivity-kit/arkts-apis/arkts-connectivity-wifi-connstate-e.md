@@ -1,8 +1,10 @@
 # ConnState
 
-WLAN连接状态枚举。
+表示Wi-Fi连接状态的枚举。
 
-@enum { number } ConnState
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃。
 
 **起始版本：** 6
 
@@ -34,7 +36,7 @@ SCANNING
 CONNECTING
 ```
 
-WLAN连接正在建立。
+正在建立Wi-Fi连接。
 
 **起始版本：** 6
 
@@ -50,7 +52,7 @@ WLAN连接正在建立。
 AUTHENTICATING
 ```
 
-WLAN连接正在认证。
+Wi-Fi连接正在认证中。
 
 **起始版本：** 6
 
@@ -66,7 +68,7 @@ WLAN连接正在认证。
 OBTAINING_IPADDR
 ```
 
-正在获取WLAN连接的IP地址。
+正在获取Wi-Fi连接的IP地址。
 
 **起始版本：** 6
 
@@ -82,7 +84,7 @@ OBTAINING_IPADDR
 CONNECTED
 ```
 
-WLAN连接已建立。
+Wi-Fi连接已建立。
 
 **起始版本：** 6
 
@@ -98,7 +100,7 @@ WLAN连接已建立。
 DISCONNECTING
 ```
 
-WLAN连接正在断开。
+Wi-Fi连接正在断开。
 
 **起始版本：** 6
 
@@ -114,7 +116,7 @@ WLAN连接正在断开。
 DISCONNECTED
 ```
 
-WLAN连接已断开。
+Wi-Fi连接已断开。
 
 **起始版本：** 6
 
@@ -130,7 +132,7 @@ WLAN连接已断开。
 UNKNOWN
 ```
 
-WLAN连接建立失败。
+Wi-Fi连接建立失败。
 
 **起始版本：** 6
 

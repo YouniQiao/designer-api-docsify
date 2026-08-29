@@ -12,9 +12,9 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function on(type: 'wifiStateChange', callback: Callback<number>): void
 ```
 
-注册WLAN状态改变事件。
+注册Wi-Fi状态改变事件，在业务退出时，要调用off(type: 'wifiStateChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
-**起始版本：** 12
+**起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -26,8 +26,8 @@ function on(type: 'wifiStateChange', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'wifiStateChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回0：未激活，1：已激活，2：正在激活，3：正在去激活。 |
+| type | 'wifiStateChange' | 是 | 固定填"wifiStateChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回状态值枚举：   - 0: 未激活。   - 1: 已激活。   - 2: 激活中。   - 3: 去激活中。 |
 
 **错误码：**
 
@@ -45,9 +45,9 @@ function on(type: 'wifiStateChange', callback: Callback<number>): void
 function on(type: 'wifiConnectionChange', callback: Callback<number>): void
 ```
 
-注册WLAN连接状态改变事件。
+注册Wi-Fi连接状态改变事件，在业务退出时，要调用off(type: 'wifiConnectionChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
-**起始版本：** 12
+**起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -59,8 +59,8 @@ function on(type: 'wifiConnectionChange', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'wifiConnectionChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回0：已断开，1：已连接。 |
+| type | 'wifiConnectionChange' | 是 | 固定填"wifiConnectionChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回状态值枚举：   - 0: 已断开。   - 1: 已连接。 |
 
 **错误码：**
 
@@ -78,9 +78,9 @@ function on(type: 'wifiConnectionChange', callback: Callback<number>): void
 function on(type: 'wifiScanStateChange', callback: Callback<number>): void
 ```
 
-注册扫描状态改变事件。
+注册扫描状态改变事件，在业务退出时，要调用off(type: 'wifiScanStateChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
-**起始版本：** 12
+**起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -92,8 +92,8 @@ function on(type: 'wifiScanStateChange', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'wifiScanStateChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回0：扫描失败，1：扫描成功。 |
+| type | 'wifiScanStateChange' | 是 | 固定填"wifiScanStateChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回状态值枚举：   - 0: 扫描失败。   - 1: 扫描成功。 |
 
 **错误码：**
 
@@ -111,7 +111,7 @@ function on(type: 'wifiScanStateChange', callback: Callback<number>): void
 function on(type: 'wifiRssiChange', callback: Callback<number>): void
 ```
 
-注册WLAN接收信号强度(RSSI)变化事件。
+注册Wi-Fi接收信号强度(RSSI)变化事件，在业务退出时，要调用off(type: 'wifiRssiChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -123,8 +123,8 @@ function on(type: 'wifiRssiChange', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'wifiRssiChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。 |
+| type | 'wifiRssiChange' | 是 | 固定填"wifiRssiChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数，返回以dBm为单位的RSSI值。 |
 
 **错误码：**
 
@@ -142,7 +142,7 @@ function on(type: 'wifiRssiChange', callback: Callback<number>): void
 function on(type: 'hotspotStateChange', callback: Callback<number>): void
 ```
 
-注册热点状态改变事件。
+注册热点状态改变事件，在业务退出时，要调用off(type: 'hotspotStateChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -154,8 +154,8 @@ function on(type: 'hotspotStateChange', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'hotspotStateChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。, 0: inactive, 1: active, 2: activating, 3: de-activating |
+| type | 'hotspotStateChange' | 是 | 固定填"hotspotStateChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回状态值枚举：   - 0: 未激活。   - 1: 已激活。   - 2: 激活中。   - 3: 去激活中。 |
 
 **错误码：**
 
@@ -173,7 +173,7 @@ function on(type: 'hotspotStateChange', callback: Callback<number>): void
 function on(type: 'p2pStateChange', callback: Callback<number>): void
 ```
 
-注册P2P开关状态改变事件。
+注册P2P开关状态改变事件，在业务退出时，要调用off(type: 'p2pStateChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -185,8 +185,8 @@ function on(type: 'p2pStateChange', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'p2pStateChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回1：空闲，2：打开中，3：已打开，4：关闭中，5：已关闭。 |
+| type | 'p2pStateChange' | 是 | 固定填"p2pStateChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回状态值枚举：   - 1: 空闲。   - 2: 打开中。   - 3: 已打开。   - 4: 关闭中。&lt;br/ &gt;- 5: 已关闭。 |
 
 **错误码：**
 
@@ -204,7 +204,7 @@ function on(type: 'p2pStateChange', callback: Callback<number>): void
 function on(type: 'p2pConnectionChange', callback: Callback<WifiP2pLinkedInfo>): void
 ```
 
-注册P2P连接状态改变事件。
+注册P2P连接状态改变事件，在业务退出时，要调用off(type: 'p2pConnectionChange', callback?: Callback&lt;WifiP2pLinkedInfo&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -216,8 +216,8 @@ function on(type: 'p2pConnectionChange', callback: Callback<WifiP2pLinkedInfo>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'p2pConnectionChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pLinkedInfo&gt; | 是 | 状态改变回调函数。 |
+| type | 'p2pConnectionChange' | 是 | 固定填"p2pConnectionChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pLinkedInfo&gt; | 是 | 状态改变回调函数。返回P2P连接的相关信息。 |
 
 **错误码：**
 
@@ -235,11 +235,13 @@ function on(type: 'p2pConnectionChange', callback: Callback<WifiP2pLinkedInfo>):
 function on(type: 'p2pDeviceChange', callback: Callback<WifiP2pDevice>): void
 ```
 
-注册P2P本端设备状态改变事件。
+注册P2P设备状态改变事件，在业务退出时，要调用off(type: 'p2pDeviceChange', callback?: Callback&lt;WifiP2pDevice&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 9
 
-**需要权限：** ohos.permission.GET_WIFI_INFO
+**需要权限：** 
+- API版本10+：ohos.permission.GET_WIFI_INFO
+- API版本9：ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -247,8 +249,8 @@ function on(type: 'p2pDeviceChange', callback: Callback<WifiP2pDevice>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'p2pDeviceChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice&gt; | 是 | 状态改变回调函数。 |
+| type | 'p2pDeviceChange' | 是 | 固定填"p2pDeviceChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice&gt; | 是 | 状态改变回调函数。返回P2P设备信息。 |
 
 **错误码：**
 
@@ -266,11 +268,13 @@ function on(type: 'p2pDeviceChange', callback: Callback<WifiP2pDevice>): void
 function on(type: 'p2pPeerDeviceChange', callback: Callback<WifiP2pDevice[]>): void
 ```
 
-注册P2P对端设备状态改变事件。
+注册P2P对端设备状态改变事件，在业务退出时，要调用off(type: 'p2pPeerDeviceChange', callback?: Callback&lt;WifiP2pDevice[]&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 9
 
-**需要权限：** ohos.permission.GET_WIFI_INFO
+**需要权限：** 
+- API版本10+：ohos.permission.GET_WIFI_INFO
+- API版本9：ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -278,8 +282,8 @@ function on(type: 'p2pPeerDeviceChange', callback: Callback<WifiP2pDevice[]>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'p2pPeerDeviceChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice[]&gt; | 是 | 状态改变回调函数。 |
+| type | 'p2pPeerDeviceChange' | 是 | 固定填"p2pPeerDeviceChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice[]&gt; | 是 | 状态改变回调函数。如果应用申请了ohos.permission.GET_WIFI_PEERS_MAC权限，则返回结果中的deviceAddress为真实设备地址，否则为随机设备地址。 |
 
 **错误码：**
 
@@ -297,7 +301,7 @@ function on(type: 'p2pPeerDeviceChange', callback: Callback<WifiP2pDevice[]>): v
 function on(type: 'p2pPersistentGroupChange', callback: Callback<void>): void
 ```
 
-注册P2P永久组状态改变事件。
+注册P2P永久组状态改变事件，在业务退出时，要调用off(type: 'p2pPersistentGroupChange', callback?: Callback&lt;void&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -309,7 +313,7 @@ function on(type: 'p2pPersistentGroupChange', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'p2pPersistentGroupChange' | 是 | 事件名称。 |
+| type | 'p2pPersistentGroupChange' | 是 | 固定填"p2pPersistentGroupChange"字符串。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 状态改变回调函数。 |
 
 **错误码：**
@@ -328,7 +332,7 @@ function on(type: 'p2pPersistentGroupChange', callback: Callback<void>): void
 function on(type: 'p2pDiscoveryChange', callback: Callback<number>): void
 ```
 
-注册发现设备状态改变事件。
+注册发现设备状态改变事件，在业务退出时，要调用off(type: 'p2pDiscoveryChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -340,8 +344,8 @@ function on(type: 'p2pDiscoveryChange', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'p2pDiscoveryChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。 |
+| type | 'p2pDiscoveryChange' | 是 | 固定填"p2pDiscoveryChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。返回状态值枚举：   - 0: 初始状态。   - 1: 发现成功。 |
 
 **错误码：**
 

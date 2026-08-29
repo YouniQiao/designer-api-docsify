@@ -1,8 +1,8 @@
 # WifiSecurityType
 
-描述WLAN加密类型。@enum { number }
+表示加密类型的枚举。
 
-**起始版本：** 12
+**起始版本：** 9
 
 **系统能力：** SystemCapability.Communication.WiFi.Core
 
@@ -12,7 +12,7 @@
 WIFI_SEC_TYPE_INVALID = 0
 ```
 
-无效的加密类型
+无效加密类型。
 
 **起始版本：** 9
 
@@ -24,9 +24,9 @@ WIFI_SEC_TYPE_INVALID = 0
 WIFI_SEC_TYPE_OPEN = 1
 ```
 
-开放
+开放加密类型。
 
-**起始版本：** 12
+**起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,7 +38,7 @@ WIFI_SEC_TYPE_OPEN = 1
 WIFI_SEC_TYPE_WEP = 2
 ```
 
-有线等效加密（WEP）
+Wired Equivalent Privacy (WEP)加密类型。候选网络(添加网络配置信息)配置不支持该加密类型。
 
 **起始版本：** 9
 
@@ -50,7 +50,7 @@ WIFI_SEC_TYPE_WEP = 2
 WIFI_SEC_TYPE_PSK = 3
 ```
 
-预共享密钥（PSK）
+Pre-shared key (PSK)加密类型。
 
 **起始版本：** 9
 
@@ -62,7 +62,7 @@ WIFI_SEC_TYPE_PSK = 3
 WIFI_SEC_TYPE_SAE = 4
 ```
 
-对等同步认证（SAE）
+Simultaneous Authentication of Equals (SAE)加密类型。
 
 **起始版本：** 9
 
@@ -74,7 +74,7 @@ WIFI_SEC_TYPE_SAE = 4
 WIFI_SEC_TYPE_EAP = 5
 ```
 
-EAP认证。
+EAP authentication (EAP)加密类型。
 
 **起始版本：** 9
 
@@ -86,7 +86,7 @@ EAP认证。
 WIFI_SEC_TYPE_EAP_SUITE_B = 6
 ```
 
-SUITE_B_192 192位级别。
+Suite-B 192位加密类型。
 
 **起始版本：** 9
 
@@ -98,7 +98,7 @@ SUITE_B_192 192位级别。
 WIFI_SEC_TYPE_OWE = 7
 ```
 
-机会性无线加密。
+Opportunistic  Wireless  Encryption (OWE)机会性无线加密类型。
 
 **起始版本：** 9
 
@@ -110,7 +110,7 @@ WIFI_SEC_TYPE_OWE = 7
 WIFI_SEC_TYPE_WAPI_CERT = 8
 ```
 
-指定WAPI证书。
+WAPI-Cert加密类型。
 
 **起始版本：** 9
 
@@ -122,7 +122,7 @@ WIFI_SEC_TYPE_WAPI_CERT = 8
 WIFI_SEC_TYPE_WAPI_PSK = 9
 ```
 
-指定WAPI预共享密钥。
+WAPI-PSK加密类型。
 
 **起始版本：** 9
 

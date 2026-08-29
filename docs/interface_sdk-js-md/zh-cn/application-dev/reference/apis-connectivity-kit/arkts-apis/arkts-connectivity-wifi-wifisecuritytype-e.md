@@ -1,8 +1,10 @@
 # WifiSecurityType
 
-描述WLAN加密类型。
+表示加密类型的枚举。
 
-@enum { number } WifiSecurityType
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃。
 
 **起始版本：** 6
 
@@ -18,7 +20,7 @@
 WIFI_SEC_TYPE_INVALID = 0
 ```
 
-无效的加密类型
+无效加密类型。
 
 **起始版本：** 6
 
@@ -34,7 +36,7 @@ WIFI_SEC_TYPE_INVALID = 0
 WIFI_SEC_TYPE_OPEN = 1
 ```
 
-开放
+开放加密类型。
 
 **起始版本：** 6
 
@@ -50,7 +52,7 @@ WIFI_SEC_TYPE_OPEN = 1
 WIFI_SEC_TYPE_WEP = 2
 ```
 
-有线等效保密(WEP)
+Wired Equivalent Privacy (WEP)加密类型。
 
 **起始版本：** 6
 
@@ -66,7 +68,7 @@ WIFI_SEC_TYPE_WEP = 2
 WIFI_SEC_TYPE_PSK = 3
 ```
 
-预共享密钥(PSK)
+Pre-shared key (PSK)加密类型。
 
 **起始版本：** 6
 
@@ -82,7 +84,7 @@ WIFI_SEC_TYPE_PSK = 3
 WIFI_SEC_TYPE_SAE = 4
 ```
 
-等同认证(SAE)
+Simultaneous Authentication of Equals (SAE)加密类型。
 
 **起始版本：** 6
 

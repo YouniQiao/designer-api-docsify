@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getHotspotBlockList(): Array<StationInfo>
 ```
 
-获取黑名单中的所有站点。如果未获取ohos.permission.GET_WIFI_PEERS_MAC权限，返回随机bssid。
+获取当前Wi-Fi热点的黑名单设备列表。该接口返回被热点拉黑的设备信息列表，仅在设备作为热点(AP)模式下有效。
 
 **起始版本：** 11
 
@@ -26,7 +26,7 @@ function getHotspotBlockList(): Array<StationInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;StationInfo&gt; | 黑名单中的站点。 |
+| Array&lt;StationInfo&gt; | 热点的阻止列表。 |
 
 **错误码：**
 

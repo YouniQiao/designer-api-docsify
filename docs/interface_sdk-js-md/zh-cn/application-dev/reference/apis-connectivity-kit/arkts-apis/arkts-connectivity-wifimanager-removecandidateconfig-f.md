@@ -12,9 +12,12 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function removeCandidateConfig(networkId: number): Promise<void>
 ```
 
-移除指定的候选热点配置，只允许移除自己添加的配置。应用必须在前台运行。
+移除候选网络配置，使用Promise异步回调。
 
-**起始版本：** 12
+- 从系统中删除指定网络ID的Wi-Fi候选配置，清理不再需要的Wi-Fi候选配置，释放系统资源。  
+- 只能移除通过[addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md)添加的候选配置，移除后该候选网络将不再被系统自动连接。
+
+**起始版本：** 9
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
@@ -26,13 +29,13 @@ function removeCandidateConfig(networkId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| networkId | number | 是 | 将要移除的网络ID。 |
+| networkId | number | 是 | 网络配置ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回结果。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -68,9 +71,12 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function removeCandidateConfig(networkId: number, callback: AsyncCallback<void>): void
 ```
 
-移除指定的候选热点配置，只允许移除自己添加的配置。应用必须在前台运行。
+移除指定的候选网络配置，使用callback异步回调。
 
-**起始版本：** 12
+- 从系统中删除指定网络ID的Wi-Fi候选配置，清理不再需要的Wi-Fi候选配置，释放系统资源。  
+- 只能移除通过[addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md)添加的候选配置，移除后该候选网络将不再被系统自动连接。
+
+**起始版本：** 9
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
@@ -82,8 +88,8 @@ function removeCandidateConfig(networkId: number, callback: AsyncCallback<void>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| networkId | number | 是 | 将要移除的网络ID。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示removeCandidateConfig的回调函数。 |
+| networkId | number | 是 | 网络配置ID。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当操作成功时，error为0。如果error为非0，表示处理出现错误。 |
 
 **错误码：**
 

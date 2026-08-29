@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getSupportedFeatures(): number
 ```
 
-查询设备支持的特性。检查此设备是否支持指定特性。
+查询设备支持的特性。
 
 **起始版本：** 9
 
@@ -26,7 +26,7 @@ function getSupportedFeatures(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回此设备支持的特性。 |
+| number | 支持的特性值。枚举值如下： |
 
 **错误码：**
 

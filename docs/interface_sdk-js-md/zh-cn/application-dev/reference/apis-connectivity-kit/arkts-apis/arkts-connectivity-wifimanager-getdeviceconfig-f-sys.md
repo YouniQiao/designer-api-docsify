@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getDeviceConfig(networkId: number): WifiDeviceConfig
 ```
 
-根据网络ID获取单条WLAN配置。
+根据网络ID获取单条网络配置。
 
 **起始版本：** 24
 
@@ -28,13 +28,13 @@ function getDeviceConfig(networkId: number): WifiDeviceConfig
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| networkId | number | 是 | 待获取的WLAN配置的网络ID。 |
+| networkId | number | 是 | 待查询的网络配置ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| WifiDeviceConfig | 返回与网络ID对应的WLAN配置。 |
+| WifiDeviceConfig | 指定网络ID的网络配置。 |
 
 **错误码：**
 

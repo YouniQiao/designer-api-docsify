@@ -12,7 +12,11 @@ import { wifi } from '@kit.ConnectivityKit';
 function isWifiActive(): boolean
 ```
 
-查询WLAN是否已使能。
+查询Wi-Fi是否已使能。
+
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃。
 
 **起始版本：** 6
 
@@ -28,7 +32,7 @@ function isWifiActive(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | WLAN已使能时返回{ |
+| boolean | true:已使能， false:未使能。 |
 
 **示例**
 

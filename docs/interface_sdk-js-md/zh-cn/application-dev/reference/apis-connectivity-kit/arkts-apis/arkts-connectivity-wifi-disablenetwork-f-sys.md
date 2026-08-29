@@ -12,9 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function disableNetwork(netId: number): boolean
 ```
 
-去使能网络配置。
-
-<p>去使能的网络将不再被关联。
+关闭网络配置。
 
 **起始版本：** 7
 
@@ -38,7 +36,7 @@ function disableNetwork(netId: number): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 指定网络已去使能返回{ |
+| boolean | 关闭网络配置是否成功。true:操作成功， false:操作失败。 |
 
 **示例**
 

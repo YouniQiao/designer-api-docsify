@@ -18,7 +18,7 @@ function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: Coop
 
 **废弃版本：** 11
 
-**替代接口：** [on](#on系统接口)(type: 'cooperateMessage', callback: Callback&lt;CooperateMessage&gt;)
+**替代接口：** [on](arkts-distributedservice-cooperate-on-f-sys.md)(type: 'cooperateMessage', callback: Callback&lt;CooperateMessage&gt;)
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

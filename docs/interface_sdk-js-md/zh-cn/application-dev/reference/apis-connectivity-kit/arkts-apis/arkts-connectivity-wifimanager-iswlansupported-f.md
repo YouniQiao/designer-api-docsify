@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function isWlanSupported(): boolean
 ```
 
-查询WLAN是否可用。
+查询是否可用Wi-Fi网络。
 
 **起始版本：** 26.0.0
 
@@ -24,7 +24,7 @@ function isWlanSupported(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | WLAN是否可用。{ |
+| boolean | Wi-Fi是否可用。true表示Wi-Fi可用， false表示Wi-Fi不可用。 |
 
 **错误码：**
 

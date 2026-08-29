@@ -67,7 +67,7 @@ Obtains a **SimpleDateTimeFormat** object based on the specified pattern string.
 
 **Deprecated since:** 20
 
-**Substitutes:** [getSimpleDateTimeFormatByPattern](#getsimpledatetimeformatbypattern)(pattern: string, locale?: Intl.Locale)
+**Substitutes:** [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md)(pattern: string, locale?: Intl.Locale)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

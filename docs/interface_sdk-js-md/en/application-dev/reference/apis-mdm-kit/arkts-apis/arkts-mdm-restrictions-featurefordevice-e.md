@@ -233,7 +233,7 @@ If the device USB capability is disabled in any of the following scenarios, a po
 3. Specific USB device types have been blocked via the  
 [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md) API.
 4. USB storage write has been disabled for specific users via the [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md) API.
-5. USB-to-serial conversion ([USB_SERIAL](#featurefordevice)) is disabled.
+5. USB-to-serial conversion ([USB_SERIAL](arkts-mdm-restrictions-featurefordevice-e.md)) is disabled.
 
 **Since:** 26.0.0
 
@@ -608,7 +608,7 @@ Device USB-to-serial port capability. After the capability is disabled, external
 
 1. A list of allowed USB devices has been configured via the  
 [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md) API.
-2. The device ([USB](#featurefordevice)) capability has been disabled.
+2. The device ([USB](arkts-mdm-restrictions-featurefordevice-e.md)) capability has been disabled.
 
 **Since:** 26.0.0
 

@@ -287,7 +287,7 @@
   - [InnerEvent](arkts-basicservices-emitter-innerevent-i.md)
   - [Options](arkts-basicservices-emitter-options-i.md)
   - [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
-- [@ohos.pasteboard](arkts-pasteboard.md)
+- [@ohos.pasteboard(剪贴板)](arkts-pasteboard.md)
   - [createData](arkts-basicservices-pasteboard-createdata-f.md)
   - [createHtmlData](arkts-basicservices-pasteboard-createhtmldata-f.md)
   - [createHtmlTextRecord](arkts-basicservices-pasteboard-createhtmltextrecord-f.md)

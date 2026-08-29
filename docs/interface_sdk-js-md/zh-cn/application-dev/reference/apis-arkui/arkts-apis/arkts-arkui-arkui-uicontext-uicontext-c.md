@@ -2488,7 +2488,7 @@ export struct PageThree {
 getPixelRoundMode(): PixelRoundMode
 ```
 
-获取当前应用的像素取整模式。
+获取当前页面的像素取整模式。
 
 **起始版本：** 18
 
@@ -2502,7 +2502,7 @@ getPixelRoundMode(): PixelRoundMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | Pixel rounding mode of the current page. |
+| [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | 当前页面的像素取整模式，取值包括： |
 
 **示例**
 
@@ -4316,7 +4316,7 @@ Init OverlayManager.
 setPixelRoundMode(mode: PixelRoundMode): void
 ```
 
-设置当前页面的像素取整模式。
+设置当前页面的像素取整模式，影响整个页面的像素取整时机。通常在使用[组件级像素取整](../arkts-components/arkts-arkui-commonmethod-c.md#pixelround)无法解决像素取整问题时，可尝试采用PIXEL_ROUND_AFTER_MEASURE模式。
 
 **起始版本：** 18
 
@@ -4330,7 +4330,7 @@ setPixelRoundMode(mode: PixelRoundMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | 是 | 像素取整模式。默认值：PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH设置异常值时，该属性为默认值。 |
+| mode | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | 是 | 像素取整模式，可选值：   - PIXEL_ROUND_ON_LAYOUT_FINISH：在布局完成后进行像素取整，适合大多数场景。   - PIXEL_ROUND_AFTER_MEASURE：在组件测量大小结束后进行像素取整，适用于使用组件级像素取整无法解决的像素取整问题场景，但最终大小相比PIXEL_ROUND_ON_LAYOUT_FINISH模式可能扩大1px。   设置异常值时，按PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH模式处理。 |
 
 **示例**
 

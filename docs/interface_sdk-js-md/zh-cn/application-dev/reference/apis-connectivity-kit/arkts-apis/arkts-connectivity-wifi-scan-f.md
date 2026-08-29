@@ -12,9 +12,11 @@ import { wifi } from '@kit.ConnectivityKit';
 function scan(): boolean
 ```
 
-启动WLAN扫描。
+启动Wi-Fi扫描。
 
-<p>该接口工作在异步模式。</p>
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃。
 
 **起始版本：** 6
 
@@ -30,7 +32,7 @@ function scan(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 扫描操作执行成功时返回{ |
+| boolean | true:扫描操作执行成功， false:扫描操作执行失败。 |
 
 **示例**
 

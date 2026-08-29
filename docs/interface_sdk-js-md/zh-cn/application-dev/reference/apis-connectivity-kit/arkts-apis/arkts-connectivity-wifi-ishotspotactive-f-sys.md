@@ -12,13 +12,13 @@ import { wifi } from '@kit.ConnectivityKit';
 function isHotspotActive(): boolean
 ```
 
-热点是否已使能。
+热点是否已激活。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [isHotspotActive](arkts-connectivity-wifimanager-ishotspotactive-f-sys.md)
+**替代接口：** [isHotspotActive](arkts-connectivity-wifimanager-ishotspotactive-f.md)
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -30,7 +30,7 @@ function isHotspotActive(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true:已使能，false:未使能。 |
+| boolean | 热点是否已激活 true:已激活， false:未激活。 |
 
 **示例**
 

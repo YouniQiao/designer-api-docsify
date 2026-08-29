@@ -1,6 +1,6 @@
 # WifiBandType
 
-WLAN频段类型。@enum { number }
+表示WIFI频段类型的枚举。
 
 **起始版本：** 10
 
@@ -12,7 +12,7 @@ WLAN频段类型。@enum { number }
 WIFI_BAND_NONE
 ```
 
-默认。
+无效频段类型。
 
 **起始版本：** 10
 
@@ -24,7 +24,7 @@ WIFI_BAND_NONE
 WIFI_BAND_2G
 ```
 
-2.4G频段。
+2.4G频段类型。
 
 **起始版本：** 10
 
@@ -36,7 +36,7 @@ WIFI_BAND_2G
 WIFI_BAND_5G
 ```
 
-5G频段。
+5G频段类型。
 
 **起始版本：** 10
 
@@ -48,7 +48,7 @@ WIFI_BAND_5G
 WIFI_BAND_6G
 ```
 
-6G频段。
+6G频段类型。
 
 **起始版本：** 10
 
@@ -60,7 +60,7 @@ WIFI_BAND_6G
 WIFI_BAND_60G
 ```
 
-60G频段。
+60G频段类型。
 
 **起始版本：** 10
 

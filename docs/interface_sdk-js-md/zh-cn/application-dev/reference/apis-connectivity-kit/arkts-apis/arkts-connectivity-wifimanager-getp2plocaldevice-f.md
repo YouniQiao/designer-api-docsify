@@ -12,11 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getP2pLocalDevice(): Promise<WifiP2pDevice>
 ```
 
-获取本设备的信息。如果未获取ohos.permission.GET_WIFI_LOCAL_MAC权限，返回的WifiP2pDevice中的DeviceAddress将设置为"00:00:00:00:00:00"。
+获取P2P本端设备信息，使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 9
 
-**需要权限：** ohos.permission.GET_WIFI_INFO
+**需要权限：** 
+- API版本11+：ohos.permission.GET_WIFI_INFO
+- API版本9 - 10：ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -24,7 +26,7 @@ function getP2pLocalDevice(): Promise<WifiP2pDevice>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;WifiP2pDevice&gt; | 返回本设备的信息。 |
+| Promise&lt;WifiP2pDevice&gt; | Promise对象。表示本端设备信息。 |
 
 **错误码：**
 
@@ -59,11 +61,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getP2pLocalDevice(callback: AsyncCallback<WifiP2pDevice>): void
 ```
 
-获取本设备的信息。如果未获取ohos.permission.GET_WIFI_LOCAL_MAC权限，返回的WifiP2pDevice中的DeviceAddress将设置为"00:00:00:00:00:00"。
+获取P2P本端设备信息，使用callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 9
 
-**需要权限：** ohos.permission.GET_WIFI_INFO
+**需要权限：** 
+- API版本11+：ohos.permission.GET_WIFI_INFO
+- API版本9 - 10：ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -71,7 +75,7 @@ function getP2pLocalDevice(callback: AsyncCallback<WifiP2pDevice>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice&gt; | 是 | 表示回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiP2pDevice&gt; | 是 | 回调函数。当操作成功时，err为0，data表示本端设备信息。如果err为非0，表示处理出现错误。 |
 
 **错误码：**
 

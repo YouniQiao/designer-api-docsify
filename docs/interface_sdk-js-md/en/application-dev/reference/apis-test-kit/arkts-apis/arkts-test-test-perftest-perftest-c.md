@@ -19,7 +19,7 @@ Represents the general entry of the white-box performance test framework. It pro
 static create(strategy: PerfTestStrategy): PerfTest
 ```
 
-Creates a [PerfTest](#perftest) object and returns the object created. This API is a static API.
+Creates a [PerfTest](arkts-test-test-perftest-perftest-c.md) object and returns the object created. This API is a static API.
 
 **Since:** 20
 

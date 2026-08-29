@@ -12,9 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function enableHotspot(): boolean
 ```
 
-使能热点。
-
-<p>该方法是异步的。使能热点后，WLAN可能会被去使能。
+开启热点。
 
 **起始版本：** 7
 
@@ -32,7 +30,7 @@ function enableHotspot(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作成功时返回{ |
+| boolean | 开启热点是否成功。true:操作成功， false:操作失败。 |
 
 **示例**
 

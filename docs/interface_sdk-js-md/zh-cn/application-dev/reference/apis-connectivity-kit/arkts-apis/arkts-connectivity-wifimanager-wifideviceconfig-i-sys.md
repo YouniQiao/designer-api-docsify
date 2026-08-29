@@ -1,8 +1,8 @@
 # WifiDeviceConfig
 
-WLAN设备配置信息。
+Wi-Fi配置信息。
 
-**起始版本：** 12
+**起始版本：** 9
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -18,7 +18,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 configStatus?: number
 ```
 
-设备配置状态：0 - 使能，1 - 去使能，2 - 永久去使能，3 - 未知。
+返回当前网络是否允许参与选网。
+
+1 - 允许参与选网，2 - 禁止参与
+
+3 - 永久禁止参与，4 - 未知
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -34,7 +40,9 @@ configStatus?: number
 creatorUid?: number
 ```
 
-WLAN配置创建者的UID。
+创建用户的ID。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -50,7 +58,25 @@ WLAN配置创建者的UID。
 disableReason?: number
 ```
 
-去使能原因
+禁用原因：
+
+-1 - 未知原因，0 - 未禁用，1 - 关联拒绝，2 - 认证失败
+
+3 - DHCP失败，4 - 暂时无互联网连接
+
+5 - 认证无凭据，6 - 永久无互联网连接
+
+7 - 由WIFI管理器禁用，8 - 由于密码错误禁用
+
+9 - 认证无订阅，10 - 私有EAP认证错误
+
+11 - 未找到网络，12 - 连续失败
+
+13 - 由系统禁用，14 - EAP-AKA认证失败
+
+15 - 解除关联原因，16 - 禁用网络选择最大值
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -66,7 +92,7 @@ disableReason?: number
 family?: number
 ```
 
-静态IP族：0 - IPv4，1 - Ipv6。
+Static IP family: 0 - IPv4, 1 - Ipv6.
 
 **类型：** number
 
@@ -82,7 +108,9 @@ family?: number
 ipType?: IpType
 ```
 
-IP类型
+IP地址类型。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** IpType
 
@@ -98,7 +126,9 @@ IP类型
 isAutoConnectAllowed?: boolean
 ```
 
-是否允许自动连接配置：false - 不允许，true - 允许。
+是否允许自动连接。false:不允许，true:允许自动连接。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** boolean
 
@@ -114,27 +144,13 @@ isAutoConnectAllowed?: boolean
 isSecureWifi?: boolean
 ```
 
-安全WLAN探测配置：false - 否，true - 是。
+安全Wi-Fi检测。false:不是安全Wi-Fi，true:是安全Wi-Fi。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** boolean
 
 **起始版本：** 20
-
-**系统能力：** SystemCapability.Communication.WiFi.STA
-
-**系统接口：** 此接口为系统接口。
-
-## netId
-
-```TypeScript
-netId?: number
-```
-
-分配的networkId
-
-**类型：** number
-
-**起始版本：** 22
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -147,6 +163,8 @@ proxyConfig?: WifiProxyConfig
 ```
 
 代理配置。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** [WifiProxyConfig](arkts-connectivity-wifimanager-wifiproxyconfig-i-sys.md)
 
@@ -162,7 +180,9 @@ proxyConfig?: WifiProxyConfig
 randomMacAddr?: string
 ```
 
-随机MAC地址，长度为6。
+MAC地址。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** string
 
@@ -178,7 +198,9 @@ randomMacAddr?: string
 randomMacType?: number
 ```
 
-随机MAC类型
+MAC地址类型。0 - 随机MAC地址，1 - 设备MAC地址
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -194,7 +216,9 @@ randomMacType?: number
 staticIp?: IpConfig
 ```
 
-静态IP配置
+静态IP配置信息。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** IpConfig
 
@@ -210,7 +234,7 @@ staticIp?: IpConfig
 staticIpv6?: Ipv6Config
 ```
 
-静态IPv6配置
+IPv6 config of static
 
 **类型：** [Ipv6Config](arkts-connectivity-wifimanager-ipv6config-i-sys.md)
 

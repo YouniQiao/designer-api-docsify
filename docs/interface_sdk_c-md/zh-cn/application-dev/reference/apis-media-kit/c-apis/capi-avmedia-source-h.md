@@ -323,7 +323,7 @@ OH_AVErrCode OH_AVMediaSource_SetMimeType(OH_AVMediaSource *source, const char *
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AVMediaSource](capi-avmediasource-oh-avmediasource.md) *source | 指向OH_AVMediaSource的指针。 |
-| const char *mimetype | 媒体源的MIME类型。 |
+| const char *mimetype | 媒体源的MIME类型。{@link AV_MimeTypes} |
 
 **返回：**
 

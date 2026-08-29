@@ -36,7 +36,7 @@ state: AdvertisingState
 
 表示当前广播状态。
 
-**类型：** [AdvertisingState](arkts-connectivity-advertising-advertisingstate-e.md)
+**类型：** AdvertisingState
 
 **起始版本：** 26.0.0
 

@@ -37,8 +37,8 @@
  | Basic Services Kit | [@ohos.account.osAccount (系统账号管理)](../../apis-basic-services-kit/arkts-apis/arkts-account-osaccount.md)
  </br>[@ohos.account.distributedAccount (分布式账号管理)](../../apis-basic-services-kit/arkts-apis/arkts-account-distributedaccount.md)
  </br>[@ohos.wallpaper (壁纸)](../../apis-basic-services-kit/arkts-apis/arkts-wallpaper.md) |
- | Connectivity Kit |  @ohos.bluetooth (蓝牙)
- </br>@ohos.bluetoothManager (蓝牙)</br>nfctech (标准NFC-Tag Nfc 技术)
+ | Connectivity Kit |  [@ohos.bluetooth (蓝牙)](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-bluetooth-n.md)
+ </br>[@ohos.bluetoothManager (蓝牙)](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-bluetoothmanager-n.md)</br>nfctech (标准NFC-Tag Nfc 技术)
  </br>[@ohos.nfc.controller (标准NFC)](../../apis-connectivity-kit/arkts-apis/arkts-nfc-controller.md)
  </br>[@ohos.nfc.cardEmulation (标准NFC-cardEmulation)](../../apis-connectivity-kit/arkts-apis/arkts-nfc-cardemulation.md)
  </br>[@ohos.connectedTag (有源标签)](../../apis-connectivity-kit/arkts-apis/arkts-connectedtag.md)</br>[@ohos.wifiext (WLAN扩展接口)](../../apis-connectivity-kit/arkts-apis/arkts-wifiext.md)

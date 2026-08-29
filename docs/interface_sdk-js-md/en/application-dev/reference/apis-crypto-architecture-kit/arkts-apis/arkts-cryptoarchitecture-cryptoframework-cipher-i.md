@@ -215,7 +215,7 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 > **NOTE：**
 > 
 > 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
-> is complete and the [Cipher](#cipher) instance is cleared. When a new encryption and
+> is complete and the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is cleared. When a new encryption and
 > decryption process is started, **init()** must be called with a complete parameter list for initialization.
 > Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**
 > parameter must be set when **init** is called during decryption.
@@ -379,7 +379,7 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 > **NOTE：**
 > 
 > 1. In symmetric encryption and decryption, after **doFinal** is called, the encryption and decryption process
-> is complete and the [Cipher](#cipher) instance is cleared. When a new encryption and
+> is complete and the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is cleared. When a new encryption and
 > decryption process is started, **init()** must be called with a complete parameter list for initialization.
 > Even if the same symmetric key is used to encrypt and decrypt the same **Cipher** instance, the **params**
 > parameter must be set when **init** is called during decryption.
@@ -669,7 +669,7 @@ Initializes the crypto operation with the given crypto mode, key and parameters.
 init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCallback<void>): void
 ```
 
-Initializes the [cipher](#cipher) object for encryption and decryption. This API uses an asynchronous callback to return the result.
+Initializes the [cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) object for encryption and decryption. This API uses an asynchronous callback to return the result.
 
 **init**, **update**, and **doFinal** must be used together. **init** and **doFinal** are mandatory, and **update** is optional.
 
@@ -790,7 +790,7 @@ Initializes the cipher object for encryption and decryption. This API uses a pro
 initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void
 ```
 
-Initializes a [cipher](#cipher) instance. This API returns the result synchronously.
+Initializes a [cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance. This API returns the result synchronously.
 
 **initSync**, **updateSync**, and **doFinalSync** must be used together. **initSync** and **doFinalSync** are mandatory, and **updateSync** is optional.
 
@@ -873,7 +873,7 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 Updates the data to encrypt or decrypt by segment. This API uses an asynchronous callback to return the result.
 
-This API can be called only after the [Cipher](#cipher) instance is initialized by using [init()](#init).
+This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is initialized by using [init()](#init).
 
 > **NOTE：**
 > 
@@ -944,7 +944,7 @@ update(data: DataBlob): Promise<DataBlob>
 
 Updates the data to encrypt or decrypt by segment. This API uses a promise to return the result.
 
-This API can be called only after the [Cipher](#cipher) instance is initialized by using [init()](#init).
+This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is initialized by using [init()](#init).
 
 > **NOTE：**
 > 
@@ -1020,7 +1020,7 @@ updateSync(data: DataBlob): DataBlob
 
 Updates the data to encrypt or decrypt by segment.
 
-This API can be called only after the [Cipher](#cipher) instance is initialized by using [initSync()](#initsync).
+This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is initialized by using [initSync()](#initsync).
 
 See **NOTE：**in **update()** for other precautions.
 

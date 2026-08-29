@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function enableSemiWifi(): void
 ```
 
-使能WLAN半关闭（STA关闭、其他P2p、Hml可用）。
+使能Wi-Fi半关闭（STA关闭，P2P、HML等功能可用），异步接口，需要通过注册"wifiStateChange"事件的回调来监听是否使能成功。
 
 **起始版本：** 12
 

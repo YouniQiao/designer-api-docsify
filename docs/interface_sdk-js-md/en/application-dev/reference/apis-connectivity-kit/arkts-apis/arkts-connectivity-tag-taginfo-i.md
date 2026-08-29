@@ -1,6 +1,6 @@
 # TagInfo
 
-Before a card with tags is read or written, **[TagInfo](#taginfo)** must be obtained to determine the tag technologies supported by the card. In this way, the application can invoke the correct API to communicate with the card.
+Before a card with tags is read or written, **[TagInfo](arkts-connectivity-tag-taginfo-i.md)** must be obtained to determine the tag technologies supported by the card. In this way, the application can invoke the correct API to communicate with the card.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ supportedProfiles: number[]
 
 Supported profiles.
 
-Note: This parameter is supported since API version 7 and deprecated since API version 9. Use **[tag.TagInfo#technology](#taginfo)** instead.
+Note: This parameter is supported since API version 7 and deprecated since API version 9. Use **[tag.TagInfo#technology](arkts-connectivity-tag-taginfo-i.md)** instead.
 
 **Type:** number[]
 

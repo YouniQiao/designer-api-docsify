@@ -1,6 +1,6 @@
 # WifiCategory
 
-WLAN类别。@enum { number }
+表示热点支持的最高Wi-Fi类别。可以用于识别和区分不同Wi-Fi技术标准的热点。
 
 **起始版本：** 12
 
@@ -12,7 +12,7 @@ WLAN类别。@enum { number }
 DEFAULT = 1
 ```
 
-默认。
+Default。Wifi6以下的wifi类别。
 
 **起始版本：** 12
 

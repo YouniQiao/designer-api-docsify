@@ -14,6 +14,10 @@ function getScanInfos(): Promise<Array<WifiScanInfo>>
 
 获取扫描结果，使用Promise异步回调。
 
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃。
+
 **起始版本：** 6
 
 **废弃版本：** 9
@@ -28,7 +32,7 @@ function getScanInfos(): Promise<Array<WifiScanInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;WifiScanInfo&gt;&gt; | 返回扫描到的热点列表。 |
+| Promise&lt;Array&lt;WifiScanInfo&gt;&gt; | Promise对象。返回扫描到的热点列表。 |
 
 **示例**
 
@@ -61,6 +65,10 @@ function getScanInfos(callback: AsyncCallback<Array<WifiScanInfo>>): void
 
 获取扫描结果，使用callback异步回调。
 
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃。
+
 **起始版本：** 6
 
 **废弃版本：** 9
@@ -75,7 +83,7 @@ function getScanInfos(callback: AsyncCallback<Array<WifiScanInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiScanInfo&gt;&gt; | 是 | 回调函数。当成功时，err为0，data为扫描到的热点；否则err为非0值，data为空。 |
 
 **示例**
 

@@ -12,11 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getP2pGroups(): Promise<Array<WifiP2pGroupInfo>>
 ```
 
-获取群组信息。
+获取创建的所有P2P群组信息，使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 9
 
-**需要权限：** ohos.permission.GET_WIFI_INFO
+**需要权限：** 
+- API版本10+：ohos.permission.GET_WIFI_INFO
+- API版本9：ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -26,7 +28,7 @@ function getP2pGroups(): Promise<Array<WifiP2pGroupInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;WifiP2pGroupInfo&gt;&gt; | 返回群组信息。 |
+| Promise&lt;Array&lt;WifiP2pGroupInfo&gt;&gt; | Promise对象。表示所有群组信息。如果应用申请了ohos.permission.GET_WIFI_PEERS_MAC权限，则返回结果中的deviceAddress为真实设备地址，否则为随机设备地址。 |
 
 **错误码：**
 
@@ -63,11 +65,13 @@ wifiManager.getP2pGroups().then(data => {
 function getP2pGroups(callback: AsyncCallback<Array<WifiP2pGroupInfo>>): void
 ```
 
-获取群组信息。
+获取创建的所有P2P群组信息，使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 9
 
-**需要权限：** ohos.permission.GET_WIFI_INFO
+**需要权限：** 
+- API版本10+：ohos.permission.GET_WIFI_INFO
+- API版本9：ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -77,7 +81,7 @@ function getP2pGroups(callback: AsyncCallback<Array<WifiP2pGroupInfo>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiP2pGroupInfo&gt;&gt; | 是 | 表示回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;WifiP2pGroupInfo&gt;&gt; | 是 | 回调函数。当操作成功时，err为0，data表示所有群组信息。如果err为非0，表示处理出现错误。如果应用申请了ohos.permission.GET_WIFI_PEERS_MAC权限，则返回结果中的deviceAddress为真实设备地址，否则为随机设备地址。 |
 
 **错误码：**
 

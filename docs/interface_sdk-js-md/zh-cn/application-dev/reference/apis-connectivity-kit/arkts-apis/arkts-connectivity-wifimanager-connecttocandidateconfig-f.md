@@ -12,9 +12,9 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function connectToCandidateConfig(networkId: number): void
 ```
 
-通过networkId连接到指定的候选热点，只允许连接自己添加的配置。此方法一次连接一个配置。应用必须在前台运行。
+应用使用该接口连接到自己添加的候选网络。
 
-**起始版本：** 12
+**起始版本：** 9
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
@@ -26,7 +26,7 @@ function connectToCandidateConfig(networkId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| networkId | number | 是 | 将要连接的网络ID。networkId的值不能小于0。 |
+| networkId | number | 是 | 候选网络配置的ID。 |
 
 **错误码：**
 
@@ -58,7 +58,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function connectToCandidateConfig(settings: ConnectSettings): Promise<void>
 ```
 
-使用连接设置连接到指定的候选热点。
+应用使用该接口连接到自己添加的候选网络，支持设置自定义参数。
 
 **起始版本：** 26.0.0
 
@@ -74,13 +74,13 @@ function connectToCandidateConfig(settings: ConnectSettings): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| settings | [ConnectSettings](arkts-connectivity-wifimanager-connectsettings-i.md) | 是 | 表示连接设置。 |
+| settings | [ConnectSettings](arkts-connectivity-wifimanager-connectsettings-i.md) | 是 | 连接Wi-Fi设置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 返回用于返回操作结果的Promise对象。如果操作失败，返回错误信息。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

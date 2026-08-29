@@ -18,7 +18,7 @@ Disables listening for screen hopping status change events.
 
 **Deprecated since:** 11
 
-**Substitutes:** [off](#off-system-api)(type: 'cooperateMessage', callback?: Callback&lt;CooperateMessage&gt;)
+**Substitutes:** [off](arkts-distributedservice-cooperate-off-f-sys.md)(type: 'cooperateMessage', callback?: Callback&lt;CooperateMessage&gt;)
 
 **System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
 

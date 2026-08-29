@@ -1,8 +1,6 @@
 # GroupOwnerBand
 
-P2P群组带宽。
-
-@enum { number }
+表示群组带宽的枚举。
 
 **起始版本：** 9
 
@@ -26,7 +24,7 @@ GO_BAND_AUTO = 0
 GO_BAND_2GHZ = 1
 ```
 
-2.4GHz频段。
+2.4GHz。
 
 **起始版本：** 9
 
@@ -38,7 +36,7 @@ GO_BAND_2GHZ = 1
 GO_BAND_5GHZ = 2
 ```
 
-5GHz频段。
+5GHz。
 
 **起始版本：** 9
 

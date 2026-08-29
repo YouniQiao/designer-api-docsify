@@ -100,7 +100,7 @@ Unsubscribes from the user authentication result. This API is commonly used in t
 
 > **NOTE：**
 
-> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used
+> The [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance used to invoke this API must be the one used
 > to subscribe to the event.
 
 **Since:** 10
@@ -178,7 +178,7 @@ Unsubscribes from the authentication tip information. This API is commonly used 
 
 > **NOTE：**
 
-> The [UserAuthInstance](#userauthinstance) instance used to invoke this API must be the one used
+> The [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance used to invoke this API must be the one used
 > to subscribe to the event.
 
 **Since:** 20

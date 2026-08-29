@@ -1,6 +1,6 @@
 # WifiDetailState（系统接口）
 
-WLAN详细状态。@enum { number } WifiDetailState
+表示Wi-Fi开关状态的枚举。
 
 **起始版本：** 12
 
@@ -14,7 +14,7 @@ WLAN详细状态。@enum { number } WifiDetailState
 UNKNOWN = -1
 ```
 
-状态未知
+未指定。
 
 **起始版本：** 12
 
@@ -28,7 +28,7 @@ UNKNOWN = -1
 INACTIVE = 0
 ```
 
-WLAN已关闭
+已关闭。
 
 **起始版本：** 12
 
@@ -42,7 +42,7 @@ WLAN已关闭
 ACTIVATED = 1
 ```
 
-WLAN已打开
+已激活。
 
 **起始版本：** 12
 
@@ -56,7 +56,7 @@ WLAN已打开
 ACTIVATING = 2
 ```
 
-WLAN正在打开
+激活中。
 
 **起始版本：** 12
 
@@ -70,7 +70,7 @@ WLAN正在打开
 DEACTIVATING = 3
 ```
 
-WLAN正在关闭
+关闭中。
 
 **起始版本：** 12
 
@@ -84,7 +84,7 @@ WLAN正在关闭
 SEMI_ACTIVATING = 4
 ```
 
-WLAN STA正在进入半激活状态
+半关闭中。
 
 **起始版本：** 12
 
@@ -98,7 +98,7 @@ WLAN STA正在进入半激活状态
 SEMI_ACTIVE = 5
 ```
 
-WLAN STA处于半激活状态
+已半关闭。
 
 **起始版本：** 12
 

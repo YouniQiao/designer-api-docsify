@@ -12,7 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function on(type: 'streamChange', callback: Callback<number>): void
 ```
 
-订阅WLAN数据流改变事件。
+注册Wi-Fi流更改事件。使用callback异步回调。
 
 **起始版本：** 7
 
@@ -30,8 +30,8 @@ function on(type: 'streamChange', callback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'streamChange' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数。1:向下，2:向上，3:双向 |
+| type | 'streamChange' | 是 | 固定填"streamChange"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 状态改变回调函数，返回0：无，1：下行，2：上行，3：双向。 |
 
 
 ## on('hotspotStaJoin')
@@ -40,7 +40,7 @@ function on(type: 'streamChange', callback: Callback<number>): void
 function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void
 ```
 
-订阅WLAN热点STA加入事件。
+注册Wi-Fi热点sta加入事件。使用callback异步回调。
 
 **起始版本：** 7
 
@@ -58,8 +58,8 @@ function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'hotspotStaJoin' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 是 | 状态改变回调函数 |
+| type | 'hotspotStaJoin' | 是 | 固定填"hotspotStaJoin"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 是 | 回调函数，返回StationInfo对象。 |
 
 
 ## on('hotspotStaLeave')
@@ -68,7 +68,7 @@ function on(type: 'hotspotStaJoin', callback: Callback<StationInfo>): void
 function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void
 ```
 
-订阅WLAN热点STA离开事件。
+注册Wi-Fi热点sta离开事件。使用callback异步回调。
 
 **起始版本：** 7
 
@@ -86,5 +86,5 @@ function on(type: 'hotspotStaLeave', callback: Callback<StationInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'hotspotStaLeave' | 是 | 事件名称。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 是 | 状态改变回调函数 |
+| type | 'hotspotStaLeave' | 是 | 固定填"hotspotStaLeave"字符串。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | 是 | 回调函数，返回StationInfo对象。 |

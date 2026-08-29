@@ -18,7 +18,7 @@ Specifies capsule, circle, rounded rectangle, or normal button style.
 
 ## Key APIs
 
-- [SecurityComponentMethod](#securitycomponentmethod): A collection of universal attribute methods for  
+- [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md): A collection of universal attribute methods for  
 security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components.
 
 ## Child Components

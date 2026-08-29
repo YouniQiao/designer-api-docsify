@@ -320,7 +320,7 @@ on(type: 'playFinished', callback: Callback<void>): void
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听[SoundPool](#soundpool)的错误事件，该事件仅用于错误提示。使用callback异步回调。
+监听[SoundPool](arkts-media-soundpool-soundpool-i.md)的错误事件，该事件仅用于错误提示。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -362,7 +362,7 @@ on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
 on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
 ```
 
-监听[SoundPool](#soundpool)的错误事件，并返回包含错误码、错误发生阶段、资源ID和音频流ID的[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)。使用callback异步回调。
+监听[SoundPool](arkts-media-soundpool-soundpool-i.md)的错误事件，并返回包含错误码、错误发生阶段、资源ID和音频流ID的[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)。使用callback异步回调。
 
 **起始版本：** 20
 

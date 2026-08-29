@@ -12,7 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function setDeviceName(devName: string): boolean
 ```
 
-设置WLAN P2P设备名称。
+设置设备名称。
 
 **起始版本：** 8
 
@@ -30,13 +30,13 @@ function setDeviceName(devName: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| devName | string | 是 | 要设置的名称。 |
+| devName | string | 是 | 设备名称。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作成功时返回{ |
+| boolean | 设置设备名称操作是否成功。true:操作成功， false:操作失败。 |
 
 **示例**
 

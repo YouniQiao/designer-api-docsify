@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function reassociate(): void
 ```
 
-重新关联当前网络。
+重新关联网络。
 
 **起始版本：** 9
 

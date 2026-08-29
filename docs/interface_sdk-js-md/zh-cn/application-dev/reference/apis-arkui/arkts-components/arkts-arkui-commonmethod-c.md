@@ -680,7 +680,7 @@ align(value: Alignment): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## align
 
@@ -710,7 +710,7 @@ align(alignment: Alignment | LocalizedAlignment): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## alignRules
 
@@ -738,7 +738,7 @@ alignRules(value: AlignRuleOption): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## alignRules
 
@@ -768,7 +768,7 @@ alignRules(alignRule: LocalizedAlignRuleOptions): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## alignSelf
 
@@ -796,7 +796,7 @@ alignSelf(value: ItemAlign): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## allowDrop
 
@@ -903,9 +903,11 @@ aspectRatio(value: number): T
 指定当前组件的宽高比，aspectRatio=width/height。  
 - 仅设置width、aspectRatio时，height=width/aspectRatio。  
 - 仅设置height、aspectRatio时，width=height*aspectRatio。  
-- 同时设置width、height和aspectRatio时，height不生效，height=width/aspectRatio。
+- 同时设置width、height和aspectRatio时，height会被重新计算为width/aspectRatio，显式设置的height值不生效。
 
-设置aspectRatio属性后，组件宽高会受父组件内容区大小限制，[constraintSize](#constraintsize)的优先级高于aspectRatio。
+适用于需要保持固定宽高比的组件，例如图片展示、视频播放器、响应式布局中保持比例等场景。
+
+设置aspectRatio属性后，组件宽高会受父组件内容区大小限制，[constraintSize](#constraintsize)的优先级高于aspectRatio。当constraintSize设置的maxWidth/maxHeight约束与aspectRatio计算结果冲突时，组件将优先遵循constraintSize的maxWidth/maxHeight约束，此时aspectRatio可能无法生效。
 
 **起始版本：** 7
 
@@ -925,7 +927,7 @@ aspectRatio(value: number): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## attributeModifier
 
@@ -2194,7 +2196,7 @@ border(value: BorderOptions): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件，用于链式调用。 |
 
 ## borderColor
 
@@ -2203,6 +2205,10 @@ borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 ```
 
 设置边框的颜色。
+
+> **说明：**
+> 
+> 当使用border统一设置边框且color参数缺省时，需将borderColor设置在border之后调用才能生效。
 
 **起始版本：** 7
 
@@ -2216,13 +2222,13 @@ borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | 是 | Border color.Default value: **Color.Black |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | 是 | 设置元素的边框圆角半径，支持百分比，百分比依据组件宽度，默认单位：vp。默认值：0。设置圆角后，可搭配[clip](#clip)属性进行裁剪，避免子组件超出组件自身。   **说明：** 使用LocalizedBorderRadiuses类型时，在不同语言方向下边框圆角半径设置会有差异，具体参见示例2。设置四个不同圆角值，若某个圆角值超过高度和宽度中的最小值的一半时，按值的比例绘制异形圆角，效果参见示例4。<br>**起始版本：** 12 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件，用于链式调用。 |
 
 ## borderImage
 
@@ -2260,6 +2266,10 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses): T
 
 设置边框的圆角半径。
 
+> **说明：**
+> 
+> 当使用border统一设置边框且radius参数缺省时，需将borderRadius设置在border之后调用才能生效。
+
 **起始版本：** 7
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -2272,13 +2282,13 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | 是 | Radius of the border corners. The value can be expressed as a percentage of the component's width. When combined with the [clip](#clip) attribute, this setting clips child components to prevent them from extending beyond the component's boundaries.<br>**起始版本：** 12 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | 是 | 设置元素的边框圆角半径，支持百分比，百分比依据组件宽度，默认单位：vp。默认值：0。设置圆角后，可搭配[clip](#clip)属性进行裁剪，避免子组件超出组件自身。   **说明：** 使用LocalizedBorderRadiuses类型时，在不同语言方向下边框圆角半径设置会有差异，具体参见示例2。设置四个不同圆角值，若某个圆角值超过高度和宽度中的最小值的一半时，按值的比例绘制异形圆角，效果参见示例4。<br>**起始版本：** 12 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件，用于链式调用。 |
 
 ## borderRadius
 
@@ -2288,9 +2298,9 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses, type?: Re
 
 设置边框的圆角半径和绘制圆角的模式。
 
-**注意**
-1. **RenderStrategy.FAST**：当前组件及其子组件将直接以圆角效果绘制到画布上。
-2. **RenderStrategy.OFFSCREEN**：当前组件及其子组件将首先渲染到一个离屏画布，然后进行圆角裁剪，最后绘制到主画布上。
+> **说明：**
+> 
+> 当使用border统一设置边框且radius参数缺省时，需将borderRadius设置在border之后调用才能生效。
 
 **起始版本：** 22
 
@@ -2307,13 +2317,13 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses, type?: Re
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | 是 | 设置元素的边框圆角半径，支持百分比，百分比依据组件宽度。设置圆角后，可搭配clip属性进行裁剪，避免子组件超出组件自身。 |
-| type | [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md) | 否 | 设置组件绘制圆角的模式。默认值： **RenderStrategy.FAST**。 |
+| type | [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md) | 否 | 设置组件绘制圆角的模式。默认值：RenderStrategy.FAST。可选值：   - RenderStrategy.FAST：快速绘制模式，适用于常规圆角场景，性能更优。若组件包含模糊等复杂视觉效果，使用该模式可能导致圆角裁剪异常。   - RenderStrategy.OFFSCREEN：离屏绘制模式，适用于包含模糊等复杂视觉效果的圆角场景，可正确渲染圆角但性能开销较大。   默认值： **RenderStrategy.FAST**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件，用于链式调用。 |
 
 ## borderStyle
 
@@ -2341,7 +2351,7 @@ borderStyle(value: BorderStyle | EdgeStyles): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件，用于链式调用。 |
 
 ## borderWidth
 
@@ -2369,7 +2379,7 @@ borderWidth(value: Length | EdgeWidths | LocalizedEdgeWidths): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件，用于链式调用。 |
 
 ## brightness
 
@@ -2488,7 +2498,7 @@ chainWeight(chainWeight: ChainWeightOptions): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 **示例**
 
@@ -2987,7 +2997,7 @@ direction(value: Direction): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## displayPriority
 
@@ -2995,7 +3005,7 @@ direction(value: Direction): T
 displayPriority(value: number): T
 ```
 
-设置当前组件在布局容器中显示的优先级。
+设置当前组件在Row/Column/Flex(单行)容器中显示的优先级，优先级由数值的整数部分决定，整数部分越大优先级越高。适用于响应式布局中根据父容器空间动态显示/隐藏子组件的场景。例如，在不同屏幕尺寸下优先显示重要内容，隐藏次要内容。
 
 **起始版本：** 7
 
@@ -3009,13 +3019,13 @@ displayPriority(value: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 设置当前组件在布局容器中显示的优先级。默认值：1   **说明：**仅在Row/Column/Flex(单行)容器组件中生效。小数点后的数字不作优先级区分，即区间为[x, x + 1)内的数字视为相同优先级。例如：1.0与1.9为同一优先级。子组件的displayPriority均不大于1时，优先级没有区别。当子组件的displayPriority大于1时，displayPriority数值越大，优先级越高。若父容器空间不足，隐藏低优先级子组件。若某一优先级的子组件被隐藏，则优先级更低的子组件也都被隐藏取值限定为整数。 |
+| value | number | 是 | 设置当前组件在布局容器中显示的优先级，取值范围0, +∞)。默认值：1   **说明：**仅在[Row/Column/Flex(单行)容器组件中生效。当容器空间有限，需要控制组件显示顺序或隐藏低优先级组件时使用（如在Flex容器中根据空间大小动态显示内容）。建议根据组件重要性设置优先级，关键组件设置较大的值（如2-10），次要组件设置较小的值（如1）。小数点后的数字不影响优先级。不大于1的所有值优先级相同。大于1时，displayPriority的整数部分越大，优先级越高；同一整数区间内的值优先级相同。例如：0.5和1.0优先级相同（均不大于1）；1.5和1.9优先级相同（整数部分均为1）；2.0和2.9优先级相同（整数部分均为2），且高于1.x的优先级。若父容器空间不足，隐藏低优先级子组件。若某一优先级级别的子组件被隐藏，则所有更低优先级的子组件也都会被隐藏。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## doubleSided
 
@@ -3259,7 +3269,7 @@ enabled(value: boolean): T
 expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): T
 ```
 
-控制组件扩展其安全区域。
+控制组件扩展其安全区域，实现沉浸式效果。
 
 > **说明：**
 > 
@@ -3305,7 +3315,7 @@ expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## flexBasis
 
@@ -3313,7 +3323,7 @@ expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): T
 flexBasis(value: number | string): T
 ```
 
-设置组件的基准尺寸。
+设置组件的基准尺寸。仅作为Flex、Column、Row和DynamicLayout容器的子组件时支持设置此属性。设置后组件会以该基准尺寸作为初始尺寸参与布局计算。当父容器为Column、Row时，需设置主轴方向的尺寸。Column和Row在未设置主轴尺寸（width/height/size）时仍遵守默认布局行为，在主轴上自适应子组件尺寸，此时可能影响flexBasis的效果。
 
 **起始版本：** 7
 
@@ -3333,7 +3343,7 @@ flexBasis(value: number | string): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## flexGrow
 
@@ -3361,7 +3371,7 @@ flexGrow(value: number): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## flexShrink
 
@@ -3391,7 +3401,7 @@ flexShrink(value: number): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## focusable
 
@@ -4107,7 +4117,11 @@ height(value: Length): T
 
 设置组件自身的高度，缺省时使用子组件自身内容需要的高度。若子组件的高大于父组件的高，则子组件会溢出显示在父组件外部。
 
-从API version 10开始，该接口支持calc计算特性。
+> **说明：**
+> 
+> - 在Row、Column、RelativeContainer组件中，height设置auto表示自适应子组件。
+> 
+> - 从API version 10开始，该接口支持calc计算特性。
 
 **起始版本：** 7
 
@@ -4338,7 +4352,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## inspectorLabel
 
@@ -4514,7 +4528,7 @@ layoutGravity(alignment: LocalizedAlignment): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## layoutWeight
 
@@ -4766,13 +4780,13 @@ markAnchor(value: Position | LocalizedPosition): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Position \| [LocalizedPosition](../arkts-apis/arkts-arkui-localizedposition-i.md) | 是 | Positioning anchor that offsets an element from the position specified by position or offset **.position({x: value1, y: value2}).markAnchor({x: value3, y: value4})** has the same effect as **.position({x: value1 - value3, y: value2 - value4})**. The same applies to **offset**. If **.markAnchor({x: value1, y: value2})** is set separately, the effect is the same as that of **.offset({x: -value1, y: -value2})**. API version 9 and earlier: The default value is **{x: 0, y: 0}**. API version 10: no default value. This attribute does not take effect when it is set to an abnormal value.<br>**起始版本：** 12 |
+| value | Position \| [LocalizedPosition](../arkts-apis/arkts-arkui-localizedposition-i.md) | 是 | 设置元素在位置定位时的锚点，基于position或offset的初始位置，进行进一步的偏移调整。设置.position({x: value1, y: value2}).markAnchor({x: value3, y: value4})，效果等于设置.position({x: value1 - value3, y: value2 - value4})，offset同理。单独设置.markAnchor({x: value1, y: value2})，效果等于设置.offset({x: -value1, y: -value2})。API version 9及以前，默认值为：{x: 0, y: 0} API version 10：无默认值。设置异常值时该属性不生效。<br>**起始版本：** 12 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## mask
 
@@ -5212,13 +5226,13 @@ offset(value: Position | Edges | LocalizedEdges): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Position \| Edges \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | 是 | Offset of the component relative to its original layout position. The **offset** attribute does not affect the layout of the parent container. It adjusts the component position only during drawing. If of the Position type, this parameter sets the offset relative to the upper left corner of the component. If of the Edges type, this parameter sets the offset relative to the four edges of the component. **{x: x, y: y}** has the same effect as **{left: x, top: y}** and **{right: -x, bottom: -y}**. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) type supports the mirror mode: **start** is equivalent to **x** with left-to-right scripts and **-x** with right-to-left scripts. API version 9 and earlier: The default value is **{x: 0, y: 0}**. Default unit: vp API version 10: no default value. This attribute does not take effect when it is set to an abnormal value.<br>**起始版本：** 12 |
+| value | Position \| Edges \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | 是 | 相对偏移，组件基于原本的布局位置进行偏移。offset属性不影响父组件布局，仅在绘制时调整位置。Position类型基于组件自身左上角偏移，Edges类型基于组件自身四边偏移。 offset属性设置{x: x, y: y}与设置{left: x, top: y}以及{right: -x, bottom: -y}效果相同，类型LocalizedEdges支持镜像模式：LTR模式下start等同于x，RTL模式下start等同于-x。API version 9及以前，默认值为：{x: 0, y: 0} 默认单位：vp API version 10：无默认值。设置异常值时该属性不生效。<br>**起始版本：** 12 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## onAccessibilityActionIntercept
 
@@ -7084,19 +7098,19 @@ parallelGesture(gesture: GestureType, mask?: GestureMask): T
 pixelRound(value: PixelRoundPolicy): T
 ```
 
-指定当前组件在指定方向上的像素取整对齐方式，某方向不设置时默认在该方向进行四舍五入取整。
+指定当前组件在指定方向上的像素取整对齐方式，使用后组件边界坐标将按指定策略取整，从而避免因浮点数绘制产生的视觉异常（如1px缝隙、组件重叠、分割线消失）。从API version 12开始，某方向不设置时默认在该方向进行四舍五入取整。
 
 > **说明：**
 > 
-> - 在API version 11，本接口采用半像素对齐方式（即0\~0.25取0，0.25\~0.75取0.5，0.75\~1.0取1）。从API version 12开始，本接口采用四舍五入的取整方式，并支持组件级关闭像素取整的能力。
+> - 在API version 11，本接口采用半像素对齐方式（即0\~0.25取0，0.25\~0.75取0.5，0.75\~1.0取1）。该方式通过保留0.5像素值来减少连续取整可能带来的累积误差。从API version 12开始，未设置取整策略的方向默认采用四舍五入的取整方式，并支持通过PixelRoundCalcPolicy.NO_FORCE_ROUND关闭指定方向的像素取整。
 > 
-> - 从API version 12开始，该接口支持在[attributeModifier](ts-universal-attributes-attribute-modifier.md#attributemodifier)中调用。
+> - 从API version12开始，该接口支持在[attributeModifier](ts-universal-attributes-attribute-modifier.md#attributemodifier)中调用。
 
 正常计算时，上下方向与组件高度相对应，左右方向（镜像的起始方向称为左）与宽度相对应。为方便描述将两组方向称为左上和右下。
 
 - 计算当前组件左上角坐标： 左上角相对父容器偏移量。  
 - 计算当前组件右下角坐标： 左上角相对于父容器偏移量 + 组件自身尺寸。  
-- 重新计算当前组件尺寸： 右下角坐标四舍五入取整 - 左上角坐标四舍五入取整。
+- 重新计算当前组件尺寸： 右下角坐标四舍五入取整 - 左上角坐标四舍五入取整（API version 11采用半像素对齐方式，API version 12采用四舍五入方式）。
 
 **起始版本：** 11
 
@@ -7112,13 +7126,13 @@ pixelRound(value: PixelRoundPolicy): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md) | 是 | 指定当前组件边界取整策略。   **说明：**该属性用于因浮点数绘制产生视觉异常的场景。取整结果不仅和组件的宽高有关，也与组件的位置有关。即使设置组件的宽高相同，由于以浮点数描述的组件位置不同，舍入后组件的最终宽高也可能不同。 |
+| value | [PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md) | 是 | 指定当前组件边界取整策略。[PixelRoundPolicy](arkts-arkui-pixelroundpolicy-i.md)包含start、top、end、bottom四个可选属性，分别对应组件前部、上部、尾部、底部边界。每个属性可设置[PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)枚举值。设置PixelRoundCalcPolicy.NO_FORCE_ROUND可关闭对应方向上的像素取整，未设置的属性默认按四舍五入规则取整。   **说明：**该属性用于因浮点数绘制产生视觉异常的场景。取整结果不仅和组件的宽高有关，也与组件的位置有关。即使设置组件的宽高相同，由于以浮点数描述的组件位置不同，舍入后组件的最终宽高也可能不同。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## pixelStretchEffect
 
@@ -7206,13 +7220,13 @@ position(value: Position | Edges | LocalizedEdges): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Position \| Edges \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | 是 | Absolute positioning that determines the child component's position relative to the parent's content area. The content area of the parent component is calculated by subtracting the [border](#border), padding, and [safeAreaPadding](#safeareapadding) values from the parent component's total size. This resulting content area defines the available layout space for child components. This attribute does not take effect when it is set to an abnormal value.<br>**起始版本：** 12 |
+| value | Position \| Edges \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | 是 | 绝对定位，确定子组件相对父组件内容区的位置，父组件内容区的大小为父组件大小减去[border](#border)、padding、[safeAreaPadding](#safeareapadding)后提供给子组件可布局的内容区域大小。设置异常值时该属性不生效。<br>**起始版本：** 12 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| T | Current component. |
+| T | 返回当前组件。 |
 
 ## priorityGesture
 
@@ -8871,7 +8885,15 @@ width(value: Length): T
 
 设置组件自身的宽度，缺省时使用子组件自身内容需要的宽度。若子组件的宽大于父组件的宽，则子组件会溢出显示在父组件外部。
 
-从API version 10开始，该接口支持calc计算特性。
+> **说明：**
+> 
+> - 在[TextInput](./ts-basic-components-textinput.md)组件中，width设置auto表示自适应文本宽度。
+> 
+> - 在[AlphabetIndexer](./ts-container-alphabet-indexer.md)组件中，width设置auto表示自适应宽度最大索引项的宽度。
+> 
+> - 在Row、Column、RelativeContainer组件中，width设置auto表示自适应子组件。
+> 
+> - 从API version 10开始，该接口支持calc计算特性。
 
 **起始版本：** 7
 

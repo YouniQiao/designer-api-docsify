@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function disableHotspot(): void
 ```
 
-关闭WLAN热点功能。此方法为异步方法。如果WLAN热点关闭后WLAN已使能，则WLAN可能会重新使能。
+关闭热点 ，异步接口，是否关闭成功需要注册并监听hotspotStateChange的回调。
 
 **起始版本：** 9
 

@@ -12,9 +12,16 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getLinkedInfo(): Promise<WifiLinkedInfo>
 ```
 
-获取WLAN连接信息。如果未获取ohos.permission.GET_WIFI_PEERS_MAC权限，返回随机bssid。
+获取Wi-Fi连接信息。使用Promise异步回调。
 
-**起始版本：** 12
+> **说明：**
+> 
+> - 当macType是1（设备MAC地址）时，获取macAddress还需申请ohos.permission.GET_WIFI_LOCAL_MAC权限（API 8-15仅面向系统应用开放。从API 16开始，在PC/2in1设
+> 备上面向普通应用开放，在其余设备上仍仅面向系统应用开放），无该权限时，macAddress返回为空。
+> 
+> - 如果应用申请了ohos.permission.GET_WIFI_PEERS_MAC权限，则返回结果中的bssid为真实BSSID地址，否则为随机设备地址。
+
+**起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -26,7 +33,7 @@ function getLinkedInfo(): Promise<WifiLinkedInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;WifiLinkedInfo&gt; | 返回WLAN连接信息。 |
+| Promise&lt;WifiLinkedInfo&gt; | Promise对象。表示Wi-Fi连接信息。 |
 
 **错误码：**
 
@@ -56,9 +63,16 @@ wifiManager.getLinkedInfo().then((data: wifiManager.WifiLinkedInfo) => {
 function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 ```
 
-获取WLAN连接信息。
+获取Wi-Fi连接信息。使用callback异步回调。
 
-**起始版本：** 12
+> **说明：**
+> 
+> - 当macType是1（设备MAC地址），获取macAddress还需申请ohos.permission.GET_WIFI_LOCAL_MAC权限（API8-15仅面向系统应用开放。从API 16开始，在PC/2in1设备上
+> 面向普通应用开放，在其余设备上仍仅面向系统应用开放），无该权限时，macAddress返回为空。
+> 
+> - 如果应用申请了ohos.permission.GET_WIFI_PEERS_MAC权限，则返回结果中的bssid为真实BSSID地址，否则为随机设备地址。
+
+**起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -68,7 +82,7 @@ function getLinkedInfo(callback: AsyncCallback<WifiLinkedInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | 是 | 表示回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WifiLinkedInfo&gt; | 是 | 回调函数。当获取成功时，error为0，data表示Wi-Fi连接信息。如果error为非0，表示处理出现错误。 |
 
 **错误码：**
 

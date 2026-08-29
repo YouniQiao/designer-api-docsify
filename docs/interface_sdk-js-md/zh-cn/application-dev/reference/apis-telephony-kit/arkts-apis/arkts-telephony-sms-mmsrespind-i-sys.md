@@ -21,7 +21,7 @@ reportAllowed?: ReportType
 
 允许报告
 
-**类型：** [ReportType](arkts-telephony-sms-reporttype-e-sys.md)
+**类型：** ReportType
 
 **起始版本：** 8
 

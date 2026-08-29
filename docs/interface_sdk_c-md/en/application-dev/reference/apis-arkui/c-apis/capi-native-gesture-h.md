@@ -457,7 +457,7 @@ Obtains the component handle corresponding to a touch recognizer.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_NodeHandle | Component handle corresponding to the touch recognizer. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Component handle corresponding to the touch recognizer. |
 
 ### OH_ArkUI_TouchRecognizer_CancelTouch()
 
@@ -530,7 +530,7 @@ Obtains gesture input.
 
 | Type | Description |
 | -- | -- |
-| [const ArkUI_UIInputEvent*](capi-arkui-eventmodule-arkui-uiinputevent.md) | Pointer to the input event of the gesture event. |
+| const ArkUI_UIInputEvent* | Pointer to the input event of the gesture event. |
 
 ### OH_ArkUI_LongPress_GetRepeatCount()
 
@@ -842,7 +842,7 @@ Obtains the ArkUI component to which the gesture is bound.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_NodeHandle | ArkUI component to which the gesture is bound. Returns NULL if the event is invalid. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | ArkUI component to which the gesture is bound. Returns NULL if the event is invalid. |
 
 ### OH_ArkUI_GetResponseRecognizersFromInterruptInfo()
 
@@ -1519,7 +1519,7 @@ Obtains the maximum movement distance allowed for gesture recognition by the lon
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RECOGNIZER_TYPE_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the gesture recognizer type is not      supported. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RECOGNIZER_TYPE_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the gesture recognizer type is not      supported. |
 
 ### OH_ArkUI_PanGesture_SetDistanceMap()
 
@@ -1546,7 +1546,7 @@ Sets the minimum sliding distance threshold mapping for gesture recognition.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RECOGNIZER_TYPE_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the gesture recognizer type is not      supported. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RECOGNIZER_TYPE_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the gesture recognizer type is not      supported. |
 
 ### OH_ArkUI_PanGesture_GetDistanceByToolType()
 
@@ -1572,7 +1572,7 @@ Obtains the movement distance threshold for gesture recognition for a specific i
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RECOGNIZER_TYPE_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the gesture recognizer type is not      supported. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RECOGNIZER_TYPE_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the gesture recognizer type is not      supported. |
 
 ### OH_ArkUI_SetTouchTestDoneCallback()
 
@@ -1598,7 +1598,7 @@ Registers a callback that is executed after all gesture recognizers are collecte
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_GestureInterrupter_GetUserData()
 
@@ -1646,7 +1646,7 @@ Prevents a gesture recognizer from participating in the current gesture recognit
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_LongPressGesture_SetAllowableMovement()
 
@@ -1671,7 +1671,7 @@ Sets the maximum movement distance allowed for gesture recognition by the long p
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RECOGNIZER_TYPE_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the gesture recognizer type is not      supported. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs.      <br>Returns [ARKUI_ERROR_CODE_RECOGNIZER_TYPE_NOT_SUPPORTED](capi-error-code-h.md#arkui_errorcode) if the gesture recognizer type is not      supported. |
 
 ### OH_ArkUI_GestureCollectInterceptInfo_GetResponseRecognizers()
 
@@ -1697,7 +1697,7 @@ Obtains gesture recognizer handles from gesture collection interception informat
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_GestureCollectInterceptInfo_GetTouchRecognizers()
 
@@ -1723,7 +1723,7 @@ Obtains touch recognizer handles from gesture collection interception informatio
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_GestureCollectInterceptInfo_SetGestureCollectIntervention()
 
@@ -1748,7 +1748,7 @@ Sets the intervention mode for gesture collection.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_GetGestureBindNodeUniqueId()
 
@@ -1773,7 +1773,7 @@ Obtains the unique ID of the component bound to a gesture recognizer.
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if a parameter error occurs. |
 
 ### OH_ArkUI_TouchRecognizer_IsHostBelongsTo()
 

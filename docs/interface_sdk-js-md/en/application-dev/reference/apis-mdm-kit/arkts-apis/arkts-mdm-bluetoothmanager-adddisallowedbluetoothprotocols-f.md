@@ -81,7 +81,7 @@ Adds disallowed Bluetooth protocols. After the setting, specified users cannot u
 > **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
 > 
 > 3. This API and
-> [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#adddisallowedbluetoothprotocols) are
+> [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](arkts-mdm-bluetoothmanager-adddisallowedbluetoothprotocols-f.md) are
 > overloaded APIs. This API adds the **policy** parameter to specify the transfer policy, enabling more fine-
 > grained control over Bluetooth protocol disabling behavior (for example, blocking only sending, only receiving,
 > or both sending and receiving). If both APIs are used to configure disabling policies, the policies will be

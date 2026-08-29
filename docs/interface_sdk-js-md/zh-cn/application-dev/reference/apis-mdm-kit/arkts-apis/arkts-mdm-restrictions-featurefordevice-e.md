@@ -234,7 +234,7 @@ USB = 15
 
 4）通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md)接口禁用了某用户USB存储设备写入能力。
 
-5）禁用USB转串口（[USB_SERIAL](#featurefordevice)）。
+5）禁用USB转串口（[USB_SERIAL](arkts-mdm-restrictions-featurefordevice-e.md)）。
 
 **起始版本：** 26.0.0
 
@@ -604,7 +604,7 @@ USB_SERIAL = 41
 
 1）通过[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md)接口添加了USB设备可用名单。
 
-2）禁用设备USB能力（[USB](#featurefordevice)）。
+2）禁用设备USB能力（[USB](arkts-mdm-restrictions-featurefordevice-e.md)）。
 
 **起始版本：** 26.0.0
 

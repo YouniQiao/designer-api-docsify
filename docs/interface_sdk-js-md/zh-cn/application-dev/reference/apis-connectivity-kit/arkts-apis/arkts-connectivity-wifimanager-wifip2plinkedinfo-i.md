@@ -1,6 +1,6 @@
 # WifiP2pLinkedInfo
 
-P2P连接信息。
+提供Wi-Fi连接的相关信息。
 
 **起始版本：** 9
 
@@ -32,7 +32,7 @@ P2P连接状态。
 groupOwnerAddr: string
 ```
 
-群主地址。
+群组IP地址。
 
 **类型：** string
 
@@ -46,7 +46,7 @@ groupOwnerAddr: string
 isGroupOwner: boolean
 ```
 
-{@code true}表示是群主，{@code false}表示不是群主。
+true表示是群主，false表示不是群主。
 
 **类型：** boolean
 

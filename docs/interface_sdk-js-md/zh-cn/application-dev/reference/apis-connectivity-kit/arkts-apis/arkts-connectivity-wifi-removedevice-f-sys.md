@@ -14,8 +14,6 @@ function removeDevice(id: number): boolean
 
 移除指定的网络配置。
 
-<p>删除WLAN网络后，其配置将从网络配置列表中删除。如果正在连接该WLAN网络，连接将被中断。应用只能删除自己创建的WLAN网络。
-
 **起始版本：** 7
 
 **废弃版本：** 9
@@ -32,13 +30,13 @@ function removeDevice(id: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | number | 是 | WLAN网络的ID，可通过{ |
+| id | number | 是 | 网络配置ID。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 操作成功时返回{ |
+| boolean | 移除指定的网络配置操作是否成功。true:操作成功， false:操作失败。 |
 
 **示例**
 

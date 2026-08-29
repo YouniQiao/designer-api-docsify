@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function delHotspotBlockList(stationInfo: StationInfo): void
 ```
 
-从黑名单中删除站点，该站点可以访问热点。
+将设备从热点的阻止列表中删除。
 
 **起始版本：** 11
 
@@ -26,7 +26,7 @@ function delHotspotBlockList(stationInfo: StationInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| stationInfo | StationInfo | 是 | 将要从黑名单中删除的站点。 |
+| stationInfo | StationInfo | 是 | 将从热点的阻止列表中删除的设备。 |
 
 **错误码：**
 

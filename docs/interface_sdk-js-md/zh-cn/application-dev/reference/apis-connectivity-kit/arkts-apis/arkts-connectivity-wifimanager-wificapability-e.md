@@ -1,6 +1,6 @@
 # WifiCapability
 
-WLAN能力
+Wi-Fi功能。
 
 **起始版本：** 26.0.0
 
@@ -12,7 +12,7 @@ WLAN能力
 WIFI_AUTO_ENABLE = 0
 ```
 
-WLAN自动使能能力
+Wi-Fi自动启用功能。
 
 **起始版本：** 26.0.0
 

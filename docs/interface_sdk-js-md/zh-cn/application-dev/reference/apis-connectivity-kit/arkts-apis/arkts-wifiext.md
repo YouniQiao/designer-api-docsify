@@ -1,10 +1,10 @@
-# @ohos.wifiext
+# @ohos.wifiext(WLAN扩展接口)
 
-提供WLAN扩展接口，供非通用类型产品使用。
+该模块主要提供Wi-Fi扩展接口，供非通用类型产品使用。
 
-<p>本文件涉及的接口为非通用接口。这些扩展接口仅供部分产品类型使用，例如路由器。普通产品不应使用这些接口。</p>
-
-@namespace wifiext
+> **说明：**
+> 
+> 从API version 9开始，该接口不再维护，推荐使用[@ohos.wifiManagerExt (WLAN扩展接口)](arkts-wifimanagerext.md)等相关接口。
 
 **起始版本：** 8
 
@@ -22,12 +22,12 @@ import { wifiext } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [disableHotspot](arkts-connectivity-wifiext-disablehotspot-f.md) | 去使能WLAN热点。 |
-| [enableHotspot](arkts-connectivity-wifiext-enablehotspot-f.md) | 使能WLAN热点。 |
-| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) | 获取功率模式。 |
-| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) | 获取功率模式。 |
-| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) | 获取支持的功率模式。 |
-| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) | 获取支持的功率模式。 |
+| [disableHotspot](arkts-connectivity-wifiext-disablehotspot-f.md) | 禁用Wi-Fi热点。 |
+| [enableHotspot](arkts-connectivity-wifiext-enablehotspot-f.md) | 启用Wi-Fi热点。 |
+| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) | 获取功率模式，使用Promise异步回调。 |
+| [getPowerModel](arkts-connectivity-wifiext-getpowermodel-f.md) | 获取功率模式。使用callback异步回调。 |
+| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) | 获取支持的功率模式。使用Promise异步回调。 |
+| [getSupportedPowerModel](arkts-connectivity-wifiext-getsupportedpowermodel-f.md) | 获取支持的功率模式。使用callback异步回调。 |
 | [setPowerModel](arkts-connectivity-wifiext-setpowermodel-f.md) | 设置功率模式。 |
 
 ### 枚举

@@ -39,7 +39,7 @@ Text color of the character counter when the maximum limit is exceeded. When the
 
 **NOTE：**
 
-The border color is changed only when the **highlightBorder** attribute of [InputCounterOptions](#inputcounteroptions) is set.
+The border color is changed only when the **highlightBorder** attribute of [InputCounterOptions](arkts-arkui-inputcounteroptions-i.md) is set.
 
 **Type:** ColorMetrics
 

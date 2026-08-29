@@ -501,7 +501,7 @@ Camera_ErrorCode OH_CameraManager_CreateCameraInput(Camera_Manager* cameraManage
 | -- | -- |
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | 相机管理器实例。 |
 | [const Camera_Device](capi-oh-camera-camera-device.md)* camera | 用于创建Camera_Input实例的Camera_Device。 |
-| [Camera_Input](capi-oh-camera-camera-input.md)** cameraInput | 如果方法调用成功，将创建Camera_Input实例。 |
+| Camera_Input** cameraInput | 如果方法调用成功，将创建Camera_Input实例。 |
 
 **返回：**
 
@@ -530,7 +530,7 @@ Camera_ErrorCode OH_CameraManager_CreateCameraInput_WithPositionAndType(Camera_M
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | 相机管理器实例。 |
 | [Camera_Position](capi-camera-h.md#camera_position) position | 用于创建Camera_Input实例的相机位置。 |
 | [Camera_Type](capi-camera-h.md#camera_type) type | 用于创建Camera_Input实例的相机类型。 |
-| [Camera_Input](capi-oh-camera-camera-input.md)** cameraInput | 如果方法调用成功，将创建Camera_Input实例。 |
+| Camera_Input** cameraInput | 如果方法调用成功，将创建Camera_Input实例。 |
 
 **返回：**
 
@@ -636,7 +636,7 @@ Camera_ErrorCode OH_CameraManager_CreatePhotoOutput(Camera_Manager* cameraManage
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | 相机管理器实例。 |
 | [const Camera_Profile](capi-oh-camera-camera-profile.md)* profile | 用于创建Camera_PhotoOutput实例的相机流配置文件。 |
 | const char* surfaceId | 用于创建Camera_PhotoOutput实例的surfaceId。 |
-| Camera_PhotoOutput** photoOutput | 如果方法调用成功，将创建Camera_PhotoOutput实例。 |
+| [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)** photoOutput | 如果方法调用成功，将创建Camera_PhotoOutput实例。 |
 
 **返回：**
 
@@ -662,7 +662,7 @@ Camera_ErrorCode OH_CameraManager_CreatePhotoOutputUsedInPreconfig(Camera_Manage
 | -- | -- |
 | [Camera_Manager](capi-oh-camera-camera-manager.md)* cameraManager | 相机管理器实例。 |
 | const char* surfaceId | 用于创建Camera_PhotoOutput实例的surfaceId。 |
-| Camera_PhotoOutput** photoOutput | 如果方法调用成功，将创建Camera_PhotoOutput实例。 |
+| [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)** photoOutput | 如果方法调用成功，将创建Camera_PhotoOutput实例。 |
 
 **返回：**
 
@@ -688,7 +688,7 @@ Camera_ErrorCode OH_CameraManager_CreatePhotoOutputWithoutSurface(Camera_Manager
 | -- | -- |
 | [Camera_Manager](capi-oh-camera-camera-manager.md) *cameraManager | 相机管理器实例。 |
 | [const Camera_Profile](capi-oh-camera-camera-profile.md) *profile | 用于创建Camera_PhotoOutput实例的相机流配置文件。 |
-| Camera_PhotoOutput **photoOutput | 如果方法调用成功，将创建Camera_PhotoOutput实例。 |
+| [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md) **photoOutput | 如果方法调用成功，将创建Camera_PhotoOutput实例。 |
 
 **返回：**
 

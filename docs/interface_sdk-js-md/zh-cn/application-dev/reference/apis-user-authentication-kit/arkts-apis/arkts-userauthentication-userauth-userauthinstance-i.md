@@ -99,7 +99,7 @@ off(type: 'result', callback?: IAuthCallback): void
 
 > **说明：**
 > 
-> 需要使用已经成功订阅事件的[UserAuthInstance](#userauthinstance)对象调用该接口进行取消订阅。
+> 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
 
 **起始版本：** 10
 
@@ -176,7 +176,7 @@ off(type: 'authTip', callback?: AuthTipCallback): void
 
 > **说明：**
 > 
-> 需要使用已经成功订阅事件的[UserAuthInstance](#userauthinstance)对象调用该接口进行取消订阅。
+> 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
 
 **起始版本：** 20
 

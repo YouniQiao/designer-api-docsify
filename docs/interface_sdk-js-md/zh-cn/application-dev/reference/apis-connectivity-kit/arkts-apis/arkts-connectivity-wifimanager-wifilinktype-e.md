@@ -1,6 +1,6 @@
 # WifiLinkType
 
-WLAN连接类型。@enum { number }
+枚举，Wi-Fi7连接类型。
 
 **起始版本：** 18
 
@@ -24,7 +24,7 @@ DEFAULT_LINK = 0
 WIFI7_SINGLE_LINK = 1
 ```
 
-WLAN7单链连接。
+Wi-Fi7单链连接。
 
 **起始版本：** 18
 
@@ -36,7 +36,7 @@ WLAN7单链连接。
 WIFI7_MLSR = 2
 ```
 
-WLAN7 MLSR连接。
+Wi-Fi7 MLSR（multi-link single-radio，多链路单射频）连接。
 
 **起始版本：** 18
 
@@ -48,7 +48,7 @@ WLAN7 MLSR连接。
 WIFI7_EMLSR = 3
 ```
 
-WLAN7 EMLSR连接。
+Wi-Fi7 EMLSR（enhanced multi-link single-radio，增强型多链路单天线）连接。
 
 **起始版本：** 18
 
@@ -60,7 +60,7 @@ WLAN7 EMLSR连接。
 WIFI7_STR = 4
 ```
 
-WLAN7 STR连接。
+Wi-Fi7 STR（Simultaneous Tx and Rx，同时发送和接收）连接。
 
 **起始版本：** 18
 

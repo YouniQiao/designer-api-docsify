@@ -822,6 +822,24 @@ To subscribe to this common event, your application must have the ohos.permissio
 
 **System API:** This is a system API.
 
+## COMMON_EVENT_DATA_VOLUME_STATUS_REPORT
+
+```TypeScript
+COMMON_EVENT_DATA_VOLUME_STATUS_REPORT = 'usual.event.DATA_VOLUME_STATUS_REPORT'
+```
+
+This common event indicates whether a specific volume is available for use on a PC with an extended data disk. A broadcast is sent after the extended data disk is mounted during system startup or after the user logs in.
+
+This event is supported only on PCs/2-in-1 devices.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Notification.CommonEvent
+
+**System API:** This is a system API.
+
 ## COMMON_EVENT_SANDBOX_BUNDLE_ADDED
 
 ```TypeScript

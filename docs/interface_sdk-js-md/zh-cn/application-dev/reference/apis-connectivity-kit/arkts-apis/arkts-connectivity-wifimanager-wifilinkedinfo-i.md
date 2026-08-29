@@ -1,8 +1,8 @@
 # WifiLinkedInfo
 
-WLAN连接信息。
+Wi-Fi连接信息。
 
-**起始版本：** 12
+**起始版本：** 9
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
@@ -18,7 +18,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 band: number
 ```
 
-WLAN接入点的频段。
+Wi-Fi接入点的频段，1表示2.4GHz；2表示5GHz。
 
 **类型：** number
 
@@ -32,11 +32,11 @@ WLAN接入点的频段。
 bssid: string
 ```
 
-WLAN热点的BSSID
+热点的BSSID（Basic Service Set Identifier，基本服务集标识符）即无线网络的MAC地址。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -48,7 +48,7 @@ WLAN热点的BSSID
 channelWidth: WifiChannelWidth
 ```
 
-已连接热点的带宽。
+当前连接热点的信道带宽。
 
 **类型：** [WifiChannelWidth](arkts-connectivity-wifimanager-wifichannelwidth-e.md)
 
@@ -62,7 +62,7 @@ channelWidth: WifiChannelWidth
 connState: ConnState
 ```
 
-此WLAN连接的状态。
+Wi-Fi连接状态。
 
 **类型：** ConnState
 
@@ -76,11 +76,11 @@ connState: ConnState
 frequency: number
 ```
 
-WLAN接入点的频率。
+Wi-Fi接入点的频率。
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -92,7 +92,10 @@ WLAN接入点的频率。
 ipAddress: number
 ```
 
-此WLAN连接的IP地址。
+Wi-Fi连接的IP地址。
+
+1. IP地址在WiFi连接信息和"设置 &gt; 关于本机 &gt; 状态信息"中可以查看。
+2. ipAddress值为number类型，需要转换为点分十进制格式的IP地址（如192.168.1.1），具体请参考[IP格式转换](https://developer.huawei.com/consumer/cn/doc/harmonyos-faqs/faqs-connectivity-4)。
 
 **类型：** number
 
@@ -106,7 +109,7 @@ ipAddress: number
 isHidden: boolean
 ```
 
-此WLAN连接的接入点（AP）的SSID是否隐藏。
+Wi-Fi接入点是否是隐藏网络，true表示是隐藏网络，false表示不是隐藏网络。
 
 **类型：** boolean
 
@@ -120,7 +123,7 @@ isHidden: boolean
 isHiLinkNetwork: boolean
 ```
 
-WLAN热点是否是HiLink网络。
+热点是否支持hilink，true表示支持， false表示不支持。
 
 **类型：** boolean
 
@@ -134,7 +137,7 @@ WLAN热点是否是HiLink网络。
 isRestricted: boolean
 ```
 
-此WLAN连接是否限制数据量。
+Wi-Fi接入点是否限制数据量，true表示限制，false表示不限制。
 
 **类型：** boolean
 
@@ -148,7 +151,7 @@ isRestricted: boolean
 linkSpeed: number
 ```
 
-WLAN接入点的速度。
+Wi-Fi接入点的上行速度，单位Mbps。
 
 **类型：** number
 
@@ -162,7 +165,7 @@ WLAN接入点的速度。
 macAddress: string
 ```
 
-设备的WLAN MAC地址。
+设备的MAC地址。
 
 **类型：** string
 
@@ -176,7 +179,7 @@ macAddress: string
 macType: number
 ```
 
-macAddress类型：0 - 真实MAC，1 - 随机MAC。
+MAC地址类型。0 - 随机MAC地址，1 - 设备MAC地址。
 
 **类型：** number
 
@@ -190,7 +193,7 @@ macAddress类型：0 - 真实MAC，1 - 随机MAC。
 maxSupportedRxLinkSpeed: number
 ```
 
-WLAN接入点的最大下行速度。
+当前支持的最大下行速率，单位Mbps。
 
 **类型：** number
 
@@ -204,7 +207,7 @@ WLAN接入点的最大下行速度。
 maxSupportedTxLinkSpeed: number
 ```
 
-WLAN接入点的最大上行速度。
+当前支持的最大上行速率，单位Mbps。
 
 **类型：** number
 
@@ -218,11 +221,13 @@ WLAN接入点的最大上行速度。
 rssi: number
 ```
 
-WLAN接入点的RSSI（dBm）。
+热点的信号强度(dBm)。
+
+RSSI（Received Signal Strength Indicator，接收信号强度指示），其标准取值范围为-127dBm至0dBm。在正常使用场景下，常见有效范围为-100dBm（弱信号）至-30dBm（强信号），接近0dBm表示信号极强。
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -234,7 +239,7 @@ WLAN接入点的RSSI（dBm）。
 rxLinkSpeed: number
 ```
 
-WLAN接入点的下行速度。
+Wi-Fi接入点的下行速度，单位Mbps。
 
 **类型：** number
 
@@ -248,11 +253,11 @@ WLAN接入点的下行速度。
 ssid: string
 ```
 
-WLAN热点的SSID
+热点的SSID（Service Set Identifier，服务集标识符），用于获取当前设备已连接的Wi-Fi热点的公开名称（即无线网络的名称），编码格式为UTF-8。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 9
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -264,7 +269,7 @@ WLAN热点的SSID
 supportedWifiCategory: WifiCategory
 ```
 
-支持的WLAN类别
+当前设备连接Wi-Fi后支持的最高协议版本。
 
 **类型：** [WifiCategory](arkts-connectivity-wifimanager-wificategory-e.md)
 
@@ -278,7 +283,7 @@ supportedWifiCategory: WifiCategory
 wifiLinkType?: WifiLinkType
 ```
 
-WLAN连接类型
+Wi-Fi7连接类型。
 
 **类型：** [WifiLinkType](arkts-connectivity-wifimanager-wifilinktype-e.md)
 
@@ -292,7 +297,7 @@ WLAN连接类型
 wifiStandard: WifiStandard
 ```
 
-当前连接的WLAN标准。
+当前路由器支持的最高Wi-Fi标准。
 
 **类型：** [WifiStandard](arkts-connectivity-wifimanager-wifistandard-e.md)
 

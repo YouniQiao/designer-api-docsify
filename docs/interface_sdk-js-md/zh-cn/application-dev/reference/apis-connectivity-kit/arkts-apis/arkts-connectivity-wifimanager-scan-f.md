@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function scan(): void
 ```
 
-启动WLAN扫描。
+启动Wi-Fi扫描，使用前先开启Wi-Fi。
 
 **起始版本：** 9
 

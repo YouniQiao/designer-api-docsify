@@ -16,7 +16,7 @@
 - [Basic Services Kit (852)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-account-appaccount.md)
 - [Calendar Kit (19)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-calendar-kit/arkts-apis/arkts-calendarmanager.md)
 - [Camera Kit (298)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-camera-kit/arkts-apis/arkts-multimedia-camera.md)
-- [Connectivity Kit (425)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-connectivity-kit/arkts-apis/arkts-connectedtag.md)
+- [Connectivity Kit (886)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-connectivity-kit/arkts-apis/arkts-bluetooth.md)
 - [Contacts Kit (53)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-contacts-kit/arkts-apis/arkts-contact.md)
 - [Content Embed Kit (23)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-content-embed-kit/c-apis/capi-content-embed-proxy-h.md)
 - [Core File Kit (462)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-application-backupextensionability.md)

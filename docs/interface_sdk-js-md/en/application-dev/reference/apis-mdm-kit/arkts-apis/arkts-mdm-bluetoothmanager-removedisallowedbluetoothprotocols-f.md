@@ -78,7 +78,7 @@ Removes Bluetooth protocols from the blocklist. After the setting, specified use
 > **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
 > 
 > 2. This API and
-> [removeDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#removedisallowedbluetoothprotocols) are
+> [removeDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](arkts-mdm-bluetoothmanager-removedisallowedbluetoothprotocols-f.md) are
 > overloaded APIs. This API adds the **policy** parameter to remove the disallowing configuration based on the
 > transfer policy. If the same protocol has been blocked under different policies via the two APIs, calling this
 > API removes only the blocking configuration for the corresponding policy, while blocking configurations of other

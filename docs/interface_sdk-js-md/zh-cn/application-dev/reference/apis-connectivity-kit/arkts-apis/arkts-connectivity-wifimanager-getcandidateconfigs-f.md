@@ -12,11 +12,17 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getCandidateConfigs(): Array<WifiDeviceConfig>
 ```
 
-获取自己添加的所有已存在的候选WLAN配置列表。只能获取自己在应用上创建的WLAN配置。
+获取候选网络配置。
 
-**起始版本：** 12
+- 候选网络是指曾经连接过或者手动添加的网络配置。  
+- 该接口返回当前应用添加的所有已保存但当前未连接的Wi-Fi候选网络配置。  
+- 用于展示可连接的网络列表。
 
-**需要权限：** ohos.permission.GET_WIFI_INFO
+**起始版本：** 9
+
+**需要权限：** 
+- API版本10+：ohos.permission.GET_WIFI_INFO
+- API版本9：ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -26,7 +32,7 @@ function getCandidateConfigs(): Array<WifiDeviceConfig>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;WifiDeviceConfig&gt; | 返回您在应用上创建的所有已存在的WLAN配置列表。 |
+| Array&lt;WifiDeviceConfig&gt; | 候选网络配置数组。 |
 
 **错误码：**
 

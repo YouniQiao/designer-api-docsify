@@ -63,9 +63,9 @@ import { media } from '@kit.MediaKit';
 | [AudioPlayer](arkts-media-media-audioplayer-i.md) |  |
 | [AudioRecorder](arkts-media-media-audiorecorder-i.md) |  |
 | [AudioRecorderConfig](arkts-media-media-audiorecorderconfig-i.md) |  |
-| [AVAdsController](arkts-media-media-avadscontroller-i.md) | 广告内容控制接口 |
+| [AVAdsController](arkts-media-media-avadscontroller-i.md) | 广告内容控制接口，用于管理广告播放控制器中的广告资源及监听广告事件，支持添加和移除广告源、跳过当前广告、禁用剩余广告等，适用于需要在视频播放过程中插入和管理广告内容的场景。通过[createAVAdsController](arkts-media-media-createavadscontroller-f.md)创建实例。 |
 | [AVDataSrcDescriptor](arkts-media-media-avdatasrcdescriptor-i.md) | 定义音频和视频文件的描述符，用于DataSource播放模式。使用场景：一个应用可以在下载完音频和视频资源之前创建播放实例并开始播放。 |
-| [AVDownloaderManager](arkts-media-media-avdownloadermanager-i.md) | 离线下载任务管理接口，用于管理媒体资源的离线下载任务，包括创建、暂停、恢复、移除下载任务以及监听下载状态和进度变化事件。 |
+| [AVDownloaderManager](arkts-media-media-avdownloadermanager-i.md) | 离线下载任务管理接口，用于管理媒体资源的离线下载任务，包括创建、暂停、恢复、移除下载任务以及监听下载状态和进度变化事件。适用于需要在应用内支持流媒体资源离线缓存、实现无网络环境下播放等场景，可帮助用户节省流量并提升弱网或离线场景下的媒体播放体验。通过[createAVDownloaderManager](arkts-media-media-createavdownloadermanager-f.md)创建实例。 |
 | [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md) | 媒体文件描述符。调用者需要确保fd有效，并且偏移量和长度是正确的。 |
 | [AVImageGenerator](arkts-media-media-avimagegenerator-i.md) | 视频缩略图获取类，用于从视频资源中获取缩略图。在调用AVImageGenerator的方法前，需要先通过[createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md)构建一个AVImageGenerator实例。 |
 | [AVMetadata](arkts-media-media-avmetadata-i.md) | 音视频元数据，包含各个元数据字段。 |
@@ -176,7 +176,7 @@ import { media } from '@kit.MediaKit';
 | --- | --- |
 | [AudioState](arkts-media-media-audiostate-t.md) | 音频播放的状态机。可通过state属性获取当前状态。 |
 | [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md) | 离线下载任务状态枚举。 |
-| [AVPlayerState](arkts-media-media-avplayerstate-t.md) | [AVPlayer](#ohosmultimediamedia)的状态机，可通过state属性主动获取当前状态，也可通过监听[stateChange](arkts-media-media-avplayer-i.md#onstatechange)事件上报当前状态，状态机之间的切换规则，可参考[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)。 |
+| [AVPlayerState](arkts-media-media-avplayerstate-t.md) | [AVPlayer](arkts-multimedia-media.md)的状态机，可通过state属性主动获取当前状态，也可通过监听[stateChange](arkts-media-media-avplayer-i.md#onstatechange)事件上报当前状态，状态机之间的切换规则，可参考[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)。 |
 | [AVRecorderState](arkts-media-media-avrecorderstate-t.md) | 音视频录制的状态机。可通过state属性获取当前状态。 |
 | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | 广告内容播放开始事件回调方法。 |
 | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | 广告媒体资源加载失败事件回调方法。 |

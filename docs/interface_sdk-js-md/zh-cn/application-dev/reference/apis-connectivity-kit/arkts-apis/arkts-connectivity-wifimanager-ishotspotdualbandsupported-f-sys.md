@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function isHotspotDualBandSupported(): boolean
 ```
 
-检查作为WLAN热点的设备是否同时支持2.4 GHz和5 GHz WLAN。
+检查当前设备的Wi-Fi热点功能是否支持双频段（同时支持2.4GHz和5GHz频段）。
 
 **起始版本：** 9
 
@@ -26,7 +26,7 @@ function isHotspotDualBandSupported(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 方法调用成功时返回{ |
+| boolean | true:支持， false:不支持。 |
 
 **错误码：**
 

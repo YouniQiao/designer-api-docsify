@@ -12,7 +12,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getHotspotConfig(): HotspotConfig
 ```
 
-获取WLAN热点配置。
+获取Wi-Fi热点的配置信息，包括SSID、加密方式、密码、带宽、信道、最大连接STA数量等。
 
 **起始版本：** 9
 
@@ -26,7 +26,7 @@ function getHotspotConfig(): HotspotConfig
 
 | 类型 | 说明 |
 | --- | --- |
-| HotspotConfig | 返回已存在或已使能的WLAN热点配置。 |
+| HotspotConfig | 热点的配置信息。 |
 
 **错误码：**
 

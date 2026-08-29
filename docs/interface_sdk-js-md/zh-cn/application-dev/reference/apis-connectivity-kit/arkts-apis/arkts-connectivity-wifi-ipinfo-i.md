@@ -1,8 +1,10 @@
 # IpInfo
 
-WLAN IP信息。
+IP信息。
 
-@interface IpInfo
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -24,7 +26,7 @@ import { wifi } from '@kit.ConnectivityKit';
 gateway: number
 ```
 
-WLAN连接的网关
+网关。
 
 **类型：** number
 
@@ -42,7 +44,7 @@ WLAN连接的网关
 ipAddress: number
 ```
 
-WLAN连接的IP地址
+IP地址。
 
 **类型：** number
 
@@ -60,7 +62,7 @@ WLAN连接的IP地址
 leaseDuration: number
 ```
 
-WLAN连接的IP地址租约时长
+IP地址租用时长，单位：秒(s)。
 
 **类型：** number
 
@@ -78,7 +80,7 @@ WLAN连接的IP地址租约时长
 netmask: number
 ```
 
-WLAN连接的网络掩码
+掩码。
 
 **类型：** number
 
@@ -96,7 +98,7 @@ WLAN连接的网络掩码
 primaryDns: number
 ```
 
-WLAN连接的主DNS服务器IP地址
+主DNS服务器IP地址。
 
 **类型：** number
 
@@ -114,7 +116,7 @@ WLAN连接的主DNS服务器IP地址
 secondDns: number
 ```
 
-WLAN连接的辅助DNS服务器IP地址
+备DNS服务器IP地址。
 
 **类型：** number
 
@@ -132,7 +134,7 @@ WLAN连接的辅助DNS服务器IP地址
 serverIp: number
 ```
 
-WLAN连接的DHCP服务器IP地址
+DHCP服务端IP地址。
 
 **类型：** number
 

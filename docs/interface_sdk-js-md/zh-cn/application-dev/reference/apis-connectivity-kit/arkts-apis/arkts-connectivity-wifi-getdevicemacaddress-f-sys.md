@@ -12,9 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function getDeviceMacAddress(): string[]
 ```
 
-获取设备的MAC地址。WLAN必须已使能。
-
-<p>MAC地址是唯一的，无法更改。
+获取设备的MAC地址。
 
 **起始版本：** 7
 

@@ -51,3 +51,5 @@ Requests to publish a form to the form host service of the remote device.
 | [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the maximum allowed. |
 | 16501017 | There is no space to publish the form. |
 | 16501018 | This form does not support publishing. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501008](../errorcode-form.md#16501008-adding-a-widget-to-the-home-screen-times-out) | Waiting for the form addition to the desktop timed out. |

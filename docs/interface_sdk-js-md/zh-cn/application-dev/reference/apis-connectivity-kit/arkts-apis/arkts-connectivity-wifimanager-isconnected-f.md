@@ -12,9 +12,9 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function isConnected(): boolean
 ```
 
-检查WLAN连接是否已建立。
+查询Wi-Fi是否已连接。
 
-**起始版本：** 12
+**起始版本：** 9
 
 **需要权限：** ohos.permission.GET_WIFI_INFO
 
@@ -26,7 +26,7 @@ function isConnected(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | WLAN连接已建立时返回{ |
+| boolean | true:已连接， false:未连接。 |
 
 **错误码：**
 

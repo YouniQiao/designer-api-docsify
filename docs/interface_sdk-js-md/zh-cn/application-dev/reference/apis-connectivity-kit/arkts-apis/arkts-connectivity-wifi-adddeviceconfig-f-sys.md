@@ -12,9 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 ```
 
-添加网络配置，使用Promise异步回调。
-
-<p>添加配置后，配置将被更新。</p>
+添加网络配置。使用Promise异步回调。
 
 **起始版本：** 6
 
@@ -32,13 +30,13 @@ function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | 是 | WLAN配置信息。 |
+| config | WifiDeviceConfig | 是 | Wi-Fi配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 返回添加的网络配置ID，如果值为{ |
+| Promise&lt;number&gt; | Promise对象。返回添加的网络配置ID，如果值为-1表示添加失败。 |
 
 **示例**
 
@@ -80,9 +78,7 @@ try {
 function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void
 ```
 
-添加网络配置，使用callback异步回调。
-
-<p>添加配置后，配置将被更新。</p>
+添加网络配置。使用callback异步回调。
 
 **起始版本：** 6
 
@@ -100,8 +96,8 @@ function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<numbe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiDeviceConfig | 是 | WLAN配置信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |  |
+| config | WifiDeviceConfig | 是 | Wi-Fi配置信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当操作成功时，error为0，data为添加的网络配置ID，如果data值为-1，表示添加失败。当error为非0，表示处理出现错误。 |
 
 **示例**
 

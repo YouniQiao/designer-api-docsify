@@ -13,14 +13,14 @@ Querying data from a large amount of data may take time or even cause applicatio
 
 The **relationalStore** module provides the following functionalities:
 
-- [RdbPredicates](#ohosdatarelationalstore): provides predicates indicating the nature,  
+- [RdbPredicates](arkts-data-relationalstore.md): provides predicates indicating the nature,  
 feature, or relationship of a data entity in an RDB store. It is used to define the operation conditions for an RDB store.  
-- [RdbStore](#ohosdatarelationalstore): provides APIs for managing data in an RDB store.  
-- [ResultSet](#ohosdatarelationalstore): provides APIs for accessing the result set obtained  
+- [RdbStore](arkts-data-relationalstore.md): provides APIs for managing data in an RDB store.  
+- [ResultSet](arkts-data-relationalstore.md): provides APIs for accessing the result set obtained  
 from the RDB store.  
-- [LiteResultSet](#ohosdatarelationalstore): provides APIs for accessing the result set  
-obtained from the RDB store, such as [queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount) and [querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount). Unlike [ResultSet](#ohosdatarelationalstore), **LiteResultSet** does not include the total number of rows in the query result.  
-- [Transaction](#ohosdatarelationalstore): provides APIs for managing transaction objects.
+- [LiteResultSet](arkts-data-relationalstore.md): provides APIs for accessing the result set  
+obtained from the RDB store, such as [queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount) and [querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount). Unlike [ResultSet](arkts-data-relationalstore.md), **LiteResultSet** does not include the total number of rows in the query result.  
+- [Transaction](arkts-data-relationalstore.md): provides APIs for managing transaction objects.
 
 **Since:** 9
 

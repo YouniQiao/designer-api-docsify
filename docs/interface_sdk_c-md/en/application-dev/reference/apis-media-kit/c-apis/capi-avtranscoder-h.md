@@ -56,7 +56,7 @@ Creates an instance of the transcoding configuration parameters.
 
 | Type | Description |
 | -- | -- |
-| OH_AVTranscoder_Config * | Pointer to the OH_AVTranscoder_Config instance created. If the operation fails, nullptr is returned. |
+| [OH_AVTranscoder_Config *](capi-avtranscoder-oh-avtranscoder-config.md) | Pointer to the OH_AVTranscoder_Config instance created. If the operation fails, nullptr is returned. |
 
 ### OH_AVTranscoderConfig_Release()
 
@@ -74,7 +74,7 @@ Releases the resources of the transcoding configuration parameters.After a succe
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder_Config* config | Pointer to an OH_AVTranscoder_Config instance. |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md)* config | Pointer to an OH_AVTranscoder_Config instance. |
 
 **Returns**:
 
@@ -98,7 +98,7 @@ Sets the file descriptor of the source video for transcoding.This function must 
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance. |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance. |
 | int32_t srcFd | Source file descriptor. |
 | int64_t srcOffset | The offset into the file where the data to be read, in bytes. |
 | int64_t length | The length in bytes of the data to be read |
@@ -125,7 +125,7 @@ Sets the file descriptor of the output video for transcoding.This function must 
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | int32_t dstFd | Destination file descriptor |
 
 **Returns**:
@@ -150,7 +150,7 @@ Sets the encoding format of the output video for transcoding.Currently, only AVC
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | const char *mimeType | Destination video mime type. See native_avcodec_base.h |
 
 **Returns**:
@@ -175,7 +175,7 @@ Sets the encoding format of the output audio for transcoding.Currently, only AAC
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | const char *mimeType | Destination audio mime type. See native_avcodec_base.h |
 
 **Returns**:
@@ -200,7 +200,7 @@ Sets the container format of the output video file for transcoding.Currently, on
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | [OH_AVOutputFormat](../AVCodecKit/capi-native-avcodec-base-h.md#oh_avoutputformat) mimeType | Destination file type. See native_avcodec_base.h |
 
 **Returns**:
@@ -225,7 +225,7 @@ Sets the bit rate of the output audio for transcoding.This function must be call
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | int32_t bitrate | Destination audio bitrate, in bit/s. |
 
 **Returns**:
@@ -250,7 +250,7 @@ Sets the bit rate of the output video for transcoding.This function must be call
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | int32_t bitrate | Destination video bitrate, in bit/s. |
 
 **Returns**:
@@ -275,7 +275,7 @@ Sets the resolution of the output video for transcoding, in px, where **width** 
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | int32_t width | Destination for video width, in px. |
 | int32_t height | Destination for video height, in px. |
 
@@ -301,7 +301,7 @@ Creates an AVTranscoder instance.
 
 | Type | Description |
 | -- | -- |
-| OH_AVTranscoder * | Pointer to the OH_AVTranscoder instance created. If the operation fails, nullptr is returned. |
+| [OH_AVTranscoder *](capi-avtranscoder-oh-avtranscoder.md) | Pointer to the OH_AVTranscoder instance created. If the operation fails, nullptr is returned. |
 
 ### OH_AVTranscoder_Prepare()
 
@@ -319,8 +319,8 @@ Sets the parameters for video transcoding and prepares for transcoding.This func
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance,see [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance,see [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) |
 
 **Returns**:
 
@@ -344,7 +344,7 @@ Starts transcoding.This function must be called after a successful call to [OH_A
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
 
 **Returns**:
 
@@ -368,7 +368,7 @@ Pauses transcoding.This function must be called when the AVTranscoder is in the 
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
 
 **Returns**:
 
@@ -392,7 +392,7 @@ Resumes transcoding.This function must be called when the AVTranscoder is in the
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
 
 **Returns**:
 
@@ -416,7 +416,7 @@ Cancels transcoding.This function must be called when the AVTranscoder is in the
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
 
 **Returns**:
 
@@ -440,7 +440,7 @@ Releases an AVTranscoder instance.
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
 
 **Returns**:
 
@@ -464,8 +464,8 @@ Registers a callback for transcoding state change events.This callback is invoke
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
-| OH_AVTranscoder_OnStateChange callback | State callback function, see [OH_AVTranscoder_OnStateChange](capi-avtranscoder-base-h.md#oh_avtranscoder_onstatechange) |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder_OnStateChange](capi-avtranscoder-base-h.md#oh_avtranscoder_onstatechange) callback | State callback function, see [OH_AVTranscoder_OnStateChange](capi-avtranscoder-base-h.md#oh_avtranscoder_onstatechange) |
 | void *userData | Pointer to user specific data |
 
 **Returns**:
@@ -490,8 +490,8 @@ Registers a callback for transcoding error events.This callback is invoked when 
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
-| OH_AVTranscoder_OnError callback | Error callback function, see [OH_AVTranscoder_OnError](capi-avtranscoder-base-h.md#oh_avtranscoder_onerror) |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder_OnError](capi-avtranscoder-base-h.md#oh_avtranscoder_onerror) callback | Error callback function, see [OH_AVTranscoder_OnError](capi-avtranscoder-base-h.md#oh_avtranscoder_onerror) |
 | void *userData | Pointer to user specific data |
 
 **Returns**:
@@ -516,8 +516,8 @@ Registers a callback for transcoding progress update events.This callback is inv
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder *transcoder | Pointer to an OH_AVTranscoder instance |
-| OH_AVTranscoder_OnProgressUpdate callback | Uri callback function,see [OH_AVTranscoder_OnProgressUpdate](capi-avtranscoder-base-h.md#oh_avtranscoder_onprogressupdate) |
+| [OH_AVTranscoder](capi-avtranscoder-oh-avtranscoder.md) *transcoder | Pointer to an OH_AVTranscoder instance |
+| [OH_AVTranscoder_OnProgressUpdate](capi-avtranscoder-base-h.md#oh_avtranscoder_onprogressupdate) callback | Uri callback function,see [OH_AVTranscoder_OnProgressUpdate](capi-avtranscoder-base-h.md#oh_avtranscoder_onprogressupdate) |
 | void *userData | Pointer to user specific data |
 
 **Returns**:
@@ -542,7 +542,7 @@ Enables B-frame encoding for the output video during transcoding.For details abo
 
 | Parameter | Description |
 | -- | -- |
-| OH_AVTranscoder_Config *config | Pointer to an OH_AVTranscoder_Config instance |
+| [OH_AVTranscoder_Config](capi-avtranscoder-oh-avtranscoder-config.md) *config | Pointer to an OH_AVTranscoder_Config instance |
 | bool enabled | Whether enable B Frame. If this function is not called, B Frame is disabled. |
 
 **Returns**:

@@ -1,8 +1,10 @@
 # WifiLinkedInfo
 
-WLAN连接信息。
+提供Wi-Fi连接的相关信息。
 
-@interface WifiLinkedInfo
+> **说明：**
+> 
+> 从API version 6开始支持，从API version 9开始废弃。
 
 **起始版本：** 6
 
@@ -24,7 +26,9 @@ import { wifi } from '@kit.ConnectivityKit';
 chload: number
 ```
 
-此WLAN连接的负载值。值越大表示负载越高。
+连接负载，值越大表示负载越高。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -44,7 +48,9 @@ chload: number
 networkId: number
 ```
 
-WLAN连接的ID(唯一标识)。
+网络配置ID。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -64,7 +70,9 @@ WLAN连接的ID(唯一标识)。
 snr: number
 ```
 
-此WLAN连接的信噪比(SNR)。
+信噪比，单位：dB。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** number
 
@@ -84,7 +92,9 @@ snr: number
 suppState: SuppState
 ```
 
-此WLAN连接的 supplicant 状态。
+请求状态。
+
+**系统接口：** 此接口为系统接口。
 
 **类型：** SuppState
 

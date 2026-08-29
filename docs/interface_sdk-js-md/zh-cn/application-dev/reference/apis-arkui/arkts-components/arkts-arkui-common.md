@@ -137,7 +137,7 @@ Common()
 | [PopupOptions](arkts-arkui-popupoptions-i.md) | 基础气泡的信息。 |
 | [PopupStateChangeParam](arkts-arkui-popupstatechangeparam-i.md) | 气泡的显示状态。 |
 | [PreviewConfiguration](arkts-arkui-previewconfiguration-i.md) | 配置自定义拖拽过程中的预览图样式。 |
-| [PreviewParams](arkts-arkui-previewparams-i.md) | Define Preview property |
+| [PreviewParams](arkts-arkui-previewparams-i.md) | @Preview参数对象。 |
 | [ProvideOptions](arkts-arkui-provideoptions-i.md) | ProvideOptions是\@Provide的选项。允许在同一组件树上通过allowOverride重写同名的\@Provide，适用于子组件需要覆盖父组件同名\@Provide值的场景，提高了跨层级状态管理的灵活性。具体例子可见[\@Provide支持allowOverride参数](../../../ui/state-management/arkts-provide-and-consume.md#provide支持allowoverride参数)。 |
 | [RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md) | 径向渐变参数。 |
 | [Rectangle](arkts-arkui-rectangle-i.md) | 矩形区域类型。 |

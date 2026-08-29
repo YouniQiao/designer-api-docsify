@@ -12,11 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function p2pConnect(config: WifiP2PConfig): void
 ```
 
-使用指定配置发起与设备的P2P连接。
+执行P2P连接。调用此方法连接后，如需取消可调用[p2pCancelConnect](arkts-connectivity-wifimanager-p2pcancelconnect-f.md)。
 
-**起始版本：** 10
+**起始版本：** 9
 
-**需要权限：** ohos.permission.GET_WIFI_INFO
+**需要权限：** 
+- API版本10+：ohos.permission.GET_WIFI_INFO
+- API版本9：ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **系统能力：** SystemCapability.Communication.WiFi.P2P
 
@@ -24,7 +26,7 @@ function p2pConnect(config: WifiP2PConfig): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | WifiP2PConfig | 是 | 表示连接到指定群组的配置。 |
+| config | WifiP2PConfig | 是 | 连接配置信息。如果DeviceAddressType未指定值，则DeviceAddressType默认为随机设备地址类型。 |
 
 **错误码：**
 

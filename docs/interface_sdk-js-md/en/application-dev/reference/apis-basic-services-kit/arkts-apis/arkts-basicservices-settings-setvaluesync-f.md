@@ -18,7 +18,7 @@ Set settingsdata value(synchronous method)
 
 **Deprecated since:** 9
 
-**Substitutes:** [setValueSync](#setvaluesync)
+**Substitutes:** [setValueSync](arkts-basicservices-settings-setvaluesync-f.md)
 
 **Required permissions:** ohos.permission.MANAGE_SETTINGS
 

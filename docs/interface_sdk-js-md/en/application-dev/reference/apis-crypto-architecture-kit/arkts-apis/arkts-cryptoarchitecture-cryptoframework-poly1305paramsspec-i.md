@@ -14,7 +14,7 @@ Applicable to ChaCha20-Poly1305.
 > [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md) returned by
 > [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal) or
 > [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync) and use them as **authTag** in
-> [Poly1305ParamsSpec](#poly1305paramsspec) for
+> [Poly1305ParamsSpec](arkts-cryptoarchitecture-cryptoframework-poly1305paramsspec-i.md) for
 > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) or
 > [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync) during decryption.
 

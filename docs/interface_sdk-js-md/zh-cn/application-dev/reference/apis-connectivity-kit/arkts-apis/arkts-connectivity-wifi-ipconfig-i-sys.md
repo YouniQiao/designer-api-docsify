@@ -1,8 +1,6 @@
 # IpConfig（系统接口）
 
-WLAN IP配置信息。
-
-@interface IpConfig
+IPv4配置信息。
 
 **起始版本：** 7
 
@@ -46,7 +44,7 @@ DNS服务器。
 domains: Array<string>
 ```
 
-域名。
+域信息。
 
 **类型：** Array&lt;string&gt;
 
@@ -86,7 +84,7 @@ gateway: number
 ipAddress: number
 ```
 
-IP地址。
+IPv4地址。
 
 **类型：** number
 

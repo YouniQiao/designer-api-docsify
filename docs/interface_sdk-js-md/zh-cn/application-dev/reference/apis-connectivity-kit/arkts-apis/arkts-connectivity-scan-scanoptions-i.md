@@ -36,7 +36,7 @@ scanMode?: ScanMode
 
 表示扫描模式。默认值为'SCAN_MODE_LOW_POWER'。
 
-**类型：** [ScanMode](arkts-connectivity-scan-scanmode-e.md)
+**类型：** ScanMode
 
 **起始版本：** 26.0.0
 

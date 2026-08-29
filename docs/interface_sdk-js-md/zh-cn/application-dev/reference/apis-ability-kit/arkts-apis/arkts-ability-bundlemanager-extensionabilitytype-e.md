@@ -432,7 +432,7 @@ CRYPTO = 35
 PARTNER_AGENT = 36
 ```
 
-PartnerAgentExtensionAbility：基于蓝牙通信技术，提供设备发现与设备下线的通知功能。
+[PartnerAgentExtensionAbility](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md)：基于蓝牙通信技术，提供设备发现与设备下线的通知功能。
 
 **模型约束**：此接口仅可在Stage模型下使用。
 

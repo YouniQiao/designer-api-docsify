@@ -238,7 +238,7 @@ State of the animated target after the animation is executed.
 
 **'forwards'**: The target keeps the state at the end of the animation (defined in the last key frame) after the animation is executed.
 
-**'backwards'**: During the delay period specified in [AnimatorOptions](#animatoroptions), the animation uses the value defined in the first keyframe. When **direction** in [AnimatorOptions](#animatoroptions) is **'normal'** or **'alternate'**, the animation uses the **from** keyframe value. When **direction** in [AnimatorOptions](#animatoroptions) is **'reverse'** or **'alternate-reverse'**, the animation uses the **to** keyframe value.
+**'backwards'**: During the delay period specified in [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md), the animation uses the value defined in the first keyframe. When **direction** in [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) is **'normal'** or **'alternate'**, the animation uses the **from** keyframe value. When **direction** in [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) is **'reverse'** or **'alternate-reverse'**, the animation uses the **to** keyframe value.
 
 **'both'**: The animation follows the **'forwards'** and **'backwards'** rules.
 

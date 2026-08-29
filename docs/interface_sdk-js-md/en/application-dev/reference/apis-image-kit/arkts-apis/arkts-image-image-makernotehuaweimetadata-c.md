@@ -22,7 +22,7 @@ import { image } from '@kit.ImageKit';
 clone(): Promise<MakerNoteHuaweiMetadata>
 ```
 
-Clones [MakerNoteHuaweiMetadata](#makernotehuaweimetadata) metadata. This API returns the result asynchronously through a promise.
+Clones [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md) metadata. This API returns the result asynchronously through a promise.
 
 **Since:** 23
 
@@ -72,7 +72,7 @@ async function makerNoteHuaweiClone(context: Context) {
 static createInstance(): MakerNoteHuaweiMetadata
 ```
 
-Returns an empty [MakerNoteHuaweiMetadata](#makernotehuaweimetadata) instance.
+Returns an empty [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md) instance.
 
 **Since:** 23
 

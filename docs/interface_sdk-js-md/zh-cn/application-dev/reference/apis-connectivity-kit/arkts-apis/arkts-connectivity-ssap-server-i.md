@@ -4,7 +4,7 @@ SSAP服务端类，提供了和客户端进行连接和数据交互等操作方�
 
 使用该类的方法前，需通过[ssap.createServer](arkts-connectivity-ssap-createserver-f.md)方法构造该类的实例。
 
-同一应用创建一个[Server](#server)实例即可，重复创建会增加不必要的资源开销。
+同一应用创建一个[Server](arkts-connectivity-ssap-server-i.md)实例即可，重复创建会增加不必要的资源开销。
 
 **起始版本：** 26.0.0
 
@@ -332,7 +332,7 @@ sendResponse(response: ServerResponse): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| response | [ServerResponse](arkts-connectivity-ssap-serverresponse-i.md) | 是 | 回复客户端的响应数据。 |
+| response | ServerResponse | 是 | 回复客户端的响应数据。 |
 
 **错误码：**
 

@@ -40,7 +40,7 @@ Paste is allowed in any application.
 CROSSDEVICE = 2
 ```
 
-Paste is allowed in any application across devices.
+Paste is allowed in any application.
 
 This API is deprecated since API version 12 without any alternative API or method.
 

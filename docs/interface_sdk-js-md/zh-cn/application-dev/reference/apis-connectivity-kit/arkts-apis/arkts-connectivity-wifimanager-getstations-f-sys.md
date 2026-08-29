@@ -12,11 +12,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function getStations(): Array<StationInfo>
 ```
 
-获取连接到WLAN热点的站点列表。此方法只能在作为WLAN热点的设备上使用。
+获取当前连接到本设备热点的所有设备信息列表。
 
-**起始版本：** 10
+**起始版本：** 9
 
-**需要权限：** ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
+**需要权限：** 
+- API版本10+：ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
+- API版本9：ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION and ohos.permission.MANAGE_WIFI_HOTSPOT
 
 **系统能力：** SystemCapability.Communication.WiFi.AP.Core
 
@@ -26,7 +28,7 @@ function getStations(): Array<StationInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;StationInfo&gt; | 连接到WLAN热点的客户端列表。 |
+| Array&lt;StationInfo&gt; | 连接的设备数组。如果应用申请了ohos.permission.GET_WIFI_PEERS_MAC权限，则返回结果中的macAddress为真实设备地址，否则为随机设备地址。 |
 
 **错误码：**
 

@@ -12,7 +12,11 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function setScanAlwaysAllowed(isScanAlwaysAllowed: boolean): void
 ```
 
-用户可以在WLAN关闭时触发扫描。
+设置是否始终允许扫描。
+
+- 该接口控制设备是否可以在Wi-Fi开关关闭时支持热点扫描功能。  
+- 启用后即使Wi-Fi开关关闭，系统仍可以扫描附近的Wi-Fi热点。  
+- 主要用于支持网络发现和位置定位等场景。
 
 **起始版本：** 10
 
@@ -26,7 +30,7 @@ function setScanAlwaysAllowed(isScanAlwaysAllowed: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isScanAlwaysAllowed | boolean | 是 | true表示允许触发扫描，false表示WLAN关闭时不允许触发扫描。 |
+| isScanAlwaysAllowed | boolean | 是 | 是否始终允许扫描。true:允许扫描， false:不允许扫描 |
 
 **错误码：**
 

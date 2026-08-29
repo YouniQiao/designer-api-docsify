@@ -18,7 +18,7 @@ function off(type: 'cooperate', callback?: Callback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [off](#off系统接口)(type: 'cooperateMessage', callback?: Callback&lt;CooperateMessage&gt;)
+**替代接口：** [off](arkts-distributedservice-cooperate-off-f-sys.md)(type: 'cooperateMessage', callback?: Callback&lt;CooperateMessage&gt;)
 
 **系统能力：** SystemCapability.Msdp.DeviceStatus.Cooperate
 

@@ -14,6 +14,10 @@ function getCountryCode(): string
 
 获取国家码信息。
 
+> **说明：**
+> 
+> 从API version 7开始支持，从API version 9开始废弃。
+
 **起始版本：** 7
 
 **废弃版本：** 9
