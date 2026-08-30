@@ -238,7 +238,7 @@ Defines a callback function for notifying the child process startup result.
 | Parameter | Description |
 | -- | -- |
 | int errCode | Error code returned by the callback function.[NCP_NO_ERROR](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The child process is created successfully.[NCP_ERR_LIB_LOADING_FAILED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): Loading the dynamic library file fails or the necessary export function isnot implemented in the dynamic library.[NCP_ERR_CONNECTION_FAILED](capi-native-child-process-h.md#ability_nativechildprocess_errcode): The **OnConnect** method implemented in the dynamic library does not returna valid IPC stub pointer.For details, see [Ability_NativeChildProcess_ErrCode](capi-native-child-process-h.md#ability_nativechildprocess_errcode). |
-| [OHIPCRemoteProxy](../IPCKit/capi-ohipcparcel-ohipcremoteproxy.md) \*remoteProxy | Pointer to the IPC object of the child process. If an exception occurs, the value may be nullptr.The object must be released by calling {@link OH_IPCRemoteProxy_Destroy} when it is no longer needed. |
+| OHIPCRemoteProxy \*remoteProxy | Pointer to the IPC object of the child process. If an exception occurs, the value may be nullptr.The object must be released by calling {@link OH_IPCRemoteProxy_Destroy} when it is no longer needed. |
 
 **Reference**:
 

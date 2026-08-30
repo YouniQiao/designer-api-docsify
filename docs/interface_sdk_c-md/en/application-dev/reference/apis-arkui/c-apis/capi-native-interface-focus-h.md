@@ -68,13 +68,13 @@ Requests focus for a specific node.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Node. |
+| ArkUI_NodeHandle node | Node. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_FOCUS_NON_FOCUSABLE](capi-error-code-h.md#arkui_errorcode) if the node cannot receive focus.      <br>Returns [ARKUI_ERROR_CODE_FOCUS_NON_FOCUSABLE_ANCESTOR](capi-error-code-h.md#arkui_errorcode) if the ancestor node cannot receive focus.      <br>Returns [ARKUI_ERROR_CODE_FOCUS_NON_EXISTENT](capi-error-code-h.md#arkui_errorcode) if the node does not exist. |
+| ArkUI_ErrorCode | Result code.      <br>Returns [ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.      <br>Returns [ARKUI_ERROR_CODE_FOCUS_NON_FOCUSABLE](capi-error-code-h.md#arkui_errorcode) if the node cannot receive focus.      <br>Returns [ARKUI_ERROR_CODE_FOCUS_NON_FOCUSABLE_ANCESTOR](capi-error-code-h.md#arkui_errorcode) if the ancestor node cannot receive focus.      <br>Returns [ARKUI_ERROR_CODE_FOCUS_NON_EXISTENT](capi-error-code-h.md#arkui_errorcode) if the node does not exist. |
 
 ### OH_ArkUI_FocusClear()
 
@@ -92,7 +92,7 @@ Clears the focus to the root container node.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | UI instance object pointer. |
+| ArkUI_ContextHandle uiContext | UI instance object pointer. |
 
 ### OH_ArkUI_FocusActivate()
 
@@ -110,7 +110,7 @@ Sets the focus activation state for the current page. When activated, the focuse
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | UI instance object pointer. |
+| ArkUI_ContextHandle uiContext | UI instance object pointer. |
 | bool isActive | Whether to enter or exit the focus activation state. The value **true** means to enter the focusactivation state, and **false** means to exit the focus activation state. |
 | bool isAutoInactive | Whether to automatically exit the focus active state on touch or mouse down events. **true**:Automatically exit the focus active state. **false**: Maintain the current state until the corresponding settingAPI is called. |
 
@@ -130,7 +130,7 @@ Configures the focus transfer behavior when pages are switched.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | UI instance object pointer. |
+| ArkUI_ContextHandle uiContext | UI instance object pointer. |
 | bool autoTransfer | Whether to automatically transfer focus when pages are switched. The value **true** means toautomatically transfer focus when pages are switched, and **false** means the opposite. |
 
 ### OH_ArkUI_FocusSetKeyProcessingMode()
@@ -149,7 +149,7 @@ Sets the mode for processing key events.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-context8h.md) uiContext | UI instance object pointer. |
+| ArkUI_ContextHandle uiContext | UI instance object pointer. |
 | [ArkUI_KeyProcessingMode](capi-native-interface-focus-h.md#arkui_keyprocessingmode) mode | Key event processing priority mode. |
 
 
