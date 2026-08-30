@@ -524,7 +524,7 @@ typedef void (*OH_AudioCapturer_OnDeviceChangeCallback)(OH_AudioCapturer* captur
 | -- | -- |
 | [OH_AudioCapturer](capi-ohaudio-oh-audiocapturerstruct.md)\* capturer | 指向{@link OH_AudioStreamBuilder_GenerateCapturer}创建的音频流实例。 |
 | void\* userData | 指向应用自定义的数据存储区域。 |
-| [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md)\* deviceArray | 音频设备描述符数组。 |
+| OH_AudioDeviceDescriptorArray\* deviceArray | 音频设备描述符数组。 |
 
 **参考：**
 
@@ -759,7 +759,7 @@ OH_AudioStream_Result OH_AudioCapturer_SetNoiseReductionMode(OH_AudioCapturer* c
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioCapturer](capi-ohaudio-oh-audiocapturerstruct.md)* capturer | [in] 指向OH_AudioStreamBuilder_GenerateCapturer创建的音频流实例。 |
-| [OH_AudioNoiseReductionMode](capi-native-audio-common-h.md#oh_audionoisereductionmode) noiseReductionMode | [in] 要设置的降噪模式。 |
+| OH_AudioNoiseReductionMode noiseReductionMode | [in] 要设置的降噪模式。 |
 
 **返回：**
 
@@ -784,7 +784,7 @@ OH_AudioStream_Result OH_AudioCapturer_GetNoiseReductionMode(OH_AudioCapturer* c
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioCapturer](capi-ohaudio-oh-audiocapturerstruct.md)* capturer | [in] 指向OH_AudioStreamBuilder_GenerateCapturer创建的音频流实例。 |
-| [OH_AudioNoiseReductionMode](capi-native-audio-common-h.md#oh_audionoisereductionmode)* noiseReductionMode | [out] 指向接收当前降噪模式的变量。 |
+| OH_AudioNoiseReductionMode* noiseReductionMode | [out] 指向接收当前降噪模式的变量。 |
 
 **返回：**
 
@@ -809,7 +809,7 @@ OH_AudioStream_Result OH_AudioCapturer_GetSupportedNoiseReductionModes(OH_AudioC
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioCapturer](capi-ohaudio-oh-audiocapturerstruct.md)* capturer | [in] 指向OH_AudioStreamBuilder_GenerateCapturer创建的音频流实例。 |
-| [OH_AudioNoiseReductionMode](capi-native-audio-common-h.md#oh_audionoisereductionmode)* noiseReductionModeArray | [out] 指向应用分配的数组，用于接收支持的录音降噪模式，默认支持AUDIO_NOISE_REDUCTION_MODE_FIDELITY。 |
+| OH_AudioNoiseReductionMode* noiseReductionModeArray | [out] 指向应用分配的数组，用于接收支持的录音降噪模式，默认支持AUDIO_NOISE_REDUCTION_MODE_FIDELITY。 |
 | uint32_t inModeArraySize | [in] noiseReductionModeArray数组的元素个数。 |
 | uint32_t *outModeArraySize | [out] 指向接收实际写入模式数量的变量。 |
 

@@ -83,7 +83,7 @@ Obtains the application-level file data encryption level of the application.
 
 | Parameter | Description |
 | -- | -- |
-| [AbilityRuntime_AreaMode](capi-context-constant-h.md#abilityruntime_areamode)* areaMode | Pointer to the encryption level of the received data. |
+| AbilityRuntime_AreaMode* areaMode | Pointer to the encryption level of the received data. |
 
 **Returns**:
 
