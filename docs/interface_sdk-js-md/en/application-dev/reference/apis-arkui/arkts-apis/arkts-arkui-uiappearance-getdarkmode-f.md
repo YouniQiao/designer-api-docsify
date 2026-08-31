@@ -27,7 +27,7 @@ Obtains the current system dark mode configuration.
 **Since:** 20
 
 **Required permissions:** 
-- API version 10 - 19: ohos.permission.UPDATE_CONFIGURATION
+- API versions 10 to 19: ohos.permission.UPDATE_CONFIGURATION
 
 **System capability:** SystemCapability.ArkUI.UiAppearance
 

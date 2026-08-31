@@ -47,6 +47,7 @@ struct WebComponent {
           response.setEncoding("utf-8")
           response.setHeaderByName("header1", "value1", false)
           response.setNetErrorCode(WebNetErrorList.NET_OK)
+          response.setCustomErrorCode(1001)
           console.info("[schemeHandler] getUrl:" + response.getUrl())
           console.info("[schemeHandler] getStatus:" + response.getStatus())
           console.info("[schemeHandler] getStatusText:" + response.getStatusText())
@@ -54,6 +55,7 @@ struct WebComponent {
           console.info("[schemeHandler] getEncoding:" + response.getEncoding())
           console.info("[schemeHandler] getHeaderByName:" + response.getHeaderByName("header1"))
           console.info("[schemeHandler] getNetErrorCode:" + response.getNetErrorCode())
+          console.info("[schemeHandler] getCustomErrorCode:" + response.getCustomErrorCode())
 
         } catch (error) {
           console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);

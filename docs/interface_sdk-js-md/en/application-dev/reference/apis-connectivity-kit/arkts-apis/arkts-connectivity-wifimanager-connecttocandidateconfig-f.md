@@ -44,7 +44,7 @@ Connect to a specified candidate hotspot by networkId, only the configuration wh
 import { wifiManager } from '@kit.ConnectivityKit';
 
   try {
-    let networkId = 0; // Candidate network ID, which is generated when a candidate network is added.
+    let networkId = 0; // Candidate network ID, generated when the candidate network is added.
     wifiManager.connectToCandidateConfig(networkId);
   }catch(error){
     console.error("failed:" + JSON.stringify(error));
@@ -100,7 +100,7 @@ Connect to the specified candidate hotspot using connect settings.
 import { wifiManager } from '@kit.ConnectivityKit';
 
   try {
-    let setting:wifiManager.ConnectSettings = { networkId: 0 }; // Candidate network ID, which is generated when a candidate network is added.
+    let setting:wifiManager.ConnectSettings = { networkId: 0 }; // Candidate network ID, generated when adding a candidate network.
     wifiManager.connectToCandidateConfig(setting);
   }catch(error){
     console.error("failed:" + JSON.stringify(error));

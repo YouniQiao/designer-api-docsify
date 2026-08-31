@@ -45,7 +45,7 @@ let recvP2pConnectionChangeFunc = (result:wifi.WifiP2pLinkedInfo) => {
     console.info("p2p connection change receive event: " + JSON.stringify(result));
     wifi.getP2pLinkedInfo((err, data:wifi.WifiP2pLinkedInfo) => {
         if (err) {
-            console.error('failed to get getP2pLinkedInfo: ' + JSON.stringify(err));
+            console.error("failed to get getP2pLinkedInfo: " + JSON.stringify(err));
             return;
         }
         console.info("get getP2pLinkedInfo: " + JSON.stringify(data));

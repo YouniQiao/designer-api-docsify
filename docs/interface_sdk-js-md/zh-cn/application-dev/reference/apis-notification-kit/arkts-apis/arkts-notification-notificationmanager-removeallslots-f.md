@@ -22,11 +22,11 @@ function removeAllSlots(callback: AsyncCallback<void>): void
 
 **参见：**
 
-addSlot 创建通知频道。
+[addSlot](arkts-notification-notificationmanager-addslot-f.md) 创建通知频道。
 
-getSlot 获取指定类型的通知渠道。
+[getSlot](arkts-notification-notificationmanager-getslot-f.md) 获取指定类型的通知渠道。
 
-removeSlot 删除所有通知渠道。
+[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) 删除所有通知渠道。
 
 **参数：**
 
@@ -75,11 +75,11 @@ function removeAllSlots(): Promise<void>
 
 **参见：**
 
-addSlot 创建通知频道。
+[addSlot](arkts-notification-notificationmanager-addslot-f.md) 创建通知频道。
 
-getSlot 获取指定类型的通知渠道。
+[getSlot](arkts-notification-notificationmanager-getslot-f.md) 获取指定类型的通知渠道。
 
-removeSlot 删除指定类型的通知渠道。
+[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) 删除指定类型的通知渠道。
 
 **返回值：**
 

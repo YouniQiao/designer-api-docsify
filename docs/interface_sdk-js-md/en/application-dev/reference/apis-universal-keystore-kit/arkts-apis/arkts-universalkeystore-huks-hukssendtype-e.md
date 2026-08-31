@@ -6,7 +6,7 @@ Enumerates the tag transfer modes.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_SEND_TYPE_ASYNC
 
@@ -22,7 +22,7 @@ The tag is sent asynchronously.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_SEND_TYPE_SYNC
 
@@ -38,4 +38,4 @@ The tag is sent synchronously.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension

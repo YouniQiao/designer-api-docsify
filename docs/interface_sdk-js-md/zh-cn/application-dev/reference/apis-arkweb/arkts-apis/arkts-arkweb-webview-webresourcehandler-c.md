@@ -118,7 +118,7 @@ struct WebComponent {
               }
 
               try {
-                // 直接调用didFail(WebNetErrorList.ERR_FAILED, true)，若此前未调用didReceiveResponse，系统将自动生成响应头，网络错误码为-104（对应ERR_CONNECTION_FAILED）
+                // 直接调用didFail(WebNetErrorList.ERR_FAILED, true)，若此前未调用didReceiveResponse，系统将自动生成响应头。
                 resourceHandler.didFail(WebNetErrorList.ERR_FAILED, true);
               } catch (error) {
                 // 当error.code为17100101(The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList)
@@ -172,8 +172,6 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: n
 
 **示例**
 
-示例请参考[OnRequestStart](./arkts-apis-webview-WebSchemeHandler.md#onrequeststart)。
-
 ```TypeScript
 // xxx.ets
 import { webview, WebNetErrorList } from '@kit.ArkWeb';
@@ -191,47 +189,27 @@ struct WebComponent {
         .onControllerAttached(() => {
           try {
             this.schemeHandler.onRequestStart((request: webview.WebSchemeHandlerRequest, resourceHandler: webview.WebResourceHandler) => {
-              console.info('[schemeHandler] onRequestStart');
+              console.info("[schemeHandler] onRequestStart");
               try {
-                console.info('[schemeHandler] onRequestStart url:' + request.getRequestUrl());
-                console.info('[schemeHandler] onRequestStart method:' + request.getRequestMethod());
-                console.info('[schemeHandler] onRequestStart referrer:' + request.getReferrer());
-                console.info('[schemeHandler] onRequestStart isMainFrame:' + request.isMainFrame());
-                console.info('[schemeHandler] onRequestStart hasGesture:' + request.hasGesture());
-                console.info('[schemeHandler] onRequestStart header size:' + request.getHeader().length);
-                console.info('[schemeHandler] onRequestStart resource type:' + request.getRequestResourceType());
-                console.info('[schemeHandler] onRequestStart frame url:' + request.getFrameUrl());
-                let header = request.getHeader();
-                for (let i = 0; i < header.length; i++) {
-                  console.info('[schemeHandler] onRequestStart header:' + header[i].headerKey + ' ' + header[i].headerValue);
-                }
-                let stream = request.getHttpBodyStream();
-                if (stream) {
-                  console.info('[schemeHandler] onRequestStart has http body stream');
-                } else {
-                  console.info('[schemeHandler] onRequestStart has no http body stream');
-                }
+                console.info("[schemeHandler] onRequestStart url:" + request.getRequestUrl());
               } catch (error) {
                 console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
               }
 
-              if (request.getRequestUrl().endsWith('example.com')) {
+              if (request.getRequestUrl().endsWith("example.com")) {
                 return false;
               }
 
               try {
-                // 直接调用didFail(WebNetErrorList.ERR_FAILED, true)，若此前未调用didReceiveResponse，系统将自动生成响应头，网络错误码为-104（对应ERR_CONNECTION_FAILED）
-                resourceHandler.didFail(WebNetErrorList.ERR_FAILED, true);
+                resourceHandler.didFail(WebNetErrorList.ERR_FAILED, true, 1001);
               } catch (error) {
-                // 当error.code为17100101(The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList)
-                // 且didFail(code: WebNetErrorList, completeIfNoResponse: boolean)的code值不为null时，接口会继续调用不会中断。
                 console.error(`[schemeHandler] ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
               }
               return true;
             })
 
             this.schemeHandler.onRequestStop((request: webview.WebSchemeHandlerRequest) => {
-              console.info('[schemeHandler] onRequestStop');
+              console.info("[schemeHandler] onRequestStop");
             });
 
             this.controller.setWebSchemeHandler('https', this.schemeHandler);

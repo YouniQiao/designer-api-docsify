@@ -6,7 +6,7 @@ Asymmetric key generator interface, defining methods for generating asymmetric k
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -28,7 +28,7 @@ Converts asymmetric key data to a key pair object. This API uses an asynchronous
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -155,7 +155,7 @@ Converts data into an asymmetric key pair. This API uses an asynchronous callbac
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -213,7 +213,7 @@ Converts asymmetric key data to a key pair object. This API uses a promise to re
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -255,7 +255,7 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -726,7 +726,7 @@ Generates a random key pair using this asymmetric key generator. This API uses a
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -812,7 +812,7 @@ Generates a random key pair using this asymmetric key generator. This API uses a
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Return value:**
 
@@ -994,4 +994,4 @@ The algName of the AsyKeyGenerator.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework

@@ -31,7 +31,7 @@ Obtains the connected devices list of profile. On API 10 and above, the permissi
 **Substitutes:** getConnectedDevices
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -80,7 +80,7 @@ Obtains the profile state of device. On API 10 and above, the permission require
 **Substitutes:** getConnectionState
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

@@ -354,7 +354,7 @@ struct Index {
 }
 ```
 
-从API version 18开始，该示例通过设置EditorMenuOptions的属性symbolStyle，展示了自定义Symbol类型图标。
+从API version 18开始，该示例通过设置EditorMenuOptions的属性symbolStyle，展示了使用系统Symbol图标的方法。
 
 ```TypeScript
 import {

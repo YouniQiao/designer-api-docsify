@@ -6,7 +6,7 @@ Message digest interface, defining methods for calculating message digests. Befo
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -26,13 +26,13 @@ Generates a message digest. This API uses an asynchronous callback to return the
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
-- API version 9 to 11: This API can be used only in the stage model.
+- API versions 9 to 11: This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -80,7 +80,7 @@ Generates a message digest. This API uses a promise to return the result.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Return value:**
 
@@ -327,13 +327,13 @@ Obtains the message digest length, in bytes.
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
-- API version 9 to 11: This API can be used only in the stage model.
+- API versions 9 to 11: This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Return value:**
 
@@ -376,13 +376,13 @@ Updates the message digest status. This API uses an asynchronous callback to ret
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
-- API version 9 to 11: This API can be used only in the stage model.
+- API versions 9 to 11: This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -421,7 +421,7 @@ Updates the message digest status. This API uses a promise to return the result.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -497,4 +497,4 @@ Indicates the algorithm name.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.MessageDigest
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework

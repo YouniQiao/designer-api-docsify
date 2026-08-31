@@ -63,11 +63,11 @@ struct Index {
             }
           },
           style: {
-            // options: {
-            // startIcon: $r("app.media.icon"), // Menu icon, which can be provided by yourself. The default value is "sys.media.ic_public_add."
-            //   content: "Add to home screen",  // Menu content, which can be provided by yourself. The default value is "sys.string.ohos_add_form_to_desktop."
-            //   endIcon: $r("app.media.icon") // Menu icon, which can be provided by yourself.
-            // }
+            options: {
+              startIcon: $r("app.media.icon"), // Menu icon. You can provide your own. The system uses "sys.media.ic_public_add" by default.
+              content: "Add to Home Screen",  // Menu content. You can provide your own. "sys.string.ohos_add_form_to_desktop" is used by default.
+              endIcon: $r("app.media.icon") // Menu icon. You can provide your own.
+            }
           }
         }
       )

@@ -20,7 +20,7 @@ Imports a key in plaintext. This API uses an asynchronous callback to return the
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 **Parameters:**
 

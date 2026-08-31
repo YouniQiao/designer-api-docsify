@@ -22,7 +22,7 @@ For details about the supported specifications, see [Signing and Signature Verif
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 

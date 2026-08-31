@@ -20,7 +20,7 @@ Rivest-Shamir-Adleman (RSA) key of 512 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_RSA_KEY_SIZE_768
 
@@ -36,7 +36,7 @@ RSA key of 768 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_RSA_KEY_SIZE_1024
 
@@ -52,7 +52,7 @@ RSA key of 1024 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_RSA_KEY_SIZE_2048
 
@@ -68,7 +68,7 @@ RSA key of 2048 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_RSA_KEY_SIZE_3072
 
@@ -84,7 +84,7 @@ RSA key of 3072 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_RSA_KEY_SIZE_4096
 
@@ -100,7 +100,7 @@ RSA key of 4096 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ECC_KEY_SIZE_224
 
@@ -116,7 +116,7 @@ Elliptic Curve Cryptography (ECC) key of 224 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ECC_KEY_SIZE_256
 
@@ -132,7 +132,7 @@ ECC key of 256 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ECC_KEY_SIZE_384
 
@@ -148,7 +148,7 @@ ECC key of 384 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ECC_KEY_SIZE_521
 
@@ -164,7 +164,7 @@ ECC key of 521 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_AES_KEY_SIZE_128
 
@@ -238,7 +238,7 @@ Curve25519 key of 256 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_DH_KEY_SIZE_2048
 
@@ -254,7 +254,7 @@ Diffie-Hellman (DH) key of 2048 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_DH_KEY_SIZE_3072
 
@@ -270,7 +270,7 @@ DH key of 3072 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_DH_KEY_SIZE_4096
 
@@ -286,7 +286,7 @@ DH key of 4096 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_SM2_KEY_SIZE_256
 
@@ -302,7 +302,7 @@ ShangMi2 (SM2) key of 256 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_SM4_KEY_SIZE_128
 
@@ -318,7 +318,7 @@ ShangMi4 (SM4) key of 128 bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_DES_KEY_SIZE_64
 

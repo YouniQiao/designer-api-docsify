@@ -17,7 +17,7 @@ Subscribe location changed.
 **Since:** 26.0.0
 
 **Required permissions:** 
-- API version 23+: ohos.permission.APPROXIMATELY_LOCATION
+- API version 23 and later: ohos.permission.APPROXIMATELY_LOCATION
 
 **System capability:** 
 - API version 23 and later: SystemCapability.Location.Location.Core

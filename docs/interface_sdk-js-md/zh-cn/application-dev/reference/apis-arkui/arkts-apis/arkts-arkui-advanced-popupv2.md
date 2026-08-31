@@ -20,3 +20,156 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 | --- | --- |
 | [PopupV2Button](arkts-arkui-arkui-advanced-popupv2-popupv2button-i.md) | PopupV2Button定义按钮的相关属性和事件。 |
 | [PopupV2InitInfo](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md) | 定义PopupV2的具体样式参数。 |
+
+## 示例
+
+从API版本26.0.0开始，新增titleModifier、messageModifier、PopupV2Button。
+
+```TypeScript
+// xxx.ets
+import { PopupV2, PopupV2Button } from '@kit.ArkUI';
+import { ImageModifier, TextModifier } from '@kit.ArkUI';
+
+@Entry
+@ComponentV2
+struct PopupExample {
+
+  build() {
+    Row() {
+      // PopupV2自定义高级组件
+      PopupV2 ({
+        // 请开发者替换为实际的资源文件
+        icon:  $r('app.media.startIcon'),
+        iconModifier: new ImageModifier().width(32).height(32).fillColor(Color.White).borderRadius(16),
+        title: 'This is a popupv2',
+        titleModifier: new TextModifier().fontSize(20).fontColor(Color.Black).fontWeight(FontWeight.Normal),
+        message:  'This is the message',
+        messageModifier: new TextModifier().fontSize(15).fontColor(Color.Black),
+        showClose: false,
+        onClose: () => {
+          console.info('close Button click');
+        },
+        buttons: [{
+          text: 'confirm',
+          action: () => {
+            console.info('confirm button click');
+          },
+          buttonTextModifier: new TextModifier().fontSize(15).fontColor(Color.Black)
+        },
+          {
+            text: 'cancel',
+            action: () => {
+              console.info('cancel button click');
+            },
+            buttonTextModifier: new TextModifier().fontSize(15).fontColor(Color.Black)
+          }] as [PopupV2Button | undefined, PopupV2Button | undefined]
+      })
+    }
+    .width(300)
+    .height(200)
+    .borderWidth(2)
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+从API版本26.0.0开始，新增direction参数。
+
+```TypeScript
+// xxx.ets
+import { PopupV2, PopupV2Button } from '@kit.ArkUI';
+import { ImageModifier, TextModifier } from '@kit.ArkUI';
+
+@Entry
+@ComponentV2
+struct PopupExample {
+
+  build() {
+    Column() {
+      // PopupV2自定义高级组件
+      PopupV2 ({
+        direction: Direction.Rtl,
+        // 请开发者替换为实际的资源文件
+        icon:  $r('app.media.startIcon'),
+        iconModifier: new ImageModifier().width(32).height(32).fillColor(Color.White).borderRadius(16),
+        title: 'This is a popupv2',
+        titleModifier: new TextModifier().fontSize(20).fontColor(Color.Black).fontWeight(FontWeight.Normal),
+        message:  'This is the message',
+        messageModifier: new TextModifier().fontSize(15).fontColor(Color.Black),
+        showClose: true,
+        onClose: () => {
+          console.info('close Button click');
+        },
+        buttons: [{
+          text: 'confirm',
+          action: () => {
+            console.info('confirm button click');
+          },
+          buttonTextModifier: new TextModifier().fontSize(15).fontColor(Color.Black)
+        },
+          {
+            text: 'cancel',
+            action: () => {
+              console.info('cancel button click');
+            },
+            buttonTextModifier: new TextModifier().fontSize(15).fontColor(Color.Black)
+          }] as [PopupV2Button | undefined, PopupV2Button | undefined]
+      })
+    }
+    .width('100%')
+    .height('100%')
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+从API版本26.0.0开始，新增maxWidth参数。
+
+```TypeScript
+// xxx.ets
+import { PopupV2, PopupV2Button } from '@kit.ArkUI';
+import { ImageModifier, TextModifier } from '@kit.ArkUI';
+
+@Entry
+@ComponentV2
+struct PopupExample {
+
+  build() {
+    Row() {
+      // PopupV2自定义高级组件
+      PopupV2 ({
+        maxWidth: '50%',
+        // 请开发者替换为实际的资源文件
+        icon:  $r('app.media.startIcon'),
+        iconModifier: new ImageModifier().width(32).height(32).fillColor(Color.White).borderRadius(16),
+        title: 'This is a popupv2',
+        titleModifier: new TextModifier().fontSize(20).fontColor(Color.Black).fontWeight(FontWeight.Normal),
+        message:  'This is the message, This is the message, This is the message, This is the message',
+        messageModifier: new TextModifier().fontSize(15).fontColor(Color.Black),
+        showClose: true,
+        onClose: () => {
+          console.info('close Button click');
+        },
+        buttons: [{
+          text: 'confirm',
+          action: () => {
+            console.info('confirm button click');
+          },
+          buttonTextModifier: new TextModifier().fontSize(15).fontColor(Color.Black)
+        },
+          {
+            text: 'cancel',
+            action: () => {
+              console.info('cancel button click');
+            },
+            buttonTextModifier: new TextModifier().fontSize(15).fontColor(Color.Black)
+          }] as [PopupV2Button | undefined, PopupV2Button | undefined]
+      })
+    }
+    .width(400)
+    .height(200)
+    .borderWidth(2)
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```

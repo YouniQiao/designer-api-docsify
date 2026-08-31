@@ -17,7 +17,7 @@ Obtains information about visible main windows on the current screen. Visible ma
 **Since:** 18
 
 **Required permissions:** 
-- API version 18+: ohos.permission.VISIBLE_WINDOW_INFO
+- API version 18 and later: ohos.permission.VISIBLE_WINDOW_INFO
 
 **System capability:** SystemCapability.Window.SessionManager
 

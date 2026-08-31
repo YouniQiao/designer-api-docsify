@@ -22,11 +22,11 @@ This API is used to batch query the configuration information of all notificatio
 
 **See also:**
 
-addSlot adds a notification slot of
+[addSlot](arkts-notification-notificationmanager-addslot-f.md) adds a notification slot of
 
-removeSlot removes a notification slot of
+[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) removes a notification slot of
 
-removeAllSlots removes all notification
+[removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all notification
 
 **Parameters:**
 
@@ -76,11 +76,11 @@ This API is used to batch query the configuration information of all notificatio
 
 **See also:**
 
-addSlot adds a notification slot of
+[addSlot](arkts-notification-notificationmanager-addslot-f.md) adds a notification slot of
 
-removeSlot removes a notification slot of
+[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) removes a notification slot of
 
-removeAllSlots removes all notification
+[removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all notification
 
 **Return value:**
 

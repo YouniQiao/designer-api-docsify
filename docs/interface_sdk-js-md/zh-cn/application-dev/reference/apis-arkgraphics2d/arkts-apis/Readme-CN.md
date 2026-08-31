@@ -195,11 +195,19 @@
     <!--Del-->
     - [LiquidMaterialEffectParam(系统接口)](arkts-arkgraphics2d-uieffect-liquidmaterialeffectparam-i-sys.md)<!--DelEnd-->
     <!--Del-->
+    - [SweepRefractionMaskOptions(系统接口)](arkts-arkgraphics2d-uieffect-sweeprefractionmaskoptions-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [SweepRefractionParam(系统接口)](arkts-arkgraphics2d-uieffect-sweeprefractionparam-i-sys.md)<!--DelEnd-->
+    <!--Del-->
     - [VisualEffect(系统接口)](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [WarpedRingParam(系统接口)](arkts-arkgraphics2d-uieffect-warpedringparam-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [Blender(系统接口)](arkts-arkgraphics2d-uieffect-blender-t-sys.md)<!--DelEnd-->
     <!--Del-->
     - [FlyMode(系统接口)](arkts-arkgraphics2d-uieffect-flymode-e-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [PrismShapeType(系统接口)](arkts-arkgraphics2d-uieffect-prismshapetype-e-sys.md)<!--DelEnd-->
     <!--Del-->
     - [TileMode(系统接口)](arkts-arkgraphics2d-uieffect-tilemode-e-sys.md)<!--DelEnd-->
     <!--Del-->

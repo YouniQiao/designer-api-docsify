@@ -1,6 +1,6 @@
 # C API<!--c-mediakit-->
 
-- 模块<!--mediakit-module-->n
+- 模块<!--mediakit-module-->
     - [VideoProcessing](capi-videoprocessing.md)
     - [AVMediaSource](capi-avmediasource.md)
     - [AVScreenCapture](capi-avscreencapture.md)

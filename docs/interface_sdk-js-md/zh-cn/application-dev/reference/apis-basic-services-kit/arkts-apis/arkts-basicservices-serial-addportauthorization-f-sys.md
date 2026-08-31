@@ -43,3 +43,18 @@ function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>
 | [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
 | [35700002](../errorcode-busmanager-serial.md#35700002-参数错误) | Invalid parameter. |
 | [35700008](../errorcode-busmanager-serial.md#35700008-权限被拒绝) | Permission denied. |
+
+**示例**
+
+```TypeScript
+import {BusinessError} from '@kit.BasicServicesKit';
+// 添加串口访问权限
+// Token ID 需要通过bundleManager.getBundleInfoForSelf接口获取，此处仅为示例占位符
+let tokenId: string = '123456';
+let deviceId: string = '/dev/ttyUSB0';
+serial.addPortAuthorization(tokenId, deviceId).then(() => {
+  console.info('addPortAuthorization success');
+}).catch((error: BusinessError) => {
+  console.error(`Failed to addPortAuthorization. Code: ${error.code}, message: ${error.message}`);
+});
+```

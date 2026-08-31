@@ -51,6 +51,7 @@ struct WebComponent {
           response.setEncoding("utf-8")
           response.setHeaderByName("header1", "value1", false)
           response.setNetErrorCode(WebNetErrorList.NET_OK)
+          response.setCustomErrorCode(1001)
           console.info("[schemeHandler] getUrl:" + response.getUrl())
           console.info("[schemeHandler] getStatus:" + response.getStatus())
           console.info("[schemeHandler] getStatusText:" + response.getStatusText())
@@ -58,6 +59,7 @@ struct WebComponent {
           console.info("[schemeHandler] getEncoding:" + response.getEncoding())
           console.info("[schemeHandler] getHeaderByName:" + response.getHeaderByName("header1"))
           console.info("[schemeHandler] getNetErrorCode:" + response.getNetErrorCode())
+          console.info("[schemeHandler] getCustomErrorCode:" + response.getCustomErrorCode())
 
         } catch (error) {
           console.error(`ErrorCode: ${(error as BusinessError).code},  Message: ${(error as BusinessError).message}`);
@@ -88,6 +90,10 @@ getCustomErrorCode(): number
 | 类型 | 说明 |
 | --- | --- |
 | number | 当前Response的自定义错误码。 |
+
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
 
 ## getEncoding
 
@@ -411,6 +417,10 @@ setCustomErrorCode(customErrorCode: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | customErrorCode | number | 是 | 该响应的自定义错误码。 |
+
+**示例**
+
+完整示例代码参考[constructor](#constructor)。
 
 ## setEncoding
 

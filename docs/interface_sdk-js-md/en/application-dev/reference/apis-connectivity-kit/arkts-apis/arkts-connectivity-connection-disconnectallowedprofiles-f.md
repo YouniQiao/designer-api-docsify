@@ -16,8 +16,8 @@ Disconnects all allowed bluetooth profiles between the local and remote device.
 **Since:** 26.0.0
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH
-- API version 11 - 24: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+- API version 26.0.0 and later: ohos.permission.ACCESS_BLUETOOTH
+- API versions 11 to 24: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 

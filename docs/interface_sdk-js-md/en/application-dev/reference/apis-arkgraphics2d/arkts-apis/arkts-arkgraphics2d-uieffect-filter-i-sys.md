@@ -562,6 +562,40 @@ let filter = uiEffect.createFilter()
 filter.flyInFlyOutEffect(0.5, uiEffect.FlyMode.TOP)
 ```
 
+## haloBloom
+
+```TypeScript
+haloBloom(tintColor: Color, bloomFactor: number, glowExposure: number): Filter
+```
+
+Applies a soft halo bloom effect to the image, creating a gentle glow around bright areas.
+
+> **NOTE：**
+> 
+> It is recommended to use as a foreground filter.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| tintColor | Color | Yes | Specifies the color tint applied to the halo bloom. The value is unrestricted, with a recommended range of [0, 1). The alpha channel has no effect. Values below 0 or greater than or equal to 1 have no meaningful effect. When all red, green, and blue are set to 0, no tint is applied and the halo bloom retains its original color. |
+| bloomFactor | number | Yes | Controls the brightness of the halo bloom. The value is unrestricted, with a recommended range of [0, 10]. When set to 0, the halo bloom produces no visible effect. |
+| glowExposure | number | Yes | Controls how far the halo bloom spreads. The value is unrestricted, with a recommended range of [0, 10]. When set to 0, the halo bloom produces no visible effect. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Filter | Returns the Filter with the halo bloom effect attached. |
+
 ## heatDistortion
 
 ```TypeScript
@@ -881,6 +915,40 @@ struct RadiusGradientBlurExample {
   }
 }
 ```
+
+## spinBlur
+
+```TypeScript
+spinBlur(center: common2D.Point, angle: number, samples: number): Filter
+```
+
+Applies a spin blur effect to the image, creating rotational motion trails around a specified center.
+
+> **NOTE：**
+> 
+> It is recommended to use as a foreground filter.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| center | common2D.Point | Yes | Specifies the blur center in normalized coordinates. [0, 0] represents the top-left corner, [0.5, 0.5] the center, and [1, 1] the bottom-right corner. |
+| angle | number | Yes | Specifies the angular range of the spin blur in radians. The value is unrestricted, with a recommended range of [-2π, 2π]. Positive values rotate clockwise, while negative values rotate counterclockwise. |
+| samples | number | Yes | Specifies the number of samples used for the spin blur. The value is clamped to the range [0, 128]. Higher values produce smoother results but increase processing cost; 32 is usually sufficient. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Filter | Returns the Filter with the spin blur effect attached. |
 
 ## variableRadiusBlur
 

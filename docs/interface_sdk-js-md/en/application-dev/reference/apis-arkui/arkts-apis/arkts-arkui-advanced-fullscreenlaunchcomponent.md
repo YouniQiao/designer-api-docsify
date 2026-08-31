@@ -27,13 +27,13 @@ import { FullScreenLaunchComponent } from '@kit.ArkUI';
 User Implementation
 
 ```TypeScript
-// The entry point file Index.ets for the user side is as follows:
+// The content of the consumer entry page Index.ets is as follows:
 import { FullScreenLaunchComponent } from '@kit.ArkUI';
 
 @Entry
 @Component
 struct Index {
-  @State appId: string = '6917573653426122083'; // App ID of the atomic service.
+  @State appId: string = '6917573653426122083'; // Application ID of the atomic service.
 
   build() {
     Row() {
@@ -51,7 +51,7 @@ struct Index {
           onReceive: (data) => {
             console.info(`onReceive, data: ${JSON.stringify(data)}`);
           }
-        }).width("80vp").height("80vp")
+        }).width('80vp').height('80vp')
       }
       .width('100%')
     }
@@ -89,9 +89,9 @@ export default class EntryAbility extends EmbeddableUIAbility {
 
   onWindowStageCreate(windowStage: window.WindowStage): void {
     hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
-    let mainWindow = windowStage.getMainWindowSync()
-    this.storage.setOrCreate("window", mainWindow)
-    this.storage.setOrCreate("windowStage", windowStage)
+    let mainWindow = windowStage.getMainWindowSync();
+    this.storage.setOrCreate('window', mainWindow);
+    this.storage.setOrCreate('windowStage', windowStage);
     windowStage.loadContent('pages/Index', this.storage);
   }
 
@@ -115,8 +115,6 @@ Extended ability entry page file: /src/main/ets/pages/Index.ets
 import { BusinessError } from '@kit.BasicServicesKit';
 import { window } from '@kit.ArkUI';
 
-const DOMAIN = 0x0000;
-
 @Entry
 @Component
 struct Index {
@@ -127,30 +125,30 @@ struct Index {
       Column() {
         GridRow({ columns: 2 }) {
           GridCol() {
-            Button("setWindowSystemBar")
+            Button('setWindowSystemBar')
               .onClick(() => {
-                this.testSetSystemBarEnable()
+                this.testSetSystemBarEnable();
               }).width(120)
           }.height(60)
 
           GridCol() {
-            Button("setGestureBack")
+            Button('setGestureBack')
               .onClick(() => {
-                this.testSetGestureBackEnable()
+                this.testSetGestureBackEnable();
               }).width(120)
           }.height(60)
 
           GridCol() {
-            Button("setImmersive")
+            Button('setImmersive')
               .onClick(() => {
-                this.testSetImmersiveEnable()
+                this.testSetImmersiveEnable();
               }).width(120)
           }.height(60)
 
           GridCol() {
-            Button("setSpecificSystemBarEnabled")
+            Button('setSpecificSystemBarEnabled')
               .onClick(() => {
-                this.testSetSpecificSystemBarEnabled()
+                this.testSetSpecificSystemBarEnabled();
               }).width(120)
           }.height(60)
         }
@@ -161,42 +159,42 @@ struct Index {
   }
 
   testSetSystemBarEnable() {
-    let window: window.Window | undefined = this.storage?.get("window");
-    let p = window?.setWindowSystemBarEnable(["status"])
-    p?.then(() => {
+    let window: window.Window | undefined = this.storage?.get('window');
+    let promise = window?.setWindowSystemBarEnable(['status']);
+    promise?.then(() => {
       console.info('setWindowSystemBarEnable success');
     }).catch((err: BusinessError) => {
-      console.error(`setWindowSystemBarEnable failed, error = ${JSON.stringify(err)}`);
-    })
+      console.error(`setWindowSystemBarEnable failed, code: ${err.code}, message: ${err.message}`);
+    });
   }
 
   testSetGestureBackEnable() {
-    let window: window.Window | undefined = this.storage?.get("window");
-    let p = window?.setGestureBackEnabled(true)
-    p?.then(() => {
+    let window: window.Window | undefined = this.storage?.get('window');
+    let promise = window?.setGestureBackEnabled(true);
+    promise?.then(() => {
       console.info('setGestureBackEnabled success');
     }).catch((err: BusinessError) => {
-      console.error(`setGestureBackEnabled failed, error = ${JSON.stringify(err)}`);
-    })
+      console.error(`setGestureBackEnabled failed, code: ${err.code}, message: ${err.message}`);
+    });
   }
 
   testSetImmersiveEnable() {
-    let window: window.Window | undefined = this.storage?.get("window");
+    let window: window.Window | undefined = this.storage?.get('window');
     try {
-      window?.setImmersiveModeEnabledState(true)
+      window?.setImmersiveModeEnabledState(true);
     } catch (err) {
-      console.error(`setImmersiveModeEnabledState failed, error = ${JSON.stringify(err)}`);
+      console.error(`setImmersiveModeEnabledState failed, code: ${err.code}, message: ${err.message}`);
     }
   }
 
   testSetSpecificSystemBarEnabled() {
-    let window: window.Window | undefined = this.storage?.get("window");
-    let p = window?.setSpecificSystemBarEnabled('navigationIndicator', false, false)
-    p?.then(() => {
+    let window: window.Window | undefined = this.storage?.get('window');
+    let promise = window?.setSpecificSystemBarEnabled('navigationIndicator', false, false);
+    promise?.then(() => {
       console.info('setSpecificSystemBarEnabled success');
     }).catch((err: BusinessError) => {
-      console.error(`setSpecificSystemBarEnabled failed, error = ${JSON.stringify(err)}`);
-    })
+      console.error(`setSpecificSystemBarEnabled failed, code: ${err.code}, message: ${err.message}`);
+    });
   }
 }
 ```

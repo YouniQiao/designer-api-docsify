@@ -33,7 +33,7 @@ Disconnect to device with pan. On API 10 and above, the permission required by t
 **Substitutes:** [disconnect](arkts-connectivity-pan-panprofile-i-sys.md#disconnect)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -116,7 +116,7 @@ Obtains the tethering enable or disable. On API 10 and above, the permission req
 **Substitutes:** [isTetheringOn](arkts-connectivity-pan-panprofile-i.md#istetheringon)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -162,7 +162,7 @@ Enable bluetooth tethering. On API 10 and above, the permission required by this
 **Substitutes:** [setTethering](arkts-connectivity-pan-panprofile-i-sys.md#settethering)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

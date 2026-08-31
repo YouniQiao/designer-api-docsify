@@ -63,7 +63,7 @@ import {
   ArcButtonStatus,
   ArcButtonStyleMode,
   ArcButtonPosition,
-}  from '@kit.ArkUI';
+} from '@kit.ArkUI';
 
 @Entry
 @ComponentV2
@@ -116,22 +116,6 @@ struct Index {
 }
 ```
 
-This example is recommended to run on a wearable device for optimal display effects and is also supported on other devices. To run the example on a wearable device, configure wearable in the [deviceTypes](../../../quick-start/module-configuration-file.md#devicetypes) tag of the [module.json5] configuration file (../../../quick-start/module-configuration-file.md) in the src/main directory.
-
-```TypeScript
-// module.json5
-{
-  "module": {
-    // ...
-    "deviceTypes": [
-      "wearable",
-      "phone"
-    ]
-    // ...
-  }
-}
-```
-
 ```TypeScript
 // xxx.ets
 import {
@@ -142,7 +126,7 @@ import {
   ArcButtonStatus,
   ArcButtonStyleMode,
   ArcButtonPosition,
-}  from '@kit.ArkUI';
+} from '@kit.ArkUI';
 
 @Entry
 @ComponentV2
@@ -158,9 +142,9 @@ struct Index {
       fontSize: new LengthMetrics(15, LengthUnit.FP),
       shadowEnabled: true,
       onClick: () => {
-        if(this.bottomOptions.progressConfig && this.bottomOptions.progressConfig.value < 100) {
-          this.bottomOptions.progressConfig.value = this.bottomOptions.progressConfig.value + 5
-          this.bottomOptions.label = this.bottomOptions.progressConfig.value + "%"
+        if (this.bottomOptions.progressConfig && this.bottomOptions.progressConfig.value < 100) {
+          this.bottomOptions.progressConfig.value = this.bottomOptions.progressConfig.value + 5;
+          this.bottomOptions.label = this.bottomOptions.progressConfig.value + '%';
         }
       }
     })
@@ -170,7 +154,7 @@ struct Index {
       status: ArcButtonStatus.NORMAL,
       fontSize: new LengthMetrics(15, LengthUnit.FP),
       shadowEnabled: true,
-      progressConfig: {value:0, total:100},
+      progressConfig: {value:0, total:100}
     })
   }
 

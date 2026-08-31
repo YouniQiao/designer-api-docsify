@@ -17,9 +17,9 @@ Disables a device administrator application for the specified user. This API use
 **Since:** 12
 
 **Required permissions:** 
-- API version 23+: ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN or ohos.permission.START_PROVISIONING_MESSAGE or ohos.permission.ENTERPRISE_DEACTIVATE_DEVICE_ADMIN
-- API version 20 - 22: ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN or ohos.permission.START_PROVISIONING_MESSAGE
-- API version 12 - 19: ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
+- API version 23 and later: ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN or ohos.permission.START_PROVISIONING_MESSAGE or ohos.permission.ENTERPRISE_DEACTIVATE_DEVICE_ADMIN
+- API versions 20 to 22: ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN or ohos.permission.START_PROVISIONING_MESSAGE
+- API versions 12 to 19: ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
 
 **Model restriction:** This API can be used only in the stage model.
 

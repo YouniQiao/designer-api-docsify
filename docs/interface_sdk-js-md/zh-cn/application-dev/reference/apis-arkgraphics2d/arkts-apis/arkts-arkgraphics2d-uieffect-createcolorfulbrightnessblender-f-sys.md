@@ -37,3 +37,43 @@ function createColorfulBrightnessBlender(brightnessBlenderParam: BrightnessBlend
 | 类型 | 说明 |
 | --- | --- |
 | [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | 返回具有彩色提亮压暗效果的混合器。 |
+
+**示例**
+
+```TypeScript
+import { uiEffect } from "@kit.ArkGraphics2D"
+
+let blender : uiEffect.ColorfulBrightnessBlender =
+  uiEffect.createColorfulBrightnessBlender({
+    cubicRate:1.0,
+    quadraticRate:1.0,
+    linearRate:1.0,
+    degree:1.0,
+    saturation:1.0,
+    positiveCoefficient:[2.3, 4.5, 2.0],
+    negativeCoefficient:[0.5, 2.0, 0.5],
+    fraction:0.0}, {
+    darkenWeight: 0.6,
+    vibrancyStrength: 0.5,
+    lumaDiff: 0.4,
+    hdrEnabled: true})
+
+@Entry
+@Component
+struct example {
+  build() {
+    RelativeContainer() {
+      Image($r("app.media.backgroundImage"))
+        .width("100%")
+        .height("100%")
+      
+      Text("Hello world")
+        .fontSize(100)
+        .fontColor(Color.Red)
+        .fontWeight(900)
+        .position({x: 50, y: 200})
+        .advancedBlendMode(blender)
+    }
+  }
+}
+```

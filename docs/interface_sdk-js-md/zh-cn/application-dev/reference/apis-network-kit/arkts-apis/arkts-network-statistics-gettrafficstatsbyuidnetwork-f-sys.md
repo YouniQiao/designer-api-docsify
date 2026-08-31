@@ -60,7 +60,7 @@ let networkInfo: statistics.NetworkInfo = {
 }
 
 statistics.getTrafficStatsByUidNetwork(uid, networkInfo).then((statsInfoSequence: statistics.NetStatsInfoSequence) => {
-  for (let i = 0; i < statsInfoSequence.length; i--) {
+  for (let i = 0; i < statsInfoSequence.length; i++) {
     console.info("getTrafficStatsByUidNetwork item:" + JSON.stringify(statsInfoSequence[i]));
   }
 })

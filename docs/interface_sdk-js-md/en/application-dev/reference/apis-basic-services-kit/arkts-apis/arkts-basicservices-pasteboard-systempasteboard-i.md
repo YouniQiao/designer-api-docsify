@@ -294,7 +294,7 @@ While most applications must [request permissions to access the pasteboard](../.
 **Since:** 9
 
 **Required permissions:** 
-- API version 12+: ohos.permission.READ_PASTEBOARD
+- API version 12 and later: ohos.permission.READ_PASTEBOARD
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -345,7 +345,7 @@ While most applications must [request permissions to access the pasteboard](../.
 **Since:** 9
 
 **Required permissions:** 
-- API version 12+: ohos.permission.READ_PASTEBOARD
+- API version 12 and later: ohos.permission.READ_PASTEBOARD
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -433,7 +433,7 @@ While most applications must [request permissions to access the pasteboard](../.
 **Since:** 11
 
 **Required permissions:** 
-- API version 12+: ohos.permission.READ_PASTEBOARD
+- API version 12 and later: ohos.permission.READ_PASTEBOARD
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1206,7 +1206,7 @@ Deletes the global pasteable range of the application.
 **Since:** 14
 
 **Required permissions:** 
-- API version 14+: ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
+- API version 14 and later: ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1240,7 +1240,7 @@ Sets pasteable range of PasteData for application.
 **Since:** 14
 
 **Required permissions:** 
-- API version 14+: ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
+- API version 14 and later: ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 

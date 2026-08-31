@@ -18,8 +18,8 @@ Updates the print job state. This API uses an asynchronous callback to return th
 **Since:** 24
 
 **Required permissions:** 
-- API version 24+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
-- API version 10 - 23: ohos.permission.MANAGE_PRINT_JOB
+- API version 24 and later: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
+- API versions 10 to 23: ohos.permission.MANAGE_PRINT_JOB
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -70,8 +70,8 @@ Updates the print job state. This API uses a promise to return the result.
 **Since:** 24
 
 **Required permissions:** 
-- API version 24+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
-- API version 10 - 23: ohos.permission.MANAGE_PRINT_JOB
+- API version 24 and later: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.ENTERPRISE_MANAGE_PRINT
+- API versions 10 to 23: ohos.permission.MANAGE_PRINT_JOB
 
 **System capability:** SystemCapability.Print.PrintFramework
 

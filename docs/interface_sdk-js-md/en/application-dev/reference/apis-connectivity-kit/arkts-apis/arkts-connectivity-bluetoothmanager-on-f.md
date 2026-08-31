@@ -21,7 +21,7 @@ Subscribe the event reported when a remote Bluetooth device is discovered. On AP
 **Substitutes:** bluetoothDeviceFind
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -72,7 +72,7 @@ Subscribe the event reported when a remote Bluetooth device is bonded. On API 10
 **Substitutes:** bondStateChange
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -123,7 +123,7 @@ Subscribe the event of a pairing request from a remote Bluetooth device. On API 
 **Substitutes:** pinRequired
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -174,7 +174,7 @@ Subscribe the event reported when the Bluetooth state changes. On API 10 and abo
 **Substitutes:** stateChange
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

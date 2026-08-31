@@ -6,7 +6,7 @@ Enumerates the **salt_len** types to set when PSS padding is used in RSA signing
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 10 to 11: SystemCapability.Security.Huks.Extension
+- API versions 10 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_RSA_PSS_SALT_LEN_DIGEST
 
@@ -22,7 +22,7 @@ HUKS_RSA_PSS_SALT_LEN_DIGEST = 0
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 10 to 11: SystemCapability.Security.Huks.Extension
+- API versions 10 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_RSA_PSS_SALT_LEN_MAX
 
@@ -38,4 +38,4 @@ HUKS_RSA_PSS_SALT_LEN_MAX = 1
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 10 to 11: SystemCapability.Security.Huks.Extension
+- API versions 10 to 11: SystemCapability.Security.Huks.Extension

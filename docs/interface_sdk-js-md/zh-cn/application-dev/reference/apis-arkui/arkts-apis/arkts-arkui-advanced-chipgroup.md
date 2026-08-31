@@ -643,7 +643,8 @@ struct ChipGroupMaterialExample {
     })
   }
 
-  build() {
+  @Builder
+  NavigationTitle() {
     Column({ space: 10 }) {
       ChipGroup({
         items: [
@@ -685,7 +686,15 @@ struct ChipGroupMaterialExample {
     })
     .padding(12)
     .width('100%')
-    .height('100%')
+  }
+
+  build() {
+    Column() {
+      Navigation() {
+        // 页面内容
+      }
+      .title({ builder: this.NavigationTitle, height: '100%' })
+    }.width('100%').height('100%')
   }
 }
 ```
@@ -714,7 +723,8 @@ struct ChipGroupMaterialExample {
     })
   }
 
-  build() {
+  @Builder
+  NavigationTitle() {
     Column({ space: 10 }) {
       ChipGroup({
         items: [
@@ -762,7 +772,15 @@ struct ChipGroupMaterialExample {
     })
     .padding(12)
     .width('100%')
-    .height('100%')
+  }
+
+  build() {
+    Column() {
+      Navigation() {
+        // 页面内容
+      }
+      .title({ builder: this.NavigationTitle, height: '100%' })
+    }.width('100%').height('100%')
   }
 }
 ```

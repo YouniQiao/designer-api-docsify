@@ -21,7 +21,7 @@ Starts scanning Bluetooth devices. On API 10 and above, the permission required 
 **Substitutes:** [startBluetoothDiscovery](arkts-connectivity-connection-startbluetoothdiscovery-f.md)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

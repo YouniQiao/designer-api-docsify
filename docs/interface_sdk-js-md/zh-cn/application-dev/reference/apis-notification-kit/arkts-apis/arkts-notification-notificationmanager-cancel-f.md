@@ -22,11 +22,11 @@ function cancel(id: number, callback: AsyncCallback<void>): void
 
 **参见：**
 
-publish 发布通知。
+[publish](arkts-notification-notificationmanager-publish-f.md) 发布通知。
 
-cancelAll 取消当前应用所有已发布的通知。
+[cancelAll](arkts-notification-notificationmanager-cancelall-f.md) 取消当前应用所有已发布的通知。
 
-cancelGroup 取消当前应用指定组下的通知。
+[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) 取消当前应用指定组下的通知。
 
 **参数：**
 
@@ -78,11 +78,11 @@ function cancel(id: number, label: string, callback: AsyncCallback<void>): void
 
 **参见：**
 
-publish 发布通知。
+[publish](arkts-notification-notificationmanager-publish-f.md) 发布通知。
 
-cancelAll 取消当前应用所有已发布的通知。
+[cancelAll](arkts-notification-notificationmanager-cancelall-f.md) 取消当前应用所有已发布的通知。
 
-cancelGroup 取消当前应用指定组下的通知。
+[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) 取消当前应用指定组下的通知。
 
 **参数：**
 
@@ -135,11 +135,11 @@ function cancel(id: number, label?: string): Promise<void>
 
 **参见：**
 
-publish 发布通知。
+[publish](arkts-notification-notificationmanager-publish-f.md) 发布通知。
 
-cancelAll 取消当前应用所有已发布的通知。
+[cancelAll](arkts-notification-notificationmanager-cancelall-f.md) 取消当前应用所有已发布的通知。
 
-cancelGroup 取消当前应用指定组下的通知。
+[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) 取消当前应用指定组下的通知。
 
 **参数：**
 

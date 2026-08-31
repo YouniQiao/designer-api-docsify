@@ -204,19 +204,19 @@ struct NavigationExample {
       .titleMode(NavigationTitleMode.Full)
       .toolbarConfiguration([
         {
-          // Replace $r("app.string.navigation_toolbar_add") and $r("app.media.ic_public_highlights_ed") with the image resource file you use.
-          value: $r("app.string.navigation_toolbar_add"),
-          icon: $r("app.media.ic_public_highlights_ed")
+          // Replace $r('app.string.navigation_toolbar_add') and $r('app.media.ic_public_highlights_ed') with the image resource file you use.
+          value: $r('app.string.navigation_toolbar_add'),
+          icon: $r('app.media.ic_public_highlights_ed')
         },
         {
-          // Replace $r("app.string.navigation_toolbar_app") and $r("app.media.ic_public_highlights") with the image resource file you use.
-          value: $r("app.string.navigation_toolbar_app"),
-          icon: $r("app.media.ic_public_highlights")
+          // Replace $r('app.string.navigation_toolbar_app') and $r('app.media.ic_public_highlights') with the image resource file you use.
+          value: $r('app.string.navigation_toolbar_app'),
+          icon: $r('app.media.ic_public_highlights')
         },
         {
-          // Replace $r("app.string.navigation_toolbar_collect") and $r("app.media.ic_public_highlights") with the image resource file you use.
-          value: $r("app.string.navigation_toolbar_collect"),
-          icon: $r("app.media.ic_public_highlights")
+          // Replace $r('app.string.navigation_toolbar_collect') and $r('app.media.ic_public_highlights') with the image resource file you use.
+          value: $r('app.string.navigation_toolbar_collect'),
+          icon: $r('app.media.ic_public_highlights')
         }
       ])
       .hideTitleBar(false)
@@ -242,13 +242,13 @@ struct NavigationExample {
   registerInterception() {
     this.pageInfos.setInterception({
       // Interception before page redirection, allowing for stack operations. The setting takes effect in the current redirection.
-      willShow: (from: NavDestinationContext | "navBar", to: NavDestinationContext | "navBar",
+      willShow: (from: NavDestinationContext | 'navBar', to: NavDestinationContext | 'navBar',
         operation: NavigationOperation, animated: boolean) => {
         if (!this.isUseInterception) {
           return;
         }
-        if (typeof to === "string") {
-          console.info("target page is navigation home");
+        if (typeof to === 'string') {
+          console.info('target page is navigation home');
           return;
         }
         // Redirect the target page from pageTwo to pageOne.
@@ -259,18 +259,18 @@ struct NavigationExample {
         }
       },
       // Callback invoked after the page is navigated. Stack operations in this callback are effective in the next navigation.
-      didShow: (from: NavDestinationContext | "navBar", to: NavDestinationContext | "navBar",
+      didShow: (from: NavDestinationContext | 'navBar', to: NavDestinationContext | 'navBar',
         operation: NavigationOperation, isAnimated: boolean) => {
         if (!this.isUseInterception) {
           return;
         }
-        if (typeof from === "string") {
-          console.info("current transition is from navigation home");
+        if (typeof from === 'string') {
+          console.info('current transition is from navigation home');
         } else {
           console.info(`current transition is from  ${(from as NavDestinationContext).pathInfo.name}`);
         }
-        if (typeof to === "string") {
-          console.info("current transition to is navBar");
+        if (typeof to === 'string') {
+          console.info('current transition to is navBar');
         } else {
           console.info(`current transition is to ${(to as NavDestinationContext).pathInfo.name}`);
         }
@@ -315,7 +315,7 @@ struct NavigationExample {
 
 ```TypeScript
 // PageOne.ets
-class TmpClass {
+class PageParam {
   count: number = 10;
 }
 
@@ -336,8 +336,8 @@ export struct PageOne {
           .height(40)
           .margin(20)
           .onClick(() => {
-            let tmp = new TmpClass();
-            this.pageInfos.pushPathByName('pageTwo', tmp); // Push the navigation destination page specified by name, with the data specified by param, to the stack.
+            let pageParam = new PageParam();
+            this.pageInfos.pushPathByName('pageTwo', pageParam); // Push the navigation destination page specified by name, with the data specified by param, to the stack.
           })
         Button('singletonLaunchMode', { stateEffect: true, type: ButtonType.Capsule })
           .width('80%')
@@ -352,7 +352,7 @@ export struct PageOne {
           .height(40)
           .margin(20)
           .onClick(() => {
-            this.pageInfos.popToName('pageTwo'); // Pop the first navigation destination page that matches the value of name to the top of the routing stack.
+            this.pageInfos.popToName('pageTwo'); // Pop the routing stack back to the first navigation destination page that matches the value of name.
             console.info(`popToName ${JSON.stringify(this.pageInfos)},` + 
               `Return value ${JSON.stringify(this.pageInfos.popToName('pageTwo'))}`); 
           })
@@ -369,7 +369,7 @@ export struct PageOne {
           .height(40)
           .margin(20)
           .onClick(() => {
-            this.pageInfos.moveToTop('pageTwo'); // Move to the top of the routing stack the first navigation destination page that matches the value of name.
+            this.pageInfos.moveToTop('pageTwo'); // Move the first navigation destination page that matches the value of name to the top of the routing stack.
             console.info(`moveToTop ${JSON.stringify(this.pageInfos)},` + 
               `Return value ${JSON.stringify(this.pageInfos.popToName('pageTwo'))}`); 
           })
@@ -426,18 +426,18 @@ export struct PageTwo {
   private menuItems: Array<NavigationMenuItem> = [
     {
       // Replace 'resources/base/media/undo.svg' with the image resource file you use.
-      value: "1",
+      value: '1',
       icon: 'resources/base/media/undo.svg',
     },
     {
       // Replace 'resources/base/media/redo.svg' with the image resource file you use.
-      value: "2",
+      value: '2',
       icon: 'resources/base/media/redo.svg',
       isEnabled: false,
     },
     {
       // Replace 'resources/base/media/ic_public_ok.svg' with the image resource file you use.
-      value: "3",
+      value: '3',
       icon: 'resources/base/media/ic_public_ok.svg',
       isEnabled: true,
     }
@@ -527,7 +527,7 @@ struct NavigationExample {
       if (CustomTransition.getInstance().interactive) {
         let customAnimation: NavigationAnimatedTransition = {
           onTransitionEnd: (isSuccess: boolean) => {
-            console.info("===== current transition is " + isSuccess);
+            console.info(`===== current transition is ${isSuccess}`);
             CustomTransition.getInstance().recoverState();
             CustomTransition.getInstance().proxy = undefined;
           },
@@ -748,7 +748,7 @@ export struct PageTwo {
         this.translateX = '0';
         this.getUIContext()?.animateTo({
           duration: 500, onFinish: () => {
-            this.translateX = "0";
+            this.translateX = '0';
           }
         }, () => {
           this.translateX = '100%';
@@ -977,7 +977,7 @@ struct NavigationExample {
 // PageOne.ets
 import { BusinessError } from '@kit.BasicServicesKit';
 
-class TmpClass {
+class PageParam {
   count: number = 10;
 }
 
@@ -1022,8 +1022,8 @@ export struct PageOne {
           .height(40)
           .margin(10)
           .onClick(() => {
-            let tmp = new TmpClass();
-            this.pageInfo.pushPathByName('pageTwo', tmp, (popInfo) => {
+            let pageParam = new PageParam();
+            this.pageInfo.pushPathByName('pageTwo', pageParam, (popInfo) => {
               this.message =
                 `[pushPathByName]last page is: ${popInfo.info.name}, result: ${JSON.stringify(popInfo.result)}`;
             }); // Push the navigation destination page specified by name, with the data specified by param, to the routing stack. Use the onPop callback to receive the page processing result.
@@ -1034,7 +1034,7 @@ export struct PageOne {
           .height(40)
           .margin(10)
           .onClick(() => {
-            let tmp = new TmpClass();
+            let pageParam = new PageParam();
             // Push the navigation destination page specified by name, with the data specified by param, to the routing stack. Use the onPop callback to receive the page processing result.
             this.pageInfo.pushDestination({
               name: 'pageTwo', param: new ParamWithOp(), onPop: (popInfo: PopInfo) => {
@@ -1044,7 +1044,7 @@ export struct PageOne {
             }).catch((error: BusinessError) => {
               console.error(`[pushDestination]failed, error code = ${error.code}, error.message = ${error.message}.`);
             }).then(() => {
-              console.error('[pushDestination]success.');
+              console.info('[pushDestination]success.');
             });
           })
 
@@ -1053,15 +1053,15 @@ export struct PageOne {
           .height(40)
           .margin(10)
           .onClick(() => {
-            let tmp = new TmpClass();
+            let pageParam = new pageParam();
             // Push the navigation destination page specified by name, with the data specified by param, to the routing stack. Use the onPop callback to receive the page processing result.
-            this.pageInfo.pushDestinationByName('pageTwo', tmp, (popInfo) => {
+            this.pageInfo.pushDestinationByName('pageTwo', pageParam, (popInfo) => {
               this.message = 
                 `[pushDestinationByName]last page is: ${popInfo.info.name}, result: ${JSON.stringify(popInfo.result)}`;
             }).catch((error: BusinessError) => {
               console.error(`[pushDestinationByName]failed, error code = ${error.code}, error.message = ${error.message}.`);
             }).then(() => {
-              console.error('[pushDestinationByName]success.');
+              console.info('[pushDestinationByName]success.');
             });
           })
 
@@ -1078,8 +1078,8 @@ export struct PageOne {
           .height(40)
           .margin(10)
           .onClick(() => {
-            let tmp = new TmpClass();
-            this.pageInfo.pushPathByName('pageTwo', tmp); // Push the navigation destination page specified by name, with the data specified by param, to the routing stack.
+            let pageParam = new PageParam();
+            this.pageInfo.pushPathByName('pageTwo', pageParam); // Push the navigation destination page specified by name, with the data specified by param, to the routing stack.
           })
 
         Button('pushDestinationWithoutOnPop', { stateEffect: true, type: ButtonType.Capsule })
@@ -1087,13 +1087,13 @@ export struct PageOne {
           .height(40)
           .margin(10)
           .onClick(() => {
-            let tmp = new TmpClass();
-            // Push the navigation destination page specified by name, with the data specified by param, to the routing stack. Use the onPop callback to receive the page processing result.
+            let pageParam = new PageParam();
+            // Push the navigation destination page specified by name, with the data specified by param, to the routing stack.
             this.pageInfo.pushDestination({ name: 'pageTwo', param: new ParamWithOp() })
               .catch((error: BusinessError) => {
                 console.error(`[pushDestinationWithoutOnPop]failed, error code = ${error.code}, error.message = ${error.message}.`);
               }).then(() => {
-              console.error('[pushDestinationWithoutOnPop]success.');
+              console.info('[pushDestinationWithoutOnPop]success.');
             });
           })
 
@@ -1102,13 +1102,13 @@ export struct PageOne {
           .height(40)
           .margin(10)
           .onClick(() => {
-            let tmp = new TmpClass();
+            let pageParam = new PageParam();
             // Push the navigation destination page specified by name, with the data specified by param, to the routing stack.
-            this.pageInfo.pushDestinationByName('pageTwo', tmp)
+            this.pageInfo.pushDestinationByName('pageTwo', pageParam)
               .catch((error: BusinessError) => {
                 console.error(`[pushDestinationByNameWithoutOnPop]failed, error code = ${error.code}, error.message = ${error.message}.`);
               }).then(() => {
-              console.error('[pushDestinationByNameWithoutOnPop]success.');
+              console.info('[pushDestinationByNameWithoutOnPop]success.');
             });
           })
 
@@ -1133,7 +1133,7 @@ export struct PageOne {
 
 ```TypeScript
 // PageTwo.ets
-class resultClass {
+class ResultClass {
   constructor(count: number) {
     this.count = count;
   }
@@ -1158,7 +1158,7 @@ export struct PageTwo {
           .height(40)
           .margin(20)
           .onClick(() => {
-            this.pathStack.pop(new resultClass(1)); // Return to the previous page and pass in the processing result to the onPop callback of push.
+            this.pathStack.pop(new ResultClass(1)); // Return to the previous page and pass in the processing result to the onPop callback of push.
           })
 
         Button('popToName', { stateEffect: true, type: ButtonType.Capsule })
@@ -1167,7 +1167,7 @@ export struct PageTwo {
           .margin(20)
           .onClick(() => {
             this.pathStack.popToName('pageOne',
-              new resultClass(11)); // Move the first navigation destination page that matches name to the top of the routing stack, and pass in the processing result to the onPop callback of push.
+              new ResultClass(11)); // Pop the routing stack back to the first navigation destination page specified by name and pass the processing result to the onPop callback of push.
           })
 
         Button('popToIndex', { stateEffect: true, type: ButtonType.Capsule })
@@ -1175,7 +1175,7 @@ export struct PageTwo {
           .height(40)
           .margin(20)
           .onClick(() => {
-            this.pathStack.popToIndex(0, new resultClass(111)); // Move the navigation destination page specified by index to the top of the routing stack, and pass in the processing result to the onPop callback of push.
+            this.pathStack.popToIndex(0, new ResultClass(111)); // Pop the routing stack back to the navigation destination page specified by index and pass the processing result to the onPop callback of push.
           })
 
         Button('popWithoutResult', { stateEffect: true, type: ButtonType.Capsule })
@@ -1204,7 +1204,7 @@ export struct PageTwo {
       }.width('100%').height('100%')
     }.title('pageTwo')
     .onBackPressed(() => {
-      this.pathStack.pop(new resultClass(0)); // Return to the previous page and pass in the processing result to the onPop callback of push.
+      this.pathStack.pop(new ResultClass(0)); // Pop to the previous page and pass in the processing result to the onPop callback of push.
       return true;
     }).onReady((context: NavDestinationContext) => {
       this.pathStack = context.pathStack;
@@ -1242,7 +1242,7 @@ struct Index {
           .height('100%')
         Column() {
           Stack({ alignContent: Alignment.Center }) {
-            Button("switch color")
+            Button('switch color')
               .onClick(() => {
                 this.useColor1 = !this.useColor1;
               })
@@ -1251,7 +1251,7 @@ struct Index {
           .layoutWeight(1)
 
           Stack({ alignContent: Alignment.Center }) {
-            Button("switch blur")
+            Button('switch blur')
               .onClick(() => {
                 this.useBlur1 = !this.useBlur1;
               })
@@ -1260,7 +1260,7 @@ struct Index {
           .layoutWeight(1)
 
           Stack({ alignContent: Alignment.Center }) {
-            Button("switch blurOption")
+            Button('switch blurOption')
               .onClick(() => {
                 this.useBlurOption1 = !this.useBlurOption1;
               })
@@ -1269,7 +1269,7 @@ struct Index {
           .layoutWeight(1)
 
           Stack({ alignContent: Alignment.Center }) {
-            Button("push page")
+            Button('push page')
               .onClick(() => {
                 this.navPathStack.pushPathByName('NavigationMenu', null);
               })
@@ -1285,7 +1285,7 @@ struct Index {
     .width('100%')
     .height('100%')
     // You can set the background color and background blur style of the title bar.
-    .title("NavTitle", {
+    .title('NavTitle', {
       backgroundColor: this.useColor1 ? COLOR1 : COLOR2,
       backgroundBlurStyle: this.useBlur1 ? BLUR_STYLE_1 : BLUR_STYLE_2,
       barStyle: BarStyle.STACK,
@@ -1293,10 +1293,10 @@ struct Index {
     })
     // You can set the background color and background blur style for the menu
     .menus([
-      { value: "A" },
-      { value: "B" },
-      { value: "C" },
-      { value: "D" },
+      { value: 'A' },
+      { value: 'B' },
+      { value: 'C' },
+      { value: 'D' },
     ], {
       moreButtonOptions: {
         backgroundBlurStyle: this.useBlur1 ? BLUR_STYLE_1 : BLUR_STYLE_2,
@@ -1305,12 +1305,12 @@ struct Index {
     })
     // You can set the background color and background blur style of the toolbar.
     .toolbarConfiguration([
-      { value: "A" },
-      { value: "B" },
-      { value: "C" },
-      { value: "D" },
-      { value: "E" },
-      { value: "F" }
+      { value: 'A' },
+      { value: 'B' },
+      { value: 'C' },
+      { value: 'D' },
+      { value: 'E' },
+      { value: 'F' }
     ], {
       backgroundColor: this.useColor1 ? COLOR1 : COLOR2,
       backgroundBlurStyle: this.useBlur1 ? BLUR_STYLE_1 : BLUR_STYLE_2,
@@ -1330,19 +1330,19 @@ export struct BackComponent {
       Column() {
       }
       .height('100%')
-      .backgroundColor("#3D9DB4")
+      .backgroundColor('#3D9DB4')
       .layoutWeight(9)
 
       Column() {
       }
       .height('100%')
-      .backgroundColor("#17A98D")
+      .backgroundColor('#17A98D')
       .layoutWeight(9)
 
       Column() {
       }
       .height('100%')
-      .backgroundColor("#FFC000")
+      .backgroundColor('#FFC000')
       .layoutWeight(9)
     }
     .height('100%')
@@ -1382,7 +1382,7 @@ struct ColorAndBlur {
           .height('100%')
         Column() {
           Stack({ alignContent: Alignment.Center }) {
-            Button("switch color")
+            Button('switch color')
               .onClick(() => {
                 this.useColor1 = !this.useColor1;
               })
@@ -1391,7 +1391,7 @@ struct ColorAndBlur {
           .layoutWeight(1)
 
           Stack({ alignContent: Alignment.Center }) {
-            Button("switch blur")
+            Button('switch blur')
               .onClick(() => {
                 this.useBlur1 = !this.useBlur1;
               })
@@ -1400,7 +1400,7 @@ struct ColorAndBlur {
           .layoutWeight(1)
 
           Stack({ alignContent: Alignment.Center }) {
-            Button("switch effect")
+            Button('switch effect')
               .onClick(() => {
                 this.useEffect1 = !this.useEffect1;
               })
@@ -1416,7 +1416,7 @@ struct ColorAndBlur {
     .width('100%')
     .height('100%')
     // You can set the background color and background blur style of the title bar.
-    .title("Destination Title", {
+    .title('Destination Title', {
       backgroundColor: this.useColor1 ? COLOR1 : COLOR2,
       backgroundBlurStyle: this.useBlur1 ? BLUR_STYLE_1 : BLUR_STYLE_2,
       barStyle: BarStyle.STACK,
@@ -1424,10 +1424,10 @@ struct ColorAndBlur {
     })
     // You can set the background color and background blur style for the menu
     .menus([
-      { value: "A" },
-      { value: "B" },
-      { value: "C" },
-      { value: "D" },
+      { value: 'A' },
+      { value: 'B' },
+      { value: 'C' },
+      { value: 'D' },
     ], {
       moreButtonOptions: {
         backgroundEffect: this.useEffect1 ? EFFECT_OPTION_1 : EFFECT_OPTION_2,
@@ -1435,12 +1435,12 @@ struct ColorAndBlur {
     })
     // You can set the background color and background blur style of the toolbar.
     .toolbarConfiguration([
-      { value: "A" },
-      { value: "B" },
-      { value: "C" },
-      { value: "D" },
-      { value: "E" },
-      { value: "F" }
+      { value: 'A' },
+      { value: 'B' },
+      { value: 'C' },
+      { value: 'D' },
+      { value: 'E' },
+      { value: 'F' }
     ], {
       backgroundEffect: this.useEffect1 ? EFFECT_OPTION_1 : EFFECT_OPTION_2,
       // You can set the background color and background blur style for the menu in the toolbar.
@@ -1454,8 +1454,8 @@ struct ColorAndBlur {
 
 ```TypeScript
 // Utils.ets
-export const COLOR1: string = "#80004AAF";
-export const COLOR2: string = "#802787D9";
+export const COLOR1: string = '#80004AAF';
+export const COLOR2: string = '#802787D9';
 export const BLUR_STYLE_1: BlurStyle = BlurStyle.BACKGROUND_THIN;
 export const BLUR_STYLE_2: BlurStyle = BlurStyle.BACKGROUND_THICK;
 export const BLUR_STYLE_OPTION_1: BackgroundBlurStyleOptions = {
@@ -1524,7 +1524,7 @@ struct NavigationExample1 {
             .onClick(() => {
               // The parent navigation path stack can be obtained.
               let parentStack = this.childNavStack.getParent();
-              parentStack?.pushPath({ name: "pageOne" });
+              parentStack?.pushPath({ name: 'pageOne' });
             })
         }
         .clip(true)
@@ -1549,7 +1549,7 @@ struct NavigationExample1 {
 @Builder
 export function PageOneBuilder(name: string) {
   NavDestination() {
-    Text("this is " + name)
+    Text(`this is ${name}`)
   }
   .title(name)
 }
@@ -1591,21 +1591,21 @@ export function PageOneBuilder(name: string, param: Object) {
 @Component
 struct PageOne {
   private stack: NavPathStack | null = null;
-  private name: string = "";
+  private name: string = '';
   private paramNum: number = 0;
 
   build() {
     NavDestination() {
       Column() {
-        Text("NavPathInfo: name: " + this.name + ", paramNum: " + this.paramNum)
+        Text('NavPathInfo: name: ' + this.name + ', paramNum: ' + this.paramNum)
         Button('pushPath', { stateEffect: true, type: ButtonType.Capsule })
           .width('80%')
           .height(40)
           .margin(20)
           .onClick(() => {
             if (this.stack) {
-              let p = new PageParam(this.paramNum + 1);
-              this.stack.pushPath({ name: "pageOne", param: p });
+              let pageParam = new PageParam(this.paramNum + 1);
+              this.stack.pushPath({ name: 'pageOne', param: pageParam });
             }
           })
         Button('pop', { stateEffect: true, type: ButtonType.Capsule })
@@ -1626,8 +1626,8 @@ struct PageOne {
         this.name = ctx?.pathInfo?.name;
         this.paramNum = (ctx?.pathInfo?.param as PageParam)?.num;
         this.stack = ctx.pathStack;
-      } catch (e) {
-        console.error(`testTag onReady catch exception: ${JSON.stringify(e)}`);
+      } catch (err) {
+        console.error(`testTag onReady catch exception.Code:${err.Code}, message: ${err.message}`);
       }
     })
   }
@@ -1646,8 +1646,8 @@ struct NavigationExample2 {
           .height(40)
           .margin(20)
           .onClick(() => {
-            let p = new PageParam(1);
-            this.stack.pushPath({ name: "pageOne", param: p });
+            let pageParam = new PageParam(1);
+            this.stack.pushPath({ name: 'pageOne', param: pageParam });
           })
       }
       .width('100%')
@@ -1688,19 +1688,19 @@ export function PageOneBuilder(name: string, param: Object) {
 @Component
 struct PageOneComponent {
   private stack: NavPathStack | null = null;
-  @State eventStr: string = "";
+  @State eventStr: string = '';
 
   build() {
     NavDestination() {
       Column() {
-        Text("event: " + this.eventStr)
+        Text('event: ' + this.eventStr)
         Button('pushPath', { stateEffect: true, type: ButtonType.Capsule })
           .width('80%')
           .height(40)
           .margin(20)
           .onClick(() => {
             if (this.stack) {
-              this.stack.pushPath({ name: "pageOne" });
+              this.stack.pushPath({ name: 'pageOne' });
             }
           })
         Button('pop', { stateEffect: true, type: ButtonType.Capsule })
@@ -1716,36 +1716,36 @@ struct PageOneComponent {
     }
     .title('pageOne')
     .onAppear(() => {
-      this.eventStr += "<onAppear>";
+      this.eventStr += '<onAppear>';
     })
     .onDisAppear(() => {
-      this.eventStr += "<onDisAppear>";
+      this.eventStr += '<onDisAppear>';
     })
     .onShown(() => {
-      this.eventStr += "<onShown>";
+      this.eventStr += '<onShown>';
     })
     .onHidden(() => {
-      this.eventStr += "<onHidden>";
+      this.eventStr += '<onHidden>';
     })
     .onWillAppear(() => {
-      this.eventStr += "<onWillAppear>";
+      this.eventStr += '<onWillAppear>';
     })
     .onWillDisappear(() => {
-      this.eventStr += "<onWillDisappear>";
+      this.eventStr += '<onWillDisappear>';
     })
     .onWillShow(() => {
-      this.eventStr += "<onWillShow>";
+      this.eventStr += '<onWillShow>';
     })
     .onWillHide(() => {
-      this.eventStr += "<onWillHide>";
+      this.eventStr += '<onWillHide>';
     })
     // onReady is called before onAppear.
     .onReady((ctx: NavDestinationContext) => {
       try {
-        this.eventStr += "<onReady>";
+        this.eventStr += '<onReady>';
         this.stack = ctx.pathStack;
-      } catch (e) {
-        console.error(`testTag onReady catch exception: ${JSON.stringify(e)}`);
+      } catch (err) {
+        console.error(`testTag onReady catch exception.Code:${err.code}, message:${err.message}`);
       }
     })
   }
@@ -1764,7 +1764,7 @@ struct NavigationExample3 {
           .height(40)
           .margin(20)
           .onClick(() => {
-            this.stack.pushPath({ name: "pageOne" });
+            this.stack.pushPath({ name: 'pageOne' });
           })
       }
       .width('100%')
@@ -1886,7 +1886,7 @@ export function pageMap(name: string) {
 @Component
 struct PageOne {
   derivedStack: DerivedNavPathStack = new DerivedNavPathStack();
-  curStringifyParam: string = "NA";
+  curStringifyParam: string = 'NA';
 
   build() {
     NavDestination() {
@@ -1930,7 +1930,7 @@ struct PageOne {
 // Utils.ets
 export class DerivedNavPathStack extends NavPathStack {
   // Set the custom unique ID.
-  id: string = "__default__";
+  id: string = '__default__';
 
   // Custom method for the derived class.
   setId(id: string) {
@@ -1939,7 +1939,7 @@ export class DerivedNavPathStack extends NavPathStack {
 
   // Custom method for the derived class.
   getInfo(): string {
-    return "this page used Derived NavPathStack, id: " + this.id;
+    return `this page used Derived NavPathStack, id: ${this.id}`;
   }
 
   // Overload the method inherited from the NavPathStack base class.
@@ -1966,7 +1966,7 @@ export class DerivedNavPathStack extends NavPathStack {
 }
 
 export class NewParam {
-  info: string = "__default_param__";
+  info: string = '__default_param__';
 
   constructor(info: string) {
     this.info = info;
@@ -2211,7 +2211,7 @@ struct NavigationExample {
     }
     .titleMode(NavigationTitleMode.Full)
     .title(
-      { main: "Title", sub: "subTitle" },
+      { main: 'Title', sub: 'subTitle' },
       this.applyModifier ?
         {
           paddingStart: this.paddingStart,
@@ -2300,7 +2300,7 @@ export struct NavDestinationExample {
     }
     .hideTitleBar(false)
     .title(
-      { main: "Title", sub: "subTitle" },
+      { main: 'Title', sub: 'subTitle' },
       this.applyModifier ?
         {
           paddingStart: this.paddingStart,
@@ -2471,13 +2471,13 @@ struct NavigationCustomTransitionExample {
 // PageOne
 @Builder
 export function PageOneBuilder() {
-  PageContainer({ title: "PageOne" });
+  PageContainer({ title: 'PageOne' });
 }
 
 // PageTwo
 @Builder
 export function PageTwoBuilder() {
-  PageContainer({ title: "PageTwo" });
+  PageContainer({ title: 'PageTwo' });
 }
 
 @Component
@@ -2531,7 +2531,7 @@ export struct PageContainer {
           .height(40)
           .margin(20)
           .onClick(() => {
-            this.pageInfos.pushPath({ name: this.title == 'PageOne' ? "PageTwo" : "PageOne" });
+            this.pageInfos.pushPath({ name: this.title == 'PageOne' ? 'PageTwo' : 'PageOne' });
           })
       }
       .size({ width: '100%', height: '100%' })
@@ -2634,12 +2634,12 @@ import { ComponentContent } from '@kit.ArkUI';
 
 @Builder function PlaceholderPage() {
   Column() {
-    Text("Split-column mode placeholder page")
+    Text('Split-column mode placeholder page')
       .fontSize(28)
       .fontWeight(700)
       .margin({ top: 200 })
-  }.width("100%")
-  .height("100%")
+  }.width('100%')
+  .height('100%')
 }
 
 @Entry
@@ -2722,19 +2722,19 @@ struct NavigationExample {
       .titleMode(NavigationTitleMode.Full)
       .toolbarConfiguration([
         {
-          // Replace $r("app.string.navigation_toolbar_add") and $r("app.media.startIcon") with the image resource file you use.
-          value: $r("app.string.navigation_toolbar_add"),
-          icon: $r("app.media.startIcon")
+          // Replace $r('app.string.navigation_toolbar_add') and $r('app.media.startIcon') with the image resource file you use.
+          value: $r('app.string.navigation_toolbar_add'),
+          icon: $r('app.media.startIcon')
         },
         {
-          // Replace $r("app.string.navigation_toolbar_app") and $r("app.media.startIcon") with the image resource file you use.
-          value: $r("app.string.navigation_toolbar_app"),
-          icon: $r("app.media.startIcon")
+          // Replace $r('app.string.navigation_toolbar_app') and $r('app.media.startIcon') with the image resource file you use.
+          value: $r('app.string.navigation_toolbar_app'),
+          icon: $r('app.media.startIcon')
         },
         {
-          // Replace $r("app.string.navigation_toolbar_collect") and $r("app.media.startIcon") with the image resource file you use.
-          value: $r("app.string.navigation_toolbar_collect"),
-          icon: $r("app.media.startIcon")
+          // Replace $r('app.string.navigation_toolbar_collect') and $r('app.media.startIcon') with the image resource file you use.
+          value: $r('app.string.navigation_toolbar_collect'),
+          icon: $r('app.media.startIcon')
         }
       ])
       .mode(NavigationMode.Split) // Set the navigation mode to Split.
@@ -2804,7 +2804,7 @@ struct NavigationExample {
         Button('Enable/Disable Adaptation').onClick(()=> {
           this.enable = !this.enable;
         })
-        Text("Toolbar adaptation enabled: " + this.enable)
+        Text(`Toolbar adaptation enabled: ${this.enable}`)
       }
     }
     .mode(NavigationMode.Stack)
@@ -2912,12 +2912,12 @@ struct NavigationExample {
   registerInterception() {
     this.pageInfos.setInterception({
       // Intercept navigation behavior before page creation. Stack operations take effect for the current navigation process.
-      interception: (from: NavPathInfo | "navBar", to: NavPathInfo | NavBar, navStack: NavPathStack,
+      interception: (from: NavPathInfo | 'navBar', to: NavPathInfo | NavBar, navStack: NavPathStack,
         operation: NavigationOperation, animated: boolean) => {
         if (!this.isUseInterception) {
           return;
         }
-        if (typeof to === "string") {
+        if (typeof to === 'string') {
           return;
         }
         // Redirect the target page from pageTwo to pageOne.
@@ -2929,19 +2929,19 @@ struct NavigationExample {
         }
       },
       // Callback invoked after the page is navigated. Stack operations in this callback are effective in the next navigation.
-      didShow: (from: NavDestinationContext | "navBar", to: NavDestinationContext | "navBar",
+      didShow: (from: NavDestinationContext | 'navBar', to: NavDestinationContext | 'navBar',
         operation: NavigationOperation, isAnimated: boolean) => {
         if (!this.isUseInterception) {
           return;
         }
-        if (typeof from === "string") {
-          console.info("current transition is from navigation home");
+        if (typeof from === 'string') {
+          console.info('current transition is from navigation home');
         } else {
           console.info(`current transition is from  ${(from as NavDestinationContext).pathInfo.name}`);
           console.info(`current transition mode is to ${(to as NavDestinationContext).mode?.toString()}`);
         }
-        if (typeof to === "string") {
-          console.info("current transition to is navBar");
+        if (typeof to === 'string') {
+          console.info('current transition to is navBar');
         } else {
           console.info(`current transition is to ${(to as NavDestinationContext).pathInfo.name}`);
           console.info(`current transition mode is to ${(to as NavDestinationContext).mode?.toString()}`);
@@ -2987,7 +2987,7 @@ struct NavigationExample {
 
 ```TypeScript
 // PageOne.ets
-class TmpClass {
+class PageParam {
   count: number = 10;
 }
 
@@ -3008,8 +3008,8 @@ export struct PageOne {
           .height(40)
           .margin(20)
           .onClick(() => {
-            let tmp = new TmpClass();
-            this.pageInfos.pushPathByName('pageTwo', tmp); // Push the navigation destination page specified by name, with the data specified by param, to the routing stack.
+            let pageParam = new PageParam();
+            this.pageInfos.pushPathByName('pageTwo', pageParam); // Push the navigation destination page specified by name, with the data specified by param, to the stack.
           })
         Button('singletonLaunchMode', { stateEffect: true, type: ButtonType.Capsule })
           .width('80%')
@@ -3024,7 +3024,7 @@ export struct PageOne {
           .height(40)
           .margin(20)
           .onClick(() => {
-            this.pageInfos.popToName('pageTwo'); // Pop the first navigation destination page that matches the value of name to the top of the routing stack.
+            this.pageInfos.popToName('pageTwo'); // Pop the routing stack back to the first navigation destination page that matches the value of name.
             console.info('popToName' + JSON.stringify(this.pageInfos),
               'Return value' + JSON.stringify(this.pageInfos.popToName('pageTwo')));
           })
@@ -3041,7 +3041,7 @@ export struct PageOne {
           .height(40)
           .margin(20)
           .onClick(() => {
-            this.pageInfos.moveToTop('pageTwo'); // Move to the top of the routing stack the first navigation destination page that matches the value of name.
+            this.pageInfos.moveToTop('pageTwo'); // Move the first navigation destination page that matches the value of name to the top of the routing stack.
             console.info('moveToTop' + JSON.stringify(this.pageInfos),
               'Return value' + JSON.stringify(this.pageInfos.moveToTop('pageTwo')));
           })
@@ -3100,16 +3100,16 @@ export struct PageTwo {
   pathStack: NavPathStack = new NavPathStack();
   private menuItems: Array<NavigationMenuItem> = [
     {
-      value: "1",
+      value: '1',
       icon: 'resources/base/media/undo.svg',
     },
     {
-      value: "2",
+      value: '2',
       icon: 'resources/base/media/redo.svg',
       isEnabled: false,
     },
     {
-      value: "3",
+      value: '3',
       icon: 'resources/base/media/ic_public_ok.svg',
       isEnabled: true,
     }
@@ -3134,7 +3134,7 @@ export struct PageTwo {
     })
     .onReady((context: NavDestinationContext) => {
       this.pathStack = context.pathStack;
-      console.info("current page config info is " + JSON.stringify(context.getConfigInRouteMap()));
+      console.info('current page config info is ' + JSON.stringify(context.getConfigInRouteMap()));
     })
   }
 }
@@ -3313,5 +3313,301 @@ Configure "routerMap": "$profile:router_map" in the module field of the configur
       }
     }
   ]
+}
+```
+
+Since API version 26.0.0, the [scrollEffectOptions](#scrolleffectoptions) attribute has been added to the options parameter of the [title](#title) API.
+
+```TypeScript
+// xxx.ets
+import { LengthMetrics } from '@kit.ArkUI'
+
+@Entry
+@Component
+struct NavigationExample {
+  private arr: number[] = [];
+
+  aboutToAppear(): void {
+    for (let i = 0; i < 50; i++) {
+      this.arr.push(i)
+    }
+  }
+
+  build() {
+    Column() {
+      Navigation() {
+        Column() {
+          List({ space: 12, initialIndex: 0 }) {
+            ListItem() {
+              Column() {
+                Blank()
+                  .width('100%')
+                  .height(128)
+              }
+            }
+            ForEach(this.arr, (item: number) => {
+              ListItem() {
+                Text('' + item)
+                  .width('90%')
+                  .height(72)
+                  .backgroundColor($r('sys.color.brand'))
+                  .borderRadius(24)
+                  .fontSize(16)
+                  .fontWeight(500)
+                  .textAlign(TextAlign.Center)
+              }
+            }, (item: number) => item.toString())
+          }
+          .height('100%')
+          .width('100%')
+        }
+        .width('100%')
+        .height('100%')
+      }
+      .title({ main: 'Main Title', sub: 'Sub Title' }, {
+        barStyle: BarStyle.STACK,
+        scrollEffectOptions: {
+          scrollEffectType: ScrollEffectType.COMMON_BLUR,
+          blurEffectiveStartOffset: LengthMetrics.vp(8),
+          blurEffectiveEndOffset: LengthMetrics.vp(56)
+        }
+      })
+      .titleMode(NavigationTitleMode.Full)
+      .hideTitleBar(false)
+      .hideToolBar(false)
+    }.width('100%').height('100%').backgroundColor('#F1F3F5')
+  }
+}
+```
+
+The systemMaterial attribute is added to [NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md) since API version 26.0.0.
+
+```TypeScript
+// xxx.ets
+import { SymbolGlyphModifier, uiMaterial } from '@kit.ArkUI';
+
+function BuildMenu(): Array<NavigationMenuItem> {
+  return [
+    {
+      value: 'menu1',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_circle'))
+    },
+    {
+      value: 'menu2',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_star'))
+    },
+    {
+      value: 'menu3',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_folder_badge_plus'))
+    },
+    {
+      value: 'menu4',
+      symbolIcon: new SymbolGlyphModifier($r('sys.symbol.ohos_lock'))
+    }
+  ]
+}
+
+@Component
+struct TestComponent {
+  private arr: number[] = new Array<number>();
+
+  aboutToAppear(): void {
+    for (let i = 0; i < 20; i++) {
+      this.arr.push(i);
+    }
+  }
+
+  build() {
+    Scroll() {
+      Column() {
+        ForEach(this.arr, (item: number) => {
+          Stack() {
+            Text(item.toString())
+              .fontSize(20)
+              .fontWeight(FontWeight.Bold)
+              .fontColor((item % 2) == 1 ? '#fff5e4e4' : '#ff302a2a')
+          }.width('100%')
+          .height(180)
+          .backgroundColor((item % 2) == 0 ? '#fff5e4e4' : '#ff302a2a')
+        }, (item: number) => item.toString())
+      }
+    }
+  }
+}
+
+@Component
+struct MyDest {
+  build() {
+    NavDestination() {
+      TestComponent().width('100%').height('100%')
+    }.width('100%').height('100%')
+    .title('', {
+      systemMaterial: new uiMaterial.ImmersiveMaterial({
+        style: uiMaterial.ImmersiveStyle.ULTRA_THIN,
+        colorInvert: true,
+        interactive: true,
+        lightEffect: {}
+      }),
+      // systemMaterial and barStyle are not associated. However, setting barStyle to STACK can achieve the best immersive effect.
+      barStyle: BarStyle.STACK
+    })
+    .menus(BuildMenu())
+  }
+}
+
+@Entry
+@Component
+struct NavigationTitleMaterialDemo {
+  private stack: NavPathStack = new NavPathStack();
+
+  @Builder
+  MyMap(name: string) {
+    MyDest()
+  }
+
+  build() {
+    RelativeContainer() {
+      Navigation(this.stack) {
+        Column() {
+          TestComponent()
+            .width('100%')
+        }.width('100%').height('100%')
+      }
+      .width('100%')
+      .height('100%')
+      .mode(NavigationMode.Stack)
+      .navDestination(this.MyMap)
+      .title('', {
+        systemMaterial: new uiMaterial.ImmersiveMaterial({
+          style: uiMaterial.ImmersiveStyle.ULTRA_THIN,
+          colorInvert: true,
+          interactive: true,
+          lightEffect: {}
+        }),
+        // systemMaterial and barStyle are not associated. However, setting barStyle to STACK can achieve the best immersive effect.
+        barStyle: BarStyle.STACK
+      })
+      .menus(BuildMenu())
+      Column() {
+        Stack({alignContent: Alignment.Center}) {
+          Text('push page').fontSize(25)
+        }
+        .width(150)
+        .height(50)
+        .borderRadius(22)
+        .backgroundColor(Color.Orange)
+        .margin({left: 50, bottom: 100})
+        .onClick(() => {
+          this.stack.pushPath({name: 'one'})
+        })
+      }
+      .alignRules({
+        bottom: {anchor: '__container__', align: VerticalAlign.Bottom},
+        left: {anchor: '__container__', align: HorizontalAlign.Start},
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+The clearContentStackOnPrimaryNavigation attribute is added to [NavigationConfiguration](arkts-arkui-navigationconfiguration-i.md) since API version 26.1.0.
+
+```TypeScript
+// xxx.ets
+@Component
+struct MyControlPanel {
+  private stack: NavPathStack | undefined = undefined;
+
+  aboutToAppear(): void {
+    let info = this.queryNavigationInfo();
+    if (info) {
+      this.stack = info.pathStack;
+    }
+  }
+
+  build() {
+    Column() {
+      Button('push pageOne').onClick(() => {
+        this.stack?.pushPath({name: 'one'})
+      })
+        .margin({top: 25})
+      Button('push pageTwo').onClick(() => {
+        this.stack?.pushPath({name: 'two'})
+      })
+        .margin({top: 25})
+      Button('pop').onClick(() => {
+        this.stack?.pop()
+      })
+        .margin({top: 25})
+    }
+  }
+}
+
+@Component
+struct MyPageOne {
+  build() {
+    NavDestination() {
+      Column() {
+        MyControlPanel()
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+    .title('PageOne')
+  }
+}
+
+@Component
+struct MyPageTwo {
+  build() {
+    NavDestination() {
+      Column() {
+        MyControlPanel()
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+    .title('PageTwo')
+  }
+}
+
+@Entry
+@Component
+struct NavigationConfig {
+  private stack: NavPathStack = new NavPathStack();
+
+  @Builder
+  MyDestMap(name: string) {
+    if (name === 'one') {
+      MyPageOne()
+    } else {
+      MyPageTwo()
+    }
+  }
+
+  build() {
+    Navigation(this.stack) {
+      Column() {
+        MyControlPanel()
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+    .title('NavBar')
+    .titleMode(NavigationTitleMode.Mini)
+    .mode(NavigationMode.Split)
+    .navDestination(this.MyDestMap)
+    .configuration({
+      clearContentStackOnPrimaryNavigation: true
+    })
+  }
 }
 ```

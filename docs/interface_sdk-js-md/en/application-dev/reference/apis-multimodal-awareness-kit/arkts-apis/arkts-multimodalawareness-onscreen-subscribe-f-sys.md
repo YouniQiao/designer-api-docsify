@@ -19,8 +19,8 @@ Enables proactive awareness on screen content and subscribes to a screen awarene
 **Since:** 23
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS
-- API version 23 - 24: ohos.permission.GET_SCREEN_CONTENT
+- API version 26.0.0 and later: ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS
+- API versions 23 to 24: ohos.permission.GET_SCREEN_CONTENT
 
 **Model restriction:** This API can be used only in the stage model.
 

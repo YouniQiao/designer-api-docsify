@@ -32,3 +32,20 @@ Obtains the serial port list. This API returns the result asynchronously through
 | --- | --- |
 | [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) | This function is prohibited by enterprise management policies. |
 | [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Obtain the serial port list.
+serial.getSerialPortList().then((portList: serial.SerialPort[]) => {
+  console.info(`getSerialPortList success, length: ${portList.length}`);
+  if (portList.length > 0) {
+    let portInfo: serial.SerialPortInfo = portList[0].portInfo;
+    console.info(`portName: ${portInfo.portName}`);
+  }
+}).catch((error: Error) => {
+  console.error(`getSerialPortList error: ${JSON.stringify(error)}`);
+});
+```

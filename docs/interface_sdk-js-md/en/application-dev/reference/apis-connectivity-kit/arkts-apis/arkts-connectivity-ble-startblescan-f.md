@@ -21,7 +21,7 @@ Starts scanning for specified BLE devices with filters. On API 10 and above, the
 **Substitutes:** [startBLEScan](arkts-connectivity-ble-startblescan-f.md)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

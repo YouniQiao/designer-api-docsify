@@ -35,8 +35,8 @@ This API can be used in enterprise account authentication and cloud permission v
 **Since:** 21
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
-- API version 21 - 24: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
+- API version 26.0.0 and later: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
+- API versions 21 to 24: ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 

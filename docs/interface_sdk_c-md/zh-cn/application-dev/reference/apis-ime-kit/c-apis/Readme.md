@@ -1,4 +1,4 @@
 # C API<!--c-imekit-->
 
-- 模块<!--imekit-module-->n
+- 模块<!--imekit-module-->
     - [InputMethod](capi-inputmethod.md)

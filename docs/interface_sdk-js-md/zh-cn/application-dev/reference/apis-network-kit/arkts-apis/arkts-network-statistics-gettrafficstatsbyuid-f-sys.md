@@ -58,7 +58,10 @@ let uidInfo: statistics.UidInfo = {
 statistics.getTrafficStatsByUid(
   uidInfo,
   (error: BusinessError, statsInfo: statistics.NetStatsInfo) => {
-    console.error(JSON.stringify(error));
+    if (error) {
+      console.error(JSON.stringify(error));
+      return;
+    };
     console.info(
       "getTrafficStatsByUid bytes of received = " +
       JSON.stringify(statsInfo.rxBytes)

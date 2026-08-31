@@ -146,7 +146,7 @@ struct DateStyleExample {
 }
 ```
 
-Set the direction attribute to implement a mirrored layout for list, compact, inline numeric, and inline date counters.
+This example sets the direction attribute to implement a mirrored layout for list, compact, inline numeric, and inline date counters.
 
 ```TypeScript
 import { CounterType, CounterComponent, DateData } from '@kit.ArkUI';

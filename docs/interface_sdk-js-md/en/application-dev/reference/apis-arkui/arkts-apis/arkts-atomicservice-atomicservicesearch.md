@@ -55,10 +55,10 @@ struct Index {
       AtomicServiceSearch({
         select: {
           options: [
-            { value: 'Select1', icon: $r("app.media.sweep") }, // Custom resource
-            { value: 'Select2', icon: $r("app.media.sweep") }, // Custom resource
-            { value: 'Select3', icon: $r("app.media.sweep") }, // Custom resource
-            { value: 'Select4', icon: $r("app.media.sweep") } // Custom resource
+            { value: 'Select1', icon: $r('app.media.sweep') }, // Custom resource
+            { value: 'Select2', icon: $r('app.media.sweep') }, // Custom resource
+            { value: 'Select3', icon: $r('app.media.sweep') }, // Custom resource
+            { value: 'Select4', icon: $r('app.media.sweep') } // Custom resource
           ],
           selected: -1,
           selectValue: 'Select1',
@@ -104,14 +104,14 @@ struct Index {
         operation: {
           // Auxiliary item of the Search component.
           auxiliaryItem: {
-            value: $r("app.media.sweep"), // Custom resource
+            value: $r('app.media.sweep'), // Custom resource.
             action: () => {
               this.alert('Scan'); // Custom event
             }
           },
           // Independent item of the Search component.
           independentItem: {
-            value: $r("app.media.dingding"), // Custom resource
+            value: $r('app.media.dingding'), // Custom resource.
             action: () => {
               this.alert('Notifications'); // Custom event
             }
@@ -146,10 +146,10 @@ struct Index {
       AtomicServiceSearch({
         select: {
           options: [
-            { value: 'Select1', icon: $r("app.media.sweep") }, // Custom resource
-            { value: 'Select2', icon: $r("app.media.sweep") }, // Custom resource
-            { value: 'Select3', icon: $r("app.media.sweep") }, // Custom resource
-            { value: 'Select4', icon: $r("app.media.sweep") } // Custom resource
+            { value: 'Select1', icon: $r('app.media.sweep') }, // Custom resource.
+            { value: 'Select2', icon: $r('app.media.sweep') }, // Custom resource.
+            { value: 'Select3', icon: $r('app.media.sweep') }, // Custom resource.
+            { value: 'Select4', icon: $r('app.media.sweep') } // Custom resource.
           ],
           selected: -1,
           selectValue: 'Select1',
@@ -167,13 +167,13 @@ struct Index {
         },
         operation: {
           auxiliaryItem: {
-            value: $r("app.media.sweep"), // Custom resource
+            value: $r('app.media.sweep'), // Custom resource.
             action: () => {
               this.alert('Scan'); // Custom event
             }
           },
           independentItem: {
-            value: $r("app.media.dingding"), // Custom resource
+            value: $r('app.media.dingding'), // Custom resource.
             action: () => {
               this.alert('Notifications'); // Custom event
             }
@@ -197,8 +197,8 @@ import { AtomicServiceSearch } from '@kit.ArkUI';
 @Entry
 @Component
 struct Index {
-  @State insertValue: string = "";
-  @State deleteValue: string = "";
+  @State insertValue: string = '';
+  @State deleteValue: string = '';
   @State insertOffset: number = 0;
   @State deleteOffset: number = 0;
   @State deleteDirection: number = 0;
@@ -207,9 +207,8 @@ struct Index {
   @State offsetX: number = 0;
   @State offsetY: number = 0;
   @State changeValue: string = '';
-  @State value: string = 'false';
+  @State editingState: string = 'false';
   @State submitValue: string = '';
-  @State text: string = 'Search editMenuOptions';
 
   build() {
     Column({ space: 6 }) {
@@ -220,7 +219,7 @@ struct Index {
       }).margin({ top: 20, bottom: 20 })
 
       Column({ space: 6 }) {
-        Text('editing: ' + this.value).width('100%').height(25).borderRadius(15).padding({ left: 15 })
+        Text('editing: ' + this.editingState).width('100%').height(25).borderRadius(15).padding({ left: 15 })
           .backgroundColor('rgba(0, 0, 0, 0.1)').maxLines(1).textOverflow({ overflow: TextOverflow.MARQUEE });
         Text('onSubmit:' + this.submitValue).width('100%').height(25).borderRadius(15).padding({ left: 15 })
           .backgroundColor('rgba(0, 0, 0, 0.1)').maxLines(1).textOverflow({ overflow: TextOverflow.MARQUEE });
@@ -228,22 +227,22 @@ struct Index {
           .backgroundColor('rgba(0, 0, 0, 0.1)').maxLines(1).textOverflow({ overflow: TextOverflow.MARQUEE });
         Text('offset x:' + this.offsetX + ' y:' + this.offsetY).width('100%').height(25).borderRadius(15).padding({ left: 15 })
           .backgroundColor('rgba(0, 0, 0, 0.1)').maxLines(1).textOverflow({ overflow: TextOverflow.MARQUEE });
-        Text("insertValue:" + this.insertValue + "  insertOffset:" + this.insertOffset).width('100%').height(25)
+        Text('insertValue:' + this.insertValue + '  insertOffset:' + this.insertOffset).width('100%').height(25)
           .borderRadius(15).padding({ left: 15 }).backgroundColor('rgba(0, 0, 0, 0.1)').maxLines(1)
           .textOverflow({ overflow: TextOverflow.MARQUEE });
-        Text("deleteValue:" + this.deleteValue + "  deleteOffset:" + this.deleteOffset).width('100%').height(25)
+        Text('deleteValue:' + this.deleteValue + '  deleteOffset:' + this.deleteOffset).width('100%').height(25)
           .borderRadius(15).padding({ left: 15 }).backgroundColor('rgba(0, 0, 0, 0.1)').maxLines(1)
           .textOverflow({ overflow: TextOverflow.MARQUEE });
-        Text("deleteDirection:" + (this.deleteDirection == 0 ? "BACKWARD" : "FORWARD")).width('100%').height(25)
+        Text('deleteDirection:' + (this.deleteDirection == 0 ? 'BACKWARD' : 'FORWARD')).width('100%').height(25)
           .borderRadius(15).padding({ left: 15 }).backgroundColor('rgba(0, 0, 0, 0.1)').maxLines(1)
           .textOverflow({ overflow: TextOverflow.MARQUEE });
         AtomicServiceSearch({
           select: {
             options: [
-              { value: 'Select1', icon: $r("app.media.sweep") },
-              { value: 'Select2', icon: $r("app.media.sweep") },
-              { value: 'Select3', icon: $r("app.media.sweep") },
-              { value: 'Select4', icon: $r("app.media.sweep") }
+              { value: 'Select1', icon: $r('app.media.sweep') },
+              { value: 'Select2', icon: $r('app.media.sweep') },
+              { value: 'Select3', icon: $r('app.media.sweep') },
+              { value: 'Select4', icon: $r('app.media.sweep') }
             ],
             selected: -1,
             selectValue: 'Select1',
@@ -261,10 +260,10 @@ struct Index {
           },
           search: {
             onSubmit: (value: string) => {
-              this.submitValue = value
+              this.submitValue = value;
             },
             onChange: (value: string) => {
-              this.changeValue = value
+              this.changeValue = value;
             },
             onCopy: () => {
               this.alert('onCopy');
@@ -276,31 +275,30 @@ struct Index {
               this.alert('onPaste');
             },
             onTextSelectionChange: (selectionStart: number, selectionEnd: number) => {
-              this.startIndex = selectionStart
-              this.endIndex = selectionEnd
+              this.startIndex = selectionStart;
+              this.endIndex = selectionEnd;
             },
             onContentScroll: (totalOffsetX: number, totalOffsetY: number) => {
-              this.offsetX = totalOffsetX
-              this.offsetY = totalOffsetY
+              this.offsetX = totalOffsetX;
+              this.offsetY = totalOffsetY;
             },
             onEditChange: (data: boolean) => {
-              this.value = data ? 'true' : 'false'
+              this.editingState = data ? 'true' : 'false';
             },
             onWillInsert: (info: InsertValue) => {
-              this.insertValue = info.insertValue
+              this.insertValue = info.insertValue;
               return true;
             },
             onDidInsert: (info: InsertValue) => {
-              this.insertOffset = info.insertOffset
+              this.insertOffset = info.insertOffset;
             },
             onWillDelete: (info: DeleteValue) => {
-              this.deleteValue = info.deleteValue
-              info.direction
+              this.deleteValue = info.deleteValue;
               return true;
             },
             onDidDelete: (info: DeleteValue) => {
-              this.deleteOffset = info.deleteOffset
-              this.deleteDirection = info.direction
+              this.deleteOffset = info.deleteOffset;
+              this.deleteDirection = info.direction;
             }
           }
         })
@@ -327,10 +325,10 @@ struct Index {
   @State private search?: SearchParams = {};
   @State private select?: SelectParams = {
     options: [
-      { value: 'Select1', icon: $r("app.media.sweep") },
-      { value: 'Select2', icon: $r("app.media.sweep") },
-      { value: 'Select3', icon: $r("app.media.sweep") },
-      { value: 'Select4', icon: $r("app.media.sweep") }
+      { value: 'Select1', icon: $r('app.media.sweep') },
+      { value: 'Select2', icon: $r('app.media.sweep') },
+      { value: 'Select3', icon: $r('app.media.sweep') },
+      { value: 'Select4', icon: $r('app.media.sweep') }
     ],
     selected: -1,
     selectValue: 'Select1',
@@ -362,14 +360,14 @@ struct Index {
         search: this.search,
         operation: {
           independentItem: {
-            value: $r(`app.media.dingding`),
+            value: $r('app.media.dingding'),
             action: () => {
               this.alert('Notification');
             }
           }
         }
       })
-      Button("Change placeholder")
+      Button('Change placeholder')
         .width('100%')
         .type(ButtonType.Normal)
         .borderRadius(20)
@@ -380,7 +378,7 @@ struct Index {
             this.placeholder = 'Search...';
           }
         });
-      Button("Change defaultValue")
+      Button('Change defaultValue')
         .width('100%')
         .type(ButtonType.Normal)
         .borderRadius(20)
@@ -391,15 +389,15 @@ struct Index {
             this.defaultValue = 'value';
           }
         });
-      Button("Change selection area style")
+      Button('Change selection area style')
         .width('100%')
         .type(ButtonType.Normal)
         .borderRadius(20)
         .onClick(() => {
           this.select = {
             options: [
-              { value: 'Option 1', icon: $r("app.media.dingding") },
-              { value: 'Option 2', icon: $r("app.media.dingding") },
+              { value: 'Option 1', icon: $r('app.media.dingding') },
+              { value: 'Option 2', icon: $r('app.media.dingding') },
             ],
             selected: -1,
             selectValue: 'Option 1',
@@ -413,7 +411,7 @@ struct Index {
           };
         });
 
-      Button("Change Search Area Style")
+      Button('Change search area Style')
         .width('100%')
         .type(ButtonType.Normal)
         .borderRadius(20)
@@ -449,8 +447,7 @@ struct Index {
         style: TextDecorationStyle.SOLID
       }).margin({ top: 20, bottom: 20 })
 
-      AtomicServiceSearch(
-        {
+      AtomicServiceSearch({
           value: 'Default Value',
           placeholder: 'Type to Search...',
           controller: this.controller,
@@ -469,13 +466,9 @@ struct Index {
         this.controller.stopEditing();
       }).width('100%')
       Button('Selection [0,3]').onClick(() => {
-        this.controller.setTextSelection(0, 3)
+        this.controller.setTextSelection(0, 3);
       }).width('100%')
     }.padding({ left: 16, right: 16 })
-  }
-
-  public alert(message: string): void {
-    this.getUIContext().showAlertDialog({ message: message });
   }
 }
 ```
@@ -488,8 +481,8 @@ import { AtomicServiceSearch } from '@kit.ArkUI';
 @Entry
 @Component
 struct Index {
-  @State enterTypes: Array<EnterKeyType> = [EnterKeyType.Go, EnterKeyType.Search, EnterKeyType.Send, EnterKeyType.Done, EnterKeyType.Next, EnterKeyType.PREVIOUS, EnterKeyType.NEW_LINE]
-  @State index: number = 0
+  @State enterTypes: Array<EnterKeyType> = [EnterKeyType.Go, EnterKeyType.Search, EnterKeyType.Send, EnterKeyType.Done, EnterKeyType.Next, EnterKeyType.PREVIOUS, EnterKeyType.NEW_LINE];
+  @State index: number = 0;
 
   build() {
     Column({ space : 10 }) {
@@ -512,17 +505,13 @@ struct Index {
 
     }.padding({ left: 16, right: 16 })
   }
-
-  public alert(message: string): void {
-    this.getUIContext().showAlertDialog({ message: message });
-  }
 }
 ```
 
 This example demonstrates how to use the fontFeature attribute to display text with various typographic features.
 
 ```TypeScript
-​​​​import { AtomicServiceSearch } from '@kit.ArkUI';
+import { AtomicServiceSearch } from '@kit.ArkUI';
 
 @Entry
 @Component
@@ -538,35 +527,31 @@ struct Index {
       AtomicServiceSearch({
         value: 'This is ss01 on : 0123456789',
         search: {
-          fontFeature: "\"ss01\" on"
+          fontFeature: '"ss01" on'
         }
       });
 
       AtomicServiceSearch({
         value: 'This is ss01 off : 0123456789',
         search: {
-          fontFeature: "\"ss01\" off"
+          fontFeature: '"ss01" off'
         }
       });
 
       AtomicServiceSearch({
         value: 'fiabc1234567DEFGHIJKLMN',
         search: {
-          fontFeature: "\"frac\" on"
+          fontFeature: '"frac" on'
         }
       });
 
       AtomicServiceSearch({
         value: 'fiabc1234567DEFGHIJKLMN',
         search: {
-          fontFeature: "\"frac\" off"
+          fontFeature: '"frac" off'
         }
       });
     }.padding({ left: 16, right: 16 })
-  }
-
-  public alert(message: string): void {
-    this.getUIContext().showAlertDialog({ message: message });
   }
 }
 ```
@@ -600,10 +585,6 @@ struct Index {
       }).width('80%').height(40).borderWidth(1).borderRadius(20)
     }.padding({ left: 16, right: 16 })
   }
-
-  public alert(message: string): void {
-    this.getUIContext().showAlertDialog({ message: message });
-  }
 }
 ```
 
@@ -616,7 +597,7 @@ import { AtomicServiceSearch, TextMenuController } from '@kit.ArkUI';
 @Component
 struct Index {
   aboutToAppear(): void {
-    TextMenuController.disableMenuItems([TextMenuItemId.AI_WRITER])
+    TextMenuController.disableMenuItems([TextMenuItemId.AI_WRITER]);
   }
 
   onCreateMenu = (menuItems: Array<TextMenuItem>) => {
@@ -624,34 +605,34 @@ struct Index {
       content: 'custom1',
       icon: $r('app.media.startIcon'),
       id: TextMenuItemId.of('custom1'),
-    }
+    };
     let item2: TextMenuItem = {
       content: 'custom2',
       id: TextMenuItemId.of('custom2'),
       icon: $r('app.media.startIcon'),
-    }
-    menuItems.push(item1)
-    menuItems.unshift(item2)
-    return menuItems
+    };
+    menuItems.push(item1);
+    menuItems.unshift(item2);
+    return menuItems;
   }
   onMenuItemClick = (menuItem: TextMenuItem, textRange: TextRange) => {
     if (menuItem.id.equals(TextMenuItemId.of('custom2'))) {
-      console.info('Intercept id: custom2 start:' + textRange.start + '; end:' + textRange.end)
-      return true
+      console.info('Intercept id: custom2 start:' + textRange.start + '; end:' + textRange.end);
+      return true;
     }
     if (menuItem.id.equals(TextMenuItemId.COPY)) {
-      console.info('Intercept COPY start:' + textRange.start + '; end:' + textRange.end)
-      return true
+      console.info('Intercept COPY start:' + textRange.start + '; end:' + textRange.end);
+      return true;
     }
     if (menuItem.id.equals(TextMenuItemId.SELECT_ALL)) {
-      console.info('Do not intercept SELECT_ALL start:' + textRange.start + '; end:' + textRange.end)
-      return false
+      console.info('Do not intercept SELECT_ALL start:' + textRange.start + '; end:' + textRange.end);
+      return false;
     }
-    return false
+    return false;
   }
   @State editMenuOptions: EditMenuOptions = {
     onCreateMenu: this.onCreateMenu, onMenuItemClick: this.onMenuItemClick
-  }
+  };
 
   build() {
     Column({ space: 10 }) {
@@ -669,10 +650,6 @@ struct Index {
       })
     }.padding({ left: 16, right: 16 })
   }
-
-  public alert(message: string): void {
-    this.getUIContext().showAlertDialog({ message: message });
-  }
 }
 ```
 
@@ -685,7 +662,7 @@ import { AtomicServiceSearch, TextMenuController } from '@kit.ArkUI';
 @Component
 struct Index {
   aboutToAppear(): void {
-    TextMenuController.disableMenuItems([TextMenuItemId.AI_WRITER])
+    TextMenuController.disableMenuItems([TextMenuItemId.AI_WRITER]);
   }
 
   build() {
@@ -705,10 +682,6 @@ struct Index {
         }
       })
     }.padding({ left: 16, right: 16 })
-  }
-
-  public alert(message: string): void {
-    this.getUIContext().showAlertDialog({ message: message });
   }
 }
 ```
@@ -736,7 +709,7 @@ struct Index {
           search: {
             inputFilter: {
               inputFilterValue : '[a-z]',
-              error: (filterValue: string) => {this.filterValue = filterValue}
+              error: (filterValue: string) => {this.filterValue = filterValue;}
             }
           }
         })
@@ -744,10 +717,6 @@ struct Index {
 
       }
     }.padding({ left: 16, right: 16 })
-  }
-
-  public alert(message: string): void {
-    this.getUIContext().showAlertDialog({ message: message });
   }
 }
 ```

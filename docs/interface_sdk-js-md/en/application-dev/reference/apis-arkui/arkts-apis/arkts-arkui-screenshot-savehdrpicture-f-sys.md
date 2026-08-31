@@ -22,8 +22,8 @@ SDR and HDR PixelMaps, regardless of whether HDR is enabled.
 **Since:** 20
 
 **Required permissions:** 
-- API version 22+: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
-- API version 20 - 21: ohos.permission.CAPTURE_SCREEN
+- API version 22 and later: ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API versions 20 to 21: ohos.permission.CAPTURE_SCREEN
 
 **System capability:** SystemCapability.Window.SessionManager
 

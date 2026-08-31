@@ -15,7 +15,7 @@ not supported. **doFinal()** can be called multiple times to encrypt or decrypt 
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -37,7 +37,7 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -239,7 +239,7 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -324,7 +324,7 @@ Finishes the crypto operation, encrypts or decrypts the input data, and then fee
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -403,7 +403,7 @@ of **update()** and **doFinal()** throughout the process will yield the complete
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -590,7 +590,7 @@ Obtains cipher specifications. Currently, only RSA and SM2 (available since API 
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -642,7 +642,7 @@ Initializes the crypto operation with the given crypto mode, key and parameters.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -679,7 +679,7 @@ Initializes the [cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) o
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -716,7 +716,7 @@ Initializes the crypto operation with the given crypto mode, key and parameters.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -758,7 +758,7 @@ Initializes the cipher object for encryption and decryption. This API uses a pro
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -834,7 +834,7 @@ Sets cipher specifications. You can use this API to set cipher specifications th
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -917,7 +917,7 @@ For details about the sample code for passing data in multiple **update()** call
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -988,7 +988,7 @@ For details about the sample code for passing data in multiple **update()** call
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -1070,4 +1070,4 @@ Indicates the algorithm name of the cipher object.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework

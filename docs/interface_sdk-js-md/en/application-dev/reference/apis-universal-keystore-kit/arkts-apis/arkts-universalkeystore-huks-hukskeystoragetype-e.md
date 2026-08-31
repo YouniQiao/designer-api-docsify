@@ -52,7 +52,7 @@ The key derived from the master key is stored in the HUKS and managed by the HUK
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 10 to 11: SystemCapability.Security.Huks.Extension
+- API versions 10 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_STORAGE_KEY_EXPORT_ALLOWED
 
@@ -68,4 +68,4 @@ The key derived from the master key is exported to the service, and not managed 
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 10 to 11: SystemCapability.Security.Huks.Extension
+- API versions 10 to 11: SystemCapability.Security.Huks.Extension

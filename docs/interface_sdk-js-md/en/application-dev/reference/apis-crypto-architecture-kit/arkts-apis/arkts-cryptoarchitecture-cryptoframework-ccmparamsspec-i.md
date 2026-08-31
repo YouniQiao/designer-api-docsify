@@ -16,7 +16,7 @@ Applies to the CCM mode.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -40,7 +40,7 @@ AAD for encryption and decryption. The AAD value contains 1 to 2,048 bytes.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 ## authTag
 
@@ -60,7 +60,7 @@ When CCM mode is used for encryption, you need to extract the last 12 bytes from
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 ## iv
 
@@ -78,4 +78,4 @@ IV for encryption and decryption. Only 7 bytes are supported. If the length of t
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework

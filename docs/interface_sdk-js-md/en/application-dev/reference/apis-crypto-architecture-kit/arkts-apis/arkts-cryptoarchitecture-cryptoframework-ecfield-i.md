@@ -6,7 +6,7 @@ Defines the field type of an elliptic curve. Currently, only the **Fp** field is
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -30,4 +30,4 @@ Type of the elliptic curve field. Currently, only **Fp** is supported.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework

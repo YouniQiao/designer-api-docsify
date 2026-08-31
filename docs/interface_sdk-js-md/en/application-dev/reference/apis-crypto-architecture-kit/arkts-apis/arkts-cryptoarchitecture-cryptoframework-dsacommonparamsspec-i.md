@@ -10,7 +10,7 @@ To generate a key based on key parameters, pass it to [createAsyKeyGeneratorBySp
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -34,7 +34,7 @@ Parameter **g** in the DSA algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## p
 
@@ -52,7 +52,7 @@ Prime modulus **p** in the DSA algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## q
 
@@ -70,4 +70,4 @@ Parameter **q**, prime factor of (p - 1) in the DSA algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework

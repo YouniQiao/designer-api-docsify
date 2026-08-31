@@ -29,7 +29,7 @@ Subscribe to cloud data changes.
 **Since:** 10
 
 **Required permissions:** 
-- API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC
+- API versions 10 to 11: ohos.permission.DISTRIBUTED_DATASYNC
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 
@@ -44,7 +44,7 @@ Subscribe to detailed information about cloud data changes.
 **Since:** 10
 
 **Required permissions:** 
-- API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC
+- API versions 10 to 11: ohos.permission.DISTRIBUTED_DATASYNC
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Client
 

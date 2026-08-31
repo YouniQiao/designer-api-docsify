@@ -25,8 +25,8 @@ ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 **Since:** 10
 
 **Required permissions:** 
-- API version 23+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
-- API version 10 - 22: ohos.permission.ACCESS_BLUETOOTH
+- API version 23 and later: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
+- API versions 10 to 22: ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,8 +124,8 @@ ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 **Since:** 11
 
 **Required permissions:** 
-- API version 23+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
-- API version 11 - 22: ohos.permission.ACCESS_BLUETOOTH
+- API version 23 and later: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
+- API versions 11 to 22: ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -234,8 +234,8 @@ ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 **Since:** 11
 
 **Required permissions:** 
-- API version 23+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
-- API version 11 - 22: ohos.permission.ACCESS_BLUETOOTH
+- API version 23 and later: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME)
+- API versions 11 to 22: ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 

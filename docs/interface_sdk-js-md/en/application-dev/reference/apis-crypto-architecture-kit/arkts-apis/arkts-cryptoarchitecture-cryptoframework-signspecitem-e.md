@@ -8,7 +8,7 @@ Currently, only RSA and SM2 are supported. For details, see [Signing and Signatu
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## PSS_MD_NAME_STR
 
@@ -24,7 +24,7 @@ Message digest algorithm used with the PSS padding mode in RSA.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## PSS_MGF_NAME_STR
 
@@ -40,7 +40,7 @@ Mask generation algorithm used with the PSS padding mode in RSA. Currently, only
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## PSS_MGF1_MD_STR
 
@@ -56,7 +56,7 @@ Message digest algorithm for the MGF1 mask generation used with the PSS padding 
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## PSS_SALT_LEN_NUM
 
@@ -84,7 +84,7 @@ calculate the salt length, or -3 to use the maximum salt length. The recommended
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## PSS_TRAILER_FIELD_NUM
 
@@ -100,7 +100,7 @@ Trailer field used in the encoding operation when PSS padding mode is used in RS
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## SM2_USER_ID_UINT8ARR
 

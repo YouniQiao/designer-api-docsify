@@ -1,4 +1,4 @@
 # C API<!--c-dataprotectionkit-->
 
-- 模块<!--dataprotectionkit-module-->n
+- 模块<!--dataprotectionkit-module-->
     - [DlpPermissionApi](capi-dlppermissionapi.md)

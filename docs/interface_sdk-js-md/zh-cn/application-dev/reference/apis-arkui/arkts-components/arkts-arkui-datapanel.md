@@ -172,9 +172,6 @@ struct LinearGradientDataPanelExample {
   @State color4: string = '#20FF0000';
   @State colorArray: Array<LinearGradient | ResourceColor> = [this.color1, this.color2, this.color3, this.color4];
   @State bgColor: string = '#08182431';
-  @State offsetX: number = 15;
-  @State offsetY: number = 15;
-  @State radius: number = 5;
 
   build() {
     Column({ space: 5 }) {

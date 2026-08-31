@@ -6,7 +6,7 @@ Enumerates the asymmetric key parameters.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## DSA_P_BN
 
@@ -22,7 +22,7 @@ Prime modulus **p** in the DSA algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## DSA_Q_BN
 
@@ -38,7 +38,7 @@ Parameter **q**, prime factor of (p - 1) in the DSA algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## DSA_G_BN
 
@@ -54,7 +54,7 @@ Parameter **g** in the DSA algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## DSA_SK_BN
 
@@ -70,7 +70,7 @@ Private key **sk** in the DSA algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## DSA_PK_BN
 
@@ -86,7 +86,7 @@ Public key **pk** in the DSA algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## ECC_FP_P_BN
 
@@ -102,7 +102,7 @@ Prime number **p** in the **Fp** field of the elliptic curve in the ECC algorith
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## ECC_A_BN
 
@@ -118,7 +118,7 @@ First coefficient **a** of the elliptic curve in the ECC algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## ECC_B_BN
 
@@ -134,7 +134,7 @@ Second coefficient **b** of the elliptic curve in the ECC algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## ECC_G_X_BN
 
@@ -150,7 +150,7 @@ X coordinate of the base point **g** in the ECC algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## ECC_G_Y_BN
 
@@ -166,7 +166,7 @@ Y coordinate of the base point **g** in the ECC algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## ECC_N_BN
 
@@ -182,7 +182,7 @@ Order **n** of the base point **g** in the ECC algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## ECC_H_NUM
 
@@ -198,7 +198,7 @@ Cofactor **h** in the ECC algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## ECC_SK_BN
 
@@ -214,7 +214,7 @@ Private key **sk** in the ECC algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## ECC_PK_X_BN
 
@@ -230,7 +230,7 @@ X coordinate of the public key **pk** (a point on the elliptic curve) in the ECC
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## ECC_PK_Y_BN
 
@@ -246,7 +246,7 @@ Y coordinate of the public key **pk** (a point on the elliptic curve) in the ECC
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## ECC_FIELD_TYPE_STR
 
@@ -262,7 +262,7 @@ Elliptic curve field type in the ECC algorithm. Currently, only the **Fp** field
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## ECC_FIELD_SIZE_NUM
 
@@ -280,7 +280,7 @@ Note: The size of the **Fp** field is the length of the prime **p**, in bits.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## ECC_CURVE_NAME_STR
 
@@ -296,7 +296,7 @@ Standards for Efficient Cryptography Group (SECG) curve name in the ECC algorith
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## RSA_N_BN
 
@@ -312,7 +312,7 @@ Modulus **n** in the RSA algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## RSA_SK_BN
 
@@ -328,7 +328,7 @@ Private key **sk** (private key exponent **d**) in the RSA algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## RSA_PK_BN
 
@@ -344,7 +344,7 @@ Public key **pk** (public key exponent **e**) in the RSA algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## DH_P_BN
 

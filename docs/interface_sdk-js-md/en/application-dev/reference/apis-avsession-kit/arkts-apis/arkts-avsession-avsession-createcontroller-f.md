@@ -17,8 +17,8 @@ Create an avsession controller
 **Since:** 23
 
 **Required permissions:** 
-- API version 23+: ohos.permission.MANAGE_MEDIA_RESOURCES or ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
-- API version 9 - 22: ohos.permission.MANAGE_MEDIA_RESOURCES
+- API version 23 and later: ohos.permission.MANAGE_MEDIA_RESOURCES or ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
+- API versions 9 to 22: ohos.permission.MANAGE_MEDIA_RESOURCES
 
 **System capability:** SystemCapability.Multimedia.AVSession.Manager
 

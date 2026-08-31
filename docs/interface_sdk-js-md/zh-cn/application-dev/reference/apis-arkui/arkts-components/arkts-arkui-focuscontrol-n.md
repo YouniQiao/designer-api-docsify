@@ -3446,7 +3446,7 @@ struct TipsExample {
     Flex({ direction: FlexDirection.Column }) {
       Button('Hover Tips')
         .bindTips("悬浮气泡测试", {
-          // 控制是否设置系统材质
+          // 控制是否设置系统材质接口
           systemMaterial: new uiMaterial.ImmersiveMaterial({
             style: uiMaterial.ImmersiveStyle.THIN
           })
@@ -4793,7 +4793,7 @@ struct Index {
 }
 ```
 
-该示例主要演示accessibilityRole无障碍组件类型和accessibilityTextHint供无障碍辅助应用查询的组件的文本提示信息。
+该示例主要演示accessibilityRole无障碍组件类型和accessibilityTextHint设置组件的文本提示信息（仅在与车机交互的场景下供车机的无障碍服务监听并响应）。
 
 ```TypeScript
 // xxx.ets
@@ -5020,8 +5020,8 @@ struct Index {
           max: 100,
           style: SliderStyle.OutSet
         })
-        // 调整屏幕朗读手势下slider滑动的步长
-          .accessibilityActionOptions({ scrollStep: 10 })
+        // 调整屏幕朗读手势下slider滑动的步数
+        .accessibilityActionOptions({ scrollStep: 10 })
       }
       .width('80%')
     }
@@ -6874,7 +6874,7 @@ struct PopupExample {
         .bindPopup(this.handlePopup!!, {
           message: 'This is a popup with PopupOptions',
           placement: Placement.Top,
-          // 控制是否设置系统材质
+          // 控制是否设置系统材质接口
           systemMaterial: new uiMaterial.ImmersiveMaterial({
             style: uiMaterial.ImmersiveStyle.THIN
           })
@@ -7343,7 +7343,7 @@ struct KeyEventExample {
 }
 ```
 
-该示例演示在无障碍模式下，通过onAccessibilityActionIntercept事件在Toggle组件点击事件触发前进行拦截，并由开发者确认是否放行该点击事件。
+该示例演示在无障碍模式下，通过onAccessibilityActionIntercept事件在Toggle组件点击事件触发前进行拦截，并弹出确认对话框由用户确认是否放行该点击事件。
 
 ```TypeScript
 // xxx.ets
@@ -7407,9 +7407,9 @@ struct OnAccessibilityFocusExample {
       Column() {
         Text("onAccessibilityFocus doesn't take effect")
         Text('onAccessibilityFocus takes effect')
-        .onAccessibilityFocus((isFocus: boolean) => {
-          console.info(`[testingTag] isFocus current is ${isFocus}`);
-        })
+          .onAccessibilityFocus((isFocus: boolean) => {
+            console.info(`[testingTag] isFocus current is ${isFocus}`);
+          })
       }
       .padding(24)
       .width('100%')
@@ -8715,7 +8715,7 @@ struct OpacityExample {
 }
 ```
 
-该示例通过为[Navigation](ts-basic-components-navigation.md)下的[Button](ts-basic-components-button.md)组件绑定toolbar通用属性，为标题栏NavBar分栏开头位置添加包含两个[Button](ts-basic-components-button.md)组件的工具栏项。为[NavDestination](ts-basic-components-navdestination.md)下的[Text](ts-basic-components-text.md)组件绑定toolbar通用属性，为标题栏NavDestination分栏末尾位置添加包含一个滑动条组件和一个搜索栏组件的工具栏项。
+该示例通过为[Navigation](ts-basic-components-navigation.md)下的[Button](ts-basic-components-button.md)组件绑定toolbar通用属性，为标题栏NavBar分栏开头位置添加包含两个[Button](ts-basic-components-button.md)组件的工具栏项。为[NavDestination](ts-basic-components-navdestination.md)下的[Text](ts-basic-components-text.md)组件绑定toolbar通用属性，为标题栏NavDestination分栏末尾位置添加两个工具栏项，分别包含一个滑动条组件和一个搜索框组件。
 
 ```TypeScript
 // xxx.ets
@@ -8723,7 +8723,7 @@ struct OpacityExample {
 @Component
 struct ToolbarExample {
   normalIcon: Resource = $r('app.media.startIcon')
-  selectedIcon: Resource = $r("app.media.startIcon")
+  selectedIcon: Resource = $r('app.media.startIcon')
   @State arr: number[] = [1, 2, 3]
   @State current: number = 1
   @Provide('navPathStack') navPathStack: NavPathStack = new NavPathStack()
@@ -11617,7 +11617,7 @@ struct OnAccessibilityHoverEventExample {
 }
 ```
 
-从API version 20开始，新增了入参类型为AccessibilityTransparentCallback的[onAccessibilityHoverTransparent](arkts-arkui-commonmethod-c.md#onaccessibilityhovertransparent)接口。
+从API version 20开始，新增了[onAccessibilityHoverTransparent](arkts-arkui-commonmethod-c.md#onaccessibilityhovertransparent)接口。
 
 ```TypeScript
 @Entry
@@ -13606,7 +13606,8 @@ struct Index {
     }
     .height('100%')
     .width('100%')
-    .backgroundColor(Color.Gray)
+    // 请开发者替换为实际资源文件
+    .backgroundImage($r("app.media.img"))
   }
 }
 ```
@@ -15470,6 +15471,7 @@ struct TouchExample {
             if (event.touches.length > 0) {
               this.text = 'TouchType:' + this.eventType
                 + '\nDistance between touch point and touch element:'
+                + '\n  id: ' + event.touches[0].id
                 + '\n  x: ' + event.touches[0].x + '\n  y: ' + event.touches[0].y
                 + '\n  width: ' + event.touches[0].width + '\n  height: ' + event.touches[0].height
                 + '\n  pressedTime: ' + event.touches[0].pressedTime
@@ -15501,6 +15503,7 @@ struct TouchExample {
             if (event.touches.length > 0) {
               this.text = 'TouchType:' + this.eventType
                 + '\nDistance between touch point and touch element:'
+                + '\n  id: ' + event.touches[0].id
                 + '\n  x: ' + event.touches[0].x + '\n  y: ' + event.touches[0].y
                 + '\n  width: ' + event.touches[0].width + '\n  height: ' + event.touches[0].height
                 + '\n  pressedTime: ' + event.touches[0].pressedTime

@@ -24,11 +24,11 @@ This is suitable for scenarios where users need to manually modify notification 
 
 **See also:**
 
-requestEnableNotification requests notification
+[requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md) requests notification
 
-isNotificationEnabled checks whether notification is
+[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) checks whether notification is
 
-getNotificationSetting obtains the notification settings
+[getNotificationSetting](arkts-notification-notificationmanager-getnotificationsetting-f.md) obtains the notification settings
 
 **Parameters:**
 

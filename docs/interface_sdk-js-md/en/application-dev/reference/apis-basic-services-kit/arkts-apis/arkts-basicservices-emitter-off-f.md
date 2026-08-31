@@ -164,7 +164,7 @@ emitter1.off('eventId', callback);
 function off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\&lt;EventData&gt;** has been registered through the [on](arkts-basicservices-emitter-emitter-c.md#on) or [once](arkts-basicservices-emitter-emitter-c.md#once) API. Otherwise, no processing is performed.
+Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\&lt;EventData&gt;** has been registered through the on or once API. Otherwise, no processing is performed.
 
 After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed.
 

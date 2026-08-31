@@ -361,7 +361,7 @@ videoRecorder.pause().then(() => {
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至playing状态后才能调用。
   avPlayer.pause().then(() => {
@@ -554,7 +554,7 @@ async function test() {
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发除released以外的状态才能调用。
   avPlayer.release().then(() => {

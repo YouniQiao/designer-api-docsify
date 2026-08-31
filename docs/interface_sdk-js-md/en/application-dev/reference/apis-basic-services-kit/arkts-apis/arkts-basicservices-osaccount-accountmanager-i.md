@@ -869,7 +869,7 @@ Obtains information about the OS account to which the current process belongs. T
 **Deprecated since:** 11
 
 **Required permissions:** 
-- API version 10+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
+- API version 10 and later: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
 - API version 9: ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -925,7 +925,7 @@ Obtains information about the OS account to which the current process belongs. T
 **Deprecated since:** 11
 
 **Required permissions:** 
-- API version 10+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
+- API version 10 and later: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
 - API version 9: ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **System capability:** SystemCapability.Account.OsAccount

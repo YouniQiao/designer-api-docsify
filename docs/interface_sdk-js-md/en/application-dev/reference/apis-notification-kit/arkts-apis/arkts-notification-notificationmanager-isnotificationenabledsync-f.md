@@ -22,7 +22,7 @@ This API is used to quickly check whether the current application is allowed to 
 
 **See also:**
 
-requestEnableNotification requests notification
+[requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md) requests notification
 
 **Return value:**
 

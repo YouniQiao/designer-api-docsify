@@ -48,7 +48,7 @@ TextClock(options?: TextClockOptions)
 @Component
 struct Second {
   @State accumulateTime: number = 0;
-  // 导入对象
+  // 创建控制器对象
   controller: TextClockController = new TextClockController();
 
   build() {

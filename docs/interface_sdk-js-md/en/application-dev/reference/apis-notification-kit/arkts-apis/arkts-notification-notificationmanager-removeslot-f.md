@@ -22,11 +22,11 @@ After deletion, the corresponding type of notification slot and its configuratio
 
 **See also:**
 
-addSlot adds a notification slot of
+[addSlot](arkts-notification-notificationmanager-addslot-f.md) adds a notification slot of
 
-getSlot obtains a
+[getSlot](arkts-notification-notificationmanager-getslot-f.md) obtains a
 
-removeAllSlots removes all notification
+[removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all notification
 
 **Parameters:**
 
@@ -78,11 +78,11 @@ After deletion, the corresponding notification slot and its configuration will b
 
 **See also:**
 
-addSlot adds a notification slot of
+[addSlot](arkts-notification-notificationmanager-addslot-f.md) adds a notification slot of
 
-getSlot obtains a notification slot of a
+[getSlot](arkts-notification-notificationmanager-getslot-f.md) obtains a notification slot of a
 
-removeAllSlots removes all notification
+[removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all notification
 
 **Parameters:**
 

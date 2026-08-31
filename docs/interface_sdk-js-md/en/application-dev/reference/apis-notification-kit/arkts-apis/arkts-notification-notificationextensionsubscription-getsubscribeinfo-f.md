@@ -22,13 +22,13 @@ Obtains the subscription information about the notification extension of this ap
 
 **See also:**
 
-subscribe subscribes
+[subscribe](arkts-notification-notificationextensionsubscription-subscribe-f.md) subscribes
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NotificationExtensionSubscriptionInfo[]&gt; | Promise used to return the [NotificationExtensionSubscriptionInfo[]]{ |
+| Promise&lt;NotificationExtensionSubscriptionInfo[]&gt; | Promise used to return the [NotificationExtensionSubscriptionInfo]{ |
 
 **Error codes:**
 

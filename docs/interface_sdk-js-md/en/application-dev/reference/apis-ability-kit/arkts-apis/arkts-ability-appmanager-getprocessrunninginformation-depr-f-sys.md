@@ -24,7 +24,7 @@ Obtains information about the running processes. This API uses a promise to retu
 **Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md)
 
 **Required permissions:** 
-- API version 8 - 10: ohos.permission.GET_RUNNING_INFO
+- API versions 8 to 10: ohos.permission.GET_RUNNING_INFO
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -62,7 +62,7 @@ Obtains information about the running processes. This API uses an asynchronous c
 **Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md)
 
 **Required permissions:** 
-- API version 8 - 10: ohos.permission.GET_RUNNING_INFO
+- API versions 8 to 10: ohos.permission.GET_RUNNING_INFO
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

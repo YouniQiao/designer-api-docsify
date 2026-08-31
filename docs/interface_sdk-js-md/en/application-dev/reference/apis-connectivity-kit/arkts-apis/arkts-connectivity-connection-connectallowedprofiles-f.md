@@ -16,8 +16,8 @@ Connects all allowed bluetooth profiles between the local and remote device.
 **Since:** 16
 
 **Required permissions:** 
-- API version 16+: ohos.permission.ACCESS_BLUETOOTH
-- API version 11 - 15: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+- API version 16 and later: ohos.permission.ACCESS_BLUETOOTH
+- API versions 11 to 15: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,8 +71,8 @@ Connects all allowed bluetooth profiles between the local and remote device.
 **Since:** 16
 
 **Required permissions:** 
-- API version 16+: ohos.permission.ACCESS_BLUETOOTH
-- API version 11 - 15: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+- API version 16 and later: ohos.permission.ACCESS_BLUETOOTH
+- API versions 11 to 15: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 

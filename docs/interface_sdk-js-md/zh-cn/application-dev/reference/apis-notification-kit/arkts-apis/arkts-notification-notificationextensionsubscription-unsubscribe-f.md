@@ -22,7 +22,7 @@ function unsubscribe(): Promise<void>
 
 **参见：**
 
-subscribe 订阅通知扩展。
+[subscribe](arkts-notification-notificationextensionsubscription-subscribe-f.md) 订阅通知扩展。
 
 **返回值：**
 

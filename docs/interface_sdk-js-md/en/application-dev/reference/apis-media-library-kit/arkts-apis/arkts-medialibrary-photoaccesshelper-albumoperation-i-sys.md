@@ -1,6 +1,6 @@
 # AlbumOperation (System API)
 
-Album operation info.
+Represents an album operation configuration.
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ The album operation type.
 values: string[]
 ```
 
-The album operation parameters. The maximum length is 20, The array can contain a maximum of 20 strings, and each string must not exceed 500 characters in length.
+The album operation parameters. The array can contain a maximum of 20 strings, and each string must not exceed 8KB.
 
 **Type:** string[]
 

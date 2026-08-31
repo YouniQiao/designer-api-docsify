@@ -43,3 +43,18 @@ Adds the permission for applications to access the serial port. This API is open
 | [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
 | [35700002](../errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
 | [35700008](../errorcode-busmanager-serial.md#35700008-permission-denied) | Permission denied. |
+
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Add the serial port access permission (available only to system applications).
+let tokenId: string = '123456';
+let deviceId: string = '/dev/ttyUSB0';
+serial.addPortAuthorization(tokenId, deviceId).then(() => {
+  console.info('addPortAuthorization success');
+}).catch((error: Error) => {
+  console.error(`addPortAuthorization error: ${JSON.stringify(error)}`);
+});
+```

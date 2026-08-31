@@ -42,6 +42,8 @@ import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 
 ## Examples
 
+In the process list on the right, select the launched atomic service process (the bundle name of the launched atomic service, with the suffix "embeddable").
+
 ```TypeScript
 import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 
@@ -54,12 +56,12 @@ struct Index {
     Column() {
       Text('InnerFullScreenLaunchComponent').fontSize(16).margin({top: 100})
       Button('Start Sunrise/Sunset')
-        .onClick(()=>{
+        .onClick(() => {
           let appId1: string = '576****************';
           this.controller.launchAtomicService(appId1, {});
         }).height(30).width('50%').margin({top: 50})
       Button('Start Top-up')
-        .onClick(()=>{
+        .onClick(() => {
           let appId2: string = '576****************';
           this.controller.launchAtomicService(appId2, {});
         }).height(30).width('50%').margin({top: 50})
@@ -73,13 +75,13 @@ struct Index {
           content: this.ColumnChild,
           controller: this.controller,
           onReceive: (data) => {
-            console.info("onReceive, data: " + data['ohos.atomicService.window']);
+            console.info('onReceive, data: ' + JSON.stringify(data['ohos.atomicService.window']));
           },
-          onError: (err: Error) => {
-            console.error("onError, err: " + JSON.stringify(err));
+          onError: (err: BusinessError) => {
+            console.error(`onError, code: ${err.code}, message: ${err.message}`);
           },
           onTerminated: (info: TerminationInfo) => {
-            console.info("onTerminated, info: " + JSON.stringify(info));
+            console.info('onTerminated, info: ' + JSON.stringify(info));
           }
         })
     }

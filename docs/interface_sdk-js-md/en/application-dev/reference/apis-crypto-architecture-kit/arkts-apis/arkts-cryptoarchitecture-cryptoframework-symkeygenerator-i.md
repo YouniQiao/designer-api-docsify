@@ -6,7 +6,7 @@ Symmetric key generator interface, defining methods for generating symmetric key
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -36,7 +36,7 @@ If no hash algorithm is specified when the symmetric key generator is created (f
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -90,7 +90,7 @@ Converts specified data into a symmetric key. This API uses a promise to return 
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -224,7 +224,7 @@ Generates a random key using this symmetric key generator. This API uses an asyn
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -264,7 +264,7 @@ Generates a random key using this symmetric key generator. This API uses a promi
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Return value:**
 
@@ -362,4 +362,4 @@ Indicates the algorithm name of the SymKeyGenerator object.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework

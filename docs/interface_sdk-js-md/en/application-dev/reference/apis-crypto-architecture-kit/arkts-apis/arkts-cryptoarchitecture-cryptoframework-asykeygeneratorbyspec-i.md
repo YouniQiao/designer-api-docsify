@@ -6,7 +6,7 @@ Asymmetric key generator interface with specified key specifications, defining m
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -30,7 +30,7 @@ If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptofr
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -118,7 +118,7 @@ If a key parameter of the [COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptofr
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Return value:**
 
@@ -302,7 +302,7 @@ If [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -377,7 +377,7 @@ If a key parameter of the [PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptofram
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Return value:**
 
@@ -530,7 +530,7 @@ If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframe
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -605,7 +605,7 @@ If a key parameter of the [PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframe
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Return value:**
 
@@ -758,4 +758,4 @@ Indicates the algorithm name of the generator.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework

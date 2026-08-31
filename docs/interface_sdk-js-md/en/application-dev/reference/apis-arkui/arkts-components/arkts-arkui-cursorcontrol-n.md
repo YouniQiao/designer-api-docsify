@@ -91,7 +91,7 @@ struct AnimatablePropertyExample {
         .animation({ duration: 2000, curve: Curve.Ease })
       Button("Play")
         .onClick(() => {
-          this.textWidth = this.textWidth == 80 ? 160 : 80;
+          this.textWidth = this.textWidth === 80 ? 160 : 80;
         })
     }.width("100%")
     .padding(10)
@@ -132,7 +132,7 @@ class Point {
 class PointVector extends Array<Point> implements AnimatableArithmetic<PointVector> {
   constructor(value: Array<Point>) {
     super();
-    value.forEach(p => this.push(p));
+    value.forEach(point => this.push(point));
   }
 
   plus(rhs: PointVector): PointVector {
@@ -162,7 +162,7 @@ class PointVector extends Array<Point> implements AnimatableArithmetic<PointVect
   }
 
   equals(rhs: PointVector): boolean {
-    if (this.length != rhs.length) {
+    if (this.length !== rhs.length) {
       return false;
     }
     for (let i = 0; i < this.length; i++) {
@@ -175,13 +175,14 @@ class PointVector extends Array<Point> implements AnimatableArithmetic<PointVect
 
   get(): Array<Object[]> {
     let result: Array<Object[]> = [];
-    this.forEach(p => result.push([p.x, p.y]));
+    this.forEach(point => result.push([point.x, point.y]));
     return result;
   }
 }
 
 @AnimatableExtend(Polyline)
 function animatablePoints(points: PointVector) {
+  // Convert PointVector to the array format required by the points attribute of Polyline.
   .points(points.get())
 }
 
@@ -344,7 +345,7 @@ struct HoverExample {
 ```
 
 ```TypeScript
-// Components with allowForceDark(false) will ignore color inversion capabilities.
+// After the allowForceDark(false) attribute is added to a component, the color inversion is not used for the current component and all its child components.
 @Entry
 @Component
 struct ComponentPage {
@@ -358,7 +359,7 @@ struct ComponentPage {
             console.info(`Text is clicked`);
           })
       }
-      .allowForceDark(false) // Disable color inversion for Column and its child Text component, ignoring the color inversion settings of the parent component Column.
+      .allowForceDark(false) // Column and its child component Text do not use the color inversion, and are not affected by the color inversion used by the parent component Column.
 
       Row() {
         Button('BUTTON')
@@ -368,7 +369,7 @@ struct ComponentPage {
             console.info(`Button is clicked`);
           })
       }
-      .allowForceDark(false) // Disable color inversion for Row and its child Button component, ignoring the color inversion settings of the parent component Column.
+      .allowForceDark(false) // Row and its child component Button do not use the color inversion, and are not affected by the color inversion used by the parent component Column.
     }
     .allowForceDark(true)
     .width('100%')
@@ -2050,7 +2051,7 @@ struct Index {
     Menu() {
       MenuItem({
         symbolStartIcon: this.startIconModifier,
-        content: "Create folder",
+        content: "New folder",
       })
       MenuItem({
         symbolStartIcon: this.startIconModifier,
@@ -2172,7 +2173,7 @@ struct Index {
   @Builder
   MenuBuilderWithParam(type: ResponseType) {
     Flex({ direction: FlexDirection.Column, justifyContent: FlexAlign.Center, alignItems: ItemAlign.Center }) {
-      Text('Current ResponseType = ' + (type === 0 ? 'RIGHT_CLICK' : 'LONG_PRESS'))
+      Text('Current ResponseType = ' + (type === ResponseType.RightClick ? 'RIGHT_CLICK' : 'LONG_PRESS'))
       Divider().height(10)
       if (type === ResponseType.LongPress) {
         Text('Item: ' + this.longPress)
@@ -2332,6 +2333,177 @@ struct Index {
 }
 ```
 
+The maxHeight attribute is added to ContextMenuOptions as of API version 26.0.0.
+
+```TypeScript
+import { LengthMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  // Replace $r('app.media.startIcon') with the image resource file you use.
+  private iconStr: ResourceStr = $r('app.media.startIcon');
+
+  @Builder
+  MyMenu() {
+    Menu() {
+      MenuItem({ startIcon: this.iconStr, content: 'MenuItem1' })
+      MenuItem({ startIcon: this.iconStr, content: 'MenuItem2' })
+      MenuItem({ startIcon: this.iconStr, content: 'MenuItem3' })
+      MenuItem({ startIcon: this.iconStr, content: 'MenuItem4' })
+      MenuItem({ startIcon: this.iconStr, content: 'MenuItem5' })
+      MenuItem({ startIcon: this.iconStr, content: 'MenuItem6' })
+      MenuItem({ startIcon: this.iconStr, content: 'MenuItem7' })
+      MenuItem({ startIcon: this.iconStr, content: 'MenuItem8' })
+      MenuItem({ startIcon: this.iconStr, content: 'MenuItem9' })
+    }
+  }
+
+  build() {
+    Column({ space: 50 }) {
+      Column() {
+        Column() {
+          Text('LongPress-image')
+            .width(200)
+            .height(100)
+            .textAlign(TextAlign.Center)
+            .margin(100)
+            .fontSize(30)
+            .bindContextMenu(this.MyMenu, ResponseType.LongPress,
+              {
+                maxHeight: LengthMetrics.percent(50)
+              })
+            .backgroundColor('#ff7fcdff')
+        }
+      }.width('100%')
+    }
+  }
+}
+```
+
+The targetSpace attribute is added to ContextMenuOptions as of API version 26.0.0.
+
+```TypeScript
+import { LengthMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Alone {
+  @Builder
+  MyMenu() {
+    Menu() {
+      MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Menu item 1' })
+      MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Menu item 2' })
+      MenuItem({ startIcon: $r('app.media.startIcon'), content: 'menu option 3' })
+    }
+  }
+
+  build() {
+    Column() {
+      Stack() {
+        Column()
+          .width(120 + 40 * 2)
+          .height(120 + 40 * 2)
+          .borderWidth(2)
+          .borderColor(Color.Orange)
+          .borderStyle(BorderStyle.Dotted)
+
+        Image($r('app.media.startIcon'))
+          .width(120)
+          .height(120)
+          .bindMenu(this.MyMenu,
+            {
+              targetSpace: LengthMetrics.vp(40)
+            })
+      }.height('75%')
+      .width('100%')
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+The systemMaterial attribute is added to ContextMenuOptions as of API version 26.0.0.
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  @Builder
+  MyMenu() {
+    Menu() {
+      MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Menu item' })
+      MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Menu item' })
+      MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Menu item' })
+    }
+  }
+
+  build() {
+    Stack() {
+      Button('bindMenu with THICK material')
+        .bindMenu(this.MyMenu, {
+          systemMaterial: new uiMaterial.ImmersiveMaterial({
+            style: uiMaterial.ImmersiveStyle.THICK
+          })
+        })
+    }
+    .height('100%')
+    .width('100%')
+    .backgroundColor(Color.Gray)
+  }
+}
+```
+
+In API version 26.0.0 and later, the [bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow) API is added, and the gridStyle attribute is added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+
+```TypeScript
+@Entry
+@Component
+struct ContextMenuGridStyleExample {
+  @State isShown: boolean = false;
+
+  @Builder
+  MyMenu() {
+   Menu() {
+     MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Copy')
+     MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Paste' })
+     MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Cut' })
+     MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Delete' })
+     MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Share' })
+     MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Select All' })
+     MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Translate' })
+     MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Favorite' })
+   }
+   .width(150)
+  }
+
+  build() {
+    Column({ space: 20 }) {
+      Text('bindContextMenuByIsShow grid menu')
+        .fontSize(20)
+        .bindContextMenuByIsShow(this.isShown, this.MyMenu, {
+          gridStyle: {
+            count: 4,
+            horizontalSize: 3,
+            position: MenuGridPosition.BOTTOM
+          },
+          onWillDisappear: () => {
+            this.isShown = false;
+          },
+        })
+        .onClick(() => {
+          this.isShown = true;
+        })
+    }
+    .width('100%')
+    .margin({ top: 50 })
+  }
+}
+```
+
 The keyboardAvoidMode attribute is added to PopupOptions and CustomPopupOptions since API version 15.
 
 ```TypeScript
@@ -2346,7 +2518,7 @@ struct PopupExample {
   @Builder popupBuilder() {
     Row({ space: 2 }) {
       // Replace $r('app.media.icon') with the image resource file you use.
-      Image($r("app.media.icon")).width(24).height(24).margin({ left: -5 })
+      Image($r('app.media.icon')).width(24).height(24).margin({ left: -5 })
       Text('Custom Popup').fontSize(10)
     }.width(100).height(50).padding(5)
   }
@@ -2361,7 +2533,7 @@ struct PopupExample {
         .bindPopup(this.handlePopup, {
           message: 'This is a popup with PopupOptions',
           placement: Placement.Top,
-          showInSubWindow:false,
+          showInSubWindow: false,
           keyboardAvoidMode: KeyboardAvoidMode.DEFAULT, // Set the popup to avoid the soft keyboard.
           primaryButton: {
             value: 'confirm',
@@ -2379,7 +2551,7 @@ struct PopupExample {
             }
           },
           onStateChange: (e) => {
-            console.info(JSON.stringify(e.isVisible))
+            console.info(JSON.stringify(e.isVisible));
             if (!e.isVisible) {
               this.handlePopup = false;
             }
@@ -2396,7 +2568,7 @@ struct PopupExample {
         .bindPopup(this.customPopup, {
           builder: this.popupBuilder,
           placement: Placement.Top,
-          mask: {color:'#33000000'},
+          mask: { color: '#33000000' },
           popupColor: Color.Yellow,
           enableArrow: true,
           keyboardAvoidMode: KeyboardAvoidMode.DEFAULT, // Set the popup to avoid the soft keyboard.
@@ -2469,13 +2641,13 @@ struct PopupExample {
 
   build() {
     Column({ space: 100 }) {
-      Button("popup")
+      Button('popup')
         .margin({ top: 50 })
         .onClick(() => {
           this.customPopup = !this.customPopup;
         })
         .bindPopup(this.customPopup!!, {
-          message: "this is a popup",
+          message: 'this is a popup',
           arrowHeight: 20, // Set the height for the popup arrow.
           arrowWidth: 20, // Set the width for the popup arrow.
           radius: 20, // Set the corner radius of the popup.
@@ -2530,7 +2702,7 @@ struct PopupExample {
           placement: Placement.Top,
           showInSubWindow: false,
           onStateChange: (e) => {
-            console.info(JSON.stringify(e.isVisible))
+            console.info(JSON.stringify(e.isVisible));
             if (!e.isVisible) {
               this.handlePopup = false;
             }
@@ -2599,9 +2771,13 @@ struct PopupExample {
               this.handlePopup = false;
             }
           },
+          /**
+           * Callback for intercepting the popup before it is closed.
+           * dismissPopupAction: popup closing behavior object, containing the closing reason and method.
+           */
           onWillDismiss: (
             (dismissPopupAction: DismissPopupAction) => {
-              console.info("dismissReason:" + JSON.stringify(dismissPopupAction.reason));
+              console.info('dismissReason:' + JSON.stringify(dismissPopupAction.reason));
               if (dismissPopupAction.reason === DismissReason.PRESS_BACK) {
                 dismissPopupAction.dismiss();
               }
@@ -2613,7 +2789,7 @@ struct PopupExample {
 }
 ```
 
-This example demonstrates how to set the onWillDismiss attribute in [PopupOptions](#popupoptions) to false to intercept popup dismissal events. In addition, configuring the followTransformOfTarget attribute in [PopupOptions](#popupoptions) sets whether the popup follows and displays at the corresponding position when the host component's position is transformed.
+In this example, the onWillDismiss attribute in [PopupOptions](#popupoptions) is set to false, so that the popup does not respond to the exit event. In addition, you can set the followTransformOfTarget attribute of [PopupOptions](#popupoptions) to determine whether the popup follows the changes of the host component.
 
 ```TypeScript
 // xxx.ets
@@ -2622,6 +2798,7 @@ This example demonstrates how to set the onWillDismiss attribute in [PopupOption
 @Component
 struct PopupExample {
   @State handlePopup: boolean = false;
+  private timer: number = -1;
 
   build() {
     Column() {
@@ -2642,16 +2819,23 @@ struct PopupExample {
           placement: Placement.Bottom,
           enableArrow: false,
           targetSpace: '15vp',
+          // The popup changes synchronously with the translation and scaling of the button.
           followTransformOfTarget: true,
           onStateChange: (e) => {
-            let timer = setTimeout(() => {
+            // Set the popup to automatically close after 6 seconds.
+            if (e.isVisible) {
+              this.timer = setTimeout(() => {
+                this.handlePopup = false;
+              }, 6000);
+            } else {
               this.handlePopup = false;
-            }, 6000);
-            if (!e.isVisible) {
-              this.handlePopup = false;
-              clearTimeout(timer);
+              if (this.timer !== -1) {
+                clearTimeout(this.timer);
+                this.timer = -1;
+              }
             }
           },
+          // The popup does not respond to the tap, swipe (left or right), three-key back, route redirection, or keyboard ESC exit events. The popup exits only when the value of the popup display status parameter is set to false.
           onWillDismiss: false
         })
     }.margin(20)
@@ -2674,6 +2858,16 @@ struct PopupExample {
         .onClick(() => {
           this.handlePopup = !this.handlePopup
         })
+        /**
+         * Bind a popup to the button.
+         * First parameter: variable for controlling the popup display.
+         * message: text displayed in the popup.
+         * placement.Top: The popup is displayed above the button.
+         * outlineWidth: width of the outside outline (1 vp).
+         * outlineLinearGradient: vertical linear gradient from yellow to green for the outside outline.
+         * borderWidth: width of the inner border of the popup window (1 vp).
+         * borderLinearGradient: vertical linear gradient from red to blue for the inner border.
+         */
         .bindPopup(this.handlePopup!!, {
           message: 'This is a popup with PopupOptions',
           placement: Placement.Top,
@@ -2712,10 +2906,174 @@ struct PopupExample {
         .bindPopup(this.handlePopup!!, {
           message: 'popup message '.repeat(200),
           placement: Placement.Top,
+          // When the remaining display space is insufficient, the popup is compressed and displayed in the maximum space.
           avoidTarget: AvoidanceMode.AVOID_AROUND_TARGET,
         })
         .position({ x: 100, y: 150 }) 
     }.width('100%').padding({ top: 5 })
+  }
+}
+```
+
+The systemMaterial attribute is added to PopupOptions as of API version 26.0.0.
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct PopupExample {
+  @State handlePopup: boolean = false;
+
+  build() {
+    Flex({ direction: FlexDirection.Column }) {
+      Button('PopupOptions')
+        .onClick(() => {
+          this.handlePopup = !this.handlePopup
+        })
+        /**
+         * Bind a popup to a button.
+         * The first parameter is a Boolean value that indicates whether to display the popup.
+         * message: text displayed in the popup.
+         * placement.Top: The popup is displayed above the button.
+         * systemMaterial: configures an immersive frosted material for the popup.
+         * ImmersiveStyle.THIN: thin frosted material with medium transparency.
+         */
+        .bindPopup(this.handlePopup!!, {
+          message: 'This is a popup with PopupOptions',
+          placement: Placement.Top,
+          // Control whether to set the system material.
+          systemMaterial: new uiMaterial.ImmersiveMaterial({
+            style: uiMaterial.ImmersiveStyle.THIN
+          })
+        })
+        .position({ x: 100, y: 300 })
+    }.width('100%')
+    // Replace the resource file with the actual one.
+    .backgroundImage($r('app.media.img'))
+    .backgroundImageSize({ width: '100%', height: '100%' })
+  }
+}
+```
+
+In API version 26.0.0 and later, the backgroundBlurStyleOptions and backgroundEffect attributes are added to PopupOptions.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct PopupExample {
+  @State handlePopup: boolean = false;
+
+  build() {
+    Flex({ direction: FlexDirection.Column }) {
+      Button('Popup custom background effect 1')
+        .onClick(() => {
+          this.handlePopup = !this.handlePopup
+        })
+        /**
+         * Bind the popup and use the system criterion frosted blur style.
+         * message: long text content of the popup. The repeated concatenation of long text is used to test the line break and blur effect.
+         * backgroundBlurStyleOptions: immersive blur configuration item of the system.
+         * colorMode.LIGHT: light theme color mode.
+         * adaptiveColor.AVERAGE: The average color of the background is used as the base color for frosted effect.
+         * scale: transparency scaling coefficient of the frosted effect, which is 0.5 in this example.
+         * blurOptions.grayscale: grayscale filter range [minimum value, maximum value].
+         */
+        .bindPopup(this.handlePopup!!, {
+          message: 'popup message '.repeat(20),
+          backgroundBlurStyleOptions: {
+            colorMode: ThemeColorMode.LIGHT,
+            adaptiveColor: AdaptiveColor.AVERAGE,
+            scale: 0.5,
+            blurOptions: { grayscale: [20, 20] },
+          }
+        })
+        .position({ x: 100, y: 150 }) 
+
+      Button('Popup custom background effect 2')
+        .onClick(() => {
+          this.handlePopup = !this.handlePopup
+        })
+        /**
+         * Bind the popup and use the fully customized mixed background effect.
+         * radius: The background blur radius is 60, indicating a higher blur degree.
+         * saturation: saturation 0, indicating that the image is desaturated and displayed in black and white.
+         * brightness: brightness 1, indicating that the original brightness remains unchanged.
+         * color: pink background color is added.
+         * blurOptions.grayscale: grayscale filter parameters.
+         */
+        .bindPopup(this.handlePopup!!, {
+          message: 'popup message '.repeat(20),
+          backgroundEffect: {
+            radius: 60,
+            saturation: 0,
+            brightness: 1,
+            color: Color.Pink,
+            blurOptions: { grayscale: [20, 20] }
+          }
+        })
+        .position({ x: 100, y: 400 }) 
+    }.width('100%')
+    // Replace the resource file with the actual one.
+    .backgroundImage($r('app.media.img'))
+    .backgroundImageSize({ width: '100%', height: '100%' })
+  }
+}
+```
+
+From API version 26.0.0, the levelMode attribute is added to PopupOptions.
+
+```TypeScript
+import { LevelMode } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct PopupExample {
+  @State handlePopup: boolean = false;
+
+  build() {
+    Column() {
+      Button('PopupOptions EMBEDDED')
+        .id('targetButton')
+        .onClick(() => {
+          // Switch the popup display or hiding status.
+          this.handlePopup = !this.handlePopup;
+          // Delay the route redirection for 500 ms to ensure that the popup animation is played.
+          setTimeout(() => {
+            // pages/PageTwo needs to be replaced with the actual route name.
+            this.getUIContext().getRouter().pushUrl({ url: 'pages/PageTwo'}).catch(() => {
+              console.error("route to PageTwo error!")
+            })
+          }, 500)
+        })
+        /**
+         * Bind the popup to the current button.
+         * First parameter: Boolean value for popup display control.
+         * message: text displayed in the popup.
+         * levelMode: EMBEDDED. The popup belongs to the current page. When the page is redirected, the popup is destroyed synchronously.
+         */
+        .bindPopup(this.handlePopup!!, {
+          message: 'This is an embedded popup',
+          levelMode: LevelMode.EMBEDDED,
+        })
+        .position({ x: 60, y: 300 })
+    }.width('100%').padding({ top: 5 })
+  }
+}
+```
+
+PageTwo:
+
+```TypeScript
+@Entry
+@Component
+struct PageTwo {
+  build() {
+    Column() {
+      Text("This is next page")
+    }
+    .position({ x: 120, y: 300 })
   }
 }
 ```
@@ -2971,7 +3329,7 @@ This example shows how to register onWillDismiss and onWillSpringBackWhenDismiss
 // xxx.ets
 @Entry
 @Component
-struct bindSheetExample {
+struct BindSheetExample {
   @State isShow: boolean = false;
 
   @Builder
@@ -2999,12 +3357,13 @@ struct bindSheetExample {
           preferType: SheetType.CENTER,
 
           onWillDismiss: ((dismissSheetAction: DismissSheetAction) => {
+            // Only when the user performs a downward swipe gesture, the dismiss function is called to close the sheet modal page.
             if (dismissSheetAction.reason == DismissReason.SLIDE_DOWN) {
-              dismissSheetAction.dismiss();// Register the dismiss behavior.
+                dismissSheetAction.dismiss(); // Close the sheet page.
             }
           }),
 
-          onWillSpringBackWhenDismiss: ((SpringBackAction: SpringBackAction) => {
+          onWillSpringBackWhenDismiss: ((springBackAction: SpringBackAction) => {
           // No springBack is registered, so the modal sheet will not bounce back when swiped down.
           // SpringBackAction.springBack();
           }),
@@ -3039,7 +3398,7 @@ struct Index {
 
   build() {
     Column() {
-      Button('BindSheet')
+      Button("BindSheet")
         .onClick(() => {
           this.isShow = true;
         })
@@ -3063,8 +3422,8 @@ This example demonstrates how to adjust the scrollable content within a sheet wh
 
 ```TypeScript
 // xxx.ets
-import window from '@ohos.window';
-import { BusinessError } from '@ohos.base';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -3072,15 +3431,14 @@ struct ListenKeyboardHeightChange {
   @State isShow: boolean = false;
   @State avoidMode: SheetKeyboardAvoidMode = SheetKeyboardAvoidMode.RESIZE_ONLY;
   scroller = new Scroller();
-  private arr: number[] = [0, 1, 2, 3, 4, 5, 6];
+  private numberList: number[] = [0, 1, 2, 3, 4, 5, 6];
   windowClass: window.Window | undefined = undefined;
 
   aboutToAppear(): void {
     try {
       window.getLastWindow(this.getUIContext().getHostContext(), (err: BusinessError, data) => {
-        const errCode: number = err.code;
-        if (errCode) {
-          console.error(`Failed to obtain the top window, Cause code: ${err.code}, message: ${err.message}`);
+        if (err && err.code) {
+          console.error(`Failed to obtain the top window, Code: ${err.code}, message: ${err.message}`);
           return;
         }
         this.windowClass = data;
@@ -3113,7 +3471,7 @@ struct ListenKeyboardHeightChange {
   myBuilder() {
     Scroll(this.scroller) {
       Column() {
-        ForEach(this.arr, (item: number) => {
+        ForEach(this.numberList, (item: number) => {
           Row() {
             Text(item.toString())
               .width('80%')
@@ -3229,12 +3587,12 @@ struct SheetSideExample {
   @State enableOutsideInteractive: boolean = false;
   @State borderWidths: LocalizedEdgeWidths | undefined = undefined;
   @State borderColors: Resource | undefined = undefined;
-  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+  private numberList: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   @Builder
   sideBuilder() {
     Column() {
-      ForEach(this.arr, (item: number) => {
+      ForEach(this.numberList, (item: number) => {
         Row() {
           Text(item.toString())
             .width('90%')
@@ -3249,7 +3607,7 @@ struct SheetSideExample {
       TextInput()
         .margin({ top: 5 })
       Text('Change Sheet Interaction Mode')
-        .fontSize(22).fontColor(0xFFFFFF).fontWeight(FontWeight.Bold).textAlign(TextAlign.Center)
+        .fontSize(22).fontColor(Color.White).fontWeight(FontWeight.Bold).textAlign(TextAlign.Center)
         .width('100%').height(50).backgroundColor('#2ebd82')
       Button("change enableOutsideInteractive = " + this.enableOutsideInteractive)
         .margin({ top: 5 })
@@ -3293,7 +3651,7 @@ struct SheetSideExample {
             console.info("SideSheet onDisappear.");
           },
 
-          preferType: SheetType.SIDE,  // SheetType.SIDE
+          preferType: SheetType.SIDE,
           blurStyle: BlurStyle.Regular,
           maskColor: "#4bffc62d",  // Customize the mask color.
           enableOutsideInteractive: this.enableOutsideInteractive,
@@ -3301,7 +3659,7 @@ struct SheetSideExample {
           borderWidth: this.borderWidths,
           borderColor: this.borderColors,
 
-          onHeightDidChange: (height: number)=>{
+          onHeightDidChange: (height: number) => {
             console.info("SideSheet height change:" + height);
           },
           onTypeDidChange: (type: SheetType) => {
@@ -3344,7 +3702,7 @@ struct ContentCoverExample {
     Column() {
       Button("Show Content Cover Sheet")
         .onClick(() => {
-          this.isShow = true
+          this.isShow = true;
         })
         .fontSize(20)
         .margin(10)
@@ -3352,18 +3710,17 @@ struct ContentCoverExample {
           modalTransition: ModalTransition.DEFAULT,
           preferType: SheetType.CONTENT_COVER,
           backgroundColor: '#ffd5d5d5',
-          maskColor: '#ff707070',
           onWillAppear: () => {
-            console.info("ContentCover onWillAppear.")
+            console.info("ContentCover onWillAppear.");
           },
           onAppear: () => {
-            console.info("ContentCover onAppear.")
+            console.info("ContentCover onAppear.");
           },
           onWillDisappear: () => {
-            console.info("ContentCover onWillDisappear.")
+            console.info("ContentCover onWillDisappear.");
           },
           onDisappear: () => {
-            console.info("ContentCover onDisappear.")
+            console.info("ContentCover onDisappear.");
           },
         })
     }
@@ -3371,6 +3728,63 @@ struct ContentCoverExample {
     .backgroundColor(Color.White)
     .width('100%')
     .height('100%')
+  }
+}
+```
+
+From API version 26.0.0, the systemMaterial attribute is added to [SheetOptions](arkts-arkui-sheetoptions-i.md).
+
+```TypeScript
+// xxx.ets
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SheetMaterialExample {
+  @State isShow: boolean = false;
+  @State sheetHeight: number = 300;
+  @State myMaterial: SystemUiMaterial | undefined = new uiMaterial.ImmersiveMaterial({
+    style: uiMaterial.ImmersiveStyle.ULTRA_THICK,
+  });
+
+  @Builder
+  myBuilder() {
+    Column({ space: 10 }) {
+      Text("Text")
+        .fontSize(20)
+        .margin(10)
+    }
+    .width('100%')
+    .height('100%')
+  }
+
+  build() {
+    Stack() {
+      // Replace it with the actual resource file.
+      Image($r('app.media.startIcon'))
+      Column() {
+        Button("open Sheet")
+          .onClick(() => {
+            this.isShow = true;
+          })
+          .fontSize(20)
+          .margin(10)
+          .bindSheet($$this.isShow, this.myBuilder(), {
+            height: this.sheetHeight,
+            // The following APIs are not recommended to be used together with systemMaterial.
+            // borderWidth: 20,
+            // borderColor: Color.Red,
+            // backgroundColor: Color.Green,
+            // shadow: { radius: 30, type: ShadowType.COLOR, color: Color.Yellow },
+            // Some material effects do not have a background and will be covered by the color set by backgroundColor. To display such material effects, you are advised to change the background color to transparent.
+            backgroundColor: Color.Transparent,
+            systemMaterial: this.myMaterial // The systemMaterial attribute is added in API version 26.0.0.
+          })
+      }
+      .justifyContent(FlexAlign.Center)
+      .width('100%')
+      .height('100%')
+    }
   }
 }
 ```
@@ -6016,13 +6430,13 @@ class MyButtonModifier implements AttributeModifier<ButtonAttribute> {
 
 @Entry
 @Component
-struct attributeDemo {
+struct AttributeDemo {
   @State modifier: MyButtonModifier = new MyButtonModifier();
 
   build() {
     Row() {
       Column() {
-        Button("Button")
+        Button('Button')
           .attributeModifier(this.modifier)
           .onClick(() => {
             this.modifier.isDark = !this.modifier.isDark;
@@ -6052,13 +6466,13 @@ class MyButtonModifier implements AttributeModifier<ButtonAttribute> {
 
 @Entry
 @Component
-struct attributePressedDemo {
+struct AttributePressedDemo {
   @State modifier: MyButtonModifier = new MyButtonModifier();
 
   build() {
     Row() {
       Column() {
-        Button("Button")
+        Button('Button')
           .attributeModifier(this.modifier)
       }
       .width('100%')
@@ -6071,9 +6485,9 @@ struct attributePressedDemo {
 This example shows how to set the width of a custom modifier using state data. Custom modifiers do not support observing changes in data decorated with the @State decorator. Therefore, the width does not change when the button is clicked.
 
 ```TypeScript
-import { CommonModifier } from "@kit.ArkUI";
+import { CommonModifier } from '@kit.ArkUI';
 
-const TEST_TAG: string = "AttributeModifier";
+const TEST_TAG: string = 'AttributeModifier';
 
 // Set the custom AttributeModifier for the universal component attributes.
 class MyModifier extends CommonModifier {
@@ -6087,7 +6501,7 @@ struct MyImage1 {
   @Link modifier: CommonModifier;
 
   build() {
-    Image($r("app.media.startIcon")).attributeModifier(this.modifier as MyModifier)
+    Image($r('app.media.startIcon')).attributeModifier(this.modifier as MyModifier)
   }
 }
 
@@ -6101,17 +6515,17 @@ struct Index {
 
   build() {
     Column() {
-      Button($r("app.string.EntryAbility_label"))
+      Button($r('app.string.EntryAbility_label'))
         .margin(10)
         .onClick(() => {
-          console.info(TEST_TAG, "onClick");
+          console.info(TEST_TAG, 'onClick');
           this.index++;
           if (this.index % 2 === 1) {
             this.width1 = 10;
-            console.info(TEST_TAG, "setGroup1");
+            console.info(TEST_TAG, 'setGroup1');
           } else {
             this.height1 = 10;
-            console.info(TEST_TAG, "setGroup2");
+            console.info(TEST_TAG, 'setGroup2');
           }
         })
       MyImage1({ modifier: this.myModifier })
@@ -6121,12 +6535,12 @@ struct Index {
 }
 ```
 
-This example demonstrates how to set width and height through a custom modifier. When the button is clicked, [borderStyle](ts-appendix-enums.md#borderstyle) and [borderWidth](ts-universal-attributes-border.md#borderwidth) are configured, with all four attributes taking effect simultaneously.
+In this example, the width, height, and margin attributes are set using a custom Modifier. When the button is clicked, the [borderStyle](ts-appendix-enums.md#borderstyle) and [borderWidth](ts-universal-attributes-border.md#borderwidth) attributes are set. After the button is clicked, the five attributes take effect at the same time.
 
 ```TypeScript
-import { CommonModifier } from "@kit.ArkUI";
+import { CommonModifier } from '@kit.ArkUI';
 
-const TEST_TAG: string = "AttributeModifier";
+const TEST_TAG: string = 'AttributeModifier';
 
 // Set the custom AttributeModifier for the universal component attributes.
 class MyModifier extends CommonModifier {
@@ -6150,7 +6564,7 @@ struct MyImage1 {
   @Link modifier: CommonModifier;
 
   build() {
-    Image($r("app.media.startIcon")).attributeModifier(this.modifier as MyModifier)
+    Image($r('app.media.startIcon')).attributeModifier(this.modifier as MyModifier)
   }
 }
 
@@ -6162,17 +6576,17 @@ struct Index {
 
   build() {
     Column() {
-      Button($r("app.string.EntryAbility_label"))
+      Button($r('app.string.EntryAbility_label'))
         .margin(10)
         .onClick(() => {
-          console.info(TEST_TAG, "onClick");
+          console.info(TEST_TAG, 'onClick');
           this.index++;
           if (this.index % 2 === 1) {
             (this.myModifier as MyModifier).setGroup1();
-            console.info(TEST_TAG, "setGroup1");
+            console.info(TEST_TAG, 'setGroup1');
           } else {
             (this.myModifier as MyModifier).setGroup2();
-            console.info(TEST_TAG, "setGroup2");
+            console.info(TEST_TAG, 'setGroup2');
           }
         })
       MyImage1({ modifier: this.myModifier })
@@ -6198,22 +6612,22 @@ class MyButtonModifier implements AttributeModifier<ButtonAttribute> {
 
 @Entry
 @Component
-struct attributeDemo {
+struct AttributeDemo {
   @State modifier: MyButtonModifier = new MyButtonModifier();
   @State isDisable: boolean = true;
 
   build() {
     Row() {
       Column() {
-        Button("Button")
+        Button('Button')
           .attributeModifier(this.modifier)
           .enabled(this.isDisable)
-          .id("app")
+          .id('app')
         Divider().vertical(false).strokeWidth(15).color(Color.Transparent)
-        Button("Button2")
+        Button('Button2')
           .onClick(() => {
             this.getUIContext().getFocusController().activate(true);
-            this.getUIContext().getFocusController().requestFocus("app");
+            this.getUIContext().getFocusController().requestFocus('app');
           })
       }
       .width('100%')
@@ -6235,18 +6649,18 @@ class MyButtonModifier implements AttributeModifier<ButtonAttribute> {
 
 @Entry
 @Component
-struct attributeDemo {
+struct AttributeDemo {
   @State modifier: MyButtonModifier = new MyButtonModifier();
   @State isDisable: boolean = true;
 
   build() {
     Row() {
       Column() {
-        Button("Button")
+        Button('Button')
           .attributeModifier(this.modifier)
           .enabled(this.isDisable)
         Divider().vertical(false).strokeWidth(15).color(Color.Transparent)
-        Button("Button2")
+        Button('Button2')
           .onClick(() => {
             this.isDisable = !this.isDisable;
           })
@@ -6258,7 +6672,7 @@ struct attributeDemo {
 }
 ```
 
-This example demonstrates how to implement a selected state style for a Radio component by binding it to a modifier.
+This example uses Radio to bind Modifier to implement the style effect when a component is selected.
 
 ```TypeScript
 // Set the custom AttributeModifier for the Radio component attributes.
@@ -6275,10 +6689,9 @@ class MyRadioModifier implements AttributeModifier<RadioAttribute> {
 
 @Entry
 @Component
-struct attributeDemo {
+struct AttributeDemo {
   @State modifier: MyRadioModifier = new MyRadioModifier();
   @State value: boolean = false;
-  @State value2: boolean = false;
 
   build() {
     Row() {
@@ -6308,18 +6721,18 @@ This example demonstrates how to implement a pressed state effect for a custom c
 // Set the custom AttributeModifier for the custom component attributes.
 class CustomModifier implements AttributeModifier<CommonAttribute> {
   applyNormalAttribute(instance: CommonAttribute): void {
-    instance.backgroundColor(Color.Blue)
+    instance.backgroundColor(Color.Blue);
   }
 
   applyPressedAttribute(instance: CommonAttribute): void {
-    instance.backgroundColor(Color.Gray)
+    instance.backgroundColor(Color.Gray);
   }
 }
 
 @Entry
 @Component
-struct attributePressedDemo {
-  @State modifier: CustomModifier = new CustomModifier()
+struct AttributePressedDemo {
+  @State modifier: CustomModifier = new CustomModifier();
 
   build() {
     Row() {
@@ -6337,12 +6750,46 @@ struct attributePressedDemo {
 @Component
 struct ChildComponent {
   build() {
-    Text("common")
+    Text('common')
       .fontColor(Color.White)
       .fontSize(28)
       .textAlign(TextAlign.Center)
       .width('35%')
       .height('10%')
+  }
+}
+```
+
+The [applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute) API is added since API version 26.0.0.
+
+```TypeScript
+// xxx.ets
+// Set the custom AttributeModifier for the Button component attributes.
+class MyButtonModifier implements AttributeModifier<ButtonAttribute> {
+  applyNormalAttribute(instance: ButtonAttribute): void {
+    instance.backgroundColor(Color.Black);
+  }
+
+  // Set the hovered state style.
+  applyHoveredAttribute(instance: ButtonAttribute): void {
+    instance.backgroundColor(Color.Red);
+  }
+}
+
+@Entry
+@Component
+struct AttributeHoveredDemo {
+  @State modifier: MyButtonModifier = new MyButtonModifier();
+
+  build() {
+    Row() {
+      Column() {
+        Button('Button')
+          .attributeModifier(this.modifier)
+      }
+      .width('100%')
+    }
+    .height('100%')
   }
 }
 ```
@@ -9561,6 +10008,40 @@ struct Index {
 }
 ```
 
+The ReusableOptions API is added since API version 26.0.0.
+
+```TypeScript
+@Reusable({ memoryOptimizationStrategy: ReusableMemOptStrategy.ENABLE_AUTO_CACHE_OPTIMIZATION }) // Use the automatic memory optimization strategy.
+@Component
+struct ReusableComponent {
+  aboutToRecycle() {
+    console.info('ReusableComponent aboutToRecycle');
+  }
+  aboutToDisappear() {
+    console.info('ReusableComponent aboutToDisappear');
+  }
+  build() {
+    Text('ReusableComponent')
+  }
+}
+
+@Entry
+@Component
+struct MemoryOptimizeDemo {
+  @State showReusableComponent: boolean = true;
+  build() {
+    Column() {
+      Button('Recycle').onClick(() => { // Tap the button to trigger component recycling.
+        this.showReusableComponent = false;
+      })
+      if (this.showReusableComponent) {
+        ReusableComponent()
+      }
+    }
+  }
+}
+```
+
 This example demonstrates how to use [allowDrop](arkts-arkui-commonmethod-c.md#allowdrop) to configure component drop targets and [draggable](#draggable) to enable component dragging.
 
 ```TypeScript
@@ -10594,6 +11075,7 @@ struct Index {
   }
 }
 
+// Pass multiple components through the builder as the first-level child components of the custom component (that is, excluding container components such as Column).
 @Builder
 function ColumnChildren() {
   ForEach([1, 2, 3], (index: number) => { // LazyForEach is not supported.
@@ -10613,22 +11095,15 @@ struct CustomLayout {
   };
 
   @BuilderParam builder: () => void = this.doNothingBuilder;
-  @State startSize: number = 100;
   result: SizeResult = {
     width: 0,
     height: 0
   };
 
-  onPlaceChildren(selfLayoutInfo: GeometryInfo, children: Array<Layoutable>, constraint: ConstraintSizeOptions) {
-    let startPos = 300;
-    children.forEach((child) => {
-      let pos = startPos - child.measureResult.height;
-      child.layout({ x: pos, y: pos })
-    })
-  }
-
+  // Step 1: Calculate the size of each child component.
   onMeasureSize(selfLayoutInfo: GeometryInfo, children: Array<Measurable>, constraint: ConstraintSizeOptions) {
     let size = 100;
+    // Set the initial constraint baseline to 100 vp, and accumulate half of the child component width in each iteration to gradually increase the constraint.
     children.forEach((child) => {
       let result: MeasureResult = child.measure({
         minHeight: size,
@@ -10641,6 +11116,15 @@ struct CustomLayout {
     this.result.width = 100;
     this.result.height = 400;
     return this.result;
+  }
+  // Step 2: Place each child component.
+  onPlaceChildren(selfLayoutInfo: GeometryInfo, children: Array<Layoutable>, constraint: ConstraintSizeOptions) {
+    // Calculate the child component positions in reverse from a fixed starting position to achieve a bottom-to-top reverse layout effect.
+    let startPos = 300;
+    children.forEach((child) => {
+      let pos = startPos - child.measureResult.height;
+      child.layout({ x: pos, y: pos })
+    })
   }
 
   build() {
@@ -10774,7 +11258,7 @@ class MyNodeController extends NodeController {
 struct CustomLayout {
   @Builder
   childrenBuilder() {
-    ForEach([1, 2, 3], (index: number) => { // LazyForEach is not supported.
+    ForEach([1, 2, 3], (index: number) => { // LazyForEach is not supported currently.
       NodeContainer(new MyNodeController())
     })
   };
@@ -10786,6 +11270,7 @@ struct CustomLayout {
   };
 
   onPlaceChildren(selfLayoutInfo: GeometryInfo, children: Array<Layoutable>, constraint: ConstraintSizeOptions) {
+    // Arrange child components horizontally with an interval of 10 vp.
     let prev = 0;
     children.forEach((child) => {
       let pos = prev + 10;
@@ -10877,7 +11362,7 @@ struct CustomLayoutText {
 
   onMeasureSize(selfLayoutInfo: GeometryInfo, children: Array<Measurable>, constraint: ConstraintSizeOptions) {
     children.forEach((child) => {
-      let result: MeasureResult = child.measure({ maxWidth: 335, maxHeight: 50 }) // Set constraints on the size of the child component of the custom component.
+      child.measure({ maxWidth: 335, maxHeight: 50 }) // Set the size limit of the child component of the custom component.
     })
     this.result.width = 200;
     this.result.height = 130;
@@ -11074,7 +11559,7 @@ struct MouseEventExample {
         .height(80)
         .backgroundColor(this.color)
         .fontSize(24)
-        .onHover((isHover: boolean, event: HoverEvent) => {
+        .onHover((isHover: boolean) => {
           // Use the onHover event to dynamically change the text content and background color of a button when the mouse pointer is hovered on it.
           if (isHover) {
             this.hoverText = 'hover';
@@ -11113,9 +11598,6 @@ struct MouseEventExample {
             }
             // Determine the type of the triggered mouse action.
             switch (event.action) {
-              case MouseAction.Hover:
-                this.action = 'Hover';
-                break;
               case MouseAction.Press:
                 this.action = 'Press';
                 break;
@@ -11124,6 +11606,12 @@ struct MouseEventExample {
                 break;
               case MouseAction.Release:
                 this.action = 'Release';
+                break;
+              case MouseAction.ENTER_WINDOW:
+                this.action = 'ENTER_WINDOW';
+                break;
+              case MouseAction.LEAVE_WINDOW:
+                this.action = 'LEAVE_WINDOW';
                 break;
             }
             // Combine and display all information about the mouse event.
@@ -11138,6 +11626,73 @@ struct MouseEventExample {
         })
       Text(this.mouseText)
     }.padding({ top: 30 }).width('100%')
+  }
+}
+```
+
+The getHistoricalPoints API is added as of API version 26.0.0.
+
+```TypeScript
+@Entry
+@Component
+struct HistoricalPointsExample {
+  historicalPointsInfo: string = '';
+
+  build() {
+    Column() {
+      Button('Obtain historical points by moving the mouse')
+        .width(180)
+        .height(80)
+        .onMouse((event: MouseEvent) => {
+          if (event.action === MouseAction.Move) {
+            // Call the getHistoricalPoints API to obtain the historical points of the current frame.
+            const historicalPoints = event.getHistoricalPoints?.();
+            if (historicalPoints) {
+              this.historicalPointsInfo = `Number of historical points: ${historicalPoints.length}`;
+              historicalPoints.forEach((point: MouseHistoricalPoint, index: number) => {
+                this.historicalPointsInfo += `\nPoint ${index}: `
+                  + `x = ${point.x}, y = ${point.y}, windowX = ${point.windowX}, windowY = ${point.windowY}, `
+                  + `displayX = ${point.displayX}, displayY = ${point.displayY}, `
+                  + `globalDisplayX = ${point.globalDisplayX}, globalDisplayY = ${point.globalDisplayY}, `
+                  + `timestamp = ${point.timestamp}`;
+              });
+              console.info(this.historicalPointsInfo);
+            }
+          }
+        })
+    }.padding({ top: 30 })
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+The getCurrentLocalPosition API is supported since API version 26.0.0.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct GetCurrentLocalPositionExample {
+  @State positionText: string = '';
+  @State textOffsetY: number = 0;
+
+  build() {
+    Column() {
+      Button('Obtain the coordinates of the mouse position relative to the upper left corner of the real-time position of the current component').translate({ y: this.textOffsetY })
+        .onMouse((event: MouseEvent) => {
+          if (event) {
+            // Obtain the coordinates of the mouse position relative to the upper left corner of the real-time position of the component after the component is moved. The coordinates are obtained after a delay.
+            this.textOffsetY = -200;
+            setTimeout(() => {
+              let localPos: Coordinate2D | undefined = event.getCurrentLocalPosition?.();
+              this.positionText = `Coordinates of the upper left corner relative to the real-time position of the current component:\n x: ${localPos?.x}\n y: ${localPos?.y}`;
+            }, 2000);
+          }
+        })
+
+      Text(this.positionText)
+    }.width('100%')
   }
 }
 ```
@@ -12013,16 +12568,16 @@ This example demonstrates how to apply a linear gradient blur effect on a compon
 // xxx.ets
 @Entry
 @Component
-struct ImageExample1 {
+struct LinearGradientBlurExample {
   // Replace $r('app.media.testlinearGradientBlurOrigin') with the resource file you use.
-  private_resource1: Resource = $r('app.media.testlinearGradientBlurOrigin')
-  @State image_src: Resource = this.private_resource1
+  privateResource1: Resource = $r('app.media.testlinearGradientBlurOrigin')
+  @State imageSrc: Resource = this.privateResource1
 
   build() {
     Column() {
       Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Start }) {
         Row({ space: 5 }) {
-          Image(this.image_src)
+          Image(this.imageSrc)
             .blur(0) // Set the blur effect of the image to none (no blur applied).
             .linearGradientBlur(60,
               { fractionStops: [[0, 0], [0, 0.33], [1, 0.66], [1, 1]], direction: GradientDirection.Bottom })
@@ -12038,7 +12593,7 @@ This example demonstrates how to use [renderGroup](arkts-arkui-commonmethod-c.md
 ```TypeScript
 // xxx.ets
 @Component
-struct Component1 {
+struct RenderGroupChildComponent {
   @Prop renderGroupValue: boolean;
 
   build() {
@@ -12070,9 +12625,9 @@ struct Component1 {
 struct RenderGroupExample {
   build() {
     Column() {
-      Component1({ renderGroupValue: true })
+      RenderGroupChildComponent({ renderGroupValue: true })
         .margin(20)
-      Component1({ renderGroupValue: false })
+      RenderGroupChildComponent({ renderGroupValue: false })
         .margin(20)
     }
     .width("100%")
@@ -14256,6 +14811,306 @@ struct Index {
     }
     .height('100%')
     .width('100%')
+  }
+}
+```
+
+This example demonstrates how to set the width, height, padding, and margin of a component.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct SizeExample {
+  build() {
+    Column({ space: 10 }) {
+      Text('margin and padding:').fontSize(12).fontColor(0xCCCCCC).width('90%')
+      Row() {
+        // Width: 80; height: 80; margin: 20 (blue area); top, bottom, left, and right paddings: 5, 15, 10, and 20 (white area)
+        Row() {
+          Row()
+            .size({ width: '100%', height: '100%' })
+            .backgroundColor(Color.Yellow)
+        }
+        .width(80)
+        .height(80)
+        .padding({
+          top: 5,
+          left: 10,
+          bottom: 15,
+          right: 20
+        })
+        .margin(20)
+        .backgroundColor(Color.White)
+      }.backgroundColor(Color.Blue)
+
+      Text('constraintSize')
+        .fontSize(12)
+        .fontColor(0xCCCCCC)
+        .width('90%')
+      Text('this is a Text.this is a Text.this is a Text.this is a Text.this is a Text.this is a Text.this is a Text.this is a Text.this is a Text.this is a Text.this is a Text.this is a Text.this is a Text.this is a Text.this is a Text')
+        .width('90%')
+        .constraintSize({ maxWidth: 200 })
+
+      Text('layoutWeight')
+        .fontSize(12)
+        .fontColor(0xCCCCCC)
+        .width('90%')
+      // When the parent container size is determined, the child component with layoutWeight set is allocated its size on the main axis based on the weight, ignoring its own size setting.
+      Row() {
+        // Weight 1: The component occupies 1/3 of the remaining space along the main axis.
+        Text('layoutWeight(1)')
+          .size({ width: '30%', height: 110 }).backgroundColor(0xFFEFD5).textAlign(TextAlign.Center)
+          .layoutWeight(1)
+        // Weight 2: The component occupies 2/3 of the remaining space along the main axis.
+        Text('layoutWeight(2)')
+          .size({ width: '30%', height: 110 }).backgroundColor(0xF5DEB3).textAlign(TextAlign.Center)
+          .layoutWeight(2)
+        // If layoutWeight is not set, the component is rendered based on its own size setting.
+        Text('no layoutWeight')
+          .size({ width: '30%', height: 110 }).backgroundColor(0xD2B48C).textAlign(TextAlign.Center)
+      }
+      .size({ width: '90%', height: 140 })
+      .backgroundColor(0xAFEEEE)
+
+      // calc calculation feature
+      Text('calc:')
+        .fontSize(12)
+        .fontColor(0xCCCCCC)
+        .width('90%')
+      Column() {
+        Row() {
+          Text('width 50%')
+            .fontSize(14)
+            .borderWidth(1)
+            .textAlign(TextAlign.Center)
+            .size({ width: '50%', height: 50 })
+          Text('width 50vp')
+            .fontSize(14)
+            .borderWidth(1)
+            .textAlign(TextAlign.Center)
+            .size({ width: '50vp', height: 50 })
+        }
+        .width('100%')
+        .justifyContent(FlexAlign.Center)
+
+        Text('width:calc(50% + 50vp), height:calc(50%)')
+          .fontSize(14)
+          .borderWidth(1)
+          .fontWeight(FontWeight.Bold)
+          .backgroundColor(0xFFFAF0)
+          .textAlign(TextAlign.Center)
+          .size({ width: 'calc(50% + 50vp)', height: 'calc(50%)' })
+          // If width or height is set to a percentage, the width or height of the parent container are used as the base values. The calculation result of calc for the width equals the sum of the widths of the two text components above.
+      }.width('100%').height(100)
+    }
+    .width('100%')
+    .margin({ top: 5 })
+  }
+}
+```
+
+This example demonstrates how to use LocalizedPadding and LocalizedMargin types to define the padding and margin attributes.
+
+```TypeScript
+// xxx.ets
+import { LengthMetrics } from '@kit.ArkUI'
+
+@Entry
+@Component
+struct SizeExample {
+  build() {
+    Column({ space: 10 }) {
+      Text('margin and padding:')
+        .fontSize(12)
+        .fontColor(0xCCCCCC)
+        .width('90%')
+      Row() {
+        // Set the width to 80, height to 80, top, bottom, start, and end paddings to 40, 20, 30, and 10, respectively (blue area), and top, bottom, start, and end margins to 5, 15, 10, and 20, respectively (white area).
+        Row() {
+          Row()
+            .size({ width: '100%', height: '100%' })
+            .backgroundColor(Color.Yellow)
+        }
+        .width(80)
+        .height(80)
+        .padding({
+          top: LengthMetrics.vp(5),
+          bottom: LengthMetrics.vp(15),
+          start: LengthMetrics.vp(10),
+          end: LengthMetrics.vp(20)
+        })
+        .margin({
+          top: LengthMetrics.vp(40),
+          bottom: LengthMetrics.vp(20),
+          start: LengthMetrics.vp(30),
+          end: LengthMetrics.vp(10)
+        })
+        .backgroundColor(Color.White)
+      }
+      .backgroundColor(Color.Blue)
+    }
+    .width('100%')
+    .margin({ top: 5 })
+  }
+}
+```
+
+This example demonstrates how to set a component-level safe area for a container.
+
+```TypeScript
+// xxx.ets
+import { LengthMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SafeAreaPaddingExample {
+  build() {
+    Column() {
+      Column() {
+        Column()
+          .width('100%')
+          .height('100%')
+          .backgroundColor(Color.Pink)
+      }
+      .width(200)
+      .height(200)
+      .backgroundColor(Color.Yellow)
+      .borderWidth(10)
+      .padding(10)
+      .safeAreaPadding(LengthMetrics.vp(40))
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+This example demonstrates how to use attributeModifier to dynamically set a component-level safe area for a container.
+
+```TypeScript
+// xxx.ets
+class MyModifier implements AttributeModifier<CommonAttribute> {
+  applyNormalAttribute(instance: CommonAttribute): void {
+    instance.safeAreaPadding({
+      left: 10,
+      top: 20,
+      right: 30,
+      bottom: 40
+    })
+  }
+}
+
+@Entry
+@Component
+struct SafeAreaPaddingExample {
+  @State modifier: MyModifier = new MyModifier()
+
+  build() {
+    Column() {
+      Column() {
+        Column()
+          .width('100%')
+          .height('100%')
+          .backgroundColor(Color.Pink)
+      }
+      .width(200)
+      .height(200)
+      .backgroundColor(Color.Yellow)
+      .borderWidth(10)
+      .padding(10)
+      .attributeModifier(this.modifier)
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+This example demonstrates how to set the layout policy for a container's size.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct LayoutPolicyExample {
+  build() {
+    Column() {
+      Column() {
+        // When matchParent is effective, the current component's size is equal to its parent component's content area size (180x180 vp) and is subject to its own constraintSize (150x150 vp), so the current component's size is 150x150 vp.
+        Text('matchParent')
+        Flex()
+          .backgroundColor('rgb(0, 74, 175)')
+          .width(LayoutPolicy.matchParent)
+          .height(LayoutPolicy.matchParent)
+          .constraintSize({ maxWidth: 150, maxHeight: 150 })
+
+        // When wrapContent is effective, the current component's size is equal to its child component size (300x300 vp), but it cannot exceed the parent component's content size (180x180 vp) and is subject to its own constraintSize (250x250 vp), so the current component's size is 180x180 vp.
+        Text('wrapContent')
+        Row() {
+          Flex()
+            .width(300)
+            .height(300)
+        }
+        .backgroundColor('rgb(39, 135, 217)')
+        .width(LayoutPolicy.wrapContent)
+        .height(LayoutPolicy.wrapContent)
+        .constraintSize({ maxWidth: 250, maxHeight: 250 })
+
+        // Since API version 20, layoutPolicy supports wrapContent and fixAtIdealSize. When fixAtIdealSize is effective, the current component's size is equal to its child component size (300x300 vp), it can exceed the parent component's content size (180x180 vp) but is subject to its own constraintSize (250x250 vp), so the current component's size is 250x250 vp.
+        Text('fixAtIdealSize')
+
+        Row() {
+          Flex()
+            .width(300)
+            .height(300)
+        }
+        .backgroundColor('rgb(240, 250, 255)')
+        .width(LayoutPolicy.fixAtIdealSize)
+        .height(LayoutPolicy.fixAtIdealSize)
+        .constraintSize({ maxWidth: 250, maxHeight: 250 })
+      }
+      .width(200)
+      .height(200)
+      .padding(10)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+This example demonstrates the layout effect when the Column component adapts to child components and a child component sets matchParent on only a single direction. Since API version 26.0.0, the height of the Column component adapts to the first and second child components, and the width adapts to the first and third child components.
+
+```TypeScript
+@Entry
+@Component
+struct Demo {
+  build() {
+    Column() {
+      // Before API version 26.0.0, the parent component height is calculated as padding + component 1 height = 30px × 2 + 200px = 260px, and the width is calculated as padding + component 1 width = 30px × 2 + 200px = 260px
+      // Since API version 26.0.0, the parent component height is calculated as padding + space + component 1 height + component 2 height = 30px × 2 + 30px + 200px + 200px = 490px, and the width is calculated as padding + max(component 1 width, component 3 width) = 30px × 2 + max(200px, 400px) = 460px
+      Column({space: "30px"}) {
+        Column()
+          .width("200px")
+          .height("200px")
+          .backgroundColor('rgb(0, 74, 175)')
+
+        Column()
+          .width(LayoutPolicy.matchParent) // The child component width is consistent with the parent component content area width.
+          .height("200px")
+          .backgroundColor('rgb(0, 74, 175)')
+
+        Column()
+          .width("400px")
+          .height(LayoutPolicy.matchParent) // The child component height is consistent with the parent component content area height.
+          .backgroundColor('rgb(0, 74, 175)')
+      }
+      .width(LayoutPolicy.wrapContent)
+      .height(LayoutPolicy.wrapContent)
+      .backgroundColor('rgb(39, 135, 217)')
+      .padding("30px")
+    }.width("100%")
   }
 }
 ```

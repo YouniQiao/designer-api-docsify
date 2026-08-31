@@ -22,7 +22,7 @@ import { HalfScreenLaunchComponent } from '@kit.ArkUI';
 
 ## Examples
 
-In the process list on the right, select the process of the launched atomic service. The package name has embeddable within its suffix segment.
+In the process list on the right, select the process of the launched atomic service. The bundle name has embeddable within its suffix segment.
 
 ```TypeScript
 import { HalfScreenLaunchComponent } from '@kit.ArkUI';
@@ -30,27 +30,27 @@ import { HalfScreenLaunchComponent } from '@kit.ArkUI';
 @Entry
 @Component
 struct Index {
-  appId: string = "576****************"; // Application ID for the atomic service.
+  appId: string = '576****************'; // The appId of the atomic service.
 
   build() {
     Column() {
       HalfScreenLaunchComponent({
         appId: this.appId,
         options: {},
-        onTerminated:  (info:TerminationInfo)=> {
-          console.info('onTerminated info = '+ info.want);
+        onTerminated: (info: TerminationInfo) => {
+          console.info('onTerminated info = ' + info.want);
         },
-        onError: (err) => {
-          console.error(" onError code: " + err.code + ", message: ", err.message);
+        onError: (err: BusinessError) => {
+          console.error(`onError code: ${err.code}, message: ${err.message}`);
         },
-        onReceive: (data) => {
-          console.info("onReceive, data: " + data['ohos.atomicService.window']);
+        onReceive: (data: Record<string, Object>) => {
+          console.info('onReceive, data: ' + data['ohos.atomicService.window']);
         }
       }) {
         Column() {
           Image($r('app.media.app_icon'))
           Text('Start top-up')
-        }.width("80vp").height("80vp").margin({bottom:30})
+        }.width('80vp').height('80vp').margin({bottom:30})
       } // Pass content through the trailing closure.
     }
   }

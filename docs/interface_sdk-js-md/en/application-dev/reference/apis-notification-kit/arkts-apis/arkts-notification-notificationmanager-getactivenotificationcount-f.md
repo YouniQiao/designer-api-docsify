@@ -22,7 +22,7 @@ This API is used to query the number of active notifications published by the cu
 
 **See also:**
 
-setBadgeNumber sets the
+[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) sets the
 
 **Parameters:**
 
@@ -72,7 +72,7 @@ This API is used to query the number of active notifications published by the cu
 
 **See also:**
 
-setBadgeNumber sets the
+[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) sets the
 
 **Return value:**
 

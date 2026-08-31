@@ -17,7 +17,7 @@ Obtains the total space of the built-in storage, in bytes. This API returns the 
 **Since:** 15
 
 **Required permissions:** 
-- API version 10 - 14: ohos.permission.STORAGE_MANAGER
+- API versions 10 to 14: ohos.permission.STORAGE_MANAGER
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

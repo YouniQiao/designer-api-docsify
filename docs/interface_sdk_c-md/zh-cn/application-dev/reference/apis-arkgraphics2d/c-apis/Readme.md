@@ -1,6 +1,6 @@
 # C API<!--c-arkgraphics2d-->
 
-- 模块<!--arkgraphics2d-module-->n
+- 模块<!--arkgraphics2d-module-->
     - [NativeWindow](capi-nativewindow.md)
     - [NativeColorSpaceManager](capi-nativecolorspacemanager.md)
     - [OH_NativeBuffer](capi-oh-nativebuffer.md)

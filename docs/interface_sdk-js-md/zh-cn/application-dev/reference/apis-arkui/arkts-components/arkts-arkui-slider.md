@@ -967,7 +967,8 @@ struct SliderSystemMaterial {
     }
     .height('100%')
     .width('100%')
-    .backgroundColor(Color.Grey)
+    // 请开发者替换为实际资源文件
+    .backgroundImage($r("app.media.img"))
   }
 }
 ```

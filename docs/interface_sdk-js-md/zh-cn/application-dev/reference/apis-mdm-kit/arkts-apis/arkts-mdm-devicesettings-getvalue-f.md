@@ -56,11 +56,30 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 
+// 获取设备息屏时间，返回设备息屏时间（单位：毫秒）
 try {
   // 参数需根据实际情况进行替换
   let result: string = deviceSettings.getValue(wantTemp, 'screenOff');
   console.info(`Succeeded in getting screen off time, result : ${result}`);
 } catch (err) {
   console.error(`Failed to get screen off time. Code: ${err.code}, message: ${err.message}`);
+}
+
+// 获取设备电源策略（仅支持PC/2in1设备），返回JSON字符串{"powerScene":xx,"powerPolicy":{"powerPolicyAction":xx,"delayTime":xx}}
+try {
+  // 参数需根据实际情况进行替换
+  let result: string = deviceSettings.getValue(wantTemp, 'powerPolicy');
+  console.info(`Succeeded in getting power policy, result : ${result}`);
+} catch (err) {
+  console.error(`Failed to get power policy. Code: ${err.code}, message: ${err.message}`);
+}
+
+// 获取护眼模式开关状态，返回值为on、off或unknown
+try {
+  // 参数需根据实际情况进行替换
+  let result: string = deviceSettings.getValue(wantTemp, 'eyeComfort');
+  console.info(`Succeeded in getting eye comfort, result : ${result}`);
+} catch (err) {
+  console.error(`Failed to get eye comfort. Code: ${err.code}, message: ${err.message}`);
 }
 ```

@@ -6,7 +6,7 @@ Enumerates the key parameter types.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## COMMON_PARAMS_SPEC
 
@@ -22,7 +22,7 @@ Common parameters of the public and private keys. You can use [generateKeyPair](
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## PRIVATE_KEY_SPEC
 
@@ -38,7 +38,7 @@ Parameter of the private key. You can use [generatePriKey](arkts-cryptoarchitect
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## PUBLIC_KEY_SPEC
 
@@ -54,7 +54,7 @@ Parameter of the public key. You can use [generatePubKey](arkts-cryptoarchitectu
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## KEY_PAIR_SPEC
 
@@ -70,4 +70,4 @@ Full parameters of the public and private keys. You can use [generateKeyPair](ar
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework

@@ -33,7 +33,7 @@ struct Index {
   private menuBar: AtomicServiceMenuBar = new AtomicServiceMenuBar(this.getUIContext());
 
   @Builder
-  private EmbedCompLauncherShow(title: string, text: string, event?: () => void) {
+  private menuCapsuleShow(title: string, text: string, event?: () => void) {
     Column() {
       if (typeof event === 'function') {
         Button(title)
@@ -55,10 +55,10 @@ struct Index {
 
   build() {
     Column() {
-      this.EmbedCompLauncherShow('Display menu function capsule', 'Clicking this button will display the menu function capsule.', () => {
+      this.menuCapsuleShow('Display menu function capsule', 'Clicking this button will display the menu function capsule.', () => {
         this.menuBar.setVisible(true);
       });
-      this.EmbedCompLauncherShow('Hide menu function capsule', 'Clicking this button will hide the menu function capsule.', () => {
+      this.menuCapsuleShow('Hide menu function capsule', 'Clicking this button will hide the menu function capsule.', () => {
         this.menuBar.setVisible(false);
       });
     }

@@ -17,8 +17,8 @@ Obtains the Want used to launch the bundle based on the given bundle name and us
 **Since:** 24
 
 **Required permissions:** 
-- API version 24+: ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
-- API version 10 - 23: ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
+- API version 24 and later: ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
+- API versions 10 to 23: ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

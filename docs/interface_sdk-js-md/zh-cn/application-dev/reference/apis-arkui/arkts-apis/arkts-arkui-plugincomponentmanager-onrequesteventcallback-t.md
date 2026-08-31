@@ -38,7 +38,7 @@ const onRequestListener = (source: Want, name: string, data: pluginComponentMana
   console.info("onRequestListener name=" + name);
   console.info("onRequestListener data=" + JSON.stringify(data));
   // 构建Request事件回调的返回数据，指定组件模板路径并携带请求数据返回给请求方
-  let returnData: Record<string, string | pluginComponentManager.KVObject> = {
+  const returnData: Record<string, string | pluginComponentManager.KVObject> = {
     "template": "ets/pages/plugin.js",
     "data": data,
   }

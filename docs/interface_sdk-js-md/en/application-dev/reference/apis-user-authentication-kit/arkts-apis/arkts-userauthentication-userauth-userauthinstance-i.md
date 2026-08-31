@@ -356,8 +356,8 @@ Starts authentication. This API is commonly used in the following service scenar
 **Since:** 10
 
 **Required permissions:** 
-- API version 20+: ohos.permission.ACCESS_BIOMETRIC or ohos.permission.USER_AUTH_FROM_BACKGROUND
-- API version 10 - 19: ohos.permission.ACCESS_BIOMETRIC
+- API version 20 and later: ohos.permission.ACCESS_BIOMETRIC or ohos.permission.USER_AUTH_FROM_BACKGROUND
+- API versions 10 to 19: ohos.permission.ACCESS_BIOMETRIC
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

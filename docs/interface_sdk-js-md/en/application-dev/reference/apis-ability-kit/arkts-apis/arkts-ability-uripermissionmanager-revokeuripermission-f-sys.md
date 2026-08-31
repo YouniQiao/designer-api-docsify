@@ -26,7 +26,7 @@ Revokes the URI permission from an application. This API uses an asynchronous ca
 **Since:** 10
 
 **Required permissions:** 
-- API version 10 - 11: ohos.permission.PROXY_AUTHORIZATION_URI
+- API versions 10 to 11: ohos.permission.PROXY_AUTHORIZATION_URI
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -89,7 +89,7 @@ Revokes the URI permission from an application. This API uses a promise to retur
 **Since:** 10
 
 **Required permissions:** 
-- API version 10 - 11: ohos.permission.PROXY_AUTHORIZATION_URI
+- API versions 10 to 11: ohos.permission.PROXY_AUTHORIZATION_URI
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

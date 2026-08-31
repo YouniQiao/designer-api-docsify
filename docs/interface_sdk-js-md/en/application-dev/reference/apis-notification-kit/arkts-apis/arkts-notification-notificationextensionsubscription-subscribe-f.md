@@ -22,9 +22,9 @@ Subscribes to the notification extension. You can subscribe to the notification 
 
 **See also:**
 
-unsubscribe unsubscribes from the notification extension.
+[unsubscribe](arkts-notification-notificationextensionsubscription-unsubscribe-f.md) unsubscribes from the notification extension.
 
-getSubscribeInfo obtains all
+[getSubscribeInfo](arkts-notification-notificationextensionsubscription-getsubscribeinfo-f.md) obtains all
 
 **Parameters:**
 

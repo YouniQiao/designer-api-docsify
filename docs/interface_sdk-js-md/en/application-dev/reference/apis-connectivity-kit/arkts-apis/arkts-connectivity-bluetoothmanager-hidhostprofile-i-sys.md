@@ -33,7 +33,7 @@ Connect to device with hid host. On API 10 and above, the permission required by
 **Substitutes:** [connect](arkts-connectivity-hid-hidhostprofile-i-sys.md#connect)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -106,7 +106,7 @@ Disconnect to device with hid host. On API 10 and above, the permission required
 **Substitutes:** [disconnect](arkts-connectivity-hid-hidhostprofile-i-sys.md#disconnect)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

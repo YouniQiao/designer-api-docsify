@@ -230,6 +230,7 @@ struct TextTimerStart {
 @Entry
 @Component
 struct TextTimerDemo {
+  // textTimerController用于控制计时器启停，本示例主要展示样式配置
   textTimerController: TextTimerController = new TextTimerController();
   @State countValue: number = 5025678;
 

@@ -33,7 +33,7 @@ This method unregisters the device and clears the registered callbacks and handl
 **Substitutes:** [close](arkts-connectivity-ble-gattclientdevice-i.md#close)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -87,7 +87,7 @@ The 'BLEConnectionStateChange' event is subscribed to return the connection stat
 **Substitutes:** [connect](arkts-connectivity-ble-gattclientdevice-i.md#connect)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -129,7 +129,7 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device. On A
 **Substitutes:** [disconnect](arkts-connectivity-ble-gattclientdevice-i.md#disconnect)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -171,7 +171,7 @@ Obtains the name of BLE peripheral device. On API 10 and above, the permission r
 **Substitutes:** [getDeviceName](arkts-connectivity-ble-gattclientdevice-i.md#getdevicename)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -224,7 +224,7 @@ Obtains the name of BLE peripheral device. On API 10 and above, the permission r
 **Substitutes:** [getDeviceName](arkts-connectivity-ble-gattclientdevice-i.md#getdevicename)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -276,7 +276,7 @@ Get the RSSI value of this BLE peripheral device. On API 10 and above, the permi
 **Substitutes:** [getRssiValue](arkts-connectivity-ble-gattclientdevice-i.md#getrssivalue)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -328,7 +328,7 @@ Get the RSSI value of this BLE peripheral device. On API 10 and above, the permi
 **Substitutes:** [getRssiValue](arkts-connectivity-ble-gattclientdevice-i.md#getrssivalue)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -378,7 +378,7 @@ Starts discovering services. On API 10 and above, the permission required by thi
 **Substitutes:** [getServices](arkts-connectivity-ble-gattclientdevice-i.md#getservices)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -440,7 +440,7 @@ Starts discovering services. On API 10 and above, the permission required by thi
 **Substitutes:** [getServices](arkts-connectivity-ble-gattclientdevice-i.md#getservices)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -492,7 +492,7 @@ Unsubscribe characteristic value changed event. On API 10 and above, the permiss
 **Substitutes:** BLECharacteristicChange
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -538,7 +538,7 @@ Unsubscribe client connection state changed event. On API 10 and above, the perm
 **Substitutes:** BLEConnectionStateChange
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -584,7 +584,7 @@ Subscribe characteristic value changed event. On API 10 and above, the permissio
 **Substitutes:** BLECharacteristicChange
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -635,7 +635,7 @@ Subscribe client connection state changed event. On API 10 and above, the permis
 **Substitutes:** BLEConnectionStateChange
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -685,7 +685,7 @@ Reads the characteristic of a BLE peripheral device. On API 10 and above, the pe
 **Substitutes:** [readCharacteristicValue](arkts-connectivity-ble-gattclientdevice-i.md#readcharacteristicvalue)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -760,7 +760,7 @@ Reads the characteristic of a BLE peripheral device. On API 10 and above, the pe
 **Substitutes:** [readCharacteristicValue](arkts-connectivity-ble-gattclientdevice-i.md#readcharacteristicvalue)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -831,7 +831,7 @@ Reads the descriptor of a BLE peripheral device. On API 10 and above, the permis
 **Substitutes:** [readDescriptorValue](arkts-connectivity-ble-gattclientdevice-i.md#readdescriptorvalue)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -898,7 +898,7 @@ Reads the descriptor of a BLE peripheral device. On API 10 and above, the permis
 **Substitutes:** [readDescriptorValue](arkts-connectivity-ble-gattclientdevice-i.md#readdescriptorvalue)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -962,7 +962,7 @@ Set the mtu size of a BLE peripheral device. On API 10 and above, the permission
 **Substitutes:** [setBLEMtuSize](arkts-connectivity-ble-gattclientdevice-i.md#setblemtusize)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1010,7 +1010,7 @@ Enables or disables notification of a characteristic when value changed. On API 
 **Substitutes:** [setCharacteristicChangeNotification](arkts-connectivity-ble-gattclientdevice-i.md#setcharacteristicchangenotification)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1075,7 +1075,7 @@ Writes the characteristic of a BLE peripheral device. On API 10 and above, the p
 **Substitutes:** [writeCharacteristicValue](arkts-connectivity-ble-gattclientdevice-i.md#writecharacteristicvalue)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -1139,7 +1139,7 @@ Writes the descriptor of a BLE peripheral device. On API 10 and above, the permi
 **Substitutes:** [writeDescriptorValue](arkts-connectivity-ble-gattclientdevice-i.md#writedescriptorvalue)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

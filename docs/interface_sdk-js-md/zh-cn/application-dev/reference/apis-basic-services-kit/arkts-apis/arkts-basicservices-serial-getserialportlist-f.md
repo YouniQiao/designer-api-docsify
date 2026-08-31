@@ -32,3 +32,19 @@ function getSerialPortList(): Promise<SerialPort[]>
 | --- | --- |
 | [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
 | [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+
+**示例**
+
+```TypeScript
+// BusinessError需从@kit.BasicServicesKit导入
+// 获取串口设备列表
+serial.getSerialPortList().then((portList: serial.SerialPort[]) => {
+  console.info(`getSerialPortList success, length: ${portList.length}`);
+  if (portList.length > 0) {
+    let portInfo: serial.SerialPortInfo = portList[0].portInfo;
+    console.info(`portName: ${portInfo.portName}`);
+  }
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get serial port list. Code: ${error.code}, message: ${error.message}`);
+});
+```

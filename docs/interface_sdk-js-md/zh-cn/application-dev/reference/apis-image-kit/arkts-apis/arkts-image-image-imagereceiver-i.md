@@ -596,6 +596,34 @@ setMemoryName(name: string): void
 | --- | --- |
 | [7900201](../errorcode-image.md#7900201-无效参数) | 参数无效。可能原因：&lt;ol&gt;&lt;li&gt;name为空。&lt;/li&gt; &lt;li&gt;过滤后name中无可视字符。&lt;/li&gt; &lt;li&gt;name的长度超过256字节。&lt;/li&gt; &lt;li&gt;请确保name参数包含可见ASCII字符。&lt;/li&gt;&lt;/ol&gt; |
 
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function setMemoryNameSync(receiver: image.ImageReceiver) {
+  try {
+    // 建议在注册imageArrival回调并读取图片前设置内存标识符。
+    receiver.setMemoryName('ImageReceiverNameTest');
+    console.info('Succeeded in setting memory name.');
+  } catch (e) {
+    const err = e as BusinessError;
+    console.error(`Failed to set memory name. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+
+  receiver.on('imageArrival', () => {
+    receiver.readNextImage().then((nextImage: image.Image) => {
+      console.info('Succeeded in reading the next Image.');
+      // 处理图片数据。
+      nextImage.release();
+    }).catch((error: BusinessError) => {
+      console.error(`Failed to read the next Image. Code: ${error.code}, message: ${error.message}`);
+    });
+  });
+}
+```
+
 ## capacity
 
 ```TypeScript

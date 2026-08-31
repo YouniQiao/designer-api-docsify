@@ -65,7 +65,7 @@ struct WebComponent {
   
   build() {
     Column() {
-      AtomicServiceWeb({ src: $rawfile("index.html"), controller: this.controller })
+      AtomicServiceWeb({ src: $rawfile('index.html'), controller: this.controller })
     }
   }
 }
@@ -108,7 +108,7 @@ struct WebComponent {
 
   build() {
     NavDestination() {
-      AtomicServiceWeb({ src: $rawfile("index.html"), controller: this.controller, navPathStack: this.navPathStack })
+      AtomicServiceWeb({ src: $rawfile('index.html'), controller: this.controller, navPathStack: this.navPathStack })
     }
     .onReady((context: NavDestinationContext) => {
       this.navPathStack = context.pathStack;
@@ -131,7 +131,7 @@ struct WebComponent {
   build() {
     Column() {
       AtomicServiceWeb({
-        src: $rawfile("index.html"),
+        src: $rawfile('index.html'),
         controller: this.controller,
         // Called when the user clicks Send Message and then Back on an HTML5 page.
         onMessage: (event: OnMessageEvent) => {
@@ -263,7 +263,7 @@ struct WebComponent {
   @State forceDarkAccess: boolean = true;
   @State mixedMode: MixedMode = MixedMode.None;
   @State controller: AtomicServiceWebController = new AtomicServiceWebController();
-  @State num: number = 1;
+  @State count: number = 1;
 
   build() {
     Column() {
@@ -277,16 +277,20 @@ struct WebComponent {
         console.info(`AtomicServiceWebLog accessStep = ${this.controller.accessStep(1)}`);
       })
       Button('forward').onClick(() => {
-        console.info(`AtomicServiceWebLog forward = ${this.controller.forward()}`);
+        this.controller.forward();
+        console.info(`AtomicServiceWebLog forward`);
       })
       Button('backward').onClick(() => {
-        console.info(`AtomicServiceWebLog backward = ${this.controller.backward()}`);
+        this.controller.backward();
+        console.info(`AtomicServiceWebLog backward`);
       })
       Button('refresh').onClick(() => {
-        console.info(`AtomicServiceWebLog refresh = ${this.controller.refresh()}`);
+        this.controller.refresh();
+        console.info(`AtomicServiceWebLog refresh`);
       })
       Button('loadUrl').onClick(() => {
-        console.info(`AtomicServiceWebLog loadUrl = ${this.controller.loadUrl('https://www.baidu.com/')}`);
+        this.controller.loadUrl('https://www.baidu.com/');
+        console.info(`AtomicServiceWebLog loadUrl`);
       })
       Button('Dark Mode').onClick(() => {
         this.forceDarkAccess = !this.forceDarkAccess;
@@ -297,7 +301,7 @@ struct WebComponent {
       Button('Click').onClick(() => {
         console.info(`AtomicServiceWebLog getUserAgent = ${this.controller.getUserAgent()}`);
         console.info(`AtomicServiceWebLog getCustomUserAgent = ${this.controller.getCustomUserAgent()}`);
-        this.controller.setCustomUserAgent('test' + this.num++);
+        this.controller.setCustomUserAgent('test' + this.count++);
 
         console.info(`AtomicServiceWebLog getUserAgent after set = ${this.controller.getUserAgent()}`);
         console.info(`AtomicServiceWebLog getCustomUserAgent after set = ${this.controller.getCustomUserAgent()}`);
@@ -309,36 +313,36 @@ struct WebComponent {
         forceDarkAccess: this.forceDarkAccess,
         controller: this.controller,
         onControllerAttached: () => {
-          console.info("AtomicServiceWebLog onControllerAttached call back success");
+          console.info('AtomicServiceWebLog onControllerAttached call back success');
         },
         onLoadIntercept: (event: OnLoadInterceptEvent) => {
-          console.info("AtomicServiceWebLog onLoadIntercept call back success " + JSON.stringify({
+          console.info('AtomicServiceWebLog onLoadIntercept call back success ' + JSON.stringify({
             getRequestUrl: event.data.getRequestUrl(),
             getRequestMethod: event.data.getRequestMethod(),
             getRequestHeader: event.data.getRequestHeader(),
             isRequestGesture: event.data.isRequestGesture(),
             isMainFrame: event.data.isMainFrame(),
             isRedirect: event.data.isRedirect(),
-          }))
+          }));
           return false;
         },
         onProgressChange: (event: OnProgressChangeEvent) => {
-          console.info("AtomicServiceWebLog onProgressChange call back success " + JSON.stringify(event));
+          console.info('AtomicServiceWebLog onProgressChange call back success ' + JSON.stringify(event));
         },
         onMessage: (event: OnMessageEvent) => {
-          console.info("onMessage call back success " + JSON.stringify(event));
+          console.info('AtomicServiceWebLog onMessage call back success ' + JSON.stringify(event));
         },
         onPageBegin: (event: OnPageBeginEvent) => {
-          console.info("onPageBegin call back success " + JSON.stringify(event));
+          console.info('AtomicServiceWebLog onPageBegin call back success ' + JSON.stringify(event));
         },
         onPageEnd: (event: OnPageEndEvent) => {
-          console.info("onPageEnd call back success " + JSON.stringify(event));
+          console.info('AtomicServiceWebLog onPageEnd call back success ' + JSON.stringify(event));
         },
         onHttpErrorReceive: (event: OnHttpErrorReceiveEvent) => {
-          console.info("onHttpErrorReceive call back success " + JSON.stringify(event));
+          console.info('AtomicServiceWebLog onHttpErrorReceive call back success ' + JSON.stringify(event));
         },
         onErrorReceive: (event: OnErrorReceiveEvent) => {
-          console.info("onErrorReceive call back success " + JSON.stringify(event));
+          console.info('AtomicServiceWebLog onErrorReceive call back success ' + JSON.stringify(event));
         }
       })
     }
@@ -349,6 +353,7 @@ struct WebComponent {
 This example shows how to set nested scrolling.
 
 ```TypeScript
+// xxx.ets
 import { AtomicServiceWeb, AtomicServiceWebController } from '@kit.ArkUI';
 
 @Entry
@@ -364,9 +369,9 @@ struct AtomicServiceNestedScroll {
   build() {
     Scroll() {
       Column() {
-        Text("Nested AsWeb - Header")
-          .height("15%")
-          .width("100%")
+        Text('Nested AsWeb - Header')
+          .height('15%')
+          .width('100%')
           .fontSize(30)
           .backgroundColor(Color.Yellow)
         Button(this.mode)
@@ -391,9 +396,9 @@ struct AtomicServiceNestedScroll {
           controller: this.controller,
           nestedScroll: this.nestedScroll
         })
-        Text("Nested Web - Footer")
-          .height("15%")
-          .width("100%")
+        Text('Nested AsWeb - Footer')
+          .height('15%')
+          .width('100%')
           .fontSize(30)
           .backgroundColor(Color.Yellow)
       }

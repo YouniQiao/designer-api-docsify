@@ -14,6 +14,70 @@ Mask效果类，作为Filter以及VisualEffect的输入使用。不同类型的M
 import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
+## createBinocularMask
+
+```TypeScript
+static createBinocularMask(radiusX: number, radiusY: number, gap: number, softness: number): Mask
+```
+
+创建一个双目蒙版。生成一个左右对称的双椭圆弧形蒙版形状，与 maskDispersion 滤镜配合使用，用于控制色散效果的作用区域和方向。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| radiusX | number | 是 | 双目椭圆的半长轴。取值范围为 [0, 1.0]；超出范围的值将在内部被截断。 |
+| radiusY | number | 是 | 双目椭圆的半短轴。取值范围为 [0, 1.0]；超出范围的值将在内部被截断。 |
+| gap | number | 是 | 每个椭圆中心相对于原点的水平偏移。取值范围为 [0, 1.0]；超出范围的值将在内部被截断。 |
+| softness | number | 是 | 双目蒙版形状的边缘柔和度。取值范围为 [0, 1.0]；超出范围的值将在内部被截断。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 带有双目蒙版效果的 Mask 实例。 |
+
+## createFractalGlassMask
+
+```TypeScript
+static createFractalGlassMask(glassNum: number, glassStrength: number, glassSoftness: number,
+      isSymmetric: boolean, refractMask?: image.PixelMap): Mask
+```
+
+创建一个分形玻璃蒙版。它通过分形条纹对输入纹理进行周期性水平位移采样，产生类似玻璃折射的扭曲效果。扭曲效果关于图像垂直轴对称。配合 displacementDistort 使用，可产生光栅折射的视觉效果。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| glassNum | number | 是 | 分形玻璃条纹的数量。取值范围为 [0, 100]；超出范围的值将在内部被截断。 |
+| glassStrength | number | 是 | 分形玻璃的扭曲强度。取值范围为 [0, 10]；超出范围的值将在内部被截断。 |
+| glassSoftness | number | 是 | 分形玻璃条纹的边缘柔和度。取值范围为 [0, 0.01]；超出范围的值将在内部被截断。 |
+| isSymmetric | boolean | 是 | 是否启用对称扭曲。「对称」指关于图像的垂直轴进行对称。 |
+| refractMask | image.PixelMap | 否 | 由 image 模块创建的 PixelMap 实例。可选参数，用于控制分形效果的有效区域。如果提供该参数，glassNum 不再表示条纹数量；glassNum 和 glassStrength 共同决定折射强度。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 带有分形玻璃蒙版效果的 Mask 实例。 |
+
 ## createPixelMapMask
 
 ```TypeScript
@@ -313,6 +377,36 @@ static createRippleMask(center: common2D.Point, radius: number, width: number, o
 let mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 1.0}, 0.5, 0.3, 0.0);
 ```
 
+## createSweepRefractionMask
+
+```TypeScript
+static createSweepRefractionMask(param: SweepRefractionParam,
+      options?: SweepRefractionMaskOptions): Mask
+```
+
+创建一个模拟棱镜色散效果的扫光折射遮罩 Mask 实例。该遮罩会在组件上生成一条带有颜色分离效果的扫光光带。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| param | [SweepRefractionParam](arkts-arkgraphics2d-uieffect-sweeprefractionparam-i-sys.md) | 是 | 扫光折射遮罩的必选参数，包括mask半径、棱镜边缘厚度、折射强度、波纹宽度、扫光偏移和色散偏移. |
+| options | [SweepRefractionMaskOptions](arkts-arkgraphics2d-uieffect-sweeprefractionmaskoptions-i-sys.md) | 否 | 扫光折射遮罩的可选参数，包括棱镜形状、圆角半径、棱镜尺寸和扫光中心。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回带有扫光折射效果的 Mask。 |
+
 ## createUseEffectMask
 
 ```TypeScript
@@ -402,6 +496,34 @@ struct Index {
   }
 }
 ```
+
+## createWarpedRingMask
+
+```TypeScript
+static createWarpedRingMask(ringParam: WarpedRingParam): Mask
+```
+
+创建一个表示扭曲光环的 Mask 实例。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| ringParam | [WarpedRingParam](arkts-arkgraphics2d-uieffect-warpedringparam-i-sys.md) | 是 | 配置扭曲光环的形状。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回带有扭曲光环蒙版效果的 Mask。 |
 
 ## createWaveGradientMask
 

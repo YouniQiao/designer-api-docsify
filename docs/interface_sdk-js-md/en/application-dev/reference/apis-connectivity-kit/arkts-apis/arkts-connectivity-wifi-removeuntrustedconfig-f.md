@@ -124,7 +124,7 @@ try {
       domains: []
     }
   }
-  wifi.removeUntrustedConfig(config,(error,result) => {
+  wifi.removeUntrustedConfig(config, (error, result) => {
   console.info("result:" + JSON.stringify(result));
   });  
 }catch(error){

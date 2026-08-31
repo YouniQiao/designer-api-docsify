@@ -66,7 +66,7 @@ audioPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.Medi
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused状态后才能调用。
   avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
@@ -133,7 +133,7 @@ audioPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused状态后才能调用。
   avPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {

@@ -16,7 +16,7 @@ If the DSA algorithm is used for signature verification and the digest algorithm
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -38,7 +38,7 @@ Obtains signature verification specifications. Currently, only RSA is supported.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -89,7 +89,7 @@ Initializes the **Verify** object using a public key. This API uses an asynchron
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -122,7 +122,7 @@ Initializes the **Verify** object using a public key. This API uses a promise to
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -356,7 +356,7 @@ The parameters for signature verification must be the same as those for signing.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -533,7 +533,7 @@ This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptofr
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -588,7 +588,7 @@ This API can be called only after the [Verify](arkts-cryptoarchitecture-cryptofr
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -680,7 +680,7 @@ Verifies the message, including the update data. This API uses an asynchronous c
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -714,7 +714,7 @@ Verifies the signature of the data. This API uses an asynchronous callback to re
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -748,7 +748,7 @@ Verifies the message, including the update data. This API uses a promise to retu
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -787,7 +787,7 @@ Verifies the signature of the data. This API uses a promise to return the result
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -1089,4 +1089,4 @@ Indicates the algorithm name of the Verify instance.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework

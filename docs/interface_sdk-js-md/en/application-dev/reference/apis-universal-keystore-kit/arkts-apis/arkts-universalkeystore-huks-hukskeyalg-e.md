@@ -20,7 +20,7 @@ RSA.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ALG_ECC
 
@@ -36,7 +36,7 @@ ECC.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ALG_DSA
 
@@ -52,7 +52,7 @@ DSA<!--RP5--><!--RP5End-->.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ALG_AES
 
@@ -82,7 +82,7 @@ HMAC.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ALG_HKDF
 
@@ -98,7 +98,7 @@ HKDF.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ALG_PBKDF2
 
@@ -114,7 +114,7 @@ PBKDF2.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ALG_ECDH
 
@@ -130,7 +130,7 @@ ECDH.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ALG_X25519
 
@@ -146,7 +146,7 @@ X25519.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ALG_ED25519
 
@@ -162,7 +162,7 @@ Ed25519.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ALG_DH
 
@@ -178,7 +178,7 @@ DH.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ALG_SM2
 
@@ -194,7 +194,7 @@ SM2.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ALG_SM3
 
@@ -210,7 +210,7 @@ SM3
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ALG_SM4
 
@@ -226,7 +226,7 @@ SM4.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_ALG_DES
 

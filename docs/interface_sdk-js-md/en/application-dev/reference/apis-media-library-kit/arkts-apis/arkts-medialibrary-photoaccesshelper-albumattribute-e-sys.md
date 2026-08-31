@@ -71,3 +71,19 @@ The album friend_id operation attribute.
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **System API:** This is a system API.
+
+## CONTACT_INFO_ATTR
+
+```TypeScript
+CONTACT_INFO_ATTR = 'contact_info'
+```
+
+The album contact_info operation attribute.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.

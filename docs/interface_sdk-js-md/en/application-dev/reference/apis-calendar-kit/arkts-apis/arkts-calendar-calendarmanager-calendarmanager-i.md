@@ -23,8 +23,8 @@ Creates a Calendar object based on the calendar account information. This API us
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.WRITE_CALENDAR
+- API version 21 and later: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.WRITE_CALENDAR
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -81,8 +81,8 @@ Creates a Calendar object based on the calendar account information. This API us
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.WRITE_CALENDAR
+- API version 21 and later: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.WRITE_CALENDAR
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -139,8 +139,8 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.WRITE_CALENDAR
+- API version 21 and later: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.WRITE_CALENDAR
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -208,8 +208,8 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.WRITE_CALENDAR
+- API version 21 and later: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.WRITE_CALENDAR
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -322,8 +322,8 @@ Obtains the created and default Calendar objects of the current application. Thi
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.READ_CALENDAR
+- API version 21 and later: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.READ_CALENDAR
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -374,8 +374,8 @@ Obtains the created and default Calendar objects of the current application. Thi
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.READ_CALENDAR
+- API version 21 and later: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.READ_CALENDAR
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -426,8 +426,8 @@ Obtains the default or specified Calendar object. This API uses a promise to ret
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.READ_CALENDAR
+- API version 21 and later: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.READ_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -482,8 +482,8 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.READ_CALENDAR
+- API version 21 and later: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.READ_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -545,8 +545,8 @@ Obtains the default Calendar object, which is created when the data storage runs
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.READ_CALENDAR
+- API version 21 and later: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.READ_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

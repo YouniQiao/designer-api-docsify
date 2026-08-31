@@ -43,6 +43,10 @@ getCustomErrorCode(): number
 | --- | --- |
 | number | 返回加载资源的自定义错误码。 |
 
+**示例**
+
+完整示例代码参考[onErrorReceive事件](./arkts-basic-components-web-events.md#onerrorreceive)。
+
 ## getErrorCode
 
 ```TypeScript

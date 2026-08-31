@@ -43,6 +43,19 @@ close(): Promise<void>
 | [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
+**示例**
+
+```TypeScript
+// BusinessError需从@kit.BasicServicesKit导入
+// port为串口对象，需要先通过serial.getSerialPortList()获取
+// 关闭串口
+port.close().then(() => {
+  console.info('close success');
+}).catch((error: BusinessError) => {
+  console.error(`Failed to close serial port. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 ## drain
 
 ```TypeScript
@@ -80,6 +93,19 @@ drain(): Promise<void>
 | [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
+**示例**
+
+```TypeScript
+// BusinessError需从@kit.BasicServicesKit导入
+// port为串口对象，需要先通过serial.getSerialPortList()获取
+// 等待所有写请求完成
+port.drain().then(() => {
+  console.info('drain success');
+}).catch((error: BusinessError) => {
+  console.error(`Failed to drain serial port. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 ## flush
 
 ```TypeScript
@@ -113,6 +139,19 @@ flush(): Promise<void>
 | [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
 | [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+
+**示例**
+
+```TypeScript
+// BusinessError需从@kit.BasicServicesKit导入
+// port为串口对象，需要先通过serial.getSerialPortList()获取
+// 刷新串口缓冲区
+port.flush().then(() => {
+  console.info('flush success');
+}).catch((error: BusinessError) => {
+  console.error(`Failed to flush serial port. Code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## getCts
 
@@ -149,6 +188,19 @@ getCts(): Promise<boolean>
 | [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
+**示例**
+
+```TypeScript
+// BusinessError需从@kit.BasicServicesKit导入
+// port为串口对象，需要先通过serial.getSerialPortList()获取
+// 获取CTS信号状态
+port.getCts().then((cts: boolean) => {
+  console.info('getCts success, cts: ' + cts);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get CTS. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 ## getDsr
 
 ```TypeScript
@@ -176,6 +228,19 @@ getDsr(): Promise<boolean>
 | [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
 | [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+
+**示例**
+
+```TypeScript
+// BusinessError需从@kit.BasicServicesKit导入
+// port为串口对象，需要先通过serial.getSerialPortList()获取
+// 获取DSR信号状态
+port.getDsr().then((dsr: boolean) => {
+  console.info('getDsr success, dsr: ' + dsr);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to get DSR. Code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## offDataRead
 
@@ -207,6 +272,20 @@ offDataRead(callback?: Callback<Uint8Array>): void
 | --- | --- |
 | [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+
+**示例**
+
+```TypeScript
+// port为串口对象，需要先通过serial.getSerialPortList()获取
+// 取消监听串口数据接收
+port.offDataRead();
+
+// 取消指定的监听回调
+let callback = (data: Uint8Array) => {
+  console.info(`received data length: ${data.length}`);
+};
+port.offDataRead(callback);
+```
 
 ## offDisconnect
 
@@ -242,6 +321,20 @@ offDisconnect(callback?: Callback<void>): void
 | --- | --- |
 | [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+
+**示例**
+
+```TypeScript
+// port为串口对象，需要先通过serial.getSerialPortList()获取
+// 取消监听串口断开事件
+port.offDisconnect();
+
+// 取消指定的监听回调
+let disconnectedCallback = () => {
+  console.info('serial port disconnected');
+};
+port.offDisconnect(disconnectedCallback);
+```
 
 ## onDataRead
 
@@ -279,6 +372,16 @@ onDataRead(callback: Callback<Uint8Array>): void
 | [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
+**示例**
+
+```TypeScript
+// port为串口对象，需要先通过serial.getSerialPortList()获取
+// 监听串口数据接收
+port.onDataRead((data: Uint8Array) => {
+  console.info(`onDataRead, length: ${data.length}`);
+});
+```
+
 ## onDisconnect
 
 ```TypeScript
@@ -313,6 +416,16 @@ onDisconnect(callback: Callback<void>): void
 | --- | --- |
 | [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+
+**示例**
+
+```TypeScript
+// port为串口对象，需要先通过serial.getSerialPortList()获取
+// 监听串口断开事件
+port.onDisconnect(() => {
+  console.info('serial port disconnected');
+});
+```
 
 ## open
 
@@ -354,6 +467,32 @@ open(config?: SerialConfigs): Promise<void>
 | [35700004](../errorcode-busmanager-serial.md#35700004-端口已被占用) | Port already in use. |
 | [35700007](../errorcode-busmanager-serial.md#35700007-需要用户授权) | User authorization required. |
 
+**示例**
+
+```TypeScript
+// BusinessError需从@kit.BasicServicesKit导入
+// 获取串口列表并打开第一个串口
+serial.getSerialPortList().then(async (portList: serial.SerialPort[]) => {
+  if (portList.length === 0) {
+    console.error('portList is empty');
+    return;
+  }
+  let port: serial.SerialPort = portList[0];
+  let config: serial.SerialConfigs = {
+    baudRate: 115200,
+    dataBits: serial.DataBits.EIGHT,
+    stopBits: serial.StopBits.ONE,
+    parity: serial.Parity.NONE
+  };
+  await port.open(config);
+  console.info('open success');
+  // 串口使用完毕后需调用port.close()释放资源
+  await port.close();
+}).catch((error: BusinessError) => {
+  console.error(`Failed to open serial port. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 ## sendBrk
 
 ```TypeScript
@@ -381,6 +520,19 @@ sendBrk(): Promise<void>
 | [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
 | [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+
+**示例**
+
+```TypeScript
+// BusinessError需从@kit.BasicServicesKit导入
+// port为串口对象，需要先通过serial.getSerialPortList()获取
+// 发送BRK信号
+port.sendBrk().then(() => {
+  console.info('sendBrk success');
+}).catch((error: BusinessError) => {
+  console.error(`Failed to send BRK. Code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## setDtr
 
@@ -415,6 +567,19 @@ setDtr(enable: boolean): Promise<void>
 | [35700001](../errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
 | [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+
+**示例**
+
+```TypeScript
+// BusinessError需从@kit.BasicServicesKit导入
+// port为串口对象，需要先通过serial.getSerialPortList()获取
+// 设置DTR信号
+port.setDtr(true).then(() => {
+  console.info('setDtr success');
+}).catch((error: BusinessError) => {
+  console.error(`Failed to set DTR. Code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## setRts
 
@@ -456,6 +621,19 @@ setRts(enable: boolean): Promise<void>
 | [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
+**示例**
+
+```TypeScript
+// BusinessError需从@kit.BasicServicesKit导入
+// port为串口对象，需要先通过serial.getSerialPortList()获取
+// 设置RTS信号
+port.setRts(true).then(() => {
+  console.info('setRts success');
+}).catch((error: BusinessError) => {
+  console.error(`Failed to set RTS. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
 ## write
 
 ```TypeScript
@@ -496,6 +674,21 @@ write(data: Uint8Array, timeout?: number): Promise<number>
 | [35700003](../errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 | [35700006](../errorcode-busmanager-serial.md#35700006-传输超时) | Transmission timeout. |
+
+**示例**
+
+```TypeScript
+// buffer需从@kit.ArkTS导入
+// BusinessError需从@kit.BasicServicesKit导入
+// port为串口对象，需要先通过serial.getSerialPortList()获取
+// 向串口写入数据
+let writeData: Uint8Array = new Uint8Array(buffer.from('Hello World', 'utf-8').buffer);
+port.write(writeData, 2000).then((size: number) => {
+  console.info('write success, size: ' + size);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to write to serial port. Code: ${error.code}, message: ${error.message}`);
+});
+```
 
 ## portInfo
 

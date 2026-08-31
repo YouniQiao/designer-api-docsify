@@ -17,7 +17,7 @@ Obtains the total size (in bytes) of the built-in storage. This API uses an asyn
 **Since:** 15
 
 **Required permissions:** 
-- API version 9 - 14: ohos.permission.STORAGE_MANAGER
+- API versions 9 to 14: ohos.permission.STORAGE_MANAGER
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -63,7 +63,7 @@ Obtains the total size (in bytes) of the built-in storage. This API uses a promi
 **Since:** 15
 
 **Required permissions:** 
-- API version 9 - 14: ohos.permission.STORAGE_MANAGER
+- API versions 9 to 14: ohos.permission.STORAGE_MANAGER
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

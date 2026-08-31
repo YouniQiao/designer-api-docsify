@@ -14,6 +14,70 @@ Mask effect class, used as input for Filter and VisualEffect. Different types of
 import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
+## createBinocularMask
+
+```TypeScript
+static createBinocularMask(radiusX: number, radiusY: number, gap: number, softness: number): Mask
+```
+
+Creates a binocular mask. Generates a left‑right symmetric dual‑elliptical‑arc mask shape, which is used together with the maskDispersion filter to control the area and direction of the dispersion effect.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| radiusX | number | Yes | Semi‑major axis of the binocular ellipses. Value range: [0, 1.0]; out‑of‑range values will be clamped internally. |
+| radiusY | number | Yes | Semi‑minor axis of the binocular ellipses. Value range: [0, 1.0]; out‑of‑range values will be clamped internally. |
+| gap | number | Yes | Horizontal offset of each ellipse center from origin. Value range: [0, 1.0]; out‑of‑range values will be clamped internally. |
+| softness | number | Yes | Edge softness of the binocular mask shape. Value range: [0, 1.0]; out‑of‑range values will be clamped internally. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Mask instance carrying the binocular mask effect. |
+
+## createFractalGlassMask
+
+```TypeScript
+static createFractalGlassMask(glassNum: number, glassStrength: number, glassSoftness: number,
+      isSymmetric: boolean, refractMask?: image.PixelMap): Mask
+```
+
+Creates a fractal glass mask. It performs periodic horizontal displacement sampling on the input texture via fractal stripes to produce a glass‑refraction‑like distortion effect. Distortion can be made symmetric around the image vertical axis. Combined with displacementDistort, it produces a grating refraction visual effect.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| glassNum | number | Yes | Number of fractal glass stripes. Value range: [0, 100]; out‑of‑range values will be clamped internally. |
+| glassStrength | number | Yes | Distortion strength of the fractal glass. Value range: [0, 10]; out‑of‑range values will be clamped internally. |
+| glassSoftness | number | Yes | Edge softness of fractal glass stripes. Value range: [0, 0.01]; out‑of‑range values will be clamped internally. |
+| isSymmetric | boolean | Yes | Whether to enable symmetric distortion."Symmetric" refers to centering around the vertical axis of the image. |
+| refractMask | image.PixelMap | No | PixelMap instance created by the image module. Optional parameter to control the effective region of the fractal effect. If provided, glassNum no longer denotes stripe quantity. GlassNum and glassStrength jointly determine refraction intensity. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Mask instance carrying the fractal‑glass mask effect. |
+
 ## createPixelMapMask
 
 ```TypeScript
@@ -313,6 +377,35 @@ Creates a wave ring mask Mask instance by inputting the center position, radius,
 let mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 1.0}, 0.5, 0.3, 0.0);
 ```
 
+## createSweepRefractionMask
+
+```TypeScript
+static createSweepRefractionMask(param: SweepRefractionParam, options?: SweepRefractionMaskOptions): Mask
+```
+
+Creates a sweep refraction mask Mask instance that simulates a prism-like chromatic dispersion effect. The mask generates a sweeping light band with color separation across the component.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| param | [SweepRefractionParam](arkts-arkgraphics2d-uieffect-sweeprefractionparam-i-sys.md) | Yes | Required parameters including mask radius, edge thickness, refraction amount, ripple width, sweep offset, and chroma delta. |
+| options | [SweepRefractionMaskOptions](arkts-arkgraphics2d-uieffect-sweeprefractionmaskoptions-i-sys.md) | No | Optional parameters for the sweep refraction mask, including prism shape, corner radius, prism dimensions, and sweep center. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Returns a Mask with the sweep refraction effect. |
+
 ## createUseEffectMask
 
 ```TypeScript
@@ -402,6 +495,34 @@ struct Index {
   }
 }
 ```
+
+## createWarpedRingMask
+
+```TypeScript
+static createWarpedRingMask(ringParam: WarpedRingParam): Mask
+```
+
+Creates a Mask instance representing a warped ring.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| ringParam | [WarpedRingParam](arkts-arkgraphics2d-uieffect-warpedringparam-i-sys.md) | Yes | Configures the warped ring's shape. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Returns a Mask with the warped ring mask effect. |
 
 ## createWaveGradientMask
 

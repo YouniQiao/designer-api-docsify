@@ -16,8 +16,8 @@ Subscribe the event reported when a remote Bluetooth device is discovered. On AP
 **Since:** 10
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
-- API version 10 - 24: ohos.permission.ACCESS_BLUETOOTH
+- API version 26.0.0 and later: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
+- API versions 10 to 24: ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,9 +67,9 @@ Subscribe the event reported when a remote Bluetooth device is discovered. On AP
 **Since:** 18
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
-- API version 18 - 24: ohos.permission.ACCESS_BLUETOOTH
-- API version 12 - 17: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC
+- API version 26.0.0 and later: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
+- API versions 18 to 24: ohos.permission.ACCESS_BLUETOOTH
+- API versions 12 to 17: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -117,8 +117,8 @@ Subscribe the event reported when a remote Bluetooth device is bonded. On API 26
 **Since:** 10
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
-- API version 10 - 24: ohos.permission.ACCESS_BLUETOOTH
+- API version 26.0.0 and later: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
+- API versions 10 to 24: ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,8 +166,8 @@ Subscribe the event of a pairing request from a remote Bluetooth device. On API 
 **Since:** 10
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
-- API version 10 - 24: ohos.permission.ACCESS_BLUETOOTH
+- API version 26.0.0 and later: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
+- API versions 10 to 24: ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 

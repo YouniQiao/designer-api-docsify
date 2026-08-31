@@ -17,7 +17,7 @@ Unsubscribes from a notification. This API uses an asynchronous callback to retu
 **Since:** 9
 
 **Required permissions:** 
-- API version 9 - 19: ohos.permission.NOTIFICATION_CONTROLLER
+- API versions 9 to 19: ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -74,7 +74,7 @@ Unsubscribes from a notification. This API uses a promise to return the result.
 **Since:** 9
 
 **Required permissions:** 
-- API version 9 - 19: ohos.permission.NOTIFICATION_CONTROLLER
+- API versions 9 to 19: ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
 

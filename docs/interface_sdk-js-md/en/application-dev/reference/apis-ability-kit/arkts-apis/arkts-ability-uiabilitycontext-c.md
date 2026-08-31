@@ -2475,8 +2475,8 @@ Obtains a [Caller](arkts-ability-app-ability-uiability-caller-i.md) object for c
 **Since:** 9
 
 **Required permissions:** 
-- API version 11+: ohos.permission.DISTRIBUTED_DATASYNC
-- API version 9 - 10: ohos.permission.ABILITY_BACKGROUND_COMMUNICATION
+- API version 11 and later: ohos.permission.DISTRIBUTED_DATASYNC
+- API versions 9 to 10: ohos.permission.ABILITY_BACKGROUND_COMMUNICATION
 
 **Model restriction:** This API can be used only in the stage model.
 

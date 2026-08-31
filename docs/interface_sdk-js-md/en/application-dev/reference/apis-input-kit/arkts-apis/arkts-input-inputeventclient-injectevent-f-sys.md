@@ -16,7 +16,7 @@ Injects keys (including single keys and combination keys).
 **Since:** 8
 
 **Required permissions:** 
-- API version 12+: ohos.permission.INJECT_INPUT_EVENT
+- API version 12 and later: ohos.permission.INJECT_INPUT_EVENT
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 

@@ -405,3 +405,29 @@ struct Index {
   }
 }
 ```
+
+从API版本26.0.0开始，新增systemMaterial属性。
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  build() {
+    Column() {
+      Button('helloWorld')
+        .width(200)
+        .systemMaterial(new uiMaterial.ImmersiveMaterial({
+          style: uiMaterial.ImmersiveStyle.THIN
+        }))
+    }
+    .padding({ top: 50 })
+    .width('100%')
+    .height('100%')
+    // 请开发者替换为实际资源文件
+    .backgroundImage($r("app.media.img"))
+    .backgroundImageSize({ height: '100%' })
+  }
+}
+```

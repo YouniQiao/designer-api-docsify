@@ -6,7 +6,7 @@ Enumerates the types of keys to import. By default, a public key is imported. Th
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_KEY_TYPE_PUBLIC_KEY
 
@@ -22,7 +22,7 @@ Public key
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_KEY_TYPE_PRIVATE_KEY
 
@@ -38,7 +38,7 @@ Private key
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_KEY_TYPE_KEY_PAIR
 
@@ -54,4 +54,4 @@ Public and private key pair
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension

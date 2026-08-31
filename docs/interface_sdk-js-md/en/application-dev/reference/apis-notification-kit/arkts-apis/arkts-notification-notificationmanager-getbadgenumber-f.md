@@ -22,7 +22,7 @@ This API is used to query the badge number displayed on the current application'
 
 **See also:**
 
-setBadgeNumber sets the notification badge number.
+[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) sets the notification badge number.
 
 **Return value:**
 

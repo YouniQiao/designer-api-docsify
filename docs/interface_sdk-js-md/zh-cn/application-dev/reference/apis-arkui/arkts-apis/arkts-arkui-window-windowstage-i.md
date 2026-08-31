@@ -22,7 +22,7 @@ createSubWindow(name: string): Promise<Window>
 
 创建该WindowStage实例下的子窗口，使用Promise异步回调。
 
-子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
+子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#immersive-layout沉浸式布局)。
 
 **起始版本：** 9
 
@@ -89,7 +89,7 @@ createSubWindow(name: string, callback: AsyncCallback<Window>): void
 
 创建该WindowStage实例下的子窗口，使用callback异步回调。
 
-子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
+子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#immersive-layout沉浸式布局)。
 
 **起始版本：** 9
 
@@ -159,9 +159,9 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 
 创建该WindowStage实例下的子窗口，使用Promise异步回调。
 
-非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
+非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#immersive-layout沉浸式布局)。
 
-自由窗口状态下，子窗口参数[decorEnabled](arkts-apis-window-i.md#subwindowoptions11)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口创建后为非沉浸式布局。
+自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-window-subwindowoptions-i.md)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口创建后为非沉浸式布局。
 
 **起始版本：** 11
 
@@ -254,7 +254,7 @@ getMainWindow(): Promise<Window>
 
 获取该WindowStage实例下的主窗口，使用Promise异步回调。
 
-调用该接口前，建议先通过[loadContent](../apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者setUIContent方法完成页面加载。
+调用该接口前，建议先通过[loadContent](arkts-arkui-window-window-i.md#loadcontent)方法或者setUIContent方法完成页面加载。
 
 **起始版本：** 9
 
@@ -317,7 +317,7 @@ getMainWindow(callback: AsyncCallback<Window>): void
 
 获取该WindowStage实例下的主窗口，使用callback异步回调。
 
-调用该接口前，建议先通过[loadContent](../apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者setUIContent方法完成页面加载。
+调用该接口前，建议先通过[loadContent](arkts-arkui-window-window-i.md#loadcontent)方法或者setUIContent方法完成页面加载。
 
 **起始版本：** 9
 

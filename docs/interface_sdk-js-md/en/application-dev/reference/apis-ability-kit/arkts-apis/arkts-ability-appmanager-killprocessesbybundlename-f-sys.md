@@ -17,8 +17,8 @@ Kills a process by bundle name. This API uses a promise to return the result.
 **Since:** 9
 
 **Required permissions:** 
-- API version 14+: ohos.permission.KILL_APP_PROCESSES or ohos.permission.CLEAN_BACKGROUND_PROCESSES
-- API version 9 - 13: ohos.permission.CLEAN_BACKGROUND_PROCESSES
+- API version 14 and later: ohos.permission.KILL_APP_PROCESSES or ohos.permission.CLEAN_BACKGROUND_PROCESSES
+- API versions 9 to 13: ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -78,8 +78,8 @@ Kills a process by bundle name. This API uses an asynchronous callback to return
 **Since:** 9
 
 **Required permissions:** 
-- API version 14+: ohos.permission.KILL_APP_PROCESSES or ohos.permission.CLEAN_BACKGROUND_PROCESSES
-- API version 9 - 13: ohos.permission.CLEAN_BACKGROUND_PROCESSES
+- API version 14 and later: ohos.permission.KILL_APP_PROCESSES or ohos.permission.CLEAN_BACKGROUND_PROCESSES
+- API versions 9 to 13: ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

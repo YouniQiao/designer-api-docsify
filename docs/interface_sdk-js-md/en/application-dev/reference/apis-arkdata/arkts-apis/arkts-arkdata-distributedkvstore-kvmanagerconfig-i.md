@@ -50,4 +50,4 @@ Since API version 10, the parameter type of context is [BaseContext](../../apis-
 
 **System capability:** 
 - API version 10 and later: SystemCapability.DistributedDataManager.KVStore.Core if swap the area, you should close all the KV store and use the new BaseContext to create the KVManager
-- API version 9 to 23: SystemCapability.DistributedDataManager.KVStore.Core if swap the area, you should close all the KV store and use the new Context to create the KVManager
+- API versions 9 to 23: SystemCapability.DistributedDataManager.KVStore.Core if swap the area, you should close all the KV store and use the new Context to create the KVManager

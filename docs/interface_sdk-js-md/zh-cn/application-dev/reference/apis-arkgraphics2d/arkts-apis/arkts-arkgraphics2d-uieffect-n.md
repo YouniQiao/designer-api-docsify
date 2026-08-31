@@ -60,12 +60,15 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | [HeatDistortionEffectParam](arkts-arkgraphics2d-uieffect-heatdistortioneffectparam-i-sys.md) | 热浪扭曲效果的参数。 |
 | [BlurBubblesRiseEffectParam](arkts-arkgraphics2d-uieffect-blurbubblesriseeffectparam-i-sys.md) | 模糊气泡上升效果的参数。 |
 | [LiquidMaterialEffectParam](arkts-arkgraphics2d-uieffect-liquidmaterialeffectparam-i-sys.md) | 材质效果参数，用于控制材质的折射、反射、扰动和叠加颜色等显示属性。 |
+| [WarpedRingParam](arkts-arkgraphics2d-uieffect-warpedringparam-i-sys.md) | WarpedRingParam 用于指定光环的半径、宽度、变化量、旋转、3D 朝向和噪声演化。 |
 | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | 提亮混合器，用于将提亮效果添加到指定的组件上。在调用BrightnessBlender前，需要先通过createBrightnessBlender创建一个BrightnessBlender实例。 |
 | [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i-sys.md) | 支持HDR的提亮混合器（继承自BrightnessBlender），用于将提亮效果添加到指定的组件上。在调用HdrBrightnessBlender前，需要先通过createHdrBrightnessBlender创建一个HdrBrightnessBlender实例。该混合器参数可参考BrightnessBlender。 |
 | [HdrDarkenBlender](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | 支持HDR的压暗混合器，用于将压暗效果添加到指定的组件上。在调用HdrDarkenBlender前，需要先通过createHdrDarkenBlender创建一个HdrDarkenBlender实例。 |
 | [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md) | ColorfulBrightnessBlenderOptions的参数列表，用于配置彩色提亮压暗效果的各项属性，包括前景压暗权重、提亮压暗强度、亮度差阈值和hdr开关参数。 |
 | [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | 彩色提亮压暗混合器，用于将提亮效果添加到指定的组件上。在调用ColorfulBrightnessBlender前，需要先通过createColorfulBrightnessBlender创建一个ColorfulBrightnessBlender实例。 |
 | [Color](arkts-arkgraphics2d-uieffect-color-i-sys.md) | RGBA格式的颜色描述。 |
+| [SweepRefractionParam](arkts-arkgraphics2d-uieffect-sweeprefractionparam-i-sys.md) | 创建 SweepRefractionMask 的必选参数。 |
+| [SweepRefractionMaskOptions](arkts-arkgraphics2d-uieffect-sweeprefractionmaskoptions-i-sys.md) | 创建 SweepRefractionMask 的可选参数。 |
 <!--DelEnd-->
 
 <!--Del-->
@@ -76,6 +79,7 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | [TileMode](arkts-arkgraphics2d-uieffect-tilemode-e-sys.md) | 像素填充模式枚举。 |
 | [WaterRippleMode](arkts-arkgraphics2d-uieffect-waterripplemode-e-sys.md) | 水波纹场景模式枚举。 |
 | [FlyMode](arkts-arkgraphics2d-uieffect-flymode-e-sys.md) | 飞入飞出形变场景模式枚举。 |
+| [PrismShapeType](arkts-arkgraphics2d-uieffect-prismshapetype-e-sys.md) | 枚举 SweepRefractionMask 的棱镜形状类型。 |
 <!--DelEnd-->
 
 <!--Del-->

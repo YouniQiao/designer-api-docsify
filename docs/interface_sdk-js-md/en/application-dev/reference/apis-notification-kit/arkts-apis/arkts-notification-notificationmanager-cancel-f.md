@@ -24,11 +24,11 @@ Compared with notificationManager.cancel(id, label, callback), which includes th
 
 **See also:**
 
-publish publishes a notification.
+[publish](arkts-notification-notificationmanager-publish-f.md) publishes a notification.
 
-cancelAll cancels all notifications of this application.
+[cancelAll](arkts-notification-notificationmanager-cancelall-f.md) cancels all notifications of this application.
 
-cancelGroup cancels notifications
+[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) cancels notifications
 
 **Parameters:**
 
@@ -82,11 +82,11 @@ Compared with notificationManager.cancel(id, callback), which requires only the 
 
 **See also:**
 
-publish publishes a notification.
+[publish](arkts-notification-notificationmanager-publish-f.md) publishes a notification.
 
-cancelAll cancels all notifications of this application.
+[cancelAll](arkts-notification-notificationmanager-cancelall-f.md) cancels all notifications of this application.
 
-cancelGroup cancels
+[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) cancels
 
 **Parameters:**
 
@@ -139,11 +139,11 @@ After cancellation, the corresponding notification will be removed from the noti
 
 **See also:**
 
-publish publishes a notification.
+[publish](arkts-notification-notificationmanager-publish-f.md) publishes a notification.
 
-cancelAll cancels all notifications of this application.
+[cancelAll](arkts-notification-notificationmanager-cancelall-f.md) cancels all notifications of this application.
 
-cancelGroup cancels notifications
+[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) cancels notifications
 
 **Parameters:**
 

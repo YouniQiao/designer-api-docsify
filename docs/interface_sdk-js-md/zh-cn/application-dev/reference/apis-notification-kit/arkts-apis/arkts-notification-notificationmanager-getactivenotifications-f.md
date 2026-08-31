@@ -22,7 +22,7 @@ function getActiveNotifications(callback: AsyncCallback<Array<NotificationReques
 
 **参见：**
 
-setBadgeNumber 设置角标个数。
+[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) 设置角标个数。
 
 **参数：**
 
@@ -71,7 +71,7 @@ function getActiveNotifications(): Promise<Array<NotificationRequest>>
 
 **参见：**
 
-setBadgeNumber 设置角标个数。
+[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) 设置角标个数。
 
 **返回值：**
 

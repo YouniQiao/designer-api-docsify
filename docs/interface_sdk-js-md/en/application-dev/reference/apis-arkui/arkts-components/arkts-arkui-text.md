@@ -61,8 +61,8 @@ This example showcases various text layouts using the following attributes: [tex
 ```TypeScript
 // xxx.ets
 @Extend(Text)
-function style(TextAlign: TextAlign) {
-  .textAlign(TextAlign)
+function style(textAlign: TextAlign) {
+  .textAlign(textAlign)
   .fontSize(12)
   .border({ width: 1 })
   .padding(10)
@@ -74,7 +74,6 @@ function style(TextAlign: TextAlign) {
 @Component
 struct TextExample1 {
   @State changeTextAlignIndex: number = 0;
-  @State changeDecorationIndex: number = 0;
   @State textAlign: TextAlign[] = [TextAlign.Start, TextAlign.Center, TextAlign.End];
   @State textAlignStr: string[] = ['Start', 'Center', 'End'];
 
@@ -92,7 +91,7 @@ struct TextExample1 {
         .margin(5)
 
       Row() {
-        Button('TextAlign value: ' + this.textAlignStr[this.changeTextAlignIndex]).onClick(() => {
+        Button('TextAlign Value: ' + this.textAlignStr[this.changeTextAlignIndex]).onClick(() => {
           this.changeTextAlignIndex++;
           if (this.changeTextAlignIndex > (this.textAlignStr.length - 1)) {
             this.changeTextAlignIndex = 0;
@@ -122,11 +121,11 @@ struct TextExample1 {
 
       // Set whether half leading is enabled.
       Text('halfLeading').fontSize(9).fontColor(0xCCCCCC)
-      Text("This is the text with the halfLeading set.")
+      Text('This is the text with the halfLeading set.')
         .lineHeight(60)
         .halfLeading(true)
         .style(TextAlign.Start)
-      Text("This is the text without the halfLeading set.")
+      Text('This is the text without the halfLeading set.')
         .lineHeight(60)
         .halfLeading(false)
         .style(TextAlign.Start)
@@ -135,7 +134,7 @@ struct TextExample1 {
 }
 ```
 
-This example showcases various text styles using the following attributes: [decoration](#decoration), [letterSpacing](#letterspacing), [textCase](#textcase), [fontFamily](#fontfamily), [textShadow](#textshadow10) (available since API version 10), fontStyle, [textIndent](#textindent10) (available since API version 10), and [fontWeight](#fontweight12) (available since API version 12, supporting variable font weight setting options).
+This example shows various text styles using the following attributes: [decoration](#decoration), [letterSpacing](#letterspacing), [textCase](#textcase), [fontFamily](#fontfamily), [textShadow](#textshadow10) (available since API version 10), [fontStyle](#fontstyle), [textIndent](#textindent10) (available since API version 10), and [fontWeight](#fontweight12) (available since API version 12, supporting variable font weight setting options).
 
 ```TypeScript
 // xxx.ets
@@ -369,10 +368,10 @@ function style() {
 struct TextExample4 {
   @State text: string =
     'The text component is used to display a piece of textual information.Support universal attributes and universal text attributes.';
-  @State text2: string =
-    "They can be classified as built-in components–those directly provided by the ArkUI framework and custom components – those defined by developers" +
-      "The built-in components include buttons radio buttons progress indicators and text You can set the rendering effect of these components in method chaining mode," +
-      "page components are divided into independent UI units to implement independent creation development and reuse of different units on pages making pages more engineering-oriented.";
+  @State longText: string =
+    'They can be classified as built-in components–those directly provided by the ArkUI framework and custom components – those defined by developers' +
+      'The built-in components include buttons radio buttons progress indicators and text You can set the rendering effect of these components in method chaining mode,' +
+      'page components are divided into independent UI units to implement independent creation development and reuse of different units on pages making pages more engineering-oriented.';
   @State textClip: boolean = false;
   @State wordBreakIndex: number = 0;
   @State wordBreak: WordBreak[] = [WordBreak.NORMAL, WordBreak.BREAK_ALL, WordBreak.BREAK_WORD];
@@ -416,7 +415,7 @@ struct TextExample4 {
 
       Text('lineBreakStrategy').fontSize(9).fontColor(0xCCCCCC)
       // Set the text line breaking rule.
-      Text(this.text2)
+      Text(this.longText)
         .lineBreakStrategy(this.lineBreakStrategy[this.lineBreakStrategyIndex])
         .style()
       Row() {
@@ -460,8 +459,8 @@ struct TextExample5 {
           })
           // onWillCopy is supported since API version 26.0.0.
           .onWillCopy((value: string) => {
-            this.onCopy = value;
-            return false;
+            // Determine whether the copy operation is allowed based on the service logic.
+            return true; // Return true if the copy operation is allowed. Then, onCopy will be triggered.
           })
           .draggable(true)
           .caretColor(Color.Red)
@@ -485,7 +484,7 @@ This example demonstrates text adaptive behavior using the [heightAdaptivePolicy
 ```TypeScript
 // xxx.ets
 @Extend(Text)
-function style(HeightAdaptivePolicy: TextHeightAdaptivePolicy) {
+function style(heightAdaptivePolicy: TextHeightAdaptivePolicy) {
   .width('80%')
   .height(90)
   .borderWidth(1)
@@ -494,7 +493,7 @@ function style(HeightAdaptivePolicy: TextHeightAdaptivePolicy) {
   .maxLines(2)
   .margin(5)
   .textOverflow({ overflow: TextOverflow.Ellipsis })
-  .heightAdaptivePolicy(HeightAdaptivePolicy)
+  .heightAdaptivePolicy(heightAdaptivePolicy)
 }
 
 @Entry
@@ -531,7 +530,7 @@ struct TextExample7 {
   @State phoneNumber: string = '(86) (755) ********';
   @State url: string = 'www.********.com';
   @State email: string = '***@example.com';
-  @State address: string = 'XX (province) XX (city) XX (county) XXXX';
+  @State address: string = 'XX (province) XX (city) XX (district) XXXX';
   @State datetime: string = 'YYYY-MM-DD HH:mm';
   @State enableDataDetector: boolean = true;
   @State types: TextDataDetectorType[] = [];
@@ -557,22 +556,6 @@ struct TextExample7 {
           .borderWidth(1)
           .padding(10)
           .width('100%')
-        Text(
-          'Phone number: ' + this.phoneNumber + '\n' +
-            'Time: ' + this.datetime
-        )
-          .fontSize(16)
-          .copyOption(CopyOptions.LocalDevice)
-          .textAlign(TextAlign.Center)
-          .borderWidth(1)
-          .padding(10)
-          .width('100%')
-        TextInput({ text: 'TextInput content' })
-          .copyOption(CopyOptions.LocalDevice)
-        TextArea({ text: 'TextArea content' })
-          .copyOption(CopyOptions.LocalDevice)
-        Search()
-          .copyOption(CopyOptions.LocalDevice)
       }
       .width('100%')
       // Use TapGesture in parallelGesture to mimic the effect of a bubbling event,
@@ -647,12 +630,12 @@ struct TextExample8 {
       Menu() {
         MenuItemGroup() {
           // Replace $r('app.media.startIcon') with the image resource file you use.
-          MenuItem({ startIcon: $r('app.media.startIcon'), content: "Right Click Menu 1", labelInfo: "" })
+          MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Right Click Menu 1', labelInfo: '' })
             .onClick((event) => {
               this.controller.closeSelectionMenu();
             })
-          MenuItem({ startIcon: $r('app.media.startIcon'), content: "Right Click Menu 2", labelInfo: "" })
-          MenuItem({ startIcon: $r('app.media.startIcon'), content: "Right Click Menu 3", labelInfo: "" })
+          MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Right Click Menu 2', labelInfo: '' })
+          MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Right Click Menu 3', labelInfo: '' })
         }
       }
       .MenuStyles()
@@ -665,12 +648,12 @@ struct TextExample8 {
       Menu() {
         MenuItemGroup() {
           // Replace $r('app.media.startIcon') with the image resource file you use.
-          MenuItem({ startIcon: $r('app.media.startIcon'), content: "Long Press Image Menu 1", labelInfo: "" })
+          MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Long Press Image Menu 1', labelInfo: '' })
             .onClick((event) => {
               this.controller.closeSelectionMenu();
             })
-          MenuItem({ startIcon: $r('app.media.startIcon'), content: "Long Press Image Menu 2", labelInfo: "" })
-          MenuItem({ startIcon: $r('app.media.startIcon'), content: "Long Press Image Menu 3", labelInfo: "" })
+          MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Long Press Image Menu 2', labelInfo: '' })
+          MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Long Press Image Menu 3', labelInfo: '' })
         }
       }
       .MenuStyles()
@@ -683,12 +666,12 @@ struct TextExample8 {
       Menu() {
         MenuItemGroup() {
           // Replace $r('app.media.startIcon') with the image resource file you use.
-          MenuItem({ startIcon: $r('app.media.startIcon'), content: "Select Mixed Menu 1", labelInfo: "" })
+          MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Select Mixed Menu 1', labelInfo: '' })
             .onClick((event) => {
               this.controller.closeSelectionMenu();
             })
-          MenuItem({ startIcon: $r('app.media.startIcon'), content: "Select Mixed Menu 2", labelInfo: "" })
-          MenuItem({ startIcon: $r('app.media.startIcon'), content: "Select Mixed Menu 3", labelInfo: "" })
+          MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Select Mixed Menu 2', labelInfo: '' })
+          MenuItem({ startIcon: $r('app.media.startIcon'), content: 'Select Mixed Menu 3', labelInfo: '' }) 
         }
       }
       .MenuStyles()
@@ -749,10 +732,10 @@ struct TextExample9 {
       Text('fontFeature').fontSize(9).fontColor(0xCCCCCC)
       // Set text features.
       Text('This is frac on : 1/2 2/3 3/4')
-        .fontFeature("\"frac\" on")
+        .fontFeature('"frac" on')
         .style()
       Text('This is frac off: 1/2 2/3 3/4')
-        .fontFeature("\"frac\" off")
+        .fontFeature('"frac" off')
         .style()
     }.height(300).width(350).padding({ left: 35, right: 35, top: 35 })
   }
@@ -788,8 +771,12 @@ struct TextExample10 {
           .fontSize(25)
           .borderWidth(1)
           .onAreaChange(() => {
+            // getLayoutManager returns undefined if TextController is not bound to the Text component or the Text component has been destroyed. You need to check for null values when using it.
             let layoutManager: LayoutManager = this.controller.getLayoutManager();
-            this.lineCount = "LineCount: " + layoutManager.getLineCount();
+            if (!layoutManager) {
+              return;
+            }
+            this.lineCount = 'LineCount: ' + layoutManager.getLineCount();
           })
 
         Text('LineCount').fontSize(15).fontColor(0xCCCCCC).width('90%').padding(10)
@@ -799,38 +786,47 @@ struct TextExample10 {
         Button("Relative Component Coordinate [150, 50]")
           .onClick(() => {
             let layoutManager: LayoutManager = this.controller.getLayoutManager();
+            if (!layoutManager) {
+              return;
+            }
             let position: PositionWithAffinity = layoutManager.getGlyphPositionAtCoordinate(150, 50);
             this.glyphPositionAtCoordinate =
-              "Relative component coordinate [150, 50] glyphPositionAtCoordinate position: " + position.position + " affinity: " +
+              'Relative component coordinate [150, 50] glyphPositionAtCoordinate position: ' + position.position + ' affinity: ' +
               position.affinity;
           })
           .margin({ bottom: 20, top: 10 })
         Text(this.glyphPositionAtCoordinate)
 
         Text('LineMetrics').fontSize(15).fontColor(0xCCCCCC).width('90%').padding(10)
-        Button("Line Metrics")
+        Button('Line Metrics')
           .onClick(() => {
             let layoutManager: LayoutManager = this.controller.getLayoutManager();
+            if (!layoutManager) {
+              return;
+            }
             let lineMetrics: LineMetrics = layoutManager.getLineMetrics(0);
-            this.lineMetrics = "lineMetrics is " + JSON.stringify(lineMetrics) + "\n\n";
+            this.lineMetrics = 'lineMetrics is ' + JSON.stringify(lineMetrics) + '\n\n';
             let runMetrics = lineMetrics.runMetrics;
             runMetrics.forEach((value, key) => {
-              this.lineMetrics += "runMetrics key is " + key + " " + JSON.stringify(value) + "\n\n";
+              this.lineMetrics += 'runMetrics key is ' + key + ' ' + JSON.stringify(value) + '\n\n';
             })
           })
           .margin({ bottom: 20, top: 10 })
         Text(this.lineMetrics)
 
         Text('getRectsForRange').fontSize(15).fontColor(0xCCCCCC).width('90%').padding(10)
-        Button("Drawing Area Info for Characters/Placeholders within Specified Text Range")
+        Button('Drawing Area Info for Characters/Placeholders within Specified Text Range')
           .onClick(() => {
             let layoutManager: LayoutManager = this.controller.getLayoutManager();
+            if (!layoutManager) {
+              return;
+            }
             let range: TextRange = { start: 0, end: 1 };
             let rectsForRangeInfo: text.TextBox[] =
               layoutManager.getRectsForRange(range, text.RectWidthStyle.TIGHT, text.RectHeightStyle.TIGHT);
-            this.rectsForRangeStr = "getRectsForRange result is " + "\n\n";
+            this.rectsForRangeStr = 'getRectsForRange result is ' + '\n\n';
             rectsForRangeInfo.forEach((value, key) => {
-              this.rectsForRangeStr += "rectsForRange key is " + key + " " + JSON.stringify(value) + "\n\n";
+              this.rectsForRangeStr += 'rectsForRange key is ' + key + ' ' + JSON.stringify(value) + '\n\n';
             })
           })
           .margin({ bottom: 20, top: 10 })
@@ -902,19 +898,19 @@ struct TextExample12 {
   }
   onMenuItemClick = (menuItem: TextMenuItem, textRange: TextRange) => {
     if (menuItem.id.equals(TextMenuItemId.of("create2"))) {
-      console.info("Intercept id: create2 start:" + textRange.start + "; end:" + textRange.end);
+      console.info('Intercept id: create2 start:' + textRange.start + '; end:' + textRange.end);
       return true;
     }
     if (menuItem.id.equals(TextMenuItemId.of("prepare1"))) {
-      console.info("Intercept id: prepare1 start:" + textRange.start + "; end:" + textRange.end);
+      console.info('Intercept id: prepare1 start:' + textRange.start + '; end:' + textRange.end);
       return true;
     }
     if (menuItem.id.equals(TextMenuItemId.COPY)) {
-      console.info("Intercept COPY start:" + textRange.start + "; end:" + textRange.end);
+      console.info('Intercept COPY start:' + textRange.start + '; end:' + textRange.end);
       return true;
     }
     if (menuItem.id.equals(TextMenuItemId.SELECT_ALL)) {
-      console.info("Do not intercept SELECT_ALL start:" + textRange.start + "; end:" + textRange.end);
+      console.info('Do not intercept SELECT_ALL start:' + textRange.start + '; end:' + textRange.end);
       return false;
     }
     return false;
@@ -946,8 +942,8 @@ struct TextExample12 {
           this.endIndex = selectionEnd;
         })
     }
-    .width("90%")
-    .margin("5%")
+    .width('90%')
+    .margin('5%')
   }
 }
 ```
@@ -961,12 +957,12 @@ This example illustrates how to secure sensitive information using the [privacyS
 struct TextExample13 {
   build() {
     Column({ space: 10 }) {
-      Text("privacySensitive")
+      Text('privacySensitive')
         .privacySensitive(true)
         .margin({ top: 30 })
     }
     .alignItems(HorizontalAlign.Center)
-    .width("100%")
+    .width('100%')
   }
 }
 ```
@@ -1001,12 +997,12 @@ This example demonstrates how to apply gradient and solid colors to the Text com
 @Component
 struct ShaderColorStyle {
   @State message: string = 'Hello World';
-  @State linearGradientOptions1: LinearGradientOptions =
+  @State linearGradientOptionsAngle: LinearGradientOptions =
     {
       angle: 45,
       colors: [[Color.Red, 0.0], [Color.Blue, 0.3], [Color.Green, 0.5]]
     };
-  @State linearGradientOptions2: LinearGradientOptions =
+  @State linearGradientOptionsDirection: LinearGradientOptions =
     {
       direction: GradientDirection.LeftTop,
       colors: [[Color.Red, 0.0], [Color.Blue, 0.3], [Color.Green, 0.5]],
@@ -1031,14 +1027,14 @@ struct ShaderColorStyle {
         .fontSize(50)
         .width('80%')
         .height(50)
-        .shaderStyle(this.linearGradientOptions1)
+        .shaderStyle(this.linearGradientOptionsAngle)
       Text('Linear gradient (top left direction)').fontSize(18).width('90%').fontColor(0xCCCCCC)
         .margin({ top: 40, left: 40 })
       Text(this.message)
         .fontSize(50)
         .width('80%')
         .height(50)
-        .shaderStyle(this.linearGradientOptions2)
+        .shaderStyle(this.linearGradientOptionsDirection)
       Text('Radial gradient').fontSize(18).width('90%').fontColor(0xCCCCCC)
         .margin({ top: 40, left: 40 })
       Text(this.message)
@@ -1067,13 +1063,13 @@ This example demonstrates how to optimize trailing spaces using the [optimizeTra
 struct TextExample16 {
   build() {
     Column() {
-      Text("Trimmed space enabled     ")
+      Text('Trimmed space enabled     ')
         .fontSize(30)
         .fontWeight(FontWeight.Bold)
         .margin({ top: 20 })
         .optimizeTrailingSpace(true)
         .textAlign(TextAlign.Center)
-      Text("Trimmed space disabled     ")
+      Text('Trimmed space disabled     ')
         .fontSize(30)
         .fontWeight(FontWeight.Bold)
         .margin({ top: 20 })
@@ -1095,24 +1091,24 @@ struct TextExample14 {
   build() {
     Column({ space: 10 }) {
       Text() {
-        Span("Hello")
+        Span('Hello')
           .fontSize(50)
         // Replace $r('app.media.startIcon') with the image resource file you use.
         ImageSpan($r('app.media.startIcon'))
           .width(30).height(30)
           .verticalAlign(ImageSpanAlignment.FOLLOW_PARAGRAPH)// Available since API version 20.
-        Span("World")
+        Span('World')
       }
       .textVerticalAlign(TextVerticalAlign.CENTER)
       .borderWidth(1)
     }
     .alignItems(HorizontalAlign.Center)
-    .width("100%")
+    .width('100%')
   }
 }
 ```
 
-This example demonstrates how to implement a a flip animation for numeric text using the [contentTransition](#contenttransition20) attribute, available since API version 20.
+This example demonstrates how to implement a flip animation for numeric text using the [contentTransition](#contenttransition20) attribute, available since API version 20.
 
 ```TypeScript
 // xxx.ets
@@ -1125,11 +1121,11 @@ struct TextNumberTransition {
 
   build() {
     Column() {
-      Text(this.number + "")
+      Text(this.number + '')
         .borderWidth(1)
         .fontSize(40)
         .contentTransition(this.numberTransition)
-      Button("change number")
+      Button('change number')
         .onClick(() => {
           this.number++;
         })
@@ -1210,18 +1206,18 @@ This example demonstrates how to set the minimum number of lines using the [minL
 @Entry
 @Component
 struct TextExample1 {
-  @State message1: string = 'Hello world!';
-  @State message2: string = 'The minimum number of lines displayed for this text setting is 1';
+  @State shortMessage: string = 'Hello world!';
+  @State longMessage: string = 'The minimum number of lines displayed for this text setting is 1';
 
   build() {
     Column() {
-      Text(this.message1)
+      Text(this.shortMessage)
         .minLines(3)
         .fontSize(20)
         .margin(10)
         .width('95%')
         .border({ width: 1 })
-      Text(this.message2)
+      Text(this.longMessage)
         .minLines(1)
         .fontSize(20)
         .margin(10)
@@ -1248,7 +1244,7 @@ struct Index {
           .fontSize(25)
           .borderWidth(1)
           .copyOption(CopyOptions.LocalDevice)
-        Button("setTextSelection")
+        Button('setTextSelection')
           .onClick(() => {
             this.controller.setTextSelection(1, 6, { menuPolicy: MenuPolicy.HIDE })
           })
@@ -1260,27 +1256,43 @@ struct Index {
 }
 ```
 
-The compressLeadingPunctuation API is supported since API version 23.
+Since API version 26.0.0, the punctuationOverflow API is added.
 
 ```TypeScript
-// xxx.ets
 @Entry
 @Component
-struct Index {
+struct PunctuationDemo {
+  @State compressLeadingPunctuation: boolean = false;
+  @State punctuationOverflow: boolean = false;
+  @State text: string = '「0123456789！\n『0123456789：\n（0123456789；\n《0123456789）\n〈0123456789】';
+
   build() {
-    Column(){
-      Text("\u300CLeading punctuation compression enabled")
-        .compressLeadingPunctuation(true)
-        .margin(5)
-        .border({ width: 1 })
-        .fontSize(30)
-        .width("90%")
-      Text("\u300CLeading punctuation compression disabled")
-        .compressLeadingPunctuation(false)
-        .border({ width: 1 })
-        .fontSize(30)
-        .width("90%")
-    }
+    Column() {
+      Text(this.text)
+        .compressLeadingPunctuation(this.compressLeadingPunctuation)
+        .punctuationOverflow(this.punctuationOverflow)
+        .border({ width: 1, color: Color.Black })
+        .copyOption(CopyOptions.LocalDevice)
+        .fontSize('20fp')
+        .align(Alignment.Center)
+        .height('35%')
+        .width('40%')
+
+      Column() {
+        Button('Enable Leading Punctuation Compression').onClick(() => {
+          this.compressLeadingPunctuation = true
+        }).margin(5)
+        Button('Disable Leading Punctuation Compression').onClick(() => {
+          this.compressLeadingPunctuation = false
+        }).margin(5)
+        Button('Enable Trailing Punctuation Hanging').onClick(() => {
+          this.punctuationOverflow = true
+        }).margin(5)
+        Button('Disable Trailing Punctuation Hanging').onClick(() => {
+          this.punctuationOverflow = false
+        }).margin(5)
+      }
+    }.width('100%').padding(20)
   }
 }
 ```
@@ -1412,24 +1424,22 @@ struct TextExample10 {
   @State start: number = 10;
   @State end: number = 20;
   textController: TextController = new TextController();
-  textStr: string = "Hello World";
-  @State str1: string = ""
-  @State str2: string = ""
-  @State str3: string = ""
-  @State str4: string = ""
-  textStyleAttrs: TextStyle =
-    new TextStyle({ fontWeight: FontWeight.Bolder, fontSize: LengthMetrics.vp(24), fontStyle: FontStyle.Italic });
+  textStr: string = 'Hello World';
+  @State str1: string = ''
+  @State str2: string = ''
+  @State str3: string = ''
+  @State str4: string = ''
   titleParagraphStyleAttr: ParagraphStyle =
     new ParagraphStyle({ paragraphSpacing: LengthMetrics.px(50), textIndent: LengthMetrics.vp(15) });
   mutableStyledString: MutableStyledString =
-    new MutableStyledString("Styled string TextStyle test\nStyled string test\nStyled string TextStyle test");
+    new MutableStyledString('Styled string TextStyle test\nStyled string test\nStyled string TextStyle test');
 
   build() {
     Column() {
       Text(this.textStr, { controller: this.textController }) {
-        Span("Hello World 123 \n")
-        Span("Hello World 456 \n")
-        Span("Hello World 789 \n")
+        Span('Hello World 123 \n')
+        Span('Hello World 456 \n')
+        Span('Hello World 789 \n')
       }
       .fontSize(25)
       .borderWidth(1)
@@ -1439,36 +1449,40 @@ struct TextExample10 {
       Text(this.str3)
       Text(this.str4)
 
-      Button("Add Styled String").onClick (() => {
+      Button('Add Styled String').onClick (() => {
         this.textController.setStyledString(this.mutableStyledString)
       })
 
-      Button("Glyph Info at [150, 50]")
+      Button('Glyph Info at [150, 50]')
         .onClick(() => {
+          // getLayoutManager returns undefined if TextController is not bound to the Text component or the Text component has been destroyed. You need to check for null values when using it.
           let layoutManager: LayoutManager = this.textController.getLayoutManager();
+          if (!layoutManager) {
+            return;
+          }
           let position1: PositionWithAffinity = layoutManager.getGlyphPositionAtCoordinate(150, 50);
-          this.str1 = "Glyph info at [150, 50]. glyphPosition position: " + position1.position +
-            " affinity: " +
+          this.str1 = 'Glyph info at [150, 50]. glyphPosition position: ' + position1.position +
+            ' affinity: ' +
           position1.affinity;
 
           let position2: PositionWithAffinity =
             layoutManager.getCharacterPositionAtCoordinate(150, 50) as PositionWithAffinity;
-          this.str2 = "Glyph info at [150, 50]. characterPosition position: " + position2.position +
-            " affinity: " +
+          this.str2 = 'Glyph info at [150, 50]. characterPosition position: ' + position2.position +
+            ' affinity: ' +
           position2.affinity;
 
           let range1: TextRange = { start: this.start, end: this.end };
           let ranges1: Array<TextRange> = layoutManager.getGlyphRangeForCharacterRange(range1) as Array<TextRange>
-          this.str3 = "getGlyphRangeForCharacterRange. Glyph range: " + ranges1[0].start + " " + ranges1[0].end + "\n" 
-            "getGlyphRangeForCharacterRange. Actual character range: " + ranges1[1].start + " " + ranges1[1].end
+          this.str3 = 'getGlyphRangeForCharacterRange. Glyph range: ' + ranges1[0].start + ' ' + ranges1[0].end + '\n' +
+            'getGlyphRangeForCharacterRange. Actual character range: ' + ranges1[1].start + ' ' + ranges1[1].end
 
           let range2: TextRange = { start: this.start, end: this.end };
           let ranges2: Array<TextRange> = layoutManager.getCharacterRangeForGlyphRange(range2) as Array<TextRange>
-          this.str4 = "getCharacterRangeForGlyphRange. Character range: " + ranges2[0].start + " " + ranges2[0].end + "\n" +
-            "getCharacterRangeForGlyphRange. Actual glyph range: " + ranges2[1].start + " " + ranges2[1].end
+          this.str4 = 'getCharacterRangeForGlyphRange. Character range: ' + ranges2[0].start + ' ' + ranges2[0].end + '\n' +
+            'getCharacterRangeForGlyphRange. Actual glyph range: ' + ranges2[1].start + ' ' + ranges2[1].end
         })
         .margin({ bottom: 20, top: 10 })
-    }.justifyContent(FlexAlign.Center).width("100%").height("100%")
+    }.justifyContent(FlexAlign.Center).width('100%').height('100%')
   }
 }
 ```
@@ -1500,6 +1514,381 @@ struct TextExample {
     }
     .width('100%')
     .height('100%')
+  }
+}
+```
+
+The [fontVariations](#fontvariations) API is added since API version 26.0.0.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TextExample {
+  @State weightValue: number = 400;
+
+  build() {
+    Column() {
+      Text('Hello World !')
+        // wght indicates the weight of the variable font.
+        .fontVariations([{ axis: 'wght', value: this.weightValue }])
+      Button('Weight: ' + this.weightValue)
+        .margin(10)
+        .onClick(() => {
+          this.weightValue += 100;
+        })
+    }.width('100%')
+  }
+}
+```
+
+Since API version 26.0.0, when the text component calls this API, the image preview menu takes effect if the menuType attribute in options is set to MenuType.PREVIEW_MENU.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TextExample {
+  @Builder
+  panel() {
+    Column() {
+      Text('abc').backgroundColor('#F0F0F0')
+    }.width(256)
+  }
+
+  build() {
+    Column() {
+      Column() {
+        Text() {
+          Span('Hello')
+            .fontSize(50)
+          // Replace $r('app.media.startIcon') with the image resource file you use.
+          ImageSpan($r('app.media.startIcon'))
+            .width(30).height(30)
+            .verticalAlign(ImageSpanAlignment.FOLLOW_PARAGRAPH)// Available since API version 20.
+          Span('World')
+        }
+        .textVerticalAlign(TextVerticalAlign.CENTER)
+        .borderWidth(1)
+        .copyOption(CopyOptions.InApp)
+        .bindSelectionMenu(TextSpanType.IMAGE, this.panel, TextResponseType.LONG_PRESS, {
+          menuType : MenuType.PREVIEW_MENU,
+          previewMenuOptions : {
+            hapticFeedbackMode : HapticFeedbackMode.ENABLED
+          }
+        })
+      }.width('100%').backgroundColor(Color.White)
+    }.height('100%')
+  }
+}
+```
+
+The incrementalUpdatePolicy attribute is added since API version 26.0.0.
+
+```TypeScript
+// xxx.ets
+import { LengthMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct StyledStringAppend {
+  textController: TextController = new TextController();
+  scroller: Scroller = new Scroller();
+  @State index: number = 0
+  // Paragraph title style: centered and bold.
+  titleParagraphStyle: ParagraphStyle = new ParagraphStyle({ textAlign: TextAlign.Center });
+  // Style of the first paragraph: indent the first line by 20 vp.
+  paragraphStyleAttr1: ParagraphStyle = new ParagraphStyle({ textIndent: LengthMetrics.vp(20) });
+  // Style of the second paragraph: left-aligned and indent the first line by 20 vp.
+  paragraphStyleAttr2: ParagraphStyle =
+    new ParagraphStyle({ textAlign: TextAlign.Start, textIndent: LengthMetrics.vp(20) });
+  // Line height style.
+  lineHeightStyle: LineHeightStyle = new LineHeightStyle(new LengthMetrics(30));
+  str: string = 'Example of paragraph cache for a style string'
+  styledString1: MutableStyledString = new MutableStyledString(this.str, [{
+    start: 0,
+    length: this.str.length,
+    styledKey: StyledStringKey.PARAGRAPH_STYLE,
+    styledValue: this.titleParagraphStyle
+  }, {
+    start: 0,
+    length: this.str.length,
+    styledKey: StyledStringKey.LINE_HEIGHT,
+    styledValue: this.lineHeightStyle
+  }, {
+    start: 0,
+    length: this.str.length,
+    styledKey: StyledStringKey.FONT,
+    styledValue: new TextStyle({
+      fontColor: Color.Blue,
+      fontWeight: FontWeight.Bolder
+    })
+  }]);
+
+  aboutToAppear() {
+    // Append the initial paragraph content and set the paragraph indentation and line height.
+    let str1: string = '\nFirst paragraph: '
+    let str2: string = 'The styled string supports paragraph style caching. Click the button below to append a new paragraph and verify the paragraph caching effect.'
+    let paragraph1: StyledString =
+      new StyledString(str1 + str2, [{
+        start: 0,
+        length: str1.length,
+        styledKey: StyledStringKey.PARAGRAPH_STYLE,
+        styledValue: this.paragraphStyleAttr1
+      }, {
+        start: 0,
+        length: str1.length,
+        styledKey: StyledStringKey.FONT,
+        styledValue: new TextStyle({
+          fontColor: Color.Blue,
+          fontWeight: FontWeight.Bold
+        })
+      }, {
+        start: 0,
+        length: str1.length + str2.length,
+        styledKey: StyledStringKey.LINE_HEIGHT,
+        styledValue: this.lineHeightStyle
+      }]);
+    this.styledString1.appendStyledString(paragraph1);
+    this.textController.setStyledString(this.styledString1);
+  }
+
+  build() {
+    Column() {
+      Scroll(this.scroller) {
+        Column() {
+          Text('Example: Paragraph caching for a styled string\nClick "Append Text" to add a new paragraph. The backend will cache the paragraph.\n')
+            .fontSize(16)
+            .fontColor(Color.Gray)
+            .margin({ bottom: 5 })
+            .width("100%")
+
+          Text(undefined, { controller: this.textController })
+            .width('100%')
+            .borderWidth(1)
+            .padding(10)
+            .copyOption(CopyOptions.InApp)
+            .incrementalUpdatePolicy(IncrementalUpdatePolicy.PARAGRAPH_CACHE)
+        }
+        .width('100%')
+        .padding({ left: 20, right: 20 })
+      }
+      .width('100%')
+
+      Button ("Append Text")
+        .width('80%')
+        .margin({ top: 10, bottom: 15 })
+        .onClick(() => {
+          this.index++;
+          // Append a new paragraph. Each paragraph has a paragraph indentation style, triggering the backend paragraph cache.
+          let str1: string = '\nParagraph ' + this.index + ': '
+          let str2: string ='This is the appended text content, which is used to verify the paragraph cache mechanism.'
+          let newParagraph: StyledString = new StyledString(
+            str1 + str2,
+            [{
+              start: 0,
+              length: str1.length,
+              styledKey: StyledStringKey.PARAGRAPH_STYLE,
+              styledValue: this.paragraphStyleAttr2
+            }, {
+              start: 0,
+              length: str1.length + str2.length,
+              styledKey: StyledStringKey.LINE_HEIGHT,
+              styledValue: this.lineHeightStyle
+            }, {
+              start: 0,
+              length: str1.length,
+              styledKey: StyledStringKey.FONT,
+              styledValue: new TextStyle({
+                fontColor: Color.Blue,
+                fontWeight: FontWeight.Bold
+              })
+            }]);
+          this.styledString1.appendStyledString(newParagraph);
+          this.textController.setStyledString(this.styledString1);
+        })
+    }
+    .width('100%')
+    .height('70%')
+  }
+}
+```
+
+Since API version 26.0.0, you can use the tailIndents attribute to set text tail indentation.
+
+```TypeScript
+import { LengthMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct TailIndentsExample {
+  build() {
+    Column() {
+      Text('No tailIndents set\nNo tailIndents set\nNo tailIndents set\nNo tailIndents set\nNo tailIndents set')
+        .fontSize(20)
+        .borderWidth(1)
+        .borderColor(Color.Blue)
+        .textAlign(TextAlign.End)
+        .width('100%')
+
+      Text('Set a single tailIndents value\nSet a single tailIndents value\nSet a single tailIndents value\nSet a single tailIndents value\nSet a single tailIndents value')
+        .fontSize(20)
+        .borderWidth(1)
+        .borderColor(Color.Blue)
+        .textAlign(TextAlign.End)
+        .width('100%')
+        .tailIndents(LengthMetrics.vp(100))
+
+      Text('Set a tailIndents array\nSet a tailIndents array\nSet a tailIndents array\nSet a tailIndents array\nSet a tailIndents array')
+        .fontSize(20)
+        .borderWidth(1)
+        .borderColor(Color.Blue)
+        .textAlign(TextAlign.End)
+        .width('100%')
+        .tailIndents([LengthMetrics.vp(100), LengthMetrics.vp(50), LengthMetrics.vp(20)])
+
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+The enableSelectedDataDetector API is added in API version 22.
+
+```TypeScript
+@Entry
+@Component
+struct DataDetectorDemo {
+  exampleText: string ='Example website: www.example.com';
+
+  build() {
+    Column() {
+      Row(){
+        Text(this.exampleText)
+          .copyOption(CopyOptions.LocalDevice)
+          .enableSelectedDataDetector(true)
+          .border({ width: 1, color: Color.Black })
+          .padding(10)
+          .margin(10)
+      }
+    }.width('100%')
+  }
+}
+```
+
+Since API version 26.0.0, the getCharacterPositionAtCoordinate, getGlyphRangeForCharacterRange, and getCharacterRangeForGlyphRange APIs with the encoding type parameter are added, and the TextEncoding enumeration is added.
+
+```TypeScript
+// xxx.ets
+import { LengthMetrics } from '@kit.ArkUI';
+import { text } from '@kit.ArkGraphics2D';
+
+const TEXT_CONTENT: string =
+  'This is test text containing emojis\u{1F60A}. Long press the text to view the gradient highlight effect\u{1F389}.\n' +
+  'Complex emojis\u{1F468}\u{200D}\u{1F469}\u{200D}\u{1F467}\u{200D}\u{1F466} will also be correctly processed.' +
+  '\u{1F3F3}\u{FE0F}\u{200D}\u{1F308}. Here are some more emojis\u{1F680}\u{1F31F}\u{1F4BB} mixed with Chinese characters.\n' +
+  'Third line: Long press different positions to try various characters\u{1F600}\u{1F431}\u{1F409}.';
+
+@Entry
+@Component
+struct Utf16GlyphHighlightPage {
+  private textController: TextController = new TextController();
+  private canvasContext: CanvasRenderingContext2D = new CanvasRenderingContext2D(new RenderingContextSettings(true));
+  @State isCanvasReady: boolean = false;
+  @State resultInfo: string = 'Long press the text below (including emojis) to view the gradient background highlight effect.';
+
+  aboutToAppear(): void {
+    const styledString = new MutableStyledString(TEXT_CONTENT, [{
+      start: 0, length: TEXT_CONTENT.length,
+      styledKey: StyledStringKey.FONT,
+      styledValue: new TextStyle({ fontSize: LengthMetrics.vp(24) })
+    }]);
+    this.textController.setStyledString(styledString);
+  }
+
+  build() {
+    Column() {
+      Text(this.resultInfo)
+        .fontSize(13).fontColor('#666666')
+        .padding({ left: 16, right: 16, top: 12, bottom: 8 })
+        .margin({ left: 12, right: 12, top: 12 })
+        .width('100%').height(110)
+      Stack({ alignContent: Alignment.TopStart }) {
+        Canvas(this.canvasContext).width('100%').height('100%')
+          .onReady(() => { this.isCanvasReady = true; })
+        Text(undefined, { controller: this.textController })
+          .gesture(LongPressGesture({ repeat: false, duration: 500 })
+            .onAction((event: GestureEvent) => { this.handleLongPress(event); }))
+      }
+      .layoutWeight(1).width('100%')
+      .padding({ left: 16, right: 16, top: 12 })
+      .margin({ left: 12, right: 12, bottom: 12 }).clip(true)
+    }.height('100%').width('100%')
+  }
+
+  private handleLongPress(event: GestureEvent): void {
+    // Processing flow: Convert coordinates to pixels -> Use getCharacterPositionAtCoordinate to obtain the character position and affinity ->
+    //            Determine the character range based on the affinity -> Use getGlyphRangeForCharacterRange to obtain the glyph range and actual character range ->
+    //           Use getRectsForRange to obtain the rectangular area -> Use Canvas to draw the gradient background.
+    if (!this.isCanvasReady) { this.resultInfo = 'The canvas is not ready. Please try again later.'; return; }
+    const uiContext = this.getUIContext();
+    // Obtain the text layout manager object for subsequent queries of character positions, glyph ranges, and rectangular areas.
+    const layoutManager = this.textController.getLayoutManager();
+    if (!layoutManager) { this.resultInfo = 'LayoutManager is unavailable.'; return; }
+    const finger = event.fingerList[0];
+    if (!finger) { this.resultInfo = 'Finger information not obtained.'; return; }
+    // Convert the long-pressing coordinates from vp to px for the layout query API.
+    const localXPx = uiContext.vp2px(finger.localX);
+    const localYPx = uiContext.vp2px(finger.localY);
+    // Query the position and affinity of the character closest to the long-pressing coordinates in UTF-16 encoding.
+    const posAffinity = layoutManager.getCharacterPositionAtCoordinate(localXPx, localYPx, TextEncoding.TEXT_ENCODING_UTF16);
+    if (!posAffinity) { this.resultInfo = 'getCharacterPositionAtCoordinate returns undefined.'; return; }
+    const index = posAffinity.position;
+    const affinity = posAffinity.affinity;
+    let charStart: number, charEnd: number;
+    if (affinity === text.Affinity.UPSTREAM) {
+      charStart = Math.max(0, index - 1); charEnd = index;
+    } else {
+      charStart = index; charEnd = index + 1;
+    }
+    // Query the glyph range and actual character range (UTF-16 encoding) based on the character range.
+    const glyphRanges = layoutManager.getGlyphRangeForCharacterRange(
+      { start: charStart, end: charEnd }, TextEncoding.TEXT_ENCODING_UTF16);
+    if (!glyphRanges || glyphRanges.length === 0) {
+      this.resultInfo = `getGlyphRangeForCharacterRange returns an empty value, index=${index}, affinity=${affinity}`; return;
+    }
+    const actualRange: TextRange = glyphRanges.length >= 2 ? glyphRanges[1] : { start: charStart, end: charEnd };
+    // Obtain the rectangular area of the text based on the actual character range for drawing the highlighted background.
+    const textBoxes = layoutManager.getRectsForRange(actualRange, text.RectWidthStyle.TIGHT, text.RectHeightStyle.TIGHT);
+    if (!textBoxes || textBoxes.length === 0) {
+      this.resultInfo = `getRectsForRange returns an empty value. range=[${actualRange.start}, ${actualRange.end}]`; return;
+    }
+    this.drawGradientBackground(uiContext, textBoxes);
+    const affinityStr = affinity === text.Affinity.UPSTREAM ? 'UPSTREAM(0)' : 'DOWNSTREAM(1)';
+    this.resultInfo =
+      `Coordinates: (${finger.localX.toFixed(1)}, ${finger.localY.toFixed(1)})vp\n` +
+      `UTF16 offset: ${index}, affinity: ${affinityStr}\n` +
+      `Input range: [${charStart}, ${charEnd}] -> Actual character range: [${actualRange.start}, ${actualRange.end}]\n` +
+      `Number of rectangles: ${textBoxes.length}`;
+  }
+
+  private drawGradientBackground(uiContext: UIContext, textBoxes: TextBox[]): void {
+    const ctx = this.canvasContext;
+    ctx.clearRect(0, 0, 5000, 5000);
+    for (const box of textBoxes) {
+      const r = box.rect;
+      const l = uiContext.px2vp(r.left), t = uiContext.px2vp(r.top);
+      const w = uiContext.px2vp(r.right) - l, h = uiContext.px2vp(r.bottom) - t;
+      if (w <= 0 || h <= 0) continue;
+      const g = ctx.createLinearGradient(l, t, l + w, t + h);
+      g.addColorStop(0, 'rgba(187, 153, 255, 0.66)');
+      g.addColorStop(1, 'rgba(129, 229, 255, 0.66)');
+      ctx.fillStyle = g;
+      ctx.beginPath();
+      ctx.roundRect(l, t, w, h, 4);
+      ctx.fill();
+    }
   }
 }
 ```

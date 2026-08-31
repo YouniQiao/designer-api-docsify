@@ -21,7 +21,7 @@ Sets the Bluetooth scan mode for a device. On API 10 and above, the permission r
 **Substitutes:** [setBluetoothScanMode](arkts-connectivity-connection-setbluetoothscanmode-f.md)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

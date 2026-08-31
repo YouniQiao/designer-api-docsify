@@ -16,7 +16,7 @@ Set the configuration parameters for simulating reverse geocoding.
 **Since:** 9
 
 **Required permissions:** 
-- API version 20+: ohos.permission.MOCK_LOCATION
+- API version 20 and later: ohos.permission.MOCK_LOCATION
 
 **System capability:** SystemCapability.Location.Location.Core
 

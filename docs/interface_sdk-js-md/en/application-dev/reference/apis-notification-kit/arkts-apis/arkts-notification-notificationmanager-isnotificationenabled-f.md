@@ -19,7 +19,7 @@ This API is used to check whether the current application is allowed to send not
 **Since:** 11
 
 **Required permissions:** 
-- API version 9 - 10: ohos.permission.NOTIFICATION_CONTROLLER
+- API versions 9 to 10: ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -72,7 +72,7 @@ This API is used to check whether the current application is allowed to send not
 **Since:** 11
 
 **Required permissions:** 
-- API version 9 - 10: ohos.permission.NOTIFICATION_CONTROLLER
+- API versions 9 to 10: ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
 

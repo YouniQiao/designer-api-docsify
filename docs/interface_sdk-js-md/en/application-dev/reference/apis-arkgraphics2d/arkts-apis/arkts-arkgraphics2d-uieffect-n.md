@@ -60,12 +60,15 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | [HeatDistortionEffectParam](arkts-arkgraphics2d-uieffect-heatdistortioneffectparam-i-sys.md) | The parameters of heat distortion effect. |
 | [BlurBubblesRiseEffectParam](arkts-arkgraphics2d-uieffect-blurbubblesriseeffectparam-i-sys.md) | The parameters of blur bubbles rise effect. |
 | [LiquidMaterialEffectParam](arkts-arkgraphics2d-uieffect-liquidmaterialeffectparam-i-sys.md) | Material effect parameters, used to control the display properties of the material such as refraction, reflection, perturbation, and overlay color. |
+| [WarpedRingParam](arkts-arkgraphics2d-uieffect-warpedringparam-i-sys.md) | WarpedRingParam specifies the ring's radius, width, variation, rotation, 3D orientation and noise evolution. |
 | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | Brightness blender, used to add a brightness effect to a specified component. Before calling BrightnessBlender, you need to first create a BrightnessBlender instance through createBrightnessBlender. |
 | [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i-sys.md) | HDR-enabled brightness blender (inherited from BrightnessBlender), used to add a brightness effect to a specified component. Before calling HdrBrightnessBlender, you need to first create an HdrBrightnessBlender instance through createHdrBrightnessBlender. The parameters of this blender can be referenced from BrightnessBlender. |
 | [HdrDarkenBlender](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | HDR-adaptive darken blender, used to add a darken effect to a specified component. Before calling HdrDarkenBlender, you need to first create an HdrDarkenBlender instance through createHdrDarkenBlender. |
 | [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md) | Parameter list of ColorfulBrightnessBlenderOptions, used to configure various properties of the colorful brightness darken effect, including the foreground darken weight, brightness darken strength, luma difference threshold, and HDR switch parameters. |
 | [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | Colorful brightness darken blender, used to add a colorful brightness darken effect to a specified component. Before calling ColorfulBrightnessBlender, you need to first create a ColorfulBrightnessBlender instance through createColorfulBrightnessBlender. |
 | [Color](arkts-arkgraphics2d-uieffect-color-i-sys.md) | RGBA color description. |
+| [SweepRefractionParam](arkts-arkgraphics2d-uieffect-sweeprefractionparam-i-sys.md) | Required parameters for creating a SweepRefractionMask. |
+| [SweepRefractionMaskOptions](arkts-arkgraphics2d-uieffect-sweeprefractionmaskoptions-i-sys.md) | Optional parameters for creating a SweepRefractionMask. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -76,6 +79,7 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | [TileMode](arkts-arkgraphics2d-uieffect-tilemode-e-sys.md) | Pixel fill mode enumeration. |
 | [WaterRippleMode](arkts-arkgraphics2d-uieffect-waterripplemode-e-sys.md) | Water ripple scene mode enumeration. |
 | [FlyMode](arkts-arkgraphics2d-uieffect-flymode-e-sys.md) | Fly-in or fly-out deformation scene mode enumeration. |
+| [PrismShapeType](arkts-arkgraphics2d-uieffect-prismshapetype-e-sys.md) | Enumerates the prism shape types for SweepRefractionMask. |
 <!--DelEnd-->
 
 <!--Del-->

@@ -24,11 +24,11 @@ function openNotificationSettings(context: UIAbilityContext): Promise<void>
 
 **参见：**
 
-requestEnableNotification 请求通知使能。
+[requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md) 请求通知使能。
 
-isNotificationEnabled 查询当前应用通知授权状态。
+[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) 查询当前应用通知授权状态。
 
-getNotificationSetting 获取应用的通知设置状态。
+[getNotificationSetting](arkts-notification-notificationmanager-getnotificationsetting-f.md) 获取应用的通知设置状态。
 
 **参数：**
 

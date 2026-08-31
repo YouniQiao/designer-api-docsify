@@ -60,7 +60,7 @@ struct LoadingProgressExample {
 }
 ```
 
-该示例通过[contentModifier](#contentmodifier12)接口，实现了定制内容区的功能，并通过[enableLoading](#enableloading10)接口实现了通过按钮切换是否显示LoadingProgress的效果。
+该示例通过[contentModifier](#contentmodifier12)接口，实现了定制内容区的功能，并展示了如何基于[LoadingProgressConfiguration](#loadingprogressconfiguration12对象说明)的[enableLoading](#enableloading10)属性切换自定义内容的显示效果。
 
 ```TypeScript
 // xxx.ets
@@ -178,7 +178,6 @@ function buildLoadingProgress(config: LoadingProgressConfiguration) {
 struct LoadingProgressDemoExample {
   @State loadingProgressList: (boolean | undefined | null)[] = [undefined, true, null, false];
   @State loadingProgressIndex: number = 0;
-  @State clickFlag: number = 0;
   scroller: Scroller = new Scroller();
 
   build() {
@@ -195,7 +194,6 @@ struct LoadingProgressDemoExample {
       }.height('85%')
 
       Button('点击切换config.enableLoading').onClick(() => {
-        this.clickFlag++;
         this.loadingProgressIndex = (this.loadingProgressIndex + 1) % this.loadingProgressList.length;
         console.info('enableLoading:' + this.loadingProgressList[this.loadingProgressIndex]);
       }).margin(20)

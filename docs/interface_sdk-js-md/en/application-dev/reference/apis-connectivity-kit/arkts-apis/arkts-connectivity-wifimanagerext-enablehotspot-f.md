@@ -37,7 +37,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 
   try {
       wifiManagerExt.enableHotspot();
-  }catch(error){
+  } catch (error) {
       console.error("failed: " + JSON.stringify(error));
   }
 ```

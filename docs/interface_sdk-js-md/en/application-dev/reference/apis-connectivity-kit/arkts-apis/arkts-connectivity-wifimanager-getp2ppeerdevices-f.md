@@ -38,7 +38,7 @@ Obtain the information about the found devices.
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
-  // The peer device list can be obtained only after the P2P discovery is complete.
+  // The P2P peer device list information can be obtained only after the P2P discovery phase is complete.
   wifiManager.getP2pPeerDevices((err, data:wifiManager.WifiP2pDevice[]) => {
     if (err) {
         console.error("get P2P peer devices error");

@@ -16,7 +16,7 @@ Remove a geofence.
 **Since:** 12
 
 **Required permissions:** 
-- API version 12 - 24: ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
+- API versions 12 to 24: ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
 **System capability:** SystemCapability.Location.Location.Geofence
 

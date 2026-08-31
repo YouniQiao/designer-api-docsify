@@ -33,7 +33,7 @@ Connect to device with a2dp. On API 10 and above, the permission required by thi
 **Substitutes:** [connect](arkts-connectivity-a2dp-a2dpsourceprofile-i-sys.md#connect)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -103,7 +103,7 @@ Disconnect to device with a2dp. On API 10 and above, the permission required by 
 **Substitutes:** [disconnect](arkts-connectivity-a2dp-a2dpsourceprofile-i-sys.md#disconnect)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -183,7 +183,7 @@ Obtains the playing state of device. On API 10 and above, the permission require
 **Substitutes:** [getPlayingState](arkts-connectivity-a2dp-a2dpsourceprofile-i.md#getplayingstate)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -237,7 +237,7 @@ Unsubscribe the event reported when the profile connection state changes. On API
 **Substitutes:** connectionStateChange
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -270,7 +270,7 @@ Subscribe the event reported when the profile connection state changes. On API 1
 **Substitutes:** connectionStateChange
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

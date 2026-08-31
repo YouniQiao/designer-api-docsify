@@ -22,7 +22,7 @@ function setBadgeNumber(badgeNumber: number, callback: AsyncCallback<void>): voi
 
 **参见：**
 
-getActiveNotificationCount 获取当前应用的通知数量。
+[getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md) 获取当前应用的通知数量。
 
 **参数：**
 
@@ -75,7 +75,7 @@ function setBadgeNumber(badgeNumber: number): Promise<void>
 
 **参见：**
 
-getActiveNotificationCount 获取当前应用的通知数量。
+[getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md) 获取当前应用的通知数量。
 
 **参数：**
 

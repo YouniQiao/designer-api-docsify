@@ -18,7 +18,7 @@ Obtains the data flow type of the cellular network (corresponding to the uplink 
 **Since:** 7
 
 **Required permissions:** 
-- API version 22+: ohos.permission.GET_NETWORK_INFO
+- API version 22 and later: ohos.permission.GET_NETWORK_INFO
 
 **System capability:** SystemCapability.Telephony.CellularData
 
@@ -63,7 +63,7 @@ Obtains the data flow type of the cellular network (corresponding to the uplink 
 **Since:** 7
 
 **Required permissions:** 
-- API version 22+: ohos.permission.GET_NETWORK_INFO
+- API version 22 and later: ohos.permission.GET_NETWORK_INFO
 
 **System capability:** SystemCapability.Telephony.CellularData
 

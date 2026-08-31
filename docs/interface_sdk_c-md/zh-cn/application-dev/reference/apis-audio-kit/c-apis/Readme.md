@@ -1,6 +1,6 @@
 # C API<!--c-audiokit-->
 
-- 模块<!--audiokit-module-->n
+- 模块<!--audiokit-module-->
     - [OHMIDI](capi-ohmidi.md)
     - [OHAudioSuite](capi-ohaudiosuite.md)
     - [AudioSuite](capi-audiosuite.md)

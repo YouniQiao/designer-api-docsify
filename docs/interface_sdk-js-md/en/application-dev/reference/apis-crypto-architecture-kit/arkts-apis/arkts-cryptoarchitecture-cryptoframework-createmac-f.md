@@ -22,7 +22,7 @@ For details about the supported specifications, see [MAC Overview and Algorithm 
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 

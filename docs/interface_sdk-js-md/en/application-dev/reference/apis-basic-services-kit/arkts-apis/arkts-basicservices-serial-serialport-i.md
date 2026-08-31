@@ -39,6 +39,19 @@ Closes the serial port device. This API returns the result asynchronously throug
 | [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Close the serial port device.
+port.close().then(() => {
+  console.info('close success');
+}).catch((error: Error) => {
+  console.error(`close error: ${JSON.stringify(error)}`);
+});
+```
+
 ## drain
 
 ```TypeScript
@@ -66,6 +79,19 @@ Waits until all write requests are complete. This API returns the result asynchr
 | [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
 | [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Wait until all write requests are complete.
+port.drain().then(() => {
+  console.info('drain success');
+}).catch((error: Error) => {
+  console.error(`drain error: ${JSON.stringify(error)}`);
+});
+```
 
 ## flush
 
@@ -95,6 +121,19 @@ Flushes the serial port buffer. This API returns the result asynchronously throu
 | [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Flush the serial port buffer.
+port.flush().then(() => {
+  console.info('flush success');
+}).catch((error: Error) => {
+  console.error(`flush error: ${JSON.stringify(error)}`);
+});
+```
+
 ## getCts
 
 ```TypeScript
@@ -122,6 +161,19 @@ Obtains the CTS signal status. This API returns the result asynchronously throug
 | [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
 | [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Obtain the CTS signal status.
+port.getCts().then((cts: boolean) => {
+  console.info('getCts success, cts: ' + cts);
+}).catch((error: Error) => {
+  console.error(`getCts error: ${JSON.stringify(error)}`);
+});
+```
 
 ## getDsr
 
@@ -151,6 +203,19 @@ Obtains the DSR signal status. This API returns the result asynchronously throug
 | [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Obtain the DSR signal status.
+port.getDsr().then((dsr: boolean) => {
+  console.info('getDsr success, dsr: ' + dsr);
+}).catch((error: Error) => {
+  console.error(`getDsr error: ${JSON.stringify(error)}`);
+});
+```
+
 ## offDataRead
 
 ```TypeScript
@@ -178,6 +243,21 @@ Cancels listening for data receiving events on the serial port.
 | [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Cancel listening for data receiving events on the serial port.
+port.offDataRead();
+
+// Cancel the specified listener callback.
+let callback = (data: Uint8Array) => {
+  console.info(`received data length: ${data.length}`);
+};
+port.offDataRead(callback);
+```
+
 ## offDisconnect
 
 ```TypeScript
@@ -204,6 +284,21 @@ This command is used to cancel the monitoring of the USB virtual serial port dis
 | --- | --- |
 | [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Unsubscribe from serial port disconnection events.
+port.offDisconnect();
+
+// Cancel the specified listener callback.
+let disconnectedCallback = () => {
+  console.info('serial port disconnected');
+};
+port.offDisconnect(disconnectedCallback);
+```
 
 ## onDataRead
 
@@ -233,6 +328,17 @@ Listens for data received by the serial port. This API uses an asynchronous call
 | [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Listen for data receiving events on the serial port.
+port.onDataRead((data: Uint8Array) => {
+  console.info(`onDataRead, length: ${data.length}`);
+});
+```
+
 ## onDisconnect
 
 ```TypeScript
@@ -259,6 +365,17 @@ This interface is used to listen to the disconnection event of the USB virtual s
 | --- | --- |
 | [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Subscribe to serial port disconnection events.
+port.onDisconnect(() => {
+  console.info('serial port disconnected');
+});
+```
 
 ## open
 
@@ -296,6 +413,31 @@ Enables the port. This API returns the result asynchronously through a promise.
 | [35700004](../errorcode-busmanager-serial.md#35700004-port-in-use) | Port already in use. |
 | [35700007](../errorcode-busmanager-serial.md#35700007-user-authorization-rejected) | User authorization required. |
 
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Obtain the serial port list and open the first serial port.
+serial.getSerialPortList().then(async (portList: serial.SerialPort[]) => {
+  if (portList.length === 0) {
+    console.error('portList is empty');
+    return;
+  }
+  let port: serial.SerialPort = portList[0];
+  let config: serial.SerialConfigs = {
+    baudRate: 115200,
+    dataBits: serial.DataBits.EIGHT,
+    stopBits: serial.StopBits.ONE,
+    parity: serial.Parity.NONE
+  };
+  await port.open(config);
+  console.info('open success');
+}).catch((error: Error) => {
+  console.error(`error: ${JSON.stringify(error)}`);
+});
+```
+
 ## sendBrk
 
 ```TypeScript
@@ -323,6 +465,19 @@ Sends a BRK signal. This API returns the result asynchronously through a promise
 | [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
 | [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Send a BRK signal.
+port.sendBrk().then(() => {
+  console.info('sendBrk success');
+}).catch((error: Error) => {
+  console.error(`sendBrk error: ${JSON.stringify(error)}`);
+});
+```
 
 ## setDtr
 
@@ -358,6 +513,19 @@ Sets the DTR signal status. Use Promise asynchronous callbacks.
 | [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Set the DTR signal.
+port.setDtr(true).then(() => {
+  console.info('setDtr success');
+}).catch((error: Error) => {
+  console.error(`setDtr error: ${JSON.stringify(error)}`);
+});
+```
+
 ## setRts
 
 ```TypeScript
@@ -391,6 +559,19 @@ Sets the RTS signal. This API returns the result asynchronously through a promis
 | [35700001](../errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
 | [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+
+**Examples**
+
+```TypeScript
+import { serial } from "@kit.BasicServicesKit";
+
+// Set the RTS signal.
+port.setRts(true).then(() => {
+  console.info('setRts success');
+}).catch((error: Error) => {
+  console.error(`setRts error: ${JSON.stringify(error)}`);
+});
+```
 
 ## write
 
@@ -428,6 +609,21 @@ Sends data. This API returns the result asynchronously through a promise.
 | [35700003](../errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
 | [35700005](../errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 | [35700006](../errorcode-busmanager-serial.md#35700006-transmission-timeout) | Transmission timeout. |
+
+**Examples**
+
+```TypeScript
+import { buffer } from '@kit.ArkTS';
+import { serial } from "@kit.BasicServicesKit";
+
+// Write data to a serial port device.
+let writeData: Uint8Array = new Uint8Array(buffer.from('Hello World', 'utf-8').buffer);
+port.write(writeData, 2000).then((size: number) => {
+  console.info('write success, size: ' + size);
+}).catch((error: Error) => {
+  console.error(`write error: ${JSON.stringify(error)}`);
+});
+```
 
 ## portInfo
 

@@ -17,8 +17,8 @@ Connects to a printer by printer ID. This API uses an asynchronous callback to r
 **Since:** 20
 
 **Required permissions:** 
-- API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
-- API version 10 - 19: ohos.permission.MANAGE_PRINT_JOB
+- API version 20 and later: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
+- API versions 10 to 19: ohos.permission.MANAGE_PRINT_JOB
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -64,8 +64,8 @@ Connects to a printer by printer ID. This API uses a promise to return the resul
 **Since:** 20
 
 **Required permissions:** 
-- API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
-- API version 10 - 19: ohos.permission.MANAGE_PRINT_JOB
+- API version 20 and later: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
+- API versions 10 to 19: ohos.permission.MANAGE_PRINT_JOB
 
 **System capability:** SystemCapability.Print.PrintFramework
 

@@ -1,6 +1,6 @@
 # C API<!--c-avcodeckit-->
 
-- 模块<!--avcodeckit-module-->n
+- 模块<!--avcodeckit-module-->
     - [Core](capi-core.md)
     - [CodecBase](capi-codecbase.md)
     - [AVSource](capi-avsource.md)

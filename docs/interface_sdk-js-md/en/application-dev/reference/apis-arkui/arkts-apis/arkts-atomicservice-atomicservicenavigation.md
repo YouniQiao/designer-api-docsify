@@ -44,7 +44,7 @@ import { AtomicServiceNavigation, NavDestinationBuilder, MixMode, GradientAlpha,
 
 ## Examples
 
-This example demonstrates how to set the basic style of the AtomicServiceNavigation component with a gradient background.
+This example demonstrates the basic style and gradient background of AtomicServiceNavigation.
 
 ```TypeScript
 import { AtomicServiceNavigation, MixMode, GradientAlpha, BackgroundTheme } from '@kit.ArkUI';
@@ -58,7 +58,7 @@ struct Index {
   tabContent1() {
     Text('first page')
       .onClick(() => {
-        this.childNavStack.pushPath({ name: 'page one' })
+        this.childNavStack.pushPath({ name: 'page one' });
       })
   }
 
@@ -93,7 +93,7 @@ struct Index {
       ],
       tabBarPosition: TabBarPosition.BOTTOM,
       barBackgroundColor: $r('sys.color.ohos_id_color_bottom_tab_bg'),
-      onTabBarClick: (index: Number) => {
+      onTabBarClick: (index: number) => {
         if (index == 0) {
           this.message = 'Feature 1';
         } else if (index == 1) {
@@ -151,7 +151,7 @@ export struct PageOne {
     NavDestination() {
       Button('Next')
         .onClick(() => {
-          this.pageInfo.pushPath({ name: 'page two'})
+          this.pageInfo.pushPath({ name: 'page two'});
         })
     }
     .title('PageOne')
@@ -177,7 +177,7 @@ export struct PageTwo {
 }
 ```
 
-This example demonstrates how to implement the drawer style and insert custom layouts into the title bar in wide-screen scenarios (width > 600 vp).
+This example sets the drawer mode in wide-screen scenarios (width greater than 600 vp) and inserts custom layouts into the title bar.
 
 ```TypeScript
 import { AtomicServiceNavigation, TitleBarType } from '@kit.ArkUI';
@@ -193,7 +193,7 @@ struct Index {
   tabContent1() {
     Text('first page')
       .onClick(() => {
-        this.childNavStack.pushPath({ name: 'page one' })
+        this.childNavStack.pushPath({ name: 'page one' });
       })
   }
 
@@ -228,7 +228,7 @@ struct Index {
       ],
       tabBarPosition: TabBarPosition.BOTTOM,
       barBackgroundColor: $r('sys.color.ohos_id_color_bottom_tab_bg'),
-      onTabBarClick: (index: Number) => {
+      onTabBarClick: (index: number) => {
         if (index == 0) {
           this.message = 'Feature 1';
         } else if (index == 1) {
@@ -248,9 +248,6 @@ struct Index {
       PageTwo()
     }
   }
-
-  @State showText: string = 'time: ';
-  @State time: number = 0;
 
   @Builder
   insertComp() {
@@ -290,7 +287,7 @@ export struct PageOne {
     NavDestination() {
       Button('Next')
         .onClick(() => {
-          this.pageInfo.pushPath({ name: 'page two'})
+          this.pageInfo.pushPath({ name: 'page two'});
         })
     }
     .title('PageOne')
@@ -316,7 +313,7 @@ export struct PageTwo {
 }
 ```
 
-This example demonstrates how to set the sidebar background color and content style.
+This example sets the sidebar background color and content style.
 
 ```TypeScript
 import { AtomicServiceNavigation, TitleBarType } from '@kit.ArkUI';
@@ -332,7 +329,7 @@ struct Index {
   tabContent1() {
     Text('first page')
       .onClick(() => {
-        this.childNavStack.pushPath({ name: 'page one' })
+        this.childNavStack.pushPath({ name: 'page one' });
       })
   }
 
@@ -367,7 +364,7 @@ struct Index {
       ],
       tabBarPosition: TabBarPosition.BOTTOM,
       barBackgroundColor: $r('sys.color.ohos_id_color_bottom_tab_bg'),
-      onTabBarClick: (index: Number) => {
+      onTabBarClick: (index: number) => {
         if (index == 0) {
           this.message = 'Feature 1';
         } else if (index == 1) {
@@ -386,17 +383,6 @@ struct Index {
     } else if (name === 'page two') {
       PageTwo()
     }
-  }
-
-  @State showText: string = 'time: ';
-  @State time: number = 0;
-
-  @Builder
-  insertComp() {
-    Text('This is menus area')
-      .fontColor(Color.Red)
-      .width(200)
-      .height('100%')
   }
 
   @Builder
@@ -438,7 +424,7 @@ export struct PageOne {
     NavDestination() {
       Button('Next')
         .onClick(() => {
-          this.pageInfo.pushPath({ name: 'page two'})
+          this.pageInfo.pushPath({ name: 'page two'});
         })
     }
     .title('PageOne')

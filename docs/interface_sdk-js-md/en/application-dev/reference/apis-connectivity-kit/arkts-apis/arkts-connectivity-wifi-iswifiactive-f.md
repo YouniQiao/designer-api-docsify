@@ -38,7 +38,7 @@ import wifi from '@ohos.wifi';
 try {
   let isWifiActive = wifi.isWifiActive();
   console.info("isWifiActive:" + isWifiActive);
-}catch(error){
+} catch (error) {
   console.error("failed:" + JSON.stringify(error));
 }
 ```

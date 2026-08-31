@@ -6,7 +6,7 @@ Message authentication code (MAC) interface, defining methods for calculating MA
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -28,7 +28,7 @@ Finishes the MAC computation and obtains the MAC computation result. This API us
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -82,7 +82,7 @@ Finishes the MAC computation and obtains the MAC computation result. This API us
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Return value:**
 
@@ -184,7 +184,7 @@ Obtains the MAC length, in bytes.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Return value:**
 
@@ -249,7 +249,7 @@ Initializes the MAC computation using a symmetric key. This API uses an asynchro
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -280,7 +280,7 @@ Initializes the MAC computation using a symmetric key. This API uses a promise t
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -352,7 +352,7 @@ Updates the MAC status. This API uses an asynchronous callback to return the res
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -389,7 +389,7 @@ Updates the MAC status. This API uses a promise to return the result.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -463,4 +463,4 @@ Indicates the algorithm name.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Mac
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework

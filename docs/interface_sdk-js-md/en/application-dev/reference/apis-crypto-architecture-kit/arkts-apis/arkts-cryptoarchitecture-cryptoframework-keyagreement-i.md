@@ -6,7 +6,7 @@ Key agreement interface, defining methods for generating shared secrets based on
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.KeyAgreement
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -28,7 +28,7 @@ Generates a shared secret based on the given private key and public key. This AP
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.KeyAgreement
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -151,7 +151,7 @@ Generates a shared secret based on the given private key and public key. This AP
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.KeyAgreement
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -281,4 +281,4 @@ Indicates the algorithm name.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.KeyAgreement
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework

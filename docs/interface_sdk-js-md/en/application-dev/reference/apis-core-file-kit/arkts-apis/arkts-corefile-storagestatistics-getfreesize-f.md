@@ -17,7 +17,7 @@ Obtains the available space (in bytes) of the built-in storage. This API uses an
 **Since:** 15
 
 **Required permissions:** 
-- API version 9 - 14: ohos.permission.STORAGE_MANAGER
+- API versions 9 to 14: ohos.permission.STORAGE_MANAGER
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 
@@ -63,7 +63,7 @@ Obtains the available space (in bytes) of the built-in storage. This API uses a 
 **Since:** 15
 
 **Required permissions:** 
-- API version 9 - 14: ohos.permission.STORAGE_MANAGER
+- API versions 9 to 14: ohos.permission.STORAGE_MANAGER
 
 **System capability:** SystemCapability.FileManagement.StorageService.SpatialStatistics
 

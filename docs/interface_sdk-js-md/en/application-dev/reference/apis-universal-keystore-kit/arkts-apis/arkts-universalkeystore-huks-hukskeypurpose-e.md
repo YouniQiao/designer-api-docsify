@@ -50,7 +50,7 @@ Used for signing.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_KEY_PURPOSE_VERIFY
 
@@ -66,7 +66,7 @@ Used to verify the signature.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_KEY_PURPOSE_DERIVE
 
@@ -82,7 +82,7 @@ Used to derive a key.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_KEY_PURPOSE_WRAP
 
@@ -98,7 +98,7 @@ Used for an encrypted export.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_KEY_PURPOSE_UNWRAP
 
@@ -114,7 +114,7 @@ Used for a secure import.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_KEY_PURPOSE_MAC
 
@@ -130,7 +130,7 @@ Used to generate a message authentication code.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_KEY_PURPOSE_AGREE
 
@@ -146,4 +146,4 @@ Used for key agreement.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension

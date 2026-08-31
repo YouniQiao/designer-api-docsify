@@ -31,3 +31,153 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 | [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md) | DateMode枚举用于定义日期选择器的模式。 |
 | [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md) | DisplayMode枚举用于定义选择器的显示模式。 |
 | [TimeFormat](arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md) | TimeFormat枚举用于定义时间选择器的格式。 |
+
+## 示例
+
+从API版本26.0.0开始，新增[DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)参数。
+
+```TypeScript
+import { DatePickerComponent, DisplayMode, DateMode } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct DatePickerExample {
+  @State selectedYear: number = 2026
+  @State selectedMonth: number = 0
+  @State selectedDay: number = 1
+
+  build() {
+    Column() {
+      DatePickerComponent({
+        options: {
+          displayMode: DisplayMode.DATE,
+          dateOptions: {
+            mode: DateMode.DATE,
+            selected: new Date(this.selectedYear, this.selectedMonth, this.selectedDay),
+            start: new Date('2020-03-01'),
+            end: new Date('2030-10-31'),
+            enableHapticFeedback: true,
+            onChange: (result) => {
+              console.info('Selected date: ' + (result.year ?? 0) + '-' + ((result.month ?? 0) + 1) + '-' + (result.day ?? 0));
+              if (result.year !== undefined) {
+                this.selectedYear = result.year
+              }
+              if (result.month !== undefined) {
+                this.selectedMonth = result.month
+              }
+              if (result.day !== undefined) {
+                this.selectedDay = result.day
+              }
+            },
+            onScrollStop: (result) => {
+              console.info('Scroll stop: ' + (result.year ?? 0) + '-' + ((result.month ?? 0) + 1) + '-' + (result.day ?? 0));
+            }
+          }
+        }
+      })
+    }
+  }
+}
+```
+
+从API版本26.0.0开始，新增[DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)参数。
+
+```TypeScript
+import { DatePickerComponent, DisplayMode, TimeFormat } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct TimePickerExample {
+  build() {
+    Column() {
+      DatePickerComponent({
+        options: {
+          displayMode: DisplayMode.TIME,
+          timeOptions: {
+            format: TimeFormat.HOUR_MINUTE,
+            useMilitaryTime: true,
+            enableHapticFeedback: true,
+            onChange: (result) => {
+              console.info('Selected time: ' + (result.hour ?? 0) + ':' + (result.minute ?? 0));
+            },
+            onScrollStop: (result) => {
+              console.info('Scroll stop: ' + (result.hour ?? 0) + ':' + (result.minute ?? 0));
+            }
+          }
+        }
+      })
+    }
+  }
+}
+```
+
+从API版本26.0.0开始，新增[DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)参数。
+
+```TypeScript
+import { DatePickerComponent, DisplayMode, DateMode, TimeFormat } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct DateTimePickerExample {
+  build() {
+    Column() {
+      DatePickerComponent({
+        options: {
+          displayMode: DisplayMode.DATE_TIME,
+          dateOptions: {
+            mode: DateMode.DATE,
+            lunar: false,
+            enableHapticFeedback: true,
+            onChange: (result) => {
+              console.info('Selected: ' + JSON.stringify(result));
+            },
+            onScrollStop: (result) => {
+              console.info('Scroll stop: ' + JSON.stringify(result));
+            }
+          },
+          timeOptions: {
+            format: TimeFormat.HOUR_MINUTE_SECOND,
+            useMilitaryTime: false,
+            onChange: (result) => {
+              console.info('Selected: ' + JSON.stringify(result));
+            },
+            onScrollStop: (result) => {
+              console.info('Scroll stop: ' + JSON.stringify(result));
+            }
+          }
+        }
+      })
+    }
+  }
+}
+```
+
+从API版本26.0.0开始，新增DateOptions参数。
+
+```TypeScript
+import { DatePickerComponent, DisplayMode, DateMode } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct NoLoopPickerExample {
+  build() {
+    Column() {
+      DatePickerComponent({
+        options: {
+          displayMode: DisplayMode.DATE,
+          dateOptions: {
+            mode: DateMode.DATE,
+            selected: new Date(),
+            start: new Date('2020-01-01'),
+            end: new Date('2030-12-31'),
+            loop: false,
+            onChange: (result) => {
+              console.info('Selected date: ' + (result.year ?? 0) + '-' + ((result.month ?? 0) + 1) + '-' + (result.day ?? 0));
+            }
+          }
+        }
+      })
+    }
+  }
+}
+```

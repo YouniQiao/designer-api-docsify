@@ -17,8 +17,8 @@ Discovers printers by specifying the extension list. The discovered printers con
 **Since:** 20
 
 **Required permissions:** 
-- API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
-- API version 10 - 19: ohos.permission.MANAGE_PRINT_JOB
+- API version 20 and later: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
+- API versions 10 to 19: ohos.permission.MANAGE_PRINT_JOB
 
 **System capability:** SystemCapability.Print.PrintFramework
 
@@ -67,8 +67,8 @@ Discovers printers by specifying the extension list. The discovered printers con
 **Since:** 20
 
 **Required permissions:** 
-- API version 20+: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
-- API version 10 - 19: ohos.permission.MANAGE_PRINT_JOB
+- API version 20 and later: ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINT
+- API versions 10 to 19: ohos.permission.MANAGE_PRINT_JOB
 
 **System capability:** SystemCapability.Print.PrintFramework
 

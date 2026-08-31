@@ -583,7 +583,9 @@ struct AlertDialogExample {
       }
       .height('100%')
       .width('100%')
-      .backgroundColor(Color.Gray)
+      // 请开发者替换为实际资源文件
+      .backgroundImage($r("app.media.img"))
+      .backgroundImageSize({width: '100%', height: '100%'})
     }
   }
 }

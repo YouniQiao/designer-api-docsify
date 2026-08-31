@@ -1792,7 +1792,7 @@ showToast(options: promptAction.ShowToastOptions): void
 
 **示例**
 
-从API版本26.0.0开始，参数options的类型promptAction.ShowToastOptions中新增了systemMaterial属性。
+组件沉浸光感效果会根据设备算力与用户在系统中设置的沉浸光感效果自适应调整，开发者无需额外适配。
 
 ```TypeScript
 import { PromptAction, promptAction, uiMaterial } from '@kit.ArkUI';
@@ -1813,7 +1813,7 @@ struct Index {
               message: 'Message Info',
               duration: 2000,
               showMode:promptAction.ToastShowMode.DEFAULT,
-              // 设置系统材质
+              // 设置系统材质接口
               systemMaterial: new uiMaterial.ImmersiveMaterial({
                 style: uiMaterial.ImmersiveStyle.THIN
               })

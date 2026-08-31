@@ -16,7 +16,7 @@ Get remote device custom type.
 **Since:** 12
 
 **Required permissions:** 
-- API version 12 - 17: ohos.permission.ACCESS_BLUETOOTH
+- API versions 12 to 17: ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 

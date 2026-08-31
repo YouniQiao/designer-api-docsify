@@ -316,12 +316,12 @@ findElementByContent(condition: string): Promise<Array<AccessibilityElement>>
 
 ```TypeScript
 // Page.ets
-  build() {
-    Text('Connect')
-        .id('connect')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-// ...
+build() {
+  Text('Connect')
+      .id('connect')
+      .fontSize($r('app.float.page_text_font_size'))
+      .fontWeight(FontWeight.Bold)
+}
 
 // AccessibilityExtAbility.ets
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -383,17 +383,22 @@ findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityEle
 
 ```TypeScript
 // Page.ets
-// 点击TextInput使其成为无障碍焦点元素，向上方向的下一个焦点元素是Text#connect。
-  build() {
-    Text('Connect')
-        .id('connect')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
+import { webview } from '@kit.ArkWeb';
+controller: webview.WebviewController = new webview.WebviewController();
 
-    TextInput({ placeholder: 'please input...' })
-        .id('text_input')
-        .fontSize($r('app.float.page_text_font_size'))
-// ...
+// 点击“Link1”使其成为无障碍焦点元素，向上方向的下一个焦点元素是“Title1”。
+build() {
+  Text('Connect')
+      .id('connect')
+      .fontSize($r('app.float.page_text_font_size'))
+      .fontWeight(FontWeight.Bold)
+
+  TextInput({ placeholder: 'please input...' })
+      .id('text_input')
+      .fontSize($r('app.float.page_text_font_size'))
+
+  Web({ src: $rawfile("index.html"), controller: this.controller })
+}
 
 // AccessibilityExtAbility.ets
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -409,6 +414,25 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 }).catch((err: BusinessError) => {
   console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
 });
+```
+
+```TypeScript
+// index.html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<h3>Title1</h3>
+<div class="base-elements">
+    <a href="#link1">Link1</a>
+    <h4>Title2</h4> <a href="#link2">Link2</a>
+    <p>说明文本text3</p>
+</div>
+</body>
+</html>
 ```
 
 ## findElementByFocusDirection
@@ -454,39 +478,22 @@ findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Pro
 
 ```TypeScript
 // Page.ets
-// 点击“二级标题1”，使其成为无障碍焦点元素。下一个聚焦类型为标题焦点元素，是“二级标题2”。
-  build() {
-    Text('Connect')
-        .id('connect')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-        
-    SubHeader({
-      secondaryTitle: '二级标题1',
-      operationType: OperationType.BUTTON,
-      operationItem: [{
-        value: '操作',
-        action: () => {
-          Prompt.showToast({ message: 'demo' });
-        }
-      }]
-    })
+import { webview } from '@kit.ArkWeb';
+controller: webview.WebviewController = new webview.WebviewController();
 
-    TextInput({ placeholder: 'please input...' })
-        .id('text_input')
-        .fontSize($r('app.float.page_text_font_size'))
+// 点击“Title1”，使其成为无障碍焦点元素。下一个聚焦类型为标题的焦点元素是“Title2”。
+build() {
+  Text('Connect')
+      .id('connect')
+      .fontSize($r('app.float.page_text_font_size'))
+      .fontWeight(FontWeight.Bold)
 
-    SubHeader({
-      secondaryTitle: '二级标题2',
-      operationType: OperationType.BUTTON,
-      operationItem: [{
-        value: '操作',
-        action: () => {
-          Prompt.showToast({ message: 'demo' });
-        }
-      }]
-    })
-  }
+  TextInput({ placeholder: 'please input...' })
+      .id('text_input')
+      .fontSize($r('app.float.page_text_font_size'))
+
+  Web({ src: $rawfile("index.html"), controller: this.controller })
+}
 
 // AccessibilityExtAbility.ets
 import { AccessibilityElement, FocusRuleType } from '@kit.AccessibilityKit';
@@ -501,6 +508,25 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 }).catch((err: BusinessError) => {
   console.error(`Failed to getAccessibilityFocusedElement. Code: ${err.code}, message: ${err.message}`);
 });
+```
+
+```TypeScript
+// index.html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<h3>Title1</h3>
+<div class="base-elements">
+    <a href="#link1">Link1</a>
+    <h4>Title2</h4> <a href="#link2">Link2</a>
+    <p>说明文本text3</p>
+</div>
+</body>
+</html>
 ```
 
 ## findElementById
@@ -546,16 +572,16 @@ findElementById(condition: number): Promise<AccessibilityElement>
 ```TypeScript
 // Page.ets
 // 点击TextInput使其成为无障碍焦点元素。
-  build() {
-    Text('Connect')
-        .id('connect')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
+build() {
+  Text('Connect')
+      .id('connect')
+      .fontSize($r('app.float.page_text_font_size'))
+      .fontWeight(FontWeight.Bold)
 
-    TextInput({ placeholder: 'please input...' })
-        .id('text_input')
-        .fontSize($r('app.float.page_text_font_size'))
-// ...
+  TextInput({ placeholder: 'please input...' })
+      .id('text_input')
+      .fontSize($r('app.float.page_text_font_size'))
+}
 
 // AccessibilityExtAbility.ets
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -613,17 +639,17 @@ findElementsByAccessibilityHintText(condition: string): Promise<Array<Accessibil
 
 ```TypeScript
 // Page.ets
-  build() {
-    Text('Connect')
-        .id('connect')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
+build() {
+  Text('Connect')
+      .id('connect')
+      .fontSize($r('app.float.page_text_font_size'))
+      .fontWeight(FontWeight.Bold)
 
-    TextInput({ placeholder: 'please input...' })
-        .id('text_input')
-        .fontSize($r('app.float.page_text_font_size'))
-        .accessibilityTextHint('location')
-// ...
+  TextInput({ placeholder: 'please input...' })
+      .id('text_input')
+      .fontSize($r('app.float.page_text_font_size'))
+      .accessibilityTextHint('location')
+}
 
 // AccessibilityExtAbility.ets
 import { AccessibilityElement } from '@kit.AccessibilityKit';
@@ -684,6 +710,18 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<Foc
 **示例**
 
 ```TypeScript
+// 点击“Text#connect”使其成为无障碍焦点元素，下一个焦点元素是“TextInput”。
+build() {
+  Text('Connect')
+      .id('connect')
+      .fontSize($r('app.float.page_text_font_size'))
+      .fontWeight(FontWeight.Bold)
+
+  TextInput({ placeholder: 'please input...' })
+      .id('text_input')
+      .fontSize($r('app.float.page_text_font_size'))
+}
+
 import { AccessibilityElement, FocusMoveResult } from '@kit.AccessibilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
@@ -742,38 +780,39 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusR
 
 ```TypeScript
 // Page.ets
-  build() {
-    Text('Connect')
-        .id('connect')
-        .fontSize($r('app.float.page_text_font_size'))
-        .fontWeight(FontWeight.Bold)
-        
-    SubHeader({
-      secondaryTitle: '二级标题1',
-      operationType: OperationType.BUTTON,
-      operationItem: [{
-        value: '操作',
-        action: () => {
-          Prompt.showToast({ message: 'demo' });
-        }
-      }]
-    })
+// 点击“二级标题1”，使其成为无障碍焦点元素。下一个聚焦类型为标题的焦点元素是“二级标题2”。
+build() {
+  Text('Connect')
+      .id('connect')
+      .fontSize($r('app.float.page_text_font_size'))
+      .fontWeight(FontWeight.Bold)
+      
+  SubHeader({
+    secondaryTitle: '二级标题1',
+    operationType: OperationType.BUTTON,
+    operationItem: [{
+      value: '操作',
+      action: () => {
+        Prompt.showToast({ message: 'demo' });
+      }
+    }]
+  })
 
-    TextInput({ placeholder: 'please input...' })
-        .id('text_input')
-        .fontSize($r('app.float.page_text_font_size'))
+  TextInput({ placeholder: 'please input...' })
+      .id('text_input')
+      .fontSize($r('app.float.page_text_font_size'))
 
-    SubHeader({
-      secondaryTitle: '二级标题2',
-      operationType: OperationType.BUTTON,
-      operationItem: [{
-        value: '操作',
-        action: () => {
-          Prompt.showToast({ message: 'demo' });
-        }
-      }]
-    })
-  }
+  SubHeader({
+    secondaryTitle: '二级标题2',
+    operationType: OperationType.BUTTON,
+    operationItem: [{
+      value: '操作',
+      action: () => {
+        Prompt.showToast({ message: 'demo' });
+      }
+    }]
+  })
+}
 
 // AccessibilityExtAbility.ets
 

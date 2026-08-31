@@ -45,7 +45,7 @@ import wifi from '@ohos.wifi';
 try {
   let rssi = 0;
   let band = 0;
-  let level = wifi.getSignalLevel(rssi,band);
+  let level = wifi.getSignalLevel(rssi, band);
   console.info("level:" + JSON.stringify(level));
 }catch(error){
   console.error("failed:" + JSON.stringify(error));

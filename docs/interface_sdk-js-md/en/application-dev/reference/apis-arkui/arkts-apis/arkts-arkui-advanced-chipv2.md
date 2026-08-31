@@ -53,3 +53,206 @@ import { ChipV2Size, ChipV2AccessibilitySelectedType, ChipV2ImageIconConfig, Chi
 | --- | --- |
 | [ChipV2AccessibilitySelectedType](arkts-arkui-arkui-advanced-chipv2-chipv2accessibilityselectedtype-e.md) | Enum for ChipV2AccessibilitySelectedType |
 | [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) | Enum for ChipV2 Size |
+
+## Examples
+
+Since API version 26.0.0, ChipV2Options supports the prefixIcon and suffixIcon attributes.
+
+```TypeScript
+import { ChipV2, ChipV2Options, ChipV2Label, ChipV2PrefixImageIcon, ChipV2SuffixImageIcon, LengthMetrics, ColorMetrics } from '@kit.ArkUI';
+
+@Entry
+@ComponentV2
+struct Index {
+  build() {
+    Column({ space: 10 }) {
+      ChipV2({
+        chipV2Options: new ChipV2Options({
+          // Set the prefix icon attribute.
+          prefixIcon: new ChipV2PrefixImageIcon({
+            // Replace 'app.media.chips' with your actual icon resource.
+            src: $r('app.media.chips'),
+            size: { width: LengthMetrics.fp(16), height: LengthMetrics.fp(16) },
+            fillColor: ColorMetrics.resourceColor(Color.Red)
+          }),
+          // Set the text attribute.
+          label: new ChipV2Label({
+            text: 'Chip',
+            fontSize: LengthMetrics.fp(12),
+            fontColor: ColorMetrics.resourceColor(Color.Blue),
+            fontFamily: 'HarmonyOS Sans',
+            labelMargin: { left: LengthMetrics.fp(20), right: LengthMetrics.fp(30) }
+          }),
+          // Set the suffix icon attribute.
+          suffixIcon: new ChipV2SuffixImageIcon({
+            // Replace 'app.media.close' with your actual icon resource.
+            src: $r('app.media.close'),
+            size: { width: LengthMetrics.fp(16), height: LengthMetrics.fp(16) },
+            fillColor: ColorMetrics.resourceColor(Color.Red)
+          }),
+          size: { width: LengthMetrics.fp(160), height: LengthMetrics.fp(36) },
+          enabled: true,
+          backgroundColor: ColorMetrics.resourceColor($r('sys.color.ohos_id_color_button_normal')),
+          borderRadius: LengthMetrics.resource($r('sys.float.ohos_id_corner_radius_button')),
+          minFontScale: 0.2,
+          maxFontScale: 2,
+          padding: {
+            start: LengthMetrics.fp(20),
+            end: LengthMetrics.fp(20)
+          },
+          fontSize: LengthMetrics.fp(12)
+        })
+      })
+    }
+  }
+}
+```
+
+Since API version 26.0.0, ChipV2Options supports the activated attribute.
+
+```TypeScript
+import { ChipV2, ChipV2Options, ChipV2Label, ChipV2PrefixImageIcon, ChipV2CloseIcon, LengthMetrics, ColorMetrics } from '@kit.ArkUI';
+
+@Entry
+@ComponentV2
+struct Index {
+  @Local isActivated: boolean = false;
+
+  build() {
+    Column({ space: 10 }) {
+      ChipV2({
+        chipV2Options: new ChipV2Options({
+          // Set the prefix icon attribute.
+          prefixIcon: new ChipV2PrefixImageIcon({
+            // Replace 'app.media.icon' with your actual icon resource.
+            src: $r('app.media.chips'),
+            size: { width: LengthMetrics.fp(16), height: LengthMetrics.fp(16) },
+            fillColor: ColorMetrics.resourceColor(Color.Blue),
+            activatedFillColor: ColorMetrics.resourceColor($r('sys.color.ohos_id_color_text_primary_contrary'))
+          }),
+          // Set the text attribute.
+          label: new ChipV2Label({
+            text: 'Chip',
+            fontSize: LengthMetrics.fp(12),
+            fontColor: ColorMetrics.resourceColor(Color.Blue),
+            activatedFontColor: ColorMetrics.resourceColor($r('sys.color.ohos_id_color_text_primary_contrary')),
+            fontFamily: 'HarmonyOS Sans',
+            labelMargin: { left: LengthMetrics.fp(20), right: LengthMetrics.fp(30) }
+          }),
+          size: { width: LengthMetrics.fp(160), height: LengthMetrics.fp(36) },
+          allowClose: true,
+          enabled: true,
+          activated: this.isActivated,
+          backgroundColor: ColorMetrics.resourceColor($r('sys.color.ohos_id_color_button_normal')),
+          activatedBackgroundColor: ColorMetrics.resourceColor($r('sys.color.ohos_id_color_emphasize')),
+          borderRadius: LengthMetrics.resource($r('sys.float.ohos_id_corner_radius_button')),
+          closeIcon: new ChipV2CloseIcon({
+            fontSize: LengthMetrics.fp(12)
+          }),
+          onClose: () => {
+            console.info('chip on close');
+          },
+          onClicked: () => {
+            console.info('chip on clicked');
+          }
+        })
+      })
+      // Tap "Change active state" to activate and deactivate ChipV2.
+      Button('Change active state')
+        .onClick(() => {
+          this.isActivated = !this.isActivated;
+        })
+    }
+  }
+}
+```
+
+Since API version 26.0.0, ChipV2 is introduced.
+
+```TypeScript
+import { ChipV2, ChipV2Options, ChipV2Label, ChipV2PrefixSymbolIcon, SymbolGlyphModifier, LengthMetrics, ColorMetrics } from '@kit.ArkUI';
+
+@Entry
+@ComponentV2
+struct Index {
+  @Local isActivated: boolean = false;
+
+  build() {
+    Column({ space: 10 }) {
+      ChipV2({
+        chipV2Options: new ChipV2Options({
+          // Set the prefix symbol icon attribute.
+          prefixIcon: new ChipV2PrefixSymbolIcon({
+            normal: new SymbolGlyphModifier($r('sys.symbol.ohos_star')).fontSize(16).fontColor([Color.Green]),
+            activated: new SymbolGlyphModifier($r('sys.symbol.ohos_star')).fontSize(16).fontColor([Color.Red]),
+          }),
+          // Set the text attribute.
+          label: new ChipV2Label({
+            text: 'Chip',
+            fontSize: LengthMetrics.fp(12),
+            fontColor: ColorMetrics.resourceColor(Color.Blue),
+            activatedFontColor: ColorMetrics.resourceColor($r('sys.color.ohos_id_color_text_primary_contrary')),
+            fontFamily: 'HarmonyOS Sans',
+            labelMargin: { left: LengthMetrics.fp(20), right: LengthMetrics.fp(30) },
+          }),
+          size: { width: LengthMetrics.fp(160), height: LengthMetrics.fp(36) },
+          allowClose: true,
+          enabled: true,
+          activated: this.isActivated,
+          backgroundColor: ColorMetrics.resourceColor($r('sys.color.ohos_id_color_button_normal')),
+          activatedBackgroundColor: ColorMetrics.resourceColor($r('sys.color.ohos_id_color_emphasize')),
+          borderRadius: LengthMetrics.resource($r('sys.float.ohos_id_corner_radius_button')),
+          onClose: () => {
+            console.info('chip on close');
+          },
+          onClicked: () => {
+            console.info('chip on clicked');
+          }
+        })
+      })
+
+      Button('Change active state')
+        .onClick(() => {
+          this.isActivated = !this.isActivated;
+        })
+    }
+  }
+}
+```
+
+The following example uses makeObserved to wrap padding, and changes the start and end attributes of padding through a button, to verify that changes to internal attributes of object-type attributes can trigger UI refresh of ChipV2.
+
+```TypeScript
+import { ChipV2, ChipV2Options, ChipV2Label, LengthMetrics, ColorMetrics, UIUtils } from '@kit.ArkUI';
+
+@Entry
+@ComponentV2
+struct Index {
+  @Local chipV2Options: ChipV2Options = new ChipV2Options({
+    // Set the text attribute.
+    label: new ChipV2Label({ text: 'Chip' }),
+    // Use UIUtils.makeObserved to wrap padding so that the internal attributes start and end are observable.
+    padding: UIUtils.makeObserved({ start: LengthMetrics.fp(20), end: LengthMetrics.fp(20) }),
+    backgroundColor: ColorMetrics.resourceColor($r('sys.color.ohos_id_color_button_normal')),
+    borderRadius: LengthMetrics.resource($r('sys.float.ohos_id_corner_radius_button')),
+    enabled: true,
+  });
+  @Local currentPadding: number = 20;
+
+  build() {
+    Column({ space: 10 }) {
+      ChipV2({ chipV2Options: this.chipV2Options })
+      Button('Change padding')
+        .onClick(() => {
+          if (this.chipV2Options.padding) {
+            this.currentPadding = this.currentPadding === 20 ? 10 : 20;
+            // Change the internal attributes of padding. The UI is automatically refreshed because padding is wrapped with makeObserved.
+            this.chipV2Options.padding.start = LengthMetrics.fp(this.currentPadding);
+            this.chipV2Options.padding.end = LengthMetrics.fp(this.currentPadding);
+          }
+        })
+    }
+    .padding(20)
+  }
+}
+```

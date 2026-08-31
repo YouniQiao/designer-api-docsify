@@ -6,7 +6,7 @@ The **cryptoFramework** module provides APIs for cryptographic operations, shiel
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
-- API version 9 to 11: This API can be used only in the stage model.
+- API versions 9 to 11: This API can be used only in the stage model.
 
 **System capability:** SystemCapability.Security.CryptoFramework
 

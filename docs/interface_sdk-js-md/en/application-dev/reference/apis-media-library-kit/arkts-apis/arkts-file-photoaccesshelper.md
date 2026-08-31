@@ -117,7 +117,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [AlbumAttributeInfo](arkts-medialibrary-photoaccesshelper-albumattributeinfo-i-sys.md) | Album attribute info. |
 | [AlbumChangeData](arkts-medialibrary-photoaccesshelper-albumchangedata-i-sys.md) | Describes the change data of an album. |
 | [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i-sys.md) | Describes the information about an album. |
-| [AlbumOperation](arkts-medialibrary-photoaccesshelper-albumoperation-i-sys.md) | Album operation info. |
+| [AlbumOperation](arkts-medialibrary-photoaccesshelper-albumoperation-i-sys.md) | Represents an album operation configuration. |
 | [AlbumOrder](arkts-medialibrary-photoaccesshelper-albumorder-i-sys.md) | Describes the album sorting order. |
 | [AnalysisConfig](arkts-medialibrary-photoaccesshelper-analysisconfig-i-sys.md) | Defines the asset analysis configuration. |
 | [AnalysisResult](arkts-medialibrary-photoaccesshelper-analysisresult-i-sys.md) | Defines the asset analysis result. |

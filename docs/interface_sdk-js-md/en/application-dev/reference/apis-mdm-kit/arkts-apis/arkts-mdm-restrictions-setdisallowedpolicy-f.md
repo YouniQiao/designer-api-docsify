@@ -27,9 +27,9 @@ Disallows a feature.
 **Substitutes:** [setDisallowedPolicy](#setdisallowedpolicy)(admin: Want, feature: FeatureForDevice, disallow: boolean)
 
 **Required permissions:** 
-- API version 20+: ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS or ohos.permission.ENTERPRISE_MANAGE_NETWORK
-- API version 15 - 19: ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
-- API version 12 - 14: ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
+- API version 20 and later: ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS or ohos.permission.ENTERPRISE_MANAGE_NETWORK
+- API versions 15 to 19: ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
+- API versions 12 to 14: ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
 **Model restriction:** This API can be used only in the stage model.
 

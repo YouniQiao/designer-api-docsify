@@ -1390,7 +1390,7 @@ Removes the image that the application has set to be displayed in the multitaski
 **Since:** 26.0.0
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.MANAGE_RECENT_SNAPSHOT
+- API version 26.0.0 and later: ohos.permission.MANAGE_RECENT_SNAPSHOT
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1693,7 +1693,7 @@ Sets the image displayed in the multitasking view and on dock hover. This API us
 **Since:** 26.0.0
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.MANAGE_RECENT_SNAPSHOT
+- API version 26.0.0 and later: ohos.permission.MANAGE_RECENT_SNAPSHOT
 
 **Model restriction:** This API can be used only in the stage model.
 

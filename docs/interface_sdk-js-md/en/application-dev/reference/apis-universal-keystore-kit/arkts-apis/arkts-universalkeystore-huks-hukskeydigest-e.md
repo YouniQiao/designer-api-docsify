@@ -6,7 +6,7 @@ Enumerates the digest algorithms.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_DIGEST_NONE
 
@@ -22,7 +22,7 @@ No digest algorithm
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_DIGEST_MD5
 
@@ -38,7 +38,7 @@ MD5
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_DIGEST_SM3
 
@@ -54,7 +54,7 @@ SM3
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_DIGEST_SHA1
 
@@ -70,7 +70,7 @@ SHA-1
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_DIGEST_SHA224
 
@@ -86,7 +86,7 @@ SHA-224
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_DIGEST_SHA256
 
@@ -102,7 +102,7 @@ SHA-256
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_DIGEST_SHA384
 
@@ -118,7 +118,7 @@ SHA-384
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_DIGEST_SHA512
 
@@ -134,4 +134,4 @@ SHA-512
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension

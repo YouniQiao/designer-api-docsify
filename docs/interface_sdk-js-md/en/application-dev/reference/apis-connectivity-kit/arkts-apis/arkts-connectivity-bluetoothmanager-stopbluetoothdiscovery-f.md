@@ -21,7 +21,7 @@ Stops Bluetooth device scanning. On API 10 and above, the permission required by
 **Substitutes:** [stopBluetoothDiscovery](arkts-connectivity-connection-stopbluetoothdiscovery-f.md)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

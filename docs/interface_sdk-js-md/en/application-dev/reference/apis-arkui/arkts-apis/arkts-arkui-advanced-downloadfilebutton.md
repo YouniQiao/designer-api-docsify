@@ -58,7 +58,7 @@ struct Index {
           fontColor: '#ffffffff',
           iconColor: '#ffffffff',
           textIconSpace: '4vp'
-        }
+       }
       })
         .backgroundColor('#007dff')
         .borderStyle(BorderStyle.Dotted)
@@ -90,7 +90,9 @@ struct Index {
         }
         console.info(`downloadAction result:  ${JSON.stringify(result)}`);
       });
-    } catch (e) {
+    } catch (error) {
+      const err: BusinessError = error as BusinessError;
+      console.error(`downloadAction failed. Code: ${err.code}, message: ${err.message}`);
     }
   }
 }

@@ -10070,7 +10070,7 @@ Sets the touchable areas for this window. By default, the entire window is touch
 **Since:** 26.0.0
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.SET_WINDOW_TOUCH_AREAS
+- API version 26.0.0 and later: ohos.permission.SET_WINDOW_TOUCH_AREAS
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -10616,7 +10616,7 @@ The background color you set here covers the entire window, including both the t
 **Since:** 26.0.0
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.SET_WINDOW_ALPHA
+- API version 26.0.0 and later: ohos.permission.SET_WINDOW_ALPHA
 
 **System capability:** SystemCapability.Window.SessionManager
 

@@ -30,7 +30,7 @@ Switches to a specified subtype of a specified input method. This API uses an as
 **Since:** 9
 
 **Required permissions:** 
-- API version 9 - 10: ohos.permission.CONNECT_IME_ABILITY
+- API versions 9 to 10: ohos.permission.CONNECT_IME_ABILITY
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -96,7 +96,7 @@ Switches to a specified subtype of a specified input method. This API uses a pro
 **Since:** 9
 
 **Required permissions:** 
-- API version 9 - 10: ohos.permission.CONNECT_IME_ABILITY
+- API versions 9 to 10: ohos.permission.CONNECT_IME_ABILITY
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 

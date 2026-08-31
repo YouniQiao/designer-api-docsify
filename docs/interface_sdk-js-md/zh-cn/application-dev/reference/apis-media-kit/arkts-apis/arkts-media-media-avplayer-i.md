@@ -486,7 +486,7 @@ getCurrentPresentationTimestamp() : number
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至initialized状态后才能调用。
   avPlayer.play().then(() => {
@@ -565,7 +565,7 @@ getMediaKeySystemInfos(): Array<drm.MediaKeySystemInfo>
 ```TypeScript
 import { drm } from '@kit.DrmKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在mediaKeySystemInfoUpdate事件触发成功后才能调用。
   const infos = avPlayer.getMediaKeySystemInfos();
@@ -693,7 +693,7 @@ getPlaybackPosition() : number
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused/completed状态后才能调用。
   avPlayer.prepare().then(() => {
@@ -850,7 +850,7 @@ getSelectedTracks(): Promise<Array<number>>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused状态后才能调用。
   avPlayer.getSelectedTracks().then((arrList: Array<number>) => {
@@ -904,7 +904,7 @@ audioPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.Medi
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused状态后才能调用。
   avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
@@ -970,7 +970,7 @@ audioPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused状态后才能调用。
   avPlayer.getTrackDescription().then((arrList: Array<media.MediaDescription>) => {
@@ -1059,7 +1059,7 @@ isSeekContinuousSupported() : boolean
 **示例**
 
 ```TypeScript
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused/completed状态后才能调用。
   let isSupported = avPlayer.isSeekContinuousSupported();
@@ -2273,6 +2273,7 @@ onTimedMetaData(callback: Callback<AVTimedMetaData>): void
 async function test(){
   let avPlayer = await media.createAVPlayer();
   avPlayer.onTimedMetaData((data: media.AVTimedMetaData) => {
+    // 实际业务代码。
   });
 }
 ```
@@ -2321,7 +2322,7 @@ videoRecorder.pause((err: BusinessError) => {
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至playing状态后才能调用。
   avPlayer.pause((err: BusinessError) => {
@@ -2400,7 +2401,7 @@ videoRecorder.pause().then(() => {
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至playing状态后才能调用。
   avPlayer.pause().then(() => {
@@ -2478,7 +2479,7 @@ play(callback: AsyncCallback<void>): void
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/paused/completed状态后才能调用。
   avPlayer.play((err: BusinessError) => {
@@ -2534,7 +2535,7 @@ play(): Promise<void>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/paused/completed状态后才能调用。
   avPlayer.play().then(() => {
@@ -2587,7 +2588,7 @@ prepare(callback: AsyncCallback<void>): void
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至initialized状态后才能调用。
   avPlayer.prepare((err: BusinessError) => {
@@ -2646,7 +2647,7 @@ prepare(): Promise<void>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至initialized状态后才能调用。
   avPlayer.prepare().then(() => {
@@ -2752,7 +2753,7 @@ async function test() {
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发除released以外的状态才能调用。
   avPlayer.release((err: BusinessError) => {
@@ -2870,7 +2871,7 @@ async function test() {
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发除released以外的状态才能调用。
   avPlayer.release().then(() => {
@@ -3033,7 +3034,7 @@ videoRecorder.reset((err: BusinessError) => {
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至initialized/prepared/playing/paused/completed/stopped/error状态后才能调用。
   avPlayer.reset((err: BusinessError) => {
@@ -3112,7 +3113,7 @@ videoRecorder.reset().then(() => {
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至initialized/prepared/playing/paused/completed/stopped/error状态后才能调用。
   avPlayer.reset().then(() => {
@@ -3174,7 +3175,7 @@ seek(timeMs: number, mode?: SeekMode): void
 **示例**
 
 ```TypeScript
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   let seekTime: number = 1000;
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused/completed状态后才能调用。
@@ -3183,7 +3184,7 @@ async function  test(){
 ```
 
 ```TypeScript
-async function  test(){
+async function test(){
   // SEEK_CONTINUOUS 可以结合Slider的onChange回调方法进行对应处理，当slideMode为Moving时，触发拖动过程的SeekContinuous。
   let avPlayer = await media.createAVPlayer();
   let slideMovingTime: number = 2000;
@@ -3272,7 +3273,7 @@ selectTrack(index: number, mode?: SwitchMode): Promise<void>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer: media.AVPlayer = await media.createAVPlayer();
   let audioTrackIndex: Object = 0;
   avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
@@ -3317,7 +3318,7 @@ setBitrate(bitrate: number): void
 **示例**
 
 ```TypeScript
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   let bitrate: number = 96000;
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused/completed状态后才能调用。
@@ -3359,7 +3360,7 @@ setDecryptionConfig(mediaKeySession: drm.MediaKeySession, secureVideoPath: boole
 ```TypeScript
 import { drm } from '@kit.DrmKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 创建MediaKeySystem系统。
   let keySystem:drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
@@ -3471,7 +3472,7 @@ setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 import { media } from '@kit.MediaKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至initialized状态后才能调用。
   avPlayer.prepare().then(() => {
@@ -3576,7 +3577,7 @@ setPlaybackRange(startTimeMs: number, endTimeMs: number, mode?: SeekMode) : Prom
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   avPlayer.setPlaybackRange(0, 6000, media.SeekMode.SEEK_CLOSEST).then(() => {
     console.info('Succeeded setPlaybackRange');
@@ -3708,7 +3709,7 @@ setSpeed(speed: PlaybackSpeed): void
 **示例**
 
 ```TypeScript
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused/completed状态后才能调用。
   avPlayer.setSpeed(media.PlaybackSpeed.SPEED_FORWARD_2_00_X);
@@ -3960,7 +3961,7 @@ videoRecorder.stop((err: BusinessError) => {
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused/completed状态后才能调用。
   avPlayer.stop((err: BusinessError) => {
@@ -4039,7 +4040,7 @@ videoRecorder.stop().then(() => {
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-async function  test(){
+async function test(){
   let avPlayer = await media.createAVPlayer();
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused/completed状态后才能调用。
   avPlayer.stop().then(() => {

@@ -86,6 +86,150 @@ import { router } from '@kit.ArkUI';
 
 ## Examples
 
+The following sample code applies only to JavaScript files, not ArkTS files.
+
+```TypeScript
+// Current page
+export default {
+  pushPage() {
+    router.pushUrl({
+      url: 'pages/detail/detail',
+      params: {
+        data1: 'message'
+      }
+    });
+  }
+}
+```
+
+```TypeScript
+// detail page
+export default {
+  onInit() {
+    console.info('showData1:' + router.getParams()['data1']);
+  }
+}
+```
+
+Directly using router can lead to the issue of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain a [UIContext](arkts-apis-uicontext-uicontext.md) instance using getUIContext, and then obtain the associated router object using [getRouter](arkts-arkui-arkui-uicontext-uicontext-c.md#getrouter).
+
+```TypeScript
+// Navigate to the target page through router.pushUrl with the params parameter carried.
+import { router } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// Define the class for passing parameters.
+class InnerParams {
+  array: number[];
+
+  constructor(tuple: number[]) {
+    this.array = tuple;
+  }
+}
+
+class RouterParams {
+  text: string;
+  data: InnerParams;
+
+  constructor(str: string, tuple: number[]) {
+    this.text = str;
+    this.data = new InnerParams(tuple);
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  async routePage() {
+    let options: router.RouterOptions = {
+      url: 'pages/second',
+      params: new RouterParams('This is the value on the first page', [12, 45, 78])
+    };
+    // You are advised to use this.getUIContext().getRouter().pushUrl().
+    this.getUIContext().getRouter().pushUrl(options)
+      .then(() => {
+        console.info(`pushUrl finish`);
+      })
+      .catch((err: BusinessError) => {
+        console.error(`pushUrl failed. Code: ${err.code}, message: ${err.message}`);
+      })
+    }
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Text('This is the first page.')
+        .fontSize(50)
+        .fontWeight(FontWeight.Bold)
+      Button() {
+        Text('next page')
+          .fontSize(25)
+          .fontWeight(FontWeight.Bold)
+      }.type(ButtonType.Capsule)
+      .margin({ top: 20 })
+      .backgroundColor('#ccc')
+      .onClick(() => {
+        this.routePage()
+      })
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+```TypeScript
+// Receive the transferred parameters on the second page.
+import { router } from '@kit.ArkUI';
+
+class InnerParams {
+  array: number[];
+
+  constructor(tuple: number[]) {
+    this.array = tuple;
+  }
+}
+
+class RouterParams {
+  text: string;
+  data: InnerParams;
+
+  constructor(str: string, tuple: number[]) {
+    this.text = str;
+    this.data = new InnerParams(tuple);
+  }
+}
+
+@Entry
+@Component
+struct Second {
+  private content: string = 'This is the second page.';
+  // You are advised to use this.getUIContext().getRouter().getParams().
+  @State text: string = (this.getUIContext().getRouter().getParams() as RouterParams).text;
+  @State data: InnerParams = (this.getUIContext().getRouter().getParams() as RouterParams).data;
+  @State secondData: string = '';
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      Text(`${this.content}`)
+        .fontSize(50)
+        .fontWeight(FontWeight.Bold)
+      Text(this.text)
+        .fontSize(30)
+        .onClick(() => {
+          this.secondData = (this.data['array'][1]).toString();
+        })
+        .margin({ top: 20 })
+      Text(`This is the data passed from the first page: ${this.secondData}`)
+        .fontSize(20)
+        .margin({ top: 20 })
+        .backgroundColor('red')
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 The following describes the tree structure:
 
 ```TypeScript

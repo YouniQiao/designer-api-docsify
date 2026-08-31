@@ -263,7 +263,7 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 **Since:** 11
 
 **Required permissions:** 
-- API version 12+: ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS
+- API version 12 and later: ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS
 
 **Model restriction:** This API can be used only in the stage model.
 

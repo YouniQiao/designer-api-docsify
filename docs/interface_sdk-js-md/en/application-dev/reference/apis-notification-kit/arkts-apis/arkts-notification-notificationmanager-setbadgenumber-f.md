@@ -24,7 +24,7 @@ This API can be properly called on devices other than wearables. If it is called
 
 **See also:**
 
-getActiveNotificationCount obtains the number of
+[getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md) obtains the number of
 
 **Parameters:**
 
@@ -79,7 +79,7 @@ This API can be properly called on devices other than wearables. If it is called
 
 **See also:**
 
-getActiveNotificationCount obtains the number of
+[getActiveNotificationCount](arkts-notification-notificationmanager-getactivenotificationcount-f.md) obtains the number of
 
 **Parameters:**
 

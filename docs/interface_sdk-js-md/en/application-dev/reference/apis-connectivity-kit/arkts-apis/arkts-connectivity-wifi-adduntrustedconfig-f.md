@@ -124,7 +124,7 @@ try {
       domains: []
     }
   }
-  wifi.addUntrustedConfig(config,(error,result) => {
+  wifi.addUntrustedConfig(config, (error, result) => {
     console.info("result:" + JSON.stringify(result));
   });  
 }catch(error){

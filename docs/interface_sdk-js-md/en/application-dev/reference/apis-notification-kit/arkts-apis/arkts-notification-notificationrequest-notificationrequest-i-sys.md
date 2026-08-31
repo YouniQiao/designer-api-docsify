@@ -162,7 +162,7 @@ Whether the notification can be removed. If a notification is not removable, it 
 **Since:** 8
 
 **Required permissions:** 
-- API version 11+: ohos.permission.SET_UNREMOVABLE_NOTIFICATION
+- API version 11 and later: ohos.permission.SET_UNREMOVABLE_NOTIFICATION
 
 **System capability:** SystemCapability.Notification.Notification
 

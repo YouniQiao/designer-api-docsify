@@ -20,9 +20,9 @@ function getNotificationSetting(): Promise<NotificationSetting>
 
 **参见：**
 
-openNotificationSettings 拉起
+[openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md) 拉起
 
-isNotificationEnabled 获取指定应用的通知使能状态。
+[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) 获取指定应用的通知使能状态。
 
 **返回值：**
 

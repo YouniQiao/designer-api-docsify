@@ -6,7 +6,7 @@ Random interface, defining methods for generating random numbers. Before use, yo
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -74,13 +74,13 @@ Generates a random number of the specified length. This API uses an asynchronous
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
-- API version 9 to 11: This API can be used only in the stage model.
+- API versions 9 to 11: This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -128,7 +128,7 @@ Generates a random number of the specified length. This API uses a promise to re
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -247,13 +247,13 @@ Generates a random number of the specified length. This API returns the result s
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
-- API version 10 to 11: This API can be used only in the stage model.
+- API versions 10 to 11: This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -376,13 +376,13 @@ Sets a seed.
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
-- API version 9 to 11: This API can be used only in the stage model.
+- API versions 9 to 11: This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -436,4 +436,4 @@ Indicates the random generation algorithm name. Currently, only CTR_DRBG is supp
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Rand
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework

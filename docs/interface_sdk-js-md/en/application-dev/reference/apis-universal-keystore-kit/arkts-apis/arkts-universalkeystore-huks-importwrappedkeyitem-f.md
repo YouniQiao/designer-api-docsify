@@ -30,7 +30,7 @@ Imports keys in secure mode. This API uses an asynchronous callback to return th
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 **Parameters:**
 

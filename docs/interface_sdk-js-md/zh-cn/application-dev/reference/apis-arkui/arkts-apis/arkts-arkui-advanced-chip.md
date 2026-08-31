@@ -675,7 +675,8 @@ struct ChipMaterialExample {
     })
   }
 
-  build() {
+  @Builder
+  NavigationTitle() {
     Column({ space: 50 }) {
       Chip(this.chipOptions)
       Chip(this.chipOptions)
@@ -691,6 +692,15 @@ struct ChipMaterialExample {
     .padding(12)
     .width('100%')
     .height(150)
+  }
+
+  build() {
+    Column() {
+      Navigation() {
+        // 页面内容
+      }
+      .title({ builder: this.NavigationTitle, height: '100%' })
+    }.width('100%').height('100%')
   }
 }
 ```

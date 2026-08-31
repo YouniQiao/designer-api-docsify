@@ -1,6 +1,6 @@
 # C API<!--c-corefilekit-->
 
-- 模块<!--corefilekit-module-->n
+- 模块<!--corefilekit-module-->
     - [fileShare](capi-fileshare.md)
     - [fileUri](capi-fileuri.md)
     - [Archive](capi-archive.md)

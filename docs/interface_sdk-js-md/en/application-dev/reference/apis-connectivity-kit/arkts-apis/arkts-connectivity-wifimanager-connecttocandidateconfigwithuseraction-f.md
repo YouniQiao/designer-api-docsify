@@ -52,7 +52,7 @@ Connect to a specified candidate hotspot by networkId, and wait for user respond
 import { wifiManager } from '@kit.ConnectivityKit';
   
   try {
-    let networkId = 0; // Candidate network ID, which is generated when a candidate network is added.
+    let networkId = 0; // Candidate network ID, generated when adding a candidate network.
     wifiManager.connectToCandidateConfigWithUserAction(networkId).then(result => {
       console.info("result:" + JSON.stringify(result));
     }).catch((err:number) => {

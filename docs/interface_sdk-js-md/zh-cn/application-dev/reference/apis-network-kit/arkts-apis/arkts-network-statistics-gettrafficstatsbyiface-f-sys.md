@@ -49,7 +49,10 @@ import { statistics } from '@kit.NetworkKit';
 let iFaceInfo: statistics.IfaceInfo | null = null;
 if (iFaceInfo) {
   statistics.getTrafficStatsByIface(iFaceInfo as statistics.IfaceInfo, (error: BusinessError, statsInfo: statistics.NetStatsInfo) => {
-    console.error(JSON.stringify(error));
+    if (error) {
+      console.error(JSON.stringify(error));
+      return;
+    };
     console.info(
       "getTrafficStatsByIface bytes of received = " +
       JSON.stringify(statsInfo.rxBytes)

@@ -14,7 +14,7 @@ function create(id: string, type: WindowType, callback: AsyncCallback<Window>): 
 
 创建子窗口，使用callback异步回调。
 
-子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
+子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#immersive-layout沉浸式布局)。
 
 > **说明：**
 > 
@@ -65,7 +65,7 @@ function create(id: string, type: WindowType): Promise<Window>
 
 创建子窗口，使用Promise异步回调。
 
-子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
+子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#immersive-layout沉浸式布局)。
 
 > **说明：**
 > 

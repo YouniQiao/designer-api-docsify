@@ -40,7 +40,7 @@ constructor(jsonObject: Object)
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
 
-let eventInfo = new accessibility.EventInfo({
+let eventInfo: accessibility.EventInfo = ({
   type: 'click',
   bundleName: 'com.example.MyApplication',
   triggerAction: 'click',

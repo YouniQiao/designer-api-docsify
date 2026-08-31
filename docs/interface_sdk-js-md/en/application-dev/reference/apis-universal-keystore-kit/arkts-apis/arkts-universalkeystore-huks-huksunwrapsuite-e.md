@@ -6,7 +6,7 @@ Enumerates the algorithm suites for securely importing a key.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING
 
@@ -22,7 +22,7 @@ Use X25519 for key agreement and then use AES-256 GCM to decrypt the key.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING
 
@@ -38,7 +38,7 @@ Use ECDH for key agreement and then use AES-256 GCM to decrypt the key.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING
 

@@ -16,7 +16,7 @@ Injects a mouse/touchpad event.
 **Since:** 11
 
 **Required permissions:** 
-- API version 12+: ohos.permission.INJECT_INPUT_EVENT
+- API version 12 and later: ohos.permission.INJECT_INPUT_EVENT
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
 

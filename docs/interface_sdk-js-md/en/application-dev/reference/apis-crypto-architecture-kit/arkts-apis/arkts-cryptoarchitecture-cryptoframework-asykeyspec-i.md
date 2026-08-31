@@ -6,7 +6,7 @@ Defines the asymmetric key parameters for creating a key generator. You need to 
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -30,7 +30,7 @@ Asymmetric key algorithm, for example, **RSA**, **DSA**, **ECC**, **SM2**, **Ed2
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## specType
 
@@ -48,4 +48,4 @@ Key parameter type, which is used to distinguish public and private key paramete
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework

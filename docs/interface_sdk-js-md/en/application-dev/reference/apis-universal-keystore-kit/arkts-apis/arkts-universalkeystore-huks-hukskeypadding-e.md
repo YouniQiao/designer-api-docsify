@@ -34,7 +34,7 @@ Optimal Asymmetric Encryption Padding (OAEP).
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_PADDING_PSS
 
@@ -50,7 +50,7 @@ Probabilistic Signature Scheme (PSS).
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_PADDING_PKCS1_V1_5
 
@@ -66,7 +66,7 @@ Public Key Cryptography Standards (PKCS) #1 v1.5.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_PADDING_PKCS5
 
@@ -82,7 +82,7 @@ PKCS #5.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_PADDING_PKCS7
 

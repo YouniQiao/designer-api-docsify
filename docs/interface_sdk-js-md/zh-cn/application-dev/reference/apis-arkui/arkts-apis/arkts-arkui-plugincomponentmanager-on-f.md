@@ -45,7 +45,7 @@ const onRequestListener = (source:Want, name:string, data:pluginComponentManager
   console.info("onRequestListener source=" + JSON.stringify(source));
   console.info("onRequestListener name=" + name);
   console.info("onRequestListener data=" + JSON.stringify(data));
-  let returnData: Record<string, string | pluginComponentManager.KVObject> = { "template": "ets/pages/plugin.js", "data": data };
+  const returnData: Record<string, string | pluginComponentManager.KVObject> = { "template": "ets/pages/plugin.js", "data": data };
   return returnData;
 }
 pluginComponentManager.on("push", onPushListener);

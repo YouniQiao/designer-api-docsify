@@ -403,7 +403,7 @@ emitter1.off('eventId', callback);
 off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-Unsubscribes from an event of the Emitter instance. This API takes effect only when the [on](#on) or [once](#once) API is used to subscribe to the event with specified event ID and a callback is used to process the event.
+Unsubscribes from an event of the Emitter instance. This API takes effect only when the on or once API is used to subscribe to the event with specified event ID and a callback is used to process the event.
 
 After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed.
 

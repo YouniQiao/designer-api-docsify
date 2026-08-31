@@ -563,6 +563,40 @@ let filter = uiEffect.createFilter();
 filter.flyInFlyOutEffect(0.5, uiEffect.FlyMode.TOP);
 ```
 
+## haloBloom
+
+```TypeScript
+haloBloom(tintColor: Color, bloomFactor: number, glowExposure: number): Filter
+```
+
+对图像应用柔和光晕泛光效果，在明亮区域周围产生柔和的光晕。
+
+> **说明：**
+> 
+> 建议作为前景滤镜使用。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| tintColor | Color | 是 | 指定应用于光晕泛光的颜色色调。该值无限制，推荐范围为 [0, 1)。Alpha 通道无效。小于 0 或大于等于 1 的值无实际效果。当红、绿、蓝三个分量均设为 0 时，不应用色调，光晕泛光保留原始颜色。 |
+| bloomFactor | number | 是 | 控制光晕泛光的亮度。该值无限制，推荐范围为 [0, 10]。设为 0 时，光晕泛光无可见效果。 |
+| glowExposure | number | 是 | 控制光晕泛光的扩散范围。该值无限制，推荐范围为 [0, 10]。设为 0 时，光晕泛光无可见效果。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Filter | 返回附加了光晕泛光效果的 Filter。 |
+
 ## heatDistortion
 
 ```TypeScript
@@ -882,6 +916,40 @@ struct RadiusGradientBlurExample {
   }
 }
 ```
+
+## spinBlur
+
+```TypeScript
+spinBlur(center: common2D.Point, angle: number, samples: number): Filter
+```
+
+对图像应用旋转模糊效果，在指定中心点周围产生旋转运动拖影。
+
+> **说明：**
+> 
+> 建议作为前景滤镜使用。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| center | common2D.Point | 是 | 以归一化坐标指定模糊中心点。[0, 0] 表示左上角，[0.5, 0.5] 表示中心，[1, 1] 表示右下角。 |
+| angle | number | 是 | 以弧度指定旋转模糊的角度范围。该值无限制，推荐范围为 [-2π, 2π]。正值表示顺时针旋转，负值表示逆时针旋转。 |
+| samples | number | 是 | 指定旋转模糊的采样数量。该值会被截断到 [0, 128] 范围内。值越大效果越平滑，但处理开销也越大；通常 32 即可满足需求。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Filter | 返回附加了旋转模糊效果的 Filter。 |
 
 ## variableRadiusBlur
 

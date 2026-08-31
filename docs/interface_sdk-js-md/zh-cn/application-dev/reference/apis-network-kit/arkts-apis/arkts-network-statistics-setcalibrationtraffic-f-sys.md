@@ -51,7 +51,8 @@ function setCalibrationTraffic(simId: number, remainTraffic: number, totalTraffi
 **示例**
 
 ```TypeScript
-import { connection, statistics } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { statistics } from '@kit.NetworkKit';
 
 let simId:number = 1;
 let remainData:number = 600*1024*1024;   // 当前剩余流量为600MB。

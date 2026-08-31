@@ -22,7 +22,7 @@ For details about the supported specifications, see Symmetric Key Generation and
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.SymKey
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 

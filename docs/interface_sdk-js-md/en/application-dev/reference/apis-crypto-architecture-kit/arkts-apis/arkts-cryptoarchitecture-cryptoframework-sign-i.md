@@ -18,7 +18,7 @@ If the DSA algorithm is used for signing and the digest algorithm is **NoHash**,
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 ## Modules to Import
 
@@ -40,7 +40,7 @@ Obtains signing specifications. Currently, only RSA is supported.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -93,7 +93,7 @@ The **Sign** instance does not support repeated use of **init**.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -130,7 +130,7 @@ The **Sign** instance does not support repeated use of **init**.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -206,7 +206,7 @@ Currently, only RSA and SM2 are supported. Since API version 11, SM2 signing par
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -356,7 +356,7 @@ Signs the data, including data added via the update interface. This API uses an 
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -389,7 +389,7 @@ Signs data. This API uses an asynchronous callback to return the result.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -422,7 +422,7 @@ Signs the data, including data added via the update interface. This API uses a p
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -460,7 +460,7 @@ Signs data. This API uses a promise to return the result.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -748,7 +748,7 @@ This API can be called only after the [Sign](arkts-cryptoarchitecture-cryptofram
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -802,7 +802,7 @@ Before using this API, you must initialize the [Sign](arkts-cryptoarchitecture-c
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework
 
 **Parameters:**
 
@@ -896,4 +896,4 @@ Indicates the algorithm name of the Sign instance.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Signature
-- API version 9 to 11: SystemCapability.Security.CryptoFramework
+- API versions 9 to 11: SystemCapability.Security.CryptoFramework

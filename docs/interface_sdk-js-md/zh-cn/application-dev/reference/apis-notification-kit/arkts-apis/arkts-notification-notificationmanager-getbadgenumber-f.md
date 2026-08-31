@@ -22,7 +22,7 @@ function getBadgeNumber(): Promise<number>
 
 **参见：**
 
-setBadgeNumber 设定角标个数。
+[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) 设定角标个数。
 
 **返回值：**
 

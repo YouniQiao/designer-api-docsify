@@ -19,8 +19,8 @@ This API allows you to take screenshots of different screens by setting various 
 **Since:** 14
 
 **Required permissions:** 
-- API version 22+: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CUSTOM_SCREEN_RECORDING
-- API version 14 - 21: ohos.permission.CUSTOM_SCREEN_CAPTURE
+- API version 22 and later: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CUSTOM_SCREEN_RECORDING
+- API versions 14 to 21: ohos.permission.CUSTOM_SCREEN_CAPTURE
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

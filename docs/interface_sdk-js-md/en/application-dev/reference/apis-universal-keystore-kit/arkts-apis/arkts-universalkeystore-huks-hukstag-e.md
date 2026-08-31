@@ -78,7 +78,7 @@ Digest algorithm.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_PADDING
 
@@ -192,7 +192,7 @@ Salt value used for key derivation.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_PWD
 
@@ -224,7 +224,7 @@ Number of iterations for key derivation.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_KEY_GENERATE_TYPE
 
@@ -302,7 +302,7 @@ Type of the algorithm used for key agreement.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS
 
@@ -318,7 +318,7 @@ Public key alias used in key agreement.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS
 
@@ -334,7 +334,7 @@ Private key alias used in key agreement.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_AGREE_PUBLIC_KEY
 
@@ -350,7 +350,7 @@ Public key used in key agreement.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_KEY_ALIAS
 
@@ -380,7 +380,7 @@ Size of the derived key, in bytes.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_IMPORT_KEY_TYPE
 
@@ -396,7 +396,7 @@ Type of the imported key.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_UNWRAP_ALGORITHM_SUITE
 
@@ -412,7 +412,7 @@ Suite for securely importing a key.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 9 to 11: SystemCapability.Security.Huks.Extension
+- API versions 9 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG
 
@@ -428,7 +428,7 @@ Storage type of the derived key or agreed key.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 10 to 11: SystemCapability.Security.Huks.Extension
+- API versions 10 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_RSA_PSS_SALT_LEN_TYPE
 
@@ -444,7 +444,7 @@ Type of the **rsa_pss_salt_length**.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 10 to 11: SystemCapability.Security.Huks.Extension
+- API versions 10 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_ACTIVE_DATETIME
 
@@ -524,7 +524,7 @@ Reserved.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_USER_ID
 
@@ -540,7 +540,7 @@ ID of the user to which the key belongs.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_NO_AUTH_REQUIRED
 
@@ -556,7 +556,7 @@ Reserved.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_USER_AUTH_TYPE
 
@@ -1066,7 +1066,7 @@ Reserved.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_KEY_WRAP_TYPE
 
@@ -1082,7 +1082,7 @@ Reserved.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_KEY_AUTH_ID
 
@@ -1112,7 +1112,7 @@ Reserved.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_KEY_FLAG
 
@@ -1142,7 +1142,7 @@ Reserved.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_SECURE_KEY_ALIAS
 
@@ -1420,7 +1420,7 @@ Reserved.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension
 
 ## HUKS_TAG_ASYMMETRIC_PRIVATE_KEY_DATA
 
@@ -1436,4 +1436,4 @@ Reserved.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.Huks.Core
-- API version 8 to 11: SystemCapability.Security.Huks.Extension
+- API versions 8 to 11: SystemCapability.Security.Huks.Extension

@@ -8,7 +8,7 @@ Currently, only RSA and SM2 are supported. For details, see Asymmetric Key Encry
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## OAEP_MD_NAME_STR
 
@@ -24,7 +24,7 @@ Message digest algorithm used with the PKCS1_OAEP padding mode in RSA.
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## OAEP_MGF_NAME_STR
 
@@ -40,7 +40,7 @@ Mask generation algorithm used with the PKCS1_OAEP padding mode in RSA. Currentl
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## OAEP_MGF1_MD_STR
 
@@ -56,7 +56,7 @@ Message digest algorithm for the MGF1 mask generation used with the PKCS1_OAEP p
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## OAEP_MGF1_PSRC_UINT8ARR
 
@@ -72,7 +72,7 @@ OAEP_MGF1_PSRC_UINT8ARR = 103
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API version 10 to 11: SystemCapability.Security.CryptoFramework
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
 ## SM2_MD_NAME_STR
 

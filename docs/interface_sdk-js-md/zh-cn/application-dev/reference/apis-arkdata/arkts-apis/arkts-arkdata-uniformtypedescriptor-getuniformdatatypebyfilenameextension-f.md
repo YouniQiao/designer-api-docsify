@@ -55,7 +55,7 @@ try {
   console.error(`getUniformDataTypeByFilenameExtension throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 
-// 根据“.myts”，“general.plain-text”查不到预置数据类型则按返回根据入参信息生成的动态类型。
+// 根据“.myts”，“general.plain-text”查不到预置数据类型则返回根据入参信息生成的动态类型。
 try {
   let typeId = uniformTypeDescriptor.getUniformDataTypeByFilenameExtension('.myts', 'general.plain-text');
   if (typeId) {

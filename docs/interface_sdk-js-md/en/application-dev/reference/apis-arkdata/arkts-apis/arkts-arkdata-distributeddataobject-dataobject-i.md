@@ -966,7 +966,7 @@ Exits all sessions. This API uses an asynchronous callback to return the result.
 **Since:** 9
 
 **Required permissions:** 
-- API version 9 - 19: ohos.permission.DISTRIBUTED_DATASYNC
+- API versions 9 to 19: ohos.permission.DISTRIBUTED_DATASYNC
 
 **System capability:** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 

@@ -645,8 +645,8 @@ Operates album attribute.
 **Since:** 26.0.0
 
 **Required permissions:** 
-- API version 26.0.0 - since 26.0.0: ohos.permission.ACCESS_MEDIALIB_THUMB_DB
-- API version 26.1.0+: ohos.permission.ACCESS_MEDIALIB_THUMB_DB or ohos.permission.WRITE_IMAGEVIDEO
+- API versions 26.0.0 to since 26.0.0: ohos.permission.ACCESS_MEDIALIB_THUMB_DB
+- API version 26.1.0 and later: ohos.permission.ACCESS_MEDIALIB_THUMB_DB or ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
 

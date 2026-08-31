@@ -66,3 +66,101 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 | --- | --- |
 | [RowOptions](arkts-arkui-rowoptions-i.md) | Sets the spacing between child components of the **Row** component. |
 | [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md) | Sets the spacing between child components of the **Row** component. |
+
+## Examples
+
+This example demonstrates the effect of setting the layout attributes (such as the spacing and alignment mode) of the Row component.
+
+```TypeScript
+// resources/base/element/string.json
+{
+  "string": [
+    {
+      "name": "stringSpace",
+      "value": "5"
+    }
+  ]
+}
+```
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct RowExample {
+  build() {
+    Column({ space: 5 }) {
+      // Set the horizontal spacing between two adjacent child components to 5.
+      Text('space').width('90%')
+      Row({ space: 5 }) {
+        Row().width('30%').height(50).backgroundColor(0xAFEEEE)
+        Row().width('30%').height(50).backgroundColor(0x00FFFF)
+      }.width('90%').height(107).border({ width: 1 })
+
+      // Set the spacing between child components using the Resource type.
+      Text('Resource space').width('90%')
+      // Set the space attribute by using a resource reference (supported since API 18+).
+      Row({ space: $r('app.string.stringSpace') }) {
+        Row().width('30%').height(50).backgroundColor(0xAFEEEE)
+        Row().width('30%').height(50).backgroundColor(0x00FFFF)
+      }.width('90%').height(107).border({ width: 1 })
+
+      // Set the vertical alignment of child components.
+      Text('alignItems(Bottom)').width('90%')
+      // Align child components to the bottom.
+      Row() {
+        Row().width('30%').height(50).backgroundColor(0xAFEEEE)
+        Row().width('30%').height(50).backgroundColor(0x00FFFF)
+      }.width('90%').alignItems(VerticalAlign.Bottom).height('15%').border({ width: 1 })
+
+      Text('alignItems(Center)').width('90%')
+      // Align child components vertically to the center.
+      Row() {
+        Row().width('30%').height(50).backgroundColor(0xAFEEEE)
+        Row().width('30%').height(50).backgroundColor(0x00FFFF)
+      }.width('90%').alignItems(VerticalAlign.Center).height('15%').border({ width: 1 })
+
+      // Set the horizontal alignment of child components.
+      Text('justifyContent(End)').width('90%')
+      // Align child components to the right.
+      Row() {
+        Row().width('30%').height(50).backgroundColor(0xAFEEEE)
+        Row().width('30%').height(50).backgroundColor(0x00FFFF)
+      }.width('90%').border({ width: 1 }).justifyContent(FlexAlign.End)
+
+      Text('justifyContent(Center)').width('90%')
+      // Align child components horizontally to the center.
+      Row() {
+        Row().width('30%').height(50).backgroundColor(0xAFEEEE)
+        Row().width('30%').height(50).backgroundColor(0x00FFFF)
+      }.width('90%').border({ width: 1 }).justifyContent(FlexAlign.Center)
+    }.width('100%')
+  }
+}
+```
+
+This example shows the effect after setting the reverse attribute of the Row component, demonstrating how to reverse the arrangement order of child components.
+
+```TypeScript
+@Entry
+@Component
+struct RowReverseSample {
+  build() {
+    Row() {
+      Text('1')
+        .width(100)
+        .height(50)
+        .backgroundColor(0xAFEEEE)
+
+      Text('2')
+        .width(100)
+        .height(50)
+        .backgroundColor(0x00FFFF)
+    }
+    .height(100)
+    .width(300)
+    .border({ width: 1 })
+    .reverse(true)
+  }
+}
+```

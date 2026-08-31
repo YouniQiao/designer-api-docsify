@@ -390,13 +390,14 @@ struct WidgetCard {
   readonly fullHeightPercent: string = '100%';
 
   onFormRecycle(): string {
-    let formId: string = "1859635745"
-    console.info("card is recycled, formID: " + formId);
+    let formId: string = '1859635745';
+    console.info('card is recycled, formID: ' + formId);
     return formId;
   }
 
   onFormRecover(statusData: string): void {
-    console.info("card has been restored, formID: " + statusData);
+    // Trigger the callback when the widget is restored.
+    console.info('card has been restored, formID: ' + statusData);
   }
 
   build() {
@@ -462,13 +463,14 @@ struct WidgetCard {
   readonly fullHeightPercent: string = '100%';
 
   onFormRecycle(): string {
-    let formId: string = "1859635745"
-    console.info("card is recycled, formID: " + formId);
+    let formId: string = '1859635745';
+    // Trigger the callback when the widget is recycled.
+    console.info('card is recycled, formID: ' + formId);
     return formId;
   }
 
   onFormRecover(statusData: string): void {
-    console.info("card has been restored, formID: " + statusData);
+    console.info('card has been restored, formID: ' + statusData);
   }
 
   build() {
@@ -609,7 +611,7 @@ Invoked when the custom component needs to determine the positions of its child 
 
 **Examples**
 
-See the [example for customizing a layout](#example).
+For an example, see [Custom Layout Code Example](#example-1-implementing-a-custom-layout).
 
 ## onWillApplyTheme
 

@@ -1591,8 +1591,8 @@ Unsubscribes from the switchover between a foreground OS account and a backgroun
 **Since:** 12
 
 **Required permissions:** 
-- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
+- API version 23 and later: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+- API versions 12 to 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1639,8 +1639,8 @@ Unsubscribes from the end of a switchover between a foreground OS account and a 
 **Since:** 12
 
 **Required permissions:** 
-- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
+- API version 23 and later: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+- API versions 12 to 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1831,8 +1831,8 @@ Subscribes to the switchover between a foreground OS account and a background OS
 **Since:** 12
 
 **Required permissions:** 
-- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
+- API version 23 and later: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+- API versions 12 to 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1884,8 +1884,8 @@ Subscribes to the end of a switchover between a foreground OS account and a back
 **Since:** 12
 
 **Required permissions:** 
-- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
+- API version 23 and later: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+- API versions 12 to 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **System capability:** SystemCapability.Account.OsAccount
 

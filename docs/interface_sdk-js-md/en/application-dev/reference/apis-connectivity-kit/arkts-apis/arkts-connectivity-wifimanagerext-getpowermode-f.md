@@ -39,12 +39,17 @@ Obtains the current Wi-Fi power mode.
 ```TypeScript
 import { wifiManagerExt } from '@kit.ConnectivityKit';
 
+async function getWifiPowerMode() {
   try {
-      let model = wifiManagerExt.getPowerMode();
-      console.info("model info:" + model);
-  }catch(error){
-      console.error("failed: " + JSON.stringify(error));
+    // 1. Use the await keyword to wait for promise parsing to complete.
+    let model = await wifiManagerExt.getPowerMode();
+    
+    console.info("model info: " + model);
+  } catch (error) {
+    // 2. Capture the error when the promise is rejected.
+    console.error("failed: " + JSON.stringify(error));
   }
+}
 ```
 
 

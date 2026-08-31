@@ -101,8 +101,8 @@ struct Second {
   @State hei: number = 300;
   @State windowStrategy: WindowModeFollowStrategy = WindowModeFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE;
   private proxy: UIExtensionProxy | null = null;
-  private initPlaceholder = new ComponentContent(this.getUIContext(), wrapBuilder(LoadingBuilder), new Params);
-  private areaChangePlaceholder = new ComponentContent(this.getUIContext(), wrapBuilder(AreaChangePlaceholderBuilder), new Params);
+  private initPlaceholder = new ComponentContent(this.getUIContext(), wrapBuilder(LoadingBuilder), new Params());
+  private areaChangePlaceholder = new ComponentContent(this.getUIContext(), wrapBuilder(AreaChangePlaceholderBuilder), new Params());
 
   aboutToDisappear(): void {
     console.info('start do proxy off!');
@@ -133,7 +133,7 @@ struct Second {
           .height(this.hei)
           .border({width: 5, color: Color.Blue})
           .onReceive((data) => {
-            console.info('Lee onReceive, for test');
+            console.info('onReceive, for test');
             this.message3 = JSON.stringify(data['data']);
           })
           .onError((info) => {
@@ -376,13 +376,13 @@ struct Second {
               })
               .width(this.wid)
               .height(this.hei)
-               // 设置手势拦截，UEC外部组件不响应滚动
+              // 设置手势拦截，UIExtensionComponent外部组件不响应滚动
               .gesture(PanGesture().onActionStart(() => {
                 console.info('UIExtensionComponent PanGesture onAction');
               }))
               .border({ width: 5, color: Color.Blue })
               .onReceive((data) => {
-                console.info('Lee onReceive, for test');
+                console.info('onReceive, for test');
                 this.message3 = JSON.stringify(data['data']);
               })
               .onTerminated((info) => {

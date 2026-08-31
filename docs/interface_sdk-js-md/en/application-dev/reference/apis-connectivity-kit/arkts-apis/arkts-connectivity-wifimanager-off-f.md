@@ -49,10 +49,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive power state change event: " + result);
   }
   
-  // Register an event.
+  // Register event
   wifiManager.on("wifiStateChange", recvPowerNotifyFunc);
   
-  // Unregister an event.
+  // Unregister event
   wifiManager.off("wifiStateChange", recvPowerNotifyFunc);
 ```
 
@@ -98,10 +98,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive wifi connection change event: " + result);
   }
   
-  // Register an event.
+  // Register event
   wifiManager.on("wifiConnectionChange", recvWifiConnectionChangeFunc);
   
-  // Unregister an event.
+  // Unregister event
   wifiManager.off("wifiConnectionChange", recvWifiConnectionChangeFunc);
 ```
 
@@ -147,10 +147,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive Wifi scan state change event: " + result);
   }
   
-  // Register an event.
+  // Register event
   wifiManager.on("wifiScanStateChange", recvWifiScanStateChangeFunc);
   
-  // Unregister an event.
+  // Unregister event
   wifiManager.off("wifiScanStateChange", recvWifiScanStateChangeFunc);
 ```
 
@@ -194,10 +194,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive wifi rssi change event: " + result);
   }
   
-  // Register an event.
+  // Register event
   wifiManager.on("wifiRssiChange", recvWifiRssiChangeFunc);
   
-  // Unregister an event.
+  // Unregister event
   wifiManager.off("wifiRssiChange", recvWifiRssiChangeFunc);
 ```
 
@@ -241,10 +241,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive hotspot state change event: " + result);
   }
   
-  // Register an event.
+  // Register event
   wifiManager.on("hotspotStateChange", recvHotspotStateChangeFunc);
   
-  // Unregister an event.
+  // Unregister event
   wifiManager.off("hotspotStateChange", recvHotspotStateChangeFunc);
 ```
 
@@ -288,10 +288,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive p2p state change event: " + result);
   }
   
-  // Register an event.
+  // Register event
   wifiManager.on("p2pStateChange", recvP2pStateChangeFunc);
   
-  // Unregister an event.
+  // Unregister event
   wifiManager.off("p2pStateChange", recvP2pStateChangeFunc);
 ```
 
@@ -335,10 +335,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive p2p connection change event: " + result);
   }
   
-  // Register an event.
+  // Register event
   wifiManager.on("p2pConnectionChange", recvP2pConnectionChangeFunc);
   
-  // Unregister an event.
+  // Unregister event
   wifiManager.off("p2pConnectionChange", recvP2pConnectionChangeFunc);
 ```
 
@@ -380,10 +380,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive p2p device change event: " + result);
   }
   
-  // Register an event.
+  // Register event
   wifiManager.on("p2pDeviceChange", recvP2pDeviceChangeFunc);
   
-  // Unregister an event.
+  // Unregister event
   wifiManager.off("p2pDeviceChange", recvP2pDeviceChangeFunc);
 ```
 
@@ -425,10 +425,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive p2p peer device change event: " + result);
   }
   
-  // Register an event.
+  // Register event
   wifiManager.on("p2pPeerDeviceChange", recvP2pPeerDeviceChangeFunc);
   
-  // Unregister an event.
+  // Unregister event
   wifiManager.off("p2pPeerDeviceChange", recvP2pPeerDeviceChangeFunc);
 ```
 
@@ -472,10 +472,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive p2p persistent group change event: " + result);
   }
   
-  // Register an event.
+  // Register event
   wifiManager.on("p2pPersistentGroupChange", recvP2pPersistentGroupChangeFunc);
   
-  // Unregister an event.
+  // Unregister event
   wifiManager.off("p2pPersistentGroupChange", recvP2pPersistentGroupChangeFunc);
 ```
 
@@ -519,9 +519,9 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive p2p discovery change event: " + result);
   }
   
-  // Register an event.
+  // Register event
   wifiManager.on("p2pDiscoveryChange", recvP2pDiscoveryChangeFunc);
   
-  // Unregister an event.
+  // Unregister event
   wifiManager.off("p2pDiscoveryChange", recvP2pDiscoveryChangeFunc);
 ```

@@ -199,7 +199,7 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 子窗口的名字。 |
-| options | [SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md) | 是 | 子窗口参数。decorEnabled为true时，子窗口为非[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)；decorEnabled为false时，子窗口为沉浸式布局。 |
+| options | [SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md) | 是 | 子窗口参数。decorEnabled为true时，子窗口为非[沉浸式布局](../../../windowmanager/window-terminology.md#immersive-layout沉浸式布局)；decorEnabled为false时，子窗口为沉浸式布局。 |
 
 **返回值：**
 
@@ -5805,7 +5805,7 @@ on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void
 
 开启主窗口或子窗口关闭事件的监听。此监听仅能通过系统提供的窗口标题栏关闭按键触发，其余关闭窗口的方式不触发回调。
 
-该接口触发的回调函数是异步执行。子窗口的同步关闭事件监听参考on('subWindowClose')方法。主窗口的同步关闭事件监听参考[on('windowStageClose')](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#onwindowstageclose)方法。
+该接口触发的回调函数是异步执行。子窗口的同步关闭事件监听参考on('subWindowClose')方法。主窗口的同步关闭事件监听参考on('windowStageClose')方法。
 
 **起始版本：** 15
 
@@ -12786,7 +12786,7 @@ showWindow(callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 调用该接口前，建议先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者
+> 调用该接口前，建议先通过[loadContent](#loadcontent)方法或者
 > [setUIContent](#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
 > 一直显示启动界面；如果系统窗口、应用子窗口、模态窗和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
@@ -12870,7 +12870,7 @@ showWindow(): Promise<void>
 
 > **说明：**
 > 
-> 调用该接口前，建议优先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者
+> 调用该接口前，建议优先通过[loadContent](#loadcontent)方法或者
 > [setUIContent](#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
 > 一直显示启动界面；如果系统窗口、应用子窗口、模态窗和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 

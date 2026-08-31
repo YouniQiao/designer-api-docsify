@@ -38,7 +38,7 @@ Obtain the information about own device information. DeviceAddress in the return
 
 ```TypeScript
 import { wifiManager } from '@kit.ConnectivityKit';
-  // The local device information can be obtained only after a P2P group is created or the connection is successful.
+  // The local device information can be obtained only after a P2P group is created or a connection is established.
   wifiManager.getP2pLocalDevice((err, data:wifiManager.WifiP2pDevice) => {
     if (err) {
         console.error("get P2P local device error");

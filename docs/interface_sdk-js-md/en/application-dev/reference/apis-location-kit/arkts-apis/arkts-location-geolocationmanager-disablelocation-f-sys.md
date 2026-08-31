@@ -16,8 +16,8 @@ Disable location switch.
 **Since:** 9
 
 **Required permissions:** 
-- API version 20+: ohos.permission.MANAGE_SECURE_SETTINGS and ohos.permission.CONTROL_LOCATION_SWITCH
-- API version 9 - 19: ohos.permission.MANAGE_SECURE_SETTINGS
+- API version 20 and later: ohos.permission.MANAGE_SECURE_SETTINGS and ohos.permission.CONTROL_LOCATION_SWITCH
+- API versions 9 to 19: ohos.permission.MANAGE_SECURE_SETTINGS
 
 **System capability:** SystemCapability.Location.Location.Core
 

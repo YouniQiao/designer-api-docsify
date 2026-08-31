@@ -33,7 +33,7 @@ Connect to device with hfp. On API 10 and above, the permission required by this
 **Substitutes:** [connect](arkts-connectivity-hfp-handsfreeaudiogatewayprofile-i-sys.md#connect)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -103,7 +103,7 @@ Disconnect to device with hfp. On API 10 and above, the permission required by t
 **Substitutes:** [disconnect](arkts-connectivity-hfp-handsfreeaudiogatewayprofile-i-sys.md#disconnect)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -183,7 +183,7 @@ Unsubscribe the event reported when the profile connection state changes. On API
 **Substitutes:** connectionStateChange
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -216,7 +216,7 @@ Subscribe the event reported when the profile connection state changes. On API 1
 **Substitutes:** connectionStateChange
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

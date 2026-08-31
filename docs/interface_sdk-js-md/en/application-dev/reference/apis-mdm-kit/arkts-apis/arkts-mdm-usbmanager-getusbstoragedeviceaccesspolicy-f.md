@@ -17,8 +17,8 @@ Obtains the access policy of the USB storage device.
 **Since:** 12
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
-- API version 12 - 24: ohos.permission.ENTERPRISE_MANAGE_USB
+- API version 26.0.0 and later: ohos.permission.ENTERPRISE_MANAGE_USB or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
+- API versions 12 to 24: ohos.permission.ENTERPRISE_MANAGE_USB
 
 **Model restriction:** This API can be used only in the stage model.
 

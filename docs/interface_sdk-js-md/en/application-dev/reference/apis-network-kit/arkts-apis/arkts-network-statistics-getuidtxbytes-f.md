@@ -21,7 +21,7 @@ Obtains the total uplink traffic (in bytes) of the specified application from th
 **Since:** 10
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.GET_NETWORK_STATS
+- API version 26.0.0 and later: ohos.permission.GET_NETWORK_STATS
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -76,7 +76,7 @@ Obtains the total uplink traffic of the specified application from the last star
 **Since:** 10
 
 **Required permissions:** 
-- API version 26.0.0+: ohos.permission.GET_NETWORK_STATS
+- API version 26.0.0 and later: ohos.permission.GET_NETWORK_STATS
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 

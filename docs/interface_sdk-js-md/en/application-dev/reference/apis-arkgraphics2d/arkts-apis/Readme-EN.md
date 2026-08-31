@@ -195,11 +195,19 @@
     <!--Del-->
     - [LiquidMaterialEffectParam(system api)](arkts-arkgraphics2d-uieffect-liquidmaterialeffectparam-i-sys.md)<!--DelEnd-->
     <!--Del-->
+    - [SweepRefractionMaskOptions(system api)](arkts-arkgraphics2d-uieffect-sweeprefractionmaskoptions-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [SweepRefractionParam(system api)](arkts-arkgraphics2d-uieffect-sweeprefractionparam-i-sys.md)<!--DelEnd-->
+    <!--Del-->
     - [VisualEffect(system api)](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [WarpedRingParam(system api)](arkts-arkgraphics2d-uieffect-warpedringparam-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [Blender(system api)](arkts-arkgraphics2d-uieffect-blender-t-sys.md)<!--DelEnd-->
     <!--Del-->
     - [FlyMode(system api)](arkts-arkgraphics2d-uieffect-flymode-e-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [PrismShapeType(system api)](arkts-arkgraphics2d-uieffect-prismshapetype-e-sys.md)<!--DelEnd-->
     <!--Del-->
     - [TileMode(system api)](arkts-arkgraphics2d-uieffect-tilemode-e-sys.md)<!--DelEnd-->
     <!--Del-->

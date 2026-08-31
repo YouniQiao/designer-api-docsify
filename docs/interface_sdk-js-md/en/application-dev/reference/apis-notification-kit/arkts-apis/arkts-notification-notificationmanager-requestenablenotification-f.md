@@ -82,11 +82,11 @@ Requests notification to be enabled for this application. You can call this API 
 
 **See also:**
 
-isNotificationEnabled checks whether
+[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) checks whether
 
-openNotificationSettingsWithResult Opens the notification settings page of the application, which is presented in a semi-modal
+[openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) *     Opens the notification settings page of the application, which is presented in a semi-modal
 
-openNotificationSettings opens the
+[openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md) opens the
 
 **Parameters:**
 
@@ -209,11 +209,11 @@ Requests notification to be enabled for this application. You can call this API 
 
 **See also:**
 
-isNotificationEnabled checks whether
+[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) checks whether
 
-openNotificationSettingsWithResult Opens the notification settings page of the application, which is presented in a semi-modal
+[openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) *     Opens the notification settings page of the application, which is presented in a semi-modal
 
-openNotificationSettings opens the
+[openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md) opens the
 
 **Parameters:**
 

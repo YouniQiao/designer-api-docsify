@@ -33,7 +33,7 @@ The added service and its characteristics are provided by the local device. On A
 **Substitutes:** [addService](arkts-connectivity-ble-gattserver-i.md#addservice)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -106,7 +106,7 @@ Closes this {@code GattServer} object and unregisters its callbacks. On API 10 a
 **Substitutes:** [close](arkts-connectivity-ble-gattserver-i.md#close)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -160,7 +160,7 @@ This method should be called for every BLE peripheral device that has requested 
 **Substitutes:** [notifyCharacteristicChanged](arkts-connectivity-ble-gattserver-i.md#notifycharacteristicchanged)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -224,7 +224,7 @@ Unsubscribe characteristic read event. On API 10 and above, the permission requi
 **Substitutes:** characteristicRead
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -271,7 +271,7 @@ Unsubscribe characteristic write event. On API 10 and above, the permission requ
 **Substitutes:** characteristicWrite
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -318,7 +318,7 @@ Unsubscribe descriptor read event. On API 10 and above, the permission required 
 **Substitutes:** descriptorRead
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -365,7 +365,7 @@ Unsubscribe descriptor write event. On API 10 and above, the permission required
 **Substitutes:** descriptorWrite
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -412,7 +412,7 @@ Unsubscribe server connection state changed event. On API 10 and above, the perm
 **Substitutes:** connectionStateChange
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -459,7 +459,7 @@ Subscribe characteristic read event. On API 10 and above, the permission require
 **Substitutes:** characteristicRead
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -520,7 +520,7 @@ Subscribe characteristic write event. On API 10 and above, the permission requir
 **Substitutes:** characteristicWrite
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -584,7 +584,7 @@ Subscribe descriptor read event. On API 10 and above, the permission required by
 **Substitutes:** descriptorRead
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -645,7 +645,7 @@ Subscribe descriptor write event. On API 10 and above, the permission required b
 **Substitutes:** descriptorWrite
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -709,7 +709,7 @@ Subscribe server connection state changed event. On API 10 and above, the permis
 **Substitutes:** connectionStateChange
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -760,7 +760,7 @@ Removes a specified service from the list of GATT services provided by this devi
 **Substitutes:** [removeService](arkts-connectivity-ble-gattserver-i.md#removeservice)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -810,7 +810,7 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 **Substitutes:** [sendResponse](arkts-connectivity-ble-gattserver-i.md#sendresponse)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.USE_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -871,7 +871,7 @@ Starts BLE advertising. On API 10 and above, the permission required by this int
 **Substitutes:** [startAdvertising](arkts-connectivity-ble-startadvertising-f.md)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -958,7 +958,7 @@ Stops BLE advertising. On API 10 and above, the permission required by this inte
 **Substitutes:** [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md)
 
 **Required permissions:** 
-- API version 10+: ohos.permission.ACCESS_BLUETOOTH
+- API version 10 and later: ohos.permission.ACCESS_BLUETOOTH
 - API version 9: ohos.permission.DISCOVER_BLUETOOTH
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

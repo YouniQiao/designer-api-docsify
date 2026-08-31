@@ -20,9 +20,9 @@ Obtains the notification settings of the application, including the switch statu
 
 **See also:**
 
-openNotificationSettings opens the notification
+[openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md) opens the notification
 
-isNotificationEnabled Checks whether notification is enabled for the
+[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) Checks whether notification is enabled for the
 
 **Return value:**
 

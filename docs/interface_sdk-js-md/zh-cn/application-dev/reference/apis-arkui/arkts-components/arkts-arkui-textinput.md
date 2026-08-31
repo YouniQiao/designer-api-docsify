@@ -520,7 +520,7 @@ struct TextInputExample {
   build() {
     Row() {
       Column() {
-        Text('TextInput为inline模式，WordBreakType属性为NORMAL的样式：').fontSize(16).fontColor(0xCCCCCC)
+        Text('TextInput为inline模式，wordBreak属性为NORMAL的样式：').fontSize(16).fontColor(0xCCCCCC)
         TextInput({
           text: this.textStrEn
         })
@@ -529,7 +529,7 @@ struct TextInputExample {
           .style(TextInputStyle.Inline)// Inline模式
           .wordBreak(WordBreak.NORMAL) // 非Inline模式该属性无效
 
-        Text('TextInput为inline模式，英文文本，WordBreakType属性为BREAK_ALL的样式：').fontSize(16).fontColor(0xCCCCCC)
+        Text('TextInput为inline模式，英文文本，wordBreak属性为BREAK_ALL的样式：').fontSize(16).fontColor(0xCCCCCC)
         TextInput({
           text: this.textStrEn
         })
@@ -538,7 +538,7 @@ struct TextInputExample {
           .style(TextInputStyle.Inline)
           .wordBreak(WordBreak.BREAK_ALL)
 
-        Text('TextInput为inline模式，中文文本，WordBreakType属性为BREAK_ALL的样式：').fontSize(16).fontColor(0xCCCCCC)
+        Text('TextInput为inline模式，中文文本，wordBreak属性为BREAK_ALL的样式：').fontSize(16).fontColor(0xCCCCCC)
         TextInput({
           text: this.textStrZn
         })
@@ -547,7 +547,7 @@ struct TextInputExample {
           .style(TextInputStyle.Inline)
           .wordBreak(WordBreak.BREAK_ALL)
 
-        Text('TextInput为inline模式，WordBreakType属性为BREAK_WORD的样式：').fontSize(16).fontColor(0xCCCCCC)
+        Text('TextInput为inline模式，wordBreak属性为BREAK_WORD的样式：').fontSize(16).fontColor(0xCCCCCC)
         TextInput({
           text: this.textStrEn
         })
@@ -1172,8 +1172,7 @@ struct TextInputExample {
   // 设置字体大小
   async setFontScale(scale: number): Promise<void> {
     let configInit: Configuration = {
-      language: 'zh-Ch',
-      fontSizeScale: scale,
+      fontSizeScale: scale
     };
     // 更新配置-字体大小，调用系统接口更新字体配置
     // 需在工程的module.json5文件的requestPermissions字段配置权限：ohos.permission.UPDATE_CONFIGURATION
@@ -1198,7 +1197,7 @@ struct TextInputExample {
           .minFontScale(this.minFontScale)// 设置最小字体缩放倍数，参数为undefined则跟随系统默认倍数缩放
           .maxFontScale(this.maxFontScale) // 设置最大字体缩放倍数，参数为undefined则跟随系统默认倍数缩放
       }.width('100%')
-
+      // 以下按钮只用做字体大小倍数调整，不在示例图中呈现
       Column() {
         Row() {
           Button('1倍').onClick(() => {

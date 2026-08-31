@@ -22,9 +22,9 @@ function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 
 **参见：**
 
-unsubscribe 取消通知扩展订阅。
+[unsubscribe](arkts-notification-notificationextensionsubscription-unsubscribe-f.md) 取消通知扩展订阅。
 
-getSubscribeInfo 获取应用通知扩展订阅信息。
+[getSubscribeInfo](arkts-notification-notificationextensionsubscription-getsubscribeinfo-f.md) 获取应用通知扩展订阅信息。
 
 **参数：**
 

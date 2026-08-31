@@ -17,8 +17,8 @@ Publishes a notification to a specified user. This API uses an asynchronous call
 **Since:** 9
 
 **Required permissions:** 
-- API version 18+: ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
-- API version 9 - 17: ohos.permission.NOTIFICATION_CONTROLLER
+- API version 18 and later: ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
+- API versions 9 to 17: ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -101,8 +101,8 @@ Publishes a notification to a specified user. This API uses a promise to return 
 **Since:** 9
 
 **Required permissions:** 
-- API version 18+: ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
-- API version 9 - 17: ohos.permission.NOTIFICATION_CONTROLLER
+- API version 18 and later: ohos.permission.NOTIFICATION_CONTROLLER or ohos.permission.SEND_NOTIFICATION_CROSS_USER
+- API versions 9 to 17: ohos.permission.NOTIFICATION_CONTROLLER
 
 **System capability:** SystemCapability.Notification.Notification
 

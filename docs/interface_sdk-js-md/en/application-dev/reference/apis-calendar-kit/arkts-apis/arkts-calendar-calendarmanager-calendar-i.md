@@ -25,8 +25,8 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.WRITE_CALENDAR
+- API version 21 and later: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.WRITE_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -94,8 +94,8 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.WRITE_CALENDAR
+- API version 21 and later: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.WRITE_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -158,8 +158,8 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.WRITE_CALENDAR
+- API version 21 and later: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.WRITE_CALENDAR
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -232,8 +232,8 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.WRITE_CALENDAR
+- API version 21 and later: ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.WRITE_CALENDAR
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -663,8 +663,8 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.READ_CALENDAR
+- API version 21 and later: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.READ_CALENDAR
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -740,8 +740,8 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.READ_CALENDAR
+- API version 21 and later: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.READ_CALENDAR
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -827,8 +827,8 @@ For versions earlier than API version 20, the default fields to be obtained incl
 **Since:** 10
 
 **Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 10-20: ohos.permission.READ_CALENDAR
+- API version 21 and later: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API versions 10 to 20: ohos.permission.READ_CALENDAR
 
 **System capability:** SystemCapability.Applications.CalendarData
 
@@ -971,8 +971,8 @@ Queries the event instance with a specified event key in a calendar. This API us
 **Since:** 18
 
 **Required permissions:** 
-- API version 21+: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
-- API version 18-20: ohos.permission.READ_CALENDAR
+- API version 21 and later: ohos.permission.READ_CALENDAR or ohos.permission.READ_WHOLE_CALENDAR
+- API versions 18 to 20: ohos.permission.READ_CALENDAR
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

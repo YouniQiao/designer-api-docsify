@@ -17,7 +17,7 @@ Removes the data control information set by [setAppShareOptions](arkts-arkdata-u
 **Since:** 14
 
 **Required permissions:** 
-- API version 14+: ohos.permission.MANAGE_UDMF_APP_SHARE_OPTION
+- API version 14 and later: ohos.permission.MANAGE_UDMF_APP_SHARE_OPTION
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -55,7 +55,7 @@ try {
   console.error(`getUniformDataTypeByMIMEType throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 
-// 根据“image/myimage”, “general.image”查不到预置数据类型则按返回根据入参信息生成的动态类型。
+// 根据“image/myimage”, “general.image”查不到预置数据类型则返回根据入参信息生成的动态类型。
 try {
   let typeId = uniformTypeDescriptor.getUniformDataTypeByMIMEType('image/myimage', 'general.image');
   if (typeId) {
