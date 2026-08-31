@@ -1,4 +1,0 @@
-# VkBindVertexBufferIndirectCommandNV
-
-## Overview
-

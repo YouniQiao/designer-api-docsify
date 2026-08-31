@@ -1,4 +1,0 @@
-# VkShadingRatePaletteNV
-
-## Overview
-

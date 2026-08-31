@@ -13,6 +13,8 @@ This module provides the capability of displaying ads, covering native, roll, sp
 
 **Since:** 11
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## Modules to Import
@@ -30,6 +32,8 @@ adRenderer?: () => void
 Application self-rendered ad style. The application self-rendered ad style is a restricted capability. For details, please consult [Traffic Monetization Official Website Customer Support](https://developer.huawei.com/consumer/en/doc/monetize/ support-0000001061434261).
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -110,6 +114,8 @@ Used to provide the playback status of roll ads externally. Set to 1 for playing
 **Type:** number
 
 **Since:** 15
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

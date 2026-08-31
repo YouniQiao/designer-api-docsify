@@ -1,4 +1,0 @@
-# VkSparseImageOpaqueMemoryBindInfo
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceSubpassShadingFeaturesHUAWEI
-
-## Overview
-

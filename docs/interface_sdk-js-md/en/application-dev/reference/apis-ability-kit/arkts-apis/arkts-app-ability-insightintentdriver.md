@@ -38,12 +38,6 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 | [queryEntityInfo](arkts-ability-insightintentdriver-queryentityinfo-f-sys.md) | Query insight intent entity information. |
 <!--DelEnd-->
 
-### Interfaces
-
-| Name | Description |
-| --- | --- |
-| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md) | Defines the parameter type of the [@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod) decorator. All parameters inherit from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md). |
-
 <!--Del-->
 ### Interfaces(System API)
 
@@ -53,6 +47,7 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 | [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md) | Describes the parameters supported by the [@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform) decorator, such as the widget name. It also describes the widget information bound to the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md). |
 | [ExecuteParam](arkts-ability-insightintentdriver-executeparam-i-sys.md) | Defines the parameter used to execute an intent call. |
 | [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) | Describes the parameters supported by the [@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform) decorator, such as the widget name. It also describes the widget information bound to the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md). |
+| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i-sys.md) | Defines the parameter type of the [@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod) decorator. All parameters inherit from [IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md). |
 | [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md) | Defines the intent information, which is the specific parameter configuration of the intent in the device. |
 | [InsightIntentInfoFilter](arkts-ability-insightintentdriver-insightintentinfofilter-i-sys.md) | Defines an intent filter, which specifies the criteria for selecting target intents. It is used to filter intents on the device that meet these criteria. |
 | [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) | Describes the parameters supported by the [@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator, such as the URI required for application redirection. |

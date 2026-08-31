@@ -1,4 +1,0 @@
-# VkDisplayModeStereoPropertiesNV
-
-## Overview
-

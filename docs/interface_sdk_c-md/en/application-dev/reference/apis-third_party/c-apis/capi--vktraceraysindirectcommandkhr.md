@@ -1,4 +1,0 @@
-# VkTraceRaysIndirectCommandKHR
-
-## Overview
-

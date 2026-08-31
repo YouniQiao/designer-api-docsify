@@ -54,7 +54,6 @@ import { osAccount } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [AccountManager](arkts-basicservices-osaccount-accountmanager-i.md) | Provides APIs for managing OS accounts. |
-| [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i.md) | Represents a set of optional parameters for creating an OS account bound to the specified domain account. It inherits from [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md). |
 | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Represents domain account information. |
 | [DomainServerConfig](arkts-basicservices-osaccount-domainserverconfig-i.md) | Represents the configuration of a domain server. |
 | [OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md) | Represents the OS account information. |
@@ -73,6 +72,7 @@ import { osAccount } from '@kit.BasicServicesKit';
 | [AuthStatusInfo](arkts-basicservices-osaccount-authstatusinfo-i-sys.md) | Presents the authentication status information. |
 | [ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md) | Defines the constraint change information. |
 | [ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md) | Defines the constraint source type. |
+| [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i-sys.md) | Represents a set of optional parameters for creating an OS account bound to the specified domain account. It inherits from [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md). |
 | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | Represents the optional parameter used to create an OS account. |
 | [CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md) | Defines the credential change information. |
 | [CredentialInfo](arkts-basicservices-osaccount-credentialinfo-i-sys.md) | Defines the credential information. |

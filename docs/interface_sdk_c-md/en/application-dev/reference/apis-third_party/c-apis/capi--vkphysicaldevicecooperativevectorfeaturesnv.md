@@ -1,4 +1,0 @@
-# VkPhysicalDeviceCooperativeVectorFeaturesNV
-
-## Overview
-

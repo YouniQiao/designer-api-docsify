@@ -4,6 +4,8 @@ Object used for store least recently used sendable Object.
 
 **Since:** 18
 
+**Decorator:** @Sendable
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

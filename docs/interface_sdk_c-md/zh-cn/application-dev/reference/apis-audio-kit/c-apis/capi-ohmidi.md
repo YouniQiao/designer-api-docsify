@@ -5,6 +5,7 @@
 Provides the definition of the C interface for the MIDI module.
 
 **起始版本：** 24
+
 ## 文件汇总
 
 | 名称 | 描述 |

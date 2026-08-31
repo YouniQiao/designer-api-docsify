@@ -1,4 +1,0 @@
-# VkPhysicalDeviceFragmentDensityMap2FeaturesEXT
-
-## Overview
-

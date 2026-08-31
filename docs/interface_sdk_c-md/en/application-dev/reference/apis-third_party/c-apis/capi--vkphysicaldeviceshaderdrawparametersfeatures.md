@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderDrawParametersFeatures
-
-## Overview
-

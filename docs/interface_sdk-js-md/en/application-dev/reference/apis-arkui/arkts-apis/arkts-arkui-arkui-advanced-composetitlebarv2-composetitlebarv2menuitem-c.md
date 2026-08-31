@@ -4,6 +4,8 @@ Declaration of the menu item on the right side.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,6 +23,8 @@ action?: OnActionCallback
 Callback function when click on this menu item.
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +66,8 @@ The accessibilityDescription of this menu item.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -84,6 +90,8 @@ The accessibilityLevel of this menu item.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -101,6 +109,8 @@ The accessibilityText of this menu item.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,6 +130,8 @@ Whether to enable this menu item.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -137,6 +149,8 @@ Icon label for this menu item.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,6 +170,8 @@ Symbol icon resource for this menu item, which has higher priority than value.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -173,6 +189,8 @@ Icon resource for this menu item.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

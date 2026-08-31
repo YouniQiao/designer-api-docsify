@@ -1,4 +1,0 @@
-# VkPhysicalDeviceMemoryDecompressionFeaturesNV
-
-## Overview
-

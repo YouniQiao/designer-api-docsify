@@ -19,6 +19,8 @@ import { FoldSplitContainer } from '@kit.ArkUI';
 
 **起始版本：** 12
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -57,6 +59,8 @@ animationOptions?: AnimateParam | null
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -74,6 +78,8 @@ expandedLayoutOptions: ExpandedRegionLayoutOptions
 **类型：** [ExpandedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -93,6 +99,8 @@ extra?: Callback<void>
 
 **起始版本：** 12
 
+**装饰器类型：** @BuilderParam
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -110,6 +118,8 @@ foldedLayoutOptions: FoldedRegionLayoutOptions
 **类型：** [FoldedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -129,6 +139,8 @@ hoverModeLayoutOptions: HoverModeRegionLayoutOptions
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -147,6 +159,8 @@ primary: Callback<void>
 
 **起始版本：** 12
 
+**装饰器类型：** @BuilderParam
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -164,6 +178,8 @@ secondary: Callback<void>
 **类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceLayeredDriverPropertiesMSFT
-
-## Overview
-

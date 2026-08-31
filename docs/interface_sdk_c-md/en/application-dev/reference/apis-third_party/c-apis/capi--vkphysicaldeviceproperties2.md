@@ -1,4 +1,0 @@
-# VkPhysicalDeviceProperties2
-
-## Overview
-

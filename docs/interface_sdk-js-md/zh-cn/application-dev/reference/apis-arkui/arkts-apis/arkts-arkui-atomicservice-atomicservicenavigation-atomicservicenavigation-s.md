@@ -8,6 +8,8 @@
 
 **起始版本：** 12
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -26,6 +28,8 @@ navDestinationBuilder?: NavDestinationBuilder
 
 **起始版本：** 12
 
+**装饰器类型：** @BuilderParam
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -41,6 +45,8 @@ gradientBackground?: GradientBackground
 **类型：** [GradientBackground](arkts-arkui-atomicservice-atomicservicenavigation-gradientbackground-i.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -58,6 +64,8 @@ hideTitleBar?: boolean
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -73,6 +81,8 @@ menus?: CustomBuilder | Array<NavigationMenuItem>
 **类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| Array&lt;[NavigationMenuItem](../arkts-components/arkts-arkui-navigationmenuitem-i.md)&gt;
 
 **起始版本：** 18
+
+**装饰器类型：** @BuilderParam
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -90,6 +100,8 @@ minContentWidth?: Dimension
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -105,6 +117,8 @@ mode?: NavigationMode
 **类型：** [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -138,6 +152,8 @@ navBarWidth?: Length
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -157,6 +173,8 @@ navBarWidthRange?: [
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -172,6 +190,8 @@ Navigation容器内容。默认值为空，无内容展示。
 **类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
+
+**装饰器类型：** @BuilderParam
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -189,6 +209,8 @@ navPathStack?: NavPathStack
 
 **起始版本：** 12
 
+**装饰器类型：** @State
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -205,6 +227,8 @@ sideBarContent?: Callback<void>
 
 **起始版本：** 18
 
+**装饰器类型：** @BuilderParam
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -220,6 +244,8 @@ sideBarOptions?: SideBarOptions
 **类型：** [SideBarOptions](arkts-arkui-atomicservice-atomicservicenavigation-sidebaroptions-i.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -253,6 +279,8 @@ title?: ResourceStr
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -268,6 +296,8 @@ titleOptions?: TitleOptions
 **类型：** [TitleOptions](arkts-arkui-atomicservice-atomicservicenavigation-titleoptions-i.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

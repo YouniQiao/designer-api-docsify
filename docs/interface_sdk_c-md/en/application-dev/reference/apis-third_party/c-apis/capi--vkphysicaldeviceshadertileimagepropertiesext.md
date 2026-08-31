@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderTileImagePropertiesEXT
-
-## Overview
-

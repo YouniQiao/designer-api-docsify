@@ -124,7 +124,7 @@ onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
-| request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) | 是 | 自动填充数据。 |
+| request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i-sys.md) | 是 | 自动填充数据。 |
 | callback | [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) | 是 | 自动填充请求回调。 |
 
 **示例**

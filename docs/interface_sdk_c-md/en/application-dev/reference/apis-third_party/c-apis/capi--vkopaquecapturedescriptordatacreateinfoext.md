@@ -1,4 +1,0 @@
-# VkOpaqueCaptureDescriptorDataCreateInfoEXT
-
-## Overview
-

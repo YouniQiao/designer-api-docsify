@@ -1,4 +1,0 @@
-# VkDedicatedAllocationBufferCreateInfoNV
-
-## Overview
-

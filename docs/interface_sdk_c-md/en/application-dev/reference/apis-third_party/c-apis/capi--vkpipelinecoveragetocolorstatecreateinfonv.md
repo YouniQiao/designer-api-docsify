@@ -1,4 +1,0 @@
-# VkPipelineCoverageToColorStateCreateInfoNV
-
-## Overview
-

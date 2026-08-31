@@ -1,4 +1,0 @@
-# VkPipelineMultisampleStateCreateInfo
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceVulkanMemoryModelFeatures
-
-## Overview
-

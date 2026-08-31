@@ -4,6 +4,8 @@ Defines chipV2 icon.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

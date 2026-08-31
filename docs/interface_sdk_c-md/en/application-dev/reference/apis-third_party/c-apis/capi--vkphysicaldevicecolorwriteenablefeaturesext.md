@@ -1,4 +1,0 @@
-# VkPhysicalDeviceColorWriteEnableFeaturesEXT
-
-## Overview
-

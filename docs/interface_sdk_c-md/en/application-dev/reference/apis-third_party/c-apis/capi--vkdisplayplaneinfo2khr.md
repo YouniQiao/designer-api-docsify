@@ -1,4 +1,0 @@
-# VkDisplayPlaneInfo2KHR
-
-## Overview
-

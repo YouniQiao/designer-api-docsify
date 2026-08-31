@@ -32,13 +32,13 @@
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-sessionrestore-c-sys.md">SessionRestore(系统接口)</a></li>
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-backupparams-i-sys.md">BackupParams(系统接口)</a></li>
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-backuppriority-i-sys.md">BackupPriority(系统接口)</a></li>
-<li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-file-i.md">File</a></li>
+<li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-file-i-sys.md">File(系统接口)</a></li>
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-filedata-i-sys.md">FileData(系统接口)</a></li>
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-filemanifestdata-i-sys.md">FileManifestData(系统接口)</a></li>
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-filemeta-i-sys.md">FileMeta(系统接口)</a></li>
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-filesystemrequestconfig-i-sys.md">FileSystemRequestConfig(系统接口)</a></li>
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-generalcallbacks-i-sys.md">GeneralCallbacks(系统接口)</a></li>
-<li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-incrementalbackupdata-i.md">IncrementalBackupData</a></li>
+<li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-incrementalbackupdata-i-sys.md">IncrementalBackupData(系统接口)</a></li>
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-incrementalbackuptime-i-sys.md">IncrementalBackupTime(系统接口)</a></li>
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-pathinfo-i-sys.md">PathInfo(系统接口)</a></li>
 <li><a href="#/interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-backup-onbackupsizereport-t-sys.md">OnBackupSizeReport(系统接口)</a></li>
@@ -546,23 +546,8 @@
 </div>
 <div class="tree-section">
   <details>
-    <summary class="tree-section-label">C API <span class="tree-count">(43)</span></summary>
+    <summary class="tree-section-label">C API <span class="tree-count">(8)</span></summary>
     <ul class="tree-l1">
-<li class="has-children"><details>
-<summary>头文件</summary>
-<ul class="tree-l2">
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-oh-file-share-h.md">oh_file_share.h</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-oh-file-uri-h.md">oh_file_uri.h</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-oh-archive-h.md">oh_archive.h</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-oh-archive-errcode-h.md">oh_archive_errcode.h</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-oh-fileio-h.md">oh_fileio.h</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-oh-cloud-disk-manager-h.md">oh_cloud_disk_manager.h</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-cloud-disk-error-code-h.md">cloud_disk_error_code.h</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-oh-environment-h.md">oh_environment.h</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-swapfs-errcode-h.md">swapfs_errcode.h</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-oh-swapfs-h.md">oh_swapfs.h</a></li>
-</ul>
-</details></li>
 <li class="has-children"><details>
 <summary>模块</summary>
 <ul class="tree-l2">
@@ -573,34 +558,6 @@
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk.md">CloudDisk</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-environment.md">Environment</a></li>
 <li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-swapfs.md">Swapfs</a></li>
-</ul>
-</details></li>
-<li class="has-children"><details>
-<summary>结构体</summary>
-<ul class="tree-l2">
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-fileshare-fileshare-policyerrorresult.md">FileShare_PolicyErrorResult</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-fileshare-fileshare-policyinfo.md">FileShare_PolicyInfo</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-oh-archive-streaminfo.md">OH_Archive_StreamInfo</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-oh-archive-stream-config.md">OH_Archive_Stream_Config</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-archivewritectx.md">ArchiveWriteCtx</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-archivereadctx.md">ArchiveReadCtx</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-archivestreamwritectx.md">ArchiveStreamWriteCtx</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-archive-archivestreamreadctx.md">ArchiveStreamReadCtx</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-clouddisk-pathinfo.md">CloudDisk_PathInfo</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-clouddisk-filesyncstate.md">CloudDisk_FileSyncState</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-clouddisk-changedata.md">CloudDisk_ChangeData</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-clouddisk-changesresult.md">CloudDisk_ChangesResult</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-clouddisk-failedlist.md">CloudDisk_FailedList</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-clouddisk-resultlist.md">CloudDisk_ResultList</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-clouddisk-displaynameinfo.md">CloudDisk_DisplayNameInfo</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-clouddisk-syncfolder.md">CloudDisk_SyncFolder</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-clouddisk-oh-clouddisk-placeholderinfo.md">OH_CloudDisk_PlaceholderInfo</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-swapfs-oh-swapfsconfig.md">OH_SwapfsConfig</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-swapfs-oh-swapfsswapoutrequest.md">OH_SwapfsSwapOutRequest</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-swapfs-oh-swapfsswapinrequest.md">OH_SwapfsSwapInRequest</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-swapfs-oh-swapfsdatainfo.md">OH_SwapfsDataInfo</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-swapfs-oh-swapfsstats.md">OH_SwapfsStats</a></li>
-<li><a href="#/interface_sdk_c-md/zh-cn/application-dev/reference/apis-core-file-kit/c-apis/capi-swapfs-oh-swapfsmanager.md">OH_SwapfsManager</a></li>
 </ul>
 </details></li>
 </ul>

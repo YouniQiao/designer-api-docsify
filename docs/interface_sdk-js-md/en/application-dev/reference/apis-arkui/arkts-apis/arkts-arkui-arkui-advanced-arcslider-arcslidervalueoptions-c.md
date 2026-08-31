@@ -4,6 +4,8 @@ Defines the value of the arc slider.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -56,6 +58,8 @@ If the value is not within the [min, max] range, the value of **min** or **max**
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -78,6 +82,8 @@ Default value: **0**.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -97,6 +103,8 @@ Default value: same as the value of **min**.
 **Type:** number
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

@@ -1,4 +1,0 @@
-# VkProtectedSubmitInfo
-
-## Overview
-

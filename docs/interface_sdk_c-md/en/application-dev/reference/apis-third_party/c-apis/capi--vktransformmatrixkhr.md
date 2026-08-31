@@ -1,4 +1,0 @@
-# VkTransformMatrixKHR
-
-## Overview
-

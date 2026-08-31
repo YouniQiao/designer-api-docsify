@@ -1,4 +1,0 @@
-# VkRectLayerKHR
-
-## Overview
-

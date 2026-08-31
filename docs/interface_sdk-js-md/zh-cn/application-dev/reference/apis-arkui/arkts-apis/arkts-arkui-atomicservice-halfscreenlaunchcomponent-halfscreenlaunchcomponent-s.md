@@ -12,6 +12,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -47,6 +49,8 @@ content: Callback<void>
 **类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 18
+
+**装饰器类型：** @BuilderParam
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

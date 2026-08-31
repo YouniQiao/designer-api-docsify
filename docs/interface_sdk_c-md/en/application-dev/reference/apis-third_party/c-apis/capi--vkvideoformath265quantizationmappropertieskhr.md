@@ -1,4 +1,0 @@
-# VkVideoFormatH265QuantizationMapPropertiesKHR
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkDependencyInfo
-
-## Overview
-

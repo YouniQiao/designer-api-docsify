@@ -4,6 +4,8 @@ Declare CustomDialog ConfirmDialog
 
 **Since:** 18
 
+**Decorator:** @CustomDialog
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

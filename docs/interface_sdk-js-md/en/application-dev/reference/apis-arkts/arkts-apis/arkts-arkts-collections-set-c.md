@@ -12,6 +12,8 @@ A non-linear data structure.
 
 **Since:** 12
 
+**Decorator:** @Sendable
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

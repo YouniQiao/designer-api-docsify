@@ -1,4 +1,0 @@
-# VkBindAccelerationStructureMemoryInfoNV
-
-## Overview
-

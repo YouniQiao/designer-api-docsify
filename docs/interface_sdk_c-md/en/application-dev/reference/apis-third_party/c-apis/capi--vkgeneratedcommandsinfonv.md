@@ -1,4 +1,0 @@
-# VkGeneratedCommandsInfoNV
-
-## Overview
-

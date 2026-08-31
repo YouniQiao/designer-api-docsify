@@ -1,4 +1,0 @@
-# VkSemaphoreWaitInfo
-
-## Overview
-

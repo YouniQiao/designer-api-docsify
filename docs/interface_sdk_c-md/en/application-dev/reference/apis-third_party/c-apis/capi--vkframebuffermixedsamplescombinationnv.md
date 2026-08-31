@@ -1,4 +1,0 @@
-# VkFramebufferMixedSamplesCombinationNV
-
-## Overview
-

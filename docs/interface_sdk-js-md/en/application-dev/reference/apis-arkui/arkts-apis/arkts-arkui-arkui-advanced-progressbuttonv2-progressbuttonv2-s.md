@@ -4,6 +4,8 @@ Declare Component ProgressButtonV2
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -58,6 +60,8 @@ Sets the ProgressButtonV2 content.
 
 **Since:** 18
 
+**Decorator:** @Require
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -93,6 +97,8 @@ Sets the ProgressButtonV2 progress.
 **Type:** number
 
 **Since:** 18
+
+**Decorator:** @Require
 
 **Model restriction:** This API can be used only in the stage model.
 

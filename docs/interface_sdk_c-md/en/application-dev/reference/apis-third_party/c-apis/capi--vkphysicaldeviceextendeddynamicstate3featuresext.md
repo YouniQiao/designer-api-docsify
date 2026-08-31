@@ -1,4 +1,0 @@
-# VkPhysicalDeviceExtendedDynamicState3FeaturesEXT
-
-## Overview
-

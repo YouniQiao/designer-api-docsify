@@ -1,4 +1,0 @@
-# VkBufferUsageFlags2CreateInfo
-
-## Overview
-

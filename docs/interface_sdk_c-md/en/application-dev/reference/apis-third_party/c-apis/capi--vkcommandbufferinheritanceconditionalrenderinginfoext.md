@@ -1,4 +1,0 @@
-# VkCommandBufferInheritanceConditionalRenderingInfoEXT
-
-## Overview
-

@@ -30,7 +30,7 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 
 | 类型 | 说明 |
 | --- | --- |
-| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i.md) | 返回具有提亮效果的混合器（支持HDR）。 |
+| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i-sys.md) | 返回具有提亮效果的混合器（支持HDR）。 |
 
 **错误码：**
 

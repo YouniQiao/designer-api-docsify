@@ -10,6 +10,8 @@
 
 **Since:** 12
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
@@ -31,6 +33,8 @@ Content displayed in the component.
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

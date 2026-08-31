@@ -1,4 +1,0 @@
-# VkDeviceOrHostAddressConstKHR
-
-## Overview
-

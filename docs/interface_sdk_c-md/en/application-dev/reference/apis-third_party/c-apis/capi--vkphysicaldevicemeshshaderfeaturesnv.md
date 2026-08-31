@@ -1,4 +1,0 @@
-# VkPhysicalDeviceMeshShaderFeaturesNV
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPerformanceStreamMarkerInfoINTEL
-
-## Overview
-

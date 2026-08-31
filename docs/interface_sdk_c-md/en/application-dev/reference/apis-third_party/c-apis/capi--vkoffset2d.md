@@ -1,4 +1,0 @@
-# VkOffset2D
-
-## Overview
-

@@ -54,7 +54,6 @@ import { osAccount } from '@kit.BasicServicesKit';
 | 名称 | 说明 |
 | --- | --- |
 | [AccountManager](arkts-basicservices-osaccount-accountmanager-i.md) | 系统账号管理类。 |
-| [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i.md) | 表示用于创建与指定域账号绑定的系统账号的可选参数。继承自[CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md)。 |
 | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 表示域账号信息。 |
 | [DomainServerConfig](arkts-basicservices-osaccount-domainserverconfig-i.md) | 域服务器配置。 |
 | [OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md) | 表示系统账号信息。 |
@@ -73,6 +72,7 @@ import { osAccount } from '@kit.BasicServicesKit';
 | [AuthStatusInfo](arkts-basicservices-osaccount-authstatusinfo-i-sys.md) | 表示认证状态信息。 |
 | [ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md) | 表示约束变更信息。 |
 | [ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md) | 表示约束来源类型信息。 |
+| [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i-sys.md) | 表示用于创建与指定域账号绑定的系统账号的可选参数。继承自[CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md)。 |
 | [CreateOsAccountOptions](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md) | 表示用于创建系统账号的可选参数。 |
 | [CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md) | 表示凭据变更信息。 |
 | [CredentialInfo](arkts-basicservices-osaccount-credentialinfo-i-sys.md) | 表示凭证信息。 |

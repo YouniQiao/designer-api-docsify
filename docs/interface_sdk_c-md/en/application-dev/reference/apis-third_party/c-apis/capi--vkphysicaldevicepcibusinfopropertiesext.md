@@ -1,4 +1,0 @@
-# VkPhysicalDevicePCIBusInfoPropertiesEXT
-
-## Overview
-

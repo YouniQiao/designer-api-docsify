@@ -38,7 +38,7 @@ movingPhotoFormat?: PixelMapFormat
 
 format of MovingPhotoView.
 
-**Type:** [PixelMapFormat](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**Type:** [PixelMapFormat](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e-sys.md)
 
 **Since:** 14
 

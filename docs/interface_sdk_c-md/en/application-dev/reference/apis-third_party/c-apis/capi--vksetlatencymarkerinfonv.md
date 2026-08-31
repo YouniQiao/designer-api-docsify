@@ -1,4 +1,0 @@
-# VkSetLatencyMarkerInfoNV
-
-## Overview
-

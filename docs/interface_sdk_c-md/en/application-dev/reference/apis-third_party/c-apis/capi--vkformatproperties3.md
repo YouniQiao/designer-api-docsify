@@ -1,4 +1,0 @@
-# VkFormatProperties3
-
-## Overview
-

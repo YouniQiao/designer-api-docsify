@@ -11,6 +11,8 @@
 
 **起始版本：** 24
 
+**装饰器类型：** @ObservedV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## constructor

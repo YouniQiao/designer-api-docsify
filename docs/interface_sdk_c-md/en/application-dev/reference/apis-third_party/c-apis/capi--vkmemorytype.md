@@ -1,4 +1,0 @@
-# VkMemoryType
-
-## Overview
-

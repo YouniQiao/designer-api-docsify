@@ -1,4 +1,0 @@
-# VkPushConstantsInfo
-
-## Overview
-

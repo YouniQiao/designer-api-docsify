@@ -4,6 +4,8 @@ A picker view to show available streaming device list.
 
 **Since:** 10
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
 ## Modules to Import
@@ -44,6 +46,8 @@ Assigns the color of picker component at active state.
 
 **Since:** 11
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -59,6 +63,8 @@ Set the picker color mode.
 **Type:** [AVCastPickerColorMode](arkts-avsession-multimedia-avcastpickerparam-avcastpickercolormode-e.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -76,6 +82,8 @@ Set the custom builder for the picker appearance. If not set, system will show t
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -91,6 +99,8 @@ Assigns the color of picker component at normal state .
 **Type:** Color \| number \| string
 
 **Since:** 11
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -108,6 +118,8 @@ Set the picker style.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
@@ -123,6 +135,8 @@ Set the session type used by current picker component which can refer to AVSessi
 **Type:** string
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,4 +1,0 @@
-# VkPhysicalDevicePipelineLibraryGroupHandlesFeaturesEXT
-
-## Overview
-

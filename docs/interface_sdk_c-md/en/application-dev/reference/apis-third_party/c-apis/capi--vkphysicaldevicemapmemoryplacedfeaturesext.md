@@ -1,4 +1,0 @@
-# VkPhysicalDeviceMapMemoryPlacedFeaturesEXT
-
-## Overview
-

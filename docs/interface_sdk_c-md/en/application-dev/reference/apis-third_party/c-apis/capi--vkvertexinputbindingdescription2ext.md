@@ -1,4 +1,0 @@
-# VkVertexInputBindingDescription2EXT
-
-## Overview
-

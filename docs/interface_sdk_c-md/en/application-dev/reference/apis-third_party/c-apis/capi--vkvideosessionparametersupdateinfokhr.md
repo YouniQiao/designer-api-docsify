@@ -1,4 +1,0 @@
-# VkVideoSessionParametersUpdateInfoKHR
-
-## Overview
-

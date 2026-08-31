@@ -1,4 +1,0 @@
-# VkCopyMemoryToImageIndirectCommandNV
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceRayTracingMotionBlurFeaturesNV
-
-## Overview
-

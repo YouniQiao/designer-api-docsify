@@ -1,4 +1,0 @@
-# VkBlitImageCubicWeightsInfoQCOM
-
-## Overview
-

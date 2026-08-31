@@ -1,4 +1,0 @@
-# VkQueueFamilyProperties
-
-## Overview
-

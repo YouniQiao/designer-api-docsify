@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ObservedV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,6 +23,8 @@ action?: OnActionCallback
 触发时的动作闭包，item属性不支持触发action事件。
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,6 +68,8 @@ accessibilityDescription?: ResourceStr
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -98,6 +104,8 @@ accessibilityLevel?: string
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -117,6 +125,8 @@ accessibilityText?: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -144,6 +154,8 @@ item属性不支持触发isEnabled属性。
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -161,6 +173,8 @@ label?: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -180,6 +194,8 @@ Symbol图标资源，优先级大于value，item左侧头像不支持设置该�
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -197,6 +213,8 @@ value: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,4 +1,0 @@
-# VkPipelineRenderingCreateInfo
-
-## Overview
-

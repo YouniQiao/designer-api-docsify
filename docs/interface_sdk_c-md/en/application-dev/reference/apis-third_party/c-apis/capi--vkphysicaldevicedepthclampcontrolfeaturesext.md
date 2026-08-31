@@ -1,4 +1,0 @@
-# VkPhysicalDeviceDepthClampControlFeaturesEXT
-
-## Overview
-

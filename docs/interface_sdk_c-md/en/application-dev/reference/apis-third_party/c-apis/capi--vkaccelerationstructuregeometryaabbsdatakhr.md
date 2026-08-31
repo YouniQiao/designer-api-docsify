@@ -1,4 +1,0 @@
-# VkAccelerationStructureGeometryAabbsDataKHR
-
-## Overview
-

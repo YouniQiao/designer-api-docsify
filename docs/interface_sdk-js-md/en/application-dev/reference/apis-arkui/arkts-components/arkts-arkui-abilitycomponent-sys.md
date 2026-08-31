@@ -16,8 +16,6 @@ Construct the ability component. Called when the ability component is used.
 
 **Substitutes:** UIExtensionComponentInterface
 
-**Decorator:** @ohos
-
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.

@@ -4,6 +4,8 @@ Defines the content and events for selection.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -44,6 +46,8 @@ Sets the onSelect of the SubHeaderV2SelectOptions.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -72,6 +76,8 @@ Decorator: @Trace
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -89,6 +95,8 @@ Set the id for the SubHeaderV2Select.
 **Type:** string
 
 **Since:** 24
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +116,8 @@ Sets the options of the SubHeaderV2SelectOptions.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -126,6 +136,8 @@ Sets the selected content of the SubHeaderV2SelectOptions.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -143,6 +155,8 @@ Sets the selected index of the SubHeaderV2SelectOptions.
 **Type:** number
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,4 +1,0 @@
-# VkBindShaderGroupIndirectCommandNV
-
-## Overview
-

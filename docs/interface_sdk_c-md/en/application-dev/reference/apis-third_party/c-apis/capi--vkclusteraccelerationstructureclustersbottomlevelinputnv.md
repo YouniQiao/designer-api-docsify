@@ -1,4 +1,0 @@
-# VkClusterAccelerationStructureClustersBottomLevelInputNV
-
-## Overview
-

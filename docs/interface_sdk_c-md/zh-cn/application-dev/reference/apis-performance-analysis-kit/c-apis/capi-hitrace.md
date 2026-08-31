@@ -5,6 +5,7 @@
 hitraceChain provides APIs for cross-thread and cross-process distributed tracing.hiTraceChain generates a unique chain ID for a service process and passes it to various information (includingapplication events, system events, and logs) specific to the service process.During debugging and fault locating, you can use the unique chain ID to quickly correlate various informationrelated to the service process.
 
 **起始版本：** 10
+
 ## 文件汇总
 
 | 名称 | 描述 |

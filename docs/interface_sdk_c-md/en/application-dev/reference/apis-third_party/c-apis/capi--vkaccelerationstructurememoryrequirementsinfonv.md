@@ -1,4 +1,0 @@
-# VkAccelerationStructureMemoryRequirementsInfoNV
-
-## Overview
-

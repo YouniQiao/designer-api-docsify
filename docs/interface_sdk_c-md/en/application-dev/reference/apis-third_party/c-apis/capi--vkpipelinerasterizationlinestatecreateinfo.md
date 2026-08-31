@@ -1,4 +1,0 @@
-# VkPipelineRasterizationLineStateCreateInfo
-
-## Overview
-

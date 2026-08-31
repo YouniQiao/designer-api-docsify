@@ -1,4 +1,0 @@
-# VkCommandBufferInheritanceRenderingInfo
-
-## Overview
-

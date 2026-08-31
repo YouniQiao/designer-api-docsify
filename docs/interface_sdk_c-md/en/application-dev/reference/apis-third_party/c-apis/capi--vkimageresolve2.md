@@ -1,4 +1,0 @@
-# VkImageResolve2
-
-## Overview
-

@@ -4,6 +4,8 @@ Declare component SwipeRefresher
 
 **Since:** 20
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

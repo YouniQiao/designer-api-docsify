@@ -1,4 +1,0 @@
-# VkSubpassDescription2
-
-## Overview
-

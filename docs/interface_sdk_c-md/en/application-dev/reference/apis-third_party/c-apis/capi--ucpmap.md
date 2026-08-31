@@ -1,4 +1,0 @@
-# UCPMap
-
-## Overview
-

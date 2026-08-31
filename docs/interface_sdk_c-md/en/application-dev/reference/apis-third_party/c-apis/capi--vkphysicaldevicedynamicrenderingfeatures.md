@@ -1,4 +1,0 @@
-# VkPhysicalDeviceDynamicRenderingFeatures
-
-## Overview
-

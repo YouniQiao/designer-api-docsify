@@ -1,4 +1,0 @@
-# StdVideoEncodeAV1ReferenceInfo
-
-## Overview
-

@@ -15,6 +15,8 @@ The **ComposeListItem** component is a container that presents a series of items
 
 **Since:** 10
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -35,6 +37,8 @@ Elements on the left and in the center.
 
 **Since:** 10
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -52,6 +56,8 @@ Element on the right.
 **Type:** [OperateItem](arkts-arkui-arkui-advanced-composelistitem-operateitem-c.md)
 
 **Since:** 10
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

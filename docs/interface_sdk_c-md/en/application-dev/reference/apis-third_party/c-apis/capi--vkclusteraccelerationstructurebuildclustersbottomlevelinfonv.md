@@ -1,4 +1,0 @@
-# VkClusterAccelerationStructureBuildClustersBottomLevelInfoNV
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceScalarBlockLayoutFeatures
-
-## Overview
-

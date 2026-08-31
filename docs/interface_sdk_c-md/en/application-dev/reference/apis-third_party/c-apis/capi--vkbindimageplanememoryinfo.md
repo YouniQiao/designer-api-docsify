@@ -1,4 +1,0 @@
-# VkBindImagePlaneMemoryInfo
-
-## Overview
-

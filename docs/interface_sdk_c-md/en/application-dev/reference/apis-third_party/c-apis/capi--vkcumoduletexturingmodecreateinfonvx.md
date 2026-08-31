@@ -1,4 +1,0 @@
-# VkCuModuleTexturingModeCreateInfoNVX
-
-## Overview
-

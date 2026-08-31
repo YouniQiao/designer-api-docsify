@@ -1,4 +1,0 @@
-# VkDeviceEventInfoEXT
-
-## Overview
-

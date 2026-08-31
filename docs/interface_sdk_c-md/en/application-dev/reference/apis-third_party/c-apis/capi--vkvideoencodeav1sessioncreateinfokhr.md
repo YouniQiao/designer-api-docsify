@@ -1,4 +1,0 @@
-# VkVideoEncodeAV1SessionCreateInfoKHR
-
-## Overview
-

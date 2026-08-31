@@ -1017,7 +1017,8 @@
   - [RichText properties/events](arkts-arkui-richtext-attribute.md)
 - [RootScene](arkts-arkui-rootscene-sys.md)
   - [RootScene properties/events](arkts-arkui-rootscene-attribute.md)
-  - [RootSceneSession](arkts-arkui-rootscenesession-i.md)
+  <!--Del-->
+  - [RootSceneSession(system api)](arkts-arkui-rootscenesession-i-sys.md)<!--DelEnd-->
 - [Row](arkts-arkui-row.md)
   - [Row properties/events](arkts-arkui-row-attribute.md)
   - [RowOptions](arkts-arkui-rowoptions-i.md)

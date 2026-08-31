@@ -86,7 +86,7 @@ authentication result, and the value **tip** means to unsubscribe from the authe
 
 **Deprecated since:** 10
 
-**Substitutes:** [off](arkts-userauthentication-userauth-userauthinstance-i.md#offresult)
+**Substitutes:** [off](arkts-userauthentication-userauth-userauthinstance-i.md#off)
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -149,7 +149,7 @@ authentication result, and the value **tip** means that the callback returns the
 
 **Deprecated since:** 10
 
-**Substitutes:** [on](arkts-userauthentication-userauth-userauthinstance-i.md#onresult)
+**Substitutes:** [on](arkts-userauthentication-userauth-userauthinstance-i.md#on)
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 

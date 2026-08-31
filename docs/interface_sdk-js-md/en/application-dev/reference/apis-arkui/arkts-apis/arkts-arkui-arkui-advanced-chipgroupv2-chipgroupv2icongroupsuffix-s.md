@@ -4,6 +4,8 @@ Defines IconGroupSuffix.
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -57,6 +59,8 @@ Suffix item.
 **Type:** Array&lt;[ChipGroupV2IconItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2iconitemconfig-i.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md) \| [ChipGroupV2SymbolItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2symbolitemconfig-i.md)&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @Require
 
 **Model restriction:** This API can be used only in the stage model.
 

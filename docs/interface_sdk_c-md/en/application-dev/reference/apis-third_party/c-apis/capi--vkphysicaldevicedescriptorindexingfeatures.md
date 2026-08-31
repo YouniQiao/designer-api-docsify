@@ -1,4 +1,0 @@
-# VkPhysicalDeviceDescriptorIndexingFeatures
-
-## Overview
-

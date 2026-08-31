@@ -1,4 +1,0 @@
-# VkPresentTimeGOOGLE
-
-## Overview
-

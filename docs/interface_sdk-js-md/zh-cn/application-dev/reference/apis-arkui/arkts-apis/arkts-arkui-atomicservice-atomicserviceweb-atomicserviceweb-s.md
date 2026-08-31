@@ -10,6 +10,8 @@
 
 **起始版本：** 12
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -44,6 +46,8 @@ controller: AtomicServiceWebController
 
 **起始版本：** 12
 
+**装饰器类型：** @ObjectLink
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -59,6 +63,8 @@ darkMode?: WebDarkMode
 **类型：** [WebDarkMode](../../apis-arkweb/arkts-components/arkts-arkweb-webdarkmode-e.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -76,6 +82,8 @@ forceDarkAccess?: boolean
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -91,6 +99,8 @@ mixedMode?: MixedMode
 **类型：** [MixedMode](../../apis-arkweb/arkts-components/arkts-arkweb-mixedmode-e.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -123,6 +133,8 @@ nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
 **类型：** [NestedScrollOptions](../arkts-components/arkts-arkui-nestedscrolloptions-i.md) \| [NestedScrollOptionsExt](../../apis-arkweb/arkts-components/arkts-arkweb-nestedscrolloptionsext-i.md)
 
 **起始版本：** 15
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 

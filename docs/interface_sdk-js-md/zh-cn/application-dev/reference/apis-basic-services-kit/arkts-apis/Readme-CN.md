@@ -63,7 +63,8 @@
   - [ConstraintChangeInfo(系统接口)](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ConstraintSourceTypeInfo(系统接口)](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)<!--DelEnd-->
-  - [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i.md)
+  <!--Del-->
+  - [CreateOsAccountForDomainOptions(系统接口)](arkts-basicservices-osaccount-createosaccountfordomainoptions-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CreateOsAccountOptions(系统接口)](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md)<!--DelEnd-->
   <!--Del-->

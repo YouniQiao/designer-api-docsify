@@ -1,4 +1,0 @@
-# VkImageSubresourceLayers
-
-## Overview
-

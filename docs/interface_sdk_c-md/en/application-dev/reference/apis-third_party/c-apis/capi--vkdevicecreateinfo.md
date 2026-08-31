@@ -1,4 +1,0 @@
-# VkDeviceCreateInfo
-
-## Overview
-

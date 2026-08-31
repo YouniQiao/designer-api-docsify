@@ -1,4 +1,0 @@
-# VkMemoryBarrierAccessFlags3KHR
-
-## Overview
-

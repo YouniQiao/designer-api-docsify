@@ -1,4 +1,0 @@
-# VkValidationCacheCreateInfoEXT
-
-## Overview
-

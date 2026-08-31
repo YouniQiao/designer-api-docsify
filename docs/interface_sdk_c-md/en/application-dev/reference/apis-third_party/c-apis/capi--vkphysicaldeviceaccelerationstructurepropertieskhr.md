@@ -1,4 +1,0 @@
-# VkPhysicalDeviceAccelerationStructurePropertiesKHR
-
-## Overview
-

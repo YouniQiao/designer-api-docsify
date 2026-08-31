@@ -1,4 +1,0 @@
-# VkPhysicalDeviceProtectedMemoryFeatures
-
-## Overview
-

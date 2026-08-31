@@ -1,4 +1,0 @@
-# VkPhysicalDeviceASTCDecodeFeaturesEXT
-
-## Overview
-

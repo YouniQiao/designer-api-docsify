@@ -1,4 +1,0 @@
-# VkPhysicalDeviceVideoEncodeAV1FeaturesKHR
-
-## Overview
-

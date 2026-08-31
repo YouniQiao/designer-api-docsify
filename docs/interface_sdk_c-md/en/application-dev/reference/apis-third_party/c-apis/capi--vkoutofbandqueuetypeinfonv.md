@@ -1,4 +1,0 @@
-# VkOutOfBandQueueTypeInfoNV
-
-## Overview
-

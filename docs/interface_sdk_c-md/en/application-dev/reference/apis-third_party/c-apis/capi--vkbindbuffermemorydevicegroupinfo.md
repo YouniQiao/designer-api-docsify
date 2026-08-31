@@ -1,4 +1,0 @@
-# VkBindBufferMemoryDeviceGroupInfo
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDevicePrimitiveTopologyListRestartFeaturesEXT
-
-## Overview
-

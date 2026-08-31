@@ -195,7 +195,7 @@ This API can be called to unsubscribe in scenarios such as when there is no need
 
 When the callback parameter is not passed in, all callback functions associated with the permissionList will be deleted in batch.
 
-This API is usually used in conjunction with [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#onpermissionstatechange) to cancel the monitoring relationship created through on.
+This API is usually used in conjunction with [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#on) to cancel the monitoring relationship created through on.
 
 **Since:** 18
 
@@ -208,7 +208,7 @@ This API is usually used in conjunction with [on](arkts-ability-abilityaccessctr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | Yes | Type of the unsubscription event, which is fixed as'selfPermissionStateChange', indicating a permission status change event. |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#onpermissionstatechange) subscription (order insensitive). The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#on) subscription (order insensitive). The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback function. Callback for unsubscribing from the status change event of the specified permission names. If this parameter is not passed, all callback functions associated with permissionList will be deleted in batch. |
 
 **Error codes:**
@@ -248,7 +248,7 @@ on(
     ): void
 ```
 
-Subscribes to permission authorization status change events for a specified permission list of this app, using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior. When monitoring is no longer needed, call [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#offpermissionstatechange) to unsubscribe.
+Subscribes to permission authorization status change events for a specified permission list of this app, using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior. When monitoring is no longer needed, call [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#off) to unsubscribe.
 
 - When this subscription API is called for multiple times, if the subscribed permission lists are the same but  
 the callbacks are different, the subscription is successful.  
@@ -261,7 +261,7 @@ There are two possible scenarios when the permission status changes from "author
 - System actively reclaims: The app process will not be terminated. A typical scenario is the one-time  
 authorization of a security component, which is automatically reclaimed by the system after the authorization period ends.
 
-This API is usually used in conjunction with [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#offpermissionstatechange). When monitoring is no longer needed, call off to unsubscribe.
+This API is usually used in conjunction with [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#off). When monitoring is no longer needed, call off to unsubscribe.
 
 **Since:** 18
 

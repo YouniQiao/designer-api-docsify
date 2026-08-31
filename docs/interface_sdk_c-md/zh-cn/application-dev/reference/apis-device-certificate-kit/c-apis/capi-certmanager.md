@@ -5,6 +5,7 @@
 Describes the OpenHarmony Certificate Manager capabilities, including certificate and credential managementoperations, provided for applications.
 
 **起始版本：** 22
+
 ## 文件汇总
 
 | 名称 | 描述 |

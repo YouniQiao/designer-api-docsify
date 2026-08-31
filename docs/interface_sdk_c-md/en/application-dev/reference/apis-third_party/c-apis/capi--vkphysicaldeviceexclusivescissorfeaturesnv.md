@@ -1,4 +1,0 @@
-# VkPhysicalDeviceExclusiveScissorFeaturesNV
-
-## Overview
-

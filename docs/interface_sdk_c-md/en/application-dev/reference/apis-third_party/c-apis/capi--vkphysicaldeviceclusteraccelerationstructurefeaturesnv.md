@@ -1,4 +1,0 @@
-# VkPhysicalDeviceClusterAccelerationStructureFeaturesNV
-
-## Overview
-

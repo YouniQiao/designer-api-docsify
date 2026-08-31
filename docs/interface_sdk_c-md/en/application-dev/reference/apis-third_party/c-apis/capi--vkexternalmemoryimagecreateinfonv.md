@@ -1,4 +1,0 @@
-# VkExternalMemoryImageCreateInfoNV
-
-## Overview
-

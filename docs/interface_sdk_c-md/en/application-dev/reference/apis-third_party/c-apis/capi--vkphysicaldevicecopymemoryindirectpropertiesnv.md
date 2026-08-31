@@ -1,4 +1,0 @@
-# VkPhysicalDeviceCopyMemoryIndirectPropertiesNV
-
-## Overview
-

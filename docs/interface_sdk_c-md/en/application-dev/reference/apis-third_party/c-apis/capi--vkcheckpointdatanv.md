@@ -1,4 +1,0 @@
-# VkCheckpointDataNV
-
-## Overview
-

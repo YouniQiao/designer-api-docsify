@@ -8,6 +8,8 @@ ChipV2ImageIcon定义图标图片的基类。
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ObservedV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -56,6 +58,8 @@ ChipV2激活时图标填充颜色。
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -80,6 +84,8 @@ public fillColor?: ColorMetrics
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -99,6 +105,8 @@ public modifier?: ImageModifier
 **类型：** ImageModifier
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -129,6 +137,8 @@ sys.float.chip_normal_icon_size')}。
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -146,6 +156,8 @@ public src: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,4 +1,0 @@
-# SLOHBufferQueueItf_
-
-## Overview
-

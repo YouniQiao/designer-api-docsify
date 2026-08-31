@@ -6,6 +6,8 @@ Allows an application to access the latest image or video file in the public dir
 
 **Since:** 12
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import

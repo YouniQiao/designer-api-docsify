@@ -1,4 +1,0 @@
-# VkSwapchainCounterCreateInfoEXT
-
-## Overview
-

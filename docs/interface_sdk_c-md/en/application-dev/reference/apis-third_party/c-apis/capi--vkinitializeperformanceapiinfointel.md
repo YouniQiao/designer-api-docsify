@@ -1,4 +1,0 @@
-# VkInitializePerformanceApiInfoINTEL
-
-## Overview
-

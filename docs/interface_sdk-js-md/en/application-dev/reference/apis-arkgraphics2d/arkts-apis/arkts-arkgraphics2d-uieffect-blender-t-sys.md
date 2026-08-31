@@ -17,6 +17,6 @@ Blender type, used to describe the blending effect.
 | Type | Description |
 | --- | --- |
 | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | Brightness blender |
-| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i.md) | HDR-enabled brightness blender [since 20] |
+| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i-sys.md) | HDR-enabled brightness blender [since 20] |
 | [HdrDarkenBlender](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | HDR-adaptive darken blender [since 26.0.0] |
 | [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | Colorful brightness darken blender [since 26.1.0] |

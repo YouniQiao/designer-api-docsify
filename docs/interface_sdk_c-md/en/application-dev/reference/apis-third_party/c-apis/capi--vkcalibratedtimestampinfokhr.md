@@ -1,4 +1,0 @@
-# VkCalibratedTimestampInfoKHR
-
-## Overview
-

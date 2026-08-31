@@ -13,6 +13,8 @@ K和V类型都需为[Sendable支持的数据类型](../../../arkts-utils/arkts-s
 
 **起始版本：** 12
 
+**装饰器类型：** @Sendable
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

@@ -148,7 +148,8 @@
   - [PhotoCreationConfig](arkts-medialibrary-photoaccesshelper-photocreationconfig-i.md)
   <!--Del-->
   - [PhotoCreationSource(system api)](arkts-medialibrary-photoaccesshelper-photocreationsource-i-sys.md)<!--DelEnd-->
-  - [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i.md)
+  <!--Del-->
+  - [PhotoProxy(system api)](arkts-medialibrary-photoaccesshelper-photoproxy-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Progress(system api)](arkts-medialibrary-photoaccesshelper-progress-i-sys.md)<!--DelEnd-->
   - [QuickImageDataHandler](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md)
@@ -417,7 +418,6 @@
   - [MovingPhotoViewEventCallback](arkts-medialibrary-movingphotovieweventcallback-t.md)
   <!--Del-->
   - [DynamicRangeMode(system api)](arkts-medialibrary-multimedia-movingphotoview-dynamicrangemode-e-sys.md)<!--DelEnd-->
-  - [PixelMapFormat](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
   <!--Del-->
   - [PixelMapFormat(system api)](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e-sys.md)<!--DelEnd-->
   - [Constants](arkts-medialibrary-multimedia-movingphotoview-con.md)

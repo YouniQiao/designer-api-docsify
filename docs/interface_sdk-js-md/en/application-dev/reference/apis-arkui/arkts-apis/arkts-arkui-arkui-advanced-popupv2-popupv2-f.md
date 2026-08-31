@@ -16,6 +16,8 @@ Build function of PopupV2. This component is implemented based on state manageme
 
 **Since:** 26.0.0
 
+**Decorator:** @Builder
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

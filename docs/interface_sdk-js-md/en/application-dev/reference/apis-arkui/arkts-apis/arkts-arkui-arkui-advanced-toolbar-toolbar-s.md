@@ -15,6 +15,8 @@ The **Toolbar** component is designed to present a set of action options related
 
 **Since:** 10
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -38,6 +40,8 @@ The default value is **-1**, indicating that there is no active item. Values les
 **Type:** number
 
 **Since:** 10
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,6 +81,8 @@ Default value: system default value
 
 **Since:** 13
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -94,6 +100,8 @@ Toolbar list.
 **Type:** [ToolBarOptions](arkts-arkui-arkui-advanced-toolbar-toolbaroptions-c.md)
 
 **Since:** 10
+
+**Decorator:** @ObjectLink
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,6 +130,8 @@ Whether to display the pressed state: yes
 **Type:** [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md)
 
 **Since:** 13
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

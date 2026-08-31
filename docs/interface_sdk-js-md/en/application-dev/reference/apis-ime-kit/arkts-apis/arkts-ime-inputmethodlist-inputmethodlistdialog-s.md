@@ -4,6 +4,8 @@ InputMethodListDialog({controller: CustomDialogController, patternOptions?: Patt
 
 **Since:** 11
 
+**Decorator:** @CustomDialog
+
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
 ## Modules to Import

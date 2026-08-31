@@ -4,6 +4,8 @@ Defines toolBarV2 symbolGlyph.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -46,6 +48,8 @@ Modifier of toolbarV2's activated symbol.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -63,6 +67,8 @@ Modifier of toolbarV2's normal symbol.
 **Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -43,7 +43,7 @@ addResource(type: ResourceType, proxy: PhotoProxy): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | ResourceType | 是 | 待添加资源的类型。 |
-| proxy | [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i.md) | 是 | 待添加资源的PhotoProxy 数据。 |
+| proxy | [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i-sys.md) | 是 | 待添加资源的PhotoProxy 数据。 |
 
 **错误码：**
 

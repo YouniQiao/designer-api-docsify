@@ -14,6 +14,8 @@ A linear data structure that is implemented on arrays and can be passed between 
 
 **Since:** 12
 
+**Decorator:** @Sendable
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

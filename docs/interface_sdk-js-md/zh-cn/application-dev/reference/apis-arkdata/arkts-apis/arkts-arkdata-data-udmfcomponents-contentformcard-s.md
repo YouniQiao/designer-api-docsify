@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## 导入模块
@@ -40,6 +42,8 @@ formHeight?: number
 
 **起始版本：** 20
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -56,6 +60,8 @@ formType: FormType
 
 **起始版本：** 20
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -71,6 +77,8 @@ formWidth?: number
 **类型：** number
 
 **起始版本：** 20
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

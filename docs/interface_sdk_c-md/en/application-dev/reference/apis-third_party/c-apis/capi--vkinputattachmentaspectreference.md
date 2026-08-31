@@ -1,4 +1,0 @@
-# VkInputAttachmentAspectReference
-
-## Overview
-

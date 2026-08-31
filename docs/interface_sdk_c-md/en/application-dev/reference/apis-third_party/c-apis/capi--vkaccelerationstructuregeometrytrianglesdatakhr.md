@@ -1,4 +1,0 @@
-# VkAccelerationStructureGeometryTrianglesDataKHR
-
-## Overview
-

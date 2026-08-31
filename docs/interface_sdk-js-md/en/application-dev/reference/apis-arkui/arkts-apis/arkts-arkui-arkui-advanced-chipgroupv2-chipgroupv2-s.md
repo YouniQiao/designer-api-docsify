@@ -4,6 +4,8 @@ Defines chipGroupV2.
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -40,6 +42,8 @@ Two-way binding callback method for ChipV2 item.
 
 **Since:** 26.0.0
 
+**Decorator:** @Event
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -57,6 +61,8 @@ Two-way binding callback method for selected ChipV2 item indexes.
 **Type:** Callback&lt;Array&lt;number&gt;&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @Event
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +118,8 @@ ChipV2 item.
 
 **Since:** 26.0.0
 
+**Decorator:** @Require
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -166,6 +174,8 @@ Callback method when the chipV2 status changes
 
 **Since:** 26.0.0
 
+**Decorator:** @Event
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -201,6 +211,8 @@ The builder function which will be rendered in the suffix of ChipGroupV2.
 **Type:** Callback&lt;void&gt;
 
 **Since:** 26.0.0
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

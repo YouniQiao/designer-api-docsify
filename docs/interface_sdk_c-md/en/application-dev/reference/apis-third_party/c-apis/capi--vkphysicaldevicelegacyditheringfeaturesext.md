@@ -1,4 +1,0 @@
-# VkPhysicalDeviceLegacyDitheringFeaturesEXT
-
-## Overview
-

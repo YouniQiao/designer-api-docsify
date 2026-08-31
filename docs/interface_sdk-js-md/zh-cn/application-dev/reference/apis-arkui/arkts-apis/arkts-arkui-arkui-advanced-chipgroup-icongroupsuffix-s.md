@@ -4,6 +4,8 @@ ChipGroup组件提供操作块群组能力，支持单选或多选模式，可�
 
 **起始版本：** 12
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -28,6 +30,8 @@ iconBackgroundSystemMaterial?: uiMaterial.Material
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -45,6 +49,8 @@ items: Array<IconItemOptions | SymbolGlyphModifier | SymbolItemOptions>
 **类型：** Array&lt;[IconItemOptions](arkts-arkui-arkui-advanced-chipgroup-iconitemoptions-i.md) \| SymbolGlyphModifier \| [SymbolItemOptions](arkts-arkui-arkui-advanced-chipgroup-symbolitemoptions-i.md)&gt;
 
 **起始版本：** 12
+
+**装饰器类型：** @Require、@Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

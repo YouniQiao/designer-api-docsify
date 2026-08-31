@@ -11,6 +11,8 @@ TabTitleBar是页签型标题栏组件，支持页签列表与关联内容的联
 
 **起始版本：** 10
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -28,6 +30,8 @@ swiperContent: () => void
 页签列表关联的页面内容构造器。
 
 **起始版本：** 10
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

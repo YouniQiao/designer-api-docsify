@@ -1,4 +1,0 @@
-# VkTimelineSemaphoreSubmitInfo
-
-## Overview
-

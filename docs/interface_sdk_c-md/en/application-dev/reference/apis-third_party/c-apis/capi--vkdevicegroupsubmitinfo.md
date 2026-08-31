@@ -1,4 +1,0 @@
-# VkDeviceGroupSubmitInfo
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkImageBlit
-
-## Overview
-

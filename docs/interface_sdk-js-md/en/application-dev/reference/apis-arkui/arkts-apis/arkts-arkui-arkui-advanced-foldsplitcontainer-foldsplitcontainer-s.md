@@ -13,6 +13,8 @@
 
 **Since:** 12
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -49,6 +51,8 @@ Animation settings. The value **null** indicates that the animation is disabled.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -66,6 +70,8 @@ Layout information for the expanded state.
 **Type:** [ExpandedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,6 +91,8 @@ Callback function for the extra region. If this parameter is not provided, there
 
 **Since:** 12
 
+**Decorator:** @BuilderParam
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -102,6 +110,8 @@ Layout information for the folded state.
 **Type:** [FoldedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,6 +131,8 @@ Layout information for the semi-folded state.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -139,6 +151,8 @@ Callback function for the primary region.
 
 **Since:** 12
 
+**Decorator:** @BuilderParam
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -156,6 +170,8 @@ Callback function for the extra region.
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

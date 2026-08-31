@@ -1,4 +1,0 @@
-- Header file
-    - [dlp_permission_api.h](capi-dlp-permission-api-h.md)
-- Module
-    - [DlpPermissionApi](capi-dlppermissionapi.md)

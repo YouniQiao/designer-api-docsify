@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderSMBuiltinsFeaturesNV
-
-## Overview
-

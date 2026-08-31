@@ -9,6 +9,8 @@ A linear data structure that is implemented on arrays. A bit vector stores bit v
 
 **Since:** 12
 
+**Decorator:** @Sendable
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

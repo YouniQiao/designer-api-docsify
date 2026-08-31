@@ -1,4 +1,0 @@
-# VkExportFenceCreateInfo
-
-## Overview
-

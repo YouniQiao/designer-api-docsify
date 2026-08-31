@@ -1,4 +1,0 @@
-# VkVideoDecodeAV1InlineSessionParametersInfoKHR
-
-## Overview
-

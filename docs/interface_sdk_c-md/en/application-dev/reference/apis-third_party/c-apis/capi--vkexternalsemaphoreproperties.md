@@ -1,4 +1,0 @@
-# VkExternalSemaphoreProperties
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkDeviceMemoryOverallocationCreateInfoAMD
-
-## Overview
-

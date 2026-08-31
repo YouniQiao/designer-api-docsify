@@ -1,4 +1,0 @@
-# VkValidationFlagsEXT
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkVideoEncodeH264CapabilitiesKHR
-
-## Overview
-

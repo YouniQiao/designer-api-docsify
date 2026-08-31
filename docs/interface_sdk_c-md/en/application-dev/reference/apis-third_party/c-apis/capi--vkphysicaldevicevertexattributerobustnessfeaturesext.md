@@ -1,4 +1,0 @@
-# VkPhysicalDeviceVertexAttributeRobustnessFeaturesEXT
-
-## Overview
-

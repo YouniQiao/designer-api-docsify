@@ -1,4 +1,4 @@
-- 头文件
-    - [notification.h](capi-notification-h.md)
-- 模块
+# C API<!--c-notificationkit-->
+
+- 模块<!--notificationkit-module-->n
     - [NOTIFICATION](capi-notification.md)

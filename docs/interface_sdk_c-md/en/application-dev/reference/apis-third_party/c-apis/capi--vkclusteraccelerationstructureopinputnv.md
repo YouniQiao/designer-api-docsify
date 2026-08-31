@@ -1,4 +1,0 @@
-# VkClusterAccelerationStructureOpInputNV
-
-## Overview
-

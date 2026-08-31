@@ -1,4 +1,0 @@
-# VkLatencyTimingsFrameReportNV
-
-## Overview
-

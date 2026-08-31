@@ -1,4 +1,0 @@
-# StdVideoEncodeH264WeightTable
-
-## Overview
-

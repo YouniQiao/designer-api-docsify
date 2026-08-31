@@ -15,6 +15,8 @@ Allows the application to access images or videos in the user directory without 
 
 **Since:** 12
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import
@@ -32,6 +34,8 @@ build(): void
 Build function of PhotoPickerComponent
 
 **Since:** 12
+
+**Decorator:** @Builder
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -397,6 +401,8 @@ PickerController
 **Type:** [PickerController](arkts-medialibrary-file-photopickercomponent-pickercontroller-c.md)
 
 **Since:** 12
+
+**Decorator:** @ObjectLink
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

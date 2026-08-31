@@ -1,4 +1,0 @@
-# VkPhysicalDeviceClusterCullingShaderVrsFeaturesHUAWEI
-
-## Overview
-

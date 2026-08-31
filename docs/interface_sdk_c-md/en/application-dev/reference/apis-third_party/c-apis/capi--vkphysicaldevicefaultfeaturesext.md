@@ -1,4 +1,0 @@
-# VkPhysicalDeviceFaultFeaturesEXT
-
-## Overview
-

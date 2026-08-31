@@ -1,4 +1,0 @@
-# VkClusterAccelerationStructureGeometryIndexAndGeometryFlagsNV
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkQueryPoolPerformanceCreateInfoKHR
-
-## Overview
-

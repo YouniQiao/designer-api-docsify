@@ -1,4 +1,0 @@
-# VkPhysicalDeviceMemoryBudgetPropertiesEXT
-
-## Overview
-

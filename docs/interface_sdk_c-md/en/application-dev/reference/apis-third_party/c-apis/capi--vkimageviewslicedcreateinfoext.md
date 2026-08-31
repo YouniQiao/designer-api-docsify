@@ -1,4 +1,0 @@
-# VkImageViewSlicedCreateInfoEXT
-
-## Overview
-

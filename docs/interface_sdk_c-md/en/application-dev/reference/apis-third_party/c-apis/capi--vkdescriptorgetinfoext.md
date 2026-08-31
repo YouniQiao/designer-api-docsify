@@ -1,4 +1,0 @@
-# VkDescriptorGetInfoEXT
-
-## Overview
-

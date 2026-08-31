@@ -1,4 +1,0 @@
-# VkOpticalFlowImageFormatPropertiesNV
-
-## Overview
-

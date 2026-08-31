@@ -1,4 +1,0 @@
-# VkSurfaceCapabilities2KHR
-
-## Overview
-

@@ -7,6 +7,7 @@ InputMethod模块提供C语言接口来使用输入法。"使用输入法"面向
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **起始版本：** 12
+
 ## 文件汇总
 
 | 名称 | 描述 |

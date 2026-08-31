@@ -15,6 +15,8 @@ The editable title bar is a title bar that comes with button icons, typically **
 
 **Since:** 10
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -79,6 +81,8 @@ Default value:
  end: LengthMetrics.resource($r('sys.float.margin_right'))}
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

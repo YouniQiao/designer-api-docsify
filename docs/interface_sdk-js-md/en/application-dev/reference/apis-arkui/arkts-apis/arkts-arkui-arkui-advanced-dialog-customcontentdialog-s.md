@@ -4,6 +4,8 @@ Declare custom content dialog
 
 **Since:** 12
 
+**Decorator:** @CustomDialog
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

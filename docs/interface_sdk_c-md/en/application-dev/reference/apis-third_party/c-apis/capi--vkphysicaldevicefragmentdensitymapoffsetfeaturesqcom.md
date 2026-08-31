@@ -1,4 +1,0 @@
-# VkPhysicalDeviceFragmentDensityMapOffsetFeaturesQCOM
-
-## Overview
-

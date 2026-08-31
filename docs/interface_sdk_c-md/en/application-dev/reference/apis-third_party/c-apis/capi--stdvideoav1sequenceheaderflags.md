@@ -1,4 +1,0 @@
-# StdVideoAV1SequenceHeaderFlags
-
-## Overview
-

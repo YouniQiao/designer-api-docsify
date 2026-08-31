@@ -1,4 +1,0 @@
-# VkPhysicalDeviceBlendOperationAdvancedFeaturesEXT
-
-## Overview
-

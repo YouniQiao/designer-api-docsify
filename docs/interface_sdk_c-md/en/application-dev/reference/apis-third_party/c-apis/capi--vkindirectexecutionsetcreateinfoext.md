@@ -1,4 +1,0 @@
-# VkIndirectExecutionSetCreateInfoEXT
-
-## Overview
-

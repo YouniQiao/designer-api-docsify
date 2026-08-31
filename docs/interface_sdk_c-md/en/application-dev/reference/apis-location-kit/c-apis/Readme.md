@@ -1,9 +1,0 @@
-- Header file
-    - [oh_location_type.h](capi-oh-location-type-h.md)
-    - [oh_location.h](capi-oh-location-h.md)
-- Module
-    - [Location](capi-location.md)
-- Struct
-    - [Location_BasicInfo](capi-location-location-basicinfo.md)
-    - [Location_Info](capi-location-location-info.md)
-    - [Location_RequestConfig](capi-location-location-requestconfig.md)

@@ -1,4 +1,0 @@
-# FTW
-
-## Overview
-

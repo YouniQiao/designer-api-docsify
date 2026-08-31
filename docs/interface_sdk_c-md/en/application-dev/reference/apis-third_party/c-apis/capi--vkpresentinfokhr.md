@@ -1,4 +1,0 @@
-# VkPresentInfoKHR
-
-## Overview
-

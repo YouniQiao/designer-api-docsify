@@ -1,4 +1,0 @@
-# VkAttachmentReferenceStencilLayout
-
-## Overview
-

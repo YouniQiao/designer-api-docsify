@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderImageFootprintFeaturesNV
-
-## Overview
-

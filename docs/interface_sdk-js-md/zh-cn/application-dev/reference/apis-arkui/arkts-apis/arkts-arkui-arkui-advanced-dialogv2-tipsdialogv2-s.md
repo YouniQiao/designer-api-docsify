@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @ComponentV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -141,6 +143,8 @@ imageRes: ResourceStr | PixelMap
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap
 
 **起始版本：** 18
+
+**装饰器类型：** @Require
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

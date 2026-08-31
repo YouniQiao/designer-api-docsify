@@ -4,6 +4,8 @@
 
 **Since:** 12
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -38,6 +40,8 @@ Sets the barBackgroundColor of tabs.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -53,6 +57,8 @@ set if need overlap, default value is true.
 **Type:** boolean
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -86,6 +92,8 @@ Sets the index of tabs.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -101,6 +109,8 @@ Sets the layout mode of the bottom tab bar
 **Type:** [LayoutMode](../arkts-components/arkts-arkui-layoutmode-e.md)
 
 **Since:** 18
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -156,6 +166,8 @@ The tabBar array of tabs.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -171,6 +183,8 @@ set the positions of tabbar.
 **Type:** [TabBarPosition](arkts-arkui-atomicservice-atomicservicetabs-tabbarposition-e.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -193,6 +207,8 @@ The TabContent array of tabs.
 **Type:** [      TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?   ]
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

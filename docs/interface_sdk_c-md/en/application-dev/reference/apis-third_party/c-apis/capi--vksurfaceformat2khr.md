@@ -1,4 +1,0 @@
-# VkSurfaceFormat2KHR
-
-## Overview
-

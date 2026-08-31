@@ -1,4 +1,0 @@
-# VkRenderingFragmentDensityMapAttachmentInfoEXT
-
-## Overview
-

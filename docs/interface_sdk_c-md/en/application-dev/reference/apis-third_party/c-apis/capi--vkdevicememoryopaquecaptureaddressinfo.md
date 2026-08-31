@@ -1,4 +1,0 @@
-# VkDeviceMemoryOpaqueCaptureAddressInfo
-
-## Overview
-

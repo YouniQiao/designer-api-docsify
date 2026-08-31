@@ -1,4 +1,0 @@
-# VkDispatchIndirectCommand
-
-## Overview
-

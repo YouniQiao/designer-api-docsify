@@ -1,4 +1,0 @@
-# VkIndirectCommandsLayoutCreateInfoEXT
-
-## Overview
-

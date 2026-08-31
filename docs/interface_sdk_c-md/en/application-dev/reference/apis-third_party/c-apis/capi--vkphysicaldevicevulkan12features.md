@@ -1,4 +1,0 @@
-# VkPhysicalDeviceVulkan12Features
-
-## Overview
-

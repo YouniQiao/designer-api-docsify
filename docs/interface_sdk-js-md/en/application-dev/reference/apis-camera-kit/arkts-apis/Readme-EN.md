@@ -154,21 +154,26 @@
   <!--Del-->
   - [Photo(system api)](arkts-camera-camera-photo-i-sys.md)<!--DelEnd-->
   - [PhotoCaptureSetting](arkts-camera-camera-photocapturesetting-i.md)
-  - [PhotoConflictFunctions](arkts-camera-camera-photoconflictfunctions-i.md)
-  - [PhotoFunctions](arkts-camera-camera-photofunctions-i.md)
+  <!--Del-->
+  - [PhotoConflictFunctions(system api)](arkts-camera-camera-photoconflictfunctions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PhotoFunctions(system api)](arkts-camera-camera-photofunctions-i-sys.md)<!--DelEnd-->
   - [PhotoOutput](arkts-camera-camera-photooutput-i.md)
   <!--Del-->
   - [PhotoOutput(system api)](arkts-camera-camera-photooutput-i-sys.md)<!--DelEnd-->
   - [PhotoSession](arkts-camera-camera-photosession-i.md)
   <!--Del-->
   - [PhotoSession(system api)](arkts-camera-camera-photosession-i-sys.md)<!--DelEnd-->
-  - [PhotoSessionForSys](arkts-camera-camera-photosessionforsys-i.md)
+  <!--Del-->
+  - [PhotoSessionForSys(system api)](arkts-camera-camera-photosessionforsys-i-sys.md)<!--DelEnd-->
   - [PhysicalAperture](arkts-camera-camera-physicalaperture-i.md)
   - [Point](arkts-camera-camera-point-i.md)
   <!--Del-->
   - [Portrait(system api)](arkts-camera-camera-portrait-i-sys.md)<!--DelEnd-->
-  - [PortraitPhotoConflictFunctions](arkts-camera-camera-portraitphotoconflictfunctions-i.md)
-  - [PortraitPhotoFunctions](arkts-camera-camera-portraitphotofunctions-i.md)
+  <!--Del-->
+  - [PortraitPhotoConflictFunctions(system api)](arkts-camera-camera-portraitphotoconflictfunctions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PortraitPhotoFunctions(system api)](arkts-camera-camera-portraitphotofunctions-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [PortraitPhotoSession(system api)](arkts-camera-camera-portraitphotosession-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -215,8 +220,10 @@
   - [TripodDetectionResult(system api)](arkts-camera-camera-tripoddetectionresult-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TryAEInfo(system api)](arkts-camera-camera-tryaeinfo-i-sys.md)<!--DelEnd-->
-  - [VideoConflictFunctions](arkts-camera-camera-videoconflictfunctions-i.md)
-  - [VideoFunctions](arkts-camera-camera-videofunctions-i.md)
+  <!--Del-->
+  - [VideoConflictFunctions(system api)](arkts-camera-camera-videoconflictfunctions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [VideoFunctions(system api)](arkts-camera-camera-videofunctions-i-sys.md)<!--DelEnd-->
   - [VideoOutput](arkts-camera-camera-videooutput-i.md)
   <!--Del-->
   - [VideoOutput(system api)](arkts-camera-camera-videooutput-i-sys.md)<!--DelEnd-->
@@ -224,7 +231,8 @@
   - [VideoSession](arkts-camera-camera-videosession-i.md)
   <!--Del-->
   - [VideoSession(system api)](arkts-camera-camera-videosession-i-sys.md)<!--DelEnd-->
-  - [VideoSessionForSys](arkts-camera-camera-videosessionforsys-i.md)
+  <!--Del-->
+  - [VideoSessionForSys(system api)](arkts-camera-camera-videosessionforsys-i-sys.md)<!--DelEnd-->
   - [WhiteBalance](arkts-camera-camera-whitebalance-i.md)
   <!--Del-->
   - [WhiteBalance(system api)](arkts-camera-camera-whitebalance-i-sys.md)<!--DelEnd-->

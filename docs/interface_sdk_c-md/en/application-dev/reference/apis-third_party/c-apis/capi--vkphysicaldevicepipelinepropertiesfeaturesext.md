@@ -1,4 +1,0 @@
-# VkPhysicalDevicePipelinePropertiesFeaturesEXT
-
-## Overview
-

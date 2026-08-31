@@ -6,6 +6,8 @@ Declare CustomDialog SelectDialogV2
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -62,6 +64,8 @@ Sets the SelectDialog sheets.
 
 **Since:** 18
 
+**Decorator:** @Require
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -97,6 +101,8 @@ Sets the SelectDialogV2 title.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Decorator:** @Require
 
 **Model restriction:** This API can be used only in the stage model.
 

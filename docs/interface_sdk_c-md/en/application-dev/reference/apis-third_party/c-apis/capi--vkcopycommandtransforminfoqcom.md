@@ -1,4 +1,0 @@
-# VkCopyCommandTransformInfoQCOM
-
-## Overview
-

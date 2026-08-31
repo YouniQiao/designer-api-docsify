@@ -1,4 +1,0 @@
-# VkDescriptorUpdateTemplateEntry
-
-## Overview
-

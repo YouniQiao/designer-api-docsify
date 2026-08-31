@@ -1,4 +1,0 @@
-# VkPhysicalDeviceMaintenance7PropertiesKHR
-
-## Overview
-

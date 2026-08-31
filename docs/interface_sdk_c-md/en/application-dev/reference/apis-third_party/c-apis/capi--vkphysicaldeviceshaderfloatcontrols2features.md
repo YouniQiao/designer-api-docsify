@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderFloatControls2Features
-
-## Overview
-

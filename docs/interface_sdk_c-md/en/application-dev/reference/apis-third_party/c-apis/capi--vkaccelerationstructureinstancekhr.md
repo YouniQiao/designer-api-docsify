@@ -1,4 +1,0 @@
-# VkAccelerationStructureInstanceKHR
-
-## Overview
-

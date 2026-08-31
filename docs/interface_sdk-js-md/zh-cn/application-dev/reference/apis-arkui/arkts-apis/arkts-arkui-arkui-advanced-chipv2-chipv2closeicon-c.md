@@ -8,6 +8,8 @@ ChipV2CloseIcon用于定义ChipV2组件关闭图标的功能属性类，包括�
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ObservedV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -59,6 +61,8 @@ size不为ChipV2Size.SMALL时，默认值：`\$r('sys.float.chip_normal_font_siz
 **类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

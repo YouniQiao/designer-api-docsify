@@ -1,4 +1,0 @@
-# str_list
-
-## Overview
-

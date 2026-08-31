@@ -1,4 +1,0 @@
-# VkPhysicalDeviceImageRobustnessFeatures
-
-## Overview
-

@@ -8,6 +8,8 @@ None
 
 **Since:** 26.0.0
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -27,6 +29,8 @@ Defines options for the date time picker component.
 **Type:** [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

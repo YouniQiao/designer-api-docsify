@@ -1,4 +1,0 @@
-# VkMemoryAllocateFlagsInfo
-
-## Overview
-

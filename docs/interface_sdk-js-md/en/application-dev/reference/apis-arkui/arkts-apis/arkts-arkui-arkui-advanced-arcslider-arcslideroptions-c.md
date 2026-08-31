@@ -4,6 +4,8 @@ Defines the properties of the arc slider.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -46,6 +48,8 @@ Default value: If this parameter is not provided, no callback will be invoked.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -64,6 +68,8 @@ Default value: If this parameter is not provided, no callback will be invoked.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -81,6 +87,8 @@ Default value: If this parameter is not provided, no callback will be invoked.
 @Trace
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -102,6 +110,8 @@ Default value: **CrownSensitivity.MEDIUM**
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -121,6 +131,8 @@ Default value: default values of all properties of [ArcSliderStyleOptions](arkts
 **Type:** [ArcSliderLayoutOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -142,6 +154,8 @@ Default value: default values of all properties of [ArcSliderStyleOptions](arkts
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -161,6 +175,8 @@ Default value: default values of all properties of [ArcSliderStyleOptions](arkts
 **Type:** [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

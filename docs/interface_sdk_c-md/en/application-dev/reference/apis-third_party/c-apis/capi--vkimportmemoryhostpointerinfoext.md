@@ -1,4 +1,0 @@
-# VkImportMemoryHostPointerInfoEXT
-
-## Overview
-

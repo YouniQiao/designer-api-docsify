@@ -17,7 +17,7 @@ Defines the vibrator parameters. If **VibratorInfoParam** is left unspecified, a
 deviceId?: number
 ```
 
-Device ID. The default value is **-1**, indicating the local device. Since API version 19, you can use [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md) or [on](arkts-sensorservice-vibrator-on-f.md#onvibratorstatechange) to query the device ID.
+Device ID. The default value is **-1**, indicating the local device. Since API version 19, you can use [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md) or [on](arkts-sensorservice-vibrator-on-f.md) to query the device ID.
 
 **Type:** number
 
@@ -31,7 +31,7 @@ Device ID. The default value is **-1**, indicating the local device. Since API v
 vibratorId?: number
 ```
 
-Vibrator ID. The default value is **0**, which indicates all vibrators of the local device. Since API version 19, you can use [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md) or [on](arkts-sensorservice-vibrator-on-f.md#onvibratorstatechange) to query the vibrator ID.
+Vibrator ID. The default value is **0**, which indicates all vibrators of the local device. Since API version 19, you can use [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md) or [on](arkts-sensorservice-vibrator-on-f.md) to query the vibrator ID.
 
 **Type:** number
 

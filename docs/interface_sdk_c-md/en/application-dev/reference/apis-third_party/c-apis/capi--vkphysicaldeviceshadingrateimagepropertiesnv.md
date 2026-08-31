@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShadingRateImagePropertiesNV
-
-## Overview
-

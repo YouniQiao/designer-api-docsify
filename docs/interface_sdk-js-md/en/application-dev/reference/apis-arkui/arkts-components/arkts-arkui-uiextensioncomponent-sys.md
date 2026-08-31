@@ -31,8 +31,6 @@ Construct the UIExtensionComponent.Called when the UIExtensionComponent is used.
 
 **Since:** 10
 
-**Decorator:** @ohos
-
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

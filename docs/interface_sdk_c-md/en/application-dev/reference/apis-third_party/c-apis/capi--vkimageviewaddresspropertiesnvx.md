@@ -1,4 +1,0 @@
-# VkImageViewAddressPropertiesNVX
-
-## Overview
-

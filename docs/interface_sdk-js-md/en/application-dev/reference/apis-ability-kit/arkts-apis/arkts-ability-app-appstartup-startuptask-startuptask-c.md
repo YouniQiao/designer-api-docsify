@@ -4,6 +4,8 @@ The module provides capabilities related to startup tasks in [AppStartup](../../
 
 **Since:** 12
 
+**Decorator:** @Sendable
+
 **System capability:** SystemCapability.Ability.AppStartup
 
 ## Modules to Import

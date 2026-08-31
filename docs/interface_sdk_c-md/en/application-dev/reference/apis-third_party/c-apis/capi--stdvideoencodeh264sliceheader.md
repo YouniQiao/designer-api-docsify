@@ -1,4 +1,0 @@
-# StdVideoEncodeH264SliceHeader
-
-## Overview
-

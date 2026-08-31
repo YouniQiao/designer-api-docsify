@@ -1,4 +1,0 @@
-# VkPhysicalDeviceIndexTypeUint8Features
-
-## Overview
-

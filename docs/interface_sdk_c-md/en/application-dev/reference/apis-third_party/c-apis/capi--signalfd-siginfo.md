@@ -1,4 +1,0 @@
-# signalfd_siginfo
-
-## Overview
-

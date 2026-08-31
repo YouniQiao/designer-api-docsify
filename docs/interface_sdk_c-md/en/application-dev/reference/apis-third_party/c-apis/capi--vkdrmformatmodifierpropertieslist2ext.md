@@ -1,4 +1,0 @@
-# VkDrmFormatModifierPropertiesList2EXT
-
-## Overview
-

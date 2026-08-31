@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderAtomicInt64Features
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkBaseOutStructure
-
-## Overview
-

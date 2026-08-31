@@ -1,4 +1,0 @@
-# VkDebugMarkerObjectTagInfoEXT
-
-## Overview
-

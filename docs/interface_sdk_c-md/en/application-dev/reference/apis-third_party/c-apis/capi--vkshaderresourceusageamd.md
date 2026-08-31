@@ -1,4 +1,0 @@
-# VkShaderResourceUsageAMD
-
-## Overview
-

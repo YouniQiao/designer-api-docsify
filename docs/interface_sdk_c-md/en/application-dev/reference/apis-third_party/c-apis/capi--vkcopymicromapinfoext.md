@@ -1,4 +1,0 @@
-# VkCopyMicromapInfoEXT
-
-## Overview
-

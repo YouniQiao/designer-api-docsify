@@ -4,6 +4,8 @@ Defines segmented button item.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -52,6 +54,8 @@ Decorator type: @Trace
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -76,6 +80,8 @@ Decorator type: @Trace
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -99,6 +105,8 @@ Decorator type: @Trace
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,6 +134,8 @@ Decorator type: @Trace
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -148,6 +158,8 @@ Decorator type: @Trace
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -169,6 +181,8 @@ Decorator type: @Trace
 **Type:** [ImageModifier](arkts-arkui-imagemodifier-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -210,6 +224,8 @@ Decorator type: @Trace
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -231,6 +247,8 @@ Decorator type: @Trace
 **Type:** [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -254,6 +272,8 @@ Decorator type: @Trace
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -275,6 +295,8 @@ Decorator type: @Trace
 **Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

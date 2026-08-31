@@ -1,4 +1,0 @@
-# VkClusterAccelerationStructureCommandsInfoNV
-
-## Overview
-

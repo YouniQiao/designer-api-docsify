@@ -1,4 +1,0 @@
-# VkCopyMemoryToAccelerationStructureInfoKHR
-
-## Overview
-

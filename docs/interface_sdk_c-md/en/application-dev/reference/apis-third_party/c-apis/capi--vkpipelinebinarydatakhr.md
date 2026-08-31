@@ -1,4 +1,0 @@
-# VkPipelineBinaryDataKHR
-
-## Overview
-

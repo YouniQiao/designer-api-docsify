@@ -1,4 +1,0 @@
-# StdVideoH264SpsVuiFlags
-
-## Overview
-

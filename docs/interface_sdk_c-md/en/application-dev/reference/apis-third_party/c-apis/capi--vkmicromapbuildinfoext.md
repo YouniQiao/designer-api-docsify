@@ -1,4 +1,0 @@
-# VkMicromapBuildInfoEXT
-
-## Overview
-

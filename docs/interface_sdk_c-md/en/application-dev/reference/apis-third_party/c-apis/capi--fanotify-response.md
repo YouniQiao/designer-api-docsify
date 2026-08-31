@@ -1,4 +1,0 @@
-# fanotify_response
-
-## Overview
-

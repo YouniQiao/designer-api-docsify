@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderReplicatedCompositesFeaturesEXT
-
-## Overview
-

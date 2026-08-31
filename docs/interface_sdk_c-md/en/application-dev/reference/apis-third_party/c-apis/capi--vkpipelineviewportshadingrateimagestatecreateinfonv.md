@@ -1,4 +1,0 @@
-# VkPipelineViewportShadingRateImageStateCreateInfoNV
-
-## Overview
-

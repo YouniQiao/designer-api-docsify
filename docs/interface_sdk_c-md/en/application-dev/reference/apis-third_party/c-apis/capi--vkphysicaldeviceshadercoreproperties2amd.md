@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderCoreProperties2AMD
-
-## Overview
-

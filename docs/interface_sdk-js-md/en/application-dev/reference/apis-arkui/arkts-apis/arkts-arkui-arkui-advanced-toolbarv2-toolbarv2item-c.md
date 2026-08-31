@@ -4,6 +4,8 @@ Declare type ToolBarV2Item
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,6 +23,8 @@ action?: ToolBarV2ItemAction
 Define the action event.
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +66,8 @@ The accessibilityDescription of item.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -82,6 +88,8 @@ The accessibilityLevel of item.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -99,6 +107,8 @@ The accessibilityText of item.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,6 +128,8 @@ Define text content.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -136,6 +148,8 @@ Define icon resource.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -153,6 +167,8 @@ Define item type.
 **Type:** [ToolBarV2ItemState](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2itemstate-e.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

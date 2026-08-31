@@ -1,4 +1,0 @@
-# VkSubpassDependency
-
-## Overview
-

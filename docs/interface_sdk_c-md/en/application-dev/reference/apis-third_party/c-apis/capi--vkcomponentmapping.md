@@ -1,4 +1,0 @@
-# VkComponentMapping
-
-## Overview
-

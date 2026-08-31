@@ -1,4 +1,0 @@
-# VkRayTracingShaderGroupCreateInfoKHR
-
-## Overview
-

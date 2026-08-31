@@ -1,4 +1,0 @@
-# VkQueryPoolPerformanceQueryCreateInfoINTEL
-
-## Overview
-

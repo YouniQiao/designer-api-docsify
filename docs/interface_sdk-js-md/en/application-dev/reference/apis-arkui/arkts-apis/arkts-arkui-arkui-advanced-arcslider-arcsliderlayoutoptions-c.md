@@ -4,6 +4,8 @@ Defines the layout of the arc slider.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -50,6 +52,8 @@ Default value: **ArcSliderPosition.RIGHT**
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -71,6 +75,8 @@ Whether the value range of the arc slider is reversed. **false**: top-to-bottom 
 **Default:** true
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

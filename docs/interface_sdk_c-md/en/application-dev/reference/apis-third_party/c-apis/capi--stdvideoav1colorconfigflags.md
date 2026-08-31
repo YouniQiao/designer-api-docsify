@@ -1,4 +1,0 @@
-# StdVideoAV1ColorConfigFlags
-
-## Overview
-

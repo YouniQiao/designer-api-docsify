@@ -2,7 +2,8 @@
 
 <!--Del-->
 - [@ohos.app.ability.MediaControlExtensionAbility](arkts-app-ability-mediacontrolextensionability.md)<!--DelEnd-->
-  - [MediaControlExtensionAbility](arkts-avsession-app-ability-mediacontrolextensionability-mediacontrolextensionability-c.md)
+  <!--Del-->
+  - [MediaControlExtensionAbility(系统接口)](arkts-avsession-app-ability-mediacontrolextensionability-mediacontrolextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.multimedia.avCastPicker](arkts-multimedia-avcastpicker.md)
   - [AVCastPicker](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md)
 - [@ohos.multimedia.avCastPickerParam](arkts-multimedia-avcastpickerparam.md)
@@ -249,4 +250,5 @@
 - application<!--arkts-avsessionkit-application-->
   <!--Del-->
   - [MediaControlExtensionContext](arkts-mediacontrolextensioncontext.md)<!--DelEnd-->
-    - [MediaControlExtensionContext](arkts-avsession-mediacontrolextensioncontext-c.md)
+    <!--Del-->
+    - [MediaControlExtensionContext(系统接口)](arkts-avsession-mediacontrolextensioncontext-c-sys.md)<!--DelEnd-->

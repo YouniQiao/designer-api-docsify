@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @ObservedV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -21,6 +23,8 @@ action?: SubHeaderV2OperationItemAction
 callback function when operate the text or icon.
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,6 +66,8 @@ The accessibilityDescription of this text or icon.
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -84,6 +90,8 @@ The accessibilityLevel of this text or icon.
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -102,6 +110,8 @@ The accessibilityText of this text or icon.
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -119,6 +129,8 @@ The content of text or the address of icon.
 **类型：** [SubHeaderV2OperationItemType](arkts-arkui-subheaderv2operationitemtype-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -140,6 +152,8 @@ Sets the default focus state of the text or icon.
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -159,6 +173,8 @@ id?: string
 **类型：** string
 
 **起始版本：** 24
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

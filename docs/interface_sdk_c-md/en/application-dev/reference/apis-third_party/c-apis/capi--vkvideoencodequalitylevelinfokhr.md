@@ -1,4 +1,0 @@
-# VkVideoEncodeQualityLevelInfoKHR
-
-## Overview
-

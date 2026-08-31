@@ -1,4 +1,0 @@
-# VkTextureLODGatherFormatPropertiesAMD
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceTransformFeedbackFeaturesEXT
-
-## Overview
-

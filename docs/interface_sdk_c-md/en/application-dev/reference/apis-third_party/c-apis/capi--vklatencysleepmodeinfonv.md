@@ -1,4 +1,0 @@
-# VkLatencySleepModeInfoNV
-
-## Overview
-

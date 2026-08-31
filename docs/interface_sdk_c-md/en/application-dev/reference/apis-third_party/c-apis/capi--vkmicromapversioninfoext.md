@@ -1,4 +1,0 @@
-# VkMicromapVersionInfoEXT
-
-## Overview
-

@@ -4,6 +4,8 @@ Declare Component ProgressButton
 
 **Since:** 22
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

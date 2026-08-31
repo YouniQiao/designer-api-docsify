@@ -1,4 +1,0 @@
-# sg_iovec
-
-## Overview
-

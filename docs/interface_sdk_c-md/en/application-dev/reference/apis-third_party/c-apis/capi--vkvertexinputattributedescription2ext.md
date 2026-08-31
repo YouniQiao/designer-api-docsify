@@ -1,4 +1,0 @@
-# VkVertexInputAttributeDescription2EXT
-
-## Overview
-

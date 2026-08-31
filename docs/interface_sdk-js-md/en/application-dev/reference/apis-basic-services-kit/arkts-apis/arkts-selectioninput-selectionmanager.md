@@ -1,14 +1,14 @@
 # @ohos.selectionInput.selectionManager(Word Selection Management)
 
 This module provides word selection management capabilities, including creating, displaying, moving, hiding, and destroying panels, listening for word selection events using a mouse or touchpad, and retrieving the selected text. The typical usage process is as follows:
-1. Call [on('selectionCompleted')](arkts-basicservices-selectionmanager-on-f.md#onselectioncompleted) to subscribe to the selection completion event.
+1. Call [on('selectionCompleted')](arkts-basicservices-selectionmanager-on-f.md) to subscribe to the selection completion event.
 2. In the callback, call [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md) to obtain the selected text.
 3. Call [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md) to create a word selection panel.
 4. Call [setUiContent](arkts-basicservices-selectionmanager-panel-i.md#setuicontent) to load the page content.
 5. Call [moveToGlobalDisplay](arkts-basicservices-selectionmanager-panel-i.md#movetoglobaldisplay) to move the panel to the specified position.
 6. Call [show](arkts-basicservices-selectionmanager-panel-i.md#show) to display the panel.
 7. Call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md) to destroy the panel.
-8. Call [off('selectionCompleted')](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted) to unsubscribe from the selection completion event.
+8. Call [off('selectionCompleted')](arkts-basicservices-selectionmanager-off-f.md) to unsubscribe from the selection completion event.
 
 > **NOTE：**
 > 

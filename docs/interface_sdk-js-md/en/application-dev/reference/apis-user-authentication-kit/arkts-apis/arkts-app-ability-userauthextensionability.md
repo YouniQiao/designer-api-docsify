@@ -8,8 +8,10 @@ import { UserAuthExtensionAbility } from '@kit.UserAuthenticationKit';
 
 ## Summary
 
-### Classes
+<!--Del-->
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
-| [UserAuthExtensionAbility](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c.md) | The class of user authentication extension ability. |
+| [UserAuthExtensionAbility](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c-sys.md) | The class of user authentication extension ability. |
+<!--DelEnd-->

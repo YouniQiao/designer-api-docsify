@@ -1,4 +1,0 @@
-# VkDepthClampRangeEXT
-
-## Overview
-

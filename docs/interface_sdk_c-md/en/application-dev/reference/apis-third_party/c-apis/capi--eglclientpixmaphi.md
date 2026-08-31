@@ -1,4 +1,0 @@
-# EGLClientPixmapHI
-
-## Overview
-

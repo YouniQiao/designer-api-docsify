@@ -4,6 +4,8 @@ Declaration of the composable title bar. Composable title bar represents a commo
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

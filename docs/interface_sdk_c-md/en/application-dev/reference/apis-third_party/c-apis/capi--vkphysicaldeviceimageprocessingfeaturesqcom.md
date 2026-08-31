@@ -1,4 +1,0 @@
-# VkPhysicalDeviceImageProcessingFeaturesQCOM
-
-## Overview
-

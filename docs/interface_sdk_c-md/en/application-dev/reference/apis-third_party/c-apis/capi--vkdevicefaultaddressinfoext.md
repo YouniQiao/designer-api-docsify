@@ -1,4 +1,0 @@
-# VkDeviceFaultAddressInfoEXT
-
-## Overview
-

@@ -4,6 +4,8 @@ Declare ProgressButtonV2 Color.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

@@ -1,4 +1,0 @@
-# ether_header
-
-## Overview
-

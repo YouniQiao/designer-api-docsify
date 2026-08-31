@@ -11,6 +11,8 @@
 
 **起始版本：** 10
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -32,6 +34,8 @@ activateIndex?: number
 **类型：** number
 
 **起始版本：** 10
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -75,6 +79,8 @@ dividerModifier?: DividerModifier
 
 **起始版本：** 13
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -92,6 +98,8 @@ toolBarList: ToolBarOptions
 **类型：** [ToolBarOptions](arkts-arkui-arkui-advanced-toolbar-toolbaroptions-c.md)
 
 **起始版本：** 10
+
+**装饰器类型：** @ObjectLink
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,6 +128,8 @@ toolBarModifier?: ToolBarModifier
 **类型：** [ToolBarModifier](arkts-arkui-arkui-advanced-toolbar-toolbarmodifier-c.md)
 
 **起始版本：** 13
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

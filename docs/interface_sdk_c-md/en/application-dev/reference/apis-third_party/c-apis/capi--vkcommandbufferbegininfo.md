@@ -1,4 +1,0 @@
-# VkCommandBufferBeginInfo
-
-## Overview
-

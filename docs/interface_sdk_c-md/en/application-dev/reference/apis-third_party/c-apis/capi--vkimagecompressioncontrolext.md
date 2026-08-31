@@ -1,4 +1,0 @@
-# VkImageCompressionControlEXT
-
-## Overview
-

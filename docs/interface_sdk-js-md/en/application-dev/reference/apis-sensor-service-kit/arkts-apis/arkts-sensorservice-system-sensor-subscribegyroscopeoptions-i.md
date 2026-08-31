@@ -30,7 +30,7 @@ Callback invoked when an API call fails.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -57,7 +57,7 @@ Callback invoked when the gyroscope sensor data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange)
+**Substitutes:** [on](arkts-sensorservice-sensor-on-f.md)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 

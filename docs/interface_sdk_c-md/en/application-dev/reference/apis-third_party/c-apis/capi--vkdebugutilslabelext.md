@@ -1,4 +1,0 @@
-# VkDebugUtilsLabelEXT
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkDescriptorSetLayoutBinding
-
-## Overview
-

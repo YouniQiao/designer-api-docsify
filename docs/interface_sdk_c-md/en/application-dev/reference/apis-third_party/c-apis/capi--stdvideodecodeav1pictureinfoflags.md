@@ -1,4 +1,0 @@
-# StdVideoDecodeAV1PictureInfoFlags
-
-## Overview
-

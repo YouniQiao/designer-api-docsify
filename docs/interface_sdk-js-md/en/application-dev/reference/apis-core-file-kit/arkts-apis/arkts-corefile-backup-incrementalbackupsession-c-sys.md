@@ -34,7 +34,7 @@ Append new bundles to incremental backup.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundlesToBackup | Array&lt;[IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i.md)&gt; | Yes | Bundles to incremental backup. |
+| bundlesToBackup | Array&lt;[IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i-sys.md)&gt; | Yes | Bundles to incremental backup. |
 
 **Return value:**
 
@@ -136,7 +136,7 @@ Append new bundles to incremental backup.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundlesToAppend | Array&lt;[IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i.md)&gt; | Yes | Bundles to incremental backup. |
+| bundlesToAppend | Array&lt;[IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i-sys.md)&gt; | Yes | Bundles to incremental backup. |
 | infos | string[] | Yes | information of the bundlesToBackup |
 
 **Return value:**

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderAtomicFloatFeaturesEXT
-
-## Overview
-

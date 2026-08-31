@@ -13,6 +13,8 @@ The K and V types must be any of the [sendable data types](../../../arkts-utils/
 
 **Since:** 12
 
+**Decorator:** @Sendable
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

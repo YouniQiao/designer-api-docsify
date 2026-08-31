@@ -1,4 +1,0 @@
-# VkSubpassFragmentDensityMapOffsetEndInfoQCOM
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkAccelerationStructureMatrixMotionInstanceNV
-
-## Overview
-

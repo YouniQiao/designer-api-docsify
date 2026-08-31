@@ -1,4 +1,0 @@
-# VkPhysicalDevicePartitionedAccelerationStructureFeaturesNV
-
-## Overview
-

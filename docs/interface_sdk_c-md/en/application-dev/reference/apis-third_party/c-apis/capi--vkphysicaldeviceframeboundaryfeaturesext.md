@@ -1,4 +1,0 @@
-# VkPhysicalDeviceFrameBoundaryFeaturesEXT
-
-## Overview
-

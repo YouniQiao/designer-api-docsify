@@ -11,6 +11,8 @@
 
 **起始版本：** 10
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 ## 导入模块
@@ -53,6 +55,8 @@ activeColor?: Color | number | string
 
 **起始版本：** 11
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -72,6 +76,8 @@ colorMode?: AVCastPickerColorMode
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -87,6 +93,8 @@ customPicker?: CustomBuilder
 **类型：** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -105,6 +113,8 @@ normalColor?: Color | number | string
 **类型：** Color \| number \| string
 
 **起始版本：** 11
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -125,6 +135,8 @@ pickerStyle?: AVCastPickerStyle
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -140,6 +152,8 @@ sessionType?: string
 **类型：** string
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

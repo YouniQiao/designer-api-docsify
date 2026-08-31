@@ -1,4 +1,0 @@
-# VkPipelineRasterizationProvokingVertexStateCreateInfoEXT
-
-## Overview
-

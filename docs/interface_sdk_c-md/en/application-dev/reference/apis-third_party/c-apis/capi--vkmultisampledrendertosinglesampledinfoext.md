@@ -1,4 +1,0 @@
-# VkMultisampledRenderToSingleSampledInfoEXT
-
-## Overview
-

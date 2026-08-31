@@ -1,4 +1,0 @@
-# VkPhysicalDeviceCooperativeMatrixPropertiesKHR
-
-## Overview
-

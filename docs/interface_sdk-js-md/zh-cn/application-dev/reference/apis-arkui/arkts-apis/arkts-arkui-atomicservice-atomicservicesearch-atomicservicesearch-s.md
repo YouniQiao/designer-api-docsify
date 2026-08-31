@@ -8,6 +8,8 @@ AtomicServiceSearch为开发者提供满足定制化需求的功能，内容包�
 
 **起始版本：** 18
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -60,6 +62,8 @@ placeholder?: ResourceStr
 
 **起始版本：** 18
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -75,6 +79,8 @@ search搜索区可支持的事件及样式。默认值为undefined。
 **类型：** [SearchParams](arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -92,6 +98,8 @@ select选择区的内容、事件及样式。默认值为undefined。
 
 **起始版本：** 18
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -107,6 +115,8 @@ value?: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

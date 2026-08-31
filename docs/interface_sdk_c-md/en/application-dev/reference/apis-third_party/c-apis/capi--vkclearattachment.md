@@ -1,4 +1,0 @@
-# VkClearAttachment
-
-## Overview
-

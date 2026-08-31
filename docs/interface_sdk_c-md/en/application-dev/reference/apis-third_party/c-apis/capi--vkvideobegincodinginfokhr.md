@@ -1,4 +1,0 @@
-# VkVideoBeginCodingInfoKHR
-
-## Overview
-

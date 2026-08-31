@@ -1,4 +1,0 @@
-# VkPhysicalDeviceRayTracingInvocationReorderFeaturesNV
-
-## Overview
-

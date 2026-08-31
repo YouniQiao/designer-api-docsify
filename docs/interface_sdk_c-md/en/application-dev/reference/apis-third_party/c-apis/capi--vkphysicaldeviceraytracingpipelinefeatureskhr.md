@@ -1,4 +1,0 @@
-# VkPhysicalDeviceRayTracingPipelineFeaturesKHR
-
-## Overview
-

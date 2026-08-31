@@ -1,4 +1,0 @@
-# VkWriteDescriptorSetPartitionedAccelerationStructureNV
-
-## Overview
-

@@ -103,7 +103,6 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i.md) | 媒体资产（图片/视频）信息。 |
 | [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md) | 媒体资产（图片/视频）的变更通知信息。 |
 | [PhotoCreationConfig](arkts-medialibrary-photoaccesshelper-photocreationconfig-i.md) | 保存图片/视频到媒体库的配置，包括保存的文件名等。 |
-| [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i.md) | 照片代理，相机应用通过该对象写入图片数据。 |
 | [QuickImageDataHandler](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md) | 媒体资源处理器，应用在onDataPrepared方法中可自定义媒体资源处理逻辑。 |
 | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | 请求策略。 |
 | [TextContextInfo](arkts-medialibrary-photoaccesshelper-textcontextinfo-i.md) | 文本信息，用于推荐图片的文本信息。 |
@@ -144,6 +143,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md) | 媒体库支持图库自定义用户统计行为。 |
 | [PhotoCreateOptions](arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md) | 图片或视频的创建选项。 |
 | [PhotoCreationSource](arkts-medialibrary-photoaccesshelper-photocreationsource-i-sys.md) | 代替应用创建资产传入的应用信息。 |
+| [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i-sys.md) | 照片代理，相机应用通过该对象写入图片数据。 |
 | [Progress](arkts-medialibrary-photoaccesshelper-progress-i-sys.md) | 复制操作的进度信息。 |
 | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i-sys.md) | 请求策略。 |
 | [RequestPhotoOptions](arkts-medialibrary-photoaccesshelper-requestphotooptions-i-sys.md) | 获取图片或视频缩略图的选项。 |

@@ -10,6 +10,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## 导入模块

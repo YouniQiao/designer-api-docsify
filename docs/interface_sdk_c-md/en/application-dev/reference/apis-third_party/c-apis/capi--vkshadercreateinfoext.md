@@ -1,4 +1,0 @@
-# VkShaderCreateInfoEXT
-
-## Overview
-

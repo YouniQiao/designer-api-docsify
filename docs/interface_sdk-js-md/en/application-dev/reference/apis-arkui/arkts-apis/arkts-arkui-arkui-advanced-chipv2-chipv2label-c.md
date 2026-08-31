@@ -4,6 +4,8 @@ Defines chip label class.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -46,6 +48,8 @@ Text font color when chip is activated.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -63,6 +67,8 @@ Text font color.
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,6 +88,8 @@ Text font family.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -99,6 +107,8 @@ Text font size.
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,6 +128,8 @@ Label margin.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -135,6 +147,8 @@ Localized label margin.
 **Type:** [ChipV2LocalizedLabelMarginConfig](arkts-arkui-arkui-advanced-chipv2-chipv2localizedlabelmarginconfig-i.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -154,6 +168,8 @@ Modifier for the label text.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -171,6 +187,8 @@ Text content.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

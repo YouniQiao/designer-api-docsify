@@ -1,4 +1,0 @@
-# VkVideoDecodeAV1ProfileInfoKHR
-
-## Overview
-

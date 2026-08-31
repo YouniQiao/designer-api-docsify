@@ -1,4 +1,0 @@
-# VkDescriptorSetVariableDescriptorCountLayoutSupport
-
-## Overview
-

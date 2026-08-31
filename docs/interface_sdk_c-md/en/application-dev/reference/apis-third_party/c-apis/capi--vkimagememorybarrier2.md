@@ -1,4 +1,0 @@
-# VkImageMemoryBarrier2
-
-## Overview
-

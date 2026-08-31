@@ -1,4 +1,0 @@
-# VkBindDescriptorSetsInfo
-
-## Overview
-

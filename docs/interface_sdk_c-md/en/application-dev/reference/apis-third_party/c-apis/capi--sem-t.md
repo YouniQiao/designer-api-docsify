@@ -1,4 +1,0 @@
-# sem_t
-
-## Overview
-

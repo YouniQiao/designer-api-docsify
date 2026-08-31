@@ -1,4 +1,0 @@
-# VkVideoProfileListInfoKHR
-
-## Overview
-

@@ -12,6 +12,8 @@
 
 **起始版本：** 12
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **系统接口：** 此接口为系统接口。
@@ -33,6 +35,8 @@ content: Callback<void>
 **类型：** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
+
+**装饰器类型：** @BuilderParam
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

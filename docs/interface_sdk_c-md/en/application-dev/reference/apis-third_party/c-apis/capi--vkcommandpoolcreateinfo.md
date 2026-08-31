@@ -1,4 +1,0 @@
-# VkCommandPoolCreateInfo
-
-## Overview
-

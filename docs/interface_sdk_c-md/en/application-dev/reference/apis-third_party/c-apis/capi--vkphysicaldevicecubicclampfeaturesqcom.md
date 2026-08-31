@@ -1,4 +1,0 @@
-# VkPhysicalDeviceCubicClampFeaturesQCOM
-
-## Overview
-

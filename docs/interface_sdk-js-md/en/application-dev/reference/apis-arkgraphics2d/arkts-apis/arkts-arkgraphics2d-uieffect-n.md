@@ -48,7 +48,6 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | Name | Description |
 | --- | --- |
 | [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | Filter effect class, used to apply corresponding effects to specified components. Before calling Filter methods, you need to first create a Filter instance through createFilter. |
-| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i.md) | HDR-enabled brightness blender (inherited from BrightnessBlender), used to add a brightness effect to a specified component. Before calling HdrBrightnessBlender, you need to first create an HdrBrightnessBlender instance through createHdrBrightnessBlender. The parameters of this blender can be referenced from BrightnessBlender. |
 
 <!--Del-->
 ### Interfaces(System API)
@@ -62,6 +61,7 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 | [BlurBubblesRiseEffectParam](arkts-arkgraphics2d-uieffect-blurbubblesriseeffectparam-i-sys.md) | The parameters of blur bubbles rise effect. |
 | [LiquidMaterialEffectParam](arkts-arkgraphics2d-uieffect-liquidmaterialeffectparam-i-sys.md) | Material effect parameters, used to control the display properties of the material such as refraction, reflection, perturbation, and overlay color. |
 | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | Brightness blender, used to add a brightness effect to a specified component. Before calling BrightnessBlender, you need to first create a BrightnessBlender instance through createBrightnessBlender. |
+| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i-sys.md) | HDR-enabled brightness blender (inherited from BrightnessBlender), used to add a brightness effect to a specified component. Before calling HdrBrightnessBlender, you need to first create an HdrBrightnessBlender instance through createHdrBrightnessBlender. The parameters of this blender can be referenced from BrightnessBlender. |
 | [HdrDarkenBlender](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | HDR-adaptive darken blender, used to add a darken effect to a specified component. Before calling HdrDarkenBlender, you need to first create an HdrDarkenBlender instance through createHdrDarkenBlender. |
 | [ColorfulBrightnessBlenderOptions](arkts-arkgraphics2d-uieffect-colorfulbrightnessblenderoptions-i-sys.md) | Parameter list of ColorfulBrightnessBlenderOptions, used to configure various properties of the colorful brightness darken effect, including the foreground darken weight, brightness darken strength, luma difference threshold, and HDR switch parameters. |
 | [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | Colorful brightness darken blender, used to add a colorful brightness darken effect to a specified component. Before calling ColorfulBrightnessBlender, you need to first create a ColorfulBrightnessBlender instance through createColorfulBrightnessBlender. |

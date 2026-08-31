@@ -12,6 +12,8 @@
 
 **起始版本：** 11
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.Advertising.Ads
 
 ## 导入模块
@@ -29,6 +31,8 @@ adRenderer?: () => void
 应用自渲染广告样式。应用自渲染广告样式为受限使用能力，具体请前往[流量变现官网客服支持](https://developer.huawei.com/consumer/cn/doc/monetize/kefuzhichi-0000001104461922)进行咨询。
 
 **起始版本：** 12
+
+**装饰器类型：** @BuilderParam
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -109,6 +113,8 @@ rollPlayState?: number
 **类型：** number
 
 **起始版本：** 15
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

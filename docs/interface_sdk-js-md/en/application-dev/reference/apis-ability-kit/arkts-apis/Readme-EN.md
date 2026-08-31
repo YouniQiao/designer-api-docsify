@@ -591,7 +591,8 @@
   - [ExecuteParam(system api)](arkts-ability-insightintentdriver-executeparam-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FormIntentInfo(system api)](arkts-ability-insightintentdriver-formintentinfo-i-sys.md)<!--DelEnd-->
-  - [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md)
+  <!--Del-->
+  - [FunctionIntentInfo(system api)](arkts-ability-insightintentdriver-functionintentinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [InsightIntentInfo(system api)](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->

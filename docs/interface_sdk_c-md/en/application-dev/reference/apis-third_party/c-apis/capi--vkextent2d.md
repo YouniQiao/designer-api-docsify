@@ -1,4 +1,0 @@
-# VkExtent2D
-
-## Overview
-

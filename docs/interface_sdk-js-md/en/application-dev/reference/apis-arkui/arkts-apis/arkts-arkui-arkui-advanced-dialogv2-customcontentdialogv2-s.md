@@ -6,6 +6,8 @@ Declare custom content dialog
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -61,6 +63,8 @@ Sets the CustomContentDialogV2 content.
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
 
 **Since:** 18
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

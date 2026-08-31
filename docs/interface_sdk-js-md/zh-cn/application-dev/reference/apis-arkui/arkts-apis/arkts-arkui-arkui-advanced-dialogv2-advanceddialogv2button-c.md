@@ -10,6 +10,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @ObservedV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -29,6 +31,8 @@ action?: AdvancedDialogV2ButtonAction
 默认无事件。
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,6 +76,8 @@ background?: ColorMetrics
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -94,6 +100,8 @@ buttonStyle?: ButtonStyleMode
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -111,6 +119,8 @@ content: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -138,6 +148,8 @@ false：按钮不是默认焦点。
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -164,6 +176,8 @@ false：按钮不可用。
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -183,6 +197,8 @@ fontColor?: ColorMetrics
 **类型：** ColorMetrics
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -206,6 +222,8 @@ role?: ButtonRole
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -227,6 +245,8 @@ textAlign?: TextAlign
 **默认值：** { TextAlign.Start }
 
 **起始版本：** 24
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

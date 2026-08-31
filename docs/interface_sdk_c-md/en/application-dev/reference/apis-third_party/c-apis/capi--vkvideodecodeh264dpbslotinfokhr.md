@@ -1,4 +1,0 @@
-# VkVideoDecodeH264DpbSlotInfoKHR
-
-## Overview
-

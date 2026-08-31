@@ -1,4 +1,0 @@
-# VkPhysicalDeviceGlobalPriorityQueryFeatures
-
-## Overview
-

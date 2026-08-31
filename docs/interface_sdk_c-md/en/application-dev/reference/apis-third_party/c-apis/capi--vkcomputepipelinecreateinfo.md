@@ -1,4 +1,0 @@
-# VkComputePipelineCreateInfo
-
-## Overview
-

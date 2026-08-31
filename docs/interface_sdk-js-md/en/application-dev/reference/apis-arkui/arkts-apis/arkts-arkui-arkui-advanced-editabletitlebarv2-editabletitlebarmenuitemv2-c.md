@@ -4,6 +4,8 @@ Declaration of the menu item on the right side.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,6 +23,8 @@ public action?: OnActionCallback
 Callback function when click on this menu item.
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +66,8 @@ Accessibility description.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -82,6 +88,8 @@ Accessibility level, options: 'auto', 'yes', 'no'.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -99,6 +107,8 @@ Accessibility text for screen reader.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,6 +130,8 @@ Whether to get focus by default.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -140,6 +152,8 @@ Whether to enable this menu item.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -158,6 +172,8 @@ Label text for number press dialog.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -175,6 +191,8 @@ Symbol icon style modifier.
 **Type:** SymbolGlyphModifier
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -195,6 +213,8 @@ Icon resource, supports Symbol or Image.
 **Default:** ''
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

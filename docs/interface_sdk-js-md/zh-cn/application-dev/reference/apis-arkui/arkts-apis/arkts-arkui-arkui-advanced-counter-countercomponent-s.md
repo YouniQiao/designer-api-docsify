@@ -10,6 +10,8 @@ Counter组件用于精确调节数值，支持列表型、紧凑型、数值内�
 
 **起始版本：** 11
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -29,6 +31,8 @@ options: CounterOptions
 **类型：** [CounterOptions](arkts-arkui-arkui-advanced-counter-counteroptions-c.md)
 
 **起始版本：** 11
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

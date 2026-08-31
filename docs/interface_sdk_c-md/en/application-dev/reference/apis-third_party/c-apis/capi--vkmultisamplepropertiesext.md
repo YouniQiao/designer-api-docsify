@@ -1,4 +1,0 @@
-# VkMultisamplePropertiesEXT
-
-## Overview
-

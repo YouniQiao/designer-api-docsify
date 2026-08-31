@@ -4,6 +4,8 @@ Defines the style of the arc slider.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -52,6 +54,8 @@ Value range: [24, 36]. If the value is invalid, the default value is used.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -73,6 +77,8 @@ Default value: **#FF5EA1FF**
 **Default:** #FF5EA1FF
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -98,6 +104,8 @@ If a value less than 0 is set, the default is used.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -119,6 +127,8 @@ Default value: **#33FFFFFF**
 **Default:** #33FFFFFF
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -143,6 +153,8 @@ Value range: [5, 16]. If the value is invalid, the default value is used.
 **Default:** 5
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

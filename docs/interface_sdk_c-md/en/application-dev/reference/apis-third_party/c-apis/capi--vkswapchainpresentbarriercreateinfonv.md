@@ -1,4 +1,0 @@
-# VkSwapchainPresentBarrierCreateInfoNV
-
-## Overview
-

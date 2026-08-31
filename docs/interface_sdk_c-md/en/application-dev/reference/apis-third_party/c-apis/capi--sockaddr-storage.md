@@ -1,4 +1,0 @@
-# sockaddr_storage
-
-## Overview
-

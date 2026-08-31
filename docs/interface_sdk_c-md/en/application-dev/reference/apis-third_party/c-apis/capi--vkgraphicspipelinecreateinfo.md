@@ -1,4 +1,0 @@
-# VkGraphicsPipelineCreateInfo
-
-## Overview
-

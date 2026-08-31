@@ -4,6 +4,8 @@ Configuration parameter of ExceptionPromptV2. Use @ObservedV2 and @Trace to supp
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -46,6 +48,8 @@ Text of the icon on the right of the ExceptionPromptV2. If this parameter is not
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -63,6 +67,8 @@ Icon style of the ExceptionPromptV2. If this parameter is not set or is set to u
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,6 +88,8 @@ Whether the ExceptionPromptV2 is displayed. true: The exception prompt is displa
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -99,6 +107,8 @@ Top margin of the ExceptionPromptV2. Distance from the top to the content area o
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,6 +128,8 @@ Margin Type of ExceptionPromptV2. Margin from the content area to the edge of th
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -135,6 +147,8 @@ Symbol icon style of the ExceptionPromptV2, which has higher priority than icon.
 **Type:** SymbolGlyphModifier
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,6 +172,8 @@ but the location fails to be obtained. If this parameter is not set or is set to
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

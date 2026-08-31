@@ -1,4 +1,0 @@
-# VkVertexInputAttributeDescription
-
-## Overview
-

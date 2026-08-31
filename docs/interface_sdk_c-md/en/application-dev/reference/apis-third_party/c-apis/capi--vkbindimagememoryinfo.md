@@ -1,4 +1,0 @@
-# VkBindImageMemoryInfo
-
-## Overview
-

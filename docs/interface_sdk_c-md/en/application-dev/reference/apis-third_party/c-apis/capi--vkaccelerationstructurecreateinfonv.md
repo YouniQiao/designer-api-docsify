@@ -1,4 +1,0 @@
-# VkAccelerationStructureCreateInfoNV
-
-## Overview
-

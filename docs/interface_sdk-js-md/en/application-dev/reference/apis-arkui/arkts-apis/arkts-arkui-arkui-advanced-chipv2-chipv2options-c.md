@@ -4,6 +4,8 @@ Defines chip options class.
 
 **Since:** 26.0.0
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -62,6 +64,8 @@ Set accessibility description for Chip.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -79,6 +83,8 @@ Set accessibility level for Chip.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +104,8 @@ Sets the accessibility selection type for the chip.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -115,6 +123,8 @@ Set whether chip is active or not.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,6 +144,8 @@ Chip background color when chip is activated.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -151,6 +163,8 @@ Set system-styled materials for the component which is activated. Different mate
 **Type:** uiMaterial.Material
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,6 +184,8 @@ Show close icon.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -187,6 +203,8 @@ Chip background color.
 **Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,6 +224,8 @@ Set system-styled materials for the component. Different materials have differen
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -223,6 +243,8 @@ Chip radius.
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,6 +264,8 @@ Set config for default close icon when 'allowClose' is true.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -259,6 +283,8 @@ Indicates the attribute of the current chip direction.
 **Type:** Direction
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -278,6 +304,8 @@ Enable chip.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -295,6 +323,8 @@ Set font size for the label text and the close icon.
 **Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -314,6 +344,8 @@ Chip prefix icon.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -332,6 +364,8 @@ Maximum font scale for Chip.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -349,6 +383,8 @@ Minimum font scale for Chip.
 **Type:** number \| Resource
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -386,6 +422,8 @@ Chip padding.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -403,6 +441,8 @@ Chip prefix icon.
 **Type:** [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -422,6 +462,8 @@ Chip size.
 
 **Since:** 26.0.0
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -439,6 +481,8 @@ Chip suffix icon.
 **Type:** [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

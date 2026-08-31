@@ -1,4 +1,0 @@
-# maxdiv_t
-
-## Overview
-

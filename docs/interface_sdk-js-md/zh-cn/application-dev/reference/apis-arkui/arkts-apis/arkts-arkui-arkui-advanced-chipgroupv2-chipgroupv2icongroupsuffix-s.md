@@ -6,6 +6,8 @@ ChipGroupV2组件提供操作块群组容器，支持单选或多选、自定义
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ComponentV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -63,6 +65,8 @@ items: Array<ChipGroupV2IconItemConfig | SymbolGlyphModifier | ChipGroupV2Symbol
 **类型：** Array&lt;[ChipGroupV2IconItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2iconitemconfig-i.md) \| SymbolGlyphModifier \| [ChipGroupV2SymbolItemConfig](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2symbolitemconfig-i.md)&gt;
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Require
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

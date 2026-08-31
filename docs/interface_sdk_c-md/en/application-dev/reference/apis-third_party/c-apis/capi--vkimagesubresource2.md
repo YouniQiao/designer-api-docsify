@@ -1,4 +1,0 @@
-# VkImageSubresource2
-
-## Overview
-

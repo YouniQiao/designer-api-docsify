@@ -1,4 +1,0 @@
-# VkPipelineViewportStateCreateInfo
-
-## Overview
-

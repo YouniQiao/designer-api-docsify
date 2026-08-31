@@ -1,4 +1,0 @@
-# VkPipelineShaderStageRequiredSubgroupSizeCreateInfo
-
-## Overview
-

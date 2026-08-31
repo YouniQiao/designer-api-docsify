@@ -1,4 +1,0 @@
-# VkDescriptorSetBindingReferenceVALVE
-
-## Overview
-

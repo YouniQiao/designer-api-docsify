@@ -1,4 +1,0 @@
-# VkBindPipelineIndirectCommandNV
-
-## Overview
-

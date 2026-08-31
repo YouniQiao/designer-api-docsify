@@ -1,4 +1,0 @@
-# VkEventCreateInfo
-
-## Overview
-

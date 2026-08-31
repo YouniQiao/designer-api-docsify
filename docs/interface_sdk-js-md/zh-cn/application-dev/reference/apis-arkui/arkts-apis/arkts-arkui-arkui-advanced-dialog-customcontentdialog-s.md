@@ -11,6 +11,8 @@
 
 **起始版本：** 12
 
+**装饰器类型：** @CustomDialog
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块

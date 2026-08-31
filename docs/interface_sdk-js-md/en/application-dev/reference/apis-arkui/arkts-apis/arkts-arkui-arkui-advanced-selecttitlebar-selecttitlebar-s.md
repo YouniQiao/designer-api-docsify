@@ -15,6 +15,8 @@ The **SelectTitleBar** component represents a drop-down menu title bar used for 
 
 **Since:** 10
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -134,6 +136,8 @@ The index of the first item is 0. If this attribute is not set, the default valu
 **Type:** number
 
 **Since:** 10
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

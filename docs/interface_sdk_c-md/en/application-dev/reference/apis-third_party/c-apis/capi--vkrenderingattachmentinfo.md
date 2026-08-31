@@ -1,4 +1,0 @@
-# VkRenderingAttachmentInfo
-
-## Overview
-

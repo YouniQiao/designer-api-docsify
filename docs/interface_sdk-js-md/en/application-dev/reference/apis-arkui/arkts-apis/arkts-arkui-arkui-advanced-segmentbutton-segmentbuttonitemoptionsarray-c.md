@@ -10,6 +10,8 @@ Represents an array for storing button information.
 
 **Since:** 11
 
+**Decorator:** @Observed
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceCustomBorderColorFeaturesEXT
-
-## Overview
-

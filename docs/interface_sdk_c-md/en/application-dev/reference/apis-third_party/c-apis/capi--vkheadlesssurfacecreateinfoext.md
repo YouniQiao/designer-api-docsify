@@ -1,4 +1,0 @@
-# VkHeadlessSurfaceCreateInfoEXT
-
-## Overview
-

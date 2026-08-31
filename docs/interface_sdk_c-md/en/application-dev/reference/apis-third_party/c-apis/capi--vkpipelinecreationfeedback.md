@@ -1,4 +1,0 @@
-# VkPipelineCreationFeedback
-
-## Overview
-

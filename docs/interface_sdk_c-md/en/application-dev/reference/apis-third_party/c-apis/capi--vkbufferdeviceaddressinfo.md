@@ -1,4 +1,0 @@
-# VkBufferDeviceAddressInfo
-
-## Overview
-

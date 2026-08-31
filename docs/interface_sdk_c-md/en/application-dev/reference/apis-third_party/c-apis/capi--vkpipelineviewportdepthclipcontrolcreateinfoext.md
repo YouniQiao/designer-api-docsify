@@ -1,4 +1,0 @@
-# VkPipelineViewportDepthClipControlCreateInfoEXT
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkClusterAccelerationStructureMoveObjectsInfoNV
-
-## Overview
-

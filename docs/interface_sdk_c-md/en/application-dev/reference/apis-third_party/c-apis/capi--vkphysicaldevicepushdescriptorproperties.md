@@ -1,4 +1,0 @@
-# VkPhysicalDevicePushDescriptorProperties
-
-## Overview
-

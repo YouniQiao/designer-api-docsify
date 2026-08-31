@@ -1,4 +1,0 @@
-# VkPhysicalDeviceMultiviewFeatures
-
-## Overview
-

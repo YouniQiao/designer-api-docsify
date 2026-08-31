@@ -30,7 +30,7 @@ Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness ef
 
 | Type | Description |
 | --- | --- |
-| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i.md) | Returns the HDR-enabled brightness blender. |
+| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i-sys.md) | Returns the HDR-enabled brightness blender. |
 
 **Error codes:**
 

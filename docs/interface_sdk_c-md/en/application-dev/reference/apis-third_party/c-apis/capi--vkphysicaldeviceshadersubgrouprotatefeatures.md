@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderSubgroupRotateFeatures
-
-## Overview
-

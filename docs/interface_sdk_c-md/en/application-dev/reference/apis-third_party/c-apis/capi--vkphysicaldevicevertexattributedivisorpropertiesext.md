@@ -1,4 +1,0 @@
-# VkPhysicalDeviceVertexAttributeDivisorPropertiesEXT
-
-## Overview
-

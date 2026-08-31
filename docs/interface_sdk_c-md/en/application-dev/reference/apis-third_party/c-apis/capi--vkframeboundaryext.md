@@ -1,4 +1,0 @@
-# VkFrameBoundaryEXT
-
-## Overview
-

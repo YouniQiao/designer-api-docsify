@@ -1,4 +1,0 @@
-# VkDescriptorSetLayoutSupport
-
-## Overview
-

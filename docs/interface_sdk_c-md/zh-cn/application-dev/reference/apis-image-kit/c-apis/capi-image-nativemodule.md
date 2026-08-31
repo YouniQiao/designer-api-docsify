@@ -5,6 +5,7 @@
 Provides APIs for obtaining image data.
 
 **起始版本：** 12
+
 ## 文件汇总
 
 | 名称 | 描述 |

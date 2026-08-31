@@ -1,4 +1,0 @@
-# VkPhysicalDeviceFragmentShaderBarycentricFeaturesKHR
-
-## Overview
-

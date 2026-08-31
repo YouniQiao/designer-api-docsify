@@ -1,4 +1,0 @@
-# VkCommandBufferInheritanceViewportScissorInfoNV
-
-## Overview
-

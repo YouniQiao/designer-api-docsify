@@ -1,4 +1,0 @@
-# VkPipelineRepresentativeFragmentTestStateCreateInfoNV
-
-## Overview
-

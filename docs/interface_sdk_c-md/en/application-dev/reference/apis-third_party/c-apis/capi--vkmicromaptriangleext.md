@@ -1,4 +1,0 @@
-# VkMicromapTriangleEXT
-
-## Overview
-

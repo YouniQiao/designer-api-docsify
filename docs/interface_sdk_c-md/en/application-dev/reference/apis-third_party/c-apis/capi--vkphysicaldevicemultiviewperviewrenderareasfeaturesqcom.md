@@ -1,4 +1,0 @@
-# VkPhysicalDeviceMultiviewPerViewRenderAreasFeaturesQCOM
-
-## Overview
-

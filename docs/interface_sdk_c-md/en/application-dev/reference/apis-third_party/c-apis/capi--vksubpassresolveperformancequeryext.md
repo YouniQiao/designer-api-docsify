@@ -1,4 +1,0 @@
-# VkSubpassResolvePerformanceQueryEXT
-
-## Overview
-

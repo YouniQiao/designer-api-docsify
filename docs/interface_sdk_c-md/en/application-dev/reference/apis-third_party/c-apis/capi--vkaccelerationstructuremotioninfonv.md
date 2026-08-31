@@ -1,4 +1,0 @@
-# VkAccelerationStructureMotionInfoNV
-
-## Overview
-

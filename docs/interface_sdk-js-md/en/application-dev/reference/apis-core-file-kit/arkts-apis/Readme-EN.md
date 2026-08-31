@@ -33,7 +33,8 @@
   - [BackupParams(system api)](arkts-corefile-backup-backupparams-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [BackupPriority(system api)](arkts-corefile-backup-backuppriority-i-sys.md)<!--DelEnd-->
-  - [File](arkts-corefile-backup-file-i.md)
+  <!--Del-->
+  - [File(system api)](arkts-corefile-backup-file-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FileData(system api)](arkts-corefile-backup-filedata-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -44,7 +45,8 @@
   - [FileSystemRequestConfig(system api)](arkts-corefile-backup-filesystemrequestconfig-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [GeneralCallbacks(system api)](arkts-corefile-backup-generalcallbacks-i-sys.md)<!--DelEnd-->
-  - [IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i.md)
+  <!--Del-->
+  - [IncrementalBackupData(system api)](arkts-corefile-backup-incrementalbackupdata-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [IncrementalBackupTime(system api)](arkts-corefile-backup-incrementalbackuptime-i-sys.md)<!--DelEnd-->
   <!--Del-->

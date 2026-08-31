@@ -4,6 +4,8 @@ Declare SplitLayout.The SplitLayout is used for upper and lower graphic layouts.
 
 **Since:** 22
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

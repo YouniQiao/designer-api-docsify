@@ -1,4 +1,0 @@
-# VkDeviceQueueCreateInfo
-
-## Overview
-

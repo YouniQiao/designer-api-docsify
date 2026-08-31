@@ -1,4 +1,0 @@
-# VkPipelineRasterizationConservativeStateCreateInfoEXT
-
-## Overview
-

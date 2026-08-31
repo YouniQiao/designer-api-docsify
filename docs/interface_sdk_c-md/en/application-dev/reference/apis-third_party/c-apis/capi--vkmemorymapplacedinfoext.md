@@ -1,4 +1,0 @@
-# VkMemoryMapPlacedInfoEXT
-
-## Overview
-

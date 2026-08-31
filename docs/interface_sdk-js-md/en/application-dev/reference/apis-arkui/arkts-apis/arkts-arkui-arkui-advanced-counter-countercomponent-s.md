@@ -4,6 +4,8 @@ Defines Counter Component.
 
 **Since:** 11
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,6 +25,8 @@ The options of a counter component.
 **Type:** [CounterOptions](arkts-arkui-arkui-advanced-counter-counteroptions-c.md)
 
 **Since:** 11
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

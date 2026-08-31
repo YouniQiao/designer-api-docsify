@@ -1,4 +1,0 @@
-# VkDeviceQueueGlobalPriorityCreateInfo
-
-## Overview
-

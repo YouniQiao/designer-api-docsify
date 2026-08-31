@@ -1,4 +1,0 @@
-# VkSRTDataNV
-
-## Overview
-

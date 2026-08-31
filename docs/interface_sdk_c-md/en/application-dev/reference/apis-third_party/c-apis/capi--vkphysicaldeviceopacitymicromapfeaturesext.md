@@ -1,4 +1,0 @@
-# VkPhysicalDeviceOpacityMicromapFeaturesEXT
-
-## Overview
-

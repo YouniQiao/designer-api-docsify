@@ -4,6 +4,8 @@ Declare struct ExceptionPromptV2 higher-order component. The exception prompt co
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,6 +24,8 @@ Callback invoked when the icon on the right is clicked.
 
 **Since:** 26.0.0
 
+**Decorator:** @Event
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -37,6 +41,8 @@ onTipClick?: OnTipClickCallback
 Callback invoked when the prompt text on the left is clicked.
 
 **Since:** 26.0.0
+
+**Decorator:** @Event
 
 **Model restriction:** This API can be used only in the stage model.
 

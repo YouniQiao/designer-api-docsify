@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderIntegerFunctions2FeaturesINTEL
-
-## Overview
-

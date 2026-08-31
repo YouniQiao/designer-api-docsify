@@ -1,4 +1,0 @@
-# VkPhysicalDeviceCommandBufferInheritanceFeaturesNV
-
-## Overview
-

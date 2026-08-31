@@ -1,4 +1,0 @@
-# StdVideoAV1LoopFilterFlags
-
-## Overview
-

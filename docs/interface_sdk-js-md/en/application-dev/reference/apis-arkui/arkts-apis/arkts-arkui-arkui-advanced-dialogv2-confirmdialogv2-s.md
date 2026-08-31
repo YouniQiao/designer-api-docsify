@@ -6,6 +6,8 @@ Declare CustomDialog ConfirmDialogV2
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -131,6 +133,8 @@ Sets the ConfirmDialogV2 title.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Decorator:** @Require
 
 **Model restriction:** This API can be used only in the stage model.
 

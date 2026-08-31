@@ -1,4 +1,0 @@
-# VkImageMemoryRequirementsInfo2
-
-## Overview
-

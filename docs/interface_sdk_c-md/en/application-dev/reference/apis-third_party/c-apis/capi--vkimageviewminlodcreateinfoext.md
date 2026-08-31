@@ -1,4 +1,0 @@
-# VkImageViewMinLodCreateInfoEXT
-
-## Overview
-

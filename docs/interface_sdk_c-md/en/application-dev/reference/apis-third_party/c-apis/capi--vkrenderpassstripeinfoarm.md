@@ -1,4 +1,0 @@
-# VkRenderPassStripeInfoARM
-
-## Overview
-

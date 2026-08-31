@@ -1,4 +1,0 @@
-# VkPhysicalDeviceDescriptorPoolOverallocationFeaturesNV
-
-## Overview
-

@@ -14,6 +14,8 @@
 
 **Since:** 14
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -31,6 +33,8 @@ navDestination: NavDestinationBuildFunction
 Routing rules for loading the target page.
 
 **Since:** 14
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,6 +85,8 @@ Navigation stack.
 **Type:** [MultiNavPathStack](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md)
 
 **Since:** 14
+
+**Decorator:** @State
 
 **Model restriction:** This API can be used only in the stage model.
 

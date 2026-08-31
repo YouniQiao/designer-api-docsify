@@ -1,4 +1,0 @@
-# VkSubresourceLayout2
-
-## Overview
-

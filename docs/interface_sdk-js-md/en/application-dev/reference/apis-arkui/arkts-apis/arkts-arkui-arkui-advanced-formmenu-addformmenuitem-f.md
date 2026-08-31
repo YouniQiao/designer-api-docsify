@@ -20,6 +20,8 @@ Build function of AddFormMenuItem.
 
 **Since:** 12
 
+**Decorator:** @Builder
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

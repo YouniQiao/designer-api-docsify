@@ -8,6 +8,8 @@ DatePickerComponent组件用于选择日期（年月日）和时间（时分秒�
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -27,6 +29,8 @@ options: DatePickerComponentOptions
 **类型：** [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

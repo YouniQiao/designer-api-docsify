@@ -1,4 +1,0 @@
-# VkPhysicalDeviceExternalBufferInfo
-
-## Overview
-

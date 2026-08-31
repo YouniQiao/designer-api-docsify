@@ -1,4 +1,0 @@
-# VkPhysicalDeviceImageSlicedViewOf3DFeaturesEXT
-
-## Overview
-

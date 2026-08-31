@@ -1,4 +1,0 @@
-# VkPartitionedAccelerationStructureInstancesInputNV
-
-## Overview
-

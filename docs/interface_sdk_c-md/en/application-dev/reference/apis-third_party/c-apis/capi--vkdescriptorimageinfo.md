@@ -1,4 +1,0 @@
-# VkDescriptorImageInfo
-
-## Overview
-

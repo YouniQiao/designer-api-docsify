@@ -1,4 +1,0 @@
-# ldiv_t
-
-## Overview
-

@@ -2,12 +2,6 @@
 
 ## 汇总
 
-### 接口
-
-| 名称 | 说明 |
-| --- | --- |
-| [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) | 自动填充的填充请求。 |
-
 <!--Del-->
 ### 接口（系统接口）
 

@@ -1,4 +1,0 @@
-# VkRenderPassCreationFeedbackInfoEXT
-
-## Overview
-

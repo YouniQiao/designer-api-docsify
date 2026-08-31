@@ -8,6 +8,8 @@ This parameter is inherited from Array\&lt;[SegmentButtonV2Item](arkts-arkui-ark
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

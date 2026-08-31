@@ -1,4 +1,0 @@
-# VkSamplerCustomBorderColorCreateInfoEXT
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkQueryPoolCreateInfo
-
-## Overview
-

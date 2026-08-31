@@ -1,4 +1,0 @@
-# VkPhysicalDeviceAntiLagFeaturesAMD
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkClusterAccelerationStructureMoveObjectsInputNV
-
-## Overview
-

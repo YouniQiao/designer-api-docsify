@@ -19,6 +19,8 @@ import { SplitLayout } from '@kit.ArkUI';
 
 **起始版本：** 10
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -36,6 +38,8 @@ container: () => void
 容器内组件，用于在布局下方区域承载自定义组件内容，无返回值。
 
 **起始版本：** 10
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,6 +59,8 @@ mainImage: ResourceStr
 
 **起始版本：** 10
 
+**装饰器类型：** @State
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -72,6 +78,8 @@ primaryText: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -91,6 +99,8 @@ secondaryText?: ResourceStr
 
 **起始版本：** 10
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -108,6 +118,8 @@ tertiaryText?: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

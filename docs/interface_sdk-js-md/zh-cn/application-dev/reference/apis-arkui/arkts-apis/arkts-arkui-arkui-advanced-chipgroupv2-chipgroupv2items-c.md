@@ -6,6 +6,8 @@ ChipGroupV2Items定义了ChipGroupV2项的数组类，继承自Array&lt;[ChipGro
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ObservedV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块

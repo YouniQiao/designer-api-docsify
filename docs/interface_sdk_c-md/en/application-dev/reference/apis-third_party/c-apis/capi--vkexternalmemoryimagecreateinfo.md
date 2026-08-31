@@ -1,4 +1,0 @@
-# VkExternalMemoryImageCreateInfo
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceMaintenance5Properties
-
-## Overview
-

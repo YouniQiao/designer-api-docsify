@@ -1,4 +1,0 @@
-# VkMemoryRequirements2
-
-## Overview
-

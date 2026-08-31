@@ -4,6 +4,8 @@ Declare struct PopoverDialog
 
 **Since:** 14
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

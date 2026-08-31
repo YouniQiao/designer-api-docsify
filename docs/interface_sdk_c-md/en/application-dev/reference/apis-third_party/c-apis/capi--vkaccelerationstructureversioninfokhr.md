@@ -1,4 +1,0 @@
-# VkAccelerationStructureVersionInfoKHR
-
-## Overview
-

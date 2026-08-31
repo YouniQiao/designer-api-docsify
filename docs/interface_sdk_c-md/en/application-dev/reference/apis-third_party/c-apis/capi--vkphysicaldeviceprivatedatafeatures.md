@@ -1,4 +1,0 @@
-# VkPhysicalDevicePrivateDataFeatures
-
-## Overview
-

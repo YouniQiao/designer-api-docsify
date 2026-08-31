@@ -1,4 +1,0 @@
-# VkPhysicalDeviceImageAlignmentControlFeaturesMESA
-
-## Overview
-

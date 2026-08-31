@@ -1,4 +1,0 @@
-# VkCooperativeMatrixPropertiesNV
-
-## Overview
-

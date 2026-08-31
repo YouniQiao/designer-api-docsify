@@ -1,4 +1,0 @@
-# VkIndirectCommandsTokenDataEXT
-
-## Overview
-

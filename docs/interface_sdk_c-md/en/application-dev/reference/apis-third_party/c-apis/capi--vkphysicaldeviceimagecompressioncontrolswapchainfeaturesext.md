@@ -1,4 +1,0 @@
-# VkPhysicalDeviceImageCompressionControlSwapchainFeaturesEXT
-
-## Overview
-

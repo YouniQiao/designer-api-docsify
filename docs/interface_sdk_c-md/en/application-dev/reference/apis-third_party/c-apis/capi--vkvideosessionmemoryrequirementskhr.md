@@ -1,4 +1,0 @@
-# VkVideoSessionMemoryRequirementsKHR
-
-## Overview
-

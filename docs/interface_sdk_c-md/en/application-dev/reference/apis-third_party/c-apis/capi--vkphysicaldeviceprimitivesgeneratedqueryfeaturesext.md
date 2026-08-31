@@ -1,4 +1,0 @@
-# VkPhysicalDevicePrimitivesGeneratedQueryFeaturesEXT
-
-## Overview
-

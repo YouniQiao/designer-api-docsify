@@ -1,4 +1,0 @@
-# VkLatencySurfaceCapabilitiesNV
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkIndirectCommandsLayoutTokenEXT
-
-## Overview
-

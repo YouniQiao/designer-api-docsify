@@ -1,4 +1,0 @@
-# VkImageSwapchainCreateInfoKHR
-
-## Overview
-

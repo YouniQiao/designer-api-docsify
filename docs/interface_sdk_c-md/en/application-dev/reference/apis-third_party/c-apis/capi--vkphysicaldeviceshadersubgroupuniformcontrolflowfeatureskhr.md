@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderSubgroupUniformControlFlowFeaturesKHR
-
-## Overview
-

@@ -14,6 +14,8 @@
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ComponentV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -32,6 +34,8 @@ onActionTextClick?: OnActionTextClickCallback
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @Event
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -47,6 +51,8 @@ onTipClick?: OnTipClickCallback
 点击左侧提示文本的回调函数，缺省时不执行任何操作。
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Event
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

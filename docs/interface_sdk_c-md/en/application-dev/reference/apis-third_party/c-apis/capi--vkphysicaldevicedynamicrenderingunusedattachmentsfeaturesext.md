@@ -1,4 +1,0 @@
-# VkPhysicalDeviceDynamicRenderingUnusedAttachmentsFeaturesEXT
-
-## Overview
-

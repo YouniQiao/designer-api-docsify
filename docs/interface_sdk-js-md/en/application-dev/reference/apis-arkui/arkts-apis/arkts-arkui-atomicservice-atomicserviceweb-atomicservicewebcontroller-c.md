@@ -4,6 +4,8 @@ Implements an **AtomicServiceWebController** object for controlling the behavior
 
 **Since:** 12
 
+**Decorator:** @Observed
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

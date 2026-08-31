@@ -1,4 +1,0 @@
-# VkPhysicalDevice16BitStorageFeatures
-
-## Overview
-

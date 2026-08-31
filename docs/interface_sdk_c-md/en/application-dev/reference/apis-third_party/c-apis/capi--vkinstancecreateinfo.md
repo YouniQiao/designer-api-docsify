@@ -1,4 +1,0 @@
-# VkInstanceCreateInfo
-
-## Overview
-

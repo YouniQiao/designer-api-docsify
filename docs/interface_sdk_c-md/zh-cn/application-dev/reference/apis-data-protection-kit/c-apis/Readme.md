@@ -1,4 +1,4 @@
-- 头文件
-    - [dlp_permission_api.h](capi-dlp-permission-api-h.md)
-- 模块
+# C API<!--c-dataprotectionkit-->
+
+- 模块<!--dataprotectionkit-module-->n
     - [DlpPermissionApi](capi-dlppermissionapi.md)

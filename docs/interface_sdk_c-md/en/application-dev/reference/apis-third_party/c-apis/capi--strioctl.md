@@ -1,4 +1,0 @@
-# strioctl
-
-## Overview
-

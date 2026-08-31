@@ -1,4 +1,0 @@
-# tify_event
-
-## Overview
-

@@ -4,6 +4,8 @@ The AutoAdComponent module provides the capability of displaying carousel ads.
 
 **Since:** 11
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.Advertising.Ads
 
 ## Modules to Import

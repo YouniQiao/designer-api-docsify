@@ -16,6 +16,8 @@
 
 **Since:** 12
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -35,6 +37,8 @@ Set system-styled materials for the component. Different materials have differen
 **Type:** uiMaterial.Material
 
 **Since:** 26.0.0
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,6 +64,8 @@ If the value is **undefined**, the default value is used.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -84,6 +90,8 @@ If the value is **undefined**, the default value is used.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -103,6 +111,8 @@ If the value is **undefined**, the **ChipGroup** component is empty by default.
 **Type:** [ChipGroupItemOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md)[]
 
 **Since:** 12
+
+**Decorator:** @Require, @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,6 +138,8 @@ If the value is **undefined**, the default value is used.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -151,6 +163,8 @@ If the value is **undefined**, the default value is used.
 **Type:** boolean
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,6 +204,8 @@ Set system-styled materials for the component when selected. Different materials
 
 **Since:** 26.0.0
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -212,6 +228,8 @@ If the value is **undefined**, the default value is used.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -233,6 +251,8 @@ If the value is **undefined**, there is no suffix.
 **Type:** Callback&lt;void&gt;
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

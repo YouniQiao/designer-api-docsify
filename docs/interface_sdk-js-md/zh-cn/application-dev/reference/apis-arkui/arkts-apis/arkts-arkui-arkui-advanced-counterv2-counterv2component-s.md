@@ -22,6 +22,8 @@ import { CounterV2Type, CounterV2Component, CounterV2Options, CounterV2DateData 
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ComponentV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块

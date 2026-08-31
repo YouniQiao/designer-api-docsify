@@ -1,4 +1,0 @@
-# StdVideoDecodeH265PictureInfoFlags
-
-## Overview
-

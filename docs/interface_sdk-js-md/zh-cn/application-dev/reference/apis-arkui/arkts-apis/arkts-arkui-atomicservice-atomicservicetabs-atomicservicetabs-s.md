@@ -8,6 +8,8 @@ AtomicServiceTabs高级组件，对Tabs组件中不需要暴露给用户进行�
 
 **起始版本：** 12
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -42,6 +44,8 @@ barBackgroundColor?: ResourceColor
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -57,6 +61,8 @@ barOverlap?: boolean
 **类型：** boolean
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -90,6 +96,8 @@ index?: number
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -105,6 +113,8 @@ layoutMode?: LayoutMode
 **类型：** [LayoutMode](../arkts-components/arkts-arkui-layoutmode-e.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -160,6 +170,8 @@ tabBarOptionsArray: [
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -175,6 +187,8 @@ tabBarPosition?: TabBarPosition
 **类型：** [TabBarPosition](arkts-arkui-atomicservice-atomicservicetabs-tabbarposition-e.md)
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -197,6 +211,8 @@ tabContents?: [
 **类型：** [      TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?,     TabContentBuilder?   ]
 
 **起始版本：** 12
+
+**装饰器类型：** @BuilderParam
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

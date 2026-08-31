@@ -1,4 +1,0 @@
-# VkFramebufferAttachmentImageInfo
-
-## Overview
-

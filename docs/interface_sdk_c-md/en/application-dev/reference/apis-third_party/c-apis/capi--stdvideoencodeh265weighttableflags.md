@@ -1,4 +1,0 @@
-# StdVideoEncodeH265WeightTableFlags
-
-## Overview
-

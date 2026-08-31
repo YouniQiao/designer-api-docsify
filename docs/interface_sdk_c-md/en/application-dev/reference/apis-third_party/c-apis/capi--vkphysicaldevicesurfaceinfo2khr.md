@@ -1,4 +1,0 @@
-# VkPhysicalDeviceSurfaceInfo2KHR
-
-## Overview
-

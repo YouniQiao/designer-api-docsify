@@ -4,6 +4,8 @@ Defines toolBarV2 symbolGlyph.
 
 **起始版本：** 18
 
+**装饰器类型：** @ObservedV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -46,6 +48,8 @@ Modifier of toolbarV2's activated symbol.
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -63,6 +67,8 @@ Modifier of toolbarV2's normal symbol.
 **类型：** SymbolGlyphModifier
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

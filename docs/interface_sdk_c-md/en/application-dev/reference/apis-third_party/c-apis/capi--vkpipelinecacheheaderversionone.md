@@ -1,4 +1,0 @@
-# VkPipelineCacheHeaderVersionOne
-
-## Overview
-

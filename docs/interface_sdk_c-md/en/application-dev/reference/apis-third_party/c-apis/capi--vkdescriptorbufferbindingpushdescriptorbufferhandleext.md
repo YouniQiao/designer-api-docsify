@@ -1,4 +1,0 @@
-# VkDescriptorBufferBindingPushDescriptorBufferHandleEXT
-
-## Overview
-

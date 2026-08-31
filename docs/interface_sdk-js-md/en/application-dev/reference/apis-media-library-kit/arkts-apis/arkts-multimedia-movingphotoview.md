@@ -39,12 +39,6 @@ import { MovingPhotoView, MovingPhotoViewController, MovingPhotoViewAttribute, P
 | [MovingPhotoViewOptions](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewoptions-i-sys.md) | Defines the moving photo view options. |
 <!--DelEnd-->
 
-### Enums
-
-| Name | Description |
-| --- | --- |
-| [PixelMapFormat](arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md) | Enumerates pixel map formats. |
-
 <!--Del-->
 ### Enums(System API)
 

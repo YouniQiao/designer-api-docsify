@@ -1,4 +1,0 @@
-# VkPipelineViewportWScalingStateCreateInfoNV
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPipelineRasterizationStateRasterizationOrderAMD
-
-## Overview
-

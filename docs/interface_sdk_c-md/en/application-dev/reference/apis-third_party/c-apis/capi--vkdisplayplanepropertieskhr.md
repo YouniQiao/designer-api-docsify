@@ -1,4 +1,0 @@
-# VkDisplayPlanePropertiesKHR
-
-## Overview
-

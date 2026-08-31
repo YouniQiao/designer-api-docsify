@@ -4,6 +4,8 @@ Declare struct ExceptionPrompt higher-order component.
 
 **Since:** 12
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

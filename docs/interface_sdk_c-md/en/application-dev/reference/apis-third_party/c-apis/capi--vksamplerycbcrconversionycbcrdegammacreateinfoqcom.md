@@ -1,4 +1,0 @@
-# VkSamplerYcbcrConversionYcbcrDegammaCreateInfoQCOM
-
-## Overview
-

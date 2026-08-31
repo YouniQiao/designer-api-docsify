@@ -1,4 +1,0 @@
-# VkPhysicalDeviceMapMemoryPlacedPropertiesEXT
-
-## Overview
-

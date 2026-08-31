@@ -1,4 +1,0 @@
-# siginfo_t
-
-## Overview
-

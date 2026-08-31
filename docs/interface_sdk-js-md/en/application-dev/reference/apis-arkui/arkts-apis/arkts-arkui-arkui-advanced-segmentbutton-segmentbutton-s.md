@@ -10,6 +10,8 @@
 
 **Since:** 11
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -36,6 +38,8 @@ Default value: **false**
 
 **Since:** 24
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -57,6 +61,8 @@ Values less than 1 are treated as 1, and values greater than 2 are treated as 2.
 **Type:** number \| Resource
 
 **Since:** 14
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,6 +99,8 @@ Options of the **SegmentButton** component.
 **Type:** [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md)
 
 **Since:** 11
+
+**Decorator:** @ObjectLink
 
 **Model restriction:** This API can be used only in the stage model.
 

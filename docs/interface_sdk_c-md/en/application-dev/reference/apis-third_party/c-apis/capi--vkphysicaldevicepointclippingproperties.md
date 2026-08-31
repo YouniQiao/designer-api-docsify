@@ -1,4 +1,0 @@
-# VkPhysicalDevicePointClippingProperties
-
-## Overview
-

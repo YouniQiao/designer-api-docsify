@@ -1,4 +1,0 @@
-# VkPipelineFragmentShadingRateStateCreateInfoKHR
-
-## Overview
-

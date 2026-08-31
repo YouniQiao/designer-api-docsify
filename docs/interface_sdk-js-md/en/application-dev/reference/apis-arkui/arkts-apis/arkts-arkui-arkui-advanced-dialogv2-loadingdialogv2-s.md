@@ -6,6 +6,8 @@ Declare CustomDialog LoadingDialogV2
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

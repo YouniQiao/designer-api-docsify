@@ -1,4 +1,0 @@
-# VkRenderingAreaInfo
-
-## Overview
-

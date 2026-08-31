@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderTerminateInvocationFeatures
-
-## Overview
-

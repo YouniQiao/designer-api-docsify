@@ -27,6 +27,8 @@ import { SwipeRefresherV2 } from '@kit.ArkUI';
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ComponentV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -65,6 +67,8 @@ isLoading: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Require
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

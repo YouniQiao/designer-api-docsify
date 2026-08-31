@@ -6,6 +6,8 @@ The **ArcSlider** component is designed for circular screens on wearables to qui
 
 **Since:** 18
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import

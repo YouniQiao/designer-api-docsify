@@ -1,4 +1,0 @@
-# VkClearValue
-
-## Overview
-

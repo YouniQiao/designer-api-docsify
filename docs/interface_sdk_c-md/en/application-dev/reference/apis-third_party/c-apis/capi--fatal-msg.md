@@ -1,4 +1,0 @@
-# fatal_msg
-
-## Overview
-

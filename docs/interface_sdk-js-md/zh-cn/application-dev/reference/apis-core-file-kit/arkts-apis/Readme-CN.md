@@ -33,7 +33,8 @@
   - [BackupParams(系统接口)](arkts-corefile-backup-backupparams-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [BackupPriority(系统接口)](arkts-corefile-backup-backuppriority-i-sys.md)<!--DelEnd-->
-  - [File](arkts-corefile-backup-file-i.md)
+  <!--Del-->
+  - [File(系统接口)](arkts-corefile-backup-file-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FileData(系统接口)](arkts-corefile-backup-filedata-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -44,7 +45,8 @@
   - [FileSystemRequestConfig(系统接口)](arkts-corefile-backup-filesystemrequestconfig-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [GeneralCallbacks(系统接口)](arkts-corefile-backup-generalcallbacks-i-sys.md)<!--DelEnd-->
-  - [IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i.md)
+  <!--Del-->
+  - [IncrementalBackupData(系统接口)](arkts-corefile-backup-incrementalbackupdata-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [IncrementalBackupTime(系统接口)](arkts-corefile-backup-incrementalbackuptime-i-sys.md)<!--DelEnd-->
   <!--Del-->

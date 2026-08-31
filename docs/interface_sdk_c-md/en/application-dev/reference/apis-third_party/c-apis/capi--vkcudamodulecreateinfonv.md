@@ -1,4 +1,0 @@
-# VkCudaModuleCreateInfoNV
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkBufferCopy2
-
-## Overview
-

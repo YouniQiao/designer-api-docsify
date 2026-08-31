@@ -7,6 +7,7 @@
 **系统能力：** SystemCapability.Multimedia.Media.AVTranscoder
 
 **起始版本：** 20
+
 ## 文件汇总
 
 | 名称 | 描述 |

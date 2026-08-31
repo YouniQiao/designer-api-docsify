@@ -37,7 +37,7 @@ Adds resources using **PhotoProxy** data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | ResourceType | Yes | Type of the resource to add. |
-| proxy | [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i.md) | Yes | PhotoProxy data of the resource to add. |
+| proxy | [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i-sys.md) | Yes | PhotoProxy data of the resource to add. |
 
 **Error codes:**
 

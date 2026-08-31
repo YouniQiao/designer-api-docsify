@@ -1,6 +1,0 @@
-- Header file
-    - [telephony_data.h](capi-telephony-data-h.md)
-- Module
-    - [Telephony](capi-telephony.md)
-- Struct
-    - [Telephony_NetworkState](capi--telephony-networkstate.md)

@@ -29,8 +29,6 @@ Creates a cross-process embedded component to display the UI of the EmbeddedUIEx
 
 **Since:** 12
 
-**Decorator:** @ohos
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -57,8 +55,6 @@ EmbeddedComponent(
 Construct the EmbeddedComponent.Called when the EmbeddedComponent is used.
 
 **Since:** 26.0.0
-
-**Decorator:** @ohos
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,4 +1,0 @@
-# VkWriteIndirectExecutionSetShaderEXT
-
-## Overview
-

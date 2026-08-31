@@ -1,4 +1,0 @@
-# VkVideoEncodeSessionParametersFeedbackInfoKHR
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkDeviceFaultCountsEXT
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceSchedulingControlsFeaturesARM
-
-## Overview
-

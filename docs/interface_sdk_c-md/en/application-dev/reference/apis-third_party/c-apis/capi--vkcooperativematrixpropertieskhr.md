@@ -1,4 +1,0 @@
-# VkCooperativeMatrixPropertiesKHR
-
-## Overview
-

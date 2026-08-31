@@ -1,4 +1,0 @@
-# VkSamplerReductionModeCreateInfo
-
-## Overview
-

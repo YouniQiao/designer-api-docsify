@@ -1,4 +1,0 @@
-# VkPhysicalDeviceWorkgroupMemoryExplicitLayoutFeaturesKHR
-
-## Overview
-

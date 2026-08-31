@@ -1,4 +1,0 @@
-# VkVideoEncodeH265PictureInfoKHR
-
-## Overview
-

@@ -4,6 +4,8 @@ Class to execute an asynchronous operation under lock.
 
 **Since:** 12
 
+**Decorator:** @Sendable
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

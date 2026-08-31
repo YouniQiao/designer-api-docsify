@@ -1,4 +1,0 @@
-# VkIndirectCommandsIndexBufferTokenEXT
-
-## Overview
-

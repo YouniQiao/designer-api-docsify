@@ -1,4 +1,0 @@
-# VkPhysicalDeviceProvokingVertexFeaturesEXT
-
-## Overview
-

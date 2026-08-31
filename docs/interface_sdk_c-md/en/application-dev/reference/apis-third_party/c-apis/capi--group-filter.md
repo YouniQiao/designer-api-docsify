@@ -1,4 +1,0 @@
-# group_filter
-
-## Overview
-

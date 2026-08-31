@@ -1,4 +1,0 @@
-# VkPushConstantRange
-
-## Overview
-

@@ -2,7 +2,8 @@
 
 <!--Del-->
 - [@ohos.app.ability.UserAuthExtensionAbility(User Authentication Extension Ability)](arkts-app-ability-userauthextensionability.md)<!--DelEnd-->
-  - [UserAuthExtensionAbility](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c.md)
+  <!--Del-->
+  - [UserAuthExtensionAbility(system api)](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.userIAM.companionDeviceAuth(Companion Device Authentication)](arkts-useriam-companiondeviceauth.md)<!--DelEnd-->
   <!--Del-->

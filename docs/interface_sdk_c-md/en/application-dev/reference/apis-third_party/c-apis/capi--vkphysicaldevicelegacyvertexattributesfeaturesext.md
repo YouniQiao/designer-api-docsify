@@ -1,4 +1,0 @@
-# VkPhysicalDeviceLegacyVertexAttributesFeaturesEXT
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkDescriptorBufferInfo
-
-## Overview
-

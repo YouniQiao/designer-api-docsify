@@ -1,4 +1,0 @@
-# VkPhysicalDeviceRayTracingLinearSweptSpheresFeaturesNV
-
-## Overview
-

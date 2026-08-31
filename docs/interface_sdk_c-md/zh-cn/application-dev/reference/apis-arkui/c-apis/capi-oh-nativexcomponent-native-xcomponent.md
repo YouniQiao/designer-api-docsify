@@ -5,6 +5,7 @@
 描述ArkUI XComponent持有的Surface和触摸事件，该事件可用于EGL/OpenGLES和媒体数据输入，并显示在ArkUI XComponent上。
 
 **起始版本：** 8
+
 ## 文件汇总
 
 | 名称 | 描述 |

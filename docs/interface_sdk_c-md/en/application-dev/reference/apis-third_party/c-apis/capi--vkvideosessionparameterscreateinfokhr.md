@@ -1,4 +1,0 @@
-# VkVideoSessionParametersCreateInfoKHR
-
-## Overview
-

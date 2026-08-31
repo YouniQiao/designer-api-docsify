@@ -4,6 +4,8 @@ Defines the segmented button with multi capsule style.
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,6 +23,8 @@ $selectedIndexes: OnSelectedIndexesChange
 Callback invoked when the selected item changes.
 
 **Since:** 18
+
+**Decorator:** @Event
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -428,6 +432,8 @@ This property is read-only.
 
 **Since:** 18
 
+**Decorator:** @Require
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -722,6 +728,8 @@ Callback invoked when a segmented button item is clicked.
 
 **Since:** 18
 
+**Decorator:** @Event
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -747,6 +755,8 @@ This property is read-only.
 **Type:** number[]
 
 **Since:** 18
+
+**Decorator:** @Require
 
 **Model restriction:** This API can be used only in the stage model.
 

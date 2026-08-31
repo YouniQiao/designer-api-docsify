@@ -17,6 +17,6 @@ type Blender = BrightnessBlender | HdrBrightnessBlender | HdrDarkenBlender | Col
 | 类型 | 说明 |
 | --- | --- |
 | [BrightnessBlender](arkts-arkgraphics2d-uieffect-brightnessblender-i-sys.md) | 提亮混合器 |
-| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i.md) | 支持HDR的提亮混合器 [since 20] |
+| [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i-sys.md) | 支持HDR的提亮混合器 [since 20] |
 | [HdrDarkenBlender](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | 支持HDR的压暗混合器 [since 26.0.0] |
 | [ColorfulBrightnessBlender](arkts-arkgraphics2d-uieffect-colorfulbrightnessblender-i-sys.md) | 具有彩色提亮压暗效果的混合器 [since 26.1.0] |

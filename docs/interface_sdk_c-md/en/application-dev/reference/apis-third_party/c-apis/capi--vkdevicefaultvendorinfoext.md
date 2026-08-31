@@ -1,4 +1,0 @@
-# VkDeviceFaultVendorInfoEXT
-
-## Overview
-

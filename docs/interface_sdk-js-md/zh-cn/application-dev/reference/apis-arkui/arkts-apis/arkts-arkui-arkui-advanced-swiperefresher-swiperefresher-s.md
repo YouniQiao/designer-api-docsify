@@ -20,6 +20,8 @@ import { SwipeRefresher } from '@kit.ArkUI';
 
 **起始版本：** 10
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -44,6 +46,8 @@ content?: ResourceStr
 
 **起始版本：** 10
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -65,6 +69,8 @@ false：未在加载。
 **类型：** boolean
 
 **起始版本：** 10
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

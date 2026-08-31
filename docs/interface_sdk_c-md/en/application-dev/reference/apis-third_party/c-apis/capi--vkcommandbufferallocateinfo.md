@@ -1,4 +1,0 @@
-# VkCommandBufferAllocateInfo
-
-## Overview
-

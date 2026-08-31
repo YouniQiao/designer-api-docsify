@@ -1,4 +1,0 @@
-# VkDeviceGroupBindSparseInfo
-
-## Overview
-

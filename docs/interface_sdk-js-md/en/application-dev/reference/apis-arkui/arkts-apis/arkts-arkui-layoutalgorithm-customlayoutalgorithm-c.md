@@ -13,6 +13,8 @@ Custom layout algorithm class.
 
 **Since:** 24
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onLayout

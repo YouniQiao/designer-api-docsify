@@ -1,4 +1,0 @@
-# VkQueueFamilyCheckpointProperties2NV
-
-## Overview
-

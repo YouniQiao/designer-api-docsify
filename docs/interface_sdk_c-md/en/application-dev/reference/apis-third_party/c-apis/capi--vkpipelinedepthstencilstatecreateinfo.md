@@ -1,4 +1,0 @@
-# VkPipelineDepthStencilStateCreateInfo
-
-## Overview
-

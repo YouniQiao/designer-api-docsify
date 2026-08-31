@@ -1,4 +1,0 @@
-# sigaction
-
-## Overview
-

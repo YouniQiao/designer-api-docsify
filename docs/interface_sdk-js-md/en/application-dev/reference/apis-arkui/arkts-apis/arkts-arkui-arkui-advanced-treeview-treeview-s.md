@@ -15,6 +15,8 @@ This component is applicable in productivity applications, such as side navigati
 
 **Since:** 10
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

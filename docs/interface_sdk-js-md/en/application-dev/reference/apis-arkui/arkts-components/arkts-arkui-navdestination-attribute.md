@@ -621,8 +621,6 @@ Triggered when the **NavDestination** component is about to build a child compon
 
 **Since:** 11
 
-**Decorator:** @ohos
-
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.

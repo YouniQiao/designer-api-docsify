@@ -53,8 +53,6 @@ onError(callback: import('../api/@ohos.base').ErrorCallback)
 
 **起始版本：** 12
 
-**装饰器类型：** @ohos
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -80,8 +78,6 @@ onTerminated(callback: import('../api/@ohos.base').Callback<TerminationInfo>)
 > 该接口不能在attributeModifier内调用。
 
 **起始版本：** 12
-
-**装饰器类型：** @ohos
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

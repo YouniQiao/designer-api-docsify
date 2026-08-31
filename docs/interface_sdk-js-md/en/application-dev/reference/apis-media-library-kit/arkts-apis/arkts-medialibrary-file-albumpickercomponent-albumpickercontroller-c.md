@@ -4,6 +4,8 @@ A controller that enables applications to send data to the **AlbumPickerComponen
 
 **Since:** 20
 
+**Decorator:** @Observed
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import

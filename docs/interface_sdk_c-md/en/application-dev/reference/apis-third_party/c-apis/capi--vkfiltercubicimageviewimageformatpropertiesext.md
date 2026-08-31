@@ -1,4 +1,0 @@
-# VkFilterCubicImageViewImageFormatPropertiesEXT
-
-## Overview
-

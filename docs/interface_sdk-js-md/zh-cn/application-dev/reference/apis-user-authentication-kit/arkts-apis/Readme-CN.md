@@ -2,7 +2,8 @@
 
 <!--Del-->
 - [@ohos.app.ability.UserAuthExtensionAbility(用户认证扩展能力组件)](arkts-app-ability-userauthextensionability.md)<!--DelEnd-->
-  - [UserAuthExtensionAbility](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c.md)
+  <!--Del-->
+  - [UserAuthExtensionAbility(系统接口)](arkts-userauthentication-app-ability-userauthextensionability-userauthextensionability-c-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.userIAM.companionDeviceAuth(伴随设备认证)](arkts-useriam-companiondeviceauth.md)<!--DelEnd-->
   <!--Del-->

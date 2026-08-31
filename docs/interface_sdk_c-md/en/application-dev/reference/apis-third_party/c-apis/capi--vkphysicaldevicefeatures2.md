@@ -1,4 +1,0 @@
-# VkPhysicalDeviceFeatures2
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkDeviceMemoryReportCallbackDataEXT
-
-## Overview
-

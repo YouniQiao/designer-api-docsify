@@ -1,4 +1,0 @@
-# VkPhysicalDeviceCooperativeMatrix2PropertiesNV
-
-## Overview
-

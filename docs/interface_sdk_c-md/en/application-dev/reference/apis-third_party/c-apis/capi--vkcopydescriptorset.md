@@ -1,4 +1,0 @@
-# VkCopyDescriptorSet
-
-## Overview
-

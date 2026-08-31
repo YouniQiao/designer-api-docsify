@@ -1,4 +1,0 @@
-# VkDisplayProperties2KHR
-
-## Overview
-

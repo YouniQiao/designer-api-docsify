@@ -1,4 +1,0 @@
-# VkFenceGetFdInfoKHR
-
-## Overview
-

@@ -10,6 +10,8 @@ This module applies to the following scenarios:
 
 **Since:** 12
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
 ## Modules to Import

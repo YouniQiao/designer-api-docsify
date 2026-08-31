@@ -1,4 +1,0 @@
-# mq_attr
-
-## Overview
-

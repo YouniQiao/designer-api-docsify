@@ -1,4 +1,0 @@
-# wordexp_t
-
-## Overview
-

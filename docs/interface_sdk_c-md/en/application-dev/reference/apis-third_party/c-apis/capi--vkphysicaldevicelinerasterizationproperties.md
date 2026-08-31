@@ -1,4 +1,0 @@
-# VkPhysicalDeviceLineRasterizationProperties
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkAttachmentDescription
-
-## Overview
-

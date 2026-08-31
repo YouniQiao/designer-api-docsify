@@ -1,4 +1,0 @@
-# VkShaderModuleCreateInfo
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkDeviceGroupSwapchainCreateInfoKHR
-
-## Overview
-

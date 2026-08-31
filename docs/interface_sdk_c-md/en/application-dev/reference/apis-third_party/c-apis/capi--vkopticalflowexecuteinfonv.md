@@ -1,4 +1,0 @@
-# VkOpticalFlowExecuteInfoNV
-
-## Overview
-

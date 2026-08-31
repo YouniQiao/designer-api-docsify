@@ -1,4 +1,0 @@
-# VkSwapchainLatencyCreateInfoNV
-
-## Overview
-

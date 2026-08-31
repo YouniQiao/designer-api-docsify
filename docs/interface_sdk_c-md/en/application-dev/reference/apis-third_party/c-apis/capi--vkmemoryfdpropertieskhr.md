@@ -1,4 +1,0 @@
-# VkMemoryFdPropertiesKHR
-
-## Overview
-

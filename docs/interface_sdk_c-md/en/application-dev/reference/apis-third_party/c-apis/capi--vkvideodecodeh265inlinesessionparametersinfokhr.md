@@ -1,4 +1,0 @@
-# VkVideoDecodeH265InlineSessionParametersInfoKHR
-
-## Overview
-

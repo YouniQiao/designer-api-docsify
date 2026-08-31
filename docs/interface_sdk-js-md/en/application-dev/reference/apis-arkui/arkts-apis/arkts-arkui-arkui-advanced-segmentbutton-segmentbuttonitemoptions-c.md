@@ -4,6 +4,8 @@ Button options in a segmented button.
 
 **Since:** 11
 
+**Decorator:** @Observed
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

@@ -1,4 +1,0 @@
-# VkLatencySubmissionPresentIdNV
-
-## Overview
-

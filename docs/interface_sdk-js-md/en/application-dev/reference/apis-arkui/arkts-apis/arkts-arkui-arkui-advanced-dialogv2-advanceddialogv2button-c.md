@@ -6,6 +6,8 @@ Declare AdvancedDialogV2Button.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,6 +25,8 @@ action?: AdvancedDialogV2ButtonAction
 Sets the Button Callback.
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,6 +68,8 @@ Sets the background color of a button.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -84,6 +90,8 @@ Describes the Button style.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -101,6 +109,8 @@ Sets the Display Content of a Button.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,6 +132,8 @@ Set the default focus of a button.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -142,6 +154,8 @@ Set the availability of the button.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -159,6 +173,8 @@ Sets the Button Text Color.
 **Type:** ColorMetrics
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,6 +196,8 @@ Describes the Button role.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -199,6 +217,8 @@ Set the alignment mode for the button label.
 **Default:** { TextAlign.Start }
 
 **Since:** 24
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

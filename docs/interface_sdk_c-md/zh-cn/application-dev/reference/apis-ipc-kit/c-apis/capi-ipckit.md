@@ -7,6 +7,7 @@ IPC（Inter-Process Communication，进程间通信）Kit提供了进程间通�
 **系统能力：** SystemCapability.Communication.IPC.Core
 
 **起始版本：** 12
+
 ## 文件汇总
 
 | 名称 | 描述 |

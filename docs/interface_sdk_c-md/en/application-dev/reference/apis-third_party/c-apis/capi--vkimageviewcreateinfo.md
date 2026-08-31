@@ -1,4 +1,0 @@
-# VkImageViewCreateInfo
-
-## Overview
-

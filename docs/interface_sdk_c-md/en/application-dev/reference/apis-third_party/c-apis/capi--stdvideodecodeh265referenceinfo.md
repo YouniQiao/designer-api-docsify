@@ -1,4 +1,0 @@
-# StdVideoDecodeH265ReferenceInfo
-
-## Overview
-

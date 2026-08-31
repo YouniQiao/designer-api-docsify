@@ -1,4 +1,0 @@
-# VkPhysicalDeviceOpticalFlowPropertiesNV
-
-## Overview
-

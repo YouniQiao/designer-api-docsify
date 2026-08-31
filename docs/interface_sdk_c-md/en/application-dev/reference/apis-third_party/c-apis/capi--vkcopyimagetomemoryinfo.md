@@ -1,4 +1,0 @@
-# VkCopyImageToMemoryInfo
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkRect2D
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDevicePerformanceQueryPropertiesKHR
-
-## Overview
-

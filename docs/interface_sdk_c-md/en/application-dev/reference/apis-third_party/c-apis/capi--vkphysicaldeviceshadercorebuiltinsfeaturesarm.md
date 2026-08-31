@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderCoreBuiltinsFeaturesARM
-
-## Overview
-

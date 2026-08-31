@@ -1,4 +1,0 @@
-# glob_t
-
-## Overview
-

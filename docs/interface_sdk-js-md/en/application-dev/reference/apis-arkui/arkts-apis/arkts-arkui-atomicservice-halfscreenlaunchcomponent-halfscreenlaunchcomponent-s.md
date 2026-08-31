@@ -10,6 +10,8 @@
 
 **Since:** 18
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -45,6 +47,8 @@ Content displayed in the component.
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 18
+
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

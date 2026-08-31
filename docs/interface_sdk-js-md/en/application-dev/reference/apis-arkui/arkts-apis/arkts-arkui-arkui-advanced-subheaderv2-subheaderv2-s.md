@@ -17,6 +17,8 @@ This component is implemented based on [state management V2](../../../ui/state-m
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -36,6 +38,8 @@ Custom content for the title area.
 Default value: **() =&gt; void**
 
 **Since:** 18
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

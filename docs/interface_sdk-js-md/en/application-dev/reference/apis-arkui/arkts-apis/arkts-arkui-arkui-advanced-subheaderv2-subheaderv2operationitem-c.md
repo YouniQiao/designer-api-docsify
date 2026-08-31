@@ -4,6 +4,8 @@ Represents an item in the operation area.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -21,6 +23,8 @@ action?: SubHeaderV2OperationItemAction
 callback function when operate the text or icon.
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +66,8 @@ The accessibilityDescription of this text or icon.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -84,6 +90,8 @@ The accessibilityLevel of this text or icon.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -102,6 +110,8 @@ The accessibilityText of this text or icon.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -119,6 +129,8 @@ The content of text or the address of icon.
 **Type:** [SubHeaderV2OperationItemType](arkts-arkui-subheaderv2operationitemtype-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,6 +152,8 @@ Sets the default focus state of the text or icon.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -157,6 +171,8 @@ Set the id for SubHeaderV2OperationItem.
 **Type:** string
 
 **Since:** 24
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

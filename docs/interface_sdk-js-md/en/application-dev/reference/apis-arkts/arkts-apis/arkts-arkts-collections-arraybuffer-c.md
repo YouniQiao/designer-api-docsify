@@ -9,6 +9,8 @@ Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-arkts-colle
 
 **Since:** 12
 
+**Decorator:** @Sendable
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

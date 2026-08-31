@@ -1,4 +1,0 @@
-# VkClusterAccelerationStructureBuildTriangleClusterTemplateInfoNV
-
-## Overview
-

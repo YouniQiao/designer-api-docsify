@@ -1,4 +1,0 @@
-# VkPhysicalDeviceBorderColorSwizzleFeaturesEXT
-
-## Overview
-

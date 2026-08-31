@@ -1,4 +1,0 @@
-# VkIndirectExecutionSetShaderInfoEXT
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceHdrVividFeaturesHUAWEI
-
-## Overview
-

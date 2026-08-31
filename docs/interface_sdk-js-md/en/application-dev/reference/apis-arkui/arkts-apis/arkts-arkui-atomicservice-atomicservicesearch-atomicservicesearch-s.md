@@ -4,6 +4,8 @@
 
 **Since:** 18
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -56,6 +58,8 @@ Indicates default prompt text displayed in the search box. The default value is 
 
 **Since:** 18
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -71,6 +75,8 @@ Events and styles supported by the search area.
 **Type:** [SearchParams](arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md)
 
 **Since:** 18
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -88,6 +94,8 @@ Contents, events, and styles of the select area.
 
 **Since:** 18
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -103,6 +111,8 @@ Sets the search text content that is currently displayed.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

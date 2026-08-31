@@ -1,4 +1,0 @@
-# VkImageCopy2
-
-## Overview
-

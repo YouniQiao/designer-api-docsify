@@ -1,4 +1,0 @@
-# VkDebugUtilsMessengerCallbackDataEXT
-
-## Overview
-

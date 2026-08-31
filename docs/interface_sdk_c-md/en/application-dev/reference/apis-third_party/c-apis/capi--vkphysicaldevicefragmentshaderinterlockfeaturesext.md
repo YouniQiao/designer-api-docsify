@@ -1,4 +1,0 @@
-# VkPhysicalDeviceFragmentShaderInterlockFeaturesEXT
-
-## Overview
-

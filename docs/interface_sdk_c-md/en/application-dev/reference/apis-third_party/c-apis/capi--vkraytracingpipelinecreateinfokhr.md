@@ -1,4 +1,0 @@
-# VkRayTracingPipelineCreateInfoKHR
-
-## Overview
-

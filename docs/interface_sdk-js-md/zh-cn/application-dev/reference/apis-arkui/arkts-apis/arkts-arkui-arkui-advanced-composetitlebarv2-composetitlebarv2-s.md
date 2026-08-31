@@ -14,6 +14,8 @@ ComposeTitleBarV2组件是一种标题栏，支持设置标题、头像（可选
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ComponentV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块

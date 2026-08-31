@@ -1,14 +1,14 @@
 # @ohos.selectionInput.selectionManager(划词管理)
 
 本模块提供划词管理能力，包括创建面板、显示面板、移动面板、隐藏面板、销毁面板、监听鼠标/触控板划词事件、获取选中文本等。典型使用流程如下：
-1. 调用[on('selectionCompleted')](arkts-basicservices-selectionmanager-on-f.md#onselectioncompleted)订阅划词完成事件。
+1. 调用[on('selectionCompleted')](arkts-basicservices-selectionmanager-on-f.md)订阅划词完成事件。
 2. 在回调中调用[getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md)获取选中文本。
 3. 调用[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md)创建划词面板。
 4. 调用[setUiContent](arkts-basicservices-selectionmanager-panel-i.md#setuicontent)加载页面内容。
 5. 调用[moveToGlobalDisplay](arkts-basicservices-selectionmanager-panel-i.md#movetoglobaldisplay)移动面板到指定位置。
 6. 调用[show](arkts-basicservices-selectionmanager-panel-i.md#show)显示面板。
 7. 调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md)销毁面板。
-8. 调用[off('selectionCompleted')](arkts-basicservices-selectionmanager-off-f.md#offselectioncompleted)取消订阅划词完成事件。
+8. 调用[off('selectionCompleted')](arkts-basicservices-selectionmanager-off-f.md)取消订阅划词完成事件。
 
 > **说明：**
 > 

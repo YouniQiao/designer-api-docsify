@@ -1,4 +1,0 @@
-# VkVideoEncodeH265SessionCreateInfoKHR
-
-## Overview
-

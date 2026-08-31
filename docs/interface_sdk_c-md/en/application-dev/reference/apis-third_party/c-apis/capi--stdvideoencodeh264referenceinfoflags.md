@@ -1,4 +1,0 @@
-# StdVideoEncodeH264ReferenceInfoFlags
-
-## Overview
-

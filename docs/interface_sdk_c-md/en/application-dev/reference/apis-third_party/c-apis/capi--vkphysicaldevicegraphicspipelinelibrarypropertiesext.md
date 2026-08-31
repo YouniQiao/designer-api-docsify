@@ -1,4 +1,0 @@
-# VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT
-
-## Overview
-

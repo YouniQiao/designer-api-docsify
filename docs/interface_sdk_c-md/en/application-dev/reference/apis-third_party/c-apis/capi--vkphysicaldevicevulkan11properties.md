@@ -1,4 +1,0 @@
-# VkPhysicalDeviceVulkan11Properties
-
-## Overview
-

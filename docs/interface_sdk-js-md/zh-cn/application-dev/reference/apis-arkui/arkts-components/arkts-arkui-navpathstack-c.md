@@ -616,8 +616,6 @@ pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.b
 
 **起始版本：** 11
 
-**装饰器类型：** @ohos
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -727,8 +725,6 @@ pushPathByName(name: string, param: Object, onPop: import('../api/@ohos.base').C
 将name指定的NavDestination页面信息入栈，传递的数据为param，添加onPop回调接收入栈页面出栈时的返回结果，并进行处理。
 
 **起始版本：** 11
-
-**装饰器类型：** @ohos
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

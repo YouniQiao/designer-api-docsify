@@ -1,4 +1,0 @@
-# VkPhysicalDeviceRayTracingMaintenance1FeaturesKHR
-
-## Overview
-

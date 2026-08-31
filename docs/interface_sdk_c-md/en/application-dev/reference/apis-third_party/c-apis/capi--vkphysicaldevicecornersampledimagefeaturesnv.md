@@ -1,4 +1,0 @@
-# VkPhysicalDeviceCornerSampledImageFeaturesNV
-
-## Overview
-

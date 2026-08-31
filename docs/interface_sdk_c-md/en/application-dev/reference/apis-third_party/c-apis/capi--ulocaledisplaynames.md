@@ -1,4 +1,0 @@
-# ULocaleDisplayNames
-
-## Overview
-

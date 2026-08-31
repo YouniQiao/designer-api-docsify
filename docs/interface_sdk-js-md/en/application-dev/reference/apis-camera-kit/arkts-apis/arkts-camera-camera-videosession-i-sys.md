@@ -37,7 +37,7 @@ Gets session conflict functions.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[VideoConflictFunctions](arkts-camera-camera-videoconflictfunctions-i.md)&gt; | List of session conflict functions. |
+| Array&lt;[VideoConflictFunctions](arkts-camera-camera-videoconflictfunctions-i-sys.md)&gt; | List of session conflict functions. |
 
 **Error codes:**
 
@@ -69,7 +69,7 @@ Gets session functions.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[VideoFunctions](arkts-camera-camera-videofunctions-i.md)&gt; | List of session functions. |
+| Array&lt;[VideoFunctions](arkts-camera-camera-videofunctions-i-sys.md)&gt; | List of session functions. |
 
 **Error codes:**
 

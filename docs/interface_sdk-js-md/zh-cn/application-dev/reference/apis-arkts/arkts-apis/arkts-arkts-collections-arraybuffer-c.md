@@ -9,6 +9,8 @@ ArkTS TypedArray（[Int8Array](arkts-arkts-collections-int8array-c.md)、[Uint8A
 
 **起始版本：** 12
 
+**装饰器类型：** @Sendable
+
 **系统能力：** SystemCapability.Utils.Lang
 
 ## 导入模块

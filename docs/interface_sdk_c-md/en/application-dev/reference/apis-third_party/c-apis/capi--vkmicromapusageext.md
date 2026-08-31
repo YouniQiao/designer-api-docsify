@@ -1,4 +1,0 @@
-# VkMicromapUsageEXT
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceTilePropertiesFeaturesQCOM
-
-## Overview
-

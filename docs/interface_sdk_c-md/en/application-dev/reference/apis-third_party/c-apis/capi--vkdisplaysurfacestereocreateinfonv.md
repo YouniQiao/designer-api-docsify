@@ -1,4 +1,0 @@
-# VkDisplaySurfaceStereoCreateInfoNV
-
-## Overview
-

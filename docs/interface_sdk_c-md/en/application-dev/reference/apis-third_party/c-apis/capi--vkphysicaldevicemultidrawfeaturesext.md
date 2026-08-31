@@ -1,4 +1,0 @@
-# VkPhysicalDeviceMultiDrawFeaturesEXT
-
-## Overview
-

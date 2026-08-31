@@ -1,4 +1,0 @@
-# VkSparseMemoryBind
-
-## Overview
-

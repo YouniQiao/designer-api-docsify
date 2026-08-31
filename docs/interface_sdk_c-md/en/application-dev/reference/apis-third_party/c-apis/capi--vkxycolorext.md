@@ -1,4 +1,0 @@
-# VkXYColorEXT
-
-## Overview
-

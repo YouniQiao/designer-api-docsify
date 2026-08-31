@@ -4,6 +4,8 @@ Defines the title settings for the subheader.
 
 **Since:** 18
 
+**Decorator:** @ObservedV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -46,6 +48,8 @@ Set the id of the title.
 
 **Since:** 24
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -63,6 +67,8 @@ The first line text of content area.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,6 +88,8 @@ Text modifier for primary title.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -100,6 +108,8 @@ The secondary line text of content area.
 
 **Since:** 18
 
+**Decorator:** @Trace
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -117,6 +127,8 @@ Text modifier for secondary title.
 **Type:** [TextModifier](arkts-arkui-textmodifier-c.md)
 
 **Since:** 18
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,6 +153,8 @@ Decorator: @Trace
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
+
+**Decorator:** @Trace
 
 **Model restriction:** This API can be used only in the stage model.
 

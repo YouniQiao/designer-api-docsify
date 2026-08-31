@@ -1,4 +1,0 @@
-# VkDisplayPowerInfoEXT
-
-## Overview
-

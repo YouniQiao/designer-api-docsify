@@ -1,4 +1,0 @@
-# VkPhysicalDeviceVideoEncodeQuantizationMapFeaturesKHR
-
-## Overview
-

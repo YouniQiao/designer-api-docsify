@@ -1,4 +1,0 @@
-# VkDebugUtilsObjectTagInfoEXT
-
-## Overview
-

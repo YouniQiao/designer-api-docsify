@@ -1,4 +1,0 @@
-# VkIndirectCommandsVertexBufferTokenEXT
-
-## Overview
-

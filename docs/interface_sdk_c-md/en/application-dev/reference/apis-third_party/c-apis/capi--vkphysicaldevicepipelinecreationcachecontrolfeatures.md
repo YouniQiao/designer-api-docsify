@@ -1,4 +1,0 @@
-# VkPhysicalDevicePipelineCreationCacheControlFeatures
-
-## Overview
-

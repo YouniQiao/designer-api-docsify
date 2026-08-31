@@ -1,4 +1,0 @@
-# VkGeometryDataNV
-
-## Overview
-

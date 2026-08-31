@@ -1,4 +1,0 @@
-# res_sym
-
-## Overview
-

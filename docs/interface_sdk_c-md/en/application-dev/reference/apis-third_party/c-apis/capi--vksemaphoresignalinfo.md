@@ -1,4 +1,0 @@
-# VkSemaphoreSignalInfo
-
-## Overview
-

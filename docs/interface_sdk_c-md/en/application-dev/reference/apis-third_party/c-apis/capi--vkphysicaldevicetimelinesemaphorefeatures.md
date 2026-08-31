@@ -1,4 +1,0 @@
-# VkPhysicalDeviceTimelineSemaphoreFeatures
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkConvertCooperativeVectorMatrixInfoNV
-
-## Overview
-

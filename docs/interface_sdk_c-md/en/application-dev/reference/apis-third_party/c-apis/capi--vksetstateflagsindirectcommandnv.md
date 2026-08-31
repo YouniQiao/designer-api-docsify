@@ -1,4 +1,0 @@
-# VkSetStateFlagsIndirectCommandNV
-
-## Overview
-

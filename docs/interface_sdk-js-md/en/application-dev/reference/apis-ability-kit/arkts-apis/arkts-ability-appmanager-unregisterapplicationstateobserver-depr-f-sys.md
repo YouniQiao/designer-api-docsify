@@ -17,7 +17,7 @@ Unregister application state observer.
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](arkts-ability-appmanager-off-f.md#offapplicationstate)
+**Substitutes:** [off](arkts-ability-appmanager-off-f.md)
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -63,7 +63,7 @@ Unregister application state observer.
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](arkts-ability-appmanager-off-f.md#offapplicationstate)
+**Substitutes:** [off](arkts-ability-appmanager-off-f.md)
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 

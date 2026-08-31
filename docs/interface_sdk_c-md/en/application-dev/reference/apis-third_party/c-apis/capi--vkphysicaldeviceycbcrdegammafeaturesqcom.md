@@ -1,4 +1,0 @@
-# VkPhysicalDeviceYcbcrDegammaFeaturesQCOM
-
-## Overview
-

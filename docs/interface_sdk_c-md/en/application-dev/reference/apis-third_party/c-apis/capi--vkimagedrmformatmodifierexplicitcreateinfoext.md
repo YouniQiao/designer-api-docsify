@@ -1,4 +1,0 @@
-# VkImageDrmFormatModifierExplicitCreateInfoEXT
-
-## Overview
-

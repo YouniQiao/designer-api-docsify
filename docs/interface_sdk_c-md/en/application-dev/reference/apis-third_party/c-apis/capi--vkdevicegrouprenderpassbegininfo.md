@@ -1,4 +1,0 @@
-# VkDeviceGroupRenderPassBeginInfo
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkBindSparseInfo
-
-## Overview
-

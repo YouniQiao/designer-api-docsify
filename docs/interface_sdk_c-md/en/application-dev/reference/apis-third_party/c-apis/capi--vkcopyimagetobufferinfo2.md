@@ -1,4 +1,0 @@
-# VkCopyImageToBufferInfo2
-
-## Overview
-

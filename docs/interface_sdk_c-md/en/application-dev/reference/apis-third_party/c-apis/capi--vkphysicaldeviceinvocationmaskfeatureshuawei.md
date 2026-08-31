@@ -1,4 +1,0 @@
-# VkPhysicalDeviceInvocationMaskFeaturesHUAWEI
-
-## Overview
-

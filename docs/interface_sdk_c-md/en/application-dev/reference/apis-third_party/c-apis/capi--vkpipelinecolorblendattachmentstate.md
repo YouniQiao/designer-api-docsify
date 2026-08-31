@@ -1,4 +1,0 @@
-# VkPipelineColorBlendAttachmentState
-
-## Overview
-

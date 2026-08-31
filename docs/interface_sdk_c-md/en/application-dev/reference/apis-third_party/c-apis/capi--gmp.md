@@ -1,4 +1,0 @@
-# gmp
-
-## Overview
-

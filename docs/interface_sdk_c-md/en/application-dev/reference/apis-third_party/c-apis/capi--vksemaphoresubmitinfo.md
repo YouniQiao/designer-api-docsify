@@ -1,4 +1,0 @@
-# VkSemaphoreSubmitInfo
-
-## Overview
-

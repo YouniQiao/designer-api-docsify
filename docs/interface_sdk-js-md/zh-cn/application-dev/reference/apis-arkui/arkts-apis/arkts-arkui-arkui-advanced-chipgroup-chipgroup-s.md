@@ -4,6 +4,8 @@ ChipGroup组件提供操作块群组能力，支持单选或多选模式，可�
 
 **起始版本：** 12
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -27,6 +29,8 @@ backgroundSystemMaterial?: uiMaterial.Material
 **类型：** uiMaterial.Material
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,6 +56,8 @@ chipGroupPadding?: ChipGroupPaddingOptions
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -76,6 +82,8 @@ chipGroupSpace?: ChipGroupSpaceOptions
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -95,6 +103,8 @@ items: ChipGroupItemOptions[]
 **类型：** [ChipGroupItemOptions](arkts-arkui-arkui-advanced-chipgroup-chipgroupitemoptions-i.md)[]
 
 **起始版本：** 12
+
+**装饰器类型：** @Require、@Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,6 +130,8 @@ itemStyle?: ChipItemStyle
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -143,6 +155,8 @@ multiple?: boolean
 **类型：** boolean
 
 **起始版本：** 12
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -186,6 +200,8 @@ selectedBackgroundSystemMaterial?: uiMaterial.Material
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -214,6 +230,8 @@ selectedIndexes?: Array<number>
 
 **起始版本：** 12
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -235,6 +253,8 @@ suffix?: Callback<void>
 **类型：** Callback&lt;void&gt;
 
 **起始版本：** 12
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

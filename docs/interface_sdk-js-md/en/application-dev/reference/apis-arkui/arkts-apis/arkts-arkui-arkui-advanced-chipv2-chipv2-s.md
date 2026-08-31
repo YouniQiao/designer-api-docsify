@@ -4,6 +4,8 @@ Defines chip component with V2 state management.
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -39,6 +41,8 @@ Chip options.
 **Type:** [ChipV2Options](arkts-arkui-arkui-advanced-chipv2-chipv2options-c.md)
 
 **Since:** 26.0.0
+
+**Decorator:** @Require
 
 **Model restriction:** This API can be used only in the stage model.
 

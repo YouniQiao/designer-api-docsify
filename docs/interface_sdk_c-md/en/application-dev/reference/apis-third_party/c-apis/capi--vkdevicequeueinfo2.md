@@ -1,4 +1,0 @@
-# VkDeviceQueueInfo2
-
-## Overview
-

@@ -9,6 +9,8 @@ A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-c
 
 **Since:** 12
 
+**Decorator:** @Sendable
+
 **System capability:** SystemCapability.Utils.Lang
 
 ## Modules to Import

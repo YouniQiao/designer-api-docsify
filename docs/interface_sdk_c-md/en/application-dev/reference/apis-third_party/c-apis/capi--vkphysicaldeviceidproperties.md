@@ -1,4 +1,0 @@
-# VkPhysicalDeviceIDProperties
-
-## Overview
-

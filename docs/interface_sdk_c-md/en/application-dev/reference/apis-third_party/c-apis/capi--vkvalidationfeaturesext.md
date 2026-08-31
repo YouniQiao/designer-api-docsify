@@ -1,4 +1,0 @@
-# VkValidationFeaturesEXT
-
-## Overview
-

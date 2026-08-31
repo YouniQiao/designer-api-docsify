@@ -4,6 +4,8 @@ Declare Component ToolBarV2
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -59,6 +61,8 @@ Define toolbarV2 item list.
 **Type:** [ToolBarV2Item](arkts-arkui-arkui-advanced-toolbarv2-toolbarv2item-c.md)[]
 
 **Since:** 18
+
+**Decorator:** @Require
 
 **Model restriction:** This API can be used only in the stage model.
 

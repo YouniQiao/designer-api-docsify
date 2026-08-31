@@ -5,6 +5,7 @@
 Drawing模块提供包括2D图形渲染、文字绘制和图片显示等功能函数。<br>本模块采用屏幕物理像素单位px。<br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
 **起始版本：** 8
+
 ## 文件汇总
 
 | 名称 | 描述 |
@@ -35,7 +36,7 @@ Drawing模块提供包括2D图形渲染、文字绘制和图片显示等功能�
 | [drawing_record_cmd.h](capi-drawing-record-cmd-h.md) | 文件中定义了与录制指令对象相关的功能函数。用于录制和回放绘制指令序列，支持创建录制画布、记录绘制操作、生成可回放的指令对象。<br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。 |
 | [drawing_font_collection.h](capi-drawing-font-collection-h.md) | 定义绘制模块中与字体集相关的函数，用于管理文本排版所需的字体资源，支持创建独立的或可共享的字体集对象，满足不同场景下的文本排版需求。通过字体集对象，可实现自定义字体加载、系统字体管理、字体缓存清理等功能。 |
 | [drawing_sampling_options.h](capi-drawing-sampling-options-h.md) | 文件中定义了与采样选项相关的功能函数，用于创建、拷贝和销毁采样选项对象，以及指定图像采样时的过滤模式和纹理采样时的多级渐远纹理模式。<br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。 |
-| [drawing_text_lineTypography.h](capi-drawing-text-lineTypography-h.md) | 提供排版行相关的接口，如获取指定位置处开始可以排版的字符个数等函数。 |
+| [drawing_text_lineTypography.h](capi-drawing-text-linetypography-h.md) | 提供排版行相关的接口，如获取指定位置处开始可以排版的字符个数等函数。 |
 | [drawing_pixel_map.h](capi-drawing-pixel-map-h.md) | 声明与绘图模块中的像素图对象相关的函数。支持从图像框架定义的像素图对象中获取本模块定义的像素图对象，支持解除两者之间的关系。<br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。 |
 | [drawing_typeface.h](capi-drawing-typeface-h.md) | 文件中定义了与字形相关的功能函数，支持创建默认字形、从文件或内存流创建指定字形、通过字型参数自定义字体的可变维度，以及查询字形的粗体、斜体属性等。<br>不同的平台有自己的默认字形，也可以从ttf文件解析出三方指定字形，如宋体、黑体字形等。<br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。 |
 | [drawing_color.h](capi-drawing-color-h.md) | 文件中定义了与颜色相关的功能函数。<br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。 |
@@ -43,7 +44,7 @@ Drawing模块提供包括2D图形渲染、文字绘制和图片显示等功能�
 | [drawing_font.h](capi-drawing-font-h.md) | 文件中定义了与字体相关的功能函数。<br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。 |
 | [drawing_rect.h](capi-drawing-rect-h.md) | 文件中定义了与矩形相关的功能函数。<br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。 |
 | [drawing_types.h](capi-drawing-types-h.md) | 文件中定义了用于绘制2D图形的数据类型，包括画布、画笔、画刷、位图和路径。这些数据类型提供了2D图形绘制能力，适用于需要在画布上绑定画笔和画刷绘制各种形状、图片和文字的场景，可以灵活定义路径和位图，帮助开发者高效实现自定义图形绘制、图像处理等功能，满足复杂的2D图形绘制需求。<br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。 |
-| [drawing_font_mgr.h](capi-drawing-font-mgr-h.md) | 文件中定义了与系统字体管理相关的功能函数，用于匹配与获取系统中预置的字体。OH_Drawing_FontMgr（字体管理器）管理系统中预置的字体家族，每个字体家族对应一个字体样式集[OH_Drawing_FontStyleSet](capi-drawing-oh-drawing-fontstyleset.md)，每个样式集中包含多个字型对象[OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md)。 |
+| [drawing_font_mgr.h](capi-drawing-font-mgr-h.md) | 文件中定义了与系统字体管理相关的功能函数，用于匹配与获取系统中预置的字体。OH_Drawing_FontMgr（字体管理器）管理系统中预置的字体家族，每个字体家族对应一个字体样式集{@link OH_Drawing_FontStyleSet}，每个样式集中包含多个字型对象{@link OH_Drawing_Typeface}。 |
 | [drawing_text_typography.h](capi-drawing-text-typography-h.md) | 定义绘制模块中排版相关的函数。 |
 | [drawing_path.h](capi-drawing-path-h.md) | 文件中定义了与自定义路径相关的功能函数，能够高效构建复杂几何路径、支持SVG数据交换实现跨平台兼容，并通过配对创建与销毁机制保障内存安全。主要支持以下能力：<ul><li>路径的创建、拷贝与销毁。</li><li>添加线段、弧线、贝塞尔曲线、圆锥曲线、矩形、椭圆、圆形、多边形等几何图形。</li><li>路径的矩阵变换、偏移、合并与闭合等操作。</li><li>路径长度、边界、包含关系等查询和测量能力。</li></ul> |
 | [drawing_color_filter.h](capi-drawing-color-filter-h.md) | 声明与绘图模块中的颜色滤波器对象相关的函数。支持创建混合模式、组合、矩阵、伽马转换、亮度和光照等多种颜色滤波器效果，适用于图像渲染中的色彩调整与特效处理场景。<br>本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。 |

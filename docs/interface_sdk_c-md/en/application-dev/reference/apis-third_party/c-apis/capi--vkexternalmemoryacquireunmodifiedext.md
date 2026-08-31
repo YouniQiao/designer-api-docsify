@@ -1,4 +1,0 @@
-# VkExternalMemoryAcquireUnmodifiedEXT
-
-## Overview
-

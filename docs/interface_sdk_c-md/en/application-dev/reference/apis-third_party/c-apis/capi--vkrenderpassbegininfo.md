@@ -1,4 +1,0 @@
-# VkRenderPassBeginInfo
-
-## Overview
-

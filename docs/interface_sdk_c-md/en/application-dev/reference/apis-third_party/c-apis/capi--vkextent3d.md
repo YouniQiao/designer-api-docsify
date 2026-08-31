@@ -1,4 +1,0 @@
-# VkExtent3D
-
-## Overview
-

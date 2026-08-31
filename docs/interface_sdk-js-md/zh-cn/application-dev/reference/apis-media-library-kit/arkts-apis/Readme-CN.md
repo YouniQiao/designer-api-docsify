@@ -142,7 +142,8 @@
   - [PhotoCreationConfig](arkts-medialibrary-photoaccesshelper-photocreationconfig-i.md)
   <!--Del-->
   - [PhotoCreationSource(系统接口)](arkts-medialibrary-photoaccesshelper-photocreationsource-i-sys.md)<!--DelEnd-->
-  - [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i.md)
+  <!--Del-->
+  - [PhotoProxy(系统接口)](arkts-medialibrary-photoaccesshelper-photoproxy-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Progress(系统接口)](arkts-medialibrary-photoaccesshelper-progress-i-sys.md)<!--DelEnd-->
   - [QuickImageDataHandler](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md)

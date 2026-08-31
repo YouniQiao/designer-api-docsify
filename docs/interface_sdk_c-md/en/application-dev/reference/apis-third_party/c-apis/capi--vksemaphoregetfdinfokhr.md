@@ -1,4 +1,0 @@
-# VkSemaphoreGetFdInfoKHR
-
-## Overview
-

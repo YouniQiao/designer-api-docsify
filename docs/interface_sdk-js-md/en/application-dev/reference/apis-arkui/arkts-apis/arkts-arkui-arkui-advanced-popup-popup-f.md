@@ -14,6 +14,8 @@ export declare function Popup(options: PopupOptions): void
 
 **Since:** 11
 
+**Decorator:** @Builder
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.

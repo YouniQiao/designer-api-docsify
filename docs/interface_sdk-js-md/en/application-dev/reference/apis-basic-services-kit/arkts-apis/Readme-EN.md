@@ -63,7 +63,8 @@
   - [ConstraintChangeInfo(system api)](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ConstraintSourceTypeInfo(system api)](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)<!--DelEnd-->
-  - [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i.md)
+  <!--Del-->
+  - [CreateOsAccountForDomainOptions(system api)](arkts-basicservices-osaccount-createosaccountfordomainoptions-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CreateOsAccountOptions(system api)](arkts-basicservices-osaccount-createosaccountoptions-i-sys.md)<!--DelEnd-->
   <!--Del-->

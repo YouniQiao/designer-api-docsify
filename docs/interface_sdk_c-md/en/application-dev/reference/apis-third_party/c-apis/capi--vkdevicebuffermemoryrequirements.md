@@ -1,4 +1,0 @@
-# VkDeviceBufferMemoryRequirements
-
-## Overview
-

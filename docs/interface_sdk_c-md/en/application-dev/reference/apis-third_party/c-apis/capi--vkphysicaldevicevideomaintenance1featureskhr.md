@@ -1,4 +1,0 @@
-# VkPhysicalDeviceVideoMaintenance1FeaturesKHR
-
-## Overview
-

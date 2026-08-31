@@ -1,4 +1,0 @@
-# VkPipelineColorBlendStateCreateInfo
-
-## Overview
-

@@ -7,6 +7,7 @@ Swapfs模块提供swap文件系统相关的错误码定义，用于管理和监�
 **系统能力：** SystemCapability.FileManagement.File.Swapfs
 
 **起始版本：** 26.0.0
+
 ## 文件汇总
 
 | 名称 | 描述 |

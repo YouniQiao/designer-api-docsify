@@ -22,6 +22,8 @@ import { SegmentButton, SegmentButtonOptions, SegmentButtonItemOptionsArray } fr
 
 **起始版本：** 11
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -48,6 +50,8 @@ true表示开启分段按钮的属性动画；false表示不开启分段按钮�
 
 **起始版本：** 24
 
+**装饰器类型：** @Prop
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -71,6 +75,8 @@ maxFontScale: number | Resource
 **类型：** number \| Resource
 
 **起始版本：** 14
+
+**装饰器类型：** @Prop
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -107,6 +113,8 @@ options: SegmentButtonOptions
 **类型：** [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md)
 
 **起始版本：** 11
+
+**装饰器类型：** @ObjectLink
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

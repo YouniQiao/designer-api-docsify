@@ -1,4 +1,0 @@
-# VkImageCompressionPropertiesEXT
-
-## Overview
-

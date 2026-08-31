@@ -1,4 +1,0 @@
-# VkGraphicsShaderGroupCreateInfoNV
-
-## Overview
-

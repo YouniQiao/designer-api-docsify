@@ -1,4 +1,0 @@
-# VkDescriptorSetVariableDescriptorCountAllocateInfo
-
-## Overview
-

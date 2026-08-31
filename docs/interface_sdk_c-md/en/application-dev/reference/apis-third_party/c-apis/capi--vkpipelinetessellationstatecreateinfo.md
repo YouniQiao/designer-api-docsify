@@ -1,4 +1,0 @@
-# VkPipelineTessellationStateCreateInfo
-
-## Overview
-

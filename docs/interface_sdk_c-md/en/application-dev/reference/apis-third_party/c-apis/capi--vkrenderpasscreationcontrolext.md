@@ -1,4 +1,0 @@
-# VkRenderPassCreationControlEXT
-
-## Overview
-

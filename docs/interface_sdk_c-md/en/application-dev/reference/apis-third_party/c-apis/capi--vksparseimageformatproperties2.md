@@ -1,4 +1,0 @@
-# VkSparseImageFormatProperties2
-
-## Overview
-

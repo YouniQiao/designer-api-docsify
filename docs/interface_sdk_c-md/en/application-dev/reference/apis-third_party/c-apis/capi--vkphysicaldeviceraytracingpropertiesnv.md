@@ -1,4 +1,0 @@
-# VkPhysicalDeviceRayTracingPropertiesNV
-
-## Overview
-

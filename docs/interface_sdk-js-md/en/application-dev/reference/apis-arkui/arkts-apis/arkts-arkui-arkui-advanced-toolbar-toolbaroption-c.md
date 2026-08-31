@@ -4,6 +4,8 @@ Defines the content and attributes of a toolbar.
 
 **Since:** 10
 
+**Decorator:** @Observed
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

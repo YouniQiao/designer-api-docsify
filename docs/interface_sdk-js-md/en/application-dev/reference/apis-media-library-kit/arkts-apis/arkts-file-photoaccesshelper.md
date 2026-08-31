@@ -103,7 +103,6 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i.md) | Describes the information about a media asset. |
 | [PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md) | Describes the notification information about the change of a media asset. |
 | [PhotoCreationConfig](arkts-medialibrary-photoaccesshelper-photocreationconfig-i.md) | Represents the configuration for saving a media asset (image or video) to the media library, including the file name. |
-| [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i.md) | Photo proxy object, which is used by the camera application to write image data. |
 | [QuickImageDataHandler](arkts-medialibrary-photoaccesshelper-quickimagedatahandler-i.md) | QuickImageDataHandler is a media asset handler used to customize the media asset processing logic in **onDataPrepared**. |
 | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i.md) | Represents request options. |
 | [TextContextInfo](arkts-medialibrary-photoaccesshelper-textcontextinfo-i.md) | Represents the text information about the recommended images. |
@@ -144,6 +143,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md) | Provides APIs for custom user behavior recording for Gallery. |
 | [PhotoCreateOptions](arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md) | Options for creating an image or video asset. |
 | [PhotoCreationSource](arkts-medialibrary-photoaccesshelper-photocreationsource-i-sys.md) | Defines the application information provided to create assets on behalf of the application. |
+| [PhotoProxy](arkts-medialibrary-photoaccesshelper-photoproxy-i-sys.md) | Photo proxy object, which is used by the camera application to write image data. |
 | [Progress](arkts-medialibrary-photoaccesshelper-progress-i-sys.md) | progress info of batch operations. |
 | [RequestOptions](arkts-medialibrary-photoaccesshelper-requestoptions-i-sys.md) | Represents request options. |
 | [RequestPhotoOptions](arkts-medialibrary-photoaccesshelper-requestphotooptions-i-sys.md) | Defines the options for obtaining the thumbnail of an image or video. |

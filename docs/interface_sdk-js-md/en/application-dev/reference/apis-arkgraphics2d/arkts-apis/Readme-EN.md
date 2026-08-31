@@ -186,7 +186,8 @@
     - [Filter](arkts-arkgraphics2d-uieffect-filter-i.md)
     <!--Del-->
     - [Filter(system api)](arkts-arkgraphics2d-uieffect-filter-i-sys.md)<!--DelEnd-->
-    - [HdrBrightnessBlender](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i.md)
+    <!--Del-->
+    - [HdrBrightnessBlender(system api)](arkts-arkgraphics2d-uieffect-hdrbrightnessblender-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [HdrDarkenBlender(system api)](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md)<!--DelEnd-->
     <!--Del-->

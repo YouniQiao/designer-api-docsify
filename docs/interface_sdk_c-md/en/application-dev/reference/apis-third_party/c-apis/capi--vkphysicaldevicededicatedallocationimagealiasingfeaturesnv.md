@@ -1,4 +1,0 @@
-# VkPhysicalDeviceDedicatedAllocationImageAliasingFeaturesNV
-
-## Overview
-

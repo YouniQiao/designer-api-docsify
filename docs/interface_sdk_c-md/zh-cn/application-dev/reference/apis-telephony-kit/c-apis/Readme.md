@@ -1,6 +1,4 @@
-- 头文件
-    - [telephony_data.h](capi-telephony-data-h.md)
-- 模块
+# C API<!--c-telephonykit-->
+
+- 模块<!--telephonykit-module-->n
     - [Telephony](capi-telephony.md)
-- 结构体
-    - [Telephony_NetworkState](capi--telephony-networkstate.md)

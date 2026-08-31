@@ -1,4 +1,0 @@
-# VkSubpassSampleLocationsEXT
-
-## Overview
-

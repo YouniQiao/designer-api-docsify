@@ -1,4 +1,0 @@
-# VkGeneratedCommandsShaderInfoEXT
-
-## Overview
-

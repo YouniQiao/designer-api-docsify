@@ -1,4 +1,0 @@
-# VkImageFormatProperties
-
-## Overview
-

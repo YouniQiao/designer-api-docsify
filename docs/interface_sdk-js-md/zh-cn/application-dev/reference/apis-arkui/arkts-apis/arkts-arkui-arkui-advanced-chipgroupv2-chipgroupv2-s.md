@@ -16,6 +16,8 @@ import { ChipV2Size, ChipGroupV2 } from '@kit.ArkUI';
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ComponentV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -54,6 +56,8 @@ ChipV2项的双向绑定回调方法，当需要监听或修改ChipV2项列表�
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @Event
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -73,6 +77,8 @@ $selectedIndexes?: Callback<Array<number>>
 **类型：** Callback&lt;Array&lt;number&gt;&gt;
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Event
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -141,6 +147,8 @@ items: ChipGroupV2Items
 **类型：** [ChipGroupV2Items](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Require
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -214,6 +222,8 @@ ChipV2状态改变时的回调方法，用于响应ChipV2选中状态变化。�
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @Event
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -261,6 +271,8 @@ suffix?: Callback<void>
 **类型：** Callback&lt;void&gt;
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

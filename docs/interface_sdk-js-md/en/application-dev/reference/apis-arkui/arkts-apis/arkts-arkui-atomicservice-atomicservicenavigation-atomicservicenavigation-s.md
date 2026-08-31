@@ -4,6 +4,8 @@
 
 **Since:** 12
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -22,6 +24,8 @@ The builder of navDestination.
 
 **Since:** 12
 
+**Decorator:** @BuilderParam
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -37,6 +41,8 @@ The background with gradient colors of Navigation.
 **Type:** [GradientBackground](arkts-arkui-atomicservice-atomicservicenavigation-gradientbackground-i.md)
 
 **Since:** 18
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -54,6 +60,8 @@ Hide navigation title bar.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -69,6 +77,8 @@ The layout style users defined and inserted.
 **Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| Array&lt;[NavigationMenuItem](../arkts-components/arkts-arkui-navigationmenuitem-i.md)&gt;
 
 **Since:** 18
+
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -86,6 +96,8 @@ Sets the minimum width of content.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -101,6 +113,8 @@ Sets the mode of navigation.
 **Type:** [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -134,6 +148,8 @@ Sets the width of navigation bar.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -153,6 +169,8 @@ Sets the minimum width and the maximum width of navigation bar.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -168,6 +186,8 @@ the content of Navigation.
 **Type:** [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -185,6 +205,8 @@ the information of route page.Providers methods for controlling destination page
 
 **Since:** 12
 
+**Decorator:** @State
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -201,6 +223,8 @@ Set side bar content.
 
 **Since:** 18
 
+**Decorator:** @BuilderParam
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -216,6 +240,8 @@ Set side bar options.
 **Type:** [SideBarOptions](arkts-arkui-atomicservice-atomicservicenavigation-sidebaroptions-i.md)
 
 **Since:** 18
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -249,6 +275,8 @@ Sets the Navigation title.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -264,6 +292,8 @@ The color of Navigation's TitleBar.
 **Type:** [TitleOptions](arkts-arkui-atomicservice-atomicservicenavigation-titleoptions-i.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

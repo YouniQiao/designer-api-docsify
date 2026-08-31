@@ -1,4 +1,0 @@
-# VkQueueFamilyQueryResultStatusPropertiesKHR
-
-## Overview
-

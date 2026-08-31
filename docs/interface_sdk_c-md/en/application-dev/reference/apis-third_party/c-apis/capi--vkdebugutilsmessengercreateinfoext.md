@@ -1,4 +1,0 @@
-# VkDebugUtilsMessengerCreateInfoEXT
-
-## Overview
-

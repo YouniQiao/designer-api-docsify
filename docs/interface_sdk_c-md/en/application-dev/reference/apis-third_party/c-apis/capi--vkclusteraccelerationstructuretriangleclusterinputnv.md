@@ -1,4 +1,0 @@
-# VkClusterAccelerationStructureTriangleClusterInputNV
-
-## Overview
-

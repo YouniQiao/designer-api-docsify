@@ -1,4 +1,0 @@
-# VkSubpassBeginInfo
-
-## Overview
-

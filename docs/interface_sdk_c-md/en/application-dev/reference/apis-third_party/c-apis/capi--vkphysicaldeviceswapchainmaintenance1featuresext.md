@@ -1,4 +1,0 @@
-# VkPhysicalDeviceSwapchainMaintenance1FeaturesEXT
-
-## Overview
-

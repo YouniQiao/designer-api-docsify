@@ -1,4 +1,0 @@
-# VkAntiLagDataAMD
-
-## Overview
-

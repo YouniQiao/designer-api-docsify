@@ -1,4 +1,0 @@
-# VkPhysicalDeviceTextureCompressionASTCHDRFeatures
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkDrawIndirectCommand
-
-## Overview
-

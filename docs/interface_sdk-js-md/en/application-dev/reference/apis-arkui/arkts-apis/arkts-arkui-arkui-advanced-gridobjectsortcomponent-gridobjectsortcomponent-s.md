@@ -15,6 +15,8 @@
 
 **Since:** 11
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -107,6 +109,8 @@ Component configuration.
 **Type:** [GridObjectSortComponentOptions](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentoptions-i.md)
 
 **Since:** 11
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

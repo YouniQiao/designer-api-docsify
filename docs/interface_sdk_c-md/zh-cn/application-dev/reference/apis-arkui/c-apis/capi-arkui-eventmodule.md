@@ -5,6 +5,7 @@
 Declares the UI input event capabilities provided by ArkUI on the native side.
 
 **起始版本：** 12
+
 ## 文件汇总
 
 | 名称 | 描述 |

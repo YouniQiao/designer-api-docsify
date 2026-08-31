@@ -1,4 +1,0 @@
-# VkAccelerationStructureBuildGeometryInfoKHR
-
-## Overview
-

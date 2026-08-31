@@ -1,4 +1,0 @@
-# VkImageViewASTCDecodeModeEXT
-
-## Overview
-

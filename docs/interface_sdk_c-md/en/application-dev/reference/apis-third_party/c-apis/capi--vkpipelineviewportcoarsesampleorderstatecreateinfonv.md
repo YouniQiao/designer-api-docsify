@@ -1,4 +1,0 @@
-# VkPipelineViewportCoarseSampleOrderStateCreateInfoNV
-
-## Overview
-

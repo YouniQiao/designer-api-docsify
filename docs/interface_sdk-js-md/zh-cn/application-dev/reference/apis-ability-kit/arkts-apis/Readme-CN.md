@@ -575,7 +575,8 @@
   - [ExecuteParam(系统接口)](arkts-ability-insightintentdriver-executeparam-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FormIntentInfo(系统接口)](arkts-ability-insightintentdriver-formintentinfo-i-sys.md)<!--DelEnd-->
-  - [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md)
+  <!--Del-->
+  - [FunctionIntentInfo(系统接口)](arkts-ability-insightintentdriver-functionintentinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [InsightIntentInfo(系统接口)](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1620,7 +1621,6 @@
     - [AutoFillRect(系统接口)](arkts-ability-autofillrect-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AutoFillRequest](arkts-autofillrequest.md)<!--DelEnd-->
-    - [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md)
     <!--Del-->
     - [FillRequest(系统接口)](arkts-ability-autofillrequest-fillrequest-i-sys.md)<!--DelEnd-->
     <!--Del-->

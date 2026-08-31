@@ -1,4 +1,0 @@
-# VkDeviceDiagnosticsConfigCreateInfoNV
-
-## Overview
-

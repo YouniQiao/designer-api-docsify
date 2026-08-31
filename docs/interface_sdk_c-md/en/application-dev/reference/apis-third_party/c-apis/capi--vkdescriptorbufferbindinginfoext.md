@@ -1,4 +1,0 @@
-# VkDescriptorBufferBindingInfoEXT
-
-## Overview
-

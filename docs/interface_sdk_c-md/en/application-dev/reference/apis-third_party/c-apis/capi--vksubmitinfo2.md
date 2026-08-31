@@ -1,4 +1,0 @@
-# VkSubmitInfo2
-
-## Overview
-

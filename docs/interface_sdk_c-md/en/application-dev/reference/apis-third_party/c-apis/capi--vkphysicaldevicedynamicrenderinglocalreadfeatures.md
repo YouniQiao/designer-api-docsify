@@ -1,4 +1,0 @@
-# VkPhysicalDeviceDynamicRenderingLocalReadFeatures
-
-## Overview
-

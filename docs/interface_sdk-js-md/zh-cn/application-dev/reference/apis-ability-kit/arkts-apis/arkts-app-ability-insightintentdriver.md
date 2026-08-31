@@ -38,12 +38,6 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 | [queryEntityInfo](arkts-ability-insightintentdriver-queryentityinfo-f-sys.md) | 查询意图实体信息。 |
 <!--DelEnd-->
 
-### 接口
-
-| 名称 | 说明 |
-| --- | --- |
-| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md) | [@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod)装饰器的参数类型，当前全部属性均继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)。 |
-
 <!--Del-->
 ### 接口（系统接口）
 
@@ -53,6 +47,7 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 | [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md) | FormIntentInfo用于描述[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)装饰器支持的参数，例如卡片名称。同时，该接口也可用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的卡片信息。 |
 | [ExecuteParam](arkts-ability-insightintentdriver-executeparam-i-sys.md) | 执行意图调用的参数。 |
 | [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) | FormIntentInfo用于描述[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)装饰器支持的参数，例如卡片名称。同时，该接口也可用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的卡片信息。 |
+| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i-sys.md) | [@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod)装饰器的参数类型，当前全部属性均继承自[IntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intentdecoratorinfo-i.md)。 |
 | [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md) | 意图信息，表示设备中意图的具体参数配置。 |
 | [InsightIntentInfoFilter](arkts-ability-insightintentdriver-insightintentinfofilter-i-sys.md) | 意图筛选器，描述目标意图的筛选条件，用于筛选设备上符合条件的意图。 |
 | [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) | LinkIntentInfo用于描述[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)装饰器支持的参数，例如应用间跳转需要的uri信息。 |

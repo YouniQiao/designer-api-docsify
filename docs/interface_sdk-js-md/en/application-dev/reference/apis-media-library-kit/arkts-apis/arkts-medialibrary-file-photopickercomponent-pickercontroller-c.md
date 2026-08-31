@@ -4,6 +4,8 @@ Defines an instance used to send data to the **PhotoPickerComponent**.
 
 **Since:** 12
 
+**Decorator:** @Observed
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import

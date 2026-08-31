@@ -10,6 +10,8 @@
 
 **起始版本：** 12
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
 ## 导入模块

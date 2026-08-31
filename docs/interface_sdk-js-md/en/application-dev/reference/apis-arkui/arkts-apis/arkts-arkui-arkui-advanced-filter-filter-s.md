@@ -4,6 +4,8 @@ Declare Filter.The Filter is used in scenarios where multi-dimensional filtering
 
 **Since:** 22
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import

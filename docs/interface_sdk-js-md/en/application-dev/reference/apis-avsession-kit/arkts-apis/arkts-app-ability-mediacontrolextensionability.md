@@ -8,8 +8,10 @@ import { MediaControlExtensionAbility } from '@kit.AVSessionKit';
 
 ## Summary
 
-### Classes
+<!--Del-->
+### Classes(System API)
 
 | Name | Description |
 | --- | --- |
-| [MediaControlExtensionAbility](arkts-avsession-app-ability-mediacontrolextensionability-mediacontrolextensionability-c.md) | The class of media control extension ability. |
+| [MediaControlExtensionAbility](arkts-avsession-app-ability-mediacontrolextensionability-mediacontrolextensionability-c-sys.md) | The class of media control extension ability. |
+<!--DelEnd-->

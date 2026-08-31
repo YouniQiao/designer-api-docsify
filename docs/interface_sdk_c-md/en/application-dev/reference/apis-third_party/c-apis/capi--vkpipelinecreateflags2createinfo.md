@@ -1,4 +1,0 @@
-# VkPipelineCreateFlags2CreateInfo
-
-## Overview
-

@@ -17,7 +17,7 @@ Register application state observer.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](arkts-ability-appmanager-on-f.md#onapplicationstate)
+**Substitutes:** [on](arkts-ability-appmanager-on-f.md)
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 

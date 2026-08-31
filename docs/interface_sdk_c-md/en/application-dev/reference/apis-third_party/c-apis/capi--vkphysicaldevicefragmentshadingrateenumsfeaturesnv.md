@@ -1,4 +1,0 @@
-# VkPhysicalDeviceFragmentShadingRateEnumsFeaturesNV
-
-## Overview
-

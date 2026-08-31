@@ -1,4 +1,0 @@
-# VkSwapchainCreateInfoKHR
-
-## Overview
-

@@ -6,6 +6,8 @@ Declare struct PopoverDialogV2
 
 **Since:** 18
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -23,6 +25,8 @@ $visible?: PopoverDialogV2OnVisibleChange
 Sets the callback when visibility changed.
 
 **Since:** 18
+
+**Decorator:** @Event
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Sets the PopoverDialogV2 options.
 
 **Since:** 18
 
+**Decorator:** @Require
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -60,6 +66,8 @@ Sets the targetBuilder content.
 
 **Since:** 18
 
+**Decorator:** @BuilderParam
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -77,6 +85,8 @@ Sets the PopoverDialogV2 Visible Status.
 **Type:** boolean
 
 **Since:** 18
+
+**Decorator:** @Require
 
 **Model restriction:** This API can be used only in the stage model.
 

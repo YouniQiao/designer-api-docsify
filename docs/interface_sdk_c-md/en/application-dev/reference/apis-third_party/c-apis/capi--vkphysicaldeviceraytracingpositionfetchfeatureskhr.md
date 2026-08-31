@@ -1,4 +1,0 @@
-# VkPhysicalDeviceRayTracingPositionFetchFeaturesKHR
-
-## Overview
-

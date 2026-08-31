@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderClockFeaturesKHR
-
-## Overview
-

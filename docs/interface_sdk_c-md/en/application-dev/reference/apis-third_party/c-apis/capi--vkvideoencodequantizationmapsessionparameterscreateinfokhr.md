@@ -1,4 +1,0 @@
-# VkVideoEncodeQuantizationMapSessionParametersCreateInfoKHR
-
-## Overview
-

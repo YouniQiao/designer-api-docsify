@@ -1,4 +1,0 @@
-# VkPhysicalDeviceDeviceGeneratedCommandsFeaturesEXT
-
-## Overview
-

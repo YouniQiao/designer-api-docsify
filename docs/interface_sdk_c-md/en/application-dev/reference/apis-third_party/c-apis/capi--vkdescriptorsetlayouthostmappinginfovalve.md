@@ -1,4 +1,0 @@
-# VkDescriptorSetLayoutHostMappingInfoVALVE
-
-## Overview
-

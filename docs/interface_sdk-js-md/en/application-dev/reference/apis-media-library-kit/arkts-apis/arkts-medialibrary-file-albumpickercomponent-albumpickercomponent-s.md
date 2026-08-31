@@ -6,6 +6,8 @@ The **AlbumPickerComponent** embedded in the UI of an application allows the app
 
 **Since:** 12
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## Modules to Import

@@ -1,4 +1,0 @@
-# VkExportSemaphoreCreateInfo
-
-## Overview
-

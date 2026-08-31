@@ -1,4 +1,0 @@
-# VkDeviceFaultVendorBinaryHeaderVersionOneEXT
-
-## Overview
-

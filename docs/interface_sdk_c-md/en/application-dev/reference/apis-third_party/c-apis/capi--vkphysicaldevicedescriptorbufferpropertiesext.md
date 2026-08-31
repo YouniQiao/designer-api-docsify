@@ -1,4 +1,0 @@
-# VkPhysicalDeviceDescriptorBufferPropertiesEXT
-
-## Overview
-

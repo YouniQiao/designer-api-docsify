@@ -15,6 +15,8 @@ MultiNavigation是一个支持分栏导航的组件，提供多层页面栈管�
 
 **起始版本：** 14
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -32,6 +34,8 @@ navDestination: NavDestinationBuildFunction
 设置加载目标页面的路由规则。
 
 **起始版本：** 14
+
+**装饰器类型：** @BuilderParam
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,6 +86,8 @@ multiStack: MultiNavPathStack
 **类型：** [MultiNavPathStack](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md)
 
 **起始版本：** 14
+
+**装饰器类型：** @State
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,4 +1,0 @@
-# VkAntiLagPresentationInfoAMD
-
-## Overview
-

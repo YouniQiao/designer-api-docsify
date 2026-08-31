@@ -21,8 +21,6 @@ constructor(name: string, param: unknown, onPop?: import('../api/@ohos.base').Ca
 
 **起始版本：** 10
 
-**装饰器类型：** @ohos
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -116,8 +114,6 @@ NavDestination页面触发[pop](arkts-arkui-navpathstack-c.md#pop)、[popToName]
 **类型：** import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt;
 
 **起始版本：** 11
-
-**装饰器类型：** @ohos
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -34,7 +34,7 @@ appendBundles(bundlesToBackup: Array<IncrementalBackupData>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundlesToBackup | Array&lt;[IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i.md)&gt; | 是 | 需要增量备份的应用数据列表。 |
+| bundlesToBackup | Array&lt;[IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i-sys.md)&gt; | 是 | 需要增量备份的应用数据列表。 |
 
 **返回值：**
 
@@ -136,7 +136,7 @@ appendBundles(bundlesToAppend: Array<IncrementalBackupData>, infos: string[]): P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundlesToAppend | Array&lt;[IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i.md)&gt; | 是 | 需要增量备份的应用数据列表。 |
+| bundlesToAppend | Array&lt;[IncrementalBackupData](arkts-corefile-backup-incrementalbackupdata-i-sys.md)&gt; | 是 | 需要增量备份的应用数据列表。 |
 | infos | string[] | 是 | 增量备份时各应用所需扩展信息的数组。 |
 
 **返回值：**

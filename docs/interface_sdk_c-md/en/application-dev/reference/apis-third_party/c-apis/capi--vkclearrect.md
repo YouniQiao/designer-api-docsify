@@ -1,4 +1,0 @@
-# VkClearRect
-
-## Overview
-

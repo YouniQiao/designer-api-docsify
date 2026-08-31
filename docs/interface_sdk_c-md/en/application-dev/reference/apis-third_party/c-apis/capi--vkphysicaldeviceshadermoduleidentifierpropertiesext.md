@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderModuleIdentifierPropertiesEXT
-
-## Overview
-

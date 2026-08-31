@@ -1,4 +1,0 @@
-# VkPhysicalDeviceComputeShaderDerivativesFeaturesKHR
-
-## Overview
-

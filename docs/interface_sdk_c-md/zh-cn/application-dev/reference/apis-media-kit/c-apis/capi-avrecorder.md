@@ -7,6 +7,7 @@ AVRecorder提供媒体录制能力，支持配置录制参数及实时状态回�
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **起始版本：** 18
+
 ## 文件汇总
 
 | 名称 | 描述 |

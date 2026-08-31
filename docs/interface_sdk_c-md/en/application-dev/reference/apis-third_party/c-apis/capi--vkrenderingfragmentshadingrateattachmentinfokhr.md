@@ -1,4 +1,0 @@
-# VkRenderingFragmentShadingRateAttachmentInfoKHR
-
-## Overview
-

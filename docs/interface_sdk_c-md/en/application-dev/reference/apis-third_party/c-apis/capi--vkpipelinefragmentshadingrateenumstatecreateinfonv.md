@@ -1,4 +1,0 @@
-# VkPipelineFragmentShadingRateEnumStateCreateInfoNV
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkBindIndexBufferIndirectCommandEXT
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPipelineColorWriteCreateInfoEXT
-
-## Overview
-

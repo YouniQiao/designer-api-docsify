@@ -1,4 +1,0 @@
-# VkAttachmentReference2
-
-## Overview
-

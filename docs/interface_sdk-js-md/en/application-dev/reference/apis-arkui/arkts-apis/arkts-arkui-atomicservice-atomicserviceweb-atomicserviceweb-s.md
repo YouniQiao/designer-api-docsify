@@ -8,6 +8,8 @@
 
 **Since:** 12
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -42,6 +44,8 @@ Sets the controller of the AtomicServiceWeb.
 
 **Since:** 12
 
+**Decorator:** @ObjectLink
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -57,6 +61,8 @@ Sets the dark mode of Web.
 **Type:** [WebDarkMode](../../apis-arkweb/arkts-components/arkts-arkweb-webdarkmode-e.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,6 +80,8 @@ Sets whether to enable forced dark algorithm when the web is in dark mode.
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -89,6 +97,8 @@ Sets how to load HTTP and HTTPS content.
 **Type:** [MixedMode](../../apis-arkweb/arkts-components/arkts-arkweb-mixedmode-e.md)
 
 **Since:** 12
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -121,6 +131,8 @@ Sets the nested scroll options.
 **Type:** [NestedScrollOptions](../arkts-components/arkts-arkui-nestedscrolloptions-i.md) \| [NestedScrollOptionsExt](../../apis-arkweb/arkts-components/arkts-arkweb-nestedscrolloptionsext-i.md)
 
 **Since:** 15
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

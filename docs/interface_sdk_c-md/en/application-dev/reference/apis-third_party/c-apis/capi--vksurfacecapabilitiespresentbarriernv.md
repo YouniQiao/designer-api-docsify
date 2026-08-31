@@ -1,4 +1,0 @@
-# VkSurfaceCapabilitiesPresentBarrierNV
-
-## Overview
-

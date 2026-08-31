@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderDemoteToHelperInvocationFeatures
-
-## Overview
-

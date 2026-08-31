@@ -1,4 +1,0 @@
-# StdVideoEncodeH265LongTermRefPics
-
-## Overview
-

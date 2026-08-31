@@ -1,4 +1,0 @@
-# VkPhysicalDeviceRobustness2FeaturesEXT
-
-## Overview
-

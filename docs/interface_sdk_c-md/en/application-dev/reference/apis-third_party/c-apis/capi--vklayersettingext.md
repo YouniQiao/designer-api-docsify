@@ -1,4 +1,0 @@
-# VkLayerSettingEXT
-
-## Overview
-

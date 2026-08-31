@@ -1,4 +1,0 @@
-# VkBaseInStructure
-
-## Overview
-

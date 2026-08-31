@@ -1,4 +1,0 @@
-# sched_param
-
-## Overview
-

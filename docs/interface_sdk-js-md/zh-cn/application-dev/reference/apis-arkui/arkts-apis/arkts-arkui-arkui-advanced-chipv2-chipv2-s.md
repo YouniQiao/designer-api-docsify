@@ -6,6 +6,8 @@ ChipV2是提供丰富样式和交互能力的操作块组件，支持前缀图�
 
 **起始版本：** 26.0.0
 
+**装饰器类型：** @ComponentV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## 导入模块
@@ -41,6 +43,8 @@ readonly chipV2Options: ChipV2Options
 **类型：** [ChipV2Options](arkts-arkui-arkui-advanced-chipv2-chipv2options-c.md)
 
 **起始版本：** 26.0.0
+
+**装饰器类型：** @Require
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

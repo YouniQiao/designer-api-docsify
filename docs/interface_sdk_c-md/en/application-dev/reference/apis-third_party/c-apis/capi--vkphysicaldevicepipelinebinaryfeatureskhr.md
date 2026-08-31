@@ -1,4 +1,0 @@
-# VkPhysicalDevicePipelineBinaryFeaturesKHR
-
-## Overview
-

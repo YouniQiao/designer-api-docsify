@@ -1,4 +1,0 @@
-# VkPipelineLayoutCreateInfo
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceDescriptorSetHostMappingFeaturesVALVE
-
-## Overview
-

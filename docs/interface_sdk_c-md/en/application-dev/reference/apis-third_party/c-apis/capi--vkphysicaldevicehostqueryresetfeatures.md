@@ -1,4 +1,0 @@
-# VkPhysicalDeviceHostQueryResetFeatures
-
-## Overview
-

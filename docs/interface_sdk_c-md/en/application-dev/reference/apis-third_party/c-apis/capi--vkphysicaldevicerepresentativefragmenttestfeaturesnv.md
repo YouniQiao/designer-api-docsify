@@ -1,4 +1,0 @@
-# VkPhysicalDeviceRepresentativeFragmentTestFeaturesNV
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceDepthClipEnableFeaturesEXT
-
-## Overview
-

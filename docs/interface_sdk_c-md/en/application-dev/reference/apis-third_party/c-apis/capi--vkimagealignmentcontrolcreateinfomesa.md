@@ -1,4 +1,0 @@
-# VkImageAlignmentControlCreateInfoMESA
-
-## Overview
-

@@ -1,4 +1,0 @@
-# StdVideoH265PictureParameterSet
-
-## Overview
-

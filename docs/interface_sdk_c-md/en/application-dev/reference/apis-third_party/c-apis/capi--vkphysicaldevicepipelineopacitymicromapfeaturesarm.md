@@ -1,4 +1,0 @@
-# VkPhysicalDevicePipelineOpacityMicromapFeaturesARM
-
-## Overview
-

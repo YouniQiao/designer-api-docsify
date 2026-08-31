@@ -487,7 +487,7 @@ Creates an OS account and associates it with the specified domain account. This 
 | --- | --- | --- | --- |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | Yes | Type of the OS account to create. |
 | domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
-| options | [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i.md) | No | Optional parameters for creating the account. By default, this parameter is left blank.<br>**Since:** 12 |
+| options | [CreateOsAccountForDomainOptions](arkts-basicservices-osaccount-createosaccountfordomainoptions-i-sys.md) | No | Optional parameters for creating the account. By default, this parameter is left blank.<br>**Since:** 12 |
 
 **Return value:**
 

@@ -1,4 +1,0 @@
-# VkReleaseSwapchainImagesInfoEXT
-
-## Overview
-

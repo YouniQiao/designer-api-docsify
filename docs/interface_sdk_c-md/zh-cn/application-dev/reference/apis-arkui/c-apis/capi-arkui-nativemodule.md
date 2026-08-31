@@ -5,6 +5,7 @@
 Provides UI capabilities of ArkUI on the native side, such as UI component creation and destruction,tree node operations, attribute setting, and event listening.
 
 **起始版本：** 26.0.0
+
 ## 文件汇总
 
 | 名称 | 描述 |
@@ -25,7 +26,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [common_type.h](capi-common-type-h.md) | 定义ArkUI Native API的公共类型。 |
 | [drawable_descriptor.h](capi-drawable-descriptor-h.md) | 提供NativeDrawableDescriptor接口的类型定义。 |
 | [native_node_napi.h](capi-native-node-napi-h.md) | 提供ArkTS侧的{@link FrameNode}转换{@link NodeHandle}的方式。 |
-| [styled_string.h](capi-styled-string-h.md) | 在Native侧定义[ArkUI_NodeType](capi-native-node-h.md#arkui_nodetype)为ARKUI_NODE_TEXT的组件的文本样式和文本布局管理器。 |
+| [styled_string.h](capi-styled-string-h.md) | 在Native侧定义{@link ArkUI_NodeType}为ARKUI_NODE_TEXT的组件的文本样式和文本布局管理器。 |
 | [custom_span.h](capi-custom-span-h.md) | Defines a set of CustomSpan enum and interface. |
 | [water_flow.h](capi-water-flow-h.md) | 定义WaterFlow组件相关的枚举和接口。 |
 | [swiper.h](capi-swiper-h.md) | 定义Swiper组件的枚举和接口。 |

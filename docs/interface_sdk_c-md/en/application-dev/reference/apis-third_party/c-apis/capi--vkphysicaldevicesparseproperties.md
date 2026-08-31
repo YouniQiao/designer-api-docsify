@@ -1,4 +1,0 @@
-# VkPhysicalDeviceSparseProperties
-
-## Overview
-

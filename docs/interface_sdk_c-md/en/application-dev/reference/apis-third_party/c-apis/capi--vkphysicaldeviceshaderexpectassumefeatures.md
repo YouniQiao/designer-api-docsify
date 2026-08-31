@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderExpectAssumeFeatures
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkAabbPositionsKHR
-
-## Overview
-

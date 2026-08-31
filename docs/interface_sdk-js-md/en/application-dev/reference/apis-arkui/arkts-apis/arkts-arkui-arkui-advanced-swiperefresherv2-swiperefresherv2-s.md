@@ -6,6 +6,8 @@ Declare component SwipeRefresherV2
 
 **Since:** 26.0.0
 
+**Decorator:** @ComponentV2
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -43,6 +45,8 @@ Whether the component is loading.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Decorator:** @Require
 
 **Model restriction:** This API can be used only in the stage model.
 

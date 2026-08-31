@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**装饰器类型：** @ObservedV2
+
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
 ## 导入模块
@@ -46,6 +48,8 @@ onChange?: ArcSliderChangeHandler
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -64,6 +68,8 @@ onEnlarge?: ArcSliderEnlargeHandler
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -81,6 +87,8 @@ onTouch?: ArcSliderTouchHandler
 @Trace
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -102,6 +110,8 @@ digitalCrownSensitivity?: CrownSensitivity
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -121,6 +131,8 @@ layoutOptions?: ArcSliderLayoutOptions
 **类型：** [ArcSliderLayoutOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -142,6 +154,8 @@ styleOptions?: ArcSliderStyleOptions
 
 **起始版本：** 18
 
+**装饰器类型：** @Trace
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -161,6 +175,8 @@ valueOptions?: ArcSliderValueOptions
 **类型：** [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 
 **起始版本：** 18
+
+**装饰器类型：** @Trace
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

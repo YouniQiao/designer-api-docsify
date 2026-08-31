@@ -1,4 +1,0 @@
-# VkPhysicalDeviceInheritedViewportScissorFeaturesNV
-
-## Overview
-

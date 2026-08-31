@@ -1,4 +1,0 @@
-# VkVideoFormatPropertiesKHR
-
-## Overview
-

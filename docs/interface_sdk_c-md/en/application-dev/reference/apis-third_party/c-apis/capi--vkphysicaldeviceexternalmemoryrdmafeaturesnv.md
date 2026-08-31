@@ -1,4 +1,0 @@
-# VkPhysicalDeviceExternalMemoryRDMAFeaturesNV
-
-## Overview
-

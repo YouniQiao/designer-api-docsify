@@ -1,4 +1,0 @@
-# VkPhysicalDeviceDriverProperties
-
-## Overview
-

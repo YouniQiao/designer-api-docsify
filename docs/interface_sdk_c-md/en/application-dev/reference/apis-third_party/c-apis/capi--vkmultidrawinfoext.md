@@ -1,4 +1,0 @@
-# VkMultiDrawInfoEXT
-
-## Overview
-

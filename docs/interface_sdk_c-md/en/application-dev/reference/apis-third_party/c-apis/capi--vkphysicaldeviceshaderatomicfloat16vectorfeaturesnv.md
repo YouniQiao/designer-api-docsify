@@ -1,4 +1,0 @@
-# VkPhysicalDeviceShaderAtomicFloat16VectorFeaturesNV
-
-## Overview
-

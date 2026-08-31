@@ -1,4 +1,0 @@
-# VkWriteDescriptorSetInlineUniformBlock
-
-## Overview
-

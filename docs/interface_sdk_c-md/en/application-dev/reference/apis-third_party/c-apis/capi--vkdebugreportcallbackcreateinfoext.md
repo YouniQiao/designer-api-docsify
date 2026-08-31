@@ -1,4 +1,0 @@
-# VkDebugReportCallbackCreateInfoEXT
-
-## Overview
-

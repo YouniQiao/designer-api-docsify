@@ -4,6 +4,8 @@ Picker used to show available input devices. @struct { AVInputCastPicker }
 
 **Since:** 20
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.Multimedia.AVSession.AVInputCast
 
 ## Modules to Import
@@ -37,6 +39,8 @@ Custom picker.
 **Type:** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
 
 **Since:** 20
+
+**Decorator:** @Prop
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

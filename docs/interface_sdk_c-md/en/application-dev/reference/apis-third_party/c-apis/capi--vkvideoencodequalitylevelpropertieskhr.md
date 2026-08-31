@@ -1,4 +1,0 @@
-# VkVideoEncodeQualityLevelPropertiesKHR
-
-## Overview
-

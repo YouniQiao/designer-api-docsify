@@ -1,4 +1,0 @@
-# VkSwapchainPresentModesCreateInfoEXT
-
-## Overview
-

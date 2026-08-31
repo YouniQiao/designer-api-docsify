@@ -1,4 +1,0 @@
-# VkDescriptorAddressInfoEXT
-
-## Overview
-

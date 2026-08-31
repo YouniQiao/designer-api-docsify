@@ -1,4 +1,0 @@
-# VkPerformanceMarkerInfoINTEL
-
-## Overview
-

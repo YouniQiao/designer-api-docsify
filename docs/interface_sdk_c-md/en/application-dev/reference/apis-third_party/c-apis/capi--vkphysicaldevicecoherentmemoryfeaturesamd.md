@@ -1,4 +1,0 @@
-# VkPhysicalDeviceCoherentMemoryFeaturesAMD
-
-## Overview
-

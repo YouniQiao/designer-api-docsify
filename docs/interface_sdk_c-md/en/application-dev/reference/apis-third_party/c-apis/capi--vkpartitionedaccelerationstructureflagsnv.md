@@ -1,4 +1,0 @@
-# VkPartitionedAccelerationStructureFlagsNV
-
-## Overview
-

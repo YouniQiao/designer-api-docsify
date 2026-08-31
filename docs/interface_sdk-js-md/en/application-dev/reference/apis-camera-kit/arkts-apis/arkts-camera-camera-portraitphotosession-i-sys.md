@@ -2,7 +2,7 @@
 
 PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorManagement, Portrait, Aperture Implements a portrait photo session, which sets the parameters of the portrait photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md).
 
-**Inheritance/Implementation:** PortraitPhotoSession extends [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md), [Beauty](arkts-camera-camera-beauty-i-sys.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md), [ColorManagement](arkts-camera-camera-colormanagement-i.md), [Portrait](arkts-camera-camera-portrait-i-sys.md), [Aperture](arkts-camera-camera-aperture-i.md)
+**Inheritance/Implementation:** PortraitPhotoSession extends [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md)<!--Del-->, [Beauty](arkts-camera-camera-beauty-i-sys.md)<!--DelEnd--><!--Del-->, [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)<!--DelEnd-->, [ColorManagement](arkts-camera-camera-colormanagement-i.md)<!--Del-->, [Portrait](arkts-camera-camera-portrait-i-sys.md)<!--DelEnd-->, [Aperture](arkts-camera-camera-aperture-i.md)
 
 **Since:** 11
 
@@ -33,7 +33,7 @@ Gets session conflict functions.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[PortraitPhotoConflictFunctions](arkts-camera-camera-portraitphotoconflictfunctions-i.md)&gt; | List of session conflict functions. |
+| Array&lt;[PortraitPhotoConflictFunctions](arkts-camera-camera-portraitphotoconflictfunctions-i-sys.md)&gt; | List of session conflict functions. |
 
 **Error codes:**
 
@@ -65,7 +65,7 @@ Gets session functions.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[PortraitPhotoFunctions](arkts-camera-camera-portraitphotofunctions-i.md)&gt; | List of session functions. |
+| Array&lt;[PortraitPhotoFunctions](arkts-camera-camera-portraitphotofunctions-i-sys.md)&gt; | List of session functions. |
 
 **Error codes:**
 

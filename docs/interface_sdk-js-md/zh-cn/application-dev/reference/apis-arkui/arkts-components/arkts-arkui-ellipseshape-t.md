@@ -8,8 +8,6 @@ declare type EllipseShape = import('../api/@ohos.arkui.shape').EllipseShape
 
 **起始版本：** 12
 
-**装饰器类型：** @ohos
-
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。

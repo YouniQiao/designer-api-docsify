@@ -8,6 +8,8 @@
 
 **起始版本：** 20
 
+**装饰器类型：** @Component
+
 **系统能力：** SystemCapability.Multimedia.AVSession.AVInputCast
 
 ## 导入模块
@@ -41,6 +43,8 @@ customPicker?: CustomBuilder
 **类型：** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 20
+
+**装饰器类型：** @Prop
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

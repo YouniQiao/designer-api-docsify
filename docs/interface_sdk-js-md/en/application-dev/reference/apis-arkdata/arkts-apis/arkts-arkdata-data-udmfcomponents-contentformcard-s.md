@@ -4,6 +4,8 @@ Defines a content form card.
 
 **Since:** 20
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## Modules to Import
@@ -40,6 +42,8 @@ Height of the content form card. The unit of measurement is vp.
 
 **Since:** 20
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -56,6 +60,8 @@ Type of the form card.
 
 **Since:** 20
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -71,6 +77,8 @@ Width of the content form card. The unit of measurement is vp.
 **Type:** number
 
 **Since:** 20
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

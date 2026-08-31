@@ -10,6 +10,8 @@ The **ArcButton** component offers various button styles, such as emphasized, no
 
 **Since:** 18
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## Modules to Import
@@ -29,6 +31,8 @@ Text, background color, shadow, and other parameters of the **ArcButton** compon
 **Type:** [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
 **Since:** 18
+
+**Decorator:** @Require
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

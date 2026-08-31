@@ -1,4 +1,0 @@
-# VkCommandBufferInheritanceRenderPassTransformInfoQCOM
-
-## Overview
-

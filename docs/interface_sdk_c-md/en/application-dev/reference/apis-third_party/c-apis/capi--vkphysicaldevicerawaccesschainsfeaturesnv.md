@@ -1,4 +1,0 @@
-# VkPhysicalDeviceRawAccessChainsFeaturesNV
-
-## Overview
-

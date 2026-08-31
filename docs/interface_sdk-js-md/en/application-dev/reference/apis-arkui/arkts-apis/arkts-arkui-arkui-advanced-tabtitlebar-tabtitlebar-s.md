@@ -13,6 +13,8 @@ The **TabTitleBar** component is a tab title bar used to switch between tabs pag
 
 **Since:** 10
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -30,6 +32,8 @@ swiperContent: () => void
 Constructor for page content pertaining to the tab list.
 
 **Since:** 10
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 

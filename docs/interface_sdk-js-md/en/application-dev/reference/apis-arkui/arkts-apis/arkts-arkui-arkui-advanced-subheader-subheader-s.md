@@ -15,6 +15,8 @@ The **SubHeader** component is positioned at the top of list items or content se
 
 **Since:** 10
 
+**Decorator:** @Component
+
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## Modules to Import
@@ -34,6 +36,8 @@ Content of the custom title area.
 Default value: **undefined**, indicating that no custom title is used.
 
 **Since:** 12
+
+**Decorator:** @BuilderParam
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +70,8 @@ Default value:
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -94,6 +100,8 @@ If a secondary title, with or without an icon, is displayed on the left:
 
 **Since:** 12
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -115,6 +123,8 @@ The **icon** attribute takes effect only when the **secondaryTitle** attribute i
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -198,6 +208,8 @@ Default value: **OperationType.BUTTON**
 
 **Since:** 10
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -219,6 +231,8 @@ When the **primaryTitle**, **secondaryTitle**, and **icon** attributes are used 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -259,6 +273,8 @@ Default value: **undefined**, indicating that no secondary title is displayed.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -322,6 +338,8 @@ If the value is **undefined**, the title content displayed by the component is r
 
 **Since:** 23
 
+**Decorator:** @Prop
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -339,6 +357,8 @@ Set the titleId for title.
 **Type:** string
 
 **Since:** 24
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 

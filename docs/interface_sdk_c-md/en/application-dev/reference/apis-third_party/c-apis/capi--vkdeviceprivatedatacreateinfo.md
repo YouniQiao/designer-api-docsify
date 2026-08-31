@@ -1,4 +1,0 @@
-# VkDevicePrivateDataCreateInfo
-
-## Overview
-

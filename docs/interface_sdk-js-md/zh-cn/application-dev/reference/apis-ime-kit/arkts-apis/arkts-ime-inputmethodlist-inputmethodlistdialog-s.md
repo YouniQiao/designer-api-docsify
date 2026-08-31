@@ -10,6 +10,8 @@
 
 **起始版本：** 11
 
+**装饰器类型：** @CustomDialog
+
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 ## 导入模块

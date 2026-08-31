@@ -1,4 +1,0 @@
-# VkPhysicalDevice8BitStorageFeatures
-
-## Overview
-

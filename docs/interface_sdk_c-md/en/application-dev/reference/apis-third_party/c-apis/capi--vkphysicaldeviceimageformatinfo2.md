@@ -1,4 +1,0 @@
-# VkPhysicalDeviceImageFormatInfo2
-
-## Overview
-

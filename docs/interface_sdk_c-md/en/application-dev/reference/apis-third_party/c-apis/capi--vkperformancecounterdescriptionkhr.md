@@ -1,4 +1,0 @@
-# VkPerformanceCounterDescriptionKHR
-
-## Overview
-

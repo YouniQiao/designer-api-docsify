@@ -1,4 +1,0 @@
-# VkQueryLowLatencySupportNV
-
-## Overview
-

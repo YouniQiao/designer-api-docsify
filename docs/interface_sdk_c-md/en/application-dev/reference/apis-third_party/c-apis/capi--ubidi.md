@@ -1,4 +1,0 @@
-# UBiDi
-
-## Overview
-

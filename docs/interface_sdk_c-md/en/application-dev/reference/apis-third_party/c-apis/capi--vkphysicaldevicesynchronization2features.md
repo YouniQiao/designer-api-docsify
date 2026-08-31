@@ -1,4 +1,0 @@
-# VkPhysicalDeviceSynchronization2Features
-
-## Overview
-

@@ -1,4 +1,0 @@
-# VkPhysicalDeviceInlineUniformBlockFeatures
-
-## Overview
-

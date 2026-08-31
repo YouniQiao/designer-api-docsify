@@ -1,4 +1,0 @@
-# VkPhysicalDevicePresentWaitFeaturesKHR
-
-## Overview
-

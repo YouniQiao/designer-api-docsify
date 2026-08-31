@@ -1,4 +1,0 @@
-# VkPushDescriptorSetInfo
-
-## Overview
-
