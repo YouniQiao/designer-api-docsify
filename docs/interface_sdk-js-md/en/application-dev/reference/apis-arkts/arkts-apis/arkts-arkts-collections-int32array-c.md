@@ -279,7 +279,7 @@ Checks whether all elements in this ArkTS Int32Array meet a given condition.
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -349,7 +349,7 @@ Returns a new ArkTS Int32Array that contains all elements that meet the given co
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -384,7 +384,7 @@ Returns the value of the first element that passes a test provided by a callback
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -419,7 +419,7 @@ Returns the index of the first element that passes a test provided by a callback
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1039,7 +1039,7 @@ Checks whether any element in this ArkTS Int32Array meets a given condition.
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

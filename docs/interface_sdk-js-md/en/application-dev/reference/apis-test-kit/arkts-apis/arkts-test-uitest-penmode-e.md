@@ -6,7 +6,7 @@ Pen mode enum.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## HANDWRITING
 
@@ -22,7 +22,7 @@ Handwriting mode.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## AIR_MOUSE
 
@@ -38,4 +38,4 @@ Air mouse mode.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

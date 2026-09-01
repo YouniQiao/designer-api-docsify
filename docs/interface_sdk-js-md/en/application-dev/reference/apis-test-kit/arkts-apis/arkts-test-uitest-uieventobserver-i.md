@@ -6,7 +6,7 @@ Defines a UI event listener, which is used to listen for various events on the U
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -28,7 +28,7 @@ Subscribes to events of the toast component. This API uses a callback to return 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -79,7 +79,7 @@ Subscribes to events of the dialog component. This API uses a callback to return
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -126,7 +126,7 @@ Starts listening for window change events of the specified type with extended co
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -182,7 +182,7 @@ Starts listening for component operation events of the specified type with exten
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

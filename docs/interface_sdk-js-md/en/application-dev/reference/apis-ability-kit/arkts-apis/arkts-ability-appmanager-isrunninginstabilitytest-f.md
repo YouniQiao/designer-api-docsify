@@ -25,7 +25,7 @@ Checks whether the system is undergoing a stability test. This API uses an async
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -74,7 +74,7 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 

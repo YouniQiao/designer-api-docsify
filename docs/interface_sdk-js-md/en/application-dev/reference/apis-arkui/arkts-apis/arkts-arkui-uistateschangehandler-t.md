@@ -19,4 +19,4 @@ Defines the callback triggered when the UI state changes. Defines the callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Node triggering the UI state change. |
-| currentUIStates | number | Yes | Current UI states when the callback is triggered.  You can use the bitwise AND operation to check the [UI states](arkts-arkui-framenode-uistate-e.md) that are currently included.  Example: **if (currentState & UIState.PRESSED == UIState.PRESSED)**.  Direct comparison: **if (currentState == UIState.PRESSED)**. |
+| currentUIStates | number | Yes | Current UI states when the callback is triggered. You can use the bitwise AND operation to check the [UI states](arkts-arkui-framenode-uistate-e.md) that are currently included. Example: **if (currentState & UIState.PRESSED == UIState.PRESSED)**. Direct comparison: **if (currentState == UIState.PRESSED)**. |

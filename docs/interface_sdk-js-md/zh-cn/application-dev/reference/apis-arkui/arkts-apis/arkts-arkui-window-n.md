@@ -89,7 +89,7 @@ import { window } from '@kit.ArkUI';
 | [RectInVP](arkts-arkui-window-rectinvp-i.md) | 窗口矩形区域，单位为vp。 |
 | [Position](arkts-arkui-window-position-i.md) | 窗口或组件的位置。 |
 | [AvoidArea](arkts-arkui-window-avoidarea-i.md) | 窗口内容的避让区域。 |
-| [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md) | 以vp为单位表示的窗口避让区域信息，在进行[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时需关注。 |
+| [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md) | 以vp为单位表示的窗口避让区域信息，在进行[沉浸式布局](../../../windowmanager/window-terminology.md#immersive-layout沉浸式布局)适配时需关注。 |
 | [Size](arkts-arkui-window-size-i.md) | 窗口大小，单位为px。 |
 | [SizeInVP](arkts-arkui-window-sizeinvp-i.md) | 窗口大小，单位为vp。 |
 | [WindowInfo](arkts-arkui-window-windowinfo-i.md) | 当前窗口的详细信息。 |

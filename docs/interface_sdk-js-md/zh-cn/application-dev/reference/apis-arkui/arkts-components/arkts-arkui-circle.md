@@ -50,7 +50,7 @@ Circle(value?: CircleOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | 否 | 设置圆形尺寸。当需要自定义圆形大小时传入此参数，不传入时width和height默认为0。 异常值undefined和null按照无效值处理，本次设置不生效。 |
+| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | 否 | 设置圆形尺寸。当需要自定义圆形大小时传入此参数，不传入时width和height默认为0。异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## 汇总
 

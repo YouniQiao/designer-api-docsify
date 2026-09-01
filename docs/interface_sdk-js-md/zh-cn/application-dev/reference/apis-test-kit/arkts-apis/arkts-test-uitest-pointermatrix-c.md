@@ -6,7 +6,7 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## 导入模块
 
@@ -28,7 +28,7 @@ static create(fingers: number, steps: number): PointerMatrix
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -74,7 +74,7 @@ setPoint(finger: number, step: number, point: Point): void
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 

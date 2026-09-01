@@ -6,7 +6,7 @@ Describes the extended configuration of window change event listening, which is 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -30,7 +30,7 @@ Bundle name of the window to be listened for. By default, all windows are listen
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## timeout
 
@@ -48,4 +48,4 @@ Listening timeout interval, in milliseconds. The value is an integer greater tha
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

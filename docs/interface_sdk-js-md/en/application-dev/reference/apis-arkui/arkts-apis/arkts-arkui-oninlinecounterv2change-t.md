@@ -18,4 +18,4 @@ The change callback of the inline CounterV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | value.  The value should be an integer. |
+| value | number | Yes | value. The value should be an integer. |

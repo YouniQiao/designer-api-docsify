@@ -26,7 +26,7 @@ Creates a toolbar item at the beginning of the corresponding column in the title
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | No | Optional parameters for **ToolBarItem**, including the **placement** parameter of the [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md) type. Default value: **placement: ToolBarItemPlacement.TOP_BAR_LEADING |
+| options | [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | No | Optional parameters for **ToolBarItem**, including the **placement** parameter of the [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md) type.Default value: **placement: ToolBarItemPlacement.TOP_BAR_LEADING |
 
 ## Summary
 

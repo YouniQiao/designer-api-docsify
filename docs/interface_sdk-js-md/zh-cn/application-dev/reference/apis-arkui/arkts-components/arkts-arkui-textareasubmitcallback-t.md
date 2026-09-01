@@ -18,5 +18,5 @@ declare type TextAreaSubmitCallback = (enterKeyType: EnterKeyType, event?: Submi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enterKeyType | EnterKeyType | 是 | 软键盘输入法回车键类型。 类型为EnterKeyType.NEW_LINE时不触发onSubmit。 |
+| enterKeyType | EnterKeyType | 是 | 软键盘输入法回车键类型。类型为EnterKeyType.NEW_LINE时不触发onSubmit。 |
 | event | [SubmitEvent](arkts-arkui-submitevent-i.md) | 否 | 提交事件。用于获取提交事件的详细信息。不传入此参数时，无法获取提交事件的详细信息。 |

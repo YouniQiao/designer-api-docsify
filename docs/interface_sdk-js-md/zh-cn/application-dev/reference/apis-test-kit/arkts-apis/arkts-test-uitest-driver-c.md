@@ -6,7 +6,7 @@ Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键�
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## 导入模块
 
@@ -28,7 +28,7 @@ assertComponentExist(on: On): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -76,7 +76,7 @@ click(x: number, y: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -136,7 +136,7 @@ clickAt(point: Point): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -183,7 +183,7 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -235,7 +235,7 @@ static create(): Driver
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -274,7 +274,7 @@ createUIEventObserver(): UIEventObserver
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -314,7 +314,7 @@ crownRotate(d: number, speed?: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -366,7 +366,7 @@ delayMs(duration: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -423,7 +423,7 @@ doubleClick(x: number, y: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -481,7 +481,7 @@ doubleClickAt(point: Point): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -528,7 +528,7 @@ drag(startx: number, starty: number, endx: number, endy: number, speed?: number)
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -579,7 +579,7 @@ dragBetween(from: Point, to: Point, speed?: number, duration?: number): Promise<
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -629,7 +629,7 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -684,7 +684,7 @@ Get the current layout information and save as file with json format.
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -733,7 +733,7 @@ findComponent(on: On): Promise<Component>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -782,7 +782,7 @@ findComponents(on: On): Promise<Array<Component>>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -831,7 +831,7 @@ findWindow(filter: WindowFilter): Promise<UiWindow>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -878,7 +878,7 @@ fling(from: Point, to: Point, stepLen: number, speed: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -928,7 +928,7 @@ fling(direction: UiDirection, speed: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -976,7 +976,7 @@ fling(direction: UiDirection, speed: number, displayId: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1025,7 +1025,7 @@ getDisplayDensity(): Promise<Point>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -1065,7 +1065,7 @@ getDisplayDensity(displayId: number): Promise<Point>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1112,7 +1112,7 @@ getDisplayRotation(): Promise<DisplayRotation>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -1152,7 +1152,7 @@ getDisplayRotation(displayId: number): Promise<DisplayRotation>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1199,7 +1199,7 @@ getDisplaySize(): Promise<Point>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -1239,7 +1239,7 @@ getDisplaySize(displayId: number): Promise<Point>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1290,7 +1290,7 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: number): Promise<voi
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1347,7 +1347,7 @@ injectMultiPointerAction(pointers: PointerMatrix, speed?: number): Promise<boole
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1411,7 +1411,7 @@ injectPenPointerAction(pointers: PointerMatrix, speed?: number, pressure?: numbe
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1467,7 +1467,7 @@ inputText(p: Point, text: string): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1521,7 +1521,7 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1581,7 +1581,7 @@ isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: number, durat
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1632,7 +1632,7 @@ isComponentPresentWhenLongClick(on: On, point: Point, duration?: number): Promis
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1681,7 +1681,7 @@ isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: number): Pro
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1735,7 +1735,7 @@ knuckleKnock(pointers: Array<Point>, times: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1786,7 +1786,7 @@ longClick(x: number, y: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1844,7 +1844,7 @@ longClickAt(point: Point, duration?: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1892,7 +1892,7 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1945,7 +1945,7 @@ mouseClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1995,7 +1995,7 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Pr
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2045,7 +2045,7 @@ mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2094,7 +2094,7 @@ mouseDrag(from: Point, to: Point, speed?: number, duration?: number): Promise<vo
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2144,7 +2144,7 @@ mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOpt
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2203,7 +2203,7 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2254,7 +2254,7 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, durat
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2306,7 +2306,7 @@ mouseMoveTo(p: Point): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2353,7 +2353,7 @@ mouseMoveWithTrack(from: Point, to: Point, speed?: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2402,7 +2402,7 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2453,7 +2453,7 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, sp
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2505,7 +2505,7 @@ penClick(point: Point): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2552,7 +2552,7 @@ penDoubleClick(point: Point): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2599,7 +2599,7 @@ penLongClick(point: Point, pressure?: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2647,7 +2647,7 @@ penSwipe(startPoint: Point, endPoint: Point, speed?: number, pressure?: number):
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2697,7 +2697,7 @@ pressBack(): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -2747,7 +2747,7 @@ pressBack(displayId: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2794,7 +2794,7 @@ pressHome(): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -2834,7 +2834,7 @@ pressHome(displayId: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2881,7 +2881,7 @@ screenCap(savePath: string): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2938,7 +2938,7 @@ screenCap(savePath: string, displayId: number): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -2986,7 +2986,7 @@ screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3039,7 +3039,7 @@ setDisplayRotation(rotation: DisplayRotation): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3086,7 +3086,7 @@ setDisplayRotationEnabled(enabled: boolean): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3133,7 +3133,7 @@ swipe(startx: number, starty: number, endx: number, endy: number, speed?: number
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3186,7 +3186,7 @@ swipeBetween(from: Point, to: Point, speed?: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3235,7 +3235,7 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3289,7 +3289,7 @@ touchPadMultiFingerSwipe(fingers: number, direction: UiDirection, options?: Touc
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3339,7 +3339,7 @@ touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: number, speed?
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3390,7 +3390,7 @@ triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3440,7 +3440,7 @@ triggerCombineKeys(key0: number, key1: number, key2?: number, displayId?: number
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3490,7 +3490,7 @@ triggerKey(keyCode: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3549,7 +3549,7 @@ triggerKey(keyCode: number, displayId: number): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3604,7 +3604,7 @@ HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK opera
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3660,7 +3660,7 @@ waitForComponent(on: On, time: number): Promise<Component>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3708,7 +3708,7 @@ waitForIdle(idleTime: number, timeout: number): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -3756,7 +3756,7 @@ wakeUpDisplay(): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 

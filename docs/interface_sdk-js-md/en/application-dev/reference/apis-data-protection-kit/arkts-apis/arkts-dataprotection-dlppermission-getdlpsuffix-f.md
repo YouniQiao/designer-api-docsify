@@ -20,7 +20,7 @@ This API is used to obtain the standard extension of the DLP file, which can be 
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 

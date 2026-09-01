@@ -279,7 +279,7 @@ Checks whether all elements in this ArkTS Uint8ClampedArray meet a given conditi
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -349,7 +349,7 @@ Returns a new ArkTS Uint8ClampedArray that contains all elements that meet the g
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -384,7 +384,7 @@ Returns the value of the first element that passes a test provided by a callback
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -419,7 +419,7 @@ Returns the index of the first element that passes a test provided by a callback
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1005,7 +1005,7 @@ Checks whether any element in this ArkTS Uint8ClampedArray meets a given conditi
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

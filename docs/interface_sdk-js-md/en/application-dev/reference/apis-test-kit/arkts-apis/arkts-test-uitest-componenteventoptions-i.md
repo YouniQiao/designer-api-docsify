@@ -6,7 +6,7 @@ Describes the extended configuration of component operation event listening, whi
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -30,7 +30,7 @@ Attribute requirements of the target component to listen for. By default, all co
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## timeout
 
@@ -48,4 +48,4 @@ Listening timeout interval, in milliseconds. The value is an integer greater tha
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

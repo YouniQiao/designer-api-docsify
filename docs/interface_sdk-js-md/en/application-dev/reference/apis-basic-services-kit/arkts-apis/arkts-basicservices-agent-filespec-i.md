@@ -118,4 +118,4 @@ Example: **file://media/Photo/path/to/file.img**. Only foreground tasks are supp
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

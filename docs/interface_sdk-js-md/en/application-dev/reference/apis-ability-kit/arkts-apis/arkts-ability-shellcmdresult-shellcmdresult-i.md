@@ -10,7 +10,7 @@ The **ShellCmdResult** module provides the shell command execution result.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## exitCode
 

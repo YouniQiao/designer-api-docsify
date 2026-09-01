@@ -14,7 +14,7 @@ Returns the numeric valid group ID of the process
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## euid
 
@@ -30,7 +30,7 @@ Return the numeric valid user identity of the process
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## gid
 
@@ -46,7 +46,7 @@ Returns the numeric group id of the process
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## groups
 
@@ -62,7 +62,7 @@ Return an array with supplementary group id
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## ppid
 
@@ -78,4 +78,4 @@ Return ppid is The pid of the current child process
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

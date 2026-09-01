@@ -6,7 +6,7 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## WINDOW_UNDEFINED
 
@@ -24,7 +24,7 @@ WINDOW_UNDEFINED = 0
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## WINDOW_ADDED
 
@@ -40,7 +40,7 @@ WINDOW_ADDED = 1
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## WINDOW_REMOVED
 
@@ -56,7 +56,7 @@ WINDOW_REMOVED = 2
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## WINDOW_BOUNDS_CHANGED
 
@@ -72,4 +72,4 @@ WINDOW_BOUNDS_CHANGED = 3
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。

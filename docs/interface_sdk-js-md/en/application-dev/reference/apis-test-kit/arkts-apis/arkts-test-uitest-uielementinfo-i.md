@@ -6,7 +6,7 @@ Provides information about the UI event.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -30,7 +30,7 @@ Bundle name of the application.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## componentEventType
 
@@ -48,7 +48,7 @@ Component operation event type. If it is not a component operation event, [COMPO
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## componentId
 
@@ -66,7 +66,7 @@ Component ID. If it is not a component operation event, an empty string is retur
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## componentRect
 
@@ -84,7 +84,7 @@ Component border information. If it is not a component operation event, a [Rect]
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## text
 
@@ -102,7 +102,7 @@ Text information of the component or window.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Examples**
 
@@ -136,7 +136,7 @@ Component or window type.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Examples**
 
@@ -177,7 +177,7 @@ Window change event type. If the event is not a window change event, [WINDOW_UND
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## windowId
 
@@ -195,4 +195,4 @@ ID of the window to which the component belongs. If it is not a component operat
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

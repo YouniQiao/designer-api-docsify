@@ -28,7 +28,7 @@ Provides the capability of accessing application resources and system resources.
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -102,7 +102,7 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -160,7 +160,7 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -218,7 +218,7 @@ Closes the file descriptor (fd) of the HAP where the **rawfile** file in the **r
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -273,7 +273,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -312,7 +312,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -5507,7 +5507,7 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -5572,7 +5572,7 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -5640,7 +5640,7 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -5697,7 +5697,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -5738,7 +5738,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -5780,7 +5780,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -5836,7 +5836,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -5895,7 +5895,7 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -5952,7 +5952,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -5995,7 +5995,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -8112,7 +8112,7 @@ Checks whether a path is a subdirectory in the **rawfile** directory. This API r
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

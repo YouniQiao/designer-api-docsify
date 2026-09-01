@@ -6,7 +6,7 @@ Provides the flag attributes of this window.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -30,7 +30,7 @@ Whether the window is interacting with the user. The value **true** indicates th
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## actived
 
@@ -52,7 +52,7 @@ This API is supported since API version 9 and deprecated since API version 11. Y
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## bundleName
 
@@ -70,7 +70,7 @@ Bundle name of the application to which the window belongs, which is used to fil
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## displayId
 
@@ -88,7 +88,7 @@ ID of the display to which the window belongs. The default value is the default 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## focused
 
@@ -106,7 +106,7 @@ Whether the window is focused. The value **true** indicates that the window is f
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Examples**
 
@@ -140,4 +140,4 @@ Window title, which is used to filter the target window in multi-window scenario
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

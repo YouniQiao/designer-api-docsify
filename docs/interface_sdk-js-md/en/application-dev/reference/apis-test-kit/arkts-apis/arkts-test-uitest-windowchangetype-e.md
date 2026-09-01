@@ -6,7 +6,7 @@ Enumerates the window change event types that can be listened for.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## WINDOW_UNDEFINED
 
@@ -22,7 +22,7 @@ Non-window change event. Note: This value can only be used as a return value. If
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## WINDOW_ADDED
 
@@ -38,7 +38,7 @@ Window adding event.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## WINDOW_REMOVED
 
@@ -54,7 +54,7 @@ Window removing event.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## WINDOW_BOUNDS_CHANGED
 
@@ -70,4 +70,4 @@ Window bounds change event.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

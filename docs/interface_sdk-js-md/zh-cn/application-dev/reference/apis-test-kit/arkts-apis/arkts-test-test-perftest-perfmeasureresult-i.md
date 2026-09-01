@@ -6,7 +6,7 @@
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## 导入模块
 
@@ -29,7 +29,7 @@ readonly average: number
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## maximum
 
@@ -47,7 +47,7 @@ readonly maximum: number
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## metric
 
@@ -65,7 +65,7 @@ readonly metric: PerfMetric
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## minimum
 
@@ -83,7 +83,7 @@ readonly minimum: number
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## roundValues
 
@@ -101,4 +101,4 @@ readonly roundValues: Array<number>
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。

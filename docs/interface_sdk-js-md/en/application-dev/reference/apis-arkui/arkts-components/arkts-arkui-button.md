@@ -68,7 +68,7 @@ By default, the text content is displayed in a one line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| label | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Button text. Note: If the text is longer than the width of the button, it is truncated. |
+| label | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Button text.Note: If the text is longer than the width of the button, it is truncated. |
 | options | [ButtonOptions](arkts-arkui-buttonoptions-i.md) | No | Button settings. |
 
 ## Summary

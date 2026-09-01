@@ -54,7 +54,7 @@ This API is intended exclusively for app testing to verify attribute configurati
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

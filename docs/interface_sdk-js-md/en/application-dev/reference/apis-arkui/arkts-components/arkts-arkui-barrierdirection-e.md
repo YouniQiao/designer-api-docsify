@@ -6,7 +6,7 @@ Defines the direction of a barrier.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## LEFT
 

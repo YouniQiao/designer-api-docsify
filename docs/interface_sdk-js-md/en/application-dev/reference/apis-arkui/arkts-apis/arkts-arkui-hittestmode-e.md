@@ -13,7 +13,7 @@ Sets the response logic and node blocking rules for the hit test.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Default
 
@@ -31,7 +31,7 @@ Default hit test mode. The node itself and its child nodes respond to the hit te
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Block
 
@@ -49,7 +49,7 @@ The node itself responds to the hit test and blocks the hit test of child nodes,
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Transparent
 
@@ -67,7 +67,7 @@ Both the node itself and its child nodes respond to the hit test and do not bloc
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## None
 
@@ -85,7 +85,7 @@ The node itself does not respond to the hit test and does not block the hit test
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## BLOCK_HIERARCHY
 
@@ -105,7 +105,7 @@ The node itself and its child nodes respond to the hit test, preventing all sibl
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## BLOCK_DESCENDANTS
 
@@ -125,4 +125,4 @@ The node itself does not respond to the hit test, and all its descendants (child
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

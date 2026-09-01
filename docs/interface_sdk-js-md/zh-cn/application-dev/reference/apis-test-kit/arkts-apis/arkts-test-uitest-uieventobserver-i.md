@@ -6,7 +6,7 @@ UI事件监听器。
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## 导入模块
 
@@ -28,7 +28,7 @@ once(type: 'toastShow', callback: Callback<UIElementInfo>): void
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -79,7 +79,7 @@ once(type: 'dialogShow', callback: Callback<UIElementInfo>): void
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -126,7 +126,7 @@ once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowCh
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -182,7 +182,7 @@ once(type: 'componentEventOccur', componentEventType: ComponentEventType, option
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 

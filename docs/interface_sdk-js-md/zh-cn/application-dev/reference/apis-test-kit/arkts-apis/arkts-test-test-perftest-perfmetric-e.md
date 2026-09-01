@@ -44,7 +44,7 @@
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## DURATION
 
@@ -60,7 +60,7 @@ DURATION = 0
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## CPU_LOAD
 
@@ -76,7 +76,7 @@ CPU_LOAD = 1
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## CPU_USAGE
 
@@ -92,7 +92,7 @@ CPU_USAGE = 2
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## MEMORY_RSS
 
@@ -108,7 +108,7 @@ MEMORY_RSS = 3
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## MEMORY_PSS
 
@@ -124,7 +124,7 @@ MEMORY_PSS = 4
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## APP_START_RESPONSE_TIME
 
@@ -140,7 +140,7 @@ APP_START_RESPONSE_TIME = 5
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## APP_START_COMPLETE_TIME
 
@@ -156,7 +156,7 @@ APP_START_COMPLETE_TIME = 6
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## PAGE_SWITCH_COMPLETE_TIME
 
@@ -172,7 +172,7 @@ PAGE_SWITCH_COMPLETE_TIME = 7
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## LIST_SWIPE_FPS
 
@@ -188,4 +188,4 @@ LIST_SWIPE_FPS = 8
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。

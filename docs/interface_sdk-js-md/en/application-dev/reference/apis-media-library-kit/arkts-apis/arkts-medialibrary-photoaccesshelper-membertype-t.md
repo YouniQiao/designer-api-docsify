@@ -15,7 +15,7 @@ The member types are the union of the types listed in the following table.
 | Type | Description |
 | --- | --- |
 | int | The member value is an integer. |
-| long | The member value is a long integer. |
+| long | The member value is a number integer. |
 | double | The member value is a decimal number. |
 | string | The member value is any string. |
 | boolean | The member value is true or false. |

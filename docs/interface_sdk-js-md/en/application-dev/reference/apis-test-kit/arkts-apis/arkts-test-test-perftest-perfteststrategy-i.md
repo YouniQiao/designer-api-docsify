@@ -13,7 +13,7 @@ Represents the performance test strategy.
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -36,7 +36,7 @@ Code segment to test. The input parameter is a callback function, which needs to
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## bundleName
 
@@ -54,7 +54,7 @@ Bundle name of the application to test. The format must be the same as that of *
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## iterations
 
@@ -72,7 +72,7 @@ Number of test iterations. The value must be an integer greater than 0. The defa
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## metrics
 
@@ -90,7 +90,7 @@ Array of performance metrics to test. If the array is empty, no performance metr
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## resetCode
 
@@ -108,7 +108,7 @@ Code segment for resetting the environment after the test is complete. This para
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## timeout
 
@@ -126,4 +126,4 @@ resetCode**) at a time. The value is an integer greater than 0, in milliseconds.
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

@@ -6,7 +6,7 @@ Base class for the test framework. If you want to implement your own unit test f
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -27,7 +27,7 @@ Prepare the unit testing environment for running test cases.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Examples**
 
@@ -60,7 +60,7 @@ Run all test cases.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Examples**
 
@@ -95,7 +95,7 @@ Stop all test cases.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Examples**
 

@@ -6,7 +6,7 @@ Represents the measurement result data corresponding to the performance metric.
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -29,7 +29,7 @@ Average value of the measurement data of each round (the value **-1** is exclude
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## maximum
 
@@ -47,7 +47,7 @@ Maximum value of the measurement data of each round (the value **-1** is exclude
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## metric
 
@@ -65,7 +65,7 @@ Performance metric to test.
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## minimum
 
@@ -83,7 +83,7 @@ Minimum value of the measurement data of each round (the value **-1** is exclude
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## roundValues
 
@@ -101,4 +101,4 @@ Measurement data value of each round of the tested performance metric. The unit 
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

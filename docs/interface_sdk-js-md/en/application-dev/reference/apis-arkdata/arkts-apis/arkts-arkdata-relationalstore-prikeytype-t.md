@@ -12,6 +12,6 @@ The type of the priority key can be number or string
 
 | Type | Description |
 | --- | --- |
-| long | The value is a long |
-| double | The value is a double |
+| long | The value is a number |
+| double | The value is a number |
 | string | The value is a string |

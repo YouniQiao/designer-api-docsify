@@ -6,7 +6,7 @@ Enumerates the match patterns supported for component attributes.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## EQUALS
 
@@ -22,7 +22,7 @@ Equals the given value.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## CONTAINS
 
@@ -38,7 +38,7 @@ Contains the given value.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## STARTS_WITH
 
@@ -54,7 +54,7 @@ Starts with the given value.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## ENDS_WITH
 
@@ -70,7 +70,7 @@ Ends with the given value.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## REG_EXP
 
@@ -86,7 +86,7 @@ Uses regular expression matching.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## REG_EXP_ICASE
 
@@ -102,4 +102,4 @@ Uses case-insensitive regular expression matching.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

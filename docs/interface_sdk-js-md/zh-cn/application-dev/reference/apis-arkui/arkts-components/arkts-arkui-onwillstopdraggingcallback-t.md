@@ -20,4 +20,4 @@ declare type OnWillStopDraggingCallback = (velocity: number) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| velocity | number | 是 | 划动离手速度，滚动组件的内容向上滚动时速度为正，向下滚动时速度为负。 单位vp/s。 |
+| velocity | number | 是 | 划动离手速度，滚动组件的内容向上滚动时速度为正，向下滚动时速度为负。单位vp/s。 |

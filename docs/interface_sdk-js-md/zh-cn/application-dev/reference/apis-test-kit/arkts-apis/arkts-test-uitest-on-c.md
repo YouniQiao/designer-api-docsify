@@ -16,7 +16,7 @@ On类提供的所有API均为同步接口，建议使用者通过静态构造器
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## 导入模块
 
@@ -38,7 +38,7 @@ afterComponent(com: Component): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -85,7 +85,7 @@ beforeComponent(com: Component): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -132,7 +132,7 @@ belongingDisplay(displayId: number): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -175,7 +175,7 @@ checkable(b?: boolean): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -218,7 +218,7 @@ checked(b?: boolean): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -261,7 +261,7 @@ clickable(b?: boolean): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -304,7 +304,7 @@ description(val: string, pattern?: MatchPattern): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -348,7 +348,7 @@ enabled(b?: boolean): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -391,7 +391,7 @@ focused(b?: boolean): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -434,7 +434,7 @@ hint(val: string, pattern?: MatchPattern): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -478,7 +478,7 @@ id(id: string): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -521,7 +521,7 @@ id(id: string, pattern: MatchPattern): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -565,7 +565,7 @@ inWindow(bundleName: string): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -608,7 +608,7 @@ isAfter(on: On): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -652,7 +652,7 @@ isBefore(on: On): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -696,7 +696,7 @@ longClickable(b?: boolean): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -745,7 +745,7 @@ originalText(text: string, pattern?: MatchPattern): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -789,7 +789,7 @@ scrollable(b?: boolean): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -832,7 +832,7 @@ selected(b?: boolean): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -881,7 +881,7 @@ text(txt: string, pattern?: MatchPattern): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -925,7 +925,7 @@ type(tp: string): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -968,7 +968,7 @@ type(tp: string, pattern: MatchPattern): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1012,7 +1012,7 @@ within(on: On): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -1056,7 +1056,7 @@ withinComponent(com: Component): On
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 

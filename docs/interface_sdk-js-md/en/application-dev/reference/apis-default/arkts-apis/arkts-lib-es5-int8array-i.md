@@ -35,7 +35,7 @@ every(predicate: (value: number, index: number, array: Int8Array) => unknown, th
 
 Determines whether all the members of an array satisfy the specified test.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

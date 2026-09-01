@@ -22,7 +22,7 @@ Migrates files from the source path to the destination path. This API uses a pro
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

@@ -47,7 +47,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
 | [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
-| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+| [160003](../errorcode-snapshot.md#160003-color-space-or-dynamic-range-mode-set-in-screenshot-options-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
 **Examples**
 

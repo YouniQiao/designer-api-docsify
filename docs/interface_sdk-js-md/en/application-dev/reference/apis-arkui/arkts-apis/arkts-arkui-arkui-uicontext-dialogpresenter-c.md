@@ -82,8 +82,8 @@ Presents a fixed-style dialog box.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 103306 | The dialog cannot be opened due to node mount failure. |
-| 103308 | The dialog cannot be opened due to subwindow create failure. |
+| [103306](../errorcode-promptAction.md#103306-node-mount-failure-causes-dialog-box-to-fail-to-open) | The dialog cannot be opened due to node mount failure. |
+| [103308](../errorcode-promptAction.md#103308-dialog-box-cannot-be-opened-due-to-subwindow-creation-failure) | The dialog cannot be opened due to subwindow create failure. |
 
 ## present
 
@@ -126,8 +126,8 @@ isModal = true and showInSubWindow = true cannot be used at the same time.
 | --- | --- |
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | Dialog content error. The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exist. The ComponentContent has already been opened. |
-| 103306 | The dialog cannot be opened due to node mount failure. |
-| 103308 | The dialog cannot be opened due to subwindow create failure. |
+| [103306](../errorcode-promptAction.md#103306-node-mount-failure-causes-dialog-box-to-fail-to-open) | The dialog cannot be opened due to node mount failure. |
+| [103308](../errorcode-promptAction.md#103308-dialog-box-cannot-be-opened-due-to-subwindow-creation-failure) | The dialog cannot be opened due to subwindow create failure. |
 
 ## update
 

@@ -18,7 +18,7 @@ Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| totalOffset | number | Yes | Total scrolling offset, that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component.  Unit:vp. |
+| totalOffset | number | Yes | Total scrolling offset, that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component. Unit:vp. |
 
 **Return value:**
 

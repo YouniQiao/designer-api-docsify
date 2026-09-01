@@ -6,7 +6,7 @@ Describes the injected simulated mouse button.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## MOUSE_BUTTON_LEFT
 
@@ -22,7 +22,7 @@ Left button on the mouse.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## MOUSE_BUTTON_RIGHT
 
@@ -38,7 +38,7 @@ Right button on the mouse.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## MOUSE_BUTTON_MIDDLE
 
@@ -54,4 +54,4 @@ MIDDLE button on the mouse.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

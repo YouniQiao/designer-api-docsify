@@ -23,7 +23,7 @@ Accessibility event types.
 | 'accessibilityFocus' | Event indicating that the accessibility focus is obtained. |
 | 'accessibilityFocusClear' | Event indicating that the accessibility focus is cleared. |
 | 'click' | Event indicating that a component is clicked. |
-| 'longClick' | Event indicating that a component is long-pressed. |
+| 'longClick' | Event indicating that a component is number-pressed. |
 | 'focus' | Event indicating that a component obtains focus. This feature is not supported in the current version. |
 | 'select' | Event indicating that a component is selected. |
 | 'hoverEnter' | Event indicating that the pointer hovers over a component. |

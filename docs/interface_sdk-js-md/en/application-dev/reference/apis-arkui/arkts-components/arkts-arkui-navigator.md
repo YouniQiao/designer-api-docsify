@@ -28,7 +28,7 @@ Called when the route jumps.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { target: string; type?: NavigationType } | No | Information about the page to be redirected to. target: Path of the target page to be redirected to.  type: Navigation type. Default value: **NavigationType.Push |
+| value | { target: string; type?: NavigationType } | No | Information about the page to be redirected to.target: Path of the target page to be redirected to. type: Navigation type.Default value: **NavigationType.Push |
 
 ## Navigator
 

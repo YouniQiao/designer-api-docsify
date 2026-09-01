@@ -44,7 +44,7 @@ Defines the constructor of Line component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LineOptions](arkts-arkui-lineoptions-i.md) | No | Options of the line. The **undefined** and **null** values are treated as invalid and will not take effect. |
+| options | [LineOptions](arkts-arkui-lineoptions-i.md) | No | Options of the line.The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

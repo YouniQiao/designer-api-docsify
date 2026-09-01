@@ -6,7 +6,7 @@ Represents the options for key operations.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -30,7 +30,7 @@ The first keyCode to press during the operation. If not set, no key event will b
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## key2
 
@@ -48,4 +48,4 @@ The second KeyCode to press during the operation. If not set, no key event will 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

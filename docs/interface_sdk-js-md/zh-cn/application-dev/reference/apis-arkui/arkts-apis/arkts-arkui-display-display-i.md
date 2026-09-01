@@ -161,7 +161,7 @@ Get current display capability, including foldstatus, displaymode, rotation, and
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 

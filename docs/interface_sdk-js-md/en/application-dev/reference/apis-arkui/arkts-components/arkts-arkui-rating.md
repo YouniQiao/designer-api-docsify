@@ -32,7 +32,7 @@ Rating(options?: RatingOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RatingOptions](arkts-arkui-ratingoptions-i.md) | No | Rating bar options.  The default values of the parameters in **RatingOptions** apply if this parameter is not set. |
+| options | [RatingOptions](arkts-arkui-ratingoptions-i.md) | No | Rating bar options.The default values of the parameters in **RatingOptions** apply if this parameter is not set. |
 
 ## Summary
 

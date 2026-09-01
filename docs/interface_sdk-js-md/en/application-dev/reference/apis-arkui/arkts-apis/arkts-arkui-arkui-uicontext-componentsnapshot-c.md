@@ -70,8 +70,8 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
 | [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
-| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
-| [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots.<br>**Applicable version:** 23 and later |
+| [160003](../errorcode-snapshot.md#160003-color-space-or-dynamic-range-mode-set-in-screenshot-options-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+| [160004](../errorcode-snapshot.md#160004-offscreen-node-screenshot-does-not-support-setting-the-isauto-parameter-of-color-space-or-dynamic-range-mode-to-true) | isAuto(true) is not supported for offscreen node snapshots.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -178,8 +178,8 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
 | [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
-| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
-| [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots.<br>**Applicable version:** 23 and later |
+| [160003](../errorcode-snapshot.md#160003-color-space-or-dynamic-range-mode-set-in-screenshot-options-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+| [160004](../errorcode-snapshot.md#160004-offscreen-node-screenshot-does-not-support-setting-the-isauto-parameter-of-color-space-or-dynamic-range-mode-to-true) | isAuto(true) is not supported for offscreen node snapshots.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -276,8 +276,8 @@ Captures a snapshot of the provided component content. This API uses a promise t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | The builder is not a valid build function. |
 | [160001](../errorcode-snapshot.md#160001-image-loading-error) | An image component in builder is not ready for taking a snapshot. The check for the ready state is required when the checkImageStatus option is enabled. |
-| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
-| [160004](../errorcode-snapshot.md#160004-unsupported-isauto-setting-of-the-color-space-or-dynamic-range-mode-for-offscreen-node-snapshot) | isAuto(true) is not supported for offscreen node snapshots.<br>**Applicable version:** 23 and later |
+| [160003](../errorcode-snapshot.md#160003-color-space-or-dynamic-range-mode-set-in-screenshot-options-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+| [160004](../errorcode-snapshot.md#160004-offscreen-node-screenshot-does-not-support-setting-the-isauto-parameter-of-color-space-or-dynamic-range-mode-to-true) | isAuto(true) is not supported for offscreen node snapshots.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -394,7 +394,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
-| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+| [160003](../errorcode-snapshot.md#160003-color-space-or-dynamic-range-mode-set-in-screenshot-options-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -479,7 +479,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
-| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+| [160003](../errorcode-snapshot.md#160003-color-space-or-dynamic-range-mode-set-in-screenshot-options-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -636,7 +636,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
 | [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
-| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+| [160003](../errorcode-snapshot.md#160003-color-space-or-dynamic-range-mode-set-in-screenshot-options-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -720,7 +720,7 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
 | [160002](../errorcode-snapshot.md#160002-snapshot-timeout) | Timeout. |
-| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+| [160003](../errorcode-snapshot.md#160003-color-space-or-dynamic-range-mode-set-in-screenshot-options-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
 **Examples**
 
@@ -820,7 +820,7 @@ Obtains the snapshot of a component that has been loaded based on the provided *
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:   1. Mandatory parameters are left unspecified.   2. Incorrect parameters types.   3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
-| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
+| [160003](../errorcode-snapshot.md#160003-color-space-or-dynamic-range-mode-set-in-screenshot-options-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
 **Examples**
 

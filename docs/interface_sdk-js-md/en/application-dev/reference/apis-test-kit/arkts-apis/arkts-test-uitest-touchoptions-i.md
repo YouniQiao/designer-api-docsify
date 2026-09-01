@@ -6,7 +6,7 @@ Common options for touch operations.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -30,7 +30,7 @@ Duration of the operation in milliseconds. Value range: The value should be &gt;
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## pressure
 
@@ -48,7 +48,7 @@ Pressure value of the touch. The value range is [0, 1]. The default value is **0
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## speed
 
@@ -66,4 +66,4 @@ Speed of touch action. Value range:[200, 40000] Unit: px/s. If the value is out 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

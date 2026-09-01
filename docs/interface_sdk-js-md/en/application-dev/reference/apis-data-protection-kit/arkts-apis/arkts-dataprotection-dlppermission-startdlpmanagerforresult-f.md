@@ -71,3 +71,52 @@ if (context !== undefined) {
     }); // Start the DLP manager application.
 }
 ```
+
+
+## startDLPManagerForResult
+
+```TypeScript
+function startDLPManagerForResult(context: common.Context, want: Want, window: window.Window): Promise<DLPManagerResult>
+```
+
+Starts the DLP manager application on the current page in borderless mode. This API uses a promise to return the result.
+
+This API starts the DLP manager application to configure file permissions and return the user operation result to the caller.
+
+> **NOTE：**
+> 
+> This API can be called only by domain accounts.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Security.DataLossPrevention
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| context | common.Context | Yes | Ability context information. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Request object, which must contain the **uri** and **displayName** fields. |
+| window | window.Window | Yes | Window object used to start the DLP manager application. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;[DLPManagerResult](arkts-dataprotection-dlppermission-dlpmanagerresult-i.md)&gt; | Promise used to return the **DLPManagerResult** object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [19100016](../errorcode-dlp.md#19100016-uri-missing-in-want) | The uri field is missing in the want parameter. |
+| [19100017](../errorcode-dlp.md#19100017-displayname-missing-in-parameters-of-want) | The displayName field is missing in the want parameter. |
+
+**Examples**
+
+See [startDLPManagerForResult](#startdlpmanagerforresult)

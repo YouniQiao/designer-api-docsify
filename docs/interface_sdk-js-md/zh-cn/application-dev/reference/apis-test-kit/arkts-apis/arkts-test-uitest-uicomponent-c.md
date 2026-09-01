@@ -14,7 +14,7 @@ UiTest中，UiComponent类代表了UI界面上的一个控件，提供控件属�
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## 导入模块
 
@@ -42,7 +42,7 @@ click(): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -97,7 +97,7 @@ doubleClick(): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -149,7 +149,7 @@ getId(): Promise<number>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -190,7 +190,7 @@ getKey(): Promise<string>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -231,7 +231,7 @@ getText(): Promise<string>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -283,7 +283,7 @@ getType(): Promise<string>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -335,7 +335,7 @@ inputText(text: string): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -396,7 +396,7 @@ isClickable(): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -456,7 +456,7 @@ isEnabled(): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -516,7 +516,7 @@ isFocused(): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -587,7 +587,7 @@ isScrollable(): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -647,7 +647,7 @@ isSelected(): Promise<boolean>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -707,7 +707,7 @@ longClick(): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -759,7 +759,7 @@ scrollSearch(by: By): Promise<UiComponent>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 

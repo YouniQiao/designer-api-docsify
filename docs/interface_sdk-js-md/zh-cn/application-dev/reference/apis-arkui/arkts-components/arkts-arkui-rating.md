@@ -32,7 +32,7 @@ Rating(options?: RatingOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RatingOptions](arkts-arkui-ratingoptions-i.md) | 否 | 设置评分组件。  未设置时，则按照RatingOptions中各参数的默认值配置。 |
+| options | [RatingOptions](arkts-arkui-ratingoptions-i.md) | 否 | 设置评分组件。未设置时，则按照RatingOptions中各参数的默认值配置。 |
 
 ## 汇总
 

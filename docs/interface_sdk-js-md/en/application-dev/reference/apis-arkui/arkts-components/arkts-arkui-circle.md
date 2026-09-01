@@ -44,7 +44,7 @@ set the value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No | Options of the circle. The **undefined** and **null** values are treated as invalid and will not take effect. |
+| value | [CircleOptions](arkts-arkui-circleoptions-i.md) | No | Options of the circle.The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

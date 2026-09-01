@@ -14,7 +14,7 @@ Enumerates vibration effects of the vibrator. You can specify the vibration effe
 
 | Type | Description |
 | --- | --- |
-| [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md) | Triggers vibration based on a specified duration.   This API can be used in atomic services since API version 11. |
+| [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md) | Triggers vibration based on a specified duration. This API can be used in atomic services since API version 11. |
 | [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md) | Triggers vibration based on a preset effect. |
 | [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md) | Triggers vibration based on a custom vibration configuration file. [since 10] |
 | [VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md) | Triggers vibration based on a custom effect. [since 18] |

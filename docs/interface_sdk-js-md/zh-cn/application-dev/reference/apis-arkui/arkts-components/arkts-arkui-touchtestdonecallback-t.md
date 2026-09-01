@@ -18,5 +18,5 @@ declare type TouchTestDoneCallback = (event: BaseGestureEvent, recognizers: Arra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [BaseGestureEvent](../arkts-apis/arkts-arkui-basegestureevent-i.md) | 是 | [触摸测试](../../../ui/arkts-interaction-basic-principles.md#触摸测试)结束后的基础手势事件的信息。   **说明：**  仅包含BaseGestureEvent的信息，不包含其子类拓展信息。 axisHorizontal和axisVertical的值为0。 |
+| event | [BaseGestureEvent](../arkts-apis/arkts-arkui-basegestureevent-i.md) | 是 | [触摸测试](../../../ui/arkts-interaction-basic-principles.md#触摸测试)结束后的基础手势事件的信息。    **说明：** 仅包含BaseGestureEvent的信息，不包含其子类拓展信息。axisHorizontal和axisVertical的值为0。 |
 | recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | 是 | [触摸测试](../../../ui/arkts-interaction-basic-principles.md#触摸测试)结束后，所有手势识别器对象。 |

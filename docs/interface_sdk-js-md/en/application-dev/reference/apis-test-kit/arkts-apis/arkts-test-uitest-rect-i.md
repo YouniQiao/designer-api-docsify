@@ -6,7 +6,7 @@ Represents the rectangle area on the device screen.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -30,7 +30,7 @@ Y coordinate of the lower right corner of the component border, in pixels. The v
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## displayId
 
@@ -48,7 +48,7 @@ ID of the display to which the component border belongs. The value is an integer
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## left
 
@@ -66,7 +66,7 @@ X coordinate of the upper left corner of the component border, in pixels. The va
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## right
 
@@ -84,7 +84,7 @@ X coordinate of the lower right corner of the component border, in pixels. The v
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## top
 
@@ -102,4 +102,4 @@ Y coordinate of the upper left corner of the component border, in pixels. The va
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

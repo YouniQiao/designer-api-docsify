@@ -14,7 +14,7 @@ UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按�
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## 导入模块
 
@@ -43,7 +43,7 @@ assertComponentExist(by: By): Promise<void>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -97,7 +97,7 @@ UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异�
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -156,7 +156,7 @@ static create(): UiDriver
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -195,7 +195,7 @@ UiDriver对象在给定的时间内延时。使用Promise异步回调。
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -251,7 +251,7 @@ UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异�
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -308,7 +308,7 @@ findComponent(by: By): Promise<UiComponent>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -354,7 +354,7 @@ findComponents(by: By): Promise<Array<UiComponent>>
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -400,7 +400,7 @@ UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -457,7 +457,7 @@ UiDriver对象进行点击BACK键的操作。使用Promise异步回调。
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 
@@ -507,7 +507,7 @@ UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -563,7 +563,7 @@ UiDriver对象采取如下操作：从给出的起始坐标点滑向给出的目
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -612,7 +612,7 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 

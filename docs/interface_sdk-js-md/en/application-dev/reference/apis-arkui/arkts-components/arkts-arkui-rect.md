@@ -48,7 +48,7 @@ Defines the constructor of Rect component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md) | No | Options of the rectangle.  The **undefined** and **null** values are treated as invalid and will not take effect. |
+| options | [RectOptions](arkts-arkui-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md) | No | Options of the rectangle. The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

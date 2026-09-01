@@ -20,7 +20,7 @@ function on(type: string, listener: EventListener): void
 
 **系统接口：** 此接口为系统接口。
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 

@@ -6,7 +6,7 @@ The **UiWindow** class represents a window on the UI and provides APIs for obtai
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -28,7 +28,7 @@ Closes a window. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -71,7 +71,7 @@ Focuses a window. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -113,7 +113,7 @@ Obtains the bounds information of a window. This API uses a promise to return th
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -169,7 +169,7 @@ Obtains the bundle name of the application to which a window belongs. This API u
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -214,7 +214,7 @@ Obtains the ID of the display to which a window belongs. This API uses a promise
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -267,7 +267,7 @@ Obtains the window title. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -309,7 +309,7 @@ Obtains the window mode. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -351,7 +351,7 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -395,7 +395,7 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -437,7 +437,7 @@ Checks whether a window is focused. This API uses a promise to return the result
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -509,7 +509,7 @@ Maximizes a window. A window can be resumed to its previous mode using [resume](
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -552,7 +552,7 @@ Minimizes a window. A window can be resumed to its previous mode using [resume](
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -595,7 +595,7 @@ Moves a window to the target point. This API uses a promise to return the result
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -646,7 +646,7 @@ Resizes a window based on the specified width, height, and direction. This API u
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -685,7 +685,7 @@ Resumes a window to its previous mode. This API uses a promise to return the res
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -728,7 +728,7 @@ Switches to the split-screen mode. A window can be resumed to its previous mode 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 

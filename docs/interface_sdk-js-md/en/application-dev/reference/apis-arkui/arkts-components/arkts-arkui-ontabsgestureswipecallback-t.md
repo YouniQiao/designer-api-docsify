@@ -18,5 +18,5 @@ Defines the callback triggered on a frame-by-frame basis during a swipe-based pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the currently displayed element. The index is zero-based. Value range: [0, Index value — 1] |
+| index | number | Yes | Index of the currently displayed element. The index is zero-based.Value range: [0, Index value — 1] |
 | extraInfo | [TabsAnimationEvent](arkts-arkui-tabsanimationevent-i.md) | Yes | Extra information of the animation, which is the offset of the currently displayed element relative to the start position of the **Tabs** along the main axis. |

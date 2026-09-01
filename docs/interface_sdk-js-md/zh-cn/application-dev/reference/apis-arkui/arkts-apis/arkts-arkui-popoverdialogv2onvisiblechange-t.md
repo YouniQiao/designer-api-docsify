@@ -18,4 +18,4 @@ export declare type PopoverDialogV2OnVisibleChange = (visible: boolean) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| visible | boolean | 是 | 表示跟手弹出框显示状态。 值为true时跟手弹出框显示，为false时隐藏。 |
+| visible | boolean | 是 | 表示跟手弹出框显示状态。值为true时跟手弹出框显示，为false时隐藏。 |

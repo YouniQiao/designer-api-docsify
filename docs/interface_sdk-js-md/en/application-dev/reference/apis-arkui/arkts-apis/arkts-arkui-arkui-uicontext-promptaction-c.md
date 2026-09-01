@@ -953,7 +953,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | The ComponentContent already exists. |
 | [103304](../errorcode-promptAction.md#103304-target-id-not-found) | The targetId does not exist. |
-| [103305](../errorcode-promptAction.md#103305-node-not-mounted) | The node of targetId is not in the component tree. |
+| [103305](../errorcode-promptAction.md#103305-node-specified-by-targetid-not-mounted-on-the-component-tree) | The node of targetId is not in the component tree. |
 
 **Examples**
 
@@ -1058,7 +1058,7 @@ Creates and displays a popup with the specified content. This API uses a promise
 | [103301](../errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | The ComponentContent already exists. |
 | [103304](../errorcode-promptAction.md#103304-target-id-not-found) | The targetId does not exist. |
-| [103305](../errorcode-promptAction.md#103305-node-not-mounted) | The node of targetId is not in the component tree. |
+| [103305](../errorcode-promptAction.md#103305-node-specified-by-targetid-not-mounted-on-the-component-tree) | The node of targetId is not in the component tree. |
 
 **Examples**
 

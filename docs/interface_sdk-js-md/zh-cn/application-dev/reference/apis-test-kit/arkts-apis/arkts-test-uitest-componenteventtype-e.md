@@ -6,7 +6,7 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## COMPONENT_UNDEFINED
 
@@ -24,7 +24,7 @@ COMPONENT_UNDEFINED = 0
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## COMPONENT_CLICKED
 
@@ -40,7 +40,7 @@ COMPONENT_CLICKED = 1
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## COMPONENT_LONG_CLICKED
 
@@ -56,7 +56,7 @@ COMPONENT_LONG_CLICKED = 2
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## COMPONENT_SCROLL_START
 
@@ -72,7 +72,7 @@ COMPONENT_SCROLL_START = 3
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## COMPONENT_SCROLL_END
 
@@ -88,7 +88,7 @@ COMPONENT_SCROLL_END = 4
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## COMPONENT_TEXT_CHANGED
 
@@ -104,4 +104,4 @@ COMPONENT_TEXT_CHANGED = 5
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。

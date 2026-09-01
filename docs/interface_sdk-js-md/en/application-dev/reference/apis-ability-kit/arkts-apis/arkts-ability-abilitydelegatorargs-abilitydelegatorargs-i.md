@@ -10,7 +10,7 @@ The **AbilityDelegatorArgs** module provides APIs to obtain an **AbilityDelegato
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## bundleName
 
@@ -28,7 +28,7 @@ Bundle name of the application to test.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## parameters
 
@@ -46,7 +46,7 @@ Parameters of the unit test that is started currently.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## testCaseNames
 
@@ -64,7 +64,7 @@ Test case name.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## testRunnerClassName
 
@@ -82,7 +82,7 @@ Names of the test case executors.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Examples**
 

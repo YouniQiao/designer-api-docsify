@@ -50,7 +50,7 @@ Line(options?: LineOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [LineOptions](arkts-arkui-lineoptions-i.md) | 否 | Line组件绘制区域，包含width和height属性，用于设置Line组件的宽高。不传递此参数时，Line组件的width和height属性将按照各自属性的缺省逻辑处理（参见LineOptions对象说明）。 异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [LineOptions](arkts-arkui-lineoptions-i.md) | 否 | Line组件绘制区域，包含width和height属性，用于设置Line组件的宽高。不传递此参数时，Line组件的width和height属性将按照各自属性的缺省逻辑处理（参见LineOptions对象说明）。异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## 汇总
 

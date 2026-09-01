@@ -20,7 +20,7 @@ Indicates the type of Repeat.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arr | [RepeatArray](arkts-arkui-repeatarray-t.md)&lt;T&gt; | 是 | 数据源，为`RepeatArray<T>`类型的数组，由开发者决定数据类型。 |
+| arr | [RepeatArray](arkts-arkui-repeatarray-t.md)&lt;T&gt; | 是 | 数据源，为`RepeatArray&lt;T&gt;`类型的数组，由开发者决定数据类型。 |
 
 **返回值：**
 

@@ -26,7 +26,7 @@ ToolBarItem(options?: ToolBarItemOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | 否 | ToolBarItem**的可选参数，包括[ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md)类型的**placement**参数。 默认值：**placement: ToolBarItemPlacement.TOP_BAR_LEADING |
+| options | [ToolBarItemOptions](arkts-arkui-toolbaritemoptions-i.md) | 否 | ToolBarItem**的可选参数，包括[ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md)类型的**placement**参数。默认值：**placement: ToolBarItemPlacement.TOP_BAR_LEADING |
 
 ## 汇总
 

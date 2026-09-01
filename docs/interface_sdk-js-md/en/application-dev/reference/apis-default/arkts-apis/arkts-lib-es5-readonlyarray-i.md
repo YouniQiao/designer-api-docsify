@@ -49,7 +49,7 @@ every<S extends T>(predicate: (value: T, index: number, array: readonly T[]) => 
 
 Determines whether all the members of an array satisfy the specified test.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -70,7 +70,7 @@ every(predicate: (value: T, index: number, array: readonly T[]) => unknown, this
 
 Determines whether all the members of an array satisfy the specified test.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

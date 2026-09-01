@@ -18,7 +18,7 @@ The static builder for building [By](arkts-test-uitest-by-c.md)object convenient
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## ON
 
@@ -36,4 +36,4 @@ The static builder for building [On](arkts-test-uitest-on-c.md)object convenient
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

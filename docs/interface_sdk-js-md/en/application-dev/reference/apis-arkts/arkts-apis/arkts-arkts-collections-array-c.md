@@ -367,7 +367,7 @@ Checks whether all elements in this ArkTS array meet a given condition.
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -465,7 +465,7 @@ Returns a new array containing all elements that pass a test provided by a callb
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -500,7 +500,7 @@ Returns the value of the first element that passes a test provided by a callback
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -535,7 +535,7 @@ Returns the index of the first element that passes a test provided by a callback
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1231,7 +1231,7 @@ Retains only the elements in this ArkTS Array that satisfy the specified predica
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1381,7 +1381,7 @@ Checks whether this ArkTS array contains an element that meets certain condition
 
 **System capability:** SystemCapability.Utils.Lang
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

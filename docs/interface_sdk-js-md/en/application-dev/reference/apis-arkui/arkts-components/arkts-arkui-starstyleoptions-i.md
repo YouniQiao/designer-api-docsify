@@ -12,7 +12,7 @@ Provides style settings for the selected, unselected, and partially selected sta
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 

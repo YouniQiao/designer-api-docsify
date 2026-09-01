@@ -10,7 +10,7 @@ In **UiTest**, the **UiComponent** class represents a component on the UI and pr
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -34,7 +34,7 @@ Clicks this component. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -85,7 +85,7 @@ Double-clicks this component. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -133,7 +133,7 @@ Obtains the ID of this component. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -170,7 +170,7 @@ Obtains the key of this component. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -207,7 +207,7 @@ Obtains the text information of this component. This API uses a promise to retur
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -255,7 +255,7 @@ Obtains the type of this component. This API uses a promise to return the result
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -303,7 +303,7 @@ Inputs text to a component. This API takes effect only for editable text compone
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -360,7 +360,7 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -416,7 +416,7 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -472,7 +472,7 @@ Obtains the focused status of this component. This API uses a promise to return 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -539,7 +539,7 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -595,7 +595,7 @@ Obtains the selected status of this component. This API uses a promise to return
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -651,7 +651,7 @@ Long-clicks this component. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -699,7 +699,7 @@ Scrolls on this component to search for the target component (applicable to comp
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

@@ -43,7 +43,7 @@ Creates a sidebar container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | No | Display type of the sidebar. Default value: **SideBarContainerType.Embed |
+| type | [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md) | No | Display type of the sidebar.Default value: **SideBarContainerType.Embed |
 
 ## Summary
 

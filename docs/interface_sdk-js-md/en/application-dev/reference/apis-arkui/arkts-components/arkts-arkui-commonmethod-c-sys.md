@@ -143,6 +143,34 @@ If this attribute is not set, the current component and its children are not rem
 | --- | --- |
 | T | Current component. |
 
+## markLayeredRender
+
+```TypeScript
+markLayeredRender(value: boolean | undefined): T
+```
+
+Marks the node as an independent render layer. Once marked, the component and its child components are rendered independently, so that when a popup is displayed above it, the component itself does not need to be rendered again.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | boolean \| undefined | Yes | Whether to mark the node as an independent render layer. The value **true** means to mark the node as an independent render layer, and **false** or **undefined** means to cancel the mark. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Current component. |
+
 ## spatialEffect
 
 ```TypeScript

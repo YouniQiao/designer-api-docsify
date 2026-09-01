@@ -17,4 +17,4 @@ type OnAdsEventAdsStartedHandle = (adsId: string, duration: number) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | adsId | string | 是 | 正在播放的广告资源ID。 |
-| duration | number | 是 | 广告的播放时长，单位为毫秒。 取值限定为整数。 |
+| duration | number | 是 | 广告的播放时长，单位为毫秒。取值限定为整数。 |

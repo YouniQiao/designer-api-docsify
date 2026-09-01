@@ -31,7 +31,7 @@ Defines the constructor of Text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string \| Resource | No | Plain text. This parameter takes effect when the child component Span is not included and styled string is not set. Default value: **' '** **NOTE** Priority of displayed content: Styled string > Content of the **Span** component > Text content of the **Text** component. |
+| content | string \| Resource | No | Plain text. This parameter takes effect when the child component Span is not included and styled string is not set.Default value: **' '**   **NOTE：**Priority of displayed content: Styled string &gt; Content of the **Span** component &gt; Text content of the **Text** component. |
 | value | [TextOptions](arkts-arkui-textoptions-i.md) | No | Initialization options of the component. |
 
 ## Summary

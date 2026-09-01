@@ -14,7 +14,7 @@ This callback is triggered when a same-layer tag is clicked using the mouse or t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [NativeEmbedMouseInfo](arkts-arkweb-nativeembedmouseinfo-i.md) | Yes | Detailed information about the mouse or touchpad click or long press on the same-layer tag. |
+| event | [NativeEmbedMouseInfo](arkts-arkweb-nativeembedmouseinfo-i.md) | Yes | Detailed information about the mouse or touchpad click or number press on the same-layer tag. |
 
 **Examples**
 

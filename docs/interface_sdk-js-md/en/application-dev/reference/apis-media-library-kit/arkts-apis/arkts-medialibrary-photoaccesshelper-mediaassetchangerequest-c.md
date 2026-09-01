@@ -33,7 +33,7 @@ Adds resources from the application sandbox based on the file URI. For details a
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -252,7 +252,7 @@ For details about data source of the asset to be created, see [@ohos.file.fileur
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -308,7 +308,7 @@ For details about data source of the asset to be created, see [@ohos.file.fileur
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

@@ -53,7 +53,7 @@ Creates a paste button with the specified icon, text and button type. After crea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md) | Yes | Configuration options for the paste button, used to set properties such as icon, text and button type.  You are advised to explicitly set at least one of **icon** or **text** to help users identify the button.  If neither **icon** nor **text** is specified, **options** does not take effect and the button is displayed in the default style. { icon: PasteIconStyle.LINES, text:PasteDescription.PASTE,  buttonType: ButtonType.Capsule  }. |
+| options | [PasteButtonOptions](arkts-arkui-pastebuttonoptions-i.md) | Yes | Configuration options for the paste button, used to set properties such as icon, text and button type. You are advised to explicitly set at least one of **icon** or **text** to help users identify the button. If neither **icon** nor **text** is specified, **options** does not take effect and the button is displayed in the default style.{icon: PasteIconStyle.LINES,text:PasteDescription.PASTE, buttonType: ButtonType.Capsule }. |
 
 ## Summary
 

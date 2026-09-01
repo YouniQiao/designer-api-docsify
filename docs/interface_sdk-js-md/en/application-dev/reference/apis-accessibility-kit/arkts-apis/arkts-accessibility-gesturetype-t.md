@@ -40,18 +40,18 @@ Enumerates the gesture event types. A gesture event is triggered by the accessib
 | 'downThenRight' | Down-then-right gesture. |
 | 'downThenUp' | Down-then-up gesture. |
 | 'twoFingerSingleTap' | Two-finger single-tap gesture. [since 11] |
-| 'twoFingerDoubleTap' | Two-finger double-tap gesture. [since 11] |
-| 'twoFingerDoubleTapAndHold' | Two-finger double-tap-and-hold gesture. [since 11] |
+| 'twoFingerDoubleTap' | Two-finger number-tap gesture. [since 11] |
+| 'twoFingerDoubleTapAndHold' | Two-finger number-tap-and-hold gesture. [since 11] |
 | 'twoFingerTripleTap' | Two-finger triple-tap gesture. [since 11] |
 | 'twoFingerTripleTapAndHold' | Two-finger triple-tap-and-hold gesture. [since 11] |
 | 'threeFingerSingleTap' | Three-finger single-tap gesture. [since 11] |
-| 'threeFingerDoubleTap' | Three-finger double-tap gesture. [since 11] |
-| 'threeFingerDoubleTapAndHold' | Three-finger double-tap-and-hold gesture. [since 11] |
+| 'threeFingerDoubleTap' | Three-finger number-tap gesture. [since 11] |
+| 'threeFingerDoubleTapAndHold' | Three-finger number-tap-and-hold gesture. [since 11] |
 | 'threeFingerTripleTap' | Three-finger triple-tap gesture. [since 11] |
 | 'threeFingerTripleTapAndHold' | Three-finger triple-tap-and-hold gesture. [since 11] |
 | 'fourFingerSingleTap' | Four-finger single-tap gesture. [since 11] |
-| 'fourFingerDoubleTap' | Four-finger double-tap gesture. [since 11] |
-| 'fourFingerDoubleTapAndHold' | Four-finger double-tap-and-hold gesture. [since 11] |
+| 'fourFingerDoubleTap' | Four-finger number-tap gesture. [since 11] |
+| 'fourFingerDoubleTapAndHold' | Four-finger number-tap-and-hold gesture. [since 11] |
 | 'fourFingerTripleTap' | Four-finger triple-tap gesture. [since 11] |
 | 'fourFingerTripleTapAndHold' | Four-finger triple-tap-and-hold gesture. [since 11] |
 | 'threeFingerSwipeUp' | Three-finger swipe-up gesture. [since 11] |
@@ -62,4 +62,4 @@ Enumerates the gesture event types. A gesture event is triggered by the accessib
 | 'fourFingerSwipeDown' | Four-finger swipe-down gesture. [since 11] |
 | 'fourFingerSwipeLeft' | Four-finger swipe-left gesture. [since 11] |
 | 'fourFingerSwipeRight' | Four-finger swipe-right gesture. [since 11] |
-| 'oneFingerDoubleTap' | Single-finger double-tap gesture. [since 26.0.0] |
+| 'oneFingerDoubleTap' | Single-finger number-tap gesture. [since 26.0.0] |

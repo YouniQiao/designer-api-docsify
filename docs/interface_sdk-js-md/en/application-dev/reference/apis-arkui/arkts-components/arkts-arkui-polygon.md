@@ -45,7 +45,7 @@ Defines the constructor of Polygon component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | No | Options of the polygon. The **undefined** and **null** values are treated as invalid and will not take effect. |
+| options | [PolygonOptions](arkts-arkui-polygonoptions-i.md) | No | Options of the polygon.The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

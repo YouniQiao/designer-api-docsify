@@ -6,7 +6,7 @@ PerfTest类为白盒性能测试框架的总入口。提供测试任务创建、
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## 导入模块
 
@@ -27,7 +27,7 @@ static create(strategy: PerfTestStrategy): PerfTest
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -93,7 +93,7 @@ destroy(): void
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **错误码：**
 
@@ -140,7 +140,7 @@ getMeasureResult(metric: PerfMetric): PerfMeasureResult
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -201,7 +201,7 @@ run(): Promise<void>
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **返回值：**
 

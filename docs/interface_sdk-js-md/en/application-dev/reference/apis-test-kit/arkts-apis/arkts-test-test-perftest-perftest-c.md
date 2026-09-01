@@ -6,7 +6,7 @@ Represents the general entry of the white-box performance test framework. It pro
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -27,7 +27,7 @@ Creates a [PerfTest](arkts-test-test-perftest-perftest-c.md) object and returns 
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -93,7 +93,7 @@ Destroys the **PerfTest** object to release the resources occupied by the object
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Error codes:**
 
@@ -140,7 +140,7 @@ Obtains the measurement data of a specified performance metric. This method must
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -201,7 +201,7 @@ Runs a performance test, iteratively executes test code segments based on the co
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 

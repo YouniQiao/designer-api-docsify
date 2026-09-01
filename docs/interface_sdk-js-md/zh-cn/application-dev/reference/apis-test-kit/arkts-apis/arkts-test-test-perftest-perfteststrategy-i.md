@@ -13,7 +13,7 @@
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## 导入模块
 
@@ -36,7 +36,7 @@ actionCode: Callback<Callback<boolean>>
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## bundleName
 
@@ -54,7 +54,7 @@ bundleName?: string
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## iterations
 
@@ -72,7 +72,7 @@ iterations?: number
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## metrics
 
@@ -90,7 +90,7 @@ metrics: Array<PerfMetric>
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## resetCode
 
@@ -108,7 +108,7 @@ resetCode?: Callback<Callback<boolean>>
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## timeout
 
@@ -126,4 +126,4 @@ timeout?: number
 
 **系统能力：** SystemCapability.Test.PerfTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。

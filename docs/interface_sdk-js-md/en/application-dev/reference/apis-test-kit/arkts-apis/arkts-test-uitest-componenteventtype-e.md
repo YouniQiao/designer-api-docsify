@@ -6,7 +6,7 @@ Enumerates the component operation event types that can be listened for.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## COMPONENT_UNDEFINED
 
@@ -24,7 +24,7 @@ Note: This value can only be used as a return value. If it is passed in an API, 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## COMPONENT_CLICKED
 
@@ -40,7 +40,7 @@ Component clicked event.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## COMPONENT_LONG_CLICKED
 
@@ -56,7 +56,7 @@ Component number-clicked event.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## COMPONENT_SCROLL_START
 
@@ -72,7 +72,7 @@ Component scroll start event.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## COMPONENT_SCROLL_END
 
@@ -88,7 +88,7 @@ Component scroll end event.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## COMPONENT_TEXT_CHANGED
 
@@ -104,4 +104,4 @@ Text change event of the [text input component](../../../ui/arkts-common-compone
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

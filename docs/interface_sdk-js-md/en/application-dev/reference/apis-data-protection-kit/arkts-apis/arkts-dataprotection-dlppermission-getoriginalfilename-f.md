@@ -20,7 +20,7 @@ Determine the file type based on the original file name extension and select an 
 
 **System capability:** SystemCapability.Security.DataLossPrevention
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

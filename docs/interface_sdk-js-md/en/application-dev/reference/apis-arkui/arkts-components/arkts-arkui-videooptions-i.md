@@ -144,7 +144,7 @@ If an invalid value is passed, the default value will be used.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## src
 

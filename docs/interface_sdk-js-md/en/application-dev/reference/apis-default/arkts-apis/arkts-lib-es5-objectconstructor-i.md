@@ -240,7 +240,7 @@ isExtensible(o: any): boolean
 
 Returns a value that indicates whether new properties can be added to an object.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -260,7 +260,7 @@ isFrozen(o: any): boolean
 
 Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -280,7 +280,7 @@ isSealed(o: any): boolean
 
 Returns true if existing property attributes cannot be modified in an object and new properties cannot be added to the object.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

@@ -10,7 +10,7 @@ The **UiDriver** class is the main entry to the UiTest framework. It provides AP
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -34,7 +34,7 @@ Asserts that a component that matches the given attributes exists on the current
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -84,7 +84,7 @@ Clicks a specific point of this **UiDriver** object based on the given coordinat
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -144,7 +144,7 @@ Creates a **UiDriver** object and returns the object created. This API is a stat
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -179,7 +179,7 @@ Delays a duration of time. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -231,7 +231,7 @@ Double-clicks a specific point of this **UiDriver** object based on the given co
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -284,7 +284,7 @@ Searches this **UiDriver** object for the target component that matches the give
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -326,7 +326,7 @@ Searches this **UiDriver** object for all components that match the given attrib
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -368,7 +368,7 @@ Long-clicks a specific point of this **UiDriver** object based on the given coor
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -421,7 +421,7 @@ Presses the Back button on this **UiDriver** object. This API uses a promise to 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -467,7 +467,7 @@ Captures the current screen of this **UiDriver** object and saves it as a PNG im
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -519,7 +519,7 @@ Swipes on this **UiDriver** object from the start point to the end point based o
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -564,7 +564,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

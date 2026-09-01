@@ -31,7 +31,7 @@ Defines the constructor of Hyperlink.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | address | string \| Resource | Yes | Web page to which the hyperlink is redirected. |
-| content | string \| Resource | No | Text displayed in the hyperlink. Default value: **''**. If this parameter is not passed and the component does not have child components, the value of the **address** parameter is displayed by default. **NOTE** If this component has child components, the hyperlink text is not displayed. |
+| content | string \| Resource | No | Text displayed in the hyperlink.Default value: **''**. If this parameter is not passed and the component does not have child components, the value of the **address** parameter is displayed by default.   **NOTE：**If this component has child components, the hyperlink text is not displayed. |
 
 ## Summary
 

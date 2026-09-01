@@ -43,7 +43,7 @@ Since API version 9, this API is supported in ArkTS widgets, except that **Pixel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PixelMap | Yes | Drawing target. You can draw a shape in a specified **PixelMap** object. If this parameter is not set, the shape is drawn in the current drawing target by default. The **undefined** and **null** values are treated as invalid and will not take effect. |
+| value | PixelMap | Yes | Drawing target. You can draw a shape in a specified **PixelMap** object. If this parameter is not set, the shape is drawn in the current drawing target by default.The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Shape
 

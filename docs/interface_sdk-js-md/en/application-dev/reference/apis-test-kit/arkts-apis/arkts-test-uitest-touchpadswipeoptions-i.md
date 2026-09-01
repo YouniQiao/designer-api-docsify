@@ -6,7 +6,7 @@ Describes information about the touchpad swipe gesture option.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -30,7 +30,7 @@ Swipe speed. Value range:[200, 40000] Unit: px/s. Throws error code 17000007 if 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## stay
 
@@ -48,4 +48,4 @@ Whether the swipe gesture stays on the touchpad for 1s before it is lifted. The 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

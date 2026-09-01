@@ -348,7 +348,7 @@ Teletypewriter (TTY) or Test Driven Development (TDD) phone, the default value i
 
 **System capability:** SystemCapability.Applications.ContactsData
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## NUM_WORK
 

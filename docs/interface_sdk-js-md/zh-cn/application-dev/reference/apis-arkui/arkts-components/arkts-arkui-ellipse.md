@@ -50,7 +50,7 @@ Ellipse(options?: EllipseOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | 否 | 椭圆绘制配置选项，包含宽度和高度设置。不传入时使用默认尺寸（宽度和高度均为0）。 异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | 否 | 椭圆绘制配置选项，包含宽度和高度设置。不传入时使用默认尺寸（宽度和高度均为0）。异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## 汇总
 

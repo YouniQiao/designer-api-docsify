@@ -10,7 +10,7 @@ The **AbilityDelegator** module can listen for and manage the lifecycle changes 
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## addAbilityMonitor
 
@@ -705,7 +705,7 @@ Finishes the test and prints log information to the unit test console. This API 
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -755,7 +755,7 @@ Finishes the test and prints log information to the unit test console. This API 
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -982,7 +982,7 @@ Prints log information to the unit test console. This API uses an asynchronous c
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1024,7 +1024,7 @@ Prints log information to the unit test console. This API uses a promise to retu
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1066,7 +1066,7 @@ Prints log information to the unit test console.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

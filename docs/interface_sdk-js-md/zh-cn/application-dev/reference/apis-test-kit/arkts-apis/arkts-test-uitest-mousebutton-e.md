@@ -6,7 +6,7 @@
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## MOUSE_BUTTON_LEFT
 
@@ -22,7 +22,7 @@ MOUSE_BUTTON_LEFT = 0
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## MOUSE_BUTTON_RIGHT
 
@@ -38,7 +38,7 @@ MOUSE_BUTTON_RIGHT = 1
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 ## MOUSE_BUTTON_MIDDLE
 
@@ -54,4 +54,4 @@ MOUSE_BUTTON_MIDDLE = 2
 
 **系统能力：** SystemCapability.Test.UiTest
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。

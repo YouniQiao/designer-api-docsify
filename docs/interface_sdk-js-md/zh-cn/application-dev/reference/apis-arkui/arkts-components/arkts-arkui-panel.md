@@ -28,7 +28,7 @@ Panel(show: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| show | boolean | 是 | 控制Panel显示或隐藏，true表示显示面板，false表示隐藏面板。 **说明：**  如果设置为false时，则不占位隐藏。Visibility.None或show之间有一个生效时，都会生效不占位隐藏。 属性show的优先级高于此参数，当属性show被设置时，本参数可能不生效。 |
+| show | boolean | 是 | 控制Panel显示或隐藏，true表示显示面板，false表示隐藏面板。   **说明：** 如果设置为false时，则不占位隐藏。Visibility.None或show之间有一个生效时，都会生效不占位隐藏。属性show的优先级高于此参数，当属性show被设置时，本参数可能不生效。 |
 
 ## 汇总
 

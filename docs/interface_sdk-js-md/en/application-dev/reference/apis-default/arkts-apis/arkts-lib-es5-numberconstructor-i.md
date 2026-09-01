@@ -67,7 +67,7 @@ A value that is not a number. In equality comparisons, NaN does not equal any va
 
 **Type:** number
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## NEGATIVE_INFINITY
 

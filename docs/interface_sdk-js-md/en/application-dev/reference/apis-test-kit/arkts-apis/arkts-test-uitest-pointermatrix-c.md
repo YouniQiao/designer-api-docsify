@@ -6,7 +6,7 @@ Implements a **PointerMatrix** object that stores coordinates and behaviors of e
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -28,7 +28,7 @@ Creates a **PointerMatrix** object and returns the object created. This API is a
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -74,7 +74,7 @@ Sets the coordinates for the action corresponding to the specified finger and st
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

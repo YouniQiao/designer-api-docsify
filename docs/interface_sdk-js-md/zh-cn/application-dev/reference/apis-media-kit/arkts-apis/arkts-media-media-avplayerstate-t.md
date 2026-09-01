@@ -15,7 +15,7 @@ type AVPlayerState = 'idle' | 'initialized' | 'prepared' | 'playing' | 'paused' 
 | 类型 | 说明 |
 | --- | --- |
 | 'idle' | 闲置状态，AVPlayer刚被创建[createAVPlayer()]{ |
-| 'initialized' | 资源初始化，在idle状态设置 url<sup>9+</sup> 或 fdSrc<sup>9+</sup>属性，AVPlayer会进入initialized状态，此时可以配置窗口、音频等静态属性。 |
+| 'initialized' | 资源初始化，在idle状态设置 url&lt;sup&gt;9+&lt;/sup&gt; 或 fdSrc&lt;sup&gt;9+&lt;/sup&gt;属性，AVPlayer会进入initialized状态，此时可以配置窗口、音频等静态属性。 |
 | 'prepared' | 已准备状态，AVPlayer在initialized状态调用[prepare()]{ |
 | 'playing' | 正在播放状态，AVPlayer在prepared/paused/completed状态调用[play()]{ |
 | 'paused' | 暂停状态，在playing状态调用pause方法，AVPlayer会进入paused状态。 |

@@ -44,7 +44,7 @@ Defines the constructor of Polyline component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | No | Options of the polyline. The **undefined** and **null** values are treated as invalid and will not take effect. |
+| options | [PolylineOptions](arkts-arkui-polylineoptions-i.md) | No | Options of the polyline.The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

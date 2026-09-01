@@ -44,7 +44,7 @@ Set the value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | Options of the ellipse. The **undefined** and **null** values are treated as invalid and will not take effect. |
+| options | [EllipseOptions](arkts-arkui-ellipseoptions-i.md) | No | Options of the ellipse.The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

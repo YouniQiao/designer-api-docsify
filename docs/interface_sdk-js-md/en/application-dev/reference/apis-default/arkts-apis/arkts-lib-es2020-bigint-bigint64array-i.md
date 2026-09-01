@@ -57,7 +57,7 @@ every(predicate: (value: bigint, index: number, array: BigInt64Array) => boolean
 
 Determines whether all the members of an array satisfy the specified test.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

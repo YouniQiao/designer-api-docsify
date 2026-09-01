@@ -32,7 +32,7 @@ Defines the constructor of SymbolSpan.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Resource | Yes | Resource of the **SymbolSpan** component, for example, **\$r('sys.symbol.ohos_wifi')**. |
+| value | Resource | Yes | Resource of the **SymbolSpan** component, for example, **\\$r('sys.symbol.ohos_wifi')**. |
 
 ## Summary
 

@@ -3812,7 +3812,7 @@ Sets the cross-language access options for this FrameNode. For example, for node
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100022](../errorcode-node.md#100022-cross-language-common-attribute-configuration-not-supported) | The FrameNode cannot be set whether to support cross-language common attribute setting. |
+| [100022](../errorcode-node.md#100022-component-type-of-the-framenode-does-not-support-adjusting-the-cross-language-common-attribute-configuration-permission) | The FrameNode cannot be set whether to support cross-language common attribute setting. |
 
 **Examples**
 

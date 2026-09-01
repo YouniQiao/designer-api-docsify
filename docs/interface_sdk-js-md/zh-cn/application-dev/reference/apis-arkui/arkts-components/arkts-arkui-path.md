@@ -58,7 +58,7 @@ Path(options?: PathOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PathOptions](arkts-arkui-pathoptions-i.md) | 否 | Path组件绘制属性的配置对象。 省略时不设置绘制属性，组件按默认尺寸显示。默认尺寸根据路径内容自动计算宽度和高度。 异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [PathOptions](arkts-arkui-pathoptions-i.md) | 否 | Path组件绘制属性的配置对象。省略时不设置绘制属性，组件按默认尺寸显示。默认尺寸根据路径内容自动计算宽度和高度。异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## 汇总
 

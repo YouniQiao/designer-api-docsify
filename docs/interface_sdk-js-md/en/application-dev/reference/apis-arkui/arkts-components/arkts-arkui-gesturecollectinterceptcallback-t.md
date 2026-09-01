@@ -20,7 +20,7 @@ Defines the callback type used in [onGestureCollectIntercept](arkts-arkui-common
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes | Gesture recognizer objects of the component on the response chain. |
-| touchRecognizers | Array&lt;[TouchRecognizer](../arkts-apis/arkts-arkui-touchrecognizer-c.md)&gt; | No | Touch recognizer objects of the component on the response chain. The default value is **null**. |
+| touchRecognizers | Array&lt;[TouchRecognizer](../arkts-apis/arkts-arkui-touchrecognizer-c.md)&gt; | No | Touch recognizer objects of the component on the response chain.The default value is **null**. |
 
 **Return value:**
 

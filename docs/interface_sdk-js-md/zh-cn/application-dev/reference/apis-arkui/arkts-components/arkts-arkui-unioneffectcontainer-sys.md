@@ -22,7 +22,7 @@ UnionEffectContainer(options?: UnionEffectContainerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [UnionEffectContainerOptions](arkts-arkui-unioneffectcontaineroptions-i-sys.md) | 否 | UnionEffectContainer构造参数，用于决定收集到的后代组件形状的融合形变程度。 默认值：{spacing:0} |
+| options | [UnionEffectContainerOptions](arkts-arkui-unioneffectcontaineroptions-i-sys.md) | 否 | UnionEffectContainer构造参数，用于决定收集到的后代组件形状的融合形变程度。默认值：{spacing:0} |
 
 ## 汇总
 

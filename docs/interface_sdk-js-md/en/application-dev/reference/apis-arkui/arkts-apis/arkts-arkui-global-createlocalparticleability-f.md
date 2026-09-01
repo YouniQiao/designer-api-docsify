@@ -16,7 +16,7 @@ Get the java interface instance. The java instance needs to register, otherwise 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

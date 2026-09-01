@@ -19,7 +19,7 @@ Send mouse event.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**测试接口：** 此接口为测试接口。
+**测试接口：** 本接口仅在自动化测试脚本中使用。
 
 **参数：**
 

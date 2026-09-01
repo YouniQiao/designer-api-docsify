@@ -6,7 +6,7 @@ Pen key type enum.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## HANDWRITING
 
@@ -22,7 +22,7 @@ Handwriting key.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## SMART
 
@@ -38,7 +38,7 @@ Smart key.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## AIR_MOUSE
 
@@ -54,4 +54,4 @@ Air mouse key.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

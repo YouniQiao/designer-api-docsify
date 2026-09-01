@@ -13,8 +13,8 @@ Indicates possible value types
 | Type | Description |
 | --- | --- |
 | null | The value is a null |
-| long | The value is a long |
-| double | The value is a double |
+| long | The value is a number |
+| double | The value is a number |
 | string | The value is a string |
 | boolean | The value is a boolean |
 | Uint8Array | The value is an array of the Uint8 |

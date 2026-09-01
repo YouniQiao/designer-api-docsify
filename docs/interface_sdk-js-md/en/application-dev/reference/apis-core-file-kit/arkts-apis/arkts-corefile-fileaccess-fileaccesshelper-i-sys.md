@@ -229,7 +229,7 @@ Copies a file or directory. This API uses a promise to return the result.
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -333,7 +333,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -398,7 +398,7 @@ Copies a file or directory. If a file with the same name already exists, you can
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -466,7 +466,7 @@ Copies a file with an alternative file name. This API uses a promise to return t
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -558,7 +558,7 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

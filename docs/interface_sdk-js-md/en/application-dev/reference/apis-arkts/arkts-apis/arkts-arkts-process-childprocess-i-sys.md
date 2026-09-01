@@ -8,7 +8,7 @@ The childprocess object can be used to create a new process.
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -30,7 +30,7 @@ Close the target process
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## getErrorOutput
 
@@ -46,7 +46,7 @@ Return it as 'Uint8Array of the stderr until EOF
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -68,7 +68,7 @@ Return it as 'Uint8Array' of the stdout until EOF
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -90,7 +90,7 @@ Send a signal to process
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -125,7 +125,7 @@ Return 'number' is the target process exit code
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -149,7 +149,7 @@ Return exitCode is the exit code of the current child process
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## killed
 
@@ -167,7 +167,7 @@ Return boolean is whether the current process signal is sent successfully
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## pid
 
@@ -185,7 +185,7 @@ Return pid is the pid of the current process
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## ppid
 
@@ -203,4 +203,4 @@ Return ppid is the pid of the current child process
 
 **System API:** This is a system API.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

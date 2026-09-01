@@ -6,7 +6,7 @@ The **Driver** class is the main entrance of the UiTest framework. This class pr
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -28,7 +28,7 @@ Asserts whether a component matches the specified attributes exists on the curre
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -76,7 +76,7 @@ Clicks the target coordinate point. This method can be used only on the default 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -136,7 +136,7 @@ Clicks the target coordinate point. This API uses a promise to return the result
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -183,7 +183,7 @@ Click on the specified location on the screen, with optional touch options.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -235,7 +235,7 @@ Creates a **Driver** object and returns the object created. This API is a static
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -274,7 +274,7 @@ Creates a UI event listener [UIEventObserver](arkts-test-uitest-uieventobserver-
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -314,7 +314,7 @@ Injects a crown rotation event. You can specify the rotation speed. This API use
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -366,7 +366,7 @@ Delays a duration of time. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -423,7 +423,7 @@ Double-clicks the target coordinate point. This method can be used only on the d
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -481,7 +481,7 @@ Double-clicks the target coordinate point. This API uses a promise to return the
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -528,7 +528,7 @@ Drags from the start coordinate point to the target coordinate point. This metho
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -579,7 +579,7 @@ Drags from the start point to the target point. You can specify the drag speed a
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -629,7 +629,7 @@ Drag on the screen between the specified points with optional settings.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -684,7 +684,7 @@ Dumps the current layout information and saves it as a JSON file. This method is
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -733,7 +733,7 @@ Searches for the target component based on the specified attributes. This API us
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -782,7 +782,7 @@ Searches for all matched components based on the specified attributes and saves 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -831,7 +831,7 @@ Searches for a window based on the specified attributes. This API uses a promise
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -878,7 +878,7 @@ Simulates a fling operation. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -928,7 +928,7 @@ Simulates a fling operation with the specified direction and speed. This API use
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -976,7 +976,7 @@ Simulates a fling operation on a specified display with the specified direction 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1030,7 +1030,7 @@ Obtains the display density of the current device. This API uses a promise to re
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -1070,7 +1070,7 @@ Obtains the density of the specified display of the current device. This API use
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1122,7 +1122,7 @@ Obtains the display rotation of the current device. This API uses a promise to r
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -1162,7 +1162,7 @@ Obtains the display rotation of the specified device. This API uses a promise to
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1214,7 +1214,7 @@ Obtains the display size of the current device. This API uses a promise to retur
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -1254,7 +1254,7 @@ Obtains the size of the specified display on the current device. This API uses a
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1305,7 +1305,7 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1362,7 +1362,7 @@ Injects a multi-finger operation into a device. This method applies to test scen
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1426,7 +1426,7 @@ Simulates a continuous multi-point pen injection operation. This method is appli
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1482,7 +1482,7 @@ Inputs text at a specified coordinate without clearing the original text in the 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1536,7 +1536,7 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1596,7 +1596,7 @@ Drags from the start point to the end point and checks whether the target compon
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1647,7 +1647,7 @@ Long-clicks at the specified coordinates and checks whether the target component
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1696,7 +1696,7 @@ Swipes from the start point to the end point and checks whether the target compo
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1750,7 +1750,7 @@ Simulates a knuckle knock on the display. This API uses a promise to return the 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1801,7 +1801,7 @@ Long-clicks the target coordinate point. This method can be used only on the def
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1859,7 +1859,7 @@ Long-clicks the target coordinate point for a specified duration. This API uses 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1907,7 +1907,7 @@ LongClick on the specified location on the screen, with optional touch settings.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -1960,7 +1960,7 @@ Injects a mouse click action at the specified coordinates, with the optional key
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2010,7 +2010,7 @@ Injects a number-click action at the specified coordinates, with the optional ke
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2060,7 +2060,7 @@ Drags the mouse pointer from the start point to the end point. This API uses a p
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2109,7 +2109,7 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2159,7 +2159,7 @@ Hold down the left mouse button and drag on the screen between the specified poi
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2218,7 +2218,7 @@ Injects a mouse number-click action at the specified coordinates, with the optio
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2269,7 +2269,7 @@ Injects a mouse number-click action at the specified coordinates, with the optio
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2321,7 +2321,7 @@ Moves the mouse cursor to the target point. This API uses a promise to return th
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2368,7 +2368,7 @@ Moves the mouse pointer from the start point to the end point, with a visible mo
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2417,7 +2417,7 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2468,7 +2468,7 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2520,7 +2520,7 @@ Simulates a pen click operation. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2567,7 +2567,7 @@ Simulates a pen number-click operation. This API uses a promise to return the re
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2614,7 +2614,7 @@ Simulates a pen number-click operation. This API uses a promise to return the re
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2662,7 +2662,7 @@ Simulates a pen swipe operation. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2717,7 +2717,7 @@ Simulates pressing the Back button. This API uses a promise to return the result
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -2767,7 +2767,7 @@ Simulates pressing the Back button on a specified screen. This API uses a promis
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2814,7 +2814,7 @@ Injects an operation of returning to the home screen on the device. This API use
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 
@@ -2854,7 +2854,7 @@ Injects an operation of returning to the home screen on the specified display. T
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2901,7 +2901,7 @@ Captures the current screen and saves it as a PNG image to the given save path. 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -2958,7 +2958,7 @@ Captures the specified screen and saves it as a PNG image to the given save path
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3006,7 +3006,7 @@ Captures the specified area of the current screen and saves the captured screens
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3059,7 +3059,7 @@ Sets the display rotation of the current scene. This API uses a promise to retur
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3106,7 +3106,7 @@ Enables or disables display rotation. This method is applicable to scenarios whe
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3153,7 +3153,7 @@ Swipes from the start coordinate point to the target coordinate point. This meth
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3206,7 +3206,7 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3255,7 +3255,7 @@ Swipe on the screen between the specified points with optional touch options.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3309,7 +3309,7 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3359,7 +3359,7 @@ Simulates a two-finger scroll gesture on the touchpad. This API uses a promise t
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3410,7 +3410,7 @@ Triggers a combination key event based on the specified key code values. This AP
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3460,7 +3460,7 @@ Triggers a combination key event based on the specified key code values on the s
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3510,7 +3510,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3569,7 +3569,7 @@ Triggers a key event by passing the key code value on the specified screen. This
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3624,7 +3624,7 @@ HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK opera
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3680,7 +3680,7 @@ Searches for the target component based on the attributes within a specified tim
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3728,7 +3728,7 @@ Checks whether all components on the current UI are idle. This method is applica
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 
@@ -3776,7 +3776,7 @@ Wakes up the current display. This API uses a promise to return the result.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Return value:**
 

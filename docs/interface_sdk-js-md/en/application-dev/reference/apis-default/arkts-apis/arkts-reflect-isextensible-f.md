@@ -13,7 +13,7 @@ function isExtensible(target: object): boolean
 
 Returns a value that indicates whether new properties can be added to an object.
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

@@ -26,7 +26,7 @@ APP_START_COMPLETE_TIME**):
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## DURATION
 
@@ -42,7 +42,7 @@ Execution duration of a code segment, in milliseconds.
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## CPU_LOAD
 
@@ -58,7 +58,7 @@ CPU load of the application process, in percentage.
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## CPU_USAGE
 
@@ -74,7 +74,7 @@ CPU usage of the application process, in percentage.
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## MEMORY_RSS
 
@@ -90,7 +90,7 @@ Physical memory (including the shared library) occupied by the application proce
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## MEMORY_PSS
 
@@ -106,7 +106,7 @@ Physical memory (the proportionally allocated memory occupied by shared librarie
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## APP_START_RESPONSE_TIME
 
@@ -124,7 +124,7 @@ Marks: 1) Delay calculation is restricted by system dotting reporting. The start
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## APP_START_COMPLETE_TIME
 
@@ -142,7 +142,7 @@ Marks: 1) Delay calculation is restricted by system dotting reporting. The start
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## PAGE_SWITCH_COMPLETE_TIME
 
@@ -160,7 +160,7 @@ Marks: 1) Delay calculation is restricted by system dotting and reporting. The s
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## LIST_SWIPE_FPS
 
@@ -178,4 +178,4 @@ Mark: 1) List sliding frame rate: refers to the frequency at which the screen ca
 
 **System capability:** SystemCapability.Test.PerfTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

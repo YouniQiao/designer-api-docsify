@@ -6,7 +6,7 @@ Enumerates the window modes.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## FULLSCREEN
 
@@ -22,7 +22,7 @@ Full-screen mode.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## PRIMARY
 
@@ -38,7 +38,7 @@ Primary window mode.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## SECONDARY
 
@@ -54,7 +54,7 @@ Secondary window mode.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## FLOATING
 
@@ -70,4 +70,4 @@ Floating window mode.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

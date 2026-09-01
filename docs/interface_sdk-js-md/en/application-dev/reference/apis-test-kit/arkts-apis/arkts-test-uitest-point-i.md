@@ -6,7 +6,7 @@ Represents the point on the device screen.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## Modules to Import
 
@@ -30,7 +30,7 @@ ID of the display to which the coordinate point belongs. The default value is th
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## x
 
@@ -50,7 +50,7 @@ Horizontal coordinate of a coordinate point, in pixels. The value is an integer 
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## y
 
@@ -70,4 +70,4 @@ Vertical coordinate of a coordinate point, in pixels. The value is an integer gr
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

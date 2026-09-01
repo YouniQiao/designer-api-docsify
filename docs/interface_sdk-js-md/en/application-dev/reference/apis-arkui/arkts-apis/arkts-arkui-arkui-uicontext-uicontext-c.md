@@ -3393,7 +3393,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 | [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
 | [120002](../errorcode-bindSheet.md#120002-modal-for-bindsheetcontent-already-exists) | The bindSheetContent already exists. |
 | [120004](../errorcode-bindSheet.md#120004-specified-targetid-does-not-exist) | The targetId does not exist. |
-| [120005](../errorcode-bindSheet.md#120005-node-specified-by-targetid-is-not-in-the-component-tree) | The node of targetId is not in the component tree. |
+| [120005](../errorcode-bindSheet.md#120005-node-specified-by-targetid-is-not-mounted-on-the-component-tree) | The node of targetId is not in the component tree. |
 | [120006](../errorcode-bindSheet.md#120006-node-specified-by-targetid-is-not-a-child-of-a-page-node-or-navdestination-node) | The node of targetId is not a child of the page node or NavDestination node. |
 
 **Examples**

@@ -1594,4 +1594,4 @@ Internal instruction code used to test whether the IPC service is normal.
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

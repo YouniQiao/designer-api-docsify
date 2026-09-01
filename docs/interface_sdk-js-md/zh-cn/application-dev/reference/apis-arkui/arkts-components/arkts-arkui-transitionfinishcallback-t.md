@@ -20,4 +20,4 @@ declare type TransitionFinishCallback = (transitionIn: boolean) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transitionIn | boolean | 是 | 转场动画的结束回调类型。 true表示出现动画结束回调，false表示消失动画结束回调。 |
+| transitionIn | boolean | 是 | 转场动画的结束回调类型。true表示出现动画结束回调，false表示消失动画结束回调。 |

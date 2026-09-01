@@ -111,7 +111,7 @@ userId: "12345"
 
 **System capability:** SystemCapability.Advertising.Ads
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## shown
 

@@ -19,7 +19,7 @@ Send touch event.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 **Parameters:**
 

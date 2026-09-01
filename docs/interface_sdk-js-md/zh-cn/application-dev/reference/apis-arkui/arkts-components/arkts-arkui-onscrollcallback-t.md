@@ -20,5 +20,5 @@ declare type OnScrollCallback = (scrollOffset: number, scrollState: ScrollState)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scrollOffset | number | 是 | 相对于上一帧的偏移量，滚动组件的内容向上滚动时偏移量为正，向下滚动时偏移量为负。 单位vp。 |
+| scrollOffset | number | 是 | 相对于上一帧的偏移量，滚动组件的内容向上滚动时偏移量为正，向下滚动时偏移量为负。单位vp。 |
 | scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | 是 | 当前滑动状态。 |

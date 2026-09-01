@@ -458,7 +458,7 @@ Since API version 20, the default file path can be the cache path of the caller 
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## timeout
 

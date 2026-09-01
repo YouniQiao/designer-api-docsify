@@ -6,7 +6,7 @@ Describes the display rotation of the device.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## ROTATION_0
 
@@ -22,7 +22,7 @@ The device display is not rotated and is in its original vertical orientation.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## ROTATION_90
 
@@ -38,7 +38,7 @@ The device display rotates 90° clockwise and is in landscape orientation.
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## ROTATION_180
 
@@ -54,7 +54,7 @@ The device display rotates 180° clockwise and is in reverse vertical orientatio
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.
 
 ## ROTATION_270
 
@@ -70,4 +70,4 @@ The device display rotates 270° clockwise and is in reverse landscape orientati
 
 **System capability:** SystemCapability.Test.UiTest
 
-**Test API:** This is a test API.
+**Test API:** This API is used only in automated test scripts.

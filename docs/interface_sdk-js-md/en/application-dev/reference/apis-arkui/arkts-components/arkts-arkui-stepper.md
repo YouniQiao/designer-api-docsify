@@ -32,7 +32,7 @@ Creates a **Stepper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { index?: number } | No | Index of the **StepperItem** that is currently displayed. Default value: **0**  Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md). |
+| value | { index?: number } | No | Index of the **StepperItem** that is currently displayed.Default value: **0**Since API version 10, this parameter supports two-way binding through [\\$\\$](../../../ui/state-management/arkts-two-way-sync.md). |
 
 ## Summary
 
