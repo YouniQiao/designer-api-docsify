@@ -343,7 +343,7 @@ struct RatingExample {
 }
 ```
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOptions > resOptions > copyCodeResource in the module's build-profile.json5 file, and set enable to true. For details, see the description of [resOptions](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348).
+This example shows how to customize the star images by configuring starStyle.
 
 ```TypeScript
 // xxx.ets

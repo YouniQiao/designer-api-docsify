@@ -1,17 +1,15 @@
 # @ohos.inputMethod(Input Method Framework)
 
-###### Constant
- <br>
- <br>Provides the constants.
- <br>
- | Name| Type| Value| Description|
- | -------- | -------- | -------- | -------- |
-| MAX_TYPE_NUM<sup>8+</sup> | number | 128 | Maximum number of supported input methods.|
-
-
 **Since:** 6
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+## Constant
+
+<br><br>Provides the constants.<br>  
+ | Name| Type| Value| Description|  
+ | -------- | -------- | -------- | -------- |  
+| MAX_TYPE_NUM&lt;sup&gt;8+&lt;/sup&gt; | number | 128 | Maximum number of supported input methods.|
 
 ## Modules to Import
 

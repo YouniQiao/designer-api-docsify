@@ -34,7 +34,7 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 
 ## 示例
 
-从API版本26.0.0开始，新增[DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)参数。
+该示例通过设置[DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)中的displayMode为DisplayMode.DATE，实现日期选择器。
 
 ```TypeScript
 import { DatePickerComponent, DisplayMode, DateMode } from '@kit.ArkUI';
@@ -80,7 +80,7 @@ struct DatePickerExample {
 }
 ```
 
-从API版本26.0.0开始，新增[DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)参数。
+该示例通过设置[DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)中的displayMode为DisplayMode.TIME，实现时间选择器。
 
 ```TypeScript
 import { DatePickerComponent, DisplayMode, TimeFormat } from '@kit.ArkUI';
@@ -111,7 +111,7 @@ struct TimePickerExample {
 }
 ```
 
-从API版本26.0.0开始，新增[DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)参数。
+该示例通过设置[DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)中的displayMode为DisplayMode.DATE_TIME，同时选择日期和时间。
 
 ```TypeScript
 import { DatePickerComponent, DisplayMode, DateMode, TimeFormat } from '@kit.ArkUI';
@@ -152,7 +152,7 @@ struct DateTimePickerExample {
 }
 ```
 
-从API版本26.0.0开始，新增DateOptions参数。
+该示例通过设置DateOptions中的loop为false，关闭选择器的循环滚动模式。
 
 ```TypeScript
 import { DatePickerComponent, DisplayMode, DateMode } from '@kit.ArkUI';

@@ -4,7 +4,7 @@
 type Assets = Array<Asset>
 ```
 
-表示Asset类型的数组。
+表示[Asset](arkts-arkdata-commontype-asset-i.md)类型的数组。
 
 **起始版本：** 11
 

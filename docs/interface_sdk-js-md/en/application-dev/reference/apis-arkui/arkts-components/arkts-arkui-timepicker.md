@@ -240,7 +240,7 @@ struct TimePickerExample {
 }
 ```
 
-The enableCascade API is added since API version 18.
+This example demonstrates how to enable the AM/PM indicator to automatically switch based on the hour value in 12-hour format using [enableCascade](#enablecascade18) and [loop](#loop11).
 
 ```TypeScript
 // xxx.ets

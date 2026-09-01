@@ -41,7 +41,7 @@ Creates a **DiscoveryService** object, which is used to discover MDNS services o
 
 **Examples**
 
-Stage model:
+> NOTE
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';

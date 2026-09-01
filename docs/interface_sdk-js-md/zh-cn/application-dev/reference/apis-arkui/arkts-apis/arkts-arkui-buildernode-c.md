@@ -1158,7 +1158,7 @@ struct Index {
 }
 ```
 
-该示例演示了ReactiveBuilderNode释放节点前后分别使用[isDisposed](#isdisposed)接口验证节点的状态，释放节点前节点调用isDisposed接口返回false，释放节点后节点调用isDisposed接口返回true。
+参考[isDisposed](#isdisposed)示例。
 
 ```TypeScript
 import { FrameNode, NodeController, ReactiveBuilderNode } from '@kit.ArkUI';
@@ -1526,7 +1526,7 @@ struct MyComponent {
 }
 ```
 
-当触摸下方蓝色区域时，触摸事件会经过坐标转换后传递给上方的ReactiveBuilderNode按钮，触发按钮的触摸反馈和日志输出，实现了触摸事件的跨节点精准传递。
+该示例实现了通过ReactiveBuilderNode构建的按钮组件与外部容器的触摸事件联动，演示了自定义节点中触摸事件的坐标转换与跨节点传递机制。
 
 ```TypeScript
 import { NodeController, ReactiveBuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
@@ -1828,7 +1828,7 @@ struct Index {
 }
 ```
 
-从API版本26.0.0开始，ReactiveBuilderNode中的自定义组件支持V2组件复用。
+recycle
 
 ```TypeScript
 import { FrameNode, NodeController, ReactiveBuilderNode, UIContext } from '@kit.ArkUI';

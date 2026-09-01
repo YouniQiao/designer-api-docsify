@@ -1022,7 +1022,7 @@ struct StyledStringSetLineheightParagraphstyleDemo {
 }
 ```
 
-Since API version 26.0.0, the maxWidth and layoutPolicy properties are added to [CustomSpanMeasureInfo](arkts-arkui-customspanmeasureinfo-i.md).
+This example illustrates how to configure custom spans for a styled string using [CustomSpan](arkts-arkui-customspan-c.md) and [measureTextSize](../arkts-apis-uicontext-measureutils.md#measuretextsize12), supported since API version 12.
 
 ```TypeScript
 // xxx.ets
@@ -1394,7 +1394,7 @@ struct StyledStringModifyDemo {
 }
 ```
 
-Since API version 26.0.0, the strokeJoinStyle API is added to TextStyle to implement the text corner stroke style.
+This example illustrates how to configure the text stroke for a styled string by setting strokeWidth and strokeColor of TextStyle, available since API version 20.
 
 ```TypeScript
 // xxx.ets
@@ -1872,7 +1872,7 @@ struct StyledStringProcessDemo {
 }
 ```
 
-Since API version 24, the fontConfigs property is added to TextStyleInterface.
+This example implements the font configuration of a styled string through [fontConfigs](ts-text-common.md#fontconfigs24) in [TextStyleInterface](arkts-arkui-textstyleinterface-i.md).
 
 ```TypeScript
 // xxx.ets
@@ -1974,7 +1974,7 @@ struct StyledStringFontConfigsDemo {
 }
 ```
 
-Since API version 26.0.0, fromHtml additionally supports the <cite>, <dfn>, <small>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <ol>, <ul>, and <li> tags.
+This example converts the <cite>, <dfn>, <small>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <ol>, <ul>, and <li> tags in HTML into a styled string through the [fromHtml](arkts-arkui-styledstring-c.md#fromhtml) API.
 
 ```TypeScript
 @Entry
@@ -2003,7 +2003,7 @@ struct html_convert_demo {
 }
 ```
 
-Since API version 26.0.0, the fontVariations property is added to TextStyle.
+This example sets the properties of a variable font through the fontVariations property of TextStyle.
 
 ```TypeScript
 // xxx.ets
@@ -2048,7 +2048,7 @@ struct StyledStringExample {
 }
 ```
 
-Since API version 26.0.0, the shaderStyle API is added to ParagraphStyle.
+This example implements the text shader effect through the shaderStyle API in ParagraphStyle.
 
 ```TypeScript
 @Entry
@@ -2172,7 +2172,7 @@ struct ShaderColorStyle {
 }
 ```
 
-Since API version 26.0.0, the tailIndents property is added to the ParagraphStyle API.
+This example sets the text tail indentation for a styled string through the tailIndents property in ParagraphStyle.
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';

@@ -249,7 +249,7 @@ struct Index1 {
 }
 ```
 
-从API version 18开始，在[EditableTitleBar](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebar-s.md)中新增leftIconDefaultFocus接口。
+在获焦状态下，该示例通过设置标题栏属性leftIconDefaultFocus使左侧图标默认获焦。
 
 ```TypeScript
 import { Prompt, EditableLeftIconType, EditableTitleBar } from '@kit.ArkUI';
@@ -275,7 +275,7 @@ struct Index {
 }
 ```
 
-从API version 18开始，在[EditableTitleBarMenuItem](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md)中新增defaultFocus接口。
+在获焦状态下，该示例通过设置标题栏右侧图标属性defaultFocus使右侧图标默认获焦。
 
 ```TypeScript
 import { Prompt, EditableLeftIconType, EditableTitleBar } from '@kit.ArkUI';

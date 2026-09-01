@@ -28,7 +28,7 @@ function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType,
 | --- | --- | --- | --- |
 | source | string \| image.PixelMap | 是 | JPEG或PNG文件的Uri路径，或者PNG格式文件的位图。 |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置壁纸成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -82,7 +82,7 @@ imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
 function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>
 ```
 
-将指定资源设置为指定类型的壁纸。使用promise异步回调。
+将指定资源设置为指定类型的壁纸。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -103,7 +103,7 @@ function setImage(source: string | image.PixelMap, wallpaperType: WallpaperType)
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

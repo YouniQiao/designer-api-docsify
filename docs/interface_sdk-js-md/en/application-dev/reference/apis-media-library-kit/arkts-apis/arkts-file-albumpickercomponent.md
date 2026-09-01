@@ -10,9 +10,10 @@ The **AlbumPickerComponent** embedded in the UI of an application allows the app
  > **NOTE**
  >
  > - This component does not support [same-layer rendering](../../../web/web-same-layer.md).
- ###### Attributes
- The universal attributes are supported.
 
+## Attributes
+
+The universal attributes are supported.
 
 ## Modules to Import
 

@@ -234,7 +234,7 @@ struct ImageExample1 {
 }
 ```
 
-使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
+加载网络图片时，默认网络超时是5分钟，建议使用alt配置加载时的占位图。使用[HTTP](../../../network/http-request.md)工具包发送网络请求，接着将返回的数据解码为Image组件中的，加载gif到时，gif显示为静态图。图片开发可参考[Image Kit简介](../../../media/image/image-overview.md)。
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -294,7 +294,7 @@ struct ImageExample2 {
 }
 ```
 
-使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
+该示例使用cacheDownload.download接口下载网络gif图片。
 
 ```TypeScript
 import { cacheDownload } from '@kit.BasicServicesKit';
@@ -841,7 +841,7 @@ struct ImageExample11 {
 }
 ```
 
-从API version 15开始，新增imageMatrix属性。
+该示例通过[imageMatrix](#imagematrix15)和[objectFit](#objectfit)属性，为图片添加旋转和平移的效果。
 
 ```TypeScript
 import { matrix4 } from '@kit.ArkUI';
@@ -1023,7 +1023,7 @@ struct Index {
 }
 ```
 
-从API version 19开始，新增hdrBrightness属性。
+该示例通过[hdrBrightness](#hdrbrightness19)属性调整HDR图源的亮度，将hdrBrightness从0调整到1。
 
 ```TypeScript
 import { image } from '@kit.ImageKit';
@@ -1417,7 +1417,7 @@ struct Index {
 }
 ```
 
-从API version 21开始，新增supportSvg2属性。
+该示例通过设置[supportSvg2](#supportsvg221)属性，使SVG标签解析能力增强功能生效。
 
 ```TypeScript
 @Entry
@@ -1512,7 +1512,7 @@ struct ImageExample {
 }
 ```
 
-从API version 23开始，ImageError新增downloadInfo属性。
+该示例演示如何通过[onError](#onerror9)回调获取网络图片加载异常时的详细下载信息[ImageError](arkts-arkui-imageerror-i.md)。当图片加载失败时，可通过ImageError中的downloadInfo属性获取网络图片下载的详细信息，包括下载的资源信息、网络请求信息以及性能统计信息，有助于快速定位网络异常或资源错误原因。
 
 ```TypeScript
 @Entry
@@ -1533,7 +1533,7 @@ struct Index {
 }
 ```
 
-从API version 23开始，新增[antialiased](arkts-arkui-image-attribute.md#antialiased)接口。
+该示例演示了如何通过设置[antialiased](arkts-arkui-image-attribute.md#antialiased)接口开启位图图片边缘的抗锯齿功能。
 
 ```TypeScript
 @Entry

@@ -37,7 +37,7 @@ Applies a foreground color animation to the drag preview. This API does not work
 
 **Examples**
 
-In the EntryAbility.ets file, obtain the UI context and save it to LocalStorage.
+> NOTE
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';

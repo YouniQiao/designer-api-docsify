@@ -1,8 +1,8 @@
 # DynamicLayoutAttribute
 
-支持通用属性。
+支持[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)。
 
-支持通用事件。
+支持[通用事件](../arkts-components/arkts-arkui-commonmethod-c.md)。
 
 **继承/实现关系：** DynamicLayoutAttribute extends CommonMethod<DynamicLayoutAttribute>
 

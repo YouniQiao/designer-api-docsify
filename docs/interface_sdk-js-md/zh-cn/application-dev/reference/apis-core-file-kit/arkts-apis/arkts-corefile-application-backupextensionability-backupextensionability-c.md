@@ -101,6 +101,8 @@ class BackupExt extends BackupExtensionAbility {
 }
 ```
 
+> 说明：
+
 ```TypeScript
 import { BackupExtensionAbility } from '@kit.CoreFileKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -396,6 +398,8 @@ class BackupExt extends BackupExtensionAbility {
   }
 }
 ```
+
+> 说明：
 
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';

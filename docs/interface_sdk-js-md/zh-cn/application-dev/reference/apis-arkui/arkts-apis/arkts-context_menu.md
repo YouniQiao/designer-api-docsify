@@ -15,7 +15,7 @@
 
 ## 示例
 
-推荐通过使用[UIContext](../arkts-apis-uicontext-uicontext.md)中的[getContextMenuController](../arkts-apis-uicontext-uicontext.md#getcontextmenucontroller)来明确UI的执行上下文。
+该示例演示ContextMenu.close的使用方法，在拖拽开始时关闭通过bindContextMenu绑定的菜单。
 
 ```TypeScript
 // xxx.ets

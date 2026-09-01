@@ -41,7 +41,7 @@ Create TextClock component.
 
 ## Examples
 
-This example uses the [onDateChange](#ondatechange) callback to update accumulateTime whenever the text clock refreshes.
+This example demonstrates the basic usage of the TextClock component, setting the clock display format using the [format](#format) attribute.
 
 ```TypeScript
 @Entry

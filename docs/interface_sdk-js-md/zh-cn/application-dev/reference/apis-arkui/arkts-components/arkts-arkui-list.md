@@ -106,7 +106,7 @@ List(options?: ListOptions)
 
 ## 示例
 
-ListDataSource实现了LazyForEach数据源接口[IDataSource](ts-rendering-control-lazyforeach.md#idatasource)，用于通过LazyForEach给List提供子组件。
+该示例实现了设置纵向列表，并在当前显示界面发生改变时回调索引。
 
 ```TypeScript
 // ListDataSource.ets
@@ -229,7 +229,7 @@ struct ListExample {
 }
 ```
 
-ListDataSource说明及完整代码参考[示例1（添加滚动事件）](#示例1添加滚动事件)。
+该示例展示了不同ListItemAlign枚举值下，List组件交叉轴方向子元素对齐效果。
 
 ```TypeScript
 // xxx.ets
@@ -279,7 +279,7 @@ struct ListLanesExample {
 }
 ```
 
-ListDataSource说明及完整代码参考[示例1（添加滚动事件）](#示例1添加滚动事件)。
+该示例展示了如何通过自定义状态变量控制删除按钮的显示与隐藏，并在删除按钮的点击事件中更新数据源，实现列表项删除效果。
 
 ```TypeScript
 // xxx.ets
@@ -337,7 +337,7 @@ struct ListExample {
 }
 ```
 
-ListDataSource说明及完整代码参考[示例1（添加滚动事件）](#示例1添加滚动事件)。
+该示例展示了List组件设置居中限位的实现效果。
 
 ```TypeScript
 // xxx.ets
@@ -390,7 +390,7 @@ struct ListExample {
 }
 ```
 
-ListDataSource说明及完整代码参考[示例1（添加滚动事件）](#示例1添加滚动事件)。
+该示例通过设置[childrenMainSize](#childrenmainsize12)属性，实现了List在子组件高度不一致时调用scrollTo接口也可以跳转准确。
 
 ```TypeScript
 // xxx.ets
@@ -619,7 +619,7 @@ interface TimeTable {
 }
 ```
 
-ListDataSource说明及完整代码参考[示例1（添加滚动事件）](#示例1添加滚动事件)。
+该示例实现了List组件开启边缘渐隐效果并设置边缘渐隐长度。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI'
@@ -652,7 +652,7 @@ struct ListExample {
 }
 ```
 
-ListDataSource说明及完整代码参考[示例1（添加滚动事件）](#示例1添加滚动事件)。
+该示例通过edgeEffect接口，实现了List组件设置单边边缘效果。
 
 ```TypeScript
 // xxx.ets
@@ -728,7 +728,7 @@ struct ListExample {
 }
 ```
 
-ListDataSource说明及完整代码参考[示例1（添加滚动事件）](#示例1添加滚动事件)。
+该示例通过maintainVisibleContentPosition接口，实现了上滑无限加载历史消息场景。
 
 ```TypeScript
 import { ListDataSource } from './ListDataSource';
@@ -848,7 +848,7 @@ struct ForEachSort {
 }
 ```
 
-ListDataSource说明及完整代码参考[示例1（添加滚动事件）](#示例1添加滚动事件)。
+从API version 22开始，该示例展示了List组件支持基于断点配置lanes效果。
 
 ```TypeScript
 // xxx.ets
@@ -1156,7 +1156,7 @@ struct ContactsList {
 }
 ```
 
-ListDataSource说明及完整代码参考[示例1（添加滚动事件）](#示例1添加滚动事件)。
+该示例通过打开List多选聚拢动画开关，实现了通过[bindContextMenu](ts-universal-attributes-menu.md#bindcontextmenu8)在ListItem上长按弹出菜单时聚拢显示范围内被选中的ListItem。
 
 ```TypeScript
 // xxx.ets
@@ -1247,7 +1247,7 @@ struct ListExample {
 }
 ```
 
-ListDataSource说明及完整代码参考[示例1（添加滚动事件）](#示例1添加滚动事件)。
+该示例通过使用[enableEditMode](#enableeditmode)接口和[onEditModeChange](#oneditmodechange)事件，在List上实现了手指滑动多选的效果。
 
 ```TypeScript
 // xxx.ets

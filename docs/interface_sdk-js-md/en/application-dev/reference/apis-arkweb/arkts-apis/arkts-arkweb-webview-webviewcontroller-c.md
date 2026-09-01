@@ -4538,7 +4538,7 @@ After **webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode
 
 **Examples**
 
-First, store the [UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md) in [localStorage](../../../ui/state-management/arkts-localstorage.md) in EntryAbility.
+When appropriate, use this API in conjunction with dynamic components. Offline Web components are used to inject resources into the engine's memory cache, and at the appropriate time, the service Web components load and utilize these resources. The following is a code example:
 
 ```TypeScript
 // EntryAbility.ets
@@ -5490,7 +5490,7 @@ struct WebComponent {
 }
 ```
 
-Using $rawfile.
+There are three methods for loading local resource files:
 
 ```TypeScript
 // xxx.ets
@@ -5519,7 +5519,7 @@ struct WebComponent {
 }
 ```
 
-Using the  protocol prefix can avoid the issue where the URL is truncated by the number sign (#) when the conventional  method is used to handle URLs containing "#" for routing. When a URL contains a "#", the content following the "#" is treated as a fragment.
+Resource protocol.
 
 ```TypeScript
 // xxx.ets
@@ -5579,7 +5579,7 @@ Create an index.html file in src/main/resources/rawfile.
 </html>
 ```
 
-HTML file to be loaded:
+Load the local file through the sandbox path. For details, see the sample code for loading the sandbox path in [Loading Web Pages](../../../web/web-page-loading-with-web-components.md#loading-local-pages).
 
 ```TypeScript
 <!-- index.html -->
@@ -6568,7 +6568,7 @@ The API determines whether to update the existing bytecode cache based on the pr
 
 **Examples**
 
-First, store the [UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md) in [localStorage](../../../ui/state-management/arkts-localstorage.md) in EntryAbility.
+The API is recommended for use in conjunction with dynamic components. Employ offline Web components to generate bytecode caches, and at the appropriate time, load service Web components to utilize these bytecode caches. The following is a code example:
 
 ```TypeScript
 // EntryAbility.ets
@@ -6688,7 +6688,7 @@ async function readRawFile(path: string, context: UIContext) {
 }
 ```
 
-Compile the code of the service component.
+JavaScript resources can also be obtained through [data request](../../apis-network-kit/arkts-apis/arkts-net-http.md). However, the HTTP response headers obtained through this method are not in the standard HTTP response header format. You need to convert the response headers to the standard HTTP response header format before use. For example, if the response header obtained through data request is e-tag, it needs to be converted to E-Tag before use.
 
 ```TypeScript
 // BusinessWebview.ets
@@ -7621,7 +7621,7 @@ struct WebComponent {
 }
 ```
 
-Obtain the path of the application cache file.
+Modify the EntryAbility.ets file.
 
 ```TypeScript
 // xxx.ets
@@ -9024,7 +9024,7 @@ struct WebComponent {
 }
 ```
 
-Obtain the path of the application cache file.
+Modify the EntryAbility.ets file.
 
 ```TypeScript
 // xxx.ets

@@ -812,7 +812,7 @@ requestPermissionsFromUserWithWindowId(
 
 **示例**
 
-关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)。
+下述示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { abilityAccessCtrl, Context, PermissionRequestResult } from '@kit.AbilityKit';

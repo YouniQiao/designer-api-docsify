@@ -42,7 +42,7 @@ import { LengthMetrics } from '@kit.ArkUI';
 @Entry
 @Component
 struct MyStateSample {
-  @State lengthMetrics: LengthMetrics = LengthMetrics.resource($r('sys.float.ohos_id_button_min_width')).autoRefresh!(true)
+  @State lengthMetrics: LengthMetrics = LengthMetrics.resource($r('sys.float.ohos_id_button_min_width')).autoRefresh!(true);
 
   build() {
     Column() {
@@ -254,7 +254,7 @@ struct SizeExample {
         })
         .backgroundColor(Color.White)
       }
-      .backgroundColor("#ff2787d9")
+      .backgroundColor('#ff2787d9')
     }
     .width('100%')
     .margin({ top: 5 })

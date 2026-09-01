@@ -69,7 +69,7 @@ Construct the UIExtensionComponent.Called when the UIExtensionComponent is used.
 
 ## Examples
 
-The content of the user's entry page Index.ets is as follows:
+The UIExtensionComponent component can be used by both the host and provider. This example shows only the method used by the component and the UIExtensionAbility. For the code to run properly, you need to install the ability whose bundleName is com.example.newdemo and abilityName is UIExtensionProvider on the device.
 
 ```TypeScript
 import { ComponentContent } from '@kit.ArkUI';
@@ -181,7 +181,7 @@ function syncRegisterCallback2(proxy: UIExtensionProxy) {
 };
 ```
 
-/src/main/ets/uiextensionability/UIExtensionProvider.ets
+Component provider
 
 ```TypeScript
 import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
@@ -342,7 +342,7 @@ The provider's extension Ability. Add the corresponding configuration to the mod
 }
 ```
 
-Example of the user's component usage:
+This example demonstrates a scenario where both the UIExtensionComponent host and the UIExtensionAbility use [Scroll](ts-container-scroll.md) containers. By setting gesture interception on UIExtensionComponent, it achieves that external components do not respond to scrolling when the internal layer of the UIExtensionComponent is being scrolled.
 
 ```TypeScript
 @Entry

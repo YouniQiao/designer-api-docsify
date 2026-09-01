@@ -16,7 +16,10 @@ function setWallpaper(
   ): void
 ```
 
-将指定资源设置为指定类型的壁纸。
+将指定资源设置为指定类型的壁纸。使用callback异步回调。  
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -30,9 +33,9 @@ function setWallpaper(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | string \| image.PixelMap | 是 |  |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |  |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
+| source | string \| image.PixelMap | 是 | JPEG或PNG文件的Uri路径，或者PNG格式文件的位图。 |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置壁纸成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -78,7 +81,10 @@ imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
 function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperType): Promise<void>
 ```
 
-将指定资源设置为指定类型的壁纸。
+将指定资源设置为指定类型的壁纸。使用Promise异步回调。  
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -92,14 +98,14 @@ function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | string \| image.PixelMap | 是 |  |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |  |
+| source | string \| image.PixelMap | 是 | JPEG或PNG文件的Uri路径，或者PNG格式文件的位图。 |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 

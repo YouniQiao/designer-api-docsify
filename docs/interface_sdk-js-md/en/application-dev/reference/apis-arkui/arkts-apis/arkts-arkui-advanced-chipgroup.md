@@ -619,7 +619,7 @@ export struct ChipGroupExample2 {
 }
 ```
 
-Starting from API version 26.0.0, the backgroundSystemMaterial attribute is added to [ChipGroup](arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md), and the iconBackgroundSystemMaterial attribute is added to [IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md).
+This example implements the system material style by configuring backgroundSystemMaterial and iconBackgroundSystemMaterial, and enables the auto-invert feature so that the text color adapts to the background color.
 
 ```TypeScript
 import { ChipGroup, IconGroupSuffix, SymbolGlyphModifier, uiMaterial } from '@kit.ArkUI';
@@ -690,7 +690,7 @@ struct ChipGroupMaterialExample {
 }
 ```
 
-Since API version 26.0.0, [ChipGroup](arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md) adds the selectedBackgroundSystemMaterial attribute.
+This example configures selectedBackgroundSystemMaterial to implement the system material style for the selected state of the component, and enables auto invert color so that the text color adapts to the background color.
 
 ```TypeScript
 import { ChipGroup, IconGroupSuffix, SymbolGlyphModifier, uiMaterial } from '@kit.ArkUI';

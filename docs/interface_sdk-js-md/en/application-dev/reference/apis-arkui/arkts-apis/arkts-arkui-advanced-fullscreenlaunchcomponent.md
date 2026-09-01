@@ -1,12 +1,16 @@
 # @ohos.arkui.advanced.FullScreenLaunchComponent(Defines the fullScreen launch component)
 
-###### Child Components
- Not supported
- ###### Attributes
- The universal attributes are not supported.
- ###### Events
- The universal events are not supported.
+## Child Components
 
+Not supported
+
+## Attributes
+
+The universal attributes are not supported.
+
+## Events
+
+The universal events are not supported.
 
 ## Modules to Import
 
@@ -24,7 +28,7 @@ import { FullScreenLaunchComponent } from '@kit.ArkUI';
 
 ## Examples
 
-User Implementation
+This example demonstrates how to use the component and how to implement the provider-side atomic service. In actual running, use the appId of your own atomic service.
 
 ```TypeScript
 // The content of the consumer entry page Index.ets is as follows:
@@ -68,7 +72,7 @@ function ColumnChild() {
 }
 ```
 
-Entry point file: /src/main/ets/entryability/EntryAbility.ets
+Provider Implementation
 
 ```TypeScript
 import { AbilityConstant, Want, EmbeddableUIAbility } from '@kit.AbilityKit';

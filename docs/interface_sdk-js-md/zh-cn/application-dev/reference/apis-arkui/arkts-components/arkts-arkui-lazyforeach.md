@@ -100,7 +100,7 @@ LazyForEach从提供的数据源中按需迭代数据，并在每次迭代过程
 
 ## 示例
 
-BasicDataSource代码见LazyForEach开发者指南末尾BasicDataSource示例代码：[string类型数组的BasicDataSource代码](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md#string类型数组的basicdatasource代码)。
+以下示例中，通过[LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md)的memoryOptimizationStrategy属性使用了自动内存优化策略。应用退后台时，清理缓存。应用恢复前台时，恢复缓存。
 
 ```TypeScript
 import { BasicDataSource } from './BasicDataSource';

@@ -683,7 +683,7 @@ struct RefreshExample {
 }
 ```
 
-The pullUpToCancelRefresh API is supported since API version 23.
+This example uses the [pullUpToCancelRefresh](arkts-arkui-refresh-attribute.md#pulluptocancelrefresh) API to configure pull-up without canceling refresh.
 
 ```TypeScript
 // xxx.ets

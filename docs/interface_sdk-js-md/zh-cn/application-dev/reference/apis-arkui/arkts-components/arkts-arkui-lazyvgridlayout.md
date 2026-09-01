@@ -30,7 +30,7 @@ LazyVGridLayout()
 
 ## 示例
 
-从API版本26.0.0开始，新增onVisibleIndexesChange事件。
+该示例通过[WaterFlow](ts-container-waterflow.md)和LazyVGridLayout实现懒加载网格布局，并通过[onVisibleIndexesChange](#onvisibleindexeschange)在可视区域发生变化时触发回调，返回当前可视区域内子组件的起始索引值和结束索引值。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -186,7 +186,7 @@ export class MyDataSource<T> extends BasicDataSource<T> {
 }
 ```
 
-从API版本26.0.0开始，新增支持header、footer和sticky属性。
+该示例通过[WaterFlow](ts-container-waterflow.md)嵌套LazyVGridLayout，并通过[header](#header)、[footer](#footer)、[sticky](#sticky)实现网格顶部和底部吸附效果。滚动过程中header吸附在可视区域顶部，footer吸附在可视区域底部。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -260,7 +260,7 @@ struct LazyVGridLayoutStickyDemo {
 }
 ```
 
-从API version 19开始，新增[columnsTemplate](#columnstemplate)接口。
+该示例通过设置[columnsTemplate](#columnstemplate)属性实现了LazyVGridLayout组件自适应列数，并使用了属性[columnsTemplate](#columnstemplate)中的auto-fill、auto-fit和auto-stretch。
 
 ```TypeScript
 import { LazyColumnLayout, LazyColumnLayoutAttribute, LengthMetrics } from '@kit.ArkUI';

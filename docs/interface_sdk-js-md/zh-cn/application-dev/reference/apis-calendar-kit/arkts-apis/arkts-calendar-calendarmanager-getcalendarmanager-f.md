@@ -36,7 +36,7 @@ function getCalendarManager(context: Context) : CalendarManager
 
 **示例**
 
-示例中的mContext的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> 说明：
 
 ```TypeScript
 // 获取上下文mContext

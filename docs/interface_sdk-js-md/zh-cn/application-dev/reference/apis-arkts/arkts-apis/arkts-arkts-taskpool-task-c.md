@@ -194,6 +194,8 @@ function inspectStatus(arg: number): number {
 }
 ```
 
+> 说明：
+
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 

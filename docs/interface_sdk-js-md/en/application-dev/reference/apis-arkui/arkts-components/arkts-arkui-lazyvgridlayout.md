@@ -28,7 +28,7 @@ Creates a vertical lazy-loading grid layout container.
 
 ## Examples
 
-The onVisibleIndexesChange event is added since API version 26.0.0.
+This example uses [WaterFlow](ts-container-waterflow.md) and LazyVGridLayout to implement a lazy loading grid layout, and triggers a callback through [onVisibleIndexesChange](#onvisibleindexeschange) when the visible area changes, returning the start index and end index of the child components in the current visible area.
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -184,7 +184,7 @@ export class MyDataSource<T> extends BasicDataSource<T> {
 }
 ```
 
-Since API version 26.0.0, the header, footer, and sticky attributes are newly supported.
+This example nests LazyVGridLayout inside [WaterFlow](ts-container-waterflow.md), and implements sticky styles at the top and bottom of the grid through [header](#header), [footer](#footer), and [sticky](#sticky). During scrolling, the header sticks to the top of the visible area, and the footer sticks to the bottom of the visible area.
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -258,7 +258,7 @@ struct LazyVGridLayoutStickyDemo {
 }
 ```
 
-Since API version 19, the [columnsTemplate](#columnstemplate) API is newly supported.
+This example implements adaptive column count for the LazyVGridLayout component by setting the [columnsTemplate](#columnstemplate) attribute, and uses auto-fill, auto-fit, and auto-stretch in the [columnsTemplate](#columnstemplate) attribute.
 
 ```TypeScript
 import { LazyColumnLayout, LazyColumnLayoutAttribute, LengthMetrics } from '@kit.ArkUI';

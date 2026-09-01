@@ -250,7 +250,7 @@ struct TextExample2 {
 }
 ```
 
-从API version 24开始，[EllipsisMode](ts-appendix-enums.md#ellipsismode11)新增了MULTILINE_START和MULTILINE_CENTER枚举。
+该示例通过[maxLines](#maxlines)、[textOverflow](#textoverflow)、[ellipsisMode](#ellipsismode11)属性展示了文本超长省略以及调整省略位置的效果，通过MULTILINE_START和MULTILINE_CENTER两种类型实现了单行文本和多行文本场景下的省略号在行首和行中的效果。同时，可以通过[marqueeOptions](#marqueeoptions18)配置跑马灯模式下的配置项以及跑马灯动画进行到特定的阶段时，触发的回调[onMarqueeStateChange](arkts-arkui-text-attribute.md#onmarqueestatechange)。
 
 ```TypeScript
 // xxx.ets
@@ -431,7 +431,7 @@ struct TextExample4 {
 }
 ```
 
-从API版本26.0.0开始，新增[onWillCopy](#onwillcopy)接口。
+该示例通过[selection](#selection11)（从API version 11开始）、[onCopy](#oncopy11)（从API version 11开始）、[draggable](#draggable9)（从API version 9开始）、[caretColor](#caretcolor14)（从API version 14开始）、[selectedBackgroundColor](#selectedbackgroundcolor14)（从API version 14开始）、[onWillCopy](#onwillcopy)接口展示了文本选中、触发复制回调、设置文本选中可拖拽、修改手柄和选中颜色的效果以及如何拦截系统复制。
 
 ```TypeScript
 // xxx.ets
@@ -1256,7 +1256,7 @@ struct Index {
 }
 ```
 
-从API版本26.0.0开始，新增punctuationOverflow接口。
+本示例通过[compressLeadingPunctuation](#compressleadingpunctuation23)接口设置行首标点符号压缩，通过[punctuationOverflow](#punctuationoverflow)设置行尾标点符号悬挂。
 
 ```TypeScript
 @Entry
@@ -1297,7 +1297,7 @@ struct PunctuationDemo {
 }
 ```
 
-从API version 23开始，新增[includeFontPadding](#includefontpadding23)和[fallbackLineSpacing](#fallbacklinespacing23)接口。
+该示例通过[includeFontPadding](#includefontpadding23)接口增加首行尾行间距和[fallbackLineSpacing](#fallbacklinespacing23)接口设置自适应行间距。
 
 ```TypeScript
 // xxx.ets
@@ -1355,7 +1355,7 @@ struct Index {
 }
 ```
 
-从API version 23开始，新增selectedDragPreviewStyle接口。
+该示例通过[selectedDragPreviewStyle](#selecteddragpreviewstyle23)接口设置文本拖拽时的背板样式。
 
 ```TypeScript
 @Entry
@@ -1376,7 +1376,7 @@ struct TextTest {
 }
 ```
 
-从API version 23开始，新增textDirection接口。
+该示例通过[textDirection](#textdirection23)接口设置文本排版方向。
 
 ```TypeScript
 // xxx.ets
@@ -1487,7 +1487,7 @@ struct TextExample10 {
 }
 ```
 
-从API版本26.0.0开始，新增orphanCharOptimization接口。
+该示例通过[orphanCharOptimization](#orphancharoptimization)接口设置使能孤字优化，确保段落最后一行不出现孤字。
 
 ```TypeScript
 // xxx.ets
@@ -1518,7 +1518,7 @@ struct TextExample {
 }
 ```
 
-从API版本26.0.0开始，新增[fontVariations](#fontvariations)接口。
+该示例通过[fontVariations](#fontvariations)接口设置可变字体的属性。
 
 ```TypeScript
 // xxx.ets
@@ -1542,7 +1542,7 @@ struct TextExample {
 }
 ```
 
-从API版本26.0.0开始，文本组件调用该接口时，options中的menuType属性传入MenuType.PREVIEW_MENU，设置图片预览菜单的能力生效。
+该示例通过[bindSelectionMenu](#bindselectionmenu11)接口实现了文本设置图片预览菜单的功能。
 
 ```TypeScript
 // xxx.ets
@@ -1583,7 +1583,7 @@ struct TextExample {
 }
 ```
 
-从API版本26.0.0开始，新增incrementalUpdatePolicy属性。
+该示例通过[incrementalUpdatePolicy](#incrementalupdatepolicy)接口设置文本渲染的增量更新策略，使用段落级缓存优化渲染性能。
 
 ```TypeScript
 // xxx.ets
@@ -1714,7 +1714,7 @@ struct StyledStringAppend {
 }
 ```
 
-从API版本26.0.0开始，通过tailIndents属性设置文本尾部缩进。
+该示例通过[tailIndents](#tailindents)接口实现了文本尾部缩进的功能。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -1754,7 +1754,7 @@ struct TailIndentsExample {
 }
 ```
 
-从API version 22开始，新增enableSelectedDataDetector。
+该示例通过[enableSelectedDataDetector](#enableselecteddatadetector22)，配置文本选择AI菜单功能。
 
 ```TypeScript
 @Entry
@@ -1777,7 +1777,7 @@ struct DataDetectorDemo {
 }
 ```
 
-从API版本26.0.0开始，新增带编码类型参数的getCharacterPositionAtCoordinate、getGlyphRangeForCharacterRange、getCharacterRangeForGlyphRange接口重载，以及TextEncoding枚举。
+该示例通过[getLayoutManager](#getlayoutmanager12)接口获取文本的布局管理对象，使用[LayoutManager](ts-text-common.md#layoutmanager12)中以UTF-16编码查询的[getCharacterPositionAtCoordinate](ts-text-common.md#getcharacterpositionatcoordinate)根据长按坐标获取字符位置与亲和性，再通过[getGlyphRangeForCharacterRange](ts-text-common.md#getglyphrangeforcharacterrange)获取对应的字形索引范围与实际字符范围，最后通过[getRectsForRange](ts-text-common.md#getrectsforrange14)获取文本矩形区域，并在[Canvas](ts-components-canvas-canvas.md)上绘制渐变背景，实现对包含表情符号（字形簇）文本的高亮。
 
 ```TypeScript
 // xxx.ets

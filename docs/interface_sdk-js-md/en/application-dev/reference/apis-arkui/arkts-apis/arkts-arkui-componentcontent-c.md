@@ -1293,8 +1293,6 @@ struct Index {
 }
 ```
 
-Since API version 26.0.0, custom components in ReactiveComponentContent support V2 component reuse.
-
 ```TypeScript
 import { NodeContent, typeNode, ReactiveComponentContent } from '@kit.ArkUI';
 

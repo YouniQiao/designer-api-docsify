@@ -1,12 +1,16 @@
 # @ohos.arkui.advanced.InnerFullScreenLaunchComponent(System API)
 
-###### Child Components
- Not supported
- ###### Attributes
- The universal attributes are not supported.
- ###### Events
- The universal events are not supported.
+## Child Components
 
+Not supported
+
+## Attributes
+
+The universal attributes are not supported.
+
+## Events
+
+The universal events are not supported.
 
 ## Modules to Import
 
@@ -42,7 +46,7 @@ import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 
 ## Examples
 
-In the process list on the right, select the launched atomic service process (the bundle name of the launched atomic service, with the suffix "embeddable").
+> NOTE
 
 ```TypeScript
 import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';

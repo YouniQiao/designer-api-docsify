@@ -905,7 +905,7 @@ struct SliderExample {
 }
 ```
 
-The trackColorMetrics API is supported since API version 23.
+This example demonstrates how to set the gradient color stop of the specified color gamut, including the offset and color, using [trackColorMetrics](arkts-arkui-slider-attribute.md#trackcolormetrics). In this example, colorSpace is of the ColorSpace.DISPLAY_P3 type. You need to call the setWindowColorSpace API of the corresponding window to set the current window to the wide color gamut mode. For details, see [setWindowColorSpace](../arkts-apis-window-Window.md#setwindowcolorspace).
 
 ```TypeScript
 // xxx.ets

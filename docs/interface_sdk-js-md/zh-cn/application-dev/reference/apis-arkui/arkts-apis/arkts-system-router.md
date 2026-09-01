@@ -38,7 +38,7 @@ import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, Ena
 
 ## 示例
 
-示例树状结构如下：
+该示例展示了类Web范式下router.replace接口的跳转功能。
 
 ```TypeScript
 pages

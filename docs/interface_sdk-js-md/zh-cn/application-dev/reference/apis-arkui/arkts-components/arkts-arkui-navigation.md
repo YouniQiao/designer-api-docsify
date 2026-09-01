@@ -1571,7 +1571,7 @@ export function PageOneBuilder(name: string) {
 }
 ```
 
-[NavDestination](ts-basic-components-navdestination.md)通过[onReady](ts-basic-components-navdestination.md#onready11)事件能够拿到对应的[NavPathInfo](arkts-arkui-navpathinfo-c.md)和所属的[NavPathStack](#navpathstack10)。
+该示例主要演示如下两点功能：
 
 ```TypeScript
 class PageParam {
@@ -2626,7 +2626,7 @@ export class CustomTransition {
 }
 ```
 
-此示例在运行前需要在工程配置文件[module.json5](../../../quick-start/module-configuration-file.md)中的abilities字段里配置"orientation": "auto_rotation"。
+该示例主要展示Navigation组件在双栏模式下的使用效果，通过[splitPlaceholder](arkts-arkui-navigation-attribute.md#splitplaceholder)设置右侧默认占位页，使用[navBarWidthRange](#navbarwidthrange10)配置导航栏宽度范围，并借助[divider](#divider23)属性自定义导航栏与内容区之间的分割线样式。
 
 ```TypeScript
 import { ComponentContent } from '@kit.ArkUI';
@@ -2754,7 +2754,7 @@ struct NavigationExample {
 }
 ```
 
-在工程配置文件[module.json5](../../../quick-start/module-configuration-file.md)中的abilities字段里配置"orientation": "landscape"（该工程配置仅方便演示在横屏模式下的Navigation工具栏自适应能力，实际配置可自行设置为"auto_rotation"）。
+该示例主要通过[enableToolBarAdaptation](arkts-arkui-navigation-attribute.md#enabletoolbaradaptation)属性展示Navigation工具栏自适应能力的启用及关闭。
 
 ```TypeScript
 import { SymbolGlyphModifier } from '@kit.ArkUI';
@@ -2817,7 +2817,7 @@ struct NavigationExample {
 }
 ```
 
-从API version 20开始，新增创建Navigation组件的方式。
+该示例展示了Navigation组件通过配置[homeDestination](#navigation)参数，实现以[NavDestination](ts-basic-components-navdestination.md)作为根导航页的效果。
 
 ```TypeScript
 @Component
@@ -2898,7 +2898,7 @@ struct Index {
 }
 ```
 
-从API version 22开始，在setInterception的参数类型[NavigationInterception](arkts-arkui-navigationinterception-i.md)中新增了interception接口。
+该示例通过设置[setInterception](arkts-arkui-navpathstack-c.md#setinterception)方法来实现路由拦截功能，并在[NavDestinationContext](ts-basic-components-navdestination.md#navdestinationcontext11)中获取mode。
 
 ```TypeScript
 // Index.ets
@@ -3162,7 +3162,7 @@ export struct PageTwo {
 }
 ```
 
-从API version 14开始，新增recoverable接口。
+该示例演示如何使用[recoverable](#recoverable14)配置Navigation可恢复，需要开发者在应用模块初始化时启用[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md)的备份恢复功能，可参考[UIAbility备份恢复](../../../application-models/ability-recover-guideline.md)。
 
 ```TypeScript
 // Index.ets
@@ -3315,7 +3315,7 @@ export struct NavigationMenu {
 }
 ```
 
-从API版本26.0.0开始，[title](#title)接口的参数options，新增了[scrollEffectOptions](#scrolleffectoptions)属性。
+该示例演示如何使用[scrollEffectOptions](#scrolleffectoptions)配置项，开启标题栏滚动模糊效果。
 
 ```TypeScript
 // xxx.ets
@@ -3379,7 +3379,7 @@ struct NavigationExample {
 }
 ```
 
-从API版本26.0.0开始，[NavigationTitleOptions](arkts-arkui-navigationtitleoptions-i.md)新增了systemMaterial属性。
+该示例演示如何通过systemMaterial属性设置组件的系统材质，开启标题栏沉浸光感效果。
 
 ```TypeScript
 // xxx.ets
@@ -3511,7 +3511,7 @@ struct NavigationTitleMaterialDemo {
 }
 ```
 
-从API版本26.1.0开始，[NavigationConfiguration](arkts-arkui-navigationconfiguration-i.md)新增了clearContentStackOnPrimaryNavigation属性。
+该示例演示如何使用clearContentStackOnPrimaryNavigation属性，开启Navigation左起右清栈效果。
 
 ```TypeScript
 // xxx.ets

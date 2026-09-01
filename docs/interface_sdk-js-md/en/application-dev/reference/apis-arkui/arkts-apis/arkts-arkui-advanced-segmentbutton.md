@@ -614,7 +614,7 @@ struct Index {
 }
 ```
 
-Since API version 24, [SegmentButton](arkts-arkui-arkui-advanced-segmentbutton-segmentbutton-s.md) has added the enableStateAnimation attribute.
+This example demonstrates how to enable property animation for SegmentButton. That is, after enableStateAnimation is set to true, modifying the selectedIndexes value triggers a button switching animation. In addition, two SegmentButton components with the same selectedIndexes value present different switching animations depending on whether property animation is enabled.
 
 ```TypeScript
 import { SegmentButton, SegmentButtonItemTuple, SegmentButtonOptions } from '@kit.ArkUI';
@@ -684,7 +684,7 @@ struct Index {
 }
 ```
 
-Starting from API version 26.0.0, the backgroundSystemMaterial attribute has been added to [SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) and [CommonSegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-commonsegmentbuttonoptions-i.md).
+The following example uses the backgroundSystemMaterial attribute to set a transparent background material for the segment button, enable automatic color inversion and interactive deformation effects, and customize the color of the feedback light effect.
 
 ```TypeScript
 import {
@@ -738,7 +738,7 @@ struct Index {
 }
 ```
 
-The following example compares two scenarios: tapping the "Change fontColor" button changes the fontColor property of iconTextCapsuleOptions (a first-level basic type property, already supported for observation through @Observed and @ObjectLink), and the UI automatically refreshes. Tapping the "Change icon size" button changes the width and height properties of iconTextCapsuleOptions.imageSize (internal properties of the imageSize object, which require UIUtils.makeObserved to wrap imageSize for observation), and the UI also automatically refreshes.
+[SegmentButtonOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonoptions-c.md) uses the @Observed decorator, and the SegmentButton component receives this object through @ObjectLink. For first-level basic type properties of SegmentButtonOptions (such as fontColor and backgroundColor), the linkage mechanism of @Observed and @ObjectLink can already observe property changes and trigger UI refresh without additional processing. However, for internal properties of object-type properties in SegmentButtonOptions (such as width and height of imageSize, or properties of buttonPadding), which are deeper nested properties, @State can only observe first-level assignment changes and cannot detect modifications to such deep properties. As a result, the UI does not automatically refresh when internal properties of object-type properties are modified. Using the makeObserved API to wrap object-type properties (such as imageSize) can add deep observation capability to the internal properties of the object, so that when internal properties (such as width and height) are modified, the framework can detect the changes and trigger UI refresh. For details about the makeObserved API, see [makeObserved API: Changing Unobservable Data to Observable Data](../../../ui/state-management/arkts-new-makeObserved.md).
 
 ```TypeScript
 import {

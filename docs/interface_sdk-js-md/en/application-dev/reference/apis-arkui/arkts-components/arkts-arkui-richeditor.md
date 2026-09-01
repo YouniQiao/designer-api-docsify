@@ -338,7 +338,7 @@ struct RichEditorExample {
 }
 ```
 
-The paste menu item in this example involves reading pasteboard data. Therefore, you need to [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md) as required.
+This example illustrates how to bind a custom menu to the component using [bindSelectionMenu](#bindselectionmenu).
 
 ```TypeScript
 // xxx.ets
@@ -4089,7 +4089,7 @@ struct RichEditorExample {
 }
 ```
 
-The includeFontPadding and fallbackLineSpacing attributes are added since API version 23.
+This example uses the [includeFontPadding](#includefontpadding23) attribute to add font padding at the top of the first line and the bottom of the last line of text. It also uses the [fallbackLineSpacing](#fallbacklinespacing23) attribute to implement adaptive line spacing which adjusts dynamically according to the actual text height.
 
 ```TypeScript
 @Entry
@@ -4171,7 +4171,7 @@ struct RichEditorExample {
 }
 ```
 
-The compressLeadingPunctuation attribute is added since API version 23.
+This example demonstrates how to compress punctuation at the beginning of a line using the [compressLeadingPunctuation](#compressleadingpunctuation23) attribute.
 
 ```TypeScript
 @Entry
@@ -4209,7 +4209,7 @@ struct CompressLeadingPunctuationDemo {
 }
 ```
 
-The selectedDragPreviewStyle API is supported since API version 23.
+This example demonstrates how to set the drag preview style using the [selectedDragPreviewStyle](#selecteddragpreviewstyle23) API.
 
 ```TypeScript
 @Entry
@@ -4235,7 +4235,7 @@ struct RichEditorDemo {
 }
 ```
 
-The singleLine API is added since API version 23.
+This example demonstrates how to set single-line mode using the [singleLine](arkts-arkui-richeditor-attribute.md#singleline) API.
 
 ```TypeScript
 @Entry
@@ -4270,7 +4270,7 @@ struct SingleLineDemo {
 }
 ```
 
-The setStyledPlaceholder API is added since API version 24.
+This example demonstrates how to set the placeholder text of the styled string using the [setStyledPlaceholder](#setstyledplaceholder24) API.
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -4344,7 +4344,7 @@ struct RichEditorExample {
 }
 ```
 
-The orphanCharOptimization API is supported since API version 26.0.0.
+This example demonstrates how to use the [orphanCharOptimization](#orphancharoptimization) API to enable/disable orphan character optimization, ensuring no orphan character appears in the last line of a paragraph.
 
 ```TypeScript
 // xxx.ets
@@ -4387,7 +4387,7 @@ struct RichEditorDemo {
 }
 ```
 
-The horizontalScrolling API is added since API version 26.0.0.
+This example demonstrates how to set horizontal scrolling using [horizontalScrolling](#horizontalscrolling).
 
 ```TypeScript
 // xxx.ets

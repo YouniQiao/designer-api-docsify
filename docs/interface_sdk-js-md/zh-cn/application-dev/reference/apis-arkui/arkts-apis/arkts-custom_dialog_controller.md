@@ -181,7 +181,7 @@ struct CustomDialogUser {
 }
 ```
 
-从API版本26.0.0开始，CustomDialogControllerOptions新增displayModeInSubWindow属性。
+在2in1设备上设置showInSubWindow为true时，可以弹出在主窗外显示的弹窗。
 
 ```TypeScript
 // xxx.ets
@@ -444,7 +444,7 @@ struct CustomDialogUser {
 }
 ```
 
-从API version 20开始，在CustomDialogController中新增了getState接口。
+该示例实现了在[CustomDialogController](arkts-arkui-customdialogcontroller-c.md)中调用getState获取弹窗当前状态。
 
 ```TypeScript
 // xxx.ets
@@ -702,7 +702,7 @@ struct CustomDialogUser {
 }
 ```
 
-从API version 15开始，在CustomDialogControllerOptions中新增了keyboardAvoidDistance属性。
+该示例通过监听键盘变化，调整布局[margin](ts-universal-attributes-size.md#margin)的属性，实现与使用keyboardAvoidDistance调整弹窗与软键盘的间距一样的效果。
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
@@ -837,7 +837,7 @@ struct CustomDialogUser {
 }
 ```
 
-从API version 19开始，在CustomDialogControllerOptions中新增了onDidAppear、onDidDisappear、onWillAppear和onWillDisappear属性。
+该示例为弹窗配置生命周期回调。
 
 ```TypeScript
 // xxx.ets
@@ -1010,7 +1010,7 @@ struct CustomDialogUser {
 }
 ```
 
-从API version 19开始，在CustomDialogControllerOptions中新增了backgroundBlurStyleOptions属性。
+该示例通过配置backgroundBlurStyleOptions，实现自定义背景模糊效果。
 
 ```TypeScript
 @CustomDialog
@@ -1066,7 +1066,7 @@ struct CustomDialogUser {
 }
 ```
 
-从API version 19开始，在CustomDialogControllerOptions中新增了backgroundEffect属性。
+该示例通过配置backgroundEffect，实现自定义背景效果。
 
 ```TypeScript
 @CustomDialog
@@ -1186,7 +1186,7 @@ struct CustomDialogUser {
 }
 ```
 
-从API版本26.0.0开始，在CustomDialogControllerOptions中新增了systemMaterial属性。
+该示例通过systemMaterial设置组件的系统材质，实现沉浸光感效果。
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';

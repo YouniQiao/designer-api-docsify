@@ -1,6 +1,9 @@
 # WallpaperExtensionAbility（系统接口）
 
-class of wallpaper extension ability.
+WallpaperExtensionAbility为壁纸扩展模块，提供应用生命周期回调和监听壁纸变化的能力。  
+> **说明：**
+> 
+> 本模块接口均为系统接口。
 
 **起始版本：** 10
 
@@ -22,7 +25,10 @@ import { WallpaperExtensionAbility } from '@kit.BasicServicesKit';
 onCreate(want: object): void
 ```
 
-初始化壁纸扩展应用。在拉起Extension壁纸扩展应用时触发回调，执行初始化应用操作。不支持多线程并发调用。
+初始化壁纸扩展应用。在拉起Extension壁纸扩展应用时触发回调，执行初始化应用操作。不支持多线程并发调用。  
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 23开始废弃。
 
 **起始版本：** 10
 
@@ -59,7 +65,10 @@ class WallpaperExt extends WallpaperExtensionAbility {
 onDestroy(): void
 ```
 
-清理壁纸扩展应用资源。在销毁壁纸扩展应用时触发回调，执行资源清理。不支持多线程并发调用。
+清理壁纸扩展应用资源。在销毁壁纸扩展应用时触发回调，执行资源清理。不支持多线程并发调用。  
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 23开始废弃。
 
 **起始版本：** 10
 
@@ -89,7 +98,10 @@ class WallpaperExt extends WallpaperExtensionAbility {
 onWallpaperChange(wallpaperType: number): void
 ```
 
-监听壁纸变化。在壁纸变化时触发回调。不支持多线程并发调用。
+监听壁纸变化。在壁纸变化时触发回调。不支持多线程并发调用。  
+> **说明：**
+> 
+> 从 API version 10开始支持，从API version 23开始废弃。
 
 **起始版本：** 10
 

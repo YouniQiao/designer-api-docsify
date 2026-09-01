@@ -76,7 +76,7 @@ struct PatternLockExample {
 }
 ```
 
-通过'Reset PatternLock'按钮，用户可以重置密码锁。
+该示例通过[sideLength](arkts-arkui-patternlock-attribute.md#sidelength)属性设置九宫格的大小、[circleRadius](arkts-arkui-patternlock-attribute.md#circleradius)属性设置宫格中圆点的半径、[onPatternComplete](arkts-arkui-patternlock-attribute.md#onpatterncomplete)属性设置密码输入完成时的回调。
 
 ```TypeScript
 // xxx.ets

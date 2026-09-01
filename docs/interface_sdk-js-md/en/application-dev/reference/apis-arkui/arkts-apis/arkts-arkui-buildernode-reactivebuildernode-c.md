@@ -1065,7 +1065,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to verify a ReactiveBuilderNode's state using the [isDisposed](#isdisposed) API before and after node release. This API returns false before node release and true after node release.
+For details, see [isDisposed](#isdisposed).
 
 ```TypeScript
 import { FrameNode, NodeController, ReactiveBuilderNode } from '@kit.ArkUI';
@@ -1449,7 +1449,7 @@ struct MyComponent {
 }
 ```
 
-When the blue area is touched, the touch event is transferred to the ReactiveBuilderNode button after coordinate conversion. The touch feedback and log output of the button are triggered, implementing accurate cross-node transfer of the touch event.
+The following example demonstrates coordinate conversion and cross-node transfer of the touch event in the custom node through the linkage between the button component constructed by ReactiveBuilderNode and the touch event of the external container.
 
 ```TypeScript
 import { NodeController, ReactiveBuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
@@ -1748,7 +1748,7 @@ struct Index {
 }
 ```
 
-Since API version 26.0.0, custom components in the ReactiveBuilderNode support V2 component reuse.
+recycle
 
 ```TypeScript
 import { FrameNode, NodeController, ReactiveBuilderNode, UIContext } from '@kit.ArkUI';

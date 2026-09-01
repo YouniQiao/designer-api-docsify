@@ -95,7 +95,7 @@ struct Index {
 import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
 
 const clip = new ShapeClip();
-clip.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+clip.setCommandPath({ commands: 'M100 0 L0 100 L50 200 L150 200 L200 100 Z' });
 
 const renderNode = new RenderNode();
 renderNode.frame = {
@@ -131,7 +131,7 @@ struct Index {
     Column() {
       NodeContainer(this.myNodeController)
         .borderWidth(1)
-      Button("setCircleShape")
+      Button('setCircleShape')
         .onClick(() => {
           renderNode.shapeClip.setCircleShape({ centerY: 75, centerX: 75, radius: 75 });
 
@@ -169,7 +169,7 @@ Sets the command for drawing a path.
 import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
 
 const mask = new ShapeMask();
-mask.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+mask.setCommandPath({ commands: 'M100 0 L0 100 L50 200 L150 200 L200 100 Z' });
 mask.fillColor = 0X55FF0000;
 
 const renderNode = new RenderNode();
@@ -215,7 +215,7 @@ struct Index {
 import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
 
 const clip = new ShapeClip();
-clip.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+clip.setCommandPath({ commands: 'M100 0 L0 100 L50 200 L150 200 L200 100 Z' });
 
 const renderNode = new RenderNode();
 renderNode.frame = {
@@ -251,9 +251,9 @@ struct Index {
     Column() {
       NodeContainer(this.myNodeController)
         .borderWidth(1)
-      Button("setCommandPath")
+      Button('setCommandPath')
         .onClick(() => {
-          renderNode.shapeClip.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+          renderNode.shapeClip.setCommandPath({ commands: 'M100 0 L0 100 L50 200 L150 200 L200 100 Z' });
         })
     }
   }
@@ -328,7 +328,7 @@ struct Index {
 import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
 
 const clip = new ShapeClip();
-clip.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+clip.setCommandPath({ commands: 'M100 0 L0 100 L50 200 L150 200 L200 100 Z' });
 
 const renderNode = new RenderNode();
 renderNode.frame = {
@@ -364,7 +364,7 @@ struct Index {
     Column() {
       NodeContainer(this.myNodeController)
         .borderWidth(1)
-      Button("setOvalShape")
+      Button('setOvalShape')
         .onClick(() => {
           renderNode.shapeClip.setOvalShape({
             left: 0,
@@ -456,7 +456,7 @@ struct Index {
 import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
 
 const clip = new ShapeClip();
-clip.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+clip.setCommandPath({ commands: 'M100 0 L0 100 L50 200 L150 200 L200 100 Z' });
 
 const renderNode = new RenderNode();
 renderNode.frame = {
@@ -494,7 +494,7 @@ struct Index {
       NodeContainer(this.myNodeController)
         .borderWidth(1)
         .margin({ bottom: 20 })
-      Button("setRectShape")
+      Button('setRectShape')
         .onClick(() => {
           shapeClip.setRectShape({
             left: 0,
@@ -534,7 +534,7 @@ Sets the mask in the shape of a rectangle with rounded corners.
 **Examples**
 
 ```TypeScript
-import { RenderNode, FrameNode, NodeController, ShapeMask,RoundRect} from '@kit.ArkUI';
+import { RenderNode, FrameNode, NodeController, ShapeMask, RoundRect } from '@kit.ArkUI';
 
 class MyNodeController extends NodeController {
   private rootNode: FrameNode | null = null;
@@ -551,7 +551,7 @@ class MyNodeController extends NodeController {
         bottomLeft: { x: 32, y: 32 },
         bottomRight: { x: 32, y: 32 }
       }
-    }
+    };
     mask.setRoundRectShape(roundRect);
     mask.fillColor = 0X55FF0000;
 
@@ -586,7 +586,7 @@ struct Index {
 import { RenderNode, FrameNode, NodeController, ShapeClip } from '@kit.ArkUI';
 
 const clip = new ShapeClip();
-clip.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+clip.setCommandPath({ commands: 'M100 0 L0 100 L50 200 L150 200 L200 100 Z' });
 
 const renderNode = new RenderNode();
 renderNode.frame = {
@@ -622,7 +622,7 @@ struct Index {
     Column() {
       NodeContainer(this.myNodeController)
         .borderWidth(1)
-      Button("setRoundRectShape")
+      Button('setRoundRectShape')
         .onClick(() => {
           renderNode.shapeClip.setRoundRectShape({
             rect: {

@@ -238,7 +238,7 @@ console.info("result = " + result);
 // 输出结果：result = true
 ```
 
-该接口无法对Sendable class中的async成员函数进行有效判断，无替代方案。
+> 说明：
 
 ```TypeScript
 // /entry/src/main/ets/pages/test.ts
@@ -680,7 +680,7 @@ console.info("result = " + result);
 // 输出结果：result = true
 ```
 
-该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的属性与做判等的方式替代。
+> 说明：
 
 ```TypeScript
 // /entry/src/main/ets/pages/test.ts

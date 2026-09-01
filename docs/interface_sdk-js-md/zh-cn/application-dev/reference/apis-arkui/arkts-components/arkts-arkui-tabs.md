@@ -1345,7 +1345,7 @@ struct TabsExample {
 }
 ```
 
-从API version 15开始，在TabsOptions中新增了barModifier接口。
+该示例通过使用[TabsOptions](arkts-arkui-tabsoptions-i.md)中的barModifier设置tabBar的clip属性实现页签超出tabBar区域显示效果。
 
 ```TypeScript
 // xxx.ets
@@ -1431,7 +1431,7 @@ struct TabsBarModifierExample {
 }
 ```
 
-从API version 15开始，在TabsOptions中新增了barModifier接口。
+本示例通过使用[TabsOptions](arkts-arkui-tabsoptions-i.md)中的barModifier设置tabBar的align属性实现页签对齐布局效果。
 
 ```TypeScript
 // xxx.ets
@@ -1530,7 +1530,7 @@ struct TabsBarModifierExample {
 }
 ```
 
-从API version 18开始，新增了onSelected接口。
+该示例通过[onSelected](#onselected18)接口，实现了Tabs与TabBar的同步切换。
 
 ```TypeScript
 // xxx.ets
@@ -1602,7 +1602,7 @@ struct TabsExample {
 }
 ```
 
-从API version 19开始，新增了cachedMaxCount接口。
+该示例通过设置[cachedMaxCount](arkts-arkui-tabs-attribute.md#cachedmaxcount)属性，实现了Tabs子组件的释放。
 
 ```TypeScript
 @Entry
@@ -1654,7 +1654,7 @@ struct MyComponent {
 }
 ```
 
-从API version 18开始，新增了barBackgroundBlurStyle和barBackgroundEffect接口。
+该示例分别通过[barBackgroundBlurStyle](arkts-arkui-tabs-attribute.md#barbackgroundblurstyle)和[barBackgroundEffect](arkts-arkui-tabs-attribute.md#barbackgroundeffect)设置TabBar页签栏的背景模糊样式和效果。
 
 ```TypeScript
 // xxx.ets
@@ -1773,7 +1773,7 @@ struct TabsExample {
 }
 ```
 
-从API version 20开始，新增了animationCurve接口。
+该示例展示了如何通过[animationCurve](arkts-arkui-tabs-attribute.md#animationcurve)接口设置Tabs翻页动画曲线，并结合animationDuration设置翻页动画的时长。
 
 ```TypeScript
 import { curves } from '@kit.ArkUI';
@@ -1859,7 +1859,7 @@ struct TabsExample {
 }
 ```
 
-从API version 23开始，新增onContentDidScroll接口。
+该示例展示了如何通过[onContentDidScroll](#oncontentdidscroll23)接口设置Tabs滑动时的回调。
 
 ```TypeScript
 // xxx.ets
@@ -1954,7 +1954,7 @@ struct TabsDidScrollExample {
 }
 ```
 
-从API version 24开始，新增nestedScroll接口。
+该示例展示了如何通过[nestedScroll](#nestedscroll24)接口设置Tabs嵌套滚动效果。
 
 ```TypeScript
 // xxx.ets
@@ -2016,7 +2016,7 @@ struct TabsExample {
 }
 ```
 
-从API版本26.0.0开始，新增barFloatingStyle接口。
+本示例展示了如何通过[barFloatingStyle](arkts-arkui-tabs-attribute.md#barfloatingstyle)接口设置TabBar的悬浮样式和背板沉浸式材质。
 
 ```TypeScript
 // xxx.ets

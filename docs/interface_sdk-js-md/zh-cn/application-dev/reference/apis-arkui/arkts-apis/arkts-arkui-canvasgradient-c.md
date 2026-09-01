@@ -154,7 +154,7 @@ struct AddColorStop {
 }
 ```
 
-从API版本26.0.0开始，[addColorStop](#addcolorstop)接口新增支持通过ColorMetrics类型入参进行HDR提亮。
+addColorStop
 
 ```TypeScript
 // xxx.ets

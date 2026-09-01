@@ -37,6 +37,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 | [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | 表示路径操作迭代器，可通过遍历迭代器逐段读取路径的操作指令。迭代器按顺序遍历路径中的操作指令，便于实现对路径的细粒度分析与自定义处理。 |
 | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | 画笔对象，用于描述所绘制图形形状的轮廓信息，支持设置颜色、线宽、抗锯齿、透明度、混合模式、转角样式、线帽样式，以及颜色滤波器、蒙版滤波器、路径效果、着色器、阴影层等绘制效果。 |
 | [PointUtils](arkts-arkgraphics2d-drawing-pointutils-c.md) | 本Class是提供处理坐标点的工具类，支持对坐标点进行取反、偏移等操作，适用于需要对坐标点进行变换处理的图形绘制场景。 |
+| [RecordCmdUtils](arkts-arkgraphics2d-drawing-recordcmdutils-c.md) | 该类提供了一组录制回放命令的操作。 |
 | [RectUtils](arkts-arkgraphics2d-drawing-rectutils-c.md) | 提供处理矩形的工具，支持矩形的快速构建与基本属性获取、边界计算与调整、平移与状态判断、边界规范化等功能。 |
 | [Region](arkts-arkgraphics2d-drawing-region-c.md) | 区域对象，用于描述所绘制图形的区域信息。Region支持设置矩形区域和路径区域，提供区域间的合并运算、相交判断、平移、边界获取等操作。 |
 | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | 圆角矩形对象。支持设置和获取指定圆角位置的圆角半径，以及对圆角矩形进行平移操作。 |
@@ -54,6 +55,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 | --- | --- |
 | [FontFeature](arkts-arkgraphics2d-drawing-fontfeature-i.md) | 表示字体特征。字体特征是字体内置的排版规则，用于控制字形的显示效果，具体包括连字、替代字形、上下标等功能。 |
 | [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md) | 描述字形大小和布局的属性信息，同一种字体中的字符属性大致相同。 |
+| [RecordCmd](arkts-arkgraphics2d-drawing-recordcmd-i.md) |  |
 | [TextBlobRunBuffer](arkts-arkgraphics2d-drawing-textblobrunbuffer-i.md) | 描述一行文字中具有相同属性的连续字形。 |
 
 ### 枚举

@@ -137,7 +137,7 @@ export default {
 };
 ```
 
-NOTEHTTPS is supported by default. To support HTTP, you need to add "network" to the config.json file, and set the attribute "cleartextTraffic" to true.
+> NOTEHTTPS is supported by default. To support HTTP, you need to add "network" to the config.json file, and set the attribute "cleartextTraffic" to true.
 
 ```TypeScript
 {

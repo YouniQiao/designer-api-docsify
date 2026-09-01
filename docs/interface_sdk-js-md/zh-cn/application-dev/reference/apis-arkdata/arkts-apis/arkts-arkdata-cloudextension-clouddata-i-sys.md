@@ -52,7 +52,7 @@ nextCursor: string
 values: Array<Record<string, CloudType>>
 ```
 
-需要查询数据的数组，包括数据记录的实际值和ExtensionValue（扩展值）。
+需要查询数据的数组，包括数据记录的实际值和[ExtensionValue](arkts-arkdata-cloudextension-extensionvalue-i-sys.md)（扩展值）。
 
 **类型：** Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;
 

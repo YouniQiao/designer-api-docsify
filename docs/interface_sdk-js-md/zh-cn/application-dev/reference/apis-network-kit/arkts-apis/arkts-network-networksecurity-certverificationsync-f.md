@@ -57,6 +57,7 @@ export function certVerificationSync(cert: CertBlob, caCert?: CertBlob): number
 
 ```TypeScript
 import { networkSecurity } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // Create certificate blobs
 const cert: networkSecurity.CertBlob = {

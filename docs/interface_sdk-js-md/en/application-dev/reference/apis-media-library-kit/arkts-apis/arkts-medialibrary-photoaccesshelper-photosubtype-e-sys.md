@@ -20,6 +20,20 @@ Screenshot and screen recording file.
 
 **System API:** This is a system API.
 
+## CINEMATIC_VIDEO
+
+```TypeScript
+CINEMATIC_VIDEO = 5
+```
+
+Cinematic video file.
+
+**Since:** 26.1.0
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
 ## SLOW_MOTION_VIDEO
 
 ```TypeScript
@@ -43,6 +57,20 @@ SPATIAL_3DGS = 7
 Video file using the 3D Gaussian Splatting (3DGS) rendering format.
 
 **Since:** 22
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## CINEMATIC_VIDEO_V2
+
+```TypeScript
+CINEMATIC_VIDEO_V2 = 8
+```
+
+Cinematic version 2 video file. Compared to CINEMATIC_VIDEO, it adds more effects such as Hitchcock.
+
+**Since:** 26.1.0
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

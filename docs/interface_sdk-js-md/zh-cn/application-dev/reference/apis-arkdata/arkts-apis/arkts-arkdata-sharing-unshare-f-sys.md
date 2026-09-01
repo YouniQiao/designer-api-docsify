@@ -16,7 +16,7 @@ function unshare(
     ): void
 ```
 
-根据指定的共享资源标识和共享参与者发起共享邀请，使用callback异步回调。
+根据指定的共享资源标识和共享参与者取消共享，使用callback异步回调。
 
 **起始版本：** 11
 
@@ -29,8 +29,8 @@ function unshare(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sharingResource | string | 是 | 端云共享数据的资源标识。 |
-| participants | Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | 是 | 端云共享的参与者。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;Result&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt;&gt; | 是 | 回调函数。返回端云共享的结果。 |
+| participants | Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | 是 | 端云共享参与者。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;Result&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt;&gt; | 是 | 回调函数。返回取消共享的结果。 |
 
 **错误码：**
 
@@ -78,7 +78,7 @@ function unshare(
     ): Promise<Result<Array<Result<Participant>>>>
 ```
 
-根据指定的共享资源标识和共享参与者发起共享邀请，使用Promise异步回调。
+根据指定的共享资源标识和共享参与者取消共享，使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -97,7 +97,7 @@ function unshare(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回端云共享的结果。 |
+| Promise&lt;Result&lt;Array&lt;Result&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回取消共享的结果。 |
 
 **错误码：**
 

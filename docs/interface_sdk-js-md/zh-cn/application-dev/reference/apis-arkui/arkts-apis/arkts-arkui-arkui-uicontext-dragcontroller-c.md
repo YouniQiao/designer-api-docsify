@@ -258,7 +258,7 @@ enableDropDisallowedBadge(enabled: boolean): void
 
 **示例**
 
-在EntryAbility.ets中调用enableDropDisallowedBadge接口，设置enabled参数为true。
+该示例通过enableDropDisallowedBadge接口实现了拖拽对象经过不允许落入的目标区域时显示拖拽禁止角标的功能。
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';

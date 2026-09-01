@@ -46,7 +46,7 @@ function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<Acti
 
 **示例**
 
-示例：1
+showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>):void
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
@@ -79,7 +79,7 @@ try {
 };
 ```
 
-从API version 19开始，该示例通过调用ActionMenuOptions中的onDidAppear、onDidDisappear、onWillAppear和onWillDisappear属性展示了操作菜单生命周期相关接口的使用方法。
+zh-cn_image_0005
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
@@ -195,6 +195,8 @@ function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessRe
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 **示例**
+
+showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';

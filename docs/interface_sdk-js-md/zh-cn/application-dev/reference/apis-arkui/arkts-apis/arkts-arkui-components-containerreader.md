@@ -12,7 +12,7 @@ import { ContainerReader, ContainerReaderAttribute, BreakpointOptions } from '@k
 
 | 名称 | 说明 |
 | --- | --- |
-| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) | 除支持通用属性外，还支持以下属性： |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) | 除支持[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)外，还支持以下属性： |
 
 ### 接口
 

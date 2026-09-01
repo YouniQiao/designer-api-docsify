@@ -250,7 +250,7 @@ struct TextExample2 {
 }
 ```
 
-The MULTILINE_START and MULTILINE_CENTER enums are added to the [EllipsisMode](ts-appendix-enums.md#ellipsismode11) attribute since API version 24.
+This example demonstrates how to clip text with an ellipsis and adjust its position using the [maxLines](#maxlines), [textOverflow](#textoverflow), and [ellipsisMode](#ellipsismode11) attributes. The MULTILINE_START and MULTILINE_CENTER enums are used to implement the effect of displaying ellipsis at the beginning and in the middle of a line for single-line and multi-line text. In addition, you can set the options for the marquee effect using [marqueeOptions](#marqueeoptions18) and the [onMarqueeStateChange](arkts-arkui-text-attribute.md#onmarqueestatechange) callback that is invoked when the marquee animation reaches the specified state.
 
 ```TypeScript
 // xxx.ets
@@ -431,7 +431,7 @@ struct TextExample4 {
 }
 ```
 
-The [onWillCopy](#onwillcopy) API is added since API version 26.0.0.
+This example demonstrates how to set text selection, invoke a copy callback, make text selection draggable, modify the selection handle and background colors, and intercept a system copy operation using the following APIs: [selection](#selection11) (available since API version 11), [onCopy](#oncopy11) (available since API version 11), [draggable](#draggable9) (available since API version 9), [caretColor](#caretcolor14) (available since API version 14), [selectedBackgroundColor](#selectedbackgroundcolor14) (available since API version 14), and [onWillCopy](#onwillcopy).
 
 ```TypeScript
 // xxx.ets
@@ -1256,7 +1256,7 @@ struct Index {
 }
 ```
 
-Since API version 26.0.0, the punctuationOverflow API is added.
+This example shows how to use [compressLeadingPunctuation](#compressleadingpunctuation23) to set the punctuation compression at the beginning of a line, and use [punctuationOverflow](#punctuationoverflow) to set the punctuation hanging at the end of a line.
 
 ```TypeScript
 @Entry
@@ -1297,7 +1297,7 @@ struct PunctuationDemo {
 }
 ```
 
-The [includeFontPadding](#includefontpadding23) and [fallbackLineSpacing](#fallbacklinespacing23) APIs are supported since API version 23.
+This example uses the [includeFontPadding](#includefontpadding23) API to add the spacing of the first and last lines and the [fallbackLineSpacing](#fallbacklinespacing23) API to set adaptive line spacing.
 
 ```TypeScript
 // xxx.ets
@@ -1355,7 +1355,7 @@ struct Index {
 }
 ```
 
-The selectedDragPreviewStyle API is supported since API version 23.
+This example demonstrates how to set the drag preview style for text being dragged using the [selectedDragPreviewStyle](#selecteddragpreviewstyle23) API.
 
 ```TypeScript
 @Entry
@@ -1376,7 +1376,7 @@ struct TextTest {
 }
 ```
 
-The textDirection API is supported since API version 23.
+This example demonstrates how to set the text layout direction using the [textDirection](#textdirection23) API.
 
 ```TypeScript
 // xxx.ets
@@ -1487,7 +1487,7 @@ struct TextExample10 {
 }
 ```
 
-The orphanCharOptimization API is supported since API version 26.0.0.
+This example demonstrates how to use the [orphanCharOptimization](#orphancharoptimization) API to enable/disable orphan word optimization, ensuring no orphan character appears in the last line of a paragraph.
 
 ```TypeScript
 // xxx.ets
@@ -1518,7 +1518,7 @@ struct TextExample {
 }
 ```
 
-The [fontVariations](#fontvariations) API is added since API version 26.0.0.
+This example demonstrates how to set text font variations using [fontVariations](#fontvariations).
 
 ```TypeScript
 // xxx.ets
@@ -1542,7 +1542,7 @@ struct TextExample {
 }
 ```
 
-Since API version 26.0.0, when the text component calls this API, the image preview menu takes effect if the menuType attribute in options is set to MenuType.PREVIEW_MENU.
+This example demonstrates how to use the [bindSelectionMenu](#bindselectionmenu11) API to set an image preview menu for text.
 
 ```TypeScript
 // xxx.ets
@@ -1583,7 +1583,7 @@ struct TextExample {
 }
 ```
 
-The incrementalUpdatePolicy attribute is added since API version 26.0.0.
+This example shows how to use the [incrementalUpdatePolicy](#incrementalupdatepolicy) API to set the incremental update policy for text rendering and uses paragraph-level cache to optimize rendering performance.
 
 ```TypeScript
 // xxx.ets
@@ -1714,7 +1714,7 @@ struct StyledStringAppend {
 }
 ```
 
-Since API version 26.0.0, you can use the tailIndents attribute to set text tail indentation.
+This example demonstrates how to use the [tailIndents](#tailindents) API to set text tail indentation.
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -1754,7 +1754,7 @@ struct TailIndentsExample {
 }
 ```
 
-The enableSelectedDataDetector API is added in API version 22.
+This example demonstrates how to configure the AI menu for text selection using the [enableSelectedDataDetector](#enableselecteddatadetector22) API.
 
 ```TypeScript
 @Entry
@@ -1777,7 +1777,7 @@ struct DataDetectorDemo {
 }
 ```
 
-Since API version 26.0.0, the getCharacterPositionAtCoordinate, getGlyphRangeForCharacterRange, and getCharacterRangeForGlyphRange APIs with the encoding type parameter are added, and the TextEncoding enumeration is added.
+This example shows how to use [getLayoutManager](#getlayoutmanager12) to obtain the text layout management object, use [getCharacterPositionAtCoordinate](ts-text-common.md#getcharacterpositionatcoordinate) queried in UTF-16 format in [LayoutManager](ts-text-common.md#layoutmanager12) to obtain the character position and affinity based on the long-pressing coordinates, use [getGlyphRangeForCharacterRange](ts-text-common.md#getglyphrangeforcharacterrange) to obtain the corresponding glyph index range and actual character range, and use [getRectsForRange](ts-text-common.md#getrectsforrange14) to obtain the text rectangular area, and draw a gradient background on [Canvas](ts-components-canvas-canvas.md) to highlight the text that contains emoticons (glyph clusters).
 
 ```TypeScript
 // xxx.ets

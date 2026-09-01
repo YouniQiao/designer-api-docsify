@@ -259,7 +259,7 @@ Specifies whether to enable the display of a disallowed badge when dragged conte
 
 **Examples**
 
-Call the enableDropDisallowedBadge API in EntryAbility.ets and set the enabled parameter to true.
+This example demonstrates the function of displaying a drag-disallowed badge when a drag object passes over a target area where dropping is not allowed, implemented via the enableDropDisallowedBadge API.
 
 ```TypeScript
 import { UIAbility } from '@kit.AbilityKit';

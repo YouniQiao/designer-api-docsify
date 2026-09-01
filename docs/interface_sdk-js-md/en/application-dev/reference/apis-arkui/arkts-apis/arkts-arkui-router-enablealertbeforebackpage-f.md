@@ -30,6 +30,8 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 **Examples**
 
+enableAlertBeforeBackPage(options: EnableAlertOptions): void
+
 ```TypeScript
 import { router } from '@kit.ArkUI';
 

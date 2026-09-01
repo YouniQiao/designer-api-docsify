@@ -46,7 +46,7 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 
 **Examples**
 
-Example 1
+showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>):void
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
@@ -79,7 +79,7 @@ try {
 };
 ```
 
-This example demonstrates how to use the onDidAppear, onDidDisappear, onWillAppear, and onWillDisappear properties of ActionMenuOptions to implement the action menu lifecycle callbacks, supported since API version 19.
+en-us_image_0005
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
@@ -195,6 +195,8 @@ Creates and displays an action menu in the given settings. This API uses a promi
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 **Examples**
+
+showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';

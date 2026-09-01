@@ -9,9 +9,10 @@ You can embed the **PhotoPickerComponent** in your application's layout to let u
  > **NOTE**
  >
  > - This component does not support [same-layer rendering](../../../web/web-same-layer.md).
- ###### Attributes
- The universal attributes are supported.
 
+## Attributes
+
+The universal attributes are supported.
 
 ## Modules to Import
 

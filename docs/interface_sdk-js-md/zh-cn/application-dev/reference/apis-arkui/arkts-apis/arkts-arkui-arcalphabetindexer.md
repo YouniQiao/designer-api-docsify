@@ -135,7 +135,7 @@ struct ArcListAndIndexer {
 }
 ```
 
-从API version 18开始，支持popupColor和popupBackground接口。
+该示例通过popupColor和popupBackground接口实现了提示弹窗的显示背景颜色和文字颜色。
 
 ```TypeScript
 // xxx.ets

@@ -135,7 +135,7 @@ struct ArcListAndIndexer {
 }
 ```
 
-Since API version 18, the popupColor and popupBackground APIs are supported.
+This example uses the popupColor and popupBackground APIs to set the display background color and text color of the pop-up window.
 
 ```TypeScript
 // xxx.ets

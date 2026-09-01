@@ -1,10 +1,12 @@
 # @ohos.atomicservice.HalfScreenLaunchComponent(Defines the halfScreen launch component)
 
-###### Child Components
- Not supported
- ###### Attributes
- The universal attributes are not supported.
+## Child Components
 
+Not supported
+
+## Attributes
+
+The universal attributes are not supported.
 
 ## Modules to Import
 
@@ -22,7 +24,7 @@ import { HalfScreenLaunchComponent } from '@kit.ArkUI';
 
 ## Examples
 
-In the process list on the right, select the process of the launched atomic service. The bundle name has embeddable within its suffix segment.
+This example demonstrates how to start a top-up service in embedded mode.
 
 ```TypeScript
 import { HalfScreenLaunchComponent } from '@kit.ArkUI';

@@ -12,7 +12,10 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function getId(wallpaperType: WallpaperType, callback: AsyncCallback<number>): void
 ```
 
-获取指定类型壁纸的ID。
+获取指定类型壁纸的ID。使用callback异步回调。  
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -24,8 +27,8 @@ function getId(wallpaperType: WallpaperType, callback: AsyncCallback<number>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |  |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |  |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取壁纸ID成功，err为undefined，data为获取到的壁纸ID；否则为错误对象。 |
 
 **示例**
 
@@ -48,7 +51,10 @@ wallpaper.getId(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessError,
 function getId(wallpaperType: WallpaperType): Promise<number>
 ```
 
-获取指定类型壁纸的ID。
+获取指定类型壁纸的ID。使用Promise异步回调。  
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -60,13 +66,13 @@ function getId(wallpaperType: WallpaperType): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |  |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 壁纸的ID。如果配置了这种壁纸类型的壁纸就返回一个大于等于0的数，否则返回-1。取值范围是-1到（2^31-1）。 |
+| Promise&lt;number&gt; | Promise对象，返回壁纸的ID。如果配置了这种壁纸类型的壁纸就返回一个大于等于0的数，否则返回-1。取值范围是-1到（2^31-1）。 |
 
 **示例**
 

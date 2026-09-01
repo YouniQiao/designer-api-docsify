@@ -31,6 +31,8 @@ Creates an HTTP request. You can use this API to initiate or destroy an HTTP req
 
 **Examples**
 
+createHttp(): HttpRequest
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 

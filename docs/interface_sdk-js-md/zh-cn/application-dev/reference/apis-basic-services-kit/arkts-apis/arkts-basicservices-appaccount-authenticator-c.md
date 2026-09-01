@@ -456,6 +456,8 @@ getRemoteObject(): rpc.RemoteObject
 
 **示例**
 
+接口需组合使用，请查看[getRemoteObject](#getremoteobject)中的示例。
+
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { Want } from '@kit.AbilityKit';

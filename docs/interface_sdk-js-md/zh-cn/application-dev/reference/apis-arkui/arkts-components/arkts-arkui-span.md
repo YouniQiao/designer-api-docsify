@@ -312,7 +312,7 @@ struct SpanExample {
 }
 ```
 
-从API版本26.0.0开始，新增[fontVariations](#fontvariations)接口。
+该示例通过[fontVariations](#fontvariations)属性设置可变字体的属性。
 
 ```TypeScript
 // xxx.ets

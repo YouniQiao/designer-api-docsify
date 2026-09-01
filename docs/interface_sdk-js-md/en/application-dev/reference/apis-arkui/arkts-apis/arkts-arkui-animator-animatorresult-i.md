@@ -31,6 +31,7 @@ Cancels the animation, triggering the [onCancel](../../../reference/apis-arkui/j
 See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
+// Obtain the AnimatorResult object through this.getUIContext().createAnimator() for the animator first.
 animator.cancel();
 ```
 
@@ -53,6 +54,7 @@ Ends the animation, triggering the [onFinish](../../../reference/apis-arkui/js-a
 See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
+// Obtain the AnimatorResult object through this.getUIContext().createAnimator() for the animator first.
 animator.finish();
 ```
 
@@ -233,6 +235,7 @@ Pauses this animation.
 See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
+// Obtain the AnimatorResult object through this.getUIContext().createAnimator() for the animator first.
 animator.pause();
 ```
 
@@ -255,6 +258,7 @@ Plays this animation. The animation retains the previous playback state. For exa
 See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
+// Obtain the AnimatorResult object through this.getUIContext().createAnimator() for the animator first.
 animator.play();
 ```
 
@@ -319,7 +323,7 @@ struct AnimatorTest {
   }
 
   build() {
-    // ......
+    // ...
   }
 }
 ```
@@ -397,6 +401,7 @@ Plays this animation in reverse order. This API does not take effect when the in
 See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
+// Obtain the AnimatorResult object through this.getUIContext().createAnimator() for the animator first.
 animator.reverse();
 ```
 
@@ -453,7 +458,7 @@ struct AnimatorTest {
   }
 
   build() {
-    // ......
+    // ...
   }
 }
 ```
@@ -485,5 +490,6 @@ Updates this animator.
 See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
+// Obtain the AnimatorResult object through this.getUIContext().createAnimator() for the animator first.
 animator.update(options);
 ```

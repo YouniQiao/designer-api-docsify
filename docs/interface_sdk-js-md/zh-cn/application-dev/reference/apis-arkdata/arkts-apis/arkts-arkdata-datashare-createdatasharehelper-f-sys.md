@@ -12,7 +12,10 @@ import { dataShare } from '@kit.ArkData';
 function createDataShareHelper(context: Context, uri: string, callback: AsyncCallback<DataShareHelper>): void
 ```
 
-创建DataShareHelper实例。使用callback异步回调。
+创建DataShareHelper实例。使用callback异步回调。  
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 9
 
@@ -79,7 +82,10 @@ function createDataShareHelper(
   ): void
 ```
 
-创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用callback异步回调。
+创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用callback异步回调。  
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 10
 
@@ -93,10 +99,10 @@ function createDataShareHelper(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | Indicates the application context. |
-| uri | string | 是 | Indicates the path of the file to open. |
-| options | [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | 是 | Indicates the optional config. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)&gt; | 是 | {DataShareHelper}: The dataShareHelper for consumer. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用的上下文环境。 |
+| uri | string | 是 | 要连接的服务端应用的路径。 |
+| options | [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | 是 | 指定[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)是否在代理模式下，指定非静默访问时的等待启动时间。如果不设置，则表示[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)不在代理模式下，且非静默访问时的等待启动时间为2秒。如果uri以datashareproxy为开头，则必须设置options的isProxy参数，否则DataShareHelper创建失败返回错误。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)&gt; | 是 | 回调函数。当创建DataShareHelper实例成功，err为undefined，data为获取到的DataShareHelper实例；否则为错误对象。 |
 
 **错误码：**
 
@@ -146,7 +152,10 @@ function createDataShareHelper(
   ): Promise<DataShareHelper>
 ```
 
-创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用Promise异步回调。
+创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用Promise异步回调。  
+> **说明：**
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
 
 **起始版本：** 9
 
@@ -162,7 +171,7 @@ function createDataShareHelper(
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用的上下文环境。 |
 | uri | string | 是 | 要连接的服务端应用的路径。 |
-| options | [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | 否 | 可选配置。指定[DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md)是否在代理模式下，指定非静默访问时的等待拉起时间。如果不设置，则表示[DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md)不在代理模式下，且非静默访问时的等待拉起时间为2秒。如果uri以datashareproxy为开头，则必须设置options的isProxy参数，否则DataShareHelper创建失败返回错误。<br>**起始版本：** 10 |
+| options | [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | 否 | 可选配置。指定[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)是否在代理模式下，指定非静默访问时的等待启动时间。如果不设置，则表示[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)不在代理模式下，且非静默访问时的等待启动时间为2秒。如果uri以datashareproxy为开头，则必须设置options的isProxy参数，否则DataShareHelper创建失败返回错误。<br>**起始版本：** 10 |
 
 **返回值：**
 

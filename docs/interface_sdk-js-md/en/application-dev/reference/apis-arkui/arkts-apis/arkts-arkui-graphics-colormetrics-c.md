@@ -42,7 +42,7 @@ import { ColorMetrics } from '@kit.ArkUI';
 @Entry
 @Component
 struct MyStateSample {
-  @State colorMetrics: ColorMetrics = ColorMetrics.resourceColor($r('sys.color.font_primary')).autoRefresh!(true)
+  @State colorMetrics: ColorMetrics = ColorMetrics.resourceColor($r('sys.color.font_primary')).autoRefresh!(true);
 
   build() {
     Column() {
@@ -245,12 +245,11 @@ function getBlendColor(baseColor: ResourceColor): ColorMetrics {
     // When resourceColor and blendColor of ColorMetrics are used, add exception handling.
     // Error codes 401 and 180003 of the ArkUI subsystem may be returned.
     // 61 157 180
-    sourceColor = ColorMetrics.resourceColor(baseColor).blendColor(ColorMetrics.resourceColor("#083d9db4"));
+    sourceColor = ColorMetrics.resourceColor(baseColor).blendColor(ColorMetrics.resourceColor('#083d9db4'));
     console.info(`current color is ${sourceColor.color} r:${sourceColor.red} g:${sourceColor.green} b:${sourceColor.blue} a :${sourceColor.alpha}`);
   } catch (error) {
-    console.error("getBlendColor failed, code = " + (error as BusinessError).code + ", message = " +
-    (error as BusinessError).message);
-    sourceColor = ColorMetrics.resourceColor("#19000000");
+    console.error(`getBlendColor failed. Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+    sourceColor = ColorMetrics.resourceColor('#19000000');
   }
   return sourceColor;
 }
@@ -260,25 +259,25 @@ function getBlendColor(baseColor: ResourceColor): ColorMetrics {
 struct ColorMetricsSample {
   build() {
     Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
-      Button("ColorMetrics blendColor")
+      Button('ColorMetrics blendColor')
         .width('80%')
         .align(Alignment.Center)
         .height(50)
-        .backgroundColor(getBlendColor("#ff3d9db4").color)
+        .backgroundColor(getBlendColor('#ff3d9db4').color)
         .margin(10)
-      Button("ColorMetrics numeric")
+      Button('ColorMetrics numeric')
         .width('80%')
         .align(Alignment.Center)
         .height(50)
         .backgroundColor(ColorMetrics.numeric(0xff707070).color)
         .margin(10)
-      Button("ColorMetrics rgba")
+      Button('ColorMetrics rgba')
         .width('80%')
         .align(Alignment.Center)
         .height(50)
-        .backgroundColor(ColorMetrics.rgba(0, 74, 175, 255).color)
+        .backgroundColor(ColorMetrics.rgba(0, 74, 175, 1.0).color)
         .margin(10)
-      Button("ColorMetrics colorWithSpace")
+      Button('ColorMetrics colorWithSpace')
         .width('80%')
         .align(Alignment.Center)
         .height(50)

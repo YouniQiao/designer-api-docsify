@@ -118,7 +118,7 @@ struct SystemMaterialPage {
 }
 ```
 
-从API版本26.0.0开始，新增uiMaterial.convertToECMaterial、uiMaterial.convertToECSubMaterial接口。
+本示例介绍如何将[uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)设置到[EffectComponent](../arkui-ts/ts-container-effectcomponent-sys.md)及其子组件上，包括直接使用EC样式材质，以及通过[uiMaterial.convertToECMaterial](arkts-arkui-uimaterial-converttoecmaterial-f-sys.md)、[uiMaterial.convertToECSubMaterial](arkts-arkui-uimaterial-converttoecsubmaterial-f-sys.md)将材质经过转换后设置两种方式。
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';

@@ -1,12 +1,16 @@
 # @ohos.atomicservice.InterstitialDialogAction(This section describes the interfaces used by InterstitialDialogAction)
 
-###### 子组件
- 无。
- ###### 属性
- 不支持通用属性。
- ###### 事件
- 不支持通用事件。
+## 子组件
 
+无。
+
+## 属性
+
+不支持通用属性。
+
+## 事件
+
+不支持通用事件。
 
 ## 导入模块
 

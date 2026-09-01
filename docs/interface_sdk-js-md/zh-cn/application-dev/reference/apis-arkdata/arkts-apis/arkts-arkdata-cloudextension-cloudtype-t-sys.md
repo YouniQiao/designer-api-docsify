@@ -14,11 +14,11 @@ type CloudType = null | number | number | string | boolean | Uint8Array | CloudA
 
 | 类型 | 说明 |
 | --- | --- |
-| null | 表示值的类型为空。 |
-| long | 表示值的类型为数字类型。 |
-| double | 表示值的类型为数字类型。 |
-| string | 表示值的类型为字符串类型。 |
-| boolean | 表示值的类型为布尔类型。 |
-| Uint8Array | 表示值的类型为Uint8Array类型。 |
-| [CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md) | 表示值的类型为云资产类型。 |
-| [CloudAssets](arkts-arkdata-cloudextension-cloudassets-t-sys.md) | 表示值的类型为云资产数组类型。 |
+| null | The value is null. |
+| long | The value is a 64-bit integer (int64_t). |
+| double | The value is a floating-point number (float). |
+| string | The value is a string. |
+| boolean | The value is true or false. |
+| Uint8Array | The value is a Uint8 array. |
+| [CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md) | The value is of the cloud asset type. |
+| [CloudAssets](arkts-arkdata-cloudextension-cloudassets-t-sys.md) | The value is an array of cloud assets. |

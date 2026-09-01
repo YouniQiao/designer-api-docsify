@@ -1,10 +1,12 @@
 # @ohos.atomicservice.HalfScreenLaunchComponent(Defines the halfScreen launch component)
 
-###### 子组件
- 无。
- ###### 属性
- 不支持通用属性。
+## 子组件
 
+无。
+
+## 属性
+
+不支持通用属性。
 
 ## 导入模块
 
@@ -22,7 +24,7 @@ import { HalfScreenLaunchComponent } from '@kit.ArkUI';
 
 ## 示例
 
-在右侧进程列表中，选择被拉起的原子化服务进程（被拉起原子化服务的包名，且后缀带有embeddable字样）。
+该示例展示如何嵌入式拉起手机充值服务。
 
 ```TypeScript
 import { HalfScreenLaunchComponent } from '@kit.ArkUI';

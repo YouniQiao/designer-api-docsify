@@ -27,10 +27,9 @@ Obtains the canvas used for drawing.
 **Examples**
 
 ```TypeScript
-import { RenderNode, FrameNode, NodeController, DrawContext } from "@kit.ArkUI";
+import { RenderNode, FrameNode, NodeController, DrawContext } from '@kit.ArkUI';
 
 class MyRenderNode extends RenderNode {
-  flag: boolean = false;
 
   draw(context: DrawContext) {
     const size = context.size;

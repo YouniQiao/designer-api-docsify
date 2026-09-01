@@ -1236,8 +1236,6 @@ struct Index {
 }
 ```
 
-从API版本26.0.0开始，ReactiveComponentContent中的自定义组件支持V2组件复用。
-
 ```TypeScript
 import { NodeContent, typeNode, ReactiveComponentContent } from '@kit.ArkUI';
 

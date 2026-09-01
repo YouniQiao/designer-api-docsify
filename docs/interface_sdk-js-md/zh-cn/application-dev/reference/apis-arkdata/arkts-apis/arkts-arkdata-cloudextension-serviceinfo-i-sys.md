@@ -1,6 +1,6 @@
 # ServiceInfo（系统接口）
 
-云服务信息
+云服务信息。
 
 **起始版本：** 11
 
@@ -20,7 +20,7 @@ import { cloudExtension } from '@kit.ArkData';
 enableCloud: boolean
 ```
 
-表示是否启用了云服务。true表示启用云服务，false表示未启用
+表示是否启用了云服务。true表示启用云服务，false表示未启用。
 
 **类型：** boolean
 
@@ -84,7 +84,7 @@ totalSpace: number
 user: number
 ```
 
-设备的当前用户ID。
+设备的当前用户账号ID。
 
 **类型：** number
 

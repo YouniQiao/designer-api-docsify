@@ -1,7 +1,14 @@
 # @ohos.distributedsched.proxyChannelManager(Proxy Channel Management)
 
-###### Instructions
- Before calling the APIs of this module, complete the following configurations:
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+## Instructions
+
+Before calling the APIs of this module, complete the following configurations:
  1. You have requested the **ohos.permission.ACCESS_BLUETOOTH** permission. For details about how to configure and apply for permissions, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md) and [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
  2. In the **module.json5** file, you have configured the **action** field **action.ohos.pull.listener** for the phone app process that needs to be started by the proxy module.
  The typical calling process is as follows:
@@ -9,13 +16,6 @@
  2. Call **sendData** to send data, and subscribe to events based on service requirements. Call **on('receiveData')** to receive data from the peer end, and call **on('channelStateChange')** to monitor channel connection state changes (such as disconnection and recovery). You can subscribe to both events at the same time. It is recommended to use them together in data transmission scenarios so that data sending can be paused promptly and disconnection recovery logic can be handled when the channel is abnormal.
  3. After using the event, call **off('receiveData')** or **off('channelStateChange')** to unsubscribe from the event.
  4. Call **closeProxyChannel** to close the proxy channel and release resources.
-
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## Modules to Import
 

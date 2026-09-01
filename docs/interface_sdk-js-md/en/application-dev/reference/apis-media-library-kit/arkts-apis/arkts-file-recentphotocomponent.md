@@ -8,9 +8,10 @@ The RecentPhotoComponent embedded in the UI of an application allows the applica
  > **NOTE**
  >
  > - This component does not support [same-layer rendering](../../../web/web-same-layer.md).
- ###### Properties
- The universal properties are supported.
 
+## Properties
+
+The universal properties are supported.
 
 ## Modules to Import
 

@@ -480,7 +480,7 @@ Creates a pattern for image filling based on a specified source image and repeti
 
 **Examples**
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOption in the module's build-profile.json5 file > resOptions > copyCodeResource, and set enable to true. For details, see the description of [copyCodeResource](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348) in resOptions.
+> NOTE
 
 ```TypeScript
 // xxx.ets
@@ -608,7 +608,7 @@ Draws an image on the canvas.
 
 **Examples**
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOption in the module's build-profile.json5 file > resOptions > copyCodeResource, and set enable to true. For details, see the description of [copyCodeResource](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348) in resOptions.
+> NOTE
 
 ```TypeScript
 // xxx.ets
@@ -668,7 +668,7 @@ Draws an image by stretching or compressing it to the specified dimensions.
 
 **Examples**
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOption in the module's build-profile.json5 file > resOptions > copyCodeResource, and set enable to true. For details, see the description of [copyCodeResource](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348) in resOptions.
+> NOTE
 
 ```TypeScript
 // xxx.ets
@@ -742,7 +742,7 @@ Draws a cropped portion of an image by stretching or compressing it to the speci
 
 **Examples**
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOption in the module's build-profile.json5 file > resOptions > copyCodeResource, and set enable to true. For details, see the description of [copyCodeResource](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348) in resOptions.
+> NOTE
 
 ```TypeScript
 // xxx.ets
@@ -774,7 +774,7 @@ struct DrawImage {
 }
 ```
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOption in the module's build-profile.json5 file > resOptions > copyCodeResource, and set enable to true. For details, see the description of [copyCodeResource](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348) in resOptions.
+> NOTE
 
 ```TypeScript
 // xxx.ets
@@ -806,7 +806,7 @@ struct DrawImage {
 }
 ```
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOption in the module's build-profile.json5 file > resOptions > copyCodeResource, and set enable to true. For details, see the description of [copyCodeResource](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348) in resOptions.
+> NOTE
 
 ```TypeScript
 // xxx.ets
@@ -1071,7 +1071,7 @@ Obtains the **ImageData** object created with the pixels within the specified ar
 
 **Examples**
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOption in the module's build-profile.json5 file > resOptions > copyCodeResource, and set enable to true. For details, see the description of [copyCodeResource](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348) in resOptions.
+> NOTE
 
 ```TypeScript
 // xxx.ets
@@ -1198,7 +1198,7 @@ Obtains the **PixelMap** object created with the pixels within the specified are
 
 **Examples**
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOption in the module's build-profile.json5 file > resOptions > copyCodeResource, and set enable to true. For details, see the description of [copyCodeResource](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348) in resOptions.
+> NOTE
 
 ```TypeScript
 // xxx.ets

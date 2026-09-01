@@ -376,7 +376,7 @@ struct ActionSheetExample {
 }
 ```
 
-The onDidAppear, onDidDisappear, onWillAppear, and onWillDisappear properties are supported in [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) since API version 19.
+This example demonstrates how to configure the lifecycle callbacks for the dialog box.
 
 ```TypeScript
 // xxx.ets
@@ -448,7 +448,7 @@ struct Example1 {
 }
 ```
 
-The backgroundBlurStyleOptions property is supported in [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) since API version 19.
+This example demonstrates how to customize the background blur effect by configuring [backgroundBlurStyleOptions](arkts-arkui-actionsheetoptions-i.md).
 
 ```TypeScript
 @Entry
@@ -502,7 +502,7 @@ struct ActionSheetExample {
 }
 ```
 
-The backgroundEffect property is supported in [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) since API version 19.
+This example demonstrates how to customize the background effect by configuring [backgroundEffect](arkts-arkui-actionsheetoptions-i.md).
 
 ```TypeScript
 @Entry
@@ -557,7 +557,7 @@ struct ActionSheetExample {
 }
 ```
 
-Since API version 26.0.0, the systemMaterial attribute has been added to [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md).
+This example implements the system material effect by configuring the systemMaterial attribute in [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md).
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';

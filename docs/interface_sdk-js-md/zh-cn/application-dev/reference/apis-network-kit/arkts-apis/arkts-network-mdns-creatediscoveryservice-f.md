@@ -41,7 +41,7 @@ function createDiscoveryService(context: Context, serviceType: string): Discover
 
 **示例**
 
-Stage模型示例：
+> 说明：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';

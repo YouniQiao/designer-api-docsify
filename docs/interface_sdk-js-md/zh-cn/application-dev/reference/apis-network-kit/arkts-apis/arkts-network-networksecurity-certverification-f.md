@@ -57,6 +57,7 @@ export function certVerification(cert: CertBlob, caCert?: CertBlob): Promise<num
 
 ```TypeScript
 import { networkSecurity } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 // Define certificate blobs
 const cert:networkSecurity.CertBlob = {

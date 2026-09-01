@@ -45,7 +45,7 @@ hilog.debug(0x0001, "testTag", 'this is a debug level log, id: %{public}d', 4);
 hilog.info(0x0001, "testTag", 'this is an info level log, id: %{public}d', 5);
 ```
 
-最终打印结果如下所示：
+由于全局日志起始为INFO，第一条日志可以正常打印。
 
 ```TypeScript
 08-07 23:50:01.532   13694-13694   A00001/testTag                  com.example.hilogDemo  I     this is an info level log, id: 1

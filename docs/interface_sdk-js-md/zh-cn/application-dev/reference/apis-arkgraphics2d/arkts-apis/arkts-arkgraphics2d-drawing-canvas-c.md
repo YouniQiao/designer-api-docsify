@@ -1585,6 +1585,26 @@ class DrawingRenderNode extends RenderNode {
 }
 ```
 
+## drawRecordCmd
+
+```TypeScript
+drawRecordCmd(recordCmd: RecordCmd): void
+```
+
+回放已录制的绘制指令。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| recordCmd | [RecordCmd](arkts-arkgraphics2d-drawing-recordcmd-i.md) | 是 | 已录制的绘制指令对象。 |
+
 ## drawRect
 
 ```TypeScript

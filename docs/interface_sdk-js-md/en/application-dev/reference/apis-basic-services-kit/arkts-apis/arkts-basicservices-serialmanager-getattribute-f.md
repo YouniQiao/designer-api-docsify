@@ -41,7 +41,7 @@ Obtains the configuration parameters of a specified serial port.
 
 **Examples**
 
-The following sample code shows the basic process for calling the getAttribute API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
+> NOTE
 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';

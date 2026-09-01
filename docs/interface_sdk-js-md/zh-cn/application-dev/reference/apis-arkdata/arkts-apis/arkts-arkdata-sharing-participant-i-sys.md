@@ -52,9 +52,9 @@ identity: string
 privilege?: Privilege
 ```
 
-指定的共享数据权限。默认为Privilege的默认值。
+指定的共享数据权限。默认为[Privilege](arkts-arkdata-sharing-privilege-i-sys.md)的默认值。
 
-**类型：** [Privilege](arkts-arkdata-sharing-privilege-i-sys.md)
+**类型：** Privilege
 
 **起始版本：** 11
 

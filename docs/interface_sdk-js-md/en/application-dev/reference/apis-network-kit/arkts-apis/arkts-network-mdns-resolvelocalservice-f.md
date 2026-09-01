@@ -42,7 +42,7 @@ Resolves an MDNS service. This API uses an asynchronous callback to return the r
 
 **Examples**
 
-Stage model:
+> NOTE
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -109,7 +109,7 @@ Resolves an MDNS service. This API uses a promise to return the result.
 
 **Examples**
 
-Stage model:
+> NOTE
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';

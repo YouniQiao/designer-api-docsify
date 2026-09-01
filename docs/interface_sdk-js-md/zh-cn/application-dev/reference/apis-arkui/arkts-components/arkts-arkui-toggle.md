@@ -208,7 +208,7 @@ struct Index {
 }
 ```
 
-系统材质的实际显示效果与设备的算力档位相关，相同的代码在不同算力档位的设备上显示效果存在差异，低算力设备上会显示简化后的材质效果。算力档位由系统根据设备硬件能力自动划分和管理，应用无需感知，也无需进行额外设置，系统会根据当前设备的算力档位自动适配材质的显示效果。
+该示例展示了Toggle组件Switch类型在开启沉浸光感前后的效果对比，包括不设置系统材质、设置undefined、设置系统材质以及设置系统材质并配合[switchPointColor](arkts-arkui-toggle-attribute.md#switchpointcolor)设置点光源颜色的效果。示例使用通用属性[systemMaterial](ts-universal-attributes-image-effect.md#systemmaterial)接口来实现沉浸光感效果。
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';

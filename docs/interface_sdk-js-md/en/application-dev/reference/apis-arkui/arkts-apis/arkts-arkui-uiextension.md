@@ -42,7 +42,7 @@ import { uiExtension } from '@kit.ArkUI';
 
 ## Examples
 
-The EntryAbility (UIAbility) of the sample application loads the pages/Index.ets file, whose content is as follows:
+This example shows how to use all the available APIs in the [EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md). The bundle name of the sample application is com.example.embeddeddemo, and the EmbeddedUIExtensionAbility to start is ExampleEmbeddedAbility.
 
 ```TypeScript
 // The UIAbility loads pages/Index.ets when started.
@@ -53,9 +53,9 @@ import { Want } from '@kit.AbilityKit';
 struct Index {
   @State message: string = 'Message: ';
   private want: Want = {
-    bundleName: "com.example.embeddeddemo",
-    abilityName: "ExampleEmbeddedAbility",
-  }
+    bundleName: 'com.example.embeddeddemo',
+    abilityName: 'ExampleEmbeddedAbility',
+  };
 
   build() {
     Row() {
@@ -153,40 +153,40 @@ struct Extension {
       Text(this.message)
         .fontSize(20)
         .fontWeight(FontWeight.Bold)
-      Button("Obtain Component Size").width('90%').margin({ top: 5, bottom: 5 }).fontSize(16).onClick(() => {
+      Button('Obtain Component Size').width('90%').margin({ top: 5, bottom: 5 }).fontSize(16).onClick(() => {
         let rect = this.extensionWindow?.properties.uiExtensionHostWindowProxyRect;
-        console.info(`EmbeddedComponent position and size: ${JSON.stringify(rect)}`);
+        console.info(`EmbeddedComponent position and size info: ${JSON.stringify(rect)}`);
       })
-      Button("Obtain Avoid Area Info").width('90%').margin({ top: 5, bottom: 5 }).fontSize(16).onClick(() => {
+      Button('Obtain System Avoid Area Info').width('90%').margin({ top: 5, bottom: 5 }).fontSize(16).onClick(() => {
         let avoidArea: window.AvoidArea | undefined =
           this.extensionWindow?.getWindowAvoidArea(window.AvoidAreaType.TYPE_SYSTEM);
-        console.info(`Avoidance area: ${JSON.stringify(avoidArea)}`);
+        console.info(`System avoid area: ${JSON.stringify(avoidArea)}`);
       })
-      Button("Create Subwindow").width('90%').margin({ top: 5, bottom: 5 }).fontSize(16).onClick(() => {
+      Button('Create Subwindow').width('90%').margin({ top: 5, bottom: 5 }).fontSize(16).onClick(() => {
         let subWindowOpts: window.SubWindowOptions = {
-          'title': 'This is a subwindow',
+          title: 'This is a subwindow',
           decorEnabled: true
         };
         this.extensionWindow?.createSubWindowWithOptions('subWindowForHost', subWindowOpts)
           .then((subWindow: window.Window) => {
             this.subWindow = subWindow;
-            this.subWindow.loadContent('pages/Index', this.storage, (err, data) => {
-              if (err && err.code != 0) {
+            this.subWindow?.loadContent('pages/Index', this.storage, (err, data) => {
+              if (err && err.code) {
                 return;
               }
               this.subWindow?.resize(300, 300, (err, data) => {
-                if (err && err.code != 0) {
+                if (err && err.code) {
                   return;
                 }
                 this.subWindow?.moveWindowTo(100, 100, (err, data) => {
-                  if (err && err.code != 0) {
+                  if (err && err.code) {
                     return;
                   }
                   this.subWindow?.showWindow((err, data) => {
-                    if (err && err.code == 0) {
-                      console.info(`The subwindow has been shown!`);
+                    if (err && err.code) {
+                      console.error(`Failed to show the subwindow. Code: ${err.code}, message: ${err.message}`);
                     } else {
-                      console.error(`Failed to show the subwindow!`);
+                      console.info(`The subwindow has been shown!`);
                     }
                   });
                 });
@@ -194,7 +194,7 @@ struct Extension {
             });
           }).catch((error: BusinessError) => {
           console.error(`Create subwindow failed. Cause code: ${error.code}, message: ${error.message}`);
-        })
+        });
       })
     }.width('100%').height('100%')
   }

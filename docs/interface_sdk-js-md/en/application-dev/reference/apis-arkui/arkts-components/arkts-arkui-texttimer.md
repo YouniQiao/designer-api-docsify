@@ -39,7 +39,7 @@ Create TextTimer component.
 
 ## Examples
 
-Users can start, pause, and reset the timer by clicking the start, pause, and reset buttons.
+This example demonstrates the basic usage of the TextTimer component, setting the timer display format using the [format](#format) attribute.
 
 ```TypeScript
 // xxx.ets

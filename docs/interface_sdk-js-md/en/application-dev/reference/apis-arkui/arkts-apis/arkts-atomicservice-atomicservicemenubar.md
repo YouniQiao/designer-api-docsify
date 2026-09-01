@@ -1,10 +1,12 @@
 # @ohos.atomicservice.AtomicServiceMenuBar(System API)
 
-###### Child Components
- Not supported
- ###### Attributes
- The universal attributes are not supported.
+## Child Components
 
+Not supported
+
+## Attributes
+
+The universal attributes are not supported.
 
 ## Modules to Import
 

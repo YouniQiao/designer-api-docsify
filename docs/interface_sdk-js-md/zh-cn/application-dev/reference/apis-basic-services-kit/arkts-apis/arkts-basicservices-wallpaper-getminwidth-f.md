@@ -12,7 +12,10 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function getMinWidth(callback: AsyncCallback<number>): void
 ```
 
-获取壁纸的最小宽度值。
+获取壁纸的最小宽度值。使用callback异步回调。  
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -24,7 +27,7 @@ function getMinWidth(callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |  |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当获取壁纸的最小宽度值（单位为像素）成功，err为undefined，data为获取到的壁纸的最小宽度值；否则为错误对象。 |
 
 **示例**
 
@@ -47,7 +50,10 @@ wallpaper.getMinWidth((error: BusinessError, data: number) => {
 function getMinWidth(): Promise<number>
 ```
 
-获取壁纸的最小宽度值。
+获取壁纸的最小宽度值。使用Promise异步回调。  
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -59,7 +65,7 @@ function getMinWidth(): Promise<number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;number&gt; | 壁纸的最小宽度值，单位是像素。如果返回值等于0，说明没有设置壁纸，调用者应该使用默认显示的宽度值代替。 |
+| Promise&lt;number&gt; | Promise对象，返回壁纸的最小宽度值（单位为像素）。如果返回值等于0，说明没有设置壁纸，调用者应该使用默认显示的宽度值代替。 |
 
 **示例**
 

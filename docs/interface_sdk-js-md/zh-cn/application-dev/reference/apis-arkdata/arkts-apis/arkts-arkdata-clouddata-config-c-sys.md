@@ -299,7 +299,7 @@ static clear(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| appActions | Record&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt; | 是 | 要清除数据的应用信息及清除规则。<br>**起始版本：** 10 |
+| appActions | Record&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt; | 是 | 待清除数据的应用信息及各应用的清除规则，键为应用包名，值为清除规则。<br>**起始版本：** 10 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当清除本地下载的云端数据成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -357,7 +357,7 @@ static clear(accountId: string, appActions: Record<string, ClearAction>): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| appActions | Record&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt; | 是 | 要清除数据的应用信息及清除规则。<br>**起始版本：** 11 |
+| appActions | Record&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt; | 是 | 待清除数据的应用信息及各应用的清除规则，键为应用包名，值为清除规则。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -424,8 +424,8 @@ static clear(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| appActions | Record&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt; | 是 | 要清除数据的应用信息及清除规则。 |
-| config | Record&lt;string, [ClearConfig](arkts-arkdata-clouddata-clearconfig-i-sys.md)&gt; | 否 | 端云协同数据库级清除配置信息。键为应用包名，值为该应用数据库清除规则。清除规则优先级：表级 &gt; 数据库级 &gt; 应用级。当未配置该参数时，默认使用应用级的数据清除方式。 |
+| appActions | Record&lt;string, [ClearAction](arkts-arkdata-clouddata-clearaction-e-sys.md)&gt; | 是 | 待清除数据的应用信息及各应用的清除规则，键为应用包名，值为清除规则。 |
+| config | Record&lt;string, [ClearConfig](arkts-arkdata-clouddata-clearconfig-i-sys.md)&gt; | 否 | 端云协同数据库级清除规则。键为应用包名，值为该应用数据库清除规则。清除规则优先级：表级 &gt; 数据库级 &gt; 应用级。当未配置该参数时，默认使用应用级的数据清除规则。 |
 
 **返回值：**
 
@@ -749,7 +749,7 @@ static enableCloud(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| switches | Record&lt;string, boolean&gt; | 是 | 各应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。<br>**起始版本：** 11 |
+| switches | Record&lt;string, boolean&gt; | 是 | 各应用的端云协同开关信息。键为应用的包名，值为该应用的开关状态，true为打开该应用端云开关，false为关闭该应用端云开关。<br>**起始版本：** 11 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当打开端云协同功能成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -803,7 +803,7 @@ static enableCloud(accountId: string, switches: Record<string, boolean>): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | accountId | string | 是 | 已登录的云账号ID。 |
-| switches | Record&lt;string, boolean&gt; | 是 | 各应用的端云协同开关信息。true为打开该应用端云开关，false为关闭该应用端云开关。<br>**起始版本：** 11 |
+| switches | Record&lt;string, boolean&gt; | 是 | 各应用的端云协同开关信息。键为应用的包名，值为该应用的开关状态，true为打开该应用端云开关，false为关闭该应用端云开关。<br>**起始版本：** 11 |
 
 **返回值：**
 
@@ -845,7 +845,7 @@ try {
 static notifyDataChange(extInfo: ExtraData, userId?: number): Promise<void>
 ```
 
-通知云端的数据变更，可以通过extInfo中的extraData字段指定变更的数据库名和表名，可通过userId指定用户ID，使用Promise异步回调。
+通知云端的数据变更，可以通过extInfo中的extraData字段指定变更的数据库名和表名，可通过userId指定用户账号ID，使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -960,7 +960,7 @@ try {
 static notifyDataChange(extInfo: ExtraData, userId: number, callback: AsyncCallback<void>): void
 ```
 
-通知云端的数据变更，可以通过extInfo中的extraData字段指定变更的数据库名和表名，可通过userId指定用户ID，使用callback异步回调。
+通知云端的数据变更，可以通过extInfo中的extraData字段指定变更的数据库名和表名，可通过userId指定用户账号ID，使用callback异步回调。
 
 **起始版本：** 11
 
@@ -975,7 +975,7 @@ static notifyDataChange(extInfo: ExtraData, userId: number, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | extInfo | ExtraData | 是 | 透传数据，包含通知数据变更后的应用信息。 |
-| userId | number | 是 | 用户ID，对应为系统中现有的用户ID。 |
+| userId | number | 是 | 用户账号ID，指系统中现有的用户账号ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当数据变更通知成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -1287,7 +1287,7 @@ static queryLastSyncInfo(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt; | 返回数据库名以及上一次端云同步的信息结果集。 |
+| Promise&lt;Record&lt;string, [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md)&gt;&gt; | 返回以数据库名为键，上一次端云同步信息为值的结果集。 |
 
 **错误码：**
 

@@ -10,7 +10,7 @@
 
 ## Examples
 
-It also shows how to mount a BuilderNode using NodeController.
+This example demonstrates how to implement lifecycle callbacks of the NodeContainer component using aboutToResize and onTouchEvent for node layout and touch event receiving.
 
 ```TypeScript
 import { NodeController, BuilderNode, Size, FrameNode, UIContext } from '@kit.ArkUI';
@@ -76,7 +76,7 @@ struct Index {
 }
 ```
 
-It implements lifecycle callbacks using onWillBind*, onWillUnbind, onBind, and onUnbind when it is bound or unbound.
+This example demonstrates how to implement lifecycle of callbacks of the NodeContainer component using onAttach and onDetach when it is attached to or detached from the main node tree.
 
 ```TypeScript
 import { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';

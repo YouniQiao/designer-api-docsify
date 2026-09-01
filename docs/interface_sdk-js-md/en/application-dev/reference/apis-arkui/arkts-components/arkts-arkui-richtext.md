@@ -82,7 +82,7 @@ struct RichTextExample {
 }
 ```
 
-Loads local resource files through $rawfile.
+richText
 
 ```TypeScript
 // xxx.ets
@@ -99,7 +99,7 @@ struct RichTextComponent {
 }
 ```
 
-When $rawfile is used to load a URL contains a number sign (#), the content following the number sign is treated as a fragment. To avoid this issue, you can use the resource://rawfile/ protocol prefix instead. If the URL contains a number sign (#), the content following the number sign is treated as an anchor (fragment).
+The following is an example of loading a link with the hash (#) route through the resources protocol in Webview.
 
 ```TypeScript
 // xxx.ets
@@ -116,7 +116,7 @@ struct RichTextComponent {
 }
 ```
 
-HTML file to be loaded:
+Create an index.html file in src/main/resources/rawfile.
 
 ```TypeScript
 <!-- index.html -->

@@ -52,3 +52,28 @@ function filterBundleListByDeviceModeDistributionPolicies(
 | [17700097](../errorcode-bundle.md#17700097-设备不支持双模式) | The device does not support the dual mode. |
 | [17700098](../errorcode-bundle.md#17700098-入参无效) | The input parameter is invalid. It is either outside the range of valid enum values or does not include the following required enum values: [DeviceModeDistributionPolicy.UNIVERSAL_DIFFERENT_PACKAGE, DeviceModeDistributionPolicy.PARTIAL_COMPATIBLE_DIFFERENT_PACKAGE, DeviceModeDistributionPolicy.FULL_COMPATIBLE_DIFFERENT_PACKAGE]. |
 | [17700099](../errorcode-bundle.md#17700099-设备正在安装卸载应用或双模切换正在处理中) | The device is installing or uninstalling an application, or a previous API call is still being processed. Please try again. |
+
+**示例**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let policies: Array<bundleManager.DeviceModeDistributionPolicy> = [
+  bundleManager.DeviceModeDistributionPolicy.UNIVERSAL_DIFFERENT_PACKAGE,
+  bundleManager.DeviceModeDistributionPolicy.PARTIAL_COMPATIBLE_DIFFERENT_PACKAGE,
+  bundleManager.DeviceModeDistributionPolicy.FULL_COMPATIBLE_DIFFERENT_PACKAGE
+];
+
+try {
+  bundleManager.filterBundleListByDeviceModeDistributionPolicies(policies).then(() => {
+    hilog.info(0x0000, 'testTag', 'filterBundleListByDeviceModeDistributionPolicies successfully');
+  }).catch((err: BusinessError) => {
+    hilog.error(0x0000, 'testTag', 'filterBundleListByDeviceModeDistributionPolicies failed. Cause: %{public}s', err.message);
+  });
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'filterBundleListByDeviceModeDistributionPolicies failed. Cause: %{public}s', message);
+}
+```

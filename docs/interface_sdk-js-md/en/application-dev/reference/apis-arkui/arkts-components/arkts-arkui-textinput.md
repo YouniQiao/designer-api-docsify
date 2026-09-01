@@ -232,7 +232,7 @@ struct TextInputExample {
 }
 ```
 
-Since API version 22, ComponentContent is added to the input parameter type of [customKeyboard](#customkeyboard10).
+This example implements a custom keyboard using the [customKeyboard](#customkeyboard10) attribute (available since API version 10) to set the input parameter type in value to [CustomBuilder](ts-types.md#custombuilder8) and ComponentContent.
 
 ```TypeScript
 // xxx.ets
@@ -956,7 +956,7 @@ struct TextInputExample {
 }
 ```
 
-The MULTILINE_START and MULTILINE_CENTER enums are added to the [EllipsisMode](ts-appendix-enums.md#ellipsismode11) attribute since API version 24.
+This example demonstrates text ellipsis for overflow content and ellipsis position adjustment using the [textOverflow](#textoverflow12), [ellipsisMode](#ellipsismode18), and [style](#style9) attributes. The MULTILINE_START and MULTILINE_CENTER types are used to implement ellipsis at the start and middle positions for both single-line and multi-line text scenarios.
 
 ```TypeScript
 // xxx.ets
@@ -1012,7 +1012,7 @@ struct EllipsisModeExample {
 }
 ```
 
-The [onWillCopy](#onwillcopy) and [onWillCut](#onwillcut) APIs are added since API version 26.0.0.
+This example uses the [onEditChange](#oneditchange8), [onCopy](#oncopy8), [onCut](#oncut8), [onPaste](#onpaste8) (available since API version 8), [onContentScroll](#oncontentscroll10) (available from API version 10), [onWillCopy](#onwillcopy), and [onWillCut](#onwillcut) callbacks to monitor the input status change, implement copy, cut, paste, and content scrolling effects, and disable system copy/cut features. In addition, you can set the [selectAll](#selectall11) (available from API version 11) attribute to select all text in the text box in the initial state.
 
 ```TypeScript
 // xxx.ets
@@ -1468,7 +1468,7 @@ struct demo {
 }
 ```
 
-The compressLeadingPunctuation API is supported since API version 23.
+This example demonstrates how to set leading punctuation compression using the [compressLeadingPunctuation](#compressleadingpunctuation23) API. If a punctuation mark with a leading space appears at the start of a line, the punctuation mark will be compressed to the left boundary.
 
 ```TypeScript
 // xxx.ets
@@ -1493,7 +1493,7 @@ struct Index {
 }
 ```
 
-The [includeFontPadding](#includefontpadding23) and [fallbackLineSpacing](#fallbacklinespacing23) APIs are supported since API version 23.
+This example uses the [includeFontPadding](#includefontpadding23) API to add the spacing of the first and last lines and the [fallbackLineSpacing](#fallbacklinespacing23) API to set adaptive line spacing.
 
 ```TypeScript
 // xxx.ets
@@ -1554,7 +1554,7 @@ struct Index {
 }
 ```
 
-The selectedDragPreviewStyle API is supported since API version 23.
+This example demonstrates how to set the drag preview style for text being dragged using the [selectedDragPreviewStyle](#selecteddragpreviewstyle23) API.
 
 ```TypeScript
 @Entry
@@ -1575,7 +1575,7 @@ struct TextInputTest {
 }
 ```
 
-The [deleteBackward](ts-universal-attributes-text-style.md#deletebackward23) API is added since API version 23.
+This example demonstrates how to delete the last character in a text box using the [deleteBackward](ts-universal-attributes-text-style.md#deletebackward23) API.
 
 ```TypeScript
 @Entry
@@ -1595,7 +1595,7 @@ struct Page {
 }
 ```
 
-The textDirection API is supported since API version 23.
+This example demonstrates how to set the text layout direction using the [textDirection](#textdirection23) API.
 
 ```TypeScript
 // xxx.ets
@@ -1637,7 +1637,7 @@ struct TextInputExample {
 }
 ```
 
-The scrollToVisible API is supported since API version 23.
+This example demonstrates how to scroll the text in a specified range to the visible area using the [scrollToVisible](./ts-universal-attributes-text-style.md#scrolltovisible23) API.
 
 ```TypeScript
 // xxx.ets
@@ -1660,7 +1660,7 @@ struct TextInputExample {
 }
 ```
 
-The orphanCharOptimization API is supported since API version 26.0.0.
+This example demonstrates how to use the [orphanCharOptimization](#orphancharoptimization) API to enable/disable orphan word optimization, ensuring no orphan character appears in the last line of a paragraph.
 
 ```TypeScript
 // xxx.ets

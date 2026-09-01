@@ -30,6 +30,8 @@ Replaces the current page with another one in the application and destroys the c
 
 **Examples**
 
+replace(options: RouterOptions): void
+
 ```TypeScript
 import { router } from '@kit.ArkUI';
 

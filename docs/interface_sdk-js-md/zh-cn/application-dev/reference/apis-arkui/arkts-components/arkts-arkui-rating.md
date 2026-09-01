@@ -343,7 +343,7 @@ struct RatingExample {
 }
 ```
 
-此示例的资源不在src > main > resource目录下，从DevEco Studio 6.0.0 Beta2开始，新建工程或者模块时，默认创建的模块不会对非resources目录下的资源进行打包，需使能相关开关：模块的build-profile.json5中buildOptions > resOptions > copyCodeResource > enable设置为true，详见[resOptions](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348)中相关介绍。
+以下示例展示了如何通过配置starStyle实现自定义星级的图片链接。
 
 ```TypeScript
 // xxx.ets

@@ -4029,7 +4029,7 @@ grayscale(grayscale: Optional<number>): T
 gridOffset(value: number): T
 ```
 
-The default offset column number indicates the number of offset columns of the current component in the start direction of the parent component when the useSizeType attribute does not set the offset of the corresponding dimension. That is, the current component is located in the nth column.
+默认偏移列数。
 
 **起始版本：** 11
 
@@ -4045,7 +4045,7 @@ The default offset column number indicates the number of offset columns of the c
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 |  |
+| value | number | 是 | 默认偏移列数，指useSizeType属性没有设置对应尺寸的偏移（offset）时，当前组件沿着父组件Start方向偏移的列数，即组件起始位置相对于父组件Start方向偏移n列，需为非负整数。传入负数时，使用默认值0。当useSizeType设置了对应尺寸的offset时，gridOffset设置无效。   **说明：** - 调用该属性时，其父组件或祖先组件必须是GridContainer。 - 配置该属性后，当前组件在父组件水平方向的布局不再跟随父组件原有的布局方式，而是沿着父组件的Start方向偏移一定位移。 - 偏移位移 & nbsp;= & nbsp;（列宽 & nbsp;+ & nbsp;间距）\* & nbsp;偏移列数。 - 设置了偏移(gridOffset)的组件之后的兄弟组件会根据该组件进行相对布局。 默认值：0 |
 
 **返回值：**
 
@@ -4059,7 +4059,7 @@ The default offset column number indicates the number of offset columns of the c
 gridSpan(value: number): T
 ```
 
-Default number of occupied columns, indicating the number of occupied grid columns when the number of columns (span) of the corresponding size is not set in the useSizeType attribute.
+默认占用列数。
 
 **起始版本：** 11
 
@@ -4075,7 +4075,7 @@ Default number of occupied columns, indicating the number of occupied grid colum
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 |  |
+| value | number | 是 | 默认占用列数，指useSizeType属性没有设置对应尺寸的列数（span）时，占用的栅格列数，需为非负整数。传入负数或超出GridContainer总列数时，使用默认值1。   **说明：** - 调用该属性时，其父组件或祖先组件必须是GridContainer。 - 设置了栅格span属性，组件的宽度由栅格布局决定。 默认值：1 |
 
 **返回值：**
 
@@ -8795,7 +8795,7 @@ useSizeType(value: {
   }): T
 ```
 
-Sets the number of occupied columns and offset columns for a specific device width type.
+设置在特定设备宽度类型下的占用列数和偏移列数。
 
 **起始版本：** 7
 
@@ -8809,7 +8809,7 @@ Sets the number of occupied columns and offset columns for a specific device wid
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | {     xs?: number \| { span: number; offset: number };     sm?: number \| { span: number; offset: number };     md?: number \| { span: number; offset: number };     lg?: number \| { span: number; offset: number };   } | 是 |  |
+| value | {     xs?: number \| { span: number; offset: number };     sm?: number \| { span: number; offset: number };     md?: number \| { span: number; offset: number };     lg?: number \| { span: number; offset: number };   } | 是 | 设置在特定设备宽度类型下的占用列数和偏移列数，span：占用列数（需为非负整数）。传入负数或超出GridContainer总列数时，使用默认值；offset：偏移列数（需为非负整数）。传入负数时，使用默认值0。当值为number类型时，仅设置列数，当格式如{"span":&nbsp;1,&nbsp;"offset":&nbsp;0}时，指同时设置占用列数与偏移列数。   -&nbsp;xs：指设备宽度类型为SizeType.XS（&lt;320vp）时的占用列数和偏移列数。   -&nbsp;sm：指设备宽度类型为SizeType.SM（320vp-600vp）时的占用列数和偏移列数。   -&nbsp;md：指设备宽度类型为SizeType.MD（600vp-840vp）时的占用列数和偏移列数。   -&nbsp;lg：指设备宽度类型为SizeType.LG（≥840vp）时的占用列数和偏移列数。   各尺寸类型的详细断点配置请参见[GridContainer](ts-container-gridcontainer.md)。   **说明：** - 调用该属性时，其父组件或祖先组件必须是GridContainer。 |
 
 **返回值：**
 

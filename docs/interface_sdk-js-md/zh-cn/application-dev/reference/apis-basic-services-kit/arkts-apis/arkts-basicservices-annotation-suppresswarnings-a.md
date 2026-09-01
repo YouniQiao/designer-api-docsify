@@ -38,7 +38,7 @@ rules: Array<SuppressWarningsType>
 
 **示例**
 
-重复规则屏蔽时，仅生效代码位置上距离最近且符合规则的屏蔽类型。当多个不同类型的抑制实例同时存在时，各类型独立生效。
+兼容性告警消除预置条件：OpenHarmony工程根目录下，build-profile.json5文件设置的compatibleSdkVersion值为20。
 
 ```TypeScript
 import { SuppressWarnings, SuppressWarningsType, systemDateTime } from '@kit.BasicServicesKit';
@@ -81,7 +81,7 @@ async function savePhotoToGallerySuppress(context: common.UIAbilityContext) {
 }
 ```
 
-权限告警消除预置条件：module.json5配置文件的requestPermissions标签中没有申请权限。
+// @SuppressWarnings <SuppressWarningsType>
 
 ```TypeScript
 import { systemDateTime } from '@kit.BasicServicesKit';

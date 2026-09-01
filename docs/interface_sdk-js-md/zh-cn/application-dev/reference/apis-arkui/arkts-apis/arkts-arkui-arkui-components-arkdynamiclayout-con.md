@@ -10,7 +10,7 @@ export declare const DynamicLayout: DynamicLayoutInterface
 
 > **说明：**
 
-### 子组件
+## 子组件
 
 可以包含子组件。
 

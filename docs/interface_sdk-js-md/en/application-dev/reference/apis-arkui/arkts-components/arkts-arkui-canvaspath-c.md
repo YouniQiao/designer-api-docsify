@@ -897,7 +897,7 @@ Creates a rounded rectangle path. This API does not directly render content. To 
 
 **Examples**
 
-Create a rounded rectangle with the start point at (220 vp, 330 vp), width and height of -100 vp, and the radius of the upper-left, upper-right, lower-right, and lower-left rounded corners of 10 vp, 20 vp, 30 vp, and 40 vp, respectively. Then, stroke the rectangle.
+The following example shows how to draw six rounded rectangles:
 
 ```TypeScript
 // xxx.ets
@@ -952,7 +952,7 @@ struct CanvasExample {
 }
 ```
 
-Creates a rounded rectangle with the start point (220vp, 330vp), width and height of -100 vp, and the radius of the upper-left rounded corner of 10 vp, the radius of the upper-right rounded corner of 20 vp, the radius of the lower-right rounded corner of 30 vp, and the radius of the lower-left rounded corner of 40 vp. The rounded rectangle is outlined.
+This example shows how to draw six rounded rectangles.
 
 ```TypeScript
 // xxx.ets

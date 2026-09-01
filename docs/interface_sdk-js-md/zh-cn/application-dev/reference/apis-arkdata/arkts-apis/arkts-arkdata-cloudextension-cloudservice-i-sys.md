@@ -20,7 +20,7 @@ import { cloudExtension } from '@kit.ArkData';
 connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 ```
 
-系统内部通过该接口获取AssetLoader的RemoteObject对象，可以通过createAssetLoaderStub接口进行创建，使用Promise异步回调。
+系统内部通过该接口获取[AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md)的[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)对象，可以通过[createAssetLoaderStub](arkts-arkdata-cloudextension-createassetloaderstub-f-sys.md)接口进行创建，使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -39,7 +39,7 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回AssetLoader的RemoteObject对象。 |
+| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回[AssetLoader]{ |
 
 **示例**
 
@@ -66,7 +66,7 @@ class MyCloudService implements cloudExtension.CloudService {
 connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 ```
 
-系统内部通过该接口获取CloudDB的RemoteObject对象，可以通过createCloudDBStub接口进行创建，使用Promise异步回调。
+系统内部通过该接口获取[CloudDB](arkts-arkdata-cloudextension-clouddb-i-sys.md)的[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)对象，可以通过[createCloudDBStub](arkts-arkdata-cloudextension-createclouddbstub-f-sys.md)接口进行创建，使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -85,7 +85,7 @@ connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回CloudDB的RemoteObject对象。 |
+| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回[CloudDB]{ |
 
 **示例**
 
@@ -112,7 +112,7 @@ class MyCloudService implements cloudExtension.CloudService {
 connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject>
 ```
 
-系统内部通过该接口获取ShareCenter的RemoteObject对象，可以通过createShareServiceStub接口进行创建，使用Promise异步回调。
+系统内部通过该接口获取[ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md)的[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)对象，可以通过[createShareServiceStub](arkts-arkdata-cloudextension-createshareservicestub-f-sys.md)接口进行创建，使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -131,7 +131,7 @@ connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回ShareCenter的RemoteObject对象。 |
+| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回[ShareCenter]{ |
 
 **示例**
 
@@ -170,7 +170,7 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; | Promise对象，返回以bundleName为键、AppBriefInfo为值的键值对。in KV pairs. |
+| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; | Promise对象，返回以bundleName为键、[AppBriefInfo]{ |
 
 **示例**
 

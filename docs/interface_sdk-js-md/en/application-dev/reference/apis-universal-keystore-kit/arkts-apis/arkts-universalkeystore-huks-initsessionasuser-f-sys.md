@@ -57,7 +57,7 @@ Initialize a key session for the specified user. This API uses a promise to retu
 
 **Examples**
 
-The values of the following cryptography-related variables (such as initializationVector) are for reference only and cannot be directly used in the service logic. You need to set them based on actual situation.
+Prerequisites: see Example of generateKeyItemAsUser.
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

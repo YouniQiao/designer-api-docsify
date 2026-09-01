@@ -57,6 +57,8 @@ function openCustomDialog(options: CustomDialogOptions): Promise<number>
 
 **示例**
 
+openCustomDialog(options: CustomDialogOptions): Promise<number>
+
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -128,7 +130,7 @@ struct Index {
 }
 ```
 
-直接使用openCustomDialog可能导致实例不明确的问题，建议使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)获取[PromptAction](arkts-apis-uicontext-promptaction.md)对象，再通过此对象调用替代方法openCustomDialog。
+该示例定义了弹窗样式，如宽度、高度、背景色、阴影等。
 
 ```TypeScript
 import { LevelMode, ImmersiveMode } from '@kit.ArkUI';
@@ -205,7 +207,7 @@ struct Index {
 }
 ```
 
-直接使用openCustomDialog可能导致实例不明确的问题，建议使用[UIContext](arkts-apis-uicontext-uicontext.md)中的[getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)获取[PromptAction](arkts-apis-uicontext-promptaction.md)对象，再通过此对象调用替代方法openCustomDialog。
+zh-cn_image_0007
 
 ```TypeScript
 // Index.ets

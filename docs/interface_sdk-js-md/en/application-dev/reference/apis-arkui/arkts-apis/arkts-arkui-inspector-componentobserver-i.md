@@ -218,10 +218,10 @@ struct ImageExample {
     // this.listenerForRow.off('drawChildren', offFuncDrawChildren)
 
     let onLayoutChildrenComplete: () => void = (): void => {
-      // After the LayoutChildren event is received, you can customize the implementation logic.
+      // After the layoutChildren event is received, you can customize the implementation logic.
     };
 
-    let uniqueId: number = this.getUniqueId();
+    let uniqueId: number = 0; // Replace it with the unique ID of the actual component.
     let listenerForUniqueId: inspector.ComponentObserver = this.getUIContext().getUIInspector().createComponentObserver(uniqueId.toString());
     listenerForUniqueId.onLayoutChildren(onLayoutChildrenComplete);
   }
@@ -351,7 +351,7 @@ struct ImageExample {
 
   aboutToAppear() {
     let onDrawChildrenCompleteUniqueId: (childIds: number[]) => void = (childIds: number[]): void => {
-      // The onDrawChildren API is added since API version 24. After the DrawChildren event is received, you can customize the implementation logic.
+      // Since API version 24, the onDrawChildren API is added. After the drawChildren event is received, you can customize the implementation logic.
     };
 
     this.listenerForRow.onDrawChildren(onDrawChildrenCompleteUniqueId);

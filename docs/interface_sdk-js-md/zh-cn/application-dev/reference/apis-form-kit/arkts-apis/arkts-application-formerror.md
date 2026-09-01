@@ -1,12 +1,12 @@
 # @ohos.application.formError(formError)
 
-###### 权限
- 无
-
-
 **起始版本：** 8
 
 **系统能力：** SystemCapability.Ability.Form
+
+## 权限
+
+无
 
 ## 导入模块
 

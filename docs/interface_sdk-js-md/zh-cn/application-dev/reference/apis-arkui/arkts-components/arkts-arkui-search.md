@@ -144,7 +144,7 @@ struct SearchExample {
 }
 ```
 
-从API version 22开始[customKeyboard](#customkeyboard10)属性新增了入参类型ComponentContent。
+该示例通过[customKeyboard](#customkeyboard10)（从API version 10开始）属性分别将value中的入参类型设置为[CustomBuilder](ts-types.md#custombuilder8)和ComponentContent，实现了自定义键盘的功能。
 
 ```TypeScript
 // xxx.ets
@@ -650,7 +650,7 @@ struct SearchExample {
 }
 ```
 
-从API版本26.0.0开始，新增[onWillCopy](#onwillcopy)、[onWillCut](#onwillcut)接口。
+该示例通过[copyOption](#copyoption9)、[onWillCopy](#onwillcopy)、[onWillCut](#onwillcut)接口展示如何设置文本复制、如何拦截系统复制、如何拦截系统剪切。
 
 ```TypeScript
 // xxx.ets
@@ -957,7 +957,7 @@ struct SearchExample {
 }
 ```
 
-从API版本26.0.0开始，新增[strokeJoinStyle](#strokejoinstyle)接口，支持设置文本描边拐角样式。
+从API version 20开始，该示例通过[strokeWidth](#strokewidth20)和[strokeColor](#strokecolor20)属性设置文本的描边宽度及颜色。
 
 ```TypeScript
 // xxx.ets
@@ -1151,7 +1151,7 @@ struct SearchExample {
 }
 ```
 
-从API version 23开始，支持compressLeadingPunctuation接口。
+该示例通过[compressLeadingPunctuation](#compressleadingpunctuation23)接口设置行首标点压缩，左侧有间距的标点符号位于行首时，标点会直接压缩间距至左侧边界。
 
 ```TypeScript
 // xxx.ets
@@ -1174,7 +1174,7 @@ struct Index {
 }
 ```
 
-从API version 23开始，新增[includeFontPadding](#includefontpadding23)和[fallbackLineSpacing](#fallbacklinespacing23)接口。
+该示例通过[includeFontPadding](#includefontpadding23)接口增加首行尾行间距和[fallbackLineSpacing](#fallbacklinespacing23)接口设置自适应行间距。
 
 ```TypeScript
 // xxx.ets
@@ -1235,7 +1235,7 @@ struct Index {
 }
 ```
 
-从API version 23开始，新增selectedDragPreviewStyle接口。
+该示例通过[selectedDragPreviewStyle](#selecteddragpreviewstyle23)接口设置文本拖拽时的背板样式。
 
 ```TypeScript
 @Entry
@@ -1256,7 +1256,7 @@ struct SearchTest {
 }
 ```
 
-从API version 23开始，新增[deleteBackward](ts-universal-attributes-text-style.md#deletebackward23)接口。
+该示例通过调用[deleteBackward](ts-universal-attributes-text-style.md#deletebackward23)接口删除文本框内最后一个字符。
 
 ```TypeScript
 @Entry
@@ -1276,7 +1276,7 @@ struct Page {
 }
 ```
 
-从API version 23开始，新增textDirection接口。
+该示例通过[textDirection](#textdirection23)接口设置文本排版方向。
 
 ```TypeScript
 // xxx.ets
@@ -1314,7 +1314,7 @@ struct SearchExample {
 }
 ```
 
-从API version 23开始，新增scrollToVisible接口。
+本示例通过[scrollToVisible](./ts-universal-attributes-text-style.md#scrolltovisible23)将可视区外的文本滚动到可视区内。
 
 ```TypeScript
 // xxx.ets
@@ -1337,7 +1337,7 @@ struct SearchExample {
 }
 ```
 
-从API版本26.0.0开始，新增shaderStyle接口。
+该示例通过[shaderStyle](#shaderstyle)接口实现对Search组件内文本着色效果。
 
 ```TypeScript
 @Entry
@@ -1401,7 +1401,7 @@ struct ShaderColorStyle {
 }
 ```
 
-从API version 22开始，新增enableSelectedDataDetector。
+该示例通过[enableSelectedDataDetector](#enableselecteddatadetector22)，配置文本选择AI菜单功能。
 
 ```TypeScript
 @Entry

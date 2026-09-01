@@ -50,7 +50,7 @@ import { EditableLeftIconTypeV2, EditableTitleBarV2, EditableLeftIconV2, Editabl
 
 ## 示例
 
-从API版本26.0.0开始，支持EditableTitleBarV2。
+本示例通过EditableTitleBarV2接口实现了编辑型标题栏左侧图标、主标题及自定义右侧图标区内容的展示。
 
 ```TypeScript
 import { Prompt } from '@kit.ArkUI';
@@ -118,7 +118,7 @@ struct EditableTitleBarV2Demo01 {
 }
 ```
 
-从API版本26.0.0开始，支持EditableTitleBarV2。
+本示例通过EditableTitleBarV2接口leftIcon、title、saveButton等，实现了编辑型标题栏设置背景模糊、头像、取消右侧保存图标及自定义标题栏外边距的功能。
 
 ```TypeScript
 import { LengthMetrics, Prompt } from '@kit.ArkUI';
@@ -260,7 +260,7 @@ struct EditableTitleBarV2Demo02 {
 }
 ```
 
-从API版本26.0.0开始，支持EditableTitleBarV2。
+本示例通过EditableTitleBarV2接口右侧自定义按钮属性接口accessibilityText、accessibilityDescription等，实现了编辑型标题栏屏幕朗读播报文本内容的自定义功能。
 
 ```TypeScript
 import { Prompt } from '@kit.ArkUI';
@@ -335,7 +335,7 @@ struct EditableTitleBarV2Demo03 {
 }
 ```
 
-从API版本26.0.0开始，支持EditableTitleBarV2。
+在获焦状态下，本示例通过EditableTitleBarV2接口配置[EditableLeftIconV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticonv2-c.md)的defaultFocus属性，实现了编辑型标题栏左侧图标默认获焦功能。
 
 ```TypeScript
 import { Prompt } from '@kit.ArkUI';
@@ -366,7 +366,7 @@ struct EditableTitleBarV2Demo04 {
 }
 ```
 
-从API版本26.0.0开始，支持EditableTitleBarV2。
+在获焦状态下，本示例通过EditableTitleBarV2的右侧图标属性defaultFocus，实现了编辑型标题栏右侧图标默认获焦功能。
 
 ```TypeScript
 import { Prompt } from '@kit.ArkUI';
@@ -420,7 +420,7 @@ struct EditableTitleBarV2Demo05 {
 }
 ```
 
-从API版本26.0.0开始，支持EditableTitleBarV2。
+本示例通过EditableTitleBarV2接口symbolStyle，实现了编辑型标题栏自定义Symbol类型图标功能。
 
 ```TypeScript
 import { Prompt, SymbolGlyphModifier } from '@kit.ArkUI';

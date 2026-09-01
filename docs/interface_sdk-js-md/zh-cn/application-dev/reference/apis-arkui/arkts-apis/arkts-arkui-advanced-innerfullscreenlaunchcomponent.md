@@ -1,12 +1,16 @@
 # @ohos.arkui.advanced.InnerFullScreenLaunchComponent(系统接口)
 
-###### 子组件
- 无。
- ###### 属性
- 不支持通用属性。
- ###### 事件
- 不支持通用事件。
+## 子组件
 
+无。
+
+## 属性
+
+不支持通用属性。
+
+## 事件
+
+不支持通用事件。
 
 ## 导入模块
 
@@ -42,7 +46,7 @@ import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 
 ## 示例
 
-在右侧进程列表中，选择被拉起的原子化服务进程（被拉起原子化服务的包名，且后缀带有embeddable字样）。
+> 说明：
 
 ```TypeScript
 import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';

@@ -33,6 +33,8 @@ Creates an **HttpResponseCache** object that stores the response data of HTTP re
 
 **Examples**
 
+createHttpResponseCache(cacheSize?: number): HttpResponseCache
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 

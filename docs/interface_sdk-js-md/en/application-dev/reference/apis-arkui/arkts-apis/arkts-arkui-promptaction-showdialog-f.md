@@ -46,6 +46,8 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 
 **Examples**
 
+showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>):void
+
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -78,7 +80,7 @@ try {
 };
 ```
 
-When the showInSubWindow attribute is set to true, the toast can be displayed outside the window.
+en-us_image_0004
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
@@ -114,7 +116,7 @@ try {
 };
 ```
 
-This example demonstrates how to use the onDidAppear, onDidDisappear, onWillAppear, and onWillDisappear properties of ShowDialogOptions to implement the dialog box lifecycle callbacks, supported since API version 19.
+en-us_image_0002_showinsubwindow
 
 ```TypeScript
 // xxx.ets
@@ -220,6 +222,8 @@ Creates and displays a dialog box in the given settings. This API uses a promise
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 **Examples**
+
+showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';

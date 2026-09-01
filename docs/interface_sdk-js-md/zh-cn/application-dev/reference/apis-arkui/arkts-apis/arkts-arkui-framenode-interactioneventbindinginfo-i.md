@@ -52,7 +52,7 @@ true表示组件绑定内置事件，false表示组件没有绑定内置事件�
 nativeEventRegistered: boolean
 ```
 
-是否以注册节点事件（[registerNodeEvent](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#registernodeevent)）的方式绑定事件。
+是否以注册节点事件（registerNodeEvent）的方式绑定事件。
 
 true表示以注册节点事件的方式绑定事件，false表示没有以注册节点事件的方式绑定事件。
 

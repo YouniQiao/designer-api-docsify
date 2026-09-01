@@ -235,7 +235,7 @@ struct TimePickerExample {
 }
 ```
 
-从API version 18开始，新增enableCascade接口。
+该示例通过配置[enableCascade](#enablecascade18)、[loop](#loop11)实现12小时制时上午/下午跟随时间联动。
 
 ```TypeScript
 // xxx.ets

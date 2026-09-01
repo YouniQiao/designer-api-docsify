@@ -54,7 +54,7 @@ privilege?: Privilege
 
 Permissions on the shared data. The Privilege defaults are used by default.
 
-**Type:** [Privilege](arkts-arkdata-sharing-privilege-i-sys.md)
+**Type:** Privilege
 
 **Since:** 11
 

@@ -28,7 +28,7 @@ function queryParticipantsByInvitation(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | invitationCode | string | 是 | 端云共享的邀请码。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | 是 | 回调函数。返回查找共享参与者的结果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | 是 | 回调函数。返回查询共享参与者的结果。 |
 
 **错误码：**
 
@@ -77,7 +77,7 @@ function queryParticipantsByInvitation(invitationCode: string): Promise<Result<A
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Promise对象，返回查找共享参与者的结果。 |
+| Promise&lt;Result&lt;Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt;&gt;&gt; | Promise对象，返回查询共享参与者的结果。 |
 
 **错误码：**
 

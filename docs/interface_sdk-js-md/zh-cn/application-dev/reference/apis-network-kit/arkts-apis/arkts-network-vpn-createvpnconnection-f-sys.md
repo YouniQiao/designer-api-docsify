@@ -41,7 +41,7 @@ function createVpnConnection(context: AbilityContext): VpnConnection
 
 **示例**
 
-Stage 模型示例：
+> 说明：
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';

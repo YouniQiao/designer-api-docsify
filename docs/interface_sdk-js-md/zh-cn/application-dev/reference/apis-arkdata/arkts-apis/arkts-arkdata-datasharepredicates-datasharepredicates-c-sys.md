@@ -18,9 +18,7 @@ import { dataSharePredicates } from '@kit.ArkData';
 beginsWith(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值以指定字符串起始的字段。
-
-目前仅关系型数据库支持该谓词。
+该接口用于配置谓词以匹配值以指定字符串起始的字段。目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -56,9 +54,7 @@ predicates.beginsWith("NAME", "os");
 contains(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值包含指定字段的字段。
-
-目前仅关系型数据库支持该谓词。
+该接口用于配置谓词以匹配字段包含指定值的字段。目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -94,9 +90,7 @@ predicates.contains("NAME", "os");
 distinct(): DataSharePredicates
 ```
 
-该接口用于配置谓词以过滤重复记录并仅保留其中一个。
-
-目前仅关系型数据库支持该谓词。
+该接口用于配置谓词以过滤重复记录并仅保留其中一个。目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -125,9 +119,7 @@ predicates.equalTo("NAME", "Rose").distinct();
 endsWith(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值以指定字符串结尾的字段。
-
-目前仅关系型数据库支持该谓词。
+该接口用于配置谓词以匹配值以指定字符串结尾的字段。目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -163,9 +155,7 @@ predicates.endsWith("NAME", "os");
 glob(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配指定通配符表达式的字段。
-
-目前仅关系型数据库支持该谓词。
+该接口用于配置谓词以匹配指定通配符表达式的字段。目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -201,9 +191,7 @@ predicates.glob("NAME", "?h*g");
 groupBy(fields: Array<string>): DataSharePredicates
 ```
 
-该接口用于配置谓词按指定列分组查询结果。
-
-目前仅关系型数据库支持该谓词。
+该接口用于配置谓词按指定列分组查询结果。目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -238,9 +226,7 @@ predicates.groupBy(["AGE", "NAME"]);
 indexedBy(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词按指定索引列查询结果。使用该方法前，需要设置索引列。
-
-目前仅关系型数据库支持该谓词。
+该接口用于配置谓词按指定索引列查询结果。使用该方法前，需要设置索引列。目前仅关系型数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -275,9 +261,7 @@ predicates.indexedBy("SALARY_INDEX");
 inKeys(keys: Array<string>): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配键在指定范围内的字段。
-
-目前仅KVDB支持该谓词。
+该接口用于配置谓词以匹配键在指定范围内的字段。目前仅分布式键值数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -312,9 +296,7 @@ predicates.inKeys(["Lisa", "Rose"]);
 isNotNull(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值不为null的字段。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配值不为null的字段。目前仅关系型数据库及分布式键值数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -349,9 +331,7 @@ predicates.isNotNull("NAME");
 isNull(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值为null的字段。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配值为null的字段。目前仅关系型数据库及分布式键值数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -371,7 +351,7 @@ isNull(field: string): DataSharePredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | DataSharePredicates** object created. |
+| [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md) | 返回与指定字段匹配的谓词。 |
 
 **示例**
 
@@ -386,9 +366,7 @@ predicates.isNull("NAME");
 prefixKey(prefix: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配键前缀的指定字段。
-
-目前仅KVDB支持该谓词。
+该接口用于配置谓词以匹配键前缀的指定字段。目前仅分布式键值数据库支持该谓词。
 
 **起始版本：** 9
 
@@ -423,9 +401,7 @@ predicates.prefixKey("NAME");
 unlike(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配不类似指定通配符表达式的字段。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配不类似指定通配符表达式的字段。目前仅关系型数据库及分布式键值数据库支持该谓词。
 
 **起始版本：** 9
 

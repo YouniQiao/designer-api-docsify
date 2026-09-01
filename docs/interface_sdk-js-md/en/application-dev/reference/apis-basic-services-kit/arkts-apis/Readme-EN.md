@@ -155,6 +155,12 @@
   - [ResultCode(system api)](arkts-basicservices-osaccount-resultcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SetPropertyType(system api)](arkts-basicservices-osaccount-setpropertytype-e-sys.md)<!--DelEnd-->
+- [@ohos.account.osAccount.authorization](arkts-account-osaccount-authorization.md)
+  - [getAuthorizationManager](arkts-basicservices-authorization-getauthorizationmanager-f.md)
+  - [AuthorizationManager](arkts-basicservices-authorization-authorizationmanager-i.md)
+  - [AuthorizationResult](arkts-basicservices-authorization-authorizationresult-i.md)
+  - [AuthorizationResultCode](arkts-basicservices-authorization-authorizationresultcode-e.md)
+  - [Privilege](arkts-basicservices-authorization-privilege-e.md)
 <!--Del-->
 - [@ohos.ai.intelligentVoice](arkts-ai-intelligentvoice.md)<!--DelEnd-->
   <!--Del-->

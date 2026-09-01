@@ -56,7 +56,7 @@ Performs bulk transfer. This API uses a promise to return the result.
 
 **Examples**
 
-The following sample code is only a basic process for calling the bulkTransfer API. In actual calling, you must comply with the device-related protocols to ensure correct data transfer and device compatibility.
+> NOTE
 
 ```TypeScript
 // Call usbManager.getDevices to obtain a data set. Then, obtain a USB device and its access permission.

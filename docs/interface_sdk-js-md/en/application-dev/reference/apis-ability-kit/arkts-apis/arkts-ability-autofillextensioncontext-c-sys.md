@@ -49,7 +49,7 @@ Reload autoFillExtension in modal window.
 
 **Examples**
 
-When an account is selected, reloadInModal is called to trigger the autofill service again, and a modal page is started in the onFillRequest lifecycle of the AutoFillExtensionAbility.
+The autofill service is triggered when a user touches the account and password text box, and an account selection page is displayed in the onFillRequest lifecycle of the [AutoFillExtensionAbility](arkts-ability-app-ability-autofillextensionability-autofillextensionability-c-sys.md).
 
 ```TypeScript
 // AutoFillAbility.ts

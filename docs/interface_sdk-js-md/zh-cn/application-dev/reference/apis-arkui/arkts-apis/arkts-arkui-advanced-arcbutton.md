@@ -37,7 +37,7 @@ import { ArcButton, ArcButtonOptions, ArcButtonProgressConfig, ArcButtonPosition
 
 ## 示例
 
-该示例推荐在Wearable设备下运行以获得最佳显示效果，同时支持在其他设备上运行。若要在Wearable设备上运行，需在src/main目录下的工程配置文件[module.json5](../../../quick-start/module-configuration-file.md)中[deviceTypes标签](../../../quick-start/module-configuration-file.md#devicetypes标签)内配置wearable。
+该示例展示了ArcButton的基本用法。从API version 18开始，新增ArcButton。示例配置如下：
 
 ```TypeScript
 // module.json5
@@ -112,6 +112,22 @@ struct Index {
     .height('100%')
     .alignContent(Alignment.Center)
     .backgroundColor(Color.Gray)
+  }
+}
+```
+
+该示例展示了ArcButton组件进度条样式的基本用法。从API version 23开始，新增[ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)的progressConfig接口。示例配置如下：
+
+```TypeScript
+// module.json5
+{
+  "module": {
+    // ...
+    "deviceTypes": [
+      "wearable",
+      "phone"
+    ]
+    // ...
   }
 }
 ```

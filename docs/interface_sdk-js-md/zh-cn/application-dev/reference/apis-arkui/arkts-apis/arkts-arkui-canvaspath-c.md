@@ -542,7 +542,7 @@ roundRect(x: number, y: number, w: number, h: number, radii?: number | Array<num
 
 **示例**
 
-创建一个(220vp, 330vp)为起点，宽高为-100vp，左上矩形角圆弧半径为10vp，右上矩形角圆弧半径为20vp，右下矩形角圆弧半径为30vp，左下矩形角圆弧半径为40vp的圆角矩形并描边。
+该示例展示了绘制六个圆角矩形：
 
 ```TypeScript
 // xxx.ets

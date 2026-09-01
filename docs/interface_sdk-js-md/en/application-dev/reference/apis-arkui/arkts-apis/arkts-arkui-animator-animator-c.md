@@ -56,7 +56,7 @@ Creates an **AnimatorResult** object for animations.
 
 **Examples**
 
-For precise UI context management, use the createAnimator API in [UIContext](arkts-apis-uicontext-uicontext.md) to specify the execution context.
+See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
 import { Animator as animator, AnimatorOptions } from '@kit.ArkUI';
@@ -110,7 +110,7 @@ Creates an **AnimatorResult** object for animations. Compared with [create](#cre
 
 **Examples**
 
-For precise UI context management, use the createAnimator API in [UIContext](arkts-apis-uicontext-uicontext.md) to specify the execution context.
+See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
 import { Animator as animator, SimpleAnimatorOptions } from '@kit.ArkUI';
@@ -151,10 +151,9 @@ Creates an animation.
 See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
-import { Animator as animator } from '@kit.ArkUI';
+import { Animator as animator, AnimatorOptions } from '@kit.ArkUI';
 
-let options: AnimatorOptions = {
-  // There is no need to explicitly specify the type AnimatorOptions in the xxx.js file.
+let options: AnimatorOptions = { // The explicit type AnimatorOptions does not need to be emphasized in the xxx.js file.
   duration: 1500,
   easing: "friction",
   delay: 0,

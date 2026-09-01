@@ -4487,7 +4487,7 @@ injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 
 **示例**
 
-首先，在EntryAbility中将[UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md)存到[localStorage](../../../ui/state-management/arkts-localstorage.md)中。
+接口推荐配合动态组件使用，使用离线的Web组件用于将资源注入到内核的内存缓存中，并在适当的时机加载业务用Web组件使用这些资源。下方是代码示例：
 
 ```TypeScript
 // EntryAbility.ets
@@ -5435,7 +5435,7 @@ struct WebComponent {
 }
 ```
 
-1.$rawfile方式。
+加载本地网页，加载本地资源文件有三种方式。
 
 ```TypeScript
 // xxx.ets
@@ -5464,7 +5464,7 @@ struct WebComponent {
 }
 ```
 
-使用  协议前缀可以避免常规  方式在处理带有“#”路由链接时URL会被“#”截断的问题。当URL中包含“#”号时，“#”后面的内容会被视为锚点（fragment）。
+2.resource协议。
 
 ```TypeScript
 // xxx.ets
@@ -5524,7 +5524,7 @@ struct WebComponent {
 </html>
 ```
 
-加载的html文件。
+3.通过沙箱路径加载本地文件，可以参考[web](../../../web/web-page-loading-with-web-components.md#加载本地页面)加载沙箱路径的示例代码。
 
 ```TypeScript
 <!-- index.html -->
@@ -6512,7 +6512,7 @@ precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: Cac
 
 **示例**
 
-首先，在EntryAbility中将[UIContext](../apis-arkui/arkts-apis-uicontext-uicontext.md)存到[localStorage](../../../ui/state-management/arkts-localstorage.md)中。
+接口推荐配合动态组件使用，使用离线的Web组件用于生成字节码缓存，并在适当的时机加载业务用Web组件使用这些字节码缓存。下方是代码示例：
 
 ```TypeScript
 // EntryAbility.ets
@@ -6632,7 +6632,7 @@ async function readRawFile(path: string, context: UIContext) {
 }
 ```
 
-编写业务用组件代码。
+JavaScript资源的获取方式也可通过[数据请求](../../apis-network-kit/arkts-apis/arkts-net-http.md)的方式获取，但此方法获取到的HTTP响应头非标准HTTP响应头格式，需额外将响应头转换成标准HTTP响应头格式后使用。如通过数据请求获取到的响应头是e-tag，则需要将其转换成E-Tag后使用。
 
 ```TypeScript
 // BusinessWebview.ets
@@ -7557,7 +7557,7 @@ struct WebComponent {
 }
 ```
 
-获取应用缓存文件路径。
+2.修改EntryAbility.ets。
 
 ```TypeScript
 // xxx.ets
@@ -8950,7 +8950,7 @@ struct WebComponent {
 }
 ```
 
-获取应用缓存文件路径。
+2.修改EntryAbility.ets。
 
 ```TypeScript
 // xxx.ets

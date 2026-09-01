@@ -12,7 +12,7 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState, rotateState: RotateState): Promise<image.PixelMap>
 ```
 
-获取指定壁纸类型、折展态、横竖屏的壁纸图片的像素图，如果指定的壁纸不存在，会逐步降级匹配，unfolded-land -&gt; unfolded-port -&gt;normal-port。使用promise异步回调。
+获取指定壁纸类型、折展态、横竖屏的壁纸图片的像素图，如果指定的壁纸不存在，会逐步降级匹配，unfolded-land -&gt; unfolded-port -&gt;normal-port。使用Promise异步回调。
 
 **起始版本：** 14
 
@@ -34,7 +34,7 @@ function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState,
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;image.PixelMap&gt; | 调用成功则返回壁纸图片的像素图对象，调用失败则返回error信息。 |
+| Promise&lt;image.PixelMap&gt; | Promise对象，返回壁纸图片的像素图对象。 |
 
 **错误码：**
 

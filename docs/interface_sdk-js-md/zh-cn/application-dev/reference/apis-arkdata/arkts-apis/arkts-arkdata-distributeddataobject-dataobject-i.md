@@ -18,9 +18,7 @@ import { distributedDataObject } from '@kit.ArkData';
 bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<void>): void
 ```
 
-绑定分布式对象中的单个资产与其对应的数据库信息，当前版本只支持分布式对象中的资产与关系型数据库的绑定。使用callback方式异步回调。
-
-当分布式对象中包含的资产和关系型数据库中包含的资产指向同一个实体资产文件，即两个资产的Uri相同时，就会存在冲突，我们把这种资产称为融合资产。如果需要分布式数据管理进行融合资产的冲突解决，需要先进行资产的绑定。当应用退出session后，绑定关系随之消失。
+绑定分布式数据对象中的单个资产与其对应的数据库信息，当前版本只支持分布式数据对象中的资产与关系型数据库的绑定。使用callback异步回调。当分布式数据对象中包含的资产和关系型数据库中包含的资产指向同一个实体资产文件，即两个资产的Uri相同时，就会存在冲突，我们把这种资产称为融合资产。如果需要分布式数据管理进行融合资产的冲突解决，需要先进行资产的绑定。当应用退出session后，绑定关系随之消失。
 
 **起始版本：** 11
 
@@ -30,9 +28,9 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetKey | string | 是 | 待绑定的融合资产在分布式对象中的键值。 |
+| assetKey | string | 是 | 待绑定的融合资产在分布式数据对象中的键值。 |
 | bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | 是 | 待绑定的融合资产在数据库中的信息，包含库名、表名、主键、列名及在数据库中的资产名。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 绑定数据库的回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当绑定数据库成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -103,9 +101,7 @@ class EntryAbility extends UIAbility {
 bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
 ```
 
-绑定分布式对象中的单个资产与其对应的数据库信息，当前版本只支持分布式对象中的资产与关系型数据库的绑定。使用Promise方式作为异步回调。
-
-当分布式对象中包含的资产和关系型数据库中包含的资产指向同一个实体资产文件，即两个资产的Uri相同时，就会存在冲突，我们把这种资产称为融合资产。如果需要分布式数据管理进行融合资产的冲突解决，需要先进行资产的绑定。当应用退出session后，绑定关系随之消失。
+绑定分布式数据对象中的单个资产与其对应的数据库信息，当前版本只支持分布式数据对象中的资产与关系型数据库的绑定。使用Promise异步回调。当分布式数据对象中包含的资产和关系型数据库中包含的资产指向同一个实体资产文件，即两个资产的Uri相同时，就会存在冲突，我们把这种资产称为融合资产。如果需要分布式数据管理进行融合资产的冲突解决，需要先进行资产的绑定。当应用退出session后，绑定关系随之消失。
 
 **起始版本：** 11
 
@@ -115,7 +111,7 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetKey | string | 是 | 待绑定的融合资产在分布式对象中的键值。 |
+| assetKey | string | 是 | 待绑定的融合资产在分布式数据对象中的键值。 |
 | bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | 是 | 待绑定的融合资产在数据库中的信息，包含库名、表名、主键、列名及在数据库中的资产名。 |
 
 **返回值：**
@@ -246,7 +242,7 @@ off(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'status' | 是 | 事件类型，固定为'status'，表示对象上下线。 |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 否 | 需要删除的上下线回调，若不设置则删除该对象所有的上下线回调。sessionId：标识变更对象的sessionId；networkId：标识对象设备；status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 否 | 需要删除的上下线回调，若不设置则删除该对象所有的上下线回调。sessionId：标识变更对象的sessionId；networkId：对端设备的网络标识；status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
 
 **错误码：**
 
@@ -271,7 +267,7 @@ g_object.off('status');
 off(type: 'change', callback?: DataObserver): void
 ```
 
-当不再进行数据变更监听时，使用此接口删除分布式对象数据变更监听的回调实例。
+当不再进行数据变更监听时，使用此接口删除分布式数据对象数据变更监听的回调实例。
 
 **起始版本：** 20
 
@@ -328,7 +324,7 @@ try {
 off(type: 'status', callback?: StatusObserver): void
 ```
 
-当不再进行分布式对象状态变更监听时，使用此接口删除分布式对象状态变更的回调实例。
+当不再进行分布式数据对象状态变更监听时，使用此接口删除分布式数据对象状态变更的回调实例。
 
 **起始版本：** 20
 
@@ -338,7 +334,7 @@ off(type: 'status', callback?: StatusObserver): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'status' | 是 | 事件类型，固定为'status'，表示数据对象状态变更事件。 |
+| type | 'status' | 是 | 事件类型，固定为'status'，表示分布式数据对象状态变更事件。 |
 | callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 否 | 需要删除状态变更的回调实例，若不设置则删除该对象所有的状态变更回调实例。 |
 
 **示例**
@@ -474,7 +470,7 @@ on(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'status' | 是 | 事件类型，固定为'status'，表示对象上下线。 |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 是 | 监听上下线回调实例。sessionId：标识变更对象的sessionId；networkId：标识对象设备；status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 是 | 监听上下线回调实例。sessionId：标识变更对象的sessionId；networkId：对端设备的网络标识；status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
 
 **错误码：**
 
@@ -496,7 +492,7 @@ g_object.on('status', (sessionId: string, networkId: string, status: 'online' | 
 on(type: 'change', callback: DataObserver): void
 ```
 
-监听分布式对象的数据变更。
+监听分布式数据对象的数据变更。
 
 **起始版本：** 20
 
@@ -507,7 +503,7 @@ on(type: 'change', callback: DataObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定为'change'，表示数据变更。 |
-| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 是 | 表示分布式对象数据变更的回调实例。 |
+| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 是 | 表示分布式数据对象数据变更的回调实例。 |
 
 **示例**
 
@@ -536,7 +532,7 @@ try {
 on(type: 'status', callback: StatusObserver): void
 ```
 
-监听分布式对象的状态变更。
+监听分布式数据对象的状态变更。
 
 **起始版本：** 20
 
@@ -546,8 +542,8 @@ on(type: 'status', callback: StatusObserver): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'status' | 是 | 事件类型，固定为'status'，表示分布式对象状态变更事件。 |
-| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 是 | 表示分布式对象状态变更的回调实例。 |
+| type | 'status' | 是 | 事件类型，固定为'status'，表示分布式数据对象状态变更事件。 |
+| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 是 | 表示分布式数据对象状态变更的回调实例。 |
 
 **示例**
 
@@ -607,11 +603,7 @@ try {
 revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void
 ```
 
-撤回保存的分布式数据对象。使用callback方式作为异步方法。
-
-如果对象保存在本地设备，那么将删除所有受信任设备上所保存的数据。
-
-如果对象保存在其他设备，那么将删除本地设备上的数据。
+撤回保存的分布式数据对象。使用callback异步回调。如果对象保存在本地设备，那么将删除所有受信任设备上所保存的数据。如果对象保存在其他设备，那么将删除本地设备上的数据。
 
 **起始版本：** 9
 
@@ -621,7 +613,7 @@ revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; | 是 | 回调函数。返回RevokeSaveSuccessResponse，包含sessionId。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; | 是 | 回调函数。当撤回保存成功，err为undefined，data为RevokeSaveSuccessResponse（包含sessionId信息）；否则为错误对象。 |
 
 **错误码：**
 
@@ -662,11 +654,7 @@ g_object.revokeSave((err: BusinessError, result: distributedDataObject.RevokeSav
 revokeSave(): Promise<RevokeSaveSuccessResponse>
 ```
 
-撤回保存的分布式数据对象。使用Promise方式作为异步方法。
-
-如果对象保存在本地设备，那么将删除所有受信任设备上所保存的数据。
-
-如果对象保存在其他设备，那么将删除本地设备上的数据。
+撤回保存的分布式数据对象。使用Promise异步回调。如果对象保存在本地设备，那么将删除所有受信任设备上所保存的数据。如果对象保存在其他设备，那么将删除本地设备上的数据。
 
 **起始版本：** 9
 
@@ -712,11 +700,7 @@ g_object.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessRespo
 save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void
 ```
 
-保存分布式数据对象。使用callback方式异步回调。
-
-对象数据保存成功后，当应用存在时不会释放对象数据，当应用退出后，重新进入应用时，恢复保存在设备上的数据。
-
-有以下几种情况时，保存的数据将会被释放：
+保存分布式数据对象。使用callback异步回调。对象数据保存成功后，当应用存在时不会释放对象数据，当应用退出后，重新进入应用时，恢复保存在设备上的数据。有以下几种情况时，保存的数据将会被释放：
 
 - 存储时间超过24小时。  
 - 应用卸载。  
@@ -731,7 +715,7 @@ save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 存储数据的设备号，标识需要保存对象的设备。"local"表示本地设备，否则表示其他设备的设备号。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; | 是 | 回调函数。返回SaveSuccessResponse，包含sessionId、version、deviceId等信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; | 是 | 回调函数。当保存成功，err为undefined，data为SaveSuccessResponse（包含sessionId、version、deviceId等信息）；否则为错误对象。 |
 
 **错误码：**
 
@@ -762,11 +746,7 @@ g_object.save('local', (err: BusinessError, result:distributedDataObject.SaveSuc
 save(deviceId: string): Promise<SaveSuccessResponse>
 ```
 
-保存分布式数据对象。使用Promise方式作为异步回调。
-
-对象数据保存成功后，当应用存在时不会释放对象数据，当应用退出后，重新进入应用时，恢复保存在设备上的数据。
-
-有以下几种情况时，保存的数据将会被释放：
+保存分布式数据对象。使用Promise异步回调。对象数据保存成功后，当应用存在时不会释放对象数据，当应用退出后，重新进入应用时，恢复保存在设备上的数据。有以下几种情况时，保存的数据将会被释放：
 
 - 存储时间超过24小时。  
 - 应用卸载。  
@@ -815,7 +795,15 @@ g_object.save('local').then((callbackInfo: distributedDataObject.SaveSuccessResp
 setAsset(assetKey: string, uri: string): Promise<void>
 ```
 
-设置分布式对象中的单个资产的属性信息，该接口必须在[setSessionId](#setsessionid)接口调用前使用。使用Promise异步回调。
+设置分布式数据对象中的单个资产的属性信息，该接口必须在[setSessionId](#setsessionid)接口调用前使用。使用Promise异步回调。  
+> **注意：**
+> 
+> 在设置资产时必须保证assetKey存在且对应文件为资产类型文件，否则无法保证对端能接收到此次设置的资产。
+> 
+> 在设置资产时必须保证uri为正确且真实存在的分布式路径，否则无法保证对端能接收到此次设置的资产。
+> 有以下几种异常场景:
+
+| 触发条件 | 操作结果 | | -------- | -------- | | 调用[setSessionId](#setsessionid)接口设置sessionId后再调用[setAsset](#setasset)接口设置资产。 | 设置资产失败，抛出15400003异常。 | | assetKey为无效值，例如：null（不存在）、undefined（未定义）或''（空字符串）。 | 设置资产失败，抛出15400002异常。 | | assetKey存在、对应文件为非资产类型。 | 系统会强制修改该字段对应的文件类型为资产类型且设置资产字段，可能出现真实资产无法同步至对端设备。 | | uri为无效值，例如：null（不存在）、undefined（未定义）或''（空字符串）。 | 设置资产失败，抛出15400002异常。 |
 
 **起始版本：** 20
 
@@ -825,7 +813,7 @@ setAsset(assetKey: string, uri: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetKey | string | 是 | 分布式对象中资产类型数据对应的属性名。   **使用约束：** （1）提供的assetKey对应的文件必须已存在且类型为资产[Asset](arkts-arkdata-commontype-asset-i.md)，才可进行正确的设置资产。若assetKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错误。（2）在协同或接续场景下需要双端满足assetKey对应的文件存在且为资产类型，才可将设置的资产同步到对端设备。 |
+| assetKey | string | 是 | 分布式数据对象中资产类型数据对应的属性名。   **使用约束：** （1）提供的assetKey对应的文件必须已存在且类型为资产[Asset](arkts-arkdata-commontype-asset-i.md)，才可进行正确的设置资产。若assetKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错误。（2）在协同或接续场景下需要双端满足assetKey对应的文件存在且为资产类型，才可将设置的资产同步到对端设备。 |
 | uri | string | 是 | 待设置的新资产的uri，表示该资产的存放的分布式路径。必须为真实存在的资产对应的分布式路径。 |
 
 **返回值：**
@@ -891,7 +879,15 @@ class EntryAbility extends UIAbility {
 setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 ```
 
-设置分布式对象中的多个资产的属性信息，该接口必须在[setSessionId](#setsessionid)接口调用前使用。使用Promise异步回调。
+设置分布式数据对象中的多个资产的属性信息，该接口必须在[setSessionId](#setsessionid)接口调用前使用。使用Promise异步回调。  
+> **注意：**
+> 
+> 在设置资产时必须保证assetsKey存在且对应文件为资产类型文件，否则无法保证对端能接收到此次设置的资产。
+> 
+> 在设置资产时必须保证uris数组中uri元素的数量在[1, 50]之间，元素uri均为正确且真实存在的分布式路径，否则无法保证对端能接收到此次设置的资产。
+> 有以下几种异常场景:
+
+| 触发条件 | 操作结果 | | -------- | -------- | | 调用[setSessionId](#setsessionid)接口设置sessionId后再调用[setAssets](#setassets)接口设置资产。 | 设置资产失败，抛出15400003异常。 | | assetsKey为无效值，例如：null（不存在）、undefined（未定义）或''（空字符串）。 | 设置资产失败，抛出15400002异常。 | | assetsKey存在、对应文件为非资产类型。 | 系统会强制修改该字段对应的文件类型为资产类型且设置资产字段，可能出现真实资产无法同步至对端设备。 | | assetsKey存在、且对应文件为资产类型。 | 设置资产成功、更新uri信息。 | | uris数组中uri元素的数量在[1, 50]之外。 | 设置资产失败，抛出15400002异常。 | | uris数组中uri元素的数量在[1, 50]之间，存在单个或多个uri无效，例如：null（不存在）、undefined（未定义）或''（空字符串）。| 设置资产失败，抛出15400002异常。 |
 
 **起始版本：** 20
 
@@ -901,7 +897,7 @@ setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| assetsKey | string | 是 | 分布式对象中资产数组类型数据对应的属性名。   **使用约束：** （1）提供的assetsKey对应的文件已存在且类型必须为资产[Asset](arkts-arkdata-commontype-asset-i.md)，才可进行正确的设置资产。若assetsKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错误。（2）在协同或接续场景下需要双端满足assetsKey对应的文件存在且为资产类型，才可将设置的资产数组同步到对端设备。 |
+| assetsKey | string | 是 | 分布式数据对象中资产数组类型数据对应的属性名。   **使用约束：** （1）提供的assetsKey对应的文件已存在且类型必须为资产[Asset](arkts-arkdata-commontype-asset-i.md)，才可进行正确的设置资产。若assetsKey对应文件不存在或文件存在但类型不是资产类型，可能会出现资产设置错误。（2）在协同或接续场景下需要双端满足assetsKey对应的文件存在且为资产类型，才可将设置的资产数组同步到对端设备。 |
 | uris | Array&lt;string&gt; | 是 | 待设置的新资产数组的uri集合，表示资产数组内每个资产存放的分布式路径。数组中元素的数量为[1, 50]，元素uri必须为真实存在的资产对应的分布式路径。 |
 
 **返回值：**
@@ -967,7 +963,7 @@ class EntryAbility extends UIAbility {
 setSessionId(sessionId: string, callback: AsyncCallback<void>): void
 ```
 
-设置sessionId，使用callback方式异步回调。当可信组网中有多个设备处于协同状态时，如果多个设备间的分布式对象设置为同一个sessionId，就能自动同步。
+设置sessionId，使用callback异步回调。当可信组网中有多个设备处于协同状态时，如果多个设备间的分布式数据对象设置为同一个sessionId，就能自动同步。
 
 **起始版本：** 9
 
@@ -979,8 +975,8 @@ setSessionId(sessionId: string, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sessionId | string | 是 | 分布式数据对象在可信组网中的标识ID，长度不大于128字节，且只能包含字母数字或下划线_。当传入""、null时表示退出分布式组网。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 加入session的异步回调。 |
+| sessionId | string | 是 | 分布式数据对象在可信组网中的标识ID，长度不大于128字节，且只能包含字母、数字或下划线_。当传入""、null时表示退出分布式组网。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当加入session成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1009,7 +1005,7 @@ g_object.setSessionId('', () => {
 setSessionId(callback: AsyncCallback<void>): void
 ```
 
-退出所有已加入的session，使用callback方式异步回调。
+退出所有已加入的session，使用callback异步回调。
 
 **起始版本：** 9
 
@@ -1022,7 +1018,7 @@ setSessionId(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 退出所有已加入session的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当退出session成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1051,7 +1047,7 @@ g_object.setSessionId(() => {
 setSessionId(sessionId?: string): Promise<void>
 ```
 
-设置sessionId或退出分布式组网，使用Promise异步回调。当传入""、null或不传入参数时，表示退出分布式组网。当可信组网中有多个设备处于协同状态时，如果多个设备间的分布式对象设置为同一个sessionId，就能自动同步。
+设置sessionId或退出分布式组网，使用Promise异步回调。当传入""、null或不传入参数时，表示退出分布式组网。当可信组网中有多个设备处于协同状态时，如果多个设备间的分布式数据对象设置为同一个sessionId，就能自动同步。
 
 **起始版本：** 9
 
@@ -1063,7 +1059,7 @@ setSessionId(sessionId?: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sessionId | string | 否 | 分布式数据对象在可信组网中的标识ID，长度不大于128字节，且只能包含字母数字或下划线_。当传入""、null或不传入参数时表示退出分布式组网。 |
+| sessionId | string | 否 | 分布式数据对象在可信组网中的标识ID，长度不大于128字节，且只能包含字母、数字或下划线_。当传入""、null或不传入参数时表示退出分布式组网。 |
 
 **返回值：**
 

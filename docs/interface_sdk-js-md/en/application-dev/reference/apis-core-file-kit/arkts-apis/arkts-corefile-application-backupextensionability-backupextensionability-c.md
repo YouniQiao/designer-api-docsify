@@ -94,6 +94,8 @@ class BackupExt extends BackupExtensionAbility {
 }
 ```
 
+> NOTE
+
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';
 
@@ -370,6 +372,8 @@ class BackupExt extends BackupExtensionAbility {
   }
 }
 ```
+
+> NOTE
 
 ```TypeScript
 import { BackupExtensionAbility, BundleVersion } from '@kit.CoreFileKit';

@@ -69,22 +69,22 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
     extensionWindow.createSubWindowWithOptions('subWindowForHost', subWindowOpts)
       .then((subWindow: window.Window) => {
         subWindow.setUIContent('pages/Index', (err, data) => {
-          if (err && err.code != 0) {
+          if (err && err.code) {
             return;
           }
           subWindow?.resize(300, 300, (err, data) => {
-            if (err && err.code != 0) {
+            if (err && err.code) {
               return;
             }
             subWindow?.moveWindowTo(100, 100, (err, data) => {
-              if (err && err.code != 0) {
+              if (err && err.code) {
                 return;
               }
               subWindow?.showWindow((err, data) => {
-                if (err && err.code == 0) {
-                  console.info(`The subwindow has been shown!`);
+                if (err && err.code) {
+                  console.error(`Failed to show the subwindow. Code: ${err.code}, message: ${err.message}`);
                 } else {
-                  console.error(`Failed to show the subwindow!`);
+                  console.info(`The subwindow has been shown!`);
                 }
               });
             });
@@ -92,7 +92,7 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
         });
       }).catch((error: BusinessError) => {
       console.error(`Create subwindow failed. Cause code: ${error.code}, message: ${error.message}`);
-    })
+    });
   }
 }
 ```
@@ -153,22 +153,22 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
     extensionWindow.createSubWindowWithOptions('subWindowForHost', subWindowConfig, true)
       .then((subWindow: window.Window) => {
         subWindow.setUIContent('pages/Index', (err, data) => {
-          if (err && err.code != 0) {
+          if (err && err.code) {
             return;
           }
           subWindow?.resize(300, 300, (err, data) => {
-            if (err && err.code != 0) {
+            if (err && err.code) {
               return;
             }
             subWindow?.moveWindowTo(100, 100, (err, data) => {
-              if (err && err.code != 0) {
+              if (err && err.code) {
                 return;
               }
               subWindow?.showWindow((err, data) => {
-                if (err && err.code == 0) {
-                  console.info(`The subwindow has been shown!`);
+                if (err && err.code) {
+                  console.error(`Failed to show the subwindow. Code: ${err.code}, message: ${err.message}`);
                 } else {
-                  console.error(`Failed to show the subwindow!`);
+                  console.info(`The subwindow has been shown!`);
                 }
               });
             });
@@ -176,7 +176,7 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
         });
       }).catch((error: BusinessError) => {
       console.error(`Create subwindow failed. Cause code: ${error.code}, message: ${error.message}`);
-    })
+    });
   }
 }
 ```
@@ -282,15 +282,13 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
     // Occupy events.
     setTimeout(() => {
       try {
-        let promise =
-          extensionWindow.occupyEvents(uiExtension.EventFlag.EVENT_CLICK | uiExtension.EventFlag.EVENT_LONG_PRESS);
-        promise.then(() => {
+        extensionWindow.occupyEvents(uiExtension.EventFlag.EVENT_CLICK | uiExtension.EventFlag.EVENT_LONG_PRESS).then(() => {
           console.info(`Succeeded in occupying events`);
         }).catch((err: BusinessError) => {
           console.error(`Failed to occupy events. Cause code: ${err.code}, message: ${err.message}`);
         });
-      } catch (e) {
-        console.error(`Occupy events got exception code: ${e.code}, message: ${e.message}`);
+      } catch (err) {
+        console.error(`Occupy events got exception code: ${err.code}, message: ${err.message}`);
       }
     }, 500);
   }

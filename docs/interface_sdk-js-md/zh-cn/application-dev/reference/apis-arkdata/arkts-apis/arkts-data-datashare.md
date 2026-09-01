@@ -1,6 +1,9 @@
-# @ohos.data.dataShare
+# @ohos.data.dataShare(数据共享)
 
-**DataShare**用于应用管理其自身数据，同时支持同个设备上不同应用间的数据共享。
+**DataShare**用于应用管理其自身数据，同时支持同一个设备上不同应用间的数据共享。  
+> **说明：**
+> 
+> - 本模块首批接口从<!--RP1-->API version 9<!--RP1End-->开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 **起始版本：** 20
 
@@ -30,8 +33,8 @@ import { dataShare } from '@kit.ArkData';
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | 创建DataShareHelper实例。使用callback异步回调。 |
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用callback异步回调。 |
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md) | 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用Promise异步回调。 |
-| [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md) | 关闭静默访问。使用Promise异步回调。 |
-| [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f-sys.md) | 开启静默访问。使用Promise异步回调。 |
+| [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md) | 关闭静默访问。使用Promise异步回调。使用规则： |
+| [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f-sys.md) | 开启静默访问。使用Promise异步回调。使用规则： |
 <!--DelEnd-->
 
 ### 接口
@@ -52,11 +55,11 @@ import { dataShare } from '@kit.ArkData';
 | --- | --- |
 | [ChangeInfo](arkts-arkdata-datashare-changeinfo-i-sys.md) | 数据变更时通知用户具体变更的内容，包括数据变更类型、变化的uri、变更的数据内容。 |
 | [DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md) | DataShare管理工具实例，可使用此实例访问或管理服务端的数据。在调用DataShareHelper提供的方法前，需要先通过[createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md)构建一个实例。 |
-| [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | 指定[DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md)的可选参数，包含是否在代理模式下，以及非静默访问的拉起等待时间。 |
+| [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i-sys.md) | 指定[DataShareHelper](arkts-arkdata-datashare-datasharehelper-i-sys.md)的可选参数，包含是否在代理模式下，以及非静默访问的启动等待时间。 |
 | [OperationResult](arkts-arkdata-datashare-operationresult-i-sys.md) | 订阅/取消订阅数据变更和发布数据的操作结果。 |
 | [PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i-sys.md) | 订阅/取消订阅已发布数据变更的结果。 |
 | [PublishedItem](arkts-arkdata-datashare-publisheditem-i-sys.md) | 指定发布的数据类型。 |
-| [RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md) | 订阅/取消订阅RDB数据变更的结果，回调支持传输不大于10M的数据。 |
+| [RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i-sys.md) | 订阅/取消订阅RDB数据变更的结果，回调支持传输不大于10MB的数据。 |
 | [Template](arkts-arkdata-datashare-template-i-sys.md) | 指定订阅中的模板结构。 |
 | [TemplateId](arkts-arkdata-datashare-templateid-i-sys.md) | 标记模板的数据结构，TemplateId是在[addTemplate](arkts-arkdata-datashare-datasharehelper-i-sys.md#addtemplate)中自动生成的，在[addTemplate](arkts-arkdata-datashare-datasharehelper-i-sys.md#addtemplate)后，可以使用模板id来标记模板。 |
 | [UpdateOperation](arkts-arkdata-datashare-updateoperation-i-sys.md) | 批量更新操作的参数结构。 |

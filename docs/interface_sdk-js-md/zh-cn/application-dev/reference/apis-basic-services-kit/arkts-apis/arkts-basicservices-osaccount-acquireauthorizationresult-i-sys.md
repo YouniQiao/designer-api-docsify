@@ -60,7 +60,7 @@ resultCode: AuthorizationResultCode
 
 授权结果码。
 
-**类型：** [AuthorizationResultCode](arkts-basicservices-osaccount-authorizationresultcode-e-sys.md)
+**类型：** AuthorizationResultCode
 
 **起始版本：** 24
 

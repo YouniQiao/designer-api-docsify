@@ -62,7 +62,7 @@ hilog.debug(0x0001, "testTag", 'this is a debug level log, id: %{public}d', 4);
 hilog.info(0x0001, "testTag", 'this is an info level log, id: %{public}d', 5);
 ```
 
-The log result is as follows:
+The first log is printed properly because the global log level is INFO.
 
 ```TypeScript
 08-07 23:50:01.532   13694-13694   A00001/testTag                  com.example.hilogDemo  I     this is an info level log, id: 1

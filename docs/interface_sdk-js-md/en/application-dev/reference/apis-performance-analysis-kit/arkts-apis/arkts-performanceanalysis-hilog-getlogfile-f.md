@@ -43,7 +43,7 @@ let logs = hilog.getLogFile(300);
 hilog.info(0x0001, "testTag", 'sandbox log files:%{public}s', logs.toString());
 ```
 
-Sandbox log output.
+Log result:
 
 ```TypeScript
 05-15 16:57:04.238 40518 40518 I A00001/testTag: sandbox log files:hiapplog.40518.001.20260515-165602.log

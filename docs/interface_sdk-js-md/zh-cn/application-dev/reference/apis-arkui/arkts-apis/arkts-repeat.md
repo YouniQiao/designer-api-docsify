@@ -44,7 +44,7 @@
 
 ## 示例
 
-从API版本26.0.0开始，VirtualScrollOptions新增memoryOptimizationStrategy属性。
+以下示例中，通过[VirtualScrollOptions](arkts-arkui-virtualscrolloptions-i.md)的memoryOptimizationStrategy属性使用了自动内存优化策略。点击Scroll按钮，使列表跳转，旧节点进入缓存池。应用退后台时，清理缓存。应用恢复前台时，恢复缓存。
 
 ```TypeScript
 @ComponentV2

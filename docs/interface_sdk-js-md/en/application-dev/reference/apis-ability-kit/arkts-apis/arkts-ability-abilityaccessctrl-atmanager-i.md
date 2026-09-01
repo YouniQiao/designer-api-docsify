@@ -508,7 +508,7 @@ If the user denies authorization, the authorization dialog box cannot be brought
 
 **Examples**
 
-For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
+For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';
@@ -575,7 +575,7 @@ If the user denies authorization, the authorization dialog box cannot be brought
 
 **Examples**
 
-For details about the process and example of applying for user authorization, see [Requesting User Authorization](../../../security/AccessToken/request-user-authorization.md).
+For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { abilityAccessCtrl, Context, PermissionRequestResult, common } from '@kit.AbilityKit';

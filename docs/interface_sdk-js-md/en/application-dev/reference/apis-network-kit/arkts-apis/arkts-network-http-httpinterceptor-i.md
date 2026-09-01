@@ -40,6 +40,8 @@ Intercepts the HTTP processing and modifies it as required.
 
 **Examples**
 
+interceptorHandle(reqContext: HttpRequestContext, rspContext: HttpResponse): Promise<ChainContinue>
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 

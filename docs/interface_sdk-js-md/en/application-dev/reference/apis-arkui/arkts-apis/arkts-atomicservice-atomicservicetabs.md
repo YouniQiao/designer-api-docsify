@@ -1,10 +1,12 @@
 # @ohos.atomicservice.AtomicServiceTabs(Provides an advanced struct of tabs for atomic services)
 
-###### Child Components
- Not supported
- ###### Attributes
- The universal attributes are not supported.
+## Child Components
 
+Not supported
+
+## Attributes
+
+The universal attributes are not supported.
 
 ## Modules to Import
 

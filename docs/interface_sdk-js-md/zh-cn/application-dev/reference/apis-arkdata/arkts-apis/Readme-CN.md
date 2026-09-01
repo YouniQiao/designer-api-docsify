@@ -1,7 +1,7 @@
 # ArkTS API<!--arkts-arkdata-->
 
 <!--Del-->
-- [@ohos.application.DataShareExtensionAbility](arkts-application-datashareextensionability.md)<!--DelEnd-->
+- [@ohos.application.DataShareExtensionAbility(数据共享扩展能力)](arkts-application-datashareextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [DataShareExtensionAbility(系统接口)](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -70,7 +70,7 @@
     - [SyncStatus(系统接口)](arkts-arkdata-clouddata-syncstatus-e-sys.md)<!--DelEnd-->
     <!--Del-->
     - [常量(系统接口)](arkts-arkdata-clouddata-con-sys.md)<!--DelEnd-->
-- [@ohos.data.cloudExtension](arkts-data-cloudextension.md)
+- [@ohos.data.cloudExtension(端云共享Extension)](arkts-data-cloudextension.md)
   <!--Del-->
   - [createAssetLoaderStub(系统接口)](arkts-arkdata-cloudextension-createassetloaderstub-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -125,7 +125,7 @@
   - [FieldType(系统接口)](arkts-arkdata-cloudextension-fieldtype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Flag(系统接口)](arkts-arkdata-cloudextension-flag-e-sys.md)<!--DelEnd-->
-- [@ohos.data.commonType](arkts-data-commontype.md)
+- [@ohos.data.commonType(数据通用类型)](arkts-data-commontype.md)
   - [Asset](arkts-arkdata-commontype-asset-i.md)
   - [Assets](arkts-arkdata-commontype-assets-t.md)
   - [ValuesBucket](arkts-arkdata-commontype-valuesbucket-t.md)
@@ -135,7 +135,7 @@
   - [createRdbPredicates](arkts-arkdata-dataability-createrdbpredicates-f.md)
   - [DataAbilityPredicates](arkts-arkdata-dataability-dataabilitypredicates-c.md)
   - [ValueType](arkts-arkdata-dataability-valuetype-t.md)
-- [@ohos.data.dataShare](arkts-data-datashare.md)
+- [@ohos.data.dataShare(数据共享)](arkts-data-datashare.md)
   - [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md)
   <!--Del-->
   - [createDataShareHelper(系统接口)](arkts-arkdata-datashare-createdatasharehelper-f-sys.md)<!--DelEnd-->
@@ -175,12 +175,12 @@
   - [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md)
   <!--Del-->
   - [SubscriptionType(系统接口)](arkts-arkdata-datashare-subscriptiontype-e-sys.md)<!--DelEnd-->
-- [@ohos.data.dataSharePredicates](arkts-data-datasharepredicates.md)
+- [@ohos.data.dataSharePredicates(数据共享谓词)](arkts-data-datasharepredicates.md)
   - [DataSharePredicates](arkts-arkdata-datasharepredicates-datasharepredicates-c.md)
   <!--Del-->
   - [DataSharePredicates(系统接口)](arkts-arkdata-datasharepredicates-datasharepredicates-c-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.data.DataShareResultSet](arkts-data-datashareresultset.md)<!--DelEnd-->
+- [@ohos.data.DataShareResultSet(数据共享结果集)](arkts-data-datashareresultset.md)<!--DelEnd-->
   <!--Del-->
   - [DataShareResultSet(系统接口)](arkts-arkdata-data-datashareresultset-datashareresultset-i-sys.md)<!--DelEnd-->
   <!--Del-->

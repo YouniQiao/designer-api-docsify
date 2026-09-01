@@ -41,7 +41,7 @@ TextClock(options?: TextClockOptions)
 
 ## 示例
 
-示例中的组件通过设置[onDateChange](#ondatechange)回调函数，在文本时钟更新时，持续修改accumulateTime的内容。
+该示例展示了TextClock组件的基本使用方法，通过[format](#format)属性设置时钟文本的格式。
 
 ```TypeScript
 @Entry

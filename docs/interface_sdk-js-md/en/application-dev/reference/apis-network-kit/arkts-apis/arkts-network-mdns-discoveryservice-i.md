@@ -35,7 +35,7 @@ Disables listening for **discoveryStart** events.
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -103,7 +103,7 @@ Disables listening for **serviceFound** events.
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -153,7 +153,7 @@ Disables listening for **serviceLost** events.
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -200,7 +200,7 @@ Enables listening for **discoveryStart** events.
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -243,7 +243,7 @@ Enables listening for **discoveryStop** events.
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -286,7 +286,7 @@ Enables listening for **serviceFound** events.
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -332,7 +332,7 @@ Enables listening for **serviceLost** events.
 
 **Examples**
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -368,7 +368,7 @@ Searches for MDNS services on the LAN.
 
 **Examples**
 
-Stage model:
+> NOTE
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -398,7 +398,7 @@ Stops searching for MDNS services on the LAN.
 
 **Examples**
 
-Stage model:
+> NOTE
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';

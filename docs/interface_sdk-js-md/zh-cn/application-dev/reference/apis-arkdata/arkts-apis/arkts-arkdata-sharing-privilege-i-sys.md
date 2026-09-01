@@ -52,7 +52,7 @@ deletable?: boolean
 readable?: boolean
 ```
 
-被共享者是否可读取共享的数据。true表示可读取，false表示不可读取，默认不可读取
+被共享者是否可读取共享的数据。true表示可读取，false表示不可读取，默认不可读取。
 
 **类型：** boolean
 

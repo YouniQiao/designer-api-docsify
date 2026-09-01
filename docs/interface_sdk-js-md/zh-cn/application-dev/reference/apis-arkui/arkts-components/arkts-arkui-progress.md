@@ -338,7 +338,7 @@ struct ProgressExample {
 }
 ```
 
-从API version 18开始，新增borderRadius属性。
+该示例通过[CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md)的入参borderRadius，实现了Capsule类型进度条圆角半径设置。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';

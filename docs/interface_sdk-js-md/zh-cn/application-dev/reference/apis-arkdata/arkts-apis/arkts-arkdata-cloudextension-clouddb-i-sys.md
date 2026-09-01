@@ -84,7 +84,7 @@ generateId(count: number): Promise<Result<Array<string>>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;Array&lt;string&gt;&gt;&gt; | Promise对象，以Result结构将生成的ID以数组形式返回。 |
+| Promise&lt;Result&lt;Array&lt;string&gt;&gt;&gt; | Promise对象，以[Result](../../../reference/apis-arkdata/js-apis-data-cloudExtension-sys.md#resultt)结构将生成的ID以数组形式返回。 |
 
 **示例**
 
@@ -122,7 +122,7 @@ heartbeat(lockId: number): Promise<Result<LockInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lockId | number | 是 | 表示需要延时的锁ID，取值为lock方法返回的LockInfo中的lockId。 |
+| lockId | number | 是 | 表示需要延时的锁ID，取值为[lock](#lock)方法返回的LockInfo中的lockId。 |
 
 **返回值：**
 
@@ -316,7 +316,7 @@ unlock(lockId: number): Promise<Result<boolean>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lockId | number | 是 | 表示锁的ID，取值为lock方法返回的LockInfo中的lockId。 |
+| lockId | number | 是 | 表示锁的ID，取值为[lock](#lock)方法返回的LockInfo中的lockId。 |
 
 **返回值：**
 

@@ -22,6 +22,8 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md) | Add a specified candidate hotspot configuration and returns the networkId. This method adds one configuration at a time. After this configuration is added, your device will determine whether to connect to the hotspot. The app must be in the foreground. |
 | [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md) | Add Wi-Fi connection configuration to the device. The configuration will be updated when the configuration is added. |
 | [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md) | Add Wi-Fi connection configuration to the device. The configuration will be updated when the configuration is added. |
+| [addDnsSdLocalP2pService](arkts-connectivity-wifimanager-adddnssdlocalp2pservice-f.md) | Add a Bonjour (DNS-SD) local P2P service description and register it. |
+| [addUpnpLocalP2pService](arkts-connectivity-wifimanager-addupnplocalp2pservice-f.md) | Add a UPnP local P2P service description and register it. |
 | [connectToCandidateConfig](arkts-connectivity-wifimanager-connecttocandidateconfig-f.md) | Connect to a specified candidate hotspot by networkId, only the configuration which is added by ourself is allowed to be connected. This method connect to a configuration at a time. The app must be in the foreground. |
 | [connectToCandidateConfig](arkts-connectivity-wifimanager-connecttocandidateconfig-f.md) | Connect to the specified candidate hotspot using connect settings. |
 | [connectToCandidateConfigWithUserAction](arkts-connectivity-wifimanager-connecttocandidateconfigwithuseraction-f.md) | Connect to a specified candidate hotspot by networkId, and wait for user respond result. Only the configuration which is added by ourself is allowed to be connected. This method connect to a configuration at a time. The app must be in the foreground. |
@@ -41,6 +43,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md) | Obtain connection information about the Wi-Fi connection. If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid. |
 | [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md) | Obtain connection information about the Wi-Fi connection. |
 | [getLinkedInfoSync](arkts-connectivity-wifimanager-getlinkedinfosync-f.md) | Obtain connection information about the Wi-Fi connection.this apireturns the result syncchronously. If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid. |
+| [getLocalP2pServices](arkts-connectivity-wifimanager-getlocalp2pservices-f.md) | Queries the local P2P services. This API uses a promise to return the result. |
 | [getMultiLinkedInfo](arkts-connectivity-wifimanager-getmultilinkedinfo-f.md) | Obtain multiple Wi-Fi connection information when Wi-Fi linked in MLO(Muti-Link Operation) state. If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid. |
 | [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md) | Obtain information about the P2P connection. |
 | [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md) | Obtain information about the P2P connection. |
@@ -87,6 +90,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md) | Remove a specified candidate hotspot configuration, only the configuration which is added by ourself is allowed to be removed. The app must be in the foreground. |
 | [removeDevice](arkts-connectivity-wifimanager-removedevice-f.md) | Remove a Wi-Fi DeviceConfig with networkId. After a Wi-Fi DeviceConfig is removed, its configuration will be deleted from the list of Wi-Fi configurations. If the Wi-Fi DeviceConfig is being connected, the connection will be interrupted. The application can only delete Wi-Fi DeviceConfig it has created. |
 | [removeGroup](arkts-connectivity-wifimanager-removegroup-f.md) | Remove a P2P group. |
+| [removeLocalP2pService](arkts-connectivity-wifimanager-removelocalp2pservice-f.md) | Remove a registered local P2P service added with the [addDnsSdLocalP2pService](arkts-connectivity-wifimanager-adddnssdlocalp2pservice-f.md) or [addUpnpLocalP2pService](arkts-connectivity-wifimanager-addupnplocalp2pservice-f.md). |
 | [scan](arkts-connectivity-wifimanager-scan-f.md) | Scan Wi-Fi hotspot. |
 | [startDiscoverDevices](arkts-connectivity-wifimanager-startdiscoverdevices-f.md) | Start discover Wi-Fi P2P devices. |
 | [startScan](arkts-connectivity-wifimanager-startscan-f.md) | Scan Wi-Fi hotspot. |
@@ -160,6 +164,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md) | P2P device information. |
 | [WifiP2pGroupInfo](arkts-connectivity-wifimanager-wifip2pgroupinfo-i.md) | P2P group information. |
 | [WifiP2pLinkedInfo](arkts-connectivity-wifimanager-wifip2plinkedinfo-i.md) | P2P linked information. |
+| [WifiP2pServiceInfo](arkts-connectivity-wifimanager-wifip2pserviceinfo-i.md) | Represents the P2P service information. |
 | [WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md) | Describes the scanned Wi-Fi information. |
 | [WifiWapiConfig](arkts-connectivity-wifimanager-wifiwapiconfig-i.md) | Wi-Fi WAPI config. |
 
@@ -188,6 +193,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [GroupOwnerBand](arkts-connectivity-wifimanager-groupownerband-e.md) | P2P group owner band. |
 | [P2pConnectState](arkts-connectivity-wifimanager-p2pconnectstate-e.md) | P2P connection status. |
 | [P2pDeviceStatus](arkts-connectivity-wifimanager-p2pdevicestatus-e.md) | P2P device status. |
+| [P2pServiceProtocolType](arkts-connectivity-wifimanager-p2pserviceprotocoltype-e.md) | Enumerates the P2P service protocol types. |
 | [Phase2Method](arkts-connectivity-wifimanager-phase2method-e.md) | Wi-Fi phase 2 method. @enum { number } |
 | [WapiPskType](arkts-connectivity-wifimanager-wapipsktype-e.md) | Describes the WAPI pre-shared key Type. @enum { number } |
 | [WifiBandType](arkts-connectivity-wifimanager-wifibandtype-e.md) | Wi-Fi band type. @enum { number } |

@@ -301,7 +301,7 @@ struct Index {
 }
 ```
 
-从API版本26.0.0开始，新增[subMenuBuilder](ts-basic-components-menuitem.md#submenubuilder)属性。
+该示例通过设置subMenuBuilder属性为自定义菜单项添加多级菜单。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';

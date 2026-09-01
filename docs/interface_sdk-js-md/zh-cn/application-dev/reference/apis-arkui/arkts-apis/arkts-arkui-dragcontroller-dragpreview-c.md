@@ -37,7 +37,7 @@ animate(options: AnimationOptions, handler: () =>void): void
 
 **示例**
 
-在EntryAbility.ets中获取UI上下文并保存至LocalStorage中。
+> 说明：
 
 ```TypeScript
 import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';

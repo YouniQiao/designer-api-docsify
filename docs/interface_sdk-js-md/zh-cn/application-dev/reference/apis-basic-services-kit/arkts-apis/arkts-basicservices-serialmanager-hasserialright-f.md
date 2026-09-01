@@ -44,7 +44,7 @@ function hasSerialRight(portId: number): boolean
 
 **示例**
 
-以下示例代码只是调用hasSerialRight接口的必要流程，需要放入具体的方法中执行。实际调用时，设备开发者需要遵循设备相关协议进行调用。
+> 说明：
 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';

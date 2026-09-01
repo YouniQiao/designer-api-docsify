@@ -36,7 +36,7 @@ Obtains a CalendarManager object based on the context.
 
 **Examples**
 
-For details about how to obtain an mContext object in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 // Obtain an mContext object.

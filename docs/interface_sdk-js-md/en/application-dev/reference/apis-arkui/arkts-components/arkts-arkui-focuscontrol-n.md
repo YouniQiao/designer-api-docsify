@@ -745,7 +745,7 @@ struct TipsExample {
 }
 ```
 
-Since API version 26.0.0, the systemMaterial attribute is added to TipsOptions.
+This example implements the system material effect of bindTips by setting the systemMaterial attribute in [TipsOptions](arkts-arkui-tipsoptions-i.md).
 
 ```TypeScript
 // xxx.ets
@@ -943,7 +943,7 @@ struct TouchTargetExample {
 }
 ```
 
-The responseRegionList API is supported since API version 22.
+This example demonstrates how to set a touch target for a button using [responseRegionList](arkts-arkui-commonmethod-c.md#responseregionlist) to respond to click events.
 
 ```TypeScript
 // xxx.ets
@@ -1779,7 +1779,7 @@ struct Index {
 }
 ```
 
-The backgroundBlurStyleOptions property is added to ContextMenuOptions since API version 18.
+This example demonstrates how to customize the blur background effect of a menu by setting the backgroundBlurStyleOptions property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindMenu.
 
 ```TypeScript
 @Entry
@@ -1824,7 +1824,7 @@ struct MenuExample {
 }
 ```
 
-The backgroundEffect property is added to ContextMenuOptions since API version 18.
+This example demonstrates how to customize the background effect of a menu by setting the backgroundEffect property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindMenu.
 
 ```TypeScript
 @Entry
@@ -1870,7 +1870,7 @@ struct MenuExample {
 }
 ```
 
-From API version 20, the hoverScaleInterruption property is added to the [ContextMenuAnimationOptions](arkts-arkui-contextmenuanimationoptions-i.md) type of previewAnimationOptions.
+This example demonstrates how to implement a shared element transition by setting the previewAnimationOptions property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) for bindContextMenu and how to control whether lifting the finger after a long press can cancel the menu pop-up by setting hoverScaleInterruption.
 
 ```TypeScript
 @Entry
@@ -1923,7 +1923,7 @@ struct Index {
 }
 ```
 
-In API version 19, the previewBorderRadius property is added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+This example demonstrates how to implement the function using bindContextMenu with [responseType](ts-appendix-enums.md#responsetype8).LongPress set. In addition, the [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) type of the preview property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) is set to determine the menu preview mode. previewBorderRadius is set to implement the radius of the rounded corners of the preview image.
 
 ```TypeScript
 @Entry
@@ -1964,7 +1964,7 @@ struct Index {
 }
 ```
 
-From API version 20, the onWillAppear, onDidAppear, onWillDisappear, and onDidDisappear properties are added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+This sample shows how to configure lifecycle callbacks for bindMenu11+.
 
 ```TypeScript
 @Entry
@@ -2034,7 +2034,7 @@ struct Index {
 }
 ```
 
-In API version 20, the mask property is added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+This example demonstrates how to implement the menu mask using bindMenu with the mask property.
 
 ```TypeScript
 import { SymbolGlyphModifier } from '@kit.ArkUI';
@@ -2076,7 +2076,7 @@ struct Index {
 }
 ```
 
-In API version 20, the outlineWidth and outlineColor properties are added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+This example demonstrates how to set the outline style of the drop-down menu by setting the outlineWidth and outlineColor properties of bindMenu.
 
 ```TypeScript
 @Entry
@@ -2160,7 +2160,7 @@ struct Index {
 }
 ```
 
-The bindContextMenuWithResponse API is added since API version 23.
+This example demonstrates how to bind a menu to the target component by passing CustomBuilderT<ResponseType> to [bindContextMenuWithResponse](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse). The component returns the mode of triggering menu display in the UI function. You can implement differentiated display based on the returned trigger mode.
 
 ```TypeScript
 @Entry
@@ -2205,7 +2205,7 @@ struct Index {
 }
 ```
 
-Starting from API version 23, the** keyboardAvoidMode** and minKeyboardAvoidDistance properties are added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+This example demonstrates how to configure the menu to avoid the soft keyboard by setting keyboardAvoidMode in bindMenu and set the minimum distance for avoiding the soft keyboard by setting minKeyboardAvoidDistance.
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
@@ -2265,7 +2265,7 @@ struct Index {
 }
 ```
 
-The anchorPosition property is added to ContextMenuOptions since API version 20.
+This example shows how to set the anchorPosition property in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) to display the menu relative to the upper left corner of the bound component.
 
 ```TypeScript
 @Entry
@@ -2332,7 +2332,7 @@ struct Index {
 }
 ```
 
-The maxHeight attribute is added to ContextMenuOptions as of API version 26.0.0.
+This sample shows how to use the maxHeight attribute in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) to set the maximum height of a menu.
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -2380,7 +2380,7 @@ struct Index {
 }
 ```
 
-The targetSpace attribute is added to ContextMenuOptions as of API version 26.0.0.
+This example describes how to increase the spacing between the menu and the target component by setting the targetSpace attribute in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -2423,7 +2423,7 @@ struct Alone {
 }
 ```
 
-The systemMaterial attribute is added to ContextMenuOptions as of API version 26.0.0.
+This example sets the system material of a menu by setting the systemMaterial attribute in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';
@@ -2456,7 +2456,7 @@ struct Index {
 }
 ```
 
-In API version 26.0.0 and later, the [bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow) API is added, and the gridStyle attribute is added to [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+This example shows how to use gridStyle to set the grid menu style in [bindContextMenuByIsShow](arkts-arkui-commonmethod-c.md#bindcontextmenubyisshow). You can customize the grid layout of the menu by setting the count, horizontalSize, and position attributes.
 
 ```TypeScript
 @Entry
@@ -2503,7 +2503,7 @@ struct ContextMenuGridStyleExample {
 }
 ```
 
-The keyboardAvoidMode attribute is added to PopupOptions and CustomPopupOptions since API version 15.
+This example shows how to configure the keyboardAvoidMode attribute in [PopupOptions](#popupoptions) or [CustomPopupOptions](arkts-arkui-custompopupoptions-i.md) to determine whether the popup avoids the soft keyboard.
 
 ```TypeScript
 // xxx.ets
@@ -2842,7 +2842,7 @@ struct PopupExample {
 }
 ```
 
-The outlineWidth, borderWidth, outlineLinearGradient, and borderLinearGradient attributes are added to PopupOptions since API version 20.
+This example configures the outlineWidth, borderWidth, outlineLinearGradient, and borderLinearGradient attributes in [PopupOptions](#popupoptions) to set the color and direction of the linear gradient of the inner and outer outlines of the popup.
 
 ```TypeScript
 // xxx.ets
@@ -2887,7 +2887,7 @@ struct PopupExample {
 }
 ```
 
-The avoidTarget attribute is added to PopupOptions since API version 20.
+This example configures the avoidTarget attribute of [PopupOptions](#popupoptions) to enable the popup to avoid the bound component.
 
 ```TypeScript
 // xxx.ets
@@ -2914,7 +2914,7 @@ struct PopupExample {
 }
 ```
 
-The systemMaterial attribute is added to PopupOptions as of API version 26.0.0.
+This example demonstrates how to implement the system material effect of a popup by setting the systemMaterial attribute in [PopupOptions](#popupoptions).
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';
@@ -2955,7 +2955,7 @@ struct PopupExample {
 }
 ```
 
-In API version 26.0.0 and later, the backgroundBlurStyleOptions and backgroundEffect attributes are added to PopupOptions.
+This example customizes the popup background effect by setting the backgroundBlurStyleOptions and backgroundEffect attributes of [PopupOptions](#popupoptions).
 
 ```TypeScript
 // xxx.ets
@@ -3021,7 +3021,7 @@ struct PopupExample {
 }
 ```
 
-From API version 26.0.0, the levelMode attribute is added to PopupOptions.
+This example configures the levelMode attribute of [PopupOptions](#popupoptions) to display a popup on the page. After the button is clicked, the page-level popup will not be displayed on the next route page.
 
 ```TypeScript
 import { LevelMode } from '@kit.ArkUI';
@@ -3227,7 +3227,7 @@ struct SheetTransitionExample {
 }
 ```
 
-If the height range is uncertain or there may be more than three different heights, avoid using the detents attribute.
+This example demonstrates how to use the detents attribute of bindSheet to set three different height detents for a sheet.
 
 ```TypeScript
 // xxx.ets
@@ -3372,7 +3372,7 @@ struct BindSheetExample {
 }
 ```
 
-Whenever possible, minimize UI loading time within the builder, as real-time content refreshing during scrolling has higher performance requirements.
+This example shows how to use ScrollSizeMode.CONTINUOUS, which continuously updates the content and is suitable for detents with multiple height settings.
 
 ```TypeScript
 // xxx.ets
@@ -3529,7 +3529,7 @@ struct ListenKeyboardHeightChange {
 }
 ```
 
-Since API version 15, the radius attribute supports the LocalizedBorderRadiuses type.
+This example demonstrates how to set different corner radii for a sheet in a mirrored layout. Typically, to avoid a poor visual experience, do not set different values.
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -3731,7 +3731,7 @@ struct ContentCoverExample {
 }
 ```
 
-From API version 26.0.0, the systemMaterial attribute is added to [SheetOptions](arkts-arkui-sheetoptions-i.md).
+This example demonstrates how to set the system material using the sheet systemMaterial attribute.
 
 ```TypeScript
 // xxx.ets
@@ -4944,7 +4944,7 @@ struct Index {
 }
 ```
 
-The accessibilityStateDescription API is available since API version 23.
+In this example, the [accessibilityStateDescription](ts-universal-attributes-accessibility.md#accessibilitystatedescription23) API is used to modify the state description of a component. After the accessibility feature is enabled, when a component is focused or tapped, the screen reader reads the component state description.
 
 ```TypeScript
 // xxx.ets
@@ -4968,7 +4968,7 @@ struct Index {
 }
 ```
 
-AccessibilityActionOptions is available since API version 23.
+This example demonstrates how to customize the scrolling step of a component by using the scrollStep parameter in [accessibilityActionOptions](ts-types.md#accessibilityactionoptions23). The following uses a sliding distance change of the Slider component in screen reading scenarios.
 
 ```TypeScript
 // xxx.ets
@@ -5755,7 +5755,7 @@ struct Index {
 }
 ```
 
-The [excludeFromRenderGroup](arkts-arkui-commonmethod-c-sys.md#excludefromrendergroup) attribute is supported since API version 22.
+This example demonstrates how to use the [excludeFromRenderGroup](arkts-arkui-commonmethod-c-sys.md#excludefromrendergroup) to avoid repeated invalidations of the render group cache in scenarios involving attribute animations on the component.
 
 ```TypeScript
 // xxx.ets
@@ -6759,7 +6759,7 @@ struct ChildComponent {
 }
 ```
 
-The [applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute) API is added since API version 26.0.0.
+In this example, the mouse hover state is implemented by binding a button to a Modifier. When the mouse pointer moves to the button, the background color of the button changes to red, indicating the hovered state. When the mouse pointer leaves the button, the background color of the button changes to black, indicating the normal state. In addition, you can use the [applyHoveredAttribute](arkts-arkui-attributemodifier-i.md#applyhoveredattribute) API to set the hovered state style.
 
 ```TypeScript
 // xxx.ets
@@ -7222,7 +7222,7 @@ struct TabStop {
 }
 ```
 
-If [nextFocus](arkts-arkui-commonmethod-c.md#nextfocus) is not configured, the default focus navigation order when pressing the Tab key is: M->A->B->C->D->E->F. After [nextFocus](arkts-arkui-commonmethod-c.md#nextfocus) is configured, the focus navigation order changes to: M->D->F->B->C.
+This example demonstrates how to implement custom focus movement logic using the [nextFocus](arkts-arkui-commonmethod-c.md#nextfocus) API, available since API version 18.
 
 ```TypeScript
 class MyButtonModifier implements AttributeModifier<ButtonAttribute> {
@@ -7556,7 +7556,7 @@ struct Index {
 }
 ```
 
-This example demonstrates how to create an appearance animation for a component using the onAppear method.
+> NOTE
 
 ```TypeScript
 // xxx.ets
@@ -9533,7 +9533,7 @@ struct FatherControlChild {
 }
 ```
 
-You can define variables to record the index of the inner Tabs container and use this index to determine when to trigger the callback to block the swipe gestures of the outer Tabs container when the inner Tabs container reaches its boundaries.
+This example demonstrates how to set the exposeInnerGesture parameter to true to enable a first-level Tabs container to intercept the swipe gestures of a nested second-level Tabs container, thereby triggering the swipe gestures of the built-in Swiper component of first-level Tabs container.
 
 ```TypeScript
 // xxx.ets
@@ -9979,7 +9979,7 @@ struct TouchTestDoneExample {
 }
 ```
 
-The [onNeedSoftkeyboard](arkts-arkui-commonmethod-c.md#onneedsoftkeyboard) API is available since API version 24.
+In this example, the [onNeedSoftkeyboard](arkts-arkui-commonmethod-c.md#onneedsoftkeyboard) API is used to enable the keyboard continuation for a button. After the keyboard is started by the text box, switch the focus to the button upon a tap. In this case, the keyboard will not collapse. Tap the text box again to continue entering text.
 
 ```TypeScript
 @Entry
@@ -10007,7 +10007,7 @@ struct Index {
 }
 ```
 
-The ReusableOptions API is added since API version 26.0.0.
+In the following example, the reusable custom component ReusableComponent uses the automatic memory optimization strategy through the memoryOptimizationStrategy attribute of [ReusableOptions](arkts-arkui-reusableoptions-i.md). Click the Recycle button to trigger the recycling of the ReusableComponent component. Then, when the app goes to the background, the reuse pool cache is released.
 
 ```TypeScript
 @Reusable({ memoryOptimizationStrategy: ReusableMemOptStrategy.ENABLE_AUTO_CACHE_OPTIMIZATION }) // Use the automatic memory optimization strategy.
@@ -10389,7 +10389,7 @@ struct dragPreviewOptionsDemo {
 }
 ```
 
-The ohos.permission.INTERNET permission is required for using online images. For details about how to apply for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
+This example demonstrates drag configuration for different image types (online resources, local resources, and PixelMap).
 
 ```TypeScript
 // xxx.ets
@@ -11479,7 +11479,7 @@ struct PreImeEventExample {
 }
 ```
 
-In [onKeyEvent15+](#onkeyevent15), returning true consumes the key event and prevents bubbling, achieving the same effect as stopPropagation.
+This example demonstrates event bubbling prevention using stopPropagation. Adding event.stopPropagation() to the Button component's onKeyEvent callback ensures only the Button component responds to keyboard events, while the parent Column remains unresponsive.
 
 ```TypeScript
 @Entry
@@ -11538,7 +11538,7 @@ struct KeyEventExample {
 }
 ```
 
-For mouse wheel event examples, see [Axis Event](ts-universal-events-axis.md#example).
+This example demonstrates how to set a mouse event on a button. When the button is clicked using a mouse device, the [onMouse](#onmouse) event is triggered to obtain relevant mouse event parameters. Starting from API version 15, the [MouseEvent](#mouseevent) object provides access to the targetDisplayId, rawDeltaX, rawDeltaY, and pressedButtons parameters.
 
 ```TypeScript
 // xxx.ets
@@ -11629,7 +11629,7 @@ struct MouseEventExample {
 }
 ```
 
-The getHistoricalPoints API is added as of API version 26.0.0.
+This example calls the [getHistoricalPoints](#gethistoricalpoints) API to obtain the historical points of the current frame, which can be used to implement smoother drawing.
 
 ```TypeScript
 @Entry
@@ -11666,7 +11666,7 @@ struct HistoricalPointsExample {
 }
 ```
 
-The getCurrentLocalPosition API is supported since API version 26.0.0.
+This example uses the [getCurrentLocalPosition](#getcurrentlocalposition) method to obtain the coordinates of the mouse position relative to the upper left corner of the real-time position of the current component.
 
 ```TypeScript
 // xxx.ets
@@ -12902,7 +12902,7 @@ struct Index {
 }
 ```
 
-Since API version 26.0.0, the doubleSided method is added.
+This example demonstrates how to enable/disable double-sided rendering using [doubleSided](arkts-arkui-commonmethod-c.md#doublesided).
 
 ```TypeScript
 // xxx.ets
@@ -12960,7 +12960,7 @@ struct DoubleSided {
 }
 ```
 
-For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](./ts-container-list.md#example-1-adding-a-scroll-event).
+This example sets the [enableScrollInteraction](#enablescrollinteraction11) attribute to scroll a vertical list with gestures and call back the index when the currently displayed interface changes.
 
 ```TypeScript
 // xxx.ets
@@ -13023,7 +13023,7 @@ struct ListExample {
 }
 ```
 
-For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](./ts-container-list.md#example-1-adding-a-scroll-event).
+This example sets the [fadingEdge](#fadingedge14) attribute to enable the edge fading effect for the [List](ts-container-list.md) component and set the edge fading length.
 
 ```TypeScript
 // xxx.ets
@@ -13119,7 +13119,7 @@ struct ScrollExample {
 }
 ```
 
-For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](./ts-container-list.md#example-1-adding-a-scroll-event).
+This example demonstrates how to use the [scrollBarMargin](#scrollbarmargin20) attribute to adjust the scrollbar margins of a scrollable component, available since API version 20.
 
 ```TypeScript
 // xxx.ets
@@ -13200,7 +13200,7 @@ struct OnAccessibilityHoverEventExample {
 }
 ```
 
-Starting from API version 20, the [onAccessibilityHoverTransparent](arkts-arkui-commonmethod-c.md#onaccessibilityhovertransparent) API with the input parameter AccessibilityTransparentCallback has been added.
+This example shows how to capture touch events from a component that cannot receive focus in accessibility mode using the onAccessibilityHoverTransparent API and display event details in the text area below.
 
 ```TypeScript
 @Entry
@@ -14280,7 +14280,7 @@ struct OnHoverMoveEventExample {
 }
 ```
 
-The systemMaterial attribute is added to ContextMenuOptions since API version 23.
+This example sets the system material of a menu by setting the systemMaterial attribute in [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';
@@ -15311,7 +15311,7 @@ struct ProgressMaskExample {
 }
 ```
 
-The [enableClickSoundEffect](arkts-arkui-commonmethod-c.md#enableclicksoundeffect) attribute is added since API version 24.
+This example disables the default click sound effect by setting the enableClickSoundEffect attribute. You can call audio-related APIs in the onClick callback to customize the sound effect. For details, see [Using SoundPool to Play Short Sounds](../../../media/media/using-soundpool-for-playback.md).
 
 ```TypeScript
 @Entry

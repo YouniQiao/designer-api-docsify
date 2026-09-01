@@ -69,7 +69,7 @@ UIExtensionComponent(
 
 ## 示例
 
-使用方入口界面Index.ets内容如下：
+UIExtensionComponent组件使用分为使用方和提供方。本示例仅展示组件使用的方法和扩展的Ability，实际运行需在设备中安装bundleName为"com.example.newdemo"，abilityName为"UIExtensionProvider"的Ability扩展。
 
 ```TypeScript
 import { ComponentContent } from '@kit.ArkUI';
@@ -181,7 +181,7 @@ function syncRegisterCallback2(proxy: UIExtensionProxy) {
 };
 ```
 
-提供方新增扩展入口文件/src/main/ets/uiextensionability/UIExtensionProvider.ets
+组件提供方
 
 ```TypeScript
 import { UIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
@@ -342,7 +342,7 @@ function onReceiveDataForResult(data: Record<string, Object>): Record<string, Ob
 }
 ```
 
-使用方组件使用示例：
+本示例展示了当UIExtensionComponent组件使用方和扩展的Ability同时使用[Scroll](ts-container-scroll.md)容器的场景，通过对UIExtensionComponent设置手势拦截处理，实现当UIExtensionComponent内部滚动时，外部组件不响应滚动。
 
 ```TypeScript
 @Entry

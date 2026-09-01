@@ -44,7 +44,7 @@ Adds an event watcher. You can use the callback of the event watcher to subscrib
 
 **Examples**
 
-Method 1: Set triggerCondition to implement the onTrigger() callback. When the callback conditions are met, the system automatically triggers the callback.
+Based on the type of the event watcher, the following methods are available:
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -84,7 +84,7 @@ hiAppEvent.addWatcher({
 });
 ```
 
-When the subscription data holder is used to manually process subscription events, the events may not be generated or the log capture is not complete. Therefore, you are advised to call takeNext() to obtain such events again after the process is started.
+Method 2: If the triggerCondition parameter is not set, use the holder object returned by the event subscription to obtain the subscribed event.
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';

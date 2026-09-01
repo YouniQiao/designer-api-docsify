@@ -27,6 +27,8 @@ Stops an HTTP request task and releases system resources.
 
 **Examples**
 
+destroy(): void
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 let httpRequest = http.createHttp();
@@ -65,6 +67,8 @@ Sets whether to automatically carry and share cookies. That is, whether to autom
 | enable | boolean | Yes | Whether to automatically carry cookies. **true**: yes; **false**: no. |
 
 **Examples**
+
+enableAutoCookie(enable: boolean): void
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -115,6 +119,8 @@ Unregisters the observer for HTTP Response Header events.
 
 **Examples**
 
+off(type: "headerReceive", callback?: AsyncCallback<Object>): void
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 
@@ -144,6 +150,8 @@ Unregisters the observer for HTTP Response Header events.
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.<br>**Since:** 11 |
 
 **Examples**
+
+off(type: "headersReceive", callback?: Callback<Object>): void
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -178,6 +186,8 @@ Unregisters the observer for events indicating receiving of HTTP streaming respo
 
 **Examples**
 
+off(type: "dataReceive", callback?: Callback<ArrayBuffer>): void
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 
@@ -210,6 +220,8 @@ Unregisters the observer for events indicating completion of receiving HTTP stre
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
+
+off(type: "dataEnd", callback?: Callback<void>): void
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -244,6 +256,8 @@ Unregisters the observer for events indicating progress of receiving HTTP stream
 
 **Examples**
 
+off(type: 'dataReceiveProgress', callback?: Callback<DataReceiveProgressInfo>): void
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 
@@ -276,6 +290,8 @@ Unregisters the observer for events indicating progress of sending HTTP requests
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No | Callback used to return the result. You can pass the callback of the **on** function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events. |
 
 **Examples**
+
+off(type: 'dataSendProgress', callback?: Callback<DataSendProgressInfo>): void
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -312,6 +328,8 @@ Registers an observer for HTTP Response Header events.
 
 **Examples**
 
+on(type: "headerReceive", callback: AsyncCallback<Object>): void
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -344,6 +362,8 @@ Registers an observer for HTTP Response Header events.
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
 
 **Examples**
+
+on(type: "headersReceive", callback: Callback<Object>): void
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -378,6 +398,8 @@ Registers an observer for events indicating receiving of HTTP streaming response
 
 **Examples**
 
+on(type: "dataReceive", callback: Callback<ArrayBuffer>): void
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 
@@ -410,6 +432,8 @@ Registers an observer for events indicating completion of receiving HTTP streami
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an **Error** object. |
 
 **Examples**
+
+on(type: "dataEnd", callback: Callback<void>): void
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -444,6 +468,8 @@ Registers an observer for events indicating progress of receiving HTTP streaming
 
 **Examples**
 
+on(type: 'dataReceiveProgress', callback: Callback<DataReceiveProgressInfo>): void
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 
@@ -477,6 +503,8 @@ Registers an observer for events indicating progress of sending HTTP requests.
 
 **Examples**
 
+on(type: 'dataSendProgress', callback: Callback<DataSendProgressInfo>): void
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 
@@ -509,6 +537,8 @@ Registers a one-time observer for HTTP Response Header events. Once triggered, t
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Object&gt; | Yes | Callback used to return the HTTP response header. |
 
 **Examples**
+
+once(type: "headersReceive", callback: Callback<Object>): void
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -596,6 +626,8 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
+
+request(url: string, callback: AsyncCallback<HttpResponse>): void
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -692,6 +724,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
+
+request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>):void
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -819,6 +853,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
+request(url: string, options? : HttpRequestOptions): Promise<HttpResponse>
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 
@@ -914,6 +950,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Examples**
 
+requestInStream(url: string, callback: AsyncCallback<number>): void
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -992,6 +1030,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
+
+requestInStream(url: string, options: HttpRequestOptions, callback: AsyncCallback<number>): void
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -1098,6 +1138,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 | 2300996 | The request was intercepted by the HTTP global interceptor.<br>**Applicable version:** 26.0.0 and later |
 
 **Examples**
+
+requestInStream(url: string, options? : HttpRequestOptions): Promise<number>
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -1206,6 +1248,8 @@ Initiates an HTTP network request based on the URL and related configuration opt
 | [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
 
 **Examples**
+
+requestSync(url: string, options?: HttpRequestOptions): HttpResponse
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

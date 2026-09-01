@@ -1,6 +1,6 @@
 # cloudData(端云服务)
 
-端云服务提供端云协同和端云共享能力。端云协同提供结构化数据（RDB Store，关系型数据库）端云同步的能力。即：云作为数据的中心节点，通过与云空间的数据同步，实现数据云备份、同账号设备间的数据一致性。端云共享是在端云协同能力基础上，实现跨账号的数据共享。其中，端云共享资源标识是指：对于应用发起共享的每一条数据记录，该条数据在进行端云同步时会生成唯一的共享资源标识（字符串类型的值），此标识作为该条数据记录共享时的识别标识。端云共享参与者是指：共享发起者根据好友列表选中的参与当前数据共享的所有人员。端云共享邀请码是指：共享发起后，在共享的服务端会生成当前共享操作的邀请码，并将该邀请码附加到当前共享邀请中，通过推送消息推送到被邀请者的设备端，被邀请者可以通过该邀请码进行邀请的确认。
+端云服务提供端云策略能力。端云策略提供端云同步策略配置的能力。
 
 **起始版本：** 10
 
@@ -18,7 +18,7 @@ import { cloudData } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [sharing](arkts-arkdata-clouddata-sharing-n.md) | 提供端云共享的方法，包括发起共享、取消共享、退出共享、更改共享数据权限、查找共享参与者、确认邀请、更改已确认的邀请、查找共享资源。 |
+| [sharing](arkts-arkdata-clouddata-sharing-n.md) | 提供端云共享的方法，包括发起共享、取消共享、退出共享、更改共享数据权限、查询共享参与者、确认邀请、更改已确认的邀请、查询共享资源。 |
 
 ### 函数
 
@@ -52,8 +52,8 @@ import { cloudData } from '@kit.ArkData';
 | [SyncInfo](arkts-arkdata-clouddata-syncinfo-i-sys.md) | 端云同步信息，包含最近一次端云同步的时间、结果和状态。 |
 | [DBSwitchInfo](arkts-arkdata-clouddata-dbswitchinfo-i-sys.md) | 端云协同数据库开关配置信息。 |
 | [SwitchConfig](arkts-arkdata-clouddata-switchconfig-i-sys.md) | 端云协同数据库级配置。 |
-| [DBActionInfo](arkts-arkdata-clouddata-dbactioninfo-i-sys.md) | 端云协同数据库级清除配置信息。 |
-| [ClearConfig](arkts-arkdata-clouddata-clearconfig-i-sys.md) | 端云协同数据库级清除配置。 |
+| [DBActionInfo](arkts-arkdata-clouddata-dbactioninfo-i-sys.md) | 端云协同数据库级清除规则。 |
+| [ClearConfig](arkts-arkdata-clouddata-clearconfig-i-sys.md) | 端云协同数据库级清除规则。 |
 | [BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | 端云协同应用信息。 |
 <!--DelEnd-->
 

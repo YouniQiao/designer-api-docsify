@@ -36,7 +36,7 @@ Sets the parameters of the serial port. If this method is not called, the defaul
 
 **Examples**
 
-The following sample code shows the basic process for calling the setAttribute API and it needs to be executed in a specific method. In actual calling, you must comply with the device-related protocols.
+> NOTE
 
 ```TypeScript
 import { JSON } from '@kit.ArkTS';

@@ -46,6 +46,8 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 
 **示例**
 
+showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>):void
+
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -78,7 +80,7 @@ try {
 };
 ```
 
-当弹窗的showInSubWindow属性为true时，弹窗可显示在窗口外。
+zh-cn_image_0004
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
@@ -114,7 +116,7 @@ try {
 };
 ```
 
-从API version 19开始，该示例通过调用ShowDialogOptions中的onDidAppear、onDidDisappear、onWillAppear和onWillDisappear属性展示了弹窗生命周期的相关接口的使用方法。
+zh-cn_image_0002_showinsubwindow
 
 ```TypeScript
 // xxx.ets
@@ -220,6 +222,8 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
 
 **示例**
+
+showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>
 
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';

@@ -12,7 +12,7 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: WallpaperType): Promise<void>
 ```
 
-设置设备所有形态的壁纸。使用promise异步回调。（包括折展状态、横竖屏状态、资源路径，其中NORMAL-PORT为必选）
+设置设备所有形态的壁纸。使用Promise异步回调。（包括折展状态、横竖屏状态、资源路径，其中NORMAL-PORT为必选）
 
 **起始版本：** 14
 
@@ -33,7 +33,7 @@ function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: W
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

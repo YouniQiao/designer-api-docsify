@@ -144,6 +144,8 @@ backDisplaySync?.on("frame", callback)
 backDisplaySync?.start()
 ```
 
+> NOTE
+
 ```TypeScript
 import { displaySync } from '@kit.ArkGraphics2D';
 import { UIContext } from '@kit.ArkUI';

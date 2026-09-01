@@ -100,7 +100,7 @@ huks.generateKeyItem(keyAlias, options, (error) => {
 });
 ```
 
-The JS sample code is used only for the lightweight devices.
+JS sample code:
 
 ```TypeScript
 <stack class="container">

@@ -38,7 +38,7 @@ Binds an application to the network specified by **netHandle**, so that the appl
 
 **Examples**
 
-The following example binds the application to a Wi-Fi network. It uses the [on('netAvailable')](arkts-network-connection-netconnection-i.md#onnetavailable) API to bind the application when the Wi-Fi network is available, and the [on('netLost')](arkts-network-connection-netconnection-i.md#onnetlost) API to unbind the application and switch to the default network when the Wi-Fi network is unavailable.
+If an application is bound to a Wi-Fi network and the Wi-Fi signal is weak or the network is disconnected, the application cannot access the Internet if it is not unbound.
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -124,7 +124,7 @@ Binds an application to the network specified by **netHandle**, so that the appl
 
 **Examples**
 
-The following example binds the application to a Wi-Fi network. It uses the [on('netAvailable')](arkts-network-connection-netconnection-i.md#onnetavailable) API to bind the application when the Wi-Fi network is available, and the [on('netLost')](arkts-network-connection-netconnection-i.md#onnetlost) API to unbind the application and switch to the default network when the Wi-Fi network is unavailable.
+If an application is bound to a Wi-Fi network and the Wi-Fi signal is weak or the network is disconnected, the application cannot access the Internet if it is not unbound.
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

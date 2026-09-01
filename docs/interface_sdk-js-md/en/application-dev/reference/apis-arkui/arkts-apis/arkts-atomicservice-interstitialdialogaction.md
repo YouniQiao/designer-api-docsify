@@ -1,12 +1,16 @@
 # @ohos.atomicservice.InterstitialDialogAction(This section describes the interfaces used by InterstitialDialogAction)
 
-###### Child Components
- Not supported
- ###### Attributes
- The universal attributes are not supported.
- ###### Events
- The universal events are not supported.
+## Child Components
 
+Not supported
+
+## Attributes
+
+The universal attributes are not supported.
+
+## Events
+
+The universal events are not supported.
 
 ## Modules to Import
 

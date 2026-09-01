@@ -15,7 +15,7 @@
 
 ## Examples
 
-You are advised to use the [getContextMenuController](../arkts-apis-uicontext-uicontext.md#getcontextmenucontroller) API in [UIContext](../arkts-apis-uicontext-uicontext.md) to specify the UI execution context.
+This example demonstrates how to call the ContextMenu.close API to close a context menu that is bound to a component using bindContextMenu.
 
 ```TypeScript
 // xxx.ets

@@ -1,6 +1,6 @@
 # ClearConfig（系统接口）
 
-端云协同数据库级清除配置。
+端云协同数据库级清除规则。
 
 **起始版本：** 23
 
@@ -20,7 +20,7 @@ import { cloudData } from '@kit.ArkData';
 dbInfo: Record<string, DBActionInfo>
 ```
 
-要清除数据的库信息及清除规则。键为数据库名称，值为该数据库的清除配置信息。
+待清除数据的库信息及各库的清除规则。键为数据库名称，值为该数据库的清除规则。
 
 **类型：** Record&lt;string, [DBActionInfo](arkts-arkdata-clouddata-dbactioninfo-i-sys.md)&gt;
 

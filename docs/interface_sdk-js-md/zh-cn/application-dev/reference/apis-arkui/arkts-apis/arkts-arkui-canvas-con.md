@@ -12,7 +12,7 @@ declare const Canvas: CanvasInterface
 > 
 > 该组件从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
-### 子组件
+## 子组件
 
 不支持。
 
@@ -36,7 +36,7 @@ declare const CanvasInstance: CanvasAttribute
 > 
 > 该组件从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
-### 子组件
+## 子组件
 
 不支持。
 

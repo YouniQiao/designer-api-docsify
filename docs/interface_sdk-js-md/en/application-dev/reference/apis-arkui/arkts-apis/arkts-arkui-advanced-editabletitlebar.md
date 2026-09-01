@@ -249,7 +249,7 @@ struct Index1 {
 }
 ```
 
-The leftIconDefaultFocus API is added to [EditableTitleBar](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebar-s.md) since API version 18.
+This example demonstrates how to set the leftIconDefaultFocus attribute in EditableTitleBar to ensure the left icon obtains focus by default in the focused state.
 
 ```TypeScript
 import { Prompt, EditableLeftIconType, EditableTitleBar } from '@kit.ArkUI';
@@ -275,7 +275,7 @@ struct Index {
 }
 ```
 
-The defaultFocus API is added to [EditableTitleBarMenuItem](arkts-arkui-arkui-advanced-editabletitlebar-editabletitlebarmenuitem-c.md) since API version 18.
+This example demonstrates how to set the defaultFocus attribute in EditableTitleBar to ensure the right icon obtains focus by default in the focused state.
 
 ```TypeScript
 import { Prompt, EditableLeftIconType, EditableTitleBar } from '@kit.ArkUI';

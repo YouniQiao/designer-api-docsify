@@ -155,6 +155,12 @@
   - [ResultCode(系统接口)](arkts-basicservices-osaccount-resultcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SetPropertyType(系统接口)](arkts-basicservices-osaccount-setpropertytype-e-sys.md)<!--DelEnd-->
+- [@ohos.account.osAccount.authorization](arkts-account-osaccount-authorization.md)
+  - [getAuthorizationManager](arkts-basicservices-authorization-getauthorizationmanager-f.md)
+  - [AuthorizationManager](arkts-basicservices-authorization-authorizationmanager-i.md)
+  - [AuthorizationResult](arkts-basicservices-authorization-authorizationresult-i.md)
+  - [AuthorizationResultCode](arkts-basicservices-authorization-authorizationresultcode-e.md)
+  - [Privilege](arkts-basicservices-authorization-privilege-e.md)
 - [@ohos.annotation(Annotation)](arkts-annotation.md)
   - [Available](arkts-basicservices-annotation-available-a.md)
   - [SuppressWarnings](arkts-basicservices-annotation-suppresswarnings-a.md)
@@ -1015,7 +1021,7 @@
   - [WallpaperResourceType(系统接口)](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md)<!--DelEnd-->
   - [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md)
 <!--Del-->
-- [@ohos.WallpaperExtensionAbility](arkts-wallpaperextensionability.md)<!--DelEnd-->
+- [@ohos.WallpaperExtensionAbility(WallpaperExtensionAbility)](arkts-wallpaperextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [WallpaperExtensionAbility(系统接口)](arkts-basicservices-wallpaperextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.zlib](arkts-zlib.md)

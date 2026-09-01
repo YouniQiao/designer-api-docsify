@@ -49,6 +49,8 @@ Creates and displays a toast.
 
 **示例**
 
+showToast(options: ShowToastOptions): void
+
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';

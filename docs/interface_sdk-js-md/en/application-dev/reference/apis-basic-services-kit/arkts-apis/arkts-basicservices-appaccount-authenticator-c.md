@@ -460,6 +460,8 @@ Obtains the remote object of an authenticator. This API cannot be overloaded.
 
 **Examples**
 
+This API must be used together with the getRemoteObject API. For details, see the example of the [getRemoteObject](#getremoteobject) API.
+
 ```TypeScript
 import { rpc } from '@kit.IPCKit';
 import { Want } from '@kit.AbilityKit';

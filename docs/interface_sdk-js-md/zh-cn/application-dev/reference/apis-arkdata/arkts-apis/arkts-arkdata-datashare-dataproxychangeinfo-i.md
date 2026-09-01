@@ -34,7 +34,7 @@ type: ChangeType
 uri: string
 ```
 
-通知变更指定URI。
+通知变更指定URI。固定格式为`"datashareproxy://{bundleName}/{path}"`，其中bundleName为配置发布方应用的bundleName，path可随意填写，但同一应用内不允许重复，字符串长度不超过256个字节。
 
 **类型：** string
 
@@ -66,7 +66,7 @@ value: ValueType
 values?: ValueType[]
 ```
 
-多值类型的变更数据。如果变更的数据类型不是多值类型，则**values**值为undefined。
+多值类型的变更数据。如果变更的数据类型不是多值类型，则values值为undefined。
 
 **类型：** [ValueType](arkts-arkdata-valuetype-t.md)[]
 

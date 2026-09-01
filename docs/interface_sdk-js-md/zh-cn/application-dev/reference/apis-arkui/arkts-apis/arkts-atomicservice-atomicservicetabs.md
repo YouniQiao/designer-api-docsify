@@ -1,10 +1,12 @@
 # @ohos.atomicservice.AtomicServiceTabs(Provides an advanced struct of tabs for atomic services)
 
-###### 子组件
- 无。
- ###### 属性
- 不支持通用属性。
+## 子组件
 
+无。
+
+## 属性
+
+不支持通用属性。
 
 ## 导入模块
 

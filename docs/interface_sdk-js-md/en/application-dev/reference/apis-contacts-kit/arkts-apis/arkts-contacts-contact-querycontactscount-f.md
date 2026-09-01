@@ -43,7 +43,7 @@ Queries the number of all contacts. This API uses a promise to return the result
 
 **Examples**
 
-In the examples of this document, the UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

@@ -567,7 +567,7 @@ struct SelectExample {
 }
 ```
 
-The keyboardAvoidMode and minKeyboardAvoidDistance APIs are added since API version 23.
+This example demonstrates how to configure the drop-down menu to avoid the soft keyboard and customize the minimum distance for avoiding the soft keyboard by calling the [keyboardAvoidMode](#keyboardavoidmode23) and [minKeyboardAvoidDistance](#minkeyboardavoiddistance23) APIs.
 
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
@@ -641,7 +641,7 @@ struct Index {
 }
 ```
 
-Since API version 26.0.0, the menuSystemMaterial API is added.
+This example uses the [menuSystemMaterial](arkts-arkui-select-attribute.md#menusystemmaterial) API to apply the system material effect to the drop-down menu, and the [SystemUiMaterial](ts-universal-attributes-image-effect.md#systemuimaterial) API to apply the system material effect to the Select component.
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';

@@ -77,7 +77,7 @@ function queryContacts(context: Context, callback: AsyncCallback<Array<Contact>>
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> 说明：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -173,7 +173,7 @@ function queryContacts(context: Context, holder: Holder, callback: AsyncCallback
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> 说明：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -271,7 +271,7 @@ function queryContacts(context: Context, attrs: ContactAttributes, callback: Asy
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> 说明：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -373,7 +373,7 @@ function queryContacts(context: Context, holder: Holder, attrs: ContactAttribute
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> 说明：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -485,7 +485,7 @@ function queryContacts(context: Context, holder?: Holder, attrs?: ContactAttribu
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> 说明：
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

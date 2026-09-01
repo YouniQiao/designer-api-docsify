@@ -12,7 +12,10 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function isChangePermitted(callback: AsyncCallback<boolean>): void
 ```
 
-是否允许应用改变当前用户的壁纸。
+是否允许应用改变当前用户的壁纸。使用callback异步回调。  
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -24,7 +27,7 @@ function isChangePermitted(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |  |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示允许应用改变当前用户的壁纸；返回false表示不允许。 |
 
 **示例**
 
@@ -47,7 +50,10 @@ wallpaper.isChangePermitted((error: BusinessError, data: boolean) => {
 function isChangePermitted(): Promise<boolean>
 ```
 
-是否允许应用改变当前用户的壁纸。
+是否允许应用改变当前用户的壁纸。使用Promise异步回调。  
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -59,7 +65,7 @@ function isChangePermitted(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | 返回是否允许应用改变当前用户的壁纸。如果允许返回true，否则返回false。 |
+| Promise&lt;boolean&gt; | Promise对象。返回true表示允许应用改变当前用户的壁纸；返回false表示不允许。 |
 
 **示例**
 

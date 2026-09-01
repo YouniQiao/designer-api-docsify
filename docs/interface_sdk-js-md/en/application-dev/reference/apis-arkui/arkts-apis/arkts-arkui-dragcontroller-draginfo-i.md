@@ -154,7 +154,7 @@ Coordinates of the touch point. If this parameter is not set, the touch point is
 
 **Examples**
 
-The autoHideComponentUniqueIds attribute is added for DragInfo since API version 26.0.0.
+In this example, the autoHideComponentUniqueIds attribute of [DragInfo](#draginfo) is used to automatically hide the specified component after the proactive dragging is successfully initiated.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

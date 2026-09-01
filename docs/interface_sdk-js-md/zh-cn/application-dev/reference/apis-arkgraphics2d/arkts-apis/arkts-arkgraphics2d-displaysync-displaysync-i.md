@@ -157,6 +157,8 @@ backDisplaySync?.on("frame", callback)
 backDisplaySync?.start()
 ```
 
+> 说明：
+
 ```TypeScript
 import { displaySync } from '@kit.ArkGraphics2D';
 import { UIContext } from '@kit.ArkUI';

@@ -1,6 +1,6 @@
 # sharing(端云服务)
 
-提供端云共享的方法，包括发起共享、取消共享、退出共享、更改共享数据权限、查找共享参与者、确认邀请、更改已确认的邀请、查找共享资源。
+提供端云共享的方法，包括发起共享、取消共享、退出共享、更改共享数据权限、查询共享参与者、确认邀请、更改已确认的邀请、查询共享资源。
 
 **起始版本：** 11
 
@@ -23,11 +23,11 @@ import { cloudData } from '@kit.ArkData';
 | --- | --- |
 | [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md) | 根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集。如果指定了列字段，则返回的结果集中同时包含对应列的字段值，使用Promise异步回调。 |
 | [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md) | 根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集，使用callback异步回调。 |
-| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md) | 根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集并根据指定的列字段，返回的结果集中同时包含对应列的字段值，使用callback异步回调。 |
+| [allocResourceAndShare](arkts-arkdata-sharing-allocresourceandshare-f-sys.md) | 根据谓词条件匹配的数据申请共享资源标识并发起共享，返回已共享资源的结果集。并根据指定的列字段，返回的结果集中同时包含对应列的字段值，使用callback异步回调。 |
 | [share](arkts-arkdata-sharing-share-f-sys.md) | 根据指定的共享资源标识和共享参与者发起共享邀请，使用callback异步回调。 |
 | [share](arkts-arkdata-sharing-share-f-sys.md) | 根据指定的共享资源标识和共享参与者发起共享邀请，使用Promise异步回调。 |
-| [unshare](arkts-arkdata-sharing-unshare-f-sys.md) | 根据指定的共享资源标识和共享参与者发起共享邀请，使用callback异步回调。 |
-| [unshare](arkts-arkdata-sharing-unshare-f-sys.md) | 根据指定的共享资源标识和共享参与者发起共享邀请，使用Promise异步回调。 |
+| [unshare](arkts-arkdata-sharing-unshare-f-sys.md) | 根据指定的共享资源标识和共享参与者取消共享，使用callback异步回调。 |
+| [unshare](arkts-arkdata-sharing-unshare-f-sys.md) | 根据指定的共享资源标识和共享参与者取消共享，使用Promise异步回调。 |
 | [exit](arkts-arkdata-sharing-exit-f-sys.md) | 根据指定的共享资源标识退出共享，使用callback异步回调。 |
 | [exit](arkts-arkdata-sharing-exit-f-sys.md) | 根据指定的共享资源标识退出共享，使用Promise异步回调。 |
 | [changePrivilege](arkts-arkdata-sharing-changeprivilege-f-sys.md) | 根据指定的共享资源标识更改共享参与者对共享数据的操作权限，使用callback异步回调。 |

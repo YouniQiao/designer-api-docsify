@@ -79,7 +79,7 @@ Checks whether a contact is included in my card. This API uses an asynchronous c
 
 **Examples**
 
-In the examples in this document, the UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -177,7 +177,7 @@ Checks whether a contact is included in my card. This API uses a promise to retu
 
 **Examples**
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

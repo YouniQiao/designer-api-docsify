@@ -12,16 +12,16 @@
  > - 本模块接口仅可在FA模型下使用。
  >
  > - 在以下内容中，对于Lite Wearable设备类型，请参考“JS示例”；对于支持该模块的其他设备类型，请参考“ArkTS示例”。
- ###### storage.get
- get(options: GetStorageOptions): void
- 通过索引读取缓存中存储的值。
- **系统能力：**  SystemCapability.DistributedDataManager.Preferences.Core.Lite
- **参数：**
- | 参数名  | 类型                    | 必填 | 说明       |
- | ------- | -------------------- | ---- | ---------- |
-| options | [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md) | 是   | 接口配置信息。 |
- **示例：**
- ArkTS示例：
+
+## storage.get
+
+get(options: GetStorageOptions): void通过索引读取缓存中存储的值。  
+ **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite  
+ **参数：**  
+ | 参数名 | 类型 | 必填 | 说明 |  
+ | ------- | -------------------- | ---- | ---------- |  
+| options | [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md) | 是 | 接口配置信息。 |
+ **示例：**ArkTS示例：  
  ```js
  export default {
  storageGet() {
@@ -39,17 +39,16 @@
  });
  }
  }
- ```
- JS示例：
+ ```JS示例：  
  ```xml
  <!-- xxx.hml -->
- <div class="container">
- <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+ &lt;div class="container"&gt;
+ &lt;text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};"&gt;
  Get Data
- </text>
- <input type="button" value="Get Data" style="width: 240px; height: 50px; margin: 5px;" onclick="storageGet"></input>
- </div>
- ```
+ &lt;/text&gt;
+ &lt;input type="button" value="Get Data" style="width: 240px; height: 50px; margin: 5px;" onclick="storageGet"&gt;&lt;/input&gt;
+ &lt;/div&gt;
+ ```  
  ```css
  /* xxx.css *\/
  .container {
@@ -73,7 +72,7 @@
  width: 200px;
  height: 100px;
  }
- ```
+ ```  
  ```js
  // xxx.js
  import storage from '@system.storage';
@@ -95,16 +94,16 @@
  },
  }
  ```
- ###### storage.set
- set(options: SetStorageOptions): void
- 修改缓存中索引对应的值。
- **系统能力：**  SystemCapability.DistributedDataManager.Preferences.Core.Lite
- **参数：**
- | 参数名  | 类型                   | 必填 | 说明       |
- | ------- | ------------------- | ---- | ---------- |
-| options | [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md) | 是   | 接口配置信息。 |
- **示例：**
- ArkTS示例：
+
+## storage.set
+
+set(options: SetStorageOptions): void修改缓存中索引对应的值。  
+ **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite  
+ **参数：**  
+ | 参数名 | 类型 | 必填 | 说明 |  
+ | ------- | ------------------- | ---- | ---------- |  
+| options | [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md) | 是 | 接口配置信息。 |
+ **示例：**ArkTS示例：  
  ```js
  export default {
  storageSet() {
@@ -120,17 +119,16 @@
  });
  }
  }
- ```
- JS示例：
+ ```JS示例：  
  ```xml
  <!-- xxx.hml -->
- <div class="container">
- <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+ &lt;div class="container"&gt;
+ &lt;text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};"&gt;
  Set Data
- </text>
- <input type="button" value="Set Data" style="width: 240px; height: 50px; margin: 5px;" onclick="storageSet"></input>
- </div>
- ```
+ &lt;/text&gt;
+ &lt;input type="button" value="Set Data" style="width: 240px; height: 50px; margin: 5px;" onclick="storageSet"&gt;&lt;/input&gt;
+ &lt;/div&gt;
+ ```  
  ```css
  /* xxx.css *\/
  .container {
@@ -154,7 +152,7 @@
  width: 200px;
  height: 100px;
  }
- ```
+ ```  
  ```js
  // xxx.js
  import storage from '@system.storage';
@@ -177,16 +175,16 @@
  }
  }
  ```
- ###### storage.clear
- clear(options?: ClearStorageOptions): void
- 清空缓存中存储的键值对。
- **系统能力：**  SystemCapability.DistributedDataManager.Preferences.Core.Lite
- **参数：**
- | 参数名  | 类型                                        | 必填 | 说明           |
- | ------- | ------------------------------------------- | ---- | -------------- |
-| options | [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md) | 否   | 接口配置信息。 |
- **示例：**
- ArkTS示例：
+
+## storage.clear
+
+clear(options?: ClearStorageOptions): void清空缓存中存储的键值对。  
+ **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite  
+ **参数：**  
+ | 参数名 | 类型 | 必填 | 说明 |  
+ | ------- | ------------------------------------------- | ---- | -------------- |  
+| options | [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md) | 否 | 接口配置信息。 |
+ **示例：**ArkTS示例：  
  ```js
  export default {
  storageClear() {
@@ -200,17 +198,16 @@
  });
  }
  }
- ```
- JS示例：
+ ```JS示例：  
  ```xml
  <!-- xxx.hml -->
- <div class="container">
- <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+ &lt;div class="container"&gt;
+ &lt;text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};"&gt;
  Clear Data
- </text>
- <input type="button" value="Clear Data" style="width: 240px; height: 50px; margin: 5px;" onclick="storageClear"></input>
- </div>
- ```
+ &lt;/text&gt;
+ &lt;input type="button" value="Clear Data" style="width: 240px; height: 50px; margin: 5px;" onclick="storageClear"&gt;&lt;/input&gt;
+ &lt;/div&gt;
+ ```  
  ```css
  /* xxx.css *\/
  .container {
@@ -234,7 +231,7 @@
  width: 200px;
  height: 100px;
  }
- ```
+ ```  
  ```js
  // xxx.js
  import storage from '@system.storage';
@@ -255,18 +252,20 @@
  }
  }
  ```
- ###### storage.get
- get(options: GetStorageOptions): void
- ###### storage.delete
- delete(options: DeleteStorageOptions): void
- 删除缓存中索引对应的键值对。
- **系统能力：**  SystemCapability.DistributedDataManager.Preferences.Core.Lite
- **参数：**
- | 参数名  | 类型                                          | 必填 | 说明           |
- | ------- | --------------------------------------------- | ---- | -------------- |
-| options | [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md) | 是   | 接口配置信息。 |
- **示例：**
- ArkTS示例：
+
+## storage.get
+
+get(options: GetStorageOptions): void
+
+## storage.delete
+
+delete(options: DeleteStorageOptions): void删除缓存中索引对应的键值对。  
+ **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core.Lite  
+ **参数：**  
+ | 参数名 | 类型 | 必填 | 说明 |  
+ | ------- | --------------------------------------------- | ---- | -------------- |  
+| options | [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md) | 是 | 接口配置信息。 |
+ **示例：**ArkTS示例：  
  ```js
  export default {
  storageDelete() {
@@ -281,17 +280,16 @@
  });
  }
  }
- ```
- JS示例：
+ ```JS示例：  
  ```xml
  <!-- xxx.hml -->
- <div class="container">
- <text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};">
+ &lt;div class="container"&gt;
+ &lt;text class="title" style="font-size: {{fontSize}}; color: {{fontColor}};"&gt;
  Delete Data
- </text>
- <input type="button" value="Delete Data" style="width: 240px; height: 50px; margin: 5px;" onclick="storageDelete"></input>
- </div>
- ```
+ &lt;/text&gt;
+ &lt;input type="button" value="Delete Data" style="width: 240px; height: 50px; margin: 5px;" onclick="storageDelete"&gt;&lt;/input&gt;
+ &lt;/div&gt;
+ ```  
  ```css
  /* xxx.css *\/
  .container {
@@ -315,7 +313,7 @@
  width: 200px;
  height: 100px;
  }
- ```
+ ```  
  ```js
  // xxx.js
  import storage from '@system.storage';
@@ -337,7 +335,6 @@
  }
  }
  ```
-
 
 ## 导入模块
 

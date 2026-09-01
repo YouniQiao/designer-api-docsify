@@ -190,6 +190,8 @@ function inspectStatus(arg: number): number {
 }
 ```
 
+> NOTE
+
 ```TypeScript
 @Concurrent
 function inspectStatus(arg: number): number {

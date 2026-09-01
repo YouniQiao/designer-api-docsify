@@ -1,12 +1,16 @@
 # @ohos.arkui.advanced.FullScreenLaunchComponent(Defines the fullScreen launch component)
 
-###### 子组件
- 无。
- ###### 属性
- 不支持通用属性。
- ###### 事件
- 不支持通用事件。
+## 子组件
 
+无。
+
+## 属性
+
+不支持通用属性。
+
+## 事件
+
+不支持通用事件。
 
 ## 导入模块
 
@@ -24,7 +28,7 @@ import { FullScreenLaunchComponent } from '@kit.ArkUI';
 
 ## 示例
 
-使用方
+本示例展示组件使用方法和提供方原子化服务的实现。实际运行时请使用开发者自己的原子化服务appId。
 
 ```TypeScript
 // 使用方入口界面Index.ets内容如下：
@@ -68,7 +72,7 @@ function ColumnChild() {
 }
 ```
 
-提供方入口文件：/src/main/ets/entryability/EntryAbility.ets。
+组件提供方
 
 ```TypeScript
 import { AbilityConstant, Want, EmbeddableUIAbility } from '@kit.AbilityKit';

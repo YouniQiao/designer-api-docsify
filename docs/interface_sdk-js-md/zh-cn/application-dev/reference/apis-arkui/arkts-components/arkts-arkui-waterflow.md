@@ -81,7 +81,7 @@ WaterFlow(options?: WaterFlowOptions)
 
 ## 示例
 
-当[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)数据中影响FlowItem宽高的字段发生变化时，需要在修改数据后通知[DataChangeListener](ts-rendering-control-lazyforeach.md#datachangelistener)，例如调用[onDataChange](ts-rendering-control-lazyforeach.md#ondatachange8)或[onDataReloaded](ts-rendering-control-lazyforeach.md#ondatareloaded)。只修改数据内容但不触发数据变化通知时，LazyForEach可能不会刷新对应FlowItem。
+该示例展示了WaterFlow组件数据加载处理、属性设置和事件回调等基本使用场景。
 
 ```TypeScript
 // WaterFlowDataSource.ets
@@ -368,7 +368,7 @@ struct WaterFlowDemo {
 }
 ```
 
-WaterFlowDataSource说明及完整代码参考[示例1（使用基本瀑布流）](#示例1使用基本瀑布流)。
+该示例通过auto-fill实现了自动计算列数的效果。
 
 ```TypeScript
 // Index.ets
@@ -434,7 +434,7 @@ struct WaterFlowDemo {
 }
 ```
 
-WaterFlowDataSource说明及完整代码参考[示例1（使用基本瀑布流）](#示例1使用基本瀑布流)。
+该示例展示了分组的初始化以及splice、update、values、length等接口的不同效果。
 
 ```TypeScript
 // Index.ets
@@ -683,7 +683,7 @@ struct WaterFlowDemo {
 }
 ```
 
-WaterFlowDataSource说明及完整代码参考[示例1（使用基本瀑布流）](#示例1使用基本瀑布流)。
+该示例通过[priorityGesture](ts-gesture-settings.md#prioritygesture)和[PinchGesture](ts-basic-gestures-pinchgesture.md)实现了双指缩放改变列数效果。
 
 ```TypeScript
 // Index.ets
@@ -879,7 +879,7 @@ struct WaterFlowDemo {
 }
 ```
 
-WaterFlowDataSource说明及完整代码参考[示例1（使用基本瀑布流）](#示例1使用基本瀑布流)。
+该示例通过[fadingEdge](ts-container-scrollable-common.md#fadingedge14)实现了WaterFlow组件开启边缘渐隐效果，并通过fadingEdgeLength参数设置边缘渐隐长度。
 
 ```TypeScript
 // Index.ets
@@ -946,7 +946,7 @@ struct WaterFlowDemo {
 }
 ```
 
-WaterFlowDataSource说明及完整代码参考[示例1（使用基本瀑布流）](#示例1使用基本瀑布流)。
+该示例通过[edgeEffect](ts-container-scrollable-common.md#edgeeffect11)接口，实现了WaterFlow组件设置单边边缘效果。
 
 ```TypeScript
 // Index.ets
@@ -1013,7 +1013,7 @@ struct WaterFlowDemo {
 }
 ```
 
-WaterFlowDataSource说明及完整代码参考[示例1（使用基本瀑布流）](#示例1使用基本瀑布流)。
+从API version 18开始，该示例通过[WaterFlowOptions对象说明](#waterflowoptions对象说明)的footerContent接口，实现了WaterFlow组件设置尾部组件。通过ComponentContent的update函数更新尾部组件。
 
 ```TypeScript
 // Index.ets
@@ -1118,7 +1118,7 @@ struct Index {
 }
 ```
 
-WaterFlowDataSource说明及完整代码参考[示例1（使用基本瀑布流）](#示例1使用基本瀑布流)。
+该示例通过[Refresh](ts-container-refresh.md)组件和WaterFlow组件，实现了下拉刷新瀑布流组件数据源。
 
 ```TypeScript
 // Index.ets
@@ -1269,7 +1269,7 @@ struct WaterFlowDemo {
 }
 ```
 
-WaterFlowDataSource说明及完整代码参考[示例1（使用基本瀑布流）](#示例1使用基本瀑布流)。
+从API version 22 开始，该示例通过WaterFlow组件，实现了获取内容高度。
 
 ```TypeScript
 // Index.ets
@@ -1368,7 +1368,7 @@ struct WaterFlowContentSizeDemo {
 }
 ```
 
-从API version 19开始，新增UIWaterFlowEvent接口。
+该示例通过FrameNode中的getEvent('WaterFlow')获取[UIWaterFlowEvent](arkts-arkui-uiwaterflowevent-i.md)，并为WaterFlow设置滚动事件回调，用于事件监听方因无法直接修改页面代码而无法使用声明式接口设置回调的场景。
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';

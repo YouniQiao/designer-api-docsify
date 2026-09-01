@@ -1,6 +1,9 @@
 # DistributedObject
 
-表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md)获取DistributedObject对象。
+表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md)获取DistributedObject对象。  
+> **说明：**
+> 
+> 从API version 8开始支持，从API version 9开始废弃，暂无替代接口。
 
 **起始版本：** 8
 
@@ -93,7 +96,7 @@ off(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'status' | 是 | 事件类型，固定为'status'，表示对象上下线。 |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 否 | 需要删除的上下线回调，若不设置则删除该对象所有的上下线回调。sessionId：标识变更对象的sessionId；networkId：标识对象设备；status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 否 | 需要删除的上下线回调，若不设置则删除该对象所有的上下线回调。sessionId：标识变更对象的sessionId；networkId：对端设备的网络标识；status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
 
 **示例**
 
@@ -126,7 +129,7 @@ g_object.off('status');
 on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void): void
 ```
 
-监听分布式数据对象的变更。
+监听分布式数据对象的数据变更。
 
 **起始版本：** 8
 
@@ -194,7 +197,7 @@ on(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'status' | 是 | 事件类型，固定为'status'，表示对象上下线。 |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 是 | 监听上下线回调实例。sessionId：标识变更对象的sessionId；networkId：标识对象设备；status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 是 | 监听上下线回调实例。sessionId：标识变更对象的sessionId；networkId：对端设备的网络标识；status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
 
 **示例**
 
@@ -225,7 +228,7 @@ g_object.on('status', (sessionId: string, networkId: string, status: 'online' | 
 setSessionId(sessionId?: string): boolean
 ```
 
-设置sessionId。当可信组网中有多个设备处于协同状态时，如果多个设备间的分布式对象设置为同一个sessionId，就能自动同步。
+设置sessionId。当可信组网中有多个设备处于协同状态时，如果多个设备间的分布式数据对象设置为同一个sessionId，就能自动同步。
 
 **起始版本：** 8
 
@@ -247,7 +250,7 @@ setSessionId(sessionId?: string): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true：标识设置sessionId成功。 |
+| boolean | true：表示设置sessionId成功。 |
 
 **示例**
 

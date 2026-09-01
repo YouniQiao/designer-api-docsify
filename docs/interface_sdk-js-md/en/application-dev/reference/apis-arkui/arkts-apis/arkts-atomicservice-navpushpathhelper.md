@@ -1,12 +1,16 @@
 # @ohos.atomicservice.NavPushPathHelper(Defines provides a push method for the target page in the routing table.)
 
-###### Child Components
- Not supported
- ###### Attributes
- The universal attributes are not supported.
- ###### Events
- The universal events are not supported.
+## Child Components
 
+Not supported
+
+## Attributes
+
+The universal attributes are not supported.
+
+## Events
+
+The universal events are not supported.
 
 ## Modules to Import
 

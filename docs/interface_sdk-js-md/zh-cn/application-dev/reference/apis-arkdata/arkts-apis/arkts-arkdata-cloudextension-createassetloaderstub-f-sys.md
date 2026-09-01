@@ -12,7 +12,7 @@ import { cloudExtension } from '@kit.ArkData';
 function createAssetLoaderStub(instance: AssetLoader): Promise<rpc.RemoteObject>
 ```
 
-根据AssetLoader类的实例创建对应的RemoteObject对象，系统内部通过该对象调用AssetLoader的实现接口，使用Promise异步回调。
+根据[AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md)类的实例创建对应的[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)对象，系统内部通过该对象调用[AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md)的实现接口，使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -24,13 +24,13 @@ function createAssetLoaderStub(instance: AssetLoader): Promise<rpc.RemoteObject>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| instance | [AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md) | 是 | 表示一个AssetLoader类型的实例。 |
+| instance | [AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md) | 是 | 表示一个[AssetLoader](arkts-arkdata-cloudextension-assetloader-i-sys.md)类型的实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回AssetLoader的rpc.RemoteObject对象。 |
+| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回[AssetLoader]{ |
 
 **示例**
 

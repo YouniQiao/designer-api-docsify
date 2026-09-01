@@ -49,7 +49,7 @@ reloadInModal(customData: CustomData): Promise<void>
 
 **示例**
 
-当点击账号选择界面选择任意账号时，调用reloadInModal接口再次触发自动填充服务，在AutoFillExtensionAbility的onFillRequest生命周期中拉起模态页面。
+通过点击账号密码输入框触发自动填充服务时，在[AutoFillExtensionAbility](arkts-ability-app-ability-autofillextensionability-autofillextensionability-c-sys.md)的onFillRequest生命周期中拉起账号选择界面。
 
 ```TypeScript
 // AutoFillAbility.ts

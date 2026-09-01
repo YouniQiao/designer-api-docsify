@@ -20,7 +20,7 @@ import { dataShare } from '@kit.ArkData';
 bundleNameOfOwner: string
 ```
 
-指定创建模板的模板所有者的bundleName，与[addTemplate](arkts-arkdata-datashare-datasharehelper-i-sys.md#addtemplate)中的bundleName相同。
+指定创建模板的模板所有者的bundleName。
 
 **类型：** string
 

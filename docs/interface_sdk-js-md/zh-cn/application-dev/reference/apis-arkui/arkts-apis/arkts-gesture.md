@@ -210,7 +210,7 @@ struct TapGestureExample {
 }
 ```
 
-从API版本26.0.0开始，新增支持getCurrentLocalPosition接口。
+该示例通过getCurrentLocalPosition方法获取点击位置相对于当前组件实时位置左上角的坐标。
 
 ```TypeScript
 // xxx.ets

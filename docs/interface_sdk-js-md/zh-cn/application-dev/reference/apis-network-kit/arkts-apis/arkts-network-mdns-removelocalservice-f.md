@@ -42,7 +42,7 @@ function removeLocalService(context: Context, serviceInfo: LocalServiceInfo,
 
 **示例**
 
-Stage模型示例：
+> 说明：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -109,7 +109,7 @@ function removeLocalService(context: Context, serviceInfo: LocalServiceInfo): Pr
 
 **示例**
 
-Stage模型示例：
+> 说明：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';

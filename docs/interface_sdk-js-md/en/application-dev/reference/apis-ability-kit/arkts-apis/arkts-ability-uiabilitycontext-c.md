@@ -1465,7 +1465,7 @@ When the first UIAbility launched under a module needs to redirect to another UI
 
 **Examples**
 
-The module name specified by abilityStageSrcEntryDelegator must be different from the current module name.
+Set a DelegatorAbility.
 
 ```TypeScript
 {

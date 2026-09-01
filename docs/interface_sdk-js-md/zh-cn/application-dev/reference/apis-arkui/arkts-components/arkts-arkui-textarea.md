@@ -134,7 +134,7 @@ struct TextAreaExample {
 }
 ```
 
-从API version 22开始[customKeyboard](#customkeyboard10)属性新增了入参类型ComponentContent。
+该示例通过[customKeyboard](#customkeyboard10)（从API version 10开始）属性分别将value中的入参类型设置为[CustomBuilder](ts-types.md#custombuilder8)和ComponentContent，实现了自定义键盘的功能。
 
 ```TypeScript
 // xxx.ets
@@ -702,7 +702,7 @@ struct TextAreaExample {
 }
 ```
 
-从API version 24开始，[EllipsisMode](ts-appendix-enums.md#ellipsismode11)新增了MULTILINE_START和MULTILINE_CENTER枚举。
+该示例通过[textOverflow](#textoverflow12)、[ellipsisMode](#ellipsismode18)、[maxLines](#maxlines10)属性展示了文本超长省略以及调整省略位置的效果，通过MULTILINE_START和MULTILINE_CENTER两种类型实现了单行文本和多行文本场景下的省略号在行首和行中的效果。
 
 ```TypeScript
 // xxx.ets
@@ -769,7 +769,7 @@ struct EllipsisModeExample {
 }
 ```
 
-从API版本26.0.0开始，新增[onWillCopy](#onwillcopy)、[onWillCut](#onwillcut)接口。
+该示例通过[onCopy](#oncopy8)、[onCut](#oncut8)、[onPaste](#onpaste)、[onWillCopy](#onwillcopy)、[onWillCut](#onwillcut)展示如何监听文本选择菜单的复制、剪切、粘贴按钮、如何屏蔽系统粘贴功能并实现自定义的粘贴能力、如何屏蔽系统复制功能，以及如何屏蔽系统剪切功能，同时，可以通过[maxFontScale](#maxfontscale18)、[minFontScale](#minfontscale18)属性设置文本最大和最小的字体缩放倍数。
 
 ```TypeScript
 // xxx.ets
@@ -983,7 +983,7 @@ struct TextAreaExample {
 }
 ```
 
-从API版本26.0.0开始，新增[strokeJoinStyle](#strokejoinstyle)接口，支持设置文本描边拐角样式。
+从API version 20开始，该示例通过[strokeWidth](#strokewidth20)和[strokeColor](#strokecolor20)属性设置文本的描边宽度及颜色。
 
 ```TypeScript
 // xxx.ets
@@ -1192,7 +1192,7 @@ struct Index {
 }
 ```
 
-原始文本支持多种语言，不同语言内容时样式起始索引下标start和length会有差异，以下仅以中文设置富文本样式为例。
+从API version 22开始，该示例通过[setStyledPlaceholder](ts-universal-attributes-text-style.md#setstyledplaceholder22)接口设置placeholder富文本样式。
 
 ```TypeScript
 // xxx.ets
@@ -1280,7 +1280,7 @@ struct TextAreaExample {
 }
 ```
 
-从API版本26.0.0开始，新增punctuationOverflow接口。
+本示例通过[compressLeadingPunctuation](#compressleadingpunctuation23)接口设置行首标点符号压缩，通过[punctuationOverflow](#punctuationoverflow)设置行尾标点符号悬挂。
 
 ```TypeScript
 @Entry
@@ -1319,7 +1319,7 @@ struct PunctuationDemo {
 }
 ```
 
-从API version 23开始，新增[includeFontPadding](#includefontpadding23)和[fallbackLineSpacing](#fallbacklinespacing23)接口。
+该示例通过[includeFontPadding](#includefontpadding23)接口增加首行尾行间距和[fallbackLineSpacing](#fallbacklinespacing23)接口设置自适应行间距。
 
 ```TypeScript
 // xxx.ets
@@ -1380,7 +1380,7 @@ struct Index {
 }
 ```
 
-从API version 23开始，新增selectedDragPreviewStyle接口。
+该示例通过[selectedDragPreviewStyle](#selecteddragpreviewstyle23)接口设置文本拖拽时的背板样式。
 
 ```TypeScript
 @Entry
@@ -1401,7 +1401,7 @@ struct TextAreaTest {
 }
 ```
 
-从API version 23开始，新增[deleteBackward](ts-universal-attributes-text-style.md#deletebackward23)接口。
+该示例通过调用[deleteBackward](ts-universal-attributes-text-style.md#deletebackward23)接口删除文本框内最后一个字符。
 
 ```TypeScript
 @Entry
@@ -1421,7 +1421,7 @@ struct Page {
 }
 ```
 
-从API version 23开始，新增textDirection接口。
+该示例通过[textDirection](#textdirection23)接口设置文本排版方向。
 
 ```TypeScript
 // xxx.ets
@@ -1469,7 +1469,7 @@ struct TextAreaExample {
 }
 ```
 
-从API version 23开始，新增scrollToVisible接口。
+本示例通过[scrollToVisible](./ts-universal-attributes-text-style.md#scrolltovisible23)将可视区外的文本滚动到可视区内。
 
 ```TypeScript
 // xxx.ets
@@ -1498,7 +1498,7 @@ struct TextAreaExample {
 }
 ```
 
-从API version 24开始，新增horizontalScrolling接口。
+本示例通过[horizontalScrolling](#horizontalscrolling24)设置水平滚动。
 
 ```TypeScript
 // xxx.ets
@@ -1528,7 +1528,7 @@ Hello World Hello World Hello World Hello World Hello World\n
 }
 ```
 
-从API版本26.0.0开始，新增orphanCharOptimization接口。
+该示例通过[orphanCharOptimization](#orphancharoptimization)接口设置使能孤字优化，确保段落最后一行不出现孤字。
 
 ```TypeScript
 // xxx.ets
@@ -1559,7 +1559,7 @@ struct TextExample {
 }
 ```
 
-从API版本26.0.0开始，新增shaderStyle接口。
+该示例通过[shaderStyle](#shaderstyle)接口实现对TextArea组件内文本着色效果。
 
 ```TypeScript
 @Entry
@@ -1623,7 +1623,7 @@ struct ShaderColorStyle {
 }
 ```
 
-从API version 22开始，新增enableSelectedDataDetector。
+该示例通过[enableSelectedDataDetector](#enableselecteddatadetector22)，配置文本选择AI菜单功能。
 
 ```TypeScript
 @Entry

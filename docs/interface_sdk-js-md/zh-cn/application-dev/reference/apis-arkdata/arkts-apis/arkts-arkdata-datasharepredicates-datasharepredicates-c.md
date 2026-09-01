@@ -18,9 +18,7 @@ import { dataSharePredicates } from '@kit.ArkData';
 and(): DataSharePredicates
 ```
 
-该接口用于将和条件添加到谓词中。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于将和条件添加到谓词中。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 10
 
@@ -51,9 +49,7 @@ predicates.equalTo("NAME", "lisi")
 beginWrap(): DataSharePredicates
 ```
 
-该接口用于向谓词添加左括号，相当于sql语句的“(”，必须和右括号一起使用。
-
-目前仅关系型数据库支持该谓词。
+该接口用于向谓词添加左括号，相当于SQL语句的“(”，必须和右括号一起使用。目前仅关系型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -85,9 +81,7 @@ predicates.equalTo("NAME", "lisi")
 between(field: string, low: ValueType, high: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值在指定范围内的字段。包含两端边界值，为左闭右闭区间。
-
-目前仅关系型数据库支持该谓词。
+该接口用于配置谓词以匹配值在指定范围内的字段。包含两端边界值，为左闭右闭区间。目前仅关系型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -122,9 +116,7 @@ predicates.between("AGE", 10, 50);
 endWrap(): DataSharePredicates
 ```
 
-该接口用于向谓词添加右括号，相当于sql语句的“)”，必须和左括号一起使用。
-
-目前仅关系型数据库支持该谓词。
+该接口用于向谓词添加右括号，相当于SQL语句的“)”，必须和左括号一起使用。目前仅关系型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -156,9 +148,7 @@ predicates.equalTo("NAME", "lisi")
 equalTo(field: string, value: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值等于指定值的字段。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配值等于指定值的字段。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 10
 
@@ -172,8 +162,8 @@ equalTo(field: string, value: ValueType): DataSharePredicates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名。field为undefined或者null时，此次调用接口配置的谓词无效。 |
-| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或者null时，此次调用接口配置的谓词无效。 |
+| field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。 |
+| value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
@@ -194,9 +184,7 @@ predicates.equalTo("NAME", "Rose");
 greaterThan(field: string, value: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值大于指定值的字段。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配值大于指定值的字段。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -230,9 +218,7 @@ predicates.greaterThan("AGE", 10);
 greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值大于或等于指定值的字段。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配值大于或等于指定值的字段。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -244,7 +230,7 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，此次调用接口配置的谓词匹配结果非预期或抛出异常。 |
+| field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
 | value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 指示要与谓词匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
@@ -266,9 +252,7 @@ predicates.greaterThanOrEqualTo("AGE", 10);
 in(field: string, value: Array<ValueType>): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值在指定范围内的字段。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配值在指定范围内的字段。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 10
 
@@ -282,8 +266,8 @@ in(field: string, value: Array<ValueType>): DataSharePredicates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名。field为undefined或者null时，此次调用接口配置的谓词无效。 |
-| value | Array&lt;[ValueType](arkts-arkdata-valuetype-t.md)&gt; | 是 | 以ValueType型数组形式指定的要匹配的值。 |
+| field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
+| value | Array&lt;[ValueType](arkts-arkdata-valuetype-t.md)&gt; | 是 | 以ValueType型数组形式指定的要匹配的值。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
@@ -304,9 +288,7 @@ predicates.in("AGE", [18, 20]);
 lessThan(field: string, value: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值小于指定值的字段。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配值小于指定值的字段。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -340,9 +322,7 @@ predicates.lessThan("AGE", 50);
 lessThanOrEqualTo(field: string, value: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值小于或等于指定值的字段。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配值小于或等于指定值的字段。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -376,9 +356,7 @@ predicates.lessThanOrEqualTo("AGE", 50);
 like(field: string, value: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配指定通配符表达式的字段。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配指定通配符表达式的字段。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -391,7 +369,7 @@ like(field: string, value: string): DataSharePredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。当field为字符串'null'或'undefined'时，键值型数据库和关系型数据库接口使用该谓词时，可能匹配结果非预期或抛出异常。 |
-| value | string | 是 | 指示要与谓词匹配的通配符表达式。 表达式中'%'代表零个、一个或多个数字或字符，'_'代表一个单一的数字或字符，不区分大小写。value为undefined或null时，此次调用接口配置的谓词无效。 |
+| value | string | 是 | 指示要与谓词匹配的通配符表达式。表达式中'%'代表零个、一个或多个数字或字符，'_'代表一个单一的数字或字符，不区分大小写。value为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
@@ -412,9 +390,7 @@ predicates.like("NAME", "%os%");
 limit(total: number, offset: number): DataSharePredicates
 ```
 
-该接口用于配置谓词以指定结果数和起始位置。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以指定结果数和起始位置。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 10
 
@@ -450,9 +426,7 @@ predicates.equalTo("NAME", "Rose").limit(10, 3);
 notBetween(field: string, low: ValueType, high: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值超出指定范围的字段。不包含两端边界值，为左开右开区间。
-
-目前仅关系型数据库支持该谓词。
+该接口用于配置谓词以匹配值超出指定范围的字段。不包含两端边界值，为左开右开区间。目前仅关系型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -487,9 +461,7 @@ predicates.notBetween("AGE", 10, 50);
 notEqualTo(field: string, value: ValueType): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值不等于指定值的字段。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配值不等于指定值的字段。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -523,9 +495,7 @@ predicates.notEqualTo("NAME", "Rose");
 notIn(field: string, value: Array<ValueType>): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配值不在指定范围内的字段。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配值不在指定范围内的字段。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -559,9 +529,7 @@ predicates.notIn("NAME", ["Lisa", "Rose"]);
 or(): DataSharePredicates
 ```
 
-该接口用于将或条件添加到谓词中。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于将或条件添加到谓词中。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 23
 
@@ -590,9 +558,7 @@ predicates.equalTo("NAME", "lisi")
 orderByAsc(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配其值按升序排序的列。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配其值按升序排序的列。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 10
 
@@ -606,7 +572,7 @@ orderByAsc(field: string): DataSharePredicates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名。 field为undefined或者null时，此次调用接口配置的谓词无效。 |
+| field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 
@@ -627,9 +593,7 @@ predicates.orderByAsc("AGE");
 orderByDesc(field: string): DataSharePredicates
 ```
 
-该接口用于配置谓词以匹配其值按降序排序的列。
-
-目前仅关系型数据库及键值型数据库支持该谓词。
+该接口用于配置谓词以匹配其值按降序排序的列。目前仅关系型数据库及键值型数据库支持该谓词。
 
 **起始版本：** 10
 
@@ -643,7 +607,7 @@ orderByDesc(field: string): DataSharePredicates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| field | string | 是 | 数据库表中的列名。field为undefined或者null时，此次调用接口配置的谓词无效。 |
+| field | string | 是 | 数据库表中的列名。field为undefined或null时，此次调用接口配置的谓词无效。 |
 
 **返回值：**
 

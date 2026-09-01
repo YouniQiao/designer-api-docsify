@@ -41,7 +41,7 @@ Creates a VPN connection.
 
 **Examples**
 
-Stage model:
+> NOTE
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';

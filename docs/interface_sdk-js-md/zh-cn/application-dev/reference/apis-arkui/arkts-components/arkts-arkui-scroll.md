@@ -767,7 +767,7 @@ struct ScrollExample1 {
 }
 ```
 
-从API version 19开始，新增UIScrollEvent接口。
+该示例通过FrameNode中的getEvent('Scroll')获取[UIScrollEvent](arkts-arkui-uiscrollevent-i.md)，并为Scroll设置滚动事件回调，用于事件监听方因无法直接修改页面代码而无法使用声明式接口设置回调的场景。
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';

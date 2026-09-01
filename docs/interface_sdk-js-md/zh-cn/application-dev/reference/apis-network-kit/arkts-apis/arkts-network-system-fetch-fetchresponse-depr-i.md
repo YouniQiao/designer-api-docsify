@@ -67,7 +67,7 @@ fetch.fetch({
     console.info(JSON.stringify(response));
   },
   fail: (data: Object, code) => {
-    console.error('fetch failed, data: ' + JSON.stringify(data) + ', code: =' + code);
+    console.error('fetch failed, data: ' + JSON.stringify(data) + ', code: ' + code);
   }
 });
 ```
@@ -137,7 +137,7 @@ export default {
 };
 ```
 
-说明：默认支持https，如果要支持http，需要在config.json里增加network标签，属性标识 "cleartextTraffic":  true。
+> 说明：默认支持https，如果要支持http，需要在config.json里增加network标签，属性标识 "cleartextTraffic":  true。
 
 ```TypeScript
 {

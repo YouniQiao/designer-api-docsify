@@ -189,7 +189,7 @@ struct SpanExample {
 }
 ```
 
-使用网络图片时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
+从API version 12开始，该示例通过[alt](#alt12)属性展示了ImageSpan设置加载网络图片时占位图的效果。
 
 ```TypeScript
 // xxx.ets

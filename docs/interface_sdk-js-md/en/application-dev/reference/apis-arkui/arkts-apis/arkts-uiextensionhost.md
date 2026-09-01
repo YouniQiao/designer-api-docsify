@@ -36,7 +36,7 @@ import { uiExtensionHost } from '@kit.ArkUI';
 
 ## Examples
 
-The EntryAbility (UIAbility) of the sample application loads the pages/Index.ets file, whose content is as follows:
+This example shows how to use all the available APIs in the UIExtensionAbility. The bundle name of the sample application, which requires a system signature, is com.example.uiextensiondemo, and the UIExtensionAbility to start is ExampleUIExtensionAbility.
 
 ```TypeScript
 // The UIAbility loads pages/Index.ets when started.

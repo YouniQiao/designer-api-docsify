@@ -77,7 +77,7 @@ Queries all contacts. This API uses an asynchronous callback to return the resul
 
 **Examples**
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -173,7 +173,7 @@ Queries all contacts based on the specified holder. This API uses an asynchronou
 
 **Examples**
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -271,7 +271,7 @@ Queries all contacts based on the specified attributes. This API uses an asynchr
 
 **Examples**
 
-In the examples in this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -373,7 +373,7 @@ Queries all contacts based on the specified holder and attributes. This API uses
 
 **Examples**
 
-In the examples of this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -485,7 +485,7 @@ Queries all contacts based on the specified holder and attributes. This API uses
 
 **Examples**
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

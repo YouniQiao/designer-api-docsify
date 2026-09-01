@@ -4327,7 +4327,7 @@ struct Index {
 }
 ```
 
-Construct the singleton object GlobalContext.
+Interconnect with certificate management to implement two-way authentication.
 
 ```TypeScript
 // GlobalContext.ets

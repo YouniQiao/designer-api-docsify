@@ -52,6 +52,8 @@ Adds an interceptor to the HTTP client.
 
 **Examples**
 
+addChain(chain: HttpInterceptor[]): boolean
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 
@@ -143,6 +145,8 @@ Adds an interceptor chain to the target HTTP request. Each HTTP request instance
 
 **Examples**
 
+apply(httpRequest: HttpRequest): boolean
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 
@@ -228,6 +232,8 @@ Obtains all interceptor instances in the current interceptor chain.
 
 **Examples**
 
+getChain(): HttpInterceptor[]
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 
@@ -263,6 +269,8 @@ console.info(`Current interceptor chain has ${chain.length} interceptors`);
 ```
 
 **Examples**
+
+Defines HTTP interceptor chain.
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

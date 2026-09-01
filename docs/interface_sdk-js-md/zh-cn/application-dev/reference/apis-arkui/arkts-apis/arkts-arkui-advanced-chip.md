@@ -12,7 +12,7 @@ import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, Lab
 
 | 名称 | 说明 |
 | --- | --- |
-| [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md) | 创建Chip组件。 |
+| [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md) | Chip组件用于标签展示和交互场景，支持自定义样式、图标、激活态等功能，适用于搜索框历史记录、邮件发送列表等场景，可快速实现标签的创建、删除和交互能力。 |
 
 ### 接口
 
@@ -644,7 +644,7 @@ struct ChipAccessibilityExample {
 }
 ```
 
-从API版本26.0.0开始，[ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md)新增backgroundSystemMaterial和activatedBackgroundSystemMaterial属性。
+该示例通过配置backgroundSystemMaterial和activatedBackgroundSystemMaterial实现系统材质样式，启用自动反色功能适配标签文本颜色。
 
 ```TypeScript
 import { Chip, ChipOptions, uiMaterial } from '@kit.ArkUI';

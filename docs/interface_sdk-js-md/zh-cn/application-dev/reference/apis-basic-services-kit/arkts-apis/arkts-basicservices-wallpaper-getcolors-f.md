@@ -12,7 +12,10 @@ import { wallpaper } from '@kit.BasicServicesKit';
 function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<RgbaColor>>): void
 ```
 
-获取指定类型壁纸的主要颜色信息。
+获取指定类型壁纸的主要颜色信息。使用callback异步回调。  
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -24,8 +27,8 @@ function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<R
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |  |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;&gt; | 是 | 回调函数，返回壁纸的主要颜色信息。 |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;&gt; | 是 | 回调函数。当获取壁纸主要颜色信息成功，err为undefined，data为获取到的壁纸主要颜色信息；否则为错误对象。 |
 
 **示例**
 
@@ -48,7 +51,10 @@ wallpaper.getColors(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: BusinessEr
 function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 ```
 
-获取指定类型壁纸的主要颜色信息。
+获取指定类型壁纸的主要颜色信息。使用Promise异步回调。  
+> **说明：**
+> 
+> 从 API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -60,13 +66,13 @@ function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |  |
+| wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;&gt; | 返回壁纸的主要颜色信息。 |
+| Promise&lt;Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;&gt; | Promise对象，返回壁纸的主要颜色信息。 |
 
 **示例**
 

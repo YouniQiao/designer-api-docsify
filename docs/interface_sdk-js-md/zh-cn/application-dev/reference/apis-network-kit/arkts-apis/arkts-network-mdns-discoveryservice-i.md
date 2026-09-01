@@ -35,7 +35,7 @@ off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> 说明：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -103,7 +103,7 @@ off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> 说明：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -153,7 +153,7 @@ off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> 说明：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -200,7 +200,7 @@ on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> 说明：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -243,7 +243,7 @@ on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> 说明：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -286,7 +286,7 @@ on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> 说明：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -332,7 +332,7 @@ on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void
 
 **示例**
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+> 说明：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -368,7 +368,7 @@ startSearchingMDNS(): void
 
 **示例**
 
-Stage模型示例：
+> 说明：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -398,7 +398,7 @@ stopSearchingMDNS(): void
 
 **示例**
 
-Stage模型示例：
+> 说明：
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';

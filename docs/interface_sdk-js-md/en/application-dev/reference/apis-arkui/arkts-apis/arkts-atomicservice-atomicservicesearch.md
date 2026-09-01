@@ -189,7 +189,7 @@ struct Index {
 }
 ```
 
-The onChange API is used to listen for the content changes in the search area.
+This example demonstrates how to use the onWillInsert, onDidInsert, onWillDelete, and onDidDelete APIs to implement insert and delete operations.
 
 ```TypeScript
 import { AtomicServiceSearch } from '@kit.ArkUI';

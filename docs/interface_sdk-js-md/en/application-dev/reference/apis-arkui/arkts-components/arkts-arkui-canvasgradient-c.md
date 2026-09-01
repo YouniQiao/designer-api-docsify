@@ -168,7 +168,7 @@ struct AddColorStop {
 }
 ```
 
-Since API version 26.0.0, the [addColorStop](#addcolorstop) API additionally supports HDR brightening through the ColorMetrics type input parameter.
+addColorStop
 
 ```TypeScript
 // xxx.ets

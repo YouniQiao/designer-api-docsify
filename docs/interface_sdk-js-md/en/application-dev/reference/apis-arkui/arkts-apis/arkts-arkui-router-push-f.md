@@ -30,6 +30,8 @@ Navigates to a specified page in the application.
 
 **Examples**
 
+push(options: RouterOptions): void
+
 ```TypeScript
 import { router } from '@kit.ArkUI';
 

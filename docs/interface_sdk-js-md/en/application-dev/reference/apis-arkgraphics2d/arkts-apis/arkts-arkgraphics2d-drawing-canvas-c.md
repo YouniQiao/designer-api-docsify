@@ -1588,6 +1588,26 @@ class DrawingRenderNode extends RenderNode {
 }
 ```
 
+## drawRecordCmd
+
+```TypeScript
+drawRecordCmd(recordCmd: RecordCmd): void
+```
+
+Replays drawing commands.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| recordCmd | [RecordCmd](arkts-arkgraphics2d-drawing-recordcmd-i.md) | Yes | Recorded drawing command. |
+
 ## drawRect
 
 ```TypeScript

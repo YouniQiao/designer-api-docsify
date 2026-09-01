@@ -759,7 +759,7 @@ struct ScrollExample1 {
 }
 ```
 
-The UIScrollEvent API is supported since API version 19.
+This example obtains a [UIScrollEvent](arkts-arkui-uiscrollevent-i.md) instance via getEvent('Scroll') on a FrameNode and sets scroll event callbacks for a Scroll component. This approach is intended for scenarios where the page code cannot be directly modified to use declarative callbacks.
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';

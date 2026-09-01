@@ -11,7 +11,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) | 除支持通用属性外，还支持以下属性： |
+| [CanvasAttribute](arkts-arkui-canvasattribute-c.md) | 除支持[通用属性](../arkts-components/arkts-arkui-commonmethod-c.md)外，还支持以下属性： |
 | [CanvasGradient](arkts-arkui-canvasgradient-c.md) | OffscreenCanvas支持以下属性： |
 | [CanvasPath](arkts-arkui-canvaspath-c.md) | 路径对象，提供基本的路径绘制方法。路径相关API的详细说明请参见CanvasRenderingContext2D中的描述。 |
 | [CanvasRenderer](arkts-arkui-canvasrenderer-c.md) | CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。 |
@@ -179,7 +179,7 @@ struct CanvasExample {
 }
 ```
 
-此示例的资源不在src > main > resource目录下，从DevEco Studio 6.0.0 Beta2版本开始，新建工程或模块时，默认创建的模块不会对非resources目录下的资源进行打包，需使能相关开关：模块的build-profile.json5中buildOption > resOptions > copyCodeResource > enable设置为true，详见resOptions中[copyCodeResource](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348)相关介绍。
+通过createPattern创建CanvasPattern对象，在onReady回调和按钮点击时分别设置matrix参数，并调用setTransform方法进行矩阵变换。
 
 ```TypeScript
 // xxx.ets
@@ -283,7 +283,7 @@ struct CanvasExample {
 }
 ```
 
-此示例的资源不在src > main > resource目录下，从DevEco Studio 6.0.0 Beta2版本开始，新建工程或模块时，默认创建的模块不会对非resources目录下的资源进行打包，需启用相关开关：模块的build-profile.json5中buildOption > resOptions > copyCodeResource > enable设置为true，详见resOptions中[copyCodeResource](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348)相关介绍。
+该示例展示了如何使用[attributeModifier](ts-universal-attributes-attribute-modifier.md#attributemodifier)动态设置Canvas组件的enableAnalyzer属性和onReady方法。
 
 ```TypeScript
 // xxx.ets
@@ -363,7 +363,7 @@ struct attributeDemo {
 }
 ```
 
-从API version 23开始，新增CanvasParams接口。
+该示例介绍了如何使用[CanvasParams](arkts-arkui-canvasparams-i.md)创建不缓存指令的Canvas组件并进行绘制。
 
 ```TypeScript
 // xxx.ets
@@ -495,7 +495,7 @@ struct CanvasExample {
 }
 ```
 
-此示例的资源不在src > main > resource目录下，从DevEco Studio 6.0.0 Beta2版本开始，新建工程或模块时，默认创建的模块不会对非resources目录下的资源进行打包，需启用相关开关：模块的build-profile.json5中buildOption > resOptions > copyCodeResource > enable设置为true，详见resOptions中[copyCodeResource](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348)相关介绍。
+通过ImageBitmap加载本地图片。
 
 ```TypeScript
 // xxx.ets
@@ -524,7 +524,7 @@ struct ImageExample {
 }
 ```
 
-DevEco Studio的预览器不支持getPixelMap接口，不支持显示PixelMap绘制的内容。
+通过PixelMap创建ImageBitmap对象。
 
 ```TypeScript
 // xxx.ets
@@ -555,7 +555,7 @@ struct Demo {
 }
 ```
 
-DevEco Studio的预览器不支持显示在Worker线程中绘制的内容。
+通过创建Worker线程，实现并发线程绘制。
 
 ```TypeScript
 import { worker } from '@kit.ArkTS';
@@ -609,7 +609,7 @@ workerPort.onmessage = (e: MessageEvents) => {
 }
 ```
 
-从API版本26.0.0开始，新增constructor接口。
+通过constructor接口创建Resource类型的ImageBitmap对象，用于Canvas绘制。
 
 ```TypeScript
 // xxx.ets

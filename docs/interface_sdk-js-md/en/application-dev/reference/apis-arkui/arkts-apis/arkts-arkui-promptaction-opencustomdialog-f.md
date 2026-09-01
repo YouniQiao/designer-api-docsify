@@ -57,6 +57,8 @@ By default, the width of the dialog box in portrait mode is the width of the win
 
 **Examples**
 
+openCustomDialog(options: CustomDialogOptions): Promise<number>
+
 ```TypeScript
 import { promptAction } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -128,7 +130,7 @@ struct Index {
 }
 ```
 
-Directly using openCustomDialog can lead to the issue of ambiguous UI context. To avoid this, obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) and then call the openCustomDialog API through this object.
+This example demonstrates how to set styles of a dialog box, including the width, height, background color, and shadow.
 
 ```TypeScript
 import { LevelMode, ImmersiveMode } from '@kit.ArkUI';
@@ -205,7 +207,7 @@ struct Index {
 }
 ```
 
-Directly using openCustomDialog can lead to the issue of ambiguous UI context. To avoid this, obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) and then call the openCustomDialog API through this object.
+en-us_image_0007
 
 ```TypeScript
 // Index.ets

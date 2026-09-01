@@ -388,7 +388,7 @@ struct ButtonExample {
 }
 ```
 
-The textAlign API is supported since API version 23.
+This example shows how to set the text alignment mode by configuring textAlign of [LabelStyle](#labelstyle10).
 
 ```TypeScript
 @Entry

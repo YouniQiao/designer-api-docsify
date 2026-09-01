@@ -261,7 +261,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-String
+Currently, the following data types are supported: string, number, Boolean, object, array, and file descriptor (FD).
 
 ```TypeScript
 import { UIAbility, Want } from '@kit.AbilityKit';

@@ -48,7 +48,7 @@ Checks whether there are call records that meet the specified conditions. By def
 
 **Examples**
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';
@@ -109,7 +109,7 @@ Checks whether there are call records that meet the specified conditions. This A
 
 **Examples**
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

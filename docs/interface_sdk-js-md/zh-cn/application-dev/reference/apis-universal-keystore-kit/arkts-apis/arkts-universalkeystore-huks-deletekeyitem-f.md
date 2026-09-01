@@ -68,7 +68,7 @@ huks.deleteKeyItem(keyAlias, emptyOptions, (error) => {
 });
 ```
 
-JS示例代码仅供轻量级设备使用。
+JS示例：
 
 ```TypeScript
 <stack class="container">

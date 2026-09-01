@@ -38,6 +38,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 | [PathIterator](arkts-arkgraphics2d-drawing-pathiterator-c.md) | Implements a path operation iterator. You can read path operation instructions by traversing the iterator. |
 | [Pen](arkts-arkgraphics2d-drawing-pen-c.md) | Defines a pen, which is used to describe the style and color to outline a shape. |
 | [PointUtils](arkts-arkgraphics2d-drawing-pointutils-c.md) | This class offers a comprehensive set of operations for handling common2D Point objects. |
+| [RecordCmdUtils](arkts-arkgraphics2d-drawing-recordcmdutils-c.md) | This class offers a set of operations to generate drawing commands. |
 | [RectUtils](arkts-arkgraphics2d-drawing-rectutils-c.md) | This module provides tools for processing rectangles. Use scenarios: |
 | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Describes a region, which is used to describe the region where the shape can be drawn. |
 | [RoundRect](arkts-arkgraphics2d-drawing-roundrect-c.md) | Rounded rectangle. |
@@ -55,6 +56,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 | --- | --- |
 | [FontFeature](arkts-arkgraphics2d-drawing-fontfeature-i.md) | Defines font features, which are typesetting rules within a font that determine how glyphs look, such as ligatures, alternates, and superscripts/subscripts. |
 | [FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md) | Describes the attributes that describe the font size and layout. A typeface has similar font metrics. |
+| [RecordCmd](arkts-arkgraphics2d-drawing-recordcmd-i.md) | Describes a list of recorded drawing commands. |
 | [TextBlobRunBuffer](arkts-arkgraphics2d-drawing-textblobrunbuffer-i.md) | Describes a series of consecutive glyphs with the same attributes in a text blob. |
 
 ### Enums

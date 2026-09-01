@@ -4,7 +4,7 @@
 type DataObserver = (sessionId: string, fields: Array<string>) => void
 ```
 
-定义获取分布式对象数据变更的监听回调函数。
+定义获取分布式数据对象数据变更的监听回调函数。
 
 **起始版本：** 20
 

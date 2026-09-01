@@ -36,6 +36,6 @@ import { distributedDataObject } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 定义获取分布式对象数据变更的监听回调函数。 |
+| [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 定义获取分布式数据对象数据变更的监听回调函数。 |
 | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | 定义传输进度的监听回调函数。 |
-| [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 定义获取分布式对象状态变更的监听回调函数。 |
+| [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 定义获取分布式数据对象状态变更的监听回调函数。 |

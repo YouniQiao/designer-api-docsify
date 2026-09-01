@@ -23,7 +23,7 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 
 ## Examples
 
-Since API version 26.0.0, titleModifier, messageModifier, and PopupV2Button are added.
+This example implements the popup style by configuring [titleModifier](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md), [messageModifier](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md), and [PopupV2Button](arkts-arkui-arkui-advanced-popupv2-popupv2button-i.md).
 
 ```TypeScript
 // xxx.ets
@@ -73,7 +73,7 @@ struct PopupExample {
 }
 ```
 
-Since API version 26.0.0, the direction parameter is added.
+This example implements a mirrored layout effect by configuring [direction](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md), suitable for RTL (right-to-left) layout requirements in internationalization scenarios.
 
 ```TypeScript
 // xxx.ets
@@ -123,7 +123,7 @@ struct PopupExample {
 }
 ```
 
-Since API version 26.0.0, the maxWidth parameter is added.
+This example implements a custom width effect by configuring [maxWidth](arkts-arkui-arkui-advanced-popupv2-popupv2initinfo-i.md), suitable for scenarios such as long message notifications that require adjusting the display width.
 
 ```TypeScript
 // xxx.ets

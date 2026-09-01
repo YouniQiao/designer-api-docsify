@@ -60,7 +60,7 @@ resultCode: AuthorizationResultCode
 
 Authorization result code.
 
-**Type:** [AuthorizationResultCode](arkts-basicservices-osaccount-authorizationresultcode-e-sys.md)
+**Type:** AuthorizationResultCode
 
 **Since:** 24
 

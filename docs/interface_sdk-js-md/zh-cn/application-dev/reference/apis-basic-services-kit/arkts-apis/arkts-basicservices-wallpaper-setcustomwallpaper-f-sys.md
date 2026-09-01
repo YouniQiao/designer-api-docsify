@@ -26,9 +26,9 @@ function setCustomWallpaper(source: string, wallpaperType: WallpaperType, callba
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | string | 是 | 指定的zip资源包。 |
+| source | string | 是 | 指定的zip资源路径。 |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，设置壁纸成功，error为undefined，否则返回error信息。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置壁纸资源成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -79,14 +79,14 @@ function setCustomWallpaper(source: string, wallpaperType: WallpaperType): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | string | 是 | 指定的zip资源包。 |
+| source | string | 是 | 指定的zip资源路径。 |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 | 壁纸类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回结果的Promise对象。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

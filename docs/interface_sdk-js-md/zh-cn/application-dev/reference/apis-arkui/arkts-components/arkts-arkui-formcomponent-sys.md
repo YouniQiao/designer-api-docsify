@@ -44,7 +44,7 @@ Set a new value of form info.
 
 ## 示例
 
-该示例创建一张2 * 2尺寸大小的卡片，并注册事件回调。
+卡片示例。
 
 ```TypeScript
 // card.ets

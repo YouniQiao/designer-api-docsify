@@ -531,7 +531,7 @@ struct Index {
 }
 ```
 
-Set enableProvideConsumeCrossing in [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) of the BuilderNode to true to support two-way synchronization between the @Consumer decorated state variable of the custom component inside the BuilderNode and the @Provider decorated state variable outside the BuilderNode.
+> NOTE
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -614,7 +614,7 @@ struct AddChild {
 }
 ```
 
-This example demonstrates how the synchronization relationship between @Consumer and @Provider changes when a BuilderNode is mounted to or unmounted from the component tree.
+> NOTE
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -732,7 +732,7 @@ struct TestRemove {
 }
 ```
 
-This example demonstrates how the synchronization relationship between @Consumer and @Provider changes when a BuilderNode is mounted to a different component tree.
+> NOTE
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -869,7 +869,7 @@ struct ConsumerChild {
 }
 ```
 
-This example demonstrates how the synchronization relationship between @Consumer and @Provider changes when BuilderNodes are nested.
+> NOTE
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeContent, NodeController } from '@kit.ArkUI';
@@ -993,7 +993,7 @@ struct BuildNodeToBuildNodeChild {
 }
 ```
 
-This example demonstrates the synchronization relationship between @Consumer and @Provider when the custom component containing @Consumer is located under BuilderNode and has child components.
+> NOTE
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -1136,7 +1136,7 @@ struct NestedComponentChildChild {
 }
 ```
 
-This example demonstrates the synchronization relationship between @Consumer and @Provider in a component tree structured as @Provider-@Consumer-BuilderNode-@Consumer.
+> NOTE
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -1291,7 +1291,7 @@ struct NestedComponentChild {
 }
 ```
 
-This example demonstrates the synchronization relationship between @Consumer and @Provider in a component tree structured as @Provider-BuilderNode-@Provider-@Consumer.
+> NOTE
 
 ```TypeScript
 import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
@@ -1448,7 +1448,7 @@ struct DefaultConsumer {
 }
 ```
 
-This example demonstrates the end-to-end process for intercepting mouse events in a custom component and performing coordinate conversion. The component reads the local X and Y coordinates through the [onMouse](../arkui-ts/ts-universal-mouse-key.md#onmouse) callback, calls [vp2px](./arkts-apis-uicontext-uicontext.md#vp2px12) to convert the relative coordinates to pixel coordinates based on the offset obtained by FrameNode.getPositionToParent(), and updates windowX, windowY, displayX, and displayY of [MouseEvent](../arkui-ts/ts-universal-mouse-key.md#mouseevent). Finally, the component uses rootNode.postInputEvent to post the converted mouse event to the child node for handling.
+The functionality demonstrated in this example is supported starting from API version 22.
 
 ```TypeScript
 import { NodeController, ReactiveBuilderNode, FrameNode, PromptAction, UIContext, InputEventType } from '@kit.ArkUI';
@@ -1588,7 +1588,7 @@ struct MyComponent {
 }
 ```
 
-This example demonstrates the end-to-end process for intercepting touch events in a custom component and transforming touch point coordinates. In the [onTouch](../arkui-ts/ts-universal-events-touch.md#ontouch) callback, iterate through the changedTouches and touches arrays of [TouchEvent](../arkui-ts/ts-universal-events-touch.md#touchevent), add the component offset to the X and Y coordinates of each touch point, call [vp2px](./arkts-apis-uicontext-uicontext.md#vp2px12) to convert the coordinates to pixels, and update windowX/windowY and displayX/displayY. Finally, rootNode.postInputEvent is used to post the converted touch event to the child node for handling.
+The functionality demonstrated in this example is supported starting from API version 22.
 
 ```TypeScript
 import { NodeController, ReactiveBuilderNode, FrameNode, UIContext, PromptAction, InputEventType } from '@kit.ArkUI';
@@ -1696,7 +1696,7 @@ struct MyComponent {
 }
 ```
 
-This example demonstrates the end-to-end process for intercepting wheel or trackpad axis events in a custom component and performing coordinate conversion. In the [onAxisEvent](../arkui-ts/ts-universal-events-axis.md#onaxisevent) callback, obtain the relative X and Y coordinates of the axis event, add the component offset, call [vp2px](./arkts-apis-uicontext-uicontext.md#vp2px12) to convert the coordinates to pixels, update the windowX/windowY and displayX/displayY of the axis event, and use rootNode.postInputEvent to post the converted axis event to the child node for handling.
+The functionality demonstrated in this example is supported starting from API version 22.
 
 ```TypeScript
 import { NodeController, ReactiveBuilderNode, FrameNode, UIContext, PromptAction, InputEventType } from '@kit.ArkUI';
@@ -1791,7 +1791,7 @@ struct MyComponent {
 }
 ```
 
-This example demonstrates the end-to-end process for intercepting mouse events in a custom component and performing coordinate conversion. The component reads the current touch point coordinates (x/y) through the [onMouse](../arkui-ts/ts-universal-mouse-key.md#onmouse) callback, and calls [vp2px](./arkts-apis-uicontext-uicontext.md#vp2px12) to convert the relative coordinates to pixel coordinates based on the offset obtained from FrameNode.getPositionToParent. It then updates windowX, windowY, displayX, and displayY of [MouseEvent](../arkui-ts/ts-universal-mouse-key.md#mouseevent). The component selects a [gesture competition strategy](../arkui-ts/ts-appendix-enums.md#competitionstrategy24), and posts the converted mouse event to child nodes through rootNode.postInputEventWithStrategy for processing.
+The postInputEventWithStrategy API is added since API version 24.
 
 ```TypeScript
 import { NodeController, BuilderNode, FrameNode, PromptAction, UIContext, InputEventType } from '@kit.ArkUI';
@@ -2043,7 +2043,7 @@ struct MyComponent {
 }
 ```
 
-This example demonstrates the end-to-end process for intercepting touch events in a custom component and transforming touch point coordinates. In the [onTouch](../arkui-ts/ts-universal-events-touch.md#ontouch) callback, traverse the changedTouches and touches arrays of [TouchEvent](../arkui-ts/ts-universal-events-touch.md#touchevent), add the component offset to the X and Y coordinates of each touch point, call [vp2px](./arkts-apis-uicontext-uicontext.md#vp2px12) to convert the coordinates to pixels, and update windowX, windowY, displayX, and displayY of each touch point. Select a [gesture competition strategy](../arkui-ts/ts-appendix-enums.md#competitionstrategy24), and post the converted touch event to child nodes through rootNode.postInputEventWithStrategy for processing.
+The postInputEventWithStrategy API is added since API version 24.
 
 ```TypeScript
 import { NodeController, BuilderNode, FrameNode, PromptAction, UIContext, InputEventType } from '@kit.ArkUI';
@@ -2326,7 +2326,7 @@ struct MyComponent {
 }
 ```
 
-This example demonstrates the end-to-end process for intercepting wheel or trackpad axis events in a custom component and performing coordinate conversion. In the [onAxisEvent](../arkui-ts/ts-universal-events-axis.md#onaxisevent) callback, obtain the relative X and Y coordinates of the event, add the component offset to the coordinates, call [vp2px](./arkts-apis-uicontext-uicontext.md#vp2px12) to convert the coordinates to pixel coordinates, update windowX, windowY, displayX, and displayY of AxisEvent, select [a gesture competition strategy](../arkui-ts/ts-appendix-enums.md#competitionstrategy24), and use rootNode.postInputEventWithStrategy to post the converted axis event to child nodes for processing.
+The postInputEventWithStrategy API is added since API version 24.
 
 ```TypeScript
 import { NodeController, BuilderNode, FrameNode, UIContext, PromptAction, InputEventType } from '@kit.ArkUI';

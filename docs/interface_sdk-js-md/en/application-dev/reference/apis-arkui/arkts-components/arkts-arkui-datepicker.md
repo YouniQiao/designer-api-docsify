@@ -111,7 +111,7 @@ struct DatePickerExample {
 }
 ```
 
-The mode attribute of [DatePickerOptions](arkts-arkui-datepickeroptions-i.md) is added since API version 18.
+This example demonstrates how to display year and month, or month and day columns using mode.
 
 ```TypeScript
 // xxx.ets

@@ -44,7 +44,7 @@ function addWatcher(watcher: Watcher): AppEventPackageHolder
 
 **示例**
 
-方法一：设置回调条件triggerCondition，实现onTrigger()回调。当满足回调条件时，系统将自动触发回调。
+根据添加的事件观察者类型，目前有如下三种使用方法：
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';
@@ -84,7 +84,7 @@ hiAppEvent.addWatcher({
 });
 ```
 
-在手动处理订阅事件的方法中，由于事件可能未生成或日志信息未抓取完成，建议在进程启动后延时重试调用takeNext()获取此类事件。
+方法二：未设置回调条件参数，使用事件订阅返回的holder对象主动获取监听的事件。
 
 ```TypeScript
 import { hilog } from '@kit.PerformanceAnalysisKit';

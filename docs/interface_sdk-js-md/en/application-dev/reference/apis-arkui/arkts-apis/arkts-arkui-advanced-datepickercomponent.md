@@ -34,7 +34,7 @@ import { DatePickerComponent, DatePickerComponentOptions, DisplayMode, DateMode,
 
 ## Examples
 
-Since API version 26.0.0, the [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md) parameter is added.
+This example implements a date picker by setting displayMode in [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md) to DisplayMode.DATE.
 
 ```TypeScript
 import { DatePickerComponent, DisplayMode, DateMode } from '@kit.ArkUI';
@@ -80,7 +80,7 @@ struct DatePickerExample {
 }
 ```
 
-Since API version 26.0.0, the [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md) parameter is added.
+This example implements a time picker by setting displayMode in [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md) to DisplayMode.TIME.
 
 ```TypeScript
 import { DatePickerComponent, DisplayMode, TimeFormat } from '@kit.ArkUI';
@@ -111,7 +111,7 @@ struct TimePickerExample {
 }
 ```
 
-Since API version 26.0.0, the [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md) parameter is added.
+This example sets displayMode in [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md) to DisplayMode.DATE_TIME to select both date and time.
 
 ```TypeScript
 import { DatePickerComponent, DisplayMode, DateMode, TimeFormat } from '@kit.ArkUI';
@@ -152,7 +152,7 @@ struct DateTimePickerExample {
 }
 ```
 
-Since API version 26.0.0, the DateOptions parameter is added.
+This example disables the loop scrolling mode of the picker by setting loop in DateOptions to false.
 
 ```TypeScript
 import { DatePickerComponent, DisplayMode, DateMode } from '@kit.ArkUI';

@@ -343,7 +343,7 @@ struct RichEditorExample {
 }
 ```
 
-示例中的粘贴菜单项涉及读取剪贴板数据，因此需按规范[申请访问剪贴板权限](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md)。
+通过[bindSelectionMenu](#bindselectionmenu)给组件绑定自定义菜单。
 
 ```TypeScript
 // xxx.ets
@@ -2526,7 +2526,7 @@ struct RichEditorDemo {
 }
 ```
 
-从API版本26.0.0开始，[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)新增strokeJoinStyle接口。
+该示例通过[addTextSpan](arkts-arkui-richeditorcontroller-c.md#addtextspan)接口设置文字特性效果（[fontFeature](arkts-arkui-richeditortextstyle-i.md)）。当添加“ss01”特性的FontFeature属性时，数字“0”由原来的椭圆形改变为带有倒圆角形。同时通过[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)的strokeJoinStyle接口设置文本描边拐角样式。
 
 ```TypeScript
 @Entry
@@ -4106,7 +4106,7 @@ struct RichEditorExample {
 }
 ```
 
-从API version 23开始，新增includeFontPadding、fallbackLineSpacing属性。
+该示例通过[includeFontPadding](#includefontpadding23)属性，在首行文字顶部和尾行文字底部添加文字内边距，同时通过[fallbackLineSpacing](#fallbacklinespacing23)属性实现行高自适应，基于文字实际高度动态调整。
 
 ```TypeScript
 @Entry
@@ -4188,7 +4188,7 @@ struct RichEditorExample {
 }
 ```
 
-从API版本26.0.0开始，新增punctuationOverflow接口。
+本示例通过[compressLeadingPunctuation](#compressleadingpunctuation23)设置行首标点符号压缩，通过[punctuationOverflow](#punctuationoverflow)设置行尾标点符号悬挂。
 
 ```TypeScript
 @Entry
@@ -4232,7 +4232,7 @@ struct PunctuationDemo {
 }
 ```
 
-从API version 23开始，新增selectedDragPreviewStyle接口。
+该示例通过[selectedDragPreviewStyle](#selecteddragpreviewstyle23)接口设置拖动预览样式。
 
 ```TypeScript
 @Entry
@@ -4258,7 +4258,7 @@ struct RichEditorDemo {
 }
 ```
 
-从API version 23开始，新增singleLine接口。
+该示例通过[singleLine](arkts-arkui-richeditor-attribute.md#singleline)接口设置单行模式。
 
 ```TypeScript
 @Entry
@@ -4293,7 +4293,7 @@ struct SingleLineDemo {
 }
 ```
 
-从API version 24开始，新增setStyledPlaceholder接口。
+该示例通过[setStyledPlaceholder](#setstyledplaceholder24)接口设置属性字符串样式的提示文本。
 
 ```TypeScript
 import { LengthMetrics } from '@kit.ArkUI';
@@ -4367,7 +4367,7 @@ struct RichEditorExample {
 }
 ```
 
-从API版本26.0.0开始，新增orphanCharOptimization接口。
+该示例通过[orphanCharOptimization](#orphancharoptimization)接口启用孤字优化，确保段落最后一行不出现孤字。
 
 ```TypeScript
 // xxx.ets
@@ -4410,7 +4410,7 @@ struct RichEditorDemo {
 }
 ```
 
-从API版本26.0.0开始，新增horizontalScrolling接口。
+本示例通过[horizontalScrolling](#horizontalscrolling)设置水平滚动。
 
 ```TypeScript
 // xxx.ets
@@ -4448,7 +4448,7 @@ struct HorizontalScrollDemo {
 }
 ```
 
-从API版本26.0.0开始，RichEditorParagraphStyle新增shaderStyle接口。
+该示例通过[RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)中shaderStyle接口实现文本着色效果。
 
 ```TypeScript
 @Entry
@@ -4545,7 +4545,7 @@ struct ShaderColorStyle {
 }
 ```
 
-从API版本26.0.0开始，新增scrollToVisible接口。
+本示例通过[scrollToVisible](#scrolltovisible)将可视区外的文本滚动到可视区内。
 
 ```TypeScript
 @Entry

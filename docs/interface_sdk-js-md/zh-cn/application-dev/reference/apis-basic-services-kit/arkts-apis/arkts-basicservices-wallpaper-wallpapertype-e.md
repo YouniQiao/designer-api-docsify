@@ -2,8 +2,6 @@
 
 定义壁纸的枚举类型。
 
-@enum { number } WallpaperType
-
 **起始版本：** 7
 
 **系统能力：** SystemCapability.MiscServices.Wallpaper

@@ -43,7 +43,7 @@ class TestAbility extends rpc.RemoteObject {
 let remoteObject = new TestAbility("testObject").asObject();
 ```
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.

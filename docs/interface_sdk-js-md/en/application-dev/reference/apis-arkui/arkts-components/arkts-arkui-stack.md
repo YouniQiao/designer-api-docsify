@@ -45,7 +45,7 @@ Stack(options?: StackOptions)
 
 ## Examples
 
-The syncLoad attribute is added since API version 26.0.0.
+When the [alignContent](#aligncontent) attribute of the Stack component is set to Alignment.Bottom and [syncLoad](#syncload) is set to true, the child components are displayed horizontally centered at the bottom of the Stack component, and all child components are loaded within the same frame.
 
 ```TypeScript
 // xxx.ets

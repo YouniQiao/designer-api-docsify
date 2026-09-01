@@ -77,7 +77,7 @@ struct PatternLockExample {
 }
 ```
 
-The user can click Reset PatternLock to reset the password lock.
+This example demonstrates how to use the [sideLength](arkts-arkui-patternlock-attribute.md#sidelength) attribute to set the grid size, how to use the [circleRadius](arkts-arkui-patternlock-attribute.md#circleradius) attribute to set the grid dot style, and how to use the [onPatternComplete](arkts-arkui-patternlock-attribute.md#onpatterncomplete) attribute to set the callback for password input.
 
 ```TypeScript
 // xxx.ets

@@ -45,7 +45,7 @@ Calls the API for adding a contact to open the UI. This API uses a promise to re
 
 **Examples**
 
-In the examples in this document, the UIAbilityContext is obtained through this.context, where this represents the UIAbility instance that inherits from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> NOTE
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

@@ -12,7 +12,7 @@ import { cloudExtension } from '@kit.ArkData';
 function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject>
 ```
 
-根据ShareCenter类的实例创建对应的RemoteObject对象，系统内部通过该对象调用ShareCenter的实现接口，使用Promise异步回调。
+根据[ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md)类的实例创建对应的[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md)对象，系统内部通过该对象调用[ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md)的实现接口，使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -24,13 +24,13 @@ function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| instance | [ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md) | 是 | ShareCenter类的实例。 |
+| instance | [ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md) | 是 | [ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md)类的实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回ShareCenter的RemoteObject对象。 |
+| Promise&lt;rpc.RemoteObject&gt; | Promise对象，返回[ShareCenter]{ |
 
 **示例**
 

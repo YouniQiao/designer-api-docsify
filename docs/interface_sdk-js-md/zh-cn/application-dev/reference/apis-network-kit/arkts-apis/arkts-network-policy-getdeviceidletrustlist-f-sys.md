@@ -88,12 +88,9 @@ function getDeviceIdleTrustlist(): Promise<Array<number>>
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-policy
-  .getDeviceIdleTrustlist()
-  .then((data: number[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
+policy.getDeviceIdleTrustlist().then((data: number[]) => {
+  console.info(JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
 ```

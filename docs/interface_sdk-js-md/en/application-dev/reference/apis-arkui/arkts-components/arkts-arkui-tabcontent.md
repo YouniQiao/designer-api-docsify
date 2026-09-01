@@ -59,7 +59,7 @@ Creates the **TabContent** component, which represents the content associated wi
 
 ## Examples
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOptions > resOptions > copyCodeResource in the module's build-profile.json5 file, and set enable to true. For details, see the description of [resOptions](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348).
+This example demonstrates how to use [onAnimationStart](ts-container-tabs.md#onanimationstart11) and [onChange](ts-container-tabs.md#onchange) to implement synchronized switching between the tab bar and tab content.
 
 ```TypeScript
 // xxx.ets
@@ -178,7 +178,7 @@ struct TabContentExample {
 }
 ```
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOptions > resOptions > copyCodeResource in the module's build-profile.json5 file, and set enable to true. For details, see the description of [resOptions](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348).
+This example demonstrates how to create side tabs using [vertical](./ts-container-tabs.md#vertical) and [barPosition](./ts-container-tabs.md#barposition9).
 
 ```TypeScript
 // xxx.ets
@@ -884,7 +884,7 @@ struct TabContentExample6 {
 }
 ```
 
-The resources used in this example are not located in the src > main > resource directory. Starting from DevEco Studio 6.0.0 Beta2, the resources that are located outside the resources directory are not packaged by default when a project or module is created. To package these resources, go to buildOptions > resOptions > copyCodeResource in the module's build-profile.json5 file, and set enable to true. For details, see the description of [resOptions](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/ide-hvigor-build-profile#section754823013348).
+This example demonstrates how to change the text color of subtabs and bottom tabs using unselectedColor and selectedColor in [LabelStyle](#labelstyle10) and
 
 ```TypeScript
 // xxx.ets

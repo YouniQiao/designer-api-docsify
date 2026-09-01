@@ -64,6 +64,8 @@ Disables the cache and deletes the data in it. This API uses an asynchronous cal
 
 **Examples**
 
+delete(callback: AsyncCallback<void>): void
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -110,6 +112,8 @@ Disables the cache and deletes the data in it. This API uses a promise to return
 
 **Examples**
 
+delete(): Promise<void>
+
 ```TypeScript
 import { http } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -149,6 +153,8 @@ Flushes data in the cache to the file system so that the cached data can be acce
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Examples**
+
+flush(callback: AsyncCallback<void>): void
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -194,6 +200,8 @@ Flushes data in the cache to the file system so that the cached data can be acce
 | Promise&lt;void&gt; | Promise that returns no value. |
 
 **Examples**
+
+flush(): Promise<void>
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

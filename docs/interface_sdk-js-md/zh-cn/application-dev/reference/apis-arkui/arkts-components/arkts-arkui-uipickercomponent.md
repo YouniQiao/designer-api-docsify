@@ -776,7 +776,7 @@ struct UIPickerComponentExample {
 }
 ```
 
-中文（默认）：在resource目录下创建base目录，在base目录下创建element目录，在element目录添加string.json文件（若文件已存在，请在文件中追加以下"name"-"value"键值对，请勿直接覆盖原文件）。文件内容如下：
+从API version 22开始，该示例实现了一个时间选择器，功能包含设置切换是否循环滚动、切换是否显示秒数、切换是否使用24小时制、切换是否显示前导0，还可按照当前系统语言显示对应语言的内容，并根据语言习惯调整各列的显示顺序。
 
 ```TypeScript
 {
@@ -839,7 +839,7 @@ struct UIPickerComponentExample {
 }
 ```
 
-示例代码如下：
+其他语言依此类推。
 
 ```TypeScript
 // xxx.ets
@@ -1237,7 +1237,7 @@ struct TimeUIPickerComponentExample {
 }
 ```
 
-从API版本26.0.0开始，新增[itemHeight](#itemheight)属性。
+该示例通过[itemHeight](#itemheight)设置UIPickerComponent容器的选项高度。
 
 ```TypeScript
 // xxx.ets
@@ -1295,7 +1295,7 @@ struct UIPickerComponentItemHeightExample {
 }
 ```
 
-从API版本26.0.0开始，新增[displayedItemCount](arkts-arkui-uipickercomponent-attribute.md#displayeditemcount)属性。
+该示例通过[displayedItemCount](arkts-arkui-uipickercomponent-attribute.md#displayeditemcount)设置UIPickerComponent容器的可见选项数量。
 
 ```TypeScript
 // xxx.ets

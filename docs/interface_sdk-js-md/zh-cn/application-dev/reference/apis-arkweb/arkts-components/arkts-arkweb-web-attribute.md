@@ -4243,7 +4243,7 @@ struct Index {
 }
 ```
 
-构造  单例对象。
+对接证书管理，实现双向认证功能。
 
 ```TypeScript
 // GlobalContext.ets

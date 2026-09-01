@@ -587,7 +587,7 @@ struct HomeBody {
 }
 ```
 
-从API version 19开始，新增了preferredOrientation属性。
+以下示例主要演示每个NavDestination可以配置[preferredOrientation](arkts-arkui-navdestination-attribute.md#preferredorientation)指定的页面方向和状态栏，导航条显隐状态。
 
 ```TypeScript
 import { window } from '@kit.ArkUI';

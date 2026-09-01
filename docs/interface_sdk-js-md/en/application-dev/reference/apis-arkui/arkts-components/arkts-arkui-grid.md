@@ -174,7 +174,7 @@ struct GridExample {
 }
 ```
 
-GridDataSource implements the LazyForEach data source API [IDataSource](ts-rendering-control-lazyforeach.md#idatasource), which is used to provide child components for Grid through LazyForEach.
+This example shows a scrollable grid with all its scrolling attributes and events specified.
 
 ```TypeScript
 // GridDataSource.ets
@@ -317,7 +317,7 @@ struct GridExample {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+[GridLayoutOptions](arkts-arkui-gridlayoutoptions-i.md): irregularIndexes and onGetIrregularSizeByIndex.
 
 ```TypeScript
 // xxx.ets
@@ -404,7 +404,7 @@ struct GridExample {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+This example demonstrates how to use [nestedScroll](#nestedscroll10) and [onScrollFrameBegin](#onscrollframebegin10).
 
 ```TypeScript
 import { GridDataSource } from './GridDataSource';
@@ -580,7 +580,7 @@ struct GridExample {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+Set [editMode](#editmode8) to enable edit mode for a grid, where the user can drag grid items.
 
 ```TypeScript
 import { GridDataSource } from './GridDataSource';
@@ -654,7 +654,7 @@ struct GridExample {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+This example demonstrates how to use [layoutDirection](#layoutdirection8), [maxCount](#maxcount8), [minCount](#mincount8), and [cellLength](arkts-arkui-grid-attribute.md#celllength).
 
 ```TypeScript
 import { GridDataSource } from './GridDataSource';
@@ -701,7 +701,7 @@ struct GridExample {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+This example demonstrates how to adjust the number of columns in the grid with a pinch gesture using two fingers.
 
 ```TypeScript
 // xxx.ets
@@ -847,7 +847,7 @@ struct GridColumnsTemplate {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+This example implements a grid that contains two columns. The grid item in each column consists of two Column components with determined heights and one Text component with an undetermined height.
 
 ```TypeScript
 import { GridDataSource } from './GridDataSource';
@@ -908,7 +908,7 @@ struct Index {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+This example demonstrates how to enable the edge fading effect using [fadingEdge](ts-container-scrollable-common.md#fadingedge14).
 
 ```TypeScript
 // xxx.ets
@@ -958,7 +958,7 @@ struct GridExample {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+This example uses the [edgeEffect](#edgeeffect10) API to set the single-edge effect for the Grid component.
 
 ```TypeScript
 // xxx.ets
@@ -1089,7 +1089,7 @@ struct GridExample {
 }
 ```
 
-The UIGridEvent API is added since API version 19.
+This example obtains a [UIGridEvent](arkts-arkui-uigridevent-i.md) instance via getEvent('Grid') on a FrameNode and sets scroll event callbacks for a Grid component. This approach is intended for scenarios where the page code cannot be directly modified to use declarative callbacks.
 
 ```TypeScript
 import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
@@ -1179,7 +1179,7 @@ struct Index {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+This example uses the [scrollToIndex](ts-container-scroll.md#scrolltoindex) API to scroll the Grid component to a specified position.
 
 ```TypeScript
 import { GridDataSource } from './GridDataSource';
@@ -1235,7 +1235,7 @@ struct GridScrollToIndexSample {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+This example uses the [PanGesture](./ts-basic-gestures-pangesture.md#pangesture-1) API to implement the effect of panning while selecting items in a Grid component.
 
 ```TypeScript
 // xxx.ets
@@ -1798,7 +1798,7 @@ struct GridItemExample {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+This example demonstrates dragging GridItem components to the Grid component's edges to trigger automatic scrolling, implemented through [drag events](./ts-universal-events-drag-drop.md).
 
 ```TypeScript
 // xxx.ets
@@ -1912,7 +1912,7 @@ struct GridExample {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+This example demonstrates how to obtain the total content size. This functionality is supported since API version 22.
 
 ```TypeScript
 import { GridDataSource } from './GridDataSource';
@@ -1992,7 +1992,7 @@ struct GridExample {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+This example enables the multi-select gather animation switch of the Grid to implement the effect of gathering the selected GridItem items within the display range through [bindContextMenu](ts-universal-attributes-menu.md#bindcontextmenu8) when a context menu is popped up by long pressing a GridItem.
 
 ```TypeScript
 // xxx.ets
@@ -2088,7 +2088,7 @@ struct GridExample {
 }
 ```
 
-For details about GridDataSource and the complete code, see [Example 2: Implementing a Scrollable Grid with Scroll Events](#example-2-implementing-a-scrollable-grid-with-scroll-events).
+This example uses the two-way binding of  and the  event to listen for the notification of entering the multi-select mode by swiping with two fingers on the Grid, implementing the effect of selecting while swiping on the Grid.
 
 ```TypeScript
 // xxx.ets

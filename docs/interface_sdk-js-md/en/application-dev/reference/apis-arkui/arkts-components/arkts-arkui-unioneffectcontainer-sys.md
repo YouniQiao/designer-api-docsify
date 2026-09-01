@@ -150,7 +150,7 @@ struct UnionEffectContainerPage {
 }
 ```
 
-The unionMode API is added since API version 26.0.0.
+This example demonstrates how to use the [unionMode](#unionmode) API to produce different union deformation effects by setting different union types.
 
 ```TypeScript
 // UnionEffectContainerPage.ets

@@ -457,7 +457,7 @@ struct AlertDialogLifecycleExample {
 }
 ```
 
-从API version 19开始，在AlertDialogParam中新增了backgroundBlurStyleOptions属性。
+该示例通过配置AlertDialogParam中的backgroundBlurStyleOptions属性，实现了自定义背景模糊效果。
 
 ```TypeScript
 @Entry
@@ -502,7 +502,7 @@ struct AlertDialogExample {
 }
 ```
 
-从API version 19开始，在AlertDialogParam中新增了backgroundEffect属性。
+该示例通过配置AlertDialogParam中的backgroundEffect属性，实现自定义背景效果。
 
 ```TypeScript
 @Entry
@@ -548,7 +548,7 @@ struct AlertDialogExample {
 }
 ```
 
-从API版本26.0.0开始，在AlertDialogParam中新增了systemMaterial属性。
+该示例通过AlertDialogParam中的systemMaterial属性设置组件的系统材质，实现沉浸光感效果。
 
 ```TypeScript
 import { uiMaterial } from '@kit.ArkUI';

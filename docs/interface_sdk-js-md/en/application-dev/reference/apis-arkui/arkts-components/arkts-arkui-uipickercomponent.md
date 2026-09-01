@@ -795,7 +795,7 @@ struct UIPickerComponentExample {
 }
 ```
 
-Chinese (default): Create a base directory under the resource directory, create an element directory under the base directory, and add a string.json file under the element directory (if the file already exists, append the following "name"-"value" key-value pairs to the file instead of overwriting the original file). The file content is as follows:
+Since API version 22, this example implements a time picker with the following features: setting whether to loop scrolling, whether to display seconds, whether to use the 24-hour format, and whether to display leading zeros. It can also display content in the language corresponding to the current system language and adjust the display order of each column based on language habits.
 
 ```TypeScript
 {
@@ -858,7 +858,7 @@ Arabic: Create the ar directory under the resource directory, create the element
 }
 ```
 
-The sample code is as follows:
+The same applies to other languages.
 
 ```TypeScript
 // xxx.ets
@@ -1256,7 +1256,7 @@ struct TimeUIPickerComponentExample {
 }
 ```
 
-Since API version 26.0.0, the [itemHeight](#itemheight) attribute is added.
+This example uses [itemHeight](#itemheight) to set the item height of the UIPickerComponent container.
 
 ```TypeScript
 // xxx.ets
@@ -1314,7 +1314,7 @@ struct UIPickerComponentItemHeightExample {
 }
 ```
 
-Since API version 26.0.0, the [displayedItemCount](arkts-arkui-uipickercomponent-attribute.md#displayeditemcount) attribute is added.
+This example uses [displayedItemCount](arkts-arkui-uipickercomponent-attribute.md#displayeditemcount) to set the number of visible items in the UIPickerComponent container.
 
 ```TypeScript
 // xxx.ets

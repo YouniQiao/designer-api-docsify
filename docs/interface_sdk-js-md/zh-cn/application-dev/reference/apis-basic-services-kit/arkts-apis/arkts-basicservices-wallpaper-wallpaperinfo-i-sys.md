@@ -52,7 +52,7 @@ rotateState: RotateState
 source: string
 ```
 
-表示壁纸资源uri，只支持应用沙箱目录。
+表示壁纸资源Uri，只支持应用沙箱目录。
 
 **类型：** string
 

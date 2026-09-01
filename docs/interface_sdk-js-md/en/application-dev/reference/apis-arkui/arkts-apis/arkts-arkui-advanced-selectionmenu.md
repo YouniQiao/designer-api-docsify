@@ -687,7 +687,7 @@ struct Index {
 }
 ```
 
-Starting from API version 26.0.0, the backgroundSystemMaterial property is added to SelectionMenuOptions.
+This example demonstrates the ultra-thin background material by setting the backgroundSystemMaterial property of SelectionMenuOptions.
 
 ```TypeScript
 import {

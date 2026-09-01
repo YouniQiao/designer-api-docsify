@@ -38,7 +38,7 @@ Rules that support warning suppression. This parameter is used to specify the ty
 
 **Examples**
 
-When a warning is matched by multiple suppression rules, only the suppression rule closest to the code generating the warning takes effect. When different types of warnings are matched by different suppression rules, each suppression rule takes effect independently.
+Prerequisites for compatibility warning suppression: The value of compatibleSdkVersion in the build-profile.json5 file under the project root directory is 20.
 
 ```TypeScript
 import { SuppressWarnings, SuppressWarningsType } from '@kit.BasicServicesKit';
@@ -81,7 +81,7 @@ async function savePhotoToGallerySuppress(context: common.UIAbilityContext) {
 }
 ```
 
-Prerequisites for permission warning suppression: No permission is requested under requestPermissions in the module.json5 file.
+// @SuppressWarnings <SuppressWarningsType>
 
 ```TypeScript
 import { systemDateTime } from '@kit.BasicServicesKit';

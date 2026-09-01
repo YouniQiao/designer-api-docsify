@@ -33,7 +33,7 @@ import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from
 ```
 
 ```TypeScript
-import { Animator as animator, AnimatorResult } from '@kit.ArkUI';
+import { Animator as animator, AnimatorResult, AnimatorOptions } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let DataTmp: Record<string, Animator> = {
@@ -46,11 +46,11 @@ class Tmp {
   data: animator = DataTmp
   onInit: Function = () => {
   }
-  Show: Function = () => {
+  show: Function = () => {
   }
 }
 
-class DateT {
+class AnimatorState {
   divWidth: number = 0
   divHeight: number = 0
   animator: AnimatorResult | null = null
@@ -70,15 +70,15 @@ class DateT {
         begin: 200.0,
         end: 400.0
       };
-      let DataTmp: DateT = {
+      let animatorState: AnimatorState = {
         divWidth: 200,
         divHeight: 200,
         animator: null
       }
-      DataTmp.animator = animator.create(options);
+      animatorState.animator = animator.create(options);
     },
-    Show() {
-      let options1: AnimatorOptions = {
+    show() {
+      let resetOptions: AnimatorOptions = {
         duration: 1500,
         easing: "friction",
         delay: 0,
@@ -88,33 +88,33 @@ class DateT {
         begin: 0,
         end: 400.0,
       };
-      let DataTmp: DateT = {
+      let animatorState: AnimatorState = {
         divWidth: 200,
         divHeight: 200,
         animator: null
       }
       try {
-        DataTmp.animator = animator.create(options1);
-        DataTmp.animator.reset(options1);
+        animatorState.animator = animator.create(resetOptions);
+        animatorState.animator.reset(resetOptions);
       } catch (error) {
         let message = (error as BusinessError).message
         let code = (error as BusinessError).code
-        console.error(`Animator reset failed, error code: ${code}, message: ${message}.`);
+        console.error(`Animator reset failed. Code: ${code}, message: ${message}`);
       }
-      let _this = DataTmp;
-      if (DataTmp.animator) {
-        DataTmp.animator.onFrame = (value: number) => {
+      let _this = animatorState;
+      if (animatorState.animator) {
+        animatorState.animator.onFrame = (value: number) => {
           _this.divWidth = value;
           _this.divHeight = value;
         };
-        DataTmp.animator.play();
+        animatorState.animator.play();
       }
     }
   })
 }
 ```
 
-For precise UI context management, use the createAnimator API in [UIContext](arkts-apis-uicontext-uicontext.md) to specify the execution context.
+> NOTE
 
 ```TypeScript
 import { AnimatorResult } from '@kit.ArkUI';
@@ -130,7 +130,7 @@ struct AnimatorTest {
 
   create() {
     this.backAnimator = this.getUIContext().createAnimator({
-      // You are advised to use this.getUIContext().createAnimator().
+    // You are advised to use the this.getUIContext().createAnimator() API.
       duration: 2000,
       easing: "ease",
       delay: 0,
@@ -289,7 +289,7 @@ struct AnimatorTest {
   private TAG: string = '[AnimatorTest]'
   private backAnimator: AnimatorResult | undefined = undefined
   private flag: boolean = false
-  @State translate_: number = 0
+  @State translateX: number = 0
 
   create() {
     this.backAnimator = this.getUIContext()?.createAnimator(
@@ -300,7 +300,7 @@ struct AnimatorTest {
       console.info(this.TAG, 'backAnimator onFinish')
     }
     this.backAnimator.onFrame = (value: number) => {
-      this.translate_ = value
+      this.translateX = value
     }
   }
 
@@ -318,7 +318,7 @@ struct AnimatorTest {
         Column()
           .width(100)
           .height(100)
-          .translate({x: this.translate_})
+          .translate({x: this.translateX})
           .backgroundColor(Color.Green)
       }
       .width('100%')
