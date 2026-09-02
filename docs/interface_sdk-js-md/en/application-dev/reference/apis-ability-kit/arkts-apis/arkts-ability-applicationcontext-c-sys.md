@@ -6,7 +6,7 @@ ApplicationContext inherits from Context and provides application-level manageme
 > 
 > The APIs of this module can be used only in the stage model.
 
-**Inheritance/Implementation:** ApplicationContext extends Context
+**Inheritance/Implementation:** ApplicationContext extends [Context](arkts-ability-context-c.md)
 
 **Since:** 9
 

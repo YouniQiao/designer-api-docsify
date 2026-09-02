@@ -13,6 +13,7 @@ Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md)。
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getZoomCenterPoint

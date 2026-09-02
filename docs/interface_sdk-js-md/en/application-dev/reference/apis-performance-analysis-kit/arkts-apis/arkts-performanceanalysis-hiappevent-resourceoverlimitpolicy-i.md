@@ -9,6 +9,7 @@ Defines the resource leak event configuration policy.
 ## Modules to Import
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## jsHeapLogtype

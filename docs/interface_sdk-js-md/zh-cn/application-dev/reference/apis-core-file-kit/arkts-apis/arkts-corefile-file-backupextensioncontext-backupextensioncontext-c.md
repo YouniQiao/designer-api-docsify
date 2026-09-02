@@ -4,7 +4,7 @@ BackupExtensionAbility的上下文环境，继承自ExtensionContext。用于在
 
 @extends ExtensionContext
 
-**继承/实现关系：** BackupExtensionContext extends ExtensionContext
+**继承/实现关系：** BackupExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 12
 

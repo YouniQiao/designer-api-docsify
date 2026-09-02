@@ -9,6 +9,7 @@ Represents the result obtained from the **close** event reported when the WebSoc
 ## Modules to Import
 
 ```TypeScript
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## code

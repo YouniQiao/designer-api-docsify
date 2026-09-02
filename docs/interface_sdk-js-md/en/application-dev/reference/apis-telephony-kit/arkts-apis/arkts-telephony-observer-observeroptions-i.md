@@ -9,6 +9,7 @@ Defines event subscription parameters.
 ## Modules to Import
 
 ```TypeScript
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## slotId

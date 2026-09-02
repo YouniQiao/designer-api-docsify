@@ -11,6 +11,7 @@ Provides APIs to obtain and set the beauty effect.
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getSupportedBeautyRange

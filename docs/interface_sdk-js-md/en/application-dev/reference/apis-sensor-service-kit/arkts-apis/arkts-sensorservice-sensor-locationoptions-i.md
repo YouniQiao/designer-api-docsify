@@ -9,6 +9,7 @@ Describes the geographical location.
 ## Modules to Import
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## altitude

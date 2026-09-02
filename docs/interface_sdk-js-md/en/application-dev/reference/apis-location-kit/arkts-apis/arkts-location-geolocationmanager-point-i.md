@@ -9,6 +9,7 @@ Indicates a location point, including the longitude and latitude.
 ## Modules to Import
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## latitude

@@ -9,6 +9,7 @@ Represents the authorization request information of the credentials.
 ## Modules to Import
 
 ```TypeScript
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## certPurpose

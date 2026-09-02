@@ -11,6 +11,7 @@ WebResourceHandler与[WebSchemeHandler](arkts-arkweb-webview-webschemehandler-c.
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## didFail

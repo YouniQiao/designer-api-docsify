@@ -29,6 +29,7 @@ VibratorInfoParam）。多马达设备场景：从API version 19开始，支持�
 ## 导入模块
 
 ```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## 汇总

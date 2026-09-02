@@ -15,6 +15,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hfp } from '@kit.ConnectivityKit';
 ```
 
 ## connect

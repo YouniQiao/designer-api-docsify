@@ -13,6 +13,7 @@ Implements depth data output. It inherits from [CameraOutput](arkts-camera-camer
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('depthDataAvailable')

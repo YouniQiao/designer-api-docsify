@@ -11,6 +11,7 @@ Defines the effect parameters used to preheat an image.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## faceSlender

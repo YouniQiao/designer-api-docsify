@@ -10,7 +10,7 @@ This module provides APIs for accessing resources of a specific [FaultLogExtensi
 
 @extends ExtensionContext
 
-**Inheritance/Implementation:** FaultLogExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** FaultLogExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 21
 
@@ -21,4 +21,5 @@ This module provides APIs for accessing resources of a specific [FaultLogExtensi
 ## Modules to Import
 
 ```TypeScript
+import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
 ```

@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## injectTouchEvent

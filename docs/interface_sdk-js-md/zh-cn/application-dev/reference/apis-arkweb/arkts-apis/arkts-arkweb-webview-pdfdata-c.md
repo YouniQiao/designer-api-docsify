@@ -15,6 +15,7 @@ PdfData适用于需要离线保存网页内容、生成网页PDF报告等场景�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## pdfArrayBuffer

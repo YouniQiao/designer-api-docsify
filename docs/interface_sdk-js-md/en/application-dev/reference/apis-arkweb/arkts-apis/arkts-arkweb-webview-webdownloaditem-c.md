@@ -17,6 +17,7 @@ WebDownloadItem is a class in the ArkWeb framework used to represent and manage 
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## cancel

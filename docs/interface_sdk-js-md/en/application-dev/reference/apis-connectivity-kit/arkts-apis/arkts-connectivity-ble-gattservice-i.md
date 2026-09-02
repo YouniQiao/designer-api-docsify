@@ -9,6 +9,7 @@ Describes the Gatt service.
 ## Modules to Import
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## characteristics

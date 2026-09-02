@@ -9,6 +9,7 @@ Defines the ICC account information.
 ## Modules to Import
 
 ```TypeScript
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## iccId

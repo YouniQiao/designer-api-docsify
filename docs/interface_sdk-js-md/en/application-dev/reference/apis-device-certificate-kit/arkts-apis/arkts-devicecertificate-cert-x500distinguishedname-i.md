@@ -9,6 +9,7 @@ Provides APIs for X.500 distinguished name operations.
 ## Modules to Import
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## getEncoded
@@ -37,7 +38,7 @@ Obtains the DER-encoded data of the X.500 Distinguished Name.
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
 
@@ -127,7 +128,7 @@ Obtains the DN in the form of a string.
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
 
@@ -189,7 +190,7 @@ Obtains RDN strings based on the specified encoding format.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes:  1. The value of encodingType is not in the EncodingType enumeration range. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
 
@@ -248,7 +249,7 @@ Obtains relative distinguished name (RDN) strings of the specified type.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
 
@@ -310,7 +311,7 @@ Obtains an array of RDN strings based on the specified type and encoding format.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes:  1. The value of encodingType is invalid. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 
 **Examples**
 

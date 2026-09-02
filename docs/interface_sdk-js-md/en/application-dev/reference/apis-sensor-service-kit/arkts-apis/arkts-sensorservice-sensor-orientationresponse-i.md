@@ -11,6 +11,7 @@ Describes the orientation sensor data. It extends from [Response](arkts-sensorse
 ## Modules to Import
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## alpha

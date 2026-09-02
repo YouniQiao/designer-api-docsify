@@ -6,7 +6,7 @@ PartnerAgentExtensionContext模块是三方外设的发现和连接管理功能�
 
 - 仅可在Stage模型下使用。
 
-**继承/实现关系：** PartnerAgentExtensionContext extends ExtensionContext
+**继承/实现关系：** PartnerAgentExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 23
 

@@ -9,6 +9,7 @@ beacon围栏请求参数。transitionCallback与fenceExtensionAbilityName任选�
 ## 导入模块
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## beacon

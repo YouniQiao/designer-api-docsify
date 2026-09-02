@@ -11,6 +11,7 @@ Manager hfp source profile.
 ## Modules to Import
 
 ```TypeScript
+import { hfp } from '@kit.ConnectivityKit';
 ```
 
 ## connect

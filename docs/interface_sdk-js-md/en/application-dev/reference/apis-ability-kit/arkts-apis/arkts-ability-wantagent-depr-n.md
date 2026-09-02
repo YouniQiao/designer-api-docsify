@@ -38,8 +38,8 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 
 | Name | Description |
 | --- | --- |
-| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant) | Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent). |
-| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant) | Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent). |
+| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant) | Obtains the [Want](arkts-ability-app-ability-want-want-c.md) of an [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent). |
+| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant) | Obtains the [Want](arkts-ability-app-ability-want-want-c.md) of an [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent). |
 <!--DelEnd-->
 
 ### Interfaces

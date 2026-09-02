@@ -19,6 +19,7 @@ When the crash and freeze events are subscribed by [HiAppEvent](arkts-performanc
 ## Modules to Import
 
 ```TypeScript
+import { FaultLogExtensionAbility } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## onConnect

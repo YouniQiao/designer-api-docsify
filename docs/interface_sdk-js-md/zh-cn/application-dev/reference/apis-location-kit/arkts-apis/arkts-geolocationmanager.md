@@ -12,6 +12,7 @@
 ## 导入模块
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## 汇总

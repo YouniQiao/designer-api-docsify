@@ -4,7 +4,7 @@ FenceExtensionContext，继承自ExtensionContext，是FenceExtensionAbility的�
 
 @extends ExtensionContext
 
-**继承/实现关系：** FenceExtensionContext extends ExtensionContext
+**继承/实现关系：** FenceExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 14
 

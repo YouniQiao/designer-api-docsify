@@ -13,6 +13,7 @@ Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## enableLcdFlash

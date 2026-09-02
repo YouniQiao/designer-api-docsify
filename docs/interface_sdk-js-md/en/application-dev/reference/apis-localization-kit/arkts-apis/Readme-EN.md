@@ -1,17 +1,23 @@
 # ArkTS API<!--arkts-localizationkit-->
 
-<!--Del-->
-- [@ohos.fontManager(Font Management)](arkts-fontmanager.md)<!--DelEnd-->
+- [@ohos.fontManager(Font Management)](arkts-fontmanager.md)
   <!--Del-->
   - [dataMigration(system api)](arkts-localization-fontmanager-datamigration-f-sys.md)<!--DelEnd-->
+  - [getFontScope](arkts-localization-fontmanager-getfontscope-f.md)
   <!--Del-->
   - [installFont(system api)](arkts-localization-fontmanager-installfont-f-sys.md)<!--DelEnd-->
+  - [installScopeFont](arkts-localization-fontmanager-installscopefont-f.md)
+  - [offFontObserver](arkts-localization-fontmanager-offfontobserver-f.md)
+  - [onFontObserver](arkts-localization-fontmanager-onfontobserver-f.md)
   <!--Del-->
   - [uninstallFont(system api)](arkts-localization-fontmanager-uninstallfont-f-sys.md)<!--DelEnd-->
+  - [uninstallScopeFont](arkts-localization-fontmanager-uninstallscopefont-f.md)
   <!--Del-->
   - [DataMigrationCallback(system api)](arkts-localization-fontmanager-datamigrationcallback-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DataMigrationProgress(system api)](arkts-localization-fontmanager-datamigrationprogress-i-sys.md)<!--DelEnd-->
+  - [FontClientObserver](arkts-localization-fontmanager-fontclientobserver-i.md)
+  - [FontScope](arkts-localization-fontmanager-fontscope-e.md)
 - [@ohos.i18n](arkts-i18n.md)
   - [addPreferredLanguage](arkts-localization-i18n-addpreferredlanguage-f.md)
   - [getCalendar](arkts-localization-i18n-getcalendar-f.md)

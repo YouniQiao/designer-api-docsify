@@ -9,6 +9,7 @@ Enumerates the GWP-ASan configuration items. You can configure whether to enable
 ## Modules to Import
 
 ```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## alwaysEnabled

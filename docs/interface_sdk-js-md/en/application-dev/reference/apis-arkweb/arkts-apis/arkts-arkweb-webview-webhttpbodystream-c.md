@@ -11,6 +11,7 @@ WebHttpBodyStream works in conjunction with [WebSchemeHandlerRequest](arkts-arkw
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getPosition

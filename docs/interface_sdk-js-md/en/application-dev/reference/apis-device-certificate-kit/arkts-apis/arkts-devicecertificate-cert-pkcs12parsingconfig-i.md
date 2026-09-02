@@ -9,6 +9,7 @@ Represents the configuration for parsing P12.
 ## Modules to Import
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## needsCert

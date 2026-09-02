@@ -11,6 +11,7 @@ Indicates Wi-Fi fence information.
 ## Modules to Import
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## type

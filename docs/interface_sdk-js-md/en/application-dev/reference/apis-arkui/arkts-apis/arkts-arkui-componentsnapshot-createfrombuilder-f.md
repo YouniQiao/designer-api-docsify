@@ -27,7 +27,7 @@ Renders a custom component in the application background and outputs its snapsho
 > - Components in the builder do not support the setting of animation-related attributes, such as
 > transition.
 > 
-> - If a component is on a time-consuming task, for example, an Image or Web component
+> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) or Web component
 > that is loading online images, its loading may be still in progress when this API is called. In this case, the
 > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
@@ -145,7 +145,7 @@ Renders a custom component in the application background and outputs its snapsho
 > - Components in the builder do not support the setting of animation-related attributes, such as
 > transition.
 > 
-> - If a component is on a time-consuming task, for example, an Image or Web component
+> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) or Web component
 > that is loading online images, its loading may be still in progress when this API is called. In this case, the
 > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 

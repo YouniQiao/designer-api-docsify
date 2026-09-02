@@ -9,6 +9,7 @@ Defines a rotation gesture event.
 ## Modules to Import
 
 ```TypeScript
+import { ActionType, FourFingersSwipe, Pinch, Rotate, ThreeFingersSwipe, ThreeFingersTap, SwipeInward, TouchGestureEvent } from '@kit.InputKit';
 ```
 
 ## angle

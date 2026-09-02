@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { networkSecurity } from '@kit.NetworkKit';
 ```
 
 ## certVerificationSync

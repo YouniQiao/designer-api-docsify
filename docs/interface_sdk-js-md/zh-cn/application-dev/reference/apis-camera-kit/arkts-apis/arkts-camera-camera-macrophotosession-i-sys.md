@@ -15,6 +15,7 @@ Implements a macro photo session, which sets the parameters of the macro photo m
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('error')

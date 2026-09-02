@@ -15,6 +15,7 @@ HashSet是一种非线性容器，用于存储不重复的元素集合，支持�
 ## 导入模块
 
 ```TypeScript
+import { HashSet } from '@kit.ArkTS';
 ```
 
 ## 汇总

@@ -9,6 +9,7 @@ Defines the touch point information.
 ## Modules to Import
 
 ```TypeScript
+import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from '@kit.InputKit';
 ```
 
 ## globalX

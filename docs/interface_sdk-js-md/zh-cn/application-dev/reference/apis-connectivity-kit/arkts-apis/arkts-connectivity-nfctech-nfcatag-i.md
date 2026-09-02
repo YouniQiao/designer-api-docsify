@@ -8,7 +8,7 @@ NfcATag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-
 
 以下是NfcATag的独有接口。
 
-**继承/实现关系：** NfcATag extends TagSession
+**继承/实现关系：** NfcATag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
 
 **起始版本：** 7
 

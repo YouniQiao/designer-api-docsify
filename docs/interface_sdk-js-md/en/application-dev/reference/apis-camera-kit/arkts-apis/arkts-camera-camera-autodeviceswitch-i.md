@@ -13,6 +13,7 @@ It is recommended that the system automatically handle input device switching, s
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## enableAutoDeviceSwitch

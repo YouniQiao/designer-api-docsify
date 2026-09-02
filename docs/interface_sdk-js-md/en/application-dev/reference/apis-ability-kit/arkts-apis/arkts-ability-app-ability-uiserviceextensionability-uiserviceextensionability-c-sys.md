@@ -6,7 +6,7 @@ UIServiceExtensionAbility provides extended capabilities related to the floating
 > 
 > The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
-**Inheritance/Implementation:** UIServiceExtensionAbility extends ExtensionAbility
+**Inheritance/Implementation:** UIServiceExtensionAbility extends [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
 
 **Since:** 14
 

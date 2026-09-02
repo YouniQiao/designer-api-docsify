@@ -11,6 +11,7 @@ Target information.
 ## 导入模块
 
 ```TypeScript
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## targetType

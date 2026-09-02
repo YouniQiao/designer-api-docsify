@@ -11,6 +11,7 @@ Indicates fusion fence request params.
 ## Modules to Import
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## cellFences

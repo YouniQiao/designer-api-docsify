@@ -8,7 +8,7 @@ For details about how to obtain an **NfcBTag** object, see [NFC Tag Read/Write D
 
 The following describes the unique APIs of **NfcBTag**.
 
-**Inheritance/Implementation:** NfcBTag extends TagSession
+**Inheritance/Implementation:** NfcBTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
 
 **Since:** 7
 

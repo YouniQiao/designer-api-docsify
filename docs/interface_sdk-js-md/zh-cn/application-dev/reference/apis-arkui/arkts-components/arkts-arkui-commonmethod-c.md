@@ -3288,11 +3288,11 @@ expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): T
 > 
 &gt; - 组件延伸到避让区时，在避让区的事件如点击事件等可能会被系统拦截，优先给状态栏等系统组件响应。
 > 
-> - 滚动类容器内的组件不建议设置expandSafeArea属性，如果设置，需要按照组件嵌套关系，将当前节点到滚动类祖先容器间所有直接节点设置expandSafeArea属性，否则expandSafeArea属性在滚动后可能会失效，写法参考[示例7](#示例7滚动类容器扩展安全区)。
+> - 滚动类容器内的组件不建议设置expandSafeArea属性，如果设置，需要按照组件嵌套关系，将当前节点到滚动类祖先容器间所有直接节点设置expandSafeArea属性， 否则expandSafeArea属性在滚动后可能会失效，写法参考[示例7](#示例7滚动类容器扩展安全区)。
 > 
 > - expandSafeArea属性仅作用于当前组件，不会向父组件或子组件传递，因此使用过程中，所有相关组件均需配置。
 > 
-> - 同时设置expandSafeArea和position属性时，position属性会优先生效，expandSafeArea属性会后生效。对于未设置position、offset等绘制属性的组件，如果其边界未与避让区重叠，设置exp andSafeArea属性将不生效，如弹窗和半模态组件。
+> - 同时设置expandSafeArea和position属性时，position属性会优先生效，expandSafeArea属性会后生效。 对于未设置position、offset等绘制属性的组件，如果其边界未与避让区重叠，设置expandSafeArea属性将不生效，如弹窗和半模态组件。
 > 
 > - 对于expandSafeArea属性无法生效的场景，若要将组件部署在避让区，需要手动调整组件的坐标。
 
@@ -3308,8 +3308,8 @@ expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| types | Array&lt;[SafeAreaType](arkts-arkui-safeareatype-e.md)&gt; | 否 | 配置扩展安全区域的类型。未添加Metadata配置项时，页面不避让挖孔，CUTOUT类型不生效。默认值： [SafeAreaType.SYSTEM, SafeAreaType.CUTOUT, SafeAreaType.KEYBOARD]。非法值：按默认值处理。 |
-| edges | Array&lt;[SafeAreaEdge](arkts-arkui-safeareaedge-e.md)&gt; | 否 | 配置扩展安全区域的边缘。默认值： [SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM, SafeAreaEdge.START, SafeAreaEdge.END]。非法值：按默认值处理。扩展至所有避让区域。 |
+| types | Array&lt;[SafeAreaType](arkts-arkui-safeareatype-e.md)&gt; | 否 | 配置扩展安全区域的类型。默认值包含SafeAreaType.CUTOUT，但未添加Metadata配置项时，页面不避让挖孔，CUTOUT类型不生效。默认值：[SafeAreaType.SYSTEM, SafeAreaType.CUTOUT, SafeAreaType.KEYBOARD] 非法值：按默认值处理。 |
+| edges | Array&lt;[SafeAreaEdge](arkts-arkui-safeareaedge-e.md)&gt; | 否 | 配置扩展安全区域的边缘，默认扩展至所有避让区域。默认值：[SafeAreaEdge.TOP, SafeAreaEdge.BOTTOM, SafeAreaEdge.START, SafeAreaEdge.END]。非法值：按默认值处理。 |
 
 **返回值：**
 
@@ -4331,7 +4331,7 @@ ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafe
 > 
 > 滚动类组件的子元素忽略布局安全区边缘时在滚动方向不考虑滚动组件自身及其父组件的安全区域，包括：List、ArcListItem、Grid、WaterFlow、Swiper和Tabs。
 > 
-> 忽略布局安全区属性.ignoreLayoutSafeArea和忽略渲染安全区属性.expandSafeArea都设置时，.ignoreLayoutSafeArea先生效，.expandSafeArea在前者基础上再生效。
+> 忽略布局安全区属性.ignoreLayoutSafeArea和忽略渲染安全区属性.expandSafeArea都设置时，ignoreLayoutSafeArea先生效，expandSafeArea在前者基础上再生效。
 
 **起始版本：** 20
 

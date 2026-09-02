@@ -45,6 +45,28 @@ A constructor used to create a **TabsController** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## getBarDisplayMode
+
+```TypeScript
+getBarDisplayMode(): TabBarDisplayMode
+```
+
+Get the current display mode of the Tabs.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [TabBarDisplayMode](arkts-arkui-tabbardisplaymode-e.md) | The current display mode. |
+
 ## preloadItems
 
 ```TypeScript

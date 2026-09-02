@@ -12,7 +12,7 @@ You can create an entity encapsulation component in either of the following ways
 > 
 > - ComponentContent objects do not support JSON serialization.
 
-**Inheritance/Implementation:** ComponentContent extends Content
+**Inheritance/Implementation:** ComponentContent extends [Content](arkts-arkui-content-c.md)
 
 **Since:** 12
 

@@ -11,6 +11,7 @@ Obtains the network selection mode option.
 ## Modules to Import
 
 ```TypeScript
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## networkInformation

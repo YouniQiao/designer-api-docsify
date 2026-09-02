@@ -13,6 +13,7 @@ with an **touchUp()** call.
 ## Modules to Import
 
 ```TypeScript
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## touchDown

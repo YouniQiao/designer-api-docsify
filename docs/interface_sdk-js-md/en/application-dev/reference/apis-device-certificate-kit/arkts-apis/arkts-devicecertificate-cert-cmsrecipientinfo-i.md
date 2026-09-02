@@ -13,6 +13,7 @@ Represents recipient information for the CMS message.
 ## Modules to Import
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## keyAgreeInfo

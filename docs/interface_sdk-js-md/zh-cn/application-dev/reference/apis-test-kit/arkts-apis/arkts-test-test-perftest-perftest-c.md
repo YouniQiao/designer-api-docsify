@@ -11,6 +11,7 @@ PerfTest类为白盒性能测试框架的总入口。提供测试任务创建、
 ## 导入模块
 
 ```TypeScript
+import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from '@kit.TestKit';
 ```
 
 ## create

@@ -11,6 +11,7 @@ Defines the NIC status and usage of an application.
 ## Modules to Import
 
 ```TypeScript
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## iface

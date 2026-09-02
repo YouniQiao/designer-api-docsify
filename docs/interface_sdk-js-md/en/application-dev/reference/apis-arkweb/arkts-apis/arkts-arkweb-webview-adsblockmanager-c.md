@@ -11,6 +11,7 @@ The core mechanism of AdsBlockManager is based on a two-tier AllowedList/Disallo
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## addAdsBlockAllowedList

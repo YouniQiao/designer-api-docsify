@@ -9,6 +9,7 @@ The Buffer object is a method of handling buffers dedicated to binary data.
 ## Modules to Import
 
 ```TypeScript
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## compare

@@ -9,6 +9,7 @@ Represents the credential used for server identity verification in a session, in
 ## Modules to Import
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## password

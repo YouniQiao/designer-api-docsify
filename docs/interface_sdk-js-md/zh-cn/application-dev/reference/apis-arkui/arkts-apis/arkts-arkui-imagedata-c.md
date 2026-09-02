@@ -1,6 +1,6 @@
 # ImageData
 
-ImageData对象可以存储canvas渲染的像素数据。
+ImageData对象用于存储Canvas渲染的像素数据，支持对像素进行读取、修改和操作，适用于图像处理、像素级编辑、特效滤镜等场景。通过ImageData可以精确控制图像的每个像素点，实现自定义图像处理算法，为Canvas绘图提供灵活的像素级数据访问能力。
 
 > **说明：**
 > 
@@ -36,9 +36,9 @@ constructor(width: number, height: number, data?: Uint8ClampedArray)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | number | 是 | 矩形区域宽度，默认单位为vp。异常值NaN和Infinity按0处理。 |
-| height | number | 是 | 矩形区域高度，默认单位为vp。异常值NaN和Infinity按0处理。 |
-| data | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-uint8clampedarray-c.md) | 否 | 一维数组，保存了相应的颜色数据，数据值范围为0到255。传入异常值undefined时，data为undefined。默认值：值全为0的一维数组。 |
+| width | number | 是 | 矩形区域宽度，单位由unit参数决定，默认单位为vp。宽高不超过16384px，最大面积不超过16000px*16000px，超过最大面积则无法正常绘制。当创建面积超过536870911平方像素时，返回对象的width和height为0，data为undefined。异常值NaN、Infinity、负数和0按0处理。 |
+| height | number | 是 | 矩形区域高度，单位由unit参数决定，默认单位为vp。宽高不超过16384px，最大面积不超过16000px*16000px，超过最大面积则无法正常绘制。当创建面积超过536870911平方像素时，返回对象的width和height为0，data为undefined。异常值NaN、Infinity、负数和0按0处理。 |
+| data | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-uint8clampedarray-c.md) | 否 | 一维数组，保存了RGBA格式的像素数据，每个像素占4字节，依次为R、G、B、A，数据值范围为0到255。当需要自定义ImageData的像素数据时传入此参数，如需要对图像进行像素级别的处理或修改。传入异常值undefined时，data为undefined。默认值：值全为0的一维数组。 |
 
 **示例**
 
@@ -104,10 +104,10 @@ constructor(width: number, height: number, data?: Uint8ClampedArray, unit?: Leng
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | number | 是 | 矩形区域宽度，默认单位为vp。异常值NaN和Infinity按0处理。 |
-| height | number | 是 | 矩形区域高度，默认单位为vp。异常值NaN和Infinity按0处理。 |
-| data | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-uint8clampedarray-c.md) | 否 | 一维数组，保存了相应的颜色数据，数据值范围为0到255。传入异常值undefined时，data为undefined。默认值：值全为0的一维数组。 |
-| unit | LengthMetricsUnit | 否 | 用来配置ImageData对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
+| width | number | 是 | 矩形区域宽度，单位由unit参数决定，默认单位为vp。宽高不超过16384px，最大面积不超过16000px*16000px，超过最大面积则无法正常绘制。当创建面积超过536870911平方像素时，返回对象的width和height为0，data为undefined。异常值NaN、Infinity、负数和0按0处理。 |
+| height | number | 是 | 矩形区域高度，单位由unit参数决定，默认单位为vp。宽高不超过16384px，最大面积不超过16000px*16000px，超过最大面积则无法正常绘制。当创建面积超过536870911平方像素时，返回对象的width和height为0，data为undefined。异常值NaN、Infinity、负数和0按0处理。 |
+| data | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-uint8clampedarray-c.md) | 否 | 一维数组，保存了RGBA格式的像素数据，每个像素占4字节，依次为R、G、B、A，数据值范围为0到255。当需要自定义ImageData的像素数据时传入此参数，如需要对图像进行像素级别的处理或修改。 |
+| unit | LengthMetricsUnit | 否 | 用来配置ImageData对象的单位模式，配置后无法动态更改，配置方法同[CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)。当需要使用vp单位实现响应式布局或适配不同屏幕密度时传入此参数。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
 
 **示例**
 
@@ -119,7 +119,11 @@ constructor(width: number, height: number, data?: Uint8ClampedArray, unit?: Leng
 readonly data: Uint8ClampedArray
 ```
 
-一维数组，保存了相应的颜色数据，数据值范围为0到255。
+一维数组，保存了RGBA格式的像素数据，每个像素占4字节，依次为R、G、B、A，数据值范围为0到255。   
+> **说明：**
+> 
+> 可使用px2vp
+> 接口进行单位转换。
 
 **类型：** [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-uint8clampedarray-c.md)
 
@@ -137,7 +141,11 @@ readonly data: Uint8ClampedArray
 readonly height: number
 ```
 
-矩形区域实际像素高度。单位为px。
+矩形区域实际像素高度。单位为px。   
+> **说明：**
+> 
+> 可使用px2vp
+> 接口进行单位转换。
 
 **类型：** number
 

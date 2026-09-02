@@ -16,6 +16,8 @@ List底层通过单向链表实现，每个节点有一个指向后一个元素�
 ## 导入模块
 
 ```TypeScript
+import { List } from '@kit.ArkTS';
+import { ListComparatorFn } from '@kit.ArkTS';
 ```
 
 ## 汇总

@@ -18,6 +18,7 @@ of number-term network usage trends of the application.
 ## Modules to Import
 
 ```TypeScript
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## Summary

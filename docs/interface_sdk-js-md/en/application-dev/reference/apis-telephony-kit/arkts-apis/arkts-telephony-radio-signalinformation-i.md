@@ -9,6 +9,7 @@ Defines the signal strength.
 ## Modules to Import
 
 ```TypeScript
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## dBm

@@ -18,6 +18,7 @@ Represents the performance test strategy.
 ## Modules to Import
 
 ```TypeScript
+import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from '@kit.TestKit';
 ```
 
 ## actionCode

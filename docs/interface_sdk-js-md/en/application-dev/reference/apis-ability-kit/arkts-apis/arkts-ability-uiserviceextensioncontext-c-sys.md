@@ -8,7 +8,7 @@ UIServiceExtensionContext provides access to a [UIServiceExtensionAbility](arkts
 > 
 > - The APIs of this module must be used on the main thread, but not on child threads such as Worker and TaskPool.
 
-**Inheritance/Implementation:** UIServiceExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** UIServiceExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
 **Since:** 14
 

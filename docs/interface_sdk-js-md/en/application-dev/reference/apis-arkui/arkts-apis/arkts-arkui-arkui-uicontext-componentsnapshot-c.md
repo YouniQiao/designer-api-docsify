@@ -41,7 +41,7 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 > the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive
 > scenarios.
 > 
-> - If a component is on a time-consuming task, for example, an Image or Web component
+> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) or Web component
 > that is loading online images, its loading may be still in progress when this API is called. In this case, the
 > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
@@ -144,7 +144,7 @@ Captures a snapshot of an offscreen-rendered component created from a [CustomBui
 > the callback for off-screen snapshot capturing. Therefore, this API is not recommended for performance-sensitive
 > scenarios.
 > 
-> - If a component is on a time-consuming task, for example, an Image or Web component
+> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md) or Web component
 > that is loading online images, its loading may be still in progress when this API is called. In this case, the
 > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
@@ -365,7 +365,7 @@ struct Index {
 get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnapshot.SnapshotOptions): void
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses an asynchronous callback to return the result.
+Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API uses an asynchronous callback to return the result.
 
 > **NOTE：**
 > 
@@ -384,7 +384,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | ID of the target component.Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| id | string | Yes | [ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) of the target component.Note: Off-screen or cached components not mounted in the component tree are not supported. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If the snapshot capture is successful, **err** is **undefined**, and **data** contains the resulting [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md). Otherwise, **err** provides detailed error information. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
@@ -445,7 +445,7 @@ struct SnapshotExample {
 get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses a promise to return the result.
+Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API uses a promise to return the result.
 
 > **NOTE：**
 > 
@@ -464,7 +464,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | ID of the target component.Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| id | string | Yes | [ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) of the target component.Note: Off-screen or cached components not mounted in the component tree are not supported. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Return value:**
@@ -601,7 +601,7 @@ struct SnapshotColorModeExample {
 getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided component ID. This API synchronously returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) after completing the capture. Note that this API blocks the main thread and has a 3-second timeout. If the operation exceeds this limit, it throws an exception. Use with caution in performance-critical scenarios.
+Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md). This API synchronously returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) after completing the capture. Note that this API blocks the main thread and has a 3-second timeout. If the operation exceeds this limit, it throws an exception. Use with caution in performance-critical scenarios.
 
 > **NOTE：**
 > 
@@ -620,7 +620,7 @@ Obtains the snapshot of a component that has been loaded based on the provided c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | ID of the target component.Note: Off-screen or cached components not mounted in the component tree are not supported. |
+| id | string | Yes | [ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) of the target component.Note: Off-screen or cached components not mounted in the component tree are not supported. |
 | options | componentSnapshot.SnapshotOptions | No | Custom settings of the snapshot. |
 
 **Return value:**

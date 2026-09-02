@@ -13,6 +13,7 @@ Scope 接口用于描述字段的有效范围。
 ## 导入模块
 
 ```TypeScript
+import { util } from '@kit.ArkTS';
 ```
 
 ## clamp

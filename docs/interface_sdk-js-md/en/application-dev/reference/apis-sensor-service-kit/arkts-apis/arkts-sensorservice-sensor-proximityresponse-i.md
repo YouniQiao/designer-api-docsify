@@ -11,6 +11,7 @@ Describes the proximity sensor data. It extends from [Response](arkts-sensorserv
 ## Modules to Import
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## distance

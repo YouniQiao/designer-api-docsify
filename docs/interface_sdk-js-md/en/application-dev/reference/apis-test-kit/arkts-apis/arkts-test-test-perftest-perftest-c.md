@@ -11,6 +11,7 @@ Represents the general entry of the white-box performance test framework. It pro
 ## Modules to Import
 
 ```TypeScript
+import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from '@kit.TestKit';
 ```
 
 ## create

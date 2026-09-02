@@ -19,6 +19,7 @@ SecureSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkt
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## addSecureOutput

@@ -11,6 +11,7 @@ To subscribe to call status changes, use `observer.on('callStateChange')`.
 ## Modules to Import
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## Summary

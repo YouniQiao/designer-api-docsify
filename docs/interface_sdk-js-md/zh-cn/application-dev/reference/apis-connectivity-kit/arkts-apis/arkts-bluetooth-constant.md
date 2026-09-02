@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { constant } from '@kit.ConnectivityKit';
 ```
 
 ## 汇总

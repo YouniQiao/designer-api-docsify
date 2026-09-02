@@ -11,6 +11,7 @@ RGB white balance gain values.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## blueGain

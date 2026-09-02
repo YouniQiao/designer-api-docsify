@@ -11,6 +11,7 @@ WebSchemeHandler works in conjunction with [WebSchemeHandlerRequest](arkts-arkwe
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## onRequestStart

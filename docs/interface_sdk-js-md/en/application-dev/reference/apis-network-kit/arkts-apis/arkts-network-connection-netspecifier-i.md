@@ -9,6 +9,7 @@ Provides an instance that bears data network capabilities.
 ## Modules to Import
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## bearerPrivateIdentifier

@@ -9,6 +9,7 @@ Defines the detailed information about the HTTP request interaction.
 ## Modules to Import
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## cipherSuite

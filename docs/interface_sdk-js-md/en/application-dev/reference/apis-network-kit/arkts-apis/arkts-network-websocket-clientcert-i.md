@@ -9,6 +9,7 @@ Defines the client certificate type.
 ## Modules to Import
 
 ```TypeScript
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## certPath

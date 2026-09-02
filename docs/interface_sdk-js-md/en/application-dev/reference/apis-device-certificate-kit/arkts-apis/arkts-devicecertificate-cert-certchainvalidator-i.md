@@ -9,6 +9,7 @@ Provides APIs for certificate chain validator operations.
 ## Modules to Import
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## validate
@@ -41,7 +42,7 @@ Because the system time on the device is untrusted, the certificate chain valida
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 | [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | The certificate signature verification failed. |
 | [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
 | [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
@@ -177,7 +178,7 @@ Because the system time on the device is untrusted, the certificate chain valida
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 | [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | The certificate signature verification failed. |
 | [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
 | [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
@@ -324,7 +325,7 @@ such as certificate signature verification and certificate revocation check.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 | [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) | The certificate signature verification failed. |
 | [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
 | [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
@@ -333,16 +334,16 @@ such as certificate signature verification and certificate revocation check.
 | [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) | The key cannot be used for a digital signature. |
 | [19030009](../errorcode-cert.md#19030009-untrusted-certificate) | Untrusted certificate. |
 | [19030010](../errorcode-cert.md#19030010-certificate-revoked) | The certificate has been revoked. |
-| [19030011](../errorcode-cert.md#19030011-unsupported-key-extensions) | Unsupported critical extension. |
+| [19030011](../errorcode-cert.md#19030011-unknown-key-extensions) | Unsupported critical extension. |
 | [19030012](../errorcode-cert.md#19030012-host-name-mismatch) | Hostname mismatch in the certificate. |
 | [19030013](../errorcode-cert.md#19030013-email-address-mismatch) | Email address mismatch in the certificate. |
 | [19030014](../errorcode-cert.md#19030014-key-usage-mismatch) | Key usage mismatch in the certificate. |
-| [19030015](../errorcode-cert.md#19030015-crl-not-found) | Failed to obtain the certificate revocation list. |
+| [19030015](../errorcode-cert.md#19030015-failed-to-obtain-the-crl) | Failed to obtain the certificate revocation list. |
 | [19030016](../errorcode-cert.md#19030016-invalid-crl) | The certificate revocation list has not taken effect. |
-| [19030017](../errorcode-cert.md#19030017-crl-expired) | The certificate revocation list has expired. |
-| [19030018](../errorcode-cert.md#19030018-crl-signature-verification-failure) | Failed to verify the signature of the certificate revocation list. |
-| [19030019](../errorcode-cert.md#19030019-crl-issuer-not-found) | Failed to find the issuer of the certificate revocation list. |
-| [19030020](../errorcode-cert.md#19030020-ocsp-response-not-found) | Failed to obtain the OCSP response. |
+| [19030017](../errorcode-cert.md#19030017-crl-has-expired) | The certificate revocation list has expired. |
+| [19030018](../errorcode-cert.md#19030018-failed-to-verify-the-crl-signature) | Failed to verify the signature of the certificate revocation list. |
+| [19030019](../errorcode-cert.md#19030019-failed-to-obtain-the-crl-issuer) | Failed to find the issuer of the certificate revocation list. |
+| [19030020](../errorcode-cert.md#19030020-failed-to-obtain-the-ocsp-response) | Failed to obtain the OCSP response. |
 | [19030021](../errorcode-cert.md#19030021-invalid-ocsp-response) | Invalid OCSP response. |
 | [19030022](../errorcode-cert.md#19030022-ocsp-signature-verification-failure) | Failed to verify the OCSP signature. |
 | [19030023](../errorcode-cert.md#19030023-unknown-ocsp-certificate-status) | Unknown OCSP certificate status. |

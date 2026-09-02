@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## parsePkcs12
@@ -39,7 +40,7 @@ Parses P12.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes:  1. Mandatory parameters are left unspecified;  2. Incorrect parameter types;  3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 | [19030008](../errorcode-cert.md#19030008-incorrect-private-key-password) | Maybe wrong password. |
 
 **Examples**
@@ -254,7 +255,7 @@ Parses P12. This API uses a promise to return the result.
 | [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 | [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes:  1. Memory copy failed;  2. A null pointer occurs inside the system;  3. Failed to obtain the native object or convert parameters. |
 | [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes:  1. The length of the data is zero or too large;  2. The length of the password is too large. |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030001](../errorcode-cert.md#19030001-failed-to-invoke-the-third-party-cryptographic-api) | Crypto operation error. |
 | [19030008](../errorcode-cert.md#19030008-incorrect-private-key-password) | Maybe wrong password. |
 
 **Examples**

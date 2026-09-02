@@ -11,7 +11,7 @@
 function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 ```
 
-Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent).
+Obtains the [Want](arkts-ability-app-ability-want-want-c.md) of an [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent).
 
 **Since:** 7
 
@@ -92,7 +92,7 @@ WantAgent.getWantAgent({
 function getWant(agent: WantAgent): Promise<Want>
 ```
 
-Obtains the Want of an [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent).
+Obtains the [Want](arkts-ability-app-ability-want-want-c.md) of an [WantAgent](arkts-ability-wantagent-depr-t.md#wantagent).
 
 **Since:** 7
 

@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { pointer } from '@kit.InputKit';
 ```
 
 ## 汇总

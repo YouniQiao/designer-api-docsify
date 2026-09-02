@@ -9,6 +9,7 @@ The **inputEventClient** module provides the capability of injecting key, mouse/
 ## Modules to Import
 
 ```TypeScript
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## Summary

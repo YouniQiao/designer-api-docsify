@@ -22,11 +22,11 @@ After a notification is published, it will be displayed as a notification widget
 
 **See also:**
 
-[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) checks whether
+[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) checks whether notification is enabled for the specified application.
 
-[cancel](arkts-notification-notificationmanager-cancel-f.md) cancels a published
+[cancel](arkts-notification-notificationmanager-cancel-f.md) cancels a published notification based on the notification ID and label.
 
-[cancelAll](arkts-notification-notificationmanager-cancelall-f.md) cancels all
+[cancelAll](arkts-notification-notificationmanager-cancelall-f.md) cancels all notifications of this application.
 
 **Parameters:**
 
@@ -100,11 +100,11 @@ After a notification is published, it will be displayed as a notification card i
 
 **See also:**
 
-[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) checks whether
+[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) checks whether notification is enabled for the specified application.
 
-[cancel](arkts-notification-notificationmanager-cancel-f.md) cancels a published
+[cancel](arkts-notification-notificationmanager-cancel-f.md) cancels a published notification based on the notification ID and label.
 
-[cancelAll](arkts-notification-notificationmanager-cancelall-f.md) cancels all notifications of
+[cancelAll](arkts-notification-notificationmanager-cancelall-f.md) cancels all notifications of this application.
 
 **Parameters:**
 

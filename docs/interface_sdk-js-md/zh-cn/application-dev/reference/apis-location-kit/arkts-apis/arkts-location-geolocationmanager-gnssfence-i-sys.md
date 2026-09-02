@@ -11,6 +11,7 @@ GNSS围栏信息。
 ## 导入模块
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## circularFence

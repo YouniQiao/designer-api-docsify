@@ -9,6 +9,7 @@ Describes the TCP port state information.
 ## Modules to Import
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## tcpLocalIp

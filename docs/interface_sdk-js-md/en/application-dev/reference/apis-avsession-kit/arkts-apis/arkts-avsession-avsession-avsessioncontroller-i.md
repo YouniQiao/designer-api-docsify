@@ -906,7 +906,7 @@ if (controller !== undefined) {
 getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 ```
 
-Get the WantAgent of this session that can launch the session ability
+Get the [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) of this session that can launch the session ability
 
 **Since:** 10
 
@@ -944,7 +944,7 @@ avcontroller.getLaunchAbility((err: BusinessError, agent: object) => {
 getLaunchAbility(): Promise<WantAgent>
 ```
 
-Get the WantAgent of this session that can launch the session ability
+Get the [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md) of this session that can launch the session ability
 
 **Since:** 10
 

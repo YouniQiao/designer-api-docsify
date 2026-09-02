@@ -22,6 +22,8 @@ List is implemented based on the singly linked list. Each node has a reference p
 ## Modules to Import
 
 ```TypeScript
+import { List } from '@kit.ArkTS';
+import { ListComparatorFn } from '@kit.ArkTS';
 ```
 
 ## Summary

@@ -9,6 +9,7 @@ Describes the response for setting the rotation matrix.
 ## Modules to Import
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## inclination

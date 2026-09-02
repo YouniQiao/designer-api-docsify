@@ -17,6 +17,7 @@ Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web 
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## deleteAllData

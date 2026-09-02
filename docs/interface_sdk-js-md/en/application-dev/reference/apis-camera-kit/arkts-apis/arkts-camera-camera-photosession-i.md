@@ -17,6 +17,7 @@ It implements a photo session, which provides operations on the flash, exposure,
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## canPreconfig

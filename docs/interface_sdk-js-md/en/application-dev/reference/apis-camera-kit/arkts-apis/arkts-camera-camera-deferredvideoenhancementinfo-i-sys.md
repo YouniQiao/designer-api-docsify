@@ -11,6 +11,7 @@ Deferred video enhancement info.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## isDeferredVideoEnhancementAvailable

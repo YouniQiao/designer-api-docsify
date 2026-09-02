@@ -11,6 +11,7 @@ Obtains the network selection mode option.
 ## 导入模块
 
 ```TypeScript
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## networkInformation

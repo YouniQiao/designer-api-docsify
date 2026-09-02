@@ -8,7 +8,7 @@ For details about how to obtain a **BarcodeTag** object, see [NFC Tag Read/Write
 
 The following describes the unique APIs of **BarcodeTag**.
 
-**Inheritance/Implementation:** BarcodeTag extends TagSession
+**Inheritance/Implementation:** BarcodeTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
 
 **Since:** 18
 

@@ -9,6 +9,7 @@ White-Screen-Free Loading frame interpolation status information, which is used 
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## key

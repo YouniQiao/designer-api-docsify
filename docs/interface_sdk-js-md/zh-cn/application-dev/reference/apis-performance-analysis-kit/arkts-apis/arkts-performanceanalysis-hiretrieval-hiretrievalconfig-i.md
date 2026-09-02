@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hiRetrieval } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## deviceModel

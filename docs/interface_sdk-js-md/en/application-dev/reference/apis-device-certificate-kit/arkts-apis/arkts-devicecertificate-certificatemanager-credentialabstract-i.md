@@ -9,6 +9,7 @@ Represents brief information about a credential.
 ## Modules to Import
 
 ```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## alias

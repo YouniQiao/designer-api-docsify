@@ -11,6 +11,7 @@ WebResourceHandler is a handler used to return the result of an intercepted requ
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## didFail

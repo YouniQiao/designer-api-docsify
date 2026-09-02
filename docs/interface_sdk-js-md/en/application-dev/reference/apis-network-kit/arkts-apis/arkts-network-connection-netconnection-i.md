@@ -23,6 +23,7 @@ Represents the network connection object type.
 ## Modules to Import
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## on('netAvailable')

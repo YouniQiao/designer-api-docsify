@@ -9,6 +9,7 @@ Provides the aperture query capability.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getSupportedVirtualApertures

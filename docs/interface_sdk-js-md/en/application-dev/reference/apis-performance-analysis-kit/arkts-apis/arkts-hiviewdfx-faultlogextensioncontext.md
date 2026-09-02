@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

@@ -11,6 +11,7 @@ BackForwardList is an interface in the ArkWeb framework for accessing the browsi
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getItemAtIndex

@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## network

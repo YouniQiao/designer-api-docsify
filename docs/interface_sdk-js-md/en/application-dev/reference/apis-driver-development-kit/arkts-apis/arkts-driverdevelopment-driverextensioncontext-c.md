@@ -5,7 +5,7 @@ The **DriverExtensionContext** module provides the context of **DriverExtensionA
 > **NOTE：**
 > - The APIs of this module can be used only in the stage model.
 
-**Inheritance/Implementation:** DriverExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** DriverExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 10
 

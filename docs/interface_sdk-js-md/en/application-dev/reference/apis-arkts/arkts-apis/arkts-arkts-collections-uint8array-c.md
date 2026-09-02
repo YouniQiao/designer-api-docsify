@@ -16,6 +16,7 @@ A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-arkts-c
 ## Modules to Import
 
 ```TypeScript
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

@@ -19,6 +19,7 @@ A non-linear data structure.
 ## Modules to Import
 
 ```TypeScript
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

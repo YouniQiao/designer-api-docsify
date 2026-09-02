@@ -2,7 +2,7 @@
 
 PartnerAgentExtensionAbility提供设备发现与扩展能力销毁的通知功能，本能力继承自[ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md)，需要应用继承实现。
 
-**继承/实现关系：** PartnerAgentExtensionAbility extends ExtensionAbility
+**继承/实现关系：** PartnerAgentExtensionAbility extends [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md)
 
 **起始版本：** 23
 

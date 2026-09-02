@@ -6,6 +6,7 @@
 ## 导入模块
 
 ```TypeScript
+import { InputEvent } from '@kit.InputKit';
 ```
 
 ## 汇总

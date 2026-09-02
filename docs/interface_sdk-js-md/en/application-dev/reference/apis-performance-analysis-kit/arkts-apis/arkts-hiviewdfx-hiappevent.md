@@ -9,6 +9,7 @@ Application events are defined by application developers and can be customized u
 ## Modules to Import
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

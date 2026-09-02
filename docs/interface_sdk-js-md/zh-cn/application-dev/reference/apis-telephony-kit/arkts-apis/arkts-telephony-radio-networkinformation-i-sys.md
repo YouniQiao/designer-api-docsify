@@ -11,6 +11,7 @@ Obtains the network information.
 ## 导入模块
 
 ```TypeScript
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## operatorName

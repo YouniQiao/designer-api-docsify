@@ -9,6 +9,7 @@ NativeMediaPlayerBridge is the return value type of the [CreateNativeMediaPlayer
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## enterFullscreen

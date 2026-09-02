@@ -9,6 +9,7 @@ Represents the configuration for generating a CMS message.
 ## Modules to Import
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## contentDataFormat

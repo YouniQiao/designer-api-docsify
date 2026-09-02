@@ -13,6 +13,7 @@ Key event.
 ## Modules to Import
 
 ```TypeScript
+import { Action, Key, KeyEvent } from '@kit.InputKit';
 ```
 
 ## action

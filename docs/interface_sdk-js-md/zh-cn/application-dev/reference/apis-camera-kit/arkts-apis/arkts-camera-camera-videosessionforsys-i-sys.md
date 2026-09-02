@@ -15,4 +15,5 @@ Implements a video session for system applications, which sets the parameters of
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```

@@ -15,6 +15,7 @@ Quick shot photo session object.
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('error')

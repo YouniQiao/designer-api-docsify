@@ -11,6 +11,7 @@ It provides camera device information used in [Session](arkts-camera-camera-sess
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## close

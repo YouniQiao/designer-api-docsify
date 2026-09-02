@@ -14,6 +14,7 @@ Defines the configuration policy for the high CPU usage event.
 ## Modules to Import
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## backgroundLoadThreshold

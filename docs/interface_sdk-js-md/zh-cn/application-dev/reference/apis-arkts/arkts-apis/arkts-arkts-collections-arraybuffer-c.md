@@ -16,6 +16,7 @@ ArkTS TypedArray（[Int8Array](arkts-arkts-collections-int8array-c.md)、[Uint8A
 ## 导入模块
 
 ```TypeScript
+import { collections } from '@kit.ArkTS';
 ```
 
 ## constructor

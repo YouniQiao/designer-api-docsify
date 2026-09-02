@@ -9,6 +9,7 @@ Configuring parameters in current location requests.
 ## Modules to Import
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## maxAccuracy

@@ -15,6 +15,7 @@ When browsing web pages in Privacy Mode, data such as cookies and caches are not
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## clearAllCookies

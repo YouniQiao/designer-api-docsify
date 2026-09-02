@@ -11,6 +11,7 @@ ProxyRule provides two methods: getSchemeFilter is used to obtain the protocol f
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getSchemeFilter

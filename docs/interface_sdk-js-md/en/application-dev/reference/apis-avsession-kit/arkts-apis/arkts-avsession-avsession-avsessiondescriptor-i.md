@@ -18,7 +18,7 @@ import { avSession } from '@kit.AVSessionKit';
 elementName: ElementName
 ```
 
-The elementName of the ability that created this session. See ElementName in bundle/elementName.d.ts
+The elementName of the ability that created this session. See [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md) in bundle/elementName.d.ts
 
 **Type:** [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md)
 

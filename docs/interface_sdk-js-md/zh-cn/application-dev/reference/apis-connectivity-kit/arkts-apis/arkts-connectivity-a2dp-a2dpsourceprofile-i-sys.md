@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { a2dp } from '@kit.ConnectivityKit';
 ```
 
 ## connect

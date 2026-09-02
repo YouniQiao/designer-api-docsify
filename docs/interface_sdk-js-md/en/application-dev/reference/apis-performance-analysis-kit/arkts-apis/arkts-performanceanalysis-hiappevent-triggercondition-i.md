@@ -9,6 +9,7 @@ Defines the triggering condition parameters of the **onTrigger** callback of a [
 ## Modules to Import
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## row

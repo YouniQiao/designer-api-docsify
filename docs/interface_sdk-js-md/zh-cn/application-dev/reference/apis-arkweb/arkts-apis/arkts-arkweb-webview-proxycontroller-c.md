@@ -11,6 +11,7 @@ ProxyController提供两个核心方法：applyProxyOverride用于应用代理�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## applyProxyOverride

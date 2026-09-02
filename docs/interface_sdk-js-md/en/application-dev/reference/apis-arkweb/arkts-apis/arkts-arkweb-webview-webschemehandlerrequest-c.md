@@ -9,6 +9,7 @@ The WebSchemeHandlerRequest class defines a wrapper object for resource requests
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getFrameUrl

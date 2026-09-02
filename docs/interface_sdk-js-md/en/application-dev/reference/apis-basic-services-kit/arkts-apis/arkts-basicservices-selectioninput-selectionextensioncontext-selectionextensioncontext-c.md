@@ -10,7 +10,7 @@ When a **SelectionExtensionAbility** component is instantiated, the system autom
 > **canIUse('SystemCapability.SelectionInput.Selection')** to check whether the current device supports this
 > function.
 
-**Inheritance/Implementation:** SelectionExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** SelectionExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 24
 

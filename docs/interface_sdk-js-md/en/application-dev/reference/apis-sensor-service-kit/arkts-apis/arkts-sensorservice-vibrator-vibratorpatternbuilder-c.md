@@ -9,6 +9,7 @@ Provide methods for adding number or short vibration events and generate Vibrato
 ## Modules to Import
 
 ```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## addContinuousEvent

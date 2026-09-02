@@ -11,6 +11,7 @@ WebHttpBodyStream与[WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehand
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getPosition

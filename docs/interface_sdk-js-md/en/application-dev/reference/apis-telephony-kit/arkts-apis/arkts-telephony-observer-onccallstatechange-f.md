@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## onCCallStateChange

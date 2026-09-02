@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## getDownloadableProfiles

@@ -6,6 +6,7 @@
 ## 导入模块
 
 ```TypeScript
+import { Action as KeyAction, SourceType, ToolType, Touch, TouchEvent, FixedMode } from '@kit.InputKit';
 ```
 
 ## 汇总

@@ -9,6 +9,7 @@ Implements a **WebMessageExt** object that received and sent by the [WebMessageP
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArray

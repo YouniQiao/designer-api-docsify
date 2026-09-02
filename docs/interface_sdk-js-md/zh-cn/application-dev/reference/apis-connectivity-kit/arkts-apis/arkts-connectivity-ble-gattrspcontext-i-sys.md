@@ -11,6 +11,7 @@ client端调用[writeCharacteristicValueWithContext](arkts-connectivity-ble-gatt
 ## 导入模块
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## timestamp

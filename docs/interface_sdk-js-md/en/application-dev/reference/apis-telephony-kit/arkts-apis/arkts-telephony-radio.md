@@ -9,6 +9,7 @@ The **radio** module provides basic network search management functions. Using t
 ## Modules to Import
 
 ```TypeScript
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## Summary

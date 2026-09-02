@@ -11,6 +11,7 @@ Describes the LCD flash information.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## isLcdFlashNeeded

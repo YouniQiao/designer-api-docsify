@@ -11,6 +11,7 @@ Parameters for target searching.
 ## Modules to Import
 
 ```TypeScript
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## direction

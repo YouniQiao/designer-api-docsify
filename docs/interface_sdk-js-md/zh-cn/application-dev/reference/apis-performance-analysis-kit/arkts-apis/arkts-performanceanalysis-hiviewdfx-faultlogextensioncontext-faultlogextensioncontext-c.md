@@ -10,7 +10,7 @@ FaultLogExtensionContext模块提供访问[FaultLogExtensionAbility](arkts-perfo
 
 @extends ExtensionContext
 
-**继承/实现关系：** FaultLogExtensionContext extends ExtensionContext
+**继承/实现关系：** FaultLogExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 21
 
@@ -21,4 +21,5 @@ FaultLogExtensionContext模块提供访问[FaultLogExtensionAbility](arkts-perfo
 ## 导入模块
 
 ```TypeScript
+import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
 ```

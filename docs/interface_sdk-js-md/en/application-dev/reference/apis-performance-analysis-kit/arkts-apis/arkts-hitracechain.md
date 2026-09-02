@@ -9,6 +9,7 @@ The **hiTraceChain** module implements call chain trace throughout a service pro
 ## Modules to Import
 
 ```TypeScript
+import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

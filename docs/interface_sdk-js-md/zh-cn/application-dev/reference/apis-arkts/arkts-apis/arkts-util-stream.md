@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { stream } from '@kit.ArkTS';
 ```
 
 ## 汇总

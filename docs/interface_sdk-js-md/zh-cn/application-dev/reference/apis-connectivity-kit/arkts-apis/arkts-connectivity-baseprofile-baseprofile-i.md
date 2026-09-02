@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { baseProfile } from '@kit.ConnectivityKit';
 ```
 
 ## getConnectedDevices

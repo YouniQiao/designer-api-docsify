@@ -15,6 +15,7 @@ PlainArray可用于存储具有关联关系的key-value键值对集合，其中k
 ## 导入模块
 
 ```TypeScript
+import { PlainArray } from '@kit.ArkTS';
 ```
 
 ## 汇总

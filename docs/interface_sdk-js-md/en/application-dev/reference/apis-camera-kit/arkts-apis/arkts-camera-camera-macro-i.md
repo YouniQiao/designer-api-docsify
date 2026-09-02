@@ -13,6 +13,7 @@ It provides the API to enable macro photography.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## enableMacro

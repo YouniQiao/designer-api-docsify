@@ -9,6 +9,7 @@ CMS验签的配置。
 ## 导入模块
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## contentData

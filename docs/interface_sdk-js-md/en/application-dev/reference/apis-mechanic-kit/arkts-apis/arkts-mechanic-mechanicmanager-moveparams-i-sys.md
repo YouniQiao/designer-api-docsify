@@ -11,6 +11,7 @@ Parameters for moving the target.
 ## Modules to Import
 
 ```TypeScript
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## angle

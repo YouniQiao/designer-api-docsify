@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## abort

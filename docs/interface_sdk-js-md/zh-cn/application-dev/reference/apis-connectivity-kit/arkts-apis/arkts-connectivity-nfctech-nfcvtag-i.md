@@ -8,7 +8,7 @@ NfcVTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-
 
 以下是NfcVTag的独有接口。
 
-**继承/实现关系：** NfcVTag extends TagSession
+**继承/实现关系：** NfcVTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
 
 **起始版本：** 7
 

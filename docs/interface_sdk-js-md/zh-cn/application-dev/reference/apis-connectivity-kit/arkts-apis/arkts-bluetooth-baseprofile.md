@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { baseProfile } from '@kit.ConnectivityKit';
 ```
 
 ## 汇总

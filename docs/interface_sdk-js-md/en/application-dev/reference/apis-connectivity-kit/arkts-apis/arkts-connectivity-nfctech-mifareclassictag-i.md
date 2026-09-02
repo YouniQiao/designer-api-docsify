@@ -8,7 +8,7 @@ For details about how to obtain a **MifareClassicTag** object, see [NFC Tag Read
 
 The following describes the unique APIs of **MifareClassicTag**.
 
-**Inheritance/Implementation:** MifareClassicTag extends TagSession
+**Inheritance/Implementation:** MifareClassicTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
 
 **Since:** 9
 

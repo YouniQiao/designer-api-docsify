@@ -11,6 +11,7 @@ Represents the measurement result data corresponding to the performance metric.
 ## Modules to Import
 
 ```TypeScript
+import {PerfMetric, PerfTestStrategy, PerfMeasureResult, PerfTest} from '@kit.TestKit';
 ```
 
 ## average

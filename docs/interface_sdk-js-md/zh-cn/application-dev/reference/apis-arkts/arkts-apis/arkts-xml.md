@@ -23,6 +23,7 @@
 ## 导入模块
 
 ```TypeScript
+import { xml } from '@kit.ArkTS';
 ```
 
 ## 汇总

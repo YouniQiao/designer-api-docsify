@@ -9,6 +9,7 @@ SIM卡管理模块提供了SIM卡管理的基础能力，包括获取指定卡�
 ## 导入模块
 
 ```TypeScript
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## 汇总

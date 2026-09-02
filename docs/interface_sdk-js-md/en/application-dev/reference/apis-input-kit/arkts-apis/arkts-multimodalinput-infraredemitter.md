@@ -9,6 +9,7 @@ The **infraredEmitter** module generates IR signals of the specified frequency a
 ## Modules to Import
 
 ```TypeScript
+import { infraredEmitter } from '@kit.InputKit';
 ```
 
 ## Summary

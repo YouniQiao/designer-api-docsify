@@ -10,7 +10,7 @@ AgentExtensionContext为开发者提供访问当前[AgentExtensionAbility](arkts
 
 @extends ExtensionContext
 
-**继承/实现关系：** AgentExtensionContext extends ExtensionContext
+**继承/实现关系：** AgentExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 24
 

@@ -1376,7 +1376,7 @@ Listens for pan gesture onActionStart pre-execution events, executing the callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'beforePanStart' | Yes | Event type. The value is fixed at **'beforePanStart'**, indicating command dispatch before the execution of the pan gesture onActionStart event. The registered callback is triggered before **onActionStart** is executed. |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](arkts-arkui-gestureevent-i.md), [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md), and the target component's FrameNode information. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](arkts-arkui-gestureevent-i.md), [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
 
 ## on('beforePanEnd')
 
@@ -1399,7 +1399,7 @@ Listens for pan gesture onActionEnd pre-execution events, executing the callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'beforePanEnd' | Yes | Event type. The value is fixed at **'beforePanEnd'**, indicating command dispatch before the execution of the pan gesture onActionEnd event. The registered callback is triggered before **onActionEnd** is executed. |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](arkts-arkui-gestureevent-i.md), [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md), and the target component's FrameNode information. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](arkts-arkui-gestureevent-i.md), [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
 
 ## on('afterPanStart')
 
@@ -1422,7 +1422,7 @@ Listens for pan gesture onActionStart post-execution events, executing the callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'afterPanStart' | Yes | Event type. The value is fixed at **'afterPanStart'**, indicating command dispatch after the execution of the pan gesture onActionStart event. The registered callback is triggered after **onActionStart** is executed. |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](arkts-arkui-gestureevent-i.md), [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md), and the target component's FrameNode information. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](arkts-arkui-gestureevent-i.md), [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
 
 ## on('afterPanEnd')
 
@@ -1445,7 +1445,7 @@ Listens for pan gesture onActionEnd post-execution events, executing the callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'afterPanEnd' | Yes | Event type. The value is fixed at **'beforePanEnd'**, indicating command dispatch after the execution of the pan gesture onActionEnd event. The registered callback is triggered after **onActionEnd** is executed. |
-| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](arkts-arkui-gestureevent-i.md), [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md), and the target component's FrameNode information. |
+| callback | [PanListenerCallback](arkts-arkui-panlistenercallback-t.md) | Yes | Callback used to return the result. It provides [GestureEvent](arkts-arkui-gestureevent-i.md), [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md), and the target component's [FrameNode](arkts-arkui-framenode-c.md) information. |
 
 ## on('tabContentUpdate')
 
@@ -1590,7 +1590,7 @@ Typically, a **RENDER_OUT** notification is received when a component moves off-
 | --- | --- | --- | --- |
 | type | 'nodeRenderState' | Yes | Event type. The value is fixed at **'nodeRenderState'**, indicating rendering state changes. |
 | nodeIdentity | [NodeIdentity](arkts-arkui-nodeidentity-t.md) | Yes | Node ID. |
-| callback | [NodeRenderStateChangeCallback](arkts-arkui-noderenderstatechangecallback-t.md) | Yes | Callback used to return the result. It provides the [NodeRenderState](arkts-arkui-arkui-uicontext-noderenderstate-e.md) of the node rendering state change event and the component's FrameNode. |
+| callback | [NodeRenderStateChangeCallback](arkts-arkui-noderenderstatechangecallback-t.md) | Yes | Callback used to return the result. It provides the [NodeRenderState](arkts-arkui-arkui-uicontext-noderenderstate-e.md) of the node rendering state change event and the component's [FrameNode](arkts-arkui-framenode-c.md). |
 
 **Error codes:**
 

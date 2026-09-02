@@ -9,6 +9,7 @@ BackForwardCacheSupportedFeatures is a configuration class in the ArkWeb framewo
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## constructor

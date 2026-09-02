@@ -9,6 +9,7 @@ Parameters for checking certificate revocation status.
 ## Modules to Import
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## allowDownloadCrl

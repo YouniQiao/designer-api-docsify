@@ -11,6 +11,7 @@ WebDownloadDelegate defines four download lifecycle callbacks: [onBeforeDownload
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## onBeforeDownload

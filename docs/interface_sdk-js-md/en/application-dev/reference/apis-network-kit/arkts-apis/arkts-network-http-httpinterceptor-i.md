@@ -9,6 +9,7 @@ Defines the HTTP interceptor API, which is used to define the interception proce
 ## Modules to Import
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## interceptorHandle

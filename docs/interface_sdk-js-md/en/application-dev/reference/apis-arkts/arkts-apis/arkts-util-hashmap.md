@@ -20,6 +20,7 @@ HashMap is implemented using an array, linked lists, and red-black trees as its 
 ## Modules to Import
 
 ```TypeScript
+import { HashMap } from '@kit.ArkTS';
 ```
 
 ## Summary

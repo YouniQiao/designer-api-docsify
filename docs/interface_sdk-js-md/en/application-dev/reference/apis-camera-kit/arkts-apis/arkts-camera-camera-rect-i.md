@@ -13,6 +13,7 @@ For details about how to obtain the preview stream data, see [Dual-Channel Previ
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## height

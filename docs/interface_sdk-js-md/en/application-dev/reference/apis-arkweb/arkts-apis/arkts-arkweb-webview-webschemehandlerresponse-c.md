@@ -11,6 +11,7 @@ WebSchemeHandlerResponse is used together with WebResourceHandler: the developer
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## constructor

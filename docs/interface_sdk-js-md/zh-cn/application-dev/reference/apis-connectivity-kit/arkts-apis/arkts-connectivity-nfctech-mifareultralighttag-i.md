@@ -8,7 +8,7 @@ MifareUltralightTag获取方式请参考[nfc-tag开发指南](../../../connectiv
 
 以下是MifareUltralightTag的独有接口。
 
-**继承/实现关系：** MifareUltralightTag extends TagSession
+**继承/实现关系：** MifareUltralightTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
 
 **起始版本：** 9
 

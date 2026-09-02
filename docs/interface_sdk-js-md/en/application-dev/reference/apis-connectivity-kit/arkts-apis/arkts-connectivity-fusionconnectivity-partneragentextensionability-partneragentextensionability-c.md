@@ -4,7 +4,7 @@ Class for the PartnerAgentExtensionAbility. Applications can use this ability to
 
 @extends ExtensionAbility
 
-**Inheritance/Implementation:** PartnerAgentExtensionAbility extends ExtensionAbility
+**Inheritance/Implementation:** PartnerAgentExtensionAbility extends [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md)
 
 **Since:** 23
 

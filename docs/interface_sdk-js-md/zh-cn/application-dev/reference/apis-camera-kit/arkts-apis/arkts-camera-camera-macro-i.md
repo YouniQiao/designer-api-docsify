@@ -13,6 +13,7 @@ Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i.md)。
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## enableMacro

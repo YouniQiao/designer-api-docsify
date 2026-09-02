@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { hid } from '@kit.ConnectivityKit';
 ```
 
 ## createHidHostProfile

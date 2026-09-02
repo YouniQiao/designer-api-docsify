@@ -11,6 +11,7 @@ MMS configuration file.
 ## Modules to Import
 
 ```TypeScript
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## userAgent

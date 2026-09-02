@@ -11,6 +11,7 @@ Target information.
 ## Modules to Import
 
 ```TypeScript
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## targetType

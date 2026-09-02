@@ -15,4 +15,5 @@ Implements a video session for system applications, which sets the parameters of
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```

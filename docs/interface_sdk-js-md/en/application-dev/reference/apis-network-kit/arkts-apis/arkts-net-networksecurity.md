@@ -9,6 +9,7 @@ The **networkSecurity** module provides the network security verification capabi
 ## Modules to Import
 
 ```TypeScript
+import { networkSecurity } from '@kit.NetworkKit';
 ```
 
 ## Summary

@@ -11,6 +11,7 @@ Defines a number mark.
 ## Modules to Import
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## isCloud

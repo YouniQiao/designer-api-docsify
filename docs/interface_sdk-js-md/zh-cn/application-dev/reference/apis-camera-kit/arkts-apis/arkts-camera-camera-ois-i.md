@@ -11,6 +11,7 @@ OIS (Optical Image Stabilization) interface.
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## setOISMode

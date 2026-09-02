@@ -11,6 +11,7 @@ Describes the structure of the data required for locating.
 ## Modules to Import
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## bluetoothData

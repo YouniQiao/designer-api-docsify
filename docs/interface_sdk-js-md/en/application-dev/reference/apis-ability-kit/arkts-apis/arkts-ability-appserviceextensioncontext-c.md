@@ -8,7 +8,7 @@ AppServiceExtensionContext provides APIs to connect to and disconnect from a Ser
 > 
 > - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
-**Inheritance/Implementation:** AppServiceExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** AppServiceExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
 **Since:** 20
 

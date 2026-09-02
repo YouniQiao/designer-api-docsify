@@ -9,6 +9,7 @@ TreeSet is implemented based on TreeMap. In TreeSet, only value objects are proc
 ## Modules to Import
 
 ```TypeScript
+import { TreeSet } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

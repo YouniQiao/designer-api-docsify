@@ -13,6 +13,7 @@ ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreserv
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getColorReservation

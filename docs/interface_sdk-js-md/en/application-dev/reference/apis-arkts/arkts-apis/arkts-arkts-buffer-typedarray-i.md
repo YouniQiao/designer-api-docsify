@@ -13,4 +13,5 @@ TypedArray inherits the features and methods of Int8Array
 ## Modules to Import
 
 ```TypeScript
+import { buffer } from '@kit.ArkTS';
 ```

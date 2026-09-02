@@ -9,6 +9,7 @@ The wrapper of external log, providing various information.
 ## Modules to Import
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## getFilePath

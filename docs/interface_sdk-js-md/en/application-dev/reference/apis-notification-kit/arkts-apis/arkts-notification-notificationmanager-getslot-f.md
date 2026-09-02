@@ -22,11 +22,11 @@ This API is used to query the detailed configuration information of a created no
 
 **See also:**
 
-[addSlot](arkts-notification-notificationmanager-addslot-f.md) adds a notification
+[addSlot](arkts-notification-notificationmanager-addslot-f.md) adds a notification slot of a specified type.
 
-[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) removes a notification slot of
+[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) removes a notification slot of a specified type for this application.
 
-[removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all notification slots
+[removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all notification slots for this application.
 
 **Parameters:**
 
@@ -80,9 +80,9 @@ This API is used to query the detailed configuration information of a created no
 
 [addSlot](arkts-notification-notificationmanager-addslot-f.md) adds a notification slot of a specified type.
 
-[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) removes a notification
+[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) removes a notification slot of a specified type for this application.
 
-[removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all
+[removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all notification slots for this application.
 
 **Parameters:**
 

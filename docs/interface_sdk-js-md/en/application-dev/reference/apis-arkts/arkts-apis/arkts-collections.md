@@ -9,6 +9,7 @@ The collections module provides ArkTS containers for efficient data transfer in 
 ## Modules to Import
 
 ```TypeScript
+import { collections } from '@kit.ArkTS';
 ```
 
 ## Summary

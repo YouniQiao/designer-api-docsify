@@ -9,6 +9,7 @@ This module provides the capability of monitoring whether ArkTS objects are leak
 ## Modules to Import
 
 ```TypeScript
+import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

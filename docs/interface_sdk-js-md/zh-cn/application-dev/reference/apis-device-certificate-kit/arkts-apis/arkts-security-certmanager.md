@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## 汇总

@@ -9,6 +9,7 @@ Defines shortcut key options.
 ## Modules to Import
 
 ```TypeScript
+import { inputConsumer } from '@kit.InputKit';
 ```
 
 ## finalKey

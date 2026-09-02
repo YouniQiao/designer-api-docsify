@@ -9,6 +9,7 @@ Defines a **WebSocketServer** object. You need to use [webSocket.createWebSocket
 ## Modules to Import
 
 ```TypeScript
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## close

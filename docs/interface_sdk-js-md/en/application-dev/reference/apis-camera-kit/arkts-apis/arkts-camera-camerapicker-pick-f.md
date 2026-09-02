@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## pick

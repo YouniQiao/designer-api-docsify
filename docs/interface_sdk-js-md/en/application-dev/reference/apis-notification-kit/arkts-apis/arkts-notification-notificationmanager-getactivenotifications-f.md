@@ -22,7 +22,7 @@ This API is used to query the detailed information list of all stored notificati
 
 **See also:**
 
-[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) sets the notification
+[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) sets the notification badge number.
 
 **Parameters:**
 
@@ -71,7 +71,7 @@ This API is used to query the detailed information list of all stored notificati
 
 **See also:**
 
-[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) sets the notification
+[setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) sets the notification badge number.
 
 **Return value:**
 

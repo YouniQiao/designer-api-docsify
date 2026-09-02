@@ -11,6 +11,7 @@ connection模块提供了蓝牙设备的配对、连接、状态查询、设备�
 ## 导入模块
 
 ```TypeScript
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## 汇总

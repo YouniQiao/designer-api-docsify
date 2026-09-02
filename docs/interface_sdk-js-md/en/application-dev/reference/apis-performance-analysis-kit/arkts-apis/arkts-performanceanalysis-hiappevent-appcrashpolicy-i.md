@@ -9,6 +9,7 @@ Defines the application crash event configuration policy.
 ## Modules to Import
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## collectMinidump

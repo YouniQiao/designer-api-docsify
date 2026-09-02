@@ -8,7 +8,7 @@ AppServiceExtensionContext提供了连接、断开ServiceExtensionAbility（系�
 > 
 > - 本模块接口需要在主线程中使用，不要在Worker、TaskPool等子线程中使用。
 
-**继承/实现关系：** AppServiceExtensionContext extends ExtensionContext
+**继承/实现关系：** AppServiceExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 20
 

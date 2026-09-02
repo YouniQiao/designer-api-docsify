@@ -9,6 +9,7 @@ WhiteBalanceQuery provides APIs to check whether a white balance mode is support
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getColorTintRange

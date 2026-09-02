@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { data } from '@kit.TelephonyKit';
 ```
 
 ## queryAllApns

@@ -14,6 +14,7 @@ Deque（double-ended queue）基于循环队列的数据结构实现，支持两
 ## 导入模块
 
 ```TypeScript
+import { Deque } from '@kit.ArkTS';
 ```
 
 ## 汇总

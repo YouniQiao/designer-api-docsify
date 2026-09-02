@@ -9,6 +9,7 @@ Describes the image dimensions.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## height

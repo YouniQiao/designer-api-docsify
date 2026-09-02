@@ -132,9 +132,9 @@ animateTo(value: AnimateParam, event: () => void): void
 > - 执行aboutToDisappear
 > 时，组件即将销毁，不能在aboutToDisappear里面做动画。
 > 
-> - 在组件出现和消失时，可以通过组件内转场添加动画效果。
+> - 在组件出现和消失时，可以通过[组件内转场](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)添加动画效果。
 > 
-> - 组件内转场不支持的属性，可以参考显式动画中的
+> - 组件内转场不支持的属性，可以参考[显式动画](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)中的
 > 示例2，使用animateTo实现动画执行结束后组件消失的效
 > 果。
 > 
@@ -1249,7 +1249,7 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 节点对应的组件标识。 |
+| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
 
 **返回值：**
 
@@ -1748,7 +1748,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 节点对应的组件标识。 |
+| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
 
 **返回值：**
 
@@ -3183,7 +3183,7 @@ struct Index {
 keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>): void
 ```
 
-产生关键帧动画。该接口的使用说明请参考keyframeAnimateTo。
+产生关键帧动画。该接口的使用说明请参考[keyframeAnimateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。
 
 **起始版本：** 11
 
@@ -3710,7 +3710,7 @@ px2vp(value: number): number
 > [loadContent](arkts-arkui-window-window-i.md#loadcontent)之后调用，确保UIContext初始化完成后
 > 调用此接口，否则无法返回准确结果。
 > 
-> 2. UI实例未创建时，像素单位中的px2vp接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考
+> 2. UI实例未创建时，[像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)中的px2vp接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考
 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
 
 **起始版本：** 12
@@ -3840,7 +3840,7 @@ requireDynamicSyncScene(id: string): Array<DynamicSyncScene>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 节点对应的组件标识。 |
+| id | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
 
 **返回值：**
 
@@ -5039,7 +5039,7 @@ vp2px(value: number): number
 > [loadContent](arkts-arkui-window-window-i.md#loadcontent)之后调用，确保UIContext初始化完成后
 > 调用此接口，否则无法返回准确结果。
 > 
-> 2. UI实例未创建时，像素单位中的vp2px接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考
+> 2. UI实例未创建时，[像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)中的vp2px接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考
 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
 
 **起始版本：** 12

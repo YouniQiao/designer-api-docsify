@@ -9,6 +9,7 @@ HTTP请求上下文数据。该对象实例在拦截器的[interceptorHandle](ar
 ## 导入模块
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## body

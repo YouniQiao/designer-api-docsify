@@ -11,6 +11,7 @@ Obtains information about the eUICC chip or device.
 ## Modules to Import
 
 ```TypeScript
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## gid1

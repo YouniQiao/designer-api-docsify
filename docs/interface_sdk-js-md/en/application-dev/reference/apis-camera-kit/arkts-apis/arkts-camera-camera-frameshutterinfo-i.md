@@ -9,6 +9,7 @@ Describes the frame shutter information.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## captureId

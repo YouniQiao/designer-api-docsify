@@ -9,6 +9,7 @@ The XmlSAXParser provides the capability of parsing XML in a streaming manner.
 ## Modules to Import
 
 ```TypeScript
+import { xml } from '@kit.ArkTS';
 ```
 
 ## constructor

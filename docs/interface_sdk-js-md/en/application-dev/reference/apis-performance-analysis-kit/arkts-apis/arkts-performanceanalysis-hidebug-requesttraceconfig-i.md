@@ -9,6 +9,7 @@ Provides options of trace collection.
 ## Modules to Import
 
 ```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## bufferSizeKb

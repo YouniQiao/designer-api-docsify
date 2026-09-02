@@ -1,6 +1,6 @@
 # Divider属性/事件
 
-除支持[通用属性](arkts-arkui-commonmethod-c.md)外，还支持以下属性：
+支持[通用属性](arkts-arkui-commonmethod-c.md)。
 
 支持[通用事件](arkts-arkui-commonmethod-c.md)。
 
@@ -35,7 +35,7 @@ color(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 分割线颜色。默认值：'#33182431' 非法值：按默认值处理。 支持通过WithTheme设置通用分割线颜色。 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 分割线颜色。默认值：'#33182431'非法值：按默认值处理。支持通过WithTheme设置通用分割线颜色。 |
 
 ## lineCap
 
@@ -71,8 +71,7 @@ strokeWidth(value: number | string)
 > 
 > - 分割线的宽度不支持百分比设置。
 > 
-> - 使用水平分割线时，strokeWidth控制高度，优先级低于通用属性height；使用垂直分割线时，strokeWidth控制宽度，优
-> 先级低于通用属性width。
+> - 使用水平分割线时，strokeWidth控制高度，优先级低于通用属性height； 使用垂直分割线时，strokeWidth控制宽度，优先级低于通用属性width。
 > 
 > - 超过通用属性设置大小时，按照通用属性进行裁切。
 > 
@@ -90,7 +89,7 @@ strokeWidth(value: number | string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string | 是 | 分割线宽度。默认值：1px 非法值：按默认值处理。 单位：vp |
+| value | number \| string | 是 | 分割线宽度。默认值：1px 非法值：按默认值处理。单位：vp |
 
 ## vertical
 

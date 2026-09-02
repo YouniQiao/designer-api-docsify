@@ -36,7 +36,7 @@ createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image.PixelMap
 > 
 > - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟，不适宜使用在对性能敏感的场景。
 > 
-> - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的Image组件、Web组件。
+> - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)组件、Web组件。
 
 **起始版本：** 12
 
@@ -135,7 +135,7 @@ createFromBuilder(builder: CustomBuilder, delay?: number,
 > 
 > - 由于需要等待组件构建、渲染成功，离屏截图的回调有500ms以内的延迟，不适宜使用在对性能敏感的场景。
 > 
-> - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的Image组件、Web组件。
+> - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)组件、Web组件。
 
 **起始版本：** 12
 
@@ -354,7 +354,7 @@ struct Index {
 get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnapshot.SnapshotOptions): void
 ```
 
-获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。使用callback异步回调。
+获取已加载的组件的截图，传入组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)，找到对应组件进行截图。使用callback异步回调。
 
 > **说明：**
 > 
@@ -372,7 +372,7 @@ get(id: string, callback: AsyncCallback<image.PixelMap>, options?: componentSnap
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 目标组件的组件标识。   **说明：** 不支持未挂树组件，当传入的组件标识是离屏或缓存未挂树的节点时，系统不会对其进行截图。 |
+| id | string | 是 | 目标组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。   **说明：** 不支持未挂树组件，当传入的组件标识是离屏或缓存未挂树的节点时，系统不会对其进行截图。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 回调函数。当截图返回结果成功，err为undefined，data为获取到的image. [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)；否则为错误对象。 |
 | options | componentSnapshot.SnapshotOptions | 否 | 截图相关的自定义参数。 |
 
@@ -433,7 +433,7 @@ struct SnapshotExample {
 get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.PixelMap>
 ```
 
-获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。使用Promise异步回调。
+获取已加载的组件的截图，传入组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)，找到对应组件进行截图。使用Promise异步回调。
 
 > **说明：**
 > 
@@ -451,7 +451,7 @@ get(id: string, options?: componentSnapshot.SnapshotOptions): Promise<image.Pixe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 目标组件的组件标识。   **说明：** 不支持未挂树组件，当传入的组件标识是离屏或缓存未挂树的节点时，系统不会对其进行截图。 |
+| id | string | 是 | 目标组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。   **说明：** 不支持未挂树组件，当传入的组件标识是离屏或缓存未挂树的节点时，系统不会对其进行截图。 |
 | options | componentSnapshot.SnapshotOptions | 否 | 截图相关的自定义参数。 |
 
 **返回值：**
@@ -588,7 +588,7 @@ struct SnapshotColorModeExample {
 getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap
 ```
 
-获取已加载的组件的截图。传入组件的组件标识，找到对应组件进行截图，同步等待截图完成返回[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)。本方法会阻塞主线程，请谨慎使用。接口的最大等待时间为3s，如果3s后未返回将会抛出异常。
+获取已加载的组件的截图。传入组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)，找到对应组件进行截图，同步等待截图完成返回[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)。本方法会阻塞主线程，请谨慎使用。接口的最大等待时间为3s，如果3s后未返回将会抛出异常。
 
 > **说明：**
 > 
@@ -606,7 +606,7 @@ getSync(id: string, options?: componentSnapshot.SnapshotOptions): image.PixelMap
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 目标组件的组件标识。    **说明：** 不支持未挂树组件，当传入的组件标识是离屏或缓存未挂树的节点时，系统不会对其进行截图。 |
+| id | string | 是 | 目标组件的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。    **说明：** 不支持未挂树组件，当传入的组件标识是离屏或缓存未挂树的节点时，系统不会对其进行截图。 |
 | options | componentSnapshot.SnapshotOptions | 否 | 截图相关的自定义参数。 |
 
 **返回值：**

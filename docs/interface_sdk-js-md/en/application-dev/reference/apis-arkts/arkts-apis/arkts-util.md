@@ -9,6 +9,7 @@ The util module provides common utility functions, such as [TextEncoder](arkts-a
 ## Modules to Import
 
 ```TypeScript
+import { util } from '@kit.ArkTS';
 ```
 
 ## Summary

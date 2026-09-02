@@ -9,6 +9,7 @@ TreeSet基于[TreeMap](arkts-arkts-util-treemap-treemap-c.md)实现，在TreeSet
 ## 导入模块
 
 ```TypeScript
+import { TreeSet } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

@@ -31,6 +31,7 @@ sensor.on与sensor.once的区别：
 ## 导入模块
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## 汇总

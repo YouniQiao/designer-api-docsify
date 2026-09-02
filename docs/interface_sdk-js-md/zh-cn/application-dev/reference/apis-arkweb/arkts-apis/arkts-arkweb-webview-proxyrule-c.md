@@ -11,6 +11,7 @@ ProxyRule提供两个方法：getSchemeFilter用于获取该代理规则对应�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getSchemeFilter

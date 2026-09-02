@@ -19,6 +19,7 @@ The security TA can verify the signature of data delivered by the server, sign i
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## addSecureOutput

@@ -78,7 +78,7 @@ fileSuffixFilters?: Array<string>
 
 Suffix of the document to select.
 
-The value is a string array. Each element specifies an option, which includes at most two parts with a vertical bar (|) in between. The first part is the description, and the second part is the document suffix. If there is no "|", the option does not have the description. Each filter suffix can contain multiple suffixes, separated by a comma (,). The length of the input array cannot exceed 100 characters, for example, ['Images (.png, .jpg)|.png,.jpg', 'Documents|.txt', 'Videos|.mp4', '.pdf'].
+The value is a string array. Each element specifies an option, which includes at most two parts with a vertical bar (|) in between. The first part is the description, and the second part is the document suffix. If there is no "|", the option does not have the description. Each filter suffix can contain multiple suffixes, separated by a comma (,). The length of the input array cannot exceed 100 characters, for example, ['Images (.png,jpg)|.png,jpg', 'Documents|.txt', 'Videos|.mp4', '.pdf'].
 
 By default, no filtering is performed, that is, all documents are selected. The wildcard ['All files (*.*)|.*'] can be used on 2-in-1 devices to display all files. (Mobile phones can support this configuration since API version 17.)
 

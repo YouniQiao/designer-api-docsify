@@ -9,6 +9,7 @@ Represents the preset vibration effect. You can pass **VibratePreset** to [Vibra
 ## Modules to Import
 
 ```TypeScript
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## count

@@ -28,6 +28,7 @@ For details about the development process, see [Using HiTraceMeter (ArkTS)](../.
 ## Modules to Import
 
 ```TypeScript
+import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

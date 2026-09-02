@@ -13,6 +13,7 @@ ProfessionalPhotoSession extends Session, AutoExposure, ManualExposure, Focus, M
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('error')

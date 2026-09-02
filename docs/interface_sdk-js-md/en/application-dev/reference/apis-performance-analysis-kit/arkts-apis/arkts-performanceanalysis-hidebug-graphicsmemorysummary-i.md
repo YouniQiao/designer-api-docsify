@@ -9,6 +9,7 @@ Describes the GPU memory data of an application, including the GL and Graph part
 ## Modules to Import
 
 ```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## gl

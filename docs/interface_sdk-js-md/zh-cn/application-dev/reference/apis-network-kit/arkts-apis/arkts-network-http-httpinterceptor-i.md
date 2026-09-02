@@ -9,6 +9,7 @@ HTTP拦截器接口。用户可以实现此接口来定义拦截处理函数。
 ## 导入模块
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## interceptorHandle

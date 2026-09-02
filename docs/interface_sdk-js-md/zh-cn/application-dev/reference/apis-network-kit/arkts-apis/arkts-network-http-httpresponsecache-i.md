@@ -31,6 +31,7 @@
 ## 导入模块
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## delete

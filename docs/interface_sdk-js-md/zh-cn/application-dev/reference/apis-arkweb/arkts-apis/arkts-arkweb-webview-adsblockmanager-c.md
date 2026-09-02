@@ -11,6 +11,7 @@ AdsBlockManager的核心机制基于域名后缀匹配的AllowedList/DisallowedL
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## addAdsBlockAllowedList

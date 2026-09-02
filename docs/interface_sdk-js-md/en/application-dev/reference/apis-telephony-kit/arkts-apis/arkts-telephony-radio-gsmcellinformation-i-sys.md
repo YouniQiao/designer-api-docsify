@@ -11,6 +11,7 @@ Obtains GSM cell information.
 ## Modules to Import
 
 ```TypeScript
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## arfcn

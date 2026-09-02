@@ -9,6 +9,7 @@ The **sim** module provides basic SIM card management functions. With the APIs p
 ## Modules to Import
 
 ```TypeScript
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## Summary

@@ -9,6 +9,7 @@ Represents the configuration of the CMS signer.
 ## Modules to Import
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## addAttr

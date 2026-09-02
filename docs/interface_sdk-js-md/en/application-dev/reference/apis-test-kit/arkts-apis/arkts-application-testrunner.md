@@ -11,6 +11,7 @@ The **TestRunner** module provides a test framework. You can use the APIs of thi
 ## Modules to Import
 
 ```TypeScript
+import { TestRunner } from '@kit.TestKit';
 ```
 
 ## Summary

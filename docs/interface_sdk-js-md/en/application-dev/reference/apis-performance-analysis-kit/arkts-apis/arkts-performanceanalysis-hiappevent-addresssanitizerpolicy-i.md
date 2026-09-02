@@ -9,6 +9,7 @@ Defines the address sanitizer event configuration policy.
 ## Modules to Import
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## pageSwitchLogEnable

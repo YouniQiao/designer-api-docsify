@@ -9,6 +9,7 @@ XmlSerializer接口用于生成XML文件。该接口基于预分配的ArrayBuffe
 ## 导入模块
 
 ```TypeScript
+import { xml } from '@kit.ArkTS';
 ```
 
 ## addEmptyElement

@@ -8,7 +8,7 @@ EmbeddableUIAbilityContext是[EmbeddableUIAbility](arkts-ability-app-ability-emb
 > 
 > - 本模块接口需要在主线程中使用，不要在Worker、TaskPool等子线程中使用。
 
-**继承/实现关系：** EmbeddableUIAbilityContext extends UIAbilityContext
+**继承/实现关系：** EmbeddableUIAbilityContext extends [UIAbilityContext](arkts-ability-uiabilitycontext-c.md)
 
 **起始版本：** 12
 

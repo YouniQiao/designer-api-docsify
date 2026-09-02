@@ -9,6 +9,7 @@ Describes the sensor information.
 ## Modules to Import
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## deviceId

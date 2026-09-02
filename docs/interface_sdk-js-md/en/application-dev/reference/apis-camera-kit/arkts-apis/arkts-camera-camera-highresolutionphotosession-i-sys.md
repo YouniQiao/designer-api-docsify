@@ -17,6 +17,7 @@ HighResolutionPhotoSession extends Session, AutoExposure, Focus Implements a hig
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('error')

@@ -9,6 +9,7 @@ NativeMediaPlayerHandler is the parameter of the [CreateNativeMediaPlayerCallbac
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## handleBufferedEndTimeChanged

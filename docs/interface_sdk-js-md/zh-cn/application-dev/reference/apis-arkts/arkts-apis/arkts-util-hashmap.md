@@ -15,6 +15,7 @@ HashMap底层采用数组、链表和红黑树实现，支持高效查询、插�
 ## 导入模块
 
 ```TypeScript
+import { HashMap } from '@kit.ArkTS';
 ```
 
 ## 汇总

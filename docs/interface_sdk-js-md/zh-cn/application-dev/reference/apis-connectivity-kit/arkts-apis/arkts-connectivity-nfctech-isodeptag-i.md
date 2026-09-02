@@ -8,7 +8,7 @@ IsoDepTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nf
 
 以下是IsoDepTag的独有接口。
 
-**继承/实现关系：** IsoDepTag extends TagSession
+**继承/实现关系：** IsoDepTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
 
 **起始版本：** 9
 

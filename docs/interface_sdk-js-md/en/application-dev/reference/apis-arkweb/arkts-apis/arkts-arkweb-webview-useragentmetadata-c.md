@@ -9,6 +9,7 @@ UserAgentMetadata is a class in the ArkWeb framework used to configure the compl
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArchitecture

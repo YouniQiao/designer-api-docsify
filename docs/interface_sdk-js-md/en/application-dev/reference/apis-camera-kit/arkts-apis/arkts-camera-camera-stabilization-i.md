@@ -15,6 +15,7 @@ You can set video stabilization only when a [VideoOutput](arkts-camera-camera-vi
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getActiveVideoStabilizationMode

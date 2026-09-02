@@ -9,6 +9,7 @@ Describes the information about a single POI.
 ## Modules to Import
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## additionalInfo

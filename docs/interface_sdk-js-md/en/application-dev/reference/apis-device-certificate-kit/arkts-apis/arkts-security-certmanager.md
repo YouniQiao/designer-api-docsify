@@ -11,6 +11,7 @@ It can be used to verify the HTTPS certificate chain of the application server ,
 ## Modules to Import
 
 ```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## Summary

@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { inputMonitor } from '@kit.InputKit';
 ```
 
 ## queryTouchEvents

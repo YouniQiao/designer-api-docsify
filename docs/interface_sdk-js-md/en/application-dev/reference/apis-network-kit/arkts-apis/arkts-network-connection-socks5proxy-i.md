@@ -9,6 +9,7 @@ Socks5 Proxy Configuration Information.
 ## Modules to Import
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## dnsStrategy

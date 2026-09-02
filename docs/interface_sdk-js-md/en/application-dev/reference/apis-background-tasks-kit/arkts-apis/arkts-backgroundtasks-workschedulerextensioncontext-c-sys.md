@@ -4,7 +4,7 @@ The **WorkSchedulerExtensionContext** module, inherited from [ExtensionContext](
 
 This module provides APIs for accessing the resources of a **WorkSchedulerExtensionAbility**.
 
-**Inheritance/Implementation:** WorkSchedulerExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** WorkSchedulerExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 10
 

@@ -13,6 +13,7 @@ Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getPortraitEffect

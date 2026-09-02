@@ -188,11 +188,11 @@ barDisplayModeBreakpoint(style: Optional<TabsBreakpointType<TabBarDisplayMode>>)
 
 Sets the display mode of the tab bar for different Tabs container sizes.
 
-**Since:** 26.1.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -407,11 +407,11 @@ barStyle(style: Optional<TabBarStyle>)
 
 Sets the display style of the tab bar.
 
-**Since:** 26.1.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -643,6 +643,28 @@ Triggered when the transition animation starts. If [animationDuration](#animatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | handler | [OnTabsAnimationStartCallback](arkts-arkui-ontabsanimationstartcallback-t.md) | Yes | Callback triggered when the transition animation starts.<br>**Since:** 18 |
+
+## onBarDisplayModeChange
+
+```TypeScript
+onBarDisplayModeChange(callback: Optional<Callback<TabBarDisplayMode>>)
+```
+
+Triggered after the TabBar display mode changes.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;[TabBarDisplayMode](arkts-arkui-tabbardisplaymode-e.md)&gt;&gt; | Yes | Display mode change callback. |
 
 ## onChange
 
@@ -906,16 +928,16 @@ Sets whether the tabs are scrollable.
 ## sidebarHeader
 
 ```TypeScript
-sidebarHeader(header: ComponentContent)
+sidebarHeader(header: Optional<ComponentContent>)
 ```
 
 Sets the header content of the sidebar tab bar.
 
-**Since:** 26.1.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -923,7 +945,7 @@ Sets the header content of the sidebar tab bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| header | ComponentContent | Yes | Header content of the sidebar tab bar. |
+| header | [Optional](arkts-arkui-optional-t.md)&lt;ComponentContent&gt; | Yes | Header content of the sidebar tab bar. |
 
 ## sidebarPosition
 
@@ -933,11 +955,11 @@ sidebarPosition(position: Optional<BarPosition>)
 
 Sets the position of the sidebar tab bar. The sidebar tab bar position is not affected by the **vertical** attribute. It is always on the start or end side of the Tabs container, regardless of the **vertical** setting.
 
-**Since:** 26.1.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -955,11 +977,11 @@ sidebarSearchable(searchOptions?: TabsSidebarSearchableOptions)
 
 Sets the search options for the sidebar tab bar.
 
-**Since:** 26.1.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -968,6 +990,116 @@ Sets the search options for the sidebar tab bar.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchOptions | [TabsSidebarSearchableOptions](arkts-arkui-tabssidebarsearchableoptions-i.md) | No | Search options for the sidebar tab bar. |
+
+## sidebarSelectedBoardColor
+
+```TypeScript
+sidebarSelectedBoardColor(value: Optional<ResourceColor>)
+```
+
+Sets the selected color of the tab board in sidebar mode.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Selected color of the tab board in sidebar mode. Default value: **#19007DFF**. |
+
+## sidebarSelectedIconColor
+
+```TypeScript
+sidebarSelectedIconColor(value: Optional<ResourceColor>)
+```
+
+Sets the selected color of the tab icon in sidebar mode.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Selected color of the tab icon in sidebar mode. Default value: **#ff182431**. |
+
+## sidebarSelectedTextColor
+
+```TypeScript
+sidebarSelectedTextColor(value: Optional<ResourceColor>)
+```
+
+Sets the selected color of the tab text in sidebar mode.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Selected color of the tab text in sidebar mode. Default value: **#ff182431**. |
+
+## sidebarUnselectedIconColor
+
+```TypeScript
+sidebarUnselectedIconColor(value: Optional<ResourceColor>)
+```
+
+Sets the unselected color of the tab icon in sidebar mode.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Unselected color of the tab icon in sidebar mode. Default value: **#99182431**. |
+
+## sidebarUnselectedTextColor
+
+```TypeScript
+sidebarUnselectedTextColor(value: Optional<ResourceColor>)
+```
+
+Sets the unselected color of the tab text in sidebar mode.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes | Unselected color of the tab text in sidebar mode. Default value: **#99182431**. |
 
 ## vertical
 

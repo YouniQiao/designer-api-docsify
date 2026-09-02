@@ -13,6 +13,7 @@ Beauty extends [BeautyQuery](arkts-camera-camera-beautyquery-i-sys.md) Provides 
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getBeauty

@@ -8,7 +8,7 @@ SelectionExtensionContext是[SelectionExtensionAbility](arkts-basicservices-sele
 > 
 > - 本模块仅支持PC/2in1设备。开发者可通过canIUse('SystemCapability.SelectionInput.Selection')判断当前设备是否支持该功能。
 
-**继承/实现关系：** SelectionExtensionContext extends ExtensionContext
+**继承/实现关系：** SelectionExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 24
 

@@ -9,6 +9,7 @@ Parameters for certificate validation.
 ## Modules to Import
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## allowDownloadIntermediateCa

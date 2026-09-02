@@ -9,6 +9,7 @@ HashSet is implemented based on HashMap. In HashSet, only the value object is pr
 ## Modules to Import
 
 ```TypeScript
+import { HashSet } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

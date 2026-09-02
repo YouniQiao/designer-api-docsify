@@ -9,6 +9,7 @@ LinkedList is implemented based on the doubly linked list. Each node of the doub
 ## Modules to Import
 
 ```TypeScript
+import { LinkedList } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

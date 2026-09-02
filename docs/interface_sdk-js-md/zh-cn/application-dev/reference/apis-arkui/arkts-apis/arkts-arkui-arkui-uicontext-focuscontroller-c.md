@@ -239,7 +239,7 @@ requestFocus(key: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 节点对应的组件标识。 |
+| key | string | 是 | 节点对应的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md)。 |
 
 **错误码：**
 

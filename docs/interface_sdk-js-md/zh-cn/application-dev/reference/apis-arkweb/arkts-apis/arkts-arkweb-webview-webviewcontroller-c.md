@@ -9,6 +9,7 @@ WebviewController是Web组件各种行为的核心控制器，提供网页加载
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## accessBackward

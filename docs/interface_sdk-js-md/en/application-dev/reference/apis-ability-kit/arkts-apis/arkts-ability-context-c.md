@@ -2,7 +2,7 @@
 
 Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations. ../../../
 
-**Inheritance/Implementation:** Context extends BaseContext
+**Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md)
 
 **Since:** 9
 

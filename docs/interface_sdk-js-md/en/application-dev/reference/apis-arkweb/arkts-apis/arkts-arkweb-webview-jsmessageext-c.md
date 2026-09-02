@@ -11,6 +11,7 @@ JsMessageExt supports parsing of multiple JavaScript return value types: string 
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArray

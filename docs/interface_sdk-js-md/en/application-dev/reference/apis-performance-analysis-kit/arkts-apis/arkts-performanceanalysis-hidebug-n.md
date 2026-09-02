@@ -11,6 +11,7 @@ HiDebug provides multiple methods for debugging and profiling applications. With
 ## Modules to Import
 
 ```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

@@ -6,7 +6,7 @@ WebNativeMessagingExtensionContext是Web原生消息扩展（[WebNativeMessaging
 > 
 > 本模块接口仅可在Stage模型下使用。
 
-**继承/实现关系：** WebNativeMessagingExtensionContext extends ExtensionContext
+**继承/实现关系：** WebNativeMessagingExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 21
 
@@ -15,6 +15,7 @@ WebNativeMessagingExtensionContext是Web原生消息扩展（[WebNativeMessaging
 ## 导入模块
 
 ```TypeScript
+import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
 ```
 
 ## startAbility

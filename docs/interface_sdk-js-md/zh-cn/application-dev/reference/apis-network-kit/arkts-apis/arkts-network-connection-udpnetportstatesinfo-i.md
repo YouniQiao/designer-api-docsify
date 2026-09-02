@@ -9,6 +9,7 @@ UDP端口状态信息。
 ## 导入模块
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## udpLocalIp

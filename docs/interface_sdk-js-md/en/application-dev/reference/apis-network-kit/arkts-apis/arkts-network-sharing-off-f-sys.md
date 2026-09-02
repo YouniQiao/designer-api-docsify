@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { sharing } from '@kit.NetworkKit';
 ```
 
 ## off('sharingStateChange')

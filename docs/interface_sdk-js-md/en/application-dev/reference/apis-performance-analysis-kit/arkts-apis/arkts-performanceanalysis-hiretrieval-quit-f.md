@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { hiRetrieval } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## quit

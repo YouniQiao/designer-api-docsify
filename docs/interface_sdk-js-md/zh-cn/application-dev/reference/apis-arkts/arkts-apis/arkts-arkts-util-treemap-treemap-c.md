@@ -9,6 +9,7 @@ TreeMap可用于存储具有关联关系的key-value键值对集合，存储元�
 ## 导入模块
 
 ```TypeScript
+import { TreeMap } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

@@ -13,6 +13,7 @@ On the WebSocket server: Use the [createWebSocketServer](arkts-network-websocket
 ## Modules to Import
 
 ```TypeScript
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## Summary

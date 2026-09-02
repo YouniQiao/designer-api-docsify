@@ -9,6 +9,7 @@ ProxyConfig is a class in the ArkWeb framework used to configure network proxy r
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## bypassHostnamesWithoutPeriod

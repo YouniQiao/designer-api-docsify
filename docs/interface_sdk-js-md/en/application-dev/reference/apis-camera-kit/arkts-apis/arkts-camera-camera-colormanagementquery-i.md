@@ -9,6 +9,7 @@ ColorManagementQuery provides the APIs for color space query.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getSupportedColorSpaces

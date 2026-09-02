@@ -11,6 +11,7 @@ BLE扫描类，提供了扫描相关的操作方法。
 ## 导入模块
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## off('BLEDeviceFind')

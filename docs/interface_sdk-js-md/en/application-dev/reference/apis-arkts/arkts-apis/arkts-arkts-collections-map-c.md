@@ -20,6 +20,7 @@ The K and V types must be any of the [sendable data types](../../../arkts-utils/
 ## Modules to Import
 
 ```TypeScript
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

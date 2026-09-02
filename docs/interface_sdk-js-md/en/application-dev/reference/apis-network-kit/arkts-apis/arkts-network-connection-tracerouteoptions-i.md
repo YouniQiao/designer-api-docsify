@@ -9,6 +9,7 @@ Defines options for route tracing.
 ## Modules to Import
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## maxJumpNumber

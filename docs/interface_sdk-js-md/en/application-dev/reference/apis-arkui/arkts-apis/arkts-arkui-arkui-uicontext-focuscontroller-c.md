@@ -240,7 +240,7 @@ Transfers focus to a component node by the component ID, which is effective imme
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Component ID of the target node. |
+| key | string | Yes | [Component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md) of the target node. |
 
 **Error codes:**
 

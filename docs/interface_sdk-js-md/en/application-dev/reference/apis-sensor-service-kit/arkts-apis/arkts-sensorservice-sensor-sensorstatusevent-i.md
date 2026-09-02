@@ -9,6 +9,7 @@ Defines a device status change event.
 ## Modules to Import
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## deviceId

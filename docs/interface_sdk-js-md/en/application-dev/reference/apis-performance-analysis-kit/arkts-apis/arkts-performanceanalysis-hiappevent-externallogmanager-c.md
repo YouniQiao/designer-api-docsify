@@ -9,6 +9,7 @@ Defines an external log manager for external log management.
 ## Modules to Import
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## onCapacityReached

@@ -24,11 +24,11 @@ This is suitable for scenarios where users need to manually modify notification 
 
 **See also:**
 
-[requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md) requests notification
+[requestEnableNotification](arkts-notification-notificationmanager-requestenablenotification-f.md) requests notification to be enabled for this application.
 
-[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) checks whether notification is
+[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md) checks whether notification is enabled for the specified application.
 
-[getNotificationSetting](arkts-notification-notificationmanager-getnotificationsetting-f.md) obtains the notification settings
+[getNotificationSetting](arkts-notification-notificationmanager-getnotificationsetting-f.md) obtains the notification settings of the application, including the switch statuses for lock screen notifications, banner notifications, desktop badges, vibration, and ringtone.
 
 **Parameters:**
 

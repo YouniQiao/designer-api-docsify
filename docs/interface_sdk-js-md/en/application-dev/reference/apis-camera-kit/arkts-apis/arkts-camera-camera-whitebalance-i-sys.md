@@ -13,6 +13,7 @@ It provides APIs to process white balance, including obtaining and setting the w
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getWhiteBalanceGains

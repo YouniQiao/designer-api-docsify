@@ -9,6 +9,7 @@ Defines the data receiving progress information.
 ## Modules to Import
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## receiveSize

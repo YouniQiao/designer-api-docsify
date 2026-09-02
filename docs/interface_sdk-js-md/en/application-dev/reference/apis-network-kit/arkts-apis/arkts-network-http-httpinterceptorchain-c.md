@@ -9,6 +9,7 @@ Defines HTTP interceptor chain.
 ## Modules to Import
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## addChain

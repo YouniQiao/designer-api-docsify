@@ -28,7 +28,7 @@ Compared with notificationManager.cancel(id, label, callback), which includes th
 
 [cancelAll](arkts-notification-notificationmanager-cancelall-f.md) cancels all notifications of this application.
 
-[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) cancels notifications
+[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) cancels notifications under a notification group of this application.
 
 **Parameters:**
 
@@ -86,7 +86,7 @@ Compared with notificationManager.cancel(id, callback), which requires only the 
 
 [cancelAll](arkts-notification-notificationmanager-cancelall-f.md) cancels all notifications of this application.
 
-[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) cancels
+[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) cancels notifications under a notification group of this application.
 
 **Parameters:**
 
@@ -143,7 +143,7 @@ After cancellation, the corresponding notification will be removed from the noti
 
 [cancelAll](arkts-notification-notificationmanager-cancelall-f.md) cancels all notifications of this application.
 
-[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) cancels notifications
+[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) cancels notifications under a notification group of this application.
 
 **Parameters:**
 

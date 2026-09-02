@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## allocUninitialized

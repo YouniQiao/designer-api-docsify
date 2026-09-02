@@ -2,7 +2,7 @@
 
 Interactive widget extension class. It provides APIs for the widget provider to receive notifications about widget creation and destruction.
 
-**继承/实现关系：** LiveFormExtensionAbility extends ExtensionAbility
+**继承/实现关系：** LiveFormExtensionAbility extends [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md)
 
 **起始版本：** 20
 

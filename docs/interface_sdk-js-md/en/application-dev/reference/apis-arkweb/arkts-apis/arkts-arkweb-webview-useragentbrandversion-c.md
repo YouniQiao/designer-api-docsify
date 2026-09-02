@@ -11,6 +11,7 @@ UserAgentBrandVersion provides methods for setting and obtaining the brand name 
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getBrand

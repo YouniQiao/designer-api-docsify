@@ -13,6 +13,7 @@ TripodDetectionResult extends [SceneFeatureDetectionResult](arkts-camera-camera-
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## tripodStatus

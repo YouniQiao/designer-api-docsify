@@ -9,6 +9,7 @@ Represents the HTTP proxy configuration.
 ## Modules to Import
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## exclusionList

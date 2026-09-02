@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { hid } from '@kit.ConnectivityKit';
 ```
 
 ## createHidDeviceProfile

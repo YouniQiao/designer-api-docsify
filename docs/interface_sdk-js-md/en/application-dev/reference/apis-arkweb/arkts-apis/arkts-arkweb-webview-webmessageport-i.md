@@ -11,6 +11,7 @@ WebMessagePort is a message port interface in the Web component used for bidirec
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## close

@@ -24,7 +24,7 @@ After cancellation, all notifications of the current application will be removed
 
 [publish](arkts-notification-notificationmanager-publish-f.md) publishes a notification.
 
-[cancel](arkts-notification-notificationmanager-cancel-f.md) cancels a published notification based
+[cancel](arkts-notification-notificationmanager-cancel-f.md) cancels a published notification based on the notification ID and label.
 
 **Parameters:**
 

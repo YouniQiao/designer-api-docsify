@@ -9,6 +9,7 @@ Callback information about the device attachment state change.
 ## Modules to Import
 
 ```TypeScript
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## mechInfo

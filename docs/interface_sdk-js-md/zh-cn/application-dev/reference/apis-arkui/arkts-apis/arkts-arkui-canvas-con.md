@@ -8,10 +8,6 @@ declare const Canvas: CanvasInterface
 
 提供画布组件，用于自定义绘制图形。
 
-> **说明：**
-> 
-> 该组件从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-
 ## 子组件
 
 不支持。
@@ -31,10 +27,6 @@ declare const CanvasInstance: CanvasAttribute
 ```
 
 提供画布组件，用于自定义绘制图形。
-
-> **说明：**
-> 
-> 该组件从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
 ## 子组件
 

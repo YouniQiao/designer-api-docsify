@@ -9,6 +9,7 @@ Defines a downloadable profile.
 ## Modules to Import
 
 ```TypeScript
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## accessRules

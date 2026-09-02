@@ -11,6 +11,7 @@ GATT通信中的服务端类。
 ## 导入模块
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## addService

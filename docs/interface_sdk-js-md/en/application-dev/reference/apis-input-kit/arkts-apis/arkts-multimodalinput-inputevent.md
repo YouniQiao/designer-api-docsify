@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { InputEvent } from '@kit.InputKit';
 ```
 
 ## Summary

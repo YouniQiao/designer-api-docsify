@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## getRotationMatrix

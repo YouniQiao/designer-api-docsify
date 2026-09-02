@@ -22,7 +22,7 @@ Unsubscribes from the notification extension. This API uses a promise to return 
 
 **See also:**
 
-[subscribe](arkts-notification-notificationextensionsubscription-subscribe-f.md) subscribes to the
+[subscribe](arkts-notification-notificationextensionsubscription-subscribe-f.md) subscribes to the notification extension.
 
 **Return value:**
 

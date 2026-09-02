@@ -9,6 +9,7 @@ BLE扫描的配置参数。
 ## 导入模块
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## dutyMode

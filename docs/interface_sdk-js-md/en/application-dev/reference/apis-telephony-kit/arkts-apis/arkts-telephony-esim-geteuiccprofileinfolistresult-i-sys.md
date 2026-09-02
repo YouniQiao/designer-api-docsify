@@ -11,6 +11,7 @@ Obtains the profile information list.
 ## Modules to Import
 
 ```TypeScript
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## isRemovable

@@ -9,6 +9,7 @@ The interface of URL is used to parse, construct, normalize, and encode URLs.
 ## Modules to Import
 
 ```TypeScript
+import { url } from '@kit.ArkTS';
 ```
 
 ## constructor

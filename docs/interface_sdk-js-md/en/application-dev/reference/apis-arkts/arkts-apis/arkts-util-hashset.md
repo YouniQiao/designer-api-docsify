@@ -18,6 +18,7 @@ HashSet is implemented based on [HashMap](arkts-arkts-util-hashmap-hashmap-c.md)
 ## Modules to Import
 
 ```TypeScript
+import { HashSet } from '@kit.ArkTS';
 ```
 
 ## Summary

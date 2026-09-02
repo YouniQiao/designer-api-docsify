@@ -81,7 +81,7 @@ Unit: vp
 src: string | Resource | PixelMap
 ```
 
-Image path. The image format can be .jpg, .jpeg, .svg, .png, .bmp, .webp, .ico, or .heif. The Resource type is supported since API version 9, and the [PixelMap](../../../reference/apis-arkui/arkui-ts/ts-image-common.md#pixelmap) type is supported since API version 12.
+Image path. The image format can be .jpg,jpeg,svg,png,bmp,webp,ico, or .heif. The Resource type is supported since API version 9, and the [PixelMap](../../../reference/apis-arkui/arkui-ts/ts-image-common.md#pixelmap) type is supported since API version 12.
 
 **Type:** string \| Resource \| PixelMap
 

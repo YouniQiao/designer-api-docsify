@@ -6,7 +6,7 @@ The FormExtensionContext module, inherited from [ExtensionContext](../../apis-ab
 
 > - The APIs of this module can be used only in the stage model.
 
-**Inheritance/Implementation:** FormExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** FormExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 9
 

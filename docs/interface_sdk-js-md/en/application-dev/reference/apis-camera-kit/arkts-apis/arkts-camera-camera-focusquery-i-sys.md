@@ -14,6 +14,7 @@ FocusQuery provides APIs to check whether a focus mode is supported.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## isFocusAssistSupported

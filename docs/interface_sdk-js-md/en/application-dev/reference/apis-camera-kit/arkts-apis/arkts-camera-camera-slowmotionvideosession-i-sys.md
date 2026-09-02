@@ -13,6 +13,7 @@ SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorE
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## isSlowMotionDetectionSupported

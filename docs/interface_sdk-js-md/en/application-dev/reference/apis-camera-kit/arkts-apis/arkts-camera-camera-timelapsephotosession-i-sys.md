@@ -13,6 +13,7 @@ TimeLapsePhotoSession extends Session, Focus, ManualFocus, AutoExposure, ManualE
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getSupportedTimeLapseIntervalRange

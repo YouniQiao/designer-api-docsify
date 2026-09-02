@@ -13,6 +13,7 @@ Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getFocalLength

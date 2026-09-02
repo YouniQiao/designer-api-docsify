@@ -11,6 +11,7 @@ A stream that is both readable and writable. A duplex stream allows data to be t
 ## Modules to Import
 
 ```TypeScript
+import { stream } from '@kit.ArkTS';
 ```
 
 ## constructor

@@ -10,7 +10,7 @@ EnterpriseAdminExtensionContext是[EnterpriseAdminExtensionAbility](arkts-mdm-en
 > 
 > 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
 
-**继承/实现关系：** EnterpriseAdminExtensionContext extends ExtensionContext
+**继承/实现关系：** EnterpriseAdminExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 23
 

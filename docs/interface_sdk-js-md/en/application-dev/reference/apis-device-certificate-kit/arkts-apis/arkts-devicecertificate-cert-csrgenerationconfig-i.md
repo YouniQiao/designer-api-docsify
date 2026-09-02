@@ -21,6 +21,7 @@ Configuration parameters for generating a CSR, including the subject name, diges
 ## Modules to Import
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## attributes

@@ -22,7 +22,7 @@ Obtains the subscription information about the notification extension of this ap
 
 **See also:**
 
-[subscribe](arkts-notification-notificationextensionsubscription-subscribe-f.md) subscribes
+[subscribe](arkts-notification-notificationextensionsubscription-subscribe-f.md) subscribes from the notification extension.
 
 **Return value:**
 

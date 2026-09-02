@@ -9,6 +9,7 @@ Describes the parameters of the Ble phy.
 ## Modules to Import
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## phyMode

@@ -11,6 +11,7 @@ ProxyController provides two core methods: **applyProxyOverride** is used to app
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## applyProxyOverride

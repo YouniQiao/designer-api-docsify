@@ -6,7 +6,7 @@
 > 
 > - **NodeContent** objects do not support JSON serialization.
 
-**Inheritance/Implementation:** NodeContent extends Content
+**Inheritance/Implementation:** NodeContent extends [Content](arkts-arkui-content-c.md)
 
 **Since:** 12
 

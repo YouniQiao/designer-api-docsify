@@ -11,6 +11,7 @@ Defines a watcher for event subscription.
 ## Modules to Import
 
 ```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## onEvent

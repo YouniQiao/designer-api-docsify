@@ -13,6 +13,7 @@
 ## 导入模块
 
 ```TypeScript
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## 汇总

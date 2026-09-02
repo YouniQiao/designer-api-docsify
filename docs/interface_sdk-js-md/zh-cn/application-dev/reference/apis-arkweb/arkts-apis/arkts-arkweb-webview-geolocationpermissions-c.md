@@ -11,6 +11,7 @@ GeolocationPermissions适用于需要主动管理Web组件地理位置权限的�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## allowGeolocation

@@ -13,6 +13,7 @@ It is used to enable the camera controller.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## enableControlCenter

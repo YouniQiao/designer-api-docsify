@@ -11,6 +11,7 @@ Provides the API to obtain the color effects supported.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getSupportedColorEffects

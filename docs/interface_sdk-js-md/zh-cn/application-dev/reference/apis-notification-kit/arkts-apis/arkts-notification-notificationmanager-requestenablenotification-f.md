@@ -85,7 +85,7 @@ function requestEnableNotification(context: UIAbilityContext, callback: AsyncCal
 
 [openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md) 拉起当前应用的通知设置界面。
 
-[openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) *     拉起应用的通知设置界面。
+[openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) 拉起应用的通知设置界面。
 
 **参数：**
 
@@ -211,7 +211,7 @@ function requestEnableNotification(context: UIAbilityContext): Promise<void>
 
 [openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md) 拉起当前应用的通知设置界面。
 
-[openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) *     拉起应用的通知设置界面。
+[openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) 拉起应用的通知设置界面。
 
 **参数：**
 

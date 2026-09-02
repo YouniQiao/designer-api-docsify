@@ -13,6 +13,7 @@ It provides APIs related to zoom operations.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getZoomCenterPoint

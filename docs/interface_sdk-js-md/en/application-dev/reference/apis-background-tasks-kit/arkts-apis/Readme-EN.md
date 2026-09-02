@@ -91,11 +91,15 @@
   - [StopCode](arkts-backgroundtasks-backgroundloader-stopcode-e.md)
   - [Constants](arkts-backgroundtasks-backgroundloader-con.md)
 - [@ohos.resourceschedule.backgroundProcessManager(Background Child Process Management)](arkts-resourceschedule-backgroundprocessmanager.md)
+  <!--Del-->
+  - [clearBackgroundApps(system api)](arkts-backgroundtasks-backgroundprocessmanager-clearbackgroundapps-f-sys.md)<!--DelEnd-->
   - [getPowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-getpowersavemode-f.md)
   - [isPowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-ispowersavemode-f.md)
   - [resetProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-resetprocesspriority-f.md)
   - [setPowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-setpowersavemode-f.md)
   - [setProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-setprocesspriority-f.md)
+  <!--Del-->
+  - [ClearType(system api)](arkts-backgroundtasks-backgroundprocessmanager-cleartype-e-sys.md)<!--DelEnd-->
   - [PowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-powersavemode-e.md)
   - [ProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-processpriority-e.md)
 - [@ohos.resourceschedule.backgroundTaskManager](arkts-resourceschedule-backgroundtaskmanager.md)

@@ -13,6 +13,7 @@ AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getExposureMeteringMode

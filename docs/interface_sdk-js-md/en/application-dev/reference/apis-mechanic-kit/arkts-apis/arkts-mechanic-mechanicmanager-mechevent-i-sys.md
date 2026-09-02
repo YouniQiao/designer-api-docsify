@@ -11,6 +11,7 @@ Definition of Mechanic device event.
 ## Modules to Import
 
 ```TypeScript
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## event

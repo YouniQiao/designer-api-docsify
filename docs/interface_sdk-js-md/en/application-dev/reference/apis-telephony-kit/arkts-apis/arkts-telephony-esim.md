@@ -9,6 +9,7 @@ The **esim** module provides basic eSIM management capabilities, including check
 ## Modules to Import
 
 ```TypeScript
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## Summary

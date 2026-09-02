@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## arrayBuffer

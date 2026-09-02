@@ -11,6 +11,7 @@ WebDownloadManager与[WebDownloadDelegate](arkts-arkweb-webview-webdownloaddeleg
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## resumeDownload

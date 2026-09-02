@@ -11,6 +11,7 @@ Describes a depth data object.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## release

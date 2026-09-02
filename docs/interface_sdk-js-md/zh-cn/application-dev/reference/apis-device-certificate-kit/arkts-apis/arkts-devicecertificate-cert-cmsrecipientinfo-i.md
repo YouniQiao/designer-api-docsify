@@ -13,6 +13,7 @@ CMS封装数据的接收者信息。
 ## 导入模块
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## keyAgreeInfo

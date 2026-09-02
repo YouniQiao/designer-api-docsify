@@ -9,6 +9,7 @@ Defines a subscription data holder for processing event information.
 ## Modules to Import
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## constructor

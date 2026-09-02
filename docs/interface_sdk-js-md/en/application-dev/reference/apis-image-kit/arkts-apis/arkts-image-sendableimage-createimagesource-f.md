@@ -67,7 +67,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng SVG, and ico. |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. The following formats are supported: .jpg,png,gif,bmp,webp,dng SVG, and ico. |
 
 **Return value:**
 

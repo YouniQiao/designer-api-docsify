@@ -21,6 +21,7 @@ A linear data structure that is implemented on arrays and can be passed between 
 ## Modules to Import
 
 ```TypeScript
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

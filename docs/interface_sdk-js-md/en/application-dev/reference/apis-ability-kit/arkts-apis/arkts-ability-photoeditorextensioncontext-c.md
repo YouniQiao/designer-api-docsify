@@ -4,7 +4,7 @@ The context of Photo Editor extension. It allows access to PhotoEditorExtension-
 
 @extends ExtensionContext
 
-**Inheritance/Implementation:** PhotoEditorExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** PhotoEditorExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
 **Since:** 12
 

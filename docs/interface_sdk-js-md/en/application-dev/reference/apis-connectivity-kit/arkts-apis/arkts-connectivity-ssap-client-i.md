@@ -314,7 +314,7 @@ Initiates an MTU negotiation request. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mtu | number | Yes | MTU parameter. The default value is **251**. Unit: byte. Value range: [22, 1024],. |
+| mtu | number | Yes | MTU parameter. The default value is **251**. Unit: byte. Value range: [22, 1024], |
 
 **Return value:**
 

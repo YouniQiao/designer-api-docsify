@@ -16,6 +16,7 @@ PdfData is applicable to scenarios such as saving web page content offline and g
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## pdfArrayBuffer

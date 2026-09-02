@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## subscribe

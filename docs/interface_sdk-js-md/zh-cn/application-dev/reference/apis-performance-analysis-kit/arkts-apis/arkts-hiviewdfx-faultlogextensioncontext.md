@@ -3,6 +3,7 @@
 ## 导入模块
 
 ```TypeScript
+import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总

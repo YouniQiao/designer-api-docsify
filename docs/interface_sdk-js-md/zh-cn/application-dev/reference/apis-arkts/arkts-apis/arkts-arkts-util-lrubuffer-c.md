@@ -13,6 +13,7 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 ## 导入模块
 
 ```TypeScript
+import { util } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

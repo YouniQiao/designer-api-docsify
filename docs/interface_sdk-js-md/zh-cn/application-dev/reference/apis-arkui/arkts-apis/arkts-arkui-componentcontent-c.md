@@ -12,7 +12,7 @@ ReactiveComponentContent表示组件内容的实体封装，其对象支持在�
 > 
 > - ComponentContent对象不支持使用JSON序列化。
 
-**继承/实现关系：** ComponentContent extends Content
+**继承/实现关系：** ComponentContent extends [Content](arkts-arkui-content-c.md)
 
 **起始版本：** 12
 

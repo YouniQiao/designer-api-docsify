@@ -9,6 +9,7 @@ The **data** module provides basic mobile data management functions. With the AP
 ## Modules to Import
 
 ```TypeScript
+import { data } from '@kit.TelephonyKit';
 ```
 
 ## Summary

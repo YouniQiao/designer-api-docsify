@@ -9,6 +9,7 @@ The **http** module provides APIs for implementing HTTP data request capabilitie
 ## Modules to Import
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## Summary

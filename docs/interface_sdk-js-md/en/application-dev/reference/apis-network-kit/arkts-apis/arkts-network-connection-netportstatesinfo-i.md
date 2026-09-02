@@ -9,6 +9,7 @@ Describes the information about the TCP and UDP ports that are currently listene
 ## Modules to Import
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## tcpPortStatesInfo

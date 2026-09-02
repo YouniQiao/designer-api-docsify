@@ -9,6 +9,7 @@ TreeMap stores key-value (KV) pairs. Each key must be unique and have only one v
 ## Modules to Import
 
 ```TypeScript
+import { TreeMap } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

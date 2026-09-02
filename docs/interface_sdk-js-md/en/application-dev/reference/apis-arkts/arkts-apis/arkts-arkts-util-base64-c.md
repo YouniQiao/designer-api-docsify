@@ -13,6 +13,7 @@ Decodes a string or Uint8Array containing Base64 data into a newly allocated Uin
 ## Modules to Import
 
 ```TypeScript
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor

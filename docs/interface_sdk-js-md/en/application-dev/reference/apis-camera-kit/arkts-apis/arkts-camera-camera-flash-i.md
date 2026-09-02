@@ -13,6 +13,7 @@ It provides APIs related to the flash.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getFlashMode

@@ -9,6 +9,7 @@ Configuring parameters in reverse geocode requests.
 ## Modules to Import
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## country

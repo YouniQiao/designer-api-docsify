@@ -9,6 +9,7 @@ Provides APIs to encode strings into byte arrays. Multiple encoding formats are 
 ## Modules to Import
 
 ```TypeScript
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor

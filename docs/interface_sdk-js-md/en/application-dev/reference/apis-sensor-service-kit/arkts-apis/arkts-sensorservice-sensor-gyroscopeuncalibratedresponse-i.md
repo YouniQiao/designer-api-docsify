@@ -11,6 +11,7 @@ Describes the uncalibrated gyroscope sensor data. It extends from [Response](ark
 ## Modules to Import
 
 ```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## biasX

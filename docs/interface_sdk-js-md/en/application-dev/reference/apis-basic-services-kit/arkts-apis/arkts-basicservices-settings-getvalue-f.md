@@ -28,7 +28,7 @@ Obtains the value of a specified character string in the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the DataAbilityHelper used to access the database. |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) used to access the database. |
 | name | string | Yes | Indicates the name of the character string. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;object&gt; | Yes | The callback of getValue result. |
 
@@ -71,7 +71,7 @@ Obtains the value of a specified character string in the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the DataAbilityHelper used to access the database. |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) used to access the database. |
 | name | string | Yes | Indicates the name of the character string. |
 
 **Return value:**

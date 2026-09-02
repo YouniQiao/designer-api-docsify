@@ -17,6 +17,7 @@ VideoSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkts
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## canPreconfig

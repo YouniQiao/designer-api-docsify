@@ -18,10 +18,10 @@
 | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) | CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。 |
 | [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | DrawingRenderingContext对象与Canvas组件绑定后，可在Canvas组件上进行绘制，绘制对象可以是形状、文本、图片等。 |
 | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | ImageBitmap对象可以存储canvas渲染的像素数据。从API version 11开始，当应用创建[Worker线程](../../../arkts-utils/worker-introduction.md)，支持使用postMessage将ImageBitmap实例传到Worker中进行绘制，并使用onmessage接收Worker线程发送的绘制结果进行显示。 |
-| [ImageData](arkts-arkui-imagedata-c.md) | ImageData对象可以存储canvas渲染的像素数据。 |
+| [ImageData](arkts-arkui-imagedata-c.md) | ImageData对象用于存储Canvas渲染的像素数据，支持对像素进行读取、修改和操作，适用于图像处理、像素级编辑、特效滤镜等场景。通过ImageData可以精确控制图像的每个像素点，实现自定义图像处理算法，为Canvas绘图提供灵活的像素级数据访问能力。 |
 | [OffscreenCanvas](arkts-arkui-offscreencanvas-c.md) | OffscreenCanvas组件用于绘制自定义图形。 |
 | [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) |  |
-| [Path2D](arkts-arkui-path2d-c.md) | 路径对象，支持通过对象的接口进行路径的描述，并通过Canvas的stroke接口或者fill接口进行绘制。 |
+| [Path2D](arkts-arkui-path2d-c.md) | 路径对象，支持通过对象的接口进行路径的描述和组合，并通过Canvas的stroke接口或者fill接口进行绘制。Path2D支持复用路径、组合多个路径、基于SVG路径字符串创建路径等功能，适用于需要多次绘制相同路径、动态组合复杂图形或基于SVG路径数据绘制图形的场景。 |
 | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 用于配置CanvasRenderingContext2D对象的参数，包括是否开启抗锯齿。 |
 
 ### 接口

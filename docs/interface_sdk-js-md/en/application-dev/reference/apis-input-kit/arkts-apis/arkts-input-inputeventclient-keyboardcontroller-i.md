@@ -14,6 +14,7 @@ has not been released.
 ## Modules to Import
 
 ```TypeScript
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## pressKey

@@ -8,7 +8,7 @@ You can use the APIs of this module to start, terminate, connect, and disconnect
 > 
 > - The APIs of this module must be used on the main thread, but not in child threads such as Worker and TaskPool.
 
-**Inheritance/Implementation:** ServiceExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** ServiceExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
 **Since:** 9
 

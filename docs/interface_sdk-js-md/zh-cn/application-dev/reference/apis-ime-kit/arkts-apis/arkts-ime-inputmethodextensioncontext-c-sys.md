@@ -47,7 +47,7 @@ this.context.startAbility(targetWant);
    
 > `onDestroy`生命周期回调中调用，也可在其他时机主动调用以终止输入法ExtensionAbility。
 
-**继承/实现关系：** InputMethodExtensionContext extends ExtensionContext
+**继承/实现关系：** InputMethodExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 9
 

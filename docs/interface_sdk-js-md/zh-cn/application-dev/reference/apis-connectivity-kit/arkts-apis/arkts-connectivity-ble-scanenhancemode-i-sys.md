@@ -11,6 +11,7 @@ The enum of gatt characteristic write type
 ## 导入模块
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## enhanceMode

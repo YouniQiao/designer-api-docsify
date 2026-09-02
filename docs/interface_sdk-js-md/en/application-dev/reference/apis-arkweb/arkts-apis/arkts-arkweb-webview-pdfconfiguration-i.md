@@ -13,6 +13,7 @@ Input parameter of the [createPdf](arkts-arkweb-webview-webviewcontroller-c.md#c
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## height

@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总

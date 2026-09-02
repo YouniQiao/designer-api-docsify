@@ -4,7 +4,7 @@ The context of the agent service extension. It provides resources and methods th
 
 @extends ExtensionContext
 
-**Inheritance/Implementation:** AgentExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** AgentExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
 **Since:** 24
 

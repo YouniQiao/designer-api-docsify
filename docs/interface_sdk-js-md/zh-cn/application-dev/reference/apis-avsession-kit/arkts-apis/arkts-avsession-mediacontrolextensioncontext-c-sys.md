@@ -4,7 +4,7 @@ MediaControlExtensionContext是[MediaControlExtensionAbility](arkts-avsession-ap
 
 @extends UIExtensionContext
 
-**继承/实现关系：** MediaControlExtensionContext extends UIExtensionContext
+**继承/实现关系：** MediaControlExtensionContext extends [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)
 
 **起始版本：** 10
 

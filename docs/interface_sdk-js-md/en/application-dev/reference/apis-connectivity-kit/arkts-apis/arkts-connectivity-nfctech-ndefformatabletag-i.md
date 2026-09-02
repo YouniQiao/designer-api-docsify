@@ -8,7 +8,7 @@ For details about how to obtain an **NdefFormatableTag** object, see [NFC Tag Re
 
 The following describes the unique APIs of **NdefFormatableTag**.
 
-**Inheritance/Implementation:** NdefFormatableTag extends TagSession
+**Inheritance/Implementation:** NdefFormatableTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
 
 **Since:** 9
 

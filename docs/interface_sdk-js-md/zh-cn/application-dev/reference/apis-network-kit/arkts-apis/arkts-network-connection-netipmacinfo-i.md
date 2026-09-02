@@ -9,6 +9,7 @@ IP邻居表条目信息。
 ## 导入模块
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## iface

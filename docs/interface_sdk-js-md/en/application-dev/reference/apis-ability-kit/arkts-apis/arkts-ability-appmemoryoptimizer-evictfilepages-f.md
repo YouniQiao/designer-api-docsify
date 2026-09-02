@@ -24,7 +24,7 @@ Sends a request to the system to release file page cache of specified files. The
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fileNames | Array&lt;string&gt; | Yes | Array of file names for which file page cache needs to be released. File names must end with .so, .hap, or .hsp. |
+| fileNames | Array&lt;string&gt; | Yes | Array of file names for which file page cache needs to be released. File names must end with .so,hap, or .hsp. |
 
 **Return value:**
 
@@ -36,4 +36,4 @@ Sends a request to the system to release file page cache of specified files. The
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 16000163 | File type error. File name does not end with .so, .hap, or .hsp. |
+| 16000163 | File type error. File name does not end with .so,hap, or .hsp. |

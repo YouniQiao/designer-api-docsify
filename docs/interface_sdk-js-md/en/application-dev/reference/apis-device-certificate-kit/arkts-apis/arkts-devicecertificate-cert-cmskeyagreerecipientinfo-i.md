@@ -9,6 +9,7 @@ Represents KeyAgree recipient information for CMS enveloped data.
 ## Modules to Import
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## cert

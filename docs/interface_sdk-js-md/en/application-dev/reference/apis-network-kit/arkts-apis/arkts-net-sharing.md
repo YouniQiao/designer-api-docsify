@@ -9,6 +9,7 @@ This module allows you to share your device's network connectivity with other co
 ## Modules to Import
 
 ```TypeScript
+import { sharing } from '@kit.NetworkKit';
 ```
 
 ## Summary

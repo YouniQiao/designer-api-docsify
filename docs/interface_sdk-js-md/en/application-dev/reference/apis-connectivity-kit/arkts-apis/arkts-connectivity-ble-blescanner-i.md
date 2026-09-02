@@ -9,6 +9,7 @@ Manages the ble scanner. Before calling a ble scanner method, you must use [crea
 ## Modules to Import
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## off('BLEDeviceFind')

@@ -9,6 +9,7 @@ GATT服务结构定义，可包含多个特征值[BLECharacteristic](arkts-conne
 ## 导入模块
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## characteristics

@@ -9,6 +9,7 @@ Defines the type of multi-form data.
 ## Modules to Import
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## contentType

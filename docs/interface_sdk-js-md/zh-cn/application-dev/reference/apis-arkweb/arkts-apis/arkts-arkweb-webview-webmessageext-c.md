@@ -11,6 +11,7 @@ WebMessageExt与WebMessagePort配合使用：WebMessagePort负责消息通道的
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArray

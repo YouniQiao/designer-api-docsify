@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { hichecker } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## contains

@@ -9,6 +9,7 @@ HiChecker可以作为应用开发阶段使用的检测工具，用于检测代�
 ## 导入模块
 
 ```TypeScript
+import { hichecker } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## 汇总

@@ -13,6 +13,7 @@ Implements imaging mode.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getImagingMode

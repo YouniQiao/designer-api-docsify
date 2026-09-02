@@ -13,6 +13,7 @@ Aperture video session object.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('error')

@@ -11,6 +11,7 @@ Obtains WCDMA cell information.
 ## Modules to Import
 
 ```TypeScript
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## cellId

@@ -10,7 +10,7 @@ AgentExtensionAbility继承自[ExtensionAbility](arkts-ability-app-ability-exten
 
 @extends ExtensionAbility
 
-**继承/实现关系：** AgentExtensionAbility extends ExtensionAbility
+**继承/实现关系：** AgentExtensionAbility extends [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
 
 **起始版本：** 24
 

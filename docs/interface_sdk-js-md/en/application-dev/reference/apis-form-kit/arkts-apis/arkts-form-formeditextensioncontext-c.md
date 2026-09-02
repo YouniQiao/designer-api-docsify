@@ -6,7 +6,7 @@
 
 > - The APIs of this module can be used only in the stage model.
 
-**Inheritance/Implementation:** FormEditExtensionContext extends UIExtensionContext
+**Inheritance/Implementation:** FormEditExtensionContext extends [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md)
 
 **Since:** 18
 

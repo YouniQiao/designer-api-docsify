@@ -39,6 +39,6 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [IsolatedComponent](arkts-arkui-isolatedcomponent-con-sys.md) | IsolatedComponent用于支持在本页面内嵌入显示独立Abc（方舟字节码，.abc文件）提供的UI，展示的内容在受限Worker线程中运行。 |
+| [IsolatedComponent](arkts-arkui-isolatedcomponent-con-sys.md) | IsolatedComponent用于支持在本页面内嵌入显示独立Abc（方舟字节码，abc文件）提供的UI，展示的内容在受限Worker线程中运行。 |
 | [IsolatedComponentInstance](arkts-arkui-isolatedcomponent-con-sys.md#isolatedcomponentinstance) | 定义IsolatedComponent组件实例。 |
 <!--DelEnd-->

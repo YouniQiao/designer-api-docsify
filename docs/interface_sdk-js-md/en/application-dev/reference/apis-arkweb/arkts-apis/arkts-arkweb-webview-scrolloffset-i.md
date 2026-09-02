@@ -9,6 +9,7 @@ Represents the current scrolling offset of a web page.
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## x

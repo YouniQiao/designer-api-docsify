@@ -13,6 +13,7 @@ It provides APIs related to focus operations.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getFocalLength

@@ -11,6 +11,7 @@ Before invoking **NetHandle** APIs, call **getNetHandle** to obtain a **NetHandl
 ## Modules to Import
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## bindSocket

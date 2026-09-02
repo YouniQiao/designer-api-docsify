@@ -20,6 +20,7 @@ K和V类型都需为[Sendable支持的数据类型](../../../arkts-utils/arkts-s
 ## 导入模块
 
 ```TypeScript
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

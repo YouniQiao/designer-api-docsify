@@ -11,6 +11,7 @@ Wakes up the listener for network sharing state changes of an NIC.
 ## Modules to Import
 
 ```TypeScript
+import { sharing } from '@kit.NetworkKit';
 ```
 
 ## iface

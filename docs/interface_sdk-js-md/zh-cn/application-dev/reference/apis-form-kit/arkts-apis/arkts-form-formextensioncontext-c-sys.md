@@ -4,7 +4,7 @@ FormExtensionContext模块是[FormExtensionAbility](arkts-form-app-form-formexte
 
 FormExtensionContext模块提供FormExtensionAbility具有的接口和能力。
 
-**继承/实现关系：** FormExtensionContext extends ExtensionContext
+**继承/实现关系：** FormExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 9
 

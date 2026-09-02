@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## getSockfdRxBytes

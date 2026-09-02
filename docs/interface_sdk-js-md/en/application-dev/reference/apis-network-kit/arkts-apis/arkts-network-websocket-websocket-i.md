@@ -9,6 +9,7 @@ Defines a **WebSocket** object. Before invoking WebSocket APIs, you need to call
 ## Modules to Import
 
 ```TypeScript
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## close

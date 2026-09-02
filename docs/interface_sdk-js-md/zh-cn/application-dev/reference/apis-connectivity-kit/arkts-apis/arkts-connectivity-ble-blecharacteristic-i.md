@@ -9,6 +9,7 @@ GATT特征值结构定义，是服务[GattService](arkts-connectivity-ble-gattse
 ## 导入模块
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid

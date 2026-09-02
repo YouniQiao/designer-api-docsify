@@ -22,6 +22,7 @@ Double-Ended Queue (Deque) is a data structure implemented based on a circular q
 ## Modules to Import
 
 ```TypeScript
+import { Deque } from '@kit.ArkTS';
 ```
 
 ## Summary

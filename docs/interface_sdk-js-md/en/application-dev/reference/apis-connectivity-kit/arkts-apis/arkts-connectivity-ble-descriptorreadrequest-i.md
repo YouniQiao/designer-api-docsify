@@ -9,6 +9,7 @@ Describes the parameters of the Gatt client's descriptor read request.
 ## Modules to Import
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid

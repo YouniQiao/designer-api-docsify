@@ -17,7 +17,7 @@ class EntryAbility extends AccessibilityExtensionAbility {
 }
 ```
 
-**继承/实现关系：** AccessibilityExtensionContext extends ExtensionContext
+**继承/实现关系：** AccessibilityExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 9
 

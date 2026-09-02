@@ -11,6 +11,7 @@ Defines the key event to inject.
 ## Modules to Import
 
 ```TypeScript
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## isIntercepted

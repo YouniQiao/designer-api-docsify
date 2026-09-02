@@ -9,6 +9,7 @@ Represents brief information about a certificate.
 ## Modules to Import
 
 ```TypeScript
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## certAlias

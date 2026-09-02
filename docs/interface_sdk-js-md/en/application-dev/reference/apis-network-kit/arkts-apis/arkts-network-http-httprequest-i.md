@@ -9,6 +9,7 @@ Defines an HTTP request task. Before invoking APIs provided by **HttpRequest**, 
 ## Modules to Import
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## destroy

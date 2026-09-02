@@ -16,6 +16,7 @@ Queue follows the principle of First In First Out (FIFO). It supports insertion 
 ## Modules to Import
 
 ```TypeScript
+import { Queue } from '@kit.ArkTS';
 ```
 
 ## Summary

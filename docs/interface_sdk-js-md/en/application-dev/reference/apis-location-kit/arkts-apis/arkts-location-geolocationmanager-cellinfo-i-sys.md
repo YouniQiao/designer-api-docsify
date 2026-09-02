@@ -11,6 +11,7 @@ Cell information.
 ## Modules to Import
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## additionsMap

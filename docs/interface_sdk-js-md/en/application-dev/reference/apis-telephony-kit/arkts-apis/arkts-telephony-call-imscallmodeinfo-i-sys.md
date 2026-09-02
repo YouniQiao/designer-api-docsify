@@ -11,6 +11,7 @@ Defines the video call mode information.
 ## Modules to Import
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## callId

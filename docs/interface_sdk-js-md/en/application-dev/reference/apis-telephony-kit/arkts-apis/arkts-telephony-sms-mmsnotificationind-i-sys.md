@@ -11,6 +11,7 @@ Defines an MMS notification index.
 ## Modules to Import
 
 ```TypeScript
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## contentClass

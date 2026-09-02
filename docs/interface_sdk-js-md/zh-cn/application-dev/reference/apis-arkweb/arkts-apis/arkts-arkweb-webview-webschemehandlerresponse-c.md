@@ -11,6 +11,7 @@ WebSchemeHandlerResponse与WebResourceHandler配合使用：开发者构造WebSc
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## constructor

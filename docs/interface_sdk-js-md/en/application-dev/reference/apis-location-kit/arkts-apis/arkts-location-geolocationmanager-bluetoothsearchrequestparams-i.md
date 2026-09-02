@@ -9,6 +9,7 @@ Indicates request parameters for Bluetooth search function.
 ## Modules to Import
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## deviceIdArray

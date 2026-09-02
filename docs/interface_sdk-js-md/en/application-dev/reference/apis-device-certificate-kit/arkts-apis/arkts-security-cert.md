@@ -9,6 +9,7 @@ The certificate algorithm library framework provides certificate-related APIs. T
 ## Modules to Import
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## Summary

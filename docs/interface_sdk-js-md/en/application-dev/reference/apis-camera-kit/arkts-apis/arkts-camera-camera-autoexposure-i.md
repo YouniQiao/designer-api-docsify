@@ -13,6 +13,7 @@ It provides APIs related to auto exposure.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getExposureMeteringMode

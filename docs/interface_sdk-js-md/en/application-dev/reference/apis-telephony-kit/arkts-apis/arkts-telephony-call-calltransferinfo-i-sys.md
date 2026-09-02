@@ -11,6 +11,7 @@ Defines the call transfer information.
 ## Modules to Import
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## endHour

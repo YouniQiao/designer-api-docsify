@@ -9,6 +9,7 @@ Process data as blob type
 ## Modules to Import
 
 ```TypeScript
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## arrayBuffer

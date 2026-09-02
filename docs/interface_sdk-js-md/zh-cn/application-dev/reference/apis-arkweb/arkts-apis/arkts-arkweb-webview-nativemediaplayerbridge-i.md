@@ -9,6 +9,7 @@ NativeMediaPlayerBridge 是[CreateNativeMediaPlayerCallback](arkts-arkweb-webvie
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## enterFullscreen

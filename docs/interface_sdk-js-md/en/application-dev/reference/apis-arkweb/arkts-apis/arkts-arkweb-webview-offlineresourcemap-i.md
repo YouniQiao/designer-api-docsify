@@ -9,6 +9,7 @@ Implements an **OfflineResourceMap** object, which is used to set information re
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## resource

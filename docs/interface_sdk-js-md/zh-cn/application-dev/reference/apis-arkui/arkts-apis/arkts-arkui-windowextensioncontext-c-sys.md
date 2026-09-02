@@ -12,7 +12,7 @@ WindowExtensionContext模块提供[WindowExtensionAbility](arkts-arkui-applicati
 > 
 > - 本模块接口仅可在Stage模型下使用。
 
-**继承/实现关系：** WindowExtensionContext extends ExtensionContext
+**继承/实现关系：** WindowExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 9
 

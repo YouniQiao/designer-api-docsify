@@ -11,6 +11,7 @@
 ## 导入模块
 
 ```TypeScript
+import { inputMonitor } from '@kit.InputKit';
 ```
 
 ## 汇总

@@ -9,6 +9,7 @@ Satellite status information.
 ## Modules to Import
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## altitudes

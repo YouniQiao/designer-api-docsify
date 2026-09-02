@@ -11,6 +11,7 @@ Manager a2dp source profile.
 ## Modules to Import
 
 ```TypeScript
+import { a2dp } from '@kit.ConnectivityKit';
 ```
 
 ## getPlayingState

@@ -9,6 +9,7 @@ PrefetchOptions is a configuration class in the ArkWeb framework for customizing
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## constructor

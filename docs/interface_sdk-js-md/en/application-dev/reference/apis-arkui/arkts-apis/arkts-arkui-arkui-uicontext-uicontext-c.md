@@ -162,7 +162,7 @@ Adds transition animations for state changes in closure code.
 > the component is being destroyed, so animations should not be used.
 > 
 > - When a component appears or disappears, animation effects can be added through
-> component transition.
+> [component transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).
 > 
 > - For properties that component transitions do not support, refer to
 > [Example 2: Enabling Component Disappearance After Animation Completion](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#example-2-enabling-component-disappearance-after-animation-completion),
@@ -3214,7 +3214,7 @@ struct Index {
 keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>): void
 ```
 
-Generates a key frame animation. For details about how to use this API, see keyframeAnimateTo.
+Generates a key frame animation. For details about how to use this API, see [keyframeAnimateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md).
 
 **Since:** 11
 

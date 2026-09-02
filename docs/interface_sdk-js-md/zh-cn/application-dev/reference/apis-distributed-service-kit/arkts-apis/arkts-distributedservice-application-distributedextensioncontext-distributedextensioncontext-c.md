@@ -2,7 +2,7 @@
 
 用于分布式扩展功能的实现。
 
-**继承/实现关系：** DistributedExtensionContext extends ExtensionContext
+**继承/实现关系：** DistributedExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **起始版本：** 20
 

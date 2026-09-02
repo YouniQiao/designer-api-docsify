@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { inputConsumer } from '@kit.InputKit';
 ```
 
 ## off('hotkeyChange')

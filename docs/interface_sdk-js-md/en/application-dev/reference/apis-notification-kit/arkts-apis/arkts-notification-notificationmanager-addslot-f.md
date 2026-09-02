@@ -22,11 +22,11 @@ The notification slot NotificationSlot defines the reminder type (such as alert 
 
 **See also:**
 
-[getSlot](arkts-notification-notificationmanager-getslot-f.md) obtains a
+[getSlot](arkts-notification-notificationmanager-getslot-f.md) obtains a notification slot of a specified type.
 
-[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) removes a
+[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) removes a notification slot of a specified type for this application.
 
-[removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all
+[removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all notification slots for this application.
 
 **Parameters:**
 
@@ -78,11 +78,11 @@ The notification slot NotificationSlot defines the reminder type (such as alert 
 
 **See also:**
 
-[getSlot](arkts-notification-notificationmanager-getslot-f.md) obtains a notification
+[getSlot](arkts-notification-notificationmanager-getslot-f.md) obtains a notification slot of a specified type.
 
-[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) removes a notification
+[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) removes a notification slot of a specified type for this application.
 
-[removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all notificationslots
+[removeAllSlots](arkts-notification-notificationmanager-removeallslots-f.md) removes all notificationslots for this application.
 
 **Parameters:**
 

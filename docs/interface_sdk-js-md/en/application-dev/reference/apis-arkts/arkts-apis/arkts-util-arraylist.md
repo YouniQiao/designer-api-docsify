@@ -17,6 +17,8 @@ ArrayList is a linear data structure that is implemented based on arrays. ArrayL
 ## Modules to Import
 
 ```TypeScript
+import { ArrayList } from '@kit.ArkTS';
+import { ArrayListComparatorFn } from '@kit.ArkTS';
 ```
 
 ## Summary

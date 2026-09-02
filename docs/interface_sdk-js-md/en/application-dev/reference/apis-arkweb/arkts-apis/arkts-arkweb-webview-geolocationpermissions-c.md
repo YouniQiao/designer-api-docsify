@@ -15,6 +15,7 @@ GeolocationPermissions is suitable for scenarios where proactive management of W
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## allowGeolocation

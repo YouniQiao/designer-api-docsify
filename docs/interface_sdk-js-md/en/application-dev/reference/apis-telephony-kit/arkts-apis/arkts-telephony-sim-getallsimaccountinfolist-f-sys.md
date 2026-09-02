@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## getAllSimAccountInfoList

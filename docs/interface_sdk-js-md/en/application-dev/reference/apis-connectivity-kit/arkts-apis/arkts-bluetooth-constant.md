@@ -9,6 +9,7 @@ The definition of constant.
 ## Modules to Import
 
 ```TypeScript
+import { constant } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

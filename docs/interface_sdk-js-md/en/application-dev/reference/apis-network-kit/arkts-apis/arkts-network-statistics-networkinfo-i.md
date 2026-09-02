@@ -9,6 +9,7 @@ Defines the network information.
 ## Modules to Import
 
 ```TypeScript
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## endTime

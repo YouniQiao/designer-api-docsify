@@ -11,6 +11,7 @@ JsMessageExt支持多种JavaScript返回值类型的解析：字符串（getStri
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArray

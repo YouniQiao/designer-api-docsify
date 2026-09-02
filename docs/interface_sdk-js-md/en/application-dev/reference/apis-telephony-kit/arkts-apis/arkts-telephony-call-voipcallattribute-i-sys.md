@@ -11,6 +11,7 @@ Defines the VoIP call information.
 ## Modules to Import
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## abilityName

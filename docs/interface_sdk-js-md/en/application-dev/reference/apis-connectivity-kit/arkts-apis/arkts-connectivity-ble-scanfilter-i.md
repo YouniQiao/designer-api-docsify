@@ -9,6 +9,7 @@ Describes the criteria for filtering scanning results can be set.
 ## Modules to Import
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## address

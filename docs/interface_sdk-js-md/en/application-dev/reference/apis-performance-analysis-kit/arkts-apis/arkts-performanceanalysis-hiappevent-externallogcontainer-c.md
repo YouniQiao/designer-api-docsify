@@ -9,6 +9,7 @@ An external log container including all external log files.
 ## Modules to Import
 
 ```TypeScript
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## getAllLogFiles

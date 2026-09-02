@@ -9,6 +9,7 @@ GNSS地理围栏请求参数。
 ## 导入模块
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## fenceExtensionAbilityName

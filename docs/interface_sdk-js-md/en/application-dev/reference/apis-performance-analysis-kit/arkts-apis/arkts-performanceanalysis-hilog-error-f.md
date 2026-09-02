@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## error

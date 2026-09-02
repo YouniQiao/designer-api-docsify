@@ -9,6 +9,7 @@ Defines the dynamic configuration of certificate pinning.
 ## Modules to Import
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## hashAlgorithm

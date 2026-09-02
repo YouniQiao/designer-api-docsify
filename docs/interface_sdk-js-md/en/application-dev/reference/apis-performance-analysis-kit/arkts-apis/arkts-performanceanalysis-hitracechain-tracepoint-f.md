@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## tracepoint

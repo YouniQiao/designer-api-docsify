@@ -9,6 +9,7 @@ HTTP请求任务。在调用HttpRequest的方法前，需要先通过[createHttp
 ## 导入模块
 
 ```TypeScript
+import { http } from '@kit.NetworkKit';
 ```
 
 ## destroy

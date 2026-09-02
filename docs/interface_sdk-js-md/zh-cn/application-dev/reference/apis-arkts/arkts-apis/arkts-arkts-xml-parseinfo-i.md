@@ -9,6 +9,7 @@
 ## 导入模块
 
 ```TypeScript
+import { xml } from '@kit.ArkTS';
 ```
 
 ## getAttributeCount

@@ -8,7 +8,7 @@ For details about how to obtain a **MifareUltralightTag** object, see [NFC Tag R
 
 The following describes the unique APIs of **MifareUltralightTag**.
 
-**Inheritance/Implementation:** MifareUltralightTag extends TagSession
+**Inheritance/Implementation:** MifareUltralightTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
 
 **Since:** 9
 

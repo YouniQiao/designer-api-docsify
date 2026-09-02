@@ -779,7 +779,7 @@ Sets the alignment rule for child components within the relative container. This
 alignRules(alignRule: LocalizedAlignRuleOptions): T
 ```
 
-Sets the alignment rules in the relative container. This API is valid only when the container is RelativeContainer,. This attribute replaces the original **left** and **right** directional parameters with **start** and **end** to support proper mirroring in right-to-left (RTL) layout modes. It is recommended that you use this attribute for configuring child component alignment rules in relative containers. This attribute supports dynamic configuration via [attributeModifier](#attributemodifier).
+Sets the alignment rules in the relative container. This API is valid only when the container is RelativeContainer, This attribute replaces the original **left** and **right** directional parameters with **start** and **end** to support proper mirroring in right-to-left (RTL) layout modes. It is recommended that you use this attribute for configuring child component alignment rules in relative containers. This attribute supports dynamic configuration via [attributeModifier](#attributemodifier).
 
 **Since:** 12
 
@@ -3365,7 +3365,7 @@ Sets the percentage of the parent container's remaining space that is allocated 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Percentage of the parent container's remaining space that is allocated to the component. The value must be greater than or equal to 0, . Default value: **0**. If this parameter is set to an invalid value, the default value will be used. |
+| value | number | Yes | Percentage of the parent container's remaining space that is allocated to the component. The value must be greater than or equal to 0, Default value: **0**. If this parameter is set to an invalid value, the default value will be used. |
 
 **Return value:**
 

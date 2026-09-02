@@ -9,6 +9,7 @@ Defines the route tracing information.
 ## Modules to Import
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## address

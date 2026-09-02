@@ -13,6 +13,7 @@ It provides the APIs for color space settings.
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getActiveColorSpace

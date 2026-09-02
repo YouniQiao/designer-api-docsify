@@ -14,6 +14,7 @@ ZoomQuery provides APIs to query the zoom feature of a device camera, including 
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getRAWCaptureZoomRatioRange

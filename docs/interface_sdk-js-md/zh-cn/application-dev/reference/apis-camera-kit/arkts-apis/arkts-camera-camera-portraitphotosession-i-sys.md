@@ -13,6 +13,7 @@ PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, 
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getSessionConflictFunctions

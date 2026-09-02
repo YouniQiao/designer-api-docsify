@@ -4,7 +4,7 @@ The **StaticSubscriberExtensionContext** module, inherited from **ExtensionConte
 
 You can use the APIs of this module to start **StaticSubscriberExtensionAbility**.
 
-**Inheritance/Implementation:** StaticSubscriberExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** StaticSubscriberExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 10
 

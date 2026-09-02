@@ -11,6 +11,7 @@ Indicates wireless signal feature.
 ## Modules to Import
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## mac

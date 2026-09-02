@@ -13,6 +13,7 @@ Aperture继承自ApertureQuery。
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getPhysicalAperture

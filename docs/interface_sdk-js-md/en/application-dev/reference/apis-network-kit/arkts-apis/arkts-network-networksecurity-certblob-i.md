@@ -9,6 +9,7 @@ Defines the certificate data.
 ## Modules to Import
 
 ```TypeScript
+import { networkSecurity } from '@kit.NetworkKit';
 ```
 
 ## data

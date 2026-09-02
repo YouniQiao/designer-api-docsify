@@ -9,6 +9,7 @@ The current parse info.
 ## Modules to Import
 
 ```TypeScript
+import { xml } from '@kit.ArkTS';
 ```
 
 ## getAttributeCount

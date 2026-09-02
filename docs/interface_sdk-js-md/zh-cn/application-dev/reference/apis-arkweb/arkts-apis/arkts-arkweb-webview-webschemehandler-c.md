@@ -11,6 +11,7 @@ WebSchemeHandler与[WebSchemeHandlerRequest](arkts-arkweb-webview-webschemehandl
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## onRequestStart

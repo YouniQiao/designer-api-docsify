@@ -9,6 +9,7 @@ Provides APIs to check whether a camera device supports manual ISO setting and o
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getIsoRange

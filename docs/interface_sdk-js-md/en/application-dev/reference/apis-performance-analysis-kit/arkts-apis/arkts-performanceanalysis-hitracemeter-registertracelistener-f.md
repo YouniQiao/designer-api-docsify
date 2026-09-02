@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## registerTraceListener

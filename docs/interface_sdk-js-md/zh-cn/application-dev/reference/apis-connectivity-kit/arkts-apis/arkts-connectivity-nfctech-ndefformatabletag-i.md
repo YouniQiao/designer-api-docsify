@@ -8,7 +8,7 @@ NdefFormatableTag获取方式请参考[nfc-tag开发指南](../../../connectivit
 
 以下是NdefFormatableTag的独有接口。
 
-**继承/实现关系：** NdefFormatableTag extends TagSession
+**继承/实现关系：** NdefFormatableTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
 
 **起始版本：** 9
 

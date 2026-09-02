@@ -2,7 +2,7 @@
 
 The AutoFillExtensionContext module provides the context environment for the AutoFillExtensionAbility. It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
 
-**Inheritance/Implementation:** AutoFillExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** AutoFillExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
 **Since:** 11
 

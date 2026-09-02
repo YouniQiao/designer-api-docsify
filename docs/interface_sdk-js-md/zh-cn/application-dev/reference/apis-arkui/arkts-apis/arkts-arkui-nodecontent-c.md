@@ -6,7 +6,7 @@ NodeContent是ArkUI提供的ContentSlot的管理器，用于管理挂载到Conte
 > 
 > - NodeContent对象不支持使用JSON序列化。
 
-**继承/实现关系：** NodeContent extends Content
+**继承/实现关系：** NodeContent extends [Content](arkts-arkui-content-c.md)
 
 **起始版本：** 12
 

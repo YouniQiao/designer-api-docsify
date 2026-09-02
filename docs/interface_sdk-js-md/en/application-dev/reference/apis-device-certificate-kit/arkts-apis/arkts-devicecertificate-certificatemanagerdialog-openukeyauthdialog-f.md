@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## openUkeyAuthDialog

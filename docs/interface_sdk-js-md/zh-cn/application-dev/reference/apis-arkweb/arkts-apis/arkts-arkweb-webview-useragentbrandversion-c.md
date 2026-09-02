@@ -11,6 +11,7 @@ UserAgentBrandVersion提供品牌名称和版本号的设置与获取方法：se
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getBrand

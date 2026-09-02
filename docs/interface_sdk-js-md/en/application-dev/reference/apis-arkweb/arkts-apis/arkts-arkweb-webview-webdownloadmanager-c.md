@@ -11,6 +11,7 @@ WebDownloadManager works together with [WebDownloadDelegate](arkts-arkweb-webvie
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## resumeDownload

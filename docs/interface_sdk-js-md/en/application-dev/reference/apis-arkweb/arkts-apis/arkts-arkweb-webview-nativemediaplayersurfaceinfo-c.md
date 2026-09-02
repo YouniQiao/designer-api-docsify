@@ -9,6 +9,7 @@ NativeMediaPlayerSurfaceInfo uses [enableNativeMediaPlayer](../arkts-components/
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## id

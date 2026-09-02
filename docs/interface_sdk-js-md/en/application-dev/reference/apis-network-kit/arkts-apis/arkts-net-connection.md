@@ -13,6 +13,7 @@ The network connection management module provides basic network management capab
 ## Modules to Import
 
 ```TypeScript
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## Summary

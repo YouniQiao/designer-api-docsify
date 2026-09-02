@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## pairDevice

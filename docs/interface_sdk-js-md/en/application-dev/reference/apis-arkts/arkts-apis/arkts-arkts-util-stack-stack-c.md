@@ -9,6 +9,7 @@ Stack is implemented based on the array data structure. It follows the principle
 ## Modules to Import
 
 ```TypeScript
+import { Stack } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]

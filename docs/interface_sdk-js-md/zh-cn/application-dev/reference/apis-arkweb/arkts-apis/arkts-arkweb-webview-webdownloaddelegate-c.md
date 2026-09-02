@@ -11,6 +11,7 @@ WebDownloadDelegate定义了四个下载生命周期回调：[onBeforeDownload](
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## onBeforeDownload

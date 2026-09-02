@@ -11,6 +11,7 @@ Defines the profile download result.
 ## Modules to Import
 
 ```TypeScript
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## cardId

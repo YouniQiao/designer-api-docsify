@@ -8,7 +8,7 @@ For details about how to obtain an **NfcVTag** object, see [NFC Tag Read/Write D
 
 The following describes the unique APIs of **NfcVTag**.
 
-**Inheritance/Implementation:** NfcVTag extends TagSession
+**Inheritance/Implementation:** NfcVTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
 
 **Since:** 7
 

@@ -11,6 +11,7 @@ Rotational speed. A negative value indicates a clockwise rotation, and a positiv
 ## Modules to Import
 
 ```TypeScript
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## pitchSpeed

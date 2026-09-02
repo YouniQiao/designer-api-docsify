@@ -9,6 +9,7 @@ An arbitrary-precision Decimal type
 ## Modules to Import
 
 ```TypeScript
+import { Decimal } from '@kit.ArkTS';
 ```
 
 ## abs

@@ -25,7 +25,7 @@ function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image
 > 
 > - builder中的组件不支持设置动画相关的属性，如transition。
 > 
-> - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的Image组件、Web组件。
+> - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)组件、Web组件。
 
 **起始版本：** 10
 
@@ -139,7 +139,7 @@ function createFromBuilder(builder: CustomBuilder, delay?: number,
 > 
 > - builder中的组件不支持设置动画相关的属性，如transition。
 > 
-> - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的Image组件、Web组件。
+> - 部分执行耗时任务的组件可能无法及时在截图前加载完成，因此会截取不到加载成功后的图像。例如：加载网络图片的[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md)组件、Web组件。
 
 **起始版本：** 10
 

@@ -11,6 +11,7 @@ Effect suggestion status
 ## Modules to Import
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## status

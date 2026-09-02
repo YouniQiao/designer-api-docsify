@@ -4,7 +4,7 @@
 
 @extends FrameNode
 
-**继承/实现关系：** XComponentNode extends FrameNode
+**继承/实现关系：** XComponentNode extends [FrameNode](arkts-arkui-framenode-c.md)
 
 **起始版本：** 11
 

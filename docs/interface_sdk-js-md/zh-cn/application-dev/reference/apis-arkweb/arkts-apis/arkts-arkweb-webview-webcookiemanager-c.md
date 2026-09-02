@@ -15,6 +15,7 @@ WebCookieManager是Web组件的cookie管理器，提供对Web组件中cookie的�
 ## 导入模块
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## clearAllCookies

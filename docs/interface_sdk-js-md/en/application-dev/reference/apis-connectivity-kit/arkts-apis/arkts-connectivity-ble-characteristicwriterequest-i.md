@@ -9,6 +9,7 @@ Describes the parameters of the of the Gatt client's characteristic write reques
 ## Modules to Import
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid

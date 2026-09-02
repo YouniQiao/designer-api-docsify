@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { TreeMap } from '@kit.ArkTS';
 ```
 
 ## Summary

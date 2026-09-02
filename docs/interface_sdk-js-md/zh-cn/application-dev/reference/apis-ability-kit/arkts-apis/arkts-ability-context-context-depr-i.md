@@ -2,7 +2,7 @@
 
 Context模块提供了Ability或Application的上下文的基础能力，包括允许访问特定于应用程序的资源、请求和验证权限等。
 
-**继承/实现关系：** Context extends BaseContext
+**继承/实现关系：** Context extends [BaseContext](arkts-ability-basecontext-c.md)
 
 **起始版本：** 6
 

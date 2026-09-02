@@ -28,7 +28,7 @@ Prints files. This API uses an asynchronous callback to return the result. To st
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| files | Array&lt;string&gt; | Yes | List of files to print. Images (in .jpg, .png, .gif, .bmp, or .webp format) and PDF files are supported. You should save the files to the application sandbox, obtain the sandbox URI through **fileUri.getUriFromPath**, and then pass this URI as a parameter to this API. |
+| files | Array&lt;string&gt; | Yes | List of files to print. Images (in .jpg,png,gif,bmp, or .webp format) and PDF files are supported. You should save the files to the application sandbox, obtain the sandbox URI through **fileUri.getUriFromPath**, and then pass this URI as a parameter to this API. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Yes | Callback to be invoked when the print job is finished. |
 
 **Error codes:**
@@ -82,7 +82,7 @@ Prints files. This API uses a promise to return the result. To start the system 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| files | Array&lt;string&gt; | Yes | List of files to print. Images (in .jpg, .png, .gif, .bmp, or .webp format) and PDF files are supported. You should save the files to the application sandbox, obtain the sandbox URI through **fileUri.getUriFromPath**, and then pass this URI as a parameter to this API. |
+| files | Array&lt;string&gt; | Yes | List of files to print. Images (in .jpg,png,gif,bmp, or .webp format) and PDF files are supported. You should save the files to the application sandbox, obtain the sandbox URI through **fileUri.getUriFromPath**, and then pass this URI as a parameter to this API. |
 
 **Return value:**
 

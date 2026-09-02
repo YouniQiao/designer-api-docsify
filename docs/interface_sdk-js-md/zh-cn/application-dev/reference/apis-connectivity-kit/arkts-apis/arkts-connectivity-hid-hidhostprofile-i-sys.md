@@ -11,6 +11,7 @@ HidHostProfile类提供蓝牙HID设备的连接和断开等管理功能，适用
 ## 导入模块
 
 ```TypeScript
+import { hid } from '@kit.ConnectivityKit';
 ```
 
 ## connect

@@ -9,6 +9,7 @@ Configuring parameters in single location requests.
 ## Modules to Import
 
 ```TypeScript
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## locatingPriority

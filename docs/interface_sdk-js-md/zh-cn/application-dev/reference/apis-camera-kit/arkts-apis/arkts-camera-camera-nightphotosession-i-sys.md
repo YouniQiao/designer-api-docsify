@@ -13,6 +13,7 @@ NightPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('error')

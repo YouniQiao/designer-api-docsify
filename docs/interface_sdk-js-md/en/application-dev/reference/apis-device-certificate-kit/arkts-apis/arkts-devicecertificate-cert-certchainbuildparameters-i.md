@@ -9,6 +9,7 @@ Represents the parameters for building a certificate chain.
 ## Modules to Import
 
 ```TypeScript
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## certMatchParameters

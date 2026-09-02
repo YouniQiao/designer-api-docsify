@@ -9,6 +9,7 @@ WebviewController is the core controller for various behaviors of the **Web** co
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## accessBackward

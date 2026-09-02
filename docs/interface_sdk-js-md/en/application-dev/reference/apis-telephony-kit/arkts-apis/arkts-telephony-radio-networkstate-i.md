@@ -9,6 +9,7 @@ Defines the network status.
 ## Modules to Import
 
 ```TypeScript
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## cfgTech

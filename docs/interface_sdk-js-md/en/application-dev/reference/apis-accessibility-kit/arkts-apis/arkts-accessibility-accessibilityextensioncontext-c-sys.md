@@ -17,7 +17,7 @@ class EntryAbility extends AccessibilityExtensionAbility {
 }
 ```
 
-**Inheritance/Implementation:** AccessibilityExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** AccessibilityExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 9
 

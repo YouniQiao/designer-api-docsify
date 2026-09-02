@@ -8,7 +8,7 @@ For details about how to obtain an **NdefTag** object, see [NFC Tag Read/Write D
 
 The following describes the unique APIs of **NdefTag**.
 
-**Inheritance/Implementation:** NdefTag extends TagSession
+**Inheritance/Implementation:** NdefTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
 
 **Since:** 9
 

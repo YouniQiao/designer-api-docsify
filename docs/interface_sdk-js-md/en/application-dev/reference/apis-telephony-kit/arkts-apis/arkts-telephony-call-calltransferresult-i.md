@@ -9,6 +9,7 @@ Defines the call transfer result.
 ## Modules to Import
 
 ```TypeScript
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## endHour

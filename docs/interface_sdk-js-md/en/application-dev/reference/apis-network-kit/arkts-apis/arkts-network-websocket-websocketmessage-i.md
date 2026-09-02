@@ -9,6 +9,7 @@ Callback used to return the result, which contains:
 ## Modules to Import
 
 ```TypeScript
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## clientConnection

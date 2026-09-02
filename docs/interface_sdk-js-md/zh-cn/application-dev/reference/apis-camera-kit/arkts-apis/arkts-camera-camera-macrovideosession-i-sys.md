@@ -15,6 +15,7 @@ Implements a macro video session, which sets the parameters of the macro video m
 ## 导入模块
 
 ```TypeScript
+import { camera } from '@kit.CameraKit';
 ```
 
 ## off('error')

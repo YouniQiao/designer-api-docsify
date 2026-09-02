@@ -17,6 +17,7 @@ URI遵循RFC3986规范标准，不支持非标准场景解析。
 ## 导入模块
 
 ```TypeScript
+import { uri } from '@kit.ArkTS';
 ```
 
 ## 汇总

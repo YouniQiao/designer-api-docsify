@@ -9,6 +9,7 @@ Defines cookie-related fields.
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## domain

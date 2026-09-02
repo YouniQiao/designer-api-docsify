@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { TreeSet } from '@kit.ArkTS';
 ```
 
 ## Summary

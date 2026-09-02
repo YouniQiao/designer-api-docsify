@@ -9,6 +9,7 @@ GATT描述符结构定义，是特征值[BLECharacteristic](arkts-connectivity-b
 ## 导入模块
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid

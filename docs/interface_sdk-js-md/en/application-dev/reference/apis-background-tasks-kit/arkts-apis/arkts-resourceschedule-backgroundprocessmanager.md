@@ -24,9 +24,25 @@ import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 | [setPowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-setpowersavemode-f.md) | Sets the power saving mode for a process. This API uses a promise to return the result. |
 | [setProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-setprocesspriority-f.md) | Sets the child process priority. After a child process is suppressed, the CPU resources that can be obtained will be limited. If the scheduling policy of the main process changes, for example, from the background to the foreground, the child process changes with the main process. To suppress the child process, call this API again. |
 
+<!--Del-->
+### Functions(System API)
+
+| Name | Description |
+| --- | --- |
+| [clearBackgroundApps](arkts-backgroundtasks-backgroundprocessmanager-clearbackgroundapps-f-sys.md) | One-tap background app cleanup |
+<!--DelEnd-->
+
 ### Enums
 
 | Name | Description |
 | --- | --- |
 | [PowerSaveMode](arkts-backgroundtasks-backgroundprocessmanager-powersavemode-e.md) | Specifies the power saving mode. |
 | [ProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-processpriority-e.md) | Specifies the child process priority. |
+
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [ClearType](arkts-backgroundtasks-backgroundprocessmanager-cleartype-e-sys.md) | The type of clearing background apps. |
+<!--DelEnd-->

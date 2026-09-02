@@ -8,7 +8,7 @@ For details about how to obtain an **IsoDepTag** object, see [NFC Tag Read/Write
 
 The following describes the unique APIs of **IsoDepTag**.
 
-**Inheritance/Implementation:** IsoDepTag extends TagSession
+**Inheritance/Implementation:** IsoDepTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
 
 **Since:** 9
 

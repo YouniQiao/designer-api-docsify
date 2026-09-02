@@ -15,6 +15,7 @@ and end with an **endAxis** call.
 ## Modules to Import
 
 ```TypeScript
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## beginAxis

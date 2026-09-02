@@ -11,6 +11,7 @@ GATT客户端类，提供了和服务端进行连接和数据传输等操作方�
 ## 导入模块
 
 ```TypeScript
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## close

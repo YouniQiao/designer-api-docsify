@@ -9,6 +9,7 @@ Describes the bond key param.
 ## Modules to Import
 
 ```TypeScript
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## pinType

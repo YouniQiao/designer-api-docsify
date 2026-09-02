@@ -13,6 +13,7 @@ Implements a **WebDataBase** object.
 ## Modules to Import
 
 ```TypeScript
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## deleteHttpAuthCredentials

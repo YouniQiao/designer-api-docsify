@@ -2,7 +2,7 @@
 
 Class inherited for the distributed extension function.
 
-**Inheritance/Implementation:** DistributedExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** DistributedExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 Connects to a remote Service extension ability.
 
-This method connects to a Service extension ability on a remote device. You must implement the ConnectOptions interface to obtain the proxy of the target service extension when connected.
+This method connects to a Service extension ability on a remote device. You must implement the [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) interface to obtain the proxy of the target service extension when connected.
 
 **Since:** 26.0.0
 

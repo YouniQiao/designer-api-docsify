@@ -2,7 +2,7 @@
 
 The **NotificationSubscriberExtensionContext** module provides the context for the **NotificationSubscriberExtensionAbility**.
 
-**Inheritance/Implementation:** NotificationSubscriberExtensionContext extends ExtensionContext
+**Inheritance/Implementation:** NotificationSubscriberExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
 **Since:** 22
 
