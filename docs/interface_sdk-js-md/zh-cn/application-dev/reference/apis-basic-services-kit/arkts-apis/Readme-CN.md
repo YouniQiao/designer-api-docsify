@@ -1090,7 +1090,7 @@
 - application<!--arkts-basicserviceskit-application-->
   - [PrintExtensionContext](arkts-printextensioncontext.md)
     - [PrintExtensionContext](arkts-basicservices-printextensioncontext-c.md)
-- commonEvent<!--arkts-basicserviceskit-commonEvent-->
+- commonEvent<!--arkts-basicserviceskit-commonevent-->
   - [commonEventData(Common event data.)](arkts-commoneventdata.md)
     - [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md)
   - [commonEventPublishData(The CommonEventPublishData module provides APIs for defining common event content and attributes.)](arkts-commoneventpublishdata.md)

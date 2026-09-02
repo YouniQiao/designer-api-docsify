@@ -1,6 +1,6 @@
 # C API<!--c-arkui-->
 
-- 模块<!--arkui-module-->
+- 模块<!--arkui-module-->n
     - [OH_DisplayManager](capi-oh-displaymanager.md)
     - [WindowManager](capi-windowmanager.md)
     - [ArkUI_NativeModule](capi-arkui-nativemodule.md)

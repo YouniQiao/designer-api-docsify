@@ -18,5 +18,5 @@ Function that returns array of file handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | BusinessError&lt;void&gt; | Yes | the error that triggers the callback. |
+| error | [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | Yes | the error that triggers the callback. |
 | files | Array&lt;File&gt; | Yes | file handle. |

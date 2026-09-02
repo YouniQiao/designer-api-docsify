@@ -1949,7 +1949,7 @@
     - [ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md)
     <!--Del-->
     - [ShortcutWant(system api)](arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md)<!--DelEnd-->
-- bundleManager<!--arkts-abilitykit-bundleManager-->
+- bundleManager<!--arkts-abilitykit-bundlemanager-->
   - [AbilityInfo](arkts-abilityinfo.md)
     - [AbilityInfo](arkts-ability-abilityinfo-i.md)
     - [WindowSize](arkts-ability-abilityinfo-windowsize-i.md)
@@ -2073,7 +2073,7 @@
 - security<!--arkts-abilitykit-security-->
   - [PermissionRequestResult](arkts-permissionrequestresult.md)
     - [PermissionRequestResult](arkts-ability-permissionrequestresult-c.md)
-- wantAgent<!--arkts-abilitykit-wantAgent-->
+- wantAgent<!--arkts-abilitykit-wantagent-->
   - [triggerInfo](arkts-triggerinfo.md)
     - [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md)
     <!--Del-->

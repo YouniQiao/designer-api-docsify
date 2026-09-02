@@ -1,6 +1,6 @@
 # C API<!--c-basicserviceskit-->
 
-- 模块<!--basicserviceskit-module-->
+- 模块<!--basicserviceskit-module-->n
     - [Pasteboard](capi-pasteboard.md)
     - [SyscapNdk](capi-syscapndk.md)
     - [DeviceInfo](capi-deviceinfo.md)
