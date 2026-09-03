@@ -14,7 +14,10 @@
 > 
    
 > `InputMethodExtensionAbility`的`context`属性类型为`InputMethodExtensionContext`（来自`@ohos.InputMethodExtensionContext`模块），属于关联关系——`InputMethodExtensionAbility`拥有`InputMethodExtensionContext`的上下文能力。
- | Class | 说明 | |---|---| | InputMethodExtensionAbility | 输入法ExtensionAbility基类，提供输入法应用的生命周期管理框架。关键成员包括：`context`属性（`InputMethodExtensionContext`上下文对象）、`onCreate(want)`方法（初始化回调）、`onDestroy()`方法（销毁回调）。开发者需继承此类并重写生命周期方法。 |
+
+| Class | 说明 |  
+|---|---|  
+| [InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) | 输入法ExtensionAbility基类，提供输入法应用的生命周期管理框架。关键成员包括：`context`属性（`InputMethodExtensionContext`上下文对象）、`onCreate(want)`方法（初始化回调）、`onDestroy()`方法（销毁回调）。开发者需继承此类并重写生命周期方法。 |
 
 **起始版本：** 9
 

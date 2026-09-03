@@ -2809,7 +2809,20 @@ constraintSize(value: ConstraintSizeOptions): T
 
 Sets the constraint size of the component, which is used to limit the size range during component layout. Since API version 10, this API supports the calc calculation feature.
 
-**Impact of constraintSize(minWidth/maxWidth/minHeight/maxHeight) on width/height** | Default Value | Result | | ---------------------------------------- | ---------------------------------------- | | \ | width=MAX(minWidth,MIN(maxWidth,width))height=MAX(minHeight,MIN(maxHeight,height)) | | maxWidth, maxHeight| width=MAX(minWidth,width)height=MAX(minHeight,height) | minWidth, minHeight| width=MIN(maxWidth,width)height=MIN(maxHeight,height) | | width, height| If minWidth &lt; maxWidth, the layout logic of the component takes effect, and the value range of **width** is [minWidth, maxWidth]. Otherwise, width = MAX(minWidth, maxWidth).If minHeight &lt; maxHeight, the layout logic of the component takes effect, and the value range of **height** is [minHeight, maxHeight]. Otherwise, height = MAX (minHeight, maxHeight).| | width and maxWidth; height and maxHeight| width = minWidth height = minHeight | | width and minWidth; and height and minHeight| The layout logic of the component takes effect, and the value of **width** cannot be greater than that of **maxWidth**.The layout logic of the component takes effect, and the value of **height** cannot be greater than that of **maxHeight**.| | minWidth and maxWidth; minHeight and maxHeight| The width of the component is initially determined by the value of **width**, and it may be adjusted based on other layout attributes.The height of the component is initially determined by the value of **height**, and it may be adjusted based on other layout attributes.| | width, minWidth, and maxWidth| The layout restrictions passed by the parent container are used for layout.| | height, minHeight, and maxHeight| The layout restrictions passed by the parent container are used for layout.|
+**Impact of constraintSize(minWidth/maxWidth/minHeight/maxHeight) on width/height**  
+| Default Value | Result |  
+| ---------------------------------------- | ---------------------------------------- |  
+| \ | width=MAX(minWidth,MIN(maxWidth,width))height=MAX(minHeight,MIN(maxHeight,height)) |
+| maxWidth, maxHeight| width=MAX(minWidth,width)height=MAX(minHeight,height)  
+| minWidth, minHeight| width=MIN(maxWidth,width)height=MIN(maxHeight,height) |  
+| width, height| If minWidth &lt; maxWidth, the layout logic of the component takes effect, and the value range of  
+**width** is [minWidth, maxWidth]. Otherwise, width = MAX(minWidth, maxWidth).If minHeight &lt; maxHeight, the layout logic of the component takes effect, and the value range of **height** is [minHeight, maxHeight]. Otherwise, height = MAX (minHeight, maxHeight).|  
+| width and maxWidth; height and maxHeight| width = minWidth height = minHeight |  
+| width and minWidth; and height and minHeight| The layout logic of the component takes effect, and the value of  
+**width** cannot be greater than that of **maxWidth**.The layout logic of the component takes effect, and the value of **height** cannot be greater than that of **maxHeight**.|  
+| minWidth and maxWidth; minHeight and maxHeight| The width of the component is initially determined by the value of **width**, and it may be adjusted based on other layout attributes.The height of the component is initially determined by the value of **height**, and it may be adjusted based on other layout attributes.|  
+| width, minWidth, and maxWidth| The layout restrictions passed by the parent container are used for layout.|  
+| height, minHeight, and maxHeight| The layout restrictions passed by the parent container are used for layout.|
 
 **Since:** 7
 

@@ -1399,7 +1399,19 @@ globalCompositeOperation: string
 
 类型字段可选值有'source-over'，'source-atop'，'source-in'，'source-out'，'destination-over'，'destination-atop'，'destination-in'，'destination-out'，'lighter'，'copy'，'xor'。
 
-| 名称 | 描述 | | ------ | ------ | | source-over | 在现有绘制内容上显示新绘制内容，属于默认值。 | | source-atop | 在现有绘制内容顶部显示新绘制内容。 | | source-in | 在现有绘制内容中显示新绘制内容。 | | source-out | 在现有绘制内容之外显示新绘制内容。 | | destination-over | 在新绘制内容上方显示现有绘制内容。 | | destination-atop | 在新绘制内容顶部显示现有绘制内容。 | | destination-in | 在新绘制内容中显示现有绘制内容。 | | destination-out | 在新绘制内容外显示现有绘制内容。 | | lighter | 显示新绘制内容和现有绘制内容。 | | copy | 显示新绘制内容而忽略现有绘制内容。 | | xor | 使用异或操作对新绘制内容与现有绘制内容进行融合。 |
+| 名称 | 描述 |  
+| ------ | ------ |  
+| source-over | 在现有绘制内容上显示新绘制内容，属于默认值。 |
+| source-atop | 在现有绘制内容顶部显示新绘制内容。 |
+| source-in | 在现有绘制内容中显示新绘制内容。 |
+| source-out | 在现有绘制内容之外显示新绘制内容。 |
+| destination-over | 在新绘制内容上方显示现有绘制内容。 |
+| destination-atop | 在新绘制内容顶部显示现有绘制内容。 |
+| destination-in | 在新绘制内容中显示现有绘制内容。 |
+| destination-out | 在新绘制内容外显示现有绘制内容。 |
+| lighter | 显示新绘制内容和现有绘制内容。 |
+| copy | 显示新绘制内容而忽略现有绘制内容。 |
+| xor | 使用异或操作对新绘制内容与现有绘制内容进行融合。 |
 
 默认值：**'source-over'**
 

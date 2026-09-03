@@ -6,7 +6,24 @@
 
 而在RichEditorTextStyleResult中，会将之前设置的字体粗细转换为数字后返回。
 
-转换关系如下：| RichEditorTextStyle中的fontWeight | RichEditorTextStyleResult中的fontWeight | | ---- | ----------------------------------- | | 100 | 0 | | 200 | 1 | | 300 | 2 | | 400 | 3 | | 500 | 4 | | 600 | 5 | | 700 | 6 | | 800 | 7 | | 900 | 8 | | Lighter | 12 | | Normal | 10 | | Regular | 14 | | Medium | 13 | | Bold | 9 | | Bolder | 11 |
+转换关系如下：  
+| RichEditorTextStyle中的fontWeight | RichEditorTextStyleResult中的fontWeight |  
+| ---- | ----------------------------------- |  
+| 100 | 0 |
+| 200 | 1 |
+| 300 | 2 |
+| 400 | 3 |
+| 500 | 4 |
+| 600 | 5 |
+| 700 | 6 |
+| 800 | 7 |
+| 900 | 8 |
+| [Lighter](../arkts-apis/arkts-arkui-fontweight-e.md) | 12 |
+| Normal | 10 |
+| Regular | 14 |
+| Medium | 13 |
+| [Bold](../arkts-apis/arkts-arkui-fontweight-e.md) | 9 |
+| [Bolder](../arkts-apis/arkts-arkui-fontweight-e.md) | 11 |
 
 RichEditorSymbolSpanStyle和RichEditorSymbolSpanStyleResult中fontWeight的转换关系，与RichEditorTextStyle和RichEditorTextStyleResult中fontWeight的转换关系一致。
 

@@ -1,6 +1,6 @@
 # EmbeddedDpiFollowStrategy
 
-DPI跟随策略，用于设置DPI，使其能够跟随宿主或EmbeddedUIExtensionAbility。
+DPI跟随策略，用于设置DPI，使其能够跟随宿主或EmbeddedUIExtensionAbility。例如，当EmbeddedUIExtensionAbility需要与宿主应用保持视觉一致性时，可选择跟随宿主DPI；当EmbeddedUIExtensionAbility需要独立适配自身资源的DPI配置时，可选择跟随EmbeddedUIExtensionAbility DPI。
 
 **起始版本：** 26.0.0
 

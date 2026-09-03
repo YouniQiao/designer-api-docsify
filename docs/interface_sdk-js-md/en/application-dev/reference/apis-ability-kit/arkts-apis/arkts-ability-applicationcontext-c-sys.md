@@ -90,7 +90,9 @@ The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle 
 
 A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility.
 
-| Name| Type| Mandatory| Description| | -------- | -------- | -------- | -------- | | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes| Want information of the UIExtensionAbility.|
+| Name| Type| Mandatory| Description|  
+| -------- | -------- | -------- | -------- |  
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes| Want information of the UIExtensionAbility.|
 
 **Since:** 12
 

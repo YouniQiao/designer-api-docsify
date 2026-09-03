@@ -32,7 +32,7 @@ Called back when Service is started.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the want of Service to start. |
-| startId | number | Yes | Indicates the number of times the Service ability has been started. {@code startId} is incremented by 1 every time the ability is started. For example, if the ability has been started for six times. |
+| startId | number | Yes | Indicates the number of times the Service ability has been started. `startId` is incremented by 1 every time the ability is started. For example, if the ability has been started for six times. |
 
 ## onConnect
 

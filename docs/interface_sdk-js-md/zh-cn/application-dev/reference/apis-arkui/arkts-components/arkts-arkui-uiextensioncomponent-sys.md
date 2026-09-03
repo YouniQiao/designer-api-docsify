@@ -50,9 +50,9 @@ UIExtensionComponent(
 
 | 名称 | 说明 |
 | --- | --- |
-| [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md) | 用于表示被拉起的UIExtensionAbility通过调用terminateSelfWithResult或者terminateSelf正常退出时的返回结果。 |
-| [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | 该接口用于在构造时设置UIExtensionComponentAttribute的选项。 |
-| [UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md) | 该接口用于向UIExtensionAbility发送数据。当UIExtensionAbility连接成功时，它从UIExtensionComponent的onRemoteReady回调中返回。 |
+| [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md) | 用于表示被拉起的UIExtensionAbility通过调用`terminateSelfWithResult`或者`terminateSelf`正常退出时的返回结果。 |
+| [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | 用于在UIExtensionComponent进行构造时传递可选的构造参数。 |
+| [UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md) | 用于在双方建立连接成功后，组件使用方将数据发送给被拉起的Ability，并订阅和取消订阅扩展Ability的注册事件。 |
 
 ### 类型
 
@@ -65,7 +65,7 @@ UIExtensionComponent(
 | 名称 | 说明 |
 | --- | --- |
 | [DpiFollowStrategy](arkts-arkui-dpifollowstrategy-e-sys.md) | 表示不同类型的DpiFollowStrategy的枚举。 |
-| [WindowModeFollowStrategy](arkts-arkui-windowmodefollowstrategy-e-sys.md) | 表示不同类型的WindowModeFollowStrategy的枚举。 |
+| [WindowModeFollowStrategy](arkts-arkui-windowmodefollowstrategy-e-sys.md) | 窗口Mode跟随策略，用于设置窗口Mode，使其能够跟随宿主或UIExtensionAbility。 |
 
 ## 示例
 

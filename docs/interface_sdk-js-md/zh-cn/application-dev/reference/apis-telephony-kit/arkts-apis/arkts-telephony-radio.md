@@ -81,7 +81,7 @@ import { radio } from '@kit.TelephonyKit';
 | [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md) | Obtains the unique device ID of a specified card slot of the device. |
 | [isManualNetworkScanning](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md) | 确定当前手动网络扫描是否正在进行 |
 | off | Unsubscribe from imsRegStateChange event. |
-| on | Called when the IMS registration state of specified IMS service type corresponding to a monitored {@code slotId} updates. |
+| on | Called when the IMS registration state of specified IMS service type corresponding to a monitored `slotId` updates. |
 | [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md) | Actively requests to update location information. |
 | [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md) | Actively requests to update location information. |
 | [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md) | Actively requests to update location information. |

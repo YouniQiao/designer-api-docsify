@@ -731,7 +731,7 @@ Enables or disables notification of a characteristic when value changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | characteristic | BLECharacteristic | Yes | BLE characteristic to listen for. |
-| enable | boolean | Yes | Specifies whether to enable notification of the characteristic. The value {@code true} indicates that notification is enabled, and the value {@code false} indicates that notification is disabled. |
+| enable | boolean | Yes | Specifies whether to enable notification of the characteristic. The value `true` indicates that notification is enabled, and the value `false` indicates that notification is disabled. |
 
 **Return value:**
 

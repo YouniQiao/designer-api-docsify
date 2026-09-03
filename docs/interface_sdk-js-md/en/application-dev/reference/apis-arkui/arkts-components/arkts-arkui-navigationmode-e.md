@@ -8,11 +8,19 @@ Display mode of the navigation page. When **Navigation** is displayed in split-c
 
 **Table 1** Relationship between actual navBarWidth and the developer-defined value
 
-| Developer-defined navBarWidth| calcNavBarWidth Value| Actual navBarWidth| | --- | --- | --- | | navBarWidth &lt; minNavBarWidth | NA | minNavBarWidth | | navBarWidth   
+| Developer-defined navBarWidth| calcNavBarWidth Value| Actual navBarWidth|  
+| --- | --- | --- |  
+| navBarWidth &lt; minNavBarWidth | NA | minNavBarWidth |
+| navBarWidth   
 &gt; maxNavBarWidth | calcNavBarWidth
-> maxNavBarWidth | maxNavBarWidth | | navBarWidth
-> maxNavBarWidth | calcNavBarWidth &lt; minNavBarWidth | minNavBarWidth | | navBarWidth
-&gt; maxNavBarWidth | minNavBarWidth �� calcNavBarWidth �� maxNavBarWidth | calcNavBarWidth | | minNavBarWidth �� navBarWidth �� maxNavBarWidth | calcNavBarWidth �� minNavBarWidth | minNavBarWidth | | minNavBarWidth �� navBarWidth �� maxNavBarWidth | minNavBarWidth &lt; calcNavBarWidth &lt;= navBarWidth | calcNavBarWidth | | minNavBarWidth �� navBarWidth �� maxNavBarWidth | calcNavBarWidth
+> maxNavBarWidth | maxNavBarWidth |
+| navBarWidth   
+> maxNavBarWidth | calcNavBarWidth &lt; minNavBarWidth | minNavBarWidth |
+| navBarWidth   
+&gt; maxNavBarWidth | minNavBarWidth �� calcNavBarWidth �� maxNavBarWidth | calcNavBarWidth |
+| minNavBarWidth �� navBarWidth �� maxNavBarWidth | calcNavBarWidth �� minNavBarWidth | minNavBarWidth |  
+| minNavBarWidth �� navBarWidth �� maxNavBarWidth | minNavBarWidth &lt; calcNavBarWidth &lt;= navBarWidth | calcNavBarWidth |  
+| minNavBarWidth �� navBarWidth �� maxNavBarWidth | calcNavBarWidth   
 &gt; navBarWidth | navBarWidth |
 
 **Since:** 9

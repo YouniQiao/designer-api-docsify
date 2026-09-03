@@ -23,7 +23,7 @@
 onDrawReady(callback: Callback<void>)
 ```
 
-EmbeddedUIExtensionAbility绘制首帧时的回调。
+被拉起的EmbeddedUIExtensionAbility绘制第一帧时触发该回调。
 
 **起始版本：** 26.0.0
 
@@ -45,11 +45,7 @@ EmbeddedUIExtensionAbility绘制首帧时的回调。
 onError(callback: import('../api/@ohos.base').ErrorCallback)
 ```
 
-当启动的EmbeddedUIExtensionAbility运行过程中发生错误时调用。通过回调参数中的**code**、**name**和**message**可以获取并处理错误信息。关于错误码的详细信息，请参见[UIExtension错误码](../errorcode-uiextension.md)。
-
-> **说明：**
-> 
-> 该接口不能在attributeModifier内调用。
+被拉起的EmbeddedUIExtensionAbility在运行过程中发生异常，或出现拉起EmbeddedUIExtensionAbility失败、通知提供方切后台/销毁EmbeddedUIExtensionAbility失败、在EmbeddedUIExtensionAbility中嵌套使用EmbeddedComponent等异常情形时，触发本回调。可通过回调参数中的code、name和message获取错误信息并做处理，业务错误码详细介绍请参见UIExtension错误码。
 
 **起始版本：** 12
 
@@ -63,7 +59,7 @@ onError(callback: import('../api/@ohos.base').ErrorCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | import('../api/@ohos.base').ErrorCallback | 是 | 用于返回[BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)类型错误信息的回调。基于**code**、**name**和**message**参数可以获取并处理错误信息。 |
+| callback | import('../api/@ohos.base').ErrorCallback | 是 | 回调函数，入参用于接收异常信息，类型为BusinessError，可通过参数中的`code`、`name`和`message`获取错误信息并做处理。 |
 
 ## onTerminated
 
@@ -71,11 +67,7 @@ onError(callback: import('../api/@ohos.base').ErrorCallback)
 onTerminated(callback: import('../api/@ohos.base').Callback<TerminationInfo>)
 ```
 
-当启动的EmbeddedUIExtensionAbility通过调用[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateselfwithresult)或[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateself)正常退出时回调。
-
-> **说明：**
-> 
-> 该接口不能在attributeModifier内调用。
+被拉起的EmbeddedUIExtensionAbility通过调用terminateSelfWithResult或者terminateSelf正常退出时，触发本回调函数。
 
 **起始版本：** 12
 
@@ -89,4 +81,4 @@ onTerminated(callback: import('../api/@ohos.base').Callback<TerminationInfo>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | import('../api/@ohos.base').Callback&lt;[TerminationInfo](arkts-arkui-terminationinfo-i.md)&gt; | 是 | 用于返回EmbeddedUIExtensionAbility结果的回调。 |
+| callback | import('../api/@ohos.base').Callback&lt;[TerminationInfo](arkts-arkui-terminationinfo-i.md)&gt; | 是 | 回调函数，入参用于接收EmbeddedUIExtensionAbility的返回结果，类型为TerminationInfo。 |

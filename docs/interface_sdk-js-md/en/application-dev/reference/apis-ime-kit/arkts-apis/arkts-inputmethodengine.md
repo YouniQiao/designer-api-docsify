@@ -66,14 +66,14 @@ import { inputMethodEngine } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [CapitalizeMode](arkts-ime-inputmethodengine-capitalizemode-e.md) | Enumerates the modes of capitalizing the first letter of a text.   \| Name\| Value\| Description\| \| -------- \| -- \| -------- \| \| NONE \| 0 \| The first letter is not capitalized.\| \| SENTENCES \| 1 \| The first letter of each sentence is capitalized.\| \| WORDS \| 2 \| The first letter of each word is capitalized.\| \| CHARACTERS \| 3 \| All letters are capitalized.\| |
+| [CapitalizeMode](arkts-ime-inputmethodengine-capitalizemode-e.md) | Enumerates the modes of capitalizing the first letter of a text. |
 | [Direction](arkts-ime-inputmethodengine-direction-e.md) | Enumerates the directions of cursor movement of the input method. |
 | [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md) | Describes the type of the extended edit action on the text box. |
-| [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md) | Enumerates the gradient modes of the input method.   \| Name \| Value\| Description \| \| ------------ \| -- \| ------------------ \| \| NONE \| 0 \| The gradient mode is not used.\| \| LINEAR_GRADIENT \| 1 \| Linear gradient.\| |
-| [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | Enumerates the immersive modes of the input method.   \| Name \| Value\| Description \| \| ------------ \| -- \| ------------------ \| \| NONE_IMMERSIVE \| 0 \| The immersive mode is not used.\| \| IMMERSIVE \| 1 \| The immersive mode is used. Its style is determined by the input method application.\| \| LIGHT_IMMERSIVE \| 2 \| Immersive style in light mode.\| \| DARK_IMMERSIVE \| 3 \| Immersive style in dark mode.\| |
-| [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Enumerates the state types of the input method panel.   \| Name \| Value\| Description \| \| ------------ \| -- \| ------------------ \| \| FLG_FIXED \| 0 \| Fixed state type.\| \| FLG_FLOATING \| 1 \| Floating state type.\| \| FLAG_CANDIDATE&lt;sup&gt;15+&lt;/sup&gt; \| 2 \| Candidate state type.\| |
-| [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) | Enumerates the types of the input method panel.   \| Name \| Value\| Description \| \| ------------ \| -- \| ------------------ \| \| SOFT_KEYBOARD \| 0 \| Soft keyboard type.\| \| STATUS_BAR \| 1 \| Status bar type.\| |
-| [RequestKeyboardReason](arkts-ime-inputmethodengine-requestkeyboardreason-e.md) | Enumerates the reasons for requesting keyboard input.   \| Name \| Value\| Description \| \| ------------ \| -- \| ------------------ \| \| NONE \| 0 \| The keyboard request is triggered for no reason.\| \| MOUSE \| 1 \| The keyboard request is triggered by a mouse operation.\| \| TOUCH \| 2 \| The keyboard request is triggered by a touch operation.\| \| OTHER \| 20 \| The keyboard request is triggered by other reasons.\| |
+| [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md) | Enumerates the gradient modes of the input method. |
+| [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | Enumerates the immersive modes of the input method. |
+| [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Enumerates the state types of the input method panel. |
+| [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) | Enumerates the types of the input method panel. |
+| [RequestKeyboardReason](arkts-ime-inputmethodengine-requestkeyboardreason-e.md) | Enumerates the reasons for requesting keyboard input. |
 | [SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md) | Describes the security mode. |
 
 <!--Del-->
@@ -81,7 +81,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 
 | Name | Description |
 | --- | --- |
-| [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md) | Enumerates the fluid light modes of the input method.   \| Name \| Value\| Description \| \| ------------ \| -- \| ------------------ \| \| NONE \| 0 \| The fluid light mode is not used.\| \| BACKGROUND_FLUID_LIGHT \| 1 \| When the background fluid light mode is enabled, the system panel turns transparent. The fluid light effect must be implemented by the host application of the edit box.\| |
+| [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md) | Enumerates the fluid light modes of the input method. |
 <!--DelEnd-->
 
 ### Types

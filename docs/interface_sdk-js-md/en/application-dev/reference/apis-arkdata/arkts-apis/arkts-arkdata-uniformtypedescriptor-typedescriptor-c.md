@@ -314,7 +314,7 @@ Reference URL for the uniform data type, which describes the detail information 
 set typeId(value: string)
 ```
 
-Type ID of the uniform data type, which corresponds to the enum string in the {@code UniformDataType}.
+Type ID of the uniform data type, which corresponds to the enum string in the `UniformDataType`.
 
 **Type:** string
 

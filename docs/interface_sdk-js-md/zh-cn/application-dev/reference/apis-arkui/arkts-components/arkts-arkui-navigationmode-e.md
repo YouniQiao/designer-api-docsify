@@ -8,11 +8,19 @@
 
 **表1** navBarWidth最终取值与开发者设置值的关系表
 
-| 开发者设置的navBarWidth值 | calcNavBarWidth计算值 | navBarWidth最终取值 | | --- | --- | --- | | navBarWidth &lt; minNavBarWidth | NA | minNavBarWidth | | navBarWidth   
+| 开发者设置的navBarWidth值 | calcNavBarWidth计算值 | navBarWidth最终取值 |  
+| --- | --- | --- |  
+| navBarWidth &lt; minNavBarWidth | NA | minNavBarWidth |
+| navBarWidth   
 &gt; maxNavBarWidth | calcNavBarWidth
-> maxNavBarWidth | maxNavBarWidth | | navBarWidth
-> maxNavBarWidth | calcNavBarWidth &lt; minNavBarWidth | minNavBarWidth | | navBarWidth
-&gt; maxNavBarWidth | minNavBarWidth ≤ calcNavBarWidth ≤ maxNavBarWidth | calcNavBarWidth | | minNavBarWidth ≤ navBarWidth ≤ maxNavBarWidth | calcNavBarWidth ≤ minNavBarWidth | minNavBarWidth | | minNavBarWidth ≤ navBarWidth ≤ maxNavBarWidth | minNavBarWidth &lt; calcNavBarWidth &lt;= navBarWidth | calcNavBarWidth | | minNavBarWidth ≤ navBarWidth ≤ maxNavBarWidth | calcNavBarWidth
+> maxNavBarWidth | maxNavBarWidth |
+| navBarWidth   
+> maxNavBarWidth | calcNavBarWidth &lt; minNavBarWidth | minNavBarWidth |
+| navBarWidth   
+&gt; maxNavBarWidth | minNavBarWidth ≤ calcNavBarWidth ≤ maxNavBarWidth | calcNavBarWidth |
+| minNavBarWidth ≤ navBarWidth ≤ maxNavBarWidth | calcNavBarWidth ≤ minNavBarWidth | minNavBarWidth |  
+| minNavBarWidth ≤ navBarWidth ≤ maxNavBarWidth | minNavBarWidth &lt; calcNavBarWidth &lt;= navBarWidth | calcNavBarWidth |  
+| minNavBarWidth ≤ navBarWidth ≤ maxNavBarWidth | calcNavBarWidth   
 &gt; navBarWidth | navBarWidth |
 
 **起始版本：** 9

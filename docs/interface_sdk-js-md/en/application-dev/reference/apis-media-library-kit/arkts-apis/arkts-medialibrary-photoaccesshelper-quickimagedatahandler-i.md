@@ -22,7 +22,9 @@ Called when the requested image is ready. If an error occurs, **data** returned 
 
 Information returned by **map**:
 
-| Map Key | **Description**| |----------|-------| | 'quality' | Image quality. The value **high** means high quality, and **low** means poor quality.|
+| Map Key | **Description**|  
+|----------|-------|  
+| 'quality' | Image quality. The value **high** means high quality, and **low** means poor quality.|
 
 **Since:** 13
 

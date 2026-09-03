@@ -74,7 +74,22 @@ Converts an HTML string into a styled string. Currently, the following HTML tags
 
 For details about how to use this API, see [Example 12: Implementing Conversion Using fromHtml and toHtml] (../../../reference/apis-arkui/arkui-ts/ ts-universal-styled-string.md#example-12-implementing-conversion-using-fromhtml-and-tohtml).
 
-| Tag Name| Description | | ------------- | ---------------------------- | | \&lt;p\&gt; | Paragraph tag, which separates text into paragraphs. | | \&lt;span\&gt; | Inline text supporting style configuration. | | \&lt;img\&gt; | Image tag, used to insert an image. | | \&lt;strong\&gt; | Bold text tag. | | <br>&lt;sup&gt;20+&lt;/sup&gt; | Line break tag. | | \&lt;b\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Bold text tag. | | \&lt;a\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Hyperlink tag. | | \&lt;i\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Italic text tag. | | \&lt;em\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Italic text tag. | | \&lt;s\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Strikethrough tag, which adds a line through the text. | | \&lt;u\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Underline tag, which adds a decorative underline to the text. | | \&lt;del\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Strikethrough tag, which adds a line through the text. | | \&lt;sup\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Superscript tag. | | \&lt;sub\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Subscript tag. |
+| Tag Name| Description |  
+| ------------- | ---------------------------- |  
+| \&lt;p\&gt; | Paragraph tag, which separates text into paragraphs. |
+| \&lt;span\&gt; | Inline text supporting style configuration. |
+| \&lt;img\&gt; | Image tag, used to insert an image. |
+| \&lt;strong\&gt; | Bold text tag. |
+| <br>&lt;sup&gt;20+&lt;/sup&gt; | Line break tag. |
+| \&lt;b\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Bold text tag. |
+| \&lt;a\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Hyperlink tag. |
+| \&lt;i\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Italic text tag. |
+| \&lt;em\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Italic text tag. |
+| \&lt;s\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Strikethrough tag, which adds a line through the text. |
+| \&lt;u\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Underline tag, which adds a decorative underline to the text. |
+| \&lt;del\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Strikethrough tag, which adds a line through the text. |
+| \&lt;sup\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Superscript tag. |
+| \&lt;sub\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Subscript tag. |
 
 **Since:** 12
 

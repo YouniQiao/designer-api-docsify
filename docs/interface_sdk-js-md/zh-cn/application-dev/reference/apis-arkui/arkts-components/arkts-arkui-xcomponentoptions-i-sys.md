@@ -1,6 +1,6 @@
 # XComponentOptions
 
-定义XComponent的选项。
+定义XComponent的具体配置参数。
 
 **起始版本：** 12
 

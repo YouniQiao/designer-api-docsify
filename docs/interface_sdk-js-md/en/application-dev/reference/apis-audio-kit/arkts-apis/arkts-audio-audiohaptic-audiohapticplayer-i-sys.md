@@ -30,7 +30,7 @@ Enable haptics when the ringer mode is silent mode. This function should be call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | use {@code true} if application want to enable this feature. |
+| enable | boolean | Yes | use `true` if application want to enable this feature. |
 
 **Error codes:**
 

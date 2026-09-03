@@ -2,7 +2,11 @@
 
 提供参数名常量。
 
-|名称|类型|只读|描述| | ------------------------------- | ------ | ------ | ------------------ | | USER_ID | string |是|自定义用户ID| | DISTRIBUTED_SERVICE_NAME | string |是|分布式服务名称| | DISTRIBUTED_SERVICE_INSTANCE_ID | string |是|分布式服务实例ID|
+|名称|类型|只读|描述|  
+| ------------------------------- | ------ | ------ | ------------------ |  
+| USER_ID | string |是|自定义用户ID|
+| DISTRIBUTED_SERVICE_NAME | string |是|分布式服务名称|
+| DISTRIBUTED_SERVICE_INSTANCE_ID | string |是|分布式服务实例ID|
 
 **起始版本：** 9
 

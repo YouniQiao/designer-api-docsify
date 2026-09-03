@@ -37,7 +37,7 @@ isCamped: boolean
 
 Obtains the camp-on status of the serving cell.
 
-Returns {@code true} if the user equipment (UE) is camped on the cell; returns {@code false} otherwise.
+Returns `true` if the user equipment (UE) is camped on the cell; returns `false` otherwise.
 
 **类型：** boolean
 

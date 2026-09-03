@@ -8,7 +8,7 @@ const AIRPLANE_MODE_RADIOS: string
 
 Indicates the list of radio signals to be disabled when airplane mode is enabled. Multiple radio signals are separated by commas (,).
 
-&lt;ul&gt; &lt;li&gt;{@code BLUETOOTH_RADIO} - Bluetooth is disabled in airplane mode. &lt;li&gt;{@code CELL_RADIO} - Cellular radio is disabled in airplane mode. &lt;li&gt;{@code NFC_RADIO} - NFC is disabled in airplane mode. &lt;li&gt;{@code WIFI_RADIO} - Wi-Fi is disabled in airplane mode. &lt;/ul&gt;
+&lt;ul&gt; &lt;li&gt;`BLUETOOTH_RADIO` - Bluetooth is disabled in airplane mode. &lt;li&gt;`CELL_RADIO` - Cellular radio is disabled in airplane mode. &lt;li&gt;`NFC_RADIO` - NFC is disabled in airplane mode. &lt;li&gt;`WIFI_RADIO` - Wi-Fi is disabled in airplane mode. &lt;/ul&gt;
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ const BLUETOOTH_DISCOVER_ABILITY_STATUS: string
 
 Specifies whether the device can be discovered or connected by other devices through Bluetooth.
 
-If the value is {@code 0}, the device cannot be connected or discovered. If the value is {@code 1}, the device can be connected but cannot be discovered. If the value is {@code 2}, the device can be connected and discovered.
+If the value is `0`, the device cannot be connected or discovered. If the value is `1`, the device can be connected but cannot be discovered. If the value is `2`, the device can be connected and discovered.
 
 **Since:** 7
 
@@ -54,7 +54,7 @@ Indicates the duration (in seconds) that the device can be discovered through Bl
 const BLUETOOTH_RADIO: string
 ```
 
-A constant of {@code AIRPLANE_MODE_RADIOS} to indicate that Bluetooth is disabled in airplane mode.
+A constant of `AIRPLANE_MODE_RADIOS` to indicate that Bluetooth is disabled in airplane mode.
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ const BLUETOOTH_STATUS: string
 
 Specifies whether Bluetooth is enabled.
 
-<p>If the value is {@code true}, Bluetooth is enabled. If the value is {@code false}, Bluetooth is disabled.
+<p>If the value is `true`, Bluetooth is enabled. If the value is `false`, Bluetooth is disabled.
 
 **Since:** 7
 
@@ -84,7 +84,7 @@ Specifies whether Bluetooth is enabled.
 const CELL_RADIO: string
 ```
 
-A constant of {@code AIRPLANE_MODE_RADIOS} to indicate that cellular radio is disabled in airplane mode.
+A constant of `AIRPLANE_MODE_RADIOS` to indicate that cellular radio is disabled in airplane mode.
 
 **Since:** 7
 
@@ -98,7 +98,7 @@ A constant of {@code AIRPLANE_MODE_RADIOS} to indicate that cellular radio is di
 const NFC_RADIO: string
 ```
 
-A constant of {@code AIRPLANE_MODE_RADIOS} to indicate that NFC is disabled in airplane mode.
+A constant of `AIRPLANE_MODE_RADIOS` to indicate that NFC is disabled in airplane mode.
 
 **Since:** 7
 
@@ -114,7 +114,7 @@ const OWNER_LOCKDOWN_WIFI_CFG: string
 
 Specifies whether the Wi-Fi configuration created by the application of the device owner should be locked down.
 
-<p>If the value is {@code true}, the Wi-Fi configuration should be locked down. If the value is {@code false}, the Wi-Fi configuration should not be locked down.
+<p>If the value is `true`, the Wi-Fi configuration should be locked down. If the value is `false`, the Wi-Fi configuration should not be locked down.
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ Indicates the maximum number of attempts to obtain an IP address from the DHCP s
 const WIFI_RADIO: string
 ```
 
-A constant of {@code AIRPLANE_MODE_RADIOS} to indicate that Wi-Fi is disabled in airplane mode.
+A constant of `AIRPLANE_MODE_RADIOS` to indicate that Wi-Fi is disabled in airplane mode.
 
 **Since:** 7
 
@@ -158,7 +158,7 @@ const WIFI_STATUS: string
 
 Specifies whether Wi-Fi is enabled.
 
-<p>If the value is {@code true}, Wi-Fi is enabled. If the value is {@code false}, Wi-Fi is disabled.
+<p>If the value is `true`, Wi-Fi is enabled. If the value is `false`, Wi-Fi is disabled.
 
 **Since:** 7
 
@@ -188,7 +188,7 @@ const WIFI_WATCHDOG_STATUS: string
 
 Specifies whether Wi-Fi watchdog is enabled.
 
-<p>If the value is {@code true}, Wi-Fi watchdog is enabled. If the value is {@code false}, Wi-Fi watchdog is disabled.
+<p>If the value is `true`, Wi-Fi watchdog is enabled. If the value is `false`, Wi-Fi watchdog is disabled.
 
 **Since:** 7
 

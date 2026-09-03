@@ -179,10 +179,10 @@ Common()
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityActionInterceptCallback](arkts-arkui-accessibilityactioninterceptcallback-t.md) | 定义在可访问性操作拦截中使用的回调类型。action的值表示可访问性动作类型。 |
-| [AccessibilityCallback](arkts-arkui-accessibilitycallback-t.md) | Defines the callback type used in accessibility hover events. The value of isHover indicates whether the touch is hovering over the component. The value of event contains information about AccessibilityHoverEvent. |
-| [AccessibilityFocusCallback](arkts-arkui-accessibilityfocuscallback-t.md) | Defines the callback type used in accessibility focus. The value of isFocus indicates whether the current component is focused |
-| [AccessibilityTransparentCallback](arkts-arkui-accessibilitytransparentcallback-t.md) | Defines the callback type used in accessibility hover transparent event. |
+| [AccessibilityActionInterceptCallback](arkts-arkui-accessibilityactioninterceptcallback-t.md) | 定义onAccessibilityActionIntercept中使用的回调类型。 |
+| [AccessibilityCallback](arkts-arkui-accessibilitycallback-t.md) | 提供开启无障碍模式后的无障碍悬浮回调事件类型。 |
+| [AccessibilityFocusCallback](arkts-arkui-accessibilityfocuscallback-t.md) | 定义onAccessibilityFocus中使用的回调类型。 |
+| [AccessibilityTransparentCallback](arkts-arkui-accessibilitytransparentcallback-t.md) | 提供开启朗读类辅助应用后未能被无障碍悬浮响应的触摸事件回调类型。 |
 | [AnimationRange](arkts-arkui-animationrange-t.md) | 动画开始和结束时相对预览原图缩放比例。 |
 | [AreaChangeCallback](arkts-arkui-areachangecallback-t.md) | 组件区域变化事件的回调类型。 |
 | [Blender](arkts-arkui-blender-t-sys.md) | [Blender](arkts-arkui-blender-t-sys.md) |

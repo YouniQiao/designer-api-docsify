@@ -21,7 +21,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 getBarRect(): Frame
 ```
 
-Get size and position of the bar.
+获取原子化服务menuBar相对窗口的布局信息。
 
 **起始版本：** 15
 
@@ -35,7 +35,7 @@ Get size and position of the bar.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Frame](arkts-arkui-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
+| [Frame](arkts-arkui-graphics-frame-i.md) | 原子化服务menuBar的大小和位置。 |
 
 **示例**
 
@@ -69,7 +69,7 @@ struct Index {
 onBarRectChange(callback: Callback<Frame>): void
 ```
 
-当appbar的组件大小发生变化时会触发调用。
+当原子化服务menuBar（即AtomicServiceMenuBar，右上角菜单功能胶囊）的大小或位置发生变化时，触发注册的回调，返回menuBar最新的布局信息。该布局信息包含了menuBar的大小和位置，其中位置已考虑左右margin的影响。
 
 **起始版本：** 26.0.0
 
@@ -83,7 +83,7 @@ onBarRectChange(callback: Callback<Frame>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Frame](arkts-arkui-graphics-frame-i.md)&gt; | 是 | 回调函数的参数为Frame。当传入的callback为undefined时表示取消监听appbar组件的大小变化。回调函数触发时，回调函数的参数不可能为undefined或者null。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Frame](arkts-arkui-graphics-frame-i.md)&gt; | 是 | AtomicServiceMenuBar布局变化时的回调，返回变化后的布局信息。 |
 
 **示例**
 
@@ -117,7 +117,7 @@ struct Index {
 setBackgroundColor(color: Nullable< Color | number | string>): void
 ```
 
-Set the background color of the bar.
+通过该方法设置原子化服务menuBar的背景颜色。
 
 **起始版本：** 11
 
@@ -131,7 +131,7 @@ Set the background color of the bar.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [Nullable](arkts-arkui-nullable-t.md)&lt;Color \| number \| string&gt; | 是 | the color to set, undefined indicates using default. |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;Color \| number \| string&gt; | 是 | 原子化服务menuBar的背景颜色，undefined代表使用默认颜色。number为HEX格式颜色，支持rgb或者argb，示例：0xffffff。string为rgb或者argb格式颜色，示例：'#ffffff'。从API version 12开始，在原子化服务中该参数将被忽略。 |
 
 **示例**
 
@@ -168,7 +168,7 @@ export default class EntryAbility extends UIAbility {
 setIconColor(color: Nullable< Color | number | string>): void
 ```
 
-Set the color of the icon on the bar.
+通过该方法设置原子化服务menuBar图标的颜色。
 
 **起始版本：** 11
 
@@ -182,7 +182,7 @@ Set the color of the icon on the bar.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [Nullable](arkts-arkui-nullable-t.md)&lt;Color \| number \| string&gt; | 是 | the color to set to icon, undefined indicates using default. |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;Color \| number \| string&gt; | 是 | 原子化服务menuBar图标的颜色，undefined代表使用默认颜色。number为HEX格式颜色，支持rgb或者argb，示例：0xffffff。string为rgb或者argb格式颜色，示例：'#ffffff'。从API version 12开始，在原子化服务中该参数将被忽略。 |
 
 **示例**
 
@@ -219,7 +219,7 @@ export default class EntryAbility extends UIAbility {
 setTitleContent(content: string): void
 ```
 
-Set the title of the bar.
+通过该方法设置原子化服务menuBar的标题内容。
 
 **起始版本：** 11
 
@@ -233,7 +233,7 @@ Set the title of the bar.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | string | 是 | the content of the bar. |
+| content | string | 是 | 原子化服务menuBar中的标题内容。从API version 12开始，在原子化服务中该参数将被忽略。 |
 
 **示例**
 
@@ -270,7 +270,7 @@ export default class EntryAbility extends UIAbility {
 setTitleFontStyle(font: FontStyle): void
 ```
 
-Set the font style of the bar's title.
+通过该方法设置原子化服务menuBar标题的字体样式。
 
 **起始版本：** 11
 
@@ -284,7 +284,7 @@ Set the font style of the bar's title.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| font | FontStyle | 是 | the font style of the bar's title. |
+| font | FontStyle | 是 | 原子化服务menuBar标题中的字体样式。从API version 12开始，在原子化服务中该参数将被忽略。 |
 
 **示例**
 
@@ -321,7 +321,7 @@ export default class EntryAbility extends UIAbility {
 setVisible(visible: boolean): void
 ```
 
-Set the visibility of the bar, except the icon.
+通过该方法设置原子化服务menuBar是否可见。
 
 **起始版本：** 11
 
@@ -335,7 +335,7 @@ Set the visibility of the bar, except the icon.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| visible | boolean | 是 | whether this bar is visible. |
+| visible | boolean | 是 | 原子化服务menuBar是否可见。true表示设置menuBar可见，false表示设置menuBar不可见。从API version 12开始，在原子化服务中该参数将被忽略。 |
 
 **示例**
 

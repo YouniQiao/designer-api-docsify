@@ -1028,7 +1028,15 @@ Obtains the range of text that is visible on the screen in a paragraph. Excludes
 
 The returned range depends on the specific truncation of the paragraph (for example, whether the maximum number of lines or ellipsis is set):
 
-| Scenario| Description| |---|---| | Text is not truncated.| The range includes all typeset text.| | Only maxLines truncation is set (no ellipsis).| the text from the first line to the end of the maxLines line.| | EllipsisMode.END| The range is the text before the ellipsis.| | EllipsisMode.START| The value is the text after the ellipsis.| | EllipsisMode.MIDDLE| the text range before and after the ellipsis is returned.| | EllipsisMode.MULTILINE_START| the text range before and after the ellipsis is returned.| | EllipsisMode.MULTILINE_MIDDLE| the text range before and after the ellipsis is returned.|
+| Scenario| Description|  
+|---|---|  
+| Text is not truncated.| The range includes all typeset text.|
+| Only maxLines truncation is set (no ellipsis).| the text from the first line to the end of the maxLines line.|
+| EllipsisMode.END| The range is the text before the ellipsis.|
+| EllipsisMode.START| The value is the text after the ellipsis.|
+| EllipsisMode.MIDDLE| the text range before and after the ellipsis is returned.|
+| EllipsisMode.MULTILINE_START| the text range before and after the ellipsis is returned.|
+| EllipsisMode.MULTILINE_MIDDLE| the text range before and after the ellipsis is returned.|
 
 **Since:** 26.0.0
 

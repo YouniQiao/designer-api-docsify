@@ -94,7 +94,7 @@ struct UIInspectorExample {
 createComponentObserver(id: string | number): inspector.ComponentObserver
 ```
 
-注册组件布局和组件绘制送显完成回调通知。送显指节点的绘制命令发送到图形服务并完成显示。例如，开发者可在组件布局完成后获取组件精确尺寸，或在送显完成后执行截图、动画同步等操作。相比createComponentObserver，新增支持传入UniqueID（系统为节点分配的唯一标识）。
+注册组件布局和组件绘制送显完成回调通知。例如，开发者可在组件布局完成后获取组件精确尺寸，或在送显完成后执行截图、动画同步等操作。
 
 **起始版本：** 23
 
@@ -108,7 +108,7 @@ createComponentObserver(id: string | number): inspector.ComponentObserver
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string \| number | 是 | 类型为string时，为指定的组件id，该id通过通用属性id或者key设置。使用组件id创建监听句柄时，请确保该id对应的组件已经存在，否则后续监听无法生效。类型为number时，为系统为节点分配的唯一标识UniqueID，UniqueID通过getUniqueId获取。使用UniqueID创建监听句柄时，请确保UniqueID对应的节点已经存在，否则后续监听无法生效。number的取值范围为1~2147483647的整数。 |
+| id | string \| number | 是 | 指定组件id，该id通过通用属性id或者key设置。 |
 
 **返回值：**
 

@@ -892,7 +892,7 @@ Obtains all cookies. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| incognito | boolean | Yes | {@code true} Gets all cookies in incognito context; {@code false} otherwise. |
+| incognito | boolean | Yes | `true` Gets all cookies in incognito context; `false` otherwise. |
 
 **Return value:**
 

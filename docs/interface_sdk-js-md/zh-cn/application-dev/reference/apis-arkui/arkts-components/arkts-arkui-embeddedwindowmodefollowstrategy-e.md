@@ -1,6 +1,6 @@
 # EmbeddedWindowModeFollowStrategy
 
-窗口模式跟随策略，用于设置窗口模式跟随宿主或EmbeddedUIExtensionAbility。
+窗口模式跟随策略，用于设置窗口模式跟随宿主或EmbeddedUIExtensionAbility。例如，当EmbeddedUIExtensionAbility需要与宿主应用保持一致的窗口模式（如全屏、分屏）时，可选择跟随宿主；当EmbeddedUIExtensionAbility需要独立控制窗口模式时，可选择跟随EmbeddedUIExtensionAbility。
 
 **起始版本：** 26.0.0
 

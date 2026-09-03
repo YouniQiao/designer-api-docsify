@@ -169,7 +169,7 @@ setTethering(enable: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | Specifies whether to enable tethering. The value {@code true} indicates that tethering is enabled, and the value {@code false} indicates that tethering is disabled. |
+| enable | boolean | 是 | Specifies whether to enable tethering. The value `true` indicates that tethering is enabled, and the value `false` indicates that tethering is disabled. |
 
 **错误码：**
 

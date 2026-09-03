@@ -23,11 +23,10 @@
 enableAnalyzer(enable: boolean)
 ```
 
-设置是否启用AI图像分析器，支持主体识别、文字识别和查找对象。
-
-要使设置生效，此属性必须与XComponentController的[StartImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#startimageanalyzer)和[StopImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#stopimageanalyzer)一起使用。
-
-此特性不能与overlay属性同时使用。如果两者都设置，overlay中的CustomBuilder属性将不生效。此特性还依赖于设备能力。
+设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能。本功能需要搭配XComponentController的startImageAnalyzer和stopImageAnalyzer一起使用。不能和overlay属性同时使用，两者同时设置时overlay中CustomBuilder属性将失效。AI分析功能依赖设备能力。   
+> **说明：**
+> 
+> 仅type为SURFACE或TEXTURE时该功能有效。
 
 **起始版本：** 12
 
@@ -41,7 +40,7 @@ enableAnalyzer(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否启用AI图像分析器。   **true**：启用；**false**：禁用。默认值：**false**。 |
+| enable | boolean | 是 | 是否启用AI分析功能。true：开启AI分析；false：关闭AI分析。默认值：false |
 
 ## enableSecure
 
@@ -49,7 +48,12 @@ enableAnalyzer(enable: boolean)
 enableSecure(isSecure: boolean)
 ```
 
-设置是否启用安全surface，以保护组件内渲染的内容不被截屏或录屏。
+防止组件内自绘制内容被截屏、录屏。   
+> **说明：**
+> 
+> 仅type为SURFACE时有效。
+> 
+> 不支持ArkUI NDK接口创建的XComponent组件。
 
 **起始版本：** 13
 
@@ -63,7 +67,7 @@ enableSecure(isSecure: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isSecure | boolean | 是 | 是否启用安全surface。值**true**表示启用安全surface，**false**表示相反的情况。默认值：**false**。 |
+| isSecure | boolean | 是 | 是否开启隐私图层模式。true：开启隐私图层模式；false：关闭隐私图层模式。默认值：false |
 
 ## hdrBrightness
 
@@ -72,8 +76,6 @@ hdrBrightness(brightness: number)
 ```
 
 用于调整组件播放HDR视频的亮度。
-
-**说明：**仅XComponent构造参数中的type为**XComponentType**.SURFACE时该接口生效，否则该接口不生效。
 
 **起始版本：** 20
 
@@ -87,7 +89,7 @@ hdrBrightness(brightness: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| brightness | number | 是 | HDR视频的亮度。取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。   **0.0**表示视频按照SDR亮度显示，**1.0**表示视频按照当前允许的最高HDR亮度显示。默认值：**1.0**。 |
+| brightness | number | 是 | HDR视频的亮度。默认值：1.0取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。 0.0表示视频按照SDR亮度显示，1.0表示视频按照当前允许的最高HDR亮度显示。 |
 
 ## hdrBrightness
 
@@ -95,12 +97,7 @@ hdrBrightness(brightness: number)
 hdrBrightness(brightness: number, type?: HdrType)
 ```
 
-用于调整组件显示HDR内容时的亮度。当参数type设置为非**HdrType**.DEFAULT时，调用该接口前需先检查Display的hdrFormats属性是否包含对应的HDRFormat。仅当hdrFormats包含对应的HDRFormat时，当前设备才支持对应的HDR类型，参数设置才会生效；否则将使用默认值**HdrType**.DEFAULT。其映射关系如下：  
-| type取值 | hdrFormats需包含的HDRFormat |   
-| -------- | -------- |   
-| **HdrType**.AIHDR | HDRFormat.VIDEO_AIHDR |
-
-**说明：**仅XComponent构造参数中的type为**XComponentType**.SURFACE时该接口生效，否则该接口不生效。
+用于调整组件播放HDR视频的亮度。
 
 **起始版本：** 24
 
@@ -114,7 +111,7 @@ hdrBrightness(brightness: number, type?: HdrType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| brightness | number | 是 | HDR内容的亮度。取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。   **0.0**表示内容按照SDR亮度显示，**1.0**表示内容按照当前允许的最高HDR亮度显示。默认值：**1.0**。 |
+| brightness | number | 是 | HDR视频的亮度。默认值：1.0取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。 0.0表示视频按照SDR亮度显示，1.0表示视频按照当前允许的最高HDR亮度显示。 |
 | type | [HdrType](arkts-arkui-hdrtype-e.md) | 否 | 显示HDR内容时的HDR类型。默认值：**HdrType.DEFAULT |
 
 ## onDestroy
@@ -123,7 +120,7 @@ hdrBrightness(brightness: number, type?: HdrType)
 onDestroy(event: VoidCallback)
 ```
 
-当插件销毁时触发。
+Native卸载完成时回调事件。与onSurfaceDestroyed的区别：onDestroy适用于设置libraryname参数的场景，回调无参数；onSurfaceDestroyed适用于未设置libraryname参数的场景，回调参数为surfaceId。
 
 **起始版本：** 8
 
@@ -135,7 +132,7 @@ onDestroy(event: VoidCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | XComponent销毁后的回调。<br>**起始版本：** 18 |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 是 | Native卸载完成时回调事件。<br>**起始版本：** 18 |
 
 ## onLoad
 
@@ -143,7 +140,7 @@ onDestroy(event: VoidCallback)
 onLoad(callback: OnNativeLoadCallback)
 ```
 
-插件加载完成时回调事件。
+Native加载完成时回调事件。
 
 **起始版本：** 8
 
@@ -155,4 +152,4 @@ onLoad(callback: OnNativeLoadCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | 是 | 插件加载完成时回调事件，用于获取XComponent实例对象的context。<br>**起始版本：** 18 |
+| callback | [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md) | 是 | Native加载完成时回调事件，用于获取XComponent实例对象的context。<br>**起始版本：** 18 |

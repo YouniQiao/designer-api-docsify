@@ -1,6 +1,6 @@
 # ProgressDetails
 
-Describes detail of the cloud sync {@code Progress}.
+Describes detail of the cloud sync `Progress`.
 
 **Since:** 10
 

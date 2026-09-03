@@ -172,7 +172,7 @@ try {
 disableAutoPlay(deviceId: string, duration: number): Promise<void>
 ```
 
-Restriction devices to play music within {@code duration} milliseconds of connection.
+Restriction devices to play music within `duration` milliseconds of connection.
 
 **Since:** 12
 

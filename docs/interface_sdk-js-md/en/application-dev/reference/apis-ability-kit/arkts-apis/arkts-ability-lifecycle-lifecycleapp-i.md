@@ -45,7 +45,7 @@ Called back when a local ability migration is complete. <p>You can define the pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | number | Yes | Indicates the migration result code. The value {@code 0} indicates that the migration is successful, and {@code -1} indicates that the migration fails. |
+| result | number | Yes | Indicates the migration result code. The value `0` indicates that the migration is successful, and `-1` indicates that the migration fails. |
 
 ## onCreate
 
@@ -141,7 +141,7 @@ Called when the launch mode of an ability is set to singleton.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the new {@code want} containing information about the ability. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the new `want` containing information about the ability. |
 
 ## onRemoteTerminated
 
@@ -175,7 +175,7 @@ This method is called if an ability was destroyed at a certain time due to resou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inState | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes | Indicates the {@code PacMap} object used for storing data and states. This parameter can not be null. |
+| inState | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes | Indicates the `PacMap` object used for storing data and states. This parameter can not be null. |
 
 ## onRestoreData
 
@@ -215,7 +215,7 @@ This method is called when the system determines that the ability may be destroy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outState | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes | Indicates the {@code PacMap} object used for storing user data and states. This parameter cannot be null. |
+| outState | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes | Indicates the `PacMap` object used for storing user data and states. This parameter cannot be null. |
 
 ## onSaveData
 

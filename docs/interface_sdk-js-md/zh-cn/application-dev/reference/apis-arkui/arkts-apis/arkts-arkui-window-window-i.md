@@ -136,7 +136,12 @@ convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, valu
 > 
 > 
 
-| 屏幕角度 | 屏幕方向 | 窗口方向 | | ------- | ------- | ------- | | 0 | PORTRAIT | PORTRAIT | | 90 | LANDSCAPE | LANDSCAPE_INVERTED | | 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED | | 270 | LANDSCAPE_INVERTED | LANDSCAPE |
+| 屏幕角度 | 屏幕方向 | 窗口方向 |  
+| ------- | ------- | ------- |  
+| 0 | PORTRAIT | PORTRAIT |
+| 90 | LANDSCAPE | LANDSCAPE_INVERTED |
+| 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED |
+| 270 | LANDSCAPE_INVERTED | LANDSCAPE |
 
 **起始版本：** 23
 
@@ -3906,7 +3911,11 @@ moveWindowToAsync(x: number, y: number): Promise<void>
 
 在自由悬浮窗口模式下，不同类型窗口的移动行为如下：
 
-| 窗口类型 | [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态 | 非自由窗口状态 | |---------|---------------|-----------------| | 主窗口 | 相对于屏幕移动 | 调用不生效不报错 | | 应用子窗口/模态窗 | 相对于屏幕移动 | 相对于主窗口移动 | | 系统窗口/全局悬浮窗 | 相对于屏幕移动 | 相对于屏幕移动 |
+| 窗口类型 | [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态 | 非自由窗口状态 |  
+|---------|---------------|-----------------|  
+| 主窗口 | 相对于屏幕移动 | 调用不生效不报错 |
+| 应用子窗口/模态窗 | 相对于屏幕移动 | 相对于主窗口移动 |
+| 系统窗口/全局悬浮窗 | 相对于屏幕移动 | 相对于屏幕移动 |
 
 > **说明：**
 > 
@@ -3972,7 +3981,11 @@ moveWindowToAsync(x: number, y: number, moveConfiguration?: MoveConfiguration): 
 
 在自由悬浮窗口模式下，不同类型窗口的移动行为如下：
 
-| 窗口类型 | [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态 | 非自由窗口状态 | |---------|---------------|-----------------| | 主窗口 | 相对于屏幕移动 | 调用不生效不报错 | | 应用子窗口/模态窗 | 相对于屏幕移动 | 相对于主窗口移动 | | 系统窗口/全局悬浮窗 | 相对于屏幕移动 | 相对于屏幕移动 |
+| 窗口类型 | [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态 | 非自由窗口状态 |  
+|---------|---------------|-----------------|  
+| 主窗口 | 相对于屏幕移动 | 调用不生效不报错 |
+| 应用子窗口/模态窗 | 相对于屏幕移动 | 相对于主窗口移动 |
+| 系统窗口/全局悬浮窗 | 相对于屏幕移动 | 相对于屏幕移动 |
 
 > **说明：**
 > 
@@ -5140,7 +5153,7 @@ on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
 
 开启窗口帧率指标变化事件的监听。该接口需要在[loadContent()](#loadcontent)或[setUIContent()](#setuicontent)调用生效后使用。
 
-应用注册帧率变化监听后，只有当客户端UI内容发生重绘时（如页面切换、和可响应组件交互、设置背景色和透明度等），才会触发注册的回调。但当同时使用该接口和[postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)、[postDelayedFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postdelayedframecallback)、displaySync.on('frame')中的任意一个时，即使无UI内容重绘，也可能触发回调。
+应用注册帧率变化监听后，只有当客户端UI内容发生重绘时（如页面切换、和可响应组件交互、设置背景色和透明度等），才会触发注册的回调。但当同时使用该接口和[postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)、[postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback)、displaySync.on('frame')中的任意一个时，即使无UI内容重绘，也可能触发回调。
 
 **起始版本：** 22
 

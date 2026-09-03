@@ -33,5 +33,5 @@ Called when the window display mode of this ability changes, for example, from f
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShownInMultiWindow | boolean | Yes | Specifies whether this ability is currently in multi-window mode.The value {@code true} indicates the multi-window mode, and {@code false} indicates another mode. |
+| isShownInMultiWindow | boolean | Yes | Specifies whether this ability is currently in multi-window mode.The value `true` indicates the multi-window mode, and `false` indicates another mode. |
 | newConfig | resourceManager.Configuration | Yes | Indicates the new configuration information about Page ability. |

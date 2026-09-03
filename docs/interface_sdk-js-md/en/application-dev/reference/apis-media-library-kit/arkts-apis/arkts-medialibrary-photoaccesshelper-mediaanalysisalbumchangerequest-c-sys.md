@@ -380,7 +380,33 @@ setRelationship(relationship: string): Promise<void>
 
 Sets the relationships of a person in the portrait album.
 
-The supported relationship names include: | Unique ID | Description | | ---------- | ------- | | me | Me| | son | Son| | daughter | Daughter| | wife | Wife| | husband | Husband| | father | Father| | mother | Mother| | colleague | Colleague| | friend | Friend| | classmate | Classmate| | best_friend_female | Best female friend| | boyfriend | Boyfriend| | girlfriend | Girlfriend| | family | Family| | maternal_grandfather | Maternal grandfather| | maternal_grandmother | Maternal grandmother| | paternal_grandfather | Paternal grandfather| | paternal_grandmother | Paternal grandmother| | older_brother | Older brother| | older_sister | Older sister| | younger_brother | Younger brother| | younger_sister | Younger sister| | relative | Relative| | other | Other|
+The supported relationship names include:  
+| Unique ID | Description |  
+| ---------- | ------- |  
+| me | Me|
+| son | Son|
+| daughter | Daughter|
+| wife | Wife|
+| husband | Husband|
+| father | Father|
+| mother | Mother|
+| colleague | Colleague|
+| friend | Friend|
+| classmate | Classmate|
+| best_friend_female | Best female friend|
+| boyfriend | Boyfriend|
+| girlfriend | Girlfriend|
+| family | Family|
+| maternal_grandfather | Maternal grandfather|
+| maternal_grandmother | Maternal grandmother|
+| paternal_grandfather | Paternal grandfather|
+| paternal_grandmother | Paternal grandmother|
+| older_brother | Older brother|
+| older_sister | Older sister|
+| younger_brother | Younger brother|
+| younger_sister | Younger sister|
+| relative | Relative|
+| other | [Other](../../apis-arkweb/arkts-components/arkts-arkweb-contextmenuinputfieldtype-e.md) |
 
 **Since:** 21
 

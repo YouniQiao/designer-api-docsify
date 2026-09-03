@@ -24,7 +24,7 @@ type OnRequestEventCallback = (source: Want, name: string, data: KVObject) => Re
 
 | 类型 | 说明 |
 | --- | --- |
-| [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | 返回request事件结果。 |
+| [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | 注册request监听方法后，接收到请求事件时回应请求的数据类型。 |
 
 **示例**
 

@@ -173,7 +173,7 @@ Enable bluetooth tethering. On API 10 and above, the permission required by this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Specifies whether to enable tethering. The value {@code true} indicates that tethering is enabled, and the value {@code false} indicates that tethering is disabled. |
+| enable | boolean | Yes | Specifies whether to enable tethering. The value `true` indicates that tethering is enabled, and the value `false` indicates that tethering is disabled. |
 
 **Error codes:**
 

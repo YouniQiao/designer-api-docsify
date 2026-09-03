@@ -137,7 +137,7 @@ Starts scanning for specified BLE devices with filters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filters | Array&lt;ScanFilter&gt; | Yes | Indicates the list of filters used to filter out specified devices. If you do not want to use filter, set this parameter to {@code null}. |
+| filters | Array&lt;ScanFilter&gt; | Yes | Indicates the list of filters used to filter out specified devices. If you do not want to use filter, set this parameter to `null`. |
 | options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-ble-scanoptions-i.md#interval) set to 0, and [dutyMode](arkts-connectivity-ble-scanoptions-i.md#dutymode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#scan_mode_low_power) and [matchMode](arkts-connectivity-ble-scanoptions-i.md#matchmode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-ble-matchmode-e.md#match_mode_aggressive). and [phyType](arkts-connectivity-ble-scanoptions-i.md#phytype) set to [PHY_LE_ALL_SUPPORTED](arkts-connectivity-ble-phytype-e.md#phy_le_all_supported). and [reportMode](arkts-connectivity-ble-scanoptions-i.md#reportmode) set to [NORMAL](arkts-connectivity-ble-scanreportmode-e.md#normal). |
 
 **Return value:**

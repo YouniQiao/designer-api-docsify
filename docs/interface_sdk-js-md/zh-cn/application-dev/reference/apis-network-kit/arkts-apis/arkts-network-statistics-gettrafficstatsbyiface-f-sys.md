@@ -83,7 +83,9 @@ function getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise<NetStatsInfo>
 
 获取指定网卡历史流量信息，使用 Promise 异步回调。
 
-| 参数名 | 类型 | 必填 | 说明 | | --------- | ------------------------- | ---- | --------------------------------------------------- | | ifaceInfo | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | 是 | 指定查询的网卡信息，参见[IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md)。 |
+| 参数名 | 类型 | 必填 | 说明 |  
+| --------- | ------------------------- | ---- | --------------------------------------------------- |  
+| ifaceInfo | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | 是 | 指定查询的网卡信息，参见[IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md)。 |
 
 **起始版本：** 10
 

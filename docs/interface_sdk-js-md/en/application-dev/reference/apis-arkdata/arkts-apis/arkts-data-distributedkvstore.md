@@ -69,8 +69,8 @@ import { distributedKVStore } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [KVStoreType](arkts-arkdata-distributedkvstore-kvstoretype-e.md) | Enumerates the distributed KV store types. \| Name \| Value\| Description \| \| -------------------- \| - \| ------------------------------------------------------------ \| \| DEVICE_COLLABORATION \| 0 \| Device KV store.The device KV store manages data by device, which eliminates conflicts. Data can be queried by device.  **System capability**: SystemCapability.DistributedDataManager.KVStore.DistributedKVStore\| \| SINGLE_VERSION \| 1 \| Single KV store.The single KV store does not differentiate data by device. If entries with the same key are modified on different devices, the value will be overwritten.  **System capability**: SystemCapability.DistributedDataManager.KVStore.Core\| |
+| [KVStoreType](arkts-arkdata-distributedkvstore-kvstoretype-e.md) | Enumerates the distributed KV store types.  \| Name \| Value\| Description \|  \| -------------------- \| - \| ------------------------------------------------------------ \|  \| DEVICE_COLLABORATION \| 0 \| Device KV store.The device KV store manages data by device, which eliminates conflicts. Data can be queried by device.  **System capability**: SystemCapability.DistributedDataManager.KVStore.DistributedKVStore\|  \| SINGLE_VERSION \| 1 \| Single KV store.The single KV store does not differentiate data by device. If entries with the same key are modified on different devices, the value will be overwritten.  **System capability**: SystemCapability.DistributedDataManager.KVStore.Core\| |
 | [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md) | Enumerates the KV store security levels. |
 | [SubscribeType](arkts-arkdata-distributedkvstore-subscribetype-e.md) | Enumerates the subscription types. |
 | [SyncMode](arkts-arkdata-distributedkvstore-syncmode-e.md) | Enumerates the sync modes. |
-| [ValueType](arkts-arkdata-distributedkvstore-valuetype-e.md) | Indicates the {@code ValueType}. |
+| [ValueType](arkts-arkdata-distributedkvstore-valuetype-e.md) | Indicates the `ValueType`. |

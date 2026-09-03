@@ -1,6 +1,6 @@
 # ProgressCode
 
-Describes the status of {@code Progress}.
+Describes the status of `Progress`.
 
 **Since:** 10
 

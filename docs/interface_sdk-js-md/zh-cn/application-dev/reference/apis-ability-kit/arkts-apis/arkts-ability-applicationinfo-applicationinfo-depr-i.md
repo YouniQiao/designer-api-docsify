@@ -142,7 +142,7 @@ readonly entryDir: string
 
 **类型：** string
 
-**默认值：** Indicates the path where the {@code Entry.hap} file of the application is saved
+**默认值：** Indicates the path where the `Entry.hap` file of the application is saved
 
 **起始版本：** 7
 
@@ -300,7 +300,7 @@ readonly name: string
 
 **类型：** string
 
-**默认值：** Indicates the application name, which is the same as {@code bundleName}
+**默认值：** Indicates the application name, which is the same as `bundleName`
 
 **起始版本：** 7
 

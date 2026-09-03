@@ -75,7 +75,21 @@ Otherwise, compression cannot be performed.
 2. Only the punctuations within the punctuation compression range at the beginning of a line
 are in the scope of this feature.
 
-Punctuation range at the beginning of a line. | Punctuation| Unicode Code Point| Unicode Name| |---------|---------|-------------| | 「| U+300C | LEFT CORNER BRACKET | | 『| U+300E | LEFT WHITE CORNER BRACKET | | " | U+201C | LEFT DOUBLE QUOTATION MARK | | ' | U+2018 | LEFT SINGLE QUOTATION MARK | | （| U+FF08 | FULLWIDTH LEFT PARENTHESIS | | 《| U+300A | LEFT DOUBLE ANGLE BRACKET | | 〈| U+3008 | LEFT ANGLE BRACKET | | 【| U+3010 | LEFT BLACK LENTICULAR BRACKET | | 〖| U+3016 | LEFT WHITE LENTICULAR BRACKET | | 〔| U+3014 | LEFT TORTOISE SHELL BRACKET | | ［| U+FF3B | FULLWIDTH LEFT SQUARE BRACKET | | ｛| U+FF5B | FULLWIDTH LEFT CURLY BRACKET |
+Punctuation range at the beginning of a line.  
+| Punctuation| Unicode Code Point| Unicode Name|  
+|---------|---------|-------------|  
+| 「| U+300C | LEFT CORNER BRACKET |
+| 『| U+300E | LEFT WHITE CORNER BRACKET |
+| " | U+201C | LEFT DOUBLE QUOTATION MARK |
+| ' | U+2018 | LEFT SINGLE QUOTATION MARK |
+| （| U+FF08 | FULLWIDTH LEFT PARENTHESIS |
+| 《| U+300A | LEFT DOUBLE ANGLE BRACKET |
+| 〈| U+3008 | LEFT ANGLE BRACKET |
+| 【| U+3010 | LEFT BLACK LENTICULAR BRACKET |
+| 〖| U+3016 | LEFT WHITE LENTICULAR BRACKET |
+| 〔| U+3014 | LEFT TORTOISE SHELL BRACKET |
+| ［| U+FF3B | FULLWIDTH LEFT SQUARE BRACKET |
+| ｛| U+FF5B | FULLWIDTH LEFT CURLY BRACKET |
 
 **Type:** boolean
 

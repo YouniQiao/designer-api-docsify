@@ -53,7 +53,7 @@ Define whether to gather selected items in grid or list when item is number pres
 enableTwoFingerMultiSelect?: boolean
 ```
 
-Enable two-finger swipe multi-selection. {@code true} indicates that two-finger swiping can enter edit mode and perform multi-selection. {@code false} indicates that two-finger swiping cannot perform multi-selection.
+Enable two-finger swipe multi-selection. `true` indicates that two-finger swiping can enter edit mode and perform multi-selection. `false` indicates that two-finger swiping cannot perform multi-selection.
 
 **Type:** boolean
 
@@ -73,7 +73,7 @@ Enable two-finger swipe multi-selection. {@code true} indicates that two-finger 
 useDefaultMultiSelectStyle?: boolean
 ```
 
-Use default multi-select style. {@code true} indicates that the check box is displayed for GridItem or ListItem after entering the multi-select state. {@code false} indicates that there is no default style after entering the multi-select state.
+Use default multi-select style. `true` indicates that the check box is displayed for GridItem or ListItem after entering the multi-select state. `false` indicates that there is no default style after entering the multi-select state.
 
 **Type:** boolean
 

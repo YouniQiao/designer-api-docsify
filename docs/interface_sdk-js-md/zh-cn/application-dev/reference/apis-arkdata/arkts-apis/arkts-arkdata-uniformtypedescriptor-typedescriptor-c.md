@@ -319,7 +319,7 @@ set referenceURL(value: string)
 set typeId(value: string)
 ```
 
-标准化数据类型的ID（即{@code UniformDataType}中各类型对应的UTD-ID），也可以是自定义UTD。自定义UTD建议使用反向域名格式（如'com.example.mytype'）。
+标准化数据类型的ID（即`UniformDataType`中各类型对应的UTD-ID），也可以是自定义UTD。自定义UTD建议使用反向域名格式（如'com.example.mytype'）。
 
 **类型：** string
 

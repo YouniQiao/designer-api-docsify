@@ -1,7 +1,11 @@
 # PanelType
 
-Enumerates the types of the input method panel.  
- | Name | Value| Description | | ------------ | -- | ------------------ | | SOFT_KEYBOARD | 0 | Soft keyboard type.| | STATUS_BAR | 1 | Status bar type.|
+Enumerates the types of the input method panel.
+
+| Name | Value| Description |  
+| ------------ | -- | ------------------ |  
+| SOFT_KEYBOARD | 0 | Soft keyboard type.|
+| STATUS_BAR | 1 | Status bar type.|
 
 **Since:** 10
 

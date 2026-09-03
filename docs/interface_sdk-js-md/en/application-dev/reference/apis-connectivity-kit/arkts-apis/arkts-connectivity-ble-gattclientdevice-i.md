@@ -1490,7 +1490,7 @@ Enables or disables indication of a characteristic when value changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
-| enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that indication is enabled, and the value {@code false} indicates that indication is disabled. |
+| enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value `true` indicates that indication is enabled, and the value `false` indicates that indication is disabled. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCharacteristicChangeIndication. |
 
 **Error codes:**
@@ -1558,7 +1558,7 @@ Enables or disables indication of a characteristic when value changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
-| enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that indication is enabled, and the value {@code false} indicates that indication is disabled. |
+| enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value `true` indicates that indication is enabled, and the value `false` indicates that indication is disabled. |
 
 **Return value:**
 
@@ -1629,7 +1629,7 @@ Enables or disables notification of a characteristic when value changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
-| enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that notification is enabled, and the value {@code false} indicates that indication is disabled. |
+| enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value `true` indicates that notification is enabled, and the value `false` indicates that indication is disabled. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setCharacteristicChangeNotification. |
 
 **Error codes:**
@@ -1697,7 +1697,7 @@ Enables or disables indication of a characteristic when value changed.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | characteristic | BLECharacteristic | Yes | Indicates the characteristic to indicate. |
-| enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value {@code true} indicates that indication is enabled, and the value {@code false} indicates that indication is disabled. |
+| enable | boolean | Yes | Specifies whether to enable indication of the characteristic. The value `true` indicates that indication is enabled, and the value `false` indicates that indication is disabled. |
 
 **Return value:**
 

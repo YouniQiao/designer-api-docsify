@@ -117,7 +117,7 @@ try {
 backupEx(backupConfig: BackupConfig): Promise<void>
 ```
 
-Backs up a database by specifying {@code BackupConfig}.
+Backs up a database by specifying `BackupConfig`.
 
 **Since:** 24
 
@@ -129,7 +129,7 @@ Backs up a database by specifying {@code BackupConfig}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backupConfig | [BackupConfig](arkts-arkdata-distributedkvstore-backupconfig-i.md) | Yes | Indicates the {@code BackupConfig} object for backup database. |
+| backupConfig | [BackupConfig](arkts-arkdata-distributedkvstore-backupconfig-i.md) | Yes | Indicates the `BackupConfig` object for backup database. |
 
 **Return value:**
 
@@ -593,7 +593,7 @@ try {
 deleteBackupEx(backupConfig: BackupConfig): Promise<void>
 ```
 
-Delete database backup file by specifying {@code BackupConfig}.
+Delete database backup file by specifying `BackupConfig`.
 
 **Since:** 24
 
@@ -605,7 +605,7 @@ Delete database backup file by specifying {@code BackupConfig}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backupConfig | [BackupConfig](arkts-arkdata-distributedkvstore-backupconfig-i.md) | Yes | Indicates the {@code BackupConfig} object for delete backup file. |
+| backupConfig | [BackupConfig](arkts-arkdata-distributedkvstore-backupconfig-i.md) | Yes | Indicates the `BackupConfig` object for delete backup file. |
 
 **Return value:**
 
@@ -2963,7 +2963,7 @@ try {
 restoreEx(backupConfig: BackupConfig): Promise<void>
 ```
 
-Restores a database by specifying {@code BackupConfig}.
+Restores a database by specifying `BackupConfig`.
 
 **Since:** 24
 
@@ -2975,7 +2975,7 @@ Restores a database by specifying {@code BackupConfig}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backupConfig | [BackupConfig](arkts-arkdata-distributedkvstore-backupconfig-i.md) | Yes | Indicates the {@code BackupConfig} object for restore database. |
+| backupConfig | [BackupConfig](arkts-arkdata-distributedkvstore-backupconfig-i.md) | Yes | Indicates the `BackupConfig` object for restore database. |
 
 **Return value:**
 

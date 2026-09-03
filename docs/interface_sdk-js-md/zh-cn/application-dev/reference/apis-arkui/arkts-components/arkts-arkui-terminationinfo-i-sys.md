@@ -1,6 +1,6 @@
 # TerminationInfo（系统接口）
 
-用于表示被拉起的UIExtensionAbility通过调用terminateSelfWithResult或者terminateSelf正常退出时的返回结果。
+用于表示被拉起的UIExtensionAbility通过调用`terminateSelfWithResult`或者`terminateSelf`正常退出时的返回结果。
 
 **起始版本：** 12
 

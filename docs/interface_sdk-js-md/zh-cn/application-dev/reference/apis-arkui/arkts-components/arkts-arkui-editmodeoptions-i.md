@@ -55,7 +55,7 @@ enableGatherSelectedItemsAnimation?: boolean
 enableTwoFingerMultiSelect?: boolean
 ```
 
-启用双指滑动多选。{@code true}表示双指滑动可以进入编辑模式，进行多选操作。{@code false}表示两指滑动不支持多指滑动。
+启用双指滑动多选。`true`表示双指滑动可以进入编辑模式，进行多选操作。`false`表示两指滑动不支持多指滑动。
 
 **类型：** boolean
 
@@ -75,7 +75,7 @@ enableTwoFingerMultiSelect?: boolean
 useDefaultMultiSelectStyle?: boolean
 ```
 
-使用默认的多选样式。{@code true}表示进入多选状态后为GridItem或ListItem显示复选框。{@code false}表示进入多选状态后没有默认样式。
+使用默认的多选样式。`true`表示进入多选状态后为GridItem或ListItem显示复选框。`false`表示进入多选状态后没有默认样式。
 
 **类型：** boolean
 

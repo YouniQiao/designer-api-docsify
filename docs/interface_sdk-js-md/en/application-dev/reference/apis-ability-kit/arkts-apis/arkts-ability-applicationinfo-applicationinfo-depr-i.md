@@ -143,7 +143,7 @@ Path for storing application files. Do not access resource files using concatena
 
 **Type:** string
 
-**Default:** Indicates the path where the {@code Entry.hap} file of the application is saved
+**Default:** Indicates the path where the `Entry.hap` file of the application is saved
 
 **Since:** 7
 
@@ -301,7 +301,7 @@ Application name.
 
 **Type:** string
 
-**Default:** Indicates the application name, which is the same as {@code bundleName}
+**Default:** Indicates the application name, which is the same as `bundleName`
 
 **Since:** 7
 

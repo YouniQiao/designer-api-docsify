@@ -18,7 +18,7 @@ import { relationalStore } from '@kit.ArkData';
 download: Statistic
 ```
 
-Describes the {@code Statistic} details of the download process.
+Describes the `Statistic` details of the download process.
 
 **Type:** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 
@@ -32,7 +32,7 @@ Describes the {@code Statistic} details of the download process.
 upload: Statistic
 ```
 
-Describes the {@code Statistic} details of the upload process.
+Describes the `Statistic` details of the upload process.
 
 **Type:** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 

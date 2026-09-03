@@ -18,7 +18,7 @@ import { ble } from '@kit.ConnectivityKit';
 autoConnect?: boolean
 ```
 
-Indicates whether to automatically connect to the remote device, default is {@code false}
+Indicates whether to automatically connect to the remote device, default is `false`
 
 **Type:** boolean
 
@@ -36,7 +36,7 @@ Indicates whether to automatically connect to the remote device, default is {@co
 transport?: BluetoothTransport
 ```
 
-Transport of the connection, default is {@code TRANSPORT_LE}
+Transport of the connection, default is `TRANSPORT_LE`
 
 **Type:** BluetoothTransport
 

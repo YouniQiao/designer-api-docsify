@@ -54,7 +54,7 @@ Time of delay for reporting the scan result
 isExtended?: boolean
 ```
 
-Indicates whether the scan is extended, default is {@code false}
+Indicates whether the scan is extended, default is `false`
 
 **Type:** boolean
 

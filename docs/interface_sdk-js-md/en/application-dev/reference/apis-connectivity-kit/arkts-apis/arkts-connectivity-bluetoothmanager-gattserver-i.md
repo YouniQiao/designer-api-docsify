@@ -97,7 +97,7 @@ try {
 close(): void
 ```
 
-Closes this {@code GattServer} object and unregisters its callbacks. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Closes this `GattServer` object and unregisters its callbacks. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -880,7 +880,7 @@ Starts BLE advertising. On API 10 and above, the permission required by this int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| setting | AdvertiseSetting | Yes | Indicates the settings for BLE advertising. If you need to use the default value, set this parameter to {@code null}. |
+| setting | AdvertiseSetting | Yes | Indicates the settings for BLE advertising. If you need to use the default value, set this parameter to `null`. |
 | advData | AdvertiseData | Yes | Indicates the advertising data. |
 | advResponse | AdvertiseData | No | Indicates the scan response associated with the advertising data. |
 

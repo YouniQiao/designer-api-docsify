@@ -77,7 +77,7 @@ import { relationalStore } from '@kit.ArkData';
 | [CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md) | Represents the configuration of database encryption parameters. This configuration is valid only when **encrypt** of **StoreConfig** is set to **true** or the key is not empty. |
 | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md) | Defines a struct for distributed configuration of a table. |
 | [ExceptionMessage](arkts-arkdata-relationalstore-exceptionmessage-i.md) | Represents an exception message about the SQL statement executed by the database. |
-| [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) | Describes detail of the cloud sync {@code Progress}. |
+| [ProgressDetails](arkts-arkdata-relationalstore-progressdetails-i.md) | Describes detail of the cloud sync `Progress`. |
 | [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md) | Provides APIs for managing data in an RDB store. |
 | [Result](arkts-arkdata-relationalstore-result-i.md) | Records the number of affected data rows and the result set. |
 | [ResultSet](arkts-arkdata-relationalstore-resultset-i.md) | Provides APIs to access the result set obtained by querying the RDB store. This result set is the collection of results returned with the **query()** method called. |
@@ -122,7 +122,7 @@ import { relationalStore } from '@kit.ArkData';
 | [KdfAlgo](arkts-arkdata-relationalstore-kdfalgo-e.md) | Enumerates the PBKDF2 algorithms for the database. Use the enum name rather than the enum value. |
 | [Origin](arkts-arkdata-relationalstore-origin-e.md) | Enumerates the data sources. Use the enum name rather than the enum value. |
 | [Progress](arkts-arkdata-relationalstore-progress-e.md) | Enumerates the stages in the device-cloud sync progress. Use the enum name rather than the enum value. |
-| [ProgressCode](arkts-arkdata-relationalstore-progresscode-e.md) | Describes the status of {@code Progress}. |
+| [ProgressCode](arkts-arkdata-relationalstore-progresscode-e.md) | Describes the status of `Progress`. |
 | [RebuildType](arkts-arkdata-relationalstore-rebuildtype-e.md) | Enumerates the RDB store rebuild types. Use the enum name rather than the enum value. |
 | [SecurityLevel](arkts-arkdata-relationalstore-securitylevel-e.md) | Enumerates the KV store security levels. Use the enum name rather than the enum value. You cannot change the security level of an RDB store from a higher level to a lower one. |
 | [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md) | Enumerates the subscription types. Use the enum name rather than the enum value. |

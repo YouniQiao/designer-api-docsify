@@ -4,7 +4,7 @@
 declare type AccessibilityActionInterceptCallback = (action: AccessibilityAction) => AccessibilityActionInterceptResult
 ```
 
-定义在可访问性操作拦截中使用的回调类型。action的值表示可访问性动作类型。
+定义onAccessibilityActionIntercept中使用的回调类型。
 
 **起始版本：** 20
 
@@ -20,10 +20,10 @@ declare type AccessibilityActionInterceptCallback = (action: AccessibilityAction
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | [AccessibilityAction](arkts-arkui-accessibilityaction-e.md) | 是 | 可访问性操作类型的枚举。 |
+| action | [AccessibilityAction](arkts-arkui-accessibilityaction-e.md) | 是 | 当前触发的无障碍控制操作类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [AccessibilityActionInterceptResult](arkts-arkui-accessibilityactioninterceptresult-e.md) | 继续执行操作、中断操作或事件冒泡的结果 |
+| [AccessibilityActionInterceptResult](arkts-arkui-accessibilityactioninterceptresult-e.md) | 无障碍控制操作拦截结果，用于决定是否拦截当前组件的无障碍控制操作及后续处理方式。 |

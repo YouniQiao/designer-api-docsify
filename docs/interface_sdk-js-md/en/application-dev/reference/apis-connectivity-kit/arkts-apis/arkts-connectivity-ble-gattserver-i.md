@@ -89,7 +89,7 @@ try {
 close(): void
 ```
 
-Closes this {@code GattServer} object and unregisters its callbacks.
+Closes this `GattServer` object and unregisters its callbacks.
 
 **Since:** 10
 
@@ -156,7 +156,7 @@ Connects to a BLE central device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| autoConnect | boolean | No | Indicates whether to automatically connect to the remote device. If {@code true}, it will automatically connect when the remote device is available, default is {@code false}. |
+| autoConnect | boolean | No | Indicates whether to automatically connect to the remote device. If `true`, it will automatically connect when the remote device is available, default is `false`. |
 
 **Error codes:**
 

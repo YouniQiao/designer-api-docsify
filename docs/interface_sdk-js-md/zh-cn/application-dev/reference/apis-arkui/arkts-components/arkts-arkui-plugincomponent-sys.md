@@ -40,4 +40,4 @@ PluginComponent(options: PluginComponentOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [PluginErrorCallback](arkts-arkui-pluginerrorcallback-t-sys.md) | 发生错误时触发的回调。 |
+| [PluginErrorCallback](arkts-arkui-pluginerrorcallback-t-sys.md) | 发生错误时触发事件回调。 |

@@ -162,7 +162,7 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | predicates | dataSharePredicates.DataSharePredicates | Yes | Indicates the datasharePredicates. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | {KVStoreResultSet}: the {@code KVStoreResultSet} object matching the specified {@code dataSharePredicates.DataSharePredicates} object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md)&gt; | Yes | {KVStoreResultSet}: the `KVStoreResultSet` object matching the specified `dataSharePredicates.DataSharePredicates` object. |
 
 **Error codes:**
 
@@ -717,7 +717,7 @@ See [getResultSet](#getresultset)
 putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void
 ```
 
-Writes values of ValuesBucket type into the {@code SingleKVStore} database.
+Writes values of ValuesBucket type into the `SingleKVStore` database.
 
 **Since:** 9
 
@@ -831,7 +831,7 @@ try {
 putBatch(value: Array<ValuesBucket>): Promise<void>
 ```
 
-Writes values of ValuesBucket type into the {@code SingleKVStore} database.
+Writes values of ValuesBucket type into the `SingleKVStore` database.
 
 **Since:** 9
 

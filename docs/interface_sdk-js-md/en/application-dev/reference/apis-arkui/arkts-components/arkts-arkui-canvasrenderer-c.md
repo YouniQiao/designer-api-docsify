@@ -2783,7 +2783,19 @@ Sets the composite operation. This attribute is write-only. You can set its valu
 
 Available values are as follows:
 
-| Name | Description | | ------ | ------ | | source-over | Displays the new drawing above the existing drawing. Default value. | | source-atop | Displays the new drawing on the top of the existing drawing. | | source-in | Displays the new drawing inside the existing drawing. | | source-out | Displays part of the new drawing that is outside of the existing drawing. | | destination-over | Displays the existing drawing above the new drawing. | | destination-atop | Displays the existing drawing on the top of the new drawing. | | destination-in | Displays the existing drawing inside the new drawing. | | destination-out | Displays the existing drawing outside the new drawing. | | lighter | Displays both the new and existing drawing. | | copy | Displays the new drawing and neglects the existing drawing. | | xor | Combines the new drawing and existing drawing using the XOR operation. |
+| Name | Description |  
+| ------ | ------ |  
+| source-over | Displays the new drawing above the existing drawing. Default value. |
+| source-atop | Displays the new drawing on the top of the existing drawing. |
+| source-in | Displays the new drawing inside the existing drawing. |
+| source-out | Displays part of the new drawing that is outside of the existing drawing. |
+| destination-over | Displays the existing drawing above the new drawing. |
+| destination-atop | Displays the existing drawing on the top of the new drawing. |
+| destination-in | Displays the existing drawing inside the new drawing. |
+| destination-out | Displays the existing drawing outside the new drawing. |
+| lighter | Displays both the new and existing drawing. |
+| copy | Displays the new drawing and neglects the existing drawing. |
+| xor | Combines the new drawing and existing drawing using the XOR operation. |
 
 Default value: **'source-over'**
 

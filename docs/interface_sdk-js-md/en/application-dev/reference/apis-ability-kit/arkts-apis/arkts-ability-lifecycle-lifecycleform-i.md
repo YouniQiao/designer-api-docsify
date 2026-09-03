@@ -77,7 +77,7 @@ Called to return a FormBindingData object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the detailed information for creating a FormBindingData. The {@code Want} object must include the form ID, form name, and grid style of the form, which can be obtained from IDENTITY_KEY, NAME_KEY, and DIMENSION_KEY, respectively. Such form information must be managed as persistent data for further form acquisition, update, and deletion. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the detailed information for creating a FormBindingData. The `Want` object must include the form ID, form name, and grid style of the form, which can be obtained from IDENTITY_KEY, NAME_KEY, and DIMENSION_KEY, respectively. Such form information must be managed as persistent data for further form acquisition, update, and deletion. |
 
 **Return value:**
 
@@ -124,7 +124,7 @@ Called when a specified message event defined by the form provider is triggered.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Indicates the ID of the form on which the message event is triggered, which is provided by the client to the form provider. |
-| message | string | Yes | Indicates the value of the {@code params} field of the message event. This parameter is used to identify the specific component on which the event is triggered. |
+| message | string | Yes | Indicates the value of the `params` field of the message event. This parameter is used to identify the specific component on which the event is triggered. |
 
 ## onUpdate
 
@@ -164,4 +164,4 @@ Called when the form provider receives form events from the system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newStatus | Record&lt;string, number&gt; | Yes | Indicates the form events occurred. The key in the {@code Map} object indicates form ID,and the value indicates the event type, which can be either [FORM_VISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_visible) or [FORM_INVISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_invisible). [FORM_VISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_visible) means that the form becomes visible, and [FORM_INVISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_invisible) means that the form becomes invisible. |
+| newStatus | Record&lt;string, number&gt; | Yes | Indicates the form events occurred. The key in the `Map` object indicates form ID,and the value indicates the event type, which can be either [FORM_VISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_visible) or [FORM_INVISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_invisible). [FORM_VISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_visible) means that the form becomes visible, and [FORM_INVISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#form_invisible) means that the form becomes invisible. |

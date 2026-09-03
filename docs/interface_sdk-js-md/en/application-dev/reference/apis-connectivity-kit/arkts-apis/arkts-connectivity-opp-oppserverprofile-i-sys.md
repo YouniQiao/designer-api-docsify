@@ -452,7 +452,7 @@ Set the user confirmation information for incoming files.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accept | boolean | Yes | Indicates whether to accept the incoming file, {@code true} indicates accept or {@code false} otherwise. |
+| accept | boolean | Yes | Indicates whether to accept the incoming file, `true` indicates accept or `false` otherwise. |
 | fileFd | number | Yes | : the receive file fd to receive need contains open when accepting. |
 
 **Return value:**

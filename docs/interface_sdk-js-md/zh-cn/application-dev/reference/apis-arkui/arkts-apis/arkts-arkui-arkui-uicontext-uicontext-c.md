@@ -1189,7 +1189,7 @@ struct Index {
 getAtomicServiceBar(): Nullable<AtomicServiceBar>
 ```
 
-Get AtomicServiceBar.
+获取AtomicServiceBar对象，通过该对象设置原子化服务menuBar的属性。
 
 **起始版本：** 11
 
@@ -1203,7 +1203,7 @@ Get AtomicServiceBar.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Nullable](arkts-arkui-nullable-t.md)&lt;[AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
+| [Nullable](arkts-arkui-nullable-t.md)&lt;[AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; | 如果是原子化服务则返回AtomicServiceBar类型，否则返回undefined。 |
 
 **示例**
 

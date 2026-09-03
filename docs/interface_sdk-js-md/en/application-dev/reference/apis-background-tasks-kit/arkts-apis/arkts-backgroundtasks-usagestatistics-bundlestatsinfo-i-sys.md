@@ -162,7 +162,7 @@ The identifier of BundleStatsInfo.
 infosBeginTime?: number
 ```
 
-The time of the first bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. Unit:ms
+The time of the first bundle usage record in this `BundleActiveInfo` object, in milliseconds. Unit:ms
 
 **Type:** number
 
@@ -178,7 +178,7 @@ The time of the first bundle usage record in this {@code BundleActiveInfo} objec
 infosEndTime?: number
 ```
 
-The time of the last bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. Unit:ms
+The time of the last bundle usage record in this `BundleActiveInfo` object, in milliseconds. Unit:ms
 
 **Type:** number
 

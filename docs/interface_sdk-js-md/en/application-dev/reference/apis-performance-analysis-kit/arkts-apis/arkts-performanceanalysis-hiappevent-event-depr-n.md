@@ -2,7 +2,11 @@
 
 Provides constants that define the names of all predefined events.
 
-| Name | Type | Readable| Writable| Description | | ------------------------- | ------ | ---- | ---- | -------------------- | | USER_LOGIN | string | Yes | No | User login event. | | USER_LOGOUT | string | Yes | No | User logout event. | | DISTRIBUTED_SERVICE_START | string | Yes | No | Distributed service startup event.|
+| Name | Type | Readable| Writable| Description |  
+| ------------------------- | ------ | ---- | ---- | -------------------- |  
+| USER_LOGIN | string | Yes | No | User login event. |
+| USER_LOGOUT | string | Yes | No | User logout event. |
+| DISTRIBUTED_SERVICE_START | string | Yes | No | Distributed service startup event.|
 
 **Since:** 7
 

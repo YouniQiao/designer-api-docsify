@@ -322,7 +322,16 @@ Sets the number of elements to display per page.
 When the navigation indicator is set to dot style and the number of child elements displayed in the viewport is greater than 1 (multi-page scenario)<!--RP1--><!--RP1End-->, the number of displayed navigation dots follows the rules below.
 
 | Total Children Count   
-> Visible Children Count|Swiping by Group Enabled|Loop Status|Number of Navigation Dots Displayed| Description| | ------------------------------------------ | ------------ | --------------- | ------------------------- ----------------------------------- | ---------------------------------------- | | Yes | Yes | **loop** set to **true** | Equals the number of groups (calculated by dividing the total number of child elements by the number of visible child elements, with rounding up if there is a remainder).| Not effective when **displayCount** is set to **'auto'**.| | Yes | Yes | **loop** set to **false**| Equals the number of groups (calculated by dividing the total number of child elements by the number of visible child elements, with rounding up if there is a remainder).| Not effective when **displayCount** is set to **'auto'**.| | Yes | No | **loop** set to **true** | Equals the actual number of page turns available (that is, the total number of child elements).| —— | | Yes | No | **loop** set to **false**| Equals the actual number of page turns available (calculated as total number of child elements minus the number of visible child elements, plus 1).| Not effective when **displayCount** is set to **'auto'**.| | No (while the total number of child elements is greater than 0)| —— | —— | 1 | Not effective when **displayCount** is set to **'auto'**.| | No (while the total number of child elements is 0)| —— | —— | 0| —— |
+> Visible Children Count|Swiping by Group Enabled|Loop Status|Number of Navigation
+Dots Displayed| Description|  
+| ------------------------------------------ | ------------ | --------------- | -------------------------  
+----------------------------------- | ---------------------------------------- |  
+| Yes | Yes | **loop** set to **true** | Equals the number of groups(calculated by dividing the total number of child elements by the number of visible child elements, with rounding up if there is a remainder).| Not effective when **displayCount** is set to **'auto'**.|  
+| Yes | Yes | **loop** set to **false**| Equals the number of groups (calculated by dividing the total number of child elements by the number of visible child elements, with rounding up if there is a remainder).| Not effective when **displayCount** is set to **'auto'**.|  
+| Yes | No | **loop** set to **true** | Equals the actual number of page turns available(that is, the total number of child elements).| —— |
+| Yes | No | **loop** set to **false**| Equals the actual number of page turns available(calculated as total number of child elements minus the number of visible child elements, plus 1).| Not effective when **displayCount** is set to **'auto'**.|
+| No (while the total number of child elements is greater than 0)| —— | —— | 1 |Not effective when **displayCount** is set to **'auto'**.|
+| No (while the total number of child elements is 0)| —— | —— | 0| —— |
 
 **Since:** 8
 

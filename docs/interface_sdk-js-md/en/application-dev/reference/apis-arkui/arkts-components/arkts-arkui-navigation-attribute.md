@@ -545,7 +545,13 @@ Sets the minimum and maximum widths of the navigation page (effective in split-c
 
 Divider dragging range:
 
-| Condition| Dragging Range | | ----| ----------- | |Both **navBarWidthRange** and **minContentWidth** are set.| Range set by **navBarWidthRange** if the value set by **minContentWidth** is satisfied| |Neither **navBarWidthRange** nor **minContentWidth** is set.| Default minimum and maximum ranges of **navBarWidthRange**| |Only the **navBarWidthRange** attribute is set.| Range set by **navBarWidthRange**, where the maximum dragging range cannot exceed the default value of **minContentWidth**| |Only the **minContentWidth** attribute is set.| Default minimum and maximum ranges of **navBarWidthRange**| |Only the **navBarWidth** attribute is set.| Dragging not supported|
+| Condition| Dragging Range |  
+| ----| ----------- |  
+|Both **navBarWidthRange** and **minContentWidth** are set.| Range set by **navBarWidthRange**if the value set by **minContentWidth** is satisfied|
+|Neither **navBarWidthRange** nor **minContentWidth** is set.| Default minimum and maximum ranges of **navBarWidthRange**|
+|Only the **navBarWidthRange** attribute is set.| Range set by **navBarWidthRange**,where the maximum dragging range cannot exceed the default value of **minContentWidth**|
+|Only the **minContentWidth** attribute is set.| Default minimum and maximum ranges of **navBarWidthRange**|
+|Only the **navBarWidth** attribute is set.| Dragging not supported|
 
 **Since:** 10
 

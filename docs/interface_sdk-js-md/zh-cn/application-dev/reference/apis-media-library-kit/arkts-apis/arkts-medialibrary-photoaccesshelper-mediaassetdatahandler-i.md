@@ -28,7 +28,9 @@ T支持ArrayBuffer，[ImageSource](../../apis-image-kit/arkts-apis/arkts-image-i
 
 map支持返回的信息：
 
-| map键名 | 值说明 | |----------|-------| | 'quality' | 图片质量。高质量为'high'，低质量为'low'。 |
+| map键名 | 值说明 |  
+|----------|-------|  
+| 'quality' | 图片质量。高质量为'high'，低质量为'low'。 |
 
 **起始版本：** 11
 

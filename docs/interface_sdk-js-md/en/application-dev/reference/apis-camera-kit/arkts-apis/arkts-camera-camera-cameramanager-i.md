@@ -537,7 +537,10 @@ Creates a **VideoOutput** instance. This API returns the result synchronously.
 
 In video recording mode, if SDR or HDR VIVID is enabled, the camera format and color space must be configured according to the relationships specified in the table below. Configurations that do not match the table will cause issues such as preview exceptions.
 
-| SDR/HDR Photo Capture | CameraFormat | ColorSpace | |--------------------|--------------------------|------------------| | SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT | | HDR_VIVID | CAMERA_FORMAT_YCRCB_P010CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG_LIMIT BT2020_HLG_FULL |
+| SDR/HDR Photo Capture | CameraFormat | ColorSpace |  
+|--------------------|--------------------------|------------------|  
+| SDR | [CAMERA_FORMAT_YUV_420_SP](arkts-camera-camera-cameraformat-e.md) | [BT709_LIMIT](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) |
+| HDR_VIVID | CAMERA_FORMAT_YCRCB_P010CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG_LIMIT BT2020_HLG_FULL |
 
 **Since:** 10
 

@@ -94,7 +94,7 @@ Group network ID. When creating a group, -1 indicates creates a temporary group,
 passphrase: string
 ```
 
-The passphrase of this {@code WifiP2pConfig} instance
+The passphrase of this `WifiP2pConfig` instance
 
 **Type:** string
 

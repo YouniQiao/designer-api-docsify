@@ -24,7 +24,7 @@ Enables or disables airplane mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Specifies whether to enable airplane mode. The value {@code true} means to enable airplane mode, and {@code false} means to disable airplane mode. |
+| enable | boolean | Yes | Specifies whether to enable airplane mode. The value `true` means to enable airplane mode, and `false` means to disable airplane mode. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of enableAirplaneMode result. |
 
 **Examples**
@@ -59,7 +59,7 @@ Enables or disables airplane mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Specifies whether to enable airplane mode. The value {@code true} means to enable airplane mode, and {@code false} means to disable airplane mode. |
+| enable | boolean | Yes | Specifies whether to enable airplane mode. The value `true` means to enable airplane mode, and `false` means to disable airplane mode. |
 
 **Return value:**
 

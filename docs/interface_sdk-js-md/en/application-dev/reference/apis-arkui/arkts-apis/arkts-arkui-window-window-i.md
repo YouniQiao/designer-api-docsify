@@ -133,8 +133,13 @@ Window orientation refers to the direction of the screen where the window reside
 > The following figure and table show the relationship between the window orientation, screen orientation, and
 > screen angle of a bar-type device.
 > 
-> 
-> | Screen Angle| Screen Orientation| Window Orientation| | ------- | ------- | ------- | | 0 | PORTRAIT | PORTRAIT | | 90 | LANDSCAPE | LANDSCAPE_INVERTED | | 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED | | 270 | LANDSCAPE_INVERTED | LANDSCAPE |
+>  &gt;
+| Screen Angle| Screen Orientation| Window Orientation|  
+| ------- | ------- | ------- |  
+| 0 | PORTRAIT | PORTRAIT |
+| 90 | LANDSCAPE | LANDSCAPE_INVERTED |
+| 180 | PORTRAIT_INVERTED | PORTRAIT_INVERTED |
+| 270 | LANDSCAPE_INVERTED | LANDSCAPE |
 
 **Since:** 23
 
@@ -3870,7 +3875,11 @@ Moves this window to the specified position. This API uses a promise to return t
 
 This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**). In other window modes, this API returns error code 1300010. (The window mode can be obtained through [getWindowStatus()](#getwindowstatus)). In floating window mode, the movement behavior of different types of windows is as follows.
 
-| Window Type| [Freeform Window](../../../windowmanager/window-terminology.md#freeform-window) State| Non-freeform Window State| |---------|---------------|-----------------| | Main window| Move relative to the screen.| API calls do not take effect or return an error.| | App subwindow/Modal window| Move relative to the screen.| Move relative to the main window.| | System window/Global floating window| Move relative to the screen.| Move relative to the screen.|
+| Window Type| [Freeform Window](../../../windowmanager/window-terminology.md#freeform-window) State| Non-freeform Window State|  
+|---------|---------------|-----------------|  
+| Main window| Move relative to the screen.| API calls do not take effect or return an error.|
+| App subwindow/Modal window| Move relative to the screen.| Move relative to the main window.|
+| System window/Global floating window| Move relative to the screen.| Move relative to the screen.|
 
 > **NOTE：**
 > 

@@ -18,7 +18,10 @@ If no database file exists in the corresponding sandbox directory, a database fi
 
 When creating a database, you should consider whether to configure the [encrypt](arkts-arkdata-relationalstore-storeconfig-i.md) parameter. Once the database is created, you are not allowed to change this parameter.
 
-| Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | Result| | ------- | -------------------------------- | ---- | | Non-encryption| Encryption | The RDB store is opened in encrypted mode. | | Encryption| Non-encryption | The RDB store is opened in non-encrypted mode. |
+| Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | Result|  
+| ------- | -------------------------------- | ---- |  
+| Non-encryption| Encryption | The RDB store is opened in encrypted mode. |
+| Encryption| Non-encryption | The RDB store is opened in non-encrypted mode. |
 
 Currently, **getRdbStore()** does not support multi-thread concurrent operations.
 
@@ -123,7 +126,10 @@ If no database file exists in the corresponding sandbox directory, a database fi
 
 When creating a database, you should consider whether to configure the [encrypt](arkts-arkdata-relationalstore-storeconfig-i.md) parameter. Once the database is created, you are not allowed to change this parameter.
 
-| Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | Result| | ------- | -------------------------------- | ---- | | Non-encryption| Encryption | The RDB store is opened in encrypted mode. | | Encryption| Non-encryption | The RDB store is opened in non-encrypted mode. |
+| Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | Result|  
+| ------- | -------------------------------- | ---- |  
+| Non-encryption| Encryption | The RDB store is opened in encrypted mode. |
+| Encryption| Non-encryption | The RDB store is opened in non-encrypted mode. |
 
 Currently, **getRdbStore()** does not support multi-thread concurrent operations.
 

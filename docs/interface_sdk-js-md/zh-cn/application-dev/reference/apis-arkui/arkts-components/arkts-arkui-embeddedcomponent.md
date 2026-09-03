@@ -1,22 +1,6 @@
 # EmbeddedComponent
 
-**EmbeddedComponent**组件用于支持在当前页面嵌入本应用内或满足跨应用权限条件的其他[EmbeddedUIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md)提供的UI。EmbeddedUIExtensionAbility运行在独立进程中，完成页面布局和渲染。
-
-通常用于需要进程隔离的模块化开发场景。
-
-> **说明：** > > EmbeddedComponent组件宽高默认值和最小值均为10vp。 > 不支持如下与宽高相关的属性：“constraintSize”、“aspectRatio”、“layoutWeight”、“flexBasis”、“flexGrow”和“flexShrink”。
-
-## 约束
-
-**EmbeddedComponent**仅支持在拥有多进程权限的设备上使用。
-
-**EmbeddedComponent**只能在UIAbility中使用，且默认情况下被拉起的EmbeddedUIExtensionAbility需与UIAbility属于同一应用。从API版本26.0.0开始，在同时满足以下条件时，允许**EmbeddedComponent**跨应用拉起EmbeddedUIExtensionAbility：  
-- **EmbeddedComponent**所属应用申请了ohos.permission.SUPPORT_CROSS_APP_EMBED_FOR_OA权限（该权限仅企业普通应用可申请）；  
-- 该应用的appIdentifier在EmbeddedUIExtensionAbility支持的应用清单（即extensionAbilities标签的appIdentifierAllowList属性）中。
-
-## 子组件
-
-不支持
+创建跨进程嵌入式组件，用于显示同包名或满足跨应用权限条件的EmbeddedUIExtensionAbility的UI。
 
 ## EmbeddedComponent
 
@@ -85,5 +69,5 @@ EmbeddedComponent(
 
 | 名称 | 说明 |
 | --- | --- |
-| [EmbeddedDpiFollowStrategy](arkts-arkui-embeddeddpifollowstrategy-e.md) | DPI跟随策略，用于设置DPI，使其能够跟随宿主或EmbeddedUIExtensionAbility。 |
-| [EmbeddedWindowModeFollowStrategy](arkts-arkui-embeddedwindowmodefollowstrategy-e.md) | 窗口模式跟随策略，用于设置窗口模式跟随宿主或EmbeddedUIExtensionAbility。 |
+| [EmbeddedDpiFollowStrategy](arkts-arkui-embeddeddpifollowstrategy-e.md) | DPI跟随策略，用于设置DPI，使其能够跟随宿主或EmbeddedUIExtensionAbility。例如，当EmbeddedUIExtensionAbility需要与宿主应用保持视觉一致性时，可选择跟随宿主DPI；当EmbeddedUIExtensionAbility需要独立适配自身资源的DPI配置时，可选择跟随EmbeddedUIExtensionAbility DPI。 |
+| [EmbeddedWindowModeFollowStrategy](arkts-arkui-embeddedwindowmodefollowstrategy-e.md) | 窗口模式跟随策略，用于设置窗口模式跟随宿主或EmbeddedUIExtensionAbility。例如，当EmbeddedUIExtensionAbility需要与宿主应用保持一致的窗口模式（如全屏、分屏）时，可选择跟随宿主；当EmbeddedUIExtensionAbility需要独立控制窗口模式时，可选择跟随EmbeddedUIExtensionAbility。 |

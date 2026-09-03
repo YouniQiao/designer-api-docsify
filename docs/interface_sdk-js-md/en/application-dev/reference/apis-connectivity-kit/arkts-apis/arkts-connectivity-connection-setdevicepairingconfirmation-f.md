@@ -27,7 +27,7 @@ Sets the confirmation of pairing with a certain device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates device ID. For example, "11:22:33:AA:BB:FF". |
-| accept | boolean | Yes | Indicates whether to accept the pairing request, {@code true} indicates accept or {@code false} otherwise. |
+| accept | boolean | Yes | Indicates whether to accept the pairing request, `true` indicates accept or `false` otherwise. |
 
 **Error codes:**
 

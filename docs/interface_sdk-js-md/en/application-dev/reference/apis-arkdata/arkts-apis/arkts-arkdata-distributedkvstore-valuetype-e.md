@@ -1,8 +1,8 @@
 # ValueType
 
-Indicates the {@code ValueType}.
+Indicates the `ValueType`.
 
-<p>{@code ValueType} is obtained based on the value.
+<p>`ValueType` is obtained based on the value.
 
 **Since:** 9
 

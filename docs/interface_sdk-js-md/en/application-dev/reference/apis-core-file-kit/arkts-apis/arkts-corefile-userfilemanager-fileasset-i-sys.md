@@ -476,7 +476,43 @@ Obtains the EXIF data from a JPG image and returns a JSON string. This API uses 
 
 For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
 
-| Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | Orientation | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | SceneType | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | Model | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | LightSource | Light source.| | Flash | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | WhiteBalance | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue | Exposure compensation.|
+| Key Value | Description |  
+| --------------------------------------- | ----------------- |  
+| BitsPerSample | Number of bits per sample.|
+| Orientation | Image orientation.|
+| ImageLength | Image length.|
+| ImageWidth | Image width.|
+| GPSLatitude | GPS latitude of the image.|
+| GPSLongitude | GPS longitude of the image.|
+| GPSLatitudeRef | Longitude reference, for example, W or E.|
+| GPSLongitudeRef | Latitude reference, for example, N or S.|
+| DateTimeOriginal | Shooting time.|
+| ExposureTime | Exposure time.|
+| [SceneType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-scenetype-e.md) | Scene type.|
+| ISOSpeedRatings | ISO sensitivity or speed.|
+| FNumber | f-number.|
+| DateTime | Modification time.|
+| GPSTimeStamp | GPS timestamp.|
+| GPSDateStamp | GPS date stamp.|
+| ImageDescription | Image description.|
+| Make | Manufacturer.|
+| MakeNote | Manufacturer.|
+| [Model](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-model-i.md) | Model.|
+| PhotoMode | Photo mode.|
+| SensitivityType | Sensitivity type.|
+| StandardOutputSensitivity | Standard output sensitivity.|
+| RecommendedExposureIndex | Recommended exposure index.|
+| ApertureValue | Aperture value.|
+| MeteringMode | Metering mode.|
+| [LightSource](../../apis-arkui/arkts-components/arkts-arkui-lightsource-i-sys.md) | Light source.|
+| [Flash](../../apis-camera-kit/arkts-apis/arkts-camera-camera-flash-i.md) | Flash status.|
+| FocalLength | Focal length.|
+| UserComment | User comments.|
+| PixelXDimension | Pixel X dimension.|
+| PixelYDimension | Pixel Y dimension.|
+| [WhiteBalance](../../apis-camera-kit/arkts-apis/arkts-camera-camera-whitebalance-i.md) | White balance.|
+| FocalLengthIn35mmFilm | Focal length in 35 mm film.|
+| ExposureBiasValue | Exposure compensation.|
 
 > **NOTE：**
 > 
@@ -558,7 +594,43 @@ Obtains the EXIF data from a JPG image and returns a JSON string. This API uses 
 
 For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md).
 
-| Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | Orientation | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | SceneType | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | Model | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | LightSource | Light source.| | Flash | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | WhiteBalance | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue | Exposure compensation.|
+| Key Value | Description |  
+| --------------------------------------- | ----------------- |  
+| BitsPerSample | Number of bits per sample.|
+| Orientation | Image orientation.|
+| ImageLength | Image length.|
+| ImageWidth | Image width.|
+| GPSLatitude | GPS latitude of the image.|
+| GPSLongitude | GPS longitude of the image.|
+| GPSLatitudeRef | Longitude reference, for example, W or E.|
+| GPSLongitudeRef | Latitude reference, for example, N or S.|
+| DateTimeOriginal | Shooting time.|
+| ExposureTime | Exposure time.|
+| [SceneType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-scenetype-e.md) | Scene type.|
+| ISOSpeedRatings | ISO sensitivity or speed.|
+| FNumber | f-number.|
+| DateTime | Modification time.|
+| GPSTimeStamp | GPS timestamp.|
+| GPSDateStamp | GPS date stamp.|
+| ImageDescription | Image description.|
+| Make | Manufacturer.|
+| MakeNote | Manufacturer.|
+| [Model](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-model-i.md) | Model.|
+| PhotoMode | Photo mode.|
+| SensitivityType | Sensitivity type.|
+| StandardOutputSensitivity | Standard output sensitivity.|
+| RecommendedExposureIndex | Recommended exposure index.|
+| ApertureValue | Aperture value.|
+| MeteringMode | Metering mode.|
+| [LightSource](../../apis-arkui/arkts-components/arkts-arkui-lightsource-i-sys.md) | Light source.|
+| [Flash](../../apis-camera-kit/arkts-apis/arkts-camera-camera-flash-i.md) | Flash status.|
+| FocalLength | Focal length.|
+| UserComment | User comments.|
+| PixelXDimension | Pixel X dimension.|
+| PixelYDimension | Pixel Y dimension.|
+| [WhiteBalance](../../apis-camera-kit/arkts-apis/arkts-camera-camera-whitebalance-i.md) | White balance.|
+| FocalLengthIn35mmFilm | Focal length in 35 mm film.|
+| ExposureBiasValue | Exposure compensation.|
 
 > **NOTE：**
 > 

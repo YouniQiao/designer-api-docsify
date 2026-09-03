@@ -72,7 +72,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 | [FontHinting](arkts-arkgraphics2d-drawing-fonthinting-e.md) | 字型轮廓效果类型枚举。 |
 | [FontMetricsFlags](arkts-arkgraphics2d-drawing-fontmetricsflags-e.md) | 字体度量标志枚举，指示字体度量中的各字段数据是否有效。常用于精确文本布局、自定义文本渲染等需要获取字体详细度量信息的场景。 |
 | [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) | 定义线条转角样式的枚举，即画笔在绘制折线段时，在折线转角处的样式。 |
-| [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 路径效果的绘制样式枚举。\| 名称 \| 值 \| 说明 \| \| ------ \| - \| ------------------ \| \| TRANSLATE \| 0 \| 不会随着路径旋转，只会平移。 \| \| ROTATE \| 1 \| 随着路径的旋转而旋转。 \| \| MORPH \| 2 \| 随着路径的旋转而旋转，并在转折处进行拉伸或压缩等操作以增加平滑度。 \| |
+| [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 路径效果的绘制样式枚举。  \| 名称 \| 值 \| 说明 \|  \| ------ \| - \| ------------------ \|  \| TRANSLATE \| 0 \| 不会随着路径旋转，只会平移。 \|  \| ROTATE \| 1 \| 随着路径的旋转而旋转。 \|  \| MORPH \| 2 \| 随着路径的旋转而旋转，并在转折处进行拉伸或压缩等操作以增加平滑度。 \| |
 | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) | 添加闭合轮廓方向的枚举。 |
 | [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) | 定义路径的填充类型枚举。 |
 | [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) | 迭代器包含的路径操作类型枚举，可用于读取path的操作指令。常用于路径分析、路径转换、路径动画等需要解析路径构成的场景。 |

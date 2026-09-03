@@ -20,7 +20,13 @@ vibrator模块的核心能力围绕"启动振动"和"停止振动"两条主线�
 - 停止所有模式振动：调用[vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)（无参数版本）或  
 [vibrator.stopVibrationSync](arkts-sensorservice-vibrator-stopvibrationsync-f.md)（同步版本）。  
 - 停止指定设备的马达振动：调用[vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md)（API version 19+，传入  
-VibratorInfoParam）。多马达设备场景：从API version 19开始，支持多设备多马达场景。可通过[vibrator.getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md)查询马达信息，通过[vibrator.on](arkts-sensorservice-vibrator-on-f.md#onvibratorstatechange)监听马达上下线事件，以便动态选择合适的马达触发振动。振动效果类型对比：| 振动效果类型 | 适用场景 | 个性化程度 | 推荐优先级 | | --- | --- | --- | --- | | VibratePreset | 交互反馈类的短振场景（点击、长按、滑动、拖拽等） | 低，使用系统预置效果 | 推荐，与系统整体振感反馈体验风格一致 | | VibrateFromFile | 复杂场景效果（表情包拟真效果、游戏场景/操作反馈） | 高，支持自定义振动配置文件 | 适用于需要精细振动的场景 | | VibrateFromPattern | 与VibrateFromFile一致，但更灵活 | 高，支持振动事件数组组合 | 适用于需要动态组合振动事件的场景 | | VibrateTime | 基础时长振动，仅控制启停 | 低，无法调节强度和频率 | 仅满足基础功能需求 |
+VibratorInfoParam）。多马达设备场景：从API version 19开始，支持多设备多马达场景。可通过[vibrator.getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md)查询马达信息，通过[vibrator.on](arkts-sensorservice-vibrator-on-f.md#onvibratorstatechange)监听马达上下线事件，以便动态选择合适的马达触发振动。振动效果类型对比：  
+| 振动效果类型 | 适用场景 | 个性化程度 | 推荐优先级 |  
+| --- | --- | --- | --- |  
+| VibratePreset | 交互反馈类的短振场景（点击、长按、滑动、拖拽等） | 低，使用系统预置效果 | 推荐，与系统整体振感反馈体验风格一致 |
+| VibrateFromFile | 复杂场景效果（表情包拟真效果、游戏场景/操作反馈） | 高，支持自定义振动配置文件 | 适用于需要精细振动的场景 |
+| VibrateFromPattern | 与VibrateFromFile一致，但更灵活 | 高，支持振动事件数组组合 | 适用于需要动态组合振动事件的场景 |
+| VibrateTime | 基础时长振动，仅控制启停 | 低，无法调节强度和频率 | 仅满足基础功能需求 |
 
 **起始版本：** 8
 

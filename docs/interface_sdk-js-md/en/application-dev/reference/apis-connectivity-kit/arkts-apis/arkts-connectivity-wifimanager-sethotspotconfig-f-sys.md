@@ -26,7 +26,7 @@ Set the hotspot configuration for the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | HotspotConfig | Yes | Indicates the Wi-Fi hotspot configuration. The SSID and {@code securityType} must be available and correct. If {@code securityType} is not {@code open}, {@code preSharedKey} must be available and correct. |
+| config | HotspotConfig | Yes | Indicates the Wi-Fi hotspot configuration. The SSID and `securityType` must be available and correct. If `securityType` is not `open`, `preSharedKey` must be available and correct. |
 
 **Error codes:**
 

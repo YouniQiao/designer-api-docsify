@@ -26,7 +26,7 @@ Obtains the voice mailbox number of the SIM card in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from `0` to the maximum card slot index number supported by the device. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the voice mailbox number; returns an empty string if no voice mailbox number is written into the SIM card. |
 
 **Error codes:**
@@ -74,7 +74,7 @@ Obtains the voice mailbox number of the SIM card in a specified slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | number | Yes | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
+| slotId | number | Yes | Indicates the card slot index number, ranging from `0` to the maximum card slot index number supported by the device. |
 
 **Return value:**
 

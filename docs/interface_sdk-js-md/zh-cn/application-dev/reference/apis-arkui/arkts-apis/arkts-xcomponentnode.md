@@ -6,7 +6,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [XComponentNode](arkts-arkui-xcomponentnode-c.md) | 定义XComponent Node。 |
+| [XComponentNode](arkts-arkui-xcomponentnode-c.md) | 提供XComponent节点XComponentNode，表示组件树中的XComponent组件，用于EGL/OpenGL ES渲染和媒体数据写入，并支持动态修改节点渲染类型，适用于需要在ArkUI组件树中嵌入Native自渲染内容的场景。 |
 
 ## 示例
 

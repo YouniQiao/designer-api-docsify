@@ -537,7 +537,13 @@ navBarWidthRange(value: [Dimension, Dimension])
 
 分割线的拖拽范围：
 
-| 条件| 拖拽范围 | | ----| ----------- | |navBarWidthRange和minContentWidth同时设置 | 满足minContentWidth所设置的值后，在navBarWidthRange所设置的范围内进行拖拽 | |navBarWidthRange和minContentWidth均不设置 | 在navBarWidthRange默认的最小和最大范围内进行拖拽 | |仅设置navBarWidthRange属性 | 在navBarWidthRange所设置的范围内进行拖拽，最大拖拽范围不能超过minContentWidth的默认值 | |仅设置minContentWidth属性 | 在navBarWidthRange默认的最小和最大范围内进行拖拽 | |仅设置navBarWidth属性 | 不支持拖拽 |
+| 条件| 拖拽范围 |  
+| ----| ----------- |  
+|navBarWidthRange和minContentWidth同时设置 | 满足minContentWidth所设置的值后，在navBarWidthRange所设置的范围内进行拖拽 |
+|navBarWidthRange和minContentWidth均不设置 | 在navBarWidthRange默认的最小和最大范围内进行拖拽 |
+|仅设置navBarWidthRange属性 | 在navBarWidthRange所设置的范围内进行拖拽，最大拖拽范围不能超过minContentWidth的默认值 |
+|仅设置minContentWidth属性 | 在navBarWidthRange默认的最小和最大范围内进行拖拽 |
+|仅设置navBarWidth属性 | 不支持拖拽 |
 
 **起始版本：** 10
 
@@ -817,7 +823,11 @@ toolBar(value: object | CustomBuilder)
 
 **object类型说明：**
 
-| 名称 | 类型 | 必填 | 说明 | | ------ | ------------- | ---- | --------------- | | value | string | 是 | 工具栏单个选项的显示文本。 | | icon | string | 否 | 工具栏单个选项的图标资源路径。 | | action | () =&gt; void | 否 | 当前选项被选中的事件回调。 |
+| 名称 | 类型 | 必填 | 说明 |  
+| ------ | ------------- | ---- | --------------- |  
+| value | string | 是 | 工具栏单个选项的显示文本。 |
+| icon | string | 否 | 工具栏单个选项的图标资源路径。 |
+| action | () =&gt; void | 否 | 当前选项被选中的事件回调。 |
 
 **起始版本：** 8
 

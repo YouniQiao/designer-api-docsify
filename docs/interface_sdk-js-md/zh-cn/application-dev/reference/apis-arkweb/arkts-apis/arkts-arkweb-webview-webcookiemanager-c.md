@@ -872,7 +872,7 @@ static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| incognito | boolean | 是 | {@code true} Gets all cookies in incognito context; {@code false} otherwise. |
+| incognito | boolean | 是 | `true` Gets all cookies in incognito context; `false` otherwise. |
 
 **返回值：**
 

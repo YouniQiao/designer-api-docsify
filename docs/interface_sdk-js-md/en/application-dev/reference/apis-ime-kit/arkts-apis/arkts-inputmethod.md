@@ -86,7 +86,7 @@ import { inputMethod } from '@kit.IMEKit';
 | Name | Description |
 | --- | --- |
 | [AttachFailureReason](arkts-ime-inputmethod-attachfailurereason-e.md) | Enumerates the reasons for attachment failure. |
-| [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md) | Enumerates the modes of capitalizing the first letter of a text.   \| Name\| Value\| Description\| \| -------- \| -- \| -------- \| \| NONE \| 0 \| The first letter is not capitalized.\| \| SENTENCES \| 1 \| The first letter of each sentence is capitalized.\| \| WORDS \| 2 \| The first letter of each word is capitalized.\| \| CHARACTERS \| 3 \| All letters are capitalized.\| |
+| [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md) | Enumerates the modes of capitalizing the first letter of a text. |
 | [Direction](arkts-ime-inputmethod-direction-e.md) | Enumerates the directions of cursor movement of the input method. |
 | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Indicates whether the input method is enabled. |
 | [EnterKeyType](arkts-ime-inputmethod-enterkeytype-e.md) | Enumerates the function types represented by the Enter key of the input method. |

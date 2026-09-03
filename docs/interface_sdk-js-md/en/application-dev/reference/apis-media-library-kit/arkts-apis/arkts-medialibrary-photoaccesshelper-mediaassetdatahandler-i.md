@@ -24,7 +24,9 @@ T supports the following data types: ArrayBuffer, [ImageSource](../../apis-image
 
 Information returned by **map**:
 
-| Map Key | Description| |----------|-------| | 'quality' | Image quality. The value **high** means high quality, and **low** means poor quality.|
+| Map Key | Description|  
+|----------|-------|  
+| 'quality' | Image quality. The value **high** means high quality, and **low** means poor quality.|
 
 **Since:** 11
 

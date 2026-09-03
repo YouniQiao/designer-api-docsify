@@ -947,7 +947,7 @@ try {
 ## on('serviceDie')
 
 ```TypeScript
-on(type: 'serviceDie', callback?: Callback<{}>): void
+on(type: 'serviceDie', callback: Callback<{}>): void
 ```
 
 Subscribes to the dead events of the **DeviceManager** service. The application will be notified when the **DeviceManager** service is terminated unexpectedly. This API uses an asynchronous callback to return the result.
@@ -963,7 +963,7 @@ Subscribes to the dead events of the **DeviceManager** service. The application 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceDie' | Yes | Event type, which has a fixed value of **'serviceDie'**. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | No |  |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{}&gt; | Yes |  |
 
 **Error codes:**
 
@@ -971,23 +971,6 @@ Subscribes to the dead events of the **DeviceManager** service. The application 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified type is greater than 255. |
-
-**Examples**
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('serviceDie', () => {
-    console.info('serviceDie on');
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('serviceDie errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
 
 ## startDiscovering
 

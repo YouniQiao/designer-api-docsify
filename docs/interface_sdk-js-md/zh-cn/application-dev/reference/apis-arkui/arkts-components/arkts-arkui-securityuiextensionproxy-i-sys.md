@@ -19,7 +19,7 @@
 off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-取消订阅被拉起的Ability异步注册时触发的回调。使用callback异步回调。
+取消订阅被拉起的Ability异步注册时触发的回调。
 
 **起始版本：** 26.0.0
 
@@ -42,7 +42,7 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 ```
 
-取消订阅被拉起的Ability同步注册时触发的回调。使用callback异步回调。
+取消订阅被拉起的Ability异步注册时触发的回调。
 
 **起始版本：** 26.0.0
 
@@ -56,7 +56,7 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'syncReceiverRegister' | 是 | 固定填'syncReceiverRegister'，取消订阅被拉起的Ability同步注册时触发的回调。 |
+| type | 'syncReceiverRegister' | 是 | 固定填'asyncReceiverRegister'，取消订阅被拉起的Ability异步注册时触发的回调。 |
 | callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 | 回调函数。为空时取消订阅所有同步注册的回调。非空时取消订阅指定的同步注册回调。 |
 
 ## on('asyncReceiverRegister')
@@ -80,7 +80,7 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | 是 | 固定填'asyncReceiverRegister'，代表订阅被拉起的Ability异步注册时触发的回调。 |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。订阅被拉起的Ability注册setReceiveDataCallback后触发的回调。 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。被拉起的Ability注册setReceiveDataCallback后触发的回调。 |
 
 ## on('syncReceiverRegister')
 
@@ -88,7 +88,7 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 ```
 
-在双方建立连接成功后，订阅被拉起的Ability同步注册时触发的回调。使用callback异步回调。
+在双方建立连接成功后，订阅被拉起的Ability异步注册时触发的回调。使用callback异步回调。
 
 **起始版本：** 26.0.0
 
@@ -102,8 +102,8 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'syncReceiverRegister' | 是 | 固定填'syncReceiverRegister'，代表订阅被拉起的Ability同步注册时触发的回调。 |
-| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。被拉起的Ability注册setReceiveDataForResultCallback后触发的回调。 |
+| type | 'syncReceiverRegister' | 是 | 固定填'asyncReceiverRegister'，代表订阅被拉起的Ability异步注册时触发的回调。 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 | 回调函数。被拉起的Ability注册setReceiveDataCallback后触发的回调。 |
 
 ## send
 
@@ -111,7 +111,7 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 send(data: Record<string, Object>): void
 ```
 
-用于在双方建立连接成功后，向被拉起的Ability发送数据，提供异步发送能力。数据将被扩展Ability通过setReceiveDataCallback接收处理。
+用于在双方建立连接成功后，向被拉起的Ability发送数据，提供异步发送能力。数据将被拉起的Ability通过setReceiveDataCallback接收处理。
 
 **起始版本：** 26.0.0
 
@@ -133,7 +133,7 @@ send(data: Record<string, Object>): void
 sendSync(data: Record<string, Object>): Record<string, Object>
 ```
 
-用于在双方建立连接成功后，向被拉起的Ability同步发送数据，数据将被拉起的Ability通过setReceiveDataForResultCallback处理并返回结果。
+用于在双方建立连接成功后，向被拉起的Ability同步发送数据，数据将被拉起的Ability通过setReceiveDataForResultCallback处理并返回结果。以下错误码的详细介绍请参见UIExtension错误码。
 
 **起始版本：** 26.0.0
 

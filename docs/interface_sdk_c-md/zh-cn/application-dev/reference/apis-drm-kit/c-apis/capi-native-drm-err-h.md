@@ -1,0 +1,58 @@
+# native_drm_err.h
+
+## 概述
+
+定义DRM错误码，用于标识DRM模块在运行过程中可能出现的各种异常情况。开发者可基于错误码进行错误处理和问题定位，提高DRM应用的稳定性和可维护性，适用于需要处理DRM功能异常的场景。
+
+**引用文件：** <multimedia/drm_framework/native_drm_err.h>
+
+**库：** libnative_drm.so
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**起始版本：** 11
+
+**相关模块：** [Drm](capi-drm.md)
+
+## 汇总
+
+### 枚举
+
+| 名称 | typedef关键字 | 描述 |
+| -- | -- | -- |
+| [Drm_ErrCode](#drm_errcode) | Drm_ErrCode | DRM错误码。 |
+
+## 枚举类型说明
+
+### Drm_ErrCode
+
+```c
+enum Drm_ErrCode
+```
+
+**描述：**
+
+DRM错误码。
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**起始版本：** 11
+
+| 枚举项 | 描述 |
+| -- | -- |
+| DRM_ERR_OK = 0 | 操作成功。 |
+| DRM_CAPI_ERR_BASE = 24700500 | 错误码基准值，用于生成其他错误码。 |
+| DRM_ERR_NO_MEMORY = DRM_CAPI_ERR_BASE + 1 | 内存不足。 |
+| DRM_ERR_OPERATION_NOT_PERMITTED = DRM_CAPI_ERR_BASE + 2 | 不支持的操作。 |
+| DRM_ERR_INVALID_VAL = DRM_CAPI_ERR_BASE + 3 | 无效参数。 |
+| DRM_ERR_IO = DRM_CAPI_ERR_BASE + 4 | IO错误。 |
+| DRM_ERR_TIMEOUT = DRM_CAPI_ERR_BASE + 5 | 网络超时。 |
+| DRM_ERR_UNKNOWN = DRM_CAPI_ERR_BASE + 6 | 未知错误。 |
+| DRM_ERR_SERVICE_DIED = DRM_CAPI_ERR_BASE + 7 | DRM服务死亡。 |
+| DRM_ERR_INVALID_STATE = DRM_CAPI_ERR_BASE + 8 | 无效的操作状态。 |
+| DRM_ERR_UNSUPPORTED = DRM_CAPI_ERR_BASE + 9 | 不支持的操作。 |
+| DRM_ERR_MAX_SYSTEM_NUM_REACHED = DRM_CAPI_ERR_BASE + 10 | MediaKeySystem最大实例数。 |
+| DRM_ERR_MAX_SESSION_NUM_REACHED = DRM_CAPI_ERR_BASE + 11 | MediaKeySession最大实例数。 |
+| DRM_ERR_EXTEND_START  = DRM_CAPI_ERR_BASE + 100 | 扩展错误。 |
+
+

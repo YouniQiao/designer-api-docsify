@@ -88,7 +88,7 @@ if (ret) {
 close(): void
 ```
 
-Closes this {@code GattServer} object and unregisters its callbacks.
+Closes this `GattServer` object and unregisters its callbacks.
 
 **Since:** 7
 
@@ -684,7 +684,7 @@ Starts BLE advertising.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| setting | AdvertiseSetting | Yes | Indicates the settings for BLE advertising. If you need to use the default value, set this parameter to {@code null}. |
+| setting | AdvertiseSetting | Yes | Indicates the settings for BLE advertising. If you need to use the default value, set this parameter to `null`. |
 | advData | AdvertiseData | Yes | Indicates the advertising data. |
 | advResponse | AdvertiseData | No | Indicates the scan response associated with the advertising data. |
 

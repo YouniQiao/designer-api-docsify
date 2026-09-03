@@ -559,7 +559,7 @@ Application registers the HID Device capability. The application will only succe
 | sdp | [HidDeviceSdp](arkts-connectivity-hid-hiddevicesdp-i.md) | Yes | Describe the hid device capability fields of this endpoint being queried. |
 | inQos | [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md) | Yes | Describe the In Quality of Service (QoS) settings for the Bluetooth HID device application. |
 | outQos | [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md) | Yes | Describe the Out Quality of Service (QoS) settings for the Bluetooth HID device application. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback for HID device registration status changes, {@code true} indicates register success or {@code false} otherwise. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback for HID device registration status changes, `true` indicates register success or `false` otherwise. |
 
 **Error codes:**
 

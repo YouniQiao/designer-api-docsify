@@ -247,7 +247,37 @@ When used in widgets, the minimum time unit is minute. In this case, if the form
 
 The following table shows how different settings of **format** work out.
 
-| Input Format | Display Effect | | ------------------------- | ---------------------- | | EEEE, M, d, yyyy | Saturday, Feb, 4, 2023 | | M d, yyyy | Feb 4, 2023 | | EEEE, M, d | Saturday, Feb, 4 | | M d | Feb 4 | | MM/dd/yyyy | Feb/04/2023 | | EEEE MM dd | Saturday Feb 04 | | yyyy | 2023 | | yy | 23 | | MM | Feb | | M | Feb | | dd (complete date) | 04 | | d | 4 | | EEEE (full name) | Saturday | | E, EE, EEE (abbreviation) | Sat | | M d, yyyy | Feb 4, 2023 | | yyyy/M/d | 2023/Feb/4 | | yyyy-M-d | 2023-Feb-4 | | yyyy.M.d | 2023.Feb.4 | | HH:mm:ss | 17:00:04 | | aa hh:mm:ss | AM 5:00:04 | | hh:mm:ss | 5:00:04 | | HH:mm | 17:00 | | aa hh:mm | AM 5:00 | | hh:mm | 5:00 | | mm:ss | 00:04 | | mm:ss.SS | 00:04.91 | | mm:ss.SSS | 00:04.536 | | hh:mm:ss aa | 5:00:04 AM | | HH | 17 |
+| Input Format | Display Effect |  
+| ------------------------- | ---------------------- |  
+| EEEE, M, d, yyyy | Saturday, Feb, 4, 2023 |
+| M d, yyyy | Feb 4, 2023 |
+| EEEE, M, d | Saturday, Feb, 4 |
+| M d | Feb 4 |
+| MM/dd/yyyy | Feb/04/2023 |
+| EEEE MM dd | Saturday Feb 04 |
+| yyyy | 2023 |
+| yy | 23 |
+| MM | Feb |
+| M | Feb |
+| dd (complete date) | 04 |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | 4 |
+| EEEE (full name) | Saturday |
+| E, EE, EEE (abbreviation) | [Sat](../arkts-apis/arkts-arkui-week-e.md) |
+| M d, yyyy | Feb 4, 2023 |
+| yyyy/M/d | 2023/Feb/4 |
+| yyyy-M-d | 2023-Feb-4 |
+| yyyy.M.d | 2023.Feb.4 |
+| HH:mm:ss | 17:00:04 |
+| aa hh:mm:ss | AM 5:00:04 |
+| hh:mm:ss | 5:00:04 |
+| HH:mm | 17:00 |
+| aa hh:mm | AM 5:00 |
+| hh:mm | 5:00 |
+| mm:ss | 00:04 |
+| mm:ss.SS | 00:04.91 |
+| mm:ss.SSS | 00:04.536 |
+| hh:mm:ss aa | 5:00:04 AM |
+| HH | 17 |
 
 **Since:** 8
 

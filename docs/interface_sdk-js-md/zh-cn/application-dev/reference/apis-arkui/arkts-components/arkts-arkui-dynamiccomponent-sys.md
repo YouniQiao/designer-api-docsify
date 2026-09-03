@@ -43,4 +43,4 @@ DynamicComponent(options: DynamicOptions)
 | 名称 | 说明 |
 | --- | --- |
 | [ErrorCallback](arkts-arkui-errorcallback-t-sys.md) | 错误回调类型，用于接收异常信息。 |
-| [Worker](arkts-arkui-worker-t-sys.md) | 用于运行Abc的Worker线程对象。 |
+| [Worker](arkts-arkui-worker-t-sys.md) | 用于运行Abc的Worker线程对象。需通过worker.ThreadWorker创建。 |

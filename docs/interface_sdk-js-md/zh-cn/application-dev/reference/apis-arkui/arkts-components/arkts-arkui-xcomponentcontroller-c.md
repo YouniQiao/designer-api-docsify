@@ -1,6 +1,6 @@
 # XComponentController
 
-定义XComponent的控制器。您可以将该控制器绑定到XComponent，以通过控制器调用组件接口。
+XComponent组件的控制器，可以将此对象绑定至XComponent组件，然后通过控制器来调用组件方法。
 
 **起始版本：** 8
 
@@ -17,7 +17,10 @@
 constructor()
 ```
 
-用于创建XComponentController实例的构造函数。
+XComponentController的构造函数。  
+```ts
+xComponentController: XComponentController = new XComponentController();
+```
 
 **起始版本：** 8
 
@@ -37,7 +40,7 @@ xComponentController: XComponentController = new XComponentController();
 getXComponentContext(): Object
 ```
 
-获取XComponent对象的context。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+获取XComponent实例对象的context，仅XComponent类型为SURFACE("surface")或TEXTURE时有效。
 
 **起始版本：** 8
 
@@ -49,7 +52,7 @@ getXComponentContext(): Object
 
 | 类型 | 说明 |
 | --- | --- |
-| Object | XComponent对象的context。context中包含的接口由开发者定义。context作为onLoad回调的第一个参数传入。 |
+| Object | 获取XComponent实例对象的context，context包含的具体接口方法由开发者自定义，context内容与onLoad回调中的第一个参数一致。 |
 
 ## getXComponentSurfaceId
 
@@ -57,7 +60,7 @@ getXComponentContext(): Object
 getXComponentSurfaceId(): string
 ```
 
-获取XComponent所持有的surface的ID，可用于@ohos相关接口。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+获取XComponent对应Surface的ID，仅XComponent类型为SURFACE("surface")或TEXTURE时有效。
 
 **起始版本：** 9
 
@@ -69,7 +72,7 @@ getXComponentSurfaceId(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | XComponent所持有的surface的ID。 |
+| string | XComponent持有Surface的ID。 |
 
 **示例**
 
@@ -102,7 +105,7 @@ getXComponentSurfaceId(): string
 getXComponentSurfaceRect(): SurfaceRect
 ```
 
-获取XComponent所持有的surface的矩形。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+获取XComponent持有Surface的显示区域，包括宽高和相对于组件左上角的位置坐标，仅XComponent类型为SURFACE("surface")或TEXTURE时有效。
 
 **起始版本：** 12
 
@@ -116,7 +119,7 @@ getXComponentSurfaceRect(): SurfaceRect
 
 | 类型 | 说明 |
 | --- | --- |
-| [SurfaceRect](arkts-arkui-surfacerect-i.md) | XComponent所持有的surface的矩形。 |
+| [SurfaceRect](arkts-arkui-surfacerect-i.md) | 获取XComponent持有Surface的显示区域。 |
 
 ## getXComponentSurfaceRotation
 
@@ -124,7 +127,7 @@ getXComponentSurfaceRect(): SurfaceRect
 getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 ```
 
-获取屏幕旋转时此XComponent所持有的surface的方向是否锁定。该接口仅在XComponent的type设置为SURFACE("surface")时生效。
+获取XComponent持有Surface在屏幕旋转时是否锁定方向的设置，仅XComponent类型为SURFACE("surface")时有效。
 
 **起始版本：** 12
 
@@ -138,7 +141,7 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 
 | 类型 | 说明 |
 | --- | --- |
-| Required&lt;[SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)&gt; | surface旋转选项的结果。 |
+| Required&lt;[SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)&gt; | 获取XComponent持有Surface在屏幕旋转时是否锁定方向的设置。 |
 
 ## lockCanvas
 
@@ -146,7 +149,7 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 lockCanvas(): DrawingCanvas | null
 ```
 
-获取用于在XComponent创建的surface上绘制的Canvas。有关绘制方法的详细信息，请参见[Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md)。
+返回可用于向XComponent上绘制内容的画布对象。具体绘制方法请参考Canvas。
 
 **起始版本：** 20
 
@@ -160,7 +163,7 @@ lockCanvas(): DrawingCanvas | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) \| null | 返回用于在XComponent创建的surface上绘制的Canvas。如果surface不可用，则返回null。 |
+| [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) \| null | 可用于向XComponent区域绘制的画布对象；当无法获取画布对象时（如Surface未创建完成或画布已被占用未释放）返回null。 |
 
 ## onSurfaceChanged
 
@@ -168,9 +171,7 @@ lockCanvas(): DrawingCanvas | null
 onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 ```
 
-当XComponent所持有的surface大小发生变化时触发（包括XComponent以指定大小创建时）。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
-
-**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
+当XComponent持有的Surface大小改变后（包括首次创建时的大小改变）进行该回调，仅XComponent类型为SURFACE("surface")或TEXTURE时有效。
 
 **起始版本：** 12
 
@@ -184,8 +185,8 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | XComponent所持有的surface的ID。 |
-| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 | 用于显示XComponent所持有的surface的矩形。 |
+| surfaceId | string | 是 | 回调该方法的时候，绑定XComponent持有Surface的ID。 |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 | 回调该方法的时候，绑定XComponent持有Surface的显示区域。 |
 
 ## onSurfaceCreated
 
@@ -193,9 +194,7 @@ onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 onSurfaceCreated(surfaceId: string): void
 ```
 
-当XComponent所持有的surface创建完成时触发。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
-
-**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
+当XComponent持有的Surface创建后进行该回调，仅XComponent类型为SURFACE("surface")或TEXTURE时有效。
 
 **起始版本：** 12
 
@@ -209,7 +208,7 @@ onSurfaceCreated(surfaceId: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | XComponent所持有的surface的ID。 |
+| surfaceId | string | 是 | 回调该方法的时候，绑定XComponent持有Surface的ID。 |
 
 ## onSurfaceDestroyed
 
@@ -217,9 +216,7 @@ onSurfaceCreated(surfaceId: string): void
 onSurfaceDestroyed(surfaceId: string): void
 ```
 
-当XComponent所持有的surface销毁时触发。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
-
-**说明：**仅当XComponent组件未设置libraryname参数时，会进行该回调。
+当XComponent持有的Surface销毁后进行该回调，仅XComponent类型为SURFACE("surface")或TEXTURE时有效，具体可以参考指南创建XComponent和管理Surface生命周期章节。
 
 **起始版本：** 12
 
@@ -233,7 +230,7 @@ onSurfaceDestroyed(surfaceId: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | XComponent所持有的surface的ID。 |
+| surfaceId | string | 是 | 回调该方法的时候，绑定XComponent持有Surface的ID。 |
 
 ## setXComponentSurfaceConfig
 
@@ -241,11 +238,7 @@ onSurfaceDestroyed(surfaceId: string): void
 setXComponentSurfaceConfig(config: SurfaceConfig):void
 ```
 
-设置XComponent创建的surface的配置。
-
-> **说明：**
-> 
-> 此接口仅在XComponent的type为TEXTURE或SURFACE时生效。
+设置XComponent创建的Surface的选项，用于设置XComponent持有的Surface在渲染时是否需要被视为不透明。当Surface绘制内容完全不透明时，可设置为不透明以提升渲染性能；当绘制内容包含透明区域时，需保持非不透明以保证透明效果正确显示。
 
 **起始版本：** 22
 
@@ -259,7 +252,7 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [SurfaceConfig](arkts-arkui-surfaceconfig-i.md) | 是 | surface配置 |
+| config | [SurfaceConfig](arkts-arkui-surfaceconfig-i.md) | 是 | Surface配置选项，用于设置XComponent持有的Surface在渲染时是否需要被视为不透明。 |
 
 ## setXComponentSurfaceRect
 
@@ -267,7 +260,7 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 setXComponentSurfaceRect(rect: SurfaceRect): void
 ```
 
-设置XComponent所持有的surface的矩形。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
+设置XComponent持有Surface的显示区域，包括宽高和相对于组件左上角的位置坐标，仅XComponent类型为SURFACE("surface")或TEXTURE时有效。
 
 **起始版本：** 12
 
@@ -281,7 +274,7 @@ setXComponentSurfaceRect(rect: SurfaceRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 | XComponent所持有的surface的矩形。 |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | 是 | XComponent持有Surface的显示区域。 |
 
 ## setXComponentSurfaceRotation
 
@@ -289,7 +282,7 @@ setXComponentSurfaceRect(rect: SurfaceRect): void
 setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 ```
 
-设置屏幕旋转时是否锁定此XComponent所持有的surface的方向。该接口仅在XComponent的type设置为SURFACE("surface")时生效。
+设置XComponent持有Surface在屏幕旋转时是否锁定方向，仅XComponent类型为SURFACE("surface")时有效。
 
 **起始版本：** 12
 
@@ -303,7 +296,7 @@ setXComponentSurfaceRotation(rotationOptions: SurfaceRotationOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rotationOptions | [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | 是 | 屏幕旋转时是否锁定当前XComponent所持有的surface的方向。 |
+| rotationOptions | [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | 是 | 设置XComponent持有Surface在屏幕旋转时是否锁定方向。 |
 
 ## setXComponentSurfaceSize
 
@@ -314,9 +307,7 @@ setXComponentSurfaceSize(value: {
   }): void
 ```
 
-设置XComponent所持有的surface的宽度和高度。该接口仅在XComponent的type设置为SURFACE("surface")或TEXTURE时生效。
-
-单位：px。
+设置XComponent持有Surface的宽度和高度，仅XComponent类型为SURFACE("surface")或TEXTURE时有效。
 
 **起始版本：** 9
 
@@ -338,17 +329,7 @@ setXComponentSurfaceSize(value: {
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-配置AI分析并启动AI分析功能，使用前需先启用图像AI分析能力[enableAnalyzer](arkts-arkui-xcomponent-attribute.md#enableanalyzer)，仅type为SURFACE或TEXTURE时有效。使用Promise异步回调来返回结果。
-
-由于用于分析的图像帧是调用此接口时捕获的帧，因此请注意此接口的调用时机。
-
-如果在执行完成之前重复调用此接口，将触发错误回调。
-
-> **说明：**
-
-> 图像分析类型无法动态修改。
-> 
-> 此接口依赖于设备能力。在不兼容的设备上调用将返回错误码。
+配置AI分析并启动AI分析功能，使用前需先启用图像AI分析能力enableAnalyzer，仅XComponent类型为SURFACE或TEXTURE时有效。使用Promise异步回调。该方法调用时，将截取调用时刻的画面帧进行分析，使用时需注意启动分析的时机，避免出现画面和分析内容不一致的情况。若该方法尚未执行完毕，此时重复调用，则会触发错误回调。以下错误码的详细介绍请参见图像AI分析错误码。
 
 **起始版本：** 12
 
@@ -362,13 +343,13 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | 是 | AI图像分析器的设置。 |
+| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | 是 | 执行AI分析所需要的入参，用于配置AI分析功能。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 用于返回结果的Promise。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。用于获取AI分析是否成功执行。 |
 
 **错误码：**
 
@@ -384,13 +365,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 stopImageAnalyzer(): void
 ```
 
-停止AI分析功能，AI分析展示的内容将被销毁。仅type为SURFACE或TEXTURE时有效。
-
-> **说明：**
-
-> 如果在startImageAnalyzer接口尚未返回任何结果时调用此接口，将触发错误回调。
-> 
-> 此特性依赖于设备能力。
+停止AI分析功能，仅XComponent类型为SURFACE或TEXTURE时有效，须先调用enableAnalyzer和startImageAnalyzer启用AI分析能力。调用后AI分析展示的内容将被销毁。
 
 **起始版本：** 12
 
@@ -406,7 +381,7 @@ stopImageAnalyzer(): void
 unlockCanvasAndPost(canvas: DrawingCanvas):void
 ```
 
-将Canvas的新内容发布到XComponent创建的surface，并释放该Canvas。
+将画布对象中的内容绘制在XComponent区域，并释放该画布对象。
 
 **起始版本：** 20
 
@@ -420,4 +395,4 @@ unlockCanvasAndPost(canvas: DrawingCanvas):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| canvas | [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) | 是 | 之前通过lockCanvas获取的canvas。 |
+| canvas | [DrawingCanvas](../arkts-apis/arkts-arkui-drawingcanvas-t.md) | 是 | 之前调用lockCanvas方法返回的画布对象。 |

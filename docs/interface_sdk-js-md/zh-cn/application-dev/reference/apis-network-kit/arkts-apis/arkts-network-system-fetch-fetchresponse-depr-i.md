@@ -2,7 +2,11 @@
 
 **表2** responseType与success中data关系
 
-| responseType | data | 说明 | | -------- | -------- | -------- | | 无 | string | 服务器返回的header中的type如果是text/\*或application/json、application/javascript、application/xml，值为文本内容。 | | text | string | 返回文本内容。 | | json | Object | 返回json格式的对象。 |
+| responseType | data | 说明 |  
+| -------- | -------- | -------- |  
+| 无 | string | 服务器返回的header中的type如果是text/\*或application/json、application/javascript、application/xml，值为文本内容。 |
+| text | string | 返回文本内容。 |
+| [json](../../apis-arkts/arkts-apis/arkts-util-json.md) | Object | 返回json格式的对象。 |
 
 **起始版本：** 3
 

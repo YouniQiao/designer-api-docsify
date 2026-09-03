@@ -12,7 +12,7 @@ import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 function request(param: RequestParameterForStage, callback: AsyncCallback<RequestCallbackParameters>): void
 ```
 
-组件使用方向组件提供方主动请求组件。组件提供方需通过onRequest事件监听响应请求，并通过回调返回组件模板信息。
+组件使用方向组件提供方主动请求组件。适用于使用方需要按需动态获取插件组件模板的场景，例如动态加载其他应用提供的插件内容、按需展示跨应用组件等。组件提供方需通过onRequest事件监听响应请求，并通过回调返回组件模板信息，事件监听接口请参见@ohos.pluginComponent (PluginComponentManager)。
 
 **起始版本：** 9
 

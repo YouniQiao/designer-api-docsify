@@ -20,7 +20,7 @@ const ACTIVATED_INPUT_METHODS: string
 
 Indicates the list of input methods that have been activated.
 
-<p>The list is a string that contains the IDs of activated input methods. The IDs are separated by colons (:), and keyboardTypes of an input method are separated by semicolons (;). An example format is {@code ima0:keyboardType0;keyboardType1;ima1:ima2:keyboardTypes0}. The type of &lt;b&gt;imaID&lt;/b&gt; is ElementName, and the type of &lt;b&gt;keyboard&lt;/b&gt; is number.
+<p>The list is a string that contains the IDs of activated input methods. The IDs are separated by colons (:), and keyboardTypes of an input method are separated by semicolons (;). An example format is `ima0:keyboardType0;keyboardType1;ima1:ima2:keyboardTypes0`. The type of &lt;b&gt;imaID&lt;/b&gt; is ElementName, and the type of &lt;b&gt;keyboard&lt;/b&gt; is number.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ const AUTO_CAPS_TEXT_INPUT: string
 
 Specifies whether automatic capitalization is enabled for the text editor.
 
-<p>If the value is {@code 0}, automatic capitalization is disabled. If the value {@code 1}, automatic capitalization is enabled.
+<p>If the value is `0`, automatic capitalization is disabled. If the value `1`, automatic capitalization is enabled.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ const AUTO_PUNCTUATE_TEXT_INPUT: string
 
 Specifies whether automatic punctuation is enabled for the text editor. Automatic punctuation enables the text editor to convert two spaces into a period (.) and a space.
 
-<p>If the value is {@code 0}, automatic punctuation is disabled. If the value {@code 1}, automatic punctuation is enabled.
+<p>If the value is `0`, automatic punctuation is disabled. If the value `1`, automatic punctuation is enabled.
 
 **Since:** 7
 
@@ -68,7 +68,7 @@ const AUTO_REPLACE_TEXT_INPUT: string
 
 Specifies whether autocorrect is enabled for the text editor. Autocorrect enables the text editor to correct typos.
 
-<p>If the value is {@code 0}, autocorrect is disabled. If the value {@code 1}, autocorrect is enabled.
+<p>If the value is `0`, autocorrect is disabled. If the value `1`, autocorrect is enabled.
 
 **Since:** 7
 
@@ -98,7 +98,7 @@ const SELECTOR_VISIBILITY_FOR_INPUT_METHOD: string
 
 Specifies whether the input method selector is visible.
 
-<p>If the value is {@code 1}, the input method selector is visible. If the value is {@code 0}, the input method selector is invisible.
+<p>If the value is `1`, the input method selector is visible. If the value is `0`, the input method selector is invisible.
 
 **Since:** 7
 
@@ -114,7 +114,7 @@ const SHOW_PASSWORD_TEXT_INPUT: string
 
 Specifies whether password presentation is enabled in the text editor. Password presentation enables the text editor to show password characters when the user types them.
 
-<p>If the value is {@code 0}, password presentation is disabled. If the value {@code 1}, password presentation is enabled.
+<p>If the value is `0`, password presentation is disabled. If the value `1`, password presentation is enabled.
 
 **Since:** 7
 

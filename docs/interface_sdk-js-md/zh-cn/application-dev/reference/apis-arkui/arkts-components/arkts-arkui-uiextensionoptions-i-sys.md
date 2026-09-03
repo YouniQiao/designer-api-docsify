@@ -1,6 +1,6 @@
 # UIExtensionOptions（系统接口）
 
-该接口用于在构造时设置UIExtensionComponentAttribute的选项。
+用于在UIExtensionComponent进行构造时传递可选的构造参数。
 
 **起始版本：** 11
 

@@ -11,8 +11,11 @@
  
 1. 编辑框应用侧（`@ohos.inputMethod`模块）：通过`InputMethodSetting.listInputMethodSubtype()`查询输入法子类型列表，通过`inputMethod.switchCurrentInputMethodSubtype()`切换到指定子类型。
 2. 输入法应用侧（`@ohos.inputMethodEngine`模块）：通过`InputMethodAbility.on('setSubtype')`监听子类型切换事件，回调参数为`InputMethodSubtype`对象，据此调整键盘布局和语言。
- 本模块的核心开放能力由以下关键接口承载：  
- | Interface | 说明 | |---|---| | InputMethodSubtype | 输入法子类型属性接口，描述输入法的一种具体语言或模式形态。必填属性包括：`name`（所属应用包名）、`id`（子类型ID）、`locale`（区域）、`language`（语言）；可选属性包括：`label`（标签）、`labelId`（标签资源号）、`mode`（大写/小写模式）、`icon`（图标）、`iconId`（图标ID）、`extra`（额外信息）。 | 本模块为纯数据定义模块，`InputMethodSubtype`作为子类型描述数据需与其他模块的API组合使用。典型组合场景为：在`@ohos.inputMethod`模块中，通过`InputMethodSetting`查询和切换子类型；在`@ohos.inputMethodEngine`模块中，通过`InputMethodAbility`监听子类型切换事件。  
+ 本模块的核心开放能力由以下关键接口承载：
+
+| Interface | 说明 |  
+|---|---|  
+| InputMethodSubtype | 输入法子类型属性接口，描述输入法的一种具体语言或模式形态。必填属性包括：`name`（所属应用包名）、`id`（子类型ID）、`locale`（区域）、`language`（语言）；可选属性包括：`label`（标签）、`labelId`（标签资源号）、`mode`（大写/小写模式）、`icon`（图标）、`iconId`（图标ID）、`extra`（额外信息）。 | 本模块为纯数据定义模块，`InputMethodSubtype`作为子类型描述数据需与其他模块的API组合使用。典型组合场景为：在`@ohos.inputMethod`模块中，通过`InputMethodSetting`查询和切换子类型；在`@ohos.inputMethodEngine`模块中，通过`InputMethodAbility`监听子类型切换事件。  
 > **说明：**
    
 > 

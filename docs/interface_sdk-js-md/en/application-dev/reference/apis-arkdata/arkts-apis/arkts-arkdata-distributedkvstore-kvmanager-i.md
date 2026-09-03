@@ -102,7 +102,7 @@ Closes a distributed KV store. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
 | storeId | string | Yes | Unique identifier of the KV store to close. The KV store ID allows only letters, digits, and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md) in length. |
-| kvConfig | Options | No | Indicates the {@code Options} object used for close the KVStore database.<br>**Since:** 24 |
+| kvConfig | Options | No | Indicates the `Options` object used for close the KVStore database.<br>**Since:** 24 |
 
 **Return value:**
 
@@ -249,7 +249,7 @@ Deletes a distributed KV store. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | appId | string | Yes | Bundle name of the application. The value cannot be empty or exceed 256 bytes. |
 | storeId | string | Yes | Unique identifier of the KV store to delete. The KV store ID allows only letters, digits, and underscores (_), and cannot exceed [MAX_STORE_ID_LENGTH](arkts-arkdata-distributedkvstore-constants-i.md) in length. |
-| kvConfig | Options | No | Indicates the {@code Options} object used for delete the KVStore database.<br>**Since:** 24 |
+| kvConfig | Options | No | Indicates the `Options` object used for delete the KVStore database.<br>**Since:** 24 |
 
 **Return value:**
 

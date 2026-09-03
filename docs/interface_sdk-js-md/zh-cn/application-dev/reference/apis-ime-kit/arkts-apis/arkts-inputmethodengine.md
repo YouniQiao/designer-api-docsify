@@ -1,7 +1,17 @@
 # @ohos.inputMethodEngine(输入法服务)
 
-@ohos.inputMethodEngine模块是面向输入法应用（包括系统输入法和第三方输入法）的服务端API模块，提供了输入法应用与系统输入法框架之间的交互能力。本模块是输入法应用的服务端接口，定义了输入法应用在运行期间所需的全部开放能力，包括输入法生命周期管理、软键盘面板的创建与控制、文本编辑操作（插入、删除、选中文本）、光标控制、物理键盘事件监听、安全模式管理、私有数据通信等。输入法应用通过本模块可以：1）订阅输入法绑定/解绑事件，感知编辑框的连接与断开；2）创建和管理软键盘面板（固定态、悬浮态、候选态）及状态栏面板，控制面板的显示、隐藏、大小调整、位置移动、沉浸模式等；3）通过InputClient对编辑框进行文本插入、删除、选中文本、移动光标、发送功能键和扩展编辑动作等操作；4）通过KeyboardDelegate监听物理键盘按键事件、光标位置变化、文本选择变化、文本内容变化、编辑框属性变化等；5）管理安全模式（基础模式/完全访问模式），支持隐私面板设置；6）与编辑框应用进行私有数据通信和自定义消息通信。当开发输入法应用时使用本模块。本模块需在InputMethodExtensionAbility中使用，适用于系统输入法开发、第三方输入法开发、自定义键盘布局等场景。本模块的核心开放能力由以下关键Interface承载：  
- | Interface/Class | 说明 | |---|---| | InputMethodAbility | 输入法能力对象，是输入法应用的核心入口。提供输入法生命周期事件订阅（绑定/解绑/键盘显示隐藏/子类型切换/安全模式变化等）、面板创建与销毁、安全模式获取等能力。通过`getInputMethodAbility()`获取实例。 | | KeyboardDelegate | 键盘代理对象，提供物理键盘按键事件监听、光标位置变化监听、文本选择变化监听、文本内容变化监听、编辑框属性变化监听等能力。通过`getKeyboardDelegate()`获取实例。 | | InputClient | 输入客户端对象，提供对编辑框的文本操作能力，包括插入文本、删除文本（前删/后删）、获取光标前后文本、移动光标、选中文本、发送功能键和扩展编辑动作、设置预览文本、发送私有数据、自定义消息通信等。通过订阅`inputStart`事件在回调中获取实例。 | | KeyboardController | 键盘控制器对象，提供隐藏键盘、退出当前输入类型等能力。通过订阅`inputStart`事件在回调中获取实例。 | | Panel | 输入法面板对象，提供面板页面内容加载、大小调整、位置移动、显示/隐藏、面板状态切换、隐私模式设置、沉浸模式与效果设置、面板矩形区域预设置、热区更新等能力。通过`createPanel()`获取实例。 | | MessageHandler | 自定义通信对象，用于接收编辑框应用发送的自定义通信数据，并提供终止通知回调。通过`InputClient.recvMessage()`注册。 | 输入法应用的典型使用流程涉及多个API的组合调用，核心流程为：获取InputMethodAbility实例 -&gt; 订阅inputStart事件 -&gt; 在回调中获取KeyboardController和InputClient -&gt; 创建Panel -&gt; 加载面板页面内容 -&gt; 通过InputClient操作编辑框文本 -&gt; 通过KeyboardController控制键盘显隐。
+@ohos.inputMethodEngine模块是面向输入法应用（包括系统输入法和第三方输入法）的服务端API模块，提供了输入法应用与系统输入法框架之间的交互能力。本模块是输入法应用的服务端接口，定义了输入法应用在运行期间所需的全部开放能力，包括输入法生命周期管理、软键盘面板的创建与控制、文本编辑操作（插入、删除、选中文本）、光标控制、物理键盘事件监听、安全模式管理、私有数据通信等。输入法应用通过本模块可以：1）订阅输入法绑定/解绑事件，感知编辑框的连接与断开；2）创建和管理软键盘面板（固定态、悬浮态、候选态）及状态栏面板，控制面板的显示、隐藏、大小调整、位置移动、沉浸模式等；3）通过InputClient对编辑框进行文本插入、删除、选中文本、移动光标、发送功能键和扩展编辑动作等操作；4）通过KeyboardDelegate监听物理键盘按键事件、光标位置变化、文本选择变化、文本内容变化、编辑框属性变化等；5）管理安全模式（基础模式/完全访问模式），支持隐私面板设置；6）与编辑框应用进行私有数据通信和自定义消息通信。当开发输入法应用时使用本模块。本模块需在InputMethodExtensionAbility中使用，适用于系统输入法开发、第三方输入法开发、自定义键盘布局等场景。本模块的核心开放能力由以下关键Interface承载：
+
+| Interface/Class | 说明 |  
+|---|---|  
+| [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) | 输入法能力对象，是输入法应用的核心入口。提供输入法生命周期事件订阅（绑定/解绑/键盘显示隐藏/子类型切换/安全模式变化等）、面板创建与销毁、安全模式获取等能力。通过`getInputMethodAbility()`获取实例。 |
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | 键盘代理对象，提供物理键盘按键事件监听、光标位置变化监听、文本选择变化监听、文本内容变化监听、编辑框属性变化监听等能力。通过`getKeyboardDelegate()`获取实例。 |
+| [InputClient](arkts-ime-inputmethodengine-inputclient-i.md) | 输入客户端对象，提供对编辑框的文本操作能力，包括插入文本、删除文本（前删/后删）、获取光标前后文本、移动光标、选中文本、发送功能键和扩展编辑动作、设置预览文本、发送私有数据、自定义消息通信等。通过订阅`inputStart`事件在回调中获取实例。 |
+| KeyboardController | 键盘控制器对象，提供隐藏键盘、退出当前输入类型等能力。通过订阅`inputStart`事件在回调中获取实例。 |
+| Panel | 输入法面板对象，提供面板页面内容加载、大小调整、位置移动、显示/隐藏、面板状态切换、隐私模式设置、沉浸模式与效果设置、面板矩形区域预设置、热区更新等能力。通过`createPanel()`获取实例。 |
+| MessageHandler | 自定义通信对象，用于接收编辑框应用发送的自定义通信数据，并提供终止通知回调。通过`InputClient.recvMessage()`注册。 |
+
+ 输入法应用的典型使用流程涉及多个API的组合调用，核心流程为：获取InputMethodAbility实例 -&gt; 订阅inputStart事件 -&gt; 在回调中获取KeyboardController和InputClient -&gt; 创建Panel -&gt; 加载面板页面内容 -&gt; 通过InputClient操作编辑框文本 -&gt; 通过KeyboardController控制键盘显隐。
 
 **起始版本：** 8
 
@@ -63,14 +73,14 @@ import { inputMethodEngine } from '@kit.IMEKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [CapitalizeMode](arkts-ime-inputmethodengine-capitalizemode-e.md) | 枚举，定义了文本首字母大写的不同模式。   \| 名称 \| 值 \| 说明 \| \| -------- \| -- \| -------- \| \| NONE \| 0 \| 不进行任何首字母大写处理。\| \| SENTENCES \| 1 \| 每个句子的首字母大写。\| \| WORDS \| 2 \| 每个单词的首字母大写。\| \| CHARACTERS \| 3 \| 每个字母都大写。\| |
+| [CapitalizeMode](arkts-ime-inputmethodengine-capitalizemode-e.md) | 枚举，定义了文本首字母大写的不同模式。 |
 | [Direction](arkts-ime-inputmethodengine-direction-e.md) | 光标的移动方向。 |
 | [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md) | 编辑框中文本的扩展编辑操作类型，如剪切、复制等。 |
-| [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md) | 枚举，输入法渐变模式。   \| 名称 \| 值 \| 说明 \| \| ------------ \| -- \| ------------------ \| \| NONE \| 0 \| 不使用渐变模式。 \| \| LINEAR_GRADIENT \| 1 \| 线性渐变。 \| |
-| [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | 枚举，输入法沉浸模式。   \| 名称 \| 值 \| 说明 \| \| ------------ \| -- \| ------------------ \| \| NONE_IMMERSIVE \| 0 \| 不使用沉浸模式。 \| \| IMMERSIVE \| 1 \| 沉浸模式，由输入法应用确定沉浸模式类型。 \| \| LIGHT_IMMERSIVE \| 2 \| 浅色沉浸模式。 \| \| DARK_IMMERSIVE \| 3 \| 深色沉浸模式。 \| |
-| [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 输入法面板状态类型枚举。   \| 名称 \| 值 \| 说明 \| \| ------------ \| -- \| ------------------ \| \| FLG_FIXED \| 0 \| 固定态面板类型。 \| \| FLG_FLOATING \| 1 \| 悬浮态面板类型。 \| \| FLAG_CANDIDATE&lt;sup&gt;15+&lt;/sup&gt; \| 2 \| 候选词态面板类型。 \| |
-| [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) | 输入法面板类型枚举。   \| 名称 \| 值 \| 说明 \| \| ------------ \| -- \| ------------------ \| \| SOFT_KEYBOARD \| 0 \| 软键盘类型。 \| \| STATUS_BAR \| 1 \| 状态栏类型。 \| |
-| [RequestKeyboardReason](arkts-ime-inputmethodengine-requestkeyboardreason-e.md) | 枚举，请求键盘输入的原因。   \| 名称 \| 值 \| 说明 \| \| ------------ \| -- \| ------------------ \| \| NONE \| 0 \| 表示没有特定的原因触发键盘请求。 \| \| MOUSE \| 1 \| 表示键盘请求是由鼠标操作触发的。 \| \| TOUCH \| 2 \| 表示键盘请求是由触摸操作触发的。 \| \| OTHER \| 20 \| 表示键盘请求是由其他原因触发的。 \| |
+| [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md) | 枚举，输入法渐变模式。 |
+| [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | 枚举，输入法沉浸模式。 |
+| [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 输入法面板状态类型枚举。 |
+| [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) | 输入法面板类型枚举。 |
+| [RequestKeyboardReason](arkts-ime-inputmethodengine-requestkeyboardreason-e.md) | 枚举，请求键盘输入的原因。 |
 | [SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md) | 输入法的安全模式，如BASIC或FULL。 |
 
 <!--Del-->
@@ -78,7 +88,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md) | 枚举，输入法流光模式。   \| 名称 \| 值 \| 说明 \| \| ------------ \| -- \| ------------------ \| \| NONE \| 0 \| 不使用流光模式。 \| \| BACKGROUND_FLUID_LIGHT \| 1 \| 开启背景流光模式。系统面板变为透明，流光效果由编辑框宿主应用实现。 \| |
+| [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md) | 枚举，输入法流光模式。 |
 <!--DelEnd-->
 
 ### 类型

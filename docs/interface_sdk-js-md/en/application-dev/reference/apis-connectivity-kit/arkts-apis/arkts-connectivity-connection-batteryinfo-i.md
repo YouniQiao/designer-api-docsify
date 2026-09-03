@@ -18,7 +18,7 @@ import { connection } from '@kit.ConnectivityKit';
 batteryLevel: number
 ```
 
-Electricity value of the general device. {@code -1} means no power information.
+Electricity value of the general device. `-1` means no power information.
 
 **Type:** number
 
@@ -34,7 +34,7 @@ Electricity value of the general device. {@code -1} means no power information.
 boxBatteryLevel: number
 ```
 
-Electricity value of the box. {@code -1} means no power information.
+Electricity value of the box. `-1` means no power information.
 
 **Type:** number
 
@@ -66,7 +66,7 @@ The charge state of the box.
 leftEarBatteryLevel: number
 ```
 
-Electricity value of the left ear. {@code -1} means no power information.
+Electricity value of the left ear. `-1` means no power information.
 
 **Type:** number
 
@@ -98,7 +98,7 @@ The charge state of the left ear.
 rightEarBatteryLevel: number
 ```
 
-Electricity value of the right ear. {@code -1} means no power information.
+Electricity value of the right ear. `-1` means no power information.
 
 **Type:** number
 

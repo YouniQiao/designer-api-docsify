@@ -31,7 +31,7 @@ Sets the confirmation of pairing with a certain device. On API 10 and above, the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | device | string | Yes | The address of the remote device. |
-| accept | boolean | Yes | Indicates whether to accept the pairing request, {@code true} indicates accept or {@code false} otherwise. |
+| accept | boolean | Yes | Indicates whether to accept the pairing request, `true` indicates accept or `false` otherwise. |
 
 **Error codes:**
 
