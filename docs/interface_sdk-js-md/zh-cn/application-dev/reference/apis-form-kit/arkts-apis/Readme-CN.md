@@ -10,9 +10,9 @@
   - [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md)
   - [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md)
   - [ProxyData](arkts-form-formbindingdata-proxydata-i.md)
-- [@ohos.app.form.FormEditExtensionAbility](arkts-app-form-formeditextensionability.md)
+- [@ohos.app.form.FormEditExtensionAbility(FormEditExtensionAbility)](arkts-app-form-formeditextensionability.md)
   - [FormEditExtensionAbility](arkts-form-app-form-formeditextensionability-formeditextensionability-c.md)
-- [@ohos.app.form.FormExtensionAbility](arkts-app-form-formextensionability.md)
+- [@ohos.app.form.FormExtensionAbility(FormExtensionAbility)](arkts-app-form-formextensionability.md)
   - [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md)
   <!--Del-->
   - [FormExtensionAbility(系统接口)](arkts-form-app-form-formextensionability-formextensionability-c-sys.md)<!--DelEnd-->
@@ -213,7 +213,7 @@
   - [updateForm](arkts-form-formprovider-updateform-f.md)
   <!--Del-->
   - [updateTemplateFormDetailInfo(系统接口)](arkts-form-formprovider-updatetemplateformdetailinfo-f-sys.md)<!--DelEnd-->
-- [@ohos.app.form.LiveFormExtensionAbility](arkts-app-form-liveformextensionability.md)
+- [@ohos.app.form.LiveFormExtensionAbility(LiveFormExtensionAbility)](arkts-app-form-liveformextensionability.md)
   - [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md)
   - [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md)
 - [@ohos.application.formBindingData(卡片数据绑定类)](arkts-application-formbindingdata.md)

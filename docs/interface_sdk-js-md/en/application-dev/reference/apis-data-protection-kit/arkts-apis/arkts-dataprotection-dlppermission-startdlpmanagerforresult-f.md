@@ -87,7 +87,7 @@ This API starts the DLP manager application to configure file permissions and re
 > 
 > This API can be called only by domain accounts.
 
-**Since:** 26.1.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,7 +111,7 @@ This API starts the DLP manager application to configure file permissions and re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature. |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
 | [19100016](../errorcode-dlp.md#19100016-uri-missing-in-want) | The uri field is missing in the want parameter. |

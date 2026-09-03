@@ -14,8 +14,6 @@ ERR_DISTRIBUTED_SCHEDULE_FAILED = 37
 
 分布式调度失败。
 
-**系统接口**: 此接口为系统接口。
-
 **起始版本：** 9
 
 **系统能力：** SystemCapability.Ability.Form

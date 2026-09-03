@@ -1,6 +1,6 @@
 # LiveFormInfo
 
-Provides information about a live form.
+互动卡片信息。
 
 **起始版本：** 20
 
@@ -18,7 +18,7 @@ import { LiveFormExtensionAbility, LiveFormInfo } from '@kit.FormKit';
 borderRadius: number
 ```
 
-The form border radius. Unit: vp, The value must be greater than or equal to 0.
+卡片圆角半径信息。取值大于等于0，单位vp。
 
 **类型：** number
 
@@ -36,7 +36,7 @@ The form border radius. Unit: vp, The value must be greater than or equal to 0.
 formId: string
 ```
 
-The form id of the live form.
+卡片id。
 
 **类型：** string
 
@@ -54,7 +54,7 @@ The form id of the live form.
 rect: formInfo.Rect
 ```
 
-The live form display area.
+卡片位置和大小信息。
 
 **类型：** formInfo.Rect
 

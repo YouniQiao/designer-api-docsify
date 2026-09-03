@@ -144,7 +144,7 @@ function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. the type of the node is error. 2. the node is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 15 and will not be threw above API version 24.<br>**适用版本：** 15 - 24 |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 15 and will not be thrown above API version 24.<br>**适用版本：** 15 - 24 |
 
 **示例**
 
@@ -182,7 +182,7 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**适用版本：** 20 - 24 |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**适用版本：** 20 - 24 |
 
 **示例**
 
@@ -292,7 +292,7 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**适用版本：** 20 - 24 |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**适用版本：** 20 - 24 |
 
 **示例**
 
@@ -402,7 +402,7 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100023](../errorcode-node.md#100023-参数错误) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**适用版本：** 20 - 24 |
+| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**适用版本：** 20 - 24 |
 
 **示例**
 

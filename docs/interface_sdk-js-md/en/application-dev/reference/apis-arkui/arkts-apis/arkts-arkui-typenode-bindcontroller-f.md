@@ -144,7 +144,7 @@ Binds the [Scroller](../arkts-components/arkts-arkui-scroller-c.md) to the [Scro
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. the type of the node is error. 2. the node is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 15 and will not be threw above API version 24.<br>**Applicable version:** 15 - 24 |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 15 and will not be thrown above API version 24.<br>**Applicable version:** 15 - 24 |
 
 **Examples**
 
@@ -182,7 +182,7 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md) instance to th
 | Error Code ID | Error Message |
 | --- | --- |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**Applicable version:** 20 - 24 |
 
 **Examples**
 
@@ -292,7 +292,7 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md) instance to th
 | Error Code ID | Error Message |
 | --- | --- |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**Applicable version:** 20 - 24 |
 
 **Examples**
 
@@ -402,7 +402,7 @@ Binds a [Scroller](../arkts-components/arkts-arkui-scroller-c.md) instance to th
 | Error Code ID | Error Message |
 | --- | --- |
 | [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be thrown above API version 24.<br>**Applicable version:** 20 - 24 |
 
 **Examples**
 

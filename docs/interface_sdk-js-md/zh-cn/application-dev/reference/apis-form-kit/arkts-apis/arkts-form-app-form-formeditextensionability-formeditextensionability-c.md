@@ -1,6 +1,6 @@
 # FormEditExtensionAbility
 
-The **FormEditExtensionAbility** module, inherited from [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), provides the widget editing function.
+FormEditExtensionAbility模块提供卡片编辑功能，支持用户在卡片提供方应用内编辑卡片内容，适用于需要动态更新卡片展示信息、实现卡片个性化配置的场景。继承自[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)。
 
 **继承/实现关系：** FormEditExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
 
@@ -20,7 +20,7 @@ import { FormEditExtensionAbility } from '@kit.FormKit';
 context: FormEditExtensionContext
 ```
 
-Indicates configuration information about a form edit extension ability context.
+FormEditExtensionAbility的上下文环境。
 
 **类型：** [FormEditExtensionContext](arkts-form-formeditextensioncontext-c.md)
 

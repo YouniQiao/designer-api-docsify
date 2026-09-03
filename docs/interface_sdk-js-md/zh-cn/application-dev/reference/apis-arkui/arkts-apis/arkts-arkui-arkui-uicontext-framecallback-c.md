@@ -29,6 +29,8 @@ onFrame(frameTimeInNano: number): void
 
 在下一帧进行渲染时，该方法将被执行。
 
+继承FrameCallback类并重写该方法后，可配合[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)中的[postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)和[postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback)使用。
+
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -41,7 +43,7 @@ onFrame(frameTimeInNano: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| frameTimeInNano | number | 是 | 下一帧渲染开始执行的时间，以纳秒为单位。取值范围：[0, +∞) |
+| frameTimeInNano | number | 是 | 下一帧渲染开始执行的时间，以纳秒为单位，由系统回调时传入，开发者无需手动传入。取值范围：[0, +∞) |
 
 **示例**
 
@@ -89,7 +91,7 @@ struct Index {
 onIdle(timeLeftInNano: number): void
 ```
 
-在下一帧渲染结束时，如果距离下一个Vsync信号到来还有1ms以上的剩余时间，该方法将被执行，否则将顺延至后面的帧。
+下一帧渲染任务结束后，若当前时间到下一个VSync信号的剩余时间大于1ms，则执行该回调；若剩余时间小于等于1ms，则将回调顺延至后续某一帧，待当前时间到下一个VSync信号的剩余时间大于1ms时执行。若当前没有已请求的下一帧，系统会自动请求一帧。
 
 **起始版本：** 12
 
@@ -103,7 +105,7 @@ onIdle(timeLeftInNano: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeLeftInNano | number | 是 | 这一帧剩余的空闲时间，以纳秒为单位。取值范围：[0, +∞) |
+| timeLeftInNano | number | 是 | 这一帧剩余的空闲时间，以纳秒为单位，由系统回调时传入，开发者无需手动传入。取值范围：[0, +∞) |
 
 **示例**
 

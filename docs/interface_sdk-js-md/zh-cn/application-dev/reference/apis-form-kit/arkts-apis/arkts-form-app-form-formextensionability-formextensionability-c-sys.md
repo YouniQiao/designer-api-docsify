@@ -1,6 +1,6 @@
 # FormExtensionAbility
 
-Widget extension class. It provides APIs to notify the widget provider that a widget is being created or the widget visibility status is being changed.
+卡片扩展类。包含卡片提供方接收创建卡片、修改可见性等的通知接口。
 
 **起始版本：** 9
 
