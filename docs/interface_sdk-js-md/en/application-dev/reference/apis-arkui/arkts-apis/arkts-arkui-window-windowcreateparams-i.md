@@ -26,6 +26,60 @@ The params of start animation
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## excludeFromDock
+
+```TypeScript
+excludeFromDock?: boolean
+```
+
+Whether to hide the dock icon and the hover thumbnail preview. If true, the current window will not display its icon and hover thumbnail preview on the dock. This parameter only takes effect within the same application.
+
+**Type:** boolean
+
+**Default:** false
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## excludeFromRecent
+
+```TypeScript
+excludeFromRecent?: boolean
+```
+
+Whether to hide the window from the multitasking center. If true, the current window will not be displayed in the multitasking center. This parameter only takes effect within the same application.
+
+**Type:** boolean
+
+**Default:** false
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## minimizeOnStart
+
+```TypeScript
+minimizeOnStart?: boolean
+```
+
+Whether the window starts in a minimized state. If true, the window will not be brought to the foreground. This parameter only takes effect within the same application.
+
+**Type:** boolean
+
+**Default:** false
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**System capability:** SystemCapability.Window.SessionManager
+
 ## needAnimation
 
 ```TypeScript

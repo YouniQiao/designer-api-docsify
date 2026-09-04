@@ -81,5 +81,5 @@ requestAuthorization(privilege: Privilege, context: UIAbilityContext): Promise<A
 | --- | --- |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| 12300302 | User interaction is required but not allowed. Possible causes: 1. The specified UI context is invalid; 2. The application is not in the foreground. Suggested solutions: Ensure the application is in the foreground and pass a valid UIAbilityContext. |
-| 12300304 | Authorization service is busy. Possible cause: Another authorization is being processed. |
+| [12300302](../errorcode-account.md#12300302-授权操作需要用户交互但当前交互操作受限) | User interaction is required but not allowed. Possible causes: 1. The specified UI context is invalid; 2. The application is not in the foreground. Suggested solutions: Ensure the application is in the foreground and pass a valid UIAbilityContext. |
+| [12300304](../errorcode-account.md#12300304-授权服务忙) | Authorization service is busy. Possible cause: Another authorization is being processed. |

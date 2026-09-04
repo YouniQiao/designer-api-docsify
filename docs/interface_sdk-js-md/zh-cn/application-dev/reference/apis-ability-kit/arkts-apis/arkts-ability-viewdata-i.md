@@ -1,6 +1,6 @@
 # ViewData
 
-查看自动填充的数据。
+自动填充的视图数据信息。
 
 **起始版本：** 26.0.0
 
@@ -12,7 +12,7 @@
 bundleName: string
 ```
 
-包名称。
+应用的包名。
 
 **类型：** string
 
@@ -48,7 +48,7 @@ pageNodeInfos: Array<PageNodeInfo>
 pageRect: AutoFillRect
 ```
 
-该页面记录了信息。
+页面的位置坐标与宽高信息。在PC/2in1设备上，密码保险箱以弹窗形式展示，为保证弹窗位置跟随输入框，left和top需置为0。
 
 **类型：** [AutoFillRect](arkts-ability-autofillrect-i-sys.md)
 

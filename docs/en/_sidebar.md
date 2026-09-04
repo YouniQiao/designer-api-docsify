@@ -41,7 +41,7 @@
 - [Mdm Kit (434)](interface_sdk-js-md/en/application-dev/reference/apis-mdm-kit/arkts-apis/arkts-enterprise-accountmanager.md)
 - [Mechanic Kit (63)](interface_sdk-js-md/en/application-dev/reference/apis-mechanic-kit/arkts-apis/arkts-distributedhardware-mechanicmanager.md)
 - [Media Kit (243)](interface_sdk-js-md/en/application-dev/reference/apis-media-kit/arkts-apis/arkts-multimedia-media.md)
-- [Media Library Kit (307)](interface_sdk-js-md/en/application-dev/reference/apis-media-library-kit/arkts-apis/arkts-file-albumpickercomponent.md)
+- [Media Library Kit (308)](interface_sdk-js-md/en/application-dev/reference/apis-media-library-kit/arkts-apis/arkts-file-albumpickercomponent.md)
 - [Mind Spore Lite Kit (39)](interface_sdk-js-md/en/application-dev/reference/apis-mind-spore-lite-kit/arkts-apis/arkts-ai-mindsporelite.md)
 - [Multimodal Awareness Kit (119)](interface_sdk-js-md/en/application-dev/reference/apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-carawareness.md)
 - [Network Kit (484)](interface_sdk-js-md/en/application-dev/reference/apis-network-kit/arkts-apis/arkts-app-ability-vpnextensionability.md)

@@ -38,6 +38,8 @@
   <!--Del-->
   - [MediaAssetEditData(system api)](arkts-medialibrary-photoaccesshelper-mediaasseteditdata-c-sys.md)<!--DelEnd-->
   - [MediaAssetManager](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c.md)
+  <!--Del-->
+  - [MediaAssetManager(system api)](arkts-medialibrary-photoaccesshelper-mediaassetmanager-c-sys.md)<!--DelEnd-->
   - [MediaAssetsChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetschangerequest-c.md)
   <!--Del-->
   - [MediaAssetsChangeRequest(system api)](arkts-medialibrary-photoaccesshelper-mediaassetschangerequest-c-sys.md)<!--DelEnd-->

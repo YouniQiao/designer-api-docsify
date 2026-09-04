@@ -30,7 +30,7 @@ Ability名称。
 appIndex: number
 ```
 
-DLP沙盒的索引。
+DLP（数据防泄露）沙盒的索引。
 
 **类型：** number
 

@@ -841,6 +841,16 @@
   <!--Del-->
   - [SessionStatus(系统接口)](arkts-ability-climanager-sessionstatus-e-sys.md)<!--DelEnd-->
 <!--Del-->
+- [@ohos.app.function.functionManager](arkts-app-function-functionmanager.md)<!--DelEnd-->
+  <!--Del-->
+  - [invokeFunction(系统接口)](arkts-ability-functionmanager-invokefunction-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [queryFunctions(系统接口)](arkts-ability-functionmanager-queryfunctions-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [InvokeOptions(系统接口)](arkts-ability-functionmanager-invokeoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [InvokeResult(系统接口)](arkts-ability-functionmanager-invokeresult-i-sys.md)<!--DelEnd-->
+<!--Del-->
 - [@ohos.application.abilityManager](arkts-application-abilitymanager.md)<!--DelEnd-->
   <!--Del-->
   - [getAbilityRunningInfos(系统接口)](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md)<!--DelEnd-->
@@ -1619,8 +1629,8 @@
   - [AutoFillRect](arkts-autofillrect.md)<!--DelEnd-->
     <!--Del-->
     - [AutoFillRect(系统接口)](arkts-ability-autofillrect-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AutoFillRequest](arkts-autofillrequest.md)<!--DelEnd-->
+  - [AutoFillRequest](arkts-autofillrequest.md)
+    - [FillFailureResult](arkts-ability-autofillrequest-fillfailureresult-i.md)
     <!--Del-->
     - [FillRequest(系统接口)](arkts-ability-autofillrequest-fillrequest-i-sys.md)<!--DelEnd-->
     <!--Del-->
@@ -1698,6 +1708,10 @@
   - [ExtensionRunningInfo](arkts-extensionrunninginfo.md)<!--DelEnd-->
     <!--Del-->
     - [ExtensionRunningInfo(系统接口)](arkts-ability-extensionrunninginfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FunctionInfo](arkts-functioninfo.md)<!--DelEnd-->
+    <!--Del-->
+    - [FunctionInfo(系统接口)](arkts-ability-functioninfo-i-sys.md)<!--DelEnd-->
   - [InteropAbilityMonitor](arkts-interopabilitymonitor.md)
     - [InteropAbilityMonitor](arkts-ability-interopabilitymonitor-i.md)
     - [AbilityCallbackFn](arkts-ability-abilitycallbackfn-t.md)

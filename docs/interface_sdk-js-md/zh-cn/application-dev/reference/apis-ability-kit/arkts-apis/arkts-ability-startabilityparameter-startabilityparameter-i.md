@@ -12,7 +12,7 @@
 abilityStartSetting?: { [key: string]: any }
 ```
 
-启动Ability的特殊属性，当开发者启动Ability时，该属性可以作为调用中的输入参数传递。
+启动Ability的特殊属性，用于配置窗口显示等相关参数。不配置时不应用特殊启动属性。支持abilityBounds、windowMode、displayId等配置项。
 
 **类型：** { [key: string]: any }
 
@@ -28,7 +28,7 @@ abilityStartSetting?: { [key: string]: any }
 abilityStartSettings?: Record<string, Object>
 ```
 
-启动Ability的特殊属性，当开发者启动Ability时，该属性可以作为调用中的输入参数传递。推荐使用该属性替代abilityStartSetting，设置该属性后，abilityStartSetting不再生效。
+启动Ability的特殊属性（如abilityBounds、windowMode、displayId等）。不配置时不应用特殊启动属性。推荐使用该属性替代abilityStartSetting，设置该属性后，abilityStartSetting不再生效。
 
 **类型：** Record&lt;string, Object&gt;
 

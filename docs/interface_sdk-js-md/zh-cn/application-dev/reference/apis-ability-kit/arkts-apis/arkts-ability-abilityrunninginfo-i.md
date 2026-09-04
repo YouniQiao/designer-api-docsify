@@ -76,7 +76,7 @@ processName: string
 startTime: number
 ```
 
-Ability的启动时间。
+Ability的启动时间，单位：ms。
 
 **类型：** number
 

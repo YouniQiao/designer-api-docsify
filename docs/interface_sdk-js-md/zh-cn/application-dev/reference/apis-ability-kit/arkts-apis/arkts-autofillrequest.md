@@ -2,6 +2,12 @@
 
 ## 汇总
 
+### 接口
+
+| 名称 | 说明 |
+| --- | --- |
+| [FillFailureResult](arkts-ability-autofillrequest-fillfailureresult-i.md) | 自动填充失败结果。 |
+
 <!--Del-->
 ### 接口（系统接口）
 
